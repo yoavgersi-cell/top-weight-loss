@@ -15,6 +15,8 @@ const RESERVED_SLUGS = [
   "disclaimer",
   "find-your-match",
   "reviews",
+  "semaglutide",
+  "tirzepatide",
 ];
 
 export async function generateMetadata({

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { getConfig } from "@/lib/config-store";
 import { RatingBadge } from "@/components/rating-badge";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -153,6 +154,9 @@ export default async function ReviewPage({
                 </h1>
                 <p className="mt-1 text-sm text-gray-500">
                   {provider.tagline}
+                </p>
+                <p className="mt-1 text-xs text-gray-400">
+                  Last updated: June 2026
                 </p>
               </div>
             </div>
@@ -342,6 +346,47 @@ export default async function ReviewPage({
             </svg>
           </a>
         </Section>
+
+        {/* Related content — battles & articles */}
+        {(() => {
+          const relatedBattles = (config.battles ?? []).filter(
+            (b) => b.provider1Id === provider.id || b.provider2Id === provider.id
+          );
+          const relatedArticles = (config.articles ?? []).slice(0, 3);
+          if (relatedBattles.length === 0 && relatedArticles.length === 0) return null;
+          return (
+            <div className="mb-6">
+              <h3 className="mb-4 text-lg font-bold text-[#191919]">Related</h3>
+              <div className="space-y-2">
+                {relatedBattles.map((battle) => {
+                  const otherProvider = config.providers.find(
+                    (p) => p.id === (battle.provider1Id === provider.id ? battle.provider2Id : battle.provider1Id)
+                  );
+                  return (
+                    <Link
+                      key={battle.slug}
+                      href={`/${battle.slug}`}
+                      className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-medium text-[#191919] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
+                    >
+                      <span className="text-[#0C4B75]">{provider.name} vs {otherProvider?.name}</span>
+                      <span className="ml-auto text-[12px] text-gray-400">Compare</span>
+                    </Link>
+                  );
+                })}
+                {relatedArticles.map((article) => (
+                  <Link
+                    key={article.slug}
+                    href={`/articles/${article.slug}`}
+                    className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-medium text-[#191919] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
+                  >
+                    <span className="truncate">{article.title}</span>
+                    <span className="ml-auto shrink-0 text-[12px] text-gray-400">{article.readTime}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          );
+        })()}
       </div>
     </div>
   );

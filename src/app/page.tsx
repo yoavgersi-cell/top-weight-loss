@@ -70,17 +70,31 @@ export default async function HomePage() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Best Weight Loss Programs 2026 — Compare Top Providers",
+    name: "Top Weight Loss Providers 2026 — Compare Trusted Providers Side by Side",
     description:
-      "Compare the top weight loss programs and GLP-1 providers of 2026. Expert rankings, pricing, side-by-side comparisons.",
+      "Compare pricing, medications, medical support, and overall value across the top weight loss providers of 2026.",
     url: "https://topweightloss.io",
     mainEntity: {
       "@type": "ItemList",
       itemListElement: displayList.map((product, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        name: product.name,
-        url: `https://topweightloss.io/reviews/${product.id}`,
+        item: {
+          "@type": "Product",
+          name: product.name,
+          description: product.tagline,
+          url: `https://topweightloss.io/reviews/${product.id}`,
+          review: {
+            "@type": "Review",
+            reviewRating: {
+              "@type": "Rating",
+              ratingValue: product.rating,
+              bestRating: 10,
+              worstRating: 0,
+            },
+            author: { "@type": "Organization", name: "topweightloss.io" },
+          },
+        },
       })),
     },
   };
