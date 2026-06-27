@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
-import { Check, Clock, Shield, Lock, ShieldCheck, Timer, Search, MapPin } from "lucide-react";
+import { Check, Clock, Shield, Lock, ShieldCheck, Timer, Search, MapPin, ArrowRight } from "lucide-react";
 
 // Simplify footer on quiz pages — hide disclosure & nav, keep copyright
 function HideChrome() {
@@ -458,9 +458,10 @@ export default function FindYourMatchPage() {
                 <button
                   onClick={() => startLoading()}
                   disabled={!answers[currentQ?.id || ""]}
-                  className="mt-4 w-full rounded-xl bg-[#0C4B75] py-3.5 text-[16px] font-bold text-white transition-all hover:bg-[#093d61] disabled:opacity-40 sm:mt-5 sm:py-4 sm:text-[18px]"
+                  className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-[#0C4B75] py-3.5 text-[16px] font-bold text-white transition-all hover:bg-[#093d61] disabled:opacity-40 sm:mt-5 sm:py-4 sm:text-[18px]"
                 >
                   Get My Results
+                  <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
                 </button>
               </>
             )}
