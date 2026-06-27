@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function EditorialContent() {
   return (
     <div className="mx-auto max-w-[1200px] px-4 py-12 text-[16px] leading-[1.7] text-gray-700">
@@ -5,10 +7,18 @@ export function EditorialContent() {
         Weight Loss Injections Compared
       </h2>
       <p className="mb-4">
-        Choosing the right weight loss provider involves more than selecting a medication. Pricing, clinical support, treatment plans, eligibility requirements, and long-term value can vary significantly between providers.
+        Choosing the right weight loss provider involves more than selecting a medication. Pricing, clinical support, treatment plans, eligibility requirements, and long-term value can vary significantly between providers. Not sure where to start? Try our{" "}
+        <Link href="/find-your-match" className="font-semibold text-[#0C4B75] hover:underline">
+          provider matching quiz
+        </Link>{" "}
+        for a personalized recommendation.
       </p>
       <p className="mb-4">
-        To help simplify the decision, we reviewed leading weight loss programs and compared them based on medication access, affordability, provider support, customer experience, and overall value.
+        To help simplify the decision, we reviewed leading weight loss programs and compared them based on medication access, affordability, provider support, customer experience, and overall value. Read our{" "}
+        <Link href="/reviews" className="font-semibold text-[#0C4B75] hover:underline">
+          in-depth provider reviews
+        </Link>{" "}
+        for detailed breakdowns.
       </p>
       <p className="mb-8">
         Our goal is to help you identify the provider that best aligns with your health goals, budget, and treatment preferences.
@@ -20,7 +30,11 @@ export function EditorialContent() {
         Weight Loss Program Pricing Comparison
       </h2>
       <p className="mb-4">
-        Monthly costs can vary depending on the provider, medication prescribed, and level of support included in the program.
+        Monthly costs can vary depending on the provider, medication prescribed, and level of support included in the program. Learn more about{" "}
+        <Link href="/articles/choosing-telehealth-weight-loss-provider" className="font-semibold text-[#0C4B75] hover:underline">
+          how to choose the right telehealth provider
+        </Link>{" "}
+        to understand what you should expect to pay.
       </p>
       <p className="mb-3">Many providers offer all-inclusive plans that may include:</p>
       <ul className="mb-8 list-disc space-y-1 pl-6">
@@ -40,7 +54,11 @@ export function EditorialContent() {
         What to Consider Before Starting Treatment
       </h2>
       <p className="mb-3">
-        Before choosing a weight loss provider, it&apos;s important to evaluate several key factors:
+        Before choosing a weight loss provider, it&apos;s important to evaluate several key factors. Our guide on{" "}
+        <Link href="/articles/first-month-weight-loss-medication" className="font-semibold text-[#0C4B75] hover:underline">
+          what to expect your first month on medication
+        </Link>{" "}
+        can help you prepare:
       </p>
       <ul className="mb-8 list-disc space-y-1 pl-6">
         <li>Available medication options</li>
@@ -60,7 +78,11 @@ export function EditorialContent() {
         Popular Weight Loss Medications
       </h2>
       <p className="mb-3">
-        Many leading weight loss programs offer access to medications such as:
+        Many leading weight loss programs offer access to GLP-1 receptor agonist medications. Learn{" "}
+        <Link href="/articles/how-glp1-medications-work" className="font-semibold text-[#0C4B75] hover:underline">
+          how GLP-1 medications actually work
+        </Link>{" "}
+        for a detailed breakdown. Common options include:
       </p>
       <ul className="mb-4 list-disc space-y-1 pl-6">
         <li>Semaglutide</li>
@@ -86,7 +108,15 @@ export function EditorialContent() {
         <li>Overall value</li>
       </ul>
       <p>
-        We continuously review and update our recommendations to help consumers compare leading weight loss solutions with confidence.
+        We continuously review and update our recommendations to help consumers{" "}
+        <Link href="/reviews" className="font-semibold text-[#0C4B75] hover:underline">
+          compare leading weight loss solutions
+        </Link>{" "}
+        with confidence. Browse all{" "}
+        <Link href="/articles" className="font-semibold text-[#0C4B75] hover:underline">
+          weight loss articles
+        </Link>{" "}
+        for more research and guides.
       </p>
     </div>
   );

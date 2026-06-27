@@ -3,7 +3,7 @@ import { getConfig } from "@/lib/config-store";
 import { RatingBadge } from "@/components/rating-badge";
 import Link from "next/link";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Weight Loss Provider Reviews — In-Depth Expert Analysis",

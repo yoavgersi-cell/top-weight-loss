@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Clock, ArrowLeft, ArrowRight } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound } from "next/navigation";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export async function generateMetadata({
   params,
@@ -129,26 +130,13 @@ export default async function ArticlePage({
           style={{ backgroundColor: article.heroColor }}
         >
           <div className="mx-auto max-w-[720px] px-4 py-10 sm:px-6 sm:py-14">
-            {/* Breadcrumb */}
-            <nav className="mb-5 flex items-center gap-1.5 text-[12px] text-gray-400">
-              <Link
-                href="/"
-                className="hover:text-[#0C4B75] transition-colors"
-              >
-                Home
-              </Link>
-              <span>/</span>
-              <Link
-                href="/articles"
-                className="hover:text-[#0C4B75] transition-colors"
-              >
-                Articles
-              </Link>
-              <span>/</span>
-              <span className="text-gray-500 truncate max-w-[200px]">
-                {article.title}
-              </span>
-            </nav>
+            <Breadcrumbs
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Articles", href: "/articles" },
+                { label: article.title },
+              ]}
+            />
 
             <div className="flex items-center gap-3 mb-4">
               <span

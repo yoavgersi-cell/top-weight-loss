@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Clock, ArrowRight } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Weight Loss Articles — Research, Guides & Expert Insights",

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { getConfig } from "@/lib/config-store";
 import { RatingBadge } from "@/components/rating-badge";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound } from "next/navigation";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export async function generateMetadata({
   params,
@@ -127,6 +128,13 @@ export default async function ReviewPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div className="mx-auto max-w-[800px] px-4 py-12 sm:px-6">
+        <Breadcrumbs
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Reviews", href: "/reviews" },
+            { label: `${provider.name} Review` },
+          ]}
+        />
         {/* Header */}
         <div className="mb-8 rounded-xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">

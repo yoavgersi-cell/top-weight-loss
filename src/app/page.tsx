@@ -5,7 +5,7 @@ import { EditorialContent } from "@/components/editorial-content";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { getConfig } from "@/lib/config-store";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export default async function HomePage() {
   const config = await getConfig();
