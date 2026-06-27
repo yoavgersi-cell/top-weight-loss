@@ -47,6 +47,8 @@ export default function FindYourMatchPage() {
   const [loadingIdx, setLoadingIdx] = useState(0);
   const [loadingPct, setLoadingPct] = useState(0);
   const [transitioning, setTransitioning] = useState(false);
+  const [slideDirection, setSlideDirection] = useState<"forward" | "back">("forward");
+  const [phaseTransitioning, setPhaseTransitioning] = useState(false);
   const [matchedProviders, setMatchedProviders] = useState<QuizMatchedProvider[]>([]);
 
   useEffect(() => {
@@ -74,41 +76,69 @@ export default function FindYourMatchPage() {
         if (step < totalSteps - 1) {
           // Show mid-flow message after step 2
           if (step === 1 && quiz?.midFlowMessage) {
-            setPhase("midmsg");
+            setPhaseTransitioning(true);
             setTimeout(() => {
-              transitionTo(() => { setStep(step + 1); setPhase("quiz"); });
-            }, 1500);
+              setPhase("midmsg");
+              setPhaseTransitioning(false);
+              setTimeout(() => {
+                setPhaseTransitioning(true);
+                setTimeout(() => {
+                  setStep(step + 1);
+                  setPhase("quiz");
+                  setTransitioning(false);
+                  setTimeout(() => setPhaseTransitioning(false), 30);
+                }, 280);
+              }, 1500);
+            }, 280);
           } else {
             transitionTo(() => setStep(step + 1));
           }
         } else {
-          startLoading();
+          setPhaseTransitioning(true);
+          setTimeout(() => {
+            startLoading();
+            setTimeout(() => setPhaseTransitioning(false), 30);
+          }, 280);
         }
       }, 350);
     }
   }
 
-  function transitionTo(next: () => void) {
+  function transitionTo(next: () => void, direction: "forward" | "back" = "forward") {
+    setSlideDirection(direction);
     setTransitioning(true);
     setTimeout(() => {
       next();
-      setTransitioning(false);
-    }, 200);
+      setTimeout(() => setTransitioning(false), 30);
+    }, 280);
   }
 
   function handleContinue() {
     if (step < totalSteps - 1) {
-      // Show mid-flow message after step 2
       if (step === 1 && quiz?.midFlowMessage) {
-        setPhase("midmsg");
+        setPhaseTransitioning(true);
         setTimeout(() => {
-          transitionTo(() => { setStep(step + 1); setPhase("quiz"); });
-        }, 1500);
+          setPhase("midmsg");
+          setPhaseTransitioning(false);
+          setTimeout(() => {
+            setPhaseTransitioning(true);
+            setTimeout(() => {
+              setStep(step + 1);
+              setPhase("quiz");
+              setTransitioning(false);
+              setTimeout(() => setPhaseTransitioning(false), 30);
+            }, 280);
+          }, 1500);
+        }, 280);
       } else {
         transitionTo(() => setStep(step + 1));
       }
     } else {
-      startLoading();
+      setPhaseTransitioning(true);
+      setTimeout(() => {
+        startLoading();
+        setTimeout(() => setPhaseTransitioning(false), 30);
+      }, 280);
     }
   }
 
@@ -201,7 +231,7 @@ export default function FindYourMatchPage() {
     return (
       <>
       <HideChrome />
-      <div className="bg-[#F7F8FA] px-5 py-10 sm:py-20">
+      <div className={`bg-[#F7F8FA] px-5 py-10 sm:py-20 transition-all duration-[280ms] ease-out ${phaseTransitioning ? "opacity-0 scale-[0.97]" : "opacity-100 scale-100"}`}>
         <div className="mx-auto w-full max-w-[540px] text-center">
           <h1 className="text-[28px] font-extrabold text-[#191919] leading-[1.15] sm:text-[46px]">
             Find Your Best Weight Loss Provider
@@ -211,7 +241,14 @@ export default function FindYourMatchPage() {
           </p>
 
           <button
-            onClick={() => { setPhase("quiz"); setStep(0); }}
+            onClick={() => {
+              setPhaseTransitioning(true);
+              setTimeout(() => {
+                setPhase("quiz");
+                setStep(0);
+                setTimeout(() => setPhaseTransitioning(false), 30);
+              }, 280);
+            }}
             className="mt-8 inline-flex h-[46px] w-full max-w-[280px] items-center justify-center rounded-xl bg-[#0C4B75] text-[15px] font-bold text-white shadow-lg transition-all hover:bg-[#093d61] hover:shadow-xl sm:mt-10 sm:h-[50px] sm:w-auto sm:px-14 sm:text-[18px]"
           >
             {quiz.welcomeCta || "Find My Match"}
@@ -261,7 +298,7 @@ export default function FindYourMatchPage() {
   // ========== MID-FLOW MESSAGE ==========
   if (phase === "midmsg") {
     return (
-      <><HideChrome /><div className="flex min-h-[60vh] flex-col items-center justify-center px-6">
+      <><HideChrome /><div className={`flex min-h-[60vh] flex-col items-center justify-center px-6 transition-all duration-[280ms] ease-out ${phaseTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}>
         {/* Animated pulsing ring with check */}
         <div className="relative flex h-14 w-14 items-center justify-center">
           <div className="absolute inset-0 animate-ping rounded-full bg-[#0C4B75]/10" style={{ animationDuration: "1.5s" }} />
@@ -291,7 +328,7 @@ export default function FindYourMatchPage() {
   if (phase === "loading") {
     const msgs = quiz.loadingMessages;
     return (
-      <><HideChrome /><div className="flex min-h-[60vh] flex-col items-center justify-center gap-8 px-6">
+      <><HideChrome /><div className={`flex min-h-[60vh] flex-col items-center justify-center gap-8 px-6 transition-all duration-[280ms] ease-out ${phaseTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}>
         <div className="w-full max-w-[320px]">
           <div className="h-2 w-full overflow-hidden rounded-full bg-gray-100">
             <div
@@ -314,7 +351,7 @@ export default function FindYourMatchPage() {
     const others = matchedProviders.slice(1);
 
     return (
-      <><HideChrome /><div className="bg-[#F7F8FA] py-8 sm:py-14 overflow-x-hidden">
+      <><HideChrome /><div className="bg-[#F7F8FA] py-8 sm:py-14 overflow-x-hidden animate-[fadeSlideUp_0.5s_ease-out]">
         <div className="mx-auto max-w-[800px] px-4 overflow-hidden">
           {/* Trust strip */}
           <div className="mb-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
@@ -388,7 +425,7 @@ export default function FindYourMatchPage() {
   const isDropdown = currentQ?.type === "dropdown";
 
   return (
-    <><HideChrome /><div className="bg-[#F7F8FA] px-4 py-3 sm:py-16">
+    <><HideChrome /><div className={`bg-[#F7F8FA] px-4 py-3 sm:py-16 transition-all duration-[280ms] ease-out ${phaseTransitioning ? "opacity-0 scale-[0.97]" : "opacity-100 scale-100"}`}>
       <div className="mx-auto max-w-[720px]">
         {/* Progress section */}
         <div className="mb-3 flex items-center gap-3 sm:mb-4">
@@ -406,9 +443,15 @@ export default function FindYourMatchPage() {
         {/* Persistent card */}
         <div className="rounded-2xl border-0 bg-white px-5 py-5 shadow-[0_4px_20px_rgba(0,0,0,0.06)] sm:px-10 sm:py-8">
           {/* Content with transition */}
-          <div className={`transition-all duration-200 ${transitioning ? "opacity-0 translate-y-1" : "opacity-100 translate-y-0"}`}>
+          <div className={`transition-all duration-[280ms] ease-out ${
+            transitioning
+              ? slideDirection === "forward"
+                ? "opacity-0 -translate-x-6"
+                : "opacity-0 translate-x-6"
+              : "opacity-100 translate-x-0"
+          }`}>
             {step > 0 && (
-              <button onClick={() => transitionTo(() => setStep(step - 1))} className="mb-3 text-[12px] font-medium text-gray-400 hover:text-gray-600 sm:text-[13px]">
+              <button onClick={() => transitionTo(() => setStep(step - 1), "back")} className="mb-3 text-[12px] font-medium text-gray-400 hover:text-gray-600 sm:text-[13px]">
                 &larr; Back
               </button>
             )}
