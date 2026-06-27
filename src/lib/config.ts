@@ -115,9 +115,19 @@ export interface ArticleData {
 
 export interface BattleCategory {
   name: string;
-  provider1Score: number;
-  provider2Score: number;
-  description: string;
+  winner: "provider1" | "provider2" | "tie";
+  explanation: string;
+  supportingPoints: string[];
+  // Legacy fields kept for backwards compat
+  provider1Score?: number;
+  provider2Score?: number;
+  description?: string;
+}
+
+export interface BattleFeatureRow {
+  feature: string;
+  provider1Value: string;
+  provider2Value: string;
 }
 
 export interface BattleData {
@@ -125,11 +135,15 @@ export interface BattleData {
   provider1Id: string;
   provider2Id: string;
   title: string;
+  subtitle: string;
   description: string;
   intro: string;
   verdict: string;
+  verdictWinnerPoints: string[];
+  verdictLoserPoints: string[];
   winnerId: string;
   categories: BattleCategory[];
+  features: BattleFeatureRow[];
 }
 
 export interface SiteConfig {

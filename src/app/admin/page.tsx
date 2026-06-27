@@ -783,6 +783,11 @@ export default function AdminPage() {
             {(config.battles ?? []).map((battle, index) => {
               const bp1 = config.providers.find((p) => p.id === battle.provider1Id);
               const bp2 = config.providers.find((p) => p.id === battle.provider2Id);
+              const updateBattle = (patch: Record<string, unknown>) => {
+                const battles = [...(config.battles ?? [])];
+                battles[index] = { ...battles[index], ...patch };
+                setConfig({ ...config, battles });
+              };
               return (
                 <div key={battle.slug || index} className="rounded-xl border bg-white p-6 shadow-sm">
                   <div className="mb-4 flex items-center justify-between">
@@ -804,61 +809,27 @@ export default function AdminPage() {
                   </div>
 
                   <div className="grid gap-4 sm:grid-cols-2">
-                    <Field label="Slug (URL path)" value={battle.slug} onChange={(v) => {
-                      const battles = [...(config.battles ?? [])];
-                      battles[index] = { ...battles[index], slug: v };
-                      setConfig({ ...config, battles });
-                    }} />
-                    <Field label="Title" value={battle.title} onChange={(v) => {
-                      const battles = [...(config.battles ?? [])];
-                      battles[index] = { ...battles[index], title: v };
-                      setConfig({ ...config, battles });
-                    }} />
+                    <Field label="Slug (URL path)" value={battle.slug} onChange={(v) => updateBattle({ slug: v })} />
+                    <Field label="Title" value={battle.title} onChange={(v) => updateBattle({ title: v })} />
+                    <Field label="Subtitle" value={battle.subtitle || ""} onChange={(v) => updateBattle({ subtitle: v })} />
+                    <Field label="SEO Description" value={battle.description} onChange={(v) => updateBattle({ description: v })} />
                     <div>
                       <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Provider 1</label>
-                      <select
-                        value={battle.provider1Id}
-                        onChange={(e) => {
-                          const battles = [...(config.battles ?? [])];
-                          battles[index] = { ...battles[index], provider1Id: e.target.value };
-                          setConfig({ ...config, battles });
-                        }}
-                        className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none"
-                      >
+                      <select value={battle.provider1Id} onChange={(e) => updateBattle({ provider1Id: e.target.value })} className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none">
                         <option value="">Select...</option>
-                        {config.providers.map((p) => (
-                          <option key={p.id} value={p.id}>{p.name}</option>
-                        ))}
+                        {config.providers.map((p) => (<option key={p.id} value={p.id}>{p.name}</option>))}
                       </select>
                     </div>
                     <div>
                       <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Provider 2</label>
-                      <select
-                        value={battle.provider2Id}
-                        onChange={(e) => {
-                          const battles = [...(config.battles ?? [])];
-                          battles[index] = { ...battles[index], provider2Id: e.target.value };
-                          setConfig({ ...config, battles });
-                        }}
-                        className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none"
-                      >
+                      <select value={battle.provider2Id} onChange={(e) => updateBattle({ provider2Id: e.target.value })} className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none">
                         <option value="">Select...</option>
-                        {config.providers.map((p) => (
-                          <option key={p.id} value={p.id}>{p.name}</option>
-                        ))}
+                        {config.providers.map((p) => (<option key={p.id} value={p.id}>{p.name}</option>))}
                       </select>
                     </div>
                     <div>
                       <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Winner</label>
-                      <select
-                        value={battle.winnerId}
-                        onChange={(e) => {
-                          const battles = [...(config.battles ?? [])];
-                          battles[index] = { ...battles[index], winnerId: e.target.value };
-                          setConfig({ ...config, battles });
-                        }}
-                        className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none"
-                      >
+                      <select value={battle.winnerId} onChange={(e) => updateBattle({ winnerId: e.target.value })} className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none">
                         <option value="">Select...</option>
                         {battle.provider1Id && <option value={battle.provider1Id}>{bp1?.name ?? battle.provider1Id}</option>}
                         {battle.provider2Id && <option value={battle.provider2Id}>{bp2?.name ?? battle.provider2Id}</option>}
@@ -867,115 +838,86 @@ export default function AdminPage() {
                   </div>
 
                   <div className="mt-4">
-                    <Field label="SEO Description" value={battle.description} onChange={(v) => {
-                      const battles = [...(config.battles ?? [])];
-                      battles[index] = { ...battles[index], description: v };
-                      setConfig({ ...config, battles });
-                    }} />
-                  </div>
-
-                  <div className="mt-4">
                     <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Intro</label>
-                    <textarea
-                      value={battle.intro}
-                      onChange={(e) => {
-                        const battles = [...(config.battles ?? [])];
-                        battles[index] = { ...battles[index], intro: e.target.value };
-                        setConfig({ ...config, battles });
-                      }}
-                      rows={3}
-                      className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none"
-                    />
+                    <textarea value={battle.intro} onChange={(e) => updateBattle({ intro: e.target.value })} rows={3} className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none" />
                   </div>
 
                   <div className="mt-4">
                     <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Verdict</label>
-                    <textarea
-                      value={battle.verdict}
-                      onChange={(e) => {
-                        const battles = [...(config.battles ?? [])];
-                        battles[index] = { ...battles[index], verdict: e.target.value };
-                        setConfig({ ...config, battles });
-                      }}
-                      rows={3}
-                      className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none"
-                    />
+                    <textarea value={battle.verdict} onChange={(e) => updateBattle({ verdict: e.target.value })} rows={3} className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none" />
                   </div>
+
+                  <ArrayField
+                    label={`Choose ${bp1?.name ?? "Winner"} if you want (points)`}
+                    items={battle.verdictWinnerPoints ?? []}
+                    onUpdate={(i, v) => { const pts = [...(battle.verdictWinnerPoints ?? [])]; pts[i] = v; updateBattle({ verdictWinnerPoints: pts }); }}
+                    onAdd={() => updateBattle({ verdictWinnerPoints: [...(battle.verdictWinnerPoints ?? []), ""] })}
+                    onRemove={(i) => updateBattle({ verdictWinnerPoints: (battle.verdictWinnerPoints ?? []).filter((_, idx) => idx !== i) })}
+                  />
+                  <ArrayField
+                    label={`Choose ${bp2?.name ?? "Other"} if you prefer (points)`}
+                    items={battle.verdictLoserPoints ?? []}
+                    onUpdate={(i, v) => { const pts = [...(battle.verdictLoserPoints ?? [])]; pts[i] = v; updateBattle({ verdictLoserPoints: pts }); }}
+                    onAdd={() => updateBattle({ verdictLoserPoints: [...(battle.verdictLoserPoints ?? []), ""] })}
+                    onRemove={(i) => updateBattle({ verdictLoserPoints: (battle.verdictLoserPoints ?? []).filter((_, idx) => idx !== i) })}
+                  />
 
                   {/* Categories */}
                   <div className="mt-5">
-                    <label className="mb-2 block text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                      Comparison Categories
-                    </label>
+                    <label className="mb-2 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Comparison Categories</label>
                     <div className="space-y-3">
                       {(battle.categories ?? []).map((cat, ci) => (
                         <div key={ci} className="rounded-lg border bg-gray-50 p-4">
                           <div className="mb-2 flex items-center justify-between">
                             <span className="text-xs font-semibold text-gray-400">Category {ci + 1}</span>
-                            <button
-                              onClick={() => {
-                                const battles = [...(config.battles ?? [])];
-                                const categories = battles[index].categories.filter((_, i) => i !== ci);
-                                battles[index] = { ...battles[index], categories };
-                                setConfig({ ...config, battles });
-                              }}
-                              className="rounded border border-red-200 px-2 py-0.5 text-xs text-red-500 hover:bg-red-50"
-                            >
-                              Remove
-                            </button>
+                            <button onClick={() => { const cats = battle.categories.filter((_, i) => i !== ci); updateBattle({ categories: cats }); }} className="rounded border border-red-200 px-2 py-0.5 text-xs text-red-500 hover:bg-red-50">Remove</button>
                           </div>
-                          <div className="grid gap-3 sm:grid-cols-3">
-                            <Field label="Category Name" value={cat.name} onChange={(v) => {
-                              const battles = [...(config.battles ?? [])];
-                              const categories = [...battles[index].categories];
-                              categories[ci] = { ...categories[ci], name: v };
-                              battles[index] = { ...battles[index], categories };
-                              setConfig({ ...config, battles });
-                            }} />
-                            <Field label={`${bp1?.name ?? "P1"} Score`} value={String(cat.provider1Score)} type="number" onChange={(v) => {
-                              const battles = [...(config.battles ?? [])];
-                              const categories = [...battles[index].categories];
-                              categories[ci] = { ...categories[ci], provider1Score: parseFloat(v) || 0 };
-                              battles[index] = { ...battles[index], categories };
-                              setConfig({ ...config, battles });
-                            }} />
-                            <Field label={`${bp2?.name ?? "P2"} Score`} value={String(cat.provider2Score)} type="number" onChange={(v) => {
-                              const battles = [...(config.battles ?? [])];
-                              const categories = [...battles[index].categories];
-                              categories[ci] = { ...categories[ci], provider2Score: parseFloat(v) || 0 };
-                              battles[index] = { ...battles[index], categories };
-                              setConfig({ ...config, battles });
-                            }} />
+                          <div className="grid gap-3 sm:grid-cols-2">
+                            <Field label="Name" value={cat.name} onChange={(v) => { const cats = [...battle.categories]; cats[ci] = { ...cats[ci], name: v }; updateBattle({ categories: cats }); }} />
+                            <div>
+                              <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Winner</label>
+                              <select value={cat.winner || ""} onChange={(e) => { const cats = [...battle.categories]; cats[ci] = { ...cats[ci], winner: e.target.value as "provider1" | "provider2" | "tie" }; updateBattle({ categories: cats }); }} className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none">
+                                <option value="provider1">{bp1?.name ?? "Provider 1"}</option>
+                                <option value="provider2">{bp2?.name ?? "Provider 2"}</option>
+                                <option value="tie">Tie</option>
+                              </select>
+                            </div>
                           </div>
                           <div className="mt-2">
-                            <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Description</label>
-                            <textarea
-                              value={cat.description}
-                              onChange={(e) => {
-                                const battles = [...(config.battles ?? [])];
-                                const categories = [...battles[index].categories];
-                                categories[ci] = { ...categories[ci], description: e.target.value };
-                                battles[index] = { ...battles[index], categories };
-                                setConfig({ ...config, battles });
-                              }}
-                              rows={2}
-                              className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none"
-                            />
+                            <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Explanation</label>
+                            <textarea value={cat.explanation || ""} onChange={(e) => { const cats = [...battle.categories]; cats[ci] = { ...cats[ci], explanation: e.target.value }; updateBattle({ categories: cats }); }} rows={2} className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none" />
                           </div>
+                          <ArrayField
+                            label="Supporting Points"
+                            items={cat.supportingPoints ?? []}
+                            onUpdate={(i, v) => { const cats = [...battle.categories]; const pts = [...(cats[ci].supportingPoints ?? [])]; pts[i] = v; cats[ci] = { ...cats[ci], supportingPoints: pts }; updateBattle({ categories: cats }); }}
+                            onAdd={() => { const cats = [...battle.categories]; cats[ci] = { ...cats[ci], supportingPoints: [...(cats[ci].supportingPoints ?? []), ""] }; updateBattle({ categories: cats }); }}
+                            onRemove={(i) => { const cats = [...battle.categories]; cats[ci] = { ...cats[ci], supportingPoints: (cats[ci].supportingPoints ?? []).filter((_, idx) => idx !== i) }; updateBattle({ categories: cats }); }}
+                          />
                         </div>
                       ))}
                     </div>
-                    <button
-                      onClick={() => {
-                        const battles = [...(config.battles ?? [])];
-                        const categories = [...battles[index].categories, { name: "", provider1Score: 8, provider2Score: 8, description: "" }];
-                        battles[index] = { ...battles[index], categories };
-                        setConfig({ ...config, battles });
-                      }}
-                      className="mt-2 rounded border border-dashed border-gray-300 px-3 py-1.5 text-xs font-medium text-gray-400 hover:border-[#0C4B75] hover:text-[#0C4B75]"
-                    >
-                      + Add Category
-                    </button>
+                    <button onClick={() => updateBattle({ categories: [...battle.categories, { name: "", winner: "tie" as const, explanation: "", supportingPoints: [] }] })} className="mt-2 rounded border border-dashed border-gray-300 px-3 py-1.5 text-xs font-medium text-gray-400 hover:border-[#0C4B75] hover:text-[#0C4B75]">+ Add Category</button>
+                  </div>
+
+                  {/* Feature Table */}
+                  <div className="mt-5">
+                    <label className="mb-2 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Feature Comparison Table</label>
+                    <div className="space-y-2">
+                      {(battle.features ?? []).map((feat, fi) => (
+                        <div key={fi} className="flex gap-2 items-start">
+                          <div className="grid flex-1 gap-2 sm:grid-cols-3">
+                            <input value={feat.feature} onChange={(e) => { const feats = [...(battle.features ?? [])]; feats[fi] = { ...feats[fi], feature: e.target.value }; updateBattle({ features: feats }); }} placeholder="Feature" className="rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none" />
+                            <input value={feat.provider1Value} onChange={(e) => { const feats = [...(battle.features ?? [])]; feats[fi] = { ...feats[fi], provider1Value: e.target.value }; updateBattle({ features: feats }); }} placeholder={bp1?.name ?? "Provider 1"} className="rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none" />
+                            <input value={feat.provider2Value} onChange={(e) => { const feats = [...(battle.features ?? [])]; feats[fi] = { ...feats[fi], provider2Value: e.target.value }; updateBattle({ features: feats }); }} placeholder={bp2?.name ?? "Provider 2"} className="rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none" />
+                          </div>
+                          <button onClick={() => updateBattle({ features: (battle.features ?? []).filter((_, i) => i !== fi) })} className="flex h-9 w-9 shrink-0 items-center justify-center rounded border border-red-200 text-red-400 hover:bg-red-50 hover:text-red-600">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                    <button onClick={() => updateBattle({ features: [...(battle.features ?? []), { feature: "", provider1Value: "", provider2Value: "" }] })} className="mt-2 rounded border border-dashed border-gray-300 px-3 py-1.5 text-xs font-medium text-gray-400 hover:border-[#0C4B75] hover:text-[#0C4B75]">+ Add Feature Row</button>
                   </div>
                 </div>
               );
@@ -986,15 +928,23 @@ export default function AdminPage() {
                   slug: "provider1-vs-provider2",
                   provider1Id: config.providers[0]?.id ?? "",
                   provider2Id: config.providers[1]?.id ?? "",
-                  title: "Provider 1 vs Provider 2",
+                  title: "Provider 1 vs Provider 2: Which Is Better?",
+                  subtitle: "Compare pricing, medication options, and overall value side by side.",
                   description: "",
                   intro: "",
                   verdict: "",
+                  verdictWinnerPoints: [""],
+                  verdictLoserPoints: [""],
                   winnerId: "",
                   categories: [
-                    { name: "Pricing & Value", provider1Score: 8, provider2Score: 8, description: "" },
-                    { name: "Medical Support", provider1Score: 8, provider2Score: 8, description: "" },
-                    { name: "Medication Options", provider1Score: 8, provider2Score: 8, description: "" },
+                    { name: "Pricing & Value", winner: "tie" as const, explanation: "", supportingPoints: [] },
+                    { name: "Medical Support", winner: "tie" as const, explanation: "", supportingPoints: [] },
+                    { name: "Medication Options", winner: "tie" as const, explanation: "", supportingPoints: [] },
+                  ],
+                  features: [
+                    { feature: "GLP-1 Treatment Access", provider1Value: "", provider2Value: "" },
+                    { feature: "Online Consultation", provider1Value: "", provider2Value: "" },
+                    { feature: "Home Delivery", provider1Value: "", provider2Value: "" },
                   ],
                 };
                 setConfig({ ...config, battles: [...(config.battles ?? []), newBattle] });

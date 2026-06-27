@@ -3,11 +3,10 @@ import Link from "next/link";
 import { getConfig } from "@/lib/config-store";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound } from "next/navigation";
-import { Trophy, ArrowRight } from "lucide-react";
+import { Trophy, ArrowRight, Check, Minus } from "lucide-react";
 
 export const revalidate = 60;
 
-// Prevent this catch-all from matching known static routes
 const RESERVED_SLUGS = [
   "about",
   "admin",
@@ -59,7 +58,6 @@ export default async function BattlePage({
   const p2 = config.providers.find((p) => p.id === battle.provider2Id);
   if (!p1 || !p2) return notFound();
 
-  // Get scores from ranking
   const { providerOrder, positions } = config.ranking;
   const p1Rank = providerOrder.indexOf(p1.id);
   const p2Rank = providerOrder.indexOf(p2.id);
@@ -67,11 +65,13 @@ export default async function BattlePage({
   const p2Score = p2Rank >= 0 && positions[p2Rank] ? positions[p2Rank] : null;
 
   const winner = battle.winnerId === p1.id ? p1 : p2;
-  const p1Wins = battle.categories.filter((c) => c.provider1Score > c.provider2Score).length;
-  const p2Wins = battle.categories.filter((c) => c.provider2Score > c.provider1Score).length;
-  const ties = battle.categories.filter((c) => c.provider1Score === c.provider2Score).length;
+  const loser = battle.winnerId === p1.id ? p2 : p1;
 
-  // JSON-LD
+  const getCategoryWinnerName = (cat: (typeof battle.categories)[0]) => {
+    if (cat.winner === "tie") return "Tie";
+    return cat.winner === "provider1" ? p1.name : p2.name;
+  };
+
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -89,10 +89,10 @@ export default async function BattlePage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
 
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero */}
-        <div className="bg-[#0C4B75]">
-          <div className="mx-auto max-w-[900px] px-4 py-10 sm:px-6 sm:py-14">
+      <div className="min-h-screen bg-[#FAFAFA]">
+        {/* ───── HERO ───── */}
+        <section className="border-b border-gray-200 bg-white">
+          <div className="mx-auto max-w-[860px] px-4 pb-10 pt-8 sm:px-6 sm:pb-14 sm:pt-10">
             <Breadcrumbs
               items={[
                 { label: "Home", href: "/" },
@@ -100,35 +100,40 @@ export default async function BattlePage({
               ]}
             />
 
-            <h1 className="text-[24px] font-bold leading-tight text-white sm:text-[36px]">
-              {p1.name} vs {p2.name}
+            <h1 className="text-[26px] font-extrabold leading-[1.15] text-[#191919] sm:text-[38px]">
+              {battle.title}
             </h1>
-            <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-white/70">
-              {battle.description}
+            <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-gray-500">
+              {battle.subtitle || battle.description}
             </p>
           </div>
-        </div>
+        </section>
 
-        <div className="mx-auto max-w-[900px] px-4 py-10 sm:px-6">
-          {/* Score header cards */}
-          <div className="mb-8 grid grid-cols-2 gap-4">
+        <div className="mx-auto max-w-[860px] px-4 py-10 sm:px-6">
+          {/* ───── PROVIDER CARDS ───── */}
+          <div className="mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
             {[
               { provider: p1, score: p1Score, isWinner: battle.winnerId === p1.id },
               { provider: p2, score: p2Score, isWinner: battle.winnerId === p2.id },
             ].map(({ provider, score, isWinner }) => (
               <div
                 key={provider.id}
-                className={`relative rounded-xl border bg-white p-5 text-center shadow-sm sm:p-6 ${isWinner ? "border-[#0C4B75] ring-1 ring-[#0C4B75]/20" : "border-gray-200"}`}
+                className={`relative rounded-2xl border bg-white px-6 pb-6 pt-8 ${
+                  isWinner
+                    ? "border-[#0C4B75]/30 shadow-[0_2px_16px_rgba(12,75,117,0.08)]"
+                    : "border-gray-200 shadow-sm"
+                }`}
               >
                 {isWinner && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="inline-flex items-center gap-1 rounded-full bg-[#0C4B75] px-3 py-0.5 text-[11px] font-bold text-white uppercase tracking-wide">
+                  <div className="absolute -top-3 left-6">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#0C4B75] px-3.5 py-1 text-[11px] font-bold text-white uppercase tracking-wide">
                       <Trophy className="h-3 w-3" strokeWidth={2} />
                       Winner
                     </span>
                   </div>
                 )}
-                <div className="mx-auto mb-3 flex h-[45px] w-[120px] items-center justify-center">
+
+                <div className="mb-5 flex h-[44px] w-[120px] items-center">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={provider.logo}
@@ -136,26 +141,28 @@ export default async function BattlePage({
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
+
                 {score && (
-                  <div className="flex items-center justify-center gap-2">
-                    <span className="text-[28px] font-extrabold text-[#191919]">
+                  <div className="mb-1 flex items-baseline gap-1.5">
+                    <span className="text-[32px] font-extrabold text-[#191919]">
                       {score.score}
                     </span>
-                    <span className="text-[13px] font-semibold text-gray-400">
-                      / 10
-                    </span>
+                    <span className="text-[14px] font-semibold text-gray-300">/10</span>
                   </div>
                 )}
                 {score && (
-                  <p className="mt-0.5 text-[12px] font-semibold text-gray-400">
-                    {score.label}
-                  </p>
+                  <p className="mb-5 text-[13px] font-semibold text-gray-400">{score.label}</p>
                 )}
+
                 <a
                   href={provider.affiliateUrl}
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  className="mt-4 inline-flex h-[40px] w-full items-center justify-center gap-1.5 rounded-lg bg-[#0C4B75] text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]"
+                  className={`flex h-[44px] w-full items-center justify-center gap-1.5 rounded-xl text-[14px] font-bold transition-colors ${
+                    isWinner
+                      ? "bg-[#0C4B75] text-white hover:bg-[#093d61]"
+                      : "border border-[#0C4B75] text-[#0C4B75] hover:bg-[#0C4B75]/5"
+                  }`}
                 >
                   Visit {provider.name}
                   <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
@@ -164,116 +171,216 @@ export default async function BattlePage({
             ))}
           </div>
 
-          {/* Win tally */}
-          <div className="mb-8 flex items-center justify-center gap-6 rounded-xl border border-gray-200 bg-white px-6 py-4 shadow-sm">
-            <div className="text-center">
-              <p className="text-[22px] font-extrabold text-[#0C4B75]">{p1Wins}</p>
-              <p className="text-[11px] font-semibold uppercase tracking-wider text-gray-400">{p1.name}</p>
-            </div>
-            <div className="h-8 w-px bg-gray-200" />
-            <div className="text-center">
-              <p className="text-[22px] font-extrabold text-gray-400">{ties}</p>
-              <p className="text-[11px] font-semibold uppercase tracking-wider text-gray-400">Tied</p>
-            </div>
-            <div className="h-8 w-px bg-gray-200" />
-            <div className="text-center">
-              <p className="text-[22px] font-extrabold text-[#0C4B75]">{p2Wins}</p>
-              <p className="text-[11px] font-semibold uppercase tracking-wider text-gray-400">{p2.name}</p>
-            </div>
-          </div>
-
-          {/* Intro */}
-          <div className="mb-8 rounded-xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-            <p className="text-[16px] leading-[1.75] text-gray-600">
+          {/* ───── INTRO ───── */}
+          <div className="mb-14">
+            <p className="text-[16px] leading-[1.8] text-gray-600">
               {battle.intro}
             </p>
           </div>
 
-          {/* Category breakdowns */}
-          <div className="mb-8 space-y-4">
-            {battle.categories.map((cat, i) => {
-              const p1Higher = cat.provider1Score > cat.provider2Score;
-              const p2Higher = cat.provider2Score > cat.provider1Score;
-              const maxScore = 10;
+          {/* ───── CATEGORY WINNERS ───── */}
+          <div className="mb-14">
+            <h2 className="mb-6 text-[22px] font-bold text-[#191919]">
+              Winner by Category
+            </h2>
 
-              return (
-                <div
-                  key={i}
-                  className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8"
-                >
-                  <h3 className="mb-4 text-[18px] font-bold text-[#191919]">
-                    {cat.name}
-                  </h3>
+            <div className="space-y-4">
+              {battle.categories.map((cat, i) => {
+                const catWinnerName = getCategoryWinnerName(cat);
+                const isTie = cat.winner === "tie";
 
-                  {/* Score bars */}
-                  <div className="mb-4 space-y-3">
-                    {/* Provider 1 */}
-                    <div>
-                      <div className="mb-1 flex items-center justify-between">
-                        <span className={`text-[13px] font-semibold ${p1Higher ? "text-[#0C4B75]" : "text-gray-500"}`}>
-                          {p1.name}
-                        </span>
-                        <span className={`text-[14px] font-bold ${p1Higher ? "text-[#0C4B75]" : "text-gray-500"}`}>
-                          {cat.provider1Score}/{maxScore}
-                        </span>
-                      </div>
-                      <div className="h-2.5 overflow-hidden rounded-full bg-gray-100">
-                        <div
-                          className={`h-full rounded-full transition-all ${p1Higher ? "bg-[#0C4B75]" : "bg-gray-300"}`}
-                          style={{ width: `${(cat.provider1Score / maxScore) * 100}%` }}
-                        />
-                      </div>
+                return (
+                  <div
+                    key={i}
+                    className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-7"
+                  >
+                    <div className="mb-3 flex flex-wrap items-center gap-3">
+                      <h3 className="text-[16px] font-bold text-[#191919]">
+                        {cat.name}
+                      </h3>
+                      <span
+                        className={`rounded-full px-3 py-0.5 text-[11px] font-bold uppercase tracking-wide ${
+                          isTie
+                            ? "bg-gray-100 text-gray-500"
+                            : "bg-[#0C4B75]/8 text-[#0C4B75]"
+                        }`}
+                      >
+                        {isTie ? "Tie" : `Winner: ${catWinnerName}`}
+                      </span>
                     </div>
 
-                    {/* Provider 2 */}
-                    <div>
-                      <div className="mb-1 flex items-center justify-between">
-                        <span className={`text-[13px] font-semibold ${p2Higher ? "text-[#0C4B75]" : "text-gray-500"}`}>
-                          {p2.name}
-                        </span>
-                        <span className={`text-[14px] font-bold ${p2Higher ? "text-[#0C4B75]" : "text-gray-500"}`}>
-                          {cat.provider2Score}/{maxScore}
-                        </span>
+                    <p className="mb-4 text-[14px] leading-[1.7] text-gray-500">
+                      {cat.explanation}
+                    </p>
+
+                    {cat.supportingPoints && cat.supportingPoints.length > 0 && (
+                      <ul className="space-y-1.5">
+                        {cat.supportingPoints.map((point, pi) => (
+                          <li
+                            key={pi}
+                            className="flex items-start gap-2.5 text-[13px] text-gray-600"
+                          >
+                            <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#0C4B75]" strokeWidth={2} />
+                            {point}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* ───── FEATURE COMPARISON TABLE ───── */}
+          {battle.features && battle.features.length > 0 && (
+            <div className="mb-14">
+              <h2 className="mb-6 text-[22px] font-bold text-[#191919]">
+                Side-by-Side Comparison
+              </h2>
+
+              {/* Desktop table */}
+              <div className="hidden sm:block overflow-hidden rounded-2xl border border-gray-200 bg-white">
+                <table className="w-full text-left text-[14px]">
+                  <thead>
+                    <tr className="border-b border-gray-100 bg-[#FAFAFA]">
+                      <th className="px-6 py-4 text-[12px] font-bold uppercase tracking-wider text-gray-400">
+                        Feature
+                      </th>
+                      <th className="px-6 py-4 text-[12px] font-bold uppercase tracking-wider text-gray-400">
+                        {p1.name}
+                      </th>
+                      <th className="px-6 py-4 text-[12px] font-bold uppercase tracking-wider text-gray-400">
+                        {p2.name}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {battle.features.map((row, i) => (
+                      <tr
+                        key={i}
+                        className={i < battle.features.length - 1 ? "border-b border-gray-100" : ""}
+                      >
+                        <td className="px-6 py-4 font-semibold text-[#191919]">
+                          {row.feature}
+                        </td>
+                        <td className="px-6 py-4 text-gray-600">
+                          {row.provider1Value}
+                        </td>
+                        <td className="px-6 py-4 text-gray-600">
+                          {row.provider2Value}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Mobile stacked */}
+              <div className="space-y-3 sm:hidden">
+                {battle.features.map((row, i) => (
+                  <div
+                    key={i}
+                    className="rounded-xl border border-gray-200 bg-white p-4"
+                  >
+                    <p className="mb-2 text-[13px] font-bold text-[#191919]">
+                      {row.feature}
+                    </p>
+                    <div className="grid grid-cols-2 gap-3">
+                      <div>
+                        <p className="mb-0.5 text-[11px] font-semibold uppercase tracking-wider text-gray-400">
+                          {p1.name}
+                        </p>
+                        <p className="text-[13px] text-gray-600">
+                          {row.provider1Value}
+                        </p>
                       </div>
-                      <div className="h-2.5 overflow-hidden rounded-full bg-gray-100">
-                        <div
-                          className={`h-full rounded-full transition-all ${p2Higher ? "bg-[#0C4B75]" : "bg-gray-300"}`}
-                          style={{ width: `${(cat.provider2Score / maxScore) * 100}%` }}
-                        />
+                      <div>
+                        <p className="mb-0.5 text-[11px] font-semibold uppercase tracking-wider text-gray-400">
+                          {p2.name}
+                        </p>
+                        <p className="text-[13px] text-gray-600">
+                          {row.provider2Value}
+                        </p>
                       </div>
                     </div>
                   </div>
-
-                  <p className="text-[14px] leading-[1.7] text-gray-500">
-                    {cat.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Verdict */}
-          <div className="mb-8 rounded-xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-            <div className="mb-3 flex items-center gap-2">
-              <Trophy className="h-5 w-5 text-[#0C4B75]" strokeWidth={1.5} />
-              <h2 className="text-[20px] font-bold text-[#191919]">Our Verdict</h2>
+                ))}
+              </div>
             </div>
-            <p className="text-[16px] leading-[1.75] text-gray-600">
+          )}
+
+          {/* ───── VERDICT ───── */}
+          <div className="mb-14 rounded-2xl border border-[#0C4B75]/15 bg-[#0C4B75]/[0.02] p-6 sm:p-8">
+            <div className="mb-5 flex items-center gap-2.5">
+              <Trophy className="h-5 w-5 text-[#0C4B75]" strokeWidth={1.5} />
+              <h2 className="text-[22px] font-bold text-[#191919]">Our Verdict</h2>
+            </div>
+
+            <p className="mb-6 text-[15px] leading-[1.75] text-gray-600">
               {battle.verdict}
             </p>
+
+            <div className="grid gap-6 sm:grid-cols-2">
+              {/* Winner points */}
+              <div>
+                <p className="mb-3 text-[13px] font-bold uppercase tracking-wider text-[#0C4B75]">
+                  Choose {winner.name} if you want
+                </p>
+                <ul className="space-y-2">
+                  {(battle.verdictWinnerPoints ?? []).map((point, i) => (
+                    <li
+                      key={i}
+                      className="flex items-start gap-2.5 text-[14px] text-gray-600"
+                    >
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#0C4B75]" strokeWidth={2} />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Loser points */}
+              <div>
+                <p className="mb-3 text-[13px] font-bold uppercase tracking-wider text-gray-400">
+                  Choose {loser.name} if you prefer
+                </p>
+                <ul className="space-y-2">
+                  {(battle.verdictLoserPoints ?? []).map((point, i) => (
+                    <li
+                      key={i}
+                      className="flex items-start gap-2.5 text-[14px] text-gray-600"
+                    >
+                      <Minus className="mt-0.5 h-4 w-4 shrink-0 text-gray-400" strokeWidth={2} />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <a
+              href={winner.affiliateUrl}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="mt-7 flex h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-[#0C4B75] text-[15px] font-bold text-white transition-colors hover:bg-[#093d61] sm:w-auto sm:px-8"
+            >
+              Visit {winner.name}
+              <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
+            </a>
           </div>
 
-          {/* Final CTAs */}
-          <div className="grid grid-cols-2 gap-4">
+          {/* ───── BOTTOM CTAs ───── */}
+          <div className="mb-6 grid grid-cols-2 gap-4">
             {[p1, p2].map((provider) => (
               <a
                 key={provider.id}
                 href={provider.affiliateUrl}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                className="flex flex-col items-center gap-3 rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+                className="group flex flex-col items-center gap-3 rounded-2xl border border-gray-200 bg-white px-4 py-6 transition-shadow hover:shadow-md"
               >
-                <div className="flex h-[40px] w-[110px] items-center justify-center">
+                <div className="flex h-[36px] w-[100px] items-center justify-center">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={provider.logo}
@@ -281,22 +388,22 @@ export default async function BattlePage({
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
-                <span className="flex items-center gap-1.5 text-[14px] font-bold text-[#0C4B75]">
-                  Visit {provider.name}
-                  <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
+                <span className="flex items-center gap-1 text-[13px] font-bold text-[#0C4B75] group-hover:underline">
+                  Visit Site
+                  <ArrowRight className="h-3 w-3" strokeWidth={2.5} />
                 </span>
               </a>
             ))}
           </div>
 
           {/* Related links */}
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4 text-[13px]">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 py-4 text-[13px]">
             <Link href={`/reviews/${p1.id}`} className="font-semibold text-[#0C4B75] hover:underline">
-              {p1.name} Full Review
+              {p1.name} Review
             </Link>
             <span className="text-gray-300">|</span>
             <Link href={`/reviews/${p2.id}`} className="font-semibold text-[#0C4B75] hover:underline">
-              {p2.name} Full Review
+              {p2.name} Review
             </Link>
             <span className="text-gray-300">|</span>
             <Link href="/" className="font-semibold text-[#0C4B75] hover:underline">
