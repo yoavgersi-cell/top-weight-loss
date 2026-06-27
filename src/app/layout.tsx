@@ -13,14 +13,14 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   metadataBase: new URL("https://topweightloss.io"),
   title: {
-    default: "Best Weight Loss Programs 2026 — Compare Top Providers | topweightloss.io",
+    default: "Top Weight Loss Providers 2026 — Compare Trusted Providers Side by Side | topweightloss.io",
     template: "%s | topweightloss.io",
   },
   icons: {
     icon: "/favicon.svg",
   },
   description:
-    "Compare the top weight loss programs and GLP-1 providers of 2026. Expert rankings, pricing, side-by-side comparisons of semaglutide and tirzepatide telehealth services.",
+    "Compare pricing, medications, medical support, and overall value across the top weight loss providers of 2026. Find the provider that best fits your goals.",
   keywords: [
     "weight loss programs",
     "GLP-1 weight loss",
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     "wegovy alternatives",
   ],
   openGraph: {
-    title: "Best Weight Loss Programs 2026 — Compare Top Providers",
+    title: "Top Weight Loss Providers 2026 — Compare Trusted Providers Side by Side",
     description:
-      "Compare top GLP-1 weight loss providers side by side. Expert rankings, pricing, and honest reviews of semaglutide and tirzepatide programs.",
+      "Compare pricing, medications, medical support, and overall value across the top weight loss providers of 2026.",
     type: "website",
     siteName: "topweightloss.io",
     locale: "en_US",
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Weight Loss Programs 2026 — Compare Top Providers",
+    title: "Top Weight Loss Providers 2026 — Compare Trusted Providers Side by Side",
     description:
-      "Compare top GLP-1 weight loss providers side by side. Expert rankings, pricing, and honest reviews.",
+      "Compare pricing, medications, medical support, and overall value across the top weight loss providers of 2026.",
   },
   alternates: {
     canonical: "https://topweightloss.io",
