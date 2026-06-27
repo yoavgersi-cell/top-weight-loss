@@ -13,9 +13,9 @@ export function RatingBadge({ rating, label, className }: RatingBadgeProps) {
 
   return (
     <div className={cn("flex flex-col items-center", className)}>
-      <div className="flex items-start gap-1">
+      <div className="flex items-center gap-1.5">
         <span className="text-[32px] font-extrabold leading-none text-[#191919]">{rating}</span>
-        <div className="pt-1">
+        <div>
           <div className="flex gap-0.5">
             {Array.from({ length: 5 }).map((_, i) => (
               <Star

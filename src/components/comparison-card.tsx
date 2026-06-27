@@ -72,7 +72,7 @@ export function ComparisonCard({ product, hideRank }: ComparisonCardProps) {
         </div>
 
         {/* Column 3: Rating + CTA */}
-        <div className="flex flex-col items-center justify-center gap-3 px-6 py-5 sm:w-[200px] sm:shrink-0">
+        <div className="flex flex-col items-center justify-center gap-4 px-6 py-5 sm:w-[200px] sm:shrink-0">
           <RatingBadge rating={product.rating} label={product.ratingLabel} />
           <a
             href={product.affiliateUrl}
