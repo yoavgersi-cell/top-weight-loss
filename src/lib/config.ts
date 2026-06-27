@@ -113,11 +113,31 @@ export interface ArticleData {
   sections: ArticleSection[];
 }
 
+export interface BattleCategory {
+  name: string;
+  provider1Score: number;
+  provider2Score: number;
+  description: string;
+}
+
+export interface BattleData {
+  slug: string;
+  provider1Id: string;
+  provider2Id: string;
+  title: string;
+  description: string;
+  intro: string;
+  verdict: string;
+  winnerId: string;
+  categories: BattleCategory[];
+}
+
 export interface SiteConfig {
   providers: Provider[];
   faqs: FaqItem[];
   reviews: ReviewData[];
   articles: ArticleData[];
+  battles: BattleData[];
   quiz: QuizConfig;
   hero: HeroConfig;
   sidebar: SidebarConfig;
@@ -170,6 +190,7 @@ export const defaultConfig: SiteConfig = {
   faqs: [],
   reviews: [],
   articles: [],
+  battles: [],
   quiz: {
     welcomeTitle: "Find Your Best Weight Loss Provider Match",
     welcomeSubtitle: "Answer a few quick questions and we'll compare trusted weight loss providers based on your goals, preferences, and location.",

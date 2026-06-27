@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import type { SiteConfig, Provider, FaqItem, ReviewData, ArticleData, RankingPageConfig } from "@/lib/config";
+import type { SiteConfig, Provider, FaqItem, ReviewData, ArticleData, BattleData, RankingPageConfig } from "@/lib/config";
 
 export default function AdminPage() {
   const [password, setPassword] = useState("");
@@ -9,7 +9,7 @@ export default function AdminPage() {
   const [config, setConfig] = useState<SiteConfig | null>(null);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState("");
-  const [activeTab, setActiveTab] = useState<"providers" | "ranking" | "hero" | "sidebar" | "faqs" | "reviews" | "articles" | "quiz" | "general">("providers");
+  const [activeTab, setActiveTab] = useState<"providers" | "ranking" | "hero" | "sidebar" | "faqs" | "reviews" | "articles" | "battles" | "quiz" | "general">("providers");
 
   const token = typeof window !== "undefined" ? sessionStorage.getItem("admin_token") : null;
 
@@ -225,6 +225,7 @@ export default function AdminPage() {
     { key: "faqs" as const, label: "FAQs" },
     { key: "reviews" as const, label: "Reviews" },
     { key: "articles" as const, label: "Articles" },
+    { key: "battles" as const, label: "Battles" },
     { key: "quiz" as const, label: "Quiz" },
     { key: "general" as const, label: "General" },
   ];
@@ -772,6 +773,235 @@ export default function AdminPage() {
               className="w-full rounded-lg border-2 border-dashed border-gray-300 py-4 text-sm font-medium text-gray-400 hover:border-[#0C4B75] hover:text-[#0C4B75]"
             >
               + Add Article
+            </button>
+          </div>
+        )}
+
+        {/* Battles Tab */}
+        {activeTab === "battles" && (
+          <div className="space-y-4">
+            {(config.battles ?? []).map((battle, index) => {
+              const bp1 = config.providers.find((p) => p.id === battle.provider1Id);
+              const bp2 = config.providers.find((p) => p.id === battle.provider2Id);
+              return (
+                <div key={battle.slug || index} className="rounded-xl border bg-white p-6 shadow-sm">
+                  <div className="mb-4 flex items-center justify-between">
+                    <div>
+                      <h3 className="text-sm font-bold text-[#191919]">
+                        {bp1?.name ?? battle.provider1Id} vs {bp2?.name ?? battle.provider2Id}
+                      </h3>
+                      <span className="text-xs text-gray-400">/{battle.slug}</span>
+                    </div>
+                    <button
+                      onClick={() => {
+                        const battles = (config.battles ?? []).filter((_, i) => i !== index);
+                        setConfig({ ...config, battles });
+                      }}
+                      className="flex h-8 w-8 items-center justify-center rounded border border-red-200 text-red-400 hover:bg-red-50 hover:text-red-600"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                    </button>
+                  </div>
+
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <Field label="Slug (URL path)" value={battle.slug} onChange={(v) => {
+                      const battles = [...(config.battles ?? [])];
+                      battles[index] = { ...battles[index], slug: v };
+                      setConfig({ ...config, battles });
+                    }} />
+                    <Field label="Title" value={battle.title} onChange={(v) => {
+                      const battles = [...(config.battles ?? [])];
+                      battles[index] = { ...battles[index], title: v };
+                      setConfig({ ...config, battles });
+                    }} />
+                    <div>
+                      <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Provider 1</label>
+                      <select
+                        value={battle.provider1Id}
+                        onChange={(e) => {
+                          const battles = [...(config.battles ?? [])];
+                          battles[index] = { ...battles[index], provider1Id: e.target.value };
+                          setConfig({ ...config, battles });
+                        }}
+                        className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none"
+                      >
+                        <option value="">Select...</option>
+                        {config.providers.map((p) => (
+                          <option key={p.id} value={p.id}>{p.name}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <div>
+                      <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Provider 2</label>
+                      <select
+                        value={battle.provider2Id}
+                        onChange={(e) => {
+                          const battles = [...(config.battles ?? [])];
+                          battles[index] = { ...battles[index], provider2Id: e.target.value };
+                          setConfig({ ...config, battles });
+                        }}
+                        className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none"
+                      >
+                        <option value="">Select...</option>
+                        {config.providers.map((p) => (
+                          <option key={p.id} value={p.id}>{p.name}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <div>
+                      <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Winner</label>
+                      <select
+                        value={battle.winnerId}
+                        onChange={(e) => {
+                          const battles = [...(config.battles ?? [])];
+                          battles[index] = { ...battles[index], winnerId: e.target.value };
+                          setConfig({ ...config, battles });
+                        }}
+                        className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none"
+                      >
+                        <option value="">Select...</option>
+                        {battle.provider1Id && <option value={battle.provider1Id}>{bp1?.name ?? battle.provider1Id}</option>}
+                        {battle.provider2Id && <option value={battle.provider2Id}>{bp2?.name ?? battle.provider2Id}</option>}
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="mt-4">
+                    <Field label="SEO Description" value={battle.description} onChange={(v) => {
+                      const battles = [...(config.battles ?? [])];
+                      battles[index] = { ...battles[index], description: v };
+                      setConfig({ ...config, battles });
+                    }} />
+                  </div>
+
+                  <div className="mt-4">
+                    <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Intro</label>
+                    <textarea
+                      value={battle.intro}
+                      onChange={(e) => {
+                        const battles = [...(config.battles ?? [])];
+                        battles[index] = { ...battles[index], intro: e.target.value };
+                        setConfig({ ...config, battles });
+                      }}
+                      rows={3}
+                      className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none"
+                    />
+                  </div>
+
+                  <div className="mt-4">
+                    <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Verdict</label>
+                    <textarea
+                      value={battle.verdict}
+                      onChange={(e) => {
+                        const battles = [...(config.battles ?? [])];
+                        battles[index] = { ...battles[index], verdict: e.target.value };
+                        setConfig({ ...config, battles });
+                      }}
+                      rows={3}
+                      className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none"
+                    />
+                  </div>
+
+                  {/* Categories */}
+                  <div className="mt-5">
+                    <label className="mb-2 block text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                      Comparison Categories
+                    </label>
+                    <div className="space-y-3">
+                      {(battle.categories ?? []).map((cat, ci) => (
+                        <div key={ci} className="rounded-lg border bg-gray-50 p-4">
+                          <div className="mb-2 flex items-center justify-between">
+                            <span className="text-xs font-semibold text-gray-400">Category {ci + 1}</span>
+                            <button
+                              onClick={() => {
+                                const battles = [...(config.battles ?? [])];
+                                const categories = battles[index].categories.filter((_, i) => i !== ci);
+                                battles[index] = { ...battles[index], categories };
+                                setConfig({ ...config, battles });
+                              }}
+                              className="rounded border border-red-200 px-2 py-0.5 text-xs text-red-500 hover:bg-red-50"
+                            >
+                              Remove
+                            </button>
+                          </div>
+                          <div className="grid gap-3 sm:grid-cols-3">
+                            <Field label="Category Name" value={cat.name} onChange={(v) => {
+                              const battles = [...(config.battles ?? [])];
+                              const categories = [...battles[index].categories];
+                              categories[ci] = { ...categories[ci], name: v };
+                              battles[index] = { ...battles[index], categories };
+                              setConfig({ ...config, battles });
+                            }} />
+                            <Field label={`${bp1?.name ?? "P1"} Score`} value={String(cat.provider1Score)} type="number" onChange={(v) => {
+                              const battles = [...(config.battles ?? [])];
+                              const categories = [...battles[index].categories];
+                              categories[ci] = { ...categories[ci], provider1Score: parseFloat(v) || 0 };
+                              battles[index] = { ...battles[index], categories };
+                              setConfig({ ...config, battles });
+                            }} />
+                            <Field label={`${bp2?.name ?? "P2"} Score`} value={String(cat.provider2Score)} type="number" onChange={(v) => {
+                              const battles = [...(config.battles ?? [])];
+                              const categories = [...battles[index].categories];
+                              categories[ci] = { ...categories[ci], provider2Score: parseFloat(v) || 0 };
+                              battles[index] = { ...battles[index], categories };
+                              setConfig({ ...config, battles });
+                            }} />
+                          </div>
+                          <div className="mt-2">
+                            <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Description</label>
+                            <textarea
+                              value={cat.description}
+                              onChange={(e) => {
+                                const battles = [...(config.battles ?? [])];
+                                const categories = [...battles[index].categories];
+                                categories[ci] = { ...categories[ci], description: e.target.value };
+                                battles[index] = { ...battles[index], categories };
+                                setConfig({ ...config, battles });
+                              }}
+                              rows={2}
+                              className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none"
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <button
+                      onClick={() => {
+                        const battles = [...(config.battles ?? [])];
+                        const categories = [...battles[index].categories, { name: "", provider1Score: 8, provider2Score: 8, description: "" }];
+                        battles[index] = { ...battles[index], categories };
+                        setConfig({ ...config, battles });
+                      }}
+                      className="mt-2 rounded border border-dashed border-gray-300 px-3 py-1.5 text-xs font-medium text-gray-400 hover:border-[#0C4B75] hover:text-[#0C4B75]"
+                    >
+                      + Add Category
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
+            <button
+              onClick={() => {
+                const newBattle: BattleData = {
+                  slug: "provider1-vs-provider2",
+                  provider1Id: config.providers[0]?.id ?? "",
+                  provider2Id: config.providers[1]?.id ?? "",
+                  title: "Provider 1 vs Provider 2",
+                  description: "",
+                  intro: "",
+                  verdict: "",
+                  winnerId: "",
+                  categories: [
+                    { name: "Pricing & Value", provider1Score: 8, provider2Score: 8, description: "" },
+                    { name: "Medical Support", provider1Score: 8, provider2Score: 8, description: "" },
+                    { name: "Medication Options", provider1Score: 8, provider2Score: 8, description: "" },
+                  ],
+                };
+                setConfig({ ...config, battles: [...(config.battles ?? []), newBattle] });
+              }}
+              className="w-full rounded-lg border-2 border-dashed border-gray-300 py-4 text-sm font-medium text-gray-400 hover:border-[#0C4B75] hover:text-[#0C4B75]"
+            >
+              + Add Battle Page
             </button>
           </div>
         )}

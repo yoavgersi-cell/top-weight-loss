@@ -1,5 +1,5 @@
 import { put, list } from "@vercel/blob";
-import { type SiteConfig, type ReviewData, type ArticleData, defaultConfig } from "./config";
+import { type SiteConfig, type ReviewData, type ArticleData, type BattleData, defaultConfig } from "./config";
 import productsJson from "@/data/products.json";
 import faqsJson from "@/data/faqs.json";
 import { articles as defaultArticlesData } from "@/data/articles";
@@ -420,6 +420,25 @@ function buildInitialConfig(): SiteConfig {
     faqs: faqsJson,
     reviews: defaultReviews,
     articles: defaultArticlesData,
+    battles: [
+      {
+        slug: "altrx-vs-ro",
+        provider1Id: "altrx",
+        provider2Id: "ro",
+        title: "ALT RX vs Ro: Which Weight Loss Provider Is Better?",
+        description: "Head-to-head comparison of ALT RX and Ro for GLP-1 weight loss treatment. Compare pricing, medical support, medication options, and overall value.",
+        intro: "ALT RX and Ro are two of the most popular telehealth weight loss providers offering GLP-1 medications. Both platforms connect patients with licensed providers and deliver prescription medication to your door — but they differ in pricing structure, level of personalization, medication options, and overall patient experience. Here's how they compare across the categories that matter most.",
+        verdict: "ALT RX edges ahead with its transparent all-inclusive pricing, wider medication selection, and more personalized treatment approach. Ro remains a strong choice for those who value brand reputation and a streamlined, no-frills process. Both are solid options — your best pick depends on whether you prioritize personalization (ALT RX) or simplicity (Ro).",
+        winnerId: "altrx",
+        categories: [
+          { name: "Pricing & Value", provider1Score: 9, provider2Score: 8, description: "ALT RX offers transparent all-inclusive pricing with no hidden fees. Ro is competitively priced but medication costs can vary depending on the treatment plan selected." },
+          { name: "Medical Support", provider1Score: 9, provider2Score: 9, description: "Both providers offer physician-guided treatment with licensed providers overseeing every case. ALT RX provides slightly more personalized protocols, while Ro leverages its established telehealth infrastructure." },
+          { name: "Medication Options", provider1Score: 9, provider2Score: 8, description: "ALT RX offers access to semaglutide, tirzepatide, oral GLP-1 medications, and combination therapy programs. Ro focuses primarily on compounded semaglutide and brand-name GLP-1 options." },
+          { name: "Convenience", provider1Score: 9, provider2Score: 9, description: "Both platforms provide full telehealth convenience with home delivery. Ro has an integrated in-house pharmacy which can streamline fulfillment. ALT RX offers fast nationwide delivery." },
+          { name: "Customer Experience", provider1Score: 9, provider2Score: 8, description: "ALT RX is praised for responsive support and customized treatment plans. Ro benefits from strong brand trust and a polished user interface, though some users report longer wait times during peak periods." },
+        ],
+      },
+    ],
     quiz: {
       welcomeTitle: "Find Your Best Weight Loss Provider Match",
       welcomeSubtitle: "Answer a few quick questions and we'll compare trusted weight loss providers based on your goals, preferences, and location.",
@@ -526,6 +545,7 @@ export async function getConfig(): Promise<SiteConfig> {
           ranking: saved.ranking && saved.ranking.providerOrder && saved.ranking.providerOrder.length > 0 ? saved.ranking : initial.ranking,
           reviews: saved.reviews && saved.reviews.length > 0 ? saved.reviews : initial.reviews,
           articles: saved.articles && saved.articles.length > 0 ? saved.articles : initial.articles,
+          battles: saved.battles && saved.battles.length > 0 ? saved.battles : initial.battles,
           quiz: saved.quiz && saved.quiz.questions && saved.quiz.questions.length > 0 ? saved.quiz : initial.quiz,
         };
       }

@@ -64,5 +64,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
   ];
 
-  return [...staticPages, ...reviewPages, ...articlePages];
+  const battlePages: MetadataRoute.Sitemap = (config.battles ?? []).map(
+    (battle) => ({
+      url: `${BASE_URL}/${battle.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    })
+  );
+
+  return [...staticPages, ...reviewPages, ...articlePages, ...battlePages];
 }
