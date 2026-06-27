@@ -168,10 +168,10 @@ export const defaultConfig: SiteConfig = {
     backgroundImageUrl: "/hero.png",
     imageAlt: "Weight loss medications",
     updatedLabel: "Last Updated: June 2026",
-    h1: "Top Weight Loss Programs 2026",
-    h2: "Compare leading weight loss providers",
+    h1: "Top Weight Loss Providers 2026",
+    h2: "Compare trusted providers side by side",
     description:
-      "Review costs, treatment options and provider details to find the right weight loss solution for your goals.",
+      "Compare pricing, medications, medical support, and overall value to find the provider that best fits your goals.",
   },
   sidebar: {
     socialProofNumber: "18,400+",
