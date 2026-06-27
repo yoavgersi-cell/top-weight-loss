@@ -1,65 +1,122 @@
-import Image from "next/image";
+import { HeroSection } from "@/components/hero-section";
+import { ComparisonCard } from "@/components/comparison-card";
+import { Sidebar } from "@/components/sidebar";
+import { EditorialContent } from "@/components/editorial-content";
+import { FaqAccordion } from "@/components/faq-accordion";
+import { getConfig } from "@/lib/config-store";
 
-export default function Home() {
+export const dynamic = "force-dynamic";
+
+export default async function HomePage() {
+  const config = await getConfig();
+  const { providerOrder, positions } = config.ranking;
+
+  // Build display list by merging provider data with ranking position data
+  const displayList = providerOrder
+    .map((id, index) => {
+      const provider = config.providers.find((p) => p.id === id);
+      if (!provider) return null;
+      const position = positions[index] || positions[positions.length - 1];
+      return {
+        id: provider.id,
+        name: provider.name,
+        tagline: provider.tagline,
+        logo: provider.logo,
+        smallLogo: provider.smallLogo,
+        highlights: provider.highlights,
+        affiliateUrl: provider.affiliateUrl,
+        ctaText: provider.ctaText,
+        rank: index + 1,
+        rating: position.score,
+        ratingLabel: position.label,
+        badge: position.badge,
+      };
+    })
+    .filter(Boolean) as Array<{
+      id: string;
+      name: string;
+      tagline: string;
+      logo: string;
+      smallLogo: string;
+      highlights: string[];
+      affiliateUrl: string;
+      ctaText: string;
+      rank: number;
+      rating: number;
+      ratingLabel: string;
+      badge?: string;
+    }>;
+
+  // Build sidebar providers in ranking order
+  const sidebarProviders = providerOrder
+    .map((id) => config.providers.find((p) => p.id === id))
+    .filter(Boolean) as typeof config.providers;
+
+  // JSON-LD: FAQPage schema
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: config.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
+  // JSON-LD: WebPage + ItemList for comparison
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Best Weight Loss Programs 2026 — Compare Top Providers",
+    description:
+      "Compare the top weight loss programs and GLP-1 providers of 2026. Expert rankings, pricing, side-by-side comparisons.",
+    url: "https://topweightloss.io",
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: displayList.map((product, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: product.name,
+        url: `https://topweightloss.io/reviews/${product.id}`,
+      })),
+    },
+  };
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <HeroSection
+        backgroundImageUrl={config.hero.backgroundImageUrl}
+        imageAlt={config.hero.imageAlt}
+        updatedLabel={config.hero.updatedLabel}
+        h1={config.hero.h1}
+        h2={config.hero.h2}
+        description={config.hero.description}
+      />
+
+      <section className="mx-auto max-w-[1200px] px-4 pt-6 pb-14">
+        <div className="flex gap-6 items-start">
+          <div className="min-w-0 flex-1 space-y-4">
+            {displayList.map((product) => (
+              <ComparisonCard key={product.id} product={product} />
+            ))}
+          </div>
+          <Sidebar config={config.sidebar} providers={sidebarProviders} />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+
+      <EditorialContent />
+      <FaqAccordion items={config.faqs} />
+    </>
   );
 }

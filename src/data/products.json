@@ -1,0 +1,202 @@
+[
+  {
+    "id": "altrx",
+    "rank": 1,
+    "name": "ALT RX",
+    "slug": "altrx",
+    "tagline": "Most Comprehensive GLP-1 Medication Access",
+    "logo": "/logos/altrx.svg",
+    "rating": 9.8,
+    "ratingLabel": "Exceptional",
+    "reviewCount": 14200,
+    "highlights": [
+      "Access to leading GLP-1 treatment options",
+      "Prescription and provider consultations included",
+      "Transparent pricing with no long-term commitment"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "#",
+    "ctaText": "View Plan",
+    "description": ""
+  },
+  {
+    "id": "noom",
+    "rank": 2,
+    "name": "Noom",
+    "slug": "noom",
+    "tagline": "Behavior-Based Weight Loss With Medical Support",
+    "logo": "/logos/noom.svg",
+    "rating": 9.6,
+    "ratingLabel": "Excellent",
+    "reviewCount": 18520,
+    "highlights": [
+      "Personalized treatment plans and coaching",
+      "Multiple medication options available",
+      "Designed to build sustainable habits"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "#",
+    "ctaText": "View Plan",
+    "description": ""
+  },
+  {
+    "id": "ro",
+    "rank": 3,
+    "name": "Ro",
+    "slug": "ro",
+    "tagline": "Simple Online Weight Loss Care",
+    "logo": "/logos/ro.svg",
+    "rating": 9.5,
+    "ratingLabel": "Excellent",
+    "reviewCount": 8430,
+    "highlights": [
+      "Licensed providers review every treatment plan",
+      "Medication options tailored to your goals",
+      "Convenient online follow-ups and support"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "#",
+    "ctaText": "View Plan",
+    "description": ""
+  },
+  {
+    "id": "trimrx",
+    "rank": 4,
+    "name": "TrimRX",
+    "slug": "trimrx",
+    "tagline": "Affordable Access To GLP-1 Programs",
+    "logo": "/logos/trimrx.svg",
+    "rating": 9.4,
+    "ratingLabel": "Excellent",
+    "reviewCount": 5840,
+    "highlights": [
+      "Competitive monthly pricing",
+      "Flexible treatment plans available",
+      "Ongoing clinical guidance included"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "#",
+    "ctaText": "View Plan",
+    "description": ""
+  },
+  {
+    "id": "shed",
+    "rank": 5,
+    "name": "Shed",
+    "slug": "shed",
+    "tagline": "Weight Loss Programs Built Around You",
+    "logo": "/logos/shed.svg",
+    "rating": 9.3,
+    "ratingLabel": "Excellent",
+    "reviewCount": 4120,
+    "highlights": [
+      "Personalized treatment recommendations",
+      "Coaching and support resources included",
+      "Convenient home delivery options"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "#",
+    "ctaText": "View Plan",
+    "description": ""
+  },
+  {
+    "id": "embody",
+    "rank": 6,
+    "name": "Embody",
+    "slug": "embody",
+    "tagline": "Doctor-Led Weight Loss Solutions",
+    "logo": "/logos/embody.svg",
+    "rating": 9.1,
+    "ratingLabel": "Excellent",
+    "reviewCount": 3650,
+    "highlights": [
+      "Medical evaluation completed online",
+      "Access to prescription treatment options",
+      "Ongoing provider monitoring and support"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "#",
+    "ctaText": "View Plan",
+    "description": ""
+  },
+  {
+    "id": "wellmedr",
+    "rank": 7,
+    "name": "WellMedR",
+    "slug": "wellmedr",
+    "tagline": "Long-Term Weight Management Support",
+    "logo": "/logos/wellmedr.svg",
+    "rating": 8.9,
+    "ratingLabel": "Very Good",
+    "reviewCount": 2980,
+    "highlights": [
+      "Clinical guidance throughout treatment",
+      "Progress tracking and medication management",
+      "Focus on sustainable results"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "#",
+    "ctaText": "View Plan",
+    "description": ""
+  },
+  {
+    "id": "sunlight",
+    "rank": 8,
+    "name": "Sunlight",
+    "slug": "sunlight",
+    "tagline": "Flexible Telehealth Weight Loss Care",
+    "logo": "/logos/sunlight.svg",
+    "rating": 8.7,
+    "ratingLabel": "Very Good",
+    "reviewCount": 2740,
+    "highlights": [
+      "Virtual consultations with licensed providers",
+      "Treatment plans adapted to individual needs",
+      "Convenient online access and follow-up care"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "#",
+    "ctaText": "View Plan",
+    "description": ""
+  },
+  {
+    "id": "medvi",
+    "rank": 9,
+    "name": "Medvi",
+    "slug": "medvi",
+    "tagline": "Medical Weight Loss Made Simple",
+    "logo": "/logos/medvi.svg",
+    "rating": 8.5,
+    "ratingLabel": "Very Good",
+    "reviewCount": 2310,
+    "highlights": [
+      "Prescription-based treatment options",
+      "Provider support available throughout the program",
+      "Straightforward online enrollment process"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "#",
+    "ctaText": "View Plan",
+    "description": ""
+  },
+  {
+    "id": "sprout",
+    "rank": 10,
+    "name": "Sprout",
+    "slug": "sprout",
+    "tagline": "Personalized Metabolic Health Programs",
+    "logo": "/logos/sprout.svg",
+    "rating": 8.4,
+    "ratingLabel": "Very Good",
+    "reviewCount": 1890,
+    "highlights": [
+      "Customized treatment recommendations",
+      "Focus on long-term lifestyle improvement",
+      "Provider-guided weight loss support"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "#",
+    "ctaText": "View Plan",
+    "description": ""
+  }
+]
