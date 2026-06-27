@@ -262,12 +262,27 @@ export default function FindYourMatchPage() {
   if (phase === "midmsg") {
     return (
       <><HideChrome /><div className="flex min-h-[60vh] flex-col items-center justify-center px-6">
-        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0C4B75]/10">
-          <Check className="h-5 w-5 text-[#0C4B75]" strokeWidth={2} />
+        {/* Animated pulsing ring with check */}
+        <div className="relative flex h-14 w-14 items-center justify-center">
+          <div className="absolute inset-0 animate-ping rounded-full bg-[#0C4B75]/10" style={{ animationDuration: "1.5s" }} />
+          <div className="absolute inset-0 animate-pulse rounded-full bg-[#0C4B75]/5" style={{ animationDuration: "2s" }} />
+          <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#0C4B75] to-[#1a7ab5] shadow-lg">
+            <Check className="h-6 w-6 text-white" strokeWidth={2.5} />
+          </div>
         </div>
-        <p className="mt-4 text-center text-[17px] font-medium text-gray-600 sm:text-[19px]">
+        <p className="mt-5 text-center text-[18px] font-semibold text-[#191919] sm:text-[20px]">
           {quiz.midFlowMessage}
         </p>
+        {/* Animated dots */}
+        <div className="mt-3 flex items-center gap-1.5">
+          {[0, 1, 2].map((i) => (
+            <div
+              key={i}
+              className="h-1.5 w-1.5 rounded-full bg-[#0C4B75]/40 animate-bounce"
+              style={{ animationDelay: `${i * 0.2}s`, animationDuration: "1s" }}
+            />
+          ))}
+        </div>
       </div></>
     );
   }
