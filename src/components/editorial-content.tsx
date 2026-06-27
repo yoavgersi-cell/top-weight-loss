@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function EditorialContent() {
   return (
-    <div className="mx-auto max-w-[1200px] px-4 py-12 text-[16px] leading-[1.7] text-gray-700">
+    <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-700">
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">
         Weight Loss Injections Compared
       </h2>

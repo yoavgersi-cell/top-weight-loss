@@ -104,7 +104,7 @@ export default async function HomePage() {
         description={config.hero.description}
       />
 
-      <section className="mx-auto max-w-[1200px] px-4 pt-6 pb-14">
+      <section className="mx-auto max-w-[1200px] px-4 pt-6 pb-6">
         <div className="flex gap-6 items-start">
           <div className="min-w-0 flex-1 space-y-4">
             {displayList.map((product) => (
