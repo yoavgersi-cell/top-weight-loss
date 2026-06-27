@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import type { SiteConfig, Provider, FaqItem, ReviewData, RankingPageConfig } from "@/lib/config";
+import type { SiteConfig, Provider, FaqItem, ReviewData, ArticleData, RankingPageConfig } from "@/lib/config";
 
 export default function AdminPage() {
   const [password, setPassword] = useState("");
@@ -9,7 +9,7 @@ export default function AdminPage() {
   const [config, setConfig] = useState<SiteConfig | null>(null);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState("");
-  const [activeTab, setActiveTab] = useState<"providers" | "ranking" | "hero" | "sidebar" | "faqs" | "reviews" | "quiz" | "general">("providers");
+  const [activeTab, setActiveTab] = useState<"providers" | "ranking" | "hero" | "sidebar" | "faqs" | "reviews" | "articles" | "quiz" | "general">("providers");
 
   const token = typeof window !== "undefined" ? sessionStorage.getItem("admin_token") : null;
 
@@ -224,6 +224,7 @@ export default function AdminPage() {
     { key: "sidebar" as const, label: "Sidebar" },
     { key: "faqs" as const, label: "FAQs" },
     { key: "reviews" as const, label: "Reviews" },
+    { key: "articles" as const, label: "Articles" },
     { key: "quiz" as const, label: "Quiz" },
     { key: "general" as const, label: "General" },
   ];
@@ -579,6 +580,199 @@ export default function AdminPage() {
                 </div>
               );
             })}
+          </div>
+        )}
+
+        {/* Articles Tab */}
+        {activeTab === "articles" && (
+          <div className="space-y-4">
+            {(config.articles ?? []).map((article, index) => (
+              <div key={article.slug || index} className="rounded-xl border bg-white p-6 shadow-sm">
+                <div className="mb-4 flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div
+                      className="h-9 w-9 rounded-lg"
+                      style={{ backgroundColor: article.heroColor || "#EEF4FB" }}
+                    />
+                    <div>
+                      <h3 className="text-sm font-bold text-[#191919]">
+                        {article.title || "Untitled Article"}
+                      </h3>
+                      <span className="text-xs text-gray-400">/{article.slug}</span>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => {
+                      const articles = (config.articles ?? []).filter((_, i) => i !== index);
+                      setConfig({ ...config, articles });
+                    }}
+                    className="flex h-8 w-8 items-center justify-center rounded border border-red-200 text-red-400 hover:bg-red-50 hover:text-red-600"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                  </button>
+                </div>
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <Field
+                    label="Title"
+                    value={article.title}
+                    onChange={(v) => {
+                      const articles = [...(config.articles ?? [])];
+                      articles[index] = { ...articles[index], title: v };
+                      setConfig({ ...config, articles });
+                    }}
+                  />
+                  <Field
+                    label="Slug"
+                    value={article.slug}
+                    onChange={(v) => {
+                      const articles = [...(config.articles ?? [])];
+                      articles[index] = { ...articles[index], slug: v };
+                      setConfig({ ...config, articles });
+                    }}
+                  />
+                  <div className="sm:col-span-2">
+                    <Field
+                      label="Description (SEO)"
+                      value={article.description}
+                      onChange={(v) => {
+                        const articles = [...(config.articles ?? [])];
+                        articles[index] = { ...articles[index], description: v };
+                        setConfig({ ...config, articles });
+                      }}
+                    />
+                  </div>
+                  <Field
+                    label="Category"
+                    value={article.category}
+                    onChange={(v) => {
+                      const articles = [...(config.articles ?? [])];
+                      articles[index] = { ...articles[index], category: v };
+                      setConfig({ ...config, articles });
+                    }}
+                  />
+                  <Field
+                    label="Read Time"
+                    value={article.readTime}
+                    onChange={(v) => {
+                      const articles = [...(config.articles ?? [])];
+                      articles[index] = { ...articles[index], readTime: v };
+                      setConfig({ ...config, articles });
+                    }}
+                  />
+                  <Field
+                    label="Published Date"
+                    value={article.publishedAt}
+                    onChange={(v) => {
+                      const articles = [...(config.articles ?? [])];
+                      articles[index] = { ...articles[index], publishedAt: v };
+                      setConfig({ ...config, articles });
+                    }}
+                  />
+                  <Field
+                    label="Updated Date"
+                    value={article.updatedAt}
+                    onChange={(v) => {
+                      const articles = [...(config.articles ?? [])];
+                      articles[index] = { ...articles[index], updatedAt: v };
+                      setConfig({ ...config, articles });
+                    }}
+                  />
+                  <Field
+                    label="Hero Color (hex)"
+                    value={article.heroColor}
+                    onChange={(v) => {
+                      const articles = [...(config.articles ?? [])];
+                      articles[index] = { ...articles[index], heroColor: v };
+                      setConfig({ ...config, articles });
+                    }}
+                  />
+                </div>
+
+                {/* Sections */}
+                <div className="mt-5">
+                  <label className="mb-2 block text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                    Content Sections
+                  </label>
+                  <div className="space-y-4">
+                    {(article.sections ?? []).map((section, si) => (
+                      <div key={si} className="rounded-lg border bg-gray-50 p-4">
+                        <div className="mb-2 flex items-center justify-between">
+                          <span className="text-xs font-semibold text-gray-400">Section {si + 1}</span>
+                          <button
+                            onClick={() => {
+                              const articles = [...(config.articles ?? [])];
+                              const sections = articles[index].sections.filter((_, i) => i !== si);
+                              articles[index] = { ...articles[index], sections };
+                              setConfig({ ...config, articles });
+                            }}
+                            className="rounded border border-red-200 px-2 py-0.5 text-xs text-red-500 hover:bg-red-50"
+                          >
+                            Remove
+                          </button>
+                        </div>
+                        <Field
+                          label="Heading"
+                          value={section.heading}
+                          onChange={(v) => {
+                            const articles = [...(config.articles ?? [])];
+                            const sections = [...articles[index].sections];
+                            sections[si] = { ...sections[si], heading: v };
+                            articles[index] = { ...articles[index], sections };
+                            setConfig({ ...config, articles });
+                          }}
+                        />
+                        <div className="mt-2">
+                          <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Body</label>
+                          <textarea
+                            value={section.body}
+                            onChange={(e) => {
+                              const articles = [...(config.articles ?? [])];
+                              const sections = [...articles[index].sections];
+                              sections[si] = { ...sections[si], body: e.target.value };
+                              articles[index] = { ...articles[index], sections };
+                              setConfig({ ...config, articles });
+                            }}
+                            rows={4}
+                            className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none"
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <button
+                    onClick={() => {
+                      const articles = [...(config.articles ?? [])];
+                      const sections = [...articles[index].sections, { heading: "", body: "" }];
+                      articles[index] = { ...articles[index], sections };
+                      setConfig({ ...config, articles });
+                    }}
+                    className="mt-2 rounded border border-dashed border-gray-300 px-3 py-1.5 text-xs font-medium text-gray-400 hover:border-[#0C4B75] hover:text-[#0C4B75]"
+                  >
+                    + Add Section
+                  </button>
+                </div>
+              </div>
+            ))}
+            <button
+              onClick={() => {
+                const newArticle: ArticleData = {
+                  slug: `article-${Date.now()}`,
+                  title: "New Article",
+                  description: "",
+                  category: "Guide",
+                  readTime: "5 min read",
+                  publishedAt: new Date().toISOString().split("T")[0],
+                  updatedAt: new Date().toISOString().split("T")[0],
+                  heroColor: "#EEF4FB",
+                  sections: [{ heading: "Introduction", body: "" }],
+                };
+                setConfig({ ...config, articles: [...(config.articles ?? []), newArticle] });
+              }}
+              className="w-full rounded-lg border-2 border-dashed border-gray-300 py-4 text-sm font-medium text-gray-400 hover:border-[#0C4B75] hover:text-[#0C4B75]"
+            >
+              + Add Article
+            </button>
           </div>
         )}
 
