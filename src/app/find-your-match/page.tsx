@@ -314,8 +314,8 @@ export default function FindYourMatchPage() {
     const others = matchedProviders.slice(1);
 
     return (
-      <><HideChrome /><div className="bg-[#F7F8FA] py-8 sm:py-14">
-        <div className="mx-auto max-w-[800px] px-4">
+      <><HideChrome /><div className="bg-[#F7F8FA] py-8 sm:py-14 overflow-x-hidden">
+        <div className="mx-auto max-w-[800px] px-4 overflow-hidden">
           {/* Trust strip */}
           <div className="mb-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             {quiz.trustStrip.map((item, i) => (
