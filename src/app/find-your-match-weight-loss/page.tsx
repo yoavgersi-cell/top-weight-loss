@@ -285,7 +285,7 @@ export default function ChatQuizPage() {
   return (
     <>
       <HideChrome />
-      <div className="flex flex-col bg-[#F5F3EF]" style={{ minHeight: "calc(100dvh - 64px)" }}>
+      <div className="fixed inset-x-0 top-[64px] bottom-0 flex flex-col bg-[#F5F3EF]">
         {/* Header */}
         <div className="shrink-0 border-b border-[#E8E4DD] bg-[#F5F3EF] px-4 pb-5 pt-6 text-center sm:pb-6 sm:pt-8">
           <h1 className="text-[24px] font-extrabold leading-tight text-[#191919] sm:text-[32px]">
@@ -297,7 +297,7 @@ export default function ChatQuizPage() {
         </div>
 
         {/* Chat area */}
-        <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-4 sm:px-6">
+        <div ref={scrollRef} className="min-h-0 flex-1 overflow-y-auto px-4 py-4 sm:px-6">
           <div className="mx-auto max-w-[560px] space-y-4">
             {messages.map((msg) => (
               <div
