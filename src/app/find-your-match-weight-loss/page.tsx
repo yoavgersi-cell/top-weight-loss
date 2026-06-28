@@ -62,7 +62,8 @@ export default function ChatQuizPage() {
   const quiz: QuizConfig | null = config?.quiz ?? null;
   const questions = quiz?.questions ?? [];
   const totalSteps = questions.length;
-  const progress = totalSteps > 0 && currentStep >= 0 ? Math.round(((currentStep + 1) / totalSteps) * 100) : (totalSteps > 0 ? Math.round((1 / totalSteps) * 100) : 0);
+  const answeredCount = Object.keys(answers).length;
+  const progress = totalSteps > 0 ? Math.round((answeredCount / totalSteps) * 100) : 0;
 
   function scrollToBottom() {
     setTimeout(() => {
