@@ -213,16 +213,16 @@ export default function ChatQuizPage() {
   if (phase === "loading") {
     const msgs = quiz.loadingMessages;
     return (
-      <><HideChrome /><div className="flex min-h-[60vh] flex-col items-center justify-center gap-8 px-6 bg-[#F5F3EF]">
+      <><HideChrome /><div className="flex min-h-[60vh] flex-col items-center justify-center gap-8 px-6 bg-[#F7F8FA]">
         <div className="relative flex h-14 w-14 items-center justify-center">
-          <div className="absolute inset-0 animate-ping rounded-full bg-[#D4A843]/20" style={{ animationDuration: "1.5s" }} />
-          <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#D4A843] to-[#C49530] shadow-lg">
+          <div className="absolute inset-0 animate-ping rounded-full bg-[#0C4B75]/20" style={{ animationDuration: "1.5s" }} />
+          <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#0C4B75] to-[#093d61] shadow-lg">
             <Check className="h-6 w-6 text-white" strokeWidth={2.5} />
           </div>
         </div>
         <div className="w-full max-w-[320px]">
-          <div className="h-2 w-full overflow-hidden rounded-full bg-[#E8E4DD]">
-            <div className="h-full rounded-full bg-[#D4A843] transition-all duration-100" style={{ width: `${loadingPct}%` }} />
+          <div className="h-2 w-full overflow-hidden rounded-full bg-[#E5E7EB]">
+            <div className="h-full rounded-full bg-[#0C4B75] transition-all duration-100" style={{ width: `${loadingPct}%` }} />
           </div>
           <p className="mt-1 text-right text-[12px] text-gray-400">{loadingPct}%</p>
         </div>
@@ -285,9 +285,9 @@ export default function ChatQuizPage() {
   return (
     <>
       <HideChrome />
-      <div className="fixed inset-0 flex flex-col bg-[#F5F3EF]">
+      <div className="fixed inset-0 flex flex-col bg-[#F7F8FA]">
         {/* Logo bar */}
-        <div className="shrink-0 border-b border-[#E8E4DD] bg-white px-4 py-3">
+        <div className="shrink-0 border-b border-[#E5E7EB] bg-white px-4 py-3">
           <a href="/" className="flex items-center gap-2">
             <svg className="h-6 w-6 text-[#0C4B75]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg>
             <span className="text-[18px] font-bold text-[#191919]">topweightloss<span className="text-[#0C4B75]">.io</span></span>
@@ -295,7 +295,7 @@ export default function ChatQuizPage() {
         </div>
 
         {/* Header */}
-        <div className="shrink-0 border-b border-[#E8E4DD] bg-[#F5F3EF] px-4 pb-5 pt-5 text-center sm:pb-6 sm:pt-6">
+        <div className="shrink-0 border-b border-[#E5E7EB] bg-[#F7F8FA] px-4 pb-5 pt-5 text-center sm:pb-6 sm:pt-6">
           <h1 className="text-[24px] font-extrabold leading-tight text-[#191919] sm:text-[32px]">
             {quiz.pageTitle || quiz.welcomeTitle}
           </h1>
@@ -315,8 +315,8 @@ export default function ChatQuizPage() {
                 <div
                   className={`${
                     msg.from === "user"
-                      ? "rounded-2xl rounded-br-sm bg-[#D4A843] px-5 py-3.5 text-[16px] font-medium text-white sm:text-[17px]"
-                      : "max-w-[85%] rounded-2xl rounded-bl-sm bg-[#EDEAE4] px-5 py-4 text-[16px] text-[#191919] sm:text-[17px]"
+                      ? "rounded-2xl rounded-br-sm bg-[#0C4B75] px-5 py-3.5 text-[16px] font-medium text-white sm:text-[17px]"
+                      : "max-w-[85%] rounded-2xl rounded-bl-sm bg-[#E8EDF2] px-5 py-4 text-[16px] text-[#191919] sm:text-[17px]"
                   }`}
                 >
                   {msg.text}
@@ -327,7 +327,7 @@ export default function ChatQuizPage() {
             {/* Typing indicator */}
             {typing && (
               <div className="flex justify-start animate-[fadeSlideUp_0.2s_ease-out]">
-                <div className="rounded-2xl rounded-bl-sm bg-[#EDEAE4] px-5 py-5">
+                <div className="rounded-2xl rounded-bl-sm bg-[#E8EDF2] px-5 py-5">
                   <div className="flex items-center gap-2">
                     {[0, 1, 2].map((i) => (
                       <div key={i} className="h-2.5 w-2.5 rounded-full bg-gray-400 animate-bounce" style={{ animationDelay: `${i * 0.15}s`, animationDuration: "0.8s" }} />
@@ -344,7 +344,7 @@ export default function ChatQuizPage() {
                   <button
                     key={opt.value}
                     onClick={() => handleSelect(opt.value, opt.label)}
-                    className="rounded-full border border-[#D9D5CE] bg-white px-6 py-3 text-[15px] font-medium text-[#191919] transition-all hover:border-[#D4A843] hover:bg-[#D4A843]/5 active:scale-[0.97] sm:text-[16px]"
+                    className="rounded-full border border-[#D1D5DB] bg-white px-6 py-3 text-[15px] font-medium text-[#191919] transition-all hover:border-[#0C4B75] hover:bg-[#0C4B75]/5 active:scale-[0.97] sm:text-[16px]"
                   >
                     {opt.label}
                   </button>
@@ -358,7 +358,7 @@ export default function ChatQuizPage() {
                 <div className="relative flex-1">
                   <select
                     id="chat-dropdown"
-                    className="w-full appearance-none rounded-full border-2 border-[#D4A843]/50 bg-white px-6 py-3.5 pr-10 text-[15px] text-gray-700 focus:border-[#D4A843] focus:outline-none sm:text-[16px]"
+                    className="w-full appearance-none rounded-full border-2 border-[#0C4B75]/50 bg-white px-6 py-3.5 pr-10 text-[15px] text-gray-700 focus:border-[#0C4B75] focus:outline-none sm:text-[16px]"
                     defaultValue=""
                     onChange={() => {}}
                   >
@@ -376,7 +376,7 @@ export default function ChatQuizPage() {
                     const opt = activeOptions.options.find((o) => o.value === select.value);
                     if (opt) handleSelect(opt.value, opt.label);
                   }}
-                  className="flex h-[48px] w-[48px] shrink-0 items-center justify-center rounded-full bg-[#D4A843] text-white shadow-sm transition-all hover:bg-[#C49530] active:scale-95"
+                  className="flex h-[48px] w-[48px] shrink-0 items-center justify-center rounded-full bg-[#0C4B75] text-white shadow-sm transition-all hover:bg-[#093d61] active:scale-95"
                 >
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m22 2-7 20-4-9-9-4 20-7z"/><path d="M22 2 11 13"/></svg>
                 </button>
@@ -386,11 +386,11 @@ export default function ChatQuizPage() {
         </div>
 
         {/* Bottom progress bar */}
-        <div className="shrink-0 sticky bottom-0 border-t border-[#E8E4DD] bg-[#F5F3EF] px-4 py-3">
+        <div className="shrink-0 sticky bottom-0 border-t border-[#E5E7EB] bg-[#F7F8FA] px-4 py-3">
           <div className="mx-auto flex max-w-[560px] items-center gap-3">
-            <div className="h-[10px] flex-1 overflow-hidden rounded-full bg-[#E8E4DD]">
+            <div className="h-[10px] flex-1 overflow-hidden rounded-full bg-[#E5E7EB]">
               <div
-                className="h-full rounded-full bg-[#D4A843] transition-all duration-500 ease-out"
+                className="h-full rounded-full bg-[#0C4B75] transition-all duration-500 ease-out"
                 style={{ width: `${progress}%` }}
               />
             </div>
