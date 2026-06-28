@@ -344,23 +344,34 @@ export default function ChatQuizPage() {
               </div>
             )}
 
-            {/* Dropdown as select */}
+            {/* Dropdown as pill select + send button */}
             {activeOptions && activeOptions.type === "dropdown" && (
-              <div className="flex gap-2 animate-[fadeSlideUp_0.3s_ease-out]">
-                <select
-                  id="chat-dropdown"
-                  className="flex-1 rounded-full border border-[#D9D5CE] bg-white px-6 py-3 text-[15px] text-gray-700 focus:border-[#D4A843] focus:outline-none sm:text-[16px]"
-                  defaultValue=""
-                  onChange={(e) => {
-                    const opt = activeOptions.options.find((o) => o.value === e.target.value);
+              <div className="flex items-center gap-2.5 animate-[fadeSlideUp_0.3s_ease-out]">
+                <div className="relative flex-1">
+                  <select
+                    id="chat-dropdown"
+                    className="w-full appearance-none rounded-full border-2 border-[#D4A843]/50 bg-white px-6 py-3.5 pr-10 text-[15px] text-gray-700 focus:border-[#D4A843] focus:outline-none sm:text-[16px]"
+                    defaultValue=""
+                    onChange={() => {}}
+                  >
+                    <option value="" disabled>Select your state...</option>
+                    {activeOptions.options.map((opt) => (
+                      <option key={opt.value} value={opt.value}>{opt.label}</option>
+                    ))}
+                  </select>
+                  <svg className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </div>
+                <button
+                  onClick={() => {
+                    const select = document.getElementById("chat-dropdown") as HTMLSelectElement;
+                    if (!select?.value) return;
+                    const opt = activeOptions.options.find((o) => o.value === select.value);
                     if (opt) handleSelect(opt.value, opt.label);
                   }}
+                  className="flex h-[48px] w-[48px] shrink-0 items-center justify-center rounded-full bg-[#D4A843] text-white shadow-sm transition-all hover:bg-[#C49530] active:scale-95"
                 >
-                  <option value="" disabled>Select your state...</option>
-                  {activeOptions.options.map((opt) => (
-                    <option key={opt.value} value={opt.value}>{opt.label}</option>
-                  ))}
-                </select>
+                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m22 2-7 20-4-9-9-4 20-7z"/><path d="M22 2 11 13"/></svg>
+                </button>
               </div>
             )}
           </div>
