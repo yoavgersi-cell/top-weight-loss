@@ -282,11 +282,11 @@ export default function ChatQuizPage() {
       <HideChrome />
       <div className="flex flex-col bg-[#F5F3EF]" style={{ minHeight: "calc(100dvh - 64px)" }}>
         {/* Header */}
-        <div className="shrink-0 border-b border-[#E8E4DD] bg-[#F5F3EF] px-4 pb-4 pt-5 text-center sm:pb-5 sm:pt-6">
-          <h1 className="text-[20px] font-extrabold leading-tight text-[#191919] sm:text-[28px]">
+        <div className="shrink-0 border-b border-[#E8E4DD] bg-[#F5F3EF] px-4 pb-5 pt-6 text-center sm:pb-6 sm:pt-8">
+          <h1 className="text-[24px] font-extrabold leading-tight text-[#191919] sm:text-[32px]">
             {quiz.pageTitle || quiz.welcomeTitle}
           </h1>
-          <p className="mx-auto mt-1.5 max-w-[420px] text-[12px] leading-relaxed text-gray-500 sm:text-[14px]">
+          <p className="mx-auto mt-2 max-w-[440px] text-[14px] leading-relaxed text-gray-500 sm:text-[16px]">
             {quiz.pageSubtitle || quiz.welcomeSubtitle}
           </p>
         </div>
@@ -302,8 +302,8 @@ export default function ChatQuizPage() {
                 <div
                   className={`${
                     msg.from === "user"
-                      ? "rounded-2xl rounded-br-sm bg-[#D4A843] px-5 py-3 text-[15px] font-medium text-white sm:text-[16px]"
-                      : "max-w-[85%] rounded-2xl rounded-bl-sm bg-[#EDEAE4] px-5 py-3.5 text-[15px] text-[#191919] sm:text-[16px]"
+                      ? "rounded-2xl rounded-br-sm bg-[#D4A843] px-5 py-3.5 text-[16px] font-medium text-white sm:text-[17px]"
+                      : "max-w-[85%] rounded-2xl rounded-bl-sm bg-[#EDEAE4] px-5 py-4 text-[16px] text-[#191919] sm:text-[17px]"
                   }`}
                 >
                   {msg.text}
@@ -314,10 +314,10 @@ export default function ChatQuizPage() {
             {/* Typing indicator */}
             {typing && (
               <div className="flex justify-start animate-[fadeSlideUp_0.2s_ease-out]">
-                <div className="rounded-2xl rounded-bl-sm bg-[#EDEAE4] px-5 py-4">
-                  <div className="flex items-center gap-1.5">
+                <div className="rounded-2xl rounded-bl-sm bg-[#EDEAE4] px-5 py-5">
+                  <div className="flex items-center gap-2">
                     {[0, 1, 2].map((i) => (
-                      <div key={i} className="h-2 w-2 rounded-full bg-gray-400 animate-bounce" style={{ animationDelay: `${i * 0.15}s`, animationDuration: "0.8s" }} />
+                      <div key={i} className="h-2.5 w-2.5 rounded-full bg-gray-400 animate-bounce" style={{ animationDelay: `${i * 0.15}s`, animationDuration: "0.8s" }} />
                     ))}
                   </div>
                 </div>
@@ -326,12 +326,12 @@ export default function ChatQuizPage() {
 
             {/* Option pills */}
             {activeOptions && activeOptions.type === "cards" && (
-              <div className="flex flex-wrap gap-2 animate-[fadeSlideUp_0.3s_ease-out]">
+              <div className="flex flex-wrap gap-2.5 animate-[fadeSlideUp_0.3s_ease-out]">
                 {activeOptions.options.map((opt) => (
                   <button
                     key={opt.value}
                     onClick={() => handleSelect(opt.value, opt.label)}
-                    className="rounded-full border border-[#D9D5CE] bg-white px-5 py-2.5 text-[14px] font-medium text-[#191919] transition-all hover:border-[#D4A843] hover:bg-[#D4A843]/5 active:scale-[0.97] sm:text-[15px]"
+                    className="rounded-full border border-[#D9D5CE] bg-white px-6 py-3 text-[15px] font-medium text-[#191919] transition-all hover:border-[#D4A843] hover:bg-[#D4A843]/5 active:scale-[0.97] sm:text-[16px]"
                   >
                     {opt.label}
                   </button>
@@ -344,7 +344,7 @@ export default function ChatQuizPage() {
               <div className="flex gap-2 animate-[fadeSlideUp_0.3s_ease-out]">
                 <select
                   id="chat-dropdown"
-                  className="flex-1 rounded-full border border-[#D9D5CE] bg-white px-5 py-2.5 text-[14px] text-gray-700 focus:border-[#D4A843] focus:outline-none sm:text-[15px]"
+                  className="flex-1 rounded-full border border-[#D9D5CE] bg-white px-6 py-3 text-[15px] text-gray-700 focus:border-[#D4A843] focus:outline-none sm:text-[16px]"
                   defaultValue=""
                   onChange={(e) => {
                     const opt = activeOptions.options.find((o) => o.value === e.target.value);
@@ -364,13 +364,13 @@ export default function ChatQuizPage() {
         {/* Bottom progress bar */}
         <div className="shrink-0 sticky bottom-0 border-t border-[#E8E4DD] bg-[#F5F3EF] px-4 py-3">
           <div className="mx-auto flex max-w-[560px] items-center gap-3">
-            <div className="h-[6px] flex-1 overflow-hidden rounded-full bg-[#E8E4DD]">
+            <div className="h-[10px] flex-1 overflow-hidden rounded-full bg-[#E8E4DD]">
               <div
                 className="h-full rounded-full bg-[#D4A843] transition-all duration-500 ease-out"
                 style={{ width: `${progress}%` }}
               />
             </div>
-            <span className="shrink-0 text-[12px] font-medium text-gray-400">{progress}%</span>
+            <span className="shrink-0 text-[14px] font-semibold text-gray-400">{progress}%</span>
           </div>
         </div>
       </div>
