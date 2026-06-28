@@ -7,6 +7,7 @@ export interface Provider {
   highlights: string[];
   affiliateUrl: string;
   ctaText: string;
+  trustpilotReviews?: string;
 }
 
 export interface RankingPosition {

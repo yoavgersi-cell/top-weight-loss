@@ -13,6 +13,7 @@ interface ComparisonCardProduct {
   rating: number;
   ratingLabel: string;
   badge?: string;
+  trustpilotReviews?: string;
 }
 
 interface ComparisonCardProps {
@@ -83,6 +84,9 @@ export function ComparisonCard({ product, hideRank }: ComparisonCardProps) {
             Visit Site
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
+          {product.trustpilotReviews && (
+            <TrustpilotLine reviews={product.trustpilotReviews} />
+          )}
         </div>
       </div>
 
@@ -124,7 +128,22 @@ export function ComparisonCard({ product, hideRank }: ComparisonCardProps) {
           Visit Site
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
+        {product.trustpilotReviews && (
+          <TrustpilotLine reviews={product.trustpilotReviews} />
+        )}
       </div>
     </article>
+  );
+}
+
+function TrustpilotLine({ reviews }: { reviews: string }) {
+  return (
+    <p className="mt-2 flex items-center justify-center gap-1.5 text-[12px] font-semibold text-[#00B67A]">
+      {reviews} reviews by
+      <svg className="h-[14px] w-[14px]" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#00B67A" />
+      </svg>
+      <span className="text-[#1A1A1A] font-medium">Trustpilot</span>
+    </p>
   );
 }
