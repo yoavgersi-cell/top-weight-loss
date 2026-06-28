@@ -23,13 +23,18 @@ interface QuizMatchedProvider extends Provider {
 function HideChrome() {
   useEffect(() => {
     const footer = document.querySelector("footer");
+    if (!footer) return;
+    const disclosure = footer.querySelector("p:has(strong)");
+    const footerNav = footer.querySelector("nav");
     const headerNav = document.querySelector("header nav");
     const hamburger = document.querySelector("header button");
-    if (footer) (footer as HTMLElement).style.display = "none";
+    if (disclosure) (disclosure as HTMLElement).style.display = "none";
+    if (footerNav) (footerNav as HTMLElement).style.display = "none";
     if (headerNav) (headerNav as HTMLElement).style.display = "none";
     if (hamburger) (hamburger as HTMLElement).style.display = "none";
     return () => {
-      if (footer) (footer as HTMLElement).style.display = "";
+      if (disclosure) (disclosure as HTMLElement).style.display = "";
+      if (footerNav) (footerNav as HTMLElement).style.display = "";
       if (headerNav) (headerNav as HTMLElement).style.display = "";
       if (hamburger) (hamburger as HTMLElement).style.display = "";
     };
@@ -275,8 +280,8 @@ export default function ChatQuizPage() {
   return (
     <>
       <HideChrome />
-      <div className="flex h-[calc(100vh-64px)] flex-col bg-[#F5F3EF]">
-        {/* Fixed header */}
+      <div className="flex flex-col bg-[#F5F3EF]" style={{ minHeight: "calc(100dvh - 64px)" }}>
+        {/* Header */}
         <div className="shrink-0 border-b border-[#E8E4DD] bg-[#F5F3EF] px-4 pb-4 pt-5 text-center sm:pb-5 sm:pt-6">
           <h1 className="text-[20px] font-extrabold leading-tight text-[#191919] sm:text-[28px]">
             {quiz.pageTitle || quiz.welcomeTitle}
@@ -287,7 +292,7 @@ export default function ChatQuizPage() {
         </div>
 
         {/* Chat area */}
-        <div ref={scrollRef} className="min-h-0 flex-1 overflow-y-auto px-4 py-4 sm:px-6">
+        <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-4 sm:px-6">
           <div className="mx-auto max-w-[560px] space-y-4">
             {messages.map((msg) => (
               <div
@@ -357,7 +362,7 @@ export default function ChatQuizPage() {
         </div>
 
         {/* Bottom progress bar */}
-        <div className="border-t border-[#E8E4DD] bg-[#F5F3EF] px-4 py-3">
+        <div className="shrink-0 sticky bottom-0 border-t border-[#E8E4DD] bg-[#F5F3EF] px-4 py-3">
           <div className="mx-auto flex max-w-[560px] items-center gap-3">
             <div className="h-[6px] flex-1 overflow-hidden rounded-full bg-[#E8E4DD]">
               <div
