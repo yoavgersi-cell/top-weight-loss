@@ -55,12 +55,6 @@ export function ComparisonCard({ product, hideRank }: ComparisonCardProps) {
         {/* Column 2: Content */}
         <div className="flex-1 px-6 py-5">
           <h3 className="text-[12px] font-semibold text-[#1A1A1A]">{product.name}</h3>
-          <a
-            href={`/reviews/${product.id}`}
-            className="text-[12px] font-semibold text-[#0B5E9E] hover:underline"
-          >
-            Read Review
-          </a>
           {product.trustpilotReviews && (
             <TrustpilotLine reviews={product.trustpilotReviews} />
           )}
@@ -139,12 +133,12 @@ export function ComparisonCard({ product, hideRank }: ComparisonCardProps) {
 
 function TrustpilotLine({ reviews }: { reviews: string }) {
   return (
-    <p className="mt-1.5 flex items-center gap-1 text-[11px] font-semibold text-[#00B67A]">
+    <p className="mt-1 flex items-center gap-1 text-[11px] font-semibold text-[#191919]">
       {reviews} reviews by
       <svg className="h-[13px] w-[13px]" viewBox="0 0 24 24" fill="none">
         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#00B67A" />
       </svg>
-      <span className="text-[#191919] font-medium">Trustpilot</span>
+      Trustpilot
     </p>
   );
 }
