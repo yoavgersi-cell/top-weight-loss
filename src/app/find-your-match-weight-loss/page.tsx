@@ -23,18 +23,13 @@ interface QuizMatchedProvider extends Provider {
 function HideChrome() {
   useEffect(() => {
     const footer = document.querySelector("footer");
-    if (!footer) return;
-    const disclosure = footer.querySelector("p:has(strong)");
-    const footerNav = footer.querySelector("nav");
     const headerNav = document.querySelector("header nav");
     const hamburger = document.querySelector("header button");
-    if (disclosure) (disclosure as HTMLElement).style.display = "none";
-    if (footerNav) (footerNav as HTMLElement).style.display = "none";
+    if (footer) (footer as HTMLElement).style.display = "none";
     if (headerNav) (headerNav as HTMLElement).style.display = "none";
     if (hamburger) (hamburger as HTMLElement).style.display = "none";
     return () => {
-      if (disclosure) (disclosure as HTMLElement).style.display = "";
-      if (footerNav) (footerNav as HTMLElement).style.display = "";
+      if (footer) (footer as HTMLElement).style.display = "";
       if (headerNav) (headerNav as HTMLElement).style.display = "";
       if (hamburger) (hamburger as HTMLElement).style.display = "";
     };
@@ -280,19 +275,19 @@ export default function ChatQuizPage() {
   return (
     <>
       <HideChrome />
-      <div className="flex min-h-[calc(100vh-64px)] flex-col bg-[#F5F3EF]">
+      <div className="flex h-[calc(100vh-64px)] flex-col bg-[#F5F3EF]">
         {/* Fixed header */}
-        <div className="border-b border-[#E8E4DD] bg-[#F5F3EF] px-4 pb-5 pt-6 text-center sm:pb-6 sm:pt-8">
-          <h1 className="text-[22px] font-extrabold leading-tight text-[#191919] sm:text-[30px]">
+        <div className="shrink-0 border-b border-[#E8E4DD] bg-[#F5F3EF] px-4 pb-4 pt-5 text-center sm:pb-5 sm:pt-6">
+          <h1 className="text-[20px] font-extrabold leading-tight text-[#191919] sm:text-[28px]">
             {quiz.pageTitle || quiz.welcomeTitle}
           </h1>
-          <p className="mx-auto mt-2 max-w-[420px] text-[13px] leading-relaxed text-gray-500 sm:text-[15px]">
+          <p className="mx-auto mt-1.5 max-w-[420px] text-[12px] leading-relaxed text-gray-500 sm:text-[14px]">
             {quiz.pageSubtitle || quiz.welcomeSubtitle}
           </p>
         </div>
 
         {/* Chat area */}
-        <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
+        <div ref={scrollRef} className="min-h-0 flex-1 overflow-y-auto px-4 py-4 sm:px-6">
           <div className="mx-auto max-w-[560px] space-y-4">
             {messages.map((msg) => (
               <div
