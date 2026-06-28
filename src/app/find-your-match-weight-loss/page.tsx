@@ -23,18 +23,13 @@ interface QuizMatchedProvider extends Provider {
 function HideChrome() {
   useEffect(() => {
     const footer = document.querySelector("footer");
-    if (!footer) return;
-    const disclosure = footer.querySelector("p:has(strong)");
-    const footerNav = footer.querySelector("nav");
     const headerNav = document.querySelector("header nav");
     const hamburger = document.querySelector("header button");
-    if (disclosure) (disclosure as HTMLElement).style.display = "none";
-    if (footerNav) (footerNav as HTMLElement).style.display = "none";
+    if (footer) (footer as HTMLElement).style.display = "none";
     if (headerNav) (headerNav as HTMLElement).style.display = "none";
     if (hamburger) (hamburger as HTMLElement).style.display = "none";
     return () => {
-      if (disclosure) (disclosure as HTMLElement).style.display = "";
-      if (footerNav) (footerNav as HTMLElement).style.display = "";
+      if (footer) (footer as HTMLElement).style.display = "";
       if (headerNav) (headerNav as HTMLElement).style.display = "";
       if (hamburger) (hamburger as HTMLElement).style.display = "";
     };
