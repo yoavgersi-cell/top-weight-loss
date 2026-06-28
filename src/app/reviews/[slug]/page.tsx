@@ -30,12 +30,12 @@ export async function generateMetadata({
     title,
     description,
     alternates: {
-      canonical: `https://topweightloss.io/reviews/${slug}`,
+      canonical: `https://www.topweightloss.io/reviews/${slug}`,
     },
     openGraph: {
       title,
       description,
-      url: `https://topweightloss.io/reviews/${slug}`,
+      url: `https://www.topweightloss.io/reviews/${slug}`,
       type: "article",
     },
   };
@@ -101,19 +101,19 @@ export default async function ReviewPage({
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://topweightloss.io",
+        item: "https://www.topweightloss.io",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Reviews",
-        item: "https://topweightloss.io/reviews",
+        item: "https://www.topweightloss.io/reviews",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: `${provider.name} Review`,
-        item: `https://topweightloss.io/reviews/${slug}`,
+        item: `https://www.topweightloss.io/reviews/${slug}`,
       },
     ],
   };

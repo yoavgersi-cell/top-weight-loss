@@ -11,7 +11,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://topweightloss.io"),
+  metadataBase: new URL("https://www.topweightloss.io"),
   title: {
     default: "Top Weight Loss Providers 2026 — Compare Trusted Providers Side by Side | topweightloss.io",
     template: "%s | topweightloss.io",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "topweightloss.io",
     locale: "en_US",
-    url: "https://topweightloss.io",
+    url: "https://www.topweightloss.io",
   },
   twitter: {
     card: "summary_large_image",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       "Compare pricing, medications, medical support, and overall value across the top weight loss providers of 2026.",
   },
   alternates: {
-    canonical: "https://topweightloss.io",
+    canonical: "https://www.topweightloss.io",
   },
   robots: {
     index: true,
@@ -82,8 +82,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "topweightloss.io",
-              url: "https://topweightloss.io",
-              logo: "https://topweightloss.io/favicon.svg",
+              url: "https://www.topweightloss.io",
+              logo: "https://www.topweightloss.io/favicon.svg",
               sameAs: [],
             }),
           }}

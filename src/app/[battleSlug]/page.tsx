@@ -35,11 +35,11 @@ export async function generateMetadata({
     return {
       title: landing.seoTitle,
       description: landing.seoDescription,
-      alternates: { canonical: `https://topweightloss.io/${landing.slug}` },
+      alternates: { canonical: `https://www.topweightloss.io/${landing.slug}` },
       openGraph: {
         title: landing.seoTitle,
         description: landing.seoDescription,
-        url: `https://topweightloss.io/${landing.slug}`,
+        url: `https://www.topweightloss.io/${landing.slug}`,
       },
     };
   }
@@ -50,11 +50,11 @@ export async function generateMetadata({
   return {
     title: battle.title,
     description: battle.description,
-    alternates: { canonical: `https://topweightloss.io/${battle.slug}` },
+    alternates: { canonical: `https://www.topweightloss.io/${battle.slug}` },
     openGraph: {
       title: battle.title,
       description: battle.description,
-      url: `https://topweightloss.io/${battle.slug}`,
+      url: `https://www.topweightloss.io/${battle.slug}`,
       type: "article",
     },
   };
@@ -87,7 +87,7 @@ export default async function BattlePage({
       "@type": "WebPage",
       name: landing.seoTitle,
       description: landing.seoDescription,
-      url: `https://topweightloss.io/${landing.slug}`,
+      url: `https://www.topweightloss.io/${landing.slug}`,
     };
 
     return (
@@ -139,7 +139,7 @@ export default async function BattlePage({
     description: battle.description,
     author: { "@type": "Organization", name: "topweightloss.io" },
     publisher: { "@type": "Organization", name: "topweightloss.io" },
-    mainEntityOfPage: `https://topweightloss.io/${battle.slug}`,
+    mainEntityOfPage: `https://www.topweightloss.io/${battle.slug}`,
   };
 
   return (

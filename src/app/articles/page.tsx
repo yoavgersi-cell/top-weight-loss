@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description:
     "Expert articles on GLP-1 medications, weight loss strategies, and choosing the right telehealth provider. Evidence-based guides updated regularly.",
   alternates: {
-    canonical: "https://topweightloss.io/articles",
+    canonical: "https://www.topweightloss.io/articles",
   },
   openGraph: {
     title: "Weight Loss Articles — Research, Guides & Expert Insights",
     description:
       "Expert articles on GLP-1 medications, weight loss strategies, and choosing the right provider.",
-    url: "https://topweightloss.io/articles",
+    url: "https://www.topweightloss.io/articles",
   },
 };
 

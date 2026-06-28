@@ -73,7 +73,7 @@ export default async function HomePage() {
     name: "Top Weight Loss Providers 2026 — Compare Trusted Providers Side by Side",
     description:
       "Compare pricing, medications, medical support, and overall value across the top weight loss providers of 2026.",
-    url: "https://topweightloss.io",
+    url: "https://www.topweightloss.io",
     mainEntity: {
       "@type": "ItemList",
       itemListElement: displayList.map((product, index) => ({
@@ -83,7 +83,7 @@ export default async function HomePage() {
           "@type": "Product",
           name: product.name,
           description: product.tagline,
-          url: `https://topweightloss.io/reviews/${product.id}`,
+          url: `https://www.topweightloss.io/reviews/${product.id}`,
           review: {
             "@type": "Review",
             reviewRating: {

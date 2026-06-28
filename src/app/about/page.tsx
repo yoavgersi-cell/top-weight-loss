@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Learn how topweightloss.io independently ranks and reviews weight loss providers. Our methodology, editorial standards, and mission.",
   alternates: {
-    canonical: "https://topweightloss.io/about",
+    canonical: "https://www.topweightloss.io/about",
   },
 };
 

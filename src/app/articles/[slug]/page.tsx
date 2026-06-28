@@ -21,12 +21,12 @@ export async function generateMetadata({
     title: article.title,
     description: article.description,
     alternates: {
-      canonical: `https://topweightloss.io/articles/${slug}`,
+      canonical: `https://www.topweightloss.io/articles/${slug}`,
     },
     openGraph: {
       title: article.title,
       description: article.description,
-      url: `https://topweightloss.io/articles/${slug}`,
+      url: `https://www.topweightloss.io/articles/${slug}`,
       type: "article",
       publishedTime: article.publishedAt,
       modifiedTime: article.updatedAt,
@@ -73,16 +73,16 @@ export default async function ArticlePage({
     author: {
       "@type": "Organization",
       name: "topweightloss.io",
-      url: "https://topweightloss.io",
+      url: "https://www.topweightloss.io",
     },
     publisher: {
       "@type": "Organization",
       name: "topweightloss.io",
-      url: "https://topweightloss.io",
+      url: "https://www.topweightloss.io",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://topweightloss.io/articles/${slug}`,
+      "@id": `https://www.topweightloss.io/articles/${slug}`,
     },
   };
 
@@ -95,19 +95,19 @@ export default async function ArticlePage({
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://topweightloss.io",
+        item: "https://www.topweightloss.io",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Articles",
-        item: "https://topweightloss.io/articles",
+        item: "https://www.topweightloss.io/articles",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: article.title,
-        item: `https://topweightloss.io/articles/${slug}`,
+        item: `https://www.topweightloss.io/articles/${slug}`,
       },
     ],
   };

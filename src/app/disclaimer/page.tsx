@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "FTC disclosure, affiliate relationship details, medical disclaimer, and revenue model transparency for topweightloss.io.",
   alternates: {
-    canonical: "https://topweightloss.io/disclaimer",
+    canonical: "https://www.topweightloss.io/disclaimer",
   },
 };
 

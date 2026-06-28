@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description:
     "Read expert reviews of the top weight loss providers offering GLP-1 medications like semaglutide and tirzepatide. Compare pricing, treatment options, pros and cons.",
   alternates: {
-    canonical: "https://topweightloss.io/reviews",
+    canonical: "https://www.topweightloss.io/reviews",
   },
   openGraph: {
     title: "Weight Loss Provider Reviews — In-Depth Expert Analysis",
     description:
       "Read expert reviews of leading weight loss providers. Compare pricing, treatment options, and customer experience.",
-    url: "https://topweightloss.io/reviews",
+    url: "https://www.topweightloss.io/reviews",
   },
 };
 
