@@ -22,16 +22,16 @@ interface QuizMatchedProvider extends Provider {
 
 function HideChrome() {
   useEffect(() => {
+    const header = document.querySelector("header");
     const footer = document.querySelector("footer");
-    const headerNav = document.querySelector("header nav");
-    const hamburger = document.querySelector("header button");
+    const disclosure = document.querySelector("header")?.previousElementSibling;
+    if (header) (header as HTMLElement).style.display = "none";
     if (footer) (footer as HTMLElement).style.display = "none";
-    if (headerNav) (headerNav as HTMLElement).style.display = "none";
-    if (hamburger) (hamburger as HTMLElement).style.display = "none";
+    if (disclosure) (disclosure as HTMLElement).style.display = "none";
     return () => {
+      if (header) (header as HTMLElement).style.display = "";
       if (footer) (footer as HTMLElement).style.display = "";
-      if (headerNav) (headerNav as HTMLElement).style.display = "";
-      if (hamburger) (hamburger as HTMLElement).style.display = "";
+      if (disclosure) (disclosure as HTMLElement).style.display = "";
     };
   }, []);
   return null;
@@ -285,9 +285,17 @@ export default function ChatQuizPage() {
   return (
     <>
       <HideChrome />
-      <div className="fixed inset-x-0 top-[64px] bottom-0 flex flex-col bg-[#F5F3EF]">
+      <div className="fixed inset-0 flex flex-col bg-[#F5F3EF]">
+        {/* Logo bar */}
+        <div className="shrink-0 border-b border-[#E8E4DD] bg-white px-4 py-3">
+          <a href="/" className="flex items-center gap-2">
+            <svg className="h-6 w-6 text-[#0C4B75]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg>
+            <span className="text-[18px] font-bold text-[#191919]">topweightloss<span className="text-[#0C4B75]">.io</span></span>
+          </a>
+        </div>
+
         {/* Header */}
-        <div className="shrink-0 border-b border-[#E8E4DD] bg-[#F5F3EF] px-4 pb-5 pt-6 text-center sm:pb-6 sm:pt-8">
+        <div className="shrink-0 border-b border-[#E8E4DD] bg-[#F5F3EF] px-4 pb-5 pt-5 text-center sm:pb-6 sm:pt-6">
           <h1 className="text-[24px] font-extrabold leading-tight text-[#191919] sm:text-[32px]">
             {quiz.pageTitle || quiz.welcomeTitle}
           </h1>
