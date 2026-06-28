@@ -1,5 +1,5 @@
 import { put, list } from "@vercel/blob";
-import { type SiteConfig, type ReviewData, type ArticleData, type BattleData, defaultConfig } from "./config";
+import { type SiteConfig, type ReviewData, type ArticleData, type BattleData, type LandingPageData, defaultConfig } from "./config";
 import productsJson from "@/data/products.json";
 import faqsJson from "@/data/faqs.json";
 import { articles as defaultArticlesData } from "@/data/articles";
@@ -459,6 +459,26 @@ function buildInitialConfig(): SiteConfig {
         ],
       },
     ],
+    landingPages: [
+      {
+        slug: "semaglutide",
+        seoTitle: "Best Semaglutide Providers 2026 — Compare GLP-1 Weight Loss Programs",
+        seoDescription: "Compare the top semaglutide weight loss providers of 2026. Side-by-side pricing, medical support, and treatment options for Ozempic and Wegovy alternatives.",
+        h1: "Best Semaglutide Providers 2026",
+        h2: "Compare GLP-1 weight loss programs side by side",
+        heroDescription: "Semaglutide (the active ingredient in Ozempic and Wegovy) is one of the most effective GLP-1 medications for weight loss. Compare providers offering semaglutide treatment below.",
+        providerOrder: ["altrx", "noom", "ro", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout"],
+      },
+      {
+        slug: "tirzepatide",
+        seoTitle: "Best Tirzepatide Providers 2026 — Compare GLP-1 Weight Loss Programs",
+        seoDescription: "Compare the top tirzepatide weight loss providers of 2026. Side-by-side pricing, medical support, and treatment options for Mounjaro and Zepbound alternatives.",
+        h1: "Best Tirzepatide Providers 2026",
+        h2: "Compare dual-action GLP-1 weight loss programs",
+        heroDescription: "Tirzepatide (the active ingredient in Mounjaro and Zepbound) targets both GLP-1 and GIP receptors for enhanced weight loss results. Compare providers offering tirzepatide treatment below.",
+        providerOrder: ["altrx", "noom", "ro", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout"],
+      },
+    ],
     quiz: {
       welcomeTitle: "Find Your Best Weight Loss Provider Match",
       welcomeSubtitle: "Answer a few quick questions and we'll compare trusted weight loss providers based on your goals, preferences, and location.",
@@ -566,6 +586,7 @@ export async function getConfig(): Promise<SiteConfig> {
           reviews: saved.reviews && saved.reviews.length > 0 ? saved.reviews : initial.reviews,
           articles: saved.articles && saved.articles.length > 0 ? saved.articles : initial.articles,
           battles: saved.battles && saved.battles.length > 0 ? saved.battles : initial.battles,
+          landingPages: saved.landingPages && saved.landingPages.length > 0 ? saved.landingPages : initial.landingPages,
           quiz: saved.quiz && saved.quiz.questions && saved.quiz.questions.length > 0 ? saved.quiz : initial.quiz,
         };
       }

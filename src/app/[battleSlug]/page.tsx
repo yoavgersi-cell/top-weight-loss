@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getConfig } from "@/lib/config-store";
+import { ComparisonLayout } from "@/components/comparison-layout";
+import { EditorialContent } from "@/components/editorial-content";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound } from "next/navigation";
 import { Trophy, ArrowRight, Check, Minus } from "lucide-react";
@@ -15,8 +17,6 @@ const RESERVED_SLUGS = [
   "disclaimer",
   "find-your-match",
   "reviews",
-  "semaglutide",
-  "tirzepatide",
 ];
 
 export async function generateMetadata({
@@ -28,6 +28,22 @@ export async function generateMetadata({
   if (RESERVED_SLUGS.includes(battleSlug)) return {};
 
   const config = await getConfig();
+
+  // Check landing pages first
+  const landing = (config.landingPages ?? []).find((lp) => lp.slug === battleSlug);
+  if (landing) {
+    return {
+      title: landing.seoTitle,
+      description: landing.seoDescription,
+      alternates: { canonical: `https://topweightloss.io/${landing.slug}` },
+      openGraph: {
+        title: landing.seoTitle,
+        description: landing.seoDescription,
+        url: `https://topweightloss.io/${landing.slug}`,
+      },
+    };
+  }
+
   const battle = (config.battles ?? []).find((b) => b.slug === battleSlug);
   if (!battle) return { title: "Not Found" };
 
@@ -53,6 +69,48 @@ export default async function BattlePage({
   if (RESERVED_SLUGS.includes(battleSlug)) return notFound();
 
   const config = await getConfig();
+
+  // ───── LANDING PAGE ─────
+  const landing = (config.landingPages ?? []).find((lp) => lp.slug === battleSlug);
+  if (landing) {
+    // Build a config override with custom provider order + positions
+    const customConfig = {
+      ...config,
+      ranking: {
+        ...config.ranking,
+        providerOrder: landing.providerOrder.length > 0 ? landing.providerOrder : config.ranking.providerOrder,
+      },
+    };
+
+    const schemaData = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: landing.seoTitle,
+      description: landing.seoDescription,
+      url: `https://topweightloss.io/${landing.slug}`,
+    };
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+        <ComparisonLayout
+          config={customConfig}
+          heroOverrides={{
+            h1: landing.h1,
+            h2: landing.h2,
+            description: landing.heroDescription,
+          }}
+        >
+          <EditorialContent />
+        </ComparisonLayout>
+      </>
+    );
+  }
+
+  // ───── BATTLE PAGE ─────
   const battle = (config.battles ?? []).find((b) => b.slug === battleSlug);
   if (!battle) return notFound();
 

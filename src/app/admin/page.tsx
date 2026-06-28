@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import type { SiteConfig, Provider, FaqItem, ReviewData, ArticleData, BattleData, RankingPageConfig } from "@/lib/config";
+import type { SiteConfig, Provider, FaqItem, ReviewData, ArticleData, BattleData, LandingPageData, RankingPageConfig } from "@/lib/config";
 
 export default function AdminPage() {
   const [password, setPassword] = useState("");
@@ -9,7 +9,7 @@ export default function AdminPage() {
   const [config, setConfig] = useState<SiteConfig | null>(null);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState("");
-  const [activeTab, setActiveTab] = useState<"providers" | "ranking" | "hero" | "sidebar" | "faqs" | "reviews" | "articles" | "battles" | "quiz" | "general">("providers");
+  const [activeTab, setActiveTab] = useState<"providers" | "ranking" | "hero" | "sidebar" | "faqs" | "reviews" | "articles" | "battles" | "pages" | "quiz" | "general">("providers");
 
   const token = typeof window !== "undefined" ? sessionStorage.getItem("admin_token") : null;
 
@@ -226,6 +226,7 @@ export default function AdminPage() {
     { key: "reviews" as const, label: "Reviews" },
     { key: "articles" as const, label: "Articles" },
     { key: "battles" as const, label: "Battles" },
+    { key: "pages" as const, label: "Pages" },
     { key: "quiz" as const, label: "Quiz" },
     { key: "general" as const, label: "General" },
   ];
@@ -952,6 +953,151 @@ export default function AdminPage() {
               className="w-full rounded-lg border-2 border-dashed border-gray-300 py-4 text-sm font-medium text-gray-400 hover:border-[#0C4B75] hover:text-[#0C4B75]"
             >
               + Add Battle Page
+            </button>
+          </div>
+        )}
+
+        {/* Pages (Landing Pages) Tab */}
+        {activeTab === "pages" && (
+          <div className="space-y-4">
+            <p className="text-xs text-gray-400">Create comparison landing pages (e.g. /semaglutide, /ozempic). Same layout as the homepage but with custom hero text and provider ranking.</p>
+            {(config.landingPages ?? []).map((lp, index) => {
+              const updateLP = (patch: Record<string, unknown>) => {
+                const landingPages = [...(config.landingPages ?? [])];
+                landingPages[index] = { ...landingPages[index], ...patch };
+                setConfig({ ...config, landingPages });
+              };
+              return (
+                <div key={lp.slug || index} className="rounded-xl border bg-white p-6 shadow-sm">
+                  <div className="mb-4 flex items-center justify-between">
+                    <div>
+                      <h3 className="text-sm font-bold text-[#191919]">{lp.h1 || "Untitled Page"}</h3>
+                      <span className="text-xs text-gray-400">/{lp.slug}</span>
+                    </div>
+                    <button
+                      onClick={() => {
+                        const landingPages = (config.landingPages ?? []).filter((_, i) => i !== index);
+                        setConfig({ ...config, landingPages });
+                      }}
+                      className="flex h-8 w-8 items-center justify-center rounded border border-red-200 text-red-400 hover:bg-red-50 hover:text-red-600"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                    </button>
+                  </div>
+
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <Field label="Slug (URL path)" value={lp.slug} onChange={(v) => updateLP({ slug: v })} />
+                    <Field label="SEO Title" value={lp.seoTitle} onChange={(v) => updateLP({ seoTitle: v })} />
+                    <div className="sm:col-span-2">
+                      <Field label="SEO Description" value={lp.seoDescription} onChange={(v) => updateLP({ seoDescription: v })} />
+                    </div>
+                    <Field label="H1 Headline" value={lp.h1} onChange={(v) => updateLP({ h1: v })} />
+                    <Field label="H2 Subtitle (blue)" value={lp.h2} onChange={(v) => updateLP({ h2: v })} />
+                    <div className="sm:col-span-2">
+                      <Field label="Hero Description" value={lp.heroDescription} onChange={(v) => updateLP({ heroDescription: v })} />
+                    </div>
+                  </div>
+
+                  {/* Provider Ranking Order */}
+                  <div className="mt-5">
+                    <label className="mb-2 block text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                      Provider Ranking Order
+                    </label>
+                    <p className="mb-3 text-xs text-gray-400">Drag providers up/down to change ranking for this page. Only listed providers will appear.</p>
+                    <div className="space-y-2">
+                      {(lp.providerOrder ?? []).map((providerId, pi) => {
+                        const provider = config.providers.find((p) => p.id === providerId);
+                        return (
+                          <div key={providerId} className="flex items-center gap-3 rounded-lg border bg-gray-50 px-4 py-2.5">
+                            <div className="flex h-7 w-7 items-center justify-center rounded bg-[#191919] text-xs font-bold text-white shrink-0">
+                              {pi + 1}
+                            </div>
+                            <span className="flex-1 text-sm font-medium text-[#191919]">{provider?.name ?? providerId}</span>
+                            <div className="flex gap-1 shrink-0">
+                              <button
+                                onClick={() => {
+                                  if (pi === 0) return;
+                                  const order = [...(lp.providerOrder ?? [])];
+                                  [order[pi], order[pi - 1]] = [order[pi - 1], order[pi]];
+                                  updateLP({ providerOrder: order });
+                                }}
+                                disabled={pi === 0}
+                                className="flex h-7 w-7 items-center justify-center rounded border text-gray-400 hover:bg-white hover:text-gray-600 disabled:opacity-30"
+                              >
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m18 15-6-6-6 6"/></svg>
+                              </button>
+                              <button
+                                onClick={() => {
+                                  if (pi === (lp.providerOrder ?? []).length - 1) return;
+                                  const order = [...(lp.providerOrder ?? [])];
+                                  [order[pi], order[pi + 1]] = [order[pi + 1], order[pi]];
+                                  updateLP({ providerOrder: order });
+                                }}
+                                disabled={pi === (lp.providerOrder ?? []).length - 1}
+                                className="flex h-7 w-7 items-center justify-center rounded border text-gray-400 hover:bg-white hover:text-gray-600 disabled:opacity-30"
+                              >
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m6 9 6 6 6-6"/></svg>
+                              </button>
+                              <button
+                                onClick={() => {
+                                  const order = (lp.providerOrder ?? []).filter((_, i) => i !== pi);
+                                  updateLP({ providerOrder: order });
+                                }}
+                                className="flex h-7 w-7 items-center justify-center rounded border border-red-200 text-red-400 hover:bg-red-50"
+                              >
+                                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                              </button>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    {/* Add provider dropdown */}
+                    <div className="mt-2 flex gap-2">
+                      <select
+                        id={`add-provider-${index}`}
+                        className="flex-1 rounded border px-3 py-1.5 text-sm text-gray-600 focus:border-[#0C4B75] focus:outline-none"
+                        defaultValue=""
+                      >
+                        <option value="" disabled>Add provider...</option>
+                        {config.providers
+                          .filter((p) => !(lp.providerOrder ?? []).includes(p.id))
+                          .map((p) => (
+                            <option key={p.id} value={p.id}>{p.name}</option>
+                          ))}
+                      </select>
+                      <button
+                        onClick={() => {
+                          const select = document.getElementById(`add-provider-${index}`) as HTMLSelectElement;
+                          if (!select?.value) return;
+                          updateLP({ providerOrder: [...(lp.providerOrder ?? []), select.value] });
+                          select.value = "";
+                        }}
+                        className="rounded border border-[#0C4B75] px-3 py-1.5 text-xs font-semibold text-[#0C4B75] hover:bg-[#0C4B75]/5"
+                      >
+                        Add
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+            <button
+              onClick={() => {
+                const newLP: LandingPageData = {
+                  slug: "new-page",
+                  seoTitle: "New Page Title",
+                  seoDescription: "",
+                  h1: "New Landing Page",
+                  h2: "Compare providers side by side",
+                  heroDescription: "",
+                  providerOrder: config.ranking.providerOrder.slice(),
+                };
+                setConfig({ ...config, landingPages: [...(config.landingPages ?? []), newLP] });
+              }}
+              className="w-full rounded-lg border-2 border-dashed border-gray-300 py-4 text-sm font-medium text-gray-400 hover:border-[#0C4B75] hover:text-[#0C4B75]"
+            >
+              + Add Landing Page
             </button>
           </div>
         )}
