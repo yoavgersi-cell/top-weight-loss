@@ -26,7 +26,6 @@ export default async function HomePage() {
         highlights: provider.highlights,
         affiliateUrl: provider.affiliateUrl,
         ctaText: provider.ctaText,
-        trustpilotReviews: provider.trustpilotReviews,
         rank: index + 1,
         rating: position.score,
         ratingLabel: position.label,
@@ -42,7 +41,6 @@ export default async function HomePage() {
       highlights: string[];
       affiliateUrl: string;
       ctaText: string;
-      trustpilotReviews?: string;
       rank: number;
       rating: number;
       ratingLabel: string;

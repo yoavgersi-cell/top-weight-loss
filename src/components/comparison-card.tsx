@@ -13,7 +13,6 @@ interface ComparisonCardProduct {
   rating: number;
   ratingLabel: string;
   badge?: string;
-  trustpilotReviews?: string;
 }
 
 interface ComparisonCardProps {
@@ -55,9 +54,12 @@ export function ComparisonCard({ product, hideRank }: ComparisonCardProps) {
         {/* Column 2: Content */}
         <div className="flex-1 px-6 py-5">
           <h3 className="text-[12px] font-semibold text-[#1A1A1A]">{product.name}</h3>
-          {product.trustpilotReviews && (
-            <TrustpilotLine reviews={product.trustpilotReviews} />
-          )}
+          <a
+            href={`/reviews/${product.id}`}
+            className="text-[12px] font-semibold text-[#0B5E9E] hover:underline"
+          >
+            Read Review
+          </a>
           <p className="mt-3 text-[12px] font-semibold text-[#1A1A1A]">{product.tagline}</p>
           <ul className="mt-1.5 space-y-1">
             {product.highlights.slice(0, 3).map((highlight) => (
@@ -99,14 +101,8 @@ export function ComparisonCard({ product, hideRank }: ComparisonCardProps) {
           <RatingBadge rating={product.rating} label={product.ratingLabel} />
         </div>
 
-        {product.trustpilotReviews && (
-          <div className="mt-4">
-            <TrustpilotLine reviews={product.trustpilotReviews} />
-          </div>
-        )}
-
         {/* Tagline */}
-        <p className="mt-3 text-[14px] font-semibold text-[#1A1A1A]">{product.tagline}</p>
+        <p className="mt-4 text-[14px] font-semibold text-[#1A1A1A]">{product.tagline}</p>
 
         {/* Bullets */}
         <ul className="mt-3 space-y-2">
@@ -130,17 +126,5 @@ export function ComparisonCard({ product, hideRank }: ComparisonCardProps) {
         </a>
       </div>
     </article>
-  );
-}
-
-function TrustpilotLine({ reviews }: { reviews: string }) {
-  return (
-    <p className="mt-1 flex items-center gap-1 text-[13px] font-semibold text-[#191919] sm:mt-1 sm:text-[13px]">
-      {reviews} reviews by
-      <svg className="h-[15px] w-[15px]" viewBox="0 0 24 24" fill="none">
-        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#00B67A" />
-      </svg>
-      Trustpilot
-    </p>
   );
 }

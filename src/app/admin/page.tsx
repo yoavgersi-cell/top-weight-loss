@@ -297,7 +297,6 @@ export default function AdminPage() {
                     <ImageField label="Small Logo (icon)" value={provider.smallLogo || ""} onChange={(v) => updateProvider(index, "smallLogo", v)} />
                     <Field label="Affiliate URL" value={provider.affiliateUrl} onChange={(v) => updateProvider(index, "affiliateUrl", v)} />
                     <Field label="CTA Text" value={provider.ctaText} onChange={(v) => updateProvider(index, "ctaText", v)} />
-                    <Field label="Trustpilot Reviews" value={provider.trustpilotReviews || ""} onChange={(v) => updateProvider(index, "trustpilotReviews", v)} />
                   </div>
 
                   <div className="mt-4">

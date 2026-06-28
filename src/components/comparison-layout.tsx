@@ -32,7 +32,6 @@ export function ComparisonLayout({ config, heroOverrides, children }: Comparison
         highlights: provider.highlights,
         affiliateUrl: provider.affiliateUrl,
         ctaText: provider.ctaText,
-        trustpilotReviews: provider.trustpilotReviews,
         rank: index + 1,
         rating: position.score,
         ratingLabel: position.label,
@@ -48,7 +47,6 @@ export function ComparisonLayout({ config, heroOverrides, children }: Comparison
       highlights: string[];
       affiliateUrl: string;
       ctaText: string;
-      trustpilotReviews?: string;
       rank: number;
       rating: number;
       ratingLabel: string;
