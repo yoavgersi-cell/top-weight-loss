@@ -64,12 +64,22 @@ export default function ChatQuizPage() {
   const totalSteps = questions.length;
   const progress = totalSteps > 0 && currentStep >= 0 ? Math.round(((currentStep + 1) / totalSteps) * 100) : (totalSteps > 0 ? Math.round((1 / totalSteps) * 100) : 0);
 
-  useEffect(() => {
+  function scrollToBottom() {
     setTimeout(() => {
       if (scrollRef.current) {
         scrollRef.current.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
       }
-    }, 50);
+    }, 80);
+    // Second scroll to catch late-rendered content
+    setTimeout(() => {
+      if (scrollRef.current) {
+        scrollRef.current.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
+      }
+    }, 350);
+  }
+
+  useEffect(() => {
+    scrollToBottom();
   }, [messages, typing, activeOptions]);
 
   // Start chat
