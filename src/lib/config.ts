@@ -80,6 +80,7 @@ export interface QuizProviderProfile {
 }
 
 export interface QuizConfig {
+  panelType?: "classic" | "chat";
   welcomeTitle: string;
   welcomeSubtitle: string;
   welcomeTrustPoints: string[];

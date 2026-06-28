@@ -1105,6 +1105,30 @@ export default function AdminPage() {
         {/* Quiz Tab */}
         {activeTab === "quiz" && config.quiz && (
           <div className="space-y-4">
+            {/* Panel Type */}
+            <div className="rounded-xl border bg-white p-6 shadow-sm">
+              <h3 className="mb-4 text-sm font-bold text-gray-500 uppercase tracking-wider">Panel Type</h3>
+              <p className="mb-3 text-xs text-gray-400">Choose the quiz funnel style. Classic = card-based steps. Chat = conversational chat bubbles.</p>
+              <div className="flex gap-3">
+                {(["classic", "chat"] as const).map((type) => (
+                  <button
+                    key={type}
+                    onClick={() => setConfig({ ...config, quiz: { ...config.quiz, panelType: type } })}
+                    className={`flex-1 rounded-lg border px-4 py-3 text-sm font-medium transition-colors ${
+                      (config.quiz.panelType || "classic") === type
+                        ? "border-[#0C4B75] bg-[#0C4B75]/5 text-[#0C4B75]"
+                        : "border-gray-200 text-gray-500 hover:border-gray-300"
+                    }`}
+                  >
+                    {type === "classic" ? "Classic (Card Steps)" : "Chat (Conversational)"}
+                  </button>
+                ))}
+              </div>
+              <p className="mt-2 text-xs text-gray-400">
+                Classic: <span className="font-medium">/find-your-match</span> — Chat: <span className="font-medium">/find-your-match-weight-loss</span>
+              </p>
+            </div>
+
             {/* Welcome screen */}
             <div className="rounded-xl border bg-white p-6 shadow-sm">
               <h3 className="mb-4 text-sm font-bold text-gray-500 uppercase tracking-wider">Welcome Screen</h3>
