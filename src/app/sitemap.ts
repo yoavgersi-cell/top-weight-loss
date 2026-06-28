@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getConfig } from "@/lib/config-store";
 import { articles } from "@/data/articles";
 
-const BASE_URL = "https://topweightloss.io";
+const BASE_URL = "https://www.topweightloss.io";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const config = await getConfig();
