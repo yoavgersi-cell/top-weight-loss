@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { Check } from "lucide-react";
+import { useState, useEffect, useRef, useMemo } from "react";
+import { Check, Search } from "lucide-react";
 import { ComparisonCard } from "@/components/comparison-card";
 import type { SiteConfig, Provider, QuizConfig } from "@/lib/config";
 
@@ -353,35 +353,12 @@ export default function ChatQuizPage() {
               </div>
             )}
 
-            {/* Dropdown as pill select + send button */}
+            {/* Searchable state picker */}
             {activeOptions && activeOptions.type === "dropdown" && (
-              <div className="flex items-center gap-2.5 animate-[fadeSlideUp_0.3s_ease-out]">
-                <div className="relative flex-1">
-                  <select
-                    id="chat-dropdown"
-                    className="w-full appearance-none rounded-full border-2 border-[#0C4B75]/50 bg-white px-6 py-3.5 pr-10 text-[15px] text-gray-700 focus:border-[#0C4B75] focus:outline-none sm:text-[16px]"
-                    defaultValue=""
-                    onChange={() => {}}
-                  >
-                    <option value="" disabled>Select your state...</option>
-                    {activeOptions.options.map((opt) => (
-                      <option key={opt.value} value={opt.value}>{opt.label}</option>
-                    ))}
-                  </select>
-                  <svg className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-                </div>
-                <button
-                  onClick={() => {
-                    const select = document.getElementById("chat-dropdown") as HTMLSelectElement;
-                    if (!select?.value) return;
-                    const opt = activeOptions.options.find((o) => o.value === select.value);
-                    if (opt) handleSelect(opt.value, opt.label);
-                  }}
-                  className="flex h-[48px] w-[48px] shrink-0 items-center justify-center rounded-full bg-[#0C4B75] text-white shadow-sm transition-all hover:bg-[#093d61] active:scale-95"
-                >
-                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m22 2-7 20-4-9-9-4 20-7z"/><path d="M22 2 11 13"/></svg>
-                </button>
-              </div>
+              <ChatStatePicker
+                options={activeOptions.options}
+                onSelect={(value, label) => handleSelect(value, label)}
+              />
             )}
           </div>
         </div>
@@ -400,5 +377,71 @@ export default function ChatQuizPage() {
         </div>
       </div>
     </>
+  );
+}
+
+function ChatStatePicker({
+  options,
+  onSelect,
+}: {
+  options: { label: string; value: string }[];
+  onSelect: (value: string, label: string) => void;
+}) {
+  const [search, setSearch] = useState("");
+  const [selected, setSelected] = useState<{ label: string; value: string } | null>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const filtered = useMemo(() => {
+    if (!search) return options;
+    const q = search.toLowerCase();
+    return options.filter((o) => o.label.toLowerCase().includes(q));
+  }, [search, options]);
+
+  return (
+    <div className="animate-[fadeSlideUp_0.3s_ease-out]">
+      {/* Search input + send */}
+      <div className="flex items-center gap-2.5">
+        <div className="relative flex-1">
+          <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" strokeWidth={1.5} />
+          <input
+            ref={inputRef}
+            type="text"
+            placeholder="Type your state..."
+            value={selected ? selected.label : search}
+            onChange={(e) => { setSearch(e.target.value); setSelected(null); }}
+            onFocus={() => { if (selected) { setSearch(""); setSelected(null); } }}
+            className={`w-full rounded-full border-2 bg-white py-3.5 pl-11 pr-4 text-[15px] focus:outline-none sm:text-[16px] ${
+              selected ? "border-[#0C4B75] text-[#0C4B75] font-medium" : "border-[#0C4B75]/30 text-gray-700 focus:border-[#0C4B75]"
+            }`}
+          />
+        </div>
+        <button
+          onClick={() => { if (selected) onSelect(selected.value, selected.label); }}
+          disabled={!selected}
+          className="flex h-[48px] w-[48px] shrink-0 items-center justify-center rounded-full bg-[#0C4B75] text-white shadow-sm transition-all hover:bg-[#093d61] active:scale-95 disabled:opacity-30"
+        >
+          <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m22 2-7 20-4-9-9-4 20-7z"/><path d="M22 2 11 13"/></svg>
+        </button>
+      </div>
+
+      {/* Results list */}
+      {!selected && (
+        <div className="mt-2 max-h-[160px] overflow-y-auto rounded-2xl border border-gray-200 bg-white">
+          {filtered.length > 0 ? (
+            filtered.map((opt) => (
+              <button
+                key={opt.value}
+                onClick={() => { setSelected(opt); setSearch(""); }}
+                className="flex w-full items-center gap-2 border-b border-gray-100 px-5 py-2.5 text-left text-[15px] text-gray-700 transition-colors last:border-0 hover:bg-[#0C4B75]/5 hover:text-[#0C4B75]"
+              >
+                {opt.label}
+              </button>
+            ))
+          ) : (
+            <p className="px-5 py-4 text-center text-[13px] text-gray-400">No states found</p>
+          )}
+        </div>
+      )}
+    </div>
   );
 }
