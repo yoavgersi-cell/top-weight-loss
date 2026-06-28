@@ -283,10 +283,7 @@ export default function ChatQuizPage() {
       <div className="flex min-h-[calc(100vh-64px)] flex-col bg-[#F5F3EF]">
         {/* Fixed header */}
         <div className="border-b border-[#E8E4DD] bg-[#F5F3EF] px-4 pb-5 pt-6 text-center sm:pb-6 sm:pt-8">
-          <p className="text-[12px] font-bold uppercase tracking-widest text-[#D4A843] sm:text-[13px]">
-            topweightloss.io
-          </p>
-          <h1 className="mt-2 text-[22px] font-extrabold leading-tight text-[#191919] sm:text-[30px]">
+          <h1 className="text-[22px] font-extrabold leading-tight text-[#191919] sm:text-[30px]">
             {quiz.pageTitle || quiz.welcomeTitle}
           </h1>
           <p className="mx-auto mt-2 max-w-[420px] text-[13px] leading-relaxed text-gray-500 sm:text-[15px]">
