@@ -84,7 +84,7 @@ export function ComparisonCard({ product, hideRank }: ComparisonCardProps) {
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
           {product.rank === 1 && (
-            <div className="absolute bottom-1.5 left-0 right-0 hidden sm:flex items-center justify-center">
+            <div className="absolute bottom-3 left-0 right-0 hidden sm:flex items-center justify-center">
               <ShippingBadge />
             </div>
           )}
