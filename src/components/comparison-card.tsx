@@ -72,18 +72,22 @@ export function ComparisonCard({ product, hideRank }: ComparisonCardProps) {
         </div>
 
         {/* Column 3: Rating + CTA */}
-        <div className="flex flex-col items-center justify-center px-6 py-5 sm:w-[200px] sm:shrink-0">
+        <div className="relative flex flex-col items-center justify-center gap-4 px-6 py-5 sm:w-[200px] sm:shrink-0">
           <RatingBadge rating={product.rating} label={product.ratingLabel} />
           <a
             href={product.affiliateUrl}
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="mt-4 flex h-[42px] w-full items-center justify-center gap-2 rounded-lg bg-[#0C4B75] text-[15px] font-bold text-white transition-colors hover:bg-[#093d61]"
+            className="flex h-[42px] w-full items-center justify-center gap-2 rounded-lg bg-[#0C4B75] text-[15px] font-bold text-white transition-colors hover:bg-[#093d61]"
           >
             Visit Site
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
-          {product.rank === 1 && <ShippingBadge />}
+          {product.rank === 1 && (
+            <div className="absolute bottom-1.5 left-0 right-0 hidden sm:flex items-center justify-center">
+              <ShippingBadge />
+            </div>
+          )}
         </div>
       </div>
 
@@ -115,7 +119,9 @@ export function ComparisonCard({ product, hideRank }: ComparisonCardProps) {
           ))}
         </ul>
 
-        {product.rank === 1 && <ShippingBadge />}
+        {product.rank === 1 && (
+          <div className="sm:hidden"><ShippingBadge /></div>
+        )}
 
         {/* CTA */}
         <a
@@ -134,7 +140,7 @@ export function ComparisonCard({ product, hideRank }: ComparisonCardProps) {
 
 function ShippingBadge() {
   return (
-    <p className="mt-2 flex items-center justify-center gap-1.5 whitespace-nowrap text-[12px] font-semibold text-[#0B9E6A]">
+    <p className="mt-2.5 flex items-center gap-1.5 whitespace-nowrap text-[12px] font-semibold text-[#0B9E6A]">
       <Truck className="h-3.5 w-3.5 shrink-0" strokeWidth={2} />
       Free &amp; Discreet Shipping
     </p>
