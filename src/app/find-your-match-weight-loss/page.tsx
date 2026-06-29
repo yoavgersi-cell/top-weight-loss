@@ -298,10 +298,10 @@ export default function ChatQuizPage() {
         {/* Header */}
         <div className="shrink-0 border-b border-[#E5E7EB] bg-[#F7F8FA] px-4 pb-5 pt-5 text-center sm:pb-6 sm:pt-6">
           <h1 className="text-[24px] font-extrabold leading-tight text-[#191919] sm:text-[32px]">
-            {quiz.pageTitle || quiz.welcomeTitle}
+            {quiz.welcomeTitle}
           </h1>
           <p className="mx-auto mt-2 max-w-[440px] text-[14px] leading-relaxed text-gray-500 sm:text-[16px]">
-            {quiz.pageSubtitle || quiz.welcomeSubtitle}
+            {quiz.welcomeSubtitle}
           </p>
         </div>
 
