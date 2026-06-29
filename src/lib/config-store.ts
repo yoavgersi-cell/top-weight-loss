@@ -587,7 +587,7 @@ export async function getConfig(): Promise<SiteConfig> {
           articles: saved.articles && saved.articles.length > 0 ? saved.articles : initial.articles,
           battles: saved.battles && saved.battles.length > 0 ? saved.battles : initial.battles,
           landingPages: saved.landingPages && saved.landingPages.length > 0 ? saved.landingPages : initial.landingPages,
-          quiz: saved.quiz && saved.quiz.questions && saved.quiz.questions.length > 0 ? saved.quiz : initial.quiz,
+          quiz: saved.quiz && saved.quiz.questions && saved.quiz.questions.length > 0 ? { ...initial.quiz, ...saved.quiz } : initial.quiz,
         };
       }
     }

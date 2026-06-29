@@ -1137,6 +1137,9 @@ export default function AdminPage() {
                 <Field label="Welcome Subtitle" value={config.quiz.welcomeSubtitle || ""} onChange={(v) => setConfig({ ...config, quiz: { ...config.quiz, welcomeSubtitle: v } })} />
                 <Field label="CTA Button Text" value={config.quiz.welcomeCta || ""} onChange={(v) => setConfig({ ...config, quiz: { ...config.quiz, welcomeCta: v } })} />
                 <Field label="Mid-Flow Message" value={config.quiz.midFlowMessage || ""} onChange={(v) => setConfig({ ...config, quiz: { ...config.quiz, midFlowMessage: v } })} />
+                <div className="sm:col-span-2">
+                  <Field label="Chat Intro Message (chat panel only)" value={config.quiz.chatIntroMessage || ""} onChange={(v) => setConfig({ ...config, quiz: { ...config.quiz, chatIntroMessage: v } })} />
+                </div>
               </div>
               <ArrayField
                 label="Trust Points"
