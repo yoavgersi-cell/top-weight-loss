@@ -87,7 +87,7 @@ export default function ChatQuizPage() {
   useEffect(() => {
     if (config && quiz && messages.length === 0 && currentStep === -1) {
       pushBotThenQuestion(
-        quiz.welcomeSubtitle || "Let me help you find the right provider.",
+        "Let's find the right weight loss provider for you. It only takes about a minute.",
         0
       );
     }
