@@ -69,6 +69,7 @@ export function ComparisonCard({ product, hideRank }: ComparisonCardProps) {
               </li>
             ))}
           </ul>
+          {product.rank === 1 && <ShippingBadge />}
         </div>
 
         {/* Column 3: Rating + CTA */}
@@ -83,7 +84,6 @@ export function ComparisonCard({ product, hideRank }: ComparisonCardProps) {
             Visit Site
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
-          {product.rank === 1 && <ShippingBadge />}
         </div>
       </div>
 
@@ -134,8 +134,8 @@ export function ComparisonCard({ product, hideRank }: ComparisonCardProps) {
 
 function ShippingBadge() {
   return (
-    <p className="mt-3 flex items-center justify-center gap-1.5 text-[13px] font-semibold text-[#0B9E6A]">
-      <Truck className="h-4 w-4" strokeWidth={2} />
+    <p className="mt-2.5 flex items-center gap-1.5 whitespace-nowrap text-[12px] font-semibold text-[#0B9E6A]">
+      <Truck className="h-3.5 w-3.5 shrink-0" strokeWidth={2} />
       Free &amp; Discreet Shipping
     </p>
   );
