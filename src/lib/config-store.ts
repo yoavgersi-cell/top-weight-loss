@@ -584,7 +584,12 @@ export async function getConfig(): Promise<SiteConfig> {
           providers,
           ranking: saved.ranking && saved.ranking.providerOrder && saved.ranking.providerOrder.length > 0 ? saved.ranking : initial.ranking,
           reviews: saved.reviews && saved.reviews.length > 0 ? saved.reviews : initial.reviews,
-          articles: saved.articles && saved.articles.length > 0 ? saved.articles : initial.articles,
+          articles: (() => {
+            const savedArticles = saved.articles && saved.articles.length > 0 ? saved.articles : [];
+            const savedSlugs = new Set(savedArticles.map((a) => a.slug));
+            const newDefaults = initial.articles.filter((a) => !savedSlugs.has(a.slug));
+            return [...savedArticles, ...newDefaults];
+          })(),
           battles: saved.battles && saved.battles.length > 0 ? saved.battles : initial.battles,
           landingPages: saved.landingPages && saved.landingPages.length > 0 ? saved.landingPages : initial.landingPages,
           quiz: saved.quiz && saved.quiz.questions && saved.quiz.questions.length > 0 ? { ...initial.quiz, ...saved.quiz } : initial.quiz,
