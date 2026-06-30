@@ -258,7 +258,7 @@ export default function ChatQuizPage() {
               <span className="rounded-full bg-[#0C4B75] px-4 py-1 text-[12px] font-bold text-white sm:text-[13px]">{featured.matchPct}% Match</span>
               <span className="rounded-full bg-amber-50 px-3 py-1 text-[11px] font-semibold text-amber-700 sm:text-[12px]">Top Recommendation</span>
             </div>
-            <div className="rounded-xl shadow-md"><ComparisonCard product={featured} /></div>
+            <div className="rounded-xl shadow-md"><ComparisonCard product={featured} pageType="quiz_results" sourceFlow="matching_flow" /></div>
             <div className="mt-2 flex flex-wrap gap-2 px-1">
               {featured.reasons.map((r, i) => (
                 <span key={i} className="flex items-center gap-1 text-[12px] text-gray-500"><Check className="h-3 w-3 text-[#0C4B75]" strokeWidth={2} />{r}</span>
@@ -274,7 +274,7 @@ export default function ChatQuizPage() {
                     <div className="mb-1 flex items-center gap-2 px-1">
                       <span className="rounded-full bg-gray-200 px-3 py-0.5 text-[11px] font-bold text-gray-600">{provider.matchPct}% Match</span>
                     </div>
-                    <div className="opacity-90"><ComparisonCard product={provider} hideRank /></div>
+                    <div className="opacity-90"><ComparisonCard product={provider} hideRank pageType="quiz_results" sourceFlow="matching_flow" /></div>
                   </div>
                 ))}
               </div>

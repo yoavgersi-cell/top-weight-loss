@@ -6,6 +6,7 @@ import { EditorialContent } from "@/components/editorial-content";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound } from "next/navigation";
 import { Trophy, ArrowRight, Check, Minus } from "lucide-react";
+import { ProviderCta } from "@/components/provider-cta";
 
 export const revalidate = 60;
 
@@ -225,10 +226,12 @@ export default async function BattlePage({
                   </p>
                 )}
 
-                <a
+                <ProviderCta
                   href={provider.affiliateUrl}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
+                  providerName={provider.name}
+                  providerSlug={provider.id}
+                  pageType="battle"
+                  sourceFlow="battle_page"
                   className={`flex h-[44px] w-full items-center justify-center gap-1.5 rounded-xl text-[14px] font-bold transition-all ${
                     isWinner
                       ? "bg-gradient-to-r from-[#0C4B75] to-[#1a7ab5] text-white shadow-sm hover:shadow-md"
@@ -237,7 +240,7 @@ export default async function BattlePage({
                 >
                   Visit {provider.name}
                   <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
-                </a>
+                </ProviderCta>
               </div>
             ))}
           </div>
@@ -448,15 +451,17 @@ export default async function BattlePage({
                 </div>
               </div>
 
-              <a
+              <ProviderCta
                 href={winner.affiliateUrl}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
+                providerName={winner.name}
+                providerSlug={winner.id}
+                pageType="battle"
+                sourceFlow="battle_page"
                 className="mt-7 flex h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0C4B75] to-[#1a7ab5] text-[15px] font-bold text-white shadow-sm transition-shadow hover:shadow-md sm:w-auto sm:px-8"
               >
                 Visit {winner.name}
                 <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
-              </a>
+              </ProviderCta>
             </div>
           </div>
 
@@ -466,11 +471,13 @@ export default async function BattlePage({
               { provider: p1, color: "from-[#0C4B75]/5 to-[#0C4B75]/[0.02]", hoverColor: "hover:border-[#0C4B75]/30", textColor: "text-[#0C4B75]" },
               { provider: p2, color: "from-teal-50/50 to-teal-50/20", hoverColor: "hover:border-teal-300", textColor: "text-teal-700" },
             ].map(({ provider, color, hoverColor, textColor }) => (
-              <a
+              <ProviderCta
                 key={provider.id}
                 href={provider.affiliateUrl}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
+                providerName={provider.name}
+                providerSlug={provider.id}
+                pageType="battle"
+                sourceFlow="battle_page"
                 className={`group flex flex-col items-center gap-3 rounded-2xl border border-gray-200 bg-gradient-to-b ${color} px-4 py-6 transition-all ${hoverColor} hover:shadow-md`}
               >
                 <div className="flex h-[36px] w-[100px] items-center justify-center">
@@ -485,7 +492,7 @@ export default async function BattlePage({
                   Visit Site
                   <ArrowRight className="h-3 w-3" strokeWidth={2.5} />
                 </span>
-              </a>
+              </ProviderCta>
             ))}
           </div>
 

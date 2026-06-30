@@ -383,7 +383,7 @@ export default function FindYourMatchPage() {
               </span>
             </div>
             <div className="rounded-xl shadow-md">
-              <ComparisonCard product={featured} />
+              <ComparisonCard product={featured} pageType="quiz_results" sourceFlow="matching_flow" />
             </div>
             <div className="mt-2 flex flex-wrap gap-2 px-1">
               {featured.reasons.map((r, i) => (
@@ -410,7 +410,7 @@ export default function FindYourMatchPage() {
                       </span>
                     </div>
                     <div className="opacity-90">
-                      <ComparisonCard product={provider} hideRank />
+                      <ComparisonCard product={provider} hideRank pageType="quiz_results" sourceFlow="matching_flow" />
                     </div>
                   </div>
                 ))}

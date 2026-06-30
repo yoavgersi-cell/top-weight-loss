@@ -1,5 +1,6 @@
 import { Check, Truck } from "lucide-react";
 import { RatingBadge } from "./rating-badge";
+import { ProviderCta } from "./provider-cta";
 
 interface ComparisonCardProduct {
   id: string;
@@ -18,9 +19,13 @@ interface ComparisonCardProduct {
 interface ComparisonCardProps {
   product: ComparisonCardProduct;
   hideRank?: boolean;
+  pageType?: "listing" | "review" | "battle" | "quiz_results";
+  sourceFlow?: "main_comparison" | "provider_review" | "battle_page" | "matching_flow";
 }
 
-export function ComparisonCard({ product, hideRank }: ComparisonCardProps) {
+const arrowSvg = <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>;
+
+export function ComparisonCard({ product, hideRank, pageType = "listing", sourceFlow = "main_comparison" }: ComparisonCardProps) {
   return (
     <article className="relative rounded-md border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md overflow-hidden">
       {/* Rank badge — top-left, only bottom-right rounded */}
@@ -74,15 +79,18 @@ export function ComparisonCard({ product, hideRank }: ComparisonCardProps) {
         {/* Column 3: Rating + CTA */}
         <div className="relative flex flex-col items-center justify-center gap-4 px-6 py-5 sm:w-[200px] sm:shrink-0">
           <RatingBadge rating={product.rating} label={product.ratingLabel} />
-          <a
+          <ProviderCta
             href={product.affiliateUrl}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
+            providerName={product.name}
+            providerSlug={product.id}
+            position={product.rank}
+            pageType={pageType}
+            sourceFlow={sourceFlow}
             className="flex h-[42px] w-full items-center justify-center gap-2 rounded-lg bg-[#0C4B75] text-[15px] font-bold text-white transition-colors hover:bg-[#093d61]"
           >
             Visit Site
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
+            {arrowSvg}
+          </ProviderCta>
           {product.rank === 1 && (
             <div className="absolute bottom-4.5 left-0 right-0 hidden sm:flex items-center justify-center">
               <ShippingBadge />
@@ -124,15 +132,18 @@ export function ComparisonCard({ product, hideRank }: ComparisonCardProps) {
         )}
 
         {/* CTA */}
-        <a
+        <ProviderCta
           href={product.affiliateUrl}
-          target="_blank"
-          rel="noopener noreferrer nofollow"
+          providerName={product.name}
+          providerSlug={product.id}
+          position={product.rank}
+          pageType={pageType}
+          sourceFlow={sourceFlow}
           className="mt-5 flex h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-[#0C4B75] text-[16px] font-bold text-white transition-colors hover:bg-[#093d61]"
         >
           Visit Site
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
+          {arrowSvg}
+        </ProviderCta>
       </div>
     </article>
   );

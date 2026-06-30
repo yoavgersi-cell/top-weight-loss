@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getConfig } from "@/lib/config-store";
 import { RatingBadge } from "@/components/rating-badge";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { ProviderCta } from "@/components/provider-cta";
 import { notFound } from "next/navigation";
 
 export const revalidate = 60;
@@ -170,28 +171,17 @@ export default async function ReviewPage({
             {review.reviewIntro}
           </p>
 
-          <a
+          <ProviderCta
             href={provider.affiliateUrl}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
+            providerName={provider.name}
+            providerSlug={provider.id}
+            pageType="review"
+            sourceFlow="provider_review"
             className="mt-6 flex h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-[#0C4B75] text-[16px] font-bold text-white transition-colors hover:bg-[#093d61] sm:w-auto sm:px-8"
           >
             Visit {provider.name}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
-          </a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+          </ProviderCta>
         </div>
 
         {/* Key Features */}
@@ -323,28 +313,17 @@ export default async function ReviewPage({
           <p className="text-base leading-relaxed text-gray-700">
             {review.finalVerdict}
           </p>
-          <a
+          <ProviderCta
             href={provider.affiliateUrl}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
+            providerName={provider.name}
+            providerSlug={provider.id}
+            pageType="review"
+            sourceFlow="provider_review"
             className="mt-6 flex h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-[#0C4B75] text-[16px] font-bold text-white transition-colors hover:bg-[#093d61] sm:w-auto sm:px-8"
           >
             Visit {provider.name}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
-          </a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+          </ProviderCta>
         </Section>
 
         {/* Related content — battles & articles */}

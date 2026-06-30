@@ -40,6 +40,22 @@ export function trackEvent(
  * Fire an event only once per browser session.
  * Prevents duplicates on refresh or re-render.
  */
+/**
+ * Track a provider CTA click. Fire-and-forget — never blocks the redirect.
+ */
+export function trackProviderClick(params: {
+  provider_name: string;
+  provider_slug: string;
+  provider_position?: number;
+  page_type: "listing" | "review" | "battle" | "quiz_results";
+  source_flow: "main_comparison" | "provider_review" | "battle_page" | "matching_flow";
+}) {
+  trackEvent("ProviderClick", {
+    ...params,
+    page_path: typeof window !== "undefined" ? window.location.pathname : "",
+  });
+}
+
 export function trackOnce(
   event: MetaPixelEvent,
   params?: Record<string, string | number | boolean>
