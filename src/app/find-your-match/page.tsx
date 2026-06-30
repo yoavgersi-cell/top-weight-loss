@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from "react";
 import { Check, Clock, Shield, Lock, ShieldCheck, Timer, Search, MapPin, ArrowRight } from "lucide-react";
+import { trackOnce } from "@/lib/analytics";
 
 // Simplify footer on quiz pages — hide disclosure & nav, keep copyright
 function HideChrome() {
@@ -209,6 +210,7 @@ export default function FindYourMatchPage() {
 
     setMatchedProviders(results);
     setPhase("results");
+    trackOnce("Lead");
   }
 
   if (!config || !quiz) {
@@ -243,6 +245,7 @@ export default function FindYourMatchPage() {
           <button
             onClick={() => {
               setPhaseTransitioning(true);
+              trackOnce("StartMatch");
               setTimeout(() => {
                 setPhase("quiz");
                 setStep(0);

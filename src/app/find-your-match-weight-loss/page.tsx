@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useMemo } from "react";
 import { Check, Search } from "lucide-react";
+import { trackOnce } from "@/lib/analytics";
 import { ComparisonCard } from "@/components/comparison-card";
 import type { SiteConfig, Provider, QuizConfig } from "@/lib/config";
 
@@ -86,6 +87,7 @@ export default function ChatQuizPage() {
   // Start chat
   useEffect(() => {
     if (config && quiz && messages.length === 0 && currentStep === -1) {
+      trackOnce("StartMatch");
       pushBotThenQuestion(
         quiz.chatIntroMessage || "Let's find the right weight loss provider for you. It only takes about a minute.",
         0
@@ -204,6 +206,7 @@ export default function ChatQuizPage() {
     }).filter(Boolean) as QuizMatchedProvider[];
     setMatchedProviders(results);
     setPhase("results");
+    trackOnce("Lead");
   }
 
   if (!config || !quiz) {
