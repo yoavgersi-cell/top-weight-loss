@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Script from "next/script";
 
@@ -8,9 +8,14 @@ const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
 
 export function MetaPixel() {
   const pathname = usePathname();
+  const isFirstRender = useRef(true);
 
-  // Fire PageView on route changes (SPA navigation), skip /admin
+  // Fire PageView on SPA route changes only (skip first render — handled by inline script)
   useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
     if (!PIXEL_ID || pathname.startsWith("/admin")) return;
     if (typeof window !== "undefined" && window.fbq) {
       window.fbq("track", "PageView");
