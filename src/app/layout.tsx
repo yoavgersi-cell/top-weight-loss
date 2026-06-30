@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import { DisclosureBar } from "@/components/disclosure-bar";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { MetaPixel } from "@/components/meta-pixel";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -88,6 +89,7 @@ export default function RootLayout({
             }),
           }}
         />
+        <MetaPixel />
         <DisclosureBar />
         <Header />
         <main className="flex-1">{children}</main>
