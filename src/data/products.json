@@ -198,5 +198,25 @@
     "affiliateUrl": "#",
     "ctaText": "View Plan",
     "description": ""
+  },
+  {
+    "id": "wellorithm",
+    "rank": 11,
+    "name": "Wellorithm",
+    "slug": "wellorithm",
+    "tagline": "Algorithm-Driven Weight Loss Programs",
+    "logo": "/logos/wellorithm.svg",
+    "rating": 8.2,
+    "ratingLabel": "Very Good",
+    "reviewCount": 1450,
+    "highlights": [
+      "Data-driven treatment recommendations",
+      "Personalized GLP-1 medication access",
+      "Ongoing provider monitoring and support"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://wellorithm.com/",
+    "ctaText": "View Plan",
+    "description": ""
   }
 ]

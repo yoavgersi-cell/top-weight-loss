@@ -386,6 +386,44 @@ const defaultReviews: ReviewData[] = [
       "Anyone seeking long-term wellness improvement beyond just weight"
     ],
     finalVerdict: "Sprout stands out with its metabolic health-first approach, making it a compelling option for people who want to understand the science behind their weight loss journey. If you value a holistic approach that goes beyond just medication, Sprout is worth considering."
+  },
+  {
+    slug: "wellorithm",
+    providerId: "wellorithm",
+    shortSummary: "Algorithm-driven weight loss platform using data insights to match patients with optimal GLP-1 treatment plans.",
+    reviewIntro: "Wellorithm takes a technology-forward approach to weight loss, using proprietary algorithms to analyze patient data and recommend personalized treatment plans. Their platform combines data-driven insights with licensed provider oversight to create an efficient, tailored weight loss experience.",
+    keyFeatures: [
+      "Algorithm-based treatment matching",
+      "Licensed provider consultations included",
+      "Personalized GLP-1 medication protocols",
+      "Data-driven progress tracking",
+      "Home delivery of medications"
+    ],
+    pricingSummary: "Wellorithm offers monthly plans that include algorithmic treatment matching, provider consultations, medication, and ongoing monitoring. Pricing is competitive with transparent monthly rates.",
+    treatmentOptions: [
+      "Compounded semaglutide",
+      "Compounded tirzepatide",
+      "Algorithm-optimized dosing protocols",
+      "Data-informed treatment adjustments"
+    ],
+    pros: [
+      "Technology-driven personalization",
+      "Efficient treatment matching process",
+      "Licensed providers oversee all care",
+      "Transparent pricing structure",
+      "Convenient home delivery"
+    ],
+    cons: [
+      "Newer platform with limited track record",
+      "Less human touch than traditional providers",
+      "Limited availability in some states"
+    ],
+    bestFor: [
+      "Tech-savvy individuals who value data-driven decisions",
+      "Those looking for efficient, streamlined treatment matching",
+      "People who prefer a modern, algorithm-based approach"
+    ],
+    finalVerdict: "Wellorithm offers a fresh, technology-driven approach to weight loss that appeals to patients who value efficiency and data-informed treatment. While the platform is newer than some competitors, its algorithmic matching and transparent pricing make it a noteworthy option for those comfortable with a tech-forward healthcare experience."
   }
 ];
 
@@ -403,7 +441,7 @@ function buildInitialConfig(): SiteConfig {
       ctaText: p.ctaText,
     })),
     ranking: {
-      providerOrder: ["altrx", "noom", "ro", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout"],
+      providerOrder: ["altrx", "noom", "ro", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
       positions: [
         { score: 9.8, starRating: 5, label: "Exceptional", badge: "Our Most Popular" },
         { score: 9.6, starRating: 5, label: "Excellent" },
@@ -415,6 +453,7 @@ function buildInitialConfig(): SiteConfig {
         { score: 8.7, starRating: 4, label: "Very Good" },
         { score: 8.5, starRating: 4, label: "Very Good" },
         { score: 8.4, starRating: 4, label: "Very Good" },
+        { score: 8.2, starRating: 4, label: "Very Good" },
       ],
     },
     faqs: faqsJson,
@@ -467,7 +506,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Semaglutide Providers 2026",
         h2: "Compare GLP-1 weight loss programs side by side",
         heroDescription: "Semaglutide (the active ingredient in Ozempic and Wegovy) is one of the most effective GLP-1 medications for weight loss. Compare providers offering semaglutide treatment below.",
-        providerOrder: ["altrx", "noom", "ro", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout"],
+        providerOrder: ["altrx", "noom", "ro", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
       },
       {
         slug: "tirzepatide",
@@ -476,7 +515,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Tirzepatide Providers 2026",
         h2: "Compare dual-action GLP-1 weight loss programs",
         heroDescription: "Tirzepatide (the active ingredient in Mounjaro and Zepbound) targets both GLP-1 and GIP receptors for enhanced weight loss results. Compare providers offering tirzepatide treatment below.",
-        providerOrder: ["altrx", "noom", "ro", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout"],
+        providerOrder: ["altrx", "noom", "ro", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
       },
     ],
     quiz: {
