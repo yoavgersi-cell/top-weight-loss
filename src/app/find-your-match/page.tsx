@@ -172,10 +172,16 @@ export default function FindYourMatchPage() {
 
   function calculateResults() {
     if (!config || !quiz) return;
+    const userState = answers["state"] || "";
     const quizOrder = quiz.providerOrder && quiz.providerOrder.length > 0 ? quiz.providerOrder : null;
-    const profiles = quizOrder
+    const profiles = (quizOrder
       ? quiz.providerProfiles.filter((p) => quizOrder.includes(p.providerId))
-      : quiz.providerProfiles;
+      : quiz.providerProfiles
+    ).filter((profile) => {
+      if (!userState) return true;
+      const provider = config.providers.find((p) => p.id === profile.providerId);
+      return !(provider?.excludedStates ?? []).includes(userState);
+    });
     const priority = answers["priority"] || "";
     const ranking = config.ranking;
 

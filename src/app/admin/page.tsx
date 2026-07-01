@@ -297,6 +297,9 @@ export default function AdminPage() {
                     <ImageField label="Small Logo (icon)" value={provider.smallLogo || ""} onChange={(v) => updateProvider(index, "smallLogo", v)} />
                     <Field label="Affiliate URL" value={provider.affiliateUrl} onChange={(v) => updateProvider(index, "affiliateUrl", v)} />
                     <Field label="CTA Text" value={provider.ctaText} onChange={(v) => updateProvider(index, "ctaText", v)} />
+                    <div className="sm:col-span-2">
+                      <Field label="Excluded States (comma-separated codes, e.g. CA,NY,TX)" value={(provider.excludedStates ?? []).join(", ")} onChange={(v) => updateProvider(index, "excludedStates", v.split(",").map((s) => s.trim()).filter(Boolean))} />
+                    </div>
                   </div>
 
                   <div className="mt-4">
