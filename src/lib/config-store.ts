@@ -424,6 +424,44 @@ const defaultReviews: ReviewData[] = [
       "People who prefer a modern, algorithm-based approach"
     ],
     finalVerdict: "Wellorithm offers a fresh, technology-driven approach to weight loss that appeals to patients who value efficiency and data-informed treatment. While the platform is newer than some competitors, its algorithmic matching and transparent pricing make it a noteworthy option for those comfortable with a tech-forward healthcare experience."
+  },
+  {
+    slug: "directmeds",
+    providerId: "directmeds",
+    shortSummary: "Pharmacy-direct weight loss platform offering GLP-1 medications with streamlined fulfillment and licensed provider oversight.",
+    reviewIntro: "DirectMeds connects patients directly with pharmacy fulfillment for GLP-1 weight loss medications, cutting out unnecessary middlemen. Their platform pairs licensed medical providers with efficient pharmacy operations to deliver prescription weight loss treatments quickly and at competitive prices.",
+    keyFeatures: [
+      "Direct pharmacy fulfillment model",
+      "Licensed provider consultations included",
+      "GLP-1 medication access (semaglutide, tirzepatide)",
+      "Streamlined ordering and delivery process",
+      "Ongoing medical support and dosage adjustments"
+    ],
+    pricingSummary: "DirectMeds offers competitive monthly pricing that includes provider consultations, medication, and direct pharmacy shipping. No hidden fees or long-term contracts required.",
+    treatmentOptions: [
+      "Compounded semaglutide",
+      "Compounded tirzepatide",
+      "Provider-guided dosage optimization",
+      "Ongoing treatment monitoring"
+    ],
+    pros: [
+      "Fast pharmacy-direct fulfillment",
+      "Competitive pricing on GLP-1 treatments",
+      "Licensed providers oversee all prescriptions",
+      "Simple, streamlined ordering process",
+      "No long-term commitment required"
+    ],
+    cons: [
+      "Smaller platform with fewer user reviews",
+      "Limited lifestyle support resources",
+      "Availability may vary by state"
+    ],
+    bestFor: [
+      "People who want fast, direct pharmacy fulfillment",
+      "Those looking for competitively priced GLP-1 access",
+      "Anyone who values a simple, no-frills ordering process"
+    ],
+    finalVerdict: "DirectMeds is a solid option for patients who prioritize speed and simplicity in accessing GLP-1 weight loss medications. Their pharmacy-direct model cuts out unnecessary steps, and competitive pricing makes treatment more accessible. While the platform lacks some of the coaching and lifestyle features of larger competitors, it delivers on its core promise: affordable, provider-supervised GLP-1 treatment with fast delivery."
   }
 ];
 

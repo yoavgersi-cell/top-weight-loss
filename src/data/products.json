@@ -218,5 +218,25 @@
     "affiliateUrl": "https://wellorithm.com/",
     "ctaText": "View Plan",
     "description": ""
+  },
+  {
+    "id": "directmeds",
+    "rank": 12,
+    "name": "DirectMeds",
+    "slug": "directmeds",
+    "tagline": "Pharmacy-Direct GLP-1 Weight Loss Treatment",
+    "logo": "/logos/directmeds.svg",
+    "rating": 8.0,
+    "ratingLabel": "Good",
+    "reviewCount": 980,
+    "highlights": [
+      "Direct pharmacy fulfillment for faster delivery",
+      "Licensed providers and ongoing medical support",
+      "Competitive pricing on GLP-1 medications"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://directmeds.com",
+    "ctaText": "View Plan",
+    "description": ""
   }
 ]
