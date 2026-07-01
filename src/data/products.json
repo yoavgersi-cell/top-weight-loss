@@ -238,5 +238,45 @@
     "affiliateUrl": "https://directmeds.com",
     "ctaText": "View Plan",
     "description": ""
+  },
+  {
+    "id": "found",
+    "rank": 13,
+    "name": "Found",
+    "slug": "found",
+    "tagline": "Science-Backed Weight Loss with Ongoing Coaching",
+    "logo": "/logos/found.svg",
+    "rating": 8.0,
+    "ratingLabel": "Good",
+    "reviewCount": 3200,
+    "highlights": [
+      "Board-certified providers and health coaching",
+      "GLP-1 and non-GLP-1 medication options",
+      "Personalized programs based on biology and habits"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://joinfound.com/",
+    "ctaText": "View Plan",
+    "description": ""
+  },
+  {
+    "id": "yucca",
+    "rank": 14,
+    "name": "Yucca",
+    "slug": "yucca",
+    "tagline": "Modern Telehealth Weight Loss with GLP-1 Access",
+    "logo": "/logos/yucca.svg",
+    "rating": 8.0,
+    "ratingLabel": "Good",
+    "reviewCount": 1100,
+    "highlights": [
+      "Streamlined GLP-1 prescription process",
+      "Licensed clinicians with ongoing support",
+      "Affordable monthly plans with home delivery"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://tryyucca.com/",
+    "ctaText": "View Plan",
+    "description": ""
   }
 ]

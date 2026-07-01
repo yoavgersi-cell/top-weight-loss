@@ -462,6 +462,82 @@ const defaultReviews: ReviewData[] = [
       "Anyone who values a simple, no-frills ordering process"
     ],
     finalVerdict: "DirectMeds is a solid option for patients who prioritize speed and simplicity in accessing GLP-1 weight loss medications. Their pharmacy-direct model cuts out unnecessary steps, and competitive pricing makes treatment more accessible. While the platform lacks some of the coaching and lifestyle features of larger competitors, it delivers on its core promise: affordable, provider-supervised GLP-1 treatment with fast delivery."
+  },
+  {
+    slug: "found",
+    providerId: "found",
+    shortSummary: "Science-backed weight loss platform combining prescription medication with personalized coaching and behavior change support.",
+    reviewIntro: "Found takes a comprehensive approach to weight loss by combining prescription medication with ongoing health coaching, behavioral science, and personalized treatment plans. Their platform is designed around the idea that sustainable weight loss requires more than just medication — it requires understanding your unique biology, habits, and lifestyle factors.",
+    keyFeatures: [
+      "Board-certified clinicians prescribe treatment",
+      "GLP-1 and non-GLP-1 medication options available",
+      "Dedicated health coaching included",
+      "Personalized plans based on biology and habits",
+      "Ongoing progress tracking and community support"
+    ],
+    pricingSummary: "Found offers monthly membership plans that include clinician consultations, coaching, and access to prescription medications. Medication costs vary depending on the treatment prescribed. Some plans may be eligible for insurance or HSA/FSA coverage.",
+    treatmentOptions: [
+      "GLP-1 medications (semaglutide, tirzepatide)",
+      "Non-GLP-1 prescription options",
+      "Health coaching and behavioral support",
+      "Personalized nutrition and activity guidance"
+    ],
+    pros: [
+      "Combines medication with coaching for a holistic approach",
+      "Multiple medication options beyond just GLP-1",
+      "Board-certified providers oversee all treatment",
+      "Strong community and educational resources",
+      "Personalized to individual biology and habits"
+    ],
+    cons: [
+      "Coaching-focused approach may not suit everyone",
+      "Medication costs can vary and add up",
+      "Some users report longer onboarding process"
+    ],
+    bestFor: [
+      "People who want medication plus coaching support",
+      "Those interested in understanding the science behind their weight loss",
+      "Anyone looking for a holistic, long-term approach"
+    ],
+    finalVerdict: "Found stands out for its combination of prescription medication and personalized health coaching. If you want more than just a prescription — if you want to understand why your body responds the way it does and build sustainable habits alongside medical treatment — Found is a strong choice. The platform is best suited for people who value a science-backed, coaching-supported approach to weight loss."
+  },
+  {
+    slug: "yucca",
+    providerId: "yucca",
+    shortSummary: "Modern telehealth weight loss platform offering streamlined GLP-1 access with licensed clinicians and affordable pricing.",
+    reviewIntro: "Yucca is a modern telehealth platform focused on making GLP-1 weight loss treatment simple and accessible. Their streamlined process connects patients with licensed clinicians who evaluate eligibility, prescribe medication, and provide ongoing support — all through a clean, easy-to-use online experience.",
+    keyFeatures: [
+      "Fast online eligibility evaluation",
+      "Licensed clinician consultations included",
+      "GLP-1 medication prescribed and delivered",
+      "Affordable, transparent monthly pricing",
+      "Ongoing clinical support and check-ins"
+    ],
+    pricingSummary: "Yucca offers straightforward monthly plans that include clinician consultations, GLP-1 medication, and home delivery. Pricing is transparent with no hidden fees or long-term contracts.",
+    treatmentOptions: [
+      "Compounded semaglutide",
+      "Compounded tirzepatide",
+      "Clinician-guided dosage adjustments",
+      "Ongoing treatment monitoring"
+    ],
+    pros: [
+      "Simple and fast onboarding process",
+      "Affordable pricing compared to competitors",
+      "Licensed clinicians oversee all care",
+      "Clean, modern user experience",
+      "No long-term contracts required"
+    ],
+    cons: [
+      "Newer platform with limited brand recognition",
+      "Fewer lifestyle support features",
+      "Limited availability in some states"
+    ],
+    bestFor: [
+      "People looking for affordable GLP-1 access",
+      "Those who prefer a fast, simple onboarding process",
+      "Anyone who values a modern, no-frills telehealth experience"
+    ],
+    finalVerdict: "Yucca delivers a clean, modern telehealth experience for patients seeking affordable GLP-1 weight loss treatment. While it lacks the coaching depth of some competitors, its streamlined process, transparent pricing, and licensed clinical oversight make it a compelling option for people who want effective treatment without complexity."
   }
 ];
 
