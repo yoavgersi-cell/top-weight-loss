@@ -37,7 +37,7 @@ export function ContentSidebar({ config, providers, articles, pageType, sourceFl
                   <div className="space-y-4">
                     {selectedProviders.map((provider, pi) => (
                       <div key={provider.id} className="flex items-center gap-3">
-                        <div className="flex h-[32px] w-[80px] shrink-0 items-center">
+                        <div className="flex h-[32px] w-[100px] shrink-0 items-center">
                           {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img
                             src={provider.logo}
@@ -45,9 +45,7 @@ export function ContentSidebar({ config, providers, articles, pageType, sourceFl
                             className="max-h-full max-w-full object-contain"
                           />
                         </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="truncate text-[13px] font-semibold text-[#191919]">{provider.name}</p>
-                        </div>
+                        <div className="flex-1" />
                         <ProviderCta
                           href={provider.affiliateUrl}
                           providerName={provider.name}
@@ -149,11 +147,11 @@ export function ContentSidebar({ config, providers, articles, pageType, sourceFl
                 <div className="space-y-3">
                   {selectedProviders.map((provider, pi) => (
                     <div key={provider.id} className="flex items-center gap-3">
-                      <div className="flex h-[28px] w-[70px] shrink-0 items-center">
+                      <div className="flex h-[28px] w-[90px] shrink-0 items-center">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src={provider.logo} alt={provider.name} className="max-h-full max-w-full object-contain" />
                       </div>
-                      <span className="flex-1 truncate text-[13px] font-semibold text-[#191919]">{provider.name}</span>
+                      <div className="flex-1" />
                       <ProviderCta
                         href={provider.affiliateUrl}
                         providerName={provider.name}
