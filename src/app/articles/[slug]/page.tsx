@@ -136,7 +136,7 @@ export default async function ArticlePage({
           className="w-full"
           style={{ backgroundColor: article.heroColor }}
         >
-          <div className="mx-auto max-w-[720px] px-4 py-10 sm:px-6 sm:py-14">
+          <div className="mx-auto max-w-[1100px] px-4 py-10 sm:px-6 sm:py-14">
             <Breadcrumbs
               items={[
                 { label: "Home", href: "/" },
