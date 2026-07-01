@@ -45,7 +45,7 @@ export function HeroSection({
       >
         <div style={{ maxWidth: maxTextWidth }}>
           {updatedLabel && (
-            <span className="mb-3 inline-flex items-center gap-1.5 text-[13px] text-gray-600">
+            <span className="mb-4 sm:mb-5 inline-flex items-center gap-1.5 text-[13px] text-gray-600">
               <svg className="h-4 w-4 text-green-500" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
               {updatedLabel}
             </span>
@@ -56,13 +56,13 @@ export function HeroSection({
           </h1>
 
           {h2 && (
-            <h2 className="mt-1 text-[16px] sm:text-[32px] leading-[1.2] font-semibold text-[#3a6ea5]">
+            <h2 className="mt-2 text-[16px] sm:text-[32px] leading-[1.2] font-semibold text-[#3a6ea5]">
               {h2}
             </h2>
           )}
 
           {description && (
-            <p className="mt-2 sm:mt-3 text-[13px] sm:text-[16px] leading-[1.5] sm:leading-[1.6] text-gray-600 max-w-[520px]">
+            <p className="mt-3 sm:mt-4 text-[13px] sm:text-[16px] leading-[1.5] sm:leading-[1.6] text-gray-600 max-w-[520px]">
               {description}
             </p>
           )}
