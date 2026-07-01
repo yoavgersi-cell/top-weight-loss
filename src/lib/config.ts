@@ -207,7 +207,7 @@ export const defaultConfig: SiteConfig = {
   hero: {
     backgroundImageUrl: "/hero.png",
     imageAlt: "Weight loss medications",
-    updatedLabel: "Last Updated: June 2026",
+    updatedLabel: "Last Updated: July 2026",
     h1: "Top Weight Loss Providers 2026",
     h2: "Compare trusted providers side by side",
     description:

@@ -157,7 +157,7 @@ export default async function ReviewPage({
                   {provider.tagline}
                 </p>
                 <p className="mt-1 text-xs text-gray-400">
-                  Last updated: June 2026
+                  Last updated: July 2026
                 </p>
               </div>
             </div>
