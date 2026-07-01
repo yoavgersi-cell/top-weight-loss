@@ -650,17 +650,27 @@ export async function getConfig(): Promise<SiteConfig> {
       if (res.ok) {
         const saved = (await res.json()) as Partial<SiteConfig>;
         const initial = buildInitialConfig();
-        // Merge smallLogo into saved providers that don't have it
-        const providers = (saved.providers || initial.providers).map((p) => ({
+        // Merge providers: keep saved, add new defaults by id
+        const savedProviders = (saved.providers || []).map((p) => ({
           ...p,
           smallLogo: p.smallLogo || `/logos/${p.id}-icon.svg`,
         }));
+        const savedProviderIds = new Set(savedProviders.map((p) => p.id));
+        const newProviders = initial.providers
+          .filter((p) => !savedProviderIds.has(p.id))
+          .map((p) => ({ ...p, smallLogo: p.smallLogo || `/logos/${p.id}-icon.svg` }));
+        const providers = [...savedProviders, ...newProviders];
         return {
           ...initial,
           ...saved,
           providers,
           ranking: saved.ranking && saved.ranking.providerOrder && saved.ranking.providerOrder.length > 0 ? saved.ranking : initial.ranking,
-          reviews: saved.reviews && saved.reviews.length > 0 ? saved.reviews : initial.reviews,
+          reviews: (() => {
+            const savedReviews = saved.reviews && saved.reviews.length > 0 ? saved.reviews : [];
+            const savedSlugs = new Set(savedReviews.map((r) => r.slug));
+            const newDefaults = initial.reviews.filter((r) => !savedSlugs.has(r.slug));
+            return [...savedReviews, ...newDefaults];
+          })(),
           articles: (() => {
             const savedArticles = saved.articles && saved.articles.length > 0 ? saved.articles : [];
             const savedSlugs = new Set(savedArticles.map((a) => a.slug));
