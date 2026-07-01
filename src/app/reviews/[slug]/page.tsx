@@ -129,7 +129,7 @@ export default async function ReviewPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <div className="mx-auto max-w-[800px] px-4 py-12 sm:px-6">
+      <div className="mx-auto max-w-[1000px] px-4 py-12 sm:px-6">
         <Breadcrumbs
           items={[
             { label: "Home", href: "/" },
