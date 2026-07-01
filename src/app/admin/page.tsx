@@ -219,7 +219,7 @@ export default function AdminPage() {
 
   const tabs = [
     { key: "providers" as const, label: "Providers" },
-    { key: "ranking" as const, label: "Ranking" },
+    { key: "ranking" as const, label: "Homepage" },
     { key: "hero" as const, label: "Hero" },
     { key: "sidebar" as const, label: "Sidebar" },
     { key: "faqs" as const, label: "FAQs" },
@@ -327,13 +327,13 @@ export default function AdminPage() {
           </div>
         )}
 
-        {/* Ranking Tab */}
+        {/* Homepage Ranking Tab */}
         {activeTab === "ranking" && config.ranking && (
           <div className="space-y-6">
             {/* Provider Ranking Order */}
             <div className="rounded-xl border bg-white p-6 shadow-sm">
-              <h3 className="mb-1 text-sm font-bold text-gray-500 uppercase tracking-wider">Provider Ranking Order</h3>
-              <p className="mb-4 text-xs text-gray-400">Drag providers up or down to change their ranking. Each position automatically receives the score and label defined below.</p>
+              <h3 className="mb-1 text-sm font-bold text-gray-500 uppercase tracking-wider">Homepage Provider Order</h3>
+              <p className="mb-4 text-xs text-gray-400">Choose which providers appear on the homepage and in what order. Only listed providers will be shown.</p>
               <div className="space-y-2">
                 {config.ranking.providerOrder.map((providerId, index) => {
                   const provider = config.providers.find((p) => p.id === providerId);
@@ -365,10 +365,50 @@ export default function AdminPage() {
                         >
                           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m6 9 6 6 6-6"/></svg>
                         </button>
+                        <button
+                          onClick={() => {
+                            const order = config.ranking.providerOrder.filter((_, i) => i !== index);
+                            setConfig({ ...config, ranking: { ...config.ranking, providerOrder: order } });
+                          }}
+                          className="flex h-8 w-8 items-center justify-center rounded border border-red-200 text-red-400 hover:bg-red-50 hover:text-red-600"
+                        >
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                        </button>
                       </div>
                     </div>
                   );
                 })}
+              </div>
+              <div className="mt-3 flex gap-2">
+                <select
+                  id="add-homepage-provider"
+                  className="flex-1 rounded border px-3 py-2 text-sm text-gray-600 focus:border-[#0C4B75] focus:outline-none"
+                  defaultValue=""
+                >
+                  <option value="" disabled>Add provider to homepage...</option>
+                  {config.providers
+                    .filter((p) => !config.ranking.providerOrder.includes(p.id))
+                    .map((p) => (
+                      <option key={p.id} value={p.id}>{p.name}</option>
+                    ))}
+                </select>
+                <button
+                  onClick={() => {
+                    const select = document.getElementById("add-homepage-provider") as HTMLSelectElement;
+                    if (!select?.value) return;
+                    setConfig({
+                      ...config,
+                      ranking: {
+                        ...config.ranking,
+                        providerOrder: [...config.ranking.providerOrder, select.value],
+                      },
+                    });
+                    select.value = "";
+                  }}
+                  className="rounded border border-[#0C4B75] px-4 py-2 text-xs font-semibold text-[#0C4B75] hover:bg-[#0C4B75]/5"
+                >
+                  Add
+                </button>
               </div>
             </div>
 
