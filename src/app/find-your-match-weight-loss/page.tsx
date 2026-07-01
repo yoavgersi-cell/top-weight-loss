@@ -180,11 +180,15 @@ export default function ChatQuizPage() {
 
   function calculateResults() {
     if (!config || !quiz) return;
-    const profiles = quiz.providerProfiles;
+    const quizOrder = quiz.providerOrder && quiz.providerOrder.length > 0 ? quiz.providerOrder : null;
+    const profiles = quizOrder
+      ? quiz.providerProfiles.filter((p) => quizOrder.includes(p.providerId))
+      : quiz.providerProfiles;
     const priority = answers["priority"] || "";
     const ranking = config.ranking;
     const scored = profiles.map((profile) => {
-      const rankingIndex = ranking.providerOrder.indexOf(profile.providerId);
+      const orderList = quizOrder || ranking.providerOrder;
+      const rankingIndex = orderList.indexOf(profile.providerId);
       let score = 10 - (rankingIndex >= 0 ? rankingIndex : 5);
       if (priority === "cost") score += profile.priceLevel === "low" ? 4 : profile.priceLevel === "mid" ? 2 : 0;
       if (profile.strengths.includes(priority)) score += 4;

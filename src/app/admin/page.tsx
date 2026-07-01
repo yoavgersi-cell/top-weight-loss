@@ -1150,6 +1150,85 @@ export default function AdminPage() {
               />
             </div>
 
+            {/* Quiz Provider Order */}
+            <div className="rounded-xl border bg-white p-6 shadow-sm">
+              <h3 className="mb-1 text-sm font-bold text-gray-500 uppercase tracking-wider">Quiz Provider Order</h3>
+              <p className="mb-4 text-xs text-gray-400">Control which providers appear in quiz results and in what priority. Only listed providers will be shown.</p>
+              <div className="space-y-2">
+                {(config.quiz.providerOrder ?? config.ranking.providerOrder ?? []).map((providerId, pi) => {
+                  const provider = config.providers.find((p) => p.id === providerId);
+                  return (
+                    <div key={providerId} className="flex items-center gap-3 rounded-lg border bg-gray-50 px-4 py-2.5">
+                      <div className="flex h-7 w-7 items-center justify-center rounded bg-[#191919] text-xs font-bold text-white shrink-0">{pi + 1}</div>
+                      <span className="flex-1 text-sm font-medium text-[#191919]">{provider?.name ?? providerId}</span>
+                      <div className="flex gap-1 shrink-0">
+                        <button
+                          onClick={() => {
+                            if (pi === 0) return;
+                            const order = [...(config.quiz.providerOrder ?? config.ranking.providerOrder ?? [])];
+                            [order[pi], order[pi - 1]] = [order[pi - 1], order[pi]];
+                            setConfig({ ...config, quiz: { ...config.quiz, providerOrder: order } });
+                          }}
+                          disabled={pi === 0}
+                          className="flex h-7 w-7 items-center justify-center rounded border text-gray-400 hover:bg-white hover:text-gray-600 disabled:opacity-30"
+                        >
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m18 15-6-6-6 6"/></svg>
+                        </button>
+                        <button
+                          onClick={() => {
+                            const order = config.quiz.providerOrder ?? config.ranking.providerOrder ?? [];
+                            if (pi === order.length - 1) return;
+                            const newOrder = [...order];
+                            [newOrder[pi], newOrder[pi + 1]] = [newOrder[pi + 1], newOrder[pi]];
+                            setConfig({ ...config, quiz: { ...config.quiz, providerOrder: newOrder } });
+                          }}
+                          disabled={pi === (config.quiz.providerOrder ?? config.ranking.providerOrder ?? []).length - 1}
+                          className="flex h-7 w-7 items-center justify-center rounded border text-gray-400 hover:bg-white hover:text-gray-600 disabled:opacity-30"
+                        >
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m6 9 6 6 6-6"/></svg>
+                        </button>
+                        <button
+                          onClick={() => {
+                            const order = (config.quiz.providerOrder ?? config.ranking.providerOrder ?? []).filter((_, i) => i !== pi);
+                            setConfig({ ...config, quiz: { ...config.quiz, providerOrder: order } });
+                          }}
+                          className="flex h-7 w-7 items-center justify-center rounded border border-red-200 text-red-400 hover:bg-red-50"
+                        >
+                          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              <div className="mt-2 flex gap-2">
+                <select
+                  id="add-quiz-provider"
+                  className="flex-1 rounded border px-3 py-1.5 text-sm text-gray-600 focus:border-[#0C4B75] focus:outline-none"
+                  defaultValue=""
+                >
+                  <option value="" disabled>Add provider...</option>
+                  {config.providers
+                    .filter((p) => !(config.quiz.providerOrder ?? config.ranking.providerOrder ?? []).includes(p.id))
+                    .map((p) => (
+                      <option key={p.id} value={p.id}>{p.name}</option>
+                    ))}
+                </select>
+                <button
+                  onClick={() => {
+                    const select = document.getElementById("add-quiz-provider") as HTMLSelectElement;
+                    if (!select?.value) return;
+                    const order = [...(config.quiz.providerOrder ?? config.ranking.providerOrder ?? []), select.value];
+                    setConfig({ ...config, quiz: { ...config.quiz, providerOrder: order } });
+                    select.value = "";
+                  }}
+                  className="rounded border border-[#0C4B75] px-3 py-1.5 text-xs font-semibold text-[#0C4B75] hover:bg-[#0C4B75]/5"
+                >
+                  Add
+                </button>
+              </div>
+            </div>
+
             {/* Results & loading */}
             <div className="rounded-xl border bg-white p-6 shadow-sm">
               <h3 className="mb-4 text-sm font-bold text-gray-500 uppercase tracking-wider">Results & Loading</h3>
