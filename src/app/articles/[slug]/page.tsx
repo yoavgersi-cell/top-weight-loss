@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Clock, ArrowLeft, ArrowRight } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { ContentSidebar } from "@/components/content-sidebar";
 import { notFound } from "next/navigation";
 
 export const revalidate = 60;
@@ -56,6 +57,12 @@ export default async function ArticlePage({
   const currentIndex = articles.findIndex((a) => a.slug === slug);
   const nextArticle = articles[currentIndex + 1] || null;
   const prevArticle = currentIndex > 0 ? articles[currentIndex - 1] : null;
+
+  // Resolve sidebar: per-article override → articles default → null
+  const sidebars = config.sidebars ?? [];
+  const sidebarConfig = article.sidebarId
+    ? sidebars.find((s) => s.id === article.sidebarId) || null
+    : sidebars.find((s) => s.area === "articles" && s.active) || null;
 
   const formattedDate = new Date(article.updatedAt).toLocaleDateString(
     "en-US",
@@ -162,8 +169,10 @@ export default async function ArticlePage({
           </div>
         </div>
 
-        {/* Article body */}
-        <div className="mx-auto max-w-[720px] px-4 py-10 sm:px-6">
+        {/* Article body + sidebar */}
+        <div className="mx-auto max-w-[1100px] px-4 py-10 sm:px-6">
+          <div className="flex gap-8 items-start">
+          <div className="min-w-0 flex-1 max-w-[720px]">
           <article className="space-y-8">
             {article.sections.map((section, i) => (
               <section key={i}>
@@ -238,6 +247,19 @@ export default async function ArticlePage({
                 </div>
               </Link>
             )}
+          </div>
+
+          </div>
+
+          {sidebarConfig && (
+            <ContentSidebar
+              config={sidebarConfig}
+              providers={config.providers}
+              articles={(config.articles ?? []).filter((a) => a.slug !== slug)}
+              pageType="listing"
+              sourceFlow="main_comparison"
+            />
+          )}
           </div>
         </div>
       </div>

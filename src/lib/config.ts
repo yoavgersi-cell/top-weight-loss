@@ -115,6 +115,7 @@ export interface ArticleData {
   updatedAt: string;
   heroColor: string;
   sections: ArticleSection[];
+  sidebarId?: string;
 }
 
 export interface BattleCategory {
@@ -150,6 +151,29 @@ export interface BattleData {
   features: BattleFeatureRow[];
 }
 
+export interface SidebarBlock {
+  type: "providers" | "quizCta" | "relatedArticles";
+  enabled: boolean;
+}
+
+export interface SidebarQuizCta {
+  headline: string;
+  description: string;
+  ctaText: string;
+  ctaUrl: string;
+}
+
+export interface SidebarConfigData {
+  id: string;
+  name: string;
+  area: "homepage" | "articles" | "reviews" | "comparisons" | "custom";
+  active: boolean;
+  blocks: SidebarBlock[];
+  providerIds: string[];
+  quizCta: SidebarQuizCta;
+  articleSlugs: string[];
+}
+
 export interface LandingPageData {
   slug: string;
   seoTitle: string;
@@ -167,6 +191,7 @@ export interface SiteConfig {
   articles: ArticleData[];
   battles: BattleData[];
   landingPages: LandingPageData[];
+  sidebars: SidebarConfigData[];
   quiz: QuizConfig;
   hero: HeroConfig;
   sidebar: SidebarConfig;
@@ -221,6 +246,7 @@ export const defaultConfig: SiteConfig = {
   articles: [],
   battles: [],
   landingPages: [],
+  sidebars: [],
   quiz: {
     welcomeTitle: "Find Your Best Weight Loss Provider Match",
     welcomeSubtitle: "Answer a few quick questions and we'll compare trusted weight loss providers based on your goals, preferences, and location.",

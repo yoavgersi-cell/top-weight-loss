@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import type { SiteConfig, Provider, FaqItem, ReviewData, ArticleData, BattleData, LandingPageData, RankingPageConfig } from "@/lib/config";
+import type { SiteConfig, Provider, FaqItem, ReviewData, ArticleData, BattleData, LandingPageData, SidebarConfigData, RankingPageConfig } from "@/lib/config";
 
 export default function AdminPage() {
   const [password, setPassword] = useState("");
@@ -9,7 +9,7 @@ export default function AdminPage() {
   const [config, setConfig] = useState<SiteConfig | null>(null);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState("");
-  const [activeTab, setActiveTab] = useState<"providers" | "ranking" | "hero" | "sidebar" | "faqs" | "reviews" | "articles" | "battles" | "pages" | "quiz" | "general">("providers");
+  const [activeTab, setActiveTab] = useState<"providers" | "ranking" | "hero" | "sidebar" | "faqs" | "reviews" | "articles" | "battles" | "pages" | "sidebars" | "quiz" | "general">("providers");
 
   const token = typeof window !== "undefined" ? sessionStorage.getItem("admin_token") : null;
 
@@ -227,6 +227,7 @@ export default function AdminPage() {
     { key: "articles" as const, label: "Articles" },
     { key: "battles" as const, label: "Battles" },
     { key: "pages" as const, label: "Pages" },
+    { key: "sidebars" as const, label: "Sidebars" },
     { key: "quiz" as const, label: "Quiz" },
     { key: "general" as const, label: "General" },
   ];
@@ -1101,6 +1102,150 @@ export default function AdminPage() {
               className="w-full rounded-lg border-2 border-dashed border-gray-300 py-4 text-sm font-medium text-gray-400 hover:border-[#0C4B75] hover:text-[#0C4B75]"
             >
               + Add Landing Page
+            </button>
+          </div>
+        )}
+
+        {/* Sidebars Tab */}
+        {activeTab === "sidebars" && (
+          <div className="space-y-4">
+            <p className="text-xs text-gray-400">Configure sidebar content per section. Sidebars can be assigned to articles, reviews, homepage, etc.</p>
+            {(config.sidebars ?? []).map((sb, index) => {
+              const updateSB = (patch: Record<string, unknown>) => {
+                const sidebars = [...(config.sidebars ?? [])];
+                sidebars[index] = { ...sidebars[index], ...patch };
+                setConfig({ ...config, sidebars });
+              };
+              return (
+                <div key={sb.id || index} className="rounded-xl border bg-white p-6 shadow-sm">
+                  <div className="mb-4 flex items-center justify-between">
+                    <div>
+                      <h3 className="text-sm font-bold text-[#191919]">{sb.name}</h3>
+                      <span className="text-xs text-gray-400">ID: {sb.id} — Area: {sb.area}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <label className="flex items-center gap-1.5 text-xs font-medium text-gray-500">
+                        <input type="checkbox" checked={sb.active} onChange={(e) => updateSB({ active: e.target.checked })} className="rounded" />
+                        Active
+                      </label>
+                      <button onClick={() => setConfig({ ...config, sidebars: (config.sidebars ?? []).filter((_, i) => i !== index) })} className="flex h-8 w-8 items-center justify-center rounded border border-red-200 text-red-400 hover:bg-red-50 hover:text-red-600">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="grid gap-4 sm:grid-cols-3">
+                    <Field label="Sidebar Name" value={sb.name} onChange={(v) => updateSB({ name: v })} />
+                    <Field label="ID" value={sb.id} onChange={(v) => updateSB({ id: v })} />
+                    <div>
+                      <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Area</label>
+                      <select value={sb.area} onChange={(e) => updateSB({ area: e.target.value })} className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none">
+                        <option value="homepage">Homepage</option>
+                        <option value="articles">Articles</option>
+                        <option value="reviews">Reviews</option>
+                        <option value="comparisons">Comparisons</option>
+                        <option value="custom">Custom</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  {/* Blocks */}
+                  <div className="mt-4">
+                    <label className="mb-2 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Blocks</label>
+                    <div className="flex gap-3">
+                      {(sb.blocks ?? []).map((block, bi) => (
+                        <label key={bi} className="flex items-center gap-1.5 text-sm font-medium text-gray-600">
+                          <input type="checkbox" checked={block.enabled} onChange={(e) => {
+                            const blocks = [...sb.blocks];
+                            blocks[bi] = { ...blocks[bi], enabled: e.target.checked };
+                            updateSB({ blocks });
+                          }} className="rounded" />
+                          {block.type === "providers" ? "Top Providers" : block.type === "quizCta" ? "Quiz CTA" : "Related Articles"}
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Selected Providers */}
+                  <div className="mt-4">
+                    <label className="mb-2 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Sidebar Providers</label>
+                    <div className="space-y-1.5">
+                      {(sb.providerIds ?? []).map((pid, pi) => {
+                        const prov = config.providers.find((p) => p.id === pid);
+                        return (
+                          <div key={pid} className="flex items-center gap-2 rounded border bg-gray-50 px-3 py-1.5 text-sm">
+                            <span className="flex-1">{prov?.name ?? pid}</span>
+                            <button onClick={() => updateSB({ providerIds: sb.providerIds.filter((_, i) => i !== pi) })} className="text-red-400 hover:text-red-600 text-xs">Remove</button>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div className="mt-1.5 flex gap-2">
+                      <select id={`sb-prov-${index}`} className="flex-1 rounded border px-3 py-1.5 text-sm focus:border-[#0C4B75] focus:outline-none" defaultValue="">
+                        <option value="" disabled>Add provider...</option>
+                        {config.providers.filter((p) => !(sb.providerIds ?? []).includes(p.id)).map((p) => (<option key={p.id} value={p.id}>{p.name}</option>))}
+                      </select>
+                      <button onClick={() => { const el = document.getElementById(`sb-prov-${index}`) as HTMLSelectElement; if (el?.value) { updateSB({ providerIds: [...(sb.providerIds ?? []), el.value] }); el.value = ""; } }} className="rounded border border-[#0C4B75] px-3 py-1.5 text-xs font-semibold text-[#0C4B75] hover:bg-[#0C4B75]/5">Add</button>
+                    </div>
+                  </div>
+
+                  {/* Quiz CTA */}
+                  <div className="mt-4">
+                    <label className="mb-2 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Quiz CTA</label>
+                    <div className="grid gap-3 sm:grid-cols-2">
+                      <Field label="Headline" value={sb.quizCta?.headline ?? ""} onChange={(v) => updateSB({ quizCta: { ...sb.quizCta, headline: v } })} />
+                      <Field label="Description" value={sb.quizCta?.description ?? ""} onChange={(v) => updateSB({ quizCta: { ...sb.quizCta, description: v } })} />
+                      <Field label="CTA Text" value={sb.quizCta?.ctaText ?? ""} onChange={(v) => updateSB({ quizCta: { ...sb.quizCta, ctaText: v } })} />
+                      <Field label="CTA URL" value={sb.quizCta?.ctaUrl ?? ""} onChange={(v) => updateSB({ quizCta: { ...sb.quizCta, ctaUrl: v } })} />
+                    </div>
+                  </div>
+
+                  {/* Related Articles */}
+                  <div className="mt-4">
+                    <label className="mb-2 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Related Articles</label>
+                    <div className="space-y-1.5">
+                      {(sb.articleSlugs ?? []).map((aSlug, ai) => {
+                        const art = (config.articles ?? []).find((a) => a.slug === aSlug);
+                        return (
+                          <div key={aSlug} className="flex items-center gap-2 rounded border bg-gray-50 px-3 py-1.5 text-sm">
+                            <span className="flex-1 truncate">{art?.title ?? aSlug}</span>
+                            <button onClick={() => updateSB({ articleSlugs: sb.articleSlugs.filter((_, i) => i !== ai) })} className="text-red-400 hover:text-red-600 text-xs">Remove</button>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div className="mt-1.5 flex gap-2">
+                      <select id={`sb-art-${index}`} className="flex-1 rounded border px-3 py-1.5 text-sm focus:border-[#0C4B75] focus:outline-none" defaultValue="">
+                        <option value="" disabled>Add article...</option>
+                        {(config.articles ?? []).filter((a) => !(sb.articleSlugs ?? []).includes(a.slug)).map((a) => (<option key={a.slug} value={a.slug}>{a.title}</option>))}
+                      </select>
+                      <button onClick={() => { const el = document.getElementById(`sb-art-${index}`) as HTMLSelectElement; if (el?.value) { updateSB({ articleSlugs: [...(sb.articleSlugs ?? []), el.value] }); el.value = ""; } }} className="rounded border border-[#0C4B75] px-3 py-1.5 text-xs font-semibold text-[#0C4B75] hover:bg-[#0C4B75]/5">Add</button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+            <button
+              onClick={() => {
+                const newSB: SidebarConfigData = {
+                  id: `sidebar-${Date.now()}`,
+                  name: "New Sidebar",
+                  area: "articles",
+                  active: true,
+                  blocks: [
+                    { type: "providers", enabled: true },
+                    { type: "quizCta", enabled: true },
+                    { type: "relatedArticles", enabled: true },
+                  ],
+                  providerIds: [],
+                  quizCta: { headline: "Not sure which provider?", description: "Take our free quiz.", ctaText: "Find My Match", ctaUrl: "/find-your-match" },
+                  articleSlugs: [],
+                };
+                setConfig({ ...config, sidebars: [...(config.sidebars ?? []), newSB] });
+              }}
+              className="w-full rounded-lg border-2 border-dashed border-gray-300 py-4 text-sm font-medium text-gray-400 hover:border-[#0C4B75] hover:text-[#0C4B75]"
+            >
+              + Add Sidebar
             </button>
           </div>
         )}

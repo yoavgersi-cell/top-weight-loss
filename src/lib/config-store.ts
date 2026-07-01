@@ -612,6 +612,27 @@ function buildInitialConfig(): SiteConfig {
         ],
       },
     ],
+    sidebars: [
+      {
+        id: "articles-default",
+        name: "Articles Sidebar",
+        area: "articles" as const,
+        active: true,
+        blocks: [
+          { type: "providers" as const, enabled: true },
+          { type: "quizCta" as const, enabled: true },
+          { type: "relatedArticles" as const, enabled: true },
+        ],
+        providerIds: ["altrx", "noom", "ro"],
+        quizCta: {
+          headline: "Not sure which provider is right?",
+          description: "Take our free quiz and get a personalized recommendation.",
+          ctaText: "Find My Match",
+          ctaUrl: "/find-your-match",
+        },
+        articleSlugs: ["how-glp1-medications-work", "first-month-weight-loss-medication", "choosing-telehealth-weight-loss-provider"],
+      },
+    ],
     landingPages: [
       {
         slug: "semaglutide",
@@ -754,6 +775,7 @@ export async function getConfig(): Promise<SiteConfig> {
             return [...savedArticles, ...newDefaults];
           })(),
           battles: saved.battles && saved.battles.length > 0 ? saved.battles : initial.battles,
+          sidebars: saved.sidebars && saved.sidebars.length > 0 ? saved.sidebars : initial.sidebars,
           landingPages: saved.landingPages && saved.landingPages.length > 0 ? saved.landingPages : initial.landingPages,
           quiz: saved.quiz && saved.quiz.questions && saved.quiz.questions.length > 0 ? { ...initial.quiz, ...saved.quiz } : initial.quiz,
         };
