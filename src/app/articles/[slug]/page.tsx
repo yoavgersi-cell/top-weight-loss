@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Clock, ArrowLeft, ArrowRight, List } from "lucide-react";
+import { Clock, ArrowLeft, ArrowRight } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound } from "next/navigation";
@@ -224,28 +224,6 @@ export default async function ArticlePage({
         {/* Article body */}
         <div className="mx-auto max-w-[1100px] px-4 py-10 sm:px-6">
           <div>
-          {/* Table of Contents */}
-          <nav className="mb-10 rounded-xl border border-gray-200 bg-white p-5 sm:p-6">
-            <div className="flex items-center gap-2 mb-3">
-              <List className="h-4 w-4 text-gray-400" strokeWidth={1.5} />
-              <h2 className="text-[14px] font-bold text-[#191919]">
-                In This Article
-              </h2>
-            </div>
-            <ol className="space-y-1.5">
-              {article.sections.map((section, i) => (
-                <li key={i}>
-                  <a
-                    href={`#${slugifyHeading(section.heading)}`}
-                    className="text-[14px] text-gray-500 hover:text-[#0C4B75] transition-colors"
-                  >
-                    {i + 1}. {section.heading}
-                  </a>
-                </li>
-              ))}
-            </ol>
-          </nav>
-
           <article className="space-y-8">
             {article.sections.map((section, i) => (
               <section key={i} id={slugifyHeading(section.heading)}>
