@@ -22,7 +22,7 @@ export const articles: Article[] = [
     publishedAt: "2026-05-12",
     updatedAt: "2026-06-20",
     heroColor: "#EEF4FB",
-    author: "TopWeightLoss Medical Team",
+    author: "TopWeightLoss Team",
     sections: [
       {
         heading: "What Are GLP-1 Medications?",
@@ -136,7 +136,7 @@ export const articles: Article[] = [
     publishedAt: "2026-06-01",
     updatedAt: "2026-06-25",
     heroColor: "#F5F0FB",
-    author: "TopWeightLoss Medical Team",
+    author: "TopWeightLoss Team",
     sections: [
       {
         heading: "Plateaus Are Normal — Even on Medication",
@@ -174,7 +174,7 @@ export const articles: Article[] = [
     publishedAt: "2026-06-10",
     updatedAt: "2026-06-28",
     heroColor: "#EEF4FB",
-    author: "TopWeightLoss Medical Team",
+    author: "TopWeightLoss Team",
     sections: [
       {
         heading: "Same Ingredient, Different Purpose",
@@ -208,7 +208,7 @@ export const articles: Article[] = [
     publishedAt: "2026-06-15",
     updatedAt: "2026-06-27",
     heroColor: "#F0FAF5",
-    author: "TopWeightLoss Medical Team",
+    author: "TopWeightLoss Team",
     sections: [
       {
         heading: "The Most Common Side Effects",
@@ -242,7 +242,7 @@ export const articles: Article[] = [
     publishedAt: "2026-06-18",
     updatedAt: "2026-06-28",
     heroColor: "#FBF5EE",
-    author: "TopWeightLoss Medical Team",
+    author: "TopWeightLoss Team",
     sections: [
       {
         heading: "How They Work Differently",
@@ -310,7 +310,7 @@ export const articles: Article[] = [
     publishedAt: "2026-06-25",
     updatedAt: "2026-07-03",
     heroColor: "#F0FAF5",
-    author: "TopWeightLoss Medical Team",
+    author: "TopWeightLoss Team",
     sections: [
       {
         heading: "BMI Requirements for Eligibility",
@@ -424,7 +424,7 @@ export const articles: Article[] = [
     publishedAt: "2026-07-01",
     updatedAt: "2026-07-05",
     heroColor: "#FBF5EE",
-    author: "TopWeightLoss Medical Team",
+    author: "TopWeightLoss Team",
     sections: [
       {
         heading: "The Weight Regain Data",
@@ -462,7 +462,7 @@ export const articles: Article[] = [
     publishedAt: "2026-07-03",
     updatedAt: "2026-07-05",
     heroColor: "#F5F0FB",
-    author: "TopWeightLoss Medical Team",
+    author: "TopWeightLoss Team",
     sections: [
       {
         heading: "Beyond Weight Loss: GLP-1 Receptors in the Brain",

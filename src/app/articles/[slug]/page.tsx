@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Clock, ArrowLeft, ArrowRight } from "lucide-react";
+import { Clock, ArrowLeft, ArrowRight, List } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound } from "next/navigation";
@@ -30,7 +30,7 @@ export async function generateMetadata({
       type: "article",
       publishedTime: article.publishedAt,
       modifiedTime: article.updatedAt,
-      authors: ["topweightloss.io"],
+      authors: [article.author || "topweightloss.io"],
     },
   };
 }
@@ -41,6 +41,13 @@ const categoryColors: Record<string, string> = {
   Advice: "bg-amber-50 text-amber-700",
   Wellness: "bg-purple-50 text-purple-700",
 };
+
+function slugifyHeading(heading: string): string {
+  return heading
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
 
 export default async function ArticlePage({
   params,
@@ -57,12 +64,29 @@ export default async function ArticlePage({
   const nextArticle = articles[currentIndex + 1] || null;
   const prevArticle = currentIndex > 0 ? articles[currentIndex - 1] : null;
 
+  // Related articles: same category first, then others, exclude self, max 3
+  const relatedArticles = [
+    ...articles.filter(
+      (a) => a.slug !== slug && a.category === article.category
+    ),
+    ...articles.filter(
+      (a) => a.slug !== slug && a.category !== article.category
+    ),
+  ].slice(0, 3);
+
   const formattedDate = new Date(article.updatedAt).toLocaleDateString(
     "en-US",
     { year: "numeric", month: "long", day: "numeric" }
   );
 
-  // JSON-LD Article schema
+  // Word count for schema
+  const wordCount = article.sections.reduce(
+    (sum, s) =>
+      sum + s.body.replace(/<[^>]*>/g, "").split(/\s+/).length,
+    0
+  );
+
+  // JSON-LD Article schema (enhanced)
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -70,20 +94,34 @@ export default async function ArticlePage({
     description: article.description,
     datePublished: article.publishedAt,
     dateModified: article.updatedAt,
+    wordCount,
+    articleSection: article.category,
     author: {
       "@type": "Organization",
-      name: "topweightloss.io",
+      name: article.author || "topweightloss.io",
       url: "https://www.topweightloss.io",
     },
     publisher: {
       "@type": "Organization",
       name: "topweightloss.io",
       url: "https://www.topweightloss.io",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.topweightloss.io/favicon.svg",
+      },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `https://www.topweightloss.io/articles/${slug}`,
     },
+    keywords: [
+      "weight loss",
+      "GLP-1",
+      "semaglutide",
+      "tirzepatide",
+      article.category.toLowerCase(),
+      ...article.sections.map((s) => s.heading),
+    ],
   };
 
   // JSON-LD Breadcrumb
@@ -112,6 +150,20 @@ export default async function ArticlePage({
     ],
   };
 
+  // FAQ schema from sections (each heading = question, body = answer)
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: article.sections.map((s) => ({
+      "@type": "Question",
+      name: s.heading,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: s.body.replace(/<[^>]*>/g, ""),
+      },
+    })),
+  };
+
   return (
     <>
       <script
@@ -121,6 +173,10 @@ export default async function ArticlePage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <div className="min-h-screen bg-gray-50">
@@ -168,10 +224,32 @@ export default async function ArticlePage({
         {/* Article body */}
         <div className="mx-auto max-w-[1100px] px-4 py-10 sm:px-6">
           <div>
+          {/* Table of Contents */}
+          <nav className="mb-10 rounded-xl border border-gray-200 bg-white p-5 sm:p-6">
+            <div className="flex items-center gap-2 mb-3">
+              <List className="h-4 w-4 text-gray-400" strokeWidth={1.5} />
+              <h2 className="text-[14px] font-bold text-[#191919]">
+                In This Article
+              </h2>
+            </div>
+            <ol className="space-y-1.5">
+              {article.sections.map((section, i) => (
+                <li key={i}>
+                  <a
+                    href={`#${slugifyHeading(section.heading)}`}
+                    className="text-[14px] text-gray-500 hover:text-[#0C4B75] transition-colors"
+                  >
+                    {i + 1}. {section.heading}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+
           <article className="space-y-8">
             {article.sections.map((section, i) => (
-              <section key={i}>
-                <h2 className="mb-3 text-[20px] font-bold text-[#191919]">
+              <section key={i} id={slugifyHeading(section.heading)}>
+                <h2 className="mb-3 text-[20px] font-bold text-[#191919] scroll-mt-24">
                   {section.heading}
                 </h2>
                 <p
@@ -206,6 +284,36 @@ export default async function ArticlePage({
               </Link>
             </div>
           </div>
+
+          {/* Related Articles */}
+          {relatedArticles.length > 0 && (
+            <div className="mt-12">
+              <h2 className="mb-5 text-[18px] font-bold text-[#191919]">
+                Related Articles
+              </h2>
+              <div className="grid gap-4 sm:grid-cols-3">
+                {relatedArticles.map((ra) => (
+                  <Link
+                    key={ra.slug}
+                    href={`/articles/${ra.slug}`}
+                    className="group rounded-xl border border-gray-200 bg-white p-5 transition-shadow hover:shadow-md"
+                  >
+                    <span
+                      className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-semibold mb-2 ${categoryColors[ra.category] || "bg-gray-100 text-gray-600"}`}
+                    >
+                      {ra.category}
+                    </span>
+                    <p className="text-[14px] font-semibold leading-snug text-[#191919] group-hover:text-[#0C4B75] transition-colors">
+                      {ra.title}
+                    </p>
+                    <p className="mt-1.5 text-[12px] text-gray-400 line-clamp-2">
+                      {ra.description}
+                    </p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Prev / Next navigation */}
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
