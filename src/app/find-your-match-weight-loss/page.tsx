@@ -64,7 +64,7 @@ export default function ChatQuizPage() {
   const questions = quiz?.questions ?? [];
   const totalSteps = questions.length;
   const answeredCount = Object.keys(answers).length;
-  const progress = totalSteps > 0 ? Math.round((answeredCount / totalSteps) * 100) : 0;
+  const progress = totalSteps > 0 ? Math.round(20 + (answeredCount / Math.max(totalSteps - 1, 1)) * 80) : 0;
 
   function scrollToBottom() {
     setTimeout(() => {

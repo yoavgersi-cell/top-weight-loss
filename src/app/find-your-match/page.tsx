@@ -65,7 +65,7 @@ export default function FindYourMatchPage() {
   const questions = quiz?.questions ?? [];
   const currentQ = step >= 0 ? questions[step] : null;
   const totalSteps = questions.length;
-  const progress = totalSteps > 0 && step >= 0 ? ((step + 1) / totalSteps) * 100 : 0;
+  const progress = totalSteps > 0 && step >= 0 ? 20 + (step / Math.max(totalSteps - 1, 1)) * 80 : 0;
 
   function handleSelect(value: string) {
     if (!currentQ) return;
