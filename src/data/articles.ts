@@ -26,7 +26,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "What Are GLP-1 Medications?",
-        body: "GLP-1 receptor agonists are a class of prescription medications originally developed for type 2 diabetes. They mimic a natural hormone called glucagon-like peptide-1, which your gut produces after eating. Medications like semaglutide (the active ingredient in Ozempic and Wegovy) and tirzepatide (used in Mounjaro and Zepbound) have shown remarkable results for weight management in clinical trials, leading to FDA approval specifically for weight loss.",
+        body: 'GLP-1 receptor agonists are a class of prescription medications originally developed for type 2 diabetes. They mimic a natural hormone called glucagon-like peptide-1, which your gut produces after eating. Medications like semaglutide (the active ingredient in <a href="/articles/ozempic-vs-wegovy-differences">Ozempic and Wegovy</a>) and tirzepatide (used in Mounjaro and Zepbound) have shown remarkable results for weight management in clinical trials, leading to FDA approval specifically for weight loss.',
       },
       {
         heading: "How They Reduce Appetite",
@@ -38,15 +38,15 @@ export const articles: Article[] = [
       },
       {
         heading: "Tirzepatide: The Dual-Action Approach",
-        body: "Tirzepatide takes things a step further by targeting two receptors: GLP-1 and GIP (glucose-dependent insulinotropic polypeptide). This dual-agonist approach has shown even greater weight loss results in clinical trials, with some participants losing over 20% of their body weight. The GIP receptor activation provides additional metabolic benefits that complement the GLP-1 pathway.",
+        body: 'Tirzepatide takes things a step further by targeting two receptors: GLP-1 and GIP (glucose-dependent insulinotropic polypeptide). This dual-agonist approach has shown even greater weight loss results in clinical trials, with some participants losing over 20% of their body weight. For a detailed comparison, see our guide on <a href="/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide</a>. The GIP receptor activation provides additional metabolic benefits that complement the GLP-1 pathway.',
       },
       {
         heading: "What to Realistically Expect",
-        body: "Clinical trials show average weight loss of 15-20% of body weight with semaglutide and up to 22% with tirzepatide over 68–72 weeks. However, results vary significantly between individuals. Most patients begin noticing appetite changes within the first two weeks, with meaningful weight loss becoming visible around weeks 4-8. The medications are typically administered as once-weekly injections, with doses gradually increased over several months to minimize side effects.",
+        body: 'Clinical trials show average weight loss of 15–20% of body weight with semaglutide and up to 22% with tirzepatide over 68–72 weeks. However, results vary significantly between individuals. Most patients begin noticing appetite changes within the first two weeks, with meaningful weight loss becoming visible around weeks 4–8. For a week-by-week breakdown, read our guide on <a href="/articles/first-month-weight-loss-medication">what to expect your first month on medication</a>. The medications are typically administered as once-weekly injections, with doses gradually increased over several months to minimize side effects.',
       },
       {
         heading: "Common Side Effects",
-        body: "The most common side effects are gastrointestinal: nausea, vomiting, diarrhea, and constipation. These are usually most pronounced during dose increases and tend to improve over time. Starting at a low dose and gradually titrating up helps most patients manage these effects. More serious but rare side effects include pancreatitis and gallbladder problems, which is why medical supervision during treatment is important.",
+        body: 'The most common side effects are gastrointestinal: nausea, vomiting, diarrhea, and constipation. These are usually most pronounced during dose increases and tend to improve over time. Starting at a low dose and gradually titrating up helps most patients manage these effects. For a full breakdown, see our <a href="/articles/semaglutide-side-effects-guide">semaglutide side effects guide</a>. More serious but rare side effects include pancreatitis and gallbladder problems, which is why medical supervision during treatment is important. <a href="/find-your-match">Take our quiz</a> to find a provider with strong clinical oversight.',
       },
     ],
   },
@@ -64,7 +64,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Before You Start",
-        body: "Your provider will typically begin with a medical evaluation — either in-person or via telehealth — to review your health history, current medications, and weight loss goals. Blood work may be ordered to check metabolic markers. Once approved, your medication will be shipped to your door (most telehealth providers include home delivery). You'll receive your first dose at the lowest available strength, which helps your body adjust gradually.",
+        body: 'Your provider will typically begin with a medical evaluation — either in-person or via telehealth — to review your health history, current medications, and weight loss goals. Blood work may be ordered to check metabolic markers. Once approved, your medication will be shipped to your door (most telehealth providers include home delivery). You\'ll receive your first dose at the lowest available strength, which helps your body adjust gradually. Not sure if you qualify? Read our guide on <a href="/articles/who-qualifies-for-glp1-weight-loss">GLP-1 eligibility requirements</a>.',
       },
       {
         heading: "Week 1: The Adjustment Period",
@@ -72,19 +72,19 @@ export const articles: Article[] = [
       },
       {
         heading: "Week 2: Appetite Changes Become Clearer",
-        body: "By the second week, appetite reduction is more noticeable for most patients. You may find yourself leaving food on your plate — something that might feel unfamiliar. Portion sizes that used to seem normal now feel like too much. Some patients report that cravings for specific foods (sugar, processed snacks) diminish significantly. If nausea persists, eating bland, protein-rich foods and staying well-hydrated helps. Ginger tea and small, frequent meals are common strategies.",
+        body: 'By the second week, appetite reduction is more noticeable for most patients. You may find yourself leaving food on your plate — something that might feel unfamiliar. Portion sizes that used to seem normal now feel like too much. Some patients report that cravings for specific foods (sugar, processed snacks) diminish significantly. If nausea persists, eating bland, protein-rich foods and staying well-hydrated helps. For detailed nutrition guidance, see our guide on <a href="/articles/what-to-eat-on-glp1-medication">what to eat while taking GLP-1 medication</a>.',
       },
       {
         heading: "Weeks 3-4: Early Results",
-        body: "By the end of the first month, many patients see 3-5 pounds of weight loss, though this varies widely. The scale may not tell the whole story — changes in how clothes fit, energy levels, and relationship with food are equally important early indicators. Some patients lose more, some less. Remember: you're on the starting dose, and most of the weight loss acceleration happens as doses increase over the following months.",
+        body: "By the end of the first month, many patients see 3–5 pounds of weight loss, though this varies widely. The scale may not tell the whole story — changes in how clothes fit, energy levels, and relationship with food are equally important early indicators. Some patients lose more, some less. Remember: you're on the starting dose, and most of the weight loss acceleration happens as doses increase over the following months.",
       },
       {
         heading: "Managing Side Effects",
-        body: "If you experience nausea, constipation, or digestive discomfort, know that these are the most commonly reported side effects and they usually improve. Practical tips that help: eat slowly, choose lean proteins and vegetables, avoid carbonated drinks, stay hydrated throughout the day, and don't eat until you're overly full. If side effects are severe or persistent, contact your provider — they may adjust your timeline for dose increases.",
+        body: 'If you experience nausea, constipation, or digestive discomfort, know that these are the most commonly reported side effects and they usually improve. Practical tips that help: eat slowly, choose lean proteins and vegetables, avoid carbonated drinks, stay hydrated throughout the day, and don\'t eat until you\'re overly full. If side effects are severe or persistent, contact your provider — they may adjust your timeline for dose increases. Read our full <a href="/articles/semaglutide-side-effects-guide">side effects guide</a> for more strategies.',
       },
       {
         heading: "Setting Realistic Expectations",
-        body: "The first month is about building a foundation, not dramatic transformation. The medication needs time to reach effective levels in your body, and dose titration happens gradually for good reason. Patients who see the best long-term results are those who combine medication with sustainable lifestyle changes: regular movement, adequate sleep, stress management, and balanced nutrition. Think of the medication as a powerful tool that makes these changes significantly easier — not a replacement for them.",
+        body: 'The first month is about building a foundation, not dramatic transformation. The medication needs time to reach effective levels in your body, and dose titration happens gradually for good reason. Patients who see the best long-term results are those who combine medication with sustainable lifestyle changes: regular movement, adequate sleep, stress management, and balanced nutrition. Our guide on <a href="/articles/exercise-while-on-glp1-medication">exercising on GLP-1 medication</a> can help you build an effective routine. Think of the medication as a powerful tool that makes these changes significantly easier — not a replacement for them.',
       },
     ],
   },
@@ -102,7 +102,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Why Provider Choice Matters",
-        body: "The telehealth weight loss space has grown rapidly, with dozens of providers now offering GLP-1 medication access online. While this has made treatment more accessible, it also means the quality of care varies significantly. Some providers offer comprehensive medical oversight with board-certified physicians, while others take a more transactional approach. The provider you choose affects not just cost, but the safety and effectiveness of your treatment.",
+        body: 'The telehealth weight loss space has grown rapidly, with dozens of providers now offering GLP-1 medication access online. While this has made treatment more accessible, it also means the quality of care varies significantly. Some providers offer comprehensive medical oversight with board-certified physicians, while others take a more transactional approach. The provider you choose affects not just cost, but the safety and effectiveness of your treatment. You can <a href="/">compare top-rated providers side by side</a> on our homepage.',
       },
       {
         heading: "Check for Licensed Medical Providers",
@@ -110,7 +110,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Understand What's Included in the Price",
-        body: "Pricing in this space can be confusing. Some providers quote a low monthly fee but charge separately for medication, consultations, or shipping. Others offer all-inclusive plans where everything is bundled. When comparing costs, look at the total monthly expense including medication, provider consultations, and delivery. Also check whether there are enrollment fees, cancellation fees, or minimum commitment periods. The cheapest option isn't always the best value if it cuts corners on medical oversight.",
+        body: 'Pricing in this space can be confusing. Some providers quote a low monthly fee but charge separately for medication, consultations, or shipping. Others offer all-inclusive plans where everything is bundled. When comparing costs, look at the total monthly expense including medication, provider consultations, and delivery. Also check whether there are enrollment fees, cancellation fees, or minimum commitment periods. For a detailed pricing breakdown, see our <a href="/articles/weight-loss-medication-cost-guide">weight loss medication cost guide</a>.',
       },
       {
         heading: "Compounded vs. Brand-Name Medications",
@@ -122,7 +122,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Red Flags to Watch For",
-        body: "Be cautious of providers that guarantee specific weight loss amounts, offer medication without any medical evaluation, pressure you into long-term contracts, or lack clear information about their medical team. Also watch for providers that don't disclose their compounding pharmacy sources or that offer medications at prices that seem too good to be true. Legitimate medical weight loss is an investment in your health — and the provider managing your care should treat it that way.",
+        body: 'Be cautious of providers that guarantee specific weight loss amounts, offer medication without any medical evaluation, pressure you into long-term contracts, or lack clear information about their medical team. Also watch for providers that don\'t disclose their compounding pharmacy sources or that offer medications at prices that seem too good to be true. Legitimate medical weight loss is an investment in your health — and the provider managing your care should treat it that way. Not sure where to start? <a href="/find-your-match">Take our matching quiz</a> to find a provider that fits your needs.',
       },
     ],
   },
@@ -148,19 +148,19 @@ export const articles: Article[] = [
       },
       {
         heading: "The Dose Titration Factor",
-        body: "For patients on GLP-1 medications, plateaus sometimes coincide with your body adjusting to a particular dose. As your system adapts, the appetite-suppressing effects may feel less pronounced. This is one reason why these medications use a graduated dosing schedule — moving to a higher dose often restarts progress. Talk to your provider about your plateau; if you haven't yet reached your maximum dose, an adjustment may be appropriate.",
+        body: 'For patients on GLP-1 medications, plateaus sometimes coincide with your body adjusting to a particular dose. As your system adapts, the appetite-suppressing effects may feel less pronounced. This is one reason why these medications use a graduated dosing schedule — moving to a higher dose often restarts progress. Talk to your provider about your plateau; if you haven\'t yet reached your maximum dose, an adjustment may be appropriate. Learn more about how these medications work in our <a href="/articles/how-glp1-medications-work">GLP-1 medications guide</a>.',
       },
       {
         heading: "Reassess Your Nutrition",
-        body: "Plateaus are a good time to take an honest look at your eating patterns. As appetite suppression from medication becomes your new normal, it's possible that portion sizes have gradually crept back up without you noticing. You don't need to obsessively track calories, but keeping a food diary for a week can reveal patterns. Focus on protein intake — it supports muscle preservation during weight loss and has the highest thermic effect of any macronutrient, meaning your body burns more calories digesting it.",
+        body: 'Plateaus are a good time to take an honest look at your eating patterns. As appetite suppression from medication becomes your new normal, it\'s possible that portion sizes have gradually crept back up without you noticing. You don\'t need to obsessively track calories, but keeping a food diary for a week can reveal patterns. Focus on protein intake — it supports muscle preservation during weight loss and has the highest thermic effect of any macronutrient, meaning your body burns more calories digesting it. See our <a href="/articles/what-to-eat-on-glp1-medication">nutrition guide for GLP-1 patients</a> for specific meal recommendations.',
       },
       {
         heading: "The Role of Movement and Muscle",
-        body: "If you haven't incorporated strength training into your routine, a plateau is a compelling reason to start. Resistance exercise builds and preserves lean muscle mass, which is metabolically active tissue that burns calories even at rest. You don't need an intense gym routine — bodyweight exercises, resistance bands, or moderate weight training 2-3 times per week can make a meaningful difference. Walking remains one of the most underrated tools for weight management: aim for consistent daily steps rather than sporadic intense cardio.",
+        body: 'If you haven\'t incorporated strength training into your routine, a plateau is a compelling reason to start. Resistance exercise builds and preserves lean muscle mass, which is metabolically active tissue that burns calories even at rest. You don\'t need an intense gym routine — bodyweight exercises, resistance bands, or moderate weight training 2–3 times per week can make a meaningful difference. For a complete workout framework, read our guide on <a href="/articles/exercise-while-on-glp1-medication">how to exercise on GLP-1 medication</a>. Walking remains one of the most underrated tools for weight management: aim for consistent daily steps rather than sporadic intense cardio.',
       },
       {
         heading: "When to Talk to Your Provider",
-        body: "A plateau lasting 2-4 weeks is normal and usually resolves on its own or with minor adjustments. If your weight has stalled for 6+ weeks despite consistent effort, it's worth having a conversation with your medical provider. They can assess whether a dose adjustment is appropriate, check for underlying factors like thyroid function or medication interactions, and help you recalibrate your approach. The goal is sustained, healthy weight loss — not a race to a number on the scale.",
+        body: 'A plateau lasting 2–4 weeks is normal and usually resolves on its own or with minor adjustments. If your weight has stalled for 6+ weeks despite consistent effort, it\'s worth having a conversation with your medical provider. They can assess whether a dose adjustment is appropriate, check for underlying factors like thyroid function or medication interactions, and help you recalibrate your approach. If you\'re not happy with your current provider\'s support, <a href="/">compare alternatives</a> on our platform. The goal is sustained, healthy weight loss — not a race to a number on the scale.',
       },
     ],
   },
@@ -178,7 +178,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Same Ingredient, Different Purpose",
-        body: "Ozempic and Wegovy both contain semaglutide, a GLP-1 receptor agonist made by Novo Nordisk. The key difference is their FDA approval. Ozempic is approved for type 2 diabetes management, while Wegovy is specifically approved for chronic weight management. Many doctors prescribe Ozempic off-label for weight loss, but Wegovy was designed and dosed specifically for that purpose.",
+        body: 'Ozempic and Wegovy both contain semaglutide, a <a href="/articles/how-glp1-medications-work">GLP-1 receptor agonist</a> made by Novo Nordisk. The key difference is their FDA approval. Ozempic is approved for type 2 diabetes management, while Wegovy is specifically approved for chronic weight management. Many doctors prescribe Ozempic off-label for weight loss, but Wegovy was designed and dosed specifically for that purpose.',
       },
       {
         heading: "Dosing Differences",
@@ -186,15 +186,15 @@ export const articles: Article[] = [
       },
       {
         heading: "Weight Loss Results",
-        body: "In the STEP clinical trials, Wegovy patients lost an average of about 15% of their body weight over 68 weeks. Ozempic trials, which focused on diabetes outcomes, showed average weight loss of around 10-12%. While both produce meaningful results, the higher dose and weight-specific focus of Wegovy generally leads to more pronounced weight loss for most patients.",
+        body: 'In the STEP clinical trials, Wegovy patients lost an average of about 15% of their body weight over 68 weeks. Ozempic trials, which focused on diabetes outcomes, showed average weight loss of around 10–12%. While both produce meaningful results, the higher dose and weight-specific focus of Wegovy generally leads to more pronounced weight loss for most patients. Curious how these compare to tirzepatide? See our <a href="/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide comparison</a>.',
       },
       {
         heading: "Cost and Insurance",
-        body: "Both medications carry a high retail price — often over $1,000 per month without insurance. Insurance coverage varies significantly. Ozempic tends to have better insurance coverage because it's classified as a diabetes drug. Wegovy, as a weight loss medication, is less likely to be covered by insurance plans. This is one reason many patients and providers opt for compounded semaglutide through telehealth platforms, which can be significantly more affordable.",
+        body: 'Both medications carry a high retail price — often over $1,000 per month without insurance. Insurance coverage varies significantly. Ozempic tends to have better insurance coverage because it\'s classified as a diabetes drug. Wegovy, as a weight loss medication, is less likely to be covered by insurance plans. This is one reason many patients and providers opt for compounded semaglutide through telehealth platforms, which can be significantly more affordable. For a full pricing breakdown, see our <a href="/articles/weight-loss-medication-cost-guide">medication cost guide</a>.',
       },
       {
         heading: "Which One Should You Choose?",
-        body: "If you have type 2 diabetes and want to lose weight, Ozempic addresses both needs. If weight loss is your primary goal and you don't have diabetes, Wegovy is the purpose-built option. In practice, many people access semaglutide through telehealth providers that offer compounded versions at lower cost. The best approach is to consult with a licensed provider who can evaluate your health profile and recommend the right treatment path.",
+        body: 'If you have type 2 diabetes and want to lose weight, Ozempic addresses both needs. If weight loss is your primary goal and you don\'t have diabetes, Wegovy is the purpose-built option. In practice, many people access semaglutide through telehealth providers that offer compounded versions at lower cost. <a href="/find-your-match">Take our matching quiz</a> to find a provider that offers the right medication for your needs, or <a href="/">compare providers</a> directly on our homepage.',
       },
     ],
   },
@@ -212,15 +212,15 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "The Most Common Side Effects",
-        body: "Gastrointestinal issues are by far the most frequently reported side effects of semaglutide. Nausea affects roughly 40-45% of patients, particularly during the first few weeks and after dose increases. Other common GI side effects include diarrhea (about 30%), vomiting (around 25%), and constipation (about 24%). These numbers can sound alarming, but context matters: most side effects are mild to moderate, and they tend to improve significantly over time as your body adjusts.",
+        body: 'Gastrointestinal issues are by far the most frequently reported side effects of semaglutide. Nausea affects roughly 40–45% of patients, particularly during the first few weeks and after dose increases. Other common GI side effects include diarrhea (about 30%), vomiting (around 25%), and constipation (about 24%). These numbers can sound alarming, but context matters: most side effects are mild to moderate, and they tend to improve significantly over time as your body adjusts. Understanding <a href="/articles/how-glp1-medications-work">how GLP-1 medications work</a> can help explain why these effects occur.',
       },
       {
         heading: "When Side Effects Typically Start",
-        body: "Most patients notice side effects within the first week of starting semaglutide or after a dose increase. The first two to four weeks on a new dose are usually when symptoms are most noticeable. By weeks four to six at a stable dose, the majority of patients report a meaningful reduction in side effects. This is exactly why the medication uses a gradual titration schedule — starting at a low dose and increasing slowly gives your body time to adapt.",
+        body: 'Most patients notice side effects within the first week of starting semaglutide or after a dose increase. The first two to four weeks on a new dose are usually when symptoms are most noticeable. By weeks four to six at a stable dose, the majority of patients report a meaningful reduction in side effects. This is exactly why the medication uses a gradual titration schedule — starting at a low dose and increasing slowly gives your body time to adapt. For a detailed week-by-week timeline, see our guide on <a href="/articles/first-month-weight-loss-medication">your first month on medication</a>.',
       },
       {
         heading: "How to Manage Nausea",
-        body: "Nausea is the number one complaint, but there are effective strategies to manage it. Eat smaller, more frequent meals instead of large portions. Avoid greasy, fried, or heavily spiced foods, especially in the first few weeks. Stay well hydrated throughout the day — dehydration makes nausea worse. Eating bland, protein-rich foods tends to be better tolerated. Some patients find that ginger tea, peppermint, or eating crackers before meals helps. If nausea is severe, your provider may recommend a slower dose titration or temporary use of anti-nausea medication.",
+        body: 'Nausea is the number one complaint, but there are effective strategies to manage it. Eat smaller, more frequent meals instead of large portions. Avoid greasy, fried, or heavily spiced foods, especially in the first few weeks. Stay well hydrated throughout the day — dehydration makes nausea worse. Eating bland, protein-rich foods tends to be better tolerated. Some patients find that ginger tea, peppermint, or eating crackers before meals helps. For detailed meal recommendations, read our guide on <a href="/articles/what-to-eat-on-glp1-medication">what to eat while on GLP-1 medication</a>. If nausea is severe, your provider may recommend a slower dose titration or temporary use of anti-nausea medication.',
       },
       {
         heading: "Serious Side Effects to Watch For",
@@ -228,7 +228,7 @@ export const articles: Article[] = [
       },
       {
         heading: "The Role of Your Provider",
-        body: "Having a qualified medical provider monitor your treatment is essential, not optional. Your provider can adjust your dosing schedule, recommend strategies for managing side effects, and identify any concerning symptoms early. This is one of the most important factors when choosing a telehealth weight loss provider — make sure the platform includes ongoing medical oversight, not just an initial prescription. Regular check-ins, easy access to your care team, and responsive support can make the difference between a rough experience and a manageable one.",
+        body: 'Having a qualified medical provider monitor your treatment is essential, not optional. Your provider can adjust your dosing schedule, recommend strategies for managing side effects, and identify any concerning symptoms early. This is one of the most important factors when <a href="/articles/choosing-telehealth-weight-loss-provider">choosing a telehealth weight loss provider</a> — make sure the platform includes ongoing medical oversight, not just an initial prescription. Regular check-ins, easy access to your care team, and responsive support can make the difference between a rough experience and a manageable one. <a href="/">Compare providers</a> that prioritize clinical support.',
       },
     ],
   },
@@ -246,7 +246,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "How They Work Differently",
-        body: "Semaglutide targets a single receptor: GLP-1. Tirzepatide targets two receptors: GLP-1 and GIP (glucose-dependent insulinotropic polypeptide). This dual-agonist mechanism is what sets tirzepatide apart. By activating both pathways simultaneously, tirzepatide provides enhanced appetite suppression, improved insulin sensitivity, and potentially greater metabolic benefits. Think of semaglutide as a focused tool and tirzepatide as a broader one — both are effective, but they take different approaches.",
+        body: 'Semaglutide targets a single receptor: GLP-1. Tirzepatide targets two receptors: GLP-1 and GIP (glucose-dependent insulinotropic polypeptide). This dual-agonist mechanism is what sets tirzepatide apart. By activating both pathways simultaneously, tirzepatide provides enhanced appetite suppression, improved insulin sensitivity, and potentially greater metabolic benefits. For a deeper dive into these mechanisms, see our article on <a href="/articles/how-glp1-medications-work">how GLP-1 medications work</a>. Think of semaglutide as a focused tool and tirzepatide as a broader one — both are effective, but they take different approaches.',
       },
       {
         heading: "Clinical Trial Results",
@@ -254,15 +254,15 @@ export const articles: Article[] = [
       },
       {
         heading: "Side Effect Profiles",
-        body: "Both medications share similar gastrointestinal side effects — nausea, vomiting, diarrhea, and constipation are common, especially during dose escalation. In clinical trials, tirzepatide's side effect rates were broadly comparable to semaglutide's, with some studies suggesting slightly higher rates of certain GI symptoms at the highest tirzepatide doses. The overall tolerability of both medications is considered acceptable, and side effects typically decrease over time. Your provider can help manage symptoms through dosing adjustments.",
+        body: 'Both medications share similar gastrointestinal side effects — nausea, vomiting, diarrhea, and constipation are common, especially during dose escalation. In clinical trials, tirzepatide\'s side effect rates were broadly comparable to semaglutide\'s, with some studies suggesting slightly higher rates of certain GI symptoms at the highest tirzepatide doses. The overall tolerability of both medications is considered acceptable, and side effects typically decrease over time. Read our <a href="/articles/semaglutide-side-effects-guide">semaglutide side effects guide</a> for detailed management strategies that apply to both medications.',
       },
       {
         heading: "Cost and Availability",
-        body: "Brand-name versions of both medications are expensive — typically over $1,000 per month at retail price. Semaglutide has been available longer and has more compounded options through telehealth providers, which can significantly reduce cost. Compounded tirzepatide is increasingly available but still less widespread. Insurance coverage varies for both and is often limited for weight loss indications. When comparing providers, check whether they offer both medications and how their pricing compares for each option.",
+        body: 'Brand-name versions of both medications are expensive — typically over $1,000 per month at retail price. Semaglutide has been available longer and has more compounded options through telehealth providers, which can significantly reduce cost. Compounded tirzepatide is increasingly available but still less widespread. Insurance coverage varies for both and is often limited for weight loss indications. For a complete pricing breakdown, see our <a href="/articles/weight-loss-medication-cost-guide">medication cost guide</a>.',
       },
       {
         heading: "Which One Is Right for You?",
-        body: "There's no universal answer. Tirzepatide may produce greater weight loss on average, which could be important for patients with more significant weight loss goals. Semaglutide has a longer track record, more real-world data, and broader availability through telehealth providers. Some patients start with semaglutide and transition to tirzepatide if they plateau, while others begin with tirzepatide based on their provider's recommendation. The best choice depends on your health profile, weight loss goals, budget, and provider availability. A licensed medical provider can help you evaluate both options and make an informed decision.",
+        body: 'There\'s no universal answer. Tirzepatide may produce greater weight loss on average, which could be important for patients with more significant weight loss goals. Semaglutide has a longer track record, more real-world data, and broader availability through telehealth providers. Some patients start with semaglutide and transition to tirzepatide if they <a href="/articles/weight-loss-plateau-what-to-do">hit a plateau</a>, while others begin with tirzepatide based on their provider\'s recommendation. The best choice depends on your health profile, weight loss goals, budget, and provider availability. <a href="/find-your-match">Take our quiz</a> to find a provider that offers the medication best suited to your needs.',
       },
     ],
   },
@@ -280,7 +280,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Brand-Name Pricing",
-        body: "At retail price, brand-name GLP-1 medications are expensive. Wegovy (semaglutide for weight loss) typically costs between $1,300 and $1,400 per month. Ozempic runs around $900 to $1,000 per month. Zepbound (tirzepatide for weight loss) is priced similarly to Wegovy at roughly $1,000 to $1,100 per month. Mounjaro (tirzepatide for diabetes) falls in a similar range. These prices are without insurance or manufacturer discounts, which can significantly reduce out-of-pocket costs for eligible patients.",
+        body: 'At retail price, brand-name GLP-1 medications are expensive. <a href="/articles/ozempic-vs-wegovy-differences">Wegovy</a> (semaglutide for weight loss) typically costs between $1,300 and $1,400 per month. Ozempic runs around $900 to $1,000 per month. Zepbound (tirzepatide for weight loss) is priced similarly to Wegovy at roughly $1,000 to $1,100 per month. Mounjaro (tirzepatide for diabetes) falls in a similar range. These prices are without insurance or manufacturer discounts, which can significantly reduce out-of-pocket costs for eligible patients.',
       },
       {
         heading: "Insurance Coverage Reality",
@@ -292,11 +292,11 @@ export const articles: Article[] = [
       },
       {
         heading: "What's Usually Included in the Price",
-        body: "When comparing providers, it's important to understand what's bundled into the quoted price. The best telehealth providers include everything in one monthly fee: the medication itself, medical consultations, dosage adjustments, ongoing support, and home delivery. Some providers quote a lower base price but charge separately for consultations, shipping, or supplies. Others may require enrollment fees or minimum commitment periods. Always compare total monthly cost, not just the medication price, to get an accurate picture of what you'll actually pay.",
+        body: 'When comparing providers, it\'s important to understand what\'s bundled into the quoted price. The best telehealth providers include everything in one monthly fee: the medication itself, medical consultations, dosage adjustments, ongoing support, and home delivery. Some providers quote a lower base price but charge separately for consultations, shipping, or supplies. Others may require enrollment fees or minimum commitment periods. Always compare total monthly cost, not just the medication price. For tips on evaluating providers, see our guide on <a href="/articles/choosing-telehealth-weight-loss-provider">choosing a telehealth weight loss provider</a>.',
       },
       {
         heading: "How to Find the Best Value",
-        body: "The cheapest option isn't always the best value. A provider that costs slightly more but includes thorough medical oversight, responsive support, and quality medications from a reputable pharmacy may save you money in the long run by ensuring safe, effective treatment. Start by comparing total monthly costs across several telehealth providers. Check whether the price includes consultations, medication, and delivery. Ask about the compounding pharmacy they use. Read reviews from actual patients. And consider using a comparison tool to see how providers stack up across pricing, medical support, and medication options.",
+        body: 'The cheapest option isn\'t always the best value. A provider that costs slightly more but includes thorough medical oversight, responsive support, and quality medications from a reputable pharmacy may save you money in the long run by ensuring safe, effective treatment. Start by <a href="/">comparing top providers</a> on our platform — we break down pricing, medical support, and medication options side by side. You can also <a href="/find-your-match">take our matching quiz</a> to find a provider that fits both your needs and budget.',
       },
     ],
   },
@@ -314,7 +314,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "BMI Requirements for Eligibility",
-        body: "The FDA-approved criteria for weight loss medications like Wegovy and Zepbound require a BMI of 30 or higher (classified as obesity) or a BMI of 27 or higher with at least one weight-related health condition such as type 2 diabetes, high blood pressure, high cholesterol, or obstructive sleep apnea. Many telehealth providers follow these same guidelines, though some may have slightly different thresholds for compounded medications. Your provider will calculate your BMI during the initial evaluation and determine whether you meet the clinical criteria.",
+        body: 'The FDA-approved criteria for weight loss medications like <a href="/articles/ozempic-vs-wegovy-differences">Wegovy</a> and Zepbound require a BMI of 30 or higher (classified as obesity) or a BMI of 27 or higher with at least one weight-related health condition such as type 2 diabetes, high blood pressure, high cholesterol, or obstructive sleep apnea. Many telehealth providers follow these same guidelines, though some may have slightly different thresholds for compounded medications. Your provider will calculate your BMI during the initial evaluation and determine whether you meet the clinical criteria.',
       },
       {
         heading: "Medical Conditions That May Disqualify You",
@@ -326,15 +326,15 @@ export const articles: Article[] = [
       },
       {
         heading: "Medications That May Interact",
-        body: "GLP-1 medications can interact with other drugs, particularly insulin and sulfonylureas (which may increase the risk of hypoglycemia when combined). Because GLP-1 agonists slow gastric emptying, they can also affect the absorption of oral medications. Your provider will review your full medication list during the evaluation process. If you take oral birth control, blood thinners, or thyroid medication, discuss timing and potential interactions with your provider before starting treatment.",
+        body: 'GLP-1 medications can interact with other drugs, particularly insulin and sulfonylureas (which may increase the risk of hypoglycemia when combined). Because GLP-1 agonists slow gastric emptying, they can also affect the absorption of oral medications. Your provider will review your full medication list during the evaluation process. If you take oral birth control, blood thinners, or thyroid medication, discuss timing and potential interactions with your provider before starting treatment. Learn more about potential side effects in our <a href="/articles/semaglutide-side-effects-guide">semaglutide side effects guide</a>.',
       },
       {
         heading: "The Evaluation Process",
-        body: "Most telehealth providers follow a straightforward process: you complete a detailed health questionnaire, provide your medical history and current medications, and have a consultation with a licensed provider (usually via video or asynchronous message). Some providers require recent lab work, while others may order labs as part of their program. The evaluation typically takes one to three days, and if approved, your medication can be shipped within a week. If you're not eligible, a good provider will explain why and suggest alternative approaches.",
+        body: 'Most telehealth providers follow a straightforward process: you complete a detailed health questionnaire, provide your medical history and current medications, and have a consultation with a licensed provider (usually via video or asynchronous message). Some providers require recent lab work, while others may order labs as part of their program. The evaluation typically takes one to three days, and if approved, your medication can be shipped within a week. For tips on choosing the right platform, read our guide on <a href="/articles/choosing-telehealth-weight-loss-provider">selecting a telehealth provider</a>.',
       },
       {
         heading: "What If You Don't Qualify?",
-        body: "If you don't meet the criteria for GLP-1 medication, you still have options. Providers may recommend oral weight loss medications like metformin or bupropion-naltrexone, which have different eligibility criteria. Structured programs that focus on nutrition, behavioral change, and exercise can also produce meaningful results. Some patients who don't initially qualify may become eligible as their health profile changes. The key is to work with a licensed provider who can evaluate all available options and build a plan tailored to your situation.",
+        body: 'If you don\'t meet the criteria for GLP-1 medication, you still have options. Providers may recommend oral weight loss medications like metformin or bupropion-naltrexone, which have different eligibility criteria. Structured programs that focus on nutrition, behavioral change, and exercise can also produce meaningful results. Some patients who don\'t initially qualify may become eligible as their health profile changes. The key is to work with a licensed provider who can evaluate all available options and build a plan tailored to your situation. <a href="/find-your-match">Take our quiz</a> to find a provider that matches your specific needs.',
       },
     ],
   },
@@ -352,15 +352,15 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Why Nutrition Still Matters on Medication",
-        body: "GLP-1 medications reduce appetite, but they don't choose what you eat. Patients who get the best results pair their medication with intentional food choices — not restrictive dieting, but a shift toward nutrient-dense meals that support energy, muscle preservation, and overall health. Because these medications reduce how much you eat, every bite matters more. If you're consuming 30-40% fewer calories, the quality of those calories becomes critical to getting adequate protein, vitamins, and minerals.",
+        body: 'GLP-1 medications reduce appetite, but they don\'t choose what you eat. Patients who get the best results pair their medication with intentional food choices — not restrictive dieting, but a shift toward nutrient-dense meals that support energy, muscle preservation, and overall health. Because these medications reduce how much you eat, every bite matters more. If you\'re consuming 30–40% fewer calories, the quality of those calories becomes critical to getting adequate protein, vitamins, and minerals. Understanding <a href="/articles/how-glp1-medications-work">how GLP-1 medications affect appetite</a> helps explain why this shift is so important.',
       },
       {
         heading: "Prioritize Protein at Every Meal",
-        body: "Protein is the single most important macronutrient during medicated weight loss. When you lose weight rapidly, you risk losing muscle mass alongside fat — and protein intake is the primary defense against this. Aim for 25-30 grams of protein per meal, or roughly 80-120 grams daily depending on your body weight. Good sources include chicken, fish, eggs, Greek yogurt, cottage cheese, tofu, and legumes. If you struggle to eat enough volume, consider a protein shake as a supplement — not a replacement — for whole food meals.",
+        body: 'Protein is the single most important macronutrient during medicated weight loss. When you lose weight rapidly, you risk losing muscle mass alongside fat — and protein intake is the primary defense against this. Aim for 25–30 grams of protein per meal, or roughly 80–120 grams daily depending on your body weight. Good sources include chicken, fish, eggs, Greek yogurt, cottage cheese, tofu, and legumes. If you struggle to eat enough volume, consider a protein shake as a supplement — not a replacement — for whole food meals. Pairing adequate protein with <a href="/articles/exercise-while-on-glp1-medication">a strength training routine</a> is the most effective way to preserve muscle during weight loss.',
       },
       {
         heading: "Foods That Minimize Side Effects",
-        body: "The most common GLP-1 side effects are gastrointestinal, and food choices can make a significant difference. Foods that are generally well-tolerated include lean proteins, cooked vegetables, rice, oatmeal, bananas, toast, and broth-based soups. Foods that tend to worsen nausea and digestive discomfort include fried foods, greasy meals, very spicy dishes, carbonated drinks, alcohol, and large portions of high-fat foods. Many patients find that eating smaller meals more frequently — four to five mini-meals rather than three large ones — significantly reduces nausea.",
+        body: 'The most common <a href="/articles/semaglutide-side-effects-guide">GLP-1 side effects</a> are gastrointestinal, and food choices can make a significant difference. Foods that are generally well-tolerated include lean proteins, cooked vegetables, rice, oatmeal, bananas, toast, and broth-based soups. Foods that tend to worsen nausea and digestive discomfort include fried foods, greasy meals, very spicy dishes, carbonated drinks, alcohol, and large portions of high-fat foods. Many patients find that eating smaller meals more frequently — four to five mini-meals rather than three large ones — significantly reduces nausea.',
       },
       {
         heading: "Hydration Is Non-Negotiable",
@@ -372,7 +372,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Sample Meal Structure",
-        body: "A practical daily meal structure might look like this: breakfast of Greek yogurt with berries and a handful of nuts, or eggs with spinach and whole grain toast. A mid-morning snack of string cheese or a small protein shake. Lunch of grilled chicken or fish with roasted vegetables and quinoa. An afternoon snack of hummus with vegetables or an apple with almond butter. Dinner of salmon or lean beef with steamed broccoli and sweet potato. This kind of structure ensures adequate protein across the day while keeping portions manageable and nutrient-dense.",
+        body: 'A practical daily meal structure might look like this: breakfast of Greek yogurt with berries and a handful of nuts, or eggs with spinach and whole grain toast. A mid-morning snack of string cheese or a small protein shake. Lunch of grilled chicken or fish with roasted vegetables and quinoa. An afternoon snack of hummus with vegetables or an apple with almond butter. Dinner of salmon or lean beef with steamed broccoli and sweet potato. This kind of structure ensures adequate protein across the day while keeping portions manageable and nutrient-dense. For a broader look at building sustainable habits, see our guide on <a href="/articles/first-month-weight-loss-medication">your first month on medication</a>.',
       },
     ],
   },
@@ -390,27 +390,27 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "The Muscle Loss Problem",
-        body: "One of the most important — and often overlooked — concerns with rapid weight loss is the loss of lean muscle mass. Studies show that up to 25-40% of weight lost during caloric restriction can come from muscle rather than fat, especially without resistance training. GLP-1 medications accelerate weight loss, which makes this risk more significant. Muscle isn't just about aesthetics — it's metabolically active tissue that supports your resting metabolic rate, joint health, and long-term weight maintenance. Preserving it should be a priority.",
+        body: 'One of the most important — and often overlooked — concerns with rapid weight loss is the loss of lean muscle mass. Studies show that up to 25–40% of weight lost during caloric restriction can come from muscle rather than fat, especially without resistance training. GLP-1 medications accelerate weight loss, which makes this risk more significant. Muscle isn\'t just about aesthetics — it\'s metabolically active tissue that supports your resting metabolic rate, joint health, and long-term weight maintenance. Preserving it should be a priority. This is also critical for anyone worried about <a href="/articles/stopping-glp1-medication-what-happens">maintaining results after stopping medication</a>.',
       },
       {
         heading: "Why Strength Training Is Essential",
-        body: "Resistance training is the most effective way to preserve and build muscle during weight loss. You don't need to become a bodybuilder — two to three sessions per week of 30-45 minutes is enough for most people. Focus on compound movements that work multiple muscle groups: squats, lunges, deadlifts, rows, presses, and pull-ups (or assisted variations). If you're new to strength training, start with bodyweight exercises or light dumbbells and focus on form before adding weight. Even modest resistance training has been shown to significantly reduce muscle loss during medicated weight loss.",
+        body: "Resistance training is the most effective way to preserve and build muscle during weight loss. You don't need to become a bodybuilder — two to three sessions per week of 30–45 minutes is enough for most people. Focus on compound movements that work multiple muscle groups: squats, lunges, deadlifts, rows, presses, and pull-ups (or assisted variations). If you're new to strength training, start with bodyweight exercises or light dumbbells and focus on form before adding weight. Even modest resistance training has been shown to significantly reduce muscle loss during medicated weight loss.",
       },
       {
         heading: "Walking: The Underrated Foundation",
-        body: "Walking is the simplest and most sustainable form of exercise — and it complements GLP-1 treatment exceptionally well. Aim for 7,000-10,000 steps per day, building up gradually if you're starting from a lower baseline. Walking doesn't require recovery time, doesn't spike appetite the way intense cardio can, and is gentle enough to maintain even on days when GI side effects from medication are present. Many successful patients describe daily walking as the habit that made the biggest difference alongside their medication.",
+        body: "Walking is the simplest and most sustainable form of exercise — and it complements GLP-1 treatment exceptionally well. Aim for 7,000–10,000 steps per day, building up gradually if you're starting from a lower baseline. Walking doesn't require recovery time, doesn't spike appetite the way intense cardio can, and is gentle enough to maintain even on days when GI side effects from medication are present. Many successful patients describe daily walking as the habit that made the biggest difference alongside their medication.",
       },
       {
         heading: "Managing Energy and Side Effects",
-        body: "Reduced caloric intake from appetite suppression means your energy levels may fluctuate, especially during the first few weeks or after dose increases. Listen to your body. On days when nausea or fatigue is more pronounced, a light walk is better than skipping activity entirely. Time your workouts to avoid exercising immediately after meals — the slowed gastric emptying from GLP-1 medications can make exercising on a full stomach uncomfortable. Many patients find that exercising in the morning before eating, or two to three hours after a meal, works best.",
+        body: 'Reduced caloric intake from appetite suppression means your energy levels may fluctuate, especially during the first few weeks or after dose increases. Listen to your body. On days when nausea or fatigue is more pronounced, a light walk is better than skipping activity entirely. Time your workouts to avoid exercising immediately after meals — the slowed gastric emptying from GLP-1 medications can make exercising on a full stomach uncomfortable. Many patients find that exercising in the morning before eating, or two to three hours after a meal, works best. Proper <a href="/articles/what-to-eat-on-glp1-medication">nutrition</a> also plays a major role in sustaining energy for exercise.',
       },
       {
         heading: "What About Cardio?",
-        body: "Moderate cardio — like brisk walking, cycling, swimming, or light jogging — supports cardiovascular health and can contribute to caloric deficit. However, excessive high-intensity cardio can accelerate muscle loss and increase hunger, which may counteract some benefits of your medication. A balanced approach works best: prioritize strength training for muscle preservation, use daily walking as your cardio foundation, and add moderate-intensity sessions two to three times per week if you enjoy them. Avoid the common trap of doing only cardio and skipping resistance work.",
+        body: 'Moderate cardio — like brisk walking, cycling, swimming, or light jogging — supports cardiovascular health and can contribute to caloric deficit. However, excessive high-intensity cardio can accelerate muscle loss and increase hunger, which may counteract some benefits of your medication. A balanced approach works best: prioritize strength training for muscle preservation, use daily walking as your cardio foundation, and add moderate-intensity sessions two to three times per week if you enjoy them. Avoid the common trap of doing only cardio and skipping resistance work. If you\'ve <a href="/articles/weight-loss-plateau-what-to-do">hit a plateau</a>, adjusting your exercise mix is often more effective than simply doing more.',
       },
       {
         heading: "Building a Sustainable Routine",
-        body: "The best exercise program is one you'll actually stick with. Start with what's realistic for your current fitness level and schedule, then build gradually. A practical starting point: walk daily (even 20 minutes counts), strength train two to three times per week, and rest when your body needs it. Track your progress not just by the scale but by how you feel, your strength gains, and your overall energy. Remember that exercise during medicated weight loss isn't primarily about burning calories — it's about preserving the muscle and metabolic health that will support you long after treatment.",
+        body: 'The best exercise program is one you\'ll actually stick with. Start with what\'s realistic for your current fitness level and schedule, then build gradually. A practical starting point: walk daily (even 20 minutes counts), strength train two to three times per week, and rest when your body needs it. Track your progress not just by the scale but by how you feel, your strength gains, and your overall energy. Remember that exercise during medicated weight loss isn\'t primarily about burning calories — it\'s about preserving the muscle and metabolic health that will support you long after treatment. Looking for a provider that includes fitness guidance? <a href="/">Compare providers</a> on our platform.',
       },
     ],
   },
@@ -432,7 +432,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Why Weight Comes Back",
-        body: "GLP-1 medications work by suppressing appetite, slowing gastric emptying, and modulating hunger hormones. When you stop the medication, these effects reverse. Appetite returns to pre-treatment levels — often quite rapidly — and the hormonal environment that drove weight gain in the first place re-emerges. Your body's metabolic rate has also decreased during weight loss (adaptive thermogenesis), meaning you now burn fewer calories than someone of the same weight who was never heavier. This combination makes weight regain highly likely without ongoing intervention.",
+        body: 'GLP-1 medications work by suppressing appetite, slowing gastric emptying, and modulating hunger hormones. When you stop the medication, these effects reverse. Appetite returns to pre-treatment levels — often quite rapidly — and the hormonal environment that drove weight gain in the first place re-emerges. For a deeper understanding of these mechanisms, see our guide on <a href="/articles/how-glp1-medications-work">how GLP-1 medications work</a>. Your body\'s metabolic rate has also decreased during weight loss (adaptive thermogenesis), meaning you now burn fewer calories than someone of the same weight who was never heavier. This combination makes weight regain highly likely without ongoing intervention.',
       },
       {
         heading: "How to Taper Safely",
@@ -440,15 +440,15 @@ export const articles: Article[] = [
       },
       {
         heading: "Strategies for Maintaining Results",
-        body: "If you do stop medication, the habits you built during treatment become your primary tools for maintenance. High protein intake, regular strength training, consistent daily movement, adequate sleep, and stress management all contribute to weight maintenance. Patients who established these habits while on medication — rather than relying solely on appetite suppression — tend to maintain more of their results. Some research suggests that structured behavioral programs during and after medication can improve long-term outcomes.",
+        body: 'If you do stop medication, the habits you built during treatment become your primary tools for maintenance. High protein intake, regular strength training, consistent daily movement, adequate sleep, and stress management all contribute to weight maintenance. Patients who established these habits while on medication — rather than relying solely on appetite suppression — tend to maintain more of their results. Our guides on <a href="/articles/what-to-eat-on-glp1-medication">nutrition during GLP-1 treatment</a> and <a href="/articles/exercise-while-on-glp1-medication">exercise on medication</a> can help you build these foundations before discontinuing.',
       },
       {
         heading: "The Case for Long-Term Treatment",
-        body: "Major medical organizations including the American Association of Clinical Endocrinology now recognize obesity as a chronic disease that may require ongoing treatment — similar to hypertension or diabetes. Just as stopping blood pressure medication causes blood pressure to rise, stopping weight loss medication allows weight to return. For many patients, the most effective approach is continued treatment at a maintenance dose, which can be lower than the initial weight-loss dose. The decision to continue or stop should be made with your provider based on your individual health profile, goals, and circumstances.",
+        body: 'Major medical organizations including the American Association of Clinical Endocrinology now recognize obesity as a chronic disease that may require ongoing treatment — similar to hypertension or diabetes. Just as stopping blood pressure medication causes blood pressure to rise, stopping weight loss medication allows weight to return. For many patients, the most effective approach is continued treatment at a maintenance dose, which can be lower than the initial weight-loss dose. For information on long-term costs, see our <a href="/articles/weight-loss-medication-cost-guide">medication cost guide</a>.',
       },
       {
         heading: "Making an Informed Decision",
-        body: "Whether to continue or discontinue GLP-1 medication is a personal decision that should be made with full information. Consider your reasons for stopping — cost, side effects, reaching a goal weight — and weigh them against the statistical likelihood of regain. If cost is the primary factor, explore compounded options or lower maintenance doses that may be more affordable. If you've reached your goal, discuss a maintenance protocol with your provider rather than simply stopping. The most important thing is to go in with realistic expectations and a plan, not just stop and hope for the best.",
+        body: 'Whether to continue or discontinue GLP-1 medication is a personal decision that should be made with full information. Consider your reasons for stopping — cost, side effects, reaching a goal weight — and weigh them against the statistical likelihood of regain. If cost is the primary factor, explore compounded options or lower maintenance doses that may be more affordable. If you\'ve reached your goal, discuss a maintenance protocol with your provider rather than simply stopping. <a href="/">Compare providers</a> that offer flexible maintenance plans, or <a href="/find-your-match">take our quiz</a> to find the right fit for long-term care.',
       },
     ],
   },
@@ -466,7 +466,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Beyond Weight Loss: GLP-1 Receptors in the Brain",
-        body: "GLP-1 receptors aren't just found in the gut and pancreas — they're widely distributed throughout the brain, including areas involved in reward processing, emotional regulation, and decision-making. This has led researchers to investigate whether GLP-1 medications might have neuropsychiatric effects beyond appetite suppression. Early findings are intriguing: some studies suggest potential benefits for mood, anxiety, and addictive behaviors, while questions remain about the full scope of these effects.",
+        body: 'GLP-1 receptors aren\'t just found in the gut and pancreas — they\'re widely distributed throughout the brain, including areas involved in reward processing, emotional regulation, and decision-making. This has led researchers to investigate whether <a href="/articles/how-glp1-medications-work">GLP-1 medications</a> might have neuropsychiatric effects beyond appetite suppression. Early findings are intriguing: some studies suggest potential benefits for mood, anxiety, and addictive behaviors, while questions remain about the full scope of these effects.',
       },
       {
         heading: "What Patients Are Reporting",
@@ -482,11 +482,11 @@ export const articles: Article[] = [
       },
       {
         heading: "Potential Concerns",
-        body: "Not all reported mental health effects are positive. A subset of patients reports emotional blunting — a reduced ability to feel pleasure or emotional range — which some attribute to the medication's effects on reward pathways. There have also been post-marketing reports of suicidal ideation, though regulatory reviews by the FDA and EMA have not established a causal link. Patients with a history of depression, eating disorders, or other mental health conditions should discuss these considerations with their provider before starting treatment and report any mood changes promptly.",
+        body: 'Not all reported mental health effects are positive. A subset of patients reports emotional blunting — a reduced ability to feel pleasure or emotional range — which some attribute to the medication\'s effects on reward pathways. There have also been post-marketing reports of suicidal ideation, though regulatory reviews by the FDA and EMA have not established a causal link. Patients with a history of depression, eating disorders, or other mental health conditions should discuss these considerations with their provider before starting treatment and report any mood changes promptly. For a broader look at side effect management, see our <a href="/articles/semaglutide-side-effects-guide">side effects guide</a>.',
       },
       {
         heading: "What This Means for You",
-        body: "If you're taking or considering GLP-1 medication, be aware that mental health effects — both positive and negative — are possible. Monitor your mood, energy, and emotional state, especially during the first few months and after dose changes. If you notice improvements in areas like alcohol consumption or compulsive behaviors, that's consistent with what many patients experience. If you notice persistent low mood, emotional numbness, or any concerning psychological changes, contact your provider. The research in this area is evolving rapidly, and staying informed will help you make the best decisions about your treatment.",
+        body: 'If you\'re taking or considering GLP-1 medication, be aware that mental health effects — both positive and negative — are possible. Monitor your mood, energy, and emotional state, especially during the first few months and after dose changes. If you notice improvements in areas like alcohol consumption or compulsive behaviors, that\'s consistent with what many patients experience. If you notice persistent low mood, emotional numbness, or any concerning psychological changes, contact your provider. Choosing a provider with strong clinical oversight matters — <a href="/articles/choosing-telehealth-weight-loss-provider">learn what to look for</a> or <a href="/find-your-match">find your match</a> through our quiz.',
       },
     ],
   },

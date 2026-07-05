@@ -174,9 +174,10 @@ export default async function ArticlePage({
                 <h2 className="mb-3 text-[20px] font-bold text-[#191919]">
                   {section.heading}
                 </h2>
-                <p className="text-[16px] leading-[1.75] text-gray-600">
-                  {section.body}
-                </p>
+                <p
+                  className="text-[16px] leading-[1.75] text-gray-600 [&_a]:text-[#0C4B75] [&_a]:font-medium [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-[#093d61]"
+                  dangerouslySetInnerHTML={{ __html: section.body }}
+                />
               </section>
             ))}
           </article>
