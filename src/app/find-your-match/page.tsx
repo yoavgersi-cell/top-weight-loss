@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
+import Image from "next/image";
 import { Check, Clock, Shield, Lock, ShieldCheck, Timer, Search, MapPin, ArrowRight } from "lucide-react";
 import { trackOnce } from "@/lib/analytics";
 
@@ -47,6 +48,8 @@ export default function FindYourMatchPage() {
   const [phase, setPhase] = useState<"welcome" | "quiz" | "midmsg" | "loading" | "results">("welcome");
   const [loadingIdx, setLoadingIdx] = useState(0);
   const [loadingPct, setLoadingPct] = useState(0);
+  const [loadingLogoIdx, setLoadingLogoIdx] = useState(0);
+  const [logoFading, setLogoFading] = useState(false);
   const [transitioning, setTransitioning] = useState(false);
   const [slideDirection, setSlideDirection] = useState<"forward" | "back">("forward");
   const [phaseTransitioning, setPhaseTransitioning] = useState(false);
@@ -147,6 +150,8 @@ export default function FindYourMatchPage() {
     setPhase("loading");
     setLoadingIdx(0);
     setLoadingPct(0);
+    setLoadingLogoIdx(0);
+    setLogoFading(false);
     const msgs = quiz?.loadingMessages ?? [];
     const totalMs = 4300;
     const perMsg = totalMs / msgs.length;
@@ -157,6 +162,17 @@ export default function FindYourMatchPage() {
       setLoadingPct((prev) => Math.min(prev + 1, 95));
     }, totalMs / 95);
 
+    // Logo cycling animation (every 600ms)
+    let logoI = 0;
+    const logoInterval = setInterval(() => {
+      setLogoFading(true);
+      setTimeout(() => {
+        logoI++;
+        setLoadingLogoIdx(logoI);
+        setLogoFading(false);
+      }, 150);
+    }, 600);
+
     const msgInterval = setInterval(() => {
       i++;
       if (i < msgs.length) {
@@ -164,6 +180,7 @@ export default function FindYourMatchPage() {
       } else {
         clearInterval(msgInterval);
         clearInterval(pctInterval);
+        clearInterval(logoInterval);
         setLoadingPct(100);
         setTimeout(() => calculateResults(), 200);
       }
@@ -339,86 +356,68 @@ export default function FindYourMatchPage() {
   // ========== LOADING ==========
   if (phase === "loading") {
     const msgs = quiz.loadingMessages;
+    const providers = config.providers ?? [];
+    const currentLogo = providers[loadingLogoIdx % providers.length];
+
     return (
       <><HideChrome /><div className={`flex min-h-[60vh] flex-col items-center justify-center px-6 transition-all duration-[280ms] ease-out ${phaseTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}>
-        <div className="w-full max-w-[380px]">
-          {/* Animated spinner */}
-          <div className="mb-8 flex justify-center">
-            <div className="relative h-16 w-16">
-              <svg className="h-16 w-16 animate-spin" viewBox="0 0 64 64" fill="none">
-                <circle cx="32" cy="32" r="28" stroke="#E5E7EB" strokeWidth="4" />
-                <path
-                  d="M32 4a28 28 0 0 1 28 28"
-                  stroke="#0C4B75"
-                  strokeWidth="4"
-                  strokeLinecap="round"
+        <div className="w-full max-w-[400px]">
+          {/* Cycling provider logo */}
+          <div className="mb-6 flex flex-col items-center">
+            <div className="relative mb-4 flex h-20 w-48 items-center justify-center">
+              {currentLogo && (
+                <Image
+                  key={loadingLogoIdx}
+                  src={currentLogo.logo}
+                  alt={currentLogo.name}
+                  width={160}
+                  height={48}
+                  className={`max-h-[48px] w-auto object-contain transition-opacity duration-150 ${logoFading ? "opacity-0" : "opacity-100"}`}
                 />
-              </svg>
-              <span className="absolute inset-0 flex items-center justify-center text-[13px] font-bold text-[#0C4B75]">
-                {loadingPct}%
-              </span>
+              )}
             </div>
-          </div>
-
-          {/* Step list with checkmarks */}
-          <div className="space-y-3">
-            {msgs.map((msg, i) => {
-              const isDone = i < loadingIdx;
-              const isActive = i === loadingIdx;
-              return (
-                <div
-                  key={i}
-                  className={`flex items-center gap-3 rounded-lg border px-4 py-3 transition-all duration-300 ${
-                    isDone
-                      ? "border-emerald-200 bg-emerald-50"
-                      : isActive
-                        ? "border-[#0C4B75]/30 bg-[#0C4B75]/5"
-                        : "border-gray-100 bg-gray-50"
-                  }`}
-                >
-                  <div
-                    className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
-                      isDone
-                        ? "bg-emerald-500"
-                        : isActive
-                          ? "bg-[#0C4B75]"
-                          : "bg-gray-200"
-                    }`}
-                  >
-                    {isDone ? (
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M20 6 9 17l-5-5" />
-                      </svg>
-                    ) : isActive ? (
-                      <div className="h-2 w-2 animate-pulse rounded-full bg-white" />
-                    ) : (
-                      <div className="h-2 w-2 rounded-full bg-gray-400" />
-                    )}
-                  </div>
-                  <span
-                    className={`text-[14px] transition-colors duration-300 ${
-                      isDone
-                        ? "font-medium text-emerald-700"
-                        : isActive
-                          ? "font-medium text-[#191919]"
-                          : "text-gray-400"
-                    }`}
-                  >
-                    {msg}
-                  </span>
-                </div>
-              );
-            })}
+            <p className="text-center text-[15px] font-medium text-gray-500 sm:text-[16px]">
+              {msgs[loadingIdx] || msgs[0]}
+            </p>
           </div>
 
           {/* Progress bar */}
-          <div className="mt-6">
-            <div className="h-1.5 w-full overflow-hidden rounded-full bg-gray-100">
+          <div className="mb-4">
+            <div className="h-2 w-full overflow-hidden rounded-full bg-gray-100">
               <div
                 className="h-full rounded-full bg-[#0C4B75] transition-all duration-100"
                 style={{ width: `${loadingPct}%` }}
               />
             </div>
+            <div className="mt-1.5 flex items-center justify-between">
+              <span className="text-[12px] text-gray-400">Analyzing providers</span>
+              <span className="text-[12px] font-medium text-[#0C4B75]">{loadingPct}%</span>
+            </div>
+          </div>
+
+          {/* Small logo trail showing scanned providers */}
+          <div className="flex items-center justify-center gap-3 pt-2">
+            {providers.slice(0, 6).map((p, i) => {
+              const isScanned = loadingLogoIdx > i;
+              return (
+                <div
+                  key={p.id}
+                  className={`flex h-8 w-8 items-center justify-center rounded-full border transition-all duration-300 ${
+                    isScanned
+                      ? "border-emerald-200 bg-emerald-50"
+                      : "border-gray-100 bg-gray-50"
+                  }`}
+                >
+                  {isScanned ? (
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                  ) : (
+                    <div className="h-1.5 w-1.5 rounded-full bg-gray-300" />
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div></>
