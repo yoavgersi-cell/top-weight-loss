@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useMemo } from "react";
+import Image from "next/image";
 import { Check, Search } from "lucide-react";
 import { trackOnce } from "@/lib/analytics";
 import { ComparisonCard } from "@/components/comparison-card";
@@ -48,6 +49,8 @@ export default function ChatQuizPage() {
   const [phase, setPhase] = useState<"chat" | "loading" | "results">("chat");
   const [loadingPct, setLoadingPct] = useState(0);
   const [loadingIdx, setLoadingIdx] = useState(0);
+  const [loadingLogoIdx, setLoadingLogoIdx] = useState(0);
+  const [logoFading, setLogoFading] = useState(false);
   const [matchedProviders, setMatchedProviders] = useState<QuizMatchedProvider[]>([]);
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -161,15 +164,28 @@ export default function ChatQuizPage() {
   function startLoading() {
     setLoadingIdx(0);
     setLoadingPct(0);
+    setLoadingLogoIdx(0);
+    setLogoFading(false);
     const msgs = quiz?.loadingMessages ?? [];
     const totalMs = 4300;
     const perMsg = totalMs / msgs.length;
     let i = 0;
     const pctInterval = setInterval(() => setLoadingPct((p) => Math.min(p + 1, 95)), totalMs / 95);
+
+    let logoI = 0;
+    const logoInterval = setInterval(() => {
+      setLogoFading(true);
+      setTimeout(() => {
+        logoI++;
+        setLoadingLogoIdx(logoI);
+        setLogoFading(false);
+      }, 150);
+    }, 600);
+
     const msgInterval = setInterval(() => {
       i++;
       if (i < msgs.length) { setLoadingIdx(i); }
-      else { clearInterval(msgInterval); clearInterval(pctInterval); setLoadingPct(100); setTimeout(() => calculateResults(), 200); }
+      else { clearInterval(msgInterval); clearInterval(pctInterval); clearInterval(logoInterval); setLoadingPct(100); setTimeout(() => calculateResults(), 200); }
     }, perMsg);
   }
 
@@ -226,21 +242,70 @@ export default function ChatQuizPage() {
   // ========== LOADING ==========
   if (phase === "loading") {
     const msgs = quiz.loadingMessages;
+    const providers = config.providers ?? [];
+    const currentLogo = providers[loadingLogoIdx % providers.length];
+
     return (
-      <><HideChrome /><div className="flex min-h-[60vh] flex-col items-center justify-center gap-8 px-6 bg-[#F7F8FA]">
-        <div className="relative flex h-14 w-14 items-center justify-center">
-          <div className="absolute inset-0 animate-ping rounded-full bg-[#0C4B75]/20" style={{ animationDuration: "1.5s" }} />
-          <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#0C4B75] to-[#093d61] shadow-lg">
-            <Check className="h-6 w-6 text-white" strokeWidth={2.5} />
+      <><HideChrome /><div className="flex min-h-[60vh] flex-col items-center justify-center px-6 bg-[#F7F8FA]">
+        <div className="w-full max-w-[400px]">
+          {/* Cycling provider logo */}
+          <div className="mb-6 flex flex-col items-center">
+            <div className="relative mb-4 flex h-20 w-48 items-center justify-center">
+              {currentLogo && (
+                <Image
+                  key={loadingLogoIdx}
+                  src={currentLogo.logo}
+                  alt={currentLogo.name}
+                  width={160}
+                  height={48}
+                  className={`max-h-[48px] w-auto object-contain transition-opacity duration-150 ${logoFading ? "opacity-0" : "opacity-100"}`}
+                />
+              )}
+            </div>
+            <p className="text-center text-[15px] font-medium text-gray-500 sm:text-[16px]">
+              {msgs[loadingIdx] || msgs[0]}
+            </p>
+          </div>
+
+          {/* Progress bar */}
+          <div className="mb-4">
+            <div className="h-2 w-full overflow-hidden rounded-full bg-gray-100">
+              <div
+                className="h-full rounded-full bg-[#0C4B75] transition-all duration-100"
+                style={{ width: `${loadingPct}%` }}
+              />
+            </div>
+            <div className="mt-1.5 flex items-center justify-between">
+              <span className="text-[12px] text-gray-400">Analyzing providers</span>
+              <span className="text-[12px] font-medium text-[#0C4B75]">{loadingPct}%</span>
+            </div>
+          </div>
+
+          {/* Small logo trail showing scanned providers */}
+          <div className="flex items-center justify-center gap-3 pt-2">
+            {providers.slice(0, 6).map((p, i) => {
+              const isScanned = loadingLogoIdx > i;
+              return (
+                <div
+                  key={p.id}
+                  className={`flex h-8 w-8 items-center justify-center rounded-full border transition-all duration-300 ${
+                    isScanned
+                      ? "border-emerald-200 bg-emerald-50"
+                      : "border-gray-100 bg-gray-50"
+                  }`}
+                >
+                  {isScanned ? (
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                  ) : (
+                    <div className="h-1.5 w-1.5 rounded-full bg-gray-300" />
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
-        <div className="w-full max-w-[320px]">
-          <div className="h-2 w-full overflow-hidden rounded-full bg-[#E5E7EB]">
-            <div className="h-full rounded-full bg-[#0C4B75] transition-all duration-100" style={{ width: `${loadingPct}%` }} />
-          </div>
-          <p className="mt-1 text-right text-[12px] text-gray-400">{loadingPct}%</p>
-        </div>
-        <p className="text-center text-[16px] font-medium text-gray-600 sm:text-[18px]">{msgs[loadingIdx] || msgs[0]}</p>
       </div></>
     );
   }
