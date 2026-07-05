@@ -157,6 +157,9 @@ export default async function ArticlePage({
               {article.description}
             </p>
             <p className="mt-4 text-[12px] text-gray-400">
+              {article.author && (
+                <span className="mr-2">By {article.author} &middot;</span>
+              )}
               Updated {formattedDate}
             </p>
           </div>

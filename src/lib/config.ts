@@ -114,6 +114,7 @@ export interface ArticleData {
   publishedAt: string;
   updatedAt: string;
   heroColor: string;
+  author?: string;
   sections: ArticleSection[];
   sidebarId?: string;
 }
