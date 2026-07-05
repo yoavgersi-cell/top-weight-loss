@@ -175,6 +175,12 @@ export interface SidebarConfigData {
   articleSlugs: string[];
 }
 
+export interface LandingEditorialSection {
+  heading: string;
+  body: string;
+  bullets?: string[];
+}
+
 export interface LandingPageData {
   slug: string;
   seoTitle: string;
@@ -183,6 +189,7 @@ export interface LandingPageData {
   h2: string;
   heroDescription: string;
   providerOrder: string[];
+  editorialSections?: LandingEditorialSection[];
 }
 
 export interface SiteConfig {

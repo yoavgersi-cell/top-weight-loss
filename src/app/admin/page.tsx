@@ -1123,6 +1123,77 @@ export default function AdminPage() {
                       </button>
                     </div>
                   </div>
+
+                  {/* Editorial Content Sections */}
+                  <div className="mt-5">
+                    <label className="mb-2 block text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                      Editorial Content Sections
+                    </label>
+                    <p className="mb-3 text-xs text-gray-400">Custom content shown below the provider cards. HTML links are supported in body text. Leave empty to use the default editorial content.</p>
+                    <div className="space-y-3">
+                      {(lp.editorialSections ?? []).map((es, si) => (
+                        <div key={si} className="rounded-lg border bg-gray-50 p-4">
+                          <div className="mb-2 flex items-center justify-between">
+                            <span className="text-xs font-semibold text-gray-500">Section {si + 1}</span>
+                            <button
+                              onClick={() => {
+                                const sections = (lp.editorialSections ?? []).filter((_, i) => i !== si);
+                                updateLP({ editorialSections: sections });
+                              }}
+                              className="flex h-6 w-6 items-center justify-center rounded border border-red-200 text-red-400 hover:bg-red-50"
+                            >
+                              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                            </button>
+                          </div>
+                          <Field
+                            label="Heading"
+                            value={es.heading}
+                            onChange={(v) => {
+                              const sections = [...(lp.editorialSections ?? [])];
+                              sections[si] = { ...sections[si], heading: v };
+                              updateLP({ editorialSections: sections });
+                            }}
+                          />
+                          <div className="mt-2">
+                            <label className="mb-1 block text-xs text-gray-400">Body (HTML supported)</label>
+                            <textarea
+                              value={es.body}
+                              onChange={(e) => {
+                                const sections = [...(lp.editorialSections ?? [])];
+                                sections[si] = { ...sections[si], body: e.target.value };
+                                updateLP({ editorialSections: sections });
+                              }}
+                              rows={3}
+                              className="w-full rounded border px-3 py-2 text-sm text-gray-700 focus:border-[#0C4B75] focus:outline-none"
+                            />
+                          </div>
+                          <div className="mt-2">
+                            <label className="mb-1 block text-xs text-gray-400">Bullets (one per line, optional)</label>
+                            <textarea
+                              value={(es.bullets ?? []).join("\n")}
+                              onChange={(e) => {
+                                const sections = [...(lp.editorialSections ?? [])];
+                                const bullets = e.target.value.split("\n").filter((b) => b.trim());
+                                sections[si] = { ...sections[si], bullets };
+                                updateLP({ editorialSections: sections });
+                              }}
+                              rows={2}
+                              className="w-full rounded border px-3 py-2 text-sm text-gray-700 focus:border-[#0C4B75] focus:outline-none"
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <button
+                      onClick={() => {
+                        const sections = [...(lp.editorialSections ?? []), { heading: "", body: "", bullets: [] }];
+                        updateLP({ editorialSections: sections });
+                      }}
+                      className="mt-2 w-full rounded border-2 border-dashed border-gray-200 py-2 text-xs font-medium text-gray-400 hover:border-[#0C4B75] hover:text-[#0C4B75]"
+                    >
+                      + Add Section
+                    </button>
+                  </div>
                 </div>
               );
             })}
@@ -1136,6 +1207,7 @@ export default function AdminPage() {
                   h2: "Compare providers side by side",
                   heroDescription: "",
                   providerOrder: config.ranking.providerOrder.slice(),
+                  editorialSections: [],
                 };
                 setConfig({ ...config, landingPages: [...(config.landingPages ?? []), newLP] });
               }}

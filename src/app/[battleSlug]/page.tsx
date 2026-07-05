@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getConfig } from "@/lib/config-store";
 import { ComparisonLayout } from "@/components/comparison-layout";
 import { EditorialContent } from "@/components/editorial-content";
+import { LandingEditorial } from "@/components/landing-editorial";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound } from "next/navigation";
 import { Trophy, ArrowRight, Check, Minus } from "lucide-react";
@@ -105,7 +106,11 @@ export default async function BattlePage({
             description: landing.heroDescription,
           }}
         >
-          <EditorialContent />
+          {landing.editorialSections && landing.editorialSections.length > 0 ? (
+            <LandingEditorial sections={landing.editorialSections} />
+          ) : (
+            <EditorialContent />
+          )}
         </ComparisonLayout>
       </>
     );
