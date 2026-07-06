@@ -66,24 +66,24 @@ export default async function ReviewPage({
     "@context": "https://schema.org",
     "@type": "Review",
     name: `${provider.name} Review`,
+    headline: `${provider.name} Review 2026 — Is It Worth It?`,
     reviewBody: review.reviewIntro,
+    datePublished: "2026-06-01",
+    dateModified: new Date().toISOString().split("T")[0],
     author: {
       "@type": "Organization",
+      name: "TopWeightLoss Team",
+      url: "https://www.topweightloss.io",
+    },
+    publisher: {
+      "@type": "Organization",
       name: "topweightloss.io",
+      url: "https://www.topweightloss.io",
     },
     itemReviewed: {
       "@type": "Product",
       name: provider.name,
       description: review.shortSummary,
-      review: {
-        "@type": "Review",
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: position.score,
-          bestRating: 10,
-          worstRating: 0,
-        },
-      },
     },
     reviewRating: {
       "@type": "Rating",

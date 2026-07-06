@@ -34,8 +34,37 @@ export default async function ReviewsPage() {
     })
     .filter(Boolean) as Array<{ id: string; name: string; logo: string; rating: number; ratingLabel: string }>;
 
+  // JSON-LD: ItemList schema for reviews listing
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Weight Loss Provider Reviews",
+    description: "Expert reviews of top weight loss providers offering GLP-1 medications.",
+    numberOfItems: sortedProviders.length,
+    itemListElement: sortedProviders.map((provider, i) => {
+      const review = (config.reviews ?? []).find((r) => r.providerId === provider.id);
+      return {
+        "@type": "ListItem",
+        position: i + 1,
+        name: `${provider.name} Review`,
+        url: review ? `https://www.topweightloss.io/reviews/${review.slug}` : undefined,
+      };
+    }).filter((item) => item.url),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.topweightloss.io" },
+      { "@type": "ListItem", position: 2, name: "Reviews", item: "https://www.topweightloss.io/reviews" },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <div className="mb-10 text-center">
           <h1 className="text-3xl font-bold text-[#191919] sm:text-4xl">

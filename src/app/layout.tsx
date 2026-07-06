@@ -85,7 +85,28 @@ export default function RootLayout({
               name: "topweightloss.io",
               url: "https://www.topweightloss.io",
               logo: "https://www.topweightloss.io/favicon.svg",
+              description: "Compare the top weight loss providers offering GLP-1 medications like semaglutide and tirzepatide. Expert reviews, pricing comparisons, and personalized provider matching.",
               sameAs: [],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "topweightloss.io",
+              url: "https://www.topweightloss.io",
+              description: "Compare trusted weight loss providers side by side",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate: "https://www.topweightloss.io/articles?q={search_term_string}",
+                },
+                "query-input": "required name=search_term_string",
+              },
             }),
           }}
         />

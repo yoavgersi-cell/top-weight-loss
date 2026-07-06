@@ -84,20 +84,43 @@ export default async function BattlePage({
       },
     };
 
+    const providerOrder = landing.providerOrder.length > 0 ? landing.providerOrder : config.ranking.providerOrder;
+
     const schemaData = {
       "@context": "https://schema.org",
       "@type": "WebPage",
       name: landing.seoTitle,
       description: landing.seoDescription,
       url: `https://www.topweightloss.io/${landing.slug}`,
+      dateModified: new Date().toISOString().split("T")[0],
+      publisher: { "@type": "Organization", name: "topweightloss.io", url: "https://www.topweightloss.io" },
+    };
+
+    const itemListSchema = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: landing.h1,
+      numberOfItems: providerOrder.length,
+      itemListElement: providerOrder.map((id, i) => {
+        const p = config.providers.find((pr) => pr.id === id);
+        return { "@type": "ListItem", position: i + 1, name: p?.name ?? id };
+      }),
+    };
+
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.topweightloss.io" },
+        { "@type": "ListItem", position: 2, name: landing.h1, item: `https://www.topweightloss.io/${landing.slug}` },
+      ],
     };
 
     return (
       <>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <ComparisonLayout
           config={customConfig}
           heroOverrides={{
