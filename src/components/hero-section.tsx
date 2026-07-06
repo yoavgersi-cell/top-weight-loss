@@ -56,7 +56,7 @@ export function HeroSection({
           </h1>
 
           {h2 && (
-            <h2 className="mt-2 text-[16px] sm:text-[32px] leading-[1.2] font-semibold text-[#3a6ea5]">
+            <h2 className="mt-2 hidden sm:block text-[32px] leading-[1.2] font-semibold text-[#3a6ea5]">
               {h2}
             </h2>
           )}
