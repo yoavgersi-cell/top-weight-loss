@@ -365,13 +365,13 @@ export default function FindYourMatchPage() {
     return (
       <><HideChrome /><div className="bg-[#F7F8FA] py-8 sm:py-14 overflow-x-hidden animate-[fadeSlideUp_0.5s_ease-out]">
         <div className="mx-auto max-w-[800px] px-4 overflow-hidden">
-          {/* Trust strip */}
-          <div className="mb-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+          {/* Trust strip — single line on mobile */}
+          <div className="mb-6 flex items-center justify-center gap-1.5 text-[11px] font-medium text-gray-400 sm:mb-8 sm:gap-4 sm:text-[13px]">
             {quiz.trustStrip.map((item, i) => (
-              <div key={i} className="flex items-center gap-1.5 text-[12px] font-medium text-gray-400 sm:text-[13px]">
-                <Check className="h-3.5 w-3.5 text-[#0C4B75]" strokeWidth={2} />
+              <span key={i} className="flex items-center gap-1">
+                <Check className="h-3 w-3 shrink-0 text-[#0C4B75]" strokeWidth={2} />
                 {item}
-              </div>
+              </span>
             ))}
           </div>
 
@@ -383,7 +383,7 @@ export default function FindYourMatchPage() {
 
           {/* Featured provider */}
           <div className="mb-3">
-            <div className="mb-2 flex flex-wrap items-center gap-2 px-1">
+            <div className="mb-2 flex items-center gap-2 px-1">
               <span className="rounded-full bg-[#0C4B75] px-4 py-1 text-[12px] font-bold text-white sm:text-[13px]">
                 {featured.matchPct}% Match
               </span>
@@ -394,10 +394,10 @@ export default function FindYourMatchPage() {
             <div className="rounded-xl shadow-md">
               <ComparisonCard product={featured} pageType="quiz_results" sourceFlow="matching_flow" />
             </div>
-            <div className="mt-2 flex flex-wrap gap-2 px-1">
+            <div className="mt-2 flex items-center gap-3 px-1">
               {featured.reasons.map((r, i) => (
-                <span key={i} className="flex items-center gap-1 text-[12px] text-gray-500">
-                  <Check className="h-3 w-3 text-[#0C4B75]" strokeWidth={2} />
+                <span key={i} className="flex items-center gap-1 text-[11px] text-gray-500 sm:text-[12px]">
+                  <Check className="h-3 w-3 shrink-0 text-[#0C4B75]" strokeWidth={2} />
                   {r}
                 </span>
               ))}
