@@ -365,16 +365,6 @@ export default function FindYourMatchPage() {
     return (
       <><HideChrome /><div className="bg-[#F7F8FA] py-8 sm:py-14 overflow-x-hidden animate-[fadeSlideUp_0.5s_ease-out]">
         <div className="mx-auto max-w-[800px] px-4 overflow-hidden">
-          {/* Trust strip — single line on mobile */}
-          <div className="mb-6 flex items-center justify-center gap-1.5 text-[11px] font-medium text-gray-400 sm:mb-8 sm:gap-4 sm:text-[13px]">
-            {quiz.trustStrip.map((item, i) => (
-              <span key={i} className="flex items-center gap-1">
-                <Check className="h-3 w-3 shrink-0 text-[#0C4B75]" strokeWidth={2} />
-                {item}
-              </span>
-            ))}
-          </div>
-
           {/* Results title */}
           <div className="mb-6 text-center sm:mb-8">
             <h1 className="text-[26px] font-extrabold text-[#191919] sm:text-[34px]">{quiz.resultsTitle}</h1>
