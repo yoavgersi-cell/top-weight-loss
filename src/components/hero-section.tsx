@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { Stethoscope, Star, Zap } from "lucide-react";
 
 interface HeroSectionProps {
   backgroundImageUrl: string;
@@ -68,10 +69,14 @@ export function HeroSection({
           )}
 
           <div className="mt-3 sm:mt-4 flex items-center gap-3 sm:gap-5">
-            {["Licensed Providers", "Top-Rated Options", "Fast Online Process"].map((item) => (
-              <span key={item} className="flex items-center gap-1 text-[11px] sm:text-[13px] font-medium text-gray-500">
-                <svg className="h-3.5 w-3.5 shrink-0 text-green-500" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
-                {item}
+            {[
+              { label: "Licensed Providers", icon: Stethoscope },
+              { label: "Top-Rated Options", icon: Star },
+              { label: "Fast Online Process", icon: Zap },
+            ].map(({ label, icon: Icon }) => (
+              <span key={label} className="flex items-center gap-1.5 text-[11px] sm:text-[13px] font-medium text-gray-500">
+                <Icon className="h-3.5 w-3.5 shrink-0 text-[#0C4B75]" strokeWidth={1.5} />
+                {label}
               </span>
             ))}
           </div>
