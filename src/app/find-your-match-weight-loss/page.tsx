@@ -162,14 +162,20 @@ export default function ChatQuizPage() {
     setLoadingIdx(0);
     setLoadingPct(0);
     const msgs = quiz?.loadingMessages ?? [];
-    const totalMs = 4300;
+    const totalMs = 6000;
     const perMsg = totalMs / msgs.length;
     let i = 0;
-    const pctInterval = setInterval(() => setLoadingPct((p) => Math.min(p + 1, 95)), totalMs / 95);
+    const pctInterval = setInterval(() => {
+      setLoadingPct((prev) => {
+        if (prev >= 95) return 95;
+        const step = prev < 60 ? 1.2 : prev < 80 ? 0.8 : 0.4;
+        return Math.min(prev + step, 95);
+      });
+    }, 50);
     const msgInterval = setInterval(() => {
       i++;
       if (i < msgs.length) { setLoadingIdx(i); }
-      else { clearInterval(msgInterval); clearInterval(pctInterval); setLoadingPct(100); setTimeout(() => calculateResults(), 200); }
+      else { clearInterval(msgInterval); clearInterval(pctInterval); setLoadingPct(100); setTimeout(() => calculateResults(), 400); }
     }, perMsg);
   }
 
@@ -227,20 +233,45 @@ export default function ChatQuizPage() {
   if (phase === "loading") {
     const msgs = quiz.loadingMessages;
     return (
-      <><HideChrome /><div className="flex min-h-[60vh] flex-col items-center justify-center gap-8 px-6 bg-[#F7F8FA]">
-        <div className="relative flex h-14 w-14 items-center justify-center">
-          <div className="absolute inset-0 animate-ping rounded-full bg-[#0C4B75]/20" style={{ animationDuration: "1.5s" }} />
-          <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#0C4B75] to-[#093d61] shadow-lg">
-            <Check className="h-6 w-6 text-white" strokeWidth={2.5} />
+      <><HideChrome /><div className="flex min-h-[60vh] flex-col items-center justify-center px-6 bg-[#F7F8FA]">
+        <div className="w-full max-w-[340px] flex flex-col items-center">
+          {/* Animated ring */}
+          <div className="relative mb-8">
+            <svg className="h-24 w-24" viewBox="0 0 96 96">
+              <circle cx="48" cy="48" r="42" fill="none" stroke="#E5E7EB" strokeWidth="4" />
+              <circle
+                cx="48" cy="48" r="42"
+                fill="none" stroke="#0C4B75" strokeWidth="4"
+                strokeLinecap="round"
+                strokeDasharray={`${Math.round(2 * Math.PI * 42)}`}
+                strokeDashoffset={`${Math.round(2 * Math.PI * 42 * (1 - loadingPct / 100))}`}
+                className="transition-all duration-300 ease-out"
+                style={{ transform: "rotate(-90deg)", transformOrigin: "center" }}
+              />
+            </svg>
+            <span className="absolute inset-0 flex items-center justify-center text-[18px] font-bold text-[#0C4B75]">
+              {Math.round(loadingPct)}%
+            </span>
+          </div>
+
+          {/* Message with fade */}
+          <p
+            key={loadingIdx}
+            className="mb-6 text-center text-[16px] font-medium text-[#191919] animate-[fadeIn_0.4s_ease-out] sm:text-[18px]"
+          >
+            {msgs[loadingIdx] || msgs[0]}
+          </p>
+
+          {/* Thin progress bar */}
+          <div className="w-full">
+            <div className="h-1 w-full overflow-hidden rounded-full bg-gray-100">
+              <div
+                className="h-full rounded-full bg-[#0C4B75] transition-all duration-300 ease-out"
+                style={{ width: `${loadingPct}%` }}
+              />
+            </div>
           </div>
         </div>
-        <div className="w-full max-w-[320px]">
-          <div className="h-2 w-full overflow-hidden rounded-full bg-[#E5E7EB]">
-            <div className="h-full rounded-full bg-[#0C4B75] transition-all duration-100" style={{ width: `${loadingPct}%` }} />
-          </div>
-          <p className="mt-1 text-right text-[12px] text-gray-400">{loadingPct}%</p>
-        </div>
-        <p className="text-center text-[16px] font-medium text-gray-600 sm:text-[18px]">{msgs[loadingIdx] || msgs[0]}</p>
       </div></>
     );
   }
