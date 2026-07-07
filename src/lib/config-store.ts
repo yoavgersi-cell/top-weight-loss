@@ -867,13 +867,13 @@ function buildInitialConfig(): SiteConfig {
         },
         {
           id: "experience",
-          title: "Have you tried weight loss medication before?",
+          title: "Have you tried weight loss meds before?",
           subtitle: "No wrong answer — this just helps us personalize.",
           type: "cards" as const,
           options: [
             { label: "Yes, I have", value: "yes" },
-            { label: "No, this would be my first time", value: "no" },
-            { label: "Not sure", value: "unsure" },
+            { label: "No, it's my first time", value: "no" },
+            { label: "I'm not sure", value: "unsure" },
           ],
         },
         {
