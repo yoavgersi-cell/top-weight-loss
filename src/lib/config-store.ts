@@ -890,7 +890,7 @@ function buildInitialConfig(): SiteConfig {
         },
         {
           id: "state",
-          title: "Last one — where are you located?",
+          title: "Almost done — what state are you in?",
           subtitle: "Some providers aren't available in every state.",
           type: "dropdown" as const,
           options: [
