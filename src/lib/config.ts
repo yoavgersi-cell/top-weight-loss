@@ -98,6 +98,12 @@ export interface QuizConfig {
   resultsOthersTitle: string;
   trustStrip: string[];
   loadingMessages: string[];
+  loadingScreen?: {
+    headline: string;
+    supportingTexts: string[];
+    providerLogos: string[];
+    durationMs: number;
+  };
 }
 
 export interface ArticleSection {

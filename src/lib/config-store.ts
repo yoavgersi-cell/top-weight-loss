@@ -841,6 +841,17 @@ function buildInitialConfig(): SiteConfig {
       resultsOthersTitle: "Other Providers You May Want to Consider",
       trustStrip: ["Updated Monthly", "Editorially Reviewed", "Independent Provider Comparison"],
       loadingMessages: ["Comparing providers for you...", "Checking treatment options...", "Finding your best match...", "Almost there..."],
+      loadingScreen: {
+        headline: "Finding your best match",
+        supportingTexts: [
+          "Comparing trusted providers",
+          "Checking availability",
+          "Matching based on your answers",
+          "Preparing your recommendation",
+        ],
+        providerLogos: ["altrx", "noom", "ro", "trimrx", "shed"],
+        durationMs: 3500,
+      },
       questions: [
         {
           id: "goal",

@@ -1517,6 +1517,102 @@ export default function AdminPage() {
               />
             </div>
 
+            {/* Loading Screen Config */}
+            <div className="rounded-xl border bg-white p-6 shadow-sm">
+              <h3 className="mb-4 text-sm font-bold text-gray-500 uppercase tracking-wider">Loading Screen (Provider Scan)</h3>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <Field label="Headline" value={config.quiz.loadingScreen?.headline ?? "Finding your best match"} onChange={(v) => setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...config.quiz.loadingScreen!, headline: v } } })} />
+                <Field label="Duration (ms)" value={String(config.quiz.loadingScreen?.durationMs ?? 3500)} onChange={(v) => setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...config.quiz.loadingScreen!, durationMs: parseInt(v) || 3500 } } })} />
+              </div>
+              <div className="mt-4">
+                <ArrayField
+                  label="Supporting Texts (rotate during loading)"
+                  items={config.quiz.loadingScreen?.supportingTexts ?? []}
+                  onUpdate={(i, v) => {
+                    const texts = [...(config.quiz.loadingScreen?.supportingTexts ?? [])];
+                    texts[i] = v;
+                    setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...config.quiz.loadingScreen!, supportingTexts: texts } } });
+                  }}
+                  onAdd={() => setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...config.quiz.loadingScreen!, supportingTexts: [...(config.quiz.loadingScreen?.supportingTexts ?? []), ""] } } })}
+                  onRemove={(i) => setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...config.quiz.loadingScreen!, supportingTexts: (config.quiz.loadingScreen?.supportingTexts ?? []).filter((_, idx) => idx !== i) } } })}
+                />
+              </div>
+              <div className="mt-4">
+                <label className="mb-2 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Provider Logos (in order)</label>
+                <p className="mb-3 text-xs text-gray-400">Select which provider logos appear during loading and in what order. Logos are shown in grayscale.</p>
+                <div className="space-y-2">
+                  {(config.quiz.loadingScreen?.providerLogos ?? []).map((pid, pi) => {
+                    const provider = config.providers.find((p) => p.id === pid);
+                    return (
+                      <div key={pid} className="flex items-center gap-3 rounded-lg border bg-gray-50 px-4 py-2">
+                        <span className="flex-1 text-sm font-medium text-[#191919]">{provider?.name ?? pid}</span>
+                        <div className="flex gap-1">
+                          <button
+                            onClick={() => {
+                              if (pi === 0) return;
+                              const logos = [...(config.quiz.loadingScreen?.providerLogos ?? [])];
+                              [logos[pi], logos[pi - 1]] = [logos[pi - 1], logos[pi]];
+                              setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...config.quiz.loadingScreen!, providerLogos: logos } } });
+                            }}
+                            disabled={pi === 0}
+                            className="flex h-7 w-7 items-center justify-center rounded border text-gray-400 hover:bg-white disabled:opacity-30"
+                          >
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m18 15-6-6-6 6"/></svg>
+                          </button>
+                          <button
+                            onClick={() => {
+                              if (pi === (config.quiz.loadingScreen?.providerLogos ?? []).length - 1) return;
+                              const logos = [...(config.quiz.loadingScreen?.providerLogos ?? [])];
+                              [logos[pi], logos[pi + 1]] = [logos[pi + 1], logos[pi]];
+                              setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...config.quiz.loadingScreen!, providerLogos: logos } } });
+                            }}
+                            disabled={pi === (config.quiz.loadingScreen?.providerLogos ?? []).length - 1}
+                            className="flex h-7 w-7 items-center justify-center rounded border text-gray-400 hover:bg-white disabled:opacity-30"
+                          >
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m6 9 6 6 6-6"/></svg>
+                          </button>
+                          <button
+                            onClick={() => {
+                              const logos = (config.quiz.loadingScreen?.providerLogos ?? []).filter((_, i) => i !== pi);
+                              setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...config.quiz.loadingScreen!, providerLogos: logos } } });
+                            }}
+                            className="flex h-7 w-7 items-center justify-center rounded border border-red-200 text-red-400 hover:bg-red-50"
+                          >
+                            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                          </button>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className="mt-2 flex gap-2">
+                  <select
+                    id="add-loading-logo"
+                    className="flex-1 rounded border px-3 py-1.5 text-sm text-gray-600 focus:border-[#0C4B75] focus:outline-none"
+                    defaultValue=""
+                  >
+                    <option value="" disabled>Add provider logo...</option>
+                    {config.providers
+                      .filter((p) => !(config.quiz.loadingScreen?.providerLogos ?? []).includes(p.id))
+                      .map((p) => (
+                        <option key={p.id} value={p.id}>{p.name}</option>
+                      ))}
+                  </select>
+                  <button
+                    onClick={() => {
+                      const select = document.getElementById("add-loading-logo") as HTMLSelectElement;
+                      if (!select?.value) return;
+                      setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...config.quiz.loadingScreen!, providerLogos: [...(config.quiz.loadingScreen?.providerLogos ?? []), select.value] } } });
+                      select.value = "";
+                    }}
+                    className="rounded border border-[#0C4B75] px-3 py-1.5 text-xs font-semibold text-[#0C4B75] hover:bg-[#0C4B75]/5"
+                  >
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+
             {/* Questions */}
             {config.quiz.questions.map((q, qi) => (
               <div key={q.id} className="rounded-xl border bg-white p-6 shadow-sm">

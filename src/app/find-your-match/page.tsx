@@ -147,32 +147,32 @@ export default function FindYourMatchPage() {
     setPhase("loading");
     setLoadingIdx(0);
     setLoadingPct(0);
-    const msgs = quiz?.loadingMessages ?? [];
-    const totalMs = 6000;
-    const perMsg = totalMs / msgs.length;
-    let i = 0;
 
-    // Smooth eased progress — fast at start, slows near end
-    const pctInterval = setInterval(() => {
-      setLoadingPct((prev) => {
-        if (prev >= 95) return 95;
-        // Slow down as we approach 95
-        const step = prev < 60 ? 1.2 : prev < 80 ? 0.8 : 0.4;
-        return Math.min(prev + step, 95);
-      });
-    }, 50);
+    const ls = quiz?.loadingScreen;
+    const logoIds = ls?.providerLogos ?? [];
+    const texts = ls?.supportingTexts ?? quiz?.loadingMessages ?? [];
+    const totalMs = ls?.durationMs ?? 3500;
+    const logoCount = logoIds.length || 1;
+    const perLogo = totalMs / logoCount;
+    const perText = totalMs / (texts.length || 1);
+    let logoI = 0;
+    let textI = 0;
 
-    const msgInterval = setInterval(() => {
-      i++;
-      if (i < msgs.length) {
-        setLoadingIdx(i);
+    const logoInterval = setInterval(() => {
+      logoI++;
+      if (logoI < logoCount) {
+        setLoadingIdx(logoI);
       } else {
-        clearInterval(msgInterval);
-        clearInterval(pctInterval);
-        setLoadingPct(100);
-        setTimeout(() => calculateResults(), 400);
+        clearInterval(logoInterval);
+        clearInterval(textInterval);
+        setTimeout(() => calculateResults(), 300);
       }
-    }, perMsg);
+    }, perLogo);
+
+    const textInterval = setInterval(() => {
+      textI++;
+      if (textI < texts.length) setLoadingPct(textI);
+    }, perText);
   }
 
   function calculateResults() {
@@ -343,46 +343,40 @@ export default function FindYourMatchPage() {
 
   // ========== LOADING ==========
   if (phase === "loading") {
-    const msgs = quiz.loadingMessages;
+    const ls = quiz.loadingScreen;
+    const logoIds = ls?.providerLogos ?? [];
+    const texts = ls?.supportingTexts ?? quiz.loadingMessages;
+    const currentLogoId = logoIds[loadingIdx % logoIds.length];
+    const currentProvider = config.providers.find((p) => p.id === currentLogoId);
+    const currentText = texts[loadingPct % texts.length] ?? texts[0];
+
     return (
-      <><HideChrome /><div className={`flex min-h-[60vh] flex-col items-center justify-center px-6 transition-all duration-[280ms] ease-out ${phaseTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}>
-        <div className="w-full max-w-[340px] flex flex-col items-center">
-          {/* Animated ring */}
-          <div className="relative mb-8">
-            <svg className="h-24 w-24" viewBox="0 0 96 96">
-              <circle cx="48" cy="48" r="42" fill="none" stroke="#E5E7EB" strokeWidth="4" />
-              <circle
-                cx="48" cy="48" r="42"
-                fill="none" stroke="#0C4B75" strokeWidth="4"
-                strokeLinecap="round"
-                strokeDasharray={`${Math.round(2 * Math.PI * 42)}`}
-                strokeDashoffset={`${Math.round(2 * Math.PI * 42 * (1 - loadingPct / 100))}`}
-                className="transition-all duration-300 ease-out"
-                style={{ transform: "rotate(-90deg)", transformOrigin: "center" }}
+      <><HideChrome /><div className={`flex min-h-[60vh] flex-col items-center justify-center px-6 bg-white transition-all duration-[280ms] ease-out ${phaseTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}>
+        <div className="flex flex-col items-center">
+          {/* Headline */}
+          <h2 className="mb-8 text-[20px] font-bold text-[#191919] sm:text-[24px]">
+            {ls?.headline ?? "Finding your best match"}
+          </h2>
+
+          {/* Provider logo — grayscale, fading */}
+          <div className="relative mb-8 flex h-[56px] w-[180px] items-center justify-center">
+            {currentProvider && (
+              <img
+                key={loadingIdx}
+                src={currentProvider.logo}
+                alt={currentProvider.name}
+                className="max-h-[48px] max-w-[160px] object-contain grayscale opacity-0 animate-[logoFade_0.9s_ease-in-out_forwards]"
               />
-            </svg>
-            <span className="absolute inset-0 flex items-center justify-center text-[18px] font-bold text-[#0C4B75]">
-              {Math.round(loadingPct)}%
-            </span>
+            )}
           </div>
 
-          {/* Message with fade */}
+          {/* Supporting text */}
           <p
-            key={loadingIdx}
-            className="mb-6 text-center text-[16px] font-medium text-[#191919] animate-[fadeIn_0.4s_ease-out] sm:text-[18px]"
+            key={`text-${loadingPct}`}
+            className="text-[14px] font-medium text-gray-400 animate-[fadeIn_0.3s_ease-out] sm:text-[15px]"
           >
-            {msgs[loadingIdx] || msgs[0]}
+            {currentText}
           </p>
-
-          {/* Thin progress bar */}
-          <div className="w-full">
-            <div className="h-1 w-full overflow-hidden rounded-full bg-gray-100">
-              <div
-                className="h-full rounded-full bg-[#0C4B75] transition-all duration-300 ease-out"
-                style={{ width: `${loadingPct}%` }}
-              />
-            </div>
-          </div>
         </div>
       </div></>
     );
