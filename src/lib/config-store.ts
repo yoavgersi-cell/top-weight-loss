@@ -833,7 +833,7 @@ function buildInitialConfig(): SiteConfig {
       welcomeSubtitle: "Answer 4 quick questions and we'll match you with the provider that best fits your goals.",
       welcomeTrustPoints: ["Takes less than 1 minute", "Personalized provider recommendations", "Completely free"],
       welcomeCta: "Find My Match",
-      midFlowMessage: "Good so far — just a couple more questions.",
+      midFlowMessage: "Great! Just two more questions.",
       pageTitle: "Find Your Best Weight Loss Provider",
       pageSubtitle: "Answer 4 quick questions and we'll match you with the provider that best fits your goals.",
       resultsTitle: "Your Best Match",
@@ -878,14 +878,14 @@ function buildInitialConfig(): SiteConfig {
         },
         {
           id: "priority",
-          title: "What matters most to you in a provider?",
+          title: "What's most important to you?",
           subtitle: "Pick the one that feels most important right now.",
           type: "cards" as const,
           options: [
-            { label: "Lower monthly cost", value: "cost" },
-            { label: "Licensed medical support", value: "medical" },
-            { label: "Convenient online care", value: "online" },
-            { label: "Personalized treatment plan", value: "personalized" },
+            { label: "Lowest monthly cost", value: "cost" },
+            { label: "Doctor-guided care", value: "medical" },
+            { label: "Fast online treatment", value: "online" },
+            { label: "Personalized care", value: "personalized" },
           ],
         },
         {
