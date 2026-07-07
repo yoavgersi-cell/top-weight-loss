@@ -850,7 +850,7 @@ function buildInitialConfig(): SiteConfig {
           "Preparing your recommendation",
         ],
         providerLogos: ["altrx", "noom", "ro", "trimrx", "shed"],
-        durationMs: 3500,
+        durationMs: 5000,
       },
       questions: [
         {

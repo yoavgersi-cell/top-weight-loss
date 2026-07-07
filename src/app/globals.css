@@ -35,8 +35,8 @@ body {
 }
 
 @keyframes logoFade {
-  0% { opacity: 0; transform: scale(0.96); }
-  20% { opacity: 1; transform: scale(1); }
-  80% { opacity: 1; transform: scale(1); }
-  100% { opacity: 0; transform: scale(0.96); }
+  0% { opacity: 0; }
+  30% { opacity: 0.45; }
+  70% { opacity: 0.45; }
+  100% { opacity: 0; }
 }

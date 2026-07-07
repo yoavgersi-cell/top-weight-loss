@@ -165,7 +165,7 @@ export default function ChatQuizPage() {
     const ls = quiz?.loadingScreen;
     const logoIds = ls?.providerLogos ?? [];
     const texts = ls?.supportingTexts ?? quiz?.loadingMessages ?? [];
-    const totalMs = ls?.durationMs ?? 3500;
+    const totalMs = ls?.durationMs ?? 5000;
     const logoCount = logoIds.length || 1;
     const perLogo = totalMs / logoCount;
     const perText = totalMs / (texts.length || 1);
@@ -261,7 +261,7 @@ export default function ChatQuizPage() {
                 key={loadingIdx}
                 src={currentProvider.logo}
                 alt={currentProvider.name}
-                className="max-h-[48px] max-w-[160px] object-contain grayscale opacity-0 animate-[logoFade_0.7s_ease-in-out_forwards]"
+                className="max-h-[36px] max-w-[130px] object-contain grayscale brightness-[1.3] opacity-0 animate-[logoFade_1s_ease-in-out_forwards]"
               />
             )}
           </div>
