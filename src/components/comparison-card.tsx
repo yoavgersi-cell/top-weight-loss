@@ -65,8 +65,8 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
           >
             Read Review
           </a>
-          <p className="mt-3 text-[12px] font-semibold text-[#1A1A1A]">{product.tagline}</p>
-          <ul className="mt-1.5 space-y-1">
+          <p className="mt-2 text-[12px] font-semibold text-[#1A1A1A]">{product.tagline}</p>
+          <ul className="mt-1 space-y-0.5">
             {product.highlights.slice(0, 3).map((highlight) => (
               <li key={highlight} className="flex items-center gap-2 text-[12px] leading-[1.35] text-gray-800">
                 <Check className="h-3.5 w-3.5 shrink-0 text-[#0B5E9E]" strokeWidth={2} />
@@ -115,10 +115,10 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
         </div>
 
         {/* Tagline */}
-        <p className="mt-4 text-[14px] font-semibold text-[#1A1A1A]">{product.tagline}</p>
+        <p className="mt-3 text-[14px] font-semibold text-[#1A1A1A]">{product.tagline}</p>
 
         {/* Bullets */}
-        <ul className="mt-3 space-y-2">
+        <ul className="mt-1.5 space-y-1">
           {product.highlights.slice(0, 3).map((highlight) => (
             <li key={highlight} className="flex items-start gap-2 text-[14px] leading-[1.4] text-gray-800">
               <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#0B5E9E]" strokeWidth={2} />
