@@ -164,7 +164,7 @@ export default function ChatQuizPage() {
     const ls = quiz?.loadingScreen;
     const logoIds = ls?.providerLogos ?? [];
     const logoCount = logoIds.length || 1;
-    const perStep = 1100;
+    const perStep = 800;
     let step = 0;
 
     const interval = setInterval(() => {
@@ -250,7 +250,7 @@ export default function ChatQuizPage() {
                 key={loadingIdx}
                 src={currentProvider.logo}
                 alt={currentProvider.name}
-                className="max-h-[36px] max-w-[130px] object-contain grayscale brightness-[1.3] opacity-0 animate-[logoFade_1s_ease-in-out_forwards]"
+                className="max-h-[36px] max-w-[130px] object-contain grayscale brightness-[1.3] opacity-0 animate-[logoFade_0.75s_ease-in-out_forwards]"
               />
             )}
           </div>

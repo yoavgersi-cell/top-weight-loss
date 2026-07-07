@@ -850,7 +850,7 @@ function buildInitialConfig(): SiteConfig {
           "Checking provider quality...",
           "Finalizing your recommendation...",
         ],
-        providerLogos: ["altrx", "noom", "ro", "trimrx"],
+        providerLogos: ["altrx", "noom", "ro", "trimrx", "shed", "embody", "wellmedr", "sunlight"],
         durationMs: 4400,
       },
       questions: [
