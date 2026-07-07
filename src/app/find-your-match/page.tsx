@@ -474,7 +474,7 @@ export default function FindYourMatchPage() {
         </div>
 
         {/* Persistent card */}
-        <div className="rounded-2xl border-0 bg-white px-5 py-5 shadow-[0_4px_20px_rgba(0,0,0,0.06)] sm:px-10 sm:py-8">
+        <div className="rounded-2xl border-0 bg-white px-5 py-5 shadow-[0_6px_24px_rgba(0,0,0,0.08)] sm:px-10 sm:py-8">
           {/* Content with transition */}
           <div className={`transition-all duration-[280ms] ease-out ${
             transitioning
@@ -501,22 +501,22 @@ export default function FindYourMatchPage() {
                     <button
                       key={opt.value}
                       onClick={() => handleSelect(opt.value)}
-                      className={`flex w-full items-center rounded-xl border px-4 py-2.5 text-left text-[16px] font-semibold transition-all duration-200 sm:px-5 sm:py-3 sm:text-[17px] active:scale-[0.99] ${
+                      className={`flex w-full items-center rounded-xl border-[1.5px] px-4 py-2.5 text-left text-[16px] font-medium transition-all duration-200 sm:px-5 sm:py-3 sm:text-[17px] active:scale-[0.99] ${
                         isSelected
-                          ? "border-[#0C4B75] bg-[#0C4B75]/5 text-[#191919] shadow-sm"
-                          : "border-gray-200 bg-[#fafbfc] text-gray-700 hover:border-gray-300 hover:bg-white hover:shadow-sm"
+                          ? "border-[#0C4B75] bg-[#0C4B75]/[0.04] text-[#191919] shadow-sm"
+                          : "border-gray-200 bg-[#fafbfc] text-gray-700"
                       }`}
                     >
                       <span
                         className={`mr-3 flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-full border-[1.5px] transition-all duration-200 ${
                           isSelected
-                            ? "border-[#0C4B75] bg-[#0C4B75] scale-110"
+                            ? "border-[#0C4B75] bg-[#0C4B75]"
                             : "border-gray-300"
                         }`}
                       >
                         {isSelected && <span className="h-[6px] w-[6px] rounded-full bg-white" />}
                       </span>
-                      {opt.label}
+                      <span dangerouslySetInnerHTML={{ __html: opt.label }} />
                     </button>
                   );
                 })}

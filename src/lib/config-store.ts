@@ -848,10 +848,10 @@ function buildInitialConfig(): SiteConfig {
           subtitle: "This helps us recommend providers that best match your goals.",
           type: "cards" as const,
           options: [
-            { label: "Lose up to 20 lbs", value: "light" },
-            { label: "Lose 20–50 lbs", value: "moderate" },
-            { label: "Lose more than 50 lbs", value: "significant" },
-            { label: "Just exploring my options", value: "exploring" },
+            { label: "Lose up to <strong>20 lbs</strong>", value: "light" },
+            { label: "Lose <strong>20–50 lbs</strong>", value: "moderate" },
+            { label: "Lose <strong>50+ lbs</strong>", value: "significant" },
+            { label: "<strong>I'm not sure yet</strong>", value: "exploring" },
           ],
         },
         {
