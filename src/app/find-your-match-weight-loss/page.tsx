@@ -239,43 +239,31 @@ export default function ChatQuizPage() {
 
     return (
       <><HideChrome /><div className="flex min-h-[60vh] flex-col items-center justify-center px-6 bg-white">
-        <div className="flex flex-col items-center w-full max-w-[300px]">
-          <h2 className="mb-6 text-[18px] font-bold text-[#191919] sm:text-[22px]">
+        <div className="flex flex-col items-center">
+          <h2 className="mb-10 text-[20px] font-bold text-[#191919] sm:text-[24px]">
             {ls?.headline ?? "Finding your best match"}
           </h2>
 
-          <div className="mb-5 w-full rounded-xl border border-gray-100 bg-[#fafbfc] px-6 py-5 flex flex-col items-center">
-            <span className="mb-3 text-[11px] font-semibold uppercase tracking-wider text-gray-400">
-              Checking provider
-            </span>
-            <div className="relative flex h-[40px] w-[140px] items-center justify-center">
-              {currentProvider && (
-                <img
-                  key={loadingIdx}
-                  src={currentProvider.logo}
-                  alt={currentProvider.name}
-                  className="max-h-[36px] max-w-[130px] object-contain grayscale brightness-[1.3] opacity-0 animate-[logoFade_1s_ease-in-out_forwards]"
-                />
-              )}
-            </div>
+          <div className="relative mb-10 flex h-[44px] w-[160px] items-center justify-center">
+            {currentProvider && (
+              <img
+                key={loadingIdx}
+                src={currentProvider.logo}
+                alt={currentProvider.name}
+                className="max-h-[36px] max-w-[130px] object-contain grayscale brightness-[1.3] opacity-0 animate-[logoFade_1s_ease-in-out_forwards]"
+              />
+            )}
           </div>
 
+          <p className="mb-2 text-[14px] font-medium text-gray-500 sm:text-[15px]">
+            Comparing top weight loss providers...
+          </p>
           <p
             key={`text-${loadingIdx}`}
-            className="mb-5 text-[13px] font-medium text-gray-400 animate-[fadeIn_0.3s_ease-out] sm:text-[14px]"
+            className="text-[13px] text-gray-400 animate-[fadeIn_0.3s_ease-out] sm:text-[14px]"
           >
             {currentText}
           </p>
-
-          <div className="flex items-center gap-1.5 text-[11px] font-medium text-gray-300 sm:text-[12px]">
-            {["Goals", "Preferences", "Availability"].map((label, i) => (
-              <span key={label} className="flex items-center gap-1.5">
-                {i > 0 && <span className="text-gray-200">&middot;</span>}
-                <svg className={`h-3 w-3 ${loadingIdx >= i ? "text-[#0C4B75]" : "text-gray-200"} transition-colors duration-300`} viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
-                <span className={loadingIdx >= i ? "text-gray-500" : ""}>{label}</span>
-              </span>
-            ))}
-          </div>
         </div>
       </div></>
     );
