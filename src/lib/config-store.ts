@@ -844,13 +844,13 @@ function buildInitialConfig(): SiteConfig {
       loadingScreen: {
         headline: "Finding your best match",
         supportingTexts: [
-          "Comparing trusted providers",
+          "Comparing pricing",
           "Checking availability",
-          "Matching based on your answers",
+          "Matching your answers",
           "Preparing your recommendation",
         ],
-        providerLogos: ["altrx", "noom", "ro", "trimrx", "shed"],
-        durationMs: 5000,
+        providerLogos: ["altrx", "noom", "ro", "trimrx"],
+        durationMs: 4400,
       },
       questions: [
         {

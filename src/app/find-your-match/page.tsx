@@ -146,33 +146,22 @@ export default function FindYourMatchPage() {
   function startLoading() {
     setPhase("loading");
     setLoadingIdx(0);
-    setLoadingPct(0);
 
     const ls = quiz?.loadingScreen;
     const logoIds = ls?.providerLogos ?? [];
-    const texts = ls?.supportingTexts ?? quiz?.loadingMessages ?? [];
-    const totalMs = ls?.durationMs ?? 5000;
     const logoCount = logoIds.length || 1;
-    const perLogo = totalMs / logoCount;
-    const perText = totalMs / (texts.length || 1);
-    let logoI = 0;
-    let textI = 0;
+    const perStep = 1100; // 1.1s per logo
+    let step = 0;
 
-    const logoInterval = setInterval(() => {
-      logoI++;
-      if (logoI < logoCount) {
-        setLoadingIdx(logoI);
+    const interval = setInterval(() => {
+      step++;
+      if (step < logoCount) {
+        setLoadingIdx(step);
       } else {
-        clearInterval(logoInterval);
-        clearInterval(textInterval);
-        setTimeout(() => calculateResults(), 300);
+        clearInterval(interval);
+        setTimeout(() => calculateResults(), 400);
       }
-    }, perLogo);
-
-    const textInterval = setInterval(() => {
-      textI++;
-      if (textI < texts.length) setLoadingPct(textI);
-    }, perText);
+    }, perStep);
   }
 
   function calculateResults() {
@@ -348,18 +337,16 @@ export default function FindYourMatchPage() {
     const texts = ls?.supportingTexts ?? quiz.loadingMessages;
     const currentLogoId = logoIds[loadingIdx % logoIds.length];
     const currentProvider = config.providers.find((p) => p.id === currentLogoId);
-    const currentText = texts[loadingPct % texts.length] ?? texts[0];
+    const currentText = texts[loadingIdx % texts.length] ?? texts[0];
 
     return (
       <><HideChrome /><div className={`flex min-h-[60vh] flex-col items-center justify-center px-6 bg-white transition-all duration-[280ms] ease-out ${phaseTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}>
         <div className="flex flex-col items-center">
-          {/* Headline */}
-          <h2 className="mb-8 text-[20px] font-bold text-[#191919] sm:text-[24px]">
+          <h2 className="mb-5 text-[18px] font-bold text-[#191919] sm:text-[22px]">
             {ls?.headline ?? "Finding your best match"}
           </h2>
 
-          {/* Provider logo — grayscale, fading */}
-          <div className="relative mb-8 flex h-[56px] w-[180px] items-center justify-center">
+          <div className="relative mb-4 flex h-[44px] w-[160px] items-center justify-center">
             {currentProvider && (
               <img
                 key={loadingIdx}
@@ -370,10 +357,9 @@ export default function FindYourMatchPage() {
             )}
           </div>
 
-          {/* Supporting text */}
           <p
-            key={`text-${loadingPct}`}
-            className="text-[14px] font-medium text-gray-400 animate-[fadeIn_0.3s_ease-out] sm:text-[15px]"
+            key={`text-${loadingIdx}`}
+            className="text-[13px] font-medium text-gray-400 animate-[fadeIn_0.3s_ease-out] sm:text-[14px]"
           >
             {currentText}
           </p>
