@@ -367,12 +367,12 @@ export default function ChatQuizPage() {
 
             {/* Option pills */}
             {activeOptions && activeOptions.type === "cards" && (
-              <div className="flex flex-wrap gap-2.5 animate-[fadeSlideUp_0.3s_ease-out]">
+              <div className="flex flex-wrap gap-2 animate-[fadeSlideUp_0.3s_ease-out]">
                 {activeOptions.options.map((opt) => (
                   <button
                     key={opt.value}
                     onClick={() => handleSelect(opt.value, opt.label)}
-                    className="rounded-full border-[1.5px] border-[#D1D5DB] bg-white px-6 py-3 text-[15px] font-medium text-[#191919] transition-all hover:border-[#0C4B75] hover:bg-[#0C4B75]/[0.04] active:scale-[0.97] sm:text-[16px]"
+                    className="rounded-full border-[1.5px] border-[#D1D5DB] bg-white px-4 py-2.5 text-[14px] font-medium text-[#191919] transition-all hover:border-[#0C4B75] hover:bg-[#0C4B75]/[0.04] active:scale-[0.97] sm:px-6 sm:py-3 sm:text-[16px]"
                     dangerouslySetInnerHTML={{ __html: opt.label }}
                   />
                 ))}
