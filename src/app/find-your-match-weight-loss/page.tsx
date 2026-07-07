@@ -132,7 +132,7 @@ export default function ChatQuizPage() {
     const qId = activeOptions.questionId;
     setActiveOptions(null);
     // User bubble
-    setMessages((prev) => [...prev, { id: `u-${Date.now()}`, from: "user", text: label }]);
+    setMessages((prev) => [...prev, { id: `u-${Date.now()}`, from: "user", text: label.replace(/<[^>]*>/g, "") }]);
     setAnswers((prev) => ({ ...prev, [qId]: value }));
 
     const nextStep = currentStep + 1;
