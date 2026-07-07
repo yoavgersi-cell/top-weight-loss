@@ -365,7 +365,7 @@ export default function FindYourMatchPage() {
                 key={loadingIdx}
                 src={currentProvider.logo}
                 alt={currentProvider.name}
-                className="max-h-[48px] max-w-[160px] object-contain grayscale opacity-0 animate-[logoFade_0.9s_ease-in-out_forwards]"
+                className="max-h-[48px] max-w-[160px] object-contain grayscale opacity-0 animate-[logoFade_0.7s_ease-in-out_forwards]"
               />
             )}
           </div>
