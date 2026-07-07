@@ -555,7 +555,7 @@ function buildInitialConfig(): SiteConfig {
       ctaText: p.ctaText,
     })),
     ranking: {
-      providerOrder: ["altrx", "noom", "ro", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+      providerOrder: ["altrx", "noom", "ro", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm", "synergyrx"],
       positions: [
         { score: 9.8, starRating: 5, label: "Exceptional", badge: "Our Most Popular" },
         { score: 9.6, starRating: 5, label: "Excellent" },
@@ -568,6 +568,7 @@ function buildInitialConfig(): SiteConfig {
         { score: 8.5, starRating: 4, label: "Very Good" },
         { score: 8.4, starRating: 4, label: "Very Good" },
         { score: 8.2, starRating: 4, label: "Very Good" },
+        { score: 8.0, starRating: 4, label: "Very Good" },
       ],
     },
     faqs: faqsJson,

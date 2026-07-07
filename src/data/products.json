@@ -278,5 +278,25 @@
     "affiliateUrl": "https://tryyucca.com/",
     "ctaText": "View Plan",
     "description": ""
+  },
+  {
+    "id": "synergyrx",
+    "rank": 15,
+    "name": "SynergyRX",
+    "slug": "synergyrx",
+    "tagline": "Personalized GLP-1 Care Made Simple",
+    "logo": "/logos/synergyrx.svg",
+    "rating": 9.0,
+    "ratingLabel": "Excellent",
+    "reviewCount": 3200,
+    "highlights": [
+      "Compounded semaglutide from $199/month",
+      "Available in all 50 states with home delivery",
+      "Licensed physicians with ongoing check-ins"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://www.synergyrx.co/",
+    "ctaText": "View Plan",
+    "description": ""
   }
 ]
