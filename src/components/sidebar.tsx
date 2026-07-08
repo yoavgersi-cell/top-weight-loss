@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Shield, Users, Award, Info, Stethoscope, ClipboardList, MessageCircle, ArrowRight } from "lucide-react";
+import { Shield, Users, Award, Info } from "lucide-react";
 import type { SidebarConfig, Provider } from "@/lib/config";
 
 function SidebarCard({ children, className }: { children: React.ReactNode; className?: string }) {
@@ -48,69 +48,15 @@ export function Sidebar({ config, providers }: { config: SidebarConfig; provider
           </div>
         </SidebarCard>
 
-        {/* Card 3: Featured Provider */}
-        {(() => {
-          const featuredProvider = topProviders[0];
-          if (!featuredProvider) return null;
-          return (
-            <div className="overflow-hidden rounded-xl border border-[#EAEAEA] bg-white">
-              {/* Image — cropped to show only the photo */}
-              <div className="relative h-[280px] overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={config.featuredImageUrl}
-                  alt={config.featuredImageAlt}
-                  className="w-full h-auto object-cover object-top"
-                />
-                <div className="absolute top-4 right-4 flex items-center gap-1.5 rounded-lg bg-[#1a3a2a] px-3 py-1.5 text-[11px] font-bold text-white uppercase tracking-wide">
-                  <Award className="h-3.5 w-3.5" strokeWidth={2} />
-                  Editor&apos;s Featured Provider
-                </div>
-              </div>
-
-              {/* Dynamic provider info */}
-              <div className="px-5 py-5">
-                <div className="mb-1 flex h-[36px] w-[100px] items-center">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={featuredProvider.logo} alt={featuredProvider.name} className="max-h-full max-w-full object-contain" />
-                </div>
-                <div className="my-2 h-[2px] w-8 rounded bg-[#09553D]" />
-                <p className="text-[14px] leading-snug text-gray-500">
-                  Physician-guided GLP-1 weight loss treatment.
-                </p>
-
-                <div className="mt-4 flex items-center justify-between border-t border-gray-100 pt-4">
-                  <div className="flex flex-col items-center gap-1">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-50">
-                      <Stethoscope className="h-4 w-4 text-gray-500" strokeWidth={1.5} />
-                    </div>
-                    <span className="text-[10px] font-medium text-gray-500 text-center leading-tight">Licensed<br/>Providers</span>
-                  </div>
-                  <div className="flex flex-col items-center gap-1">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-50">
-                      <ClipboardList className="h-4 w-4 text-gray-500" strokeWidth={1.5} />
-                    </div>
-                    <span className="text-[10px] font-medium text-gray-500 text-center leading-tight">Personalized<br/>Plans</span>
-                  </div>
-                  <div className="flex flex-col items-center gap-1">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-50">
-                      <MessageCircle className="h-4 w-4 text-gray-500" strokeWidth={1.5} />
-                    </div>
-                    <span className="text-[10px] font-medium text-gray-500 text-center leading-tight">Ongoing<br/>Support</span>
-                  </div>
-                </div>
-
-                <a
-                  href={featuredProvider.affiliateUrl}
-                  className="mt-4 flex h-[44px] w-full items-center justify-center gap-2 rounded-lg bg-[#1a3a2a] text-[14px] font-bold text-white uppercase tracking-wide transition-colors hover:bg-[#153123]"
-                >
-                  Learn More
-                  <ArrowRight className="h-4 w-4" strokeWidth={2} />
-                </a>
-              </div>
-            </div>
-          );
-        })()}
+        {/* Card 3: Featured Provider Image */}
+        <a href={config.featuredImageLink} className="block overflow-hidden rounded-xl border border-[#EAEAEA]">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={config.featuredImageUrl}
+            alt={config.featuredImageAlt}
+            className="w-full h-auto"
+          />
+        </a>
 
         {/* Card 4: Editorial Reviews */}
         <SidebarCard className="!bg-[#fafafa]">
