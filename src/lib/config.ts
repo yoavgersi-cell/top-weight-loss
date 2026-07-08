@@ -4,6 +4,7 @@ export interface Provider {
   tagline: string;
   logo: string;
   smallLogo: string;
+  sidebarImage?: string;
   highlights: string[];
   affiliateUrl: string;
   ctaText: string;

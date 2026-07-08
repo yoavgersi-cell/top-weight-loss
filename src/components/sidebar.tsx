@@ -48,15 +48,22 @@ export function Sidebar({ config, providers }: { config: SidebarConfig; provider
           </div>
         </SidebarCard>
 
-        {/* Card 3: Featured Provider Image */}
-        <a href={config.featuredImageLink} className="block overflow-hidden rounded-xl border border-[#EAEAEA]">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={config.featuredImageUrl}
-            alt={config.featuredImageAlt}
-            className="w-full h-auto"
-          />
-        </a>
+        {/* Card 3: Featured Provider Image — uses #1 provider's sidebarImage */}
+        {(() => {
+          const featured = topProviders[0];
+          const imgSrc = featured?.sidebarImage || config.featuredImageUrl;
+          const href = featured?.affiliateUrl || config.featuredImageLink;
+          return (
+            <a href={href} className="block overflow-hidden rounded-xl border border-[#EAEAEA]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={imgSrc}
+                alt={featured ? `${featured.name} — Editor's Featured Provider` : config.featuredImageAlt}
+                className="w-full h-auto"
+              />
+            </a>
+          );
+        })()}
 
         {/* Card 4: Editorial Reviews */}
         <SidebarCard className="!bg-[#fafafa]">
