@@ -1682,9 +1682,9 @@ export default function AdminPage() {
                         profiles[ppi] = { ...profiles[ppi], priceLevel: v as "low" | "mid" | "high" };
                         setConfig({ ...config, quiz: { ...config.quiz, providerProfiles: profiles } });
                       }} />
-                      <Field label="Strengths (comma)" value={pp.strengths.join(", ")} onChange={(v) => {
+                      <Field label="Strengths (comma)" value={(pp.strengths ?? []).join(", ")} onChange={(v) => {
                         const profiles = [...config.quiz.providerProfiles];
-                        profiles[ppi] = { ...profiles[ppi], strengths: v.split(",").map((s) => s.trim()) };
+                        profiles[ppi] = { ...profiles[ppi], strengths: v.split(",").map((s) => s.trim()).filter(Boolean) };
                         setConfig({ ...config, quiz: { ...config.quiz, providerProfiles: profiles } });
                       }} />
                     </div>
