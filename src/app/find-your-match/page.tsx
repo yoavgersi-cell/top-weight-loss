@@ -284,7 +284,7 @@ export default function FindYourMatchPage() {
                 .filter(Boolean) as Provider[])
                 .slice(0, 8)
                 .map((p) => (
-                  <div key={p.id} className="hidden h-[22px] w-[64px] items-center justify-center first:flex [&:nth-child(-n+5)]:flex sm:h-[36px] sm:w-[120px] sm:[&:nth-child(-n+8)]:flex">
+                  <div key={p.id} className="hidden h-[22px] w-[64px] items-center justify-center first:flex [&:nth-child(-n+5)]:flex sm:h-[44px] sm:w-[140px] sm:[&:nth-child(-n+8)]:flex">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={p.logo}
