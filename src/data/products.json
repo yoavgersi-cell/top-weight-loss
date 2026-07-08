@@ -298,5 +298,25 @@
     "affiliateUrl": "https://www.synergyrx.co/",
     "ctaText": "View Plan",
     "description": ""
+  },
+  {
+    "id": "bodybuildinghealth",
+    "rank": 16,
+    "name": "Bodybuilding Health",
+    "slug": "bodybuildinghealth",
+    "tagline": "$100 Off Limited-Time Offer",
+    "logo": "/logos/bodybuildinghealth.svg",
+    "rating": 8.0,
+    "ratingLabel": "Good",
+    "reviewCount": 1200,
+    "highlights": [
+      "Provider-Guided Weight Loss",
+      "Choose GLP-1 or GIP + GLP-1",
+      "No Commitment Until Approved"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "#",
+    "ctaText": "View Plan",
+    "description": ""
   }
 ]
