@@ -296,6 +296,7 @@ export default function AdminPage() {
                     <Field label="Tagline / Headline" value={provider.tagline} onChange={(v) => updateProvider(index, "tagline", v)} />
                     <ImageField label="Logo" value={provider.logo} onChange={(v) => updateProvider(index, "logo", v)} />
                     <ImageField label="Small Logo (icon)" value={provider.smallLogo || ""} onChange={(v) => updateProvider(index, "smallLogo", v)} />
+                    <ImageField label="Sidebar Image (shown when #1)" value={provider.sidebarImage || ""} onChange={(v) => updateProvider(index, "sidebarImage", v)} />
                     <Field label="Affiliate URL" value={provider.affiliateUrl} onChange={(v) => updateProvider(index, "affiliateUrl", v)} />
                     <Field label="CTA Text" value={provider.ctaText} onChange={(v) => updateProvider(index, "ctaText", v)} />
                     <div className="sm:col-span-2">
