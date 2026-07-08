@@ -318,5 +318,25 @@
     "affiliateUrl": "#",
     "ctaText": "View Plan",
     "description": ""
+  },
+  {
+    "id": "livbody",
+    "rank": 17,
+    "name": "LIV Body",
+    "slug": "livbody",
+    "tagline": "Works With Your Biology",
+    "logo": "/logos/livbody.svg",
+    "rating": 8.0,
+    "ratingLabel": "Good",
+    "reviewCount": 1500,
+    "highlights": [
+      "Clinician-Prescribed Care",
+      "Compounded GLP-1 Treatments",
+      "Science-Backed Weight Loss"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "#",
+    "ctaText": "View Plan",
+    "description": ""
   }
 ]
