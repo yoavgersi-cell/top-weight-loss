@@ -167,48 +167,65 @@ export default function FindYourMatchPage() {
   function calculateResults() {
     if (!config || !quiz) return;
     const userState = answers["state"] || "";
-    const quizOrder = quiz.providerOrder && quiz.providerOrder.length > 0 ? quiz.providerOrder : null;
-    const profiles = (quizOrder
-      ? quiz.providerProfiles.filter((p) => quizOrder.includes(p.providerId))
-      : quiz.providerProfiles
-    ).filter((profile) => {
-      if (!userState) return true;
-      const provider = config.providers.find((p) => p.id === profile.providerId);
-      return !(provider?.excludedStates ?? []).includes(userState);
-    });
     const priority = answers["priority"] || "";
-    const ranking = config.ranking;
+    const quizRatings = [9.8, 9.6, 9.4, 9.2, 9.0, 8.8, 8.6, 8.4, 8.2, 8.0];
+    const quizLabels = ["Exceptional", "Excellent", "Excellent", "Excellent", "Excellent", "Very Good", "Very Good", "Very Good", "Good", "Good"];
 
-    const scored = profiles.map((profile) => {
-      const orderList = quizOrder || ranking.providerOrder;
-      const rankingIndex = orderList.indexOf(profile.providerId);
-      let score = 10 - (rankingIndex >= 0 ? rankingIndex : 5);
-      if (priority === "cost") {
-        score += profile.priceLevel === "low" ? 4 : profile.priceLevel === "mid" ? 2 : 0;
-      }
-      if (profile.strengths.includes(priority)) score += 4;
-      const reasons: string[] = [];
-      if (profile.matchReasons[priority]) reasons.push(profile.matchReasons[priority]);
-      const otherKeys = Object.keys(profile.matchReasons).filter((k) => k !== priority);
-      if (otherKeys.length > 0) reasons.push(profile.matchReasons[otherKeys[0]]);
-      return { providerId: profile.providerId, score, reasons };
-    });
+    // Check for manual override for this priority
+    const overrideOrder = quiz.resultOverrides?.[priority];
 
-    scored.sort((a, b) => b.score - a.score);
+    let scored: { providerId: string; score: number; reasons: string[] }[];
+
+    if (overrideOrder && overrideOrder.length > 0) {
+      // Manual override — use exact order from CMS
+      const filtered = overrideOrder.filter((id) => {
+        if (!userState) return true;
+        const provider = config.providers.find((p) => p.id === id);
+        return !(provider?.excludedStates ?? []).includes(userState);
+      });
+      scored = filtered.map((id, idx) => {
+        const profile = quiz.providerProfiles.find((p) => p.providerId === id);
+        const reasons: string[] = [];
+        if (profile?.matchReasons[priority]) reasons.push(profile.matchReasons[priority]);
+        const otherKeys = Object.keys(profile?.matchReasons ?? {}).filter((k) => k !== priority);
+        if (otherKeys.length > 0 && profile) reasons.push(profile.matchReasons[otherKeys[0]]);
+        return { providerId: id, score: filtered.length - idx, reasons };
+      });
+    } else {
+      // Algorithm-based scoring
+      const quizOrder = quiz.providerOrder && quiz.providerOrder.length > 0 ? quiz.providerOrder : null;
+      const profiles = (quizOrder
+        ? quiz.providerProfiles.filter((p) => quizOrder.includes(p.providerId))
+        : quiz.providerProfiles
+      ).filter((profile) => {
+        if (!userState) return true;
+        const provider = config.providers.find((p) => p.id === profile.providerId);
+        return !(provider?.excludedStates ?? []).includes(userState);
+      });
+      const ranking = config.ranking;
+      scored = profiles.map((profile) => {
+        const orderList = quizOrder || ranking.providerOrder;
+        const rankingIndex = orderList.indexOf(profile.providerId);
+        let score = 10 - (rankingIndex >= 0 ? rankingIndex : 5);
+        if (priority === "cost") {
+          score += profile.priceLevel === "low" ? 4 : profile.priceLevel === "mid" ? 2 : 0;
+        }
+        if ((profile.strengths ?? []).includes(priority)) score += 4;
+        const reasons: string[] = [];
+        if (profile.matchReasons[priority]) reasons.push(profile.matchReasons[priority]);
+        const otherKeys = Object.keys(profile.matchReasons).filter((k) => k !== priority);
+        if (otherKeys.length > 0) reasons.push(profile.matchReasons[otherKeys[0]]);
+        return { providerId: profile.providerId, score, reasons };
+      });
+      scored.sort((a, b) => b.score - a.score);
+    }
+
     const maxScore = Math.max(...scored.map((s) => s.score));
     const results = scored.map((s, idx) => {
       const provider = config.providers.find((p) => p.id === s.providerId);
       if (!provider) return null;
       const matchPct = Math.min(98, Math.max(85, Math.round((s.score / maxScore) * 98)));
-      // Override rank and rating based on quiz position
-      const quizRatings = [9.8, 9.6, 9.4, 9.2, 9.0, 8.8, 8.6, 8.4, 8.2, 8.0];
-      const quizLabels = ["Exceptional", "Excellent", "Excellent", "Excellent", "Excellent", "Very Good", "Very Good", "Very Good", "Good", "Good"];
-      const overrides: { rank: number; rating: number; ratingLabel: string; badge?: string } = {
-        rank: idx + 1,
-        rating: quizRatings[idx] ?? 8.0,
-        ratingLabel: quizLabels[idx] ?? "Good",
-      };
-      return { ...provider, ...overrides, matchPct, reasons: s.reasons };
+      return { ...provider, rank: idx + 1, rating: quizRatings[idx] ?? 8.0, ratingLabel: quizLabels[idx] ?? "Good", matchPct, reasons: s.reasons };
     }).filter(Boolean) as QuizMatchedProvider[];
 
     setMatchedProviders(results);

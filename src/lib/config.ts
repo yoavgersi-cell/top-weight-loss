@@ -99,6 +99,7 @@ export interface QuizConfig {
   resultsOthersTitle: string;
   trustStrip: string[];
   loadingMessages: string[];
+  resultOverrides?: Record<string, string[]>;
   loadingScreen?: {
     headline: string;
     supportingTexts: string[];

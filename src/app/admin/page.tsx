@@ -1701,6 +1701,93 @@ export default function AdminPage() {
                 );
               })}
             </div>
+
+            {/* Quiz Results Override — Visual Tree */}
+            <div className="rounded-xl border bg-white p-6 shadow-sm">
+              <h3 className="mb-1 text-sm font-bold text-gray-500 uppercase tracking-wider">Quiz Results — Per Priority Override</h3>
+              <p className="mb-4 text-xs text-gray-400">Drag providers to set the exact result order for each priority. When set, this overrides the algorithm. Leave empty to use automatic scoring.</p>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                {[
+                  { key: "cost", label: "Lowest Monthly Cost" },
+                  { key: "medical", label: "Doctor-Guided Care" },
+                  { key: "online", label: "Fast Online Treatment" },
+                  { key: "personalized", label: "Personalized Care" },
+                ].map(({ key, label }) => {
+                  const overrides = config.quiz.resultOverrides ?? {};
+                  const order = overrides[key] ?? [];
+                  return (
+                    <div key={key} className="rounded-lg border bg-gray-50 p-3">
+                      <p className="mb-2 text-xs font-bold text-[#0C4B75]">{label}</p>
+                      <div className="space-y-1.5 mb-2">
+                        {order.map((pid, pi) => {
+                          const provider = config.providers.find((p) => p.id === pid);
+                          return (
+                            <div key={pid} className="flex items-center gap-2 rounded border bg-white px-2.5 py-1.5">
+                              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded bg-[#191919] text-[10px] font-bold text-white">{pi + 1}</span>
+                              <span className="flex-1 text-xs font-medium text-[#191919] truncate">{provider?.name ?? pid}</span>
+                              <div className="flex gap-0.5 shrink-0">
+                                <button
+                                  onClick={() => {
+                                    if (pi === 0) return;
+                                    const newOrder = [...order];
+                                    [newOrder[pi], newOrder[pi - 1]] = [newOrder[pi - 1], newOrder[pi]];
+                                    setConfig({ ...config, quiz: { ...config.quiz, resultOverrides: { ...overrides, [key]: newOrder } } });
+                                  }}
+                                  disabled={pi === 0}
+                                  className="flex h-5 w-5 items-center justify-center rounded text-gray-400 hover:bg-gray-100 disabled:opacity-20"
+                                >
+                                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m18 15-6-6-6 6"/></svg>
+                                </button>
+                                <button
+                                  onClick={() => {
+                                    if (pi === order.length - 1) return;
+                                    const newOrder = [...order];
+                                    [newOrder[pi], newOrder[pi + 1]] = [newOrder[pi + 1], newOrder[pi]];
+                                    setConfig({ ...config, quiz: { ...config.quiz, resultOverrides: { ...overrides, [key]: newOrder } } });
+                                  }}
+                                  disabled={pi === order.length - 1}
+                                  className="flex h-5 w-5 items-center justify-center rounded text-gray-400 hover:bg-gray-100 disabled:opacity-20"
+                                >
+                                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m6 9 6 6 6-6"/></svg>
+                                </button>
+                                <button
+                                  onClick={() => {
+                                    const newOrder = order.filter((_, i) => i !== pi);
+                                    setConfig({ ...config, quiz: { ...config.quiz, resultOverrides: { ...overrides, [key]: newOrder } } });
+                                  }}
+                                  className="flex h-5 w-5 items-center justify-center rounded text-red-400 hover:bg-red-50"
+                                >
+                                  <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                                </button>
+                              </div>
+                            </div>
+                          );
+                        })}
+                        {order.length === 0 && (
+                          <p className="py-2 text-center text-[10px] text-gray-400 italic">Using algorithm</p>
+                        )}
+                      </div>
+                      <select
+                        className="w-full rounded border px-2 py-1 text-xs text-gray-500 focus:border-[#0C4B75] focus:outline-none"
+                        value=""
+                        onChange={(e) => {
+                          if (!e.target.value) return;
+                          setConfig({ ...config, quiz: { ...config.quiz, resultOverrides: { ...overrides, [key]: [...order, e.target.value] } } });
+                          e.target.value = "";
+                        }}
+                      >
+                        <option value="">+ Add provider...</option>
+                        {config.providers
+                          .filter((p) => !order.includes(p.id))
+                          .map((p) => (
+                            <option key={p.id} value={p.id}>{p.name}</option>
+                          ))}
+                      </select>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         )}
 
