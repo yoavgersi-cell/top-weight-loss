@@ -1522,8 +1522,8 @@ export default function AdminPage() {
             <div className="rounded-xl border bg-white p-6 shadow-sm">
               <h3 className="mb-4 text-sm font-bold text-gray-500 uppercase tracking-wider">Loading Screen (Provider Scan)</h3>
               <div className="grid gap-4 sm:grid-cols-2">
-                <Field label="Headline" value={config.quiz.loadingScreen?.headline ?? "Finding your best match"} onChange={(v) => setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...config.quiz.loadingScreen!, headline: v } } })} />
-                <Field label="Duration (ms)" value={String(config.quiz.loadingScreen?.durationMs ?? 3500)} onChange={(v) => setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...config.quiz.loadingScreen!, durationMs: parseInt(v) || 3500 } } })} />
+                <Field label="Headline" value={config.quiz.loadingScreen?.headline ?? "Finding your best match"} onChange={(v) => setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...(config.quiz.loadingScreen ?? { headline: "Finding your best match", supportingTexts: [], providerLogos: [], durationMs: 5000 }), headline: v } } })} />
+                <Field label="Duration (ms)" value={String(config.quiz.loadingScreen?.durationMs ?? 3500)} onChange={(v) => setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...(config.quiz.loadingScreen ?? { headline: "Finding your best match", supportingTexts: [], providerLogos: [], durationMs: 5000 }), durationMs: parseInt(v) || 3500 } } })} />
               </div>
               <div className="mt-4">
                 <ArrayField
@@ -1532,10 +1532,10 @@ export default function AdminPage() {
                   onUpdate={(i, v) => {
                     const texts = [...(config.quiz.loadingScreen?.supportingTexts ?? [])];
                     texts[i] = v;
-                    setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...config.quiz.loadingScreen!, supportingTexts: texts } } });
+                    setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...(config.quiz.loadingScreen ?? { headline: "Finding your best match", supportingTexts: [], providerLogos: [], durationMs: 5000 }), supportingTexts: texts } } });
                   }}
-                  onAdd={() => setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...config.quiz.loadingScreen!, supportingTexts: [...(config.quiz.loadingScreen?.supportingTexts ?? []), ""] } } })}
-                  onRemove={(i) => setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...config.quiz.loadingScreen!, supportingTexts: (config.quiz.loadingScreen?.supportingTexts ?? []).filter((_, idx) => idx !== i) } } })}
+                  onAdd={() => setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...(config.quiz.loadingScreen ?? { headline: "Finding your best match", supportingTexts: [], providerLogos: [], durationMs: 5000 }), supportingTexts: [...(config.quiz.loadingScreen?.supportingTexts ?? []), ""] } } })}
+                  onRemove={(i) => setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...(config.quiz.loadingScreen ?? { headline: "Finding your best match", supportingTexts: [], providerLogos: [], durationMs: 5000 }), supportingTexts: (config.quiz.loadingScreen?.supportingTexts ?? []).filter((_, idx) => idx !== i) } } })}
                 />
               </div>
               <div className="mt-4">
@@ -1553,7 +1553,7 @@ export default function AdminPage() {
                               if (pi === 0) return;
                               const logos = [...(config.quiz.loadingScreen?.providerLogos ?? [])];
                               [logos[pi], logos[pi - 1]] = [logos[pi - 1], logos[pi]];
-                              setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...config.quiz.loadingScreen!, providerLogos: logos } } });
+                              setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...(config.quiz.loadingScreen ?? { headline: "Finding your best match", supportingTexts: [], providerLogos: [], durationMs: 5000 }), providerLogos: logos } } });
                             }}
                             disabled={pi === 0}
                             className="flex h-7 w-7 items-center justify-center rounded border text-gray-400 hover:bg-white disabled:opacity-30"
@@ -1565,7 +1565,7 @@ export default function AdminPage() {
                               if (pi === (config.quiz.loadingScreen?.providerLogos ?? []).length - 1) return;
                               const logos = [...(config.quiz.loadingScreen?.providerLogos ?? [])];
                               [logos[pi], logos[pi + 1]] = [logos[pi + 1], logos[pi]];
-                              setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...config.quiz.loadingScreen!, providerLogos: logos } } });
+                              setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...(config.quiz.loadingScreen ?? { headline: "Finding your best match", supportingTexts: [], providerLogos: [], durationMs: 5000 }), providerLogos: logos } } });
                             }}
                             disabled={pi === (config.quiz.loadingScreen?.providerLogos ?? []).length - 1}
                             className="flex h-7 w-7 items-center justify-center rounded border text-gray-400 hover:bg-white disabled:opacity-30"
@@ -1575,7 +1575,7 @@ export default function AdminPage() {
                           <button
                             onClick={() => {
                               const logos = (config.quiz.loadingScreen?.providerLogos ?? []).filter((_, i) => i !== pi);
-                              setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...config.quiz.loadingScreen!, providerLogos: logos } } });
+                              setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...(config.quiz.loadingScreen ?? { headline: "Finding your best match", supportingTexts: [], providerLogos: [], durationMs: 5000 }), providerLogos: logos } } });
                             }}
                             className="flex h-7 w-7 items-center justify-center rounded border border-red-200 text-red-400 hover:bg-red-50"
                           >
@@ -1603,7 +1603,7 @@ export default function AdminPage() {
                     onClick={() => {
                       const select = document.getElementById("add-loading-logo") as HTMLSelectElement;
                       if (!select?.value) return;
-                      setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...config.quiz.loadingScreen!, providerLogos: [...(config.quiz.loadingScreen?.providerLogos ?? []), select.value] } } });
+                      setConfig({ ...config, quiz: { ...config.quiz, loadingScreen: { ...(config.quiz.loadingScreen ?? { headline: "Finding your best match", supportingTexts: [], providerLogos: [], durationMs: 5000 }), providerLogos: [...(config.quiz.loadingScreen?.providerLogos ?? []), select.value] } } });
                       select.value = "";
                     }}
                     className="rounded border border-[#0C4B75] px-3 py-1.5 text-xs font-semibold text-[#0C4B75] hover:bg-[#0C4B75]/5"
