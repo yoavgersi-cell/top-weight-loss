@@ -538,6 +538,122 @@ const defaultReviews: ReviewData[] = [
       "Anyone who values a modern, no-frills telehealth experience"
     ],
     finalVerdict: "Yucca delivers a clean, modern telehealth experience for patients seeking affordable GLP-1 weight loss treatment. While it lacks the coaching depth of some competitors, its streamlined process, transparent pricing, and licensed clinical oversight make it a compelling option for people who want effective treatment without complexity."
+  },
+  {
+    slug: "synergyrx",
+    providerId: "synergyrx",
+    shortSummary: "Medically supervised weight loss platform offering compounded semaglutide and tirzepatide with personalized care in all 50 states.",
+    reviewIntro: "SynergyRX positions itself as a personalized, medically supervised weight loss platform. With licensed physicians overseeing every treatment plan, they offer both compounded and brand-name GLP-1 medications at competitive prices. Their standout feature is availability across all 50 states with a fully online process, from evaluation to home delivery. The platform also offers oral dissolving tablets as an alternative to injections.",
+    keyFeatures: [
+      "Compounded semaglutide starting at $199/month",
+      "Compounded tirzepatide starting at $349/month",
+      "Oral dissolving tablet options available",
+      "Brand-name Wegovy, Ozempic, and Mounjaro available",
+      "Licensed physicians (MD) overseeing all care",
+      "Available in all 50 states"
+    ],
+    pricingSummary: "Compounded semaglutide starts at $199/month and tirzepatide at $349/month. Brand-name options range from $499 to $947/month. A $100 welcome credit is applied at checkout. All plans include medical consultations, ongoing support, and home delivery. FSA/HSA eligible.",
+    treatmentOptions: [
+      "Compounded semaglutide (injectable)",
+      "Compounded tirzepatide (injectable)",
+      "Semaglutide oral dissolving tablets",
+      "Tirzepatide oral dissolving tablets",
+      "Brand-name Wegovy, Ozempic, Mounjaro"
+    ],
+    pros: [
+      "Wide range of medication options including oral tablets",
+      "Competitive pricing on compounded medications",
+      "Available in all 50 states",
+      "$100 welcome credit for new patients",
+      "Monthly check-ins and ongoing medical support",
+      "FSA/HSA eligible"
+    ],
+    cons: [
+      "Brand-name options are significantly more expensive",
+      "Newer platform with less established track record",
+      "No behavioral coaching or nutrition program included"
+    ],
+    bestFor: [
+      "Patients who want both injectable and oral medication options",
+      "Those looking for affordable compounded GLP-1 access",
+      "People in states with limited telehealth provider availability"
+    ],
+    finalVerdict: "SynergyRX offers a solid combination of medication variety, competitive pricing, and nationwide availability. The option to choose between injectable and oral dissolving tablets sets them apart from many competitors. With licensed physician oversight and transparent pricing, SynergyRX is a strong choice for patients seeking flexible, affordable GLP-1 treatment."
+  },
+  {
+    slug: "bodybuildinghealth",
+    providerId: "bodybuildinghealth",
+    shortSummary: "Provider-guided weight loss program offering both GLP-1 and dual-agonist GIP+GLP-1 treatments with no commitment until approved.",
+    reviewIntro: "Bodybuilding Health brings a provider-guided approach to medical weight loss, offering patients the choice between GLP-1 and the newer dual-agonist GIP+GLP-1 medications. Their no-commitment-until-approved model removes the financial risk from the evaluation process, and their current $100 off promotion makes the entry point more accessible. The platform is designed for people who want clinician oversight without the hassle of in-person visits.",
+    keyFeatures: [
+      "$100 off for new patients (limited-time offer)",
+      "Choice between GLP-1 and GIP+GLP-1 treatments",
+      "No commitment or payment until medically approved",
+      "Provider-guided treatment plans",
+      "Home delivery of medications"
+    ],
+    pricingSummary: "Plans are competitively priced with a current $100 discount for new patients. No payment is required until a provider reviews your case and approves treatment. Medication, consultations, and delivery are included in monthly pricing.",
+    treatmentOptions: [
+      "GLP-1 receptor agonists (semaglutide-based)",
+      "Dual-agonist GIP+GLP-1 (tirzepatide-based)",
+      "Provider-customized treatment protocols"
+    ],
+    pros: [
+      "No financial commitment until approved by a provider",
+      "Access to both GLP-1 and newer GIP+GLP-1 options",
+      "$100 off for new patients",
+      "Provider-guided with ongoing medical oversight",
+      "Simple online process with home delivery"
+    ],
+    cons: [
+      "Less established brand in the telehealth weight loss space",
+      "Limited public information on pricing tiers",
+      "No coaching or behavioral support component"
+    ],
+    bestFor: [
+      "People who want to explore eligibility without financial risk",
+      "Those interested in dual-agonist (GIP+GLP-1) treatment",
+      "Patients who value provider-guided care over self-service platforms"
+    ],
+    finalVerdict: "Bodybuilding Health offers a risk-free entry point to medical weight loss with its no-commitment-until-approved model. The ability to choose between GLP-1 and the more advanced GIP+GLP-1 treatments gives patients flexibility, and the current $100 discount makes it an attractive option for those ready to start. It's a good fit for people who want medical guidance and don't want to pay before knowing they qualify."
+  },
+  {
+    slug: "livbody",
+    providerId: "livbody",
+    shortSummary: "Science-backed weight loss platform offering clinician-prescribed compounded GLP-1 treatments designed to work with your biology.",
+    reviewIntro: "LIV Body takes a biology-first approach to weight loss, emphasizing that their treatment plans are designed to work with your body's natural mechanisms rather than against them. Their platform offers clinician-prescribed compounded GLP-1 medications with a focus on sustainable results. The combination of medical oversight and science-backed protocols positions LIV Body as a thoughtful option for patients who want a more personalized treatment experience.",
+    keyFeatures: [
+      "Clinician-prescribed compounded GLP-1 medications",
+      "Treatment plans designed around individual biology",
+      "Science-backed weight loss protocols",
+      "Ongoing medical oversight and support",
+      "Home delivery of all medications"
+    ],
+    pricingSummary: "LIV Body offers competitive monthly plans for compounded GLP-1 medications. Pricing includes clinician consultations, medication, and home delivery. No long-term contracts required.",
+    treatmentOptions: [
+      "Compounded semaglutide",
+      "Compounded tirzepatide",
+      "Personalized dosing protocols",
+      "Biology-based treatment customization"
+    ],
+    pros: [
+      "Personalized approach based on individual biology",
+      "Clinician-prescribed with ongoing medical oversight",
+      "Compounded GLP-1 options at competitive pricing",
+      "Science-backed treatment protocols",
+      "No long-term commitment required"
+    ],
+    cons: [
+      "Newer entrant with limited user reviews",
+      "No brand-name medication options listed",
+      "No behavioral coaching or nutrition guidance included"
+    ],
+    bestFor: [
+      "People who want a personalized, biology-based approach",
+      "Those seeking clinician-guided compounded GLP-1 treatment",
+      "Patients who value science-backed protocols over generic programs"
+    ],
+    finalVerdict: "LIV Body stands out with its biology-first philosophy and clinician-prescribed treatment plans. While it's a newer platform, its focus on personalization and science-backed protocols makes it appealing for patients who want more than a one-size-fits-all approach. If you value medical oversight and a treatment plan tailored to how your body works, LIV Body is worth considering."
   }
 ];
 
