@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useMemo } from "react";
 import { Check, Search } from "lucide-react";
-import { trackOnce } from "@/lib/analytics";
+import { trackOnce, trackEvent } from "@/lib/analytics";
 import { ComparisonCard } from "@/components/comparison-card";
 import type { SiteConfig, Provider, QuizConfig } from "@/lib/config";
 
@@ -134,6 +134,7 @@ export default function ChatQuizPage() {
     // User bubble
     setMessages((prev) => [...prev, { id: `u-${Date.now()}`, from: "user", text: label.replace(/<[^>]*>/g, "") }]);
     setAnswers((prev) => ({ ...prev, [qId]: value }));
+    trackEvent("QuizStep", { step_name: qId, step_number: currentStep + 1, answer: value });
 
     const nextStep = currentStep + 1;
 

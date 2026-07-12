@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo } from "react";
 import { Check, Clock, Shield, Lock, ShieldCheck, Timer, Search, MapPin, ArrowRight } from "lucide-react";
-import { trackOnce } from "@/lib/analytics";
+import { trackOnce, trackEvent } from "@/lib/analytics";
 
 // Simplify footer on quiz pages — hide disclosure & nav, keep copyright
 function HideChrome() {
@@ -70,6 +70,7 @@ export default function FindYourMatchPage() {
   function handleSelect(value: string) {
     if (!currentQ) return;
     setAnswers((prev) => ({ ...prev, [currentQ.id]: value }));
+    trackEvent("QuizStep", { step_name: currentQ.id, step_number: step + 1, answer: value });
 
     // Auto-advance for card-type questions
     if (currentQ.type === "cards") {

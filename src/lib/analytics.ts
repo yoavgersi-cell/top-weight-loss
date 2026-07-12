@@ -1,5 +1,5 @@
 /**
- * Meta Pixel analytics helper.
+ * Analytics helper — fires events to both Meta Pixel and GA4.
  *
  * Usage:
  *   import { trackEvent, trackOnce } from "@/lib/analytics";
@@ -7,28 +7,27 @@
  *   trackOnce("StartMatch");  // fires only once per session
  */
 
-type MetaPixelEvent =
+type AnalyticsEvent =
   | "PageView"
   | "Lead"
   | "StartMatch"
   | "CompleteMatch"
   | "ProviderClick"
-  | "ViewContent";
+  | "ViewContent"
+  | "QuizStep";
 
 declare global {
   interface Window {
     fbq?: (...args: unknown[]) => void;
+    gtag?: (...args: unknown[]) => void;
   }
 }
 
-const STANDARD_EVENTS = new Set(["PageView", "Lead", "ViewContent"]);
+const STANDARD_FB_EVENTS = new Set(["PageView", "Lead", "ViewContent"]);
 
-export function trackEvent(
-  event: MetaPixelEvent,
-  params?: Record<string, string | number | boolean>
-) {
+function fireFB(event: string, params?: Record<string, string | number | boolean>) {
   if (typeof window === "undefined" || !window.fbq) return;
-  const method = STANDARD_EVENTS.has(event) ? "track" : "trackCustom";
+  const method = STANDARD_FB_EVENTS.has(event) ? "track" : "trackCustom";
   if (params) {
     window.fbq(method, event, params);
   } else {
@@ -36,10 +35,19 @@ export function trackEvent(
   }
 }
 
-/**
- * Fire an event only once per browser session.
- * Prevents duplicates on refresh or re-render.
- */
+function fireGA(event: string, params?: Record<string, string | number | boolean>) {
+  if (typeof window === "undefined" || !window.gtag) return;
+  window.gtag("event", event, params);
+}
+
+export function trackEvent(
+  event: AnalyticsEvent,
+  params?: Record<string, string | number | boolean>
+) {
+  fireFB(event, params);
+  fireGA(event, params);
+}
+
 /**
  * Track a provider CTA click. Fire-and-forget — never blocks the redirect.
  */
@@ -56,12 +64,16 @@ export function trackProviderClick(params: {
   });
 }
 
+/**
+ * Fire an event only once per browser session.
+ * Prevents duplicates on refresh or re-render.
+ */
 export function trackOnce(
-  event: MetaPixelEvent,
+  event: AnalyticsEvent,
   params?: Record<string, string | number | boolean>
 ) {
   if (typeof window === "undefined") return;
-  const key = `_fbq_sent_${event}`;
+  const key = `_evt_sent_${event}`;
   if (sessionStorage.getItem(key)) return;
   sessionStorage.setItem(key, "1");
   trackEvent(event, params);

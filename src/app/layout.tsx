@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { DisclosureBar } from "@/components/disclosure-bar";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { MetaPixel } from "@/components/meta-pixel";
+import { GoogleAnalytics } from "@/components/google-analytics";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -111,6 +114,9 @@ export default function RootLayout({
           }}
         />
         <MetaPixel />
+        <GoogleAnalytics />
+        <Analytics />
+        <SpeedInsights />
         <DisclosureBar />
         <Header />
         <main className="flex-1">{children}</main>
