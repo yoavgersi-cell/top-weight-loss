@@ -949,7 +949,7 @@ function buildInitialConfig(): SiteConfig {
       welcomeSubtitle: "Answer 4 quick questions and we'll match you with the provider that best fits your goals.",
       welcomeTrustPoints: ["Takes less than 1 minute", "Personalized provider recommendations", "Completely free"],
       welcomeCta: "Find My Match",
-      midFlowMessage: "Great! Just two more questions.",
+      midFlowMessage: "Great! Almost done — just a few more.",
       pageTitle: "Find Your Best Weight Loss Provider",
       pageSubtitle: "Answer 4 quick questions and we'll match you with the provider that best fits your goals.",
       resultsTitle: "Your Best Match",
@@ -1014,8 +1014,19 @@ function buildInitialConfig(): SiteConfig {
           ],
         },
         {
+          id: "timing",
+          title: "When would you like to get started?",
+          subtitle: "No pressure — just helps us prioritize.",
+          type: "cards" as const,
+          options: [
+            { label: "Today", value: "today" },
+            { label: "This week", value: "this_week" },
+            { label: "Just exploring", value: "exploring" },
+          ],
+        },
+        {
           id: "state",
-          title: "Almost done — what state are you in?",
+          title: "One last step — which state are you in?",
           subtitle: "Some providers aren't available in every state.",
           type: "dropdown" as const,
           options: [
