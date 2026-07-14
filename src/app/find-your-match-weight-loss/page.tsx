@@ -165,7 +165,7 @@ export default function ChatQuizPage() {
     const ls = quiz?.loadingScreen;
     const logoIds = ls?.providerLogos ?? [];
     const logoCount = logoIds.length || 1;
-    const perStep = 800;
+    const perStep = 1100;
     let step = 0;
 
     const interval = setInterval(() => {
@@ -260,24 +260,24 @@ export default function ChatQuizPage() {
     const currentText = texts[loadingIdx % texts.length] ?? texts[0];
 
     return (
-      <><HideChrome /><div className="flex min-h-[60vh] flex-col items-center justify-center px-6 bg-white">
+      <><HideChrome /><div className="flex min-h-[60vh] flex-col items-center pt-20 sm:pt-28 px-6 bg-white">
         <div className="flex flex-col items-center">
-          <h2 className="mb-10 text-[20px] font-bold text-[#191919] sm:text-[24px]">
+          <h2 className="mb-6 text-[20px] font-bold text-[#191919] sm:text-[24px]">
             {ls?.headline ?? "Finding your best match"}
           </h2>
 
-          <div className="relative mb-10 flex h-[44px] w-[160px] items-center justify-center">
+          <div className="relative mb-6 flex h-[44px] w-[160px] items-center justify-center">
             {currentProvider && (
               <img
                 key={loadingIdx}
                 src={currentProvider.logo}
                 alt={currentProvider.name}
-                className="max-h-[36px] max-w-[130px] object-contain grayscale brightness-[1.3] opacity-0 animate-[logoFade_0.75s_ease-in-out_forwards]"
+                className="max-h-[36px] max-w-[130px] object-contain grayscale brightness-[1.3] opacity-0 animate-[logoFade_1s_ease-in-out_forwards]"
               />
             )}
           </div>
 
-          <p className="mb-2 text-[14px] font-medium text-gray-500 sm:text-[15px]">
+          <p className="mb-1.5 text-[14px] font-medium text-gray-500 sm:text-[15px]">
             Comparing top weight loss providers...
           </p>
           <p
@@ -286,6 +286,11 @@ export default function ChatQuizPage() {
           >
             {currentText}
           </p>
+
+          <div className="mt-12 flex flex-col items-center gap-1">
+            <p className="text-[22px] font-extrabold text-[#191919] sm:text-[26px]">18,400+</p>
+            <p className="text-[12px] text-gray-400 sm:text-[13px]">people found their weight loss program with us</p>
+          </div>
         </div>
       </div></>
     );
