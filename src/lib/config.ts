@@ -100,6 +100,7 @@ export interface QuizConfig {
   trustStrip: string[];
   loadingMessages: string[];
   resultOverrides?: Record<string, string[]>;
+  testimonials?: { text: string; name: string; state: string }[];
   loadingScreen?: {
     headline: string;
     supportingTexts: string[];

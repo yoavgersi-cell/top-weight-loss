@@ -956,6 +956,14 @@ function buildInitialConfig(): SiteConfig {
       resultsSubtitle: "Based on your answers, this provider is the strongest fit for your goals and preferences.",
       resultsOthersTitle: "Other Providers You May Want to Consider",
       trustStrip: ["Updated Monthly", "Editorially Reviewed", "Independent Provider Comparison"],
+      testimonials: [
+        { text: "I finally found a provider that fit my budget and the whole process was much easier than I expected.", name: "Sarah M.", state: "Texas" },
+        { text: "The matching quiz saved me hours of research. I was approved and had my medication within a week.", name: "Jessica R.", state: "Florida" },
+        { text: "I was skeptical at first but the process was simple and my provider has been incredibly supportive.", name: "Amanda K.", state: "California" },
+        { text: "Everything was handled online and my prescription arrived faster than I thought possible.", name: "Rachel T.", state: "New York" },
+        { text: "I compared several options and this made it so easy to find the right fit for my goals and budget.", name: "Michelle D.", state: "Ohio" },
+        { text: "The whole experience felt professional and trustworthy. I'm glad I took the quiz.", name: "Lauren P.", state: "Georgia" },
+      ],
       loadingMessages: ["Comparing providers for you...", "Checking treatment options...", "Finding your best match...", "Almost there..."],
       loadingScreen: {
         headline: "Finding your best match",

@@ -1518,6 +1518,72 @@ export default function AdminPage() {
               />
             </div>
 
+            {/* Testimonials */}
+            <div className="rounded-xl border bg-white p-6 shadow-sm">
+              <h3 className="mb-1 text-sm font-bold text-gray-500 uppercase tracking-wider">Testimonials</h3>
+              <p className="mb-4 text-xs text-gray-400">Shown on quiz results page below the top provider. One is randomly selected per page load.</p>
+              <div className="space-y-3">
+                {(config.quiz.testimonials ?? []).map((t, ti) => (
+                  <div key={ti} className="rounded-lg border bg-gray-50 p-4">
+                    <div className="mb-2 flex items-center justify-between">
+                      <span className="text-xs font-semibold text-gray-500">Testimonial {ti + 1}</span>
+                      <button
+                        onClick={() => {
+                          const testimonials = (config.quiz.testimonials ?? []).filter((_, i) => i !== ti);
+                          setConfig({ ...config, quiz: { ...config.quiz, testimonials } });
+                        }}
+                        className="flex h-6 w-6 items-center justify-center rounded border border-red-200 text-red-400 hover:bg-red-50"
+                      >
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                      </button>
+                    </div>
+                    <textarea
+                      value={t.text}
+                      onChange={(e) => {
+                        const testimonials = [...(config.quiz.testimonials ?? [])];
+                        testimonials[ti] = { ...testimonials[ti], text: e.target.value };
+                        setConfig({ ...config, quiz: { ...config.quiz, testimonials } });
+                      }}
+                      rows={2}
+                      placeholder="Review text..."
+                      className="mb-2 w-full rounded border px-3 py-2 text-sm text-gray-700 focus:border-[#0C4B75] focus:outline-none"
+                    />
+                    <div className="flex gap-2">
+                      <input
+                        value={t.name}
+                        onChange={(e) => {
+                          const testimonials = [...(config.quiz.testimonials ?? [])];
+                          testimonials[ti] = { ...testimonials[ti], name: e.target.value };
+                          setConfig({ ...config, quiz: { ...config.quiz, testimonials } });
+                        }}
+                        placeholder="Name (e.g. Sarah M.)"
+                        className="flex-1 rounded border px-3 py-1.5 text-sm focus:border-[#0C4B75] focus:outline-none"
+                      />
+                      <input
+                        value={t.state}
+                        onChange={(e) => {
+                          const testimonials = [...(config.quiz.testimonials ?? [])];
+                          testimonials[ti] = { ...testimonials[ti], state: e.target.value };
+                          setConfig({ ...config, quiz: { ...config.quiz, testimonials } });
+                        }}
+                        placeholder="State (e.g. Texas)"
+                        className="w-32 rounded border px-3 py-1.5 text-sm focus:border-[#0C4B75] focus:outline-none"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <button
+                onClick={() => {
+                  const testimonials = [...(config.quiz.testimonials ?? []), { text: "", name: "", state: "" }];
+                  setConfig({ ...config, quiz: { ...config.quiz, testimonials } });
+                }}
+                className="mt-2 w-full rounded border-2 border-dashed border-gray-200 py-2 text-xs font-medium text-gray-400 hover:border-[#0C4B75] hover:text-[#0C4B75]"
+              >
+                + Add Testimonial
+              </button>
+            </div>
+
             {/* Loading Screen Config */}
             <div className="rounded-xl border bg-white p-6 shadow-sm">
               <h3 className="mb-4 text-sm font-bold text-gray-500 uppercase tracking-wider">Loading Screen (Provider Scan)</h3>
