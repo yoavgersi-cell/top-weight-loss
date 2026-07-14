@@ -35,6 +35,7 @@ export function ComparisonLayout({ config, heroOverrides, children }: Comparison
         rank: index + 1,
         rating: position.score,
         ratingLabel: position.label,
+        starRating: position.starRating,
         badge: position.badge,
       };
     })

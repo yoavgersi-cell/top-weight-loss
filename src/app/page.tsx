@@ -29,6 +29,7 @@ export default async function HomePage() {
         rank: index + 1,
         rating: position.score,
         ratingLabel: position.label,
+        starRating: position.starRating,
         badge: position.badge,
       };
     })

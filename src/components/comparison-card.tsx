@@ -13,6 +13,7 @@ interface ComparisonCardProduct {
   rank: number;
   rating: number;
   ratingLabel: string;
+  starRating?: number;
   badge?: string;
 }
 
@@ -78,7 +79,7 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
 
         {/* Column 3: Rating + CTA */}
         <div className="relative flex flex-col items-center justify-center gap-4 px-6 py-5 sm:w-[200px] sm:shrink-0">
-          <RatingBadge rating={product.rating} label={product.ratingLabel} />
+          <RatingBadge rating={product.rating} label={product.ratingLabel} starRating={product.starRating} />
           <ProviderCta
             href={product.affiliateUrl}
             providerName={product.name}
@@ -111,7 +112,7 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
               className="max-h-full max-w-full object-contain"
             />
           </div>
-          <RatingBadge rating={product.rating} label={product.ratingLabel} />
+          <RatingBadge rating={product.rating} label={product.ratingLabel} starRating={product.starRating} />
         </div>
 
         {/* Tagline */}

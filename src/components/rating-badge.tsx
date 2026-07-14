@@ -4,12 +4,14 @@ import { cn } from "@/lib/utils";
 interface RatingBadgeProps {
   rating: number;
   label: string;
+  starRating?: number;
   className?: string;
 }
 
-export function RatingBadge({ rating, label, className }: RatingBadgeProps) {
-  const fullStars = Math.floor(rating / 2);
-  const hasHalf = rating % 2 >= 1;
+export function RatingBadge({ rating, label, starRating, className }: RatingBadgeProps) {
+  const stars = starRating ?? (rating / 2);
+  const fullStars = Math.floor(stars);
+  const hasHalf = stars % 1 >= 0.5;
 
   return (
     <div className={cn("flex flex-col items-center", className)}>
