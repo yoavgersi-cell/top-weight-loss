@@ -654,6 +654,43 @@ const defaultReviews: ReviewData[] = [
       "Patients who value science-backed protocols over generic programs"
     ],
     finalVerdict: "LIV Body stands out with its biology-first philosophy and clinician-prescribed treatment plans. While it's a newer platform, its focus on personalization and science-backed protocols makes it appealing for patients who want more than a one-size-fits-all approach. If you value medical oversight and a treatment plan tailored to how your body works, LIV Body is worth considering."
+  },
+  {
+    slug: "skinnyrx",
+    providerId: "skinnyrx",
+    shortSummary: "Physician-prescribed GLP-1 weight loss platform offering compounded semaglutide and tirzepatide with fast home delivery.",
+    reviewIntro: "SkinnyRx offers a straightforward path to physician-prescribed GLP-1 weight loss treatment. Their platform connects patients with licensed providers who evaluate eligibility and prescribe compounded semaglutide or tirzepatide. With a focus on simplicity and fast delivery, SkinnyRx aims to make medical weight loss accessible without the complexity of traditional healthcare channels.",
+    keyFeatures: [
+      "Physician-prescribed GLP-1 medications",
+      "Compounded semaglutide and tirzepatide available",
+      "Fast nationwide home delivery",
+      "Online medical evaluation process",
+      "Ongoing provider support included"
+    ],
+    pricingSummary: "SkinnyRx offers competitive monthly pricing for compounded GLP-1 medications. Plans include physician consultations, medication, and home delivery. No long-term contracts required.",
+    treatmentOptions: [
+      "Compounded semaglutide (injectable)",
+      "Compounded tirzepatide (injectable)",
+      "Graduated dosing protocols"
+    ],
+    pros: [
+      "Simple and fast online enrollment process",
+      "Both semaglutide and tirzepatide options",
+      "Physician oversight for all prescriptions",
+      "Home delivery included in all plans",
+      "No long-term commitment required"
+    ],
+    cons: [
+      "Limited information on pricing before sign-up",
+      "No behavioral coaching or nutrition support",
+      "Brand-name medications not available"
+    ],
+    bestFor: [
+      "People who want a fast, no-hassle path to GLP-1 medication",
+      "Those looking for compounded medication options",
+      "Patients who prefer a simple online process without extras"
+    ],
+    finalVerdict: "SkinnyRx delivers a streamlined, physician-guided weight loss experience focused on getting patients started quickly. While it lacks the coaching and behavioral components of some competitors, its straightforward approach and fast delivery make it a solid option for people who know what they want and prefer simplicity over extensive support programs."
   }
 ];
 
@@ -1068,6 +1105,7 @@ function buildInitialConfig(): SiteConfig {
         { providerId: "synergyrx", priceLevel: "low", strengths: ["cost", "medical"], matchReasons: { cost: "Compounded semaglutide from $199", medical: "Licensed physician oversight", online: "Available in all 50 states", personalized: "Personalized medical supervision" } },
         { providerId: "bodybuildinghealth", priceLevel: "mid", strengths: ["medical", "personalized"], matchReasons: { cost: "$100 off limited-time offer", medical: "Provider-guided weight loss", online: "No commitment until approved", personalized: "Choose GLP-1 or GIP + GLP-1" } },
         { providerId: "livbody", priceLevel: "mid", strengths: ["personalized", "medical"], matchReasons: { cost: "Competitive compounded pricing", medical: "Clinician-prescribed care", online: "Home delivery included", personalized: "Biology-based treatment plans" } },
+        { providerId: "skinnyrx", priceLevel: "mid", strengths: ["online", "medical"], matchReasons: { cost: "Competitive compounded pricing", medical: "Physician-prescribed GLP-1 care", online: "Fast home delivery nationwide", personalized: "Provider-guided treatment plans" } },
       ],
     },
   };

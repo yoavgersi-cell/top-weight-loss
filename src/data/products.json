@@ -338,5 +338,25 @@
     "affiliateUrl": "#",
     "ctaText": "View Plan",
     "description": ""
+  },
+  {
+    "id": "skinnyrx",
+    "rank": 18,
+    "name": "SkinnyRx",
+    "slug": "skinnyrx",
+    "tagline": "Physician-Prescribed GLP-1 Weight Loss",
+    "logo": "/logos/skinnyrx.svg",
+    "rating": 8.0,
+    "ratingLabel": "Good",
+    "reviewCount": 2100,
+    "highlights": [
+      "Physician-prescribed GLP-1 medications",
+      "Compounded semaglutide and tirzepatide",
+      "Fast home delivery nationwide"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://skinnyrx.com/",
+    "ctaText": "View Plan",
+    "description": ""
   }
 ]
