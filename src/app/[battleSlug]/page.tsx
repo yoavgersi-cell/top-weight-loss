@@ -198,11 +198,17 @@ export default async function BattlePage({
         </section>
 
         <div className="mx-auto max-w-[1100px] px-4 py-10 sm:px-6">
-          {/* ───── PROVIDER CARDS ───── */}
+          {/* ───── PROVIDER CARDS (enriched) ───── */}
           <div className="relative mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {/* VS badge between cards */}
+            {/* VS badge */}
             <div className="absolute left-1/2 top-1/2 z-10 hidden -translate-x-1/2 -translate-y-1/2 sm:flex">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-gray-200 bg-white text-[13px] font-extrabold text-gray-400 shadow-sm">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-[#0C4B75]/20 bg-white text-[13px] font-extrabold text-[#0C4B75] shadow-sm">
+                VS
+              </div>
+            </div>
+            {/* Mobile VS */}
+            <div className="flex items-center justify-center sm:hidden -my-1">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#0C4B75]/20 bg-white text-[12px] font-extrabold text-[#0C4B75]">
                 VS
               </div>
             </div>
@@ -210,33 +216,36 @@ export default async function BattlePage({
             {[
               { provider: p1, score: p1Score },
               { provider: p2, score: p2Score },
-            ].map(({ provider, score }) => (
+            ].map(({ provider, score }, idx) => (
               <div
                 key={provider.id}
-                className="relative rounded-2xl border border-gray-200 bg-white px-6 pb-6 pt-8 shadow-sm"
+                className={`relative rounded-2xl border border-gray-200 bg-white px-6 pb-6 pt-7 shadow-sm ${idx === 0 ? "order-first" : "order-last sm:order-last"}`}
               >
-                <div className="mb-5 flex h-[44px] w-[120px] items-center">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={provider.logo}
-                    alt={`${provider.name} logo`}
-                    className="max-h-full max-w-full object-contain"
-                  />
+                <div className="mb-3 flex items-center justify-between">
+                  <div className="flex h-[40px] w-[110px] items-center">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={provider.logo} alt={`${provider.name} logo`} className="max-h-full max-w-full object-contain" />
+                  </div>
+                  {score && (
+                    <div className="flex items-baseline gap-1">
+                      <span className="text-[28px] font-extrabold text-[#191919]">{score.score}</span>
+                      <span className="text-[12px] font-semibold text-gray-300">/10</span>
+                    </div>
+                  )}
                 </div>
 
-                {score && (
-                  <div className="mb-1 flex items-baseline gap-1.5">
-                    <span className="text-[32px] font-extrabold text-[#191919]">
-                      {score.score}
-                    </span>
-                    <span className="text-[14px] font-semibold text-gray-300">/10</span>
-                  </div>
-                )}
-                {score && (
-                  <p className="mb-5 text-[13px] font-semibold text-gray-400">
-                    {score.label}
-                  </p>
-                )}
+                <p className="mb-4 text-[14px] leading-relaxed text-gray-500">
+                  {provider.tagline}
+                </p>
+
+                <ul className="mb-5 space-y-2">
+                  {provider.highlights.slice(0, 3).map((h, hi) => (
+                    <li key={hi} className="flex items-start gap-2 text-[13px] text-gray-700">
+                      <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2} />
+                      {h}
+                    </li>
+                  ))}
+                </ul>
 
                 <ProviderCta
                   href={provider.affiliateUrl}
@@ -244,7 +253,7 @@ export default async function BattlePage({
                   providerSlug={provider.id}
                   pageType="battle"
                   sourceFlow="battle_page"
-                  className="flex h-[44px] w-full items-center justify-center gap-1.5 rounded-xl border border-gray-300 text-[14px] font-bold text-gray-600 transition-all hover:border-[#0C4B75] hover:text-[#0C4B75]"
+                  className="flex h-[44px] w-full items-center justify-center gap-1.5 rounded-xl bg-[#0C4B75] text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]"
                 >
                   Visit {provider.name}
                   <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
@@ -254,55 +263,84 @@ export default async function BattlePage({
           </div>
 
           {/* ───── INTRO ───── */}
-          <div className="mb-14">
+          <div className="mb-14 max-w-[800px]">
             <p className="text-[16px] leading-[1.8] text-gray-600">
               {battle.intro}
             </p>
           </div>
 
-          {/* ───── CATEGORY WINNERS ───── */}
+          {/* ───── ROUND-BY-ROUND COMPARISON ───── */}
           <div className="mb-14">
-            <h2 className="mb-6 text-[22px] font-bold text-[#191919]">
+            <h2 className="mb-8 text-[24px] font-bold text-[#191919]">
               How They Compare
             </h2>
 
-            <div className="space-y-4">
+            <div className="space-y-6">
               {battle.categories.map((cat, i) => {
                 const label = getCategoryLabel(cat);
+                const isP1Edge = cat.winner === "provider1";
+                const isP2Edge = cat.winner === "provider2";
+                const isTie = cat.winner === "tie";
+
                 return (
-                  <div
-                    key={i}
-                    className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-7"
-                  >
-                    <div className="mb-4 flex flex-wrap items-center gap-3">
-                      <h3 className="text-[16px] font-bold text-[#191919]">
-                        {cat.name}
-                      </h3>
-                      <span className="rounded-full bg-gray-100 px-3 py-0.5 text-[11px] font-semibold text-gray-500">
+                  <div key={i} className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
+                    {/* Round header */}
+                    <div className="flex items-center justify-between border-b border-gray-100 bg-gray-50/70 px-6 py-4">
+                      <div className="flex items-center gap-3">
+                        <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#0C4B75] text-[12px] font-bold text-white">
+                          {i + 1}
+                        </span>
+                        <h3 className="text-[16px] font-bold text-[#191919]">
+                          {cat.name}
+                        </h3>
+                      </div>
+                      <span className={`rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wide ${
+                        isTie
+                          ? "bg-amber-50 text-amber-600"
+                          : "bg-emerald-50 text-emerald-700"
+                      }`}>
                         {label}
                       </span>
                     </div>
 
-                    <p className="mb-4 text-[14px] leading-[1.7] text-gray-500">
-                      {cat.explanation}
-                    </p>
+                    <div className="p-6">
+                      <p className="mb-5 max-w-[700px] text-[14px] leading-[1.7] text-gray-500">
+                        {cat.explanation}
+                      </p>
 
-                    {cat.supportingPoints && cat.supportingPoints.length > 0 && (
-                      <ul className="space-y-1.5">
-                        {cat.supportingPoints.map((point, pi) => (
-                          <li
-                            key={pi}
-                            className="flex items-start gap-2.5 text-[13px] text-gray-600"
-                          >
-                            <Check
-                              className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gray-400"
-                              strokeWidth={2}
-                            />
-                            {point}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
+                      {cat.supportingPoints && cat.supportingPoints.length > 0 && (
+                        <div className="grid gap-4 sm:grid-cols-2">
+                          {/* P1 strengths */}
+                          <div className={`rounded-xl p-4 ${isP1Edge ? "bg-emerald-50/50 border border-emerald-100" : "bg-gray-50"}`}>
+                            <p className={`mb-2.5 text-[12px] font-bold uppercase tracking-wider ${isP1Edge ? "text-emerald-700" : "text-gray-400"}`}>
+                              {p1.name}
+                            </p>
+                            <ul className="space-y-1.5">
+                              {cat.supportingPoints.slice(0, Math.ceil(cat.supportingPoints.length / 2)).map((point, pi) => (
+                                <li key={pi} className="flex items-start gap-2 text-[13px] text-gray-600">
+                                  <Check className={`mt-0.5 h-3.5 w-3.5 shrink-0 ${isP1Edge ? "text-emerald-500" : "text-gray-400"}`} strokeWidth={2} />
+                                  {point}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          {/* P2 strengths */}
+                          <div className={`rounded-xl p-4 ${isP2Edge ? "bg-emerald-50/50 border border-emerald-100" : "bg-gray-50"}`}>
+                            <p className={`mb-2.5 text-[12px] font-bold uppercase tracking-wider ${isP2Edge ? "text-emerald-700" : "text-gray-400"}`}>
+                              {p2.name}
+                            </p>
+                            <ul className="space-y-1.5">
+                              {cat.supportingPoints.slice(Math.ceil(cat.supportingPoints.length / 2)).map((point, pi) => (
+                                <li key={pi} className="flex items-start gap-2 text-[13px] text-gray-600">
+                                  <Check className={`mt-0.5 h-3.5 w-3.5 shrink-0 ${isP2Edge ? "text-emerald-500" : "text-gray-400"}`} strokeWidth={2} />
+                                  {point}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 );
               })}
