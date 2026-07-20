@@ -180,7 +180,7 @@ export default async function BattlePage({
         <section className="relative overflow-hidden border-b border-gray-200 bg-white">
           {/* Subtle gradient accent */}
           <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0C4B75] via-[#1a8cd8] to-[#0C4B75]" />
-          <div className="mx-auto max-w-[860px] px-4 pb-10 pt-10 sm:px-6 sm:pb-14 sm:pt-12">
+          <div className="mx-auto max-w-[1100px] px-4 pb-10 pt-10 sm:px-6 sm:pb-14 sm:pt-12">
             <Breadcrumbs
               items={[
                 { label: "Home", href: "/" },
@@ -197,7 +197,7 @@ export default async function BattlePage({
           </div>
         </section>
 
-        <div className="mx-auto max-w-[860px] px-4 py-10 sm:px-6">
+        <div className="mx-auto max-w-[1100px] px-4 py-10 sm:px-6">
           {/* ───── PROVIDER CARDS ───── */}
           <div className="relative mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
             {/* VS badge between cards */}
