@@ -490,4 +490,216 @@ export const articles: Article[] = [
       },
     ],
   },
+  {
+    slug: "how-to-get-ozempic-online",
+    title: "How to Get Ozempic Online in 2026: A Step-by-Step Guide",
+    description:
+      "Want to get Ozempic or semaglutide online? Here's exactly how the process works — from evaluation to delivery — and what to expect at each step.",
+    category: "Guide",
+    readTime: "6 min read",
+    publishedAt: "2026-07-08",
+    updatedAt: "2026-07-18",
+    heroColor: "#F0FAF5",
+    author: "TopWeightLoss Team",
+    sections: [
+      {
+        heading: "Can You Really Get Ozempic Online?",
+        body: 'Yes — and it\'s become one of the most common ways people access <a href="/articles/how-glp1-medications-work">GLP-1 weight loss medications</a>. Dozens of licensed telehealth providers now offer semaglutide (the active ingredient in Ozempic and Wegovy) through fully online programs. You don\'t need to visit a doctor\'s office. The entire process — medical evaluation, prescription, and delivery — happens from home.',
+      },
+      {
+        heading: "Step 1: Choose a Telehealth Provider",
+        body: 'Start by selecting a licensed telehealth platform that offers semaglutide. Look for transparent pricing, licensed physicians, and ongoing medical support. Not sure where to start? <a href="/">Compare top providers</a> on our homepage or <a href="/find-your-match">take our matching quiz</a> for a personalized recommendation. Our guide on <a href="/articles/choosing-telehealth-weight-loss-provider">choosing the right provider</a> covers what to look for.',
+      },
+      {
+        heading: "Step 2: Complete a Medical Evaluation",
+        body: 'Most providers require you to fill out a detailed health questionnaire covering your medical history, current medications, weight loss goals, and BMI. Some platforms also require lab work. A licensed physician or nurse practitioner reviews your information and determines whether you\'re eligible. This process typically takes 1–3 days. Check our <a href="/articles/who-qualifies-for-glp1-weight-loss">eligibility guide</a> to see if you qualify before starting.',
+      },
+      {
+        heading: "Step 3: Get Your Prescription",
+        body: 'If approved, your provider will prescribe semaglutide at a starting dose. Most telehealth platforms offer compounded semaglutide — the same active ingredient as Ozempic at a significantly lower cost. Brand-name Ozempic is also available through some providers but is considerably more expensive. See our <a href="/articles/ozempic-vs-wegovy-differences">Ozempic vs Wegovy comparison</a> for details on the differences.',
+      },
+      {
+        heading: "Step 4: Receive Your Medication",
+        body: 'Your medication is shipped directly to your home, typically within 3–7 days of approval. Most providers include injection supplies and clear instructions. The medication arrives in temperature-controlled packaging to ensure quality. From there, you\'ll self-administer a once-weekly injection — most patients describe it as quick and nearly painless.',
+      },
+      {
+        heading: "What It Costs Without Insurance",
+        body: 'Brand-name Ozempic runs $900–$1,000/month without insurance. Compounded semaglutide through telehealth providers typically costs $200–$500/month, often including consultations and delivery. For a full breakdown, read our <a href="/articles/weight-loss-medication-cost-guide">medication cost guide</a>. Many providers also accept HSA/FSA payments.',
+      },
+    ],
+  },
+  {
+    slug: "compounded-semaglutide-vs-brand-name",
+    title: "Compounded Semaglutide vs Brand-Name: What's the Difference?",
+    description:
+      "Compounded semaglutide costs a fraction of Ozempic or Wegovy. But is it the same? Here's what you need to know about safety, quality, and effectiveness.",
+    category: "Science",
+    readTime: "6 min read",
+    publishedAt: "2026-07-10",
+    updatedAt: "2026-07-18",
+    heroColor: "#EEF4FB",
+    author: "TopWeightLoss Team",
+    sections: [
+      {
+        heading: "What Is Compounded Semaglutide?",
+        body: 'Compounded semaglutide is the same active ingredient used in <a href="/articles/ozempic-vs-wegovy-differences">Ozempic and Wegovy</a>, but it\'s produced by licensed compounding pharmacies rather than the original manufacturer (Novo Nordisk). Compounding pharmacies create customized medications under FDA regulation, though the final compounded product itself is not individually FDA-approved in the same way brand-name drugs are.',
+      },
+      {
+        heading: "Is It Safe?",
+        body: 'When sourced from a licensed 503B compounding pharmacy that follows current Good Manufacturing Practice (cGMP) standards, compounded semaglutide is considered safe by most medical professionals. The key is the pharmacy\'s credentials. Reputable telehealth providers use only licensed, inspected facilities. Ask your provider which pharmacy they use and verify its licensure. Avoid any platform that doesn\'t disclose their compounding source.',
+      },
+      {
+        heading: "How Does It Compare in Effectiveness?",
+        body: 'Compounded semaglutide uses the same active molecule as brand-name versions, so the mechanism of action is identical — it targets <a href="/articles/how-glp1-medications-work">GLP-1 receptors</a> to reduce appetite and regulate blood sugar. Most patients and providers report comparable results. However, because compounded medications aren\'t subject to the same clinical trials as brand-name drugs, there\'s less published data specifically on compounded versions.',
+      },
+      {
+        heading: "The Price Difference",
+        body: 'This is where the difference is most dramatic. Brand-name Wegovy costs $1,300–$1,400/month at retail. Ozempic runs $900–$1,000/month. Compounded semaglutide through telehealth providers typically costs $200–$500/month — often including medical consultations and home delivery. For many patients, this price difference is what makes treatment accessible. See our <a href="/articles/weight-loss-medication-cost-guide">full cost comparison</a>.',
+      },
+      {
+        heading: "Which Should You Choose?",
+        body: 'If you have insurance that covers Wegovy or Ozempic, brand-name may be the simpler choice. If you\'re paying out of pocket — which is the reality for most weight loss patients — compounded semaglutide from a reputable provider offers the same active ingredient at a fraction of the cost. <a href="/">Compare providers</a> that offer compounded options, or <a href="/find-your-match">take our quiz</a> to find the best fit for your budget.',
+      },
+    ],
+  },
+  {
+    slug: "mounjaro-vs-ozempic",
+    title: "Mounjaro vs Ozempic: Which Is Better for Weight Loss?",
+    description:
+      "Mounjaro and Ozempic are both used for weight loss, but they work differently. Here's a clear comparison of results, side effects, cost, and which might be right for you.",
+    category: "Science",
+    readTime: "7 min read",
+    publishedAt: "2026-07-12",
+    updatedAt: "2026-07-19",
+    heroColor: "#FBF5EE",
+    author: "TopWeightLoss Team",
+    sections: [
+      {
+        heading: "Different Medications, Different Mechanisms",
+        body: 'Ozempic contains semaglutide, a <a href="/articles/how-glp1-medications-work">GLP-1 receptor agonist</a>. Mounjaro contains tirzepatide, a dual-agonist that targets both GLP-1 and GIP receptors. This fundamental difference in mechanism is why they produce different results. Both are FDA-approved for type 2 diabetes and widely used off-label (or through weight-specific versions) for weight loss.',
+      },
+      {
+        heading: "Weight Loss Results Compared",
+        body: 'In clinical trials, Mounjaro (tirzepatide) showed greater weight loss than Ozempic (semaglutide). The SURMOUNT trials showed tirzepatide patients losing up to 22.5% of body weight, while the STEP trials showed semaglutide patients losing about 15%. For a deeper dive, see our <a href="/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide comparison</a>.',
+      },
+      {
+        heading: "Side Effects",
+        body: 'Both medications share similar gastrointestinal side effects — nausea, vomiting, diarrhea, and constipation are most common during dose escalation. Mounjaro may have slightly higher rates of certain GI symptoms at its highest doses, but overall tolerability is comparable. Most side effects improve over time. Read our <a href="/articles/semaglutide-side-effects-guide">side effects guide</a> for management strategies.',
+      },
+      {
+        heading: "Cost Comparison",
+        body: 'Both are expensive at retail — Ozempic around $900–$1,000/month, Mounjaro around $1,000–$1,100/month. Compounded versions through telehealth providers are significantly cheaper: compounded semaglutide from $199/month, compounded tirzepatide from $300–$500/month. See our <a href="/articles/weight-loss-medication-cost-guide">cost guide</a> for a full breakdown.',
+      },
+      {
+        heading: "Which One Should You Choose?",
+        body: 'If maximum weight loss is your priority, tirzepatide (Mounjaro/Zepbound) has a clinical edge. If you want a longer track record and wider availability, semaglutide (Ozempic/Wegovy) is the more established option. Many patients start with semaglutide and switch to tirzepatide if they <a href="/articles/weight-loss-plateau-what-to-do">hit a plateau</a>. <a href="/find-your-match">Take our quiz</a> to find a provider that offers the medication best suited to your needs.',
+      },
+    ],
+  },
+  {
+    slug: "weight-loss-medication-without-insurance",
+    title: "How to Get Weight Loss Medication Without Insurance in 2026",
+    description:
+      "No insurance coverage for weight loss medication? Here are the most affordable ways to access GLP-1 treatments like semaglutide and tirzepatide without insurance.",
+    category: "Advice",
+    readTime: "6 min read",
+    publishedAt: "2026-07-14",
+    updatedAt: "2026-07-19",
+    heroColor: "#F5F0FB",
+    author: "TopWeightLoss Content Team",
+    sections: [
+      {
+        heading: "Why Insurance Often Doesn't Cover Weight Loss Medication",
+        body: 'Despite obesity being recognized as a chronic disease by the AMA and FDA, many insurance plans still exclude weight loss medications from coverage. Medications prescribed specifically for weight loss (Wegovy, Zepbound) are frequently excluded from formularies. Even when covered, prior authorization requirements and high copays can make access difficult. The good news: there are affordable alternatives that don\'t require insurance at all.',
+      },
+      {
+        heading: "Compounded Medications: The Most Popular Option",
+        body: 'The most common path to affordable GLP-1 treatment without insurance is through compounded medications offered by telehealth providers. Compounded semaglutide starts at $199–$300/month and compounded tirzepatide at $300–$500/month — all-inclusive with consultations and delivery. These use the same active ingredients as brand-name drugs, produced by licensed compounding pharmacies. See our <a href="/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> for details.',
+      },
+      {
+        heading: "Telehealth Providers With All-Inclusive Pricing",
+        body: 'The best telehealth providers for uninsured patients bundle everything into one monthly fee: medication, medical consultations, dose adjustments, and home delivery. No surprise bills. <a href="/">Compare providers</a> on our platform to find all-inclusive options, or check our <a href="/cheapest-weight-loss-medication">affordable providers page</a> for the lowest-cost options.',
+      },
+      {
+        heading: "HSA and FSA: Use Pre-Tax Dollars",
+        body: 'If you have a Health Savings Account (HSA) or Flexible Spending Account (FSA), you can typically use these pre-tax funds to pay for weight loss medication and consultations. This effectively gives you a 20–35% discount depending on your tax bracket. Check with your provider to confirm they accept HSA/FSA payments.',
+      },
+      {
+        heading: "Manufacturer Savings Programs",
+        body: 'Novo Nordisk (maker of Ozempic/Wegovy) and Eli Lilly (maker of Mounjaro/Zepbound) both offer savings programs for eligible patients. These can reduce brand-name costs significantly, though they typically require commercial insurance. For patients without any insurance, compounded options through telehealth remain the most cost-effective path.',
+      },
+      {
+        heading: "Finding the Right Provider for Your Budget",
+        body: 'The key is comparing total monthly cost — not just medication price. Some providers quote low base prices but charge separately for consultations, shipping, or supplies. <a href="/articles/choosing-telehealth-weight-loss-provider">Learn what to look for</a> in a provider, or <a href="/find-your-match">take our matching quiz</a> to find options that fit your budget and goals.',
+      },
+    ],
+  },
+  {
+    slug: "how-long-for-semaglutide-to-work",
+    title: "How Long Does It Take for Semaglutide to Work?",
+    description:
+      "Wondering when you'll see results on semaglutide? Here's a realistic week-by-week timeline of what to expect — from appetite changes to visible weight loss.",
+    category: "Guide",
+    readTime: "5 min read",
+    publishedAt: "2026-07-15",
+    updatedAt: "2026-07-19",
+    heroColor: "#F0FAF5",
+    author: "TopWeightLoss Team",
+    sections: [
+      {
+        heading: "Week 1–2: Appetite Changes Begin",
+        body: 'Most patients notice the first effects within the first two weeks of starting semaglutide. The most common early sign is reduced appetite — food simply doesn\'t occupy as much mental space. You may feel full faster at meals or notice that cravings for specific foods (especially sugar and processed snacks) begin to quiet. At this stage, you\'re on the lowest starting dose, so effects are typically subtle. Read our <a href="/articles/first-month-weight-loss-medication">first month guide</a> for more detail.',
+      },
+      {
+        heading: "Week 3–4: Early Weight Loss",
+        body: 'By the end of the first month, many patients see 3–5 pounds of weight loss, though this varies widely. The scale is only part of the picture — changes in how clothes fit, energy levels, and your relationship with food are equally important early indicators. Some patients lose more, some less. Remember: you\'re still on a low dose.',
+      },
+      {
+        heading: "Month 2–3: Dose Increases and Acceleration",
+        body: 'As your provider gradually increases your dose (the standard titration schedule), appetite suppression becomes more pronounced and weight loss typically accelerates. Most patients see the most significant month-over-month changes during this period. By month 3, many patients have lost 5–10% of their starting weight. <a href="/articles/what-to-eat-on-glp1-medication">Nutrition</a> and <a href="/articles/exercise-while-on-glp1-medication">exercise</a> habits amplify results during this phase.',
+      },
+      {
+        heading: "Month 4–6: Steady Progress",
+        body: 'Weight loss continues at a steady pace as you approach your maintenance dose. The rate may slow compared to months 2–3, which is normal — your body is adjusting. Patients who combine medication with high protein intake and regular strength training tend to maintain the best momentum. If progress stalls, see our guide on <a href="/articles/weight-loss-plateau-what-to-do">breaking through plateaus</a>.',
+      },
+      {
+        heading: "Month 6–12+: Maximum Results",
+        body: 'Clinical trials show the most significant results at 68 weeks (about 16 months), with average weight loss of 15% of body weight. Most patients reach their peak results between months 9–15. After reaching your goal, discuss a maintenance plan with your provider — some patients step down to a lower dose rather than stopping entirely. Read about <a href="/articles/stopping-glp1-medication-what-happens">what happens when you stop</a>.',
+      },
+    ],
+  },
+  {
+    slug: "zepbound-vs-wegovy",
+    title: "Zepbound vs Wegovy: Comparing the Two FDA-Approved Weight Loss Drugs",
+    description:
+      "Zepbound and Wegovy are both FDA-approved for weight loss but use different mechanisms. Here's how they compare on results, side effects, cost, and availability.",
+    category: "Science",
+    readTime: "6 min read",
+    publishedAt: "2026-07-16",
+    updatedAt: "2026-07-20",
+    heroColor: "#EEF4FB",
+    author: "TopWeightLoss Team",
+    sections: [
+      {
+        heading: "Both FDA-Approved for Weight Loss",
+        body: 'Zepbound (tirzepatide) and Wegovy (semaglutide) are the only two GLP-1-based medications with specific FDA approval for chronic weight management. This sets them apart from Ozempic and Mounjaro, which are approved for diabetes but widely used off-label for weight loss. Having FDA approval for weight loss means these drugs went through rigorous clinical trials specifically measuring their effectiveness for weight management.',
+      },
+      {
+        heading: "How They Work Differently",
+        body: 'Wegovy targets one receptor: GLP-1. Zepbound targets two: GLP-1 and GIP. This dual-agonist approach gives Zepbound a broader metabolic effect. For a deeper explanation, see our article on <a href="/articles/how-glp1-medications-work">how GLP-1 medications work</a> and our <a href="/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide comparison</a>.',
+      },
+      {
+        heading: "Clinical Trial Results",
+        body: 'Wegovy (STEP trials): ~15% average weight loss over 68 weeks. Zepbound (SURMOUNT trials): up to 22.5% average weight loss over 72 weeks. While these come from different trials and direct comparison requires caution, the trend is consistent — tirzepatide-based medications produce greater average weight loss in clinical research.',
+      },
+      {
+        heading: "Cost and Insurance",
+        body: 'Both are expensive at retail — Wegovy at $1,300–$1,400/month and Zepbound at $1,000–$1,100/month. Insurance coverage is limited for both. Compounded alternatives through telehealth providers offer significant savings: compounded semaglutide from ~$200/month and compounded tirzepatide from ~$350/month. See our <a href="/articles/weight-loss-medication-cost-guide">cost guide</a> for details. <a href="/cheapest-weight-loss-medication">Compare affordable options</a>.',
+      },
+      {
+        heading: "Which Is Right for You?",
+        body: 'If you want the maximum weight loss potential and can access it, Zepbound has a clinical edge. If you prefer a longer track record, broader compounded availability, and slightly lower compounded pricing, Wegovy/semaglutide is the more established path. Many telehealth providers offer both — <a href="/find-your-match">take our quiz</a> to find the best match, or <a href="/">compare providers</a> directly.',
+      },
+    ],
+  },
 ];
