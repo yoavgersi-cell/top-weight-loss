@@ -74,7 +74,7 @@ export function HeroSection({
               { label: "Top-Rated Options", icon: Star },
               { label: "Fast Online Process", icon: Zap },
             ].map(({ label, icon: Icon }) => (
-              <span key={label} className="flex items-center gap-1.5 text-[11px] sm:text-[13px] font-medium text-gray-500">
+              <span key={label} className="flex items-center gap-1.5 text-[13px] sm:text-[13px] font-medium text-gray-500">
                 <Icon className="h-3.5 w-3.5 shrink-0 text-[#0C4B75]" strokeWidth={1.5} />
                 {label}
               </span>
