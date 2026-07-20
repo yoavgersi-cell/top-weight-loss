@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Check, X, ArrowRight, Users, Clock, Shield } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
-import { RatingBadge } from "@/components/rating-badge";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
 import { notFound } from "next/navigation";
@@ -16,26 +16,20 @@ export async function generateMetadata({
   const { slug } = await params;
   const config = await getConfig();
   const review = (config.reviews ?? []).find((r) => r.slug === slug);
-  const provider = review
-    ? config.providers.find((p) => p.id === review.providerId)
-    : null;
+  if (!review) return { title: "Review Not Found" };
 
-  if (!review || !provider) {
-    return { title: "Review Not Found" };
-  }
-
-  const title = `${provider.name} Review 2026 — Is It Worth It?`;
-  const description = review.shortSummary;
+  const provider = config.providers.find((p) => p.id === review.providerId);
+  if (!provider) return { title: "Review Not Found" };
 
   return {
-    title,
-    description,
+    title: `${provider.name} Review 2026 — Is It Worth It?`,
+    description: review.shortSummary,
     alternates: {
       canonical: `https://www.topweightloss.io/reviews/${slug}`,
     },
     openGraph: {
-      title,
-      description,
+      title: `${provider.name} Review 2026 — Is It Worth It?`,
+      description: review.shortSummary,
       url: `https://www.topweightloss.io/reviews/${slug}`,
       type: "article",
     },
@@ -49,19 +43,13 @@ export default async function ReviewPage({
 }) {
   const { slug } = await params;
   const config = await getConfig();
-
   const review = (config.reviews ?? []).find((r) => r.slug === slug);
   if (!review) return notFound();
 
   const provider = config.providers.find((p) => p.id === review.providerId);
   if (!provider) return notFound();
 
-  // Get rating from ranking config
-  const { providerOrder, positions } = config.ranking;
-  const rankIndex = providerOrder.indexOf(provider.id);
-  const position = rankIndex >= 0 && positions[rankIndex] ? positions[rankIndex] : { score: 8.0, label: "Good" };
-
-  // JSON-LD: Review schema
+  // JSON-LD
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
@@ -70,238 +58,196 @@ export default async function ReviewPage({
     reviewBody: review.reviewIntro,
     datePublished: "2026-06-01",
     dateModified: new Date().toISOString().split("T")[0],
-    author: {
-      "@type": "Organization",
-      name: "TopWeightLoss Team",
-      url: "https://www.topweightloss.io",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "topweightloss.io",
-      url: "https://www.topweightloss.io",
-    },
-    itemReviewed: {
-      "@type": "Product",
-      name: provider.name,
-      description: review.shortSummary,
-    },
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: position.score,
-      bestRating: 10,
-      worstRating: 0,
-    },
+    author: { "@type": "Organization", name: "TopWeightLoss Team", url: "https://www.topweightloss.io" },
+    publisher: { "@type": "Organization", name: "topweightloss.io", url: "https://www.topweightloss.io" },
+    itemReviewed: { "@type": "Product", name: provider.name, description: review.shortSummary },
   };
 
-  // JSON-LD: BreadcrumbList
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://www.topweightloss.io",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Reviews",
-        item: "https://www.topweightloss.io/reviews",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: `${provider.name} Review`,
-        item: `https://www.topweightloss.io/reviews/${slug}`,
-      },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.topweightloss.io" },
+      { "@type": "ListItem", position: 2, name: "Reviews", item: "https://www.topweightloss.io/reviews" },
+      { "@type": "ListItem", position: 3, name: `${provider.name} Review`, item: `https://www.topweightloss.io/reviews/${slug}` },
     ],
   };
 
+  const relatedBattles = (config.battles ?? []).filter(
+    (b) => b.provider1Id === provider.id || b.provider2Id === provider.id
+  );
+  const relatedArticles = (config.articles ?? []).slice(0, 3);
+
   return (
     <div className="min-h-screen bg-gray-50">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <div className="mx-auto max-w-[1000px] px-4 py-12 sm:px-6">
-        <Breadcrumbs
-          items={[
-            { label: "Home", href: "/" },
-            { label: "Reviews", href: "/reviews" },
-            { label: `${provider.name} Review` },
-          ]}
-        />
-        {/* Header */}
-        <div className="mb-8 rounded-xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-          <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
+      {/* Hero header */}
+      <div className="border-b border-gray-200 bg-white">
+        <div className="mx-auto max-w-[1000px] px-4 pb-8 pt-8 sm:px-6 sm:pt-10">
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Reviews", href: "/reviews" },
+              { label: `${provider.name} Review` },
+            ]}
+          />
+
+          <div className="mt-4 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-5">
               <div className="flex h-[50px] w-[130px] shrink-0 items-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={provider.logo}
-                  alt={`${provider.name} logo`}
-                  className="max-h-full max-w-full object-contain"
-                />
+                <img src={provider.logo} alt={`${provider.name} logo`} className="max-h-full max-w-full object-contain" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-[#191919]">
+                <h1 className="text-[24px] font-bold text-[#191919] sm:text-[28px]">
                   {provider.name} Review
                 </h1>
-                <p className="mt-1 text-sm text-gray-500">
+                <p className="mt-0.5 text-[14px] text-gray-500">
                   {provider.tagline}
                 </p>
-                <p className="mt-1 text-xs text-gray-400">
+                <p className="mt-0.5 text-[12px] text-gray-400">
                   Last updated: July 2026
                 </p>
               </div>
             </div>
-            <RatingBadge
-              rating={position.score}
-              label={position.label}
-            />
+            <ProviderCta
+              href={provider.affiliateUrl}
+              providerName={provider.name}
+              providerSlug={provider.id}
+              pageType="review"
+              sourceFlow="provider_review"
+              className="flex h-[44px] items-center justify-center gap-2 rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61] sm:shrink-0"
+            >
+              Visit {provider.name}
+              <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
+            </ProviderCta>
           </div>
+        </div>
+      </div>
 
-          <p className="mt-6 text-base leading-relaxed text-gray-700">
-            {review.reviewIntro}
-          </p>
-
-          <ProviderCta
-            href={provider.affiliateUrl}
-            providerName={provider.name}
-            providerSlug={provider.id}
-            pageType="review"
-            sourceFlow="provider_review"
-            className="mt-6 flex h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-[#0C4B75] text-[16px] font-bold text-white transition-colors hover:bg-[#093d61] sm:w-auto sm:px-8"
-          >
-            Visit {provider.name}
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
-          </ProviderCta>
+      <div className="mx-auto max-w-[1000px] px-4 py-8 sm:px-6">
+        {/* Quick summary strip */}
+        <div className="mb-8 flex flex-wrap items-center gap-4 rounded-xl border border-gray-200 bg-white px-5 py-4 sm:gap-6">
+          <div className="flex items-center gap-2 text-[13px] text-gray-600">
+            <Shield className="h-4 w-4 text-[#0C4B75]" strokeWidth={1.5} />
+            Licensed Providers
+          </div>
+          <div className="flex items-center gap-2 text-[13px] text-gray-600">
+            <Clock className="h-4 w-4 text-[#0C4B75]" strokeWidth={1.5} />
+            Fast Home Delivery
+          </div>
+          <div className="flex items-center gap-2 text-[13px] text-gray-600">
+            <Users className="h-4 w-4 text-[#0C4B75]" strokeWidth={1.5} />
+            Ongoing Support
+          </div>
         </div>
 
-        {/* Key Features */}
-        <Section title="Key Features">
-          <ul className="space-y-3">
-            {review.keyFeatures.map((feature) => (
-              <li
-                key={feature}
-                className="flex items-start gap-3 text-base text-gray-700"
-              >
-                <svg
-                  className="mt-0.5 h-5 w-5 shrink-0 text-[#0B5E9E]"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M20 6 9 17l-5-5" />
-                </svg>
-                {feature}
-              </li>
-            ))}
-          </ul>
-        </Section>
+        {/* Intro */}
+        <div className="mb-8">
+          <p className="text-[16px] leading-[1.8] text-gray-600">
+            {review.reviewIntro}
+          </p>
+        </div>
+
+        {/* Key Features + Pricing side by side on desktop */}
+        <div className="mb-6 grid gap-6 sm:grid-cols-2">
+          <Section title="Key Features">
+            <ul className="space-y-2.5">
+              {review.keyFeatures.map((feature) => (
+                <li key={feature} className="flex items-start gap-2.5 text-[14px] text-gray-700">
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" strokeWidth={2} />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </Section>
+
+          <Section title="Treatment Options">
+            <ul className="space-y-2.5">
+              {review.treatmentOptions.map((option) => (
+                <li key={option} className="flex items-start gap-2.5 text-[14px] text-gray-700">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0C4B75]" />
+                  {option}
+                </li>
+              ))}
+            </ul>
+          </Section>
+        </div>
 
         {/* Pricing */}
         <Section title="Pricing">
-          <p className="text-base leading-relaxed text-gray-700">
+          <p className="text-[15px] leading-[1.75] text-gray-600">
             {review.pricingSummary}
           </p>
         </Section>
 
-        {/* Treatment Options */}
-        <Section title="Treatment Options">
-          <ul className="space-y-3">
-            {review.treatmentOptions.map((option) => (
-              <li
-                key={option}
-                className="flex items-start gap-3 text-base text-gray-700"
-              >
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0C4B75]" />
-                {option}
-              </li>
-            ))}
-          </ul>
-        </Section>
-
         {/* Pros & Cons */}
-        <Section title="Pros & Cons">
-          <div className="grid gap-6 sm:grid-cols-2">
-            <div>
-              <h4 className="mb-3 text-sm font-bold uppercase tracking-wider text-green-700">
+        <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+          <div className="grid sm:grid-cols-2">
+            <div className="p-6 sm:border-r sm:border-gray-100">
+              <h3 className="mb-4 flex items-center gap-2 text-[15px] font-bold text-emerald-700">
+                <div className="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100">
+                  <Check className="h-3.5 w-3.5 text-emerald-600" strokeWidth={2.5} />
+                </div>
                 Pros
-              </h4>
+              </h3>
               <ul className="space-y-2.5">
                 {review.pros.map((pro) => (
-                  <li
-                    key={pro}
-                    className="flex items-start gap-2.5 text-sm text-gray-700"
-                  >
-                    <svg
-                      className="mt-0.5 h-4 w-4 shrink-0 text-green-600"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M20 6 9 17l-5-5" />
-                    </svg>
+                  <li key={pro} className="flex items-start gap-2.5 text-[14px] text-gray-700">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" strokeWidth={2} />
                     {pro}
                   </li>
                 ))}
               </ul>
             </div>
-            <div>
-              <h4 className="mb-3 text-sm font-bold uppercase tracking-wider text-red-700">
+            <div className="border-t border-gray-100 p-6 sm:border-t-0">
+              <h3 className="mb-4 flex items-center gap-2 text-[15px] font-bold text-red-600">
+                <div className="flex h-6 w-6 items-center justify-center rounded-full bg-red-100">
+                  <X className="h-3.5 w-3.5 text-red-500" strokeWidth={2.5} />
+                </div>
                 Cons
-              </h4>
+              </h3>
               <ul className="space-y-2.5">
                 {review.cons.map((con) => (
-                  <li
-                    key={con}
-                    className="flex items-start gap-2.5 text-sm text-gray-700"
-                  >
-                    <svg
-                      className="mt-0.5 h-4 w-4 shrink-0 text-red-500"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M18 6 6 18" />
-                      <path d="m6 6 12 12" />
-                    </svg>
+                  <li key={con} className="flex items-start gap-2.5 text-[14px] text-gray-700">
+                    <X className="mt-0.5 h-4 w-4 shrink-0 text-red-400" strokeWidth={2} />
                     {con}
                   </li>
                 ))}
               </ul>
             </div>
           </div>
-        </Section>
+        </div>
+
+        {/* Mid-page CTA */}
+        <div className="mb-6 rounded-xl border border-[#0C4B75]/10 bg-[#0C4B75]/[0.03] p-5 text-center sm:p-6">
+          <p className="mb-3 text-[16px] font-bold text-[#191919]">
+            Interested in {provider.name}?
+          </p>
+          <p className="mb-4 text-[13px] text-gray-500">
+            Visit their site to check eligibility and current pricing.
+          </p>
+          <ProviderCta
+            href={provider.affiliateUrl}
+            providerName={provider.name}
+            providerSlug={provider.id}
+            pageType="review"
+            sourceFlow="provider_review"
+            className="inline-flex h-[44px] items-center justify-center gap-2 rounded-lg bg-[#0C4B75] px-8 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]"
+          >
+            Visit {provider.name}
+            <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
+          </ProviderCta>
+        </div>
 
         {/* Best For */}
         <Section title="Who It's Best For">
-          <ul className="space-y-3">
+          <ul className="space-y-2.5">
             {review.bestFor.map((item) => (
-              <li
-                key={item}
-                className="flex items-start gap-3 text-base text-gray-700"
-              >
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0C4B75]" />
+              <li key={item} className="flex items-start gap-2.5 text-[14px] text-gray-700">
+                <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-[#0C4B75]" strokeWidth={2} />
                 {item}
               </li>
             ))}
@@ -309,63 +255,74 @@ export default async function ReviewPage({
         </Section>
 
         {/* Final Verdict */}
-        <Section title="Final Verdict">
-          <p className="text-base leading-relaxed text-gray-700">
-            {review.finalVerdict}
-          </p>
-          <ProviderCta
-            href={provider.affiliateUrl}
-            providerName={provider.name}
-            providerSlug={provider.id}
-            pageType="review"
-            sourceFlow="provider_review"
-            className="mt-6 flex h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-[#0C4B75] text-[16px] font-bold text-white transition-colors hover:bg-[#093d61] sm:w-auto sm:px-8"
-          >
-            Visit {provider.name}
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
-          </ProviderCta>
-        </Section>
+        <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+          <div className="border-b border-gray-100 bg-gray-50/70 px-6 py-4">
+            <h3 className="text-[18px] font-bold text-[#191919]">Final Verdict</h3>
+          </div>
+          <div className="p-6">
+            <p className="text-[15px] leading-[1.75] text-gray-600">
+              {review.finalVerdict}
+            </p>
+            <ProviderCta
+              href={provider.affiliateUrl}
+              providerName={provider.name}
+              providerSlug={provider.id}
+              pageType="review"
+              sourceFlow="provider_review"
+              className="mt-5 flex h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-[#0C4B75] text-[15px] font-bold text-white transition-colors hover:bg-[#093d61] sm:w-auto sm:px-8"
+            >
+              Visit {provider.name}
+              <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
+            </ProviderCta>
+          </div>
+        </div>
 
-        {/* Related content — battles & articles */}
-        {(() => {
-          const relatedBattles = (config.battles ?? []).filter(
-            (b) => b.provider1Id === provider.id || b.provider2Id === provider.id
-          );
-          const relatedArticles = (config.articles ?? []).slice(0, 3);
-          if (relatedBattles.length === 0 && relatedArticles.length === 0) return null;
-          return (
-            <div className="mb-6">
-              <h3 className="mb-4 text-lg font-bold text-[#191919]">Related</h3>
-              <div className="space-y-2">
-                {relatedBattles.map((battle) => {
-                  const otherProvider = config.providers.find(
-                    (p) => p.id === (battle.provider1Id === provider.id ? battle.provider2Id : battle.provider1Id)
-                  );
-                  return (
-                    <Link
-                      key={battle.slug}
-                      href={`/${battle.slug}`}
-                      className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-medium text-[#191919] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
-                    >
-                      <span className="text-[#0C4B75]">{provider.name} vs {otherProvider?.name}</span>
-                      <span className="ml-auto text-[12px] text-gray-400">Compare</span>
-                    </Link>
-                  );
-                })}
-                {relatedArticles.map((article) => (
+        {/* Not sure? Quiz CTA */}
+        <div className="mb-8 rounded-xl border border-gray-200 bg-white p-5 text-center shadow-sm">
+          <p className="mb-1 text-[15px] font-bold text-[#191919]">Not sure if {provider.name} is right for you?</p>
+          <p className="mb-4 text-[13px] text-gray-500">Take our free quiz and get a personalized provider recommendation.</p>
+          <Link
+            href="/find-your-match"
+            className="inline-flex h-[42px] items-center justify-center gap-2 rounded-lg border border-[#0C4B75] px-6 text-[14px] font-bold text-[#0C4B75] transition-colors hover:bg-[#0C4B75]/5"
+          >
+            Find Your Match
+            <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
+          </Link>
+        </div>
+
+        {/* Related content */}
+        {(relatedBattles.length > 0 || relatedArticles.length > 0) && (
+          <div className="mb-6">
+            <h3 className="mb-4 text-[18px] font-bold text-[#191919]">Related</h3>
+            <div className="space-y-2">
+              {relatedBattles.map((battle) => {
+                const otherProvider = config.providers.find(
+                  (p) => p.id === (battle.provider1Id === provider.id ? battle.provider2Id : battle.provider1Id)
+                );
+                return (
                   <Link
-                    key={article.slug}
-                    href={`/articles/${article.slug}`}
+                    key={battle.slug}
+                    href={`/${battle.slug}`}
                     className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-medium text-[#191919] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
                   >
-                    <span className="truncate">{article.title}</span>
-                    <span className="ml-auto shrink-0 text-[12px] text-gray-400">{article.readTime}</span>
+                    <span className="text-[#0C4B75]">{provider.name} vs {otherProvider?.name}</span>
+                    <span className="ml-auto text-[12px] text-gray-400">Compare</span>
                   </Link>
-                ))}
-              </div>
+                );
+              })}
+              {relatedArticles.map((article) => (
+                <Link
+                  key={article.slug}
+                  href={`/articles/${article.slug}`}
+                  className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-medium text-[#191919] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
+                >
+                  <span className="truncate">{article.title}</span>
+                  <span className="ml-auto shrink-0 text-[12px] text-gray-400">{article.readTime}</span>
+                </Link>
+              ))}
             </div>
-          );
-        })()}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -379,8 +336,8 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <div className="mb-6 rounded-xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-      <h3 className="mb-4 text-xl font-bold text-[#191919]">{title}</h3>
+    <div className="mb-6 rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+      <h3 className="mb-4 text-[17px] font-bold text-[#191919]">{title}</h3>
       {children}
     </div>
   );
