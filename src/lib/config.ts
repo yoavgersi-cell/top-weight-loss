@@ -143,6 +143,7 @@ export interface BattleFeatureRow {
   feature: string;
   provider1Value: string;
   provider2Value: string;
+  highlight?: "provider1" | "provider2" | "both" | "none";
 }
 
 export interface BattleData {

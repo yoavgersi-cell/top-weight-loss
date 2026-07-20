@@ -310,7 +310,15 @@ export default async function BattlePage({
           </div>
 
           {/* ───── FEATURE COMPARISON TABLE ───── */}
-          {battle.features && battle.features.length > 0 && (
+          {battle.features && battle.features.length > 0 && (() => {
+            const getIcon = (row: typeof battle.features[0], which: "p1" | "p2") => {
+              const h = row.highlight ?? "both";
+              const isHighlighted = h === "both" || (which === "p1" && h === "provider1") || (which === "p2" && h === "provider2");
+              const isDimmed = h !== "both" && h !== "none" && !isHighlighted;
+              return { isHighlighted, isDimmed };
+            };
+
+            return (
             <div className="mb-14">
               <h2 className="mb-6 text-[22px] font-bold text-[#191919]">
                 Side-by-Side Comparison
@@ -320,72 +328,99 @@ export default async function BattlePage({
               <div className="hidden sm:block overflow-hidden rounded-2xl border border-gray-200 bg-white">
                 <table className="w-full text-left text-[14px]">
                   <thead>
-                    <tr className="border-b border-gray-100">
-                      <th className="bg-gray-50 px-6 py-4 text-[12px] font-bold uppercase tracking-wider text-gray-400">
+                    <tr className="border-b border-gray-200">
+                      <th className="bg-gray-50 px-6 py-4 text-[12px] font-bold uppercase tracking-wider text-gray-400 w-[200px]">
                         Feature
                       </th>
-                      <th className="bg-[#0C4B75]/[0.03] px-6 py-4 text-[12px] font-bold uppercase tracking-wider text-[#0C4B75]">
+                      <th className="px-6 py-4 text-[12px] font-bold uppercase tracking-wider text-[#191919]">
                         {p1.name}
                       </th>
-                      <th className="bg-gray-50 px-6 py-4 text-[12px] font-bold uppercase tracking-wider text-gray-600">
+                      <th className="px-6 py-4 text-[12px] font-bold uppercase tracking-wider text-[#191919]">
                         {p2.name}
                       </th>
                     </tr>
                   </thead>
                   <tbody>
-                    {battle.features.map((row, i) => (
-                      <tr
-                        key={i}
-                        className={i < battle.features.length - 1 ? "border-b border-gray-100" : ""}
-                      >
-                        <td className="bg-gray-50/50 px-6 py-4 font-semibold text-[#191919]">
-                          {row.feature}
-                        </td>
-                        <td className="px-6 py-4 text-gray-600">
-                          {row.provider1Value}
-                        </td>
-                        <td className="px-6 py-4 text-gray-600">
-                          {row.provider2Value}
-                        </td>
-                      </tr>
-                    ))}
+                    {battle.features.map((row, i) => {
+                      const p1s = getIcon(row, "p1");
+                      const p2s = getIcon(row, "p2");
+                      return (
+                        <tr
+                          key={i}
+                          className={`${i < battle.features.length - 1 ? "border-b border-gray-100" : ""} ${i % 2 === 0 ? "bg-white" : "bg-gray-50/40"}`}
+                        >
+                          <td className="px-6 py-4 font-semibold text-[#191919] bg-gray-50/70">
+                            {row.feature}
+                          </td>
+                          <td className={`px-6 py-4 ${p1s.isDimmed ? "text-gray-400" : "text-gray-700"}`}>
+                            <div className="flex items-start gap-2">
+                              {p1s.isHighlighted ? (
+                                <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" strokeWidth={2.5} />
+                              ) : p1s.isDimmed ? (
+                                <Minus className="mt-0.5 h-4 w-4 shrink-0 text-gray-300" strokeWidth={2} />
+                              ) : null}
+                              {row.provider1Value}
+                            </div>
+                          </td>
+                          <td className={`px-6 py-4 ${p2s.isDimmed ? "text-gray-400" : "text-gray-700"}`}>
+                            <div className="flex items-start gap-2">
+                              {p2s.isHighlighted ? (
+                                <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" strokeWidth={2.5} />
+                              ) : p2s.isDimmed ? (
+                                <Minus className="mt-0.5 h-4 w-4 shrink-0 text-gray-300" strokeWidth={2} />
+                              ) : null}
+                              {row.provider2Value}
+                            </div>
+                          </td>
+                        </tr>
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>
 
               {/* Mobile stacked */}
               <div className="space-y-3 sm:hidden">
-                {battle.features.map((row, i) => (
-                  <div
-                    key={i}
-                    className="rounded-xl border border-gray-200 bg-white p-4"
-                  >
-                    <p className="mb-3 text-[13px] font-bold text-[#191919]">
-                      {row.feature}
-                    </p>
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="rounded-lg bg-[#0C4B75]/[0.03] p-2.5">
-                        <p className="mb-0.5 text-[11px] font-semibold uppercase tracking-wider text-[#0C4B75]/70">
-                          {p1.name}
-                        </p>
-                        <p className="text-[13px] text-gray-600">
-                          {row.provider1Value}
-                        </p>
-                      </div>
-                      <div className="rounded-lg bg-gray-50 p-2.5">
-                        <p className="mb-0.5 text-[11px] font-semibold uppercase tracking-wider text-gray-600/70">
-                          {p2.name}
-                        </p>
-                        <p className="text-[13px] text-gray-600">
-                          {row.provider2Value}
-                        </p>
+                {battle.features.map((row, i) => {
+                  const p1s = getIcon(row, "p1");
+                  const p2s = getIcon(row, "p2");
+                  return (
+                    <div
+                      key={i}
+                      className="rounded-xl border border-gray-200 bg-white p-4"
+                    >
+                      <p className="mb-3 text-[13px] font-bold text-[#191919]">
+                        {row.feature}
+                      </p>
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className={`rounded-lg p-2.5 ${p1s.isHighlighted ? "bg-emerald-50" : "bg-gray-50"}`}>
+                          <p className="mb-1 text-[11px] font-semibold uppercase tracking-wider text-gray-500">
+                            {p1.name}
+                          </p>
+                          <div className={`flex items-start gap-1.5 text-[13px] ${p1s.isDimmed ? "text-gray-400" : "text-gray-700"}`}>
+                            {p1s.isHighlighted && <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2.5} />}
+                            {p1s.isDimmed && <Minus className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gray-300" strokeWidth={2} />}
+                            {row.provider1Value}
+                          </div>
+                        </div>
+                        <div className={`rounded-lg p-2.5 ${p2s.isHighlighted ? "bg-emerald-50" : "bg-gray-50"}`}>
+                          <p className="mb-1 text-[11px] font-semibold uppercase tracking-wider text-gray-500">
+                            {p2.name}
+                          </p>
+                          <div className={`flex items-start gap-1.5 text-[13px] ${p2s.isDimmed ? "text-gray-400" : "text-gray-700"}`}>
+                            {p2s.isHighlighted && <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2.5} />}
+                            {p2s.isDimmed && <Minus className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gray-300" strokeWidth={2} />}
+                            {row.provider2Value}
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
-          )}
+            );
+          })()}
 
           {/* ───── VERDICT ───── */}
           <div className="mb-14 overflow-hidden rounded-2xl border border-gray-200 bg-white">
