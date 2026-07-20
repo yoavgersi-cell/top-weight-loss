@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Clock, ArrowLeft, ArrowRight } from "lucide-react";
+import { Clock, ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound } from "next/navigation";
@@ -63,6 +63,17 @@ export default async function ArticlePage({
   const currentIndex = articles.findIndex((a) => a.slug === slug);
   const nextArticle = articles[currentIndex + 1] || null;
   const prevArticle = currentIndex > 0 ? articles[currentIndex - 1] : null;
+
+  // Top providers for inline CTA
+  const { providerOrder, positions } = config.ranking;
+  const topProviders = providerOrder
+    .map((id, index) => {
+      const provider = config.providers.find((p) => p.id === id);
+      if (!provider) return null;
+      const position = positions[index] || positions[positions.length - 1];
+      return { ...provider, rating: position.score, tagline: provider.tagline };
+    })
+    .filter(Boolean) as Array<{ id: string; name: string; logo: string; tagline: string; affiliateUrl: string; rating: number }>;
 
   // Related articles: same category first, then others, exclude self, max 3
   const relatedArticles = [
@@ -226,15 +237,43 @@ export default async function ArticlePage({
           <div>
           <article className="space-y-8">
             {article.sections.map((section, i) => (
-              <section key={i} id={slugifyHeading(section.heading)}>
-                <h2 className="mb-3 text-[20px] font-bold text-[#191919] scroll-mt-24">
-                  {section.heading}
-                </h2>
-                <p
-                  className="text-[16px] leading-[1.75] text-gray-600 [&_a]:text-[#0C4B75] [&_a]:font-medium [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-[#093d61]"
-                  dangerouslySetInnerHTML={{ __html: section.body }}
-                />
-              </section>
+              <div key={i}>
+                <section id={slugifyHeading(section.heading)}>
+                  <h2 className="mb-3 text-[20px] font-bold text-[#191919] scroll-mt-24">
+                    {section.heading}
+                  </h2>
+                  <p
+                    className="text-[16px] leading-[1.75] text-gray-600 [&_a]:text-[#0C4B75] [&_a]:font-medium [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-[#093d61]"
+                    dangerouslySetInnerHTML={{ __html: section.body }}
+                  />
+                </section>
+
+                {/* Inline provider CTA after 2nd section */}
+                {i === 1 && topProviders.length > 0 && (
+                  <div className="my-8 rounded-lg border border-gray-200 bg-white px-5 py-4">
+                    <p className="mb-3 text-[13px] font-bold uppercase tracking-wider text-gray-400">Top-Rated Providers</p>
+                    <div className="space-y-2.5">
+                      {topProviders.slice(0, 3).map((tp) => (
+                        <a
+                          key={tp.id}
+                          href={tp.affiliateUrl}
+                          className="flex items-center justify-between rounded-lg border border-gray-100 bg-[#fafbfc] px-4 py-3 transition-colors hover:border-[#0C4B75]/20 hover:bg-[#0C4B75]/[0.02]"
+                        >
+                          <div className="flex items-center gap-3">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src={tp.logo} alt={tp.name} className="h-[24px] w-[80px] object-contain object-left" />
+                            <span className="text-[13px] text-gray-500">{tp.tagline}</span>
+                          </div>
+                          <ArrowUpRight className="h-4 w-4 shrink-0 text-[#0C4B75]" strokeWidth={1.5} />
+                        </a>
+                      ))}
+                    </div>
+                    <a href="/find-your-match" className="mt-3 block text-center text-[13px] font-semibold text-[#0C4B75] hover:underline">
+                      Not sure? Take our free matching quiz →
+                    </a>
+                  </div>
+                )}
+              </div>
             ))}
           </article>
 
