@@ -85,6 +85,13 @@ export default async function HomePage() {
           name: product.name,
           description: product.tagline,
           url: `https://www.topweightloss.io/reviews/${product.id}`,
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: product.rating,
+            bestRating: 10,
+            worstRating: 0,
+            ratingCount: 1,
+          },
           review: {
             "@type": "Review",
             reviewRating: {
