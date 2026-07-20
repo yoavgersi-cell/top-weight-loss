@@ -6,7 +6,7 @@ import { EditorialContent } from "@/components/editorial-content";
 import { LandingEditorial } from "@/components/landing-editorial";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound } from "next/navigation";
-import { Trophy, ArrowRight, Check, Minus } from "lucide-react";
+import { ArrowRight, Check, Minus } from "lucide-react";
 import { ProviderCta } from "@/components/provider-cta";
 
 export const revalidate = 60;
@@ -153,12 +153,9 @@ export default async function BattlePage({
   const p1Score = p1Rank >= 0 && positions[p1Rank] ? positions[p1Rank] : null;
   const p2Score = p2Rank >= 0 && positions[p2Rank] ? positions[p2Rank] : null;
 
-  const winner = battle.winnerId === p1.id ? p1 : p2;
-  const loser = battle.winnerId === p1.id ? p2 : p1;
-
-  const getCategoryWinnerName = (cat: (typeof battle.categories)[0]) => {
-    if (cat.winner === "tie") return "Tie";
-    return cat.winner === "provider1" ? p1.name : p2.name;
+  const getCategoryLabel = (cat: (typeof battle.categories)[0]) => {
+    if (cat.winner === "tie") return "Close call";
+    return cat.winner === "provider1" ? `Edge: ${p1.name}` : `Edge: ${p2.name}`;
   };
 
   const schemaData = {
@@ -211,26 +208,13 @@ export default async function BattlePage({
             </div>
 
             {[
-              { provider: p1, score: p1Score, isWinner: battle.winnerId === p1.id },
-              { provider: p2, score: p2Score, isWinner: battle.winnerId === p2.id },
-            ].map(({ provider, score, isWinner }) => (
+              { provider: p1, score: p1Score },
+              { provider: p2, score: p2Score },
+            ].map(({ provider, score }) => (
               <div
                 key={provider.id}
-                className={`relative rounded-2xl border bg-white px-6 pb-6 pt-8 ${
-                  isWinner
-                    ? "border-[#0C4B75]/25 shadow-[0_4px_20px_rgba(12,75,117,0.1)]"
-                    : "border-gray-200 shadow-sm"
-                }`}
+                className="relative rounded-2xl border border-gray-200 bg-white px-6 pb-6 pt-8 shadow-sm"
               >
-                {isWinner && (
-                  <div className="absolute -top-3 left-6">
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#0C4B75] to-[#1a7ab5] px-3.5 py-1 text-[11px] font-bold text-white uppercase tracking-wide shadow-sm">
-                      <Trophy className="h-3 w-3" strokeWidth={2} />
-                      Winner
-                    </span>
-                  </div>
-                )}
-
                 <div className="mb-5 flex h-[44px] w-[120px] items-center">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
@@ -242,14 +226,14 @@ export default async function BattlePage({
 
                 {score && (
                   <div className="mb-1 flex items-baseline gap-1.5">
-                    <span className={`text-[32px] font-extrabold ${isWinner ? "text-[#0C4B75]" : "text-[#191919]"}`}>
+                    <span className="text-[32px] font-extrabold text-[#191919]">
                       {score.score}
                     </span>
                     <span className="text-[14px] font-semibold text-gray-300">/10</span>
                   </div>
                 )}
                 {score && (
-                  <p className={`mb-5 text-[13px] font-semibold ${isWinner ? "text-[#0C4B75]/60" : "text-gray-400"}`}>
+                  <p className="mb-5 text-[13px] font-semibold text-gray-400">
                     {score.label}
                   </p>
                 )}
@@ -260,11 +244,7 @@ export default async function BattlePage({
                   providerSlug={provider.id}
                   pageType="battle"
                   sourceFlow="battle_page"
-                  className={`flex h-[44px] w-full items-center justify-center gap-1.5 rounded-xl text-[14px] font-bold transition-all ${
-                    isWinner
-                      ? "bg-gradient-to-r from-[#0C4B75] to-[#1a7ab5] text-white shadow-sm hover:shadow-md"
-                      : "border border-gray-300 text-gray-600 hover:border-[#0C4B75] hover:text-[#0C4B75]"
-                  }`}
+                  className="flex h-[44px] w-full items-center justify-center gap-1.5 rounded-xl border border-gray-300 text-[14px] font-bold text-gray-600 transition-all hover:border-[#0C4B75] hover:text-[#0C4B75]"
                 >
                   Visit {provider.name}
                   <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
@@ -283,39 +263,23 @@ export default async function BattlePage({
           {/* ───── CATEGORY WINNERS ───── */}
           <div className="mb-14">
             <h2 className="mb-6 text-[22px] font-bold text-[#191919]">
-              Winner by Category
+              How They Compare
             </h2>
 
             <div className="space-y-4">
               {battle.categories.map((cat, i) => {
-                const catWinnerName = getCategoryWinnerName(cat);
-                const isTie = cat.winner === "tie";
-                const isP1 = cat.winner === "provider1";
-
+                const label = getCategoryLabel(cat);
                 return (
                   <div
                     key={i}
-                    className={`rounded-2xl border bg-white p-6 sm:p-7 ${
-                      isTie
-                        ? "border-gray-200"
-                        : "border-gray-200"
-                    }`}
+                    className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-7"
                   >
-                    {/* Colored top accent */}
                     <div className="mb-4 flex flex-wrap items-center gap-3">
                       <h3 className="text-[16px] font-bold text-[#191919]">
                         {cat.name}
                       </h3>
-                      <span
-                        className={`rounded-full px-3 py-0.5 text-[11px] font-bold uppercase tracking-wide ${
-                          isTie
-                            ? "bg-amber-50 text-amber-600"
-                            : isP1
-                              ? "bg-[#0C4B75]/8 text-[#0C4B75]"
-                              : "bg-teal-50 text-teal-700"
-                        }`}
-                      >
-                        {isTie ? "Tie" : `Winner: ${catWinnerName}`}
+                      <span className="rounded-full bg-gray-100 px-3 py-0.5 text-[11px] font-semibold text-gray-500">
+                        {label}
                       </span>
                     </div>
 
@@ -331,9 +295,7 @@ export default async function BattlePage({
                             className="flex items-start gap-2.5 text-[13px] text-gray-600"
                           >
                             <Check
-                              className={`mt-0.5 h-3.5 w-3.5 shrink-0 ${
-                                isTie ? "text-amber-500" : isP1 ? "text-[#0C4B75]" : "text-teal-600"
-                              }`}
+                              className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gray-400"
                               strokeWidth={2}
                             />
                             {point}
@@ -365,7 +327,7 @@ export default async function BattlePage({
                       <th className="bg-[#0C4B75]/[0.03] px-6 py-4 text-[12px] font-bold uppercase tracking-wider text-[#0C4B75]">
                         {p1.name}
                       </th>
-                      <th className="bg-teal-50/40 px-6 py-4 text-[12px] font-bold uppercase tracking-wider text-teal-700">
+                      <th className="bg-gray-50 px-6 py-4 text-[12px] font-bold uppercase tracking-wider text-gray-600">
                         {p2.name}
                       </th>
                     </tr>
@@ -410,8 +372,8 @@ export default async function BattlePage({
                           {row.provider1Value}
                         </p>
                       </div>
-                      <div className="rounded-lg bg-teal-50/40 p-2.5">
-                        <p className="mb-0.5 text-[11px] font-semibold uppercase tracking-wider text-teal-700/70">
+                      <div className="rounded-lg bg-gray-50 p-2.5">
+                        <p className="mb-0.5 text-[11px] font-semibold uppercase tracking-wider text-gray-600/70">
                           {p2.name}
                         </p>
                         <p className="text-[13px] text-gray-600">
@@ -426,26 +388,18 @@ export default async function BattlePage({
           )}
 
           {/* ───── VERDICT ───── */}
-          <div className="mb-14 overflow-hidden rounded-2xl border border-[#0C4B75]/15 bg-gradient-to-br from-[#0C4B75]/[0.03] to-[#1a8cd8]/[0.04]">
-            {/* Colored top bar */}
-            <div className="h-1 bg-gradient-to-r from-[#0C4B75] via-[#1a8cd8] to-[#0C4B75]" />
+          <div className="mb-14 overflow-hidden rounded-2xl border border-gray-200 bg-white">
             <div className="p-6 sm:p-8">
-              <div className="mb-5 flex items-center gap-2.5">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#0C4B75]/10">
-                  <Trophy className="h-4 w-4 text-[#0C4B75]" strokeWidth={1.5} />
-                </div>
-                <h2 className="text-[22px] font-bold text-[#191919]">Our Verdict</h2>
-              </div>
+              <h2 className="mb-5 text-[22px] font-bold text-[#191919]">The Bottom Line</h2>
 
               <p className="mb-6 text-[15px] leading-[1.75] text-gray-600">
                 {battle.verdict}
               </p>
 
               <div className="grid gap-6 sm:grid-cols-2">
-                {/* Winner points */}
-                <div className="rounded-xl bg-white/70 p-5">
-                  <p className="mb-3 text-[13px] font-bold uppercase tracking-wider text-[#0C4B75]">
-                    Choose {winner.name} if you want
+                <div className="rounded-xl bg-gray-50 p-5">
+                  <p className="mb-3 text-[13px] font-bold uppercase tracking-wider text-[#191919]">
+                    Choose {p1.name} if you want
                   </p>
                   <ul className="space-y-2">
                     {(battle.verdictWinnerPoints ?? []).map((point, i) => (
@@ -453,17 +407,16 @@ export default async function BattlePage({
                         key={i}
                         className="flex items-start gap-2.5 text-[14px] text-gray-600"
                       >
-                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#0C4B75]" strokeWidth={2} />
+                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-gray-400" strokeWidth={2} />
                         {point}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                {/* Loser points */}
-                <div className="rounded-xl bg-white/70 p-5">
-                  <p className="mb-3 text-[13px] font-bold uppercase tracking-wider text-teal-700">
-                    Choose {loser.name} if you prefer
+                <div className="rounded-xl bg-gray-50 p-5">
+                  <p className="mb-3 text-[13px] font-bold uppercase tracking-wider text-[#191919]">
+                    Choose {p2.name} if you prefer
                   </p>
                   <ul className="space-y-2">
                     {(battle.verdictLoserPoints ?? []).map((point, i) => (
@@ -471,7 +424,7 @@ export default async function BattlePage({
                         key={i}
                         className="flex items-start gap-2.5 text-[14px] text-gray-600"
                       >
-                        <Minus className="mt-0.5 h-4 w-4 shrink-0 text-teal-600" strokeWidth={2} />
+                        <Minus className="mt-0.5 h-4 w-4 shrink-0 text-gray-400" strokeWidth={2} />
                         {point}
                       </li>
                     ))}
@@ -479,25 +432,21 @@ export default async function BattlePage({
                 </div>
               </div>
 
-              <ProviderCta
-                href={winner.affiliateUrl}
-                providerName={winner.name}
-                providerSlug={winner.id}
-                pageType="battle"
-                sourceFlow="battle_page"
-                className="mt-7 flex h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0C4B75] to-[#1a7ab5] text-[15px] font-bold text-white shadow-sm transition-shadow hover:shadow-md sm:w-auto sm:px-8"
+              <Link
+                href="/find-your-match"
+                className="mt-7 flex h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-[#0C4B75] text-[15px] font-bold text-white transition-colors hover:bg-[#093d61] sm:w-auto sm:px-8"
               >
-                Visit {winner.name}
+                Find Your Best Match
                 <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
-              </ProviderCta>
+              </Link>
             </div>
           </div>
 
           {/* ───── BOTTOM CTAs ───── */}
           <div className="mb-6 grid grid-cols-2 gap-4">
             {[
-              { provider: p1, color: "from-[#0C4B75]/5 to-[#0C4B75]/[0.02]", hoverColor: "hover:border-[#0C4B75]/30", textColor: "text-[#0C4B75]" },
-              { provider: p2, color: "from-teal-50/50 to-teal-50/20", hoverColor: "hover:border-teal-300", textColor: "text-teal-700" },
+              { provider: p1, color: "from-gray-50 to-gray-50/50", hoverColor: "hover:border-[#0C4B75]/30", textColor: "text-[#191919]" },
+              { provider: p2, color: "from-gray-50 to-gray-50/50", hoverColor: "hover:border-[#0C4B75]/30", textColor: "text-[#191919]" },
             ].map(({ provider, color, hoverColor, textColor }) => (
               <ProviderCta
                 key={provider.id}
