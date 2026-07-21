@@ -48,6 +48,35 @@ export function EditorialContent() {
         Some programs focus on affordability, while others provide more personalized care and additional clinical services.
       </p>
 
+      {/* Editorial callout */}
+      <div className="mb-8 overflow-hidden rounded-xl bg-[#f5f7fa]">
+        <div className="flex flex-col sm:flex-row">
+          <div className="flex-1 p-6 sm:p-8">
+            <h3 className="mb-3 text-[18px] font-bold leading-tight text-[#0C4B75] sm:text-[20px]">
+              What To Know Before Starting GLP-1 Treatment
+            </h3>
+            <p className="mb-3 text-[14px] leading-[1.7] text-gray-600">
+              Before starting GLP-1 treatment, it&apos;s important to understand a few key things. These medications require a prescription from a licensed clinician and aren&apos;t suitable for everyone. Some people may experience side effects, especially during the first few weeks as the body adjusts.
+            </p>
+            <p className="mb-3 text-[14px] leading-[1.7] text-gray-600">
+              GLP-1s also tend to work best when combined with basic lifestyle habits like balanced nutrition and regular physical activity.
+            </p>
+            <p className="text-[14px] leading-[1.7] text-gray-600">
+              That&apos;s why choosing a provider that offers proper medical screening and ongoing follow-up support is essential for both safety and long-term success.
+            </p>
+          </div>
+          <div className="flex items-center justify-center sm:w-[260px] sm:shrink-0">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/editorial-injection.png"
+              alt="Woman preparing GLP-1 weight loss injection"
+              className="h-[200px] w-full object-cover sm:h-full sm:rounded-r-xl"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+
       <hr className="mb-8 border-gray-200" />
 
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">
