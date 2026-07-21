@@ -778,4 +778,170 @@ export const articles: Article[] = [
       },
     ],
   },
+  {
+    slug: "semaglutide-cost-per-month",
+    title: "How Much Does Semaglutide Cost Per Month in 2026?",
+    description:
+      "A full breakdown of semaglutide monthly costs — brand-name Ozempic/Wegovy vs compounded options, with and without insurance, and how to find the lowest price.",
+    category: "Advice",
+    readTime: "5 min read",
+    publishedAt: "2026-07-19",
+    updatedAt: "2026-07-21",
+    heroColor: "#F5F0FB",
+    author: "TopWeightLoss Team",
+    sections: [
+      {
+        heading: "Brand-Name Semaglutide Costs",
+        body: 'Brand-name semaglutide comes in two FDA-approved forms: <a href="/articles/ozempic-vs-wegovy-differences">Ozempic and Wegovy</a>. Ozempic costs approximately $900–$1,000/month at retail. Wegovy runs $1,300–$1,400/month. These prices are without insurance — with coverage, copays can range from $25–$500 depending on your plan.',
+      },
+      {
+        heading: "Compounded Semaglutide Costs",
+        body: 'Compounded semaglutide through telehealth providers typically costs $199–$400/month, including physician consultations and home delivery. This uses the same active ingredient as Ozempic/Wegovy but is produced by licensed compounding pharmacies. Read our <a href="/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name comparison</a> for more details.',
+      },
+      {
+        heading: "What's Included in the Monthly Price",
+        body: 'The best telehealth providers bundle everything into one fee: medication, medical consultations, dose adjustments, ongoing support, and home delivery. When comparing costs, always look at the total monthly price — not just the medication cost. Some providers charge separately for consultations or shipping. See our <a href="/articles/weight-loss-medication-cost-guide">full cost guide</a>.',
+      },
+      {
+        heading: "How to Get the Lowest Price",
+        body: 'The most affordable path to semaglutide is through telehealth providers offering compounded versions. <a href="/cheapest-weight-loss-medication">Compare the cheapest providers</a> on our platform. HSA/FSA accounts can also reduce your effective cost by 20–35%. <a href="/find-your-match">Take our quiz</a> to find a provider that fits your budget.',
+      },
+    ],
+  },
+  {
+    slug: "can-you-get-ozempic-without-doctor",
+    title: "Can You Get Ozempic Without a Doctor in 2026?",
+    description:
+      "Wondering if you can get Ozempic (semaglutide) without seeing a doctor in person? Here's how telehealth makes it possible — legally and safely.",
+    category: "Guide",
+    readTime: "5 min read",
+    publishedAt: "2026-07-20",
+    updatedAt: "2026-07-21",
+    heroColor: "#F0FAF5",
+    author: "TopWeightLoss Team",
+    sections: [
+      {
+        heading: "You Need a Prescription — But Not an Office Visit",
+        body: 'Semaglutide (the active ingredient in Ozempic and Wegovy) is a prescription medication — you cannot legally buy it without a doctor\'s authorization. However, you do NOT need to visit a doctor\'s office in person. Telehealth providers offer fully online medical evaluations where a licensed physician reviews your health profile and can prescribe semaglutide remotely.',
+      },
+      {
+        heading: "How Online Prescriptions Work",
+        body: 'The process is straightforward: you complete a health questionnaire online, a licensed physician reviews your information, and if you qualify, they prescribe the medication. Your prescription is filled and shipped directly to your home. The entire process takes 1–5 days from sign-up to delivery. Read our step-by-step <a href="/articles/how-to-get-ozempic-online">guide to getting Ozempic online</a>.',
+      },
+      {
+        heading: "Is It Safe and Legal?",
+        body: 'Yes — as long as you use a licensed telehealth provider with real physician oversight. The FDA allows telemedicine prescribing for most medications including GLP-1 drugs. The key is choosing a reputable platform with licensed, board-certified providers. See our guide on <a href="/articles/choosing-telehealth-weight-loss-provider">choosing the right telehealth provider</a>.',
+      },
+      {
+        heading: "Where to Get Started",
+        body: '<a href="/">Compare top-rated telehealth providers</a> on our platform, or <a href="/find-your-match">take our matching quiz</a> for a personalized recommendation. All providers we feature use licensed physicians for prescribing. Check our <a href="/articles/who-qualifies-for-glp1-weight-loss">eligibility guide</a> to see if you qualify before signing up.',
+      },
+    ],
+  },
+  {
+    slug: "best-glp1-for-weight-loss",
+    title: "Best GLP-1 Medication for Weight Loss in 2026",
+    description:
+      "Comparing semaglutide, tirzepatide, and liraglutide for weight loss. Which GLP-1 medication works best? Clinical data, side effects, and cost compared.",
+    category: "Science",
+    readTime: "7 min read",
+    publishedAt: "2026-07-20",
+    updatedAt: "2026-07-21",
+    heroColor: "#EEF4FB",
+    author: "TopWeightLoss Team",
+    sections: [
+      {
+        heading: "The Three Main GLP-1 Medications",
+        body: 'Three GLP-1-based medications dominate the weight loss market: semaglutide (Ozempic/Wegovy), tirzepatide (Mounjaro/Zepbound), and liraglutide (Saxenda). Each works differently, produces different results, and comes at a different price point. Understanding these differences is key to choosing the right treatment. Learn more about <a href="/articles/how-glp1-medications-work">how GLP-1 medications work</a>.',
+      },
+      {
+        heading: "Tirzepatide: The Most Effective",
+        body: 'Clinical data consistently shows tirzepatide produces the greatest weight loss — up to 22.5% of body weight in the SURMOUNT trials. As a dual-agonist targeting both GLP-1 and GIP receptors, it has a broader metabolic effect. Available as Mounjaro (diabetes) and Zepbound (weight loss). See our <a href="/articles/zepbound-vs-wegovy">Zepbound vs Wegovy comparison</a>.',
+      },
+      {
+        heading: "Semaglutide: The Most Established",
+        body: 'Semaglutide is the most widely used GLP-1 for weight loss, with the longest track record and broadest availability through telehealth providers. The STEP trials showed ~15% average weight loss. Available as brand-name (Ozempic, Wegovy) and compounded versions. <a href="/semaglutide">Compare semaglutide providers</a>.',
+      },
+      {
+        heading: "Liraglutide: The Third Option",
+        body: 'Liraglutide (Saxenda) was the first GLP-1 approved specifically for weight loss. It produces more modest results (~5-8% body weight) compared to semaglutide and tirzepatide, and requires daily rather than weekly injections. It\'s less commonly prescribed now but remains an option for patients who don\'t respond well to other GLP-1s.',
+      },
+      {
+        heading: "Cost Comparison",
+        body: 'Brand-name costs: Wegovy $1,300+/month, Zepbound $1,000+/month, Saxenda $1,300+/month. Compounded versions are significantly cheaper — semaglutide from ~$199/month and tirzepatide from ~$349/month. See our <a href="/articles/semaglutide-cost-per-month">semaglutide cost breakdown</a> and <a href="/articles/weight-loss-medication-cost-guide">full cost guide</a>.',
+      },
+      {
+        heading: "Which Should You Choose?",
+        body: 'For maximum weight loss: tirzepatide. For the most established option with widest availability: semaglutide. For patients who prefer or need an alternative: liraglutide. Your provider can help determine which is best based on your health profile. <a href="/find-your-match">Take our quiz</a> to find a provider that offers the medication best suited to your goals.',
+      },
+    ],
+  },
+  {
+    slug: "weight-loss-medication-that-works-fast",
+    title: "Weight Loss Medication That Works Fast: What to Realistically Expect",
+    description:
+      "How quickly do weight loss medications actually work? A realistic timeline for GLP-1 results — from first week to full results — backed by clinical data.",
+    category: "Guide",
+    readTime: "5 min read",
+    publishedAt: "2026-07-21",
+    updatedAt: "2026-07-21",
+    heroColor: "#F0FAF5",
+    author: "TopWeightLoss Team",
+    sections: [
+      {
+        heading: "How Fast Do GLP-1 Medications Work?",
+        body: 'GLP-1 medications like <a href="/semaglutide">semaglutide</a> and <a href="/tirzepatide">tirzepatide</a> start working within the first week — most patients notice reduced appetite within days. However, meaningful weight loss takes longer. Read our detailed <a href="/articles/how-long-for-semaglutide-to-work">semaglutide timeline</a> for a week-by-week breakdown.',
+      },
+      {
+        heading: "Realistic Timeline",
+        body: 'Week 1–2: appetite changes begin. Month 1: 3–5 lbs lost. Month 2–3: weight loss accelerates as dose increases (5–10% of body weight). Month 6–12: maximum results (15–22% depending on medication). This is based on clinical trial averages — your results may vary. See our <a href="/articles/first-month-weight-loss-medication">first month guide</a>.',
+      },
+      {
+        heading: "Which Medication Works Fastest?",
+        body: 'All GLP-1 medications start reducing appetite within the first 1–2 weeks. In terms of total weight loss speed, tirzepatide (Mounjaro/Zepbound) produces the fastest results on average due to its dual-agonist mechanism. Semaglutide follows close behind. See our <a href="/articles/best-glp1-for-weight-loss">best GLP-1 comparison</a>.',
+      },
+      {
+        heading: "How to Maximize Your Results",
+        body: 'Medication alone drives significant weight loss, but combining it with high protein intake and regular exercise amplifies results. See our guides on <a href="/articles/what-to-eat-on-glp1-medication">what to eat on GLP-1 medication</a> and <a href="/articles/exercise-while-on-glp1-medication">exercising on GLP-1</a>. If progress stalls, read our <a href="/articles/weight-loss-plateau-what-to-do">plateau guide</a>.',
+      },
+      {
+        heading: "Getting Started Quickly",
+        body: 'The fastest way to start is through a telehealth provider — most can have you evaluated and your medication shipped within 3–7 days. <a href="/find-your-match">Take our matching quiz</a> or <a href="/">compare top providers</a> to find one that fits your goals and budget.',
+      },
+    ],
+  },
+  {
+    slug: "noom-weight-loss-review",
+    title: "Noom for Weight Loss: Complete Program Review 2026",
+    description:
+      "Is Noom worth it for weight loss? Our detailed review of Noom's coaching program and Noom Med GLP-1 treatment — pricing, how it works, pros and cons.",
+    category: "Guide",
+    readTime: "7 min read",
+    publishedAt: "2026-07-21",
+    updatedAt: "2026-07-21",
+    heroColor: "#FBF5EE",
+    author: "TopWeightLoss Content Team",
+    sections: [
+      {
+        heading: "What Is Noom?",
+        body: 'Noom is a weight loss platform built on cognitive behavioral therapy (CBT) principles. Originally a coaching-only app, Noom now offers <a href="/reviews/noom">Noom Med</a> — a medical program providing access to GLP-1 medications like semaglutide. This combination of behavioral coaching and medical treatment makes Noom unique among weight loss providers.',
+      },
+      {
+        heading: "How Noom Works",
+        body: 'Noom\'s core program includes daily lessons on psychology and eating behavior, color-coded food logging, a personal coach, and community groups. Noom Med adds physician consultations and GLP-1 medication access. The idea is that medication helps you lose weight while coaching helps you keep it off by changing your habits.',
+      },
+      {
+        heading: "Noom Med: GLP-1 Medication Access",
+        body: 'Noom Med connects patients with licensed providers who can prescribe GLP-1 medications. The program includes medical evaluation, ongoing provider support, and medication delivery. Noom Med focuses primarily on semaglutide-based treatments. See how it compares in our <a href="/noom-vs-ro">Noom vs Ro</a> and <a href="/noom-vs-found">Noom vs Found</a> comparisons.',
+      },
+      {
+        heading: "Noom Pricing",
+        body: 'The coaching-only program costs approximately $50–70/month depending on your subscription length. Noom Med (with GLP-1 access) is priced separately at approximately $149–199/month plus medication costs. Total monthly cost with medication is generally competitive with other telehealth providers. See our <a href="/articles/weight-loss-medication-cost-guide">full cost comparison</a>.',
+      },
+      {
+        heading: "Is Noom Worth It?",
+        body: 'If you want more than just medication — if you want to understand why you eat the way you do and build lasting habits — Noom is one of the few platforms that addresses both. If you just want straightforward medication access, a simpler provider like <a href="/reviews/altrx">ALT RX</a> or <a href="/reviews/ro">Ro</a> may be a better fit. <a href="/find-your-match">Take our quiz</a> to find the best match for your approach.',
+      },
+    ],
+  },
 ];

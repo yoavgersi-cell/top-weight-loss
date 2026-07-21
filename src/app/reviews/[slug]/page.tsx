@@ -73,6 +73,18 @@ export default async function ReviewPage({
     ],
   };
 
+  // FAQ schema for rich results
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: `Is ${provider.name} legit?`, acceptedAnswer: { "@type": "Answer", text: review.reviewIntro } },
+      { "@type": "Question", name: `How much does ${provider.name} cost?`, acceptedAnswer: { "@type": "Answer", text: review.pricingSummary } },
+      { "@type": "Question", name: `What medications does ${provider.name} offer?`, acceptedAnswer: { "@type": "Answer", text: review.treatmentOptions.join(", ") } },
+      { "@type": "Question", name: `Who is ${provider.name} best for?`, acceptedAnswer: { "@type": "Answer", text: review.bestFor.join(". ") } },
+    ],
+  };
+
   const relatedBattles = (config.battles ?? []).filter(
     (b) => b.provider1Id === provider.id || b.provider2Id === provider.id
   );
@@ -82,6 +94,7 @@ export default async function ReviewPage({
     <div className="min-h-screen bg-gray-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero header */}
       <div className="border-b border-gray-200 bg-white">
