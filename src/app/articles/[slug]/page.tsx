@@ -250,7 +250,7 @@ export default async function ArticlePage({
 
                 {/* Editorial callout after 4th section */}
                 {i === 3 && article.sections.length > 4 && (
-                  <div className="my-10 overflow-hidden rounded-xl bg-[#f5f7fa]">
+                  <div className="my-10 overflow-hidden rounded-xl bg-transparent">
                     <div className="flex flex-col sm:flex-row">
                       <div className="flex-1 py-6 pr-6 sm:py-8 sm:pr-8">
                         <h3 className="mb-3 text-[18px] font-bold leading-tight text-[#0C4B75] sm:text-[20px]">
