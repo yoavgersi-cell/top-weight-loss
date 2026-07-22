@@ -480,6 +480,59 @@ export default function AdminPage() {
         {/* Sidebar Tab */}
         {activeTab === "sidebar" && (
           <div className="space-y-4">
+            {/* Block Order Control */}
+            <div className="rounded-xl border bg-white p-6 shadow-sm">
+              <h3 className="mb-1 text-sm font-bold text-gray-500 uppercase tracking-wider">Sidebar Blocks — Order & Visibility</h3>
+              <p className="mb-4 text-xs text-gray-400">Reorder, add, or remove sidebar blocks. Only blocks in this list will be shown, in this order.</p>
+              <div className="space-y-2 mb-3">
+                {(config.sidebar.blockOrder ?? ["socialProof", "secureBadge", "featuredImage", "editorialReviews", "rankingMethodology", "disclosure"]).map((blockId, bi) => {
+                  const labels: Record<string, string> = { socialProof: "Social Proof", secureBadge: "Secure Badge", featuredImage: "Featured Provider Image", editorialReviews: "Editorial Reviews", rankingMethodology: "Ranking Methodology", disclosure: "Editorial Disclosure" };
+                  const order = config.sidebar.blockOrder ?? ["socialProof", "secureBadge", "featuredImage", "editorialReviews", "rankingMethodology", "disclosure"];
+                  return (
+                    <div key={blockId} className="flex items-center gap-3 rounded-lg border bg-gray-50 px-4 py-2.5">
+                      <span className="flex h-6 w-6 items-center justify-center rounded bg-[#191919] text-[11px] font-bold text-white">{bi + 1}</span>
+                      <span className="flex-1 text-sm font-medium text-[#191919]">{labels[blockId] ?? blockId}</span>
+                      <div className="flex gap-1 shrink-0">
+                        <button
+                          onClick={() => { if (bi === 0) return; const o = [...order]; [o[bi], o[bi-1]] = [o[bi-1], o[bi]]; setConfig({ ...config, sidebar: { ...config.sidebar, blockOrder: o } }); }}
+                          disabled={bi === 0}
+                          className="flex h-7 w-7 items-center justify-center rounded border text-gray-400 hover:bg-white disabled:opacity-30"
+                        ><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m18 15-6-6-6 6"/></svg></button>
+                        <button
+                          onClick={() => { if (bi === order.length - 1) return; const o = [...order]; [o[bi], o[bi+1]] = [o[bi+1], o[bi]]; setConfig({ ...config, sidebar: { ...config.sidebar, blockOrder: o } }); }}
+                          disabled={bi === order.length - 1}
+                          className="flex h-7 w-7 items-center justify-center rounded border text-gray-400 hover:bg-white disabled:opacity-30"
+                        ><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m6 9 6 6 6-6"/></svg></button>
+                        <button
+                          onClick={() => { const o = order.filter((_, i) => i !== bi); setConfig({ ...config, sidebar: { ...config.sidebar, blockOrder: o } }); }}
+                          className="flex h-7 w-7 items-center justify-center rounded border border-red-200 text-red-400 hover:bg-red-50"
+                        ><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              <select
+                className="w-full rounded border px-3 py-1.5 text-sm text-gray-600 focus:border-[#0C4B75] focus:outline-none"
+                value=""
+                onChange={(e) => {
+                  if (!e.target.value) return;
+                  const order = [...(config.sidebar.blockOrder ?? ["socialProof", "secureBadge", "featuredImage", "editorialReviews", "rankingMethodology", "disclosure"]), e.target.value];
+                  setConfig({ ...config, sidebar: { ...config.sidebar, blockOrder: order } });
+                  e.target.value = "";
+                }}
+              >
+                <option value="">+ Add block...</option>
+                {["socialProof", "secureBadge", "featuredImage", "editorialReviews", "rankingMethodology", "disclosure"]
+                  .filter((b) => !(config.sidebar.blockOrder ?? ["socialProof", "secureBadge", "featuredImage", "editorialReviews", "rankingMethodology", "disclosure"]).includes(b))
+                  .map((b) => {
+                    const labels: Record<string, string> = { socialProof: "Social Proof", secureBadge: "Secure Badge", featuredImage: "Featured Provider Image", editorialReviews: "Editorial Reviews", rankingMethodology: "Ranking Methodology", disclosure: "Editorial Disclosure" };
+                    return <option key={b} value={b}>{labels[b]}</option>;
+                  })}
+              </select>
+            </div>
+
+            {/* Content fields */}
             <div className="rounded-xl border bg-white p-6 shadow-sm">
               <h3 className="mb-4 text-sm font-bold text-gray-500 uppercase tracking-wider">Social Proof</h3>
               <div className="grid gap-4 sm:grid-cols-2">

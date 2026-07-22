@@ -59,6 +59,7 @@ export interface SidebarConfig {
   featuredImageUrl: string;
   featuredImageAlt: string;
   featuredImageLink: string;
+  blockOrder?: string[];
 }
 
 export interface QuizOption {
