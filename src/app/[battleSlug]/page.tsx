@@ -116,11 +116,23 @@ export default async function BattlePage({
       ],
     };
 
+    // FAQ schema from editorial sections
+    const landingFaqSchema = landing.editorialSections && landing.editorialSections.length > 0 ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: landing.editorialSections.map((s) => ({
+        "@type": "Question",
+        name: s.heading,
+        acceptedAnswer: { "@type": "Answer", text: s.body.replace(/<[^>]*>/g, "") },
+      })),
+    } : null;
+
     return (
       <>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+        {landingFaqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(landingFaqSchema) }} />}
         <ComparisonLayout
           config={customConfig}
           heroOverrides={{
@@ -163,17 +175,36 @@ export default async function BattlePage({
     "@type": "Article",
     headline: battle.title,
     description: battle.description,
-    author: { "@type": "Organization", name: "topweightloss.io" },
-    publisher: { "@type": "Organization", name: "topweightloss.io" },
+    dateModified: new Date().toISOString().split("T")[0],
+    author: { "@type": "Organization", name: "TopWeightLoss Team", url: "https://www.topweightloss.io" },
+    publisher: { "@type": "Organization", name: "topweightloss.io", url: "https://www.topweightloss.io" },
     mainEntityOfPage: `https://www.topweightloss.io/${battle.slug}`,
+  };
+
+  const battleBreadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.topweightloss.io" },
+      { "@type": "ListItem", position: 2, name: `${p1.name} vs ${p2.name}`, item: `https://www.topweightloss.io/${battle.slug}` },
+    ],
+  };
+
+  const battleFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: battle.categories.map((cat) => ({
+      "@type": "Question",
+      name: `${cat.name}: ${p1.name} or ${p2.name}?`,
+      acceptedAnswer: { "@type": "Answer", text: cat.explanation },
+    })),
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(battleBreadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(battleFaqSchema) }} />
 
       <div className="min-h-screen bg-[#FAFAFA]">
         {/* ───── HERO ───── */}

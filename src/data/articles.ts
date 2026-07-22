@@ -1116,4 +1116,88 @@ export const articles: Article[] = [
       },
     ],
   },
+  {
+    slug: "glp1-weight-loss-for-women",
+    title: "GLP-1 Weight Loss for Women: What You Need to Know in 2026",
+    description:
+      "How GLP-1 medications like semaglutide and tirzepatide work for women's weight loss — hormonal considerations, results, pregnancy safety, and finding the right provider.",
+    category: "Wellness",
+    readTime: "8 min read",
+    publishedAt: "2026-07-21",
+    updatedAt: "2026-07-22",
+    heroColor: "#F5F0FB",
+    author: "TopWeightLoss Team",
+    sections: [
+      {
+        heading: "Why GLP-1 Medications Are Popular Among Women",
+        body: '<a href="/articles/how-glp1-medications-work">GLP-1 medications</a> have become the most talked-about weight loss treatment for women in 2026. Clinical trials show they work equally well for women and men, with average weight loss of 15–22% of body weight. For many women who have struggled with diet-resistant weight — especially after pregnancy, during perimenopause, or with PCOS — these medications address the biological factors that make weight loss difficult.',
+      },
+      {
+        heading: "How Hormones Affect the Response",
+        body: 'Women\'s hormonal fluctuations can influence how GLP-1 medications work. Some women report that side effects like nausea are slightly worse during certain phases of their menstrual cycle. Hormonal changes during perimenopause and menopause can also affect weight loss patterns. The good news: GLP-1 medications work with your hormones, not against them. They mimic natural satiety hormones that help regulate appetite regardless of hormonal status.',
+      },
+      {
+        heading: "Pregnancy and Fertility Considerations",
+        body: 'GLP-1 medications should be stopped at least 2 months before trying to conceive. They are not safe during pregnancy or breastfeeding. Interestingly, some women on GLP-1 medications have reported unexpected pregnancies — possibly because weight loss can improve fertility, especially in women with PCOS or obesity-related hormonal imbalances. If you are of childbearing age, discuss contraception with your provider. See our <a href="/articles/who-qualifies-for-glp1-weight-loss">eligibility guide</a> for full safety information.',
+      },
+      {
+        heading: "Weight Loss Results for Women",
+        body: 'Clinical trial data shows women achieve results comparable to men. In the STEP trials, women on semaglutide lost an average of 15–17% of body weight. In the SURMOUNT trials, tirzepatide results were even higher. Individual results vary based on starting weight, metabolic health, medication adherence, and lifestyle factors. Read our <a href="/articles/how-long-for-semaglutide-to-work">semaglutide results timeline</a> for realistic expectations.',
+      },
+      {
+        heading: "Managing Side Effects",
+        body: 'Women report the same primary side effects as men: nausea, constipation, diarrhea, and reduced appetite. These are most common during dose increases and typically improve within 2–4 weeks. Strategies that help: eating small, protein-rich meals; staying hydrated; avoiding greasy foods; and ginger tea for nausea. Read our full <a href="/articles/semaglutide-side-effects-guide">side effects management guide</a> and <a href="/articles/what-to-eat-on-glp1-medication">nutrition guide</a>.',
+      },
+      {
+        heading: "Preserving Muscle While Losing Weight",
+        body: 'Women naturally have less muscle mass than men, making muscle preservation during weight loss especially important. Adequate protein intake (80–120g daily) and resistance training 2–3 times per week are essential. This isn\'t about becoming a bodybuilder — it\'s about maintaining the metabolic rate and physical function that support long-term weight maintenance. See our <a href="/articles/exercise-while-on-glp1-medication">exercise guide</a>.',
+      },
+      {
+        heading: "Finding the Right Provider",
+        body: 'The best provider for you depends on your goals, budget, and how much support you want. Some women prefer comprehensive programs with coaching (like <a href="/reviews/noom">Noom</a>), while others prefer streamlined medication access (like <a href="/reviews/altrx">ALT RX</a> or <a href="/reviews/ro">Ro</a>). <a href="/find-your-match">Take our matching quiz</a> for a personalized recommendation, or <a href="/">compare all providers</a> side by side.',
+      },
+    ],
+  },
+  {
+    slug: "glp1-weight-loss-over-40",
+    title: "GLP-1 Weight Loss After 40: A Complete Guide for 2026",
+    description:
+      "Weight loss after 40 is harder due to metabolic changes. Here's how GLP-1 medications can help — what to expect, special considerations, and how to find a provider.",
+    category: "Wellness",
+    readTime: "7 min read",
+    publishedAt: "2026-07-22",
+    updatedAt: "2026-07-22",
+    heroColor: "#EEF4FB",
+    author: "TopWeightLoss Team",
+    sections: [
+      {
+        heading: "Why Weight Loss Gets Harder After 40",
+        body: 'After 40, your resting metabolic rate decreases by about 1–2% per decade. Hormonal changes — declining testosterone in men, perimenopause in women — promote fat storage, especially around the midsection. Muscle mass naturally decreases with age, further reducing calorie burn. Stress, sleep disruption, and decades of dietary habits compound the challenge. None of this means weight loss is impossible — it just means the tools that worked at 25 may not be enough anymore.',
+      },
+      {
+        heading: "How GLP-1 Medications Help After 40",
+        body: '<a href="/articles/how-glp1-medications-work">GLP-1 medications</a> address the biological barriers that make weight loss harder with age. They reduce appetite, slow gastric emptying, and improve insulin sensitivity — all factors that deteriorate with age. In clinical trials, patients over 40 achieved weight loss results comparable to younger participants. The medications work with your biology regardless of age.',
+      },
+      {
+        heading: "Special Considerations for Over-40 Patients",
+        body: 'Patients over 40 should pay extra attention to muscle preservation, bone density, and medication interactions. If you take blood pressure medications, thyroid medication, or diabetes drugs, your provider will need to monitor for interactions. GLP-1 medications can affect absorption of oral medications due to slowed gastric emptying. See our <a href="/articles/who-qualifies-for-glp1-weight-loss">eligibility guide</a> for full details on medical considerations.',
+      },
+      {
+        heading: "The Importance of Strength Training",
+        body: 'Muscle preservation becomes critical after 40. Losing weight without maintaining muscle leads to a lower metabolic rate, making regain more likely. Resistance training 2–3 times per week, combined with adequate protein intake (1g per pound of lean body mass), significantly reduces muscle loss during medicated weight loss. Our <a href="/articles/exercise-while-on-glp1-medication">exercise guide</a> covers practical routines.',
+      },
+      {
+        heading: "What to Expect: A Realistic Timeline",
+        body: 'Weight loss may be slightly slower after 40 compared to younger patients, but the long-term results are comparable. Most patients see appetite changes within 1–2 weeks and meaningful weight loss by month 2–3. The key is patience and consistency. See our <a href="/articles/how-long-for-semaglutide-to-work">semaglutide timeline</a> for detailed expectations.',
+      },
+      {
+        heading: "Choosing the Right Medication",
+        body: 'Both semaglutide and tirzepatide are effective for patients over 40. Tirzepatide may offer slightly greater weight loss, while semaglutide has a longer track record. Your provider will consider your full health profile when recommending a medication. See our <a href="/articles/mounjaro-vs-ozempic">Mounjaro vs Ozempic comparison</a> and <a href="/articles/best-glp1-for-weight-loss">best GLP-1 guide</a>.',
+      },
+      {
+        heading: "Getting Started",
+        body: 'Most telehealth providers accept patients of all ages and can evaluate your specific health situation online. The evaluation process considers your age, medical history, current medications, and goals. <a href="/find-your-match">Take our matching quiz</a> to find a provider suited to your needs, or <a href="/">compare providers</a> directly. For cost information, see our <a href="/articles/weight-loss-medication-cost-guide">pricing guide</a>.',
+      },
+    ],
+  },
 ];
