@@ -368,9 +368,9 @@ export default function ChatQuizPage() {
       <div className="fixed inset-0 flex flex-col bg-[#F7F8FA]">
         {/* Logo bar */}
         <div className="shrink-0 border-b border-[#E5E7EB] bg-white px-4 py-3">
-          <a href="/" className="flex items-center gap-2">
-            <svg className="h-6 w-6 text-[#0C4B75]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg>
-            <span className="text-[18px] font-bold text-[#191919]">topweightloss<span className="text-[#0C4B75]">.io</span></span>
+          <a href="/" className="flex items-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo.png" alt="TopWeightLoss.io" className="h-[28px] w-auto" />
           </a>
         </div>
 

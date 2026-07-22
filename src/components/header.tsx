@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Activity, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,11 +10,9 @@ export function Header() {
   return (
     <header className="border-b-2 border-[#D5D5D5] bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-        <Link href="/" className="flex items-center gap-2">
-          <Activity className="h-6 w-6 text-[#0C4B75]" strokeWidth={1.5} />
-          <span className="text-[18px] font-bold text-[#191919]">
-            topweightloss<span className="text-[#0C4B75]">.io</span>
-          </span>
+        <Link href="/" className="flex items-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.png" alt="TopWeightLoss.io" className="h-[32px] w-auto" />
         </Link>
 
         {/* Desktop nav */}
