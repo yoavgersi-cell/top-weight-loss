@@ -42,8 +42,27 @@ export default async function ArticlesPage() {
     );
   }
 
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Weight Loss Articles — Research, Guides & Expert Insights",
+    description: "Expert articles on GLP-1 medications, weight loss strategies, and choosing the right telehealth provider.",
+    url: "https://www.topweightloss.io/articles",
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: articles.length,
+      itemListElement: articles.map((a, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: a.title,
+        url: `https://www.topweightloss.io/articles/${a.slug}`,
+      })),
+    },
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
       <div className="mx-auto max-w-[1100px] px-4 py-12 sm:px-6">
         {/* Page header */}
         <div className="mb-10">
