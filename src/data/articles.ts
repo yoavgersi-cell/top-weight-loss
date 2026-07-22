@@ -342,6 +342,18 @@ export const articles: Article[] = [
         heading: "How to Find the Best Value",
         body: 'The cheapest option isn\'t always the best value. A provider that costs slightly more but includes thorough medical oversight, responsive support, and quality medications from a reputable pharmacy may save you money in the long run by ensuring safe, effective treatment. Start by <a href="/">comparing top providers</a> on our platform — we break down pricing, medical support, and medication options side by side. You can also <a href="/find-your-match">take our matching quiz</a> to find a provider that fits both your needs and budget.',
       },
+      {
+        heading: "Tirzepatide (Mounjaro/Zepbound) Pricing",
+        body: 'Brand-name Mounjaro costs approximately $1,000–$1,100/month. Zepbound (the weight-loss version) is similarly priced. Compounded tirzepatide through telehealth providers typically runs $300–$500/month. While more expensive than compounded semaglutide, tirzepatide produces greater average weight loss — so the cost-per-pound-lost may actually be comparable. Compare providers on our <a href="/tirzepatide">tirzepatide comparison page</a>.',
+      },
+      {
+        heading: "HSA, FSA, and Tax Savings",
+        body: 'If you have a Health Savings Account (HSA) or Flexible Spending Account (FSA), you can typically use pre-tax dollars to pay for weight loss medication and consultations. This effectively reduces your cost by 20–35% depending on your tax bracket. Most telehealth providers accept HSA/FSA payments — check before enrolling.',
+      },
+      {
+        heading: "How to Compare Total Monthly Cost",
+        body: 'When comparing providers, look at the total monthly price — not just medication cost. The best providers include everything: medication, physician consultations, dose adjustments, ongoing support, and home delivery. Some quote a low base price but charge separately for consultations or shipping. <a href="/">Compare all-inclusive providers</a> on our platform or <a href="/find-your-match">take our quiz</a> for a personalized recommendation.',
+      },
     ],
   },
   {
@@ -604,6 +616,18 @@ export const articles: Article[] = [
         heading: "Which Should You Choose?",
         body: 'If you have insurance that covers Wegovy or Ozempic, brand-name may be the simpler choice. If you\'re paying out of pocket — which is the reality for most weight loss patients — compounded semaglutide from a reputable provider offers the same active ingredient at a fraction of the cost. <a href="/">Compare providers</a> that offer compounded options, or <a href="/find-your-match">take our quiz</a> to find the best fit for your budget.',
       },
+      {
+        heading: "How Compounding Pharmacies Are Regulated",
+        body: 'Compounding pharmacies operate under FDA regulation through two categories: 503A (smaller, patient-specific) and 503B (larger, manufacturing-scale). 503B pharmacies follow current Good Manufacturing Practice (cGMP) standards similar to traditional drug manufacturers. When choosing a telehealth provider, ask which type of compounding pharmacy they use — 503B is generally considered the higher standard.',
+      },
+      {
+        heading: "Does Your Provider Matter?",
+        body: 'The quality of compounded semaglutide depends heavily on the provider and pharmacy they use. Reputable telehealth providers work exclusively with licensed, inspected pharmacies and provide transparency about their sources. Avoid any provider that won\'t disclose their compounding pharmacy. See our guide on <a href="/articles/choosing-telehealth-weight-loss-provider">choosing the right provider</a>.',
+      },
+      {
+        heading: "What About Compounded Tirzepatide?",
+        body: 'Compounded tirzepatide follows the same principles — same active ingredient as Mounjaro/Zepbound, produced by licensed compounding pharmacies, at lower cost ($300–$500/month vs $1,000+). It\'s increasingly available through telehealth providers. See our <a href="/articles/mounjaro-vs-ozempic">Mounjaro vs Ozempic comparison</a> and <a href="/tirzepatide">tirzepatide provider list</a>.',
+      },
     ],
   },
   {
@@ -738,6 +762,18 @@ export const articles: Article[] = [
         heading: "Month 6–12+: Maximum Results",
         body: 'Clinical trials show the most significant results at 68 weeks (about 16 months), with average weight loss of 15% of body weight. Most patients reach their peak results between months 9–15. After reaching your goal, discuss a maintenance plan with your provider — some patients step down to a lower dose rather than stopping entirely. Read about <a href="/articles/stopping-glp1-medication-what-happens">what happens when you stop</a>.',
       },
+      {
+        heading: "What If You Don't See Results?",
+        body: 'If you\'re not seeing expected results by month 3, don\'t panic. Common reasons include: not yet reaching your optimal dose, dietary habits offsetting medication effects, or individual metabolic factors. Talk to your provider about dose adjustments. Some patients also respond better to <a href="/articles/tirzepatide-vs-semaglutide">tirzepatide</a>, which targets two receptors instead of one.',
+      },
+      {
+        heading: "Does Exercise Speed Up Results?",
+        body: 'Yes — patients who combine semaglutide with regular exercise, especially strength training, tend to see faster and more sustainable results. Exercise also helps preserve lean muscle during weight loss, which is critical for long-term metabolism. See our <a href="/articles/exercise-while-on-glp1-medication">exercise guide for GLP-1 patients</a>.',
+      },
+      {
+        heading: "How to Track Your Progress",
+        body: 'Don\'t rely solely on the scale. Track waist measurements, how clothes fit, energy levels, and appetite changes. Some patients lose inches before they see scale movement. Taking progress photos monthly can also reveal changes that day-to-day weighing misses. <a href="/find-your-match">Find a provider</a> that includes progress tracking in their program.',
+      },
     ],
   },
   {
@@ -771,6 +807,18 @@ export const articles: Article[] = [
       {
         heading: "Which Is Right for You?",
         body: 'If you want the maximum weight loss potential and can access it, Zepbound has a clinical edge. If you prefer a longer track record, broader compounded availability, and slightly lower compounded pricing, Wegovy/semaglutide is the more established path. Many telehealth providers offer both — <a href="/find-your-match">take our quiz</a> to find the best match, or <a href="/">compare providers</a> directly.',
+      },
+      {
+        heading: "Dosing Schedule Compared",
+        body: 'Wegovy titrates from 0.25 mg to 2.4 mg over about 16 weeks. Zepbound starts at 2.5 mg and can go up to 15 mg. Both are once-weekly injections. Zepbound\'s wider dose range gives providers more room to optimize treatment. For details on what starting either medication feels like, see our <a href="/articles/first-month-weight-loss-medication">first month guide</a>.',
+      },
+      {
+        heading: "Compounded Alternatives",
+        body: 'Both Wegovy (semaglutide) and Zepbound (tirzepatide) have compounded versions available through telehealth providers at significantly lower prices. Compounded semaglutide starts at ~$199/month, compounded tirzepatide at ~$349/month. Read our <a href="/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> for details on quality and safety.',
+      },
+      {
+        heading: "How to Access Either Medication Online",
+        body: 'Both are available through licensed telehealth providers without in-person visits. <a href="/semaglutide">Compare semaglutide providers</a> or <a href="/tirzepatide">tirzepatide providers</a>. For a step-by-step walkthrough, see our <a href="/articles/how-to-get-ozempic-online">guide to getting GLP-1 medications online</a>.',
       },
     ],
   },
@@ -878,6 +926,18 @@ export const articles: Article[] = [
         heading: "How to Get the Lowest Price",
         body: 'The most affordable path to semaglutide is through telehealth providers offering compounded versions. <a href="/cheapest-weight-loss-medication">Compare the cheapest providers</a> on our platform. HSA/FSA accounts can also reduce your effective cost by 20–35%. <a href="/find-your-match">Take our quiz</a> to find a provider that fits your budget.',
       },
+      {
+        heading: "Cost by Dose Level",
+        body: 'Semaglutide pricing can vary by dose. Lower starting doses (0.25–0.5 mg) are typically less expensive than maintenance doses (1.7–2.4 mg). Most telehealth providers charge a flat monthly rate regardless of dose, which simplifies budgeting. Always confirm whether pricing is dose-dependent before enrolling.',
+      },
+      {
+        heading: "Semaglutide vs Tirzepatide: Cost Comparison",
+        body: 'Compounded semaglutide ($199–$400/month) is generally cheaper than compounded tirzepatide ($300–$500/month). However, tirzepatide produces greater average weight loss (22% vs 15%), so the cost-per-result may be comparable. See our <a href="/articles/tirzepatide-vs-semaglutide">full comparison</a> and <a href="/articles/mounjaro-vs-ozempic">Mounjaro vs Ozempic guide</a>.',
+      },
+      {
+        heading: "Where to Find the Cheapest Semaglutide",
+        body: '<a href="/cheapest-weight-loss-medication">Compare the most affordable providers</a> on our platform. Several offer compounded semaglutide starting at $199/month with everything included. <a href="/find-your-match">Take our quiz</a> to find a provider that fits both your goals and budget.',
+      },
     ],
   },
   {
@@ -907,6 +967,18 @@ export const articles: Article[] = [
       {
         heading: "Where to Get Started",
         body: '<a href="/">Compare top-rated telehealth providers</a> on our platform, or <a href="/find-your-match">take our matching quiz</a> for a personalized recommendation. All providers we feature use licensed physicians for prescribing. Check our <a href="/articles/who-qualifies-for-glp1-weight-loss">eligibility guide</a> to see if you qualify before signing up.',
+      },
+      {
+        heading: "What About Compounded Semaglutide?",
+        body: 'Most patients who "get Ozempic online" are actually getting compounded semaglutide — the same active ingredient at a lower cost. Compounded versions are prescribed by the same licensed physicians through telehealth platforms and delivered to your home. Read our <a href="/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> to understand the difference.',
+      },
+      {
+        heading: "Do You Need Lab Work?",
+        body: 'Some telehealth providers require recent blood work (metabolic panel, A1C) before prescribing. Others can order labs as part of their program. If you have recent labs from your primary care doctor, you can often use those. Check your provider\'s requirements during sign-up.',
+      },
+      {
+        heading: "How Fast Can You Get Started?",
+        body: 'Most telehealth providers can complete your evaluation within 1–3 days and ship medication within 3–7 days of approval. Some offer expedited shipping. From first sign-up to first injection, most patients are started within 1–2 weeks. <a href="/">Compare provider shipping speeds</a> on our platform.',
       },
     ],
   },
@@ -980,6 +1052,18 @@ export const articles: Article[] = [
         heading: "Getting Started Quickly",
         body: 'The fastest way to start is through a telehealth provider — most can have you evaluated and your medication shipped within 3–7 days. <a href="/find-your-match">Take our matching quiz</a> or <a href="/">compare top providers</a> to find one that fits your goals and budget.',
       },
+      {
+        heading: "Fastest-Acting Medications Compared",
+        body: 'In terms of how quickly you feel the effects: both semaglutide and tirzepatide reduce appetite within the first 1–2 weeks. Tirzepatide may have a slight edge in speed of visible results due to its dual mechanism. Older medications like phentermine work within hours but are only approved for short-term use. For long-term weight loss, GLP-1 medications are the clear winner. Compare them in our <a href="/articles/best-glp1-for-weight-loss">best GLP-1 guide</a>.',
+      },
+      {
+        heading: "What Slows Down Results?",
+        body: 'Several factors can slow your weight loss: eating too many calories despite reduced appetite, lack of protein intake (leading to muscle loss), inadequate hydration, poor sleep, and stress. The medication creates the conditions for weight loss, but lifestyle habits determine how quickly you see results. See our <a href="/articles/what-to-eat-on-glp1-medication">nutrition guide</a>.',
+      },
+      {
+        heading: "Setting Realistic Expectations",
+        body: 'Sustainable weight loss is not instant weight loss. Providers and clinical data consistently show that patients who lose weight gradually (1–2 lbs per week) are more likely to keep it off long-term. The medications accelerate this process compared to diet alone, but "fast" should mean "faster than without medication" — not overnight. Read about <a href="/articles/stopping-glp1-medication-what-happens">what happens when you stop</a> to understand why sustainability matters.',
+      },
     ],
   },
   {
@@ -1013,6 +1097,22 @@ export const articles: Article[] = [
       {
         heading: "Is Noom Worth It?",
         body: 'If you want more than just medication — if you want to understand why you eat the way you do and build lasting habits — Noom is one of the few platforms that addresses both. If you just want straightforward medication access, a simpler provider like <a href="/reviews/altrx">ALT RX</a> or <a href="/reviews/ro">Ro</a> may be a better fit. <a href="/find-your-match">Take our quiz</a> to find the best match for your approach.',
+      },
+      {
+        heading: "Noom Med vs Noom Coaching: What's the Difference?",
+        body: 'Noom offers two distinct programs. The original Noom coaching program focuses on behavioral change through daily lessons, food logging, and personal coaching — no medication involved. Noom Med is the newer medical program that adds GLP-1 medication access with physician oversight. You can use one or both. Most people interested in weight loss medication specifically should look at Noom Med. See how it compares in our <a href="/noom-vs-ro">Noom vs Ro</a> comparison.',
+      },
+      {
+        heading: "Who Should NOT Choose Noom?",
+        body: 'Noom isn\'t the right fit for everyone. If you just want straightforward medication access without daily app engagement, a simpler provider like <a href="/reviews/altrx">ALT RX</a>, <a href="/reviews/ro">Ro</a>, or <a href="/reviews/trimrx">TrimRX</a> may be better. If budget is your primary concern, Noom\'s combined coaching + medication pricing may be higher than medication-only providers. If you dislike food logging and daily lessons, the core experience won\'t work for you.',
+      },
+      {
+        heading: "Noom vs Other Providers",
+        body: 'We\'ve compared Noom head-to-head with several providers: <a href="/noom-vs-ro">Noom vs Ro</a> (coaching vs streamlined), <a href="/noom-vs-found">Noom vs Found</a> (two comprehensive programs), and <a href="/noom-vs-shed">Noom vs Shed</a> (coaching vs personalized treatment). Each comparison highlights different trade-offs based on what matters most to you.',
+      },
+      {
+        heading: "Final Thoughts",
+        body: 'Noom is uniquely positioned in the weight loss market — no other provider combines CBT-based behavioral coaching with GLP-1 medication access at this level. If you believe that changing your habits is as important as taking medication, Noom delivers both. If you want medication without the coaching commitment, there are simpler options. <a href="/find-your-match">Take our quiz</a> to find the right approach for you.',
       },
     ],
   },
