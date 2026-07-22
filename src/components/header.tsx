@@ -12,7 +12,7 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         <Link href="/" className="flex items-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.png" alt="TopWeightLoss.io" className="h-[32px] w-auto" />
+          <img src="/logo.png" alt="TopWeightLoss.io" className="h-[44px] sm:h-[50px] w-auto" />
         </Link>
 
         {/* Desktop nav */}
