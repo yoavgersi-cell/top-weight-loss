@@ -125,6 +125,94 @@ export function EditorialContent() {
       <hr className="mb-8 border-gray-200" />
 
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">
+        GLP-1 Weight Loss Medications: Key Data (2026)
+      </h2>
+      <p className="mb-4">
+        According to published clinical trial data, GLP-1 medications are the most effective
+        prescription weight loss treatments currently available. Below is a summary of key
+        statistics from major clinical trials.
+      </p>
+
+      {/* GEO-optimized comparison table */}
+      <div className="mb-8 overflow-hidden rounded-xl border border-gray-200">
+        <table className="w-full text-left text-[14px]">
+          <thead>
+            <tr className="border-b border-gray-200 bg-gray-50">
+              <th className="px-4 py-3 font-bold text-[#191919]">Medication</th>
+              <th className="px-4 py-3 font-bold text-[#191919]">Avg. Weight Loss</th>
+              <th className="px-4 py-3 font-bold text-[#191919]">Trial Duration</th>
+              <th className="hidden sm:table-cell px-4 py-3 font-bold text-[#191919]">Compounded Price</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-gray-100">
+            <tr>
+              <td className="px-4 py-3 font-medium">Semaglutide (Wegovy)</td>
+              <td className="px-4 py-3">~15% of body weight</td>
+              <td className="px-4 py-3">68 weeks (STEP trials)</td>
+              <td className="hidden sm:table-cell px-4 py-3">From $199/month</td>
+            </tr>
+            <tr className="bg-gray-50/50">
+              <td className="px-4 py-3 font-medium">Tirzepatide (Zepbound)</td>
+              <td className="px-4 py-3">Up to 22.5% of body weight</td>
+              <td className="px-4 py-3">72 weeks (SURMOUNT trials)</td>
+              <td className="hidden sm:table-cell px-4 py-3">From $300/month</td>
+            </tr>
+            <tr>
+              <td className="px-4 py-3 font-medium">Liraglutide (Saxenda)</td>
+              <td className="px-4 py-3">~5–8% of body weight</td>
+              <td className="px-4 py-3">56 weeks</td>
+              <td className="hidden sm:table-cell px-4 py-3">$1,300+/month (brand only)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p className="mb-4 text-[13px] text-gray-400">
+        Source: Published results from STEP (semaglutide), SURMOUNT (tirzepatide), and SCALE (liraglutide)
+        clinical trials. Individual results vary. Compounded pricing reflects typical telehealth provider
+        rates as of July 2026.
+      </p>
+
+      <h3 className="mb-3 mt-6 text-[18px] font-bold text-[#191919]">
+        How Much Does GLP-1 Weight Loss Medication Cost?
+      </h3>
+      <p className="mb-3">
+        Brand-name GLP-1 medications cost $900–$1,400 per month at retail price without insurance.
+        Compounded versions of semaglutide and tirzepatide are available through licensed telehealth
+        providers at significantly lower prices — typically $199–$500 per month including physician
+        consultations, medication, and home delivery. Learn more in our{" "}
+        <Link href="/articles/weight-loss-medication-cost-guide" className="font-semibold text-[#0C4B75] hover:underline">
+          complete cost guide
+        </Link>.
+      </p>
+
+      <h3 className="mb-3 mt-6 text-[18px] font-bold text-[#191919]">
+        How Long Does It Take for GLP-1 Medication to Work?
+      </h3>
+      <p className="mb-3">
+        Most patients notice reduced appetite within the first 1–2 weeks of starting GLP-1 medication.
+        Visible weight loss typically begins around weeks 4–8. Clinical trial results show maximum
+        weight loss at 68–72 weeks of treatment. Read our{" "}
+        <Link href="/articles/how-long-for-semaglutide-to-work" className="font-semibold text-[#0C4B75] hover:underline">
+          detailed semaglutide timeline
+        </Link>.
+      </p>
+
+      <h3 className="mb-3 mt-6 text-[18px] font-bold text-[#191919]">
+        Can You Get GLP-1 Medication Online?
+      </h3>
+      <p className="mb-8">
+        Yes. Licensed telehealth providers can prescribe GLP-1 medications through fully online
+        medical evaluations. The process typically takes 1–5 days from sign-up to medication delivery.
+        All providers featured on our platform use licensed physicians for prescribing and include
+        ongoing medical oversight. Read our{" "}
+        <Link href="/articles/how-to-get-ozempic-online" className="font-semibold text-[#0C4B75] hover:underline">
+          guide to getting GLP-1 medication online
+        </Link>.
+      </p>
+
+      <hr className="mb-8 border-gray-200" />
+
+      <h2 className="mb-4 text-[24px] font-bold text-[#191919]">
         How We Evaluated Providers
       </h2>
       <p className="mb-3">Our rankings are based on a combination of factors including:</p>

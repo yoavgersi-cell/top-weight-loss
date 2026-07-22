@@ -31,6 +31,7 @@ export function Footer() {
               <Link href="/articles/how-glp1-medications-work" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">How GLP-1 Works</Link>
               <Link href="/articles/semaglutide-side-effects-guide" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Side Effects Guide</Link>
               <Link href="/articles/weight-loss-medication-cost-guide" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Cost Guide</Link>
+              <Link href="/glp1-weight-loss-statistics" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">GLP-1 Statistics</Link>
               <Link href="/articles" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">All Articles</Link>
             </nav>
           </div>
