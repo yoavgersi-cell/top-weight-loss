@@ -51,7 +51,7 @@ export function EditorialContent() {
       {/* Editorial callout */}
       <div className="mb-8 overflow-hidden rounded-xl bg-[#f5f7fa]">
         <div className="flex flex-col sm:flex-row">
-          <div className="flex-1 p-6 sm:p-8">
+          <div className="flex-1 py-6 pr-6 sm:py-8 sm:pr-8">
             <h3 className="mb-3 text-[18px] font-bold leading-tight text-[#0C4B75] sm:text-[20px]">
               What To Know Before Starting GLP-1 Treatment
             </h3>
