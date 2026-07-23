@@ -1068,9 +1068,9 @@ export const articles: Article[] = [
   },
   {
     slug: "noom-weight-loss-review",
-    title: "Noom for Weight Loss: Complete Program Review 2026",
+    title: "Noom Review 2026: Subscription Cost, Noom Med Pricing & Results",
     description:
-      "Is Noom worth it for weight loss? Our detailed review of Noom's coaching program and Noom Med GLP-1 treatment — pricing, how it works, pros and cons.",
+      "How much does Noom cost? Full breakdown of Noom subscription pricing ($17/month app, $199/month GLP-1 Med), how it works, Noom Med results, and whether it's worth it.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-07-21",
@@ -1091,8 +1091,8 @@ export const articles: Article[] = [
         body: 'Noom Med connects patients with licensed providers who can prescribe GLP-1 medications. The program includes medical evaluation, ongoing provider support, and medication delivery. Noom Med focuses primarily on semaglutide-based treatments. See how it compares in our <a href="/noom-vs-ro">Noom vs Ro</a> and <a href="/noom-vs-found">Noom vs Found</a> comparisons.',
       },
       {
-        heading: "Noom Pricing",
-        body: 'The coaching-only program costs approximately $50–70/month depending on your subscription length. Noom Med (with GLP-1 access) is priced separately at approximately $149–199/month plus medication costs. Total monthly cost with medication is generally competitive with other telehealth providers. See our <a href="/articles/weight-loss-medication-cost-guide">full cost comparison</a>.',
+        heading: "How Much Does a Noom Subscription Cost?",
+        body: 'Noom offers several pricing tiers in 2026. <strong>Noom Weight</strong> (app-only, no medication) costs $17.42/month on a 12-month plan — this includes psychology-based lessons, food tracking, and coaching. <strong>Noom Med</strong> for compounded GLP-1 medication starts at $79 for the initial 3-week subscription plus 4 weeks of medication, then $199/month thereafter with medication included. Full-dose GLP-1 plans start at $129 initially, then $279/month. Noom also offers telehealth-only access for branded medications (Ozempic, Wegovy, Zepbound) starting at $69/month — but medication costs are separate. All compounded plans include medication in the monthly price. See our <a href="/articles/weight-loss-medication-cost-guide">full cost comparison</a>.',
       },
       {
         heading: "Is Noom Worth It?",
