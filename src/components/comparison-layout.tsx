@@ -76,7 +76,7 @@ export function ComparisonLayout({ config, heroOverrides, children }: Comparison
               <div key={product.id}>
                 <ComparisonCard product={product} />
                 {idx === 0 && config.cardSocialProof && (
-                  <p className="mt-2 text-center text-[13px] font-semibold text-gray-500">
+                  <p className="mt-2 text-center text-[13px] font-semibold text-gray-500 sm:hidden">
                     <span className="font-extrabold text-[#191919]">{config.cardSocialProof.number}</span>{" "}
                     {config.cardSocialProof.text}
                   </p>
