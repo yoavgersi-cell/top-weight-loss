@@ -131,18 +131,13 @@ export default async function HomePage() {
           <div className="min-w-0 flex-1 space-y-4">
             {displayList.map((product, idx) => (
               <div key={product.id}>
-                {idx === 0 && config.cardSocialProof ? (
-                  <div className="sm:hidden rounded-xl border-2 border-[#0C4B75]/30 p-1.5 pb-3">
-                    <ComparisonCard product={product} />
-                    <p className="mt-2 text-center text-[13px] font-semibold text-gray-500">
-                      <span className="font-extrabold text-[#191919]">{config.cardSocialProof.number}</span>{" "}
-                      {config.cardSocialProof.text}
-                    </p>
-                  </div>
-                ) : null}
-                <div className={idx === 0 && config.cardSocialProof ? "hidden sm:block" : ""}>
-                  <ComparisonCard product={product} />
-                </div>
+                <ComparisonCard product={product} />
+                {idx === 0 && config.cardSocialProof && (
+                  <p className="mt-3 mb-1 text-center text-[13px] font-semibold text-gray-500 sm:hidden">
+                    <span className="font-extrabold text-[#191919]">{config.cardSocialProof.number}</span>{" "}
+                    {config.cardSocialProof.text}
+                  </p>
+                )}
               </div>
             ))}
           </div>
