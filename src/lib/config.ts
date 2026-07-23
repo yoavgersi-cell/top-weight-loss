@@ -217,6 +217,10 @@ export interface SiteConfig {
   ranking: RankingPageConfig;
   siteName: string;
   disclosureText: string;
+  cardSocialProof?: {
+    number: string;
+    text: string;
+  };
 }
 
 export const defaultConfig: SiteConfig = {

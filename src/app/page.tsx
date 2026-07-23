@@ -129,8 +129,16 @@ export default async function HomePage() {
       <section className="mx-auto max-w-[1200px] px-4 pt-6 pb-6">
         <div className="flex gap-6 items-start">
           <div className="min-w-0 flex-1 space-y-4">
-            {displayList.map((product) => (
-              <ComparisonCard key={product.id} product={product} />
+            {displayList.map((product, idx) => (
+              <div key={product.id}>
+                <ComparisonCard product={product} />
+                {idx === 0 && config.cardSocialProof && (
+                  <p className="mt-2 text-center text-[13px] font-semibold text-gray-500">
+                    <span className="font-extrabold text-[#191919]">{config.cardSocialProof.number}</span>{" "}
+                    {config.cardSocialProof.text}
+                  </p>
+                )}
+              </div>
             ))}
           </div>
           <Sidebar config={config.sidebar} providers={sidebarProviders} />

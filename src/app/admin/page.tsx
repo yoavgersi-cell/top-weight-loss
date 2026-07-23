@@ -1916,6 +1916,10 @@ export default function AdminPage() {
             <h3 className="mb-4 text-sm font-bold text-gray-500 uppercase tracking-wider">General Settings</h3>
             <div className="space-y-4">
               <Field label="Site Name" value={config.siteName} onChange={(v) => setConfig({ ...config, siteName: v })} />
+              <div className="grid gap-4 sm:grid-cols-2">
+                <Field label="Card Social Proof — Number" value={config.cardSocialProof?.number ?? ""} onChange={(v) => setConfig({ ...config, cardSocialProof: { ...(config.cardSocialProof ?? { number: "", text: "" }), number: v } })} />
+                <Field label="Card Social Proof — Text" value={config.cardSocialProof?.text ?? ""} onChange={(v) => setConfig({ ...config, cardSocialProof: { ...(config.cardSocialProof ?? { number: "", text: "" }), text: v } })} />
+              </div>
               <div>
                 <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Disclosure Text</label>
                 <textarea
