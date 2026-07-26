@@ -1930,6 +1930,48 @@ export default function AdminPage() {
                 />
               </div>
             </div>
+
+            {/* Review Testimonials */}
+            <div className="mt-4 rounded-xl border bg-white p-6 shadow-sm">
+              <h3 className="mb-1 text-sm font-bold text-gray-500 uppercase tracking-wider">Review Page Testimonials</h3>
+              <p className="mb-4 text-xs text-gray-400">Shown as a carousel on all review pages. First name + last initial format.</p>
+              <div className="space-y-3">
+                {(config.reviewTestimonials ?? []).map((t, ti) => (
+                  <div key={ti} className="rounded-lg border bg-gray-50 p-4">
+                    <div className="mb-2 flex items-center justify-between">
+                      <span className="text-xs font-semibold text-gray-500">Testimonial {ti + 1}</span>
+                      <button
+                        onClick={() => {
+                          const testimonials = (config.reviewTestimonials ?? []).filter((_, i) => i !== ti);
+                          setConfig({ ...config, reviewTestimonials: testimonials });
+                        }}
+                        className="flex h-6 w-6 items-center justify-center rounded border border-red-200 text-red-400 hover:bg-red-50"
+                      >
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                      </button>
+                    </div>
+                    <textarea
+                      value={t.text}
+                      onChange={(e) => { const ts = [...(config.reviewTestimonials ?? [])]; ts[ti] = { ...ts[ti], text: e.target.value }; setConfig({ ...config, reviewTestimonials: ts }); }}
+                      rows={2} placeholder="Review text..."
+                      className="mb-2 w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none"
+                    />
+                    <div className="flex gap-2">
+                      <input value={t.name} onChange={(e) => { const ts = [...(config.reviewTestimonials ?? [])]; ts[ti] = { ...ts[ti], name: e.target.value }; setConfig({ ...config, reviewTestimonials: ts }); }}
+                        placeholder="Name (e.g. Sarah M.)" className="flex-1 rounded border px-3 py-1.5 text-sm focus:border-[#0C4B75] focus:outline-none" />
+                      <input value={t.state} onChange={(e) => { const ts = [...(config.reviewTestimonials ?? [])]; ts[ti] = { ...ts[ti], state: e.target.value }; setConfig({ ...config, reviewTestimonials: ts }); }}
+                        placeholder="State" className="w-28 rounded border px-3 py-1.5 text-sm focus:border-[#0C4B75] focus:outline-none" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <button
+                onClick={() => setConfig({ ...config, reviewTestimonials: [...(config.reviewTestimonials ?? []), { text: "", name: "", state: "" }] })}
+                className="mt-2 w-full rounded border-2 border-dashed border-gray-200 py-2 text-xs font-medium text-gray-400 hover:border-[#0C4B75] hover:text-[#0C4B75]"
+              >
+                + Add Testimonial
+              </button>
+            </div>
           </div>
         )}
       </div>

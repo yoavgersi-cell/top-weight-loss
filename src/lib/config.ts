@@ -221,6 +221,7 @@ export interface SiteConfig {
     number: string;
     text: string;
   };
+  reviewTestimonials?: { text: string; name: string; state: string }[];
 }
 
 export const defaultConfig: SiteConfig = {
