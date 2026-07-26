@@ -52,8 +52,17 @@ export const metadata: Metadata = {
     description:
       "Compare pricing, medications, medical support, and overall value across the top weight loss providers of 2026.",
   },
+  other: {
+    "geo.region": "US",
+    "geo.position": "37.0902;-95.7129",
+    "ICBM": "37.0902, -95.7129",
+    "content-language": "en-US",
+  },
   alternates: {
     canonical: "https://www.topweightloss.io",
+    languages: {
+      "en-US": "https://www.topweightloss.io",
+    },
   },
   robots: {
     index: true,
@@ -74,7 +83,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} h-full antialiased`}>
+    <html lang="en-US" className={`${geistSans.variable} h-full antialiased`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       </head>
@@ -87,6 +96,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: "topweightloss.io",
               url: "https://www.topweightloss.io",
+              areaServed: { "@type": "Country", name: "United States" },
               logo: "https://www.topweightloss.io/favicon.png",
               description: "Compare the top weight loss providers offering GLP-1 medications like semaglutide and tirzepatide. Expert reviews, pricing comparisons, and personalized provider matching.",
               sameAs: [],
