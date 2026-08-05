@@ -1499,14 +1499,23 @@ export async function getConfig(): Promise<SiteConfig> {
         const saved = (await res.json()) as Partial<SiteConfig>;
         const initial = buildInitialConfig();
         // Merge providers: keep saved, add new defaults by id
+        // Seed lookup tolerant of admin-recreated providers whose ids differ
+        // from the seed keys ("provider-<timestamp>"): fall back to the
+        // normalized provider name.
+        const seedFor = (p: { id: string; name: string }) => {
+          if (seedTrustpilot[p.id]) return seedTrustpilot[p.id];
+          const norm = p.name.toLowerCase().replace(/[^a-z0-9]/g, "");
+          const aliases: Record<string, string> = { sprouthealth: "sprout", directmeds: "directmeds" };
+          return seedTrustpilot[norm] ?? seedTrustpilot[aliases[norm] ?? ""];
+        };
         const savedProviders = (saved.providers || []).map((p) => ({
           ...p,
           smallLogo: p.smallLogo || `/logos/${p.id}-icon.svg`,
           // Backfill seeded Trustpilot content for providers saved before the
           // fields existed; CMS-edited values (including deletions) win.
-          trustpilotRating: p.trustpilotRating ?? seedTrustpilot[p.id]?.rating,
-          trustpilotReviewCount: p.trustpilotReviewCount ?? seedTrustpilot[p.id]?.reviewCount,
-          trustpilotReviews: p.trustpilotReviews ?? seedTrustpilot[p.id]?.reviews,
+          trustpilotRating: p.trustpilotRating ?? seedFor(p)?.rating,
+          trustpilotReviewCount: p.trustpilotReviewCount ?? seedFor(p)?.reviewCount,
+          trustpilotReviews: p.trustpilotReviews ?? seedFor(p)?.reviews,
         }));
         const savedProviderIds = new Set(savedProviders.map((p) => p.id));
         const newProviders = initial.providers
@@ -1531,9 +1540,19 @@ export async function getConfig(): Promise<SiteConfig> {
             return [...savedArticles, ...newDefaults];
           })(),
           battles: (saved.battles && saved.battles.length > 0 ? saved.battles : initial.battles).map((b) => {
-            const pair = [b.provider1Id, b.provider2Id];
-            if (pair.includes("embody") && pair.includes("altrx")) {
-              return { ...embodyAltrxBattle, slug: b.slug };
+            // Match the Embody vs altRx battle by provider id OR name, so
+            // admin-recreated providers with generated ids still match.
+            const isProvider = (id: string, key: string) => {
+              if (id === key) return true;
+              const name = providers.find((p) => p.id === id)?.name.toLowerCase().replace(/[^a-z0-9]/g, "") ?? "";
+              return name === key;
+            };
+            const p1IsEmbody = isProvider(b.provider1Id, "embody");
+            const p2IsEmbody = isProvider(b.provider2Id, "embody");
+            if ((p1IsEmbody && isProvider(b.provider2Id, "altrx")) || (p2IsEmbody && isProvider(b.provider1Id, "altrx"))) {
+              const embodyId = p1IsEmbody ? b.provider1Id : b.provider2Id;
+              const altrxId = p1IsEmbody ? b.provider2Id : b.provider1Id;
+              return { ...embodyAltrxBattle, slug: b.slug, provider1Id: embodyId, provider2Id: altrxId, winnerId: embodyId };
             }
             return b;
           }),
