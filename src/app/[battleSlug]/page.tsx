@@ -427,7 +427,7 @@ export default async function BattlePage({
                     providerSlug={winner.id}
                     pageType="battle"
                     sourceFlow="battle_page"
-                    className="flex h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 px-8 text-[15px] font-bold text-white transition-colors hover:bg-emerald-700 sm:w-auto"
+                    className="flex h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-[#0C4B75] px-8 text-[15px] font-bold text-white transition-colors hover:bg-[#093d61] sm:w-auto"
                   >
                     Visit {winner.name}
                     <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
