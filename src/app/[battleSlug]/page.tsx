@@ -567,13 +567,17 @@ export default async function BattlePage({
                 </div>
               </div>
 
-              <Link
-                href="/find-your-match"
+              <ProviderCta
+                href={winner.affiliateUrl}
+                providerName={winner.name}
+                providerSlug={winner.id}
+                pageType="battle"
+                sourceFlow="battle_page"
                 className="mt-7 flex h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-[#0C4B75] text-[15px] font-bold text-white transition-colors hover:bg-[#093d61] sm:w-auto sm:px-8"
               >
-                Find Your Best Match
+                Visit {winner.name}
                 <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
-              </Link>
+              </ProviderCta>
             </div>
           </div>
 
