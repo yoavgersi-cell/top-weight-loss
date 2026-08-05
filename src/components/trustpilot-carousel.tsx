@@ -30,16 +30,24 @@ function TrustpilotStars({ rating, boxClass = "h-5 w-5" }: { rating: number; box
   );
 }
 
-function TrustpilotWordmark() {
+// Official Trustpilot star mark: green star with dark-green notch
+function TrustpilotStarMark({ className }: { className?: string }) {
   return (
-    <span className="inline-flex items-center gap-1">
-      <span
-        className="flex h-4 w-4 items-center justify-center"
-        style={{ backgroundColor: TP_GREEN }}
-      >
-        <TrustpilotStar className="h-[68%] w-[68%]" />
-      </span>
-      <span className="text-[14px] font-bold tracking-tight text-[#191919]">Trustpilot</span>
+    <svg viewBox="0 0 1133 1080" className={className} aria-hidden="true">
+      <path
+        fill={TP_GREEN}
+        d="M1132.8 412.8H700.2L566.4 0 432.6 412.8 0 412.5l350.1 254.7L216 1080l350.4-254.4L916.8 1080 783 667.2l349.8-254.4z"
+      />
+      <path fill="#005128" d="M813.3 760.5 783 667.2 566.4 825.6z" />
+    </svg>
+  );
+}
+
+function TrustpilotWordmark({ starClass = "h-5 w-5", textClass = "text-[17px]" }: { starClass?: string; textClass?: string }) {
+  return (
+    <span className="inline-flex items-center gap-1.5" aria-label="Trustpilot">
+      <TrustpilotStarMark className={starClass} />
+      <span className={`${textClass} font-bold tracking-tight text-[#191919]`}>Trustpilot</span>
     </span>
   );
 }
@@ -113,7 +121,7 @@ export function TrustpilotCarousel({
     <div className="rounded-2xl border border-gray-200 bg-gray-50/50 p-5 sm:p-6">
       {/* Header */}
       <div className="mb-5 flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
           {providerLogo && (
             <div className="flex h-[28px] w-[90px] items-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -125,7 +133,7 @@ export function TrustpilotCarousel({
           </h3>
           <TrustpilotWordmark />
         </div>
-        {rating && numericRating !== null && !isNaN(numericRating) && (
+        {rating && numericRating !== null && !isNaN(numericRating) ? (
           <div className="flex items-center gap-2">
             <TrustpilotStars rating={numericRating} boxClass="h-[20px] w-[20px]" />
             <span className="text-[14px] font-bold text-[#191919]">{rating}</span>
@@ -133,6 +141,8 @@ export function TrustpilotCarousel({
               <span className="text-[12px] text-gray-400">({reviewCount} reviews)</span>
             )}
           </div>
+        ) : (
+          <span className="text-[12px] text-gray-400">Source: Trustpilot</span>
         )}
       </div>
 
