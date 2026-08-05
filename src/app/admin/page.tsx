@@ -1021,14 +1021,14 @@ export default function AdminPage() {
                   </div>
 
                   <ArrayField
-                    label={`Choose ${bp1?.name ?? "Winner"} if you want (points)`}
+                    label={`Choose ${(battle.winnerId === battle.provider2Id ? bp2?.name : bp1?.name) ?? "Winner"} if you want (winner's points)`}
                     items={battle.verdictWinnerPoints ?? []}
                     onUpdate={(i, v) => { const pts = [...(battle.verdictWinnerPoints ?? [])]; pts[i] = v; updateBattle({ verdictWinnerPoints: pts }); }}
                     onAdd={() => updateBattle({ verdictWinnerPoints: [...(battle.verdictWinnerPoints ?? []), ""] })}
                     onRemove={(i) => updateBattle({ verdictWinnerPoints: (battle.verdictWinnerPoints ?? []).filter((_, idx) => idx !== i) })}
                   />
                   <ArrayField
-                    label={`Choose ${bp2?.name ?? "Other"} if you prefer (points)`}
+                    label={`Choose ${(battle.winnerId === battle.provider2Id ? bp1?.name : bp2?.name) ?? "Other"} if you prefer (runner-up's points)`}
                     items={battle.verdictLoserPoints ?? []}
                     onUpdate={(i, v) => { const pts = [...(battle.verdictLoserPoints ?? [])]; pts[i] = v; updateBattle({ verdictLoserPoints: pts }); }}
                     onAdd={() => updateBattle({ verdictLoserPoints: [...(battle.verdictLoserPoints ?? []), ""] })}

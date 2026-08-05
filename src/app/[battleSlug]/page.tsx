@@ -6,7 +6,7 @@ import { EditorialContent } from "@/components/editorial-content";
 import { LandingEditorial } from "@/components/landing-editorial";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound } from "next/navigation";
-import { ArrowRight, Check, Minus } from "lucide-react";
+import { ArrowRight, Check, Minus, Trophy } from "lucide-react";
 import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 
@@ -160,11 +160,10 @@ export default async function BattlePage({
   const p2 = config.providers.find((p) => p.id === battle.provider2Id);
   if (!p1 || !p2) return notFound();
 
-  const { providerOrder, positions } = config.ranking;
-  const p1Rank = providerOrder.indexOf(p1.id);
-  const p2Rank = providerOrder.indexOf(p2.id);
-  const p1Score = p1Rank >= 0 && positions[p1Rank] ? positions[p1Rank] : null;
-  const p2Score = p2Rank >= 0 && positions[p2Rank] ? positions[p2Rank] : null;
+  // Winner is set per-battle in the CMS (Admin → Battles → Winner)
+  const winner = battle.winnerId === p2.id ? p2 : p1;
+  const loser = winner.id === p1.id ? p2 : p1;
+  const hasExplicitWinner = battle.winnerId === p1.id || battle.winnerId === p2.id;
 
   const getCategoryLabel = (cat: (typeof battle.categories)[0]) => {
     if (cat.winner === "tie") return "Close call";
@@ -245,25 +244,24 @@ export default async function BattlePage({
               </div>
             </div>
 
-            {[
-              { provider: p1, score: p1Score },
-              { provider: p2, score: p2Score },
-            ].map(({ provider, score }, idx) => (
+            {[p1, p2].map((provider, idx) => {
+              const isWinner = hasExplicitWinner && provider.id === battle.winnerId;
+              return (
               <div
                 key={provider.id}
-                className={`relative rounded-2xl border border-gray-200 bg-white px-6 pb-6 pt-7 shadow-sm ${idx === 0 ? "order-first" : "order-last sm:order-last"}`}
+                className={`relative rounded-2xl border bg-white px-6 pb-6 pt-7 shadow-sm ${isWinner ? "border-emerald-300" : "border-gray-200"} ${idx === 0 ? "order-first" : "order-last sm:order-last"}`}
               >
+                {isWinner && (
+                  <div className="absolute -top-3 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-full bg-emerald-500 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-white shadow-sm">
+                    <Trophy className="h-3 w-3" strokeWidth={2.5} />
+                    Winner
+                  </div>
+                )}
                 <div className="mb-3 flex items-center justify-between">
                   <div className="flex h-[40px] w-[110px] items-center">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={provider.logo} alt={`${provider.name} logo`} className="max-h-full max-w-full object-contain" />
                   </div>
-                  {score && (
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-[28px] font-extrabold text-[#191919]">{score.score}</span>
-                      <span className="text-[12px] font-semibold text-gray-300">/10</span>
-                    </div>
-                  )}
                 </div>
 
                 <p className="mb-4 text-[14px] leading-relaxed text-gray-500">
@@ -291,7 +289,8 @@ export default async function BattlePage({
                   <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
                 </ProviderCta>
               </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* ───── INTRO ───── */}
@@ -518,16 +517,24 @@ export default async function BattlePage({
           {/* ───── VERDICT ───── */}
           <div className="mb-14 overflow-hidden rounded-2xl border border-gray-200 bg-white">
             <div className="p-6 sm:p-8">
-              <h2 className="mb-5 text-[22px] font-bold text-[#191919]">The Bottom Line</h2>
+              <div className="mb-5 flex flex-wrap items-center gap-3">
+                <h2 className="text-[22px] font-bold text-[#191919]">The Bottom Line</h2>
+                {hasExplicitWinner && (
+                  <span className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-[12px] font-bold text-emerald-700">
+                    <Trophy className="h-3.5 w-3.5" strokeWidth={2.5} />
+                    Winner: {winner.name}
+                  </span>
+                )}
+              </div>
 
               <p className="mb-6 text-[15px] leading-[1.75] text-gray-600">
                 {battle.verdict}
               </p>
 
               <div className="grid gap-6 sm:grid-cols-2">
-                <div className="rounded-xl bg-gray-50 p-5">
+                <div className={`rounded-xl p-5 ${hasExplicitWinner ? "border border-emerald-100 bg-emerald-50/50" : "bg-gray-50"}`}>
                   <p className="mb-3 text-[13px] font-bold uppercase tracking-wider text-[#191919]">
-                    Choose {p1.name} if you want
+                    Choose {winner.name} if you want
                   </p>
                   <ul className="space-y-2">
                     {(battle.verdictWinnerPoints ?? []).map((point, i) => (
@@ -535,7 +542,7 @@ export default async function BattlePage({
                         key={i}
                         className="flex items-start gap-2.5 text-[14px] text-gray-600"
                       >
-                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-gray-400" strokeWidth={2} />
+                        <Check className={`mt-0.5 h-4 w-4 shrink-0 ${hasExplicitWinner ? "text-emerald-500" : "text-gray-400"}`} strokeWidth={2} />
                         {point}
                       </li>
                     ))}
@@ -544,7 +551,7 @@ export default async function BattlePage({
 
                 <div className="rounded-xl bg-gray-50 p-5">
                   <p className="mb-3 text-[13px] font-bold uppercase tracking-wider text-[#191919]">
-                    Choose {p2.name} if you prefer
+                    Choose {loser.name} if you prefer
                   </p>
                   <ul className="space-y-2">
                     {(battle.verdictLoserPoints ?? []).map((point, i) => (
