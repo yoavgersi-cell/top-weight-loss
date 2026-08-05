@@ -152,6 +152,31 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       },
     ],
   },
+  shed: {
+    reviews: [
+      {
+        title: "Spoke with Tamika",
+        text: "Spoke with Tamika. She was very helpful and informative. She's scheduled a coaching session. Gave me lots of good information.",
+        name: "Cindy Cruse",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Jamika was the representative that called me",
+        text: "Jamika was the representative that called me and she was amazing VERY informative and nice. Asked me if I had any questions made sure I understood the entire process and made me feel very comfortable on my journey with shed!",
+        name: "Jordan Rae",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "5 star customer service",
+        text: "Amber was quick to respond to my concern and offered a quick solution! Great customer service!",
+        name: "Joyce Headley",
+        location: "US",
+        rating: 5,
+      },
+    ],
+  },
   embody: {
     reviews: [
       {
