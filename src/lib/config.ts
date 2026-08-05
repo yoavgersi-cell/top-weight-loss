@@ -1,3 +1,11 @@
+export interface TrustpilotReview {
+  title: string;
+  text: string;
+  name: string;
+  location: string;
+  rating: number;
+}
+
 export interface Provider {
   id: string;
   name: string;
@@ -9,6 +17,9 @@ export interface Provider {
   affiliateUrl: string;
   ctaText: string;
   excludedStates?: string[];
+  trustpilotRating?: string;
+  trustpilotReviewCount?: string;
+  trustpilotReviews?: TrustpilotReview[];
 }
 
 export interface RankingPosition {
