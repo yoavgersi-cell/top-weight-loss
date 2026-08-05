@@ -177,6 +177,38 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       },
     ],
   },
+  sprout: {
+    reviews: [
+      {
+        title: "I have had a great experience with Sprout",
+        text: "I have had a great experience with Sprout. They were quick to respond and the process for approval worked seamlessly. Customer service was awesome, shout out to Frank!",
+        name: "Holly Cattrell",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Great experience!",
+        text: "Super easy to join, reasonably priced, effective, and great customer service. Frank Burton with customer support was really helpful and quick to respond when I had an issue with my email. Great experience over all!",
+        name: "Kayte Volz",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Excellent Customer Service",
+        text: "Customer Service team is very responsive and very helpful",
+        name: "Rajat Rakkhit",
+        location: "GB",
+        rating: 5,
+      },
+      {
+        title: "I have been very happy with Sprout",
+        text: "I have been very happy with Sprout. When I have had questions or problems their support staff is very quick to respond. Outstanding customer service!!!",
+        name: "Jennifer Volckaert",
+        location: "US",
+        rating: 5,
+      },
+    ],
+  },
   embody: {
     reviews: [
       {
