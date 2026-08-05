@@ -1070,6 +1070,95 @@ const embodyAltrxBattle: Omit<BattleData, "slug"> = {
   ],
 };
 
+// Embody vs WellMedR battle — winner: Embody. Injected when the CMS has no
+// battle for this provider pair, so /embody-vs-wellmedr resolves.
+const embodyWellmedrBattle: BattleData = {
+  slug: "embody-vs-wellmedr",
+  provider1Id: "embody",
+  provider2Id: "wellmedr",
+  title: "Embody vs WellMedR: Which Weight Loss Provider Wins in 2026?",
+  subtitle: "We compared pricing, medical support, long-term care, and real customer experience to see which provider comes out ahead.",
+  description: "Embody vs WellMedR compared across pricing, GLP-1 treatment, medical support, and long-term weight management. See why Embody comes out on top in 2026.",
+  intro: "Embody and WellMedR both offer physician-guided GLP-1 weight loss treatment through a fully online experience — but they take different approaches. Embody leads with doctor-driven care, aggressive introductory pricing, and fast free shipping, while WellMedR is built around long-term weight management with continuous clinical guidance. For most people starting treatment, Embody's combination of price, speed, and medical oversight gives it the edge. Here's the full breakdown.",
+  verdict: "Both providers are credible options for medically supervised weight loss — but Embody takes this comparison. Its $69/month introductory offer, board-certified doctor-led model, free 1-2 day shipping, and strong recent customer feedback make it the better starting point for most people. WellMedR remains a solid pick if your top priority is structured long-term maintenance support after the initial weight loss phase.",
+  verdictWinnerPoints: [
+    "The lowest starting price at $69/month",
+    "Doctor-led care from evaluation through treatment",
+    "Free 1-2 day shipping and a fully online process",
+  ],
+  verdictLoserPoints: [
+    "Dedicated long-term maintenance support",
+    "Progress tracking and continuous clinical guidance",
+    "Discounted rates on longer-term commitments",
+  ],
+  winnerId: "embody",
+  categories: [
+    {
+      name: "Pricing & Value",
+      winner: "provider1",
+      explanation: "Embody's limited-time $69/month GLP-1 offer makes it one of the most affordable ways to start treatment, with no insurance required. WellMedR's monthly plans include medication and clinical support, with discounts for longer commitments, but the entry price is higher than Embody's introductory rate.",
+      supportingPoints: [
+        "GLP-1 treatment from $69/month",
+        "No insurance required to start",
+        "Medication and clinical support bundled",
+        "Discounted rates on longer-term plans",
+      ],
+    },
+    {
+      name: "Medical Support",
+      winner: "provider1",
+      explanation: "Embody is doctor-led from start to finish — board-certified physicians handle evaluations, treatment protocols, and ongoing monitoring. WellMedR provides continuous clinical guidance and medication management, but Embody's depth of physician involvement stands out.",
+      supportingPoints: [
+        "Board-certified doctors lead every treatment",
+        "Thorough medical evaluations and monitoring",
+        "Continuous clinical guidance included",
+        "Medication management and adjustments",
+      ],
+    },
+    {
+      name: "Long-Term Weight Management",
+      winner: "provider2",
+      explanation: "WellMedR is purpose-built for sustainable results, with progress tracking, maintenance-phase support, and clinical guidance designed to keep weight off after the initial loss. Embody provides ongoing monitoring, but WellMedR's structured long-term program is the stronger offer here.",
+      supportingPoints: [
+        "Ongoing provider monitoring included",
+        "Evidence-based treatment protocols",
+        "Dedicated maintenance-phase support",
+        "Progress tracking and analytics",
+      ],
+    },
+    {
+      name: "Speed & Convenience",
+      winner: "provider1",
+      explanation: "Embody's process is 100% online, with free shipping that typically arrives in 1-2 days. WellMedR also runs fully online with home delivery, but Embody's turnaround time is hard to beat.",
+      supportingPoints: [
+        "Free shipping — arrives in 1-2 days",
+        "100% online medical visit",
+        "Fully online with home delivery",
+        "Flexible scheduling for check-ins",
+      ],
+    },
+    {
+      name: "Customer Experience",
+      winner: "provider1",
+      explanation: "Recent customer reviews favor Embody, with patients praising fast, proactive communication and a smooth start to treatment. WellMedR's reviews are also positive, particularly around helpful support staff, but Embody's recent feedback is more consistent.",
+      supportingPoints: [
+        "Highly rated onboarding and support",
+        "Proactive shipment updates and communication",
+        "Helpful, responsive support team",
+        "Strong focus on patient follow-through",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Starting Price", provider1Value: "$69/month (limited offer)", provider2Value: "Monthly plans, discounts on longer terms", highlight: "provider1" },
+    { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
+    { feature: "Shipping", provider1Value: "Free, arrives in 1-2 days", provider2Value: "Home delivery included", highlight: "provider1" },
+    { feature: "Insurance Required", provider1Value: "No", provider2Value: "No", highlight: "both" },
+    { feature: "Long-Term Support", provider1Value: "Ongoing provider monitoring", provider2Value: "Dedicated maintenance-phase program", highlight: "provider2" },
+    { feature: "Doctor-Led Care", provider1Value: "Board-certified doctors throughout", provider2Value: "Clinical guidance included", highlight: "provider1" },
+  ],
+};
+
 function buildInitialConfig(): SiteConfig {
   return {
     ...defaultConfig,
@@ -1539,23 +1628,40 @@ export async function getConfig(): Promise<SiteConfig> {
             const newDefaults = initial.articles.filter((a) => !savedSlugs.has(a.slug));
             return [...savedArticles, ...newDefaults];
           })(),
-          battles: (saved.battles && saved.battles.length > 0 ? saved.battles : initial.battles).map((b) => {
-            // Match the Embody vs altRx battle by provider id OR name, so
-            // admin-recreated providers with generated ids still match.
+          battles: (() => {
+            // Provider matching tolerant of admin-recreated providers whose ids
+            // differ from the seed keys: fall back to normalized name.
             const isProvider = (id: string, key: string) => {
               if (id === key) return true;
               const name = providers.find((p) => p.id === id)?.name.toLowerCase().replace(/[^a-z0-9]/g, "") ?? "";
               return name === key;
             };
-            const p1IsEmbody = isProvider(b.provider1Id, "embody");
-            const p2IsEmbody = isProvider(b.provider2Id, "embody");
-            if ((p1IsEmbody && isProvider(b.provider2Id, "altrx")) || (p2IsEmbody && isProvider(b.provider1Id, "altrx"))) {
-              const embodyId = p1IsEmbody ? b.provider1Id : b.provider2Id;
-              const altrxId = p1IsEmbody ? b.provider2Id : b.provider1Id;
-              return { ...embodyAltrxBattle, slug: b.slug, provider1Id: embodyId, provider2Id: altrxId, winnerId: embodyId };
+            const providerIdFor = (key: string) =>
+              providers.find((p) => p.id === key)?.id ??
+              providers.find((p) => p.name.toLowerCase().replace(/[^a-z0-9]/g, "") === key)?.id ??
+              key;
+            const isPair = (b: BattleData, key1: string, key2: string) =>
+              (isProvider(b.provider1Id, key1) && isProvider(b.provider2Id, key2)) ||
+              (isProvider(b.provider1Id, key2) && isProvider(b.provider2Id, key1));
+
+            const battles = (saved.battles && saved.battles.length > 0 ? saved.battles : initial.battles).map((b) => {
+              // Corrected Embody vs altRx content always wins for that pair
+              if (isPair(b, "embody", "altrx")) {
+                const embodyId = isProvider(b.provider1Id, "embody") ? b.provider1Id : b.provider2Id;
+                const altrxId = embodyId === b.provider1Id ? b.provider2Id : b.provider1Id;
+                return { ...embodyAltrxBattle, slug: b.slug, provider1Id: embodyId, provider2Id: altrxId, winnerId: embodyId };
+              }
+              return b;
+            });
+
+            // Inject Embody vs WellMedR when the CMS has no battle for the pair
+            if (!battles.some((b) => isPair(b, "embody", "wellmedr"))) {
+              const embodyId = providerIdFor("embody");
+              const wellmedrId = providerIdFor("wellmedr");
+              battles.push({ ...embodyWellmedrBattle, provider1Id: embodyId, provider2Id: wellmedrId, winnerId: embodyId });
             }
-            return b;
-          }),
+            return battles;
+          })(),
           sidebars: saved.sidebars && saved.sidebars.length > 0 ? saved.sidebars : initial.sidebars,
           landingPages: saved.landingPages && saved.landingPages.length > 0 ? saved.landingPages : initial.landingPages,
           quiz: saved.quiz && saved.quiz.questions && saved.quiz.questions.length > 0 ? { ...initial.quiz, ...saved.quiz } : initial.quiz,
