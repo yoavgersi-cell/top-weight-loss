@@ -981,6 +981,95 @@ const defaultReviews: ReviewData[] = [
   }
 ];
 
+// Corrected Embody vs altRx battle content — winner: Embody. Applied over the
+// saved CMS copy only while that copy still favors altRx (winnerId !== "embody");
+// once the battle is re-saved in the admin, the CMS version wins.
+const embodyAltrxBattle: Omit<BattleData, "slug"> = {
+  provider1Id: "embody",
+  provider2Id: "altrx",
+  title: "Embody vs altRx: Which GLP-1 Provider Wins in 2026?",
+  subtitle: "We compared pricing, medical support, medication access, and real customer experience to see which provider comes out ahead.",
+  description: "Embody vs altRx compared across pricing, GLP-1 medication options, medical support, and customer experience. See why Embody comes out on top in 2026.",
+  intro: "Embody and altRx are two of the most popular telehealth weight loss providers offering GLP-1 medications. Both connect you with licensed providers and ship medication straight to your door — but they differ in pricing, medical oversight, and day-to-day experience. Embody's doctor-led model, $69/month introductory pricing, and fast free shipping give it the edge for most people, while altRx remains a strong option for those who want the widest medication selection. Here's the full breakdown.",
+  verdict: "Both Embody and altRx are legitimate, well-reviewed telehealth options for GLP-1 weight loss — but Embody takes this one. Its $69/month introductory pricing, doctor-led care model, free 1-2 day shipping, and consistently strong recent customer feedback make it the better fit for most people starting treatment. altRx is still worth a look if your priority is the broadest possible medication selection.",
+  verdictWinnerPoints: [
+    "The lowest starting price at $69/month",
+    "Doctor-led care with ongoing monitoring",
+    "Free 1-2 day shipping and a fully online process",
+  ],
+  verdictLoserPoints: [
+    "The widest GLP-1 medication selection",
+    "Oral medication options alongside injectables",
+    "An established, transparent pricing structure",
+  ],
+  winnerId: "embody",
+  categories: [
+    {
+      name: "Pricing & Value",
+      winner: "provider1",
+      explanation: "Embody's limited-time $69/month GLP-1 offer makes it one of the most affordable ways to start treatment, with no insurance required and no hidden fees. altRx also offers transparent pricing with no long-term commitment, but typical monthly costs run higher than Embody's introductory rate.",
+      supportingPoints: [
+        "GLP-1 treatment from $69/month",
+        "No insurance required to start",
+        "Transparent pricing with no hidden fees",
+        "No long-term commitment required",
+      ],
+    },
+    {
+      name: "Medical Support",
+      winner: "provider1",
+      explanation: "Embody is doctor-led from start to finish — board-certified physicians handle evaluations, treatment protocols, and ongoing monitoring. altRx includes provider consultations with every plan, but Embody's depth of medical oversight stands out.",
+      supportingPoints: [
+        "Board-certified doctors lead every treatment",
+        "Ongoing monitoring and dosage optimization",
+        "Provider consultations included with every plan",
+        "Licensed clinicians available for follow-ups",
+      ],
+    },
+    {
+      name: "Medication Options",
+      winner: "provider2",
+      explanation: "altRx offers one of the most comprehensive GLP-1 lineups available, including semaglutide, tirzepatide, and oral options. Embody covers the core GLP-1 medications with evidence-based protocols, but altRx's selection is broader.",
+      supportingPoints: [
+        "Semaglutide and tirzepatide available",
+        "Evidence-based dosing protocols",
+        "Broadest GLP-1 medication selection",
+        "Oral and injectable options offered",
+      ],
+    },
+    {
+      name: "Speed & Convenience",
+      winner: "provider1",
+      explanation: "Embody's process is 100% online, with free shipping that typically arrives in 1-2 days. altRx also delivers nationwide with a smooth online flow, but Embody's turnaround time is hard to beat.",
+      supportingPoints: [
+        "Free shipping — arrives in 1-2 days",
+        "100% online medical visit",
+        "Nationwide delivery included",
+        "Simple online checkout and refills",
+      ],
+    },
+    {
+      name: "Customer Experience",
+      winner: "provider1",
+      explanation: "Recent customer reviews favor Embody, with patients praising fast, proactive communication and smooth onboarding. altRx reviews are positive overall, though some recent reviewers report refill delays.",
+      supportingPoints: [
+        "Highly rated onboarding and support",
+        "Proactive shipment updates and communication",
+        "Helpful provider consultations",
+        "Responsive support on most requests",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Starting Price", provider1Value: "$69/month (limited offer)", provider2Value: "Varies by medication", highlight: "provider1" },
+    { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
+    { feature: "Shipping", provider1Value: "Free, arrives in 1-2 days", provider2Value: "Nationwide delivery", highlight: "provider1" },
+    { feature: "Insurance Required", provider1Value: "No", provider2Value: "No", highlight: "both" },
+    { feature: "GLP-1 Selection", provider1Value: "Semaglutide, tirzepatide", provider2Value: "Semaglutide, tirzepatide, oral options", highlight: "provider2" },
+    { feature: "Doctor-Led Care", provider1Value: "Board-certified doctors throughout", provider2Value: "Provider consultations included", highlight: "provider1" },
+  ],
+};
+
 function buildInitialConfig(): SiteConfig {
   return {
     ...defaultConfig,
@@ -1441,7 +1530,13 @@ export async function getConfig(): Promise<SiteConfig> {
             const newDefaults = initial.articles.filter((a) => !savedSlugs.has(a.slug));
             return [...savedArticles, ...newDefaults];
           })(),
-          battles: saved.battles && saved.battles.length > 0 ? saved.battles : initial.battles,
+          battles: (saved.battles && saved.battles.length > 0 ? saved.battles : initial.battles).map((b) => {
+            const pair = [b.provider1Id, b.provider2Id];
+            if (pair.includes("embody") && pair.includes("altrx") && b.winnerId !== "embody") {
+              return { ...embodyAltrxBattle, slug: b.slug };
+            }
+            return b;
+          }),
           sidebars: saved.sidebars && saved.sidebars.length > 0 ? saved.sidebars : initial.sidebars,
           landingPages: saved.landingPages && saved.landingPages.length > 0 ? saved.landingPages : initial.landingPages,
           quiz: saved.quiz && saved.quiz.questions && saved.quiz.questions.length > 0 ? { ...initial.quiz, ...saved.quiz } : initial.quiz,
