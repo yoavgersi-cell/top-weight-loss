@@ -209,6 +209,31 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       },
     ],
   },
+  directmeds: {
+    reviews: [
+      {
+        title: "A great personnel",
+        text: "A great personnel, you have answering the phone and following up. Plus its a wonderful product",
+        name: "John",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Chelsea King was the best customer service representative",
+        text: "Chelsea King was the best customer service representative. She was smart, friendly and helpful. I would definitely recommend her!",
+        name: "Charisse",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "I spoke with two of your agents",
+        text: "I spoke with two of your agents and they were extremely helpful. First I spoke with Summer who was delightful and professional. Then I spoke with Leon, who helped me with an order I was having difficulty with. I was extremely pleased with their friendly professionalism and knowledge of the product.",
+        name: "Customer",
+        location: "US",
+        rating: 5,
+      },
+    ],
+  },
   embody: {
     reviews: [
       {
