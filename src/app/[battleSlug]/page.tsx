@@ -229,6 +229,44 @@ export default async function BattlePage({
         </section>
 
         <div className="mx-auto max-w-[1100px] px-4 py-10 sm:px-6">
+          {/* ───── WINNER BANNER ───── */}
+          {hasExplicitWinner && (
+            <div className="mb-8 overflow-hidden rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 via-white to-white shadow-sm">
+              <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+                <div className="flex items-center gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-emerald-500 shadow-sm">
+                    <Trophy className="h-6 w-6 text-white" strokeWidth={2} />
+                  </div>
+                  <div>
+                    <p className="text-[11px] font-bold uppercase tracking-wider text-emerald-600">
+                      Our Winner
+                    </p>
+                    <div className="mt-1.5 flex h-[34px] w-[130px] items-center">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={winner.logo}
+                        alt={`${winner.name} logo`}
+                        className="max-h-full max-w-full object-contain"
+                      />
+                    </div>
+                    <p className="mt-1.5 text-[13px] text-gray-500">{winner.tagline}</p>
+                  </div>
+                </div>
+                <ProviderCta
+                  href={winner.affiliateUrl}
+                  providerName={winner.name}
+                  providerSlug={winner.id}
+                  pageType="battle"
+                  sourceFlow="battle_page"
+                  className="flex h-[46px] shrink-0 items-center justify-center gap-1.5 rounded-xl bg-emerald-600 px-6 text-[14px] font-bold text-white transition-colors hover:bg-emerald-700"
+                >
+                  Visit {winner.name}
+                  <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
+                </ProviderCta>
+              </div>
+            </div>
+          )}
+
           {/* ───── PROVIDER CARDS (enriched) ───── */}
           <div className="relative mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
             {/* VS badge */}
