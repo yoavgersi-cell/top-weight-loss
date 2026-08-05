@@ -229,64 +229,6 @@ export default async function BattlePage({
         </section>
 
         <div className="mx-auto max-w-[1100px] px-4 py-10 sm:px-6">
-          {/* ───── WINNER BANNER ───── */}
-          {hasExplicitWinner && (
-            <div className="mb-8 overflow-hidden rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 via-white to-white shadow-sm">
-              {config.battleWinnerBannerImageMobile && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={config.battleWinnerBannerImageMobile}
-                  alt={`${winner.name} — our winner`}
-                  className="h-36 w-full object-cover sm:hidden"
-                />
-              )}
-              <div className="flex items-stretch">
-              <div className="flex flex-1 flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
-                <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-emerald-500 shadow-sm">
-                    <Trophy className="h-6 w-6 text-white" strokeWidth={2} />
-                  </div>
-                  <div>
-                    <p className="text-[11px] font-bold uppercase tracking-wider text-emerald-600">
-                      Our Winner
-                    </p>
-                    <div className="mt-1.5 flex h-[34px] w-[130px] items-center">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={winner.logo}
-                        alt={`${winner.name} logo`}
-                        className="max-h-full max-w-full object-contain"
-                      />
-                    </div>
-                    <p className="mt-1.5 text-[13px] text-gray-500">{winner.tagline}</p>
-                  </div>
-                </div>
-                <ProviderCta
-                  href={winner.affiliateUrl}
-                  providerName={winner.name}
-                  providerSlug={winner.id}
-                  pageType="battle"
-                  sourceFlow="battle_page"
-                  className="flex h-[46px] shrink-0 items-center justify-center gap-1.5 rounded-xl bg-emerald-600 px-6 text-[14px] font-bold text-white transition-colors hover:bg-emerald-700"
-                >
-                  Visit {winner.name}
-                  <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
-                </ProviderCta>
-              </div>
-              {config.battleWinnerBannerImageDesktop && (
-                <div className="relative hidden w-[220px] shrink-0 sm:block">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={config.battleWinnerBannerImageDesktop}
-                    alt={`${winner.name} — our winner`}
-                    className="absolute inset-0 h-full w-full object-cover"
-                  />
-                </div>
-              )}
-              </div>
-            </div>
-          )}
-
           {/* ───── PROVIDER CARDS (enriched) ───── */}
           <div className="relative mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
             {/* VS badge */}
@@ -435,6 +377,77 @@ export default async function BattlePage({
               })}
             </div>
           </div>
+
+          {/* ───── WINNER PROMO BANNER (mid-page, e-commerce style) ───── */}
+          {hasExplicitWinner && (
+            <div className="mb-14 overflow-hidden rounded-3xl bg-gradient-to-br from-[#E9F1E4] to-[#F7FAF4] shadow-sm">
+              <div className={`grid ${config.battleWinnerBannerImageDesktop ? "sm:grid-cols-2" : ""}`}>
+                {/* Mobile image */}
+                {config.battleWinnerBannerImageMobile && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={config.battleWinnerBannerImageMobile}
+                    alt={`${winner.name} customers`}
+                    className="h-52 w-full object-cover sm:hidden"
+                  />
+                )}
+
+                {/* Content */}
+                <div className="flex flex-col items-start justify-center p-6 sm:p-10 lg:p-12">
+                  <span className="mb-4 inline-flex items-center gap-1.5 rounded-full bg-emerald-600 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-wider text-white">
+                    <Trophy className="h-3.5 w-3.5" strokeWidth={2.5} />
+                    Our Winner
+                  </span>
+
+                  <div className="mb-4 flex h-[38px] w-[150px] items-center">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={winner.logo}
+                      alt={`${winner.name} logo`}
+                      className="max-h-full max-w-full object-contain"
+                    />
+                  </div>
+
+                  <p className="mb-4 text-[24px] font-extrabold leading-tight text-[#191919] sm:text-[28px]">
+                    {winner.tagline}
+                  </p>
+
+                  <ul className="mb-6 space-y-2">
+                    {winner.highlights.slice(0, 3).map((h, hi) => (
+                      <li key={hi} className="flex items-start gap-2 text-[14px] text-gray-700">
+                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" strokeWidth={2.5} />
+                        {h}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <ProviderCta
+                    href={winner.affiliateUrl}
+                    providerName={winner.name}
+                    providerSlug={winner.id}
+                    pageType="battle"
+                    sourceFlow="battle_page"
+                    className="flex h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 px-8 text-[15px] font-bold text-white transition-colors hover:bg-emerald-700 sm:w-auto"
+                  >
+                    Visit {winner.name}
+                    <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
+                  </ProviderCta>
+                </div>
+
+                {/* Desktop image */}
+                {config.battleWinnerBannerImageDesktop && (
+                  <div className="relative hidden min-h-[340px] sm:block">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={config.battleWinnerBannerImageDesktop}
+                      alt={`${winner.name} customer`}
+                      className="absolute inset-0 h-full w-full object-cover object-top"
+                    />
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
 
           {/* ───── FEATURE COMPARISON TABLE ───── */}
           {battle.features && battle.features.length > 0 && (() => {
