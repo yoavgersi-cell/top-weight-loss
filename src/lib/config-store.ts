@@ -1644,15 +1644,16 @@ export async function getConfig(): Promise<SiteConfig> {
               (isProvider(b.provider1Id, key1) && isProvider(b.provider2Id, key2)) ||
               (isProvider(b.provider1Id, key2) && isProvider(b.provider2Id, key1));
 
-            const battles = (saved.battles && saved.battles.length > 0 ? saved.battles : initial.battles).map((b) => {
-              // Corrected Embody vs altRx content always wins for that pair
-              if (isPair(b, "embody", "altrx")) {
-                const embodyId = isProvider(b.provider1Id, "embody") ? b.provider1Id : b.provider2Id;
-                const altrxId = embodyId === b.provider1Id ? b.provider2Id : b.provider1Id;
-                return { ...embodyAltrxBattle, slug: b.slug, provider1Id: embodyId, provider2Id: altrxId, winnerId: embodyId };
-              }
-              return b;
-            });
+            // CMS battles are authoritative; the corrected Embody vs altRx
+            // content now lives in the saved config, so no override is applied.
+            const battles = [...(saved.battles && saved.battles.length > 0 ? saved.battles : initial.battles)];
+
+            // Inject Embody vs altRx from code only if the CMS lost it entirely
+            if (!battles.some((b) => isPair(b, "embody", "altrx"))) {
+              const embodyId = providerIdFor("embody");
+              const altrxId = providerIdFor("altrx");
+              battles.push({ ...embodyAltrxBattle, slug: "embody-vs-altrx", provider1Id: embodyId, provider2Id: altrxId, winnerId: embodyId });
+            }
 
             // Inject Embody vs WellMedR when the CMS has no battle for the pair
             if (!battles.some((b) => isPair(b, "embody", "wellmedr"))) {
