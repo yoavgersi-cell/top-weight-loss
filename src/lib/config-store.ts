@@ -234,6 +234,31 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       },
     ],
   },
+  skinnyrx: {
+    reviews: [
+      {
+        title: "Starting my second yearly subscription",
+        text: "Ivy assisted me with my second yearly subscription and was very informative and helpful. I've lost over 45lbs on SkinnyRx so far in one year. Just don't expect to lose it all at once. Eat healthy, and be patient. Thanks Ivy!!!",
+        name: "Jill Wilson",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Nice experience",
+        text: "Great service",
+        name: "mitra shaffy",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Amy was awesome",
+        text: "Amy was awesome! Super sweet, intelligent and love every time I get to work with her.",
+        name: "Customer",
+        location: "US",
+        rating: 5,
+      },
+    ],
+  },
   embody: {
     reviews: [
       {
