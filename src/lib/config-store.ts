@@ -1,10 +1,297 @@
 import { put, list } from "@vercel/blob";
-import { type SiteConfig, type ReviewData, type ArticleData, type BattleData, type LandingPageData, defaultConfig } from "./config";
+import { type SiteConfig, type ReviewData, type ArticleData, type BattleData, type LandingPageData, type TrustpilotReview, defaultConfig } from "./config";
 import productsJson from "@/data/products.json";
 import faqsJson from "@/data/faqs.json";
 import { articles as defaultArticlesData } from "@/data/articles";
 
 const BLOB_KEY = "site-config.json";
+
+// Default Trustpilot reviews per provider id. Shown on battle pages until the
+// provider's reviews are edited in the admin CMS, which then takes precedence.
+const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; reviews: TrustpilotReview[] }> = {
+  wellmedr: {
+    reviews: [
+      {
+        title: "Contacted the company to slow my refills",
+        text: "Contacted the company to slow my refills. Talked to Shelby. She was so helpful, so fast, and helped me set up exactly what I wanted within 5 minutes. Thank you Shelby",
+        name: "Scott and Lisa Carter",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Prompt solutions",
+        text: "Candice listened and offered solutions.",
+        name: "Gooie",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Customer Service",
+        text: "Thus far, the entire process using Wellmedr has been pretty successful, pleasant and above all reassuring! Speaking to this specific experience, I reached out to obtain an update on the shipment of my meds and the turnaround time for a response was almost immediate! Can't wait to begin this journey and looking forward to adding another success story to Wellmedr's site!",
+        name: "Jessica",
+        location: "US",
+        rating: 5,
+      },
+    ],
+  },
+  altrx: {
+    reviews: [
+      {
+        title: "Good experience but a little frustration",
+        text: "I'm on my third month with altRx and while my first two months were very smooth, this third one has been terrible. My refill order has yet to be fulfilled with zero reason as to why. Customer service says they requested to “expedite it” but nothing yet. We shall see. I've been happy otherwise.",
+        name: "jb",
+        location: "US",
+        rating: 4,
+      },
+      {
+        title: "My first time ordering from AltRx",
+        text: "I was looking for a telehealth that utilized the same pharmacy I was already using, and AltRx was one of the ones. Ordering through AltRx was almost a 3rd of the cost I spent the first 3 months through the FSA site. Everything else ran smoothly. I ordered 7/5 and received it today, 7/13. I paid through Afterpay, so they can't renew without my approval.",
+        name: "Kimberly Williams",
+        location: "US",
+        rating: 4,
+      },
+      {
+        title: "Fantastic customer service",
+        text: "Fantastic customer service! I had a quick question about tracking my delivery, and their support team responded within an hour with all the details. The product quality is top-notch. Highly recommend",
+        name: "Lenden",
+        location: "US",
+        rating: 4,
+      },
+    ],
+  },
+  ro: {
+    reviews: [
+      {
+        title: "Very easy process!",
+        text: "Very easy process!",
+        name: "Jessica Phillips",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "All has been convenient and affordable",
+        text: "All has been convenient and affordable so far.",
+        name: "laura taylor",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "The meeting with the NP was on time",
+        text: "The meeting with the NP was on time. She was very thorough and I could understand her language.",
+        name: "Rebecca Kimble",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "It was really easy to sign up",
+        text: "It was really easy to sign up and I got answers right away. I'm waiting for my order to arrive. Can't wait!! Thank you",
+        name: "Teresa",
+        location: "US",
+        rating: 5,
+      },
+    ],
+  },
+  trimrx: {
+    reviews: [
+      {
+        title: "TrimRX is a good deal",
+        text: "I have to say that using TrimRx was the best decision I have made it a long time. I'm down 35 pounds since May 1st. I think the compounded B12 with Trizepatide does something really great for you. I feel better than I have in years. You'll be happy you did it trust me.",
+        name: "Steve Toney",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Excellent customer service",
+        text: "Cynthia reached out not long after I had gone through the online process. She was very kind and helpful and understanding that I was looking to find the best support and costs for my weightloss. For those that need good support along the way you cant go wrong using Trim Rx.",
+        name: "Katrina Campbell",
+        location: "US",
+        rating: 5,
+      },
+    ],
+  },
+  medvi: {
+    reviews: [
+      {
+        title: "The personal service",
+        text: "The personal service",
+        name: "DB",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "She took her time",
+        text: "She took her time, answered any questions. Very satisfied thank you",
+        name: "Raymond Skwaritch",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Friendly, prompt questions answered",
+        text: "Friendly professional answered my questions. Thank you!",
+        name: "lisa eckelhoff",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Professional and helpful",
+        text: "Professional summary, courtesy, thoroughly recommended and helpful information for my case.",
+        name: "Brian",
+        location: "US",
+        rating: 5,
+      },
+    ],
+  },
+  wellorithm: {
+    reviews: [
+      {
+        title: "Pleasant Experience Overall",
+        text: "I had to reschedule my appointment twice, they should really look into their user experience of their app, but overall the doctor was nice and delivery was quicker then I expected.",
+        name: "Tiro Mandal",
+        location: "US",
+        rating: 5,
+      },
+    ],
+  },
+  shed: {
+    reviews: [
+      {
+        title: "Spoke with Tamika",
+        text: "Spoke with Tamika. She was very helpful and informative. She's scheduled a coaching session. Gave me lots of good information.",
+        name: "Cindy Cruse",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Jamika was the representative that called me",
+        text: "Jamika was the representative that called me and she was amazing VERY informative and nice. Asked me if I had any questions made sure I understood the entire process and made me feel very comfortable on my journey with shed!",
+        name: "Jordan Rae",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "5 star customer service",
+        text: "Amber was quick to respond to my concern and offered a quick solution! Great customer service!",
+        name: "Joyce Headley",
+        location: "US",
+        rating: 5,
+      },
+    ],
+  },
+  sprout: {
+    reviews: [
+      {
+        title: "I have had a great experience with Sprout",
+        text: "I have had a great experience with Sprout. They were quick to respond and the process for approval worked seamlessly. Customer service was awesome, shout out to Frank!",
+        name: "Holly Cattrell",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Great experience!",
+        text: "Super easy to join, reasonably priced, effective, and great customer service. Frank Burton with customer support was really helpful and quick to respond when I had an issue with my email. Great experience over all!",
+        name: "Kayte Volz",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Excellent Customer Service",
+        text: "Customer Service team is very responsive and very helpful",
+        name: "Rajat Rakkhit",
+        location: "GB",
+        rating: 5,
+      },
+      {
+        title: "I have been very happy with Sprout",
+        text: "I have been very happy with Sprout. When I have had questions or problems their support staff is very quick to respond. Outstanding customer service!!!",
+        name: "Jennifer Volckaert",
+        location: "US",
+        rating: 5,
+      },
+    ],
+  },
+  directmeds: {
+    reviews: [
+      {
+        title: "A great personnel",
+        text: "A great personnel, you have answering the phone and following up. Plus its a wonderful product",
+        name: "John",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Chelsea King was the best customer service representative",
+        text: "Chelsea King was the best customer service representative. She was smart, friendly and helpful. I would definitely recommend her!",
+        name: "Charisse",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "I spoke with two of your agents",
+        text: "I spoke with two of your agents and they were extremely helpful. First I spoke with Summer who was delightful and professional. Then I spoke with Leon, who helped me with an order I was having difficulty with. I was extremely pleased with their friendly professionalism and knowledge of the product.",
+        name: "Customer",
+        location: "US",
+        rating: 5,
+      },
+    ],
+  },
+  skinnyrx: {
+    reviews: [
+      {
+        title: "Starting my second yearly subscription",
+        text: "Ivy assisted me with my second yearly subscription and was very informative and helpful. I've lost over 45lbs on SkinnyRx so far in one year. Just don't expect to lose it all at once. Eat healthy, and be patient. Thanks Ivy!!!",
+        name: "Jill Wilson",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Nice experience",
+        text: "Great service",
+        name: "mitra shaffy",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Amy was awesome",
+        text: "Amy was awesome! Super sweet, intelligent and love every time I get to work with her.",
+        name: "Customer",
+        location: "US",
+        rating: 5,
+      },
+    ],
+  },
+  embody: {
+    reviews: [
+      {
+        title: "Just started week 3 of tirzepatide",
+        text: "Only on week 3; however, from my very first inquiry I've had excellent communication from customer service. When I was debating about the product and asking questions, the responses were always very prompt. When I made the decision to start, customer service updated me every step during process without me even needing to inquiry. All steps took place on time as informed and product shipped within days.",
+        name: "MM",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Love the fact that there are no surprises",
+        text: "Love the fact that there are no surprises as in costly up front cost. So happy that it's monthly. Excited to start.",
+        name: "Tiffany Coin",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "It went awesome such a nice professional person",
+        text: "I've had a great experience with Embody over all. All those I've spoken to have been courteous informative and very helpful.",
+        name: "Rebecca Kirk",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Great customer service",
+        text: "Great customer service fast and reliable",
+        name: "Michael Tucker",
+        location: "US",
+        rating: 5,
+      },
+    ],
+  },
+};
 
 const defaultReviews: ReviewData[] = [
   {
@@ -706,6 +993,9 @@ function buildInitialConfig(): SiteConfig {
       highlights: p.highlights,
       affiliateUrl: p.affiliateUrl,
       ctaText: p.ctaText,
+      trustpilotRating: seedTrustpilot[p.id]?.rating,
+      trustpilotReviewCount: seedTrustpilot[p.id]?.reviewCount,
+      trustpilotReviews: seedTrustpilot[p.id]?.reviews,
     })),
     ranking: {
       providerOrder: ["altrx", "noom", "ro", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm", "synergyrx"],
@@ -1123,6 +1413,11 @@ export async function getConfig(): Promise<SiteConfig> {
         const savedProviders = (saved.providers || []).map((p) => ({
           ...p,
           smallLogo: p.smallLogo || `/logos/${p.id}-icon.svg`,
+          // Backfill seeded Trustpilot content for providers saved before the
+          // fields existed; CMS-edited values (including deletions) win.
+          trustpilotRating: p.trustpilotRating ?? seedTrustpilot[p.id]?.rating,
+          trustpilotReviewCount: p.trustpilotReviewCount ?? seedTrustpilot[p.id]?.reviewCount,
+          trustpilotReviews: p.trustpilotReviews ?? seedTrustpilot[p.id]?.reviews,
         }));
         const savedProviderIds = new Set(savedProviders.map((p) => p.id));
         const newProviders = initial.providers

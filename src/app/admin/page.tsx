@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import type { SiteConfig, Provider, FaqItem, ReviewData, ArticleData, BattleData, LandingPageData, SidebarConfigData, RankingPageConfig } from "@/lib/config";
+import type { SiteConfig, Provider, FaqItem, ReviewData, ArticleData, BattleData, LandingPageData, SidebarConfigData, RankingPageConfig, TrustpilotReview } from "@/lib/config";
 
 export default function AdminPage() {
   const [password, setPassword] = useState("");
@@ -81,6 +81,15 @@ export default function AdminPage() {
     const highlights = [...providers[providerIndex].highlights];
     highlights[bulletIndex] = value;
     providers[providerIndex] = { ...providers[providerIndex], highlights };
+    setConfig({ ...config, providers });
+  }
+
+  function updateTrustpilotReview(providerIndex: number, reviewIndex: number, field: keyof TrustpilotReview, value: string | number) {
+    if (!config) return;
+    const providers = [...config.providers];
+    const reviews = [...(providers[providerIndex].trustpilotReviews ?? [])];
+    reviews[reviewIndex] = { ...reviews[reviewIndex], [field]: value };
+    providers[providerIndex] = { ...providers[providerIndex], trustpilotReviews: reviews };
     setConfig({ ...config, providers });
   }
 
@@ -316,6 +325,71 @@ export default function AdminPage() {
                         />
                       ))}
                     </div>
+                  </div>
+
+                  <div className="mt-6 rounded-lg border border-gray-200 bg-gray-50/50 p-4">
+                    <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Trustpilot Reviews (shown on battle pages)</label>
+                    <p className="mb-3 text-xs text-gray-400">Add reviews to show a Trustpilot carousel for this provider on VS pages.</p>
+                    <div className="mb-3 grid gap-4 sm:grid-cols-2">
+                      <Field label="Overall Rating (e.g. 4.7)" value={provider.trustpilotRating ?? ""} onChange={(v) => updateProvider(index, "trustpilotRating", v)} />
+                      <Field label="Review Count (e.g. 2,341)" value={provider.trustpilotReviewCount ?? ""} onChange={(v) => updateProvider(index, "trustpilotReviewCount", v)} />
+                    </div>
+                    <div className="space-y-3">
+                      {(provider.trustpilotReviews ?? []).map((r, ri) => (
+                        <div key={ri} className="rounded-lg border bg-white p-4">
+                          <div className="mb-2 flex items-center justify-between">
+                            <span className="text-xs font-semibold text-gray-500">Review {ri + 1}</span>
+                            <div className="flex items-center gap-2">
+                              <select
+                                value={r.rating}
+                                onChange={(e) => updateTrustpilotReview(index, ri, "rating", parseInt(e.target.value, 10))}
+                                className="rounded border px-2 py-1 text-xs focus:border-[#0C4B75] focus:outline-none"
+                              >
+                                {[5, 4, 3, 2, 1].map((n) => (
+                                  <option key={n} value={n}>{n} star{n > 1 ? "s" : ""}</option>
+                                ))}
+                              </select>
+                              <button
+                                onClick={() => {
+                                  const reviews = (provider.trustpilotReviews ?? []).filter((_, i) => i !== ri);
+                                  updateProvider(index, "trustpilotReviews", reviews);
+                                }}
+                                className="flex h-6 w-6 items-center justify-center rounded border border-red-200 text-red-400 hover:bg-red-50"
+                              >
+                                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                              </button>
+                            </div>
+                          </div>
+                          <input
+                            value={r.title}
+                            onChange={(e) => updateTrustpilotReview(index, ri, "title", e.target.value)}
+                            placeholder="Review title (e.g. Lost 22 lbs in 3 months)"
+                            className="mb-2 w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none"
+                          />
+                          <textarea
+                            value={r.text}
+                            onChange={(e) => updateTrustpilotReview(index, ri, "text", e.target.value)}
+                            rows={2} placeholder="Review text..."
+                            className="mb-2 w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none"
+                          />
+                          <div className="flex gap-2">
+                            <input value={r.name} onChange={(e) => updateTrustpilotReview(index, ri, "name", e.target.value)}
+                              placeholder="Name (e.g. Sarah M.)" className="flex-1 rounded border px-3 py-1.5 text-sm focus:border-[#0C4B75] focus:outline-none" />
+                            <input value={r.location} onChange={(e) => updateTrustpilotReview(index, ri, "location", e.target.value)}
+                              placeholder="Location (e.g. TX)" className="w-32 rounded border px-3 py-1.5 text-sm focus:border-[#0C4B75] focus:outline-none" />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <button
+                      onClick={() => {
+                        const reviews: TrustpilotReview[] = [...(provider.trustpilotReviews ?? []), { title: "", text: "", name: "", location: "", rating: 5 }];
+                        updateProvider(index, "trustpilotReviews", reviews);
+                      }}
+                      className="mt-2 w-full rounded border-2 border-dashed border-gray-200 py-2 text-xs font-medium text-gray-400 hover:border-[#0C4B75] hover:text-[#0C4B75]"
+                    >
+                      + Add Trustpilot Review
+                    </button>
                   </div>
                 </div>
               ))}
