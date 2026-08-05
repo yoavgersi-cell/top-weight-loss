@@ -5,6 +5,7 @@ import { getConfig } from "@/lib/config-store";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
 import { TestimonialsCarousel } from "@/components/testimonials-carousel";
+import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { notFound } from "next/navigation";
 
 export const revalidate = 60;
@@ -272,6 +273,19 @@ export default async function ReviewPage({
             ))}
           </ul>
         </Section>
+
+        {/* Trustpilot Reviews */}
+        {(provider.trustpilotReviews?.length ?? 0) > 0 && (
+          <div className="mb-6">
+            <TrustpilotCarousel
+              providerName={provider.name}
+              providerLogo={provider.logo}
+              reviews={provider.trustpilotReviews!}
+              rating={provider.trustpilotRating}
+              reviewCount={provider.trustpilotReviewCount}
+            />
+          </div>
+        )}
 
         {/* Final Verdict */}
         <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
