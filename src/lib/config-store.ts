@@ -141,6 +141,17 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       },
     ],
   },
+  wellorithm: {
+    reviews: [
+      {
+        title: "Pleasant Experience Overall",
+        text: "I had to reschedule my appointment twice, they should really look into their user experience of their app, but overall the doctor was nice and delivery was quicker then I expected.",
+        name: "Tiro Mandal",
+        location: "US",
+        rating: 5,
+      },
+    ],
+  },
   embody: {
     reviews: [
       {
