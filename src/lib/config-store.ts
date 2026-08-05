@@ -981,9 +981,9 @@ const defaultReviews: ReviewData[] = [
   }
 ];
 
-// Corrected Embody vs altRx battle content — winner: Embody. Applied over the
-// saved CMS copy only while that copy still favors altRx (winnerId !== "embody");
-// once the battle is re-saved in the admin, the CMS version wins.
+// Corrected Embody vs altRx battle content — winner: Embody. Always applied
+// over the saved CMS copy (only the slug is kept); this battle is code-managed
+// until this override is removed.
 const embodyAltrxBattle: Omit<BattleData, "slug"> = {
   provider1Id: "embody",
   provider2Id: "altrx",
@@ -1532,7 +1532,7 @@ export async function getConfig(): Promise<SiteConfig> {
           })(),
           battles: (saved.battles && saved.battles.length > 0 ? saved.battles : initial.battles).map((b) => {
             const pair = [b.provider1Id, b.provider2Id];
-            if (pair.includes("embody") && pair.includes("altrx") && b.winnerId !== "embody") {
+            if (pair.includes("embody") && pair.includes("altrx")) {
               return { ...embodyAltrxBattle, slug: b.slug };
             }
             return b;
