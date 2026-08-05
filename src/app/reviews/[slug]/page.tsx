@@ -4,7 +4,6 @@ import { Check, X, ArrowRight, Users, Clock, Shield } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
-import { TestimonialsCarousel } from "@/components/testimonials-carousel";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { notFound } from "next/navigation";
 
@@ -256,11 +255,6 @@ export default async function ReviewPage({
             <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
           </ProviderCta>
         </div>
-
-        {/* Testimonials */}
-        {(config.reviewTestimonials ?? []).length > 0 && (
-          <TestimonialsCarousel testimonials={config.reviewTestimonials!} />
-        )}
 
         {/* Best For */}
         <Section title="Who It's Best For">
