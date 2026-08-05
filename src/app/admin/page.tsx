@@ -1993,6 +1993,8 @@ export default function AdminPage() {
               <div className="grid gap-4 sm:grid-cols-2">
                 <Field label="Card Social Proof — Number" value={config.cardSocialProof?.number ?? ""} onChange={(v) => setConfig({ ...config, cardSocialProof: { ...(config.cardSocialProof ?? { number: "", text: "" }), number: v } })} />
                 <Field label="Card Social Proof — Text" value={config.cardSocialProof?.text ?? ""} onChange={(v) => setConfig({ ...config, cardSocialProof: { ...(config.cardSocialProof ?? { number: "", text: "" }), text: v } })} />
+                <ImageField label="Battle Winner Banner — Desktop Image" value={config.battleWinnerBannerImageDesktop ?? ""} onChange={(v) => setConfig({ ...config, battleWinnerBannerImageDesktop: v })} />
+                <ImageField label="Battle Winner Banner — Mobile Image (wide)" value={config.battleWinnerBannerImageMobile ?? ""} onChange={(v) => setConfig({ ...config, battleWinnerBannerImageMobile: v })} />
               </div>
               <div>
                 <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Disclosure Text</label>

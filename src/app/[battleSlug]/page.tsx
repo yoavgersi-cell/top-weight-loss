@@ -232,7 +232,16 @@ export default async function BattlePage({
           {/* ───── WINNER BANNER ───── */}
           {hasExplicitWinner && (
             <div className="mb-8 overflow-hidden rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 via-white to-white shadow-sm">
-              <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+              {config.battleWinnerBannerImageMobile && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={config.battleWinnerBannerImageMobile}
+                  alt={`${winner.name} — our winner`}
+                  className="h-36 w-full object-cover sm:hidden"
+                />
+              )}
+              <div className="flex items-stretch">
+              <div className="flex flex-1 flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
                 <div className="flex items-center gap-4">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-emerald-500 shadow-sm">
                     <Trophy className="h-6 w-6 text-white" strokeWidth={2} />
@@ -263,6 +272,17 @@ export default async function BattlePage({
                   Visit {winner.name}
                   <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
                 </ProviderCta>
+              </div>
+              {config.battleWinnerBannerImageDesktop && (
+                <div className="relative hidden w-[220px] shrink-0 sm:block">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={config.battleWinnerBannerImageDesktop}
+                    alt={`${winner.name} — our winner`}
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                </div>
+              )}
               </div>
             </div>
           )}

@@ -233,6 +233,8 @@ export interface SiteConfig {
     text: string;
   };
   reviewTestimonials?: { text: string; name: string; state: string }[];
+  battleWinnerBannerImageDesktop?: string;
+  battleWinnerBannerImageMobile?: string;
 }
 
 export const defaultConfig: SiteConfig = {
