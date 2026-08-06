@@ -7,16 +7,16 @@ export function SocialProofBubble({ number, text }: { number: string; text: stri
   return (
     <div className="pointer-events-none absolute left-0 top-0 z-20 hidden lg:block">
       <div
-        className="absolute bottom-2.5 right-[-6px] w-[188px] origin-bottom-right opacity-0"
+        className="absolute bottom-0.5 right-[-6px] w-[168px] origin-bottom-right opacity-0"
         style={{ animation: "socialProofPop 0.5s cubic-bezier(0.18,0.89,0.32,1.28) 2.6s forwards" }}
       >
-        <div className="relative rounded-2xl bg-white px-3 py-2.5 shadow-[0_12px_34px_-8px_rgba(16,24,40,0.28)] ring-1 ring-black/[0.06]">
-          <div className="flex items-center gap-2.5">
-            <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full">
+        <div className="relative rounded-2xl bg-white px-2.5 py-2 shadow-[0_12px_34px_-8px_rgba(16,24,40,0.28)] ring-1 ring-black/[0.06]">
+          <div className="flex items-center gap-2">
+            <span className="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full">
               <span className="absolute inset-0 rounded-full ring-2 ring-[#0B5E9E]/30" />
-              <Users className="h-[18px] w-[18px] text-[#0B5E9E]" strokeWidth={2} />
+              <Users className="h-4 w-4 text-[#0B5E9E]" strokeWidth={2} />
             </span>
-            <p className="text-[12.5px] leading-[1.3] text-gray-600">
+            <p className="text-[12px] leading-[1.3] text-gray-600">
               <span className="font-extrabold text-[#191919]">{number}</span> {text}
             </p>
           </div>
@@ -33,7 +33,7 @@ export function SocialProofBubble({ number, text }: { number: string; text: stri
 export function SocialProofBand({ number, text }: { number: string; text: string }) {
   return (
     <div
-      className="-mt-1 overflow-hidden sm:hidden"
+      className="overflow-hidden sm:hidden"
       style={{ animation: "socialProofReveal 0.5s ease-out 2.6s both" }}
     >
       <div className="mx-auto w-3/4 rounded-b-xl border border-t-0 border-gray-200 bg-white px-3 pb-2 pt-2.5 text-center shadow-[0_2px_5px_rgba(16,24,40,0.05)]">
