@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Clock, ArrowRight } from "lucide-react";
+import { Clock, ArrowRight, Trophy } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 
 export const revalidate = 60;
@@ -31,6 +31,17 @@ export default async function ArticlesPage() {
   const config = await getConfig();
   const articles = config.articles ?? [];
 
+  // Head-to-head comparison (battle) pages, with both providers resolved
+  const comparisons = (config.battles ?? [])
+    .map((battle) => {
+      const p1 = config.providers.find((p) => p.id === battle.provider1Id);
+      const p2 = config.providers.find((p) => p.id === battle.provider2Id);
+      if (!p1 || !p2) return null;
+      const winner = battle.winnerId === p1.id ? p1 : battle.winnerId === p2.id ? p2 : null;
+      return { battle, p1, p2, winner };
+    })
+    .filter((c): c is NonNullable<typeof c> => c !== null);
+
   if (articles.length === 0) {
     return (
       <div className="min-h-screen bg-gray-50">
@@ -50,13 +61,21 @@ export default async function ArticlesPage() {
     url: "https://www.topweightloss.io/articles",
     mainEntity: {
       "@type": "ItemList",
-      numberOfItems: articles.length,
-      itemListElement: articles.map((a, i) => ({
-        "@type": "ListItem",
-        position: i + 1,
-        name: a.title,
-        url: `https://www.topweightloss.io/articles/${a.slug}`,
-      })),
+      numberOfItems: articles.length + comparisons.length,
+      itemListElement: [
+        ...articles.map((a, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: a.title,
+          url: `https://www.topweightloss.io/articles/${a.slug}`,
+        })),
+        ...comparisons.map(({ battle, p1, p2 }, i) => ({
+          "@type": "ListItem",
+          position: articles.length + i + 1,
+          name: `${p1.name} vs ${p2.name}`,
+          url: `https://www.topweightloss.io/${battle.slug}`,
+        })),
+      ],
     },
   };
 
@@ -157,6 +176,79 @@ export default async function ArticlesPage() {
             </Link>
           ))}
         </div>
+
+        {/* ───── Head-to-Head Comparisons ───── */}
+        {comparisons.length > 0 && (
+          <div className="mt-14">
+            <div className="mb-8">
+              <h2 className="text-[22px] font-bold text-[#191919] sm:text-[26px]">
+                Head-to-Head Comparisons
+              </h2>
+              <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-gray-500">
+                Can&apos;t decide between two providers? See how they stack up
+                side by side — pricing, medications, support, and our verdict.
+              </p>
+            </div>
+
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {comparisons.map(({ battle, p1, p2, winner }) => (
+                <Link
+                  key={battle.slug}
+                  href={`/${battle.slug}`}
+                  className="group flex flex-col rounded-xl border border-gray-200 bg-white p-6 transition-shadow hover:shadow-md"
+                >
+                  {/* Logos + VS */}
+                  <div className="mb-5 flex items-center justify-between gap-3">
+                    <div className="flex h-[36px] flex-1 items-center justify-center">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={p1.logo}
+                        alt={`${p1.name} logo`}
+                        className="max-h-full max-w-[110px] object-contain"
+                      />
+                    </div>
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-[#0C4B75]/20 bg-white text-[11px] font-extrabold text-[#0C4B75]">
+                      VS
+                    </span>
+                    <div className="flex h-[36px] flex-1 items-center justify-center">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={p2.logo}
+                        alt={`${p2.name} logo`}
+                        className="max-h-full max-w-[110px] object-contain"
+                      />
+                    </div>
+                  </div>
+
+                  <h3 className="text-center text-[16px] font-bold leading-snug text-[#191919] group-hover:text-[#0C4B75] transition-colors">
+                    {p1.name} vs {p2.name}
+                  </h3>
+
+                  <p className="mt-2 flex-1 text-center text-[13px] leading-relaxed text-gray-500 line-clamp-2">
+                    {battle.subtitle || battle.description}
+                  </p>
+
+                  <div className="mt-4 flex items-center justify-between border-t border-gray-100 pt-4">
+                    {winner ? (
+                      <span className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[11px] font-bold text-emerald-700">
+                        <Trophy className="h-3 w-3" strokeWidth={2.5} />
+                        Winner: {winner.name}
+                      </span>
+                    ) : (
+                      <span className="rounded-full bg-gray-100 px-2.5 py-1 text-[11px] font-semibold text-gray-500">
+                        Close call
+                      </span>
+                    )}
+                    <span className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#0C4B75]">
+                      Compare
+                      <ArrowRight className="h-3.5 w-3.5" strokeWidth={2} />
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
