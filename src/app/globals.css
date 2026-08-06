@@ -46,3 +46,8 @@ body {
   60% { opacity: 1; transform: translateY(-2px) scale(1.02); }
   100% { opacity: 1; transform: translateY(0) scale(1); }
 }
+
+@keyframes socialProofReveal {
+  0% { opacity: 0; max-height: 0; transform: translateY(-8px); }
+  100% { opacity: 1; max-height: 72px; transform: translateY(0); }
+}

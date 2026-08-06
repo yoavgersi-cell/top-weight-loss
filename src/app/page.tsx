@@ -1,5 +1,6 @@
 import { HeroSection } from "@/components/hero-section";
 import { ComparisonCard } from "@/components/comparison-card";
+import { SocialProofBand } from "@/components/social-proof-bubble";
 import { Sidebar } from "@/components/sidebar";
 import { EditorialContent } from "@/components/editorial-content";
 import { FaqAccordion } from "@/components/faq-accordion";
@@ -133,10 +134,7 @@ export default async function HomePage() {
               <div key={product.id}>
                 <ComparisonCard product={product} socialProof={config.cardSocialProof} />
                 {idx === 0 && config.cardSocialProof && (
-                  <p className="mt-3 mb-1 text-center text-[13px] font-semibold text-gray-500 sm:hidden">
-                    <span className="font-extrabold text-[#191919]">{config.cardSocialProof.number}</span>{" "}
-                    {config.cardSocialProof.text}
-                  </p>
+                  <SocialProofBand number={config.cardSocialProof.number} text={config.cardSocialProof.text} />
                 )}
               </div>
             ))}
