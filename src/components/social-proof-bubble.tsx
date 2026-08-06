@@ -33,11 +33,11 @@ export function SocialProofBubble({ number, text }: { number: string; text: stri
 export function SocialProofBand({ number, text }: { number: string; text: string }) {
   return (
     <div
-      className="-mt-1 overflow-hidden px-1.5 sm:hidden"
+      className="-mt-1 overflow-hidden sm:hidden"
       style={{ animation: "socialProofReveal 0.5s ease-out 2.6s both" }}
     >
-      <div className="rounded-b-2xl bg-[#F1F1F3] px-4 pb-3 pt-4 text-center shadow-[0_2px_6px_rgba(16,24,40,0.06)]">
-        <p className="text-[13px] font-semibold text-gray-600">
+      <div className="mx-auto w-3/4 rounded-b-xl border border-t-0 border-gray-200 bg-white px-3 pb-2 pt-2.5 text-center shadow-[0_2px_5px_rgba(16,24,40,0.05)]">
+        <p className="text-[12.5px] font-semibold text-gray-600">
           <span className="font-extrabold text-[#191919]">{number}</span> {text}
         </p>
       </div>
