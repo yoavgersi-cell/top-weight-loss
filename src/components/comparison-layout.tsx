@@ -74,7 +74,7 @@ export function ComparisonLayout({ config, heroOverrides, children }: Comparison
           <div className="min-w-0 flex-1 space-y-4">
             {displayList.map((product, idx) => (
               <div key={product.id}>
-                <ComparisonCard product={product} />
+                <ComparisonCard product={product} socialProof={config.cardSocialProof} />
                 {idx === 0 && config.cardSocialProof && (
                   <p className="mt-3 mb-1 text-center text-[13px] font-semibold text-gray-500 sm:hidden">
                     <span className="font-extrabold text-[#191919]">{config.cardSocialProof.number}</span>{" "}
