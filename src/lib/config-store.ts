@@ -1159,6 +1159,109 @@ const embodyWellmedrBattle: BattleData = {
   ],
 };
 
+// ───── Brand casing normalization ─────
+// Canonical provider names (keyed by provider id or normalized name).
+const CANONICAL_NAMES: Record<string, string> = {
+  altrx: "altRx",
+  shed: "SHED",
+  embody: "embody",
+  wellmedr: "WellMedr",
+  sprout: "Sprout",
+  sprouthealth: "Sprout",
+  directmeds: "DirectMeds",
+  found: "found",
+  skinnyrx: "skinnyRx",
+};
+
+// Wrong-cased brand mentions inside display text. "Shed"/"Embody" only match
+// the capitalized form (lowercase are common English verbs); "Found" is not
+// text-replaced at all for the same reason — only the provider name field.
+const BRAND_TEXT_FIXES: [RegExp, string][] = [
+  [/\balt\s?rx\b/gi, "altRx"],
+  [/\bShed\b/g, "SHED"],
+  [/\bEmbody\b/g, "embody"],
+  [/\bwell\s?medr\b/gi, "WellMedr"],
+  [/\bSprout\s+Health\b/gi, "Sprout"],
+  [/\bdirect\s?meds\b/gi, "DirectMeds"],
+  [/\bskinny\s?rx\b/gi, "skinnyRx"],
+];
+
+function fixBrandText(s: string): string {
+  // Skip all-lowercase single-token matches (likely slugs/URLs in HTML bodies)
+  return BRAND_TEXT_FIXES.reduce(
+    (acc, [re, to]) => acc.replace(re, (m) => (m === m.toLowerCase() && !/\s/.test(m) ? m : to)),
+    s
+  );
+}
+const fixBrandArr = (a?: string[]) => a?.map(fixBrandText) ?? [];
+
+function normalizeBrandCasing(config: SiteConfig): SiteConfig {
+  const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
+  return {
+    ...config,
+    providers: config.providers.map((p) => ({
+      ...p,
+      name: CANONICAL_NAMES[p.id] ?? CANONICAL_NAMES[norm(p.name)] ?? p.name,
+      tagline: fixBrandText(p.tagline),
+    })),
+    faqs: config.faqs.map((f) => ({ ...f, question: fixBrandText(f.question), answer: fixBrandText(f.answer) })),
+    reviews: config.reviews.map((r) => ({
+      ...r,
+      shortSummary: fixBrandText(r.shortSummary),
+      reviewIntro: fixBrandText(r.reviewIntro),
+      keyFeatures: fixBrandArr(r.keyFeatures),
+      pricingSummary: fixBrandText(r.pricingSummary),
+      treatmentOptions: fixBrandArr(r.treatmentOptions),
+      pros: fixBrandArr(r.pros),
+      cons: fixBrandArr(r.cons),
+      bestFor: fixBrandArr(r.bestFor),
+      finalVerdict: fixBrandText(r.finalVerdict),
+    })),
+    battles: config.battles.map((b) => ({
+      ...b,
+      title: fixBrandText(b.title),
+      subtitle: fixBrandText(b.subtitle ?? ""),
+      description: fixBrandText(b.description),
+      intro: fixBrandText(b.intro),
+      verdict: fixBrandText(b.verdict),
+      verdictWinnerPoints: fixBrandArr(b.verdictWinnerPoints),
+      verdictLoserPoints: fixBrandArr(b.verdictLoserPoints),
+      categories: b.categories.map((c) => ({
+        ...c,
+        name: fixBrandText(c.name),
+        explanation: fixBrandText(c.explanation),
+        supportingPoints: fixBrandArr(c.supportingPoints),
+      })),
+      features: (b.features ?? []).map((f) => ({
+        ...f,
+        feature: fixBrandText(f.feature),
+        provider1Value: fixBrandText(f.provider1Value),
+        provider2Value: fixBrandText(f.provider2Value),
+      })),
+    })),
+    articles: config.articles.map((a) => ({
+      ...a,
+      title: fixBrandText(a.title),
+      description: fixBrandText(a.description),
+      sections: a.sections.map((s) => ({ ...s, heading: fixBrandText(s.heading), body: fixBrandText(s.body) })),
+    })),
+    landingPages: (config.landingPages ?? []).map((lp) => ({
+      ...lp,
+      seoTitle: fixBrandText(lp.seoTitle),
+      seoDescription: fixBrandText(lp.seoDescription),
+      h1: fixBrandText(lp.h1),
+      h2: fixBrandText(lp.h2),
+      heroDescription: fixBrandText(lp.heroDescription),
+      editorialSections: lp.editorialSections?.map((s) => ({
+        ...s,
+        heading: fixBrandText(s.heading),
+        body: fixBrandText(s.body),
+        bullets: s.bullets ? fixBrandArr(s.bullets) : undefined,
+      })),
+    })),
+  };
+}
+
 function buildInitialConfig(): SiteConfig {
   return {
     ...defaultConfig,
@@ -1611,7 +1714,7 @@ export async function getConfig(): Promise<SiteConfig> {
           .filter((p) => !savedProviderIds.has(p.id))
           .map((p) => ({ ...p, smallLogo: p.smallLogo || `/logos/${p.id}-icon.svg` }));
         const providers = [...savedProviders, ...newProviders];
-        return {
+        return normalizeBrandCasing({
           ...initial,
           ...saved,
           providers,
@@ -1666,13 +1769,13 @@ export async function getConfig(): Promise<SiteConfig> {
           sidebars: saved.sidebars && saved.sidebars.length > 0 ? saved.sidebars : initial.sidebars,
           landingPages: saved.landingPages && saved.landingPages.length > 0 ? saved.landingPages : initial.landingPages,
           quiz: saved.quiz && saved.quiz.questions && saved.quiz.questions.length > 0 ? { ...initial.quiz, ...saved.quiz } : initial.quiz,
-        };
+        });
       }
     }
   } catch {
     // fall through to default
   }
-  return buildInitialConfig();
+  return normalizeBrandCasing(buildInitialConfig());
 }
 
 export async function saveConfig(config: SiteConfig): Promise<void> {
