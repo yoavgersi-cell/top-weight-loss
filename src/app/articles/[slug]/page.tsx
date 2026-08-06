@@ -103,6 +103,7 @@ export default async function ArticlePage({
     "@type": "Article",
     headline: article.title,
     description: article.description,
+    image: `https://www.topweightloss.io/articles/${slug}/opengraph-image`,
     datePublished: article.publishedAt,
     dateModified: article.updatedAt,
     wordCount,

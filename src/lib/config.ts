@@ -46,6 +46,7 @@ export interface ReviewData {
   cons: string[];
   bestFor: string[];
   finalVerdict: string;
+  updatedAt?: string;
 }
 
 export interface FaqItem {
@@ -172,6 +173,7 @@ export interface BattleData {
   winnerId: string;
   categories: BattleCategory[];
   features: BattleFeatureRow[];
+  updatedAt?: string;
 }
 
 export interface SidebarBlock {
@@ -212,7 +214,12 @@ export interface LandingPageData {
   heroDescription: string;
   providerOrder: string[];
   editorialSections?: LandingEditorialSection[];
+  updatedAt?: string;
 }
+
+// Stable fallback "last updated" date for schema when an item has no CMS
+// updatedAt. Avoids emitting today's date on every request (fake freshness).
+export const CONTENT_LAST_UPDATED = "2026-08-01";
 
 export interface SiteConfig {
   providers: Provider[];
