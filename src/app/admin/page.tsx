@@ -682,6 +682,7 @@ export default function AdminPage() {
                   <div className="grid gap-4 sm:grid-cols-2">
                     <Field label="Slug" value={review.slug} onChange={(v) => updateReview(index, "slug", v)} />
                     <Field label="Provider ID" value={review.providerId} onChange={(v) => updateReview(index, "providerId", v)} />
+                    <Field label="Last Updated (YYYY-MM-DD, for SEO)" value={review.updatedAt ?? ""} onChange={(v) => updateReview(index, "updatedAt", v)} />
                   </div>
 
                   <div className="mt-4">
@@ -986,6 +987,7 @@ export default function AdminPage() {
                     <Field label="Title" value={battle.title} onChange={(v) => updateBattle({ title: v })} />
                     <Field label="Subtitle" value={battle.subtitle || ""} onChange={(v) => updateBattle({ subtitle: v })} />
                     <Field label="SEO Description" value={battle.description} onChange={(v) => updateBattle({ description: v })} />
+                    <Field label="Last Updated (YYYY-MM-DD, for SEO)" value={battle.updatedAt ?? ""} onChange={(v) => updateBattle({ updatedAt: v })} />
                     <div>
                       <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Provider 1</label>
                       <select value={battle.provider1Id} onChange={(e) => updateBattle({ provider1Id: e.target.value })} className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none">

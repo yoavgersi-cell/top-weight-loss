@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getConfig } from "@/lib/config-store";
+import { CONTENT_LAST_UPDATED } from "@/lib/config";
 import { ComparisonLayout } from "@/components/comparison-layout";
 import { EditorialContent } from "@/components/editorial-content";
 import { LandingEditorial } from "@/components/landing-editorial";
@@ -93,7 +94,7 @@ export default async function BattlePage({
       name: landing.seoTitle,
       description: landing.seoDescription,
       url: `https://www.topweightloss.io/${landing.slug}`,
-      dateModified: new Date().toISOString().split("T")[0],
+      dateModified: landing.updatedAt || CONTENT_LAST_UPDATED,
       publisher: { "@type": "Organization", name: "topweightloss.io", url: "https://www.topweightloss.io" },
     };
 
@@ -175,7 +176,8 @@ export default async function BattlePage({
     "@type": "Article",
     headline: battle.title,
     description: battle.description,
-    dateModified: new Date().toISOString().split("T")[0],
+    datePublished: "2026-06-01",
+    dateModified: battle.updatedAt || CONTENT_LAST_UPDATED,
     author: { "@type": "Organization", name: "TopWeightLoss Team", url: "https://www.topweightloss.io" },
     publisher: { "@type": "Organization", name: "topweightloss.io", url: "https://www.topweightloss.io" },
     mainEntityOfPage: `https://www.topweightloss.io/${battle.slug}`,

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Check, X, ArrowRight, Users, Clock, Shield } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
+import { CONTENT_LAST_UPDATED } from "@/lib/config";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
@@ -58,7 +59,7 @@ export default async function ReviewPage({
     headline: `${provider.name} Review 2026 — Is It Worth It?`,
     reviewBody: review.reviewIntro,
     datePublished: "2026-06-01",
-    dateModified: new Date().toISOString().split("T")[0],
+    dateModified: review.updatedAt || CONTENT_LAST_UPDATED,
     author: { "@type": "Organization", name: "TopWeightLoss Team", url: "https://www.topweightloss.io" },
     publisher: { "@type": "Organization", name: "topweightloss.io", url: "https://www.topweightloss.io" },
     itemReviewed: { "@type": "Product", name: provider.name, description: review.shortSummary },
