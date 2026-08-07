@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Clock, ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { Breadcrumbs } from "@/components/breadcrumbs";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 
 export const revalidate = 60;
 
@@ -57,6 +57,14 @@ export default async function ArticlePage({
   const { slug } = await params;
   const config = await getConfig();
   const articles = config.articles ?? [];
+
+  // Head-to-head provider comparisons are canonical at the root battle URL.
+  // If a battle owns this slug, consolidate /articles/<slug> → /<slug> (301/308)
+  // so a duplicate or stale /articles/ URL doesn't compete with the battle page.
+  if ((config.battles ?? []).some((b) => b.slug === slug)) {
+    permanentRedirect(`/${slug}`);
+  }
+
   const article = articles.find((a) => a.slug === slug);
   if (!article) return notFound();
 
