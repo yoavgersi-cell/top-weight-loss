@@ -297,40 +297,40 @@ const defaultReviews: ReviewData[] = [
   {
     slug: "altrx",
     providerId: "altrx",
-    shortSummary: "Leading GLP-1 medication access platform with physician-guided treatment plans and transparent pricing.",
-    reviewIntro: "ALT RX has emerged as one of the top providers for GLP-1 weight loss medication access. Their platform connects patients with licensed physicians who evaluate eligibility and prescribe FDA-approved treatments like semaglutide and tirzepatide. With a focus on transparency and patient care, ALT RX makes medical weight loss accessible without the traditional barriers of in-person visits.",
+    shortSummary: "Affordable GLP-1 program from $89/month — compounded semaglutide and tirzepatide plus brand-name options — with clinician-guided, self-pay care and no insurance required.",
+    reviewIntro: "altRx bills itself as \"the #1 most affordable GLP-1 program,\" with compounded GLP-1 (semaglutide) from $89/month and GLP-1 + GIP (tirzepatide) from $149/month, plus brand-name options like Zepbound and Wegovy. It's a self-pay telehealth service: you complete a short assessment, a licensed provider (physician, PA, or nurse practitioner) reviews it via telehealth, and if appropriate a prescription is sent to a licensed pharmacy. No insurance is required, and Buy Now, Pay Later options are available.",
     keyFeatures: [
-      "Access to semaglutide and tirzepatide medications",
-      "Licensed physician consultations included",
-      "Transparent pricing with no hidden fees",
-      "Convenient home delivery of medications",
-      "Ongoing provider support and monitoring"
+      "Compounded GLP-1 from $89/mo, GLP-1 + GIP from $149/mo",
+      "Brand-name options too: Zepbound and Wegovy",
+      "Clinician-guided — physician, PA, or nurse practitioner",
+      "Free shipping (about 5-7 days)",
+      "No insurance required; Buy Now, Pay Later available"
     ],
-    pricingSummary: "Plans start at competitive monthly rates with medication included. No long-term contracts required. Free initial consultation and medical evaluation.",
+    pricingSummary: "altRx uses flat, transparent pricing — the same price at every dose: compounded GLP-1 (semaglutide) from $89/month and GLP-1 + GIP (tirzepatide) from $149/month. Brand-name options are also available (Zepbound and Wegovy at higher price points). It's a self-pay service with no insurance required, flexible Buy Now, Pay Later payment options, and the ability to pause or cancel anytime.",
     treatmentOptions: [
-      "Semaglutide (compounded)",
-      "Tirzepatide (compounded)",
-      "Oral GLP-1 medications",
-      "Combination therapy programs"
+      "Compounded semaglutide (GLP-1) injection",
+      "Compounded tirzepatide (GLP-1 + GIP) injection",
+      "Brand-name Zepbound and Wegovy",
+      "One simple injection per week"
     ],
     pros: [
-      "Comprehensive GLP-1 medication options",
-      "Physician-guided treatment from start to finish",
-      "No long-term commitment required",
-      "Transparent pricing with medication included",
-      "Fast home delivery nationwide"
+      "Affordable — from $89/mo, same price at every dose",
+      "Broad selection, incl. brand-name Zepbound & Wegovy",
+      "No insurance required; Buy Now, Pay Later available",
+      "Clinician-guided support; pause or cancel anytime",
+      "Everything included — vials, syringes, prep pads, guidance"
     ],
     cons: [
-      "Only available in select states",
-      "No in-person clinic visits",
-      "May not be covered by insurance"
+      "Shipping is slower — about 5-7 days",
+      "Compounded medications at the entry price",
+      "Injectable options only"
     ],
     bestFor: [
-      "Adults seeking GLP-1 medication access",
-      "Those who prefer telehealth convenience",
-      "People looking for transparent, all-inclusive pricing"
+      "People who want the most affordable GLP-1 access",
+      "Anyone who wants brand-name options (Zepbound, Wegovy) too",
+      "Those who prefer flexible, Buy Now, Pay Later payment"
     ],
-    finalVerdict: "ALT RX stands out as a top-tier GLP-1 weight loss provider thanks to its physician-guided approach, transparent pricing, and comprehensive medication options. If you are looking for a reliable telehealth platform to access GLP-1 treatments without long-term commitments, ALT RX is an excellent choice."
+    finalVerdict: "altRx lives up to its \"most affordable\" positioning, with transparent $89-$149/month compounded pricing, brand-name options for those who want them, and flexible Buy Now, Pay Later. It's a strong pick if price and selection matter most — just note that shipping runs about 5-7 days versus the fastest providers."
   },
   {
     slug: "noom",
@@ -487,40 +487,40 @@ const defaultReviews: ReviewData[] = [
   {
     slug: "embody",
     providerId: "embody",
-    shortSummary: "Doctor-led weight loss solutions with thorough medical evaluations and ongoing provider monitoring.",
-    reviewIntro: "Embody takes a medically rigorous approach to weight loss, with board-certified doctors leading every aspect of treatment. Their platform emphasizes thorough medical evaluations, evidence-based treatment protocols, and ongoing monitoring to ensure safe and effective results.",
+    shortSummary: "Doctor-prescribed GLP-1 treatment — compounded semaglutide from $69/mo and tirzepatide from $119/mo — shipped in 1-2 days with no insurance required.",
+    reviewIntro: "Embody offers doctor-prescribed GLP-1 weight loss treatment — compounded semaglutide and tirzepatide injections — through a 100% online process. Getting started takes a roughly 5-minute health qualifier, after which a medical practitioner reviews your chart (Embody says usually within 24 hours, often under 5). Pricing is flat and simple: $69/month for semaglutide and $119/month for tirzepatide, with no insurance required, no hidden fees, and no clinic visits. Medication ships to your door in 1-2 days in temperature-controlled, tracked, insured packaging, and Embody is LegitScript-certified and works with US-based 503A compounding pharmacies.",
     keyFeatures: [
-      "Board-certified doctor-led treatment",
-      "Comprehensive medical evaluations",
-      "Evidence-based treatment protocols",
-      "Ongoing provider monitoring",
-      "Access to prescription medications"
+      "Compounded semaglutide ($69/mo) and tirzepatide ($119/mo)",
+      "5-minute health qualifier; doctor review usually within 24 hrs",
+      "Free 1-2 day shipping — temperature-controlled, tracked, insured",
+      "No insurance required, no clinic visits, cancel anytime",
+      "LegitScript-certified, US-based 503A pharmacies"
     ],
-    pricingSummary: "Embody pricing includes medical evaluation, provider consultations, and medication. Plans are structured monthly with no hidden fees or long-term commitments required.",
+    pricingSummary: "Embody uses flat monthly pricing: $69/month for compounded semaglutide and $119/month for compounded tirzepatide. The price includes the medication, doctor review, supplies, and shipping — with no hidden fees, no monthly membership, and the option to cancel anytime. If a prescription isn't approved, Embody offers a full refund.",
     treatmentOptions: [
-      "GLP-1 medications (semaglutide, tirzepatide)",
-      "Medical evaluation and health screening",
-      "Ongoing dosage optimization",
-      "Provider-monitored treatment adjustments"
+      "Compounded semaglutide injections (GLP-1)",
+      "Compounded tirzepatide injections (GLP-1 + GIP)",
+      "100% online doctor review and prescription",
+      "Dosage adjustments through the patient portal"
     ],
     pros: [
-      "Doctor-led with thorough medical oversight",
-      "Comprehensive health evaluations",
-      "Evidence-based treatment approach",
-      "Ongoing monitoring for safety",
-      "Transparent pricing structure"
+      "Low, flat pricing — $69/mo semaglutide, $119/mo tirzepatide",
+      "Fast shipping — same-day dispatch on orders before 2pm CT, next-day via UPS",
+      "100% online — no insurance or clinic visits",
+      "Dedicated nursing team and 1:1 medical support",
+      "LegitScript-certified with US-based 503A pharmacies"
     ],
     cons: [
-      "Higher price point than budget options",
-      "Evaluation process can take longer",
-      "Fewer lifestyle support resources"
+      "Compounded medications only (not brand-name)",
+      "Injectable options only",
+      "Requires an online intake and doctor approval"
     ],
     bestFor: [
-      "People who prioritize medical oversight and safety",
-      "Those with complex health histories",
-      "Anyone who wants doctor-led treatment from start to finish"
+      "People who want affordable, doctor-prescribed GLP-1 treatment",
+      "Anyone who prefers a fully online process",
+      "Those who want fast shipping and simple flat pricing"
     ],
-    finalVerdict: "Embody is the right choice for individuals who want their weight loss journey led by qualified doctors with thorough medical oversight. While it may cost more than budget alternatives, the level of medical care and monitoring provides added peace of mind."
+    finalVerdict: "Embody is a strong choice for affordable, doctor-prescribed GLP-1 treatment. With flat $69-$119/month pricing, fast free shipping, a fully online process, and LegitScript certification with US-based 503A pharmacies, it removes most of the cost and friction from getting started — a great fit for people who want a simple, transparent way to begin GLP-1 treatment."
   },
   {
     slug: "wellmedr",
@@ -990,62 +990,62 @@ const embodyAltrxBattle: Omit<BattleData, "slug"> = {
   title: "Embody vs altRx: Which GLP-1 Provider Wins in 2026?",
   subtitle: "We compared pricing, medical support, medication access, and real customer experience to see which provider comes out ahead.",
   description: "Embody vs altRx compared across pricing, GLP-1 medication options, medical support, and customer experience. See why Embody comes out on top in 2026.",
-  intro: "Embody and altRx are both telehealth weight-loss providers offering GLP-1 medications through a fully online process. Embody is built around doctor-led care with a $69/month introductory offer and fast, free shipping, while altRx positions itself on comprehensive GLP-1 medication access with transparent pricing and no long-term commitment. Here's how they compare across the factors that matter most.",
-  verdict: "Both Embody and altRx are legitimate, well-reviewed telehealth options for GLP-1 weight loss — but Embody takes this one. Its $69/month introductory offer, doctor-led care, free 1-2 day shipping, and strong recent customer feedback make it a solid starting point for most people. altRx is well worth a look if your priority is comprehensive medication access.",
+  intro: "Embody and altRx are both fully online GLP-1 weight-loss providers with transparent pricing and no insurance required. Embody offers compounded semaglutide ($69/mo) and tirzepatide ($119/mo) with free 1-2 day shipping, while altRx bills itself as \"the #1 most affordable GLP-1 program\" from $89/month and stands out with a broader lineup — adding brand-name Zepbound and Wegovy plus Buy Now, Pay Later. Here's how they compare on the factors that matter most.",
+  verdict: "Both Embody and altRx are legitimate, well-reviewed, fully online GLP-1 providers with transparent pricing and no insurance required — but Embody takes this one. It's cheaper on both compounded options ($69/$119 vs altRx's $89/$149) and ships in 1-2 days versus altRx's 5-7. altRx is the better pick if you want the widest selection, including brand-name Zepbound or Wegovy, or Buy Now, Pay Later.",
   verdictWinnerPoints: [
-    "A $69/month introductory starting price",
-    "Doctor-led care with ongoing provider monitoring",
-    "Free 1-2 day shipping and a fully online process",
+    "Cheaper — $69/mo semaglutide, $119/mo tirzepatide",
+    "Free 1-2 day shipping (vs altRx's 5-7 days)",
+    "Licensed doctors, a medical director, and a nursing team",
   ],
   verdictLoserPoints: [
-    "Comprehensive GLP-1 medication access",
-    "Provider consultations included",
-    "Transparent pricing with no long-term commitment",
+    "A broader lineup, incl. brand-name Zepbound & Wegovy",
+    "Buy Now, Pay Later options available",
+    "Clinician-guided support, no insurance required",
   ],
   winnerId: "embody",
   categories: [
     {
       name: "Pricing & Value",
       winner: "provider1",
-      explanation: "Embody's limited-time $69/month introductory offer makes it an affordable way to start, with no insurance required. altRx keeps its pricing transparent with no long-term commitment. On the entry price alone, Embody's introductory rate comes out ahead.",
+      explanation: "Embody is cheaper on both compounded options — $69/month for semaglutide and $119 for tirzepatide, versus altRx's $89 (GLP-1) and $149 (GLP-1 + GIP). Both offer flat, transparent pricing with no insurance required; altRx also offers Buy Now, Pay Later.",
       supportingPoints: [
-        "$69/month introductory offer (Embody)",
-        "No insurance required to start (Embody)",
-        "Transparent pricing (both)",
-        "No long-term commitment (altRx)",
+        "$69/$119 compounded pricing (Embody)",
+        "$89/$149 compounded pricing (altRx)",
+        "No insurance required (both)",
+        "Buy Now, Pay Later (altRx)",
       ],
     },
     {
       name: "Medical Support",
       winner: "provider1",
-      explanation: "Embody is doctor-led from the online evaluation through ongoing provider monitoring. altRx includes provider consultations with every plan. Both connect you with licensed providers; Embody leans harder into doctor-led oversight.",
+      explanation: "Embody connects you with state-licensed doctors, has its own medical director (a practicing physician), and offers a dedicated nursing team; it's LegitScript-certified and works with US-based 503A compounding pharmacies. altRx offers clinician-guided support from licensed clinicians every step of the way.",
       supportingPoints: [
-        "Doctor-led care and monitoring (Embody)",
-        "Provider consultations included (altRx)",
-        "Licensed providers on both platforms",
-        "Ongoing support through treatment",
+        "Licensed doctors + medical director & nursing team (Embody)",
+        "LegitScript-certified, US-based 503A pharmacies (Embody)",
+        "Clinician-guided support from licensed clinicians (altRx)",
+        "Ongoing support on both platforms",
       ],
     },
     {
       name: "Medication Access",
       winner: "provider2",
-      explanation: "altRx positions itself on comprehensive GLP-1 medication access, which is its core strength. Embody provides access to prescription GLP-1 treatment through its online medical evaluation.",
+      explanation: "altRx offers the broader selection — compounded GLP-1 and GLP-1 + GIP plus brand-name Zepbound and Wegovy. Embody offers compounded semaglutide and tirzepatide injections. Both are one simple injection per week.",
       supportingPoints: [
-        "Comprehensive GLP-1 access (altRx)",
+        "Compounded + brand-name Zepbound & Wegovy (altRx)",
+        "Compounded semaglutide & tirzepatide (Embody)",
+        "One weekly injection (both)",
         "Prescription GLP-1 treatment (both)",
-        "Online medical evaluation",
-        "Provider-guided treatment",
       ],
     },
     {
       name: "Speed & Convenience",
       winner: "provider1",
-      explanation: "Embody's process is 100% online with free shipping that arrives in 1-2 days. altRx also runs fully online with nationwide delivery.",
+      explanation: "Embody ships free in 1-2 days (tracked, temperature-controlled, insured); altRx ships free in 5-7 days. Both run 100% online with no clinic visits.",
       supportingPoints: [
         "Free 1-2 day shipping (Embody)",
-        "100% online medical visit (both)",
-        "Nationwide delivery",
-        "Simple online refills",
+        "Free 5-7 day shipping (altRx)",
+        "100% online, no clinic visits (both)",
+        "No insurance required (both)",
       ],
     },
     {
@@ -1056,17 +1056,17 @@ const embodyAltrxBattle: Omit<BattleData, "slug"> = {
         "Positive recent Trustpilot feedback (Embody)",
         "Helpful, responsive support",
         "Smooth onboarding",
-        "Provider consultations included",
+        "Clinician-guided support (altRx)",
       ],
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "$69/month (introductory)", provider2Value: "Transparent, varies by plan", highlight: "provider1" },
+    { feature: "Starting Price", provider1Value: "$69/mo semaglutide · $119 tirzepatide", provider2Value: "$89/mo GLP-1 · $149 GLP-1+GIP", highlight: "provider1" },
     { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
-    { feature: "Shipping", provider1Value: "Free, arrives in 1-2 days", provider2Value: "Nationwide delivery", highlight: "provider1" },
-    { feature: "GLP-1 Access", provider1Value: "Prescription GLP-1 treatment", provider2Value: "Comprehensive GLP-1 access", highlight: "provider2" },
-    { feature: "Care Model", provider1Value: "Doctor-led with monitoring", provider2Value: "Provider consultations included", highlight: "provider1" },
-    { feature: "Commitment", provider1Value: "Fully online process", provider2Value: "No long-term commitment", highlight: "provider2" },
+    { feature: "Shipping", provider1Value: "Free, 1-2 days (tracked, insured)", provider2Value: "Free, 5-7 days", highlight: "provider1" },
+    { feature: "Medications", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "Compounded + brand-name (Zepbound, Wegovy)", highlight: "provider2" },
+    { feature: "Care Model", provider1Value: "Licensed doctors, medical director, nursing team", provider2Value: "Clinician-guided, licensed clinicians", highlight: "provider1" },
+    { feature: "Payment", provider1Value: "No insurance required", provider2Value: "No insurance + Buy Now, Pay Later", highlight: "provider2" },
   ],
 };
 
@@ -1082,8 +1082,8 @@ const embodyWellmedrBattle: BattleData = {
   intro: "Embody and WellMedr both offer GLP-1 weight-loss treatment through a fully online experience — but they take different approaches. Embody leads with doctor-led care, a $69/month introductory offer, and fast free shipping, while WellMedr is built around long-term weight management with clinical guidance throughout treatment. Here's how they compare.",
   verdict: "Both providers are credible options for online weight-loss treatment — but Embody takes this comparison. Its $69/month introductory offer, doctor-led care, free 1-2 day shipping, and strong recent customer feedback make it a solid starting point for most people. WellMedr is a good pick if your top priority is long-term weight-management support and sustainable results.",
   verdictWinnerPoints: [
-    "A $69/month introductory starting price",
-    "Doctor-led care from evaluation through treatment",
+    "Flat pricing — $69/mo semaglutide, $119/mo tirzepatide",
+    "Licensed doctors, a medical director, and a nursing team",
     "Free 1-2 day shipping and a fully online process",
   ],
   verdictLoserPoints: [
@@ -1096,10 +1096,10 @@ const embodyWellmedrBattle: BattleData = {
     {
       name: "Pricing & Value",
       winner: "provider1",
-      explanation: "Embody's limited-time $69/month introductory offer makes it an affordable way to start, with no insurance required. WellMedr offers monthly plans with clinical support included. On the entry price alone, Embody's introductory rate comes out ahead.",
+      explanation: "Embody uses simple flat pricing — $69/month for compounded semaglutide and $119/month for compounded tirzepatide — with no insurance required, no hidden fees, and the option to cancel anytime. WellMedr offers monthly plans with clinical support included. On the entry price, Embody comes out ahead.",
       supportingPoints: [
-        "$69/month introductory offer (Embody)",
-        "No insurance required to start (Embody)",
+        "$69/mo semaglutide, $119/mo tirzepatide (Embody)",
+        "No insurance, no hidden fees, cancel anytime (Embody)",
         "Monthly plans with clinical support (WellMedr)",
         "Prescription treatment access (both)",
       ],
@@ -1107,12 +1107,12 @@ const embodyWellmedrBattle: BattleData = {
     {
       name: "Medical Support",
       winner: "provider1",
-      explanation: "Embody is doctor-led from the online evaluation through ongoing provider monitoring. WellMedr provides clinical guidance and medication management throughout treatment. Both offer real medical oversight; Embody leans harder into doctor-led care.",
+      explanation: "Embody connects you with state-licensed doctors, has its own medical director (a practicing physician), and offers a dedicated nursing team for 1:1 support. It's LegitScript-certified and works with US-based 503A compounding pharmacies. WellMedr provides clinical guidance and medication management throughout treatment.",
       supportingPoints: [
-        "Doctor-led care and monitoring (Embody)",
+        "Licensed doctors + medical director & nursing team (Embody)",
+        "LegitScript-certified, US-based 503A pharmacies (Embody)",
         "Clinical guidance throughout (WellMedr)",
         "Medication management (WellMedr)",
-        "Ongoing provider support (both)",
       ],
     },
     {
@@ -1150,12 +1150,12 @@ const embodyWellmedrBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "$69/month (introductory)", provider2Value: "Monthly plans", highlight: "provider1" },
+    { feature: "Starting Price", provider1Value: "$69/mo semaglutide · $119/mo tirzepatide", provider2Value: "Monthly plans", highlight: "provider1" },
     { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "Online telehealth", highlight: "both" },
-    { feature: "Shipping", provider1Value: "Free, arrives in 1-2 days", provider2Value: "Home delivery", highlight: "provider1" },
-    { feature: "Care Model", provider1Value: "Doctor-led with monitoring", provider2Value: "Clinical guidance throughout", highlight: "both" },
+    { feature: "Shipping", provider1Value: "Free, 1-2 days (tracked, insured)", provider2Value: "Home delivery", highlight: "provider1" },
+    { feature: "Medications", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "GLP-1 treatment", highlight: "both" },
+    { feature: "Care Model", provider1Value: "Licensed doctors, medical director, nursing team", provider2Value: "Clinical guidance throughout", highlight: "provider1" },
     { feature: "Long-Term Support", provider1Value: "Ongoing provider monitoring", provider2Value: "Long-term management focus", highlight: "provider2" },
-    { feature: "Focus", provider1Value: "Fast, doctor-led start", provider2Value: "Sustainable, lasting results", highlight: "both" },
   ],
 };
 
