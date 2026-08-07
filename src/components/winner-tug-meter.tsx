@@ -41,16 +41,17 @@ export function WinnerTugMeter({
       requestAnimationFrame(() => setFill(advantage));
 
       const t0 = performance.now();
-      const dur = 1500;
+      const dur = 1800;
       const tick = (now: number) => {
         const p = Math.min(1, (now - t0) / dur);
-        const e = 1 - Math.pow(1 - p, 3);
+        // easeOutExpo — smooth, gentle deceleration matching the bar
+        const e = p >= 1 ? 1 : 1 - Math.pow(2, -10 * p);
         setPct(Math.round(50 + (advantage - 50) * e));
         if (p < 1) requestAnimationFrame(tick);
       };
       requestAnimationFrame(tick);
-      window.setTimeout(() => setRevealed(true), 1550);
-    }, 250);
+      window.setTimeout(() => setRevealed(true), 1850);
+    }, 300);
 
     return () => window.clearTimeout(startDelay);
   }, [advantage]);
@@ -67,7 +68,7 @@ export function WinnerTugMeter({
       </p>
 
       <div className="mb-2.5 flex items-baseline justify-between">
-        <span className="text-[14px] font-extrabold tracking-[-0.01em] text-emerald-600">
+        <span className="text-[14px] font-extrabold tracking-[-0.01em] text-[#10714E]">
           {winnerName}
         </span>
         <span className="text-[14px] font-bold text-gray-400">{loserName}</span>
@@ -76,13 +77,13 @@ export function WinnerTugMeter({
       {/* Advantage bar */}
       <div className="relative h-14 overflow-hidden rounded-2xl bg-gray-100 shadow-[inset_0_1px_3px_rgba(18,38,66,0.10)] sm:h-[52px]">
         <div
-          className="absolute inset-y-0 left-0 overflow-hidden rounded-2xl bg-gradient-to-b from-emerald-400 to-emerald-500 shadow-[0_6px_18px_-6px_rgba(16,185,129,0.55)] transition-[width] duration-[1500ms]"
-          style={{ width: `${fill}%`, transitionTimingFunction: "cubic-bezier(0.32,0.94,0.28,1)" }}
+          className="absolute inset-y-0 left-0 overflow-hidden rounded-2xl bg-gradient-to-b from-[#1C8F63] to-[#10714E] shadow-[0_6px_18px_-8px_rgba(16,113,78,0.5)] transition-[width] duration-[1800ms]"
+          style={{ width: `${fill}%`, transitionTimingFunction: "cubic-bezier(0.16,1,0.3,1)", willChange: "width" }}
         >
           {animate && (
             <span
-              className="absolute inset-y-0 w-2/5 bg-gradient-to-r from-transparent via-white/45 to-transparent"
-              style={{ animation: "tugSweep 1.15s ease-out 0.35s" }}
+              className="absolute inset-y-0 w-2/5 bg-gradient-to-r from-transparent via-white/35 to-transparent"
+              style={{ animation: "tugSweep 1.4s ease-out 0.4s" }}
             />
           )}
         </div>
@@ -97,14 +98,16 @@ export function WinnerTugMeter({
         </span>
       </div>
 
-      {/* Winner chip */}
+      {/* Winner label — an award caption, not a button */}
       <div
-        className={`mx-auto mt-4 flex w-max items-center gap-2 rounded-full bg-gradient-to-b from-emerald-500 to-emerald-600 px-4 py-2 text-[13px] font-extrabold uppercase tracking-[0.07em] text-white shadow-[0_10px_24px_-8px_rgba(16,185,129,0.6)] transition-all duration-500 ${
-          revealed ? "scale-100 opacity-100" : "scale-90 opacity-0"
+        className={`mt-4 flex items-center justify-center gap-2 transition-opacity duration-700 ${
+          revealed ? "opacity-100" : "opacity-0"
         }`}
       >
-        <Trophy className="h-4 w-4" strokeWidth={2.5} />
-        {winnerName} Wins
+        <Trophy className="h-[18px] w-[18px] text-amber-500" strokeWidth={2.5} />
+        <span className="text-[15px] font-extrabold tracking-[-0.01em] text-[#191919]">
+          {winnerName} wins
+        </span>
       </div>
 
       {/* Meta + understated text-link CTA (the primary CTA lives in the cards below) */}
