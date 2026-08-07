@@ -10,6 +10,7 @@ import { notFound } from "next/navigation";
 import { ArrowRight, Check, Minus, Trophy } from "lucide-react";
 import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
+import { WinnerTugMeter } from "@/components/winner-tug-meter";
 
 export const revalidate = 60;
 
@@ -166,6 +167,14 @@ export default async function BattlePage({
   const loser = winner.id === p1.id ? p2 : p1;
   const hasExplicitWinner = battle.winnerId === p1.id || battle.winnerId === p2.id;
 
+  // Advantage % for the verdict meter, derived from category winners
+  const winnerKey = winner.id === p1.id ? "provider1" : "provider2";
+  const catWins = battle.categories.filter((c) => c.winner === winnerKey).length;
+  const catTies = battle.categories.filter((c) => c.winner === "tie").length;
+  const catTotal = battle.categories.length || 1;
+  const rawAdvantage = Math.round(((catWins + catTies * 0.5) / catTotal) * 100);
+  const advantage = Math.min(90, Math.max(55, rawAdvantage || 70));
+
   const getCategoryLabel = (cat: (typeof battle.categories)[0]) => {
     if (cat.winner === "tie") return "Close call";
     return cat.winner === "provider1" ? `Edge: ${p1.name}` : `Edge: ${p2.name}`;
@@ -231,6 +240,18 @@ export default async function BattlePage({
         </section>
 
         <div className="mx-auto max-w-[1100px] px-4 py-10 sm:px-6">
+          {/* ───── VERDICT METER (above the fold) ───── */}
+          {hasExplicitWinner && (
+            <WinnerTugMeter
+              winnerName={winner.name}
+              loserName={loser.name}
+              advantage={advantage}
+              winnerHref={winner.affiliateUrl}
+              winnerSlug={winner.id}
+              battleSlug={battle.slug}
+            />
+          )}
+
           {/* ───── PROVIDER CARDS (enriched) ───── */}
           <div className="relative mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
             {/* VS badge */}
