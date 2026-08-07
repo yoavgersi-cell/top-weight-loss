@@ -41,7 +41,7 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
 
       {/* Badge (e.g. "Our Most Popular") */}
       {!hideRank && product.badge && (
-        <div className="absolute left-[34px] top-0 z-10 flex h-[28px] items-center rounded-br-lg bg-[#B45309] px-3 text-[11px] font-semibold tracking-wide text-white uppercase">
+        <div className="absolute left-[34px] top-0 z-10 flex h-[28px] items-center rounded-br-lg bg-[#EBA51E] px-3 text-[11px] font-bold tracking-wide text-[#3A2A06] uppercase">
           {product.badge}
         </div>
       )}
