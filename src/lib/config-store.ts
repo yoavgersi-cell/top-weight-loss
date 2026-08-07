@@ -1768,9 +1768,13 @@ export async function getConfig(): Promise<SiteConfig> {
               (isProvider(b.provider1Id, key1) && isProvider(b.provider2Id, key2)) ||
               (isProvider(b.provider1Id, key2) && isProvider(b.provider2Id, key1));
 
-            // CMS battles are authoritative; the corrected Embody vs altRx
-            // content now lives in the saved config, so no override is applied.
-            const battles = [...(saved.battles && saved.battles.length > 0 ? saved.battles : initial.battles)];
+            // Merge saved battles with code defaults (keep saved, add any
+            // default battle whose slug isn't already saved) so default battle
+            // URLs never 404 just because the CMS has its own battles.
+            const savedBattles = saved.battles && saved.battles.length > 0 ? saved.battles : [];
+            const savedSlugs = new Set(savedBattles.map((b) => b.slug));
+            const defaultsToAdd = initial.battles.filter((b) => !savedSlugs.has(b.slug));
+            const battles = [...savedBattles, ...defaultsToAdd];
 
             // Inject Embody vs altRx from code only if the CMS lost it entirely
             if (!battles.some((b) => isPair(b, "embody", "altrx"))) {
