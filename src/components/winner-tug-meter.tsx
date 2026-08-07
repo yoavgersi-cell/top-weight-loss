@@ -13,14 +13,12 @@ export function WinnerTugMeter({
   advantage,
   winnerHref,
   winnerSlug,
-  battleSlug,
 }: {
   winnerName: string;
   loserName: string;
   advantage: number; // winner's share, 50–100
   winnerHref: string;
   winnerSlug: string;
-  battleSlug: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [fill, setFill] = useState(50);
@@ -30,24 +28,15 @@ export function WinnerTugMeter({
 
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const key = `tug:${battleSlug}`;
-    const alreadyPlayed = sessionStorage.getItem(key);
-
-    if (reduce || alreadyPlayed) {
+    if (reduce) {
       setFill(advantage);
       setPct(advantage);
       setRevealed(true);
       return;
     }
 
-    const el = ref.current;
-    if (!el) return;
-    let started = false;
-
-    const play = () => {
-      if (started) return;
-      started = true;
-      sessionStorage.setItem(key, "1");
+    // Play from the start, right on load.
+    const startDelay = window.setTimeout(() => {
       setAnimate(true);
       requestAnimationFrame(() => setFill(advantage));
 
@@ -61,15 +50,10 @@ export function WinnerTugMeter({
       };
       requestAnimationFrame(tick);
       window.setTimeout(() => setRevealed(true), 1550);
-    };
+    }, 250);
 
-    const io = new IntersectionObserver(
-      (entries) => entries.forEach((en) => en.isIntersecting && play()),
-      { threshold: 0.5 }
-    );
-    io.observe(el);
-    return () => io.disconnect();
-  }, [advantage, battleSlug]);
+    return () => window.clearTimeout(startDelay);
+  }, [advantage]);
 
   const loserPct = 100 - pct;
 
@@ -123,26 +107,26 @@ export function WinnerTugMeter({
         {winnerName} Wins
       </div>
 
-      {/* CTA */}
+      {/* Meta + understated text-link CTA (the primary CTA lives in the cards below) */}
       <div
-        className={`mt-5 flex flex-col items-center gap-3 transition-all duration-500 sm:flex-row ${
+        className={`mt-4 flex flex-col items-center gap-1.5 transition-all duration-500 ${
           revealed ? "translate-y-0 opacity-100" : "translate-y-1.5 opacity-0"
         }`}
       >
+        <span className="text-[12.5px] text-gray-400">
+          {advantage}% advantage on our scorecard
+        </span>
         <ProviderCta
           href={winnerHref}
           providerName={winnerName}
           providerSlug={winnerSlug}
           pageType="battle"
           sourceFlow="battle_page"
-          className="flex h-[50px] w-full items-center justify-center gap-2 rounded-xl bg-[#0C4B75] text-[15px] font-bold text-white transition-colors hover:bg-[#093d61] sm:w-auto sm:px-8"
+          className="inline-flex items-center gap-1 text-[13.5px] font-bold text-[#0C4B75] hover:underline"
         >
           Visit {winnerName}
-          <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
+          <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
         </ProviderCta>
-        <span className="text-[12.5px] text-gray-400">
-          {advantage}% advantage on our scorecard
-        </span>
       </div>
     </section>
   );
