@@ -11,6 +11,7 @@ import { ArrowRight, Check, Minus, Trophy } from "lucide-react";
 import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { WinnerTugMeter } from "@/components/winner-tug-meter";
+import { ExpertByline } from "@/components/expert-byline";
 
 export const revalidate = 60;
 
@@ -259,6 +260,11 @@ export default async function BattlePage({
             <p className="text-[16px] leading-[1.85] text-gray-600">
               {battle.intro}
             </p>
+            {config.experts && config.experts.length > 0 && (
+              <div className="mt-5">
+                <ExpertByline expert={config.experts[0]} label="Analysis by" />
+              </div>
+            )}
           </div>
 
           {/* ───── PROVIDER CARDS (enriched) ───── */}

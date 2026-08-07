@@ -6,6 +6,19 @@ export interface TrustpilotReview {
   rating: number;
 }
 
+// Reusable expert-team member for the site's credibility (E-E-A-T) layer.
+// Populate with REAL team members; only attach medical credentials to people
+// who actually hold them.
+export interface Expert {
+  id: string;
+  name: string;
+  role: string;          // e.g. "Lead Health Researcher"
+  credentials?: string;  // e.g. "PharmD", "MPH" — real credentials only
+  bio: string;
+  avatar?: string;       // image URL; falls back to initials when empty
+  specialties?: string[];
+}
+
 export interface Provider {
   id: string;
   name: string;
@@ -242,6 +255,7 @@ export interface SiteConfig {
   reviewTestimonials?: { text: string; name: string; state: string }[];
   battleWinnerBannerImageDesktop?: string;
   battleWinnerBannerImageMobile?: string;
+  experts?: Expert[];
 }
 
 export const defaultConfig: SiteConfig = {

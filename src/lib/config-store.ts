@@ -1,5 +1,5 @@
 import { put, list } from "@vercel/blob";
-import { type SiteConfig, type ReviewData, type ArticleData, type BattleData, type LandingPageData, type TrustpilotReview, defaultConfig } from "./config";
+import { type SiteConfig, type ReviewData, type ArticleData, type BattleData, type LandingPageData, type TrustpilotReview, type Expert, defaultConfig } from "./config";
 import productsJson from "@/data/products.json";
 import faqsJson from "@/data/faqs.json";
 import { articles as defaultArticlesData } from "@/data/articles";
@@ -1262,9 +1262,30 @@ function normalizeBrandCasing(config: SiteConfig): SiteConfig {
   };
 }
 
+// Placeholder editorial team — REPLACE with real team members in the admin.
+// Uses initials avatars and editorial/research roles (no fabricated medical
+// licenses). Add real credentials only for people who actually hold them.
+const defaultExperts: Expert[] = [
+  {
+    id: "research-team",
+    name: "The TopWeightLoss Research Team",
+    role: "Editorial & Research",
+    bio: "Our independent research team compares weight-loss providers across pricing, medications, medical oversight, and real customer experience. We update our analysis regularly and rank providers on the evidence — not on who pays us.",
+    specialties: ["Provider comparison", "GLP-1 treatment", "Pricing analysis"],
+  },
+  {
+    id: "content-reviewer",
+    name: "Editorial Review Desk",
+    role: "Clinical Content Reviewer",
+    bio: "Every provider review and comparison is checked for accuracy and clarity before it publishes, and revisited as programs, pricing, and medications change.",
+    specialties: ["Accuracy review", "Editorial standards"],
+  },
+];
+
 function buildInitialConfig(): SiteConfig {
   return {
     ...defaultConfig,
+    experts: defaultExperts,
     providers: productsJson.map((p) => ({
       id: p.id,
       name: p.name,
@@ -1769,6 +1790,7 @@ export async function getConfig(): Promise<SiteConfig> {
           sidebars: saved.sidebars && saved.sidebars.length > 0 ? saved.sidebars : initial.sidebars,
           landingPages: saved.landingPages && saved.landingPages.length > 0 ? saved.landingPages : initial.landingPages,
           quiz: saved.quiz && saved.quiz.questions && saved.quiz.questions.length > 0 ? { ...initial.quiz, ...saved.quiz } : initial.quiz,
+          experts: saved.experts && saved.experts.length > 0 ? saved.experts : initial.experts,
         });
       }
     }
