@@ -173,7 +173,7 @@ export default async function BattlePage({
   const catTies = battle.categories.filter((c) => c.winner === "tie").length;
   const catTotal = battle.categories.length || 1;
   const rawAdvantage = Math.round(((catWins + catTies * 0.5) / catTotal) * 100);
-  const advantage = Math.min(90, Math.max(55, rawAdvantage || 70));
+  const advantage = Math.min(88, Math.max(68, rawAdvantage || 75));
 
   const getCategoryLabel = (cat: (typeof battle.categories)[0]) => {
     if (cat.winner === "tie") return "Close call";
@@ -248,9 +248,18 @@ export default async function BattlePage({
               advantage={advantage}
               winnerHref={winner.affiliateUrl}
               winnerSlug={winner.id}
-              battleSlug={battle.slug}
             />
           )}
+
+          {/* ───── EXPERT INTRO ───── */}
+          <div className="mb-12 max-w-[760px]">
+            <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
+              Editor&rsquo;s Analysis
+            </p>
+            <p className="text-[16px] leading-[1.85] text-gray-600">
+              {battle.intro}
+            </p>
+          </div>
 
           {/* ───── PROVIDER CARDS (enriched) ───── */}
           <div className="relative mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -314,13 +323,6 @@ export default async function BattlePage({
               </div>
               );
             })}
-          </div>
-
-          {/* ───── INTRO ───── */}
-          <div className="mb-14 max-w-[800px]">
-            <p className="text-[16px] leading-[1.8] text-gray-600">
-              {battle.intro}
-            </p>
           </div>
 
           {/* ───── ROUND-BY-ROUND COMPARISON ───── */}
