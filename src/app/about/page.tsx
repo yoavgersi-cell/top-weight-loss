@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Shield, Users, Award, BookOpen, Search, BarChart3 } from "lucide-react";
+import { getConfig } from "@/lib/config-store";
+import { ExpertTeam } from "@/components/expert-team";
+
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "About TopWeightLoss — Our Mission, Team & Review Methodology",
@@ -11,9 +15,26 @@ export const metadata: Metadata = {
   },
 };
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const config = await getConfig();
+  const experts = config.experts ?? [];
+
+  const teamSchema = experts.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "topweightloss.io",
+    url: "https://www.topweightloss.io",
+    employee: experts.map((e) => ({
+      "@type": "Person",
+      name: e.credentials ? `${e.name}, ${e.credentials}` : e.name,
+      jobTitle: e.role,
+      description: e.bio,
+    })),
+  } : null;
+
   return (
     <div className="min-h-screen bg-gray-50">
+      {teamSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(teamSchema) }} />}
       {/* Hero */}
       <div className="border-b border-gray-200 bg-white">
         <div className="mx-auto max-w-[900px] px-4 py-12 sm:px-6 sm:py-16">
@@ -64,6 +85,9 @@ export default function AboutPage() {
             ))}
           </div>
         </section>
+
+        {/* Editorial team */}
+        <ExpertTeam experts={experts} />
 
         {/* Methodology */}
         <section className="mb-12">

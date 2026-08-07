@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Clock, ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { ExpertByline } from "@/components/expert-byline";
 import { notFound, permanentRedirect } from "next/navigation";
 
 export const revalidate = 60;
@@ -57,6 +58,7 @@ export default async function ArticlePage({
   const { slug } = await params;
   const config = await getConfig();
   const articles = config.articles ?? [];
+  const experts = config.experts ?? [];
 
   // Head-to-head provider comparisons are canonical at the root battle URL.
   // If a battle owns this slug, consolidate /articles/<slug> → /<slug> (301/308)
@@ -71,6 +73,9 @@ export default async function ArticlePage({
   const currentIndex = articles.findIndex((a) => a.slug === slug);
   const nextArticle = articles[currentIndex + 1] || null;
   const prevArticle = currentIndex > 0 ? articles[currentIndex - 1] : null;
+
+  // Byline author: match the article's author to a team member, else the lead
+  const author = experts.find((e) => e.name === article.author) ?? experts[0];
 
   // Top providers for inline CTA
   const { providerOrder, positions } = config.ranking;
@@ -116,11 +121,18 @@ export default async function ArticlePage({
     dateModified: article.updatedAt,
     wordCount,
     articleSection: article.category,
-    author: {
-      "@type": "Organization",
-      name: article.author || "topweightloss.io",
-      url: "https://www.topweightloss.io",
-    },
+    author: author
+      ? {
+          "@type": "Person",
+          name: author.credentials ? `${author.name}, ${author.credentials}` : author.name,
+          jobTitle: author.role,
+          url: "https://www.topweightloss.io/about",
+        }
+      : {
+          "@type": "Organization",
+          name: article.author || "topweightloss.io",
+          url: "https://www.topweightloss.io",
+        },
     publisher: {
       "@type": "Organization",
       name: "topweightloss.io",
@@ -232,12 +244,14 @@ export default async function ArticlePage({
             <p className="mt-3 text-[15px] leading-relaxed text-gray-500">
               {article.description}
             </p>
-            <p className="mt-4 text-[12px] text-gray-400">
-              {article.author && (
-                <span className="mr-2">By {article.author} &middot;</span>
+            <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2">
+              {author ? (
+                <ExpertByline expert={author} label="Written by" />
+              ) : (
+                article.author && <span className="text-[12px] text-gray-500">By {article.author}</span>
               )}
-              Updated {formattedDate}
-            </p>
+              <span className="text-[12px] text-gray-400">Updated {formattedDate}</span>
+            </div>
           </div>
         </div>
 
