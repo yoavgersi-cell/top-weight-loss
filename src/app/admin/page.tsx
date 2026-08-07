@@ -9,7 +9,7 @@ export default function AdminPage() {
   const [config, setConfig] = useState<SiteConfig | null>(null);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState("");
-  const [activeTab, setActiveTab] = useState<"providers" | "ranking" | "hero" | "sidebar" | "faqs" | "reviews" | "articles" | "battles" | "pages" | "sidebars" | "quiz" | "general">("providers");
+  const [activeTab, setActiveTab] = useState<"providers" | "ranking" | "hero" | "sidebar" | "faqs" | "reviews" | "articles" | "battles" | "pages" | "sidebars" | "quiz" | "team" | "general">("providers");
 
   const token = typeof window !== "undefined" ? sessionStorage.getItem("admin_token") : null;
 
@@ -238,6 +238,7 @@ export default function AdminPage() {
     { key: "pages" as const, label: "Pages" },
     { key: "sidebars" as const, label: "Sidebars" },
     { key: "quiz" as const, label: "Quiz" },
+    { key: "team" as const, label: "Team" },
     { key: "general" as const, label: "General" },
   ];
 
@@ -1983,6 +1984,49 @@ export default function AdminPage() {
                 })}
               </div>
             </div>
+          </div>
+        )}
+
+        {/* Team Tab */}
+        {activeTab === "team" && (
+          <div className="space-y-4">
+            <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-xs text-amber-800">
+              <b>Trust &amp; credibility (E-E-A-T) layer.</b> These experts appear as bylines on battle pages, reviews and articles, and feed author/reviewer structured data for Google. Use <b>real</b> team members — only add medical credentials (MD, RD, PharmD…) for people who actually hold them.
+            </div>
+            {(config.experts ?? []).map((expert, index) => (
+              <div key={expert.id} className="rounded-xl border bg-white p-6 shadow-sm">
+                <div className="mb-4 flex items-center justify-between">
+                  <h3 className="text-sm font-bold text-[#191919]">{expert.name || "New Expert"}</h3>
+                  <button
+                    onClick={() => setConfig({ ...config, experts: (config.experts ?? []).filter((_, i) => i !== index) })}
+                    className="flex h-8 w-8 items-center justify-center rounded border border-red-200 text-red-400 hover:bg-red-50 hover:text-red-600"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                  </button>
+                </div>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <Field label="Name" value={expert.name} onChange={(v) => { const experts = [...(config.experts ?? [])]; experts[index] = { ...experts[index], name: v }; setConfig({ ...config, experts }); }} />
+                  <Field label="Role / Title" value={expert.role} onChange={(v) => { const experts = [...(config.experts ?? [])]; experts[index] = { ...experts[index], role: v }; setConfig({ ...config, experts }); }} />
+                  <Field label="Credentials (real only, e.g. RD, MPH)" value={expert.credentials ?? ""} onChange={(v) => { const experts = [...(config.experts ?? [])]; experts[index] = { ...experts[index], credentials: v }; setConfig({ ...config, experts }); }} />
+                  <ImageField label="Avatar (optional — initials used if empty)" value={expert.avatar ?? ""} onChange={(v) => { const experts = [...(config.experts ?? [])]; experts[index] = { ...experts[index], avatar: v }; setConfig({ ...config, experts }); }} />
+                </div>
+                <div className="mt-4">
+                  <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Bio</label>
+                  <textarea
+                    value={expert.bio}
+                    onChange={(e) => { const experts = [...(config.experts ?? [])]; experts[index] = { ...experts[index], bio: e.target.value }; setConfig({ ...config, experts }); }}
+                    rows={3}
+                    className="w-full rounded border px-3 py-2 text-sm focus:border-[#0C4B75] focus:outline-none"
+                  />
+                </div>
+              </div>
+            ))}
+            <button
+              onClick={() => setConfig({ ...config, experts: [...(config.experts ?? []), { id: `expert-${Date.now()}`, name: "New Expert", role: "Health Researcher", bio: "" }] })}
+              className="w-full rounded-lg border-2 border-dashed border-gray-300 py-4 text-sm font-medium text-gray-400 hover:border-[#0C4B75] hover:text-[#0C4B75]"
+            >
+              + Add Team Member
+            </button>
           </div>
         )}
 

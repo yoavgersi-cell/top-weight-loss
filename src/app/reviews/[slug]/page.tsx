@@ -6,6 +6,7 @@ import { CONTENT_LAST_UPDATED } from "@/lib/config";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
+import { ExpertByline } from "@/components/expert-byline";
 import { notFound } from "next/navigation";
 
 export const revalidate = 60;
@@ -51,6 +52,8 @@ export default async function ReviewPage({
   const provider = config.providers.find((p) => p.id === review.providerId);
   if (!provider) return notFound();
 
+  const reviewer = config.experts?.[0];
+
   // JSON-LD
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -61,6 +64,14 @@ export default async function ReviewPage({
     datePublished: "2026-06-01",
     dateModified: review.updatedAt || CONTENT_LAST_UPDATED,
     author: { "@type": "Organization", name: "TopWeightLoss Team", url: "https://www.topweightloss.io" },
+    ...(reviewer && {
+      reviewedBy: {
+        "@type": "Person",
+        name: reviewer.credentials ? `${reviewer.name}, ${reviewer.credentials}` : reviewer.name,
+        jobTitle: reviewer.role,
+        worksFor: { "@type": "Organization", name: "topweightloss.io" },
+      },
+    }),
     publisher: { "@type": "Organization", name: "topweightloss.io", url: "https://www.topweightloss.io" },
     itemReviewed: { "@type": "Product", name: provider.name, description: review.shortSummary },
   };
@@ -164,6 +175,11 @@ export default async function ReviewPage({
           <p className="text-[16px] leading-[1.8] text-gray-600">
             {review.reviewIntro}
           </p>
+          {config.experts && config.experts.length > 0 && (
+            <div className="mt-5">
+              <ExpertByline expert={config.experts[0]} label="Reviewed by" />
+            </div>
+          )}
         </div>
 
         {/* Key Features + Pricing side by side on desktop */}
