@@ -1357,6 +1357,8 @@ function buildInitialConfig(): SiteConfig {
           { feature: "Best For", provider1Value: "Personalized care, broader options", provider2Value: "Simplicity, brand trust" },
         ],
       },
+      embodyWellmedrBattle,
+      { ...embodyAltrxBattle, slug: "altrx-vs-embody" },
     ],
     sidebars: [
       {
@@ -1753,43 +1755,14 @@ export async function getConfig(): Promise<SiteConfig> {
             return [...savedArticles, ...newDefaults];
           })(),
           battles: (() => {
-            // Provider matching tolerant of admin-recreated providers whose ids
-            // differ from the seed keys: fall back to normalized name.
-            const isProvider = (id: string, key: string) => {
-              if (id === key) return true;
-              const name = providers.find((p) => p.id === id)?.name.toLowerCase().replace(/[^a-z0-9]/g, "") ?? "";
-              return name === key;
-            };
-            const providerIdFor = (key: string) =>
-              providers.find((p) => p.id === key)?.id ??
-              providers.find((p) => p.name.toLowerCase().replace(/[^a-z0-9]/g, "") === key)?.id ??
-              key;
-            const isPair = (b: BattleData, key1: string, key2: string) =>
-              (isProvider(b.provider1Id, key1) && isProvider(b.provider2Id, key2)) ||
-              (isProvider(b.provider1Id, key2) && isProvider(b.provider2Id, key1));
-
-            // Merge saved battles with code defaults (keep saved, add any
-            // default battle whose slug isn't already saved) so default battle
-            // URLs never 404 just because the CMS has its own battles.
+            // Merge saved battles with code defaults: keep every saved battle,
+            // and add any default battle whose slug isn't already saved. Default
+            // battles live at their canonical (indexed) slugs, so those battle
+            // URLs always resolve — even if the blob is briefly unavailable.
             const savedBattles = saved.battles && saved.battles.length > 0 ? saved.battles : [];
             const savedSlugs = new Set(savedBattles.map((b) => b.slug));
-            const defaultsToAdd = initial.battles.filter((b) => !savedSlugs.has(b.slug));
-            const battles = [...savedBattles, ...defaultsToAdd];
-
-            // Inject Embody vs altRx from code only if the CMS lost it entirely
-            if (!battles.some((b) => isPair(b, "embody", "altrx"))) {
-              const embodyId = providerIdFor("embody");
-              const altrxId = providerIdFor("altrx");
-              battles.push({ ...embodyAltrxBattle, slug: "embody-vs-altrx", provider1Id: embodyId, provider2Id: altrxId, winnerId: embodyId });
-            }
-
-            // Inject Embody vs WellMedR when the CMS has no battle for the pair
-            if (!battles.some((b) => isPair(b, "embody", "wellmedr"))) {
-              const embodyId = providerIdFor("embody");
-              const wellmedrId = providerIdFor("wellmedr");
-              battles.push({ ...embodyWellmedrBattle, provider1Id: embodyId, provider2Id: wellmedrId, winnerId: embodyId });
-            }
-            return battles;
+            const defaultsToAdd = initial.battles.filter((d) => !savedSlugs.has(d.slug));
+            return [...savedBattles, ...defaultsToAdd];
           })(),
           sidebars: saved.sidebars && saved.sidebars.length > 0 ? saved.sidebars : initial.sidebars,
           landingPages: saved.landingPages && saved.landingPages.length > 0 ? saved.landingPages : initial.landingPages,
