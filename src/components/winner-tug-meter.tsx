@@ -64,7 +64,7 @@ export function WinnerTugMeter({
       className="mb-8 overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-7"
     >
       <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.07em] text-gray-400">
-        Our Verdict
+        The Short Answer
       </p>
 
       <div className="mb-2.5 flex items-baseline justify-between">
@@ -116,8 +116,8 @@ export function WinnerTugMeter({
           revealed ? "translate-y-0 opacity-100" : "translate-y-1.5 opacity-0"
         }`}
       >
-        <span className="text-[12.5px] text-gray-400">
-          {advantage}% advantage on our scorecard
+        <span className="text-[12.5px] text-gray-500">
+          Our pick in this matchup — {advantage}% of the score.
         </span>
         <ProviderCta
           href={winnerHref}
@@ -131,6 +131,33 @@ export function WinnerTugMeter({
           <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
         </ProviderCta>
       </div>
+
+      {/* Sources */}
+      <div
+        className={`mt-4 flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 border-t border-gray-100 pt-3.5 text-[11px] text-gray-400 transition-opacity duration-700 ${
+          revealed ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <span className="font-bold uppercase tracking-[0.06em]">Sources</span>
+        <span className="text-gray-300">·</span>
+        <span className="inline-flex items-center gap-1">
+          <TrustpilotStar className="h-3 w-3" />
+          Trustpilot reviews
+        </span>
+        <span className="text-gray-300">·</span>
+        <span>Our in-house research</span>
+      </div>
     </section>
+  );
+}
+
+function TrustpilotStar({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
+      <path
+        fill="#00B67A"
+        d="M12 2l2.6 6.6 7.4.4-5.7 4.6 1.9 7.1L12 16.8l-6.2 3.9 1.9-7.1L2 9l7.4-.4L12 2z"
+      />
+    </svg>
   );
 }

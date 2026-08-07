@@ -255,7 +255,7 @@ export default async function BattlePage({
           {/* ───── EXPERT INTRO ───── */}
           <div className="mb-12 max-w-[760px]">
             <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
-              Editor&rsquo;s Analysis
+              Our Take
             </p>
             <p className="text-[16px] leading-[1.85] text-gray-600">
               {battle.intro}
