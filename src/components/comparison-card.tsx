@@ -34,14 +34,14 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
     <article className="relative rounded-md border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md overflow-hidden">
       {/* Rank badge — top-left, only bottom-right rounded */}
       {!hideRank && (
-        <div className="absolute left-0 top-0 z-10 flex h-[34px] w-[34px] items-center justify-center rounded-br-lg bg-[#191919] text-[18px] font-bold text-white">
+        <div className="absolute left-0 top-0 z-10 flex h-[28px] w-[28px] items-center justify-center rounded-br-lg bg-[#191919] text-[15px] font-bold text-white">
           {product.rank}
         </div>
       )}
 
       {/* Badge (e.g. "Our Most Popular") */}
       {!hideRank && product.badge && (
-        <div className="absolute left-[42px] top-0 z-10 flex h-[34px] items-center rounded-br-lg bg-[#0C4B75] px-4 text-[12px] font-semibold tracking-wide text-white uppercase">
+        <div className="absolute left-[34px] top-0 z-10 flex h-[28px] items-center rounded-br-lg bg-[#B45309] px-3 text-[11px] font-semibold tracking-wide text-white uppercase">
           {product.badge}
         </div>
       )}
