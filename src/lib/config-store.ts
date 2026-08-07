@@ -1705,12 +1705,23 @@ function buildInitialConfig(): SiteConfig {
   };
 }
 
+// Last successfully-merged config, kept in memory for the life of the server
+// instance. If a later blob read fails transiently, we serve this instead of
+// bare defaults — which would drop CMS-only content and 404 those pages.
+let lastGoodConfig: SiteConfig | null = null;
+
 export async function getConfig(): Promise<SiteConfig> {
   try {
     const { blobs } = await list({ prefix: BLOB_KEY });
     if (blobs.length > 0) {
-      const res = await fetch(blobs[0].url, { cache: "no-store" });
-      if (res.ok) {
+      // Retry the blob fetch a few times before giving up on this request.
+      let res: Response | null = null;
+      for (let attempt = 0; attempt < 3; attempt++) {
+        res = await fetch(blobs[0].url, { cache: "no-store" });
+        if (res.ok) break;
+        if (attempt < 2) await new Promise((r) => setTimeout(r, 150 * (attempt + 1)));
+      }
+      if (res && res.ok) {
         const saved = (await res.json()) as Partial<SiteConfig>;
         const initial = buildInitialConfig();
         // Merge providers: keep saved, add new defaults by id
@@ -1737,7 +1748,7 @@ export async function getConfig(): Promise<SiteConfig> {
           .filter((p) => !savedProviderIds.has(p.id))
           .map((p) => ({ ...p, smallLogo: p.smallLogo || `/logos/${p.id}-icon.svg` }));
         const providers = [...savedProviders, ...newProviders];
-        return normalizeBrandCasing({
+        return (lastGoodConfig = normalizeBrandCasing({
           ...initial,
           ...saved,
           providers,
@@ -1768,13 +1779,15 @@ export async function getConfig(): Promise<SiteConfig> {
           landingPages: saved.landingPages && saved.landingPages.length > 0 ? saved.landingPages : initial.landingPages,
           quiz: saved.quiz && saved.quiz.questions && saved.quiz.questions.length > 0 ? { ...initial.quiz, ...saved.quiz } : initial.quiz,
           experts: saved.experts && saved.experts.length > 0 ? saved.experts : initial.experts,
-        });
+        }));
       }
     }
   } catch {
-    // fall through to default
+    // fall through to last good config / default
   }
-  return normalizeBrandCasing(buildInitialConfig());
+  // Prefer the last successfully-loaded config over bare defaults so a
+  // transient blob failure never wipes CMS content (or 404s CMS-only pages).
+  return lastGoodConfig ?? normalizeBrandCasing(buildInitialConfig());
 }
 
 export async function saveConfig(config: SiteConfig): Promise<void> {
