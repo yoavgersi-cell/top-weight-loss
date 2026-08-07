@@ -1,8 +1,10 @@
 import type { MetadataRoute } from "next";
 import { getConfig } from "@/lib/config-store";
+import { CONTENT_LAST_UPDATED } from "@/lib/config";
 import { articles } from "@/data/articles";
 
 const BASE_URL = "https://www.topweightloss.io";
+const FALLBACK_DATE = new Date(CONTENT_LAST_UPDATED);
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const config = await getConfig();
@@ -10,43 +12,43 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
-      lastModified: new Date(),
+      lastModified: FALLBACK_DATE,
       changeFrequency: "weekly",
       priority: 1,
     },
     {
       url: `${BASE_URL}/reviews`,
-      lastModified: new Date(),
+      lastModified: FALLBACK_DATE,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${BASE_URL}/find-your-match`,
-      lastModified: new Date(),
+      lastModified: FALLBACK_DATE,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/find-your-match-weight-loss`,
-      lastModified: new Date(),
+      lastModified: FALLBACK_DATE,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/glp1-weight-loss-statistics`,
-      lastModified: new Date(),
+      lastModified: FALLBACK_DATE,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${BASE_URL}/about`,
-      lastModified: new Date(),
+      lastModified: FALLBACK_DATE,
       changeFrequency: "monthly",
       priority: 0.3,
     },
     {
       url: `${BASE_URL}/disclaimer`,
-      lastModified: new Date(),
+      lastModified: FALLBACK_DATE,
       changeFrequency: "monthly",
       priority: 0.2,
     },
@@ -55,7 +57,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const reviewPages: MetadataRoute.Sitemap = (config.reviews ?? []).map(
     (review) => ({
       url: `${BASE_URL}/reviews/${review.slug}`,
-      lastModified: new Date(),
+      lastModified: review.updatedAt ? new Date(review.updatedAt) : FALLBACK_DATE,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     })
@@ -64,7 +66,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const articlePages: MetadataRoute.Sitemap = [
     {
       url: `${BASE_URL}/articles`,
-      lastModified: new Date(),
+      lastModified: FALLBACK_DATE,
       changeFrequency: "weekly",
       priority: 0.8,
     },
@@ -79,7 +81,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const battlePages: MetadataRoute.Sitemap = (config.battles ?? []).map(
     (battle) => ({
       url: `${BASE_URL}/${battle.slug}`,
-      lastModified: new Date(),
+      lastModified: battle.updatedAt ? new Date(battle.updatedAt) : FALLBACK_DATE,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     })
@@ -88,7 +90,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const landingPageEntries: MetadataRoute.Sitemap = (config.landingPages ?? []).map(
     (lp) => ({
       url: `${BASE_URL}/${lp.slug}`,
-      lastModified: new Date(),
+      lastModified: lp.updatedAt ? new Date(lp.updatedAt) : FALLBACK_DATE,
       changeFrequency: "weekly" as const,
       priority: 0.9,
     })
