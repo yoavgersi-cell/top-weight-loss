@@ -525,40 +525,40 @@ const defaultReviews: ReviewData[] = [
   {
     slug: "wellmedr",
     providerId: "wellmedr",
-    shortSummary: "Long-term weight management platform focused on sustainable results with clinical guidance throughout.",
-    reviewIntro: "WellMedR differentiates itself by focusing on long-term weight management rather than quick fixes. Their platform provides continuous clinical guidance, progress tracking, and medication management designed to help patients achieve and maintain their weight loss goals over time.",
+    shortSummary: "AI-driven telehealth offering compounded GLP-1/GIP (tirzepatide) weight-loss treatment — plus a semaglutide + NAD+/B12 microdose — with board-certified specialists and 50% off your first month.",
+    reviewIntro: "WellMedr is an AI-driven telehealth platform that reaches beyond weight loss into longevity, hormones, and more. For weight management it offers compounded GLP-1/GIP (tirzepatide) — with 50% off your first month — plus an Energy & Focus+ microdose that pairs compounded semaglutide with NAD+ and Vitamin B12. Board-certified specialists tailor your plan, treatment is 100% online with no office visit, and medications are made in US state-licensed pharmacies following FDA compounding standards.",
     keyFeatures: [
-      "Long-term weight management focus",
-      "Continuous clinical guidance",
-      "Progress tracking and analytics",
-      "Medication management and adjustments",
-      "Maintenance phase support"
+      "Compounded GLP-1/GIP (tirzepatide) — 50% off first month",
+      "Energy & Focus+ microdose: semaglutide + NAD+ + B12",
+      "Board-certified specialists tailor your plan",
+      "100% online — no office visit; message your provider anytime",
+      "Discreet, unbranded packaging; ships across the US"
     ],
-    pricingSummary: "WellMedR offers monthly plans with medication and clinical support included. Longer-term commitments may come with discounted rates to encourage sustained engagement.",
+    pricingSummary: "WellMedr promotes 50% off your first month on its compounded GLP-1/GIP weight-loss treatment. It's a broader wellness membership that also spans TRT, NAD+, hair, and sexual health. Medications are made in US state-licensed pharmacies following FDA compounding standards, and treatment is prescribed online after a provider reviews your intake — no upfront prescription or office visit required.",
     treatmentOptions: [
-      "GLP-1 medications",
-      "Long-term maintenance protocols",
-      "Progressive dosing strategies",
-      "Lifestyle modification guidance"
+      "Compounded GLP-1/GIP injection (tirzepatide)",
+      "Energy & Focus+ microdose (semaglutide + NAD+ + B12)",
+      "Broader longevity range (TRT, NAD+, hair, sexual health)",
+      "Online provider review and prescription"
     ],
     pros: [
-      "Strong focus on long-term results",
-      "Continuous clinical guidance",
-      "Good progress tracking tools",
-      "Maintenance phase included",
-      "Sustainable approach to weight loss"
+      "50% off your first month",
+      "Board-certified specialists tailor your plan",
+      "GLP-1 formulations enhanced with NAD+ and B12",
+      "Broad platform beyond weight loss (longevity, hormones)",
+      "Discreet, unbranded packaging"
     ],
     cons: [
-      "Less suited for those wanting quick results",
-      "Smaller provider network",
-      "Fewer medication options than top competitors"
+      "Standard delivery is slower — about 3-5 business days",
+      "US shipping only (no international)",
+      "Ongoing weight-loss pricing isn't listed up front"
     ],
     bestFor: [
-      "People committed to long-term weight management",
-      "Those who have struggled with weight regain",
-      "Anyone seeking sustainable, medically-guided weight loss"
+      "People who want weight loss plus broader wellness/longevity",
+      "Anyone drawn to GLP-1 + NAD+/B12 formulations",
+      "Those who value board-certified specialist care"
     ],
-    finalVerdict: "WellMedR is an excellent option for individuals who are serious about long-term weight management. Their focus on sustainability, maintenance support, and ongoing clinical guidance sets them apart from providers that only address the initial weight loss phase."
+    finalVerdict: "WellMedr is a strong pick if you want more than weight loss — it pairs compounded GLP-1/GIP treatment (with 50% off the first month) with a broader longevity platform spanning hormones, NAD+, and more, overseen by board-certified specialists. If your only goal is the fastest, lowest-cost GLP-1, a weight-loss-focused provider may suit better; for wellness-minded patients, WellMedr's range stands out."
   },
   {
     slug: "sunlight",
@@ -1079,83 +1079,83 @@ const embodyWellmedrBattle: BattleData = {
   title: "Embody vs WellMedR: Which Weight Loss Provider Wins in 2026?",
   subtitle: "We compared pricing, medical support, long-term care, and real customer experience to see which provider comes out ahead.",
   description: "Embody vs WellMedR compared across pricing, GLP-1 treatment, medical support, and long-term weight management. See why Embody comes out on top in 2026.",
-  intro: "Embody and WellMedr both offer GLP-1 weight-loss treatment through a fully online experience — but they take different approaches. Embody leads with doctor-led care, a $69/month introductory offer, and fast free shipping, while WellMedr is built around long-term weight management with clinical guidance throughout treatment. Here's how they compare.",
-  verdict: "Both providers are credible options for online weight-loss treatment — but Embody takes this comparison. Its $69/month introductory offer, doctor-led care, free 1-2 day shipping, and strong recent customer feedback make it a solid starting point for most people. WellMedr is a good pick if your top priority is long-term weight-management support and sustainable results.",
+  intro: "Embody and WellMedr both offer compounded GLP-1 weight-loss treatment through a fully online experience — but they take different approaches. Embody is weight-loss-focused with flat $69/$119 pricing and fast 1-2 day shipping, while WellMedr is an AI-driven telehealth brand that reaches beyond weight loss into longevity, hormones, and more — pairing GLP-1 with add-ons like NAD+ and B12, overseen by board-certified specialists. Here's how they compare.",
+  verdict: "Both are credible online GLP-1 providers — but Embody takes this comparison for weight loss specifically. Its clear flat pricing ($69/$119), free 1-2 day shipping, and strong recent customer feedback make it a great starting point. WellMedr is the better fit if you want more than weight loss — a broader longevity platform with board-certified specialists, GLP-1 formulations enhanced with NAD+ and B12, and 50% off your first month.",
   verdictWinnerPoints: [
     "Flat pricing — $69/mo semaglutide, $119/mo tirzepatide",
+    "Free 1-2 day shipping (vs WellMedr's ~3-5 days)",
     "Licensed doctors, a medical director, and a nursing team",
-    "Free 1-2 day shipping and a fully online process",
   ],
   verdictLoserPoints: [
-    "Long-term weight-management support",
-    "Progress tracking and clinical guidance throughout",
-    "A focus on sustainable, lasting results",
+    "A broader longevity platform (TRT, NAD+, and more)",
+    "GLP-1 formulations enhanced with NAD+ and B12",
+    "Board-certified specialists; 50% off your first month",
   ],
   winnerId: "embody",
   categories: [
     {
       name: "Pricing & Value",
       winner: "provider1",
-      explanation: "Embody uses simple flat pricing — $69/month for compounded semaglutide and $119/month for compounded tirzepatide — with no insurance required, no hidden fees, and the option to cancel anytime. WellMedr offers monthly plans with clinical support included. On the entry price, Embody comes out ahead.",
+      explanation: "Embody uses simple flat pricing — $69/month for compounded semaglutide and $119/month for compounded tirzepatide — with no insurance required, no hidden fees, and the option to cancel anytime. WellMedr promotes 50% off your first month, though its ongoing weight-loss price isn't listed up front. On transparent entry pricing, Embody comes out ahead.",
       supportingPoints: [
         "$69/mo semaglutide, $119/mo tirzepatide (Embody)",
         "No insurance, no hidden fees, cancel anytime (Embody)",
-        "Monthly plans with clinical support (WellMedr)",
+        "50% off your first month (WellMedr)",
         "Prescription treatment access (both)",
       ],
     },
     {
       name: "Medical Support",
-      winner: "provider1",
-      explanation: "Embody connects you with state-licensed doctors, has its own medical director (a practicing physician), and offers a dedicated nursing team for 1:1 support. It's LegitScript-certified and works with US-based 503A compounding pharmacies. WellMedr provides clinical guidance and medication management throughout treatment.",
+      winner: "tie",
+      explanation: "Both bring real medical oversight. Embody connects you with state-licensed doctors, has its own medical director (a practicing physician) and a nursing team, and is LegitScript-certified with US-based 503A compounding pharmacies. WellMedr says board-certified specialists tailor your plan, with medications made in US state-licensed pharmacies following FDA compounding standards.",
       supportingPoints: [
-        "Licensed doctors + medical director & nursing team (Embody)",
-        "LegitScript-certified, US-based 503A pharmacies (Embody)",
-        "Clinical guidance throughout (WellMedr)",
-        "Medication management (WellMedr)",
+        "Medical director, nursing team, LegitScript (Embody)",
+        "US-based 503A compounding pharmacies (Embody)",
+        "Board-certified specialists tailor your plan (WellMedr)",
+        "US state-licensed pharmacies (WellMedr)",
       ],
     },
     {
-      name: "Long-Term Weight Management",
+      name: "Range Beyond Weight Loss",
       winner: "provider2",
-      explanation: "WellMedr is built around long-term weight management, with progress tracking and a focus on sustainable results. Embody provides ongoing provider monitoring, but long-term management is WellMedr's stated focus.",
+      explanation: "WellMedr is a broader longevity platform — alongside GLP-1 it offers TRT, NAD+, hair, and sexual health, and its weight-loss line includes an Energy & Focus+ microdose that pairs semaglutide with NAD+ and Vitamin B12. Embody focuses specifically on GLP-1 weight-loss treatment.",
       supportingPoints: [
-        "Long-term management focus (WellMedr)",
-        "Progress tracking and medication management (WellMedr)",
-        "Focus on sustainable results (WellMedr)",
-        "Ongoing provider monitoring (both)",
+        "Longevity, hormones, NAD+, hair, sexual health (WellMedr)",
+        "GLP-1 + NAD+/B12 microdose option (WellMedr)",
+        "Focused GLP-1 weight-loss treatment (Embody)",
+        "Compounded semaglutide & tirzepatide (both)",
       ],
     },
     {
       name: "Speed & Convenience",
       winner: "provider1",
-      explanation: "Embody's process is 100% online with free shipping that arrives in 1-2 days. WellMedr also runs fully online with a convenient telehealth experience.",
+      explanation: "Embody ships free in 1-2 days (tracked, insured). WellMedr ships within 1-2 business days of approval with standard delivery of about 3-5 business days, in discreet unbranded packaging. Both run 100% online with no office visit.",
       supportingPoints: [
         "Free 1-2 day shipping (Embody)",
-        "100% online medical visit (Embody)",
-        "Convenient telehealth access (WellMedr)",
-        "Fully online process (both)",
+        "~3-5 business day standard delivery (WellMedr)",
+        "Discreet, unbranded packaging (WellMedr)",
+        "100% online, no office visit (both)",
       ],
     },
     {
       name: "Customer Experience",
       winner: "provider1",
-      explanation: "Recent Trustpilot reviews lean positive for Embody, with customers highlighting fast, helpful communication. WellMedr's reviews are also positive, especially around helpful support staff.",
+      explanation: "Recent Trustpilot reviews lean positive for Embody, with customers highlighting fast, helpful communication. WellMedr lets you message your provider anytime through your account for guidance or plan adjustments.",
       supportingPoints: [
         "Positive recent Trustpilot feedback (Embody)",
-        "Helpful support staff (WellMedr)",
+        "Message your provider anytime (WellMedr)",
         "Smooth onboarding",
         "Responsive communication",
       ],
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "$69/mo semaglutide · $119/mo tirzepatide", provider2Value: "Monthly plans", highlight: "provider1" },
-    { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "Online telehealth", highlight: "both" },
-    { feature: "Shipping", provider1Value: "Free, 1-2 days (tracked, insured)", provider2Value: "Home delivery", highlight: "provider1" },
-    { feature: "Medications", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "GLP-1 treatment", highlight: "both" },
-    { feature: "Care Model", provider1Value: "Licensed doctors, medical director, nursing team", provider2Value: "Clinical guidance throughout", highlight: "provider1" },
-    { feature: "Long-Term Support", provider1Value: "Ongoing provider monitoring", provider2Value: "Long-term management focus", highlight: "provider2" },
+    { feature: "Starting Price", provider1Value: "$69/mo semaglutide · $119/mo tirzepatide", provider2Value: "50% off first month (ongoing not listed)", highlight: "provider1" },
+    { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
+    { feature: "Shipping", provider1Value: "Free, 1-2 days (tracked, insured)", provider2Value: "~3-5 business days, discreet packaging", highlight: "provider1" },
+    { feature: "Medications", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "GLP-1/GIP + semaglutide/NAD+/B12 microdose", highlight: "both" },
+    { feature: "Care Model", provider1Value: "Medical director, nursing team, LegitScript", provider2Value: "Board-certified specialists", highlight: "both" },
+    { feature: "Beyond Weight Loss", provider1Value: "GLP-1 weight loss focus", provider2Value: "TRT, NAD+, hair, sexual health", highlight: "provider2" },
   ],
 };
 
