@@ -176,6 +176,21 @@ export default async function BattlePage({
   const rawAdvantage = Math.round(((catWins + catTies * 0.5) / catTotal) * 100);
   const advantage = Math.min(88, Math.max(68, rawAdvantage || 75));
 
+  // Related comparisons — other battles featuring either provider (internal links)
+  const relatedBattles = (config.battles ?? [])
+    .filter(
+      (b) =>
+        b.slug !== battle.slug &&
+        [b.provider1Id, b.provider2Id].some((id) => id === p1.id || id === p2.id)
+    )
+    .map((b) => {
+      const bp1 = config.providers.find((p) => p.id === b.provider1Id);
+      const bp2 = config.providers.find((p) => p.id === b.provider2Id);
+      return bp1 && bp2 ? { slug: b.slug, bp1, bp2 } : null;
+    })
+    .filter((x): x is NonNullable<typeof x> => x !== null)
+    .slice(0, 4);
+
   const getCategoryLabel = (cat: (typeof battle.categories)[0]) => {
     if (cat.winner === "tie") return "Close call";
     return cat.winner === "provider1" ? `Edge: ${p1.name}` : `Edge: ${p2.name}`;
@@ -713,6 +728,32 @@ export default async function BattlePage({
               </ProviderCta>
             ))}
           </div>
+
+          {/* ───── RELATED COMPARISONS ───── */}
+          {relatedBattles.length > 0 && (
+            <div className="mb-10">
+              <h2 className="mb-5 text-[20px] font-bold text-[#191919]">Related Comparisons</h2>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {relatedBattles.map(({ slug, bp1, bp2 }) => (
+                  <Link
+                    key={slug}
+                    href={`/${slug}`}
+                    className="group flex items-center gap-3 rounded-xl border border-gray-200 bg-white px-4 py-3.5 transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
+                  >
+                    <div className="flex items-center gap-2 text-[13px] font-bold text-[#191919]">
+                      <span>{bp1.name}</span>
+                      <span className="text-[11px] font-extrabold text-gray-300">VS</span>
+                      <span>{bp2.name}</span>
+                    </div>
+                    <span className="ml-auto inline-flex items-center gap-1 text-[13px] font-semibold text-[#0C4B75] group-hover:underline">
+                      Compare
+                      <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Related links */}
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 py-4 text-[13px]">

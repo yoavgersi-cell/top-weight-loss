@@ -81,29 +81,8 @@ export default async function HomePage() {
       itemListElement: displayList.map((product, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        item: {
-          "@type": "Product",
-          name: product.name,
-          description: product.tagline,
-          url: `https://www.topweightloss.io/reviews/${product.id}`,
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: product.rating,
-            bestRating: 10,
-            worstRating: 0,
-            ratingCount: 1,
-          },
-          review: {
-            "@type": "Review",
-            reviewRating: {
-              "@type": "Rating",
-              ratingValue: product.rating,
-              bestRating: 10,
-              worstRating: 0,
-            },
-            author: { "@type": "Organization", name: "topweightloss.io" },
-          },
-        },
+        name: product.name,
+        url: `https://www.topweightloss.io/reviews/${product.id}`,
       })),
     },
   };
