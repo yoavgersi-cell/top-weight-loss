@@ -2214,14 +2214,32 @@ export async function getConfig(): Promise<SiteConfig> {
           const aliases: Record<string, string> = { sprouthealth: "sprout", directmeds: "directmeds" };
           return seedTrustpilot[norm] ?? seedTrustpilot[aliases[norm] ?? ""];
         };
+        // Union the code seed (our canonical, newest-first source) with any
+        // reviews saved in the CMS, deduped by title+text. This lets newly
+        // added seed reviews surface even after a provider was saved to the
+        // blob (a plain `saved ?? seed` would freeze the seed forever), while
+        // still preserving any reviews added only through the admin.
+        const mergeTrustpilotReviews = (
+          savedReviews: TrustpilotReview[] | undefined,
+          seedReviews: TrustpilotReview[] | undefined
+        ): TrustpilotReview[] | undefined => {
+          const seedList = seedReviews ?? [];
+          const savedList = savedReviews ?? [];
+          if (seedList.length === 0) return savedList.length > 0 ? savedList : undefined;
+          const key = (r: TrustpilotReview) =>
+            `${r.title}|${r.text}`.toLowerCase().replace(/\s+/g, " ").trim();
+          const seedKeys = new Set(seedList.map(key));
+          const cmsOnly = savedList.filter((r) => !seedKeys.has(key(r)));
+          return [...seedList, ...cmsOnly];
+        };
         const savedProviders = (saved.providers || []).map((p) => ({
           ...p,
           smallLogo: p.smallLogo || `/logos/${p.id}-icon.svg`,
-          // Backfill seeded Trustpilot content for providers saved before the
-          // fields existed; CMS-edited values (including deletions) win.
+          // Rating/count: CMS-edited values win, seed is a backfill.
           trustpilotRating: p.trustpilotRating ?? seedFor(p)?.rating,
           trustpilotReviewCount: p.trustpilotReviewCount ?? seedFor(p)?.reviewCount,
-          trustpilotReviews: p.trustpilotReviews ?? seedFor(p)?.reviews,
+          // Reviews: merge seed + CMS so new seed reviews always show.
+          trustpilotReviews: mergeTrustpilotReviews(p.trustpilotReviews, seedFor(p)?.reviews),
         }));
         const savedProviderIds = new Set(savedProviders.map((p) => p.id));
         const newProviders = initial.providers
