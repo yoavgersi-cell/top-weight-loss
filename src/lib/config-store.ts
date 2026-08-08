@@ -288,6 +288,8 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
     ],
   },
   embody: {
+    rating: "3.8",
+    reviewCount: "4956",
     reviews: [
       {
         title: "Just started week 3 of tirzepatide",
@@ -2235,9 +2237,10 @@ export async function getConfig(): Promise<SiteConfig> {
         const savedProviders = (saved.providers || []).map((p) => ({
           ...p,
           smallLogo: p.smallLogo || `/logos/${p.id}-icon.svg`,
-          // Rating/count: CMS-edited values win, seed is a backfill.
-          trustpilotRating: p.trustpilotRating ?? seedFor(p)?.rating,
-          trustpilotReviewCount: p.trustpilotReviewCount ?? seedFor(p)?.reviewCount,
+          // Rating/count: CMS-edited values win, seed is a backfill. Use ||
+          // so an empty string saved by the admin still falls back to seed.
+          trustpilotRating: p.trustpilotRating || seedFor(p)?.rating,
+          trustpilotReviewCount: p.trustpilotReviewCount || seedFor(p)?.reviewCount,
           // Reviews: merge seed + CMS so new seed reviews always show.
           trustpilotReviews: mergeTrustpilotReviews(p.trustpilotReviews, seedFor(p)?.reviews),
         }));
