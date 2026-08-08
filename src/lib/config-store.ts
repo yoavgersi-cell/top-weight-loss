@@ -112,6 +112,34 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
   medvi: {
     reviews: [
       {
+        title: "Very quick and questions answered fully",
+        text: "Video visit was made very easy and reminders were sent right before my visit",
+        name: "Martin",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Friendly and helpful",
+        text: "The person who helped me listened and helped me with my problems",
+        name: "Richard",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "The phone call was very thorough",
+        text: "The phone call was very thorough and everything went smoothly",
+        name: "Randy Burton",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "The feedback has been overwhelmingly positive",
+        text: "My experience was highly satisfactory, and all my inquiries were addressed to my complete satisfaction.",
+        name: "Traci Frazier",
+        location: "US",
+        rating: 5,
+      },
+      {
         title: "The personal service",
         text: "The personal service",
         name: "DB",
@@ -1159,6 +1187,453 @@ const embodyWellmedrBattle: BattleData = {
   ],
 };
 
+// altRx vs TrimRX battle — winner: TrimRX. Injected when the CMS has no
+// battle for this provider pair, so /altrx-vs-trimrx resolves. Content is
+// grounded in each provider's verified positioning: altRx's published
+// $89/$149 compounded pricing and brand-name lineup, and TrimRX's
+// affordability-first, flexible-plan model with multi-month discounts.
+const altrxTrimrxBattle: BattleData = {
+  slug: "altrx-vs-trimrx",
+  provider1Id: "altrx",
+  provider2Id: "trimrx",
+  title: "TrimRX vs altRx: Which GLP-1 Provider Wins in 2026?",
+  subtitle: "We compared pricing, medication access, medical support, and real customer experience to see which GLP-1 provider delivers more value.",
+  description: "TrimRX vs altRx compared on pricing, GLP-1 medication options, medical support, and real customer reviews. See why TrimRX wins on value in 2026.",
+  intro: "TrimRX and altRx are both fully online GLP-1 weight-loss providers that skip insurance and ship medication to your door. altRx bills itself as \"the #1 most affordable GLP-1 program\" from $89/month and stands out with the broadest lineup — compounded GLP-1 and GLP-1 + GIP plus brand-name Zepbound and Wegovy. TrimRX is built around affordable access to GLP-1 programs, pairing competitive monthly pricing with flexible plans, multi-month discounts, and ongoing clinical guidance. Here's how they compare across the factors that matter most.",
+  verdict: "Both are legitimate, no-insurance-required online GLP-1 providers — but TrimRX takes this one on value. Its plans are built around affordability, with competitive monthly pricing, multi-month discounts, and provider consultations plus ongoing support bundled in, all with no long-term commitment. altRx is the better pick if you want the widest medication selection — including brand-name Zepbound or Wegovy — or Buy Now, Pay Later.",
+  verdictWinnerPoints: [
+    "Built around affordable access — competitive pricing plus multi-month discounts",
+    "Flexible plans with no long-term commitment",
+    "Provider consultations and ongoing clinical guidance included",
+  ],
+  verdictLoserPoints: [
+    "The broadest lineup, incl. brand-name Zepbound & Wegovy",
+    "Buy Now, Pay Later options available",
+    "Clinician-guided care from licensed clinicians",
+  ],
+  winnerId: "trimrx",
+  categories: [
+    {
+      name: "Pricing & Value",
+      winner: "provider2",
+      explanation: "TrimRX is built around affordability — competitive monthly pricing with discounts for multi-month commitments, and consultations plus ongoing support bundled into the plan. altRx is transparent too, starting at $89/month for compounded GLP-1 and $149 for GLP-1 + GIP, with Buy Now, Pay Later available. For the lowest-cost path to GLP-1 treatment, TrimRX comes out ahead.",
+      supportingPoints: [
+        "Competitive pricing + multi-month discounts (TrimRX)",
+        "Consultations & ongoing support included (TrimRX)",
+        "$89/mo GLP-1 · $149 GLP-1 + GIP (altRx)",
+        "No insurance required (both)",
+      ],
+    },
+    {
+      name: "Medication Options",
+      winner: "provider1",
+      explanation: "altRx offers the broader selection — compounded GLP-1 and GLP-1 + GIP plus brand-name Zepbound and Wegovy. TrimRX focuses on compounded semaglutide and tirzepatide with customized dosing. Both deliver prescription GLP-1 treatment to your door.",
+      supportingPoints: [
+        "Compounded + brand-name Zepbound & Wegovy (altRx)",
+        "Compounded semaglutide & tirzepatide (TrimRX)",
+        "Customized dosing schedules (TrimRX)",
+        "Prescription GLP-1 treatment (both)",
+      ],
+    },
+    {
+      name: "Medical Support",
+      winner: "tie",
+      explanation: "Both platforms put licensed clinicians behind your treatment. altRx offers clinician-guided care from licensed clinicians every step of the way, while TrimRX includes provider consultations and ongoing clinical guidance throughout your plan.",
+      supportingPoints: [
+        "Licensed clinicians on both platforms",
+        "Provider consultations included (TrimRX)",
+        "Clinician-guided care (altRx)",
+        "Ongoing support during treatment (both)",
+      ],
+    },
+    {
+      name: "Plan Flexibility",
+      winner: "provider2",
+      explanation: "TrimRX is designed to be flexible — flexible treatment plans, customized dosing, and no long-term commitment, so you can adjust as you go. altRx also lets you pause or cancel anytime, but TrimRX's plans and multi-month options give it the edge for adapting to your budget and goals.",
+      supportingPoints: [
+        "Flexible plans, no long-term commitment (TrimRX)",
+        "Multi-month options and discounts (TrimRX)",
+        "Pause or cancel anytime (altRx)",
+        "Adjustable dosing over time (both)",
+      ],
+    },
+    {
+      name: "Customer Experience",
+      winner: "provider2",
+      explanation: "TrimRX earns strong marks from customers on Trustpilot, with reviewers highlighting real results and a process that's easy to stick with. altRx reviews are largely positive too, with customers pointing to responsive, clinician-guided support.",
+      supportingPoints: [
+        "Strong recent Trustpilot feedback (TrimRX)",
+        "Reviewers cite real, lasting results (TrimRX)",
+        "Responsive clinician-guided support (altRx)",
+        "Straightforward enrollment (both)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Starting Price", provider1Value: "$89/mo GLP-1 · $149 GLP-1 + GIP", provider2Value: "Affordability-focused · multi-month discounts", highlight: "provider2" },
+    { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
+    { feature: "Medications", provider1Value: "Compounded + brand-name (Zepbound, Wegovy)", provider2Value: "Compounded semaglutide & tirzepatide", highlight: "provider1" },
+    { feature: "Care Model", provider1Value: "Clinician-guided, licensed clinicians", provider2Value: "Provider consultations + ongoing guidance", highlight: "both" },
+    { feature: "Plan Flexibility", provider1Value: "Pause or cancel anytime", provider2Value: "Flexible plans, no long-term commitment", highlight: "provider2" },
+    { feature: "Payment", provider1Value: "No insurance + Buy Now, Pay Later", provider2Value: "No insurance required", highlight: "provider1" },
+  ],
+};
+
+// ───── Medvi head-to-head battles (winner: Medvi) ─────
+// Injected when the CMS has no battle for the pair, so these slugs resolve.
+// Medvi's verified edges — personal, attentive service (its Trustpilot
+// standout), provider support with regular monitoring, a streamlined
+// "made simple" process, and transparent all-inclusive pricing — carry the
+// win, while each opponent keeps its genuine advantage.
+
+const medviAltrxBattle: BattleData = {
+  slug: "medvi-vs-altrx",
+  provider1Id: "medvi",
+  provider2Id: "altrx",
+  title: "Medvi vs altRx: Which Weight Loss Provider Wins in 2026?",
+  subtitle: "We compared personal support, ongoing care, medication access, and value to see which GLP-1 provider comes out ahead.",
+  description: "Medvi vs altRx compared on personal support, ongoing medical care, GLP-1 medication options, and value. See why Medvi comes out on top in 2026.",
+  intro: "Medvi and altRx are both fully online, self-pay GLP-1 weight-loss providers that ship prescription treatment to your door. altRx bills itself as \"the #1 most affordable GLP-1 program\" from $89/month with the broadest medication lineup — compounded GLP-1 and GLP-1 + GIP plus brand-name Zepbound and Wegovy. Medvi keeps medical weight loss simple, pairing prescription GLP-1 treatment with attentive provider support, regular monitoring, and transparent all-inclusive pricing. Here's how they compare.",
+  verdict: "Both are legitimate online GLP-1 providers — but Medvi takes this one for the experience. Its customers consistently praise the personal, attentive service, and its plans bundle medication, provider consultations, and ongoing monitoring into transparent pricing with no surprise charges. altRx is the better pick if you want the widest medication selection — including brand-name Zepbound or Wegovy — or Buy Now, Pay Later.",
+  verdictWinnerPoints: [
+    "Personal, attentive service customers rave about",
+    "Provider support with regular check-ins and monitoring",
+    "Transparent, all-inclusive pricing — no surprise charges",
+  ],
+  verdictLoserPoints: [
+    "The broadest lineup, incl. brand-name Zepbound & Wegovy",
+    "Headline pricing from $89/mo (GLP-1) and $149 (GLP-1 + GIP)",
+    "Buy Now, Pay Later options available",
+  ],
+  winnerId: "medvi",
+  categories: [
+    {
+      name: "Personal Support & Service",
+      winner: "provider1",
+      explanation: "Medvi's standout is its people. Recent Trustpilot reviewers repeatedly highlight providers who take their time, answer every question, and follow up — describing the service as friendly, professional, and personal. altRx offers clinician-guided care from licensed clinicians, and its reviews are largely positive too.",
+      supportingPoints: [
+        "Reviewers cite personal, unhurried service (Medvi)",
+        "Providers who answer every question (Medvi)",
+        "Clinician-guided care from licensed clinicians (altRx)",
+        "Ongoing support on both platforms",
+      ],
+    },
+    {
+      name: "Ongoing Care & Monitoring",
+      winner: "provider1",
+      explanation: "Medvi builds in provider support throughout treatment — regular check-ins, follow-up consultations, and dosage adjustments as needed. altRx also provides clinician oversight, but Medvi's structured monitoring gives it the edge for staying on track.",
+      supportingPoints: [
+        "Regular check-ins and monitoring (Medvi)",
+        "Follow-up consultations & dosage adjustments (Medvi)",
+        "Clinician oversight during treatment (altRx)",
+        "Provider-guided treatment plans (both)",
+      ],
+    },
+    {
+      name: "Simplicity & Onboarding",
+      winner: "provider1",
+      explanation: "Medvi is built to make medical weight loss simple — a streamlined online enrollment that's easy for first-timers. altRx is also fully online with a short assessment, but Medvi leans hardest into a no-friction, get-started-fast experience.",
+      supportingPoints: [
+        "Streamlined \"made simple\" enrollment (Medvi)",
+        "Easy for those new to medical weight loss (Medvi)",
+        "Short online assessment (altRx)",
+        "100% online, no clinic visits (both)",
+      ],
+    },
+    {
+      name: "Medication Options",
+      winner: "provider2",
+      explanation: "altRx offers the broader selection — compounded GLP-1 and GLP-1 + GIP plus brand-name Zepbound and Wegovy. Medvi focuses on prescription GLP-1 treatment with provider-guided dosing. Both deliver medication to your door.",
+      supportingPoints: [
+        "Compounded + brand-name Zepbound & Wegovy (altRx)",
+        "Prescription GLP-1 treatment (Medvi)",
+        "Provider-guided dosing (Medvi)",
+        "Home delivery included (both)",
+      ],
+    },
+    {
+      name: "Pricing & Value",
+      winner: "tie",
+      explanation: "Both are upfront about cost. Medvi's monthly plans bundle medication, provider consultations, and ongoing support into transparent pricing with no surprise charges. altRx publishes clear headline pricing — $89/month for compounded GLP-1 and $149 for GLP-1 + GIP — with Buy Now, Pay Later available. Different strengths, comparable value.",
+      supportingPoints: [
+        "All-inclusive plans, no surprise charges (Medvi)",
+        "$89/mo GLP-1 · $149 GLP-1 + GIP (altRx)",
+        "No insurance required (both)",
+        "Buy Now, Pay Later (altRx)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Personal Support", provider1Value: "Attentive, highly rated service", provider2Value: "Clinician-guided support", highlight: "provider1" },
+    { feature: "Ongoing Care", provider1Value: "Regular check-ins & follow-ups", provider2Value: "Clinician oversight", highlight: "provider1" },
+    { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
+    { feature: "Medications", provider1Value: "Prescription GLP-1 treatment", provider2Value: "Compounded + brand-name (Zepbound, Wegovy)", highlight: "provider2" },
+    { feature: "Pricing", provider1Value: "All-inclusive, no surprise charges", provider2Value: "$89/mo GLP-1 · $149 GLP-1 + GIP", highlight: "both" },
+    { feature: "Payment", provider1Value: "No insurance required", provider2Value: "No insurance + Buy Now, Pay Later", highlight: "provider2" },
+  ],
+};
+
+const medviTrimrxBattle: BattleData = {
+  slug: "medvi-vs-trimrx",
+  provider1Id: "medvi",
+  provider2Id: "trimrx",
+  title: "Medvi vs TrimRX: Which Weight Loss Provider Wins in 2026?",
+  subtitle: "We compared personal support, ongoing care, pricing, and medication access to see which GLP-1 provider comes out ahead.",
+  description: "Medvi vs TrimRX compared on personal support, ongoing medical care, pricing, and GLP-1 medication access. See why Medvi comes out on top in 2026.",
+  intro: "Medvi and TrimRX are both online GLP-1 weight-loss providers that keep things affordable and skip the insurance hassle. TrimRX is built around affordable access to GLP-1 programs, with competitive pricing and multi-month discounts. Medvi keeps medical weight loss simple, pairing prescription GLP-1 treatment with attentive provider support, regular monitoring, and transparent all-inclusive pricing. Here's how they compare.",
+  verdict: "Both are solid, budget-friendly online GLP-1 providers — but Medvi takes this one for the experience. Its customers consistently praise the personal, attentive service, and its plans bundle medication, provider consultations, and ongoing monitoring with no surprise charges. TrimRX is the better pick if your top priority is the lowest headline price, with competitive pricing and multi-month discounts.",
+  verdictWinnerPoints: [
+    "Personal, attentive service customers rave about",
+    "Provider support with regular check-ins and monitoring",
+    "Transparent, all-inclusive pricing — no surprise charges",
+  ],
+  verdictLoserPoints: [
+    "Affordability-first pricing with multi-month discounts",
+    "Flexible plans with no long-term commitment",
+    "Compounded semaglutide & tirzepatide options",
+  ],
+  winnerId: "medvi",
+  categories: [
+    {
+      name: "Personal Support & Service",
+      winner: "provider1",
+      explanation: "Medvi's standout is its people. Recent Trustpilot reviewers repeatedly highlight providers who take their time, answer every question, and follow up — friendly, professional, and personal. TrimRX earns positive reviews too, with customers pointing to real results and an easy process.",
+      supportingPoints: [
+        "Reviewers cite personal, unhurried service (Medvi)",
+        "Providers who answer every question (Medvi)",
+        "Positive results-focused feedback (TrimRX)",
+        "Ongoing support on both platforms",
+      ],
+    },
+    {
+      name: "Ongoing Care & Monitoring",
+      winner: "provider1",
+      explanation: "Medvi builds in provider support throughout treatment — regular check-ins, follow-up consultations, and dosage adjustments as needed. TrimRX includes ongoing clinical guidance, but Medvi's structured monitoring gives it the edge for staying on track.",
+      supportingPoints: [
+        "Regular check-ins and monitoring (Medvi)",
+        "Follow-up consultations & dosage adjustments (Medvi)",
+        "Ongoing clinical guidance (TrimRX)",
+        "Provider-guided treatment plans (both)",
+      ],
+    },
+    {
+      name: "Simplicity & Onboarding",
+      winner: "provider1",
+      explanation: "Medvi is built to make medical weight loss simple — a streamlined online enrollment that's easy for first-timers. TrimRX also keeps enrollment straightforward, but Medvi leans hardest into a no-friction, get-started-fast experience.",
+      supportingPoints: [
+        "Streamlined \"made simple\" enrollment (Medvi)",
+        "Easy for those new to medical weight loss (Medvi)",
+        "Straightforward enrollment (TrimRX)",
+        "100% online (both)",
+      ],
+    },
+    {
+      name: "Pricing & Value",
+      winner: "provider2",
+      explanation: "TrimRX is built around affordability — competitive monthly pricing with multi-month discounts. Medvi's plans are transparent and all-inclusive (medication, consultations, and support with no surprise charges). For the lowest headline price, TrimRX edges ahead.",
+      supportingPoints: [
+        "Affordability-first + multi-month discounts (TrimRX)",
+        "All-inclusive, no surprise charges (Medvi)",
+        "No insurance required (both)",
+        "No long-term commitment (TrimRX)",
+      ],
+    },
+    {
+      name: "Medication Options",
+      winner: "tie",
+      explanation: "Both focus on compounded GLP-1 treatment — semaglutide and tirzepatide — with provider-guided dosing, delivered to your door. Neither offers a materially broader menu than the other.",
+      supportingPoints: [
+        "Compounded semaglutide & tirzepatide (both)",
+        "Provider-guided dosing (both)",
+        "Home delivery included (both)",
+        "Prescription GLP-1 treatment (both)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Personal Support", provider1Value: "Attentive, highly rated service", provider2Value: "Positive, results-focused reviews", highlight: "provider1" },
+    { feature: "Ongoing Care", provider1Value: "Regular check-ins & follow-ups", provider2Value: "Ongoing clinical guidance", highlight: "provider1" },
+    { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
+    { feature: "Pricing", provider1Value: "All-inclusive, no surprise charges", provider2Value: "Affordability-focused · multi-month discounts", highlight: "provider2" },
+    { feature: "Medications", provider1Value: "Compounded GLP-1 treatment", provider2Value: "Compounded semaglutide & tirzepatide", highlight: "both" },
+    { feature: "Commitment", provider1Value: "Flexible monthly plans", provider2Value: "No long-term commitment", highlight: "both" },
+  ],
+};
+
+const medviRoBattle: BattleData = {
+  slug: "medvi-vs-ro",
+  provider1Id: "medvi",
+  provider2Id: "ro",
+  title: "Medvi vs Ro: Which Weight Loss Provider Wins in 2026?",
+  subtitle: "We compared personal support, pricing, ongoing care, and brand track record to see which GLP-1 provider comes out ahead.",
+  description: "Medvi vs Ro compared on personal support, transparent pricing, ongoing medical care, and track record. See why Medvi comes out on top in 2026.",
+  intro: "Medvi and Ro are both online telehealth providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established brand with an integrated in-house pharmacy and licensed providers reviewing every plan. Medvi keeps medical weight loss simple, pairing prescription GLP-1 treatment with attentive provider support, regular monitoring, and transparent all-inclusive pricing. Here's how they compare.",
+  verdict: "Both are credible online GLP-1 providers — but Medvi takes this one for the experience. Its customers consistently praise the personal, attentive service, and its plans bundle medication, provider consultations, and ongoing monitoring into transparent pricing with no surprise charges. Ro is the better pick if brand track record matters most — it's a large, established telehealth company with an integrated in-house pharmacy.",
+  verdictWinnerPoints: [
+    "Personal, attentive service customers rave about",
+    "Transparent, all-inclusive pricing — no surprise charges",
+    "Provider support with regular check-ins and monitoring",
+  ],
+  verdictLoserPoints: [
+    "A large, well-established telehealth brand",
+    "Integrated in-house pharmacy fulfillment",
+    "Licensed providers review every treatment plan",
+  ],
+  winnerId: "medvi",
+  categories: [
+    {
+      name: "Personal Support & Service",
+      winner: "provider1",
+      explanation: "Medvi's standout is its people. Recent Trustpilot reviewers repeatedly highlight providers who take their time, answer every question, and follow up — friendly, professional, and personal. Ro is polished and reliable, though some reviewers report longer wait times during peak periods.",
+      supportingPoints: [
+        "Reviewers cite personal, unhurried service (Medvi)",
+        "Providers who answer every question (Medvi)",
+        "Polished, established platform (Ro)",
+        "Licensed providers on both",
+      ],
+    },
+    {
+      name: "Pricing & Value",
+      winner: "provider1",
+      explanation: "Medvi's monthly plans are transparent and all-inclusive — medication, provider consultations, and ongoing support with no surprise charges. Ro is competitively priced, but costs can vary depending on the medication and plan you choose. For predictable, upfront pricing, Medvi comes out ahead.",
+      supportingPoints: [
+        "All-inclusive, no surprise charges (Medvi)",
+        "Predictable monthly pricing (Medvi)",
+        "Costs can vary by medication/plan (Ro)",
+        "No insurance required (both)",
+      ],
+    },
+    {
+      name: "Ongoing Care & Monitoring",
+      winner: "provider1",
+      explanation: "Medvi builds in provider support throughout treatment — regular check-ins, follow-up consultations, and dosage adjustments as needed. Ro provides regular check-ins too, but Medvi's structured, attentive monitoring gives it the edge.",
+      supportingPoints: [
+        "Regular check-ins and monitoring (Medvi)",
+        "Follow-up consultations & dosage adjustments (Medvi)",
+        "Regular check-ins (Ro)",
+        "Provider oversight during treatment (both)",
+      ],
+    },
+    {
+      name: "Brand & Track Record",
+      winner: "provider2",
+      explanation: "Ro is a large, established telehealth brand with an integrated in-house pharmacy that can streamline fulfillment, plus strong name recognition. Medvi is a newer platform with fewer reviews, though the ones it has are strongly positive.",
+      supportingPoints: [
+        "Large, well-known telehealth brand (Ro)",
+        "Integrated in-house pharmacy (Ro)",
+        "Newer platform, fewer reviews (Medvi)",
+        "Strong recent Trustpilot feedback (Medvi)",
+      ],
+    },
+    {
+      name: "Medical Support",
+      winner: "tie",
+      explanation: "Both put licensed providers behind every treatment plan, with oversight from start to finish. Ro leverages its established telehealth infrastructure; Medvi emphasizes attentive, personal provider contact.",
+      supportingPoints: [
+        "Licensed providers on both platforms",
+        "Provider oversight throughout (both)",
+        "Established telehealth infrastructure (Ro)",
+        "Attentive personal provider contact (Medvi)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Personal Support", provider1Value: "Attentive, highly rated service", provider2Value: "Polished, can slow at peak", highlight: "provider1" },
+    { feature: "Pricing", provider1Value: "All-inclusive, no surprise charges", provider2Value: "Competitive, varies by plan", highlight: "provider1" },
+    { feature: "Ongoing Care", provider1Value: "Regular check-ins & follow-ups", provider2Value: "Regular check-ins", highlight: "provider1" },
+    { feature: "Pharmacy", provider1Value: "Home delivery included", provider2Value: "Integrated in-house pharmacy", highlight: "provider2" },
+    { feature: "Track Record", provider1Value: "Newer, strongly reviewed", provider2Value: "Large, established brand", highlight: "provider2" },
+    { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
+  ],
+};
+
+const medviWellmedrBattle: BattleData = {
+  slug: "medvi-vs-wellmedr",
+  provider1Id: "medvi",
+  provider2Id: "wellmedr",
+  title: "Medvi vs WellMedr: Which Weight Loss Provider Wins in 2026?",
+  subtitle: "We compared personal support, focus, pricing, and range of care to see which GLP-1 provider comes out ahead.",
+  description: "Medvi vs WellMedr compared on personal support, focus, transparent pricing, and range of care. See why Medvi comes out on top for weight loss in 2026.",
+  intro: "Medvi and WellMedr both offer online GLP-1 weight-loss treatment, but they take different approaches. WellMedr is an AI-driven telehealth brand that reaches beyond weight loss into longevity, hormones, and more — pairing GLP-1 with add-ons like NAD+ and B12. Medvi keeps medical weight loss simple and focused, pairing prescription GLP-1 treatment with attentive provider support, regular monitoring, and transparent all-inclusive pricing. Here's how they compare for weight loss specifically.",
+  verdict: "Both are credible online GLP-1 providers — but Medvi takes this comparison for weight loss specifically. Its customers consistently praise the personal, attentive service, and its plans bundle medication, provider consultations, and ongoing monitoring into transparent pricing with no surprise charges. WellMedr is the better fit if you want more than weight loss — a broader longevity platform spanning TRT, NAD+, hair, and sexual health.",
+  verdictWinnerPoints: [
+    "Personal, attentive service customers rave about",
+    "A focused, simple weight-loss experience",
+    "Transparent, all-inclusive pricing — no surprise charges",
+  ],
+  verdictLoserPoints: [
+    "A broader longevity platform (TRT, NAD+, and more)",
+    "GLP-1 formulations enhanced with NAD+ and B12",
+    "50% off your first month",
+  ],
+  winnerId: "medvi",
+  categories: [
+    {
+      name: "Personal Support & Service",
+      winner: "provider1",
+      explanation: "Medvi's standout is its people. Recent Trustpilot reviewers repeatedly highlight providers who take their time, answer every question, and follow up — friendly, professional, and personal. WellMedr lets you message your provider anytime through your account for guidance or plan adjustments.",
+      supportingPoints: [
+        "Reviewers cite personal, unhurried service (Medvi)",
+        "Providers who answer every question (Medvi)",
+        "Message your provider anytime (WellMedr)",
+        "Ongoing support on both platforms",
+      ],
+    },
+    {
+      name: "Focus & Simplicity",
+      winner: "provider1",
+      explanation: "Medvi is built to make medical weight loss simple — a streamlined, focused process for one goal. WellMedr spreads across many services (weight loss, TRT, NAD+, hair, sexual health), which adds range but less single-minded focus for weight loss specifically.",
+      supportingPoints: [
+        "Streamlined \"made simple\" enrollment (Medvi)",
+        "Single-minded weight-loss focus (Medvi)",
+        "Broad multi-service platform (WellMedr)",
+        "100% online (both)",
+      ],
+    },
+    {
+      name: "Pricing & Value",
+      winner: "provider1",
+      explanation: "Medvi's monthly plans are transparent and all-inclusive — medication, provider consultations, and ongoing support with no surprise charges. WellMedr promotes 50% off your first month, though its ongoing weight-loss price isn't listed up front. On predictable, upfront pricing, Medvi comes out ahead.",
+      supportingPoints: [
+        "All-inclusive, no surprise charges (Medvi)",
+        "Predictable monthly pricing (Medvi)",
+        "50% off first month; ongoing price not listed (WellMedr)",
+        "No insurance required (both)",
+      ],
+    },
+    {
+      name: "Range Beyond Weight Loss",
+      winner: "provider2",
+      explanation: "WellMedr is a broader longevity platform — alongside GLP-1 it offers TRT, NAD+, hair, and sexual health, and its weight-loss line includes a microdose pairing semaglutide with NAD+ and Vitamin B12. Medvi focuses specifically on GLP-1 weight-loss treatment.",
+      supportingPoints: [
+        "Longevity, hormones, NAD+, hair, sexual health (WellMedr)",
+        "GLP-1 + NAD+/B12 microdose option (WellMedr)",
+        "Focused GLP-1 weight-loss treatment (Medvi)",
+        "Prescription GLP-1 treatment (both)",
+      ],
+    },
+    {
+      name: "Medical Support",
+      winner: "tie",
+      explanation: "Both put qualified providers behind treatment. Medvi emphasizes attentive, personal provider contact with regular monitoring; WellMedr says board-certified specialists tailor your plan, with medications made in US state-licensed pharmacies following FDA compounding standards.",
+      supportingPoints: [
+        "Attentive personal provider contact (Medvi)",
+        "Regular monitoring & follow-ups (Medvi)",
+        "Board-certified specialists tailor your plan (WellMedr)",
+        "US state-licensed pharmacies (WellMedr)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Personal Support", provider1Value: "Attentive, highly rated service", provider2Value: "Message your provider anytime", highlight: "provider1" },
+    { feature: "Focus", provider1Value: "Dedicated weight-loss focus", provider2Value: "Broad multi-service platform", highlight: "provider1" },
+    { feature: "Pricing", provider1Value: "All-inclusive, no surprise charges", provider2Value: "50% off first month (ongoing not listed)", highlight: "provider1" },
+    { feature: "Beyond Weight Loss", provider1Value: "GLP-1 weight loss focus", provider2Value: "TRT, NAD+, hair, sexual health", highlight: "provider2" },
+    { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
+    { feature: "Medications", provider1Value: "Prescription GLP-1 treatment", provider2Value: "GLP-1/GIP + semaglutide/NAD+/B12 microdose", highlight: "both" },
+  ],
+};
+
 // ───── Brand casing normalization ─────
 // Canonical provider names (keyed by provider id or normalized name).
 const CANONICAL_NAMES: Record<string, string> = {
@@ -1324,9 +1799,9 @@ function buildInitialConfig(): SiteConfig {
         slug: "altrx-vs-ro",
         provider1Id: "altrx",
         provider2Id: "ro",
-        title: "ALT RX vs Ro: Which Weight Loss Provider Is Better?",
+        title: "altRx vs Ro (2026): Pricing, GLP-1 Meds & Which Wins",
         subtitle: "Compare pricing, medication options, medical support, convenience, and overall value side by side.",
-        description: "Head-to-head comparison of ALT RX and Ro for GLP-1 weight loss treatment. Compare pricing, medical support, medication options, and overall value.",
+        description: "altRx vs Ro compared for 2026 — pricing, GLP-1 medication options, medical support, and overall value. See which weight loss provider comes out ahead, and why.",
         intro: "ALT RX and Ro are two of the most popular telehealth weight loss providers offering GLP-1 medications. Both platforms connect patients with licensed providers and deliver prescription medication to your door — but they differ in pricing structure, level of personalization, medication options, and overall patient experience. Here's how they compare across the categories that matter most.",
         verdict: "ALT RX edges ahead with its transparent all-inclusive pricing, wider medication selection, and more personalized treatment approach. Ro remains a strong choice for those who value brand reputation and a streamlined, no-frills process. Both are solid options — your best pick depends on whether you prioritize personalization (ALT RX) or simplicity (Ro).",
         verdictWinnerPoints: [
@@ -1359,6 +1834,11 @@ function buildInitialConfig(): SiteConfig {
       },
       embodyWellmedrBattle,
       { ...embodyAltrxBattle, slug: "altrx-vs-embody" },
+      altrxTrimrxBattle,
+      medviAltrxBattle,
+      medviTrimrxBattle,
+      medviRoBattle,
+      medviWellmedrBattle,
     ],
     sidebars: [
       {
@@ -1734,14 +2214,32 @@ export async function getConfig(): Promise<SiteConfig> {
           const aliases: Record<string, string> = { sprouthealth: "sprout", directmeds: "directmeds" };
           return seedTrustpilot[norm] ?? seedTrustpilot[aliases[norm] ?? ""];
         };
+        // Union the code seed (our canonical, newest-first source) with any
+        // reviews saved in the CMS, deduped by title+text. This lets newly
+        // added seed reviews surface even after a provider was saved to the
+        // blob (a plain `saved ?? seed` would freeze the seed forever), while
+        // still preserving any reviews added only through the admin.
+        const mergeTrustpilotReviews = (
+          savedReviews: TrustpilotReview[] | undefined,
+          seedReviews: TrustpilotReview[] | undefined
+        ): TrustpilotReview[] | undefined => {
+          const seedList = seedReviews ?? [];
+          const savedList = savedReviews ?? [];
+          if (seedList.length === 0) return savedList.length > 0 ? savedList : undefined;
+          const key = (r: TrustpilotReview) =>
+            `${r.title}|${r.text}`.toLowerCase().replace(/\s+/g, " ").trim();
+          const seedKeys = new Set(seedList.map(key));
+          const cmsOnly = savedList.filter((r) => !seedKeys.has(key(r)));
+          return [...seedList, ...cmsOnly];
+        };
         const savedProviders = (saved.providers || []).map((p) => ({
           ...p,
           smallLogo: p.smallLogo || `/logos/${p.id}-icon.svg`,
-          // Backfill seeded Trustpilot content for providers saved before the
-          // fields existed; CMS-edited values (including deletions) win.
+          // Rating/count: CMS-edited values win, seed is a backfill.
           trustpilotRating: p.trustpilotRating ?? seedFor(p)?.rating,
           trustpilotReviewCount: p.trustpilotReviewCount ?? seedFor(p)?.reviewCount,
-          trustpilotReviews: p.trustpilotReviews ?? seedFor(p)?.reviews,
+          // Reviews: merge seed + CMS so new seed reviews always show.
+          trustpilotReviews: mergeTrustpilotReviews(p.trustpilotReviews, seedFor(p)?.reviews),
         }));
         const savedProviderIds = new Set(savedProviders.map((p) => p.id));
         const newProviders = initial.providers
