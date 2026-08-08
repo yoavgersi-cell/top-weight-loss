@@ -24,7 +24,6 @@ export function WinnerTugMeter({
   const [fill, setFill] = useState(50);
   const [pct, setPct] = useState(50);
   const [revealed, setRevealed] = useState(false);
-  const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -37,21 +36,21 @@ export function WinnerTugMeter({
 
     // Play from the start, right on load.
     const startDelay = window.setTimeout(() => {
-      setAnimate(true);
       requestAnimationFrame(() => setFill(advantage));
 
       const t0 = performance.now();
-      const dur = 1800;
+      const dur = 1400;
       const tick = (now: number) => {
         const p = Math.min(1, (now - t0) / dur);
-        // easeOutExpo — smooth, gentle deceleration matching the bar
-        const e = p >= 1 ? 1 : 1 - Math.pow(2, -10 * p);
+        // easeOutQuart — smooth, gentle deceleration matching the bar
+        const e = 1 - Math.pow(1 - p, 4);
         setPct(Math.round(50 + (advantage - 50) * e));
         if (p < 1) requestAnimationFrame(tick);
       };
       requestAnimationFrame(tick);
-      window.setTimeout(() => setRevealed(true), 1850);
-    }, 300);
+      // Reveal the chip + CTA early — the eased bar is ~90% filled by here
+      window.setTimeout(() => setRevealed(true), 650);
+    }, 200);
 
     return () => window.clearTimeout(startDelay);
   }, [advantage]);
@@ -74,19 +73,16 @@ export function WinnerTugMeter({
         <span className="text-[14px] font-bold text-gray-400">{loserName}</span>
       </div>
 
-      {/* Advantage bar */}
+      {/* Advantage bar — fill uses a GPU transform (scaleX) for smooth motion */}
       <div className="relative h-14 overflow-hidden rounded-2xl bg-gray-100 shadow-[inset_0_1px_3px_rgba(18,38,66,0.10)] sm:h-[52px]">
         <div
-          className="absolute inset-y-0 left-0 overflow-hidden rounded-2xl bg-gradient-to-b from-[#1C8F63] to-[#10714E] shadow-[0_6px_18px_-8px_rgba(16,113,78,0.5)] transition-[width] duration-[1800ms]"
-          style={{ width: `${fill}%`, transitionTimingFunction: "cubic-bezier(0.16,1,0.3,1)", willChange: "width" }}
-        >
-          {animate && (
-            <span
-              className="absolute inset-y-0 w-2/5 bg-gradient-to-r from-transparent via-white/35 to-transparent"
-              style={{ animation: "tugSweep 1.4s ease-out 0.4s" }}
-            />
-          )}
-        </div>
+          className="absolute inset-y-0 left-0 w-full origin-left bg-gradient-to-b from-[#1C8F63] to-[#10714E] shadow-[0_6px_18px_-8px_rgba(16,113,78,0.5)]"
+          style={{
+            transform: `scaleX(${fill / 100})`,
+            transition: "transform 1.4s cubic-bezier(0.22,1,0.36,1)",
+            willChange: "transform",
+          }}
+        />
         <span
           className="absolute left-4 top-1/2 -translate-y-1/2 text-[15px] font-extrabold tabular-nums text-white"
           style={{ textShadow: "0 1px 2px rgba(0,0,0,0.18)" }}
