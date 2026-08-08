@@ -91,8 +91,11 @@ export function TrustpilotCarousel({
   reviewCount?: string;
 }) {
   const [current, setCurrent] = useState(0);
+  const [page, setPage] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
   const total = reviews.length;
+  const perPage = 4;
+  const pageCount = Math.ceil(total / perPage);
 
   // Auto-advance mobile carousel
   useEffect(() => {
@@ -102,6 +105,15 @@ export function TrustpilotCarousel({
     }, 4000);
     return () => clearInterval(timer);
   }, [total]);
+
+  // Auto-advance desktop pages (each shows up to 4 reviews)
+  useEffect(() => {
+    if (pageCount <= 1) return;
+    const timer = setInterval(() => {
+      setPage((prev) => (prev + 1) % pageCount);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [pageCount]);
 
   // Scroll mobile carousel
   useEffect(() => {
@@ -114,7 +126,7 @@ export function TrustpilotCarousel({
 
   if (total === 0) return null;
 
-  const desktopVisible = reviews.slice(0, 4);
+  const desktopVisible = reviews.slice(page * perPage, page * perPage + perPage);
   const numericRating = rating ? Math.round(parseFloat(rating)) : null;
 
   return (
@@ -146,11 +158,44 @@ export function TrustpilotCarousel({
         )}
       </div>
 
-      {/* Desktop: 4 cards in a row */}
-      <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {desktopVisible.map((r, i) => (
-          <ReviewCard key={i} r={r} />
-        ))}
+      {/* Desktop: paginated grid — up to 4 per page, arrows + dots to see the rest */}
+      <div className="hidden sm:block">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {desktopVisible.map((r, i) => (
+            <ReviewCard key={`${page}-${i}`} r={r} />
+          ))}
+        </div>
+
+        {pageCount > 1 && (
+          <div className="mt-4 flex items-center justify-center gap-3">
+            <button
+              onClick={() => setPage((page - 1 + pageCount) % pageCount)}
+              aria-label="Previous reviews"
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-400 transition-colors hover:bg-gray-50"
+            >
+              <ChevronLeft className="h-4 w-4" strokeWidth={2} />
+            </button>
+            <div className="flex gap-1.5">
+              {Array.from({ length: pageCount }).map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setPage(i)}
+                  aria-label={`Go to reviews page ${i + 1}`}
+                  className={`h-1.5 rounded-full transition-all ${
+                    i === page ? "w-5 bg-[#0C4B75]" : "w-1.5 bg-gray-200 hover:bg-gray-300"
+                  }`}
+                />
+              ))}
+            </div>
+            <button
+              onClick={() => setPage((page + 1) % pageCount)}
+              aria-label="Next reviews"
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-400 transition-colors hover:bg-gray-50"
+            >
+              <ChevronRight className="h-4 w-4" strokeWidth={2} />
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Mobile: horizontal scroll carousel */}
