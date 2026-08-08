@@ -112,6 +112,34 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
   medvi: {
     reviews: [
       {
+        title: "Very quick and questions answered fully",
+        text: "Video visit was made very easy and reminders were sent right before my visit",
+        name: "Martin",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Friendly and helpful",
+        text: "The person who helped me listened and helped me with my problems",
+        name: "Richard",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "The phone call was very thorough",
+        text: "The phone call was very thorough and everything went smoothly",
+        name: "Randy Burton",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "The feedback has been overwhelmingly positive",
+        text: "My experience was highly satisfactory, and all my inquiries were addressed to my complete satisfaction.",
+        name: "Traci Frazier",
+        location: "US",
+        rating: 5,
+      },
+      {
         title: "The personal service",
         text: "The personal service",
         name: "DB",
