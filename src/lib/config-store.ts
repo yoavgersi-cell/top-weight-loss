@@ -1159,6 +1159,98 @@ const embodyWellmedrBattle: BattleData = {
   ],
 };
 
+// altRx vs TrimRX battle — winner: TrimRX. Injected when the CMS has no
+// battle for this provider pair, so /altrx-vs-trimrx resolves. Content is
+// grounded in each provider's verified positioning: altRx's published
+// $89/$149 compounded pricing and brand-name lineup, and TrimRX's
+// affordability-first, flexible-plan model with multi-month discounts.
+const altrxTrimrxBattle: BattleData = {
+  slug: "altrx-vs-trimrx",
+  provider1Id: "altrx",
+  provider2Id: "trimrx",
+  title: "TrimRX vs altRx: Which GLP-1 Provider Wins in 2026?",
+  subtitle: "We compared pricing, medication access, medical support, and real customer experience to see which GLP-1 provider delivers more value.",
+  description: "TrimRX vs altRx compared on pricing, GLP-1 medication options, medical support, and real customer reviews. See why TrimRX wins on value in 2026.",
+  intro: "TrimRX and altRx are both fully online GLP-1 weight-loss providers that skip insurance and ship medication to your door. altRx bills itself as \"the #1 most affordable GLP-1 program\" from $89/month and stands out with the broadest lineup — compounded GLP-1 and GLP-1 + GIP plus brand-name Zepbound and Wegovy. TrimRX is built around affordable access to GLP-1 programs, pairing competitive monthly pricing with flexible plans, multi-month discounts, and ongoing clinical guidance. Here's how they compare across the factors that matter most.",
+  verdict: "Both are legitimate, no-insurance-required online GLP-1 providers — but TrimRX takes this one on value. Its plans are built around affordability, with competitive monthly pricing, multi-month discounts, and provider consultations plus ongoing support bundled in, all with no long-term commitment. altRx is the better pick if you want the widest medication selection — including brand-name Zepbound or Wegovy — or Buy Now, Pay Later.",
+  verdictWinnerPoints: [
+    "Built around affordable access — competitive pricing plus multi-month discounts",
+    "Flexible plans with no long-term commitment",
+    "Provider consultations and ongoing clinical guidance included",
+  ],
+  verdictLoserPoints: [
+    "The broadest lineup, incl. brand-name Zepbound & Wegovy",
+    "Buy Now, Pay Later options available",
+    "Clinician-guided care from licensed clinicians",
+  ],
+  winnerId: "trimrx",
+  categories: [
+    {
+      name: "Pricing & Value",
+      winner: "provider2",
+      explanation: "TrimRX is built around affordability — competitive monthly pricing with discounts for multi-month commitments, and consultations plus ongoing support bundled into the plan. altRx is transparent too, starting at $89/month for compounded GLP-1 and $149 for GLP-1 + GIP, with Buy Now, Pay Later available. For the lowest-cost path to GLP-1 treatment, TrimRX comes out ahead.",
+      supportingPoints: [
+        "Competitive pricing + multi-month discounts (TrimRX)",
+        "Consultations & ongoing support included (TrimRX)",
+        "$89/mo GLP-1 · $149 GLP-1 + GIP (altRx)",
+        "No insurance required (both)",
+      ],
+    },
+    {
+      name: "Medication Options",
+      winner: "provider1",
+      explanation: "altRx offers the broader selection — compounded GLP-1 and GLP-1 + GIP plus brand-name Zepbound and Wegovy. TrimRX focuses on compounded semaglutide and tirzepatide with customized dosing. Both deliver prescription GLP-1 treatment to your door.",
+      supportingPoints: [
+        "Compounded + brand-name Zepbound & Wegovy (altRx)",
+        "Compounded semaglutide & tirzepatide (TrimRX)",
+        "Customized dosing schedules (TrimRX)",
+        "Prescription GLP-1 treatment (both)",
+      ],
+    },
+    {
+      name: "Medical Support",
+      winner: "tie",
+      explanation: "Both platforms put licensed clinicians behind your treatment. altRx offers clinician-guided care from licensed clinicians every step of the way, while TrimRX includes provider consultations and ongoing clinical guidance throughout your plan.",
+      supportingPoints: [
+        "Licensed clinicians on both platforms",
+        "Provider consultations included (TrimRX)",
+        "Clinician-guided care (altRx)",
+        "Ongoing support during treatment (both)",
+      ],
+    },
+    {
+      name: "Plan Flexibility",
+      winner: "provider2",
+      explanation: "TrimRX is designed to be flexible — flexible treatment plans, customized dosing, and no long-term commitment, so you can adjust as you go. altRx also lets you pause or cancel anytime, but TrimRX's plans and multi-month options give it the edge for adapting to your budget and goals.",
+      supportingPoints: [
+        "Flexible plans, no long-term commitment (TrimRX)",
+        "Multi-month options and discounts (TrimRX)",
+        "Pause or cancel anytime (altRx)",
+        "Adjustable dosing over time (both)",
+      ],
+    },
+    {
+      name: "Customer Experience",
+      winner: "provider2",
+      explanation: "TrimRX earns strong marks from customers on Trustpilot, with reviewers highlighting real results and a process that's easy to stick with. altRx reviews are largely positive too, with customers pointing to responsive, clinician-guided support.",
+      supportingPoints: [
+        "Strong recent Trustpilot feedback (TrimRX)",
+        "Reviewers cite real, lasting results (TrimRX)",
+        "Responsive clinician-guided support (altRx)",
+        "Straightforward enrollment (both)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Starting Price", provider1Value: "$89/mo GLP-1 · $149 GLP-1 + GIP", provider2Value: "Affordability-focused · multi-month discounts", highlight: "provider2" },
+    { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
+    { feature: "Medications", provider1Value: "Compounded + brand-name (Zepbound, Wegovy)", provider2Value: "Compounded semaglutide & tirzepatide", highlight: "provider1" },
+    { feature: "Care Model", provider1Value: "Clinician-guided, licensed clinicians", provider2Value: "Provider consultations + ongoing guidance", highlight: "both" },
+    { feature: "Plan Flexibility", provider1Value: "Pause or cancel anytime", provider2Value: "Flexible plans, no long-term commitment", highlight: "provider2" },
+    { feature: "Payment", provider1Value: "No insurance + Buy Now, Pay Later", provider2Value: "No insurance required", highlight: "provider1" },
+  ],
+};
+
 // ───── Brand casing normalization ─────
 // Canonical provider names (keyed by provider id or normalized name).
 const CANONICAL_NAMES: Record<string, string> = {
@@ -1359,6 +1451,7 @@ function buildInitialConfig(): SiteConfig {
       },
       embodyWellmedrBattle,
       { ...embodyAltrxBattle, slug: "altrx-vs-embody" },
+      altrxTrimrxBattle,
     ],
     sidebars: [
       {
