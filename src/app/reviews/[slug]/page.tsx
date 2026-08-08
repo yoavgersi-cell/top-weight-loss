@@ -24,14 +24,16 @@ export async function generateMetadata({
   const provider = config.providers.find((p) => p.id === review.providerId);
   if (!provider) return { title: "Review Not Found" };
 
+  const pageTitle = `${provider.name} Review 2026: Cost, Results & Is It Worth It?`;
+
   return {
-    title: `${provider.name} Review 2026 — Is It Worth It?`,
+    title: pageTitle,
     description: review.shortSummary,
     alternates: {
       canonical: `https://www.topweightloss.io/reviews/${slug}`,
     },
     openGraph: {
-      title: `${provider.name} Review 2026 — Is It Worth It?`,
+      title: pageTitle,
       description: review.shortSummary,
       url: `https://www.topweightloss.io/reviews/${slug}`,
       type: "article",
@@ -59,7 +61,7 @@ export default async function ReviewPage({
     "@context": "https://schema.org",
     "@type": "Review",
     name: `${provider.name} Review`,
-    headline: `${provider.name} Review 2026 — Is It Worth It?`,
+    headline: `${provider.name} Review 2026: Cost, Results & Is It Worth It?`,
     reviewBody: review.reviewIntro,
     datePublished: "2026-06-01",
     dateModified: review.updatedAt || CONTENT_LAST_UPDATED,
