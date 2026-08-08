@@ -10,6 +10,7 @@ import { notFound } from "next/navigation";
 import { ArrowRight, Check, Minus, Trophy } from "lucide-react";
 import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
+import { TrustpilotRating } from "@/components/trustpilot-rating";
 import { WinnerTugMeter } from "@/components/winner-tug-meter";
 import { ExpertByline } from "@/components/expert-byline";
 
@@ -316,6 +317,16 @@ export default async function BattlePage({
                     <img src={provider.logo} alt={`${provider.name} logo`} className="max-h-full max-w-full object-contain" />
                   </div>
                 </div>
+
+                {provider.trustpilotRating && (
+                  <div className="mb-3 border-b border-gray-100 pb-3">
+                    <TrustpilotRating
+                      rating={provider.trustpilotRating}
+                      reviewCount={provider.trustpilotReviewCount}
+                      starSize={16}
+                    />
+                  </div>
+                )}
 
                 <p className="mb-4 text-[14px] leading-relaxed text-gray-500">
                   {provider.tagline}
