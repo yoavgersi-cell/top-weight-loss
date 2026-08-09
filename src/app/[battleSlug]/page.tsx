@@ -198,6 +198,29 @@ export default async function BattlePage({
     return cat.winner === "provider1" ? `Edge: ${p1.name}` : `Edge: ${p2.name}`;
   };
 
+  // FAQ — real, query-shaped questions answered from grounded battle content.
+  // Expands the queries the page can rank for (long-tail + People Also Ask) and
+  // powers both the visible FAQ section and the FAQPage schema.
+  const catToQuestion = (name: string) => {
+    const n = name.toLowerCase();
+    if (n.includes("pric") || n.includes("value")) return `Is ${p1.name} cheaper than ${p2.name}?`;
+    if (n.includes("ship") || n.includes("speed")) return `Which is faster, ${p1.name} or ${p2.name}?`;
+    if (n.includes("medication")) return `Which has more medication options, ${p1.name} or ${p2.name}?`;
+    if (n.includes("medical") || n.includes("care") || n.includes("support") || n.includes("monitor")) return `Which has better medical support, ${p1.name} or ${p2.name}?`;
+    if (n.includes("customer") || n.includes("experience") || n.includes("service") || n.includes("personal")) return `Which has better customer reviews, ${p1.name} or ${p2.name}?`;
+    if (n.includes("flexib")) return `Which offers more flexible plans, ${p1.name} or ${p2.name}?`;
+    if (n.includes("focus") || n.includes("simplic")) return `Which is more focused on weight loss, ${p1.name} or ${p2.name}?`;
+    if (n.includes("range") || n.includes("beyond")) return `Does ${p2.name} offer more than weight loss compared to ${p1.name}?`;
+    if (n.includes("brand") || n.includes("track") || n.includes("pharmacy")) return `Which is the more established brand, ${p1.name} or ${p2.name}?`;
+    if (n.includes("transparen") || n.includes("certif")) return `Which is more transparent about pricing, ${p1.name} or ${p2.name}?`;
+    return `${name}: ${p1.name} or ${p2.name}?`;
+  };
+
+  const battleFaqs = [
+    { question: `Who wins, ${p1.name} vs ${p2.name}?`, answer: battle.verdict },
+    ...battle.categories.map((cat) => ({ question: catToQuestion(cat.name), answer: cat.explanation })),
+  ].filter((f, i, arr) => !!f.answer && arr.findIndex((x) => x.question === f.question) === i);
+
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -222,10 +245,10 @@ export default async function BattlePage({
   const battleFaqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: battle.categories.map((cat) => ({
+    mainEntity: battleFaqs.map((f) => ({
       "@type": "Question",
-      name: `${cat.name}: ${p1.name} or ${p2.name}?`,
-      acceptedAnswer: { "@type": "Answer", text: cat.explanation },
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
     })),
   };
 
@@ -743,6 +766,23 @@ export default async function BattlePage({
               </ProviderCta>
             ))}
           </div>
+
+          {/* ───── FAQ ───── */}
+          {battleFaqs.length > 0 && (
+            <div className="mb-14">
+              <h2 className="mb-6 text-[24px] font-bold text-[#191919]">
+                {p1.name} vs {p2.name}: Frequently Asked Questions
+              </h2>
+              <div className="divide-y divide-gray-100 overflow-hidden rounded-2xl border border-gray-200 bg-white">
+                {battleFaqs.map((f, i) => (
+                  <div key={i} className="p-6">
+                    <h3 className="mb-2 text-[16px] font-bold text-[#191919]">{f.question}</h3>
+                    <p className="text-[14px] leading-[1.7] text-gray-600">{f.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* ───── RELATED COMPARISONS ───── */}
           {relatedBattles.length > 0 && (
