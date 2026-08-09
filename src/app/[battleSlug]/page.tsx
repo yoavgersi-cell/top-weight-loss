@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Fragment } from "react";
 import Link from "next/link";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED } from "@/lib/config";
@@ -285,24 +286,26 @@ export default async function BattlePage({
 
           {/* ───── PROVIDER CARDS (enriched) ───── */}
           <div className="relative mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {/* VS badge */}
+            {/* VS badge — desktop: absolute-centered between the two columns */}
             <div className="absolute left-1/2 top-1/2 z-10 hidden -translate-x-1/2 -translate-y-1/2 sm:flex">
               <div className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-[#0C4B75]/20 bg-white text-[13px] font-extrabold text-[#0C4B75] shadow-sm">
                 VS
               </div>
             </div>
-            {/* Mobile VS */}
-            <div className="flex items-center justify-center sm:hidden -my-1">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#0C4B75]/20 bg-white text-[12px] font-extrabold text-[#0C4B75]">
-                VS
-              </div>
-            </div>
 
-            {(hasExplicitWinner ? [winner, loser] : [p1, p2]).map((provider) => {
+            {(hasExplicitWinner ? [winner, loser] : [p1, p2]).map((provider, idx) => {
               const isWinner = hasExplicitWinner && provider.id === battle.winnerId;
               return (
+              <Fragment key={provider.id}>
+                {/* VS badge — mobile: sits in the gap BETWEEN the two stacked cards */}
+                {idx === 1 && (
+                  <div className="flex items-center justify-center sm:hidden -my-1">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#0C4B75]/20 bg-white text-[12px] font-extrabold text-[#0C4B75]">
+                      VS
+                    </div>
+                  </div>
+                )}
               <div
-                key={provider.id}
                 className={`relative rounded-2xl border bg-white px-6 pb-6 pt-7 shadow-sm ${isWinner ? "border-emerald-300" : "border-gray-200"}`}
               >
                 {isWinner && (
@@ -353,6 +356,7 @@ export default async function BattlePage({
                   <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
                 </ProviderCta>
               </div>
+              </Fragment>
               );
             })}
           </div>
