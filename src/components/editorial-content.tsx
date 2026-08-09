@@ -172,6 +172,10 @@ export function EditorialContent() {
       </ul>
       <p className="mb-8">
         Medication availability may vary depending on your location, medical history, and provider policies.
+        Prefer a non-injection option? See our guide to{" "}
+        <Link href="/weight-loss-pills" className="font-semibold text-[#0C4B75] hover:underline">
+          weight loss pills
+        </Link>.
       </p>
 
       <hr className="mb-8 border-gray-200" />

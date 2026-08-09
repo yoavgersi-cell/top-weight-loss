@@ -20,6 +20,7 @@ export function Footer() {
             <h4 className="mb-2 text-[12px] font-bold uppercase tracking-wider text-[#191919]">Browse</h4>
             <nav className="space-y-1.5">
               <Link href="/best-weight-loss-injections" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Weight Loss Injections</Link>
+              <Link href="/weight-loss-pills" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Weight Loss Pills</Link>
               <Link href="/best-online-weight-loss-programs" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Online Programs</Link>
               <Link href="/cheapest-weight-loss-medication" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Affordable Options</Link>
               <Link href="/reviews" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">All Reviews</Link>
