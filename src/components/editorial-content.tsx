@@ -59,7 +59,10 @@ export function EditorialContent() {
         <Link href="/reviews" className="font-semibold text-[#0C4B75] hover:underline">
           in-depth provider reviews
         </Link>{" "}
-        for detailed breakdowns.
+        for detailed breakdowns, or jump straight to a head-to-head like{" "}
+        <Link href="/altrx-vs-embody" className="font-semibold text-[#0C4B75] hover:underline">
+          embody vs altRx
+        </Link>.
       </p>
       <p className="mb-8">
         Our goal is to help you identify the provider that best aligns with your health goals, budget, and treatment preferences.
@@ -139,7 +142,15 @@ export function EditorialContent() {
         <li>Overall treatment costs</li>
       </ul>
       <p className="mb-8">
-        Comparing providers side-by-side can help you better understand the differences and make a more informed decision.
+        Comparing providers side-by-side — like{" "}
+        <Link href="/trimrx-vs-ro" className="font-semibold text-[#0C4B75] hover:underline">
+          TrimRX vs Ro
+        </Link>{" "}
+        or{" "}
+        <Link href="/embody-vs-wellmedr" className="font-semibold text-[#0C4B75] hover:underline">
+          embody vs WellMedr
+        </Link>{" "}
+        — can help you better understand the differences and make a more informed decision.
       </p>
 
       <hr className="mb-8 border-gray-200" />

@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { HeroSection } from "@/components/hero-section";
 import { ComparisonCard } from "@/components/comparison-card";
 import { SocialProofBand } from "@/components/social-proof-bubble";
@@ -55,19 +53,6 @@ export default async function HomePage() {
   const sidebarProviders = providerOrder
     .map((id) => config.providers.find((p) => p.id === id))
     .filter(Boolean) as typeof config.providers;
-
-  // Popular head-to-head comparisons — internal links from the homepage to the
-  // battle pages (funnels authority + speeds crawl to the top-earning pages).
-  const comparisons = (config.battles ?? [])
-    .map((b) => {
-      const bp1 = config.providers.find((p) => p.id === b.provider1Id);
-      const bp2 = config.providers.find((p) => p.id === b.provider2Id);
-      if (!bp1 || !bp2) return null;
-      const winner = b.winnerId === bp1.id ? bp1 : b.winnerId === bp2.id ? bp2 : null;
-      return { slug: b.slug, p1: bp1, p2: bp2, winner };
-    })
-    .filter((x): x is NonNullable<typeof x> => x !== null)
-    .slice(0, 9);
 
   // JSON-LD: FAQPage schema
   const faqSchema = {
@@ -136,51 +121,6 @@ export default async function HomePage() {
           <Sidebar config={config.sidebar} providers={sidebarProviders} />
         </div>
       </section>
-
-      {comparisons.length > 0 && (
-        <section className="mx-auto max-w-[1200px] px-4 pb-8">
-          <div className="mb-5 flex items-end justify-between">
-            <div>
-              <h2 className="text-[22px] font-extrabold text-[#191919] sm:text-[26px]">
-                Popular Comparisons
-              </h2>
-              <p className="mt-1 text-[14px] text-gray-500">
-                See how the top weight loss providers stack up head-to-head.
-              </p>
-            </div>
-            <Link
-              href="/articles"
-              className="hidden shrink-0 text-[13px] font-bold text-[#0C4B75] hover:underline sm:block"
-            >
-              View all comparisons →
-            </Link>
-          </div>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {comparisons.map(({ slug, p1, p2, winner }) => (
-              <Link
-                key={slug}
-                href={`/${slug}`}
-                className="group flex items-center gap-3 rounded-xl border border-gray-200 bg-white px-4 py-4 transition-all hover:border-[#0C4B75]/30 hover:shadow-sm"
-              >
-                <div className="min-w-0 flex-1">
-                  <p className="truncate text-[14px] font-bold text-[#191919]">
-                    {p1.name} <span className="font-medium text-gray-400">vs</span> {p2.name}
-                  </p>
-                  {winner && (
-                    <p className="mt-0.5 text-[12px] text-gray-500">
-                      Winner: <span className="font-semibold text-emerald-600">{winner.name}</span>
-                    </p>
-                  )}
-                </div>
-                <ArrowRight
-                  className="h-4 w-4 shrink-0 text-[#0C4B75] transition-transform group-hover:translate-x-0.5"
-                  strokeWidth={2.5}
-                />
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
 
       <EditorialContent />
       <FaqAccordion items={config.faqs} />
