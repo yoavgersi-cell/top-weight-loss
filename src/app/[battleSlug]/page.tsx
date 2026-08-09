@@ -298,12 +298,12 @@ export default async function BattlePage({
               </div>
             </div>
 
-            {[p1, p2].map((provider, idx) => {
+            {(hasExplicitWinner ? [winner, loser] : [p1, p2]).map((provider) => {
               const isWinner = hasExplicitWinner && provider.id === battle.winnerId;
               return (
               <div
                 key={provider.id}
-                className={`relative rounded-2xl border bg-white px-6 pb-6 pt-7 shadow-sm ${isWinner ? "border-emerald-300" : "border-gray-200"} ${idx === 0 ? "order-first" : "order-last sm:order-last"}`}
+                className={`relative rounded-2xl border bg-white px-6 pb-6 pt-7 shadow-sm ${isWinner ? "border-emerald-300" : "border-gray-200"}`}
               >
                 {isWinner && (
                   <div className="absolute -top-3 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-full bg-emerald-500 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-white shadow-sm">
@@ -318,7 +318,7 @@ export default async function BattlePage({
                   </div>
                 </div>
 
-                {provider.trustpilotRating && (
+                {isWinner && provider.trustpilotRating && (
                   <div className="mb-3 border-b border-gray-100 pb-3">
                     <TrustpilotRating
                       rating={provider.trustpilotRating}
