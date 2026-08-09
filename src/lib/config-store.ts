@@ -92,6 +92,8 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
     ],
   },
   trimrx: {
+    rating: "3.6",
+    reviewCount: "5497",
     reviews: [
       {
         title: "TrimRX is a good deal",
@@ -110,6 +112,8 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
     ],
   },
   medvi: {
+    rating: "4.4",
+    reviewCount: "14372",
     reviews: [
       {
         title: "Very quick and questions answered fully",
