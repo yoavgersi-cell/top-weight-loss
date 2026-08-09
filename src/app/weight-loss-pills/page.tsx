@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Pill, Syringe, ShieldCheck, TriangleAlert } from "lucide-react";
+import { Pill, Syringe, ShieldCheck, TriangleAlert, ArrowRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { ProviderCta } from "@/components/provider-cta";
+import { getConfig } from "@/lib/config-store";
+
+// Providers confirmed to offer oral / pill options (site owner confirmed).
+// Featured accurately using verified provider data — no invented pill claims.
+const PILL_PROVIDER_IDS = ["embody", "trimrx", "medvi", "shed"];
 
 export const revalidate = 60;
 
@@ -76,7 +82,12 @@ const faqs: { question: string; answer: string }[] = [
   { question: "Are weight loss pills or injections better?", answer: "It depends on your priorities. Injections currently produce greater average weight loss, but pills avoid needles, can be simpler to start, and newer oral GLP-1s are closing the gap. The right choice comes down to your goals, tolerance, and what a clinician recommends." },
 ];
 
-export default function WeightLossPillsPage() {
+export default async function WeightLossPillsPage() {
+  const config = await getConfig();
+  const pillProviders = PILL_PROVIDER_IDS
+    .map((id) => config.providers.find((p) => p.id === id))
+    .filter((p): p is NonNullable<typeof p> => !!p);
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -202,21 +213,50 @@ export default function WeightLossPillsPage() {
           </div>
         </section>
 
-        {/* Provider CTA */}
+        {/* Providers offering oral options */}
         <section className="mb-12">
-          <h2 className="mb-4 text-[24px] font-bold text-[#191919]">Getting weight loss treatment online</h2>
+          <h2 className="mb-4 text-[24px] font-bold text-[#191919]">Providers offering oral weight loss options</h2>
           <p className="mb-6">
-            Licensed telehealth providers can evaluate you online and, when appropriate, prescribe
-            weight loss medication — determining whether an oral or injectable option best fits your
-            health profile and goals. Compare the leading providers we&rsquo;ve reviewed on pricing,
-            medical support, and overall value.
+            Several telehealth providers we review offer oral weight loss options alongside
+            injections. A licensed clinician reviews your health profile and determines whether an
+            oral or injectable medication is the right fit — no in-person visit required.
           </p>
+
+          {pillProviders.length > 0 && (
+            <div className="mb-6 grid gap-4 sm:grid-cols-2">
+              {pillProviders.map((p) => (
+                <div key={p.id} className="flex flex-col rounded-xl border border-gray-200 bg-white p-5">
+                  <div className="mb-4 flex h-[34px] w-[120px] items-center">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={p.logo} alt={`${p.name} logo`} className="max-h-full max-w-full object-contain" loading="lazy" decoding="async" />
+                  </div>
+                  <div className="mt-auto flex flex-wrap items-center gap-x-4 gap-y-2">
+                    <ProviderCta
+                      href={p.affiliateUrl}
+                      providerName={p.name}
+                      providerSlug={p.id}
+                      pageType="listing"
+                      sourceFlow="main_comparison"
+                      className="inline-flex h-[42px] items-center justify-center gap-1.5 rounded-lg bg-[#0C4B75] px-5 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]"
+                    >
+                      Visit {p.name}
+                      <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
+                    </ProviderCta>
+                    <Link href={`/reviews/${p.id}`} className="text-[13px] font-bold text-[#0C4B75] hover:underline">
+                      Read our review
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link
               href="/"
               className="inline-flex h-[46px] items-center justify-center rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]"
             >
-              Compare Top Providers
+              Compare All Providers
             </Link>
             <Link
               href="/find-your-match"
