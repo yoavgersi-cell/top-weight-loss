@@ -1636,6 +1636,272 @@ const medviWellmedrBattle: BattleData = {
   ],
 };
 
+// ───── Partner win battles (winners: embody / TrimRX) ─────
+// Capture demand for high-search-volume providers (Ro, WellMedr) and route to
+// the strongest partners, grounded in verified facts with each opponent's
+// genuine strength acknowledged.
+
+const embodyRoBattle: BattleData = {
+  slug: "embody-vs-ro",
+  provider1Id: "embody",
+  provider2Id: "ro",
+  title: "Embody vs Ro: Which GLP-1 Provider Wins in 2026?",
+  subtitle: "We compared pricing, shipping speed, medical model, and overall value to see which GLP-1 provider comes out ahead.",
+  description: "Embody vs Ro compared on pricing, shipping speed, GLP-1 medications, and value. See why Embody comes out on top for affordable, fast GLP-1 treatment in 2026.",
+  intro: "Embody and Ro are both fully online providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established telehealth brand with an integrated in-house pharmacy and licensed providers reviewing every plan. Embody is weight-loss-focused with flat, transparent pricing — $69/month for compounded semaglutide and $119 for tirzepatide — free 1-2 day shipping, and LegitScript-certified 503A pharmacies. Here's how they compare.",
+  verdict: "Both are legitimate online GLP-1 providers — but Embody takes this one on price and speed. It offers flat, transparent pricing ($69/$119), free 1-2 day tracked shipping, LegitScript-certified 503A pharmacies, and a full refund if you're not approved. Ro is the better pick if you value a large, established brand with an integrated in-house pharmacy.",
+  verdictWinnerPoints: [
+    "Flat pricing — $69/mo semaglutide, $119/mo tirzepatide",
+    "Free 1-2 day tracked, insured shipping",
+    "LegitScript-certified, US-based 503A pharmacies",
+  ],
+  verdictLoserPoints: [
+    "A large, well-established telehealth brand",
+    "Integrated in-house pharmacy fulfillment",
+    "Licensed providers review every treatment plan",
+  ],
+  winnerId: "embody",
+  categories: [
+    {
+      name: "Pricing & Value",
+      winner: "provider1",
+      explanation: "Embody uses simple flat pricing — $69/month for compounded semaglutide and $119 for tirzepatide — with no insurance required and no hidden fees. Ro is competitively priced, but costs can vary depending on the medication and plan you choose. For predictable, upfront pricing, Embody comes out ahead.",
+      supportingPoints: [
+        "$69/mo semaglutide, $119/mo tirzepatide (Embody)",
+        "Flat, transparent pricing, no hidden fees (Embody)",
+        "Costs can vary by medication/plan (Ro)",
+        "No insurance required (both)",
+      ],
+    },
+    {
+      name: "Speed & Shipping",
+      winner: "provider1",
+      explanation: "Embody ships free in 1-2 days, tracked, temperature-controlled, and insured, with a roughly 5-minute health qualifier and doctor review usually within 24 hours. Ro delivers to your door through its in-house pharmacy on standard timelines. Embody is the faster path to starting.",
+      supportingPoints: [
+        "Free 1-2 day tracked, insured shipping (Embody)",
+        "~5-min qualifier, doctor review usually <24h (Embody)",
+        "Standard home delivery (Ro)",
+        "100% online, no clinic visits (both)",
+      ],
+    },
+    {
+      name: "Transparency & Certifications",
+      winner: "provider1",
+      explanation: "Embody is upfront about everything — flat pricing, LegitScript certification, US-based 503A compounding pharmacies, and a full refund if you're not approved. Ro is an established, trusted platform, but Embody's flat pricing and published certifications make it especially easy to know exactly what you're getting.",
+      supportingPoints: [
+        "LegitScript-certified, 503A pharmacies (Embody)",
+        "Full refund if not approved (Embody)",
+        "No hidden fees, cancel anytime (Embody)",
+        "Established, trusted platform (Ro)",
+      ],
+    },
+    {
+      name: "Brand & Pharmacy",
+      winner: "provider2",
+      explanation: "Ro is a large, well-known telehealth brand with an integrated in-house pharmacy that can streamline fulfillment, plus strong name recognition. Embody works with US-based 503A compounding pharmacies and is newer, though its recent customer feedback is positive.",
+      supportingPoints: [
+        "Large, well-known telehealth brand (Ro)",
+        "Integrated in-house pharmacy (Ro)",
+        "US-based 503A compounding pharmacies (Embody)",
+        "Positive recent Trustpilot feedback (Embody)",
+      ],
+    },
+    {
+      name: "Medical Support",
+      winner: "tie",
+      explanation: "Both put licensed clinicians behind every plan. Embody connects you with licensed doctors, a medical director, and a nursing team; Ro has licensed providers review every treatment plan and leverages its established telehealth infrastructure.",
+      supportingPoints: [
+        "Licensed doctors, medical director, nursing team (Embody)",
+        "Licensed providers review every plan (Ro)",
+        "Ongoing support during treatment (both)",
+        "Provider oversight throughout (both)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Starting Price", provider1Value: "$69/mo semaglutide · $119 tirzepatide", provider2Value: "Varies by medication/plan", highlight: "provider1" },
+    { feature: "Shipping", provider1Value: "Free, 1-2 days (tracked, insured)", provider2Value: "Standard home delivery", highlight: "provider1" },
+    { feature: "Medications", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "GLP-1 treatment options", highlight: "both" },
+    { feature: "Pharmacy", provider1Value: "LegitScript-certified 503A pharmacies", provider2Value: "Integrated in-house pharmacy", highlight: "both" },
+    { feature: "Care Model", provider1Value: "Licensed doctors, medical director, nursing team", provider2Value: "Licensed providers review every plan", highlight: "both" },
+    { feature: "Payment", provider1Value: "No insurance required", provider2Value: "Monthly plans, FSA/HSA eligible", highlight: "provider2" },
+  ],
+};
+
+const trimrxRoBattle: BattleData = {
+  slug: "trimrx-vs-ro",
+  provider1Id: "trimrx",
+  provider2Id: "ro",
+  title: "TrimRX vs Ro: Which GLP-1 Provider Wins in 2026?",
+  subtitle: "We compared pricing, plan flexibility, medical support, and overall value to see which GLP-1 provider comes out ahead.",
+  description: "TrimRX vs Ro compared on pricing, plan flexibility, GLP-1 medications, and value. See why TrimRX wins on affordable, flexible GLP-1 treatment in 2026.",
+  intro: "TrimRX and Ro are both online providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established telehealth brand with an integrated in-house pharmacy and licensed providers reviewing every plan. TrimRX is built around affordable access to GLP-1 programs, with competitive pricing, multi-month discounts, and flexible plans that carry no long-term commitment. Here's how they compare.",
+  verdict: "Both are credible online GLP-1 providers — but TrimRX takes this one on value and flexibility. Its plans are built around affordability, with competitive pricing, multi-month discounts, and no long-term commitment, plus ongoing clinical guidance. Ro is the better pick if you value a large, established brand with an integrated in-house pharmacy.",
+  verdictWinnerPoints: [
+    "Affordability-first pricing with multi-month discounts",
+    "Flexible plans with no long-term commitment",
+    "Ongoing clinical guidance included",
+  ],
+  verdictLoserPoints: [
+    "A large, well-established telehealth brand",
+    "Integrated in-house pharmacy fulfillment",
+    "Licensed providers review every treatment plan",
+  ],
+  winnerId: "trimrx",
+  categories: [
+    {
+      name: "Pricing & Value",
+      winner: "provider1",
+      explanation: "TrimRX is built around affordability — competitive monthly pricing with discounts for multi-month commitments. Ro is competitively priced, but costs can vary depending on the medication and plan you choose. For the lowest-cost path to GLP-1 treatment, TrimRX comes out ahead.",
+      supportingPoints: [
+        "Affordability-first + multi-month discounts (TrimRX)",
+        "Competitive monthly pricing (TrimRX)",
+        "Costs can vary by medication/plan (Ro)",
+        "No insurance required (both)",
+      ],
+    },
+    {
+      name: "Plan Flexibility",
+      winner: "provider1",
+      explanation: "TrimRX offers flexible treatment plans with no long-term commitment, so you can adjust as you go. Ro offers monthly plans through its established platform. TrimRX's flexibility gives it the edge for adapting to your budget and goals.",
+      supportingPoints: [
+        "Flexible plans, no long-term commitment (TrimRX)",
+        "Multi-month options and discounts (TrimRX)",
+        "Monthly plans, FSA/HSA eligible (Ro)",
+        "Adjustable treatment over time (both)",
+      ],
+    },
+    {
+      name: "Customer Experience",
+      winner: "provider1",
+      explanation: "TrimRX earns strong marks from customers on Trustpilot, with reviewers highlighting real results and a process that's easy to stick with. Ro is polished and reliable, though some reviewers report longer wait times during peak periods.",
+      supportingPoints: [
+        "Strong recent Trustpilot feedback (TrimRX)",
+        "Reviewers cite real, lasting results (TrimRX)",
+        "Polished, established platform (Ro)",
+        "Straightforward enrollment (both)",
+      ],
+    },
+    {
+      name: "Brand & Pharmacy",
+      winner: "provider2",
+      explanation: "Ro is a large, well-known telehealth brand with an integrated in-house pharmacy that can streamline fulfillment, plus strong name recognition. TrimRX is a newer, fast-growing platform focused on affordable access.",
+      supportingPoints: [
+        "Large, well-known telehealth brand (Ro)",
+        "Integrated in-house pharmacy (Ro)",
+        "Newer, affordability-focused platform (TrimRX)",
+        "Positive recent customer feedback (TrimRX)",
+      ],
+    },
+    {
+      name: "Medical Support",
+      winner: "tie",
+      explanation: "Both put licensed providers behind every plan with ongoing support. TrimRX includes ongoing clinical guidance throughout treatment; Ro has licensed providers review every plan and leverages its established telehealth infrastructure.",
+      supportingPoints: [
+        "Ongoing clinical guidance (TrimRX)",
+        "Licensed providers review every plan (Ro)",
+        "Provider oversight throughout (both)",
+        "Follow-up support during treatment (both)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Starting Price", provider1Value: "Affordability-focused · multi-month discounts", provider2Value: "Varies by medication/plan", highlight: "provider1" },
+    { feature: "Commitment", provider1Value: "No long-term commitment", provider2Value: "Monthly plans", highlight: "provider1" },
+    { feature: "Medications", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "GLP-1 treatment options", highlight: "both" },
+    { feature: "Pharmacy", provider1Value: "Home delivery included", provider2Value: "Integrated in-house pharmacy", highlight: "provider2" },
+    { feature: "Care Model", provider1Value: "Ongoing clinical guidance", provider2Value: "Licensed providers review every plan", highlight: "both" },
+    { feature: "Track Record", provider1Value: "Growing, positively reviewed", provider2Value: "Large, established brand", highlight: "provider2" },
+  ],
+};
+
+const trimrxWellmedrBattle: BattleData = {
+  slug: "trimrx-vs-wellmedr",
+  provider1Id: "trimrx",
+  provider2Id: "wellmedr",
+  title: "TrimRX vs WellMedr: Which Weight Loss Provider Wins in 2026?",
+  subtitle: "We compared pricing, plan flexibility, focus, and range of care to see which GLP-1 provider comes out ahead.",
+  description: "TrimRX vs WellMedr compared on pricing, plan flexibility, focus, and range of care. See why TrimRX wins on affordable, focused GLP-1 treatment in 2026.",
+  intro: "TrimRX and WellMedr both offer online GLP-1 weight-loss treatment, but they take different approaches. WellMedr is an AI-driven telehealth brand that reaches beyond weight loss into longevity, hormones, and more — pairing GLP-1 with add-ons like NAD+ and B12. TrimRX is built around affordable access to GLP-1 programs, with competitive pricing, multi-month discounts, and flexible plans. Here's how they compare for weight loss specifically.",
+  verdict: "Both are credible online GLP-1 providers — but TrimRX takes this comparison for weight loss specifically. Its affordability-first pricing, multi-month discounts, and flexible, no-commitment plans make it an easy place to start. WellMedr is the better fit if you want more than weight loss — a broader longevity platform spanning TRT, NAD+, hair, and sexual health.",
+  verdictWinnerPoints: [
+    "Affordability-first pricing with multi-month discounts",
+    "Flexible plans with no long-term commitment",
+    "A focused, straightforward weight-loss experience",
+  ],
+  verdictLoserPoints: [
+    "A broader longevity platform (TRT, NAD+, and more)",
+    "GLP-1 formulations enhanced with NAD+ and B12",
+    "50% off your first month",
+  ],
+  winnerId: "trimrx",
+  categories: [
+    {
+      name: "Pricing & Value",
+      winner: "provider1",
+      explanation: "TrimRX is built around affordability — competitive monthly pricing with discounts for multi-month commitments. WellMedr promotes 50% off your first month, though its ongoing weight-loss price isn't listed up front. On transparent, ongoing value, TrimRX comes out ahead.",
+      supportingPoints: [
+        "Affordability-first + multi-month discounts (TrimRX)",
+        "Competitive ongoing pricing (TrimRX)",
+        "50% off first month; ongoing not listed (WellMedr)",
+        "No insurance required (both)",
+      ],
+    },
+    {
+      name: "Plan Flexibility",
+      winner: "provider1",
+      explanation: "TrimRX offers flexible treatment plans with no long-term commitment. WellMedr lets you message your provider anytime and adjust your plan, but TrimRX's no-commitment, multi-month structure gives it the edge for adapting to your budget.",
+      supportingPoints: [
+        "Flexible plans, no long-term commitment (TrimRX)",
+        "Multi-month options and discounts (TrimRX)",
+        "Message your provider anytime (WellMedr)",
+        "Adjustable treatment over time (both)",
+      ],
+    },
+    {
+      name: "Focus & Simplicity",
+      winner: "provider1",
+      explanation: "TrimRX is focused on one thing — affordable access to GLP-1 weight-loss treatment — which keeps the experience straightforward. WellMedr spreads across many services (weight loss, TRT, NAD+, hair, sexual health), which adds range but less single-minded focus for weight loss.",
+      supportingPoints: [
+        "Dedicated weight-loss focus (TrimRX)",
+        "Straightforward, affordable access (TrimRX)",
+        "Broad multi-service platform (WellMedr)",
+        "100% online (both)",
+      ],
+    },
+    {
+      name: "Range Beyond Weight Loss",
+      winner: "provider2",
+      explanation: "WellMedr is a broader longevity platform — alongside GLP-1 it offers TRT, NAD+, hair, and sexual health, and its weight-loss line includes a microdose pairing semaglutide with NAD+ and Vitamin B12. TrimRX focuses specifically on GLP-1 weight-loss treatment.",
+      supportingPoints: [
+        "Longevity, hormones, NAD+, hair, sexual health (WellMedr)",
+        "GLP-1 + NAD+/B12 microdose option (WellMedr)",
+        "Focused GLP-1 weight-loss treatment (TrimRX)",
+        "Compounded semaglutide & tirzepatide (both)",
+      ],
+    },
+    {
+      name: "Medical Support",
+      winner: "tie",
+      explanation: "Both put qualified providers behind treatment. TrimRX includes ongoing clinical guidance throughout your plan; WellMedr says board-certified specialists tailor your plan, with medications made in US state-licensed pharmacies following FDA compounding standards.",
+      supportingPoints: [
+        "Ongoing clinical guidance (TrimRX)",
+        "Provider-guided treatment plans (TrimRX)",
+        "Board-certified specialists tailor your plan (WellMedr)",
+        "US state-licensed pharmacies (WellMedr)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Starting Price", provider1Value: "Affordability-focused · multi-month discounts", provider2Value: "50% off first month (ongoing not listed)", highlight: "provider1" },
+    { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
+    { feature: "Medications", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "GLP-1/GIP + semaglutide/NAD+/B12 microdose", highlight: "both" },
+    { feature: "Focus", provider1Value: "Dedicated weight-loss focus", provider2Value: "Broad multi-service platform", highlight: "provider1" },
+    { feature: "Commitment", provider1Value: "No long-term commitment", provider2Value: "Message provider anytime", highlight: "both" },
+    { feature: "Beyond Weight Loss", provider1Value: "GLP-1 weight loss focus", provider2Value: "TRT, NAD+, hair, sexual health", highlight: "provider2" },
+  ],
+};
+
 // ───── Brand casing normalization ─────
 // Canonical provider names (keyed by provider id or normalized name).
 const CANONICAL_NAMES: Record<string, string> = {
@@ -1841,6 +2107,9 @@ function buildInitialConfig(): SiteConfig {
       medviTrimrxBattle,
       medviRoBattle,
       medviWellmedrBattle,
+      embodyRoBattle,
+      trimrxRoBattle,
+      trimrxWellmedrBattle,
     ],
     sidebars: [
       {

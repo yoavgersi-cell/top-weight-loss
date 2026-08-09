@@ -115,6 +115,13 @@ export default async function AboutPage() {
               </div>
             ))}
           </div>
+          <p className="mt-6 text-[15px] leading-[1.75] text-gray-600">
+            Want the full picture? Read our detailed{" "}
+            <Link href="/how-we-rank" className="font-semibold text-[#0C4B75] hover:underline">
+              ranking &amp; review methodology
+            </Link>{" "}
+            — the factors we score, where our data comes from, and how we pick winners.
+          </p>
         </section>
 
         {/* Editorial standards */}

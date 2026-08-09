@@ -39,6 +39,7 @@ export function Footer() {
             <h4 className="mb-2 text-[12px] font-bold uppercase tracking-wider text-[#191919]">Tools</h4>
             <nav className="space-y-1.5">
               <Link href="/find-your-match" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Provider Quiz</Link>
+              <Link href="/how-we-rank" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">How We Rank</Link>
               <Link href="/about" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">About Us</Link>
               <Link href="/disclaimer" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Disclaimer</Link>
             </nav>
