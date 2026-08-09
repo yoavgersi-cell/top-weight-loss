@@ -473,6 +473,8 @@ export default async function BattlePage({
                     src={config.battleWinnerBannerImageMobile}
                     alt={`${winner.name} customers`}
                     className="h-52 w-full object-cover sm:hidden"
+                    loading="lazy"
+                    decoding="async"
                   />
                 )}
 
@@ -526,6 +528,8 @@ export default async function BattlePage({
                       src={config.battleWinnerBannerImageDesktop}
                       alt={`${winner.name} customer`}
                       className="absolute inset-0 h-full w-full object-cover object-top"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 )}
