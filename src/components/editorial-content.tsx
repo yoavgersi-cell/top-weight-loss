@@ -1,5 +1,46 @@
 import Link from "next/link";
 
+const tirzVsSemaRows: [string, string, string][] = [
+  ["Average Weight Loss in Trials", "~15.0%–20.9% average loss at 72 weeks (SURMOUNT)", "~14.9% mean loss at 68 weeks (STEP)"],
+  ["FDA Approval Status", "FDA-approved for chronic weight management (Zepbound®); also approved for type 2 diabetes as Mounjaro®", "FDA-approved for chronic weight management (Wegovy®); also approved for type 2 diabetes as Ozempic®"],
+  ["Dosing Schedule", "Weekly injection", "Weekly injection"],
+  ["Best For", "Patients seeking greater average weight loss observed in clinical trials, when appropriate", "Patients seeking an FDA-approved GLP-1 therapy with extensive long-term safety and outcomes data"],
+  ["Insurance Coverage", "May not always be covered by insurance yet", "Coverage varies; may be available on more formularies depending on insurer"],
+];
+
+const wegovyVsOzempicRows: [string, string, string][] = [
+  ["Average Weight Loss in Trials", "~14.9% mean weight loss at 68 weeks in obesity-specific trials (STEP-1)", "5–10% weight loss observed in type 2 diabetes trials, depending on dose"],
+  ["FDA Approval Status", "Yes, FDA-approved specifically for weight management", "FDA-approved for type 2 diabetes; weight loss use is off-label"],
+  ["Dosing Schedule", "Weekly injection", "Weekly injection"],
+  ["Best For", "Patients seeking an FDA-approved medication for long-term weight management", "Patients with diabetes who may also benefit from weight loss"],
+  ["Insurance Coverage", "Coverage varies; often limited for obesity medications", "May have broader insurance coverage when prescribed for diabetes"],
+];
+
+function ComparisonTable({ colA, colB, rows }: { colA: string; colB: string; rows: [string, string, string][] }) {
+  return (
+    <div className="mb-4 overflow-x-auto rounded-xl border border-gray-200">
+      <table className="w-full min-w-[600px] text-left text-[14px]">
+        <thead>
+          <tr className="border-b border-gray-200 bg-gray-50">
+            <th className="px-4 py-3 font-bold text-[#191919]">Key Consideration</th>
+            <th className="px-4 py-3 font-bold text-[#191919]">{colA}</th>
+            <th className="px-4 py-3 font-bold text-[#191919]">{colB}</th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-gray-100">
+          {rows.map(([k, a, b], i) => (
+            <tr key={i} className={i % 2 === 1 ? "bg-gray-50/50" : ""}>
+              <td className="px-4 py-3 align-top font-medium text-[#191919]">{k}</td>
+              <td className="px-4 py-3 align-top text-gray-600">{a}</td>
+              <td className="px-4 py-3 align-top text-gray-600">{b}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 export function EditorialContent() {
   return (
     <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-700">
@@ -170,6 +211,38 @@ export function EditorialContent() {
         Source: Published results from STEP (semaglutide), SURMOUNT (tirzepatide), and SCALE (liraglutide)
         clinical trials. Individual results vary. Compounded pricing reflects typical telehealth provider
         rates as of July 2026.
+      </p>
+
+      <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">
+        Tirzepatide vs Semaglutide
+      </h3>
+      <p className="mb-4">
+        Tirzepatide and semaglutide are the two most effective GLP-1 medications for weight loss. They work
+        in similar ways but differ in average results, approvals, and coverage. Compare{" "}
+        <Link href="/tirzepatide" className="font-semibold text-[#0C4B75] hover:underline">tirzepatide providers</Link>{" "}
+        and{" "}
+        <Link href="/semaglutide" className="font-semibold text-[#0C4B75] hover:underline">semaglutide providers</Link>{" "}
+        to see which fits your goals.
+      </p>
+      <ComparisonTable colA="Tirzepatide" colB="Semaglutide" rows={tirzVsSemaRows} />
+
+      <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">
+        Wegovy vs Ozempic
+      </h3>
+      <p className="mb-4">
+        Both Wegovy and Ozempic use semaglutide, but the difference is in dosage and indication. Wegovy is
+        tailored for weight loss, while Ozempic was developed for diabetes but is often prescribed off-label.
+        See our{" "}
+        <Link href="/wegovy-providers" className="font-semibold text-[#0C4B75] hover:underline">Wegovy providers</Link>{" "}
+        and{" "}
+        <Link href="/ozempic-for-weight-loss" className="font-semibold text-[#0C4B75] hover:underline">Ozempic for weight loss</Link>{" "}
+        guides for details.
+      </p>
+      <ComparisonTable colA="Wegovy" colB="Ozempic" rows={wegovyVsOzempicRows} />
+      <p className="mb-8 text-[13px] text-gray-400">
+        Source: STEP-1 (semaglutide) and SURMOUNT (tirzepatide) clinical trial data. Brand names Zepbound®,
+        Mounjaro®, Wegovy®, and Ozempic® are trademarks of their respective manufacturers. Individual results
+        vary; medications require a prescription from a licensed clinician.
       </p>
 
       <h3 className="mb-3 mt-6 text-[18px] font-bold text-[#191919]">
