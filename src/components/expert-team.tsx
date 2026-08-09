@@ -26,7 +26,7 @@ export function ExpertTeam({ experts }: { experts: Expert[] }) {
               <span className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-[#0C4B75] to-[#0B5E9E] text-[16px] font-bold text-white">
                 {expert.avatar ? (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={expert.avatar} alt={expert.name} className="h-full w-full object-cover" />
+                  <img src={expert.avatar} alt={expert.name} className="h-full w-full object-cover" loading="lazy" decoding="async" />
                 ) : (
                   initials(expert.name)
                 )}

@@ -88,16 +88,29 @@ export default async function ReviewPage({
     ],
   };
 
-  // FAQ schema for rich results
+  // FAQ — real, query-shaped questions answered entirely from this review's
+  // own researched content (pricing, treatments, best-for, verdict). Powers
+  // both the visible FAQ section and the FAQPage schema (rich results / PAA).
+  const reviewFaqs = [
+    { question: `Is ${provider.name} legit?`, answer: review.reviewIntro },
+    { question: `How much does ${provider.name} cost?`, answer: review.pricingSummary },
+    review.treatmentOptions?.length
+      ? { question: `What treatments does ${provider.name} offer?`, answer: `${provider.name} offers ${review.treatmentOptions.join(", ")}.` }
+      : null,
+    review.bestFor?.length
+      ? { question: `Who is ${provider.name} best for?`, answer: `${provider.name} is best for ${review.bestFor.join("; ")}.` }
+      : null,
+    { question: `Is ${provider.name} worth it?`, answer: review.finalVerdict },
+  ].filter((f): f is { question: string; answer: string } => !!f && !!f.answer);
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      { "@type": "Question", name: `Is ${provider.name} legit?`, acceptedAnswer: { "@type": "Answer", text: review.reviewIntro } },
-      { "@type": "Question", name: `How much does ${provider.name} cost?`, acceptedAnswer: { "@type": "Answer", text: review.pricingSummary } },
-      { "@type": "Question", name: `What medications does ${provider.name} offer?`, acceptedAnswer: { "@type": "Answer", text: review.treatmentOptions.join(", ") } },
-      { "@type": "Question", name: `Who is ${provider.name} best for?`, acceptedAnswer: { "@type": "Answer", text: review.bestFor.join(". ") } },
-    ],
+    mainEntity: reviewFaqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
   };
 
   const relatedBattles = (config.battles ?? []).filter(
@@ -322,6 +335,25 @@ export default async function ReviewPage({
             </ProviderCta>
           </div>
         </div>
+
+        {/* FAQ */}
+        {reviewFaqs.length > 0 && (
+          <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+            <div className="border-b border-gray-100 bg-gray-50/70 px-6 py-4">
+              <h2 className="text-[18px] font-bold text-[#191919]">
+                {provider.name} Review: Frequently Asked Questions
+              </h2>
+            </div>
+            <div className="divide-y divide-gray-100">
+              {reviewFaqs.map((f, i) => (
+                <div key={i} className="p-6">
+                  <h3 className="mb-2 text-[15px] font-bold text-[#191919]">{f.question}</h3>
+                  <p className="text-[14px] leading-[1.7] text-gray-600">{f.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Not sure? Quiz CTA */}
         <div className="mb-8 rounded-xl border border-gray-200 bg-white p-5 text-center shadow-sm">
