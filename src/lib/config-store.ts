@@ -1918,6 +1918,10 @@ const CANONICAL_NAMES: Record<string, string> = {
   directmeds: "DirectMeds",
   found: "found",
   skinnyrx: "skinnyRx",
+  noom: "Noom",
+  ro: "Ro",
+  trimrx: "TrimRX",
+  medvi: "Medvi",
 };
 
 // Wrong-cased brand mentions inside display text. "Shed"/"Embody" only match
@@ -1931,6 +1935,8 @@ const BRAND_TEXT_FIXES: [RegExp, string][] = [
   [/\bSprout\s+Health\b/gi, "Sprout"],
   [/\bdirect\s?meds\b/gi, "DirectMeds"],
   [/\bskinny\s?rx\b/gi, "skinnyRx"],
+  [/\bnoom\b/gi, "Noom"],
+  [/\btrim\s?rx\b/gi, "TrimRX"],
 ];
 
 function fixBrandText(s: string): string {
