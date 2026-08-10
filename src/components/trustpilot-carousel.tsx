@@ -15,17 +15,21 @@ function TrustpilotStar({ className }: { className?: string }) {
 }
 
 function TrustpilotStars({ rating, boxClass = "h-5 w-5" }: { rating: number; boxClass?: string }) {
+  // Fractional fill so e.g. 3.6 shows three full boxes + a ~60% box, like Trustpilot.
   return (
     <div className="flex gap-0.5">
-      {[...Array(5)].map((_, i) => (
-        <div
-          key={i}
-          className={`flex items-center justify-center ${boxClass}`}
-          style={{ backgroundColor: i < rating ? TP_GREEN : "#DCDCE6" }}
-        >
-          <TrustpilotStar className="h-[68%] w-[68%]" />
-        </div>
-      ))}
+      {[...Array(5)].map((_, i) => {
+        const pct = Math.max(0, Math.min(1, rating - i)) * 100;
+        return (
+          <div
+            key={i}
+            className={`flex items-center justify-center ${boxClass}`}
+            style={{ background: `linear-gradient(90deg, ${TP_GREEN} ${pct}%, #DCDCE6 ${pct}%)` }}
+          >
+            <TrustpilotStar className="h-[68%] w-[68%]" />
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -127,7 +131,7 @@ export function TrustpilotCarousel({
   if (total === 0) return null;
 
   const desktopVisible = reviews.slice(page * perPage, page * perPage + perPage);
-  const numericRating = rating ? Math.round(parseFloat(rating)) : null;
+  const numericRating = rating ? parseFloat(rating) : null;
 
   return (
     <div className="rounded-2xl border border-gray-200 bg-gray-50/50 p-5 sm:p-6">
@@ -148,7 +152,6 @@ export function TrustpilotCarousel({
         {rating && numericRating !== null && !isNaN(numericRating) ? (
           <div className="flex items-center gap-2">
             <TrustpilotStars rating={numericRating} boxClass="h-[20px] w-[20px]" />
-            <span className="text-[14px] font-bold text-[#191919]">{rating}</span>
             {reviewCount && (
               <span className="text-[12px] text-gray-400">({reviewCount} reviews)</span>
             )}
