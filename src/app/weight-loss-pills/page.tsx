@@ -192,7 +192,10 @@ export default async function WeightLossPillsPage() {
           <p className="mb-4">
             The honest summary: injections currently deliver the greatest average weight loss, but
             GLP-1 pills avoid needles, can be simpler to start, and the newest oral GLP-1s are
-            catching up fast. Here&rsquo;s how pills and injections compare.
+            catching up fast. Here&rsquo;s how pills and injections compare — or read our full{" "}
+            <Link href="/glp1-pills-vs-injections" className="font-semibold text-[#0C4B75] hover:underline">
+              GLP-1 pills vs injections comparison
+            </Link>.
           </p>
           <DataTable colA="Pills (oral)" colB="Injections" rows={pillsVsInjections} />
         </section>
