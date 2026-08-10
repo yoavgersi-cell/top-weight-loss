@@ -31,6 +31,13 @@ export default async function ArticlesPage() {
   const config = await getConfig();
   const articles = config.articles ?? [];
 
+  // Standalone in-depth guide pages (custom layouts, not CMS articles)
+  const guides = [
+    { title: "Weight Loss Pills", href: "/weight-loss-pills", category: "Guide", description: "Oral GLP-1s and FDA-approved prescription pills — and how they compare to injections." },
+    { title: "GLP-1 Pills vs Injections", href: "/glp1-pills-vs-injections", category: "Guide", description: "Results, cost, and convenience compared — which is right for you?" },
+    { title: "GLP-1 Weight Loss Statistics", href: "/glp1-weight-loss-statistics", category: "Science", description: "Key clinical trial data on how much weight GLP-1 medications produce." },
+  ];
+
   // Head-to-head comparison (battle) pages, with both providers resolved
   const comparisons = (config.battles ?? [])
     .map((battle) => {
@@ -69,9 +76,15 @@ export default async function ArticlesPage() {
           name: a.title,
           url: `https://www.topweightloss.io/articles/${a.slug}`,
         })),
-        ...comparisons.map(({ battle, p1, p2 }, i) => ({
+        ...guides.map((g, i) => ({
           "@type": "ListItem",
           position: articles.length + i + 1,
+          name: g.title,
+          url: `https://www.topweightloss.io${g.href}`,
+        })),
+        ...comparisons.map(({ battle, p1, p2 }, i) => ({
+          "@type": "ListItem",
+          position: articles.length + guides.length + i + 1,
           name: `${p1.name} vs ${p2.name}`,
           url: `https://www.topweightloss.io/${battle.slug}`,
         })),
@@ -176,6 +189,46 @@ export default async function ArticlesPage() {
             </Link>
           ))}
         </div>
+
+        {/* ───── In-Depth Guides ───── */}
+        {guides.length > 0 && (
+          <div className="mt-14">
+            <div className="mb-8">
+              <h2 className="text-[22px] font-bold text-[#191919] sm:text-[26px]">
+                In-Depth Guides
+              </h2>
+              <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-gray-500">
+                Deeper explainers on medications and options — with side-by-side data.
+              </p>
+            </div>
+
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {guides.map((g) => (
+                <Link
+                  key={g.href}
+                  href={g.href}
+                  className="group flex flex-col rounded-xl border border-gray-200 bg-white p-6 transition-shadow hover:shadow-md"
+                >
+                  <span
+                    className={`mb-3 inline-flex w-fit rounded-full px-2.5 py-0.5 text-[11px] font-semibold ${categoryColors[g.category] || "bg-gray-100 text-gray-600"}`}
+                  >
+                    {g.category}
+                  </span>
+                  <h3 className="text-[16px] font-bold leading-snug text-[#191919] transition-colors group-hover:text-[#0C4B75]">
+                    {g.title}
+                  </h3>
+                  <p className="mt-2 flex-1 text-[13px] leading-relaxed text-gray-500 line-clamp-3">
+                    {g.description}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#0C4B75]">
+                    Read guide
+                    <ArrowRight className="h-3.5 w-3.5" strokeWidth={2} />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* ───── Head-to-Head Comparisons ───── */}
         {comparisons.length > 0 && (
