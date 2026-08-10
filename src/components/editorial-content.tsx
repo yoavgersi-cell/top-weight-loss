@@ -45,10 +45,10 @@ export function EditorialContent() {
   return (
     <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-700">
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">
-        Weight Loss Injections Compared
+        The Best Weight Loss Injections and Programs, Compared
       </h2>
       <p className="mb-4">
-        Choosing the right weight loss provider involves more than selecting a medication. Pricing, clinical support, treatment plans, eligibility requirements, and long-term value can vary significantly between providers. Not sure where to start? Try our{" "}
+        To find the best weight loss injections and programs, we compare leading GLP-1 providers on the factors that actually matter. Choosing the right weight loss provider involves more than selecting a medication — pricing, clinical support, treatment plans, eligibility requirements, and long-term value can vary significantly between providers. Not sure where to start? Try our{" "}
         <Link href="/find-your-match" className="font-semibold text-[#0C4B75] hover:underline">
           provider matching quiz
         </Link>{" "}
