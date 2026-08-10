@@ -266,10 +266,10 @@ export const defaultConfig: SiteConfig = {
     backgroundImageUrl: "/hero.png",
     imageAlt: "Weight loss medications",
     updatedLabel: "Last Updated: July 2026",
-    h1: "Top Weight Loss Providers 2026",
-    h2: "Compare trusted providers side by side",
+    h1: "Best Weight Loss Injections & Programs of 2026",
+    h2: "Compare the top GLP-1 weight loss providers, side by side",
     description:
-      "Compare pricing, medications, medical support, and overall value to find the provider that best fits your goals.",
+      "Compare the best weight loss injections and programs — pricing, medications, medical support, and overall value — to find the provider that best fits your goals.",
   },
   sidebar: {
     socialProofNumber: "18,400+",
