@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { HeroSection } from "@/components/hero-section";
 import { ComparisonCard } from "@/components/comparison-card";
 import { SocialProofBand } from "@/components/social-proof-bubble";
@@ -7,6 +8,24 @@ import { FaqAccordion } from "@/components/faq-accordion";
 import { getConfig } from "@/lib/config-store";
 
 export const revalidate = 60;
+
+// Homepage-specific metadata targeting the high-intent "best weight loss"
+// commercial queries (best weight loss injections / programs / providers).
+export const metadata: Metadata = {
+  title: {
+    absolute: "Best Weight Loss Injections & Programs 2026 — Compare Top Providers",
+  },
+  description:
+    "Compare the best weight loss injections and programs of 2026. Top GLP-1 providers ranked by pricing, medications, medical support, and value — find your best fit.",
+  alternates: { canonical: "https://www.topweightloss.io" },
+  openGraph: {
+    title: "Best Weight Loss Injections & Programs 2026 — Compare Top Providers",
+    description:
+      "Compare the best weight loss injections and programs of 2026 — top GLP-1 providers ranked by price, support, and value.",
+    url: "https://www.topweightloss.io",
+    type: "website",
+  },
+};
 
 export default async function HomePage() {
   const config = await getConfig();
