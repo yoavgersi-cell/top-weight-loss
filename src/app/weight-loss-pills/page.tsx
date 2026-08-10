@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Pill, Syringe, ShieldCheck, TriangleAlert, ArrowRight } from "lucide-react";
+import { Pill, Syringe, ShieldCheck, TriangleAlert, ArrowRight, Check } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
 import { getConfig } from "@/lib/config-store";
@@ -234,6 +234,16 @@ export default async function WeightLossPillsPage() {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={p.logo} alt={`${p.name} logo`} className="max-h-full max-w-full object-contain" loading="lazy" decoding="async" />
                   </div>
+                  {p.highlights?.length > 0 && (
+                    <ul className="mb-5 space-y-2">
+                      {p.highlights.slice(0, 3).map((h, hi) => (
+                        <li key={hi} className="flex items-start gap-2 text-[13px] leading-snug text-gray-600">
+                          <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2.5} />
+                          {h}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                   <div className="mt-auto flex flex-wrap items-center gap-x-4 gap-y-2">
                     <ProviderCta
                       href={p.affiliateUrl}
