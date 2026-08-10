@@ -11,6 +11,17 @@ import { notFound } from "next/navigation";
 
 export const revalidate = 60;
 
+// Per-provider SEO overrides for reviews with distinctive search demand.
+// Code-controlled (not CMS-merged) so they reliably target trending queries —
+// e.g. surging "embody reviews" and "embody glp1".
+const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+  embody: {
+    title: "embody Reviews 2026: GLP-1 Cost, Real Results & Is It Worth It?",
+    description:
+      "embody GLP-1 reviews: compounded semaglutide from $69/mo and tirzepatide from $119/mo, shipped in 1-2 days with no insurance. Real customer reviews, pricing, pros & cons, and whether embody is worth it.",
+  },
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -24,17 +35,19 @@ export async function generateMetadata({
   const provider = config.providers.find((p) => p.id === review.providerId);
   if (!provider) return { title: "Review Not Found" };
 
-  const pageTitle = `${provider.name} Review 2026: Cost, Results & Is It Worth It?`;
+  const override = REVIEW_SEO_OVERRIDES[slug];
+  const pageTitle = override?.title ?? `${provider.name} Review 2026: Cost, Results & Is It Worth It?`;
+  const pageDescription = override?.description ?? review.shortSummary;
 
   return {
     title: pageTitle,
-    description: review.shortSummary,
+    description: pageDescription,
     alternates: {
       canonical: `https://www.topweightloss.io/reviews/${slug}`,
     },
     openGraph: {
       title: pageTitle,
-      description: review.shortSummary,
+      description: pageDescription,
       url: `https://www.topweightloss.io/reviews/${slug}`,
       type: "article",
     },
