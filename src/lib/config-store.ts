@@ -103,6 +103,13 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
         rating: 5,
       },
       {
+        title: "I opened the first box yesterday",
+        text: "I opened the first box yesterday, everything was there and properly sealed. A good start.",
+        name: "Lisa Clark",
+        location: "US",
+        rating: 5,
+      },
+      {
         title: "Excellent customer service",
         text: "Cynthia reached out not long after I had gone through the online process. She was very kind and helpful and understanding that I was looking to find the best support and costs for my weightloss. For those that need good support along the way you cant go wrong using Trim Rx.",
         name: "Katrina Campbell",
