@@ -14,14 +14,14 @@ export const revalidate = 60;
 const CANONICAL = "https://www.topweightloss.io/weight-loss-pills";
 
 export const metadata: Metadata = {
-  title: "Weight Loss Pills 2026: Oral GLP-1s & Prescription Options That Work",
+  title: "Weight Loss Pills vs Injections 2026: Oral GLP-1s & What Works",
   description:
-    "A clear guide to weight loss pills in 2026 — oral GLP-1s (Rybelsus, oral semaglutide), FDA-approved options like Contrave, Qsymia and phentermine, and how pills compare to injections.",
+    "GLP-1 pills vs injections, explained: oral GLP-1s (Rybelsus, oral semaglutide), FDA-approved pills like Contrave and Qsymia, and how they compare to injections on results, cost, and convenience.",
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "Weight Loss Pills 2026: Oral GLP-1s & Prescription Options That Work",
+    title: "Weight Loss Pills vs Injections 2026: Oral GLP-1s & What Works",
     description:
-      "Oral GLP-1s, FDA-approved prescription pills, and how they compare to injections — honestly explained.",
+      "GLP-1 pills vs injections — oral options, FDA-approved prescription pills, and how they really compare.",
     url: CANONICAL,
     type: "article",
   },
@@ -80,6 +80,7 @@ const faqs: { question: string; answer: string }[] = [
   { question: "What is the strongest prescription weight loss pill?", answer: "Among currently FDA-approved oral options, Qsymia (phentermine/topiramate) tends to produce the most weight loss — roughly 8–10% on average. High-dose oral semaglutide, where available, is more effective still." },
   { question: "Can you get weight loss pills online?", answer: "Yes. Licensed telehealth providers can evaluate you online and, when appropriate, prescribe oral weight loss medications. A clinician determines whether an oral or injectable option fits your health profile and goals." },
   { question: "Are weight loss pills or injections better?", answer: "It depends on your priorities. Injections currently produce greater average weight loss, but pills avoid needles, can be simpler to start, and newer oral GLP-1s are closing the gap. The right choice comes down to your goals, tolerance, and what a clinician recommends." },
+  { question: "GLP-1 pills vs injections — which works better?", answer: "Injectable GLP-1s (semaglutide, tirzepatide) still lead on average weight loss — roughly 15–20%+ in trials — while most GLP-1 pills land lower. The exception is high-dose oral semaglutide, which has reached ~15% in trials and is closing the gap. Pills win on convenience: no needles and a simple daily tablet. If maximum results matter most, injections lead today; if avoiding needles matters more, a GLP-1 pill can be a strong fit." },
 ];
 
 export default async function WeightLossPillsPage() {
@@ -186,12 +187,12 @@ export default async function WeightLossPillsPage() {
         <section className="mb-12">
           <div className="mb-4 flex items-center gap-2">
             <Syringe className="h-6 w-6 text-[#0C4B75]" strokeWidth={2} />
-            <h2 className="text-[24px] font-bold text-[#191919]">Weight loss pills vs injections</h2>
+            <h2 className="text-[24px] font-bold text-[#191919]">GLP-1 pills vs injections: which is right for you?</h2>
           </div>
           <p className="mb-4">
             The honest summary: injections currently deliver the greatest average weight loss, but
-            pills avoid needles, can be simpler to start, and the newest oral GLP-1s are catching up.
-            Here&rsquo;s how they compare.
+            GLP-1 pills avoid needles, can be simpler to start, and the newest oral GLP-1s are
+            catching up fast. Here&rsquo;s how pills and injections compare.
           </p>
           <DataTable colA="Pills (oral)" colB="Injections" rows={pillsVsInjections} />
         </section>
