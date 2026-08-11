@@ -10,7 +10,7 @@ export function LastUpdated({ date, className = "" }: { date: string; className?
     timeZone: "UTC",
   });
   return (
-    <p className={`inline-flex items-center gap-1.5 text-[12px] font-medium text-gray-400 ${className}`}>
+    <p className={`inline-flex items-center gap-1.5 text-[12px] font-bold text-gray-500 ${className}`}>
       <Clock className="h-3.5 w-3.5" strokeWidth={2} />
       Last updated: {label}
     </p>
