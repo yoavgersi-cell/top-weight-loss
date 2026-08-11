@@ -53,6 +53,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/ozempic-alternatives`,
+      lastModified: FALLBACK_DATE,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: `${BASE_URL}/glp1-weight-loss-statistics`,
       lastModified: FALLBACK_DATE,
       changeFrequency: "monthly",
