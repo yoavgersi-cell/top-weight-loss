@@ -4,6 +4,7 @@ export interface TrustpilotReview {
   name: string;
   location: string;
   rating: number;
+  date?: string; // e.g. "Aug 3, 2026" — shown on the review card when present
 }
 
 // Reusable expert-team member for the site's credibility (E-E-A-T) layer.

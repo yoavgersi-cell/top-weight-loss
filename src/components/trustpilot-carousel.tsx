@@ -59,8 +59,11 @@ function TrustpilotWordmark({ starClass = "h-5 w-5", textClass = "text-[17px]" }
 function ReviewCard({ r }: { r: TrustpilotReview }) {
   return (
     <div className="flex h-full flex-col rounded-xl border border-gray-200 bg-white p-4">
-      <div className="mb-2.5">
+      <div className="mb-2.5 flex items-center justify-between gap-2">
         <TrustpilotStars rating={r.rating} boxClass="h-4 w-4" />
+        {r.date && (
+          <span className="shrink-0 text-[11px] text-gray-400">{r.date}</span>
+        )}
       </div>
       {r.title && (
         <p className="mb-1 line-clamp-1 text-[13px] font-bold text-[#191919]">{r.title}</p>
