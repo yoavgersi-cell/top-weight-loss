@@ -539,6 +539,29 @@ export default async function BattlePage({
             </div>
           )}
 
+          {/* ───── TRUSTPILOT REVIEWS ───── */}
+          {((p1.trustpilotReviews?.length ?? 0) > 0 || (p2.trustpilotReviews?.length ?? 0) > 0) && (
+            <div className="mb-14">
+              <h2 className="mb-6 text-[22px] font-bold text-[#191919]">
+                What Real Customers Say
+              </h2>
+              <div className="space-y-6">
+                {[p1, p2].map((provider) =>
+                  (provider.trustpilotReviews?.length ?? 0) > 0 ? (
+                    <TrustpilotCarousel
+                      key={provider.id}
+                      providerName={provider.name}
+                      providerLogo={provider.logo}
+                      reviews={provider.trustpilotReviews!}
+                      rating={provider.trustpilotRating}
+                      reviewCount={provider.trustpilotReviewCount}
+                    />
+                  ) : null
+                )}
+              </div>
+            </div>
+          )}
+
           {/* ───── FEATURE COMPARISON TABLE ───── */}
           {battle.features && battle.features.length > 0 && (() => {
             const getIcon = (row: typeof battle.features[0], which: "p1" | "p2") => {
@@ -651,29 +674,6 @@ export default async function BattlePage({
             </div>
             );
           })()}
-
-          {/* ───── TRUSTPILOT REVIEWS ───── */}
-          {((p1.trustpilotReviews?.length ?? 0) > 0 || (p2.trustpilotReviews?.length ?? 0) > 0) && (
-            <div className="mb-14">
-              <h2 className="mb-6 text-[22px] font-bold text-[#191919]">
-                What Real Customers Say
-              </h2>
-              <div className="space-y-6">
-                {[p1, p2].map((provider) =>
-                  (provider.trustpilotReviews?.length ?? 0) > 0 ? (
-                    <TrustpilotCarousel
-                      key={provider.id}
-                      providerName={provider.name}
-                      providerLogo={provider.logo}
-                      reviews={provider.trustpilotReviews!}
-                      rating={provider.trustpilotRating}
-                      reviewCount={provider.trustpilotReviewCount}
-                    />
-                  ) : null
-                )}
-              </div>
-            </div>
-          )}
 
           {/* ───── VERDICT ───── */}
           <div className="mb-14 overflow-hidden rounded-2xl border border-gray-200 bg-white">
