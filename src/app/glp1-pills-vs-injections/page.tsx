@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Pill, Syringe, Trophy, ArrowRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { LastUpdated } from "@/components/last-updated";
+import { CONTENT_LAST_UPDATED } from "@/lib/config";
 
 export const revalidate = 60;
 
@@ -82,6 +84,7 @@ export default function Glp1PillsVsInjectionsPage() {
             Here&rsquo;s an honest, side-by-side comparison of results, cost, convenience, and how to
             choose the right one for you.
           </p>
+          <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
         </div>
       </div>
 

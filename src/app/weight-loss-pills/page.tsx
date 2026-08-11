@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Pill, Syringe, ShieldCheck, TriangleAlert, ArrowRight, Check } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
+import { LastUpdated } from "@/components/last-updated";
+import { CONTENT_LAST_UPDATED } from "@/lib/config";
 import { getConfig } from "@/lib/config-store";
 
 // Providers confirmed to offer oral / pill options (site owner confirmed).
@@ -132,6 +134,7 @@ export default async function WeightLossPillsPage() {
             medications — the new oral GLP-1s, the FDA-approved prescription pills, and how they
             really compare to injections.
           </p>
+          <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
         </div>
       </div>
 
