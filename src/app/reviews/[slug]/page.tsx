@@ -38,6 +38,68 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   },
 };
 
+// "Is [brand] legit?" trust block — targets the high-intent "is X legit" query
+// cluster inside the existing review page (no separate page → no cannibalization).
+// Only defined for providers where the legitimacy signals are genuinely verifiable;
+// each signal is grounded in that provider's real credentials/practices.
+const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
+  embody: {
+    verdict:
+      "Yes — embody is a legitimate, US-based telehealth weight-loss provider. It's LegitScript-certified, works with US-based state-licensed 503A compounding pharmacies, and connects you with state-licensed doctors overseen by its own medical director.",
+    signals: [
+      "LegitScript-certified telehealth provider",
+      "US-based, state-licensed 503A compounding pharmacies",
+      "State-licensed doctors, a medical director, and a nursing team",
+      "Transparent flat pricing — $69/mo semaglutide, $119 tirzepatide",
+      "Full refund if you're not approved",
+    ],
+  },
+  altrx: {
+    verdict:
+      "Yes — altRx is a legitimate self-pay telehealth service. A licensed provider (physician, PA, or nurse practitioner) reviews your assessment before any prescription is issued, and medication is filled by a licensed pharmacy.",
+    signals: [
+      "Licensed providers review every assessment (physician, PA, or NP)",
+      "Prescriptions filled by licensed pharmacies",
+      "Transparent, flat pricing — no hidden fees, no insurance required",
+      "No long-term contract; pause or cancel anytime",
+      "Buy Now, Pay Later available",
+    ],
+  },
+  trimrx: {
+    verdict:
+      "Yes — TrimRX is a legitimate telehealth GLP-1 provider. Licensed clinicians guide treatment, medications are compounded semaglutide and tirzepatide prescribed after a medical review, and pricing is transparent with no long-term contract.",
+    signals: [
+      "Licensed clinical guidance throughout treatment",
+      "Compounded semaglutide & tirzepatide, prescribed after review",
+      "Transparent, competitive pricing with multi-month discounts",
+      "No long-term contract required",
+      "100% online — no clinic visit needed",
+    ],
+  },
+  medvi: {
+    verdict:
+      "Yes — Medvi is a legitimate medical weight-loss platform. Prescriptions are overseen by licensed providers with regular monitoring, and its pricing is transparent and all-inclusive with no surprise charges.",
+    signals: [
+      "Prescription treatment overseen by licensed providers",
+      "Regular monitoring and provider check-ins",
+      "Transparent, all-inclusive pricing — no surprise charges",
+      "Highly rated, personal service on Trustpilot",
+      "100% online — no clinic visit required",
+    ],
+  },
+  wellmedr: {
+    verdict:
+      "Yes — WellMedr is a legitimate telehealth platform. Board-certified specialists tailor your plan, and medications are made in US state-licensed pharmacies following FDA compounding standards after a medical review.",
+    signals: [
+      "Board-certified specialists tailor your treatment plan",
+      "US state-licensed pharmacies following FDA compounding standards",
+      "Real medical intake reviewed before prescribing",
+      "100% online — message your provider anytime",
+      "Discreet, unbranded packaging",
+    ],
+  },
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -83,6 +145,7 @@ export default async function ReviewPage({
   const provider = config.providers.find((p) => p.id === review.providerId);
   if (!provider) return notFound();
 
+  const legit = REVIEW_LEGIT[slug];
   const reviewer = config.experts?.[0];
 
   // JSON-LD
@@ -121,7 +184,7 @@ export default async function ReviewPage({
   // own researched content (pricing, treatments, best-for, verdict). Powers
   // both the visible FAQ section and the FAQPage schema (rich results / PAA).
   const reviewFaqs = [
-    { question: `Is ${provider.name} legit?`, answer: review.reviewIntro },
+    { question: `Is ${provider.name} legit?`, answer: legit?.verdict ?? review.reviewIntro },
     { question: `How much does ${provider.name} cost?`, answer: review.pricingSummary },
     review.treatmentOptions?.length
       ? { question: `What treatments does ${provider.name} offer?`, answer: `${provider.name} offers ${review.treatmentOptions.join(", ")}.` }
@@ -223,6 +286,42 @@ export default async function ReviewPage({
             </div>
           )}
         </div>
+
+        {/* Is [brand] legit? — trust block for the "is X legit" query cluster */}
+        {legit && (
+          <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+            <div className="flex items-center gap-2 border-b border-gray-100 bg-emerald-50/50 px-6 py-4">
+              <Shield className="h-5 w-5 text-emerald-600" strokeWidth={2} />
+              <h2 className="text-[18px] font-bold text-[#191919]">
+                Is {provider.name} legit?
+              </h2>
+            </div>
+            <div className="p-6">
+              <p className="mb-4 text-[15px] leading-[1.75] text-gray-600">
+                {legit.verdict}
+              </p>
+              <ul className="grid gap-2.5 sm:grid-cols-2">
+                {legit.signals.map((signal) => (
+                  <li key={signal} className="flex items-start gap-2.5 text-[14px] text-gray-700">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" strokeWidth={2} />
+                    {signal}
+                  </li>
+                ))}
+                {provider.trustpilotRating && provider.trustpilotReviewCount && (
+                  <li className="flex items-start gap-2.5 text-[14px] text-gray-700">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" strokeWidth={2} />
+                    Rated {provider.trustpilotRating}/5 across {provider.trustpilotReviewCount} Trustpilot reviews
+                  </li>
+                )}
+              </ul>
+              <p className="mt-4 text-[12px] leading-relaxed text-gray-400">
+                &ldquo;Legitimate&rdquo; here means a real, licensed telehealth operation — not a
+                guarantee of results. Compounded medications are not FDA-approved brand drugs. Always
+                confirm current details and eligibility with the provider.
+              </p>
+            </div>
+          </div>
+        )}
 
         {/* Key Features + Pricing side by side on desktop */}
         <div className="mb-6 grid gap-6 sm:grid-cols-2">
