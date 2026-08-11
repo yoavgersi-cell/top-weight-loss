@@ -2187,6 +2187,269 @@ const roWellmedrBattle: BattleData = {
   ],
 };
 
+// ───── Partner vs partner battles (complete the matchup grid) ─────
+
+const embodyTrimrxBattle: BattleData = {
+  slug: "embody-vs-trimrx",
+  provider1Id: "embody",
+  provider2Id: "trimrx",
+  title: "embody vs TrimRX: Which GLP-1 Provider Wins in 2026?",
+  subtitle: "We compared pricing, shipping speed, plan flexibility, and medications to see which affordable GLP-1 provider comes out ahead.",
+  description: "embody vs TrimRX compared on pricing, shipping speed, plan flexibility, and GLP-1 medications. See why embody comes out on top for affordable, fast treatment in 2026.",
+  intro: "embody and TrimRX are both affordable, weight-loss-focused telehealth providers offering compounded GLP-1 with home delivery. embody uses flat pricing — $69/month for compounded semaglutide and $119 for tirzepatide — with free 1-2 day shipping and LegitScript-certified 503A pharmacies. TrimRX focuses on budget-friendly access with flexible plans, multi-month discounts, and no long-term commitment. Here's how they compare.",
+  verdict: "Both are strong budget picks — but embody edges ahead on entry price and speed. It offers flat $69/month compounded semaglutide, free 1-2 day tracked shipping, and LegitScript-certified 503A pharmacies. TrimRX is the better fit if you want flexible plans and multi-month discounts with no long-term contract.",
+  verdictWinnerPoints: [
+    "$69/mo semaglutide, $119/mo tirzepatide — flat pricing",
+    "Free 1-2 day tracked shipping",
+    "LegitScript-certified 503A pharmacies",
+  ],
+  verdictLoserPoints: [
+    "Flexible plans with no long-term contract",
+    "Multi-month discounts",
+    "Compounded semaglutide & tirzepatide",
+  ],
+  winnerId: "embody",
+  categories: [
+    {
+      name: "Pricing & Value",
+      winner: "provider1",
+      explanation: "embody uses flat, published pricing — $69/month compounded semaglutide and $119 tirzepatide, the same at every dose. TrimRX is competitively priced too, with multi-month discounts, but its entry price runs a little higher. For the lowest transparent starting price, embody comes out ahead.",
+      supportingPoints: [
+        "$69/mo semaglutide, $119/mo tirzepatide (embody)",
+        "Flat pricing, same at every dose (embody)",
+        "Competitive with multi-month discounts (TrimRX)",
+        "No insurance required (both)",
+      ],
+    },
+    {
+      name: "Shipping Speed",
+      winner: "provider1",
+      explanation: "embody includes free 1-2 day tracked, insured shipping — among the fastest in the category. TrimRX ships to your door with reliable standard delivery, but not at embody's 1-2 day pace.",
+      supportingPoints: [
+        "Free 1-2 day tracked shipping (embody)",
+        "Insured delivery (embody)",
+        "Reliable standard home delivery (TrimRX)",
+        "Nationwide shipping (both)",
+      ],
+    },
+    {
+      name: "Plan Flexibility",
+      winner: "provider2",
+      explanation: "TrimRX is built around flexibility — flexible plan options, multi-month discounts, and no long-term commitment, so you can adjust as you go. embody keeps pricing simple with straightforward monthly plans.",
+      supportingPoints: [
+        "Flexible plans, no long-term contract (TrimRX)",
+        "Multi-month discounts (TrimRX)",
+        "Simple monthly plans (embody)",
+        "Cancel anytime (both)",
+      ],
+    },
+    {
+      name: "Medications",
+      winner: "tie",
+      explanation: "Both offer the core compounded GLP-1 options — semaglutide and tirzepatide — prescribed after a provider review. Neither is limited to a single medication for weight loss.",
+      supportingPoints: [
+        "Compounded semaglutide (both)",
+        "Compounded tirzepatide (both)",
+        "Provider-reviewed prescriptions (both)",
+        "One weekly injection (both)",
+      ],
+    },
+    {
+      name: "Medical Support",
+      winner: "tie",
+      explanation: "Both put licensed clinical support behind treatment, with ongoing guidance and dose adjustments as needed. embody pairs this with LegitScript-certified 503A pharmacies; TrimRX includes clinical guidance throughout.",
+      supportingPoints: [
+        "Licensed clinical guidance (both)",
+        "Ongoing dose adjustments (both)",
+        "LegitScript-certified 503A pharmacies (embody)",
+        "Clinical guidance included (TrimRX)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Pricing", provider1Value: "Flat $69 sema / $119 tirz", provider2Value: "Competitive, multi-month discounts", highlight: "provider1" },
+    { feature: "Shipping", provider1Value: "Free 1-2 day tracked", provider2Value: "Standard home delivery", highlight: "provider1" },
+    { feature: "Plan Flexibility", provider1Value: "Simple monthly plans", provider2Value: "Flexible, no long-term contract", highlight: "provider2" },
+    { feature: "Medications", provider1Value: "Compounded sema + tirz", provider2Value: "Compounded sema + tirz", highlight: "both" },
+    { feature: "Pharmacies", provider1Value: "LegitScript-certified 503A", provider2Value: "Licensed pharmacies", highlight: "provider1" },
+    { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
+  ],
+};
+
+const embodyMedviBattle: BattleData = {
+  slug: "embody-vs-medvi",
+  provider1Id: "embody",
+  provider2Id: "medvi",
+  title: "embody vs Medvi: Which Weight Loss Provider Wins in 2026?",
+  subtitle: "We compared pricing, shipping speed, medications, and personal support to see which GLP-1 provider comes out ahead.",
+  description: "embody vs Medvi compared on pricing, shipping speed, GLP-1 medications, and personal support. See why embody comes out on top for affordable, fast treatment in 2026.",
+  intro: "embody and Medvi both offer online GLP-1 weight-loss treatment with provider support and home delivery. embody is built for affordable speed — flat $69/$119 pricing, free 1-2 day shipping, and LegitScript-certified 503A pharmacies. Medvi keeps things simple and personal, pairing prescription GLP-1 treatment with attentive provider support and transparent, all-inclusive pricing. Here's how they compare.",
+  verdict: "Both are credible, transparent providers — but embody takes it on price, speed, and published medication options. It offers $69/month semaglutide, $119 tirzepatide, and free 1-2 day shipping. Medvi is the better pick if personal, attentive provider service is your top priority.",
+  verdictWinnerPoints: [
+    "$69/mo semaglutide, $119/mo tirzepatide — flat pricing",
+    "Free 1-2 day tracked shipping",
+    "Compounded semaglutide & tirzepatide",
+  ],
+  verdictLoserPoints: [
+    "Personal, attentive provider service",
+    "Transparent, all-inclusive pricing",
+    "Simple, streamlined process",
+  ],
+  winnerId: "embody",
+  categories: [
+    {
+      name: "Pricing & Value",
+      winner: "provider1",
+      explanation: "embody publishes flat pricing — $69/month compounded semaglutide and $119 tirzepatide, the same at every dose. Medvi's plans are transparent and all-inclusive, but it doesn't lead with a published low entry price. For upfront, lowest-price transparency, embody comes out ahead.",
+      supportingPoints: [
+        "$69/mo semaglutide, $119/mo tirzepatide (embody)",
+        "Published flat pricing (embody)",
+        "Transparent all-inclusive plans (Medvi)",
+        "No insurance required (both)",
+      ],
+    },
+    {
+      name: "Shipping Speed",
+      winner: "provider1",
+      explanation: "embody includes free 1-2 day tracked, insured shipping. Medvi delivers medication to your door with reliable standard shipping, but not at embody's 1-2 day pace.",
+      supportingPoints: [
+        "Free 1-2 day tracked shipping (embody)",
+        "Insured delivery (embody)",
+        "Reliable home delivery (Medvi)",
+        "Nationwide shipping (both)",
+      ],
+    },
+    {
+      name: "Medications & Options",
+      winner: "provider1",
+      explanation: "embody spells out its options — compounded semaglutide at $69 and tirzepatide at $119. Medvi prescribes GLP-1 treatment with provider-guided plans, but with fewer medication options highlighted up front.",
+      supportingPoints: [
+        "Compounded semaglutide + tirzepatide (embody)",
+        "Clear per-medication pricing (embody)",
+        "Prescription GLP-1 treatment (Medvi)",
+        "Provider-guided dosing (both)",
+      ],
+    },
+    {
+      name: "Personal Support & Service",
+      winner: "provider2",
+      explanation: "Medvi's standout is its people — reviewers repeatedly praise attentive, personal providers who take their time and follow up. embody offers solid standard support alongside its fast, low-cost model.",
+      supportingPoints: [
+        "Attentive, highly rated service (Medvi)",
+        "Providers who follow up (Medvi)",
+        "Regular monitoring & check-ins (Medvi)",
+        "Ongoing support (both)",
+      ],
+    },
+    {
+      name: "Medical Monitoring",
+      winner: "tie",
+      explanation: "Both include licensed provider oversight with regular monitoring and dose adjustments as needed. embody adds LegitScript-certified 503A pharmacies; Medvi emphasizes consistent provider check-ins.",
+      supportingPoints: [
+        "Licensed provider oversight (both)",
+        "Regular monitoring (both)",
+        "LegitScript-certified 503A pharmacies (embody)",
+        "Consistent provider check-ins (Medvi)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Pricing", provider1Value: "Flat $69 sema / $119 tirz", provider2Value: "Transparent, all-inclusive", highlight: "provider1" },
+    { feature: "Shipping", provider1Value: "Free 1-2 day tracked", provider2Value: "Home delivery", highlight: "provider1" },
+    { feature: "Medications", provider1Value: "Compounded sema + tirz", provider2Value: "Prescription GLP-1 treatment", highlight: "provider1" },
+    { feature: "Personal Support", provider1Value: "Solid standard support", provider2Value: "Attentive, highly rated service", highlight: "provider2" },
+    { feature: "Monitoring", provider1Value: "Regular monitoring", provider2Value: "Regular check-ins", highlight: "both" },
+    { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
+  ],
+};
+
+const altrxWellmedrBattle: BattleData = {
+  slug: "altrx-vs-wellmedr",
+  provider1Id: "altrx",
+  provider2Id: "wellmedr",
+  title: "altRx vs WellMedr: Which GLP-1 Provider Wins in 2026?",
+  subtitle: "We compared pricing, medication selection, range of care, and payment flexibility to see which GLP-1 provider comes out ahead.",
+  description: "altRx vs WellMedr compared on pricing, medication selection, range of care, and payment flexibility. See why altRx comes out on top for affordable GLP-1 value in 2026.",
+  intro: "altRx and WellMedr both offer compounded GLP-1 weight-loss treatment online. altRx positions itself as the most affordable GLP-1 program — compounded semaglutide from $89/month, tirzepatide from $149, plus brand-name Zepbound and Wegovy, with Buy Now, Pay Later. WellMedr is an AI-driven platform pairing tirzepatide (GLP-1/GIP) — 50% off your first month — with a semaglutide + NAD+/B12 microdose, board-certified specialists, and a broader longevity range. Here's how they compare.",
+  verdict: "Both are solid compounded-GLP-1 options — but altRx edges ahead for weight-loss value and selection. It offers flat $89/$149 pricing at every dose, brand-name Zepbound and Wegovy if you want them, and Buy Now, Pay Later. WellMedr is the better pick if you want enhanced formulations (NAD+/B12) and a broader longevity platform beyond weight loss.",
+  verdictWinnerPoints: [
+    "Compounded GLP-1 from $89/mo, same price every dose",
+    "Brand-name Zepbound & Wegovy available",
+    "No insurance; Buy Now, Pay Later",
+  ],
+  verdictLoserPoints: [
+    "Tirzepatide GLP-1/GIP — 50% off your first month",
+    "Unique semaglutide + NAD+/B12 microdose",
+    "Broader longevity platform (TRT, NAD+, and more)",
+  ],
+  winnerId: "altrx",
+  categories: [
+    {
+      name: "Pricing & Value",
+      winner: "provider1",
+      explanation: "altRx uses flat pricing — compounded semaglutide from $89/month and tirzepatide from $149, the same at every dose. WellMedr promotes 50% off your first month, but its ongoing weight-loss price isn't listed up front. On predictable, ongoing value, altRx comes out ahead.",
+      supportingPoints: [
+        "From $89/mo, flat at every dose (altRx)",
+        "Predictable ongoing pricing (altRx)",
+        "50% off first month; ongoing not listed (WellMedr)",
+        "No insurance required (both)",
+      ],
+    },
+    {
+      name: "Medication Selection",
+      winner: "provider1",
+      explanation: "altRx offers compounded semaglutide and tirzepatide plus brand-name Zepbound and Wegovy — a wide range for weight loss specifically. WellMedr offers tirzepatide plus a unique semaglutide + NAD+/B12 microdose, but not brand-name options.",
+      supportingPoints: [
+        "Compounded sema + tirz (altRx)",
+        "Brand-name Zepbound & Wegovy (altRx)",
+        "Tirzepatide + NAD+/B12 microdose (WellMedr)",
+        "Provider-reviewed prescriptions (both)",
+      ],
+    },
+    {
+      name: "Enhanced Formulations & Range",
+      winner: "provider2",
+      explanation: "WellMedr is a broader longevity platform — alongside GLP-1 it offers TRT, NAD+, hair, and sexual health, and its weight-loss line includes a semaglutide + NAD+/B12 microdose. altRx focuses specifically on affordable GLP-1 weight-loss treatment.",
+      supportingPoints: [
+        "TRT, NAD+, hair, sexual health (WellMedr)",
+        "Semaglutide + NAD+/B12 microdose (WellMedr)",
+        "Focused GLP-1 weight-loss value (altRx)",
+        "100% online care (both)",
+      ],
+    },
+    {
+      name: "Payment Flexibility",
+      winner: "provider1",
+      explanation: "altRx offers Buy Now, Pay Later and the ability to pause or cancel anytime, on a self-pay basis with no insurance required. WellMedr runs as a broader wellness membership.",
+      supportingPoints: [
+        "Buy Now, Pay Later (altRx)",
+        "Pause or cancel anytime (altRx)",
+        "Broader wellness membership (WellMedr)",
+        "Self-pay, no insurance (both)",
+      ],
+    },
+    {
+      name: "Medical Support",
+      winner: "tie",
+      explanation: "Both put qualified providers behind treatment. altRx care is clinician-guided by a physician, PA, or nurse practitioner; WellMedr says board-certified specialists tailor your plan, with the ability to message your provider anytime.",
+      supportingPoints: [
+        "Clinician-guided (physician, PA, NP) (altRx)",
+        "Pause/adjust with provider (altRx)",
+        "Board-certified specialists tailor your plan (WellMedr)",
+        "Message your provider anytime (WellMedr)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Pricing", provider1Value: "From $89/mo, flat at every dose", provider2Value: "50% off first month (ongoing not listed)", highlight: "provider1" },
+    { feature: "Medication Selection", provider1Value: "Compounded + brand-name Zepbound/Wegovy", provider2Value: "Tirzepatide + sema/NAD+/B12 microdose", highlight: "provider1" },
+    { feature: "Beyond Weight Loss", provider1Value: "Weight-loss focus", provider2Value: "TRT, NAD+, hair, sexual health", highlight: "provider2" },
+    { feature: "Payment", provider1Value: "Buy Now, Pay Later; pause anytime", provider2Value: "Wellness membership", highlight: "provider1" },
+    { feature: "Shipping", provider1Value: "Free, about 5-7 days", provider2Value: "Standard, about 3-5 days", highlight: "provider2" },
+    { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
+  ],
+};
+
 // ───── Brand casing normalization ─────
 // Canonical provider names (keyed by provider id or normalized name).
 const CANONICAL_NAMES: Record<string, string> = {
@@ -2403,6 +2666,9 @@ function buildInitialConfig(): SiteConfig {
       trimrxRoBattle,
       trimrxWellmedrBattle,
       roWellmedrBattle,
+      embodyTrimrxBattle,
+      embodyMedviBattle,
+      altrxWellmedrBattle,
     ],
     sidebars: [
       {
