@@ -8,7 +8,8 @@ import { EditorialContent } from "@/components/editorial-content";
 import { LandingEditorial } from "@/components/landing-editorial";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound } from "next/navigation";
-import { ArrowRight, Check, Minus, Trophy, Clock } from "lucide-react";
+import { ArrowRight, Check, Minus, Trophy } from "lucide-react";
+import { LastUpdated } from "@/components/last-updated";
 import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { TrustpilotRating } from "@/components/trustpilot-rating";
@@ -221,14 +222,6 @@ export default async function BattlePage({
     ...battle.categories.map((cat) => ({ question: catToQuestion(cat.name), answer: cat.explanation })),
   ].filter((f, i, arr) => !!f.answer && arr.findIndex((x) => x.question === f.question) === i);
 
-  // "Last updated" label for the header (e.g. "Aug 2026") — matches the
-  // Article schema's dateModified.
-  const lastUpdated = new Date(battle.updatedAt || CONTENT_LAST_UPDATED).toLocaleDateString("en-US", {
-    month: "short",
-    year: "numeric",
-    timeZone: "UTC",
-  });
-
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -285,10 +278,7 @@ export default async function BattlePage({
             <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-gray-500">
               {battle.subtitle || battle.description}
             </p>
-            <p className="mt-4 inline-flex items-center gap-1.5 text-[12px] font-medium text-gray-400">
-              <Clock className="h-3.5 w-3.5" strokeWidth={2} />
-              Last updated: {lastUpdated}
-            </p>
+            <LastUpdated date={battle.updatedAt || CONTENT_LAST_UPDATED} className="mt-4" />
           </div>
         </section>
 

@@ -7,6 +7,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { ExpertByline } from "@/components/expert-byline";
+import { LastUpdated } from "@/components/last-updated";
 import { notFound } from "next/navigation";
 
 export const revalidate = 60;
@@ -161,9 +162,7 @@ export default async function ReviewPage({
                 <p className="mt-0.5 text-[14px] text-gray-500">
                   {provider.tagline}
                 </p>
-                <p className="mt-0.5 text-[12px] text-gray-400">
-                  Last updated: July 2026
-                </p>
+                <LastUpdated date={review.updatedAt || CONTENT_LAST_UPDATED} className="mt-1" />
               </div>
             </div>
             <ProviderCta

@@ -4,6 +4,8 @@ import { ClipboardCheck, Database, ShieldCheck, Scale, Trophy, RefreshCw } from 
 import { getConfig } from "@/lib/config-store";
 import { ExpertTeam } from "@/components/expert-team";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { LastUpdated } from "@/components/last-updated";
+import { CONTENT_LAST_UPDATED } from "@/lib/config";
 
 export const revalidate = 60;
 
@@ -79,6 +81,7 @@ export default async function HowWeRankPage() {
             repeatable, evidence-first process. Here&rsquo;s exactly how we evaluate each
             weight loss provider, where our information comes from, and how we keep it accurate.
           </p>
+          <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
         </div>
       </div>
 

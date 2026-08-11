@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { FlaskConical, TriangleAlert, ArrowRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { LastUpdated } from "@/components/last-updated";
+import { CONTENT_LAST_UPDATED } from "@/lib/config";
 
 export const revalidate = 60;
 
@@ -82,6 +84,7 @@ export default function RetatrutidePage() {
             any weight loss drug so far. Here&rsquo;s what it is, how it stacks up against tirzepatide
             and semaglutide, and an honest answer on whether you can actually get it.
           </p>
+          <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
         </div>
       </div>
 
