@@ -21,6 +21,21 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     description:
       "embody GLP-1 reviews: compounded semaglutide from $69/mo and tirzepatide from $119/mo, shipped in 1-2 days with no insurance. Real customer reviews, pricing, pros & cons, and whether embody is worth it.",
   },
+  medvi: {
+    title: "Medvi Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
+    description:
+      "Medvi weight loss reviews: transparent, all-inclusive GLP-1 pricing and the personal provider support customers rave about on Trustpilot. Is Medvi legit and worth it? Real customer reviews, cost, pros & cons.",
+  },
+  altrx: {
+    title: "altRx Reviews 2026: Is It Legit? GLP-1 Cost, Results & Verdict",
+    description:
+      "altRx reviews: compounded semaglutide from $89/mo and tirzepatide from $149/mo, brand-name Zepbound & Wegovy too, no insurance and Buy Now Pay Later. Is altRx legit and worth it? Real customer reviews, pricing, pros & cons.",
+  },
+  trimrx: {
+    title: "TrimRX Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
+    description:
+      "TrimRX reviews: budget-friendly compounded semaglutide and tirzepatide, flexible plans with no long-term contract, and clinical support included. Is TrimRX legit and worth it? Real customer reviews, cost, pros & cons.",
+  },
 };
 
 export async function generateMetadata({
@@ -157,7 +172,7 @@ export default async function ReviewPage({
               </div>
               <div>
                 <h1 className="text-[24px] font-bold text-[#191919] sm:text-[28px]">
-                  {provider.name} Review
+                  {provider.name} Reviews
                 </h1>
                 <p className="mt-0.5 text-[14px] text-gray-500">
                   {provider.tagline}
