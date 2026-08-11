@@ -61,7 +61,7 @@ export function EditorialContent() {
         </Link>{" "}
         for detailed breakdowns, or jump straight to a head-to-head like{" "}
         <Link href="/altrx-vs-embody" className="font-semibold text-[#0C4B75] hover:underline">
-          embody vs altRx
+          altRx vs embody
         </Link>.
       </p>
       <p className="mb-8">
