@@ -58,22 +58,24 @@ function TrustpilotWordmark({ starClass = "h-5 w-5", textClass = "text-[17px]" }
 
 function ReviewCard({ r }: { r: TrustpilotReview }) {
   return (
-    <div className="flex h-full flex-col rounded-xl border border-gray-200 bg-white p-5">
-      <div className="mb-3">
-        <TrustpilotStars rating={r.rating} boxClass="h-[18px] w-[18px]" />
+    <div className="flex h-full flex-col rounded-xl border border-gray-200 bg-white p-4">
+      <div className="mb-2.5">
+        <TrustpilotStars rating={r.rating} boxClass="h-4 w-4" />
       </div>
       {r.title && (
-        <p className="mb-1.5 text-[14px] font-bold leading-snug text-[#191919]">{r.title}</p>
+        <p className="mb-1 line-clamp-1 text-[13px] font-bold text-[#191919]">{r.title}</p>
       )}
-      <p className="mb-4 flex-1 text-[13px] leading-relaxed text-gray-600">
+      {/* Clamp to 4 lines with an automatic ellipsis; min-height keeps every
+          card the same size regardless of review length. */}
+      <p className="mb-3.5 line-clamp-4 min-h-[76px] text-[12.5px] leading-[1.5] text-gray-600">
         &ldquo;{r.text}&rdquo;
       </p>
-      <div className="flex items-center gap-2">
-        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#0C4B75]/10 text-[12px] font-bold text-[#0C4B75]">
+      <div className="mt-auto flex items-center gap-2">
+        <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0C4B75]/10 text-[11px] font-bold text-[#0C4B75]">
           {r.name.charAt(0)}
         </div>
-        <div>
-          <p className="text-[13px] font-semibold text-[#191919]">{r.name}</p>
+        <div className="min-w-0">
+          <p className="truncate text-[12.5px] font-semibold text-[#191919]">{r.name}</p>
           <p className="text-[11px] text-gray-400">{r.location}</p>
         </div>
       </div>
