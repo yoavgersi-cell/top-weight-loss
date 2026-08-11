@@ -166,6 +166,11 @@ export default async function BattlePage({
   const p2 = config.providers.find((p) => p.id === battle.provider2Id);
   if (!p1 || !p2) return notFound();
 
+  // Display label for the "X vs Y" matchup (breadcrumb, FAQ, schema). A battle
+  // can lead the label with a high-demand brand via matchupLabel without
+  // reordering provider1/provider2 (which drives winner logic).
+  const matchupLabel = battle.matchupLabel || `${p1.name} vs ${p2.name}`;
+
   // Winner is set per-battle in the CMS (Admin → Battles → Winner)
   const winner = battle.winnerId === p2.id ? p2 : p1;
   const loser = winner.id === p1.id ? p2 : p1;
@@ -218,7 +223,7 @@ export default async function BattlePage({
   };
 
   const battleFaqs = [
-    { question: `Who wins, ${p1.name} vs ${p2.name}?`, answer: battle.verdict },
+    { question: `Who wins, ${matchupLabel}?`, answer: battle.verdict },
     ...battle.categories.map((cat) => ({ question: catToQuestion(cat.name), answer: cat.explanation })),
   ].filter((f, i, arr) => !!f.answer && arr.findIndex((x) => x.question === f.question) === i);
 
@@ -239,7 +244,7 @@ export default async function BattlePage({
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://www.topweightloss.io" },
-      { "@type": "ListItem", position: 2, name: `${p1.name} vs ${p2.name}`, item: `https://www.topweightloss.io/${battle.slug}` },
+      { "@type": "ListItem", position: 2, name: matchupLabel, item: `https://www.topweightloss.io/${battle.slug}` },
     ],
   };
 
@@ -268,7 +273,7 @@ export default async function BattlePage({
             <Breadcrumbs
               items={[
                 { label: "Home", href: "/" },
-                { label: `${p1.name} vs ${p2.name}` },
+                { label: matchupLabel },
               ]}
             />
 
@@ -777,7 +782,7 @@ export default async function BattlePage({
           {battleFaqs.length > 0 && (
             <div className="mb-14">
               <h2 className="mb-6 text-[24px] font-bold text-[#191919]">
-                {p1.name} vs {p2.name}: Frequently Asked Questions
+                {matchupLabel}: Frequently Asked Questions
               </h2>
               <div className="divide-y divide-gray-100 overflow-hidden rounded-2xl border border-gray-200 bg-white">
                 {battleFaqs.map((f, i) => (
