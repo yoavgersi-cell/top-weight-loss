@@ -1211,11 +1211,12 @@ const defaultReviews: ReviewData[] = [
 const embodyAltrxBattle: Omit<BattleData, "slug"> = {
   provider1Id: "embody",
   provider2Id: "altrx",
-  title: "Embody vs altRx: Which GLP-1 Provider Wins in 2026?",
-  subtitle: "We compared pricing, medical support, medication access, and real customer experience to see which provider comes out ahead.",
-  description: "Embody vs altRx compared across pricing, GLP-1 medication options, medical support, and customer experience. See why Embody comes out on top in 2026.",
-  intro: "Embody and altRx are both fully online GLP-1 weight-loss providers with transparent pricing and no insurance required. Embody offers compounded semaglutide ($69/mo) and tirzepatide ($119/mo) with free 1-2 day shipping, while altRx bills itself as \"the #1 most affordable GLP-1 program\" from $89/month and stands out with a broader lineup — adding brand-name Zepbound and Wegovy plus Buy Now, Pay Later. Here's how they compare on the factors that matter most.",
-  verdict: "Both Embody and altRx are legitimate, well-reviewed, fully online GLP-1 providers with transparent pricing and no insurance required — but Embody takes this one. It's cheaper on both compounded options ($69/$119 vs altRx's $89/$149) and ships in 1-2 days versus altRx's 5-7. altRx is the better pick if you want the widest selection, including brand-name Zepbound or Wegovy, or Buy Now, Pay Later.",
+  title: "altRx vs embody: Which GLP-1 Provider Wins in 2026?",
+  matchupLabel: "altRx vs embody",
+  subtitle: "altRx vs embody, compared on pricing, GLP-1 medications, shipping speed, and medical support — to see which provider comes out ahead.",
+  description: "altRx vs embody compared on price, GLP-1 meds, and shipping. altRx from $89/mo with brand-name Zepbound & Wegovy; embody from $69/mo with free 1-2 day delivery. See which wins in 2026.",
+  intro: "If you're deciding between altRx and embody, both are fully online GLP-1 weight-loss providers with transparent pricing and no insurance required. altRx bills itself as \"the #1 most affordable GLP-1 program\" from $89/month and stands out with a broader lineup — adding brand-name Zepbound and Wegovy plus Buy Now, Pay Later — while embody offers compounded semaglutide ($69/mo) and tirzepatide ($119/mo) with free 1-2 day shipping. Here's how altRx and embody compare on the factors that matter most.",
+  verdict: "Both altRx and embody are legitimate, well-reviewed, fully online GLP-1 providers with transparent pricing and no insurance required — but embody takes this one. It's cheaper on both compounded options ($69/$119 vs altRx's $89/$149) and ships in 1-2 days versus altRx's 5-7. altRx is the better pick if you want the widest selection, including brand-name Zepbound or Wegovy, or Buy Now, Pay Later.",
   verdictWinnerPoints: [
     "Cheaper — $69/mo semaglutide, $119/mo tirzepatide",
     "Free 1-2 day shipping (vs altRx's 5-7 days)",
@@ -1294,15 +1295,15 @@ const embodyAltrxBattle: Omit<BattleData, "slug"> = {
   ],
 };
 
-// Embody vs WellMedR battle — winner: Embody. Injected when the CMS has no
+// Embody vs WellMedr battle — winner: Embody. Injected when the CMS has no
 // battle for this provider pair, so /embody-vs-wellmedr resolves.
 const embodyWellmedrBattle: BattleData = {
   slug: "embody-vs-wellmedr",
   provider1Id: "embody",
   provider2Id: "wellmedr",
-  title: "Embody vs WellMedR: Which Weight Loss Provider Wins in 2026?",
+  title: "Embody vs WellMedr: Which Weight Loss Provider Wins in 2026?",
   subtitle: "We compared pricing, medical support, long-term care, and real customer experience to see which provider comes out ahead.",
-  description: "Embody vs WellMedR compared across pricing, GLP-1 treatment, medical support, and long-term weight management. See why Embody comes out on top in 2026.",
+  description: "Embody vs WellMedr compared across pricing, GLP-1 treatment, medical support, and long-term weight management. See why Embody comes out on top in 2026.",
   intro: "Embody and WellMedr both offer compounded GLP-1 weight-loss treatment through a fully online experience — but they take different approaches. Embody is weight-loss-focused with flat $69/$119 pricing and fast 1-2 day shipping, while WellMedr is an AI-driven telehealth brand that reaches beyond weight loss into longevity, hormones, and more — pairing GLP-1 with add-ons like NAD+ and B12, overseen by board-certified specialists. Here's how they compare.",
   verdict: "Both are credible online GLP-1 providers — but Embody takes this comparison for weight loss specifically. Its clear flat pricing ($69/$119), free 1-2 day shipping, and strong recent customer feedback make it a great starting point. WellMedr is the better fit if you want more than weight loss — a broader longevity platform with board-certified specialists, GLP-1 formulations enhanced with NAD+ and B12, and 50% off your first month.",
   verdictWinnerPoints: [
@@ -1392,10 +1393,10 @@ const altrxTrimrxBattle: BattleData = {
   slug: "altrx-vs-trimrx",
   provider1Id: "altrx",
   provider2Id: "trimrx",
-  title: "TrimRX vs altRx: Which GLP-1 Provider Wins in 2026?",
-  subtitle: "We compared pricing, medication access, medical support, and real customer experience to see which GLP-1 provider delivers more value.",
-  description: "TrimRX vs altRx compared on pricing, GLP-1 medication options, medical support, and real customer reviews. See why TrimRX wins on value in 2026.",
-  intro: "TrimRX and altRx are both fully online GLP-1 weight-loss providers that skip insurance and ship medication to your door. altRx bills itself as \"the #1 most affordable GLP-1 program\" from $89/month and stands out with the broadest lineup — compounded GLP-1 and GLP-1 + GIP plus brand-name Zepbound and Wegovy. TrimRX is built around affordable access to GLP-1 programs, pairing competitive monthly pricing with flexible plans, multi-month discounts, and ongoing clinical guidance. Here's how they compare across the factors that matter most.",
+  title: "altRx vs TrimRX: Which GLP-1 Provider Wins in 2026?",
+  subtitle: "altRx vs TrimRX, compared on pricing, medication selection, medical support, and real customer experience — to see which GLP-1 provider delivers more value.",
+  description: "altRx vs TrimRX compared on pricing, GLP-1 medications, and value. altRx offers the broadest lineup — including brand-name Zepbound & Wegovy — while TrimRX wins on affordable, flexible plans. See which comes out ahead in 2026.",
+  intro: "altRx and TrimRX are both fully online GLP-1 weight-loss providers that skip insurance and ship medication to your door. altRx bills itself as \"the #1 most affordable GLP-1 program\" from $89/month and stands out with the broadest lineup — compounded GLP-1 and GLP-1 + GIP plus brand-name Zepbound and Wegovy. TrimRX is built around affordable access to GLP-1 programs, pairing competitive monthly pricing with flexible plans, multi-month discounts, and ongoing clinical guidance. Here's how they compare across the factors that matter most.",
   verdict: "Both are legitimate, no-insurance-required online GLP-1 providers — but TrimRX takes this one on value. Its plans are built around affordability, with competitive monthly pricing, multi-month discounts, and provider consultations plus ongoing support bundled in, all with no long-term commitment. altRx is the better pick if you want the widest medication selection — including brand-name Zepbound or Wegovy — or Buy Now, Pay Later.",
   verdictWinnerPoints: [
     "Built around affordable access — competitive pricing plus multi-month discounts",
