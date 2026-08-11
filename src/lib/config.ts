@@ -178,6 +178,11 @@ export interface BattleData {
   provider1Id: string;
   provider2Id: string;
   title: string;
+  // Optional display order for the "X vs Y" label (breadcrumb, FAQ heading,
+  // schema). Lets the visible matchup lead with a high-demand brand without
+  // reordering provider1/provider2 (which drives the winner logic). Falls back
+  // to `${p1.name} vs ${p2.name}` when unset.
+  matchupLabel?: string;
   subtitle: string;
   description: string;
   intro: string;

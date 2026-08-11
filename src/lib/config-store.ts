@@ -1660,9 +1660,10 @@ const medviRoBattle: BattleData = {
   slug: "medvi-vs-ro",
   provider1Id: "medvi",
   provider2Id: "ro",
-  title: "Medvi vs Ro: Which Weight Loss Provider Wins in 2026?",
+  title: "Ro vs Medvi: Which Weight Loss Provider Wins in 2026?",
+  matchupLabel: "Ro vs Medvi",
   subtitle: "We compared personal support, pricing, ongoing care, and brand track record to see which GLP-1 provider comes out ahead.",
-  description: "Medvi vs Ro compared on personal support, transparent pricing, ongoing medical care, and track record. See why Medvi comes out on top in 2026.",
+  description: "Ro vs Medvi compared on personal support, transparent pricing, ongoing medical care, and track record. See why Medvi comes out on top in 2026.",
   intro: "Medvi and Ro are both online telehealth providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established brand with an integrated in-house pharmacy and licensed providers reviewing every plan. Medvi keeps medical weight loss simple, pairing prescription GLP-1 treatment with attentive provider support, regular monitoring, and transparent all-inclusive pricing. Here's how they compare.",
   verdict: "Both are credible online GLP-1 providers — but Medvi takes this one for the experience. Its customers consistently praise the personal, attentive service, and its plans bundle medication, provider consultations, and ongoing monitoring into transparent pricing with no surprise charges. Ro is the better pick if brand track record matters most — it's a large, established telehealth company with an integrated in-house pharmacy.",
   verdictWinnerPoints: [
@@ -1839,9 +1840,10 @@ const embodyRoBattle: BattleData = {
   slug: "embody-vs-ro",
   provider1Id: "embody",
   provider2Id: "ro",
-  title: "Embody vs Ro: Which GLP-1 Provider Wins in 2026?",
+  title: "Ro vs Embody: Which GLP-1 Provider Wins in 2026?",
+  matchupLabel: "Ro vs Embody",
   subtitle: "We compared pricing, shipping speed, medical model, and overall value to see which GLP-1 provider comes out ahead.",
-  description: "Embody vs Ro compared on pricing, shipping speed, GLP-1 medications, and value. See why Embody comes out on top for affordable, fast GLP-1 treatment in 2026.",
+  description: "Ro vs Embody compared on pricing, shipping speed, GLP-1 medications, and value. See why Embody comes out on top for affordable, fast GLP-1 treatment in 2026.",
   intro: "Embody and Ro are both fully online providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established telehealth brand with an integrated in-house pharmacy and licensed providers reviewing every plan. Embody is weight-loss-focused with flat, transparent pricing — $69/month for compounded semaglutide and $119 for tirzepatide — free 1-2 day shipping, and LegitScript-certified 503A pharmacies. Here's how they compare.",
   verdict: "Both are legitimate online GLP-1 providers — but Embody takes this one on price and speed. It offers flat, transparent pricing ($69/$119), free 1-2 day tracked shipping, LegitScript-certified 503A pharmacies, and a full refund if you're not approved. Ro is the better pick if you value a large, established brand with an integrated in-house pharmacy.",
   verdictWinnerPoints: [
@@ -1926,9 +1928,10 @@ const trimrxRoBattle: BattleData = {
   slug: "trimrx-vs-ro",
   provider1Id: "trimrx",
   provider2Id: "ro",
-  title: "TrimRX vs Ro: Which GLP-1 Provider Wins in 2026?",
+  title: "Ro vs TrimRX: Which GLP-1 Provider Wins in 2026?",
+  matchupLabel: "Ro vs TrimRX",
   subtitle: "We compared pricing, plan flexibility, medical support, and overall value to see which GLP-1 provider comes out ahead.",
-  description: "TrimRX vs Ro compared on pricing, plan flexibility, GLP-1 medications, and value. See why TrimRX wins on affordable, flexible GLP-1 treatment in 2026.",
+  description: "Ro vs TrimRX compared on pricing, plan flexibility, GLP-1 medications, and value. See why TrimRX wins on affordable, flexible GLP-1 treatment in 2026.",
   intro: "TrimRX and Ro are both online providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established telehealth brand with an integrated in-house pharmacy and licensed providers reviewing every plan. TrimRX is built around affordable access to GLP-1 programs, with competitive pricing, multi-month discounts, and flexible plans that carry no long-term commitment. Here's how they compare.",
   verdict: "Both are credible online GLP-1 providers — but TrimRX takes this one on value and flexibility. Its plans are built around affordability, with competitive pricing, multi-month discounts, and no long-term commitment, plus ongoing clinical guidance. Ro is the better pick if you value a large, established brand with an integrated in-house pharmacy.",
   verdictWinnerPoints: [
@@ -2093,6 +2096,94 @@ const trimrxWellmedrBattle: BattleData = {
     { feature: "Focus", provider1Value: "Dedicated weight-loss focus", provider2Value: "Broad multi-service platform", highlight: "provider1" },
     { feature: "Commitment", provider1Value: "No long-term commitment", provider2Value: "Message provider anytime", highlight: "both" },
     { feature: "Beyond Weight Loss", provider1Value: "GLP-1 weight loss focus", provider2Value: "TRT, NAD+, hair, sexual health", highlight: "provider2" },
+  ],
+};
+
+const roWellmedrBattle: BattleData = {
+  slug: "ro-vs-wellmedr",
+  provider1Id: "wellmedr",
+  provider2Id: "ro",
+  title: "Ro vs WellMedr: Which GLP-1 Provider Wins in 2026?",
+  matchupLabel: "Ro vs WellMedr",
+  subtitle: "We compared medications, intro pricing, range of care, and brand track record to see which GLP-1 provider comes out ahead.",
+  description: "Ro vs WellMedr compared on GLP-1 medications, intro pricing, range of care, and brand track record. See why WellMedr comes out on top for a richer treatment toolkit in 2026.",
+  intro: "WellMedr and Ro are both online providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established telehealth brand with an integrated in-house pharmacy and licensed providers reviewing every plan. WellMedr is an AI-driven platform that pairs compounded GLP-1/GIP (tirzepatide) — with 50% off your first month — and a semaglutide + NAD+/B12 microdose, with board-certified specialists and a broader longevity range. Here's how they compare.",
+  verdict: "Both are legitimate online GLP-1 providers — but WellMedr edges ahead here for a richer treatment toolkit and intro value. It offers compounded GLP-1/GIP (tirzepatide) at 50% off your first month, a unique semaglutide + NAD+/B12 microdose, and board-certified specialists who tailor your plan across a broader longevity platform. Ro is the better pick if brand track record and an integrated in-house pharmacy matter most to you.",
+  verdictWinnerPoints: [
+    "Tirzepatide GLP-1/GIP — 50% off your first month",
+    "Unique semaglutide + NAD+/B12 microdose option",
+    "Board-certified specialists tailor your plan",
+  ],
+  verdictLoserPoints: [
+    "A large, well-established telehealth brand",
+    "Integrated in-house pharmacy fulfillment",
+    "Licensed providers review every plan",
+  ],
+  winnerId: "wellmedr",
+  categories: [
+    {
+      name: "Medications & Formulations",
+      winner: "provider1",
+      explanation: "WellMedr's line stands out: compounded GLP-1/GIP tirzepatide plus a unique Energy & Focus+ microdose that pairs semaglutide with NAD+ and Vitamin B12. Ro offers solid, standard options — compounded semaglutide and brand-name GLP-1s reviewed by licensed providers. For a broader, enhanced medication toolkit, WellMedr comes out ahead.",
+      supportingPoints: [
+        "Tirzepatide GLP-1/GIP treatment (WellMedr)",
+        "Semaglutide + NAD+/B12 microdose (WellMedr)",
+        "Compounded semaglutide + brand-name GLP-1 (Ro)",
+        "Licensed provider review (both)",
+      ],
+    },
+    {
+      name: "Intro Pricing & Value",
+      winner: "provider1",
+      explanation: "WellMedr promotes a clear intro offer — 50% off your first month on its compounded GLP-1/GIP treatment. Ro is competitively priced, but costs can vary by the medication and plan you choose, and it doesn't lead with a first-month discount. On upfront intro value, WellMedr edges ahead — though neither lists its ongoing weight-loss price up front.",
+      supportingPoints: [
+        "50% off your first month (WellMedr)",
+        "Costs vary by medication/plan (Ro)",
+        "No insurance required (both)",
+        "Ongoing price not listed up front (both)",
+      ],
+    },
+    {
+      name: "Range Beyond Weight Loss",
+      winner: "provider1",
+      explanation: "WellMedr is a broader longevity platform — alongside GLP-1 it offers TRT, NAD+, hair, and sexual health, so weight loss can be one part of a wider wellness plan. Ro spans several telehealth categories too, but its weight-loss program is more of a focused, standalone offering. For patients who want weight loss plus longevity, WellMedr has more range.",
+      supportingPoints: [
+        "TRT, NAD+, hair, sexual health (WellMedr)",
+        "GLP-1 + NAD+/B12 formulations (WellMedr)",
+        "Focused weight-loss program (Ro)",
+        "100% online care (both)",
+      ],
+    },
+    {
+      name: "Brand & Pharmacy",
+      winner: "provider2",
+      explanation: "Ro's advantage is trust and fulfillment. It's a large, well-established telehealth brand with an integrated in-house pharmacy, so prescriptions are filled and shipped within its own system, with licensed providers reviewing every plan. WellMedr uses US state-licensed pharmacies following FDA compounding standards, with standard delivery around 3-5 business days.",
+      supportingPoints: [
+        "Large, established, trusted brand (Ro)",
+        "Integrated in-house pharmacy (Ro)",
+        "US state-licensed compounding pharmacies (WellMedr)",
+        "Standard delivery ~3-5 business days (WellMedr)",
+      ],
+    },
+    {
+      name: "Medical Support",
+      winner: "tie",
+      explanation: "Both put qualified providers behind treatment. Ro has licensed providers review every case with ongoing dosage adjustments; WellMedr says board-certified specialists tailor your plan, and you can message your provider anytime through your account.",
+      supportingPoints: [
+        "Licensed providers review every case (Ro)",
+        "Ongoing dosage adjustments (Ro)",
+        "Board-certified specialists tailor your plan (WellMedr)",
+        "Message your provider anytime (WellMedr)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "GLP-1 Medications", provider1Value: "Tirzepatide (GLP-1/GIP) + semaglutide/NAD+/B12 microdose", provider2Value: "Compounded semaglutide + brand-name GLP-1", highlight: "provider1" },
+    { feature: "Intro Offer", provider1Value: "50% off your first month", provider2Value: "Pricing varies by medication/plan", highlight: "provider1" },
+    { feature: "Beyond Weight Loss", provider1Value: "TRT, NAD+, hair, sexual health", provider2Value: "Weight-loss-focused telehealth", highlight: "provider1" },
+    { feature: "Brand & Pharmacy", provider1Value: "US state-licensed compounding pharmacies", provider2Value: "Established brand, integrated in-house pharmacy", highlight: "provider2" },
+    { feature: "Medical Visit", provider1Value: "100% online; message provider anytime", provider2Value: "100% online; licensed provider review", highlight: "both" },
+    { feature: "Shipping", provider1Value: "Standard 3-5 business days, discreet packaging", provider2Value: "In-house pharmacy fulfillment", highlight: "provider2" },
   ],
 };
 
@@ -2267,9 +2358,10 @@ function buildInitialConfig(): SiteConfig {
         slug: "altrx-vs-ro",
         provider1Id: "altrx",
         provider2Id: "ro",
-        title: "altRx vs Ro (2026): Pricing, GLP-1 Meds & Which Wins",
+        title: "Ro vs altRx (2026): Pricing, GLP-1 Meds & Which Wins",
+        matchupLabel: "Ro vs altRx",
         subtitle: "Compare pricing, medication options, medical support, convenience, and overall value side by side.",
-        description: "altRx vs Ro compared for 2026 — pricing, GLP-1 medication options, medical support, and overall value. See which weight loss provider comes out ahead, and why.",
+        description: "Ro vs altRx compared for 2026 — pricing, GLP-1 medication options, medical support, and overall value. See which weight loss provider comes out ahead, and why.",
         intro: "ALT RX and Ro are two of the most popular telehealth weight loss providers offering GLP-1 medications. Both platforms connect patients with licensed providers and deliver prescription medication to your door — but they differ in pricing structure, level of personalization, medication options, and overall patient experience. Here's how they compare across the categories that matter most.",
         verdict: "ALT RX edges ahead with its transparent all-inclusive pricing, wider medication selection, and more personalized treatment approach. Ro remains a strong choice for those who value brand reputation and a streamlined, no-frills process. Both are solid options — your best pick depends on whether you prioritize personalization (ALT RX) or simplicity (Ro).",
         verdictWinnerPoints: [
@@ -2310,6 +2402,7 @@ function buildInitialConfig(): SiteConfig {
       embodyRoBattle,
       trimrxRoBattle,
       trimrxWellmedrBattle,
+      roWellmedrBattle,
     ],
     sidebars: [
       {
