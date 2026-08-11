@@ -329,7 +329,7 @@ export default async function BattlePage({
                   </div>
                 )}
               <div
-                className={`relative rounded-2xl border bg-white px-6 pb-6 pt-7 shadow-sm ${isWinner ? "border-emerald-300" : "border-gray-200"}`}
+                className={`relative flex h-full flex-col rounded-2xl border bg-white px-6 pb-6 pt-7 shadow-sm ${isWinner ? "border-emerald-300" : "border-gray-200"}`}
               >
                 {isWinner && (
                   <div className="absolute -top-3 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-full bg-emerald-500 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-white shadow-sm">
@@ -373,7 +373,7 @@ export default async function BattlePage({
                   providerSlug={provider.id}
                   pageType="battle"
                   sourceFlow="battle_page"
-                  className="flex h-[44px] w-full items-center justify-center gap-1.5 rounded-xl bg-[#0C4B75] text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]"
+                  className="mt-auto flex h-[44px] w-full items-center justify-center gap-1.5 rounded-xl bg-[#0C4B75] text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]"
                 >
                   Visit {provider.name}
                   <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
