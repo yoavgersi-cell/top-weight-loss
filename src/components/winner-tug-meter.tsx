@@ -72,7 +72,7 @@ export function WinnerTugMeter({
               {pct}%
             </span>
             <span className="mt-1.5 text-[10px] font-bold uppercase tracking-[0.07em] text-gray-400">
-              Our pick
+              advantage
             </span>
           </div>
         </div>
@@ -80,7 +80,7 @@ export function WinnerTugMeter({
         {/* Verdict + CTA */}
         <div className="min-w-0 flex-1">
           <p className="text-[11.5px] font-bold uppercase tracking-[0.09em] text-gray-400">
-            The Verdict
+            Who we&rsquo;d pick
           </p>
 
           <div
@@ -99,7 +99,7 @@ export function WinnerTugMeter({
               revealed ? "opacity-100" : "opacity-0"
             }`}
           >
-            {winnerName} takes this matchup over {loserName} on {advantage}% of the head-to-head score.
+            After comparing both, we&rsquo;d go with {winnerName} — it came out ahead of {loserName} on most of what matters.
           </p>
 
           <div
@@ -133,7 +133,7 @@ export function WinnerTugMeter({
               Trustpilot reviews
             </span>
             <span className="text-gray-300">·</span>
-            <span>Our in-house research</span>
+            <span>Our own research</span>
           </div>
         </div>
       </div>

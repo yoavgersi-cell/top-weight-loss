@@ -240,7 +240,7 @@ export default async function ArticlesPage() {
               </h2>
               <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-gray-500">
                 Can&apos;t decide between two providers? See how they stack up
-                side by side — pricing, medications, support, and our verdict.
+                side by side on pricing, medications, and support — and which one we&apos;d pick.
               </p>
             </div>
 

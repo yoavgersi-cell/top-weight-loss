@@ -295,14 +295,14 @@ export default async function BattlePage({
           {/* ───── EXPERT INTRO ───── */}
           <div className="mb-12 max-w-[760px]">
             <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
-              Our Take
+              Here&rsquo;s the short version
             </p>
             <p className="text-[16px] leading-[1.85] text-gray-600">
               {battle.intro}
             </p>
             {config.experts && config.experts.length > 0 && (
               <div className="mt-5">
-                <ExpertByline expert={config.experts[0]} label="Analysis by" />
+                <ExpertByline expert={config.experts[0]} label="Written by" />
               </div>
             )}
           </div>
@@ -482,7 +482,7 @@ export default async function BattlePage({
                 <div className="flex flex-col items-start justify-center p-6 sm:p-10 lg:p-12">
                   <span className="mb-4 inline-flex items-center gap-1.5 rounded-full bg-emerald-600 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-wider text-white">
                     <Trophy className="h-3.5 w-3.5" strokeWidth={2.5} />
-                    Our Winner
+                    Our pick
                   </span>
 
                   <div className="mb-4 flex h-[38px] w-[150px] items-center">
@@ -677,7 +677,7 @@ export default async function BattlePage({
           <div className="mb-14 overflow-hidden rounded-2xl border border-gray-200 bg-white">
             <div className="p-6 sm:p-8">
               <div className="mb-5 flex flex-wrap items-center gap-3">
-                <h2 className="text-[22px] font-bold text-[#191919]">The Bottom Line</h2>
+                <h2 className="text-[22px] font-bold text-[#191919]">So, which should you pick?</h2>
                 {hasExplicitWinner && (
                   <span className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-[12px] font-bold text-emerald-700">
                     <Trophy className="h-3.5 w-3.5" strokeWidth={2.5} />
