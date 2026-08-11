@@ -106,23 +106,8 @@ export function TrustpilotCarousel({
   const perPage = 4;
   const pageCount = Math.ceil(total / perPage);
 
-  // Auto-advance mobile carousel
-  useEffect(() => {
-    if (total <= 1) return;
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % total);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, [total]);
-
-  // Auto-advance desktop pages (each shows up to 4 reviews)
-  useEffect(() => {
-    if (pageCount <= 1) return;
-    const timer = setInterval(() => {
-      setPage((prev) => (prev + 1) % pageCount);
-    }, 6000);
-    return () => clearInterval(timer);
-  }, [pageCount]);
+  // Auto-advance is intentionally disabled — the carousel only moves when the
+  // reader uses the arrows or dots (no self-scrolling animation).
 
   // Scroll mobile carousel
   useEffect(() => {
