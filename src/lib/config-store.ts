@@ -101,6 +101,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
         name: "Steve Toney",
         location: "US",
         rating: 5,
+        date: "Aug 3, 2026",
       },
       {
         title: "I opened the first box yesterday",
@@ -108,6 +109,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
         name: "Lisa Clark",
         location: "US",
         rating: 5,
+        date: "Jul 18, 2026",
       },
       {
         title: "Excellent customer service",
@@ -128,6 +130,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
         name: "Martin",
         location: "US",
         rating: 5,
+        date: "Aug 7, 2026",
       },
       {
         title: "Friendly and helpful",
@@ -135,6 +138,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
         name: "Richard",
         location: "US",
         rating: 5,
+        date: "Aug 7, 2026",
       },
       {
         title: "The phone call was very thorough",
@@ -142,6 +146,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
         name: "Randy Burton",
         location: "US",
         rating: 5,
+        date: "Aug 7, 2026",
       },
       {
         title: "The feedback has been overwhelmingly positive",
@@ -149,6 +154,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
         name: "Traci Frazier",
         location: "US",
         rating: 5,
+        date: "Aug 7, 2026",
       },
       {
         title: "The personal service",
