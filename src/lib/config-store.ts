@@ -2622,10 +2622,10 @@ function buildInitialConfig(): SiteConfig {
         slug: "altrx-vs-ro",
         provider1Id: "altrx",
         provider2Id: "ro",
-        title: "altRx vs Ro (2026): Pricing, GLP-1 Meds & Which Wins",
+        title: "altRx vs Ro: Which GLP-1 Provider Wins in 2026?",
         matchupLabel: "altRx vs Ro",
         subtitle: "altRx vs Ro, compared on pricing, medication options, medical support, convenience, and overall value.",
-        description: "altRx vs Ro compared for 2026 — pricing, GLP-1 medication options, medical support, and overall value. See which weight loss provider comes out ahead, and why.",
+        description: "altRx vs Ro compared on pricing, GLP-1 medication options, medical support, and value. See why altRx comes out on top in 2026.",
         intro: "altRx and Ro are two of the most popular telehealth weight loss providers offering GLP-1 medications. Both platforms connect patients with licensed providers and deliver prescription medication to your door — but they differ in pricing structure, level of personalization, medication options, and overall patient experience. Here's how they compare across the categories that matter most.",
         verdict: "altRx edges ahead with its transparent all-inclusive pricing, wider medication selection, and more personalized treatment approach. Ro remains a strong choice for those who value brand reputation and a streamlined, no-frills process. Both are solid options — your best pick depends on whether you prioritize personalization (altRx) or simplicity (Ro).",
         verdictWinnerPoints: [
