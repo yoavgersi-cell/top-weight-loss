@@ -13,7 +13,6 @@ import { LastUpdated } from "@/components/last-updated";
 import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { TrustpilotRating } from "@/components/trustpilot-rating";
-import { WinnerTugMeter } from "@/components/winner-tug-meter";
 import { ExpertByline } from "@/components/expert-byline";
 
 export const revalidate = 60;
@@ -176,14 +175,6 @@ export default async function BattlePage({
   const loser = winner.id === p1.id ? p2 : p1;
   const hasExplicitWinner = battle.winnerId === p1.id || battle.winnerId === p2.id;
 
-  // Advantage % for the verdict meter, derived from category winners
-  const winnerKey = winner.id === p1.id ? "provider1" : "provider2";
-  const catWins = battle.categories.filter((c) => c.winner === winnerKey).length;
-  const catTies = battle.categories.filter((c) => c.winner === "tie").length;
-  const catTotal = battle.categories.length || 1;
-  const rawAdvantage = Math.round(((catWins + catTies * 0.5) / catTotal) * 100);
-  const advantage = Math.min(88, Math.max(68, rawAdvantage || 75));
-
   // Related comparisons — other battles featuring either provider (internal links)
   const relatedBattles = (config.battles ?? [])
     .filter(
@@ -288,17 +279,6 @@ export default async function BattlePage({
         </section>
 
         <div className="mx-auto max-w-[1100px] px-4 py-10 sm:px-6">
-          {/* ───── VERDICT METER (above the fold) ───── */}
-          {hasExplicitWinner && (
-            <WinnerTugMeter
-              winnerName={winner.name}
-              loserName={loser.name}
-              advantage={advantage}
-              winnerHref={winner.affiliateUrl}
-              winnerSlug={winner.id}
-            />
-          )}
-
           {/* ───── EXPERT INTRO ───── */}
           <div className="mb-12 max-w-[760px]">
             <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
