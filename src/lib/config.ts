@@ -238,7 +238,7 @@ export interface LandingPageData {
 
 // Stable fallback "last updated" date for schema when an item has no CMS
 // updatedAt. Avoids emitting today's date on every request (fake freshness).
-export const CONTENT_LAST_UPDATED = "2026-08-11";
+export const CONTENT_LAST_UPDATED = "2026-08-12";
 
 export interface SiteConfig {
   providers: Provider[];
