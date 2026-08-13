@@ -554,7 +554,67 @@ const defaultReviews: ReviewData[] = [
       "Anyone who wants brand-name options (Zepbound, Wegovy) too",
       "Those who prefer flexible, Buy Now, Pay Later payment"
     ],
-    finalVerdict: "altRx lives up to its \"most affordable\" positioning, with transparent $89-$149/month compounded pricing, brand-name options for those who want them, and flexible Buy Now, Pay Later. It's a strong pick if price and selection matter most — just note that shipping runs about 5-7 days versus the fastest providers."
+    finalVerdict: "altRx lives up to its \"most affordable\" positioning, with transparent $89-$149/month compounded pricing, brand-name options for those who want them, and flexible Buy Now, Pay Later. It's a strong pick if price and selection matter most — just note that shipping runs about 5-7 days versus the fastest providers.",
+    trustBadges: [
+      "Transparent pricing",
+      "No insurance required",
+      "Buy Now, Pay Later",
+      "Clinician-guided support",
+    ],
+    pricingPlans: [
+      {
+        name: "GLP-1",
+        medication: "Compounded Semaglutide",
+        cadence: "Weekly",
+        price: "$89",
+        regularPrice: "$199",
+        unit: "/month",
+        highlights: ["One simple injection per week", "In stock — no insurance required"],
+      },
+      {
+        name: "GLP-1 + GIP",
+        medication: "Compounded Tirzepatide",
+        cadence: "Weekly",
+        price: "$149",
+        regularPrice: "$299",
+        unit: "/month",
+        highlights: ["One simple injection per week", "In stock — no insurance required"],
+      },
+      {
+        name: "Zepbound",
+        medication: "Brand-name tirzepatide injection",
+        price: "$1,249",
+        unit: "/month",
+      },
+      {
+        name: "Ozempic",
+        medication: "Brand-name semaglutide injection",
+        price: "$1,149",
+        unit: "/month",
+      },
+      {
+        name: "Wegovy",
+        medication: "Brand-name semaglutide injection",
+        price: "$1,579",
+        unit: "/month",
+      },
+    ],
+    howItWorks: [
+      {
+        timing: "Free · ~2 minutes",
+        title: "Take the assessment",
+        detail: "See if you qualify in a couple of minutes — no pressure, no commitment, and 100% free.",
+      },
+      {
+        title: "Get your personalized plan",
+        detail: "A licensed clinician reviews your information and builds a treatment plan tailored to you.",
+      },
+      {
+        timing: "Free 5–7 day shipping",
+        title: "Start your journey",
+        detail: "Your treatment ships to your door, with ongoing support from licensed clinicians the whole way.",
+      },
+    ],
   },
   {
     slug: "noom",
@@ -668,7 +728,46 @@ const defaultReviews: ReviewData[] = [
       "Those who want flexibility without long-term commitments",
       "People looking for affordable medical weight loss"
     ],
-    finalVerdict: "TrimRX is a strong choice for anyone who wants access to GLP-1 medications without paying premium prices. While they may not have the brand recognition of larger competitors, their affordable pricing and flexible plans make medical weight loss accessible to a broader audience."
+    finalVerdict: "TrimRX is a strong choice for anyone who wants access to GLP-1 medications without paying premium prices. While they may not have the brand recognition of larger competitors, their affordable pricing and flexible plans make medical weight loss accessible to a broader audience.",
+    trustBadges: [
+      "HIPAA compliant",
+      "Made in USA",
+      "Free tracked delivery",
+      "Unlimited check-ins",
+    ],
+    pricingPlans: [
+      {
+        name: "GLP-1",
+        medication: "Compounded Semaglutide",
+        price: "$179",
+        regularPrice: "$299",
+        unit: "/first month",
+        highlights: ["Proven, effective, more affordable", "Free consultation & delivery included"],
+      },
+      {
+        name: "GLP-1 + GIP",
+        medication: "Compounded Tirzepatide",
+        price: "$259",
+        unit: "/month",
+        highlights: ["Faster, dual-action results", "Custom dosing with unlimited check-ins"],
+      },
+    ],
+    howItWorks: [
+      {
+        timing: "Free · ~2 minutes",
+        title: "Start your free 2-minute assessment",
+        detail: "Complete a quick quiz to see if you qualify for prescription weight loss medication — no cost, no obligation.",
+      },
+      {
+        title: "Get prescribed easily",
+        detail: "A qualified doctor reviews your responses. If more information is needed, a short telehealth call can be arranged.",
+      },
+      {
+        timing: "Free tracked shipping",
+        title: "Receive your medication",
+        detail: "Your prescription is delivered to your door with free tracked shipping — often as soon as the next day.",
+      },
+    ],
   },
   {
     slug: "shed",
@@ -744,7 +843,59 @@ const defaultReviews: ReviewData[] = [
       "Anyone who prefers a fully online process",
       "Those who want fast shipping and simple flat pricing"
     ],
-    finalVerdict: "Embody is a strong choice for affordable, doctor-prescribed GLP-1 treatment. With flat $69-$119/month pricing, fast free shipping, a fully online process, and LegitScript certification with US-based 503A pharmacies, it removes most of the cost and friction from getting started — a great fit for people who want a simple, transparent way to begin GLP-1 treatment."
+    finalVerdict: "Embody is a strong choice for affordable, doctor-prescribed GLP-1 treatment. With flat $69-$119/month pricing, fast free shipping, a fully online process, and LegitScript certification with US-based 503A pharmacies, it removes most of the cost and friction from getting started — a great fit for people who want a simple, transparent way to begin GLP-1 treatment.",
+    trustBadges: [
+      "Money-back guarantee",
+      "Free expedited delivery",
+      "No hidden fees",
+      "Doctor-led plans & coaching",
+    ],
+    pricingPlans: [
+      {
+        name: "GLP-1 Injections",
+        medication: "Compounded Semaglutide",
+        cadence: "Weekly",
+        price: "$69",
+        regularPrice: "$79",
+        unit: "/month",
+        highlights: ["One simple injection once a week", "No hidden fees — shipped to your door"],
+      },
+      {
+        name: "GLP-1 / GIP Injections",
+        medication: "Compounded Tirzepatide",
+        cadence: "Weekly",
+        price: "$119",
+        regularPrice: "$129",
+        unit: "/month",
+        highlights: ["One simple injection once a week", "No hidden fees — shipped to your door"],
+      },
+    ],
+    howItWorks: [
+      {
+        timing: "Today",
+        title: "Lock in flat monthly pricing",
+        detail: "Choose your plan — $69/month semaglutide or $119/month tirzepatide. Your price stays the same each month on the same medication and plan.",
+      },
+      {
+        timing: "In ~1 day",
+        title: "A licensed provider writes your prescription",
+        detail: "Complete a short online health intake; an Embody provider reviews it and, if appropriate, writes your prescription.",
+      },
+      {
+        timing: "Within ~1 day",
+        title: "Your order ships from a licensed US pharmacy",
+      },
+      {
+        timing: "Free 1–2 day delivery",
+        title: "Get your medication",
+        detail: "Discreet, expedited shipping delivered to your door at no extra cost.",
+      },
+      {
+        timing: "Ongoing",
+        title: "Begin treatment with nursing-staff support",
+        detail: "Continued care and support from Embody's nursing staff whenever you need it.",
+      },
+    ],
   },
   {
     slug: "wellmedr",
@@ -858,7 +1009,29 @@ const defaultReviews: ReviewData[] = [
       "Those new to medical weight loss",
       "Anyone looking for an easy-to-use online platform"
     ],
-    finalVerdict: "Medvi is a good choice for people who want a no-fuss medical weight loss experience. Their streamlined process and transparent pricing remove many of the barriers that can make starting a weight loss program feel overwhelming."
+    finalVerdict: "Medvi is a good choice for people who want a no-fuss medical weight loss experience. Their streamlined process and transparent pricing remove many of the barriers that can make starting a weight loss program feel overwhelming.",
+    trustBadges: [
+      "HSA/FSA approved",
+      "No membership or hidden fees",
+      "Free shipping",
+      "Free dietician & care coaching",
+    ],
+    pricingPlans: [
+      {
+        name: "GLP-1 Injections",
+        medication: "Prescription GLP-1 (semaglutide)",
+        price: "$179",
+        unit: "/month",
+        highlights: ["One simple injection per week", "No membership or hidden fees — everything included"],
+      },
+      {
+        name: "GLP-1 Tablets",
+        medication: "Oral dissolving GLP-1",
+        price: "$249",
+        unit: "/month",
+        highlights: ["One dissolvable tablet per day", "No injections required"],
+      },
+    ],
   },
   {
     slug: "sprout",
@@ -3086,8 +3259,22 @@ export async function getConfig(): Promise<SiteConfig> {
           reviews: (() => {
             const savedReviews = saved.reviews && saved.reviews.length > 0 ? saved.reviews : [];
             const savedSlugs = new Set(savedReviews.map((r) => r.slug));
+            // Backfill code-controlled rich fields (pricing plans, how-it-works,
+            // trust badges) onto CMS-saved reviews that predate them — same
+            // "CMS wins, seed is a backfill" pattern used for ratings above.
+            const seedBySlug = new Map(initial.reviews.map((r) => [r.slug, r]));
+            const mergedSaved = savedReviews.map((r) => {
+              const seed = seedBySlug.get(r.slug);
+              if (!seed) return r;
+              return {
+                ...r,
+                pricingPlans: r.pricingPlans ?? seed.pricingPlans,
+                howItWorks: r.howItWorks ?? seed.howItWorks,
+                trustBadges: r.trustBadges ?? seed.trustBadges,
+              };
+            });
             const newDefaults = initial.reviews.filter((r) => !savedSlugs.has(r.slug));
-            return [...savedReviews, ...newDefaults];
+            return [...mergedSaved, ...newDefaults];
           })(),
           articles: (() => {
             const savedArticles = saved.articles && saved.articles.length > 0 ? saved.articles : [];

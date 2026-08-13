@@ -163,6 +163,20 @@ export default async function ReviewPage({
   const editorialFullStars = Math.floor(editorialStars);
   const editorialHasHalf = editorialStars % 1 >= 0.5;
 
+  // Lowest listed plan price → schema offers (price eligibility in rich results).
+  const planPrices = (review.pricingPlans ?? [])
+    .map((p) => parseInt(p.price.replace(/[^0-9]/g, ""), 10))
+    .filter((n) => Number.isFinite(n) && n > 0);
+  const pricingOffers =
+    planPrices.length > 0
+      ? {
+          "@type": "AggregateOffer",
+          priceCurrency: "USD",
+          lowPrice: Math.min(...planPrices),
+          offerCount: planPrices.length,
+        }
+      : null;
+
   // JSON-LD
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -182,7 +196,12 @@ export default async function ReviewPage({
       },
     }),
     publisher: { "@type": "Organization", name: "topweightloss.io", url: "https://www.topweightloss.io" },
-    itemReviewed: { "@type": "Product", name: provider.name, description: review.shortSummary },
+    itemReviewed: {
+      "@type": "Product",
+      name: provider.name,
+      description: review.shortSummary,
+      ...(pricingOffers && { offers: pricingOffers }),
+    },
     ...(editorial && {
       reviewRating: {
         "@type": "Rating",
@@ -310,18 +329,29 @@ export default async function ReviewPage({
       <div className="mx-auto max-w-[1000px] px-4 py-8 sm:px-6">
         {/* Quick summary strip */}
         <div className="mb-8 flex flex-wrap items-center gap-4 rounded-xl border border-gray-200 bg-white px-5 py-4 sm:gap-6">
-          <div className="flex items-center gap-2 text-[13px] text-gray-600">
-            <Shield className="h-4 w-4 text-[#0C4B75]" strokeWidth={1.5} />
-            Licensed Providers
-          </div>
-          <div className="flex items-center gap-2 text-[13px] text-gray-600">
-            <Clock className="h-4 w-4 text-[#0C4B75]" strokeWidth={1.5} />
-            Fast Home Delivery
-          </div>
-          <div className="flex items-center gap-2 text-[13px] text-gray-600">
-            <Users className="h-4 w-4 text-[#0C4B75]" strokeWidth={1.5} />
-            Ongoing Support
-          </div>
+          {review.trustBadges && review.trustBadges.length > 0 ? (
+            review.trustBadges.map((badge) => (
+              <div key={badge} className="flex items-center gap-2 text-[13px] text-gray-600">
+                <Check className="h-4 w-4 text-emerald-500" strokeWidth={2} />
+                {badge}
+              </div>
+            ))
+          ) : (
+            <>
+              <div className="flex items-center gap-2 text-[13px] text-gray-600">
+                <Shield className="h-4 w-4 text-[#0C4B75]" strokeWidth={1.5} />
+                Licensed Providers
+              </div>
+              <div className="flex items-center gap-2 text-[13px] text-gray-600">
+                <Clock className="h-4 w-4 text-[#0C4B75]" strokeWidth={1.5} />
+                Fast Home Delivery
+              </div>
+              <div className="flex items-center gap-2 text-[13px] text-gray-600">
+                <Users className="h-4 w-4 text-[#0C4B75]" strokeWidth={1.5} />
+                Ongoing Support
+              </div>
+            </>
+          )}
         </div>
 
         {/* Intro */}
@@ -399,10 +429,75 @@ export default async function ReviewPage({
 
         {/* Pricing */}
         <Section title="Pricing">
+          {review.pricingPlans && review.pricingPlans.length > 0 && (
+            <div className="mb-5 grid gap-4 sm:grid-cols-2">
+              {review.pricingPlans.map((plan) => (
+                <div key={plan.name} className="rounded-xl border border-gray-200 bg-gray-50/60 p-5">
+                  <div className="flex items-center justify-between gap-2">
+                    <h4 className="text-[15px] font-bold text-[#191919]">{plan.name}</h4>
+                    {plan.cadence && (
+                      <span className="rounded-full bg-[#0C4B75]/10 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-[#0C4B75]">
+                        {plan.cadence}
+                      </span>
+                    )}
+                  </div>
+                  <p className="mt-0.5 text-[13px] text-gray-500">{plan.medication}</p>
+                  <div className="mt-3 flex items-baseline gap-2">
+                    <span className="text-[28px] font-extrabold leading-none text-[#191919]">{plan.price}</span>
+                    {plan.unit && <span className="text-[14px] font-semibold text-gray-500">{plan.unit}</span>}
+                    {plan.regularPrice && (
+                      <span className="text-[15px] font-medium text-gray-400 line-through">{plan.regularPrice}</span>
+                    )}
+                  </div>
+                  {plan.regularPrice && (
+                    <span className="mt-2 inline-block rounded-full bg-emerald-50 px-2.5 py-0.5 text-[11px] font-bold text-emerald-700">
+                      Sale price
+                    </span>
+                  )}
+                  {plan.highlights && plan.highlights.length > 0 && (
+                    <ul className="mt-3 space-y-1.5">
+                      {plan.highlights.map((h) => (
+                        <li key={h} className="flex items-start gap-2 text-[13px] text-gray-600">
+                          <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2} />
+                          {h}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
           <p className="text-[15px] leading-[1.75] text-gray-600">
             {review.pricingSummary}
           </p>
         </Section>
+
+        {/* How it works */}
+        {review.howItWorks && review.howItWorks.length > 0 && (
+          <Section title={`How ${provider.name} Works`}>
+            <ol className="space-y-4">
+              {review.howItWorks.map((step, i) => (
+                <li key={i} className="flex gap-4">
+                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#0C4B75] text-[13px] font-bold text-white">
+                    {i + 1}
+                  </div>
+                  <div>
+                    {step.timing && (
+                      <span className="text-[11px] font-semibold uppercase tracking-wide text-[#0C4B75]">
+                        {step.timing}
+                      </span>
+                    )}
+                    <p className="text-[15px] font-bold text-[#191919]">{step.title}</p>
+                    {step.detail && (
+                      <p className="mt-0.5 text-[14px] leading-[1.65] text-gray-600">{step.detail}</p>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </Section>
+        )}
 
         {/* Pros & Cons */}
         <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
