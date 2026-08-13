@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, X, ArrowRight, Users, Clock, Shield } from "lucide-react";
+import { Check, X, ArrowRight, Users, Clock, Shield, Star } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED } from "@/lib/config";
+import { cn } from "@/lib/utils";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
@@ -148,6 +149,20 @@ export default async function ReviewPage({
   const legit = REVIEW_LEGIT[slug];
   const reviewer = config.experts?.[0];
 
+  // Site's own editorial rating for this provider (same scoring shown on the
+  // homepage), keyed off its ranking position. Surfaced visibly below and fed
+  // into the Review schema's reviewRating so the page is eligible for star
+  // rich snippets — a major CTR lever on review SERPs.
+  const rankIndex = config.ranking.providerOrder.indexOf(provider.id);
+  const editorial =
+    rankIndex >= 0
+      ? config.ranking.positions[rankIndex] ??
+        config.ranking.positions[config.ranking.positions.length - 1]
+      : null;
+  const editorialStars = editorial ? editorial.score / 2 : 0;
+  const editorialFullStars = Math.floor(editorialStars);
+  const editorialHasHalf = editorialStars % 1 >= 0.5;
+
   // JSON-LD
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -168,6 +183,14 @@ export default async function ReviewPage({
     }),
     publisher: { "@type": "Organization", name: "topweightloss.io", url: "https://www.topweightloss.io" },
     itemReviewed: { "@type": "Product", name: provider.name, description: review.shortSummary },
+    ...(editorial && {
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: editorial.score,
+        bestRating: 10,
+        worstRating: 1,
+      },
+    }),
   };
 
   const breadcrumbSchema = {
@@ -241,6 +264,32 @@ export default async function ReviewPage({
                   {provider.tagline}
                 </p>
                 <LastUpdated date={review.updatedAt || CONTENT_LAST_UPDATED} className="mt-1" />
+                {editorial && (
+                  <div className="mt-2 flex items-center gap-2">
+                    <div className="flex gap-0.5">
+                      {Array.from({ length: 5 }).map((_, i) => (
+                        <Star
+                          key={i}
+                          className={cn(
+                            "h-4 w-4",
+                            i < editorialFullStars
+                              ? "fill-[#FDB515] text-[#FDB515]"
+                              : i === editorialFullStars && editorialHasHalf
+                                ? "fill-[#FDB515]/50 text-[#FDB515]"
+                                : "fill-gray-300 text-gray-300"
+                          )}
+                          strokeWidth={0}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-[14px] font-bold text-[#191919]">
+                      {editorial.score}/10
+                    </span>
+                    <span className="text-[13px] text-gray-500">
+                      {editorial.label} — our rating
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
             <ProviderCta
