@@ -55,14 +55,30 @@ export async function generateMetadata({
   const battle = (config.battles ?? []).find((b) => b.slug === battleSlug);
   if (!battle) return { title: "Not Found" };
 
+  // Reverse-pair canonicalization: if another battle compares the same two
+  // providers in the opposite order (e.g. altrx-vs-noom and noom-vs-altrx),
+  // both target the same query intent and split ranking signals. Point every
+  // page for a given provider pair at one deterministic canonical — the
+  // alphabetically-first slug — so Google consolidates them into one result.
+  const samePairSlugs = (config.battles ?? [])
+    .filter(
+      (b) =>
+        (b.provider1Id === battle.provider1Id && b.provider2Id === battle.provider2Id) ||
+        (b.provider1Id === battle.provider2Id && b.provider2Id === battle.provider1Id)
+    )
+    .map((b) => b.slug)
+    .sort();
+  const canonicalSlug = samePairSlugs[0] ?? battle.slug;
+  const canonicalUrl = `https://www.topweightloss.io/${canonicalSlug}`;
+
   return {
     title: battle.title,
     description: battle.description,
-    alternates: { canonical: `https://www.topweightloss.io/${battle.slug}` },
+    alternates: { canonical: canonicalUrl },
     openGraph: {
       title: battle.title,
       description: battle.description,
-      url: `https://www.topweightloss.io/${battle.slug}`,
+      url: canonicalUrl,
       type: "article",
     },
   };
