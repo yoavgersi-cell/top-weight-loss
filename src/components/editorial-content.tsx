@@ -143,14 +143,14 @@ export function EditorialContent() {
       </ul>
       <p className="mb-8">
         Comparing providers side-by-side — like{" "}
-        <Link href="/trimrx-vs-ro" className="font-semibold text-[#0C4B75] hover:underline">
-          Ro vs TrimRX
+        <Link href="/altrx-vs-ro" className="font-semibold text-[#0C4B75] hover:underline">
+          altRx vs Ro
         </Link>,{" "}
-        <Link href="/ro-vs-wellmedr" className="font-semibold text-[#0C4B75] hover:underline">
-          Ro vs WellMedr
+        <Link href="/altrx-vs-trimrx" className="font-semibold text-[#0C4B75] hover:underline">
+          altRx vs TrimRX
         </Link>, or{" "}
-        <Link href="/embody-vs-wellmedr" className="font-semibold text-[#0C4B75] hover:underline">
-          embody vs WellMedr
+        <Link href="/embody-vs-ro" className="font-semibold text-[#0C4B75] hover:underline">
+          Embody vs Ro
         </Link>{" "}
         — can help you better understand the differences and make a more informed decision.
       </p>
