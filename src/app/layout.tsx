@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/favicon.png",
+    apple: "/apple-icon.png",
   },
   description:
     "Compare pricing, medications, medical support, and overall value across the top weight loss providers of 2026. Find the provider that best fits your goals.",
@@ -97,7 +98,7 @@ export default function RootLayout({
               name: "topweightloss.io",
               url: "https://www.topweightloss.io",
               areaServed: { "@type": "Country", name: "United States" },
-              logo: "https://www.topweightloss.io/favicon.png",
+              logo: "https://www.topweightloss.io/logo-mark.png",
               description: "Compare the top weight loss providers offering GLP-1 medications like semaglutide and tirzepatide. Expert reviews, pricing comparisons, and personalized provider matching.",
               sameAs: [],
             }),
