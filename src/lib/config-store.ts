@@ -3259,8 +3259,22 @@ export async function getConfig(): Promise<SiteConfig> {
           reviews: (() => {
             const savedReviews = saved.reviews && saved.reviews.length > 0 ? saved.reviews : [];
             const savedSlugs = new Set(savedReviews.map((r) => r.slug));
+            // Backfill code-controlled rich fields (pricing plans, how-it-works,
+            // trust badges) onto CMS-saved reviews that predate them — same
+            // "CMS wins, seed is a backfill" pattern used for ratings above.
+            const seedBySlug = new Map(initial.reviews.map((r) => [r.slug, r]));
+            const mergedSaved = savedReviews.map((r) => {
+              const seed = seedBySlug.get(r.slug);
+              if (!seed) return r;
+              return {
+                ...r,
+                pricingPlans: r.pricingPlans ?? seed.pricingPlans,
+                howItWorks: r.howItWorks ?? seed.howItWorks,
+                trustBadges: r.trustBadges ?? seed.trustBadges,
+              };
+            });
             const newDefaults = initial.reviews.filter((r) => !savedSlugs.has(r.slug));
-            return [...savedReviews, ...newDefaults];
+            return [...mergedSaved, ...newDefaults];
           })(),
           articles: (() => {
             const savedArticles = saved.articles && saved.articles.length > 0 ? saved.articles : [];
