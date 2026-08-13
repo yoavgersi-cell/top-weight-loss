@@ -139,7 +139,7 @@ export default async function ArticlePage({
       url: "https://www.topweightloss.io",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.topweightloss.io/favicon.svg",
+        url: "https://www.topweightloss.io/logo-mark.png",
       },
     },
     mainEntityOfPage: {
