@@ -1214,7 +1214,7 @@ const embodyAltrxBattle: Omit<BattleData, "slug"> = {
   title: "altRx vs embody: Which GLP-1 Provider Wins in 2026?",
   matchupLabel: "altRx vs embody",
   subtitle: "altRx vs embody, compared on pricing, GLP-1 medications, shipping speed, and medical support — to see which provider comes out ahead.",
-  description: "altRx vs embody compared on price, GLP-1 meds, and shipping. altRx from $89/mo with brand-name Zepbound & Wegovy; embody from $69/mo with free 1-2 day delivery. See which wins in 2026.",
+  description: "altRx vs embody compared on price, GLP-1 meds, and shipping. altRx from $89/mo with brand-name Zepbound & Wegovy; embody from $69/mo with free 1-2 day delivery. See why embody wins in 2026.",
   intro: "If you're deciding between altRx and embody, both are fully online GLP-1 weight-loss providers with transparent pricing and no insurance required. altRx bills itself as \"the #1 most affordable GLP-1 program\" from $89/month and stands out with a broader lineup — adding brand-name Zepbound and Wegovy plus Buy Now, Pay Later — while embody offers compounded semaglutide ($69/mo) and tirzepatide ($119/mo) with free 1-2 day shipping. Here's how altRx and embody compare on the factors that matter most.",
   verdict: "Both altRx and embody are legitimate, well-reviewed, fully online GLP-1 providers with transparent pricing and no insurance required — but embody takes this one. It's cheaper on both compounded options ($69/$119 vs altRx's $89/$149) and ships in 1-2 days versus altRx's 5-7. altRx is the better pick if you want the widest selection, including brand-name Zepbound or Wegovy, or Buy Now, Pay Later.",
   verdictWinnerPoints: [
@@ -1395,7 +1395,7 @@ const altrxTrimrxBattle: BattleData = {
   provider2Id: "trimrx",
   title: "altRx vs TrimRX: Which GLP-1 Provider Wins in 2026?",
   subtitle: "altRx vs TrimRX, compared on pricing, medication selection, medical support, and real customer experience — to see which GLP-1 provider delivers more value.",
-  description: "altRx vs TrimRX compared on pricing, GLP-1 medications, and value. altRx offers the broadest lineup — including brand-name Zepbound & Wegovy — while TrimRX wins on affordable, flexible plans. See which comes out ahead in 2026.",
+  description: "altRx vs TrimRX compared on pricing, GLP-1 medications, and value. altRx offers the broadest lineup — including brand-name Zepbound & Wegovy — while TrimRX wins on affordable, flexible plans. See why TrimRX comes out on top in 2026.",
   intro: "altRx and TrimRX are both fully online GLP-1 weight-loss providers that skip insurance and ship medication to your door. altRx bills itself as \"the #1 most affordable GLP-1 program\" from $89/month and stands out with the broadest lineup — compounded GLP-1 and GLP-1 + GIP plus brand-name Zepbound and Wegovy. TrimRX is built around affordable access to GLP-1 programs, pairing competitive monthly pricing with flexible plans, multi-month discounts, and ongoing clinical guidance. Here's how they compare across the factors that matter most.",
   verdict: "Both are legitimate, no-insurance-required online GLP-1 providers — but TrimRX takes this one on value. Its plans are built around affordability, with competitive monthly pricing, multi-month discounts, and provider consultations plus ongoing support bundled in, all with no long-term commitment. altRx is the better pick if you want the widest medication selection — including brand-name Zepbound or Wegovy — or Buy Now, Pay Later.",
   verdictWinnerPoints: [
@@ -2622,10 +2622,10 @@ function buildInitialConfig(): SiteConfig {
         slug: "altrx-vs-ro",
         provider1Id: "altrx",
         provider2Id: "ro",
-        title: "altRx vs Ro (2026): Pricing, GLP-1 Meds & Which Wins",
+        title: "altRx vs Ro: Which GLP-1 Provider Wins in 2026?",
         matchupLabel: "altRx vs Ro",
         subtitle: "altRx vs Ro, compared on pricing, medication options, medical support, convenience, and overall value.",
-        description: "altRx vs Ro compared for 2026 — pricing, GLP-1 medication options, medical support, and overall value. See which weight loss provider comes out ahead, and why.",
+        description: "altRx vs Ro compared on pricing, GLP-1 medication options, medical support, and value. See why altRx comes out on top in 2026.",
         intro: "altRx and Ro are two of the most popular telehealth weight loss providers offering GLP-1 medications. Both platforms connect patients with licensed providers and deliver prescription medication to your door — but they differ in pricing structure, level of personalization, medication options, and overall patient experience. Here's how they compare across the categories that matter most.",
         verdict: "altRx edges ahead with its transparent all-inclusive pricing, wider medication selection, and more personalized treatment approach. Ro remains a strong choice for those who value brand reputation and a streamlined, no-frills process. Both are solid options — your best pick depends on whether you prioritize personalization (altRx) or simplicity (Ro).",
         verdictWinnerPoints: [

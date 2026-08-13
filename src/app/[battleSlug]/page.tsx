@@ -175,7 +175,11 @@ export default async function BattlePage({
   const loser = winner.id === p1.id ? p2 : p1;
   const hasExplicitWinner = battle.winnerId === p1.id || battle.winnerId === p2.id;
 
-  // Related comparisons — other battles featuring either provider (internal links)
+  // Related comparisons — other battles featuring either provider (internal links).
+  // Ordered by relevance: comparisons involving this matchup's winner surface
+  // first (a reader is most likely to keep evaluating the winner against other
+  // options), then the rest in config order — the stable sort preserves that
+  // order within each tier.
   const relatedBattles = (config.battles ?? [])
     .filter(
       (b) =>
@@ -185,10 +189,14 @@ export default async function BattlePage({
     .map((b) => {
       const bp1 = config.providers.find((p) => p.id === b.provider1Id);
       const bp2 = config.providers.find((p) => p.id === b.provider2Id);
-      return bp1 && bp2 ? { slug: b.slug, bp1, bp2 } : null;
+      if (!bp1 || !bp2) return null;
+      const featuresWinner =
+        b.provider1Id === battle.winnerId || b.provider2Id === battle.winnerId;
+      return { slug: b.slug, bp1, bp2, featuresWinner };
     })
     .filter((x): x is NonNullable<typeof x> => x !== null)
-    .slice(0, 4);
+    .sort((a, b) => Number(b.featuresWinner) - Number(a.featuresWinner))
+    .slice(0, 6);
 
   const getCategoryLabel = (cat: (typeof battle.categories)[0]) => {
     if (cat.winner === "tie") return "Close call";
