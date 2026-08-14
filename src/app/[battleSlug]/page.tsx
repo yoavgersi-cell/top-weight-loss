@@ -7,7 +7,7 @@ import { ComparisonLayout } from "@/components/comparison-layout";
 import { EditorialContent } from "@/components/editorial-content";
 import { LandingEditorial } from "@/components/landing-editorial";
 import { Breadcrumbs } from "@/components/breadcrumbs";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { ArrowRight, Award, Check, DollarSign, Layers, Minus, Pill, ShieldCheck, SlidersHorizontal, Sparkles, Star, Stethoscope, Target, Trophy, Truck, Users, Zap } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { LastUpdated } from "@/components/last-updated";
@@ -196,6 +196,23 @@ export default async function BattlePage({
   // ───── BATTLE PAGE ─────
   const battle = (config.battles ?? []).find((b) => b.slug === battleSlug);
   if (!battle) return notFound();
+
+  // Collapse reverse-pair duplicates (e.g. embody-vs-altrx ↔ altrx-vs-embody):
+  // both slugs render the same matchup and compete in search. 308-redirect any
+  // non-canonical slug to the single canonical (alphabetically-first) slug for
+  // this provider pair so only one URL is indexed and its authority is pooled.
+  const samePairSlugs = (config.battles ?? [])
+    .filter(
+      (b) =>
+        (b.provider1Id === battle.provider1Id && b.provider2Id === battle.provider2Id) ||
+        (b.provider1Id === battle.provider2Id && b.provider2Id === battle.provider1Id)
+    )
+    .map((b) => b.slug)
+    .sort();
+  const canonicalPairSlug = samePairSlugs[0] ?? battle.slug;
+  if (canonicalPairSlug !== battleSlug) {
+    permanentRedirect(`/${canonicalPairSlug}`);
+  }
 
   const p1 = config.providers.find((p) => p.id === battle.provider1Id);
   const p2 = config.providers.find((p) => p.id === battle.provider2Id);
