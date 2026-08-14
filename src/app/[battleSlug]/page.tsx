@@ -8,7 +8,8 @@ import { EditorialContent } from "@/components/editorial-content";
 import { LandingEditorial } from "@/components/landing-editorial";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound } from "next/navigation";
-import { ArrowRight, Check, Minus, Trophy } from "lucide-react";
+import { ArrowRight, Award, Check, DollarSign, Layers, Minus, Pill, ShieldCheck, SlidersHorizontal, Sparkles, Star, Stethoscope, Target, Trophy, Truck, Users, Zap } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { LastUpdated } from "@/components/last-updated";
 import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
@@ -26,6 +27,25 @@ const RESERVED_SLUGS = [
   "find-your-match",
   "reviews",
 ];
+
+// Pick an infographic icon that matches a comparison category by keyword, so
+// every battle's categories get a relevant glyph instead of a bare number.
+function getCategoryIcon(name: string): LucideIcon {
+  const n = name.toLowerCase();
+  if (/pric|value|cost|afford|budget|payment/.test(n)) return DollarSign;
+  if (/medication|treatment|drug|glp|dose|formulation|semaglutide|tirzepatide/.test(n)) return Pill;
+  if (/medical|clinical|care|monitor|provider|doctor|health|oversight/.test(n)) return Stethoscope;
+  if (/ship|deliver/.test(n)) return Truck;
+  if (/speed|fast|conveni|quick|access/.test(n)) return Zap;
+  if (/custom|experience|service|review|satisf|rating|reputation/.test(n)) return Star;
+  if (/flexib|plan|commit|subscription/.test(n)) return SlidersHorizontal;
+  if (/focus|simplic|weight loss/.test(n)) return Target;
+  if (/range|select|option|beyond|variety|lineup|choice/.test(n)) return Layers;
+  if (/brand|track|pharmacy|establish|trust|award/.test(n)) return Award;
+  if (/transparen|certif|safe|secur|legit/.test(n)) return ShieldCheck;
+  if (/personal|coach|human|1:1|support/.test(n)) return Users;
+  return Sparkles;
+}
 
 export async function generateMetadata({
   params,
@@ -404,6 +424,7 @@ export default async function BattlePage({
             <div className="space-y-6">
               {battle.categories.map((cat, i) => {
                 const label = getCategoryLabel(cat);
+                const CategoryIcon = getCategoryIcon(cat.name);
                 const isP1Edge = cat.winner === "provider1";
                 const isP2Edge = cat.winner === "provider2";
                 const isTie = cat.winner === "tie";
@@ -413,8 +434,8 @@ export default async function BattlePage({
                     {/* Round header */}
                     <div className="flex items-center justify-between border-b border-gray-100 bg-gray-50/70 px-6 py-4">
                       <div className="flex items-center gap-3">
-                        <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#0C4B75] text-[12px] font-bold text-white">
-                          {i + 1}
+                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#0C4B75] text-white shadow-sm">
+                          <CategoryIcon className="h-[18px] w-[18px]" strokeWidth={2} />
                         </span>
                         <h3 className="text-[16px] font-bold text-[#191919]">
                           {cat.name}
