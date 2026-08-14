@@ -2638,7 +2638,7 @@ const CANONICAL_NAMES: Record<string, string> = {
   skinnyrx: "skinnyRx",
   noom: "Noom",
   ro: "Ro",
-  trimrx: "TrimRX",
+  trimrx: "trimrx",
   medvi: "Medvi",
 };
 
@@ -2654,7 +2654,7 @@ const BRAND_TEXT_FIXES: [RegExp, string][] = [
   [/\bdirect\s?meds\b/gi, "DirectMeds"],
   [/\bskinny\s?rx\b/gi, "skinnyRx"],
   [/\bnoom\b/gi, "Noom"],
-  [/\btrim\s?rx\b/gi, "TrimRX"],
+  [/\btrim\s?rx\b/gi, "trimrx"],
 ];
 
 function fixBrandText(s: string): string {
@@ -2691,6 +2691,7 @@ function normalizeBrandCasing(config: SiteConfig): SiteConfig {
     battles: config.battles.map((b) => ({
       ...b,
       title: fixBrandText(b.title),
+      matchupLabel: b.matchupLabel ? fixBrandText(b.matchupLabel) : b.matchupLabel,
       subtitle: fixBrandText(b.subtitle ?? ""),
       description: fixBrandText(b.description),
       intro: fixBrandText(b.intro),

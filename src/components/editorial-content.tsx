@@ -147,7 +147,7 @@ export function EditorialContent() {
           altRx vs Ro
         </Link>,{" "}
         <Link href="/altrx-vs-trimrx" className="font-semibold text-[#0C4B75] hover:underline">
-          altRx vs TrimRX
+          altRx vs trimrx
         </Link>, or{" "}
         <Link href="/embody-vs-ro" className="font-semibold text-[#0C4B75] hover:underline">
           Embody vs Ro

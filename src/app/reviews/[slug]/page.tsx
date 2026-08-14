@@ -33,9 +33,9 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "altRx reviews: compounded semaglutide from $89/mo and tirzepatide from $149/mo, brand-name Zepbound & Wegovy too, no insurance and Buy Now Pay Later. Is altRx legit and worth it? Real customer reviews, pricing, pros & cons.",
   },
   trimrx: {
-    title: "TrimRX Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
+    title: "trimrx Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
     description:
-      "TrimRX reviews: budget-friendly compounded semaglutide and tirzepatide, flexible plans with no long-term contract, and clinical support included. Is TrimRX legit and worth it? Real customer reviews, cost, pros & cons.",
+      "trimrx reviews: budget-friendly compounded semaglutide and tirzepatide, flexible plans with no long-term contract, and clinical support included. Is trimrx legit and worth it? Real customer reviews, cost, pros & cons.",
   },
 };
 
@@ -68,7 +68,7 @@ const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
   },
   trimrx: {
     verdict:
-      "Yes — TrimRX is a legitimate telehealth GLP-1 provider. Licensed clinicians guide treatment, medications are compounded semaglutide and tirzepatide prescribed after a medical review, and pricing is transparent with no long-term contract.",
+      "Yes — trimrx is a legitimate telehealth GLP-1 provider. Licensed clinicians guide treatment, medications are compounded semaglutide and tirzepatide prescribed after a medical review, and pricing is transparent with no long-term contract.",
     signals: [
       "Licensed clinical guidance throughout treatment",
       "Compounded semaglutide & tirzepatide, prescribed after review",

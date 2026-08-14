@@ -205,7 +205,7 @@ export default function OzempicAlternativesPage() {
             affordable, legitimate access are{" "}
             <Link href="/reviews/embody" className="font-semibold text-[#0C4B75] hover:underline">embody</Link>,{" "}
             <Link href="/reviews/altrx" className="font-semibold text-[#0C4B75] hover:underline">altRx</Link>, and{" "}
-            <Link href="/reviews/trimrx" className="font-semibold text-[#0C4B75] hover:underline">TrimRX</Link>{" "}
+            <Link href="/reviews/trimrx" className="font-semibold text-[#0C4B75] hover:underline">trimrx</Link>{" "}
             — but the right fit depends on your goals and budget.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
