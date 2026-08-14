@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Clock, ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
+import { NOINDEX_ARTICLE_SLUGS } from "@/lib/config";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ExpertByline } from "@/components/expert-byline";
 import { notFound, permanentRedirect } from "next/navigation";
@@ -21,6 +22,7 @@ export async function generateMetadata({
   return {
     title: article.title,
     description: article.description,
+    robots: NOINDEX_ARTICLE_SLUGS.includes(slug) ? { index: false, follow: true } : undefined,
     alternates: {
       canonical: `https://www.topweightloss.io/articles/${slug}`,
     },
@@ -322,9 +324,9 @@ export default async function ArticlePage({
                         </a>
                       ))}
                     </div>
-                    <a href="/find-your-match" className="mt-3 block text-center text-[13px] font-semibold text-[#0C4B75] hover:underline">
+                    <Link href="/find-your-match" className="mt-3 block text-center text-[13px] font-semibold text-[#0C4B75] hover:underline">
                       Not sure? Take our free matching quiz →
-                    </a>
+                    </Link>
                   </div>
                 )}
               </div>

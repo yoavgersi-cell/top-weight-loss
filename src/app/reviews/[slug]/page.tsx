@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Check, X, ArrowRight, Users, Clock, Shield, Star } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
-import { CONTENT_LAST_UPDATED } from "@/lib/config";
+import { CONTENT_LAST_UPDATED, AFFILIATE_PROVIDER_IDS } from "@/lib/config";
 import { cn } from "@/lib/utils";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
@@ -118,9 +118,14 @@ export async function generateMetadata({
   const pageTitle = override?.title ?? `${provider.name} Review 2026: Cost, Results & Is It Worth It?`;
   const pageDescription = override?.description ?? review.shortSummary;
 
+  // Reviews of non-affiliate providers don't monetize — de-index (but keep
+  // following links) so they stop diluting site-quality signals.
+  const isAffiliate = AFFILIATE_PROVIDER_IDS.includes(provider.id);
+
   return {
     title: pageTitle,
     description: pageDescription,
+    robots: isAffiliate ? undefined : { index: false, follow: true },
     alternates: {
       canonical: `https://www.topweightloss.io/reviews/${slug}`,
     },

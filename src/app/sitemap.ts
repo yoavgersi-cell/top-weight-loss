@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getConfig } from "@/lib/config-store";
-import { CONTENT_LAST_UPDATED } from "@/lib/config";
+import { CONTENT_LAST_UPDATED, AFFILIATE_PROVIDER_IDS, NOINDEX_ARTICLE_SLUGS } from "@/lib/config";
 import { articles } from "@/data/articles";
 
 const BASE_URL = "https://www.topweightloss.io";
@@ -84,14 +84,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  const reviewPages: MetadataRoute.Sitemap = (config.reviews ?? []).map(
-    (review) => ({
+  const reviewPages: MetadataRoute.Sitemap = (config.reviews ?? [])
+    // Only affiliate-provider reviews are indexed, so only they belong in the sitemap.
+    .filter((review) => AFFILIATE_PROVIDER_IDS.includes(review.providerId))
+    .map((review) => ({
       url: `${BASE_URL}/reviews/${review.slug}`,
       lastModified: review.updatedAt ? new Date(review.updatedAt) : FALLBACK_DATE,
       changeFrequency: "weekly" as const,
       priority: 0.8,
-    })
-  );
+    }));
 
   const articlePages: MetadataRoute.Sitemap = [
     {
@@ -100,12 +101,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.8,
     },
-    ...articles.map((article) => ({
-      url: `${BASE_URL}/articles/${article.slug}`,
-      lastModified: new Date(article.updatedAt),
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    })),
+    ...articles
+      // Drop de-indexed (non-monetizing) articles from the sitemap.
+      .filter((article) => !NOINDEX_ARTICLE_SLUGS.includes(article.slug))
+      .map((article) => ({
+        url: `${BASE_URL}/articles/${article.slug}`,
+        lastModified: new Date(article.updatedAt),
+        changeFrequency: "weekly" as const,
+        priority: 0.8,
+      })),
   ];
 
   const battlePages: MetadataRoute.Sitemap = (config.battles ?? []).map(
