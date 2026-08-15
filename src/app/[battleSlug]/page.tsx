@@ -8,7 +8,7 @@ import { EditorialContent } from "@/components/editorial-content";
 import { LandingEditorial } from "@/components/landing-editorial";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound, permanentRedirect } from "next/navigation";
-import { ArrowRight, Award, Check, DollarSign, Layers, Minus, Pill, ShieldCheck, SlidersHorizontal, Sparkles, Star, Stethoscope, Target, Trophy, Truck, Users, Zap } from "lucide-react";
+import { ArrowRight, Award, Check, DollarSign, Layers, Minus, Pill, ShieldCheck, SlidersHorizontal, Sparkles, Star, Stethoscope, Target, Truck, Users, Zap } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { LastUpdated } from "@/components/last-updated";
 import { ProviderCta } from "@/components/provider-cta";
@@ -223,10 +223,12 @@ export default async function BattlePage({
   // reordering provider1/provider2 (which drives winner logic).
   const matchupLabel = battle.matchupLabel || `${p1.name} vs ${p2.name}`;
 
-  // Winner is set per-battle in the CMS (Admin → Battles → Winner)
-  const winner = battle.winnerId === p2.id ? p2 : p1;
-  const loser = winner.id === p1.id ? p2 : p1;
-  const hasExplicitWinner = battle.winnerId === p1.id || battle.winnerId === p2.id;
+  // Objective framing: no declared "winner". Map the per-side verdict points to
+  // each provider (the CMS stores them as winner/loser points) so both columns
+  // read as an even "go with X if… / go with Y if…" recommendation.
+  const p1IsBattleWinner = battle.winnerId === p1.id;
+  const p1VerdictPoints = p1IsBattleWinner ? (battle.verdictWinnerPoints ?? []) : (battle.verdictLoserPoints ?? []);
+  const p2VerdictPoints = p1IsBattleWinner ? (battle.verdictLoserPoints ?? []) : (battle.verdictWinnerPoints ?? []);
 
   // Related comparisons — other battles featuring either provider (internal links).
   // Ordered by relevance: comparisons involving this matchup's winner surface
@@ -364,8 +366,7 @@ export default async function BattlePage({
               </div>
             </div>
 
-            {(hasExplicitWinner ? [winner, loser] : [p1, p2]).map((provider, idx) => {
-              const isWinner = hasExplicitWinner && provider.id === battle.winnerId;
+            {[p1, p2].map((provider, idx) => {
               return (
               <Fragment key={provider.id}>
                 {/* VS badge — mobile: sits in the gap BETWEEN the two stacked cards */}
@@ -376,15 +377,7 @@ export default async function BattlePage({
                     </div>
                   </div>
                 )}
-              <div
-                className={`relative flex h-full flex-col rounded-2xl border bg-white px-6 pb-6 pt-7 shadow-sm ${isWinner ? "border-emerald-300" : "border-gray-200"}`}
-              >
-                {isWinner && (
-                  <div className="absolute -top-3 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-full bg-emerald-500 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-white shadow-sm">
-                    <Trophy className="h-3 w-3" strokeWidth={2.5} />
-                    Winner
-                  </div>
-                )}
+              <div className="relative flex h-full flex-col rounded-2xl border border-gray-200 bg-white px-6 pb-6 pt-7 shadow-sm">
                 <div className="mb-3 flex items-center justify-between">
                   <div className="flex h-[40px] w-[110px] items-center">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -392,7 +385,7 @@ export default async function BattlePage({
                   </div>
                 </div>
 
-                {isWinner && provider.trustpilotRating && (
+                {provider.trustpilotRating && (
                   <div className="mb-3 border-b border-gray-100 pb-3">
                     <TrustpilotRating
                       rating={provider.trustpilotRating}
@@ -435,7 +428,7 @@ export default async function BattlePage({
           {/* ───── ROUND-BY-ROUND COMPARISON ───── */}
           <div className="mb-14">
             <h2 className="mb-8 text-[24px] font-bold text-[#191919]">
-              How They Compare
+              Here&rsquo;s how they stack up
             </h2>
 
             <div className="space-y-6">
@@ -511,86 +504,11 @@ export default async function BattlePage({
             </div>
           </div>
 
-          {/* ───── WINNER PROMO BANNER (mid-page, e-commerce style) ───── */}
-          {hasExplicitWinner && (
-            <div className="mb-14 overflow-hidden rounded-3xl bg-gradient-to-br from-[#E9F1E4] to-[#F7FAF4] shadow-sm">
-              <div className={`grid ${config.battleWinnerBannerImageDesktop ? "sm:grid-cols-2" : ""}`}>
-                {/* Mobile image */}
-                {config.battleWinnerBannerImageMobile && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={config.battleWinnerBannerImageMobile}
-                    alt={`${winner.name} customers`}
-                    className="h-52 w-full object-cover sm:hidden"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                )}
-
-                {/* Content */}
-                <div className="flex flex-col items-start justify-center p-6 sm:p-10 lg:p-12">
-                  <span className="mb-4 inline-flex items-center gap-1.5 rounded-full bg-emerald-600 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-wider text-white">
-                    <Trophy className="h-3.5 w-3.5" strokeWidth={2.5} />
-                    Our pick
-                  </span>
-
-                  <div className="mb-4 flex h-[38px] w-[150px] items-center">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={winner.logo}
-                      alt={`${winner.name} logo`}
-                      className="max-h-full max-w-full object-contain"
-                    />
-                  </div>
-
-                  <p className="mb-4 text-[24px] font-extrabold leading-tight text-[#191919] sm:text-[28px]">
-                    {winner.tagline}
-                  </p>
-
-                  <ul className="mb-6 space-y-2">
-                    {winner.highlights.slice(0, 3).map((h, hi) => (
-                      <li key={hi} className="flex items-start gap-2 text-[14px] text-gray-700">
-                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" strokeWidth={2.5} />
-                        {h}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <ProviderCta
-                    href={winner.affiliateUrl}
-                    providerName={winner.name}
-                    providerSlug={winner.id}
-                    pageType="battle"
-                    sourceFlow="battle_page"
-                    className="flex h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-[#0C4B75] px-8 text-[15px] font-bold text-white transition-colors hover:bg-[#093d61] sm:w-auto"
-                  >
-                    Visit {winner.name}
-                    <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
-                  </ProviderCta>
-                </div>
-
-                {/* Desktop image */}
-                {config.battleWinnerBannerImageDesktop && (
-                  <div className="relative hidden min-h-[340px] sm:block">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={config.battleWinnerBannerImageDesktop}
-                      alt={`${winner.name} customer`}
-                      className="absolute inset-0 h-full w-full object-cover object-top"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
-
           {/* ───── TRUSTPILOT REVIEWS ───── */}
           {((p1.trustpilotReviews?.length ?? 0) > 0 || (p2.trustpilotReviews?.length ?? 0) > 0) && (
             <div className="mb-14">
               <h2 className="mb-6 text-[22px] font-bold text-[#191919]">
-                What Real Customers Say
+                What real people are saying
               </h2>
               <div className="space-y-6">
                 {[p1, p2].map((provider) =>
@@ -722,70 +640,37 @@ export default async function BattlePage({
             );
           })()}
 
-          {/* ───── VERDICT ───── */}
+          {/* ───── VERDICT (objective bottom line) ───── */}
           <div className="mb-14 overflow-hidden rounded-2xl border border-gray-200 bg-white">
             <div className="p-6 sm:p-8">
-              <div className="mb-5 flex flex-wrap items-center gap-3">
-                <h2 className="text-[22px] font-bold text-[#191919]">So, which should you pick?</h2>
-                {hasExplicitWinner && (
-                  <span className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-[12px] font-bold text-emerald-700">
-                    <Trophy className="h-3.5 w-3.5" strokeWidth={2.5} />
-                    Winner: {winner.name}
-                  </span>
-                )}
-              </div>
+              <h2 className="mb-4 text-[22px] font-bold text-[#191919]">
+                So&hellip; which one&rsquo;s right for you?
+              </h2>
 
               <p className="mb-6 text-[15px] leading-[1.75] text-gray-600">
                 {battle.verdict}
               </p>
 
-              <div className="grid gap-6 sm:grid-cols-2">
-                <div className={`rounded-xl p-5 ${hasExplicitWinner ? "border border-emerald-100 bg-emerald-50/50" : "bg-gray-50"}`}>
-                  <p className="mb-3 text-[13px] font-bold uppercase tracking-wider text-[#191919]">
-                    Choose {winner.name} if you want
-                  </p>
-                  <ul className="space-y-2">
-                    {(battle.verdictWinnerPoints ?? []).map((point, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2.5 text-[14px] text-gray-600"
-                      >
-                        <Check className={`mt-0.5 h-4 w-4 shrink-0 ${hasExplicitWinner ? "text-emerald-500" : "text-gray-400"}`} strokeWidth={2} />
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="rounded-xl bg-gray-50 p-5">
-                  <p className="mb-3 text-[13px] font-bold uppercase tracking-wider text-[#191919]">
-                    Choose {loser.name} if you prefer
-                  </p>
-                  <ul className="space-y-2">
-                    {(battle.verdictLoserPoints ?? []).map((point, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2.5 text-[14px] text-gray-600"
-                      >
-                        <Minus className="mt-0.5 h-4 w-4 shrink-0 text-gray-400" strokeWidth={2} />
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {[
+                  { prov: p1, points: p1VerdictPoints },
+                  { prov: p2, points: p2VerdictPoints },
+                ].map(({ prov, points }) => (
+                  <div key={prov.id} className="rounded-xl border border-gray-200 bg-gray-50/60 p-5">
+                    <p className="mb-3 text-[14px] font-bold text-[#191919]">
+                      <span className="text-gray-400">Go with</span> {prov.name} if&hellip;
+                    </p>
+                    <ul className="space-y-2">
+                      {points.map((point, i) => (
+                        <li key={i} className="flex items-start gap-2.5 text-[14px] leading-[1.55] text-gray-600">
+                          <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" strokeWidth={2.5} />
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
-
-              <ProviderCta
-                href={winner.affiliateUrl}
-                providerName={winner.name}
-                providerSlug={winner.id}
-                pageType="battle"
-                sourceFlow="battle_page"
-                className="mt-7 flex h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-[#0C4B75] text-[15px] font-bold text-white transition-colors hover:bg-[#093d61] sm:w-auto sm:px-8"
-              >
-                Visit {winner.name}
-                <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
-              </ProviderCta>
             </div>
           </div>
 
