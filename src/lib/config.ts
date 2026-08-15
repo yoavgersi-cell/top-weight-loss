@@ -263,6 +263,37 @@ export interface LandingPageData {
 // updatedAt. Avoids emitting today's date on every request (fake freshness).
 export const CONTENT_LAST_UPDATED = "2026-08-12";
 
+// Providers we have an affiliate relationship with. Pages centered on any other
+// brand don't monetize, so they're de-indexed (noindex,follow) and dropped from
+// the sitemap to concentrate crawl budget and quality signals on money pages.
+export const AFFILIATE_PROVIDER_IDS = [
+  "altrx",
+  "embody",
+  "trimrx",
+  "medvi",
+  "wellmedr",
+  "shed",
+  "directmeds",
+];
+
+// Non-monetizing articles targeting non-affiliate brands / competitive drug
+// head-terms (rank far down, don't convert). De-indexed to keep the site
+// focused on pages that pay. Reversible — remove a slug to re-index it.
+export const NOINDEX_ARTICLE_SLUGS = [
+  "noom-weight-loss-review",
+  "best-noom-alternatives",
+  "noom-subscription-cost",
+  "noom-vs-glp1-providers",
+  "ozempic-vs-wegovy-differences",
+  "mounjaro-vs-ozempic",
+  "zepbound-vs-wegovy",
+  "tirzepatide-vs-semaglutide",
+  "best-ozempic-alternatives",
+  "best-wegovy-alternatives",
+  "best-mounjaro-alternatives",
+  "best-ro-alternatives",
+];
+
 export interface SiteConfig {
   providers: Provider[];
   faqs: FaqItem[];
