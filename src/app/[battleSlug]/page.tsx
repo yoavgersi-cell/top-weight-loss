@@ -8,8 +8,7 @@ import { EditorialContent } from "@/components/editorial-content";
 import { LandingEditorial } from "@/components/landing-editorial";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound, permanentRedirect } from "next/navigation";
-import { ArrowRight, Award, Check, DollarSign, Layers, Minus, Pill, ShieldCheck, SlidersHorizontal, Sparkles, Star, Stethoscope, Target, Truck, Users, Zap } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import { ArrowRight, Check, Minus, ShieldCheck, Sparkles } from "lucide-react";
 import { LastUpdated } from "@/components/last-updated";
 import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
@@ -27,25 +26,6 @@ const RESERVED_SLUGS = [
   "find-your-match",
   "reviews",
 ];
-
-// Pick an infographic icon that matches a comparison category by keyword, so
-// every battle's categories get a relevant glyph instead of a bare number.
-function getCategoryIcon(name: string): LucideIcon {
-  const n = name.toLowerCase();
-  if (/pric|value|cost|afford|budget|payment/.test(n)) return DollarSign;
-  if (/medication|treatment|drug|glp|dose|formulation|semaglutide|tirzepatide/.test(n)) return Pill;
-  if (/medical|clinical|care|monitor|provider|doctor|health|oversight/.test(n)) return Stethoscope;
-  if (/ship|deliver/.test(n)) return Truck;
-  if (/speed|fast|conveni|quick|access/.test(n)) return Zap;
-  if (/custom|experience|service|review|satisf|rating|reputation/.test(n)) return Star;
-  if (/flexib|plan|commit|subscription/.test(n)) return SlidersHorizontal;
-  if (/focus|simplic|weight loss/.test(n)) return Target;
-  if (/range|select|option|beyond|variety|lineup|choice/.test(n)) return Layers;
-  if (/brand|track|pharmacy|establish|trust|award/.test(n)) return Award;
-  if (/transparen|certif|safe|secur|legit/.test(n)) return ShieldCheck;
-  if (/personal|coach|human|1:1|support/.test(n)) return Users;
-  return Sparkles;
-}
 
 export async function generateMetadata({
   params,
@@ -230,6 +210,18 @@ export default async function BattlePage({
   const p1VerdictPoints = p1IsBattleWinner ? (battle.verdictWinnerPoints ?? []) : (battle.verdictLoserPoints ?? []);
   const p2VerdictPoints = p1IsBattleWinner ? (battle.verdictLoserPoints ?? []) : (battle.verdictWinnerPoints ?? []);
 
+  // Per-provider deep dives. Each provider gets its own rich, full section
+  // (intro, what-you-get, pricing, pros/cons, its own Trustpilot reviews, CTA)
+  // pulled from that provider's review data — so the page reads as two honest,
+  // standalone write-ups rather than a "who wins" head-to-head. `bestForFallback`
+  // covers providers that don't have a review entry yet.
+  const p1Review = (config.reviews ?? []).find((r) => r.providerId === p1.id);
+  const p2Review = (config.reviews ?? []).find((r) => r.providerId === p2.id);
+  const deepDives = [
+    { provider: p1, review: p1Review, bestForFallback: p1VerdictPoints },
+    { provider: p2, review: p2Review, bestForFallback: p2VerdictPoints },
+  ];
+
   // Related comparisons — other battles featuring either provider (internal links).
   // Ordered by relevance: comparisons involving this matchup's winner surface
   // first (a reader is most likely to keep evaluating the winner against other
@@ -253,11 +245,6 @@ export default async function BattlePage({
     .sort((a, b) => Number(b.featuresWinner) - Number(a.featuresWinner))
     .slice(0, 6);
 
-  const getCategoryLabel = (cat: (typeof battle.categories)[0]) => {
-    if (cat.winner === "tie") return "Close call";
-    return cat.winner === "provider1" ? `Edge: ${p1.name}` : `Edge: ${p2.name}`;
-  };
-
   // FAQ — real, query-shaped questions answered from grounded battle content.
   // Expands the queries the page can rank for (long-tail + People Also Ask) and
   // powers both the visible FAQ section and the FAQPage schema.
@@ -277,7 +264,7 @@ export default async function BattlePage({
   };
 
   const battleFaqs = [
-    { question: `Who wins, ${matchupLabel}?`, answer: battle.verdict },
+    { question: `Which is better, ${matchupLabel}?`, answer: battle.verdict },
     ...battle.categories.map((cat) => ({ question: catToQuestion(cat.name), answer: cat.explanation })),
   ].filter((f, i, arr) => !!f.answer && arr.findIndex((x) => x.question === f.question) === i);
 
@@ -425,108 +412,6 @@ export default async function BattlePage({
             })}
           </div>
 
-          {/* ───── ROUND-BY-ROUND COMPARISON ───── */}
-          <div className="mb-14">
-            <h2 className="mb-8 text-[24px] font-bold text-[#191919]">
-              Here&rsquo;s how they stack up
-            </h2>
-
-            <div className="space-y-6">
-              {battle.categories.map((cat, i) => {
-                const label = getCategoryLabel(cat);
-                const CategoryIcon = getCategoryIcon(cat.name);
-                const isP1Edge = cat.winner === "provider1";
-                const isP2Edge = cat.winner === "provider2";
-                const isTie = cat.winner === "tie";
-
-                return (
-                  <div key={i} className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
-                    {/* Round header */}
-                    <div className="flex items-center justify-between border-b border-gray-100 bg-gray-50/70 px-6 py-4">
-                      <div className="flex items-center gap-3">
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#0C4B75] text-white shadow-sm">
-                          <CategoryIcon className="h-[18px] w-[18px]" strokeWidth={2} />
-                        </span>
-                        <h3 className="text-[16px] font-bold text-[#191919]">
-                          {cat.name}
-                        </h3>
-                      </div>
-                      <span className={`rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wide ${
-                        isTie
-                          ? "bg-amber-50 text-amber-600"
-                          : "bg-emerald-50 text-emerald-700"
-                      }`}>
-                        {label}
-                      </span>
-                    </div>
-
-                    <div className="p-6">
-                      <p className="mb-5 max-w-[700px] text-[14px] leading-[1.7] text-gray-500">
-                        {cat.explanation}
-                      </p>
-
-                      {cat.supportingPoints && cat.supportingPoints.length > 0 && (
-                        <div className="grid gap-4 sm:grid-cols-2">
-                          {/* P1 strengths */}
-                          <div className={`rounded-xl p-4 ${isP1Edge ? "bg-emerald-50/50 border border-emerald-100" : "bg-gray-50"}`}>
-                            <p className={`mb-2.5 text-[12px] font-bold uppercase tracking-wider ${isP1Edge ? "text-emerald-700" : "text-gray-400"}`}>
-                              {p1.name}
-                            </p>
-                            <ul className="space-y-1.5">
-                              {cat.supportingPoints.slice(0, Math.ceil(cat.supportingPoints.length / 2)).map((point, pi) => (
-                                <li key={pi} className="flex items-start gap-2 text-[13px] text-gray-600">
-                                  <Check className={`mt-0.5 h-3.5 w-3.5 shrink-0 ${isP1Edge ? "text-emerald-500" : "text-gray-400"}`} strokeWidth={2} />
-                                  {point}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                          {/* P2 strengths */}
-                          <div className={`rounded-xl p-4 ${isP2Edge ? "bg-emerald-50/50 border border-emerald-100" : "bg-gray-50"}`}>
-                            <p className={`mb-2.5 text-[12px] font-bold uppercase tracking-wider ${isP2Edge ? "text-emerald-700" : "text-gray-400"}`}>
-                              {p2.name}
-                            </p>
-                            <ul className="space-y-1.5">
-                              {cat.supportingPoints.slice(Math.ceil(cat.supportingPoints.length / 2)).map((point, pi) => (
-                                <li key={pi} className="flex items-start gap-2 text-[13px] text-gray-600">
-                                  <Check className={`mt-0.5 h-3.5 w-3.5 shrink-0 ${isP2Edge ? "text-emerald-500" : "text-gray-400"}`} strokeWidth={2} />
-                                  {point}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* ───── TRUSTPILOT REVIEWS ───── */}
-          {((p1.trustpilotReviews?.length ?? 0) > 0 || (p2.trustpilotReviews?.length ?? 0) > 0) && (
-            <div className="mb-14">
-              <h2 className="mb-6 text-[22px] font-bold text-[#191919]">
-                What real people are saying
-              </h2>
-              <div className="space-y-6">
-                {[p1, p2].map((provider) =>
-                  (provider.trustpilotReviews?.length ?? 0) > 0 ? (
-                    <TrustpilotCarousel
-                      key={provider.id}
-                      providerName={provider.name}
-                      providerLogo={provider.logo}
-                      reviews={provider.trustpilotReviews!}
-                      rating={provider.trustpilotRating}
-                      reviewCount={provider.trustpilotReviewCount}
-                    />
-                  ) : null
-                )}
-              </div>
-            </div>
-          )}
-
           {/* ───── FEATURE COMPARISON TABLE ───── */}
           {battle.features && battle.features.length > 0 && (() => {
             const getIcon = (row: typeof battle.features[0], which: "p1" | "p2") => {
@@ -640,37 +525,251 @@ export default async function BattlePage({
             );
           })()}
 
-          {/* ───── VERDICT (objective bottom line) ───── */}
-          <div className="mb-14 overflow-hidden rounded-2xl border border-gray-200 bg-white">
-            <div className="p-6 sm:p-8">
-              <h2 className="mb-4 text-[22px] font-bold text-[#191919]">
-                So&hellip; which one&rsquo;s right for you?
-              </h2>
-
-              <p className="mb-6 text-[15px] leading-[1.75] text-gray-600">
-                {battle.verdict}
+          {/* ───── PER-PROVIDER DEEP DIVES ───── */}
+          <div className="mb-14">
+            <div className="mb-8 max-w-[760px]">
+              <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
+                A closer look at each one
               </p>
+              <h2 className="text-[24px] font-bold text-[#191919]">
+                {p1.name} and {p2.name}, side by side &mdash; the full story
+              </h2>
+              <p className="mt-3 text-[15px] leading-[1.8] text-gray-600">
+                Both are solid GLP-1 weight loss providers, and honestly you can&rsquo;t go
+                too wrong either way. So instead of crowning a &ldquo;winner,&rdquo; here&rsquo;s the
+                real rundown on each &mdash; what you get, what it actually costs, and what
+                real customers are saying &mdash; so you can pick the one that fits <em>you</em>.
+              </p>
+            </div>
 
-              <div className="grid gap-4 sm:grid-cols-2">
-                {[
-                  { prov: p1, points: p1VerdictPoints },
-                  { prov: p2, points: p2VerdictPoints },
-                ].map(({ prov, points }) => (
-                  <div key={prov.id} className="rounded-xl border border-gray-200 bg-gray-50/60 p-5">
-                    <p className="mb-3 text-[14px] font-bold text-[#191919]">
-                      <span className="text-gray-400">Go with</span> {prov.name} if&hellip;
-                    </p>
-                    <ul className="space-y-2">
-                      {points.map((point, i) => (
-                        <li key={i} className="flex items-start gap-2.5 text-[14px] leading-[1.55] text-gray-600">
-                          <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" strokeWidth={2.5} />
-                          {point}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
+            <div className="space-y-10">
+              {deepDives.map(({ provider, review, bestForFallback }) => {
+                const features = review?.keyFeatures?.length ? review.keyFeatures : provider.highlights;
+                const bestFor = review?.bestFor?.length ? review.bestFor : bestForFallback;
+                const plans = review?.pricingPlans ?? [];
+                const pros = review?.pros ?? [];
+                const cons = review?.cons ?? [];
+                const badges = review?.trustBadges ?? [];
+                const lead = review?.reviewIntro || provider.tagline;
+                const reviewCount = provider.trustpilotReviews?.length ?? 0;
+
+                return (
+                  <section
+                    key={provider.id}
+                    className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm"
+                  >
+                    {/* Accent bar */}
+                    <div className="h-1 bg-gradient-to-r from-[#0C4B75] via-[#1a8cd8] to-[#0C4B75]" />
+
+                    <div className="p-6 sm:p-8">
+                      {/* Header: logo + Trustpilot rating + quick CTA */}
+                      <div className="mb-6 flex flex-wrap items-center justify-between gap-4 border-b border-gray-100 pb-6">
+                        <div className="flex flex-wrap items-center gap-4">
+                          <div className="flex h-[44px] w-[130px] items-center">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src={provider.logo} alt={`${provider.name} logo`} className="max-h-full max-w-full object-contain" />
+                          </div>
+                          {provider.trustpilotRating && (
+                            <div className="border-l border-gray-200 pl-4">
+                              <TrustpilotRating
+                                rating={provider.trustpilotRating}
+                                reviewCount={provider.trustpilotReviewCount}
+                                starSize={15}
+                              />
+                            </div>
+                          )}
+                        </div>
+                        <ProviderCta
+                          href={provider.affiliateUrl}
+                          providerName={provider.name}
+                          providerSlug={provider.id}
+                          pageType="battle"
+                          sourceFlow="battle_page"
+                          className="inline-flex h-[42px] items-center justify-center gap-1.5 rounded-xl bg-[#0C4B75] px-5 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]"
+                        >
+                          Visit {provider.name}
+                          <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
+                        </ProviderCta>
+                      </div>
+
+                      {/* Intro */}
+                      <h3 className="mb-2.5 text-[20px] font-bold text-[#191919]">
+                        What is {provider.name}?
+                      </h3>
+                      <p className="mb-6 max-w-[820px] text-[15px] leading-[1.85] text-gray-600">
+                        {lead}
+                      </p>
+
+                      {/* Trust badges */}
+                      {badges.length > 0 && (
+                        <div className="mb-8 flex flex-wrap gap-2">
+                          {badges.map((b, i) => (
+                            <span
+                              key={i}
+                              className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5 text-[12px] font-semibold text-gray-600"
+                            >
+                              <ShieldCheck className="h-3.5 w-3.5 text-emerald-500" strokeWidth={2} />
+                              {b}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+
+                      {/* What you get + Who it's best for */}
+                      <div className="mb-8 grid gap-6 sm:grid-cols-2">
+                        <div>
+                          <h4 className="mb-3 flex items-center gap-2 text-[15px] font-bold text-[#191919]">
+                            <Check className="h-4 w-4 text-emerald-500" strokeWidth={2.5} />
+                            What you get with {provider.name}
+                          </h4>
+                          <ul className="space-y-2">
+                            {features.map((f, i) => (
+                              <li key={i} className="flex items-start gap-2 text-[14px] leading-[1.6] text-gray-600">
+                                <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2} />
+                                {f}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        {bestFor.length > 0 && (
+                          <div>
+                            <h4 className="mb-3 flex items-center gap-2 text-[15px] font-bold text-[#191919]">
+                              <Sparkles className="h-4 w-4 text-[#0C4B75]" strokeWidth={2} />
+                              Who {provider.name} is best for
+                            </h4>
+                            <ul className="space-y-2">
+                              {bestFor.map((f, i) => (
+                                <li key={i} className="flex items-start gap-2 text-[14px] leading-[1.6] text-gray-600">
+                                  <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#0C4B75]" strokeWidth={2} />
+                                  {f}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Pricing */}
+                      {plans.length > 0 ? (
+                        <div className="mb-8">
+                          <h4 className="mb-1.5 text-[17px] font-bold text-[#191919]">
+                            How much does {provider.name} cost?
+                          </h4>
+                          {review?.pricingSummary && (
+                            <p className="mb-4 max-w-[820px] text-[14px] leading-[1.7] text-gray-500">
+                              {review.pricingSummary}
+                            </p>
+                          )}
+                          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                            {plans.map((plan, i) => (
+                              <div key={i} className="rounded-xl border border-gray-200 bg-gray-50/60 p-4">
+                                <p className="text-[13px] font-bold text-[#191919]">{plan.name}</p>
+                                <p className="mb-2 text-[12px] text-gray-500">{plan.medication}</p>
+                                <div className="flex items-baseline gap-1.5">
+                                  <span className="text-[22px] font-extrabold text-[#0C4B75]">{plan.price}</span>
+                                  {plan.regularPrice && (
+                                    <span className="text-[13px] text-gray-400 line-through">{plan.regularPrice}</span>
+                                  )}
+                                  {plan.unit && <span className="text-[12px] text-gray-400">{plan.unit}</span>}
+                                </div>
+                                {plan.cadence && (
+                                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wide text-gray-400">
+                                    {plan.cadence}
+                                  </p>
+                                )}
+                                {plan.highlights && plan.highlights.length > 0 && (
+                                  <ul className="mt-3 space-y-1.5 border-t border-gray-200 pt-3">
+                                    {plan.highlights.map((h, hi) => (
+                                      <li key={hi} className="flex items-start gap-1.5 text-[12px] leading-[1.5] text-gray-500">
+                                        <Check className="mt-0.5 h-3 w-3 shrink-0 text-emerald-500" strokeWidth={2} />
+                                        {h}
+                                      </li>
+                                    ))}
+                                  </ul>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ) : review?.pricingSummary ? (
+                        <div className="mb-8">
+                          <h4 className="mb-1.5 text-[17px] font-bold text-[#191919]">
+                            How much does {provider.name} cost?
+                          </h4>
+                          <p className="max-w-[820px] text-[14px] leading-[1.7] text-gray-500">
+                            {review.pricingSummary}
+                          </p>
+                        </div>
+                      ) : null}
+
+                      {/* Pros / cons */}
+                      {(pros.length > 0 || cons.length > 0) && (
+                        <div className="mb-8 grid gap-4 sm:grid-cols-2">
+                          {pros.length > 0 && (
+                            <div className="rounded-xl border border-emerald-100 bg-emerald-50/40 p-5">
+                              <p className="mb-3 text-[14px] font-bold text-emerald-800">
+                                What we like about {provider.name}
+                              </p>
+                              <ul className="space-y-2">
+                                {pros.map((pt, i) => (
+                                  <li key={i} className="flex items-start gap-2 text-[13.5px] leading-[1.55] text-gray-700">
+                                    <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2.5} />
+                                    {pt}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                          {cons.length > 0 && (
+                            <div className="rounded-xl border border-gray-200 bg-gray-50/60 p-5">
+                              <p className="mb-3 text-[14px] font-bold text-gray-700">
+                                Worth keeping in mind
+                              </p>
+                              <ul className="space-y-2">
+                                {cons.map((c, i) => (
+                                  <li key={i} className="flex items-start gap-2 text-[13.5px] leading-[1.55] text-gray-600">
+                                    <Minus className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gray-400" strokeWidth={2} />
+                                    {c}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                        </div>
+                      )}
+
+                      {/* This provider's Trustpilot reviews */}
+                      {reviewCount > 0 && (
+                        <div className="mb-8">
+                          <h4 className="mb-4 text-[17px] font-bold text-[#191919]">
+                            What real {provider.name} customers are saying
+                          </h4>
+                          <TrustpilotCarousel
+                            providerName={provider.name}
+                            providerLogo={provider.logo}
+                            reviews={provider.trustpilotReviews!}
+                            rating={provider.trustpilotRating}
+                            reviewCount={provider.trustpilotReviewCount}
+                          />
+                        </div>
+                      )}
+
+                      {/* Bottom CTA */}
+                      <ProviderCta
+                        href={provider.affiliateUrl}
+                        providerName={provider.name}
+                        providerSlug={provider.id}
+                        pageType="battle"
+                        sourceFlow="battle_page"
+                        className="flex h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-[#0C4B75] text-[15px] font-bold text-white transition-colors hover:bg-[#093d61]"
+                      >
+                        Get started with {provider.name}
+                        <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
+                      </ProviderCta>
+                    </div>
+                  </section>
+                );
+              })}
             </div>
           </div>
 
