@@ -362,6 +362,8 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
     ],
   },
   directmeds: {
+    rating: "4.6",
+    reviewCount: "13,901",
     reviews: [
       {
         title: "A great personnel",
@@ -1145,15 +1147,15 @@ const defaultReviews: ReviewData[] = [
     slug: "directmeds",
     providerId: "directmeds",
     shortSummary: "Pharmacy-direct weight loss platform offering GLP-1 medications with streamlined fulfillment and licensed provider oversight.",
-    reviewIntro: "DirectMeds connects patients directly with pharmacy fulfillment for GLP-1 weight loss medications, cutting out unnecessary middlemen. Their platform pairs licensed medical providers with efficient pharmacy operations to deliver prescription weight loss treatments quickly and at competitive prices.",
+    reviewIntro: "DirectMeds is a pharmacy-direct telehealth program with 250,000+ customers, offering doctor-prescribed GLP-1 weight loss treatment starting at $147/month. You can get compounded semaglutide or tirzepatide as weekly injections — or, if you'd rather skip needles, as sublingual oral drops. It's 100% online with the telemedicine visit and prescription included, no insurance required, no hidden fees, and no monthly membership. Medication ships free and arrives in 1-2 days, and you can cancel anytime.",
     keyFeatures: [
-      "Direct pharmacy fulfillment model",
-      "Licensed provider consultations included",
-      "GLP-1 medication access (semaglutide, tirzepatide)",
-      "Streamlined ordering and delivery process",
-      "Ongoing medical support and dosage adjustments"
+      "Doctor-prescribed GLP-1 starting at $147/month",
+      "Injections or needle-free sublingual oral drops",
+      "Compounded semaglutide and tirzepatide",
+      "100% online — telemedicine visit & prescription included",
+      "Free 1-2 day shipping; same price at every dose"
     ],
-    pricingSummary: "DirectMeds offers competitive monthly pricing that includes provider consultations, medication, and direct pharmacy shipping. No hidden fees or long-term contracts required.",
+    pricingSummary: "DirectMeds starts at $147/month for doctor-prescribed GLP-1 treatment — compounded semaglutide or tirzepatide, available as weekly injections or sublingual oral drops. It's the same price at every dose (no surprise increases as you titrate up), with no insurance required, no hidden fees, and no monthly membership. Free shipping arrives in 1-2 days, and you can cancel anytime.",
     treatmentOptions: [
       "Compounded semaglutide",
       "Compounded tirzepatide",
@@ -1168,21 +1170,39 @@ const defaultReviews: ReviewData[] = [
       "No long-term commitment required"
     ],
     cons: [
-      "Smaller platform with fewer user reviews",
-      "Limited lifestyle support resources",
+      "Compounded medications only (not brand-name)",
+      "Limited lifestyle/coaching support resources",
       "Availability may vary by state"
     ],
     bestFor: [
       "People who want fast, direct pharmacy fulfillment",
-      "Those looking for competitively priced GLP-1 access",
-      "Anyone who values a simple, no-frills ordering process"
+      "Those looking for competitively priced GLP-1 access ($147+)",
+      "Anyone who prefers needle-free oral drops over injections"
     ],
     finalVerdict: "DirectMeds is a solid option for patients who prioritize speed and simplicity in accessing GLP-1 weight loss medications. Their pharmacy-direct model cuts out unnecessary steps, and competitive pricing makes treatment more accessible. While the platform lacks some of the coaching and lifestyle features of larger competitors, it delivers on its core promise: affordable, provider-supervised GLP-1 treatment with fast delivery.",
     trustBadges: [
-      "Pharmacy-direct fulfillment",
-      "Licensed provider oversight",
-      "No hidden fees",
-      "No long-term contracts",
+      "Same price, every dose",
+      "No hidden fees or membership",
+      "Free 1-2 day shipping",
+      "Cancel anytime",
+    ],
+    pricingPlans: [
+      {
+        name: "Compounded GLP-1 Injections",
+        medication: "Semaglutide or Tirzepatide",
+        cadence: "Weekly",
+        price: "$147",
+        unit: "/month",
+        highlights: ["Starting price — same at every dose", "Free 1-2 day shipping, no hidden fees"],
+      },
+      {
+        name: "Compounded GLP-1 Oral Drops",
+        medication: "Sublingual semaglutide or tirzepatide",
+        cadence: "Daily",
+        price: "$147",
+        unit: "/month",
+        highlights: ["No needles — sublingual liquid", "Starting price — cancel anytime"],
+      },
     ],
   },
   {
