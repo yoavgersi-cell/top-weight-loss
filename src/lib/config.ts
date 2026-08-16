@@ -261,7 +261,7 @@ export interface LandingPageData {
 
 // Stable fallback "last updated" date for schema when an item has no CMS
 // updatedAt. Avoids emitting today's date on every request (fake freshness).
-export const CONTENT_LAST_UPDATED = "2026-08-12";
+export const CONTENT_LAST_UPDATED = "2026-08-16";
 
 // Providers we have an affiliate relationship with. Pages centered on any other
 // brand don't monetize, so they're de-indexed (noindex,follow) and dropped from
@@ -325,7 +325,7 @@ export const defaultConfig: SiteConfig = {
   hero: {
     backgroundImageUrl: "/hero.png",
     imageAlt: "Weight loss medications",
-    updatedLabel: "Last Updated: July 2026",
+    updatedLabel: "Last Updated: August 2026",
     h1: "Best Weight Loss Injections & Programs of 2026",
     h2: "Compare the top GLP-1 weight loss providers, side by side",
     description:

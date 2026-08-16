@@ -20,7 +20,7 @@ export const articles: Article[] = [
     category: "Science",
     readTime: "6 min read",
     publishedAt: "2026-05-12",
-    updatedAt: "2026-06-20",
+    updatedAt: "2026-08-16",
     heroColor: "#EEF4FB",
     author: "TopWeightLoss Team",
     sections: [
@@ -58,7 +58,7 @@ export const articles: Article[] = [
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-04-28",
-    updatedAt: "2026-06-15",
+    updatedAt: "2026-08-16",
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Content Team",
     sections: [
@@ -96,7 +96,7 @@ export const articles: Article[] = [
     category: "Advice",
     readTime: "8 min read",
     publishedAt: "2026-05-20",
-    updatedAt: "2026-07-26",
+    updatedAt: "2026-08-16",
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Content Team",
     sections: [
@@ -146,7 +146,7 @@ export const articles: Article[] = [
     category: "Wellness",
     readTime: "6 min read",
     publishedAt: "2026-06-01",
-    updatedAt: "2026-06-25",
+    updatedAt: "2026-08-16",
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Team",
     sections: [
@@ -184,7 +184,7 @@ export const articles: Article[] = [
     category: "Science",
     readTime: "9 min read",
     publishedAt: "2026-06-10",
-    updatedAt: "2026-07-22",
+    updatedAt: "2026-08-16",
     heroColor: "#EEF4FB",
     author: "TopWeightLoss Team",
     sections: [
@@ -234,7 +234,7 @@ export const articles: Article[] = [
     category: "Guide",
     readTime: "9 min read",
     publishedAt: "2026-06-15",
-    updatedAt: "2026-07-22",
+    updatedAt: "2026-08-16",
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Team",
     sections: [
@@ -284,7 +284,7 @@ export const articles: Article[] = [
     category: "Science",
     readTime: "9 min read",
     publishedAt: "2026-06-18",
-    updatedAt: "2026-07-22",
+    updatedAt: "2026-08-16",
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Team",
     sections: [
@@ -330,7 +330,7 @@ export const articles: Article[] = [
     category: "Advice",
     readTime: "8 min read",
     publishedAt: "2026-06-20",
-    updatedAt: "2026-07-22",
+    updatedAt: "2026-08-16",
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Content Team",
     sections: [
@@ -376,7 +376,7 @@ export const articles: Article[] = [
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-06-25",
-    updatedAt: "2026-07-03",
+    updatedAt: "2026-08-16",
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Team",
     sections: [
@@ -414,7 +414,7 @@ export const articles: Article[] = [
     category: "Wellness",
     readTime: "7 min read",
     publishedAt: "2026-06-27",
-    updatedAt: "2026-07-04",
+    updatedAt: "2026-08-16",
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Content Team",
     sections: [
@@ -452,7 +452,7 @@ export const articles: Article[] = [
     category: "Wellness",
     readTime: "6 min read",
     publishedAt: "2026-06-30",
-    updatedAt: "2026-07-04",
+    updatedAt: "2026-08-16",
     heroColor: "#EEF4FB",
     author: "TopWeightLoss Content Team",
     sections: [
@@ -490,7 +490,7 @@ export const articles: Article[] = [
     category: "Science",
     readTime: "7 min read",
     publishedAt: "2026-07-01",
-    updatedAt: "2026-07-05",
+    updatedAt: "2026-08-16",
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Team",
     sections: [
@@ -528,7 +528,7 @@ export const articles: Article[] = [
     category: "Science",
     readTime: "6 min read",
     publishedAt: "2026-07-03",
-    updatedAt: "2026-07-05",
+    updatedAt: "2026-08-16",
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Team",
     sections: [
@@ -566,7 +566,7 @@ export const articles: Article[] = [
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-07-08",
-    updatedAt: "2026-07-18",
+    updatedAt: "2026-08-16",
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Team",
     sections: [
@@ -604,7 +604,7 @@ export const articles: Article[] = [
     category: "Science",
     readTime: "6 min read",
     publishedAt: "2026-07-10",
-    updatedAt: "2026-07-18",
+    updatedAt: "2026-08-16",
     heroColor: "#EEF4FB",
     author: "TopWeightLoss Team",
     sections: [
@@ -650,7 +650,7 @@ export const articles: Article[] = [
     category: "Science",
     readTime: "10 min read",
     publishedAt: "2026-07-12",
-    updatedAt: "2026-07-22",
+    updatedAt: "2026-08-16",
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Team",
     sections: [
@@ -712,7 +712,7 @@ export const articles: Article[] = [
     category: "Advice",
     readTime: "6 min read",
     publishedAt: "2026-07-14",
-    updatedAt: "2026-07-19",
+    updatedAt: "2026-08-16",
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Content Team",
     sections: [
@@ -750,7 +750,7 @@ export const articles: Article[] = [
     category: "Guide",
     readTime: "5 min read",
     publishedAt: "2026-07-15",
-    updatedAt: "2026-07-19",
+    updatedAt: "2026-08-16",
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Team",
     sections: [
@@ -796,7 +796,7 @@ export const articles: Article[] = [
     category: "Science",
     readTime: "6 min read",
     publishedAt: "2026-07-16",
-    updatedAt: "2026-07-20",
+    updatedAt: "2026-08-16",
     heroColor: "#EEF4FB",
     author: "TopWeightLoss Team",
     sections: [
@@ -842,7 +842,7 @@ export const articles: Article[] = [
     category: "Advice",
     readTime: "6 min read",
     publishedAt: "2026-07-18",
-    updatedAt: "2026-07-21",
+    updatedAt: "2026-08-16",
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Team",
     sections: [
@@ -880,7 +880,7 @@ export const articles: Article[] = [
     category: "Advice",
     readTime: "5 min read",
     publishedAt: "2026-07-19",
-    updatedAt: "2026-07-21",
+    updatedAt: "2026-08-16",
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Content Team",
     sections: [
@@ -918,7 +918,7 @@ export const articles: Article[] = [
     category: "Advice",
     readTime: "5 min read",
     publishedAt: "2026-07-19",
-    updatedAt: "2026-07-21",
+    updatedAt: "2026-08-16",
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Team",
     sections: [
@@ -960,7 +960,7 @@ export const articles: Article[] = [
     category: "Guide",
     readTime: "5 min read",
     publishedAt: "2026-07-20",
-    updatedAt: "2026-07-21",
+    updatedAt: "2026-08-16",
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Team",
     sections: [
@@ -1002,7 +1002,7 @@ export const articles: Article[] = [
     category: "Science",
     readTime: "7 min read",
     publishedAt: "2026-07-20",
-    updatedAt: "2026-07-21",
+    updatedAt: "2026-08-16",
     heroColor: "#EEF4FB",
     author: "TopWeightLoss Team",
     sections: [
@@ -1040,7 +1040,7 @@ export const articles: Article[] = [
     category: "Guide",
     readTime: "5 min read",
     publishedAt: "2026-07-21",
-    updatedAt: "2026-07-21",
+    updatedAt: "2026-08-16",
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Team",
     sections: [
@@ -1086,7 +1086,7 @@ export const articles: Article[] = [
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-07-21",
-    updatedAt: "2026-07-21",
+    updatedAt: "2026-08-16",
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Content Team",
     sections: [
@@ -1136,7 +1136,7 @@ export const articles: Article[] = [
     category: "Wellness",
     readTime: "8 min read",
     publishedAt: "2026-07-21",
-    updatedAt: "2026-07-22",
+    updatedAt: "2026-08-16",
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Team",
     sections: [
@@ -1178,7 +1178,7 @@ export const articles: Article[] = [
     category: "Wellness",
     readTime: "7 min read",
     publishedAt: "2026-07-22",
-    updatedAt: "2026-07-22",
+    updatedAt: "2026-08-16",
     heroColor: "#EEF4FB",
     author: "TopWeightLoss Team",
     sections: [
@@ -1220,7 +1220,7 @@ export const articles: Article[] = [
     category: "Advice",
     readTime: "7 min read",
     publishedAt: "2026-07-22",
-    updatedAt: "2026-07-22",
+    updatedAt: "2026-08-16",
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Team",
     sections: [
@@ -1262,7 +1262,7 @@ export const articles: Article[] = [
     category: "Advice",
     readTime: "8 min read",
     publishedAt: "2026-07-22",
-    updatedAt: "2026-07-22",
+    updatedAt: "2026-08-16",
     heroColor: "#EEF4FB",
     author: "TopWeightLoss Team",
     sections: [
@@ -1304,7 +1304,7 @@ export const articles: Article[] = [
     category: "Advice",
     readTime: "7 min read",
     publishedAt: "2026-07-22",
-    updatedAt: "2026-07-22",
+    updatedAt: "2026-08-16",
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Team",
     sections: [
@@ -1342,7 +1342,7 @@ export const articles: Article[] = [
     category: "Advice",
     readTime: "7 min read",
     publishedAt: "2026-07-22",
-    updatedAt: "2026-07-22",
+    updatedAt: "2026-08-16",
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Team",
     sections: [
@@ -1380,7 +1380,7 @@ export const articles: Article[] = [
     category: "Guide",
     readTime: "8 min read",
     publishedAt: "2026-07-22",
-    updatedAt: "2026-07-22",
+    updatedAt: "2026-08-16",
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Team",
     sections: [
@@ -1422,7 +1422,7 @@ export const articles: Article[] = [
     category: "Advice",
     readTime: "10 min read",
     publishedAt: "2026-07-25",
-    updatedAt: "2026-07-26",
+    updatedAt: "2026-08-16",
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Team",
     sections: [
