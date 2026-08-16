@@ -11,6 +11,7 @@ import { notFound, permanentRedirect } from "next/navigation";
 import { ArrowRight, Check, Minus, ShieldCheck, Sparkles } from "lucide-react";
 import { LastUpdated } from "@/components/last-updated";
 import { ProviderCta } from "@/components/provider-cta";
+import { BattleStickyCta } from "@/components/battle-sticky-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { TrustpilotRating } from "@/components/trustpilot-rating";
 import { ExpertByline } from "@/components/expert-byline";
@@ -328,7 +329,7 @@ export default async function BattlePage({
           </div>
         </section>
 
-        <div className="mx-auto max-w-[1100px] px-4 py-10 sm:px-6">
+        <div className="mx-auto max-w-[1100px] px-4 pt-10 pb-28 sm:px-6 sm:pb-10">
           {/* ───── EXPERT INTRO ───── */}
           <div className="mb-12 max-w-[760px]">
             <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
@@ -863,6 +864,12 @@ export default async function BattlePage({
           </div>
         </div>
       </div>
+
+      {/* Mobile-only sticky CTA — both providers, appears after the hero */}
+      <BattleStickyCta
+        p1={{ id: p1.id, name: p1.name, affiliateUrl: p1.affiliateUrl }}
+        p2={{ id: p2.id, name: p2.name, affiliateUrl: p2.affiliateUrl }}
+      />
     </>
   );
 }
