@@ -10,6 +10,8 @@ const BLOB_KEY = "site-config.json";
 // provider's reviews are edited in the admin CMS, which then takes precedence.
 const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; reviews: TrustpilotReview[] }> = {
   wellmedr: {
+    rating: "4.7",
+    reviewCount: "1,205",
     reviews: [
       {
         title: "Contacted the company to slow my refills",
