@@ -928,45 +928,75 @@ const defaultReviews: ReviewData[] = [
   {
     slug: "wellmedr",
     providerId: "wellmedr",
-    shortSummary: "AI-driven telehealth offering compounded GLP-1/GIP (tirzepatide) weight-loss treatment — plus a semaglutide + NAD+/B12 microdose — with board-certified specialists and 50% off your first month.",
-    reviewIntro: "WellMedr is an AI-driven telehealth platform that reaches beyond weight loss into longevity, hormones, and more. For weight management it offers compounded GLP-1/GIP (tirzepatide) — with 50% off your first month — plus an Energy & Focus+ microdose that pairs compounded semaglutide with NAD+ and Vitamin B12. Board-certified specialists tailor your plan, treatment is 100% online with no office visit, and medications are made in US state-licensed pharmacies following FDA compounding standards.",
+    shortSummary: "Telehealth GLP-1 weight-loss program used by 1,000,000+ patients — compounded semaglutide from $59/mo and tirzepatide from $99/mo, plus brand-name options — with board-certified specialists and a weight-loss warranty.",
+    reviewIntro: "WellMedr is a telehealth weight-loss platform whose GLP-1 medications have been used by 1,000,000+ patients. It offers compounded GLP-1 (semaglutide) from $59/month and compounded GLP-1/GIP (tirzepatide) from $99/month — both shipped every 4 weeks at the same price no matter your dose — plus brand-name Ozempic and Zepbound for anyone who wants them. Board-certified specialists tailor your plan, treatment is 100% online with no office visit, and a Medical Weight-Care Coach supports you the whole way. It's backed by a weight-loss warranty, and there's a standing offer to lock in $200 off every month — or $59/mo on a 12-month plan, for life.",
     keyFeatures: [
-      "Compounded GLP-1/GIP (tirzepatide) — 50% off first month",
-      "Energy & Focus+ microdose: semaglutide + NAD+ + B12",
-      "Board-certified specialists tailor your plan",
-      "100% online — no office visit; message your provider anytime",
-      "Discreet, unbranded packaging; ships across the US"
+      "Compounded semaglutide from $59/mo, tirzepatide from $99/mo",
+      "Same price regardless of dosage; shipped every 4 weeks",
+      "Brand-name Ozempic and Zepbound also available",
+      "Board-certified specialists + Medical Weight-Care Coach",
+      "100% online, backed by a weight-loss warranty"
     ],
-    pricingSummary: "WellMedr promotes 50% off your first month on its compounded GLP-1/GIP weight-loss treatment. It's a broader wellness membership that also spans TRT, NAD+, hair, and sexual health. Medications are made in US state-licensed pharmacies following FDA compounding standards, and treatment is prescribed online after a provider reviews your intake — no upfront prescription or office visit required.",
+    pricingSummary: "WellMedr keeps compounded pricing low: GLP-1 (semaglutide) from $59/month and GLP-1/GIP (tirzepatide) from $99/month, both shipped every 4 weeks at the same price regardless of your dose. You can lock in $200 off every month — or $59/mo on a 12-month plan, for life. Brand-name Ozempic (from $1,399) and Zepbound (from $1,599) are available too. Every plan includes licensed provider review, ongoing medical oversight, and a Medical Weight-Care Coach, and you can cancel or change anytime.",
     treatmentOptions: [
-      "Compounded GLP-1/GIP injection (tirzepatide)",
-      "Energy & Focus+ microdose (semaglutide + NAD+ + B12)",
-      "Broader longevity range (TRT, NAD+, hair, sexual health)",
+      "Compounded semaglutide injection (GLP-1)",
+      "Compounded tirzepatide injection (GLP-1 + GIP)",
+      "Brand-name Ozempic and Zepbound",
       "Online provider review and prescription"
     ],
     pros: [
-      "50% off your first month",
-      "Board-certified specialists tailor your plan",
-      "GLP-1 formulations enhanced with NAD+ and B12",
-      "Broad platform beyond weight loss (longevity, hormones)",
-      "Discreet, unbranded packaging"
+      "Low compounded pricing — semaglutide from $59/mo, tirzepatide from $99/mo",
+      "Same price regardless of dosage",
+      "Board-certified specialists + Medical Weight-Care Coach",
+      "Brand-name options available (Ozempic, Zepbound)",
+      "Backed by a weight-loss warranty; cancel anytime"
     ],
     cons: [
       "Standard delivery is slower — about 3-5 business days",
       "US shipping only (no international)",
-      "Ongoing weight-loss pricing isn't listed up front"
+      "Lowest $59/mo pricing is tied to a 12-month plan"
     ],
     bestFor: [
-      "People who want weight loss plus broader wellness/longevity",
-      "Anyone drawn to GLP-1 + NAD+/B12 formulations",
-      "Those who value board-certified specialist care"
+      "People who want the lowest-cost compounded GLP-1 ($59/mo)",
+      "Anyone who wants both compounded and brand-name options",
+      "Those who value board-certified specialist care + coaching"
     ],
-    finalVerdict: "WellMedr is a strong pick if you want more than weight loss — it pairs compounded GLP-1/GIP treatment (with 50% off the first month) with a broader longevity platform spanning hormones, NAD+, and more, overseen by board-certified specialists. If your only goal is the fastest, lowest-cost GLP-1, a weight-loss-focused provider may suit better; for wellness-minded patients, WellMedr's range stands out.",
+    finalVerdict: "WellMedr is a strong value pick: compounded semaglutide from $59/month and tirzepatide from $99/month, the same price no matter your dose, with board-certified specialists, a Medical Weight-Care Coach, and a weight-loss warranty behind it. Brand-name Ozempic and Zepbound are there if you want them. If you're after the lowest ongoing GLP-1 price and don't mind a 12-month commitment for the best rate, WellMedr is hard to beat.",
     trustBadges: [
-      "50% off first month",
-      "Board-certified specialists",
-      "100% online — no office visit",
-      "Discreet, unbranded packaging",
+      "1,000,000+ patients",
+      "Weight-loss warranty",
+      "Same price, every dose",
+      "Cancel anytime",
+    ],
+    pricingPlans: [
+      {
+        name: "GLP-1",
+        medication: "Compounded Semaglutide",
+        cadence: "Every 4 weeks",
+        price: "$59",
+        unit: "/month",
+        highlights: ["Proven & steady — recommended for most", "Same price regardless of dosage"],
+      },
+      {
+        name: "GLP-1 + GIP",
+        medication: "Compounded Tirzepatide",
+        cadence: "Every 4 weeks",
+        price: "$99",
+        unit: "/month",
+        highlights: ["Most powerful option — stronger appetite control", "Cancel or change anytime"],
+      },
+      {
+        name: "Ozempic",
+        medication: "Brand-name semaglutide injection",
+        price: "$1,399",
+        unit: "/month",
+      },
+      {
+        name: "Zepbound",
+        medication: "Brand-name tirzepatide injection",
+        price: "$1,599",
+        unit: "/month",
+      },
     ],
   },
   {
