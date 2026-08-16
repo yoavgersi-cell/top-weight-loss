@@ -1477,7 +1477,7 @@ const embodyAltrxBattle: Omit<BattleData, "slug"> = {
   title: "altRx vs embody: Which GLP-1 Provider Is Right for You in 2026?",
   matchupLabel: "altRx vs embody",
   subtitle: "altRx vs embody, compared on pricing, GLP-1 medications, shipping speed, and medical support — so you can see which one fits you best.",
-  description: "altRx (from $89/mo, plus brand-name Zepbound & Wegovy) vs embody (from $69/mo, free 1-2 day delivery). Compare GLP-1 pricing, medications & real reviews to find the one that fits you.",
+  description: "altRx vs embody: compare pricing, GLP-1 medications, shipping & real reviews. altRx: brand-name Zepbound & Wegovy. embody: free 1-2 day delivery. See which fits you.",
   intro: "If you're deciding between altRx and embody, both are fully online GLP-1 weight-loss providers with transparent pricing and no insurance required. altRx bills itself as \"the #1 most affordable GLP-1 program\" from $89/month and stands out with a broader lineup — adding brand-name Zepbound and Wegovy plus Buy Now, Pay Later — while embody offers compounded semaglutide ($69/mo) and tirzepatide ($119/mo) with free 1-2 day shipping. Here's how altRx and embody compare on the factors that matter most.",
   verdict: "Both altRx and embody are legitimate, well-reviewed, fully online GLP-1 providers with transparent pricing and no insurance required — but embody takes this one. It's cheaper on both compounded options ($69/$119 vs altRx's $89/$149) and ships in 1-2 days versus altRx's 5-7. altRx is the better pick if you want the widest selection, including brand-name Zepbound or Wegovy, or Buy Now, Pay Later.",
   verdictWinnerPoints: [
@@ -1566,7 +1566,7 @@ const embodyWellmedrBattle: BattleData = {
   provider2Id: "wellmedr",
   title: "Embody vs WellMedr: Which Weight Loss Provider Is Right for You in 2026?",
   subtitle: "We compared pricing, medical support, long-term care, and real customer experience so you can see which one fits you best.",
-  description: "embody (from $69/mo, fast free 1-2 day shipping) vs WellMedr (from $59/mo, 1M+ patients, 4.7★). Compare GLP-1 pricing, medical support & real reviews to find your best fit.",
+  description: "embody vs WellMedr: compare pricing, GLP-1 meds, support & reviews. embody: fast free shipping. WellMedr: 1M+ patients & weight-loss warranty. See which fits you.",
   intro: "Embody and WellMedr both offer compounded GLP-1 weight-loss treatment through a fully online experience — but they take different approaches. Embody is weight-loss-focused with flat $69/$119 pricing and fast 1-2 day shipping, while WellMedr is an AI-driven telehealth brand that reaches beyond weight loss into longevity, hormones, and more — pairing GLP-1 with add-ons like NAD+ and B12, overseen by board-certified specialists. Here's how they compare.",
   verdict: "Both are credible online GLP-1 providers with genuinely close pricing. Embody keeps it simple: unconditional flat pricing ($69/$119), free 1-2 day shipping, and strong recent customer feedback. WellMedr lists an even lower headline — semaglutide from $59/mo, tirzepatide from $99/mo (best rate on a 12-month plan) — plus board-certified specialists and a broader wellness range. Go with embody for simple, fast, month-to-month treatment; go with WellMedr for the lowest annual price and a wider platform.",
   verdictWinnerPoints: [
@@ -1658,7 +1658,7 @@ const altrxTrimrxBattle: BattleData = {
   provider2Id: "trimrx",
   title: "altRx vs TrimRX: Which GLP-1 Provider Is Right for You in 2026?",
   subtitle: "altRx vs TrimRX, compared on pricing, medication selection, medical support, and real customer experience — so you can see which one delivers more value for you.",
-  description: "altRx (from $89/mo, widest lineup incl. brand-name Zepbound & Wegovy) vs TrimRX (from $179/mo, flexible plans). Compare GLP-1 pricing, medications & value to find your fit.",
+  description: "altRx vs TrimRX: compare pricing, meds, plans & value. altRx: brand-name Zepbound & Wegovy. TrimRX: flexible, no-commitment plans. See which fits you.",
   intro: "altRx and TrimRX are both fully online GLP-1 weight-loss providers that skip insurance and ship medication to your door. altRx bills itself as \"the #1 most affordable GLP-1 program\" from $89/month and stands out with the broadest lineup — compounded GLP-1 and GLP-1 + GIP plus brand-name Zepbound and Wegovy. TrimRX is built around affordable access to GLP-1 programs, pairing competitive monthly pricing with flexible plans, multi-month discounts, and ongoing clinical guidance. Here's how they compare across the factors that matter most.",
   verdict: "Both are legitimate, no-insurance-required online GLP-1 providers — but TrimRX takes this one on value. Its plans are built around affordability, with competitive monthly pricing, multi-month discounts, and provider consultations plus ongoing support bundled in, all with no long-term commitment. altRx is the better pick if you want the widest medication selection — including brand-name Zepbound or Wegovy — or Buy Now, Pay Later.",
   verdictWinnerPoints: [
@@ -1752,7 +1752,7 @@ const medviAltrxBattle: BattleData = {
   provider2Id: "altrx",
   title: "Medvi vs altRx: Which Weight Loss Provider Is Right for You in 2026?",
   subtitle: "We compared personal support, ongoing care, medication access, and value so you can see which one fits you best.",
-  description: "Medvi (from $179/mo, GLP-1 injections or tablets, free coaching) vs altRx (from $89/mo, brand-name Zepbound & Wegovy). Compare GLP-1 pricing, care & value to find your fit.",
+  description: "Medvi vs altRx: compare pricing, GLP-1 options, care & value. Medvi: injections, tablets & coaching. altRx: brand-name meds & Buy Now, Pay Later. See which fits you.",
   intro: "Medvi and altRx are both fully online, self-pay GLP-1 weight-loss providers that ship prescription treatment to your door. altRx bills itself as \"the #1 most affordable GLP-1 program\" from $89/month with the broadest medication lineup — compounded GLP-1 and GLP-1 + GIP plus brand-name Zepbound and Wegovy. Medvi keeps medical weight loss simple, pairing prescription GLP-1 treatment with attentive provider support, regular monitoring, and transparent all-inclusive pricing. Here's how they compare.",
   verdict: "Both are legitimate online GLP-1 providers — but Medvi takes this one for the experience. Its customers consistently praise the personal, attentive service, and its plans bundle medication, provider consultations, and ongoing monitoring into transparent pricing with no surprise charges. altRx is the better pick if you want the widest medication selection — including brand-name Zepbound or Wegovy — or Buy Now, Pay Later.",
   verdictWinnerPoints: [
@@ -1839,7 +1839,7 @@ const medviTrimrxBattle: BattleData = {
   provider2Id: "trimrx",
   title: "Medvi vs TrimRX: Which Weight Loss Provider Is Right for You in 2026?",
   subtitle: "We compared personal support, ongoing care, pricing, and medication access so you can see which one fits you best.",
-  description: "Medvi (from $179/mo, GLP-1 injections or tablets) vs TrimRX (from $179/mo, flexible plans). Compare GLP-1 pricing, medical support & value to find the one that fits you.",
+  description: "Medvi vs TrimRX: compare pricing, GLP-1 meds, support & value. Medvi: injections, tablets & coaching. TrimRX: flexible, no-commitment plans. See which fits you.",
   intro: "Medvi and TrimRX are both online GLP-1 weight-loss providers that keep things affordable and skip the insurance hassle. TrimRX is built around affordable access to GLP-1 programs, with competitive pricing and multi-month discounts. Medvi keeps medical weight loss simple, pairing prescription GLP-1 treatment with attentive provider support, regular monitoring, and transparent all-inclusive pricing. Here's how they compare.",
   verdict: "Both are solid, budget-friendly online GLP-1 providers — but Medvi takes this one for the experience. Its customers consistently praise the personal, attentive service, and its plans bundle medication, provider consultations, and ongoing monitoring with no surprise charges. TrimRX is the better pick if your top priority is the lowest headline price, with competitive pricing and multi-month discounts.",
   verdictWinnerPoints: [
@@ -1927,7 +1927,7 @@ const medviRoBattle: BattleData = {
   title: "Ro vs Medvi: Which Weight Loss Provider Is Right for You in 2026?",
   matchupLabel: "Ro vs Medvi",
   subtitle: "We compared personal support, pricing, ongoing care, and brand track record so you can see which one fits you best.",
-  description: "Ro (established telehealth brand, brand-name GLP-1) vs Medvi (from $179/mo, injections or GLP-1 tablets, free coaching). Compare pricing, medications & care to find your fit.",
+  description: "Ro vs Medvi: compare pricing, GLP-1 meds, care & track record. Ro: established brand with brand-name GLP-1. Medvi: injections, tablets & coaching. See which fits you.",
   intro: "Medvi and Ro are both online telehealth providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established brand with an integrated in-house pharmacy and licensed providers reviewing every plan. Medvi keeps medical weight loss simple, pairing prescription GLP-1 treatment with attentive provider support, regular monitoring, and transparent all-inclusive pricing. Here's how they compare.",
   verdict: "Both are credible online GLP-1 providers — but Medvi takes this one for the experience. Its customers consistently praise the personal, attentive service, and its plans bundle medication, provider consultations, and ongoing monitoring into transparent pricing with no surprise charges. Ro is the better pick if brand track record matters most — it's a large, established telehealth company with an integrated in-house pharmacy.",
   verdictWinnerPoints: [
@@ -2014,7 +2014,7 @@ const medviWellmedrBattle: BattleData = {
   provider2Id: "wellmedr",
   title: "Medvi vs WellMedr: Which Weight Loss Provider Is Right for You in 2026?",
   subtitle: "We compared personal support, focus, pricing, and range of care so you can see which one fits you best.",
-  description: "Medvi (from $179/mo, GLP-1 injections or tablets) vs WellMedr (from $59/mo, 1M+ patients, 4.7★). Compare GLP-1 pricing, support & real reviews to find your best fit.",
+  description: "Medvi vs WellMedr: compare pricing, GLP-1 meds & reviews. Medvi: injections, tablets & coaching. WellMedr: 1M+ patients & a weight-loss warranty. See which fits you.",
   intro: "Medvi and WellMedr both offer online GLP-1 weight-loss treatment, but they take different approaches. WellMedr is an AI-driven telehealth brand that reaches beyond weight loss into longevity, hormones, and more — pairing GLP-1 with add-ons like NAD+ and B12. Medvi keeps medical weight loss simple and focused, pairing prescription GLP-1 treatment with attentive provider support, regular monitoring, and transparent all-inclusive pricing. Here's how they compare for weight loss specifically.",
   verdict: "Both are credible online GLP-1 providers — but Medvi takes this comparison for weight loss specifically. Its customers consistently praise the personal, attentive service, and its plans bundle medication, provider consultations, and ongoing monitoring into transparent pricing with no surprise charges. WellMedr is the better fit if you want more than weight loss — a broader longevity platform spanning TRT, NAD+, hair, and sexual health.",
   verdictWinnerPoints: [
@@ -2107,7 +2107,7 @@ const embodyRoBattle: BattleData = {
   title: "Embody vs Ro: Which GLP-1 Provider Is Right for You in 2026?",
   matchupLabel: "Embody vs Ro",
   subtitle: "Embody vs Ro, compared on pricing, shipping speed, medical model, and overall value — so you can see which one fits you best.",
-  description: "embody (from $69/mo, free 1-2 day shipping) vs Ro (established telehealth brand, brand-name GLP-1). Compare pricing, shipping speed & medications to find your best fit.",
+  description: "embody vs Ro: compare pricing, shipping, GLP-1 meds & care. embody: fast free 1-2 day shipping. Ro: established brand with an in-house pharmacy. See which fits you.",
   intro: "Embody and Ro are both fully online providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established telehealth brand with an integrated in-house pharmacy and licensed providers reviewing every plan. Embody is weight-loss-focused with flat, transparent pricing — $69/month for compounded semaglutide and $119 for tirzepatide — free 1-2 day shipping, and LegitScript-certified 503A pharmacies. Here's how they compare.",
   verdict: "Both are legitimate online GLP-1 providers — but Embody takes this one on price and speed. It offers flat, transparent pricing ($69/$119), free 1-2 day tracked shipping, LegitScript-certified 503A pharmacies, and a full refund if you're not approved. Ro is the better pick if you value a large, established brand with an integrated in-house pharmacy.",
   verdictWinnerPoints: [
@@ -2195,7 +2195,7 @@ const trimrxRoBattle: BattleData = {
   title: "Ro vs TrimRX: Which GLP-1 Provider Is Right for You in 2026?",
   matchupLabel: "Ro vs TrimRX",
   subtitle: "We compared pricing, plan flexibility, medical support, and overall value so you can see which one fits you best.",
-  description: "Ro (established telehealth brand, brand-name GLP-1) vs TrimRX (from $179/mo, flexible plans). Compare pricing, plan flexibility & medications to find your best fit.",
+  description: "Ro vs TrimRX: compare pricing, plan flexibility, GLP-1 meds & value. Ro: established telehealth brand. TrimRX: flexible, no-commitment plans. See which fits you.",
   intro: "TrimRX and Ro are both online providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established telehealth brand with an integrated in-house pharmacy and licensed providers reviewing every plan. TrimRX is built around affordable access to GLP-1 programs, with competitive pricing, multi-month discounts, and flexible plans that carry no long-term commitment. Here's how they compare.",
   verdict: "Both are credible online GLP-1 providers — but TrimRX takes this one on value and flexibility. Its plans are built around affordability, with competitive pricing, multi-month discounts, and no long-term commitment, plus ongoing clinical guidance. Ro is the better pick if you value a large, established brand with an integrated in-house pharmacy.",
   verdictWinnerPoints: [
@@ -2282,7 +2282,7 @@ const trimrxWellmedrBattle: BattleData = {
   provider2Id: "wellmedr",
   title: "TrimRX vs WellMedr: Which Weight Loss Provider Is Right for You in 2026?",
   subtitle: "We compared pricing, plan flexibility, focus, and range of care so you can see which one fits you best.",
-  description: "TrimRX (from $179/mo, flexible plans) vs WellMedr (from $59/mo, 1M+ patients, 4.7★). Compare GLP-1 pricing, plans & real reviews to find the one that fits you.",
+  description: "TrimRX vs WellMedr: compare pricing, plans & reviews. TrimRX: flexible, no-commitment plans. WellMedr: 1M+ patients & weight-loss warranty. See which fits you.",
   intro: "TrimRX and WellMedr both offer online GLP-1 weight-loss treatment, but they take different approaches. WellMedr is an AI-driven telehealth brand that reaches beyond weight loss into longevity, hormones, and more — pairing GLP-1 with add-ons like NAD+ and B12. TrimRX is built around affordable access to GLP-1 programs, with competitive pricing, multi-month discounts, and flexible plans. Here's how they compare for weight loss specifically.",
   verdict: "Both are credible online GLP-1 providers — but TrimRX takes this comparison for weight loss specifically. Its affordability-first pricing, multi-month discounts, and flexible, no-commitment plans make it an easy place to start. WellMedr is the better fit if you want more than weight loss — a broader longevity platform spanning TRT, NAD+, hair, and sexual health.",
   verdictWinnerPoints: [
@@ -2370,7 +2370,7 @@ const roWellmedrBattle: BattleData = {
   title: "Ro vs WellMedr: Which GLP-1 Provider Is Right for You in 2026?",
   matchupLabel: "Ro vs WellMedr",
   subtitle: "We compared medications, intro pricing, range of care, and brand track record so you can see which one fits you best.",
-  description: "Ro (established telehealth brand, brand-name GLP-1) vs WellMedr (from $59/mo, 1M+ patients, 4.7★). Compare pricing, medications & real reviews to find your best fit.",
+  description: "Ro vs WellMedr: compare pricing, GLP-1 meds & reviews. Ro: established in-house pharmacy. WellMedr: 1M+ patients & weight-loss warranty. See which fits you.",
   intro: "WellMedr and Ro are both online providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established telehealth brand with an integrated in-house pharmacy and licensed providers reviewing every plan. WellMedr keeps compounded pricing low — semaglutide from $59/month and tirzepatide from $99 — with board-certified specialists, a Medical Weight-Care Coach, and a weight-loss warranty. Here's how they compare.",
   verdict: "Both are legitimate online GLP-1 providers. WellMedr stands out on price and value: semaglutide from $59/mo and tirzepatide from $99/mo (same price at every dose), plus board-certified specialists, a Medical Weight-Care Coach, and a weight-loss warranty behind it. Ro is the better pick if brand track record and an integrated in-house pharmacy matter most to you.",
   verdictWinnerPoints: [
@@ -2459,7 +2459,7 @@ const embodyTrimrxBattle: BattleData = {
   provider2Id: "trimrx",
   title: "embody vs TrimRX: Which GLP-1 Provider Is Right for You in 2026?",
   subtitle: "We compared pricing, shipping speed, plan flexibility, and medications so you can see which affordable option fits you best.",
-  description: "embody (from $69/mo, free 1-2 day shipping) vs TrimRX (from $179/mo, flexible plans). Compare GLP-1 pricing, shipping speed & value to find your best fit.",
+  description: "embody vs TrimRX: compare pricing, shipping, plans & GLP-1 meds. embody: fast free 1-2 day shipping. TrimRX: flexible, no-commitment plans. See which fits you.",
   intro: "embody and TrimRX are both affordable, weight-loss-focused telehealth providers offering compounded GLP-1 with home delivery. embody uses flat pricing — $69/month for compounded semaglutide and $119 for tirzepatide — with free 1-2 day shipping and LegitScript-certified 503A pharmacies. TrimRX focuses on budget-friendly access with flexible plans, multi-month discounts, and no long-term commitment. Here's how they compare.",
   verdict: "Both are strong budget picks — but embody edges ahead on entry price and speed. It offers flat $69/month compounded semaglutide, free 1-2 day tracked shipping, and LegitScript-certified 503A pharmacies. TrimRX is the better fit if you want flexible plans and multi-month discounts with no long-term contract.",
   verdictWinnerPoints: [
@@ -2546,7 +2546,7 @@ const embodyMedviBattle: BattleData = {
   provider2Id: "medvi",
   title: "embody vs Medvi: Which Weight Loss Provider Is Right for You in 2026?",
   subtitle: "We compared pricing, shipping speed, medications, and personal support so you can see which one fits you best.",
-  description: "embody (from $69/mo, free 1-2 day shipping) vs Medvi (from $179/mo, GLP-1 injections or tablets). Compare GLP-1 pricing, medications & support to find your best fit.",
+  description: "embody vs Medvi: compare pricing, shipping, GLP-1 meds & support. embody: fast free 1-2 day shipping. Medvi: injections, tablets & coaching. See which fits you.",
   intro: "embody and Medvi both offer online GLP-1 weight-loss treatment with provider support and home delivery. embody is built for affordable speed — flat $69/$119 pricing, free 1-2 day shipping, and LegitScript-certified 503A pharmacies. Medvi keeps things simple and personal, pairing prescription GLP-1 treatment with attentive provider support and transparent, all-inclusive pricing. Here's how they compare.",
   verdict: "Both are credible, transparent providers — but embody takes it on price, speed, and published medication options. It offers $69/month semaglutide, $119 tirzepatide, and free 1-2 day shipping. Medvi is the better pick if personal, attentive provider service is your top priority.",
   verdictWinnerPoints: [
@@ -2633,7 +2633,7 @@ const altrxWellmedrBattle: BattleData = {
   provider2Id: "wellmedr",
   title: "altRx vs WellMedr: Which GLP-1 Provider Is Right for You in 2026?",
   subtitle: "We compared pricing, medication selection, range of care, and payment flexibility so you can see which one fits you best.",
-  description: "altRx (from $89/mo, brand-name Zepbound & Wegovy) vs WellMedr (from $59/mo, 1M+ patients, 4.7★). Compare GLP-1 pricing, selection & real reviews to find your fit.",
+  description: "altRx vs WellMedr: compare pricing, meds & reviews. altRx: brand-name Zepbound & Wegovy. WellMedr: 1M+ patients & weight-loss warranty. See which fits you.",
   intro: "altRx and WellMedr both offer compounded GLP-1 weight-loss treatment online. altRx positions itself as the most affordable GLP-1 program — compounded semaglutide from $89/month, tirzepatide from $149, plus brand-name Zepbound and Wegovy, with Buy Now, Pay Later. WellMedr lists even lower headline pricing — semaglutide from $59/month and tirzepatide from $99 — with board-certified specialists, a Medical Weight-Care Coach, and a weight-loss warranty. Here's how they compare.",
   verdict: "Both are solid compounded-GLP-1 options — but altRx edges ahead for weight-loss value and selection. It offers flat $89/$149 pricing at every dose, brand-name Zepbound and Wegovy if you want them, and Buy Now, Pay Later. WellMedr is the better pick if you want enhanced formulations (NAD+/B12) and a broader longevity platform beyond weight loss.",
   verdictWinnerPoints: [
@@ -2889,7 +2889,7 @@ function buildInitialConfig(): SiteConfig {
         title: "altRx vs Ro: Which GLP-1 Provider Is Right for You in 2026?",
         matchupLabel: "altRx vs Ro",
         subtitle: "altRx vs Ro, compared on pricing, medication options, medical support, convenience, and overall value.",
-        description: "altRx (from $89/mo, brand-name Zepbound & Wegovy, Buy Now Pay Later) vs Ro (established telehealth brand). Compare GLP-1 pricing, medications & value to find your fit.",
+        description: "altRx vs Ro: compare pricing, GLP-1 meds, support & value. altRx: brand-name Zepbound & Wegovy. Ro: established telehealth brand. See which fits you.",
         intro: "altRx and Ro are two of the most popular telehealth weight loss providers offering GLP-1 medications. Both platforms connect patients with licensed providers and deliver prescription medication to your door — but they differ in pricing structure, level of personalization, medication options, and overall patient experience. Here's how they compare across the categories that matter most.",
         verdict: "altRx edges ahead with its transparent all-inclusive pricing, wider medication selection, and more personalized treatment approach. Ro remains a strong choice for those who value brand reputation and a streamlined, no-frills process. Both are solid options — your best pick depends on whether you prioritize personalization (altRx) or simplicity (Ro).",
         verdictWinnerPoints: [
