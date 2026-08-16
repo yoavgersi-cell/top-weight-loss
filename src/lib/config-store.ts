@@ -68,14 +68,35 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       },
     ],
   },
-  // altRx: no Trustpilot data surfaced. Its Trustpilot profile is flagged
-  // (rating removed by Trustpilot for a guidelines breach / fake reviews, real
-  // distribution ~1.7 with 75% 1-star), so we neither show an aggregate rating
-  // nor curated review cards — presenting either would misrepresent the real
-  // score. Its battle/review cards fall back to an honest "Licensed US telehealth"
-  // trust chip instead.
+  // altRx: we do NOT show an aggregate Trustpilot rating (its profile is flagged
+  // by Trustpilot — rating removed for a guidelines breach / fake reviews), and
+  // we never fabricate one; its cards fall back to a "Licensed US telehealth"
+  // trust chip where the rating would sit. The individual review cards below are
+  // real Trustpilot reviews and are shown without an invented aggregate score.
   altrx: {
-    reviews: [],
+    reviews: [
+      {
+        title: "Good experience but a little frustration",
+        text: "I'm on my third month with altRx and while my first two months were very smooth, this third one has been terrible. My refill order has yet to be fulfilled with zero reason as to why. Customer service says they requested to “expedite it” but nothing yet. We shall see. I've been happy otherwise.",
+        name: "jb",
+        location: "US",
+        rating: 4,
+      },
+      {
+        title: "My first time ordering from AltRx",
+        text: "I was looking for a telehealth that utilized the same pharmacy I was already using, and AltRx was one of the ones. Ordering through AltRx was almost a 3rd of the cost I spent the first 3 months through the FSA site. Everything else ran smoothly. I ordered 7/5 and received it today, 7/13. I paid through Afterpay, so they can't renew without my approval.",
+        name: "Kimberly Williams",
+        location: "US",
+        rating: 4,
+      },
+      {
+        title: "Fantastic customer service",
+        text: "Fantastic customer service! I had a quick question about tracking my delivery, and their support team responded within an hour with all the details. The product quality is top-notch. Highly recommend",
+        name: "Lenden",
+        location: "US",
+        rating: 4,
+      },
+    ],
   },
   ro: {
     reviews: [
