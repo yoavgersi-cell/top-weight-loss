@@ -303,6 +303,8 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
     ],
   },
   shed: {
+    rating: "4.7",
+    reviewCount: "1,120",
     reviews: [
       {
         title: "Spoke with Tamika",
@@ -773,7 +775,7 @@ const defaultReviews: ReviewData[] = [
     slug: "shed",
     providerId: "shed",
     shortSummary: "Personalized weight loss programs with coaching, medication options, and convenient home delivery.",
-    reviewIntro: "Shed takes a personalized approach to weight loss, creating customized treatment plans based on each individual's health profile, goals, and preferences. Their platform combines provider-guided medication options with coaching support and convenient home delivery to create a well-rounded weight loss experience.",
+    reviewIntro: "Shed is a telehealth weight-loss program with 150,000+ members nationwide, built around compounded GLP-1 medication — semaglutide from $199/month and tirzepatide from $299/month — paired with personalized coaching. The whole thing is 100% online: you complete a visit, and if you're approved your medication ships straight to your door. Health coaching is included, plans are HSA/FSA approved, and Shed backs it with a real guarantee — lose 5% of your body weight in 120 days or your money back.",
     keyFeatures: [
       "Personalized treatment recommendations",
       "Coaching and behavioral support",
@@ -781,7 +783,7 @@ const defaultReviews: ReviewData[] = [
       "Convenient home delivery",
       "Progress tracking tools"
     ],
-    pricingSummary: "Shed offers tiered pricing based on the level of support and medication selected. All plans include provider consultations and home delivery of medications.",
+    pricingSummary: "Shed keeps pricing simple: compounded semaglutide starts at $199/month and compounded tirzepatide starts at $299/month, with 20% off your first month. Every plan includes the provider visit, health coaching, and medication shipped straight to your door — and it's HSA/FSA approved. Shed also backs it with a guarantee: lose 5% of your body weight in 120 days or your money back.",
     treatmentOptions: [
       "GLP-1 receptor agonists",
       "Personalized medication combinations",
@@ -807,10 +809,28 @@ const defaultReviews: ReviewData[] = [
     ],
     finalVerdict: "Shed excels at creating personalized weight loss experiences that go beyond just prescribing medication. If you value a tailored approach with coaching support and are willing to invest in a comprehensive program, Shed is a strong contender.",
     trustBadges: [
-      "Personalized treatment plans",
-      "Coaching + medication",
-      "Free home delivery",
-      "Provider-guided care",
+      "5% in 120 days or money back",
+      "100% online visit + checkout",
+      "Health coaching included",
+      "HSA/FSA approved",
+    ],
+    pricingPlans: [
+      {
+        name: "Compounded Semaglutide",
+        medication: "GLP-1 injection",
+        cadence: "Weekly",
+        price: "$199",
+        unit: "/month",
+        highlights: ["20% off your first month", "Health coaching & shipping included"],
+      },
+      {
+        name: "Compounded Tirzepatide",
+        medication: "GLP-1 + GIP injection",
+        cadence: "Weekly",
+        price: "$299",
+        unit: "/month",
+        highlights: ["20% off your first month", "Dual-action GLP-1 + GIP formulation"],
+      },
     ],
   },
   {
