@@ -373,15 +373,20 @@ export default async function BattlePage({
                   </div>
                 </div>
 
-                {provider.trustpilotRating && (
-                  <div className="mb-3 border-b border-gray-100 pb-3">
+                <div className="mb-3 border-b border-gray-100 pb-3">
+                  {provider.trustpilotRating ? (
                     <TrustpilotRating
                       rating={provider.trustpilotRating}
                       reviewCount={provider.trustpilotReviewCount}
                       starSize={16}
                     />
-                  </div>
-                )}
+                  ) : (
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[12px] font-semibold text-emerald-700">
+                      <ShieldCheck className="h-3.5 w-3.5" strokeWidth={2} />
+                      Licensed US telehealth
+                    </span>
+                  )}
+                </div>
 
                 <p className="mb-4 text-[14px] leading-relaxed text-gray-500">
                   {provider.tagline}
@@ -570,13 +575,20 @@ export default async function BattlePage({
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img src={provider.logo} alt={`${provider.name} logo`} className="max-h-full max-w-full object-contain" />
                           </div>
-                          {provider.trustpilotRating && (
+                          {provider.trustpilotRating ? (
                             <div className="border-l border-gray-200 pl-4">
                               <TrustpilotRating
                                 rating={provider.trustpilotRating}
                                 reviewCount={provider.trustpilotReviewCount}
                                 starSize={15}
                               />
+                            </div>
+                          ) : (
+                            <div className="border-l border-gray-200 pl-4">
+                              <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[12px] font-semibold text-emerald-700">
+                                <ShieldCheck className="h-3.5 w-3.5" strokeWidth={2} />
+                                Licensed US telehealth
+                              </span>
                             </div>
                           )}
                         </div>
