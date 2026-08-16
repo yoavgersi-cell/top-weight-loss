@@ -805,7 +805,13 @@ const defaultReviews: ReviewData[] = [
       "Those who benefit from coaching alongside medication",
       "Anyone seeking a comprehensive, personalized program"
     ],
-    finalVerdict: "Shed excels at creating personalized weight loss experiences that go beyond just prescribing medication. If you value a tailored approach with coaching support and are willing to invest in a comprehensive program, Shed is a strong contender."
+    finalVerdict: "Shed excels at creating personalized weight loss experiences that go beyond just prescribing medication. If you value a tailored approach with coaching support and are willing to invest in a comprehensive program, Shed is a strong contender.",
+    trustBadges: [
+      "Personalized treatment plans",
+      "Coaching + medication",
+      "Free home delivery",
+      "Provider-guided care",
+    ],
   },
   {
     slug: "embody",
@@ -933,7 +939,13 @@ const defaultReviews: ReviewData[] = [
       "Anyone drawn to GLP-1 + NAD+/B12 formulations",
       "Those who value board-certified specialist care"
     ],
-    finalVerdict: "WellMedr is a strong pick if you want more than weight loss — it pairs compounded GLP-1/GIP treatment (with 50% off the first month) with a broader longevity platform spanning hormones, NAD+, and more, overseen by board-certified specialists. If your only goal is the fastest, lowest-cost GLP-1, a weight-loss-focused provider may suit better; for wellness-minded patients, WellMedr's range stands out."
+    finalVerdict: "WellMedr is a strong pick if you want more than weight loss — it pairs compounded GLP-1/GIP treatment (with 50% off the first month) with a broader longevity platform spanning hormones, NAD+, and more, overseen by board-certified specialists. If your only goal is the fastest, lowest-cost GLP-1, a weight-loss-focused provider may suit better; for wellness-minded patients, WellMedr's range stands out.",
+    trustBadges: [
+      "50% off first month",
+      "Board-certified specialists",
+      "100% online — no office visit",
+      "Discreet, unbranded packaging",
+    ],
   },
   {
     slug: "sunlight",
@@ -1145,7 +1157,13 @@ const defaultReviews: ReviewData[] = [
       "Those looking for competitively priced GLP-1 access",
       "Anyone who values a simple, no-frills ordering process"
     ],
-    finalVerdict: "DirectMeds is a solid option for patients who prioritize speed and simplicity in accessing GLP-1 weight loss medications. Their pharmacy-direct model cuts out unnecessary steps, and competitive pricing makes treatment more accessible. While the platform lacks some of the coaching and lifestyle features of larger competitors, it delivers on its core promise: affordable, provider-supervised GLP-1 treatment with fast delivery."
+    finalVerdict: "DirectMeds is a solid option for patients who prioritize speed and simplicity in accessing GLP-1 weight loss medications. Their pharmacy-direct model cuts out unnecessary steps, and competitive pricing makes treatment more accessible. While the platform lacks some of the coaching and lifestyle features of larger competitors, it delivers on its core promise: affordable, provider-supervised GLP-1 treatment with fast delivery.",
+    trustBadges: [
+      "Pharmacy-direct fulfillment",
+      "Licensed provider oversight",
+      "No hidden fees",
+      "No long-term contracts",
+    ],
   },
   {
     slug: "found",
