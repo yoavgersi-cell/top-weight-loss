@@ -1568,7 +1568,7 @@ const embodyWellmedrBattle: BattleData = {
   subtitle: "We compared pricing, medical support, long-term care, and real customer experience so you can see which one fits you best.",
   description: "embody (from $69/mo, fast free 1-2 day shipping) vs WellMedr (from $59/mo, 1M+ patients, 4.7★). Compare GLP-1 pricing, medical support & real reviews to find your best fit.",
   intro: "Embody and WellMedr both offer compounded GLP-1 weight-loss treatment through a fully online experience — but they take different approaches. Embody is weight-loss-focused with flat $69/$119 pricing and fast 1-2 day shipping, while WellMedr is an AI-driven telehealth brand that reaches beyond weight loss into longevity, hormones, and more — pairing GLP-1 with add-ons like NAD+ and B12, overseen by board-certified specialists. Here's how they compare.",
-  verdict: "Both are credible online GLP-1 providers — but Embody takes this comparison for weight loss specifically. Its clear flat pricing ($69/$119), free 1-2 day shipping, and strong recent customer feedback make it a great starting point. WellMedr is the better fit if you want more than weight loss — a broader longevity platform with board-certified specialists, GLP-1 formulations enhanced with NAD+ and B12, and 50% off your first month.",
+  verdict: "Both are credible online GLP-1 providers with genuinely close pricing. Embody keeps it simple: unconditional flat pricing ($69/$119), free 1-2 day shipping, and strong recent customer feedback. WellMedr lists an even lower headline — semaglutide from $59/mo, tirzepatide from $99/mo (best rate on a 12-month plan) — plus board-certified specialists and a broader wellness range. Go with embody for simple, fast, month-to-month treatment; go with WellMedr for the lowest annual price and a wider platform.",
   verdictWinnerPoints: [
     "Flat pricing — $69/mo semaglutide, $119/mo tirzepatide",
     "Free 1-2 day shipping (vs WellMedr's ~3-5 days)",
@@ -1577,18 +1577,18 @@ const embodyWellmedrBattle: BattleData = {
   verdictLoserPoints: [
     "A broader longevity platform (TRT, NAD+, and more)",
     "GLP-1 formulations enhanced with NAD+ and B12",
-    "Board-certified specialists; 50% off your first month",
+    "Board-certified specialists; from $59/mo entry pricing",
   ],
   winnerId: "embody",
   categories: [
     {
       name: "Pricing & Value",
       winner: "provider1",
-      explanation: "Embody uses simple flat pricing — $69/month for compounded semaglutide and $119/month for compounded tirzepatide — with no insurance required, no hidden fees, and the option to cancel anytime. WellMedr promotes 50% off your first month, though its ongoing weight-loss price isn't listed up front. On transparent entry pricing, Embody comes out ahead.",
+      explanation: "Both publish flat pricing at the same rate every dose. Embody is $69/month for compounded semaglutide and $119 for tirzepatide — unconditional, with no insurance, no hidden fees, and fast free shipping. WellMedr lists a lower headline — semaglutide from $59/month and tirzepatide from $99 — though its best $59 rate is tied to a 12-month plan. On entry price they're very close: WellMedr edges lower on the annual plan, while Embody keeps it simple month-to-month.",
       supportingPoints: [
         "$69/mo semaglutide, $119/mo tirzepatide (Embody)",
         "No insurance, no hidden fees, cancel anytime (Embody)",
-        "50% off your first month (WellMedr)",
+        "$59/mo semaglutide, $99/mo tirzepatide (WellMedr)",
         "Prescription treatment access (both)",
       ],
     },
@@ -1638,7 +1638,7 @@ const embodyWellmedrBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "$69/mo semaglutide · $119/mo tirzepatide", provider2Value: "50% off first month (ongoing not listed)", highlight: "provider1" },
+    { feature: "Starting Price", provider1Value: "$69/mo semaglutide · $119/mo tirzepatide", provider2Value: "$59/mo semaglutide · $99/mo tirzepatide", highlight: "both" },
     { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
     { feature: "Shipping", provider1Value: "Free, 1-2 days (tracked, insured)", provider2Value: "~3-5 business days, discreet packaging", highlight: "provider1" },
     { feature: "Medications", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "GLP-1/GIP + semaglutide/NAD+/B12 microdose", highlight: "both" },
@@ -2025,7 +2025,7 @@ const medviWellmedrBattle: BattleData = {
   verdictLoserPoints: [
     "A broader longevity platform (TRT, NAD+, and more)",
     "GLP-1 formulations enhanced with NAD+ and B12",
-    "50% off your first month",
+    "Low entry pricing — from $59/mo semaglutide, $99 tirzepatide",
   ],
   winnerId: "medvi",
   categories: [
@@ -2054,11 +2054,11 @@ const medviWellmedrBattle: BattleData = {
     {
       name: "Pricing & Value",
       winner: "provider1",
-      explanation: "Medvi's monthly plans are transparent and all-inclusive — medication, provider consultations, and ongoing support with no surprise charges. WellMedr promotes 50% off your first month, though its ongoing weight-loss price isn't listed up front. On predictable, upfront pricing, Medvi comes out ahead.",
+      explanation: "Medvi's monthly plans are transparent and all-inclusive — medication, provider consultations, and ongoing support with no surprise charges. WellMedr lists lower headline pricing — semaglutide from $59/month and tirzepatide from $99 (best $59 rate on a 12-month plan). Medvi bundles everything into one predictable all-inclusive rate, while WellMedr's headline runs lower on an annual plan — so it comes down to what you value.",
       supportingPoints: [
         "All-inclusive, no surprise charges (Medvi)",
         "Predictable monthly pricing (Medvi)",
-        "50% off first month; ongoing price not listed (WellMedr)",
+        "From $59/mo semaglutide, $99/mo tirzepatide (WellMedr)",
         "No insurance required (both)",
       ],
     },
@@ -2088,7 +2088,7 @@ const medviWellmedrBattle: BattleData = {
   features: [
     { feature: "Personal Support", provider1Value: "Attentive, highly rated service", provider2Value: "Message your provider anytime", highlight: "provider1" },
     { feature: "Focus", provider1Value: "Dedicated weight-loss focus", provider2Value: "Broad multi-service platform", highlight: "provider1" },
-    { feature: "Pricing", provider1Value: "All-inclusive, no surprise charges", provider2Value: "50% off first month (ongoing not listed)", highlight: "provider1" },
+    { feature: "Pricing", provider1Value: "All-inclusive, no surprise charges", provider2Value: "$59/mo semaglutide · $99/mo tirzepatide", highlight: "both" },
     { feature: "Beyond Weight Loss", provider1Value: "GLP-1 weight loss focus", provider2Value: "TRT, NAD+, hair, sexual health", highlight: "provider2" },
     { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
     { feature: "Medications", provider1Value: "Prescription GLP-1 treatment", provider2Value: "GLP-1/GIP + semaglutide/NAD+/B12 microdose", highlight: "both" },
@@ -2293,18 +2293,18 @@ const trimrxWellmedrBattle: BattleData = {
   verdictLoserPoints: [
     "A broader longevity platform (TRT, NAD+, and more)",
     "GLP-1 formulations enhanced with NAD+ and B12",
-    "50% off your first month",
+    "Low entry pricing — from $59/mo semaglutide, $99 tirzepatide",
   ],
   winnerId: "trimrx",
   categories: [
     {
       name: "Pricing & Value",
       winner: "provider1",
-      explanation: "TrimRX is built around affordability — competitive monthly pricing with discounts for multi-month commitments. WellMedr promotes 50% off your first month, though its ongoing weight-loss price isn't listed up front. On transparent, ongoing value, TrimRX comes out ahead.",
+      explanation: "TrimRX is built around affordability — competitive monthly pricing with discounts for multi-month commitments. WellMedr lists lower headline pricing — semaglutide from $59/month and tirzepatide from $99 (best $59 rate on a 12-month plan). TrimRX leans on flexible, no-commitment plans, while WellMedr's headline runs lower but its best rate needs an annual plan.",
       supportingPoints: [
         "Affordability-first + multi-month discounts (TrimRX)",
         "Competitive ongoing pricing (TrimRX)",
-        "50% off first month; ongoing not listed (WellMedr)",
+        "From $59/mo semaglutide, $99/mo tirzepatide (WellMedr)",
         "No insurance required (both)",
       ],
     },
@@ -2354,7 +2354,7 @@ const trimrxWellmedrBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "Affordability-focused · multi-month discounts", provider2Value: "50% off first month (ongoing not listed)", highlight: "provider1" },
+    { feature: "Starting Price", provider1Value: "Affordability-focused · multi-month discounts", provider2Value: "$59/mo semaglutide · $99/mo tirzepatide", highlight: "both" },
     { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
     { feature: "Medications", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "GLP-1/GIP + semaglutide/NAD+/B12 microdose", highlight: "both" },
     { feature: "Focus", provider1Value: "Dedicated weight-loss focus", provider2Value: "Broad multi-service platform", highlight: "provider1" },
@@ -2371,10 +2371,10 @@ const roWellmedrBattle: BattleData = {
   matchupLabel: "Ro vs WellMedr",
   subtitle: "We compared medications, intro pricing, range of care, and brand track record so you can see which one fits you best.",
   description: "Ro (established telehealth brand, brand-name GLP-1) vs WellMedr (from $59/mo, 1M+ patients, 4.7★). Compare pricing, medications & real reviews to find your best fit.",
-  intro: "WellMedr and Ro are both online providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established telehealth brand with an integrated in-house pharmacy and licensed providers reviewing every plan. WellMedr is an AI-driven platform that pairs compounded GLP-1/GIP (tirzepatide) — with 50% off your first month — and a semaglutide + NAD+/B12 microdose, with board-certified specialists and a broader longevity range. Here's how they compare.",
-  verdict: "Both are legitimate online GLP-1 providers — but WellMedr edges ahead here for a richer treatment toolkit and intro value. It offers compounded GLP-1/GIP (tirzepatide) at 50% off your first month, a unique semaglutide + NAD+/B12 microdose, and board-certified specialists who tailor your plan across a broader longevity platform. Ro is the better pick if brand track record and an integrated in-house pharmacy matter most to you.",
+  intro: "WellMedr and Ro are both online providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established telehealth brand with an integrated in-house pharmacy and licensed providers reviewing every plan. WellMedr keeps compounded pricing low — semaglutide from $59/month and tirzepatide from $99 — with board-certified specialists, a Medical Weight-Care Coach, and a weight-loss warranty. Here's how they compare.",
+  verdict: "Both are legitimate online GLP-1 providers. WellMedr stands out on price and value: semaglutide from $59/mo and tirzepatide from $99/mo (same price at every dose), plus board-certified specialists, a Medical Weight-Care Coach, and a weight-loss warranty behind it. Ro is the better pick if brand track record and an integrated in-house pharmacy matter most to you.",
   verdictWinnerPoints: [
-    "Tirzepatide GLP-1/GIP — 50% off your first month",
+    "Tirzepatide (GLP-1/GIP) from $99/mo; semaglutide from $59",
     "Unique semaglutide + NAD+/B12 microdose option",
     "Board-certified specialists tailor your plan",
   ],
@@ -2399,12 +2399,12 @@ const roWellmedrBattle: BattleData = {
     {
       name: "Intro Pricing & Value",
       winner: "provider1",
-      explanation: "WellMedr promotes a clear intro offer — 50% off your first month on its compounded GLP-1/GIP treatment. Ro is competitively priced, but costs can vary by the medication and plan you choose, and it doesn't lead with a first-month discount. On upfront intro value, WellMedr edges ahead — though neither lists its ongoing weight-loss price up front.",
+      explanation: "WellMedr lists low, transparent pricing — compounded semaglutide from $59/month and tirzepatide from $99, the same price at every dose (best $59 rate on a 12-month plan). Ro is competitively priced, but costs can vary by the medication and plan you choose. On upfront, published pricing, WellMedr is the clearer, lower-cost option.",
       supportingPoints: [
-        "50% off your first month (WellMedr)",
+        "From $59/mo semaglutide, $99/mo tirzepatide (WellMedr)",
         "Costs vary by medication/plan (Ro)",
         "No insurance required (both)",
-        "Ongoing price not listed up front (both)",
+        "Same price at every dose (WellMedr)",
       ],
     },
     {
@@ -2443,7 +2443,7 @@ const roWellmedrBattle: BattleData = {
   ],
   features: [
     { feature: "GLP-1 Medications", provider1Value: "Tirzepatide (GLP-1/GIP) + semaglutide/NAD+/B12 microdose", provider2Value: "Compounded semaglutide + brand-name GLP-1", highlight: "provider1" },
-    { feature: "Intro Offer", provider1Value: "50% off your first month", provider2Value: "Pricing varies by medication/plan", highlight: "provider1" },
+    { feature: "Starting Price", provider1Value: "$59/mo semaglutide · $99/mo tirzepatide", provider2Value: "Pricing varies by medication/plan", highlight: "provider1" },
     { feature: "Beyond Weight Loss", provider1Value: "TRT, NAD+, hair, sexual health", provider2Value: "Weight-loss-focused telehealth", highlight: "provider1" },
     { feature: "Brand & Pharmacy", provider1Value: "US state-licensed compounding pharmacies", provider2Value: "Established brand, integrated in-house pharmacy", highlight: "provider2" },
     { feature: "Medical Visit", provider1Value: "100% online; message provider anytime", provider2Value: "100% online; licensed provider review", highlight: "both" },
@@ -2634,7 +2634,7 @@ const altrxWellmedrBattle: BattleData = {
   title: "altRx vs WellMedr: Which GLP-1 Provider Is Right for You in 2026?",
   subtitle: "We compared pricing, medication selection, range of care, and payment flexibility so you can see which one fits you best.",
   description: "altRx (from $89/mo, brand-name Zepbound & Wegovy) vs WellMedr (from $59/mo, 1M+ patients, 4.7★). Compare GLP-1 pricing, selection & real reviews to find your fit.",
-  intro: "altRx and WellMedr both offer compounded GLP-1 weight-loss treatment online. altRx positions itself as the most affordable GLP-1 program — compounded semaglutide from $89/month, tirzepatide from $149, plus brand-name Zepbound and Wegovy, with Buy Now, Pay Later. WellMedr is an AI-driven platform pairing tirzepatide (GLP-1/GIP) — 50% off your first month — with a semaglutide + NAD+/B12 microdose, board-certified specialists, and a broader longevity range. Here's how they compare.",
+  intro: "altRx and WellMedr both offer compounded GLP-1 weight-loss treatment online. altRx positions itself as the most affordable GLP-1 program — compounded semaglutide from $89/month, tirzepatide from $149, plus brand-name Zepbound and Wegovy, with Buy Now, Pay Later. WellMedr lists even lower headline pricing — semaglutide from $59/month and tirzepatide from $99 — with board-certified specialists, a Medical Weight-Care Coach, and a weight-loss warranty. Here's how they compare.",
   verdict: "Both are solid compounded-GLP-1 options — but altRx edges ahead for weight-loss value and selection. It offers flat $89/$149 pricing at every dose, brand-name Zepbound and Wegovy if you want them, and Buy Now, Pay Later. WellMedr is the better pick if you want enhanced formulations (NAD+/B12) and a broader longevity platform beyond weight loss.",
   verdictWinnerPoints: [
     "Compounded GLP-1 from $89/mo, same price every dose",
@@ -2642,7 +2642,7 @@ const altrxWellmedrBattle: BattleData = {
     "No insurance; Buy Now, Pay Later",
   ],
   verdictLoserPoints: [
-    "Tirzepatide GLP-1/GIP — 50% off your first month",
+    "Tirzepatide (GLP-1/GIP) from $99/mo; semaglutide from $59",
     "Unique semaglutide + NAD+/B12 microdose",
     "Broader longevity platform (TRT, NAD+, and more)",
   ],
@@ -2651,11 +2651,11 @@ const altrxWellmedrBattle: BattleData = {
     {
       name: "Pricing & Value",
       winner: "provider1",
-      explanation: "altRx uses flat pricing — compounded semaglutide from $89/month and tirzepatide from $149, the same at every dose. WellMedr promotes 50% off your first month, but its ongoing weight-loss price isn't listed up front. On predictable, ongoing value, altRx comes out ahead.",
+      explanation: "altRx uses flat pricing — compounded semaglutide from $89/month and tirzepatide from $149, the same at every dose. WellMedr lists lower headline pricing — semaglutide from $59/month and tirzepatide from $99 (best $59 rate on a 12-month plan). altRx keeps flat pricing with brand-name options like Zepbound & Wegovy, while WellMedr's headline runs a little lower on an annual plan.",
       supportingPoints: [
         "From $89/mo, flat at every dose (altRx)",
         "Predictable ongoing pricing (altRx)",
-        "50% off first month; ongoing not listed (WellMedr)",
+        "From $59/mo semaglutide, $99/mo tirzepatide (WellMedr)",
         "No insurance required (both)",
       ],
     },
@@ -2705,7 +2705,7 @@ const altrxWellmedrBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Pricing", provider1Value: "From $89/mo, flat at every dose", provider2Value: "50% off first month (ongoing not listed)", highlight: "provider1" },
+    { feature: "Pricing", provider1Value: "From $89/mo, flat at every dose", provider2Value: "$59/mo semaglutide · $99/mo tirzepatide", highlight: "both" },
     { feature: "Medication Selection", provider1Value: "Compounded + brand-name Zepbound/Wegovy", provider2Value: "Tirzepatide + sema/NAD+/B12 microdose", highlight: "provider1" },
     { feature: "Beyond Weight Loss", provider1Value: "Weight-loss focus", provider2Value: "TRT, NAD+, hair, sexual health", highlight: "provider2" },
     { feature: "Payment", provider1Value: "Buy Now, Pay Later; pause anytime", provider2Value: "Wellness membership", highlight: "provider1" },
