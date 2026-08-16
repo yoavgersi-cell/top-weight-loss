@@ -20,7 +20,7 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   embody: {
     title: "embody Reviews 2026: GLP-1 Cost, Real Results & Is It Worth It?",
     description:
-      "embody GLP-1 reviews: compounded semaglutide from $69/mo and tirzepatide from $119/mo, shipped in 1-2 days with no insurance. Real customer reviews, pricing, pros & cons, and whether embody is worth it.",
+      "embody GLP-1 reviews: compounded semaglutide & tirzepatide, shipped in 1-2 days with no insurance and LegitScript certification. Real customer reviews, pricing, pros & cons — and is embody worth it?",
   },
   medvi: {
     title: "Medvi Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
@@ -30,12 +30,27 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   altrx: {
     title: "altRx Reviews 2026: Is It Legit? GLP-1 Cost, Results & Verdict",
     description:
-      "altRx reviews: compounded semaglutide from $89/mo and tirzepatide from $149/mo, brand-name Zepbound & Wegovy too, no insurance and Buy Now Pay Later. Is altRx legit and worth it? Real customer reviews, pricing, pros & cons.",
+      "altRx reviews: compounded semaglutide & tirzepatide plus brand-name Zepbound & Wegovy, no insurance and Buy Now, Pay Later. Is altRx legit and worth it? Real customer reviews, pricing, pros & cons.",
   },
   trimrx: {
     title: "trimrx Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
     description:
       "trimrx reviews: budget-friendly compounded semaglutide and tirzepatide, flexible plans with no long-term contract, and clinical support included. Is trimrx legit and worth it? Real customer reviews, cost, pros & cons.",
+  },
+  shed: {
+    title: "Shed Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
+    description:
+      "Shed reviews: compounded GLP-1 (semaglutide & tirzepatide) with health coaching and a money-back guarantee. Is Shed legit and worth it? Real customer reviews, cost, pros & cons.",
+  },
+  directmeds: {
+    title: "DirectMeds Reviews 2026: Is It Legit? Cost, Results & Verdict",
+    description:
+      "DirectMeds reviews: doctor-prescribed GLP-1 as injections or needle-free oral drops, free 1-2 day shipping and no membership. Is DirectMeds legit and worth it? Real customer reviews, cost, pros & cons.",
+  },
+  wellmedr: {
+    title: "WellMedr Reviews 2026: Is It Legit? Cost, Results & Verdict",
+    description:
+      "WellMedr reviews: compounded GLP-1 used by 1M+ patients, board-certified specialists and a weight-loss warranty. Is WellMedr legit and worth it? Real customer reviews, cost, pros & cons.",
   },
 };
 
@@ -182,6 +197,25 @@ export default async function ReviewPage({
         }
       : null;
 
+  // Real Trustpilot rating → Product AggregateRating, so the review page is
+  // eligible for the star + review-count rich snippet ("★ 4.7 · 1,205 reviews").
+  // Grounded in the same Trustpilot score shown on the page (only emitted when
+  // both a rating and a count are present, so we never fabricate a rating).
+  const tpRating = provider.trustpilotRating ? parseFloat(provider.trustpilotRating) : NaN;
+  const tpCount = provider.trustpilotReviewCount
+    ? parseInt(provider.trustpilotReviewCount.replace(/[^0-9]/g, ""), 10)
+    : NaN;
+  const aggregateRating =
+    Number.isFinite(tpRating) && tpRating > 0 && Number.isFinite(tpCount) && tpCount > 0
+      ? {
+          "@type": "AggregateRating",
+          ratingValue: tpRating,
+          bestRating: 5,
+          worstRating: 1,
+          reviewCount: tpCount,
+        }
+      : null;
+
   // JSON-LD
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -206,6 +240,7 @@ export default async function ReviewPage({
       name: provider.name,
       description: review.shortSummary,
       ...(pricingOffers && { offers: pricingOffers }),
+      ...(aggregateRating && { aggregateRating }),
     },
     ...(editorial && {
       reviewRating: {
