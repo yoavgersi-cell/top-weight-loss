@@ -5,7 +5,9 @@ import { SocialProofBand } from "@/components/social-proof-bubble";
 import { Sidebar } from "@/components/sidebar";
 import { EditorialContent } from "@/components/editorial-content";
 import { FaqAccordion } from "@/components/faq-accordion";
+import { ExpertByline } from "@/components/expert-byline";
 import { getConfig } from "@/lib/config-store";
+import { CONTENT_LAST_UPDATED } from "@/lib/config";
 
 export const revalidate = 60;
 
@@ -87,14 +89,56 @@ export default async function HomePage() {
     })),
   };
 
-  // JSON-LD: WebPage + ItemList for comparison
+  // E-E-A-T authorship (health/YMYL ranking signal): a visible byline + author
+  // and reviewer in the page schema. Grounded in the site's real editorial team
+  // (no fabricated medical credentials).
+  const author = config.experts?.[0];
+  const reviewer = config.experts?.[1];
+
+  // JSON-LD: WebPage + ItemList for comparison. Enriched with authorship,
+  // publisher, freshness dates, and entity/about so the page carries clear
+  // E-E-A-T and freshness signals for a YMYL topic.
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Top Weight Loss Providers 2026 — Compare Trusted Providers Side by Side",
+    name: "Best Weight Loss Injections & Programs 2026 — Compare Top Providers",
     description:
       "Compare pricing, medications, medical support, and overall value across the top weight loss providers of 2026.",
     url: "https://www.topweightloss.io",
+    inLanguage: "en-US",
+    datePublished: "2026-06-01",
+    dateModified: CONTENT_LAST_UPDATED,
+    isPartOf: {
+      "@type": "WebSite",
+      name: "topweightloss.io",
+      url: "https://www.topweightloss.io",
+    },
+    about: {
+      "@type": "Thing",
+      name: "GLP-1 weight loss providers (semaglutide & tirzepatide)",
+    },
+    ...(author && {
+      author: {
+        "@type": "Organization",
+        name: author.name,
+        url: "https://www.topweightloss.io/about",
+      },
+    }),
+    ...(reviewer && {
+      reviewedBy: {
+        "@type": "Organization",
+        name: reviewer.name,
+      },
+    }),
+    publisher: {
+      "@type": "Organization",
+      name: "topweightloss.io",
+      url: "https://www.topweightloss.io",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.topweightloss.io/logo-mark.png",
+      },
+    },
     mainEntity: {
       "@type": "ItemList",
       itemListElement: displayList.map((product, index) => ({
@@ -124,6 +168,16 @@ export default async function HomePage() {
         h2={config.hero.h2}
         description={config.hero.description}
       />
+
+      {/* E-E-A-T byline strip — visible authorship/review + freshness for a YMYL topic */}
+      {(author || reviewer) && (
+        <section className="mx-auto max-w-[1200px] px-4 pt-5">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+            {author && <ExpertByline expert={author} label="Written by" />}
+            {reviewer && <ExpertByline expert={reviewer} label="Reviewed by" />}
+          </div>
+        </section>
+      )}
 
       <section className="mx-auto max-w-[1200px] px-4 pt-6 pb-6">
         <div className="flex gap-6 items-start">

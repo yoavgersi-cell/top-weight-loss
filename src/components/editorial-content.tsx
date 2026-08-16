@@ -227,7 +227,7 @@ export function EditorialContent() {
       <p className="mb-4 text-[13px] text-gray-400">
         Source: Published results from STEP (semaglutide), SURMOUNT (tirzepatide), and SCALE (liraglutide)
         clinical trials. Individual results vary. Compounded pricing reflects typical telehealth provider
-        rates as of July 2026.
+        rates as of August 2026.
       </p>
 
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">

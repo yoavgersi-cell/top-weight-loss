@@ -22,7 +22,7 @@ export default function StatisticsPage() {
             Key statistics from published clinical trials on GLP-1 weight loss medications.
             Data sourced from STEP, SURMOUNT, and SCALE trials.
           </p>
-          <p className="mt-2 text-[12px] text-gray-400">Last updated: July 2026</p>
+          <p className="mt-2 text-[12px] text-gray-400">Last updated: August 2026</p>
         </div>
       </div>
 
@@ -125,7 +125,7 @@ export default function StatisticsPage() {
               </tbody>
             </table>
           </div>
-          <p className="mt-2 text-[12px] text-gray-400">Source: Retail pricing and telehealth provider rates as of July 2026. Prices may vary by provider.</p>
+          <p className="mt-2 text-[12px] text-gray-400">Source: Retail pricing and telehealth provider rates as of August 2026. Prices may vary by provider.</p>
         </section>
 
         {/* Side Effects */}
