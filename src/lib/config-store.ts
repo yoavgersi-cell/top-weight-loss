@@ -10,6 +10,8 @@ const BLOB_KEY = "site-config.json";
 // provider's reviews are edited in the admin CMS, which then takes precedence.
 const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; reviews: TrustpilotReview[] }> = {
   wellmedr: {
+    rating: "4.7",
+    reviewCount: "1,205",
     reviews: [
       {
         title: "Contacted the company to slow my refills",
@@ -303,6 +305,8 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
     ],
   },
   shed: {
+    rating: "4.7",
+    reviewCount: "1,120",
     reviews: [
       {
         title: "Spoke with Tamika",
@@ -360,6 +364,8 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
     ],
   },
   directmeds: {
+    rating: "4.6",
+    reviewCount: "13,901",
     reviews: [
       {
         title: "A great personnel",
@@ -773,7 +779,7 @@ const defaultReviews: ReviewData[] = [
     slug: "shed",
     providerId: "shed",
     shortSummary: "Personalized weight loss programs with coaching, medication options, and convenient home delivery.",
-    reviewIntro: "Shed takes a personalized approach to weight loss, creating customized treatment plans based on each individual's health profile, goals, and preferences. Their platform combines provider-guided medication options with coaching support and convenient home delivery to create a well-rounded weight loss experience.",
+    reviewIntro: "Shed is a telehealth weight-loss program with 150,000+ members nationwide, built around compounded GLP-1 medication — semaglutide from $199/month and tirzepatide from $299/month — paired with personalized coaching. The whole thing is 100% online: you complete a visit, and if you're approved your medication ships straight to your door. Health coaching is included, plans are HSA/FSA approved, and Shed backs it with a real guarantee — lose 5% of your body weight in 120 days or your money back.",
     keyFeatures: [
       "Personalized treatment recommendations",
       "Coaching and behavioral support",
@@ -781,7 +787,7 @@ const defaultReviews: ReviewData[] = [
       "Convenient home delivery",
       "Progress tracking tools"
     ],
-    pricingSummary: "Shed offers tiered pricing based on the level of support and medication selected. All plans include provider consultations and home delivery of medications.",
+    pricingSummary: "Shed keeps pricing simple: compounded semaglutide starts at $199/month and compounded tirzepatide starts at $299/month, with 20% off your first month. Every plan includes the provider visit, health coaching, and medication shipped straight to your door — and it's HSA/FSA approved. Shed also backs it with a guarantee: lose 5% of your body weight in 120 days or your money back.",
     treatmentOptions: [
       "GLP-1 receptor agonists",
       "Personalized medication combinations",
@@ -805,7 +811,31 @@ const defaultReviews: ReviewData[] = [
       "Those who benefit from coaching alongside medication",
       "Anyone seeking a comprehensive, personalized program"
     ],
-    finalVerdict: "Shed excels at creating personalized weight loss experiences that go beyond just prescribing medication. If you value a tailored approach with coaching support and are willing to invest in a comprehensive program, Shed is a strong contender."
+    finalVerdict: "Shed excels at creating personalized weight loss experiences that go beyond just prescribing medication. If you value a tailored approach with coaching support and are willing to invest in a comprehensive program, Shed is a strong contender.",
+    trustBadges: [
+      "5% in 120 days or money back",
+      "100% online visit + checkout",
+      "Health coaching included",
+      "HSA/FSA approved",
+    ],
+    pricingPlans: [
+      {
+        name: "Compounded Semaglutide",
+        medication: "GLP-1 injection",
+        cadence: "Weekly",
+        price: "$199",
+        unit: "/month",
+        highlights: ["20% off your first month", "Health coaching & shipping included"],
+      },
+      {
+        name: "Compounded Tirzepatide",
+        medication: "GLP-1 + GIP injection",
+        cadence: "Weekly",
+        price: "$299",
+        unit: "/month",
+        highlights: ["20% off your first month", "Dual-action GLP-1 + GIP formulation"],
+      },
+    ],
   },
   {
     slug: "embody",
@@ -900,40 +930,76 @@ const defaultReviews: ReviewData[] = [
   {
     slug: "wellmedr",
     providerId: "wellmedr",
-    shortSummary: "AI-driven telehealth offering compounded GLP-1/GIP (tirzepatide) weight-loss treatment — plus a semaglutide + NAD+/B12 microdose — with board-certified specialists and 50% off your first month.",
-    reviewIntro: "WellMedr is an AI-driven telehealth platform that reaches beyond weight loss into longevity, hormones, and more. For weight management it offers compounded GLP-1/GIP (tirzepatide) — with 50% off your first month — plus an Energy & Focus+ microdose that pairs compounded semaglutide with NAD+ and Vitamin B12. Board-certified specialists tailor your plan, treatment is 100% online with no office visit, and medications are made in US state-licensed pharmacies following FDA compounding standards.",
+    shortSummary: "Telehealth GLP-1 weight-loss program used by 1,000,000+ patients — compounded semaglutide from $59/mo and tirzepatide from $99/mo, plus brand-name options — with board-certified specialists and a weight-loss warranty.",
+    reviewIntro: "WellMedr is a telehealth weight-loss platform whose GLP-1 medications have been used by 1,000,000+ patients. It offers compounded GLP-1 (semaglutide) from $59/month and compounded GLP-1/GIP (tirzepatide) from $99/month — both shipped every 4 weeks at the same price no matter your dose — plus brand-name Ozempic and Zepbound for anyone who wants them. Board-certified specialists tailor your plan, treatment is 100% online with no office visit, and a Medical Weight-Care Coach supports you the whole way. It's backed by a weight-loss warranty, and there's a standing offer to lock in $200 off every month — or $59/mo on a 12-month plan, for life.",
     keyFeatures: [
-      "Compounded GLP-1/GIP (tirzepatide) — 50% off first month",
-      "Energy & Focus+ microdose: semaglutide + NAD+ + B12",
-      "Board-certified specialists tailor your plan",
-      "100% online — no office visit; message your provider anytime",
-      "Discreet, unbranded packaging; ships across the US"
+      "Compounded semaglutide from $59/mo, tirzepatide from $99/mo",
+      "Same price regardless of dosage; shipped every 4 weeks",
+      "Brand-name Ozempic and Zepbound also available",
+      "Board-certified specialists + Medical Weight-Care Coach",
+      "100% online, backed by a weight-loss warranty"
     ],
-    pricingSummary: "WellMedr promotes 50% off your first month on its compounded GLP-1/GIP weight-loss treatment. It's a broader wellness membership that also spans TRT, NAD+, hair, and sexual health. Medications are made in US state-licensed pharmacies following FDA compounding standards, and treatment is prescribed online after a provider reviews your intake — no upfront prescription or office visit required.",
+    pricingSummary: "WellMedr keeps compounded pricing low: GLP-1 (semaglutide) from $59/month and GLP-1/GIP (tirzepatide) from $99/month, both shipped every 4 weeks at the same price regardless of your dose. You can lock in $200 off every month — or $59/mo on a 12-month plan, for life. Brand-name Ozempic (from $1,399) and Zepbound (from $1,599) are available too. Every plan includes licensed provider review, ongoing medical oversight, and a Medical Weight-Care Coach, and you can cancel or change anytime.",
     treatmentOptions: [
-      "Compounded GLP-1/GIP injection (tirzepatide)",
-      "Energy & Focus+ microdose (semaglutide + NAD+ + B12)",
-      "Broader longevity range (TRT, NAD+, hair, sexual health)",
+      "Compounded semaglutide injection (GLP-1)",
+      "Compounded tirzepatide injection (GLP-1 + GIP)",
+      "Brand-name Ozempic and Zepbound",
       "Online provider review and prescription"
     ],
     pros: [
-      "50% off your first month",
-      "Board-certified specialists tailor your plan",
-      "GLP-1 formulations enhanced with NAD+ and B12",
-      "Broad platform beyond weight loss (longevity, hormones)",
-      "Discreet, unbranded packaging"
+      "Low compounded pricing — semaglutide from $59/mo, tirzepatide from $99/mo",
+      "Same price regardless of dosage",
+      "Board-certified specialists + Medical Weight-Care Coach",
+      "Brand-name options available (Ozempic, Zepbound)",
+      "Backed by a weight-loss warranty; cancel anytime"
     ],
     cons: [
       "Standard delivery is slower — about 3-5 business days",
       "US shipping only (no international)",
-      "Ongoing weight-loss pricing isn't listed up front"
+      "Lowest $59/mo pricing is tied to a 12-month plan"
     ],
     bestFor: [
-      "People who want weight loss plus broader wellness/longevity",
-      "Anyone drawn to GLP-1 + NAD+/B12 formulations",
-      "Those who value board-certified specialist care"
+      "People who want the lowest-cost compounded GLP-1 ($59/mo)",
+      "Anyone who wants both compounded and brand-name options",
+      "Those who value board-certified specialist care + coaching"
     ],
-    finalVerdict: "WellMedr is a strong pick if you want more than weight loss — it pairs compounded GLP-1/GIP treatment (with 50% off the first month) with a broader longevity platform spanning hormones, NAD+, and more, overseen by board-certified specialists. If your only goal is the fastest, lowest-cost GLP-1, a weight-loss-focused provider may suit better; for wellness-minded patients, WellMedr's range stands out."
+    finalVerdict: "WellMedr is a strong value pick: compounded semaglutide from $59/month and tirzepatide from $99/month, the same price no matter your dose, with board-certified specialists, a Medical Weight-Care Coach, and a weight-loss warranty behind it. Brand-name Ozempic and Zepbound are there if you want them. If you're after the lowest ongoing GLP-1 price and don't mind a 12-month commitment for the best rate, WellMedr is hard to beat.",
+    trustBadges: [
+      "1,000,000+ patients",
+      "Weight-loss warranty",
+      "Same price, every dose",
+      "Cancel anytime",
+    ],
+    pricingPlans: [
+      {
+        name: "GLP-1",
+        medication: "Compounded Semaglutide",
+        cadence: "Every 4 weeks",
+        price: "$59",
+        unit: "/month",
+        highlights: ["Proven & steady — recommended for most", "Same price regardless of dosage"],
+      },
+      {
+        name: "GLP-1 + GIP",
+        medication: "Compounded Tirzepatide",
+        cadence: "Every 4 weeks",
+        price: "$99",
+        unit: "/month",
+        highlights: ["Most powerful option — stronger appetite control", "Cancel or change anytime"],
+      },
+      {
+        name: "Ozempic",
+        medication: "Brand-name semaglutide injection",
+        price: "$1,399",
+        unit: "/month",
+      },
+      {
+        name: "Zepbound",
+        medication: "Brand-name tirzepatide injection",
+        price: "$1,599",
+        unit: "/month",
+      },
+    ],
   },
   {
     slug: "sunlight",
@@ -1113,15 +1179,15 @@ const defaultReviews: ReviewData[] = [
     slug: "directmeds",
     providerId: "directmeds",
     shortSummary: "Pharmacy-direct weight loss platform offering GLP-1 medications with streamlined fulfillment and licensed provider oversight.",
-    reviewIntro: "DirectMeds connects patients directly with pharmacy fulfillment for GLP-1 weight loss medications, cutting out unnecessary middlemen. Their platform pairs licensed medical providers with efficient pharmacy operations to deliver prescription weight loss treatments quickly and at competitive prices.",
+    reviewIntro: "DirectMeds is a pharmacy-direct telehealth program with 250,000+ customers, offering doctor-prescribed GLP-1 weight loss treatment starting at $147/month. You can get compounded semaglutide or tirzepatide as weekly injections — or, if you'd rather skip needles, as sublingual oral drops. It's 100% online with the telemedicine visit and prescription included, no insurance required, no hidden fees, and no monthly membership. Medication ships free and arrives in 1-2 days, and you can cancel anytime.",
     keyFeatures: [
-      "Direct pharmacy fulfillment model",
-      "Licensed provider consultations included",
-      "GLP-1 medication access (semaglutide, tirzepatide)",
-      "Streamlined ordering and delivery process",
-      "Ongoing medical support and dosage adjustments"
+      "Doctor-prescribed GLP-1 starting at $147/month",
+      "Injections or needle-free sublingual oral drops",
+      "Compounded semaglutide and tirzepatide",
+      "100% online — telemedicine visit & prescription included",
+      "Free 1-2 day shipping; same price at every dose"
     ],
-    pricingSummary: "DirectMeds offers competitive monthly pricing that includes provider consultations, medication, and direct pharmacy shipping. No hidden fees or long-term contracts required.",
+    pricingSummary: "DirectMeds starts at $147/month for doctor-prescribed GLP-1 treatment — compounded semaglutide or tirzepatide, available as weekly injections or sublingual oral drops. It's the same price at every dose (no surprise increases as you titrate up), with no insurance required, no hidden fees, and no monthly membership. Free shipping arrives in 1-2 days, and you can cancel anytime.",
     treatmentOptions: [
       "Compounded semaglutide",
       "Compounded tirzepatide",
@@ -1136,16 +1202,40 @@ const defaultReviews: ReviewData[] = [
       "No long-term commitment required"
     ],
     cons: [
-      "Smaller platform with fewer user reviews",
-      "Limited lifestyle support resources",
+      "Compounded medications only (not brand-name)",
+      "Limited lifestyle/coaching support resources",
       "Availability may vary by state"
     ],
     bestFor: [
       "People who want fast, direct pharmacy fulfillment",
-      "Those looking for competitively priced GLP-1 access",
-      "Anyone who values a simple, no-frills ordering process"
+      "Those looking for competitively priced GLP-1 access ($147+)",
+      "Anyone who prefers needle-free oral drops over injections"
     ],
-    finalVerdict: "DirectMeds is a solid option for patients who prioritize speed and simplicity in accessing GLP-1 weight loss medications. Their pharmacy-direct model cuts out unnecessary steps, and competitive pricing makes treatment more accessible. While the platform lacks some of the coaching and lifestyle features of larger competitors, it delivers on its core promise: affordable, provider-supervised GLP-1 treatment with fast delivery."
+    finalVerdict: "DirectMeds is a solid option for patients who prioritize speed and simplicity in accessing GLP-1 weight loss medications. Their pharmacy-direct model cuts out unnecessary steps, and competitive pricing makes treatment more accessible. While the platform lacks some of the coaching and lifestyle features of larger competitors, it delivers on its core promise: affordable, provider-supervised GLP-1 treatment with fast delivery.",
+    trustBadges: [
+      "Same price, every dose",
+      "No hidden fees or membership",
+      "Free 1-2 day shipping",
+      "Cancel anytime",
+    ],
+    pricingPlans: [
+      {
+        name: "Compounded GLP-1 Injections",
+        medication: "Semaglutide or Tirzepatide",
+        cadence: "Weekly",
+        price: "$147",
+        unit: "/month",
+        highlights: ["Starting price — same at every dose", "Free 1-2 day shipping, no hidden fees"],
+      },
+      {
+        name: "Compounded GLP-1 Oral Drops",
+        medication: "Sublingual semaglutide or tirzepatide",
+        cadence: "Daily",
+        price: "$147",
+        unit: "/month",
+        highlights: ["No needles — sublingual liquid", "Starting price — cancel anytime"],
+      },
+    ],
   },
   {
     slug: "found",
