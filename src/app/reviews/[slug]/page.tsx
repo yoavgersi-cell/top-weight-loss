@@ -183,19 +183,10 @@ export default async function ReviewPage({
   const editorialFullStars = Math.floor(editorialStars);
   const editorialHasHalf = editorialStars % 1 >= 0.5;
 
-  // Lowest listed plan price → schema offers (price eligibility in rich results).
-  const planPrices = (review.pricingPlans ?? [])
-    .map((p) => parseInt(p.price.replace(/[^0-9]/g, ""), 10))
-    .filter((n) => Number.isFinite(n) && n > 0);
-  const pricingOffers =
-    planPrices.length > 0
-      ? {
-          "@type": "AggregateOffer",
-          priceCurrency: "USD",
-          lowPrice: Math.min(...planPrices),
-          offerCount: planPrices.length,
-        }
-      : null;
+  // Note: we intentionally do NOT emit an AggregateOffer/price in the schema.
+  // A structured price can surface in the SERP rich result and goes stale the
+  // moment a provider changes pricing, so on-page pricing tables stay the single
+  // source of truth and the search snippet carries no price.
 
   // Real Trustpilot rating → Product AggregateRating, so the review page is
   // eligible for the star + review-count rich snippet ("★ 4.7 · 1,205 reviews").
@@ -239,7 +230,6 @@ export default async function ReviewPage({
       "@type": "Product",
       name: provider.name,
       description: review.shortSummary,
-      ...(pricingOffers && { offers: pricingOffers }),
       ...(aggregateRating && { aggregateRating }),
     },
     ...(editorial && {
