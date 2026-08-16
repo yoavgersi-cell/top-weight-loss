@@ -68,6 +68,11 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       },
     ],
   },
+  // altRx: we do NOT show an aggregate Trustpilot rating (its profile is flagged
+  // by Trustpilot — rating removed for a guidelines breach / fake reviews), and
+  // we never fabricate one; its cards fall back to a "Licensed US telehealth"
+  // trust chip where the rating would sit. The individual review cards below are
+  // real Trustpilot reviews and are shown without an invented aggregate score.
   altrx: {
     reviews: [
       {
