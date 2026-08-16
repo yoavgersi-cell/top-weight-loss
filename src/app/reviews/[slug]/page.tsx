@@ -207,40 +207,49 @@ export default async function ReviewPage({
         }
       : null;
 
-  // JSON-LD
+  // JSON-LD: Product with our editorial review, plus the Trustpilot aggregate
+  // rating when a real one exists. Google's Product markup requires at least one
+  // of review / aggregateRating / offers — the editorial review guarantees the
+  // item is valid for every provider, including those (like altRx) that have no
+  // Trustpilot aggregate rating. We intentionally omit `offers` so no (stale)
+  // price surfaces in the rich result.
   const reviewSchema = {
     "@context": "https://schema.org",
-    "@type": "Review",
-    name: `${provider.name} Review`,
-    headline: `${provider.name} Review 2026: Cost, Results & Is It Worth It?`,
-    reviewBody: review.reviewIntro,
-    datePublished: "2026-06-01",
-    dateModified: review.updatedAt || CONTENT_LAST_UPDATED,
-    author: { "@type": "Organization", name: "TopWeightLoss Team", url: "https://www.topweightloss.io" },
-    ...(reviewer && {
-      reviewedBy: {
-        "@type": "Person",
-        name: reviewer.credentials ? `${reviewer.name}, ${reviewer.credentials}` : reviewer.name,
-        jobTitle: reviewer.role,
-        worksFor: { "@type": "Organization", name: "topweightloss.io" },
-      },
-    }),
-    publisher: { "@type": "Organization", name: "topweightloss.io", url: "https://www.topweightloss.io" },
-    itemReviewed: {
-      "@type": "Product",
-      name: provider.name,
-      description: review.shortSummary,
-      ...(aggregateRating && { aggregateRating }),
-    },
+    "@type": "Product",
+    name: provider.name,
+    description: review.shortSummary,
+    ...(aggregateRating && { aggregateRating }),
     ...(editorial && {
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: editorial.score,
-        bestRating: 10,
-        worstRating: 1,
+      review: {
+        "@type": "Review",
+        name: `${provider.name} Review`,
+        headline: `${provider.name} Review 2026: Cost, Results & Is It Worth It?`,
+        reviewBody: review.reviewIntro,
+        datePublished: "2026-06-01",
+        dateModified: review.updatedAt || CONTENT_LAST_UPDATED,
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: editorial.score,
+          bestRating: 10,
+          worstRating: 1,
+        },
+        author: { "@type": "Organization", name: "TopWeightLoss Team", url: "https://www.topweightloss.io" },
+        ...(reviewer && {
+          reviewedBy: {
+            "@type": "Person",
+            name: reviewer.credentials ? `${reviewer.name}, ${reviewer.credentials}` : reviewer.name,
+            jobTitle: reviewer.role,
+            worksFor: { "@type": "Organization", name: "topweightloss.io" },
+          },
+        }),
+        publisher: { "@type": "Organization", name: "topweightloss.io", url: "https://www.topweightloss.io" },
       },
     }),
   };
+
+  // A Product with neither a review nor an aggregate rating would be flagged
+  // invalid by Google, so only emit the Product markup when at least one exists.
+  const hasProductRichData = Boolean(editorial) || Boolean(aggregateRating);
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -284,7 +293,9 @@ export default async function ReviewPage({
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
+      {hasProductRichData && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
+      )}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
