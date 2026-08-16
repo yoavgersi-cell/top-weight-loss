@@ -529,10 +529,10 @@ export default async function BattlePage({
           <div className="mb-14">
             <div className="mb-8 max-w-[760px]">
               <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
-                A closer look at each one
+                The full breakdown
               </p>
               <h2 className="text-[24px] font-bold text-[#191919]">
-                {p1.name} and {p2.name}, side by side &mdash; the full story
+                {p1.name} vs {p2.name}: a closer look at each
               </h2>
               <p className="mt-3 text-[15px] leading-[1.8] text-gray-600">
                 Both are solid GLP-1 weight loss providers, and honestly you can&rsquo;t go
