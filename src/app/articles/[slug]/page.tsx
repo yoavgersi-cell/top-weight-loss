@@ -184,19 +184,27 @@ export default async function ArticlePage({
     ],
   };
 
-  // FAQ schema from sections (each heading = question, body = answer)
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: article.sections.map((s) => ({
-      "@type": "Question",
-      name: s.heading,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: s.body.replace(/<[^>]*>/g, ""),
-      },
-    })),
-  };
+  // FAQ schema — ONLY from sections that are genuinely question-shaped (heading
+  // ends with "?"). Marking narrative section headings as FAQ questions is
+  // non-compliant structured data (risk of a Google structured-data flag, and no
+  // upside since FAQ rich results are gated to authoritative health/gov sites),
+  // so we emit FAQPage only when there are at least two real questions.
+  const faqEntries = article.sections.filter((s) => s.heading.trim().endsWith("?"));
+  const faqSchema =
+    faqEntries.length >= 2
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqEntries.map((s) => ({
+            "@type": "Question",
+            name: s.heading,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: s.body.replace(/<[^>]*>/g, ""),
+            },
+          })),
+        }
+      : null;
 
   return (
     <>
@@ -208,10 +216,12 @@ export default async function ArticlePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero band */}
@@ -260,6 +270,26 @@ export default async function ArticlePage({
         {/* Article body */}
         <div className="mx-auto max-w-[1100px] px-4 py-10 sm:px-6">
           <div>
+          {/* Table of contents — anchor jump-links. Signals structure to Google
+              (eligible for "jump to" sitelinks) and improves navigation on long
+              articles. Rendered only when there are enough sections to warrant it. */}
+          {article.sections.length >= 4 && (
+            <nav aria-label="Table of contents" className="mb-8 rounded-xl border border-gray-200 bg-white p-5">
+              <p className="mb-3 text-[12px] font-bold uppercase tracking-wider text-gray-400">
+                In this article
+              </p>
+              <ol className="space-y-1.5">
+                {article.sections.map((s, i) => (
+                  <li key={i} className="flex gap-2 text-[14px] leading-snug">
+                    <span className="shrink-0 font-semibold text-gray-300">{i + 1}.</span>
+                    <a href={`#${slugifyHeading(s.heading)}`} className="text-[#0C4B75] hover:underline">
+                      {s.heading}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          )}
           <article className="space-y-8">
             {article.sections.map((section, i) => (
               <div key={i}>
