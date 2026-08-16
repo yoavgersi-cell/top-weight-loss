@@ -864,7 +864,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Shed — Best for Personalized Treatment",
-        body: '<a href="/reviews/shed">Shed</a> emphasizes highly personalized treatment plans with multiple medication pathways. Their programs are built around your individual health goals and preferences. Currently offering 30% off your first month.',
+        body: '<a href="/reviews/shed">Shed</a> emphasizes highly personalized treatment plans with multiple medication pathways. Their programs are built around your individual health goals and preferences. Currently offering 20% off your first month.',
       },
       {
         heading: "How to Choose the Right Alternative",

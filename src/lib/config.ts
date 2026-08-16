@@ -288,10 +288,13 @@ export const NOINDEX_ARTICLE_SLUGS = [
   "mounjaro-vs-ozempic",
   "zepbound-vs-wegovy",
   "tirzepatide-vs-semaglutide",
+  // Kept noindex: "ozempic alternatives" is already owned by the dedicated
+  // /ozempic-alternatives landing page — indexing this article too would split
+  // ranking signals for the same query (cannibalization).
   "best-ozempic-alternatives",
-  "best-wegovy-alternatives",
-  "best-mounjaro-alternatives",
-  "best-ro-alternatives",
+  // best-wegovy-alternatives, best-mounjaro-alternatives, and best-ro-alternatives
+  // were re-indexed: they're well-structured, commercial-intent articles that
+  // funnel to affiliate providers, with no competing landing page to cannibalize.
 ];
 
 export interface SiteConfig {
