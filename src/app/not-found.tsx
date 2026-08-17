@@ -1,6 +1,5 @@
-import Link from "next/link";
-import { ArrowRight, Home, Search } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
+import { NotFoundLinks } from "@/components/not-found-links";
 
 export default async function NotFound() {
   const config = await getConfig();
@@ -9,7 +8,8 @@ export default async function NotFound() {
   const topProviders = providerOrder
     .slice(0, 4)
     .map((id) => config.providers.find((p) => p.id === id))
-    .filter((p): p is NonNullable<typeof p> => !!p);
+    .filter((p): p is NonNullable<typeof p> => !!p)
+    .map((p) => ({ id: p.id, name: p.name, logo: p.logo }));
 
   const comparisons = (config.battles ?? [])
     .map((b) => {
@@ -31,61 +31,7 @@ export default async function NotFound() {
           The page may have moved or no longer exists. Here&rsquo;s where most people head next.
         </p>
 
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <Link
-            href="/"
-            className="inline-flex h-[46px] items-center justify-center gap-2 rounded-xl bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]"
-          >
-            <Home className="h-4 w-4" strokeWidth={2} />
-            Compare all providers
-          </Link>
-          <Link
-            href="/find-your-match"
-            className="inline-flex h-[46px] items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white px-6 text-[14px] font-bold text-[#191919] transition-colors hover:bg-gray-50"
-          >
-            <Search className="h-4 w-4" strokeWidth={2} />
-            Find your match
-          </Link>
-        </div>
-
-        {topProviders.length > 0 && (
-          <div className="mt-12">
-            <h2 className="mb-4 text-[13px] font-bold uppercase tracking-wider text-gray-400">Top providers</h2>
-            <div className="grid gap-3 sm:grid-cols-2">
-              {topProviders.map((p) => (
-                <Link
-                  key={p.id}
-                  href={`/reviews/${p.id}`}
-                  className="group flex items-center gap-3 rounded-xl border border-gray-200 bg-white px-4 py-3 transition-colors hover:border-[#0C4B75]/30"
-                >
-                  <div className="flex h-[26px] w-[90px] items-center">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={p.logo} alt={`${p.name} logo`} className="max-h-full max-w-full object-contain" />
-                  </div>
-                  <span className="ml-auto text-[13px] font-semibold text-[#0C4B75] group-hover:underline">Read review</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {comparisons.length > 0 && (
-          <div className="mt-8">
-            <h2 className="mb-4 text-[13px] font-bold uppercase tracking-wider text-gray-400">Popular comparisons</h2>
-            <div className="grid gap-3 sm:grid-cols-2">
-              {comparisons.map((c) => (
-                <Link
-                  key={c.slug}
-                  href={`/${c.slug}`}
-                  className="group flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-[13px] font-semibold text-[#191919] transition-colors hover:border-[#0C4B75]/30"
-                >
-                  {c.name}
-                  <ArrowRight className="ml-auto h-3.5 w-3.5 shrink-0 text-[#0C4B75]" strokeWidth={2.5} />
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
+        <NotFoundLinks topProviders={topProviders} comparisons={comparisons} />
       </div>
     </div>
   );

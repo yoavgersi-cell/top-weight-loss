@@ -1,6 +1,12 @@
+"use client";
+
 import Link from "next/link";
+import { useNavPrefix, navHref } from "@/lib/nav-prefix";
 
 export function Footer() {
+  const prefix = useNavPrefix();
+  const href = (path: string) => navHref(prefix, path);
+
   return (
     <footer className="mt-auto border-t border-[#E5E5E5] bg-white">
       <div className="mx-auto max-w-6xl px-4 py-8">
@@ -9,40 +15,40 @@ export function Footer() {
           <div>
             <h4 className="mb-2 text-[12px] font-bold uppercase tracking-wider text-[#191919]">Compare</h4>
             <nav className="space-y-1.5">
-              <Link href="/" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Top Providers</Link>
-              <Link href="/semaglutide" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Semaglutide</Link>
-              <Link href="/tirzepatide" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Tirzepatide</Link>
-              <Link href="/ozempic-for-weight-loss" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Ozempic</Link>
-              <Link href="/wegovy-providers" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Wegovy</Link>
+              <Link href={href("/")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Top Providers</Link>
+              <Link href={href("/semaglutide")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Semaglutide</Link>
+              <Link href={href("/tirzepatide")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Tirzepatide</Link>
+              <Link href={href("/ozempic-for-weight-loss")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Ozempic</Link>
+              <Link href={href("/wegovy-providers")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Wegovy</Link>
             </nav>
           </div>
           <div>
             <h4 className="mb-2 text-[12px] font-bold uppercase tracking-wider text-[#191919]">Browse</h4>
             <nav className="space-y-1.5">
-              <Link href="/best-weight-loss-injections" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Weight Loss Injections</Link>
-              <Link href="/weight-loss-pills" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Weight Loss Pills</Link>
-              <Link href="/best-online-weight-loss-programs" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Online Programs</Link>
-              <Link href="/cheapest-weight-loss-medication" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Affordable Options</Link>
-              <Link href="/reviews" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">All Reviews</Link>
+              <Link href={href("/best-weight-loss-injections")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Weight Loss Injections</Link>
+              <Link href={href("/weight-loss-pills")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Weight Loss Pills</Link>
+              <Link href={href("/best-online-weight-loss-programs")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Online Programs</Link>
+              <Link href={href("/cheapest-weight-loss-medication")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Affordable Options</Link>
+              <Link href={href("/reviews")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">All Reviews</Link>
             </nav>
           </div>
           <div>
             <h4 className="mb-2 text-[12px] font-bold uppercase tracking-wider text-[#191919]">Learn</h4>
             <nav className="space-y-1.5">
-              <Link href="/articles/how-glp1-medications-work" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">How GLP-1 Works</Link>
-              <Link href="/articles/semaglutide-side-effects-guide" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Side Effects Guide</Link>
-              <Link href="/articles/weight-loss-medication-cost-guide" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Cost Guide</Link>
-              <Link href="/glp1-weight-loss-statistics" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">GLP-1 Statistics</Link>
-              <Link href="/articles" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">All Articles</Link>
+              <Link href={href("/articles/how-glp1-medications-work")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">How GLP-1 Works</Link>
+              <Link href={href("/articles/semaglutide-side-effects-guide")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Side Effects Guide</Link>
+              <Link href={href("/articles/weight-loss-medication-cost-guide")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Cost Guide</Link>
+              <Link href={href("/glp1-weight-loss-statistics")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">GLP-1 Statistics</Link>
+              <Link href={href("/articles")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">All Articles</Link>
             </nav>
           </div>
           <div>
             <h4 className="mb-2 text-[12px] font-bold uppercase tracking-wider text-[#191919]">Tools</h4>
             <nav className="space-y-1.5">
-              <Link href="/find-your-match" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Provider Quiz</Link>
-              <Link href="/how-we-rank" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">How We Rank</Link>
-              <Link href="/about" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">About Us</Link>
-              <Link href="/disclaimer" className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Disclaimer</Link>
+              <Link href={href("/find-your-match")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Provider Quiz</Link>
+              <Link href={href("/how-we-rank")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">How We Rank</Link>
+              <Link href={href("/about")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">About Us</Link>
+              <Link href={href("/disclaimer")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Disclaimer</Link>
             </nav>
           </div>
         </div>
