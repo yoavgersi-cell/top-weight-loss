@@ -2,11 +2,13 @@
 
 import { useState, useEffect } from "react";
 import type { SiteConfig, Provider, FaqItem, ReviewData, ArticleData, BattleData, LandingPageData, SidebarConfigData, RankingPageConfig, TrustpilotReview } from "@/lib/config";
+import { VERTICALS, DEFAULT_VERTICAL } from "@/lib/config";
 
 export default function AdminPage() {
   const [password, setPassword] = useState("");
   const [authed, setAuthed] = useState(false);
   const [config, setConfig] = useState<SiteConfig | null>(null);
+  const [vertical, setVertical] = useState<string>(DEFAULT_VERTICAL);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState("");
   const [activeTab, setActiveTab] = useState<"providers" | "ranking" | "hero" | "sidebar" | "faqs" | "reviews" | "articles" | "battles" | "pages" | "sidebars" | "quiz" | "team" | "general">("providers");
@@ -20,8 +22,8 @@ export default function AdminPage() {
     }
   }, [token]);
 
-  async function loadConfig(pw: string) {
-    const res = await fetch("/api/config", {
+  async function loadConfig(pw: string, v: string = vertical) {
+    const res = await fetch(`/api/config?vertical=${v}`, {
       headers: { Authorization: `Bearer ${pw}` },
     });
     if (res.ok) {
@@ -30,6 +32,17 @@ export default function AdminPage() {
     } else {
       setMessage("Failed to load config");
     }
+  }
+
+  // Switch the editor to another vertical: save-guard, then load that vertical's
+  // fully-separate config from its own blob.
+  async function switchVertical(v: string) {
+    if (v === vertical) return;
+    setVertical(v);
+    setConfig(null);
+    setMessage("");
+    const pw = sessionStorage.getItem("admin_token") || password;
+    await loadConfig(pw, v);
   }
 
   async function handleLogin() {
@@ -51,7 +64,7 @@ export default function AdminPage() {
     setSaving(true);
     setMessage("");
     const pw = sessionStorage.getItem("admin_token") || password;
-    const res = await fetch("/api/config", {
+    const res = await fetch(`/api/config?vertical=${vertical}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -246,7 +259,21 @@ export default function AdminPage() {
     <div className="min-h-screen bg-gray-50">
       {/* Top bar */}
       <div className="sticky top-0 z-50 flex items-center justify-between border-b bg-white px-6 py-3 shadow-sm">
-        <h1 className="text-lg font-bold text-[#191919]">TopWeightLoss CMS</h1>
+        <div className="flex items-center gap-4">
+          <h1 className="text-lg font-bold text-[#191919]">TreatmentsHub CMS</h1>
+          <div className="flex items-center gap-2 rounded-lg border border-gray-200 bg-gray-50 py-1 pl-3 pr-1">
+            <span className="text-[11px] font-semibold uppercase tracking-wide text-gray-400">Vertical</span>
+            <select
+              value={vertical}
+              onChange={(e) => switchVertical(e.target.value)}
+              className="rounded-md border border-gray-200 bg-white px-2.5 py-1 text-sm font-semibold text-[#0C4B75] focus:outline-none focus:ring-2 focus:ring-[#0C4B75]/30"
+            >
+              {VERTICALS.map((v) => (
+                <option key={v.id} value={v.id}>{v.name}</option>
+              ))}
+            </select>
+          </div>
+        </div>
         <div className="flex items-center gap-3">
           {message && (
             <span className={`text-sm font-medium ${message.includes("success") ? "text-green-600" : "text-red-500"}`}>

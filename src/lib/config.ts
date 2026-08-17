@@ -263,6 +263,34 @@ export interface LandingPageData {
 // updatedAt. Avoids emitting today's date on every request (fake freshness).
 export const CONTENT_LAST_UPDATED = "2026-08-16";
 
+// ── Verticals ────────────────────────────────────────────────────────────────
+// The hub (treatmentshub.com) is split into fully-separated verticals. Each one
+// is an independent bundle: its own providers, reviews, comparisons, articles,
+// ranking, and affiliate links, edited on its own tab in the CMS and stored in
+// its own blob. Adding a vertical later is a single entry here — nothing else
+// in the routing or CMS is hard-coded to a specific vertical.
+//
+// `id` doubles as the URL segment (treatmentshub.com/<id>/…) and the storage
+// suffix. "weight-loss" is the default and stays on the original blob key for
+// full back-compatibility with the existing (live) site.
+export interface Vertical {
+  id: string;
+  name: string;
+  tagline: string;
+  accent: string;
+}
+
+export const VERTICALS: Vertical[] = [
+  { id: "weight-loss", name: "Weight Loss", tagline: "GLP-1 injections, pills & telehealth weight-loss programs", accent: "#0C4B75" },
+  { id: "hair-loss", name: "Hair Loss", tagline: "Finasteride, minoxidil & doctor-led hair regrowth", accent: "#6D4C2F" },
+  { id: "trt", name: "TRT", tagline: "Testosterone replacement therapy, online", accent: "#1F5F5B" },
+  { id: "hrt", name: "HRT", tagline: "Hormone replacement therapy for menopause & more", accent: "#7A3B6B" },
+];
+
+export const DEFAULT_VERTICAL = "weight-loss";
+export const VERTICAL_IDS = VERTICALS.map((v) => v.id);
+export const isVertical = (id: string): boolean => VERTICAL_IDS.includes(id);
+
 // Providers we have an affiliate relationship with. Pages centered on any other
 // brand don't monetize, so they're de-indexed (noindex,follow) and dropped from
 // the sitemap to concentrate crawl budget and quality signals on money pages.
