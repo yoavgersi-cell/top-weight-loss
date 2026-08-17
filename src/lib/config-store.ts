@@ -1,10 +1,60 @@
 import { put, list } from "@vercel/blob";
-import { type SiteConfig, type ReviewData, type ArticleData, type BattleData, type LandingPageData, type TrustpilotReview, type Expert, defaultConfig } from "./config";
+import { type SiteConfig, type ReviewData, type ArticleData, type BattleData, type LandingPageData, type TrustpilotReview, type Expert, defaultConfig, DEFAULT_VERTICAL, VERTICALS } from "./config";
 import productsJson from "@/data/products.json";
 import faqsJson from "@/data/faqs.json";
 import { articles as defaultArticlesData } from "@/data/articles";
 
+// weight-loss keeps the original key for full back-compatibility with the live
+// site; every other vertical is stored in its own separate blob.
 const BLOB_KEY = "site-config.json";
+function blobKeyFor(vertical: string): string {
+  return vertical === DEFAULT_VERTICAL ? BLOB_KEY : `site-config-${vertical}.json`;
+}
+
+// A brand-new vertical starts empty — no providers, reviews, comparisons, or
+// articles. The operator fills it entirely through the CMS (same editor as
+// weight-loss), so it seeds only a valid, minimal shell.
+function emptyVerticalConfig(vertical: string): SiteConfig {
+  const meta = VERTICALS.find((v) => v.id === vertical);
+  const name = meta?.name ?? vertical;
+  return {
+    ...defaultConfig,
+    siteName: "treatmentshub.com",
+    providers: [],
+    faqs: [],
+    reviews: [],
+    articles: [],
+    battles: [],
+    landingPages: [],
+    sidebars: [],
+    hero: {
+      ...defaultConfig.hero,
+      h1: `Best ${name} Providers of 2026`,
+      h2: `Compare the top ${name.toLowerCase()} providers, side by side`,
+      description: meta?.tagline ?? defaultConfig.hero.description,
+    },
+  };
+}
+
+// Per-vertical read for any vertical other than weight-loss. Kept intentionally
+// simple: the heavy seed-merging below is weight-loss-specific, so new verticals
+// just load their own blob (or the empty shell) with no cross-vertical seeding.
+async function getVerticalConfig(vertical: string): Promise<SiteConfig> {
+  try {
+    const key = blobKeyFor(vertical);
+    const { blobs } = await list({ prefix: key });
+    if (blobs.length > 0) {
+      const res = await fetch(blobs[0].url, { cache: "no-store" });
+      if (res.ok) {
+        const saved = (await res.json()) as Partial<SiteConfig>;
+        return normalizeBrandCasing({ ...emptyVerticalConfig(vertical), ...saved });
+      }
+    }
+  } catch {
+    // fall through to the empty shell
+  }
+  return normalizeBrandCasing(emptyVerticalConfig(vertical));
+}
 
 // Default Trustpilot reviews per provider id. Shown on battle pages until the
 // provider's reviews are edited in the admin CMS, which then takes precedence.
@@ -3290,7 +3340,12 @@ function buildInitialConfig(): SiteConfig {
 // bare defaults — which would drop CMS-only content and 404 those pages.
 let lastGoodConfig: SiteConfig | null = null;
 
-export async function getConfig(): Promise<SiteConfig> {
+export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<SiteConfig> {
+  // Non-weight-loss verticals load from their own blob with no weight-loss
+  // seeding. weight-loss keeps its original, fully-seeded path below unchanged.
+  if (vertical !== DEFAULT_VERTICAL) {
+    return getVerticalConfig(vertical);
+  }
   try {
     const { blobs } = await list({ prefix: BLOB_KEY });
     if (blobs.length > 0) {
@@ -3403,8 +3458,8 @@ export async function getConfig(): Promise<SiteConfig> {
   return lastGoodConfig ?? normalizeBrandCasing(buildInitialConfig());
 }
 
-export async function saveConfig(config: SiteConfig): Promise<void> {
-  await put(BLOB_KEY, JSON.stringify(config, null, 2), {
+export async function saveConfig(config: SiteConfig, vertical: string = DEFAULT_VERTICAL): Promise<void> {
+  await put(blobKeyFor(vertical), JSON.stringify(config, null, 2), {
     access: "public",
     addRandomSuffix: false,
     allowOverwrite: true,
