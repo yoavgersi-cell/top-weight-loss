@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Fragment } from "react";
 import Link from "next/link";
 import { getConfig } from "@/lib/config-store";
-import { CONTENT_LAST_UPDATED } from "@/lib/config";
+import { CONTENT_LAST_UPDATED, DEFAULT_VERTICAL, isVertical } from "@/lib/config";
 import { ComparisonLayout } from "@/components/comparison-layout";
 import { EditorialContent } from "@/components/editorial-content";
 import { LandingEditorial } from "@/components/landing-editorial";
@@ -35,6 +35,23 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { battleSlug } = await params;
   if (RESERVED_SLUGS.includes(battleSlug)) return {};
+
+  // Vertical home (treatmentshub.com/<vertical>). weight-loss points its
+  // canonical at the existing site until the migration, so the two never
+  // compete for the same query; new verticals are self-canonical and indexable.
+  if (isVertical(battleSlug)) {
+    const vConfig = await getConfig(battleSlug);
+    const isWL = battleSlug === DEFAULT_VERTICAL;
+    const canonical = isWL
+      ? "https://www.topweightloss.io"
+      : `https://www.treatmentshub.com/${battleSlug}`;
+    return {
+      title: { absolute: vConfig.hero.h1 },
+      description: vConfig.hero.description,
+      alternates: { canonical },
+      openGraph: { title: vConfig.hero.h1, description: vConfig.hero.description, url: canonical, type: "website" },
+    };
+  }
 
   const config = await getConfig();
 
@@ -92,6 +109,19 @@ export default async function BattlePage({
 }) {
   const { battleSlug } = await params;
   if (RESERVED_SLUGS.includes(battleSlug)) return notFound();
+
+  // ───── VERTICAL HOME (treatmentshub.com/<vertical>) ─────
+  // Reuses the comparison layout with the vertical's own separate config. A new
+  // vertical with no providers simply renders an empty ranking until content is
+  // added in the CMS.
+  if (isVertical(battleSlug)) {
+    const vConfig = await getConfig(battleSlug);
+    return (
+      <div className="bg-[#FAFAFA]">
+        <ComparisonLayout config={vConfig} />
+      </div>
+    );
+  }
 
   const config = await getConfig();
 
