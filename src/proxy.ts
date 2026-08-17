@@ -21,12 +21,17 @@ const SHARED_ONE_OFF_PAGES = new Set([
 ]);
 
 // One deployment serves two hosts:
-//   • treatmentshub.com — the hub. "/" → the hub landing; "/<vertical>/<shared>"
-//     → the shared root page (prefix stripped). Deep money routes are left alone.
+//
+//   • treatmentshub.com — the hub. "/" is the hub landing; everything else must
+//     live under a /<vertical>/ prefix. Requests already under a vertical are
+//     routed as-is (with shared one-off pages having their prefix stripped to
+//     the shared root page); any other bare path is legacy weight-loss content
+//     and is 301'd under /weight-loss, so the hub only ever serves prefixed URLs.
+//
 //   • topweightloss.io — the legacy site. Untouched until the migration flag is
-//     flipped, at which point every path 301-redirects to its /weight-loss/*
-//     equivalent on the hub (the file-with-a-dot exclusion in the matcher keeps
-//     /sitemap.xml and /robots.txt serving so crawlers still resolve them).
+//     flipped, then every path 301-redirects to its /weight-loss/* equivalent
+//     on the hub. Dotted paths (/sitemap.xml, /robots.txt) plus /api and /admin
+//     are excluded by the matcher so they keep serving.
 export function proxy(req: NextRequest) {
   const host = req.headers.get("host") || "";
 
@@ -37,14 +42,36 @@ export function proxy(req: NextRequest) {
       return NextResponse.rewrite(new URL("/hub", req.url));
     }
 
-    // "/<vertical>/<shared-page>" → "/<shared-page>". Only known shared pages
-    // are stripped; real battle/landing slugs fall through to their route.
     const segments = pathname.split("/").filter(Boolean);
-    if (segments.length === 2 && isVertical(segments[0]) && SHARED_ONE_OFF_PAGES.has(segments[1])) {
-      return NextResponse.rewrite(new URL(`/${segments[1]}`, req.url));
+    const first = segments[0];
+
+    // Already a vertical path — serve it, stripping the prefix only for the
+    // shared one-off pages ("/<vertical>/about" → "/about").
+    if (isVertical(first)) {
+      if (segments.length === 2 && SHARED_ONE_OFF_PAGES.has(segments[1])) {
+        return NextResponse.rewrite(new URL(`/${segments[1]}`, req.url));
+      }
+      return NextResponse.next();
     }
 
-    return NextResponse.next();
+    // The hub landing's own route (rewritten from "/").
+    if (first === "hub") {
+      return NextResponse.next();
+    }
+
+    // Generated metadata image routes (e.g. /opengraph-image) have no file
+    // extension, so the matcher doesn't exclude them — serve them as-is rather
+    // than redirecting the OG/Twitter image URLs into a 404.
+    const last = segments[segments.length - 1];
+    if (last === "opengraph-image" || last === "twitter-image") {
+      return NextResponse.next();
+    }
+
+    // Any other bare path is migrated weight-loss content → normalize it under
+    // the /weight-loss prefix so the hub never serves an un-prefixed content URL.
+    const url = req.nextUrl.clone();
+    url.pathname = `/weight-loss${pathname}`;
+    return NextResponse.redirect(url, 301);
   }
 
   // Legacy host: 301 to the hub once migrated; a complete no-op until then.
@@ -61,8 +88,8 @@ export function proxy(req: NextRequest) {
 
 export const config = {
   // Run on all pages except Next internals, API, admin, and any file with an
-  // extension (assets, /sitemap.xml, /robots.txt). This is broad enough for the
-  // legacy→hub 301 to cover every content path once the flag is flipped, while
-  // staying a near-zero-cost pass-through before then.
+  // extension (assets, /sitemap.xml, /robots.txt). Broad enough for both the
+  // legacy→hub 301 and the hub's bare-path normalization to be complete, while
+  // staying a near-zero-cost pass-through on the legacy host before migration.
   matcher: ["/((?!_next/|api/|admin|.*\\..*).*)"],
 };

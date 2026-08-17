@@ -3,30 +3,32 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { useNavPrefix, navHref } from "@/lib/nav-prefix";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const prefix = useNavPrefix();
 
   return (
     <header className="border-b-2 border-[#D5D5D5] bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-        <Link href="/" className="flex items-center">
+        <Link href={navHref(prefix, "/")} className="flex items-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo.png" alt="TopWeightLoss.io" className="h-[36px] sm:h-[42px] w-auto" />
         </Link>
 
         {/* Desktop nav */}
         <nav className="hidden sm:flex items-center gap-6 text-sm font-medium text-[#191919]">
-          <Link href="/" className="hover:text-[#0C4B75] transition-colors">
+          <Link href={navHref(prefix, "/")} className="hover:text-[#0C4B75] transition-colors">
             Compare
           </Link>
-          <Link href="/reviews" className="hover:text-[#0C4B75] transition-colors">
+          <Link href={navHref(prefix, "/reviews")} className="hover:text-[#0C4B75] transition-colors">
             Reviews
           </Link>
-          <Link href="/weight-loss-pills" className="hover:text-[#0C4B75] transition-colors">
+          <Link href={navHref(prefix, "/weight-loss-pills")} className="hover:text-[#0C4B75] transition-colors">
             Pills
           </Link>
-          <Link href="/articles" className="hover:text-[#0C4B75] transition-colors">
+          <Link href={navHref(prefix, "/articles")} className="hover:text-[#0C4B75] transition-colors">
             Articles
           </Link>
         </nav>
@@ -47,16 +49,16 @@ export function Header() {
       {/* Mobile menu */}
       {isOpen && (
         <nav className="sm:hidden border-t border-[#E5E5E5] bg-white px-4 py-3 space-y-3">
-          <Link href="/" onClick={() => setIsOpen(false)} className="block text-[15px] font-medium text-[#191919] hover:text-[#0C4B75]">
+          <Link href={navHref(prefix, "/")} onClick={() => setIsOpen(false)} className="block text-[15px] font-medium text-[#191919] hover:text-[#0C4B75]">
             Compare
           </Link>
-          <Link href="/reviews" onClick={() => setIsOpen(false)} className="block text-[15px] font-medium text-[#191919] hover:text-[#0C4B75]">
+          <Link href={navHref(prefix, "/reviews")} onClick={() => setIsOpen(false)} className="block text-[15px] font-medium text-[#191919] hover:text-[#0C4B75]">
             Reviews
           </Link>
-          <Link href="/weight-loss-pills" onClick={() => setIsOpen(false)} className="block text-[15px] font-medium text-[#191919] hover:text-[#0C4B75]">
+          <Link href={navHref(prefix, "/weight-loss-pills")} onClick={() => setIsOpen(false)} className="block text-[15px] font-medium text-[#191919] hover:text-[#0C4B75]">
             Pills
           </Link>
-          <Link href="/articles" onClick={() => setIsOpen(false)} className="block text-[15px] font-medium text-[#191919] hover:text-[#0C4B75]">
+          <Link href={navHref(prefix, "/articles")} onClick={() => setIsOpen(false)} className="block text-[15px] font-medium text-[#191919] hover:text-[#0C4B75]">
             Articles
           </Link>
         </nav>
