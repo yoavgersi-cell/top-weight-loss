@@ -18,6 +18,25 @@ body {
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
 }
 
+/* Hub vs legacy brand swap. `data-hub` is set (pre-paint) on <html> by an inline
+   script when served from the treatmentshub host, so the shared header/footer
+   show the TreatmentsHub brand with no flash, while the same cached HTML still
+   renders the TopWeightLoss brand on the legacy domain. */
+.hub-brand,
+.hub-name {
+  display: none !important;
+}
+html[data-hub] .legacy-brand,
+html[data-hub] .legacy-name {
+  display: none !important;
+}
+html[data-hub] .hub-brand {
+  display: inline-flex !important;
+}
+html[data-hub] .hub-name {
+  display: inline !important;
+}
+
 @keyframes fadeSlideUp {
   from {
     opacity: 0;
