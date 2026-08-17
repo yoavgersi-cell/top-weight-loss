@@ -18,7 +18,7 @@ import { DEFAULT_VERTICAL } from "./config";
 // treatmentshub.com/weight-loss. Until then, the hub's weight-loss pages point
 // their canonical at the live legacy site so the two domains never compete for
 // the same query.
-export const WEIGHT_LOSS_MIGRATED = false;
+export const WEIGHT_LOSS_MIGRATED = true;
 
 const LEGACY_WL_ORIGIN = "https://www.topweightloss.io";
 const HUB_ORIGIN = "https://www.treatmentshub.com";
