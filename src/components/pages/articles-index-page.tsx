@@ -2,22 +2,28 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Clock, ArrowRight, Trophy } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
+import { VERTICALS } from "@/lib/config";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
+
+function verticalName(id: string): string {
+  return VERTICALS.find((v) => v.id === id)?.name ?? "Treatment";
+}
 
 export async function articlesIndexMetadata(ctx: SiteContext): Promise<Metadata> {
   const url = canonicalUrl(ctx, "/articles");
+  const vName = verticalName(ctx.vertical);
+  const title = `${vName} Articles — Research, Guides & Expert Insights`;
+  const description = `Evidence-based ${vName.toLowerCase()} guides and research — treatment options, what to expect, and choosing the right online provider.`;
   return {
-    title: "Weight Loss Articles — Research, Guides & Expert Insights",
-    description:
-      "Expert articles on GLP-1 medications, weight loss strategies, and choosing the right telehealth provider. Evidence-based guides updated regularly.",
+    title,
+    description,
     robots: ctx.noindex ? { index: false, follow: false } : undefined,
     alternates: {
       canonical: url,
     },
     openGraph: {
-      title: "Weight Loss Articles — Research, Guides & Expert Insights",
-      description:
-        "Expert articles on GLP-1 medications, weight loss strategies, and choosing the right provider.",
+      title,
+      description,
       url,
     },
   };
@@ -33,15 +39,20 @@ const categoryColors: Record<string, string> = {
 export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
   const config = await getConfig(ctx.vertical);
   const articles = config.articles ?? [];
+  const vName = verticalName(ctx.vertical);
 
-  // Standalone in-depth guide pages (custom layouts, not CMS articles)
-  const guides = [
-    { title: "Weight Loss Pills", href: "/weight-loss-pills", category: "Guide", description: "Oral GLP-1s and FDA-approved prescription pills — and how they compare to injections." },
-    { title: "GLP-1 Pills vs Injections", href: "/glp1-pills-vs-injections", category: "Guide", description: "Results, cost, and convenience compared — which is right for you?" },
-    { title: "Ozempic, Wegovy & Mounjaro Alternatives", href: "/ozempic-alternatives", category: "Guide", description: "The same active ingredients as the big brands — as affordable compounded options through telehealth." },
-    { title: "Retatrutide for Weight Loss", href: "/retatrutide-weight-loss", category: "Science", description: "The triple-agonist drug that hit ~24% in trials — and whether you can get it yet." },
-    { title: "GLP-1 Weight Loss Statistics", href: "/glp1-weight-loss-statistics", category: "Science", description: "Key clinical trial data on how much weight GLP-1 medications produce." },
-  ];
+  // Standalone in-depth guide pages (custom weight-loss landing pages, not CMS
+  // articles). These only exist for weight-loss, so other verticals show none.
+  const guides =
+    ctx.vertical === "weight-loss"
+      ? [
+          { title: "Weight Loss Pills", href: "/weight-loss-pills", category: "Guide", description: "Oral GLP-1s and FDA-approved prescription pills — and how they compare to injections." },
+          { title: "GLP-1 Pills vs Injections", href: "/glp1-pills-vs-injections", category: "Guide", description: "Results, cost, and convenience compared — which is right for you?" },
+          { title: "Ozempic, Wegovy & Mounjaro Alternatives", href: "/ozempic-alternatives", category: "Guide", description: "The same active ingredients as the big brands — as affordable compounded options through telehealth." },
+          { title: "Retatrutide for Weight Loss", href: "/retatrutide-weight-loss", category: "Science", description: "The triple-agonist drug that hit ~24% in trials — and whether you can get it yet." },
+          { title: "GLP-1 Weight Loss Statistics", href: "/glp1-weight-loss-statistics", category: "Science", description: "Key clinical trial data on how much weight GLP-1 medications produce." },
+        ]
+      : [];
 
   // Head-to-head comparison (battle) pages, with both providers resolved
   const comparisons = (config.battles ?? [])
@@ -68,8 +79,8 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
   const collectionSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Weight Loss Articles — Research, Guides & Expert Insights",
-    description: "Expert articles on GLP-1 medications, weight loss strategies, and choosing the right telehealth provider.",
+    name: `${vName} Articles — Research, Guides & Expert Insights`,
+    description: `Evidence-based ${vName.toLowerCase()} guides and research — treatment options, what to expect, and choosing the right online provider.`,
     url: canonicalUrl(ctx, "/articles"),
     mainEntity: {
       "@type": "ItemList",
@@ -107,8 +118,8 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
             Articles
           </h1>
           <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-gray-500">
-            Evidence-based guides on weight loss medications, treatment
-            expectations, and making informed decisions about your health.
+            Evidence-based {vName.toLowerCase()} guides — treatment options, what
+            to expect, and making informed decisions about your health.
           </p>
         </div>
 
