@@ -4,6 +4,7 @@ import type {
   ReviewData,
   BattleData,
   FaqItem,
+  RankingPosition,
 } from "../config";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -15,7 +16,6 @@ import type {
 // edited in the CMS, and the vertical stays unpublished until it's ready.
 // ─────────────────────────────────────────────────────────────────────────────
 
-const LOGO = "/provider-placeholder.svg";
 const UPDATED = "2026-08-18";
 const PRICING_TBD =
   "Pricing varies by program, labs, and treatment. Check the provider's site for current pricing.";
@@ -25,8 +25,8 @@ const providers: Provider[] = [
     id: "hone",
     name: "Hone Health",
     tagline: "At-home hormone testing and online testosterone treatment for men",
-    logo: LOGO,
-    smallLogo: LOGO,
+    logo: "/logo-hone.svg",
+    smallLogo: "/logo-hone.svg",
     highlights: [
       "At-home lab testing to start",
       "Licensed-provider evaluation",
@@ -39,8 +39,8 @@ const providers: Provider[] = [
     id: "fountain",
     name: "Fountain TRT",
     tagline: "Online TRT clinic — testing, prescription, and follow-up for men",
-    logo: LOGO,
-    smallLogo: LOGO,
+    logo: "/logo-fountain.svg",
+    smallLogo: "/logo-fountain.svg",
     highlights: [
       "Lab work reviewed by a provider",
       "Testosterone treatment options",
@@ -53,8 +53,8 @@ const providers: Provider[] = [
     id: "marek",
     name: "Marek Health",
     tagline: "Hormone optimization and health coaching with comprehensive lab testing",
-    logo: LOGO,
-    smallLogo: LOGO,
+    logo: "/logo-marek.svg",
+    smallLogo: "/logo-marek.svg",
     highlights: [
       "Comprehensive lab panels",
       "Provider-guided optimization",
@@ -67,8 +67,8 @@ const providers: Provider[] = [
     id: "blokes",
     name: "Blokes",
     tagline: "Men's telehealth for hormone optimization, including TRT",
-    logo: LOGO,
-    smallLogo: LOGO,
+    logo: "/logo-blokes.svg",
+    smallLogo: "/logo-blokes.svg",
     highlights: [
       "Personalized hormone plans",
       "Lab-based evaluation",
@@ -81,8 +81,8 @@ const providers: Provider[] = [
     id: "maximus",
     name: "Maximus",
     tagline: "Telehealth testosterone support, including oral options",
-    logo: LOGO,
-    smallLogo: LOGO,
+    logo: "/logo-maximus.svg",
+    smallLogo: "/logo-maximus.svg",
     highlights: [
       "Oral and other protocol options",
       "Provider-supervised treatment",
@@ -95,8 +95,8 @@ const providers: Provider[] = [
     id: "defy",
     name: "Defy Medical",
     tagline: "Telehealth clinic for hormone therapy and TRT",
-    logo: LOGO,
-    smallLogo: LOGO,
+    logo: "/logo-defy.svg",
+    smallLogo: "/logo-defy.svg",
     highlights: [
       "Established hormone-therapy clinic",
       "Individualized treatment plans",
@@ -175,6 +175,176 @@ const reviews: ReviewData[] = [
     trustBadges: ["Licensed US providers", "Remote monitoring"],
     updatedAt: UPDATED,
   },
+  {
+    slug: "marek",
+    providerId: "marek",
+    shortSummary:
+      "Hormone optimization and health coaching built around comprehensive lab testing and provider guidance.",
+    reviewIntro:
+      "Marek Health is a hormone-optimization telehealth service that pairs comprehensive lab testing with provider guidance and health coaching. Rather than a one-size protocol, it focuses on interpreting detailed bloodwork and building an individualized plan — which can include testosterone therapy where appropriate — with ongoing coaching support. This review covers its approach and who it fits.",
+    keyFeatures: [
+      "Comprehensive lab panels",
+      "Provider-guided hormone optimization",
+      "Health coaching alongside treatment",
+      "Ongoing lab-based monitoring",
+    ],
+    pricingSummary: PRICING_TBD,
+    treatmentOptions: [
+      "Testosterone therapy (provider-directed)",
+      "Broader hormone optimization",
+      "Follow-up lab monitoring",
+      "Health coaching",
+    ],
+    pros: [
+      "In-depth lab testing and interpretation",
+      "Coaching plus medical oversight",
+      "Individualized optimization approach",
+    ],
+    cons: [
+      "More involved than a basic TRT script",
+      "Requires bloodwork and medical review",
+      "Ongoing monitoring needed",
+    ],
+    bestFor: [
+      "Men who want a data-driven, coached approach",
+      "Those interested in broader hormone optimization",
+      "People who value detailed lab work",
+    ],
+    finalVerdict:
+      "Marek Health suits men who want a thorough, lab-driven approach to hormone optimization with coaching support. Confirm current pricing and eligibility on their site.",
+    trustBadges: ["Comprehensive lab testing", "Provider-guided", "Coaching included"],
+    updatedAt: UPDATED,
+  },
+  {
+    slug: "blokes",
+    providerId: "blokes",
+    shortSummary:
+      "Men's telehealth for hormone optimization, including TRT, built on lab-based, personalized plans.",
+    reviewIntro:
+      "Blokes is a men's telehealth platform focused on hormone optimization, including testosterone replacement therapy. It starts from lab work and a provider evaluation to build a personalized plan, with online access to providers for follow-up. This review outlines what it offers and who it fits.",
+    keyFeatures: [
+      "Lab-based evaluation",
+      "Personalized hormone plans",
+      "Online provider access",
+      "Men's optimization focus",
+    ],
+    pricingSummary: PRICING_TBD,
+    treatmentOptions: [
+      "Testosterone therapy (provider-directed)",
+      "Personalized hormone protocols",
+      "Follow-up monitoring",
+    ],
+    pros: [
+      "Personalized, lab-based plans",
+      "Men's-health focus",
+      "Fully online access",
+    ],
+    cons: [
+      "Requires bloodwork and medical review",
+      "Ongoing treatment and monitoring",
+      "Program specifics vary",
+    ],
+    bestFor: [
+      "Men who want a personalized optimization plan",
+      "Those comparing modern men's telehealth",
+      "People who prefer an online process",
+    ],
+    finalVerdict:
+      "Blokes is a solid option for men who want a personalized, lab-based approach to hormone optimization online. Confirm current pricing and details on their site.",
+    trustBadges: ["Lab-based evaluation", "Personalized plans"],
+    updatedAt: UPDATED,
+  },
+  {
+    slug: "maximus",
+    providerId: "maximus",
+    shortSummary:
+      "Telehealth testosterone support for men, including oral protocol options, with at-home testing and provider supervision.",
+    reviewIntro:
+      "Maximus offers telehealth testosterone support for men, notable for oral protocol options alongside more traditional approaches, with at-home testing and provider supervision. You start with testing, a provider reviews your results, and an appropriate protocol is prescribed and monitored. This review covers its approach and fit.",
+    keyFeatures: [
+      "Oral protocol options",
+      "At-home testing to start",
+      "Provider-supervised treatment",
+      "Online follow-up",
+    ],
+    pricingSummary: PRICING_TBD,
+    treatmentOptions: [
+      "Oral testosterone-support protocols",
+      "Provider-directed testosterone therapy",
+      "At-home lab testing",
+      "Follow-up monitoring",
+    ],
+    pros: [
+      "Oral options some competitors don't offer",
+      "Convenient at-home testing",
+      "Provider-supervised",
+    ],
+    cons: [
+      "Suitability of oral options depends on your labs",
+      "Requires medical review",
+      "Ongoing monitoring needed",
+    ],
+    bestFor: [
+      "Men interested in oral testosterone-support options",
+      "Those who want an at-home, online start",
+      "People comparing modern protocols",
+    ],
+    finalVerdict:
+      "Maximus stands out for offering oral protocol options within a supervised, at-home telehealth model. Confirm current pricing and eligibility on their site.",
+    trustBadges: ["At-home testing", "Provider-supervised", "Oral options"],
+    updatedAt: UPDATED,
+  },
+  {
+    slug: "defy",
+    providerId: "defy",
+    shortSummary:
+      "An established telehealth clinic for hormone therapy and TRT, with individualized plans and ongoing monitoring.",
+    reviewIntro:
+      "Defy Medical is a long-standing telehealth clinic specializing in hormone therapy, including TRT. It's known for individualized treatment plans and thorough, ongoing monitoring rather than a one-size approach. This review outlines what it offers and who it fits.",
+    keyFeatures: [
+      "Established hormone-therapy clinic",
+      "Individualized treatment plans",
+      "Thorough ongoing monitoring",
+      "Broad hormone-therapy experience",
+    ],
+    pricingSummary: PRICING_TBD,
+    treatmentOptions: [
+      "Testosterone therapy (provider-directed)",
+      "Broader hormone therapy options",
+      "Follow-up lab monitoring",
+    ],
+    pros: [
+      "Established, experienced clinic",
+      "Highly individualized plans",
+      "Comprehensive monitoring",
+    ],
+    cons: [
+      "Requires bloodwork and medical review",
+      "More clinical, less 'quick' than some apps",
+      "Ongoing monitoring needed",
+    ],
+    bestFor: [
+      "Men who want an experienced, individualized clinic",
+      "Those with more complex needs",
+      "People who value thorough monitoring",
+    ],
+    finalVerdict:
+      "Defy Medical is a strong choice for men who want an established, individualized hormone-therapy clinic with thorough monitoring. Confirm current pricing and eligibility on their site.",
+    trustBadges: ["Established clinic", "Individualized plans", "Ongoing monitoring"],
+    updatedAt: UPDATED,
+  },
+];
+
+// Editorial ranking scores for this vertical (independent, disclosed via the
+// ranking methodology). Provisional order until affiliate partners are set — the
+// operator can reorder in the CMS.
+const positions: RankingPosition[] = [
+  { score: 9.3, starRating: 5, label: "Excellent", badge: "Editor's Choice" },
+  { score: 9.1, starRating: 5, label: "Excellent" },
+  { score: 9.0, starRating: 5, label: "Excellent" },
+  { score: 8.8, starRating: 4, label: "Very Good" },
+  { score: 8.6, starRating: 4, label: "Very Good" },
+  { score: 8.5, starRating: 4, label: "Very Good" },
 ];
 
 const battles: BattleData[] = [
@@ -219,6 +389,108 @@ const battles: BattleData[] = [
     ],
     updatedAt: UPDATED,
   },
+  {
+    slug: "marek-vs-blokes",
+    provider1Id: "marek",
+    provider2Id: "blokes",
+    title: "Marek Health vs Blokes: Which Is Right for You?",
+    subtitle: "Two men's hormone-optimization telehealth services, compared",
+    description:
+      "Compare Marek Health and Blokes for online hormone optimization and TRT — approach, lab testing, and who each one fits best.",
+    intro:
+      "Marek Health and Blokes both offer lab-based, provider-guided hormone optimization for men, including TRT. Marek leans into comprehensive testing and coaching, while Blokes emphasizes personalized, fully online plans. Here's how they compare.",
+    verdict:
+      "Both are personalized, lab-based options. Marek is the better fit if you want in-depth testing and coaching, while Blokes suits those who want a streamlined online plan. Confirm current pricing and details on each provider's site.",
+    verdictWinnerPoints: [
+      "Comprehensive lab panels and interpretation",
+      "Health coaching alongside treatment",
+    ],
+    verdictLoserPoints: [
+      "Personalized, fully online plans",
+      "Men's optimization focus",
+    ],
+    winnerId: "marek",
+    categories: [
+      {
+        name: "Approach",
+        winner: "provider1",
+        explanation:
+          "Marek pairs comprehensive lab testing with coaching, while Blokes focuses on a streamlined personalized plan.",
+        supportingPoints: [
+          "Marek emphasizes detailed lab interpretation",
+          "Blokes emphasizes a simple online plan",
+        ],
+      },
+      {
+        name: "Medical oversight",
+        winner: "tie",
+        explanation:
+          "Both use lab work and licensed-provider evaluation before treatment.",
+        supportingPoints: [
+          "Lab-based evaluation at both",
+          "Provider-supervised treatment at both",
+        ],
+      },
+    ],
+    features: [
+      { feature: "Comprehensive labs", provider1Value: "Emphasized", provider2Value: "Yes", highlight: "provider1" },
+      { feature: "Health coaching", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
+      { feature: "Provider evaluation", provider1Value: "Yes", provider2Value: "Yes", highlight: "both" },
+      { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
+    ],
+    updatedAt: UPDATED,
+  },
+  {
+    slug: "hone-vs-defy",
+    provider1Id: "hone",
+    provider2Id: "defy",
+    title: "Hone Health vs Defy Medical: Which Is Right for You?",
+    subtitle: "A modern at-home service vs an established hormone clinic",
+    description:
+      "Compare Hone Health and Defy Medical for testosterone therapy — at-home convenience vs an established, individualized clinic.",
+    intro:
+      "Hone Health offers a modern, at-home testing and treatment experience, while Defy Medical is an established clinic known for individualized plans and thorough monitoring. Here's how they compare so you can pick what fits.",
+    verdict:
+      "Hone is the easier at-home starting point, while Defy suits those who want an experienced clinic and more individualized care. Confirm current pricing and eligibility on each provider's site.",
+    verdictWinnerPoints: [
+      "At-home testing and a streamlined start",
+      "Ongoing telehealth monitoring",
+    ],
+    verdictLoserPoints: [
+      "Established, experienced clinic",
+      "Highly individualized plans",
+    ],
+    winnerId: "hone",
+    categories: [
+      {
+        name: "Convenience",
+        winner: "provider1",
+        explanation:
+          "Hone emphasizes an at-home, streamlined experience, while Defy is a more clinical, individualized service.",
+        supportingPoints: [
+          "Hone starts with at-home testing",
+          "Defy focuses on individualized clinical care",
+        ],
+      },
+      {
+        name: "Depth of care",
+        winner: "provider2",
+        explanation:
+          "Defy is an established clinic known for thorough, individualized monitoring.",
+        supportingPoints: [
+          "Defy offers broad hormone-therapy experience",
+          "Individualized plans with ongoing monitoring",
+        ],
+      },
+    ],
+    features: [
+      { feature: "At-home testing", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
+      { feature: "Individualized care", provider1Value: "Yes", provider2Value: "Emphasized", highlight: "provider2" },
+      { feature: "Ongoing monitoring", provider1Value: "Yes", provider2Value: "Yes", highlight: "both" },
+      { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
+    ],
+    updatedAt: UPDATED,
+  },
 ];
 
 const faqs: FaqItem[] = [
@@ -247,6 +519,16 @@ const faqs: FaqItem[] = [
     answer:
       "Depending on the provider and your plan, testosterone may be given as injections, topical gels or creams, or other forms. A provider recommends the option that fits your needs.",
   },
+  {
+    question: "How much does online TRT cost?",
+    answer:
+      "Costs vary widely by provider and depend on what's included — the initial labs, the provider visit, medication, and follow-up monitoring are sometimes bundled and sometimes billed separately. Because pricing changes, check each provider's site for current pricing before you start.",
+  },
+  {
+    question: "How long does TRT take to work?",
+    answer:
+      "Many men begin to notice changes over the first several weeks to a few months, and different symptoms can improve on different timelines. Your provider monitors your labs and how you feel, and adjusts treatment as needed.",
+  },
 ];
 
 export function trtSeed(base: SiteConfig): SiteConfig {
@@ -270,7 +552,7 @@ export function trtSeed(base: SiteConfig): SiteConfig {
     },
     ranking: {
       providerOrder: providers.map((p) => p.id),
-      positions: base.ranking.positions,
+      positions,
     },
     reviews,
     battles,
