@@ -7,6 +7,7 @@ import {
   NOINDEX_ARTICLE_SLUGS,
   VERTICAL_IDS,
   DEFAULT_VERTICAL,
+  isPublishedVertical,
   type SiteConfig,
 } from "@/lib/config";
 import { WEIGHT_LOSS_MIGRATED } from "@/lib/site-context";
@@ -50,6 +51,7 @@ async function hubSitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   for (const vertical of VERTICAL_IDS) {
+    if (!isPublishedVertical(vertical)) continue; // unpublished skeletons stay out
     if (vertical === DEFAULT_VERTICAL && !WEIGHT_LOSS_MIGRATED) continue;
     const config = await getConfig(vertical);
     if ((config.providers ?? []).length === 0) continue; // nothing to index yet

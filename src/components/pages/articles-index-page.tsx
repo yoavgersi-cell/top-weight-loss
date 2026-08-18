@@ -10,6 +10,7 @@ export async function articlesIndexMetadata(ctx: SiteContext): Promise<Metadata>
     title: "Weight Loss Articles — Research, Guides & Expert Insights",
     description:
       "Expert articles on GLP-1 medications, weight loss strategies, and choosing the right telehealth provider. Evidence-based guides updated regularly.",
+    robots: ctx.noindex ? { index: false, follow: false } : undefined,
     alternates: {
       canonical: url,
     },

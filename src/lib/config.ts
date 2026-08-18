@@ -291,6 +291,14 @@ export const DEFAULT_VERTICAL = "weight-loss";
 export const VERTICAL_IDS = VERTICALS.map((v) => v.id);
 export const isVertical = (id: string): boolean => VERTICAL_IDS.includes(id);
 
+// Verticals that are publicly launched: advertised as "live" on the hub, listed
+// in the sitemap, and indexable. A vertical can have a full content skeleton
+// (providers, comparisons, etc.) while still being unpublished — it renders for
+// preview but stays out of the hub card, the sitemap, and the index until its
+// affiliate data is filled in and it's added here. Add a vertical id to launch it.
+export const PUBLISHED_VERTICALS = ["weight-loss"];
+export const isPublishedVertical = (id: string): boolean => PUBLISHED_VERTICALS.includes(id);
+
 // Providers we have an affiliate relationship with. Pages centered on any other
 // brand don't monetize, so they're de-indexed (noindex,follow) and dropped from
 // the sitemap to concentrate crawl budget and quality signals on money pages.

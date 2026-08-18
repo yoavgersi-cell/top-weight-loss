@@ -12,7 +12,7 @@ function SidebarCard({ children, className }: { children: React.ReactNode; class
   );
 }
 
-export function Sidebar({ config, providers }: { config: SidebarConfig; providers: Provider[] }) {
+export function Sidebar({ config, providers, linkPrefix = "" }: { config: SidebarConfig; providers: Provider[]; linkPrefix?: string }) {
   const topProviders = providers.slice(0, 5);
   const blockOrder = config.blockOrder && config.blockOrder.length > 0
     ? config.blockOrder
@@ -73,7 +73,7 @@ export function Sidebar({ config, providers }: { config: SidebarConfig; provider
             <h3 className="mb-6 text-[20px] font-bold text-[#191919]">Editorial Reviews</h3>
             <div className="space-y-5">
               {topProviders.map((p) => (
-                <Link key={p.id} href={`/reviews/${p.id}`} className="flex items-center gap-4 group">
+                <Link key={p.id} href={`${linkPrefix}/reviews/${p.id}`} className="flex items-center gap-4 group">
                   <div className="flex h-[56px] w-[56px] shrink-0 items-center justify-center rounded-full bg-white border border-gray-200 shadow-[0_1px_2px_rgba(0,0,0,0.04)] overflow-hidden p-2">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={p.smallLogo || p.logo} alt={p.name} className="max-h-full max-w-full object-contain" />
@@ -85,7 +85,7 @@ export function Sidebar({ config, providers }: { config: SidebarConfig; provider
                 </Link>
               ))}
             </div>
-            <Link href="/reviews" className="mt-8 block text-[14px] font-semibold text-[#0B5E9E] hover:underline">
+            <Link href={`${linkPrefix}/reviews`} className="mt-8 block text-[14px] font-semibold text-[#0B5E9E] hover:underline">
               Read All Reviews
             </Link>
           </SidebarCard>

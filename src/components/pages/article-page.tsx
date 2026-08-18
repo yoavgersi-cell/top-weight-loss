@@ -18,7 +18,11 @@ export async function articleMetadata(slug: string, ctx: SiteContext): Promise<M
   return {
     title: article.title,
     description: article.description,
-    robots: NOINDEX_ARTICLE_SLUGS.includes(slug) ? { index: false, follow: true } : undefined,
+    robots: ctx.noindex
+      ? { index: false, follow: false }
+      : NOINDEX_ARTICLE_SLUGS.includes(slug)
+        ? { index: false, follow: true }
+        : undefined,
     alternates: {
       canonical: url,
     },

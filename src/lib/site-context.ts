@@ -1,4 +1,4 @@
-import { DEFAULT_VERTICAL } from "./config";
+import { DEFAULT_VERTICAL, isPublishedVertical } from "./config";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Site context
@@ -35,6 +35,8 @@ export interface SiteContext {
   brandDomain: string;
   /** Display name for schema author/publisher, e.g. "TopWeightLoss Team". */
   brandTeam: string;
+  /** When true, pages in this context are kept out of the index (unpublished vertical). */
+  noindex: boolean;
 }
 
 // Legacy root context — reproduces the exact URLs and branding the standalone
@@ -47,14 +49,18 @@ export const ROOT_CONTEXT: SiteContext = {
   canonicalPrefix: "",
   brandDomain: "topweightloss.io",
   brandTeam: "TopWeightLoss Team",
+  noindex: false,
 };
 
 // Context for a page rendered under the hub at /<vertical>/...
 export function hubContext(vertical: string): SiteContext {
+  // An unpublished vertical (a content skeleton not yet launched) is kept out of
+  // the index until its affiliate data is filled in and it's published.
+  const noindex = !isPublishedVertical(vertical);
   // Interim: weight-loss on the hub still canonicalizes to the live legacy site,
   // so only its internal-link prefix differs from the root context.
   if (vertical === DEFAULT_VERTICAL && !WEIGHT_LOSS_MIGRATED) {
-    return { ...ROOT_CONTEXT, prefix: `/${vertical}` };
+    return { ...ROOT_CONTEXT, prefix: `/${vertical}`, noindex };
   }
   return {
     vertical,
@@ -63,6 +69,7 @@ export function hubContext(vertical: string): SiteContext {
     canonicalPrefix: `/${vertical}`,
     brandDomain: "treatmentshub.com",
     brandTeam: "TreatmentsHub Team",
+    noindex,
   };
 }
 

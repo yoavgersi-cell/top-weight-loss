@@ -140,7 +140,11 @@ export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Me
   return {
     title: pageTitle,
     description: pageDescription,
-    robots: isAffiliate ? undefined : { index: false, follow: true },
+    robots: ctx.noindex
+      ? { index: false, follow: false }
+      : isAffiliate
+        ? undefined
+        : { index: false, follow: true },
     alternates: {
       canonical: url,
     },

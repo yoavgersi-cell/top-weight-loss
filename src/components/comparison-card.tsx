@@ -24,11 +24,12 @@ interface ComparisonCardProps {
   pageType?: "listing" | "review" | "battle" | "quiz_results";
   sourceFlow?: "main_comparison" | "provider_review" | "battle_page" | "matching_flow";
   socialProof?: { number: string; text: string };
+  linkPrefix?: string;
 }
 
 const arrowSvg = <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>;
 
-export function ComparisonCard({ product, hideRank, pageType = "listing", sourceFlow = "main_comparison", socialProof }: ComparisonCardProps) {
+export function ComparisonCard({ product, hideRank, pageType = "listing", sourceFlow = "main_comparison", socialProof, linkPrefix = "" }: ComparisonCardProps) {
   const showBubble = product.rank === 1 && !!socialProof;
   return (
     <article className="relative rounded-md border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md overflow-hidden">
@@ -64,7 +65,7 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
         <div className="flex-1 px-6 py-5">
           <h3 className="text-[12px] font-semibold text-[#1A1A1A]">{product.name}</h3>
           <a
-            href={`/reviews/${product.id}`}
+            href={`${linkPrefix}/reviews/${product.id}`}
             className="text-[12px] font-semibold text-[#0B5E9E] hover:underline"
           >
             Read Review
