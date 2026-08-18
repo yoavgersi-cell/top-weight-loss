@@ -5,15 +5,15 @@ export const revalidate = 300;
 
 export const metadata: Metadata = {
   title: {
-    absolute: "TreatmentsHub — Compare the Best Treatments Side by Side",
+    absolute: "TreatmentsHub — Compare Online Treatment Providers & Prices",
   },
   description:
-    "Compare top telehealth providers across weight loss, hair loss, TRT, and HRT — ranked on pricing, medical support, and real customer reviews.",
+    "Compare top online treatment providers across weight loss, hair loss, TRT and HRT — independent rankings on pricing, medical support and real customer reviews.",
   alternates: { canonical: "https://www.treatmentshub.com" },
   openGraph: {
-    title: "TreatmentsHub — Compare the Best Treatments Side by Side",
+    title: "TreatmentsHub — Compare Online Treatment Providers & Prices",
     description:
-      "Independent, side-by-side comparisons of top telehealth providers across every treatment category.",
+      "Independent, side-by-side comparisons of top online providers across weight loss, hair loss, TRT and HRT.",
     url: "https://www.treatmentshub.com",
     type: "website",
   },
