@@ -17,7 +17,7 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.treatmentshub.com"),
   title: {
-    default: "TreatmentsHub — Compare the Best Treatments Side by Side",
+    default: "TreatmentsHub — Compare Online Treatment Providers & Prices",
     template: "%s | TreatmentsHub",
   },
   icons: {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     apple: "/apple-icon.png",
   },
   description:
-    "Independent guides and provider comparisons across weight loss, hair loss, TRT and HRT — ranked on pricing, treatment options, medical support, and real customer reviews.",
+    "Compare top online treatment providers across weight loss, hair loss, TRT and HRT — independent rankings on pricing, medical support and real customer reviews.",
   keywords: [
     "treatment comparison",
     "telehealth comparison",
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     "menopause treatment online",
   ],
   openGraph: {
-    title: "TreatmentsHub — Compare the Best Treatments Side by Side",
+    title: "TreatmentsHub — Compare Online Treatment Providers & Prices",
     description:
-      "Independent, side-by-side comparisons of top telehealth providers across weight loss, hair loss, TRT and HRT.",
+      "Independent, side-by-side comparisons of top online providers across weight loss, hair loss, TRT and HRT.",
     type: "website",
     siteName: "TreatmentsHub",
     locale: "en_US",
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TreatmentsHub — Compare the Best Treatments Side by Side",
+    title: "TreatmentsHub — Compare Online Treatment Providers & Prices",
     description:
-      "Independent, side-by-side comparisons of top telehealth providers across weight loss, hair loss, TRT and HRT.",
+      "Independent, side-by-side comparisons of top online providers across weight loss, hair loss, TRT and HRT.",
   },
   other: {
     "geo.region": "US",

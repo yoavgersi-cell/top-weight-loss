@@ -11,10 +11,8 @@ export function Header() {
   const prefix = useNavPrefix();
   const vertical = prefix.replace(/^\//, "");
 
-  // Umbrella-brand navigation. "Treatments" points at the hub front door (which
-  // exposes the categories); the rest resolve within the current category.
+  // Navigation resolves within the current category (weight loss, etc.).
   const nav = [
-    { label: "Treatments", href: "/" },
     { label: "Reviews", href: navHref(prefix, "/reviews") },
     { label: "Comparisons", href: `${navHref(prefix, "/articles")}#comparisons` },
     { label: "Guides", href: navHref(prefix, "/articles") },
@@ -29,7 +27,7 @@ export function Header() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo.png" alt="TopWeightLoss.io" className="h-[36px] sm:h-[42px] w-auto" />
         </Link>
-        <Link href="/" className="hub-brand items-center">
+        <Link href={navHref(prefix, "/")} className="hub-brand items-center">
           <HubLogo vertical={vertical} />
         </Link>
 
