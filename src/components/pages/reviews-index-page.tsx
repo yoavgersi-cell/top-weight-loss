@@ -10,6 +10,7 @@ export async function reviewsIndexMetadata(ctx: SiteContext): Promise<Metadata> 
     title: "Weight Loss Provider Reviews — In-Depth Expert Analysis",
     description:
       "Read expert reviews of the top weight loss providers offering GLP-1 medications like semaglutide and tirzepatide. Compare pricing, treatment options, pros and cons.",
+    robots: ctx.noindex ? { index: false, follow: false } : undefined,
     alternates: {
       canonical: url,
     },

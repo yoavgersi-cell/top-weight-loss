@@ -29,6 +29,7 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
     return {
       title: landing.seoTitle,
       description: landing.seoDescription,
+      robots: ctx.noindex ? { index: false, follow: false } : undefined,
       alternates: { canonical: url },
       openGraph: {
         title: landing.seoTitle,
@@ -60,6 +61,7 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
   return {
     title: battle.title,
     description: battle.description,
+    robots: ctx.noindex ? { index: false, follow: false } : undefined,
     alternates: { canonical: url },
     openGraph: {
       title: battle.title,
@@ -136,6 +138,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
         {landingFaqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(landingFaqSchema) }} />}
         <ComparisonLayout
           config={customConfig}
+          linkPrefix={ctx.prefix}
           heroOverrides={{
             h1: landing.h1,
             h2: landing.h2,

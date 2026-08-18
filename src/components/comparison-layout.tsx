@@ -13,10 +13,13 @@ interface ComparisonLayoutProps {
     description?: string;
     updatedLabel?: string;
   };
+  // Prefix for internal links (e.g. "/hair-loss" on the hub). Empty on the
+  // legacy root site so those links are unchanged.
+  linkPrefix?: string;
   children?: React.ReactNode;
 }
 
-export function ComparisonLayout({ config, heroOverrides, children }: ComparisonLayoutProps) {
+export function ComparisonLayout({ config, heroOverrides, linkPrefix = "", children }: ComparisonLayoutProps) {
   const { providerOrder, positions } = config.ranking;
 
   const displayList = providerOrder
@@ -75,14 +78,14 @@ export function ComparisonLayout({ config, heroOverrides, children }: Comparison
           <div className="min-w-0 flex-1 space-y-4">
             {displayList.map((product, idx) => (
               <div key={product.id}>
-                <ComparisonCard product={product} socialProof={config.cardSocialProof} />
+                <ComparisonCard product={product} socialProof={config.cardSocialProof} linkPrefix={linkPrefix} />
                 {idx === 0 && config.cardSocialProof && (
                   <SocialProofBand number={config.cardSocialProof.number} text={config.cardSocialProof.text} />
                 )}
               </div>
             ))}
           </div>
-          <Sidebar config={config.sidebar} providers={sidebarProviders} />
+          <Sidebar config={config.sidebar} providers={sidebarProviders} linkPrefix={linkPrefix} />
         </div>
       </section>
 

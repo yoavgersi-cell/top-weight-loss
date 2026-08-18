@@ -3,6 +3,7 @@ import { type SiteConfig, type ReviewData, type ArticleData, type BattleData, ty
 import productsJson from "@/data/products.json";
 import faqsJson from "@/data/faqs.json";
 import { articles as defaultArticlesData } from "@/data/articles";
+import { hairLossSeed } from "./seeds/hair-loss";
 
 // weight-loss keeps the original key for full back-compatibility with the live
 // site; every other vertical is stored in its own separate blob.
@@ -36,10 +37,19 @@ function emptyVerticalConfig(vertical: string): SiteConfig {
   };
 }
 
+// Code-level content skeleton for a vertical, used as the base when there is no
+// saved blob yet. Verticals without a skeleton start from the empty shell.
+function seedForVertical(vertical: string): SiteConfig {
+  const base = emptyVerticalConfig(vertical);
+  if (vertical === "hair-loss") return hairLossSeed(base);
+  return base;
+}
+
 // Per-vertical read for any vertical other than weight-loss. Kept intentionally
 // simple: the heavy seed-merging below is weight-loss-specific, so new verticals
-// just load their own blob (or the empty shell) with no cross-vertical seeding.
+// just load their own blob (or their code skeleton) with no cross-vertical seeding.
 async function getVerticalConfig(vertical: string): Promise<SiteConfig> {
+  const base = seedForVertical(vertical);
   try {
     const key = blobKeyFor(vertical);
     const { blobs } = await list({ prefix: key });
@@ -47,13 +57,13 @@ async function getVerticalConfig(vertical: string): Promise<SiteConfig> {
       const res = await fetch(blobs[0].url, { cache: "no-store" });
       if (res.ok) {
         const saved = (await res.json()) as Partial<SiteConfig>;
-        return normalizeBrandCasing({ ...emptyVerticalConfig(vertical), ...saved });
+        return normalizeBrandCasing({ ...base, ...saved });
       }
     }
   } catch {
-    // fall through to the empty shell
+    // fall through to the code skeleton
   }
-  return normalizeBrandCasing(emptyVerticalConfig(vertical));
+  return normalizeBrandCasing(base);
 }
 
 // Default Trustpilot reviews per provider id. Shown on battle pages until the

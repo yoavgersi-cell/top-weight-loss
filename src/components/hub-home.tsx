@@ -10,7 +10,7 @@ import {
   Star,
   RefreshCw,
 } from "lucide-react";
-import { VERTICALS } from "@/lib/config";
+import { VERTICALS, isPublishedVertical } from "@/lib/config";
 import { getConfig } from "@/lib/config-store";
 
 // Per-vertical icon for the category cards (kept here, not in the config, so the
@@ -88,7 +88,9 @@ export async function HubHome() {
           {VERTICALS.map((v) => {
             const Icon = VERTICAL_ICONS[v.id] ?? Sparkles;
             const count = providerCount[v.id] ?? 0;
-            const isLive = count > 0;
+            // Only advertise a vertical as live once it's published — a vertical
+            // can have a content skeleton but still be "Coming soon" here.
+            const isLive = isPublishedVertical(v.id) && count > 0;
 
             const inner = (
               <>

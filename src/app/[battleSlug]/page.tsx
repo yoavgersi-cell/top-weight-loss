@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getConfig } from "@/lib/config-store";
-import { DEFAULT_VERTICAL, isVertical } from "@/lib/config";
+import { DEFAULT_VERTICAL, isVertical, isPublishedVertical } from "@/lib/config";
 import { ROOT_CONTEXT } from "@/lib/site-context";
 import { ComparisonLayout } from "@/components/comparison-layout";
 import { BattlePageView, battleMetadata } from "@/components/pages/battle-page";
@@ -38,6 +38,7 @@ export async function generateMetadata({
     return {
       title: { absolute: vConfig.hero.h1 },
       description: vConfig.hero.description,
+      robots: isPublishedVertical(battleSlug) ? undefined : { index: false, follow: false },
       alternates: { canonical },
       openGraph: { title: vConfig.hero.h1, description: vConfig.hero.description, url: canonical, type: "website" },
     };
@@ -62,7 +63,7 @@ export default async function BattlePage({
     const vConfig = await getConfig(battleSlug);
     return (
       <div className="bg-[#FAFAFA]">
-        <ComparisonLayout config={vConfig} />
+        <ComparisonLayout config={vConfig} linkPrefix={`/${battleSlug}`} />
       </div>
     );
   }
