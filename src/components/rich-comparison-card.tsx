@@ -162,42 +162,48 @@ export function RichComparisonCard({
             )}
           </div>
 
-          {/* CTA rail */}
-          <div className="flex shrink-0 flex-col gap-2.5 rounded-xl bg-[#F7F8FA] p-3.5 sm:p-4 lg:w-[220px]">
+          {/* CTA rail — on mobile the button stands on its own with the price
+              beside it (and stands fully alone when there's no price); on desktop
+              the price stacks above it inside a panel. */}
+          <div className="flex shrink-0 flex-row items-center gap-3 lg:w-[220px] lg:flex-col lg:items-stretch lg:gap-2.5 lg:rounded-xl lg:bg-[#F7F8FA] lg:p-4">
             {startingPlan?.price && (
-              <p className="text-center text-[12.5px] text-gray-500">
-                Pricing starts at
-                <br />
-                <span className="text-[22px] font-extrabold text-[#191919]">{startingPlan.price}</span>
-                {startingPlan.unit && <span className="text-[13px] font-semibold text-gray-500">{startingPlan.unit}</span>}
-              </p>
-            )}
-            <ProviderCta
-              href={product.affiliateUrl}
-              providerName={product.name}
-              providerSlug={product.id}
-              position={product.rank}
-              pageType="listing"
-              sourceFlow="main_comparison"
-              className="flex h-[50px] w-full items-center justify-center gap-1.5 rounded-xl bg-[#0C4B75] text-[15px] font-bold text-white transition-colors hover:bg-[#093d61]"
-            >
-              Visit Site
-              <ArrowUpRight className="h-4 w-4" strokeWidth={2.5} />
-            </ProviderCta>
-            <Link
-              href={reviewHref}
-              className="text-center text-[12.5px] font-semibold text-[#0C4B75] hover:underline"
-            >
-              Read full review
-            </Link>
-            {product.trustpilotRating && (
-              <div className="mt-0.5 flex items-center justify-center gap-1.5 border-t border-gray-200 pt-2.5 text-[11.5px] text-gray-500">
-                <Star className="h-3.5 w-3.5 fill-[#00B67A] text-[#00B67A]" strokeWidth={0} />
-                <span className="font-bold text-gray-700">{product.trustpilotRating}</span>
-                <span>Trustpilot</span>
-                {product.trustpilotReviewCount && <span className="text-gray-400">({product.trustpilotReviewCount})</span>}
+              <div className="shrink-0 leading-tight lg:text-center">
+                <span className="hidden text-[12.5px] text-gray-500 lg:block">Pricing starts at</span>
+                <p className="whitespace-nowrap text-gray-900">
+                  <span className="text-[11px] font-semibold text-gray-400 lg:hidden">from </span>
+                  <span className="text-[20px] font-extrabold text-[#191919] lg:text-[22px]">{startingPlan.price}</span>
+                  {startingPlan.unit && <span className="text-[12px] font-semibold text-gray-500 lg:text-[13px]">{startingPlan.unit}</span>}
+                </p>
               </div>
             )}
+            <div className="flex min-w-0 flex-1 flex-col gap-2 lg:w-full lg:flex-none">
+              <ProviderCta
+                href={product.affiliateUrl}
+                providerName={product.name}
+                providerSlug={product.id}
+                position={product.rank}
+                pageType="listing"
+                sourceFlow="main_comparison"
+                className="flex h-[48px] w-full items-center justify-center gap-1.5 rounded-xl bg-[#0C4B75] text-[15px] font-bold text-white transition-colors hover:bg-[#093d61] sm:h-[50px]"
+              >
+                Visit Site
+                <ArrowUpRight className="h-4 w-4" strokeWidth={2.5} />
+              </ProviderCta>
+              <Link
+                href={reviewHref}
+                className="text-center text-[12.5px] font-semibold text-[#0C4B75] hover:underline"
+              >
+                Read full review
+              </Link>
+              {product.trustpilotRating && (
+                <div className="mt-0.5 flex items-center justify-center gap-1.5 border-t border-gray-200 pt-2 text-[11.5px] text-gray-500">
+                  <Star className="h-3.5 w-3.5 fill-[#00B67A] text-[#00B67A]" strokeWidth={0} />
+                  <span className="font-bold text-gray-700">{product.trustpilotRating}</span>
+                  <span>Trustpilot</span>
+                  {product.trustpilotReviewCount && <span className="text-gray-400">({product.trustpilotReviewCount})</span>}
+                </div>
+              )}
+            </div>
           </div>
         </div>
 
