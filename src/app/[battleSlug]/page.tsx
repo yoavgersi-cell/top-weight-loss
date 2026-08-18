@@ -5,6 +5,8 @@ import { ROOT_CONTEXT, hubContext, canonicalUrl } from "@/lib/site-context";
 import { ComparisonLayout } from "@/components/comparison-layout";
 import { EditorialContent } from "@/components/editorial-content";
 import { HairLossEditorialContent } from "@/components/editorial-content-hair-loss";
+import { TrtEditorialContent } from "@/components/editorial-content-trt";
+import { HrtEditorialContent } from "@/components/editorial-content-hrt";
 import { ExpertByline } from "@/components/expert-byline";
 import { BattlePageView, battleMetadata } from "@/components/pages/battle-page";
 import { notFound } from "next/navigation";
@@ -130,7 +132,15 @@ export default async function BattlePage({
           </>
         )}
         <ComparisonLayout config={vConfig} linkPrefix={`/${battleSlug}`} byline={byline}>
-          {isWL ? <EditorialContent /> : battleSlug === "hair-loss" ? <HairLossEditorialContent /> : null}
+          {isWL ? (
+            <EditorialContent />
+          ) : battleSlug === "hair-loss" ? (
+            <HairLossEditorialContent />
+          ) : battleSlug === "trt" ? (
+            <TrtEditorialContent />
+          ) : battleSlug === "hrt" ? (
+            <HrtEditorialContent />
+          ) : null}
         </ComparisonLayout>
       </div>
     );
