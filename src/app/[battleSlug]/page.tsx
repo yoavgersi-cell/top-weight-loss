@@ -4,6 +4,7 @@ import { CONTENT_LAST_UPDATED, DEFAULT_VERTICAL, isVertical, isPublishedVertical
 import { ROOT_CONTEXT, hubContext, canonicalUrl } from "@/lib/site-context";
 import { ComparisonLayout } from "@/components/comparison-layout";
 import { EditorialContent } from "@/components/editorial-content";
+import { HairLossEditorialContent } from "@/components/editorial-content-hair-loss";
 import { ExpertByline } from "@/components/expert-byline";
 import { BattlePageView, battleMetadata } from "@/components/pages/battle-page";
 import { notFound } from "next/navigation";
@@ -129,7 +130,7 @@ export default async function BattlePage({
           </>
         )}
         <ComparisonLayout config={vConfig} linkPrefix={`/${battleSlug}`} byline={byline}>
-          {isWL ? <EditorialContent /> : null}
+          {isWL ? <EditorialContent /> : battleSlug === "hair-loss" ? <HairLossEditorialContent /> : null}
         </ComparisonLayout>
       </div>
     );
