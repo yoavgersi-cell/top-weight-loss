@@ -1,5 +1,5 @@
 import { HeroSection } from "@/components/hero-section";
-import { ComparisonCard } from "@/components/comparison-card";
+import { RichComparisonCard } from "@/components/rich-comparison-card";
 import { SocialProofBand } from "@/components/social-proof-bubble";
 import { Sidebar } from "@/components/sidebar";
 import { FaqAccordion } from "@/components/faq-accordion";
@@ -43,6 +43,8 @@ export function ComparisonLayout({ config, heroOverrides, linkPrefix = "", bylin
         ratingLabel: position.label,
         starRating: position.starRating,
         badge: position.badge,
+        trustpilotRating: provider.trustpilotRating,
+        trustpilotReviewCount: provider.trustpilotReviewCount,
       };
     })
     .filter(Boolean) as Array<{
@@ -58,6 +60,8 @@ export function ComparisonLayout({ config, heroOverrides, linkPrefix = "", bylin
       rating: number;
       ratingLabel: string;
       badge?: string;
+      trustpilotRating?: string;
+      trustpilotReviewCount?: string;
     }>;
 
   const sidebarProviders = providerOrder
@@ -86,7 +90,11 @@ export function ComparisonLayout({ config, heroOverrides, linkPrefix = "", bylin
           <div className="min-w-0 flex-1 space-y-4">
             {displayList.map((product, idx) => (
               <div key={product.id}>
-                <ComparisonCard product={product} socialProof={config.cardSocialProof} linkPrefix={linkPrefix} />
+                <RichComparisonCard
+                  product={product}
+                  review={(config.reviews ?? []).find((r) => r.providerId === product.id)}
+                  linkPrefix={linkPrefix}
+                />
                 {idx === 0 && config.cardSocialProof && (
                   <SocialProofBand number={config.cardSocialProof.number} text={config.cardSocialProof.text} />
                 )}
