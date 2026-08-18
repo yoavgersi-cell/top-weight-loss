@@ -16,10 +16,12 @@ interface ComparisonLayoutProps {
   // Prefix for internal links (e.g. "/hair-loss" on the hub). Empty on the
   // legacy root site so those links are unchanged.
   linkPrefix?: string;
+  // Optional E-E-A-T byline strip rendered directly under the hero.
+  byline?: React.ReactNode;
   children?: React.ReactNode;
 }
 
-export function ComparisonLayout({ config, heroOverrides, linkPrefix = "", children }: ComparisonLayoutProps) {
+export function ComparisonLayout({ config, heroOverrides, linkPrefix = "", byline, children }: ComparisonLayoutProps) {
   const { providerOrder, positions } = config.ranking;
 
   const displayList = providerOrder
@@ -72,6 +74,12 @@ export function ComparisonLayout({ config, heroOverrides, linkPrefix = "", child
         h2={heroOverrides?.h2 ?? config.hero.h2}
         description={heroOverrides?.description ?? config.hero.description}
       />
+
+      {byline && (
+        <section className="mx-auto max-w-[1200px] px-4 pt-5">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-2">{byline}</div>
+        </section>
+      )}
 
       <section className="mx-auto max-w-[1200px] px-4 pt-6 pb-6">
         <div className="flex gap-6 items-start">
