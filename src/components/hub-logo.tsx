@@ -28,7 +28,7 @@ export function HubLogo({ vertical }: { vertical: string }) {
     <img
       src={candidates[idx]}
       alt="TreatmentsHub"
-      className="h-[28px] w-auto max-w-[230px] object-contain object-left sm:h-[38px] sm:max-w-[340px]"
+      className="h-[42px] w-auto max-w-[240px] object-contain object-left sm:h-[56px] sm:max-w-none"
       onError={() => setFailed({ v: vertical, idx: idx + 1 })}
     />
   );
