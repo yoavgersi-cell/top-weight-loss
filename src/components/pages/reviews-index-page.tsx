@@ -1,23 +1,29 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getConfig } from "@/lib/config-store";
+import { VERTICALS } from "@/lib/config";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { RatingBadge } from "@/components/rating-badge";
 
+function verticalName(id: string): string {
+  return VERTICALS.find((v) => v.id === id)?.name ?? "Treatment";
+}
+
 export async function reviewsIndexMetadata(ctx: SiteContext): Promise<Metadata> {
   const url = canonicalUrl(ctx, "/reviews");
+  const vName = verticalName(ctx.vertical);
+  const title = `${vName} Provider Reviews — In-Depth Expert Analysis`;
+  const description = `Read expert reviews of the top online ${vName.toLowerCase()} providers. Compare treatment options, pricing, pros and cons, and customer experience.`;
   return {
-    title: "Weight Loss Provider Reviews — In-Depth Expert Analysis",
-    description:
-      "Read expert reviews of the top weight loss providers offering GLP-1 medications like semaglutide and tirzepatide. Compare pricing, treatment options, pros and cons.",
+    title,
+    description,
     robots: ctx.noindex ? { index: false, follow: false } : undefined,
     alternates: {
       canonical: url,
     },
     openGraph: {
-      title: "Weight Loss Provider Reviews — In-Depth Expert Analysis",
-      description:
-        "Read expert reviews of leading weight loss providers. Compare pricing, treatment options, and customer experience.",
+      title,
+      description,
       url,
     },
   };
@@ -25,6 +31,7 @@ export async function reviewsIndexMetadata(ctx: SiteContext): Promise<Metadata> 
 
 export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
   const config = await getConfig(ctx.vertical);
+  const vName = verticalName(ctx.vertical);
   const { providerOrder, positions } = config.ranking;
 
   // Every review in the CMS is listed. Providers in the homepage ranking come
@@ -50,8 +57,8 @@ export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Weight Loss Provider Reviews",
-    description: "Expert reviews of top weight loss providers offering GLP-1 medications.",
+    name: `${vName} Provider Reviews`,
+    description: `Expert reviews of top online ${vName.toLowerCase()} providers.`,
     numberOfItems: items.length,
     itemListElement: items.map(({ review, provider }, i) => ({
       "@type": "ListItem",
@@ -77,11 +84,11 @@ export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <div className="mb-10 text-center">
           <h1 className="text-3xl font-bold text-[#191919] sm:text-4xl">
-            Weight Loss Provider Reviews
+            {vName} Provider Reviews
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base text-gray-600">
-            In-depth reviews of the top weight loss providers. Read our expert
-            analysis of each program to find the best fit for your goals,
+            In-depth reviews of the top online {vName.toLowerCase()} providers.
+            Read our expert analysis of each to find the best fit for your goals,
             budget, and lifestyle.
           </p>
         </div>
