@@ -4,6 +4,8 @@ import productsJson from "@/data/products.json";
 import faqsJson from "@/data/faqs.json";
 import { articles as defaultArticlesData } from "@/data/articles";
 import { hairLossSeed } from "./seeds/hair-loss";
+import { trtSeed } from "./seeds/trt";
+import { hrtSeed } from "./seeds/hrt";
 
 // weight-loss keeps the original key for full back-compatibility with the live
 // site; every other vertical is stored in its own separate blob.
@@ -42,6 +44,8 @@ function emptyVerticalConfig(vertical: string): SiteConfig {
 function seedForVertical(vertical: string): SiteConfig {
   const base = emptyVerticalConfig(vertical);
   if (vertical === "hair-loss") return hairLossSeed(base);
+  if (vertical === "trt") return trtSeed(base);
+  if (vertical === "hrt") return hrtSeed(base);
   return base;
 }
 
