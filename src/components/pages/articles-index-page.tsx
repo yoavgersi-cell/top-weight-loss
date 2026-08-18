@@ -237,7 +237,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
 
         {/* ───── Head-to-Head Comparisons ───── */}
         {comparisons.length > 0 && (
-          <div className="mt-14">
+          <div id="comparisons" className="mt-14 scroll-mt-24">
             <div className="mb-8">
               <h2 className="text-[22px] font-bold text-[#191919] sm:text-[26px]">
                 Head-to-Head Comparisons

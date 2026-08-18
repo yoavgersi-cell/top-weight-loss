@@ -1,18 +1,20 @@
-import { Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-// Text wordmark for the hub (treatmentshub.com). Deliberately asset-free — a
-// small accent badge plus a two-tone "TreatmentsHub" logotype — so it renders
-// crisply at any size and needs no image.
+// TreatmentsHub logotype, recreated in text so it stays crisp at any size and
+// needs no image asset. Matches the brand mark: "Treatments" in navy, "Hub" in
+// blue, a smaller navy ".com". Scales with the wrapping font-size — size it by
+// setting a text size / font-size on `className`.
 export function TreatmentsHubWordmark({ className }: { className?: string }) {
   return (
-    <span className={cn("inline-flex items-center gap-2", className)}>
-      <span className="flex h-[30px] w-[30px] items-center justify-center rounded-lg bg-[#0C4B75] text-white">
-        <Plus className="h-[18px] w-[18px]" strokeWidth={3} />
-      </span>
-      <span className="text-[20px] font-extrabold leading-none tracking-tight text-[#191919]">
-        Treatments<span className="text-[#0C4B75]">Hub</span>
-      </span>
+    <span
+      className={cn(
+        "inline-flex items-baseline font-extrabold leading-none tracking-[-0.02em] text-[20px] sm:text-[23px]",
+        className
+      )}
+    >
+      <span className="text-[#0A1E3C]">Treatments</span>
+      <span className="text-[#3B7CE0]">Hub</span>
+      <span className="ml-[0.06em] text-[0.58em] font-bold text-[#0A1E3C]">.com</span>
     </span>
   );
 }
