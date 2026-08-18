@@ -4,11 +4,12 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useNavPrefix, navHref } from "@/lib/nav-prefix";
-import { TreatmentsHubWordmark } from "@/components/treatments-hub-wordmark";
+import { HubLogo } from "@/components/hub-logo";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const prefix = useNavPrefix();
+  const vertical = prefix.replace(/^\//, "");
 
   // Umbrella-brand navigation. "Treatments" points at the hub front door (which
   // exposes the categories); the rest resolve within the current category.
@@ -29,7 +30,7 @@ export function Header() {
           <img src="/logo.png" alt="TopWeightLoss.io" className="h-[36px] sm:h-[42px] w-auto" />
         </Link>
         <Link href="/" className="hub-brand items-center">
-          <TreatmentsHubWordmark />
+          <HubLogo vertical={vertical} />
         </Link>
 
         {/* Desktop nav */}
