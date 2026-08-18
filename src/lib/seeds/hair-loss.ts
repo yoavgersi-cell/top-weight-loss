@@ -20,11 +20,11 @@ import type {
 // Everything here is overridden the moment it's edited in the CMS.
 // ─────────────────────────────────────────────────────────────────────────────
 
-// Real brand logos + affiliate links are dropped in here before launch.
-const MAXIMUS_LOGO = "/provider-placeholder.svg";
-const HAPPYHEAD_LOGO = "/provider-placeholder.svg";
-const MAXIMUS_URL = "#";
-const HAPPYHEAD_URL = "#";
+// Real brand wordmarks + affiliate links for the launch providers.
+const MAXIMUS_LOGO = "/logo-maximus.svg";
+const HAPPYHEAD_LOGO = "/logo-happyhead.svg";
+const MAXIMUS_URL = "https://track.revoffers.com/aff_c?offer_id=1347&aff_id=13399&url_id=10972";
+const HAPPYHEAD_URL = "https://track.revoffers.com/aff_c?offer_id=1389&aff_id=13399&url_id=12477";
 const UPDATED = "2026-08-18";
 
 const providers: Provider[] = [

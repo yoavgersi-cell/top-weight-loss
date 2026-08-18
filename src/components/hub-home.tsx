@@ -28,6 +28,10 @@ const CATEGORY_LINKS: Record<string, { label: string; href: string }[]> = {
     { label: "Weight-loss pills", href: "/weight-loss-pills" },
     { label: "Ozempic alternatives", href: "/ozempic-alternatives" },
   ],
+  "hair-loss": [
+    { label: "Compare providers", href: "/hair-loss" },
+    { label: "Maximus vs Happy Head", href: "/hair-loss/maximus-vs-happy-head" },
+  ],
 };
 
 function updatedLabel(iso?: string): string {
