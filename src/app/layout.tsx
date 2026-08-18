@@ -15,43 +15,41 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.topweightloss.io"),
+  metadataBase: new URL("https://www.treatmentshub.com"),
   title: {
-    default: "Top Weight Loss Providers 2026 — Compare Trusted Providers Side by Side | topweightloss.io",
-    template: "%s | topweightloss.io",
+    default: "TreatmentsHub — Compare the Best Treatments Side by Side",
+    template: "%s | TreatmentsHub",
   },
   icons: {
     icon: "/favicon.png",
     apple: "/apple-icon.png",
   },
   description:
-    "Compare pricing, medications, medical support, and overall value across the top weight loss providers of 2026. Find the provider that best fits your goals.",
+    "Independent guides and provider comparisons across weight loss, hair loss, TRT and HRT — ranked on pricing, treatment options, medical support, and real customer reviews.",
   keywords: [
-    "weight loss programs",
-    "GLP-1 weight loss",
-    "semaglutide providers",
-    "tirzepatide weight loss",
-    "best weight loss medication 2026",
-    "telehealth weight loss",
-    "compare weight loss providers",
-    "medical weight loss online",
-    "ozempic alternatives",
-    "wegovy alternatives",
+    "treatment comparison",
+    "telehealth comparison",
+    "compare treatment providers",
+    "online weight loss",
+    "online hair loss treatment",
+    "online TRT",
+    "online HRT",
+    "menopause treatment online",
   ],
   openGraph: {
-    title: "Top Weight Loss Providers 2026 — Compare Trusted Providers Side by Side",
+    title: "TreatmentsHub — Compare the Best Treatments Side by Side",
     description:
-      "Compare pricing, medications, medical support, and overall value across the top weight loss providers of 2026.",
+      "Independent, side-by-side comparisons of top telehealth providers across weight loss, hair loss, TRT and HRT.",
     type: "website",
-    siteName: "topweightloss.io",
+    siteName: "TreatmentsHub",
     locale: "en_US",
-    url: "https://www.topweightloss.io",
+    url: "https://www.treatmentshub.com",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Top Weight Loss Providers 2026 — Compare Trusted Providers Side by Side",
+    title: "TreatmentsHub — Compare the Best Treatments Side by Side",
     description:
-      "Compare pricing, medications, medical support, and overall value across the top weight loss providers of 2026.",
+      "Independent, side-by-side comparisons of top telehealth providers across weight loss, hair loss, TRT and HRT.",
   },
   other: {
     "geo.region": "US",
@@ -60,9 +58,9 @@ export const metadata: Metadata = {
     "content-language": "en-US",
   },
   alternates: {
-    canonical: "https://www.topweightloss.io",
+    canonical: "https://www.treatmentshub.com",
     languages: {
-      "en-US": "https://www.topweightloss.io",
+      "en-US": "https://www.treatmentshub.com",
     },
   },
   robots: {
@@ -105,11 +103,11 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "topweightloss.io",
-              url: "https://www.topweightloss.io",
+              name: "TreatmentsHub",
+              url: "https://www.treatmentshub.com",
               areaServed: { "@type": "Country", name: "United States" },
-              logo: "https://www.topweightloss.io/logo-mark.png",
-              description: "Compare the top weight loss providers offering GLP-1 medications like semaglutide and tirzepatide. Expert reviews, pricing comparisons, and personalized provider matching.",
+              logo: "https://www.treatmentshub.com/treatmentshub.png",
+              description: "Independent guides and provider comparisons across weight loss, hair loss, TRT and HRT — expert reviews, pricing research, and side-by-side comparisons.",
               sameAs: [],
             }),
           }}
@@ -120,17 +118,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "topweightloss.io",
-              url: "https://www.topweightloss.io",
-              description: "Compare trusted weight loss providers side by side",
-              potentialAction: {
-                "@type": "SearchAction",
-                target: {
-                  "@type": "EntryPoint",
-                  urlTemplate: "https://www.topweightloss.io/articles?q={search_term_string}",
-                },
-                "query-input": "required name=search_term_string",
-              },
+              name: "TreatmentsHub",
+              url: "https://www.treatmentshub.com",
+              description: "Compare trusted treatment providers side by side across weight loss, hair loss, TRT and HRT",
             }),
           }}
         />
