@@ -1,59 +1,67 @@
-"use client";
-
 import Link from "next/link";
-import { useNavPrefix, navHref } from "@/lib/nav-prefix";
+
+// Umbrella-brand footer. Links point at real routes only; category links are
+// absolute (brand-level) rather than scoped to the current vertical. The brand
+// name still swaps between the legacy and hub domains via the data-hub CSS.
+const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
+  {
+    title: "Treatments",
+    links: [
+      { label: "Weight Loss", href: "/weight-loss" },
+      { label: "Hair Loss", href: "/hair-loss" },
+      { label: "TRT", href: "/trt" },
+      { label: "HRT", href: "/hrt" },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      { label: "Reviews", href: "/weight-loss/reviews" },
+      { label: "Guides", href: "/weight-loss/articles" },
+      { label: "Comparisons", href: "/weight-loss/articles#comparisons" },
+      { label: "How We Rank", href: "/how-we-rank" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { label: "About", href: "/about" },
+      { label: "Medical Disclaimer", href: "/disclaimer" },
+    ],
+  },
+];
 
 export function Footer() {
-  const prefix = useNavPrefix();
-  const href = (path: string) => navHref(prefix, path);
-
   return (
     <footer className="mt-auto border-t border-[#E5E5E5] bg-white">
-      <div className="mx-auto max-w-6xl px-4 py-8">
-        {/* Footer links grid */}
-        <div className="mb-6 grid grid-cols-2 gap-6 sm:grid-cols-4">
-          <div>
-            <h4 className="mb-2 text-[12px] font-bold uppercase tracking-wider text-[#191919]">Compare</h4>
-            <nav className="space-y-1.5">
-              <Link href={href("/")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Top Providers</Link>
-              <Link href={href("/semaglutide")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Semaglutide</Link>
-              <Link href={href("/tirzepatide")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Tirzepatide</Link>
-              <Link href={href("/ozempic-for-weight-loss")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Ozempic</Link>
-              <Link href={href("/wegovy-providers")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Wegovy</Link>
-            </nav>
+      <div className="mx-auto max-w-6xl px-4 py-10">
+        <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
+          {/* Brand blurb */}
+          <div className="col-span-2 sm:col-span-1">
+            <p className="text-[13px] leading-relaxed text-gray-500">
+              <span className="font-bold text-[#191919]">
+                <span className="legacy-name">TopWeightLoss</span>
+                <span className="hub-name">TreatmentsHub</span>
+              </span>{" "}
+              is an independent comparison publisher for modern healthcare treatments.
+            </p>
           </div>
-          <div>
-            <h4 className="mb-2 text-[12px] font-bold uppercase tracking-wider text-[#191919]">Browse</h4>
-            <nav className="space-y-1.5">
-              <Link href={href("/best-weight-loss-injections")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Weight Loss Injections</Link>
-              <Link href={href("/weight-loss-pills")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Weight Loss Pills</Link>
-              <Link href={href("/best-online-weight-loss-programs")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Online Programs</Link>
-              <Link href={href("/cheapest-weight-loss-medication")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Affordable Options</Link>
-              <Link href={href("/reviews")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">All Reviews</Link>
-            </nav>
-          </div>
-          <div>
-            <h4 className="mb-2 text-[12px] font-bold uppercase tracking-wider text-[#191919]">Learn</h4>
-            <nav className="space-y-1.5">
-              <Link href={href("/articles/how-glp1-medications-work")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">How GLP-1 Works</Link>
-              <Link href={href("/articles/semaglutide-side-effects-guide")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Side Effects Guide</Link>
-              <Link href={href("/articles/weight-loss-medication-cost-guide")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Cost Guide</Link>
-              <Link href={href("/glp1-weight-loss-statistics")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">GLP-1 Statistics</Link>
-              <Link href={href("/articles")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">All Articles</Link>
-            </nav>
-          </div>
-          <div>
-            <h4 className="mb-2 text-[12px] font-bold uppercase tracking-wider text-[#191919]">Tools</h4>
-            <nav className="space-y-1.5">
-              <Link href={href("/find-your-match")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Provider Quiz</Link>
-              <Link href={href("/how-we-rank")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">How We Rank</Link>
-              <Link href={href("/about")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">About Us</Link>
-              <Link href={href("/disclaimer")} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">Disclaimer</Link>
-            </nav>
-          </div>
+
+          {COLUMNS.map((col) => (
+            <div key={col.title}>
+              <h4 className="mb-2.5 text-[12px] font-bold uppercase tracking-wider text-[#191919]">{col.title}</h4>
+              <nav className="space-y-1.5">
+                {col.links.map((l) => (
+                  <Link key={l.label} href={l.href} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">
+                    {l.label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+          ))}
         </div>
 
-        <div className="border-t border-gray-100 pt-5">
+        <div className="mt-8 border-t border-gray-100 pt-5">
           <p className="mb-4 text-xs text-gray-400">
             <strong className="text-gray-500">Affiliate Disclosure:</strong>{" "}
             <span className="legacy-name">TopWeightLoss</span>
@@ -62,7 +70,7 @@ export function Footer() {
             rankings or reviews. We are committed to providing honest, independent
             comparisons to help you make informed decisions.
           </p>
-          <div className="flex flex-col items-center justify-between gap-3 sm:flex-row">
+          <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
             <p className="text-[12px] text-gray-400">
               &copy; {new Date().getFullYear()}{" "}
               <span className="legacy-name">TopWeightLoss</span>
