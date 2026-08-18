@@ -296,7 +296,7 @@ export async function HubHome() {
                     </h3>
                     <div className="mt-3 flex-1" />
                     <p className="text-[12.5px] font-medium text-gray-400">
-                      {a.author || "TreatmentsHub Staff"}
+                      TreatmentsHub Staff
                       {a.readTime && <span className="text-gray-300"> · {a.readTime}</span>}
                       {updatedLabel(a.updatedAt) && <span className="text-gray-300"> · {updatedLabel(a.updatedAt)}</span>}
                     </p>
