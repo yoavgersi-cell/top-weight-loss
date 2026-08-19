@@ -57,6 +57,23 @@ const providers: Provider[] = [
     affiliateUrl: HAPPYHEAD_URL,
     ctaText: "Visit Site",
   },
+  // Competitor brand — included only to power "Hims vs …" comparisons. It is NOT
+  // part of our ranking (see providerOrder below) and its standalone review page
+  // is de-indexed automatically (not in AFFILIATE_PROVIDER_IDS).
+  {
+    id: "hims",
+    name: "Hims",
+    tagline: "Prescription finasteride, minoxidil & more for men's hair loss — 100% online",
+    logo: "/logos/hims.svg",
+    smallLogo: "/logos/hims.svg",
+    highlights: [
+      "Prescription finasteride & minoxidil",
+      "Recognizable mainstream men's telehealth brand",
+      "Online consultation & discreet delivery",
+    ],
+    affiliateUrl: "https://www.hims.com/hair-loss",
+    ctaText: "Visit Site",
+  },
 ];
 
 // Honest placeholder for pricing — no invented numbers.
@@ -155,6 +172,44 @@ const reviews: ReviewData[] = [
     trustBadges: ["Dermatologist-founded", "Personalized formulas", "Free online consultation"],
     updatedAt: UPDATED,
   },
+  {
+    slug: "hims",
+    providerId: "hims",
+    shortSummary:
+      "A well-known men's telehealth brand offering prescription finasteride, minoxidil and other hair-loss treatments online.",
+    reviewIntro:
+      "Hims is one of the most recognizable men's telehealth brands, offering prescription finasteride and minoxidil (alongside a broad range of other men's-health products) after an online provider review, delivered discreetly. This review outlines what it offers and how it compares to more treatment-focused providers.",
+    keyFeatures: [
+      "Prescription finasteride and minoxidil",
+      "Online consultation with a licensed provider",
+      "Discreet, recurring home delivery",
+      "Broad men's-health product range",
+    ],
+    pricingSummary: PRICING_TBD,
+    treatmentOptions: [
+      "Oral finasteride",
+      "Topical minoxidil",
+      "Combination and other hair products",
+    ],
+    pros: [
+      "Recognizable, widely used brand",
+      "Simple, fully online process",
+      "Broad product range beyond hair loss",
+    ],
+    cons: [
+      "A more standard treatment set than compounding-focused providers",
+      "Less personalization than custom-formula services",
+      "Men's-focused",
+    ],
+    bestFor: [
+      "Men who want a simple, mainstream online option",
+      "Those comparing well-known telehealth brands",
+    ],
+    finalVerdict:
+      "Hims is a solid, recognizable mainstream option for men starting finasteride or minoxidil online. If you want broader prescription options or a personalized formula, it's worth comparing against our top-ranked providers. Confirm current pricing on their site.",
+    trustBadges: ["Licensed US providers", "Discreet shipping"],
+    updatedAt: UPDATED,
+  },
 ];
 
 const battles: BattleData[] = [
@@ -218,6 +273,132 @@ const battles: BattleData[] = [
       { feature: "Oral dutasteride", provider1Value: "Available", provider2Value: "Available", highlight: "both" },
       { feature: "Topical formula", provider1Value: "Compounded topical", provider2Value: "Custom topical (up to 8% minoxidil)", highlight: "none" },
       { feature: "For women", provider1Value: "No", provider2Value: "Yes", highlight: "provider2" },
+      { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
+    ],
+    updatedAt: UPDATED,
+  },
+  {
+    slug: "hims-vs-maximus",
+    provider1Id: "maximus",
+    provider2Id: "hims",
+    title: "Hims vs Maximus: Which Is Better for Hair Loss?",
+    subtitle: "A mainstream men's brand vs a broader prescription toolkit",
+    description:
+      "Compare Hims and Maximus for men's hair loss — treatment options, personalization, and which is the better fit.",
+    intro:
+      "Hims is one of the best-known men's telehealth brands, while Maximus offers a broader prescription toolkit for hair loss — including oral dutasteride and a compounded topical. Both prescribe online after a provider review; here's how they compare so you can pick the one that fits you.",
+    verdict:
+      "Both are legitimate online options. Maximus is our pick for men who want the widest prescription toolkit and physician-guided options beyond the basics, while Hims is a fine mainstream choice if brand familiarity matters most. Confirm current pricing on each provider's site.",
+    verdictWinnerPoints: [
+      "Broader options — oral finasteride, minoxidil and dutasteride",
+      "Compounded topical formula",
+      "Board-certified doctor oversight",
+    ],
+    verdictLoserPoints: [
+      "Recognizable, mainstream brand",
+      "Broad men's-health product range",
+      "Simple, familiar online experience",
+    ],
+    winnerId: "maximus",
+    categories: [
+      {
+        name: "Treatment breadth",
+        winner: "provider1",
+        explanation:
+          "Maximus offers a wider prescription set — including oral dutasteride and a compounded topical — while Hims focuses on the standard finasteride and minoxidil.",
+        supportingPoints: [
+          "Oral dutasteride available at Maximus",
+          "Compounded topical combining several actives",
+        ],
+      },
+      {
+        name: "Brand recognition",
+        winner: "provider2",
+        explanation:
+          "Hims is one of the most recognizable men's telehealth brands, with a broad product range beyond hair loss.",
+        supportingPoints: [
+          "Widely known mainstream brand",
+          "Products beyond hair loss",
+        ],
+      },
+      {
+        name: "Medical oversight",
+        winner: "tie",
+        explanation:
+          "Both prescribe only after a licensed-provider review, dispensed through licensed pharmacies.",
+        supportingPoints: [
+          "Provider review at both",
+          "Licensed US pharmacies",
+        ],
+      },
+    ],
+    features: [
+      { feature: "Oral finasteride", provider1Value: "Available", provider2Value: "Available", highlight: "both" },
+      { feature: "Dutasteride option", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
+      { feature: "Compounded topical", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
+      { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
+    ],
+    updatedAt: UPDATED,
+  },
+  {
+    slug: "hims-vs-happy-head",
+    provider1Id: "happyhead",
+    provider2Id: "hims",
+    title: "Hims vs Happy Head: Which Is Better for Hair Loss?",
+    subtitle: "A mainstream brand vs dermatologist-founded, personalized formulas",
+    description:
+      "Compare Hims and Happy Head for hair loss — personalization, who they serve, and which is the better fit.",
+    intro:
+      "Hims is a recognizable mainstream men's brand, while Happy Head is dermatologist-founded and builds personalized prescription formulas for both men and women. Both prescribe online after a provider review; here's how they compare.",
+    verdict:
+      "Both are legitimate online options. Happy Head is our pick for anyone who wants a personalized, dermatologist-directed formula — or who needs options for women — while Hims is a simple, familiar mainstream choice for men. Confirm current pricing on each provider's site.",
+    verdictWinnerPoints: [
+      "Dermatologist-founded, personalized formulas",
+      "Serves both men and women",
+      "Higher-strength topical minoxidil available",
+    ],
+    verdictLoserPoints: [
+      "Recognizable, mainstream brand",
+      "Simple, familiar online experience",
+      "Broad men's-health product range",
+    ],
+    winnerId: "happyhead",
+    categories: [
+      {
+        name: "Personalization",
+        winner: "provider1",
+        explanation:
+          "Happy Head builds customizable formulas you can tailor by adding or removing actives, while Hims offers a more standard set.",
+        supportingPoints: [
+          "Custom topical and oral formulas",
+          "Add or remove active ingredients",
+        ],
+      },
+      {
+        name: "Who it serves",
+        winner: "provider1",
+        explanation:
+          "Happy Head formulates for both men and women, while Hims focuses on men (its sister brand serves women separately).",
+        supportingPoints: [
+          "Happy Head offers formulas for women",
+          "Hims is men-focused",
+        ],
+      },
+      {
+        name: "Brand recognition",
+        winner: "provider2",
+        explanation:
+          "Hims is one of the most recognizable telehealth brands, with a broad product range.",
+        supportingPoints: [
+          "Widely known brand",
+          "Broad men's-health range",
+        ],
+      },
+    ],
+    features: [
+      { feature: "Personalized formulas", provider1Value: "Yes", provider2Value: "Standard set", highlight: "provider1" },
+      { feature: "For women", provider1Value: "Yes", provider2Value: "No", highlight: "provider1" },
+      { feature: "Higher-strength topical", provider1Value: "Up to 8% minoxidil", provider2Value: "See site", highlight: "provider1" },
       { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
     ],
     updatedAt: UPDATED,
@@ -479,7 +660,9 @@ export function hairLossSeed(base: SiteConfig): SiteConfig {
       blockOrder: ["secureBadge", "editorialReviews", "rankingMethodology", "disclosure"],
     },
     ranking: {
-      providerOrder: providers.map((p) => p.id),
+      // Only our two monetized providers are ranked. Hims exists as a provider
+      // solely to power the "Hims vs …" comparisons and is deliberately excluded.
+      providerOrder: ["maximus", "happyhead"],
       positions,
     },
     reviews,
