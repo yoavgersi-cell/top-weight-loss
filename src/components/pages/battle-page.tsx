@@ -881,9 +881,6 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
       {embodyProvider && (
         <EmbodyPromoPopup
           href={embodyProvider.affiliateUrl}
-          price="$69"
-          regularPrice="$299"
-          unit="/mo"
           position={embodyProvider.id === p1.id ? 1 : 2}
         />
       )}
