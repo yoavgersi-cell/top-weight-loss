@@ -118,9 +118,9 @@ export default async function BattlePage({
 
     const byline =
       author || reviewer ? (
-        <p className="text-[13.5px] leading-relaxed text-gray-500">
+        <div className="space-y-0.5 text-[13.5px] leading-relaxed text-gray-500">
           {author && (
-            <>
+            <div>
               Written by{" "}
               <Link
                 href={hubLink(ctx, "/about")}
@@ -128,11 +128,10 @@ export default async function BattlePage({
               >
                 {researchTeam}
               </Link>
-            </>
+            </div>
           )}
-          {author && reviewer && <span className="text-gray-300"> · </span>}
           {reviewer && (
-            <>
+            <div>
               Reviewed by{" "}
               <Link
                 href={hubLink(ctx, "/about")}
@@ -140,9 +139,9 @@ export default async function BattlePage({
               >
                 {reviewer.name}
               </Link>
-            </>
+            </div>
           )}
-        </p>
+        </div>
       ) : null;
 
     return (
