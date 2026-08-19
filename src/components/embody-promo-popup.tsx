@@ -32,7 +32,21 @@ export function EmbodyPromoPopup({
   const [secs, setSecs] = useState(START_SECONDS);
 
   useEffect(() => {
-    const t = setTimeout(() => setVisible(true), APPEAR_AFTER_MS);
+    // Show at most once per browser session: if already shown, never schedule it
+    // (it simply stays hidden).
+    try {
+      if (sessionStorage.getItem("embodyPromoSeen")) return;
+    } catch {
+      // sessionStorage unavailable — fall through and show normally.
+    }
+    const t = setTimeout(() => {
+      setVisible(true);
+      try {
+        sessionStorage.setItem("embodyPromoSeen", "1");
+      } catch {
+        // ignore
+      }
+    }, APPEAR_AFTER_MS);
     return () => clearTimeout(t);
   }, []);
 
