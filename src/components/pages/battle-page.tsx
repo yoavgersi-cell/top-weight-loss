@@ -15,6 +15,7 @@ import { ProviderCta } from "@/components/provider-cta";
 import { BattleStickyCta } from "@/components/battle-sticky-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { TrustpilotRating } from "@/components/trustpilot-rating";
+import { EmbodyPromoPopup } from "@/components/embody-promo-popup";
 
 // Metadata for a landing page or head-to-head battle at /<slug> (root) or
 // /<vertical>/<slug> (hub). Returns { title: "Not Found" } for an unknown slug.
@@ -202,6 +203,10 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     { provider: p1, review: p1Review, bestForFallback: p1VerdictPoints },
     { provider: p2, review: p2Review, bestForFallback: p2VerdictPoints },
   ];
+
+  // Mobile promo popup — only when Embody is one of the two providers. Price is
+  // Embody's real advertised offer ($69/mo, was $299).
+  const embodyProvider = [p1, p2].find((p) => p.id === "embody");
 
   // Related comparisons — other battles featuring either provider (internal links).
   // Ordered by relevance: comparisons involving this matchup's winner surface
@@ -871,6 +876,17 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
         p1={{ id: p1.id, name: p1.name, affiliateUrl: p1.affiliateUrl }}
         p2={{ id: p2.id, name: p2.name, affiliateUrl: p2.affiliateUrl }}
       />
+
+      {/* Mobile-only Embody promo popup — only on comparisons featuring Embody */}
+      {embodyProvider && (
+        <EmbodyPromoPopup
+          href={embodyProvider.affiliateUrl}
+          price="$69"
+          regularPrice="$299"
+          unit="/mo"
+          position={embodyProvider.id === p1.id ? 1 : 2}
+        />
+      )}
     </>
   );
 }
