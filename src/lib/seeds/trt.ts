@@ -81,8 +81,8 @@ const providers: Provider[] = [
     id: "maximus",
     name: "Maximus",
     tagline: "Telehealth testosterone support, including oral options",
-    logo: "/logo-maximus.svg",
-    smallLogo: "/logo-maximus.svg",
+    logo: "/maximuslogo.png",
+    smallLogo: "/maximuslogo.png",
     highlights: [
       "Oral and other protocol options",
       "Provider-supervised treatment",

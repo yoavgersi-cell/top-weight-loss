@@ -22,7 +22,7 @@ import type {
 // ─────────────────────────────────────────────────────────────────────────────
 
 // Real brand wordmarks + affiliate links for the launch providers.
-const MAXIMUS_LOGO = "/logo-maximus.svg";
+const MAXIMUS_LOGO = "/maximuslogo.png";
 const HAPPYHEAD_LOGO = "/logos/happyheadlogo.png";
 const MAXIMUS_URL = "https://track.revoffers.com/aff_c?offer_id=1347&aff_id=13399&url_id=10972";
 const HAPPYHEAD_URL = "https://track.revoffers.com/aff_c?offer_id=1389&aff_id=13399&url_id=12477";
