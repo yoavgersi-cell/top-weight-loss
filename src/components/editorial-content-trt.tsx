@@ -47,8 +47,8 @@ export function TrtEditorialContent() {
           provider reviews
         </Link>{" "}
         or see two go head to head in our{" "}
-        <Link href="/trt/hone-vs-fountain" className="font-semibold text-[#0C4B75] hover:underline">
-          Hone Health vs Fountain TRT comparison
+        <Link href="/trt/maximus-vs-hims" className="font-semibold text-[#0C4B75] hover:underline">
+          Maximus vs Hims comparison
         </Link>
         .
       </p>
