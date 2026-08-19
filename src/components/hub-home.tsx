@@ -32,6 +32,10 @@ const CATEGORY_LINKS: Record<string, { label: string; href: string }[]> = {
     { label: "Compare providers", href: "/hair-loss" },
     { label: "Maximus vs Happy Head", href: "/hair-loss/maximus-vs-happy-head" },
   ],
+  trt: [
+    { label: "Compare TRT providers", href: "/trt" },
+    { label: "Maximus vs Hims", href: "/trt/maximus-vs-hims" },
+  ],
 };
 
 function updatedLabel(iso?: string): string {

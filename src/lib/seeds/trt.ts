@@ -22,13 +22,15 @@ const UPDATED = "2026-08-19";
 const PRICING_TBD =
   "Pricing varies by program, labs, and treatment. Check the provider's site for current pricing.";
 
-// Real affiliate links are dropped in here before launch.
+// Provider destinations. These are the brands' own sites so the page is live and
+// functional for affiliate-program applications; swap each for its tracked
+// affiliate link once approved.
 const URLS: Record<string, string> = {
-  maximus: "#",
-  hims: "#",
-  dudemeds: "#",
-  petermd: "#",
-  maleexcel: "#",
+  maximus: "https://www.maximustribe.com/",
+  hims: "https://www.hims.com/",
+  dudemeds: "https://www.dudemeds.com/",
+  petermd: "https://getpetermd.com/",
+  maleexcel: "https://maleexcel.com/",
 };
 
 const providers: Provider[] = [
