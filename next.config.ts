@@ -13,16 +13,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // Consolidate duplicate comparison URLs onto the canonical (stronger) page.
-  async redirects() {
-    return [
-      {
-        source: "/embody-vs-altrx",
-        destination: "/altrx-vs-embody",
-        permanent: true,
-      },
-    ];
-  },
+  // Duplicate-comparison consolidation (e.g. /embody-vs-altrx → /altrx-vs-embody)
+  // is handled in the proxy (see SLUG_ALIASES in src/proxy.ts) so the alias
+  // collapses in a single 301 instead of chaining with the migration redirect.
 };
 
 export default nextConfig;

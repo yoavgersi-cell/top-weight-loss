@@ -71,11 +71,13 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
     { url: P("/articles"), lastModified: FALLBACK_DATE, changeFrequency: "weekly", priority: 0.8 },
   ];
 
-  // Reviews — weight-loss indexes only affiliate providers; other verticals
-  // (no affiliate registry yet) list all their reviews.
+  // Reviews — only affiliate-provider reviews are indexable (competitor
+  // reviews render noindex,follow to keep them out of the index), so only
+  // those belong in the sitemap. This matches review-page robots exactly and
+  // keeps noindex URLs (e.g. TRT competitors hone/fountain/marek) out of it.
   entries.push(
     ...(config.reviews ?? [])
-      .filter((r) => !isWeightLoss || AFFILIATE_PROVIDER_IDS.includes(r.providerId))
+      .filter((r) => AFFILIATE_PROVIDER_IDS.includes(r.providerId))
       .map((r) => ({
         url: P(`/reviews/${r.slug}`),
         lastModified: r.updatedAt ? new Date(r.updatedAt) : FALLBACK_DATE,

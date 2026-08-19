@@ -20,6 +20,16 @@ const SHARED_ONE_OFF_PAGES = new Set([
   "glp1-weight-loss-statistics",
 ]);
 
+// Duplicate comparison URLs that consolidate onto a stronger canonical page.
+// Resolved HERE, in the proxy, rather than via next.config redirects(), so an
+// aliased URL collapses to its final destination in a SINGLE 301 on every host.
+// Handling it in next.config instead chains an alias hop (308) into the
+// migration/prefix hop (301) — a multi-hop redirect Google reports as a
+// "Redirect error". The key is the alias slug; the value is the canonical slug.
+const SLUG_ALIASES: Record<string, string> = {
+  "embody-vs-altrx": "altrx-vs-embody",
+};
+
 // One deployment serves two hosts:
 //
 //   • treatmentshub.com — the hub. "/" is the hub landing; everything else must
@@ -44,6 +54,20 @@ export function proxy(req: NextRequest) {
 
     const segments = pathname.split("/").filter(Boolean);
     const first = segments[0];
+    const last = segments[segments.length - 1];
+
+    // Canonical-slug alias → single 301 to the canonical page. Runs before the
+    // vertical/prefix logic so both the bare legacy form (/embody-vs-altrx) and
+    // the prefixed form (/weight-loss/embody-vs-altrx) resolve in one hop. Alias
+    // targets are weight-loss battle pages, so a bare path prefixes to
+    // /weight-loss; an already-prefixed path keeps its own vertical.
+    if (last && SLUG_ALIASES[last]) {
+      const url = req.nextUrl.clone();
+      url.pathname = isVertical(first)
+        ? `/${first}/${SLUG_ALIASES[last]}`
+        : `/weight-loss/${SLUG_ALIASES[last]}`;
+      return NextResponse.redirect(url, 301);
+    }
 
     // Already a vertical path — serve it, stripping the prefix only for the
     // shared one-off pages ("/<vertical>/about" → "/about").
@@ -62,7 +86,6 @@ export function proxy(req: NextRequest) {
     // Generated metadata image routes (e.g. /opengraph-image) have no file
     // extension, so the matcher doesn't exclude them — serve them as-is rather
     // than redirecting the OG/Twitter image URLs into a 404.
-    const last = segments[segments.length - 1];
     if (last === "opengraph-image" || last === "twitter-image") {
       return NextResponse.next();
     }
@@ -79,6 +102,14 @@ export function proxy(req: NextRequest) {
     const url = req.nextUrl.clone();
     url.protocol = "https:";
     url.host = "www.treatmentshub.com";
+    // Resolve a slug alias in the same pass so an aliased legacy URL lands on
+    // the canonical hub page in ONE 301 (no alias-hop → migration-hop chain).
+    const segments = url.pathname.split("/").filter(Boolean);
+    const last = segments[segments.length - 1];
+    if (last && SLUG_ALIASES[last]) {
+      segments[segments.length - 1] = SLUG_ALIASES[last];
+      url.pathname = "/" + segments.join("/");
+    }
     url.pathname = url.pathname === "/" ? "/weight-loss" : `/weight-loss${url.pathname}`;
     return NextResponse.redirect(url, 301);
   }
