@@ -311,7 +311,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   <p className="text-gray-500">
                     <span className="font-semibold uppercase tracking-[0.05em] text-gray-400">Written by </span>
                     <Link href={hubLink(ctx, "/about")} className="font-semibold text-[#191919] hover:text-[#0C4B75] hover:underline">
-                      {config.experts[0].name}
+                      The {ctx.brandTeam.replace(/\s+Team$/i, "")} Research Team
                     </Link>
                     <span className="text-gray-400"> · {config.experts[0].role}</span>
                   </p>
