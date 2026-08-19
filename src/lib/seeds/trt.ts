@@ -26,7 +26,7 @@ const PRICING_TBD =
 // functional for affiliate-program applications; swap each for its tracked
 // affiliate link once approved.
 const URLS: Record<string, string> = {
-  maximus: "https://www.maximustribe.com/",
+  maximus: "https://track.revoffers.com/aff_c?offer_id=1347&aff_id=13399&url_id=10973",
   hims: "https://www.hims.com/",
   dudemeds: "https://www.dudemeds.com/",
   petermd: "https://getpetermd.com/",
