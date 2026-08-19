@@ -413,117 +413,57 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           </div>
 
           {/* ───── FEATURE COMPARISON TABLE ───── */}
-          {battle.features && battle.features.length > 0 && (() => {
-            const getIcon = (row: typeof battle.features[0], which: "p1" | "p2") => {
-              const h = row.highlight ?? "both";
-              const isHighlighted = h === "both" || (which === "p1" && h === "provider1") || (which === "p2" && h === "provider2");
-              const isDimmed = h !== "both" && h !== "none" && !isHighlighted;
-              return { isHighlighted, isDimmed };
-            };
-
-            return (
+          {battle.features && battle.features.length > 0 && (
             <div className="mb-14">
-              <h2 className="mb-6 text-[22px] font-bold text-[#191919]">
-                Side-by-Side Comparison
+              <h2 className="text-[22px] font-bold leading-tight text-[#191919] sm:text-[24px]">
+                {p1.name} vs. {p2.name}: What&rsquo;s the Difference?
               </h2>
+              <p className="mt-2 mb-5 max-w-[640px] text-[15px] leading-relaxed text-gray-500">
+                The key differences to consider when comparing the two providers.
+              </p>
 
-              {/* Desktop table */}
-              <div className="hidden sm:block overflow-hidden rounded-2xl border border-gray-200 bg-white">
-                <table className="w-full text-left text-[14px]">
-                  <thead>
-                    <tr className="border-b border-gray-200">
-                      <th className="bg-gray-50 px-6 py-4 text-[12px] font-bold uppercase tracking-wider text-gray-400 w-[200px]">
-                        Feature
-                      </th>
-                      <th className="px-6 py-4 text-[12px] font-bold uppercase tracking-wider text-[#191919]">
-                        {p1.name}
-                      </th>
-                      <th className="px-6 py-4 text-[12px] font-bold uppercase tracking-wider text-[#191919]">
-                        {p2.name}
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {battle.features.map((row, i) => {
-                      const p1s = getIcon(row, "p1");
-                      const p2s = getIcon(row, "p2");
-                      return (
-                        <tr
-                          key={i}
-                          className={`${i < battle.features.length - 1 ? "border-b border-gray-100" : ""} ${i % 2 === 0 ? "bg-white" : "bg-gray-50/40"}`}
+              <table className="w-full table-fixed border-collapse text-left">
+                <thead>
+                  <tr className="border-b border-gray-300">
+                    <th className="w-[32%] py-3 pr-2 align-bottom" />
+                    <th className="w-[34%] py-3 px-2 align-bottom text-[13px] font-bold text-[#191919] sm:px-3 sm:text-[15px]">
+                      {p1.name}
+                    </th>
+                    <th className="w-[34%] py-3 pl-2 align-bottom text-[13px] font-bold text-[#191919] sm:pl-3 sm:text-[15px]">
+                      {p2.name}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {battle.features.map((row, i) => {
+                    const norm = (s?: string) => (s ?? "").trim().toLowerCase();
+                    const same = norm(row.provider1Value) === norm(row.provider2Value);
+                    const bestFor = /best[\s-]?for/i.test(row.feature);
+                    // Differences read in full contrast; identical rows stay quiet so
+                    // the eye is drawn to what actually separates the two providers.
+                    const value = `${same ? "text-gray-400" : "text-[#191919]"} ${bestFor ? "font-semibold" : "font-normal"}`;
+                    return (
+                      <tr key={i} className="border-b border-gray-100 align-top">
+                        <td
+                          className={`py-3 pr-2 text-[12.5px] leading-snug sm:py-3.5 sm:text-[14px] ${
+                            bestFor ? "font-semibold text-[#191919]" : "font-medium text-gray-500"
+                          }`}
                         >
-                          <td className="px-6 py-4 font-semibold text-[#191919] bg-gray-50/70">
-                            {row.feature}
-                          </td>
-                          <td className={`px-6 py-4 ${p1s.isDimmed ? "text-gray-400" : "text-gray-700"}`}>
-                            <div className="flex items-start gap-2">
-                              {p1s.isHighlighted ? (
-                                <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" strokeWidth={2.5} />
-                              ) : p1s.isDimmed ? (
-                                <Minus className="mt-0.5 h-4 w-4 shrink-0 text-gray-300" strokeWidth={2} />
-                              ) : null}
-                              {row.provider1Value}
-                            </div>
-                          </td>
-                          <td className={`px-6 py-4 ${p2s.isDimmed ? "text-gray-400" : "text-gray-700"}`}>
-                            <div className="flex items-start gap-2">
-                              {p2s.isHighlighted ? (
-                                <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" strokeWidth={2.5} />
-                              ) : p2s.isDimmed ? (
-                                <Minus className="mt-0.5 h-4 w-4 shrink-0 text-gray-300" strokeWidth={2} />
-                              ) : null}
-                              {row.provider2Value}
-                            </div>
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-              </div>
-
-              {/* Mobile stacked */}
-              <div className="space-y-3 sm:hidden">
-                {battle.features.map((row, i) => {
-                  const p1s = getIcon(row, "p1");
-                  const p2s = getIcon(row, "p2");
-                  return (
-                    <div
-                      key={i}
-                      className="rounded-xl border border-gray-200 bg-white p-4"
-                    >
-                      <p className="mb-3 text-[13px] font-bold text-[#191919]">
-                        {row.feature}
-                      </p>
-                      <div className="grid grid-cols-2 gap-3">
-                        <div className={`rounded-lg p-2.5 ${p1s.isHighlighted ? "bg-emerald-50" : "bg-gray-50"}`}>
-                          <p className="mb-1 text-[11px] font-semibold uppercase tracking-wider text-gray-500">
-                            {p1.name}
-                          </p>
-                          <div className={`flex items-start gap-1.5 text-[13px] ${p1s.isDimmed ? "text-gray-400" : "text-gray-700"}`}>
-                            {p1s.isHighlighted && <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2.5} />}
-                            {p1s.isDimmed && <Minus className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gray-300" strokeWidth={2} />}
-                            {row.provider1Value}
-                          </div>
-                        </div>
-                        <div className={`rounded-lg p-2.5 ${p2s.isHighlighted ? "bg-emerald-50" : "bg-gray-50"}`}>
-                          <p className="mb-1 text-[11px] font-semibold uppercase tracking-wider text-gray-500">
-                            {p2.name}
-                          </p>
-                          <div className={`flex items-start gap-1.5 text-[13px] ${p2s.isDimmed ? "text-gray-400" : "text-gray-700"}`}>
-                            {p2s.isHighlighted && <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2.5} />}
-                            {p2s.isDimmed && <Minus className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gray-300" strokeWidth={2} />}
-                            {row.provider2Value}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
+                          {row.feature}
+                        </td>
+                        <td className={`py-3 px-2 text-[12.5px] leading-snug sm:py-3.5 sm:px-3 sm:text-[14.5px] ${value}`}>
+                          {row.provider1Value}
+                        </td>
+                        <td className={`py-3 pl-2 text-[12.5px] leading-snug sm:py-3.5 sm:pl-3 sm:text-[14.5px] ${value}`}>
+                          {row.provider2Value}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
             </div>
-            );
-          })()}
+          )}
 
           {/* ───── PER-PROVIDER DEEP DIVES ───── */}
           <div className="mb-14">
