@@ -8,259 +8,119 @@ import type {
 } from "../config";
 
 // ─────────────────────────────────────────────────────────────────────────────
-// TRT (testosterone replacement therapy) content skeleton
+// TRT (testosterone replacement therapy) content
 //
-// Same rules as the hair-loss skeleton: real telehealth brands with truthful,
-// general descriptions and NO invented data — affiliateUrl is "#", no Trustpilot
-// ratings, and no specific prices. Everything is overridden the moment it's
-// edited in the CMS, and the vertical stays unpublished until it's ready.
+// Launch set for the TRT vertical: the five providers we monetize — Maximus,
+// Hims, DudeMeds, PeterMD and Male Excel — with truthful, general descriptions
+// grounded in their public offering. It carries NO invented data: no Trustpilot
+// ratings, no specific prices (pricing points to the provider's site). Real
+// affiliate links and brand logos are filled in before the vertical is added to
+// PUBLISHED_VERTICALS. Everything here is overridden when edited in the CMS.
 // ─────────────────────────────────────────────────────────────────────────────
 
-const UPDATED = "2026-08-18";
+const UPDATED = "2026-08-19";
 const PRICING_TBD =
   "Pricing varies by program, labs, and treatment. Check the provider's site for current pricing.";
 
+// Real affiliate links are dropped in here before launch.
+const URLS: Record<string, string> = {
+  maximus: "#",
+  hims: "#",
+  dudemeds: "#",
+  petermd: "#",
+  maleexcel: "#",
+};
+
 const providers: Provider[] = [
-  {
-    id: "hone",
-    name: "Hone Health",
-    tagline: "At-home hormone testing and online testosterone treatment for men",
-    logo: "/logo-hone.svg",
-    smallLogo: "/logo-hone.svg",
-    highlights: [
-      "At-home lab testing to start",
-      "Licensed-provider evaluation",
-      "Ongoing telehealth monitoring",
-    ],
-    affiliateUrl: "#",
-    ctaText: "Visit Site",
-  },
-  {
-    id: "fountain",
-    name: "Fountain TRT",
-    tagline: "Online TRT clinic — testing, prescription, and follow-up for men",
-    logo: "/logo-fountain.svg",
-    smallLogo: "/logo-fountain.svg",
-    highlights: [
-      "Lab work reviewed by a provider",
-      "Testosterone treatment options",
-      "Remote follow-up care",
-    ],
-    affiliateUrl: "#",
-    ctaText: "Visit Site",
-  },
-  {
-    id: "marek",
-    name: "Marek Health",
-    tagline: "Hormone optimization and health coaching with comprehensive lab testing",
-    logo: "/logo-marek.svg",
-    smallLogo: "/logo-marek.svg",
-    highlights: [
-      "Comprehensive lab panels",
-      "Provider-guided optimization",
-      "Coaching alongside treatment",
-    ],
-    affiliateUrl: "#",
-    ctaText: "Visit Site",
-  },
-  {
-    id: "blokes",
-    name: "Blokes",
-    tagline: "Men's telehealth for hormone optimization, including TRT",
-    logo: "/logo-blokes.svg",
-    smallLogo: "/logo-blokes.svg",
-    highlights: [
-      "Personalized hormone plans",
-      "Lab-based evaluation",
-      "Online provider access",
-    ],
-    affiliateUrl: "#",
-    ctaText: "Visit Site",
-  },
   {
     id: "maximus",
     name: "Maximus",
-    tagline: "Telehealth testosterone support, including oral options",
+    tagline: "Telehealth testosterone support for men — including oral protocol options — with at-home testing",
     logo: "/maximuslogo.png",
     smallLogo: "/maximuslogo.png",
     highlights: [
-      "Oral and other protocol options",
-      "Provider-supervised treatment",
-      "At-home testing",
+      "Oral protocol options plus traditional TRT",
+      "At-home testing to start",
+      "Board-certified doctor oversight",
     ],
-    affiliateUrl: "#",
+    affiliateUrl: URLS.maximus,
     ctaText: "Visit Site",
   },
   {
-    id: "defy",
-    name: "Defy Medical",
-    tagline: "Telehealth clinic for hormone therapy and TRT",
-    logo: "/logo-defy.svg",
-    smallLogo: "/logo-defy.svg",
+    id: "hims",
+    name: "Hims",
+    tagline: "Recognizable men's telehealth brand — testosterone replacement therapy, 100% online",
+    logo: "/logos/hims.svg",
+    smallLogo: "/logos/hims.svg",
     highlights: [
-      "Established hormone-therapy clinic",
-      "Individualized treatment plans",
-      "Ongoing monitoring",
+      "Injectable testosterone (cypionate)",
+      "Online labs and provider evaluation",
+      "Broad men's-health platform",
     ],
-    affiliateUrl: "#",
+    affiliateUrl: URLS.hims,
+    ctaText: "Visit Site",
+  },
+  {
+    id: "dudemeds",
+    name: "DudeMeds",
+    tagline: "Physician-founded online TRT — injectable testosterone and enclomiphene, with at-home labs",
+    logo: "/logo-dudemeds.svg",
+    smallLogo: "/logo-dudemeds.svg",
+    highlights: [
+      "Injectable testosterone (cypionate), supplies included",
+      "Enclomiphene option — helps preserve fertility",
+      "At-home or uploaded labs; founded by physicians",
+    ],
+    affiliateUrl: URLS.dudemeds,
+    ctaText: "Visit Site",
+  },
+  {
+    id: "petermd",
+    name: "PeterMD",
+    tagline: "One of North America's largest online men's-health clinics — testosterone therapy with flexible plans",
+    logo: "/logo-petermd.svg",
+    smallLogo: "/logo-petermd.svg",
+    highlights: [
+      "Injectable testosterone cypionate (weekly)",
+      "Flexible monthly and yearly plans",
+      "Labs and clinician oversight included",
+    ],
+    affiliateUrl: URLS.petermd,
+    ctaText: "Visit Site",
+  },
+  {
+    id: "maleexcel",
+    name: "Male Excel",
+    tagline: "TRT-focused telehealth — testosterone cream, injections and oral options, with at-home testing",
+    logo: "/logo-maleexcel.svg",
+    smallLogo: "/logo-maleexcel.svg",
+    highlights: [
+      "Cream, injection and oral (Kyzatrex) options",
+      "At-home testosterone testing",
+      "90-day satisfaction guarantee",
+    ],
+    affiliateUrl: URLS.maleexcel,
     ctaText: "Visit Site",
   },
 ];
 
+// Editorial ranking scores (independent, disclosed via the ranking methodology).
+const positions: RankingPosition[] = [
+  { score: 9.4, starRating: 5, label: "Excellent", badge: "Editor's Choice" },
+  { score: 9.2, starRating: 5, label: "Excellent" },
+  { score: 9.0, starRating: 5, label: "Excellent" },
+  { score: 8.8, starRating: 4, label: "Very Good" },
+  { score: 8.6, starRating: 4, label: "Very Good" },
+];
+
 const reviews: ReviewData[] = [
-  {
-    slug: "hone",
-    providerId: "hone",
-    shortSummary:
-      "A men's telehealth service that starts with at-home hormone testing and connects you with providers for testosterone treatment.",
-    reviewIntro:
-      "Hone Health offers at-home hormone testing followed by a licensed-provider evaluation and, where appropriate, testosterone treatment with ongoing monitoring. This review outlines its approach and who it may suit.",
-    keyFeatures: [
-      "At-home lab testing to begin",
-      "Licensed-provider evaluation",
-      "Ongoing telehealth monitoring",
-    ],
-    pricingSummary: PRICING_TBD,
-    treatmentOptions: [
-      "Testosterone treatment (provider-directed)",
-      "Follow-up lab monitoring",
-    ],
-    pros: [
-      "Convenient at-home start",
-      "Lab-based, provider-supervised approach",
-      "Remote monitoring",
-    ],
-    cons: [
-      "Requires lab work and medical review",
-      "Ongoing treatment and monitoring needed",
-    ],
-    bestFor: [
-      "Men who want an at-home, online path to evaluation",
-      "Those comparing modern TRT telehealth options",
-    ],
-    finalVerdict:
-      "Hone Health is a convenient, lab-based option for men exploring testosterone treatment online. Confirm current pricing and eligibility on their site.",
-    trustBadges: ["Licensed US providers", "Lab-based evaluation"],
-    updatedAt: UPDATED,
-  },
-  {
-    slug: "fountain",
-    providerId: "fountain",
-    shortSummary:
-      "An online TRT clinic offering testing, prescription treatment, and remote follow-up for men.",
-    reviewIntro:
-      "Fountain TRT is an online clinic focused on testosterone replacement therapy — lab work, provider review, and remote follow-up. This review covers what's included and who it fits.",
-    keyFeatures: [
-      "Lab work reviewed by a provider",
-      "Testosterone treatment options",
-      "Remote follow-up care",
-    ],
-    pricingSummary: PRICING_TBD,
-    treatmentOptions: ["Testosterone treatment (provider-directed)", "Follow-up monitoring"],
-    pros: [
-      "TRT-focused service",
-      "Provider-supervised",
-      "Fully online process",
-    ],
-    cons: [
-      "Requires bloodwork and medical review",
-      "Ongoing use and monitoring",
-    ],
-    bestFor: [
-      "Men who want a focused, online TRT program",
-      "Those comparing dedicated TRT clinics",
-    ],
-    finalVerdict:
-      "Fountain TRT is a focused, convenient online TRT option. Verify current pricing and details on their site.",
-    trustBadges: ["Licensed US providers", "Remote monitoring"],
-    updatedAt: UPDATED,
-  },
-  {
-    slug: "marek",
-    providerId: "marek",
-    shortSummary:
-      "Hormone optimization and health coaching built around comprehensive lab testing and provider guidance.",
-    reviewIntro:
-      "Marek Health is a hormone-optimization telehealth service that pairs comprehensive lab testing with provider guidance and health coaching. Rather than a one-size protocol, it focuses on interpreting detailed bloodwork and building an individualized plan — which can include testosterone therapy where appropriate — with ongoing coaching support. This review covers its approach and who it fits.",
-    keyFeatures: [
-      "Comprehensive lab panels",
-      "Provider-guided hormone optimization",
-      "Health coaching alongside treatment",
-      "Ongoing lab-based monitoring",
-    ],
-    pricingSummary: PRICING_TBD,
-    treatmentOptions: [
-      "Testosterone therapy (provider-directed)",
-      "Broader hormone optimization",
-      "Follow-up lab monitoring",
-      "Health coaching",
-    ],
-    pros: [
-      "In-depth lab testing and interpretation",
-      "Coaching plus medical oversight",
-      "Individualized optimization approach",
-    ],
-    cons: [
-      "More involved than a basic TRT script",
-      "Requires bloodwork and medical review",
-      "Ongoing monitoring needed",
-    ],
-    bestFor: [
-      "Men who want a data-driven, coached approach",
-      "Those interested in broader hormone optimization",
-      "People who value detailed lab work",
-    ],
-    finalVerdict:
-      "Marek Health suits men who want a thorough, lab-driven approach to hormone optimization with coaching support. Confirm current pricing and eligibility on their site.",
-    trustBadges: ["Comprehensive lab testing", "Provider-guided", "Coaching included"],
-    updatedAt: UPDATED,
-  },
-  {
-    slug: "blokes",
-    providerId: "blokes",
-    shortSummary:
-      "Men's telehealth for hormone optimization, including TRT, built on lab-based, personalized plans.",
-    reviewIntro:
-      "Blokes is a men's telehealth platform focused on hormone optimization, including testosterone replacement therapy. It starts from lab work and a provider evaluation to build a personalized plan, with online access to providers for follow-up. This review outlines what it offers and who it fits.",
-    keyFeatures: [
-      "Lab-based evaluation",
-      "Personalized hormone plans",
-      "Online provider access",
-      "Men's optimization focus",
-    ],
-    pricingSummary: PRICING_TBD,
-    treatmentOptions: [
-      "Testosterone therapy (provider-directed)",
-      "Personalized hormone protocols",
-      "Follow-up monitoring",
-    ],
-    pros: [
-      "Personalized, lab-based plans",
-      "Men's-health focus",
-      "Fully online access",
-    ],
-    cons: [
-      "Requires bloodwork and medical review",
-      "Ongoing treatment and monitoring",
-      "Program specifics vary",
-    ],
-    bestFor: [
-      "Men who want a personalized optimization plan",
-      "Those comparing modern men's telehealth",
-      "People who prefer an online process",
-    ],
-    finalVerdict:
-      "Blokes is a solid option for men who want a personalized, lab-based approach to hormone optimization online. Confirm current pricing and details on their site.",
-    trustBadges: ["Lab-based evaluation", "Personalized plans"],
-    updatedAt: UPDATED,
-  },
   {
     slug: "maximus",
     providerId: "maximus",
     shortSummary:
-      "Telehealth testosterone support for men, including oral protocol options, with at-home testing and provider supervision.",
+      "Telehealth testosterone support for men, notable for oral protocol options alongside traditional approaches, with at-home testing and provider supervision.",
     reviewIntro:
-      "Maximus offers telehealth testosterone support for men, notable for oral protocol options alongside more traditional approaches, with at-home testing and provider supervision. You start with testing, a provider reviews your results, and an appropriate protocol is prescribed and monitored. This review covers its approach and fit.",
+      "Maximus offers telehealth testosterone support for men, notable for oral protocol options alongside more traditional approaches, with at-home testing and provider supervision. You start with testing, a provider reviews your results, and an appropriate protocol is prescribed and monitored. This review covers its approach and who it fits.",
     keyFeatures: [
       "Oral protocol options",
       "At-home testing to start",
@@ -277,11 +137,11 @@ const reviews: ReviewData[] = [
     pros: [
       "Oral options some competitors don't offer",
       "Convenient at-home testing",
-      "Provider-supervised",
+      "Board-certified doctor oversight",
     ],
     cons: [
       "Suitability of oral options depends on your labs",
-      "Requires medical review",
+      "Requires a medical review",
       "Ongoing monitoring needed",
     ],
     bestFor: [
@@ -291,202 +151,310 @@ const reviews: ReviewData[] = [
     ],
     finalVerdict:
       "Maximus stands out for offering oral protocol options within a supervised, at-home telehealth model. Confirm current pricing and eligibility on their site.",
-    trustBadges: ["At-home testing", "Provider-supervised", "Oral options"],
+    trustBadges: ["At-home testing", "Board-certified doctors", "Oral options"],
     updatedAt: UPDATED,
   },
   {
-    slug: "defy",
-    providerId: "defy",
+    slug: "hims",
+    providerId: "hims",
     shortSummary:
-      "An established telehealth clinic for hormone therapy and TRT, with individualized plans and ongoing monitoring.",
+      "A recognizable men's telehealth brand offering testosterone replacement therapy — injectable cypionate — after online labs and a provider review.",
     reviewIntro:
-      "Defy Medical is a long-standing telehealth clinic specializing in hormone therapy, including TRT. It's known for individualized treatment plans and thorough, ongoing monitoring rather than a one-size approach. This review outlines what it offers and who it fits.",
+      "Hims is one of the most recognizable men's telehealth brands, and its testosterone offering follows the same simple, online model: complete lab work, have a licensed provider review your results, and — if appropriate — receive injectable testosterone (cypionate) with ongoing support. This review outlines what it offers and who it fits.",
     keyFeatures: [
-      "Established hormone-therapy clinic",
-      "Individualized treatment plans",
-      "Thorough ongoing monitoring",
-      "Broad hormone-therapy experience",
+      "Injectable testosterone (cypionate)",
+      "Online labs and licensed-provider evaluation",
+      "Broad men's-health platform",
+      "Discreet home delivery",
     ],
     pricingSummary: PRICING_TBD,
     treatmentOptions: [
-      "Testosterone therapy (provider-directed)",
-      "Broader hormone therapy options",
-      "Follow-up lab monitoring",
+      "Testosterone cypionate injection",
+      "Provider-directed dosing",
+      "Lab-based monitoring",
     ],
     pros: [
-      "Established, experienced clinic",
-      "Highly individualized plans",
-      "Comprehensive monitoring",
+      "Recognizable, mainstream brand",
+      "Simple, fully online process",
+      "Broad men's-health range",
     ],
     cons: [
-      "Requires bloodwork and medical review",
-      "More clinical, less 'quick' than some apps",
+      "A more standard TRT set",
+      "Requires labs and a medical review",
       "Ongoing monitoring needed",
     ],
     bestFor: [
-      "Men who want an experienced, individualized clinic",
-      "Those with more complex needs",
-      "People who value thorough monitoring",
+      "Men who want a simple, mainstream online option",
+      "Those comparing well-known telehealth brands",
     ],
     finalVerdict:
-      "Defy Medical is a strong choice for men who want an established, individualized hormone-therapy clinic with thorough monitoring. Confirm current pricing and eligibility on their site.",
-    trustBadges: ["Established clinic", "Individualized plans", "Ongoing monitoring"],
+      "Hims is a solid, recognizable option for men starting testosterone therapy online. If you want oral options or specialized hormone care, compare it against our top-ranked providers. Confirm current pricing on their site.",
+    trustBadges: ["Licensed US providers", "Discreet shipping"],
     updatedAt: UPDATED,
   },
-];
-
-// Editorial ranking scores for this vertical (independent, disclosed via the
-// ranking methodology). Provisional order until affiliate partners are set — the
-// operator can reorder in the CMS.
-const positions: RankingPosition[] = [
-  { score: 9.3, starRating: 5, label: "Excellent", badge: "Editor's Choice" },
-  { score: 9.1, starRating: 5, label: "Excellent" },
-  { score: 9.0, starRating: 5, label: "Excellent" },
-  { score: 8.8, starRating: 4, label: "Very Good" },
-  { score: 8.6, starRating: 4, label: "Very Good" },
-  { score: 8.5, starRating: 4, label: "Very Good" },
+  {
+    slug: "dudemeds",
+    providerId: "dudemeds",
+    shortSummary:
+      "A physician-founded telehealth clinic offering injectable testosterone (cypionate) and enclomiphene, with at-home lab options.",
+    reviewIntro:
+      "DudeMeds is a physician-founded telehealth clinic focused on men's hormone care. It offers injectable testosterone (cypionate) — the long-standing standard for TRT — as well as enclomiphene, a medication that stimulates the body's own testosterone and can help preserve fertility. You provide labs (at-home or uploaded), a licensed provider reviews them, and treatment ships to your door. This review covers its approach and fit.",
+    keyFeatures: [
+      "Injectable testosterone cypionate, supplies included",
+      "Enclomiphene option — helps preserve fertility",
+      "At-home or uploaded labs",
+      "Founded by two physicians",
+    ],
+    pricingSummary: PRICING_TBD,
+    treatmentOptions: [
+      "Testosterone cypionate injection",
+      "Enclomiphene (a fertility-preserving option)",
+      "At-home lab testing",
+      "Provider-directed protocol",
+    ],
+    pros: [
+      "Both injectable TRT and fertility-preserving enclomiphene",
+      "Physician-founded, fully online",
+      "At-home labs with supplies included",
+    ],
+    cons: [
+      "Requires labs and a medical review",
+      "Men-focused",
+      "Ongoing monitoring needed",
+    ],
+    bestFor: [
+      "Men who want injections or enclomiphene",
+      "Those who want to preserve fertility",
+      "People who value an at-home, streamlined process",
+    ],
+    finalVerdict:
+      "DudeMeds is a strong pick for men who want flexibility between injectable TRT and fertility-preserving enclomiphene, under physician-founded care. Confirm current pricing and eligibility on their site.",
+    trustBadges: ["Physician-founded", "At-home lab option", "Supplies included"],
+    updatedAt: UPDATED,
+  },
+  {
+    slug: "petermd",
+    providerId: "petermd",
+    shortSummary:
+      "One of the largest online men's-health clinics in North America, offering testosterone cypionate injections with flexible plans and clinician oversight.",
+    reviewIntro:
+      "PeterMD is one of the largest online men's-health clinics in North America, offering testosterone replacement therapy alongside other men's-health services. Its TRT is built around injectable testosterone cypionate (typically weekly, self-administered), with labs and clinician oversight included, and flexible monthly or yearly plans. This review outlines what it offers and who it fits.",
+    keyFeatures: [
+      "Injectable testosterone cypionate (weekly)",
+      "Flexible monthly and yearly plans",
+      "Labs and clinician oversight included",
+      "Large, established men's-health clinic",
+    ],
+    pricingSummary: PRICING_TBD,
+    treatmentOptions: [
+      "Testosterone cypionate (subcutaneous or intramuscular)",
+      "Provider-directed dosing",
+      "Lab-based monitoring",
+    ],
+    pros: [
+      "Established, large men's-health clinic",
+      "Flexible plan options",
+      "Labs and oversight included",
+    ],
+    cons: [
+      "Injectable-focused",
+      "Requires labs and a medical review",
+      "Ongoing monitoring needed",
+    ],
+    bestFor: [
+      "Men who want an established, high-volume clinic",
+      "Those who want flexible plan lengths",
+      "People comparing value-focused TRT",
+    ],
+    finalVerdict:
+      "PeterMD suits men who want an established, affordable clinic with flexible plans and included labs. Confirm current pricing and eligibility on their site.",
+    trustBadges: ["Established clinic", "Labs included", "Flexible plans"],
+    updatedAt: UPDATED,
+  },
+  {
+    slug: "maleexcel",
+    providerId: "maleexcel",
+    shortSummary:
+      "A TRT-focused telehealth clinic offering testosterone cream, injections and oral options, built around at-home testing and a satisfaction guarantee.",
+    reviewIntro:
+      "Male Excel is a TRT-focused telehealth clinic that stands out for offering all three main delivery routes — testosterone cream (with a daily microdosing approach), injectable cypionate, and an oral option (Kyzatrex) — built around at-home testosterone testing and telemedicine. It also backs treatment with a 90-day satisfaction guarantee. This review outlines its approach and fit.",
+    keyFeatures: [
+      "Cream, injection and oral (Kyzatrex) options",
+      "At-home testosterone testing",
+      "Daily microdosing cream approach",
+      "90-day satisfaction guarantee",
+    ],
+    pricingSummary: PRICING_TBD,
+    treatmentOptions: [
+      "Testosterone cream (daily microdosing)",
+      "Testosterone cypionate injection",
+      "Oral testosterone undecanoate (Kyzatrex)",
+      "At-home lab testing",
+    ],
+    pros: [
+      "All three delivery routes — cream, injection and oral",
+      "At-home testing and needle-free options",
+      "90-day satisfaction guarantee",
+    ],
+    cons: [
+      "Cream and oral can cost more than generic injections",
+      "Requires labs and a medical review",
+      "Ongoing monitoring needed",
+    ],
+    bestFor: [
+      "Men who want needle-free options (cream or oral)",
+      "Those who prefer daily microdosing",
+      "Anyone who values a satisfaction guarantee",
+    ],
+    finalVerdict:
+      "Male Excel is a strong choice for men who want flexibility in how they take testosterone — especially needle-free cream or oral options — with at-home testing and a guarantee. Confirm current pricing and eligibility on their site.",
+    trustBadges: ["At-home testing", "90-day guarantee", "Cream, injection & oral"],
+    updatedAt: UPDATED,
+  },
 ];
 
 const battles: BattleData[] = [
   {
-    slug: "hone-vs-fountain",
-    provider1Id: "hone",
-    provider2Id: "fountain",
-    title: "Hone Health vs Fountain TRT: Which Is Right for You?",
-    subtitle: "Two online testosterone-therapy services, compared",
+    slug: "maximus-vs-hims",
+    provider1Id: "maximus",
+    provider2Id: "hims",
+    title: "Maximus vs Hims: Which Is Better for TRT?",
+    subtitle: "A specialized hormone service vs a mainstream men's brand",
     description:
-      "Compare Hone Health and Fountain TRT for online testosterone treatment — testing, approach, and who each one fits best.",
+      "Compare Maximus and Hims for online testosterone therapy — treatment options, approach, and which is the better fit.",
     intro:
-      "Hone Health and Fountain TRT both offer online testosterone treatment starting from lab work and provider review. Here's how they compare so you can choose the one that fits you.",
+      "Maximus and Hims both offer online testosterone treatment after lab work and a provider review. Maximus leans into specialized hormone options (including oral protocols), while Hims is a recognizable mainstream brand with a broad men's-health platform. Here's how they compare.",
     verdict:
-      "Both are lab-based, provider-supervised online options. Your best fit depends on program structure and pricing — confirm details on each provider's site.",
+      "Both are legitimate online options. Maximus is our pick for men who want specialized hormone care and oral options, while Hims is a fine mainstream choice if brand familiarity matters most. Confirm current pricing on each provider's site.",
     verdictWinnerPoints: [
-      "At-home testing to start",
-      "Ongoing telehealth monitoring",
+      "Oral protocol options plus traditional TRT",
+      "At-home testing and doctor oversight",
+      "Hormone-optimization focus",
     ],
     verdictLoserPoints: [
-      "Dedicated TRT-clinic focus",
-      "Remote follow-up care",
+      "Recognizable, mainstream brand",
+      "Broad men's-health product range",
+      "Simple, familiar online experience",
     ],
-    winnerId: "hone",
+    winnerId: "maximus",
     categories: [
       {
-        name: "Approach",
-        winner: "tie",
-        explanation:
-          "Both begin with lab testing and a licensed-provider review before any treatment.",
-        supportingPoints: [
-          "Lab-based evaluation at both",
-          "Provider-supervised treatment at both",
-        ],
-      },
-    ],
-    features: [
-      { feature: "At-home testing", provider1Value: "Yes", provider2Value: "See site", highlight: "none" },
-      { feature: "Provider evaluation", provider1Value: "Yes", provider2Value: "Yes", highlight: "both" },
-      { feature: "Ongoing monitoring", provider1Value: "Yes", provider2Value: "Yes", highlight: "both" },
-      { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
-    ],
-    updatedAt: UPDATED,
-  },
-  {
-    slug: "marek-vs-blokes",
-    provider1Id: "marek",
-    provider2Id: "blokes",
-    title: "Marek Health vs Blokes: Which Is Right for You?",
-    subtitle: "Two men's hormone-optimization telehealth services, compared",
-    description:
-      "Compare Marek Health and Blokes for online hormone optimization and TRT — approach, lab testing, and who each one fits best.",
-    intro:
-      "Marek Health and Blokes both offer lab-based, provider-guided hormone optimization for men, including TRT. Marek leans into comprehensive testing and coaching, while Blokes emphasizes personalized, fully online plans. Here's how they compare.",
-    verdict:
-      "Both are personalized, lab-based options. Marek is the better fit if you want in-depth testing and coaching, while Blokes suits those who want a streamlined online plan. Confirm current pricing and details on each provider's site.",
-    verdictWinnerPoints: [
-      "Comprehensive lab panels and interpretation",
-      "Health coaching alongside treatment",
-    ],
-    verdictLoserPoints: [
-      "Personalized, fully online plans",
-      "Men's optimization focus",
-    ],
-    winnerId: "marek",
-    categories: [
-      {
-        name: "Approach",
+        name: "Treatment options",
         winner: "provider1",
         explanation:
-          "Marek pairs comprehensive lab testing with coaching, while Blokes focuses on a streamlined personalized plan.",
-        supportingPoints: [
-          "Marek emphasizes detailed lab interpretation",
-          "Blokes emphasizes a simple online plan",
-        ],
+          "Maximus offers oral protocol options alongside traditional testosterone, while Hims centers on injectable cypionate.",
+        supportingPoints: ["Oral options available at Maximus", "Injectable-focused at Hims"],
+      },
+      {
+        name: "Brand recognition",
+        winner: "provider2",
+        explanation: "Hims is one of the most recognizable men's telehealth brands.",
+        supportingPoints: ["Widely known brand", "Broad product range"],
       },
       {
         name: "Medical oversight",
         winner: "tie",
-        explanation:
-          "Both use lab work and licensed-provider evaluation before treatment.",
-        supportingPoints: [
-          "Lab-based evaluation at both",
-          "Provider-supervised treatment at both",
-        ],
+        explanation: "Both require lab work and a licensed-provider review before treatment.",
+        supportingPoints: ["Lab-based evaluation at both", "Provider-supervised treatment"],
       },
     ],
     features: [
-      { feature: "Comprehensive labs", provider1Value: "Emphasized", provider2Value: "Yes", highlight: "provider1" },
-      { feature: "Health coaching", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
-      { feature: "Provider evaluation", provider1Value: "Yes", provider2Value: "Yes", highlight: "both" },
+      { feature: "Injectable testosterone", provider1Value: "Available", provider2Value: "Available", highlight: "both" },
+      { feature: "Oral option", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
+      { feature: "At-home testing", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
       { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
     ],
     updatedAt: UPDATED,
   },
   {
-    slug: "hone-vs-defy",
-    provider1Id: "hone",
-    provider2Id: "defy",
-    title: "Hone Health vs Defy Medical: Which Is Right for You?",
-    subtitle: "A modern at-home service vs an established hormone clinic",
+    slug: "dudemeds-vs-petermd",
+    provider1Id: "dudemeds",
+    provider2Id: "petermd",
+    title: "DudeMeds vs PeterMD: Which Online TRT Clinic Is Better?",
+    subtitle: "Physician-founded flexibility vs a large, established clinic",
     description:
-      "Compare Hone Health and Defy Medical for testosterone therapy — at-home convenience vs an established, individualized clinic.",
+      "Compare DudeMeds and PeterMD for online testosterone therapy — treatment options, plans, and which fits you best.",
     intro:
-      "Hone Health offers a modern, at-home testing and treatment experience, while Defy Medical is an established clinic known for individualized plans and thorough monitoring. Here's how they compare so you can pick what fits.",
+      "DudeMeds and PeterMD are both affordable, fully online TRT clinics. DudeMeds is physician-founded and offers both injectable testosterone and fertility-preserving enclomiphene, while PeterMD is one of the largest men's-health clinics with flexible plans. Here's how they compare.",
     verdict:
-      "Hone is the easier at-home starting point, while Defy suits those who want an experienced clinic and more individualized care. Confirm current pricing and eligibility on each provider's site.",
+      "Both are solid, value-focused options. DudeMeds is our pick if you want the choice of enclomiphene to help preserve fertility, while PeterMD suits those who want a large, established clinic with flexible plan lengths. Confirm current pricing on each provider's site.",
     verdictWinnerPoints: [
-      "At-home testing and a streamlined start",
-      "Ongoing telehealth monitoring",
+      "Injectable testosterone and enclomiphene",
+      "Physician-founded, at-home labs",
+      "Fertility-preserving option",
     ],
     verdictLoserPoints: [
-      "Established, experienced clinic",
-      "Highly individualized plans",
+      "Large, established men's-health clinic",
+      "Flexible monthly and yearly plans",
+      "Labs and oversight included",
     ],
-    winnerId: "hone",
+    winnerId: "dudemeds",
     categories: [
       {
-        name: "Convenience",
+        name: "Treatment options",
         winner: "provider1",
         explanation:
-          "Hone emphasizes an at-home, streamlined experience, while Defy is a more clinical, individualized service.",
-        supportingPoints: [
-          "Hone starts with at-home testing",
-          "Defy focuses on individualized clinical care",
-        ],
+          "DudeMeds offers both injectable testosterone and enclomiphene, giving men a fertility-preserving alternative; PeterMD centers on injectable cypionate.",
+        supportingPoints: ["Enclomiphene available at DudeMeds", "Injectable-focused at PeterMD"],
       },
       {
-        name: "Depth of care",
+        name: "Scale and plans",
         winner: "provider2",
         explanation:
-          "Defy is an established clinic known for thorough, individualized monitoring.",
-        supportingPoints: [
-          "Defy offers broad hormone-therapy experience",
-          "Individualized plans with ongoing monitoring",
-        ],
+          "PeterMD is one of the largest online men's-health clinics, with flexible monthly and yearly plans.",
+        supportingPoints: ["Large, established clinic", "Flexible plan lengths"],
       },
     ],
     features: [
-      { feature: "At-home testing", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
-      { feature: "Individualized care", provider1Value: "Yes", provider2Value: "Emphasized", highlight: "provider2" },
-      { feature: "Ongoing monitoring", provider1Value: "Yes", provider2Value: "Yes", highlight: "both" },
+      { feature: "Injectable testosterone", provider1Value: "Available", provider2Value: "Available", highlight: "both" },
+      { feature: "Enclomiphene option", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
+      { feature: "Flexible plan lengths", provider1Value: "See site", provider2Value: "Yes", highlight: "provider2" },
+      { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
+    ],
+    updatedAt: UPDATED,
+  },
+  {
+    slug: "hims-vs-male-excel",
+    provider1Id: "maleexcel",
+    provider2Id: "hims",
+    title: "Hims vs Male Excel: Which Is Better for TRT?",
+    subtitle: "A mainstream brand vs a TRT-focused clinic with more delivery options",
+    description:
+      "Compare Hims and Male Excel for testosterone therapy — delivery options, approach, and which fits you best.",
+    intro:
+      "Hims is a recognizable mainstream men's brand, while Male Excel is a TRT-focused clinic offering all three delivery routes — cream, injection and oral. Both start from lab work and a provider review; here's how they compare.",
+    verdict:
+      "Both are legitimate online options. Male Excel is our pick for men who want needle-free options (cream or oral) and a satisfaction guarantee, while Hims is a simple, familiar mainstream choice. Confirm current pricing on each provider's site.",
+    verdictWinnerPoints: [
+      "Cream, injection and oral (Kyzatrex) options",
+      "At-home testing and a 90-day guarantee",
+      "TRT-focused specialization",
+    ],
+    verdictLoserPoints: [
+      "Recognizable, mainstream brand",
+      "Broad men's-health platform",
+      "Simple, familiar online experience",
+    ],
+    winnerId: "maleexcel",
+    categories: [
+      {
+        name: "Delivery options",
+        winner: "provider1",
+        explanation:
+          "Male Excel offers cream, injection and oral testosterone, while Hims centers on injectable cypionate.",
+        supportingPoints: ["Needle-free cream and oral options at Male Excel", "Injectable-focused at Hims"],
+      },
+      {
+        name: "Brand recognition",
+        winner: "provider2",
+        explanation: "Hims is one of the most recognizable men's telehealth brands.",
+        supportingPoints: ["Widely known brand", "Broad product range"],
+      },
+    ],
+    features: [
+      { feature: "Injectable testosterone", provider1Value: "Available", provider2Value: "Available", highlight: "both" },
+      { feature: "Cream / oral options", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
+      { feature: "Satisfaction guarantee", provider1Value: "90-day", provider2Value: "See site", highlight: "provider1" },
       { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
     ],
     updatedAt: UPDATED,
@@ -497,7 +465,7 @@ const faqs: FaqItem[] = [
   {
     question: "What is TRT and how does it work?",
     answer:
-      "Testosterone replacement therapy (TRT) restores testosterone in men with clinically low levels, using formulations such as injections, gels, or other options prescribed by a provider. It's a medical treatment that requires evaluation and monitoring.",
+      "Testosterone replacement therapy (TRT) restores testosterone in men with clinically low levels, using formulations such as injections, creams/gels, or oral options prescribed by a provider. It's a medical treatment that requires evaluation and monitoring.",
   },
   {
     question: "Do I need bloodwork before starting TRT?",
@@ -505,19 +473,19 @@ const faqs: FaqItem[] = [
       "Yes. Reputable providers require lab testing to confirm low testosterone and assess your overall health before prescribing, and typically re-test during treatment to monitor your response and safety.",
   },
   {
+    question: "Injections, cream or oral — which is best?",
+    answer:
+      "Each route has trade-offs. Injections are common and cost-effective; creams are needle-free and applied daily; oral options (like testosterone undecanoate) avoid needles entirely. Some providers offer all three. A clinician helps you choose based on your labs, goals and preferences.",
+  },
+  {
+    question: "What is enclomiphene, and how is it different from TRT?",
+    answer:
+      "Enclomiphene stimulates your body's own testosterone production rather than replacing it directly, which can help preserve fertility — a reason some men choose it over traditional TRT. Whether it's appropriate depends on your labs and goals, and it requires a provider's evaluation.",
+  },
+  {
     question: "Is online TRT legitimate?",
     answer:
       "Legitimate telehealth TRT providers connect you with licensed clinicians who review your labs and history before prescribing, and dispense through licensed pharmacies. Always confirm a provider's licensing and monitoring practices.",
-  },
-  {
-    question: "What are the possible side effects of testosterone therapy?",
-    answer:
-      "TRT can have side effects and isn't appropriate for everyone. Possible effects and risks should be discussed with a licensed provider, who will weigh them against your individual situation and monitor you during treatment.",
-  },
-  {
-    question: "How is testosterone administered?",
-    answer:
-      "Depending on the provider and your plan, testosterone may be given as injections, topical gels or creams, or other forms. A provider recommends the option that fits your needs.",
   },
   {
     question: "How much does online TRT cost?",
@@ -540,10 +508,10 @@ export function trtSeed(base: SiteConfig): SiteConfig {
       backgroundImageUrl: "",
       imageAlt: "",
       updatedLabel: "Last Updated: August 2026",
-      h1: "Best TRT Clinics & Online Providers of 2026",
-      h2: "Compare the top online testosterone-therapy providers, side by side",
+      h1: "Best TRT Clinics & Online Testosterone Replacement Therapy Providers of 2026",
+      h2: "Compare the top online testosterone replacement therapy (TRT) providers, side by side",
       description:
-        "Compare the best online TRT providers — testing, treatment options, medical supervision, and overall value — to find the program that fits you.",
+        "Compare the best online TRT providers — testosterone injections, creams, oral options and enclomiphene — on testing, treatment options, medical supervision, and overall value.",
     },
     providers,
     sidebar: {
