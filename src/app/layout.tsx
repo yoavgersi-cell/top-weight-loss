@@ -20,10 +20,8 @@ export const metadata: Metadata = {
     default: "TreatmentsHub — Compare Online Treatment Providers & Prices",
     template: "%s | TreatmentsHub",
   },
-  icons: {
-    icon: "/favicon.png",
-    apple: "/apple-icon.png",
-  },
+  // Icons come from the App Router file convention (app/icon.png, app/apple-icon.png),
+  // which serves them at content-hashed URLs so they cache-bust on every update.
   description:
     "Compare top online treatment providers across weight loss, hair loss, TRT and HRT — independent rankings on pricing, medical support and real customer reviews.",
   keywords: [
