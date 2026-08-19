@@ -5,6 +5,7 @@ import type {
   BattleData,
   FaqItem,
   RankingPosition,
+  ArticleData,
 } from "../config";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -102,6 +103,51 @@ const providers: Provider[] = [
       "90-day satisfaction guarantee",
     ],
     affiliateUrl: URLS.maleexcel,
+    ctaText: "Visit Site",
+  },
+  // Competitor brands — included only to power "<competitor> vs …" comparisons.
+  // They are NOT part of our ranking (see providerOrder) and their standalone
+  // review pages de-index automatically (not in AFFILIATE_PROVIDER_IDS).
+  {
+    id: "hone",
+    name: "Hone Health",
+    tagline: "At-home hormone testing and online testosterone treatment for men",
+    logo: "/logo-hone.svg",
+    smallLogo: "/logo-hone.svg",
+    highlights: [
+      "At-home lab testing to start",
+      "Licensed-provider evaluation",
+      "Ongoing telehealth monitoring",
+    ],
+    affiliateUrl: "https://honehealth.com/",
+    ctaText: "Visit Site",
+  },
+  {
+    id: "fountain",
+    name: "Fountain TRT",
+    tagline: "Online TRT clinic — testing, prescription, and follow-up for men",
+    logo: "/logo-fountain.svg",
+    smallLogo: "/logo-fountain.svg",
+    highlights: [
+      "Lab work reviewed by a provider",
+      "Testosterone treatment options",
+      "Remote follow-up care",
+    ],
+    affiliateUrl: "https://fountaintrt.com/",
+    ctaText: "Visit Site",
+  },
+  {
+    id: "marek",
+    name: "Marek Health",
+    tagline: "Hormone optimization and health coaching with comprehensive lab testing",
+    logo: "/logo-marek.svg",
+    smallLogo: "/logo-marek.svg",
+    highlights: [
+      "Comprehensive lab panels",
+      "Provider-guided optimization",
+      "Coaching alongside treatment",
+    ],
+    affiliateUrl: "https://marekhealth.com/",
     ctaText: "Visit Site",
   },
 ];
@@ -313,6 +359,72 @@ const reviews: ReviewData[] = [
     trustBadges: ["At-home testing", "90-day guarantee", "Cream, injection & oral"],
     updatedAt: UPDATED,
   },
+  {
+    slug: "hone",
+    providerId: "hone",
+    shortSummary:
+      "A men's telehealth service that starts with at-home hormone testing and connects you with providers for testosterone treatment.",
+    reviewIntro:
+      "Hone Health is a well-known men's telehealth brand that starts with at-home hormone testing, followed by a licensed-provider evaluation and, where appropriate, testosterone treatment with ongoing monitoring. This review outlines its approach and how it compares to our top-ranked providers.",
+    keyFeatures: [
+      "At-home lab testing to begin",
+      "Licensed-provider evaluation",
+      "Ongoing telehealth monitoring",
+    ],
+    pricingSummary: PRICING_TBD,
+    treatmentOptions: ["Testosterone treatment (provider-directed)", "Follow-up lab monitoring"],
+    pros: ["Convenient at-home start", "Recognizable brand", "Remote monitoring"],
+    cons: ["Requires lab work and a medical review", "Ongoing treatment and monitoring", "Membership-style pricing"],
+    bestFor: ["Men who want an at-home, online path to evaluation", "Those comparing well-known TRT brands"],
+    finalVerdict:
+      "Hone Health is a convenient, recognizable option for men exploring testosterone treatment online. If you want oral options or specialized delivery, compare it against our top-ranked providers. Confirm current pricing on their site.",
+    trustBadges: ["Licensed US providers", "At-home testing"],
+    updatedAt: UPDATED,
+  },
+  {
+    slug: "fountain",
+    providerId: "fountain",
+    shortSummary:
+      "An online TRT clinic offering testing, prescription treatment, and remote follow-up for men.",
+    reviewIntro:
+      "Fountain TRT is an online clinic focused specifically on testosterone replacement therapy — lab work, a provider review, and remote follow-up. This review covers what's included and how it compares to our top-ranked providers.",
+    keyFeatures: [
+      "Lab work reviewed by a provider",
+      "Testosterone treatment options",
+      "Remote follow-up care",
+    ],
+    pricingSummary: PRICING_TBD,
+    treatmentOptions: ["Testosterone treatment (provider-directed)", "Follow-up monitoring"],
+    pros: ["TRT-focused service", "Provider-supervised", "Fully online process"],
+    cons: ["Requires bloodwork and a medical review", "Ongoing use and monitoring", "Fewer delivery options"],
+    bestFor: ["Men who want a focused, online TRT program", "Those comparing dedicated TRT clinics"],
+    finalVerdict:
+      "Fountain TRT is a focused, convenient online TRT option. If you want more delivery choices or included labs, compare it against our top-ranked providers. Confirm current pricing on their site.",
+    trustBadges: ["Licensed US providers", "Remote monitoring"],
+    updatedAt: UPDATED,
+  },
+  {
+    slug: "marek",
+    providerId: "marek",
+    shortSummary:
+      "Hormone optimization and health coaching built around comprehensive lab testing and provider guidance.",
+    reviewIntro:
+      "Marek Health is a hormone-optimization telehealth service that pairs comprehensive lab testing with provider guidance and health coaching. It's popular with men who want a deep, data-driven approach — which can include TRT where appropriate. This review outlines its approach and how it compares to our top-ranked providers.",
+    keyFeatures: [
+      "Comprehensive lab panels",
+      "Provider-guided hormone optimization",
+      "Health coaching alongside treatment",
+    ],
+    pricingSummary: PRICING_TBD,
+    treatmentOptions: ["Testosterone therapy (provider-directed)", "Broader hormone optimization", "Health coaching"],
+    pros: ["In-depth lab testing and interpretation", "Coaching plus medical oversight", "Individualized optimization"],
+    cons: ["More involved than a basic TRT script", "Requires bloodwork and a review", "Can cost more overall"],
+    bestFor: ["Men who want a data-driven, coached approach", "Those interested in broader hormone optimization"],
+    finalVerdict:
+      "Marek Health suits men who want a thorough, lab-driven approach with coaching. If you want a simpler, more affordable start, compare it against our top-ranked providers. Confirm current pricing on their site.",
+    trustBadges: ["Comprehensive lab testing", "Coaching included"],
+    updatedAt: UPDATED,
+  },
 ];
 
 const battles: BattleData[] = [
@@ -461,6 +573,144 @@ const battles: BattleData[] = [
     ],
     updatedAt: UPDATED,
   },
+  {
+    slug: "hone-health-vs-maximus",
+    provider1Id: "maximus",
+    provider2Id: "hone",
+    title: "Hone Health vs Maximus: Which Is Better for TRT?",
+    subtitle: "Two at-home testosterone services, compared",
+    description:
+      "Compare Hone Health and Maximus for online testosterone therapy — treatment options, approach, and which is the better fit.",
+    intro:
+      "Hone Health and Maximus both start with at-home testing and a provider review. Maximus adds specialized options like oral protocols under board-certified oversight, while Hone is a recognizable at-home TRT brand. Here's how they compare.",
+    verdict:
+      "Both offer a convenient at-home start. Maximus is our pick for men who want specialized hormone options (including oral protocols), while Hone is a solid, familiar choice. Confirm current pricing on each provider's site.",
+    verdictWinnerPoints: [
+      "Oral protocol options plus traditional TRT",
+      "Board-certified doctor oversight",
+      "At-home testing",
+    ],
+    verdictLoserPoints: [
+      "Recognizable at-home TRT brand",
+      "Licensed-provider evaluation",
+      "Ongoing telehealth monitoring",
+    ],
+    winnerId: "maximus",
+    categories: [
+      {
+        name: "Treatment options",
+        winner: "provider1",
+        explanation:
+          "Maximus offers oral protocol options alongside traditional testosterone, while Hone centers on standard provider-directed treatment.",
+        supportingPoints: ["Oral options available at Maximus", "Standard TRT at Hone"],
+      },
+      {
+        name: "At-home experience",
+        winner: "tie",
+        explanation: "Both begin with at-home testing and a licensed-provider review.",
+        supportingPoints: ["At-home testing at both", "Provider-supervised treatment"],
+      },
+    ],
+    features: [
+      { feature: "At-home testing", provider1Value: "Yes", provider2Value: "Yes", highlight: "both" },
+      { feature: "Oral option", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
+      { feature: "Board-certified oversight", provider1Value: "Yes", provider2Value: "Yes", highlight: "both" },
+      { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
+    ],
+    updatedAt: UPDATED,
+  },
+  {
+    slug: "fountain-trt-vs-petermd",
+    provider1Id: "petermd",
+    provider2Id: "fountain",
+    title: "Fountain TRT vs PeterMD: Which Online TRT Clinic Is Better?",
+    subtitle: "A focused TRT clinic vs one of the largest men's-health clinics",
+    description:
+      "Compare Fountain TRT and PeterMD for online testosterone therapy — plans, included labs, and which fits you best.",
+    intro:
+      "Fountain TRT and PeterMD are both online testosterone clinics. Fountain is TRT-focused, while PeterMD is one of the largest men's-health clinics with flexible plans and included labs. Here's how they compare.",
+    verdict:
+      "Both are provider-supervised online options. PeterMD is our pick for men who want a large, established clinic with flexible plans and included labs, while Fountain is a focused alternative. Confirm current pricing on each provider's site.",
+    verdictWinnerPoints: [
+      "Flexible monthly and yearly plans",
+      "Labs and clinician oversight included",
+      "Large, established clinic",
+    ],
+    verdictLoserPoints: [
+      "TRT-focused service",
+      "Provider-supervised treatment",
+      "Remote follow-up care",
+    ],
+    winnerId: "petermd",
+    categories: [
+      {
+        name: "Plans and value",
+        winner: "provider1",
+        explanation:
+          "PeterMD offers flexible plan lengths with labs and oversight included, while Fountain is a more focused single-service clinic.",
+        supportingPoints: ["Flexible plan lengths at PeterMD", "TRT-focused at Fountain"],
+      },
+      {
+        name: "Medical oversight",
+        winner: "tie",
+        explanation: "Both require lab work and a licensed-provider review.",
+        supportingPoints: ["Lab-based evaluation at both", "Provider-supervised treatment"],
+      },
+    ],
+    features: [
+      { feature: "Injectable testosterone", provider1Value: "Available", provider2Value: "Available", highlight: "both" },
+      { feature: "Flexible plan lengths", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
+      { feature: "Labs included", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
+      { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
+    ],
+    updatedAt: UPDATED,
+  },
+  {
+    slug: "marek-health-vs-dudemeds",
+    provider1Id: "dudemeds",
+    provider2Id: "marek",
+    title: "Marek Health vs DudeMeds: Which Is Better for TRT?",
+    subtitle: "Deep hormone optimization vs straightforward, affordable treatment",
+    description:
+      "Compare Marek Health and DudeMeds for online testosterone therapy — approach, options, and which fits you best.",
+    intro:
+      "Marek Health and DudeMeds take different approaches. Marek leans into comprehensive lab work and coaching, while DudeMeds is a physician-founded clinic offering straightforward injectable testosterone and enclomiphene. Here's how they compare.",
+    verdict:
+      "Both are legitimate options. DudeMeds is our pick for men who want a simple, affordable start with the choice of fertility-preserving enclomiphene, while Marek suits those who want deep optimization and coaching. Confirm current pricing on each provider's site.",
+    verdictWinnerPoints: [
+      "Injectable testosterone and enclomiphene",
+      "Physician-founded, at-home labs",
+      "Straightforward, value-focused",
+    ],
+    verdictLoserPoints: [
+      "Comprehensive lab panels",
+      "Health coaching alongside treatment",
+      "Deep optimization focus",
+    ],
+    winnerId: "dudemeds",
+    categories: [
+      {
+        name: "Approach",
+        winner: "provider1",
+        explanation:
+          "DudeMeds is a straightforward, affordable clinic with a fertility-preserving enclomiphene option, while Marek is a deeper optimization-and-coaching service.",
+        supportingPoints: ["Enclomiphene available at DudeMeds", "Coaching-heavy at Marek"],
+      },
+      {
+        name: "Depth of testing",
+        winner: "provider2",
+        explanation: "Marek emphasizes comprehensive lab panels and interpretation.",
+        supportingPoints: ["Detailed labs at Marek", "Standard labs at DudeMeds"],
+      },
+    ],
+    features: [
+      { feature: "Injectable testosterone", provider1Value: "Available", provider2Value: "Available", highlight: "both" },
+      { feature: "Enclomiphene option", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
+      { feature: "Coaching", provider1Value: "See site", provider2Value: "Emphasized", highlight: "provider2" },
+      { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
+    ],
+    updatedAt: UPDATED,
+  },
 ];
 
 const faqs: FaqItem[] = [
@@ -501,6 +751,196 @@ const faqs: FaqItem[] = [
   },
 ];
 
+// SEO-focused TRT guides. Content is general and appropriately hedged — no
+// fabricated statistics or provider-specific numbers — with internal links to
+// the reviews, comparisons, and between articles.
+const articles: ArticleData[] = [
+  {
+    slug: "how-to-get-trt-online",
+    title: "How to Get TRT Online: A Complete Guide for 2026",
+    description:
+      "A step-by-step guide to getting testosterone replacement therapy online — labs, provider review, treatment options, and how to choose a clinic.",
+    category: "Guide",
+    readTime: "7 min read",
+    publishedAt: "2026-08-01",
+    updatedAt: UPDATED,
+    heroColor: "#EEF4FB",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "What online TRT actually involves",
+        body: `Getting testosterone replacement therapy online has become straightforward: you complete lab work (at home or at a lab), a licensed clinician reviews your results and symptoms, and — if appropriate — treatment is prescribed and shipped to your door with ongoing monitoring. The whole process avoids in-person clinic visits while keeping real medical oversight. Compare the leading options on our <a href="/trt">best TRT providers</a> page.`,
+      },
+      {
+        heading: "Step 1: Testing",
+        body: `Every legitimate program starts with bloodwork to confirm clinically low testosterone and check your overall health. Some providers offer at-home test kits; others have you visit a lab or upload existing results. This step is non-negotiable — anywhere that prescribes testosterone without labs is a red flag.`,
+      },
+      {
+        heading: "Step 2: The provider review",
+        body: `A licensed clinician reviews your labs, symptoms and history to decide whether treatment is appropriate and, if so, which option fits. This is where good providers differ: the best ones take time to individualize your plan and explain the risks and benefits.`,
+      },
+      {
+        heading: "Step 3: Choosing your treatment",
+        body: `Testosterone can be delivered by injection, cream/gel, or oral capsule, and some men are candidates for enclomiphene instead — a medication that raises your own testosterone and can help preserve fertility. Providers vary in what they offer: see <a href="/trt/articles/testosterone-injections-vs-cream-vs-oral">injections vs cream vs oral</a> and <a href="/trt/articles/enclomiphene-vs-trt">enclomiphene vs TRT</a> to understand the choices.`,
+      },
+      {
+        heading: "How to choose a clinic",
+        body: `Prioritize real lab testing, licensed medical oversight, the treatment options that suit you, and transparent terms (pricing, included labs and follow-ups, and how easily you can cancel). Our top picks — like <a href="/trt/reviews/maximus">Maximus</a> and <a href="/trt/reviews/dudemeds">DudeMeds</a> — are compared head to head across the site. This guide is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "trt-cost",
+    title: "TRT Cost: How Much Does Testosterone Therapy Cost Online?",
+    description:
+      "What online TRT really costs — what's included, why prices vary, and how injections, cream and oral options compare on price.",
+    category: "Guide",
+    readTime: "6 min read",
+    publishedAt: "2026-07-28",
+    updatedAt: UPDATED,
+    heroColor: "#F0FAF5",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "What you're actually paying for",
+        body: `Online TRT pricing usually bundles several things: the initial labs, the provider visit, the medication itself, and ongoing follow-up and monitoring. Some clinics include all of this in one monthly price; others charge separately for labs or visits. When comparing, always look at what's included rather than the headline number.`,
+      },
+      {
+        heading: "Why prices vary so much",
+        body: `Cost depends on the treatment route (injections are typically the most affordable; creams and branded oral options cost more), how often you're monitored, and whether labs are included. Membership-style clinics spread costs into a flat monthly fee, which can be easier to budget.`,
+      },
+      {
+        heading: "Injections vs cream vs oral on price",
+        body: `Generic injectable testosterone is usually the lowest-cost route. Testosterone cream sits in the middle, and branded oral testosterone tends to be the priciest. If budget matters most, an injection-based plan is usually cheapest — see <a href="/trt/articles/testosterone-injections-vs-cream-vs-oral">injections vs cream vs oral</a>.`,
+      },
+      {
+        heading: "How to get the best value",
+        body: `Compare total cost with labs and follow-ups included, check whether a provider offers price matching or longer-plan discounts, and confirm how easy it is to pause or cancel. Because pricing changes, always verify current pricing on each provider's site — compare the options on our <a href="/trt">TRT providers</a> page.`,
+      },
+    ],
+  },
+  {
+    slug: "low-testosterone-symptoms",
+    title: "Signs of Low Testosterone: Symptoms of Low T in Men",
+    description:
+      "The common signs of low testosterone — from low energy and libido to mood and body changes — and when to get tested.",
+    category: "Science",
+    readTime: "6 min read",
+    publishedAt: "2026-07-22",
+    updatedAt: UPDATED,
+    heroColor: "#FBF3EE",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "What low testosterone is",
+        body: `Testosterone naturally declines with age, but some men have levels low enough — confirmed by bloodwork — to cause symptoms. This is sometimes called "low T." Only a lab test alongside symptoms can confirm it, which is why testing is the first step in any legitimate TRT program.`,
+      },
+      {
+        heading: "Common physical signs",
+        body: `Frequently reported physical symptoms include persistent fatigue and low energy, reduced muscle mass or strength, increased body fat, and reduced sex drive or erectile changes. These symptoms overlap with many other conditions, so they point to testing rather than a diagnosis on their own.`,
+      },
+      {
+        heading: "Mood, sleep and focus",
+        body: `Low testosterone can also affect mood, motivation, sleep quality and mental focus. Many men describe a general loss of drive or "flatness." Again, these are reasons to get evaluated, not proof of low T by themselves.`,
+      },
+      {
+        heading: "When to get tested",
+        body: `If several of these symptoms are persistent and affecting your life, it's worth getting your testosterone checked. Online providers make this easy with at-home or lab-based testing followed by a clinician review — see how the top options compare on our <a href="/trt">best TRT providers</a> page. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "trt-results-timeline",
+    title: "TRT Results Timeline: What to Expect Week by Week",
+    description:
+      "A realistic month-by-month timeline for testosterone therapy — from early energy and libido changes to muscle and body composition.",
+    category: "Guide",
+    readTime: "6 min read",
+    publishedAt: "2026-07-16",
+    updatedAt: UPDATED,
+    heroColor: "#F3EEFB",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "The short answer",
+        body: `Different benefits of TRT appear on different timelines. Some men notice changes in energy, mood and libido within the first few weeks, while changes in muscle, strength and body composition develop over months. Your provider monitors your labs and how you feel, and adjusts your dose over time.`,
+      },
+      {
+        heading: "Weeks 1–4",
+        body: `Early on, many men report improvements in libido, mood and a sense of drive. Energy may start to lift. It's also the period where your provider is dialing in the right dose, so follow-up labs matter.`,
+      },
+      {
+        heading: "Months 1–3",
+        body: `Over the first few months, improvements in mood, motivation and sexual function often become more consistent, and some men begin to notice changes in strength and workout recovery. Red-blood-cell levels and other markers are typically re-checked during this window.`,
+      },
+      {
+        heading: "Months 3–6 and beyond",
+        body: `Changes in muscle mass and body composition continue to develop with consistent treatment and training over three to six months and beyond. Benefits are maintained with ongoing therapy and generally fade if you stop. Compare provider monitoring on our <a href="/trt">TRT providers</a> page.`,
+      },
+    ],
+  },
+  {
+    slug: "testosterone-injections-vs-cream-vs-oral",
+    title: "Testosterone Injections vs Cream vs Oral: Which Is Best?",
+    description:
+      "How the three main testosterone delivery methods compare — injections, cream/gel and oral — on convenience, cost and who they suit.",
+    category: "Comparison",
+    readTime: "6 min read",
+    publishedAt: "2026-07-10",
+    updatedAt: UPDATED,
+    heroColor: "#EEF7FB",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "Injections",
+        body: `Injectable testosterone (usually cypionate) is the most common and typically most cost-effective route. It's given weekly or twice-weekly, self-administered, and provides stable levels. The main downside is the needle — though many men adjust quickly. Providers like <a href="/trt/reviews/dudemeds">DudeMeds</a> and <a href="/trt/reviews/petermd">PeterMD</a> center on injections.`,
+      },
+      {
+        heading: "Cream and gel",
+        body: `Topical testosterone is applied to the skin daily — needle-free and steady, with a microdosing approach some men prefer. The trade-offs: it must be allowed to dry and there's a risk of transferring it to others through skin contact. <a href="/trt/reviews/maleexcel">Male Excel</a> is known for its daily microdosing cream.`,
+      },
+      {
+        heading: "Oral options",
+        body: `Modern oral testosterone (such as testosterone undecanoate) avoids needles entirely and is taken as a capsule. It's newer, tends to cost more, and requires taking it with food as directed. It's a good fit for men who want to avoid both needles and skin transfer.`,
+      },
+      {
+        heading: "Which should you choose?",
+        body: `There's no single best route — it depends on your preferences, budget and a clinician's assessment. Injections win on cost and stability; cream and oral win on convenience and being needle-free. Some providers offer all three, so you can switch. Compare them on our <a href="/trt">best TRT providers</a> page. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "enclomiphene-vs-trt",
+    title: "Enclomiphene vs TRT: Which Is Right for You?",
+    description:
+      "How enclomiphene differs from traditional testosterone replacement therapy — fertility, how each works, and who each suits.",
+    category: "Comparison",
+    readTime: "6 min read",
+    publishedAt: "2026-07-04",
+    updatedAt: UPDATED,
+    heroColor: "#FBEEF4",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "How they work differently",
+        body: `Traditional TRT adds testosterone from outside the body. Enclomiphene works the other way — it stimulates your body to produce more of its own testosterone by acting on the brain's hormonal signals. That difference has real consequences, especially around fertility.`,
+      },
+      {
+        heading: "The fertility difference",
+        body: `Traditional testosterone can suppress the body's own production and sperm count, which is a concern for men who want to preserve fertility. Because enclomiphene raises your own testosterone, it can help maintain fertility — a key reason some men choose it. Providers like <a href="/trt/reviews/dudemeds">DudeMeds</a> offer both.`,
+      },
+      {
+        heading: "Who each suits",
+        body: `Enclomiphene may appeal to younger men, men planning to have children, or those who prefer to boost their own production. Traditional TRT may be the better fit when levels are very low or when enclomiphene isn't effective enough. Only a clinician can determine what's appropriate based on your labs.`,
+      },
+      {
+        heading: "How to decide",
+        body: `The right choice depends on your testosterone levels, fertility goals and how your body responds — decisions a licensed provider makes with you after reviewing your labs. Compare providers that offer both approaches on our <a href="/trt">TRT providers</a> page. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+];
+
 export function trtSeed(base: SiteConfig): SiteConfig {
   return {
     ...base,
@@ -521,11 +961,14 @@ export function trtSeed(base: SiteConfig): SiteConfig {
       blockOrder: ["secureBadge", "editorialReviews", "rankingMethodology", "disclosure"],
     },
     ranking: {
-      providerOrder: providers.map((p) => p.id),
+      // Only our five monetized providers are ranked. Hone, Fountain and Marek
+      // exist solely to power "<competitor> vs …" comparisons.
+      providerOrder: ["maximus", "hims", "dudemeds", "petermd", "maleexcel"],
       positions,
     },
     reviews,
     battles,
     faqs,
+    articles,
   };
 }
