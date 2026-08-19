@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED, DEFAULT_VERTICAL, isVertical, isPublishedVertical } from "@/lib/config";
-import { ROOT_CONTEXT, hubContext, canonicalUrl } from "@/lib/site-context";
+import { ROOT_CONTEXT, hubContext, canonicalUrl, hubLink } from "@/lib/site-context";
+import Link from "next/link";
 import { ComparisonLayout } from "@/components/comparison-layout";
 import { EditorialContent } from "@/components/editorial-content";
 import { HairLossEditorialContent } from "@/components/editorial-content-hair-loss";
 import { TrtEditorialContent } from "@/components/editorial-content-trt";
 import { HrtEditorialContent } from "@/components/editorial-content-hrt";
-import { ExpertByline } from "@/components/expert-byline";
 import { BattlePageView, battleMetadata } from "@/components/pages/battle-page";
 import { notFound } from "next/navigation";
 
@@ -70,6 +70,9 @@ export default async function BattlePage({
     const ctx = hubContext(battleSlug);
     const author = vConfig.experts?.[0];
     const reviewer = vConfig.experts?.[1];
+    // Brand the research-team name from the current context so it reads
+    // "The TreatmentsHub Research Team" on the hub (not the legacy brand).
+    const researchTeam = `The ${ctx.brandTeam.replace(/\s+Team$/i, "")} Research Team`;
 
     // WebPage + ItemList schema (authorship, freshness, ranked entities) and the
     // FAQ schema — the same E-E-A-T / rich-result signals the standalone home
@@ -85,7 +88,7 @@ export default async function BattlePage({
       dateModified: CONTENT_LAST_UPDATED,
       isPartOf: { "@type": "WebSite", name: ctx.brandDomain, url: ctx.origin },
       ...(author && {
-        author: { "@type": "Organization", name: author.name, url: canonicalUrl(ctx, "/about") },
+        author: { "@type": "Organization", name: researchTeam, url: canonicalUrl(ctx, "/about") },
       }),
       ...(reviewer && { reviewedBy: { "@type": "Organization", name: reviewer.name } }),
       publisher: {
@@ -115,10 +118,31 @@ export default async function BattlePage({
 
     const byline =
       author || reviewer ? (
-        <>
-          {author && <ExpertByline expert={author} label="Written by" />}
-          {reviewer && <ExpertByline expert={reviewer} label="Reviewed by" />}
-        </>
+        <p className="text-[13.5px] leading-relaxed text-gray-500">
+          {author && (
+            <>
+              Written by{" "}
+              <Link
+                href={hubLink(ctx, "/about")}
+                className="font-semibold text-[#191919] hover:text-[#0C4B75] hover:underline"
+              >
+                {researchTeam}
+              </Link>
+            </>
+          )}
+          {author && reviewer && <span className="text-gray-300"> · </span>}
+          {reviewer && (
+            <>
+              Reviewed by{" "}
+              <Link
+                href={hubLink(ctx, "/about")}
+                className="font-semibold text-[#191919] hover:text-[#0C4B75] hover:underline"
+              >
+                {reviewer.name}
+              </Link>
+            </>
+          )}
+        </p>
       ) : null;
 
     return (
