@@ -15,7 +15,6 @@ import { ProviderCta } from "@/components/provider-cta";
 import { BattleStickyCta } from "@/components/battle-sticky-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { TrustpilotRating } from "@/components/trustpilot-rating";
-import { ExpertByline } from "@/components/expert-byline";
 
 // Metadata for a landing page or head-to-head battle at /<slug> (root) or
 // /<vertical>/<slug> (hub). Returns { title: "Not Found" } for an unknown slug.
@@ -306,7 +305,21 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-gray-500">
               {battle.subtitle || battle.description}
             </p>
-            <LastUpdated date={battle.updatedAt || CONTENT_LAST_UPDATED} className="mt-4" />
+            <div className="mt-4 flex flex-col gap-1 text-[13px] sm:flex-row sm:items-center sm:gap-2.5">
+              {config.experts && config.experts.length > 0 && (
+                <>
+                  <p className="text-gray-500">
+                    <span className="font-semibold uppercase tracking-[0.05em] text-gray-400">Written by </span>
+                    <Link href={hubLink(ctx, "/about")} className="font-semibold text-[#191919] hover:text-[#0C4B75] hover:underline">
+                      {config.experts[0].name}
+                    </Link>
+                    <span className="text-gray-400"> · {config.experts[0].role}</span>
+                  </p>
+                  <span className="hidden text-gray-300 sm:inline">•</span>
+                </>
+              )}
+              <LastUpdated date={battle.updatedAt || CONTENT_LAST_UPDATED} />
+            </div>
           </div>
         </section>
 
@@ -319,11 +332,6 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <p className="text-[16px] leading-[1.85] text-gray-600">
               {battle.intro}
             </p>
-            {config.experts && config.experts.length > 0 && (
-              <div className="mt-5">
-                <ExpertByline expert={config.experts[0]} label="Written by" />
-              </div>
-            )}
           </div>
 
           {/* ───── PROVIDER CARDS (enriched) ───── */}
