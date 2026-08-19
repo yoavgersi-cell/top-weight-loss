@@ -1476,4 +1476,98 @@ export const articles: Article[] = [
       },
     ],
   },
+  {
+    slug: "is-embody-legit",
+    title: "Is Embody Legit? An Honest Embody Weight Loss Review (2026)",
+    description:
+      "Is Embody legit? A clear look at Embody's GLP-1 weight-loss program — its LegitScript certification, licensed pharmacies, pricing, how it works, and the pros and cons.",
+    category: "Advice",
+    readTime: "6 min read",
+    publishedAt: "2026-08-12",
+    updatedAt: "2026-08-19",
+    heroColor: "#EEF4FB",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "What is Embody?",
+        body: 'Embody is an online telehealth program that offers doctor-prescribed GLP-1 weight-loss treatment — compounded semaglutide and tirzepatide injections — through a fully online process. You complete a short health questionnaire, a licensed medical practitioner reviews it, and if appropriate, medication ships to your door. For the full breakdown, see our <a href="/reviews/embody">in-depth Embody review</a>.',
+      },
+      {
+        heading: "Is Embody legit?",
+        body: 'Yes — by the signals that matter, Embody is a legitimate telehealth provider. It is <strong>LegitScript-certified</strong> (an independent certification for online healthcare), works with <strong>US-based 503A compounding pharmacies</strong>, and requires a <strong>licensed medical review</strong> before any prescription is issued. Those three things — third-party certification, licensed pharmacies, and real clinician oversight — are exactly what separates a trustworthy provider from one to avoid.',
+      },
+      {
+        heading: "How much does Embody cost?",
+        body: 'Embody uses flat, transparent pricing: compounded semaglutide from <strong>$69/month</strong> and compounded tirzepatide from <strong>$119/month</strong>, with the medication, doctor review, supplies and shipping included — no insurance and no hidden fees. For a full breakdown, read <a href="/articles/embody-cost">how much Embody costs</a>.',
+      },
+      {
+        heading: "Pros and cons",
+        body: 'The upsides: low, flat pricing, fast 1–2 day shipping, a fully online process, and LegitScript certification with US pharmacies. The trade-offs: it offers compounded medications (not brand-name), injectables only, and — like all GLP-1 treatment — requires an online intake and doctor approval. Note that compounded medications are not FDA-approved.',
+      },
+      {
+        heading: "The verdict",
+        body: 'Embody is a legitimate, affordable way to start doctor-prescribed GLP-1 treatment online, backed by real certification and licensed pharmacies. Whether it\'s the right pick depends on price and features versus other providers — see how it stacks up in our <a href="/reviews">weight-loss provider rankings</a>, or compare cheaper and comparable options in <a href="/articles/embody-alternatives">Embody alternatives</a>. This article is general information, not medical advice.',
+      },
+    ],
+  },
+  {
+    slug: "embody-cost",
+    title: "Embody Cost: How Much Is Embody Weight Loss in 2026?",
+    description:
+      "Embody weight-loss pricing explained — compounded semaglutide from $69/month and tirzepatide from $119/month, what's included, and how it compares to other GLP-1 providers.",
+    category: "Guide",
+    readTime: "5 min read",
+    publishedAt: "2026-08-10",
+    updatedAt: "2026-08-19",
+    heroColor: "#F0FAF5",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "How much does Embody cost?",
+        body: 'Embody keeps pricing simple and flat: <strong>$69/month</strong> for compounded semaglutide and <strong>$119/month</strong> for compounded tirzepatide. There\'s no insurance requirement, no monthly membership on top, and no hidden fees. See the full write-up in our <a href="/reviews/embody">Embody review</a>.',
+      },
+      {
+        heading: "What's included in the price",
+        body: 'Unlike some providers that bill separately for visits or supplies, Embody\'s monthly price includes the medication, the doctor review, the injection supplies, and shipping. If a prescription isn\'t approved after your intake, Embody offers a full refund — so there\'s little upfront risk to getting evaluated.',
+      },
+      {
+        heading: "How Embody's pricing compares",
+        body: 'At $69/month for semaglutide, Embody is among the most affordable GLP-1 options online. Other providers price differently — for example <a href="/reviews/altrx">altRx</a> starts at $89/month with brand-name options too. Because the lowest headline price isn\'t always the best fit, compare shipping speed, support and treatment options as well. See the full lineup in our <a href="/reviews">provider rankings</a>.',
+      },
+      {
+        heading: "Is Embody worth it?",
+        body: 'For men and women who want an affordable, transparent way to start doctor-prescribed GLP-1 treatment, Embody\'s flat pricing and included extras make it strong value — provided compounded medication and injectables fit your needs. Not sure which provider fits your budget? <a href="/find-your-match">Take our matching quiz</a> or read <a href="/articles/is-embody-legit">is Embody legit?</a> This article is general information, not medical advice.',
+      },
+    ],
+  },
+  {
+    slug: "embody-alternatives",
+    title: "Embody Alternatives: The Best GLP-1 Options Compared (2026)",
+    description:
+      "The best Embody alternatives for online GLP-1 weight loss — how top providers compare on price, shipping, brand-name options and medical support.",
+    category: "Guide",
+    readTime: "6 min read",
+    publishedAt: "2026-08-08",
+    updatedAt: "2026-08-19",
+    heroColor: "#FBF3EE",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "Why look for an Embody alternative?",
+        body: 'Embody is a solid, affordable GLP-1 provider, but it isn\'t the only option — and it may not be the best fit for everyone. Some people want brand-name medication (Embody offers compounded only), faster support, or a different treatment mix. Here are strong alternatives, all comparable telehealth GLP-1 providers.',
+      },
+      {
+        heading: "altRx — broad selection, brand-name options",
+        body: '<a href="/reviews/altrx">altRx</a> offers compounded semaglutide from $89/month and tirzepatide from $149/month, plus brand-name options like Zepbound and Wegovy for those who want them. It\'s a good alternative if you want more medication choice than Embody\'s compounded-only lineup. See the head-to-head in our <a href="/altrx-vs-embody">altRx vs Embody comparison</a>.',
+      },
+      {
+        heading: "Other providers worth comparing",
+        body: 'Beyond altRx, several providers compete closely with Embody on price and service. Compare them side by side — including shipping speed, what\'s included, and treatment options — in our <a href="/reviews">weight-loss provider rankings</a>. The right alternative depends on whether you prioritize price, brand-name access, or support.',
+      },
+      {
+        heading: "How to choose",
+        body: 'Weigh price against what\'s included (labs, supplies, shipping), how fast medication arrives, whether you want compounded or brand-name treatment, and how easy it is to pause or cancel. If you\'re not sure, <a href="/find-your-match">take our matching quiz</a> for a personalized recommendation, or read our <a href="/articles/is-embody-legit">Embody review</a> first. This article is general information, not medical advice.',
+      },
+    ],
+  },
 ];
