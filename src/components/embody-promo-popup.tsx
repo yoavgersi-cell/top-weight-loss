@@ -36,22 +36,18 @@ export function EmbodyPromoPopup({ href, position }: { href: string; position?: 
 
   return (
     <div
-      className={`fixed inset-0 z-[70] flex items-center justify-center p-4 transition-opacity duration-300 sm:hidden ${
+      className={`fixed inset-0 z-[70] flex items-center justify-center px-2 py-4 transition-opacity duration-300 sm:hidden ${
         visible ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
       }`}
       role="dialog"
       aria-label="Embody offer"
     >
-      {/* Backdrop */}
-      <button
-        aria-label="Close"
-        className="absolute inset-0 h-full w-full cursor-default bg-black/50"
-        onClick={() => setClosed(true)}
-      />
+      {/* Backdrop — dims the page but does NOT close (exit is via the X only) */}
+      <div className="absolute inset-0 h-full w-full bg-black/50" />
 
       {/* Creative — the whole image links out (tracked) */}
       <div
-        className={`relative w-full max-w-[360px] transition-transform duration-300 ${
+        className={`relative w-full max-w-[430px] transition-transform duration-300 ${
           visible ? "scale-100" : "scale-95"
         }`}
       >
@@ -74,17 +70,17 @@ export function EmbodyPromoPopup({ href, position }: { href: string; position?: 
           <img
             src="/embodypopup.png"
             alt="Embody — GLP-1 from $69/mo. Start now and save."
-            className="block h-auto max-h-[86vh] w-full rounded-[24px] object-contain shadow-2xl"
+            className="block h-auto max-h-[88vh] w-full rounded-[24px] object-contain shadow-2xl"
           />
         </a>
 
-        {/* Close — sits over the creative's own X in the top-right corner */}
+        {/* Close — the only way to dismiss the popup */}
         <button
           aria-label="Close"
           onClick={() => setClosed(true)}
-          className="absolute right-2 top-2 flex h-14 w-14 items-center justify-center rounded-full text-transparent"
+          className="absolute right-2 top-2 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-black/80 text-white shadow-lg ring-2 ring-white/70 transition-colors hover:bg-black"
         >
-          <X className="h-5 w-5" strokeWidth={2.5} />
+          <X className="h-6 w-6" strokeWidth={2.5} />
         </button>
       </div>
     </div>
