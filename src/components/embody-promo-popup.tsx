@@ -7,7 +7,7 @@ import { trackProviderClick } from "@/lib/analytics";
 // Fixed, evergreen countdown — starts from the same duration on every page load
 // (a marketing urgency device, not a real deadline).
 const START_SECONDS = 5 * 86400 + 21 * 3600 + 52 * 60 + 30;
-const APPEAR_AFTER_MS = 4000;
+const APPEAR_AFTER_MS = 10000;
 
 const pad = (n: number) => String(n).padStart(2, "0");
 
