@@ -656,7 +656,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
             <div className="border-b border-gray-100 bg-gray-50/70 px-6 py-4">
               <h2 className="text-[18px] font-bold text-[#191919]">
-                {provider.name} Review: Frequently Asked Questions
+                {provider.name} Review: FAQs
               </h2>
             </div>
             <div className="divide-y divide-gray-100">

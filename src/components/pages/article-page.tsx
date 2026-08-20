@@ -292,8 +292,10 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                   <h2 className="mb-3 text-[20px] font-bold text-[#191919] scroll-mt-24">
                     {section.heading}
                   </h2>
-                  <p
-                    className="text-[16px] leading-[1.75] text-gray-600 [&_a]:text-[#0C4B75] [&_a]:font-medium [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-[#093d61]"
+                  {/* div (not p) so author HTML can include block elements —
+                      lists, tables, callouts — styled via .article-body css */}
+                  <div
+                    className="article-body text-[16px] leading-[1.75] text-gray-600 [&_a]:text-[#0C4B75] [&_a]:font-medium [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-[#093d61]"
                     dangerouslySetInnerHTML={{ __html: section.body }}
                   />
                 </section>

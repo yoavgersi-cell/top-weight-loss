@@ -92,7 +92,7 @@ const providers: Provider[] = [
   },
   {
     id: "ro",
-    name: "Ro",
+    name: "ro",
     tagline: "Finasteride & minoxidil through a broad telehealth platform covering many areas of care",
     logo: "/logos/ro.svg",
     smallLogo: "/logos/ro-icon.svg",

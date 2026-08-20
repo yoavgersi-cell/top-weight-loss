@@ -757,7 +757,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           {battleFaqs.length > 0 && (
             <div className="mb-14">
               <h2 className="mb-6 text-[24px] font-bold text-[#191919]">
-                {matchupLabel}: Frequently Asked Questions
+                {matchupLabel}: FAQs
               </h2>
               <div className="divide-y divide-gray-100 overflow-hidden rounded-2xl border border-gray-200 bg-white">
                 {battleFaqs.map((f, i) => (

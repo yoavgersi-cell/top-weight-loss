@@ -75,3 +75,116 @@ html[data-hub] .hub-name {
   0% { transform: translateX(-160%); }
   100% { transform: translateX(320%); }
 }
+
+/* ───── Rich article typography (.article-body) ─────
+   Article section bodies are author-written HTML (from code seeds or the CMS).
+   These rules give plain semantic markup — p, ul, ol, table, strong — an
+   editorial, readable rhythm, plus two purpose classes:
+   .qa       an "at a glance" callout box (quick answer / snippet bait)
+   .cta-row  an inline text-link call-to-action row                       */
+
+.article-body > p + p,
+.article-body p + p {
+  margin-top: 0.9em;
+}
+.article-body strong {
+  color: #191919;
+  font-weight: 600;
+}
+.article-body ul,
+.article-body ol {
+  margin: 0.9em 0;
+  padding-left: 1.35em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45em;
+}
+.article-body ul li {
+  list-style: none;
+  position: relative;
+}
+.article-body ul li::before {
+  content: "";
+  position: absolute;
+  left: -1.05em;
+  top: 0.62em;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: #0c4b75;
+}
+.article-body ol li {
+  list-style: decimal;
+}
+.article-body table {
+  width: 100%;
+  margin: 1.15em 0;
+  border-collapse: collapse;
+  font-size: 14.5px;
+  line-height: 1.5;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.article-body table th {
+  text-align: left;
+  font-weight: 700;
+  color: #191919;
+  background: #f8fafc;
+  padding: 10px 14px;
+  border-bottom: 2px solid #e5e7eb;
+}
+.article-body table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #4b5563;
+  vertical-align: top;
+}
+.article-body table tr:last-child td {
+  border-bottom: none;
+}
+.article-body table td:first-child {
+  font-weight: 600;
+  color: #191919;
+}
+@media (max-width: 640px) {
+  .article-body table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+.article-body .qa {
+  margin: 0 0 1.1em;
+  padding: 14px 18px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-left: 3px solid #0c4b75;
+  border-radius: 12px;
+  color: #374151;
+}
+.article-body .qa strong:first-child {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #0c4b75;
+}
+.article-body .cta-row {
+  margin: 1em 0;
+}
+.article-body .cta-row a {
+  font-weight: 700;
+  color: #0c4b75;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(12, 75, 117, 0.25);
+  padding-bottom: 1px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.article-body .cta-row a:hover {
+  color: #093d61;
+  border-bottom-color: #093d61;
+}

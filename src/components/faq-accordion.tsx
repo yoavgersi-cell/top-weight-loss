@@ -19,7 +19,7 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
   return (
     <section className="mx-auto max-w-[1200px] px-4 py-12">
       <h2 className="mb-6 text-[24px] font-bold text-[#191919]">
-        Frequently Asked Questions
+        FAQs
       </h2>
       <div className="divide-y divide-[#E5E5E5]">
         {items.map((item, index) => (
