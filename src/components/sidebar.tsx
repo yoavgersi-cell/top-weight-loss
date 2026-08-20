@@ -59,7 +59,7 @@ export function Sidebar({ config, providers, linkPrefix = "" }: { config: Sideba
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={imgSrc}
-              alt={featured ? `${featured.name} — Editor's Featured Provider` : config.featuredImageAlt}
+              alt={featured ? `${featured.name} - Editor's Featured Provider` : config.featuredImageAlt}
               className="w-full h-auto"
               loading="lazy"
             />

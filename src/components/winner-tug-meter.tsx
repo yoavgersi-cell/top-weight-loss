@@ -18,7 +18,7 @@ export function WinnerTugMeter({
 }: {
   winnerName: string;
   loserName: string;
-  advantage: number; // winner's share, 50–100
+  advantage: number; // winner's share, 50-100
   winnerHref: string;
   winnerSlug: string;
 }) {
@@ -99,7 +99,7 @@ export function WinnerTugMeter({
               revealed ? "opacity-100" : "opacity-0"
             }`}
           >
-            After comparing both, we&rsquo;d go with {winnerName} — it came out ahead of {loserName} on most of what matters.
+            After comparing both, we&rsquo;d go with {winnerName} - it came out ahead of {loserName} on most of what matters.
           </p>
 
           <div

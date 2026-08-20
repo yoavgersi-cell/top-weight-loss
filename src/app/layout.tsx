@@ -17,13 +17,13 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.treatmentshub.com"),
   title: {
-    default: "TreatmentsHub — Compare Online Treatment Providers & Prices",
+    default: "TreatmentsHub - Compare Online Treatment Providers & Prices",
     template: "%s | TreatmentsHub",
   },
   // Icons come from the App Router file convention (app/icon.png, app/apple-icon.png),
   // which serves them at content-hashed URLs so they cache-bust on every update.
   description:
-    "Compare top online treatment providers across weight loss, hair loss, TRT and HRT — independent rankings on pricing, medical support and real customer reviews.",
+    "Compare top online treatment providers across weight loss, hair loss, TRT and HRT - independent rankings on pricing, medical support and real customer reviews.",
   keywords: [
     "treatment comparison",
     "telehealth comparison",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "menopause treatment online",
   ],
   openGraph: {
-    title: "TreatmentsHub — Compare Online Treatment Providers & Prices",
+    title: "TreatmentsHub - Compare Online Treatment Providers & Prices",
     description:
       "Independent, side-by-side comparisons of top online providers across weight loss, hair loss, TRT and HRT.",
     type: "website",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TreatmentsHub — Compare Online Treatment Providers & Prices",
+    title: "TreatmentsHub - Compare Online Treatment Providers & Prices",
     description:
       "Independent, side-by-side comparisons of top online providers across weight loss, hair loss, TRT and HRT.",
   },
@@ -105,7 +105,7 @@ export default function RootLayout({
               url: "https://www.treatmentshub.com",
               areaServed: { "@type": "Country", name: "United States" },
               logo: "https://www.treatmentshub.com/treatmentshub.png",
-              description: "Independent guides and provider comparisons across weight loss, hair loss, TRT and HRT — expert reviews, pricing research, and side-by-side comparisons.",
+              description: "Independent guides and provider comparisons across weight loss, hair loss, TRT and HRT - expert reviews, pricing research, and side-by-side comparisons.",
               sameAs: [],
             }),
           }}

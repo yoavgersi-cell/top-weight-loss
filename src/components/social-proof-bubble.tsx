@@ -20,7 +20,7 @@ export function SocialProofBubble({ number, text }: { number: string; text: stri
               <span className="font-extrabold text-[#191919]">{number}</span> {text}
             </p>
           </div>
-          {/* Speech tail — points down to the CTA's top-left corner */}
+          {/* Speech tail - points down to the CTA's top-left corner */}
           <span className="absolute -bottom-[6px] right-6 h-3.5 w-3.5 rotate-45 rounded-[3px] bg-white shadow-[3px_3px_6px_-3px_rgba(16,24,40,0.28)]" />
         </div>
       </div>

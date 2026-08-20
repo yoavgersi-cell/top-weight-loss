@@ -10,7 +10,7 @@ import type {
 // HRT (menopause / hormone replacement therapy) content skeleton
 //
 // Same rules as the other skeletons: real telehealth brands with truthful,
-// general descriptions and NO invented data — affiliateUrl is "#", no Trustpilot
+// general descriptions and NO invented data - affiliateUrl is "#", no Trustpilot
 // ratings, no specific prices. Overridden the moment it's edited in the CMS, and
 // the vertical stays unpublished until it's ready.
 // ─────────────────────────────────────────────────────────────────────────────
@@ -190,7 +190,7 @@ const battles: BattleData[] = [
     title: "Midi Health vs Alloy: Which Is Right for You?",
     subtitle: "Two menopause telehealth services, compared",
     description:
-      "Compare Midi Health and Alloy for online menopause care and hormone therapy — approach, options, and who each one fits best.",
+      "Compare Midi Health and Alloy for online menopause care and hormone therapy - approach, options, and who each one fits best.",
     intro:
       "Midi Health and Alloy both provide online menopause care with clinicians and prescription options. Here's how they compare so you can choose the one that fits you.",
     verdict:
@@ -230,12 +230,12 @@ const faqs: FaqItem[] = [
   {
     question: "What is HRT for menopause?",
     answer:
-      "Hormone replacement therapy (HRT) uses estrogen — often with progesterone — to relieve menopause symptoms such as hot flashes and night sweats. It's a prescription treatment that a licensed provider tailors to your history and needs.",
+      "Hormone replacement therapy (HRT) uses estrogen - often with progesterone - to relieve menopause symptoms such as hot flashes and night sweats. It's a prescription treatment that a licensed provider tailors to your history and needs.",
   },
   {
     question: "Is hormone replacement therapy safe?",
     answer:
-      "HRT has benefits and risks that depend on your age, health history, and the type and timing of treatment. A licensed provider will review your situation to determine whether it's appropriate for you — it isn't right for everyone.",
+      "HRT has benefits and risks that depend on your age, health history, and the type and timing of treatment. A licensed provider will review your situation to determine whether it's appropriate for you - it isn't right for everyone.",
   },
   {
     question: "Do I need lab tests or an evaluation for HRT?",
@@ -245,7 +245,7 @@ const faqs: FaqItem[] = [
   {
     question: "Can HRT be prescribed online?",
     answer:
-      "Yes — reputable telehealth services connect you with licensed clinicians who review your information before prescribing, and dispense through licensed pharmacies. Always confirm a provider's licensing and practices.",
+      "Yes - reputable telehealth services connect you with licensed clinicians who review your information before prescribing, and dispense through licensed pharmacies. Always confirm a provider's licensing and practices.",
   },
   {
     question: "What symptoms can HRT help with?",
@@ -266,7 +266,7 @@ export function hrtSeed(base: SiteConfig): SiteConfig {
       h1: "Best HRT & Menopause Providers of 2026",
       h2: "Compare the top online menopause and hormone-therapy providers, side by side",
       description:
-        "Compare the best online HRT and menopause providers — treatment options, specialist care, and overall value — to find the program that fits you.",
+        "Compare the best online HRT and menopause providers - treatment options, specialist care, and overall value - to find the program that fits you.",
     },
     providers,
     sidebar: {

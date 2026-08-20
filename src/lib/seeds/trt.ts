@@ -11,8 +11,8 @@ import type {
 // ─────────────────────────────────────────────────────────────────────────────
 // TRT (testosterone replacement therapy) content
 //
-// Launch set for the TRT vertical: the five providers we monetize — Maximus,
-// Hims, DudeMeds, PeterMD and Male Excel — with truthful, general descriptions
+// Launch set for the TRT vertical: the five providers we monetize - Maximus,
+// Hims, DudeMeds, PeterMD and Male Excel - with truthful, general descriptions
 // grounded in their public offering. It carries NO invented data: no Trustpilot
 // ratings, no specific prices (pricing points to the provider's site). Real
 // affiliate links and brand logos are filled in before the vertical is added to
@@ -38,7 +38,7 @@ const providers: Provider[] = [
   {
     id: "maximus",
     name: "Maximus",
-    tagline: "Telehealth testosterone support for men — including oral protocol options — with at-home testing",
+    tagline: "Telehealth testosterone support for men - including oral protocol options - with at-home testing",
     logo: "/maximuslogo.png",
     smallLogo: "/maximuslogo.png",
     highlights: [
@@ -52,7 +52,7 @@ const providers: Provider[] = [
   {
     id: "hims",
     name: "Hims",
-    tagline: "Recognizable men's telehealth brand — testosterone replacement therapy, 100% online",
+    tagline: "Recognizable men's telehealth brand - testosterone replacement therapy, 100% online",
     logo: "/logos/hims.svg",
     smallLogo: "/logos/hims.svg",
     highlights: [
@@ -66,12 +66,12 @@ const providers: Provider[] = [
   {
     id: "dudemeds",
     name: "DudeMeds",
-    tagline: "Physician-founded online TRT — injectable testosterone and enclomiphene, with at-home labs",
+    tagline: "Physician-founded online TRT - injectable testosterone and enclomiphene, with at-home labs",
     logo: "/logo-dudemeds.svg",
     smallLogo: "/logo-dudemeds.svg",
     highlights: [
       "Injectable testosterone (cypionate), supplies included",
-      "Enclomiphene option — helps preserve fertility",
+      "Enclomiphene option - helps preserve fertility",
       "At-home or uploaded labs; founded by physicians",
     ],
     affiliateUrl: URLS.dudemeds,
@@ -80,7 +80,7 @@ const providers: Provider[] = [
   {
     id: "petermd",
     name: "PeterMD",
-    tagline: "One of North America's largest online men's-health clinics — testosterone therapy with flexible plans",
+    tagline: "One of North America's largest online men's-health clinics - testosterone therapy with flexible plans",
     logo: "/logo-petermd.svg",
     smallLogo: "/logo-petermd.svg",
     highlights: [
@@ -94,7 +94,7 @@ const providers: Provider[] = [
   {
     id: "maleexcel",
     name: "Male Excel",
-    tagline: "TRT-focused telehealth — testosterone cream, injections and oral options, with at-home testing",
+    tagline: "TRT-focused telehealth - testosterone cream, injections and oral options, with at-home testing",
     logo: "/logo-maleexcel.svg",
     smallLogo: "/logo-maleexcel.svg",
     highlights: [
@@ -105,7 +105,7 @@ const providers: Provider[] = [
     affiliateUrl: URLS.maleexcel,
     ctaText: "Visit Site",
   },
-  // Competitor brands — included only to power "<competitor> vs …" comparisons.
+  // Competitor brands - included only to power "<competitor> vs …" comparisons.
   // They are NOT part of our ranking (see providerOrder) and their standalone
   // review pages de-index automatically (not in AFFILIATE_PROVIDER_IDS).
   {
@@ -125,7 +125,7 @@ const providers: Provider[] = [
   {
     id: "fountain",
     name: "Fountain TRT",
-    tagline: "Online TRT clinic — testing, prescription, and follow-up for men",
+    tagline: "Online TRT clinic - testing, prescription, and follow-up for men",
     logo: "/logo-fountain.svg",
     smallLogo: "/logo-fountain.svg",
     highlights: [
@@ -206,9 +206,9 @@ const reviews: ReviewData[] = [
     slug: "hims",
     providerId: "hims",
     shortSummary:
-      "A recognizable men's telehealth brand offering testosterone replacement therapy — injectable cypionate — after online labs and a provider review.",
+      "A recognizable men's telehealth brand offering testosterone replacement therapy - injectable cypionate - after online labs and a provider review.",
     reviewIntro:
-      "Hims is one of the most recognizable men's telehealth brands, and its testosterone offering follows the same simple, online model: complete lab work, have a licensed provider review your results, and — if appropriate — receive injectable testosterone (cypionate) with ongoing support. This review outlines what it offers and who it fits.",
+      "Hims is one of the most recognizable men's telehealth brands, and its testosterone offering follows the same simple, online model: complete lab work, have a licensed provider review your results, and - if appropriate - receive injectable testosterone (cypionate) with ongoing support. This review outlines what it offers and who it fits.",
     keyFeatures: [
       "Injectable testosterone (cypionate)",
       "Online labs and licensed-provider evaluation",
@@ -246,10 +246,10 @@ const reviews: ReviewData[] = [
     shortSummary:
       "A physician-founded telehealth clinic offering injectable testosterone (cypionate) and enclomiphene, with at-home lab options.",
     reviewIntro:
-      "DudeMeds is a physician-founded telehealth clinic focused on men's hormone care. It offers injectable testosterone (cypionate) — the long-standing standard for TRT — as well as enclomiphene, a medication that stimulates the body's own testosterone and can help preserve fertility. You provide labs (at-home or uploaded), a licensed provider reviews them, and treatment ships to your door. This review covers its approach and fit.",
+      "DudeMeds is a physician-founded telehealth clinic focused on men's hormone care. It offers injectable testosterone (cypionate) - the long-standing standard for TRT - as well as enclomiphene, a medication that stimulates the body's own testosterone and can help preserve fertility. You provide labs (at-home or uploaded), a licensed provider reviews them, and treatment ships to your door. This review covers its approach and fit.",
     keyFeatures: [
       "Injectable testosterone cypionate, supplies included",
-      "Enclomiphene option — helps preserve fertility",
+      "Enclomiphene option - helps preserve fertility",
       "At-home or uploaded labs",
       "Founded by two physicians",
     ],
@@ -325,7 +325,7 @@ const reviews: ReviewData[] = [
     shortSummary:
       "A TRT-focused telehealth clinic offering testosterone cream, injections and oral options, built around at-home testing and a satisfaction guarantee.",
     reviewIntro:
-      "Male Excel is a TRT-focused telehealth clinic that stands out for offering all three main delivery routes — testosterone cream (with a daily microdosing approach), injectable cypionate, and an oral option (Kyzatrex) — built around at-home testosterone testing and telemedicine. It also backs treatment with a 90-day satisfaction guarantee. This review outlines its approach and fit.",
+      "Male Excel is a TRT-focused telehealth clinic that stands out for offering all three main delivery routes - testosterone cream (with a daily microdosing approach), injectable cypionate, and an oral option (Kyzatrex) - built around at-home testosterone testing and telemedicine. It also backs treatment with a 90-day satisfaction guarantee. This review outlines its approach and fit.",
     keyFeatures: [
       "Cream, injection and oral (Kyzatrex) options",
       "At-home testosterone testing",
@@ -340,7 +340,7 @@ const reviews: ReviewData[] = [
       "At-home lab testing",
     ],
     pros: [
-      "All three delivery routes — cream, injection and oral",
+      "All three delivery routes - cream, injection and oral",
       "At-home testing and needle-free options",
       "90-day satisfaction guarantee",
     ],
@@ -355,7 +355,7 @@ const reviews: ReviewData[] = [
       "Anyone who values a satisfaction guarantee",
     ],
     finalVerdict:
-      "Male Excel is a strong choice for men who want flexibility in how they take testosterone — especially needle-free cream or oral options — with at-home testing and a guarantee. Confirm current pricing and eligibility on their site.",
+      "Male Excel is a strong choice for men who want flexibility in how they take testosterone - especially needle-free cream or oral options - with at-home testing and a guarantee. Confirm current pricing and eligibility on their site.",
     trustBadges: ["At-home testing", "90-day guarantee", "Cream, injection & oral"],
     updatedAt: UPDATED,
   },
@@ -387,7 +387,7 @@ const reviews: ReviewData[] = [
     shortSummary:
       "An online TRT clinic offering testing, prescription treatment, and remote follow-up for men.",
     reviewIntro:
-      "Fountain TRT is an online clinic focused specifically on testosterone replacement therapy — lab work, a provider review, and remote follow-up. This review covers what's included and how it compares to our top-ranked providers.",
+      "Fountain TRT is an online clinic focused specifically on testosterone replacement therapy - lab work, a provider review, and remote follow-up. This review covers what's included and how it compares to our top-ranked providers.",
     keyFeatures: [
       "Lab work reviewed by a provider",
       "Testosterone treatment options",
@@ -409,7 +409,7 @@ const reviews: ReviewData[] = [
     shortSummary:
       "Hormone optimization and health coaching built around comprehensive lab testing and provider guidance.",
     reviewIntro:
-      "Marek Health is a hormone-optimization telehealth service that pairs comprehensive lab testing with provider guidance and health coaching. It's popular with men who want a deep, data-driven approach — which can include TRT where appropriate. This review outlines its approach and how it compares to our top-ranked providers.",
+      "Marek Health is a hormone-optimization telehealth service that pairs comprehensive lab testing with provider guidance and health coaching. It's popular with men who want a deep, data-driven approach - which can include TRT where appropriate. This review outlines its approach and how it compares to our top-ranked providers.",
     keyFeatures: [
       "Comprehensive lab panels",
       "Provider-guided hormone optimization",
@@ -435,7 +435,7 @@ const battles: BattleData[] = [
     title: "Maximus vs Hims: Which Is Better for TRT?",
     subtitle: "A specialized hormone service vs a mainstream men's brand",
     description:
-      "Compare Maximus and Hims for online testosterone therapy — treatment options, approach, and which is the better fit.",
+      "Compare Maximus and Hims for online testosterone therapy - treatment options, approach, and which is the better fit.",
     intro:
       "Maximus and Hims both offer online testosterone treatment after lab work and a provider review. Maximus leans into specialized hormone options (including oral protocols), while Hims is a recognizable mainstream brand with a broad men's-health platform. Here's how they compare.",
     verdict:
@@ -487,7 +487,7 @@ const battles: BattleData[] = [
     title: "DudeMeds vs PeterMD: Which Online TRT Clinic Is Better?",
     subtitle: "Physician-founded flexibility vs a large, established clinic",
     description:
-      "Compare DudeMeds and PeterMD for online testosterone therapy — treatment options, plans, and which fits you best.",
+      "Compare DudeMeds and PeterMD for online testosterone therapy - treatment options, plans, and which fits you best.",
     intro:
       "DudeMeds and PeterMD are both affordable, fully online TRT clinics. DudeMeds is physician-founded and offers both injectable testosterone and fertility-preserving enclomiphene, while PeterMD is one of the largest men's-health clinics with flexible plans. Here's how they compare.",
     verdict:
@@ -534,9 +534,9 @@ const battles: BattleData[] = [
     title: "Hims vs Male Excel: Which Is Better for TRT?",
     subtitle: "A mainstream brand vs a TRT-focused clinic with more delivery options",
     description:
-      "Compare Hims and Male Excel for testosterone therapy — delivery options, approach, and which fits you best.",
+      "Compare Hims and Male Excel for testosterone therapy - delivery options, approach, and which fits you best.",
     intro:
-      "Hims is a recognizable mainstream men's brand, while Male Excel is a TRT-focused clinic offering all three delivery routes — cream, injection and oral. Both start from lab work and a provider review; here's how they compare.",
+      "Hims is a recognizable mainstream men's brand, while Male Excel is a TRT-focused clinic offering all three delivery routes - cream, injection and oral. Both start from lab work and a provider review; here's how they compare.",
     verdict:
       "Both are legitimate online options. Male Excel is our pick for men who want needle-free options (cream or oral) and a satisfaction guarantee, while Hims is a simple, familiar mainstream choice. Confirm current pricing on each provider's site.",
     verdictWinnerPoints: [
@@ -580,7 +580,7 @@ const battles: BattleData[] = [
     title: "Hone Health vs Maximus: Which Is Better for TRT?",
     subtitle: "Two at-home testosterone services, compared",
     description:
-      "Compare Hone Health and Maximus for online testosterone therapy — treatment options, approach, and which is the better fit.",
+      "Compare Hone Health and Maximus for online testosterone therapy - treatment options, approach, and which is the better fit.",
     intro:
       "Hone Health and Maximus both start with at-home testing and a provider review. Maximus adds specialized options like oral protocols under board-certified oversight, while Hone is a recognizable at-home TRT brand. Here's how they compare.",
     verdict:
@@ -626,7 +626,7 @@ const battles: BattleData[] = [
     title: "Fountain TRT vs PeterMD: Which Online TRT Clinic Is Better?",
     subtitle: "A focused TRT clinic vs one of the largest men's-health clinics",
     description:
-      "Compare Fountain TRT and PeterMD for online testosterone therapy — plans, included labs, and which fits you best.",
+      "Compare Fountain TRT and PeterMD for online testosterone therapy - plans, included labs, and which fits you best.",
     intro:
       "Fountain TRT and PeterMD are both online testosterone clinics. Fountain is TRT-focused, while PeterMD is one of the largest men's-health clinics with flexible plans and included labs. Here's how they compare.",
     verdict:
@@ -672,7 +672,7 @@ const battles: BattleData[] = [
     title: "Marek Health vs DudeMeds: Which Is Better for TRT?",
     subtitle: "Deep hormone optimization vs straightforward, affordable treatment",
     description:
-      "Compare Marek Health and DudeMeds for online testosterone therapy — approach, options, and which fits you best.",
+      "Compare Marek Health and DudeMeds for online testosterone therapy - approach, options, and which fits you best.",
     intro:
       "Marek Health and DudeMeds take different approaches. Marek leans into comprehensive lab work and coaching, while DudeMeds is a physician-founded clinic offering straightforward injectable testosterone and enclomiphene. Here's how they compare.",
     verdict:
@@ -725,14 +725,14 @@ const faqs: FaqItem[] = [
       "Yes. Reputable providers require lab testing to confirm low testosterone and assess your overall health before prescribing, and typically re-test during treatment to monitor your response and safety.",
   },
   {
-    question: "Injections, cream or oral — which is best?",
+    question: "Injections, cream or oral - which is best?",
     answer:
       "Each route has trade-offs. Injections are common and cost-effective; creams are needle-free and applied daily; oral options (like testosterone undecanoate) avoid needles entirely. Some providers offer all three. A clinician helps you choose based on your labs, goals and preferences.",
   },
   {
     question: "What is enclomiphene, and how is it different from TRT?",
     answer:
-      "Enclomiphene stimulates your body's own testosterone production rather than replacing it directly, which can help preserve fertility — a reason some men choose it over traditional TRT. Whether it's appropriate depends on your labs and goals, and it requires a provider's evaluation.",
+      "Enclomiphene stimulates your body's own testosterone production rather than replacing it directly, which can help preserve fertility - a reason some men choose it over traditional TRT. Whether it's appropriate depends on your labs and goals, and it requires a provider's evaluation.",
   },
   {
     question: "Is online TRT legitimate?",
@@ -742,7 +742,7 @@ const faqs: FaqItem[] = [
   {
     question: "How much does online TRT cost?",
     answer:
-      "Costs vary widely by provider and depend on what's included — the initial labs, the provider visit, medication, and follow-up monitoring are sometimes bundled and sometimes billed separately. Because pricing changes, check each provider's site for current pricing before you start.",
+      "Costs vary widely by provider and depend on what's included - the initial labs, the provider visit, medication, and follow-up monitoring are sometimes bundled and sometimes billed separately. Because pricing changes, check each provider's site for current pricing before you start.",
   },
   {
     question: "How long does TRT take to work?",
@@ -751,15 +751,15 @@ const faqs: FaqItem[] = [
   },
 ];
 
-// SEO-focused TRT guides. Content is general and appropriately hedged — no
-// fabricated statistics or provider-specific numbers — with internal links to
+// SEO-focused TRT guides. Content is general and appropriately hedged - no
+// fabricated statistics or provider-specific numbers - with internal links to
 // the reviews, comparisons, and between articles.
 const articles: ArticleData[] = [
   {
     slug: "how-to-get-trt-online",
     title: "How to Get TRT Online: A Complete Guide for 2026",
     description:
-      "A step-by-step guide to getting testosterone replacement therapy online — labs, provider review, treatment options, and how to choose a clinic.",
+      "A step-by-step guide to getting testosterone replacement therapy online - labs, provider review, treatment options, and how to choose a clinic.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-01",
@@ -769,11 +769,11 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "What online TRT actually involves",
-        body: `Getting testosterone replacement therapy online has become straightforward: you complete lab work (at home or at a lab), a licensed clinician reviews your results and symptoms, and — if appropriate — treatment is prescribed and shipped to your door with ongoing monitoring. The whole process avoids in-person clinic visits while keeping real medical oversight. Compare the leading options on our <a href="/trt">best TRT providers</a> page.`,
+        body: `Getting testosterone replacement therapy online has become straightforward: you complete lab work (at home or at a lab), a licensed clinician reviews your results and symptoms, and - if appropriate - treatment is prescribed and shipped to your door with ongoing monitoring. The whole process avoids in-person clinic visits while keeping real medical oversight. Compare the leading options on our <a href="/trt">best TRT providers</a> page.`,
       },
       {
         heading: "Step 1: Testing",
-        body: `Every legitimate program starts with bloodwork to confirm clinically low testosterone and check your overall health. Some providers offer at-home test kits; others have you visit a lab or upload existing results. This step is non-negotiable — anywhere that prescribes testosterone without labs is a red flag.`,
+        body: `Every legitimate program starts with bloodwork to confirm clinically low testosterone and check your overall health. Some providers offer at-home test kits; others have you visit a lab or upload existing results. This step is non-negotiable - anywhere that prescribes testosterone without labs is a red flag.`,
       },
       {
         heading: "Step 2: The provider review",
@@ -781,11 +781,11 @@ const articles: ArticleData[] = [
       },
       {
         heading: "Step 3: Choosing your treatment",
-        body: `Testosterone can be delivered by injection, cream/gel, or oral capsule, and some men are candidates for enclomiphene instead — a medication that raises your own testosterone and can help preserve fertility. Providers vary in what they offer: see <a href="/trt/articles/testosterone-injections-vs-cream-vs-oral">injections vs cream vs oral</a> and <a href="/trt/articles/enclomiphene-vs-trt">enclomiphene vs TRT</a> to understand the choices.`,
+        body: `Testosterone can be delivered by injection, cream/gel, or oral capsule, and some men are candidates for enclomiphene instead - a medication that raises your own testosterone and can help preserve fertility. Providers vary in what they offer: see <a href="/trt/articles/testosterone-injections-vs-cream-vs-oral">injections vs cream vs oral</a> and <a href="/trt/articles/enclomiphene-vs-trt">enclomiphene vs TRT</a> to understand the choices.`,
       },
       {
         heading: "How to choose a clinic",
-        body: `Prioritize real lab testing, licensed medical oversight, the treatment options that suit you, and transparent terms (pricing, included labs and follow-ups, and how easily you can cancel). Our top picks — like <a href="/trt/reviews/maximus">Maximus</a> and <a href="/trt/reviews/dudemeds">DudeMeds</a> — are compared head to head across the site. This guide is general information, not medical advice.`,
+        body: `Prioritize real lab testing, licensed medical oversight, the treatment options that suit you, and transparent terms (pricing, included labs and follow-ups, and how easily you can cancel). Our top picks - like <a href="/trt/reviews/maximus">Maximus</a> and <a href="/trt/reviews/dudemeds">DudeMeds</a> - are compared head to head across the site. This guide is general information, not medical advice.`,
       },
     ],
   },
@@ -793,7 +793,7 @@ const articles: ArticleData[] = [
     slug: "trt-cost",
     title: "TRT Cost: How Much Does Testosterone Therapy Cost Online?",
     description:
-      "What online TRT really costs — what's included, why prices vary, and how injections, cream and oral options compare on price.",
+      "What online TRT really costs - what's included, why prices vary, and how injections, cream and oral options compare on price.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-07-28",
@@ -811,11 +811,11 @@ const articles: ArticleData[] = [
       },
       {
         heading: "Injections vs cream vs oral on price",
-        body: `Generic injectable testosterone is usually the lowest-cost route. Testosterone cream sits in the middle, and branded oral testosterone tends to be the priciest. If budget matters most, an injection-based plan is usually cheapest — see <a href="/trt/articles/testosterone-injections-vs-cream-vs-oral">injections vs cream vs oral</a>.`,
+        body: `Generic injectable testosterone is usually the lowest-cost route. Testosterone cream sits in the middle, and branded oral testosterone tends to be the priciest. If budget matters most, an injection-based plan is usually cheapest - see <a href="/trt/articles/testosterone-injections-vs-cream-vs-oral">injections vs cream vs oral</a>.`,
       },
       {
         heading: "How to get the best value",
-        body: `Compare total cost with labs and follow-ups included, check whether a provider offers price matching or longer-plan discounts, and confirm how easy it is to pause or cancel. Because pricing changes, always verify current pricing on each provider's site — compare the options on our <a href="/trt">TRT providers</a> page.`,
+        body: `Compare total cost with labs and follow-ups included, check whether a provider offers price matching or longer-plan discounts, and confirm how easy it is to pause or cancel. Because pricing changes, always verify current pricing on each provider's site - compare the options on our <a href="/trt">TRT providers</a> page.`,
       },
     ],
   },
@@ -823,7 +823,7 @@ const articles: ArticleData[] = [
     slug: "low-testosterone-symptoms",
     title: "Signs of Low Testosterone: Symptoms of Low T in Men",
     description:
-      "The common signs of low testosterone — from low energy and libido to mood and body changes — and when to get tested.",
+      "The common signs of low testosterone - from low energy and libido to mood and body changes - and when to get tested.",
     category: "Science",
     readTime: "6 min read",
     publishedAt: "2026-07-22",
@@ -833,7 +833,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "What low testosterone is",
-        body: `Testosterone naturally declines with age, but some men have levels low enough — confirmed by bloodwork — to cause symptoms. This is sometimes called "low T." Only a lab test alongside symptoms can confirm it, which is why testing is the first step in any legitimate TRT program.`,
+        body: `Testosterone naturally declines with age, but some men have levels low enough - confirmed by bloodwork - to cause symptoms. This is sometimes called "low T." Only a lab test alongside symptoms can confirm it, which is why testing is the first step in any legitimate TRT program.`,
       },
       {
         heading: "Common physical signs",
@@ -845,7 +845,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "When to get tested",
-        body: `If several of these symptoms are persistent and affecting your life, it's worth getting your testosterone checked. Online providers make this easy with at-home or lab-based testing followed by a clinician review — see how the top options compare on our <a href="/trt">best TRT providers</a> page. This article is general information, not medical advice.`,
+        body: `If several of these symptoms are persistent and affecting your life, it's worth getting your testosterone checked. Online providers make this easy with at-home or lab-based testing followed by a clinician review - see how the top options compare on our <a href="/trt">best TRT providers</a> page. This article is general information, not medical advice.`,
       },
     ],
   },
@@ -853,7 +853,7 @@ const articles: ArticleData[] = [
     slug: "trt-results-timeline",
     title: "TRT Results Timeline: What to Expect Week by Week",
     description:
-      "A realistic month-by-month timeline for testosterone therapy — from early energy and libido changes to muscle and body composition.",
+      "A realistic month-by-month timeline for testosterone therapy - from early energy and libido changes to muscle and body composition.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-07-16",
@@ -866,15 +866,15 @@ const articles: ArticleData[] = [
         body: `Different benefits of TRT appear on different timelines. Some men notice changes in energy, mood and libido within the first few weeks, while changes in muscle, strength and body composition develop over months. Your provider monitors your labs and how you feel, and adjusts your dose over time.`,
       },
       {
-        heading: "Weeks 1–4",
+        heading: "Weeks 1-4",
         body: `Early on, many men report improvements in libido, mood and a sense of drive. Energy may start to lift. It's also the period where your provider is dialing in the right dose, so follow-up labs matter.`,
       },
       {
-        heading: "Months 1–3",
+        heading: "Months 1-3",
         body: `Over the first few months, improvements in mood, motivation and sexual function often become more consistent, and some men begin to notice changes in strength and workout recovery. Red-blood-cell levels and other markers are typically re-checked during this window.`,
       },
       {
-        heading: "Months 3–6 and beyond",
+        heading: "Months 3-6 and beyond",
         body: `Changes in muscle mass and body composition continue to develop with consistent treatment and training over three to six months and beyond. Benefits are maintained with ongoing therapy and generally fade if you stop. Compare provider monitoring on our <a href="/trt">TRT providers</a> page.`,
       },
     ],
@@ -883,7 +883,7 @@ const articles: ArticleData[] = [
     slug: "testosterone-injections-vs-cream-vs-oral",
     title: "Testosterone Injections vs Cream vs Oral: Which Is Best?",
     description:
-      "How the three main testosterone delivery methods compare — injections, cream/gel and oral — on convenience, cost and who they suit.",
+      "How the three main testosterone delivery methods compare - injections, cream/gel and oral - on convenience, cost and who they suit.",
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-07-10",
@@ -893,11 +893,11 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "Injections",
-        body: `Injectable testosterone (usually cypionate) is the most common and typically most cost-effective route. It's given weekly or twice-weekly, self-administered, and provides stable levels. The main downside is the needle — though many men adjust quickly. Providers like <a href="/trt/reviews/dudemeds">DudeMeds</a> and <a href="/trt/reviews/petermd">PeterMD</a> center on injections.`,
+        body: `Injectable testosterone (usually cypionate) is the most common and typically most cost-effective route. It's given weekly or twice-weekly, self-administered, and provides stable levels. The main downside is the needle - though many men adjust quickly. Providers like <a href="/trt/reviews/dudemeds">DudeMeds</a> and <a href="/trt/reviews/petermd">PeterMD</a> center on injections.`,
       },
       {
         heading: "Cream and gel",
-        body: `Topical testosterone is applied to the skin daily — needle-free and steady, with a microdosing approach some men prefer. The trade-offs: it must be allowed to dry and there's a risk of transferring it to others through skin contact. <a href="/trt/reviews/maleexcel">Male Excel</a> is known for its daily microdosing cream.`,
+        body: `Topical testosterone is applied to the skin daily - needle-free and steady, with a microdosing approach some men prefer. The trade-offs: it must be allowed to dry and there's a risk of transferring it to others through skin contact. <a href="/trt/reviews/maleexcel">Male Excel</a> is known for its daily microdosing cream.`,
       },
       {
         heading: "Oral options",
@@ -905,7 +905,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "Which should you choose?",
-        body: `There's no single best route — it depends on your preferences, budget and a clinician's assessment. Injections win on cost and stability; cream and oral win on convenience and being needle-free. Some providers offer all three, so you can switch. Compare them on our <a href="/trt">best TRT providers</a> page. This article is general information, not medical advice.`,
+        body: `There's no single best route - it depends on your preferences, budget and a clinician's assessment. Injections win on cost and stability; cream and oral win on convenience and being needle-free. Some providers offer all three, so you can switch. Compare them on our <a href="/trt">best TRT providers</a> page. This article is general information, not medical advice.`,
       },
     ],
   },
@@ -913,7 +913,7 @@ const articles: ArticleData[] = [
     slug: "enclomiphene-vs-trt",
     title: "Enclomiphene vs TRT: Which Is Right for You?",
     description:
-      "How enclomiphene differs from traditional testosterone replacement therapy — fertility, how each works, and who each suits.",
+      "How enclomiphene differs from traditional testosterone replacement therapy - fertility, how each works, and who each suits.",
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-07-04",
@@ -923,11 +923,11 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "How they work differently",
-        body: `Traditional TRT adds testosterone from outside the body. Enclomiphene works the other way — it stimulates your body to produce more of its own testosterone by acting on the brain's hormonal signals. That difference has real consequences, especially around fertility.`,
+        body: `Traditional TRT adds testosterone from outside the body. Enclomiphene works the other way - it stimulates your body to produce more of its own testosterone by acting on the brain's hormonal signals. That difference has real consequences, especially around fertility.`,
       },
       {
         heading: "The fertility difference",
-        body: `Traditional testosterone can suppress the body's own production and sperm count, which is a concern for men who want to preserve fertility. Because enclomiphene raises your own testosterone, it can help maintain fertility — a key reason some men choose it. Providers like <a href="/trt/reviews/dudemeds">DudeMeds</a> offer both.`,
+        body: `Traditional testosterone can suppress the body's own production and sperm count, which is a concern for men who want to preserve fertility. Because enclomiphene raises your own testosterone, it can help maintain fertility - a key reason some men choose it. Providers like <a href="/trt/reviews/dudemeds">DudeMeds</a> offer both.`,
       },
       {
         heading: "Who each suits",
@@ -935,7 +935,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "How to decide",
-        body: `The right choice depends on your testosterone levels, fertility goals and how your body responds — decisions a licensed provider makes with you after reviewing your labs. Compare providers that offer both approaches on our <a href="/trt">TRT providers</a> page. This article is general information, not medical advice.`,
+        body: `The right choice depends on your testosterone levels, fertility goals and how your body responds - decisions a licensed provider makes with you after reviewing your labs. Compare providers that offer both approaches on our <a href="/trt">TRT providers</a> page. This article is general information, not medical advice.`,
       },
     ],
   },
@@ -943,7 +943,7 @@ const articles: ArticleData[] = [
     slug: "does-trt-cause-hair-loss",
     title: "Does TRT Cause Hair Loss? What to Know Before Starting",
     description:
-      "TRT can accelerate hair loss — but only if you're genetically predisposed. How testosterone converts to DHT, who's actually at risk, and what you can do.",
+      "TRT can accelerate hair loss - but only if you're genetically predisposed. How testosterone converts to DHT, who's actually at risk, and what you can do.",
     category: "Science",
     readTime: "6 min read",
     publishedAt: "2026-08-04",
@@ -953,15 +953,15 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "The short answer",
-        body: `TRT doesn't cause hair loss by itself — but it can accelerate it in men who are genetically predisposed to pattern baldness. Some of the testosterone you take converts, via the 5-alpha-reductase enzyme, into DHT: the hormone that gradually miniaturizes scalp follicles in men who carry the sensitivity. More circulating testosterone can mean more DHT, and for a predisposed scalp, a faster version of the timeline your genes had already written.`,
+        body: `TRT doesn't cause hair loss by itself - but it can accelerate it in men who are genetically predisposed to pattern baldness. Some of the testosterone you take converts, via the 5-alpha-reductase enzyme, into DHT: the hormone that gradually miniaturizes scalp follicles in men who carry the sensitivity. More circulating testosterone can mean more DHT, and for a predisposed scalp, a faster version of the timeline your genes had already written.`,
       },
       {
         heading: "Who's actually at risk",
-        body: `The deciding factor isn't the therapy — it's your follicles. If pattern baldness runs strongly in your family or your hairline was already moving before treatment, TRT may speed that process up. If you've reached your 40s with a full head of hair and no family history, your follicles are likely not DHT-sensitive, and TRT is unlikely to change that. Baldness genetics come from both sides of the family, so look at the whole picture, not just your mother's father.`,
+        body: `The deciding factor isn't the therapy - it's your follicles. If pattern baldness runs strongly in your family or your hairline was already moving before treatment, TRT may speed that process up. If you've reached your 40s with a full head of hair and no family history, your follicles are likely not DHT-sensitive, and TRT is unlikely to change that. Baldness genetics come from both sides of the family, so look at the whole picture, not just your mother's father.`,
       },
       {
         heading: "Early warning signs on TRT",
-        body: `Watch for the classic pattern-loss signature after starting therapy: more hairs on the pillow, temples pulling back, a thinning crown under bright light. Diffuse all-over shedding shortly after a new medication can have other causes, but progressive recession at the temples and crown is the DHT fingerprint. Catching it in the first months matters — pattern loss is much easier to stop than to reverse.`,
+        body: `Watch for the classic pattern-loss signature after starting therapy: more hairs on the pillow, temples pulling back, a thinning crown under bright light. Diffuse all-over shedding shortly after a new medication can have other causes, but progressive recession at the temples and crown is the DHT fingerprint. Catching it in the first months matters - pattern loss is much easier to stop than to reverse.`,
       },
       {
         heading: "What you can do about it",
@@ -969,7 +969,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "Keeping perspective",
-        body: `For most men the trade is manageable: TRT addresses real, quality-of-life symptoms of low testosterone, and the hair-loss risk applies mainly to those already predisposed — with effective countermeasures available. Discuss your family history during intake so your provider can monitor for it; the clinics on our <a href="/trt">best TRT providers</a> ranking all include ongoing clinical follow-up. For the broader safety picture, see <a href="/trt/articles/trt-side-effects">TRT side effects</a>. This article is general information, not medical advice.`,
+        body: `For most men the trade is manageable: TRT addresses real, quality-of-life symptoms of low testosterone, and the hair-loss risk applies mainly to those already predisposed - with effective countermeasures available. Discuss your family history during intake so your provider can monitor for it; the clinics on our <a href="/trt">best TRT providers</a> ranking all include ongoing clinical follow-up. For the broader safety picture, see <a href="/trt/articles/trt-side-effects">TRT side effects</a>. This article is general information, not medical advice.`,
       },
     ],
   },
@@ -977,7 +977,7 @@ const articles: ArticleData[] = [
     slug: "trt-and-fertility",
     title: "TRT and Fertility: Does Testosterone Therapy Make You Infertile?",
     description:
-      "TRT suppresses sperm production — a side effect many men learn about too late. How it happens, whether it's reversible, and the fertility-sparing alternatives.",
+      "TRT suppresses sperm production - a side effect many men learn about too late. How it happens, whether it's reversible, and the fertility-sparing alternatives.",
     category: "Science",
     readTime: "6 min read",
     publishedAt: "2026-08-07",
@@ -987,23 +987,23 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "The paradox nobody warns you about",
-        body: `It sounds backwards, but it's true: taking testosterone can sharply reduce your fertility. TRT is so effective at suppressing sperm production that testosterone has actually been studied as a male contraceptive. If you're on TRT — or considering it — and children are anywhere in your future plans, this is the side effect to understand before you start, not after.`,
+        body: `It sounds backwards, but it's true: taking testosterone can sharply reduce your fertility. TRT is so effective at suppressing sperm production that testosterone has actually been studied as a male contraceptive. If you're on TRT - or considering it - and children are anywhere in your future plans, this is the side effect to understand before you start, not after.`,
       },
       {
         heading: "Why it happens",
-        body: `Your brain regulates the testes through two signaling hormones, LH and FSH. When you supply testosterone from outside, the brain sees high levels and stops sending those signals. But sperm production depends on testosterone made <em>inside</em> the testes at concentrations far higher than what circulates in blood — and without LH, that local production collapses. The result: your blood testosterone looks great while sperm counts fall, sometimes to very low levels or zero.`,
+        body: `Your brain regulates the testes through two signaling hormones, LH and FSH. When you supply testosterone from outside, the brain sees high levels and stops sending those signals. But sperm production depends on testosterone made <em>inside</em> the testes at concentrations far higher than what circulates in blood - and without LH, that local production collapses. The result: your blood testosterone looks great while sperm counts fall, sometimes to very low levels or zero.`,
       },
       {
         heading: "Is it reversible?",
-        body: `For most men, yes — but not instantly and not guaranteed. After stopping TRT, sperm production typically recovers over months, and in some men it can take a year or longer; recovery tends to be slower with longer therapy duration and older age, and a small minority don't fully return to baseline. Anyone banking on "I'll just pause TRT when we're ready" should know the timeline is measured in months, not weeks.`,
+        body: `For most men, yes - but not instantly and not guaranteed. After stopping TRT, sperm production typically recovers over months, and in some men it can take a year or longer; recovery tends to be slower with longer therapy duration and older age, and a small minority don't fully return to baseline. Anyone banking on "I'll just pause TRT when we're ready" should know the timeline is measured in months, not weeks.`,
       },
       {
         heading: "The fertility-sparing alternatives",
-        body: `This is exactly why medications like enclomiphene exist. Instead of replacing testosterone, enclomiphene prompts the brain to increase LH and FSH — raising your own testosterone production while keeping the testicular signal (and sperm production) intact. Clinicians may also add hCG alongside TRT to maintain testicular function. We break the main option down in <a href="/trt/articles/enclomiphene-vs-trt">enclomiphene vs TRT</a>; providers like <a href="/trt/reviews/maximus">Maximus</a> offer it specifically for men prioritizing fertility.`,
+        body: `This is exactly why medications like enclomiphene exist. Instead of replacing testosterone, enclomiphene prompts the brain to increase LH and FSH - raising your own testosterone production while keeping the testicular signal (and sperm production) intact. Clinicians may also add hCG alongside TRT to maintain testicular function. We break the main option down in <a href="/trt/articles/enclomiphene-vs-trt">enclomiphene vs TRT</a>; providers like <a href="/trt/reviews/maximus">Maximus</a> offer it specifically for men prioritizing fertility.`,
       },
       {
         heading: "What to do with this",
-        body: `If fatherhood is on your roadmap, say so explicitly during your intake — it changes the right prescription. Options include starting with enclomiphene, banking sperm before TRT, or pairing therapy with fertility-preserving protocols. A quality provider will ask; if yours didn't, that's a signal. Compare clinics on our <a href="/trt">best TRT providers</a> page, and if you're weighing stopping therapy, read <a href="/trt/articles/can-you-stop-trt">can you stop TRT</a> first. This article is general information, not medical advice.`,
+        body: `If fatherhood is on your roadmap, say so explicitly during your intake - it changes the right prescription. Options include starting with enclomiphene, banking sperm before TRT, or pairing therapy with fertility-preserving protocols. A quality provider will ask; if yours didn't, that's a signal. Compare clinics on our <a href="/trt">best TRT providers</a> page, and if you're weighing stopping therapy, read <a href="/trt/articles/can-you-stop-trt">can you stop TRT</a> first. This article is general information, not medical advice.`,
       },
     ],
   },
@@ -1011,7 +1011,7 @@ const articles: ArticleData[] = [
     slug: "trt-side-effects",
     title: "TRT Side Effects: What's Common, What's Manageable, What to Monitor",
     description:
-      "The real side-effect profile of testosterone therapy — from acne and thickened blood to fertility suppression — and the lab monitoring that keeps TRT safe.",
+      "The real side-effect profile of testosterone therapy - from acne and thickened blood to fertility suppression - and the lab monitoring that keeps TRT safe.",
     category: "Science",
     readTime: "7 min read",
     publishedAt: "2026-08-10",
@@ -1021,23 +1021,23 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "TRT is a commitment, not a supplement",
-        body: `Testosterone therapy is genuinely effective for men with clinically low levels — and it's real medicine, with real side effects and a monitoring routine that isn't optional. The difference between TRT done well and TRT done badly is rarely the testosterone itself; it's whether anyone is checking your labs. Here's the honest map of what can come up.`,
+        body: `Testosterone therapy is genuinely effective for men with clinically low levels - and it's real medicine, with real side effects and a monitoring routine that isn't optional. The difference between TRT done well and TRT done badly is rarely the testosterone itself; it's whether anyone is checking your labs. Here's the honest map of what can come up.`,
       },
       {
         heading: "The common and cosmetic",
-        body: `Acne and oilier skin are among the most frequent complaints, especially early on, as skin adjusts to higher androgen levels. Injection-site soreness is routine for injectable forms. Some men notice mood changes — often positive, occasionally irritability, particularly with dosing that peaks and troughs sharply. Testicular shrinkage is common and expected: your testes downshift when external testosterone takes over. And for genetically predisposed men, accelerated hair loss — covered fully in <a href="/trt/articles/does-trt-cause-hair-loss">does TRT cause hair loss</a>.`,
+        body: `Acne and oilier skin are among the most frequent complaints, especially early on, as skin adjusts to higher androgen levels. Injection-site soreness is routine for injectable forms. Some men notice mood changes - often positive, occasionally irritability, particularly with dosing that peaks and troughs sharply. Testicular shrinkage is common and expected: your testes downshift when external testosterone takes over. And for genetically predisposed men, accelerated hair loss - covered fully in <a href="/trt/articles/does-trt-cause-hair-loss">does TRT cause hair loss</a>.`,
       },
       {
         heading: "The one your bloodwork catches: thick blood",
-        body: `The most important lab-monitored effect is erythrocytosis — testosterone stimulates red blood cell production, and in some men the blood becomes too thick, raising cardiovascular strain. This is why responsible providers check hematocrit before starting and periodically after. It's manageable (dose adjustments, switching formulations, occasionally donating blood), but only if someone's watching. If a clinic doesn't require follow-up labs, that's disqualifying.`,
+        body: `The most important lab-monitored effect is erythrocytosis - testosterone stimulates red blood cell production, and in some men the blood becomes too thick, raising cardiovascular strain. This is why responsible providers check hematocrit before starting and periodically after. It's manageable (dose adjustments, switching formulations, occasionally donating blood), but only if someone's watching. If a clinic doesn't require follow-up labs, that's disqualifying.`,
       },
       {
         heading: "The systemic ones",
-        body: `TRT suppresses sperm production — significant enough that it deserves its own read: <a href="/trt/articles/trt-and-fertility">TRT and fertility</a>. Some testosterone converts to estradiol, which in excess can cause water retention or breast tenderness; clinicians manage this through dosing rather than reflexively adding blockers. TRT can also worsen untreated sleep apnea, and men with prostate concerns need appropriate screening — providers typically monitor PSA in the age groups where that's relevant.`,
+        body: `TRT suppresses sperm production - significant enough that it deserves its own read: <a href="/trt/articles/trt-and-fertility">TRT and fertility</a>. Some testosterone converts to estradiol, which in excess can cause water retention or breast tenderness; clinicians manage this through dosing rather than reflexively adding blockers. TRT can also worsen untreated sleep apnea, and men with prostate concerns need appropriate screening - providers typically monitor PSA in the age groups where that's relevant.`,
       },
       {
         heading: "The bottom line on safety",
-        body: `Most side effects are dose-related, detectable on labs, and manageable within an ongoing clinical relationship — which is exactly what separates legitimate telehealth TRT from buying vials from a gym acquaintance. Every provider on our <a href="/trt">best TRT providers</a> ranking includes baseline labs and scheduled follow-ups. For what results and timelines look like when therapy is dialed in, see <a href="/trt/articles/trt-results-timeline">the TRT results timeline</a>. This article is general information, not medical advice.`,
+        body: `Most side effects are dose-related, detectable on labs, and manageable within an ongoing clinical relationship - which is exactly what separates legitimate telehealth TRT from buying vials from a gym acquaintance. Every provider on our <a href="/trt">best TRT providers</a> ranking includes baseline labs and scheduled follow-ups. For what results and timelines look like when therapy is dialed in, see <a href="/trt/articles/trt-results-timeline">the TRT results timeline</a>. This article is general information, not medical advice.`,
       },
     ],
   },
@@ -1054,24 +1054,24 @@ const articles: ArticleData[] = [
     author: "TreatmentsHub Staff",
     sections: [
       {
-        heading: "The normal range — and why it's so wide",
-        body: `For adult men, most labs place normal total testosterone somewhere around 300 to 1,000 ng/dL — a deliberately wide range, because healthy men genuinely vary that much. Two men can both be "normal" with one at triple the other's level. That width is also why a single number rarely tells the whole story: where you sit in the range, your symptoms, and your trend over time matter more than clearing the minimum bar.`,
+        heading: "The normal range - and why it's so wide",
+        body: `For adult men, most labs place normal total testosterone somewhere around 300 to 1,000 ng/dL - a deliberately wide range, because healthy men genuinely vary that much. Two men can both be "normal" with one at triple the other's level. That width is also why a single number rarely tells the whole story: where you sit in the range, your symptoms, and your trend over time matter more than clearing the minimum bar.`,
       },
       {
         heading: "What happens with age",
-        body: `Testosterone typically peaks in the late teens and twenties, then declines gradually — commonly cited at roughly 1% per year from the thirties onward. That slope is normal aging, not a disease. The clinical question isn't whether your level at 45 matches your level at 22 (it won't); it's whether your level is low enough, alongside real symptoms, to explain how you feel. The symptom side of that equation is covered in <a href="/trt/articles/low-testosterone-symptoms">low testosterone symptoms</a>.`,
+        body: `Testosterone typically peaks in the late teens and twenties, then declines gradually - commonly cited at roughly 1% per year from the thirties onward. That slope is normal aging, not a disease. The clinical question isn't whether your level at 45 matches your level at 22 (it won't); it's whether your level is low enough, alongside real symptoms, to explain how you feel. The symptom side of that equation is covered in <a href="/trt/articles/low-testosterone-symptoms">low testosterone symptoms</a>.`,
       },
       {
         heading: "When a number officially counts as low",
-        body: `The American Urological Association uses 300 ng/dL as the working cutoff for low testosterone — confirmed on two separate morning blood draws, alongside symptoms. All three parts matter. Testosterone peaks in the early morning and can swing meaningfully day to day, which is why guidelines require morning samples (roughly 7–10am) and a repeat test before anyone diagnoses anything. A single afternoon reading of 280 is a reason to retest properly, not a diagnosis.`,
+        body: `The American Urological Association uses 300 ng/dL as the working cutoff for low testosterone - confirmed on two separate morning blood draws, alongside symptoms. All three parts matter. Testosterone peaks in the early morning and can swing meaningfully day to day, which is why guidelines require morning samples (roughly 7-10am) and a repeat test before anyone diagnoses anything. A single afternoon reading of 280 is a reason to retest properly, not a diagnosis.`,
       },
       {
         heading: "Total vs free testosterone",
-        body: `Most of the testosterone in your blood is bound to proteins and unavailable to your tissues; the small unbound fraction — free testosterone — does the actual work. Some men have normal total testosterone but low free testosterone (often due to elevated binding proteins), which can produce classic low-T symptoms despite a "normal" report. A thorough workup measures or calculates both, which is worth checking when comparing providers' lab panels.`,
+        body: `Most of the testosterone in your blood is bound to proteins and unavailable to your tissues; the small unbound fraction - free testosterone - does the actual work. Some men have normal total testosterone but low free testosterone (often due to elevated binding proteins), which can produce classic low-T symptoms despite a "normal" report. A thorough workup measures or calculates both, which is worth checking when comparing providers' lab panels.`,
       },
       {
         heading: "Getting properly tested",
-        body: `Testing is the easy part now: online TRT clinics arrange baseline labs — typically at a local draw station or via at-home kit — and have a licensed clinician interpret them against your symptoms, with treatment only when both justify it. That two-morning-tests standard is a good litmus test for clinic quality. See <a href="/trt/articles/how-to-get-trt-online">how to get TRT online</a> for the process end to end, and our <a href="/trt">best TRT providers</a> ranking for who does testing right. This article is general information, not medical advice.`,
+        body: `Testing is the easy part now: online TRT clinics arrange baseline labs - typically at a local draw station or via at-home kit - and have a licensed clinician interpret them against your symptoms, with treatment only when both justify it. That two-morning-tests standard is a good litmus test for clinic quality. See <a href="/trt/articles/how-to-get-trt-online">how to get TRT online</a> for the process end to end, and our <a href="/trt">best TRT providers</a> ranking for who does testing right. This article is general information, not medical advice.`,
       },
     ],
   },
@@ -1089,23 +1089,23 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "The short answer",
-        body: `Insurance can cover TRT — but usually only when you fit the strict clinical definition of hypogonadism: documented low testosterone on two separate morning blood tests, plus symptoms, often with prior-authorization paperwork on top. Men whose levels hover just above the cutoff, or who don't want to route their care through referrals and waiting rooms, frequently find coverage more theoretical than real. That gap is precisely the market online TRT clinics grew to fill.`,
+        body: `Insurance can cover TRT - but usually only when you fit the strict clinical definition of hypogonadism: documented low testosterone on two separate morning blood tests, plus symptoms, often with prior-authorization paperwork on top. Men whose levels hover just above the cutoff, or who don't want to route their care through referrals and waiting rooms, frequently find coverage more theoretical than real. That gap is precisely the market online TRT clinics grew to fill.`,
       },
       {
         heading: "What insurance-covered TRT looks like",
-        body: `The covered path typically runs through your primary-care doctor or an endocrinologist/urologist: labs, a diagnosis that meets your insurer's criteria, and a prescription — commonly for generic injectable testosterone, which is an inexpensive, decades-old medication. When you qualify, this is usually the cheapest route on paper. The costs are in time and friction: appointments, prior authorizations, refill logistics, and coverage rules that can treat borderline numbers as "not medically necessary."`,
+        body: `The covered path typically runs through your primary-care doctor or an endocrinologist/urologist: labs, a diagnosis that meets your insurer's criteria, and a prescription - commonly for generic injectable testosterone, which is an inexpensive, decades-old medication. When you qualify, this is usually the cheapest route on paper. The costs are in time and friction: appointments, prior authorizations, refill logistics, and coverage rules that can treat borderline numbers as "not medically necessary."`,
       },
       {
         heading: "Why online clinics are cash-pay",
-        body: `Most telehealth TRT providers don't bill insurance at all. Instead they charge a flat monthly membership that bundles the medication, clinical visits, follow-up labs and shipping into one price. You're paying for convenience and access — no referrals, no prior auth, treatment protocols decided between you and the clinician rather than an insurer's checklist. Real prices for the major clinics are broken down in our <a href="/trt/articles/trt-cost">what does TRT cost</a> guide, with current numbers on each provider's page.`,
+        body: `Most telehealth TRT providers don't bill insurance at all. Instead they charge a flat monthly membership that bundles the medication, clinical visits, follow-up labs and shipping into one price. You're paying for convenience and access - no referrals, no prior auth, treatment protocols decided between you and the clinician rather than an insurer's checklist. Real prices for the major clinics are broken down in our <a href="/trt/articles/trt-cost">what does TRT cost</a> guide, with current numbers on each provider's page.`,
       },
       {
         heading: "Making the comparison honestly",
-        body: `If your levels are clearly low and you have a doctor you like, the insurance route can be genuinely cheaper — generic testosterone itself costs little. The cash route wins on speed, privacy and simplicity, and bundled memberships often cost less than people assume once labs and visits are counted in. One tip either way: HSA/FSA funds can generally be used for legitimate medical care, which softens the cash-pay math. Ask any provider what their price actually includes before comparing.`,
+        body: `If your levels are clearly low and you have a doctor you like, the insurance route can be genuinely cheaper - generic testosterone itself costs little. The cash route wins on speed, privacy and simplicity, and bundled memberships often cost less than people assume once labs and visits are counted in. One tip either way: HSA/FSA funds can generally be used for legitimate medical care, which softens the cash-pay math. Ask any provider what their price actually includes before comparing.`,
       },
       {
         heading: "Where to start",
-        body: `Start with proper testing and an honest read of your numbers — see <a href="/trt/articles/normal-testosterone-levels-by-age">what counts as low</a> — then pick the route that fits your situation. If that's telehealth, our <a href="/trt">best TRT providers</a> ranking compares what each membership includes, and <a href="/trt/articles/how-to-get-trt-online">how to get TRT online</a> walks through the process step by step. This article is general information, not medical advice.`,
+        body: `Start with proper testing and an honest read of your numbers - see <a href="/trt/articles/normal-testosterone-levels-by-age">what counts as low</a> - then pick the route that fits your situation. If that's telehealth, our <a href="/trt">best TRT providers</a> ranking compares what each membership includes, and <a href="/trt/articles/how-to-get-trt-online">how to get TRT online</a> walks through the process step by step. This article is general information, not medical advice.`,
       },
     ],
   },
@@ -1113,7 +1113,7 @@ const articles: ArticleData[] = [
     slug: "trt-vs-steroids",
     title: "TRT vs Steroids: Why Testosterone Therapy Isn't 'Taking Gear'",
     description:
-      "TRT and steroid use both involve testosterone — that's where the similarity ends. Doses, supervision, legality, and goals compared honestly.",
+      "TRT and steroid use both involve testosterone - that's where the similarity ends. Doses, supervision, legality, and goals compared honestly.",
     category: "Science",
     readTime: "5 min read",
     publishedAt: "2026-08-17",
@@ -1123,23 +1123,23 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "Same molecule, different universe",
-        body: `The confusion is understandable: TRT and anabolic steroid use can involve literally the same compound. But the comparison ends at the molecule. TRT restores a deficient man to the normal physiological range under medical supervision; steroid use pushes levels far beyond anything a human body produces naturally, in pursuit of maximum muscle growth. One is replacement; the other is enhancement — and the risk profiles are worlds apart.`,
+        body: `The confusion is understandable: TRT and anabolic steroid use can involve literally the same compound. But the comparison ends at the molecule. TRT restores a deficient man to the normal physiological range under medical supervision; steroid use pushes levels far beyond anything a human body produces naturally, in pursuit of maximum muscle growth. One is replacement; the other is enhancement - and the risk profiles are worlds apart.`,
       },
       {
         heading: "The dose makes the difference",
-        body: `TRT aims to bring your blood levels into the same 300–1,000 ng/dL range as any healthy man, with labs to verify you're there and not beyond. Performance-focused steroid protocols commonly involve multiples of replacement dosing, often stacking several compounds — including synthetic derivatives never approved for human therapeutic use. The side effects people associate with "steroids" scale with those supraphysiologic doses; therapy at replacement levels is a fundamentally different exposure.`,
+        body: `TRT aims to bring your blood levels into the same 300-1,000 ng/dL range as any healthy man, with labs to verify you're there and not beyond. Performance-focused steroid protocols commonly involve multiples of replacement dosing, often stacking several compounds - including synthetic derivatives never approved for human therapeutic use. The side effects people associate with "steroids" scale with those supraphysiologic doses; therapy at replacement levels is a fundamentally different exposure.`,
       },
       {
         heading: "Supervision and legality",
-        body: `TRT is legal medicine: testosterone is a Schedule III controlled substance in the US, prescribed after documented low levels, with monitoring of blood counts and other markers over time — see <a href="/trt/articles/trt-side-effects">what providers monitor and why</a>. Non-prescribed steroid use sits outside that entirely: illegally sourced, unverified products, no baseline labs, no one watching hematocrit or blood pressure. Much of the harm attributed to steroids traces to that unsupervised context.`,
+        body: `TRT is legal medicine: testosterone is a Schedule III controlled substance in the US, prescribed after documented low levels, with monitoring of blood counts and other markers over time - see <a href="/trt/articles/trt-side-effects">what providers monitor and why</a>. Non-prescribed steroid use sits outside that entirely: illegally sourced, unverified products, no baseline labs, no one watching hematocrit or blood pressure. Much of the harm attributed to steroids traces to that unsupervised context.`,
       },
       {
         heading: "Will TRT make you jacked?",
-        body: `An honest expectation-set: TRT is not a shortcut to a bodybuilder's physique. Restoring low testosterone to normal genuinely helps — energy, drive, and the ability to build and keep muscle in the gym all improve when a real deficiency is corrected. But at replacement doses you're getting back what deficiency took, not gaining a superpower. The realistic arc is laid out in our <a href="/trt/articles/trt-results-timeline">TRT results timeline</a>.`,
+        body: `An honest expectation-set: TRT is not a shortcut to a bodybuilder's physique. Restoring low testosterone to normal genuinely helps - energy, drive, and the ability to build and keep muscle in the gym all improve when a real deficiency is corrected. But at replacement doses you're getting back what deficiency took, not gaining a superpower. The realistic arc is laid out in our <a href="/trt/articles/trt-results-timeline">TRT results timeline</a>.`,
       },
       {
         heading: "The takeaway",
-        body: `If your levels are low and it's affecting your life, seeking treatment isn't "taking gear" — it's treating a diagnosed deficiency the same way you'd treat any hormone disorder, through licensed clinicians and monitored dosing. That supervision layer is exactly what separates the clinics on our <a href="/trt">best TRT providers</a> ranking from the gray market. Start with proper testing: <a href="/trt/articles/normal-testosterone-levels-by-age">normal testosterone levels by age</a>. This article is general information, not medical advice.`,
+        body: `If your levels are low and it's affecting your life, seeking treatment isn't "taking gear" - it's treating a diagnosed deficiency the same way you'd treat any hormone disorder, through licensed clinicians and monitored dosing. That supervision layer is exactly what separates the clinics on our <a href="/trt">best TRT providers</a> ranking from the gray market. Start with proper testing: <a href="/trt/articles/normal-testosterone-levels-by-age">normal testosterone levels by age</a>. This article is general information, not medical advice.`,
       },
     ],
   },
@@ -1157,19 +1157,19 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "The 'TRT is forever' claim, examined",
-        body: `You'll hear it stated as law: once you start testosterone, you can never stop. The truth is less dramatic. You can stop TRT — men do, for fertility plans, cost, side effects, or simply reconsidering. What's true is that stopping has a physiological cost you should understand in advance: your body's own production has been switched off, and it doesn't switch back on overnight.`,
+        body: `You'll hear it stated as law: once you start testosterone, you can never stop. The truth is less dramatic. You can stop TRT - men do, for fertility plans, cost, side effects, or simply reconsidering. What's true is that stopping has a physiological cost you should understand in advance: your body's own production has been switched off, and it doesn't switch back on overnight.`,
       },
       {
         heading: "What happens when you stop",
-        body: `On TRT, your brain stops signaling your testes to produce testosterone. Stop the therapy abruptly, and you enter a gap: the external supply is gone, but natural production hasn't resumed. During that window — typically weeks to months — testosterone can sit lower than where you started, and low-T symptoms like fatigue, low mood and reduced libido often return, sometimes more noticeably than before. This gap, not any permanent switch, is what the "forever" folklore is describing.`,
+        body: `On TRT, your brain stops signaling your testes to produce testosterone. Stop the therapy abruptly, and you enter a gap: the external supply is gone, but natural production hasn't resumed. During that window - typically weeks to months - testosterone can sit lower than where you started, and low-T symptoms like fatigue, low mood and reduced libido often return, sometimes more noticeably than before. This gap, not any permanent switch, is what the "forever" folklore is describing.`,
       },
       {
         heading: "How long recovery takes",
-        body: `Most men's natural production recovers over a few months, though the timeline varies with how long you were on therapy, your age, and where your system started. Sperm production follows its own, often slower, recovery arc — covered in <a href="/trt/articles/trt-and-fertility">TRT and fertility</a>. A minority of men, particularly after long-term use or with pre-existing testicular issues, don't return fully to their old baseline — which is a genuine reason to treat starting TRT as a considered decision, not a casual one.`,
+        body: `Most men's natural production recovers over a few months, though the timeline varies with how long you were on therapy, your age, and where your system started. Sperm production follows its own, often slower, recovery arc - covered in <a href="/trt/articles/trt-and-fertility">TRT and fertility</a>. A minority of men, particularly after long-term use or with pre-existing testicular issues, don't return fully to their old baseline - which is a genuine reason to treat starting TRT as a considered decision, not a casual one.`,
       },
       {
         heading: "Coming off safely",
-        body: `If you decide to stop, do it with your clinician rather than cold turkey. Providers can monitor your labs through the transition and, where appropriate, use restart support — medications like enclomiphene or hCG that stimulate the brain–testes signal to shorten the low-hormone gap. (Enclomiphene is also what some men switch <em>to</em> rather than fully stopping; see <a href="/trt/articles/enclomiphene-vs-trt">enclomiphene vs TRT</a>.) A planned exit with monitoring beats an abrupt one every time.`,
+        body: `If you decide to stop, do it with your clinician rather than cold turkey. Providers can monitor your labs through the transition and, where appropriate, use restart support - medications like enclomiphene or hCG that stimulate the brain-testes signal to shorten the low-hormone gap. (Enclomiphene is also what some men switch <em>to</em> rather than fully stopping; see <a href="/trt/articles/enclomiphene-vs-trt">enclomiphene vs TRT</a>.) A planned exit with monitoring beats an abrupt one every time.`,
       },
       {
         heading: "Decide well before you start",
@@ -1191,7 +1191,7 @@ export function trtSeed(base: SiteConfig): SiteConfig {
       h1: "Best TRT Clinics & Online Testosterone Replacement Therapy Providers of 2026",
       h2: "Compare the top online testosterone replacement therapy (TRT) providers, side by side",
       description:
-        "Compare the best online TRT providers — testosterone injections, creams, oral options and enclomiphene — on testing, treatment options, medical supervision, and overall value.",
+        "Compare the best online TRT providers - testosterone injections, creams, oral options and enclomiphene - on testing, treatment options, medical supervision, and overall value.",
     },
     providers,
     sidebar: {

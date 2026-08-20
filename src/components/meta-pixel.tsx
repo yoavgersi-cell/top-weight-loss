@@ -10,7 +10,7 @@ export function MetaPixel() {
   const pathname = usePathname();
   const isFirstRender = useRef(true);
 
-  // Fire PageView on SPA route changes only (skip first render — handled by inline script)
+  // Fire PageView on SPA route changes only (skip first render - handled by inline script)
   useEffect(() => {
     if (isFirstRender.current) {
       isFirstRender.current = false;

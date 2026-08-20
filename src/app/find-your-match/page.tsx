@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo } from "react";
 import { Check, Clock, Shield, Lock, ShieldCheck, Timer, Search, MapPin, ArrowRight } from "lucide-react";
 import { trackOnce, trackEvent } from "@/lib/analytics";
 
-// Simplify footer on quiz pages — hide disclosure & nav, keep copyright
+// Simplify footer on quiz pages - hide disclosure & nav, keep copyright
 function HideChrome() {
   useEffect(() => {
     const footer = document.querySelector("footer");
@@ -178,7 +178,7 @@ export default function FindYourMatchPage() {
     let scored: { providerId: string; score: number; reasons: string[] }[];
 
     if (overrideOrder && overrideOrder.length > 0) {
-      // Manual override — use exact order from CMS
+      // Manual override - use exact order from CMS
       const filtered = overrideOrder.filter((id) => {
         if (!userState) return true;
         const provider = config.providers.find((p) => p.id === id);
@@ -520,7 +520,7 @@ export default function FindYourMatchPage() {
             <h2 className="text-[21px] font-bold text-[#191919] leading-snug sm:text-[28px]">{currentQ?.title}</h2>
             <p className="mt-1 text-[15px] text-gray-400 sm:mt-1.5 sm:text-[16px]">{currentQ?.subtitle}</p>
 
-            {/* Card options — auto advance */}
+            {/* Card options - auto advance */}
             {currentQ?.type === "cards" && (
               <div className="mt-4 space-y-1.5 sm:mt-5 sm:space-y-2">
                 {currentQ.options.map((opt) => {

@@ -12,8 +12,8 @@ function verticalName(id: string): string {
 export async function articlesIndexMetadata(ctx: SiteContext): Promise<Metadata> {
   const url = canonicalUrl(ctx, "/articles");
   const vName = verticalName(ctx.vertical);
-  const title = `${vName} Articles — Research, Guides & Expert Insights`;
-  const description = `Evidence-based ${vName.toLowerCase()} guides and research — treatment options, what to expect, and choosing the right online provider.`;
+  const title = `${vName} Articles - Research, Guides & Expert Insights`;
+  const description = `Evidence-based ${vName.toLowerCase()} guides and research - treatment options, what to expect, and choosing the right online provider.`;
   return {
     title,
     description,
@@ -46,10 +46,10 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
   const guides =
     ctx.vertical === "weight-loss"
       ? [
-          { title: "Weight Loss Pills", href: "/weight-loss-pills", category: "Guide", description: "Oral GLP-1s and FDA-approved prescription pills — and how they compare to injections." },
-          { title: "GLP-1 Pills vs Injections", href: "/glp1-pills-vs-injections", category: "Guide", description: "Results, cost, and convenience compared — which is right for you?" },
-          { title: "Ozempic, Wegovy & Mounjaro Alternatives", href: "/ozempic-alternatives", category: "Guide", description: "The same active ingredients as the big brands — as affordable compounded options through telehealth." },
-          { title: "Retatrutide for Weight Loss", href: "/retatrutide-weight-loss", category: "Science", description: "The triple-agonist drug that hit ~24% in trials — and whether you can get it yet." },
+          { title: "Weight Loss Pills", href: "/weight-loss-pills", category: "Guide", description: "Oral GLP-1s and FDA-approved prescription pills - and how they compare to injections." },
+          { title: "GLP-1 Pills vs Injections", href: "/glp1-pills-vs-injections", category: "Guide", description: "Results, cost, and convenience compared - which is right for you?" },
+          { title: "Ozempic, Wegovy & Mounjaro Alternatives", href: "/ozempic-alternatives", category: "Guide", description: "The same active ingredients as the big brands - as affordable compounded options through telehealth." },
+          { title: "Retatrutide for Weight Loss", href: "/retatrutide-weight-loss", category: "Science", description: "The triple-agonist drug that hit ~24% in trials - and whether you can get it yet." },
           { title: "GLP-1 Weight Loss Statistics", href: "/glp1-weight-loss-statistics", category: "Science", description: "Key clinical trial data on how much weight GLP-1 medications produce." },
         ]
       : [];
@@ -79,8 +79,8 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
   const collectionSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: `${vName} Articles — Research, Guides & Expert Insights`,
-    description: `Evidence-based ${vName.toLowerCase()} guides and research — treatment options, what to expect, and choosing the right online provider.`,
+    name: `${vName} Articles - Research, Guides & Expert Insights`,
+    description: `Evidence-based ${vName.toLowerCase()} guides and research - treatment options, what to expect, and choosing the right online provider.`,
     url: canonicalUrl(ctx, "/articles"),
     mainEntity: {
       "@type": "ItemList",
@@ -118,7 +118,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
             Articles
           </h1>
           <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-gray-500">
-            Evidence-based {vName.toLowerCase()} guides — treatment options, what
+            Evidence-based {vName.toLowerCase()} guides - treatment options, what
             to expect, and making informed decisions about your health.
           </p>
         </div>
@@ -214,7 +214,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
                 In-Depth Guides
               </h2>
               <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-gray-500">
-                Deeper explainers on medications and options — with side-by-side data.
+                Deeper explainers on medications and options - with side-by-side data.
               </p>
             </div>
 
@@ -255,7 +255,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
               </h2>
               <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-gray-500">
                 Can&apos;t decide between two providers? See how they stack up
-                side by side on pricing, medications, and support — and which one we&apos;d pick.
+                side by side on pricing, medications, and support - and which one we&apos;d pick.
               </p>
             </div>
 

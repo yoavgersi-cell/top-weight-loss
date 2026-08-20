@@ -7,7 +7,7 @@ import { ExpertTeam } from "@/components/expert-team";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "About TopWeightLoss — Our Mission, Team & Review Methodology",
+  title: "About TopWeightLoss - Our Mission, Team & Review Methodology",
   description:
     "Learn how topweightloss.io independently ranks and reviews weight loss providers. Our editorial methodology, review process, medical advisory approach, and commitment to unbiased comparisons.",
   alternates: {
@@ -62,7 +62,7 @@ export default async function AboutPage() {
           <p className="text-[16px] leading-[1.75] text-gray-600">
             TopWeightLoss.io exists to simplify this decision. We independently research,
             compare, and review every major provider so you can find the right fit for your
-            goals, budget, and health needs — without spending hours doing the research yourself.
+            goals, budget, and health needs - without spending hours doing the research yourself.
           </p>
         </section>
 
@@ -120,7 +120,7 @@ export default async function AboutPage() {
             <Link href="/how-we-rank" className="font-semibold text-[#0C4B75] hover:underline">
               ranking &amp; review methodology
             </Link>{" "}
-            — the factors we score, where our data comes from, and how we pick winners.
+            - the factors we score, where our data comes from, and how we pick winners.
           </p>
         </section>
 

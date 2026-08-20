@@ -179,7 +179,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     ],
   };
 
-  // FAQ schema — ONLY from sections that are genuinely question-shaped (heading
+  // FAQ schema - ONLY from sections that are genuinely question-shaped (heading
   // ends with "?"). Marking narrative section headings as FAQ questions is
   // non-compliant structured data (risk of a Google structured-data flag, and no
   // upside since FAQ rich results are gated to authoritative health/gov sites),
@@ -265,7 +265,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
         {/* Article body */}
         <div className="mx-auto max-w-[1100px] px-4 py-10 sm:px-6">
           <div>
-          {/* Table of contents — anchor jump-links. Signals structure to Google
+          {/* Table of contents - anchor jump-links. Signals structure to Google
               (eligible for "jump to" sitelinks) and improves navigation on long
               articles. Rendered only when there are enough sections to warrant it. */}
           {article.sections.length >= 4 && (
@@ -292,8 +292,8 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                   <h2 className="mb-3 text-[20px] font-bold text-[#191919] scroll-mt-24">
                     {section.heading}
                   </h2>
-                  {/* div (not p) so author HTML can include block elements —
-                      lists, tables, callouts — styled via .article-body css */}
+                  {/* div (not p) so author HTML can include block elements -
+                      lists, tables, callouts - styled via .article-body css */}
                   <div
                     className="article-body text-[16px] leading-[1.75] text-gray-600 [&_a]:text-[#0C4B75] [&_a]:font-medium [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-[#093d61]"
                     dangerouslySetInnerHTML={{ __html: section.body }}

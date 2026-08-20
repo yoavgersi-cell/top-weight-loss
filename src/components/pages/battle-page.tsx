@@ -46,8 +46,8 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
   // Reverse-pair canonicalization: if another battle compares the same two
   // providers in the opposite order (e.g. altrx-vs-noom and noom-vs-altrx),
   // both target the same query intent and split ranking signals. Point every
-  // page for a given provider pair at one deterministic canonical — the
-  // alphabetically-first slug — so Google consolidates them into one result.
+  // page for a given provider pair at one deterministic canonical - the
+  // alphabetically-first slug - so Google consolidates them into one result.
   const samePairSlugs = (config.battles ?? [])
     .filter(
       (b) =>
@@ -195,7 +195,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
   // Per-provider deep dives. Each provider gets its own rich, full section
   // (intro, what-you-get, pricing, pros/cons, its own Trustpilot reviews, CTA)
-  // pulled from that provider's review data — so the page reads as two honest,
+  // pulled from that provider's review data - so the page reads as two honest,
   // standalone write-ups rather than a "who wins" head-to-head. `bestForFallback`
   // covers providers that don't have a review entry yet.
   const p1Review = (config.reviews ?? []).find((r) => r.providerId === p1.id);
@@ -205,15 +205,15 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     { provider: p2, review: p2Review, bestForFallback: p2VerdictPoints },
   ];
 
-  // Mobile promo popup — the highest-priority featured provider that has a
+  // Mobile promo popup - the highest-priority featured provider that has a
   // creative (registry + priority in @/lib/promo-popups). Each popup's link and
   // offer come from that provider's own real affiliate data.
   const promoPopup = resolvePromoPopup([p1, p2]);
 
-  // Related comparisons — other battles featuring either provider (internal links).
+  // Related comparisons - other battles featuring either provider (internal links).
   // Ordered by relevance: comparisons involving this matchup's winner surface
   // first (a reader is most likely to keep evaluating the winner against other
-  // options), then the rest in config order — the stable sort preserves that
+  // options), then the rest in config order - the stable sort preserves that
   // order within each tier.
   const relatedBattles = (config.battles ?? [])
     .filter(
@@ -233,7 +233,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     .sort((a, b) => Number(b.featuresWinner) - Number(a.featuresWinner))
     .slice(0, 6);
 
-  // FAQ — real, query-shaped questions answered from grounded battle content.
+  // FAQ - real, query-shaped questions answered from grounded battle content.
   // Expands the queries the page can rank for (long-tail + People Also Ask) and
   // powers both the visible FAQ section and the FAQPage schema.
   const catToQuestion = (name: string) => {
@@ -343,7 +343,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
           {/* ───── PROVIDER CARDS (enriched) ───── */}
           <div className="relative mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {/* VS badge — desktop: absolute-centered between the two columns */}
+            {/* VS badge - desktop: absolute-centered between the two columns */}
             <div className="absolute left-1/2 top-1/2 z-10 hidden -translate-x-1/2 -translate-y-1/2 sm:flex">
               <div className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-[#0C4B75]/20 bg-white text-[13px] font-extrabold text-[#0C4B75] shadow-sm">
                 VS
@@ -353,7 +353,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             {[p1, p2].map((provider, idx) => {
               return (
               <Fragment key={provider.id}>
-                {/* VS badge — mobile: sits in the gap BETWEEN the two stacked cards */}
+                {/* VS badge - mobile: sits in the gap BETWEEN the two stacked cards */}
                 {idx === 1 && (
                   <div className="flex items-center justify-center sm:hidden -my-1">
                     <div className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#0C4B75]/20 bg-white text-[12px] font-extrabold text-[#0C4B75]">
@@ -479,8 +479,8 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               <p className="mt-3 text-[15px] leading-[1.8] text-gray-600">
                 Both are solid GLP-1 weight loss providers, and honestly you can&rsquo;t go
                 too wrong either way. So instead of crowning a &ldquo;winner,&rdquo; here&rsquo;s the
-                real rundown on each &mdash; what you get, what it actually costs, and what
-                real customers are saying &mdash; so you can pick the one that fits <em>you</em>.
+                real rundown on each - what you get, what it actually costs, and what
+                real customers are saying - so you can pick the one that fits <em>you</em>.
               </p>
             </div>
 
@@ -813,13 +813,13 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
         </div>
       </div>
 
-      {/* Mobile-only sticky CTA — both providers, appears after the hero */}
+      {/* Mobile-only sticky CTA - both providers, appears after the hero */}
       <BattleStickyCta
         p1={{ id: p1.id, name: p1.name, affiliateUrl: p1.affiliateUrl }}
         p2={{ id: p2.id, name: p2.name, affiliateUrl: p2.affiliateUrl }}
       />
 
-      {/* Mobile-only promo popup — the highest-priority featured provider that
+      {/* Mobile-only promo popup - the highest-priority featured provider that
           has a creative (e.g. Embody outranks TrimRx on an Embody-vs-TrimRx
           page, so TrimRx shows on all its other comparisons but not that one) */}
       {promoPopup && (

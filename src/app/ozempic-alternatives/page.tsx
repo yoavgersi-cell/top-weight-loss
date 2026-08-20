@@ -10,7 +10,7 @@ export const revalidate = 60;
 const CANONICAL = "https://www.topweightloss.io/ozempic-alternatives";
 const TITLE = "Ozempic, Wegovy & Mounjaro Alternatives (2026): Cheaper GLP-1 Options";
 const DESCRIPTION =
-  "The best alternatives to Ozempic, Wegovy, Mounjaro and Zepbound in 2026 — including the same active ingredients (semaglutide and tirzepatide) as affordable compounded options through licensed telehealth providers. Honest comparison and typical costs.";
+  "The best alternatives to Ozempic, Wegovy, Mounjaro and Zepbound in 2026 - including the same active ingredients (semaglutide and tirzepatide) as affordable compounded options through licensed telehealth providers. Honest comparison and typical costs.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ozempic, Wegovy & Mounjaro Alternatives That Actually Work (2026)",
     description:
-      "The most effective alternatives to brand-name GLP-1s are often the same active ingredient — for a fraction of the price. Here's how it works.",
+      "The most effective alternatives to brand-name GLP-1s are often the same active ingredient - for a fraction of the price. Here's how it works.",
     url: CANONICAL,
     type: "article",
   },
@@ -38,37 +38,37 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "What is the best alternative to Ozempic?",
     answer:
-      "For most people, the most effective alternative to Ozempic isn't a different drug at all — it's the same active ingredient (semaglutide) prescribed as an affordable compounded version through a licensed telehealth provider. Ozempic and Wegovy are both semaglutide; the brand versions are expensive and often hard to get, while compounded semaglutide delivers the same molecule, typically for a fraction of the list price. If you want a stronger option, tirzepatide (the active ingredient in Mounjaro and Zepbound) produced even greater average weight loss in trials and is also available as a compounded telehealth option.",
+      "For most people, the most effective alternative to Ozempic isn't a different drug at all - it's the same active ingredient (semaglutide) prescribed as an affordable compounded version through a licensed telehealth provider. Ozempic and Wegovy are both semaglutide; the brand versions are expensive and often hard to get, while compounded semaglutide delivers the same molecule, typically for a fraction of the list price. If you want a stronger option, tirzepatide (the active ingredient in Mounjaro and Zepbound) produced even greater average weight loss in trials and is also available as a compounded telehealth option.",
   },
   {
     question: "Is compounded semaglutide the same as Ozempic?",
     answer:
-      "They share the same active ingredient — semaglutide. Ozempic is Novo Nordisk's brand-name, FDA-approved product; compounded semaglutide is made by a licensed compounding pharmacy and prescribed by a provider after a medical review. The medicine works the same way, but compounded products are not FDA-approved brand drugs and can vary by pharmacy, so it matters to use a provider that works with reputable, state-licensed compounding pharmacies.",
+      "They share the same active ingredient - semaglutide. Ozempic is Novo Nordisk's brand-name, FDA-approved product; compounded semaglutide is made by a licensed compounding pharmacy and prescribed by a provider after a medical review. The medicine works the same way, but compounded products are not FDA-approved brand drugs and can vary by pharmacy, so it matters to use a provider that works with reputable, state-licensed compounding pharmacies.",
   },
   {
     question: "What's a cheaper alternative to Mounjaro?",
     answer:
-      "Mounjaro's active ingredient is tirzepatide. The cheaper route most people use is compounded tirzepatide prescribed online through a telehealth provider — the same dual GLP-1/GIP molecule, usually well below brand list price. Brand Mounjaro and Zepbound can run over $1,000/month without insurance; compounded tirzepatide from telehealth providers is often advertised from around $150–$300/month depending on the provider and dose.",
+      "Mounjaro's active ingredient is tirzepatide. The cheaper route most people use is compounded tirzepatide prescribed online through a telehealth provider - the same dual GLP-1/GIP molecule, usually well below brand list price. Brand Mounjaro and Zepbound can run over $1,000/month without insurance; compounded tirzepatide from telehealth providers is often advertised from around $150-$300/month depending on the provider and dose.",
   },
   {
     question: "Are there alternatives to Ozempic without insurance?",
     answer:
-      "Yes — this is exactly where telehealth GLP-1 providers fit. They prescribe compounded semaglutide or tirzepatide on a cash-pay basis, so you don't need insurance coverage for a brand drug. Pricing is typically a flat monthly amount that includes the medication, the provider consultation, and ongoing support.",
+      "Yes - this is exactly where telehealth GLP-1 providers fit. They prescribe compounded semaglutide or tirzepatide on a cash-pay basis, so you don't need insurance coverage for a brand drug. Pricing is typically a flat monthly amount that includes the medication, the provider consultation, and ongoing support.",
   },
   {
     question: "Is there an over-the-counter (OTC) Ozempic?",
     answer:
-      "No. There is no legitimate over-the-counter version of Ozempic or any GLP-1 medication — they are prescription-only. Any product marketed as 'OTC Ozempic,' 'Ozempic in a bottle,' or a supplement claiming the same effects is not the real medication. The legitimate lower-cost path is a prescription for compounded semaglutide or tirzepatide through a licensed provider.",
+      "No. There is no legitimate over-the-counter version of Ozempic or any GLP-1 medication - they are prescription-only. Any product marketed as 'OTC Ozempic,' 'Ozempic in a bottle,' or a supplement claiming the same effects is not the real medication. The legitimate lower-cost path is a prescription for compounded semaglutide or tirzepatide through a licensed provider.",
   },
   {
-    question: "Semaglutide vs tirzepatide — which alternative is more effective?",
+    question: "Semaglutide vs tirzepatide - which alternative is more effective?",
     answer:
       "In their respective clinical trials, tirzepatide (Mounjaro/Zepbound) produced greater average weight loss (roughly 20%+) than semaglutide (Ozempic/Wegovy, roughly 15%). Both are highly effective and both are available as compounded telehealth options. Tirzepatide tends to cost a little more. The right choice depends on your medical history and your provider's guidance.",
   },
   {
     question: "Are compounded GLP-1 alternatives safe and legal?",
     answer:
-      "Compounded medications are prescribed by licensed clinicians and made by state-licensed compounding pharmacies that follow federal compounding standards. They are legal when prescribed appropriately, but they are not FDA-approved brand products, and quality depends on the pharmacy. Choose a provider that is transparent about its pharmacies, requires a real medical intake, and offers ongoing clinical support — which is what we weigh in our provider rankings.",
+      "Compounded medications are prescribed by licensed clinicians and made by state-licensed compounding pharmacies that follow federal compounding standards. They are legal when prescribed appropriately, but they are not FDA-approved brand products, and quality depends on the pharmacy. Choose a provider that is transparent about its pharmacies, requires a real medical intake, and offers ongoing clinical support - which is what we weigh in our provider rankings.",
   },
 ];
 
@@ -113,7 +113,7 @@ export default function OzempicAlternativesPage() {
           </h1>
           <p className="mt-3 max-w-[640px] text-[16px] leading-relaxed text-gray-500">
             The most effective &ldquo;alternative&rdquo; to a brand-name GLP-1 is usually the very same
-            active ingredient — prescribed as an affordable compounded option through a licensed
+            active ingredient - prescribed as an affordable compounded option through a licensed
             telehealth provider. Here&rsquo;s how the real alternatives compare, what they cost, and how
             to choose one safely.
           </p>
@@ -132,7 +132,7 @@ export default function OzempicAlternativesPage() {
               Mounjaro and Zepbound are both <strong className="text-[#191919]">tirzepatide</strong>. So
               the cheapest, most effective &ldquo;alternative&rdquo; to these brands is typically the
               same active ingredient, prescribed as a <strong className="text-[#191919]">compounded
-              medication</strong> through an online provider — for a fraction of the brand price.
+              medication</strong> through an online provider - for a fraction of the brand price.
             </p>
           </div>
         </div>
@@ -179,15 +179,15 @@ export default function OzempicAlternativesPage() {
             Brand-name Ozempic, Wegovy, Mounjaro and Zepbound can run{" "}
             <strong className="text-[#191919]">over $1,000 a month at list price</strong> without
             insurance, and coverage for weight loss is inconsistent. Licensed telehealth providers work
-            with compounding pharmacies to prescribe the same active ingredients — semaglutide or
-            tirzepatide — on a flat, cash-pay basis. In practice that&rsquo;s often{" "}
-            <strong className="text-[#191919]">around $99–$300 a month</strong> depending on the
+            with compounding pharmacies to prescribe the same active ingredients - semaglutide or
+            tirzepatide - on a flat, cash-pay basis. In practice that&rsquo;s often{" "}
+            <strong className="text-[#191919]">around $99-$300 a month</strong> depending on the
             medication, dose, and provider, with the consultation and ongoing support included.
           </p>
           <p>
             The trade-off: compounded products aren&rsquo;t FDA-approved brand drugs, and quality
             depends on the pharmacy behind them. That&rsquo;s why the provider you choose matters more
-            than the brand name on the box — you want transparent pharmacies, a real medical intake, and
+            than the brand name on the box - you want transparent pharmacies, a real medical intake, and
             genuine clinical follow-up.
           </p>
         </section>
@@ -200,13 +200,13 @@ export default function OzempicAlternativesPage() {
           </div>
           <p className="mb-6">
             We compare the leading telehealth providers that offer compounded semaglutide and
-            tirzepatide on the things that actually matter — transparent pricing, the medications
+            tirzepatide on the things that actually matter - transparent pricing, the medications
             offered, shipping speed, and the quality of medical support. A few we rate highly for
             affordable, legitimate access are{" "}
             <Link href="/reviews/embody" className="font-semibold text-[#0C4B75] hover:underline">embody</Link>,{" "}
             <Link href="/reviews/altrx" className="font-semibold text-[#0C4B75] hover:underline">altRx</Link>, and{" "}
             <Link href="/reviews/trimrx" className="font-semibold text-[#0C4B75] hover:underline">trimrx</Link>{" "}
-            — but the right fit depends on your goals and budget.
+            - but the right fit depends on your goals and budget.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link href="/" className="inline-flex h-[46px] items-center justify-center gap-2 rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]">
@@ -224,8 +224,8 @@ export default function OzempicAlternativesPage() {
           <h2 className="mb-4 text-[24px] font-bold text-[#191919]">What about newer options?</h2>
           <p>
             The next generation is already in trials. <strong className="text-[#191919]">Retatrutide</strong>,
-            a triple-agonist from Eli Lilly, reached about 24% average weight loss in a Phase 2 study —
-            more than tirzepatide or semaglutide — though it isn&rsquo;t FDA-approved yet. Read our{" "}
+            a triple-agonist from Eli Lilly, reached about 24% average weight loss in a Phase 2 study -
+            more than tirzepatide or semaglutide - though it isn&rsquo;t FDA-approved yet. Read our{" "}
             <Link href="/retatrutide-weight-loss" className="font-semibold text-[#0C4B75] hover:underline">
               retatrutide guide
             </Link>{" "}

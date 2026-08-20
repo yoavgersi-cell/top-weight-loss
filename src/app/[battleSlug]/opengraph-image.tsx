@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { getConfig } from "@/lib/config-store";
 
 export const runtime = "edge";
-export const alt = "Provider Comparison — topweightloss.io";
+export const alt = "Provider Comparison - topweightloss.io";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

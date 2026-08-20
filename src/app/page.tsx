@@ -15,15 +15,15 @@ export const revalidate = 60;
 // commercial queries (best weight loss injections / programs / providers).
 export const metadata: Metadata = {
   title: {
-    absolute: "Best Weight Loss Injections & Programs 2026 — Compare Top Providers",
+    absolute: "Best Weight Loss Injections & Programs 2026 - Compare Top Providers",
   },
   description:
-    "Compare the best weight loss injections and programs of 2026. Top GLP-1 providers ranked by pricing, medications, medical support, and value — find your best fit.",
+    "Compare the best weight loss injections and programs of 2026. Top GLP-1 providers ranked by pricing, medications, medical support, and value - find your best fit.",
   alternates: { canonical: "https://www.topweightloss.io" },
   openGraph: {
-    title: "Best Weight Loss Injections & Programs 2026 — Compare Top Providers",
+    title: "Best Weight Loss Injections & Programs 2026 - Compare Top Providers",
     description:
-      "Compare the best weight loss injections and programs of 2026 — top GLP-1 providers ranked by price, support, and value.",
+      "Compare the best weight loss injections and programs of 2026 - top GLP-1 providers ranked by price, support, and value.",
     url: "https://www.topweightloss.io",
     type: "website",
   },
@@ -101,7 +101,7 @@ export default async function HomePage() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Best Weight Loss Injections & Programs 2026 — Compare Top Providers",
+    name: "Best Weight Loss Injections & Programs 2026 - Compare Top Providers",
     description:
       "Compare pricing, medications, medical support, and overall value across the top weight loss providers of 2026.",
     url: "https://www.topweightloss.io",
@@ -169,7 +169,7 @@ export default async function HomePage() {
         description={config.hero.description}
       />
 
-      {/* E-E-A-T byline strip — visible authorship/review + freshness for a YMYL topic */}
+      {/* E-E-A-T byline strip - visible authorship/review + freshness for a YMYL topic */}
       {(author || reviewer) && (
         <section className="mx-auto max-w-[1200px] px-4 pt-5">
           <div className="flex flex-wrap items-center gap-x-3 gap-y-2">

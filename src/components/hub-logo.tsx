@@ -5,10 +5,10 @@ import { TreatmentsHubWordmark } from "@/components/treatments-hub-wordmark";
 
 // Renders the real TreatmentsHub logo image, co-branded to the current vertical
 // when one exists. Expects files in /public:
-//   • treatmentshub.png                 (parent brand — hub landing)
+//   • treatmentshub.png                 (parent brand - hub landing)
 //   • treatmentshub-<vertical>.png      (e.g. treatmentshub-weight-loss.png)
 // It tries the vertical-specific lockup first, falls back to the parent logo,
-// and finally to the text wordmark — so nothing breaks before the files exist.
+// and finally to the text wordmark - so nothing breaks before the files exist.
 export function HubLogo({ vertical }: { vertical: string }) {
   const candidates = vertical
     ? [`/treatmentshub-${vertical}.png`, `/treatmentshub.png`]

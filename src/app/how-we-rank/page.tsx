@@ -12,12 +12,12 @@ export const revalidate = 60;
 const CANONICAL = "https://www.topweightloss.io/how-we-rank";
 
 export const metadata: Metadata = {
-  title: "How We Rank & Review Weight Loss Providers — Our Methodology",
+  title: "How We Rank & Review Weight Loss Providers - Our Methodology",
   description:
     "Our full methodology for ranking and reviewing GLP-1 weight loss providers: the factors we score, where our data comes from, how we verify accuracy, and how we pick winners in head-to-head comparisons.",
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "How We Rank & Review Weight Loss Providers — Our Methodology",
+    title: "How We Rank & Review Weight Loss Providers - Our Methodology",
     description:
       "The factors we score, where our data comes from, how we verify accuracy, and how we pick winners in our weight loss provider comparisons.",
     url: CANONICAL,
@@ -28,17 +28,17 @@ export const metadata: Metadata = {
 const FACTORS = [
   { category: "Medical Credibility", weight: "25%", desc: "Licensed provider oversight, quality of the medical evaluation, ongoing monitoring, pharmacy standards, and any third-party certifications (e.g. LegitScript)." },
   { category: "Medication Access", weight: "20%", desc: "Range of GLP-1 options offered (semaglutide, tirzepatide, brand-name), formulations, and dosing flexibility." },
-  { category: "Pricing & Value", weight: "20%", desc: "Total monthly cost including medication, consultations, and delivery — plus pricing transparency and the absence of hidden fees." },
+  { category: "Pricing & Value", weight: "20%", desc: "Total monthly cost including medication, consultations, and delivery - plus pricing transparency and the absence of hidden fees." },
   { category: "Patient Experience", weight: "15%", desc: "Enrollment speed, interface quality, support responsiveness, delivery reliability, and recent verified customer feedback." },
   { category: "Clinical Support", weight: "10%", desc: "Follow-up consultations, dose adjustments, side-effect management, and ongoing guidance through treatment." },
   { category: "Flexibility", weight: "10%", desc: "Contract terms, cancellation and pause policies, ability to switch medications, and payment options." },
 ];
 
 const SOURCES = [
-  { icon: Database, title: "The providers' own materials", desc: "We pull pricing, medications, shipping, and the medical model directly from each provider's official website and landing pages — so what you read here matches what you'll see when you enroll." },
-  { icon: ClipboardCheck, title: "Recent verified customer reviews", desc: "We read current Trustpilot reviews to gauge real-world customer experience — communication, delivery, and support — not just marketing claims." },
+  { icon: Database, title: "The providers' own materials", desc: "We pull pricing, medications, shipping, and the medical model directly from each provider's official website and landing pages - so what you read here matches what you'll see when you enroll." },
+  { icon: ClipboardCheck, title: "Recent verified customer reviews", desc: "We read current Trustpilot reviews to gauge real-world customer experience - communication, delivery, and support - not just marketing claims." },
   { icon: Scale, title: "In-house research", desc: "Our editors independently walk enrollment flows, compare pricing side by side, and track how each provider's offering changes over time." },
-  { icon: ShieldCheck, title: "Clinical literature", desc: "Medical claims reference published trial data (such as STEP and SURMOUNT) and FDA information — not opinion." },
+  { icon: ShieldCheck, title: "Clinical literature", desc: "Medical claims reference published trial data (such as STEP and SURMOUNT) and FDA information - not opinion." },
 ];
 
 export default async function HowWeRankPage() {
@@ -48,7 +48,7 @@ export default async function HowWeRankPage() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "How We Rank & Review Weight Loss Providers — Our Methodology",
+    name: "How We Rank & Review Weight Loss Providers - Our Methodology",
     description:
       "Our full methodology for ranking and reviewing GLP-1 weight loss providers: the factors we score, where our data comes from, how we verify accuracy, and how we pick winners.",
     url: CANONICAL,
@@ -157,7 +157,7 @@ export default async function HowWeRankPage() {
           <h2 className="mb-4 text-[22px] font-bold text-[#191919]">How scoring works</h2>
           <p className="text-[16px] leading-[1.75] text-gray-600">
             Each provider earns an overall score on a 10-point scale, translated into a plain-English
-            label — from <strong className="text-[#191919]">Exceptional</strong> at the top through{" "}
+            label - from <strong className="text-[#191919]">Exceptional</strong> at the top through{" "}
             <strong className="text-[#191919]">Excellent</strong> and{" "}
             <strong className="text-[#191919]">Very Good</strong>. A score reflects the weighted result
             across the six factors above. Strong transparent pricing, credible medical oversight, and
@@ -173,7 +173,7 @@ export default async function HowWeRankPage() {
             <div>
               <h2 className="mb-2 text-[22px] font-bold text-[#191919]">How we pick a winner</h2>
               <p className="text-[15px] leading-[1.75] text-gray-600">
-                In a head-to-head comparison we score the two providers category by category —
+                In a head-to-head comparison we score the two providers category by category -
                 pricing, medical support, medication options, speed, and customer experience. The
                 provider that wins the majority of categories takes the matchup, and the advantage
                 meter reflects how decisive that edge is. We always name the runner-up&rsquo;s genuine
@@ -204,7 +204,7 @@ export default async function HowWeRankPage() {
           <div className="space-y-4 text-[16px] leading-[1.75] text-gray-600">
             <p>
               <strong className="text-[#191919]">Independent rankings.</strong> Our rankings and
-              reviews are determined by the evaluation criteria on this page — not by commercial
+              reviews are determined by the evaluation criteria on this page - not by commercial
               relationships.
             </p>
             <p>

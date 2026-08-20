@@ -12,7 +12,7 @@ function verticalName(id: string): string {
 export async function reviewsIndexMetadata(ctx: SiteContext): Promise<Metadata> {
   const url = canonicalUrl(ctx, "/reviews");
   const vName = verticalName(ctx.vertical);
-  const title = `${vName} Provider Reviews — In-Depth Expert Analysis`;
+  const title = `${vName} Provider Reviews - In-Depth Expert Analysis`;
   const description = `Read expert reviews of the top online ${vName.toLowerCase()} providers. Compare treatment options, pricing, pros and cons, and customer experience.`;
   return {
     title,

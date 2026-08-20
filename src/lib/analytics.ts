@@ -1,5 +1,5 @@
 /**
- * Analytics helper — fires events to both Meta Pixel and GA4.
+ * Analytics helper - fires events to both Meta Pixel and GA4.
  *
  * Usage:
  *   import { trackEvent, trackOnce } from "@/lib/analytics";
@@ -49,7 +49,7 @@ export function trackEvent(
 }
 
 /**
- * Track a provider CTA click. Fire-and-forget — never blocks the redirect.
+ * Track a provider CTA click. Fire-and-forget - never blocks the redirect.
  */
 export function trackProviderClick(params: {
   provider_name: string;

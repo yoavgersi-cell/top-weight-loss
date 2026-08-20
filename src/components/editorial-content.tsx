@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const tirzVsSemaRows: [string, string, string][] = [
-  ["Average Weight Loss in Trials", "~15.0%–20.9% average loss at 72 weeks (SURMOUNT)", "~14.9% mean loss at 68 weeks (STEP)"],
+  ["Average Weight Loss in Trials", "~15.0%-20.9% average loss at 72 weeks (SURMOUNT)", "~14.9% mean loss at 68 weeks (STEP)"],
   ["FDA Approval Status", "FDA-approved for chronic weight management (Zepbound®); also approved for type 2 diabetes as Mounjaro®", "FDA-approved for chronic weight management (Wegovy®); also approved for type 2 diabetes as Ozempic®"],
   ["Dosing Schedule", "Weekly injection", "Weekly injection"],
   ["Best For", "Patients seeking greater average weight loss observed in clinical trials, when appropriate", "Patients seeking an FDA-approved GLP-1 therapy with extensive long-term safety and outcomes data"],
@@ -9,7 +9,7 @@ const tirzVsSemaRows: [string, string, string][] = [
 ];
 
 const wegovyVsOzempicRows: [string, string, string][] = [
-  ["Average Weight Loss in Trials", "~14.9% mean weight loss at 68 weeks in obesity-specific trials (STEP-1)", "5–10% weight loss observed in type 2 diabetes trials, depending on dose"],
+  ["Average Weight Loss in Trials", "~14.9% mean weight loss at 68 weeks in obesity-specific trials (STEP-1)", "5-10% weight loss observed in type 2 diabetes trials, depending on dose"],
   ["FDA Approval Status", "Yes, FDA-approved specifically for weight management", "FDA-approved for type 2 diabetes; weight loss use is off-label"],
   ["Dosing Schedule", "Weekly injection", "Weekly injection"],
   ["Best For", "Patients seeking an FDA-approved medication for long-term weight management", "Patients with diabetes who may also benefit from weight loss"],
@@ -48,7 +48,7 @@ export function EditorialContent() {
         The Best Weight Loss Injections and Programs, Compared
       </h2>
       <p className="mb-4">
-        To find the best weight loss injections and programs, we compare leading GLP-1 providers on the factors that actually matter. Choosing the right weight loss provider involves more than selecting a medication — pricing, clinical support, treatment plans, eligibility requirements, and long-term value can vary significantly between providers. Not sure where to start? Try our{" "}
+        To find the best weight loss injections and programs, we compare leading GLP-1 providers on the factors that actually matter. Choosing the right weight loss provider involves more than selecting a medication - pricing, clinical support, treatment plans, eligibility requirements, and long-term value can vary significantly between providers. Not sure where to start? Try our{" "}
         <Link href="/find-your-match" className="font-semibold text-[#0C4B75] hover:underline">
           provider matching quiz
         </Link>{" "}
@@ -142,7 +142,7 @@ export function EditorialContent() {
         <li>Overall treatment costs</li>
       </ul>
       <p className="mb-8">
-        Comparing providers side-by-side — like{" "}
+        Comparing providers side-by-side - like{" "}
         <Link href="/altrx-vs-ro" className="font-semibold text-[#0C4B75] hover:underline">
           altRx vs Ro
         </Link>,{" "}
@@ -152,7 +152,7 @@ export function EditorialContent() {
         <Link href="/embody-vs-ro" className="font-semibold text-[#0C4B75] hover:underline">
           Embody vs Ro
         </Link>{" "}
-        — can help you better understand the differences and make a more informed decision.
+        - can help you better understand the differences and make a more informed decision.
       </p>
 
       <hr className="mb-8 border-gray-200" />
@@ -217,7 +217,7 @@ export function EditorialContent() {
             </tr>
             <tr>
               <td className="px-4 py-3 font-medium">Liraglutide (Saxenda)</td>
-              <td className="px-4 py-3">~5–8% of body weight</td>
+              <td className="px-4 py-3">~5-8% of body weight</td>
               <td className="px-4 py-3">56 weeks</td>
               <td className="hidden sm:table-cell px-4 py-3">$1,300+/month (brand only)</td>
             </tr>
@@ -266,9 +266,9 @@ export function EditorialContent() {
         How Much Does GLP-1 Weight Loss Medication Cost?
       </h3>
       <p className="mb-3">
-        Brand-name GLP-1 medications cost $900–$1,400 per month at retail price without insurance.
+        Brand-name GLP-1 medications cost $900-$1,400 per month at retail price without insurance.
         Compounded versions of semaglutide and tirzepatide are available through licensed telehealth
-        providers at significantly lower prices — typically $199–$500 per month including physician
+        providers at significantly lower prices - typically $199-$500 per month including physician
         consultations, medication, and home delivery. Learn more in our{" "}
         <Link href="/articles/weight-loss-medication-cost-guide" className="font-semibold text-[#0C4B75] hover:underline">
           complete cost guide
@@ -279,9 +279,9 @@ export function EditorialContent() {
         How Long Does It Take for GLP-1 Medication to Work?
       </h3>
       <p className="mb-3">
-        Most patients notice reduced appetite within the first 1–2 weeks of starting GLP-1 medication.
-        Visible weight loss typically begins around weeks 4–8. Clinical trial results show maximum
-        weight loss at 68–72 weeks of treatment. Read our{" "}
+        Most patients notice reduced appetite within the first 1-2 weeks of starting GLP-1 medication.
+        Visible weight loss typically begins around weeks 4-8. Clinical trial results show maximum
+        weight loss at 68-72 weeks of treatment. Read our{" "}
         <Link href="/articles/how-long-for-semaglutide-to-work" className="font-semibold text-[#0C4B75] hover:underline">
           detailed semaglutide timeline
         </Link>.
@@ -292,7 +292,7 @@ export function EditorialContent() {
       </h3>
       <p className="mb-8">
         Yes. Licensed telehealth providers can prescribe GLP-1 medications through fully online
-        medical evaluations. The process typically takes 1–5 days from sign-up to medication delivery.
+        medical evaluations. The process typically takes 1-5 days from sign-up to medication delivery.
         All providers featured on our platform use licensed physicians for prescribing and include
         ongoing medical oversight. Read our{" "}
         <Link href="/articles/how-to-get-ozempic-online" className="font-semibold text-[#0C4B75] hover:underline">

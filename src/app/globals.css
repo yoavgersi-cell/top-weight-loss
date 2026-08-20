@@ -78,7 +78,7 @@ html[data-hub] .hub-name {
 
 /* ───── Rich article typography (.article-body) ─────
    Article section bodies are author-written HTML (from code seeds or the CMS).
-   These rules give plain semantic markup — p, ul, ol, table, strong — an
+   These rules give plain semantic markup - p, ul, ol, table, strong - an
    editorial, readable rhythm, plus two purpose classes:
    .qa       an "at a glance" callout box (quick answer / snippet bait)
    .cta-row  an inline text-link call-to-action row                       */

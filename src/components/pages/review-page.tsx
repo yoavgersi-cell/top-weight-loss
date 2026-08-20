@@ -19,13 +19,13 @@ import { resolvePromoPopup } from "@/lib/promo-popups";
 import { notFound } from "next/navigation";
 
 // Per-provider SEO overrides for reviews with distinctive search demand.
-// Code-controlled (not CMS-merged) so they reliably target trending queries —
+// Code-controlled (not CMS-merged) so they reliably target trending queries -
 // e.g. surging "embody reviews" and "embody glp1".
 const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
   embody: {
     title: "embody Reviews 2026: GLP-1 Cost, Real Results & Is It Worth It?",
     description:
-      "embody GLP-1 reviews: compounded semaglutide & tirzepatide, shipped in 1-2 days with no insurance and LegitScript certification. Real customer reviews, pricing, pros & cons — and is embody worth it?",
+      "embody GLP-1 reviews: compounded semaglutide & tirzepatide, shipped in 1-2 days with no insurance and LegitScript certification. Real customer reviews, pricing, pros & cons - and is embody worth it?",
   },
   medvi: {
     title: "Medvi Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
@@ -59,63 +59,63 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   },
 };
 
-// "Is [brand] legit?" trust block — targets the high-intent "is X legit" query
+// "Is [brand] legit?" trust block - targets the high-intent "is X legit" query
 // cluster inside the existing review page (no separate page → no cannibalization).
 // Only defined for providers where the legitimacy signals are genuinely verifiable;
 // each signal is grounded in that provider's real credentials/practices.
 const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
   embody: {
     verdict:
-      "Yes — embody is a legitimate, US-based telehealth weight-loss provider. It's LegitScript-certified, works with US-based state-licensed 503A compounding pharmacies, and connects you with state-licensed doctors overseen by its own medical director.",
+      "Yes - embody is a legitimate, US-based telehealth weight-loss provider. It's LegitScript-certified, works with US-based state-licensed 503A compounding pharmacies, and connects you with state-licensed doctors overseen by its own medical director.",
     signals: [
       "LegitScript-certified telehealth provider",
       "US-based, state-licensed 503A compounding pharmacies",
       "State-licensed doctors, a medical director, and a nursing team",
-      "Transparent flat pricing — $69/mo semaglutide, $119 tirzepatide",
+      "Transparent flat pricing - $69/mo semaglutide, $119 tirzepatide",
       "Full refund if you're not approved",
     ],
   },
   altrx: {
     verdict:
-      "Yes — altRx is a legitimate self-pay telehealth service. A licensed provider (physician, PA, or nurse practitioner) reviews your assessment before any prescription is issued, and medication is filled by a licensed pharmacy.",
+      "Yes - altRx is a legitimate self-pay telehealth service. A licensed provider (physician, PA, or nurse practitioner) reviews your assessment before any prescription is issued, and medication is filled by a licensed pharmacy.",
     signals: [
       "Licensed providers review every assessment (physician, PA, or NP)",
       "Prescriptions filled by licensed pharmacies",
-      "Transparent, flat pricing — no hidden fees, no insurance required",
+      "Transparent, flat pricing - no hidden fees, no insurance required",
       "No long-term contract; pause or cancel anytime",
       "Buy Now, Pay Later available",
     ],
   },
   trimrx: {
     verdict:
-      "Yes — trimrx is a legitimate telehealth GLP-1 provider. Licensed clinicians guide treatment, medications are compounded semaglutide and tirzepatide prescribed after a medical review, and pricing is transparent with no long-term contract.",
+      "Yes - trimrx is a legitimate telehealth GLP-1 provider. Licensed clinicians guide treatment, medications are compounded semaglutide and tirzepatide prescribed after a medical review, and pricing is transparent with no long-term contract.",
     signals: [
       "Licensed clinical guidance throughout treatment",
       "Compounded semaglutide & tirzepatide, prescribed after review",
       "Transparent, competitive pricing with multi-month discounts",
       "No long-term contract required",
-      "100% online — no clinic visit needed",
+      "100% online - no clinic visit needed",
     ],
   },
   medvi: {
     verdict:
-      "Yes — Medvi is a legitimate medical weight-loss platform. Prescriptions are overseen by licensed providers with regular monitoring, and its pricing is transparent and all-inclusive with no surprise charges.",
+      "Yes - Medvi is a legitimate medical weight-loss platform. Prescriptions are overseen by licensed providers with regular monitoring, and its pricing is transparent and all-inclusive with no surprise charges.",
     signals: [
       "Prescription treatment overseen by licensed providers",
       "Regular monitoring and provider check-ins",
-      "Transparent, all-inclusive pricing — no surprise charges",
+      "Transparent, all-inclusive pricing - no surprise charges",
       "Highly rated, personal service on Trustpilot",
-      "100% online — no clinic visit required",
+      "100% online - no clinic visit required",
     ],
   },
   wellmedr: {
     verdict:
-      "Yes — WellMedr is a legitimate telehealth platform. Board-certified specialists tailor your plan, and medications are made in US state-licensed pharmacies following FDA compounding standards after a medical review.",
+      "Yes - WellMedr is a legitimate telehealth platform. Board-certified specialists tailor your plan, and medications are made in US state-licensed pharmacies following FDA compounding standards after a medical review.",
     signals: [
       "Board-certified specialists tailor your treatment plan",
       "US state-licensed pharmacies following FDA compounding standards",
       "Real medical intake reviewed before prescribing",
-      "100% online — message your provider anytime",
+      "100% online - message your provider anytime",
       "Discreet, unbranded packaging",
     ],
   },
@@ -133,7 +133,7 @@ export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Me
   const pageTitle = override?.title ?? `${provider.name} Review 2026: Cost, Results & Is It Worth It?`;
   const pageDescription = override?.description ?? review.shortSummary;
 
-  // Reviews of non-affiliate providers don't monetize — de-index (but keep
+  // Reviews of non-affiliate providers don't monetize - de-index (but keep
   // following links) so they stop diluting site-quality signals.
   const isAffiliate = AFFILIATE_PROVIDER_IDS.includes(provider.id);
 
@@ -173,7 +173,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // Site's own editorial rating for this provider (same scoring shown on the
   // homepage), keyed off its ranking position. Surfaced visibly below and fed
   // into the Review schema's reviewRating so the page is eligible for star
-  // rich snippets — a major CTR lever on review SERPs.
+  // rich snippets - a major CTR lever on review SERPs.
   const rankIndex = config.ranking.providerOrder.indexOf(provider.id);
   const editorial =
     rankIndex >= 0
@@ -213,7 +213,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
   // JSON-LD: Product with our editorial review, plus the Trustpilot aggregate
   // rating when a real one exists. Google's Product markup requires at least one
-  // of review / aggregateRating / offers — the editorial review guarantees the
+  // of review / aggregateRating / offers - the editorial review guarantees the
   // item is valid for every provider, including those (like altRx) that have no
   // Trustpilot aggregate rating. We intentionally omit `offers` so no (stale)
   // price surfaces in the rich result.
@@ -265,7 +265,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
     ],
   };
 
-  // FAQ — real, query-shaped questions answered entirely from this review's
+  // FAQ - real, query-shaped questions answered entirely from this review's
   // own researched content (pricing, treatments, best-for, verdict). Powers
   // both the visible FAQ section and the FAQPage schema (rich results / PAA).
   const reviewFaqs = [
@@ -350,7 +350,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       {editorial.score}/10
                     </span>
                     <span className="text-[13px] text-gray-500">
-                      {editorial.label} — our rating
+                      {editorial.label} - our rating
                     </span>
                   </div>
                 )}
@@ -411,7 +411,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           )}
         </div>
 
-        {/* Is [brand] legit? — trust block for the "is X legit" query cluster */}
+        {/* Is [brand] legit? - trust block for the "is X legit" query cluster */}
         {legit && (
           <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
             <div className="flex items-center gap-2 border-b border-gray-100 bg-emerald-50/50 px-6 py-4">
@@ -439,7 +439,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 )}
               </ul>
               <p className="mt-4 text-[12px] leading-relaxed text-gray-400">
-                &ldquo;Legitimate&rdquo; here means a real, licensed telehealth operation — not a
+                &ldquo;Legitimate&rdquo; here means a real, licensed telehealth operation - not a
                 guarantee of results. Compounded medications are not FDA-approved brand drugs. Always
                 confirm current details and eligibility with the provider.
               </p>
@@ -718,7 +718,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         )}
       </div>
 
-      {/* Mobile-only promo popup — shown on the provider's own review page when
+      {/* Mobile-only promo popup - shown on the provider's own review page when
           it has a registered creative (same once-per-session behavior as on
           comparisons). */}
       {promoPopup && (
