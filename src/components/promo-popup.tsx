@@ -9,8 +9,8 @@ const APPEAR_AFTER_MS = 10000;
 const pad = (n: number) => String(n).padStart(2, "0");
 
 // Mobile-only promo popup, shown on comparison pages where the popup's provider
-// is featured. Renders the provider's supplied creative, centered, and — when
-// the spec carries a timer — overlays a live countdown on its printed timer
+// is featured. Renders the provider's supplied creative, centered, and - when
+// the spec carries a timer - overlays a live countdown on its printed timer
 // boxes. Appears at most once per browser session, a few seconds after load.
 // The whole image is a tracked affiliate link; only the X closes it.
 export function PromoPopup({
@@ -31,7 +31,7 @@ export function PromoPopup({
     try {
       if (sessionStorage.getItem("promoPopupSeen")) return;
     } catch {
-      // sessionStorage unavailable — show normally.
+      // sessionStorage unavailable - show normally.
     }
     const t = setTimeout(() => {
       setVisible(true);
@@ -70,10 +70,10 @@ export function PromoPopup({
       role="dialog"
       aria-label={`${spec.providerName} offer`}
     >
-      {/* Backdrop — dims the page but does NOT close (exit is via the X only) */}
+      {/* Backdrop - dims the page but does NOT close (exit is via the X only) */}
       <div className="absolute inset-0 h-full w-full bg-black/50" />
 
-      {/* Creative — the whole image links out (tracked) */}
+      {/* Creative - the whole image links out (tracked) */}
       <div
         className={`relative w-full max-w-[430px] transition-transform duration-300 ${
           visible ? "scale-100" : "scale-95"
@@ -100,7 +100,7 @@ export function PromoPopup({
             alt={spec.alt}
             className="block h-auto w-full rounded-[24px] shadow-2xl"
           />
-          {/* Live countdown overlay — sits over the creative's printed timer boxes */}
+          {/* Live countdown overlay - sits over the creative's printed timer boxes */}
           {timer &&
             values.map((v, i) => (
               <span
@@ -121,7 +121,7 @@ export function PromoPopup({
             ))}
         </a>
 
-        {/* Close — the only way to dismiss the popup */}
+        {/* Close - the only way to dismiss the popup */}
         <button
           aria-label="Close"
           onClick={() => setClosed(true)}

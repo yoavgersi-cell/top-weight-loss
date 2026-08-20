@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { articles } from "@/data/articles";
 
 export const runtime = "edge";
-export const alt = "Article — topweightloss.io";
+export const alt = "Article - topweightloss.io";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

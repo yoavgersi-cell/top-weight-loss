@@ -3,7 +3,7 @@ import Link from "next/link";
 const formRows: [string, string, string][] = [
   ["Injections", "Testosterone given by injection on a set schedule.", "Common and cost-effective; some people prefer less-frequent dosing, others dislike needles."],
   ["Gels & creams", "Topical testosterone applied to the skin daily.", "Needle-free and steady, but requires care to avoid transferring to others by skin contact."],
-  ["Other forms", "Pellets, patches or other options depending on the provider.", "Availability and suitability vary — a clinician recommends what fits your situation."],
+  ["Other forms", "Pellets, patches or other options depending on the provider.", "Availability and suitability vary - a clinician recommends what fits your situation."],
 ];
 
 function ComparisonTable({ colA, colB, rows }: { colA: string; colB: string; rows: [string, string, string][] }) {
@@ -32,15 +32,15 @@ function ComparisonTable({ colA, colB, rows }: { colA: string; colB: string; row
 }
 
 // Editorial, general-information content for the TRT vertical home. Medical
-// claims are kept general and hedged — no fabricated statistics or provider
-// numbers — with links to the reviews and comparison and a clear disclaimer.
+// claims are kept general and hedged - no fabricated statistics or provider
+// numbers - with links to the reviews and comparison and a clear disclaimer.
 export function TrtEditorialContent() {
   return (
     <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-700">
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">The Best Online TRT Providers, Compared</h2>
       <p className="mb-4">
         Testosterone replacement therapy (TRT) has moved online: reputable telehealth clinics start with lab work,
-        connect you with a licensed provider to review your results and symptoms, and — where appropriate — prescribe
+        connect you with a licensed provider to review your results and symptoms, and - where appropriate - prescribe
         and monitor treatment from home. Providers differ in how they test, which treatment forms they offer, how
         closely they monitor you, and price. We compare them on those factors. Read our{" "}
         <Link href="/trt/reviews" className="font-semibold text-[#0C4B75] hover:underline">
@@ -53,7 +53,7 @@ export function TrtEditorialContent() {
         .
       </p>
 
-      <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">What TRT is — and who it&rsquo;s for</h3>
+      <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">What TRT is - and who it&rsquo;s for</h3>
       <p className="mb-4">
         TRT is a medical treatment that restores testosterone in men with clinically low levels confirmed by
         bloodwork, alongside symptoms such as low energy, reduced libido or changes in mood. It is not a treatment
@@ -74,10 +74,10 @@ export function TrtEditorialContent() {
 
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">What to look for in an online TRT provider</h3>
       <ul className="mb-4 list-disc space-y-2 pl-6">
-        <li><strong>Real lab testing</strong> — bloodwork before prescribing, and re-testing during treatment.</li>
-        <li><strong>Licensed medical oversight</strong> — a clinician reviews your labs and history, and is available for follow-up.</li>
-        <li><strong>Treatment options</strong> — the forms of testosterone and dosing that suit you.</li>
-        <li><strong>Transparent terms</strong> — check current pricing, what labs and follow-ups are included, and cancellation, on the provider&rsquo;s site.</li>
+        <li><strong>Real lab testing</strong> - bloodwork before prescribing, and re-testing during treatment.</li>
+        <li><strong>Licensed medical oversight</strong> - a clinician reviews your labs and history, and is available for follow-up.</li>
+        <li><strong>Treatment options</strong> - the forms of testosterone and dosing that suit you.</li>
+        <li><strong>Transparent terms</strong> - check current pricing, what labs and follow-ups are included, and cancellation, on the provider&rsquo;s site.</li>
       </ul>
 
       <p className="mb-4 text-[14px] text-gray-500">

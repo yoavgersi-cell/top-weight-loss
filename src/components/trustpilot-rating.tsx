@@ -1,6 +1,6 @@
 // Compact Trustpilot trust signal: the star rating rendered visually (with
 // fractional fill, like Trustpilot's own widget) plus the review count and a
-// clear "Trustpilot" attribution. Intentionally shows NO numeric score — just
+// clear "Trustpilot" attribution. Intentionally shows NO numeric score - just
 // the stars and the number of reviews.
 
 const TP_GREEN = "#00B67A";
@@ -27,7 +27,7 @@ function TrustpilotWordmark({ starClass = "h-[13px] w-[13px]", textClass = "text
 }
 
 // One Trustpilot-style box: green background filled left-to-right by `fill`
-// (0–1), gray remainder, white star on top.
+// (0-1), gray remainder, white star on top.
 function StarBox({ fill, size = 18 }: { fill: number; size?: number }) {
   const pct = Math.max(0, Math.min(1, fill)) * 100;
   return (

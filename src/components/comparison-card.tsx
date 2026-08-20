@@ -33,7 +33,7 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
   const showBubble = product.rank === 1 && !!socialProof;
   return (
     <article className="relative rounded-md border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md overflow-hidden">
-      {/* Rank badge — top-left, only bottom-right rounded */}
+      {/* Rank badge - top-left, only bottom-right rounded */}
       {!hideRank && (
         <div className="absolute left-0 top-0 z-10 flex h-[28px] w-[28px] items-center justify-center rounded-br-lg bg-[#191919] text-[15px] font-bold text-white">
           {product.rank}

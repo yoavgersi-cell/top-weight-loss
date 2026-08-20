@@ -4,7 +4,7 @@ export interface TrustpilotReview {
   name: string;
   location: string;
   rating: number;
-  date?: string; // e.g. "Aug 3, 2026" — shown on the review card when present
+  date?: string; // e.g. "Aug 3, 2026" - shown on the review card when present
 }
 
 // Reusable expert-team member for the site's credibility (E-E-A-T) layer.
@@ -14,7 +14,7 @@ export interface Expert {
   id: string;
   name: string;
   role: string;          // e.g. "Lead Health Researcher"
-  credentials?: string;  // e.g. "PharmD", "MPH" — real credentials only
+  credentials?: string;  // e.g. "PharmD", "MPH" - real credentials only
   bio: string;
   avatar?: string;       // image URL; falls back to initials when empty
   specialties?: string[];
@@ -280,7 +280,7 @@ export const CONTENT_LAST_UPDATED = "2026-08-16";
 // The hub (treatmentshub.com) is split into fully-separated verticals. Each one
 // is an independent bundle: its own providers, reviews, comparisons, articles,
 // ranking, and affiliate links, edited on its own tab in the CMS and stored in
-// its own blob. Adding a vertical later is a single entry here — nothing else
+// its own blob. Adding a vertical later is a single entry here - nothing else
 // in the routing or CMS is hard-coded to a specific vertical.
 //
 // `id` doubles as the URL segment (treatmentshub.com/<id>/…) and the storage
@@ -306,7 +306,7 @@ export const isVertical = (id: string): boolean => VERTICAL_IDS.includes(id);
 
 // Verticals that are publicly launched: advertised as "live" on the hub, listed
 // in the sitemap, and indexable. A vertical can have a full content skeleton
-// (providers, comparisons, etc.) while still being unpublished — it renders for
+// (providers, comparisons, etc.) while still being unpublished - it renders for
 // preview but stays out of the hub card, the sitemap, and the index until its
 // affiliate data is filled in and it's added here. Add a vertical id to launch it.
 export const PUBLISHED_VERTICALS = ["weight-loss", "hair-loss", "trt"];
@@ -335,7 +335,7 @@ export const AFFILIATE_PROVIDER_IDS = [
 
 // Non-monetizing articles targeting non-affiliate brands / competitive drug
 // head-terms (rank far down, don't convert). De-indexed to keep the site
-// focused on pages that pay. Reversible — remove a slug to re-index it.
+// focused on pages that pay. Reversible - remove a slug to re-index it.
 export const NOINDEX_ARTICLE_SLUGS = [
   "noom-weight-loss-review",
   "best-noom-alternatives",
@@ -346,7 +346,7 @@ export const NOINDEX_ARTICLE_SLUGS = [
   "zepbound-vs-wegovy",
   "tirzepatide-vs-semaglutide",
   // Kept noindex: "ozempic alternatives" is already owned by the dedicated
-  // /ozempic-alternatives landing page — indexing this article too would split
+  // /ozempic-alternatives landing page - indexing this article too would split
   // ranking signals for the same query (cannibalization).
   "best-ozempic-alternatives",
   // best-wegovy-alternatives, best-mounjaro-alternatives, and best-ro-alternatives
@@ -389,7 +389,7 @@ export const defaultConfig: SiteConfig = {
     h1: "Best Weight Loss Injections & Programs of 2026",
     h2: "Compare the top GLP-1 weight loss providers, side by side",
     description:
-      "Compare the best weight loss injections and programs — pricing, medications, medical support, and overall value — to find the provider that best fits your goals.",
+      "Compare the best weight loss injections and programs - pricing, medications, medical support, and overall value - to find the provider that best fits your goals.",
   },
   sidebar: {
     socialProofNumber: "18,400+",
@@ -400,7 +400,7 @@ export const defaultConfig: SiteConfig = {
       "All providers featured on our platform use secure systems to protect your personal information.",
     featuredImageUrl: "/sidebar-featured.png",
     featuredImageAlt:
-      "ALT RX — Physician-guided GLP-1 weight loss treatment",
+      "ALT RX - Physician-guided GLP-1 weight loss treatment",
     featuredImageLink: "#",
   },
   ranking: {

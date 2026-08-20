@@ -32,8 +32,8 @@ function ComparisonTable({ colA, colB, rows }: { colA: string; colB: string; row
 }
 
 // Editorial, general-information content for the HRT / menopause vertical home.
-// Medical claims are kept general and hedged — no fabricated statistics or
-// provider numbers — with links to the reviews and comparison and a disclaimer.
+// Medical claims are kept general and hedged - no fabricated statistics or
+// provider numbers - with links to the reviews and comparison and a disclaimer.
 export function HrtEditorialContent() {
   return (
     <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-700">
@@ -41,7 +41,7 @@ export function HrtEditorialContent() {
       <p className="mb-4">
         Menopause care has become far more accessible online: telehealth clinics connect you with menopause-trained
         clinicians who review your symptoms and history and, where appropriate, prescribe hormone therapy (HRT) or
-        non-hormonal treatment — with follow-up from home. Providers differ in the clinicians they use, whether they
+        non-hormonal treatment - with follow-up from home. Providers differ in the clinicians they use, whether they
         take insurance, the treatments they offer, and price. We compare them on those factors. Read our{" "}
         <Link href="/hrt/reviews" className="font-semibold text-[#0C4B75] hover:underline">
           provider reviews
@@ -55,7 +55,7 @@ export function HrtEditorialContent() {
 
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">What hormone therapy does</h3>
       <p className="mb-4">
-        Hormone therapy replaces hormones — primarily estrogen, often with progesterone — that decline during
+        Hormone therapy replaces hormones - primarily estrogen, often with progesterone - that decline during
         perimenopause and menopause. For many women it eases symptoms such as hot flashes, night sweats, sleep
         disruption and vaginal dryness. It isn&rsquo;t right for everyone, and a clinician weighs the benefits and
         risks based on your health history and preferences.
@@ -67,16 +67,16 @@ export function HrtEditorialContent() {
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">What to expect from an online visit</h3>
       <p className="mb-4">
         A good telehealth menopause provider starts with a thorough review of your symptoms, history and goals with a
-        clinician trained in menopause care. Treatment is individualized — hormonal or non-hormonal — and adjusted
+        clinician trained in menopause care. Treatment is individualized - hormonal or non-hormonal - and adjusted
         over time with follow-up. Some providers accept insurance for visits, which can affect your overall cost.
       </p>
 
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">What to look for in a menopause provider</h3>
       <ul className="mb-4 list-disc space-y-2 pl-6">
-        <li><strong>Menopause-trained clinicians</strong> — providers who specialize in perimenopause and menopause.</li>
-        <li><strong>Hormonal and non-hormonal options</strong> — so your plan fits your health and preferences.</li>
-        <li><strong>Ongoing support</strong> — follow-up visits and the ability to adjust treatment over time.</li>
-        <li><strong>Transparent terms</strong> — check pricing, whether insurance is accepted, and what&rsquo;s included, on the provider&rsquo;s site.</li>
+        <li><strong>Menopause-trained clinicians</strong> - providers who specialize in perimenopause and menopause.</li>
+        <li><strong>Hormonal and non-hormonal options</strong> - so your plan fits your health and preferences.</li>
+        <li><strong>Ongoing support</strong> - follow-up visits and the ability to adjust treatment over time.</li>
+        <li><strong>Transparent terms</strong> - check pricing, whether insurance is accepted, and what&rsquo;s included, on the provider&rsquo;s site.</li>
       </ul>
 
       <p className="mb-4 text-[14px] text-gray-500">

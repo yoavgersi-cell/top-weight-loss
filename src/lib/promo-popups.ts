@@ -5,13 +5,13 @@
 // that decides which popup wins when a page features more than one.
 //
 // `priority` breaks ties: when two featured providers both have a popup (e.g.
-// TrimRx vs. Embody), the higher priority shows and the other is suppressed —
+// TrimRx vs. Embody), the higher priority shows and the other is suppressed -
 // so TrimRx's popup appears on every TrimRx comparison EXCEPT against Embody.
 export interface PromoPopupTimer {
   // Evergreen countdown seconds at load; ticks down live from here each session.
   startSeconds: number;
   // Left offsets (% of image width) of the dd/hh/mm/ss boxes, plus their shared
-  // top/size/fill — measured against the creative so they overlay its printed
+  // top/size/fill - measured against the creative so they overlay its printed
   // timer exactly.
   boxes: { left: string }[];
   top: string;
@@ -34,7 +34,7 @@ export const PROMO_POPUPS: PromoPopupSpec[] = [
     providerId: "embody",
     providerName: "Embody",
     image: "/embodypopup.png",
-    alt: "Embody — GLP-1 from $69/mo. Start now and save.",
+    alt: "Embody - GLP-1 from $69/mo. Start now and save.",
     priority: 2,
     timer: {
       startSeconds: 5 * 86400 + 21 * 3600 + 52 * 60 + 30,
@@ -49,12 +49,12 @@ export const PROMO_POPUPS: PromoPopupSpec[] = [
     providerId: "trimrx",
     providerName: "TrimRx",
     image: "/trimrxpopup.png",
-    alt: "TrimRx — $140 off all weight loss plans, GLP-1 plans starting at $149. Start now and save.",
+    alt: "TrimRx - $140 off all weight loss plans, GLP-1 plans starting at $149. Start now and save.",
     priority: 1,
   },
 ];
 
-// Minimal provider shape the resolver needs — id, name, and the CMS popup
+// Minimal provider shape the resolver needs - id, name, and the CMS popup
 // control. Kept local so this module doesn't depend on the full config type.
 export interface PromoPopupProvider {
   id: string;
@@ -69,7 +69,7 @@ export interface PromoPopupProvider {
 
 // Highest-priority popup among the providers featured on the current page, or
 // null when none of them has one. Each provider's popup comes from the CMS
-// (provider.promoPopup) when set, otherwise the code default in PROMO_POPUPS —
+// (provider.promoPopup) when set, otherwise the code default in PROMO_POPUPS -
 // so a CMS entry can turn a popup on/off or swap its creative, while the timer
 // (an advanced, per-creative overlay) always stays code-defined by provider id.
 export function resolvePromoPopup(providers: PromoPopupProvider[]): PromoPopupSpec | null {

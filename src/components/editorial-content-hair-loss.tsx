@@ -14,7 +14,7 @@ const treatmentRows: [string, string, string][] = [
   [
     "Often used by",
     "Men with male-pattern hair loss; dutasteride is generally reserved for stronger DHT suppression under medical guidance.",
-    "Men and women — certain minoxidil formulas are used by women, unlike finasteride/dutasteride.",
+    "Men and women - certain minoxidil formulas are used by women, unlike finasteride/dutasteride.",
   ],
   [
     "Good to know",
@@ -49,8 +49,8 @@ function ComparisonTable({ colA, colB, rows }: { colA: string; colB: string; row
 }
 
 // Editorial, general-information content for the hair-loss vertical home. Keeps
-// medical claims general and appropriately hedged — no fabricated statistics or
-// provider-specific numbers — while giving the page real depth and internal
+// medical claims general and appropriately hedged - no fabricated statistics or
+// provider-specific numbers - while giving the page real depth and internal
 // links to the reviews and comparison.
 export function HairLossEditorialContent() {
   return (
@@ -77,8 +77,8 @@ export function HairLossEditorialContent() {
       </h3>
       <p className="mb-4">
         Most evidence-based hair-loss treatment comes down to a few actives, often used together under medical
-        guidance. Finasteride and dutasteride are oral prescriptions that reduce DHT — the hormone most associated
-        with male-pattern hair loss — while minoxidil supports hair growth through a separate, non-hormonal pathway
+        guidance. Finasteride and dutasteride are oral prescriptions that reduce DHT - the hormone most associated
+        with male-pattern hair loss - while minoxidil supports hair growth through a separate, non-hormonal pathway
         and is the active many people recognize from over-the-counter products.
       </p>
       <ComparisonTable colA="Finasteride / Dutasteride" colB="Minoxidil" rows={treatmentRows} />
@@ -101,8 +101,8 @@ export function HairLossEditorialContent() {
 
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">How long until you see results?</h3>
       <p className="mb-4">
-        Hair-loss treatment takes patience. Most people need several months of consistent use — commonly around 3
-        to 6 months — before visible changes appear, with fuller results developing later. It&rsquo;s also normal
+        Hair-loss treatment takes patience. Most people need several months of consistent use - commonly around 3
+        to 6 months - before visible changes appear, with fuller results developing later. It&rsquo;s also normal
         to see some early shedding as new growth cycles begin. Because these treatments work by maintaining an
         active growth environment, stopping them generally reverses the gains over time.
       </p>
@@ -110,38 +110,38 @@ export function HairLossEditorialContent() {
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">What to look for in an online provider</h3>
       <ul className="mb-4 list-disc space-y-2 pl-6">
         <li>
-          <strong>The right treatments for you</strong> — men and women have different options; confirm a provider
+          <strong>The right treatments for you</strong> - men and women have different options; confirm a provider
           offers formulas appropriate for you (for example, Happy Head serves both men and women, while Maximus is
           men-focused).
         </li>
         <li>
-          <strong>Licensed medical oversight</strong> — a real clinician should review your intake before anything
+          <strong>Licensed medical oversight</strong> - a real clinician should review your intake before anything
           is prescribed, and medication should come from a licensed pharmacy.
         </li>
         <li>
-          <strong>Personalization</strong> — some services tailor formulas to your needs, adding or removing actives
+          <strong>Personalization</strong> - some services tailor formulas to your needs, adding or removing actives
           and adjusting strength.
         </li>
         <li>
-          <strong>Transparent terms</strong> — check current pricing, what&rsquo;s included, shipping, and how easily
+          <strong>Transparent terms</strong> - check current pricing, what&rsquo;s included, shipping, and how easily
           you can pause or cancel, on the provider&rsquo;s own site.
         </li>
       </ul>
 
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">What causes hair loss? DHT and male-pattern baldness</h3>
       <p className="mb-4">
-        The most common cause of hair loss in men is <strong>androgenetic alopecia</strong> — male-pattern baldness —
+        The most common cause of hair loss in men is <strong>androgenetic alopecia</strong> - male-pattern baldness -
         and a related pattern affects many women too. It&rsquo;s driven largely by <strong>DHT (dihydrotestosterone)</strong>,
         a hormone that gradually shrinks hair follicles, leading to a receding hairline, a thinning crown, or a widening
         part. Genetics strongly influence who&rsquo;s affected, which is why pattern hair loss tends to run in families.
-        Because it&rsquo;s progressive, starting treatment early gives you the best chance to keep the hair you have — our
+        Because it&rsquo;s progressive, starting treatment early gives you the best chance to keep the hair you have - our
         guide on <Link href="/hair-loss/articles/how-to-stop-hair-loss" className="font-semibold text-[#0C4B75] hover:underline">how to stop hair loss</Link>{" "}
         walks through the options.
       </p>
 
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">Does hair-loss treatment really work?</h3>
       <p className="mb-4">
-        For most people with pattern hair loss, evidence-based treatments genuinely help — finasteride and dutasteride
+        For most people with pattern hair loss, evidence-based treatments genuinely help - finasteride and dutasteride
         slow loss by lowering DHT, and minoxidil supports regrowth. Results vary, and treatments work best when started
         early and used consistently. They&rsquo;re maintenance therapies: benefits are sustained with continued use and
         generally fade if you stop. For a deeper look, see{" "}
@@ -154,7 +154,7 @@ export function HairLossEditorialContent() {
       <p className="mb-4">
         Women&rsquo;s hair loss often shows up as diffuse thinning or a widening part rather than a receding hairline,
         and the right treatments differ. Minoxidil is commonly used for women, and some are prescribed spironolactone,
-        while finasteride and dutasteride are generally <em>not</em> recommended for women — especially during pregnancy.
+        while finasteride and dutasteride are generally <em>not</em> recommended for women - especially during pregnancy.
         Choose a provider that formulates for women:{" "}
         <Link href="/hair-loss/reviews/happyhead" className="font-semibold text-[#0C4B75] hover:underline">Happy Head</Link>{" "}
         serves both men and women. Read more in{" "}
@@ -165,7 +165,7 @@ export function HairLossEditorialContent() {
       <p className="mb-4">
         Pricing depends on the provider, the treatment, and whether you choose an oral medication or a custom topical
         formula, so it&rsquo;s best to check current pricing on each provider&rsquo;s own site. When you compare, look at
-        what&rsquo;s included — the online consultation, the medication itself, and shipping — rather than the headline
+        what&rsquo;s included - the online consultation, the medication itself, and shipping - rather than the headline
         number alone. Generic finasteride and minoxidil tend to be the most affordable, while personalized compounded
         formulas can cost more.
       </p>
@@ -174,7 +174,7 @@ export function HairLossEditorialContent() {
       <p className="mb-4">
         Reputable telehealth providers connect you with licensed clinicians who review your medical history before
         prescribing, and dispense medication through licensed pharmacies. That review is the key sign of a legitimate
-        service — avoid anywhere that ships prescription medication without one. The providers in our rankings all use
+        service - avoid anywhere that ships prescription medication without one. The providers in our rankings all use
         licensed medical oversight; still, always confirm a provider&rsquo;s licensing and read the details before you
         start.
       </p>

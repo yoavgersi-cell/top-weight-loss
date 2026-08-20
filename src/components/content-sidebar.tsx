@@ -117,7 +117,7 @@ export function ContentSidebar({ config, providers, articles, pageType, sourceFl
         </div>
       </aside>
 
-      {/* Mobile inline blocks — rendered at end of content */}
+      {/* Mobile inline blocks - rendered at end of content */}
       <div className="lg:hidden mt-10 space-y-6">
         {sortedBlocks.map((block, i) => {
           if (block.type === "quizCta") {

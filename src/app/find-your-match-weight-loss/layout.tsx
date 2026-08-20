@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Find Your Weight Loss Provider Match — Free Quiz",
+  title: "Find Your Weight Loss Provider Match - Free Quiz",
   description:
     "Chat with us to find the best weight loss provider for your goals. Personalized GLP-1 provider recommendations based on your needs.",
   alternates: {

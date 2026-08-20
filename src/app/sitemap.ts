@@ -40,7 +40,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return legacySitemap();
 }
 
-// ───── treatmentshub.com — the hub sitemap ─────
+// ───── treatmentshub.com - the hub sitemap ─────
 // Lists the hub landing plus every vertical that has content, under its
 // /<vertical>/ prefix. Weight-loss is withheld until the migration flips it
 // self-canonical (until then those pages canonicalize to the live legacy site,
@@ -71,7 +71,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
     { url: P("/articles"), lastModified: FALLBACK_DATE, changeFrequency: "weekly", priority: 0.8 },
   ];
 
-  // Reviews — only affiliate-provider reviews are indexable (competitor
+  // Reviews - only affiliate-provider reviews are indexable (competitor
   // reviews render noindex,follow to keep them out of the index), so only
   // those belong in the sitemap. This matches review-page robots exactly and
   // keeps noindex URLs (e.g. TRT competitors hone/fountain/marek) out of it.
@@ -129,7 +129,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
   return entries;
 }
 
-// ───── topweightloss.io — the legacy sitemap (unchanged) ─────
+// ───── topweightloss.io - the legacy sitemap (unchanged) ─────
 async function legacySitemap(): Promise<MetadataRoute.Sitemap> {
   const config = await getConfig();
 

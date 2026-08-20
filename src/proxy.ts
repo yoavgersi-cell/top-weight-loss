@@ -6,7 +6,7 @@ import { WEIGHT_LOSS_MIGRATED } from "@/lib/site-context";
 // vertical's CMS config (the quiz, editorial guides, and static info pages).
 // The dynamic money pages (/reviews, /articles, battle comparisons) are served
 // by real nested routes under [battleSlug] and are intentionally NOT listed
-// here — they must keep their own vertical param.
+// here - they must keep their own vertical param.
 const SHARED_ONE_OFF_PAGES = new Set([
   "find-your-match",
   "find-your-match-weight-loss",
@@ -24,7 +24,7 @@ const SHARED_ONE_OFF_PAGES = new Set([
 // Resolved HERE, in the proxy, rather than via next.config redirects(), so an
 // aliased URL collapses to its final destination in a SINGLE 301 on every host.
 // Handling it in next.config instead chains an alias hop (308) into the
-// migration/prefix hop (301) — a multi-hop redirect Google reports as a
+// migration/prefix hop (301) - a multi-hop redirect Google reports as a
 // "Redirect error". The key is the alias slug; the value is the canonical slug.
 const SLUG_ALIASES: Record<string, string> = {
   "embody-vs-altrx": "altrx-vs-embody",
@@ -32,13 +32,13 @@ const SLUG_ALIASES: Record<string, string> = {
 
 // One deployment serves two hosts:
 //
-//   • treatmentshub.com — the hub. "/" is the hub landing; everything else must
+//   • treatmentshub.com - the hub. "/" is the hub landing; everything else must
 //     live under a /<vertical>/ prefix. Requests already under a vertical are
 //     routed as-is (with shared one-off pages having their prefix stripped to
 //     the shared root page); any other bare path is legacy weight-loss content
 //     and is 301'd under /weight-loss, so the hub only ever serves prefixed URLs.
 //
-//   • topweightloss.io — the legacy site. Untouched until the migration flag is
+//   • topweightloss.io - the legacy site. Untouched until the migration flag is
 //     flipped, then every path 301-redirects to its /weight-loss/* equivalent
 //     on the hub. Dotted paths (/sitemap.xml, /robots.txt) plus /api and /admin
 //     are excluded by the matcher so they keep serving.
@@ -69,7 +69,7 @@ export function proxy(req: NextRequest) {
       return NextResponse.redirect(url, 301);
     }
 
-    // Already a vertical path — serve it, stripping the prefix only for the
+    // Already a vertical path - serve it, stripping the prefix only for the
     // shared one-off pages ("/<vertical>/about" → "/about").
     if (isVertical(first)) {
       if (segments.length === 2 && SHARED_ONE_OFF_PAGES.has(segments[1])) {
@@ -84,7 +84,7 @@ export function proxy(req: NextRequest) {
     }
 
     // Generated metadata image routes (e.g. /opengraph-image) have no file
-    // extension, so the matcher doesn't exclude them — serve them as-is rather
+    // extension, so the matcher doesn't exclude them - serve them as-is rather
     // than redirecting the OG/Twitter image URLs into a 404.
     if (last === "opengraph-image" || last === "twitter-image") {
       return NextResponse.next();

@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 // TreatmentsHub logotype, recreated in text so it stays crisp at any size and
 // needs no image asset. Matches the brand mark: "Treatments" in navy, "Hub" in
-// blue, a smaller navy ".com". Scales with the wrapping font-size — size it by
+// blue, a smaller navy ".com". Scales with the wrapping font-size - size it by
 // setting a text size / font-size on `className`.
 export function TreatmentsHubWordmark({ className }: { className?: string }) {
   return (

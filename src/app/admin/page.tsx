@@ -499,8 +499,8 @@ export default function AdminPage() {
                       <div className="flex-1 min-w-0">
                         <p className="text-sm font-bold text-[#191919]">{provider?.name ?? providerId}</p>
                         <p className="text-xs text-gray-400">
-                          Score: {position.score} — {position.label}
-                          {position.badge ? ` — "${position.badge}"` : ""}
+                          Score: {position.score} - {position.label}
+                          {position.badge ? ` - "${position.badge}"` : ""}
                         </p>
                       </div>
                       <div className="flex gap-1 shrink-0">
@@ -634,7 +634,7 @@ export default function AdminPage() {
           <div className="space-y-4">
             {/* Block Order Control */}
             <div className="rounded-xl border bg-white p-6 shadow-sm">
-              <h3 className="mb-1 text-sm font-bold text-gray-500 uppercase tracking-wider">Sidebar Blocks — Order & Visibility</h3>
+              <h3 className="mb-1 text-sm font-bold text-gray-500 uppercase tracking-wider">Sidebar Blocks - Order & Visibility</h3>
               <p className="mb-4 text-xs text-gray-400">Reorder, add, or remove sidebar blocks. Only blocks in this list will be shown, in this order.</p>
               <div className="space-y-2 mb-3">
                 {(config.sidebar.blockOrder ?? ["socialProof", "secureBadge", "featuredImage", "editorialReviews", "rankingMethodology", "disclosure"]).map((blockId, bi) => {
@@ -1441,7 +1441,7 @@ export default function AdminPage() {
                   <div className="mb-4 flex items-center justify-between">
                     <div>
                       <h3 className="text-sm font-bold text-[#191919]">{sb.name}</h3>
-                      <span className="text-xs text-gray-400">ID: {sb.id} — Area: {sb.area}</span>
+                      <span className="text-xs text-gray-400">ID: {sb.id} - Area: {sb.area}</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <label className="flex items-center gap-1.5 text-xs font-medium text-gray-500">
@@ -1593,7 +1593,7 @@ export default function AdminPage() {
                 ))}
               </div>
               <p className="mt-2 text-xs text-gray-400">
-                Classic: <span className="font-medium">/find-your-match</span> — Chat: <span className="font-medium">/find-your-match-weight-loss</span>
+                Classic: <span className="font-medium">/find-your-match</span> - Chat: <span className="font-medium">/find-your-match-weight-loss</span>
               </p>
             </div>
 
@@ -1975,9 +1975,9 @@ export default function AdminPage() {
               })}
             </div>
 
-            {/* Quiz Results Override — Visual Tree */}
+            {/* Quiz Results Override - Visual Tree */}
             <div className="rounded-xl border bg-white p-6 shadow-sm">
-              <h3 className="mb-1 text-sm font-bold text-gray-500 uppercase tracking-wider">Quiz Results — Per Priority Override</h3>
+              <h3 className="mb-1 text-sm font-bold text-gray-500 uppercase tracking-wider">Quiz Results - Per Priority Override</h3>
               <p className="mb-4 text-xs text-gray-400">Drag providers to set the exact result order for each priority. When set, this overrides the algorithm. Leave empty to use automatic scoring.</p>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {[
@@ -2068,7 +2068,7 @@ export default function AdminPage() {
         {activeTab === "team" && (
           <div className="space-y-4">
             <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-xs text-amber-800">
-              <b>Trust &amp; credibility (E-E-A-T) layer.</b> These experts appear as bylines on battle pages, reviews and articles, and feed author/reviewer structured data for Google. Use <b>real</b> team members — only add medical credentials (MD, RD, PharmD…) for people who actually hold them.
+              <b>Trust &amp; credibility (E-E-A-T) layer.</b> These experts appear as bylines on battle pages, reviews and articles, and feed author/reviewer structured data for Google. Use <b>real</b> team members - only add medical credentials (MD, RD, PharmD…) for people who actually hold them.
             </div>
             {(config.experts ?? []).map((expert, index) => (
               <div key={expert.id} className="rounded-xl border bg-white p-6 shadow-sm">
@@ -2085,7 +2085,7 @@ export default function AdminPage() {
                   <Field label="Name" value={expert.name} onChange={(v) => { const experts = [...(config.experts ?? [])]; experts[index] = { ...experts[index], name: v }; setConfig({ ...config, experts }); }} />
                   <Field label="Role / Title" value={expert.role} onChange={(v) => { const experts = [...(config.experts ?? [])]; experts[index] = { ...experts[index], role: v }; setConfig({ ...config, experts }); }} />
                   <Field label="Credentials (real only, e.g. RD, MPH)" value={expert.credentials ?? ""} onChange={(v) => { const experts = [...(config.experts ?? [])]; experts[index] = { ...experts[index], credentials: v }; setConfig({ ...config, experts }); }} />
-                  <ImageField label="Avatar (optional — initials used if empty)" value={expert.avatar ?? ""} onChange={(v) => { const experts = [...(config.experts ?? [])]; experts[index] = { ...experts[index], avatar: v }; setConfig({ ...config, experts }); }} />
+                  <ImageField label="Avatar (optional - initials used if empty)" value={expert.avatar ?? ""} onChange={(v) => { const experts = [...(config.experts ?? [])]; experts[index] = { ...experts[index], avatar: v }; setConfig({ ...config, experts }); }} />
                 </div>
                 <div className="mt-4">
                   <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Bio</label>
@@ -2114,10 +2114,10 @@ export default function AdminPage() {
             <div className="space-y-4">
               <Field label="Site Name" value={config.siteName} onChange={(v) => setConfig({ ...config, siteName: v })} />
               <div className="grid gap-4 sm:grid-cols-2">
-                <Field label="Card Social Proof — Number" value={config.cardSocialProof?.number ?? ""} onChange={(v) => setConfig({ ...config, cardSocialProof: { ...(config.cardSocialProof ?? { number: "", text: "" }), number: v } })} />
-                <Field label="Card Social Proof — Text" value={config.cardSocialProof?.text ?? ""} onChange={(v) => setConfig({ ...config, cardSocialProof: { ...(config.cardSocialProof ?? { number: "", text: "" }), text: v } })} />
-                <ImageField label="Battle Winner Banner — Desktop Image" value={config.battleWinnerBannerImageDesktop ?? ""} onChange={(v) => setConfig({ ...config, battleWinnerBannerImageDesktop: v })} />
-                <ImageField label="Battle Winner Banner — Mobile Image (wide)" value={config.battleWinnerBannerImageMobile ?? ""} onChange={(v) => setConfig({ ...config, battleWinnerBannerImageMobile: v })} />
+                <Field label="Card Social Proof - Number" value={config.cardSocialProof?.number ?? ""} onChange={(v) => setConfig({ ...config, cardSocialProof: { ...(config.cardSocialProof ?? { number: "", text: "" }), number: v } })} />
+                <Field label="Card Social Proof - Text" value={config.cardSocialProof?.text ?? ""} onChange={(v) => setConfig({ ...config, cardSocialProof: { ...(config.cardSocialProof ?? { number: "", text: "" }), text: v } })} />
+                <ImageField label="Battle Winner Banner - Desktop Image" value={config.battleWinnerBannerImageDesktop ?? ""} onChange={(v) => setConfig({ ...config, battleWinnerBannerImageDesktop: v })} />
+                <ImageField label="Battle Winner Banner - Mobile Image (wide)" value={config.battleWinnerBannerImageMobile ?? ""} onChange={(v) => setConfig({ ...config, battleWinnerBannerImageMobile: v })} />
               </div>
               <div>
                 <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Disclosure Text</label>

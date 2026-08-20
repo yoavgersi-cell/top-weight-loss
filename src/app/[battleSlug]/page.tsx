@@ -75,7 +75,7 @@ export default async function BattlePage({
     const researchTeam = `The ${ctx.brandTeam.replace(/\s+Team$/i, "")} Research Team`;
 
     // WebPage + ItemList schema (authorship, freshness, ranked entities) and the
-    // FAQ schema — the same E-E-A-T / rich-result signals the standalone home
+    // FAQ schema - the same E-E-A-T / rich-result signals the standalone home
     // carried, so the vertical home isn't a thinner page than before.
     const webPageSchema = {
       "@context": "https://schema.org",

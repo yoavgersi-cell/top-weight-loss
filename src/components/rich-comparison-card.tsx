@@ -23,7 +23,7 @@ export interface RichCardProduct {
 // pages: a prominent score, a trust pill, the treatments offered, transparent
 // starting price, a scannable key-facts grid, a strong CTA rail, and an intro
 // that links through to the full review. Every value is grounded in real config
-// data — scores, prices, treatments, features and trust signals all come from
+// data - scores, prices, treatments, features and trust signals all come from
 // the per-provider research. Nothing here is fabricated.
 export function RichComparisonCard({
   product,
@@ -42,7 +42,7 @@ export function RichComparisonCard({
   const reviewHref = `${linkPrefix}/reviews/${review?.slug ?? product.id}`;
   const intro = review?.reviewIntro ?? review?.shortSummary ?? product.tagline;
 
-  // FDA disclaimer only where it's actually warranted — i.e. the offering
+  // FDA disclaimer only where it's actually warranted - i.e. the offering
   // includes compounded medication. Detected from real copy, never assumed.
   const mentionsCompounded = /compounded/i.test(
     `${review?.pricingSummary ?? ""} ${treatments.join(" ")}`,
@@ -100,7 +100,7 @@ export function RichComparisonCard({
           <h3 className="mt-3.5 text-[15px] font-bold leading-snug text-[#191919] sm:mt-4 sm:text-[19px]">{product.tagline}</h3>
         )}
 
-        {/* Trust pills — cap at 2 on mobile so the card doesn't stack into a list */}
+        {/* Trust pills - cap at 2 on mobile so the card doesn't stack into a list */}
         {pills.length > 0 && (
           <div className="mt-2.5 flex flex-wrap gap-1.5 sm:mt-3 sm:gap-2">
             {pills.map((p, i) => (
@@ -162,7 +162,7 @@ export function RichComparisonCard({
             )}
           </div>
 
-          {/* CTA rail — on mobile the button stands on its own with the price
+          {/* CTA rail - on mobile the button stands on its own with the price
               beside it (and stands fully alone when there's no price); on desktop
               the price stacks above it inside a panel. */}
           <div className="flex shrink-0 flex-row items-center gap-3 lg:w-[220px] lg:flex-col lg:items-stretch lg:gap-2.5 lg:rounded-xl lg:bg-[#F7F8FA] lg:p-4">

@@ -4,7 +4,7 @@ import { VERTICALS, DEFAULT_VERTICAL, isPublishedVertical, type Provider, type R
 import { getConfig } from "@/lib/config-store";
 import { ProviderCta } from "@/components/provider-cta";
 
-// Decorative category icons (visual only — no data implied).
+// Decorative category icons (visual only - no data implied).
 const VERTICAL_ICON: Record<string, typeof Syringe> = {
   "weight-loss": Syringe,
   "hair-loss": Sparkles,
@@ -45,7 +45,7 @@ function updatedLabel(iso?: string): string {
   return d.toLocaleDateString("en-US", { month: "short", year: "numeric" });
 }
 
-// Compact provider card for the homepage shelf — mirrors the ranking card's
+// Compact provider card for the homepage shelf - mirrors the ranking card's
 // data but in a lighter, three-up form. Every value (logo, score, Trustpilot
 // count, highlights, price) comes from config; nothing is invented, and the
 // Trustpilot line only appears when a real aggregate rating exists.
@@ -131,7 +131,7 @@ function ProviderMiniCard({
 // Hub landing (treatmentshub.com). An editorial front door for the umbrella
 // brand, styled as a real comparison publisher: a clear hero, a category grid,
 // a shelf of trusted providers, top-rated picks and editorial guides. Every
-// provider, score, review count and article is pulled from config — nothing is
+// provider, score, review count and article is pulled from config - nothing is
 // fabricated, and unpublished categories are shown as "coming soon".
 export async function HubHome() {
   const wl = await getConfig(DEFAULT_VERTICAL);
@@ -166,7 +166,7 @@ export async function HubHome() {
             Compare the Best Online Treatment Providers for Your Needs
           </h1>
           <p className="mx-auto mt-6 max-w-[640px] text-[17px] leading-relaxed text-gray-600 sm:text-[19px]">
-            Independent rankings across weight loss, hair loss, TRT and HRT — based on pricing, medical
+            Independent rankings across weight loss, hair loss, TRT and HRT - based on pricing, medical
             support and real customer reviews.
           </p>
 
@@ -331,7 +331,7 @@ export async function HubHome() {
               How TreatmentsHub compares providers
             </h2>
             <p className="mt-4 text-[16.5px] leading-[1.7] text-gray-600">
-              We look at what actually matters when choosing treatment online — price, what&rsquo;s
+              We look at what actually matters when choosing treatment online - price, what&rsquo;s
               included, access to medical support, treatment options, cancellation terms, and
               customer experience. Rankings are editorial and independent; partnerships never buy a
               higher placement.

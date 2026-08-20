@@ -4,13 +4,13 @@ import { DEFAULT_VERTICAL, isPublishedVertical } from "./config";
 // Site context
 //
 // The same page components render in two places:
-//   • the legacy root routes  (topweightloss.io/reviews/altrx)   — untouched
+//   • the legacy root routes  (topweightloss.io/reviews/altrx)   - untouched
 //   • the hub routes          (treatmentshub.com/weight-loss/reviews/altrx)
 //
 // A SiteContext carries the few things that differ between those two: the
 // internal-link prefix, the canonical origin/prefix, and the schema branding.
 // Threading a context (instead of reading request headers) keeps every page a
-// plain, statically-renderable server component — so the live site's ISR
+// plain, statically-renderable server component - so the live site's ISR
 // behavior is completely unchanged.
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -39,7 +39,7 @@ export interface SiteContext {
   noindex: boolean;
 }
 
-// Legacy root context — reproduces the exact URLs and branding the standalone
+// Legacy root context - reproduces the exact URLs and branding the standalone
 // topweightloss.io site emitted before the hub existed. The root routes pass
 // this, so their rendered output is byte-for-byte unchanged.
 export const ROOT_CONTEXT: SiteContext = {

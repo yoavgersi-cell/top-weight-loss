@@ -21,7 +21,7 @@ export function Header() {
   return (
     <header className="border-b-2 border-[#D5D5D5] bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-        {/* Brand — TopWeightLoss on the legacy domain, TreatmentsHub on the hub.
+        {/* Brand - TopWeightLoss on the legacy domain, TreatmentsHub on the hub.
             Only one is shown; the swap is driven by the data-hub attribute. */}
         <Link href={navHref(prefix, "/")} className="legacy-brand flex items-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}

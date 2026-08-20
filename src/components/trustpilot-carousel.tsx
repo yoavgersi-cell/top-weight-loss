@@ -106,7 +106,7 @@ export function TrustpilotCarousel({
   const perPage = 4;
   const pageCount = Math.ceil(total / perPage);
 
-  // Auto-advance is intentionally disabled — the carousel only moves when the
+  // Auto-advance is intentionally disabled - the carousel only moves when the
   // reader uses the arrows or dots (no self-scrolling animation).
 
   // Scroll mobile carousel
@@ -151,7 +151,7 @@ export function TrustpilotCarousel({
         )}
       </div>
 
-      {/* Desktop: paginated grid — up to 4 per page, arrows + dots to see the rest */}
+      {/* Desktop: paginated grid - up to 4 per page, arrows + dots to see the rest */}
       <div className="hidden sm:block">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {desktopVisible.map((r, i) => (

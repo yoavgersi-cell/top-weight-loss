@@ -12,30 +12,30 @@ const CANONICAL = "https://www.topweightloss.io/glp1-pills-vs-injections";
 export const metadata: Metadata = {
   title: "GLP-1 Pills vs Injections: Which Is Better for Weight Loss? (2026)",
   description:
-    "GLP-1 pills vs injections compared for 2026 — average weight loss, cost, convenience, and side effects. See whether oral GLP-1s or injections are the better fit for you.",
+    "GLP-1 pills vs injections compared for 2026 - average weight loss, cost, convenience, and side effects. See whether oral GLP-1s or injections are the better fit for you.",
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: "GLP-1 Pills vs Injections: Which Is Better for Weight Loss? (2026)",
     description:
-      "Oral GLP-1 pills vs injections — results, cost, convenience, and how to choose.",
+      "Oral GLP-1 pills vs injections - results, cost, convenience, and how to choose.",
     url: CANONICAL,
     type: "article",
   },
 };
 
 const compareRows: [string, string, string][] = [
-  ["Average weight loss", "~5–15% depending on the pill (high-dose oral semaglutide reaches ~15%)", "~15% (semaglutide) to ~20%+ (tirzepatide) in trials"],
-  ["How you take it", "Daily tablet or capsule — no needles", "Once-weekly self-injection"],
+  ["Average weight loss", "~5-15% depending on the pill (high-dose oral semaglutide reaches ~15%)", "~15% (semaglutide) to ~20%+ (tirzepatide) in trials"],
+  ["How you take it", "Daily tablet or capsule - no needles", "Once-weekly self-injection"],
   ["Main options", "Rybelsus, oral semaglutide 25mg, orforglipron (pipeline)", "Semaglutide (Wegovy), tirzepatide (Zepbound)"],
   ["Convenience", "Simple daily pill; some require empty-stomach timing", "One injection a week; no daily routine"],
-  ["Cost (telehealth)", "Varies by medication and provider", "Compounded options often from ~$69–$149/mo"],
+  ["Cost (telehealth)", "Varies by medication and provider", "Compounded options often from ~$69-$149/mo"],
   ["Best for", "People who want to avoid needles or start simply", "People prioritizing the greatest average weight loss"],
 ];
 
 const faqs: { question: string; answer: string }[] = [
-  { question: "Are GLP-1 pills as effective as injections?", answer: "Not quite, on average — but the gap is closing. Injectable GLP-1s like semaglutide and tirzepatide produce roughly 15–20%+ weight loss in trials, while most GLP-1 pills land lower. The exception is high-dose oral semaglutide, which has reached about 15% in trials and rivals the injection. For maximum average results today, injections still lead." },
-  { question: "Which is cheaper, GLP-1 pills or injections?", answer: "It depends on the specific medication and provider. Through telehealth, compounded injectable GLP-1s are often the most affordable route (frequently around $69–$149/month, including consultations). Oral pricing varies. The best value comes down to which medication you're prescribed and the plan you choose." },
-  { question: "Do GLP-1 pills have fewer side effects than injections?", answer: "The side-effect profile is broadly similar because they're the same drug class — most commonly nausea and other GI effects, especially early on. The route (pill vs injection) doesn't dramatically change this; dose and how gradually you titrate matter more." },
+  { question: "Are GLP-1 pills as effective as injections?", answer: "Not quite, on average - but the gap is closing. Injectable GLP-1s like semaglutide and tirzepatide produce roughly 15-20%+ weight loss in trials, while most GLP-1 pills land lower. The exception is high-dose oral semaglutide, which has reached about 15% in trials and rivals the injection. For maximum average results today, injections still lead." },
+  { question: "Which is cheaper, GLP-1 pills or injections?", answer: "It depends on the specific medication and provider. Through telehealth, compounded injectable GLP-1s are often the most affordable route (frequently around $69-$149/month, including consultations). Oral pricing varies. The best value comes down to which medication you're prescribed and the plan you choose." },
+  { question: "Do GLP-1 pills have fewer side effects than injections?", answer: "The side-effect profile is broadly similar because they're the same drug class - most commonly nausea and other GI effects, especially early on. The route (pill vs injection) doesn't dramatically change this; dose and how gradually you titrate matter more." },
   { question: "Can you switch from injections to pills, or vice versa?", answer: "Often yes, under medical supervision. Many people move between formulations based on tolerance, convenience, or availability. A licensed clinician determines the right medication, dose, and titration when switching." },
   { question: "Is there a GLP-1 pill approved specifically for weight loss?", answer: "It's arriving. Rybelsus (oral semaglutide) is FDA-approved for type 2 diabetes, and a higher-dose oral semaglutide for weight loss is advancing through FDA review. Orforglipron, an oral GLP-1 from Eli Lilly, is in late-stage trials. Injectable options remain the established, approved choice for now." },
 ];
@@ -80,7 +80,7 @@ export default function Glp1PillsVsInjectionsPage() {
             GLP-1 Pills vs Injections: Which Is Better for Weight Loss?
           </h1>
           <p className="mt-3 max-w-[640px] text-[16px] leading-relaxed text-gray-500">
-            Oral GLP-1 pills are catching up to the injections — but they&rsquo;re not identical.
+            Oral GLP-1 pills are catching up to the injections - but they&rsquo;re not identical.
             Here&rsquo;s an honest, side-by-side comparison of results, cost, convenience, and how to
             choose the right one for you.
           </p>
@@ -96,8 +96,8 @@ export default function Glp1PillsVsInjectionsPage() {
             <h2 className="mb-2 text-[18px] font-bold text-[#191919]">The short answer</h2>
             <p className="text-[15px] leading-[1.75] text-gray-600">
               <strong className="text-[#191919]">Injections still win on average weight loss</strong>{" "}
-              (~15–20%+ in trials), while <strong className="text-[#191919]">pills win on
-              convenience</strong> — a daily tablet, no needles. The newest high-dose oral GLP-1s are
+              (~15-20%+ in trials), while <strong className="text-[#191919]">pills win on
+              convenience</strong> - a daily tablet, no needles. The newest high-dose oral GLP-1s are
               closing the gap. Pick injections for maximum results; pick a pill if avoiding needles
               matters more to you.
             </p>
@@ -197,7 +197,7 @@ export default function Glp1PillsVsInjectionsPage() {
         <section className="mb-12">
           <h2 className="mb-4 text-[24px] font-bold text-[#191919]">Get started online</h2>
           <p className="mb-6">
-            Compare licensed telehealth providers on pricing, medical support, and value — whether you
+            Compare licensed telehealth providers on pricing, medical support, and value - whether you
             lean toward a pill or an injection.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">

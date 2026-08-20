@@ -11,7 +11,7 @@ interface StickyProvider {
 }
 
 // Mobile-only sticky CTA bar for battle pages. Both providers are shown side by
-// side (the page is objective — no single "winner"), so the reader can act on
+// side (the page is objective - no single "winner"), so the reader can act on
 // either one from anywhere on the page. It slides up once the reader scrolls
 // past the hero, so it never competes with the hero's own CTAs on first paint.
 //
@@ -41,7 +41,7 @@ export function BattleStickyCta({ p1, p2 }: { p1: StickyProvider; p2: StickyProv
         <div className="h-[3px] bg-gradient-to-r from-[#0C4B75] via-[#1a8cd8] to-[#0C4B75]" />
 
         <div className="px-3 pt-2.5 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
-          {/* Reassurance strip — evergreen, always-positive, provider-agnostic */}
+          {/* Reassurance strip - evergreen, always-positive, provider-agnostic */}
           <div className="mb-2.5 flex items-center justify-center gap-1.5 text-[11px] font-medium text-gray-500">
             <Check className="h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2.5} />
             <span>100% online</span>
@@ -51,7 +51,7 @@ export function BattleStickyCta({ p1, p2 }: { p1: StickyProvider; p2: StickyProv
             <span>Cancel anytime</span>
           </div>
 
-          {/* Both providers — equal weight */}
+          {/* Both providers - equal weight */}
           <div className="grid grid-cols-2 gap-2.5">
             {[p1, p2].map((p) => (
               <ProviderCta
