@@ -208,7 +208,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // Mobile promo popup — the highest-priority featured provider that has a
   // creative (registry + priority in @/lib/promo-popups). Each popup's link and
   // offer come from that provider's own real affiliate data.
-  const promoPopup = resolvePromoPopup([p1.id, p2.id]);
+  const promoPopup = resolvePromoPopup([p1, p2]);
 
   // Related comparisons — other battles featuring either provider (internal links).
   // Ordered by relevance: comparisons involving this matchup's winner surface

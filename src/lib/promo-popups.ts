@@ -54,11 +54,48 @@ export const PROMO_POPUPS: PromoPopupSpec[] = [
   },
 ];
 
+// Minimal provider shape the resolver needs — id, name, and the CMS popup
+// control. Kept local so this module doesn't depend on the full config type.
+export interface PromoPopupProvider {
+  id: string;
+  name: string;
+  promoPopup?: {
+    enabled: boolean;
+    image?: string;
+    alt?: string;
+    priority?: number;
+  };
+}
+
 // Highest-priority popup among the providers featured on the current page, or
-// null when none of them has one. `providerIds` is the set of providers on the
-// page (e.g. the two sides of a comparison).
-export function resolvePromoPopup(providerIds: string[]): PromoPopupSpec | null {
-  const candidates = PROMO_POPUPS.filter((p) => providerIds.includes(p.providerId));
+// null when none of them has one. Each provider's popup comes from the CMS
+// (provider.promoPopup) when set, otherwise the code default in PROMO_POPUPS —
+// so a CMS entry can turn a popup on/off or swap its creative, while the timer
+// (an advanced, per-creative overlay) always stays code-defined by provider id.
+export function resolvePromoPopup(providers: PromoPopupProvider[]): PromoPopupSpec | null {
+  const candidates: PromoPopupSpec[] = [];
+
+  for (const p of providers) {
+    const codeSpec = PROMO_POPUPS.find((s) => s.providerId === p.id);
+    const cms = p.promoPopup;
+
+    if (cms) {
+      if (!cms.enabled) continue; // CMS explicitly turned this popup off
+      const image = cms.image || codeSpec?.image;
+      if (!image) continue; // enabled but no creative to show
+      candidates.push({
+        providerId: p.id,
+        providerName: codeSpec?.providerName ?? p.name,
+        image,
+        alt: cms.alt ?? codeSpec?.alt ?? p.name,
+        priority: cms.priority ?? codeSpec?.priority ?? 1,
+        timer: codeSpec?.timer,
+      });
+    } else if (codeSpec) {
+      candidates.push(codeSpec); // no CMS entry → code default
+    }
+  }
+
   if (candidates.length === 0) return null;
   return candidates.sort((a, b) => b.priority - a.priority)[0];
 }

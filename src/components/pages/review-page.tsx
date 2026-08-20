@@ -14,6 +14,8 @@ import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { ExpertByline } from "@/components/expert-byline";
 import { LastUpdated } from "@/components/last-updated";
+import { PromoPopup } from "@/components/promo-popup";
+import { resolvePromoPopup } from "@/lib/promo-popups";
 import { notFound } from "next/navigation";
 
 // Per-provider SEO overrides for reviews with distinctive search demand.
@@ -181,6 +183,9 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   const editorialStars = editorial ? editorial.score / 2 : 0;
   const editorialFullStars = Math.floor(editorialStars);
   const editorialHasHalf = editorialStars % 1 >= 0.5;
+
+  // Promo popup for this provider, if it has a registered creative.
+  const promoPopup = resolvePromoPopup([provider]);
 
   // Note: we intentionally do NOT emit an AggregateOffer/price in the schema.
   // A structured price can surface in the SERP rich result and goes stale the
@@ -712,6 +717,17 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           </div>
         )}
       </div>
+
+      {/* Mobile-only promo popup — shown on the provider's own review page when
+          it has a registered creative (same once-per-session behavior as on
+          comparisons). */}
+      {promoPopup && (
+        <PromoPopup
+          spec={promoPopup}
+          href={provider.affiliateUrl}
+          position={rankIndex >= 0 ? rankIndex + 1 : undefined}
+        />
+      )}
     </div>
   );
 }
