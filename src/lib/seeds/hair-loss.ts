@@ -57,9 +57,11 @@ const providers: Provider[] = [
     affiliateUrl: HAPPYHEAD_URL,
     ctaText: "Visit Site",
   },
-  // Competitor brand — included only to power "Hims vs …" comparisons. It is NOT
-  // part of our ranking (see providerOrder below) and its standalone review page
-  // is de-indexed automatically (not in AFFILIATE_PROVIDER_IDS).
+  // Competitor brands (Hims, Keeps, Ro) — included only to power "X vs …"
+  // comparisons. They are NOT part of our ranking (see providerOrder below);
+  // Keeps/Ro review pages are de-indexed automatically (not in
+  // AFFILIATE_PROVIDER_IDS — Hims is listed there for TRT, so its review
+  // indexes, which is fine).
   {
     id: "hims",
     name: "Hims",
@@ -72,6 +74,34 @@ const providers: Provider[] = [
       "Online consultation & discreet delivery",
     ],
     affiliateUrl: "https://www.hims.com/hair-loss",
+    ctaText: "Visit Site",
+  },
+  {
+    id: "keeps",
+    name: "Keeps",
+    tagline: "Men's hair-loss treatment online — generic finasteride, minoxidil & hair-care essentials",
+    logo: "/logo-keeps.svg",
+    smallLogo: "/logo-keeps.svg",
+    highlights: [
+      "Generic finasteride & minoxidil, prescribed online",
+      "Budget-focused men's hair-loss specialist",
+      "Hair-care add-ons like ketoconazole shampoo",
+    ],
+    affiliateUrl: "https://www.keeps.com",
+    ctaText: "Visit Site",
+  },
+  {
+    id: "ro",
+    name: "Ro",
+    tagline: "Finasteride & minoxidil through a broad telehealth platform covering many areas of care",
+    logo: "/logos/ro.svg",
+    smallLogo: "/logos/ro-icon.svg",
+    highlights: [
+      "Prescription finasteride & topical minoxidil",
+      "One platform spanning many health categories",
+      "Online provider review & home delivery",
+    ],
+    affiliateUrl: "https://ro.co",
     ctaText: "Visit Site",
   },
 ];
@@ -207,6 +237,82 @@ const reviews: ReviewData[] = [
     ],
     finalVerdict:
       "Hims is a solid, recognizable mainstream option for men starting finasteride or minoxidil online. If you want broader prescription options or a personalized formula, it's worth comparing against our top-ranked providers. Confirm current pricing on their site.",
+    trustBadges: ["Licensed US providers", "Discreet shipping"],
+    updatedAt: UPDATED,
+  },
+  {
+    slug: "keeps",
+    providerId: "keeps",
+    shortSummary:
+      "A men's hair-loss specialist known for affordable generic finasteride and minoxidil, prescribed online with recurring delivery.",
+    reviewIntro:
+      "Keeps built its name on making the two proven hair-loss basics — generic finasteride and minoxidil — simple and affordable for men, with an online provider review and subscription delivery. This review covers what it offers and how it compares to providers with a broader or more personalized treatment set.",
+    keyFeatures: [
+      "Generic finasteride and minoxidil, prescribed online",
+      "Hair-loss-focused men's brand",
+      "Hair-care products like ketoconazole shampoo",
+      "Recurring subscription delivery",
+    ],
+    pricingSummary: PRICING_TBD,
+    treatmentOptions: [
+      "Oral finasteride",
+      "Topical minoxidil",
+      "Hair-care shampoos and thickening products",
+    ],
+    pros: [
+      "Affordable, generics-first positioning",
+      "Focused specifically on men's hair loss",
+      "Simple online process with recurring delivery",
+    ],
+    cons: [
+      "Centers on the standard finasteride/minoxidil toolkit",
+      "No personalized compounded formulas",
+      "Men's-focused",
+    ],
+    bestFor: [
+      "Men who want the proven basics at a budget price",
+      "Those comfortable with generic medication",
+    ],
+    finalVerdict:
+      "Keeps is a sensible budget route to the two proven basics — generic finasteride and minoxidil. If you want a wider prescription toolkit (like dutasteride or oral minoxidil) or a custom-compounded formula, compare it against our top-ranked providers. Confirm current pricing on their site.",
+    trustBadges: ["Licensed US providers", "Discreet shipping"],
+    updatedAt: UPDATED,
+  },
+  {
+    slug: "ro",
+    providerId: "ro",
+    shortSummary:
+      "A large telehealth platform offering prescription finasteride and minoxidil for hair loss alongside care across many other categories.",
+    reviewIntro:
+      "Ro is one of the largest telehealth platforms in the US, covering everything from weight loss to fertility — with men's hair loss served through prescription finasteride and topical minoxidil after an online provider review. This review covers its hair-loss offering and how it compares to dedicated hair-loss specialists.",
+    keyFeatures: [
+      "Prescription finasteride and topical minoxidil",
+      "One account across many health categories",
+      "Online provider review and home delivery",
+      "Established, well-funded telehealth platform",
+    ],
+    pricingSummary: PRICING_TBD,
+    treatmentOptions: [
+      "Oral finasteride",
+      "Topical minoxidil",
+      "Other men's-health treatments on the same platform",
+    ],
+    pros: [
+      "Broad platform if you want more than hair care",
+      "Established brand with a large clinical network",
+      "Simple, fully online process",
+    ],
+    cons: [
+      "Hair loss is one category among many, not a specialty",
+      "Standard treatment set rather than custom formulas",
+      "Less hair-specific guidance than dedicated providers",
+    ],
+    bestFor: [
+      "Men already using Ro for other care",
+      "Those who value one platform for multiple needs",
+    ],
+    finalVerdict:
+      "Ro is a credible generalist: the proven basics from a large, established platform — convenient if you want several kinds of care in one place. For hair loss specifically, dedicated providers offer deeper toolkits and personalization worth comparing. Confirm current pricing on their site.",
     trustBadges: ["Licensed US providers", "Discreet shipping"],
     updatedAt: UPDATED,
   },
@@ -399,6 +505,258 @@ const battles: BattleData[] = [
       { feature: "Personalized formulas", provider1Value: "Yes", provider2Value: "Standard set", highlight: "provider1" },
       { feature: "For women", provider1Value: "Yes", provider2Value: "No", highlight: "provider1" },
       { feature: "Higher-strength topical", provider1Value: "Up to 8% minoxidil", provider2Value: "See site", highlight: "provider1" },
+      { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
+    ],
+    updatedAt: UPDATED,
+  },
+  {
+    slug: "keeps-vs-maximus",
+    provider1Id: "maximus",
+    provider2Id: "keeps",
+    title: "Keeps vs Maximus: Which Hair Loss Treatment Is Better?",
+    subtitle: "Budget generics vs a broader physician-guided toolkit",
+    description:
+      "Compare Keeps and Maximus for men's hair loss — treatment options, pricing approach, and which provider fits your situation better.",
+    intro:
+      "Keeps and Maximus sit at two ends of the online hair-loss spectrum. Keeps built its reputation on making generic finasteride and minoxidil cheap and simple; Maximus offers a wider prescription toolkit — including oral dutasteride and a compounded topical — with physician oversight. Both are legitimate; here's how to choose between them.",
+    verdict:
+      "Maximus is our pick for men who want options beyond the basics — dutasteride, oral minoxidil and a compounded topical give you somewhere to go if first-line treatment underdelivers. Keeps is a fair budget choice if you only want generic finasteride or minoxidil and price is the deciding factor. Confirm current pricing on each provider's site.",
+    verdictWinnerPoints: [
+      "Wider prescription toolkit — finasteride, dutasteride & minoxidil",
+      "Compounded topical combining several actives",
+      "Board-certified doctor review and follow-up",
+    ],
+    verdictLoserPoints: [
+      "Generics-first, budget-friendly positioning",
+      "Simple, focused men's hair-loss offering",
+      "Hair-care add-ons like ketoconazole shampoo",
+    ],
+    winnerId: "maximus",
+    categories: [
+      {
+        name: "Treatment breadth",
+        winner: "provider1",
+        explanation:
+          "Maximus prescribes a wider set — oral finasteride, dutasteride and minoxidil plus a compounded topical — while Keeps centers on generic finasteride and topical minoxidil.",
+        supportingPoints: [
+          "Dutasteride and oral minoxidil available at Maximus",
+          "Compounded topical with several actives",
+        ],
+      },
+      {
+        name: "Price positioning",
+        winner: "provider2",
+        explanation:
+          "Keeps has built its brand on affordable generics, and for men who only want basic finasteride or minoxidil it's typically one of the most budget-friendly routes online.",
+        supportingPoints: [
+          "Generics-first product line",
+          "Simple subscription model",
+        ],
+      },
+      {
+        name: "Medical oversight",
+        winner: "tie",
+        explanation:
+          "Both prescribe only after review by a licensed clinician, with medication dispensed through licensed US pharmacies.",
+        supportingPoints: [
+          "Licensed-provider review at both",
+          "Ongoing online support at both",
+        ],
+      },
+    ],
+    features: [
+      { feature: "Oral finasteride", provider1Value: "Available", provider2Value: "Available", highlight: "both" },
+      { feature: "Dutasteride option", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
+      { feature: "Oral minoxidil", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
+      { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
+    ],
+    updatedAt: UPDATED,
+  },
+  {
+    slug: "keeps-vs-happy-head",
+    provider1Id: "happyhead",
+    provider2Id: "keeps",
+    title: "Keeps vs Happy Head: Custom Formulas or Budget Basics?",
+    subtitle: "Personalized dermatologist-designed treatment vs affordable generics",
+    description:
+      "Compare Keeps and Happy Head for hair loss — custom compounded formulas vs budget generics, who each serves, and which is right for you.",
+    intro:
+      "Keeps and Happy Head answer different questions. Keeps asks: how cheaply and simply can men get the proven basics? Happy Head asks: what's the strongest personalized formula a dermatologist can design for your specific hair? One is budget generics, the other custom compounding — for men and women. Here's how they compare.",
+    verdict:
+      "Happy Head is our pick for anyone who wants treatment tailored to them — custom-compounded topicals combining multiple actives, designed by dermatologists, for both men and women. Keeps remains a reasonable budget route for men happy with standard generic finasteride or minoxidil. Confirm current pricing on each provider's site.",
+    verdictWinnerPoints: [
+      "Custom compounded formulas with multiple actives",
+      "Dermatologist-founded, serves men and women",
+      "Higher-strength topical options (up to 8% minoxidil)",
+    ],
+    verdictLoserPoints: [
+      "Budget-friendly generic basics",
+      "Simple, focused subscription",
+      "Hair-care add-ons like shampoo",
+    ],
+    winnerId: "happyhead",
+    categories: [
+      {
+        name: "Personalization",
+        winner: "provider1",
+        explanation:
+          "Happy Head compounds custom topical formulas — combining actives like finasteride, minoxidil and more at prescription strengths — while Keeps offers the standard generic set.",
+        supportingPoints: [
+          "Formulas tailored by dermatologists",
+          "Multiple actives in one topical",
+        ],
+      },
+      {
+        name: "Who it serves",
+        winner: "provider1",
+        explanation:
+          "Happy Head formulates for both men and women, including options like spironolactone for women; Keeps is a men's brand.",
+        supportingPoints: [
+          "Men's and women's formulations",
+          "Women-specific actives available",
+        ],
+      },
+      {
+        name: "Budget basics",
+        winner: "provider2",
+        explanation:
+          "If all you want is generic finasteride or minoxidil at a low price, Keeps' generics-first model is hard to argue with.",
+        supportingPoints: [
+          "Generics-first pricing approach",
+          "No-frills subscription",
+        ],
+      },
+    ],
+    features: [
+      { feature: "Personalized formulas", provider1Value: "Yes", provider2Value: "Standard set", highlight: "provider1" },
+      { feature: "For women", provider1Value: "Yes", provider2Value: "No", highlight: "provider1" },
+      { feature: "Higher-strength topical", provider1Value: "Up to 8% minoxidil", provider2Value: "See site", highlight: "provider1" },
+      { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
+    ],
+    updatedAt: UPDATED,
+  },
+  {
+    slug: "ro-vs-maximus",
+    provider1Id: "maximus",
+    provider2Id: "ro",
+    title: "Ro vs Maximus for Hair Loss: Generalist or Specialist?",
+    subtitle: "A broad telehealth platform vs a dedicated hair-loss toolkit",
+    description:
+      "Compare Ro and Maximus for men's hair loss — a large multi-category telehealth platform vs a specialist with a deeper prescription toolkit.",
+    intro:
+      "Ro is one of the biggest names in telehealth, treating everything from weight loss to fertility — with hair loss served through prescription finasteride and minoxidil. Maximus comes at it as a specialist, with a deeper hair-specific toolkit including dutasteride, oral minoxidil and a compounded topical. Here's how the generalist and the specialist compare.",
+    verdict:
+      "For hair loss specifically, Maximus is our pick: the wider prescription toolkit gives you meaningful next steps if the basics underdeliver, with physician oversight throughout. Ro makes sense if you're already on its platform for other care and want everything under one roof. Confirm current pricing on each provider's site.",
+    verdictWinnerPoints: [
+      "Hair-specific toolkit — finasteride, dutasteride, oral minoxidil",
+      "Compounded topical formula",
+      "Board-certified doctor review and follow-up",
+    ],
+    verdictLoserPoints: [
+      "One platform for many kinds of care",
+      "Large, established clinical network",
+      "Simple, familiar online experience",
+    ],
+    winnerId: "maximus",
+    categories: [
+      {
+        name: "Treatment breadth for hair",
+        winner: "provider1",
+        explanation:
+          "Maximus offers a deeper hair-loss set — dutasteride, oral minoxidil and a compounded topical beyond standard finasteride — while Ro's hair offering centers on the proven basics.",
+        supportingPoints: [
+          "Dutasteride and oral minoxidil at Maximus",
+          "Compounded multi-active topical",
+        ],
+      },
+      {
+        name: "Beyond hair loss",
+        winner: "provider2",
+        explanation:
+          "Ro spans many health categories, so one account can cover multiple needs — convenient if hair is just one thing on your list.",
+        supportingPoints: [
+          "Weight loss, men's health and more on one platform",
+          "Established multi-category brand",
+        ],
+      },
+      {
+        name: "Medical oversight",
+        winner: "tie",
+        explanation:
+          "Both prescribe only after a licensed clinician reviews your intake, with medication from licensed US pharmacies.",
+        supportingPoints: [
+          "Licensed-provider review at both",
+          "Ongoing online follow-up at both",
+        ],
+      },
+    ],
+    features: [
+      { feature: "Oral finasteride", provider1Value: "Available", provider2Value: "Available", highlight: "both" },
+      { feature: "Dutasteride option", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
+      { feature: "Multi-category platform", provider1Value: "Hair-focused", provider2Value: "Yes", highlight: "provider2" },
+      { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
+    ],
+    updatedAt: UPDATED,
+  },
+  {
+    slug: "ro-vs-happy-head",
+    provider1Id: "happyhead",
+    provider2Id: "ro",
+    title: "Ro vs Happy Head: Which Is Better for Hair Loss?",
+    subtitle: "A multi-category telehealth giant vs custom compounded formulas",
+    description:
+      "Compare Ro and Happy Head for hair loss — standard finasteride and minoxidil from a big platform vs personalized dermatologist-designed formulas.",
+    intro:
+      "Ro brings hair-loss treatment to its large telehealth platform through standard prescription finasteride and minoxidil. Happy Head was built by dermatologists to do one thing: compound personalized prescription formulas — topical and oral, for men and women. Here's how a generalist platform compares with a compounding specialist.",
+    verdict:
+      "Happy Head is our pick for treatment depth: custom-compounded, multi-active formulas at prescription strengths, designed for your specific situation — including options for women. Ro is a convenient choice if you're consolidating several kinds of care on one platform and want the proven basics. Confirm current pricing on each provider's site.",
+    verdictWinnerPoints: [
+      "Custom compounded formulas with multiple actives",
+      "Dermatologist-founded, serves men and women",
+      "Higher-strength options (up to 8% minoxidil)",
+    ],
+    verdictLoserPoints: [
+      "One account for many health categories",
+      "Large, established telehealth brand",
+      "Simple standard treatment set",
+    ],
+    winnerId: "happyhead",
+    categories: [
+      {
+        name: "Formula depth",
+        winner: "provider1",
+        explanation:
+          "Happy Head's custom compounds combine several prescription actives in one topical or oral plan; Ro's hair-loss line centers on standard finasteride and minoxidil.",
+        supportingPoints: [
+          "Multi-active compounded prescriptions",
+          "Formulas adjusted to your response",
+        ],
+      },
+      {
+        name: "Who it serves",
+        winner: "provider1",
+        explanation:
+          "Happy Head treats both men and women with dedicated formulations; Ro's hair-loss offering is centered on men's treatment.",
+        supportingPoints: [
+          "Men's and women's programs",
+          "Women-specific actives like spironolactone",
+        ],
+      },
+      {
+        name: "Platform convenience",
+        winner: "provider2",
+        explanation:
+          "Ro can handle much more than hair — if you want weight-loss, men's-health and other care in one account, the generalist model is genuinely convenient.",
+        supportingPoints: [
+          "Multiple health categories in one place",
+          "Established national platform",
+        ],
+      },
+    ],
+    features: [
+      { feature: "Personalized formulas", provider1Value: "Yes", provider2Value: "Standard set", highlight: "provider1" },
+      { feature: "For women", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
+      { feature: "Multi-category platform", provider1Value: "Hair-focused", provider2Value: "Yes", highlight: "provider2" },
       { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
     ],
     updatedAt: UPDATED,
