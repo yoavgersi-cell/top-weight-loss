@@ -17,6 +17,79 @@ import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { TrustpilotRating } from "@/components/trustpilot-rating";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
+import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
+
+// Code-side CTR overrides for the highest-performing "versus" pages. These
+// pages live in the CMS blob, so their stored titles can't be tuned from code -
+// this map wins over the stored meta for exactly these slugs. Every price is
+// the provider's real listed price; keep them in sync when pricing changes.
+const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+  "embody-vs-wellmedr": {
+    title: "embody vs WellMedr (2026): $69 vs $59 GLP-1 Compared",
+    description:
+      "embody ($69/mo semaglutide, free 1-2 day shipping, refund if not approved) vs WellMedr ($59/mo, 1M+ patients, weight-loss warranty). Real prices, real trade-offs - see which fits you.",
+  },
+  "altrx-vs-embody": {
+    title: "altRx vs embody (2026): $89 vs $69 GLP-1 Compared",
+    description:
+      "altRx ($89/mo semaglutide + brand-name Zepbound & Wegovy, BNPL) vs embody ($69/mo flat, 1-2 day shipping, LegitScript-certified). Which GLP-1 provider wins? Full comparison.",
+  },
+  "altrx-vs-trimrx": {
+    title: "altRx vs trimrx (2026): $89 vs $179 GLP-1 Compared",
+    description:
+      "altRx ($89/mo semaglutide, flat at every dose, brand-name options) vs trimrx ($179/mo, no contract, multi-month discounts). Pricing, medications and flexibility compared.",
+  },
+  "altrx-vs-wellmedr": {
+    title: "altRx vs WellMedr (2026): $89 vs $59 GLP-1 Compared",
+    description:
+      "altRx ($89/mo semaglutide + the cheapest brand-name shelf) vs WellMedr ($59/mo, used by 1M+ patients). We compared price, medications, support and guarantees.",
+  },
+  "embody-vs-trimrx": {
+    title: "embody vs trimrx (2026): $69 vs $179 GLP-1 Compared",
+    description:
+      "embody ($69/mo flat semaglutide, free 1-2 day shipping) vs trimrx ($179/mo, flexible no-contract plans). Real pricing, speed and support compared side by side.",
+  },
+  "embody-vs-medvi": {
+    title: "embody vs Medvi (2026): $69 vs $179 GLP-1 Compared",
+    description:
+      "embody ($69/mo semaglutide, 1-2 day shipping, refund policy) vs Medvi ($179/mo all-inclusive with high-touch provider support). Price or personal care - see which fits.",
+  },
+  "embody-vs-ro": {
+    title: "embody vs ro (2026): Flat $69 GLP-1 or the Big Brand?",
+    description:
+      "embody ($69/mo flat semaglutide, LegitScript-certified, 1-2 day shipping) vs ro (major telehealth brand, in-house pharmacy). Pricing, speed and trust signals compared.",
+  },
+  "medvi-vs-trimrx": {
+    title: "Medvi vs trimrx (2026): Two $179 GLP-1 Plans Compared",
+    description:
+      "Medvi ($179/mo all-inclusive, Trustpilot-praised support) vs trimrx ($179/mo, no long-term contract). Same price, different strengths - here's how to pick.",
+  },
+  "medvi-vs-wellmedr": {
+    title: "Medvi vs WellMedr (2026): $179 or $59 GLP-1 Compared",
+    description:
+      "Medvi ($179/mo with personal provider support) vs WellMedr ($59/mo semaglutide, 1M+ patients, warranty). Is high-touch care worth 3x the price? Full comparison.",
+  },
+  "medvi-vs-altrx": {
+    title: "Medvi vs altRx (2026): $179 vs $89 GLP-1 Compared",
+    description:
+      "Medvi ($179/mo all-inclusive, personal support) vs altRx ($89/mo flat + brand-name options with BNPL). Pricing, medications and support compared honestly.",
+  },
+  "trimrx-vs-wellmedr": {
+    title: "trimrx vs WellMedr (2026): $179 vs $59 GLP-1 Compared",
+    description:
+      "trimrx ($179/mo, flexible no-contract plans) vs WellMedr ($59/mo semaglutide at every dose, weight-loss warranty). We compared price, flexibility and support.",
+  },
+  "trimrx-vs-ro": {
+    title: "trimrx vs ro (2026): Which GLP-1 Provider Fits You?",
+    description:
+      "trimrx ($179/mo, no long-term contract, clinical support included) vs ro (established brand, in-house pharmacy). Pricing clarity vs brand trust - full comparison.",
+  },
+  "ro-vs-wellmedr": {
+    title: "ro vs WellMedr (2026): Big Brand or $59 GLP-1?",
+    description:
+      "ro (major telehealth brand with in-house pharmacy) vs WellMedr ($59/mo semaglutide, 1M+ patients, weight-loss warranty). Brand trust vs the lowest price, compared.",
+  },
+};
 
 // Metadata for a landing page or head-to-head battle at /<slug> (root) or
 // /<vertical>/<slug> (hub). Returns { title: "Not Found" } for an unknown slug.
@@ -59,14 +132,19 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
   const canonicalSlug = samePairSlugs[0] ?? battle.slug;
   const url = canonicalUrl(ctx, `/${canonicalSlug}`);
 
+  // CTR override (code-controlled) wins over the stored meta for top battles.
+  const override = ctx.vertical === "weight-loss" ? BATTLE_SEO_OVERRIDES[slug] : undefined;
+  const metaTitle = override?.title ?? battle.title;
+  const metaDescription = override?.description ?? battle.description;
+
   return {
-    title: battle.title,
-    description: battle.description,
+    title: metaTitle,
+    description: metaDescription,
     robots: ctx.noindex ? { index: false, follow: false } : undefined,
     alternates: { canonical: url },
     openGraph: {
-      title: battle.title,
-      description: battle.description,
+      title: metaTitle,
+      description: metaDescription,
       url,
       type: "article",
     },
@@ -210,6 +288,21 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // offer come from that provider's own real affiliate data.
   const promoPopup = resolvePromoPopup([p1, p2]);
 
+  // Above-the-fold quick-comparison rows: the three decisions searchers care
+  // about first (price, prescription, delivery), pulled from this battle's own
+  // feature data so every value is real. The prescription row is a market
+  // constant - every provider we compare requires a licensed-provider review.
+  const findFeature = (re: RegExp) => (battle.features ?? []).find((f) => re.test(f.feature));
+  const priceRow = findFeature(/price|cost/i);
+  const shippingRow = findFeature(/shipping|delivery|speed/i);
+  const medsRow = findFeature(/medication|treatment/i);
+  const quickRows = [
+    priceRow && { label: "Starting price", v1: priceRow.provider1Value, v2: priceRow.provider2Value },
+    medsRow && { label: "Medications", v1: medsRow.provider1Value, v2: medsRow.provider2Value },
+    { label: "Prescription", v1: "Required - online provider review", v2: "Required - online provider review" },
+    shippingRow && { label: "Delivery", v1: shippingRow.provider1Value, v2: shippingRow.provider2Value },
+  ].filter(Boolean) as { label: string; v1: string; v2: string }[];
+
   // Related comparisons - other battles featuring either provider (internal links).
   // Ordered by relevance: comparisons involving this matchup's winner surface
   // first (a reader is most likely to keep evaluating the winner against other
@@ -325,14 +418,31 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   <span className="hidden text-gray-300 sm:inline">•</span>
                 </>
               )}
+              {/* Medical-review credit slot: renders the reviewer from the CMS
+                  Team tab. When a credentialed clinician (MD/PharmD/RD) is
+                  added there, this line carries their name sitewide. */}
+              {config.experts && config.experts.length > 1 && (
+                <>
+                  <p className="text-gray-500">
+                    <span className="font-semibold uppercase tracking-[0.05em] text-gray-400">Reviewed by </span>
+                    <Link href={hubLink(ctx, "/about")} className="font-semibold text-[#191919] hover:text-[#0C4B75] hover:underline">
+                      {config.experts[1].credentials
+                        ? `${config.experts[1].name}, ${config.experts[1].credentials}`
+                        : config.experts[1].name}
+                    </Link>
+                  </p>
+                  <span className="hidden text-gray-300 sm:inline">•</span>
+                </>
+              )}
               <LastUpdated date={battle.updatedAt || CONTENT_LAST_UPDATED} />
             </div>
+            <TrustDisclosure disclaimerHref={hubLink(ctx, "/disclaimer")} />
           </div>
         </section>
 
         <div className="mx-auto max-w-[1100px] px-4 pt-10 pb-28 sm:px-6 sm:pb-10">
           {/* ───── EXPERT INTRO ───── */}
-          <div className="mb-12 max-w-[760px]">
+          <div className="mb-8 max-w-[760px]">
             <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
               Here&rsquo;s the short version
             </p>
@@ -340,6 +450,36 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               {battle.intro}
             </p>
           </div>
+
+          {/* ───── ABOVE-THE-FOLD QUICK COMPARISON ─────
+              The three decisions searchers came for - price, prescription,
+              delivery - answered before any scrolling, from real feature data. */}
+          {quickRows.length > 0 && (
+            <div className="mb-12 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+              <table className="w-full table-fixed border-collapse text-left">
+                <thead>
+                  <tr className="border-b-2 border-gray-200 bg-gray-50/80">
+                    <th className="w-[26%] py-3 pl-4 pr-2 text-[11px] font-bold uppercase tracking-[0.06em] text-gray-400 sm:w-[22%] sm:py-3.5 sm:text-[12px]">
+                      At a glance
+                    </th>
+                    <th className="py-3 px-2 text-[13px] font-bold text-[#191919] sm:py-3.5 sm:px-3 sm:text-[15px]">{p1.name}</th>
+                    <th className="py-3 px-2 pr-4 text-[13px] font-bold text-[#191919] sm:py-3.5 sm:px-3 sm:text-[15px]">{p2.name}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {quickRows.map((row, i) => (
+                    <tr key={i} className="border-b border-gray-100 align-top last:border-0">
+                      <td className="py-3 pl-4 pr-2 text-[12.5px] font-semibold leading-snug text-gray-500 sm:py-3.5 sm:text-[13.5px]">
+                        {row.label}
+                      </td>
+                      <td className="py-3 px-2 text-[12.5px] leading-snug text-[#191919] sm:py-3.5 sm:px-3 sm:text-[14px]">{row.v1}</td>
+                      <td className="py-3 px-2 pr-4 text-[12.5px] leading-snug text-[#191919] sm:py-3.5 sm:px-3 sm:text-[14px]">{row.v2}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
 
           {/* ───── PROVIDER CARDS (enriched) ───── */}
           <div className="relative mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -810,6 +950,8 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               Compare All Providers
             </Link>
           </div>
+
+          <MedicalSources vertical={ctx.vertical} />
         </div>
       </div>
 

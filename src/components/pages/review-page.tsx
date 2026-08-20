@@ -16,6 +16,7 @@ import { ExpertByline } from "@/components/expert-byline";
 import { LastUpdated } from "@/components/last-updated";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
+import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
 import { notFound } from "next/navigation";
 
 // Per-provider SEO overrides for reviews with distinctive search demand.
@@ -295,6 +296,15 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   );
   const relatedArticles = (config.articles ?? []).slice(0, 3);
 
+  // This provider's own question cluster (is-X-legit / X-cost / X-alternatives)
+  // - the highest-intent internal links a review can carry. Rendered only for
+  // cluster articles that actually exist in the config.
+  const clusterSlugs = [
+    { slug: `is-${provider.id}-legit`, label: `Is ${provider.name} legit?` },
+    { slug: `${provider.id}-cost`, label: `How much does ${provider.name} cost?` },
+    { slug: `${provider.id}-alternatives`, label: `Best ${provider.name} alternatives` },
+  ].filter((c) => (config.articles ?? []).some((a) => a.slug === c.slug));
+
   return (
     <div className="min-h-screen bg-gray-50">
       {hasProductRichData && (
@@ -368,6 +378,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </ProviderCta>
           </div>
+          <TrustDisclosure disclaimerHref={hubLink(ctx, "/disclaimer")} />
         </div>
       </div>
 
@@ -716,6 +727,32 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             </div>
           </div>
         )}
+
+        {/* Provider question cluster - the review's highest-intent internal links */}
+        {clusterSlugs.length > 0 && (
+          <div className="mt-8 rounded-2xl border border-gray-200 bg-white p-6 sm:p-7">
+            <h2 className="mb-1 text-[17px] font-bold text-[#191919]">
+              More on {provider.name}
+            </h2>
+            <p className="mb-4 text-[13.5px] text-gray-500">
+              The questions people ask before signing up - answered in depth.
+            </p>
+            <div className="grid gap-2.5 sm:grid-cols-3">
+              {clusterSlugs.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={hubLink(ctx, `/articles/${c.slug}`)}
+                  className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
+                >
+                  <span className="truncate">{c.label}</span>
+                  <ArrowRight className="ml-auto h-3.5 w-3.5 shrink-0" strokeWidth={2} />
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <MedicalSources vertical={ctx.vertical} />
       </div>
 
       {/* Mobile-only promo popup - shown on the provider's own review page when
