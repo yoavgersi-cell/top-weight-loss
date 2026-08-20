@@ -358,5 +358,45 @@
     "affiliateUrl": "https://skinnyrx.com/",
     "ctaText": "View Plan",
     "description": ""
+  },
+  {
+    "id": "calibrate",
+    "rank": 19,
+    "name": "Calibrate",
+    "slug": "calibrate",
+    "tagline": "One-year metabolic reset program with 1:1 coaching and insurance-covered GLP-1 medication",
+    "logo": "/logos/calibrate.svg",
+    "rating": 0,
+    "ratingLabel": "",
+    "reviewCount": 0,
+    "highlights": [
+      "Structured one-year metabolic reset program",
+      "1:1 video coaching alongside medication",
+      "Works through your insurance for GLP-1 coverage"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://www.joincalibrate.com/",
+    "ctaText": "Visit Site",
+    "description": ""
+  },
+  {
+    "id": "sequence",
+    "rank": 20,
+    "name": "Sequence",
+    "slug": "sequence",
+    "tagline": "WeightWatchers' clinician-led GLP-1 program with insurance coordination",
+    "logo": "/logos/sequence.svg",
+    "rating": 0,
+    "ratingLabel": "",
+    "reviewCount": 0,
+    "highlights": [
+      "Clinician-led GLP-1 telehealth from WeightWatchers",
+      "Insurance coordination and prior-auth support",
+      "Integrated WeightWatchers behavioral program"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://www.weightwatchers.com/us/clinic",
+    "ctaText": "Visit Site",
+    "description": ""
   }
 ]

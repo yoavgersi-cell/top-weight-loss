@@ -20,6 +20,18 @@ export interface Expert {
   specialties?: string[];
 }
 
+// CMS-editable promo-popup control for a provider. When `enabled`, the
+// provider's creative shows (mobile) on its comparison and review pages. This
+// overrides the code-side default in @/lib/promo-popups; leaving it undefined
+// falls back to that default (so Embody/TrimRx keep working with no CMS entry).
+// The live countdown timer, when a creative has one, stays code-defined.
+export interface ProviderPromoPopup {
+  enabled: boolean;
+  image?: string;
+  alt?: string;
+  priority?: number;
+}
+
 export interface Provider {
   id: string;
   name: string;
@@ -34,6 +46,7 @@ export interface Provider {
   trustpilotRating?: string;
   trustpilotReviewCount?: string;
   trustpilotReviews?: TrustpilotReview[];
+  promoPopup?: ProviderPromoPopup;
 }
 
 export interface RankingPosition {

@@ -1345,6 +1345,80 @@ const defaultReviews: ReviewData[] = [
     finalVerdict: "Found stands out for its combination of prescription medication and personalized health coaching. If you want more than just a prescription — if you want to understand why your body responds the way it does and build sustainable habits alongside medical treatment — Found is a strong choice. The platform is best suited for people who value a science-backed, coaching-supported approach to weight loss."
   },
   {
+    slug: "calibrate",
+    providerId: "calibrate",
+    shortSummary: "A structured one-year metabolic reset program pairing 1:1 video coaching with brand-name GLP-1 medication obtained through your insurance.",
+    reviewIntro: "Calibrate approaches weight loss as a year-long program rather than a monthly prescription. Members get one-on-one video coaching and a structured curriculum alongside brand-name GLP-1 medication, which Calibrate works to get covered through the member's own health insurance — including handling prior authorizations. This review covers how that model works and who it fits.",
+    keyFeatures: [
+      "Structured one-year metabolic reset program",
+      "1:1 video coaching sessions throughout",
+      "Brand-name GLP-1 medication via your insurance",
+      "Prior-authorization support handled for you",
+      "Curriculum covering food, sleep, exercise and emotional health"
+    ],
+    pricingSummary: "Calibrate charges a program fee for its one-year membership, with GLP-1 medication billed separately through your health insurance — Calibrate works to secure coverage and handles prior authorizations. Total out-of-pocket cost therefore depends heavily on your insurance plan. Check Calibrate's site for current program pricing.",
+    treatmentOptions: [
+      "Brand-name GLP-1 medications (insurance-covered)",
+      "1:1 video coaching",
+      "Structured lifestyle curriculum"
+    ],
+    pros: [
+      "Deeply structured program with real accountability",
+      "Brand-name medication when insurance covers it",
+      "Prior-auth paperwork handled for you",
+      "Coaching addresses habits, not just medication"
+    ],
+    cons: [
+      "Economics depend on your insurance covering GLP-1s",
+      "A year-long commitment isn't for everyone",
+      "Slower to start than cash-pay compounded services",
+      "Program fee comes on top of medication costs"
+    ],
+    bestFor: [
+      "People whose insurance covers GLP-1 medication",
+      "Those who want brand-name medication specifically",
+      "Anyone who values a structured, coached year-long program"
+    ],
+    finalVerdict: "Calibrate is a serious, structured program — closer to a metabolic health course with medication than a prescription service. If your insurance covers GLP-1s, it can be an excellent route to brand-name treatment with real support. If you're self-pay or want to start quickly and cheaply, flat-priced compounded providers are the better economic fit. Confirm current program pricing on Calibrate's site."
+  },
+  {
+    slug: "sequence",
+    providerId: "sequence",
+    shortSummary: "WeightWatchers' clinician-led GLP-1 telehealth program, combining prescription care and insurance coordination with the WW behavioral program.",
+    reviewIntro: "Sequence — now operating as WeightWatchers Clinic — brings GLP-1 prescribing into the WeightWatchers ecosystem. Members see licensed clinicians who evaluate and prescribe GLP-1 medication where appropriate, get help navigating insurance coverage and prior authorizations, and have the WW behavioral program integrated alongside. This review covers how it works and who it suits.",
+    keyFeatures: [
+      "Licensed clinicians evaluate and prescribe",
+      "Insurance coordination and prior-auth support",
+      "Integrated WeightWatchers behavioral program",
+      "Established, well-known parent brand",
+      "Ongoing clinical follow-up"
+    ],
+    pricingSummary: "Sequence (WeightWatchers Clinic) charges a monthly membership for clinical care, with medication billed separately — typically through your health insurance, which the team helps you navigate. Total cost therefore depends on your coverage. Check the WeightWatchers Clinic site for current membership pricing.",
+    treatmentOptions: [
+      "GLP-1 medications (prescribed where appropriate)",
+      "Insurance navigation for medication coverage",
+      "WeightWatchers behavioral program"
+    ],
+    pros: [
+      "Trusted, decades-old parent brand",
+      "Real clinical evaluation and follow-up",
+      "Insurance navigation reduces paperwork burden",
+      "Behavior-change program built in"
+    ],
+    cons: [
+      "Medication costs depend on your insurance",
+      "Membership fee on top of medication",
+      "Less predictable total cost than flat-price rivals",
+      "Not built for cash-pay compounded treatment"
+    ],
+    bestFor: [
+      "Existing WeightWatchers members adding medical treatment",
+      "People whose insurance covers GLP-1 medication",
+      "Those who want a household-name brand behind their care"
+    ],
+    finalVerdict: "Sequence makes the most sense inside the WeightWatchers world: if you're already a WW member, or your insurance covers GLP-1s and you want a famous brand coordinating the paperwork, it's a credible choice. If you're paying cash and want a predictable flat monthly price, compounded-first providers are built for exactly that. Confirm current membership pricing on the WeightWatchers Clinic site."
+  },
+  {
     slug: "yucca",
     providerId: "yucca",
     shortSummary: "Modern telehealth weight loss platform offering streamlined GLP-1 access with licensed clinicians and affordable pricing.",
@@ -2783,6 +2857,510 @@ const altrxWellmedrBattle: BattleData = {
   ],
 };
 
+// ───── Competitor battles: Found / Calibrate / Sequence (winners: partners) ─────
+// Capture "found vs …", "calibrate vs …" and "sequence vs …" comparison queries
+// and route them to the strongest partners. Competitor facts stay qualitative
+// (their pricing varies by insurance/plan — never invented); partner facts use
+// the same verified pricing as everywhere else on the site.
+
+const foundEmbodyBattle: BattleData = {
+  slug: "found-vs-embody",
+  provider1Id: "embody",
+  provider2Id: "found",
+  title: "Found vs embody: Which Weight Loss Program Wins in 2026?",
+  matchupLabel: "Found vs embody",
+  subtitle: "A coaching-first membership vs flat-priced GLP-1 treatment — compared on pricing, speed, and what you actually get.",
+  description: "Found vs embody compared: membership + coaching vs flat $69/mo compounded GLP-1 with 1-2 day shipping. See which model fits you better.",
+  intro: "Found and embody answer the same question with different models. Found is a membership: clinician consultations, health coaching and an app, with medication (GLP-1 or non-GLP-1) prescribed on top and its cost varying by treatment and insurance. embody is flat-priced medication-first treatment: $69/month for compounded semaglutide or $119 for tirzepatide, everything included, shipped free in 1-2 days. Here's how they compare.",
+  verdict: "embody takes this one on price certainty and speed: $69/$119 flat with medication included, free 1-2 day shipping, LegitScript-certified pharmacies and a full refund if you're not approved. Found is the better fit if you specifically want coaching built around your treatment and are open to non-GLP-1 medication options — check current membership and medication costs on their site.",
+  verdictWinnerPoints: [
+    "Flat pricing with medication included — $69/mo semaglutide, $119/mo tirzepatide",
+    "Free 1-2 day tracked, insured shipping",
+    "Full refund if you're not approved",
+  ],
+  verdictLoserPoints: [
+    "Health coaching and behavior-change support built in",
+    "GLP-1 and non-GLP-1 medication options",
+    "Some plans may be insurance or HSA/FSA eligible",
+  ],
+  winnerId: "embody",
+  categories: [
+    {
+      name: "Pricing & Value",
+      winner: "provider1",
+      explanation: "embody's price is the whole price: $69/month for compounded semaglutide or $119 for tirzepatide, medication included. Found charges a membership for consultations and coaching, with medication costs varying by what's prescribed and whether insurance participates — the total is harder to predict.",
+      supportingPoints: [
+        "$69/mo semaglutide, $119/mo tirzepatide, all-in (embody)",
+        "No hidden fees, cancel anytime (embody)",
+        "Membership plus variable medication costs (Found)",
+      ],
+    },
+    {
+      name: "Speed to Treatment",
+      winner: "provider1",
+      explanation: "embody's qualifier takes about 5 minutes, doctor review usually lands within 24 hours, and medication ships free in 1-2 days. Found's coaching-led onboarding is more involved by design — some users report a longer ramp-up before treatment starts.",
+      supportingPoints: [
+        "~5-min intake, doctor review usually <24h (embody)",
+        "Free 1-2 day tracked shipping (embody)",
+        "More involved onboarding process (Found)",
+      ],
+    },
+    {
+      name: "Coaching & Behavior Change",
+      winner: "provider2",
+      explanation: "This is Found's genuine strength: dedicated health coaching, a behavioral-science-based program and progress tracking are part of the membership, not an add-on. embody focuses on medication with medical oversight rather than a coaching layer.",
+      supportingPoints: [
+        "Dedicated health coaching included (Found)",
+        "Behavioral program and tracking (Found)",
+        "Medication-first model (embody)",
+      ],
+    },
+    {
+      name: "Medication Options",
+      winner: "tie",
+      explanation: "Found prescribes both GLP-1 and non-GLP-1 medications, casting a wider pharmacological net. embody focuses on compounded semaglutide and tirzepatide — the two most-demanded GLP-1 actives — with flat pricing for each. Broader menu vs sharper focus is a genuine trade-off.",
+      supportingPoints: [
+        "GLP-1 plus non-GLP-1 options (Found)",
+        "Compounded semaglutide & tirzepatide, flat-priced (embody)",
+        "Licensed clinicians prescribe at both",
+      ],
+    },
+    {
+      name: "Transparency & Certifications",
+      winner: "provider1",
+      explanation: "embody publishes flat prices, is LegitScript-certified, uses US-based 503A compounding pharmacies, and refunds you in full if a provider doesn't approve treatment. Found is a legitimate service, but its variable medication costs make the total harder to see upfront.",
+      supportingPoints: [
+        "LegitScript-certified, 503A pharmacies (embody)",
+        "Full refund if not approved (embody)",
+        "Costs vary by medication and coverage (Found)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Starting Price", provider1Value: "$69/mo semaglutide · $119 tirzepatide, all-in", provider2Value: "Membership + medication (varies)", highlight: "provider1" },
+    { feature: "Shipping", provider1Value: "Free, 1-2 days (tracked, insured)", provider2Value: "Standard delivery", highlight: "provider1" },
+    { feature: "Coaching", provider1Value: "Medical oversight", provider2Value: "Dedicated health coaching", highlight: "provider2" },
+    { feature: "Medications", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "GLP-1 and non-GLP-1 options", highlight: "both" },
+    { feature: "Refund Policy", provider1Value: "Full refund if not approved", provider2Value: "See site", highlight: "provider1" },
+    { feature: "Insurance", provider1Value: "Not needed — flat self-pay", provider2Value: "Some plans insurance/HSA eligible", highlight: "both" },
+  ],
+};
+
+const foundTrimrxBattle: BattleData = {
+  slug: "found-vs-trimrx",
+  provider1Id: "trimrx",
+  provider2Id: "found",
+  title: "Found vs trimrx: Membership Coaching or Flexible GLP-1 Plans?",
+  matchupLabel: "Found vs trimrx",
+  subtitle: "Found's coaching membership vs trimrx's contract-free GLP-1 plans — pricing, flexibility and support compared.",
+  description: "Found vs trimrx: coaching membership with variable medication costs vs transparent $179/mo GLP-1 plans with no long-term contract. Compared honestly.",
+  intro: "Found wraps medication in a coached membership — clinician consults, health coaching and an app, with medication costs varying by prescription and coverage. trimrx sells the treatment directly: compounded semaglutide at $179/month (regularly $299) or tirzepatide at $259, clinical support included, no long-term contract. Two philosophies, one decision.",
+  verdict: "trimrx wins on clarity and flexibility: transparent plans with medication included, multi-month discounts if you want them, and no lock-in. Found earns real credit for its coaching and its non-GLP-1 options — if built-in behavior support is the thing you know you need, weigh it seriously and check current membership pricing on their site.",
+  verdictWinnerPoints: [
+    "Transparent pricing with medication included — $179/mo semaglutide",
+    "No long-term contract; multi-month discounts optional",
+    "Licensed clinical support through treatment",
+  ],
+  verdictLoserPoints: [
+    "Dedicated health coaching built into membership",
+    "GLP-1 and non-GLP-1 medication breadth",
+    "Personalized plans based on biology and habits",
+  ],
+  winnerId: "trimrx",
+  categories: [
+    {
+      name: "Pricing Clarity",
+      winner: "provider1",
+      explanation: "trimrx's $179/month covers the medication, provider consultations and support — one number you can budget. Found's membership fee plus variable medication costs means your real total depends on what's prescribed and how insurance participates.",
+      supportingPoints: [
+        "$179/mo semaglutide, $259 tirzepatide, all-in (trimrx)",
+        "Multi-month discounts stated upfront (trimrx)",
+        "Membership + variable medication costs (Found)",
+      ],
+    },
+    {
+      name: "Flexibility",
+      winner: "provider1",
+      explanation: "trimrx requires no long-term contract — month-to-month is always available. Found's model is membership-based and its coaching arc rewards a longer commitment.",
+      supportingPoints: [
+        "No long-term contract (trimrx)",
+        "Month-to-month always possible (trimrx)",
+        "Membership-based model (Found)",
+      ],
+    },
+    {
+      name: "Coaching & Support",
+      winner: "provider2",
+      explanation: "Found's dedicated coaching, behavioral curriculum and tracking are the reason it exists — a real advantage for anyone who wants accountability beyond a prescription. trimrx includes clinical support but not a coaching program.",
+      supportingPoints: [
+        "Dedicated health coaching (Found)",
+        "Behavior-change curriculum and tracking (Found)",
+        "Clinical support included, no coaching layer (trimrx)",
+      ],
+    },
+    {
+      name: "Medication Options",
+      winner: "tie",
+      explanation: "Found prescribes beyond GLP-1s, which suits people who may not want or tolerate them. trimrx focuses on compounded semaglutide and tirzepatide with clear pricing for each. Breadth vs focus — pick by what you actually need.",
+      supportingPoints: [
+        "Non-GLP-1 options available (Found)",
+        "Compounded semaglutide & tirzepatide (trimrx)",
+        "Licensed prescribers at both",
+      ],
+    },
+    {
+      name: "Medical Oversight",
+      winner: "tie",
+      explanation: "Both put licensed clinicians in charge of treatment decisions, with ongoing support as doses adjust. Neither cuts corners on the clinical gate.",
+      supportingPoints: [
+        "Licensed clinician review before prescribing (both)",
+        "Ongoing support through treatment (both)",
+        "100% online process (both)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Starting Price", provider1Value: "$179/mo, medication included", provider2Value: "Membership + medication (varies)", highlight: "provider1" },
+    { feature: "Contract", provider1Value: "None — month-to-month available", provider2Value: "Membership plans", highlight: "provider1" },
+    { feature: "Coaching", provider1Value: "Clinical support included", provider2Value: "Dedicated health coaching", highlight: "provider2" },
+    { feature: "Medications", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "GLP-1 and non-GLP-1 options", highlight: "both" },
+    { feature: "Discounts", provider1Value: "Multi-month discounts", provider2Value: "See site", highlight: "provider1" },
+    { feature: "Insurance", provider1Value: "Not needed — self-pay", provider2Value: "Some plans insurance/HSA eligible", highlight: "both" },
+  ],
+};
+
+const calibrateEmbodyBattle: BattleData = {
+  slug: "calibrate-vs-embody",
+  provider1Id: "embody",
+  provider2Id: "calibrate",
+  title: "Calibrate vs embody: Insurance Program or Flat-Price GLP-1?",
+  matchupLabel: "Calibrate vs embody",
+  subtitle: "Calibrate's year-long insurance-based program vs embody's flat $69/mo compounded GLP-1 — which model fits your situation?",
+  description: "Calibrate vs embody: a 1-year coached program with insurance-covered brand GLP-1s vs flat $69/mo compounded semaglutide shipped in 1-2 days.",
+  intro: "Calibrate and embody sit at opposite ends of the GLP-1 market. Calibrate is a structured one-year program: 1:1 video coaching, a lifestyle curriculum, and brand-name GLP-1 medication that Calibrate works to get covered through your insurance. embody is flat-price simplicity: $69/month compounded semaglutide or $119 tirzepatide, medication included, no insurance involved at all, shipped free in 1-2 days. Which is better depends almost entirely on your insurance and your appetite for structure.",
+  verdict: "For most self-pay shoppers, embody wins: flat transparent pricing, medication included, 1-2 day shipping and a refund if you're not approved — no insurance gymnastics. Calibrate is the stronger choice for the specific person whose insurance covers GLP-1s and who wants brand-name medication inside a seriously structured, coached year — check current program pricing on their site.",
+  verdictWinnerPoints: [
+    "Flat $69/mo semaglutide, $119/mo tirzepatide — medication included",
+    "No insurance required at any step",
+    "Free 1-2 day tracked shipping; refund if not approved",
+  ],
+  verdictLoserPoints: [
+    "Brand-name GLP-1s via your insurance, prior-auths handled",
+    "1:1 video coaching through a full year",
+    "Structured curriculum: food, sleep, exercise, emotional health",
+  ],
+  winnerId: "embody",
+  categories: [
+    {
+      name: "Cost Predictability",
+      winner: "provider1",
+      explanation: "embody's flat $69/$119 with medication included is fully predictable from day one. Calibrate's economics hinge on your insurance: when coverage comes through, brand-name medication gets affordable — but the program fee plus coverage uncertainty makes the total harder to know in advance.",
+      supportingPoints: [
+        "Flat all-in pricing (embody)",
+        "No insurance dependency (embody)",
+        "Program fee + insurance-dependent medication (Calibrate)",
+      ],
+    },
+    {
+      name: "Speed to Treatment",
+      winner: "provider1",
+      explanation: "embody moves in days: quick intake, doctor review usually within 24 hours, medication in 1-2 days. Calibrate's insurance route — eligibility, prior authorizations, pharmacy fulfillment — is inherently slower, even with Calibrate handling the paperwork.",
+      supportingPoints: [
+        "~5-min intake, review usually <24h (embody)",
+        "Free 1-2 day shipping (embody)",
+        "Prior-auth timelines apply (Calibrate)",
+      ],
+    },
+    {
+      name: "Program Depth",
+      winner: "provider2",
+      explanation: "Calibrate's one-year structure — 1:1 video coaching plus a curriculum spanning food, sleep, exercise and emotional health — is the deepest program in this comparison. embody deliberately keeps it lean: medication plus medical oversight.",
+      supportingPoints: [
+        "1:1 video coaching all year (Calibrate)",
+        "Structured four-pillar curriculum (Calibrate)",
+        "Lean, medication-first model (embody)",
+      ],
+    },
+    {
+      name: "Medication",
+      winner: "tie",
+      explanation: "Calibrate routes you to brand-name GLP-1s — the exact trial-validated products — when insurance cooperates. embody's compounded semaglutide and tirzepatide use the same active ingredients at a fraction of the cash price, from LegitScript-certified 503A pharmacies. Brand-name assurance vs compounded affordability is a real choice.",
+      supportingPoints: [
+        "Brand-name GLP-1s via insurance (Calibrate)",
+        "Compounded semaglutide/tirzepatide, certified pharmacies (embody)",
+        "Licensed clinicians prescribe at both",
+      ],
+    },
+    {
+      name: "Commitment Required",
+      winner: "provider1",
+      explanation: "embody is month-to-month with a refund if you're not approved — you can test the waters. Calibrate is built as a year; that structure is a feature for the committed and a barrier for everyone else.",
+      supportingPoints: [
+        "Cancel anytime (embody)",
+        "Full refund if not approved (embody)",
+        "One-year program design (Calibrate)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Starting Price", provider1Value: "$69/mo semaglutide · $119 tirzepatide, all-in", provider2Value: "Program fee + insurance-covered medication", highlight: "provider1" },
+    { feature: "Insurance", provider1Value: "Not needed", provider2Value: "Central to the model (prior-auths handled)", highlight: "both" },
+    { feature: "Medication", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "Brand-name GLP-1s", highlight: "both" },
+    { feature: "Coaching", provider1Value: "Medical oversight", provider2Value: "1:1 video coaching, full curriculum", highlight: "provider2" },
+    { feature: "Speed", provider1Value: "Review <24h, ships in 1-2 days", provider2Value: "Insurance/prior-auth timelines", highlight: "provider1" },
+    { feature: "Commitment", provider1Value: "Month-to-month", provider2Value: "One-year program", highlight: "provider1" },
+  ],
+};
+
+const calibrateMedviBattle: BattleData = {
+  slug: "calibrate-vs-medvi",
+  provider1Id: "medvi",
+  provider2Id: "calibrate",
+  title: "Calibrate vs Medvi: Which Weight Loss Program Fits You in 2026?",
+  matchupLabel: "Calibrate vs Medvi",
+  subtitle: "A year-long insurance-based reset vs all-inclusive monthly GLP-1 care with high-touch support — compared honestly.",
+  description: "Calibrate vs Medvi: insurance-covered brand GLP-1s in a coached year-long program vs $179/mo all-inclusive compounded treatment with personal support.",
+  intro: "Calibrate and Medvi both take support seriously — they just fund the medication differently. Calibrate pairs a year of 1:1 coaching with brand-name GLP-1s billed through your insurance. Medvi bundles everything into one self-pay price: $179/month for compounded semaglutide or $249 for tirzepatide, with the personal provider attention its customers consistently praise on Trustpilot. Here's the honest comparison.",
+  verdict: "Medvi takes it for most people: one predictable all-inclusive price, no insurance dependency, and genuinely personal provider support. Calibrate is the better pick for the person whose insurance reliably covers GLP-1s and who wants brand-name medication inside a structured year — confirm program pricing and your coverage before committing.",
+  verdictWinnerPoints: [
+    "All-inclusive $179/mo semaglutide, $249/mo tirzepatide",
+    "Personal, highly-rated provider support",
+    "No insurance required — start on your timeline",
+  ],
+  verdictLoserPoints: [
+    "Brand-name GLP-1s when insurance covers them",
+    "1:1 video coaching across a full year",
+    "Structured lifestyle curriculum",
+  ],
+  winnerId: "medvi",
+  categories: [
+    {
+      name: "Cost Predictability",
+      winner: "provider1",
+      explanation: "Medvi's all-inclusive monthly price is the same every month, insurance or not. Calibrate's total depends on the program fee plus whether and how your insurance covers the medication — a fine bet with great coverage, a frustrating one without it.",
+      supportingPoints: [
+        "$179/$249 all-inclusive, every month (Medvi)",
+        "No coverage uncertainty (Medvi)",
+        "Insurance-dependent medication costs (Calibrate)",
+      ],
+    },
+    {
+      name: "Personal Support",
+      winner: "tie",
+      explanation: "Both genuinely deliver here, differently: Calibrate through scheduled 1:1 video coaching and a curriculum, Medvi through the responsive, personal provider relationship its Trustpilot reviewers repeatedly highlight. Structured program vs personal clinician — pick your flavor of support.",
+      supportingPoints: [
+        "1:1 video coaching program (Calibrate)",
+        "Personal provider attention, praised on Trustpilot (Medvi)",
+        "Ongoing monitoring at both",
+      ],
+    },
+    {
+      name: "Speed to Treatment",
+      winner: "provider1",
+      explanation: "Medvi's self-pay compounded route starts on your schedule: intake, provider review, medication shipped. Calibrate's insurance journey adds eligibility checks and prior authorizations before medication lands.",
+      supportingPoints: [
+        "Self-pay, no prior-auths (Medvi)",
+        "Medication shipped after provider review (Medvi)",
+        "Insurance timelines apply (Calibrate)",
+      ],
+    },
+    {
+      name: "Medication",
+      winner: "tie",
+      explanation: "Brand-name GLP-1s through insurance (Calibrate) vs compounded semaglutide and tirzepatide at a predictable cash price (Medvi). The same trade-off as everywhere in this market: validation-brand comfort vs affordability and certainty.",
+      supportingPoints: [
+        "Brand-name via insurance (Calibrate)",
+        "Compounded semaglutide/tirzepatide (Medvi)",
+        "Licensed providers oversee both",
+      ],
+    },
+    {
+      name: "Commitment Required",
+      winner: "provider1",
+      explanation: "Medvi is a monthly service — adjust as your needs change. Calibrate is designed as a full-year program, which is powerful if you finish it and expensive if you don't.",
+      supportingPoints: [
+        "Month-to-month flexibility (Medvi)",
+        "Transparent, no surprise charges (Medvi)",
+        "Year-long program design (Calibrate)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Starting Price", provider1Value: "$179/mo semaglutide · $249 tirzepatide, all-inclusive", provider2Value: "Program fee + insurance-covered medication", highlight: "provider1" },
+    { feature: "Insurance", provider1Value: "Not required", provider2Value: "Central to the model", highlight: "both" },
+    { feature: "Medication", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "Brand-name GLP-1s", highlight: "both" },
+    { feature: "Support Model", provider1Value: "Personal provider support", provider2Value: "1:1 video coaching + curriculum", highlight: "both" },
+    { feature: "Speed", provider1Value: "Self-pay — no prior-auths", provider2Value: "Insurance/prior-auth timelines", highlight: "provider1" },
+    { feature: "Commitment", provider1Value: "Monthly", provider2Value: "One-year program", highlight: "provider1" },
+  ],
+};
+
+const sequenceTrimrxBattle: BattleData = {
+  slug: "sequence-vs-trimrx",
+  provider1Id: "trimrx",
+  provider2Id: "sequence",
+  title: "Sequence (WeightWatchers) vs trimrx: Which GLP-1 Program Wins?",
+  matchupLabel: "Sequence vs trimrx",
+  subtitle: "WeightWatchers' clinic membership vs flat-priced, contract-free GLP-1 plans — compared on cost, speed and flexibility.",
+  description: "Sequence (WeightWatchers Clinic) vs trimrx: insurance-navigated GLP-1 membership vs transparent $179/mo plans with medication included. Compared.",
+  intro: "Sequence — now WeightWatchers Clinic — pairs clinician-led GLP-1 prescribing with insurance navigation and the WW behavioral program, for a monthly membership with medication billed separately. trimrx keeps it direct: $179/month compounded semaglutide (regularly $299) or $259 tirzepatide, medication and clinical support included, no long-term contract. Here's how the household name stacks up against the focused specialist.",
+  verdict: "trimrx wins on the numbers that matter to a cash-pay shopper: one transparent price with the medication in it, and no lock-in. Sequence earns its place for WW loyalists and the well-insured — if your plan covers GLP-1s, its insurance navigation plus the WW program is a coherent package; check current membership pricing on the WeightWatchers Clinic site.",
+  verdictWinnerPoints: [
+    "Medication included — $179/mo semaglutide, $259 tirzepatide",
+    "No long-term contract; multi-month discounts optional",
+    "Clinical support through dose changes",
+  ],
+  verdictLoserPoints: [
+    "Insurance navigation and prior-auth support",
+    "Integrated WeightWatchers behavioral program",
+    "Trusted, decades-old parent brand",
+  ],
+  winnerId: "trimrx",
+  categories: [
+    {
+      name: "Total Cost Clarity",
+      winner: "provider1",
+      explanation: "trimrx's price includes the medication — one number, every month. Sequence's membership covers the clinical care while medication is billed separately, usually through insurance, so your real monthly total depends on coverage you don't control.",
+      supportingPoints: [
+        "$179/mo all-in semaglutide (trimrx)",
+        "Multi-month discounts available (trimrx)",
+        "Membership + separately-billed medication (Sequence)",
+      ],
+    },
+    {
+      name: "Behavioral Program",
+      winner: "provider2",
+      explanation: "The WeightWatchers program is the most battle-tested behavior-change system in the industry, and Sequence integrates it directly with medical treatment. trimrx offers clinical support but no comparable curriculum.",
+      supportingPoints: [
+        "Integrated WW behavioral program (Sequence)",
+        "Decades of behavior-change infrastructure (Sequence)",
+        "Clinical support, no formal program (trimrx)",
+      ],
+    },
+    {
+      name: "Speed to Treatment",
+      winner: "provider1",
+      explanation: "trimrx's self-pay compounded route starts when you do: online review, prescription, shipment. Sequence's insurance-first path adds coverage checks and prior authorizations before brand-name medication arrives.",
+      supportingPoints: [
+        "Self-pay — no prior-auth wait (trimrx)",
+        "100% online start (both)",
+        "Insurance timelines apply (Sequence)",
+      ],
+    },
+    {
+      name: "Flexibility",
+      winner: "provider1",
+      explanation: "trimrx requires no long-term contract and you can stay month-to-month. Sequence is a membership designed to work alongside insurance cycles and the WW program rhythm.",
+      supportingPoints: [
+        "No contract (trimrx)",
+        "Month-to-month always available (trimrx)",
+        "Membership model (Sequence)",
+      ],
+    },
+    {
+      name: "Medical Oversight",
+      winner: "tie",
+      explanation: "Licensed clinicians gate treatment at both — Sequence through WeightWatchers Clinic's medical team, trimrx through its licensed prescribers with ongoing support. Neither compromises the clinical layer.",
+      supportingPoints: [
+        "Licensed clinician evaluation (both)",
+        "Ongoing follow-up (both)",
+        "Fully online care (both)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Starting Price", provider1Value: "$179/mo, medication included", provider2Value: "Membership + medication via insurance", highlight: "provider1" },
+    { feature: "Insurance", provider1Value: "Not needed — self-pay", provider2Value: "Navigation and prior-auth support", highlight: "both" },
+    { feature: "Medication", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "Brand-name GLP-1s (via insurance)", highlight: "both" },
+    { feature: "Behavior Program", provider1Value: "Clinical support", provider2Value: "Integrated WeightWatchers program", highlight: "provider2" },
+    { feature: "Contract", provider1Value: "None", provider2Value: "Monthly membership", highlight: "provider1" },
+    { feature: "Speed", provider1Value: "Starts on your timeline", provider2Value: "Insurance/prior-auth timelines", highlight: "provider1" },
+  ],
+};
+
+const sequenceMedviBattle: BattleData = {
+  slug: "sequence-vs-medvi",
+  provider1Id: "medvi",
+  provider2Id: "sequence",
+  title: "Sequence (WeightWatchers) vs Medvi: Which Is Better in 2026?",
+  matchupLabel: "Sequence vs Medvi",
+  subtitle: "WeightWatchers' insurance-navigated clinic vs Medvi's all-inclusive, high-touch GLP-1 care — compared honestly.",
+  description: "Sequence (WeightWatchers Clinic) vs Medvi: membership with insurance-billed GLP-1s vs $179/mo all-inclusive compounded care with personal support.",
+  intro: "Sequence (WeightWatchers Clinic) brings a household name to GLP-1 telehealth: clinicians who prescribe, a team that navigates your insurance, and the WW program woven in. Medvi answers with all-inclusive simplicity — $179/month compounded semaglutide or $249 tirzepatide covering medication, consultations and the personal provider support its customers praise. Which one fits depends on your insurance and how you like to be supported.",
+  verdict: "Medvi takes it on predictability and personal care: one all-inclusive self-pay price and a provider relationship customers consistently rate highly. Sequence is the right call for committed WW members and people with solid GLP-1 insurance coverage — its navigation team and behavioral program are real assets there; check current membership pricing on the WeightWatchers Clinic site.",
+  verdictWinnerPoints: [
+    "All-inclusive $179/mo semaglutide, $249/mo tirzepatide",
+    "Personal, Trustpilot-praised provider support",
+    "Self-pay — no coverage uncertainty",
+  ],
+  verdictLoserPoints: [
+    "Insurance navigation and prior-auth handling",
+    "Integrated WeightWatchers behavioral program",
+    "Household-name parent brand",
+  ],
+  winnerId: "medvi",
+  categories: [
+    {
+      name: "Cost Predictability",
+      winner: "provider1",
+      explanation: "Medvi's price is the whole bill: medication, consultations and support in one all-inclusive number. Sequence's membership plus insurance-billed medication means your monthly total rides on your plan's GLP-1 coverage.",
+      supportingPoints: [
+        "$179/$249 all-inclusive (Medvi)",
+        "No surprise charges (Medvi)",
+        "Coverage-dependent totals (Sequence)",
+      ],
+    },
+    {
+      name: "Support Model",
+      winner: "tie",
+      explanation: "Different strengths: Sequence surrounds treatment with the WeightWatchers behavioral system; Medvi delivers personal, responsive provider care that its reviewers repeatedly single out. Program depth vs personal attention — both are real.",
+      supportingPoints: [
+        "WW behavioral program integrated (Sequence)",
+        "Personal provider relationship (Medvi)",
+        "Ongoing monitoring at both",
+      ],
+    },
+    {
+      name: "Speed to Treatment",
+      winner: "provider1",
+      explanation: "Medvi's self-pay route has no insurance gate — provider review, then medication ships. Sequence's insurance-first model adds eligibility and prior-authorization steps before brand-name medication arrives.",
+      supportingPoints: [
+        "No prior-auths (Medvi)",
+        "Straightforward online start (both)",
+        "Insurance timelines (Sequence)",
+      ],
+    },
+    {
+      name: "Medication",
+      winner: "tie",
+      explanation: "Sequence routes to brand-name GLP-1s through insurance; Medvi prescribes compounded semaglutide and tirzepatide at predictable cash prices. Brand assurance vs cash-price certainty — the market's central trade-off.",
+      supportingPoints: [
+        "Brand-name via insurance (Sequence)",
+        "Compounded, all-inclusive pricing (Medvi)",
+        "Licensed clinicians at both",
+      ],
+    },
+    {
+      name: "Brand & Track Record",
+      winner: "provider2",
+      explanation: "WeightWatchers is one of the most recognized names in weight management, and that infrastructure stands behind Sequence. Medvi is a focused specialist — smaller name, highly rated service.",
+      supportingPoints: [
+        "Decades-old household brand (Sequence)",
+        "Established behavioral infrastructure (Sequence)",
+        "Specialist with strong ratings (Medvi)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Starting Price", provider1Value: "$179/mo semaglutide · $249 tirzepatide, all-inclusive", provider2Value: "Membership + medication via insurance", highlight: "provider1" },
+    { feature: "Insurance", provider1Value: "Not required", provider2Value: "Navigation and prior-auth support", highlight: "both" },
+    { feature: "Medication", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "Brand-name GLP-1s (via insurance)", highlight: "both" },
+    { feature: "Support", provider1Value: "Personal provider care", provider2Value: "WW program + clinical team", highlight: "both" },
+    { feature: "Speed", provider1Value: "Self-pay — starts on your timeline", provider2Value: "Insurance/prior-auth timelines", highlight: "provider1" },
+    { feature: "Best For", provider1Value: "Predictable all-in pricing, personal care", provider2Value: "WW members, well-insured patients", highlight: "none" },
+  ],
+};
+
 // ───── Brand casing normalization ─────
 // Canonical provider names (keyed by provider id or normalized name).
 const CANONICAL_NAMES: Record<string, string> = {
@@ -2796,7 +3374,7 @@ const CANONICAL_NAMES: Record<string, string> = {
   found: "found",
   skinnyrx: "skinnyRx",
   noom: "Noom",
-  ro: "Ro",
+  ro: "ro",
   trimrx: "trimrx",
   medvi: "Medvi",
 };
@@ -2814,6 +3392,8 @@ const BRAND_TEXT_FIXES: [RegExp, string][] = [
   [/\bskinny\s?rx\b/gi, "skinnyRx"],
   [/\bnoom\b/gi, "Noom"],
   [/\btrim\s?rx\b/gi, "trimrx"],
+  // ro brands itself lowercase; capital-only match so ordinary words are safe.
+  [/\bRo\b/g, "ro"],
 ];
 
 function fixBrandText(s: string): string {
@@ -3003,6 +3583,12 @@ function buildInitialConfig(): SiteConfig {
       embodyTrimrxBattle,
       embodyMedviBattle,
       altrxWellmedrBattle,
+      foundEmbodyBattle,
+      foundTrimrxBattle,
+      calibrateEmbodyBattle,
+      calibrateMedviBattle,
+      sequenceTrimrxBattle,
+      sequenceMedviBattle,
     ],
     sidebars: [
       {

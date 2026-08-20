@@ -356,6 +356,56 @@ export default function AdminPage() {
                   </div>
 
                   <div className="mt-6 rounded-lg border border-gray-200 bg-gray-50/50 p-4">
+                    <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Promo Popup (mobile)</label>
+                    <p className="mb-3 text-xs text-gray-400">
+                      A full-screen mobile popup with this provider&apos;s creative, shown once per session on its comparison
+                      and review pages. When two providers on a page both have a popup, the higher <strong>priority</strong> wins.
+                    </p>
+                    <label className="mb-3 flex items-center gap-2 text-sm font-medium text-gray-700">
+                      <input
+                        type="checkbox"
+                        checked={provider.promoPopup?.enabled ?? false}
+                        onChange={(e) =>
+                          updateProvider(index, "promoPopup", {
+                            ...(provider.promoPopup ?? {}),
+                            enabled: e.target.checked,
+                          })
+                        }
+                        className="h-4 w-4 rounded border-gray-300 text-[#0C4B75] focus:ring-[#0C4B75]"
+                      />
+                      Enable popup for {provider.name || "this provider"}
+                    </label>
+                    {provider.promoPopup?.enabled && (
+                      <div className="grid gap-4 sm:grid-cols-2">
+                        <div className="sm:col-span-2">
+                          <ImageField
+                            label="Popup Image (tall creative, ~1080×1440)"
+                            value={provider.promoPopup?.image || ""}
+                            onChange={(v) => updateProvider(index, "promoPopup", { ...(provider.promoPopup ?? { enabled: true }), image: v })}
+                          />
+                        </div>
+                        <div className="sm:col-span-2">
+                          <Field
+                            label="Alt / accessibility text (describe the offer, no invented prices)"
+                            value={provider.promoPopup?.alt || ""}
+                            onChange={(v) => updateProvider(index, "promoPopup", { ...(provider.promoPopup ?? { enabled: true }), alt: v })}
+                          />
+                        </div>
+                        <Field
+                          label="Priority (higher wins when two popups meet)"
+                          value={String(provider.promoPopup?.priority ?? 1)}
+                          onChange={(v) =>
+                            updateProvider(index, "promoPopup", {
+                              ...(provider.promoPopup ?? { enabled: true }),
+                              priority: parseInt(v, 10) || 1,
+                            })
+                          }
+                        />
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="mt-6 rounded-lg border border-gray-200 bg-gray-50/50 p-4">
                     <label className="mb-1 block text-xs font-semibold text-gray-500 uppercase tracking-wider">Trustpilot Reviews (shown on battle pages)</label>
                     <p className="mb-3 text-xs text-gray-400">Add reviews to show a Trustpilot carousel for this provider on VS pages.</p>
                     <div className="mb-3 grid gap-4 sm:grid-cols-2">

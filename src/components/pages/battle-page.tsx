@@ -15,7 +15,8 @@ import { ProviderCta } from "@/components/provider-cta";
 import { BattleStickyCta } from "@/components/battle-sticky-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { TrustpilotRating } from "@/components/trustpilot-rating";
-import { EmbodyPromoPopup } from "@/components/embody-promo-popup";
+import { PromoPopup } from "@/components/promo-popup";
+import { resolvePromoPopup } from "@/lib/promo-popups";
 
 // Metadata for a landing page or head-to-head battle at /<slug> (root) or
 // /<vertical>/<slug> (hub). Returns { title: "Not Found" } for an unknown slug.
@@ -204,9 +205,10 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     { provider: p2, review: p2Review, bestForFallback: p2VerdictPoints },
   ];
 
-  // Mobile promo popup — only when Embody is one of the two providers. Price is
-  // Embody's real advertised offer ($69/mo, was $299).
-  const embodyProvider = [p1, p2].find((p) => p.id === "embody");
+  // Mobile promo popup — the highest-priority featured provider that has a
+  // creative (registry + priority in @/lib/promo-popups). Each popup's link and
+  // offer come from that provider's own real affiliate data.
+  const promoPopup = resolvePromoPopup([p1, p2]);
 
   // Related comparisons — other battles featuring either provider (internal links).
   // Ordered by relevance: comparisons involving this matchup's winner surface
@@ -755,7 +757,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           {battleFaqs.length > 0 && (
             <div className="mb-14">
               <h2 className="mb-6 text-[24px] font-bold text-[#191919]">
-                {matchupLabel}: Frequently Asked Questions
+                {matchupLabel}: FAQs
               </h2>
               <div className="divide-y divide-gray-100 overflow-hidden rounded-2xl border border-gray-200 bg-white">
                 {battleFaqs.map((f, i) => (
@@ -817,11 +819,14 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
         p2={{ id: p2.id, name: p2.name, affiliateUrl: p2.affiliateUrl }}
       />
 
-      {/* Mobile-only Embody promo popup — only on comparisons featuring Embody */}
-      {embodyProvider && (
-        <EmbodyPromoPopup
-          href={embodyProvider.affiliateUrl}
-          position={embodyProvider.id === p1.id ? 1 : 2}
+      {/* Mobile-only promo popup — the highest-priority featured provider that
+          has a creative (e.g. Embody outranks TrimRx on an Embody-vs-TrimRx
+          page, so TrimRx shows on all its other comparisons but not that one) */}
+      {promoPopup && (
+        <PromoPopup
+          spec={promoPopup}
+          href={(promoPopup.providerId === p1.id ? p1 : p2).affiliateUrl}
+          position={promoPopup.providerId === p1.id ? 1 : 2}
         />
       )}
     </>

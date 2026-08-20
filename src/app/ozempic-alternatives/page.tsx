@@ -235,7 +235,7 @@ export default function OzempicAlternativesPage() {
 
         {/* FAQ */}
         <section className="mb-12">
-          <h2 className="mb-6 text-[24px] font-bold text-[#191919]">Ozempic Alternatives: Frequently Asked Questions</h2>
+          <h2 className="mb-6 text-[24px] font-bold text-[#191919]">Ozempic Alternatives: FAQs</h2>
           <div className="divide-y divide-gray-100 overflow-hidden rounded-2xl border border-gray-200 bg-white">
             {faqs.map((f, i) => (
               <div key={i} className="p-6">

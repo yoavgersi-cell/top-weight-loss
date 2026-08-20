@@ -14,6 +14,8 @@ import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { ExpertByline } from "@/components/expert-byline";
 import { LastUpdated } from "@/components/last-updated";
+import { PromoPopup } from "@/components/promo-popup";
+import { resolvePromoPopup } from "@/lib/promo-popups";
 import { notFound } from "next/navigation";
 
 // Per-provider SEO overrides for reviews with distinctive search demand.
@@ -181,6 +183,9 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   const editorialStars = editorial ? editorial.score / 2 : 0;
   const editorialFullStars = Math.floor(editorialStars);
   const editorialHasHalf = editorialStars % 1 >= 0.5;
+
+  // Promo popup for this provider, if it has a registered creative.
+  const promoPopup = resolvePromoPopup([provider]);
 
   // Note: we intentionally do NOT emit an AggregateOffer/price in the schema.
   // A structured price can surface in the SERP rich result and goes stale the
@@ -651,7 +656,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
             <div className="border-b border-gray-100 bg-gray-50/70 px-6 py-4">
               <h2 className="text-[18px] font-bold text-[#191919]">
-                {provider.name} Review: Frequently Asked Questions
+                {provider.name} Review: FAQs
               </h2>
             </div>
             <div className="divide-y divide-gray-100">
@@ -712,6 +717,17 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           </div>
         )}
       </div>
+
+      {/* Mobile-only promo popup — shown on the provider's own review page when
+          it has a registered creative (same once-per-session behavior as on
+          comparisons). */}
+      {promoPopup && (
+        <PromoPopup
+          spec={promoPopup}
+          href={provider.affiliateUrl}
+          position={rankIndex >= 0 ? rankIndex + 1 : undefined}
+        />
+      )}
     </div>
   );
 }

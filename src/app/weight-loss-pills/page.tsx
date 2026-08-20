@@ -286,7 +286,7 @@ export default async function WeightLossPillsPage() {
 
         {/* FAQ */}
         <section className="mb-12">
-          <h2 className="mb-6 text-[24px] font-bold text-[#191919]">Weight Loss Pills: Frequently Asked Questions</h2>
+          <h2 className="mb-6 text-[24px] font-bold text-[#191919]">Weight Loss Pills: FAQs</h2>
           <div className="divide-y divide-gray-100 overflow-hidden rounded-2xl border border-gray-200 bg-white">
             {faqs.map((f, i) => (
               <div key={i} className="p-6">

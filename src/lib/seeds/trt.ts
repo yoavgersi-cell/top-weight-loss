@@ -939,6 +939,244 @@ const articles: ArticleData[] = [
       },
     ],
   },
+  {
+    slug: "does-trt-cause-hair-loss",
+    title: "Does TRT Cause Hair Loss? What to Know Before Starting",
+    description:
+      "TRT can accelerate hair loss — but only if you're genetically predisposed. How testosterone converts to DHT, who's actually at risk, and what you can do.",
+    category: "Science",
+    readTime: "6 min read",
+    publishedAt: "2026-08-04",
+    updatedAt: UPDATED,
+    heroColor: "#EEF4FB",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "The short answer",
+        body: `TRT doesn't cause hair loss by itself — but it can accelerate it in men who are genetically predisposed to pattern baldness. Some of the testosterone you take converts, via the 5-alpha-reductase enzyme, into DHT: the hormone that gradually miniaturizes scalp follicles in men who carry the sensitivity. More circulating testosterone can mean more DHT, and for a predisposed scalp, a faster version of the timeline your genes had already written.`,
+      },
+      {
+        heading: "Who's actually at risk",
+        body: `The deciding factor isn't the therapy — it's your follicles. If pattern baldness runs strongly in your family or your hairline was already moving before treatment, TRT may speed that process up. If you've reached your 40s with a full head of hair and no family history, your follicles are likely not DHT-sensitive, and TRT is unlikely to change that. Baldness genetics come from both sides of the family, so look at the whole picture, not just your mother's father.`,
+      },
+      {
+        heading: "Early warning signs on TRT",
+        body: `Watch for the classic pattern-loss signature after starting therapy: more hairs on the pillow, temples pulling back, a thinning crown under bright light. Diffuse all-over shedding shortly after a new medication can have other causes, but progressive recession at the temples and crown is the DHT fingerprint. Catching it in the first months matters — pattern loss is much easier to stop than to reverse.`,
+      },
+      {
+        heading: "What you can do about it",
+        body: `The good news: this is one of the most treatable side effects of TRT. DHT-blocking medicines like finasteride are commonly used alongside testosterone therapy, and topical routes (finasteride or minoxidil applied to the scalp) are options for men who prefer to limit systemic exposure. This is a conversation for your prescribing clinician, since your hormone panel and goals both matter. Our sister guide on <a href="/hair-loss">hair-loss treatment providers</a> covers the full toolkit, and <a href="/hair-loss/articles/dutasteride-vs-finasteride">dutasteride vs finasteride</a> explains the DHT-blocker options.`,
+      },
+      {
+        heading: "Keeping perspective",
+        body: `For most men the trade is manageable: TRT addresses real, quality-of-life symptoms of low testosterone, and the hair-loss risk applies mainly to those already predisposed — with effective countermeasures available. Discuss your family history during intake so your provider can monitor for it; the clinics on our <a href="/trt">best TRT providers</a> ranking all include ongoing clinical follow-up. For the broader safety picture, see <a href="/trt/articles/trt-side-effects">TRT side effects</a>. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "trt-and-fertility",
+    title: "TRT and Fertility: Does Testosterone Therapy Make You Infertile?",
+    description:
+      "TRT suppresses sperm production — a side effect many men learn about too late. How it happens, whether it's reversible, and the fertility-sparing alternatives.",
+    category: "Science",
+    readTime: "6 min read",
+    publishedAt: "2026-08-07",
+    updatedAt: UPDATED,
+    heroColor: "#F0FAF5",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "The paradox nobody warns you about",
+        body: `It sounds backwards, but it's true: taking testosterone can sharply reduce your fertility. TRT is so effective at suppressing sperm production that testosterone has actually been studied as a male contraceptive. If you're on TRT — or considering it — and children are anywhere in your future plans, this is the side effect to understand before you start, not after.`,
+      },
+      {
+        heading: "Why it happens",
+        body: `Your brain regulates the testes through two signaling hormones, LH and FSH. When you supply testosterone from outside, the brain sees high levels and stops sending those signals. But sperm production depends on testosterone made <em>inside</em> the testes at concentrations far higher than what circulates in blood — and without LH, that local production collapses. The result: your blood testosterone looks great while sperm counts fall, sometimes to very low levels or zero.`,
+      },
+      {
+        heading: "Is it reversible?",
+        body: `For most men, yes — but not instantly and not guaranteed. After stopping TRT, sperm production typically recovers over months, and in some men it can take a year or longer; recovery tends to be slower with longer therapy duration and older age, and a small minority don't fully return to baseline. Anyone banking on "I'll just pause TRT when we're ready" should know the timeline is measured in months, not weeks.`,
+      },
+      {
+        heading: "The fertility-sparing alternatives",
+        body: `This is exactly why medications like enclomiphene exist. Instead of replacing testosterone, enclomiphene prompts the brain to increase LH and FSH — raising your own testosterone production while keeping the testicular signal (and sperm production) intact. Clinicians may also add hCG alongside TRT to maintain testicular function. We break the main option down in <a href="/trt/articles/enclomiphene-vs-trt">enclomiphene vs TRT</a>; providers like <a href="/trt/reviews/maximus">Maximus</a> offer it specifically for men prioritizing fertility.`,
+      },
+      {
+        heading: "What to do with this",
+        body: `If fatherhood is on your roadmap, say so explicitly during your intake — it changes the right prescription. Options include starting with enclomiphene, banking sperm before TRT, or pairing therapy with fertility-preserving protocols. A quality provider will ask; if yours didn't, that's a signal. Compare clinics on our <a href="/trt">best TRT providers</a> page, and if you're weighing stopping therapy, read <a href="/trt/articles/can-you-stop-trt">can you stop TRT</a> first. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "trt-side-effects",
+    title: "TRT Side Effects: What's Common, What's Manageable, What to Monitor",
+    description:
+      "The real side-effect profile of testosterone therapy — from acne and thickened blood to fertility suppression — and the lab monitoring that keeps TRT safe.",
+    category: "Science",
+    readTime: "7 min read",
+    publishedAt: "2026-08-10",
+    updatedAt: UPDATED,
+    heroColor: "#FBF3EE",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "TRT is a commitment, not a supplement",
+        body: `Testosterone therapy is genuinely effective for men with clinically low levels — and it's real medicine, with real side effects and a monitoring routine that isn't optional. The difference between TRT done well and TRT done badly is rarely the testosterone itself; it's whether anyone is checking your labs. Here's the honest map of what can come up.`,
+      },
+      {
+        heading: "The common and cosmetic",
+        body: `Acne and oilier skin are among the most frequent complaints, especially early on, as skin adjusts to higher androgen levels. Injection-site soreness is routine for injectable forms. Some men notice mood changes — often positive, occasionally irritability, particularly with dosing that peaks and troughs sharply. Testicular shrinkage is common and expected: your testes downshift when external testosterone takes over. And for genetically predisposed men, accelerated hair loss — covered fully in <a href="/trt/articles/does-trt-cause-hair-loss">does TRT cause hair loss</a>.`,
+      },
+      {
+        heading: "The one your bloodwork catches: thick blood",
+        body: `The most important lab-monitored effect is erythrocytosis — testosterone stimulates red blood cell production, and in some men the blood becomes too thick, raising cardiovascular strain. This is why responsible providers check hematocrit before starting and periodically after. It's manageable (dose adjustments, switching formulations, occasionally donating blood), but only if someone's watching. If a clinic doesn't require follow-up labs, that's disqualifying.`,
+      },
+      {
+        heading: "The systemic ones",
+        body: `TRT suppresses sperm production — significant enough that it deserves its own read: <a href="/trt/articles/trt-and-fertility">TRT and fertility</a>. Some testosterone converts to estradiol, which in excess can cause water retention or breast tenderness; clinicians manage this through dosing rather than reflexively adding blockers. TRT can also worsen untreated sleep apnea, and men with prostate concerns need appropriate screening — providers typically monitor PSA in the age groups where that's relevant.`,
+      },
+      {
+        heading: "The bottom line on safety",
+        body: `Most side effects are dose-related, detectable on labs, and manageable within an ongoing clinical relationship — which is exactly what separates legitimate telehealth TRT from buying vials from a gym acquaintance. Every provider on our <a href="/trt">best TRT providers</a> ranking includes baseline labs and scheduled follow-ups. For what results and timelines look like when therapy is dialed in, see <a href="/trt/articles/trt-results-timeline">the TRT results timeline</a>. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "normal-testosterone-levels-by-age",
+    title: "Normal Testosterone Levels by Age: What Counts as Low?",
+    description:
+      "What a normal total testosterone range actually is, how levels decline with age, why lab timing matters, and when a number officially counts as low.",
+    category: "Guide",
+    readTime: "6 min read",
+    publishedAt: "2026-08-13",
+    updatedAt: UPDATED,
+    heroColor: "#EEF7FB",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "The normal range — and why it's so wide",
+        body: `For adult men, most labs place normal total testosterone somewhere around 300 to 1,000 ng/dL — a deliberately wide range, because healthy men genuinely vary that much. Two men can both be "normal" with one at triple the other's level. That width is also why a single number rarely tells the whole story: where you sit in the range, your symptoms, and your trend over time matter more than clearing the minimum bar.`,
+      },
+      {
+        heading: "What happens with age",
+        body: `Testosterone typically peaks in the late teens and twenties, then declines gradually — commonly cited at roughly 1% per year from the thirties onward. That slope is normal aging, not a disease. The clinical question isn't whether your level at 45 matches your level at 22 (it won't); it's whether your level is low enough, alongside real symptoms, to explain how you feel. The symptom side of that equation is covered in <a href="/trt/articles/low-testosterone-symptoms">low testosterone symptoms</a>.`,
+      },
+      {
+        heading: "When a number officially counts as low",
+        body: `The American Urological Association uses 300 ng/dL as the working cutoff for low testosterone — confirmed on two separate morning blood draws, alongside symptoms. All three parts matter. Testosterone peaks in the early morning and can swing meaningfully day to day, which is why guidelines require morning samples (roughly 7–10am) and a repeat test before anyone diagnoses anything. A single afternoon reading of 280 is a reason to retest properly, not a diagnosis.`,
+      },
+      {
+        heading: "Total vs free testosterone",
+        body: `Most of the testosterone in your blood is bound to proteins and unavailable to your tissues; the small unbound fraction — free testosterone — does the actual work. Some men have normal total testosterone but low free testosterone (often due to elevated binding proteins), which can produce classic low-T symptoms despite a "normal" report. A thorough workup measures or calculates both, which is worth checking when comparing providers' lab panels.`,
+      },
+      {
+        heading: "Getting properly tested",
+        body: `Testing is the easy part now: online TRT clinics arrange baseline labs — typically at a local draw station or via at-home kit — and have a licensed clinician interpret them against your symptoms, with treatment only when both justify it. That two-morning-tests standard is a good litmus test for clinic quality. See <a href="/trt/articles/how-to-get-trt-online">how to get TRT online</a> for the process end to end, and our <a href="/trt">best TRT providers</a> ranking for who does testing right. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "is-trt-covered-by-insurance",
+    title: "Is TRT Covered by Insurance? Costs With & Without Coverage",
+    description:
+      "When insurance covers testosterone therapy, why online TRT clinics are usually cash-pay, and how the real monthly costs compare either way.",
+    category: "Guide",
+    readTime: "6 min read",
+    publishedAt: "2026-08-15",
+    updatedAt: UPDATED,
+    heroColor: "#F3EEFB",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "The short answer",
+        body: `Insurance can cover TRT — but usually only when you fit the strict clinical definition of hypogonadism: documented low testosterone on two separate morning blood tests, plus symptoms, often with prior-authorization paperwork on top. Men whose levels hover just above the cutoff, or who don't want to route their care through referrals and waiting rooms, frequently find coverage more theoretical than real. That gap is precisely the market online TRT clinics grew to fill.`,
+      },
+      {
+        heading: "What insurance-covered TRT looks like",
+        body: `The covered path typically runs through your primary-care doctor or an endocrinologist/urologist: labs, a diagnosis that meets your insurer's criteria, and a prescription — commonly for generic injectable testosterone, which is an inexpensive, decades-old medication. When you qualify, this is usually the cheapest route on paper. The costs are in time and friction: appointments, prior authorizations, refill logistics, and coverage rules that can treat borderline numbers as "not medically necessary."`,
+      },
+      {
+        heading: "Why online clinics are cash-pay",
+        body: `Most telehealth TRT providers don't bill insurance at all. Instead they charge a flat monthly membership that bundles the medication, clinical visits, follow-up labs and shipping into one price. You're paying for convenience and access — no referrals, no prior auth, treatment protocols decided between you and the clinician rather than an insurer's checklist. Real prices for the major clinics are broken down in our <a href="/trt/articles/trt-cost">what does TRT cost</a> guide, with current numbers on each provider's page.`,
+      },
+      {
+        heading: "Making the comparison honestly",
+        body: `If your levels are clearly low and you have a doctor you like, the insurance route can be genuinely cheaper — generic testosterone itself costs little. The cash route wins on speed, privacy and simplicity, and bundled memberships often cost less than people assume once labs and visits are counted in. One tip either way: HSA/FSA funds can generally be used for legitimate medical care, which softens the cash-pay math. Ask any provider what their price actually includes before comparing.`,
+      },
+      {
+        heading: "Where to start",
+        body: `Start with proper testing and an honest read of your numbers — see <a href="/trt/articles/normal-testosterone-levels-by-age">what counts as low</a> — then pick the route that fits your situation. If that's telehealth, our <a href="/trt">best TRT providers</a> ranking compares what each membership includes, and <a href="/trt/articles/how-to-get-trt-online">how to get TRT online</a> walks through the process step by step. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "trt-vs-steroids",
+    title: "TRT vs Steroids: Why Testosterone Therapy Isn't 'Taking Gear'",
+    description:
+      "TRT and steroid use both involve testosterone — that's where the similarity ends. Doses, supervision, legality, and goals compared honestly.",
+    category: "Science",
+    readTime: "5 min read",
+    publishedAt: "2026-08-17",
+    updatedAt: UPDATED,
+    heroColor: "#FBEEF4",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "Same molecule, different universe",
+        body: `The confusion is understandable: TRT and anabolic steroid use can involve literally the same compound. But the comparison ends at the molecule. TRT restores a deficient man to the normal physiological range under medical supervision; steroid use pushes levels far beyond anything a human body produces naturally, in pursuit of maximum muscle growth. One is replacement; the other is enhancement — and the risk profiles are worlds apart.`,
+      },
+      {
+        heading: "The dose makes the difference",
+        body: `TRT aims to bring your blood levels into the same 300–1,000 ng/dL range as any healthy man, with labs to verify you're there and not beyond. Performance-focused steroid protocols commonly involve multiples of replacement dosing, often stacking several compounds — including synthetic derivatives never approved for human therapeutic use. The side effects people associate with "steroids" scale with those supraphysiologic doses; therapy at replacement levels is a fundamentally different exposure.`,
+      },
+      {
+        heading: "Supervision and legality",
+        body: `TRT is legal medicine: testosterone is a Schedule III controlled substance in the US, prescribed after documented low levels, with monitoring of blood counts and other markers over time — see <a href="/trt/articles/trt-side-effects">what providers monitor and why</a>. Non-prescribed steroid use sits outside that entirely: illegally sourced, unverified products, no baseline labs, no one watching hematocrit or blood pressure. Much of the harm attributed to steroids traces to that unsupervised context.`,
+      },
+      {
+        heading: "Will TRT make you jacked?",
+        body: `An honest expectation-set: TRT is not a shortcut to a bodybuilder's physique. Restoring low testosterone to normal genuinely helps — energy, drive, and the ability to build and keep muscle in the gym all improve when a real deficiency is corrected. But at replacement doses you're getting back what deficiency took, not gaining a superpower. The realistic arc is laid out in our <a href="/trt/articles/trt-results-timeline">TRT results timeline</a>.`,
+      },
+      {
+        heading: "The takeaway",
+        body: `If your levels are low and it's affecting your life, seeking treatment isn't "taking gear" — it's treating a diagnosed deficiency the same way you'd treat any hormone disorder, through licensed clinicians and monitored dosing. That supervision layer is exactly what separates the clinics on our <a href="/trt">best TRT providers</a> ranking from the gray market. Start with proper testing: <a href="/trt/articles/normal-testosterone-levels-by-age">normal testosterone levels by age</a>. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "can-you-stop-trt",
+    title: "Can You Stop TRT Once You Start? What Actually Happens",
+    description:
+      "Is TRT really 'for life'? What happens to your body when you stop testosterone therapy, how long recovery takes, and how to come off safely if you choose to.",
+    category: "Guide",
+    readTime: "6 min read",
+    publishedAt: "2026-08-19",
+    updatedAt: UPDATED,
+    heroColor: "#EEF4FB",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "The 'TRT is forever' claim, examined",
+        body: `You'll hear it stated as law: once you start testosterone, you can never stop. The truth is less dramatic. You can stop TRT — men do, for fertility plans, cost, side effects, or simply reconsidering. What's true is that stopping has a physiological cost you should understand in advance: your body's own production has been switched off, and it doesn't switch back on overnight.`,
+      },
+      {
+        heading: "What happens when you stop",
+        body: `On TRT, your brain stops signaling your testes to produce testosterone. Stop the therapy abruptly, and you enter a gap: the external supply is gone, but natural production hasn't resumed. During that window — typically weeks to months — testosterone can sit lower than where you started, and low-T symptoms like fatigue, low mood and reduced libido often return, sometimes more noticeably than before. This gap, not any permanent switch, is what the "forever" folklore is describing.`,
+      },
+      {
+        heading: "How long recovery takes",
+        body: `Most men's natural production recovers over a few months, though the timeline varies with how long you were on therapy, your age, and where your system started. Sperm production follows its own, often slower, recovery arc — covered in <a href="/trt/articles/trt-and-fertility">TRT and fertility</a>. A minority of men, particularly after long-term use or with pre-existing testicular issues, don't return fully to their old baseline — which is a genuine reason to treat starting TRT as a considered decision, not a casual one.`,
+      },
+      {
+        heading: "Coming off safely",
+        body: `If you decide to stop, do it with your clinician rather than cold turkey. Providers can monitor your labs through the transition and, where appropriate, use restart support — medications like enclomiphene or hCG that stimulate the brain–testes signal to shorten the low-hormone gap. (Enclomiphene is also what some men switch <em>to</em> rather than fully stopping; see <a href="/trt/articles/enclomiphene-vs-trt">enclomiphene vs TRT</a>.) A planned exit with monitoring beats an abrupt one every time.`,
+      },
+      {
+        heading: "Decide well before you start",
+        body: `The best time to think about stopping TRT is before beginning it: confirm your levels are genuinely low on proper morning testing, understand the commitment, and pick a provider whose clinicians will still be there when your plans change. Our <a href="/trt">best TRT providers</a> ranking weighs exactly that ongoing-care layer, and <a href="/trt/articles/how-to-get-trt-online">how to get TRT online</a> covers what a quality intake looks like. This article is general information, not medical advice.`,
+      },
+    ],
+  },
 ];
 
 export function trtSeed(base: SiteConfig): SiteConfig {
