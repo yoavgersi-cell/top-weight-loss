@@ -54,9 +54,9 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "DirectMeds reviews: doctor-prescribed GLP-1 as injections or needle-free oral drops, free 1-2 day shipping and no membership. Is DirectMeds legit and worth it? Real customer reviews, cost, pros & cons.",
   },
   wellmedr: {
-    title: "WellMedr Reviews 2026: Is It Legit? Cost, Results & Verdict",
+    title: "wellmedr Reviews 2026: Is It Legit? Cost, Results & Verdict",
     description:
-      "WellMedr reviews: compounded GLP-1 used by 1M+ patients, board-certified specialists and a weight-loss warranty. Is WellMedr legit and worth it? Real customer reviews, cost, pros & cons.",
+      "wellmedr reviews: compounded GLP-1 used by 1M+ patients, board-certified specialists and a weight-loss warranty. Is wellmedr legit and worth it? Real customer reviews, cost, pros & cons.",
   },
   healthrx: {
     title: "HealthRx Reviews 2026: Is It Legit? $99/mo GLP-1 Examined",
@@ -116,7 +116,7 @@ const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
   },
   wellmedr: {
     verdict:
-      "Yes - WellMedr is a legitimate telehealth platform. Board-certified specialists tailor your plan, and medications are made in US state-licensed pharmacies following FDA compounding standards after a medical review.",
+      "Yes - wellmedr is a legitimate telehealth platform. Board-certified specialists tailor your plan, and medications are made in US state-licensed pharmacies following FDA compounding standards after a medical review.",
     signals: [
       "Board-certified specialists tailor your treatment plan",
       "US state-licensed pharmacies following FDA compounding standards",
