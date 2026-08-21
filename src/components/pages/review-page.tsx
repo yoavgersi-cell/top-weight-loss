@@ -58,6 +58,11 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     description:
       "WellMedr reviews: compounded GLP-1 used by 1M+ patients, board-certified specialists and a weight-loss warranty. Is WellMedr legit and worth it? Real customer reviews, cost, pros & cons.",
   },
+  healthrx: {
+    title: "HealthRx Reviews 2026: Is It Legit? $99/mo GLP-1 Examined",
+    description:
+      "HealthRx reviews: semaglutide from $99/mo (12-month prepaid), overnight cold-chain shipping, LegitScript-certified. Is HealthRx legit and worth the prepay? Cost, pros & cons.",
+  },
 };
 
 // "Is [brand] legit?" trust block - targets the high-intent "is X legit" query
@@ -118,6 +123,17 @@ const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
       "Real medical intake reviewed before prescribing",
       "100% online - message your provider anytime",
       "Discreet, unbranded packaging",
+    ],
+  },
+  healthrx: {
+    verdict:
+      "Yes - HealthRx is a legitimate GLP-1 telehealth program. It's LegitScript-certified (cert. 50087439), an independent US-licensed clinician reviews every request before treatment proceeds, and medication is prepared by licensed 503A pharmacies and shipped overnight in temperature-controlled, lot-tracked packaging.",
+    signals: [
+      "LegitScript certified - cert. 50087439",
+      "Independent US-licensed clinician reviews every request; approval is never automatic",
+      "Licensed 503A pharmacy fulfillment",
+      "Overnight cold-chain shipping, lot-tracked through delivery",
+      "Transparent prepaid pricing - $99/mo semaglutide ($1,188 at checkout), no hidden fees",
     ],
   },
 };
