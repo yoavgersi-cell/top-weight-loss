@@ -27,7 +27,7 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
   "best-ro-alternatives": {
     title: "Best ro Weight Loss Alternatives in 2026 (From $59/mo)",
     description:
-      "Flat-priced GLP-1 providers that compete with ro: WellMedr ($59/mo), embody ($69/mo), altRx ($89/mo) and more - compared on price, speed and support.",
+      "Flat-priced GLP-1 providers that compete with ro: wellmedr ($59/mo), embody ($69/mo), altRx ($89/mo) and more - compared on price, speed and support.",
   },
   "can-you-get-ozempic-without-doctor": {
     title: "Can You Get Ozempic Without Seeing a Doctor? (2026)",
@@ -66,11 +66,11 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
 // blob. Every figure is a real, listed price - no invented numbers.
 const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
   "best-mounjaro-alternatives":
-    "The closest Mounjaro alternatives are compounded tirzepatide plans - the same active ingredient - from licensed telehealth providers: $99/month at WellMedr, $119 at embody, $147 at DirectMeds, versus roughly $1,000+ for brand-name. Prescription required, shipped to your door.",
+    "The closest Mounjaro alternatives are compounded tirzepatide plans - the same active ingredient - from licensed telehealth providers: $99/month at wellmedr, $119 at embody, $147 at DirectMeds, versus roughly $1,000+ for brand-name. Prescription required, shipped to your door.",
   "best-wegovy-alternatives":
-    "The closest Wegovy alternatives are compounded semaglutide plans - the same active ingredient - starting at $59/month (WellMedr), $69 (embody) and $89 (altRx) through licensed online providers, versus $1,150+ for brand-name without insurance.",
+    "The closest Wegovy alternatives are compounded semaglutide plans - the same active ingredient - starting at $59/month (wellmedr), $69 (embody) and $89 (altRx) through licensed online providers, versus $1,150+ for brand-name without insurance.",
   "best-ro-alternatives":
-    "The strongest ro alternatives are flat-priced compounded GLP-1 providers: WellMedr from $59/month, embody at $69 with 1-2 day shipping, and altRx at $89 with brand-name options too. All require an online licensed-provider review.",
+    "The strongest ro alternatives are flat-priced compounded GLP-1 providers: wellmedr from $59/month, embody at $69 with 1-2 day shipping, and altRx at $89 with brand-name options too. All require an online licensed-provider review.",
   "can-you-get-ozempic-without-doctor":
     "No - Ozempic and every GLP-1 medication legally require a prescription in the US. What you don't need is an in-person visit: licensed telehealth providers evaluate you online and, if appropriate, prescribe treatment starting around $59-$89/month.",
   "weight-loss-medication-that-works-fast":
@@ -78,9 +78,9 @@ const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
   "how-to-get-ozempic-online":
     "Three steps: complete an online health intake, have a licensed provider review it (required by law), and receive medication by mail if prescribed. Brand-name Ozempic runs $1,150+/month; compounded semaglutide with the same active ingredient starts at $59-$89.",
   "semaglutide-cost-per-month":
-    "Compounded semaglutide costs $59-$199 per month all-in through licensed telehealth providers (WellMedr $59, embody $69, altRx $89). Brand-name Ozempic or Wegovy runs roughly $1,150-$1,600 per month without insurance coverage.",
+    "Compounded semaglutide costs $59-$199 per month all-in through licensed telehealth providers (wellmedr $59, embody $69, altRx $89). Brand-name Ozempic or Wegovy runs roughly $1,150-$1,600 per month without insurance coverage.",
   "weight-loss-medication-without-insurance":
-    "You don't need insurance: self-pay compounded GLP-1 plans include the provider visit and medication from $59/month (WellMedr), $69 (embody) or $89 (altRx). Brand-name without coverage runs $1,150+ - which is exactly why the compounded route exists.",
+    "You don't need insurance: self-pay compounded GLP-1 plans include the provider visit and medication from $59/month (wellmedr), $69 (embody) or $89 (altRx). Brand-name without coverage runs $1,150+ - which is exactly why the compounded route exists.",
   "compounded-semaglutide-vs-brand-name":
     "Compounded semaglutide contains the same active ingredient as Ozempic and Wegovy, prepared by state-licensed 503A compounding pharmacies, at $59-$199/month versus $1,150+ for brand-name. The trade-off: compounded versions are not FDA-approved products, so provider and pharmacy quality matter most.",
 };
