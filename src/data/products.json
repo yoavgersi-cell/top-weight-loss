@@ -360,8 +360,28 @@
     "description": ""
   },
   {
-    "id": "calibrate",
+    "id": "healthrx",
     "rank": 19,
+    "name": "HealthRx",
+    "slug": "healthrx",
+    "tagline": "GLP-1 program from $99/month - clinician consult to overnight delivery",
+    "logo": "/logos/healthrx.svg",
+    "rating": 0,
+    "ratingLabel": "",
+    "reviewCount": 0,
+    "highlights": [
+      "Semaglutide from $99/mo on a 12-month prepaid plan",
+      "Free overnight cold-chain shipping on every plan",
+      "LegitScript-certified; licensed 503A pharmacies"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://track.revoffers.com/aff_c?offer_id=1630&aff_id=12905&url_id=12442",
+    "ctaText": "Check Eligibility",
+    "description": ""
+  },
+  {
+    "id": "calibrate",
+    "rank": 20,
     "name": "Calibrate",
     "slug": "calibrate",
     "tagline": "One-year metabolic reset program with 1:1 coaching and insurance-covered GLP-1 medication",
@@ -381,7 +401,7 @@
   },
   {
     "id": "sequence",
-    "rank": 20,
+    "rank": 21,
     "name": "Sequence",
     "slug": "sequence",
     "tagline": "WeightWatchers' clinician-led GLP-1 program with insurance coordination",

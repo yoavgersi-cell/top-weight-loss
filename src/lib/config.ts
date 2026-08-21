@@ -323,6 +323,7 @@ export const AFFILIATE_PROVIDER_IDS = [
   "wellmedr",
   "shed",
   "directmeds",
+  "healthrx",
   // hair-loss
   "maximus",
   "happyhead",

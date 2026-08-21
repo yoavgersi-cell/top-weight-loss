@@ -1345,6 +1345,82 @@ const defaultReviews: ReviewData[] = [
     finalVerdict: "Found stands out for its combination of prescription medication and personalized health coaching. If you want more than just a prescription - if you want to understand why your body responds the way it does and build sustainable habits alongside medical treatment - Found is a strong choice. The platform is best suited for people who value a science-backed, coaching-supported approach to weight loss."
   },
   {
+    slug: "healthrx",
+    providerId: "healthrx",
+    shortSummary:
+      "A GLP-1 telehealth program with one all-in price - semaglutide from $99/month on a 12-month prepaid plan - overnight cold-chain shipping, and LegitScript certification.",
+    reviewIntro:
+      "HealthRx runs its GLP-1 program on a simple promise: one price with everything in it. An independent US-licensed clinician reviews every request (approval is never automatic), a licensed 503A pharmacy prepares the medication, and it ships overnight in temperature-controlled, lot-tracked packaging - free on every plan. The headline $99/month semaglutide price comes on a 12-month prepaid plan ($1,188 due at checkout), with tirzepatide plans from $179/month. This review covers exactly what's included and who the prepaid model fits.",
+    keyFeatures: [
+      "Semaglutide from $99/month (12-month prepaid plan)",
+      "Tirzepatide plans from $179/month",
+      "Independent US-licensed clinician reviews every request",
+      "Free overnight cold-chain shipping, lot-tracked",
+      "Price doesn't change when your dose does",
+      "LegitScript certified (cert. 50087439)",
+    ],
+    pricingSummary:
+      "HealthRx prices its GLP-1 program from $99/month for compounded semaglutide on a 12-month prepaid plan - $1,188 due at checkout - with tirzepatide plans starting at $179/month. The price is all-inclusive: medication, the provider consult, overnight cold-chain shipping, dose adjustments (no price change as your dose increases), and ongoing check-ins with the care team. It's cash-pay with no insurance and no prior authorization, and there's no consultation fee or shipping charge. The free 60-second assessment requires no payment to start.",
+    treatmentOptions: [
+      "Compounded semaglutide (weekly GLP-1 injection)",
+      "Compounded tirzepatide (weekly GLP-1 + GIP injection)",
+    ],
+    pros: [
+      "All-in pricing - consult, medication, shipping and check-ins in one price",
+      "Free overnight cold-chain shipping on every plan",
+      "Dose increases don't raise your price",
+      "Clinician review on every request - approval is never automatic",
+      "LegitScript-certified with licensed 503A pharmacy fulfillment",
+      "No insurance or prior authorization needed",
+    ],
+    cons: [
+      "The $99/month headline requires a 12-month prepaid commitment ($1,188 upfront)",
+      "Newer, less-established brand than the big telehealth names",
+      "Compounded only - no brand-name Ozempic/Wegovy/Zepbound shelf",
+    ],
+    bestFor: [
+      "People committed to a full year of treatment who want the math done upfront",
+      "Anyone who values overnight, temperature-controlled delivery",
+      "Cash-pay patients who want one predictable all-in price",
+    ],
+    finalVerdict:
+      "HealthRx earns a spot on the shortlist for people who've already decided GLP-1 treatment is a year-long commitment - clinically, that's usually the right frame - and want a single prepaid price with genuinely everything included, delivered overnight. If you're still testing the waters, the upfront $1,188 is the honest sticking point: month-to-month providers like embody or WellMedr let you start smaller. Confirm current plan terms on HealthRx's site.",
+    pricingPlans: [
+      {
+        name: "GLP-1",
+        medication: "Compounded Semaglutide",
+        cadence: "Weekly injection",
+        price: "$99/mo",
+        unit: "12-month prepaid plan - $1,188 due at checkout",
+      },
+      {
+        name: "GLP-1 + GIP",
+        medication: "Compounded Tirzepatide",
+        cadence: "Weekly injection",
+        price: "from $179/mo",
+      },
+    ],
+    howItWorks: [
+      {
+        timing: "~2 minutes",
+        title: "Tell them about your health",
+        detail: "A short medical questionnaire covering your history, medications, goals, and contraindications. Free, with no payment to start.",
+      },
+      {
+        timing: "Clinical review",
+        title: "An independent clinician reviews your file",
+        detail: "A US-licensed clinician in your state decides whether treatment is appropriate and selects a starting protocol. Approval is never automatic.",
+      },
+      {
+        timing: "Overnight",
+        title: "Your prescription is fulfilled",
+        detail: "If prescribed, a licensed 503A pharmacy prepares your medication and ships it overnight in temperature-controlled, lot-tracked packaging.",
+      },
+    ],
+    trustBadges: ["LegitScript certified", "Licensed 503A pharmacies", "Overnight cold-chain shipping"],
+    updatedAt: "2026-08-21",
+  },
+  {
     slug: "calibrate",
     providerId: "calibrate",
     shortSummary: "A structured one-year metabolic reset program pairing 1:1 video coaching with brand-name GLP-1 medication obtained through your insurance.",
