@@ -6,7 +6,84 @@ import { NOINDEX_ARTICLE_SLUGS } from "@/lib/config";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ExpertByline } from "@/components/expert-byline";
+import { MedicalSources } from "@/components/medical-sources";
 import { notFound, permanentRedirect } from "next/navigation";
+
+// Code-side CTR overrides for high-impression articles whose stored meta lives
+// in the CMS blob (so it can't be tuned from the content files). Applied only
+// on the weight-loss vertical. Prices cited are the providers' real listed
+// prices - keep in sync when pricing changes.
+const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+  "best-mounjaro-alternatives": {
+    title: "7 Best Mounjaro Alternatives in 2026 (From $99/Month)",
+    description:
+      "Compounded tirzepatide - the same active ingredient as Mounjaro - from $99-$147/month at licensed telehealth providers, vs $1,000+ brand-name. Compared honestly.",
+  },
+  "best-wegovy-alternatives": {
+    title: "7 Best Wegovy Alternatives in 2026 (From $59/Month)",
+    description:
+      "Compounded semaglutide - Wegovy's active ingredient - from $59-$89/month through licensed online providers. Real prices, what's included, and how to choose.",
+  },
+  "best-ro-alternatives": {
+    title: "Best ro Weight Loss Alternatives in 2026 (From $59/mo)",
+    description:
+      "Flat-priced GLP-1 providers that compete with ro: WellMedr ($59/mo), embody ($69/mo), altRx ($89/mo) and more - compared on price, speed and support.",
+  },
+  "can-you-get-ozempic-without-doctor": {
+    title: "Can You Get Ozempic Without Seeing a Doctor? (2026)",
+    description:
+      "No - GLP-1s legally require a prescription. But you don't need an office visit: licensed telehealth providers evaluate you online, with treatment from $59/month.",
+  },
+  "weight-loss-medication-that-works-fast": {
+    title: "Weight Loss Medication That Actually Works Fast (2026)",
+    description:
+      "GLP-1s are the fastest evidence-backed option: appetite changes in weeks, meaningful loss over months. What to realistically expect - and where to start online.",
+  },
+  "how-to-get-ozempic-online": {
+    title: "How to Get Ozempic Online in 2026: 3 Steps (Legally)",
+    description:
+      "The legitimate route: online intake, licensed-provider review, medication shipped. Brand-name and compounded semaglutide options from $59/month, explained.",
+  },
+  "semaglutide-cost-per-month": {
+    title: "Semaglutide Cost Per Month (2026): $59 vs $1,150+",
+    description:
+      "Compounded semaglutide runs $59-$199/month all-in via telehealth; brand-name Ozempic/Wegovy runs $1,150-$1,600 without insurance. Full real-price breakdown.",
+  },
+  "weight-loss-medication-without-insurance": {
+    title: "Weight Loss Medication Without Insurance (From $59/mo)",
+    description:
+      "No coverage? Self-pay compounded GLP-1s start at $59-$89/month with the provider visit included. Real prices from licensed telehealth providers, compared.",
+  },
+  "compounded-semaglutide-vs-brand-name": {
+    title: "Compounded Semaglutide vs Brand Name: Real Differences",
+    description:
+      "Same active ingredient, 503A-pharmacy preparation, and a 10x price gap ($59-$199 vs $1,150+/mo). What the FDA says, the real trade-offs, and how to stay safe.",
+  },
+};
+
+// Direct-answer boxes injected at the top of key articles (featured-snippet
+// targets). Code-rendered, so they work for articles whose body lives in the
+// blob. Every figure is a real, listed price - no invented numbers.
+const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
+  "best-mounjaro-alternatives":
+    "The closest Mounjaro alternatives are compounded tirzepatide plans - the same active ingredient - from licensed telehealth providers: $99/month at WellMedr, $119 at embody, $147 at DirectMeds, versus roughly $1,000+ for brand-name. Prescription required, shipped to your door.",
+  "best-wegovy-alternatives":
+    "The closest Wegovy alternatives are compounded semaglutide plans - the same active ingredient - starting at $59/month (WellMedr), $69 (embody) and $89 (altRx) through licensed online providers, versus $1,150+ for brand-name without insurance.",
+  "best-ro-alternatives":
+    "The strongest ro alternatives are flat-priced compounded GLP-1 providers: WellMedr from $59/month, embody at $69 with 1-2 day shipping, and altRx at $89 with brand-name options too. All require an online licensed-provider review.",
+  "can-you-get-ozempic-without-doctor":
+    "No - Ozempic and every GLP-1 medication legally require a prescription in the US. What you don't need is an in-person visit: licensed telehealth providers evaluate you online and, if appropriate, prescribe treatment starting around $59-$89/month.",
+  "weight-loss-medication-that-works-fast":
+    "GLP-1 medications (semaglutide, tirzepatide) are the fastest evidence-backed option: most people notice appetite changes within the first weeks, with meaningful weight loss building over 3-6 months. No pill or program works overnight - anyone promising that is selling something.",
+  "how-to-get-ozempic-online":
+    "Three steps: complete an online health intake, have a licensed provider review it (required by law), and receive medication by mail if prescribed. Brand-name Ozempic runs $1,150+/month; compounded semaglutide with the same active ingredient starts at $59-$89.",
+  "semaglutide-cost-per-month":
+    "Compounded semaglutide costs $59-$199 per month all-in through licensed telehealth providers (WellMedr $59, embody $69, altRx $89). Brand-name Ozempic or Wegovy runs roughly $1,150-$1,600 per month without insurance coverage.",
+  "weight-loss-medication-without-insurance":
+    "You don't need insurance: self-pay compounded GLP-1 plans include the provider visit and medication from $59/month (WellMedr), $69 (embody) or $89 (altRx). Brand-name without coverage runs $1,150+ - which is exactly why the compounded route exists.",
+  "compounded-semaglutide-vs-brand-name":
+    "Compounded semaglutide contains the same active ingredient as Ozempic and Wegovy, prepared by state-licensed 503A compounding pharmacies, at $59-$199/month versus $1,150+ for brand-name. The trade-off: compounded versions are not FDA-approved products, so provider and pharmacy quality matter most.",
+};
 
 export async function articleMetadata(slug: string, ctx: SiteContext): Promise<Metadata> {
   const config = await getConfig(ctx.vertical);
@@ -15,9 +92,12 @@ export async function articleMetadata(slug: string, ctx: SiteContext): Promise<M
 
   const url = canonicalUrl(ctx, `/articles/${slug}`);
 
+  // CTR override (code-controlled) wins over stored meta for target articles.
+  const override = ctx.vertical === "weight-loss" ? ARTICLE_SEO_OVERRIDES[slug] : undefined;
+
   return {
-    title: article.title,
-    description: article.description,
+    title: override?.title ?? article.title,
+    description: override?.description ?? article.description,
     robots: ctx.noindex
       ? { index: false, follow: false }
       : NOINDEX_ARTICLE_SLUGS.includes(slug)
@@ -27,8 +107,8 @@ export async function articleMetadata(slug: string, ctx: SiteContext): Promise<M
       canonical: url,
     },
     openGraph: {
-      title: article.title,
-      description: article.description,
+      title: override?.title ?? article.title,
+      description: override?.description ?? article.description,
       url,
       type: "article",
       publishedTime: article.publishedAt,
@@ -265,6 +345,16 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
         {/* Article body */}
         <div className="mx-auto max-w-[1100px] px-4 py-10 sm:px-6">
           <div>
+          {/* Direct answer up top (featured-snippet target) - code-injected so
+              it also covers articles whose body lives in the CMS blob. */}
+          {ctx.vertical === "weight-loss" && ARTICLE_QUICK_ANSWERS[slug] && (
+            <div className="article-body mb-8 text-[16px] leading-[1.75] text-gray-600">
+              <div className="qa">
+                <strong>The quick answer</strong>
+                {ARTICLE_QUICK_ANSWERS[slug]}
+              </div>
+            </div>
+          )}
           {/* Table of contents - anchor jump-links. Signals structure to Google
               (eligible for "jump to" sitelinks) and improves navigation on long
               articles. Rendered only when there are enough sections to warrant it. */}
@@ -452,6 +542,8 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               </Link>
             )}
           </div>
+
+          <MedicalSources vertical={ctx.vertical} />
 
           </div>
         </div>
