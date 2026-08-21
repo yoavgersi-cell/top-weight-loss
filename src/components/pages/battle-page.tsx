@@ -472,8 +472,10 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       <td className="py-3 pl-4 pr-2 text-[12.5px] font-semibold leading-snug text-gray-500 sm:py-3.5 sm:text-[13.5px]">
                         {row.label}
                       </td>
-                      <td className="py-3 px-2 text-[12.5px] leading-snug text-[#191919] sm:py-3.5 sm:px-3 sm:text-[14px]">{row.v1}</td>
-                      <td className="py-3 px-2 pr-4 text-[12.5px] leading-snug text-[#191919] sm:py-3.5 sm:px-3 sm:text-[14px]">{row.v2}</td>
+                      {/* break-words: slash-joined values (e.g. medication lists)
+                          have no natural break points and would clip on mobile */}
+                      <td className="break-words py-3 px-2 text-[12.5px] leading-snug text-[#191919] sm:py-3.5 sm:px-3 sm:text-[14px]">{row.v1}</td>
+                      <td className="break-words py-3 px-2 pr-4 text-[12.5px] leading-snug text-[#191919] sm:py-3.5 sm:px-3 sm:text-[14px]">{row.v2}</td>
                     </tr>
                   ))}
                 </tbody>

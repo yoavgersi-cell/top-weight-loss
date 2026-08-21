@@ -333,7 +333,12 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
             </p>
             <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2">
               {author ? (
-                <ExpertByline expert={author} label="Written by" />
+                <ExpertByline
+                  // Brand the team name from the current context so the hub
+                  // shows "TreatmentsHub", not the legacy brand from config.
+                  expert={{ ...author, name: author.name.replace(/TopWeightLoss/gi, ctx.brandTeam.replace(/\s+Team$/i, "")) }}
+                  label="Written by"
+                />
               ) : (
                 article.author && <span className="text-[12px] text-gray-500">By {article.author}</span>
               )}
