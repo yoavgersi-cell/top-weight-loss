@@ -3,6 +3,7 @@ import { type SiteConfig, type ReviewData, type ArticleData, type BattleData, ty
 import productsJson from "@/data/products.json";
 import faqsJson from "@/data/faqs.json";
 import { articles as defaultArticlesData } from "@/data/articles";
+import { brandClusterArticles } from "@/data/brand-cluster-articles";
 import { hairLossSeed } from "./seeds/hair-loss";
 import { trtSeed } from "./seeds/trt";
 import { hrtSeed } from "./seeds/hrt";
@@ -3437,6 +3438,98 @@ const sequenceMedviBattle: BattleData = {
   ],
 };
 
+// Partner-vs-partner: the trending Medvi against the new prepaid challenger.
+// Both sides' facts are their real published program details.
+const healthrxMedviBattle: BattleData = {
+  slug: "healthrx-vs-medvi",
+  provider1Id: "medvi",
+  provider2Id: "healthrx",
+  title: "HealthRx vs Medvi (2026): $99 Prepaid or $179 Monthly?",
+  matchupLabel: "HealthRx vs Medvi",
+  subtitle: "A 12-month prepaid program with overnight shipping vs month-to-month all-inclusive care with a 14,000-review track record.",
+  description:
+    "HealthRx ($99/mo semaglutide, 12-month prepaid, overnight shipping) vs Medvi ($179/mo all-inclusive, 4.4 on Trustpilot across 14,372 reviews). Real numbers, honest verdict.",
+  intro:
+    "This is a genuinely close matchup, because the two providers price the same medication in opposite ways. HealthRx gets semaglutide down to $99/month by asking for a 12-month commitment upfront - $1,188 due at checkout - and backs it with overnight cold-chain shipping and LegitScript certification. Medvi charges $179/month with no prepay, bundles everything in, and brings the strongest customer record in this matchup: 4.4 on Trustpilot across 14,372 reviews, with the personal provider support those reviews keep praising. The right answer depends on how sure you are about the next twelve months.",
+  verdict:
+    "Medvi is our pick for most people: month-to-month flexibility, everything included, and a 14,372-review Trustpilot record at 4.4 - you're not betting a year upfront on a newer brand. HealthRx is the sharper deal for the committed: if you already know you'll treat for a year, $99/month with overnight delivery beats Medvi's price by $80/month - just go in understanding the $1,188 charge at checkout. Confirm current terms on both sites.",
+  verdictWinnerPoints: [
+    "Month-to-month - no $1,188 upfront commitment",
+    "4.4 on Trustpilot across 14,372 reviews",
+    "All-inclusive $179/mo with dietician & care coaching",
+  ],
+  verdictLoserPoints: [
+    "$99/mo semaglutide - lowest in this matchup (prepaid)",
+    "Free overnight cold-chain shipping",
+    "LegitScript-certified, 503A pharmacy fulfillment",
+  ],
+  winnerId: "medvi",
+  categories: [
+    {
+      name: "Commitment & Flexibility",
+      winner: "provider1",
+      explanation:
+        "Medvi bills monthly and you can stop when your situation changes. HealthRx's headline price requires the full year paid at checkout - $1,188 - which is exactly how it gets to $99/month. If GLP-1 treatment is new territory for you, the flexible structure is worth real money.",
+      supportingPoints: [
+        "Monthly billing, adjust anytime (Medvi)",
+        "$1,188 due at checkout for the $99 rate (HealthRx)",
+        "No prepay needed to start (Medvi)",
+      ],
+    },
+    {
+      name: "Price (If You Commit)",
+      winner: "provider2",
+      explanation:
+        "For someone certain about a year of treatment, HealthRx's math wins: $99/month vs Medvi's $179 is $960 saved over twelve months on semaglutide. Its tirzepatide plans from $179 also undercut Medvi's $249. The discount is real - it's the commitment that buys it.",
+      supportingPoints: [
+        "$99/mo semaglutide prepaid vs $179 monthly (HealthRx)",
+        "Tirzepatide from $179 vs $249 (HealthRx)",
+        "~$960/year cheaper on semaglutide if you stay the full year",
+      ],
+    },
+    {
+      name: "Customer Track Record",
+      winner: "provider1",
+      explanation:
+        "Medvi's 4.4 across 14,372 Trustpilot reviews - repeatedly praising thorough providers and personal service - is the kind of evidence a newer brand simply can't match yet. HealthRx's program design looks right (LegitScript-certified, clinician-gated), but its public review record is still thin.",
+      supportingPoints: [
+        "4.4/5 across 14,372 Trustpilot reviews (Medvi)",
+        "Reviews consistently cite personal provider support (Medvi)",
+        "Newer brand, limited public review history (HealthRx)",
+      ],
+    },
+    {
+      name: "Delivery",
+      winner: "provider2",
+      explanation:
+        "HealthRx ships overnight, cold-chain, lot-tracked, free on every plan - the fastest, most controlled fulfillment in this matchup. Medvi ships free too, on standard timelines.",
+      supportingPoints: [
+        "Free overnight cold-chain, lot-tracked (HealthRx)",
+        "Free standard shipping (Medvi)",
+      ],
+    },
+    {
+      name: "Support & Care Model",
+      winner: "provider1",
+      explanation:
+        "Both gate treatment behind a licensed clinician and include ongoing check-ins, and neither charges extra when your dose changes. Medvi edges it on depth: plans include a dietician and care coaching alongside the provider relationship its reviewers rave about.",
+      supportingPoints: [
+        "Free dietician & care coaching included (Medvi)",
+        "Independent clinician review, ongoing check-ins (both)",
+        "No price change on dose adjustments (both)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Starting Price", provider1Value: "$179/mo semaglutide · $249 tirzepatide", provider2Value: "$99/mo semaglutide (12-mo prepaid) · tirzepatide from $179", highlight: "provider2" },
+    { feature: "Billing", provider1Value: "Monthly, all-inclusive", provider2Value: "$1,188 prepaid at checkout", highlight: "provider1" },
+    { feature: "Trustpilot", provider1Value: "4.4 across 14,372 reviews", provider2Value: "Newer brand", highlight: "provider1" },
+    { feature: "Shipping", provider1Value: "Free, standard", provider2Value: "Free, overnight cold-chain", highlight: "provider2" },
+    { feature: "Support", provider1Value: "Provider + dietician & care coaching", provider2Value: "Care-team check-ins", highlight: "provider1" },
+    { feature: "Certifications", provider1Value: "Licensed providers, HSA/FSA approved", provider2Value: "LegitScript certified, 503A pharmacies", highlight: "both" },
+  ],
+};
+
 // ───── Brand casing normalization ─────
 // Canonical provider names (keyed by provider id or normalized name).
 const CANONICAL_NAMES: Record<string, string> = {
@@ -3677,6 +3770,7 @@ function buildInitialConfig(): SiteConfig {
       calibrateMedviBattle,
       sequenceTrimrxBattle,
       sequenceMedviBattle,
+      healthrxMedviBattle,
     ],
     sidebars: [
       {
@@ -4118,8 +4212,15 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
           articles: (() => {
             const savedArticles = saved.articles && saved.articles.length > 0 ? saved.articles : [];
             const savedSlugs = new Set(savedArticles.map((a) => a.slug));
+            // Brand-cluster articles are code-authoritative: a CMS "Save"
+            // snapshots the whole merged config into the blob, which would
+            // otherwise freeze these articles at whatever version was live at
+            // save time. For cluster slugs the code version always wins so
+            // content rewrites actually ship; other articles stay CMS-owned.
+            const codeAuthoritative = new Map(brandClusterArticles.map((a) => [a.slug, a]));
+            const merged = savedArticles.map((a) => codeAuthoritative.get(a.slug) ?? a);
             const newDefaults = initial.articles.filter((a) => !savedSlugs.has(a.slug));
-            return [...savedArticles, ...newDefaults];
+            return [...merged, ...newDefaults];
           })(),
           battles: (() => {
             // Merge saved battles with code defaults: keep every saved battle,
