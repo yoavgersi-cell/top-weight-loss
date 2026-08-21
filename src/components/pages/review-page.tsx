@@ -417,7 +417,15 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           </p>
           {config.experts && config.experts.length > 0 && (
             <div className="mt-5">
-              <ExpertByline expert={config.experts[0]} label="Reviewed by" />
+              <ExpertByline
+                // Brand the team name from the current context so the hub
+                // shows "TreatmentsHub", not the legacy brand from config.
+                expert={{
+                  ...config.experts[0],
+                  name: config.experts[0].name.replace(/TopWeightLoss/gi, ctx.brandTeam.replace(/\s+Team$/i, "")),
+                }}
+                label="Reviewed by"
+              />
             </div>
           )}
         </div>
