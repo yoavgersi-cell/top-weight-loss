@@ -310,7 +310,6 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   const relatedBattles = (config.battles ?? []).filter(
     (b) => b.provider1Id === provider.id || b.provider2Id === provider.id
   );
-  const relatedArticles = (config.articles ?? []).slice(0, 3);
 
   // This provider's own question cluster (is-X-legit / X-cost / X-alternatives)
   // - the highest-intent internal links a review can carry. Rendered only for
@@ -320,6 +319,20 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
     { slug: `${provider.id}-cost`, label: `How much does ${provider.name} cost?` },
     { slug: `${provider.id}-alternatives`, label: `Best ${provider.name} alternatives` },
   ].filter((c) => (config.articles ?? []).some((a) => a.slug === c.slug));
+
+  // Related articles: actually related, not just the first three in the array.
+  // Prefer articles that mention this provider (excluding its own cluster,
+  // which has a dedicated box below), then fill with the newest guides.
+  const clusterSet = new Set(clusterSlugs.map((c) => c.slug));
+  const mentions = (a: { slug: string; title: string }) =>
+    a.slug.includes(provider.id) || a.title.toLowerCase().includes(provider.name.toLowerCase());
+  const nonCluster = (config.articles ?? []).filter((a) => !clusterSet.has(a.slug));
+  const relatedArticles = [
+    ...nonCluster.filter(mentions),
+    ...nonCluster
+      .filter((a) => !mentions(a))
+      .sort((a, b) => (b.publishedAt ?? "").localeCompare(a.publishedAt ?? "")),
+  ].slice(0, 3);
 
   return (
     <div className="min-h-screen bg-gray-50">
