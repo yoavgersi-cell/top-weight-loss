@@ -18,6 +18,8 @@ import { TrustpilotRating } from "@/components/trustpilot-rating";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
 import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
+import { threeWayBySlug } from "@/lib/three-way";
+import { ThreeWayPageView, threeWayMetadata } from "@/components/pages/three-way-page";
 
 // Code-side CTR overrides for the highest-performing "versus" pages. These
 // pages live in the CMS blob, so their stored titles can't be tuned from code -
@@ -94,6 +96,10 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
 // Metadata for a landing page or head-to-head battle at /<slug> (root) or
 // /<vertical>/<slug> (hub). Returns { title: "Not Found" } for an unknown slug.
 export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Metadata> {
+  // Curated 3-way comparisons (/{a}-vs-{b}-vs-{c}) resolve before 2-way battles.
+  const trio = ctx.vertical === "weight-loss" ? threeWayBySlug.get(slug) : undefined;
+  if (trio) return threeWayMetadata(trio, ctx);
+
   const config = await getConfig(ctx.vertical);
 
   // Check landing pages first
@@ -133,8 +139,13 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
   const url = canonicalUrl(ctx, `/${canonicalSlug}`);
 
   // CTR override (code-controlled) wins over the stored meta for top battles.
+  // For battles without a bespoke override whose stored title carries no year,
+  // generate a high-intent pattern instead of shipping a generic title - the
+  // matchup label stays, the intent qualifiers (year, price, verdict) come in.
   const override = ctx.vertical === "weight-loss" ? BATTLE_SEO_OVERRIDES[slug] : undefined;
-  const metaTitle = override?.title ?? battle.title;
+  const baseLabel = (battle.matchupLabel ?? battle.title.split(":")[0]).trim();
+  const generatedTitle = `${baseLabel} (2026): Price, Differences & Verdict`;
+  const metaTitle = override?.title ?? (/20\d{2}/.test(battle.title) ? battle.title : generatedTitle);
   const metaDescription = override?.description ?? battle.description;
 
   return {
@@ -152,6 +163,10 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
 }
 
 export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteContext }) {
+  // Curated 3-way comparisons render their own template.
+  const trio = ctx.vertical === "weight-loss" ? threeWayBySlug.get(slug) : undefined;
+  if (trio) return ThreeWayPageView({ trio, ctx });
+
   const config = await getConfig(ctx.vertical);
 
   // ───── LANDING PAGE ─────
