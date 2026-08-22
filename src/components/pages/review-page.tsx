@@ -161,6 +161,33 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
   ],
 };
 
+// Community feedback synthesized from REAL Reddit threads (screenshots
+// supplied and verified by the site operator - never scraped or invented).
+// Quotes are short excerpts from public comments, lightly trimmed; usernames
+// omitted. Add a provider here only when real source material exists.
+const REVIEW_COMMUNITY_FEEDBACK: Record<
+  string,
+  { intro: string; positives: string[]; gripes: string[]; takeaway: string }
+> = {
+  embody: {
+    intro:
+      "Beyond Trustpilot, recent Reddit threads about embody paint a consistent - and usefully unvarnished - picture. The themes, from actual user comments:",
+    positives: [
+      "Proactive clinical follow-up: \"Nurse called me today asking have I taken the shot and if yes have I experienced any symptoms.\"",
+      "Responsive service that fixes problems: one user whose order sat at the pharmacy commented on embody's Facebook post - \"they contacted me right away... rushed my order. I had it next day.\"",
+      "Cold-chain handling confirmed in the wild: \"Arrived the next day from the pharmacy. Packaged nicely with ice packs.\"",
+      "Easy dose escalation: \"$129 for all levels of tri and no contract - I already moved up my dosages with no issues or kick back.\"",
+      "Billing accuracy: \"They just billed for the 2nd month - the amount is correct.\"",
+    ],
+    gripes: [
+      "The approval-to-shipment pipeline can be slower than the delivery itself: one user reported about two weeks between approval and the medication shipping (transit was next-day once it shipped); another's order sat at the pharmacy for a couple of days until customer service rushed it.",
+      "One user wished the pharmacy hadn't premixed an anti-nausea ingredient into their compound without asking, and found the 50-unit doses larger than expected.",
+    ],
+    takeaway:
+      "The community picture matches the Trustpilot one: communication and service are the consistent strength, delivery is fast once medication ships, and the honest watch-out is pipeline time between approval and shipment - if timing matters, order before your current supply runs low. The $129 figures Reddit users mention line up with embody's regular tirzepatide price ($119 promotional / $129 regular).",
+  },
+};
+
 export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Metadata> {
   const config = await getConfig(ctx.vertical);
   const review = (config.reviews ?? []).find((r) => r.slug === slug);
@@ -706,6 +733,50 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               rating={provider.trustpilotRating}
               reviewCount={provider.trustpilotReviewCount}
             />
+          </div>
+        )}
+
+        {/* Community feedback - real Reddit threads, positives and gripes alike */}
+        {REVIEW_COMMUNITY_FEEDBACK[slug] && (
+          <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-6 sm:p-7">
+            <h2 className="mb-2 text-[20px] font-bold text-[#191919]">
+              What Reddit users report about {provider.name}
+            </h2>
+            <p className="mb-5 text-[14.5px] leading-relaxed text-gray-600">
+              {REVIEW_COMMUNITY_FEEDBACK[slug].intro}
+            </p>
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div>
+                <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.06em] text-emerald-700">
+                  What keeps coming up as positives
+                </p>
+                <ul className="space-y-2.5">
+                  {REVIEW_COMMUNITY_FEEDBACK[slug].positives.map((p, i) => (
+                    <li key={i} className="flex items-start gap-2 text-[13.5px] leading-relaxed text-gray-600">
+                      <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2.5} />
+                      {p}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.06em] text-amber-700">
+                  The honest gripes
+                </p>
+                <ul className="space-y-2.5">
+                  {REVIEW_COMMUNITY_FEEDBACK[slug].gripes.map((g, i) => (
+                    <li key={i} className="flex items-start gap-2 text-[13.5px] leading-relaxed text-gray-600">
+                      <X className="mt-0.5 h-3.5 w-3.5 shrink-0 text-amber-500" strokeWidth={2.5} />
+                      {g}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <p className="mt-5 border-t border-gray-100 pt-4 text-[14px] leading-relaxed text-gray-600">
+              <span className="font-semibold text-[#191919]">The takeaway: </span>
+              {REVIEW_COMMUNITY_FEEDBACK[slug].takeaway}
+            </p>
           </div>
         )}
 
