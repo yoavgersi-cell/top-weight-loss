@@ -138,6 +138,29 @@ const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
   },
 };
 
+// Extra code-controlled FAQs appended to specific reviews (and their FAQPage
+// schema) - high-intent questions grounded in each provider's real published
+// terms. Side-effect answers stay at medication level and link the full guide.
+const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> = {
+  embody: [
+    {
+      question: "How fast does embody ship?",
+      answer:
+        "embody ships free in 1-2 days in temperature-controlled, tracked and insured packaging, with same-day dispatch on orders placed before 2pm CT. The doctor review itself usually happens within 24 hours of completing the ~5-minute intake.",
+    },
+    {
+      question: "Can you cancel embody anytime?",
+      answer:
+        "Yes - embody has no long-term contract and no membership fee; plans are month-to-month and you can cancel anytime. If a provider doesn't approve your prescription in the first place, embody issues a full refund.",
+    },
+    {
+      question: "What are the side effects of embody's medications?",
+      answer:
+        "embody prescribes compounded semaglutide and tirzepatide, so the side effects are those of GLP-1 medications generally - most commonly digestive (nausea, constipation, diarrhea), especially during the first weeks as your dose increases, and usually easing as your body adjusts. Your prescribing provider reviews your history for contraindications, and embody's nursing team is available during treatment. See our full semaglutide side-effects guide for what to expect and when to seek care.",
+    },
+  ],
+};
+
 export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Metadata> {
   const config = await getConfig(ctx.vertical);
   const review = (config.reviews ?? []).find((r) => r.slug === slug);
@@ -295,6 +318,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
       ? { question: `Who is ${provider.name} best for?`, answer: `${provider.name} is best for ${review.bestFor.join("; ")}.` }
       : null,
     { question: `Is ${provider.name} worth it?`, answer: review.finalVerdict },
+    ...(REVIEW_EXTRA_FAQS[slug] ?? []),
   ].filter((f): f is { question: string; answer: string } => !!f && !!f.answer);
 
   const faqSchema = {
@@ -438,6 +462,15 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             </>
           )}
         </div>
+
+        {/* The Bottom Line - the verdict up top, so the answer to "is it worth
+            it" doesn't hide at the bottom of the page. */}
+        {review.finalVerdict && (
+          <div className="mb-8 rounded-2xl border border-[#0C4B75]/20 bg-white p-5 shadow-sm sm:p-6">
+            <p className="mb-2 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">The bottom line</p>
+            <p className="text-[15px] leading-[1.8] text-gray-700">{review.finalVerdict}</p>
+          </div>
+        )}
 
         {/* Intro */}
         <div className="mb-8">

@@ -910,8 +910,8 @@ const defaultReviews: ReviewData[] = [
   {
     slug: "embody",
     providerId: "embody",
-    shortSummary: "Doctor-prescribed GLP-1 treatment - compounded semaglutide from $69/mo and tirzepatide from $119/mo - shipped in 1-2 days with no insurance required.",
-    reviewIntro: "Embody offers doctor-prescribed GLP-1 weight loss treatment - compounded semaglutide and tirzepatide injections - through a 100% online process. Getting started takes a roughly 5-minute health qualifier, after which a medical practitioner reviews your chart (Embody says usually within 24 hours, often under 5). Pricing is flat and simple: $69/month for semaglutide and $119/month for tirzepatide, with no insurance required, no hidden fees, and no clinic visits. Medication ships to your door in 1-2 days in temperature-controlled, tracked, insured packaging, and Embody is LegitScript-certified and works with US-based 503A compounding pharmacies.",
+    shortSummary: "Doctor-prescribed GLP-1 treatment - compounded semaglutide from $69/mo and tirzepatide from $119/mo - shipped in 1-2 days with no insurance required. Rated 3.8 across 4,956 Trustpilot reviews.",
+    reviewIntro: "embody offers doctor-prescribed GLP-1 weight loss treatment - compounded semaglutide and tirzepatide injections - through a 100% online process. Getting started takes a roughly 5-minute health qualifier, after which a medical practitioner reviews your chart (embody says usually within 24 hours, often under 5). Pricing is flat and simple: $69/month for semaglutide and $119/month for tirzepatide, with no insurance required, no hidden fees, and no clinic visits. Medication ships in 1-2 days in temperature-controlled, tracked, insured packaging, and embody is LegitScript-certified and works with US-based 503A compounding pharmacies. On Trustpilot, embody averages 3.8 across 4,956 reviews - an honest, mixed-to-positive record whose recent reviews cluster around two themes: responsive, proactive customer service ('from my very first inquiry I've had excellent communication... customer service updated me every step,' writes one tirzepatide patient) and the no-surprises pricing ('Love the fact that there are no surprises as in costly up front cost'). A 3.8 also means a minority of customers had negative experiences - worth reading both ends of the reviews before deciding, as with any provider.",
     keyFeatures: [
       "Compounded semaglutide ($69/mo) and tirzepatide ($119/mo)",
       "5-minute health qualifier; doctor review usually within 24 hrs",
@@ -934,16 +934,18 @@ const defaultReviews: ReviewData[] = [
       "LegitScript-certified with US-based 503A pharmacies"
     ],
     cons: [
-      "Compounded medications only (not brand-name)",
-      "Injectable options only",
-      "Requires an online intake and doctor approval"
+      "3.8 Trustpilot average - most reviews are 5-star, but a minority report negative experiences",
+      "Compounded medications only (not brand-name Ozempic/Wegovy/Zepbound)",
+      "Injectable options only - no oral or needle-free format",
+      "Medication-first model - no dietician or formal coaching layer",
+      "Requires an online intake and doctor approval (not everyone qualifies)"
     ],
     bestFor: [
       "People who want affordable, doctor-prescribed GLP-1 treatment",
       "Anyone who prefers a fully online process",
       "Those who want fast shipping and simple flat pricing"
     ],
-    finalVerdict: "Embody is a strong choice for affordable, doctor-prescribed GLP-1 treatment. With flat $69-$119/month pricing, fast free shipping, a fully online process, and LegitScript certification with US-based 503A pharmacies, it removes most of the cost and friction from getting started - a great fit for people who want a simple, transparent way to begin GLP-1 treatment.",
+    finalVerdict: "embody is a strong choice for affordable, doctor-prescribed GLP-1 treatment - and an honest one to recommend, because its record is public: flat $69-$119/month with everything included, free 1-2 day cold shipping, LegitScript certification with US-based 503A pharmacies, a full refund if you're not approved, and 4,956 Trustpilot reviews averaging 3.8 whose recent pages consistently praise the customer-service communication. The realistic caveats: it's compounded-only and injectable-only, there's no coaching layer, and a 3.8 means not every experience lands well. For someone who wants the lowest-friction, no-commitment way to start GLP-1 treatment at a transparent price, it's one of the strongest offers in our ranking - compare it directly in embody vs wellmedr and altRx vs embody before deciding.",
     trustBadges: [
       "Money-back guarantee",
       "Free expedited delivery",
@@ -4196,9 +4198,16 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
             // trust badges) onto CMS-saved reviews that predate them - same
             // "CMS wins, seed is a backfill" pattern used for ratings above.
             const seedBySlug = new Map(initial.reviews.map((r) => [r.slug, r]));
+            // Reviews whose full content is code-authoritative (same rationale
+            // as brand-cluster articles: a CMS Save snapshots the merged config
+            // and would freeze copy rewrites at save-time versions). For these
+            // slugs the seed wins wholesale; all other reviews stay CMS-owned
+            // with the seed backfilling only the rich fields below.
+            const codeAuthoritativeReviews = new Set(["embody"]);
             const mergedSaved = savedReviews.map((r) => {
               const seed = seedBySlug.get(r.slug);
               if (!seed) return r;
+              if (codeAuthoritativeReviews.has(r.slug)) return seed;
               return {
                 ...r,
                 pricingPlans: r.pricingPlans ?? seed.pricingPlans,
