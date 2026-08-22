@@ -159,6 +159,125 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
         "embody prescribes compounded semaglutide and tirzepatide, so the side effects are those of GLP-1 medications generally - most commonly digestive (nausea, constipation, diarrhea), especially during the first weeks as your dose increases, and usually easing as your body adjusts. Your prescribing provider reviews your history for contraindications, and embody's nursing team is available during treatment. See our full semaglutide side-effects guide for what to expect and when to seek care.",
     },
   ],
+  altrx: [
+    {
+      question: "How fast does altRx ship?",
+      answer:
+        "Shipping is free and takes about 5-7 days. That's the main trade-off against the 1-2 day providers like embody and DirectMeds - altRx compensates on price ($89/month semaglutide, $149/month tirzepatide) and its brand-name shelf.",
+    },
+    {
+      question: "Can you pause or cancel altRx?",
+      answer:
+        "Yes - altRx is self-pay with no long-term contract, and you can pause or cancel anytime. Buy Now, Pay Later options are also available if you'd rather split the monthly cost.",
+    },
+    {
+      question: "Does altRx offer brand-name medication?",
+      answer:
+        "Yes - alongside compounded semaglutide ($89/month) and tirzepatide ($149/month), altRx lists brand-name Ozempic at $1,149, Zepbound at $1,249 and Wegovy at $1,579 per month, making it one of the few providers in our ranking with a genuine brand-name shelf.",
+    },
+  ],
+  trimrx: [
+    {
+      question: "How fast does trimrx ship?",
+      answer:
+        "Delivery is free and tracked, often arriving as soon as the next day after your prescription is issued. The process starts with a free 2-minute online assessment, and the consultation itself costs nothing.",
+    },
+    {
+      question: "Is trimrx a subscription with a contract?",
+      answer:
+        "No long-term commitment - plans run month to month. Note that the $179 semaglutide price is a first-month rate (regularly $299); compounded tirzepatide runs $259/month, with custom dosing and unlimited provider check-ins included.",
+    },
+    {
+      question: "What medications does trimrx offer?",
+      answer:
+        "Compounded semaglutide (GLP-1) and compounded tirzepatide (GLP-1 + GIP), both weekly injections with dosing customized by your provider. There's no brand-name or oral option - if you want those, compare altRx (brand-name shelf) or Medvi (dissolving tablets).",
+    },
+  ],
+  shed: [
+    {
+      question: "What is SHED's money-back guarantee?",
+      answer:
+        "SHED promises that if you lose less than 5% of your body weight in 120 days on the program, you get your money back - the most concrete guarantee among the providers we rank. Check SHED's site for the current terms and conditions.",
+    },
+    {
+      question: "Does SHED include coaching?",
+      answer:
+        "Yes - health coaching is included in every plan rather than sold as an add-on, alongside the provider visit and home delivery. Reviewers on Trustpilot (4.7 across 1,120 reviews) most often single out the coaching and onboarding staff by name.",
+    },
+    {
+      question: "Can I pay for SHED with HSA/FSA funds?",
+      answer:
+        "Yes - SHED plans are HSA/FSA approved. Compounded semaglutide starts at $199/month and tirzepatide at $299/month, with 20% off your first month.",
+    },
+  ],
+  wellmedr: [
+    {
+      question: "How fast does wellmedr ship?",
+      answer:
+        "Standard delivery takes about 3-5 business days, with refills shipped every 4 weeks. That's slower than the 1-2 day providers like embody and DirectMeds - the trade-off for the lowest compounded prices in our ranking.",
+    },
+    {
+      question: "Does wellmedr's price go up as your dose increases?",
+      answer:
+        "No - wellmedr charges the same price regardless of dosage: compounded semaglutide from $59/month and tirzepatide from $99/month. The lowest $59 rate is tied to a 12-month plan.",
+    },
+    {
+      question: "Can you cancel wellmedr anytime?",
+      answer:
+        "Yes - you can cancel or change your plan anytime. Keep in mind the headline $59/month rate is locked in via a 12-month plan, and the program is backed by wellmedr's weight-loss warranty.",
+    },
+  ],
+  medvi: [
+    {
+      question: "What does Medvi's $179/month actually include?",
+      answer:
+        "Everything: the provider visits, the GLP-1 medication, free shipping, and free dietician and care coaching. There's no membership fee and no hidden charges, and plans are HSA/FSA approved.",
+    },
+    {
+      question: "Does Medvi have a needle-free option?",
+      answer:
+        "Yes - Medvi offers a daily oral dissolving GLP-1 tablet at $249/month, one of the few needle-free GLP-1 formats among the providers we rank. Weekly semaglutide injections are $179/month.",
+    },
+    {
+      question: "Do I need insurance for Medvi?",
+      answer:
+        "No - Medvi is a cash-pay program with one flat all-inclusive price, no insurance and no prior authorization required. Plans are HSA/FSA approved if you want to pay with pre-tax health funds.",
+    },
+  ],
+  directmeds: [
+    {
+      question: "How fast does DirectMeds ship?",
+      answer:
+        "Shipping is free and arrives in 1-2 days once your prescription is issued - among the fastest delivery in our ranking, on par with embody.",
+    },
+    {
+      question: "What are DirectMeds' sublingual drops?",
+      answer:
+        "A needle-free format: compounded semaglutide or tirzepatide taken as daily liquid drops under the tongue instead of a weekly injection - at the same $147/month flat price as the injectable version.",
+    },
+    {
+      question: "Is DirectMeds a membership?",
+      answer:
+        "No - there's no monthly membership and no hidden fees. You pay $147/month flat (the same at every dose), the telemedicine visit and prescription are included, and you can cancel anytime.",
+    },
+  ],
+  healthrx: [
+    {
+      question: "Do I have to pay for HealthRx's full year upfront?",
+      answer:
+        "The headline $99/month semaglutide price is a 12-month prepaid plan - $1,188 due at checkout - with tirzepatide plans from $179/month. The initial 60-second assessment is free with no payment to start, and approval is never automatic.",
+    },
+    {
+      question: "How fast does HealthRx ship?",
+      answer:
+        "Overnight - every plan includes free overnight cold-chain shipping in temperature-controlled, lot-tracked packaging from a licensed 503A pharmacy.",
+    },
+    {
+      question: "Does HealthRx raise the price when your dose increases?",
+      answer:
+        "No - the all-in price covers dose adjustments, so your monthly cost doesn't change as your protocol is titrated up. The price also includes the clinician consult, shipping, and ongoing care-team check-ins.",
+    },
+  ],
 };
 
 // Community feedback synthesized from REAL Reddit threads (screenshots
@@ -185,6 +304,25 @@ const REVIEW_COMMUNITY_FEEDBACK: Record<
     ],
     takeaway:
       "The community picture matches the Trustpilot one: communication and service are the consistent strength, delivery is fast once medication ships, and the honest watch-out is pipeline time between approval and shipment - if timing matters, order before your current supply runs low. The $129 figures Reddit users mention line up with embody's regular tirzepatide price ($119 promotional / $129 regular).",
+  },
+  medvi: {
+    intro:
+      "Beyond its 14,372-review Trustpilot record, recent Reddit threads about Medvi add the long view - the two most-upvoted are full-year write-ups rather than first-week impressions. The themes, from actual user comments:",
+    positives: [
+      "Real, sustained results: one user lost \"just under 15 percent of my starting body weight\" over 12 months; another \"lost just over 40 pounds\" in a year - and kept it off - which is squarely in the clinically expected range for semaglutide.",
+      "Plateau handling that works: \"I reached out through the messaging system, and my provider adjusted my dose, which helped me start moving again.\"",
+      "The appetite effect is the win users keep naming: it \"quieted the food noise instead of turning weight loss into a daily mental fight.\"",
+      "Provider loyalty from switchers: \"medvi is the best triz provider i ever had (changed 3 providers so far).\"",
+      "Structured onboarding: a thorough intake questionnaire, gradual dose titration, discreet packaging, and a provider who \"explained the dosing schedule, possible side effects, and what the first few weeks might look like.\"",
+    ],
+    gripes: [
+      "Support replies \"took longer than expected\" a couple of times for one user - nothing major, but not always instant.",
+      "Approval isn't instant either: the intake questionnaire took one user 15-20 minutes, and the provider came back \"within a few days\" - and depending on your case, care may run through secure messaging rather than a long video call.",
+      "Mild nausea on dose increases - \"manageable and improved after a short time,\" but reported.",
+      "\"The main factor to consider is cost since it is an ongoing monthly expense\" - Reddit's consensus caveat, and ours.",
+    ],
+    takeaway:
+      "The Reddit picture matches the Trustpilot one from a different angle: nobody calls Medvi cheap - at $179/month the ongoing cost is the caveat users themselves raise - but the year-long accounts describe exactly what that price buys: medical structure, dose adjustments when progress stalls, and 10-15% body-weight results over a year that felt \"sustainable, which is something I had not experienced before.\"",
   },
 };
 
