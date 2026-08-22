@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { headers } from "next/headers";
 import { getConfig } from "@/lib/config-store";
+import { THREE_WAY_COMPARISONS } from "@/lib/three-way";
 import {
   CONTENT_LAST_UPDATED,
   AFFILIATE_PROVIDER_IDS,
@@ -114,6 +115,18 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
       priority: 0.9,
     }))
   );
+
+  // Curated 3-way comparisons (weight-loss only) - registry pages, all indexable.
+  if (isWeightLoss) {
+    entries.push(
+      ...THREE_WAY_COMPARISONS.map((t) => ({
+        url: P(`/${t.slug}`),
+        lastModified: FALLBACK_DATE,
+        changeFrequency: "weekly" as const,
+        priority: 0.8,
+      }))
+    );
+  }
 
   if (isWeightLoss) {
     entries.push(

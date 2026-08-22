@@ -548,6 +548,35 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
             )}
           </div>
 
+          {/* Contextual comparison hub (weight-loss): routes informational
+              readers into the highest-intent comparison pages. Code-injected,
+              so it also renders on articles whose bodies live in the CMS blob. */}
+          {ctx.vertical === "weight-loss" && (
+            <div className="mt-10 rounded-2xl border border-gray-200 bg-white p-6 sm:p-7">
+              <h2 className="mb-1 text-[17px] font-bold text-[#191919]">Compare providers head-to-head</h2>
+              <p className="mb-4 text-[13.5px] text-gray-500">
+                Real prices, real trade-offs - the comparisons readers use to decide.
+              </p>
+              <div className="grid gap-2.5 sm:grid-cols-2">
+                {[
+                  { href: "/weight-loss/embody-vs-wellmedr", label: "embody vs wellmedr - $69 vs $59" },
+                  { href: "/weight-loss/altrx-vs-embody", label: "altRx vs embody - $89 vs $69" },
+                  { href: "/weight-loss/healthrx-vs-medvi", label: "HealthRx vs Medvi - prepaid vs monthly" },
+                  { href: "/weight-loss/embody-vs-altrx-vs-wellmedr", label: "The budget trio: embody vs altRx vs wellmedr" },
+                ].map((c) => (
+                  <Link
+                    key={c.href}
+                    href={c.href}
+                    className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
+                  >
+                    <span className="truncate">{c.label}</span>
+                    <ArrowRight className="ml-auto h-3.5 w-3.5 shrink-0" strokeWidth={2} />
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
           <MedicalSources vertical={ctx.vertical} />
 
           </div>
