@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ClipboardCheck, Database, ShieldCheck, Scale, Trophy, RefreshCw } from "lucide-react";
+import { ClipboardCheck, Database, ShieldCheck, Scale, Trophy, RefreshCw, BadgeDollarSign, Check, X } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
+import { PRICE_INDEX } from "@/lib/price-index";
 import { ExpertTeam } from "@/components/expert-team";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { LastUpdated } from "@/components/last-updated";
@@ -34,6 +35,29 @@ const FACTORS = [
   { category: "Flexibility", weight: "10%", desc: "Contract terms, cancellation and pause policies, ability to switch medications, and payment options." },
 ];
 
+const METHOD_FAQS = [
+  {
+    question: "How often are prices updated?",
+    answer:
+      "Whenever a provider changes its published rates. All prices live in one verified registry, so a single update re-renders every affected page - reviews, comparisons, cost tables and product cards - and each page displays its last-updated date.",
+  },
+  {
+    question: "Does affiliate status affect scores or rankings?",
+    answer:
+      "No. Partnerships can affect how providers are displayed, but never scores, review content, or head-to-head winners. Our verdicts regularly favor the cheaper or better-documented provider in a matchup, and our reviews cite real Trustpilot records - including mixed ones - for partners and non-partners alike.",
+  },
+  {
+    question: "Why do some providers show no Trustpilot rating on your pages?",
+    answer:
+      "Because they don't publish one, and we never invent or estimate a score. Where no aggregate exists, our pages say so explicitly and rely on the individual reviews we can verify plus the provider's published terms.",
+  },
+  {
+    question: "How do you calculate the 12-month cost tables?",
+    answer:
+      "From each provider's published rates with promo conditions applied exactly as published: first-month rates roll to the regular price from month two, plan-locked rates are labeled with their commitment, and prepaid plans show the checkout amount. The assumptions are printed under every table.",
+  },
+];
+
 const SOURCES = [
   { icon: Database, title: "The providers' own materials", desc: "We pull pricing, medications, shipping, and the medical model directly from each provider's official website and landing pages - so what you read here matches what you'll see when you enroll." },
   { icon: ClipboardCheck, title: "Recent verified customer reviews", desc: "We read current Trustpilot reviews to gauge real-world customer experience - communication, delivery, and support - not just marketing claims." },
@@ -64,10 +88,21 @@ export default async function HowWeRankPage() {
     ],
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: METHOD_FAQS.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
       <div className="border-b border-gray-200 bg-white">
@@ -104,6 +139,113 @@ export default async function HowWeRankPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Price verification protocol - the published rulebook, shown with
+            LIVE data from the same registry every page on the site renders
+            from, so the methodology is self-proving rather than asserted. */}
+        <section className="mb-12">
+          <div className="mb-4 flex items-center gap-2">
+            <BadgeDollarSign className="h-6 w-6 text-[#0C4B75]" strokeWidth={2} />
+            <h2 className="text-[22px] font-bold text-[#191919]">How we verify prices</h2>
+          </div>
+          <p className="mb-4 text-[16px] leading-[1.75] text-gray-600">
+            Every price on this site comes from one verified registry, and every entry records four
+            things: the headline rate, the regular rate behind any promotion, the condition attached
+            (plan length, first-month rate, prepaid term), and the shipping terms. A number is never
+            published without its condition. The rows below are pulled live from that registry - the
+            same data our reviews, comparisons and cost tables render from:
+          </p>
+          <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
+            <table className="w-full min-w-[640px] border-collapse text-left">
+              <thead>
+                <tr className="border-b-2 border-gray-200 bg-gray-50/80">
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Provider</th>
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Semaglutide, as recorded</th>
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Condition on record</th>
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Customer record</th>
+                </tr>
+              </thead>
+              <tbody className="text-[13.5px]">
+                {PRICE_INDEX.slice(0, 4).map((row) => {
+                  const provider = config.providers.find((p) => p.id === row.providerId);
+                  return (
+                    <tr key={row.providerId} className="border-b border-gray-100 align-top last:border-0">
+                      <td className="px-4 py-3.5 font-bold text-[#191919]">{provider?.name ?? row.providerId}</td>
+                      <td className="px-4 py-3.5 font-semibold text-[#191919] [font-variant-numeric:tabular-nums]">
+                        {row.semaglutide ? `${row.semaglutide.price}/mo` : "-"}
+                      </td>
+                      <td className="px-4 py-3.5 text-gray-600">{row.semaglutide?.note ?? "-"}</td>
+                      <td className="px-4 py-3.5 text-gray-600">
+                        {row.trustpilot
+                          ? `Trustpilot ${row.trustpilot.rating} across ${row.trustpilot.count} reviews`
+                          : "No published aggregate - we say so rather than invent one"}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">
+            When a provider changes its published pricing, the registry is updated once and every
+            affected page - reviews, head-to-heads, cost tables, product cards - re-renders from it.
+            The full ranking is on our{" "}
+            <Link href="/weight-loss/cheapest-glp1" className="font-medium text-[#0C4B75] hover:underline">
+              cheapest-GLP-1 index
+            </Link>.
+          </p>
+        </section>
+
+        {/* What moves a score - the published rubric */}
+        <section className="mb-12">
+          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">What earns points - and what costs them</h2>
+          <p className="mb-4 text-[16px] leading-[1.75] text-gray-600">
+            Within the six weighted factors, these are the specific signals that consistently move a
+            provider up or down in our evaluations:
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="rounded-2xl border border-emerald-200 bg-emerald-50/40 p-5">
+              <p className="mb-3 flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.06em] text-emerald-700">
+                <Check className="h-4 w-4" strokeWidth={2.5} /> Earns points
+              </p>
+              <ul className="space-y-2 text-[14px] leading-relaxed text-gray-700">
+                <li>Flat pricing that holds at every dose - no titration increases</li>
+                <li>A large, public customer record (Trustpilot volume + score)</li>
+                <li>Third-party certification (LegitScript) and named, state-licensed 503A pharmacies</li>
+                <li>Real guarantees in writing - refunds, warranties, results promises</li>
+                <li>Fast, temperature-controlled shipping for injectables</li>
+                <li>Clean exit terms: month-to-month, pause or cancel anytime</li>
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-amber-200 bg-amber-50/40 p-5">
+              <p className="mb-3 flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.06em] text-amber-700">
+                <X className="h-4 w-4" strokeWidth={2.5} /> Costs points
+              </p>
+              <ul className="space-y-2 text-[14px] leading-relaxed text-gray-700">
+                <li>Teaser rates that jump after month one - we publish the regular rate next to every promo</li>
+                <li>No published review aggregate - noted plainly in the review</li>
+                <li>Prepaid commitments a shopper could miss at checkout</li>
+                <li>Undisclosed membership fees stacked on medication costs</li>
+                <li>Thin public detail on plan terms, cancellation or pharmacy standards</li>
+                <li>A weak or mixed published review record - we cite the real number even for partners</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Integrity rules - the house rules the content actually runs on */}
+        <section className="mb-12">
+          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Our review-integrity rules</h2>
+          <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
+            <div className="divide-y divide-gray-100 text-[14.5px] leading-[1.75] text-gray-600">
+              <p className="p-5"><strong className="text-[#191919]">No invented ratings, ever.</strong> If a provider has no published Trustpilot aggregate, our pages say exactly that - we never estimate or fabricate a score. Partner status doesn&rsquo;t change this: our top-rated partner&rsquo;s review openly discusses its 3.8 average.</p>
+              <p className="p-5"><strong className="text-[#191919]">Every promo carries its regular rate.</strong> Promotional prices are always published alongside the regular rate and the condition (&ldquo;first month only&rdquo;, &ldquo;12-month plan&rdquo;, &ldquo;prepaid at checkout&rdquo;), and our 12-month cost tables apply those conditions exactly as published.</p>
+              <p className="p-5"><strong className="text-[#191919]">Community feedback is verified, not scraped.</strong> The &ldquo;What Reddit says&rdquo; sections on our reviews are built only from real public threads we&rsquo;ve independently verified - quotes lightly trimmed, vote counts shown only as captured, gripes included alongside praise.</p>
+              <p className="p-5"><strong className="text-[#191919]">Medical claims cite primary sources.</strong> Clinical figures reference the published STEP and SURMOUNT trials (NEJM) and FDA prescribing information, cited at the bottom of every medical page - never blog folklore.</p>
+              <p className="p-5"><strong className="text-[#191919]">We don&rsquo;t republish what we can&rsquo;t verify.</strong> Claims circulating about providers - regulatory actions, corporate relationships - appear on our pages only after independent verification, no matter who they help or hurt.</p>
+            </div>
           </div>
         </section>
 
@@ -231,6 +373,19 @@ export default async function HowWeRankPage() {
               evaluation and supervision by a licensed healthcare provider. Always consult a qualified
               physician before starting any weight loss medication. Individual results vary.
             </p>
+          </div>
+        </section>
+
+        {/* FAQs */}
+        <section className="mb-12">
+          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Methodology FAQs</h2>
+          <div className="divide-y divide-gray-100 overflow-hidden rounded-2xl border border-gray-200 bg-white">
+            {METHOD_FAQS.map((f, i) => (
+              <div key={i} className="p-6">
+                <h3 className="mb-2 text-[15.5px] font-bold text-[#191919]">{f.question}</h3>
+                <p className="text-[14px] leading-[1.75] text-gray-600">{f.answer}</p>
+              </div>
+            ))}
           </div>
         </section>
 
