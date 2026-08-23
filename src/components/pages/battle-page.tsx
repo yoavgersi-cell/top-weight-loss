@@ -19,6 +19,7 @@ import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
 import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
 import { ProductCarousel } from "@/components/product-carousel";
+import { RedditThreadCarousel } from "@/components/reddit-community";
 import { threeWayBySlug } from "@/lib/three-way";
 import { ThreeWayPageView, threeWayMetadata } from "@/components/pages/three-way-page";
 
@@ -782,6 +783,14 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 </tbody>
               </table>
             </div>
+          )}
+
+          {/* ───── REDDIT COMMUNITY CAROUSEL (verified threads only) ───── */}
+          {ctx.vertical === "weight-loss" && (
+            <RedditThreadCarousel
+              providers={[p1, p2]}
+              reviewHrefFor={(id) => hubLink(ctx, `/reviews/${id}`)}
+            />
           )}
 
           {/* ───── PER-PROVIDER DEEP DIVES ───── */}
