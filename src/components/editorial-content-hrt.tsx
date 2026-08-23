@@ -47,8 +47,8 @@ export function HrtEditorialContent() {
           provider reviews
         </Link>{" "}
         or compare two directly in our{" "}
-        <Link href="/hrt/midi-vs-alloy" className="font-semibold text-[#0C4B75] hover:underline">
-          Midi vs Alloy comparison
+        <Link href="/hrt/midi-vs-winona" className="font-semibold text-[#0C4B75] hover:underline">
+          Midi vs Winona comparison
         </Link>
         .
       </p>

@@ -71,8 +71,13 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
   const entries: MetadataRoute.Sitemap = [
     { url: base, lastModified: FALLBACK_DATE, changeFrequency: "weekly", priority: 0.9 },
     { url: P("/reviews"), lastModified: FALLBACK_DATE, changeFrequency: "weekly", priority: 0.9 },
-    { url: P("/articles"), lastModified: FALLBACK_DATE, changeFrequency: "weekly", priority: 0.8 },
   ];
+
+  // The articles index only earns a sitemap slot once the vertical actually
+  // has articles - an empty "No articles" page is thin content.
+  if ((config.articles ?? []).length > 0) {
+    entries.push({ url: P("/articles"), lastModified: FALLBACK_DATE, changeFrequency: "weekly", priority: 0.8 });
+  }
 
   // Reviews - only affiliate-provider reviews are indexable (competitor
   // reviews render noindex,follow to keep them out of the index), so only

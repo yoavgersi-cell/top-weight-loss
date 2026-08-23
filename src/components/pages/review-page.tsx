@@ -446,7 +446,10 @@ export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Me
   const provider = config.providers.find((p) => p.id === review.providerId);
   if (!provider) return { title: "Review Not Found" };
 
-  const override = REVIEW_SEO_OVERRIDES[slug];
+  // Overrides are written against weight-loss offers (GLP-1 pricing etc.), so
+  // a shared provider id on another vertical (directmeds on HRT) falls back to
+  // the generic template instead of inheriting weight-loss claims.
+  const override = ctx.vertical === "weight-loss" ? REVIEW_SEO_OVERRIDES[slug] : undefined;
   const pageTitle = override?.title ?? `${provider.name} Review 2026: Cost, Results & Is It Worth It?`;
   const pageDescription = override?.description ?? review.shortSummary;
 
@@ -595,7 +598,10 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
       ? { question: `Who is ${provider.name} best for?`, answer: `${provider.name} is best for ${review.bestFor.join("; ")}.` }
       : null,
     { question: `Is ${provider.name} worth it?`, answer: review.finalVerdict },
-    ...(REVIEW_EXTRA_FAQS[slug] ?? []),
+    // Extra FAQs are all researched against weight-loss offers, so they only
+    // apply there - a provider id shared across verticals (e.g. directmeds on
+    // HRT) must not inherit another vertical's prices and shipping claims.
+    ...(ctx.vertical === "weight-loss" ? REVIEW_EXTRA_FAQS[slug] ?? [] : []),
   ].filter((f): f is { question: string; answer: string } => !!f && !!f.answer);
 
   const faqSchema = {
@@ -1001,8 +1007,9 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           </div>
         )}
 
-        {/* Community feedback - real Reddit threads, rendered Reddit-style */}
-        {REVIEW_COMMUNITY_FEEDBACK[slug] && (
+        {/* Community feedback - real Reddit threads, rendered Reddit-style.
+            Captured against weight-loss offers, so gated to that vertical. */}
+        {ctx.vertical === "weight-loss" && REVIEW_COMMUNITY_FEEDBACK[slug] && (
           <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-6 sm:p-7">
             <div className="mb-2 flex items-center gap-2.5">
               <RedditMark className="h-7 w-7 shrink-0" />

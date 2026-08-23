@@ -309,7 +309,7 @@ export const isVertical = (id: string): boolean => VERTICAL_IDS.includes(id);
 // (providers, comparisons, etc.) while still being unpublished - it renders for
 // preview but stays out of the hub card, the sitemap, and the index until its
 // affiliate data is filled in and it's added here. Add a vertical id to launch it.
-export const PUBLISHED_VERTICALS = ["weight-loss", "hair-loss", "trt"];
+export const PUBLISHED_VERTICALS = ["weight-loss", "hair-loss", "trt", "hrt"];
 export const isPublishedVertical = (id: string): boolean => PUBLISHED_VERTICALS.includes(id);
 
 // Providers we have an affiliate relationship with. Pages centered on any other
