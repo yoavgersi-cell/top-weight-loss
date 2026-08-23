@@ -115,6 +115,59 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
     takeaway:
       "The Reddit picture matches the Trustpilot one from a different angle: the ongoing monthly cost is the caveat users themselves raise - though Medvi's current $99/month promotion (regularly $199) blunts it considerably - but the year-long accounts describe exactly what that price buys: medical structure, dose adjustments when progress stalls, and 10-15% body-weight results over a year that felt “sustainable, which is something I had not experienced before.”",
   },
+  wellmedr: {
+    intro:
+      "wellmedr's Reddit footprint is comment-level rather than long write-ups: short, recent verdicts, mostly from people who paid for annual plans. Excerpts from the real public comments:",
+    threads: [
+      {
+        author: "Fun-Violinist-6449",
+        age: "2mo ago",
+        upvotes: 2,
+        body: [
+          "“They are legit with their pharmacy in Florida. I did a ton of research and ended up paying for a whole year at 88 a month. I am going on my 3rd month and so far they are great! I'm happy”",
+        ],
+      },
+      {
+        author: "Ok_Rub4064",
+        age: "11d ago",
+        upvotes: 1,
+        body: [
+          "“I am seriously considering switching to Wellmedr. I can get a whole year for $99/month. That's the lowest I've seen.”",
+        ],
+      },
+      {
+        author: "Useful-Commercial-49",
+        age: "4mo ago",
+        upvotes: 1,
+        body: [
+          "“I received it right away. They kept me on the 15mg of Tirz I was already on. Very responsive customer service.”",
+          "The honest catch, after leaving a previous provider (RemedyMeds) over refill delays: “I've been in it for 8 weeks and I'm only down 1 pound... I ordered a 6 month supply for $1143 from WellMedr trying to avoid the shipping delays of monthly refills but I'm currently looking for another company because I'm not wasting my time for no results.”",
+        ],
+      },
+      {
+        author: "Fun-Violinist-6449",
+        age: "2mo ago",
+        upvotes: 2,
+        body: [
+          "“I have been with them 2 months and so far no complaints. I paid for a whole year.”",
+        ],
+      },
+      {
+        author: "GlippyApp",
+        age: "16d ago",
+        upvotes: 2,
+        body: ["“We have some members using them and they like them.”"],
+      },
+      {
+        author: "Professional_Tree843",
+        age: "1mo ago",
+        upvotes: 1,
+        body: ["“They are legit”"],
+      },
+    ],
+    takeaway:
+      "The comment-level picture is mostly positive: “legit,” a named Florida pharmacy, fast delivery, responsive service, and the prices commenters actually paid on annual plans ($88-$99/month) sit right in the range of wellmedr's published 12-month rates ($59/month semaglutide, $99/month tirzepatide). The honest counterweight is one detailed account of being down only 1 pound after 8 weeks on tirzepatide despite good service - a fair reminder that response to GLP-1 medication varies by person, and no provider's service quality can guarantee results.",
+  },
 };
 
 // A minimal Snoo-style mark drawn inline (no external assets) - used to give
