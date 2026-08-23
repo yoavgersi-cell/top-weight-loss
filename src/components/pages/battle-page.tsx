@@ -26,6 +26,27 @@ import { ThreeWayPageView, threeWayMetadata } from "@/components/pages/three-way
 // pages live in the CMS blob, so their stored titles can't be tuned from code -
 // this map wins over the stored meta for exactly these slugs. Every price is
 // the provider's real listed price; keep them in sync when pricing changes.
+// Per-battle 12-month cost math - the decision-grade table SERP winners for
+// "X vs Y" queries carry. Values are computed from the same verified prices as
+// the price index; rows align to the battle's provider1/provider2 order.
+// Seed a battle here only with real, current published rates.
+const BATTLE_COST_MATH: Record<
+  string,
+  { rows: [string, string, string][]; note: string }
+> = {
+  // provider1 = embody, provider2 = Medvi
+  "embody-vs-medvi": {
+    rows: [
+      ["First month (semaglutide)", "$69", "$99"],
+      ["6-month total", "$414", "$594"],
+      ["12-month total", "$828", "$1,188"],
+      ["Tirzepatide, monthly", "$119 (reg. $129)", "$166 promo (reg. $299)"],
+      ["If the promo ends", "$79/mo regular - $948/yr", "$199/mo regular - $2,388/yr"],
+    ],
+    note: "Semaglutide at each provider's current published rate, promo conditions applied as published: embody $69/mo promotional (regularly $79), month to month; Medvi $99/mo promotional (regularly $199), all-inclusive with dietician and care coaching. Neither requires a prepaid term.",
+  },
+};
+
 const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
   "embody-vs-sprout": {
     title: "embody vs Sprout (2026): $69 vs $149 GLP-1 Compared",
@@ -516,6 +537,48 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   ))}
                 </tbody>
               </table>
+              {/* Freshness line - SERP winners date-stamp their prices; ours
+                  are verified against published rates on every content pass. */}
+              <p className="border-t border-gray-100 px-4 py-2.5 text-[11.5px] text-gray-400">
+                Prices are the providers&rsquo; published rates at our last verification - confirm the
+                final figure at checkout, as offers change.
+              </p>
+            </div>
+          )}
+
+          {/* ───── 12-MONTH COST MATH ─────
+              What a realistic course of treatment costs at each provider -
+              the number searchers actually decide on, not the headline rate. */}
+          {ctx.vertical === "weight-loss" && BATTLE_COST_MATH[slug] && (
+            <div className="mb-12">
+              <h2 className="mb-1.5 text-[22px] font-bold text-[#191919]">
+                What you actually pay over 12 months
+              </h2>
+              <p className="mb-4 max-w-[680px] text-[14px] text-gray-500">
+                Headline prices are the least useful number in a comparison - this is the real math
+                over a course of treatment, promo conditions applied exactly as published.
+              </p>
+              <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
+                <table className="w-full min-w-[520px] border-collapse text-left">
+                  <thead>
+                    <tr className="border-b-2 border-gray-200 bg-gray-50/80">
+                      <th className="w-[34%] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400" />
+                      <th className="px-4 py-3.5 text-[14px] font-bold text-[#191919]">{p1.name}</th>
+                      <th className="px-4 py-3.5 text-[14px] font-bold text-[#191919]">{p2.name}</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-[13.5px]">
+                    {BATTLE_COST_MATH[slug].rows.map(([label, v1, v2], i) => (
+                      <tr key={i} className="border-b border-gray-100 align-top last:border-0">
+                        <td className="px-4 py-3.5 text-[12.5px] font-semibold leading-snug text-gray-500">{label}</td>
+                        <td className="break-words px-4 py-3.5 font-semibold text-[#191919] [font-variant-numeric:tabular-nums]">{v1}</td>
+                        <td className="break-words px-4 py-3.5 font-semibold text-[#191919] [font-variant-numeric:tabular-nums]">{v2}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">{BATTLE_COST_MATH[slug].note}</p>
             </div>
           )}
 
