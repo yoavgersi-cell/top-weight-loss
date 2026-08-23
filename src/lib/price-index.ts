@@ -80,6 +80,15 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     trustpilot: { rating: "4.6", count: "13,901" },
   },
   {
+    providerId: "sprout",
+    edge: "Compounded plans plus a brand-name Wegovy option",
+    semaglutide: { price: "$149", note: "starting price" },
+    tirzepatide: { price: "$199", note: "starting price" },
+    shipping: "Prescription shipped within 2 days",
+    commitment: "See provider site for plan terms",
+    trustpilot: null,
+  },
+  {
     providerId: "trimrx",
     edge: "Custom dosing with unlimited provider check-ins",
     semaglutide: { price: "$179", note: "first month; reg. $299" },
@@ -104,5 +113,5 @@ export const PRICE_INDEX: PriceIndexRow[] = [
 export const BRAND_SHELF: { drug: string; ingredient: string; price: string; soldAt: string }[] = [
   { drug: "Ozempic", ingredient: "Semaglutide", price: "$1,149-$1,399/mo", soldAt: "altRx $1,149 · wellmedr $1,399" },
   { drug: "Zepbound", ingredient: "Tirzepatide", price: "$1,249-$1,599/mo", soldAt: "altRx $1,249 · wellmedr $1,599" },
-  { drug: "Wegovy", ingredient: "Semaglutide", price: "$1,579/mo", soldAt: "altRx" },
+  { drug: "Wegovy", ingredient: "Semaglutide", price: "$1,579-$1,799/mo", soldAt: "altRx $1,579 · Sprout $1,799" },
 ];

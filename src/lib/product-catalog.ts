@@ -105,6 +105,17 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     image: "/products/directmeds-semaglutide-drops.webp",
   },
   {
+    id: "sprout-semaglutide",
+    providerId: "sprout",
+    name: "Compounded Semaglutide Injection",
+    medication: "semaglutide",
+    format: "injection",
+    price: "$149",
+    priceNote: "starting price",
+    shipping: "Ships within 2 days",
+    image: "/products/sprout-semaglutide.webp",
+  },
+  {
     id: "trimrx-semaglutide",
     providerId: "trimrx",
     name: "Compounded Semaglutide Injection",
@@ -209,6 +220,17 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     image: null,
   },
   {
+    id: "sprout-tirzepatide",
+    providerId: "sprout",
+    name: "Compounded Tirzepatide Injection",
+    medication: "tirzepatide",
+    format: "injection",
+    price: "$199",
+    priceNote: "starting price",
+    shipping: "Ships within 2 days",
+    image: "/products/sprout-tirzepatide.webp",
+  },
+  {
     id: "trimrx-tirzepatide",
     providerId: "trimrx",
     name: "Compounded Tirzepatide (GLP-1 + GIP) Injection",
@@ -229,6 +251,18 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     priceNote: "20% off month one; coaching included",
     shipping: "Home delivery included",
     image: "/products/shed-tirzepatide.webp",
+  },
+  // ── Brand-name ──
+  {
+    id: "sprout-wegovy",
+    providerId: "sprout",
+    name: "Brand-Name Wegovy (Semaglutide) Pen",
+    medication: "semaglutide",
+    format: "injection",
+    price: "$1,799",
+    priceNote: "brand-name; starting price",
+    shipping: "Ships within 2 days",
+    image: "/products/sprout-wegovy.webp",
   },
 ];
 

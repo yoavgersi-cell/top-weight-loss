@@ -34,6 +34,11 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     description:
       "Medvi weight loss reviews: all-inclusive GLP-1 care now from $99/month promotional (reg. $199) and the personal provider support customers rave about on Trustpilot. Is Medvi legit and worth it? Real reviews, cost, pros & cons.",
   },
+  sprout: {
+    title: "Sprout Reviews 2026: Is It Legit? GLP-1 Cost & Verdict",
+    description:
+      "Sprout weight loss reviews: compounded semaglutide from $149/mo, tirzepatide from $199/mo, brand-name Wegovy available, prescriptions shipped within 2 days. Is Sprout legit and worth it? Real reviews, pricing, pros & cons.",
+  },
   altrx: {
     title: "altRx Reviews 2026: Is It Legit? GLP-1 Cost, Results & Verdict",
     description:
@@ -260,6 +265,23 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
       question: "Is DirectMeds a membership?",
       answer:
         "No - there's no monthly membership and no hidden fees. You pay $147/month flat (the same at every dose), the telemedicine visit and prescription are included, and you can cancel anytime.",
+    },
+  ],
+  sprout: [
+    {
+      question: "How fast does Sprout ship?",
+      answer:
+        "Sprout ships prescriptions within 2 days of approval - among the faster fulfillment windows in our ranking. The process starts with an online intake reviewed by a licensed provider.",
+    },
+    {
+      question: "Does Sprout offer brand-name medication?",
+      answer:
+        "Yes - alongside compounded semaglutide (from $149/month) and compounded tirzepatide (from $199/month), Sprout lists brand-name Wegovy from $1,799/month, making it one of the few mid-tier providers with a branded option on the shelf.",
+    },
+    {
+      question: "How much does Sprout cost per month?",
+      answer:
+        "Compounded semaglutide starts at $149/month and compounded tirzepatide at $199/month, with a standing $200 discount on the first month. Brand-name Wegovy starts at $1,799/month. Confirm current plan terms and the first-month offer on Sprout's site.",
     },
   ],
   healthrx: [
