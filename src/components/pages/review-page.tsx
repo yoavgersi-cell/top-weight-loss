@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, X, ArrowRight, Users, Clock, Shield, Star } from "lucide-react";
+import { Check, X, ArrowRight, Users, Clock, Shield, Star, ArrowBigUp, ArrowBigDown, MessageCircle } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED, AFFILIATE_PROVIDER_IDS } from "@/lib/config";
 import {
@@ -280,51 +280,140 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
   ],
 };
 
-// Community feedback synthesized from REAL Reddit threads (screenshots
-// supplied and verified by the site operator - never scraped or invented).
-// Quotes are short excerpts from public comments, lightly trimmed; usernames
-// omitted. Add a provider here only when real source material exists.
+// Community feedback from REAL Reddit threads (screenshots supplied and
+// verified by the site operator - never scraped or invented). Rendered in a
+// Reddit-style thread UI: quotes are excerpts from the public posts, lightly
+// trimmed; metadata (subreddit, votes, comment counts) is shown ONLY where
+// the source screenshot captured it - never estimated. Add a provider here
+// only when real source material exists.
+type RedditReply = { author: string; body: string };
+type RedditThread = {
+  subreddit?: string; // "r/telehealth" - omit if the screenshot didn't show it
+  author: string; // reddit username without the u/ prefix
+  age?: string; // "6mo ago"
+  title?: string; // post title; absent for standalone comments
+  upvotes?: number; // only when visible in the source screenshot
+  commentCount?: number; // only when visible in the source screenshot
+  body: string[]; // real excerpt paragraphs
+  replies?: RedditReply[];
+};
 const REVIEW_COMMUNITY_FEEDBACK: Record<
   string,
-  { intro: string; positives: string[]; gripes: string[]; takeaway: string }
+  { intro: string; threads: RedditThread[]; takeaway: string }
 > = {
   embody: {
     intro:
-      "Beyond Trustpilot, recent Reddit threads about embody paint a consistent - and usefully unvarnished - picture. The themes, from actual user comments:",
-    positives: [
-      "Proactive clinical follow-up: \"Nurse called me today asking have I taken the shot and if yes have I experienced any symptoms.\"",
-      "Responsive service that fixes problems: one user whose order sat at the pharmacy commented on embody's Facebook post - \"they contacted me right away... rushed my order. I had it next day.\"",
-      "Cold-chain handling confirmed in the wild: \"Arrived the next day from the pharmacy. Packaged nicely with ice packs.\"",
-      "Easy dose escalation: \"$129 for all levels of tri and no contract - I already moved up my dosages with no issues or kick back.\"",
-      "Billing accuracy: \"They just billed for the 2nd month - the amount is correct.\"",
-    ],
-    gripes: [
-      "The approval-to-shipment pipeline can be slower than the delivery itself: one user reported about two weeks between approval and the medication shipping (transit was next-day once it shipped); another's order sat at the pharmacy for a couple of days until customer service rushed it.",
-      "One user wished the pharmacy hadn't premixed an anti-nausea ingredient into their compound without asking, and found the 50-unit doses larger than expected.",
+      "Beyond Trustpilot, recent Reddit comments about embody paint a consistent - and usefully unvarnished - picture. These are excerpts from real public comments:",
+    threads: [
+      {
+        author: "SaltAvocado9500",
+        body: [
+          "“Nurse called me today asking have I taken the shot and if yes have I experienced any symptoms.”",
+          "Ordered on 8/6, medication delivered 8/14 - with a clinical follow-up call after the first dose.",
+        ],
+      },
+      {
+        author: "Comfortable_Whole343",
+        body: [
+          "“$129 for all levels of tri and no contract - I already moved up my dosages with no issues or kick back.”",
+        ],
+      },
+      {
+        author: "LondyRocks",
+        body: [
+          "“Arrived the next day from the pharmacy. Packaged nicely with ice packs.”",
+          "Three vials at $129 each; the honest catch: about two weeks between approval and the medication actually shipping - transit itself was next-day.",
+        ],
+      },
+      {
+        author: "TheseFrosting6548",
+        body: [
+          "Order sat at the pharmacy for a couple of days - then, after a comment on embody's Facebook post: “they contacted me right away... rushed my order. I had it next day.”",
+          "“They just billed for the 2nd month - the amount is correct.” Gripes: the pharmacy premixed an anti-nausea ingredient without asking, and the 50-unit doses were larger than expected.",
+        ],
+      },
+      {
+        author: "Maybee77",
+        body: ["“No complaints.”"],
+      },
     ],
     takeaway:
       "The community picture matches the Trustpilot one: communication and service are the consistent strength, delivery is fast once medication ships, and the honest watch-out is pipeline time between approval and shipment - if timing matters, order before your current supply runs low. The $129 figures Reddit users mention line up with embody's regular tirzepatide price ($119 promotional / $129 regular).",
   },
   medvi: {
     intro:
-      "Beyond its 14,372-review Trustpilot record, recent Reddit threads about Medvi add the long view - the two most-upvoted are full-year write-ups rather than first-week impressions. The themes, from actual user comments:",
-    positives: [
-      "Real, sustained results: one user lost \"just under 15 percent of my starting body weight\" over 12 months; another \"lost just over 40 pounds\" in a year - and kept it off - which is squarely in the clinically expected range for semaglutide.",
-      "Plateau handling that works: \"I reached out through the messaging system, and my provider adjusted my dose, which helped me start moving again.\"",
-      "The appetite effect is the win users keep naming: it \"quieted the food noise instead of turning weight loss into a daily mental fight.\"",
-      "Provider loyalty from switchers: \"medvi is the best triz provider i ever had (changed 3 providers so far).\"",
-      "Structured onboarding: a thorough intake questionnaire, gradual dose titration, discreet packaging, and a provider who \"explained the dosing schedule, possible side effects, and what the first few weeks might look like.\"",
-    ],
-    gripes: [
-      "Support replies \"took longer than expected\" a couple of times for one user - nothing major, but not always instant.",
-      "Approval isn't instant either: the intake questionnaire took one user 15-20 minutes, and the provider came back \"within a few days\" - and depending on your case, care may run through secure messaging rather than a long video call.",
-      "Mild nausea on dose increases - \"manageable and improved after a short time,\" but reported.",
-      "\"The main factor to consider is cost since it is an ongoing monthly expense\" - Reddit's consensus caveat, and ours.",
+      "Beyond its 14,372-review Trustpilot record, the most-upvoted recent Reddit threads about Medvi are full-year write-ups rather than first-week impressions. Excerpts from the real posts:",
+    threads: [
+      {
+        subreddit: "r/telehealth",
+        author: "marlsygarlsy",
+        age: "6mo ago",
+        title: "Medvi GLP-1 telehealth experience breakdown",
+        upvotes: 55,
+        commentCount: 8,
+        body: [
+          "“Within a few days, I heard back from a licensed provider... Most of the communication happened through secure messaging.”",
+          "“I did have some mild nausea when my dose increased, but it was manageable and improved after a short time... Around the middle of the year, progress slowed and I hit a plateau. I reached out through the messaging system, and my provider adjusted my dose, which helped me start moving again.”",
+          "“After about 12 months, I had lost just under 15 percent of my starting body weight... There were a couple times where replies took longer than expected, but nothing major. The main factor to consider is cost since it is an ongoing monthly expense.”",
+          "“It has not been effortless, but it has felt sustainable, which is something I had not experienced before.”",
+        ],
+        replies: [
+          {
+            author: "Canadian_Insulin",
+            body: "“Clinically speaking, losing around 10 to 15 percent of starting body weight over a year is very much within the expected and healthy range for semaglutide treatment.”",
+          },
+        ],
+      },
+      {
+        subreddit: "r/productreview",
+        author: "External-Neck-7278",
+        age: "6mo ago",
+        title: "My 2026 MEDVI review after using it for a full year",
+        upvotes: 55,
+        commentCount: 31,
+        body: [
+          "“The first thing I noticed was that my appetite felt different in a calm manageable way rather than feeling like I was constantly fighting hunger.”",
+          "“Over the course of the year I lost just over 40 pounds and more importantly I've been able to maintain that loss without feeling burnt out.”",
+          "“After a full year I'd say Medvi was worth it for me. Not because it was a miracle solution but because it helped make sustainable weight loss feel possible again.”",
+        ],
+        replies: [
+          {
+            author: "Decent_Feature_9060",
+            body: "“medvi is the best triz provider i ever had (changed 3 providers so far)”",
+          },
+          {
+            author: "DebuggingDave",
+            body: "“I've been using Medvi too and the biggest thing for me was exactly what you said, it quieted the food noise instead of turning weight loss into a daily mental fight.”",
+          },
+        ],
+      },
     ],
     takeaway:
-      "The Reddit picture matches the Trustpilot one from a different angle: nobody calls Medvi cheap - at $179/month the ongoing cost is the caveat users themselves raise - but the year-long accounts describe exactly what that price buys: medical structure, dose adjustments when progress stalls, and 10-15% body-weight results over a year that felt \"sustainable, which is something I had not experienced before.\"",
+      "The Reddit picture matches the Trustpilot one from a different angle: nobody calls Medvi cheap - at $179/month the ongoing cost is the caveat users themselves raise - but the year-long accounts describe exactly what that price buys: medical structure, dose adjustments when progress stalls, and 10-15% body-weight results over a year that felt “sustainable, which is something I had not experienced before.”",
   },
 };
+
+// A minimal Snoo-style mark drawn inline (no external assets) - used to give
+// the community section an unmistakable Reddit identity.
+function RedditMark({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 40 40" className={className} aria-hidden="true">
+      <circle cx="20" cy="20" r="20" fill="#FF4500" />
+      <g fill="#fff">
+        <ellipse cx="20" cy="23.5" rx="10.5" ry="7" />
+        <circle cx="8.8" cy="21" r="2.6" />
+        <circle cx="31.2" cy="21" r="2.6" />
+        <circle cx="26.5" cy="9.5" r="2.2" />
+        <path d="M20.6 16.9l1.2-6.6 5.3 1.1-.4 1.6-3.8-.8-1 5z" />
+      </g>
+      <g fill="#FF4500">
+        <circle cx="15.8" cy="22.3" r="1.7" />
+        <circle cx="24.2" cy="22.3" r="1.7" />
+      </g>
+      <path d="M15.5 26.6c1.3 1.1 2.8 1.6 4.5 1.6s3.2-.5 4.5-1.6" stroke="#FF4500" strokeWidth="1.3" strokeLinecap="round" fill="none" />
+    </svg>
+  );
+}
 
 export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Metadata> {
   const config = await getConfig(ctx.vertical);
@@ -874,46 +963,103 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           </div>
         )}
 
-        {/* Community feedback - real Reddit threads, positives and gripes alike */}
+        {/* Community feedback - real Reddit threads, rendered Reddit-style */}
         {REVIEW_COMMUNITY_FEEDBACK[slug] && (
           <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-6 sm:p-7">
-            <h2 className="mb-2 text-[20px] font-bold text-[#191919]">
-              What Reddit users report about {provider.name}
-            </h2>
+            <div className="mb-2 flex items-center gap-2.5">
+              <RedditMark className="h-7 w-7 shrink-0" />
+              <h2 className="text-[20px] font-bold text-[#191919]">
+                What Reddit says about {provider.name}
+              </h2>
+            </div>
             <p className="mb-5 text-[14.5px] leading-relaxed text-gray-600">
               {REVIEW_COMMUNITY_FEEDBACK[slug].intro}
             </p>
-            <div className="grid gap-5 sm:grid-cols-2">
-              <div>
-                <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.06em] text-emerald-700">
-                  What keeps coming up as positives
-                </p>
-                <ul className="space-y-2.5">
-                  {REVIEW_COMMUNITY_FEEDBACK[slug].positives.map((p, i) => (
-                    <li key={i} className="flex items-start gap-2 text-[13.5px] leading-relaxed text-gray-600">
-                      <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2.5} />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.06em] text-amber-700">
-                  The honest gripes
-                </p>
-                <ul className="space-y-2.5">
-                  {REVIEW_COMMUNITY_FEEDBACK[slug].gripes.map((g, i) => (
-                    <li key={i} className="flex items-start gap-2 text-[13.5px] leading-relaxed text-gray-600">
-                      <X className="mt-0.5 h-3.5 w-3.5 shrink-0 text-amber-500" strokeWidth={2.5} />
-                      {g}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+
+            <div className="space-y-4">
+              {REVIEW_COMMUNITY_FEEDBACK[slug].threads.map((t, i) => (
+                <div key={i} className="rounded-xl border border-gray-200 bg-[#FCFCFC] p-4 sm:p-5">
+                  {/* Post header - the Reddit identity line */}
+                  <div className="mb-2 flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[12px]">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#FF4500] text-[10px] font-bold text-white">
+                      r/
+                    </span>
+                    {t.subreddit ? (
+                      <>
+                        <span className="font-bold text-[#191919]">{t.subreddit}</span>
+                        <span className="text-gray-400">·</span>
+                        <span className="text-gray-500">u/{t.author}</span>
+                      </>
+                    ) : (
+                      <span className="font-bold text-[#191919]">u/{t.author}</span>
+                    )}
+                    {t.age && (
+                      <>
+                        <span className="text-gray-400">·</span>
+                        <span className="text-gray-400">{t.age}</span>
+                      </>
+                    )}
+                  </div>
+
+                  {t.title && (
+                    <p className="mb-2 text-[15.5px] font-bold leading-snug text-[#191919]">{t.title}</p>
+                  )}
+
+                  <div className="space-y-2">
+                    {t.body.map((para, j) => (
+                      <p key={j} className="text-[13.5px] leading-[1.7] text-gray-600">
+                        {para}
+                      </p>
+                    ))}
+                  </div>
+
+                  {/* Vote / comment pills - only real counts, never estimates */}
+                  {(t.upvotes !== undefined || t.commentCount !== undefined) && (
+                    <div className="mt-3 flex items-center gap-2">
+                      {t.upvotes !== undefined && (
+                        <span className="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2.5 py-1 text-[12px] font-bold text-gray-600">
+                          <ArrowBigUp className="h-4 w-4 text-[#FF4500]" strokeWidth={2} />
+                          {t.upvotes}
+                          <ArrowBigDown className="h-4 w-4 text-gray-400" strokeWidth={2} />
+                        </span>
+                      )}
+                      {t.commentCount !== undefined && (
+                        <span className="inline-flex items-center gap-1.5 rounded-full bg-gray-100 px-2.5 py-1 text-[12px] font-semibold text-gray-600">
+                          <MessageCircle className="h-3.5 w-3.5" strokeWidth={2} />
+                          {t.commentCount} comments
+                        </span>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Replies - threaded with the Reddit comment line */}
+                  {t.replies && t.replies.length > 0 && (
+                    <div className="mt-3 space-y-3 border-l-2 border-gray-200 pl-4">
+                      {t.replies.map((r, j) => (
+                        <div key={j}>
+                          <div className="mb-1 flex items-center gap-1.5 text-[12px]">
+                            <span className="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-gray-300 text-[9px] font-bold uppercase text-white">
+                              {r.author.charAt(0)}
+                            </span>
+                            <span className="font-bold text-gray-700">u/{r.author}</span>
+                          </div>
+                          <p className="text-[13px] leading-[1.65] text-gray-600">{r.body}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
+
             <p className="mt-5 border-t border-gray-100 pt-4 text-[14px] leading-relaxed text-gray-600">
               <span className="font-semibold text-[#191919]">The takeaway: </span>
               {REVIEW_COMMUNITY_FEEDBACK[slug].takeaway}
+            </p>
+            <p className="mt-2 text-[11.5px] leading-relaxed text-gray-400">
+              Excerpts from public Reddit posts, lightly trimmed; vote and comment counts shown as
+              captured at the time of review. Reddit is a trademark of Reddit, Inc. and is not
+              affiliated with this site.
             </p>
           </div>
         )}
