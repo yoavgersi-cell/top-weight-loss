@@ -7,6 +7,7 @@ import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ExpertByline } from "@/components/expert-byline";
 import { MedicalSources } from "@/components/medical-sources";
+import { ProductCarousel } from "@/components/product-carousel";
 import { notFound, permanentRedirect } from "next/navigation";
 
 // Code-side CTR overrides for high-impression articles whose stored meta lives
@@ -394,6 +395,21 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     dangerouslySetInnerHTML={{ __html: section.body }}
                   />
                 </section>
+
+                {/* Full-catalog product carousel mid-article (weight-loss only) -
+                    after roughly the halfway section, never at the bottom. */}
+                {ctx.vertical === "weight-loss" &&
+                  i === Math.max(0, Math.ceil(article.sections.length / 2) - 1) && (
+                    <div className="my-10">
+                      <ProductCarousel
+                        providers={config.providers}
+                        title="Shop GLP-1 plans by product"
+                        subtitle="Every provider's published plans - cheapest first, conditions under each price."
+                        withSchema
+                        pageUrl={canonicalUrl(ctx, `/articles/${slug}`)}
+                      />
+                    </div>
+                  )}
 
                 {/* Editorial callout after 4th section */}
                 {i === 3 && article.sections.length > 4 && (

@@ -9,6 +9,7 @@ import { HairLossEditorialContent } from "@/components/editorial-content-hair-lo
 import { TrtEditorialContent } from "@/components/editorial-content-trt";
 import { HrtEditorialContent } from "@/components/editorial-content-hrt";
 import { BattlePageView, battleMetadata } from "@/components/pages/battle-page";
+import { ProductCarousel } from "@/components/product-carousel";
 import { notFound } from "next/navigation";
 
 export const revalidate = 60;
@@ -158,7 +159,15 @@ export default async function BattlePage({
         )}
         <ComparisonLayout config={vConfig} linkPrefix={`/${battleSlug}`} byline={byline}>
           {isWL ? (
-            <EditorialContent />
+            <EditorialContent
+              midSlot={
+                <ProductCarousel
+                  providers={vConfig.providers}
+                  title="Shop GLP-1 plans by product"
+                  subtitle="Every provider's published plans in one strip - cheapest first, conditions under each price."
+                />
+              }
+            />
           ) : battleSlug === "hair-loss" ? (
             <HairLossEditorialContent />
           ) : battleSlug === "trt" ? (
