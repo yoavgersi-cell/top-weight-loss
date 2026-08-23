@@ -1126,31 +1126,31 @@ const defaultReviews: ReviewData[] = [
     slug: "medvi",
     providerId: "medvi",
     updatedAt: "2026-08-22",
-    shortSummary: "All-inclusive medical weight-loss program - GLP-1 injections $179/month or daily dissolving tablets $249/month - with provider visits, free dietician and care coaching, and HSA/FSA approval. Rated 4.4 across 14,372 Trustpilot reviews.",
-    reviewIntro: "Medvi carries the biggest verified track record in this ranking: 4.4 across 14,372 Trustpilot reviews, a volume most telehealth weight-loss brands can't approach. The program is all-inclusive at one flat price - $179/month for weekly GLP-1 (semaglutide) injections or $249/month for a daily oral dissolving tablet, one of the few needle-free GLP-1 formats among our providers - with no membership fee, no hidden charges, free shipping, and free dietician and care coaching folded in. Care is genuinely hands-on: recent Trustpilot reviews repeatedly describe on-time video visits ('Video visit was made very easy and reminders were sent right before my visit'), providers who 'took her time, answered any questions,' and follow-ups handled through secure messaging. Plans are HSA/FSA approved. The trade-off is the sticker price - $179 is roughly three times wellmedr's $59 entry rate - so Medvi's case rests on what's bundled into that number and on the five-figure review base behind it.",
+    shortSummary: "All-inclusive medical weight-loss program - GLP-1 (semaglutide) now from $99/month (reg. $199) and GLP-1/GIP (tirzepatide) from $166/month (reg. $299) - with provider visits, free dietician and care coaching, and HSA/FSA approval. Rated 4.4 across 14,372 Trustpilot reviews.",
+    reviewIntro: "Medvi carries the biggest verified track record in this ranking: 4.4 across 14,372 Trustpilot reviews, a volume most telehealth weight-loss brands can't approach. The program is all-inclusive at one flat price, and its current promotion cuts that price roughly in half: weekly GLP-1 (semaglutide) injections now start at $99/month (regularly $199) and GLP-1/GIP (tirzepatide) at $166/month (regularly $299), with daily oral dissolving tablets at $249/month for the needle-averse - all with no membership fee, no hidden charges, free shipping, and free dietician and care coaching folded in. Care is genuinely hands-on: recent Trustpilot reviews repeatedly describe on-time video visits ('Video visit was made very easy and reminders were sent right before my visit'), providers who 'took her time, answered any questions,' and follow-ups handled through secure messaging. Plans are HSA/FSA approved. At the $99 promotional rate, Medvi's all-inclusive bundle now competes directly with the value tier - the honest caveat is simply that promos can end; the regular rates are $199/$299.",
     keyFeatures: [
-      "GLP-1 (semaglutide) injections at $179/month, all-inclusive",
+      "GLP-1 (semaglutide) injections now from $99/month (reg. $199)",
+      "GLP-1/GIP (tirzepatide) injections from $166/month (reg. $299)",
       "Daily oral dissolving GLP-1 tablets at $249/month - no needles",
-      "Video visits with licensed providers",
-      "Free dietician and care coaching included",
+      "Video visits, free dietician and care coaching included",
       "HSA/FSA approved; no membership or hidden fees"
     ],
-    pricingSummary: "Medvi charges one flat, all-inclusive price: $179/month for weekly GLP-1 (semaglutide) injections or $249/month for daily oral dissolving GLP-1 tablets. That price covers the provider visits, the medication, free shipping, and free dietician and care coaching - there's no membership fee and no hidden charges, and plans are HSA/FSA approved. It isn't the cheapest way to get a GLP-1 (wellmedr starts at $59 and DirectMeds at $147), but almost nothing else is bundled at those prices; with Medvi the coaching, dietician access and provider visits are all in the number.",
+    pricingSummary: "Medvi charges one flat, all-inclusive price, currently promotional: weekly GLP-1 (semaglutide) injections from $99/month (regularly $199), GLP-1/GIP (tirzepatide) from $166/month (regularly $299), and daily oral dissolving GLP-1 tablets at $249/month. The price covers the provider visits, the medication, free shipping, and free dietician and care coaching - there's no membership fee and no hidden charges, and plans are HSA/FSA approved. At the promo rate the math gets aggressive: only wellmedr ($59) and embody ($69) list semaglutide cheaper, and neither bundles dietician access and coaching into the number.",
     treatmentOptions: [
       "GLP-1 (semaglutide) weekly injections",
+      "GLP-1/GIP (tirzepatide) weekly injections",
       "Oral dissolving GLP-1 tablets - daily, needle-free",
-      "Video visits with licensed providers",
-      "Free dietician and care coaching"
+      "Video visits, free dietician and care coaching"
     ],
     pros: [
       "4.4 across 14,372 Trustpilot reviews - the largest verified record in our ranking",
+      "Current promo roughly halves the price: $99 semaglutide / $166 tirzepatide",
       "Genuinely all-inclusive pricing - visits, medication, shipping, coaching",
       "Needle-free option: daily oral dissolving tablets",
-      "Free dietician and care coaching included",
       "HSA/FSA approved; no membership or hidden fees"
     ],
     cons: [
-      "Higher sticker price - $179/month vs $59-$147 at wellmedr, DirectMeds and embody",
+      "The $99/$166 rates are promotional - regular prices are $199/$299",
       "The needle-free tablet option costs more ($249/month)",
       "No brand-name Ozempic/Wegovy/Zepbound shelf",
       "It's an ongoing monthly expense - users themselves flag cost as the main consideration"
@@ -1160,7 +1160,7 @@ const defaultReviews: ReviewData[] = [
       "Anyone who wants dietician support and coaching bundled, not sold separately",
       "Needle-averse patients who want a daily dissolving tablet instead of injections"
     ],
-    finalVerdict: "Medvi's pitch holds together: you pay more per month - $179 for injections, $249 for the needle-free tablets - and in exchange you get the most complete bundle in our ranking (provider visits, dietician access, care coaching, shipping, all in one HSA/FSA-eligible price) backed by 4.4 across 14,372 Trustpilot reviews, the largest verified record of any provider we cover. If your priority is the lowest possible monthly cost, wellmedr at $59 or DirectMeds at $147 wins the math. But if you want hands-on, visit-based care with real coaching included and the reassurance of a five-figure review base - or you simply won't do injections - Medvi is the strongest offer of its kind here.",
+    finalVerdict: "Medvi was already the most complete bundle in our ranking - provider visits, dietician access, care coaching and shipping in one HSA/FSA-eligible price, backed by 4.4 across 14,372 Trustpilot reviews, the largest verified record of any provider we cover. The current promotion changes the math: at $99/month semaglutide (regularly $199) and $166 tirzepatide (regularly $299), the all-inclusive program now costs within $30-40 of the bare-bones value tier (wellmedr $59, embody $69) while bundling care those providers don't. As long as the promo holds, Medvi is arguably the best value-per-dollar in the ranking; at the $199/$299 regular rates, it goes back to being the premium-care pick. Needle-averse? The $249 dissolving tablets remain one of the few needle-free GLP-1 formats we track.",
     trustBadges: [
       "HSA/FSA approved",
       "No membership or hidden fees",
@@ -1171,13 +1171,25 @@ const defaultReviews: ReviewData[] = [
       {
         name: "GLP-1 Injections",
         medication: "Prescription GLP-1 (semaglutide)",
-        price: "$179",
+        cadence: "Weekly",
+        price: "$99",
+        regularPrice: "$199",
         unit: "/month",
         highlights: ["One simple injection per week", "No membership or hidden fees - everything included"],
       },
       {
+        name: "GLP-1 + GIP Injections",
+        medication: "Prescription GLP-1/GIP (tirzepatide)",
+        cadence: "Weekly",
+        price: "$166",
+        regularPrice: "$299",
+        unit: "/month",
+        highlights: ["One simple injection per week", "All-inclusive - visits, coaching & shipping"],
+      },
+      {
         name: "GLP-1 Tablets",
         medication: "Oral dissolving GLP-1",
+        cadence: "Daily",
         price: "$249",
         unit: "/month",
         highlights: ["One dissolvable tablet per day", "No injections required"],
@@ -3213,11 +3225,11 @@ const calibrateMedviBattle: BattleData = {
   title: "Calibrate vs Medvi: Which Weight Loss Program Fits You in 2026?",
   matchupLabel: "Calibrate vs Medvi",
   subtitle: "A year-long insurance-based reset vs all-inclusive monthly GLP-1 care with high-touch support - compared honestly.",
-  description: "Calibrate vs Medvi: insurance-covered brand GLP-1s in a coached year-long program vs $179/mo all-inclusive compounded treatment with personal support.",
-  intro: "Calibrate and Medvi both take support seriously - they just fund the medication differently. Calibrate pairs a year of 1:1 coaching with brand-name GLP-1s billed through your insurance. Medvi bundles everything into one self-pay price: $179/month for compounded semaglutide or $249 for tirzepatide, with the personal provider attention its customers consistently praise on Trustpilot. Here's the honest comparison.",
+  description: "Calibrate vs Medvi: insurance-covered brand GLP-1s in a coached year-long program vs $99/mo promo all-inclusive compounded treatment with personal support.",
+  intro: "Calibrate and Medvi both take support seriously - they just fund the medication differently. Calibrate pairs a year of 1:1 coaching with brand-name GLP-1s billed through your insurance. Medvi bundles everything into one self-pay price - currently $99/month promotional (regularly $199) for compounded semaglutide or $166 (regularly $299) for tirzepatide - with the personal provider attention its customers consistently praise on Trustpilot. Here's the honest comparison.",
   verdict: "Medvi takes it for most people: one predictable all-inclusive price, no insurance dependency, and genuinely personal provider support. Calibrate is the better pick for the person whose insurance reliably covers GLP-1s and who wants brand-name medication inside a structured year - confirm program pricing and your coverage before committing.",
   verdictWinnerPoints: [
-    "All-inclusive $179/mo semaglutide, $249/mo tirzepatide",
+    "All-inclusive semaglutide from $99/mo promo (reg. $199)",
     "Personal, highly-rated provider support",
     "No insurance required - start on your timeline",
   ],
@@ -3233,7 +3245,7 @@ const calibrateMedviBattle: BattleData = {
       winner: "provider1",
       explanation: "Medvi's all-inclusive monthly price is the same every month, insurance or not. Calibrate's total depends on the program fee plus whether and how your insurance covers the medication - a fine bet with great coverage, a frustrating one without it.",
       supportingPoints: [
-        "$179/$249 all-inclusive, every month (Medvi)",
+        "$99/$166 promo all-inclusive, every month (Medvi)",
         "No coverage uncertainty (Medvi)",
         "Insurance-dependent medication costs (Calibrate)",
       ],
@@ -3280,7 +3292,7 @@ const calibrateMedviBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "$179/mo semaglutide · $249 tirzepatide, all-inclusive", provider2Value: "Program fee + insurance-covered medication", highlight: "provider1" },
+    { feature: "Starting Price", provider1Value: "$99/mo promo semaglutide · $166 tirzepatide, all-inclusive", provider2Value: "Program fee + insurance-covered medication", highlight: "provider1" },
     { feature: "Insurance", provider1Value: "Not required", provider2Value: "Central to the model", highlight: "both" },
     { feature: "Medication", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "Brand-name GLP-1s", highlight: "both" },
     { feature: "Support Model", provider1Value: "Personal provider support", provider2Value: "1:1 video coaching + curriculum", highlight: "both" },
@@ -3379,11 +3391,11 @@ const sequenceMedviBattle: BattleData = {
   title: "Sequence (WeightWatchers) vs Medvi: Which Is Better in 2026?",
   matchupLabel: "Sequence vs Medvi",
   subtitle: "WeightWatchers' insurance-navigated clinic vs Medvi's all-inclusive, high-touch GLP-1 care - compared honestly.",
-  description: "Sequence (WeightWatchers Clinic) vs Medvi: membership with insurance-billed GLP-1s vs $179/mo all-inclusive compounded care with personal support.",
-  intro: "Sequence (WeightWatchers Clinic) brings a household name to GLP-1 telehealth: clinicians who prescribe, a team that navigates your insurance, and the WW program woven in. Medvi answers with all-inclusive simplicity - $179/month compounded semaglutide or $249 tirzepatide covering medication, consultations and the personal provider support its customers praise. Which one fits depends on your insurance and how you like to be supported.",
+  description: "Sequence (WeightWatchers Clinic) vs Medvi: membership with insurance-billed GLP-1s vs $99/mo promo all-inclusive compounded care with personal support.",
+  intro: "Sequence (WeightWatchers Clinic) brings a household name to GLP-1 telehealth: clinicians who prescribe, a team that navigates your insurance, and the WW program woven in. Medvi answers with all-inclusive simplicity - compounded semaglutide currently $99/month promotional (regularly $199), tirzepatide $166 (regularly $299) - covering medication, consultations and the personal provider support its customers praise. Which one fits depends on your insurance and how you like to be supported.",
   verdict: "Medvi takes it on predictability and personal care: one all-inclusive self-pay price and a provider relationship customers consistently rate highly. Sequence is the right call for committed WW members and people with solid GLP-1 insurance coverage - its navigation team and behavioral program are real assets there; check current membership pricing on the WeightWatchers Clinic site.",
   verdictWinnerPoints: [
-    "All-inclusive $179/mo semaglutide, $249/mo tirzepatide",
+    "All-inclusive semaglutide from $99/mo promo (reg. $199)",
     "Personal, Trustpilot-praised provider support",
     "Self-pay - no coverage uncertainty",
   ],
@@ -3399,7 +3411,7 @@ const sequenceMedviBattle: BattleData = {
       winner: "provider1",
       explanation: "Medvi's price is the whole bill: medication, consultations and support in one all-inclusive number. Sequence's membership plus insurance-billed medication means your monthly total rides on your plan's GLP-1 coverage.",
       supportingPoints: [
-        "$179/$249 all-inclusive (Medvi)",
+        "$99/$166 promo all-inclusive (Medvi)",
         "No surprise charges (Medvi)",
         "Coverage-dependent totals (Sequence)",
       ],
@@ -3446,7 +3458,7 @@ const sequenceMedviBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "$179/mo semaglutide · $249 tirzepatide, all-inclusive", provider2Value: "Membership + medication via insurance", highlight: "provider1" },
+    { feature: "Starting Price", provider1Value: "$99/mo promo semaglutide · $166 tirzepatide, all-inclusive", provider2Value: "Membership + medication via insurance", highlight: "provider1" },
     { feature: "Insurance", provider1Value: "Not required", provider2Value: "Navigation and prior-auth support", highlight: "both" },
     { feature: "Medication", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "Brand-name GLP-1s (via insurance)", highlight: "both" },
     { feature: "Support", provider1Value: "Personal provider care", provider2Value: "WW program + clinical team", highlight: "both" },
@@ -3461,19 +3473,19 @@ const healthrxMedviBattle: BattleData = {
   slug: "healthrx-vs-medvi",
   provider1Id: "medvi",
   provider2Id: "healthrx",
-  title: "HealthRx vs Medvi (2026): $99 Prepaid or $179 Monthly?",
+  title: "HealthRx vs Medvi (2026): Two $99 Semaglutide Deals Compared",
   matchupLabel: "HealthRx vs Medvi",
   subtitle: "A 12-month prepaid program with overnight shipping vs month-to-month all-inclusive care with a 14,000-review track record.",
   description:
-    "HealthRx ($99/mo semaglutide, 12-month prepaid, overnight shipping) vs Medvi ($179/mo all-inclusive, 4.4 on Trustpilot across 14,372 reviews). Real numbers, honest verdict.",
+    "HealthRx ($99/mo semaglutide, 12-month prepaid, overnight shipping) vs Medvi ($99/mo promo all-inclusive, 4.4 on Trustpilot across 14,372 reviews). Real numbers, honest verdict.",
   intro:
-    "This is a genuinely close matchup, because the two providers price the same medication in opposite ways. HealthRx gets semaglutide down to $99/month by asking for a 12-month commitment upfront - $1,188 due at checkout - and backs it with overnight cold-chain shipping and LegitScript certification. Medvi charges $179/month with no prepay, bundles everything in, and brings the strongest customer record in this matchup: 4.4 on Trustpilot across 14,372 reviews, with the personal provider support those reviews keep praising. The right answer depends on how sure you are about the next twelve months.",
+    "This is a genuinely close matchup, because the two providers price the same medication in opposite ways. HealthRx gets semaglutide down to $99/month by asking for a 12-month commitment upfront - $1,188 due at checkout - and backs it with overnight cold-chain shipping and LegitScript certification. Medvi now matches that $99/month as a promotional rate (regularly $199) with no prepay at all, bundles everything in, and brings the strongest customer record in this matchup: 4.4 on Trustpilot across 14,372 reviews, with the personal provider support those reviews keep praising. The right answer depends on how sure you are about the next twelve months.",
   verdict:
-    "Medvi is our pick for most people: month-to-month flexibility, everything included, and a 14,372-review Trustpilot record at 4.4 - you're not betting a year upfront on a newer brand. HealthRx is the sharper deal for the committed: if you already know you'll treat for a year, $99/month with overnight delivery beats Medvi's price by $80/month - just go in understanding the $1,188 charge at checkout. Confirm current terms on both sites.",
+    "Medvi is our pick for most people: month-to-month flexibility, everything included, and a 14,372-review Trustpilot record at 4.4 - you're not betting a year upfront on a newer brand. HealthRx is the sharper deal only if overnight shipping or its LegitScript pedigree matters most to you: with Medvi's promo matching the $99/month without any prepay, the $1,188-at-checkout structure is now a harder sell - just remember Medvi's regular rate is $199 if the promo ends. Confirm current terms on both sites.",
   verdictWinnerPoints: [
     "Month-to-month - no $1,188 upfront commitment",
     "4.4 on Trustpilot across 14,372 reviews",
-    "All-inclusive $179/mo with dietician & care coaching",
+    "All-inclusive $99/mo promo (reg. $199) with dietician & care coaching",
   ],
   verdictLoserPoints: [
     "$99/mo semaglutide - lowest in this matchup (prepaid)",
@@ -3497,10 +3509,10 @@ const healthrxMedviBattle: BattleData = {
       name: "Price (If You Commit)",
       winner: "provider2",
       explanation:
-        "For someone certain about a year of treatment, HealthRx's math wins: $99/month vs Medvi's $179 is $960 saved over twelve months on semaglutide. Its tirzepatide plans from $179 also undercut Medvi's $249. The discount is real - it's the commitment that buys it.",
+        "On current pricing this is now nearly a tie on semaglutide: both land at $99/month - HealthRx via a 12-month prepay, Medvi via a promotion (regularly $199). On tirzepatide, Medvi's $166 promo undercuts HealthRx's from-$179. HealthRx's edge is that its $99 is contractual for the year; Medvi's promo could end.",
       supportingPoints: [
-        "$99/mo semaglutide prepaid vs $179 monthly (HealthRx)",
-        "Tirzepatide from $179 vs $249 (HealthRx)",
+        "$99 locked for 12 months vs $99 promo rate (HealthRx)",
+        "Tirzepatide: Medvi $166 promo vs from $179 (Medvi)",
         "~$960/year cheaper on semaglutide if you stay the full year",
       ],
     },
@@ -3538,7 +3550,7 @@ const healthrxMedviBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "$179/mo semaglutide · $249 tirzepatide", provider2Value: "$99/mo semaglutide (12-mo prepaid) · tirzepatide from $179", highlight: "provider2" },
+    { feature: "Starting Price", provider1Value: "$99/mo promo semaglutide (reg. $199) · $166 tirzepatide", provider2Value: "$99/mo semaglutide (12-mo prepaid) · tirzepatide from $179", highlight: "both" },
     { feature: "Billing", provider1Value: "Monthly, all-inclusive", provider2Value: "$1,188 prepaid at checkout", highlight: "provider1" },
     { feature: "Trustpilot", provider1Value: "4.4 across 14,372 reviews", provider2Value: "Newer brand", highlight: "provider1" },
     { feature: "Shipping", provider1Value: "Free, standard", provider2Value: "Free, overnight cold-chain", highlight: "provider2" },
