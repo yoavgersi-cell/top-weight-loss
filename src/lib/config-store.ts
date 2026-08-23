@@ -1199,40 +1199,72 @@ const defaultReviews: ReviewData[] = [
   {
     slug: "sprout",
     providerId: "sprout",
-    shortSummary: "Metabolic health-focused weight loss platform with customized treatment recommendations and lifestyle support.",
-    reviewIntro: "Sprout takes a metabolic health-first approach to weight loss, focusing on understanding each patient's unique metabolic profile before recommending treatment. Their platform combines provider-guided medication options with lifestyle improvement strategies for a holistic approach to weight management.",
+    updatedAt: "2026-08-23",
+    shortSummary: "Personalized GLP-1 telehealth program - compounded semaglutide from $149/month and tirzepatide from $199/month, with brand-name Wegovy also on the shelf - and prescriptions shipped within 2 days.",
+    reviewIntro: "Sprout is a telehealth GLP-1 program with a straightforward pitch: personalized treatment plans built around your health goals, prescriptions shipped within 2 days of approval, and a menu that covers both lanes - compounded semaglutide starting at $149/month and compounded tirzepatide at $199/month, with brand-name Wegovy available from $1,799/month for anyone set on the branded pen. There's a standing offer of $200 off the first month. Sprout doesn't publish an aggregate Trustpilot score, but the individual reviews we surface are real and consistently credit its support team - 'they were quick to respond and the process for approval worked seamlessly,' writes one customer, with several others naming specific support reps who fixed problems fast. Its pricing sits mid-market: above the $59-$99 value tier, below trimrx and SHED - the fair way to read Sprout is speed and personalization at a middle price.",
     keyFeatures: [
-      "Metabolic health assessment",
-      "Customized treatment recommendations",
-      "Provider-guided medication options",
-      "Lifestyle improvement strategies",
-      "Long-term wellness focus"
+      "Compounded semaglutide from $149/mo",
+      "Compounded tirzepatide from $199/mo",
+      "Brand-name Wegovy available (from $1,799/mo)",
+      "Prescriptions shipped within 2 days",
+      "$200 off your first month (confirm current offer on site)"
     ],
-    pricingSummary: "Sprout offers monthly plans that include metabolic assessment, provider consultations, and medication. Pricing varies based on the treatment plan selected.",
+    pricingSummary: "Sprout prices compounded semaglutide from $149/month and compounded tirzepatide from $199/month, with brand-name Wegovy from $1,799/month for those who want the branded pen. A standing offer takes $200 off the first month. That positions Sprout mid-market: the value tier (wellmedr $59, embody $69, Medvi's $99 promo) is cheaper for compounded medication, but few mid-tier rivals also stock a brand-name option. Confirm current plan terms and the first-month offer on Sprout's site before checkout.",
     treatmentOptions: [
-      "GLP-1 medications",
-      "Metabolic health optimization",
-      "Lifestyle modification programs",
-      "Nutritional guidance and support"
+      "Compounded semaglutide (GLP-1) injection",
+      "Compounded tirzepatide (GLP-1 + GIP) injection",
+      "Brand-name Wegovy (semaglutide) pen",
+      "Personalized, provider-guided treatment plans"
     ],
     pros: [
-      "Unique metabolic health focus",
-      "Customized treatment approach",
-      "Combines medication with lifestyle changes",
-      "Provider-guided throughout",
-      "Focus on overall wellness"
+      "Fast fulfillment - prescriptions shipped within 2 days",
+      "Both compounded lanes plus a brand-name Wegovy option",
+      "$200 off the first month",
+      "Real customer reviews consistently praise responsive support",
+      "Personalized plans built around your goals"
     ],
     cons: [
-      "Smaller platform with limited reviews",
-      "May not be available in all states",
-      "Higher starting price for comprehensive plans"
+      "No published Trustpilot aggregate score - individual reviews only",
+      "Mid-market pricing: $149 semaglutide vs $59-$99 at the value tier",
+      "Plan terms and commitment details are thinner on the public site than rivals' - confirm at checkout"
     ],
     bestFor: [
-      "People interested in understanding their metabolic health",
-      "Those who want a holistic approach to weight loss",
-      "Anyone seeking long-term wellness improvement beyond just weight"
+      "People who want their prescription shipped fast (within 2 days)",
+      "Anyone who wants a brand-name Wegovy option alongside compounded plans",
+      "Those who value personalized plans over the lowest sticker price"
     ],
-    finalVerdict: "Sprout stands out with its metabolic health-first approach, making it a compelling option for people who want to understand the science behind their weight loss journey. If you value a holistic approach that goes beyond just medication, Sprout is worth considering."
+    finalVerdict: "Sprout earns its place as a mid-market pick: $149/month semaglutide and $199/month tirzepatide with prescriptions shipped within 2 days, a $200 first-month discount, and - unusually for this tier - a brand-name Wegovy shelf. The honest caveats: there's no published Trustpilot aggregate to verify the experience at scale (the individual reviews we can see skew positive and specific), and the value tier undercuts it by $50-$90/month on the same molecules. Pick Sprout for the speed, the personalization and the brand-name option; pick wellmedr or embody if the lowest compounded price is all that matters.",
+    trustBadges: [
+      "$200 off your first month",
+      "Ships within 2 days",
+      "Personalized treatment plans",
+      "Brand-name Wegovy available",
+    ],
+    pricingPlans: [
+      {
+        name: "GLP-1",
+        medication: "Compounded Semaglutide",
+        cadence: "Weekly",
+        price: "$149",
+        unit: "/month",
+        highlights: ["One simple injection per week", "Starting price - $200 off month one"],
+      },
+      {
+        name: "GLP-1 + GIP",
+        medication: "Compounded Tirzepatide",
+        cadence: "Weekly",
+        price: "$199",
+        unit: "/month",
+        highlights: ["One simple injection per week", "Starting price - $200 off month one"],
+      },
+      {
+        name: "Wegovy",
+        medication: "Brand-name semaglutide pen",
+        price: "$1,799",
+        unit: "/month",
+        highlights: ["FDA-approved brand-name pen", "Starting price"],
+      },
+    ],
   },
   {
     slug: "wellorithm",
@@ -4198,9 +4230,17 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
           const cmsOnly = savedList.filter((r) => !seedKeys.has(key(r)));
           return [...seedList, ...cmsOnly];
         };
+        const seedProviderById = new Map(initial.providers.map((p) => [p.id, p]));
         const savedProviders = (saved.providers || []).map((p) => ({
           ...p,
           smallLogo: p.smallLogo || `/logos/${p.id}-icon.svg`,
+          // Affiliate URL: a CMS-set real link wins, but a placeholder ("#" or
+          // empty) saved into the blob before a partnership existed must not
+          // shadow a real link later added in code (e.g. Sprout).
+          affiliateUrl:
+            p.affiliateUrl && p.affiliateUrl !== "#"
+              ? p.affiliateUrl
+              : seedProviderById.get(p.id)?.affiliateUrl ?? p.affiliateUrl,
           // Rating/count: CMS-edited values win, seed is a backfill. Use ||
           // so an empty string saved by the admin still falls back to seed.
           trustpilotRating: p.trustpilotRating || seedFor(p)?.rating,
@@ -4239,6 +4279,7 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
               "medvi",
               "directmeds",
               "healthrx",
+              "sprout",
             ]);
             const mergedSaved = savedReviews.map((r) => {
               const seed = seedBySlug.get(r.slug);
