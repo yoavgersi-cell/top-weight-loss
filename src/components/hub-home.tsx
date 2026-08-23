@@ -254,7 +254,7 @@ export async function HubHome() {
   const shelfProviders = order
     .map((id) => wl.providers.find((p) => p.id === id))
     .filter(Boolean)
-    .slice(0, 8) as Provider[];
+    .slice(0, 6) as Provider[];
 
   const articles = (wl.articles ?? []).slice(0, 6);
 
