@@ -137,6 +137,10 @@ const CATEGORY_LINKS: Record<string, { label: string; href: string }[]> = {
     { label: "Reviews", href: "/trt/reviews" },
     { label: "Guides", href: "/trt/articles" },
   ],
+  hrt: [
+    { label: "Compare providers", href: "/hrt" },
+    { label: "Reviews", href: "/hrt/reviews" },
+  ],
 };
 
 function updatedLabel(iso?: string): string {

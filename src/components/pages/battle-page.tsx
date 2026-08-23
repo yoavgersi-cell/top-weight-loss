@@ -794,8 +794,10 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 {p1.name} vs {p2.name}: a closer look at each
               </h2>
               <p className="mt-3 text-[15px] leading-[1.8] text-gray-600">
-                Both are solid GLP-1 weight loss providers, and honestly you can&rsquo;t go
-                too wrong either way. So instead of crowning a &ldquo;winner,&rdquo; here&rsquo;s the
+                {ctx.vertical === "weight-loss"
+                  ? "Both are solid GLP-1 weight loss providers, and honestly you can’t go too wrong either way."
+                  : "Both are credible providers in this category, and the right pick comes down to fit."}{" "}
+                So instead of crowning a &ldquo;winner,&rdquo; here&rsquo;s the
                 real rundown on each - what you get, what it actually costs, and what
                 real customers are saying - so you can pick the one that fits <em>you</em>.
               </p>
