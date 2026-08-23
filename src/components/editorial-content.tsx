@@ -41,7 +41,7 @@ function ComparisonTable({ colA, colB, rows }: { colA: string; colB: string; row
   );
 }
 
-export function EditorialContent() {
+export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
   return (
     <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-700">
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">
@@ -179,6 +179,10 @@ export function EditorialContent() {
           weight loss pills
         </Link>.
       </p>
+
+      {/* Mid-content slot - the product carousel lands here, mid-text below
+          the ranking, without this static editorial knowing about catalogs. */}
+      {midSlot && <div className="mb-8">{midSlot}</div>}
 
       <hr className="mb-8 border-gray-200" />
 
