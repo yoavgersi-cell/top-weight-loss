@@ -30,6 +30,11 @@ const SHARED_ONE_OFF_PAGES = new Set([
 // "Redirect error". The key is the alias slug; the value is the canonical slug.
 const SLUG_ALIASES: Record<string, string> = {
   "embody-vs-altrx": "altrx-vs-embody",
+  // Sprout battles - reverse orderings collapse to the canonical slug.
+  "sprout-vs-embody": "embody-vs-sprout",
+  "sprout-vs-altrx": "altrx-vs-sprout",
+  "trimrx-vs-sprout": "sprout-vs-trimrx",
+  "wellmedr-vs-sprout": "sprout-vs-wellmedr",
 };
 
 // One deployment serves two hosts:

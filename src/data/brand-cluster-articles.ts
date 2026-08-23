@@ -702,4 +702,91 @@ export const brandClusterArticles: Article[] = [
       },
     ],
   },
+  // ═════ Sprout ═════
+  {
+    slug: "is-sprout-legit",
+    title: "Is Sprout Legit? The Honest Audit of a Newer GLP-1 Provider (2026)",
+    description:
+      "Sprout sells compounded semaglutide from $149/month with 2-day fulfillment and a brand-name Wegovy option. We audited the process, the reviews and the fine print.",
+    category: "Guide",
+    readTime: "7 min read",
+    publishedAt: "2026-08-23",
+    updatedAt: "2026-08-23",
+    heroColor: "#EAF6EE",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "The audit has to work differently for a newer brand",
+        body: `<p>For a provider like <a href="/weight-loss/reviews/medvi">Medvi</a>, the legitimacy question is settled by fourteen thousand public reviews. Sprout doesn't have that dataset - it publishes no aggregate Trustpilot score - so the honest audit runs on three other tests: does the clinical process have a real gate, do the published prices survive contact with the checkout page, and do the reviews that DO exist describe a functioning operation or a mailbox company?</p><p>Sprout passes the first test the way every legitimate telehealth provider does: an online medical intake reviewed by a licensed provider who decides whether GLP-1 treatment is appropriate. Prescription medication only - there's no "skip the doctor" path, which is exactly what you want to see. If prescribed, the medication ships within 2 days of approval.</p>`,
+      },
+      {
+        heading: "What the reviews that exist actually say",
+        body: `<p>Sprout's visible customer reviews are individually verifiable and strikingly consistent about one thing: the support team responds, fast, and by name. "They were quick to respond and the process for approval worked seamlessly. Customer service was awesome, shout out to Frank!" writes one customer. Another: "Super easy to join, reasonably priced, effective, and great customer service. Frank Burton with customer support was really helpful and quick to respond." A third: "When I have had questions or problems their support staff is very quick to respond."</p><p>Read skeptically, that's a small sample - and we'd say so if the pattern were mixed. But the same named rep appearing across independent reviews is the signature of an actual, reachable support operation. What Sprout lacks is scale of evidence, not quality of it: there is no published aggregate score, so you can't verify the experience across thousands of customers the way you can at <a href="/weight-loss/reviews/wellmedr">wellmedr</a> (4.7 across 1,205) or Medvi (4.4 across 14,372).</p>`,
+      },
+      {
+        heading: "The pricing survives the checkout test",
+        body: `<p>Sprout's published structure is simple and holds: compounded semaglutide from <strong>$149/month</strong>, compounded tirzepatide from <strong>$199/month</strong>, and - genuinely unusual for a mid-tier provider - brand-name <strong>Wegovy from $1,799/month</strong>. A standing offer takes <strong>$200 off the first month</strong>. No teaser rate that balloons after month one (that's <a href="/weight-loss/sprout-vs-trimrx">trimrx's structure</a>, where $179 becomes $299), though Sprout publishes fewer plan-term details than rivals - commitment and cancellation specifics are worth confirming at checkout.</p>`,
+      },
+      {
+        heading: "So - is Sprout legit?",
+        body: `<p>Yes, with the caveats stated plainly: licensed-provider review before any prescription, published prices that hold, 2-day fulfillment, and reviews that describe reachable, named humans. What it can't yet offer is large-scale public proof - no aggregate score, no million-patient claim - so risk-averse buyers may prefer a provider with a bigger published record. If you go with Sprout, you're trading evidence-at-scale for speed, personalization and the Wegovy option.</p><p class="cta-row"><a href="/weight-loss/reviews/sprout">→ Read the full Sprout review: plans, pricing and real customer feedback</a></p><p class="cta-row"><a href="/weight-loss/embody-vs-sprout">→ How Sprout stacks up against embody's $69 flat price</a></p><p>This article is general information, not medical advice.</p>`,
+      },
+    ],
+  },
+  {
+    slug: "sprout-cost",
+    title: "Sprout Cost 2026: The $149/Month Math, With the $200 Discount Applied",
+    description:
+      "Sprout charges $149/month for compounded semaglutide, $199 for tirzepatide and $1,799 for brand-name Wegovy, with $200 off month one. The full-year math, honestly.",
+    category: "Guide",
+    readTime: "7 min read",
+    publishedAt: "2026-08-23",
+    updatedAt: "2026-08-23",
+    heroColor: "#EAF6EE",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "Three prices, one discount",
+        body: `<div class="qa"><strong>The short answer</strong>Sprout costs <strong>$149/month for compounded semaglutide</strong>, <strong>$199/month for compounded tirzepatide</strong>, or <strong>from $1,799/month for brand-name Wegovy</strong> - with a standing <strong>$200 discount on your first month</strong>. Prescriptions ship within 2 days of approval.</div><p>The discount does real work on the front end: your first month of semaglutide effectively runs light, and treatment starts fast. The number to budget against, though, is the ongoing rate - so here's the year, priced honestly.</p>`,
+      },
+      {
+        heading: "The 12-month math, discount included",
+        body: `<p>GLP-1 treatment is measured in months, so annual cost is the honest unit:</p><table><tr><th>Plan</th><th>Monthly</th><th>First year (with $200 off month one)</th></tr><tr><td>Compounded semaglutide</td><td>$149</td><td>$1,588</td></tr><tr><td>Compounded tirzepatide</td><td>$199</td><td>$2,188</td></tr><tr><td>Brand-name Wegovy</td><td>from $1,799</td><td>$21,388+</td></tr></table><p>The Wegovy row isn't a typo - that's what a year of brand-name medication costs cash-pay, and it's why the compounded lane exists. If brand-name matters to you, note that <a href="/weight-loss/reviews/altrx">altRx</a> lists Wegovy at $1,579/month - $220/month less - alongside Ozempic and Zepbound.</p>`,
+      },
+      {
+        heading: "Where $149 lands in the market",
+        body: `<p>Against every provider's real listed semaglutide price: <a href="/weight-loss/reviews/wellmedr">wellmedr</a> $59 (12-month plan), <a href="/weight-loss/reviews/embody">embody</a> $69 flat, <a href="/weight-loss/reviews/altrx">altRx</a> $89, <a href="/weight-loss/reviews/medvi">Medvi</a> $99 promo, <a href="/weight-loss/reviews/healthrx">HealthRx</a> $99 prepaid, <a href="/weight-loss/reviews/directmeds">DirectMeds</a> $147 - then Sprout at $149, <a href="/weight-loss/reviews/trimrx">trimrx</a> at $179 first month ($299 after), and <a href="/weight-loss/reviews/shed">SHED</a> at $199 with coaching. Sprout prices seventh of nine on the same molecule.</p><p>So what does the premium over the value tier buy? Two concrete things and one soft one: fulfillment within 2 days (only embody, DirectMeds and HealthRx match or beat that), the option to move to brand-name Wegovy without switching providers, and the personalized-plan onboarding its reviews praise. If none of those move you, the <a href="/weight-loss/cheapest-glp1">cheapest-GLP-1 index</a> is the better shopping list.</p>`,
+      },
+      {
+        heading: "Worth it, or walk?",
+        body: `<p><strong>Worth it:</strong> switchers timing a transition who can't absorb a shipping gap, anyone who wants the Wegovy door left open, and people who value fast, named-human support - "shout out to Frank" appears in more than one review for a reason.</p><p><strong>Walk:</strong> if price per milligram is the whole decision. The same compounded semaglutide runs $59-$99 across the value tier, and over a year that difference funds a vacation.</p><p class="cta-row"><a href="/weight-loss/sprout-vs-wellmedr">→ The extreme version of that choice: Sprout vs wellmedr's $59, compared</a></p><p>This article is general information, not medical advice. Prices as listed at the time of writing - confirm current terms on Sprout's site.</p>`,
+      },
+    ],
+  },
+  {
+    slug: "sprout-alternatives",
+    title: "Best Sprout Alternatives 2026: Cheaper, Faster and Bigger-Shelf Options",
+    description:
+      "Six real alternatives to Sprout's $149/month program - from wellmedr at $59 to altRx's three-brand shelf - organized by the reason you'd actually switch.",
+    category: "Guide",
+    readTime: "7 min read",
+    publishedAt: "2026-08-23",
+    updatedAt: "2026-08-23",
+    heroColor: "#EAF6EE",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "Name the reason before you name the alternative",
+        body: `<p>People shop for Sprout alternatives for three distinct reasons, and each points somewhere different. If it's <strong>price</strong> - Sprout's $149 semaglutide sits $50-90/month above the value tier - the answer is the budget lane. If it's <strong>evidence</strong> - Sprout publishes no aggregate review score - the answer is a provider with a big public record. And if it's <strong>brand-name selection</strong> - Sprout stocks Wegovy only, at $1,799 - the answer is the one provider with a bigger, cheaper shelf.</p>`,
+      },
+      {
+        heading: "The map, by what you'd actually gain",
+        body: `<table><tr><th>Alternative</th><th>Semaglutide</th><th>What it beats Sprout on</th><th>What you give up</th></tr><tr><td><a href="/weight-loss/reviews/wellmedr">wellmedr</a></td><td>$59/mo</td><td>Price + 4.7/1,205 record + warranty</td><td>2-day speed; Wegovy option</td></tr><tr><td><a href="/weight-loss/reviews/embody">embody</a></td><td>$69/mo</td><td>Price, 1-2 day cold-chain, LegitScript</td><td>Brand-name option</td></tr><tr><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td>$89/mo</td><td>Price + 3-brand shelf incl. cheaper Wegovy</td><td>Speed (5-7 day shipping)</td></tr><tr><td><a href="/weight-loss/reviews/medvi">Medvi</a></td><td>$99/mo promo</td><td>Price + coaching + 14k-review record</td><td>Brand-name option</td></tr><tr><td><a href="/weight-loss/reviews/healthrx">HealthRx</a></td><td>$99/mo*</td><td>Overnight delivery, LegitScript</td><td>$1,188 prepaid commitment</td></tr><tr><td><a href="/weight-loss/reviews/directmeds">DirectMeds</a></td><td>$147/mo</td><td>Needle-free drops, flat tirzepatide $147</td><td>Brand-name option</td></tr></table><p>*12-month prepaid plan. Every provider here gates treatment behind a licensed-provider review - that never varies, and shouldn't.</p>`,
+      },
+      {
+        heading: "The two matchups that decide it for most people",
+        body: `<p><strong>Sprout vs the price floor:</strong> <a href="/weight-loss/reviews/wellmedr">wellmedr</a> sells the same compounded semaglutide for $59/month on a 12-month plan with a warranty and a 4.7 published record - $1,080/year less. Sprout's counters are real but narrow: 2-day fulfillment vs 3-5 business days, Wegovy on the shelf, no 12-month plan attached to its listed rate. The full head-to-head is in <a href="/weight-loss/sprout-vs-wellmedr">Sprout vs wellmedr</a>.</p><p><strong>Sprout vs the other brand shelf:</strong> <a href="/weight-loss/reviews/altrx">altRx</a> is the only other provider we rank with brand-name medication, and it does it bigger and cheaper - Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 - on top of $89 compounded semaglutide with BNPL. Sprout's remaining edge there is pure speed: 2 days vs 5-7. That comparison is in <a href="/weight-loss/altrx-vs-sprout">altRx vs Sprout</a>.</p><p class="cta-row"><a href="/weight-loss/find-your-match">→ Six questions, one personalized answer: take the matching quiz</a></p><p>This article is general information, not medical advice. Prices as listed at the time of writing.</p>`,
+      },
+    ],
+  },
 ];
