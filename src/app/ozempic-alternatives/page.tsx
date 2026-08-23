@@ -7,7 +7,7 @@ import { CONTENT_LAST_UPDATED } from "@/lib/config";
 
 export const revalidate = 60;
 
-const CANONICAL = "https://www.topweightloss.io/ozempic-alternatives";
+const CANONICAL = "https://www.treatmentshub.com/weight-loss/ozempic-alternatives";
 const TITLE = "Ozempic, Wegovy & Mounjaro Alternatives (2026): Cheaper GLP-1 Options";
 const DESCRIPTION =
   "The best alternatives to Ozempic, Wegovy, Mounjaro and Zepbound in 2026 - including the same active ingredients (semaglutide and tirzepatide) as affordable compounded options through licensed telehealth providers. Honest comparison and typical costs.";
@@ -80,15 +80,15 @@ export default function OzempicAlternativesPage() {
     description: DESCRIPTION,
     datePublished: "2026-08-11",
     dateModified: CONTENT_LAST_UPDATED,
-    author: { "@type": "Organization", name: "TopWeightLoss Team", url: "https://www.topweightloss.io" },
-    publisher: { "@type": "Organization", name: "topweightloss.io", url: "https://www.topweightloss.io" },
+    author: { "@type": "Organization", name: "TreatmentsHub Team", url: "https://www.treatmentshub.com" },
+    publisher: { "@type": "Organization", name: "treatmentshub.com", url: "https://www.treatmentshub.com" },
     mainEntityOfPage: CANONICAL,
   };
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.topweightloss.io" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.treatmentshub.com/weight-loss" },
       { "@type": "ListItem", position: 2, name: "Ozempic Alternatives", item: CANONICAL },
     ],
   };
@@ -162,7 +162,7 @@ export default function OzempicAlternativesPage() {
           </div>
           <p className="text-[14px] text-gray-500">
             Weighing a pill instead of a shot? See our{" "}
-            <Link href="/glp1-pills-vs-injections" className="font-semibold text-[#0C4B75] hover:underline">
+            <Link href="/weight-loss/glp1-pills-vs-injections" className="font-semibold text-[#0C4B75] hover:underline">
               GLP-1 pills vs injections
             </Link>{" "}
             comparison.
@@ -184,11 +184,23 @@ export default function OzempicAlternativesPage() {
             <strong className="text-[#191919]">around $99-$300 a month</strong> depending on the
             medication, dose, and provider, with the consultation and ongoing support included.
           </p>
-          <p>
+          <p className="mb-4">
             The trade-off: compounded products aren&rsquo;t FDA-approved brand drugs, and quality
             depends on the pharmacy behind them. That&rsquo;s why the provider you choose matters more
             than the brand name on the box - you want transparent pharmacies, a real medical intake, and
             genuine clinical follow-up.
+          </p>
+          <p>
+            For the exact numbers, see our{" "}
+            <Link href="/weight-loss/cheapest-glp1" className="font-semibold text-[#0C4B75] hover:underline">
+              cheapest GLP-1 price index
+            </Link>{" "}
+            - every provider&rsquo;s real published price, ranked. And if you&rsquo;re already on a
+            brand injection today, our{" "}
+            <Link href="/weight-loss/switch-from-ozempic" className="font-semibold text-[#0C4B75] hover:underline">
+              switching guide
+            </Link>{" "}
+            walks through moving to the compounded version without a gap in treatment.
           </p>
         </section>
 
@@ -203,17 +215,17 @@ export default function OzempicAlternativesPage() {
             tirzepatide on the things that actually matter - transparent pricing, the medications
             offered, shipping speed, and the quality of medical support. A few we rate highly for
             affordable, legitimate access are{" "}
-            <Link href="/reviews/embody" className="font-semibold text-[#0C4B75] hover:underline">embody</Link>,{" "}
-            <Link href="/reviews/altrx" className="font-semibold text-[#0C4B75] hover:underline">altRx</Link>, and{" "}
-            <Link href="/reviews/trimrx" className="font-semibold text-[#0C4B75] hover:underline">trimrx</Link>{" "}
+            <Link href="/weight-loss/reviews/embody" className="font-semibold text-[#0C4B75] hover:underline">embody</Link>,{" "}
+            <Link href="/weight-loss/reviews/altrx" className="font-semibold text-[#0C4B75] hover:underline">altRx</Link>, and{" "}
+            <Link href="/weight-loss/reviews/trimrx" className="font-semibold text-[#0C4B75] hover:underline">trimrx</Link>{" "}
             - but the right fit depends on your goals and budget.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Link href="/" className="inline-flex h-[46px] items-center justify-center gap-2 rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]">
+            <Link href="/weight-loss" className="inline-flex h-[46px] items-center justify-center gap-2 rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]">
               Compare Top Providers
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
-            <Link href="/weight-loss-pills" className="inline-flex h-[46px] items-center justify-center rounded-lg border border-gray-200 bg-white px-6 text-[14px] font-semibold text-[#191919] transition-colors hover:bg-gray-50">
+            <Link href="/weight-loss/weight-loss-pills" className="inline-flex h-[46px] items-center justify-center rounded-lg border border-gray-200 bg-white px-6 text-[14px] font-semibold text-[#191919] transition-colors hover:bg-gray-50">
               See Weight Loss Pill Options
             </Link>
           </div>
@@ -226,7 +238,7 @@ export default function OzempicAlternativesPage() {
             The next generation is already in trials. <strong className="text-[#191919]">Retatrutide</strong>,
             a triple-agonist from Eli Lilly, reached about 24% average weight loss in a Phase 2 study -
             more than tirzepatide or semaglutide - though it isn&rsquo;t FDA-approved yet. Read our{" "}
-            <Link href="/retatrutide-weight-loss" className="font-semibold text-[#0C4B75] hover:underline">
+            <Link href="/weight-loss/retatrutide-weight-loss" className="font-semibold text-[#0C4B75] hover:underline">
               retatrutide guide
             </Link>{" "}
             for where it stands and when it might arrive.
@@ -253,10 +265,10 @@ export default function OzempicAlternativesPage() {
             tirzepatide (SURMOUNT) and Phase 2 retatrutide results; individual results vary. Pricing
             ranges are typical advertised telehealth cash-pay prices and vary by provider, medication,
             and dose. Ozempic, Wegovy, Mounjaro, Zepbound and Rybelsus are trademarks of their
-            respective manufacturers and are not affiliated with topweightloss.io.
+            respective manufacturers and are not affiliated with treatmentshub.com.
           </p>
           <p className="text-[13px] leading-relaxed text-gray-400">
-            topweightloss.io is not a medical provider and does not prescribe medications. This page is
+            treatmentshub.com is not a medical provider and does not prescribe medications. This page is
             for educational purposes only and is not medical advice. Compounded medications are not
             FDA-approved brand drugs. Always consult a licensed healthcare provider about the right
             treatment for you.

@@ -13,7 +13,7 @@ const PILL_PROVIDER_IDS = ["embody", "trimrx", "medvi", "shed"];
 
 export const revalidate = 60;
 
-const CANONICAL = "https://www.topweightloss.io/weight-loss-pills";
+const CANONICAL = "https://www.treatmentshub.com/weight-loss/weight-loss-pills";
 
 export const metadata: Metadata = {
   title: "Weight Loss Pills vs Injections 2026: Oral GLP-1s & What Works",
@@ -98,15 +98,15 @@ export default async function WeightLossPillsPage() {
     description: metadata.description,
     datePublished: "2026-08-01",
     dateModified: "2026-08-09",
-    author: { "@type": "Organization", name: "TopWeightLoss Team", url: "https://www.topweightloss.io" },
-    publisher: { "@type": "Organization", name: "topweightloss.io", url: "https://www.topweightloss.io" },
+    author: { "@type": "Organization", name: "TreatmentsHub Team", url: "https://www.treatmentshub.com" },
+    publisher: { "@type": "Organization", name: "treatmentshub.com", url: "https://www.treatmentshub.com" },
     mainEntityOfPage: CANONICAL,
   };
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.topweightloss.io" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.treatmentshub.com/weight-loss" },
       { "@type": "ListItem", position: 2, name: "Weight Loss Pills", item: CANONICAL },
     ],
   };
@@ -196,7 +196,7 @@ export default async function WeightLossPillsPage() {
             The honest summary: injections currently deliver the greatest average weight loss, but
             GLP-1 pills avoid needles, can be simpler to start, and the newest oral GLP-1s are
             catching up fast. Here&rsquo;s how pills and injections compare - or read our full{" "}
-            <Link href="/glp1-pills-vs-injections" className="font-semibold text-[#0C4B75] hover:underline">
+            <Link href="/weight-loss/glp1-pills-vs-injections" className="font-semibold text-[#0C4B75] hover:underline">
               GLP-1 pills vs injections comparison
             </Link>.
           </p>
@@ -270,13 +270,13 @@ export default async function WeightLossPillsPage() {
 
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/"
+              href="/weight-loss"
               className="inline-flex h-[46px] items-center justify-center rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]"
             >
               Compare All Providers
             </Link>
             <Link
-              href="/find-your-match"
+              href="/weight-loss/find-your-match"
               className="inline-flex h-[46px] items-center justify-center rounded-lg border border-gray-200 bg-white px-6 text-[14px] font-semibold text-[#191919] transition-colors hover:bg-gray-50"
             >
               Take the Quiz
@@ -306,7 +306,7 @@ export default async function WeightLossPillsPage() {
             their respective manufacturers.
           </p>
           <p className="text-[13px] leading-relaxed text-gray-400">
-            topweightloss.io is not a medical provider and does not prescribe medications. This page is
+            treatmentshub.com is not a medical provider and does not prescribe medications. This page is
             for educational and comparison purposes only and is not medical advice. Prescription weight
             loss medications require evaluation and supervision by a licensed healthcare provider.
             Always consult a qualified physician before starting any treatment.

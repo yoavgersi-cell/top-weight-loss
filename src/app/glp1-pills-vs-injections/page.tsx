@@ -7,7 +7,7 @@ import { CONTENT_LAST_UPDATED } from "@/lib/config";
 
 export const revalidate = 60;
 
-const CANONICAL = "https://www.topweightloss.io/glp1-pills-vs-injections";
+const CANONICAL = "https://www.treatmentshub.com/weight-loss/glp1-pills-vs-injections";
 
 export const metadata: Metadata = {
   title: "GLP-1 Pills vs Injections: Which Is Better for Weight Loss? (2026)",
@@ -48,15 +48,15 @@ export default function Glp1PillsVsInjectionsPage() {
     description: metadata.description,
     datePublished: "2026-08-09",
     dateModified: "2026-08-09",
-    author: { "@type": "Organization", name: "TopWeightLoss Team", url: "https://www.topweightloss.io" },
-    publisher: { "@type": "Organization", name: "topweightloss.io", url: "https://www.topweightloss.io" },
+    author: { "@type": "Organization", name: "TreatmentsHub Team", url: "https://www.treatmentshub.com" },
+    publisher: { "@type": "Organization", name: "treatmentshub.com", url: "https://www.treatmentshub.com" },
     mainEntityOfPage: CANONICAL,
   };
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.topweightloss.io" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.treatmentshub.com/weight-loss" },
       { "@type": "ListItem", position: 2, name: "GLP-1 Pills vs Injections", item: CANONICAL },
     ],
   };
@@ -143,7 +143,7 @@ export default function Glp1PillsVsInjectionsPage() {
             ~15% weight loss in trials and is advancing through FDA review, and{" "}
             <strong className="text-[#191919]">orforglipron</strong> (a small-molecule oral GLP-1 from
             Lilly) is in late-stage trials. See our full{" "}
-            <Link href="/weight-loss-pills" className="font-semibold text-[#0C4B75] hover:underline">
+            <Link href="/weight-loss/weight-loss-pills" className="font-semibold text-[#0C4B75] hover:underline">
               weight loss pills guide
             </Link>{" "}
             for the complete oral landscape.
@@ -201,11 +201,11 @@ export default function Glp1PillsVsInjectionsPage() {
             lean toward a pill or an injection.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Link href="/" className="inline-flex h-[46px] items-center justify-center gap-2 rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]">
+            <Link href="/weight-loss" className="inline-flex h-[46px] items-center justify-center gap-2 rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]">
               Compare Top Providers
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
-            <Link href="/weight-loss-pills" className="inline-flex h-[46px] items-center justify-center rounded-lg border border-gray-200 bg-white px-6 text-[14px] font-semibold text-[#191919] transition-colors hover:bg-gray-50">
+            <Link href="/weight-loss/weight-loss-pills" className="inline-flex h-[46px] items-center justify-center rounded-lg border border-gray-200 bg-white px-6 text-[14px] font-semibold text-[#191919] transition-colors hover:bg-gray-50">
               Weight Loss Pills Guide
             </Link>
           </div>
@@ -232,7 +232,7 @@ export default function Glp1PillsVsInjectionsPage() {
             individual results vary. Brand names are trademarks of their respective manufacturers.
           </p>
           <p className="text-[13px] leading-relaxed text-gray-400">
-            topweightloss.io is not a medical provider and does not prescribe medications. This page is
+            treatmentshub.com is not a medical provider and does not prescribe medications. This page is
             for educational and comparison purposes only and is not medical advice. GLP-1 medications
             require evaluation and supervision by a licensed healthcare provider.
           </p>

@@ -9,9 +9,9 @@ export const revalidate = 60;
 export const metadata: Metadata = {
   title: "About TopWeightLoss - Our Mission, Team & Review Methodology",
   description:
-    "Learn how topweightloss.io independently ranks and reviews weight loss providers. Our editorial methodology, review process, medical advisory approach, and commitment to unbiased comparisons.",
+    "Learn how treatmentshub.com independently ranks and reviews weight loss providers. Our editorial methodology, review process, medical advisory approach, and commitment to unbiased comparisons.",
   alternates: {
-    canonical: "https://www.topweightloss.io/about",
+    canonical: "https://www.treatmentshub.com/weight-loss/about",
   },
 };
 
@@ -22,8 +22,8 @@ export default async function AboutPage() {
   const teamSchema = experts.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "topweightloss.io",
-    url: "https://www.topweightloss.io",
+    name: "treatmentshub.com",
+    url: "https://www.treatmentshub.com",
     employee: experts.map((e) => ({
       "@type": "Person",
       name: e.credentials ? `${e.name}, ${e.credentials}` : e.name,
@@ -117,7 +117,7 @@ export default async function AboutPage() {
           </div>
           <p className="mt-6 text-[15px] leading-[1.75] text-gray-600">
             Want the full picture? Read our detailed{" "}
-            <Link href="/how-we-rank" className="font-semibold text-[#0C4B75] hover:underline">
+            <Link href="/weight-loss/how-we-rank" className="font-semibold text-[#0C4B75] hover:underline">
               ranking &amp; review methodology
             </Link>{" "}
             - the factors we score, where our data comes from, and how we pick winners.
@@ -198,13 +198,13 @@ export default async function AboutPage() {
           <p className="mb-4 text-[16px] font-bold text-[#191919]">Ready to compare providers?</p>
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
-              href="/"
+              href="/weight-loss"
               className="inline-flex h-[44px] items-center justify-center rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]"
             >
               Compare Providers
             </Link>
             <Link
-              href="/find-your-match"
+              href="/weight-loss/find-your-match"
               className="inline-flex h-[44px] items-center justify-center rounded-lg border border-gray-200 bg-white px-6 text-[14px] font-semibold text-[#191919] transition-colors hover:bg-gray-50"
             >
               Take the Quiz

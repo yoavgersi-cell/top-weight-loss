@@ -9,7 +9,7 @@ import { CONTENT_LAST_UPDATED } from "@/lib/config";
 
 export const revalidate = 60;
 
-const CANONICAL = "https://www.topweightloss.io/how-we-rank";
+const CANONICAL = "https://www.treatmentshub.com/weight-loss/how-we-rank";
 
 export const metadata: Metadata = {
   title: "How We Rank & Review Weight Loss Providers - Our Methodology",
@@ -52,14 +52,14 @@ export default async function HowWeRankPage() {
     description:
       "Our full methodology for ranking and reviewing GLP-1 weight loss providers: the factors we score, where our data comes from, how we verify accuracy, and how we pick winners.",
     url: CANONICAL,
-    publisher: { "@type": "Organization", name: "topweightloss.io", url: "https://www.topweightloss.io" },
+    publisher: { "@type": "Organization", name: "treatmentshub.com", url: "https://www.treatmentshub.com" },
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.topweightloss.io" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.treatmentshub.com/weight-loss" },
       { "@type": "ListItem", position: 2, name: "How We Rank", item: CANONICAL },
     ],
   };
@@ -212,7 +212,7 @@ export default async function HowWeRankPage() {
               compensate us through affiliate partnerships when you click through and sign up. This may
               affect how providers are displayed, but it does not influence our scores or the content of
               our reviews. See our{" "}
-              <Link href="/disclaimer" className="font-semibold text-[#0C4B75] hover:underline">full disclaimer</Link>.
+              <Link href="/weight-loss/disclaimer" className="font-semibold text-[#0C4B75] hover:underline">full disclaimer</Link>.
             </p>
           </div>
         </section>
@@ -225,7 +225,7 @@ export default async function HowWeRankPage() {
           <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Medical disclaimer</h2>
           <div className="rounded-xl border border-gray-200 bg-white p-6">
             <p className="text-[15px] leading-[1.75] text-gray-600">
-              topweightloss.io is not a medical provider and does not prescribe medications. The
+              treatmentshub.com is not a medical provider and does not prescribe medications. The
               information on this site is for educational and comparison purposes only and should not
               replace professional medical advice. GLP-1 medications are prescription drugs that require
               evaluation and supervision by a licensed healthcare provider. Always consult a qualified
@@ -239,13 +239,13 @@ export default async function HowWeRankPage() {
           <p className="mb-4 text-[16px] font-bold text-[#191919]">See the rankings in action</p>
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
-              href="/"
+              href="/weight-loss"
               className="inline-flex h-[44px] items-center justify-center rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]"
             >
               Compare Providers
             </Link>
             <Link
-              href="/reviews"
+              href="/weight-loss/reviews"
               className="inline-flex h-[44px] items-center justify-center rounded-lg border border-gray-200 bg-white px-6 text-[14px] font-semibold text-[#191919] transition-colors hover:bg-gray-50"
             >
               Read Our Reviews

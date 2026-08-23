@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Comprehensive GLP-1 weight loss statistics: clinical trial results for semaglutide, tirzepatide, and liraglutide. Average weight loss, costs, side effects, and treatment timelines.",
   alternates: {
-    canonical: "https://www.topweightloss.io/glp1-weight-loss-statistics",
+    canonical: "https://www.treatmentshub.com/weight-loss/glp1-weight-loss-statistics",
   },
 };
 
@@ -188,8 +188,8 @@ export default function StatisticsPage() {
             </ul>
             <p className="text-[14px] text-gray-500">
               Read our complete{" "}
-              <Link href="/articles/who-qualifies-for-glp1-weight-loss" className="font-semibold text-[#0C4B75] hover:underline">eligibility guide</Link> or{" "}
-              <Link href="/find-your-match" className="font-semibold text-[#0C4B75] hover:underline">take our quiz</Link> to check if you qualify.
+              <Link href="/weight-loss/articles/who-qualifies-for-glp1-weight-loss" className="font-semibold text-[#0C4B75] hover:underline">eligibility guide</Link> or{" "}
+              <Link href="/weight-loss/find-your-match" className="font-semibold text-[#0C4B75] hover:underline">take our quiz</Link> to check if you qualify.
             </p>
           </div>
         </section>
@@ -214,10 +214,10 @@ export default function StatisticsPage() {
           <p className="mb-2 text-[16px] font-bold text-[#191919]">Compare GLP-1 Providers</p>
           <p className="mb-4 text-[14px] text-gray-500">See how the top telehealth weight loss providers compare on pricing, medications, and support.</p>
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <Link href="/" className="inline-flex h-[44px] items-center justify-center rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]">
+            <Link href="/weight-loss" className="inline-flex h-[44px] items-center justify-center rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]">
               Compare Providers
             </Link>
-            <Link href="/find-your-match" className="inline-flex h-[44px] items-center justify-center rounded-lg border border-gray-200 bg-white px-6 text-[14px] font-semibold text-[#191919] transition-colors hover:bg-gray-50">
+            <Link href="/weight-loss/find-your-match" className="inline-flex h-[44px] items-center justify-center rounded-lg border border-gray-200 bg-white px-6 text-[14px] font-semibold text-[#191919] transition-colors hover:bg-gray-50">
               Take the Quiz
             </Link>
           </div>

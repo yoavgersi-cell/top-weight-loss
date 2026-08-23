@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED, DEFAULT_VERTICAL, isVertical, isPublishedVertical } from "@/lib/config";
-import { ROOT_CONTEXT, hubContext, canonicalUrl, hubLink } from "@/lib/site-context";
+import { ROOT_CONTEXT, hubContext, canonicalUrl, hubLink, WEIGHT_LOSS_MIGRATED } from "@/lib/site-context";
 import Link from "next/link";
 import { ComparisonLayout } from "@/components/comparison-layout";
 import { EditorialContent } from "@/components/editorial-content";
@@ -31,15 +31,17 @@ export async function generateMetadata({
   const { battleSlug } = await params;
   if (RESERVED_SLUGS.includes(battleSlug)) return {};
 
-  // Vertical home (treatmentshub.com/<vertical>). weight-loss points its
-  // canonical at the existing site until the migration, so the two never
-  // compete for the same query; new verticals are self-canonical and indexable.
+  // Vertical home (treatmentshub.com/<vertical>). Weight-loss pointed its
+  // canonical at the legacy site only until the migration flag flipped; now
+  // that the legacy host 301s here, every vertical home is self-canonical
+  // (a canonical aimed at a redirecting URL reads as a redirect error in GSC).
   if (isVertical(battleSlug)) {
     const vConfig = await getConfig(battleSlug);
     const isWL = battleSlug === DEFAULT_VERTICAL;
-    const canonical = isWL
-      ? "https://www.topweightloss.io"
-      : `https://www.treatmentshub.com/${battleSlug}`;
+    const canonical =
+      isWL && !WEIGHT_LOSS_MIGRATED
+        ? "https://www.topweightloss.io"
+        : `https://www.treatmentshub.com/${battleSlug}`;
     return {
       title: { absolute: vConfig.hero.h1 },
       description: vConfig.hero.description,
