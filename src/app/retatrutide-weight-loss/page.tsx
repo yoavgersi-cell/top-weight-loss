@@ -7,7 +7,7 @@ import { CONTENT_LAST_UPDATED } from "@/lib/config";
 
 export const revalidate = 60;
 
-const CANONICAL = "https://www.topweightloss.io/retatrutide-weight-loss";
+const CANONICAL = "https://www.treatmentshub.com/weight-loss/retatrutide-weight-loss";
 
 export const metadata: Metadata = {
   title: "Retatrutide for Weight Loss (2026): Results, Status & Reta vs Tirzepatide",
@@ -48,15 +48,15 @@ export default function RetatrutidePage() {
     description: metadata.description,
     datePublished: "2026-08-09",
     dateModified: "2026-08-09",
-    author: { "@type": "Organization", name: "TopWeightLoss Team", url: "https://www.topweightloss.io" },
-    publisher: { "@type": "Organization", name: "topweightloss.io", url: "https://www.topweightloss.io" },
+    author: { "@type": "Organization", name: "TreatmentsHub Team", url: "https://www.treatmentshub.com" },
+    publisher: { "@type": "Organization", name: "treatmentshub.com", url: "https://www.treatmentshub.com" },
     mainEntityOfPage: CANONICAL,
   };
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.topweightloss.io" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.treatmentshub.com/weight-loss" },
       { "@type": "ListItem", position: 2, name: "Retatrutide", item: CANONICAL },
     ],
   };
@@ -174,11 +174,11 @@ export default function RetatrutidePage() {
             on pricing, medical support, and value.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Link href="/" className="inline-flex h-[46px] items-center justify-center gap-2 rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]">
+            <Link href="/weight-loss" className="inline-flex h-[46px] items-center justify-center gap-2 rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]">
               Compare Top Providers
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
-            <Link href="/glp1-pills-vs-injections" className="inline-flex h-[46px] items-center justify-center rounded-lg border border-gray-200 bg-white px-6 text-[14px] font-semibold text-[#191919] transition-colors hover:bg-gray-50">
+            <Link href="/weight-loss/glp1-pills-vs-injections" className="inline-flex h-[46px] items-center justify-center rounded-lg border border-gray-200 bg-white px-6 text-[14px] font-semibold text-[#191919] transition-colors hover:bg-gray-50">
               Pills vs Injections
             </Link>
           </div>
@@ -206,7 +206,7 @@ export default function RetatrutidePage() {
             names are trademarks of their respective manufacturers.
           </p>
           <p className="text-[13px] leading-relaxed text-gray-400">
-            topweightloss.io is not a medical provider and does not prescribe medications. This page is
+            treatmentshub.com is not a medical provider and does not prescribe medications. This page is
             for educational purposes only and is not medical advice. Retatrutide is investigational and
             not FDA-approved. Always consult a licensed healthcare provider about approved treatment
             options.

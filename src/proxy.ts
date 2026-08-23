@@ -18,6 +18,8 @@ const SHARED_ONE_OFF_PAGES = new Set([
   "ozempic-alternatives",
   "retatrutide-weight-loss",
   "glp1-weight-loss-statistics",
+  "cheapest-glp1",
+  "switch-from-ozempic",
 ]);
 
 // Duplicate comparison URLs that consolidate onto a stronger canonical page.

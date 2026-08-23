@@ -27,6 +27,8 @@ const WL_STATIC_PATHS: { path: string; priority: number; changeFrequency: "weekl
   { path: "/glp1-pills-vs-injections", priority: 0.8, changeFrequency: "weekly" },
   { path: "/retatrutide-weight-loss", priority: 0.8, changeFrequency: "weekly" },
   { path: "/ozempic-alternatives", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/cheapest-glp1", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/switch-from-ozempic", priority: 0.8, changeFrequency: "weekly" },
   { path: "/glp1-weight-loss-statistics", priority: 0.7, changeFrequency: "monthly" },
   { path: "/how-we-rank", priority: 0.6, changeFrequency: "monthly" },
   { path: "/about", priority: 0.3, changeFrequency: "monthly" },
