@@ -53,6 +53,15 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     trustpilot: null,
   },
   {
+    providerId: "medvi",
+    edge: "All-inclusive care: visits, dietician and coaching in the price",
+    semaglutide: { price: "$99", note: "promo; reg. $199 - all-inclusive" },
+    tirzepatide: { price: "$166", note: "promo; reg. $299" },
+    shipping: "Free shipping",
+    commitment: "None - no membership or hidden fees; HSA/FSA",
+    trustpilot: { rating: "4.4", count: "14,372" },
+  },
+  {
     providerId: "healthrx",
     edge: "All-in prepaid year with overnight cold-chain delivery",
     semaglutide: { price: "$99", note: "12-mo prepaid - $1,188 at checkout" },
@@ -69,15 +78,6 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     shipping: "Free 1-2 day shipping",
     commitment: "None - no membership, cancel anytime",
     trustpilot: { rating: "4.6", count: "13,901" },
-  },
-  {
-    providerId: "medvi",
-    edge: "All-inclusive care: visits, dietician and coaching in the price",
-    semaglutide: { price: "$179", note: "all-inclusive; tablets $249" },
-    tirzepatide: null,
-    shipping: "Free shipping",
-    commitment: "None - no membership or hidden fees; HSA/FSA",
-    trustpilot: { rating: "4.4", count: "14,372" },
   },
   {
     providerId: "trimrx",

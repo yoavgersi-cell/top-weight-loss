@@ -64,8 +64,8 @@ export const TRIO_FACTS: Record<string, TrioFacts> = {
   },
   medvi: {
     id: "medvi",
-    semaglutide: "$179/mo, all-inclusive",
-    tirzepatide: "$249/mo, all-inclusive",
+    semaglutide: "$99/mo promo (reg. $199), all-inclusive",
+    tirzepatide: "$166/mo promo (reg. $299)",
     billing: "Monthly, all-inclusive - no surprise charges; HSA/FSA approved",
     shipping: "Free shipping",
     support: "Video visits + free dietician & care coaching",
@@ -183,13 +183,13 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     slug: "medvi-vs-trimrx-vs-shed",
     providerIds: ["medvi", "trimrx", "shed"],
     title: "Medvi vs trimrx vs SHED: The Support-Tier Showdown",
-    metaTitle: "Medvi vs trimrx vs SHED (2026): $179-$199 Compared",
+    metaTitle: "Medvi vs trimrx vs SHED (2026): $99-$199 Compared",
     description:
       "The support tier compared: Medvi's all-inclusive care (4.4 on Trustpilot), trimrx's no-contract flexibility, and SHED's coaching with a money-back guarantee.",
     intro:
-      "At $179-$199 a month, these three sell more than medication - each wraps the same compounded GLP-1s in a different support philosophy. Medvi bundles video visits, a dietician and care coaching behind a 14,372-review Trustpilot record. trimrx sells flexibility: no contract, optional discounts, clinical guidance. SHED sells accountability: formal health coaching plus the market's only lose-5%-in-120-days-or-your-money-back guarantee.",
+      "These three sell more than medication - each wraps the same compounded GLP-1s in a different support philosophy, from Medvi's current $99 promo to SHED's $199. Medvi bundles video visits, a dietician and care coaching behind a 14,372-review Trustpilot record. trimrx sells flexibility: no contract, optional discounts, clinical guidance. SHED sells accountability: formal health coaching plus the market's only lose-5%-in-120-days-or-your-money-back guarantee.",
     verdict:
-      "Match the model to your failure mode. If past attempts failed for lack of guidance, Medvi's high-touch care - with the receipts to prove it works - is the pick. If you want premium care without being locked to anything, trimrx. If you need stakes and structure to follow through, SHED's guarantee literally pays you back if the program doesn't deliver. Price separates them by only $20; the support philosophy is the real choice.",
+      "Match the model to your failure mode. If past attempts failed for lack of guidance, Medvi's high-touch care - with the receipts to prove it works - is the pick. If you want premium care without being locked to anything, trimrx. If you need stakes and structure to follow through, SHED's guarantee literally pays you back if the program doesn't deliver. On current pricing Medvi's $99 promo is also the cheapest of the three - but the support philosophy, not the price, is the real choice.",
     faqs: [
       {
         question: "Is Medvi, trimrx or SHED better for support?",

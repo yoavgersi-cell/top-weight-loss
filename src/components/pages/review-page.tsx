@@ -17,6 +17,7 @@ import { LastUpdated } from "@/components/last-updated";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
 import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
+import { ProductCarousel } from "@/components/product-carousel";
 import { notFound } from "next/navigation";
 
 // Per-provider SEO overrides for reviews with distinctive search demand.
@@ -31,7 +32,7 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   medvi: {
     title: "Medvi Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
     description:
-      "Medvi weight loss reviews: transparent, all-inclusive GLP-1 pricing and the personal provider support customers rave about on Trustpilot. Is Medvi legit and worth it? Real customer reviews, cost, pros & cons.",
+      "Medvi weight loss reviews: all-inclusive GLP-1 care now from $99/month promotional (reg. $199) and the personal provider support customers rave about on Trustpilot. Is Medvi legit and worth it? Real reviews, cost, pros & cons.",
   },
   altrx: {
     title: "altRx Reviews 2026: Is It Legit? GLP-1 Cost, Results & Verdict",
@@ -229,14 +230,14 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
   ],
   medvi: [
     {
-      question: "What does Medvi's $179/month actually include?",
+      question: "What does Medvi's monthly price actually include?",
       answer:
         "Everything: the provider visits, the GLP-1 medication, free shipping, and free dietician and care coaching. There's no membership fee and no hidden charges, and plans are HSA/FSA approved.",
     },
     {
       question: "Does Medvi have a needle-free option?",
       answer:
-        "Yes - Medvi offers a daily oral dissolving GLP-1 tablet at $249/month, one of the few needle-free GLP-1 formats among the providers we rank. Weekly semaglutide injections are $179/month.",
+        "Yes - Medvi offers a daily oral dissolving GLP-1 tablet at $249/month, one of the few needle-free GLP-1 formats among the providers we rank. Weekly semaglutide injections currently start at $99/month (regularly $199).",
     },
     {
       question: "Do I need insurance for Medvi?",
@@ -389,7 +390,7 @@ const REVIEW_COMMUNITY_FEEDBACK: Record<
       },
     ],
     takeaway:
-      "The Reddit picture matches the Trustpilot one from a different angle: nobody calls Medvi cheap - at $179/month the ongoing cost is the caveat users themselves raise - but the year-long accounts describe exactly what that price buys: medical structure, dose adjustments when progress stalls, and 10-15% body-weight results over a year that felt “sustainable, which is something I had not experienced before.”",
+      "The Reddit picture matches the Trustpilot one from a different angle: the ongoing monthly cost is the caveat users themselves raise - though Medvi's current $99/month promotion (regularly $199) blunts it considerably - but the year-long accounts describe exactly what that price buys: medical structure, dose adjustments when progress stalls, and 10-15% body-weight results over a year that felt “sustainable, which is something I had not experienced before.”",
   },
 };
 
@@ -723,6 +724,21 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           <div className="mb-8 rounded-2xl border border-[#0C4B75]/20 bg-white p-5 shadow-sm sm:p-6">
             <p className="mb-2 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">The bottom line</p>
             <p className="text-[15px] leading-[1.8] text-gray-700">{review.finalVerdict}</p>
+          </div>
+        )}
+
+        {/* This provider's products, shopping-style (weight-loss catalog only) */}
+        {ctx.vertical === "weight-loss" && (
+          <div className="mb-8">
+            <ProductCarousel
+              providers={config.providers}
+              title={`${provider.name} products & prices`}
+              subtitle="Published prices with their conditions - the whole card links to the provider."
+              onlyProviderIds={[provider.id]}
+              pageType="review"
+              withSchema
+              pageUrl={canonicalUrl(ctx, `/reviews/${slug}`)}
+            />
           </div>
         )}
 

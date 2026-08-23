@@ -6,6 +6,7 @@ import { CONTENT_LAST_UPDATED, AFFILIATE_PROVIDER_IDS } from "@/lib/config";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { LastUpdated } from "@/components/last-updated";
 import { PriceIndex } from "@/components/price-index";
+import { ProductCarousel } from "@/components/product-carousel";
 import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
 
 export const revalidate = 60;
@@ -135,6 +136,17 @@ export default async function CheapestGlp1Page() {
           </p>
         </div>
 
+        {/* Shopping carousel - product-led entry point above the index */}
+        <div className="mb-10">
+          <ProductCarousel
+            providers={providers}
+            title="Shop the cheapest GLP-1 plans"
+            subtitle="Product-by-product, cheapest first - promo conditions printed under every price."
+            withSchema
+            pageUrl={CANONICAL}
+          />
+        </div>
+
         {/* The index itself */}
         <div className="mb-3 flex items-center gap-2">
           <BadgeDollarSign className="h-5 w-5 text-[#0C4B75]" strokeWidth={2} />
@@ -172,9 +184,9 @@ export default async function CheapestGlp1Page() {
                   ["wellmedr", "$59 x 12 (12-month plan rate)", "$708", "$13,080"],
                   ["embody", "$69 x 12 (promo; $948 at the $79 regular rate)", "$828", "$12,960"],
                   ["altRx", "$89 x 12, flat at every dose", "$1,068", "$12,720"],
+                  ["Medvi", "$99 x 12 (promo; reg. $199) - all-inclusive", "$1,188", "$12,600"],
                   ["HealthRx", "$1,188 prepaid at checkout ($99/mo effective)", "$1,188", "$12,600"],
                   ["DirectMeds", "$147 x 12, flat at every dose", "$1,764", "$12,024"],
-                  ["Medvi", "$179 x 12, all-inclusive with coaching", "$2,148", "$11,640"],
                   ["SHED", "$159 first month (20% off) + $199 x 11", "$2,348", "$11,440"],
                   ["trimrx", "$179 first month + $299 x 11 regular", "$3,468", "$10,320"],
                 ].map(([name, math, total, saved], i) => (

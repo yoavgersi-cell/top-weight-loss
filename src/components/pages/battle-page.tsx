@@ -18,6 +18,7 @@ import { TrustpilotRating } from "@/components/trustpilot-rating";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
 import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
+import { ProductCarousel } from "@/components/product-carousel";
 import { threeWayBySlug } from "@/lib/three-way";
 import { ThreeWayPageView, threeWayMetadata } from "@/components/pages/three-way-page";
 
@@ -52,9 +53,9 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "embody ($69/mo flat semaglutide, free 1-2 day shipping) vs trimrx ($179/mo, flexible no-contract plans). Real pricing, speed and support compared side by side.",
   },
   "embody-vs-medvi": {
-    title: "embody vs Medvi (2026): $69 vs $179 GLP-1 Compared",
+    title: "embody vs Medvi (2026): $69 vs $99 GLP-1 Compared",
     description:
-      "embody ($69/mo semaglutide, 1-2 day shipping, refund policy) vs Medvi ($179/mo all-inclusive with high-touch provider support). Price or personal care - see which fits.",
+      "embody ($69/mo semaglutide, 1-2 day shipping, refund policy) vs Medvi ($99/mo promo all-inclusive with high-touch provider support). Price or personal care - see which fits.",
   },
   "embody-vs-ro": {
     title: "embody vs ro (2026): Flat $69 GLP-1 or the Big Brand?",
@@ -62,19 +63,19 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "embody ($69/mo flat semaglutide, LegitScript-certified, 1-2 day shipping) vs ro (major telehealth brand, in-house pharmacy). Pricing, speed and trust signals compared.",
   },
   "medvi-vs-trimrx": {
-    title: "Medvi vs trimrx (2026): Two $179 GLP-1 Plans Compared",
+    title: "Medvi vs trimrx (2026): $99 vs $179 GLP-1 Compared",
     description:
-      "Medvi ($179/mo all-inclusive, Trustpilot-praised support) vs trimrx ($179/mo, no long-term contract). Same price, different strengths - here's how to pick.",
+      "Medvi ($99/mo promo all-inclusive, Trustpilot-praised support) vs trimrx ($179 first month, no long-term contract). Close prices, different strengths - here's how to pick.",
   },
   "medvi-vs-wellmedr": {
-    title: "Medvi vs wellmedr (2026): $179 or $59 GLP-1 Compared",
+    title: "Medvi vs wellmedr (2026): $99 or $59 GLP-1 Compared",
     description:
-      "Medvi ($179/mo with personal provider support) vs wellmedr ($59/mo semaglutide, 1M+ patients, warranty). Is high-touch care worth 3x the price? Full comparison.",
+      "Medvi ($99/mo promo with personal provider support) vs wellmedr ($59/mo semaglutide, 1M+ patients, warranty). Is high-touch care worth the difference? Full comparison.",
   },
   "medvi-vs-altrx": {
-    title: "Medvi vs altRx (2026): $179 vs $89 GLP-1 Compared",
+    title: "Medvi vs altRx (2026): $99 vs $89 GLP-1 Compared",
     description:
-      "Medvi ($179/mo all-inclusive, personal support) vs altRx ($89/mo flat + brand-name options with BNPL). Pricing, medications and support compared honestly.",
+      "Medvi ($99/mo promo all-inclusive, personal support) vs altRx ($89/mo flat + brand-name options with BNPL). Pricing, medications and support compared honestly.",
   },
   "trimrx-vs-wellmedr": {
     title: "trimrx vs wellmedr (2026): $179 vs $59 GLP-1 Compared",
@@ -495,6 +496,23 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   ))}
                 </tbody>
               </table>
+            </div>
+          )}
+
+          {/* ───── PRODUCT CAROUSEL ─────
+              Shopping-style product cards, contenders first - the moneymaker
+              placement. Weight-loss only (the catalog is a WL registry). */}
+          {ctx.vertical === "weight-loss" && (
+            <div className="mb-12">
+              <ProductCarousel
+                providers={config.providers}
+                title={`Shop ${p1.name} and ${p2.name} plans`}
+                subtitle="Real published prices, both contenders first - alternatives after them, cheapest first."
+                highlightProviderIds={[p1.id, p2.id]}
+                pageType="battle"
+                withSchema
+                pageUrl={canonicalUrl(ctx, `/${slug}`)}
+              />
             </div>
           )}
 
