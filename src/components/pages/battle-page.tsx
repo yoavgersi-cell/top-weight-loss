@@ -27,6 +27,26 @@ import { ThreeWayPageView, threeWayMetadata } from "@/components/pages/three-way
 // this map wins over the stored meta for exactly these slugs. Every price is
 // the provider's real listed price; keep them in sync when pricing changes.
 const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+  "embody-vs-sprout": {
+    title: "embody vs Sprout (2026): $69 vs $149 GLP-1 Compared",
+    description:
+      "embody ($69/mo semaglutide, 1-2 day cold-chain shipping, LegitScript) vs Sprout ($149/mo, ships in 2 days, brand-name Wegovy available). Real prices, honest verdict.",
+  },
+  "altrx-vs-sprout": {
+    title: "altRx vs Sprout (2026): $89 vs $149 GLP-1 Compared",
+    description:
+      "The brand-shelf matchup: altRx ($89/mo + Ozempic/Zepbound/Wegovy, BNPL) vs Sprout ($149/mo, Wegovy available, 2-day fulfillment). Price, selection and speed compared.",
+  },
+  "sprout-vs-trimrx": {
+    title: "Sprout vs trimrx (2026): $149 vs $179 GLP-1 Compared",
+    description:
+      "Sprout ($149/mo semaglutide that holds, ships in 2 days, Wegovy option) vs trimrx ($179 first month then $299, custom dosing, unlimited check-ins). Compared honestly.",
+  },
+  "sprout-vs-wellmedr": {
+    title: "Sprout vs wellmedr (2026): $149 vs $59 GLP-1 Compared",
+    description:
+      "Sprout ($149/mo, 2-day fulfillment, brand-name Wegovy) vs wellmedr ($59/mo, 4.7 on Trustpilot, 1M+ patients, warranty). Real prices and an honest verdict.",
+  },
   "embody-vs-wellmedr": {
     title: "embody vs wellmedr (2026): $69 vs $59 GLP-1 Compared",
     description:

@@ -3591,6 +3591,346 @@ const healthrxMedviBattle: BattleData = {
   ],
 };
 
+// ───── Sprout head-to-head battles ─────
+// Sprout's verified edges: 2-day prescription fulfillment, a brand-name
+// Wegovy option unusual for its tier, and a $200 first-month discount.
+// Winners are called honestly per matchup from published data.
+
+const embodySproutBattle: BattleData = {
+  slug: "embody-vs-sprout",
+  provider1Id: "embody",
+  provider2Id: "sprout",
+  title: "embody vs Sprout: Which GLP-1 Provider Is Right for You in 2026?",
+  matchupLabel: "embody vs Sprout",
+  subtitle: "The $69 flat-price speed specialist vs a personalized mid-tier program with a brand-name Wegovy option.",
+  description:
+    "embody ($69/mo semaglutide, 1-2 day cold-chain shipping, LegitScript-certified) vs Sprout ($149/mo, ships in 2 days, brand-name Wegovy available). Real prices, honest verdict.",
+  intro:
+    "embody and Sprout both move fast - embody ships in 1-2 days with cold-chain packaging, Sprout ships prescriptions within 2 days of approval - so this matchup is really decided elsewhere. embody's case is price and verification: $69/month semaglutide and $119 tirzepatide (regularly $79/$129), flat month to month, LegitScript-certified with US 503A pharmacies and a public Trustpilot record (3.8 across 4,956 reviews). Sprout's case is breadth and personalization: plans built around your goals, $200 off the first month, and - unusually for its tier - brand-name Wegovy on the shelf from $1,799 alongside compounded semaglutide ($149) and tirzepatide ($199).",
+  verdict:
+    "embody wins for most people: it's $80/month cheaper on semaglutide, equally fast, and carries the certifications and public review record Sprout hasn't published yet. Choose Sprout if the brand-name path matters - it's the only one of the two that can put a Wegovy pen in the box - or if its personalized-plan model and $200 first-month discount fit how you want to start. On the same compounded molecules, though, the price gap is hard to argue with.",
+  verdictWinnerPoints: [
+    "$69/mo semaglutide, $119 tirzepatide - flat, month to month",
+    "LegitScript-certified, US 503A pharmacies, refund if not approved",
+    "Public track record: 3.8 on Trustpilot across 4,956 reviews",
+  ],
+  verdictLoserPoints: [
+    "Brand-name Wegovy available (from $1,799/mo)",
+    "$200 off your first month",
+    "Prescriptions shipped within 2 days",
+  ],
+  winnerId: "embody",
+  categories: [
+    {
+      name: "Price",
+      winner: "provider1",
+      explanation:
+        "embody's $69/month semaglutide and $119 tirzepatide (regularly $79/$129) undercut Sprout's $149/$199 starting prices by $80/month on each molecule. Sprout's $200 first-month discount narrows year-one math, but embody stays cheaper every month after.",
+      supportingPoints: [
+        "$69 vs $149 semaglutide - $960/year apart (embody)",
+        "$119 vs $199 tirzepatide (embody)",
+        "$200 off month one softens the gap early (Sprout)",
+      ],
+    },
+    {
+      name: "Medication Choice",
+      winner: "provider2",
+      explanation:
+        "embody prescribes compounded semaglutide and tirzepatide only. Sprout covers the same two compounded lanes and adds brand-name Wegovy from $1,799/month - the only branded option in this matchup.",
+      supportingPoints: [
+        "Brand-name Wegovy on the shelf (Sprout)",
+        "Compounded semaglutide + tirzepatide (both)",
+        "No branded option at any price (embody)",
+      ],
+    },
+    {
+      name: "Speed & Fulfillment",
+      winner: "tie",
+      explanation:
+        "Genuinely close: embody ships free in 1-2 days in temperature-controlled, tracked, insured packaging with same-day dispatch before 2pm CT; Sprout ships prescriptions within 2 days of approval. Either way you're starting within days, not weeks.",
+      supportingPoints: [
+        "1-2 day cold-chain, tracked & insured (embody)",
+        "Prescriptions shipped within 2 days (Sprout)",
+      ],
+    },
+    {
+      name: "Verification & Track Record",
+      winner: "provider1",
+      explanation:
+        "embody is LegitScript-certified, names its US 503A pharmacy fulfillment, refunds you if a provider doesn't approve treatment, and carries a public Trustpilot record - 3.8 across 4,956 reviews, mixed but transparent. Sprout's individual reviews are positive and specific, but it publishes no aggregate score and fewer program details.",
+      supportingPoints: [
+        "LegitScript certification + 503A pharmacies (embody)",
+        "3.8 across 4,956 public Trustpilot reviews (embody)",
+        "Positive individual reviews, no published aggregate (Sprout)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Starting Price", provider1Value: "$69/mo semaglutide · $119 tirzepatide", provider2Value: "$149/mo semaglutide · $199 tirzepatide", highlight: "provider1" },
+    { feature: "First-month offer", provider1Value: "Promo pricing (reg. $79/$129)", provider2Value: "$200 off month one", highlight: "provider2" },
+    { feature: "Brand-name option", provider1Value: "None", provider2Value: "Wegovy from $1,799/mo", highlight: "provider2" },
+    { feature: "Shipping", provider1Value: "Free 1-2 day, cold-chain, insured", provider2Value: "Ships within 2 days", highlight: "both" },
+    { feature: "Trustpilot", provider1Value: "3.8 across 4,956 reviews", provider2Value: "No published aggregate", highlight: "provider1" },
+    { feature: "Certifications", provider1Value: "LegitScript, US 503A pharmacies", provider2Value: "Licensed provider review", highlight: "provider1" },
+  ],
+};
+
+const altrxSproutBattle: BattleData = {
+  slug: "altrx-vs-sprout",
+  provider1Id: "altrx",
+  provider2Id: "sprout",
+  title: "altRx vs Sprout: Which GLP-1 Provider Is Right for You in 2026?",
+  matchupLabel: "altRx vs Sprout",
+  subtitle: "The only two providers in our ranking with brand-name shelves - compared on price, selection and speed.",
+  description:
+    "altRx ($89/mo semaglutide, brand Ozempic/Zepbound/Wegovy, BNPL) vs Sprout ($149/mo, Wegovy available, ships in 2 days). The brand-shelf matchup, compared honestly.",
+  intro:
+    "This is the brand-shelf matchup: altRx and Sprout are the only providers in our ranking that stock brand-name medication alongside compounded plans. altRx runs the bigger, cheaper shelf - Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 - on top of $89/month compounded semaglutide and $149 tirzepatide, flat at every dose with Buy Now, Pay Later and pause-anytime terms. Sprout answers with speed and personalization: prescriptions shipped within 2 days (vs altRx's 5-7), $200 off the first month, and Wegovy from $1,799 alongside $149/$199 compounded plans.",
+  verdict:
+    "altRx wins on the numbers: $60/month cheaper on compounded semaglutide, $50 cheaper on tirzepatide, three brand-name options to Sprout's one - with its Wegovy $220/month cheaper - plus BNPL and pause-anytime flexibility. Sprout takes the speed column outright: 2-day fulfillment against altRx's 5-7 day shipping is a real difference when you're starting or switching without a buffer. If the calendar matters more than the invoice, Sprout; otherwise altRx is the stronger version of the same idea.",
+  verdictWinnerPoints: [
+    "$89/mo semaglutide, $149 tirzepatide - flat at every dose",
+    "Three brand-name options; Wegovy $220/mo cheaper than Sprout's",
+    "Buy Now, Pay Later + pause or cancel anytime",
+  ],
+  verdictLoserPoints: [
+    "Prescriptions shipped within 2 days (vs 5-7)",
+    "$200 off your first month",
+    "Personalized plans built around your goals",
+  ],
+  winnerId: "altrx",
+  categories: [
+    {
+      name: "Compounded Price",
+      winner: "provider1",
+      explanation:
+        "altRx lists compounded semaglutide at $89/month (regularly $199) and tirzepatide at $149 (regularly $299), flat at every dose. Sprout starts at $149/$199. The $200 first-month discount helps Sprout's year-one math, but altRx stays $50-60/month ahead from month two on.",
+      supportingPoints: [
+        "$89 vs $149 semaglutide (altRx)",
+        "$149 vs $199 tirzepatide (altRx)",
+        "Flat at every dose - no titration increases (altRx)",
+      ],
+    },
+    {
+      name: "Brand-Name Shelf",
+      winner: "provider1",
+      explanation:
+        "Both can prescribe brand-name medication, which is what makes this matchup rare. altRx stocks three brands - Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 - while Sprout lists Wegovy from $1,799. More choice, lower prices: the shelf goes to altRx.",
+      supportingPoints: [
+        "Ozempic, Zepbound AND Wegovy (altRx)",
+        "Wegovy $1,579 vs $1,799 (altRx)",
+        "One branded option, still rare for the tier (Sprout)",
+      ],
+    },
+    {
+      name: "Speed",
+      winner: "provider2",
+      explanation:
+        "Sprout ships prescriptions within 2 days of approval. altRx's free shipping runs about 5-7 days - its one structural weakness. For switchers timing a transition against their last brand pen, that gap can decide the matchup on its own.",
+      supportingPoints: [
+        "Ships within 2 days (Sprout)",
+        "About 5-7 day shipping (altRx)",
+      ],
+    },
+    {
+      name: "Payment Flexibility",
+      winner: "provider1",
+      explanation:
+        "altRx offers Buy Now, Pay Later, requires no insurance, and lets you pause or cancel anytime. Sprout's $200 first-month discount is the better door prize, but altRx's ongoing terms are the most flexible in this matchup.",
+      supportingPoints: [
+        "Buy Now, Pay Later available (altRx)",
+        "Pause or cancel anytime (altRx)",
+        "$200 off month one (Sprout)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Starting Price", provider1Value: "$89/mo semaglutide · $149 tirzepatide", provider2Value: "$149/mo semaglutide · $199 tirzepatide", highlight: "provider1" },
+    { feature: "Brand-name shelf", provider1Value: "Ozempic $1,149 · Zepbound $1,249 · Wegovy $1,579", provider2Value: "Wegovy from $1,799", highlight: "provider1" },
+    { feature: "Shipping", provider1Value: "Free, about 5-7 days", provider2Value: "Ships within 2 days", highlight: "provider2" },
+    { feature: "First-month offer", provider1Value: "Promo pricing (reg. $199/$299)", provider2Value: "$200 off month one", highlight: "provider2" },
+    { feature: "Payment", provider1Value: "Buy Now, Pay Later; pause anytime", provider2Value: "Standard monthly billing", highlight: "provider1" },
+    { feature: "Trustpilot", provider1Value: "No published aggregate", provider2Value: "No published aggregate", highlight: "none" },
+  ],
+};
+
+const sproutTrimrxBattle: BattleData = {
+  slug: "sprout-vs-trimrx",
+  provider1Id: "sprout",
+  provider2Id: "trimrx",
+  title: "Sprout vs trimrx: Which GLP-1 Provider Is Right for You in 2026?",
+  matchupLabel: "Sprout vs trimrx",
+  subtitle: "Two mid-tier programs, opposite bets: Sprout's speed and brand option vs trimrx's custom dosing and unlimited check-ins.",
+  description:
+    "Sprout ($149/mo semaglutide, ships in 2 days, Wegovy available) vs trimrx ($179 first month then $299, custom dosing, unlimited check-ins). Compared honestly.",
+  intro:
+    "Sprout and trimrx occupy the same mid-market tier with opposite bets. Sprout keeps its price flat-ish and its logistics fast: semaglutide from $149/month, tirzepatide from $199, prescriptions shipped within 2 days, $200 off month one, and a brand-name Wegovy option. trimrx spends its budget on the care model: custom dosing set by your provider with unlimited check-ins included - but its $179 semaglutide is a first-month rate (regularly $299), tirzepatide runs $259, and its Trustpilot record is a mixed 3.6 across 5,497 reviews.",
+  verdict:
+    "Sprout takes this one on price honesty: its $149/$199 starting prices hold, while trimrx's $179 headline becomes $299 after month one - by month three, Sprout is $150/month cheaper on semaglutide. Add 2-day fulfillment and the Wegovy option, and Sprout is the stronger default. trimrx keeps a real counter-case: if custom dosing with unlimited provider check-ins is the care model you want, it's the only one of the two selling it - just budget for the $299 regular rate, not the $179 door price.",
+  verdictWinnerPoints: [
+    "$149/mo semaglutide holds; trimrx's $179 becomes $299",
+    "Prescriptions shipped within 2 days",
+    "Brand-name Wegovy available - trimrx is compounded-only",
+  ],
+  verdictLoserPoints: [
+    "Custom dosing set by your provider",
+    "Unlimited check-ins included",
+    "Free tracked delivery, often next-day",
+  ],
+  winnerId: "sprout",
+  categories: [
+    {
+      name: "Real Monthly Price",
+      winner: "provider1",
+      explanation:
+        "Sticker vs reality: Sprout starts at $149 semaglutide/$199 tirzepatide and those are the ongoing rates. trimrx advertises $179 - but that's the first-month price; the regular rate is $299, with tirzepatide at $259. Priced over a year, Sprout's $200 first-month discount only widens the gap.",
+      supportingPoints: [
+        "$149 ongoing vs $299 after month one (Sprout)",
+        "$199 vs $259 tirzepatide (Sprout)",
+        "$200 off month one on top (Sprout)",
+      ],
+    },
+    {
+      name: "Care Model",
+      winner: "provider2",
+      explanation:
+        "trimrx's genuine differentiator: dosing customized by your provider rather than a fixed protocol, with unlimited check-ins between refills at no extra charge. Sprout's plans are personalized at setup, but trimrx builds the ongoing clinical relationship deeper into the product.",
+      supportingPoints: [
+        "Custom dosing, not fixed protocols (trimrx)",
+        "Unlimited provider check-ins included (trimrx)",
+        "Personalized plan at intake (Sprout)",
+      ],
+    },
+    {
+      name: "Speed",
+      winner: "tie",
+      explanation:
+        "Both are fast. Sprout ships prescriptions within 2 days of approval; trimrx's free tracked delivery often arrives the day after your prescription is issued. Neither will keep you waiting a week.",
+      supportingPoints: [
+        "Ships within 2 days (Sprout)",
+        "Often next-day tracked delivery (trimrx)",
+      ],
+    },
+    {
+      name: "Medication Choice",
+      winner: "provider1",
+      explanation:
+        "Both prescribe compounded semaglutide and tirzepatide. Sprout adds brand-name Wegovy from $1,799/month; trimrx has no branded option at any price.",
+      supportingPoints: [
+        "Brand-name Wegovy available (Sprout)",
+        "Compounded semaglutide + tirzepatide (both)",
+      ],
+    },
+    {
+      name: "Track Record",
+      winner: "tie",
+      explanation:
+        "Neither side wins this cleanly. trimrx publishes a large record - 5,497 Trustpilot reviews - but at a 3.6 average, the weakest published score among providers we rank. Sprout's visible reviews are positive and name its support team specifically, but it publishes no aggregate at all. Volume with mixed marks vs positivity without scale: call it even, and read both.",
+      supportingPoints: [
+        "3.6 across 5,497 reviews - big but mixed (trimrx)",
+        "Positive individual reviews, no aggregate (Sprout)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Starting Price", provider1Value: "$149/mo semaglutide · $199 tirzepatide", provider2Value: "$179 first month (reg. $299) · $259 tirzepatide", highlight: "provider1" },
+    { feature: "Price after month one", provider1Value: "$149 (ongoing)", provider2Value: "$299 regular rate", highlight: "provider1" },
+    { feature: "Brand-name option", provider1Value: "Wegovy from $1,799/mo", provider2Value: "None", highlight: "provider1" },
+    { feature: "Shipping", provider1Value: "Ships within 2 days", provider2Value: "Free tracked, often next-day", highlight: "both" },
+    { feature: "Care model", provider1Value: "Personalized plans", provider2Value: "Custom dosing + unlimited check-ins", highlight: "provider2" },
+    { feature: "Trustpilot", provider1Value: "No published aggregate", provider2Value: "3.6 across 5,497 reviews", highlight: "none" },
+  ],
+};
+
+const sproutWellmedrBattle: BattleData = {
+  slug: "sprout-vs-wellmedr",
+  provider1Id: "wellmedr",
+  provider2Id: "sprout",
+  title: "Sprout vs wellmedr: Which GLP-1 Provider Is Right for You in 2026?",
+  matchupLabel: "Sprout vs wellmedr",
+  subtitle: "The market's lowest prices and a million-patient record vs 2-day fulfillment and a brand-name Wegovy option.",
+  description:
+    "wellmedr ($59/mo semaglutide, 4.7 on Trustpilot, 1M+ patients) vs Sprout ($149/mo, ships in 2 days, Wegovy available). Real prices and an honest verdict.",
+  intro:
+    "On paper this looks lopsided - wellmedr's $59/month semaglutide and $99 tirzepatide are the lowest prices in our ranking, backed by 1,000,000+ patients, a 4.7 Trustpilot average across 1,205 reviews and a weight-loss warranty. But the fine print gives Sprout its openings: wellmedr's headline rate takes a 12-month plan and standard delivery runs 3-5 business days, while Sprout ships within 2 days, takes $200 off your first month, and stocks brand-name Wegovy - something wellmedr's brand shelf (Ozempic $1,399, Zepbound $1,599) doesn't carry.",
+  verdict:
+    "wellmedr wins for anyone whose priority is price or proof: $90/month cheaper on semaglutide, $100 cheaper on tirzepatide, a 4.7 published record and a warranty behind it. Sprout's case is narrower but real: you want your prescription inside 2 days rather than 3-5, you want Wegovy specifically (wellmedr stocks Ozempic and Zepbound, not Wegovy), or you don't want a 12-month plan attached to your best rate. If none of those three apply, take the $59.",
+  verdictWinnerPoints: [
+    "$59/mo semaglutide, $99 tirzepatide - lowest in our ranking",
+    "4.7 on Trustpilot across 1,205 reviews; 1M+ patients",
+    "Weight-loss warranty + Medical Weight-Care Coach included",
+  ],
+  verdictLoserPoints: [
+    "Prescriptions shipped within 2 days (vs 3-5 business days)",
+    "Brand-name Wegovy available - wellmedr doesn't stock it",
+    "$200 off month one, no 12-month plan for the listed rate",
+  ],
+  winnerId: "wellmedr",
+  categories: [
+    {
+      name: "Price",
+      winner: "provider1",
+      explanation:
+        "wellmedr's $59/month semaglutide and $99 tirzepatide - the same price at every dose - undercut Sprout's $149/$199 by $90-100/month. The catch is commitment: the $59 rate locks on a 12-month plan. Even so, Sprout's $200 first-month discount doesn't come close to closing a $1,080/year gap.",
+      supportingPoints: [
+        "$59 vs $149 semaglutide (wellmedr)",
+        "$99 vs $199 tirzepatide (wellmedr)",
+        "Same price at every dose (wellmedr)",
+      ],
+    },
+    {
+      name: "Track Record",
+      winner: "provider1",
+      explanation:
+        "wellmedr pairs scale with score: medications used by over a million patients, a 4.7 Trustpilot average across 1,205 reviews, and a weight-loss warranty. Sprout's visible reviews are positive - responsive support comes up repeatedly - but there's no published aggregate and no comparable scale claim.",
+      supportingPoints: [
+        "1,000,000+ patients (wellmedr)",
+        "4.7 across 1,205 Trustpilot reviews (wellmedr)",
+        "Positive individual reviews, no aggregate (Sprout)",
+      ],
+    },
+    {
+      name: "Speed",
+      winner: "provider2",
+      explanation:
+        "Sprout ships prescriptions within 2 days of approval. wellmedr's standard delivery runs about 3-5 business days on a 4-week refill cadence. Not a huge gap, but if you're timing a switch against your last dose, Sprout's is the safer calendar.",
+      supportingPoints: [
+        "Ships within 2 days (Sprout)",
+        "About 3-5 business days (wellmedr)",
+      ],
+    },
+    {
+      name: "Brand-Name Options",
+      winner: "tie",
+      explanation:
+        "Both stock brands - different ones. wellmedr lists Ozempic from $1,399 and Zepbound from $1,599; Sprout lists Wegovy from $1,799. If your prescriber wants Wegovy specifically, only Sprout has it; for Ozempic or Zepbound, only wellmedr. Choose by the pen you actually need.",
+      supportingPoints: [
+        "Ozempic + Zepbound (wellmedr)",
+        "Wegovy (Sprout)",
+      ],
+    },
+    {
+      name: "Support Layer",
+      winner: "provider1",
+      explanation:
+        "wellmedr includes a Medical Weight-Care Coach on every plan and backs results with its weight-loss warranty - and its reviews describe support that reworks plans when money gets tight. Sprout's support earns specific praise too ('quick to respond... the process worked seamlessly'), but the bundled coach and warranty give wellmedr the deeper package.",
+      supportingPoints: [
+        "Medical Weight-Care Coach on every plan (wellmedr)",
+        "Weight-loss warranty (wellmedr)",
+        "Responsive, named support reps in reviews (Sprout)",
+      ],
+    },
+  ],
+  features: [
+    { feature: "Starting Price", provider1Value: "$59/mo semaglutide · $99 tirzepatide (12-mo plan)", provider2Value: "$149/mo semaglutide · $199 tirzepatide", highlight: "provider1" },
+    { feature: "Commitment", provider1Value: "12-month plan for the lowest rate", provider2Value: "$200 off month one; see site for terms", highlight: "provider2" },
+    { feature: "Shipping", provider1Value: "Free, 3-5 business days, every 4 weeks", provider2Value: "Ships within 2 days", highlight: "provider2" },
+    { feature: "Brand-name shelf", provider1Value: "Ozempic $1,399 · Zepbound $1,599", provider2Value: "Wegovy from $1,799", highlight: "both" },
+    { feature: "Trustpilot", provider1Value: "4.7 across 1,205 reviews", provider2Value: "No published aggregate", highlight: "provider1" },
+    { feature: "Guarantee", provider1Value: "Weight-loss warranty", provider2Value: "-", highlight: "provider1" },
+  ],
+};
+
 // ───── Brand casing normalization ─────
 // Canonical provider names (keyed by provider id or normalized name).
 const CANONICAL_NAMES: Record<string, string> = {
@@ -3832,6 +4172,10 @@ function buildInitialConfig(): SiteConfig {
       sequenceTrimrxBattle,
       sequenceMedviBattle,
       healthrxMedviBattle,
+      embodySproutBattle,
+      altrxSproutBattle,
+      sproutTrimrxBattle,
+      sproutWellmedrBattle,
     ],
     sidebars: [
       {
