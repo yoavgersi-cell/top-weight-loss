@@ -1,40 +1,146 @@
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Check, Star, Syringe, Sparkles, Dumbbell, HeartPulse, ShieldCheck } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, Star, ShieldCheck } from "lucide-react";
 import { VERTICALS, DEFAULT_VERTICAL, isPublishedVertical, type Provider, type RankingPosition, type ReviewData } from "@/lib/config";
 import { getConfig } from "@/lib/config-store";
 import { ProviderCta } from "@/components/provider-cta";
 
-// Decorative category icons (visual only - no data implied).
-const VERTICAL_ICON: Record<string, typeof Syringe> = {
-  "weight-loss": Syringe,
-  "hair-loss": Sparkles,
-  trt: Dumbbell,
-  hrt: HeartPulse,
+// ───── Category icons ─────
+// Hand-drawn two-tone line icons (outline + light fill), matching the
+// comparison-publisher look: detailed enough to feel bespoke, drawn inline so
+// there are no external assets. Purely decorative - no data implied.
+const ICON_STROKE = "#1673B9";
+const ICON_FILL = "#DCEDF9";
+
+function WeightLossIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 64" fill="none" className={className} aria-hidden="true">
+      {/* apple body */}
+      <path
+        d="M32 19c-3.5-4.5-10-5.5-14.5-2C11 21.5 9 31.5 13.5 41c3.5 7.5 9.5 12 13.5 12 2 0 3.5-1 5-1s3 1 5 1c4 0 10-4.5 13.5-12C55 31.5 53 21.5 46.5 17 42 13.5 35.5 14.5 32 19z"
+        fill={ICON_FILL}
+        stroke={ICON_STROKE}
+        strokeWidth="2.2"
+        strokeLinejoin="round"
+      />
+      {/* stem + leaf */}
+      <path d="M32 18v-7" stroke={ICON_STROKE} strokeWidth="2.2" strokeLinecap="round" />
+      <path
+        d="M33.5 12.5c1.5-4.5 5.5-7 10.5-6.5-.5 5-3.5 8.5-8.5 9.5"
+        fill="#fff"
+        stroke={ICON_STROKE}
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+      {/* measuring tape wrapped across the apple */}
+      <path
+        d="M8 31.5c9 3.8 39 3.8 48 0v9c-9 3.8-39 3.8-48 0z"
+        fill="#fff"
+        stroke={ICON_STROKE}
+        strokeWidth="2.2"
+        strokeLinejoin="round"
+      />
+      <path d="M15 34.5v4M22 35.5v4M29 36v4M36 36v4M43 35.5v4M50 34.5v4" stroke={ICON_STROKE} strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function HairGrowthIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 64" fill="none" className={className} aria-hidden="true">
+      {/* skin cross-section */}
+      <path
+        d="M11 39h42v11a5 5 0 0 1-5 5H16a5 5 0 0 1-5-5z"
+        fill={ICON_FILL}
+        stroke={ICON_STROKE}
+        strokeWidth="2.2"
+        strokeLinejoin="round"
+      />
+      {/* follicle root + bulb */}
+      <path d="M32 39v9" stroke={ICON_STROKE} strokeWidth="2.2" strokeLinecap="round" />
+      <circle cx="32" cy="50" r="2.6" fill="#fff" stroke={ICON_STROKE} strokeWidth="2" />
+      {/* growing hairs */}
+      <path d="M32 39c0-8-5-10-7.5-16.5" stroke={ICON_STROKE} strokeWidth="2.2" strokeLinecap="round" />
+      <path d="M32 39c1.5-7 6.5-8.5 7.5-15" stroke={ICON_STROKE} strokeWidth="2.2" strokeLinecap="round" />
+      {/* sparkles */}
+      <path d="M46 14v8M42 18h8" stroke={ICON_STROKE} strokeWidth="2" strokeLinecap="round" />
+      <path d="M18 12v5M15.5 14.5h5" stroke={ICON_STROKE} strokeWidth="1.7" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function TrtIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 64" fill="none" className={className} aria-hidden="true">
+      {/* dumbbell - unmistakable at small sizes */}
+      {/* outer plates */}
+      <rect x="6" y="22" width="7" height="20" rx="3" fill={ICON_FILL} stroke={ICON_STROKE} strokeWidth="2.2" />
+      <rect x="51" y="22" width="7" height="20" rx="3" fill={ICON_FILL} stroke={ICON_STROKE} strokeWidth="2.2" />
+      {/* inner plates */}
+      <rect x="15" y="17" width="9" height="30" rx="3.5" fill={ICON_FILL} stroke={ICON_STROKE} strokeWidth="2.2" />
+      <rect x="40" y="17" width="9" height="30" rx="3.5" fill={ICON_FILL} stroke={ICON_STROKE} strokeWidth="2.2" />
+      {/* bar */}
+      <path d="M24 32h16" stroke={ICON_STROKE} strokeWidth="3" strokeLinecap="round" />
+      {/* effort sparkle */}
+      <path d="M50 8v7M46.5 11.5h7" stroke={ICON_STROKE} strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function HrtIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 64" fill="none" className={className} aria-hidden="true">
+      {/* droplet */}
+      <path
+        d="M32 8C24 19 15 28 15 38.5 15 48 22.5 55 32 55s17-7 17-16.5C49 28 40 19 32 8z"
+        fill={ICON_FILL}
+        stroke={ICON_STROKE}
+        strokeWidth="2.2"
+        strokeLinejoin="round"
+      />
+      {/* inner highlight crescent */}
+      <path d="M23 39c0 5 3.5 9 8 10" stroke={ICON_STROKE} strokeWidth="2" strokeLinecap="round" />
+      {/* balance sparkles - hormone equilibrium */}
+      <path d="M52 14v7M48.5 17.5h7" stroke={ICON_STROKE} strokeWidth="2" strokeLinecap="round" />
+      <path d="M11 10v5M8.5 12.5h5" stroke={ICON_STROKE} strokeWidth="1.7" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+const VERTICAL_ICON: Record<string, (p: { className?: string }) => React.JSX.Element> = {
+  "weight-loss": WeightLossIcon,
+  "hair-loss": HairGrowthIcon,
+  trt: TrtIcon,
+  hrt: HrtIcon,
 };
 
-// Short, umbrella-brand blurbs per category.
-const CATEGORY_COPY: Record<string, string> = {
-  "weight-loss": "GLP-1 injections, pills and telehealth programs compared on price, support and results.",
-  "hair-loss": "Finasteride, minoxidil and doctor-led regrowth plans, side by side.",
-  trt: "Testosterone replacement therapy, prescribed and managed online.",
-  hrt: "Menopause and hormone therapy providers, treatments and support.",
+// Display names tuned for the category grid (treatment-led, like a
+// comparison publisher, rather than condition-led).
+const CATEGORY_NAME: Record<string, string> = {
+  "weight-loss": "Weight Loss",
+  "hair-loss": "Hair Growth Treatments",
+  trt: "TRT",
+  hrt: "HRT",
 };
 
 // Real, keyword-rich internal links surfaced on a live category card. Only
-// routes that actually exist are listed here.
+// routes that actually exist are listed here - all hub-prefixed so they
+// resolve without a redirect hop.
 const CATEGORY_LINKS: Record<string, { label: string; href: string }[]> = {
   "weight-loss": [
-    { label: "GLP-1 injections", href: "/weight-loss" },
-    { label: "Weight-loss pills", href: "/weight-loss-pills" },
-    { label: "Ozempic alternatives", href: "/ozempic-alternatives" },
+    { label: "Injections", href: "/weight-loss" },
+    { label: "Pills & tablets", href: "/weight-loss/weight-loss-pills" },
+    { label: "Cheapest GLP-1", href: "/weight-loss/cheapest-glp1" },
+    { label: "Switch from Ozempic", href: "/weight-loss/switch-from-ozempic" },
   ],
   "hair-loss": [
-    { label: "Compare providers", href: "/hair-loss" },
-    { label: "Maximus vs Happy Head", href: "/hair-loss/maximus-vs-happy-head" },
+    { label: "All treatments", href: "/hair-loss" },
+    { label: "Reviews", href: "/hair-loss/reviews" },
+    { label: "Guides", href: "/hair-loss/articles" },
   ],
   trt: [
-    { label: "Compare TRT providers", href: "/trt" },
-    { label: "Maximus vs Hims", href: "/trt/maximus-vs-hims" },
+    { label: "Compare providers", href: "/trt" },
+    { label: "Reviews", href: "/trt/reviews" },
+    { label: "Guides", href: "/trt/articles" },
   ],
 };
 
@@ -160,62 +266,78 @@ export async function HubHome() {
   return (
     <div className="bg-white">
       {/* ───── HERO ───── */}
-      <section className="bg-gradient-to-b from-[#EAF2F8] to-white">
-        <div className="mx-auto max-w-[1100px] px-5 py-16 text-center sm:px-8 sm:py-24">
-          <h1 className="mx-auto max-w-[900px] text-[34px] font-extrabold leading-[1.08] tracking-[-0.02em] text-[#191919] sm:text-[54px]">
-            Compare the Best Online Treatment Providers for Your Needs
+      <section className="bg-gradient-to-b from-[#E8F3FB] via-[#F3F9FD] to-white">
+        <div className="mx-auto max-w-[1100px] px-5 pb-14 pt-14 text-center sm:px-8 sm:pb-20 sm:pt-20">
+          <h1 className="mx-auto max-w-[950px] text-[36px] font-extrabold leading-[1.06] tracking-[-0.025em] text-[#111] sm:text-[62px]">
+            Compare the Best Health &amp; Wellness Services for Your Needs
           </h1>
-          <p className="mx-auto mt-6 max-w-[640px] text-[17px] leading-relaxed text-gray-600 sm:text-[19px]">
-            Independent rankings across weight loss, hair loss, TRT and HRT - based on pricing, medical
-            support and real customer reviews.
+          <p className="mx-auto mt-6 max-w-[680px] text-[16.5px] leading-relaxed text-gray-600 sm:mt-8 sm:text-[21px]">
+            Independent rankings across weight loss, hair growth, TRT and HRT - real published prices
+            and verified customer reviews.
           </p>
 
-          {/* Category cards */}
-          <div className="mx-auto mt-12 grid max-w-[820px] gap-4 text-left sm:grid-cols-2">
+          {/* Category cards - icon-led, links behind a divider */}
+          <div className="mx-auto mt-10 grid max-w-[880px] gap-4 text-left sm:mt-14 sm:grid-cols-2">
             {VERTICALS.map((v) => {
               const live = isPublishedVertical(v.id);
-              const Icon = VERTICAL_ICON[v.id] ?? Syringe;
+              const Icon = VERTICAL_ICON[v.id] ?? WeightLossIcon;
+              const name = CATEGORY_NAME[v.id] ?? v.name;
               const links = live ? CATEGORY_LINKS[v.id] ?? [] : [];
 
-              return (
-                <div
-                  key={v.id}
-                  className="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 text-left shadow-sm"
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EAF2F8] text-[#0C4B75]">
-                      <Icon className="h-5 w-5" strokeWidth={2} />
-                    </span>
-                    <div>
-                      {live ? (
-                        <Link href={`/${v.id}`} className="text-[17px] font-bold text-[#191919] hover:text-[#0C4B75]">
-                          {v.name}
-                        </Link>
-                      ) : (
-                        <span className="text-[17px] font-bold text-[#191919]">{v.name}</span>
-                      )}
+              if (links.length === 0) {
+                // Icon + name only (unpublished categories) - centered, calm.
+                return (
+                  <div
+                    key={v.id}
+                    className="flex items-center justify-center gap-4 rounded-2xl border border-gray-200/80 bg-white px-6 py-7 shadow-[0_1px_3px_rgba(16,42,67,0.06)]"
+                  >
+                    <Icon className="h-[52px] w-[52px] shrink-0" />
+                    <div className="text-left">
+                      <span className="block text-[17px] font-bold leading-snug text-[#191919]">{name}</span>
                       {!live && (
-                        <span className="ml-2 rounded-full bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-400">
+                        <span className="mt-1 inline-block rounded-full bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-400">
                           Coming soon
                         </span>
                       )}
                     </div>
                   </div>
-                  <p className="mt-3 text-[13.5px] leading-relaxed text-gray-500">{CATEGORY_COPY[v.id] ?? v.tagline}</p>
-                  {links.length > 0 && (
-                    <div className="mt-4 space-y-2 border-t border-gray-100 pt-4">
-                      {links.map((l) => (
-                        <Link
-                          key={l.href}
-                          href={l.href}
-                          className="group flex items-center justify-between text-[14px] font-semibold text-gray-700 hover:text-[#0C4B75]"
-                        >
-                          {l.label}
-                          <ArrowRight className="h-4 w-4 text-gray-300 transition-transform group-hover:translate-x-0.5 group-hover:text-[#0C4B75]" strokeWidth={2.5} />
-                        </Link>
-                      ))}
-                    </div>
-                  )}
+                );
+              }
+
+              return (
+                <div
+                  key={v.id}
+                  className="flex items-stretch gap-5 rounded-2xl border border-gray-200/80 bg-white p-5 shadow-[0_1px_3px_rgba(16,42,67,0.06)] transition-shadow hover:shadow-[0_4px_14px_rgba(16,42,67,0.10)] sm:p-6"
+                >
+                  {/* Icon + category name */}
+                  <div className="flex w-[124px] shrink-0 flex-col items-center justify-center gap-3 text-center">
+                    <Icon className="h-[56px] w-[56px]" />
+                    <Link
+                      href={`/${v.id}`}
+                      className="text-[16.5px] font-bold leading-[1.25] text-[#191919] hover:text-[#0C4B75]"
+                    >
+                      {name}
+                    </Link>
+                  </div>
+
+                  <div className="w-px self-stretch bg-gray-200" />
+
+                  {/* Arrow links */}
+                  <div className="flex flex-1 flex-col justify-center gap-2.5 py-1">
+                    {links.map((l) => (
+                      <Link
+                        key={l.href}
+                        href={l.href}
+                        className="group inline-flex items-center gap-2 text-[14.5px] font-medium text-gray-700 hover:text-[#0C4B75]"
+                      >
+                        {l.label}
+                        <ArrowRight
+                          className="h-4 w-4 text-gray-400 transition-transform group-hover:translate-x-0.5 group-hover:text-[#0C4B75]"
+                          strokeWidth={2.2}
+                        />
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               );
             })}
@@ -252,7 +374,7 @@ export async function HubHome() {
             <div className="flex flex-wrap items-end justify-between gap-3">
               <div>
                 <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-[#0C4B75]">Weight loss</p>
-                <h2 className="mt-1.5 text-[26px] font-bold leading-tight tracking-[-0.01em] text-[#191919] sm:text-[30px]">
+                <h2 className="mt-1.5 text-[26px] font-bold leading-tight tracking-[-0.015em] text-[#191919] sm:text-[32px]">
                   Top-rated providers this month
                 </h2>
               </div>
@@ -277,7 +399,7 @@ export async function HubHome() {
       {articles.length > 0 && (
         <section className="border-t border-gray-200 bg-white">
           <div className="mx-auto max-w-[1100px] px-5 py-14 sm:px-8 sm:py-16">
-            <h2 className="text-[26px] font-bold tracking-[-0.01em] text-[#191919] sm:text-[30px]">
+            <h2 className="text-[26px] font-bold tracking-[-0.015em] text-[#191919] sm:text-[32px]">
               TreatmentsHub Editor&rsquo;s Picks
             </h2>
             <p className="mt-2 max-w-[560px] text-[15px] leading-relaxed text-gray-500">
@@ -327,7 +449,7 @@ export async function HubHome() {
       <section className="border-t border-gray-200 bg-[#FAFAFA]">
         <div className="mx-auto max-w-[1100px] px-5 py-16 sm:px-8 sm:py-20">
           <div className="max-w-[720px]">
-            <h2 className="text-[24px] font-bold tracking-[-0.01em] text-[#191919] sm:text-[28px]">
+            <h2 className="text-[26px] font-bold tracking-[-0.015em] text-[#191919] sm:text-[32px]">
               How TreatmentsHub compares providers
             </h2>
             <p className="mt-4 text-[16.5px] leading-[1.7] text-gray-600">
