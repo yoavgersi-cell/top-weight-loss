@@ -48,22 +48,17 @@ function HairGrowthIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 64 64" fill="none" className={className} aria-hidden="true">
       {/* skin cross-section */}
-      <path
-        d="M11 39h42v11a5 5 0 0 1-5 5H16a5 5 0 0 1-5-5z"
-        fill={ICON_FILL}
-        stroke={ICON_STROKE}
-        strokeWidth="2.2"
-        strokeLinejoin="round"
-      />
-      {/* follicle root + bulb */}
-      <path d="M32 39v9" stroke={ICON_STROKE} strokeWidth="2.2" strokeLinecap="round" />
-      <circle cx="32" cy="50" r="2.6" fill="#fff" stroke={ICON_STROKE} strokeWidth="2" />
-      {/* growing hairs */}
-      <path d="M32 39c0-8-5-10-7.5-16.5" stroke={ICON_STROKE} strokeWidth="2.2" strokeLinecap="round" />
-      <path d="M32 39c1.5-7 6.5-8.5 7.5-15" stroke={ICON_STROKE} strokeWidth="2.2" strokeLinecap="round" />
+      <rect x="13" y="37" width="38" height="15" rx="4" fill={ICON_FILL} stroke={ICON_STROKE} strokeWidth="2.2" />
+      {/* follicle root + bulb under the surface */}
+      <path d="M32 37v7" stroke={ICON_STROKE} strokeWidth="2.2" strokeLinecap="round" />
+      <circle cx="32" cy="46.5" r="2.4" fill="#fff" stroke={ICON_STROKE} strokeWidth="2" />
+      {/* two hairs - different heights, flowing the same way */}
+      <path d="M32 37c-2-5.5-.2-9.5-2.8-15.5" stroke={ICON_STROKE} strokeWidth="2.2" strokeLinecap="round" />
+      <path d="M32 37c2.6-3.5 3.2-7.5 2.4-11.5" stroke={ICON_STROKE} strokeWidth="2.2" strokeLinecap="round" />
       {/* sparkles */}
-      <path d="M46 14v8M42 18h8" stroke={ICON_STROKE} strokeWidth="2" strokeLinecap="round" />
-      <path d="M18 12v5M15.5 14.5h5" stroke={ICON_STROKE} strokeWidth="1.7" strokeLinecap="round" />
+      <path d="M44 13v8M40 17h8" stroke={ICON_STROKE} strokeWidth="2" strokeLinecap="round" />
+      <path d="M20 11v5.5M17.25 13.75h5.5" stroke={ICON_STROKE} strokeWidth="1.7" strokeLinecap="round" />
+      <circle cx="49" cy="28" r="1.4" fill={ICON_STROKE} />
     </svg>
   );
 }
