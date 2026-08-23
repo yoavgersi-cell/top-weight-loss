@@ -79,7 +79,7 @@ export function PriceIndex({
               </div>
               <p className="mt-1 text-[13px] leading-snug text-gray-500">{row.edge}</p>
               <p className="mt-1.5 text-[12px] text-gray-400">
-                Ships {row.shipping}
+                {row.shipping}
                 {" · "}
                 {row.trustpilot
                   ? `Trustpilot ${row.trustpilot.rating} across ${row.trustpilot.count} reviews`
