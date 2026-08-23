@@ -45,6 +45,61 @@ const BATTLE_COST_MATH: Record<
     ],
     note: "Semaglutide at each provider's current published rate, promo conditions applied as published: embody $69/mo promotional (regularly $79), month to month; Medvi $99/mo promotional (regularly $199), all-inclusive with dietician and care coaching. Neither requires a prepaid term.",
   },
+  // provider1 = embody, provider2 = altRx (slug order is reversed)
+  "altrx-vs-embody": {
+    rows: [
+      ["First month (semaglutide)", "$69", "$89"],
+      ["6-month total", "$414", "$534"],
+      ["12-month total", "$828", "$1,068"],
+      ["Tirzepatide, monthly", "$119 (reg. $129)", "$149 (reg. $299)"],
+      ["If the promo ends", "$79/mo regular - $948/yr", "$199/mo regular - $2,388/yr"],
+    ],
+    note: "Semaglutide at each provider's current published rate: embody $69/mo promotional (regularly $79), month to month; altRx $89/mo promotional (regularly $199), flat at every dose with pause-anytime terms and Buy Now, Pay Later. Neither requires a prepaid term.",
+  },
+  // provider1 = embody, provider2 = wellmedr
+  "embody-vs-wellmedr": {
+    rows: [
+      ["First month (semaglutide)", "$69", "$59"],
+      ["6-month total", "$414", "$354"],
+      ["12-month total", "$828", "$708"],
+      ["Tirzepatide, monthly", "$119 (reg. $129)", "$99"],
+      ["The condition", "$69 is promotional (reg. $79); month to month", "$59 locks on a 12-month plan"],
+    ],
+    note: "Semaglutide at each provider's published rate: embody $69/mo promotional (regularly $79) with no commitment; wellmedr $59/mo on a 12-month plan, billed monthly, same price at every dose. wellmedr wins the year by $120 - embody wins the exit terms.",
+  },
+  // provider1 = Medvi, provider2 = HealthRx
+  "healthrx-vs-medvi": {
+    rows: [
+      ["First payment (semaglutide)", "$99", "$1,188 at checkout"],
+      ["6-month total", "$594", "No partial-year plan published"],
+      ["12-month total", "$1,188", "$1,188"],
+      ["Tirzepatide, monthly", "$166 promo (reg. $299)", "from $179"],
+      ["The condition", "$99 is promotional (reg. $199)", "$99/mo is contractual for the prepaid year"],
+    ],
+    note: "The year totals tie at $1,188 - the structures don't: Medvi bills $99 monthly at a promotional rate (regularly $199) with no prepay; HealthRx charges the full $1,188 at checkout, which locks the rate for 12 months regardless of promos.",
+  },
+  // provider1 = embody, provider2 = trimrx
+  "embody-vs-trimrx": {
+    rows: [
+      ["First month (semaglutide)", "$69", "$179"],
+      ["6-month total", "$414", "$1,674"],
+      ["12-month total", "$828", "$3,468"],
+      ["Tirzepatide, monthly", "$119 (reg. $129)", "$259"],
+      ["The condition", "$69 is promotional (reg. $79)", "$179 is month one only - $299 regular after"],
+    ],
+    note: "Semaglutide at published rates: embody $69/mo promotional (regularly $79), the same every month. trimrx's $179 is a first-month rate - months 2-12 bill at the $299 regular price, which is what drives the $3,468 year.",
+  },
+  // provider1 = embody, provider2 = Sprout
+  "embody-vs-sprout": {
+    rows: [
+      ["First month (semaglutide)", "$69", "$149 with $200 off applied"],
+      ["6-month total", "$414", "$694"],
+      ["12-month total", "$828", "$1,588"],
+      ["Tirzepatide, monthly", "$119 (reg. $129)", "$199"],
+      ["The condition", "$69 is promotional (reg. $79)", "$149 starting price; $200 off month one"],
+    ],
+    note: "Semaglutide at published rates: embody $69/mo promotional (regularly $79), month to month. Sprout starts at $149/mo with a standing $200 first-month discount applied to the year totals; confirm current plan terms on Sprout's site.",
+  },
 };
 
 const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
