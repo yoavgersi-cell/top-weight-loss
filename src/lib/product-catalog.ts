@@ -194,7 +194,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     regularPrice: "$299",
     priceNote: "flat at every dose",
     shipping: "Free shipping",
-    image: "/products/altrx-glp1.webp",
+    image: "/products/altrx-glp1-tight.webp",
   },
   {
     id: "medvi-tirzepatide",

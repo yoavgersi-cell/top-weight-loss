@@ -11,6 +11,23 @@ import { AFFILIATE_PROVIDER_IDS } from "@/lib/config";
 // CTA. Cards without a supplied product image render a provider-logo tile
 // rather than an invented product shot.
 
+// Medication chip on the image corner: similar vials from one provider (or
+// one shared creative) read as duplicates without a fast visual differentiator.
+const MEDICATION_CHIP: Record<string, { label: string; className: string }> = {
+  semaglutide: { label: "Semaglutide", className: "bg-sky-50 text-sky-700 ring-sky-200" },
+  tirzepatide: { label: "Tirzepatide", className: "bg-violet-50 text-violet-700 ring-violet-200" },
+};
+
+function chipFor(product: CatalogProduct): { label: string; className: string } {
+  if (product.format === "drops")
+    return { label: `${product.medication === "semaglutide" ? "Sema" : "Tirz"} drops`, className: "bg-teal-50 text-teal-700 ring-teal-200" };
+  if (product.format === "tablet")
+    return { label: "Tablets", className: "bg-teal-50 text-teal-700 ring-teal-200" };
+  if (product.id === "sprout-wegovy")
+    return { label: "Brand-name", className: "bg-amber-50 text-amber-700 ring-amber-200" };
+  return MEDICATION_CHIP[product.medication];
+}
+
 function ProductCard({
   product,
   provider,
@@ -22,6 +39,7 @@ function ProductCard({
   position: number;
   pageType: "listing" | "review" | "battle";
 }) {
+  const chip = chipFor(product);
   return (
     <div className="flex w-[200px] shrink-0 snap-start flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition-shadow hover:shadow-md sm:w-[212px]">
       <ProviderCta
@@ -34,7 +52,14 @@ function ProductCard({
         className="flex flex-1 flex-col"
       >
         {/* Product image - or logo tile when no real product shot exists */}
-        <div className="flex h-[150px] items-center justify-center border-b border-gray-100 bg-white p-3">
+        <div className="relative flex h-[150px] items-center justify-center border-b border-gray-100 bg-white p-3">
+          {chip && (
+            <span
+              className={`absolute left-2 top-2 z-10 rounded-full px-2 py-0.5 text-[10px] font-bold ring-1 ${chip.className}`}
+            >
+              {chip.label}
+            </span>
+          )}
           {product.image ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
