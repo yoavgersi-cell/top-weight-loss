@@ -201,11 +201,11 @@ export default async function SwitchFromOzempicPage() {
         {/* How the switch works */}
         <section className="mb-12">
           <h2 className="mb-5 text-[22px] font-bold text-[#191919]">How the switch actually works</h2>
-          <div className="space-y-3">
+          <div className="divide-y divide-gray-100 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
             {steps.map((s, i) => (
-              <div key={i} className="flex gap-4 rounded-xl border border-gray-200 bg-white p-5">
-                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#0C4B75] text-[13px] font-bold text-white">
-                  {i + 1}
+              <div key={i} className="flex gap-4 p-5 sm:gap-5 sm:p-6">
+                <span className="text-[22px] font-extrabold leading-none text-gray-200 [font-variant-numeric:tabular-nums]">
+                  {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
                   <p className="mb-1 text-[15.5px] font-bold text-[#191919]">{s.title}</p>
@@ -216,45 +216,162 @@ export default async function SwitchFromOzempicPage() {
           </div>
         </section>
 
-        {/* What to verify */}
+        {/* Where you are in the titration - the clinical context for the intake */}
         <section className="mb-12">
-          <div className="mb-4 flex items-center gap-2">
-            <ShieldCheck className="h-5 w-5 text-[#0C4B75]" strokeWidth={2} />
-            <h2 className="text-[22px] font-bold text-[#191919]">What to verify before you switch</h2>
+          <h2 className="mb-3 text-[22px] font-bold text-[#191919]">
+            Know your dose before the intake: the standard titration ladders
+          </h2>
+          <p className="mb-5 max-w-[720px] text-[14px] text-gray-500">
+            The intake will ask what you take and at what dose - answer from your pen or your pharmacy
+            label, not from memory. For reference, these are the FDA-label titration schedules for the
+            brand drugs people switch from:
+          </p>
+          <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
+            <table className="w-full min-w-[680px] border-collapse text-left">
+              <thead>
+                <tr className="border-b-2 border-gray-200 bg-gray-50/80">
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Brand drug</th>
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Starting dose</th>
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Escalation steps</th>
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Full / maintenance dose</th>
+                </tr>
+              </thead>
+              <tbody className="text-[13.5px]">
+                {[
+                  [
+                    "Wegovy (semaglutide)",
+                    "0.25 mg weekly, weeks 1-4",
+                    "0.5 mg → 1 mg → 1.7 mg, stepping up every 4 weeks",
+                    "2.4 mg weekly",
+                  ],
+                  [
+                    "Ozempic (semaglutide)",
+                    "0.25 mg weekly, first 4 weeks",
+                    "0.5 mg, then 1 mg if needed",
+                    "up to 2 mg weekly",
+                  ],
+                  [
+                    "Zepbound / Mounjaro (tirzepatide)",
+                    "2.5 mg weekly, weeks 1-4",
+                    "increase in 2.5 mg steps, at least 4 weeks apart",
+                    "5, 10 or 15 mg weekly",
+                  ],
+                ].map(([drug, start, steps2, full], i) => (
+                  <tr key={i} className="border-b border-gray-100 align-top last:border-0">
+                    <td className="px-4 py-3.5 font-bold text-[#191919]">{drug}</td>
+                    <td className="px-4 py-3.5 text-gray-600 [font-variant-numeric:tabular-nums]">{start}</td>
+                    <td className="px-4 py-3.5 text-gray-600 [font-variant-numeric:tabular-nums]">{steps2}</td>
+                    <td className="px-4 py-3.5 font-semibold text-[#191919] [font-variant-numeric:tabular-nums]">{full}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-          <div className="grid gap-4 text-[14px] leading-[1.75] text-gray-600 sm:grid-cols-2">
-            <div className="rounded-xl border border-gray-200 bg-white p-5">
-              <p className="mb-1.5 font-bold text-[#191919]">A real clinician review</p>
-              <p>
-                Approval should never be automatic. Every provider we rank routes your intake to a
-                licensed clinician who can decline or adjust - if a site promises guaranteed approval,
-                walk away.
-              </p>
-            </div>
-            <div className="rounded-xl border border-gray-200 bg-white p-5">
-              <p className="mb-1.5 font-bold text-[#191919]">Licensed 503A pharmacies</p>
-              <p>
-                Compounded medication is only as good as the pharmacy that prepares it. Look for
-                named, state-licensed 503A compounding pharmacies and LegitScript certification where
-                available (embody; HealthRx, cert. 50087439).
-              </p>
-            </div>
-            <div className="rounded-xl border border-gray-200 bg-white p-5">
-              <p className="mb-1.5 font-bold text-[#191919]">Cold-chain shipping for injectables</p>
-              <p>
-                Semaglutide and tirzepatide are temperature-sensitive. embody and HealthRx ship
-                temperature-controlled and tracked; whichever provider you pick, medication should
-                arrive cold, with ice packs, fast.
-              </p>
-            </div>
-            <div className="rounded-xl border border-gray-200 bg-white p-5">
-              <p className="mb-1.5 font-bold text-[#191919]">Price at YOUR dose, not the headline</p>
-              <p>
-                If you're switching on an escalated dose, flat-at-every-dose pricing (wellmedr, altRx,
-                DirectMeds, embody) means the advertised price is your price. Providers that price by
-                dose can cost more than their headline suggests.
-              </p>
-            </div>
+          <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">
+            Schedules from the drugs&rsquo; FDA prescribing information; your prescriber may have
+            deviated from them. Compounded programs dose in the same molecule but their clinician sets
+            your continuation dose individually - being mid-ladder on the brand doesn&rsquo;t
+            guarantee the same rung on the new program. Several providers charge the same price at
+            every dose (wellmedr, altRx, DirectMeds, embody), so a higher continuation dose
+            doesn&rsquo;t have to cost more.
+          </p>
+        </section>
+
+        {/* Side-effect expectations - same molecule, same profile */}
+        <section className="mb-12">
+          <h2 className="mb-3 text-[22px] font-bold text-[#191919]">
+            Side effects don&rsquo;t change with the switch: the trial numbers
+          </h2>
+          <p className="mb-5 max-w-[720px] text-[14px] text-gray-500">
+            Compounded semaglutide and tirzepatide are the same active molecules, so the published
+            side-effect profile is your best guide to what to expect - mostly digestive, mostly during
+            dose increases, mostly easing as your body adjusts:
+          </p>
+          <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
+            <table className="w-full min-w-[560px] border-collapse text-left">
+              <thead>
+                <tr className="border-b-2 border-gray-200 bg-gray-50/80">
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Reported event</th>
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Semaglutide 2.4 mg (STEP 1, 68 wks)</th>
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Tirzepatide 5-15 mg (SURMOUNT-1, 72 wks)</th>
+                </tr>
+              </thead>
+              <tbody className="text-[13.5px]">
+                {[
+                  ["Nausea", "~44%", "~25-33% across doses"],
+                  ["Diarrhea", "~32%", "~19-23% across doses"],
+                  ["Vomiting", "~25%", "~8-13% across doses"],
+                  ["Constipation", "~23%", "~12-17% across doses"],
+                ].map(([event, sema, tirz], i) => (
+                  <tr key={i} className="border-b border-gray-100 last:border-0">
+                    <td className="px-4 py-3.5 font-semibold text-[#191919]">{event}</td>
+                    <td className="px-4 py-3.5 text-gray-600 [font-variant-numeric:tabular-nums]">{sema}</td>
+                    <td className="px-4 py-3.5 text-gray-600 [font-variant-numeric:tabular-nums]">{tirz}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">
+            Approximate rates over the full trial periods, from the published STEP 1 and SURMOUNT-1
+            studies cited in the sources below; events were predominantly mild-to-moderate and
+            concentrated around dose escalation. If you switch at your established dose rather than
+            restarting the ladder, you may skip the roughest titration weeks - another reason the
+            intake disclosure matters. Seek care promptly for severe or persistent symptoms.
+          </p>
+        </section>
+
+        {/* What to verify - a checklist with names, not platitudes */}
+        <section className="mb-12">
+          <div className="mb-3 flex items-center gap-2">
+            <ShieldCheck className="h-5 w-5 text-[#0C4B75]" strokeWidth={2} />
+            <h2 className="text-[22px] font-bold text-[#191919]">The pre-switch verification checklist</h2>
+          </div>
+          <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
+            <table className="w-full min-w-[680px] border-collapse text-left">
+              <thead>
+                <tr className="border-b-2 border-gray-200 bg-gray-50/80">
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Check</th>
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Why it matters</th>
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Who clears it today</th>
+                </tr>
+              </thead>
+              <tbody className="text-[13.5px]">
+                {[
+                  [
+                    "Clinician review, never automatic approval",
+                    "A licensed clinician who can decline or adjust is the safety layer. A site promising guaranteed approval is a red flag.",
+                    "All 8 ranked providers; HealthRx states it explicitly",
+                  ],
+                  [
+                    "Licensed 503A compounding pharmacies",
+                    "The compound is only as good as the pharmacy preparing it - state licensure is the quality floor.",
+                    "embody and HealthRx name 503A fulfillment",
+                  ],
+                  [
+                    "LegitScript certification",
+                    "Independent, revocable certification of the telehealth operation itself.",
+                    "embody; HealthRx (cert. 50087439)",
+                  ],
+                  [
+                    "Cold-chain, tracked shipping",
+                    "Semaglutide and tirzepatide are temperature-sensitive; injectables should arrive cold, with ice packs, fast.",
+                    "embody (1-2 days); HealthRx (overnight)",
+                  ],
+                  [
+                    "Price at YOUR dose, not the headline",
+                    "Switchers often arrive mid-titration; per-dose pricing can beat the advertised rate out of you.",
+                    "Flat at every dose: wellmedr, altRx, DirectMeds, embody",
+                  ],
+                ].map(([check, why, who], i) => (
+                  <tr key={i} className="border-b border-gray-100 align-top last:border-0">
+                    <td className="px-4 py-3.5 font-bold text-[#191919]">{check}</td>
+                    <td className="px-4 py-3.5 text-gray-600">{why}</td>
+                    <td className="px-4 py-3.5 text-gray-600">{who}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </section>
 

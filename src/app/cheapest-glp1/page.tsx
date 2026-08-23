@@ -146,39 +146,105 @@ export default async function CheapestGlp1Page() {
         </p>
         <PriceIndex providers={providers} />
 
-        {/* How to read the prices - the transparency layer */}
+        {/* What a year actually costs - promo math done honestly, per provider */}
         <section className="mt-12">
-          <div className="mb-4 flex items-center gap-2">
+          <div className="mb-3 flex items-center gap-2">
             <ScanSearch className="h-5 w-5 text-[#0C4B75]" strokeWidth={2} />
-            <h2 className="text-[22px] font-bold text-[#191919]">How to read these prices</h2>
+            <h2 className="text-[22px] font-bold text-[#191919]">What a year of semaglutide actually costs</h2>
           </div>
-          <div className="grid gap-4 text-[14.5px] leading-[1.8] text-gray-600 sm:grid-cols-3">
-            <div className="rounded-xl border border-gray-200 bg-white p-5">
-              <p className="mb-1.5 font-bold text-[#191919]">Commitment buys the discount</p>
-              <p>
-                The two sub-$100 semaglutide rates are plan prices: wellmedr&rsquo;s $59 takes a
-                12-month plan, and HealthRx&rsquo;s $99 is prepaid - $1,188 at checkout. The cheapest
-                true month-to-month rate is embody&rsquo;s $69.
-              </p>
-            </div>
-            <div className="rounded-xl border border-gray-200 bg-white p-5">
-              <p className="mb-1.5 font-bold text-[#191919]">Promo vs regular rates</p>
-              <p>
-                Some headline numbers are introductory: trimrx&rsquo;s $179 semaglutide is a
-                first-month rate (regularly $299), and SHED&rsquo;s 20% off applies to month one.
-                embody&rsquo;s $69/$119 are promotional against $79/$129 regular. We print the
-                condition under every number.
-              </p>
-            </div>
-            <div className="rounded-xl border border-gray-200 bg-white p-5">
-              <p className="mb-1.5 font-bold text-[#191919]">&ldquo;Included&rdquo; varies a lot</p>
-              <p>
-                Every price includes the consultation and medication. The higher tiers bundle more:
-                Medvi folds in dietician access and care coaching, SHED includes health coaching and
-                a money-back guarantee. If you&rsquo;d use those, the gap narrows.
-              </p>
-            </div>
+          <p className="mb-5 max-w-[680px] text-[14px] text-gray-500">
+            Headline prices hide the arithmetic - first-month promos expire and prepaid plans front-load
+            the cost. This is the real 12-month math per provider, promo conditions applied exactly as
+            published, next to the cheapest brand-name year (Ozempic at altRx&rsquo;s $1,149/month = $13,788).
+          </p>
+          <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
+            <table className="w-full min-w-[640px] border-collapse text-left">
+              <thead>
+                <tr className="border-b-2 border-gray-200 bg-gray-50/80">
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Provider</th>
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">The 12-month math</th>
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">First-year total</th>
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Saved vs brand Ozempic</th>
+                </tr>
+              </thead>
+              <tbody className="text-[13.5px]">
+                {[
+                  ["wellmedr", "$59 x 12 (12-month plan rate)", "$708", "$13,080"],
+                  ["embody", "$69 x 12 (promo; $948 at the $79 regular rate)", "$828", "$12,960"],
+                  ["altRx", "$89 x 12, flat at every dose", "$1,068", "$12,720"],
+                  ["HealthRx", "$1,188 prepaid at checkout ($99/mo effective)", "$1,188", "$12,600"],
+                  ["DirectMeds", "$147 x 12, flat at every dose", "$1,764", "$12,024"],
+                  ["Medvi", "$179 x 12, all-inclusive with coaching", "$2,148", "$11,640"],
+                  ["SHED", "$159 first month (20% off) + $199 x 11", "$2,348", "$11,440"],
+                  ["trimrx", "$179 first month + $299 x 11 regular", "$3,468", "$10,320"],
+                ].map(([name, math, total, saved], i) => (
+                  <tr key={i} className="border-b border-gray-100 last:border-0">
+                    <td className="px-4 py-3.5 font-bold text-[#191919]">{name}</td>
+                    <td className="px-4 py-3.5 text-gray-600">{math}</td>
+                    <td className="px-4 py-3.5 font-extrabold text-[#191919] [font-variant-numeric:tabular-nums]">{total}</td>
+                    <td className="px-4 py-3.5 font-semibold text-emerald-700 [font-variant-numeric:tabular-nums]">{saved}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
+          <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">
+            Assumes published prices hold for 12 months and promo conditions apply exactly as listed
+            (trimrx&rsquo;s $179 and SHED&rsquo;s 20% off are month-one rates; embody&rsquo;s $69 is
+            promotional against $79 regular). Savings compare against Ozempic&rsquo;s lowest listed
+            brand price on our providers&rsquo; shelves ($1,149/month at altRx; wellmedr lists it at
+            $1,399). What&rsquo;s bundled differs - Medvi and SHED include coaching layers others
+            don&rsquo;t - so the cheapest row isn&rsquo;t automatically the best fit.
+          </p>
+        </section>
+
+        {/* Semaglutide vs tirzepatide - the clinical decision behind the price */}
+        <section className="mt-12">
+          <h2 className="mb-3 text-[22px] font-bold text-[#191919]">
+            Semaglutide vs tirzepatide: what the price difference buys
+          </h2>
+          <p className="mb-5 max-w-[680px] text-[14px] text-gray-500">
+            Tirzepatide costs $40-$110/month more at most providers. Whether it&rsquo;s worth it is a
+            clinical question - here&rsquo;s the published evidence side by side.
+          </p>
+          <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
+            <table className="w-full min-w-[640px] border-collapse text-left">
+              <thead>
+                <tr className="border-b-2 border-gray-200 bg-gray-50/80">
+                  <th className="w-[26%] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400" />
+                  <th className="px-4 py-3.5 text-[13px] font-bold text-[#191919]">Semaglutide</th>
+                  <th className="px-4 py-3.5 text-[13px] font-bold text-[#191919]">Tirzepatide</th>
+                </tr>
+              </thead>
+              <tbody className="text-[13.5px]">
+                {[
+                  ["Mechanism", "GLP-1 receptor agonist", "Dual GIP + GLP-1 receptor agonist"],
+                  ["Brand names", "Ozempic, Wegovy (injection); Rybelsus (oral)", "Mounjaro, Zepbound"],
+                  [
+                    "Pivotal trial result",
+                    "~15% average body-weight loss at 68 weeks (STEP 1, 2.4 mg)",
+                    "~21% average body-weight loss at 72 weeks (SURMOUNT-1, 15 mg)",
+                  ],
+                  ["Dosing", "One injection per week", "One injection per week"],
+                  ["Cheapest compounded price", "$59/mo (wellmedr, 12-month plan)", "$99/mo (wellmedr)"],
+                  ["Cheapest month-to-month", "$69/mo (embody)", "$119/mo (embody)"],
+                  ["Same price for both", "$147/mo flat (DirectMeds - injections or drops)", "$147/mo flat (DirectMeds)"],
+                ].map(([label, sema, tirz], i) => (
+                  <tr key={i} className="border-b border-gray-100 align-top last:border-0">
+                    <td className="px-4 py-3.5 text-[12.5px] font-semibold text-gray-500">{label}</td>
+                    <td className="px-4 py-3.5 text-gray-700">{sema}</td>
+                    <td className="px-4 py-3.5 text-gray-700">{tirz}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">
+            Trial figures are from the published STEP 1 (NEJM, 2021) and SURMOUNT-1 (NEJM, 2022)
+            studies, cited in the sources below; results are trial averages at the highest studied
+            doses, not guarantees. Which medication is appropriate for you is your prescribing
+            clinician&rsquo;s decision.
+          </p>
         </section>
 
         {/* Switcher cross-link - the audience this page exists for */}
