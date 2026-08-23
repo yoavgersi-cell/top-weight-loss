@@ -520,15 +520,16 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           )}
 
           {/* ───── PRODUCT CAROUSEL ─────
-              Shopping-style product cards, contenders first - the moneymaker
-              placement. Weight-loss only (the catalog is a WL registry). */}
+              Shopping-style product cards for THIS matchup's two providers
+              only - a battle page sells the contenders, not the whole market.
+              Weight-loss only (the catalog is a WL registry). */}
           {ctx.vertical === "weight-loss" && (
             <div className="mb-12">
               <ProductCarousel
                 providers={config.providers}
                 title={`Shop ${p1.name} and ${p2.name} plans`}
-                subtitle="Real published prices, both contenders first - alternatives after them, cheapest first."
-                highlightProviderIds={[p1.id, p2.id]}
+                subtitle="Both contenders' published plans, cheapest first - conditions under every price."
+                onlyProviderIds={[p1.id, p2.id]}
                 pageType="battle"
                 withSchema
                 pageUrl={canonicalUrl(ctx, `/${slug}`)}
