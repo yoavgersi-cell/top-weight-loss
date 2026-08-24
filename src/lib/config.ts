@@ -298,6 +298,7 @@ export const VERTICALS: Vertical[] = [
   { id: "hair-loss", name: "Hair Loss", tagline: "Finasteride, minoxidil & doctor-led hair regrowth", accent: "#6D4C2F" },
   { id: "trt", name: "TRT", tagline: "Testosterone replacement therapy, online", accent: "#1F5F5B" },
   { id: "hrt", name: "HRT", tagline: "Hormone replacement therapy for menopause & more", accent: "#7A3B6B" },
+  { id: "hearing-aids", name: "Hearing Aids", tagline: "OTC hearing devices you can order online, compared", accent: "#1673B9" },
 ];
 
 export const DEFAULT_VERTICAL = "weight-loss";
@@ -309,7 +310,7 @@ export const isVertical = (id: string): boolean => VERTICAL_IDS.includes(id);
 // (providers, comparisons, etc.) while still being unpublished - it renders for
 // preview but stays out of the hub card, the sitemap, and the index until its
 // affiliate data is filled in and it's added here. Add a vertical id to launch it.
-export const PUBLISHED_VERTICALS = ["weight-loss", "hair-loss", "trt", "hrt"];
+export const PUBLISHED_VERTICALS = ["weight-loss", "hair-loss", "trt", "hrt", "hearing-aids"];
 export const isPublishedVertical = (id: string): boolean => PUBLISHED_VERTICALS.includes(id);
 
 // Providers we have an affiliate relationship with. Pages centered on any other

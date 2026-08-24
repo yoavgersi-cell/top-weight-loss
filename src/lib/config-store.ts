@@ -7,6 +7,7 @@ import { brandClusterArticles } from "@/data/brand-cluster-articles";
 import { hairLossSeed } from "./seeds/hair-loss";
 import { trtSeed } from "./seeds/trt";
 import { hrtSeed } from "./seeds/hrt";
+import { hearingAidsSeed } from "./seeds/hearing-aids";
 
 // weight-loss keeps the original key for full back-compatibility with the live
 // site; every other vertical is stored in its own separate blob.
@@ -47,6 +48,7 @@ function seedForVertical(vertical: string): SiteConfig {
   if (vertical === "hair-loss") return hairLossSeed(base);
   if (vertical === "trt") return trtSeed(base);
   if (vertical === "hrt") return hrtSeed(base);
+  if (vertical === "hearing-aids") return hearingAidsSeed(base);
   return base;
 }
 

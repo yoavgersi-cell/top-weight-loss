@@ -11,6 +11,7 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "Hair Loss", href: "/hair-loss" },
       { label: "TRT", href: "/trt" },
       { label: "HRT", href: "/hrt" },
+      { label: "Hearing Aids", href: "/hearing-aids" },
     ],
   },
   {
