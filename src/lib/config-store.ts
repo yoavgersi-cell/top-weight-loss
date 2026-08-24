@@ -166,7 +166,28 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
     ],
   },
   ro: {
+    // Aggregate verified from Ro's claimed Trustpilot profile (operator-
+    // supplied screenshots, Aug 2026): 3.9 across 5,860 reviews, Online
+    // Pharmacy category, claimed Nov 2021.
+    rating: "3.9",
+    reviewCount: "5,860",
     reviews: [
+      {
+        title: "New to GLP1",
+        text: "Easy on-line application process. Quick response & approval. Good communications. Pricing for 12 month membership a bit high, but competitive.",
+        name: "TKW",
+        location: "US",
+        rating: 4,
+        date: "Aug 23, 2026",
+      },
+      {
+        title: "It was easy to answer the questions",
+        text: "It was easy to answer the questions & qualify for the medication. I've been overwhelmed with texts and would prefer e-mails, so I can print important info.",
+        name: "Margaret Blasko",
+        location: "US",
+        rating: 4,
+        date: "Aug 21, 2026",
+      },
       {
         title: "Very easy process!",
         text: "Very easy process!",
@@ -2392,7 +2413,7 @@ const embodyRoBattle: BattleData = {
   subtitle: "Embody vs Ro, compared on pricing, shipping speed, medical model, and overall value - so you can see which one fits you best.",
   description: "embody vs Ro: compare pricing, shipping, GLP-1 meds & care. embody: fast free 1-2 day shipping. Ro: established brand with an in-house pharmacy. See which fits you.",
   intro: "Embody and Ro are both fully online providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established telehealth brand with an integrated in-house pharmacy and licensed providers reviewing every plan. Embody is weight-loss-focused with flat, transparent pricing - $69/month for compounded semaglutide and $119 for tirzepatide - free 1-2 day shipping, and LegitScript-certified 503A pharmacies. Here's how they compare.",
-  verdict: "Both are legitimate online GLP-1 providers - but Embody takes this one on price and speed. It offers flat, transparent pricing ($69/$119), free 1-2 day tracked shipping, LegitScript-certified 503A pharmacies, and a full refund if you're not approved. Ro is the better pick if you value a large, established brand with an integrated in-house pharmacy.",
+  verdict: "Both are legitimate online GLP-1 providers - but they sell different things, and the math reflects it. Embody's $69/month is all-inclusive compounded semaglutide, month to month, with free 1-2 day tracked shipping and LegitScript-certified 503A pharmacies. Ro's published pricing (August 2026) is a membership - $39 for the first month, then $74-$149/month by plan - plus brand-name medication billed separately: Wegovy pill from $149/month cash-pay, Wegovy pen from $199 for two months (up to $399/month after), Zepbound KwikPen from $299. Paying cash, Embody costs a fraction of Ro over a year ($828 vs roughly $2,700-$4,500). Ro is the stronger pick when insurance covers your brand-name medication - then you pay the membership plus your copay for FDA-approved Wegovy or Zepbound, which compounded providers can't offer.",
   verdictWinnerPoints: [
     "Flat pricing - $69/mo semaglutide, $119/mo tirzepatide",
     "Free 1-2 day tracked, insured shipping",
@@ -2462,7 +2483,7 @@ const embodyRoBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "$69/mo semaglutide · $119 tirzepatide", provider2Value: "Varies by medication/plan", highlight: "provider1" },
+    { feature: "Starting Price", provider1Value: "$69/mo semaglutide · $119 tirzepatide", provider2Value: "$39 first mo membership, then $74-149/mo + medication", highlight: "provider1" },
     { feature: "Shipping", provider1Value: "Free, 1-2 days (tracked, insured)", provider2Value: "Standard home delivery", highlight: "provider1" },
     { feature: "Medications", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "GLP-1 treatment options", highlight: "both" },
     { feature: "Pharmacy", provider1Value: "LegitScript-certified 503A pharmacies", provider2Value: "Integrated in-house pharmacy", highlight: "both" },
@@ -2550,7 +2571,7 @@ const trimrxRoBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "Affordability-focused · multi-month discounts", provider2Value: "Varies by medication/plan", highlight: "provider1" },
+    { feature: "Starting Price", provider1Value: "Affordability-focused · multi-month discounts", provider2Value: "$39 first mo membership, then $74-149/mo + medication", highlight: "provider1" },
     { feature: "Commitment", provider1Value: "No long-term commitment", provider2Value: "Monthly plans", highlight: "provider1" },
     { feature: "Medications", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "GLP-1 treatment options", highlight: "both" },
     { feature: "Pharmacy", provider1Value: "Home delivery included", provider2Value: "Integrated in-house pharmacy", highlight: "provider2" },
