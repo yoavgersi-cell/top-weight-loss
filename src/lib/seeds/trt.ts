@@ -48,6 +48,52 @@ const providers: Provider[] = [
     ],
     affiliateUrl: URLS.maximus,
     ctaText: "Visit Site",
+    // Operator-level record from Maximus' claimed Trustpilot profile
+    // (operator-supplied screenshots, Aug 2026) - spans all Maximus lines.
+    trustpilotRating: "4.4",
+    trustpilotReviewCount: "1,050",
+    trustpilotReviews: [
+      {
+        title: "Super positive experience",
+        text: "Super positive experience really great doctors very proactive experience super open with their background I get open conversations about doing this what it meant long-term short-term only great things to say turning 50 this year if you're not doing this and you're an athlete, you've got injuries and you wanna feel young again you are missing one of the cooler things happening in 2026 being able to do this online... telehealth testosterone very cool.",
+        name: "Joshua Walker",
+        location: "US",
+        rating: 5,
+        date: "Aug 22, 2026",
+      },
+      {
+        title: "Excellent customer service",
+        text: "Excellent customer service. Whenever I have had an issue with shipping or a refund, the team has been responsive and eager to solve the problem. The products are also 100% as advertised. It is refreshing to deal with a company that makes customer satisfaction a priority.",
+        name: "Ben Vangarde",
+        location: "US",
+        rating: 5,
+        date: "Aug 17, 2026",
+      },
+      {
+        title: "Fast shipping and good customer service",
+        text: "Shipping was fast for a year. Left for a few months and ended up waiting after my resubscription. Customer service was able to quickly resolve the issue when I sent an email in, with a real person responding on the weekend.",
+        name: "Nathan Bennett",
+        location: "US",
+        rating: 5,
+        date: "Aug 13, 2026",
+      },
+      {
+        title: "Highly knowledgeable physician",
+        text: "Highly knowledgeable physician who prescribed a protocol that works, great products, lots of treatment options not available elsewhere.",
+        name: "David Epstein",
+        location: "US",
+        rating: 5,
+        date: "Jul 26, 2026",
+      },
+      {
+        title: "A very pleasant experience",
+        text: "This has been a very pleasant experience with Maximus. They are attentive, professional, and fast!",
+        name: "Floyd Gaugh",
+        location: "US",
+        rating: 5,
+        date: "Aug 10, 2026",
+      },
+    ],
   },
   {
     id: "hims",
@@ -186,6 +232,7 @@ const reviews: ReviewData[] = [
       "Oral options some competitors don't offer",
       "Convenient at-home testing",
       "Board-certified doctor oversight",
+      "4.4 across 1,050 Trustpilot reviews (claimed profile, operator-level)",
     ],
     cons: [
       "Suitability of oral options depends on your labs",
@@ -198,8 +245,8 @@ const reviews: ReviewData[] = [
       "People comparing modern protocols",
     ],
     finalVerdict:
-      "Maximus stands out for offering oral protocol options within a supervised, at-home telehealth model. Confirm current pricing and eligibility on their site.",
-    trustBadges: ["At-home testing", "Board-certified doctors", "Oral options"],
+      "Maximus stands out for offering oral protocol options within a supervised, at-home telehealth model, backed by a 4.4 Trustpilot average across 1,050 reviews at the operator level. Confirm current pricing and eligibility on their site.",
+    trustBadges: ["4.4 across 1,050 Trustpilot reviews", "At-home testing", "Board-certified doctors"],
     updatedAt: UPDATED,
   },
   {

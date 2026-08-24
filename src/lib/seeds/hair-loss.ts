@@ -25,6 +25,53 @@ import type {
 const MAXIMUS_LOGO = "/maximuslogo.png";
 const HAPPYHEAD_LOGO = "/logos/happyheadlogo.png";
 const MAXIMUS_URL = "https://track.revoffers.com/aff_c?offer_id=1347&aff_id=13399&url_id=10972";
+
+// Real reviews from Maximus' claimed Trustpilot profile (4.4 across 1,050
+// reviews) - operator-supplied screenshots, all 5-star "unprompted" reviews,
+// transcribed verbatim (the last one trimmed for length only). Never invent
+// or paraphrase entries here.
+const MAXIMUS_TRUSTPILOT_REVIEWS = [
+  {
+    title: "Excellent customer service",
+    text: "Excellent customer service. Whenever I have had an issue with shipping or a refund, the team has been responsive and eager to solve the problem. The products are also 100% as advertised. It is refreshing to deal with a company that makes customer satisfaction a priority.",
+    name: "Ben Vangarde",
+    location: "US",
+    rating: 5,
+    date: "Aug 17, 2026",
+  },
+  {
+    title: "Fast shipping and good customer service",
+    text: "Shipping was fast for a year. Left for a few months and ended up waiting after my resubscription. Customer service was able to quickly resolve the issue when I sent an email in, with a real person responding on the weekend.",
+    name: "Nathan Bennett",
+    location: "US",
+    rating: 5,
+    date: "Aug 13, 2026",
+  },
+  {
+    title: "Highly knowledgeable physician",
+    text: "Highly knowledgeable physician who prescribed a protocol that works, great products, lots of treatment options not available elsewhere.",
+    name: "David Epstein",
+    location: "US",
+    rating: 5,
+    date: "Jul 26, 2026",
+  },
+  {
+    title: "A very pleasant experience",
+    text: "This has been a very pleasant experience with Maximus. They are attentive, professional, and fast!",
+    name: "Floyd Gaugh",
+    location: "US",
+    rating: 5,
+    date: "Aug 10, 2026",
+  },
+  {
+    title: "Super positive experience",
+    text: "Super positive experience really great doctors very proactive experience super open with their background I get open conversations about doing this what it meant long-term short-term only great things to say.",
+    name: "Joshua Walker",
+    location: "US",
+    rating: 5,
+    date: "Aug 22, 2026",
+  },
+];
 const HAPPYHEAD_URL = "https://track.revoffers.com/aff_c?offer_id=1389&aff_id=13399&url_id=12477";
 const UPDATED = "2026-08-18";
 
@@ -42,6 +89,11 @@ const providers: Provider[] = [
     ],
     affiliateUrl: MAXIMUS_URL,
     ctaText: "Visit Site",
+    // Verified from Maximus' claimed Trustpilot profile (operator-supplied
+    // screenshots, Aug 2026).
+    trustpilotRating: "4.4",
+    trustpilotReviewCount: "1,050",
+    trustpilotReviews: MAXIMUS_TRUSTPILOT_REVIEWS,
   },
   {
     id: "happyhead",
@@ -132,20 +184,26 @@ const reviews: ReviewData[] = [
       "Free, discreet delivery to your door",
       "Focused on men's hair regrowth",
     ],
-    pricingSummary: PRICING_TBD,
+    pricingSummary:
+      "Verified from Maximus' published pricing (August 2026), billed as a 90-day supply: Oral Minoxidil $24.99/mo (its most affordable option), Oral Finasteride $34.99/mo, Oral Dutasteride $34.99/mo, Minoxidil+ Gel $44.99/mo, Dutasteride+ Gel $54.99/mo, the Oral Minoxidil + Oral Dutasteride combination $59.99/mo, and the All-in-One Gel (dutasteride, minoxidil, tretinoin and fexofenadine) $64.99/mo - about $2 a day for its strongest protocols.",
     treatmentOptions: [
-      "Oral finasteride",
-      "Oral minoxidil",
-      "Oral dutasteride",
-      "Compounded topical formula (dutasteride, minoxidil, tretinoin, fexofenadine)",
+      "Oral minoxidil - $24.99/mo (90-day supply)",
+      "Oral finasteride - $34.99/mo",
+      "Oral dutasteride - $34.99/mo",
+      "Minoxidil+ Gel - $44.99/mo · Dutasteride+ Gel - $54.99/mo",
+      "Oral minoxidil + dutasteride combo - $59.99/mo",
+      "All-in-One Gel (dutasteride, minoxidil, tretinoin, fexofenadine) - $64.99/mo",
     ],
     pros: [
       "Broad range of prescription options, including dutasteride",
       "Both oral and topical routes available",
+      "Entry price of $24.99/mo (oral minoxidil) is genuinely accessible",
+      "4.4 across 1,050 Trustpilot reviews on a claimed profile",
       "Board-certified doctor oversight",
       "Free, discreet shipping",
     ],
     cons: [
+      "Plans are billed as a 90-day supply, not month-to-month",
       "Men-focused - not formulated for women",
       "Prescription treatments require a medical review",
       "Ongoing use is needed to maintain results",
@@ -156,8 +214,8 @@ const reviews: ReviewData[] = [
       "People who prefer a fully online, doctor-reviewed process",
     ],
     finalVerdict:
-      "Maximus is a strong pick for men who want a broader set of prescription hair-loss options - including dutasteride and a compounded topical - under board-certified doctor oversight. Confirm current pricing and eligibility on their site.",
-    trustBadges: ["Board-certified doctors", "Free discreet delivery", "Prescription options"],
+      "Maximus is a strong pick for men who want a broader set of prescription hair-loss options - including dutasteride and a compounded topical - under board-certified doctor oversight, with verified pricing that runs from $24.99/mo for oral minoxidil to $64.99/mo for the All-in-One Gel (billed as a 90-day supply) and a 4.4 Trustpilot average across 1,050 reviews. Confirm current eligibility on their site.",
+    trustBadges: ["4.4 across 1,050 Trustpilot reviews", "Board-certified doctors", "Free discreet delivery"],
     updatedAt: UPDATED,
   },
   {
@@ -379,7 +437,7 @@ const battles: BattleData[] = [
       { feature: "Oral dutasteride", provider1Value: "Available", provider2Value: "Available", highlight: "both" },
       { feature: "Topical formula", provider1Value: "Compounded topical", provider2Value: "Custom topical (up to 8% minoxidil)", highlight: "none" },
       { feature: "For women", provider1Value: "No", provider2Value: "Yes", highlight: "provider2" },
-      { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
+      { feature: "Pricing", provider1Value: "From $24.99/mo (90-day supply)", provider2Value: "See site", highlight: "provider1" },
     ],
     updatedAt: UPDATED,
   },
@@ -442,7 +500,7 @@ const battles: BattleData[] = [
       { feature: "Oral finasteride", provider1Value: "Available", provider2Value: "Available", highlight: "both" },
       { feature: "Dutasteride option", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
       { feature: "Compounded topical", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
-      { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
+      { feature: "Pricing", provider1Value: "From $24.99/mo (90-day supply)", provider2Value: "See site", highlight: "provider1" },
     ],
     updatedAt: UPDATED,
   },
@@ -568,7 +626,7 @@ const battles: BattleData[] = [
       { feature: "Oral finasteride", provider1Value: "Available", provider2Value: "Available", highlight: "both" },
       { feature: "Dutasteride option", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
       { feature: "Oral minoxidil", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
-      { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
+      { feature: "Pricing", provider1Value: "From $24.99/mo (90-day supply)", provider2Value: "See site", highlight: "provider1" },
     ],
     updatedAt: UPDATED,
   },
@@ -694,7 +752,7 @@ const battles: BattleData[] = [
       { feature: "Oral finasteride", provider1Value: "Available", provider2Value: "Available", highlight: "both" },
       { feature: "Dutasteride option", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
       { feature: "Multi-category platform", provider1Value: "Hair-focused", provider2Value: "Yes", highlight: "provider2" },
-      { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
+      { feature: "Pricing", provider1Value: "From $24.99/mo (90-day supply)", provider2Value: "See site", highlight: "provider1" },
     ],
     updatedAt: UPDATED,
   },
