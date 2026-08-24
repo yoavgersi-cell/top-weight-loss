@@ -115,6 +115,52 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
     takeaway:
       "The Reddit picture matches the Trustpilot one from a different angle: the ongoing monthly cost is the caveat users themselves raise - though Medvi's current $99/month promotion (regularly $199) blunts it considerably - but the year-long accounts describe exactly what that price buys: medical structure, dose adjustments when progress stalls, and 10-15% body-weight results over a year that felt “sustainable, which is something I had not experienced before.”",
   },
+  ro: {
+    intro:
+      "Reddit's recent Ro threads are unusually rich in real numbers - starting weights, pounds lost, and what people actually pay. Excerpts from the real public comments:",
+    threads: [
+      {
+        author: "Opposite_You3133",
+        age: "5mo ago",
+        upvotes: 11,
+        body: [
+          "“I used Ro for 3 months and dropped 25 lbs. (sw: 180lbs) I personally had a great experience with Ro and they were seamless throughout the whole process.”",
+          "“The pricing ended up being the deciding factor for me after those few months, I started with another provider and lost another 30 lbs... my other provider has been great and no shipping issues.”",
+        ],
+      },
+      {
+        author: "Upstairs_Procedure33",
+        age: "5mo ago",
+        upvotes: 1,
+        body: [
+          "“I have been a member of Ro since Jan 2024, and I am loyal because they delivered what was promised and paid for. I've lost 50-60 lbs. I get my Wegovy shots through insurance and Walgreens.”",
+        ],
+      },
+      {
+        author: "Thick_Ad_2011",
+        age: "5mo ago",
+        body: ["“I've been on Ro for 3 months and have lost 22 pounds! Extremely happy!”"],
+      },
+      {
+        author: "PrestigiousRest7476",
+        age: "5mo ago",
+        upvotes: 1,
+        body: [
+          "“I have been on Zepbound 2.5mg vials for two months. I've lost 1 pound. Just one... I'm taking my first 5mg dose today. Hopefully, things will start changing for me soon. It's been expensive and frustrating.”",
+        ],
+      },
+      {
+        author: "KitchenYam8596",
+        age: "4mo ago",
+        upvotes: 1,
+        body: [
+          "“My insurance no longer covers and I had a friend who has great success with Ro!... Could someone explain the cost breakdown to me? It's somewhat confusing.”",
+        ],
+      },
+    ],
+    takeaway:
+      "The results stories are real and substantial - 22 to 60 pounds across the positive accounts - and the service itself draws little criticism. The recurring friction is exactly what Ro's own pricing pages show: the membership-plus-medication cost structure. One highly upvoted commenter left specifically over price after a great experience, and another calls the cost breakdown \"somewhat confusing.\" If brand-name medication through insurance works for you, Ro's model shines; paying cash, the math deserves a hard look first.",
+  },
   wellmedr: {
     intro:
       "wellmedr's Reddit footprint is comment-level rather than long write-ups: short, recent verdicts, mostly from people who paid for annual plans. Excerpts from the real public comments:",

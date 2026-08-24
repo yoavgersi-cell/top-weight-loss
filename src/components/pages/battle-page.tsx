@@ -46,17 +46,21 @@ const BATTLE_COST_MATH: Record<
     ],
     note: "Semaglutide at each provider's current published rate, promo conditions applied as published: embody $69/mo promotional (regularly $79), month to month; Medvi $99/mo promotional (regularly $199), all-inclusive with dietician and care coaching. Neither requires a prepaid term.",
   },
-  // provider1 = embody, provider2 = Ro. Ro doesn't publish a flat compounded
-  // rate we've verified, so its column says so honestly instead of guessing.
+  // provider1 = embody, provider2 = Ro. Ro's figures are its own published
+  // pricing (verified Aug 2026): a Ro Body membership ($39 first month, then
+  // $74-$149/mo by plan) PLUS the brand-name medication, billed separately
+  // via insurance or cash-pay. Different products - compounded vs brand-name
+  // - so the note spells out what each column buys.
   "embody-vs-ro": {
     rows: [
-      ["First month (semaglutide)", "$69", "Not published - verify on ro.co"],
-      ["6-month total", "$414", "Depends on plan and medication"],
-      ["12-month total", "$828", "Depends on plan and medication"],
-      ["Tirzepatide, monthly", "$119 (reg. $129)", "Not published - verify on ro.co"],
-      ["If the promo ends", "$79/mo regular - $948/yr", "-"],
+      ["What the price buys", "Compounded semaglutide, all-inclusive", "Membership + brand-name med, billed separately"],
+      ["First month (semaglutide)", "$69", "$39 membership + Wegovy pill from $149"],
+      ["Monthly thereafter", "$69 (reg. $79)", "$74-$149 membership + $149-$399 medication (cash-pay)"],
+      ["12-month total", "$828", "~$2,676-$4,476 cash-pay (annual membership + Wegovy)"],
+      ["Tirzepatide, monthly", "$119 (reg. $129)", "Zepbound KwikPen from $299 first mo, $399-449 after + membership"],
+      ["With insurance coverage", "-", "Membership + your copay - can be far lower if covered"],
     ],
-    note: "embody's column is its current published rate, promo conditions applied as published: $69/mo promotional semaglutide (regularly $79), month to month, no prepaid term. Ro's GLP-1 pricing depends on the plan and medication (including brand-name routes) and we haven't verified a published flat rate - we show that honestly rather than guess. Check ro.co for current figures.",
+    note: "embody's column is its published all-inclusive rate: $69/mo promotional semaglutide (regularly $79), month to month. Ro's column is Ro's own published pricing (August 2026): the Ro Body membership is $39 for the first month, then $74/mo on an annual prepaid plan up to $149/mo, and brand-name medication is billed separately - Wegovy pill from $149/mo (up to $299 after the intro period), Wegovy pen from $199 for two months (up to $399/mo), Zepbound KwikPen from $299 (then $399-449). The honest asymmetry: embody ships compounded semaglutide; Ro ships FDA-approved brand-name medication, and insurance - where it covers - changes Ro's math completely. Check both sites for current figures.",
   },
   // provider1 = embody, provider2 = altRx (slug order is reversed)
   "altrx-vs-embody": {
@@ -167,9 +171,9 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "embody ($69/mo semaglutide, 1-2 day shipping, refund policy) vs Medvi ($99/mo promo all-inclusive with high-touch provider support). Price or personal care - see which fits.",
   },
   "embody-vs-ro": {
-    title: "embody vs ro (2026): Flat $69 GLP-1 or the Big Brand?",
+    title: "embody vs ro (2026): $69 All-In or Membership + Brand-Name?",
     description:
-      "embody ($69/mo flat semaglutide, LegitScript-certified, 1-2 day shipping) vs ro (major telehealth brand, in-house pharmacy). Pricing, speed and trust signals compared.",
+      "embody: $69/mo all-inclusive compounded semaglutide, 1-2 day shipping. ro: $39 first-month membership then $74-149/mo, plus brand-name Wegovy/Zepbound billed separately. Real 12-month math inside.",
   },
   "medvi-vs-trimrx": {
     title: "Medvi vs trimrx (2026): $99 vs $179 GLP-1 Compared",
@@ -195,6 +199,16 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
     title: "trimrx vs ro (2026): Which GLP-1 Provider Fits You?",
     description:
       "trimrx ($179/mo, no long-term contract, clinical support included) vs ro (established brand, in-house pharmacy). Pricing clarity vs brand trust - full comparison.",
+  },
+  "medvi-vs-ro": {
+    title: "Medvi vs ro (2026): $99 All-In or Membership + Brand-Name?",
+    description:
+      "Medvi: $99/mo promo all-inclusive compounded semaglutide with provider support. ro: $39 first-month membership then $74-149/mo plus brand-name Wegovy/Zepbound billed separately. Full comparison.",
+  },
+  "altrx-vs-ro": {
+    title: "altRx vs ro (2026): $89 Flat GLP-1 or Membership + Brand-Name?",
+    description:
+      "altRx: $89/mo promo flat compounded semaglutide (reg $199), BNPL available. ro: $39 first-month membership then $74-149/mo plus brand-name medication billed separately. Which model fits you?",
   },
   "ro-vs-wellmedr": {
     title: "ro vs wellmedr (2026): Big Brand or $59 GLP-1?",
