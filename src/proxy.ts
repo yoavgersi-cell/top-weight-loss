@@ -35,6 +35,11 @@ const SLUG_ALIASES: Record<string, string> = {
   "sprout-vs-altrx": "altrx-vs-sprout",
   "trimrx-vs-sprout": "sprout-vs-trimrx",
   "wellmedr-vs-sprout": "sprout-vs-wellmedr",
+  // High-trend reverse orderings for the medvi/ro money battles.
+  "trimrx-vs-medvi": "medvi-vs-trimrx",
+  "medvi-vs-embody": "embody-vs-medvi",
+  "ro-vs-embody": "embody-vs-ro",
+  "wellmedr-vs-embody": "embody-vs-wellmedr",
 };
 
 // One deployment serves two hosts:
