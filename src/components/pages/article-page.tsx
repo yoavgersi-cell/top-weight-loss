@@ -17,6 +17,11 @@ import { notFound, permanentRedirect } from "next/navigation";
 // on the weight-loss vertical. Prices cited are the providers' real listed
 // prices - keep in sync when pricing changes.
 const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+  "tirzepatide-vs-semaglutide": {
+    title: "Tirzepatide vs Semaglutide (2026): Results, Side Effects & Real Prices",
+    description:
+      "Tirzepatide vs semaglutide compared: up to 22.5% vs ~15% average weight loss in trials, side effects, dosing - and verified compounded prices from $59/mo (semaglutide) and $99/mo (tirzepatide) at real providers.",
+  },
   "best-mounjaro-alternatives": {
     title: "7 Best Mounjaro Alternatives in 2026 (From $99/Month)",
     description:
