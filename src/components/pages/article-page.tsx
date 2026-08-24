@@ -8,6 +8,8 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ExpertByline } from "@/components/expert-byline";
 import { MedicalSources } from "@/components/medical-sources";
 import { ProductCarousel } from "@/components/product-carousel";
+import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
+import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/reddit-community";
 import { notFound, permanentRedirect } from "next/navigation";
 
 // Code-side CTR overrides for high-impression articles whose stored meta lives
@@ -151,6 +153,20 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   const currentIndex = articles.findIndex((a) => a.slug === slug);
   const nextArticle = articles[currentIndex + 1] || null;
   const prevArticle = currentIndex > 0 ? articles[currentIndex - 1] : null;
+
+  // Brand-cluster articles (is-embody-legit, medvi-cost, ...) carry the
+  // provider id as a slug segment. On those, surface the provider's real
+  // social proof - Trustpilot and Reddit carousels - high on the page.
+  // Exact segment match so "ro" never fires inside "sprout".
+  const slugParts = slug.split("-");
+  const subjectProvider =
+    ctx.vertical === "weight-loss"
+      ? config.providers.find((p) => slugParts.includes(p.id))
+      : undefined;
+  const subjectTrustpilot =
+    subjectProvider?.trustpilotReviews?.length ? subjectProvider : undefined;
+  const subjectReddit =
+    subjectProvider && REDDIT_COMMUNITY_FEEDBACK[subjectProvider.id] ? subjectProvider : undefined;
 
   // Byline author: match the article's author to a team member, else the lead
   const author = experts.find((e) => e.name === article.author) ?? experts[0];
@@ -395,6 +411,30 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     dangerouslySetInnerHTML={{ __html: section.body }}
                   />
                 </section>
+
+                {/* Subject-provider social proof, high on the page: Trustpilot
+                    carousel after the first section, Reddit carousel after the
+                    second (or first, on very short articles). Verified data
+                    only - providers without it simply render nothing. */}
+                {i === 0 && subjectTrustpilot && (
+                  <div className="my-10">
+                    <TrustpilotCarousel
+                      providerName={subjectTrustpilot.name}
+                      providerLogo={subjectTrustpilot.logo}
+                      reviews={subjectTrustpilot.trustpilotReviews!}
+                      rating={subjectTrustpilot.trustpilotRating}
+                      reviewCount={subjectTrustpilot.trustpilotReviewCount}
+                    />
+                  </div>
+                )}
+                {i === Math.min(1, article.sections.length - 1) && subjectReddit && (
+                  <div className="my-10">
+                    <RedditThreadCarousel
+                      providers={[subjectReddit]}
+                      reviewHrefFor={(id) => hubLink(ctx, `/reviews/${id}`)}
+                    />
+                  </div>
+                )}
 
                 {/* Full-catalog product carousel mid-article (weight-loss only) -
                     after roughly the halfway section, never at the bottom. */}
