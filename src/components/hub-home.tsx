@@ -101,11 +101,38 @@ function HrtIcon({ className }: { className?: string }) {
   );
 }
 
+function HearingAidsIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 64" fill="none" className={className} aria-hidden="true">
+      {/* ear outline - helix curving into the canal */}
+      <path
+        d="M22 26c0-9 6.5-15 14-15s13.5 6 13.5 14c0 6.5-3.5 9.5-6.5 13-2.6 3-4 5.5-4.5 9-.6 4.5-3.5 7-7.5 7-4.5 0-7.5-3-7.5-7"
+        fill={ICON_FILL}
+        stroke={ICON_STROKE}
+        strokeWidth="2.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      {/* inner helix fold */}
+      <path d="M28.5 26.5c0-5 3.2-8.5 7.5-8.5 4.5 0 7.5 3.5 7.5 8" stroke={ICON_STROKE} strokeWidth="2" strokeLinecap="round" />
+      {/* hearing-aid: behind-the-ear body hooking over the helix */}
+      <path d="M22 26c-4.5.5-8 4-8 8.5 0 3.5 2 6.5 5 7.9" stroke={ICON_STROKE} strokeWidth="2.2" strokeLinecap="round" />
+      {/* in-ear receiver */}
+      <circle cx="33" cy="30.5" r="4.2" fill="#fff" stroke={ICON_STROKE} strokeWidth="2.2" />
+      {/* tube connecting device to receiver */}
+      <path d="M19 42.4c3.5 1.6 7.5-.5 10.5-8" stroke={ICON_STROKE} strokeWidth="2" strokeLinecap="round" />
+      {/* sound sparkle */}
+      <path d="M53 36c1.5-2.5 1.5-5.5 0-8M57 39c2.5-4.5 2.5-9.5 0-14" stroke={ICON_STROKE} strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 const VERTICAL_ICON: Record<string, (p: { className?: string }) => React.JSX.Element> = {
   "weight-loss": WeightLossIcon,
   "hair-loss": HairGrowthIcon,
   trt: TrtIcon,
   hrt: HrtIcon,
+  "hearing-aids": HearingAidsIcon,
 };
 
 // Display names tuned for the category grid (treatment-led, like a
@@ -115,6 +142,7 @@ const CATEGORY_NAME: Record<string, string> = {
   "hair-loss": "Hair Growth Treatments",
   trt: "TRT",
   hrt: "HRT",
+  "hearing-aids": "Hearing Aids",
 };
 
 // Real, keyword-rich internal links surfaced on a live category card. Only
@@ -140,6 +168,10 @@ const CATEGORY_LINKS: Record<string, { label: string; href: string }[]> = {
   hrt: [
     { label: "Compare providers", href: "/hrt" },
     { label: "Reviews", href: "/hrt/reviews" },
+  ],
+  "hearing-aids": [
+    { label: "Compare brands", href: "/hearing-aids" },
+    { label: "Reviews", href: "/hearing-aids/reviews" },
   ],
 };
 
@@ -271,8 +303,8 @@ export async function HubHome() {
             Compare the Best Health &amp; Wellness Services for Your Needs
           </h1>
           <p className="mx-auto mt-6 max-w-[680px] text-[16.5px] leading-relaxed text-gray-600 sm:mt-8 sm:text-[21px]">
-            Independent rankings across weight loss, hair growth, TRT and HRT - real published prices
-            and verified customer reviews.
+            Independent rankings across weight loss, hair growth, TRT, HRT and hearing aids - real
+            published prices and verified customer reviews.
           </p>
 
           {/* Category cards - icon-led, links behind a divider */}

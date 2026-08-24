@@ -8,6 +8,7 @@ import { EditorialContent } from "@/components/editorial-content";
 import { HairLossEditorialContent } from "@/components/editorial-content-hair-loss";
 import { TrtEditorialContent } from "@/components/editorial-content-trt";
 import { HrtEditorialContent } from "@/components/editorial-content-hrt";
+import { HearingAidsEditorialContent } from "@/components/editorial-content-hearing-aids";
 import { BattlePageView, battleMetadata } from "@/components/pages/battle-page";
 import { ProductCarousel } from "@/components/product-carousel";
 import { notFound } from "next/navigation";
@@ -174,6 +175,8 @@ export default async function BattlePage({
             <TrtEditorialContent />
           ) : battleSlug === "hrt" ? (
             <HrtEditorialContent />
+          ) : battleSlug === "hearing-aids" ? (
+            <HearingAidsEditorialContent />
           ) : null}
         </ComparisonLayout>
       </div>
