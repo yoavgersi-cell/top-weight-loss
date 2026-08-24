@@ -26,7 +26,7 @@ import { REDDIT_COMMUNITY_FEEDBACK as REVIEW_COMMUNITY_FEEDBACK, RedditMark } fr
 // e.g. surging "embody reviews" and "embody glp1".
 const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
   embody: {
-    title: "embody Reviews 2026: GLP-1 Cost, Real Results & Is It Worth It?",
+    title: "embody GLP-1 Reviews 2026: Cost, Real Results & Is It Worth It?",
     description:
       "embody GLP-1 reviews: compounded semaglutide & tirzepatide, shipped in 1-2 days with no insurance and LegitScript certification. Real customer reviews, pricing, pros & cons - and is embody worth it?",
   },
