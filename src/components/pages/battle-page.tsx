@@ -46,6 +46,17 @@ const BATTLE_COST_MATH: Record<
     ],
     note: "Semaglutide at each provider's current published rate, promo conditions applied as published: embody $69/mo promotional (regularly $79), month to month; Medvi $99/mo promotional (regularly $199), all-inclusive with dietician and care coaching. Neither requires a prepaid term.",
   },
+  // provider1 = Medvi, provider2 = trimrx - both sides fully verified.
+  "medvi-vs-trimrx": {
+    rows: [
+      ["First month (semaglutide)", "$99 promo (reg. $199)", "$179 (month one only)"],
+      ["6-month total", "$594", "$1,674"],
+      ["12-month total", "$1,188", "$3,468"],
+      ["Tirzepatide, monthly", "$166 promo (reg. $299)", "$259"],
+      ["The condition", "$99 promotional - $199 regular", "$179 is month one only - $299 regular after"],
+    ],
+    note: "Semaglutide at published rates, promo conditions applied as published: Medvi $99/mo promotional (regularly $199), all-inclusive with dietician and care coaching. trimrx's $179 is a first-month rate - months 2-12 bill at the $299 regular price, which is what drives the $3,468 year. Neither requires a prepaid term.",
+  },
   // provider1 = embody, provider2 = Ro. Ro's figures are its own published
   // pricing (verified Aug 2026): a Ro Body membership ($39 first month, then
   // $74-$149/mo by plan) PLUS the brand-name medication, billed separately
