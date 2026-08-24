@@ -154,19 +154,21 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   const nextArticle = articles[currentIndex + 1] || null;
   const prevArticle = currentIndex > 0 ? articles[currentIndex - 1] : null;
 
-  // Brand-cluster articles (is-embody-legit, medvi-cost, ...) carry the
+  // Brand-cluster articles (is-embody-legit, happyhead-cost, ...) carry the
   // provider id as a slug segment. On those, surface the provider's real
   // social proof - Trustpilot and Reddit carousels - high on the page.
-  // Exact segment match so "ro" never fires inside "sprout".
+  // Exact segment match so "ro" never fires inside "sprout". Trustpilot data
+  // lives on the current vertical's own provider record, so it's safe on any
+  // vertical; the Reddit registry is weight-loss-researched and stays gated
+  // (a shared provider id like directmeds must not inherit those threads).
   const slugParts = slug.split("-");
-  const subjectProvider =
-    ctx.vertical === "weight-loss"
-      ? config.providers.find((p) => slugParts.includes(p.id))
-      : undefined;
+  const subjectProvider = config.providers.find((p) => slugParts.includes(p.id));
   const subjectTrustpilot =
     subjectProvider?.trustpilotReviews?.length ? subjectProvider : undefined;
   const subjectReddit =
-    subjectProvider && REDDIT_COMMUNITY_FEEDBACK[subjectProvider.id] ? subjectProvider : undefined;
+    ctx.vertical === "weight-loss" && subjectProvider && REDDIT_COMMUNITY_FEEDBACK[subjectProvider.id]
+      ? subjectProvider
+      : undefined;
 
   // Byline author: match the article's author to a team member, else the lead
   const author = experts.find((e) => e.name === article.author) ?? experts[0];
