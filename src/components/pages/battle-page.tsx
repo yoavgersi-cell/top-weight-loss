@@ -46,6 +46,18 @@ const BATTLE_COST_MATH: Record<
     ],
     note: "Semaglutide at each provider's current published rate, promo conditions applied as published: embody $69/mo promotional (regularly $79), month to month; Medvi $99/mo promotional (regularly $199), all-inclusive with dietician and care coaching. Neither requires a prepaid term.",
   },
+  // provider1 = embody, provider2 = Ro. Ro doesn't publish a flat compounded
+  // rate we've verified, so its column says so honestly instead of guessing.
+  "embody-vs-ro": {
+    rows: [
+      ["First month (semaglutide)", "$69", "Not published - verify on ro.co"],
+      ["6-month total", "$414", "Depends on plan and medication"],
+      ["12-month total", "$828", "Depends on plan and medication"],
+      ["Tirzepatide, monthly", "$119 (reg. $129)", "Not published - verify on ro.co"],
+      ["If the promo ends", "$79/mo regular - $948/yr", "-"],
+    ],
+    note: "embody's column is its current published rate, promo conditions applied as published: $69/mo promotional semaglutide (regularly $79), month to month, no prepaid term. Ro's GLP-1 pricing depends on the plan and medication (including brand-name routes) and we haven't verified a published flat rate - we show that honestly rather than guess. Check ro.co for current figures.",
+  },
   // provider1 = embody, provider2 = altRx (slug order is reversed)
   "altrx-vs-embody": {
     rows: [
