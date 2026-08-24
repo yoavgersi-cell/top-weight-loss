@@ -149,20 +149,58 @@ export function ProductCarousel({
           "@type": "ItemList",
           itemListElement: items.map((p, i) => {
             const provider = byId.get(p.providerId)!;
+            // GSC-requested enrichment, verified data only: description from
+            // the catalog's own honest fields; aggregateRating + one review
+            // only when the provider has a verified Trustpilot record; free-
+            // shipping details only when the catalog says shipping is free.
+            // hasMerchantReturnPolicy stays absent - we haven't verified
+            // return policies and won't invent one.
+            const tpCount = provider.trustpilotReviewCount
+              ? parseInt(provider.trustpilotReviewCount.replace(/,/g, ""), 10)
+              : NaN;
+            const hasAggregate =
+              !!provider.trustpilotRating && Number.isFinite(tpCount) && tpCount > 0;
+            const firstReview = provider.trustpilotReviews?.[0];
+            const freeShipping = /free/i.test(p.shipping);
             return {
               "@type": "ListItem",
               position: i + 1,
               item: {
                 "@type": "Product",
                 name: `${provider.name} ${p.name}`,
+                description: `${p.name} from ${provider.name} - $${productPriceValue(p)}/month (${p.priceNote}). ${p.shipping}.`,
                 ...(p.image ? { image: `https://www.treatmentshub.com${p.image}` } : {}),
                 brand: { "@type": "Brand", name: provider.name },
+                ...(hasAggregate && {
+                  aggregateRating: {
+                    "@type": "AggregateRating",
+                    ratingValue: provider.trustpilotRating,
+                    reviewCount: tpCount,
+                    bestRating: "5",
+                  },
+                }),
+                ...(hasAggregate &&
+                  firstReview && {
+                    review: {
+                      "@type": "Review",
+                      reviewRating: { "@type": "Rating", ratingValue: String(firstReview.rating), bestRating: "5" },
+                      author: { "@type": "Person", name: firstReview.name },
+                      reviewBody: firstReview.text,
+                    },
+                  }),
                 offers: {
                   "@type": "Offer",
                   price: String(productPriceValue(p)),
                   priceCurrency: "USD",
                   availability: "https://schema.org/InStock",
                   url: pageUrl,
+                  ...(freeShipping && {
+                    shippingDetails: {
+                      "@type": "OfferShippingDetails",
+                      shippingRate: { "@type": "MonetaryAmount", value: 0, currency: "USD" },
+                      shippingDestination: { "@type": "DefinedRegion", addressCountry: "US" },
+                    },
+                  }),
                 },
               },
             };

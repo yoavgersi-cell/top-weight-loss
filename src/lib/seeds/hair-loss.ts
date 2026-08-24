@@ -139,6 +139,20 @@ const providers: Provider[] = [
       },
     ],
   },
+  {
+    id: "petermd",
+    name: "PeterMD",
+    tagline: "Physician-prescribed finasteride and a 3-in-1 topical (minoxidil, finasteride, ketoconazole) for men's hair loss",
+    logo: "/logo-petermd.svg",
+    smallLogo: "/logo-petermd.svg",
+    highlights: [
+      "Finasteride 1mg from $60 per 30 tablets (reg $74)",
+      "Follicure RX: minoxidil + finasteride + ketoconazole in one spray",
+      "Physician-prescribed, discreet, delivered to your door",
+    ],
+    affiliateUrl: "https://getpetermd.com/",
+    ctaText: "Visit Site",
+  },
   // Competitor brands (Hims, Keeps, Ro) - included only to power "X vs …"
   // comparisons. They are NOT part of our ranking (see providerOrder below);
   // Keeps/Ro review pages are de-indexed automatically (not in
@@ -197,6 +211,7 @@ const PRICING_TBD =
 const positions: RankingPosition[] = [
   { score: 9.4, starRating: 5, label: "Excellent", badge: "Editor's Choice" },
   { score: 9.2, starRating: 5, label: "Excellent" },
+  { score: 9.0, starRating: 5, label: "Excellent" },
 ];
 
 const reviews: ReviewData[] = [
@@ -293,6 +308,49 @@ const reviews: ReviewData[] = [
       "Happy Head suits people who want a personalized, dermatologist-directed plan - with strong topical options, formulas for both men and women, verified $49 first-order pricing on its flagship topical and SuperCapsule (regularly $89), and a 4.5 Trustpilot average across 1,803 reviews. Confirm current eligibility and the growth-guarantee terms on their site.",
     trustBadges: ["4.5 across 1,803 Trustpilot reviews", "Dermatologist-founded", "Personalized formulas"],
     updatedAt: UPDATED,
+  },
+  {
+    slug: "petermd",
+    providerId: "petermd",
+    shortSummary:
+      "Physician-prescribed men's hair-loss treatment - finasteride 1mg from $60 per 30 tablets, and Follicure RX, a 3-in-1 topical combining minoxidil, finasteride and ketoconazole.",
+    reviewIntro:
+      "PeterMD is a men's telehealth clinic whose hair-loss line centers on two things: oral finasteride 1mg, and Follicure RX - a prescription topical spray that combines minoxidil, finasteride and ketoconazole in one daily formula. Treatment is physician-prescribed, shipped discreetly to your door, and priced openly: finasteride from $60 per 30 tablets (regularly $74) and the Follicure RX spray at $70 per 50mL bottle (regularly $80). This review covers the lineup, the verified prices and who it fits.",
+    keyFeatures: [
+      "Oral finasteride 1mg, physician-prescribed",
+      "Follicure RX: minoxidil + finasteride + ketoconazole in one topical spray",
+      "Published pricing with regular rates shown",
+      "Discreet delivery to your door",
+    ],
+    pricingSummary:
+      "Verified from PeterMD's published pricing (August 2026): finasteride 1mg is $60 for 30 tablets (regularly $74) or $90 for 60 tablets (regularly $110) - about $45/month at the 60-count rate, taken one a day. The ReGenX Bundle is $130 (regularly $160; confirm current bundle contents on their site). The Follicure RX topical spray (minoxidil, finasteride, ketoconazole) is $70 per 50mL bottle (regularly $80), or $140 for two (regularly $160).",
+    treatmentOptions: [
+      "Finasteride 1mg, 30 tablets - $60 (reg $74)",
+      "Finasteride 1mg, 60 tablets - $90 (reg $110), about $45/month",
+      "ReGenX Bundle - $130 (reg $160)",
+      "Follicure RX 3-in-1 topical spray - $70/50mL (reg $80), 2 for $140 (reg $160)",
+    ],
+    pros: [
+      "The only topical in our ranking that adds ketoconazole to minoxidil + finasteride",
+      "Clear published pricing with regular rates shown",
+      "60-count finasteride works out to about $45/month",
+      "Physician-prescribed with discreet delivery",
+    ],
+    cons: [
+      "Third-party review footprint is still small and early - too thin to weigh either way",
+      "Men-focused - not formulated for women",
+      "Narrower treatment menu than Maximus (no dutasteride or oral minoxidil published)",
+      "Prices shown are current promotions - regular rates are higher and shown alongside",
+    ],
+    bestFor: [
+      "Men who want straightforward finasteride at a published price",
+      "Those interested in a ketoconazole-containing 3-in-1 topical",
+      "People who prefer a simple two-product lineup over a big menu",
+    ],
+    finalVerdict:
+      "PeterMD earns its place with a focused lineup and honest sticker prices: finasteride from $60/30 tablets and the 3-in-1 Follicure RX spray at $70 - the only topical here that includes ketoconazole. Men wanting a broader prescription menu (dutasteride, oral minoxidil) should compare Maximus; those wanting personalized formulas or options for women should look at Happy Head. Confirm current pricing and eligibility on PeterMD's site.",
+    trustBadges: ["Physician-prescribed", "Published pricing", "Discreet delivery"],
+    updatedAt: "2026-08-24",
   },
   {
     slug: "hims",
@@ -853,6 +911,137 @@ const battles: BattleData[] = [
     ],
     updatedAt: UPDATED,
   },
+  {
+    slug: "maximus-vs-petermd",
+    provider1Id: "maximus",
+    provider2Id: "petermd",
+    title: "Maximus vs PeterMD: Which Men's Hair Loss Treatment in 2026?",
+    matchupLabel: "Maximus vs PeterMD",
+    subtitle: "The broadest prescription toolkit vs a focused finasteride + 3-in-1 topical lineup - both with verified prices.",
+    description:
+      "Maximus (oral minoxidil $24.99/mo, finasteride & dutasteride $34.99, All-in-One Gel $64.99) vs PeterMD (finasteride from $60/30 tablets, Follicure RX 3-in-1 spray $70). A verified price-for-price comparison.",
+    intro:
+      "This is one of the few hair-loss matchups where we've verified published pricing on both sides, so it can be a real price-for-price comparison. Maximus brings the widest prescription toolkit in our ranking - oral minoxidil ($24.99/mo), finasteride and dutasteride ($34.99/mo each) up to the four-active All-in-One Gel ($64.99/mo), billed as 90-day supplies. PeterMD keeps it focused: finasteride 1mg from $60 per 30 tablets (about $45/month at the 60-count rate) and Follicure RX, a 3-in-1 topical spray that pairs minoxidil and finasteride with ketoconazole - the only ketoconazole-containing topical in our ranking - at $70 per bottle.",
+    verdict:
+      "Maximus takes it for most men: its single-active treatments are cheaper month to month ($24.99-$34.99 vs about $45-$60 for PeterMD's finasteride), and its menu gives you somewhere to go - dutasteride, oral minoxidil, a four-active topical - if first-line treatment underdelivers. PeterMD's genuine edge is Follicure RX: if you specifically want ketoconazole in a prescription topical alongside minoxidil and finasteride, nobody else in our ranking publishes that combination. Confirm current pricing and eligibility on both sites.",
+    verdictWinnerPoints: [
+      "Cheaper verified single-active pricing ($24.99-$34.99/mo)",
+      "Broadest menu: dutasteride, oral minoxidil, multi-active topicals",
+      "4.4 across 1,050 Trustpilot reviews",
+    ],
+    verdictLoserPoints: [
+      "Follicure RX: the only minoxidil + finasteride + ketoconazole topical here",
+      "Simple, published two-product lineup",
+      "60-count finasteride at about $45/month",
+    ],
+    winnerId: "maximus",
+    categories: [
+      {
+        name: "Verified Pricing",
+        winner: "provider1",
+        explanation:
+          "Both publish real prices - rare in this space - but Maximus is cheaper at the treatment level: oral minoxidil $24.99/month and finasteride $34.99/month vs PeterMD's finasteride at $60 per 30 tablets ($90 per 60, about $45/month). At the top end the gap narrows: Maximus' All-in-One Gel is $64.99/month vs Follicure RX at $70 per bottle.",
+        supportingPoints: [
+          "Finasteride: $34.99/mo (Maximus) vs ~$45-$60/mo (PeterMD)",
+          "Both show regular prices next to promos",
+        ],
+      },
+      {
+        name: "Treatment Range",
+        winner: "provider1",
+        explanation:
+          "Maximus publishes seven treatments across oral and topical routes, including dutasteride and oral minoxidil that PeterMD's hair line doesn't list. PeterMD counters with focus - two products, easy to choose between.",
+        supportingPoints: [
+          "Dutasteride and oral minoxidil (Maximus only)",
+          "Two-product simplicity (PeterMD)",
+        ],
+      },
+      {
+        name: "Topical Formula",
+        winner: "provider2",
+        explanation:
+          "PeterMD's Follicure RX is the only topical in our ranking combining minoxidil, finasteride and ketoconazole - the antifungal often used alongside hair-loss treatment for scalp health. Maximus' All-in-One Gel counters with dutasteride, tretinoin and fexofenadine. Different four-way bets; if ketoconazole specifically matters to you, PeterMD is the one that publishes it.",
+        supportingPoints: [
+          "Ketoconazole in the formula (PeterMD only)",
+          "Dutasteride + tretinoin route (Maximus)",
+        ],
+      },
+    ],
+    features: [
+      { feature: "Oral finasteride", provider1Value: "$34.99/mo (90-day supply)", provider2Value: "$60/30 tablets (reg $74)", highlight: "provider1" },
+      { feature: "Oral minoxidil", provider1Value: "$24.99/mo", provider2Value: "Not published", highlight: "provider1" },
+      { feature: "Dutasteride option", provider1Value: "Yes ($34.99/mo)", provider2Value: "Not published", highlight: "provider1" },
+      { feature: "Flagship topical", provider1Value: "All-in-One Gel $64.99/mo", provider2Value: "Follicure RX $70 (reg $80)", highlight: "both" },
+      { feature: "Ketoconazole in topical", provider1Value: "No", provider2Value: "Yes", highlight: "provider2" },
+      { feature: "Delivery", provider1Value: "Free, discreet", provider2Value: "Discreet, to your door", highlight: "both" },
+    ],
+    updatedAt: "2026-08-24",
+  },
+  {
+    slug: "happyhead-vs-petermd",
+    provider1Id: "happyhead",
+    provider2Id: "petermd",
+    title: "Happy Head vs PeterMD: Custom Formulas or Simple Sticker Prices in 2026?",
+    matchupLabel: "Happy Head vs PeterMD",
+    subtitle: "Dermatologist-personalized compounds vs a focused finasteride + 3-in-1 topical lineup.",
+    description:
+      "Happy Head (custom topical & SuperCapsule, $49 first order, reg $89/mo) vs PeterMD (finasteride from $60/30 tablets, Follicure RX $70). Verified prices, honest trade-offs.",
+    intro:
+      "Happy Head and PeterMD sell opposite philosophies at similar sticker prices. Happy Head compounds personalized formulas after a dermatologist-directed review - its Custom Topical runs dutasteride 0.3% with 8% minoxidil, its SuperCapsule pairs dutasteride with oral minoxidil, and both are $49 on the first order (regularly $89/month). PeterMD keeps it off the shelf: standard finasteride 1mg from $60 per 30 tablets, and the Follicure RX spray combining minoxidil, finasteride and ketoconazole at $70 per bottle. Both publish real prices, which is exactly why this comparison can be honest.",
+    verdict:
+      "Happy Head wins for anyone who wants treatment built for them - stronger actives (8% minoxidil, dutasteride) tuned after a dermatologist-directed review, formulas for women as well as men, and a 4.5 Trustpilot average across 1,803 reviews. PeterMD is the simpler buy: standard finasteride at a clear price and the only ketoconazole 3-in-1 topical in our ranking, without a personalization layer. If budget beyond month one drives the decision, note Happy Head's regular rate is $89/month while PeterMD's 60-count finasteride runs about $45/month. Confirm current details on both sites.",
+    verdictWinnerPoints: [
+      "Personalized formulas after dermatologist-directed review",
+      "Serves both men and women",
+      "8% minoxidil and dutasteride options; 4.5/1,803 Trustpilot record",
+    ],
+    verdictLoserPoints: [
+      "Simple published pricing: finasteride from $60/30 tablets",
+      "Follicure RX adds ketoconazole - unique in our ranking",
+      "About $45/month at the 60-count finasteride rate",
+    ],
+    winnerId: "happyhead",
+    categories: [
+      {
+        name: "Personalization",
+        winner: "provider1",
+        explanation:
+          "Happy Head's entire model is compounding a formula to your case - actives, strengths and format adjusted after a dermatologist-directed review, remade fresh monthly. PeterMD prescribes standard products; simpler, but one-size.",
+        supportingPoints: [
+          "Custom-compounded, adjusted formulas (Happy Head)",
+          "Standard finasteride and a fixed topical (PeterMD)",
+        ],
+      },
+      {
+        name: "Price Over Time",
+        winner: "provider2",
+        explanation:
+          "First order favors Happy Head ($49 vs $60), but from month two its regular rate is $89/month per product, while PeterMD's 60-count finasteride works out to about $45/month. If you just need standard finasteride, PeterMD is the cheaper long-run route; Happy Head's price buys the custom multi-active formula.",
+        supportingPoints: [
+          "$49 first order, then $89/mo (Happy Head)",
+          "~$45/mo at 60-count finasteride (PeterMD)",
+        ],
+      },
+      {
+        name: "Who It Serves",
+        winner: "provider1",
+        explanation:
+          "Happy Head treats both men and women - one of the few in our ranking that does. PeterMD's hair line is built for men.",
+        supportingPoints: [
+          "Men and women (Happy Head)",
+          "Men-focused (PeterMD)",
+        ],
+      },
+    ],
+    features: [
+      { feature: "Flagship price", provider1Value: "$49 first order (reg $89/mo)", provider2Value: "$60/30 tablets (reg $74)", highlight: "both" },
+      { feature: "Personalized formula", provider1Value: "Yes - compounded to you", provider2Value: "Standard products", highlight: "provider1" },
+      { feature: "For women", provider1Value: "Yes", provider2Value: "No", highlight: "provider1" },
+      { feature: "Topical strength", provider1Value: "Up to 8% minoxidil + dutasteride", provider2Value: "Minoxidil + finasteride + ketoconazole", highlight: "both" },
+      { feature: "Long-run monthly cost", provider1Value: "$89/mo regular", provider2Value: "~$45/mo (60-count finasteride)", highlight: "provider2" },
+    ],
+    updatedAt: "2026-08-24",
+  },
 ];
 
 const faqs: FaqItem[] = [
@@ -1007,6 +1196,96 @@ const articles: ArticleData[] = [
       {
         heading: "The bottom line",
         body: `<table><thead><tr><th>Provider</th><th>Best for</th><th>Verified pricing</th></tr></thead><tbody><tr><td>Maximus</td><td>Men wanting the widest prescription toolkit</td><td>From $24.99/mo (90-day supply)</td></tr><tr><td>Happy Head</td><td>Personalized formulas; men and women</td><td>$49 first order, reg $89/mo</td></tr><tr><td>Hims</td><td>Mainstream basics</td><td>Not yet verified</td></tr><tr><td>Keeps</td><td>Budget generics</td><td>Not yet verified</td></tr><tr><td>Ro</td><td>Multi-category convenience</td><td>Not yet verified</td></tr></tbody></table>If personalization or treatment for women is the priority, Happy Head is the strongest alternative; if you just want the basics cheaper, compare Keeps. Start from our <a href="/hair-loss">full ranking</a>. General information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "is-petermd-legit",
+    title: "Is PeterMD Legit for Hair Loss? An Honest Review (2026)",
+    description:
+      "Is PeterMD legit? A clear look at its physician-prescribed hair-loss line - finasteride from $60/30 tablets and the Follicure RX 3-in-1 topical - with verified prices and honest pros and cons.",
+    category: "Advice",
+    readTime: "5 min read",
+    publishedAt: "2026-08-24",
+    updatedAt: "2026-08-24",
+    heroColor: "#EEF4FB",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "What is PeterMD's hair loss treatment?",
+        body: `PeterMD is a men's telehealth clinic whose hair-loss line is deliberately simple: oral finasteride 1mg, and Follicure RX - a prescription topical spray combining minoxidil, finasteride and ketoconazole in one daily formula. Everything is physician-prescribed and shipped discreetly to your door. Full details in our <a href="/hair-loss/reviews/petermd">PeterMD hair review</a>.`,
+      },
+      {
+        heading: "Is PeterMD legit and safe?",
+        body: `By the checkable signals, yes: treatment is prescription-only behind a physician review, its actives are established hair-loss medications (finasteride is FDA-approved for male pattern hair loss; topical minoxidil is FDA-approved; ketoconazole is a widely used antifungal often added for scalp health), and it publishes real prices with the regular rate shown next to promotions - a transparency signal we weight heavily. Its third-party review footprint is still small and early, so we don't weigh it either way yet. As with any prescription treatment, suitability depends on your case - that's what the physician review is for.`,
+      },
+      {
+        heading: "How much does PeterMD hair treatment cost?",
+        body: `Verified from PeterMD's published pricing (August 2026): finasteride 1mg is <strong>$60 for 30 tablets</strong> (regularly $74) or $90 for 60 (regularly $110) - about $45/month at the 60-count rate. The Follicure RX 3-in-1 spray is <strong>$70 per 50mL bottle</strong> (regularly $80), or $140 for two. The full breakdown: <a href="/hair-loss/articles/petermd-cost">PeterMD cost guide</a>.`,
+      },
+      {
+        heading: "PeterMD pros and cons",
+        body: `<strong>Pros:</strong> clear published pricing, the only ketoconazole-containing 3-in-1 topical in our ranking, physician-prescribed process, discreet delivery. <strong>Cons:</strong> a narrower menu than the leaders (no dutasteride or oral minoxidil published), men-only, and a review footprint too thin to weigh. For the head-to-heads, see <a href="/hair-loss/maximus-vs-petermd">Maximus vs PeterMD</a> and <a href="/hair-loss/happyhead-vs-petermd">Happy Head vs PeterMD</a>.`,
+      },
+      {
+        heading: "The verdict",
+        body: `PeterMD is a legitimate, simple route to standard finasteride and a distinctive 3-in-1 topical at honest prices. Men wanting more treatment options should compare <a href="/hair-loss/reviews/maximus">Maximus</a>; anyone wanting a personalized formula - or treatment for women - should look at <a href="/hair-loss/reviews/happyhead">Happy Head</a>. General information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "petermd-cost",
+    title: "PeterMD Hair Loss Cost: 2026 Prices (Finasteride From $60)",
+    description:
+      "How much does PeterMD cost for hair loss? Verified 2026 prices: finasteride 1mg $60/30 tablets (reg $74), $90/60 (reg $110), Follicure RX 3-in-1 spray $70 (reg $80) - and how it compares.",
+    category: "Advice",
+    readTime: "4 min read",
+    publishedAt: "2026-08-24",
+    updatedAt: "2026-08-24",
+    heroColor: "#EEF4FB",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "PeterMD hair price list (verified August 2026)",
+        body: `<table><thead><tr><th>Product</th><th>Price</th><th>Regular</th><th>Notes</th></tr></thead><tbody><tr><td>Finasteride 1mg, 30 tablets</td><td><strong>$60</strong></td><td>$74</td><td>About a month at one a day</td></tr><tr><td>Finasteride 1mg, 60 tablets</td><td><strong>$90</strong></td><td>$110</td><td>About $45/month - the better rate</td></tr><tr><td>ReGenX Bundle</td><td><strong>$130</strong></td><td>$160</td><td>Confirm current bundle contents on site</td></tr><tr><td>Follicure RX 3-in-1 spray, 50mL</td><td><strong>$70</strong></td><td>$80</td><td>Minoxidil + finasteride + ketoconazole</td></tr><tr><td>Follicure RX, 2 x 50mL</td><td><strong>$140</strong></td><td>$160</td><td></td></tr></tbody></table>Prices are per supply rather than a monthly subscription quote - the 60-count finasteride is the cheapest per-tablet route.`,
+      },
+      {
+        heading: "How PeterMD pricing compares",
+        body: `On standard finasteride, <a href="/hair-loss/reviews/maximus">Maximus</a> is cheaper month to month ($34.99/mo, billed as 90-day supplies) vs PeterMD's ~$45-$60/month equivalent. On flagship topicals the field converges: PeterMD's Follicure RX $70, Maximus' All-in-One Gel $64.99/mo, <a href="/hair-loss/reviews/happyhead">Happy Head</a>'s Custom Topical $49 first order then $89/mo. What PeterMD uniquely publishes is ketoconazole in the topical formula. Head to head: <a href="/hair-loss/maximus-vs-petermd">Maximus vs PeterMD</a>.`,
+      },
+      {
+        heading: "Is PeterMD worth the cost?",
+        body: `Worth it if you want standard finasteride with a clear sticker price, or specifically the minoxidil + finasteride + ketoconazole combination in one spray. If treatment breadth or the lowest single-active price is the goal, compare <a href="/hair-loss/articles/petermd-alternatives">the alternatives</a>. General information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "petermd-alternatives",
+    title: "Best PeterMD Alternatives for Hair Loss in 2026 (Compared)",
+    description:
+      "Looking for a PeterMD alternative? Compare Maximus, Happy Head, Hims and Keeps on verified pricing, treatment range and fit - including options for women.",
+    category: "Advice",
+    readTime: "4 min read",
+    publishedAt: "2026-08-24",
+    updatedAt: "2026-08-24",
+    heroColor: "#EEF4FB",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "Why look for a PeterMD alternative?",
+        body: `PeterMD's hair line is simple and honestly priced - finasteride from $60/30 tablets and the Follicure RX 3-in-1 spray at $70 - but its menu is narrow (no dutasteride or oral minoxidil published), it's men-only, and some people want a personalized formula. Here's how the field compares, using verified prices wherever we have them.`,
+      },
+      {
+        heading: "Maximus - broadest menu, lowest single-active prices",
+        body: `<a href="/hair-loss/reviews/maximus">Maximus</a> tops our ranking: oral minoxidil $24.99/month, finasteride or dutasteride $34.99/month, topical gels up to the four-active All-in-One at $64.99 - all verified, with a 4.4/1,050 Trustpilot record. If PeterMD's two-product lineup feels limiting, this is the upgrade path. Head to head: <a href="/hair-loss/maximus-vs-petermd">Maximus vs PeterMD</a>.`,
+      },
+      {
+        heading: "Happy Head - personalization, and the pick for women",
+        body: `<a href="/hair-loss/reviews/happyhead">Happy Head</a> compounds custom formulas (8% minoxidil, dutasteride options) after a dermatologist-directed review, serves both men and women, and holds a 4.5/1,803 Trustpilot record - $49 on the first order, regularly $89/month. Head to head: <a href="/hair-loss/happyhead-vs-petermd">Happy Head vs PeterMD</a>.`,
+      },
+      {
+        heading: "The bottom line",
+        body: `<table><thead><tr><th>If you want...</th><th>Pick</th><th>Verified pricing</th></tr></thead><tbody><tr><td>Simple finasteride + a ketoconazole topical</td><td>PeterMD</td><td>From $60/30 tablets</td></tr><tr><td>Lowest single-active prices, widest menu</td><td>Maximus</td><td>From $24.99/mo</td></tr><tr><td>Personalized formula, or you're a woman</td><td>Happy Head</td><td>$49 first order, reg $89/mo</td></tr><tr><td>Mainstream basics</td><td>Hims / Keeps</td><td>Not yet verified</td></tr></tbody></table>Start from our <a href="/hair-loss">full hair-loss ranking</a>. General information, not medical advice.`,
       },
     ],
   },
@@ -1574,7 +1853,7 @@ export function hairLossSeed(base: SiteConfig): SiteConfig {
     ranking: {
       // Only our two monetized providers are ranked. Hims exists as a provider
       // solely to power the "Hims vs …" comparisons and is deliberately excluded.
-      providerOrder: ["maximus", "happyhead"],
+      providerOrder: ["maximus", "happyhead", "petermd"],
       positions,
     },
     reviews,
