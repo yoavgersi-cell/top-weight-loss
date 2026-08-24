@@ -115,6 +115,28 @@ const providers: Provider[] = [
     tagline: "Physician-founded online TRT - injectable testosterone and enclomiphene, with at-home labs",
     logo: "/logo-dudemeds.svg",
     smallLogo: "/logo-dudemeds.svg",
+    // Individual reviews from DudeMeds' Trustpilot page (operator-supplied
+    // screenshots, both "unprompted"). No published aggregate verified, so
+    // rating/count are deliberately absent - the carousel shows the reviews
+    // with a plain "Source: Trustpilot" label instead of a score.
+    trustpilotReviews: [
+      {
+        title: "Absolutely fantastic experience",
+        text: "Absolutely fantastic experience! This is the first company that actually uses reliable testosterone instead of underdosed compounded testosterone which doesnt have the best quality control! Next day appointments available, fast shipping and good customer service!",
+        name: "Dont be A wimp",
+        location: "US",
+        rating: 5,
+        date: "Aug 14, 2025",
+      },
+      {
+        title: "Support team rectified quickly",
+        text: "Although there was a hiccup with my initial doctor consultation, the support team rectified quickly and got me a new appointment. Thanks DudeMeds!",
+        name: "Bryce T",
+        location: "US",
+        rating: 5,
+        date: "Sep 16, 2025",
+      },
+    ],
     highlights: [
       "Injectable testosterone (cypionate), supplies included",
       "Enclomiphene option - helps preserve fertility",
@@ -300,21 +322,24 @@ const reviews: ReviewData[] = [
       "At-home or uploaded labs",
       "Founded by two physicians",
     ],
-    pricingSummary: PRICING_TBD,
+    pricingSummary:
+      "Verified from DudeMeds' published pricing (August 2026): injectable testosterone from $77/month on the Bring-Your-Own-Labs plan (testosterone, anastrozole, syringes, televisit and shipping included), from $98/month with lab work included, oral enclomiphene at $125/month (lab work, televisit and shipping included), and the TRT MAX stack (testosterone + HCG + AI + lab work) at $222/month on a quarterly commitment. Every plan includes the televisit, prescriptions and free shipping.",
     treatmentOptions: [
-      "Testosterone cypionate injection",
-      "Enclomiphene (a fertility-preserving option)",
-      "At-home lab testing",
-      "Provider-directed protocol",
+      "TRT, Bring-Your-Own-Labs - from $77/mo (testosterone, anastrozole, syringes, televisit, shipping)",
+      "TRT + lab work included - from $98/mo",
+      "Oral enclomiphene - $125/mo (lab work, televisit, shipping included)",
+      "TRT MAX stack: testosterone + HCG + AI + labs - $222/mo, quarterly commitment",
     ],
     pros: [
+      "From $77/mo - among the lowest published injectable-TRT entry prices in our ranking",
       "Both injectable TRT and fertility-preserving enclomiphene",
+      "Televisit, prescriptions and free shipping included in every plan",
       "Physician-founded, fully online",
-      "At-home labs with supplies included",
     ],
     cons: [
+      "No published Trustpilot aggregate we've verified - we say so rather than invent one",
+      "Cheapest tier requires bringing your own labs; the top stack is a quarterly commitment",
       "Requires labs and a medical review",
-      "Men-focused",
       "Ongoing monitoring needed",
     ],
     bestFor: [
@@ -323,8 +348,8 @@ const reviews: ReviewData[] = [
       "People who value an at-home, streamlined process",
     ],
     finalVerdict:
-      "DudeMeds is a strong pick for men who want flexibility between injectable TRT and fertility-preserving enclomiphene, under physician-founded care. Confirm current pricing and eligibility on their site.",
-    trustBadges: ["Physician-founded", "At-home lab option", "Supplies included"],
+      "DudeMeds is a strong pick for men who want flexibility between injectable TRT and fertility-preserving enclomiphene, under physician-founded care - with verified pricing from $77/month (bring your own labs) to the $222/month TRT MAX stack, and televisit, prescriptions and shipping included throughout. Confirm current eligibility on their site.",
+    trustBadges: ["From $77/mo verified", "Physician-founded", "Televisit & shipping included"],
     updatedAt: UPDATED,
   },
   {
@@ -570,7 +595,7 @@ const battles: BattleData[] = [
       { feature: "Injectable testosterone", provider1Value: "Available", provider2Value: "Available", highlight: "both" },
       { feature: "Enclomiphene option", provider1Value: "Yes", provider2Value: "See site", highlight: "provider1" },
       { feature: "Flexible plan lengths", provider1Value: "See site", provider2Value: "Yes", highlight: "provider2" },
-      { feature: "Pricing", provider1Value: "See site", provider2Value: "See site", highlight: "none" },
+      { feature: "Pricing", provider1Value: "From $77/mo (BYO labs)", provider2Value: "See site", highlight: "provider1" },
     ],
     updatedAt: UPDATED,
   },
