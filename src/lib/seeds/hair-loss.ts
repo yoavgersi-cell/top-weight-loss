@@ -892,6 +892,230 @@ const faqs: FaqItem[] = [
 // no fabricated statistics or provider-specific numbers - with internal links to
 // the provider reviews, the comparison, and between articles.
 const articles: ArticleData[] = [
+  // ───── Brand-cluster articles (is-X-legit / X-cost / X-alternatives) ─────
+  // Every price, rating and quote below is operator-verified (Aug 2026
+  // screenshots). Review pages auto-link these via the cluster-slug pattern,
+  // and the article renderer surfaces each brand's Trustpilot carousel.
+  {
+    slug: "is-maximus-legit",
+    title: "Is Maximus Legit? An Honest Maximus Hair Loss Review (2026)",
+    description:
+      "Is Maximus legit for hair loss? A clear look at Maximus' doctor-prescribed oral and topical treatments, real published prices from $24.99/mo, its 4.4 Trustpilot rating, and the pros and cons.",
+    category: "Advice",
+    readTime: "6 min read",
+    publishedAt: "2026-08-24",
+    updatedAt: "2026-08-24",
+    heroColor: "#EEF4FB",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "What is Maximus hair treatment?",
+        body: `Maximus is an online men's health clinic whose hair-loss program covers a wider prescription toolkit than most telehealth services: oral finasteride, oral minoxidil and oral dutasteride, plus compounded topical gels - up to an All-in-One Gel that combines dutasteride, minoxidil, tretinoin and fexofenadine in a single application. You complete a medical questionnaire online, a board-certified doctor reviews it, and approved treatment ships free and discreetly. For the full breakdown, see our <a href="/hair-loss/reviews/maximus">in-depth Maximus review</a>.`,
+      },
+      {
+        heading: "Is Maximus legit and safe?",
+        body: `By the signals that matter, yes - Maximus is a legitimate telehealth provider. Every treatment is prescription-only and gated behind a review by a <strong>board-certified doctor</strong>, its actives are established hair-loss medications (finasteride is FDA-approved for male pattern hair loss, topical minoxidil is FDA-approved, and oral minoxidil and dutasteride are prescribed off-label under medical supervision), and the company holds a <strong>claimed Trustpilot profile rated 4.4 across 1,050 reviews</strong>. It also publishes its prices openly - a transparency signal plenty of competitors avoid. Safety still depends on the medication fitting you personally, which is exactly what the doctor review is for.`,
+      },
+      {
+        heading: "How much does Maximus cost?",
+        body: `Verified from Maximus' published pricing (August 2026), billed as a 90-day supply: oral minoxidil is <strong>$24.99/month</strong> - its most affordable entry point - oral finasteride and oral dutasteride are $34.99/month each, the topical gels run $44.99-$54.99/month, the oral minoxidil + dutasteride combination is $59.99/month, and the flagship All-in-One Gel is $64.99/month, which works out to about $2 a day. The full price list, and how it compares to other providers, is in our <a href="/hair-loss/articles/maximus-cost">Maximus cost guide</a>.`,
+      },
+      {
+        heading: "What real customers say",
+        body: `From Maximus' Trustpilot page (all recent, unprompted, 5-star): "Highly knowledgeable physician who prescribed a protocol that works, great products, lots of treatment options not available elsewhere" (David Epstein). "Excellent customer service... The products are also 100% as advertised" (Ben Vangarde). "Shipping was fast for a year... a real person responding on the weekend" (Nathan Bennett). The consistent themes across reviews: physician quality, service responsiveness and shipping speed.`,
+      },
+      {
+        heading: "Maximus pros and cons",
+        body: `<strong>Pros:</strong> the broadest prescription toolkit in our ranking (including dutasteride and oral minoxidil), a genuinely accessible $24.99/month entry price, board-certified doctor oversight, free discreet shipping, and a 4.4 Trustpilot average across 1,050 reviews. <strong>Cons:</strong> plans are billed as a 90-day supply rather than month-to-month, it's built for men only, and - like all hair-loss treatment - results require ongoing use. If you're a woman looking for treatment, see <a href="/hair-loss/articles/hair-loss-treatment-for-women">hair-loss treatment for women</a> or <a href="/hair-loss/reviews/happyhead">Happy Head</a>, which serves both.`,
+      },
+      {
+        heading: "The verdict: is Maximus worth it?",
+        body: `For men who want prescription-strength options beyond the basics - especially dutasteride or a multi-active topical - Maximus is one of the strongest choices online, at prices that undercut much of the field. Start with our <a href="/hair-loss/reviews/maximus">full Maximus review</a>, or see how it stacks up head to head in <a href="/hair-loss/maximus-vs-happy-head">Maximus vs Happy Head</a>. This article is general information, not medical advice - a licensed clinician determines what's appropriate for you.`,
+      },
+    ],
+  },
+  {
+    slug: "maximus-cost",
+    title: "Maximus Hair Loss Cost: Full 2026 Price List (From $24.99/mo)",
+    description:
+      "How much does Maximus cost? The full verified 2026 price list - oral minoxidil $24.99/mo, finasteride $34.99, dutasteride $34.99, All-in-One Gel $64.99 - plus what's included and how the 90-day billing works.",
+    category: "Advice",
+    readTime: "6 min read",
+    publishedAt: "2026-08-24",
+    updatedAt: "2026-08-24",
+    heroColor: "#EEF4FB",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "Maximus price list (verified August 2026)",
+        body: `Every price below comes from Maximus' own published pricing, and all plans are billed as a 90-day supply:<table><thead><tr><th>Treatment</th><th>Price</th><th>Actives</th></tr></thead><tbody><tr><td>Oral Minoxidil</td><td><strong>$24.99/mo</strong></td><td>Minoxidil (its most affordable option)</td></tr><tr><td>Oral Finasteride</td><td>$34.99/mo</td><td>Finasteride</td></tr><tr><td>Oral Dutasteride</td><td>$34.99/mo</td><td>Dutasteride</td></tr><tr><td>Minoxidil+ Gel</td><td>$44.99/mo</td><td>Minoxidil, tretinoin, fexofenadine</td></tr><tr><td>Dutasteride+ Gel</td><td>$54.99/mo</td><td>Dutasteride, tretinoin, fexofenadine</td></tr><tr><td>Oral Minoxidil + Dutasteride</td><td>$59.99/mo</td><td>Both orals combined</td></tr><tr><td>All-in-One Gel</td><td>$64.99/mo</td><td>Dutasteride, minoxidil, tretinoin, fexofenadine</td></tr></tbody></table>`,
+      },
+      {
+        heading: "What's included in the price",
+        body: `The monthly rate covers the medication, the board-certified doctor review of your questionnaire, and free discreet shipping - there's no separate consultation or membership fee in the published pricing. Prescription treatments still require the doctor to approve you as a candidate.`,
+      },
+      {
+        heading: "How the 90-day billing works",
+        body: `Maximus quotes prices per month but supplies and bills in 90-day cycles - so the $24.99/month oral minoxidil arrives as a three-month supply. The per-month math is honest, but plan for the larger upfront charge rather than a small monthly one. That structure is common for prescription subscriptions and cuts down shipping churn; it's just worth knowing before checkout.`,
+      },
+      {
+        heading: "The cheapest way to start with Maximus",
+        body: `At <strong>$24.99/month, oral minoxidil is the lowest-cost entry point</strong> - and for many men a reasonable first step, since minoxidil promotes regrowth without affecting hormones. If DHT is the driver of your loss, finasteride or dutasteride at $34.99/month targets the cause directly - our <a href="/hair-loss/articles/dutasteride-vs-finasteride">dutasteride vs finasteride guide</a> explains the difference. The doctor review determines which route fits your case.`,
+      },
+      {
+        heading: "How Maximus pricing compares",
+        body: `Against the field: <a href="/hair-loss/reviews/happyhead">Happy Head</a>'s flagship products are $49 on the first order and $89/month at the regular rate - so Maximus' single-active treatments ($24.99-$34.99) undercut it, while Happy Head competes on personalized multi-active formulas. Mainstream options like Hims and Keeps don't publish comparable verified pricing on our pages yet - we list prices only after verifying them. Head-to-heads: <a href="/hair-loss/maximus-vs-happy-head">Maximus vs Happy Head</a>, <a href="/hair-loss/hims-vs-maximus">Hims vs Maximus</a>, <a href="/hair-loss/keeps-vs-maximus">Keeps vs Maximus</a>.`,
+      },
+      {
+        heading: "Is the $64.99 All-in-One Gel worth it?",
+        body: `The All-in-One Gel is Maximus' strongest topical: dutasteride, minoxidil, tretinoin and fexofenadine in one application, at about $2 a day. Whether it's worth 2.6x the oral minoxidil price depends on your case - a multi-active topical targets several mechanisms at once while minimizing systemic exposure, which is exactly the argument for compounded topicals generally. It's a question worth putting to the reviewing doctor rather than deciding from a pricing page. Full program details in our <a href="/hair-loss/reviews/maximus">Maximus review</a>.`,
+      },
+    ],
+  },
+  {
+    slug: "maximus-alternatives",
+    title: "Best Maximus Alternatives for Hair Loss in 2026 (Compared)",
+    description:
+      "Looking for a Maximus alternative? Compare Happy Head, Hims, Keeps and Ro on treatments, verified pricing and who each fits - including options for women.",
+    category: "Advice",
+    readTime: "6 min read",
+    publishedAt: "2026-08-24",
+    updatedAt: "2026-08-24",
+    heroColor: "#EEF4FB",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "Why look for a Maximus alternative?",
+        body: `Maximus tops our <a href="/hair-loss">hair-loss ranking</a> for men who want a broad prescription toolkit at verified prices from $24.99/month. But it isn't built for everyone: it's men-only, its plans bill as 90-day supplies, and some people specifically want a personalized compounded formula or a familiar mainstream brand. Here's how the real alternatives compare.`,
+      },
+      {
+        heading: "Happy Head - best for personalized formulas (and the only pick here for women)",
+        body: `<a href="/hair-loss/reviews/happyhead">Happy Head</a> is dermatologist-founded and builds custom prescription formulas - its Custom Topical combines dutasteride 0.3%, minoxidil 8%, retinoic acid and hydrocortisone, and its 3-in-1 SuperCapsule pairs dutasteride 0.5mg with minoxidil 1.25mg and vitamin D3. Verified pricing: <strong>$49 first order</strong> on either flagship (regularly $89/month), or both bundled at $98 (regularly $178), with a 4.5 Trustpilot average across 1,803 reviews. Crucially, it serves <strong>both men and women</strong> - the single biggest gap in Maximus' offer. Head to head: <a href="/hair-loss/maximus-vs-happy-head">Maximus vs Happy Head</a>.`,
+      },
+      {
+        heading: "Hims - best for mainstream familiarity",
+        body: `<a href="/hair-loss/reviews/hims">Hims</a> is the most recognizable name in men's telehealth, offering prescription finasteride and minoxidil through a simple online flow. The toolkit is narrower than Maximus' - dutasteride and compounded topicals aren't its core offer - and we haven't verified its current hair pricing, so check its site. Comparison: <a href="/hair-loss/hims-vs-maximus">Hims vs Maximus</a>.`,
+      },
+      {
+        heading: "Keeps - best if you only want the generic basics",
+        body: `Keeps focuses on generic finasteride and minoxidil at budget positioning, plus hair-care add-ons like ketoconazole shampoo. If all you want is the two proven basics and the lowest sticker, it's a fair route - just know there's nowhere to go inside Keeps if first-line treatment underdelivers. We haven't verified its current pricing. Comparison: <a href="/hair-loss/keeps-vs-maximus">Keeps vs Maximus</a>.`,
+      },
+      {
+        heading: "Ro - best if you want one platform for many things",
+        body: `Ro offers finasteride and minoxidil inside a large multi-category telehealth platform - convenient if you already use it for other care. For hair specifically, dedicated providers offer deeper toolkits. Comparison: <a href="/hair-loss/ro-vs-maximus">Ro vs Maximus</a>.`,
+      },
+      {
+        heading: "The bottom line",
+        body: `<table><thead><tr><th>Provider</th><th>Best for</th><th>Verified pricing</th></tr></thead><tbody><tr><td>Maximus</td><td>Men wanting the widest prescription toolkit</td><td>From $24.99/mo (90-day supply)</td></tr><tr><td>Happy Head</td><td>Personalized formulas; men and women</td><td>$49 first order, reg $89/mo</td></tr><tr><td>Hims</td><td>Mainstream basics</td><td>Not yet verified</td></tr><tr><td>Keeps</td><td>Budget generics</td><td>Not yet verified</td></tr><tr><td>Ro</td><td>Multi-category convenience</td><td>Not yet verified</td></tr></tbody></table>If personalization or treatment for women is the priority, Happy Head is the strongest alternative; if you just want the basics cheaper, compare Keeps. Start from our <a href="/hair-loss">full ranking</a>. General information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "is-happyhead-legit",
+    title: "Is Happy Head Legit? An Honest Happy Head Review (2026)",
+    description:
+      "Is Happy Head legit? A clear look at the dermatologist-founded hair-loss service - its custom formulas, verified $49 first-order pricing, 4.5 Trustpilot rating across 1,803 reviews, and the pros and cons.",
+    category: "Advice",
+    readTime: "6 min read",
+    publishedAt: "2026-08-24",
+    updatedAt: "2026-08-24",
+    heroColor: "#EEF4FB",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "What is Happy Head?",
+        body: `Happy Head is a dermatologist-founded telehealth service (based in Santa Monica, California) built around personalized prescription hair-loss formulas for <strong>both men and women</strong>. Its flagship products are the Custom Topical - dutasteride 0.3%, minoxidil 8%, retinoic acid 0.001% and hydrocortisone 1% in one solution - and the 3-in-1 Daily SuperCapsule combining dutasteride 0.5mg, minoxidil 1.25mg and vitamin D3. Formulas are compounded fresh and delivered monthly. Full details in our <a href="/hair-loss/reviews/happyhead">in-depth Happy Head review</a>.`,
+      },
+      {
+        heading: "Is Happy Head legit and safe?",
+        body: `Yes - by the checkable signals, Happy Head is a legitimate provider. It's founded by dermatologists, prescriptions go through a licensed medical review with a free online consultation, its actives are established hair-loss medications (finasteride and topical minoxidil are FDA-approved; dutasteride and oral minoxidil are prescribed off-label under supervision), and it holds a <strong>claimed Trustpilot profile rated 4.5 across 1,803 reviews</strong>, listed in the Pharmacy category and claimed since March 2022. It also publishes real prices - and advertises a 6-month growth guarantee, whose terms you should read on their site before counting on it.`,
+      },
+      {
+        heading: "How much does Happy Head cost?",
+        body: `Verified from Happy Head's published pricing (August 2026): the Custom Topical and the SuperCapsule are each <strong>$49 on the first order</strong> and <strong>$89/month at the regular rate</strong>; the Dual Action Bundle (both together) is $98 first order, regularly $178. Subscribing saves 20%. The full breakdown - including how it compares to Maximus - is in our <a href="/hair-loss/articles/happyhead-cost">Happy Head cost guide</a>.`,
+      },
+      {
+        heading: "What real customers say",
+        body: `From Happy Head's Trustpilot page (recent, unprompted, 5-star): "Love the Super capsule... I'm very satisfied with the results. My hair has become much more thicker and fuller" (Ron Cee). "The customer service person listen to my complaints and resolved the issues quickly and satisfactorily!" (Dennis). The recurring themes: visible results from the oral capsule and responsive service.`,
+      },
+      {
+        heading: "Happy Head pros and cons",
+        body: `<strong>Pros:</strong> genuinely personalized prescription formulas, treatment for both men and women, high-strength 8% topical minoxidil, dermatologist-founded, a 4.5/1,803 Trustpilot record, and clear published pricing. <strong>Cons:</strong> the $49 price is a first-order promotion - the regular rate is $89/month, roughly double Maximus' single-active treatments - and, like all prescription hair-loss care, it requires a medical review and ongoing use. For the male-focused budget comparison, see <a href="/hair-loss/maximus-vs-happy-head">Maximus vs Happy Head</a>.`,
+      },
+      {
+        heading: "The verdict: is Happy Head worth it?",
+        body: `If you want a formula built for you - or you're a woman, whom most men's hair clinics simply don't serve - Happy Head is one of the strongest options online, and the $49 first order is a low-risk way to start. If budget over the long run matters more than personalization, compare Maximus' $24.99-$34.99 single-active plans first. General information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "happyhead-cost",
+    title: "Happy Head Cost in 2026: $49 First Order, $89 Regular - Full Breakdown",
+    description:
+      "How much does Happy Head cost? Verified 2026 pricing: Custom Topical and SuperCapsule $49 first order (reg $89/mo), Dual Action Bundle $98 (reg $178), 20% subscribe savings - and how it compares.",
+    category: "Advice",
+    readTime: "5 min read",
+    publishedAt: "2026-08-24",
+    updatedAt: "2026-08-24",
+    heroColor: "#EEF4FB",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "Happy Head price list (verified August 2026)",
+        body: `<table><thead><tr><th>Product</th><th>First order</th><th>Regular</th><th>What's in it</th></tr></thead><tbody><tr><td>Custom Topical</td><td><strong>$49</strong></td><td>$89/mo</td><td>Dutasteride 0.3%, minoxidil 8%, retinoic acid 0.001%, hydrocortisone 1%</td></tr><tr><td>3-in-1 Daily SuperCapsule</td><td><strong>$49</strong></td><td>$89/mo</td><td>Dutasteride 0.5mg, minoxidil 1.25mg, vitamin D3</td></tr><tr><td>Dual Action Bundle (both)</td><td><strong>$98</strong></td><td>$178/mo</td><td>Topical + oral together - "Dr. Ben's Pick"</td></tr></tbody></table>Subscribing saves 20%, and the company advertises a 6-month growth guarantee - read its terms on their site.`,
+      },
+      {
+        heading: "The honest math: promo vs regular price",
+        body: `The $49 first-order price is real, but the number to budget for is the <strong>$89/month regular rate</strong> - that's what month two onward costs on a single product. Over a first year on one flagship product, that's roughly $49 + 11 x $89 with monthly delivery, before the 20% subscription savings. We always show promotional prices next to the regular rate so there are no surprises - the same standard we hold every provider to.`,
+      },
+      {
+        heading: "What you get for the price",
+        body: `Unlike generic one-size products, Happy Head's formulas are compounded fresh monthly and personalized after a dermatologist-directed review - the free online consultation is included. The topical's 8% minoxidil concentration is notably above the 5% typical of over-the-counter products, and the multi-active approach (DHT blocker + growth stimulant + absorption support) is the core of what you're paying for.`,
+      },
+      {
+        heading: "Happy Head vs Maximus on price",
+        body: `<a href="/hair-loss/reviews/maximus">Maximus</a> undercuts Happy Head on single actives - oral minoxidil $24.99/month and finasteride or dutasteride $34.99/month (billed as 90-day supplies) - while Happy Head's argument is the personalized multi-active formula and its coverage of women. At the bundle level they converge: Happy Head's Dual Action at $98 first order vs Maximus' oral combo at $59.99 or All-in-One Gel at $64.99. The full matchup: <a href="/hair-loss/maximus-vs-happy-head">Maximus vs Happy Head</a>.`,
+      },
+      {
+        heading: "Is Happy Head worth the cost?",
+        body: `Worth it if personalization, the 8% topical strength, or treatment for women is what you need - those are things the budget options genuinely don't offer. If you just want standard finasteride or minoxidil as cheaply as possible, compare <a href="/hair-loss/articles/maximus-alternatives">the alternatives</a> first. Our <a href="/hair-loss/reviews/happyhead">full Happy Head review</a> has the complete picture. General information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "happyhead-alternatives",
+    title: "Best Happy Head Alternatives in 2026 (Compared Honestly)",
+    description:
+      "Looking for a Happy Head alternative? Compare Maximus, Hims, Keeps and Ro on treatments, verified pricing and fit - including the honest answer on options for women.",
+    category: "Advice",
+    readTime: "5 min read",
+    publishedAt: "2026-08-24",
+    updatedAt: "2026-08-24",
+    heroColor: "#EEF4FB",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "Why look for a Happy Head alternative?",
+        body: `Happy Head earns its place in our <a href="/hair-loss">ranking</a> on personalization and its 4.5/1,803 Trustpilot record - but its $89/month regular rate (after the $49 first order) is roughly double what single-active treatment costs elsewhere, and some people simply don't need a custom formula. Here's the honest field.`,
+      },
+      {
+        heading: "Maximus - best for men on price and treatment range",
+        body: `<a href="/hair-loss/reviews/maximus">Maximus</a> is our top-ranked provider for men: oral minoxidil at a verified <strong>$24.99/month</strong>, finasteride or dutasteride at $34.99, up to an All-in-One topical (dutasteride, minoxidil, tretinoin, fexofenadine) at $64.99 - all doctor-prescribed with free discreet shipping and a 4.4/1,050 Trustpilot record. What it doesn't do: treat women, or compound a formula personalized to you. Head to head: <a href="/hair-loss/maximus-vs-happy-head">Maximus vs Happy Head</a>.`,
+      },
+      {
+        heading: "Hims, Keeps and Ro - the mainstream basics",
+        body: `All three offer the proven basics (finasteride, minoxidil) through simple online flows: <a href="/hair-loss/reviews/hims">Hims</a> with the biggest brand, Keeps with budget generics, Ro inside a multi-category platform. None matches Happy Head's personalization or women's coverage, and we haven't verified current pricing at any of the three - check their sites. Comparisons: <a href="/hair-loss/hims-vs-happy-head">Hims vs Happy Head</a>, <a href="/hair-loss/keeps-vs-happy-head">Keeps vs Happy Head</a>, <a href="/hair-loss/ro-vs-happy-head">Ro vs Happy Head</a>.`,
+      },
+      {
+        heading: "The honest answer for women",
+        body: `Here's the uncomfortable truth about "alternatives": most online hair-loss clinics - Maximus included - treat men only. If you're a woman, Happy Head's dermatologist-directed formulas (which can include actives like spironolactone) make it one of the few full-service prescription options in this ranking, and the real alternatives are fewer than the listicles suggest. Start with <a href="/hair-loss/articles/hair-loss-treatment-for-women">hair-loss treatment for women</a> for the medication-level picture.`,
+      },
+      {
+        heading: "The bottom line",
+        body: `<table><thead><tr><th>If you want...</th><th>Pick</th><th>Verified pricing</th></tr></thead><tbody><tr><td>Lowest price on single actives (men)</td><td>Maximus</td><td>From $24.99/mo</td></tr><tr><td>Personalized formula, or you're a woman</td><td>Happy Head</td><td>$49 first order, reg $89/mo</td></tr><tr><td>A familiar mainstream brand</td><td>Hims</td><td>Not yet verified</td></tr><tr><td>Cheapest generics, nothing more</td><td>Keeps</td><td>Not yet verified</td></tr></tbody></table>Our <a href="/hair-loss">full ranking</a> has the complete picture. General information, not medical advice.`,
+      },
+    ],
+  },
   {
     slug: "how-to-stop-hair-loss",
     title: "How to Stop Hair Loss: Treatments That Actually Work in 2026",
