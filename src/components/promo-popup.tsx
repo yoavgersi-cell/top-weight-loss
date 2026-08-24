@@ -5,7 +5,7 @@ import { X } from "lucide-react";
 import { trackProviderClick } from "@/lib/analytics";
 import type { PromoPopupSpec } from "@/lib/promo-popups";
 
-const APPEAR_AFTER_MS = 25000;
+const APPEAR_AFTER_MS = 15000;
 const pad = (n: number) => String(n).padStart(2, "0");
 
 // Mobile-only promo popup, shown on comparison pages where the popup's provider
