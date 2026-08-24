@@ -347,7 +347,9 @@ export const NOINDEX_ARTICLE_SLUGS = [
   "ozempic-vs-wegovy-differences",
   "mounjaro-vs-ozempic",
   "zepbound-vs-wegovy",
-  "tirzepatide-vs-semaglutide",
+  // tirzepatide-vs-semaglutide was re-indexed (Aug 2026): the molecule query
+  // is surging and our verified provider-price table is an answer the medical
+  // sites can't match - operator call to compete on it.
   // Kept noindex: "ozempic alternatives" is already owned by the dedicated
   // /ozempic-alternatives landing page - indexing this article too would split
   // ranking signals for the same query (cannibalization).
