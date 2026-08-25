@@ -19,7 +19,7 @@ import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
 import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
 import { ProductCarousel } from "@/components/product-carousel";
-import { RedditThreadCarousel } from "@/components/reddit-community";
+import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/reddit-community";
 import { threeWayBySlug } from "@/lib/three-way";
 import { ThreeWayPageView, threeWayMetadata } from "@/components/pages/three-way-page";
 
@@ -297,6 +297,35 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
   };
 }
 
+// Splits long editorial copy for the CRO prototype's read-more treatment: the
+// first `n` sentences stay visible, the remainder renders inside a native
+// <details> element - so ALL content is in the initial HTML/DOM for search
+// engines, and the toggle is purely visual (no JS, no fetch).
+function splitSentences(text: string, n: number): [string, string] {
+  const parts = text.match(/[^.!?]+[.!?]+(?:\s+|$)/g);
+  if (!parts || parts.length <= n) return [text, ""];
+  return [parts.slice(0, n).join("").trim(), parts.slice(n).join("").trim()];
+}
+
+function ReadMoreProse({ text, label, visibleSentences = 2 }: { text: string; label: string; visibleSentences?: number }) {
+  const [visible, rest] = splitSentences(text, visibleSentences);
+  if (!rest) {
+    return <p className="mb-6 max-w-[820px] text-[15px] leading-[1.85] text-gray-600">{text}</p>;
+  }
+  return (
+    <div className="mb-6 max-w-[820px]">
+      <p className="text-[15px] leading-[1.85] text-gray-600">{visible}</p>
+      <details className="group mt-1.5">
+        <summary className="inline-flex cursor-pointer list-none items-center gap-1 text-[14px] font-semibold text-[#0C4B75] hover:underline [&::-webkit-details-marker]:hidden">
+          {label}
+          <span className="text-[11px] transition-transform group-open:rotate-180">▾</span>
+        </summary>
+        <p className="mt-2 text-[15px] leading-[1.85] text-gray-600">{rest}</p>
+      </details>
+    </div>
+  );
+}
+
 export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteContext }) {
   // Curated 3-way comparisons render their own template.
   const trio = ctx.vertical === "weight-loss" ? threeWayBySlug.get(slug) : undefined;
@@ -437,6 +466,15 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // creative (registry + priority in @/lib/promo-popups). Each popup's link and
   // offer come from that provider's own real affiliate data.
   const promoPopup = resolvePromoPopup([p1, p2]);
+
+  // CRO layer (rolled out to all battles after the embody-vs-ro prototype):
+  // quick answer, fit finder, Reddit synthesis, read-more accordions (content
+  // stays fully in the DOM via <details>) and sticky-CTA hierarchy. All
+  // data-driven from each battle's own verdict fields - presentation only.
+  const verdictWinner = battle.winnerId === p2.id ? p2 : battle.winnerId === p1.id ? p1 : null;
+  const verdictRunnerUp = verdictWinner === p1 ? p2 : verdictWinner === p2 ? p1 : null;
+  const winnerPts = battle.verdictWinnerPoints ?? [];
+  const runnerUpPts = battle.verdictLoserPoints ?? [];
 
   // Above-the-fold quick-comparison rows: the three decisions searchers care
   // about first (price, prescription, delivery), pulled from this battle's own
@@ -600,6 +638,50 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               {battle.intro}
             </p>
           </div>
+
+          {/* ───── EARLY QUICK ANSWER ─────
+              Answers the search intent immediately, built from each battle's
+              own verdict points - no new copy to maintain per page. Renders
+              only when a battle actually names a winner with points. */}
+          {battle.winnerId && verdictWinner && verdictRunnerUp && winnerPts.length > 0 && runnerUpPts.length > 0 && (
+            <div className="mb-12 max-w-[820px] rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6">
+              <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
+                The quick answer
+              </p>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <p className="mb-2 text-[14px] font-bold text-[#191919]">Go with {verdictWinner.name} if you want</p>
+                  <ul className="space-y-1.5">
+                    {winnerPts.slice(0, 3).map((pt, i) => (
+                      <li key={i} className="flex items-start gap-2 text-[14px] leading-[1.6] text-gray-600">
+                        <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2.5} />
+                        {pt}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <p className="mb-2 text-[14px] font-bold text-[#191919]">{verdictRunnerUp.name} makes more sense if you want</p>
+                  <ul className="space-y-1.5">
+                    {runnerUpPts.slice(0, 3).map((pt, i) => (
+                      <li key={i} className="flex items-start gap-2 text-[14px] leading-[1.6] text-gray-600">
+                        <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#0C4B75]" strokeWidth={2.5} />
+                        {pt}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <p className="mt-4 border-t border-gray-100 pt-3.5 text-[14px] text-gray-700">
+                <span className="font-bold text-[#191919]">
+                  Had to pick one for most people? {verdictWinner.name}.
+                </span>{" "}
+                <span className="text-gray-500">
+                  The numbers and customer feedback below are why - and where {verdictRunnerUp.name} wins instead.
+                </span>
+              </p>
+            </div>
+          )}
 
           {/* ───── ABOVE-THE-FOLD QUICK COMPARISON ─────
               The three decisions searchers came for - price, prescription,
@@ -822,6 +904,36 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             </div>
           )}
 
+          {/* ───── FIT FINDER ─────
+              Turns the comparison above into decisions, from each battle's own
+              verdict points - find the line that sounds like you. */}
+          {verdictWinner && verdictRunnerUp && (winnerPts.length > 0 || runnerUpPts.length > 0) && (
+            <div className="mb-14 max-w-[820px]">
+              <h2 className="mb-1.5 text-[22px] font-bold text-[#191919]">
+                So which one should you pick?
+              </h2>
+              <p className="mb-4 text-[14px] text-gray-500">
+                Find the line that sounds like you - that&rsquo;s your answer.
+              </p>
+              <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+                {[
+                  ...winnerPts.slice(0, 3).map((pt) => [pt, verdictWinner.name] as const),
+                  ...runnerUpPts.slice(0, 3).map((pt) => [pt, verdictRunnerUp.name] as const),
+                ].map(([need, pick], i) => (
+                  <div
+                    key={i}
+                    className="flex items-center justify-between gap-3 border-b border-gray-100 px-4 py-3 last:border-0 sm:px-5"
+                  >
+                    <span className="text-[13.5px] leading-snug text-gray-600 sm:text-[14px]">
+                      {need}
+                    </span>
+                    <span className="shrink-0 text-[13.5px] font-bold text-[#0C4B75] sm:text-[14px]">{pick}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* ───── REDDIT COMMUNITY CAROUSEL (verified threads only) ───── */}
           {ctx.vertical === "weight-loss" && (
             <RedditThreadCarousel
@@ -829,6 +941,29 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               reviewHrefFor={(id) => hubLink(ctx, `/reviews/${id}`)}
             />
           )}
+
+          {/* ───── EVIDENCE -> CONCLUSION SYNTHESIS ─────
+              Reads the threads shown directly above and says what keeps coming
+              up - one written summary per provider, from the same registry as
+              the threads themselves, so it only renders on verified material. */}
+          {ctx.vertical === "weight-loss" &&
+            [p1, p2].some((p) => REDDIT_COMMUNITY_FEEDBACK[p.id]?.themes) && (
+              <div className="mb-14 max-w-[820px] rounded-2xl border border-gray-200 bg-gray-50/60 p-5 sm:p-6">
+                <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
+                  What we found
+                </p>
+                <div className="space-y-3 text-[14px] leading-[1.7] text-gray-600">
+                  {[p1, p2].map((p) =>
+                    REDDIT_COMMUNITY_FEEDBACK[p.id]?.themes ? (
+                      <p key={p.id}>
+                        <span className="font-bold text-[#191919]">{p.name}:</span>{" "}
+                        {REDDIT_COMMUNITY_FEEDBACK[p.id].themes}
+                      </p>
+                    ) : null
+                  )}
+                </div>
+              </div>
+            )}
 
           {/* ───── PER-PROVIDER DEEP DIVES ───── */}
           <div className="mb-14">
@@ -910,9 +1045,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       <h3 className="mb-2.5 text-[20px] font-bold text-[#191919]">
                         What is {provider.name}?
                       </h3>
-                      <p className="mb-6 max-w-[820px] text-[15px] leading-[1.85] text-gray-600">
-                        {lead}
-                      </p>
+                      <ReadMoreProse text={lead} label={`Read the full ${provider.name} breakdown`} />
 
                       {/* Trust badges */}
                       {badges.length > 0 && (
@@ -970,9 +1103,13 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                             How much does {provider.name} cost?
                           </h4>
                           {review?.pricingSummary && (
-                            <p className="mb-4 max-w-[820px] text-[14px] leading-[1.7] text-gray-500">
-                              {review.pricingSummary}
-                            </p>
+                            <div className="mb-4 [&>div]:mb-0 [&_p]:text-[14px] [&_p]:leading-[1.7] [&_p]:text-gray-500">
+                              <ReadMoreProse
+                                text={review.pricingSummary}
+                                label="Full pricing details"
+                                visibleSentences={1}
+                              />
+                            </div>
                           )}
                           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                             {plans.map((plan, i) => (
@@ -1184,6 +1321,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
       <BattleStickyCta
         p1={{ id: p1.id, name: p1.name, affiliateUrl: p1.affiliateUrl }}
         p2={{ id: p2.id, name: p2.name, affiliateUrl: p2.affiliateUrl }}
+        recommendedId={verdictWinner?.id}
       />
 
       {/* Mobile-only promo popup - the highest-priority featured provider that

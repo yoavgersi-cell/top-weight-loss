@@ -19,7 +19,19 @@ interface StickyProvider {
 // ratings): some providers carry mediocre Trustpilot scores, and surfacing those
 // at the point of action would suppress clicks rather than lift them. Instead it
 // leans on friction-reducers that are true for every GLP-1 telehealth provider.
-export function BattleStickyCta({ p1, p2 }: { p1: StickyProvider; p2: StickyProvider }) {
+// `recommendedId` (optional, CRO prototype): marks one provider with a small
+// "Our pick" caption and keeps it solid while the other switches to an equally
+// tappable outlined style - a hierarchy, not a demotion. Both stay fully
+// credible; omitted = the original equal-weight bar, unchanged.
+export function BattleStickyCta({
+  p1,
+  p2,
+  recommendedId,
+}: {
+  p1: StickyProvider;
+  p2: StickyProvider;
+  recommendedId?: string;
+}) {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -51,22 +63,41 @@ export function BattleStickyCta({ p1, p2 }: { p1: StickyProvider; p2: StickyProv
             <span>Cancel anytime</span>
           </div>
 
-          {/* Both providers - equal weight */}
+          {/* Both providers - equal weight by default; subtle hierarchy when a
+              recommendation is passed */}
           <div className="grid grid-cols-2 gap-2.5">
-            {[p1, p2].map((p) => (
-              <ProviderCta
-                key={p.id}
-                href={p.affiliateUrl}
-                providerName={p.name}
-                providerSlug={p.id}
-                pageType="battle"
-                sourceFlow="battle_page"
-                className="flex h-[48px] items-center justify-center gap-1.5 rounded-xl bg-gradient-to-b from-[#0C4B75] to-[#093d61] px-2 text-[14px] font-bold text-white shadow-sm transition-transform active:scale-[0.98]"
-              >
-                <span className="truncate">Visit {p.name}</span>
-                <ArrowRight className="h-3.5 w-3.5 shrink-0" strokeWidth={2.5} />
-              </ProviderCta>
-            ))}
+            {[p1, p2].map((p) => {
+              const isPick = recommendedId != null && p.id === recommendedId;
+              const isOther = recommendedId != null && p.id !== recommendedId;
+              return (
+                <div key={p.id} className="min-w-0">
+                  {recommendedId != null && (
+                    <p
+                      className={`mb-1 text-center text-[10px] font-bold uppercase tracking-[0.08em] ${
+                        isPick ? "text-[#0C4B75]" : "text-transparent"
+                      }`}
+                    >
+                      Our pick
+                    </p>
+                  )}
+                  <ProviderCta
+                    href={p.affiliateUrl}
+                    providerName={p.name}
+                    providerSlug={p.id}
+                    pageType="battle"
+                    sourceFlow="battle_page"
+                    className={
+                      isOther
+                        ? "flex h-[48px] items-center justify-center gap-1.5 rounded-xl border-2 border-[#0C4B75] bg-white px-2 text-[14px] font-bold text-[#0C4B75] transition-transform active:scale-[0.98]"
+                        : "flex h-[48px] items-center justify-center gap-1.5 rounded-xl bg-gradient-to-b from-[#0C4B75] to-[#093d61] px-2 text-[14px] font-bold text-white shadow-sm transition-transform active:scale-[0.98]"
+                    }
+                  >
+                    <span className="truncate">Visit {p.name}</span>
+                    <ArrowRight className="h-3.5 w-3.5 shrink-0" strokeWidth={2.5} />
+                  </ProviderCta>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

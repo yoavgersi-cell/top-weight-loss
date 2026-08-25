@@ -23,9 +23,14 @@ export type RedditThread = {
 
 export const REDDIT_COMMUNITY_FEEDBACK: Record<
   string,
-  { intro: string; threads: RedditThread[]; takeaway: string }
+  // `themes`: a 1-2 sentence human summary of what keeps coming up in this
+  // provider's threads - rendered as the "What we found" synthesis on battle
+  // pages. Write it from the displayed threads only, good and bad alike.
+  { intro: string; threads: RedditThread[]; takeaway: string; themes?: string }
 > = {
   embody: {
+    themes:
+      "Communication and support come up again and again in the comments above - a nurse calling after the first dose, orders rushed after a quick complaint - and the prices users quote match the ones embody publishes. The one gripe that repeats: the wait between approval and the first shipment.",
     intro:
       "Beyond Trustpilot, recent Reddit comments about embody paint a consistent - and usefully unvarnished - picture. These are excerpts from real public comments:",
     threads: [
@@ -65,6 +70,8 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       "The community picture matches the Trustpilot one: communication and service are the consistent strength, delivery is fast once medication ships, and the honest watch-out is pipeline time between approval and shipment - if timing matters, order before your current supply runs low. The $129 figures Reddit users mention line up with embody's regular tirzepatide price ($119 promotional / $129 regular).",
   },
   medvi: {
+    themes:
+      "The posts above are full-year stories, not first impressions: steady results (just under 15% body weight, 40 pounds), dose adjustments when progress stalled, and support that answered. The caveat users raise themselves is the ongoing monthly cost.",
     intro:
       "Beyond its 14,372-review Trustpilot record, the most-upvoted recent Reddit threads about Medvi are full-year write-ups rather than first-week impressions. Excerpts from the real posts:",
     threads: [
@@ -116,6 +123,8 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       "The Reddit picture matches the Trustpilot one from a different angle: the ongoing monthly cost is the caveat users themselves raise - though Medvi's current $99/month promotion (regularly $199) blunts it considerably - but the year-long accounts describe exactly what that price buys: medical structure, dose adjustments when progress stalls, and 10-15% body-weight results over a year that felt “sustainable, which is something I had not experienced before.”",
   },
   ro: {
+    themes:
+      "Real results show up in the threads above - 22 to 60 pounds - and getting started draws consistent praise. The friction that keeps repeating is cost: the most upvoted commenter left over price after an otherwise great experience, and another found the cost breakdown confusing.",
     intro:
       "Reddit's recent Ro threads are unusually rich in real numbers - starting weights, pounds lost, and what people actually pay. Excerpts from the real public comments:",
     threads: [
@@ -162,6 +171,8 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       "The results stories are real and substantial - 22 to 60 pounds across the positive accounts - and the service itself draws little criticism. The recurring friction is exactly what Ro's own pricing pages show: the membership-plus-medication cost structure. One highly upvoted commenter left specifically over price after a great experience, and another calls the cost breakdown \"somewhat confusing.\" If brand-name medication through insurance works for you, Ro's model shines; paying cash, the math deserves a hard look first.",
   },
   wellmedr: {
+    themes:
+      "Most comments above are short and positive - \"legit,\" a named Florida pharmacy, annual plans at \-\/month that match the published rates. The honest exception: one detailed account got fast shipping and good service but saw little progress after 8 weeks.",
     intro:
       "wellmedr's Reddit footprint is comment-level rather than long write-ups: short, recent verdicts, mostly from people who paid for annual plans. Excerpts from the real public comments:",
     threads: [
