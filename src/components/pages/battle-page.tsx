@@ -297,6 +297,35 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
   };
 }
 
+// Splits long editorial copy for the CRO prototype's read-more treatment: the
+// first `n` sentences stay visible, the remainder renders inside a native
+// <details> element - so ALL content is in the initial HTML/DOM for search
+// engines, and the toggle is purely visual (no JS, no fetch).
+function splitSentences(text: string, n: number): [string, string] {
+  const parts = text.match(/[^.!?]+[.!?]+(?:\s+|$)/g);
+  if (!parts || parts.length <= n) return [text, ""];
+  return [parts.slice(0, n).join("").trim(), parts.slice(n).join("").trim()];
+}
+
+function ReadMoreProse({ text, label, visibleSentences = 2 }: { text: string; label: string; visibleSentences?: number }) {
+  const [visible, rest] = splitSentences(text, visibleSentences);
+  if (!rest) {
+    return <p className="mb-6 max-w-[820px] text-[15px] leading-[1.85] text-gray-600">{text}</p>;
+  }
+  return (
+    <div className="mb-6 max-w-[820px]">
+      <p className="text-[15px] leading-[1.85] text-gray-600">{visible}</p>
+      <details className="group mt-1.5">
+        <summary className="inline-flex cursor-pointer list-none items-center gap-1 text-[14px] font-semibold text-[#0C4B75] hover:underline [&::-webkit-details-marker]:hidden">
+          {label}
+          <span className="text-[11px] transition-transform group-open:rotate-180">▾</span>
+        </summary>
+        <p className="mt-2 text-[15px] leading-[1.85] text-gray-600">{rest}</p>
+      </details>
+    </div>
+  );
+}
+
 export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteContext }) {
   // Curated 3-way comparisons render their own template.
   const trio = ctx.vertical === "weight-loss" ? threeWayBySlug.get(slug) : undefined;
@@ -437,6 +466,13 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // creative (registry + priority in @/lib/promo-popups). Each popup's link and
   // offer come from that provider's own real affiliate data.
   const promoPopup = resolvePromoPopup([p1, p2]);
+
+  // CRO prototype flag - ONE page only (embody-vs-ro), presentation-level
+  // changes exclusively: early verdict, decision compression, read-more
+  // accordions (content stays fully in the DOM via <details>), Reddit
+  // synthesis, and a subtle sticky-CTA hierarchy. No metadata, schema,
+  // canonical or content-removal changes. Not applied to the template.
+  const croPrototype = slug === "embody-vs-ro";
 
   // Above-the-fold quick-comparison rows: the three decisions searchers care
   // about first (price, prescription, delivery), pulled from this battle's own
@@ -600,6 +636,40 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               {battle.intro}
             </p>
           </div>
+
+          {/* ───── CRO PROTOTYPE: EARLY EDITORIAL VERDICT ─────
+              Prototype-gated (embody-vs-ro only). Answers the search intent
+              immediately, in the site's own restrained visual language. Pure
+              presentation - no metadata, schema or URL changes. */}
+          {croPrototype && (
+            <div className="mb-12 max-w-[820px] rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6">
+              <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
+                Our verdict
+              </p>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <p className="mb-1 text-[14px] font-bold text-[#191919]">Choose {p1.name} if</p>
+                  <p className="text-[14px] leading-[1.7] text-gray-600">
+                    You want predictable all-inclusive pricing ($69/mo, month to month), fast 1-2 day
+                    shipping, and a straightforward compounded-treatment experience.
+                  </p>
+                </div>
+                <div>
+                  <p className="mb-1 text-[14px] font-bold text-[#191919]">Choose {p2.name} if</p>
+                  <p className="text-[14px] leading-[1.7] text-gray-600">
+                    You prefer a large established telehealth brand, want brand-name medication
+                    (Wegovy, Zepbound, Ozempic), or plan to use insurance coverage.
+                  </p>
+                </div>
+              </div>
+              <p className="mt-4 border-t border-gray-100 pt-3.5 text-[14px] text-gray-700">
+                <span className="font-bold text-[#191919]">Our pick for most cash-pay patients: {p1.name}.</span>{" "}
+                <span className="text-gray-500">
+                  Based on the verified pricing, shipping and customer-feedback data below.
+                </span>
+              </p>
+            </div>
+          )}
 
           {/* ───── ABOVE-THE-FOLD QUICK COMPARISON ─────
               The three decisions searchers came for - price, prescription,
@@ -822,12 +892,73 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             </div>
           )}
 
+          {/* ───── CRO PROTOTYPE: DECISION COMPRESSION ─────
+              Converts the comparison above into decisions - a reader should
+              know their fit within seconds. Mobile-first rows, no new design
+              language. */}
+          {croPrototype && (
+            <div className="mb-14 max-w-[820px]">
+              <h2 className="mb-1.5 text-[22px] font-bold text-[#191919]">
+                Which provider is right for you?
+              </h2>
+              <p className="mb-4 text-[14px] text-gray-500">
+                The whole comparison, compressed to what you care about most.
+              </p>
+              <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+                {[
+                  ["Predictable all-inclusive monthly pricing", p1.name],
+                  ["Lowest cash-pay cost over a year", p1.name],
+                  ["Fast shipping (1-2 days, tracked)", p1.name],
+                  ["Brand-name medication (Wegovy, Zepbound, Ozempic)", p2.name],
+                  ["Paying through insurance", p2.name],
+                  ["A large, long-established platform", p2.name],
+                ].map(([need, pick], i) => (
+                  <div
+                    key={i}
+                    className="flex items-center justify-between gap-3 border-b border-gray-100 px-4 py-3 last:border-0 sm:px-5"
+                  >
+                    <span className="text-[13.5px] leading-snug text-gray-600 sm:text-[14px]">
+                      If you care most about {need.charAt(0).toLowerCase() + need.slice(1)}
+                    </span>
+                    <span className="shrink-0 text-[13.5px] font-bold text-[#0C4B75] sm:text-[14px]">{pick}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* ───── REDDIT COMMUNITY CAROUSEL (verified threads only) ───── */}
           {ctx.vertical === "weight-loss" && (
             <RedditThreadCarousel
               providers={[p1, p2]}
               reviewHrefFor={(id) => hubLink(ctx, `/reviews/${id}`)}
             />
+          )}
+
+          {/* ───── CRO PROTOTYPE: EVIDENCE -> CONCLUSION SYNTHESIS ─────
+              Research synthesis of the threads shown directly above - only
+              conclusions the displayed content supports. */}
+          {croPrototype && ctx.vertical === "weight-loss" && (
+            <div className="mb-14 max-w-[820px] rounded-2xl border border-gray-200 bg-gray-50/60 p-5 sm:p-6">
+              <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
+                What we found
+              </p>
+              <div className="space-y-3 text-[14px] leading-[1.7] text-gray-600">
+                <p>
+                  <span className="font-bold text-[#191919]">{p1.name}:</span> the recurring themes in
+                  the comments above are communication and support (a nurse follow-up call after the
+                  first dose), fast delivery once medication ships, and prices that match what we list -
+                  users quote the same $129 tirzepatide figure embody publishes. The honest watch-out
+                  users raise: pipeline time between approval and first shipment.
+                </p>
+                <p>
+                  <span className="font-bold text-[#191919]">{p2.name}:</span> the results stories are
+                  real and substantial (22-60 lbs across the accounts above) and onboarding draws
+                  praise. The recurring friction is cost - the most upvoted commenter left over price
+                  after an otherwise great experience, and another calls the cost breakdown confusing.
+                </p>
+              </div>
+            </div>
           )}
 
           {/* ───── PER-PROVIDER DEEP DIVES ───── */}
@@ -910,9 +1041,13 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       <h3 className="mb-2.5 text-[20px] font-bold text-[#191919]">
                         What is {provider.name}?
                       </h3>
-                      <p className="mb-6 max-w-[820px] text-[15px] leading-[1.85] text-gray-600">
-                        {lead}
-                      </p>
+                      {croPrototype ? (
+                        <ReadMoreProse text={lead} label={`Read the full ${provider.name} breakdown`} />
+                      ) : (
+                        <p className="mb-6 max-w-[820px] text-[15px] leading-[1.85] text-gray-600">
+                          {lead}
+                        </p>
+                      )}
 
                       {/* Trust badges */}
                       {badges.length > 0 && (
@@ -969,11 +1104,20 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                           <h4 className="mb-1.5 text-[17px] font-bold text-[#191919]">
                             How much does {provider.name} cost?
                           </h4>
-                          {review?.pricingSummary && (
-                            <p className="mb-4 max-w-[820px] text-[14px] leading-[1.7] text-gray-500">
-                              {review.pricingSummary}
-                            </p>
-                          )}
+                          {review?.pricingSummary &&
+                            (croPrototype ? (
+                              <div className="mb-4 [&>div]:mb-0 [&_p]:text-[14px] [&_p]:leading-[1.7] [&_p]:text-gray-500">
+                                <ReadMoreProse
+                                  text={review.pricingSummary}
+                                  label="Full pricing details"
+                                  visibleSentences={1}
+                                />
+                              </div>
+                            ) : (
+                              <p className="mb-4 max-w-[820px] text-[14px] leading-[1.7] text-gray-500">
+                                {review.pricingSummary}
+                              </p>
+                            ))}
                           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                             {plans.map((plan, i) => (
                               <div key={i} className="rounded-xl border border-gray-200 bg-gray-50/60 p-4">
@@ -1184,6 +1328,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
       <BattleStickyCta
         p1={{ id: p1.id, name: p1.name, affiliateUrl: p1.affiliateUrl }}
         p2={{ id: p2.id, name: p2.name, affiliateUrl: p2.affiliateUrl }}
+        recommendedId={croPrototype ? p1.id : undefined}
       />
 
       {/* Mobile-only promo popup - the highest-priority featured provider that
