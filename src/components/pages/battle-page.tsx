@@ -19,7 +19,7 @@ import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
 import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
 import { ProductCarousel } from "@/components/product-carousel";
-import { RedditThreadCarousel } from "@/components/reddit-community";
+import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/reddit-community";
 import { threeWayBySlug } from "@/lib/three-way";
 import { ThreeWayPageView, threeWayMetadata } from "@/components/pages/three-way-page";
 
@@ -467,12 +467,14 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // offer come from that provider's own real affiliate data.
   const promoPopup = resolvePromoPopup([p1, p2]);
 
-  // CRO prototype flag - ONE page only (embody-vs-ro), presentation-level
-  // changes exclusively: early verdict, decision compression, read-more
-  // accordions (content stays fully in the DOM via <details>), Reddit
-  // synthesis, and a subtle sticky-CTA hierarchy. No metadata, schema,
-  // canonical or content-removal changes. Not applied to the template.
-  const croPrototype = slug === "embody-vs-ro";
+  // CRO layer (rolled out to all battles after the embody-vs-ro prototype):
+  // quick answer, fit finder, Reddit synthesis, read-more accordions (content
+  // stays fully in the DOM via <details>) and sticky-CTA hierarchy. All
+  // data-driven from each battle's own verdict fields - presentation only.
+  const verdictWinner = battle.winnerId === p2.id ? p2 : battle.winnerId === p1.id ? p1 : null;
+  const verdictRunnerUp = verdictWinner === p1 ? p2 : verdictWinner === p2 ? p1 : null;
+  const winnerPts = battle.verdictWinnerPoints ?? [];
+  const runnerUpPts = battle.verdictLoserPoints ?? [];
 
   // Above-the-fold quick-comparison rows: the three decisions searchers care
   // about first (price, prescription, delivery), pulled from this battle's own
@@ -637,35 +639,45 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             </p>
           </div>
 
-          {/* ───── CRO PROTOTYPE: EARLY EDITORIAL VERDICT ─────
-              Prototype-gated (embody-vs-ro only). Answers the search intent
-              immediately, in the site's own restrained visual language. Pure
-              presentation - no metadata, schema or URL changes. */}
-          {croPrototype && (
+          {/* ───── EARLY QUICK ANSWER ─────
+              Answers the search intent immediately, built from each battle's
+              own verdict points - no new copy to maintain per page. Renders
+              only when a battle actually names a winner with points. */}
+          {battle.winnerId && verdictWinner && verdictRunnerUp && winnerPts.length > 0 && runnerUpPts.length > 0 && (
             <div className="mb-12 max-w-[820px] rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6">
               <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
-                Our verdict
+                The quick answer
               </p>
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
-                  <p className="mb-1 text-[14px] font-bold text-[#191919]">Choose {p1.name} if</p>
-                  <p className="text-[14px] leading-[1.7] text-gray-600">
-                    You want predictable all-inclusive pricing ($69/mo, month to month), fast 1-2 day
-                    shipping, and a straightforward compounded-treatment experience.
-                  </p>
+                  <p className="mb-2 text-[14px] font-bold text-[#191919]">Go with {verdictWinner.name} if you want</p>
+                  <ul className="space-y-1.5">
+                    {winnerPts.slice(0, 3).map((pt, i) => (
+                      <li key={i} className="flex items-start gap-2 text-[14px] leading-[1.6] text-gray-600">
+                        <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2.5} />
+                        {pt}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
                 <div>
-                  <p className="mb-1 text-[14px] font-bold text-[#191919]">Choose {p2.name} if</p>
-                  <p className="text-[14px] leading-[1.7] text-gray-600">
-                    You prefer a large established telehealth brand, want brand-name medication
-                    (Wegovy, Zepbound, Ozempic), or plan to use insurance coverage.
-                  </p>
+                  <p className="mb-2 text-[14px] font-bold text-[#191919]">{verdictRunnerUp.name} makes more sense if you want</p>
+                  <ul className="space-y-1.5">
+                    {runnerUpPts.slice(0, 3).map((pt, i) => (
+                      <li key={i} className="flex items-start gap-2 text-[14px] leading-[1.6] text-gray-600">
+                        <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#0C4B75]" strokeWidth={2.5} />
+                        {pt}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
               <p className="mt-4 border-t border-gray-100 pt-3.5 text-[14px] text-gray-700">
-                <span className="font-bold text-[#191919]">Our pick for most cash-pay patients: {p1.name}.</span>{" "}
+                <span className="font-bold text-[#191919]">
+                  Had to pick one for most people? {verdictWinner.name}.
+                </span>{" "}
                 <span className="text-gray-500">
-                  Based on the verified pricing, shipping and customer-feedback data below.
+                  The numbers and customer feedback below are why - and where {verdictRunnerUp.name} wins instead.
                 </span>
               </p>
             </div>
@@ -892,33 +904,28 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             </div>
           )}
 
-          {/* ───── CRO PROTOTYPE: DECISION COMPRESSION ─────
-              Converts the comparison above into decisions - a reader should
-              know their fit within seconds. Mobile-first rows, no new design
-              language. */}
-          {croPrototype && (
+          {/* ───── FIT FINDER ─────
+              Turns the comparison above into decisions, from each battle's own
+              verdict points - find the line that sounds like you. */}
+          {verdictWinner && verdictRunnerUp && (winnerPts.length > 0 || runnerUpPts.length > 0) && (
             <div className="mb-14 max-w-[820px]">
               <h2 className="mb-1.5 text-[22px] font-bold text-[#191919]">
-                Which provider is right for you?
+                So which one should you pick?
               </h2>
               <p className="mb-4 text-[14px] text-gray-500">
-                The whole comparison, compressed to what you care about most.
+                Find the line that sounds like you - that&rsquo;s your answer.
               </p>
               <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
                 {[
-                  ["Predictable all-inclusive monthly pricing", p1.name],
-                  ["Lowest cash-pay cost over a year", p1.name],
-                  ["Fast shipping (1-2 days, tracked)", p1.name],
-                  ["Brand-name medication (Wegovy, Zepbound, Ozempic)", p2.name],
-                  ["Paying through insurance", p2.name],
-                  ["A large, long-established platform", p2.name],
+                  ...winnerPts.slice(0, 3).map((pt) => [pt, verdictWinner.name] as const),
+                  ...runnerUpPts.slice(0, 3).map((pt) => [pt, verdictRunnerUp.name] as const),
                 ].map(([need, pick], i) => (
                   <div
                     key={i}
                     className="flex items-center justify-between gap-3 border-b border-gray-100 px-4 py-3 last:border-0 sm:px-5"
                   >
                     <span className="text-[13.5px] leading-snug text-gray-600 sm:text-[14px]">
-                      If you care most about {need.charAt(0).toLowerCase() + need.slice(1)}
+                      {need}
                     </span>
                     <span className="shrink-0 text-[13.5px] font-bold text-[#0C4B75] sm:text-[14px]">{pick}</span>
                   </div>
@@ -935,31 +942,28 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             />
           )}
 
-          {/* ───── CRO PROTOTYPE: EVIDENCE -> CONCLUSION SYNTHESIS ─────
-              Research synthesis of the threads shown directly above - only
-              conclusions the displayed content supports. */}
-          {croPrototype && ctx.vertical === "weight-loss" && (
-            <div className="mb-14 max-w-[820px] rounded-2xl border border-gray-200 bg-gray-50/60 p-5 sm:p-6">
-              <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
-                What we found
-              </p>
-              <div className="space-y-3 text-[14px] leading-[1.7] text-gray-600">
-                <p>
-                  <span className="font-bold text-[#191919]">{p1.name}:</span> the recurring themes in
-                  the comments above are communication and support (a nurse follow-up call after the
-                  first dose), fast delivery once medication ships, and prices that match what we list -
-                  users quote the same $129 tirzepatide figure embody publishes. The honest watch-out
-                  users raise: pipeline time between approval and first shipment.
+          {/* ───── EVIDENCE -> CONCLUSION SYNTHESIS ─────
+              Reads the threads shown directly above and says what keeps coming
+              up - one written summary per provider, from the same registry as
+              the threads themselves, so it only renders on verified material. */}
+          {ctx.vertical === "weight-loss" &&
+            [p1, p2].some((p) => REDDIT_COMMUNITY_FEEDBACK[p.id]?.themes) && (
+              <div className="mb-14 max-w-[820px] rounded-2xl border border-gray-200 bg-gray-50/60 p-5 sm:p-6">
+                <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
+                  What we found
                 </p>
-                <p>
-                  <span className="font-bold text-[#191919]">{p2.name}:</span> the results stories are
-                  real and substantial (22-60 lbs across the accounts above) and onboarding draws
-                  praise. The recurring friction is cost - the most upvoted commenter left over price
-                  after an otherwise great experience, and another calls the cost breakdown confusing.
-                </p>
+                <div className="space-y-3 text-[14px] leading-[1.7] text-gray-600">
+                  {[p1, p2].map((p) =>
+                    REDDIT_COMMUNITY_FEEDBACK[p.id]?.themes ? (
+                      <p key={p.id}>
+                        <span className="font-bold text-[#191919]">{p.name}:</span>{" "}
+                        {REDDIT_COMMUNITY_FEEDBACK[p.id].themes}
+                      </p>
+                    ) : null
+                  )}
+                </div>
               </div>
-            </div>
-          )}
+            )}
 
           {/* ───── PER-PROVIDER DEEP DIVES ───── */}
           <div className="mb-14">
@@ -1041,13 +1045,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       <h3 className="mb-2.5 text-[20px] font-bold text-[#191919]">
                         What is {provider.name}?
                       </h3>
-                      {croPrototype ? (
-                        <ReadMoreProse text={lead} label={`Read the full ${provider.name} breakdown`} />
-                      ) : (
-                        <p className="mb-6 max-w-[820px] text-[15px] leading-[1.85] text-gray-600">
-                          {lead}
-                        </p>
-                      )}
+                      <ReadMoreProse text={lead} label={`Read the full ${provider.name} breakdown`} />
 
                       {/* Trust badges */}
                       {badges.length > 0 && (
@@ -1104,20 +1102,15 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                           <h4 className="mb-1.5 text-[17px] font-bold text-[#191919]">
                             How much does {provider.name} cost?
                           </h4>
-                          {review?.pricingSummary &&
-                            (croPrototype ? (
-                              <div className="mb-4 [&>div]:mb-0 [&_p]:text-[14px] [&_p]:leading-[1.7] [&_p]:text-gray-500">
-                                <ReadMoreProse
-                                  text={review.pricingSummary}
-                                  label="Full pricing details"
-                                  visibleSentences={1}
-                                />
-                              </div>
-                            ) : (
-                              <p className="mb-4 max-w-[820px] text-[14px] leading-[1.7] text-gray-500">
-                                {review.pricingSummary}
-                              </p>
-                            ))}
+                          {review?.pricingSummary && (
+                            <div className="mb-4 [&>div]:mb-0 [&_p]:text-[14px] [&_p]:leading-[1.7] [&_p]:text-gray-500">
+                              <ReadMoreProse
+                                text={review.pricingSummary}
+                                label="Full pricing details"
+                                visibleSentences={1}
+                              />
+                            </div>
+                          )}
                           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                             {plans.map((plan, i) => (
                               <div key={i} className="rounded-xl border border-gray-200 bg-gray-50/60 p-4">
@@ -1328,7 +1321,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
       <BattleStickyCta
         p1={{ id: p1.id, name: p1.name, affiliateUrl: p1.affiliateUrl }}
         p2={{ id: p2.id, name: p2.name, affiliateUrl: p2.affiliateUrl }}
-        recommendedId={croPrototype ? p1.id : undefined}
+        recommendedId={verdictWinner?.id}
       />
 
       {/* Mobile-only promo popup - the highest-priority featured provider that
