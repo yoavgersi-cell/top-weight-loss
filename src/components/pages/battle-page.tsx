@@ -579,7 +579,10 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
         <section className="relative overflow-hidden border-b border-gray-200 bg-white">
           {/* Subtle gradient accent */}
           <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0C4B75] via-[#1a8cd8] to-[#0C4B75]" />
-          <div className="mx-auto max-w-[1100px] px-4 pb-10 pt-10 sm:px-6 sm:pb-14 sm:pt-12">
+          {/* Mobile-tight hero: less padding, a smaller subtitle, and a single
+              wrapping byline row - the fold should reach real content, not
+              spend itself on credits. Desktop keeps its previous scale. */}
+          <div className="mx-auto max-w-[1100px] px-4 pb-6 pt-5 sm:px-6 sm:pb-14 sm:pt-12">
             <Breadcrumbs
               items={[
                 { label: "Home", href: hubLink(ctx, "/") },
@@ -587,23 +590,23 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               ]}
             />
 
-            <h1 className="text-[26px] font-extrabold leading-[1.15] text-[#191919] sm:text-[38px]">
+            <h1 className="text-[24px] font-extrabold leading-[1.18] text-[#191919] sm:text-[38px] sm:leading-[1.15]">
               {battle.title}
             </h1>
-            <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-gray-500">
+            <p className="mt-2 max-w-xl text-[14px] leading-relaxed text-gray-500 sm:mt-3 sm:text-[15px]">
               {battle.subtitle || battle.description}
             </p>
-            <div className="mt-4 flex flex-col gap-1 text-[13px] sm:flex-row sm:items-center sm:gap-2.5">
+            <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-[11.5px] sm:mt-4 sm:text-[13px]">
               {config.experts && config.experts.length > 0 && (
                 <>
                   <p className="text-gray-500">
-                    <span className="font-semibold uppercase tracking-[0.05em] text-gray-400">Written by </span>
+                    <span className="font-semibold uppercase tracking-[0.05em] text-gray-400">By </span>
                     <Link href={hubLink(ctx, "/about")} className="font-semibold text-[#191919] hover:text-[#0C4B75] hover:underline">
                       The {ctx.brandTeam.replace(/\s+Team$/i, "")} Research Team
                     </Link>
-                    <span className="text-gray-400"> · {config.experts[0].role}</span>
+                    <span className="hidden text-gray-400 sm:inline"> · {config.experts[0].role}</span>
                   </p>
-                  <span className="hidden text-gray-300 sm:inline">•</span>
+                  <span className="text-gray-300">•</span>
                 </>
               )}
               {/* Medical-review credit slot: renders the reviewer from the CMS
@@ -619,7 +622,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                         : config.experts[1].name}
                     </Link>
                   </p>
-                  <span className="hidden text-gray-300 sm:inline">•</span>
+                  <span className="text-gray-300">•</span>
                 </>
               )}
               <LastUpdated date={battle.updatedAt || CONTENT_LAST_UPDATED} />
