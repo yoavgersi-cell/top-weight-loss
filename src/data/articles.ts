@@ -141,6 +141,43 @@ export const articles: Article[] = [
     ],
   },
   {
+    // Bridge article: weight-loss (the domain's strongest vertical) -> the
+    // hair-loss vertical, on a genuinely huge cross-topic query. Medication-
+    // level claims only, hedged where evidence is directional.
+    slug: "ozempic-hair-loss",
+    title: "Does Ozempic Cause Hair Loss? What's Actually Happening (2026)",
+    description:
+      "Hair shedding on Ozempic, Wegovy or Zepbound is usually telogen effluvium from rapid weight loss - typically temporary. Why it happens, how long it lasts, and what actually helps.",
+    category: "Science",
+    readTime: "6 min read",
+    publishedAt: "2026-08-24",
+    updatedAt: "2026-08-24",
+    heroColor: "#EEF4FB",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "Is the medication causing it, or the weight loss?",
+        body: `Almost always, it's the weight loss. Hair shedding reported by people on Ozempic, Wegovy, Zepbound or compounded GLP-1s is generally <strong>telogen effluvium</strong> - a well-understood response in which a major physiological stressor (and losing weight quickly is one) pushes an unusually large share of hair follicles into their resting-and-shedding phase at once. The same shedding happens after bariatric surgery, crash diets, childbirth and serious illness - none of which involve GLP-1 medication. In clinical trials, hair loss was reported by a small minority of participants, more often than on placebo - consistent with the drugs driving faster weight loss rather than attacking hair directly.`,
+      },
+      {
+        heading: "The good news: it's typically temporary",
+        body: `Telogen effluvium usually begins 2-4 months after the trigger (which is why shedding often starts a few months into treatment, right when results get dramatic) and resolves on its own as your weight stabilizes - most people see normal fullness return within several months to a year. It causes diffuse thinning across the scalp rather than a receding hairline or bald spots. That pattern matters: a receding hairline or crown thinning is more likely <strong>androgenetic (pattern) hair loss</strong> that the weight loss merely unmasked - and that's the kind that has real prescription treatments. Our <a href="/hair-loss/articles/minoxidil-shedding-phase">shedding guide</a> explains how to tell the difference.`,
+      },
+      {
+        heading: "What actually helps while it runs its course",
+        body: `<strong>Protein first:</strong> appetite suppression can quietly crash your protein intake, and hair is built from it - most GLP-1 clinicians recommend prioritizing protein at every meal. <strong>Don't crash faster than you need to:</strong> if shedding is heavy, talk to your provider about pacing your titration - slower loss is gentler on hair. <strong>Check the basics:</strong> iron, vitamin D, zinc and thyroid issues amplify shedding and are worth ruling out with your clinician. <strong>Give it time:</strong> the follicles aren't dead, they're resting. And if the pattern looks androgenetic rather than diffuse, treating it early matters - see our guide to <a href="/hair-loss/articles/how-to-stop-hair-loss">stopping hair loss</a>.`,
+      },
+      {
+        heading: "When it's pattern hair loss: real treatment exists",
+        body: `If what you're seeing is a hairline or crown story rather than all-over shedding, prescription treatment is the evidence-based route: finasteride, minoxidil (oral or topical) and dutasteride, all available through licensed online providers. Our <a href="/hair-loss">hair-loss provider ranking</a> compares them with verified pricing - <a href="/hair-loss/reviews/maximus">Maximus</a> from $24.99/month for oral minoxidil with the widest prescription menu, and <a href="/hair-loss/reviews/happyhead">Happy Head</a> at $49 first order (regularly $89) for dermatologist-directed custom formulas that serve women as well as men. The full comparison: <a href="/hair-loss/maximus-vs-happy-head">Maximus vs Happy Head</a>.`,
+      },
+      {
+        heading: "The bottom line",
+        body: `Shedding on a GLP-1 is common, usually temporary, and mostly a side effect of success - rapid weight loss - rather than the medication itself. Keep protein up, pace the loss if it's heavy, rule out deficiencies, and give follicles the months they need. If the thinning has a pattern to it, don't wait it out - <a href="/hair-loss">compare real treatment options</a>. This article is general information, not medical advice - talk to your clinician about your specific situation.`,
+      },
+    ],
+  },
+  {
     slug: "weight-loss-plateau-what-to-do",
     title: "Hit a Weight Loss Plateau? Here's What's Actually Happening",
     description:
