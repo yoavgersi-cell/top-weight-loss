@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Fragment } from "react";
 import Link from "next/link";
 import { getConfig } from "@/lib/config-store";
-import { CONTENT_LAST_UPDATED } from "@/lib/config";
+import { BATTLES_LAST_UPDATED, CONTENT_LAST_UPDATED } from "@/lib/config";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { ComparisonLayout } from "@/components/comparison-layout";
 import { EditorialContent } from "@/components/editorial-content";
@@ -558,13 +558,18 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     ...battle.categories.map((cat) => ({ question: catToQuestion(cat.name), answer: cat.explanation })),
   ].filter((f, i, arr) => !!f.answer && arr.findIndex((x) => x.question === f.question) === i);
 
+  // ISO dates compare lexicographically, so a plain string compare picks the
+  // newer of the battle's own updatedAt and the template-wide floor date.
+  const battleUpdatedAt =
+    battle.updatedAt && battle.updatedAt > BATTLES_LAST_UPDATED ? battle.updatedAt : BATTLES_LAST_UPDATED;
+
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: battle.title,
     description: battle.description,
     datePublished: "2026-06-01",
-    dateModified: battle.updatedAt || CONTENT_LAST_UPDATED,
+    dateModified: battleUpdatedAt,
     author: { "@type": "Organization", name: ctx.brandTeam, url: ctx.origin },
     publisher: { "@type": "Organization", name: ctx.brandDomain, url: ctx.origin },
     mainEntityOfPage: canonicalUrl(ctx, `/${battle.slug}`),
@@ -646,7 +651,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   <span className="text-gray-300">•</span>
                 </>
               )}
-              <LastUpdated date={battle.updatedAt || CONTENT_LAST_UPDATED} />
+              <LastUpdated date={battleUpdatedAt} />
             </div>
             <TrustDisclosure disclaimerHref={hubLink(ctx, "/disclaimer")} />
           </div>

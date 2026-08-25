@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
-import { CONTENT_LAST_UPDATED } from "@/lib/config";
+import { BATTLES_LAST_UPDATED } from "@/lib/config";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
@@ -54,7 +54,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
     name: trio.metaTitle,
     description: trio.description,
     url,
-    dateModified: CONTENT_LAST_UPDATED,
+    dateModified: BATTLES_LAST_UPDATED,
     publisher: { "@type": "Organization", name: ctx.brandDomain, url: ctx.origin },
     mainEntity: {
       "@type": "ItemList",
@@ -99,7 +99,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
           <Breadcrumbs items={[{ label: "Home", href: hubLink(ctx, "/") }, { label: trio.title }]} />
           <h1 className="text-[26px] font-extrabold leading-[1.15] text-[#191919] sm:text-[36px]">{trio.title}</h1>
           <div className="mt-3">
-            <LastUpdated date={CONTENT_LAST_UPDATED} />
+            <LastUpdated date={BATTLES_LAST_UPDATED} />
           </div>
           <TrustDisclosure disclaimerHref={hubLink(ctx, "/disclaimer")} />
         </div>
