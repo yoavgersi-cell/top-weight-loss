@@ -307,6 +307,27 @@ function splitSentences(text: string, n: number): [string, string] {
   return [parts.slice(0, n).join("").trim(), parts.slice(n).join("").trim()];
 }
 
+// Bolds the decision-critical facts inside verdict bullets - prices, regular
+// rates, percentages, day counts - so a scanning reader catches the numbers
+// first. Pure presentation over the battle's own copy.
+function BoldKeyFacts({ text }: { text: string }) {
+  const re = /(\$[\d,]+(?:\.\d+)?(?:\/(?:mo|month|yr|year))?|\d+(?:\.\d+)?%|\b\d+(?:-\d+)?\s?(?:days?|tablets?)\b|\b\d{1,3}(?:,\d{3})+\b)/gi;
+  const parts = text.split(re);
+  return (
+    <>
+      {parts.map((p, i) =>
+        i % 2 === 1 ? (
+          <strong key={i} className="font-bold text-[#191919]">
+            {p}
+          </strong>
+        ) : (
+          p
+        )
+      )}
+    </>
+  );
+}
+
 function ReadMoreProse({ text, label, visibleSentences = 2 }: { text: string; label: string; visibleSentences?: number }) {
   const [visible, rest] = splitSentences(text, visibleSentences);
   if (!rest) {
@@ -596,7 +617,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <p className="mt-2 max-w-xl text-[14px] leading-relaxed text-gray-500 sm:mt-3 sm:text-[15px]">
               {battle.subtitle || battle.description}
             </p>
-            <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-[11.5px] sm:mt-4 sm:text-[13px]">
+            <div className="mt-3.5 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-[11.5px] leading-[1.5] sm:mt-4 sm:text-[13px]">
               {config.experts && config.experts.length > 0 && (
                 <>
                   <p className="text-gray-500">
@@ -651,25 +672,25 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
                 The quick answer
               </p>
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid gap-5 sm:grid-cols-2">
                 <div>
                   <p className="mb-2 text-[14px] font-bold text-[#191919]">Go with {verdictWinner.name} if you want</p>
-                  <ul className="space-y-1.5">
+                  <ul className="space-y-2">
                     {winnerPts.slice(0, 3).map((pt, i) => (
-                      <li key={i} className="flex items-start gap-2 text-[14px] leading-[1.6] text-gray-600">
+                      <li key={i} className="flex items-start gap-2 text-[14px] leading-[1.65] text-gray-600">
                         <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2.5} />
-                        {pt}
+                        <span><BoldKeyFacts text={pt} /></span>
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div>
                   <p className="mb-2 text-[14px] font-bold text-[#191919]">{verdictRunnerUp.name} makes more sense if you want</p>
-                  <ul className="space-y-1.5">
+                  <ul className="space-y-2">
                     {runnerUpPts.slice(0, 3).map((pt, i) => (
-                      <li key={i} className="flex items-start gap-2 text-[14px] leading-[1.6] text-gray-600">
+                      <li key={i} className="flex items-start gap-2 text-[14px] leading-[1.65] text-gray-600">
                         <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#0C4B75]" strokeWidth={2.5} />
-                        {pt}
+                        <span><BoldKeyFacts text={pt} /></span>
                       </li>
                     ))}
                   </ul>
@@ -928,7 +949,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                     className="flex items-center justify-between gap-3 border-b border-gray-100 px-4 py-3 last:border-0 sm:px-5"
                   >
                     <span className="text-[13.5px] leading-snug text-gray-600 sm:text-[14px]">
-                      {need}
+                      <BoldKeyFacts text={need} />
                     </span>
                     <span className="shrink-0 text-[13.5px] font-bold text-[#0C4B75] sm:text-[14px]">{pick}</span>
                   </div>
