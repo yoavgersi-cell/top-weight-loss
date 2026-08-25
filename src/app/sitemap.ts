@@ -4,6 +4,7 @@ import { getConfig } from "@/lib/config-store";
 import { THREE_WAY_COMPARISONS } from "@/lib/three-way";
 import {
   CONTENT_LAST_UPDATED,
+  BATTLES_LAST_UPDATED,
   AFFILIATE_PROVIDER_IDS,
   NOINDEX_ARTICLE_SLUGS,
   VERTICAL_IDS,
@@ -17,6 +18,11 @@ import { articles } from "@/data/articles";
 const BASE_URL = "https://www.topweightloss.io";
 const HUB_URL = "https://www.treatmentshub.com";
 const FALLBACK_DATE = new Date(CONTENT_LAST_UPDATED);
+
+// Battles share a template-wide floor date (see BATTLES_LAST_UPDATED) - keep
+// the sitemap's lastmod in sync with the on-page "Last updated" line.
+const battleLastModified = (updatedAt?: string) =>
+  updatedAt && updatedAt > BATTLES_LAST_UPDATED ? new Date(updatedAt) : new Date(BATTLES_LAST_UPDATED);
 
 // Weight-loss-specific standalone pages (custom-coded, not CMS-driven). Shared
 // across hosts: on the hub they live under /weight-loss/... via the proxy.
@@ -108,7 +114,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
   entries.push(
     ...(config.battles ?? []).map((b) => ({
       url: P(`/${b.slug}`),
-      lastModified: b.updatedAt ? new Date(b.updatedAt) : FALLBACK_DATE,
+      lastModified: battleLastModified(b.updatedAt),
       changeFrequency: "weekly" as const,
       priority: 0.8,
     }))
@@ -128,7 +134,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
     entries.push(
       ...THREE_WAY_COMPARISONS.map((t) => ({
         url: P(`/${t.slug}`),
-        lastModified: FALLBACK_DATE,
+        lastModified: battleLastModified(),
         changeFrequency: "weekly" as const,
         priority: 0.8,
       }))
@@ -259,7 +265,7 @@ async function legacySitemap(): Promise<MetadataRoute.Sitemap> {
   const battlePages: MetadataRoute.Sitemap = (config.battles ?? []).map(
     (battle) => ({
       url: `${BASE_URL}/${battle.slug}`,
-      lastModified: battle.updatedAt ? new Date(battle.updatedAt) : FALLBACK_DATE,
+      lastModified: battleLastModified(battle.updatedAt),
       changeFrequency: "weekly" as const,
       priority: 0.8,
     })

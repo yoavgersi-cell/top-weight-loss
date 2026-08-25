@@ -276,6 +276,12 @@ export interface LandingPageData {
 // updatedAt. Avoids emitting today's date on every request (fake freshness).
 export const CONTENT_LAST_UPDATED = "2026-08-16";
 
+// Floor date for every battle page: the shared battle template itself was last
+// reworked on this date (quick answer, fit finder, accordions, sticky CTA), so
+// no battle can honestly claim an older "last updated" than this. Per-battle
+// updatedAt still wins when it is newer.
+export const BATTLES_LAST_UPDATED = "2026-08-25";
+
 // ── Verticals ────────────────────────────────────────────────────────────────
 // The hub (treatmentshub.com) is split into fully-separated verticals. Each one
 // is an independent bundle: its own providers, reviews, comparisons, articles,
