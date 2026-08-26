@@ -20,6 +20,7 @@ import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
 import { ProductCarousel } from "@/components/product-carousel";
 import { notFound } from "next/navigation";
 import { REDDIT_COMMUNITY_FEEDBACK as REVIEW_COMMUNITY_FEEDBACK, RedditMark } from "@/components/reddit-community";
+import { YoutubeReviewSection } from "@/components/youtube-review";
 
 // Per-provider SEO overrides for reviews with distinctive search demand.
 // Code-controlled (not CMS-merged) so they reliably target trending queries -
@@ -975,6 +976,11 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             </p>
           </div>
         )}
+
+        {/* Independent YouTube review - registry-gated, one real video per
+            provider, embedded click-to-load so the iframe never weighs on
+            initial load. */}
+        <YoutubeReviewSection providerId={provider.id} providerName={provider.name} vertical={ctx.vertical} />
 
         {/* Final Verdict */}
         <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
