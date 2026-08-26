@@ -1,5 +1,5 @@
 import { put, list } from "@vercel/blob";
-import { type SiteConfig, type ReviewData, type ArticleData, type BattleData, type LandingPageData, type TrustpilotReview, type Expert, defaultConfig, DEFAULT_VERTICAL, VERTICALS } from "./config";
+import { type SiteConfig, type ReviewData, type ArticleData, type BattleData, type LandingPageData, type TrustpilotReview, type Expert, defaultConfig, DEFAULT_VERTICAL, VERTICALS, WEIGHT_LOSS_HERO_TEXT } from "./config";
 import productsJson from "@/data/products.json";
 import faqsJson from "@/data/faqs.json";
 import { articles as defaultArticlesData } from "@/data/articles";
@@ -4392,7 +4392,7 @@ function buildInitialConfig(): SiteConfig {
         seoDescription: "Find the most affordable GLP-1 weight loss medication in 2026. Compare compounded semaglutide and tirzepatide providers by price, with total cost breakdowns.",
         h1: "Most Affordable Weight Loss Medication 2026",
         h2: "Compare the cheapest GLP-1 providers",
-        heroDescription: "GLP-1 medications don't have to cost $1,000/month. Compounded semaglutide and tirzepatide from telehealth providers start at $200-$300/month - including medication, consultations, and delivery.",
+        heroDescription: "GLP-1 medications don't have to cost $1,000/month. Compounded semaglutide starts at a verified $59/month and tirzepatide at $99/month from licensed telehealth providers - including medication, consultations, and delivery.",
         providerOrder: ["altrx", "trimrx", "shed", "ro", "noom", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
@@ -4623,6 +4623,11 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
         return (lastGoodConfig = normalizeBrandCasing({
           ...initial,
           ...saved,
+          // Hero text is code-authoritative (see WEIGHT_LOSS_HERO_TEXT): the
+          // h1 doubles as the homepage meta title, so retitles must ship from
+          // code instead of being frozen by a CMS snapshot. Background image
+          // and alt stay CMS-editable.
+          hero: { ...initial.hero, ...(saved.hero ?? {}), ...WEIGHT_LOSS_HERO_TEXT },
           providers,
           ranking: saved.ranking && saved.ranking.providerOrder && saved.ranking.providerOrder.length > 0 ? saved.ranking : initial.ranking,
           reviews: (() => {

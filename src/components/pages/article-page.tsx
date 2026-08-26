@@ -159,6 +159,14 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     permanentRedirect(hubLink(ctx, `/${slug}`));
   }
 
+  // Cannibalization consolidation: the generic "best telehealth providers"
+  // article competed with the ranking homepage for the exact query cluster the
+  // homepage should own ("best telehealth weight loss", "best online weight
+  // loss clinic"). Its equity 301s to the homepage instead.
+  if (slug === "best-weight-loss-telehealth-providers") {
+    permanentRedirect(hubLink(ctx, "/"));
+  }
+
   const article = articles.find((a) => a.slug === slug);
   if (!article) return notFound();
 
