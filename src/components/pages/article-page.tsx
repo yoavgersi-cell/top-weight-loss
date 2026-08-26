@@ -74,6 +74,8 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
 // targets). Code-rendered, so they work for articles whose body lives in the
 // blob. Every figure is a real, listed price - no invented numbers.
 const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
+  "mounjaro-vs-ozempic":
+    "They are not the same drug: Mounjaro (tirzepatide) targets two hormone receptors and produced up to 22.5% average weight loss in trials, versus ~15% for Ozempic (semaglutide). Ozempic's compounded version is cheaper - verified from $59/month versus $99 for tirzepatide - and both require a prescription from a licensed provider.",
   "best-mounjaro-alternatives":
     "The closest Mounjaro alternatives are compounded tirzepatide plans - the same active ingredient - from licensed telehealth providers: $99/month at wellmedr, $119 at embody, $147 at DirectMeds, versus roughly $1,000+ for brand-name. Prescription required, shipped to your door.",
   "best-wegovy-alternatives":
