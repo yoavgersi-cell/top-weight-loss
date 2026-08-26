@@ -22,6 +22,7 @@ import { notFound } from "next/navigation";
 import { REDDIT_COMMUNITY_FEEDBACK as REVIEW_COMMUNITY_FEEDBACK, RedditMark } from "@/components/reddit-community";
 import { YoutubeReviewSection } from "@/components/youtube-review";
 import { ReadableProse } from "@/components/prose";
+import { ProviderAudit } from "@/components/provider-audit";
 
 // Per-provider SEO overrides for reviews with distinctive search demand.
 // Code-controlled (not CMS-merged) so they reliably target trending queries -
@@ -761,6 +762,10 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           )}
           <ReadableProse text={review.pricingSummary} paragraphClassName="text-[15px] leading-[1.75] text-gray-600" />
         </Section>
+
+        {/* The TreatmentsHub audit - verified-facts card. Registry-gated:
+            providers whose data isn't fully verified render nothing. */}
+        <ProviderAudit providerId={provider.id} providerName={provider.name} vertical={ctx.vertical} />
 
         {/* How it works */}
         {review.howItWorks && review.howItWorks.length > 0 && (
