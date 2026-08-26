@@ -363,9 +363,15 @@ export const NOINDEX_ARTICLE_SLUGS = [
   "best-noom-alternatives",
   "noom-subscription-cost",
   "noom-vs-glp1-providers",
-  "ozempic-vs-wegovy-differences",
-  "mounjaro-vs-ozempic",
-  "zepbound-vs-wegovy",
+  // ozempic-vs-wegovy-differences, mounjaro-vs-ozempic and zepbound-vs-wegovy
+  // were re-indexed (Aug 2026) after their GEO rewrites: GSC shows ~850
+  // zero-click impressions across those query clusters, and the articles now
+  // carry verified provider-price tables and affiliate funnels - the same
+  // operator logic that re-indexed tirzepatide-vs-semaglutide.
+  // Consolidated: the generic "best telehealth providers" article 301s to the
+  // ranking homepage, which owns that intent; the slug stays here so a
+  // blob-saved copy never re-enters the sitemap.
+  "best-weight-loss-telehealth-providers",
   // tirzepatide-vs-semaglutide was re-indexed (Aug 2026): the molecule query
   // is surging and our verified provider-price table is an answer the medical
   // sites can't match - operator call to compete on it.
@@ -402,6 +408,19 @@ export interface SiteConfig {
   experts?: Expert[];
 }
 
+// Code-authoritative hero text for the weight-loss homepage. Lives here (not
+// only in the blob) because the h1 doubles as the page's meta title - it is
+// the main lever for the "best telehealth weight loss / online GLP-1
+// providers" query cluster, which GSC shows getting zero impressions on this
+// page. The blob merge in config-store applies this over any CMS-saved hero.
+export const WEIGHT_LOSS_HERO_TEXT = {
+  updatedLabel: "Last Updated: August 2026",
+  h1: "Best Weight Loss Injections & Telehealth Providers of 2026",
+  h2: "The top online GLP-1 weight loss programs, ranked and verified",
+  description:
+    "Compare 2026's best telehealth weight loss providers and GLP-1 injection programs. Licensed online clinics with verified prices from $59/month semaglutide and $99/month tirzepatide - every price checked against the provider's own site.",
+};
+
 export const defaultConfig: SiteConfig = {
   siteName: "topweightloss.io",
   disclosureText:
@@ -409,11 +428,7 @@ export const defaultConfig: SiteConfig = {
   hero: {
     backgroundImageUrl: "/hero.png",
     imageAlt: "Weight loss medications",
-    updatedLabel: "Last Updated: August 2026",
-    h1: "Best Weight Loss Injections & Programs of 2026",
-    h2: "Compare the top GLP-1 weight loss providers, side by side",
-    description:
-      "Compare the best weight loss injections and programs - pricing, medications, medical support, and overall value - to find the provider that best fits your goals.",
+    ...WEIGHT_LOSS_HERO_TEXT,
   },
   sidebar: {
     socialProofNumber: "18,400+",

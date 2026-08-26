@@ -71,25 +71,100 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       <hr className="mb-8 border-gray-200" />
 
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">
-        Weight Loss Program Pricing Comparison
+        What Do the Best Online Weight Loss Programs Cost in 2026?
       </h2>
       <p className="mb-4">
-        Monthly costs can vary depending on the provider, medication prescribed, and level of support included in the program. Learn more about{" "}
-        <Link href="/articles/choosing-telehealth-weight-loss-provider" className="font-semibold text-[#0C4B75] hover:underline">
-          how to choose the right telehealth provider
-        </Link>{" "}
-        to understand what you should expect to pay.
+        These are the published monthly prices at every provider in our ranking - checked against
+        each provider&apos;s own site, not estimated. Most plans are all-inclusive: prescription
+        medication, medical consultations, ongoing support, and home delivery in one monthly fee.
       </p>
-      <p className="mb-3">Many providers offer all-inclusive plans that may include:</p>
-      <ul className="mb-8 list-disc space-y-1 pl-6">
-        <li>Prescription medication</li>
-        <li>Medical consultations</li>
-        <li>Ongoing provider support</li>
-        <li>Progress tracking tools</li>
-        <li>Home delivery</li>
+      <div className="mb-4 overflow-x-auto rounded-xl border border-gray-200">
+        <table className="w-full min-w-[600px] text-left text-[14px]">
+          <thead>
+            <tr className="border-b border-gray-200 bg-gray-50">
+              <th className="px-4 py-3 font-bold text-[#191919]">Provider</th>
+              <th className="px-4 py-3 font-bold text-[#191919]">Semaglutide</th>
+              <th className="px-4 py-3 font-bold text-[#191919]">Tirzepatide</th>
+              <th className="px-4 py-3 font-bold text-[#191919]">Pricing model</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-gray-100">
+            {[
+              ["wellmedr", "$59/mo", "$99/mo", "12-month plan for best rate"],
+              ["embody", "$69/mo", "$119/mo", "Flat monthly, no commitment"],
+              ["altRx", "$89/mo", "$149/mo", "Flat at every dose, BNPL"],
+              ["Medvi", "$99/mo promo (reg. $199)", "$166/mo promo (reg. $299)", "All-inclusive + dietician"],
+              ["HealthRx", "$99/mo", "from $179/mo", "12-month prepaid"],
+              ["DirectMeds", "$147/mo", "$147/mo", "Flat, needle-free option"],
+              ["Sprout", "$149/mo", "$199/mo", "Also stocks brand Wegovy"],
+              ["trimrx", "$179 first mo (reg. $299)", "$259/mo", "No contract"],
+              ["SHED", "$199/mo", "$299/mo", "Money-back results guarantee"],
+            ].map(([name, sema, tirz, model], i) => (
+              <tr key={name} className={i % 2 === 1 ? "bg-gray-50/50" : ""}>
+                <td className="px-4 py-3 align-top font-medium text-[#191919]">{name}</td>
+                <td className="px-4 py-3 align-top text-gray-600">{sema}</td>
+                <td className="px-4 py-3 align-top text-gray-600">{tirz}</td>
+                <td className="px-4 py-3 align-top text-gray-600">{model}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p className="mb-8 text-[13.5px] text-gray-500">
+        Prices as published in August 2026 - confirm current pricing on each provider&apos;s site.
+        For annual math and the budget tier in depth, see the{" "}
+        <Link href="/cheapest-glp1" className="font-semibold text-[#0C4B75] hover:underline">
+          cheapest verified GLP-1 comparison
+        </Link>
+        .
+      </p>
+
+      <hr className="mb-8 border-gray-200" />
+
+      <h2 className="mb-4 text-[24px] font-bold text-[#191919]">
+        How to Choose a GLP-1 Telehealth Provider
+      </h2>
+      <p className="mb-3">
+        Every legitimate online weight loss clinic shares the same backbone - a licensed clinician
+        reviews your health intake before anything is prescribed. Beyond that, five checks separate
+        the best telehealth weight loss providers from the rest:
+      </p>
+      <ul className="mb-4 list-disc space-y-1 pl-6">
+        <li>
+          <strong>Published, all-inclusive pricing</strong> - a real monthly number on the site, not
+          &quot;from&quot; teasers that grow at checkout
+        </li>
+        <li>
+          <strong>Licensed prescriber review</strong> - and a provider willing to decline treatment
+          when it isn&apos;t appropriate
+        </li>
+        <li>
+          <strong>Pharmacy transparency</strong> - US-licensed 503A compounding pharmacies, named or
+          verifiable
+        </li>
+        <li>
+          <strong>Support you&apos;ll actually use</strong> - dose adjustments, side-effect guidance,
+          a human to reach
+        </li>
+        <li>
+          <strong>Shipping that fits the medication</strong> - tracked, insured, cold-chain where
+          needed
+        </li>
       </ul>
       <p className="mb-8">
-        Some programs focus on affordability, while others provide more personalized care and additional clinical services.
+        Our{" "}
+        <Link href="/how-we-rank" className="font-semibold text-[#0C4B75] hover:underline">
+          full ranking methodology
+        </Link>{" "}
+        explains how we score each of these. Prefer a shortcut? The{" "}
+        <Link href="/find-your-match" className="font-semibold text-[#0C4B75] hover:underline">
+          60-second matching quiz
+        </Link>{" "}
+        weighs your budget and priorities, or read our step-by-step{" "}
+        <Link href="/articles/choosing-telehealth-weight-loss-provider" className="font-semibold text-[#0C4B75] hover:underline">
+          guide to choosing a telehealth weight loss provider
+        </Link>
+        .
       </p>
 
       {/* Editorial callout */}
