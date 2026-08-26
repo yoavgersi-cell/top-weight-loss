@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Clock, ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
-import { NOINDEX_ARTICLE_SLUGS } from "@/lib/config";
+import { NOINDEX_ARTICLE_SLUGS, latestUpdate } from "@/lib/config";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ExpertByline } from "@/components/expert-byline";
@@ -120,7 +120,7 @@ export async function articleMetadata(slug: string, ctx: SiteContext): Promise<M
       url,
       type: "article",
       publishedTime: article.publishedAt,
-      modifiedTime: article.updatedAt,
+      modifiedTime: latestUpdate(article.updatedAt),
       authors: [article.author || ctx.brandDomain],
     },
   };
@@ -199,9 +199,9 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     ),
   ].slice(0, 3);
 
-  const formattedDate = new Date(article.updatedAt).toLocaleDateString(
+  const formattedDate = new Date(latestUpdate(article.updatedAt)).toLocaleDateString(
     "en-US",
-    { year: "numeric", month: "long", day: "numeric" }
+    { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" }
   );
 
   // Word count for schema
@@ -219,7 +219,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     description: article.description,
     image: canonicalUrl(ctx, `/articles/${slug}/opengraph-image`),
     datePublished: article.publishedAt,
-    dateModified: article.updatedAt,
+    dateModified: latestUpdate(article.updatedAt),
     wordCount,
     articleSection: article.category,
     author: author

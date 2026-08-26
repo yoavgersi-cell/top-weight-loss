@@ -274,13 +274,19 @@ export interface LandingPageData {
 
 // Stable fallback "last updated" date for schema when an item has no CMS
 // updatedAt. Avoids emitting today's date on every request (fake freshness).
-export const CONTENT_LAST_UPDATED = "2026-08-16";
+export const CONTENT_LAST_UPDATED = "2026-08-25";
 
-// Floor date for every battle page: the shared battle template itself was last
-// reworked on this date (quick answer, fit finder, accordions, sticky CTA), so
-// no battle can honestly claim an older "last updated" than this. Per-battle
-// updatedAt still wins when it is newer.
-export const BATTLES_LAST_UPDATED = "2026-08-25";
+// Floor date for battle, review and article pages: the shared page templates
+// were last reworked on this date (quick answer, fit finder, accordions,
+// Trustpilot/Reddit carousels, schema enrichment), so no page built from them
+// can honestly claim an older "last updated". A per-item updatedAt still wins
+// when it is newer.
+export const TEMPLATES_LAST_UPDATED = "2026-08-25";
+
+// ISO dates compare lexicographically - returns the newer of an item's own
+// updatedAt and the template-wide floor above.
+export const latestUpdate = (updatedAt?: string) =>
+  updatedAt && updatedAt > TEMPLATES_LAST_UPDATED ? updatedAt : TEMPLATES_LAST_UPDATED;
 
 // ── Verticals ────────────────────────────────────────────────────────────────
 // The hub (treatmentshub.com) is split into fully-separated verticals. Each one
