@@ -4,7 +4,7 @@ import { getConfig } from "@/lib/config-store";
 import { THREE_WAY_COMPARISONS } from "@/lib/three-way";
 import {
   CONTENT_LAST_UPDATED,
-  BATTLES_LAST_UPDATED,
+  latestUpdate,
   AFFILIATE_PROVIDER_IDS,
   NOINDEX_ARTICLE_SLUGS,
   VERTICAL_IDS,
@@ -19,10 +19,10 @@ const BASE_URL = "https://www.topweightloss.io";
 const HUB_URL = "https://www.treatmentshub.com";
 const FALLBACK_DATE = new Date(CONTENT_LAST_UPDATED);
 
-// Battles share a template-wide floor date (see BATTLES_LAST_UPDATED) - keep
-// the sitemap's lastmod in sync with the on-page "Last updated" line.
-const battleLastModified = (updatedAt?: string) =>
-  updatedAt && updatedAt > BATTLES_LAST_UPDATED ? new Date(updatedAt) : new Date(BATTLES_LAST_UPDATED);
+// Battles, reviews and articles share a template-wide floor date (see
+// TEMPLATES_LAST_UPDATED) - keep the sitemap's lastmod in sync with the
+// on-page "Last updated" line and schema dateModified.
+const flooredLastModified = (updatedAt?: string) => new Date(latestUpdate(updatedAt));
 
 // Weight-loss-specific standalone pages (custom-coded, not CMS-driven). Shared
 // across hosts: on the hub they live under /weight-loss/... via the proxy.
@@ -94,7 +94,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
       .filter((r) => AFFILIATE_PROVIDER_IDS.includes(r.providerId))
       .map((r) => ({
         url: P(`/reviews/${r.slug}`),
-        lastModified: r.updatedAt ? new Date(r.updatedAt) : FALLBACK_DATE,
+        lastModified: flooredLastModified(r.updatedAt),
         changeFrequency: "weekly" as const,
         priority: 0.8,
       }))
@@ -105,7 +105,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
       .filter((a) => !NOINDEX_ARTICLE_SLUGS.includes(a.slug))
       .map((a) => ({
         url: P(`/articles/${a.slug}`),
-        lastModified: new Date(a.updatedAt),
+        lastModified: flooredLastModified(a.updatedAt),
         changeFrequency: "weekly" as const,
         priority: 0.8,
       }))
@@ -114,7 +114,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
   entries.push(
     ...(config.battles ?? []).map((b) => ({
       url: P(`/${b.slug}`),
-      lastModified: battleLastModified(b.updatedAt),
+      lastModified: flooredLastModified(b.updatedAt),
       changeFrequency: "weekly" as const,
       priority: 0.8,
     }))
@@ -134,7 +134,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
     entries.push(
       ...THREE_WAY_COMPARISONS.map((t) => ({
         url: P(`/${t.slug}`),
-        lastModified: battleLastModified(),
+        lastModified: flooredLastModified(),
         changeFrequency: "weekly" as const,
         priority: 0.8,
       }))
@@ -239,7 +239,7 @@ async function legacySitemap(): Promise<MetadataRoute.Sitemap> {
     .filter((review) => AFFILIATE_PROVIDER_IDS.includes(review.providerId))
     .map((review) => ({
       url: `${BASE_URL}/reviews/${review.slug}`,
-      lastModified: review.updatedAt ? new Date(review.updatedAt) : FALLBACK_DATE,
+      lastModified: flooredLastModified(review.updatedAt),
       changeFrequency: "weekly" as const,
       priority: 0.8,
     }));
@@ -256,7 +256,7 @@ async function legacySitemap(): Promise<MetadataRoute.Sitemap> {
       .filter((article) => !NOINDEX_ARTICLE_SLUGS.includes(article.slug))
       .map((article) => ({
         url: `${BASE_URL}/articles/${article.slug}`,
-        lastModified: new Date(article.updatedAt),
+        lastModified: flooredLastModified(article.updatedAt),
         changeFrequency: "weekly" as const,
         priority: 0.8,
       })),
@@ -265,7 +265,7 @@ async function legacySitemap(): Promise<MetadataRoute.Sitemap> {
   const battlePages: MetadataRoute.Sitemap = (config.battles ?? []).map(
     (battle) => ({
       url: `${BASE_URL}/${battle.slug}`,
-      lastModified: battleLastModified(battle.updatedAt),
+      lastModified: flooredLastModified(battle.updatedAt),
       changeFrequency: "weekly" as const,
       priority: 0.8,
     })

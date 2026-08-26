@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Check, X, ArrowRight, Users, Clock, Shield, Star, ArrowBigUp, ArrowBigDown, MessageCircle } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
-import { CONTENT_LAST_UPDATED, AFFILIATE_PROVIDER_IDS } from "@/lib/config";
+import { AFFILIATE_PROVIDER_IDS, latestUpdate } from "@/lib/config";
 import {
   type SiteContext,
   canonicalUrl,
@@ -417,7 +417,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         headline: `${provider.name} Review 2026: Cost, Results & Is It Worth It?`,
         reviewBody: review.reviewIntro,
         datePublished: "2026-06-01",
-        dateModified: review.updatedAt || CONTENT_LAST_UPDATED,
+        dateModified: latestUpdate(review.updatedAt),
         reviewRating: {
           "@type": "Rating",
           ratingValue: editorial.score,
@@ -540,7 +540,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 <p className="mt-0.5 text-[14px] text-gray-500">
                   {provider.tagline}
                 </p>
-                <LastUpdated date={review.updatedAt || CONTENT_LAST_UPDATED} className="mt-1" />
+                <LastUpdated date={latestUpdate(review.updatedAt)} className="mt-1" />
                 {editorial && (
                   <div className="mt-2 flex items-center gap-2">
                     <div className="flex gap-0.5">
