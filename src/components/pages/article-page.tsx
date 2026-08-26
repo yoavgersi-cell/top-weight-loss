@@ -26,7 +26,7 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
   "best-mounjaro-alternatives": {
     title: "7 Best Mounjaro Alternatives in 2026 (From $99/Month)",
     description:
-      "Compounded tirzepatide - the same active ingredient as Mounjaro - from $99-$147/month at licensed telehealth providers, vs $1,000+ brand-name. Compared honestly.",
+      "Compounded tirzepatide - Mounjaro's active ingredient - from a verified $99/month at licensed telehealth providers, vs $1,000+ brand pens. Every price checked against the provider's own site, August 2026.",
   },
   "best-wegovy-alternatives": {
     title: "7 Best Wegovy Alternatives in 2026 (From $59/Month)",
