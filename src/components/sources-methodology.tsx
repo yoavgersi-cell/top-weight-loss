@@ -33,12 +33,16 @@ export function SourcesMethodology({
   ctx,
   providers,
   headingLabel,
+  kind = "comparison",
 }: {
   ctx: SiteContext;
   providers: SourceProvider[];
   // What the page compares, e.g. "embody and Medvi" or "embody" - fills the
   // one-line "How we researched ___" opener.
   headingLabel: string;
+  // On a provider's own review page the provider rows would just link back to
+  // the page itself - "review" renders them as plain text instead.
+  kind?: "comparison" | "review";
 }) {
   const medicalSources = SOURCES_BY_VERTICAL[ctx.vertical] ?? [];
 
@@ -55,11 +59,12 @@ export function SourcesMethodology({
 
       <div className="px-6 py-6 sm:px-7">
         <p className="mb-6 max-w-[760px] text-[14px] leading-relaxed text-gray-600">
-          We built this comparison of {headingLabel}{" "}from each provider&apos;s own published pricing,
-          plans and policies, cross-checked against regulatory and peer-reviewed medical references,
-          and read alongside real customer feedback. Prices and plan details were verified against
-          each provider&apos;s published information; we do not take providers&apos; word for their
-          own claims without checking.
+          We built this {kind} of {headingLabel}{" "}from{" "}
+          {kind === "review" ? "the provider's" : "each provider's"} own published pricing, plans
+          and policies, cross-checked against regulatory and peer-reviewed medical references, and
+          read alongside real customer feedback. Prices and plan details were verified against the
+          provider&apos;s published information; we do not take providers&apos; word for their own
+          claims without checking.
         </p>
 
         <div className="grid gap-x-10 gap-y-7 sm:grid-cols-2">
@@ -72,13 +77,25 @@ export function SourcesMethodology({
             <ul className="space-y-1.5">
               {providers.map((p) => (
                 <li key={p.id} className="text-[13.5px] leading-relaxed">
-                  <a
-                    href={hubLink(ctx, `/reviews/${p.id}`)}
-                    className="font-semibold text-[#0C4B75] underline underline-offset-2 hover:text-[#093d61]"
-                  >
-                    {p.name}
-                  </a>
-                  <span className="text-gray-400"> - full pricing &amp; plan breakdown</span>
+                  {kind === "review" ? (
+                    <>
+                      <span className="font-semibold text-[#191919]">{p.name}</span>
+                      <span className="text-gray-400">
+                        {" "}
+                        - pricing, plans &amp; policies as published on its own site
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      <a
+                        href={hubLink(ctx, `/reviews/${p.id}`)}
+                        className="font-semibold text-[#0C4B75] underline underline-offset-2 hover:text-[#093d61]"
+                      >
+                        {p.name}
+                      </a>
+                      <span className="text-gray-400"> - full pricing &amp; plan breakdown</span>
+                    </>
+                  )}
                 </li>
               ))}
             </ul>

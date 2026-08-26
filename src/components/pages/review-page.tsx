@@ -16,7 +16,8 @@ import { ExpertByline } from "@/components/expert-byline";
 import { LastUpdated } from "@/components/last-updated";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
-import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
+import { TrustDisclosure } from "@/components/medical-sources";
+import { SourcesMethodology } from "@/components/sources-methodology";
 import { ProductCarousel } from "@/components/product-carousel";
 import { notFound } from "next/navigation";
 import { REDDIT_COMMUNITY_FEEDBACK as REVIEW_COMMUNITY_FEEDBACK, RedditMark } from "@/components/reddit-community";
@@ -1095,7 +1096,12 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           </div>
         )}
 
-        <MedicalSources vertical={ctx.vertical} />
+        <SourcesMethodology
+          ctx={ctx}
+          providers={[{ id: provider.id, name: provider.name }]}
+          headingLabel={provider.name}
+          kind="review"
+        />
       </div>
 
       {/* Mobile-only promo popup - shown on the provider's own review page when

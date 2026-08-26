@@ -66,7 +66,9 @@ export function MedicalSources({ vertical }: { vertical: string }) {
       </div>
       <p className="mb-4 text-[13px] leading-relaxed text-gray-500">
         Treatment facts on this page are grounded in regulatory guidance and peer-reviewed research.
-        Pricing and plan details come from each provider&apos;s published information.
+        Pricing and plan details come from each provider&apos;s published information. This content
+        is for information only and is not medical advice - always consult a licensed clinician
+        before starting treatment.
       </p>
       <ol className="space-y-2">
         {sources.map((s, i) => (
@@ -90,19 +92,19 @@ export function MedicalSources({ vertical }: { vertical: string }) {
   );
 }
 
-// One-line affiliate + medical disclosure for the top of review/comparison
-// pages: transparent about compensation, explicit that nothing here is medical
-// advice. Sits under the byline, above the content.
+// One-line affiliate disclosure under the byline, above the first affiliate
+// link (FTC: clear, conspicuous, before the links). Deliberately compact - the
+// "not medical advice" disclaimer lives once at the bottom of these pages
+// (SourcesMethodology footer, or the MedicalSources intro below) instead of
+// being repeated here.
 export function TrustDisclosure({ disclaimerHref }: { disclaimerHref: string }) {
   return (
-    <p className="mt-2.5 max-w-[720px] rounded-lg bg-gray-50 px-3 py-2 text-[11.5px] leading-[1.55] text-gray-500 sm:mt-3 sm:px-3.5 sm:py-2.5 sm:text-[12.5px] sm:leading-relaxed">
-      We may earn a commission when you visit providers through links on this page - it never
-      affects our rankings (
+    <p className="mt-2.5 max-w-[720px] text-[11.5px] leading-[1.55] text-gray-400 sm:mt-3 sm:text-[12px]">
+      We may earn a commission from links on this page - it never affects our rankings (
       <a href={disclaimerHref} className="font-medium text-[#0C4B75] hover:underline">
         how we stay objective
       </a>
-      ). This content is for information only and is not medical advice - always consult a licensed
-      clinician before starting treatment.
+      ).
     </p>
   );
 }
