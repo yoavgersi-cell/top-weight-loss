@@ -16,6 +16,7 @@ import { ProviderCta } from "@/components/provider-cta";
 import { BattleStickyCta } from "@/components/battle-sticky-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { TrustpilotRating } from "@/components/trustpilot-rating";
+import { LicensedTelehealthBadge } from "@/components/licensed-badge";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
 import { TrustDisclosure } from "@/components/medical-sources";
@@ -812,19 +813,15 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   </div>
                 </div>
 
-                <div className="mb-3 border-b border-gray-100 pb-3">
-                  {provider.trustpilotRating ? (
+                <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-2 border-b border-gray-100 pb-3">
+                  {provider.trustpilotRating && (
                     <TrustpilotRating
                       rating={provider.trustpilotRating}
                       reviewCount={provider.trustpilotReviewCount}
                       starSize={16}
                     />
-                  ) : (
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[12px] font-semibold text-emerald-700">
-                      <ShieldCheck className="h-3.5 w-3.5" strokeWidth={2} />
-                      Licensed US telehealth
-                    </span>
                   )}
+                  {ctx.vertical !== "hearing-aids" && <LicensedTelehealthBadge />}
                 </div>
 
                 <p className="mb-4 text-[14px] leading-relaxed text-gray-500">
@@ -1017,7 +1014,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img src={provider.logo} alt={`${provider.name} logo`} className="max-h-full max-w-full object-contain" />
                           </div>
-                          {provider.trustpilotRating ? (
+                          {provider.trustpilotRating && (
                             <div className="border-l border-gray-200 pl-4">
                               <TrustpilotRating
                                 rating={provider.trustpilotRating}
@@ -1025,12 +1022,10 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                                 starSize={15}
                               />
                             </div>
-                          ) : (
+                          )}
+                          {ctx.vertical !== "hearing-aids" && (
                             <div className="border-l border-gray-200 pl-4">
-                              <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[12px] font-semibold text-emerald-700">
-                                <ShieldCheck className="h-3.5 w-3.5" strokeWidth={2} />
-                                Licensed US telehealth
-                              </span>
+                              <LicensedTelehealthBadge />
                             </div>
                           )}
                         </div>
