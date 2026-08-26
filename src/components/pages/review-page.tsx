@@ -21,6 +21,7 @@ import { ProductCarousel } from "@/components/product-carousel";
 import { notFound } from "next/navigation";
 import { REDDIT_COMMUNITY_FEEDBACK as REVIEW_COMMUNITY_FEEDBACK, RedditMark } from "@/components/reddit-community";
 import { YoutubeReviewSection } from "@/components/youtube-review";
+import { ReadableProse } from "@/components/prose";
 
 // Per-provider SEO overrides for reviews with distinctive search demand.
 // Code-controlled (not CMS-merged) so they reliably target trending queries -
@@ -619,7 +620,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         {review.finalVerdict && (
           <div className="mb-8 rounded-2xl border border-[#0C4B75]/20 bg-white p-5 shadow-sm sm:p-6">
             <p className="mb-2 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">The bottom line</p>
-            <p className="text-[15px] leading-[1.8] text-gray-700">{review.finalVerdict}</p>
+            <ReadableProse text={review.finalVerdict} paragraphClassName="text-[15px] leading-[1.8] text-gray-700" />
           </div>
         )}
 
@@ -640,9 +641,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
         {/* Intro */}
         <div className="mb-8">
-          <p className="text-[16px] leading-[1.8] text-gray-600">
-            {review.reviewIntro}
-          </p>
+          <ReadableProse text={review.reviewIntro} paragraphClassName="text-[16px] leading-[1.8] text-gray-600" />
           {config.experts && config.experts.length > 0 && (
             <div className="mt-5">
               <ExpertByline
@@ -760,9 +759,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               ))}
             </div>
           )}
-          <p className="text-[15px] leading-[1.75] text-gray-600">
-            {review.pricingSummary}
-          </p>
+          <ReadableProse text={review.pricingSummary} paragraphClassName="text-[15px] leading-[1.75] text-gray-600" />
         </Section>
 
         {/* How it works */}
@@ -988,9 +985,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <h3 className="text-[18px] font-bold text-[#191919]">Final Verdict</h3>
           </div>
           <div className="p-6">
-            <p className="text-[15px] leading-[1.75] text-gray-600">
-              {review.finalVerdict}
-            </p>
+            <ReadableProse text={review.finalVerdict} paragraphClassName="text-[15px] leading-[1.75] text-gray-600" />
             <ProviderCta
               href={provider.affiliateUrl}
               providerName={provider.name}

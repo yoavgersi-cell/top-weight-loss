@@ -3,6 +3,7 @@ import { Fragment } from "react";
 import Link from "next/link";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED, latestUpdate } from "@/lib/config";
+import { splitSentences, BoldKeyFacts } from "@/components/prose";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { ComparisonLayout } from "@/components/comparison-layout";
 import { EditorialContent } from "@/components/editorial-content";
@@ -297,37 +298,11 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
   };
 }
 
-// Splits long editorial copy for the CRO prototype's read-more treatment: the
-// first `n` sentences stay visible, the remainder renders inside a native
-// <details> element - so ALL content is in the initial HTML/DOM for search
-// engines, and the toggle is purely visual (no JS, no fetch).
-function splitSentences(text: string, n: number): [string, string] {
-  const parts = text.match(/[^.!?]+[.!?]+(?:\s+|$)/g);
-  if (!parts || parts.length <= n) return [text, ""];
-  return [parts.slice(0, n).join("").trim(), parts.slice(n).join("").trim()];
-}
-
-// Bolds the decision-critical facts inside verdict bullets - prices, regular
-// rates, percentages, day counts - so a scanning reader catches the numbers
-// first. Pure presentation over the battle's own copy.
-function BoldKeyFacts({ text }: { text: string }) {
-  const re = /(\$[\d,]+(?:\.\d+)?(?:\/(?:mo|month|yr|year))?|\d+(?:\.\d+)?%|\b\d+(?:-\d+)?\s?(?:days?|tablets?)\b|\b\d{1,3}(?:,\d{3})+\b)/gi;
-  const parts = text.split(re);
-  return (
-    <>
-      {parts.map((p, i) =>
-        i % 2 === 1 ? (
-          <strong key={i} className="font-bold text-[#191919]">
-            {p}
-          </strong>
-        ) : (
-          p
-        )
-      )}
-    </>
-  );
-}
-
+/// Read-more treatment for long editorial copy: the first `n` sentences stay
+// visible, the remainder renders inside a native <details> element - so ALL
+// content is in the initial HTML/DOM for search engines, and the toggle is
+// purely visual (no JS, no fetch). Sentence splitting and key-fact bolding
+// come from the shared prose module.
 function ReadMoreProse({ text, label, visibleSentences = 2 }: { text: string; label: string; visibleSentences?: number }) {
   const [visible, rest] = splitSentences(text, visibleSentences);
   if (!rest) {
