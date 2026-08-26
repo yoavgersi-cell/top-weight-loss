@@ -128,7 +128,7 @@ export const articles: Article[] = [
       },
       {
         heading: "How Much Should a Telehealth Weight Loss Program Cost?",
-        body: 'Compounded semaglutide programs typically cost $199-$400/month, and tirzepatide programs $300-$500/month. The best providers include medication, physician consultations, dose adjustments, and home delivery in one monthly fee. Be wary of providers that quote a low base price but add separate charges for consultations, shipping, or supplies. For a full pricing breakdown, see our <a href="/articles/semaglutide-cost-per-month">semaglutide cost guide</a> and <a href="/articles/weight-loss-medication-cost-guide">complete pricing comparison</a>.',
+        body: 'Compounded semaglutide programs run a verified $59-$199/month, and tirzepatide programs $99-$299/month. The best providers include medication, physician consultations, dose adjustments, and home delivery in one monthly fee. Be wary of providers that quote a low base price but add separate charges for consultations, shipping, or supplies. For a full pricing breakdown, see our <a href="/articles/semaglutide-cost-per-month">semaglutide cost guide</a> and <a href="/articles/weight-loss-medication-cost-guide">complete pricing comparison</a>.',
       },
       {
         heading: "Questions to Ask Before Signing Up",
@@ -395,7 +395,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Tirzepatide (Mounjaro/Zepbound) Pricing",
-        body: 'Brand-name Mounjaro costs approximately $1,000-$1,100/month. Zepbound (the weight-loss version) is similarly priced. Compounded tirzepatide through telehealth providers typically runs $300-$500/month. While more expensive than compounded semaglutide, tirzepatide produces greater average weight loss - so the cost-per-pound-lost may actually be comparable. Compare providers on our <a href="/tirzepatide">tirzepatide comparison page</a>.',
+        body: 'Brand-name Mounjaro costs approximately $1,000-$1,100/month. Zepbound (the weight-loss version) is similarly priced. Compounded tirzepatide through telehealth providers runs a verified $99-$299/month. While more expensive than compounded semaglutide, tirzepatide produces greater average weight loss - so the cost-per-pound-lost may actually be comparable. Compare providers on our <a href="/tirzepatide">tirzepatide comparison page</a>.',
       },
       {
         heading: "HSA, FSA, and Tax Savings",
@@ -677,7 +677,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What About Compounded Tirzepatide?",
-        body: 'Compounded tirzepatide follows the same principles - same active ingredient as Mounjaro/Zepbound, produced by licensed compounding pharmacies, at lower cost ($300-$500/month vs $1,000+). It\'s increasingly available through telehealth providers. See our <a href="/articles/mounjaro-vs-ozempic">Mounjaro vs Ozempic comparison</a> and <a href="/tirzepatide">tirzepatide provider list</a>.',
+        body: 'Compounded tirzepatide follows the same principles - same active ingredient as Mounjaro/Zepbound, produced by licensed compounding pharmacies, at lower cost ($99-$299/month verified vs $1,000+). It\'s increasingly available through telehealth providers. See our <a href="/articles/mounjaro-vs-ozempic">Mounjaro vs Ozempic comparison</a> and <a href="/tirzepatide">tirzepatide provider list</a>.',
       },
     ],
   },
@@ -761,7 +761,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Compounded Medications: The Most Popular Option",
-        body: 'The most common path to affordable GLP-1 treatment without insurance is through compounded medications offered by telehealth providers. Compounded semaglutide starts at $199-$300/month and compounded tirzepatide at $300-$500/month - all-inclusive with consultations and delivery. These use the same active ingredients as brand-name drugs, produced by licensed compounding pharmacies. See our <a href="/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> for details.',
+        body: 'The most common path to affordable GLP-1 treatment without insurance is through compounded medications offered by telehealth providers. Compounded semaglutide starts at a verified $59/month and compounded tirzepatide at $99/month - all-inclusive with consultations and delivery. These use the same active ingredients as brand-name drugs, produced by licensed compounding pharmacies. See our <a href="/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> for details.',
       },
       {
         heading: "Telehealth Providers With All-Inclusive Pricing",
@@ -967,7 +967,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Compounded Semaglutide Costs",
-        body: 'Compounded semaglutide through telehealth providers typically costs $199-$400/month, including physician consultations and home delivery. This uses the same active ingredient as Ozempic/Wegovy but is produced by licensed compounding pharmacies. Read our <a href="/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name comparison</a> for more details.',
+        body: 'Compounded semaglutide through telehealth providers costs a verified $59-$199/month, including physician consultations and home delivery. This uses the same active ingredient as Ozempic/Wegovy but is produced by licensed compounding pharmacies. Read our <a href="/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name comparison</a> for more details.',
       },
       {
         heading: "What's Included in the Monthly Price",
@@ -983,11 +983,11 @@ export const articles: Article[] = [
       },
       {
         heading: "Semaglutide vs Tirzepatide: Cost Comparison",
-        body: 'Compounded semaglutide ($199-$400/month) is generally cheaper than compounded tirzepatide ($300-$500/month). However, tirzepatide produces greater average weight loss (22% vs 15%), so the cost-per-result may be comparable. See our <a href="/articles/tirzepatide-vs-semaglutide">full comparison</a> and <a href="/articles/mounjaro-vs-ozempic">Mounjaro vs Ozempic guide</a>.',
+        body: 'Compounded semaglutide ($59-$199/month verified) is generally cheaper than compounded tirzepatide ($99-$299/month). However, tirzepatide produces greater average weight loss (up to 22.5% vs ~15% in trials), so the cost-per-result may be comparable. See our <a href="/articles/tirzepatide-vs-semaglutide">full comparison</a> and <a href="/articles/mounjaro-vs-ozempic">Mounjaro vs Ozempic guide</a>.',
       },
       {
         heading: "Where to Find the Cheapest Semaglutide",
-        body: '<a href="/cheapest-glp1">Compare the most affordable providers</a> on our platform. Several offer compounded semaglutide starting at $199/month with everything included. <a href="/weight-loss/find-your-match">Take our quiz</a> to find a provider that fits both your goals and budget.',
+        body: '<a href="/cheapest-glp1">Compare the most affordable providers</a> on our platform. Several offer compounded semaglutide starting at a verified $59/month with everything included. <a href="/weight-loss/find-your-match">Take our quiz</a> to find a provider that fits both your goals and budget.',
       },
     ],
   },
@@ -1063,7 +1063,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Cost Comparison",
-        body: 'Brand-name costs: Wegovy $1,300+/month, Zepbound $1,000+/month, Saxenda $1,300+/month. Compounded versions are significantly cheaper - semaglutide from ~$199/month and tirzepatide from ~$349/month. See our <a href="/articles/semaglutide-cost-per-month">semaglutide cost breakdown</a> and <a href="/articles/weight-loss-medication-cost-guide">full cost guide</a>.',
+        body: 'Brand-name costs: Wegovy $1,300+/month, Zepbound $1,000+/month, Saxenda $1,300+/month. Compounded versions are significantly cheaper - semaglutide from a verified $59/month and tirzepatide from $99/month. See our <a href="/articles/semaglutide-cost-per-month">semaglutide cost breakdown</a> and <a href="/articles/weight-loss-medication-cost-guide">full cost guide</a>.',
       },
       {
         heading: "Which Should You Choose?",
@@ -1311,7 +1311,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Compounded Semaglutide - Same Ingredient, Lower Cost",
-        body: 'The most popular Ozempic alternative is <a href="/articles/compounded-semaglutide-vs-brand-name">compounded semaglutide</a> - the exact same active ingredient made by licensed compounding pharmacies at $199-$400/month instead of $900+. Available through telehealth providers like <a href="/reviews/altrx">ALT RX</a>, <a href="/reviews/trimrx">TrimRX</a>, and others. This is what most people actually use when they say they\'re "on Ozempic" through telehealth.',
+        body: 'The most popular Ozempic alternative is <a href="/articles/compounded-semaglutide-vs-brand-name">compounded semaglutide</a> - the exact same active ingredient made by licensed compounding pharmacies at a verified $59-$199/month instead of $1,149+. Available through telehealth providers like <a href="/reviews/altrx">ALT RX</a>, <a href="/reviews/trimrx">TrimRX</a>, and others. This is what most people actually use when they say they\'re "on Ozempic" through telehealth.',
       },
       {
         heading: "Wegovy - The FDA-Approved Weight Loss Version",
@@ -1319,7 +1319,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Mounjaro/Zepbound (Tirzepatide) - The Stronger Alternative",
-        body: 'If you want something more effective than Ozempic, <a href="/articles/mounjaro-vs-ozempic">tirzepatide</a> (Mounjaro for diabetes, Zepbound for weight loss) targets two receptors instead of one and produces up to 22% weight loss vs Ozempic\'s 15%. Compounded tirzepatide is available through telehealth providers at $300-$500/month. See our <a href="/tirzepatide">tirzepatide providers page</a>.',
+        body: 'If you want something more effective than Ozempic, <a href="/articles/mounjaro-vs-ozempic">tirzepatide</a> (Mounjaro for diabetes, Zepbound for weight loss) targets two receptors instead of one and produced up to 22.5% weight loss in trials vs ~15% for semaglutide. Compounded tirzepatide is available through telehealth providers from a verified $99/month. See our <a href="/tirzepatide">tirzepatide providers page</a>.',
       },
       {
         heading: "Top Telehealth Providers for Ozempic Alternatives",
@@ -1327,7 +1327,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Comparing Costs: Ozempic vs Alternatives",
-        body: 'Brand-name Ozempic: $900-$1,000/month. Brand-name Wegovy: $1,300-$1,400/month. Compounded semaglutide: $199-$400/month. Compounded tirzepatide: $300-$500/month. For most patients paying out of pocket, compounded options offer the best value with the same active ingredients. See our <a href="/articles/semaglutide-cost-per-month">semaglutide cost guide</a> and <a href="/cheapest-glp1">cheapest providers page</a>.',
+        body: 'At verified published prices, brand-name Ozempic runs $1,149/month and Wegovy $1,579 at altRx (Sprout lists Wegovy at $1,799). Compounded semaglutide: a verified $59-$199/month. Compounded tirzepatide: $99-$299/month. For most patients paying out of pocket, compounded options offer the best value with the same active ingredients. See our <a href="/articles/semaglutide-cost-per-month">semaglutide cost guide</a> and <a href="/cheapest-glp1">cheapest providers page</a>.',
       },
       {
         heading: "How to Switch from Ozempic to an Alternative",
@@ -1353,11 +1353,11 @@ export const articles: Article[] = [
       },
       {
         heading: "Compounded Semaglutide - The #1 Alternative",
-        body: 'The most direct Wegovy alternative is <a href="/articles/compounded-semaglutide-vs-brand-name">compounded semaglutide</a> - same active ingredient, same mechanism, $199-$400/month through telehealth providers. Available from providers like <a href="/reviews/altrx">ALT RX</a>, <a href="/reviews/trimrx">TrimRX</a>, and others. See our <a href="/semaglutide">semaglutide providers comparison</a>.',
+        body: 'The most direct Wegovy alternative is <a href="/articles/compounded-semaglutide-vs-brand-name">compounded semaglutide</a> - same active ingredient, same mechanism, a verified $59-$199/month through telehealth providers. Available from providers like <a href="/reviews/altrx">ALT RX</a>, <a href="/reviews/trimrx">TrimRX</a>, and others. See our <a href="/semaglutide">semaglutide providers comparison</a>.',
       },
       {
         heading: "Zepbound (Tirzepatide) - Even More Effective",
-        body: 'If you want something potentially more effective than Wegovy, <a href="/articles/zepbound-vs-wegovy">Zepbound</a> (tirzepatide) has shown up to 22.5% weight loss vs Wegovy\'s 15% in clinical trials. Compounded tirzepatide is available at $300-$500/month. See our <a href="/tirzepatide">tirzepatide providers page</a>.',
+        body: 'If you want something potentially more effective than Wegovy, <a href="/articles/zepbound-vs-wegovy">Zepbound</a> (tirzepatide) has shown up to 22.5% weight loss vs Wegovy\'s ~15% in clinical trials. Compounded tirzepatide is available from a verified $99/month. See our <a href="/tirzepatide">tirzepatide providers page</a>.',
       },
       {
         heading: "Ozempic - The Off-Label Option",
