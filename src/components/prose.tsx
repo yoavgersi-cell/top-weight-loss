@@ -8,7 +8,7 @@
 // period inside a number is never followed by a space.
 const SENTENCE_BOUNDARY = /(?<=[.!?]["')\]]*)\s+(?=[A-Z0-9$("'])/;
 
-function toSentences(text: string): string[] {
+export function toSentences(text: string): string[] {
   return text
     .split(SENTENCE_BOUNDARY)
     .map((s) => s.trim())
@@ -27,12 +27,14 @@ export function splitSentences(text: string, n: number): [string, string] {
 // day/hour counts, review-count style numbers and short decimals (ratings,
 // doses) - so a scanning reader catches the numbers first. One capture group
 // only: the split below relies on alternating plain/matched parts.
+// Longer unit spellings first (month before mo) so "$69/month" bolds whole,
+// never as "$69/mo" + a stranded "nth". Single source for both the JSX and
+// the HTML-string bolding paths.
+const FACT_RE =
+  /(\$[\d,]+(?:\.\d+)?(?:\/(?:month|mo|year|yr))?|\d+(?:\.\d+)?%|\b\d+(?:-\d+)?\s?(?:days?|hours?|weeks?|months?|tablets?)\b|\b\d{1,3}(?:,\d{3})+\b|\b\d{1,2}\.\d\b)/gi;
+
 export function BoldKeyFacts({ text }: { text: string }) {
-  // Longer unit spellings first (month before mo) so "$69/month" bolds whole,
-  // never as "$69/mo" + a stranded "nth".
-  const re =
-    /(\$[\d,]+(?:\.\d+)?(?:\/(?:month|mo|year|yr))?|\d+(?:\.\d+)?%|\b\d+(?:-\d+)?\s?(?:days?|hours?|weeks?|months?|tablets?)\b|\b\d{1,3}(?:,\d{3})+\b|\b\d{1,2}\.\d\b)/gi;
-  const parts = text.split(re);
+  const parts = text.split(FACT_RE);
   return (
     <>
       {parts.map((p, i) =>
@@ -75,4 +77,48 @@ export function ReadableProse({
       ))}
     </div>
   );
+}
+
+// ── Article-body HTML enhancement ────────────────────────────────────────────
+// Article sections are author-written HTML strings. Two readability passes,
+// both pure string transforms that never change the words:
+// 1. A body with no block-level markup (one flowing text wall, inline links
+//    allowed) is split into two-sentence <p> paragraphs - .article-body CSS
+//    already spaces sibling paragraphs.
+// 2. Key facts in text nodes get <strong> tags. Text inside existing <a>,
+//    <strong>/<b> or headings is left alone so links and author emphasis
+//    never get nested markup.
+
+function maybeSplitPlainBody(html: string): string {
+  if (/<(p|ul|ol|table|h[1-6]|div|blockquote)\b/i.test(html)) return html;
+  const sentences = toSentences(html);
+  if (sentences.length <= 3) return html;
+  const chunks: string[] = [];
+  for (let i = 0; i < sentences.length; i += 2) {
+    chunks.push(sentences.slice(i, i + 2).join(" "));
+  }
+  // Bail out entirely if a split point landed inside an inline link - a rare
+  // sentence boundary inside anchor text would produce broken markup.
+  for (const c of chunks) {
+    if ((c.match(/<a\b/gi)?.length ?? 0) !== (c.match(/<\/a>/gi)?.length ?? 0)) return html;
+  }
+  return chunks.map((c) => `<p>${c}</p>`).join("");
+}
+
+export function enhanceArticleHtml(html: string): string {
+  const parts = maybeSplitPlainBody(html).split(/(<[^>]+>)/g);
+  const SKIP_OPEN = /^<(a|strong|b|h[1-6])\b/i;
+  const SKIP_CLOSE = /^<\/(a|strong|b|h[1-6])>/i;
+  let skipDepth = 0;
+  return parts
+    .map((part) => {
+      if (part.startsWith("<")) {
+        if (SKIP_OPEN.test(part)) skipDepth++;
+        else if (SKIP_CLOSE.test(part)) skipDepth = Math.max(0, skipDepth - 1);
+        return part;
+      }
+      if (skipDepth > 0 || !part.trim()) return part;
+      return part.replace(FACT_RE, "<strong>$1</strong>");
+    })
+    .join("");
 }

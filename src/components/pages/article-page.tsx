@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Clock, ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { NOINDEX_ARTICLE_SLUGS, latestUpdate } from "@/lib/config";
+import { enhanceArticleHtml } from "@/components/prose";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ExpertByline } from "@/components/expert-byline";
@@ -415,7 +416,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                       lists, tables, callouts - styled via .article-body css */}
                   <div
                     className="article-body text-[16px] leading-[1.75] text-gray-600 [&_a]:text-[#0C4B75] [&_a]:font-medium [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-[#093d61]"
-                    dangerouslySetInnerHTML={{ __html: section.body }}
+                    dangerouslySetInnerHTML={{ __html: enhanceArticleHtml(section.body) }}
                   />
                 </section>
 

@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import Link from "next/link";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED, latestUpdate } from "@/lib/config";
-import { splitSentences, BoldKeyFacts } from "@/components/prose";
+import { splitSentences, BoldKeyFacts, ReadableProse } from "@/components/prose";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { ComparisonLayout } from "@/components/comparison-layout";
 import { EditorialContent } from "@/components/editorial-content";
@@ -306,17 +306,23 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
 function ReadMoreProse({ text, label, visibleSentences = 2 }: { text: string; label: string; visibleSentences?: number }) {
   const [visible, rest] = splitSentences(text, visibleSentences);
   if (!rest) {
-    return <p className="mb-6 max-w-[820px] text-[15px] leading-[1.85] text-gray-600">{text}</p>;
+    return (
+      <p className="mb-6 max-w-[820px] text-[15px] leading-[1.85] text-gray-600">
+        <BoldKeyFacts text={text} />
+      </p>
+    );
   }
   return (
     <div className="mb-6 max-w-[820px]">
-      <p className="text-[15px] leading-[1.85] text-gray-600">{visible}</p>
+      <p className="text-[15px] leading-[1.85] text-gray-600">
+        <BoldKeyFacts text={visible} />
+      </p>
       <details className="group mt-1.5">
         <summary className="inline-flex cursor-pointer list-none items-center gap-1 text-[14px] font-semibold text-[#0C4B75] hover:underline [&::-webkit-details-marker]:hidden">
           {label}
           <span className="text-[11px] transition-transform group-open:rotate-180">▾</span>
         </summary>
-        <p className="mt-2 text-[15px] leading-[1.85] text-gray-600">{rest}</p>
+        <ReadableProse text={rest} className="mt-2" paragraphClassName="text-[15px] leading-[1.85] text-gray-600" />
       </details>
     </div>
   );
@@ -635,9 +641,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
               Here&rsquo;s the short version
             </p>
-            <p className="text-[16px] leading-[1.85] text-gray-600">
-              {battle.intro}
-            </p>
+            <ReadableProse text={battle.intro} paragraphClassName="text-[16px] leading-[1.85] text-gray-600" />
           </div>
 
           {/* ───── EARLY QUICK ANSWER ─────
