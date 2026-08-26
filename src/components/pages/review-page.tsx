@@ -31,7 +31,7 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "embody GLP-1 reviews: compounded semaglutide & tirzepatide, shipped in 1-2 days with no insurance and LegitScript certification. Real customer reviews, pricing, pros & cons - and is embody worth it?",
   },
   medvi: {
-    title: "Medvi Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
+    title: "Medvi GLP-1 Reviews 2026: Is It Legit? Cost & Verdict",
     description:
       "Medvi weight loss reviews: all-inclusive GLP-1 care now from $99/month promotional (reg. $199) and the personal provider support customers rave about on Trustpilot. Is Medvi legit and worth it? Real reviews, cost, pros & cons.",
   },

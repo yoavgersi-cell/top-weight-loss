@@ -1517,7 +1517,7 @@ export const articles: Article[] = [
   },
   {
     slug: "is-embody-legit",
-    title: "Is Embody Legit? An Honest Embody Weight Loss Review (2026)",
+    title: "Is Embody Legit? An Honest Review of Its GLP-1 Program (2026)",
     description:
       "Is Embody legit? A clear look at Embody's GLP-1 weight-loss program - its LegitScript certification, licensed pharmacies, pricing, how it works, and the pros and cons.",
     category: "Advice",
@@ -1551,7 +1551,7 @@ export const articles: Article[] = [
   },
   {
     slug: "embody-cost",
-    title: "Embody Cost: How Much Is Embody Weight Loss in 2026?",
+    title: "Embody Cost 2026: GLP-1 Plans From $69/Month, Explained",
     description:
       "Embody weight-loss pricing explained - compounded semaglutide from $69/month and tirzepatide from $119/month, what's included, and how it compares to other GLP-1 providers.",
     category: "Guide",
