@@ -288,6 +288,13 @@ export const TEMPLATES_LAST_UPDATED = "2026-08-25";
 export const latestUpdate = (updatedAt?: string) =>
   updatedAt && updatedAt > TEMPLATES_LAST_UPDATED ? updatedAt : TEMPLATES_LAST_UPDATED;
 
+// Human-readable month when the operator last verified provider-published
+// pricing, plans and policies against each provider's own site. Shown in the
+// "Sources & methodology" block ("Checked August 2026"). Bump this only when
+// the data behind the comparisons is actually re-verified - it is a claim, not
+// a render timestamp.
+export const PROVIDER_DATA_CHECKED = "August 2026";
+
 // ── Verticals ────────────────────────────────────────────────────────────────
 // The hub (treatmentshub.com) is split into fully-separated verticals. Each one
 // is an independent bundle: its own providers, reviews, comparisons, articles,

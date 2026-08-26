@@ -18,7 +18,8 @@ import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { TrustpilotRating } from "@/components/trustpilot-rating";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
-import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
+import { TrustDisclosure } from "@/components/medical-sources";
+import { SourcesMethodology } from "@/components/sources-methodology";
 import { ProductCarousel } from "@/components/product-carousel";
 import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/reddit-community";
 import { threeWayBySlug } from "@/lib/three-way";
@@ -1318,7 +1319,11 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             </Link>
           </div>
 
-          <MedicalSources vertical={ctx.vertical} />
+          <SourcesMethodology
+            ctx={ctx}
+            providers={[{ id: p1.id, name: p1.name }, { id: p2.id, name: p2.name }]}
+            headingLabel={`${p1.name} and ${p2.name}`}
+          />
         </div>
       </div>
 
