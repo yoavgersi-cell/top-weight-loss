@@ -74,6 +74,10 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
 // targets). Code-rendered, so they work for articles whose body lives in the
 // blob. Every figure is a real, listed price - no invented numbers.
 const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
+  "ozempic-vs-wegovy-differences":
+    "Ozempic and Wegovy contain the same active ingredient (semaglutide) but are not the same drug: Ozempic is FDA-approved for type 2 diabetes, Wegovy for chronic weight management at a higher maximum dose (2.4 mg vs 2 mg). For self-pay weight loss, compounded semaglutide runs a verified $59-$99/month versus $1,149+ for either brand.",
+  "zepbound-vs-wegovy":
+    "Both are FDA-approved for weight loss, but they are different drugs: Zepbound (tirzepatide) targets two hormone receptors and produced up to 22.5% average weight loss in trials versus ~15% for Wegovy (semaglutide). At verified prices, brand Zepbound runs $1,249/month at altRx (pens from $299 first month at ro); compounded routes start at $59-$99/month.",
   "mounjaro-vs-ozempic":
     "They are not the same drug: Mounjaro (tirzepatide) targets two hormone receptors and produced up to 22.5% average weight loss in trials, versus ~15% for Ozempic (semaglutide). Ozempic's compounded version is cheaper - verified from $59/month versus $99 for tirzepatide - and both require a prescription from a licensed provider.",
   "best-mounjaro-alternatives":
