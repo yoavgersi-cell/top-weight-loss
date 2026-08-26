@@ -34,7 +34,10 @@ export const YOUTUBE_REVIEWS: Record<string, YoutubeReviewEntry> = {
 // Click-to-load player: renders YouTube's own thumbnail with a play button,
 // and swaps in the real iframe only after a click. Keeps the review page free
 // of YouTube's iframe weight (Core Web Vitals) until the visitor opts in.
-// Uses the privacy-enhanced youtube-nocookie.com embed domain.
+// Deliberately uses the standard www.youtube.com embed domain: the
+// youtube-nocookie.com variant strips the session signals YouTube's bot check
+// relies on, and real visitors were hitting "Sign in to confirm you're not a
+// bot" instead of the video.
 function LiteYoutubePlayer({ videoId, title }: { videoId: string; title: string }) {
   const [playing, setPlaying] = useState(false);
   const [thumbFailed, setThumbFailed] = useState(false);
@@ -44,9 +47,10 @@ function LiteYoutubePlayer({ videoId, title }: { videoId: string; title: string 
       <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-black">
         <iframe
           className="absolute inset-0 h-full w-full"
-          src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`}
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
           title={title}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
         />
       </div>
