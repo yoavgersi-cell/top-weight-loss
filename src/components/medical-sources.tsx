@@ -10,7 +10,7 @@ export interface MedicalSource {
   href: string;
 }
 
-const SOURCES_BY_VERTICAL: Record<string, MedicalSource[]> = {
+export const SOURCES_BY_VERTICAL: Record<string, MedicalSource[]> = {
   "weight-loss": [
     {
       label: "Once-Weekly Semaglutide in Adults with Overweight or Obesity (STEP 1 trial)",
