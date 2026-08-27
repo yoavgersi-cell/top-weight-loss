@@ -37,6 +37,52 @@ const providers: Provider[] = [
     ],
     affiliateUrl: "#",
     ctaText: "Visit Site",
+    // Operator-verified from Midi Health's claimed Trustpilot profile
+    // (Aug 2026 screenshots): 4.1 average across 1,572 reviews.
+    trustpilotRating: "4.1",
+    trustpilotReviewCount: "1,572",
+    trustpilotReviews: [
+      {
+        title: "Scheduling a telehealth appointment was refreshingly simple",
+        text: "The process was straightforward and quick - I was able to book a visit without any hassle or long waits. The clinician I met with was wonderful. She was kind, compassionate, and really took the time to listen and understand what I needed. She clearly knew the issues women face in midlife and approached everything with empathy and practical solutions.",
+        name: "Gina",
+        location: "US",
+        rating: 5,
+        date: "Aug 24, 2026",
+      },
+      {
+        title: "I have had an exceptional experience",
+        text: "I would highly recommend their care to any woman navigating peri/menopause. My clinician is knowledgeable, compassionate, thoughtful, and truly takes the time to listen and understand. I felt heard and supported and she took the time to answer my questions and develop a personalized treatment. I never felt rushed or dismissed, which can unfortunately be difficult to find when seeking menopause care.",
+        name: "SD",
+        location: "US",
+        rating: 5,
+        date: "Aug 24, 2026",
+      },
+      {
+        title: "Highly recommend",
+        text: "My PA was professional and very thorough. She took time to listen and clearly explained options. She verified my medical history. She answered all my questions demonstrating knowledge and understanding.",
+        name: "Kristyn Shipley",
+        location: "US",
+        rating: 5,
+        date: "Aug 20, 2026",
+      },
+      {
+        title: "I felt heard and understood",
+        text: "I felt heard. My doctor understood my concerns. She was kind and patient and demonstrated real care - I had not felt this from any other outside, local clinician. My exams were ordered within minutes enabling me to have these done same day. Unheard of! Honestly. Best experience ever!",
+        name: "B. J.",
+        location: "US",
+        rating: 5,
+        date: "Aug 19, 2026",
+      },
+      {
+        title: "My provider is amazing and supportive",
+        text: "She listens to me and addresses my concerns. She tells me the truth and discusses the pros and cons. I appreciate her so much!",
+        name: "Elizabeth Batson",
+        location: "US",
+        rating: 5,
+        date: "Aug 19, 2026",
+      },
+    ],
   },
   {
     id: "gala",
@@ -131,7 +177,7 @@ const reviews: ReviewData[] = [
     shortSummary:
       "Virtual, insurance-friendly care for perimenopause and menopause with clinicians trained in midlife women's health.",
     reviewIntro:
-      "Midi Health is a virtual clinic built specifically around perimenopause and menopause. Its clinicians are trained in midlife women's health, visits happen online, and treatment plans can include both hormonal and non-hormonal options after a medical review. Its most distinctive trait in this ranking: Midi works with many major insurance plans, which most cash-pay telehealth HRT services don't. This review covers the model and who it fits.",
+      "Midi Health is a virtual clinic built specifically around perimenopause and menopause - \"Insurance-Covered Hormone Replacement Therapy\" is literally its headline. Care starts with an in-depth virtual visit where a clinician reviews your symptoms, health history and genetics before deciding whether HRT is appropriate; Midi itself notes HRT \"is not appropriate for all\", which is the right posture. Treatment paths span estradiol gels, creams, patches and pills, micronized progesterone, testosterone where clinically appropriate, and non-hormonal prescriptions when hormones aren't the answer. Midi says more than 230,000 women use its midlife care, and its claimed Trustpilot profile averages 4.1 across 1,572 reviews. This review covers the model and who it fits.",
     keyFeatures: [
       "Clinicians trained in midlife women's health",
       "Hormonal and non-hormonal treatment paths",
@@ -140,14 +186,17 @@ const reviews: ReviewData[] = [
     ],
     pricingSummary: PRICING_TBD,
     treatmentOptions: [
-      "Hormone therapy (provider-directed)",
-      "Non-hormonal prescription options",
-      "Lifestyle and symptom-management guidance",
+      "Estradiol gels, creams, patches and pills",
+      "Micronized progesterone capsules",
+      "Vaginal estrogen therapies (creams or rings)",
+      "Testosterone therapy where clinically appropriate",
+      "Non-hormonal prescriptions (e.g. SSRIs, neurokinin-3 antagonists) and lifestyle support",
     ],
     pros: [
       "Menopause-specialist care, not general telehealth",
       "Insurance accepted in many cases - rare in this space",
       "Both hormonal and non-hormonal paths after review",
+      "4.1 Trustpilot average across 1,572 reviews",
     ],
     cons: [
       "We haven't verified current out-of-pocket pricing",
@@ -158,7 +207,7 @@ const reviews: ReviewData[] = [
       "Anyone who wants to use insurance rather than pay cash",
     ],
     finalVerdict:
-      "Midi Health is the insurance-friendly specialist of this ranking: dedicated menopause clinicians and both hormonal and non-hormonal paths, with coverage through many major plans. Confirm your plan's participation and current costs on Midi's site - and if you'd rather have simple cash pricing, compare the direct-pay providers below.",
+      "Midi Health is the insurance-friendly specialist of this ranking: dedicated menopause clinicians, a genuinely broad treatment menu (from estradiol formats through testosterone to non-hormonal prescriptions), and coverage through many major plans - backed by a 4.1 Trustpilot average across 1,572 reviews whose recent entries consistently praise clinicians who listen and know midlife medicine. Confirm your plan's participation and current costs on Midi's site - and if you'd rather have simple cash pricing, compare the direct-pay providers below.",
     trustBadges: ["Menopause-trained clinicians", "Licensed US providers", "Insurance-friendly"],
     updatedAt: UPDATED,
   },
