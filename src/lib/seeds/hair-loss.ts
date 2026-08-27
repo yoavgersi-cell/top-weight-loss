@@ -1042,6 +1042,75 @@ const battles: BattleData[] = [
     ],
     updatedAt: "2026-08-24",
   },
+  // The two biggest mainstream brands in the niche - the highest-volume "vs"
+  // query in hair loss. Neither is monetized and neither publishes pricing we
+  // have verified, so the comparison is strictly qualitative ("See site" for
+  // prices) and steers readers toward the verified-price alternatives.
+  {
+    slug: "hims-vs-keeps",
+    provider1Id: "keeps",
+    provider2Id: "hims",
+    title: "Hims vs Keeps (2026): Which Hair Loss Service Is Better?",
+    matchupLabel: "Hims vs Keeps",
+    subtitle: "The two best-known names in online hair loss, compared honestly",
+    description:
+      "Hims vs Keeps for hair loss: how the two most recognizable telehealth brands compare on focus, treatment range and experience - and the verified-price alternatives worth checking first.",
+    intro:
+      "Hims and Keeps are the two names most men run into first when they look for hair loss treatment online. They share the same backbone - an online visit, a licensed provider review, and the standard prescriptions (finasteride and minoxidil) shipped to your door. The real difference is focus: Keeps does hair and only hair, while Hims is a broad men's health platform where hair is one product line among many. Neither publishes pricing we have verified on our pages, so this comparison sticks to what's structural - and points you to the providers whose prices we have checked.",
+    verdict:
+      "Keeps is our pick between the two for a hair-only decision: the whole service is built around hair loss, which keeps the experience simple and focused. Hims makes sense if you want one familiar brand for several men's health needs beyond hair. Both prescribe through licensed providers and pharmacies - and both sell the same core medicines, so the deciding factors are focus, experience and price. On price we only compare what we've verified: Maximus publishes treatments from $24.99/month and Happy Head from $49 for the first order - see the comparisons below before you decide. Confirm current pricing on each provider's site.",
+    verdictWinnerPoints: [
+      "Built entirely around hair loss - focused, simple experience",
+      "Core prescriptions covered: finasteride and minoxidil",
+      "Licensed-provider review before any prescription",
+    ],
+    verdictLoserPoints: [
+      "One familiar brand across many men's health needs",
+      "Wider product range beyond hair loss",
+      "Recognizable mainstream experience",
+    ],
+    winnerId: "keeps",
+    categories: [
+      {
+        name: "Focus",
+        winner: "provider1",
+        explanation:
+          "Keeps is a hair-loss company end to end - the product line, the visit flow and the follow-up all center on hair. Hims covers hair as one category within a much broader men's health platform.",
+        supportingPoints: [
+          "Hair-only product line (Keeps)",
+          "Hair as one of many categories (Hims)",
+        ],
+      },
+      {
+        name: "Treatment range",
+        winner: "provider2",
+        explanation:
+          "Both cover the standard prescriptions - finasteride and minoxidil. Hims' broader platform gives it more adjacent products around them; neither matches the wider prescription toolkits (oral dutasteride, compounded topicals) at Maximus or Happy Head.",
+        supportingPoints: [
+          "Standard finasteride + minoxidil at both",
+          "Broader adjacent range (Hims)",
+        ],
+      },
+      {
+        name: "Medical oversight",
+        winner: "tie",
+        explanation:
+          "Both prescribe only after a licensed-provider review and dispense through licensed pharmacies - the legitimate telehealth backbone.",
+        supportingPoints: [
+          "Provider review at both",
+          "Licensed US pharmacies",
+        ],
+      },
+    ],
+    features: [
+      { feature: "Focus", provider1Value: "Hair loss only", provider2Value: "Broad men's health", highlight: "provider1" },
+      { feature: "Oral finasteride", provider1Value: "Available", provider2Value: "Available", highlight: "both" },
+      { feature: "Minoxidil", provider1Value: "Available", provider2Value: "Available", highlight: "both" },
+      { feature: "Dutasteride option", provider1Value: "See site", provider2Value: "See site" },
+      { feature: "Pricing", provider1Value: "See site", provider2Value: "See site" },
+    ],
+    updatedAt: "2026-08-28",
+  },
 ];
 
 const faqs: FaqItem[] = [
@@ -1081,6 +1150,87 @@ const faqs: FaqItem[] = [
 // no fabricated statistics or provider-specific numbers - with internal links to
 // the provider reviews, the comparison, and between articles.
 const articles: ArticleData[] = [
+  // ───── Switch-intent articles (alternatives to the mainstream brands) ─────
+  // Target the "hims alternatives" / "keeps alternatives" query cluster: people
+  // already shopping to leave the big brands. Hims/Keeps are described only
+  // qualitatively (no verified pricing for them); every number belongs to our
+  // verified providers.
+  {
+    slug: "hims-alternatives",
+    title: "Best Hims Alternatives for Hair Loss in 2026 (Verified Prices)",
+    description:
+      "The best Hims alternatives for hair loss in 2026: Maximus from $24.99/month with oral dutasteride options, Happy Head's custom formulas from $49, and PeterMD's simple finasteride pricing - every price verified.",
+    category: "Advice",
+    readTime: "6 min read",
+    publishedAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+    heroColor: "#EEF4FB",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "Why look for a Hims alternative for hair loss?",
+        body: `Hims is a legitimate, well-known men's health platform - but hair loss is one product line among many there, and its lineup centers on the two standard prescriptions (finasteride and minoxidil). The usual reasons men shop for an alternative: wanting a wider prescription toolkit (oral dutasteride, stronger compounded topicals), wanting a formula personalized to their case, or simply wanting clearly published pricing they can compare before signing up. All three exist in this market - at providers whose prices we have verified against their own sites.`,
+      },
+      {
+        heading: "What is the best alternative to Hims for hair loss?",
+        body: `<a href="/hair-loss/reviews/maximus">Maximus</a> is our top-ranked alternative: a men's health clinic whose hair program goes well beyond the standard pair - oral finasteride ($34.99), oral minoxidil ($24.99), oral dutasteride ($34.99), and compounded gels up to an All-in-One combining four actives ($64.99), all covering a 90-day supply, prescribed after a board-certified doctor's review. It holds a 4.4 Trustpilot average across 1,050 reviews. The direct matchup is in <a href="/hair-loss/hims-vs-maximus">Hims vs Maximus</a>.`,
+      },
+      {
+        heading: "What if you want a personalized formula?",
+        body: `<a href="/hair-loss/reviews/happyhead">Happy Head</a> compounds treatment to your case after a dermatologist-directed review - its Custom Topical runs up to 8% minoxidil with dutasteride 0.3%, and the SuperCapsule pairs dutasteride with oral minoxidil. First order is $49 (regularly $89/month), there's a 6-month satisfaction guarantee per its published terms, it serves women as well as men, and it averages 4.5 on Trustpilot across 1,803 reviews. See <a href="/hair-loss/hims-vs-happy-head">Hims vs Happy Head</a> for the head-to-head.`,
+      },
+      {
+        heading: "What's the simplest low-cost option?",
+        body: `<a href="/hair-loss/reviews/petermd">PeterMD</a> keeps it minimal: standard finasteride 1mg at $60 per 30 tablets (regularly $74), or $90 for 60 - about $45/month - plus Follicure RX, a 3-in-1 topical spray combining minoxidil, finasteride and ketoconazole at $70 per bottle. No personalization layer, just published prices and a licensed-provider review.`,
+      },
+      {
+        heading: "How do the Hims alternatives compare at a glance?",
+        body: `<table><tr><th>Provider</th><th>Published price</th><th>What stands out</th></tr><tr><td>Maximus</td><td>From $24.99/mo (90-day supply)</td><td>Widest toolkit: oral dutasteride + compounded gels</td></tr><tr><td>Happy Head</td><td>$49 first order (reg $89/mo)</td><td>Custom-compounded formulas; serves women too</td></tr><tr><td>PeterMD</td><td>Finasteride from $60/30 tablets</td><td>Simple pricing, ketoconazole 3-in-1 topical</td></tr></table>Prices as published in August 2026 and verified against each provider's site. Hims doesn't appear in the table because we haven't verified its pricing - we don't list numbers we haven't checked. The full ranking is on our <a href="/hair-loss">hair loss providers comparison</a>.`,
+      },
+      {
+        heading: "How do you switch hair loss providers safely?",
+        body: `The core medicines are the same regulated prescriptions wherever you buy them - what changes is the formula options, the support and the price. Complete the new provider's medical intake honestly (including what you're currently taking), let its licensed provider decide the appropriate treatment, and don't double up on DHT blockers from two services at once. Treatment continuity matters: gaps generally cost progress, so time the switch to your current supply. Start with our <a href="/hair-loss">hair loss ranking</a> or jump to the <a href="/hair-loss/maximus-vs-happy-head">Maximus vs Happy Head</a> head-to-head.`,
+      },
+    ],
+  },
+  {
+    slug: "keeps-alternatives",
+    title: "Best Keeps Alternatives for Hair Loss in 2026 (Verified Prices)",
+    description:
+      "The best Keeps alternatives in 2026: Maximus from $24.99/month with dutasteride and compounded gels, Happy Head's personalized formulas from $49, and PeterMD's flat finasteride pricing - every price verified.",
+    category: "Advice",
+    readTime: "6 min read",
+    publishedAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+    heroColor: "#F0FAF5",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "Why look for a Keeps alternative?",
+        body: `Keeps does one thing - men's hair loss - and its focused, simple experience is exactly why many men start there. It's also why some outgrow it: the lineup centers on the two standard prescriptions (finasteride and minoxidil), so men who want oral dutasteride, stronger compounded topicals, or a formula personalized to their case end up looking at providers built around a wider toolkit. Here are the alternatives whose prices we have verified against their own published pages.`,
+      },
+      {
+        heading: "What is the best alternative to Keeps?",
+        body: `<a href="/hair-loss/reviews/maximus">Maximus</a> - the top-ranked provider in our comparison - covers everything Keeps does and the next tier up: oral finasteride ($34.99), oral minoxidil ($24.99), oral dutasteride ($34.99) and compounded gels up to a four-active All-in-One ($64.99), each price covering a 90-day supply, with a board-certified doctor reviewing every case. Trustpilot: 4.4 across 1,050 reviews. The direct matchup is in <a href="/hair-loss/keeps-vs-maximus">Keeps vs Maximus</a>.`,
+      },
+      {
+        heading: "What if you want treatment built for you?",
+        body: `<a href="/hair-loss/reviews/happyhead">Happy Head</a> is the personalization play: custom-compounded formulas (topicals up to 8% minoxidil with dutasteride 0.3%; a SuperCapsule pairing dutasteride with oral minoxidil) adjusted after a dermatologist-directed review. First order $49, regularly $89/month, with a 6-month satisfaction guarantee per its published terms - and it's one of the few services here that also treats women. Head-to-head: <a href="/hair-loss/keeps-vs-happy-head">Keeps vs Happy Head</a>.`,
+      },
+      {
+        heading: "What's the simplest switch?",
+        body: `If Keeps' appeal was simplicity, <a href="/hair-loss/reviews/petermd">PeterMD</a> keeps that spirit at published prices: standard finasteride 1mg from $60 per 30 tablets (about $45/month at the 60-count rate), plus the Follicure RX 3-in-1 topical (minoxidil + finasteride + ketoconazole) at $70. No subscription theater - pick a product, pass the licensed-provider review, done.`,
+      },
+      {
+        heading: "How do the Keeps alternatives compare at a glance?",
+        body: `<table><tr><th>Provider</th><th>Published price</th><th>What stands out</th></tr><tr><td>Maximus</td><td>From $24.99/mo (90-day supply)</td><td>Dutasteride + compounded gels beyond the standard pair</td></tr><tr><td>Happy Head</td><td>$49 first order (reg $89/mo)</td><td>Personalized formulas; treats women too</td></tr><tr><td>PeterMD</td><td>Finasteride from $60/30 tablets</td><td>Flat published pricing, 3-in-1 topical</td></tr></table>Prices as published in August 2026, verified against each provider's site. Keeps isn't in the table because we haven't verified its pricing - we only list numbers we've checked. Full picture on the <a href="/hair-loss">hair loss providers ranking</a>.`,
+      },
+      {
+        heading: "How do you switch from Keeps without losing progress?",
+        body: `The active ingredients are identical prescriptions across providers, so switching is mostly about continuity: time the new order to your remaining supply, disclose current treatment in the new provider's intake, and let its licensed clinician set the plan - never stack DHT blockers from two services. If you're weighing the jump, start from <a href="/hair-loss/hims-vs-keeps">Hims vs Keeps</a> to see how the mainstream pair compare, then check <a href="/hair-loss/keeps-vs-maximus">Keeps vs Maximus</a> for the upgrade path.`,
+      },
+    ],
+  },
   // ───── Brand-cluster articles (is-X-legit / X-cost / X-alternatives) ─────
   // Every price, rating and quote below is operator-verified (Aug 2026
   // screenshots). Review pages auto-link these via the cluster-slug pattern,
