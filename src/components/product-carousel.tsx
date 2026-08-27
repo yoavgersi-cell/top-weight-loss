@@ -147,8 +147,22 @@ export function ProductCarousel({
       ? {
           "@context": "https://schema.org",
           "@type": "ItemList",
-          itemListElement: items.map((p, i) => {
+          // Merchant listings require a product image, so imageless catalog
+          // entries (logo-tile fallback cards) are excluded from the schema
+          // entirely - emitting them only produces GSC "missing image"
+          // criticals. They rejoin automatically once a real shot is added.
+          itemListElement: items.filter((p) => p.image).map((p, i) => {
             const provider = byId.get(p.providerId)!;
+            // Transit time comes only from the catalog's own verified shipping
+            // copy ("Free 1-2 day shipping", "Free overnight shipping") - no
+            // day counts are ever assumed for plain "Free shipping".
+            const dayMatch = p.shipping.match(/(\d+)(?:-(\d+))?\s*day/i);
+            const overnight = /overnight/i.test(p.shipping);
+            const transit = overnight
+              ? { min: 1, max: 1 }
+              : dayMatch
+                ? { min: parseInt(dayMatch[1], 10), max: parseInt(dayMatch[2] ?? dayMatch[1], 10) }
+                : null;
             // GSC-requested enrichment, verified data only: description from
             // the catalog's own honest fields; aggregateRating + one review
             // only when the provider has a verified Trustpilot record; free-
@@ -199,6 +213,17 @@ export function ProductCarousel({
                       "@type": "OfferShippingDetails",
                       shippingRate: { "@type": "MonetaryAmount", value: 0, currency: "USD" },
                       shippingDestination: { "@type": "DefinedRegion", addressCountry: "US" },
+                      ...(transit && {
+                        deliveryTime: {
+                          "@type": "ShippingDeliveryTime",
+                          transitTime: {
+                            "@type": "QuantitativeValue",
+                            minValue: transit.min,
+                            maxValue: transit.max,
+                            unitCode: "DAY",
+                          },
+                        },
+                      }),
                     },
                   }),
                 },
