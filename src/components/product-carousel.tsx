@@ -167,8 +167,11 @@ export function ProductCarousel({
             // the catalog's own honest fields; aggregateRating + one review
             // only when the provider has a verified Trustpilot record; free-
             // shipping details only when the catalog says shipping is free.
-            // hasMerchantReturnPolicy stays absent - we haven't verified
-            // return policies and won't invent one.
+            // Return policy: dispensed prescription medication cannot be
+            // returned (US pharmacy practice), so MerchantReturnNotPermitted
+            // is the accurate, conservative declaration for every product -
+            // refund guarantees some providers offer are a separate thing and
+            // are deliberately not represented here.
             const tpCount = provider.trustpilotReviewCount
               ? parseInt(provider.trustpilotReviewCount.replace(/,/g, ""), 10)
               : NaN;
@@ -208,6 +211,11 @@ export function ProductCarousel({
                   priceCurrency: "USD",
                   availability: "https://schema.org/InStock",
                   url: pageUrl,
+                  hasMerchantReturnPolicy: {
+                    "@type": "MerchantReturnPolicy",
+                    applicableCountry: "US",
+                    returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+                  },
                   ...(freeShipping && {
                     shippingDetails: {
                       "@type": "OfferShippingDetails",
