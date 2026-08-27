@@ -879,8 +879,11 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         )}
 
         {/* Community feedback - real Reddit threads, rendered Reddit-style.
-            Captured against weight-loss offers, so gated to that vertical. */}
-        {ctx.vertical === "weight-loss" && REVIEW_COMMUNITY_FEEDBACK[slug] && (
+            Each registry entry names the vertical its threads were captured
+            for (legacy entries without one are weight-loss research), so the
+            block renders only on the matching vertical. */}
+        {REVIEW_COMMUNITY_FEEDBACK[slug] &&
+          (REVIEW_COMMUNITY_FEEDBACK[slug].vertical ?? "weight-loss") === ctx.vertical && (
           <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-6 sm:p-7">
             <div className="mb-2 flex items-center gap-2.5">
               <RedditMark className="h-7 w-7 shrink-0" />

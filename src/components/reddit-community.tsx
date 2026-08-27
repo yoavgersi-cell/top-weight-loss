@@ -26,8 +26,51 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
   // `themes`: a 1-2 sentence human summary of what keeps coming up in this
   // provider's threads - rendered as the "What we found" synthesis on battle
   // pages. Write it from the displayed threads only, good and bad alike.
-  { intro: string; threads: RedditThread[]; takeaway: string; themes?: string }
+  // `vertical`: the vertical the threads were captured for; entries without
+  // one are the original weight-loss research. Render sites match it against
+  // the page's vertical so an id collision can never surface the wrong data.
+  { intro: string; threads: RedditThread[]; takeaway: string; themes?: string; vertical?: string }
 > = {
+  midi: {
+    vertical: "hrt",
+    themes:
+      "Both threads orbit the same two points: clinicians who actually know menopause medicine (the reason both writers left their regular doctors), and costs that landed soft either way - one writer's Anthem PPO covered everything beyond copays, the other paid out of pocket via Kaiser and still called it very reasonable.",
+    intro:
+      "Menopause forums are famously hard on providers - dismissive doctors are the default complaint. That's what makes these Midi threads stand out: specifics about clinicians, insurance and money.",
+    threads: [
+      {
+        author: "NorCalChica1",
+        age: "3y ago",
+        body: [
+          "MIDI has been a godsend! I'm 47, had a partial hysterectomy for a health issue at 34. My docs have been totally useless in being able to effectively address the symptoms I've had with fluctuating hormones even before I entered peri menopause.",
+          "I had done a lot of research and wanted HRT and the MIDI physicians were so knowledgeable about the pros/cons of different options. I have Anthem Blue Cross PPO and besides my usual copay, Anthem has covered everything (including my meds). I cannot recommend MIDI enough. I feel so much better and my body is functioning better than it has in decades.",
+        ],
+        upvotes: 10,
+        replies: [
+          {
+            author: "McNamara71",
+            body: "Wow! Thank you for this amazing review! I'm creating my account on midi's website now. I'm 16 weeks post-op from a total hysterectomy and none of the drs in my area will discuss HRT.",
+          },
+        ],
+      },
+      {
+        author: "[deleted]",
+        age: "3y ago",
+        body: [
+          "I have been using them since Dec 1 for bHRT. My clinician has been AMAZING. I have Kaiser, so I pay out of pocket, and it's still been very reasonable. I am so relieved to have found them.",
+        ],
+        upvotes: 7,
+        replies: [
+          {
+            author: "elle_dog",
+            body: "You should get labs done to baseline where you are. Midi can help tell you what you need.",
+          },
+        ],
+      },
+    ],
+    takeaway:
+      "Two different insurance realities, one verdict: with an Anthem PPO everything beyond copays was covered, and even paying out of pocket through Kaiser the writer called it very reasonable. The recurring thread is clinicians who actually engage with menopause medicine - both posts exist because local doctors wouldn't.",
+  },
   embody: {
     themes:
       "Communication and support come up again and again in the comments above - a nurse calling after the first dose, orders rushed after a quick complaint - and the prices users quote match the ones embody publishes. The one gripe that repeats: the wait between approval and the first shipment.",
