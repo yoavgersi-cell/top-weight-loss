@@ -1231,6 +1231,195 @@ const articles: ArticleData[] = [
       },
     ],
   },
+  // ───── Commercial long-tail guides (medication + how-to-get-online) ─────
+  // Target the medication-level query clusters (oral minoxidil, topical
+  // finasteride, dutasteride, combo, cost). Medical claims stay hedged and
+  // general; every price is operator-verified. Question headings feed the
+  // FAQPage schema.
+  {
+    slug: "oral-minoxidil-online",
+    title: "Oral Minoxidil for Hair Loss: How to Get It Online in 2026",
+    description:
+      "Oral minoxidil for hair loss explained: how low-dose minoxidil pills are prescribed online, how they differ from the topical, and verified pricing from $24.99/month at Maximus.",
+    category: "Guide",
+    readTime: "6 min read",
+    publishedAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+    heroColor: "#EEF4FB",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "What is oral minoxidil for hair loss?",
+        body: `Minoxidil started as a blood-pressure medication, and dermatologists have increasingly prescribed it off-label at much lower doses as a once-daily pill for hair loss. The appeal over the topical version is practical: no twice-daily application, no residue, no scalp irritation from the solution - you just take a tablet. Because it's a prescription used off-label, a licensed provider has to evaluate whether it's appropriate for you, including your blood-pressure history. For how the two formats compare in practice, see our <a href="/hair-loss/articles/oral-minoxidil-vs-topical-minoxidil">oral vs topical minoxidil breakdown</a>.`,
+      },
+      {
+        heading: "Can you get oral minoxidil prescribed online?",
+        body: `Yes - the standard telehealth route: an online medical intake, a licensed provider who reviews it (and declines when it isn't appropriate), and medication shipped if prescribed. <a href="/hair-loss/reviews/maximus">Maximus</a> is the verified option in our ranking: oral minoxidil at $24.99/month, shipped as a 90-day supply, with a board-certified doctor reviewing every case - and it can be combined with a DHT blocker in its oral combo ($59.99/month). Maximus holds a 4.4 Trustpilot average across 1,050 reviews.`,
+      },
+      {
+        heading: "How much does oral minoxidil cost?",
+        body: `At verified published prices: <a href="/hair-loss/reviews/maximus">Maximus</a> lists oral minoxidil at <strong>$24.99/month</strong> (90-day supply shipments) - the lowest published entry point in our ranking - and the finasteride + minoxidil oral combo at $59.99/month. <a href="/hair-loss/reviews/happyhead">Happy Head</a> takes the personalized route: its SuperCapsule pairs oral minoxidil with dutasteride in one custom capsule, at $49 for the first order (regularly $89/month). Prices as published in August 2026; confirm current pricing on each provider's site.`,
+      },
+      {
+        heading: "Is oral minoxidil safe?",
+        body: `That's a clinician's call, not a checkout page's. At hair-loss doses it's generally far lower than blood-pressure doses, but it still affects the whole body - which is why legitimate providers screen your health history first and why anyone selling minoxidil pills without a prescription review is a red flag. Common early effects reported with minoxidil generally include temporary shedding as hair cycles reset (see <a href="/hair-loss/articles/minoxidil-shedding-phase">why shedding happens</a>); discuss anything beyond that with your prescriber.`,
+      },
+      {
+        heading: "Oral minoxidil or the standard route - how do you choose?",
+        body: `If consistency is your weak point, a once-daily pill beats a twice-daily topical you'll skip. If you'd rather avoid systemic medication entirely, the topical remains the classic choice. Many treatment plans combine minoxidil with a DHT blocker (finasteride or dutasteride) - the mechanisms are different and complementary; see <a href="/hair-loss/articles/finasteride-and-minoxidil-together">can you take finasteride and minoxidil together</a>. Compare all verified providers on our <a href="/hair-loss">hair loss ranking</a>, or start with the <a href="/hair-loss/maximus-vs-happy-head">Maximus vs Happy Head</a> head-to-head.`,
+      },
+    ],
+  },
+  {
+    slug: "topical-finasteride",
+    title: "Topical Finasteride in 2026: What It Is & Who Sells It Online",
+    description:
+      "Topical finasteride explained: how the compounded scalp version differs from the pill, what's actually known, and the verified option online - PeterMD's Follicure RX 3-in-1 spray at $70.",
+    category: "Guide",
+    readTime: "5 min read",
+    publishedAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+    heroColor: "#F0FAF5",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "What is topical finasteride?",
+        body: `Topical finasteride is the same DHT-blocking active as the familiar pill, compounded into a solution or spray applied to the scalp. The idea behind it: deliver the medicine where the hair is and potentially limit how much circulates through the rest of the body. It's a compounded, prescription-only formulation - not a separate FDA-approved product - so quality depends on the pharmacy and the provider prescribing it. Background on the oral version is in <a href="/hair-loss/articles/does-finasteride-work">does finasteride work</a>.`,
+      },
+      {
+        heading: "Topical finasteride vs the pill: what's the difference?",
+        body: `The pill has decades of use and the deepest evidence base; the topical is the newer route, typically chosen by men who want a DHT blocker but prefer applying it locally - often after discussing side-effect concerns with a provider (see our <a href="/hair-loss/articles/finasteride-side-effects">finasteride side effects guide</a>). Effectiveness and side-effect trade-offs are individual, and this is exactly the conversation to have with the licensed provider who evaluates you - not a decision to make from marketing pages.`,
+      },
+      {
+        heading: "Who sells topical finasteride online?",
+        body: `The verified option in our ranking is <a href="/hair-loss/reviews/petermd">PeterMD's Follicure RX</a>: a 3-in-1 topical spray combining minoxidil, finasteride and ketoconazole at <strong>$70 per 50mL bottle</strong> (regularly $80; a two-pack runs $140), prescribed after a licensed-provider review. If you want a stronger compounded topical without finasteride specifically, <a href="/hair-loss/reviews/happyhead">Happy Head's Custom Topical</a> runs up to 8% minoxidil with dutasteride 0.3% at $49 for the first order (regularly $89/month). Prices as published in August 2026.`,
+      },
+      {
+        heading: "Is topical finasteride right for you?",
+        body: `Reasonable candidates: men who want a DHT blocker in their plan but prefer a scalp-applied route, and men already using a topical who'd rather combine actives in one application than add a pill. The wrong reason: expecting it to be a side-effect-free version of the pill - it's still finasteride, and a licensed provider should walk you through what's known. Compare the delivery formats in <a href="/hair-loss/articles/finasteride-vs-minoxidil">finasteride vs minoxidil</a>, or see every verified option on the <a href="/hair-loss">hair loss providers ranking</a>.`,
+      },
+    ],
+  },
+  {
+    slug: "how-to-get-finasteride-online",
+    title: "How to Get Finasteride Online in 2026 (Verified Prices)",
+    description:
+      "How to get finasteride prescribed online in 2026: the legitimate 3-step telehealth route and verified prices - $34.99/month at Maximus, $60 per 30 tablets at PeterMD.",
+    category: "Guide",
+    readTime: "5 min read",
+    publishedAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+    heroColor: "#FBF5EE",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "Can you get finasteride online without seeing a doctor?",
+        body: `Without an office visit - yes. Without a doctor - no, and that's the line that separates legitimate telehealth from sketchy pill sites. Finasteride is prescription-only in the US: a licensed provider must review your health information before prescribing, and reputable services dispense through licensed pharmacies. The whole process is online and usually takes minutes to complete on your side.`,
+      },
+      {
+        heading: "How do you get finasteride prescribed online?",
+        body: `Step one: complete a medical intake on the provider's site - health history, medications, what you've tried. Step two: a licensed provider reviews it and decides whether finasteride is appropriate (a legitimate service sometimes says no). Step three: if prescribed, medication ships to your door with ongoing access to the provider for questions and adjustments. That's the entire route at every verified provider in our <a href="/hair-loss">hair loss ranking</a>.`,
+      },
+      {
+        heading: "How much does finasteride cost online?",
+        body: `<table><tr><th>Provider</th><th>Published price</th><th>Notes</th></tr><tr><td><a href="/hair-loss/reviews/maximus">Maximus</a></td><td><strong>$34.99/mo</strong> (90-day supply)</td><td>Doctor-led; oral combo with minoxidil $59.99</td></tr><tr><td><a href="/hair-loss/reviews/petermd">PeterMD</a></td><td>$60/30 tablets (reg. $74); $90/60 - about $45/mo</td><td>Simple flat pricing</td></tr></table>Mainstream brands like Hims and Keeps also prescribe finasteride, but we haven't verified their pricing - and we don't list numbers we haven't checked. Prices as published in August 2026; confirm on each provider's site.`,
+      },
+      {
+        heading: "What should you know before starting finasteride?",
+        body: `Three honest basics: results take months and reverse if you stop (see <a href="/hair-loss/articles/how-long-hair-loss-treatment-works">how long treatment takes</a>); it's a DHT blocker, so the side-effect conversation belongs with your prescriber (our <a href="/hair-loss/articles/finasteride-side-effects">side effects guide</a> covers what's commonly discussed); and it's frequently combined with minoxidil for complementary mechanisms - see <a href="/hair-loss/articles/finasteride-and-minoxidil-together">taking finasteride and minoxidil together</a>. If a stronger blocker is on your mind, read <a href="/hair-loss/articles/dutasteride-vs-finasteride">dutasteride vs finasteride</a>.`,
+      },
+    ],
+  },
+  {
+    slug: "dutasteride-online",
+    title: "Dutasteride for Hair Loss: How to Get It Online in 2026",
+    description:
+      "Dutasteride for hair loss: how the stronger DHT blocker is prescribed off-label online, and verified prices - $34.99/month at Maximus, in Happy Head's custom formulas from $49.",
+    category: "Guide",
+    readTime: "5 min read",
+    publishedAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+    heroColor: "#EEF4FB",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "What is dutasteride and why do men switch to it?",
+        body: `Dutasteride blocks DHT more broadly than finasteride - it inhibits both types of the converting enzyme, where finasteride targets one. It's FDA-approved for enlarged prostate and prescribed off-label for hair loss, typically for men who plateaued on finasteride or want the stronger blocker from the start under medical guidance. The full comparison is in <a href="/hair-loss/articles/dutasteride-vs-finasteride">dutasteride vs finasteride</a>.`,
+      },
+      {
+        heading: "Can you get dutasteride prescribed online?",
+        body: `Yes, through the same legitimate telehealth route as any prescription: online intake, licensed-provider review (off-label prescribing is specifically a clinical judgment call, so the review matters), medication shipped if appropriate. Not every hair-loss service offers it - dutasteride is exactly where the mainstream two-drug menus end and the wider prescription toolkits begin.`,
+      },
+      {
+        heading: "Who offers dutasteride online?",
+        body: `Two verified routes in our ranking. <a href="/hair-loss/reviews/maximus">Maximus</a> offers oral dutasteride at <strong>$34.99/month</strong> (90-day supply shipments) plus a Dut+ compounded gel at $54.99 - with a board-certified doctor reviewing every case. <a href="/hair-loss/reviews/happyhead">Happy Head</a> builds dutasteride into its personalized formulas: the Custom Topical (dutasteride 0.3% with up to 8% minoxidil) and the SuperCapsule (dutasteride + oral minoxidil), each $49 on the first order and regularly $89/month. Head-to-head: <a href="/hair-loss/maximus-vs-happy-head">Maximus vs Happy Head</a>. Prices as published in August 2026.`,
+      },
+      {
+        heading: "Is dutasteride right for you?",
+        body: `The honest framing: stronger DHT suppression is a bigger hammer, and whether that's right depends on your case, your history with finasteride, and a licensed provider's judgment - especially since hair-loss use is off-label. Men planning a family should raise that specifically with their prescriber. If you're earlier in the journey, start with <a href="/hair-loss/articles/does-finasteride-work">does finasteride work</a> and the full <a href="/hair-loss">provider ranking</a>.`,
+      },
+    ],
+  },
+  {
+    slug: "hair-loss-treatment-cost",
+    title: "How Much Does Hair Loss Treatment Cost in 2026? (Verified Prices)",
+    description:
+      "What hair loss treatment actually costs online in 2026: verified published prices from $24.99/month - every plan at Maximus, Happy Head and PeterMD, compared honestly.",
+    category: "Guide",
+    readTime: "6 min read",
+    publishedAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+    heroColor: "#F0FAF5",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "How much does hair loss treatment cost per month?",
+        body: `At verified published prices, prescription hair-loss treatment online runs <strong>$24.99 to $89 per month</strong> depending on the medication and how personalized the formula is - a fraction of what most men assume. The floor is single-medication oral treatment (Maximus oral minoxidil, $24.99/month); the top is custom-compounded multi-active formulas (Happy Head, $89/month regular rate after a $49 first order). Every number on this page was checked against the provider's own published pricing in August 2026.`,
+      },
+      {
+        heading: "What does every verified provider charge?",
+        body: `<table><tr><th>Treatment</th><th>Provider</th><th>Published price</th></tr><tr><td>Oral minoxidil</td><td><a href="/hair-loss/reviews/maximus">Maximus</a></td><td><strong>$24.99/mo</strong> (90-day supply)</td></tr><tr><td>Oral finasteride</td><td><a href="/hair-loss/reviews/maximus">Maximus</a></td><td>$34.99/mo</td></tr><tr><td>Oral dutasteride</td><td><a href="/hair-loss/reviews/maximus">Maximus</a></td><td>$34.99/mo</td></tr><tr><td>Finasteride tablets</td><td><a href="/hair-loss/reviews/petermd">PeterMD</a></td><td>$60/30 (reg. $74); $90/60 - ~$45/mo</td></tr><tr><td>Minox+ compounded gel</td><td><a href="/hair-loss/reviews/maximus">Maximus</a></td><td>$44.99/mo</td></tr><tr><td>Dut+ compounded gel</td><td><a href="/hair-loss/reviews/maximus">Maximus</a></td><td>$54.99/mo</td></tr><tr><td>Oral combo (fin + minox)</td><td><a href="/hair-loss/reviews/maximus">Maximus</a></td><td>$59.99/mo</td></tr><tr><td>All-in-One Gel (4 actives)</td><td><a href="/hair-loss/reviews/maximus">Maximus</a></td><td>$64.99/mo</td></tr><tr><td>Follicure RX 3-in-1 spray</td><td><a href="/hair-loss/reviews/petermd">PeterMD</a></td><td>$70/bottle (reg. $80)</td></tr><tr><td>Custom Topical / SuperCapsule</td><td><a href="/hair-loss/reviews/happyhead">Happy Head</a></td><td>$49 first order (reg. $89/mo)</td></tr><tr><td>Dual Action set</td><td><a href="/hair-loss/reviews/happyhead">Happy Head</a></td><td>$98 first order (reg. $178)</td></tr><tr><td>ReGenX growth serum</td><td><a href="/hair-loss/reviews/petermd">PeterMD</a></td><td>$130 (reg. $160)</td></tr></table>Prices as published in August 2026 - confirm current pricing on each provider's site.`,
+      },
+      {
+        heading: "What drives the price differences?",
+        body: `Three things. Medication format: standard oral generics are the budget tier; compounded gels and custom formulas cost more because a pharmacy builds them per prescription. Personalization: <a href="/hair-loss/reviews/happyhead">Happy Head's</a> premium buys a dermatologist-directed custom formula, remade monthly. And bundling: combos like Maximus' oral combo ($59.99) or PeterMD's 3-in-1 spray ($70) cost less than buying the actives separately. What you're NOT paying for at any verified provider: office visits - the provider review is included.`,
+      },
+      {
+        heading: "What does a year of treatment cost?",
+        body: `Because hair-loss treatment is measured in months (and reverses when you stop), annual math is the honest unit: Maximus oral minoxidil runs about <strong>$300/year</strong>, its finasteride or dutasteride about $420/year, PeterMD's 60-count finasteride about $540/year, and Happy Head's custom formulas about $1,017 in year one ($49 first month + $89 thereafter, before its 20% subscription discount). Set expectations with <a href="/hair-loss/articles/how-long-hair-loss-treatment-works">how long treatment takes to work</a>, and compare everything on the <a href="/hair-loss">full ranking</a>.`,
+      },
+    ],
+  },
+  {
+    slug: "finasteride-and-minoxidil-together",
+    title: "Can You Take Finasteride and Minoxidil Together?",
+    description:
+      "Finasteride and minoxidil work through different mechanisms and are commonly combined under medical guidance. How the combo works, and verified combo options from $59.99/month.",
+    category: "Guide",
+    readTime: "5 min read",
+    publishedAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+    heroColor: "#FBF5EE",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "Can you use finasteride and minoxidil at the same time?",
+        body: `Yes - under medical guidance, combining them is one of the most common approaches in hair-loss treatment, because the two work through different, complementary mechanisms: finasteride reduces DHT (the hormone driving follicle miniaturization), while minoxidil supports the growth phase of the hair cycle. One defends, one builds. A licensed provider should confirm the combination fits your health profile - that's part of every legitimate telehealth intake.`,
+      },
+      {
+        heading: "Is the combination better than either alone?",
+        body: `The mechanisms don't overlap, which is exactly why providers so often prescribe them together rather than choosing one - each covers what the other doesn't. Individual results vary, and the deciding factors are your pattern, stage and consistency (both treatments reverse when stopped). The single-medication comparison is in <a href="/hair-loss/articles/finasteride-vs-minoxidil">finasteride vs minoxidil</a>, and timelines in <a href="/hair-loss/articles/how-long-hair-loss-treatment-works">how long treatment takes</a>.`,
+      },
+      {
+        heading: "What are the verified combo options online?",
+        body: `Three routes, all prescription, all with published prices. One pill: <a href="/hair-loss/reviews/maximus">Maximus'</a> oral combo puts finasteride and minoxidil in a single daily capsule at <strong>$59.99/month</strong> (90-day supply shipments). One spray: <a href="/hair-loss/reviews/petermd">PeterMD's Follicure RX</a> combines minoxidil, finasteride and ketoconazole in one topical at $70 per bottle. Custom: <a href="/hair-loss/reviews/happyhead">Happy Head</a> compounds multi-active formulas to your case (its versions pair dutasteride - the stronger DHT blocker - with minoxidil) from $49 for the first order. Prices as published in August 2026.`,
+      },
+      {
+        heading: "Pill, topical, or both - how do you decide?",
+        body: `Consistency wins over theoretical perfection: the best regimen is the one you'll actually follow daily for months. Men who forget twice-daily applications do better with oral routes; men who prefer localized treatment lean topical (see <a href="/hair-loss/articles/oral-minoxidil-vs-topical-minoxidil">oral vs topical minoxidil</a>). Expect an adjustment phase either way - including possible early shedding (<a href="/hair-loss/articles/minoxidil-shedding-phase">why that happens</a>). Compare all verified providers on the <a href="/hair-loss">hair loss ranking</a>, or take the head-to-head route: <a href="/hair-loss/maximus-vs-petermd">Maximus vs PeterMD</a>.`,
+      },
+    ],
+  },
   // ───── Brand-cluster articles (is-X-legit / X-cost / X-alternatives) ─────
   // Every price, rating and quote below is operator-verified (Aug 2026
   // screenshots). Review pages auto-link these via the cluster-slug pattern,
