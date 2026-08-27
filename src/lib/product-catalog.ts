@@ -32,7 +32,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     format: "injection",
     price: "$59",
     priceNote: "12-month plan; same price at every dose",
-    shipping: "Free shipping",
+    shipping: "Free discreet shipping, 3-5 day delivery",
     image: "/products/wellmedr-semaglutide.webp",
   },
   {
@@ -56,7 +56,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     price: "$89",
     regularPrice: "$199",
     priceNote: "flat at every dose",
-    shipping: "Free shipping",
+    shipping: "Free overnight cold shipping",
     image: "/products/altrx-glp1.webp",
   },
   {
@@ -68,7 +68,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     price: "$99",
     regularPrice: "$199",
     priceNote: "promo; all-inclusive with coaching",
-    shipping: "Free shipping",
+    shipping: "Free fast & discreet shipping",
     image: "/products/medvi-semaglutide.webp",
   },
   {
@@ -124,7 +124,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     price: "$179",
     regularPrice: "$299",
     priceNote: "first month",
-    shipping: "Free tracked delivery",
+    shipping: "Free discreet 1-2 day delivery",
     image: "/products/trimrx-semaglutide.webp",
   },
   {
@@ -135,7 +135,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     format: "injection",
     price: "$199",
     priceNote: "20% off month one; coaching included",
-    shipping: "Home delivery included",
+    shipping: "Home delivery included, 4-8 day total turnaround",
     image: "/products/shed-semaglutide.webp",
   },
   // ── Tirzepatide ──
@@ -147,7 +147,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     format: "injection",
     price: "$99",
     priceNote: "shipped every 4 weeks",
-    shipping: "Free shipping",
+    shipping: "Free discreet shipping, 3-5 day delivery",
     image: "/products/wellmedr-tirzepatide.webp",
   },
   {
@@ -193,7 +193,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     price: "$149",
     regularPrice: "$299",
     priceNote: "flat at every dose",
-    shipping: "Free shipping",
+    shipping: "Free overnight cold shipping",
     image: "/products/altrx-glp1-tight.webp",
   },
   {
@@ -205,7 +205,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     price: "$166",
     regularPrice: "$299",
     priceNote: "promo; all-inclusive with coaching",
-    shipping: "Free shipping",
+    shipping: "Free fast & discreet shipping",
     image: "/products/medvi-tirzepatide.webp",
   },
   {
@@ -238,7 +238,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     format: "injection",
     price: "$259",
     priceNote: "custom dosing, unlimited check-ins",
-    shipping: "Free tracked delivery",
+    shipping: "Free discreet 1-2 day delivery",
     image: "/products/trimrx-tirzepatide.webp",
   },
   {
@@ -249,7 +249,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     format: "injection",
     price: "$299",
     priceNote: "20% off month one; coaching included",
-    shipping: "Home delivery included",
+    shipping: "Home delivery included, 4-8 day total turnaround",
     image: "/products/shed-tirzepatide.webp",
   },
   // ── Brand-name ──
