@@ -178,7 +178,9 @@ export function ProductCarousel({
             const hasAggregate =
               !!provider.trustpilotRating && Number.isFinite(tpCount) && tpCount > 0;
             const firstReview = provider.trustpilotReviews?.[0];
-            const freeShipping = /free/i.test(p.shipping);
+            // "included" (SHED's "home delivery included") means no shipping
+            // charge, same as free - both earn the $0 shippingRate.
+            const freeShipping = /free|included/i.test(p.shipping);
             return {
               "@type": "ListItem",
               position: i + 1,
