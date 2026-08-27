@@ -18,6 +18,9 @@ export interface PromoPopupTimer {
   width: string;
   height: string;
   background: string;
+  // Digit size override - the mobile default scales with vw against a 430px
+  // card; landscape desktop creatives render wider and need their own clamp.
+  fontSize?: string;
 }
 
 export interface PromoPopupSpec {
@@ -27,6 +30,9 @@ export interface PromoPopupSpec {
   alt: string;
   priority: number;
   timer?: PromoPopupTimer;
+  // Optional landscape creative for sm+ screens. Without one the popup stays
+  // mobile-only, exactly as before. Timer coordinates are per-creative.
+  desktop?: { image: string; timer?: PromoPopupTimer };
 }
 
 export const PROMO_POPUPS: PromoPopupSpec[] = [
@@ -43,6 +49,18 @@ export const PROMO_POPUPS: PromoPopupSpec[] = [
       width: "10.2%",
       height: "7.8%",
       background: "rgb(2,39,43)",
+    },
+    desktop: {
+      image: "/embodypopupdesktop.png",
+      timer: {
+        startSeconds: 5 * 86400 + 21 * 3600 + 52 * 60 + 28,
+        boxes: [{ left: "5.5%" }, { left: "13.7%" }, { left: "21.8%" }, { left: "29.9%" }],
+        top: "64.3%",
+        width: "5.9%",
+        height: "8.3%",
+        background: "rgb(6,44,46)",
+        fontSize: "clamp(18px, 2vw, 26px)",
+      },
     },
   },
   {
@@ -90,6 +108,9 @@ export function resolvePromoPopup(providers: PromoPopupProvider[]): PromoPopupSp
         alt: cms.alt ?? codeSpec?.alt ?? p.name,
         priority: cms.priority ?? codeSpec?.priority ?? 1,
         timer: codeSpec?.timer,
+        // Desktop creative only applies when the CMS didn't swap the mobile
+        // image for a different one (mismatched creatives would look broken).
+        desktop: cms.image && cms.image !== codeSpec?.image ? undefined : codeSpec?.desktop,
       });
     } else if (codeSpec) {
       candidates.push(codeSpec); // no CMS entry → code default
