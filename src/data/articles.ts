@@ -141,6 +141,44 @@ export const articles: Article[] = [
     ],
   },
   {
+    // Bridge article: weight-loss -> the HRT vertical, same play as the
+    // ozempic-hair-loss bridge. Menopause weight gain is a huge cross-topic
+    // query; claims stay general and hedged, HRT is explicitly NOT framed as
+    // a weight-loss treatment, and verified GLP-1 prices carry the money side.
+    slug: "menopause-weight-gain",
+    title: "Menopause Weight Gain: Why It Happens & What Actually Helps (2026)",
+    description:
+      "Weight gain around menopause is common and has real physiological drivers. What's actually happening, what helps, where GLP-1 treatment fits - and what HRT does and doesn't do.",
+    category: "Science",
+    readTime: "6 min read",
+    publishedAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+    heroColor: "#F7EEF4",
+    author: "TreatmentsHub Staff",
+    sections: [
+      {
+        heading: "Why does menopause cause weight gain?",
+        body: 'The menopause transition commonly shifts both weight and where the body stores it - more around the middle - through a combination of hormonal changes, natural loss of muscle mass with age (which lowers the calories you burn at rest), and sleep disruption that feeds appetite. The frustrating part women describe is that nothing about their habits changed. That experience is real and physiological - not a willpower failure - and it responds to treatment strategies designed for this stage, not generic advice.',
+      },
+      {
+        heading: "Does HRT help with menopause weight gain?",
+        body: 'Here\'s the honest answer most sites blur: hormone replacement therapy is prescribed to treat menopause symptoms - hot flashes, sleep disruption, and related quality-of-life issues - and it is not a weight-loss treatment. Where it can matter indirectly is by improving sleep and symptoms that make weight management harder. If menopause symptoms are part of your picture, that conversation belongs with a menopause-specialized clinician - our <a href="/hrt">HRT &amp; menopause provider comparison</a> ranks the online services built for exactly that, and <a href="/hrt/articles/perimenopause-vs-menopause">perimenopause vs menopause</a> maps where you are in the transition.',
+      },
+      {
+        heading: "Do GLP-1 medications work for menopause weight gain?",
+        body: 'GLP-1 medications (semaglutide, tirzepatide) are prescribed based on standard clinical criteria - they aren\'t menopause-specific, and eligibility doesn\'t change at midlife. For women who qualify, they address the appetite and metabolic side of the equation; in trials semaglutide averaged ~15% body-weight loss and tirzepatide up to 22.5%. At verified published prices, compounded semaglutide starts at $59/month (<a href="/reviews/wellmedr">wellmedr</a>) and $69 at <a href="/reviews/embody">embody</a>, with tirzepatide from $99 - see the full <a href="/cheapest-glp1">verified GLP-1 price comparison</a> and the <a href="/articles/tirzepatide-vs-semaglutide">molecule head-to-head</a>. A licensed provider review decides whether treatment is appropriate.',
+      },
+      {
+        heading: "What else actually helps at this stage?",
+        body: 'The unglamorous fundamentals matter more at midlife, not less: resistance training to defend muscle mass (the metabolic engine), protein-forward eating, and treating sleep as a clinical priority rather than a luxury. None of that is menopause marketing - it\'s what the physiology responds to. Medication and hormone therapy, where appropriate, sit on top of that base, not instead of it.',
+      },
+      {
+        heading: "Where should you start?",
+        body: 'Split the problem in two. If menopause symptoms - sleep, hot flashes, mood - are disrupting your life, start with a menopause-specialized clinician: compare care models in <a href="/hrt/midi-vs-winona">Midi Health vs Winona</a>. If weight is the primary concern and you meet clinical criteria, compare <a href="/">GLP-1 weight loss providers</a> with verified pricing, or <a href="/weight-loss/find-your-match">take the 60-second matching quiz</a>. Many women end up addressing both - with two different specialists, which is exactly how it should work.',
+      },
+    ],
+  },
+  {
     // Bridge article: weight-loss (the domain's strongest vertical) -> the
     // hair-loss vertical, on a genuinely huge cross-topic query. Medication-
     // level claims only, hedged where evidence is directional.
