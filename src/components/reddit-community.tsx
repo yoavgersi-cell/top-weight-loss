@@ -31,6 +31,54 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
   // the page's vertical so an id collision can never surface the wrong data.
   { intro: string; threads: RedditThread[]; takeaway: string; themes?: string; vertical?: string }
 > = {
+  winona: {
+    vertical: "hrt",
+    themes:
+      "Three threads, one pattern: the no-video, all-online flow (free until you approve the prescription) is what pulls people in, and responsive doctors who adjust treatment plans keep them - alongside honest adjustment-period questions like a new user asking about side effects five days in.",
+    intro:
+      "Winona comes up in menopause forums mostly through word of mouth - here's how real users describe the consultation, the treatments and the first weeks.",
+    threads: [
+      {
+        author: "Seafoam_Otter",
+        age: "2y ago",
+        title: "How does the consultation work? Do you have to do a video call, or just answer questions online?",
+        body: [
+          "ETA: I think you actually recommended this to me in a different post, so I'm obviously looking into it. lol Thanks for mentioning it!",
+        ],
+        upvotes: 2,
+        replies: [
+          {
+            author: "Calm_Piece6753",
+            body: "You just answer questions online. This was one of the reasons I picked them because I hate phone calls, and I hate video calls even more! There's a survey and then a free section to write whatever you want to the doctor. That's all free and you only buy it if you approve the prescription. They're also really responsive to chat messages. So far I have nothing bad to say about them.",
+          },
+        ],
+      },
+      {
+        author: "MarchAccomplished397",
+        age: "2y ago",
+        body: [
+          "I'm using them. I use the compounded bi-est with progesterone cream. Vaginal estradiol. Estriol/tret face cream. DHEA. The doctors are very responsive to questions and can make/suggest adjustments to your treatment plan as you get established with dosages, etc.",
+        ],
+        upvotes: 3,
+        replies: [
+          {
+            author: "MarchAccomplished397",
+            body: "I have annual mammograms through my regular doctor. I can't remember if the Winona intake forms asked me about it. I know I didn't have to send over records or anything. Probably a bigger deal if you have a family history of breast cancer or BRCA gene.",
+          },
+        ],
+      },
+      {
+        author: "kitchen_goblin69",
+        age: "1y ago",
+        body: [
+          "Okay new user - I've only been in it five days. So far I can tell a remarkable difference in energy level (I can go all day without wanting to nap at all) but, is anyone else experiencing a decrease in sex drive? It's killing me. I know I'm only five days in but my bf is already irritated.",
+        ],
+        upvotes: 3,
+      },
+    ],
+    takeaway:
+      "The consultation flow is the recurring hook: all online, no video calls, free until you approve the prescription - and doctors described as responsive, adjusting plans as dosages settle. The five-days-in post is the honest counterweight: early treatment comes with an adjustment period and real questions, which is exactly what the physician follow-up is for.",
+  },
   midi: {
     vertical: "hrt",
     themes:
