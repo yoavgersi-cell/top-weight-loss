@@ -151,6 +151,52 @@ const providers: Provider[] = [
     ],
   },
   {
+    id: "nurx",
+    name: "Nurx",
+    tagline: "Telehealth pharmacy whose Solstice HRT system starts at a published $39/month",
+    logo: "/logos/nurx.svg",
+    smallLogo: "/logos/nurx-icon.svg",
+    highlights: [
+      "Published plans starting at $39/month",
+      "Adjustable estrogen/progesterone system (Solstice)",
+      "HSA/FSA eligible; satisfaction guarantee per published terms",
+    ],
+    affiliateUrl: "#",
+    ctaText: "Visit Site",
+    // Operator-verified from Nurx's claimed Trustpilot profile (Aug 2026
+    // screenshots): 4.1 average across 1,839 reviews. The profile covers the
+    // whole Nurx pharmacy platform, not the HRT line alone - the review says
+    // so explicitly.
+    trustpilotRating: "4.1",
+    trustpilotReviewCount: "1,839",
+    trustpilotReviews: [
+      {
+        title: "Love it!",
+        text: "Website is easy to use. I love that I can get my prescription in the mail. I've been using this service for years. Highly recommend!",
+        name: "Heather",
+        location: "US",
+        rating: 5,
+        date: "Aug 15, 2026",
+      },
+      {
+        title: "Much better than making a dr. appointment",
+        text: "Smooth refills every 3 months. I've tried to get medication from my OBGYN or in person provider's during yearly check ups but they can never get the script right. Nurx wrote my prescription without any problems or errors. Simple, cost effective and provider's who actually listen to what you are requesting.",
+        name: "Michelle",
+        location: "US",
+        rating: 5,
+        date: "Aug 13, 2026",
+      },
+      {
+        title: "Very simple and comprehensive",
+        text: "It was very simple and comprehensive with no hidden fees and I was finally able to receive the care I've been needing at a price I can afford",
+        name: "Cate Gray",
+        location: "US",
+        rating: 5,
+        date: "Jul 6, 2026",
+      },
+    ],
+  },
+  {
     id: "innerbalance",
     name: "Inner Balance",
     tagline: "Personalized hormone replacement therapy, managed online",
@@ -333,6 +379,56 @@ const reviews: ReviewData[] = [
       "Winona is the focused, direct-pay counterpart to Midi's insurance-based model: a service built entirely around menopause hormone therapy, with a free physician consultation, flat published prices ($39-$89/month by product), FSA/HSA eligibility and a 4.6 Trustpilot average across 8,138 reviews. If insurance coverage matters more than pricing simplicity, compare Midi Health first - otherwise this is the most transparent offer in our HRT ranking.",
     trustBadges: ["Menopause-focused physicians", "Licensed US providers", "Discreet delivery"],
     updatedAt: UPDATED,
+  },
+  {
+    slug: "nurx",
+    providerId: "nurx",
+    shortSummary:
+      "Large telehealth pharmacy whose Solstice HRT system pairs bioidentical estradiol with progesterone at a published $39/month starting price.",
+    reviewIntro:
+      "Nurx is a different animal from the menopause-only clinics in this ranking: a large telehealth pharmacy (born in birth control and sexual health) that added hormone replacement through its Solstice system. The pitch is personalization at a published price - bioidentical estradiol as a daily tablet or gel, micronized progesterone capsules included when clinically needed, and an optional vaginal estrogen cream, with the estrogen/progesterone ratio adjustable under clinical guidance rather than fixed. Plans start at a published $39/month (a 40% off first-month promotion was live at the time of review), care is HSA/FSA eligible with no insurance needed, and its claimed Trustpilot profile averages 4.1 across 1,839 reviews - covering the whole Nurx platform, not the HRT line alone.",
+    keyFeatures: [
+      "Published starting price: $39/month",
+      "Adjustable estrogen/progesterone ratios (Solstice system)",
+      "HSA/FSA eligible; no insurance needed",
+      "Clinical assistance via messaging; US-based care agents",
+    ],
+    pricingSummary:
+      "Nurx publishes a $39/month starting price for the Solstice All-in-1 HRT system - bioidentical estrogen with daily progesterone capsules included when needed - with a 40% off first-month promotion live at the time of review, free shipping, and published on-time-refill and 100% satisfaction guarantees (per Nurx's terms). Care is HSA/FSA eligible and no insurance is needed. Exact monthly cost depends on the plan a clinician prescribes; prices as published in August 2026 - confirm current rates on Nurx's site.",
+    pricingPlans: [
+      {
+        name: "Solstice All-in-1 HRT System",
+        medication: "Bioidentical estradiol (tablet or gel) + progesterone when needed",
+        price: "$39",
+        unit: "/month",
+        cadence: "starting price",
+        highlights: ["40% off first month at time of review", "Free shipping", "HSA/FSA eligible"],
+      },
+    ],
+    treatmentOptions: [
+      "Bioidentical estradiol - daily tablet or daily gel",
+      "Micronized progesterone capsules (included when needed)",
+      "Vaginal estrogen cream (optional add-on)",
+    ],
+    pros: [
+      "Lowest published starting price in our HRT ranking ($39/mo)",
+      "Adjustable hormone ratios instead of fixed combinations",
+      "Published satisfaction and on-time-refill guarantees (per terms)",
+      "HSA/FSA eligible with messaging-based clinical support",
+    ],
+    cons: [
+      "Trustpilot record (4.1 across 1,839) covers all of Nurx, not HRT specifically",
+      "A broad pharmacy platform rather than a dedicated menopause clinic",
+      "Cash-pay - no insurance path like Midi's",
+    ],
+    bestFor: [
+      "Women who want the lowest published entry price into HRT",
+      "Those comfortable with messaging-based care from a large platform",
+    ],
+    finalVerdict:
+      "Nurx brings the platform playbook to menopause care: the lowest published starting price in our ranking ($39/month), an adjustable-ratio system rather than fixed combinations, and HSA/FSA-eligible care with published guarantees. The trade-off is focus - it's a general telehealth pharmacy, not a dedicated menopause clinic, and its 4.1 Trustpilot record speaks for the whole platform. If specialist depth matters most, compare Midi Health and Winona first; if published price is the deciding factor, Nurx sets the floor.",
+    trustBadges: ["Licensed US providers", "HSA/FSA eligible", "Published pricing"],
+    updatedAt: "2026-08-28",
   },
   {
     slug: "innerbalance",
@@ -619,6 +715,74 @@ const battles: BattleData[] = [
       { feature: "Pricing", provider1Value: "Verify on site", provider2Value: "$39-$89/mo published; free consult", highlight: "provider2" },
     ],
     updatedAt: UPDATED,
+  },
+  // The vertical's first fully data-backed battle: verified published pricing
+  // and claimed-profile Trustpilot records on BOTH sides.
+  {
+    slug: "winona-vs-nurx",
+    provider1Id: "winona",
+    provider2Id: "nurx",
+    title: "Winona vs Nurx (2026): Menopause Specialist or $39 Platform Play?",
+    matchupLabel: "Winona vs Nurx",
+    subtitle: "A menopause-only clinic with an 8,138-review record vs a telehealth pharmacy's $39/month HRT system.",
+    description:
+      "Winona vs Nurx for HRT: Winona's menopause-only care (4.6 Trustpilot, 8,138 reviews; $39-$89/mo published) against Nurx's Solstice system from $39/mo. Verified prices, honest trade-offs.",
+    intro:
+      "Winona and Nurx both publish real prices - rare in menopause care - but sell different philosophies. Winona is a dedicated menopause clinic: free physician consultation, bioidentical creams, tablets and capsules at flat prices ($39-$89/month by product), and a 4.6 Trustpilot average across 8,138 reviews. Nurx is a large telehealth pharmacy whose Solstice HRT system starts at a published $39/month with adjustable estrogen/progesterone ratios, HSA/FSA eligibility and published guarantees - carrying a 4.1 Trustpilot average across 1,839 reviews for the platform as a whole. Both are cash-pay; if insurance coverage is your priority, compare Midi Health instead.",
+    verdict:
+      "Winona is our pick for most women here: the entire service is built around menopause, the consultation is free (you pay only if prescribed), and its 4.6 average across 8,138 Trustpilot reviews is the strongest verified record in our HRT ranking. Nurx wins the entry price - its Solstice system starts at a published $39/month against Winona's $39 progesterone capsules and $54-$89 estrogen products - and suits women who already know and trust the platform. Prices as published in August 2026; confirm current rates on both sites.",
+    verdictWinnerPoints: [
+      "Menopause-only clinic - the whole service is built for this",
+      "4.6 Trustpilot average across 8,138 reviews",
+      "Free consultation; flat published prices ($39-$89/mo by product)",
+    ],
+    verdictLoserPoints: [
+      "Published starting price of $39/month (Solstice system)",
+      "Adjustable estrogen/progesterone ratios",
+      "HSA/FSA eligible with published guarantees (per terms)",
+    ],
+    winnerId: "winona",
+    categories: [
+      {
+        name: "Focus",
+        winner: "provider1",
+        explanation:
+          "Winona does menopause and nothing else - physicians, products and follow-up all built for one patient. Nurx's HRT line lives inside a much broader telehealth pharmacy that started in birth control and sexual health.",
+        supportingPoints: [
+          "Dedicated menopause clinic (Winona)",
+          "HRT as one line on a large platform (Nurx)",
+        ],
+      },
+      {
+        name: "Published Pricing",
+        winner: "tie",
+        explanation:
+          "Both publish real numbers - the deciding factor is shape. Nurx sets the lower entry point: Solstice from $39/month all-in. Winona prices per product: progesterone capsules $39, estrogen tablets $54, creams $89 - with a free consultation so you pay nothing unless prescribed.",
+        supportingPoints: [
+          "From $39/mo, 40% off first month at review time (Nurx)",
+          "$39-$89/mo by product; free consult (Winona)",
+        ],
+      },
+      {
+        name: "Track Record",
+        winner: "provider1",
+        explanation:
+          "Winona's claimed Trustpilot profile averages 4.6 across 8,138 reviews - all menopause care. Nurx averages 4.1 across 1,839, and that record speaks for the whole pharmacy platform rather than the HRT line specifically.",
+        supportingPoints: [
+          "4.6 / 8,138 reviews, menopause-specific (Winona)",
+          "4.1 / 1,839 reviews, platform-wide (Nurx)",
+        ],
+      },
+    ],
+    features: [
+      { feature: "Focus", provider1Value: "Menopause only", provider2Value: "Broad telehealth pharmacy", highlight: "provider1" },
+      { feature: "Starting price", provider1Value: "$39/mo (progesterone capsules)", provider2Value: "$39/mo (Solstice system)", highlight: "both" },
+      { feature: "Estrogen products", provider1Value: "Tablets $54; creams $89", provider2Value: "Tablet or gel, in-plan", highlight: "both" },
+      { feature: "Consultation", provider1Value: "Free - pay only if prescribed", provider2Value: "90-second quiz to start", highlight: "provider1" },
+      { feature: "Trustpilot", provider1Value: "4.6 (8,138 reviews)", provider2Value: "4.1 (1,839, platform-wide)", highlight: "provider1" },
+      { feature: "HSA/FSA", provider1Value: "Eligible", provider2Value: "Eligible", highlight: "both" },
+    ],
+    updatedAt: "2026-08-28",
   },
 ];
 
