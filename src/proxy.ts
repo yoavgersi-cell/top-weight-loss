@@ -109,6 +109,18 @@ export function proxy(req: NextRequest) {
     return NextResponse.redirect(url, 301);
   }
 
+  // Legacy hair-loss domain: everything 301s to its /hair-loss/* equivalent on
+  // the hub, same single-hop pattern as the weight-loss migration below. The
+  // rule only ever fires once the domain is pointed at this deployment, so
+  // shipping it ahead of that is a no-op.
+  if (host.includes("tophairloss")) {
+    const url = req.nextUrl.clone();
+    url.protocol = "https:";
+    url.host = "www.treatmentshub.com";
+    url.pathname = url.pathname === "/" ? "/hair-loss" : `/hair-loss${url.pathname}`;
+    return NextResponse.redirect(url, 301);
+  }
+
   // Legacy host: 301 to the hub once migrated; a complete no-op until then.
   if (host.includes("topweightloss") && WEIGHT_LOSS_MIGRATED) {
     const url = req.nextUrl.clone();
