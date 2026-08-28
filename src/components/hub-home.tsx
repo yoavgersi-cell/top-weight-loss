@@ -127,12 +127,38 @@ function HearingAidsIcon({ className }: { className?: string }) {
   );
 }
 
+function OnlineTherapyIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 64" fill="none" className={className} aria-hidden="true">
+      {/* speech bubble - the conversation itself */}
+      <path
+        d="M10 14h44a4 4 0 0 1 4 4v22a4 4 0 0 1-4 4H30l-11 10 2.5-10H10a4 4 0 0 1-4-4V18a4 4 0 0 1 4-4z"
+        fill={ICON_FILL}
+        stroke={ICON_STROKE}
+        strokeWidth="2.2"
+        strokeLinejoin="round"
+      />
+      {/* heart inside the conversation */}
+      <path
+        d="M32 39c-5.5-3.6-9-6.8-9-10.6 0-2.7 2-4.7 4.6-4.7 1.8 0 3.4 1 4.4 2.6 1-1.6 2.6-2.6 4.4-2.6 2.6 0 4.6 2 4.6 4.7 0 3.8-3.5 7-9 10.6z"
+        fill="#fff"
+        stroke={ICON_STROKE}
+        strokeWidth="2.2"
+        strokeLinejoin="round"
+      />
+      {/* calm sparkle */}
+      <path d="M54 5v6M51 8h6" stroke={ICON_STROKE} strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 const VERTICAL_ICON: Record<string, (p: { className?: string }) => React.JSX.Element> = {
   "weight-loss": WeightLossIcon,
   "hair-loss": HairGrowthIcon,
   trt: TrtIcon,
   hrt: HrtIcon,
   "hearing-aids": HearingAidsIcon,
+  "online-therapy": OnlineTherapyIcon,
 };
 
 // Display names tuned for the category grid (treatment-led, like a
@@ -143,6 +169,7 @@ const CATEGORY_NAME: Record<string, string> = {
   trt: "TRT",
   hrt: "HRT",
   "hearing-aids": "Hearing Aids",
+  "online-therapy": "Online Therapy",
 };
 
 // Real, keyword-rich internal links surfaced on a live category card. Only
@@ -172,6 +199,11 @@ const CATEGORY_LINKS: Record<string, { label: string; href: string }[]> = {
   "hearing-aids": [
     { label: "Compare brands", href: "/hearing-aids" },
     { label: "Reviews", href: "/hearing-aids/reviews" },
+  ],
+  "online-therapy": [
+    { label: "Compare platforms", href: "/online-therapy" },
+    { label: "Reviews", href: "/online-therapy/reviews" },
+    { label: "Guides", href: "/online-therapy/articles" },
   ],
 };
 
@@ -303,8 +335,8 @@ export async function HubHome() {
             Compare the Best Health &amp; Wellness Services for Your Needs
           </h1>
           <p className="mx-auto mt-6 max-w-[680px] text-[16.5px] leading-relaxed text-gray-600 sm:mt-8 sm:text-[21px]">
-            Independent rankings across weight loss, hair growth, TRT, HRT and hearing aids - real
-            published prices and verified customer reviews.
+            Independent rankings across weight loss, hair growth, TRT, HRT, hearing aids and online
+            therapy - real published prices and verified customer reviews.
           </p>
 
           {/* Category cards - icon-led, links behind a divider */}
