@@ -434,7 +434,7 @@ export const defaultConfig: SiteConfig = {
     secureTitle: "Secure & Confidential",
     secureText:
       "All providers featured on our platform use secure systems to protect your personal information.",
-    featuredImageUrl: "/sidebar-featured.png",
+    featuredImageUrl: "/sidebar-featured.webp",
     featuredImageAlt:
       "ALT RX - Physician-guided GLP-1 weight loss treatment",
     featuredImageLink: "#",
