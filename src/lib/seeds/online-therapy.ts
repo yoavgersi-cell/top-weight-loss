@@ -41,7 +41,8 @@ const providers: Provider[] = [
       "Weekly live sessions - video, phone or chat",
       "Message your therapist between sessions",
     ],
-    affiliateUrl: "#",
+    // Direct site link until an affiliate link exists - CTAs must work.
+    affiliateUrl: "https://www.betterhelp.com",
     ctaText: "Visit Site",
   },
   {
@@ -55,7 +56,8 @@ const providers: Provider[] = [
       "Therapy and psychiatry (medication management) on one platform",
       "Live sessions plus ongoing messaging",
     ],
-    affiliateUrl: "#",
+    // Direct site link until an affiliate link exists - CTAs must work.
+    affiliateUrl: "https://www.talkspace.com",
     ctaText: "Visit Site",
   },
   {
@@ -69,7 +71,8 @@ const providers: Provider[] = [
       "Daily mental-fitness practice, not a therapy replacement",
       "Coaching and therapy available mainly via employers and health plans",
     ],
-    affiliateUrl: "#",
+    // Direct site link until an affiliate link exists - CTAs must work.
+    affiliateUrl: "https://www.headspace.com",
     ctaText: "Visit Site",
   },
   {
@@ -83,7 +86,8 @@ const providers: Provider[] = [
       "In-network with many major insurance plans",
       "Therapy available alongside psychiatric care",
     ],
-    affiliateUrl: "#",
+    // Direct site link until an affiliate link exists - CTAs must work.
+    affiliateUrl: "https://www.talkiatry.com",
     ctaText: "Visit Site",
   },
 ];
