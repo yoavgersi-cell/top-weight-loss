@@ -34,8 +34,8 @@ const providers: Provider[] = [
     id: "betterhelp",
     name: "BetterHelp",
     tagline: "The largest online therapy platform - subscription talk therapy with live sessions and messaging",
-    logo: "/logos/betterhelp.svg",
-    smallLogo: "/logos/betterhelp-icon.svg",
+    logo: "/logos/betterhelplogo.png",
+    smallLogo: "/logos/betterhelplogo.png",
     highlights: [
       "Largest online therapy platform in the US",
       "Weekly live sessions - video, phone or chat",
@@ -49,8 +49,8 @@ const providers: Provider[] = [
     id: "talkspace",
     name: "Talkspace",
     tagline: "Online therapy and psychiatry that many major insurance plans cover",
-    logo: "/logos/talkspace.svg",
-    smallLogo: "/logos/talkspace-icon.svg",
+    logo: "/logos/talkspacelogo.png",
+    smallLogo: "/logos/talkspacelogo.png",
     highlights: [
       "Covered by many major insurance plans and EAPs",
       "Therapy and psychiatry (medication management) on one platform",
@@ -64,8 +64,8 @@ const providers: Provider[] = [
     id: "headspace",
     name: "Headspace",
     tagline: "The mindfulness and meditation app - with coaching and therapy offered mainly through employers and health plans",
-    logo: "/logos/headspace.svg",
-    smallLogo: "/logos/headspace-icon.svg",
+    logo: "/logos/headspacelogo.png",
+    smallLogo: "/logos/headspacelogo.png",
     highlights: [
       "Guided meditation, sleep and stress content in one app",
       "Daily mental-fitness practice, not a therapy replacement",
@@ -79,8 +79,8 @@ const providers: Provider[] = [
     id: "talkiatry",
     name: "Talkiatry",
     tagline: "Psychiatry-first online care - psychiatrist visits billed through your insurance",
-    logo: "/logos/talkiatry.svg",
-    smallLogo: "/logos/talkiatry-icon.svg",
+    logo: "/logos/talkiatrylogo.png",
+    smallLogo: "/logos/talkiatrylogo.png",
     highlights: [
       "Care led by psychiatrists, not matched generalists",
       "In-network with many major insurance plans",
