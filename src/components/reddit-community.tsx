@@ -386,6 +386,33 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
     takeaway:
       "Small sample, consistent picture: providers described as relaxed and responsive, comfortable holding complex overlapping conditions in one treatment. The one complaint is administrative - a \"pretty bad\" records department - which matches the general telehealth pattern where logistics, not clinical care, draw the criticism.",
   },
+  talkiatry: {
+    vertical: "online-therapy",
+    themes:
+      "Both comments tell the same two-sided story that Talkiatry's 2.5 Trustpilot average hints at: the psychiatrists themselves get praised, while billing and back-office - insurance verification, lost forms, unresponsive staff - draw serious, specific complaints.",
+    intro:
+      "Talkiatry threads on Reddit are unusually consistent: good words for the clinicians, hard words for the office behind them. We show both, because that split is the single most useful thing to know before booking.",
+    threads: [
+      {
+        author: "Happy-Sea-5011",
+        age: "4y ago",
+        upvotes: 4,
+        body: [
+          "I tried Talkiatry for anxiety and depression. The provider was good, but the office/billing staff are horrible. They said they took my insurance but didn't actually and I find out after two visits...each costing $300. Then I spent hours calling and emailing them which they reassured me they will escalate...only to find out I'm still responsible for the bill. So ridiculous....talks Talkiatry for giving an already anxious person more anxiety 😑",
+        ],
+      },
+      {
+        author: "KentDark",
+        age: "10mo ago",
+        upvotes: 1,
+        body: [
+          "I've had good experiences with the clinicians, but not the clinical staff. I've had forms sent to them for a short term disability claim about 6 times over the last month and the staff never always says they haven't received them via fax and email. So I decided to visit their office in Manhattan to get this resolved. At 1pm on a Friday, the office was dark, there was a giant stack of mail on the ground outside in the hallway, a couple of certified letters slid underneath the door, and two other stacks of mail on the other side of the door. In short, I can't say if anyone had been in office for days and certainly aren't reading their mail which are likely sensitive medical records, claims, or other forms.",
+        ],
+      },
+    ],
+    takeaway:
+      "The pattern is unmistakable and worth taking seriously: clinical care praised, back office slammed - one commenter hit a $300-per-visit insurance-verification failure, another watched disability paperwork disappear six times. The practical takeaway isn't to avoid Talkiatry; it's to protect yourself on logistics: get your insurance eligibility confirmed in writing before the first visit, and keep copies of everything you send them.",
+  },
 };
 
 // A minimal Snoo-style mark drawn inline (no external assets) - used to give
