@@ -17,7 +17,6 @@ import { BattleStickyCta } from "@/components/battle-sticky-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { TrustpilotRating } from "@/components/trustpilot-rating";
 import { LicensedTelehealthBadge } from "@/components/licensed-badge";
-import { InsuranceBadge } from "@/components/insurance-badge";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
 import { TrustDisclosure } from "@/components/medical-sources";
@@ -823,7 +822,6 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                     />
                   )}
                   {ctx.vertical !== "hearing-aids" && <LicensedTelehealthBadge />}
-                  <InsuranceBadge providerId={provider.id} />
                 </div>
 
                 <p className="mb-4 text-[14px] leading-relaxed text-gray-500">
@@ -1030,7 +1028,6 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                               <LicensedTelehealthBadge />
                             </div>
                           )}
-                          <InsuranceBadge providerId={provider.id} />
                         </div>
                         <ProviderCta
                           href={provider.affiliateUrl}
