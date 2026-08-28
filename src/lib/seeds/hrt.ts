@@ -13,10 +13,10 @@ import type {
 // House rules, same as every vertical: real telehealth brands with truthful,
 // general descriptions and NO invented data - no fabricated prices, Trustpilot
 // scores, or program claims. Where we haven't verified a provider's published
-// pricing yet, the copy says so and points to the provider's site. Reviews for
-// non-affiliate providers are noindexed automatically; affiliate links and
-// verified pricing get filled in as partnerships come online (the same flow
-// used for HealthRx and Sprout in weight-loss).
+// pricing yet, the copy says so and points to the provider's site. All
+// reviews index (Aug 2026 operator policy); affiliate links and verified
+// pricing get filled in as partnerships come online (the same flow used for
+// HealthRx and Sprout in weight-loss).
 // ─────────────────────────────────────────────────────────────────────────────
 
 const UPDATED = "2026-08-23";

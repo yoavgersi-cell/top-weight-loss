@@ -5,7 +5,6 @@ import { THREE_WAY_COMPARISONS } from "@/lib/three-way";
 import {
   CONTENT_LAST_UPDATED,
   latestUpdate,
-  AFFILIATE_PROVIDER_IDS,
   NOINDEX_ARTICLE_SLUGS,
   VERTICAL_IDS,
   DEFAULT_VERTICAL,
@@ -85,13 +84,11 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
     entries.push({ url: P("/articles"), lastModified: FALLBACK_DATE, changeFrequency: "weekly", priority: 0.8 });
   }
 
-  // Reviews - only affiliate-provider reviews are indexable (competitor
-  // reviews render noindex,follow to keep them out of the index), so only
-  // those belong in the sitemap. This matches review-page robots exactly and
-  // keeps noindex URLs (e.g. TRT competitors hone/fountain/marek) out of it.
+  // Reviews - all provider reviews are indexable (operator policy, Aug 2026:
+  // impressions on every vertical first, optimize whichever pages earn
+  // clicks), so all of them belong in the sitemap. Matches review-page robots.
   entries.push(
     ...(config.reviews ?? [])
-      .filter((r) => AFFILIATE_PROVIDER_IDS.includes(r.providerId))
       .map((r) => ({
         url: P(`/reviews/${r.slug}`),
         lastModified: flooredLastModified(r.updatedAt),
@@ -235,8 +232,7 @@ async function legacySitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   const reviewPages: MetadataRoute.Sitemap = (config.reviews ?? [])
-    // Only affiliate-provider reviews are indexed, so only they belong in the sitemap.
-    .filter((review) => AFFILIATE_PROVIDER_IDS.includes(review.providerId))
+    // All provider reviews are indexed (operator policy), so all belong here.
     .map((review) => ({
       url: `${BASE_URL}/reviews/${review.slug}`,
       lastModified: flooredLastModified(review.updatedAt),

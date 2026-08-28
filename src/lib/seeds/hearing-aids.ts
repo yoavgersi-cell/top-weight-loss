@@ -13,9 +13,9 @@ import type {
 // descriptions and NO invented data - no fabricated prices, ratings, device
 // specs or medical claims. Where we haven't verified a brand's published
 // pricing or current product lineup, the copy says so and points to the
-// brand's site. Reviews for non-affiliate providers are noindexed
-// automatically; affiliate links and verified pricing get filled in as
-// partnerships come online (the same flow used for HealthRx, Sprout and HRT).
+// brand's site. All reviews index (Aug 2026 operator policy); affiliate links
+// and verified pricing get filled in as partnerships come online (the same
+// flow used for HealthRx, Sprout and HRT).
 // ─────────────────────────────────────────────────────────────────────────────
 
 const UPDATED = "2026-08-24";
