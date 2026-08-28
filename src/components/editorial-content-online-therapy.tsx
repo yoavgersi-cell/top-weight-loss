@@ -3,7 +3,7 @@ import Link from "next/link";
 const modelRows: [string, string, string][] = [
   ["Subscription therapy", "A matched licensed therapist, live sessions plus messaging, billed monthly.", "BetterHelp is the biggest example; Talkspace runs the same model with insurance coverage."],
   ["Psychiatry & medication", "Evaluation, diagnosis and medication management by psychiatric clinicians.", "Talkiatry is psychiatry-first and insurance-based; Talkspace offers it as an added service."],
-  ["Mindfulness apps", "Self-guided meditation, sleep and stress practice - not treatment.", "Headspace is the best-known; pairs well with therapy rather than replacing it."],
+  ["Mindfulness apps", "Self-guided meditation, sleep and stress practice - not treatment.", "Headspace is the best-known (it now sells insurance-based therapy too); pairs well with therapy rather than replacing it."],
 ];
 
 function ComparisonTable({ colA, colB, rows }: { colA: string; colB: string; rows: [string, string, string][] }) {
