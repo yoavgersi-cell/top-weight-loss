@@ -332,9 +332,10 @@ export const isVertical = (id: string): boolean => VERTICAL_IDS.includes(id);
 export const PUBLISHED_VERTICALS = ["weight-loss", "hair-loss", "trt", "hrt", "hearing-aids"];
 export const isPublishedVertical = (id: string): boolean => PUBLISHED_VERTICALS.includes(id);
 
-// Providers we have an affiliate relationship with. Pages centered on any other
-// brand don't monetize, so they're de-indexed (noindex,follow) and dropped from
-// the sitemap to concentrate crawl budget and quality signals on money pages.
+// Providers we have an affiliate relationship with. Used to gate the product
+// carousel/catalog and affiliate-only landing pages. NOTE: since Aug 2026 this
+// list no longer gates indexing - all provider reviews are indexable
+// (operator policy: impressions everywhere first, optimize what earns clicks).
 export const AFFILIATE_PROVIDER_IDS = [
   "altrx",
   "embody",
@@ -355,33 +356,27 @@ export const AFFILIATE_PROVIDER_IDS = [
   "maleexcel",
 ];
 
-// Non-monetizing articles targeting non-affiliate brands / competitive drug
-// head-terms (rank far down, don't convert). De-indexed to keep the site
-// focused on pages that pay. Reversible - remove a slug to re-index it.
+// Operator policy (Aug 2026): index everything that can honestly be indexed -
+// impressions across all verticals first, optimize the pages that earn clicks.
+// Only two kinds of pages stay in this list:
+//   1. Pages whose numbers we never verified (the honesty rule beats the
+//      index-everything rule) - flip them the day the data is verified.
+//   2. Slugs that 301 away, kept here only so a blob-saved copy never
+//      re-enters the sitemap.
 export const NOINDEX_ARTICLE_SLUGS = [
+  // Both carry detailed Noom plan prices ($17.42-$279/mo tiers) that were
+  // never operator-verified - the only reason they're still parked. The other
+  // Noom articles (best-noom-alternatives, noom-vs-glp1-providers) contain no
+  // price claims and were indexed under the Aug 2026 index-everything policy.
   "noom-weight-loss-review",
-  "best-noom-alternatives",
   "noom-subscription-cost",
-  "noom-vs-glp1-providers",
-  // ozempic-vs-wegovy-differences, mounjaro-vs-ozempic and zepbound-vs-wegovy
-  // were re-indexed (Aug 2026) after their GEO rewrites: GSC shows ~850
-  // zero-click impressions across those query clusters, and the articles now
-  // carry verified provider-price tables and affiliate funnels - the same
-  // operator logic that re-indexed tirzepatide-vs-semaglutide.
   // Consolidated: the generic "best telehealth providers" article 301s to the
   // ranking homepage, which owns that intent; the slug stays here so a
   // blob-saved copy never re-enters the sitemap.
   "best-weight-loss-telehealth-providers",
-  // tirzepatide-vs-semaglutide was re-indexed (Aug 2026): the molecule query
-  // is surging and our verified provider-price table is an answer the medical
-  // sites can't match - operator call to compete on it.
-  // Kept noindex: "ozempic alternatives" is already owned by the dedicated
-  // /ozempic-alternatives landing page - indexing this article too would split
-  // ranking signals for the same query (cannibalization).
-  "best-ozempic-alternatives",
-  // best-wegovy-alternatives, best-mounjaro-alternatives, and best-ro-alternatives
-  // were re-indexed: they're well-structured, commercial-intent articles that
-  // funnel to affiliate providers, with no competing landing page to cannibalize.
+  // best-ozempic-alternatives was re-indexed (Aug 2026) under the same policy;
+  // if /ozempic-alternatives (the landing page) slips for its query, suspect
+  // cannibalization between the two and consider re-parking this article.
 ];
 
 export interface SiteConfig {

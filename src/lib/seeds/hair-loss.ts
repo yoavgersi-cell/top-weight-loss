@@ -154,10 +154,9 @@ const providers: Provider[] = [
     ctaText: "Visit Site",
   },
   // Competitor brands (Hims, Keeps, Ro) - included only to power "X vs …"
-  // comparisons. They are NOT part of our ranking (see providerOrder below);
-  // Keeps/Ro review pages are de-indexed automatically (not in
-  // AFFILIATE_PROVIDER_IDS - Hims is listed there for TRT, so its review
-  // indexes, which is fine).
+  // comparisons. They are NOT part of our ranking (see providerOrder below).
+  // Their review pages index like everyone else's (Aug 2026 operator policy:
+  // impressions everywhere first) but stay honest about unverified data.
   {
     id: "hims",
     name: "Hims",

@@ -174,8 +174,8 @@ const providers: Provider[] = [
     ctaText: "Visit Site",
   },
   // Competitor brands - included only to power "<competitor> vs …" comparisons.
-  // They are NOT part of our ranking (see providerOrder) and their standalone
-  // review pages de-index automatically (not in AFFILIATE_PROVIDER_IDS).
+  // They are NOT part of our ranking (see providerOrder). Their review pages
+  // index like everyone else's (Aug 2026 operator policy).
   {
     id: "hone",
     name: "Hone Health",
