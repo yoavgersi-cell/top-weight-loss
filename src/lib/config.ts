@@ -274,14 +274,16 @@ export interface LandingPageData {
 
 // Stable fallback "last updated" date for schema when an item has no CMS
 // updatedAt. Avoids emitting today's date on every request (fake freshness).
-export const CONTENT_LAST_UPDATED = "2026-08-25";
+export const CONTENT_LAST_UPDATED = "2026-08-28";
 
 // Floor date for battle, review and article pages: the shared page templates
 // were last reworked on this date (quick answer, fit finder, accordions,
 // Trustpilot/Reddit carousels, schema enrichment), so no page built from them
 // can honestly claim an older "last updated". A per-item updatedAt still wins
-// when it is newer.
-export const TEMPLATES_LAST_UPDATED = "2026-08-25";
+// when it is newer. Bumped 2026-08-28: sources & methodology blocks, prose
+// readability pass, licensed-badge rollout and the index-everything policy all
+// landed site-wide since the previous floor.
+export const TEMPLATES_LAST_UPDATED = "2026-08-28";
 
 // ISO dates compare lexicographically - returns the newer of an item's own
 // updatedAt and the template-wide floor above.
