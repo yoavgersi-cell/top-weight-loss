@@ -316,6 +316,103 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
     takeaway:
       "The comment-level picture is mostly positive: “legit,” a named Florida pharmacy, fast delivery, responsive service, and the prices commenters actually paid on annual plans ($88-$99/month) sit right in the range of wellmedr's published 12-month rates ($59/month semaglutide, $99/month tirzepatide). The honest counterweight is one detailed account of being down only 1 pound after 8 weeks on tirzepatide despite good service - a fair reminder that response to GLP-1 medication varies by person, and no provider's service quality can guarantee results.",
   },
+  betterhelp: {
+    vertical: "online-therapy",
+    themes:
+      "Four comments on a shared review thread, one pattern: the anytime-messaging flexibility is what wins people over, and finding the right therapist can take a couple of tries - which is why the easy switching keeps coming up as the feature that matters.",
+    intro:
+      "BetterHelp threads on Reddit are full of people comparing notes before trying it - here's how real commenters describe the messaging, the matching, and the tries it takes to find the right fit.",
+    threads: [
+      {
+        author: "Opnes123",
+        age: "2y ago",
+        upvotes: 1,
+        body: [
+          "Reading your BetterHelp review makes me want to give it another try. I used it last year when I was going through a rough time, and it helped me build better habits around managing stress. My therapist would send me worksheets to work on between sessions, which gave me something tangible to focus on. To be honest, it did take a couple of tries to find someone I clicked with, but once I did, it felt like a real breakthrough.",
+        ],
+      },
+      {
+        author: "jeanvicheria",
+        age: "2y ago",
+        upvotes: 1,
+        body: [
+          "I never thought online therapy would work for me since I was used to in-person sessions, but I needed something more flexible. My schedule back then was all over the place (and it still is to this day), so having the option to message my therapist anytime was the thing that I needed.",
+        ],
+      },
+      {
+        author: "SoryusKozmos",
+        age: "2y ago",
+        upvotes: 1,
+        body: [
+          "I've been looking into online therapy and reading different BetterHelp reviews to see if it's a good fit. The ability to switch therapists easily is such a great feature because finding the right match can be tough. It's reassuring to hear that your sessions felt as personal as in-person therapy. I might give it a try, especially for the flexibility!",
+        ],
+      },
+      {
+        author: "Monosql",
+        age: "2y ago",
+        upvotes: 1,
+        body: [
+          "I've seen mixed BetterHelp reviews, so I wasn't sure what to expect. Your experience makes it sound like a great option for those of us who need therapy but struggle with scheduling in-person visits. The messaging feature between sessions seems like a game-changer!",
+        ],
+      },
+    ],
+    takeaway:
+      "The flexibility case dominates: messaging your therapist anytime and scheduling around a chaotic life is why these commenters chose online over in-person. The honest notes are just as useful - one commenter says outright it took a couple of tries to find a therapist they clicked with, and another opens with having seen mixed reviews. That's the real BetterHelp experience: matching is a process, and the easy-switching feature exists precisely because of it.",
+  },
+  talkspace: {
+    vertical: "online-therapy",
+    themes:
+      "Two working-patient comments: relaxed, responsive providers handling complex, overlapping diagnoses - with one honest gripe about the records department rather than the care itself.",
+    intro:
+      "Talkspace comments on Reddit tend to come from people already in treatment - here's how they describe their providers, in their own words.",
+    threads: [
+      {
+        author: "NeverJustaDream",
+        age: "1y ago",
+        upvotes: 1,
+        body: [
+          "It's been a decent experience for me so far. My provider is more relaxed (eg doesn't pressure you into scheduling at the end), and he's responsive. The records department is pretty bad though.",
+        ],
+      },
+      {
+        author: "Unlikely-Banana-2184",
+        age: "1y ago",
+        upvotes: 1,
+        body: [
+          "So far so good, my therapist just listens to me go through everything, grief, ptsd MDD, GAD, adhd all meshed together 😬",
+        ],
+      },
+    ],
+    takeaway:
+      "Small sample, consistent picture: providers described as relaxed and responsive, comfortable holding complex overlapping conditions in one treatment. The one complaint is administrative - a \"pretty bad\" records department - which matches the general telehealth pattern where logistics, not clinical care, draw the criticism.",
+  },
+  talkiatry: {
+    vertical: "online-therapy",
+    themes:
+      "Both comments tell the same two-sided story that Talkiatry's 2.5 Trustpilot average hints at: the psychiatrists themselves get praised, while billing and back-office - insurance verification, lost forms, unresponsive staff - draw serious, specific complaints.",
+    intro:
+      "Talkiatry threads on Reddit are unusually consistent: good words for the clinicians, hard words for the office behind them. We show both, because that split is the single most useful thing to know before booking.",
+    threads: [
+      {
+        author: "Happy-Sea-5011",
+        age: "4y ago",
+        upvotes: 4,
+        body: [
+          "I tried Talkiatry for anxiety and depression. The provider was good, but the office/billing staff are horrible. They said they took my insurance but didn't actually and I find out after two visits...each costing $300. Then I spent hours calling and emailing them which they reassured me they will escalate...only to find out I'm still responsible for the bill. So ridiculous....talks Talkiatry for giving an already anxious person more anxiety 😑",
+        ],
+      },
+      {
+        author: "KentDark",
+        age: "10mo ago",
+        upvotes: 1,
+        body: [
+          "I've had good experiences with the clinicians, but not the clinical staff. I've had forms sent to them for a short term disability claim about 6 times over the last month and the staff never always says they haven't received them via fax and email. So I decided to visit their office in Manhattan to get this resolved. At 1pm on a Friday, the office was dark, there was a giant stack of mail on the ground outside in the hallway, a couple of certified letters slid underneath the door, and two other stacks of mail on the other side of the door. In short, I can't say if anyone had been in office for days and certainly aren't reading their mail which are likely sensitive medical records, claims, or other forms.",
+        ],
+      },
+    ],
+    takeaway:
+      "The pattern is unmistakable and worth taking seriously: clinical care praised, back office slammed - one commenter hit a $300-per-visit insurance-verification failure, another watched disability paperwork disappear six times. The practical takeaway isn't to avoid Talkiatry; it's to protect yourself on logistics: get your insurance eligibility confirmed in writing before the first visit, and keep copies of everything you send them.",
+  },
 };
 
 // A minimal Snoo-style mark drawn inline (no external assets) - used to give
