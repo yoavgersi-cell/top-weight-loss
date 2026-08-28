@@ -651,8 +651,8 @@ export function onlineTherapySeed(base: SiteConfig): SiteConfig {
     siteName: "treatmentshub.com",
     hero: {
       ...base.hero,
-      backgroundImageUrl: "",
-      imageAlt: "",
+      backgroundImageUrl: "/online-therapy-hero.png",
+      imageAlt: "Illustration of an online therapy video session",
       updatedLabel: "Last Updated: August 2026",
       h1: "Best Online Therapy Platforms of 2026",
       h2: "Compare online therapy and psychiatry platforms honestly, side by side",
