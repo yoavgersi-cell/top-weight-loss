@@ -655,13 +655,13 @@ export function onlineTherapySeed(base: SiteConfig): SiteConfig {
     siteName: "treatmentshub.com",
     hero: {
       ...base.hero,
-      backgroundImageUrl: "/online-therapy-hero.png",
-      imageAlt: "Illustration of an online therapy video session",
+      backgroundImageUrl: "",
+      imageAlt: "",
       updatedLabel: "Last Updated: August 2026",
       h1: "Best Online Therapy Platforms of 2026",
-      h2: "Compare online therapy and psychiatry platforms honestly, side by side",
+      h2: "The top therapy & psychiatry platforms, compared honestly",
       description:
-        "Compare the leading online mental-health platforms - insurance acceptance, medication management, session formats and care models - to find the one that fits you. Where we haven't verified a platform's pricing, we say so instead of guessing. In crisis? Call or text 988 (US) now - it's free and open 24/7.",
+        "Insurance, medication management and session formats - side by side, so you can pick the right platform. In crisis? Call or text 988 (US), free and open 24/7.",
     },
     providers,
     sidebar: {
