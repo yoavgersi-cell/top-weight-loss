@@ -52,8 +52,8 @@ export function OnlineTherapyEditorialContent() {
       <p className="mb-4">
         Online therapy connects you with a licensed clinician by video, phone or messaging - no commute, wider choice
         of therapists, and formats that fit around work and family. The platforms differ far more than their ads
-        suggest: some take insurance and some don&rsquo;t, some offer psychiatry with medication management and some
-        are therapy-only, and one of the best-known names isn&rsquo;t primarily therapy at all. We compare them on
+        suggest: insurance coverage and copays vary sharply between them, some offer psychiatry with medication
+        management and some are therapy-only, and one of the best-known names isn&rsquo;t primarily therapy at all. We compare them on
         exactly those lines - with real published information and verified customer ratings, never invented numbers.
         Read our{" "}
         <Link href="/online-therapy/reviews" className="font-semibold text-[#0C4B75] hover:underline">
@@ -100,9 +100,10 @@ export function OnlineTherapyEditorialContent() {
         <Link href="/online-therapy/reviews/betterhelp" className="font-semibold text-[#0C4B75] hover:underline">
           BetterHelp
         </Link>{" "}
-        takes no insurance and offers a financial-aid questionnaire instead. Every insurance-friendly platform has a
-        free eligibility check - run two or three before paying anyone out of pocket; each takes minutes and answers
-        the question no comparison table can: what <em>you</em> will actually pay. Our{" "}
+        - long the insurance holdout - now accepts it too, with copays cited from around $23/session for covered
+        members and a financial-aid questionnaire for self-pay. Every platform has a free eligibility check - run two
+        or three before paying anyone out of pocket; each takes minutes and answers the question no comparison table
+        can: what <em>you</em> will actually pay. Our{" "}
         <Link href="/online-therapy/articles/online-therapy-that-takes-insurance" className="font-semibold text-[#0C4B75] hover:underline">
           insurance guide
         </Link>{" "}
@@ -112,9 +113,9 @@ export function OnlineTherapyEditorialContent() {
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">Which platform fits which person</h3>
       <ul className="mb-4 list-disc space-y-2 pl-6">
         <li>
-          <strong>You want talk therapy, started fast, no insurance paperwork:</strong>{" "}
+          <strong>You want talk therapy, started fast:</strong>{" "}
           <Link href="/online-therapy/reviews/betterhelp" className="font-semibold text-[#0C4B75] hover:underline">BetterHelp</Link>{" "}
-          - the largest network, video/phone/chat sessions, messaging in between, and easy therapist switching until the fit is right.
+          - the largest network, matching in as little as 2 days, video/phone/chat sessions with messaging in between, easy switching, and insurance now accepted (copays from ~$23/session for covered members).
         </li>
         <li>
           <strong>You have insurance, or might need medication too:</strong>{" "}

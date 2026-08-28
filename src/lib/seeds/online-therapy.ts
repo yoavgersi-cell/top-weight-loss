@@ -37,9 +37,9 @@ const providers: Provider[] = [
     logo: "/logos/betterhelplogo.png",
     smallLogo: "/logos/betterhelplogo.png",
     highlights: [
-      "Largest online therapy platform in the US",
-      "Weekly live sessions - video, phone or chat",
-      "Message your therapist between sessions",
+      "Now accepts insurance - copays from around $23/session for covered members",
+      "Match with a licensed therapist in as little as 2 days",
+      "Switch therapists or cancel anytime",
     ],
     // Direct site link until an affiliate link exists - CTAs must work.
     affiliateUrl: "https://www.betterhelp.com",
@@ -84,9 +84,9 @@ const providers: Provider[] = [
     logo: "/logos/talkspacelogo.png",
     smallLogo: "/logos/talkspacelogo.png",
     highlights: [
-      "Covered by many major insurance plans and EAPs",
+      "Most insured members pay a $0 copay (per Talkspace)",
       "Therapy and psychiatry (medication management) on one platform",
-      "Live sessions plus ongoing messaging",
+      "App-based care with 24/7 access - sessions plus messaging",
     ],
     // Direct site link until an affiliate link exists - CTAs must work.
     affiliateUrl: "https://www.talkspace.com",
@@ -214,9 +214,9 @@ const reviews: ReviewData[] = [
     slug: "betterhelp",
     providerId: "betterhelp",
     shortSummary:
-      "The largest subscription online-therapy platform: weekly live sessions plus ongoing messaging. Therapy only - no psychiatry - and insurance isn't accepted.",
+      "The largest online-therapy platform: weekly live sessions plus ongoing messaging, now with insurance accepted - copays from around $23/session for covered members. Therapy only - no psychiatry.",
     reviewIntro:
-      "BetterHelp is the biggest name in online therapy - a subscription platform that matches you with a licensed therapist for weekly live sessions (video, phone or live chat, your choice) plus messaging between sessions. BetterHelp itself reports 31,739 therapists on the platform and more than 6.6 million people helped - those are its own numbers, but the scale is real, and it shows in how fast matching and re-matching work. On Trustpilot it holds 3.9 across 9,652 reviews - solid, but the mixed band, not the stellar one; praise for accessibility and therapist quality runs alongside fit and billing complaints. It's talk therapy only: no psychiatry or medication management, and no insurance, though a financial-aid adjustment is available via questionnaire. Subscription cost varies by location, and we haven't verified current rates, so confirm pricing at signup. One more thing an honest review can't skip: in 2023 BetterHelp settled with the FTC over sharing user data with advertisers - the company has since updated its practices, but if data privacy is a top concern for you, read its current privacy policy before signing up.",
+      "BetterHelp is the biggest name in online therapy - a subscription platform that matches you with a licensed therapist for weekly live sessions (video, phone or live chat, your choice) plus messaging between sessions. BetterHelp itself reports 31,739 therapists on the platform and more than 6.6 million people helped - those are its own numbers, but the scale is real, and it shows in how fast matching and re-matching work. On Trustpilot it holds 3.9 across 9,652 reviews - solid, but the mixed band, not the stellar one; praise for accessibility and therapist quality runs alongside fit and billing complaints. It's talk therapy only - no psychiatry or medication management - but the old no-insurance knock is out of date: BetterHelp now accepts insurance, with copays cited from around $23/session for covered members, alongside self-pay subscriptions (commonly with a first-month discount) and a financial-aid questionnaire. Self-pay cost still varies by location and we haven't verified current rates, so confirm your number - covered or not - at signup. One more thing an honest review can't skip: in 2023 BetterHelp settled with the FTC over sharing user data with advertisers - the company has since updated its practices, but if data privacy is a top concern for you, read its current privacy policy before signing up.",
     keyFeatures: [
       "Weekly live session - video, phone or live chat",
       "Unlimited messaging with your therapist between sessions",
@@ -237,17 +237,17 @@ const reviews: ReviewData[] = [
     ],
     cons: [
       "No psychiatry or medication management",
-      "Doesn't accept insurance - subscription is out of pocket",
-      "Pricing varies by location and isn't published as a single rate",
+      "Insurance coverage and the ~$23/session copay are plan-specific - verify yours before counting on them",
+      "Self-pay pricing varies by location and isn't published as a single rate",
       "3.9 Trustpilot average (9,652 reviews) - solid but mixed, with fit and billing complaints alongside the praise",
       "2023 FTC settlement over past data-sharing practices - review the current privacy policy",
     ],
     bestFor: [
-      "People who want talk therapy started quickly, without insurance paperwork",
+      "People who want talk therapy started quickly - matching in as little as 2 days",
       "Anyone who values switching therapists easily until the fit is right",
     ],
     finalVerdict:
-      "BetterHelp is the default choice for subscription talk therapy for a reason: the network is huge, matching is fast, and the weekly-session-plus-messaging format suits how most people actually engage with therapy. The honest trade-offs: no medication management, no insurance, location-based pricing you should confirm at signup, and a privacy history worth reading up on. If you expect to need psychiatry or want insurance to pay, look at Talkspace or Talkiatry instead. And therapy platforms are not crisis services - if you're in crisis in the US, call or text 988.",
+      "BetterHelp is the default choice for subscription talk therapy for a reason: the network is huge, matching is fast, and the weekly-session-plus-messaging format suits how most people actually engage with therapy. It now takes insurance too - copays cited from around $23/session for covered members - which removes its old biggest weakness. The remaining honest trade-offs: no medication management, location/plan-based pricing you should confirm at signup, and a privacy history worth reading up on. If you expect to need psychiatry, Talkspace or Talkiatry fit better. And therapy platforms are not crisis services - if you're in crisis in the US, call or text 988.",
     trustBadges: ["Licensed therapists", "Video, phone & chat sessions", "Financial aid available"],
     updatedAt: UPDATED,
   },
@@ -257,7 +257,7 @@ const reviews: ReviewData[] = [
     shortSummary:
       "Online therapy and psychiatry with the broadest insurance story among the big subscription platforms - many major plans and EAPs cover it.",
     reviewIntro:
-      "Talkspace pairs the subscription-therapy format (live sessions plus messaging) with two things BetterHelp doesn't have: psychiatry with medication management, and insurance acceptance. Many major insurance plans and employee-assistance programs cover Talkspace, which can turn therapy from a significant monthly out-of-pocket cost into a copay - for eligible plans, that changes the affordability math entirely. It also carries the strongest verified customer rating in our online-therapy coverage: 4.4 on Trustpilot across 2,370 reviews (ahead of BetterHelp's 3.9). Coverage is plan-specific, so run its eligibility check with your insurance details before assuming anything. We haven't verified Talkspace's current self-pay rates, so check those on its site if you're paying out of pocket.",
+      "Talkspace pairs the subscription-therapy format (live sessions plus messaging) with two things BetterHelp doesn't have: psychiatry with medication management, and insurance acceptance. Many major insurance plans and employee-assistance programs cover Talkspace, which can turn therapy from a significant monthly out-of-pocket cost into a copay - for eligible plans, that changes the affordability math entirely. Talkspace says most insured members pay a $0 copay - its own claim, but one your eligibility check confirms or denies in minutes - and the app-based format means 24/7 access to your therapy room, not just session slots. It also carries the strongest verified customer rating in our online-therapy coverage: 4.4 on Trustpilot across 2,370 reviews (ahead of BetterHelp's 3.9). Coverage is plan-specific, so run its eligibility check with your insurance details before assuming anything. We haven't verified Talkspace's current self-pay rates, so check those on its site if you're paying out of pocket.",
     keyFeatures: [
       "Insurance coverage through many major plans and EAPs",
       "Therapy and psychiatry (medication management) on one platform",
@@ -382,9 +382,9 @@ const battles: BattleData[] = [
     description:
       "BetterHelp vs Talkspace: both offer subscription online therapy with live sessions and messaging, but they split hard on insurance and medication management. An honest comparison with no invented numbers.",
     intro:
-      "BetterHelp and Talkspace are the two defining platforms of online therapy, and the choice between them turns on two structural differences rather than vibes. BetterHelp is the larger network - fast matching, flexible session formats, easy switching - but it's talk therapy only and takes no insurance. Talkspace offers psychiatry with medication management alongside therapy, and many major insurance plans and EAPs cover it - which, for eligible plans, changes the entire affordability equation. We haven't verified either platform's current self-pay pricing, so where cost matters we tell you exactly what to check rather than quoting numbers.",
+      "BetterHelp and Talkspace are the two defining platforms of online therapy, and both now take insurance - BetterHelp with copays cited from around $23/session for covered members, Talkspace with broad plan and EAP coverage and, by its own claim, a $0 copay for most insured members. That leaves two real differences: scope of care - Talkspace offers psychiatry with medication management alongside therapy, BetterHelp is talk therapy only - and track record, where Talkspace's 4.4 on Trustpilot (2,370 reviews) leads BetterHelp's 3.9 (9,652). We haven't verified either platform's current self-pay pricing, so where cost matters we tell you exactly what to check rather than quoting numbers.",
     verdict:
-      "Talkspace wins on capability: therapy plus psychiatry on one platform, the strongest insurance story in subscription therapy - and now the better verified customer record too, at 4.4 on Trustpilot (2,370 reviews) against BetterHelp's 3.9 (9,652). If your plan or EAP covers it, the decision is basically made - therapy at copay-level cost with medication support available beats any out-of-pocket subscription. BetterHelp wins if insurance isn't in play and you want the biggest network with the fastest matching and easiest therapist switching for pure talk therapy. Check Talkspace's eligibility tool with your insurance details first; that one answer decides most cases. Neither platform is a crisis service - in the US, call or text 988.",
+      "Talkspace wins on capability and record: therapy plus psychiatry on one platform, broad plan and EAP coverage with a claimed $0 copay for most insured members, and the better verified rating - 4.4 on Trustpilot (2,370 reviews) against BetterHelp's 3.9 (9,652). BetterHelp has closed its old gap - it now takes insurance too, with copays cited from around $23/session - and still wins on network size, 2-day matching, video/phone/chat flexibility and easy switching for pure talk therapy. The practical move: run both eligibility checks with your insurance details and let your actual copays decide; if you may ever need medication management, Talkspace settles it. Neither platform is a crisis service - in the US, call or text 988.",
     verdictWinnerPoints: [
       "Many major insurance plans and EAPs cover it",
       "Psychiatry and medication management available",
@@ -393,7 +393,7 @@ const battles: BattleData[] = [
     verdictLoserPoints: [
       "Larger therapist network with faster matching",
       "Video, phone or chat sessions - your choice",
-      "No insurance and no psychiatry - out-of-pocket talk therapy only",
+      "Insurance accepted too (copays from ~$23/session) - but no psychiatry",
     ],
     winnerId: "talkspace",
     categories: [
@@ -401,10 +401,10 @@ const battles: BattleData[] = [
         name: "Insurance & Affordability",
         winner: "provider2",
         explanation:
-          "Talkspace is covered by many major insurance plans and employee-assistance programs; BetterHelp takes no insurance and offers only a financial-aid questionnaire. For anyone whose plan qualifies, Talkspace turns therapy into a copay while BetterHelp stays a full out-of-pocket subscription. Neither publishes one flat national rate, so verify your actual numbers on each site.",
+          "Both platforms now accept insurance, so this category is closer than it used to be. Talkspace still edges it: coverage through many major plans plus employer EAPs, and - by its own claim - a $0 copay for most insured members, against BetterHelp's cited copays from around $23/session. Both also serve self-pay (BetterHelp adds a financial-aid questionnaire). Coverage is plan-specific at both, so run both eligibility checks and let your actual numbers decide.",
         supportingPoints: [
-          "Insurance and EAP coverage (Talkspace)",
-          "No insurance accepted (BetterHelp)",
+          "Broad plans + EAPs; $0 copay for most insured members, per Talkspace",
+          "Copays cited from ~$23/session (BetterHelp)",
         ],
       },
       {
@@ -430,7 +430,7 @@ const battles: BattleData[] = [
     ],
     features: [
       { feature: "Care model", provider1Value: "Subscription talk therapy", provider2Value: "Subscription therapy + psychiatry", highlight: "provider2" },
-      { feature: "Insurance", provider1Value: "Not accepted", provider2Value: "Many major plans & EAPs", highlight: "provider2" },
+      { feature: "Insurance", provider1Value: "Accepted - copays from ~$23/session", provider2Value: "Many plans & EAPs - $0 copay for most (per Talkspace)", highlight: "provider2" },
       { feature: "Medication management", provider1Value: "No", provider2Value: "Yes (psychiatry)", highlight: "provider2" },
       { feature: "Live session formats", provider1Value: "Video, phone or chat", provider2Value: "Video (plans vary)", highlight: "provider1" },
       { feature: "Messaging between sessions", provider1Value: "Included", provider2Value: "Included", highlight: "both" },
@@ -522,7 +522,7 @@ const battles: BattleData[] = [
     verdictWinnerPoints: [
       "Licensed therapist and live sessions - actual treatment",
       "Video, phone or chat formats plus messaging",
-      "The right tool when something is genuinely weighing on you",
+      "Insurance accepted - copays from ~$23/session for covered members",
     ],
     verdictLoserPoints: [
       "Best-known daily meditation and sleep practice",
@@ -555,7 +555,7 @@ const battles: BattleData[] = [
         name: "Cost of Entry",
         winner: "provider1",
         explanation:
-          "An app subscription costs a fraction of a therapy subscription - we haven't verified current rates at either, but the category gap is structural. Headspace is the low-cost first step; BetterHelp's financial-aid questionnaire can lower its cost, and employer benefits can make Headspace free. Neither takes consumer insurance.",
+          "An app subscription costs a fraction of a therapy subscription - we haven't verified current rates at either, but the category gap is structural. Headspace is the low-cost first step; on the care side both now take insurance - BetterHelp with copays cited from around $23/session, Headspace via its therapy service's coverage check - and employer benefits can make Headspace free.",
         supportingPoints: [
           "App-level pricing (Headspace) - verify on site",
           "Financial aid available (BetterHelp)",
@@ -567,7 +567,7 @@ const battles: BattleData[] = [
       { feature: "Human clinician", provider1Value: "App is self-guided; therapy service has clinicians", provider2Value: "Yes - your matched therapist", highlight: "provider2" },
       { feature: "Best at", provider1Value: "Daily stress, sleep, focus practice", provider2Value: "Working through real problems", highlight: "none" },
       { feature: "Session formats", provider1Value: "App practice; therapy by video", provider2Value: "Video, phone or chat + messaging", highlight: "provider2" },
-      { feature: "Insurance", provider1Value: "Therapy service accepts insurance; app is subscription", provider2Value: "Not accepted", highlight: "provider1" },
+      { feature: "Insurance", provider1Value: "Therapy service accepts insurance; app is subscription", provider2Value: "Accepted - copays from ~$23/session", highlight: "both" },
       { feature: "Trustpilot", provider1Value: "1.5 (770 reviews)", provider2Value: "3.9 (9,652 reviews)", highlight: "provider2" },
       { feature: "Pricing", provider1Value: "App + therapy - verify on site", provider2Value: "Varies by location - verify at signup", highlight: "none" },
     ],
@@ -594,7 +594,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "Which platforms accept insurance?",
-        body: 'Two platforms in our coverage are built around insurance: <a href="/online-therapy/reviews/talkspace">Talkspace</a> - subscription therapy and psychiatry, covered by many major plans and employer EAPs - and <a href="/online-therapy/reviews/talkiatry">Talkiatry</a>, a psychiatry-first practice that is in-network with many major plans and bills per visit like a specialist. By contrast, <a href="/online-therapy/reviews/betterhelp">BetterHelp</a> takes no insurance at all (it offers a financial-aid questionnaire instead), and <a href="/online-therapy/reviews/headspace">Headspace</a> - best known for its meditation app - now offers online therapy that accepts insurance too, with a coverage check on its site.',
+        body: 'Two platforms in our coverage are built around insurance: <a href="/online-therapy/reviews/talkspace">Talkspace</a> - subscription therapy and psychiatry, covered by many major plans and employer EAPs - and <a href="/online-therapy/reviews/talkiatry">Talkiatry</a>, a psychiatry-first practice that is in-network with many major plans and bills per visit like a specialist. Even <a href="/online-therapy/reviews/betterhelp">BetterHelp</a>, long the holdout, now accepts insurance - with copays cited from around $23/session for covered members (plus a financial-aid questionnaire for self-pay) - and <a href="/online-therapy/reviews/headspace">Headspace</a> - best known for its meditation app - now offers online therapy that accepts insurance too, with a coverage check on its site.',
       },
       {
         heading: "How do I check if my plan covers a platform?",
@@ -700,7 +700,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "Does your insurance cover any of them?",
-        body: 'A covered platform at copay rates beats almost any out-of-pocket deal, so run the free eligibility checks at <a href="/online-therapy/reviews/talkspace">Talkspace</a> and <a href="/online-therapy/reviews/talkiatry">Talkiatry</a> before comparing further, and ask HR whether your benefits include EAP sessions or Headspace access. BetterHelp takes no insurance - its lever is a financial-aid questionnaire. Details in our <a href="/online-therapy/articles/online-therapy-that-takes-insurance">insurance guide</a>.',
+        body: 'A covered platform at copay rates beats almost any out-of-pocket deal, so run the free eligibility checks at <a href="/online-therapy/reviews/talkspace">Talkspace</a> and <a href="/online-therapy/reviews/talkiatry">Talkiatry</a> before comparing further, and ask HR whether your benefits include EAP sessions or Headspace access. BetterHelp now accepts insurance too (copays cited from ~$23/session), with a financial-aid questionnaire as the self-pay lever. Details in our <a href="/online-therapy/articles/online-therapy-that-takes-insurance">insurance guide</a>.',
       },
       {
         heading: "How do you want sessions to actually work?",
@@ -753,7 +753,7 @@ const faqs: FaqItem[] = [
   {
     question: "Does insurance cover online therapy?",
     answer:
-      "Often, but it's always plan-specific. Talkspace (therapy and psychiatry) and Talkiatry (psychiatry-first) are built around insurance billing - each has a free eligibility check that shows your actual coverage in minutes. BetterHelp doesn't accept insurance (it offers a financial-aid questionnaire instead), and Headspace's consumer app is a subscription, though some employer benefit packages include its care services. If nothing is covered, ask your insurer about out-of-network reimbursement via superbills.",
+      "Often, but it's always plan-specific. Talkspace (therapy and psychiatry) and Talkiatry (psychiatry-first) are built around insurance billing - each has a free eligibility check that shows your actual coverage in minutes. BetterHelp now accepts insurance as well, with copays cited from around $23/session for covered members, and Headspace's therapy service takes insurance too (the app itself is a subscription). If nothing is covered, ask your insurer about out-of-network reimbursement via superbills.",
   },
   {
     question: "Can online therapists prescribe medication?",

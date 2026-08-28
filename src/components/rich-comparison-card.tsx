@@ -1,7 +1,6 @@
 import { Check, ArrowUpRight, Star, ShieldCheck, BadgeCheck } from "lucide-react";
 import Link from "next/link";
 import { ProviderCta } from "./provider-cta";
-import { InsuranceBadge, hasInsuranceBadge } from "./insurance-badge";
 import type { ReviewData } from "@/lib/config";
 
 export interface RichCardProduct {
@@ -101,12 +100,9 @@ export function RichComparisonCard({
           <h3 className="mt-3.5 text-[15px] font-bold leading-snug text-[#191919] sm:mt-4 sm:text-[19px]">{product.tagline}</h3>
         )}
 
-        {/* Trust pills - cap at 2 on mobile so the card doesn't stack into a list.
-            The insurance badge leads the row: it answers the first question
-            buyers ask, so it renders on mobile even when pills are capped. */}
-        {(pills.length > 0 || hasInsuranceBadge(product.id)) && (
+        {/* Trust pills - cap at 2 on mobile so the card doesn't stack into a list */}
+        {pills.length > 0 && (
           <div className="mt-2.5 flex flex-wrap gap-1.5 sm:mt-3 sm:gap-2">
-            <InsuranceBadge providerId={product.id} />
             {pills.map((p, i) => (
               <span
                 key={p}
