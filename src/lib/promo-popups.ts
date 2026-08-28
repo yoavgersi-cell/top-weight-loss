@@ -39,7 +39,7 @@ export const PROMO_POPUPS: PromoPopupSpec[] = [
   {
     providerId: "embody",
     providerName: "Embody",
-    image: "/embodypopup.png",
+    image: "/embodypopup.webp",
     alt: "Embody - GLP-1 from $69/mo. Start now and save.",
     priority: 2,
     timer: {
@@ -51,7 +51,7 @@ export const PROMO_POPUPS: PromoPopupSpec[] = [
       background: "rgb(2,39,43)",
     },
     desktop: {
-      image: "/embodypopupdesktop.png",
+      image: "/embodypopupdesktop.webp",
       timer: {
         startSeconds: 5 * 86400 + 21 * 3600 + 52 * 60 + 28,
         boxes: [{ left: "5.5%" }, { left: "13.7%" }, { left: "21.8%" }, { left: "29.9%" }],
@@ -66,7 +66,7 @@ export const PROMO_POPUPS: PromoPopupSpec[] = [
   {
     providerId: "trimrx",
     providerName: "TrimRx",
-    image: "/trimrxpopup.png",
+    image: "/trimrxpopup.webp",
     alt: "TrimRx - $140 off all weight loss plans, GLP-1 plans starting at $149. Start now and save.",
     priority: 1,
   },

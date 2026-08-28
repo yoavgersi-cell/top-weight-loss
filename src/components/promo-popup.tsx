@@ -22,6 +22,11 @@ export function PromoPopup({
   href: string;
   position?: number;
 }) {
+  // `open` mounts the DOM only when the popup is due - before that nothing
+  // renders, so the creatives don't download during page load (an <img> that
+  // is merely opacity-0 or display:none still downloads and hurts LCP).
+  // `visible` flips one frame later to play the fade/scale-in transition.
+  const [open, setOpen] = useState(false);
   const [visible, setVisible] = useState(false);
   const [closed, setClosed] = useState(false);
   const [secs, setSecs] = useState(spec.timer?.startSeconds ?? spec.desktop?.timer?.startSeconds ?? 0);
@@ -34,7 +39,7 @@ export function PromoPopup({
       // sessionStorage unavailable - show normally.
     }
     const t = setTimeout(() => {
-      setVisible(true);
+      setOpen(true);
       try {
         sessionStorage.setItem("promoPopupSeen", "1");
       } catch {
@@ -45,12 +50,18 @@ export function PromoPopup({
   }, []);
 
   useEffect(() => {
+    if (!open) return;
+    const raf = requestAnimationFrame(() => setVisible(true));
+    return () => cancelAnimationFrame(raf);
+  }, [open]);
+
+  useEffect(() => {
     if (!visible || (!spec.timer && !spec.desktop?.timer)) return;
     const i = setInterval(() => setSecs((s) => (s > 0 ? s - 1 : s)), 1000);
     return () => clearInterval(i);
   }, [visible, spec.timer, spec.desktop?.timer]);
 
-  if (closed) return null;
+  if (closed || !open) return null;
 
   const countdown = (startAdjusted: number) => [
     pad(Math.floor(startAdjusted / 86400)),
