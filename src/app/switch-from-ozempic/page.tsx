@@ -142,7 +142,7 @@ export default async function SwitchFromOzempicPage() {
           <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
             The short answer
           </p>
-          <p className="text-[15.5px] leading-[1.85] text-gray-700">
+          <p className="text-[15.5px] leading-[1.85] text-gray-800">
             Ozempic and Wegovy are <strong className="text-[#191919]">semaglutide</strong>; Zepbound
             and Mounjaro are <strong className="text-[#191919]">tirzepatide</strong>. Licensed
             telehealth providers prescribe compounded versions of the same molecules for{" "}

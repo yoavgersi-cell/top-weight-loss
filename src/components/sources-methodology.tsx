@@ -58,7 +58,7 @@ export function SourcesMethodology({
       </div>
 
       <div className="px-6 py-6 sm:px-7">
-        <p className="mb-6 max-w-[760px] text-[14px] leading-relaxed text-gray-600">
+        <p className="mb-6 max-w-[760px] text-[14px] leading-relaxed text-gray-700">
           We built this {kind} of {headingLabel}{" "}from{" "}
           {kind === "review" ? "the provider's" : "each provider's"} own published pricing, plans
           and policies, cross-checked against regulatory and peer-reviewed medical references, and

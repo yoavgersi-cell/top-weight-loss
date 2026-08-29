@@ -186,7 +186,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
         {/* Verdict */}
         <div className="mb-12 rounded-2xl border border-[#0C4B75]/20 bg-white p-6 shadow-sm sm:p-8">
           <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">Our verdict</p>
-          <p className="text-[16px] leading-[1.85] text-gray-700">{trio.verdict}</p>
+          <p className="text-[16px] leading-[1.85] text-gray-800">{trio.verdict}</p>
         </div>
 
         {/* FAQs (visible twin of the FAQPage schema) */}

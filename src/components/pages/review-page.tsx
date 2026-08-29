@@ -617,7 +617,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         {review.finalVerdict && (
           <div className="mb-8 rounded-2xl border border-[#0C4B75]/20 bg-white p-5 shadow-sm sm:p-6">
             <p className="mb-2 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">The bottom line</p>
-            <ReadableProse text={review.finalVerdict} paragraphClassName="text-[15px] leading-[1.8] text-gray-700" />
+            <ReadableProse text={review.finalVerdict} paragraphClassName="text-[15px] leading-[1.8] text-gray-800" />
           </div>
         )}
 
@@ -669,13 +669,13 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               </p>
               <ul className="grid gap-2.5 sm:grid-cols-2">
                 {legit.signals.map((signal) => (
-                  <li key={signal} className="flex items-start gap-2.5 text-[14px] text-gray-700">
+                  <li key={signal} className="flex items-start gap-2.5 text-[14px] text-gray-800">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" strokeWidth={2} />
                     {signal}
                   </li>
                 ))}
                 {provider.trustpilotRating && provider.trustpilotReviewCount && (
-                  <li className="flex items-start gap-2.5 text-[14px] text-gray-700">
+                  <li className="flex items-start gap-2.5 text-[14px] text-gray-800">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" strokeWidth={2} />
                     Rated {provider.trustpilotRating}/5 across {provider.trustpilotReviewCount} Trustpilot reviews
                   </li>
@@ -695,7 +695,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           <Section title="Key Features">
             <ul className="space-y-2.5">
               {review.keyFeatures.map((feature) => (
-                <li key={feature} className="flex items-start gap-2.5 text-[14px] text-gray-700">
+                <li key={feature} className="flex items-start gap-2.5 text-[14px] text-gray-800">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" strokeWidth={2} />
                   {feature}
                 </li>
@@ -706,7 +706,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           <Section title="Treatment Options">
             <ul className="space-y-2.5">
               {review.treatmentOptions.map((option) => (
-                <li key={option} className="flex items-start gap-2.5 text-[14px] text-gray-700">
+                <li key={option} className="flex items-start gap-2.5 text-[14px] text-gray-800">
                   <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0C4B75]" />
                   {option}
                 </li>
@@ -801,7 +801,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               </h3>
               <ul className="space-y-2.5">
                 {review.pros.map((pro) => (
-                  <li key={pro} className="flex items-start gap-2.5 text-[14px] text-gray-700">
+                  <li key={pro} className="flex items-start gap-2.5 text-[14px] text-gray-800">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" strokeWidth={2} />
                     {pro}
                   </li>
@@ -817,7 +817,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               </h3>
               <ul className="space-y-2.5">
                 {review.cons.map((con) => (
-                  <li key={con} className="flex items-start gap-2.5 text-[14px] text-gray-700">
+                  <li key={con} className="flex items-start gap-2.5 text-[14px] text-gray-800">
                     <X className="mt-0.5 h-4 w-4 shrink-0 text-red-400" strokeWidth={2} />
                     {con}
                   </li>
@@ -852,7 +852,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         <Section title="Who It's Best For">
           <ul className="space-y-2.5">
             {review.bestFor.map((item) => (
-              <li key={item} className="flex items-start gap-2.5 text-[14px] text-gray-700">
+              <li key={item} className="flex items-start gap-2.5 text-[14px] text-gray-800">
                 <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-[#0C4B75]" strokeWidth={2} />
                 {item}
               </li>
@@ -886,7 +886,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 What Reddit says about {provider.name}
               </h2>
             </div>
-            <p className="mb-5 text-[14.5px] leading-relaxed text-gray-600">
+            <p className="mb-5 text-[14.5px] leading-relaxed text-gray-700">
               {REVIEW_COMMUNITY_FEEDBACK[slug].intro}
             </p>
 
@@ -955,7 +955,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                             <span className="flex h-[18px] w-[18px] items-center justify-center rounded-full bg-gray-300 text-[9px] font-bold uppercase text-white">
                               {r.author.charAt(0)}
                             </span>
-                            <span className="font-bold text-gray-700">u/{r.author}</span>
+                            <span className="font-bold text-gray-800">u/{r.author}</span>
                           </div>
                           <p className="text-[13px] leading-[1.65] text-gray-600">{r.body}</p>
                         </div>
@@ -966,7 +966,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               ))}
             </div>
 
-            <p className="mt-5 border-t border-gray-100 pt-4 text-[14px] leading-relaxed text-gray-600">
+            <p className="mt-5 border-t border-gray-100 pt-4 text-[14px] leading-relaxed text-gray-700">
               <span className="font-semibold text-[#191919]">The takeaway: </span>
               {REVIEW_COMMUNITY_FEEDBACK[slug].takeaway}
             </p>

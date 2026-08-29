@@ -679,7 +679,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   </ul>
                 </div>
               </div>
-              <p className="mt-4 border-t border-gray-100 pt-3.5 text-[14px] text-gray-700">
+              <p className="mt-4 border-t border-gray-100 pt-3.5 text-[14px] text-gray-800">
                 <span className="font-bold text-[#191919]">
                   Had to pick one for most people? {verdictWinner.name}.
                 </span>{" "}
@@ -830,7 +830,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
                 <ul className="mb-5 space-y-2">
                   {provider.highlights.slice(0, 3).map((h, hi) => (
-                    <li key={hi} className="flex items-start gap-2 text-[13px] text-gray-700">
+                    <li key={hi} className="flex items-start gap-2 text-[13px] text-gray-800">
                       <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2} />
                       {h}
                     </li>
@@ -1164,7 +1164,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                               </p>
                               <ul className="space-y-2">
                                 {pros.map((pt, i) => (
-                                  <li key={i} className="flex items-start gap-2 text-[13.5px] leading-[1.55] text-gray-700">
+                                  <li key={i} className="flex items-start gap-2 text-[13.5px] leading-[1.55] text-gray-800">
                                     <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2.5} />
                                     {pt}
                                   </li>
@@ -1174,7 +1174,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                           )}
                           {cons.length > 0 && (
                             <div className="rounded-xl border border-gray-200 bg-gray-50/60 p-5">
-                              <p className="mb-3 text-[14px] font-bold text-gray-700">
+                              <p className="mb-3 text-[14px] font-bold text-gray-800">
                                 Worth keeping in mind
                               </p>
                               <ul className="space-y-2">

@@ -481,7 +481,7 @@ function ThreadCard({
 
       <div className="space-y-2">
         {thread.body.slice(0, 2).map((p, i) => (
-          <p key={i} className="text-[13px] leading-relaxed text-gray-700">
+          <p key={i} className="text-[13px] leading-relaxed text-gray-800">
             {p}
           </p>
         ))}
@@ -490,7 +490,7 @@ function ThreadCard({
       {thread.replies && thread.replies.length > 0 && (
         <div className="mt-3 border-l-2 border-gray-200 pl-3">
           <p className="text-[11.5px] font-semibold text-gray-500">u/{thread.replies[0].author}</p>
-          <p className="mt-0.5 text-[12.5px] leading-relaxed text-gray-600">{thread.replies[0].body}</p>
+          <p className="mt-0.5 text-[12.5px] leading-relaxed text-gray-700">{thread.replies[0].body}</p>
         </div>
       )}
 
@@ -543,7 +543,7 @@ export function RedditThreadCarousel({
         <RedditMark className="h-7 w-7 shrink-0" />
         <h2 className="text-[20px] font-bold text-[#191919]">What Reddit says about {names}</h2>
       </div>
-      <p className="mb-5 max-w-[640px] text-[14.5px] leading-relaxed text-gray-600">
+      <p className="mb-5 max-w-[640px] text-[14.5px] leading-relaxed text-gray-700">
         Excerpts from real public Reddit posts and comments - the strengths and the caveats, in
         users&rsquo; own words.
         {withData.length < providers.length &&

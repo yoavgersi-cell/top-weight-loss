@@ -36,7 +36,7 @@ function ComparisonTable({ colA, colB, rows }: { colA: string; colB: string; row
 // numbers - with links to the reviews and comparison and a clear disclaimer.
 export function TrtEditorialContent() {
   return (
-    <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-700">
+    <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-800">
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">The Best Online TRT Providers, Compared</h2>
       <p className="mb-4">
         Testosterone replacement therapy (TRT) has moved online: reputable telehealth clinics start with lab work,

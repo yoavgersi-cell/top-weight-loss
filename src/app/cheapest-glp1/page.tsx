@@ -119,7 +119,7 @@ export default async function CheapestGlp1Page() {
           <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
             The short answer
           </p>
-          <p className="text-[15.5px] leading-[1.85] text-gray-700">
+          <p className="text-[15.5px] leading-[1.85] text-gray-800">
             The cheapest GLP-1 we track is{" "}
             <Link href="/weight-loss/reviews/wellmedr" className="font-semibold text-[#0C4B75] hover:underline">wellmedr</Link>{" "}
             - compounded semaglutide at <strong className="text-[#191919]">$59/month</strong> on a
@@ -244,8 +244,8 @@ export default async function CheapestGlp1Page() {
                 ].map(([label, sema, tirz], i) => (
                   <tr key={i} className="border-b border-gray-100 align-top last:border-0">
                     <td className="px-4 py-3.5 text-[12.5px] font-semibold text-gray-500">{label}</td>
-                    <td className="px-4 py-3.5 text-gray-700">{sema}</td>
-                    <td className="px-4 py-3.5 text-gray-700">{tirz}</td>
+                    <td className="px-4 py-3.5 text-gray-800">{sema}</td>
+                    <td className="px-4 py-3.5 text-gray-800">{tirz}</td>
                   </tr>
                 ))}
               </tbody>

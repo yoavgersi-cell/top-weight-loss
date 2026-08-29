@@ -7,7 +7,7 @@ interface LandingEditorialProps {
 
 export function LandingEditorial({ sections }: LandingEditorialProps) {
   return (
-    <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-700">
+    <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-800">
       {sections.map((section, i) => (
         <div key={i}>
           {i > 0 && <hr className="mb-8 border-gray-200" />}

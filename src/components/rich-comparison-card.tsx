@@ -153,7 +153,7 @@ export function RichComparisonCard({
             {facts.length > 0 && (
               <ul className="grid gap-x-5 gap-y-1.5 sm:grid-cols-2 sm:gap-y-2">
                 {facts.map((f) => (
-                  <li key={f} className="flex items-start gap-2 text-[12.5px] leading-snug text-gray-700 sm:text-[13px]">
+                  <li key={f} className="flex items-start gap-2 text-[12.5px] leading-snug text-gray-800 sm:text-[13px]">
                     <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2.5} />
                     <span>{f}</span>
                   </li>
@@ -198,7 +198,7 @@ export function RichComparisonCard({
               {product.trustpilotRating && (
                 <div className="mt-0.5 flex items-center justify-center gap-1.5 border-t border-gray-200 pt-2 text-[11.5px] text-gray-500">
                   <Star className="h-3.5 w-3.5 fill-[#00B67A] text-[#00B67A]" strokeWidth={0} />
-                  <span className="font-bold text-gray-700">{product.trustpilotRating}</span>
+                  <span className="font-bold text-gray-800">{product.trustpilotRating}</span>
                   <span>Trustpilot</span>
                   {product.trustpilotReviewCount && <span className="text-gray-400">({product.trustpilotReviewCount})</span>}
                 </div>
@@ -210,7 +210,7 @@ export function RichComparisonCard({
         {/* Intro paragraph + read more */}
         {intro && (
           <div className="mt-4 border-t border-gray-100 pt-3.5 sm:mt-5 sm:pt-4">
-            <p className="text-[12.5px] leading-relaxed text-gray-600 line-clamp-2 sm:text-[13.5px] sm:line-clamp-3">{intro}</p>
+            <p className="text-[12.5px] leading-relaxed text-gray-700 line-clamp-2 sm:text-[13.5px] sm:line-clamp-3">{intro}</p>
             <Link
               href={reviewHref}
               className="mt-1.5 inline-flex items-center gap-1 text-[12.5px] font-semibold text-[#0C4B75] hover:underline sm:text-[13px]"

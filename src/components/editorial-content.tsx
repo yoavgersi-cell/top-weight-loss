@@ -43,7 +43,7 @@ function ComparisonTable({ colA, colB, rows }: { colA: string; colB: string; row
 
 export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
   return (
-    <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-700">
+    <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-800">
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">
         The Best Weight Loss Injections and Programs, Compared
       </h2>

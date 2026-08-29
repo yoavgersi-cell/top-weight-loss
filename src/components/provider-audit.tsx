@@ -46,7 +46,7 @@ export function ProviderAudit({
               <dt className="text-[11.5px] font-bold uppercase tracking-[0.05em] text-gray-400">
                 {row.label}
               </dt>
-              <dd className="text-[14px] leading-[1.6] text-gray-700">
+              <dd className="text-[14px] leading-[1.6] text-gray-800">
                 <BoldKeyFacts text={row.value} />
               </dd>
             </div>

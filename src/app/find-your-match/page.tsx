@@ -532,7 +532,7 @@ export default function FindYourMatchPage() {
                       className={`flex w-full items-center rounded-xl border-[1.5px] px-4 py-2.5 text-left text-[16px] font-medium transition-all duration-200 sm:px-5 sm:py-3 sm:text-[17px] active:scale-[0.99] ${
                         isSelected
                           ? "border-[#0C4B75] bg-[#0C4B75]/[0.04] text-[#191919] shadow-sm"
-                          : "border-gray-200 bg-[#fafbfc] text-gray-700"
+                          : "border-gray-200 bg-[#fafbfc] text-gray-800"
                       }`}
                     >
                       <span
@@ -608,7 +608,7 @@ function StatePickerInline({
           onChange={(e) => { setSearch(e.target.value); setIsOpen(true); }}
           onFocus={() => setIsOpen(true)}
           className={`w-full rounded-xl border py-2.5 pl-10 pr-4 text-[14px] placeholder-gray-400 focus:border-[#0C4B75] focus:bg-white focus:outline-none sm:py-3 sm:text-[15px] ${
-            selected && !search ? "border-[#0C4B75] bg-[#0C4B75]/5 text-[#0C4B75] font-medium" : "border-gray-200 bg-[#fafbfc] text-gray-700"
+            selected && !search ? "border-[#0C4B75] bg-[#0C4B75]/5 text-[#0C4B75] font-medium" : "border-gray-200 bg-[#fafbfc] text-gray-800"
           }`}
         />
       </div>

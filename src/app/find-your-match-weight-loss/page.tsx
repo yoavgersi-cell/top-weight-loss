@@ -489,7 +489,7 @@ function ChatStatePicker({
             onChange={(e) => { setSearch(e.target.value); setSelected(null); }}
             onFocus={() => { if (selected) { setSearch(""); setSelected(null); } }}
             className={`w-full rounded-full border-2 bg-white py-3.5 pl-11 pr-4 text-[15px] focus:outline-none sm:text-[16px] ${
-              selected ? "border-[#0C4B75] text-[#0C4B75] font-medium" : "border-[#0C4B75]/30 text-gray-700 focus:border-[#0C4B75]"
+              selected ? "border-[#0C4B75] text-[#0C4B75] font-medium" : "border-[#0C4B75]/30 text-gray-800 focus:border-[#0C4B75]"
             }`}
           />
         </div>
@@ -510,7 +510,7 @@ function ChatStatePicker({
               <button
                 key={opt.value}
                 onClick={() => { setSelected(opt); setSearch(""); }}
-                className="flex w-full items-center gap-2 border-b border-gray-100 px-5 py-2.5 text-left text-[15px] text-gray-700 transition-colors last:border-0 hover:bg-[#0C4B75]/5 hover:text-[#0C4B75]"
+                className="flex w-full items-center gap-2 border-b border-gray-100 px-5 py-2.5 text-left text-[15px] text-gray-800 transition-colors last:border-0 hover:bg-[#0C4B75]/5 hover:text-[#0C4B75]"
               >
                 {opt.label}
               </button>

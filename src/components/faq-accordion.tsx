@@ -38,7 +38,7 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
               />
             </button>
             {openIndex === index && (
-              <div className="pb-5 text-[16px] leading-[1.7] text-gray-600">
+              <div className="pb-5 text-[16px] leading-[1.7] text-gray-800">
                 {item.answer}
               </div>
             )}

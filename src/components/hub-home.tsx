@@ -247,7 +247,7 @@ function ProviderMiniCard({
       {provider.trustpilotRating ? (
         <div className="mt-3 flex items-center gap-1.5 text-[12.5px] text-gray-500">
           <Star className="h-3.5 w-3.5 fill-[#00B67A] text-[#00B67A]" strokeWidth={0} />
-          <span className="font-bold text-gray-700">{provider.trustpilotRating}</span>
+          <span className="font-bold text-gray-800">{provider.trustpilotRating}</span>
           <span>on Trustpilot</span>
           {provider.trustpilotReviewCount && <span className="text-gray-400">({provider.trustpilotReviewCount})</span>}
         </div>
@@ -260,7 +260,7 @@ function ProviderMiniCard({
 
       <ul className="mt-3 space-y-1.5">
         {highlights.map((h) => (
-          <li key={h} className="flex items-start gap-2 text-[13px] leading-snug text-gray-700">
+          <li key={h} className="flex items-start gap-2 text-[13px] leading-snug text-gray-800">
             <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2.5} />
             <span className="line-clamp-2">{h}</span>
           </li>
@@ -334,7 +334,7 @@ export async function HubHome() {
           <h1 className="mx-auto max-w-[950px] text-[36px] font-extrabold leading-[1.06] tracking-[-0.025em] text-[#111] sm:text-[62px]">
             Compare the Best Health &amp; Wellness Services for Your Needs
           </h1>
-          <p className="mx-auto mt-6 max-w-[680px] text-[16.5px] leading-relaxed text-gray-600 sm:mt-8 sm:text-[21px]">
+          <p className="mx-auto mt-6 max-w-[680px] text-[16.5px] leading-relaxed text-gray-700 sm:mt-8 sm:text-[21px]">
             Independent rankings across weight loss, hair growth, TRT, HRT, hearing aids and online
             therapy - real published prices and verified customer reviews.
           </p>
@@ -391,7 +391,7 @@ export async function HubHome() {
                       <Link
                         key={l.href}
                         href={l.href}
-                        className="group inline-flex items-center gap-2 text-[14.5px] font-medium text-gray-700 hover:text-[#0C4B75]"
+                        className="group inline-flex items-center gap-2 text-[14.5px] font-medium text-gray-800 hover:text-[#0C4B75]"
                       >
                         {l.label}
                         <ArrowRight
