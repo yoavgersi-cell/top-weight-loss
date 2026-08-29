@@ -300,7 +300,7 @@ export default function AdminPage() {
               className={`flex-1 rounded-md px-4 py-2 text-sm font-medium transition-colors ${
                 activeTab === tab.key
                   ? "bg-white text-[#191919] shadow-sm"
-                  : "text-gray-500 hover:text-gray-700"
+                  : "text-gray-500 hover:text-gray-800"
               }`}
             >
               {tab.label}
@@ -361,7 +361,7 @@ export default function AdminPage() {
                       A full-screen mobile popup with this provider&apos;s creative, shown once per session on its comparison
                       and review pages. When two providers on a page both have a popup, the higher <strong>priority</strong> wins.
                     </p>
-                    <label className="mb-3 flex items-center gap-2 text-sm font-medium text-gray-700">
+                    <label className="mb-3 flex items-center gap-2 text-sm font-medium text-gray-800">
                       <input
                         type="checkbox"
                         checked={provider.promoPopup?.enabled ?? false}
@@ -1372,7 +1372,7 @@ export default function AdminPage() {
                                 updateLP({ editorialSections: sections });
                               }}
                               rows={3}
-                              className="w-full rounded border px-3 py-2 text-sm text-gray-700 focus:border-[#0C4B75] focus:outline-none"
+                              className="w-full rounded border px-3 py-2 text-sm text-gray-800 focus:border-[#0C4B75] focus:outline-none"
                             />
                           </div>
                           <div className="mt-2">
@@ -1386,7 +1386,7 @@ export default function AdminPage() {
                                 updateLP({ editorialSections: sections });
                               }}
                               rows={2}
-                              className="w-full rounded border px-3 py-2 text-sm text-gray-700 focus:border-[#0C4B75] focus:outline-none"
+                              className="w-full rounded border px-3 py-2 text-sm text-gray-800 focus:border-[#0C4B75] focus:outline-none"
                             />
                           </div>
                         </div>
@@ -1753,7 +1753,7 @@ export default function AdminPage() {
                       }}
                       rows={2}
                       placeholder="Review text..."
-                      className="mb-2 w-full rounded border px-3 py-2 text-sm text-gray-700 focus:border-[#0C4B75] focus:outline-none"
+                      className="mb-2 w-full rounded border px-3 py-2 text-sm text-gray-800 focus:border-[#0C4B75] focus:outline-none"
                     />
                     <div className="flex gap-2">
                       <input

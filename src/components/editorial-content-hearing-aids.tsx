@@ -38,7 +38,7 @@ function ComparisonTable({ colA, colB, rows }: { colA: string; colB: string; row
 // professional note.
 export function HearingAidsEditorialContent() {
   return (
-    <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-700">
+    <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-800">
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">OTC Hearing Aids You Can Order Online, Compared</h2>
       <p className="mb-4">
         Since the FDA created the over-the-counter hearing aid category, adults with perceived mild-to-moderate

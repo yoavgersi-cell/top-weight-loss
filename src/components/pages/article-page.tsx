@@ -392,7 +392,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
           {/* Direct answer up top (featured-snippet target) - code-injected so
               it also covers articles whose body lives in the CMS blob. */}
           {ctx.vertical === "weight-loss" && ARTICLE_QUICK_ANSWERS[slug] && (
-            <div className="article-body mb-8 text-[16px] leading-[1.75] text-gray-600">
+            <div className="article-body mb-8 text-[16px] leading-[1.75] text-gray-800">
               <div className="qa">
                 <strong>The quick answer</strong>
                 {ARTICLE_QUICK_ANSWERS[slug]}
@@ -429,7 +429,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                   {/* div (not p) so author HTML can include block elements -
                       lists, tables, callouts - styled via .article-body css */}
                   <div
-                    className="article-body text-[16px] leading-[1.75] text-gray-600 [&_a]:text-[#0C4B75] [&_a]:font-medium [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-[#093d61]"
+                    className="article-body text-[16px] leading-[1.75] text-gray-800 [&_a]:text-[#0C4B75] [&_a]:font-medium [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-[#093d61]"
                     dangerouslySetInnerHTML={{ __html: enhanceArticleHtml(section.body) }}
                   />
                 </section>
@@ -481,13 +481,13 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                         <h3 className="mb-3 text-[18px] font-bold leading-tight text-[#0C4B75] sm:text-[20px]">
                           What To Know Before Starting GLP-1 Treatment
                         </h3>
-                        <p className="mb-3 text-[16px] leading-[1.75] text-gray-600">
+                        <p className="mb-3 text-[16px] leading-[1.75] text-gray-800">
                           Before starting GLP-1 treatment, it&apos;s important to understand a few key things. These medications require a prescription from a licensed clinician and aren&apos;t suitable for everyone. Some people may experience side effects, especially during the first few weeks as the body adjusts.
                         </p>
-                        <p className="mb-3 text-[16px] leading-[1.75] text-gray-600">
+                        <p className="mb-3 text-[16px] leading-[1.75] text-gray-800">
                           GLP-1s also tend to work best when combined with basic lifestyle habits like balanced nutrition and regular physical activity.
                         </p>
-                        <p className="text-[16px] leading-[1.75] text-gray-600">
+                        <p className="text-[16px] leading-[1.75] text-gray-800">
                           That&apos;s why choosing a provider that offers proper medical screening and ongoing follow-up support is essential for both safety and long-term success.
                         </p>
                       </div>

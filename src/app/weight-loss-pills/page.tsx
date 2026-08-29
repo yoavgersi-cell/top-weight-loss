@@ -138,7 +138,7 @@ export default async function WeightLossPillsPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-[900px] px-4 py-10 text-[16px] leading-[1.75] text-gray-700 sm:px-6">
+      <div className="mx-auto max-w-[900px] px-4 py-10 text-[16px] leading-[1.75] text-gray-800 sm:px-6">
         {/* Do they work */}
         <section className="mb-12">
           <h2 className="mb-4 text-[24px] font-bold text-[#191919]">Do weight loss pills work?</h2>

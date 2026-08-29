@@ -182,7 +182,7 @@ export default function StatisticsPage() {
               According to FDA-approved prescribing criteria, GLP-1 weight loss medications
               are indicated for adults with:
             </p>
-            <ul className="mb-4 space-y-2 text-[15px] text-gray-700">
+            <ul className="mb-4 space-y-2 text-[15px] text-gray-800">
               <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0C4B75]" />BMI ≥ 30 (obesity)</li>
               <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0C4B75]" />BMI ≥ 27 with at least one weight-related condition (type 2 diabetes, hypertension, high cholesterol, sleep apnea)</li>
             </ul>

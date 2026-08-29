@@ -113,7 +113,7 @@ export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
                 {provider.name}
               </h2>
 
-              <p className="mt-2 text-sm leading-relaxed text-gray-600">
+              <p className="mt-2 text-sm leading-relaxed text-gray-700">
                 {review.shortSummary}
               </p>
 

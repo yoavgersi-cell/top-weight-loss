@@ -88,7 +88,7 @@ export default function RetatrutidePage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-[900px] px-4 py-10 text-[16px] leading-[1.75] text-gray-700 sm:px-6">
+      <div className="mx-auto max-w-[900px] px-4 py-10 text-[16px] leading-[1.75] text-gray-800 sm:px-6">
         {/* Status callout - set expectations up front */}
         <div className="mb-10 flex items-start gap-4 rounded-2xl border border-amber-200 bg-amber-50/60 p-6">
           <TriangleAlert className="mt-0.5 h-6 w-6 shrink-0 text-amber-500" strokeWidth={2} />

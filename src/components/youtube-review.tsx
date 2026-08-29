@@ -112,7 +112,7 @@ export function YoutubeReviewSection({
           Watch: an independent {providerName} review
         </h2>
       </div>
-      <p className="mb-5 text-[14.5px] leading-relaxed text-gray-600">
+      <p className="mb-5 text-[14.5px] leading-relaxed text-gray-700">
         Reading reviews is one thing - hearing someone talk through their own experience is
         another. This video comes from an independent creator on YouTube; we embed it unedited
         so you can hear an outside voice before you decide.

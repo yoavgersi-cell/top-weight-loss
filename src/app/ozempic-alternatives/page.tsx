@@ -121,7 +121,7 @@ export default function OzempicAlternativesPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-[900px] px-4 py-10 text-[16px] leading-[1.75] text-gray-700 sm:px-6">
+      <div className="mx-auto max-w-[900px] px-4 py-10 text-[16px] leading-[1.75] text-gray-800 sm:px-6">
         {/* Key insight callout */}
         <div className="mb-10 flex items-start gap-4 rounded-2xl border border-emerald-200 bg-emerald-50/60 p-6">
           <Pill className="mt-0.5 h-6 w-6 shrink-0 text-emerald-600" strokeWidth={2} />

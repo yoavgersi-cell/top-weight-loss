@@ -210,7 +210,7 @@ export default async function HowWeRankPage() {
               <p className="mb-3 flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.06em] text-emerald-700">
                 <Check className="h-4 w-4" strokeWidth={2.5} /> Earns points
               </p>
-              <ul className="space-y-2 text-[14px] leading-relaxed text-gray-700">
+              <ul className="space-y-2 text-[14px] leading-relaxed text-gray-800">
                 <li>Flat pricing that holds at every dose - no titration increases</li>
                 <li>A large, public customer record (Trustpilot volume + score)</li>
                 <li>Third-party certification (LegitScript) and named, state-licensed 503A pharmacies</li>
@@ -223,7 +223,7 @@ export default async function HowWeRankPage() {
               <p className="mb-3 flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.06em] text-amber-700">
                 <X className="h-4 w-4" strokeWidth={2.5} /> Costs points
               </p>
-              <ul className="space-y-2 text-[14px] leading-relaxed text-gray-700">
+              <ul className="space-y-2 text-[14px] leading-relaxed text-gray-800">
                 <li>Teaser rates that jump after month one - we publish the regular rate next to every promo</li>
                 <li>No published review aggregate - noted plainly in the review</li>
                 <li>Prepaid commitments a shopper could miss at checkout</li>

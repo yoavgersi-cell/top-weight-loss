@@ -54,7 +54,7 @@ function ComparisonTable({ colA, colB, rows }: { colA: string; colB: string; row
 // links to the reviews and comparison.
 export function HairLossEditorialContent() {
   return (
-    <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-700">
+    <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-800">
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">The Best Online Hair-Loss Providers, Compared</h2>
       <p className="mb-4">
         Treating hair loss online has become simpler than ever: you complete a short medical intake, a licensed

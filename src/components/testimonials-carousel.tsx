@@ -25,7 +25,7 @@ function TestimonialCard({ t }: { t: Testimonial }) {
   return (
     <div className="flex h-full flex-col rounded-xl border border-gray-200 bg-white p-5">
       <StarRating />
-      <p className="mb-4 flex-1 text-[14px] leading-relaxed text-gray-600">
+      <p className="mb-4 flex-1 text-[14px] leading-relaxed text-gray-700">
         &ldquo;{t.text}&rdquo;
       </p>
       <div className="flex items-center gap-2">

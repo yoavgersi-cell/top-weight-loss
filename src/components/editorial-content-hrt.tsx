@@ -36,7 +36,7 @@ function ComparisonTable({ colA, colB, rows }: { colA: string; colB: string; row
 // provider numbers - with links to the reviews and comparison and a disclaimer.
 export function HrtEditorialContent() {
   return (
-    <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-700">
+    <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-800">
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">The Best Online Menopause & HRT Providers, Compared</h2>
       <p className="mb-4">
         Menopause care has become far more accessible online: telehealth clinics connect you with menopause-trained

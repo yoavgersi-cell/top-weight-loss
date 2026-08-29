@@ -47,7 +47,7 @@ function ComparisonTable({ colA, colHeadB, colB, rows }: { colA: string; colHead
 // crisis pointer and a disclaimer close it out.
 export function OnlineTherapyEditorialContent() {
   return (
-    <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-700">
+    <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-800">
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">The Best Online Therapy Platforms, Compared</h2>
       <p className="mb-4">
         Online therapy connects you with a licensed clinician by video, phone or messaging - no commute, wider choice

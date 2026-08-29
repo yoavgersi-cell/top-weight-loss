@@ -92,7 +92,7 @@ function ProductCard({
             )}
           </div>
           <p className="mt-0.5 text-[11px] leading-snug text-gray-400">{product.priceNote}</p>
-          <p className="mt-1.5 text-[12.5px] font-medium text-gray-700">{provider.name}</p>
+          <p className="mt-1.5 text-[12.5px] font-medium text-gray-800">{provider.name}</p>
           <div className="mt-auto flex items-center gap-1.5 pt-2 text-[11.5px] text-gray-500">
             <Truck className="h-3.5 w-3.5 shrink-0" strokeWidth={2} />
             {product.shipping}
