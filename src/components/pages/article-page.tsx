@@ -473,8 +473,10 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     </div>
                   )}
 
-                {/* Editorial callout after 4th section */}
-                {i === 3 && article.sections.length > 4 && (
+                {/* Editorial callout after 4th section - GLP-1 copy, so
+                    weight-loss articles only (it was leaking onto every
+                    vertical's articles before this gate). */}
+                {ctx.vertical === "weight-loss" && i === 3 && article.sections.length > 4 && (
                   <div className="my-10 overflow-hidden rounded-xl bg-transparent">
                     <div className="flex flex-col sm:flex-row">
                       <div className="flex-1 py-6 pr-6 sm:py-8 sm:pr-8">
