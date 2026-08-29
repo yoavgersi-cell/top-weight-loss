@@ -10,12 +10,12 @@ export const revalidate = 60;
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/retatrutide-weight-loss";
 
 export const metadata: Metadata = {
-  title: "Retatrutide for Weight Loss (2026): Results, Status & Reta vs Tirzepatide",
+  title: "Retatrutide for Weight Loss (2026): Results & Status",
   description:
     "Retatrutide (“reta”) is the triple-agonist weight loss drug that hit ~24% weight loss in trials. What it is, how it compares to tirzepatide and semaglutide, and whether you can get it yet.",
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "Retatrutide for Weight Loss (2026): Results, Status & Reta vs Tirzepatide",
+    title: "Retatrutide for Weight Loss (2026): Results & Status",
     description:
       "The triple-agonist weight loss drug that reached ~24% in trials - explained, with an honest look at availability.",
     url: CANONICAL,
@@ -44,7 +44,7 @@ export default function RetatrutidePage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Retatrutide for Weight Loss (2026): Results, Status & Reta vs Tirzepatide",
+    headline: "Retatrutide for Weight Loss (2026): Results & Status",
     description: metadata.description,
     datePublished: "2026-08-09",
     dateModified: "2026-08-09",
@@ -144,9 +144,9 @@ export default function RetatrutidePage() {
           </div>
           <p className="text-[14px] text-gray-500">
             Compare the approved options in our{" "}
-            <Link href="/tirzepatide" className="font-semibold text-[#0C4B75] hover:underline">tirzepatide</Link>{" "}
+            <Link href="/weight-loss/tirzepatide" className="font-semibold text-[#0C4B75] hover:underline">tirzepatide</Link>{" "}
             and{" "}
-            <Link href="/semaglutide" className="font-semibold text-[#0C4B75] hover:underline">semaglutide</Link>{" "}
+            <Link href="/weight-loss/semaglutide" className="font-semibold text-[#0C4B75] hover:underline">semaglutide</Link>{" "}
             guides.
           </p>
         </section>

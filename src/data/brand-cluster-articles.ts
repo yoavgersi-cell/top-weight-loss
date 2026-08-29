@@ -48,7 +48,7 @@ export const brandClusterArticles: Article[] = [
     slug: "medvi-cost",
     title: "Medvi Cost 2026: What $99/Month Actually Buys You",
     description:
-      "Medvi currently charges $99/month promotional (reg. $199) for semaglutide and $166 (reg. $299) for tirzepatide, all-inclusive. The full math, what's bundled in, and when a cheaper rival is the smarter buy.",
+      "Medvi charges $99/month promo (reg. $199) for semaglutide and $166 (reg. $299) for tirzepatide, all-inclusive. The full math and when a rival wins.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-08",
@@ -705,7 +705,7 @@ export const brandClusterArticles: Article[] = [
   // ═════ Sprout ═════
   {
     slug: "is-sprout-legit",
-    title: "Is Sprout Legit? The Honest Audit of a Newer GLP-1 Provider (2026)",
+    title: "Is Sprout Legit? An Honest Audit (2026)",
     description:
       "Sprout sells compounded semaglutide from $149/month with 2-day fulfillment and a brand-name Wegovy option. We audited the process, the reviews and the fine print.",
     category: "Guide",
@@ -735,7 +735,7 @@ export const brandClusterArticles: Article[] = [
   },
   {
     slug: "sprout-cost",
-    title: "Sprout Cost 2026: The $149/Month Math, With the $200 Discount Applied",
+    title: "Sprout Cost 2026: The $149/Month Math Explained",
     description:
       "Sprout charges $149/month for compounded semaglutide, $199 for tirzepatide and $1,799 for brand-name Wegovy, with $200 off month one. The full-year math, honestly.",
     category: "Guide",
@@ -765,7 +765,7 @@ export const brandClusterArticles: Article[] = [
   },
   {
     slug: "sprout-alternatives",
-    title: "Best Sprout Alternatives 2026: Cheaper, Faster and Bigger-Shelf Options",
+    title: "Best Sprout Alternatives 2026 (From $59/mo)",
     description:
       "Six real alternatives to Sprout's $149/month program - from wellmedr at $59 to altRx's three-brand shelf - organized by the reason you'd actually switch.",
     category: "Guide",

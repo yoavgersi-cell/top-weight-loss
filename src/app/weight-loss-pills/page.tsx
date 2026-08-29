@@ -151,9 +151,9 @@ export default async function WeightLossPillsPage() {
           </p>
           <p>
             Prefer injections? See our guides to{" "}
-            <Link href="/semaglutide" className="font-semibold text-[#0C4B75] hover:underline">semaglutide</Link>{" "}
+            <Link href="/weight-loss/semaglutide" className="font-semibold text-[#0C4B75] hover:underline">semaglutide</Link>{" "}
             and{" "}
-            <Link href="/tirzepatide" className="font-semibold text-[#0C4B75] hover:underline">tirzepatide</Link>{" "}
+            <Link href="/weight-loss/tirzepatide" className="font-semibold text-[#0C4B75] hover:underline">tirzepatide</Link>{" "}
             providers.
           </p>
         </section>

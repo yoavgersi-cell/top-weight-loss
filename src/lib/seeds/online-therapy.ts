@@ -376,11 +376,11 @@ const battles: BattleData[] = [
     slug: "betterhelp-vs-talkspace",
     provider1Id: "betterhelp",
     provider2Id: "talkspace",
-    title: "BetterHelp vs Talkspace: Which Online Therapy Platform Wins in 2026?",
+    title: "BetterHelp vs Talkspace (2026): Which Wins?",
     matchupLabel: "BetterHelp vs Talkspace",
     subtitle: "The two biggest names in online therapy - compared on insurance, psychiatry, and how the subscriptions actually work.",
     description:
-      "BetterHelp vs Talkspace: both offer subscription online therapy with live sessions and messaging, but they split hard on insurance and medication management. An honest comparison with no invented numbers.",
+      "BetterHelp vs Talkspace: both now take insurance, so psychiatry and verified ratings (4.4 vs 3.9 on Trustpilot) decide it. An honest comparison.",
     intro:
       "BetterHelp and Talkspace are the two defining platforms of online therapy, and both now take insurance - BetterHelp with copays cited from around $23/session for covered members, Talkspace with broad plan and EAP coverage and, by its own claim, a $0 copay for most insured members. That leaves two real differences: scope of care - Talkspace offers psychiatry with medication management alongside therapy, BetterHelp is talk therapy only - and track record, where Talkspace's 4.4 on Trustpilot (2,370 reviews) leads BetterHelp's 3.9 (9,652). We haven't verified either platform's current self-pay pricing, so where cost matters we tell you exactly what to check rather than quoting numbers.",
     verdict:
@@ -443,11 +443,11 @@ const battles: BattleData[] = [
     slug: "talkspace-vs-talkiatry",
     provider1Id: "talkspace",
     provider2Id: "talkiatry",
-    title: "Talkspace vs Talkiatry: Therapy-First or Psychiatry-First in 2026?",
+    title: "Talkspace vs Talkiatry (2026): Which Fits Your Care?",
     matchupLabel: "Talkspace vs Talkiatry",
     subtitle: "Two insurance-friendly platforms with opposite centers of gravity - subscription therapy with psychiatry added, vs a psychiatry practice with therapy alongside.",
     description:
-      "Talkspace vs Talkiatry: both bill through many major insurance plans and both offer therapy and psychiatry - but one is therapy-led and one is psychiatrist-led. Which fits depends on where your care starts.",
+      "Talkspace vs Talkiatry: both bill through insurance, both offer therapy and psychiatry - but one is therapy-led, one psychiatrist-led. Which fits you?",
     intro:
       "Talkspace and Talkiatry look similar from a distance - insurance-friendly online mental-health care with both therapy and medication available - but their centers of gravity are opposite. Talkspace is a therapy platform: subscription care with live sessions and messaging, with psychiatry available as an add-on service. Talkiatry is a psychiatry practice: psychiatrists lead evaluation, diagnosis and medication management, with therapy offered alongside treatment. The honest question isn't which is better - it's which one matches where your care starts. We haven't verified plan-level costs at either; both have insurance checks that answer that for your specific plan.",
     verdict:
@@ -510,7 +510,7 @@ const battles: BattleData[] = [
     slug: "headspace-vs-betterhelp",
     provider1Id: "headspace",
     provider2Id: "betterhelp",
-    title: "Headspace vs BetterHelp: Meditation App or Real Therapy in 2026?",
+    title: "Headspace vs BetterHelp (2026): App or Therapy?",
     matchupLabel: "Headspace vs BetterHelp",
     subtitle: "A daily mindfulness practice vs licensed talk therapy - different tools that people keep cross-shopping.",
     description:
@@ -578,7 +578,7 @@ const battles: BattleData[] = [
 const articles: ArticleData[] = [
   {
     slug: "online-therapy-that-takes-insurance",
-    title: "Online Therapy That Takes Insurance: How It Actually Works in 2026",
+    title: "Online Therapy That Takes Insurance (2026 Guide)",
     description:
       "Which online mental-health platforms take insurance, how coverage actually works, and how to check your plan in minutes - Talkspace and Talkiatry lead, and BetterHelp sits it out.",
     category: "Advice",
@@ -612,7 +612,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "online-therapy-vs-in-person",
-    title: "Online Therapy vs In-Person Therapy: An Honest Comparison for 2026",
+    title: "Online Therapy vs In-Person: Honest 2026 Comparison",
     description:
       "When online therapy is a great fit, when in-person is worth the friction, and how to decide - without the marketing spin from either side.",
     category: "Advice",
@@ -744,7 +744,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "does-betterhelp-take-insurance",
-    title: "Does BetterHelp Take Insurance in 2026? Yes - Here's How It Works",
+    title: "Does BetterHelp Take Insurance? Yes - Here's How",
     description:
       "BetterHelp now accepts insurance, with copays cited from around $23/session for covered members. How coverage works, what self-pay costs depend on, and how it compares to Talkspace.",
     category: "Advice",
@@ -778,7 +778,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "is-betterhelp-legit",
-    title: "Is BetterHelp Legit in 2026? An Honest Look at the Biggest Name in Online Therapy",
+    title: "Is BetterHelp Legit in 2026? The Honest Answer",
     description:
       "BetterHelp is legitimate - licensed therapists, 9,652 Trustpilot reviews averaging 3.9, and insurance now accepted. The honest answer also covers the FTC settlement and what real users say.",
     category: "Advice",
@@ -812,7 +812,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "does-talkspace-take-insurance",
-    title: "Talkspace Insurance Coverage in 2026: $0 Copays, EAPs & How to Check Yours",
+    title: "Talkspace Insurance Coverage 2026: $0 Copays & EAPs",
     description:
       "Talkspace is covered by many major insurance plans and employer EAPs - and says most insured members pay a $0 copay. How to check your plan, what psychiatry coverage looks like, and the honest caveats.",
     category: "Advice",
@@ -846,7 +846,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "is-talkiatry-legit",
-    title: "Is Talkiatry Legit in 2026? Real Psychiatrists, Real Complaints - the Honest Answer",
+    title: "Is Talkiatry Legit in 2026? The Honest Answer",
     description:
       "Talkiatry is a legitimate psychiatrist-led practice billed through insurance - and its 2.5 Trustpilot average is real too. What the split record means and how to protect yourself when booking.",
     category: "Advice",

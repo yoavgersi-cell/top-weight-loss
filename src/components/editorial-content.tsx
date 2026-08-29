@@ -49,18 +49,18 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       </h2>
       <p className="mb-4">
         To find the best weight loss injections and programs, we compare leading GLP-1 providers on the factors that actually matter. Choosing the right weight loss provider involves more than selecting a medication - pricing, clinical support, treatment plans, eligibility requirements, and long-term value can vary significantly between providers. Not sure where to start? Try our{" "}
-        <Link href="/find-your-match" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/weight-loss/find-your-match" className="font-semibold text-[#0C4B75] hover:underline">
           provider matching quiz
         </Link>{" "}
         for a personalized recommendation.
       </p>
       <p className="mb-4">
         To help simplify the decision, we reviewed leading weight loss programs and compared them based on medication access, affordability, provider support, customer experience, and overall value. Read our{" "}
-        <Link href="/reviews" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/weight-loss/reviews" className="font-semibold text-[#0C4B75] hover:underline">
           in-depth provider reviews
         </Link>{" "}
         for detailed breakdowns, or jump straight to a head-to-head like{" "}
-        <Link href="/altrx-vs-embody" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/weight-loss/altrx-vs-embody" className="font-semibold text-[#0C4B75] hover:underline">
           altRx vs embody
         </Link>.
       </p>
@@ -113,7 +113,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       <p className="mb-8 text-[13.5px] text-gray-500">
         Prices as published in August 2026 - confirm current pricing on each provider&apos;s site.
         For annual math and the budget tier in depth, see the{" "}
-        <Link href="/cheapest-glp1" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/weight-loss/cheapest-glp1" className="font-semibold text-[#0C4B75] hover:underline">
           cheapest verified GLP-1 comparison
         </Link>
         .
@@ -153,15 +153,15 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       </ul>
       <p className="mb-8">
         Our{" "}
-        <Link href="/how-we-rank" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/weight-loss/how-we-rank" className="font-semibold text-[#0C4B75] hover:underline">
           full ranking methodology
         </Link>{" "}
         explains how we score each of these. Prefer a shortcut? The{" "}
-        <Link href="/find-your-match" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/weight-loss/find-your-match" className="font-semibold text-[#0C4B75] hover:underline">
           60-second matching quiz
         </Link>{" "}
         weighs your budget and priorities, or read our step-by-step{" "}
-        <Link href="/articles/choosing-telehealth-weight-loss-provider" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/weight-loss/articles/choosing-telehealth-weight-loss-provider" className="font-semibold text-[#0C4B75] hover:underline">
           guide to choosing a telehealth weight loss provider
         </Link>
         .
@@ -203,7 +203,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       </h2>
       <p className="mb-3">
         Before choosing a weight loss provider, it&apos;s important to evaluate several key factors. Our guide on{" "}
-        <Link href="/articles/first-month-weight-loss-medication" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/weight-loss/articles/first-month-weight-loss-medication" className="font-semibold text-[#0C4B75] hover:underline">
           what to expect your first month on medication
         </Link>{" "}
         can help you prepare:
@@ -218,13 +218,13 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       </ul>
       <p className="mb-8">
         Comparing providers side-by-side - like{" "}
-        <Link href="/altrx-vs-ro" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/weight-loss/altrx-vs-ro" className="font-semibold text-[#0C4B75] hover:underline">
           altRx vs Ro
         </Link>,{" "}
-        <Link href="/altrx-vs-trimrx" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/weight-loss/altrx-vs-trimrx" className="font-semibold text-[#0C4B75] hover:underline">
           altRx vs trimrx
         </Link>, or{" "}
-        <Link href="/embody-vs-ro" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/weight-loss/embody-vs-ro" className="font-semibold text-[#0C4B75] hover:underline">
           Embody vs Ro
         </Link>{" "}
         - can help you better understand the differences and make a more informed decision.
@@ -237,7 +237,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       </h2>
       <p className="mb-3">
         Many leading weight loss programs offer access to GLP-1 receptor agonist medications. Learn{" "}
-        <Link href="/articles/how-glp1-medications-work" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/weight-loss/articles/how-glp1-medications-work" className="font-semibold text-[#0C4B75] hover:underline">
           how GLP-1 medications actually work
         </Link>{" "}
         for a detailed breakdown. Common options include:
@@ -250,7 +250,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       <p className="mb-8">
         Medication availability may vary depending on your location, medical history, and provider policies.
         Prefer a non-injection option? See our guide to{" "}
-        <Link href="/weight-loss-pills" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/weight-loss/weight-loss-pills" className="font-semibold text-[#0C4B75] hover:underline">
           weight loss pills
         </Link>.
       </p>
@@ -315,9 +315,9 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       <p className="mb-4">
         Tirzepatide and semaglutide are the two most effective GLP-1 medications for weight loss. They work
         in similar ways but differ in average results, approvals, and coverage. Compare{" "}
-        <Link href="/tirzepatide" className="font-semibold text-[#0C4B75] hover:underline">tirzepatide providers</Link>{" "}
+        <Link href="/weight-loss/tirzepatide" className="font-semibold text-[#0C4B75] hover:underline">tirzepatide providers</Link>{" "}
         and{" "}
-        <Link href="/semaglutide" className="font-semibold text-[#0C4B75] hover:underline">semaglutide providers</Link>{" "}
+        <Link href="/weight-loss/semaglutide" className="font-semibold text-[#0C4B75] hover:underline">semaglutide providers</Link>{" "}
         to see which fits your goals.
       </p>
       <ComparisonTable colA="Tirzepatide" colB="Semaglutide" rows={tirzVsSemaRows} />
@@ -329,9 +329,9 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         Both Wegovy and Ozempic use semaglutide, but the difference is in dosage and indication. Wegovy is
         tailored for weight loss, while Ozempic was developed for diabetes but is often prescribed off-label.
         See our{" "}
-        <Link href="/wegovy-providers" className="font-semibold text-[#0C4B75] hover:underline">Wegovy providers</Link>{" "}
+        <Link href="/weight-loss/wegovy-providers" className="font-semibold text-[#0C4B75] hover:underline">Wegovy providers</Link>{" "}
         and{" "}
-        <Link href="/ozempic-for-weight-loss" className="font-semibold text-[#0C4B75] hover:underline">Ozempic for weight loss</Link>{" "}
+        <Link href="/weight-loss/ozempic-for-weight-loss" className="font-semibold text-[#0C4B75] hover:underline">Ozempic for weight loss</Link>{" "}
         guides for details.
       </p>
       <ComparisonTable colA="Wegovy" colB="Ozempic" rows={wegovyVsOzempicRows} />
@@ -349,7 +349,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         Compounded versions of semaglutide and tirzepatide are available through licensed telehealth
         providers at significantly lower prices - typically $199-$500 per month including physician
         consultations, medication, and home delivery. Learn more in our{" "}
-        <Link href="/articles/weight-loss-medication-cost-guide" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/weight-loss/articles/weight-loss-medication-cost-guide" className="font-semibold text-[#0C4B75] hover:underline">
           complete cost guide
         </Link>.
       </p>
@@ -361,7 +361,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         Most patients notice reduced appetite within the first 1-2 weeks of starting GLP-1 medication.
         Visible weight loss typically begins around weeks 4-8. Clinical trial results show maximum
         weight loss at 68-72 weeks of treatment. Read our{" "}
-        <Link href="/articles/how-long-for-semaglutide-to-work" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/weight-loss/articles/how-long-for-semaglutide-to-work" className="font-semibold text-[#0C4B75] hover:underline">
           detailed semaglutide timeline
         </Link>.
       </p>
@@ -374,7 +374,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         medical evaluations. The process typically takes 1-5 days from sign-up to medication delivery.
         All providers featured on our platform use licensed physicians for prescribing and include
         ongoing medical oversight. Read our{" "}
-        <Link href="/articles/how-to-get-ozempic-online" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/weight-loss/articles/how-to-get-ozempic-online" className="font-semibold text-[#0C4B75] hover:underline">
           guide to getting GLP-1 medication online
         </Link>.
       </p>
@@ -395,11 +395,11 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       </ul>
       <p>
         We continuously review and update our recommendations to help consumers{" "}
-        <Link href="/reviews" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/weight-loss/reviews" className="font-semibold text-[#0C4B75] hover:underline">
           compare leading weight loss solutions
         </Link>{" "}
         with confidence. Browse all{" "}
-        <Link href="/articles" className="font-semibold text-[#0C4B75] hover:underline">
+        <Link href="/weight-loss/articles" className="font-semibold text-[#0C4B75] hover:underline">
           weight loss articles
         </Link>{" "}
         for more research and guides.

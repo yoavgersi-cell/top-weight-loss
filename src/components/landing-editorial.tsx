@@ -33,14 +33,14 @@ export function LandingEditorial({ sections }: LandingEditorialProps) {
       <p className="text-[15px] text-gray-500">
         We continuously review and update our recommendations. Browse all{" "}
         <Link
-          href="/articles"
+          href="/weight-loss/articles"
           className="font-semibold text-[#0C4B75] hover:underline"
         >
           weight loss articles
         </Link>{" "}
         for more research and guides, or{" "}
         <Link
-          href="/find-your-match"
+          href="/weight-loss/find-your-match"
           className="font-semibold text-[#0C4B75] hover:underline"
         >
           take our matching quiz

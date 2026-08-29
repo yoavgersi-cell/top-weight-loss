@@ -12,8 +12,8 @@ function verticalName(id: string): string {
 export async function articlesIndexMetadata(ctx: SiteContext): Promise<Metadata> {
   const url = canonicalUrl(ctx, "/articles");
   const vName = verticalName(ctx.vertical);
-  const title = `${vName} Articles - Research, Guides & Expert Insights`;
-  const description = `Evidence-based ${vName.toLowerCase()} guides and research - treatment options, what to expect, and choosing the right online provider.`;
+  const title = `${vName} Guides & Articles (2026)`;
+  const description = `Evidence-based ${vName.toLowerCase()} guides for 2026 - treatment options, verified costs, what to expect, and how to choose the right online provider.`;
   return {
     title,
     description,

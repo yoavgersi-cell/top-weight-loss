@@ -10,12 +10,12 @@ export const revalidate = 60;
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/glp1-pills-vs-injections";
 
 export const metadata: Metadata = {
-  title: "GLP-1 Pills vs Injections: Which Is Better for Weight Loss? (2026)",
+  title: "GLP-1 Pills vs Injections (2026): Which Is Better?",
   description:
     "GLP-1 pills vs injections compared for 2026 - average weight loss, cost, convenience, and side effects. See whether oral GLP-1s or injections are the better fit for you.",
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "GLP-1 Pills vs Injections: Which Is Better for Weight Loss? (2026)",
+    title: "GLP-1 Pills vs Injections (2026): Which Is Better?",
     description:
       "Oral GLP-1 pills vs injections - results, cost, convenience, and how to choose.",
     url: CANONICAL,
@@ -44,7 +44,7 @@ export default function Glp1PillsVsInjectionsPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "GLP-1 Pills vs Injections: Which Is Better for Weight Loss? (2026)",
+    headline: "GLP-1 Pills vs Injections (2026): Which Is Better?",
     description: metadata.description,
     datePublished: "2026-08-09",
     dateModified: "2026-08-09",
@@ -158,9 +158,9 @@ export default function Glp1PillsVsInjectionsPage() {
           </div>
           <p className="mb-4">
             The injectables set the benchmark.{" "}
-            <Link href="/semaglutide" className="font-semibold text-[#0C4B75] hover:underline">Semaglutide</Link>{" "}
+            <Link href="/weight-loss/semaglutide" className="font-semibold text-[#0C4B75] hover:underline">Semaglutide</Link>{" "}
             (Wegovy) produces ~15% average weight loss in trials, and{" "}
-            <Link href="/tirzepatide" className="font-semibold text-[#0C4B75] hover:underline">tirzepatide</Link>{" "}
+            <Link href="/weight-loss/tirzepatide" className="font-semibold text-[#0C4B75] hover:underline">tirzepatide</Link>{" "}
             (Zepbound) reaches ~20% or more. Both are once-weekly injections, and through telehealth,
             compounded versions are often the most affordable path to GLP-1 treatment.
           </p>

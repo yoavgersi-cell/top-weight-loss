@@ -1081,7 +1081,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "trt-side-effects",
-    title: "TRT Side Effects: What's Common, What's Manageable, What to Monitor",
+    title: "TRT Side Effects: Common, Manageable & Serious",
     description:
       "The real side-effect profile of testosterone therapy - from acne and thickened blood to fertility suppression - and the lab monitoring that keeps TRT safe.",
     category: "Science",
@@ -1260,7 +1260,7 @@ export function trtSeed(base: SiteConfig): SiteConfig {
       backgroundImageUrl: "",
       imageAlt: "",
       updatedLabel: "Last Updated: August 2026",
-      h1: "Best TRT Clinics & Online Testosterone Replacement Therapy Providers of 2026",
+      h1: "Best TRT Clinics & Online Testosterone Providers of 2026",
       h2: "Compare the top online testosterone replacement therapy (TRT) providers, side by side",
       description:
         "Compare the best online TRT providers - testosterone injections, creams, oral options and enclomiphene - on testing, treatment options, medical supervision, and overall value.",

@@ -12,8 +12,18 @@ function verticalName(id: string): string {
 export async function reviewsIndexMetadata(ctx: SiteContext): Promise<Metadata> {
   const url = canonicalUrl(ctx, "/reviews");
   const vName = verticalName(ctx.vertical);
-  const title = `${vName} Provider Reviews - In-Depth Expert Analysis`;
-  const description = `Read expert reviews of the top online ${vName.toLowerCase()} providers. Compare treatment options, pricing, pros and cons, and customer experience.`;
+  // Lead with the vertical's top provider names - generic "Provider Reviews"
+  // titles earn no clicks, brand names do.
+  const config = await getConfig(ctx.vertical);
+  const topNames = config.ranking.providerOrder
+    .slice(0, 2)
+    .map((id) => config.providers.find((p) => p.id === id)?.name)
+    .filter(Boolean) as string[];
+  const title =
+    topNames.length === 2
+      ? `${vName} Reviews 2026: ${topNames[0]}, ${topNames[1]} & More`
+      : `${vName} Reviews 2026 - Every Provider Tested`;
+  const description = `Independent 2026 reviews of ${config.reviews?.length ?? "the top"} online ${vName.toLowerCase()} providers${topNames.length ? ` - ${topNames.join(", ")} and more` : ""} - with verified ratings, pricing, pros and cons.`;
   return {
     title,
     description,

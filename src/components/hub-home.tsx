@@ -522,7 +522,7 @@ export async function HubHome() {
               higher placement.
             </p>
             <Link
-              href="/how-we-rank"
+              href="/weight-loss/how-we-rank"
               className="mt-6 inline-flex items-center gap-1.5 text-[15px] font-bold text-[#0C4B75] hover:underline underline-offset-4"
             >
               See how we rank providers
