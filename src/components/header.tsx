@@ -13,9 +13,12 @@ export function Header() {
 
   // Navigation resolves within the current category (weight loss, etc.).
   const nav = [
-    { label: "Reviews", href: navHref(prefix, "/reviews") },
-    { label: "Comparisons", href: `${navHref(prefix, "/articles")}#comparisons` },
-    { label: "Guides", href: navHref(prefix, "/articles") },
+    // When no vertical prefix resolves (hub home, rewritten shared pages),
+    // fall back to /weight-loss - the bare paths 301 there anyway, so link
+    // straight and save the crawl hop.
+    { label: "Reviews", href: navHref(prefix || "/weight-loss", "/reviews") },
+    { label: "Comparisons", href: `${navHref(prefix || "/weight-loss", "/articles")}#comparisons` },
+    { label: "Guides", href: navHref(prefix || "/weight-loss", "/articles") },
   ];
 
   return (
