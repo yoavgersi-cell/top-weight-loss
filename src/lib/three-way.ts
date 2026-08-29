@@ -92,6 +92,26 @@ export const TRIO_FACTS: Record<string, TrioFacts> = {
     guarantee: "-",
     standout: "Only needle-free sublingual option in our ranking",
   },
+  ro: {
+    id: "ro",
+    semaglutide: "Brand-name Wegovy: pill from $149/mo, pen from $199 - plus membership",
+    tirzepatide: "Brand-name Zepbound KwikPen from $299 first mo, then $399-449",
+    billing: "Membership ($39 first mo, then $74-$149/mo) + medication billed separately - cash or insurance",
+    shipping: "In-house pharmacy with home delivery",
+    support: "Board-certified provider consultations; ongoing dose adjustments",
+    guarantee: "-",
+    standout: "3.9 on Trustpilot across 5,860 reviews; insurance can cut the medication cost",
+  },
+  sprout: {
+    id: "sprout",
+    semaglutide: "$149/mo compounded; brand-name Wegovy from $1,799",
+    tirzepatide: "$199/mo",
+    billing: "Monthly; $200 off your first month (confirm current offer on site)",
+    shipping: "Prescriptions shipped within 2 days",
+    support: "Personalized, provider-guided treatment plans",
+    guarantee: "-",
+    standout: "Brand-name Wegovy shelf + 2-day fulfillment",
+  },
   shed: {
     id: "shed",
     semaglutide: "$199/mo (20% off first month)",
@@ -181,6 +201,74 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
         question: "Which ships fastest?",
         answer:
           "embody ships free in 1-2 days, tracked and insured. altRx offers free nationwide delivery on standard timelines, and wellmedr ships free every 4 weeks in discreet packaging aligned to its dosing cycle.",
+      },
+    ],
+  },
+  {
+    slug: "embody-vs-medvi-vs-wellmedr",
+    providerIds: ["embody", "medvi", "wellmedr"],
+    title: "embody vs Medvi vs wellmedr: $69, $99 or $59?",
+    metaTitle: "embody vs Medvi vs wellmedr (2026): $69 vs $99 vs $59",
+    description:
+      "Three verified Trustpilot records, three commitment models: embody ($69 flat, no strings), Medvi ($99 all-inclusive, 4.4 across 14,372 reviews) and wellmedr ($59 on a 12-month plan, 4.7 rated).",
+    intro:
+      "This trio is unusual: all three carry a verified Trustpilot record, so for once the review data can carry as much weight as the price tag. wellmedr is the cheapest at $59/month - a rate that locks on a 12-month plan - and holds the highest rating here, 4.7 across 1,205 reviews. embody's $69 is flat with zero commitment and a refund if a provider doesn't approve you, at 3.8 across 4,956 reviews. Medvi's $99 promo is the all-inclusive, high-touch option - video visits, free dietician, care coaching - with the largest review base of the three: 4.4 across 14,372.",
+    verdict:
+      "Decide on commitment first, support second. Ready to commit to a year: wellmedr - the $59 lock is the best per-month rate in the market, its 4.7 rating is the highest here, and its weight-loss warranty backs the plan. Not ready to commit to anything: embody - $69 flat, cancel anytime, refunded if not approved. Know from experience that you quit without someone checking in: Medvi - the $30 premium over embody buys video visits, a dietician and coaching, and 14,372 reviews averaging 4.4 say that model holds up at scale. All three prescribe the same compounded semaglutide after a licensed-provider review.",
+    faqs: [
+      {
+        question: "Which is cheapest: embody, Medvi or wellmedr?",
+        answer:
+          "For compounded semaglutide: wellmedr at $59/month (the rate locks on a 12-month plan), embody at $69/month flat with no commitment, Medvi at $99/month promotional (regularly $199) all-inclusive. For tirzepatide: wellmedr $99, embody $119, Medvi $166 promotional (regularly $299).",
+      },
+      {
+        question: "Which has the best Trustpilot rating?",
+        answer:
+          "wellmedr holds the highest rating of the three - 4.7 across 1,205 reviews. Medvi has the largest verified base: 4.4 across 14,372 reviews. embody sits at 3.8 across 4,956. All three figures are the providers' live Trustpilot aggregates at our last verification.",
+      },
+      {
+        question: "Which is best if I don't want a commitment?",
+        answer:
+          "embody - $69/month flat, billed month to month, cancel anytime, and a full refund if a licensed provider doesn't approve you for treatment. Medvi also bills monthly with no prepaid term. wellmedr's best rate ($59) requires a 12-month plan.",
+      },
+      {
+        question: "Do any of the three offer a guarantee?",
+        answer:
+          "wellmedr backs treatment with a weight-loss warranty (terms on its site), and embody refunds you in full if you're not approved. Medvi doesn't advertise a results guarantee - its pitch is the all-inclusive support model instead.",
+      },
+    ],
+  },
+  {
+    slug: "altrx-vs-ro-vs-sprout",
+    providerIds: ["altrx", "ro", "sprout"],
+    title: "altRx vs ro vs Sprout: Three Ways to Brand-Name GLP-1s",
+    metaTitle: "altRx vs ro vs Sprout (2026): Brand-Name GLP-1s Compared",
+    description:
+      "The three providers on our ranking that sell brand-name GLP-1s online, compared: altRx's flat cash prices, ro's membership-plus-insurance model, and Sprout's Wegovy shelf with 2-day shipping.",
+    intro:
+      "Most GLP-1 comparisons are about compounded medication - this one is about the real branded pens, because these are the three providers in our ranking that publish brand-name pricing, and they sell it three completely different ways. altRx posts flat cash prices next to its $89 compounded plan: Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 a month, with Buy Now, Pay Later. ro sells a membership ($39 the first month, then $74-$149/month) with the medication billed separately - Wegovy pill from $149/month, Zepbound KwikPen from $299 the first month - and it's the one route here where insurance, if it covers you, changes the math completely. Sprout is compounded-first at $149/month but keeps brand-name Wegovy on the shelf at $1,799 for anyone set on the branded pen, and ships prescriptions within 2 days.",
+    verdict:
+      "The buying structure decides this one, not the sticker. Any chance your insurance covers GLP-1s: start with ro - membership plus a copay can undercut every cash price on this page, and its 3.9 across 5,860 Trustpilot reviews is a real record for a brand this size. Paying cash and want one flat, published number: altRx - its brand shelf is the cheapest flat-rate Wegovy here and BNPL spreads it, with the $89 compounded plan as the fallback lane. Want compounded speed with a brand option in reserve: Sprout - 2-day fulfillment and $200 off the first month, with the Wegovy shelf there if you upgrade later. Formats and billing differ enough between these three that the right answer is genuinely different per person - check the current price on each site before deciding.",
+    faqs: [
+      {
+        question: "Which has the cheapest brand-name Wegovy?",
+        answer:
+          "The published structures differ, so compare carefully: altRx lists brand-name Wegovy at a flat $1,579/month cash. Sprout lists it from $1,799/month. ro prices the Wegovy pill from $149/month and the pen from $199 at intro rates (rising to $299-$399/month after), plus its $39-to-$149/month membership - and where insurance covers the medication, ro's route can be the cheapest by far.",
+      },
+      {
+        question: "Do all three also offer compounded semaglutide?",
+        answer:
+          "altRx ($89/month promotional, flat at every dose) and Sprout ($149/month) publish flat compounded semaglutide rates. ro's published weight-loss pricing centers on brand-name medication plus its Body membership rather than a flat compounded plan.",
+      },
+      {
+        question: "How does ro's membership pricing actually work?",
+        answer:
+          "Two separate charges: the Ro Body membership - $39 the first month, then $74/month on an annual prepaid plan up to $149/month - and the medication itself, billed separately either through insurance or cash-pay at ro's published rates. That's different from altRx and Sprout, where one monthly price includes the program.",
+      },
+      {
+        question: "Which delivers fastest?",
+        answer:
+          "Sprout ships prescriptions within 2 days of approval. altRx offers free nationwide delivery on standard timelines, and ro fulfills through its own in-house pharmacy with home delivery.",
       },
     ],
   },
