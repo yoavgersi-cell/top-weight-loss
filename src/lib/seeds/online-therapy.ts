@@ -797,6 +797,10 @@ const articles: ArticleData[] = [
         body: 'On Trustpilot, BetterHelp holds 3.9 across 9,652 reviews on a claimed profile dating to 2015 - solid, but the mixed band, not the stellar one. The recent reviews we verified praise accessibility ("You can receive therapy online in whichever way you\'d prefer, and financial aid is available"), therapist quality, and the webinars and worksheets that come with the subscription. On Reddit, the honest theme is that matching takes attempts: "it did take a couple of tries to find someone I clicked with, but once I did, it felt like a real breakthrough." That\'s the pattern to expect - the platform works, and the easy therapist-switching exists precisely because first matches often aren\'t final.',
       },
       {
+        heading: "Is BetterHelp a scam?",
+        body: 'No. A scam takes your money and delivers nothing; BetterHelp is a real company delivering real therapy from licensed clinicians to millions of people, with a working refund and cancellation process. What the "scam" searches usually trace back to is three real but different things: billing complaints (subscriptions renew until cancelled - know the terms), therapist-fit disappointment (first matches often aren\'t final; switching exists for that), and the 2023 FTC privacy settlement covered below. Those are legitimate criticisms of a legitimate company - worth weighing, but not fraud.',
+      },
+      {
         heading: "What about the FTC privacy settlement?",
         body: 'In 2023, BetterHelp settled with the US Federal Trade Commission over sharing user data - including health questionnaire data - with advertisers like Facebook and Snapchat. That happened; no legitimate review should bury it. The company has since updated its practices, and the settlement itself forced changes. What it means for you: read the current privacy policy before signing up, and opt out of data sharing where offered. If privacy is your deciding factor, weigh insurance-billed alternatives too - though those create claims records with your insurer instead, a different trade rather than a free lunch.',
       },
@@ -875,6 +879,82 @@ const articles: ArticleData[] = [
       {
         heading: "Who is Talkiatry right for?",
         body: 'People whose care likely centers on medication - an evaluation, a diagnosis question, ongoing medication management - who have insurance and want a psychiatrist, not a subscription, running treatment. If therapy is the core and medication is a maybe, <a href="/online-therapy/reviews/talkspace">Talkspace</a> (therapy-first, psychiatry available, 4.4 on Trustpilot) is the stronger home - our <a href="/online-therapy/talkspace-vs-talkiatry">Talkspace vs Talkiatry comparison</a> settles that fork. Without insurance, Talkiatry generally isn\'t the right door at all. And in crisis, no intake queue is the answer: call or text 988 (US), free, 24/7.',
+      },
+    ],
+  },
+  {
+    slug: "how-much-does-betterhelp-cost",
+    title: "How Much Does BetterHelp Cost Per Month? (2026)",
+    description:
+      "BetterHelp has no single price: insured members see copays cited from ~$23/session, self-pay varies by location, and financial aid cuts it further. The honest cost breakdown.",
+    category: "Advice",
+    readTime: "6 min read",
+    publishedAt: UPDATED,
+    updatedAt: UPDATED,
+    heroColor: "#EFF3EE",
+    author: "TreatmentsHub Research Team",
+    sections: [
+      {
+        heading: "How much does BetterHelp cost per month?",
+        body: 'The honest answer most articles dodge: there is no single BetterHelp price. Your monthly cost depends on three things - whether your insurance covers it (new: copays are cited from around $23 per session for covered members), where you live (self-pay subscription rates vary by location and therapist availability), and whether you qualify for financial aid through its questionnaire. Any article quoting one flat "BetterHelp price" is describing one person\'s quote, not yours - which is why we don\'t publish a number we can\'t verify for you, and why the real answer takes two minutes at signup.',
+      },
+      {
+        heading: "Does insurance change what BetterHelp costs?",
+        body: 'Dramatically - and this is new. BetterHelp long took no insurance at all; it now accepts it, with copays cited from around $23/session for covered members, which for weekly therapy lands far below typical self-pay subscriptions. Enter your insurance details at signup and the coverage check returns your actual number before you commit. The full story is in our <a href="/online-therapy/articles/does-betterhelp-take-insurance">BetterHelp insurance guide</a> - including what to do when your plan isn\'t covered.',
+      },
+      {
+        heading: "What determines the self-pay price?",
+        body: 'Self-pay BetterHelp is a weekly-billed subscription (charged monthly) covering one live session a week - video, phone or chat - plus unlimited messaging, group webinars and digital worksheets. The rate quoted at signup varies by location and therapist availability. Two levers pull it down: the financial-aid questionnaire (answer honestly about income and circumstances and the rate adjusts) and commonly offered first-month discounts. One lever quietly pushes cost up: unused weeks - the subscription bills whether or not you attend, so the real per-session price depends on you showing up.',
+      },
+      {
+        heading: "What are the four BetterHelp cost paths?",
+        body: '<table><thead><tr><th>Path</th><th>What you pay</th><th>How to get it</th></tr></thead><tbody><tr><td><strong>Insurance copay</strong></td><td>Cited from ~$23/session for covered members</td><td>Enter insurance details at signup; the coverage check answers in minutes</td></tr><tr><td><strong>Self-pay subscription</strong></td><td>Varies by location - no single national rate</td><td>Quoted at signup; billed monthly for weekly sessions + messaging</td></tr><tr><td><strong>Financial aid</strong></td><td>Reduced self-pay rate</td><td>Income questionnaire at signup - answer honestly, rate adjusts</td></tr><tr><td><strong>First-month discount</strong></td><td>Intro discounts commonly offered</td><td>Applied at signup; confirm current terms</td></tr></tbody></table><p>One path is checked in minutes and one is location roulette - which is why the insurance check comes first, every time.</p>',
+      },
+      {
+        heading: "Is BetterHelp worth the cost?",
+        body: 'Against in-office therapy at typical US private-pay rates, a used-weekly BetterHelp subscription generally costs less per session and adds the messaging layer between sessions. Against covered alternatives, run the math: <a href="/online-therapy/reviews/talkspace">Talkspace</a> claims a $0 copay for most insured members, and <a href="/online-therapy/reviews/talkiatry">Talkiatry</a> bills in-network per visit - if your plan covers those and not BetterHelp, they win on price. Our <a href="/online-therapy/betterhelp-vs-talkspace">BetterHelp vs Talkspace comparison</a> and <a href="/online-therapy/articles/free-and-low-cost-therapy-options">low-cost therapy guide</a> cover both directions.',
+      },
+      {
+        heading: "The bottom line",
+        body: 'Get your two real numbers before deciding: the insurance coverage check at signup (minutes, and the ~$23/session cited copay beats most alternatives if you\'re covered), and the financial-aid-adjusted self-pay quote if you\'re not. Then compare against your plan\'s covered options. Full platform verdict in our <a href="/online-therapy/reviews/betterhelp">BetterHelp review</a>. In crisis, cost math is the wrong tool: call or text 988 (US), free and open 24/7.',
+      },
+    ],
+  },
+  {
+    slug: "online-couples-therapy",
+    title: "Online Couples Therapy in 2026: Options, Costs & How It Works",
+    description:
+      "Where to actually get online couples therapy in 2026 - BetterHelp's couples offering and Talkspace's couples plans compared honestly, plus what remote sessions can and can't do.",
+    category: "Advice",
+    readTime: "6 min read",
+    publishedAt: UPDATED,
+    updatedAt: UPDATED,
+    heroColor: "#F6EFF3",
+    author: "TreatmentsHub Research Team",
+    sections: [
+      {
+        heading: "Can couples do therapy online?",
+        body: 'Yes - couples therapy is one of the fastest-growing corners of online care, and for a practical reason: getting two working adults into the same office at the same hour is the single biggest reason couples counseling never starts. Online sessions remove that - both partners join a licensed therapist by video from wherever they each are, even from two different locations, which matters for couples navigating distance, travel schedules or separation.',
+      },
+      {
+        heading: "Which platforms offer couples therapy?",
+        body: 'Both of the big names we cover do. <a href="/online-therapy/reviews/betterhelp">BetterHelp</a>\'s signup asks up front whether you\'re seeking individual, couples or teen therapy, and routes couples to therapists who work with partners (its couples offering runs through its sister platform). <a href="/online-therapy/reviews/talkspace">Talkspace</a> offers dedicated couples therapy plans on its main platform - relevant because Talkspace\'s insurance coverage and EAP relationships can apply, and its 4.4 Trustpilot record (2,370 reviews) is the strongest verified score in our coverage. Check whether your plan covers couples sessions specifically; individual-therapy coverage doesn\'t always extend to couples work.',
+      },
+      {
+        heading: "BetterHelp vs Talkspace for couples - how do they compare?",
+        body: '<table><thead><tr><th></th><th>BetterHelp (couples)</th><th>Talkspace (couples)</th></tr></thead><tbody><tr><td><strong>How you start</strong></td><td>"Couples - for me and my partner" path at signup</td><td>Dedicated couples therapy plans on the main platform</td></tr><tr><td><strong>Insurance</strong></td><td>Now accepted - verify couples coverage specifically</td><td>Many plans & EAPs - verify couples coverage specifically</td></tr><tr><td><strong>Between sessions</strong></td><td>Messaging included</td><td>Messaging included, 24/7 app access</td></tr><tr><td><strong>Verified Trustpilot</strong></td><td>3.9 (9,652 reviews)</td><td>4.4 (2,370 reviews)</td></tr><tr><td><strong>Network</strong></td><td>Largest in the category</td><td>Strong, insurance-filtered</td></tr></tbody></table><p>Same decision rule as individual therapy: coverage first, then format. The full head-to-head is in our <a href="/online-therapy/betterhelp-vs-talkspace">BetterHelp vs Talkspace comparison</a>.</p>',
+      },
+      {
+        heading: "What does online couples therapy cost?",
+        body: 'Same honest rule as everywhere on this site: we don\'t quote prices we haven\'t verified, and couples pricing varies by platform, plan and insurance. The fast path: run Talkspace\'s eligibility check asking specifically about couples coverage, and get BetterHelp\'s quote at signup (its <a href="/online-therapy/articles/how-much-does-betterhelp-cost">cost model is explained here</a> - financial aid applies to couples subscriptions too). One structural note: a couples subscription is one subscription for two people, which often makes per-person cost lower than two individual therapies.',
+      },
+      {
+        heading: "What can online couples therapy handle - and what can't it?",
+        body: 'Remote couples work suits the common ground well: communication patterns, recurring conflict, intimacy and trust issues, big-decision alignment, co-parenting logistics. Where in-person or specialized care is the better call: situations involving abuse or safety concerns (couples therapy itself is often contraindicated there - individual support comes first), severe untreated mental illness in either partner, and active crisis. If any of that describes your situation, start with individual care - and in immediate crisis, call or text 988 (US), free and open 24/7.',
+      },
+      {
+        heading: "How should couples choose a platform?",
+        body: 'Three questions settle it. Insurance: does either partner\'s plan or EAP cover couples sessions? Run the checks - coverage decides most price questions. Format: scheduled video sessions work for most couples; if one partner processes better in writing, Talkspace\'s messaging-inclusive model helps between sessions. Commitment: pick the rhythm you\'ll both actually keep - consistency predicts outcomes in couples work even more than in individual therapy, because skipped weeks land on two calendars, not one. Compare everything on our <a href="/online-therapy">online therapy ranking</a>.',
       },
     ],
   },
