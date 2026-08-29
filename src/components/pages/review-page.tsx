@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Check, X, ArrowRight, Users, Clock, Shield, Star, ArrowBigUp, ArrowBigDown, MessageCircle } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
-import { latestUpdate } from "@/lib/config";
+import { latestUpdate, VERTICALS } from "@/lib/config";
 import {
   type SiteContext,
   canonicalUrl,
@@ -321,7 +321,15 @@ export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Me
   // a shared provider id on another vertical (directmeds on HRT) falls back to
   // the generic template instead of inheriting weight-loss claims.
   const override = ctx.vertical === "weight-loss" ? REVIEW_SEO_OVERRIDES[slug] : undefined;
-  const pageTitle = override?.title ?? `${provider.name} Review 2026: Cost, Results & Is It Worth It?`;
+  // Providers reviewed in more than one vertical (Ro, Maximus, PeterMD, Hims)
+  // would otherwise emit identical <title>s on two URLs - a duplicate-title
+  // signal. Their titles carry the vertical name to differentiate.
+  const SHARED_REVIEW_PROVIDER_IDS = ["ro", "maximus", "petermd", "hims"];
+  const verticalQualifier = SHARED_REVIEW_PROVIDER_IDS.includes(provider.id)
+    ? ` ${VERTICALS.find((v) => v.id === ctx.vertical)?.name ?? ""}`.trimEnd() + " "
+    : " ";
+  const pageTitle =
+    override?.title ?? `${provider.name}${verticalQualifier}Review 2026: Cost, Results & Is It Worth It?`;
   const pageDescription = override?.description ?? review.shortSummary;
 
   // Operator policy (Aug 2026): ALL provider reviews are indexable, affiliate
