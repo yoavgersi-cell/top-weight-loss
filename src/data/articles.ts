@@ -146,7 +146,7 @@ export const articles: Article[] = [
     // query; claims stay general and hedged, HRT is explicitly NOT framed as
     // a weight-loss treatment, and verified GLP-1 prices carry the money side.
     slug: "menopause-weight-gain",
-    title: "Menopause Weight Gain: Why It Happens & What Actually Helps (2026)",
+    title: "Menopause Weight Gain: Why It Happens & What Helps",
     description:
       "Weight gain around menopause is common and has real physiological drivers. What's actually happening, what helps, where GLP-1 treatment fits - and what HRT does and doesn't do.",
     category: "Science",
@@ -257,7 +257,7 @@ export const articles: Article[] = [
     slug: "ozempic-vs-wegovy-differences",
     title: "Ozempic vs Wegovy (2026): Same Drug, Different Uses - Full Guide",
     description:
-      "Ozempic and Wegovy both contain semaglutide but aren't the same drug. FDA approvals, dosing, ~15% vs 10-12% trial results, side effects - and verified prices, from $59/month compounded to brand-name routes.",
+      "Ozempic and Wegovy both contain semaglutide but aren't the same drug. FDA approvals, dosing, trial results - and verified prices from $59/month.",
     category: "Science",
     readTime: "9 min read",
     publishedAt: "2026-06-10",
@@ -401,7 +401,7 @@ export const articles: Article[] = [
   },
   {
     slug: "weight-loss-medication-cost-guide",
-    title: "Weight Loss Medication Cost Guide (2026): Complete Pricing Breakdown",
+    title: "Weight Loss Medication Cost Guide (2026)",
     description:
       "How much do GLP-1 weight loss medications cost in 2026? Full pricing for Ozempic, Wegovy, Mounjaro, Zepbound, and compounded alternatives with and without insurance.",
     category: "Advice",
@@ -867,7 +867,7 @@ export const articles: Article[] = [
   },
   {
     slug: "zepbound-vs-wegovy",
-    title: "Zepbound vs Wegovy: Comparing the Two FDA-Approved Weight Loss Drugs",
+    title: "Zepbound vs Wegovy (2026): Full Comparison",
     description:
       "Zepbound vs Wegovy: up to 22.5% vs ~15% average weight loss in trials, dosing, side effects - and verified prices for both brands plus compounded routes from $59/month.",
     category: "Science",

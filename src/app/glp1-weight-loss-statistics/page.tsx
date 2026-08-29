@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "GLP-1 Weight Loss Statistics & Data (2026) - Clinical Trial Results",
+  title: "GLP-1 Weight Loss Statistics & Data (2026)",
   description:
     "Comprehensive GLP-1 weight loss statistics: clinical trial results for semaglutide, tirzepatide, and liraglutide. Average weight loss, costs, side effects, and treatment timelines.",
   alternates: {

@@ -918,7 +918,7 @@ const battles: BattleData[] = [
     matchupLabel: "Maximus vs PeterMD",
     subtitle: "The broadest prescription toolkit vs a focused finasteride + 3-in-1 topical lineup - both with verified prices.",
     description:
-      "Maximus (oral minoxidil $24.99/mo, finasteride & dutasteride $34.99, All-in-One Gel $64.99) vs PeterMD (finasteride from $60/30 tablets, Follicure RX 3-in-1 spray $70). A verified price-for-price comparison.",
+      "Maximus (oral minoxidil $24.99/mo, finasteride $34.99) vs PeterMD (finasteride from $60/30 tablets). A verified price-for-price comparison.",
     intro:
       "This is one of the few hair-loss matchups where we've verified published pricing on both sides, so it can be a real price-for-price comparison. Maximus brings the widest prescription toolkit in our ranking - oral minoxidil ($24.99/mo), finasteride and dutasteride ($34.99/mo each) up to the four-active All-in-One Gel ($64.99/mo), billed as 90-day supplies. PeterMD keeps it focused: finasteride 1mg from $60 per 30 tablets (about $45/month at the 60-count rate) and Follicure RX, a 3-in-1 topical spray that pairs minoxidil and finasteride with ketoconazole - the only ketoconazole-containing topical in our ranking - at $70 per bottle.",
     verdict:
@@ -980,7 +980,7 @@ const battles: BattleData[] = [
     slug: "happyhead-vs-petermd",
     provider1Id: "happyhead",
     provider2Id: "petermd",
-    title: "Happy Head vs PeterMD: Custom Formulas or Simple Sticker Prices in 2026?",
+    title: "Happy Head vs PeterMD (2026): Which Wins?",
     matchupLabel: "Happy Head vs PeterMD",
     subtitle: "Dermatologist-personalized compounds vs a focused finasteride + 3-in-1 topical lineup.",
     description:
@@ -1158,7 +1158,7 @@ const articles: ArticleData[] = [
     slug: "hims-alternatives",
     title: "Best Hims Alternatives for Hair Loss in 2026 (Verified Prices)",
     description:
-      "The best Hims alternatives for hair loss in 2026: Maximus from $24.99/month with oral dutasteride options, Happy Head's custom formulas from $49, and PeterMD's simple finasteride pricing - every price verified.",
+      "The best Hims alternatives for hair loss in 2026: Maximus from $24.99/month, Happy Head's custom formulas from $49, PeterMD's flat pricing - verified.",
     category: "Advice",
     readTime: "6 min read",
     publishedAt: "2026-08-28",
@@ -1196,7 +1196,7 @@ const articles: ArticleData[] = [
     slug: "keeps-alternatives",
     title: "Best Keeps Alternatives for Hair Loss in 2026 (Verified Prices)",
     description:
-      "The best Keeps alternatives in 2026: Maximus from $24.99/month with dutasteride and compounded gels, Happy Head's personalized formulas from $49, and PeterMD's flat finasteride pricing - every price verified.",
+      "The best Keeps alternatives in 2026: Maximus from $24.99/month, Happy Head's personalized formulas from $49, PeterMD's flat finasteride - verified.",
     category: "Advice",
     readTime: "6 min read",
     publishedAt: "2026-08-28",
@@ -1361,7 +1361,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "hair-loss-treatment-cost",
-    title: "How Much Does Hair Loss Treatment Cost in 2026? (Verified Prices)",
+    title: "Hair Loss Treatment Cost in 2026 (Verified Prices)",
     description:
       "What hair loss treatment actually costs online in 2026: verified published prices from $24.99/month - every plan at Maximus, Happy Head and PeterMD, compared honestly.",
     category: "Guide",
@@ -1465,7 +1465,7 @@ const articles: ArticleData[] = [
     slug: "maximus-cost",
     title: "Maximus Hair Loss Cost: Full 2026 Price List (From $24.99/mo)",
     description:
-      "How much does Maximus cost? The full verified 2026 price list - oral minoxidil $24.99/mo, finasteride $34.99, dutasteride $34.99, All-in-One Gel $64.99 - plus what's included and how the 90-day billing works.",
+      "Maximus cost, verified for 2026: oral minoxidil $24.99/mo, finasteride $34.99, dutasteride $34.99, All-in-One Gel $64.99 - plus how 90-day billing works.",
     category: "Advice",
     readTime: "6 min read",
     publishedAt: "2026-08-24",
@@ -1631,7 +1631,7 @@ const articles: ArticleData[] = [
     slug: "is-happyhead-legit",
     title: "Is Happy Head Legit? An Honest Happy Head Review (2026)",
     description:
-      "Is Happy Head legit? A clear look at the dermatologist-founded hair-loss service - its custom formulas, verified $49 first-order pricing, 4.5 Trustpilot rating across 1,803 reviews, and the pros and cons.",
+      "Is Happy Head legit? The dermatologist-founded service examined - custom formulas, verified $49 first-order pricing, 4.5 Trustpilot across 1,803 reviews.",
     category: "Advice",
     readTime: "6 min read",
     publishedAt: "2026-08-24",
@@ -1667,7 +1667,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "happyhead-cost",
-    title: "Happy Head Cost in 2026: $49 First Order, $89 Regular - Full Breakdown",
+    title: "Happy Head Cost 2026: $49 First Order, $89 After",
     description:
       "How much does Happy Head cost? Verified 2026 pricing: Custom Topical and SuperCapsule $49 first order (reg $89/mo), Dual Action Bundle $98 (reg $178), 20% subscribe savings - and how it compares.",
     category: "Advice",
@@ -1769,7 +1769,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "finasteride-vs-minoxidil",
-    title: "Finasteride vs Minoxidil: Which Hair Loss Treatment Is Right for You?",
+    title: "Finasteride vs Minoxidil: Which Is Right for You?",
     description:
       "How finasteride and minoxidil differ, whether to use them together, side effects to know, and how to choose the right hair-loss treatment for you.",
     category: "Comparison",
@@ -1867,7 +1867,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "best-online-hair-loss-treatment",
-    title: "Best Online Hair Loss Treatment: How to Choose a Provider in 2026",
+    title: "Best Online Hair Loss Treatment: How to Choose (2026)",
     description:
       "How online hair-loss treatment works, what to look for in a telehealth provider, and how the top options compare on treatments, personalization and who they serve.",
     category: "Guide",
@@ -2033,7 +2033,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "finasteride-side-effects",
-    title: "Finasteride Side Effects: What's Common, What's Rare & What to Know",
+    title: "Finasteride Side Effects: What's Common & What's Rare",
     description:
       "An honest look at finasteride's side effects - how often sexual side effects actually occur in studies, what usually happens if you stop, and who should avoid it.",
     category: "Science",

@@ -45,12 +45,23 @@ export async function generateMetadata({
       isWL && !WEIGHT_LOSS_MIGRATED
         ? "https://www.topweightloss.io"
         : `https://www.treatmentshub.com/${battleSlug}`;
+    // Dedicated meta descriptions (<=160 chars) where the visible hero copy
+    // runs long - the hero paragraph stays as designed, the snippet gets a
+    // version Google won't truncate mid-claim. Fallback: hero.description.
+    const VERTICAL_META_DESCRIPTION: Record<string, string> = {
+      "weight-loss":
+        "Compare 2026's best telehealth weight loss providers. Verified GLP-1 prices from $59/month semaglutide and $99/month tirzepatide - checked at the source.",
+      hrt: "Compare the best online HRT and menopause providers of 2026 - care models, insurance friendliness and verified Trustpilot ratings, honestly reviewed.",
+      "hearing-aids":
+        "Compare over-the-counter hearing devices sold online - how the brands differ, what OTC can and can't do, and what to verify before buying.",
+    };
+    const metaDescription = VERTICAL_META_DESCRIPTION[battleSlug] ?? vConfig.hero.description;
     return {
       title: { absolute: vConfig.hero.h1 },
-      description: vConfig.hero.description,
+      description: metaDescription,
       robots: isPublishedVertical(battleSlug) ? undefined : { index: false, follow: false },
       alternates: { canonical },
-      openGraph: { title: vConfig.hero.h1, description: vConfig.hero.description, url: canonical, type: "website" },
+      openGraph: { title: vConfig.hero.h1, description: metaDescription, url: canonical, type: "website" },
     };
   }
 

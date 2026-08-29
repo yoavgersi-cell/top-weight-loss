@@ -577,11 +577,11 @@ const battles: BattleData[] = [
     slug: "midi-vs-winona",
     provider1Id: "midi",
     provider2Id: "winona",
-    title: "Midi Health vs Winona: Which Menopause Care Model Fits You in 2026?",
+    title: "Midi Health vs Winona (2026): Which Fits You?",
     matchupLabel: "Midi Health vs Winona",
     subtitle: "Insurance-friendly specialist visits vs a focused, direct-pay hormone-therapy subscription.",
     description:
-      "Midi Health (menopause-trained clinicians, works with many insurance plans, hormonal + non-hormonal paths) vs Winona (dedicated body-identical HRT, direct pay, monthly delivery). An honest model comparison.",
+      "Midi Health (menopause-trained clinicians, insurance-friendly) vs Winona (body-identical HRT, direct pay, monthly delivery). An honest comparison.",
     intro:
       "Midi Health and Winona are both built specifically around menopause - which makes this the most instructive matchup in our HRT ranking. The difference is the model. Midi runs like a virtual specialist clinic: menopause-trained clinicians, visits that many major insurance plans cover, and treatment plans that can be hormonal or non-hormonal. Winona runs like a focused product: physician-prescribed, body-identical hormone therapy on a direct-pay subscription, shipped discreetly every month. We haven't yet verified either provider's current published pricing, so this comparison is about the care model - the thing that actually separates them.",
     verdict:
@@ -654,11 +654,11 @@ const battles: BattleData[] = [
     slug: "hone-vs-winona",
     provider1Id: "hone",
     provider2Id: "winona",
-    title: "Hone vs Winona: Labs-First or Menopause-First Hormone Care in 2026?",
+    title: "Hone vs Winona (2026): Which HRT Model Fits?",
     matchupLabel: "Hone vs Winona",
     subtitle: "At-home bloodwork driving treatment decisions vs a dedicated menopause HRT service.",
     description:
-      "Hone (at-home lab testing, physician review of your results, monitored treatment) vs Winona (menopause-focused, body-identical HRT, monthly delivery). Two philosophies of online hormone care, compared honestly.",
+      "Hone (at-home labs, physician-reviewed results) vs Winona (menopause-focused body-identical HRT). Two models of online hormone care, compared honestly.",
     intro:
       "Hone and Winona answer the same question - how should hormone care work online? - with opposite philosophies. Hone starts with data: an at-home lab test, a physician consultation on your actual results, and treatment monitored against follow-up bloodwork. Winona starts with the condition: a service built entirely around menopause, prescribing body-identical hormone therapy after an online medical review, delivered monthly. We haven't verified either provider's current published pricing, so this comparison weighs the models themselves.",
     verdict:
@@ -722,7 +722,7 @@ const battles: BattleData[] = [
     slug: "winona-vs-nurx",
     provider1Id: "winona",
     provider2Id: "nurx",
-    title: "Winona vs Nurx (2026): Menopause Specialist or $39 Platform Play?",
+    title: "Winona vs Nurx (2026): Which $39 HRT Wins?",
     matchupLabel: "Winona vs Nurx",
     subtitle: "A menopause-only clinic with an 8,138-review record vs a telehealth pharmacy's $39/month HRT system.",
     description:

@@ -19,14 +19,14 @@ import { notFound, permanentRedirect } from "next/navigation";
 // prices - keep in sync when pricing changes.
 const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
   "tirzepatide-vs-semaglutide": {
-    title: "Tirzepatide vs Semaglutide (2026): Results, Side Effects & Real Prices",
+    title: "Tirzepatide vs Semaglutide (2026): Results & Prices",
     description:
-      "Tirzepatide vs semaglutide compared: up to 22.5% vs ~15% average weight loss in trials, side effects, dosing - and verified compounded prices from $59/mo (semaglutide) and $99/mo (tirzepatide) at real providers.",
+      "Tirzepatide vs semaglutide: up to 22.5% vs ~15% weight loss in trials, side effects, dosing - and verified compounded prices from $59 and $99/month.",
   },
   "best-mounjaro-alternatives": {
     title: "7 Best Mounjaro Alternatives in 2026 (From $99/Month)",
     description:
-      "Compounded tirzepatide - Mounjaro's active ingredient - from a verified $99/month at licensed telehealth providers, vs $1,000+ brand pens. Every price checked against the provider's own site, August 2026.",
+      "Compounded tirzepatide - Mounjaro's active ingredient - from a verified $99/month at licensed providers, vs $1,000+ brand pens. Prices checked Aug 2026.",
   },
   "best-wegovy-alternatives": {
     title: "7 Best Wegovy Alternatives in 2026 (From $59/Month)",

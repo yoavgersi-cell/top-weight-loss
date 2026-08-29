@@ -14,7 +14,7 @@ export const revalidate = 60;
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/cheapest-glp1";
 const TITLE = "Cheapest GLP-1 in 2026: Real Prices From 8 Providers ($59-$299)";
 const DESCRIPTION =
-  "The cheapest GLP-1 programs in 2026, ranked by real published prices: compounded semaglutide from $59/month and tirzepatide from $99/month. Every price verified, every condition disclosed - promo rates, prepaid plans and what's actually included.";
+  "The cheapest GLP-1 programs of 2026, ranked by verified prices: compounded semaglutide from $59/month, tirzepatide from $99/month - conditions disclosed.";
 
 export const metadata: Metadata = {
   title: { absolute: `${TITLE} | TreatmentsHub` },

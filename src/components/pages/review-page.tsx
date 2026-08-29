@@ -32,27 +32,27 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   embody: {
     title: "embody GLP-1 Reviews 2026: Cost, Real Results & Is It Worth It?",
     description:
-      "embody GLP-1 reviews: compounded semaglutide & tirzepatide, shipped in 1-2 days with no insurance and LegitScript certification. Real customer reviews, pricing, pros & cons - and is embody worth it?",
+      "embody GLP-1 reviews: compounded semaglutide & tirzepatide shipped in 1-2 days, LegitScript-certified. Real reviews, pricing - and is embody worth it?",
   },
   medvi: {
     title: "Medvi GLP-1 Reviews 2026: Is It Legit? Cost & Verdict",
     description:
-      "Medvi weight loss reviews: all-inclusive GLP-1 care now from $99/month promotional (reg. $199) and the personal provider support customers rave about on Trustpilot. Is Medvi legit and worth it? Real reviews, cost, pros & cons.",
+      "Medvi reviews: all-inclusive GLP-1 from $99/month promo (reg. $199) and personal support customers praise on Trustpilot. Is Medvi legit? Cost, pros & cons.",
   },
   sprout: {
     title: "Sprout Reviews 2026: Is It Legit? GLP-1 Cost & Verdict",
     description:
-      "Sprout weight loss reviews: compounded semaglutide from $149/mo, tirzepatide from $199/mo, brand-name Wegovy available, prescriptions shipped within 2 days. Is Sprout legit and worth it? Real reviews, pricing, pros & cons.",
+      "Sprout reviews: compounded semaglutide from $149/mo, tirzepatide from $199/mo, brand-name Wegovy available. Is Sprout legit? Pricing, pros & cons.",
   },
   altrx: {
     title: "altRx Reviews 2026: Is It Legit? GLP-1 Cost, Results & Verdict",
     description:
-      "altRx reviews: compounded semaglutide & tirzepatide plus brand-name Zepbound & Wegovy, no insurance and Buy Now, Pay Later. Is altRx legit and worth it? Real customer reviews, pricing, pros & cons.",
+      "altRx reviews: compounded semaglutide & tirzepatide plus brand-name Zepbound & Wegovy, with Buy Now, Pay Later. Is altRx legit? Pricing, pros & cons.",
   },
   trimrx: {
     title: "trimrx Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
     description:
-      "trimrx reviews: budget-friendly compounded semaglutide and tirzepatide, flexible plans with no long-term contract, and clinical support included. Is trimrx legit and worth it? Real customer reviews, cost, pros & cons.",
+      "trimrx reviews: budget compounded semaglutide and tirzepatide, no long-term contract, clinical support included. Is trimrx legit? Cost, pros & cons.",
   },
   shed: {
     title: "Shed Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
@@ -62,7 +62,7 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   directmeds: {
     title: "DirectMeds Reviews 2026: Is It Legit? Cost, Results & Verdict",
     description:
-      "DirectMeds reviews: doctor-prescribed GLP-1 as injections or needle-free oral drops, free 1-2 day shipping and no membership. Is DirectMeds legit and worth it? Real customer reviews, cost, pros & cons.",
+      "DirectMeds reviews: doctor-prescribed GLP-1 as injections or needle-free drops, free 1-2 day shipping, no membership. Is it legit? Cost, pros & cons.",
   },
   wellmedr: {
     title: "wellmedr Reviews 2026: Is It Legit? Cost, Results & Verdict",

@@ -12,9 +12,9 @@ import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
 export const revalidate = 60;
 
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/switch-from-ozempic";
-const TITLE = "Switching From Ozempic to Compounded Semaglutide (2026): Cost & How It Works";
+const TITLE = "Switch From Ozempic to Compounded Semaglutide (2026)";
 const DESCRIPTION =
-  "Paying $1,000+/month for Ozempic, Wegovy or Zepbound? Compounded versions of the same active ingredients run $59-$299/month through licensed telehealth providers. How the switch actually works, what the clinician decides, and what to verify before you move.";
+  "Paying $1,000+/month for Ozempic or Wegovy? Compounded semaglutide runs $59-$299/month at licensed telehealth providers. How switching actually works.";
 
 export const metadata: Metadata = {
   title: { absolute: `${TITLE} | TreatmentsHub` },
