@@ -74,6 +74,12 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
 // targets). Code-rendered, so they work for articles whose body lives in the
 // blob. Every figure is a real, listed price - no invented numbers.
 const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
+  "ozempic-face":
+    "Ozempic face is facial volume loss caused by losing weight quickly - not a chemical side effect of the drug. It can happen with any GLP-1 or any rapid weight loss. The levers that soften it: a moderate pace of loss, adequate protein, resistance training and hydration - and facial volume often partially recovers as weight stabilizes.",
+  "zepbound-vs-wegovy-vs-ozempic":
+    "Zepbound (tirzepatide) produced up to 22.5% average weight loss in trials versus ~15% for Wegovy (semaglutide); Ozempic is the same semaglutide under its diabetes label. Verified prices: brand Zepbound $1,249/month and Wegovy $1,579 at altRx, versus compounded semaglutide from $59 and tirzepatide from $99 through licensed telehealth.",
+  "glp1-with-insurance":
+    "Many plans cover GLP-1s for diabetes, far fewer for weight loss alone - your formulary is the only real answer, and prior authorization (BMI thresholds, documented conditions) is the usual gate. If coverage falls through, verified self-pay compounded semaglutide runs $59-$99/month through licensed telehealth providers.",
   "ozempic-vs-wegovy-differences":
     "Ozempic and Wegovy contain the same active ingredient (semaglutide) but are not the same drug: Ozempic is FDA-approved for type 2 diabetes, Wegovy for chronic weight management at a higher maximum dose (2.4 mg vs 2 mg). For self-pay weight loss, compounded semaglutide runs a verified $59-$99/month versus $1,149+ for either brand.",
   "zepbound-vs-wegovy":

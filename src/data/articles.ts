@@ -10,6 +10,8 @@ export interface Article {
   updatedAt: string;
   heroColor: string;
   author?: string;
+  // Optional 3-4 verified takeaway bullets rendered in a box above the body.
+  keyTakeaways?: string[];
   sections: { heading: string; body: string }[];
 }
 
@@ -572,6 +574,14 @@ export const articles: Article[] = [
     author: "TopWeightLoss Team",
     sections: [
       {
+        heading: "What happens when you stop taking Wegovy specifically?",
+        body: 'The same pattern as every GLP-1, because Wegovy is semaglutide: the medication\'s appetite effects fade over the weeks after your last dose, hunger returns toward its old baseline, and without a maintenance plan much of the lost weight tends to return over the following year - that is what the extension studies of semaglutide showed. Wegovy isn\'t special in this regard, and neither is Zepbound or compounded semaglutide: the biology is the medication class, not the brand. Which is why the sections below - tapering, rebound hunger, and maintenance strategy - apply whichever GLP-1 you\'re on.',
+      },
+      {
+        heading: "Is there a protocol for weaning off slowly?",
+        body: 'There is no official self-serve tapering protocol, and that\'s the honest answer: dose reduction is a clinical decision made with your prescriber, who typically steps the dose down over time rather than stopping cold - giving appetite signals time to adjust while you build maintenance habits. What not to do: stretch doses yourself, split doses, or quit abruptly without a plan for the hunger that follows. If cost is the reason for stopping, say so - moving from a brand pen to <a href="/weight-loss/switch-from-ozempic">verified $59-$99/month compounded options</a> is often the alternative your prescriber discusses before stopping entirely.',
+      },
+      {
         heading: "The Weight Regain Data",
         body: "This is the topic many patients and providers are reluctant to discuss openly, but the data is clear. The STEP 1 trial extension showed that participants who stopped semaglutide regained approximately two-thirds of their lost weight within one year of discontinuation. Similarly, tirzepatide discontinuation studies have shown significant weight regain in most participants. This isn't a personal failure - it reflects the biological reality that obesity is a chronic condition driven by hormonal and metabolic factors that reassert themselves when medication is removed.",
       },
@@ -692,6 +702,10 @@ export const articles: Article[] = [
       {
         heading: "Is It Safe?",
         body: 'When sourced from a licensed 503B compounding pharmacy that follows current Good Manufacturing Practice (cGMP) standards, compounded semaglutide is considered safe by most medical professionals. The key is the pharmacy\'s credentials. Reputable telehealth providers use only licensed, inspected facilities. Ask your provider which pharmacy they use and verify its licensure. Avoid any platform that doesn\'t disclose their compounding source.',
+      },
+      {
+        heading: "Semaglutide Base vs Salt Forms: The FDA Warning to Know About?",
+        body: 'One distinction separates legitimate compounded semaglutide from the products the FDA has warned about: the form of the drug. Approved semaglutide (in Ozempic and Wegovy) is the <strong>base</strong> form, and legitimate 503A compounding pharmacies compound that same base form. The FDA has cautioned about products made with <strong>salt forms</strong> - semaglutide sodium and semaglutide acetate - stating it is not aware of any basis for them to meet the compounding requirements, and warning consumers against them. Before ordering anywhere, ask one question: "Do you compound semaglutide base?" A legitimate provider answers instantly; the providers we list work with US state-licensed pharmacies compounding the base form. If a seller dodges the question, or offers "research use" vials with no prescription, walk away - that is not the <a href="/weight-loss/cheapest-glp1">$59-$99/month legitimate market</a>, it is the gray market wearing its clothes.',
       },
       {
         heading: "How Does It Compare in Effectiveness?",
@@ -1425,7 +1439,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "What is the best alternative to Mounjaro?",
-        body: '<p>The closest Mounjaro alternative is compounded tirzepatide - the same active ingredient, prescribed online by licensed providers, from a verified $99/month. Zepbound is literally the same drug FDA-approved for weight loss, and compounded semaglutide (from $59/month) is the budget path many people start with.</p><table><tr><th>Route</th><th>What it is</th><th>Verified monthly cost</th></tr><tr><td>Compounded tirzepatide</td><td>Mounjaro\'s active ingredient via telehealth</td><td>$99-$299</td></tr><tr><td>Zepbound (brand)</td><td>Same drug, FDA-approved for weight loss</td><td>$299 first month via ro pens; $1,249 at altRx</td></tr><tr><td>Compounded semaglutide</td><td>Ozempic\'s active ingredient, the budget option</td><td>$59-$199</td></tr></table><p>Below: why people switch, what each option actually costs at real providers, and how to pick - with every price checked against the provider\'s own published pricing.</p>',
+        body: '<p>The closest Mounjaro alternative is compounded tirzepatide - the same active ingredient, prescribed online by licensed providers, from a verified $99/month. Zepbound is literally the same drug FDA-approved for weight loss, and compounded semaglutide (from $59/month) is the budget path many people start with.</p><table><tr><th>Route</th><th>What it is</th><th>Verified monthly cost</th></tr><tr><td>Compounded tirzepatide</td><td>Mounjaro\'s active ingredient via telehealth</td><td>$99-$299</td></tr><tr><td>Zepbound (brand)</td><td>Same drug, FDA-approved for weight loss</td><td>$299 first month via ro pens; $1,249 at altRx</td></tr><tr><td>Compounded semaglutide</td><td>Ozempic\'s active ingredient, the budget option</td><td>$59-$199</td></tr></table><p>Below: why people switch, what each option actually costs at real providers, and how to pick - with every price checked against the provider\'s own published pricing.</p> The same tirzepatide also powers Zepbound - so if you\'re pricing compounded tirzepatide vs Zepbound, the verified anchors are $99-$147/month compounded versus $1,249/month for brand Zepbound at altRx (KwikPens from $299 first month at ro).',
       },
       {
         heading: "Why do people look for Mounjaro alternatives?",
@@ -1606,6 +1620,130 @@ export const articles: Article[] = [
       {
         heading: "How to choose",
         body: 'Weigh price against what\'s included (labs, supplies, shipping), how fast medication arrives, whether you want compounded or brand-name treatment, and how easy it is to pause or cancel. If you\'re not sure, <a href="/weight-loss/find-your-match">take our matching quiz</a> for a personalized recommendation, or read our <a href="/weight-loss/articles/is-embody-legit">Embody review</a> first. This article is general information, not medical advice.',
+      },
+    ],
+  },
+  {
+    slug: "ozempic-face",
+    title: "Ozempic Face: Why It Happens & How to Avoid It (2026)",
+    description:
+      "Ozempic face is facial volume loss from rapid weight loss - not a drug side effect. Why it happens on any GLP-1, how pace and protein change it, and whether it improves.",
+    category: "Advice",
+    readTime: "7 min read",
+    publishedAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+    heroColor: "#F6F0EA",
+    author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "Ozempic face is facial fat loss from losing weight fast - not a chemical side effect of semaglutide.",
+      "It can happen on any GLP-1, any diet, or after bariatric surgery; the driver is pace and total loss, not the brand.",
+      "The levers you control: a moderate rate of loss, adequate protein, resistance training and hydration.",
+      "Facial volume often partially recovers as weight stabilizes; established skin laxity is slower and age-dependent.",
+    ],
+    sections: [
+      {
+        heading: "What is Ozempic face?",
+        body: 'Ozempic face is the internet\'s name for a real phenomenon with a misleading label: the gaunt, deflated look some people notice in their face after losing a lot of weight quickly. Faces store fat too - in the cheeks, temples and around the eyes - and rapid weight loss removes that volume just as it removes it everywhere else. Overlying skin, especially older skin with less elastin, doesn\'t always shrink back at the same pace, which reads as sagging. The name is unfair to the medication: this is a feature of fast, significant weight loss by any method, not a chemical effect of semaglutide on your skin.',
+      },
+      {
+        heading: "Does Ozempic cause face sagging directly?",
+        body: 'No - and this distinction matters for what you do about it. Semaglutide and tirzepatide reduce appetite; the weight loss that follows is what changes your face. The same look shows up after bariatric surgery, aggressive dieting, and endurance-training transformations - anywhere large amounts of fat leave quickly. GLP-1s get the blame because they made significant weight loss common enough for the pattern to earn a nickname. The practical upside of the correct explanation: the levers that soften it are about how you lose, not which medication you take.',
+      },
+      {
+        heading: "How do you avoid Ozempic face?",
+        body: 'Four levers, all in your control. <strong>Pace:</strong> the face effect tracks speed - a moderate, steady rate of loss gives skin time to adapt, and your prescriber can titrate dosing with that in mind; losing slower is a legitimate clinical choice, not a failure. <strong>Protein:</strong> adequate protein protects lean tissue everywhere, face included - our <a href="/weight-loss/articles/what-to-eat-on-glp1-medication">GLP-1 nutrition guide</a> covers targets when appetite is suppressed. <strong>Resistance training:</strong> preserving muscle keeps overall composition - and the structural support under skin - in better shape; see <a href="/weight-loss/articles/exercise-while-on-glp1-medication">how to train on a GLP-1 without losing muscle</a>. <strong>Hydration and basics:</strong> dehydrated skin exaggerates every hollow. What we deliberately do not recommend: collagen supplements and "skin elasticity" products marketed at GLP-1 users - the evidence doesn\'t support specific claims, and we don\'t sell hope we can\'t verify.',
+      },
+      {
+        heading: "Does Ozempic face go away after stopping?",
+        body: 'Partially, and it depends what caused which part. The fat-volume component often softens as weight stabilizes - and if weight is regained, facial volume returns with it (usually not the trade anyone wants). The skin-laxity component is slower and honest expectations depend heavily on age: younger skin retracts substantially over months; older skin retracts less. What stabilizing does reliably stop is progression. For established laxity that bothers you, the realistic conversation is with a dermatologist - about proven options, not supplement stacks.',
+      },
+      {
+        heading: "Should fear of Ozempic face stop you from treating obesity?",
+        body: 'Framed honestly: the trade is between facial volume and the metabolic consequences of the weight itself - and that\'s rarely a close call medically. The better response to the concern isn\'t avoiding treatment; it\'s structuring it - moderate pace, protein, training - with a provider who monitors you. That provider matters: our <a href="/weight-loss">ranked telehealth providers</a> include clinician follow-up in verified $59-$99/month plans, and pace-of-loss is exactly the kind of thing to raise at check-ins. Not medical advice - your clinician\'s guidance comes first.',
+      },
+    ],
+  },
+  {
+    slug: "zepbound-vs-wegovy-vs-ozempic",
+    title: "Zepbound vs Wegovy vs Ozempic (2026): Full Comparison",
+    description:
+      "Zepbound (tirzepatide) led trials with up to 22.5% average weight loss vs ~15% for Wegovy (semaglutide); Ozempic is the diabetes-approved sibling. Verified prices from $59/month compounded to $1,249 brand.",
+    category: "Comparison",
+    readTime: "8 min read",
+    publishedAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+    heroColor: "#EAF1F6",
+    author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "Zepbound (tirzepatide) targets two hormone receptors and produced up to 22.5% average weight loss in trials, vs ~15% for Wegovy (semaglutide).",
+      "Ozempic contains Wegovy's ingredient at diabetes-approved dosing - it's the same semaglutide, different label.",
+      "Verified brand prices: Zepbound $1,249/mo and Wegovy $1,579 at altRx; compounded routes run $59-$99/month.",
+      "There is no DIY dose conversion between them - switching means restarting titration with your prescriber.",
+    ],
+    sections: [
+      {
+        heading: "What's the difference between Zepbound, Wegovy and Ozempic?",
+        body: 'Three names, two drugs, three FDA labels. <strong>Zepbound</strong> is tirzepatide, FDA-approved for chronic weight management - it targets two hormone receptors (GIP and GLP-1). <strong>Wegovy</strong> is semaglutide at weight-management dosing (up to 2.4 mg). <strong>Ozempic</strong> is the same semaglutide approved for type 2 diabetes at up to 2 mg - widely used off-label for weight loss, but the weight-loss approval belongs to Wegovy. So the real comparison is tirzepatide vs semaglutide, with Ozempic as semaglutide\'s diabetes-label sibling - our <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">molecule-level comparison</a> goes deeper.',
+      },
+      {
+        heading: "Which is stronger - Zepbound or Wegovy?",
+        body: 'On trial averages, Zepbound. Tirzepatide produced up to 22.5% average body-weight loss in its trials at the highest dose, versus roughly 15% for semaglutide in Wegovy\'s pivotal trial - a meaningful gap, with the usual honest caveats: averages hide individual variation, the drugs weren\'t compared head-to-head in those trials, and tolerability differs person to person. Plenty of people respond excellently to semaglutide; some tolerate one and not the other. "Stronger on average" is true; "stronger for you" is what titration under a clinician discovers.',
+      },
+      {
+        heading: "What do they cost out of pocket?",
+        body: 'The verified numbers, not estimates: brand <strong>Zepbound runs $1,249/month</strong> and brand <strong>Wegovy $1,579</strong> at altRx (Ozempic $1,149; Zepbound KwikPens from $299 first month at ro, then $399-$449 plus membership). The compounded route changes the math entirely: <strong>compounded semaglutide from a verified $59/month</strong> (wellmedr) and <strong>compounded tirzepatide from $99</strong> - the same active ingredients through licensed telehealth with US state-licensed pharmacies. Full ladder on our <a href="/weight-loss/cheapest-glp1">cheapest GLP-1 page</a>, checked against every provider\'s own site.',
+      },
+      {
+        heading: "How do the side effects compare?",
+        body: 'Same family, same character: GI effects dominate all three - nausea, constipation, diarrhea, especially during dose increases - because that\'s how this medication class works. Trial discontinuation rates were broadly similar, and the practical differences are individual: some people tolerate tirzepatide\'s dual mechanism better, some semaglutide. Management is identical across them - slow titration, eating patterns, hydration - covered in our <a href="/weight-loss/articles/semaglutide-side-effects-guide">side-effects guide</a>. Serious-but-rare warnings (pancreatitis, thyroid C-cell warnings) apply across the class.',
+      },
+      {
+        heading: "Can you switch from Ozempic to Zepbound?",
+        body: 'Yes, people do - and here\'s the part the search results get dangerously wrong: <strong>there is no mg-to-mg dose conversion</strong> between semaglutide and tirzepatide. They\'re different molecules with different dose ladders; a prescriber typically starts the new medication at or near its own starting dose and titrates from there, judging by response and tolerability. Never attempt a DIY conversion. If the switch you actually want is away from brand pricing rather than between molecules, that\'s a different move - our <a href="/weight-loss/switch-from-ozempic">switching-to-compounded guide</a> covers it.',
+      },
+      {
+        heading: "Which one should you choose?",
+        body: 'Decision logic, honestly ordered. Chasing maximum average efficacy with budget for brand: Zepbound leads the trial numbers. Insurance covering one of them: the covered one usually wins the math - check your formulary first. Self-pay: the compounded route\'s $59-$99/month changes the entire question, which is why it\'s our default starting point for cash payers - compare on the <a href="/weight-loss">ranking</a>. Diabetes plus weight goals: that\'s an Ozempic/Mounjaro-label conversation with your clinician. Whichever route: prescription required, titration takes months, and the provider\'s follow-up quality matters more than the logo on the pen.',
+      },
+    ],
+  },
+  {
+    slug: "glp1-with-insurance",
+    title: "GLP-1 With Insurance (2026): Coverage, PA & the Backup Plan",
+    description:
+      "How GLP-1 insurance coverage actually works - formularies, prior authorization, why denials happen - and the verified $59-$99/month self-pay backup when coverage falls through.",
+    category: "Advice",
+    readTime: "7 min read",
+    publishedAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+    heroColor: "#EDF3EE",
+    author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "Coverage is plan-specific: many plans cover GLP-1s for diabetes, far fewer for weight loss alone - your formulary is the only real answer.",
+      "Expect prior authorization: BMI thresholds, documented comorbidities and sometimes step therapy are the usual gates.",
+      "Telehealth prescribers can run the insurance route too - coverage applies to the medication, not the visit type.",
+      "The backup plan is real: verified self-pay compounded semaglutide from $59/month beats many post-deductible brand costs.",
+    ],
+    sections: [
+      {
+        heading: "Does insurance cover GLP-1s for weight loss?",
+        body: 'Sometimes - and the honest structure of that "sometimes": coverage for <strong>diabetes</strong> (Ozempic, Mounjaro) is common; coverage for <strong>weight loss alone</strong> (Wegovy, Zepbound) is much patchier - many employer plans exclude weight-loss medication outright, and Medicare broadly does not cover drugs for weight loss. Nobody can tell you from an article whether yours pays: the answer lives in your plan\'s formulary. Call the number on your card, or search your plan\'s formulary PDF for "Wegovy" and "Zepbound" - twenty minutes that decides your whole strategy.',
+      },
+      {
+        heading: "What is prior authorization and why does it matter?",
+        body: 'Even when a GLP-1 is on your formulary, most plans gate it behind <strong>prior authorization (PA)</strong>: your prescriber documents that you meet criteria before the plan pays. Typical gates: a BMI threshold (commonly 30+, or 27+ with a weight-related condition), documented comorbidities, sometimes proof you tried other approaches first ("step therapy"). PA is paperwork your prescriber files - a provider experienced with GLP-1 PAs materially changes your odds and your wait. Denied? Appeals exist and succeed often enough to be worth filing, especially with better documentation the second time.',
+      },
+      {
+        heading: "Can telehealth prescribe GLP-1s through insurance?",
+        body: 'Yes - the prescription route and the payment route are separate questions. A telehealth clinician\'s prescription for brand Wegovy or Zepbound goes to a regular pharmacy and bills your insurance like any prescription, PA process included. Among providers in our coverage, Found is built around insurance for weight-loss care, and any licensed prescriber - telehealth or office - can initiate a PA. What telehealth adds is speed to the starting line: intake this week instead of a three-month specialist waitlist. How the online route works step by step is in our <a href="/weight-loss/articles/how-to-get-ozempic-online">getting-GLP-1-online guide</a>.',
+      },
+      {
+        heading: "What does covered treatment actually cost?",
+        body: 'Coverage is not free: your real number is copay or coinsurance after deductible, and for expensive brands that can still be substantial until deductibles are met. Manufacturer savings cards exist for the commercially insured and can cut copays meaningfully - worth checking the manufacturer\'s site - though they typically exclude government plans. The comparison that matters: your true monthly out-of-pocket under coverage versus the verified <strong>$59-$99/month self-pay compounded route</strong>. Plenty of people with technically-covered plans still choose compounded for predictability alone.',
+      },
+      {
+        heading: "What's the backup plan when insurance says no?",
+        body: 'The one this site exists to document: <strong>self-pay compounded GLP-1s at verified prices</strong> - semaglutide from $59/month (wellmedr), $69 (embody), $89 (altRx); tirzepatide from $99 - visit included, no PA, no formulary. Same active ingredients, prescribed after an online evaluation by licensed clinicians, from US state-licensed pharmacies (the <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded-vs-brand trade-offs, honestly</a>). Start at the <a href="/weight-loss/cheapest-glp1">verified price ladder</a> or the full <a href="/weight-loss">ranking</a>. The wrong backup plan: gray-market vials and "research peptides" - denial is not a reason to leave the licensed system.',
       },
     ],
   },
