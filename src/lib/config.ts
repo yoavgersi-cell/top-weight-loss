@@ -187,6 +187,9 @@ export interface ArticleData {
   updatedAt: string;
   heroColor: string;
   author?: string;
+  // 3-4 scannable takeaway bullets rendered in a box above the body -
+  // verified facts only, written per-article (never auto-generated).
+  keyTakeaways?: string[];
   sections: ArticleSection[];
   sidebarId?: string;
 }

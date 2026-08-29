@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Clock, ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
+import { Clock, ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { NOINDEX_ARTICLE_SLUGS, latestUpdate } from "@/lib/config";
 import { enhanceArticleHtml } from "@/components/prose";
@@ -397,6 +397,21 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 <strong>The quick answer</strong>
                 {ARTICLE_QUICK_ANSWERS[slug]}
               </div>
+            </div>
+          )}
+          {/* Key takeaways - 3-4 verified bullets, scannable and quotable
+              (featured snippets / AI overviews lift lists like this whole). */}
+          {article.keyTakeaways && article.keyTakeaways.length > 0 && (
+            <div className="mb-8 rounded-xl border border-[#0C4B75]/15 bg-[#F4F8FB] p-5 sm:p-6">
+              <p className="mb-3 text-[12px] font-bold uppercase tracking-wider text-[#0C4B75]">Key takeaways</p>
+              <ul className="space-y-2">
+                {article.keyTakeaways.map((t) => (
+                  <li key={t} className="flex items-start gap-2.5 text-[15px] leading-relaxed text-gray-800">
+                    <Check className="mt-1 h-4 w-4 shrink-0 text-emerald-600" strokeWidth={2.5} />
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
           {/* Table of contents - anchor jump-links. Signals structure to Google

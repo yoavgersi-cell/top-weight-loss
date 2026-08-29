@@ -753,6 +753,12 @@ const articles: ArticleData[] = [
     updatedAt: UPDATED,
     heroColor: "#EEF4EE",
     author: "TreatmentsHub Research Team",
+    keyTakeaways: [
+      "BetterHelp now accepts insurance - a recent change most articles haven't caught up with.",
+      "Copays are cited from around $23/session for covered members; coverage is plan-specific.",
+      "Not covered? The financial-aid questionnaire and first-month discounts lower self-pay.",
+      "Talkspace claims a $0 copay for most insured members - run both eligibility checks.",
+    ],
     sections: [
       {
         heading: "Does BetterHelp take insurance?",
@@ -787,6 +793,12 @@ const articles: ArticleData[] = [
     updatedAt: UPDATED,
     heroColor: "#EEF2F8",
     author: "TreatmentsHub Research Team",
+    keyTakeaways: [
+      "Yes - licensed, state-credentialed therapists; BetterHelp itself reports 31,739 of them.",
+      "Verified Trustpilot: 3.9 across 9,652 reviews - solid but mixed, not stellar.",
+      "The 2023 FTC privacy settlement is real - read the current privacy policy before signing up.",
+      "No psychiatry: if medication may be part of your care, compare Talkspace or Talkiatry.",
+    ],
     sections: [
       {
         heading: "Is BetterHelp legit?",
@@ -825,6 +837,12 @@ const articles: ArticleData[] = [
     updatedAt: UPDATED,
     heroColor: "#EDF3F6",
     author: "TreatmentsHub Research Team",
+    keyTakeaways: [
+      "Talkspace is covered by many major insurance plans and employer EAPs.",
+      "Talkspace claims most insured members pay a $0 copay - its eligibility check confirms yours in minutes.",
+      "Insurance can apply to Talkspace psychiatry too, plan permitting.",
+      "Best verified rating in our coverage: 4.4 on Trustpilot across 2,370 reviews.",
+    ],
     sections: [
       {
         heading: "Does Talkspace take insurance?",
@@ -859,6 +877,12 @@ const articles: ArticleData[] = [
     updatedAt: UPDATED,
     heroColor: "#F7F3EA",
     author: "TreatmentsHub Research Team",
+    keyTakeaways: [
+      "Yes - a real psychiatrist-led practice, billed in-network through many major plans.",
+      "Its 2.5 Trustpilot average (956 reviews) is real too: clinicians praised, billing and back-office criticized.",
+      "Protect yourself: confirm eligibility in writing, keep copies, check claims posted after visits.",
+      "Therapy-only needs fit Talkspace or BetterHelp better; without insurance, Talkiatry usually isn't the door.",
+    ],
     sections: [
       {
         heading: "Is Talkiatry legit?",
@@ -893,6 +917,12 @@ const articles: ArticleData[] = [
     updatedAt: UPDATED,
     heroColor: "#EFF3EE",
     author: "TreatmentsHub Research Team",
+    keyTakeaways: [
+      "There is no single BetterHelp price - anyone quoting one flat number is describing their own quote.",
+      "Insurance is now accepted, with copays cited from ~$23/session for covered members.",
+      "Self-pay varies by location; financial aid and first-month discounts pull it down.",
+      "The subscription bills whether you attend or not - showing up weekly is what makes it good value.",
+    ],
     sections: [
       {
         heading: "How much does BetterHelp cost per month?",
@@ -931,6 +961,12 @@ const articles: ArticleData[] = [
     updatedAt: UPDATED,
     heroColor: "#F6EFF3",
     author: "TreatmentsHub Research Team",
+    keyTakeaways: [
+      "Both BetterHelp and Talkspace offer couples therapy - one subscription covers both partners.",
+      "Verify couples coverage specifically: individual-therapy insurance doesn't always extend to it.",
+      "Talkspace holds the stronger verified rating (4.4 vs 3.9 on Trustpilot).",
+      "Safety concerns or active crisis call for individual support first - and 988 in an emergency.",
+    ],
     sections: [
       {
         heading: "Can couples do therapy online?",
