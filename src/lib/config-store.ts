@@ -66,13 +66,13 @@ async function getVerticalConfig(vertical: string): Promise<SiteConfig> {
       const res = await fetch(blobs[0].url, { cache: "no-store" });
       if (res.ok) {
         const saved = (await res.json()) as Partial<SiteConfig>;
-        return normalizeBrandCasing({ ...base, ...saved });
+        return normalizeBrandCasing({ ...base, ...saved }, `/${vertical}`);
       }
     }
   } catch {
     // fall through to the code skeleton
   }
-  return normalizeBrandCasing(base);
+  return normalizeBrandCasing(base, `/${vertical}`);
 }
 
 // Default Trustpilot reviews per provider id. Shown on battle pages until the
@@ -4011,8 +4011,25 @@ function replaceLongDashesDeep(config: SiteConfig): SiteConfig {
   );
 }
 
-function normalizeBrandCasing(rawConfig: SiteConfig): SiteConfig {
-  const config = replaceLongDashesDeep(rawConfig);
+// Link hygiene for CMS-saved content: blob strings written before the domain
+// migration still carry bare pre-migration hrefs (/reviews/x, /articles/y,
+// /find-your-match...) that now 301 to /weight-loss/*. Rather than hand-editing
+// every blob field in the admin, rewrite them at load time - the same deep-pass
+// pattern as the dash rule, so anything pasted into the admin later is covered
+// too. Only known weight-loss-era path roots are rewritten, and only when the
+// href isn't already vertical-prefixed.
+const BARE_WL_LINK_RE =
+  /href="\/(reviews|articles|find-your-match-weight-loss|find-your-match|how-we-rank|about|disclaimer|cheapest-glp1|switch-from-ozempic|ozempic-alternatives|weight-loss-pills|glp1-pills-vs-injections|semaglutide|tirzepatide|wegovy-providers|ozempic-for-weight-loss|retatrutide-weight-loss|glp1-weight-loss-statistics|best-online-weight-loss-programs|best-weight-loss-injections|cheapest-weight-loss-medication)(\/|"|#)/g;
+function rewriteBareWlLinksDeep(config: SiteConfig, prefix: string): SiteConfig {
+  return JSON.parse(JSON.stringify(config), (_key, value) =>
+    typeof value === "string"
+      ? value.replace(BARE_WL_LINK_RE, `href="${prefix}/$1$2`)
+      : value
+  );
+}
+
+function normalizeBrandCasing(rawConfig: SiteConfig, linkPrefix = "/weight-loss"): SiteConfig {
+  const config = rewriteBareWlLinksDeep(replaceLongDashesDeep(rawConfig), linkPrefix);
   const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
   return {
     ...config,

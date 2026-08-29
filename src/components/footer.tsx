@@ -12,6 +12,7 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "TRT", href: "/trt" },
       { label: "HRT", href: "/hrt" },
       { label: "Hearing Aids", href: "/hearing-aids" },
+      { label: "Online Therapy", href: "/online-therapy" },
     ],
   },
   {
@@ -20,14 +21,14 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "Reviews", href: "/weight-loss/reviews" },
       { label: "Guides", href: "/weight-loss/articles" },
       { label: "Comparisons", href: "/weight-loss/articles#comparisons" },
-      { label: "How We Rank", href: "/how-we-rank" },
+      { label: "How We Rank", href: "/weight-loss/how-we-rank" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About", href: "/about" },
-      { label: "Medical Disclaimer", href: "/disclaimer" },
+      { label: "About", href: "/weight-loss/about" },
+      { label: "Medical Disclaimer", href: "/weight-loss/disclaimer" },
     ],
   },
 ];

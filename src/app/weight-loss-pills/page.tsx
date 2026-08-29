@@ -259,7 +259,7 @@ export default async function WeightLossPillsPage() {
                       Visit {p.name}
                       <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
                     </ProviderCta>
-                    <Link href={`/reviews/${p.id}`} className="text-[13px] font-bold text-[#0C4B75] hover:underline">
+                    <Link href={`/weight-loss/reviews/${p.id}`} className="text-[13px] font-bold text-[#0C4B75] hover:underline">
                       Read our review
                     </Link>
                   </div>

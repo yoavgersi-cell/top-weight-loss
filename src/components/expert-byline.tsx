@@ -12,7 +12,7 @@ function initials(name: string) {
 export function ExpertByline({
   expert,
   label = "Analysis by",
-  href = "/about",
+  href = "/weight-loss/about",
 }: {
   expert: Expert;
   label?: string;
