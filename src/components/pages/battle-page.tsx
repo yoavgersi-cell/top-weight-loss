@@ -23,7 +23,7 @@ import { TrustDisclosure } from "@/components/medical-sources";
 import { SourcesMethodology } from "@/components/sources-methodology";
 import { ProductCarousel } from "@/components/product-carousel";
 import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/reddit-community";
-import { threeWayBySlug } from "@/lib/three-way";
+import { threeWayBySlug, THREE_WAY_COMPARISONS } from "@/lib/three-way";
 import { ThreeWayPageView, threeWayMetadata } from "@/components/pages/three-way-page";
 
 // Code-side CTR overrides for the highest-performing "versus" pages. These
@@ -517,6 +517,22 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     .filter((x): x is NonNullable<typeof x> => x !== null)
     .sort((a, b) => Number(b.featuresWinner) - Number(a.featuresWinner))
     .slice(0, 6);
+
+  // Curated 3-way comparisons featuring BOTH of this battle's providers - the
+  // only internal path into the trio pages, so every trio gets inbound links
+  // from its three constituent head-to-heads. Weight-loss only (the registry
+  // is a WL registry).
+  const relatedTrios =
+    ctx.vertical === "weight-loss"
+      ? THREE_WAY_COMPARISONS.filter(
+          (t) => t.providerIds.includes(p1.id) && t.providerIds.includes(p2.id)
+        ).map((t) => ({
+          slug: t.slug,
+          names: t.providerIds.map(
+            (id) => config.providers.find((p) => p.id === id)?.name ?? id
+          ),
+        }))
+      : [];
 
   // FAQ - real, query-shaped questions answered from grounded battle content.
   // Expands the queries the page can rank for (long-tail + People Also Ask) and
@@ -1274,9 +1290,36 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           )}
 
           {/* ───── RELATED COMPARISONS ───── */}
-          {relatedBattles.length > 0 && (
+          {(relatedBattles.length > 0 || relatedTrios.length > 0) && (
             <div className="mb-10">
               <h2 className="mb-5 text-[20px] font-bold text-[#191919]">Related Comparisons</h2>
+              {/* 3-way comparisons featuring this exact matchup lead the list -
+                  the reader already cares about both providers, so "add a third
+                  option" is the highest-intent next click. */}
+              {relatedTrios.length > 0 && (
+                <div className="mb-3 grid gap-3">
+                  {relatedTrios.map((t) => (
+                    <Link
+                      key={t.slug}
+                      href={hubLink(ctx, `/${t.slug}`)}
+                      className="group flex items-center gap-3 rounded-xl border border-[#0C4B75]/20 bg-[#0C4B75]/[0.03] px-4 py-3.5 transition-colors hover:border-[#0C4B75]/40 hover:bg-[#0C4B75]/[0.06]"
+                    >
+                      <div className="flex flex-wrap items-center gap-2 text-[13px] font-bold text-[#191919]">
+                        {t.names.map((name, ni) => (
+                          <Fragment key={ni}>
+                            {ni > 0 && <span className="text-[11px] font-extrabold text-gray-300">VS</span>}
+                            <span>{name}</span>
+                          </Fragment>
+                        ))}
+                      </div>
+                      <span className="ml-auto inline-flex shrink-0 items-center gap-1 text-[13px] font-semibold text-[#0C4B75] group-hover:underline">
+                        Compare all three
+                        <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              )}
               <div className="grid gap-3 sm:grid-cols-2">
                 {relatedBattles.map(({ slug: relSlug, bp1, bp2 }) => (
                   <Link
