@@ -122,6 +122,40 @@ export interface ThreeWayComparison {
 
 export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
   {
+    slug: "embody-vs-altrx-vs-medvi",
+    providerIds: ["embody", "altrx", "medvi"],
+    title: "embody vs altRx vs Medvi: Our Top Three, One Table",
+    metaTitle: "embody vs altRx vs Medvi (2026): $69 vs $89 vs $99",
+    description:
+      "Our three most-compared GLP-1 providers in one matrix: embody ($69 flat, 1-2 day shipping), altRx ($89 + a brand-name shelf) and Medvi ($99 all-inclusive, 4.4 on Trustpilot).",
+    intro:
+      "Thirty dollars separates these three, and none of them asks for a commitment - so this comparison is really about what each adds on top of the same compounded semaglutide. embody keeps it lean: $69 flat at every dose, free 1-2 day shipping, and a full refund if a provider doesn't approve you. altRx charges $89 and is the only one with a brand-name shelf - Ozempic, Zepbound and Wegovy at published cash prices - plus Buy Now, Pay Later. Medvi's $99 promo is all-inclusive with video visits, a free dietician and care coaching, backed by the strongest review record of the three: 4.4 across 14,372 Trustpilot reviews.",
+    verdict:
+      "All three bill monthly with no prepaid term, so the price gap is the honest starting point: $69, $89, $99. Pay the minimum and move fast: embody - cheapest here, quickest shipping, and the refund-if-not-approved policy removes the main risk of trying. Think brand-name Ozempic or Zepbound might be in your future: altRx - it's the only one of the three where that switch happens without changing providers, and BNPL softens the brand prices. Want a person in the loop - video visits, a dietician, someone to call: Medvi, and its 14,372-review Trustpilot record says the support model works. There's no legitimacy gap to worry about: all three run licensed-provider review and dispense through regulated pharmacies.",
+    faqs: [
+      {
+        question: "Which is cheapest: embody, altRx or Medvi?",
+        answer:
+          "For compounded semaglutide: embody at $69/month flat (regularly $79), then altRx at $89/month promotional (regularly $199), then Medvi at $99/month promotional (regularly $199) all-inclusive. For tirzepatide: embody $119, altRx $149 (regularly $299), Medvi $166 promotional (regularly $299). All three bill monthly with no prepaid commitment.",
+      },
+      {
+        question: "Which has the best customer reviews?",
+        answer:
+          "Medvi has the strongest verified review record of the three - 4.4 on Trustpilot across 14,372 reviews, with support and communication the recurring themes. embody holds 3.8 across 4,956 reviews. Current ratings for each provider are shown on their cards above.",
+      },
+      {
+        question: "Can I get brand-name Ozempic, Zepbound or Wegovy from any of them?",
+        answer:
+          "Only altRx. Alongside its $89/month compounded semaglutide it publishes cash prices for brand-name medication - Ozempic at $1,149, Zepbound at $1,249 and Wegovy at $1,579 per month - with Buy Now, Pay Later available. embody and Medvi focus on compounded GLP-1s.",
+      },
+      {
+        question: "Do any of these require a long-term commitment?",
+        answer:
+          "No - all three bill month to month. embody adds a full refund if a licensed provider doesn't approve you for treatment, altRx lets you pause or cancel anytime, and Medvi's all-inclusive rate is HSA/FSA approved with no surprise charges.",
+      },
+    ],
+  },
+  {
     slug: "embody-vs-altrx-vs-wellmedr",
     providerIds: ["embody", "altrx", "wellmedr"],
     title: "embody vs altRx vs wellmedr: The Budget GLP-1 Trio",
@@ -252,7 +286,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
       {
         question: "Which is cheapest: Medvi, HealthRx or DirectMeds?",
         answer:
-          "For semaglutide: HealthRx at $99/month effective (12-month prepaid, $1,188 upfront), then DirectMeds at a flat $147/month, then Medvi at $179/month all-inclusive. For tirzepatide, DirectMeds' flat $147 leads, with HealthRx from $179 and Medvi at $249.",
+          "For semaglutide, Medvi and HealthRx both work out to $99/month - but the structures differ: Medvi's is a monthly promotional rate (regularly $199) with no prepay, while HealthRx's is a 12-month prepaid plan with $1,188 due at checkout. DirectMeds charges a flat $147/month. For tirzepatide, DirectMeds' flat $147 leads, with Medvi at $166 promotional (regularly $299) and HealthRx from $179.",
       },
       {
         question: "Which one has a needle-free option?",
