@@ -892,6 +892,54 @@ const faqs: FaqItem[] = [
 // fabricated statistics or provider-specific numbers - with internal links to
 // the reviews, comparisons, and between articles.
 const articles: ArticleData[] = [
+  // Trend-riding coverage for the "medvi quad" query cluster (Google Trends,
+  // week of Aug 30 2026: "medvi quad reviews" +40%, "quad ed" +30%). Every
+  // product claim is attributed to Medvi's own QUAD pages (operator-supplied
+  // screenshots); pricing is openly stated as not yet verified.
+  {
+    slug: "what-is-medvi-quad",
+    title: "What Is Medvi QUAD? The 4-in-1 Formula, Explained (2026)",
+    description:
+      "Medvi QUAD is a prescription-only sublingual for men that combines sildenafil, tadalafil, apomorphine and L-citrulline in one dose. What's in it, how ordering works, and what we could and couldn't verify.",
+    category: "Guide",
+    readTime: "6 min read",
+    publishedAt: "2026-08-30",
+    updatedAt: "2026-08-30",
+    heroColor: "#EFF1F6",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Medvi QUAD is an Rx-only sublingual performance medication combining four ingredients in one dose: sildenafil, tadalafil, apomorphine and L-citrulline (per Medvi's own product pages).",
+      "It is prescribed online: you complete a medical intake and a licensed provider decides whether the medication is appropriate - approval is not automatic.",
+      "Medvi the brand holds a verified 4.4 on Trustpilot across 14,372 reviews - earned mostly on its weight-loss line; QUAD itself has no review record yet.",
+      "We have not yet verified QUAD's pricing - confirm current rates on Medvi's site, and treat every benefit label as the company's own claim.",
+    ],
+    sections: [
+      {
+        heading: "What is Medvi QUAD?",
+        body: `Medvi QUAD is a men's performance medication from Medvi, the telehealth brand best known for its weight-loss program. Its pitch is consolidation: instead of separate prescriptions and add-ons, QUAD packs four ingredients into a single sublingual dose - a liquid absorbed under the tongue, with no injections and no pills to swallow. Medvi frames the product around "energy, hormones, and performance" and lists physical performance, hormone balance, energy levels and mental focus among its target benefits - those are the company's own marketing claims, and the ingredient list below tells you what the product actually is: a sexual-performance formula. It is Rx-only, prescribed after an online provider review, and ships in discreet packaging.`,
+      },
+      {
+        heading: "What's actually in Medvi QUAD?",
+        body: `Medvi's product pages name four ingredients, each with the company's own benefit label. <strong>Sildenafil</strong> - the active ingredient in Viagra - which Medvi labels "peak strength." <strong>Tadalafil</strong> - the active ingredient in Cialis - labeled "lasts 36 hours," a reference to tadalafil's characteristically long duration. <strong>Apomorphine</strong> - a compound that acts on the brain's dopamine system - labeled "ignites desire." And <strong>L-citrulline</strong> - an amino acid involved in the body's nitric-oxide pathway - labeled "rapid flow." The notable design choice is combining sildenafil and tadalafil, two PDE5-class medications, in one formula - that is unusual, and it is exactly the kind of decision a licensed prescriber needs to sign off on for you specifically.`,
+      },
+      {
+        heading: "Is Medvi QUAD legit?",
+        body: `The product is new, so the honest answer separates the brand from the product. The brand is established and verifiable: Medvi holds a 4.4 on Trustpilot across 14,372 reviews, a record earned mostly on its weight-loss line, where its support and provider experience are the recurring praise. The process is legitimate telehealth: a medical intake, a licensed provider's review, a prescription only if appropriate. What does not exist yet is QUAD-specific evidence - no aggregate review score, no community track record. That is normal for a new product line, but it means you are trusting the brand's record, not the product's. Our full take is in the <a href="/trt/reviews/medvi-quad">Medvi QUAD review</a>.`,
+      },
+      {
+        heading: "How much does Medvi QUAD cost?",
+        body: `We have not yet verified QUAD's pricing, and we do not publish numbers we cannot stand behind - check Medvi's site for current rates, and expect the final price to be confirmed during checkout after the medical intake. We will update this guide and the review with verified figures as soon as we have them. For context, Medvi's weight-loss plans run on transparent monthly pricing, so published QUAD rates would be in character for the brand.`,
+      },
+      {
+        heading: "Do you need a prescription for Medvi QUAD?",
+        body: `Yes. QUAD is Rx-only: you complete an online medical intake, a licensed provider reviews it, and the medication is prescribed only if it is appropriate for you. Answer the intake honestly - especially about heart conditions and every medication you take. A formula with two PDE5-class ingredients is precisely the kind of product where the medical questions are not friction, they are the safety mechanism. No legitimate seller offers this class of medication without a prescription - a site that does is the red flag to walk away from.`,
+      },
+      {
+        heading: "The bottom line",
+        body: `Medvi QUAD is a differentiated product from a brand with a real, verifiable service record: one sublingual dose, four named ingredients, a fully online Rx flow, discreet shipping. The open questions are the ones any new product carries - no QUAD-specific reviews yet, and pricing we have not yet verified. If the format appeals to you, the path is Medvi's own intake, where a licensed provider makes the call. Read the <a href="/trt/reviews/medvi-quad">full Medvi QUAD review</a> for the complete picture. This article is general information, not medical advice.`,
+      },
+    ],
+  },
   {
     slug: "how-to-get-trt-online",
     title: "How to Get TRT Online: A Complete Guide for 2026",
