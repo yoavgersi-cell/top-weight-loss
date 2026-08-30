@@ -160,7 +160,11 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "embody ($69/mo semaglutide, free 1-2 day shipping, refund if not approved) vs wellmedr ($59/mo, 1M+ patients, weight-loss warranty). Real prices, real trade-offs - see which fits you.",
   },
   "altrx-vs-embody": {
-    title: "altRx vs embody (2026): $89 vs $69 GLP-1 Compared",
+    // Measured winner, restored Aug 30: when both reverse slugs were live, the
+    // question-format title on /embody-vs-altrx did 18.2% CTR on the "altrx vs
+    // embody" query vs 6.7% for the price-format title on this slug - same
+    // page, same query. Do not switch back to price format without new data.
+    title: "altRx vs embody: Which GLP-1 Provider Is Right for You in 2026?",
     description:
       "altRx ($89/mo semaglutide + brand-name Zepbound & Wegovy, BNPL) vs embody ($69/mo flat, 1-2 day shipping, LegitScript-certified). Which GLP-1 provider wins? Full comparison.",
   },
@@ -185,7 +189,10 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "embody ($69/mo semaglutide, 1-2 day shipping, refund policy) vs Medvi ($99/mo promo all-inclusive with high-touch provider support). Price or personal care - see which fits.",
   },
   "embody-vs-ro": {
-    title: "embody vs ro (2026): $69 All-In or Membership + Brand-Name?",
+    // Reverted Aug 30 to the pre-Aug-24 title: after the Aug 24 rewrite,
+    // impressions held (~55-60/day) while clicks went 3/day -> 0 - a clean
+    // snippet regression in GSC. "the Big Brand" is the hook that clicked.
+    title: "embody vs ro (2026): Flat $69 GLP-1 or the Big Brand?",
     description:
       "embody: $69/mo all-inclusive compounded semaglutide, 1-2 day shipping. ro: $39 first-month membership then $74-149/mo, plus brand-name Wegovy/Zepbound billed separately. Real 12-month math inside.",
   },
