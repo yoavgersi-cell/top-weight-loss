@@ -179,6 +179,9 @@ const providers: Provider[] = [
   {
     id: "medvi-quad",
     name: "Medvi QUAD",
+    // NOT in the ranking (see providerOrder): QUAD is an ED/performance
+    // product, not a TRT clinic - it lives here for its review page, the
+    // trend article, and the live affiliate CTA (operator decision, Aug 30).
     tagline: "Medvi's 4-in-1 sublingual performance medication - Rx only, prescribed after an online provider review",
     logo: "/logos/medvi.svg",
     smallLogo: "/logos/medvi-icon.svg",
@@ -252,7 +255,6 @@ const positions: RankingPosition[] = [
   { score: 9.0, starRating: 5, label: "Excellent" },
   { score: 8.8, starRating: 4, label: "Very Good" },
   { score: 8.6, starRating: 4, label: "Very Good" },
-  { score: 8.4, starRating: 4, label: "Very Good" },
 ];
 
 const reviews: ReviewData[] = [
@@ -1386,7 +1388,7 @@ export function trtSeed(base: SiteConfig): SiteConfig {
     ranking: {
       // Only our five monetized providers are ranked. Hone, Fountain and Marek
       // exist solely to power "<competitor> vs …" comparisons.
-      providerOrder: ["maximus", "hims", "dudemeds", "petermd", "maleexcel", "medvi-quad"],
+      providerOrder: ["maximus", "hims", "dudemeds", "petermd", "maleexcel"],
       positions,
     },
     reviews,
