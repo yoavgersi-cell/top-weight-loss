@@ -1751,7 +1751,7 @@ export const articles: Article[] = [
     slug: "is-wellmedr-legit",
     title: "Is wellmedr Legit? Reviews, Complaints & Real Prices (2026)",
     description:
-      "wellmedr holds a verified 4.7 on Trustpilot across 1,205 reviews. What the reviews and complaints actually say, the real $59-$99 pricing structure, and an honest verdict.",
+      "wellmedr holds a verified 4.7 on Trustpilot across 1,205 reviews. What the reviews and complaints actually say, the real $59-$99 GLP-1 pricing structure, and an honest verdict.",
     category: "Advice",
     readTime: "8 min read",
     publishedAt: "2026-08-30",
@@ -1799,7 +1799,7 @@ export const articles: Article[] = [
     slug: "best-tirzepatide-online",
     title: "Best Tirzepatide Online (2026): 8 Verified Prices From $99",
     description:
-      "Where to get tirzepatide online in 2026: eight licensed telehealth providers with verified prices from $99/month compounded, brand-name Zepbound routes, and the safety checks that matter.",
+      "Where to get tirzepatide online in 2026: eight licensed GLP-1 telehealth providers with verified prices from $99/month compounded, brand-name Zepbound routes, and the safety checks that matter.",
     category: "Guide",
     readTime: "9 min read",
     publishedAt: "2026-08-30",

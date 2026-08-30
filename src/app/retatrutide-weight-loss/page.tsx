@@ -12,7 +12,7 @@ const CANONICAL = "https://www.treatmentshub.com/weight-loss/retatrutide-weight-
 export const metadata: Metadata = {
   title: "Retatrutide for Weight Loss (2026): Results & Status",
   description:
-    "Retatrutide (“reta”) is the triple-agonist weight loss drug that hit ~24% weight loss in trials. What it is, how it compares to tirzepatide and semaglutide, and whether you can get it yet.",
+    "Retatrutide (“reta”) is the next-generation triple agonist (GLP-1, GIP and glucagon) that hit ~24% weight loss in trials. How it compares to tirzepatide and semaglutide, and whether you can get it yet.",
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: "Retatrutide for Weight Loss (2026): Results & Status",

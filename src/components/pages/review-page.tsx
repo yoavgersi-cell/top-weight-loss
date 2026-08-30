@@ -49,10 +49,17 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     description:
       "altRx reviews: compounded semaglutide & tirzepatide plus brand-name Zepbound & Wegovy, with Buy Now, Pay Later. Is altRx legit? Pricing, pros & cons.",
   },
+  ro: {
+    // Title matches the generated shared-provider title byte-for-byte - this
+    // entry exists only to put "GLP-1" in the description (desc-only pass).
+    title: "ro Weight Loss Review 2026: Cost, Results & Is It Worth It?",
+    description:
+      "ro weight loss review: membership from $39 first month plus brand-name GLP-1s (Wegovy, Zepbound) billed separately - insurance can apply. Verified pricing, pros & cons.",
+  },
   trimrx: {
     title: "trimrx Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
     description:
-      "trimrx reviews: budget compounded semaglutide and tirzepatide, no long-term contract, clinical support included. Is trimrx legit? Cost, pros & cons.",
+      "trimrx reviews: budget compounded GLP-1s (semaglutide and tirzepatide), no long-term contract, clinical support included. Is trimrx legit? Cost, pros & cons.",
   },
   shed: {
     title: "Shed Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
