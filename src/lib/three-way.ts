@@ -210,7 +210,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     title: "embody vs Medvi vs wellmedr: $69, $99 or $59?",
     metaTitle: "embody vs Medvi vs wellmedr (2026): $69 vs $99 vs $59",
     description:
-      "Three verified Trustpilot records, three commitment models: embody ($69 flat, no strings), Medvi ($99 all-inclusive, 4.4 across 14,372 reviews) and wellmedr ($59 on a 12-month plan, 4.7 rated).",
+      "Three verified Trustpilot records, three ways to buy the same compounded GLP-1s: embody ($69 flat), Medvi ($99 all-inclusive, 4.4 across 14,372 reviews) and wellmedr ($59 on a 12-month plan, 4.7 rated).",
     intro:
       "This trio is unusual: all three carry a verified Trustpilot record, so for once the review data can carry as much weight as the price tag. wellmedr is the cheapest at $59/month - a rate that locks on a 12-month plan - and holds the highest rating here, 4.7 across 1,205 reviews. embody's $69 is flat with zero commitment and a refund if a provider doesn't approve you, at 3.8 across 4,956 reviews. Medvi's $99 promo is the all-inclusive, high-touch option - video visits, free dietician, care coaching - with the largest review base of the three: 4.4 across 14,372.",
     verdict:
@@ -278,7 +278,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     title: "wellmedr vs embody vs trimrx: Price, Freedom, Flexibility",
     metaTitle: "wellmedr vs embody vs trimrx (2026): $59 vs $69 vs $179",
     description:
-      "wellmedr ($59, 12-month plan), embody ($69 flat) and trimrx ($179, no contract) compared on real prices, commitment terms, shipping and support.",
+      "wellmedr ($59, 12-month plan), embody ($69 flat) and trimrx ($179, no contract) compared on real GLP-1 prices, commitment terms, shipping and support.",
     intro:
       "This trio spans the market's price range - $59 to $179 for the same compounded semaglutide - which makes it a clean test of what the extra money buys. The answer: commitment structure. wellmedr trades a 12-month plan for the lowest price, embody charges $10 more for total freedom, and trimrx charges a premium for a no-contract model with optional multi-month discounts and closer clinical guidance.",
     verdict:
@@ -307,7 +307,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     title: "Medvi vs trimrx vs SHED: The Support-Tier Showdown",
     metaTitle: "Medvi vs trimrx vs SHED (2026): $99-$199 Compared",
     description:
-      "The support tier compared: Medvi's all-inclusive care (4.4 on Trustpilot), trimrx's no-contract flexibility, and SHED's coaching with a money-back guarantee.",
+      "The GLP-1 support tier compared: Medvi's all-inclusive care (4.4 on Trustpilot), trimrx's no-contract flexibility, and SHED's coaching with a money-back guarantee.",
     intro:
       "These three sell more than medication - each wraps the same compounded GLP-1s in a different support philosophy, from Medvi's current $99 promo to SHED's $199. Medvi bundles video visits, a dietician and care coaching behind a 14,372-review Trustpilot record. trimrx sells flexibility: no contract, optional discounts, clinical guidance. SHED sells accountability: formal health coaching plus the market's only lose-5%-in-120-days-or-your-money-back guarantee.",
     verdict:
@@ -336,7 +336,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     title: "HealthRx vs embody vs wellmedr: Three Ways to Pay for GLP-1",
     metaTitle: "HealthRx vs embody vs wellmedr (2026): Prepaid vs Flat vs Lock",
     description:
-      "Three pricing models for the same medication: HealthRx's $99 prepaid year, embody's $69 flat monthly, wellmedr's $59 12-month lock - compared honestly.",
+      "Three pricing models for the same GLP-1 medication: HealthRx's $99 prepaid year, embody's $69 flat monthly, wellmedr's $59 12-month lock - compared honestly.",
     intro:
       "Same compounded semaglutide, three opposite ways to buy it. HealthRx wants the year upfront - $1,188 at checkout, working out to $99/month with overnight cold-chain shipping. embody bills $69 monthly with the right to stop anytime. wellmedr bills monthly too, but its $59 rate locks on a 12-month plan. This is the clearest commitment-structure comparison in the market, and the right answer depends on exactly one thing: how certain you are about the next twelve months.",
     verdict:
@@ -365,7 +365,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     title: "Medvi vs HealthRx vs DirectMeds: Support, Speed, Simplicity",
     metaTitle: "Medvi vs HealthRx vs DirectMeds (2026): Compared Honestly",
     description:
-      "Medvi's high-touch care vs HealthRx's $99 prepaid with overnight shipping vs DirectMeds' flat $147 with needle-free drops - one matrix, real numbers.",
+      "Medvi's high-touch care vs HealthRx's $99 prepaid with overnight shipping vs DirectMeds' flat $147 with needle-free drops - one matrix, real GLP-1 prices.",
     intro:
       "Three providers, three completely different bets. Medvi bets on people: video visits, dietician, coaching, and 14,372 Trustpilot reviews averaging 4.4. HealthRx bets on logistics: $99/month semaglutide (12-month prepaid, $1,188 at checkout) with overnight cold-chain delivery. DirectMeds bets on simplicity: one flat $147 for either medication, injections or needle-free sublingual drops, no membership. The matrix below puts the three bets side by side.",
     verdict:

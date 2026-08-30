@@ -14,7 +14,7 @@ export const brandClusterArticles: Article[] = [
     slug: "is-medvi-legit",
     title: "Is Medvi Legit? What 14,372 Trustpilot Reviews Say (2026)",
     description:
-      "Medvi holds a 4.4 on Trustpilot across 14,372 reviews. We read what customers actually praise, checked the medical process, and stress-tested the pricing.",
+      "Medvi holds a 4.4 on Trustpilot across 14,372 reviews. We read what customers actually praise, checked the GLP-1 prescribing process, and stress-tested the pricing.",
     category: "Guide",
     readTime: "8 min read",
     publishedAt: "2026-08-06",
@@ -48,7 +48,7 @@ export const brandClusterArticles: Article[] = [
     slug: "medvi-cost",
     title: "Medvi Cost 2026: What $99/Month Actually Buys You",
     description:
-      "Medvi charges $99/month promo (reg. $199) for semaglutide and $166 (reg. $299) for tirzepatide, all-inclusive. The full math and when a rival wins.",
+      "Medvi charges $99/month promo (reg. $199) for semaglutide and $166 (reg. $299) for tirzepatide, all-inclusive GLP-1 care. The full math and when a rival wins.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-08",
@@ -78,7 +78,7 @@ export const brandClusterArticles: Article[] = [
     slug: "medvi-alternatives",
     title: "Medvi Alternatives 2026: 6 Real Options, Priced & Compared",
     description:
-      "Six alternatives to Medvi's all-inclusive program (now $99/month promotional) - from wellmedr at $59 to HealthRx's $99 prepaid plan - with the honest trade-off each one asks you to make.",
+      "Six alternatives to Medvi's all-inclusive GLP-1 program (now $99/month promotional) - from wellmedr at $59 to HealthRx's $99 prepaid plan - with the honest trade-off each one asks you to make.",
     category: "Comparison",
     readTime: "7 min read",
     publishedAt: "2026-08-10",
@@ -147,7 +147,7 @@ export const brandClusterArticles: Article[] = [
     slug: "wellmedr-cost",
     title: "wellmedr Cost 2026: The Full $59/Month Math, Dose by Dose",
     description:
-      "wellmedr's real cost: $59/month semaglutide and $99 tirzepatide at every dose, $708 for a full year. How the lock-in works and where brand-name fits.",
+      "wellmedr's real GLP-1 cost: $59/month semaglutide and $99 tirzepatide at every dose, $708 for a full year. How the lock-in works and where brand-name fits.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-13",
@@ -181,7 +181,7 @@ export const brandClusterArticles: Article[] = [
     slug: "wellmedr-alternatives",
     title: "wellmedr Alternatives 2026: What Beats $59/Month, and How",
     description:
-      "Nothing undercuts wellmedr's $59/month - so every alternative competes on something else. Six rivals compared on the specific thing each does better.",
+      "Nothing undercuts wellmedr's $59/month GLP-1 plan - so every alternative competes on something else. Six rivals compared on the specific thing each does better.",
     category: "Comparison",
     readTime: "7 min read",
     publishedAt: "2026-08-15",
@@ -250,7 +250,7 @@ export const brandClusterArticles: Article[] = [
     slug: "trimrx-cost",
     title: "trimrx Cost 2026: $179 Explained - List Price, Discounts, Math",
     description:
-      "trimrx charges $179/month for semaglutide (list $299) and $259 for tirzepatide, no contract required. The discount structure and year-cost math, laid out.",
+      "trimrx charges $179/month for semaglutide (list $299) and $259 for tirzepatide, no contract required. The GLP-1 discount structure and year-cost math, laid out.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-08-09",
@@ -280,7 +280,7 @@ export const brandClusterArticles: Article[] = [
     slug: "trimrx-alternatives",
     title: "trimrx Alternatives 2026: Cheaper, Faster, or More Support",
     description:
-      "Six trimrx alternatives sorted by what you actually want to change - price, tirzepatide cost, delivery speed, brand-name access, or support depth.",
+      "Six trimrx alternatives sorted by what you actually want to change - GLP-1 price, tirzepatide cost, delivery speed, brand-name access, or support depth.",
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-08-12",
@@ -349,7 +349,7 @@ export const brandClusterArticles: Article[] = [
     slug: "altrx-cost",
     title: "altRx Cost 2026: $89 Compounded to $1,579 Brand - Full Map",
     description:
-      "Every altRx price mapped: $89/$149 compounded plans flat at every dose, brand-name Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 - plus the BNPL angle.",
+      "Every altRx price mapped: $89/$149 compounded GLP-1 plans flat at every dose, brand-name Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 - plus the BNPL angle.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-08-14",
@@ -379,7 +379,7 @@ export const brandClusterArticles: Article[] = [
     slug: "altrx-alternatives",
     title: "altRx Alternatives 2026: Six Rivals, Sorted by What They Fix",
     description:
-      "The best altRx alternatives depend on what you'd change: price ($59-$69 rivals), delivery speed, support depth, or a results guarantee. Six options, sorted.",
+      "The best altRx alternatives depend on what you'd change: GLP-1 price ($59-$69 rivals), delivery speed, support depth, or a results guarantee. Six options, sorted.",
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-08-16",
@@ -448,7 +448,7 @@ export const brandClusterArticles: Article[] = [
     slug: "shed-cost",
     title: "SHED Cost 2026: Pricing the Guarantee - $199 Decoded",
     description:
-      "SHED costs $199/month for semaglutide, $299 for tirzepatide, 20% off month one. What the premium over $59 rivals actually buys: coaching plus a guarantee.",
+      "SHED costs $199/month for semaglutide, $299 for tirzepatide, 20% off month one. What the premium over $59 GLP-1 rivals actually buys: coaching plus a guarantee.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-08-11",
@@ -478,7 +478,7 @@ export const brandClusterArticles: Article[] = [
     slug: "shed-alternatives",
     title: "SHED Alternatives 2026: Keep the Support or Keep the Cash",
     description:
-      "Leaving SHED's $199 program means choosing: keep support (Medvi, wellmedr's coach) or keep cash ($59-$99 tier). Six alternatives, honestly mapped.",
+      "Leaving SHED's $199 GLP-1 program means choosing: keep support (Medvi, wellmedr's coach) or keep cash ($59-$99 tier). Six alternatives, honestly mapped.",
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-08-17",
@@ -547,7 +547,7 @@ export const brandClusterArticles: Article[] = [
     slug: "directmeds-cost",
     title: "DirectMeds Cost 2026: The Flat $147 - When It Wins and Loses",
     description:
-      "DirectMeds charges one flat $147/month for semaglutide or tirzepatide, injections or drops. The math on when that flat rate is a steal - and when it isn't.",
+      "DirectMeds charges one flat $147/month for semaglutide or tirzepatide, injections or drops. The math on when that flat GLP-1 rate is a steal - and when it isn't.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-08-13",
@@ -577,7 +577,7 @@ export const brandClusterArticles: Article[] = [
     slug: "directmeds-alternatives",
     title: "DirectMeds Alternatives 2026: By Medication, Not by List",
     description:
-      "The right DirectMeds alternative differs by medication: semaglutide users have four cheaper options, tirzepatide users two, drops users none. Mapped out.",
+      "The right DirectMeds alternative differs by GLP-1 medication: semaglutide users have four cheaper options, tirzepatide users two, drops users none. Mapped out.",
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-08-18",
@@ -646,7 +646,7 @@ export const brandClusterArticles: Article[] = [
     slug: "healthrx-cost",
     title: "HealthRx Cost 2026: $99/Month Is Really $1,188 - The Math",
     description:
-      "HealthRx's $99/month semaglutide means $1,188 prepaid at checkout for 12 months. When that beats monthly rivals, when it doesn't, and what's inside the price.",
+      "HealthRx's $99/month semaglutide means $1,188 prepaid at checkout for 12 months of GLP-1 care. When that beats monthly rivals, when it doesn't, and what's inside the price.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-08-21",
@@ -676,7 +676,7 @@ export const brandClusterArticles: Article[] = [
     slug: "healthrx-alternatives",
     title: "HealthRx Alternatives 2026: Escaping the $1,188 Prepay",
     description:
-      "Six HealthRx alternatives for anyone unready to prepay $1,188 - from embody's $69 flat with no commitment to Medvi's 14,000-review support program.",
+      "Six HealthRx alternatives for anyone unready to prepay $1,188 for a year of GLP-1 treatment - from embody's $69 flat with no commitment to Medvi's 14,000-review support program.",
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-08-21",
@@ -707,7 +707,7 @@ export const brandClusterArticles: Article[] = [
     slug: "is-sprout-legit",
     title: "Is Sprout Legit? An Honest Audit (2026)",
     description:
-      "Sprout sells compounded semaglutide from $149/month with 2-day fulfillment and a brand-name Wegovy option. We audited the process, the reviews and the fine print.",
+      "Sprout sells compounded GLP-1s - semaglutide from $149/month - with 2-day fulfillment and a brand-name Wegovy option. We audited the process, the reviews and the fine print.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-23",
@@ -737,7 +737,7 @@ export const brandClusterArticles: Article[] = [
     slug: "sprout-cost",
     title: "Sprout Cost 2026: The $149/Month Math Explained",
     description:
-      "Sprout charges $149/month for compounded semaglutide, $199 for tirzepatide and $1,799 for brand-name Wegovy, with $200 off month one. The full-year math, honestly.",
+      "Sprout's GLP-1 pricing: $149/month for compounded semaglutide, $199 for tirzepatide and $1,799 for brand-name Wegovy, with $200 off month one. The full-year math, honestly.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-23",
@@ -767,7 +767,7 @@ export const brandClusterArticles: Article[] = [
     slug: "sprout-alternatives",
     title: "Best Sprout Alternatives 2026 (From $59/mo)",
     description:
-      "Six real alternatives to Sprout's $149/month program - from wellmedr at $59 to altRx's three-brand shelf - organized by the reason you'd actually switch.",
+      "Six real alternatives to Sprout's $149/month GLP-1 program - from wellmedr at $59 to altRx's three-brand shelf - organized by the reason you'd actually switch.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-23",

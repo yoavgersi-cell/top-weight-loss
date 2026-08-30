@@ -10,7 +10,7 @@ export const revalidate = 60;
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/ozempic-alternatives";
 const TITLE = "Ozempic, Wegovy & Mounjaro Alternatives (2026)";
 const DESCRIPTION =
-  "The best Ozempic, Wegovy and Mounjaro alternatives in 2026 - the same active ingredients as compounded options from $59/month at licensed providers.";
+  "The best Ozempic, Wegovy and Mounjaro alternatives in 2026 - the same active ingredients as compounded GLP-1 options from $59/month at licensed providers.";
 
 export const metadata: Metadata = {
   title: TITLE,

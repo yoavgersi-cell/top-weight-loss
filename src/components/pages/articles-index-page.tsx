@@ -13,7 +13,10 @@ export async function articlesIndexMetadata(ctx: SiteContext): Promise<Metadata>
   const url = canonicalUrl(ctx, "/articles");
   const vName = verticalName(ctx.vertical);
   const title = `${vName} Guides & Articles (2026)`;
-  const description = `Evidence-based ${vName.toLowerCase()} guides for 2026 - treatment options, verified costs, what to expect, and how to choose the right online provider.`;
+  const description =
+    ctx.vertical === "weight-loss"
+      ? `Evidence-based weight loss guides for 2026 - GLP-1 treatment options, verified costs, what to expect, and how to choose the right online provider.`
+      : `Evidence-based ${vName.toLowerCase()} guides for 2026 - treatment options, verified costs, what to expect, and how to choose the right online provider.`;
   return {
     title,
     description,

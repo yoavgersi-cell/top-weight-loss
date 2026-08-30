@@ -224,18 +224,45 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   "medvi-vs-ro": {
     title: "Medvi vs ro (2026): $99 All-In or Membership + Brand-Name?",
     description:
-      "Medvi: $99/mo promo all-inclusive compounded semaglutide with provider support. ro: $39 first-month membership then $74-149/mo plus brand-name Wegovy/Zepbound billed separately. Full comparison.",
+      "Medvi: $99/mo promo all-inclusive compounded GLP-1 (semaglutide) with provider support. ro: $39 first-month membership then $74-149/mo plus brand-name Wegovy/Zepbound billed separately. Full comparison.",
   },
   "altrx-vs-ro": {
     title: "altRx vs ro (2026): $89 Flat GLP-1 or Membership + Brand-Name?",
     description:
       "altRx: $89/mo promo flat compounded semaglutide (reg $199), BNPL available. ro: $39 first-month membership then $74-149/mo plus brand-name medication billed separately. Which model fits you?",
   },
+  "healthrx-vs-medvi": {
+    // Title matches the stored (CMS) title byte-for-byte - this entry exists
+    // only to put "GLP-1" in the description (desc-only pass, Aug 30).
+    title: "HealthRx vs Medvi (2026): Two $99 Semaglutide Deals Compared",
+    description:
+      "Two $99/month GLP-1 deals, opposite structures: HealthRx's prepaid year ($1,188 at checkout) vs Medvi's monthly promo all-inclusive plan. The honest math inside.",
+  },
   "ro-vs-wellmedr": {
     title: "ro vs wellmedr (2026): Big Brand or $59 GLP-1?",
     description:
       "ro (major telehealth brand with in-house pharmacy) vs wellmedr ($59/mo semaglutide, 1M+ patients, weight-loss warranty). Brand trust vs the lowest price, compared.",
   },
+};
+
+// Desc-only meta overrides for CMS landing pages: the stored descriptions
+// lack the "GLP-1" category term the audience actually searches (Aug 2026
+// audit). Titles stay whatever the CMS stores - descriptions only.
+const LANDING_META_DESCRIPTION: Record<string, string> = {
+  semaglutide:
+    "Compare the best semaglutide (GLP-1) providers of 2026 - verified prices from $59/month, licensed online prescribing, and honest reviews of every program.",
+  tirzepatide:
+    "The best tirzepatide providers of 2026 compared - verified GLP-1 prices from $99/month compounded, licensed online prescribing, honest pros and cons.",
+  "ozempic-for-weight-loss":
+    "Ozempic for weight loss in 2026: how the GLP-1 works, who prescribes it online, and verified alternatives from $59/month compared honestly.",
+  "wegovy-providers":
+    "Where to get Wegovy online in 2026 - providers compared, plus verified GLP-1 alternatives from $59/month when brand-name pricing doesn't fit.",
+  "ozempic-alternatives":
+    "Ozempic, Wegovy & Mounjaro alternatives for 2026 - verified GLP-1 options from $59/month, compared honestly on price, terms and support.",
+  "switch-from-ozempic":
+    "Switching from Ozempic to compounded semaglutide - how the GLP-1 switch works, verified prices from $59/month, and what to ask your prescriber.",
+  "retatrutide-weight-loss":
+    "Retatrutide in 2026: where the next-generation GLP-1-class candidate stands, what its trials report, and the approved options available now.",
 };
 
 // Metadata for a landing page or head-to-head battle at /<slug> (root) or
@@ -251,14 +278,17 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
   const landing = (config.landingPages ?? []).find((lp) => lp.slug === slug);
   if (landing) {
     const url = canonicalUrl(ctx, `/${landing.slug}`);
+    const landingDesc =
+      (ctx.vertical === "weight-loss" && LANDING_META_DESCRIPTION[landing.slug]) ||
+      landing.seoDescription;
     return {
       title: landing.seoTitle,
-      description: landing.seoDescription,
+      description: landingDesc,
       robots: ctx.noindex ? { index: false, follow: false } : undefined,
       alternates: { canonical: url },
       openGraph: {
         title: landing.seoTitle,
-        description: landing.seoDescription,
+        description: landingDesc,
         url,
       },
     };
