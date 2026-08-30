@@ -189,9 +189,9 @@ const providers: Provider[] = [
     // Aug 2026): sublingual "4-IN-1 PERFORMANCE" formula naming sildenafil,
     // tadalafil, apomorphine and L-citrulline. Benefit labels are Medvi's own.
     highlights: [
+      "Starting at $114/month promotional (reg. $179) - doctor consultation included",
       "4-in-1 sublingual dose: sildenafil, tadalafil, apomorphine and L-citrulline (per Medvi)",
-      "No injections, no pills to swallow - Rx-only sublingual, prescribed online",
-      "Fast, discreet shipping",
+      "No injections, no pills to swallow - Rx-only sublingual, cancel anytime",
     ],
     affiliateUrl: URLS["medvi-quad"],
     ctaText: "Visit Site",
@@ -465,14 +465,16 @@ const reviews: ReviewData[] = [
     shortSummary:
       "Medvi's 4-in-1 sublingual performance medication - sildenafil, tadalafil, apomorphine and L-citrulline in a single Rx-only dose, prescribed after an online provider review and shipped discreetly.",
     reviewIntro:
-      "QUAD is Medvi's entry into men's performance medicine, and its pitch is the formula: a single sublingual dose that Medvi describes as \"4-IN-1 PERFORMANCE,\" combining sildenafil (the active ingredient in Viagra), tadalafil (the active ingredient in Cialis, which Medvi labels \"lasts 36 hours\"), apomorphine (\"ignites desire,\" in Medvi's words) and L-citrulline (\"rapid flow\"). It is Rx-only: you complete an online intake, a licensed provider decides whether the medication is appropriate for you, and it ships fast in discreet packaging. Behind it stands a brand with a real record - Medvi holds a verified 4.4 on Trustpilot across 14,372 reviews - though that record was earned mostly on its weight-loss line, and QUAD itself is too new to have its own aggregate. We have not yet verified QUAD's pricing; check Medvi's site for current rates, and we will update this review when we can verify them.",
+      "QUAD is Medvi's entry into men's performance medicine, and its pitch is the formula: a single sublingual dose that Medvi describes as \"4-IN-1 PERFORMANCE,\" combining sildenafil (the active ingredient in Viagra), tadalafil (the active ingredient in Cialis, which Medvi labels \"lasts 36 hours\"), apomorphine (\"ignites desire,\" in Medvi's words) and L-citrulline (\"rapid flow\"). It is Rx-only: you complete an online intake, a licensed provider decides whether the medication is appropriate for you, and it ships fast in discreet packaging. Behind it stands a brand with a real record - Medvi holds a verified 4.4 on Trustpilot across 14,372 reviews - though that record was earned mostly on its weight-loss line, and QUAD itself is too new to have its own aggregate. Pricing is published and straightforward: QUAD starts at $114/month at the current promotional rate (regularly $179 - Medvi frames it as 36% off retail, with bundle discounts beyond that), and the price includes the doctor consultation, free rush shipping and 24/7 medical support, with cancel-anytime terms. Medvi also commits to a clean risk rule: if a provider does not qualify you for the medication, you do not pay.",
     keyFeatures: [
       "4-in-1 formula: sildenafil, tadalafil, apomorphine, L-citrulline (per Medvi)",
       "Sublingual - no injections, no pills to swallow",
       "Rx-only: online provider review before any prescription",
-      "Fast, discreet shipping",
+      "From $114/mo promo (reg. $179) - consult included, cancel anytime",
+      "Free rush shipping, discreet packaging; 24/7 medical support",
     ],
-    pricingSummary: PRICING_TBD,
+    pricingSummary:
+      "QUAD starts at $114/month at the current promotional rate (regularly $179 - 36% off retail per Medvi), with bundle pricing available. The rate includes the doctor consultation, free rush shipping and 24/7 medical support, billed monthly with cancel-anytime terms. If a provider does not qualify you, you do not pay. Confirm the current rate at checkout - promos change.",
     treatmentOptions: [
       "QUAD 4-in-1 sublingual performance medication (Rx only)",
       "Online provider evaluation and follow-up",
@@ -482,10 +484,11 @@ const reviews: ReviewData[] = [
       "Sublingual format - a real alternative for men who won't do injections or dislike pills",
       "Established telehealth brand: 4.4 across 14,372 Trustpilot reviews (brand-wide)",
       "Discreet, fast shipping and a fully online flow",
+      "If you don't qualify, you don't pay - and plans cancel anytime",
     ],
     cons: [
       "No QUAD-specific review record yet - the 4.4 Trustpilot aggregate is Medvi brand-wide, earned mostly on weight loss",
-      "Pricing is not in the material we have verified - confirm current rates on Medvi's site before ordering",
+      "$114 is a promotional rate - the regular price is $179/month, so confirm the current rate at checkout",
       "Combining two PDE5-class ingredients (sildenafil + tadalafil) makes the provider review genuinely important - this is not a product to route around the medical questions on",
     ],
     bestFor: [
@@ -494,7 +497,7 @@ const reviews: ReviewData[] = [
       "Existing Medvi customers who already trust the brand's service record",
     ],
     finalVerdict:
-      "QUAD is a credible new entry from a brand with a verifiable service record: the 4-in-1 sublingual formula is genuinely differentiated, the flow is Rx-only with a licensed provider making the call, and Medvi's 4.4 across 14,372 Trustpilot reviews - while earned mostly on weight loss - says the company behind it answers the phone. The honest caveats are newness and transparency: no QUAD-specific reviews exist yet, and we have not verified pricing. A licensed provider decides whether this medication is appropriate for you - the intake questions exist for a reason, especially with two PDE5-class ingredients in one dose. This review is general information, not medical advice.",
+      "QUAD is a credible new entry from a brand with a verifiable service record: the 4-in-1 sublingual formula is genuinely differentiated, the flow is Rx-only with a licensed provider making the call, and Medvi's 4.4 across 14,372 Trustpilot reviews - while earned mostly on weight loss - says the company behind it answers the phone. The honest caveat is newness: no QUAD-specific reviews exist yet, so you are trusting the brand's record. Pricing, at least, is transparent - $114/month promotional (regularly $179), consultation included, cancel anytime, and you pay nothing if a provider does not qualify you. A licensed provider decides whether this medication is appropriate for you - the intake questions exist for a reason, especially with two PDE5-class ingredients in one dose. This review is general information, not medical advice.",
     trustBadges: ["Rx-only - online provider review", "Fast & discreet shipping", "4-in-1 sublingual formula"],
     updatedAt: "2026-08-30",
   },
@@ -897,12 +900,12 @@ const articles: ArticleData[] = [
   // Trend-riding coverage for the "medvi quad" query cluster (Google Trends,
   // week of Aug 30 2026: "medvi quad reviews" +40%, "quad ed" +30%). Every
   // product claim is attributed to Medvi's own QUAD pages (operator-supplied
-  // screenshots); pricing is openly stated as not yet verified.
+  // screenshots), including verified pricing ($114/mo promo, reg. $179).
   {
     slug: "what-is-medvi-quad",
     title: "What Is Medvi QUAD? The 4-in-1 Formula, Explained (2026)",
     description:
-      "Medvi QUAD is a prescription-only sublingual for men that combines sildenafil, tadalafil, apomorphine and L-citrulline in one dose. What's in it, how ordering works, and what we could and couldn't verify.",
+      "Medvi QUAD is a prescription-only sublingual for men combining sildenafil, tadalafil, apomorphine and L-citrulline in one dose, from $114/month promo (reg. $179). What's in it and how ordering works.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-08-30",
@@ -913,7 +916,7 @@ const articles: ArticleData[] = [
       "Medvi QUAD is an Rx-only sublingual performance medication combining four ingredients in one dose: sildenafil, tadalafil, apomorphine and L-citrulline (per Medvi's own product pages).",
       "It is prescribed online: you complete a medical intake and a licensed provider decides whether the medication is appropriate - approval is not automatic.",
       "Medvi the brand holds a verified 4.4 on Trustpilot across 14,372 reviews - earned mostly on its weight-loss line; QUAD itself has no review record yet.",
-      "We have not yet verified QUAD's pricing - confirm current rates on Medvi's site, and treat every benefit label as the company's own claim.",
+      "QUAD starts at $114/month promotional (regularly $179) with the doctor consultation, rush shipping and 24/7 support included, cancel anytime - and if a provider does not qualify you, you do not pay.",
     ],
     sections: [
       {
@@ -930,7 +933,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "How much does Medvi QUAD cost?",
-        body: `We have not yet verified QUAD's pricing, and we do not publish numbers we cannot stand behind - check Medvi's site for current rates, and expect the final price to be confirmed during checkout after the medical intake. We will update this guide and the review with verified figures as soon as we have them. For context, Medvi's weight-loss plans run on transparent monthly pricing, so published QUAD rates would be in character for the brand.`,
+        body: `QUAD starts at <strong>$114/month at the current promotional rate - regularly $179</strong>, which Medvi frames as 36% off retail, with bundle pricing that discounts further. The rate is genuinely all-in: the doctor consultation, free rush shipping and 24/7 medical support are included, billing is monthly with cancel-anytime terms, and Medvi commits to a clean risk rule - <strong>if a provider does not qualify you for the medication, you do not pay</strong>. The usual promo caveat applies: $114 is the promotional rate, so confirm the current figure at checkout.`,
       },
       {
         heading: "Do you need a prescription for Medvi QUAD?",
@@ -938,7 +941,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "The bottom line",
-        body: `Medvi QUAD is a differentiated product from a brand with a real, verifiable service record: one sublingual dose, four named ingredients, a fully online Rx flow, discreet shipping. The open questions are the ones any new product carries - no QUAD-specific reviews yet, and pricing we have not yet verified. If the format appeals to you, the path is Medvi's own intake, where a licensed provider makes the call. Read the <a href="/trt/reviews/medvi-quad">full Medvi QUAD review</a> for the complete picture. This article is general information, not medical advice.`,
+        body: `Medvi QUAD is a differentiated product from a brand with a real, verifiable service record: one sublingual dose, four named ingredients, a fully online Rx flow, discreet shipping. Pricing is transparent - $114/month promotional (regularly $179), consultation included, cancel anytime, nothing to pay if a provider does not qualify you - and the one open question is the one any new product carries: no QUAD-specific reviews yet. If the format appeals to you, the path is Medvi's own intake, where a licensed provider makes the call. Read the <a href="/trt/reviews/medvi-quad">full Medvi QUAD review</a> for the complete picture. This article is general information, not medical advice.`,
       },
     ],
   },
