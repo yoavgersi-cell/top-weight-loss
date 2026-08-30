@@ -32,6 +32,9 @@ const URLS: Record<string, string> = {
   dudemeds: "https://www.dudemeds.com/",
   petermd: "https://getpetermd.com/",
   maleexcel: "https://maleexcel.com/",
+  // Live operator affiliate link (Aug 2026) - QUAD is Medvi's men's-health
+  // sublingual product line.
+  "medvi-quad": "https://quad.medvi.org/?oid=13&affid=2&pub=1952&sub1=1952&oid2=4794&affid2=1952",
 };
 
 const providers: Provider[] = [
@@ -173,6 +176,28 @@ const providers: Provider[] = [
     affiliateUrl: URLS.maleexcel,
     ctaText: "Visit Site",
   },
+  {
+    id: "medvi-quad",
+    name: "Medvi QUAD",
+    tagline: "Medvi's 4-in-1 sublingual performance medication - Rx only, prescribed after an online provider review",
+    logo: "/logos/medvi.svg",
+    smallLogo: "/logos/medvi-icon.svg",
+    // Product facts from Medvi's own QUAD pages (operator-supplied screenshots,
+    // Aug 2026): sublingual "4-IN-1 PERFORMANCE" formula naming sildenafil,
+    // tadalafil, apomorphine and L-citrulline. Benefit labels are Medvi's own.
+    highlights: [
+      "4-in-1 sublingual dose: sildenafil, tadalafil, apomorphine and L-citrulline (per Medvi)",
+      "No injections, no pills to swallow - Rx-only sublingual, prescribed online",
+      "Fast, discreet shipping",
+    ],
+    affiliateUrl: URLS["medvi-quad"],
+    ctaText: "Visit Site",
+    // Medvi's brand-wide Trustpilot record (operator-verified, Aug 2026):
+    // 4.4 across 14,372 reviews - earned mostly on its weight-loss line, and
+    // the review copy says so. No QUAD-specific aggregate exists yet.
+    trustpilotRating: "4.4",
+    trustpilotReviewCount: "14,372",
+  },
   // Competitor brands - included only to power "<competitor> vs …" comparisons.
   // They are NOT part of our ranking (see providerOrder). Their review pages
   // index like everyone else's (Aug 2026 operator policy).
@@ -227,6 +252,7 @@ const positions: RankingPosition[] = [
   { score: 9.0, starRating: 5, label: "Excellent" },
   { score: 8.8, starRating: 4, label: "Very Good" },
   { score: 8.6, starRating: 4, label: "Very Good" },
+  { score: 8.4, starRating: 4, label: "Very Good" },
 ];
 
 const reviews: ReviewData[] = [
@@ -430,6 +456,45 @@ const reviews: ReviewData[] = [
       "Male Excel is a strong choice for men who want flexibility in how they take testosterone - especially needle-free cream or oral options - with at-home testing and a guarantee. Confirm current pricing and eligibility on their site.",
     trustBadges: ["At-home testing", "90-day guarantee", "Cream, injection & oral"],
     updatedAt: UPDATED,
+  },
+  {
+    slug: "medvi-quad",
+    providerId: "medvi-quad",
+    shortSummary:
+      "Medvi's 4-in-1 sublingual performance medication - sildenafil, tadalafil, apomorphine and L-citrulline in a single Rx-only dose, prescribed after an online provider review and shipped discreetly.",
+    reviewIntro:
+      "QUAD is Medvi's entry into men's performance medicine, and its pitch is the formula: a single sublingual dose that Medvi describes as \"4-IN-1 PERFORMANCE,\" combining sildenafil (the active ingredient in Viagra), tadalafil (the active ingredient in Cialis, which Medvi labels \"lasts 36 hours\"), apomorphine (\"ignites desire,\" in Medvi's words) and L-citrulline (\"rapid flow\"). It is Rx-only: you complete an online intake, a licensed provider decides whether the medication is appropriate for you, and it ships fast in discreet packaging. Behind it stands a brand with a real record - Medvi holds a verified 4.4 on Trustpilot across 14,372 reviews - though that record was earned mostly on its weight-loss line, and QUAD itself is too new to have its own aggregate. We have not yet verified QUAD's pricing; check Medvi's site for current rates, and we will update this review when we can verify them.",
+    keyFeatures: [
+      "4-in-1 formula: sildenafil, tadalafil, apomorphine, L-citrulline (per Medvi)",
+      "Sublingual - no injections, no pills to swallow",
+      "Rx-only: online provider review before any prescription",
+      "Fast, discreet shipping",
+    ],
+    pricingSummary: PRICING_TBD,
+    treatmentOptions: [
+      "QUAD 4-in-1 sublingual performance medication (Rx only)",
+      "Online provider evaluation and follow-up",
+    ],
+    pros: [
+      "One dose combines four ingredients that would otherwise be separate prescriptions and supplements",
+      "Sublingual format - a real alternative for men who won't do injections or dislike pills",
+      "Established telehealth brand: 4.4 across 14,372 Trustpilot reviews (brand-wide)",
+      "Discreet, fast shipping and a fully online flow",
+    ],
+    cons: [
+      "No QUAD-specific review record yet - the 4.4 Trustpilot aggregate is Medvi brand-wide, earned mostly on weight loss",
+      "Pricing is not in the material we have verified - confirm current rates on Medvi's site before ordering",
+      "Combining two PDE5-class ingredients (sildenafil + tadalafil) makes the provider review genuinely important - this is not a product to route around the medical questions on",
+    ],
+    bestFor: [
+      "Men who want a needle-free, sublingual performance option from an established telehealth brand",
+      "Anyone who values a discreet, fully online process over pharmacy visits",
+      "Existing Medvi customers who already trust the brand's service record",
+    ],
+    finalVerdict:
+      "QUAD is a credible new entry from a brand with a verifiable service record: the 4-in-1 sublingual formula is genuinely differentiated, the flow is Rx-only with a licensed provider making the call, and Medvi's 4.4 across 14,372 Trustpilot reviews - while earned mostly on weight loss - says the company behind it answers the phone. The honest caveats are newness and transparency: no QUAD-specific reviews exist yet, and we have not verified pricing. A licensed provider decides whether this medication is appropriate for you - the intake questions exist for a reason, especially with two PDE5-class ingredients in one dose. This review is general information, not medical advice.",
+    trustBadges: ["Rx-only - online provider review", "Fast & discreet shipping", "4-in-1 sublingual formula"],
+    updatedAt: "2026-08-30",
   },
   {
     slug: "hone",
@@ -1273,7 +1338,7 @@ export function trtSeed(base: SiteConfig): SiteConfig {
     ranking: {
       // Only our five monetized providers are ranked. Hone, Fountain and Marek
       // exist solely to power "<competitor> vs …" comparisons.
-      providerOrder: ["maximus", "hims", "dudemeds", "petermd", "maleexcel"],
+      providerOrder: ["maximus", "hims", "dudemeds", "petermd", "maleexcel", "medvi-quad"],
       positions,
     },
     reviews,
