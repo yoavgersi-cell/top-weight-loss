@@ -183,8 +183,11 @@ const providers: Provider[] = [
     // product, not a TRT clinic - it lives here for its review page, the
     // trend article, and the live affiliate CTA (operator decision, Aug 30).
     tagline: "Medvi's 4-in-1 sublingual performance medication - Rx only, prescribed after an online provider review",
-    logo: "/logos/medvi.svg",
-    smallLogo: "/logos/medvi-icon.svg",
+    // The real Medvi logo - the exact blob asset the weight-loss vertical
+    // serves from the CMS (operator-supplied URL). The /logos/medvi.svg file
+    // in the repo is a text placeholder; don't use it.
+    logo: "https://vgnff4h66x8kvbrv.public.blob.vercel-storage.com/uploads/medvi-logo-branded-0kiNFJoPiCOjr3z55KU6eiFpzuJ9q2.png",
+    smallLogo: "https://vgnff4h66x8kvbrv.public.blob.vercel-storage.com/uploads/medvi-logo-branded-0kiNFJoPiCOjr3z55KU6eiFpzuJ9q2.png",
     // Product facts from Medvi's own QUAD pages (operator-supplied screenshots,
     // Aug 2026): sublingual "4-IN-1 PERFORMANCE" formula naming sildenafil,
     // tadalafil, apomorphine and L-citrulline. Benefit labels are Medvi's own.
