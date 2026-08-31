@@ -110,40 +110,6 @@ export const brandClusterArticles: Article[] = [
   },
   // ═════ wellmedr ═════
   {
-    slug: "is-wellmedr-legit",
-    title: "Is wellmedr Legit? The $59 GLP-1 Question, Answered (2026)",
-    description:
-      "A $59/month GLP-1 sounds too cheap to be real. We traced where wellmedr's price comes from, who's prescribing, and what the warranty actually promises.",
-    category: "Guide",
-    readTime: "8 min read",
-    publishedAt: "2026-08-11",
-    updatedAt: "2026-08-21",
-    heroColor: "#EEF7FB",
-    author: "TreatmentsHub Staff",
-    sections: [
-      {
-        heading: "\"Too cheap to be legit\" - let's test that",
-        body: `<p>wellmedr sells compounded semaglutide for <strong>$59 a month</strong> while brand-name Wegovy runs over $1,300 without insurance. A 20x price gap triggers a reasonable instinct: something must be wrong. So this piece works backwards - instead of asking "is wellmedr legit," we traced each place a scam would cut corners, and checked what wellmedr actually does there.</p><p><strong>Who prescribes?</strong> Board-certified specialists review a real medical intake before anything ships - and can decline. <strong>Who makes the medication?</strong> US state-licensed pharmacies working under federal compounding standards, the same 503A framework the FDA regulates (see <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">how compounding actually works</a>). <strong>Who's accountable after the sale?</strong> Every plan includes ongoing medical oversight and a Medical Weight-Care Coach, with provider messaging anytime. None of those are corners a fly-by-night operation pays for.</p>`,
-      },
-      {
-        heading: "Where the $59 really comes from",
-        body: `<p>The price has a structural explanation, not a suspicious one - three ingredients:</p><p><strong>1. Compounding economics.</strong> The active ingredient itself isn't what makes brand-name GLP-1s expensive; the brand premium is. Compounded semaglutide across our entire ranking runs $59-$199/month. wellmedr sits at the aggressive end of a normal range, not outside it.</p><p><strong>2. Scale.</strong> wellmedr reports over <strong>one million patients</strong>. High volume is precisely what lets a telehealth operator run thin margins - and a million-patient operation has too much to lose to risk regulatory action on shortcuts.</p><p><strong>3. Commitment pricing.</strong> The headline $59 locks in on a 12-month plan - wellmedr's "lock in $200 off every month, for life" offer. Do the math on that: <strong>$59 x 12 = $708 for a full year</strong> of semaglutide treatment with coach and oversight included. That's less than four months at mid-market rates.</p>`,
-      },
-      {
-        heading: "The dose-creep trap it doesn't spring",
-        body: `<p>Here's an industry mechanic most first-time buyers don't know: GLP-1 treatment starts at a low dose and titrates up over several months. Providers that price per-dose advertise the starting-dose price - and your bill climbs exactly when you're most committed. wellmedr charges the <strong>same price at every dose</strong>: $59 semaglutide, $99 tirzepatide, whether you're on week two or month eight. Shipments arrive every 4 weeks in discreet, unbranded packaging, and you can change or cancel anytime within your plan's terms.</p><p>It also stocks brand-name for those who want it - Ozempic from $1,399 and Zepbound from $1,599 - though at those prices, <a href="/weight-loss/reviews/altrx">altRx's brand shelf</a> undercuts it.</p>`,
-      },
-      {
-        heading: "What about the weight-loss warranty?",
-        body: `<p>wellmedr backs treatment with a weight-loss warranty - a results-linked promise that a business planning to disappoint customers couldn't afford to make. Read the terms on their site before you count on it (every warranty has conditions), but as a legitimacy signal it points the right way: the company is betting its money that the clinical outcomes will show up.</p>`,
-      },
-      {
-        heading: "The verdict, and who should still pay more",
-        body: `<p>wellmedr is legitimate - the low price is a business model, not a red flag. Licensed specialists, regulated pharmacies, a million-patient track record, dose-stable pricing and a warranty check every box we audit. Who should still look elsewhere? People who want high-touch video-visit care (that's <a href="/weight-loss/reviews/medvi">Medvi's</a> product, currently $99 promotional), people unwilling to commit 12 months for the best rate (<a href="/weight-loss/reviews/embody">embody</a> is flat $69 with zero commitment), and anyone set on brand-name from day one.</p><p class="cta-row"><a href="/weight-loss/reviews/wellmedr">→ Full wellmedr review: plans, warranty details and customer feedback</a></p><p>This article is general information, not medical advice.</p>`,
-      },
-    ],
-  },
-  {
     slug: "wellmedr-cost",
     title: "wellmedr Cost 2026: The Full $59/Month Math, Dose by Dose",
     description:
