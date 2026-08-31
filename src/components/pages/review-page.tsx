@@ -551,7 +551,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 <h1 className="text-[24px] font-bold text-[#191919] sm:text-[28px]">
                   {provider.name} Reviews
                 </h1>
-                <p className="mt-0.5 text-[14px] text-gray-500">
+                <p className="mt-0.5 text-[14px] text-gray-700">
                   {provider.tagline}
                 </p>
                 <LastUpdated date={latestUpdate(review.updatedAt)} className="mt-1" />
