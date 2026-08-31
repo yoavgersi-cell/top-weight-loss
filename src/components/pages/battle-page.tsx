@@ -652,7 +652,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <h1 className="text-[24px] font-extrabold leading-[1.18] text-[#191919] sm:text-[38px] sm:leading-[1.15]">
               {battle.title}
             </h1>
-            <p className="mt-2 max-w-xl text-[14px] leading-relaxed text-gray-500 sm:mt-3 sm:text-[15px]">
+            <p className="mt-2 max-w-xl text-[14px] leading-relaxed text-gray-700 sm:mt-3 sm:text-[15px]">
               {battle.subtitle || battle.description}
             </p>
             <div className="mt-3.5 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-[11.5px] leading-[1.5] sm:mt-4 sm:text-[13px]">

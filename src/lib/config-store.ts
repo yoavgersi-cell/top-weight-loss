@@ -82,6 +82,37 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
     rating: "4.7",
     reviewCount: "1,205",
     reviews: [
+      // Four fresh "Unprompted review" entries (operator-supplied screenshots,
+      // Aug 27-29 2026) - including Louise's critical one, kept deliberately:
+      // honest results-vary feedback is the registry's credibility.
+      {
+        title: "Had a good call this am with Autumn",
+        text: "Had a good call this am with Autumn. Hopefully back on the right track. Her call was important for me to stay with Wellmedr. Tks, Bob",
+        name: "Robert",
+        location: "US",
+        rating: 4,
+      },
+      {
+        title: "So far so good",
+        text: "So far so good. The care team has answered any questions I had.",
+        name: "Alexis Peterson",
+        location: "US",
+        rating: 4,
+      },
+      {
+        title: "Im not losing as much wt as I was...",
+        text: "Im not losing as much wt as I was hoping to. I've been on this over 6 months now. Not sure how much longer I will stay on this because it's getting to expensive for very little results.",
+        name: "Louise Marchese",
+        location: "US",
+        rating: 4,
+      },
+      {
+        title: "Naomi was awesome",
+        text: "Naomi was awesome. Apparently she was new to the company but could not tell. She told me she was. However, she knew the answers to all my questions and even had suggestions that were helpful. Very good experience for me",
+        name: "Tammy heier",
+        location: "US",
+        rating: 4,
+      },
       {
         title: "Contacted the company to slow my refills",
         text: "Contacted the company to slow my refills. Talked to Shelby. She was so helpful, so fast, and helped me set up exactly what I wanted within 5 minutes. Thank you Shelby",
@@ -514,6 +545,38 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
     rating: "3.8",
     reviewCount: "4956",
     reviews: [
+      // Four fresh 4-star entries (operator-supplied screenshots, Jul-Aug 2026;
+      // Josh/Bryan/Kelli tagged "Invited", "customer" tagged "Verified"). The
+      // honest service hiccups they describe are kept verbatim - that mix is
+      // what makes the section credible.
+      {
+        title: "So far seems to be running fine",
+        text: "So far seems to be running fine. We had misleading texts and waited on what we thought was gonna be a call for a telehealth visit. Which we never received. But after a few chats and a call I was able to get the email to send my proof of meds to. Looking forward to receiving my first shipment and get started to a healthier lifestyle",
+        name: "Josh",
+        location: "US",
+        rating: 4,
+      },
+      {
+        title: "Once the initial problem was resolved",
+        text: "Once the initial problem was resolved, and I spoke to customer service about finally setting up an appointment. Everything was smooth. There was confusion because I had been prescribed it previously I no one ever told me I needed to schedule an appointment.",
+        name: "Bryan Tapp",
+        location: "US",
+        rating: 4,
+      },
+      {
+        title: "Prompt and attentive",
+        text: "I received a call at my appt time. I was able to explain my concerns and received answers that were clear and concise.",
+        name: "Kelli",
+        location: "US",
+        rating: 4,
+      },
+      {
+        title: "I had a great experience for the most part",
+        text: "I had a great experience with all initial communication. Only giving it 4 stars as there has been no communication since I was sent my 3 month supply and they initially say that someone will follow up monthly.",
+        name: "customer",
+        location: "US",
+        rating: 4,
+      },
       {
         title: "Just started week 3 of tirzepatide",
         text: "Only on week 3; however, from my very first inquiry I've had excellent communication from customer service. When I was debating about the product and asking questions, the responses were always very prompt. When I made the decision to start, customer service updated me every step during process without me even needing to inquiry. All steps took place on time as informed and product shipped within days.",

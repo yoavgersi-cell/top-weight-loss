@@ -377,7 +377,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
             <h1 className="text-[24px] font-bold leading-tight text-[#191919] sm:text-[32px]">
               {article.title}
             </h1>
-            <p className="mt-3 text-[15px] leading-relaxed text-gray-500">
+            <p className="mt-3 text-[16px] leading-relaxed text-gray-800">
               {article.description}
             </p>
             <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2">
