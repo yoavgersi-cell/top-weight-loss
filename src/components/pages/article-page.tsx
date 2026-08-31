@@ -531,8 +531,11 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                   </div>
                 )}
 
-                {/* Inline provider CTA after 2nd section */}
-                {i === 1 && topProviders.length > 0 && (
+                {/* Inline provider CTA after 2nd section. Suppressed on
+                    "is X legit" articles: a trust-check page advertising the
+                    reviewed provider's competitors undermines the article's
+                    credibility and cannibalizes its own conversion. */}
+                {i === 1 && !/^is-.+-legit$/.test(slug) && topProviders.length > 0 && (
                   <div className="my-8 rounded-lg border border-gray-200 bg-white px-5 py-4">
                     <p className="mb-3 text-[13px] font-bold uppercase tracking-wider text-gray-400">Top-Rated Providers</p>
                     <div className="space-y-2.5">
