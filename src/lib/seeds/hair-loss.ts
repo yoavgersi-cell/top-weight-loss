@@ -1149,6 +1149,124 @@ const faqs: FaqItem[] = [
 // no fabricated statistics or provider-specific numbers - with internal links to
 // the provider reviews, the comparison, and between articles.
 const articles: ArticleData[] = [
+  // ───── Trend-riding coverage (Google Trends, Aug 30 2026) ─────
+  // Three rising query clusters: the iron/anemia trio (+90% to +150%), the
+  // shampoo head terms (top-1 and top-5 by volume), and the Veradermics
+  // VDPHL01 news wave (+300%). Facts are qualitative general knowledge or
+  // attributed to the company's own announcements - no invented figures,
+  // and no supplement recommendations (house rule).
+  {
+    slug: "iron-deficiency-hair-loss",
+    title: "Iron Deficiency and Hair Loss: The Link, Explained (2026)",
+    description:
+      "Low iron is one of the most common - and most fixable - causes of hair shedding, especially in women. How the link works, the blood test that settles it, and what recovery looks like.",
+    category: "Science",
+    readTime: "7 min read",
+    publishedAt: "2026-08-30",
+    updatedAt: "2026-08-30",
+    heroColor: "#F7F0EC",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Iron deficiency is a recognized, common cause of diffuse hair shedding - and unlike pattern hair loss, it is usually fully reversible once the deficiency is corrected.",
+      "The tell is the pattern: all-over thinning and more hair in the brush or drain, rather than a receding hairline or a widening part alone.",
+      "A blood test (including ferritin, your iron stores) settles the question - guessing and self-supplementing without one is the mistake to avoid.",
+      "Hair recovers on its own slow clock: cycles take months, so regrowth follows correction with a lag - patience is part of the treatment.",
+    ],
+    sections: [
+      {
+        heading: "Does iron deficiency cause hair loss?",
+        body: `Yes - it is one of the best-recognized non-genetic causes of hair shedding, and one of the most common, especially in women. Hair follicles are among the fastest-dividing cells in the body, which makes them early casualties when a key raw material runs short. When iron stores drop low enough, the body triages: it protects essential organs and lets "optional" projects like hair growth slide. Follicles shift out of their growth phase early and shed weeks later - a pattern called telogen effluvium. The practical upside of this diagnosis, compared to genetic pattern loss: fix the deficiency and the shedding typically stops, with regrowth following.`,
+      },
+      {
+        heading: "Can anemia cause hair loss even if I feel fine?",
+        body: `This is the part most people miss: you do not need full-blown anemia to shed hair. Iron depletion is a spectrum - hair shedding can begin when your <strong>ferritin</strong> (stored iron) runs low, before red blood cells are affected enough to cause the classic fatigue, paleness and breathlessness. That is why "my energy is fine, so it can't be iron" is unreliable reasoning, and why the shedding is sometimes the first visible sign that stores are low. The reverse is also true: if you do have diagnosed anemia and new hair shedding, the two are very plausibly connected - which is worth raising with the clinician managing it.`,
+      },
+      {
+        heading: "Who is most at risk?",
+        body: `The risk concentrates where iron losses outrun intake: people with heavy menstrual periods (the single biggest group), pregnancy and the postpartum months, frequent blood donors, people with digestive conditions that impair absorption, and people on diets with little or no red meat, where iron is less absorbable. If several of those describe you and your shedding is diffuse - coming out evenly all over rather than receding at the temples - iron moves to the top of the suspect list. Stress and crash dieting pile onto the same mechanism; our <a href="/hair-loss/articles/can-stress-cause-hair-loss">stress and hair loss guide</a> covers that side.`,
+      },
+      {
+        heading: "How do I find out - and what's the fix?",
+        body: `One blood test settles it: ask a clinician for an iron panel that includes <strong>ferritin</strong>, not just a standard blood count - ferritin is the stores measure that correlates with hair shedding, and it can be low while everything else looks normal. If the test confirms a deficiency, treatment is straightforward and handled by your clinician: correcting the deficiency and, importantly, finding <em>why</em> it happened, because untreated causes refill the problem. We deliberately do not recommend self-prescribing iron supplements: excess iron is genuinely harmful, the dose and duration depend on your numbers, and "hair vitamins" marketed without a diagnosis are exactly the product category we do not endorse. Test first, treat what the test shows, under someone licensed.`,
+      },
+      {
+        heading: "How long until hair grows back?",
+        body: `Slower than anyone wants, and knowing this in advance prevents despair. Hair operates in long cycles: once the deficiency is corrected, shedding typically settles first, and visible regrowth follows over the months after that - new hairs also start short and take time to add length. The honest checkpoint: if shedding has not settled months after your numbers are corrected, or the pattern looks like a receding hairline or widening part rather than diffuse loss, you may be looking at <a href="/hair-loss/articles/hair-loss-treatment-for-women">pattern hair loss</a> instead of - or alongside - the iron story. That has real, evidence-backed treatments too: see <a href="/hair-loss">our provider comparison</a> and the <a href="/hair-loss/articles/how-to-stop-hair-loss">how to stop hair loss guide</a>. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "do-hair-loss-shampoos-work",
+    title: "Do Hair Loss Shampoos Actually Work? An Honest Answer (2026)",
+    description:
+      "Shampoo spends seconds on your scalp - here's what that can and can't do for hair loss, which ingredient has real supporting evidence, and where regrowth actually comes from.",
+    category: "Advice",
+    readTime: "6 min read",
+    publishedAt: "2026-08-30",
+    updatedAt: "2026-08-30",
+    heroColor: "#EDF3F0",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "No shampoo regrows hair on its own - washing something off seconds after applying it is the wrong delivery system for treating follicles.",
+      "One ingredient has meaningful supporting evidence as an add-on: ketoconazole, an antifungal that helps scalp conditions and may modestly help alongside real treatment.",
+      "\"DHT-blocking\" shampoo claims borrow the language of finasteride - a prescription pill - without its evidence; thickening shampoos are cosmetics that coat the strand.",
+      "The evidence-backed regrowth tools remain minoxidil and finasteride; a shampoo can support that plan, not replace it.",
+    ],
+    sections: [
+      {
+        heading: "Can a shampoo really stop hair loss?",
+        body: `Here is the physics problem no shampoo marketing mentions: a shampoo touches your scalp for seconds, diluted in water, and is then rinsed away. Treatments that actually change what follicles do - <a href="/hair-loss/articles/finasteride-vs-minoxidil">minoxidil and finasteride</a> - work because they stay in contact with the follicle or circulate through it continuously. That contact time gap is why no shampoo has ever demonstrated the kind of regrowth that the real treatments show, and why "shampoo for hair loss" is mostly a category of hope. Mostly - because there is one honest exception worth knowing about.`,
+      },
+      {
+        heading: "The one ingredient with real evidence: ketoconazole",
+        body: `<strong>Ketoconazole</strong> is an antifungal, available in shampoos, with two honest things going for it. First, it treats scalp conditions - dandruff and the inflammation that comes with them - and an inflamed scalp is a worse place to grow hair, so fixing that helps at the margins. Second, there is supporting evidence suggesting a modest benefit for hair retention when it is used <em>alongside</em> standard treatment - the operative words being modest and alongside. Used a few times a week as the supporting act in a real plan, it is the one shampoo choice we can describe as evidence-informed rather than wishful.`,
+      },
+      {
+        heading: "What about \"DHT-blocking\" and thickening shampoos?",
+        body: `"DHT-blocking" shampoos borrow their vocabulary from <a href="/hair-loss/articles/does-finasteride-work">finasteride</a> - the prescription pill that actually lowers DHT, the hormone that shrinks genetically susceptible follicles - without borrowing its evidence. Saw palmetto and similar botanical ingredients in a rinse-off product have not shown meaningful regrowth. Thickening and volumizing shampoos are a different, more honest product: they are cosmetics that coat the strand so existing hair looks fuller for a day. Nothing wrong with that - as long as you know you are buying a styling effect, not a treatment, and priced accordingly.`,
+      },
+      {
+        heading: "So where should the money actually go?",
+        body: `If your goal is keeping and regrowing hair, the order of operations is clear: the budget belongs first to treatments with real evidence - <a href="/hair-loss/articles/finasteride-vs-minoxidil">minoxidil and/or finasteride</a>, prescribed online in minutes through the <a href="/hair-loss">providers we compare</a>, with plans from $24.99/month at Maximus - and only after that to a supporting ketoconazole shampoo if scalp condition is part of your picture. A $30 "hair growth" shampoo instead of treatment is the expensive choice, not the cheap one: it costs less per bottle and more per hair. Our <a href="/hair-loss/articles/how-to-stop-hair-loss">how to stop hair loss guide</a> lays out the full plan. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "veradermics-vdphl01",
+    title: "Veradermics' VDPHL01: The Hair Loss Pill Everyone's Searching (2026)",
+    description:
+      "VDPHL01 is an extended-release oral minoxidil in late-stage trials - the potential first FDA-approved hair loss pill for women and men. What the company reports, the timeline, and what you can do today.",
+    category: "Science",
+    readTime: "6 min read",
+    publishedAt: "2026-08-30",
+    updatedAt: "2026-08-30",
+    heroColor: "#EEF1F8",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "VDPHL01 is Veradermics' extended-release oral minoxidil, aiming to become the first FDA-approved oral prescription treatment for pattern hair loss.",
+      "The company reports positive Phase 2/3 results in men (April 2026) and positive early results in women, with major readouts expected in late 2026 and the first half of 2027.",
+      "It is not approved and not available yet - trial success so far is the company's own reporting, and late-stage trials can still surprise.",
+      "The active ingredient, minoxidil, is already prescribable today: oral minoxidil is available off-label through hair-loss telehealth providers.",
+    ],
+    sections: [
+      {
+        heading: "What is VDPHL01?",
+        body: `VDPHL01 is an <strong>extended-release oral minoxidil</strong> tablet developed by Veradermics, a clinical-stage dermatology company - and the reason searches for it are spiking is its run of trial news. Minoxidil itself is the most familiar name in hair loss, but today's approved products are topical; oral minoxidil is widely prescribed for hair loss only off-label. VDPHL01 is the attempt to change that: run the full FDA trial program and become the <strong>first approved oral prescription treatment for pattern hair loss</strong> - in both men and women, a market the company estimates at 50 million men and 30 million women in the US alone.`,
+      },
+      {
+        heading: "What have the trials shown so far?",
+        body: `Per the company's own announcements - the honest framing, since peer review and FDA review are still ahead: the Phase 2/3 "302" trial in male pattern hair loss reported positive results in April 2026, described as early, consistent and robust hair growth, and its CEO has claimed faster, stronger growth versus standard minoxidil. On the women's side, an open-label Phase 2 study reported rapid-onset growth, and enrollment is complete in a 556-participant registration-directed Phase 2/3 trial. The catch to keep in view: these are company-reported topline results, and late-stage programs can and do surprise - which is exactly what the remaining readouts are for.`,
+      },
+      {
+        heading: "When could it actually be available?",
+        body: `Not soon enough for anyone shedding hair today. The company's stated timeline puts 12-month male data and a confirmatory Phase 3 readout in late 2026, and the women's registration trial readout in the first half of 2027 - and only after successful readouts does an FDA submission and review process begin. Realistically, that puts any approval well down the road. Treat VDPHL01 as a genuinely promising pipeline story to watch, not a reason to wait: untreated pattern loss progresses, and follicles that spend years miniaturizing are harder to rescue later.`,
+      },
+      {
+        heading: "What can you do today instead of waiting?",
+        body: `The ingredient at the center of this story is already prescribable. <strong>Oral minoxidil is available off-label right now</strong> through licensed telehealth providers - our <a href="/hair-loss/articles/oral-minoxidil-online">guide to getting oral minoxidil online</a> covers exactly how, and <a href="/hair-loss/articles/oral-minoxidil-vs-topical-minoxidil">oral vs topical</a> lays out the trade-offs a prescriber weighs. Combined with finasteride where appropriate, that is the evidence-backed toolkit that exists today - compare the <a href="/hair-loss">providers we rank</a>, with plans from $24.99/month. If VDPHL01 clears its remaining trials, it will join that toolkit with an FDA label; until then, the treatment conversation belongs with a licensed provider. This article is general information, not medical advice.`,
+      },
+    ],
+  },
   // ───── Switch-intent articles (alternatives to the mainstream brands) ─────
   // Target the "hims alternatives" / "keeps alternatives" query cluster: people
   // already shopping to leave the big brands. Hims/Keeps are described only
