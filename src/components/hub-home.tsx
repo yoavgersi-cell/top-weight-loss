@@ -334,13 +334,14 @@ export async function HubHome() {
           <h1 className="mx-auto max-w-[950px] text-[36px] font-extrabold leading-[1.06] tracking-[-0.025em] text-[#111] sm:text-[62px]">
             Compare the Best Health &amp; Wellness Services for Your Needs
           </h1>
-          <p className="mx-auto mt-6 max-w-[680px] text-[16.5px] leading-relaxed text-gray-700 sm:mt-8 sm:text-[21px]">
+          <p className="mx-auto mt-5 max-w-[760px] text-[16px] leading-relaxed text-gray-700 sm:mt-6 sm:text-[19px]">
             Independent rankings across weight loss, hair growth, TRT, HRT, hearing aids and online
             therapy - real published prices and verified customer reviews.
           </p>
 
-          {/* Category cards - icon-led, links behind a divider */}
-          <div className="mx-auto mt-10 grid max-w-[880px] gap-4 text-left sm:mt-14 sm:grid-cols-2">
+          {/* Category cards - icon-led, links behind a divider. Dense 3-up
+              grid (2-up on tablet) so all six verticals sit above the fold. */}
+          <div className="mx-auto mt-10 grid max-w-[1080px] gap-3.5 text-left sm:mt-12 sm:grid-cols-2 lg:grid-cols-3">
             {VERTICALS.map((v) => {
               const live = isPublishedVertical(v.id);
               const Icon = VERTICAL_ICON[v.id] ?? WeightLossIcon;
@@ -352,9 +353,9 @@ export async function HubHome() {
                 return (
                   <div
                     key={v.id}
-                    className="flex items-center justify-center gap-4 rounded-2xl border border-gray-200/80 bg-white px-6 py-7 shadow-[0_1px_3px_rgba(16,42,67,0.06)]"
+                    className="flex items-center justify-center gap-3 rounded-xl border border-gray-200/80 bg-white px-5 py-5 shadow-[0_1px_3px_rgba(16,42,67,0.06)]"
                   >
-                    <Icon className="h-[52px] w-[52px] shrink-0" />
+                    <Icon className="h-[40px] w-[40px] shrink-0" />
                     <div className="text-left">
                       <span className="block text-[17px] font-bold leading-snug text-[#191919]">{name}</span>
                       {!live && (
@@ -370,14 +371,14 @@ export async function HubHome() {
               return (
                 <div
                   key={v.id}
-                  className="flex items-stretch gap-5 rounded-2xl border border-gray-200/80 bg-white p-5 shadow-[0_1px_3px_rgba(16,42,67,0.06)] transition-shadow hover:shadow-[0_4px_14px_rgba(16,42,67,0.10)] sm:p-6"
+                  className="flex items-stretch gap-4 rounded-xl border border-gray-200/80 bg-white px-4 py-4 shadow-[0_1px_3px_rgba(16,42,67,0.06)] transition-shadow hover:shadow-[0_4px_14px_rgba(16,42,67,0.10)] sm:px-5"
                 >
                   {/* Icon + category name */}
-                  <div className="flex w-[124px] shrink-0 flex-col items-center justify-center gap-3 text-center">
-                    <Icon className="h-[56px] w-[56px]" />
+                  <div className="flex w-[92px] shrink-0 flex-col items-center justify-center gap-2 text-center">
+                    <Icon className="h-[40px] w-[40px]" />
                     <Link
                       href={`/${v.id}`}
-                      className="text-[16.5px] font-bold leading-[1.25] text-[#191919] hover:text-[#0C4B75]"
+                      className="text-[15px] font-bold leading-[1.2] text-[#191919] hover:text-[#0C4B75]"
                     >
                       {name}
                     </Link>
@@ -386,16 +387,16 @@ export async function HubHome() {
                   <div className="w-px self-stretch bg-gray-200" />
 
                   {/* Arrow links */}
-                  <div className="flex flex-1 flex-col justify-center gap-2.5 py-1">
+                  <div className="flex flex-1 flex-col justify-center gap-[7px] py-0.5">
                     {links.map((l) => (
                       <Link
                         key={l.href}
                         href={l.href}
-                        className="group inline-flex items-center gap-2 text-[14.5px] font-medium text-gray-800 hover:text-[#0C4B75]"
+                        className="group inline-flex items-center gap-1.5 text-[13.5px] font-medium leading-snug text-gray-800 hover:text-[#0C4B75]"
                       >
                         {l.label}
                         <ArrowRight
-                          className="h-4 w-4 text-gray-400 transition-transform group-hover:translate-x-0.5 group-hover:text-[#0C4B75]"
+                          className="h-3.5 w-3.5 shrink-0 text-gray-400 transition-transform group-hover:translate-x-0.5 group-hover:text-[#0C4B75]"
                           strokeWidth={2.2}
                         />
                       </Link>
@@ -412,7 +413,7 @@ export async function HubHome() {
       {shelfProviders.length > 0 && (
         <section className="border-y border-gray-200 bg-white">
           <div className="mx-auto max-w-[1100px] px-5 py-12 sm:px-8">
-            <h2 className="text-center text-[22px] font-bold tracking-[-0.01em] text-[#191919]">
+            <h2 className="text-center text-[22px] font-bold tracking-[-0.015em] text-[#191919] sm:text-[26px]">
               Compare trusted online providers
             </h2>
             <p className="mx-auto mt-2 max-w-[560px] text-center text-[15px] leading-relaxed text-gray-500">
