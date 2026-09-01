@@ -791,6 +791,125 @@ const battles: BattleData[] = [
 // zero invented numbers, no efficacy statistics, treatment decisions always
 // deferred to a licensed clinician. Question headings feed the FAQPage schema.
 const articles: ArticleData[] = [
+  // ───── Trend-riding coverage (Google Trends, Aug 31 2026) ─────
+  // "pros and cons of hrt" (+50%), "what is hrt" (+20% on the top list,
+  // with "what does hrt stand for" +40%) and "hrt vs birth control" (+40%)
+  // were rising with thin or no coverage. Qualitative established knowledge
+  // only - no invented risk figures, clinician-decides framing throughout.
+  // (The breast-cancer risk question is deliberately NOT a standalone
+  // article per operator decision; pros-and-cons routes it to a clinician.)
+  {
+    slug: "what-is-hrt",
+    title: "What Is HRT? Hormone Replacement Therapy, Explained (2026)",
+    description:
+      "HRT stands for hormone replacement therapy - restoring the estrogen (and often progesterone) that decline through menopause. What it treats, the forms it comes in, and how women start it online.",
+    category: "Guide",
+    readTime: "6 min read",
+    publishedAt: "2026-08-31",
+    updatedAt: "2026-08-31",
+    heroColor: "#F7EEF4",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "HRT stands for hormone replacement therapy: restoring the hormones - mainly estrogen, often with progesterone - that decline through perimenopause and menopause.",
+      "It remains the most effective treatment for the classic menopause symptoms: hot flashes, night sweats, sleep disruption and genitourinary changes.",
+      "It comes in multiple forms - pills, patches, gels and creams - and the form choice is a real medical decision, not just a preference.",
+      "Whether HRT fits you depends on your symptoms, history and timing - a licensed clinician makes that call, and modern telehealth has made the evaluation genuinely accessible.",
+    ],
+    sections: [
+      {
+        heading: "What does HRT stand for?",
+        body: `HRT stands for <strong>hormone replacement therapy</strong> (you will also see "menopausal hormone therapy" or MHT in medical writing - same thing). The idea is in the name: through perimenopause and menopause, the ovaries wind down production of estrogen and progesterone, and the symptoms that follow - covered below - trace back to that decline. HRT replaces what declined, at doses meant to relieve symptoms. One important scoping note: this article covers menopause-related HRT for women; testosterone therapy for men is a different treatment with its own rules - the differences are in <a href="/hrt/articles/is-hrt-the-same-as-trt">is HRT the same as TRT</a>.`,
+      },
+      {
+        heading: "What does HRT actually treat?",
+        body: `The strongest case is the classic menopause cluster: <strong>hot flashes and night sweats</strong> (where HRT remains the most effective treatment available), the sleep disruption they cause, mood changes tied to the transition, and the genitourinary symptoms - dryness, discomfort, urinary changes - that tend to worsen rather than pass with time. Estrogen also protects bone, which is part of the long-term conversation with your clinician. What it is not: an anti-aging cure-all, and a legitimate prescriber will frame it around your actual symptoms, not a promise of turning back clocks. If you are not sure whether what you are feeling is perimenopause yet, start with <a href="/hrt/articles/perimenopause-vs-menopause">perimenopause vs menopause</a>.`,
+      },
+      {
+        heading: "Why do some women take estrogen and progesterone together?",
+        body: `Because the two hormones have different jobs in treatment. Estrogen does the symptom-relief work - and for a woman who still has her uterus, taking estrogen alone lets the uterine lining build up, which is why progesterone (or a progestin) is added to protect it. Women who have had a hysterectomy typically use estrogen alone. This single distinction explains most of the "estrogen vs progesterone" confusion in search results, and it is one of the first things a prescriber sorts out from your history.`,
+      },
+      {
+        heading: "What forms does HRT come in?",
+        body: `More than most women expect: pills, skin patches, gels, sprays, creams and vaginal preparations for localized symptoms. The delivery route is a genuine medical decision - how the hormone enters the body affects the risk conversation, and localized symptoms sometimes need only localized treatment - which is why the form gets chosen with a clinician rather than off a shelf. The trade-offs between the two most common routes are covered in <a href="/hrt/articles/estrogen-patch-vs-pill">estrogen patch vs pill</a>.`,
+      },
+      {
+        heading: "How do I find out if HRT is right for me?",
+        body: `Through an evaluation, and it has gotten dramatically easier to get one. Telehealth menopause providers - <a href="/hrt/reviews/midi">Midi</a> and <a href="/hrt/reviews/winona">Winona</a> among the ones we review - run the intake, history and clinician consultation online, and prescribe when appropriate. The decision weighs your symptoms, your medical history, and timing relative to menopause; there are real contraindications, which is exactly why this runs through a licensed clinician and not a checkout page. Our <a href="/hrt">HRT provider comparison</a> maps the options, and <a href="/hrt/articles/how-to-get-hrt-online">how to get HRT online</a> walks the process. For the balanced picture before you decide, read <a href="/hrt/articles/hrt-pros-and-cons">the pros and cons of HRT</a>. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "hrt-pros-and-cons",
+    title: "The Pros and Cons of HRT: A Balanced Look (2026)",
+    description:
+      "What HRT genuinely does well, the trade-offs and risks that deserve a clinician conversation, and how timing changes the picture - laid out without selling either direction.",
+    category: "Advice",
+    readTime: "7 min read",
+    publishedAt: "2026-08-31",
+    updatedAt: "2026-08-31",
+    heroColor: "#F2EFF6",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "The pro side is real: HRT is the most effective treatment for hot flashes and night sweats, helps genitourinary symptoms that otherwise worsen, and protects bone.",
+      "The con side is real too: side effects exist, some histories rule it out, and the risk conversation - including the breast-cancer question - genuinely depends on your history, the formulation and timing.",
+      "Timing matters more than most women hear: starting near the menopause transition is a different proposition from starting many years after it.",
+      "The honest bottom line: HRT is neither the danger of its 2000s reputation nor a universal fix - it is a personal risk-benefit call made with a clinician who knows your history.",
+    ],
+    sections: [
+      {
+        heading: "What are the real pros of HRT?",
+        body: `Start with what is not controversial. For the defining symptoms of menopause - <strong>hot flashes and night sweats</strong> - HRT is the most effective treatment there is, and the sleep and mood improvements that follow often matter as much as the flashes themselves. Genitourinary symptoms (dryness, discomfort, urinary changes) respond well, which matters because they tend to worsen without treatment rather than pass. Estrogen protects bone density, a long-term benefit that becomes more relevant the earlier menopause arrives. For a woman whose symptoms are disrupting work, sleep and relationships, these are not marginal gains - they are the difference the treatment exists for.`,
+      },
+      {
+        heading: "What are the cons and risks of HRT?",
+        body: `Three categories, honestly stated. <strong>Side effects</strong>: some women experience breast tenderness, bloating, headaches or bleeding changes, especially early - often manageable by adjusting dose or form, but real. <strong>Contraindications</strong>: certain histories - including some cancers and blood-clot conditions - rule HRT out or reshape it substantially, which is why the medical history is not paperwork theater. <strong>The risk conversation</strong>: you have likely heard about breast-cancer risk, and the honest treatment of it is that the answer is personal - it depends on your history, the formulation, whether progesterone is in the picture, and when you start. That conversation belongs with a clinician who has your chart, not with a website's summary - ours included. What we can say responsibly: the modern understanding is considerably more nuanced than the reputation HRT acquired in the early 2000s, and blanket fear is as poor a guide as blanket enthusiasm.`,
+      },
+      {
+        heading: "The factor that changes everything: timing",
+        body: `The piece most women never hear: <em>when</em> you start HRT shapes the risk-benefit picture. Starting around the menopause transition - when symptoms actually begin - is a meaningfully different proposition from starting many years afterward, and much of the confusion in older headlines traces to studies that averaged those very different situations together. This is also why "I will tough it out for a few years and decide later" is itself a decision with consequences worth discussing, not a neutral default. If you are unsure where you are in the transition, <a href="/hrt/articles/perimenopause-vs-menopause">perimenopause vs menopause</a> is the primer.`,
+      },
+      {
+        heading: "So how do you actually decide?",
+        body: `Not alone, and not from headlines in either direction. The decision is a structured conversation: your symptoms and how much they cost you, your personal and family history, your timing, and the formulation and route that fit - <a href="/hrt/articles/estrogen-patch-vs-pill">patch vs pill</a> being one of the real choices. Menopause-focused telehealth has made that conversation accessible: providers like <a href="/hrt/reviews/midi">Midi</a> and <a href="/hrt/reviews/winona">Winona</a> are built around exactly this evaluation, and our <a href="/hrt">provider comparison</a> maps the field. Go in with your questions written down - a good clinician welcomes them, and how they handle the risk questions is itself a signal of quality. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "hrt-vs-birth-control",
+    title: "HRT vs Birth Control: Not the Same Pills, Not the Same Job (2026)",
+    description:
+      "Birth control suppresses your cycle with contraceptive-dose hormones; HRT replaces declining hormones at lower doses - and doesn't prevent pregnancy. How the two differ and when women switch.",
+    category: "Comparison",
+    readTime: "6 min read",
+    publishedAt: "2026-08-31",
+    updatedAt: "2026-08-31",
+    heroColor: "#EFF2F7",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Both contain hormones, but the jobs are opposite: birth control overrides your cycle at contraceptive doses; HRT tops up declining hormones at substantially lower doses.",
+      "HRT does not prevent pregnancy - a genuinely important point for perimenopausal women who can still conceive.",
+      "Many women in perimenopause are on birth control for cycle control and symptom cover; the transition question is when to move from suppressing the cycle to replacing what has declined.",
+      "The switch point is a clinician decision based on your age, symptoms and contraception needs - not a birthday.",
+    ],
+    sections: [
+      {
+        heading: "Aren't they basically the same hormones?",
+        body: `Related molecules, opposite missions. <strong>Birth control</strong> uses synthetic hormones at doses high enough to override your natural cycle - suppressing ovulation is the entire point - and those doses are set for a body with full hormone production of its own. <strong>HRT</strong> works from the other direction: it replaces hormones that have declined, at substantially lower doses aimed at relieving symptoms, and it makes no attempt to suppress anything. Same hormone families, different molecules in many products, very different doses, opposite jobs - which is why the two are not interchangeable and why "I'm already on hormones" does not answer the menopause question.`,
+      },
+      {
+        heading: "Does HRT prevent pregnancy?",
+        body: `No - and for perimenopausal women this is the point that genuinely matters. HRT doses do not reliably suppress ovulation, and pregnancy remains possible through perimenopause until menopause is actually confirmed. A woman who switches from birth control to HRT while still perimenopausal may still need contraception alongside - one of several reasons the transition between the two is a planned, clinician-guided step rather than a swap. If you are unsure which side of the transition you are on, <a href="/hrt/articles/perimenopause-vs-menopause">perimenopause vs menopause</a> covers the signals.`,
+      },
+      {
+        heading: "Why are so many perimenopausal women on birth control?",
+        body: `Because it works as a bridge, and often deliberately: contraceptive-dose hormones smooth the erratic cycles of perimenopause, cover contraception while fertility is winding down, and blunt some early symptoms along the way. The catch is that the same suppression can mask where you actually are in the transition - symptoms and cycles are hidden behind the override - so the question "am I in menopause yet?" gets harder to answer from the inside. That is one of the standard things a menopause clinician untangles when planning the move from suppression to replacement.`,
+      },
+      {
+        heading: "When do women switch from birth control to HRT?",
+        body: `When the goal changes: from controlling a cycle (and preventing pregnancy) to treating the symptoms of hormone decline. In practice the switch is a judgment call built from your age, your symptoms, your contraception needs and your history - contraceptive doses carry their own considerations as women get older, which is part of why clinicians revisit the question rather than letting the prescription roll on by inertia. Menopause-focused telehealth providers handle exactly this transition: <a href="/hrt/reviews/midi">Midi</a> and <a href="/hrt/reviews/winona">Winona</a> both evaluate where you are and what fits next, and our <a href="/hrt">HRT provider comparison</a> maps the options. Before deciding anything, <a href="/hrt/articles/hrt-pros-and-cons">the pros and cons of HRT</a> is the balanced read. This article is general information, not medical advice.`,
+      },
+    ],
+  },
   {
     slug: "how-to-get-hrt-online",
     title: "How to Get HRT Online in 2026: The Legitimate Route",
