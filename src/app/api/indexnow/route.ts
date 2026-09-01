@@ -25,6 +25,10 @@ export async function GET(req: NextRequest) {
 
   const sinceHours = Math.min(720, Math.max(1, Number(params.get("since")) || 72));
   const cutoff = Date.now() - sinceHours * 3600_000;
+  // Cap per call, newest first. The sitewide freshness-floor date can put
+  // most of the sitemap inside a wide window (as the first live run proved:
+  // 305 URLs); the cap keeps submissions to the genuinely freshest pages.
+  const limit = Math.min(500, Math.max(1, Number(params.get("limit")) || 100));
 
   // The sitemap module is host-aware via request headers; on the hub host it
   // returns the full treatmentshub sitemap. Filter to hub URLs modified
@@ -32,10 +36,10 @@ export async function GET(req: NextRequest) {
   const entries = await sitemap();
   const urlList = entries
     .filter((e) => e.url.startsWith(HUB_ORIGIN))
-    .filter((e) => {
-      const lm = e.lastModified ? new Date(e.lastModified).getTime() : 0;
-      return lm >= cutoff;
-    })
+    .map((e) => ({ url: e.url, lm: e.lastModified ? new Date(e.lastModified).getTime() : 0 }))
+    .filter((e) => e.lm >= cutoff)
+    .sort((a, b) => b.lm - a.lm)
+    .slice(0, limit)
     .map((e) => e.url);
 
   if (urlList.length === 0) {
@@ -58,11 +62,19 @@ export async function GET(req: NextRequest) {
       }),
     });
     // IndexNow returns 200/202 on acceptance; anything else is worth surfacing.
+    const ok = res.status === 200 || res.status === 202;
     return NextResponse.json({
-      submitted: urlList.length,
+      submitted: ok ? urlList.length : 0,
       sinceHours,
+      limit,
       indexnowStatus: res.status,
-      ok: res.status === 200 || res.status === 202,
+      ok,
+      // 403 = IndexNow could not validate the key file. Usually propagation:
+      // the file must be publicly fetchable at keyFileUrl. Verify it in a
+      // browser, then retry - the daily cron retries automatically anyway.
+      ...(res.status === 403 && {
+        hint: `key validation failed - confirm ${HUB_ORIGIN}/${INDEXNOW_KEY}.txt returns the key, then retry in a few hours`,
+      }),
     });
   } catch (err) {
     return NextResponse.json(
