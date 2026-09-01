@@ -576,6 +576,88 @@ const battles: BattleData[] = [
 ];
 
 const articles: ArticleData[] = [
+  // ───── Trend-riding coverage (Google Trends, Aug 31 2026) ─────
+  // "best online therapy reddit" (+30%) and "cognitive behavioral therapy"
+  // (+40%) were rising with zero coverage on our side. The Reddit article
+  // quotes ONLY the verified excerpts already in our community registry -
+  // no invented comments; the CBT article is qualitative established
+  // knowledge with provider-decides framing.
+  {
+    slug: "online-therapy-reddit",
+    title: "Online Therapy According to Reddit: What Real Users Say (2026)",
+    description:
+      "We collected real Reddit comments on BetterHelp, Talkspace and Talkiatry - the praise and the complaints, quoted as written. What the threads agree on, and what to check before you book.",
+    category: "Advice",
+    readTime: "7 min read",
+    publishedAt: "2026-08-31",
+    updatedAt: "2026-08-31",
+    heroColor: "#F1EEF7",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Across platforms, Reddit's praise concentrates on the same two things: anytime messaging and flexible scheduling - the reasons people pick online over in-person.",
+      "The complaints are rarely about the therapy itself - they target logistics: billing, insurance verification and records departments.",
+      "The sharpest warning in the threads is Talkiatry's split: clinicians praised, back office slammed - one commenter was billed $300 per visit after an insurance-verification failure.",
+      "The practical Reddit-derived rule: confirm insurance eligibility in writing before the first session, and keep copies of everything you send any platform.",
+    ],
+    sections: [
+      {
+        heading: "Why ask Reddit about online therapy at all?",
+        body: `Because it is where people talk without a testimonial box. Platform sites show curated success stories; Trustpilot skews toward invited reviews; Reddit is where someone describes the therapist they liked <em>and</em> the records department that lost their forms, in the same comment. That texture is exactly what you want before trusting a platform with something as personal as therapy. Below are real comments from public Reddit threads about the three most-discussed platforms - quoted as written, the critical ones included, because that is the point. (The same excerpts, with more context, live on our <a href="/online-therapy/reviews">review pages</a>.)`,
+      },
+      {
+        heading: "What does Reddit say about BetterHelp?",
+        body: `The recurring theme across BetterHelp threads is flexibility - and an honest note about matching. "Having the option to message my therapist anytime was the thing that I needed," writes one commenter whose schedule was "all over the place." Another describes worksheets between sessions that "gave me something tangible to focus on," with the honest caveat that "it did take a couple of tries to find someone I clicked with, but once I did, it felt like a real breakthrough." That couple-of-tries pattern shows up repeatedly, which is why easy therapist switching keeps being named as the feature that matters. Our <a href="/online-therapy/reviews/betterhelp">BetterHelp review</a> carries the full picture, including its 3.9 Trustpilot average and the 2023 FTC privacy settlement - the context Reddit threads rarely include.`,
+      },
+      {
+        heading: "What does Reddit say about Talkspace?",
+        body: `Talkspace comments tend to come from people already in treatment, and they read calmer: "My provider is more relaxed (eg doesn't pressure you into scheduling at the end), and he's responsive," writes one - before adding, in the same breath, "The records department is pretty bad though." Another describes a therapist comfortably holding "grief, ptsd MDD, GAD, adhd all meshed together." That is the telehealth pattern in miniature: clinical care praised, administration criticized. Talkspace also holds the strongest verified Trustpilot record of the platforms we track (4.4 across 2,370 reviews) - details in our <a href="/online-therapy/reviews/talkspace">Talkspace review</a>.`,
+      },
+      {
+        heading: "What does Reddit say about Talkiatry?",
+        body: `Talkiatry threads are unusually consistent, and they are the reason this article exists: good words for the psychiatrists, hard words for the office behind them. One commenter: "The provider was good, but the office/billing staff are horrible. They said they took my insurance but didn't actually and I find out after two visits...each costing $300." Another had good experiences with clinicians but watched disability paperwork go missing repeatedly - and found the company's Manhattan office dark on a Friday afternoon with mail piling up outside the door. That two-sided story matches Talkiatry's 2.5 Trustpilot average almost exactly - our <a href="/online-therapy/reviews/talkiatry">Talkiatry review</a> breaks down the same split.`,
+      },
+      {
+        heading: "So what's the Reddit-derived playbook?",
+        body: `Read enough threads and the advice writes itself. <strong>Pick for flexibility, verify the logistics:</strong> the praise is real - messaging, scheduling, switching - and so are the administrative failures, so confirm your insurance eligibility <em>in writing</em> before the first session, keep copies of every form you send, and treat the first therapist match as a starting point rather than a verdict. Expect to switch once or twice; the platforms make it easy precisely because it is normal. Our <a href="/online-therapy">platform comparison</a> ranks the field with verified ratings, and the <a href="/online-therapy/articles/online-therapy-that-takes-insurance">insurance guide</a> covers the eligibility step in depth. If you are in crisis or having thoughts of self-harm, skip the platforms and call or text 988 - free, 24/7. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "cbt-online",
+    title: "CBT Online: What It Is & Why Every Platform Offers It (2026)",
+    description:
+      "Cognitive behavioral therapy is the approach most online platforms are built around. What CBT actually involves, why it translates so well to video and messaging, and how to start online.",
+    category: "Guide",
+    readTime: "6 min read",
+    publishedAt: "2026-08-31",
+    updatedAt: "2026-08-31",
+    heroColor: "#EDF3F6",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "CBT is structured, present-focused talk therapy: it works on the loop between thoughts, feelings and behaviors, with skills you practice between sessions.",
+      "It is among the most-studied forms of psychotherapy and the approach most online platforms are built around - structure and homework translate naturally to video and messaging.",
+      "A course of CBT is typically goal-oriented rather than open-ended, which is part of why it fits subscription-style online care.",
+      "Starting online is genuinely simple: match with a licensed therapist, say what you want to work on, and ask whether CBT fits it - the therapist tailors from there.",
+    ],
+    sections: [
+      {
+        heading: "What is cognitive behavioral therapy, actually?",
+        body: `Strip away the jargon and CBT is a structured, practical form of talk therapy built on one observation: thoughts, feelings and behaviors feed each other in loops. An anxious thought drives avoidance; avoidance shrinks your life; the shrinking confirms the anxious thought. CBT works by making those loops visible and then deliberately interrupting them - questioning distorted thought patterns, testing feared situations in manageable steps, building new behavioral habits. It is present-focused (less about childhood, more about this week) and it comes with homework: worksheets, thought records, small experiments between sessions. If that sounds unusually concrete for therapy, that concreteness is exactly why it is so widely used.`,
+      },
+      {
+        heading: "Does CBT work as well online as in person?",
+        body: `CBT is arguably the approach best suited to the online format, and the reason is structural. Its ingredients - a defined agenda, skills teaching, between-session practice, progress you can name - do not depend on sharing a physical room. Worksheets travel well over an app; a thought record filled in at 11pm and messaged to your therapist is CBT working <em>better</em> than it does confined to a weekly hour. This fit is why most major platforms are built around CBT-trained therapists and CBT-shaped tools, and why <a href="/online-therapy/articles/online-therapy-vs-in-person">the online-vs-in-person question</a> is less about effectiveness and more about your preferences and circumstances.`,
+      },
+      {
+        heading: "What is CBT good for - and what isn't it?",
+        body: `Its strongest territory is the everyday heavyweights: anxiety, depression, stress, sleep problems, unhelpful habit loops - the conditions where thought-and-behavior patterns do much of the damage and skills genuinely help. It is not the only tool: deeper trauma work, complex diagnoses, and situations needing medication involve other approaches and other professionals - platforms like <a href="/online-therapy/reviews/talkiatry">Talkiatry</a> exist precisely for the psychiatric side, and <a href="/online-therapy/articles/online-therapy-with-medication">therapy with medication</a> covers how the two work together. An honest therapist will tell you within a session or two whether CBT fits what you brought in - and that conversation is the real starting point.`,
+      },
+      {
+        heading: "How do I start CBT online?",
+        body: `The mechanics take minutes: pick a platform, complete the intake, and say explicitly that you want to work in a CBT style on whatever brought you - the matching process uses that. <a href="/online-therapy/reviews/betterhelp">BetterHelp</a> matches most people within about 2 days and now takes insurance with copays from around $23/session; <a href="/online-therapy/reviews/talkspace">Talkspace</a> works with many plans and reports a $0 copay for most insured members. The full field is in our <a href="/online-therapy">platform comparison</a>. Two honest notes to carry in: the first match is a starting point, not a verdict - switching is normal and easy - and if you are in crisis or having thoughts of self-harm, skip the sign-up flows and call or text 988, free and available 24/7. This article is general information, not medical advice.`,
+      },
+    ],
+  },
   {
     slug: "online-therapy-that-takes-insurance",
     title: "Online Therapy That Takes Insurance (2026 Guide)",
@@ -710,7 +792,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "free-and-low-cost-therapy-options",
-    title: "Free & Low-Cost Therapy Options That Actually Exist in 2026",
+    title: "Free Online Therapy: The Options That Actually Exist (2026)",
     description:
       "Real routes to affordable mental-health support - EAPs, community clinics, sliding-scale therapists, training clinics, support lines - and where the online platforms fit in.",
     category: "Advice",
