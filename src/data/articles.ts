@@ -1851,5 +1851,88 @@ export const articles: Article[] = [
       },
     ],
   },
+  // Bridge articles: route weight-loss authority into the TRT and
+  // online-therapy verticals, mirroring the ozempic-hair-loss bridge that
+  // preceded hair-loss becoming the first new vertical to earn impressions.
+  {
+    slug: "testosterone-and-weight-loss",
+    title: "Testosterone and Weight Loss: The Two-Way Link, Explained (2026)",
+    description:
+      "Low testosterone and excess weight feed each other - and improving either can improve both. How the link works, what GLP-1 users should know, and when testing makes sense.",
+    category: "Science",
+    readTime: "7 min read",
+    publishedAt: "2026-08-31",
+    updatedAt: "2026-08-31",
+    heroColor: "#EEF2F7",
+    author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "The relationship runs both ways: carrying significant excess weight is associated with lower testosterone, and low testosterone makes fat easier to gain and muscle harder to keep.",
+      "Meaningful weight loss - by any method, GLP-1s included - can improve testosterone levels for many men; it is one of the most effective non-prescription levers.",
+      "Symptoms overlap heavily (low energy, low drive, stubborn weight), which is why testing beats guessing - modern TRT providers start with at-home lab work.",
+      "If you are losing weight on a GLP-1, protecting muscle with protein and resistance training matters for hormones too, not just appearance.",
+    ],
+    sections: [
+      {
+        heading: "How are testosterone and body weight connected?",
+        body: 'In both directions, which is what makes the topic confusing. Fat tissue is hormonally active: it converts testosterone into estrogen, so the more excess fat a man carries, the more downward pressure on his testosterone. And the loop closes from the other side - lower testosterone shifts body composition toward fat and away from muscle, makes training feel harder, and drags energy down, all of which make weight easier to gain. Neither side of the loop is destiny; the practical point is that the two problems are rarely separate, and improving either one tends to help the other.',
+      },
+      {
+        heading: "Does losing weight raise testosterone?",
+        body: 'For many men carrying significant excess weight - yes, meaningfully. Weight loss reduces the fat tissue doing the testosterone-to-estrogen conversion, and improvements are commonly seen as weight comes down, whichever method got you there. That makes weight loss one of the most effective things a man can do for his hormones without a prescription. The honest caveat: it is not universal, the size of the effect varies person to person, and men whose levels are low for reasons unrelated to weight will not fix them on the scale alone - which is where testing comes in.',
+      },
+      {
+        heading: "I'm on a GLP-1 - what does this mean for me?",
+        body: 'Two things. First, good news: the weight you are losing is likely helping your hormonal picture, not hurting it. Second, a caution we cover in depth in our <a href="/weight-loss/articles/exercise-while-on-glp1-medication">muscle-loss guide</a>: rapid weight loss takes muscle along with fat unless you defend it, and muscle matters for metabolic and hormonal health. The defense is unglamorous - adequate protein and resistance training through the loss - and it is worth doing for reasons beyond the mirror.',
+      },
+      {
+        heading: "When does testing for low testosterone make sense?",
+        body: 'When the symptoms persist after the weight story is moving in the right direction - or when they are severe regardless. The overlap is the trap: low energy, low drive, poor recovery, stubborn fat can be a weight problem, a testosterone problem, or both, and guessing from symptoms alone is unreliable. Testing settles it with a blood panel. The modern route is convenient: telehealth TRT providers like <a href="/trt/reviews/maximus">Maximus</a> start with at-home lab work reviewed by a licensed clinician - our <a href="/trt">TRT provider comparison</a> covers the options, and the <a href="/trt/articles/low-testosterone-symptoms">low-testosterone symptoms guide</a> is the right primer. As always: a licensed provider interprets your numbers and decides whether treatment is appropriate - normal ranges vary by age and lab.',
+      },
+      {
+        heading: "The bottom line",
+        body: 'Weight and testosterone are a system, not two separate problems. If you are significantly overweight with low-T symptoms, weight loss is the highest-leverage first move - and GLP-1 treatment from <a href="/weight-loss">verified providers from $59/month</a> is the most effective tool most people have for it. If symptoms persist as the weight comes down, test instead of guessing: <a href="/trt">online TRT providers</a> make the lab work and the clinical review straightforward. This article is general information, not medical advice.',
+      },
+    ],
+  },
+  {
+    slug: "emotional-eating-and-weight-loss",
+    title: "Emotional Eating: When Therapy Helps More Than Medication (2026)",
+    description:
+      "GLP-1s quiet appetite - they don't touch the reasons you eat when you're not hungry. How emotional eating works, where medication helps and stops, and when online therapy is the missing piece.",
+    category: "Wellness",
+    readTime: "7 min read",
+    publishedAt: "2026-08-31",
+    updatedAt: "2026-08-31",
+    heroColor: "#F2EFF7",
+    author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "GLP-1 medications reduce hunger signals - but emotional eating is not driven by hunger, which is why it can persist even on medication.",
+      "Stress, boredom and difficult feelings are the common triggers; the eating works as short-term relief, which is exactly what makes the pattern self-reinforcing.",
+      "Medication and therapy are not competitors - the medication handles the appetite side while therapy works on the triggers, and many people need both.",
+      "Online therapy has made this accessible: platforms like BetterHelp and Talkspace match you with licensed therapists, and insurance now covers more of it than most people think.",
+    ],
+    sections: [
+      {
+        heading: "Why am I still eating when the medication killed my appetite?",
+        body: 'Because hunger was never the whole story. GLP-1s are remarkably good at what they actually do - quieting the body\'s hunger signaling and food noise. But eating in response to stress, boredom, loneliness or a hard day is not triggered by hunger; it is triggered by the feeling, and it works - briefly - which is why the pattern sticks. People on GLP-1s often describe this discovery in exactly these words: the appetite is gone, and they still find themselves in the kitchen at 10pm after a bad day. That is not a medication failure and it is not a willpower failure. It is a different problem, with a different tool.',
+      },
+      {
+        heading: "What actually helps with emotional eating?",
+        body: 'The honest answer is working on the trigger side, not just the food side - and this is squarely therapy territory. A therapist helps you map what actually sends you to food, build responses to those moments that are not eating, and unhook the shame spiral that usually follows a lapse (and drives the next one). This is skills work, not lying-on-a-couch work, and it is one of the areas where structured talk therapy has the clearest practical payoff. Self-directed steps help too - noticing patterns, delaying, substituting - but if the pattern has years behind it, working with someone tends to move faster than working alone.',
+      },
+      {
+        heading: "Should I do therapy and medication at the same time?",
+        body: 'They solve different halves of the same problem, so combining them is logical, not redundant: the medication turns down biological hunger while therapy works on the emotional triggers that medication cannot reach. For a lot of people this combination is what finally makes the change durable - the medication creates the space, and the therapy fills it with something that lasts after the pattern is broken. If medication alone has stalled for you and the stall looks emotional rather than biological, that is the clearest sign the missing piece is on the therapy side.',
+      },
+      {
+        heading: "How does online therapy actually work?",
+        body: 'The mechanics have gotten genuinely convenient: platforms match you with a licensed therapist and sessions happen by video, phone or messaging. <a href="/online-therapy/reviews/betterhelp">BetterHelp</a> matches most people with a therapist within about 2 days and now accepts insurance, with copays from around $23/session; <a href="/online-therapy/reviews/talkspace">Talkspace</a> works with many insurance plans and reports a $0 copay for most insured members. Our <a href="/online-therapy">online therapy comparison</a> ranks the major platforms honestly - verified ratings included - and the <a href="/online-therapy/articles/online-therapy-that-takes-insurance">insurance guide</a> covers the coverage question in depth. If you are in crisis or having thoughts of self-harm, skip the platforms and call or text 988 (the Suicide & Crisis Lifeline) - it is free and available 24/7.',
+      },
+      {
+        heading: "The bottom line",
+        body: 'If you eat for reasons that are not hunger, medication alone was never going to be the whole answer - and knowing that early saves months of frustration. Use each tool for its job: <a href="/weight-loss">GLP-1 treatment</a> for the biological side, <a href="/online-therapy">therapy</a> for the patterns, and both together when both problems are real. This article is general information, not medical advice.',
+      },
+    ],
+  },
   ...brandClusterArticles,
 ];
