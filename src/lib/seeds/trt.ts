@@ -900,6 +900,87 @@ const faqs: FaqItem[] = [
 // fabricated statistics or provider-specific numbers - with internal links to
 // the reviews, comparisons, and between articles.
 const articles: ArticleData[] = [
+  // ───── Trend-riding coverage (Google Trends, Aug 30 2026) ─────
+  // "is trt bad for you" and "is trt a steroid" both broke out, with
+  // "anastrozole side effects/for men" and "enclomiphene vs trt" rising
+  // behind them. Everything below is qualitative established knowledge -
+  // no invented figures, provider-decides framing throughout.
+  {
+    slug: "is-trt-bad-for-you",
+    title: "Is TRT Bad for You? Is It a Steroid? Straight Answers (2026)",
+    description:
+      "TRT is testosterone - chemically a steroid hormone, medically nothing like a bodybuilding cycle. The real risks, what monitoring exists for, the fertility caveat, and who shouldn't be on it.",
+    category: "Guide",
+    readTime: "8 min read",
+    publishedAt: "2026-08-30",
+    updatedAt: "2026-08-30",
+    heroColor: "#EDF2F8",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Chemically, yes - testosterone is a steroid hormone. Medically, TRT at prescribed doses under monitoring is a different universe from bodybuilding steroid abuse at many times those doses.",
+      "The real, known trade-offs: TRT suppresses your own production and fertility while you are on it, and requires ongoing blood monitoring - which is exactly why legitimate providers require labs.",
+      "\"Bad for you\" mostly depends on one question: are your levels genuinely low and confirmed by testing, or are you medicating normal aging without a diagnosis?",
+      "Anastrozole and other add-ons are provider-managed tools with their own trade-offs - not something to self-add from a forum thread.",
+    ],
+    sections: [
+      {
+        heading: "Is TRT a steroid?",
+        body: `The honest answer has two halves, and both matter. Chemically: yes - testosterone is literally a steroid hormone, the original one that anabolic steroids are derived from, so "TRT is a steroid" is technically true. Medically, the comparison collapses: TRT means restoring a deficient man to normal physiological levels, at prescribed doses, with blood monitoring - while steroid abuse means stacking supraphysiological doses, often several compounds at once, with no medical oversight, chasing levels far beyond anything a body naturally produces. Same molecule family, opposite practices. The question worth asking is not "is it a steroid" but "is it a diagnosis" - which is the next section.`,
+      },
+      {
+        heading: "Is TRT bad for you?",
+        body: `For a man with genuinely low, lab-confirmed testosterone and real symptoms, TRT under medical supervision is established, mainstream treatment - that is why it exists as a medical specialty and not a gray market. For a man with normal levels chasing an edge, it is a bad trade: the risks stay, the benefits mostly do not. The known trade-offs to weigh with your clinician, honestly listed: your natural production shuts down while on TRT (more below), blood can thicken and needs periodic lab checks, and prostate and cardiovascular considerations are exactly what the monitoring schedule exists to watch. None of this is hidden by legitimate providers - in fact, the fastest way to spot an illegitimate one is that it skips the labs and the questions. Our <a href="/trt/articles/how-to-get-trt-online">guide to getting TRT online</a> shows what the proper process looks like.`,
+      },
+      {
+        heading: "The fertility caveat nobody should skip",
+        body: `When testosterone comes from outside, the brain stops signaling the testes to produce their own - which also suppresses sperm production. For men who may want children, this is the single most important line in this article, and it is why age and life-stage matter in the treatment conversation. It is also why alternatives exist: <strong>enclomiphene</strong>, for example, works by stimulating your own production instead of replacing it, preserving fertility - we compare the approaches in <a href="/trt/articles/enclomiphene-vs-trt">enclomiphene vs TRT</a>. A provider who does not ask about family plans before prescribing TRT is not doing the job properly.`,
+      },
+      {
+        heading: "What about anastrozole and other add-ons?",
+        body: `Search interest in anastrozole - an aromatase inhibitor sometimes prescribed alongside TRT to manage estrogen conversion - is spiking, so here is the honest frame: it is a real clinical tool with real trade-offs, because estrogen is not the enemy in the male body; it has jobs (bone, joints, mood, libido among them), and crushing it too far creates its own side effects. Whether estrogen management is needed at all, and with what, is a decision made from your labs by your prescriber - not something to bolt on because a forum said so. If a provider's protocol includes it, ask why your numbers justify it; a good one will show you.`,
+      },
+      {
+        heading: "So who should - and shouldn't - consider TRT?",
+        body: `Consider it if the symptoms are real, the levels are confirmed low on proper testing, fertility plans are accounted for, and you are prepared for ongoing monitoring - that combination is what TRT is for, and modern telehealth makes it accessible: the <a href="/trt">providers we compare</a> run labs first and clinician review always, with oral options at <a href="/trt/reviews/maximus">Maximus</a> alongside traditional protocols. Skip it - or expect a legitimate provider to turn you away - if levels are normal, if it is a shortcut around training and sleep, or if you want children soon and have not discussed the alternatives. Start with the <a href="/trt/articles/low-testosterone-symptoms">symptoms guide</a> if you are not sure which group you are in. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "enclomiphene-vs-trt",
+    title: "Enclomiphene vs TRT: Boost Your Own or Replace It? (2026)",
+    description:
+      "Enclomiphene stimulates your own testosterone production and preserves fertility; TRT replaces production outright with the stronger established effect. How the two paths differ and who fits each.",
+    category: "Comparison",
+    readTime: "7 min read",
+    publishedAt: "2026-08-30",
+    updatedAt: "2026-08-30",
+    heroColor: "#EEF4F1",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "They answer low testosterone from opposite directions: enclomiphene signals your body to make more of its own, TRT supplies testosterone from outside.",
+      "The fertility line is the big divider - TRT suppresses sperm production while on it; enclomiphene's whole appeal is working with your own production instead.",
+      "TRT is the longer-established treatment with the more robust track record; enclomiphene is oral, needle-free, and used off-label for testosterone support.",
+      "This is a lab-results-and-life-stage decision a licensed clinician makes with you - modern telehealth providers offer both paths after blood work.",
+    ],
+    sections: [
+      {
+        heading: "What's the actual difference?",
+        body: `Two opposite strategies for the same problem. <strong>TRT replaces</strong>: testosterone arrives from outside - injections, creams, or oral formulations - and your levels rise regardless of what your own testes do. It is the established, decades-old approach with the most robust track record. <strong>Enclomiphene stimulates</strong>: it works upstream, at the brain's signaling level, prompting your own natural production to increase. It is taken as a simple oral tablet and used off-label for testosterone support. Same goal, different machinery - and the machinery difference is what drives every trade-off below.`,
+      },
+      {
+        heading: "Why does fertility decide this for so many men?",
+        body: `Because the two paths point in opposite directions on it. External testosterone tells the brain the job is done, so it stops signaling the testes - shutting down not just natural testosterone production but sperm production with it, for as long as treatment continues. Enclomiphene does the reverse: the signaling it boosts is the same signaling that drives sperm production, which is why preserving fertility is its headline use case. For a man in his 20s or 30s who wants children, that difference is usually the whole decision. For a man past family-building, TRT's suppression trade-off costs him little - and its stronger, more predictable effect matters more.`,
+      },
+      {
+        heading: "Which one works better?",
+        body: `Honestly: TRT is the heavyweight. Because it delivers testosterone directly, its effect on levels is stronger and more predictable, and it remains the standard of care for diagnosed hypogonadism. Enclomiphene's results depend on your own machinery responding to the louder signal - which works meaningfully for many men, particularly younger men whose production system is intact but under-signaled, and less so where the testes themselves are the limiting factor. This is exactly what baseline blood work reveals, and why the choice is made from labs rather than preference: the pattern of your numbers tells a clinician which lever is likely to move.`,
+      },
+      {
+        heading: "How do I actually get either one?",
+        body: `Both run through the same modern front door: blood work, then a licensed clinician's review, then a prescription if appropriate - all doable online. <a href="/trt/reviews/maximus">Maximus</a> is the standout here for offering oral protocol options alongside traditional TRT, with at-home testing to start; the full field is in our <a href="/trt">TRT provider comparison</a>, and <a href="/trt/articles/how-to-get-trt-online">how to get TRT online</a> walks the process step by step. Wherever you land, the sequence is non-negotiable at any legitimate provider: labs first, decision second. This article is general information, not medical advice - a licensed clinician determines which path, if either, is appropriate for you.`,
+      },
+    ],
+  },
   // Trend-riding coverage for the "medvi quad" query cluster (Google Trends,
   // week of Aug 30 2026: "medvi quad reviews" +40%, "quad ed" +30%). Every
   // product claim is attributed to Medvi's own QUAD pages (operator-supplied
@@ -981,6 +1062,10 @@ const articles: ArticleData[] = [
         body: `Testosterone can be delivered by injection, cream/gel, or oral capsule, and some men are candidates for enclomiphene instead - a medication that raises your own testosterone and can help preserve fertility. Providers vary in what they offer: see <a href="/trt/articles/testosterone-injections-vs-cream-vs-oral">injections vs cream vs oral</a> and <a href="/trt/articles/enclomiphene-vs-trt">enclomiphene vs TRT</a> to understand the choices.`,
       },
       {
+        heading: "TRT clinic near me - or online?",
+        body: `The "near me" search usually ends at one of two doors: a local men's-health clinic with in-person visits, or an online TRT provider that handles labs through a draw site near you and everything else remotely. The honest trade-off: local clinics offer face-to-face care and same-room injections; online providers typically cost less, move faster, prescribe the same medications, and fit treatment around your schedule instead of the clinic's. For most men without complicating conditions, the online route - at-home or local-lab testing, licensed clinician review, medication shipped - delivers the same medicine with less friction, which is exactly what the providers in <a href="/trt">our comparison</a> do.`,
+      },
+      {
         heading: "How to choose a clinic",
         body: `Prioritize real lab testing, licensed medical oversight, the treatment options that suit you, and transparent terms (pricing, included labs and follow-ups, and how easily you can cancel). Our top picks - like <a href="/trt/reviews/maximus">Maximus</a> and <a href="/trt/reviews/dudemeds">DudeMeds</a> - are compared head to head across the site. This guide is general information, not medical advice.`,
       },
@@ -1028,6 +1113,10 @@ const articles: ArticleData[] = [
     heroColor: "#FBF3EE",
     author: "TreatmentsHub Staff",
     sections: [
+      {
+        heading: "Is this hypogonadism?",
+        body: `Hypogonadism is the clinical name for what most men search as "low testosterone" - a state where the body does not produce enough of the hormone, whether the issue starts in the testes or in the brain's signaling to them. If a clinician uses the word, it is not a scarier diagnosis than "low T" - it is the same conversation with its medical label, and it is the term that unlocks proper evaluation: symptoms plus confirmed low levels on blood testing, not either one alone. The symptoms below are the checklist that starts that conversation.`,
+      },
       {
         heading: "What low testosterone is",
         body: `Testosterone naturally declines with age, but some men have levels low enough - confirmed by bloodwork - to cause symptoms. This is sometimes called "low T." Only a lab test alongside symptoms can confirm it, which is why testing is the first step in any legitimate TRT program.`,
