@@ -24,6 +24,7 @@ import { REDDIT_COMMUNITY_FEEDBACK as REVIEW_COMMUNITY_FEEDBACK, RedditMark } fr
 import { YoutubeReviewSection } from "@/components/youtube-review";
 import { ReadableProse } from "@/components/prose";
 import { ProviderAudit } from "@/components/provider-audit";
+import { TrustProofBar } from "@/components/trust-proof-bar";
 
 // Per-provider SEO overrides for reviews with distinctive search demand.
 // Code-controlled (not CMS-merged) so they reliably target trending queries -
@@ -600,6 +601,9 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
       </div>
 
       <div className="mx-auto max-w-[1000px] px-4 py-8 sm:px-6">
+        {/* Honest social-proof bar (real numbers derived from config) */}
+        <TrustProofBar config={config} />
+
         {/* Quick summary strip */}
         <div className="mb-8 flex flex-wrap items-center gap-4 rounded-xl border border-gray-200 bg-white px-5 py-4 sm:gap-6">
           {review.trustBadges && review.trustBadges.length > 0 ? (
