@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Check, Star, ShieldCheck } from "lucide-react";
 import { VERTICALS, DEFAULT_VERTICAL, isPublishedVertical, type Provider, type RankingPosition, type ReviewData } from "@/lib/config";
@@ -341,68 +342,85 @@ export async function HubHome() {
 
           {/* Category cards - icon-led, links behind a divider. Dense 3-up
               grid (2-up on tablet) so all six verticals sit above the fold. */}
-          <div className="mx-auto mt-10 grid max-w-[1080px] gap-3.5 text-left sm:mt-12 sm:grid-cols-2 lg:grid-cols-3">
+          {/* Mobile is a compact 2-up grid of tappable category tiles (icon +
+              name only); sm+ upgrades to the richer card with sub-links. */}
+          <div className="mx-auto mt-10 grid max-w-[1080px] grid-cols-2 gap-3 text-left sm:mt-12 sm:gap-3.5 sm:grid-cols-2 lg:grid-cols-3">
             {VERTICALS.map((v) => {
               const live = isPublishedVertical(v.id);
               const Icon = VERTICAL_ICON[v.id] ?? WeightLossIcon;
               const name = CATEGORY_NAME[v.id] ?? v.name;
               const links = live ? CATEGORY_LINKS[v.id] ?? [] : [];
 
-              if (links.length === 0) {
-                // Icon + name only (unpublished categories) - centered, calm.
-                return (
-                  <div
-                    key={v.id}
-                    className="flex items-center justify-center gap-3 rounded-xl border border-gray-200/80 bg-white px-5 py-5 shadow-[0_1px_3px_rgba(16,42,67,0.06)]"
-                  >
-                    <Icon className="h-[40px] w-[40px] shrink-0" />
-                    <div className="text-left">
-                      <span className="block text-[17px] font-bold leading-snug text-[#191919]">{name}</span>
-                      {!live && (
-                        <span className="mt-1 inline-block rounded-full bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-400">
-                          Coming soon
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                );
-              }
-
               return (
-                <div
-                  key={v.id}
-                  className="flex items-stretch gap-4 rounded-xl border border-gray-200/80 bg-white px-4 py-4 shadow-[0_1px_3px_rgba(16,42,67,0.06)] transition-shadow hover:shadow-[0_4px_14px_rgba(16,42,67,0.10)] sm:px-5"
-                >
-                  {/* Icon + category name */}
-                  <div className="flex w-[92px] shrink-0 flex-col items-center justify-center gap-2 text-center">
-                    <Icon className="h-[40px] w-[40px]" />
+                <Fragment key={v.id}>
+                  {/* ── Mobile: compact tile, whole card taps through ── */}
+                  {live ? (
                     <Link
                       href={`/${v.id}`}
-                      className="text-[15px] font-bold leading-[1.2] text-[#191919] hover:text-[#0C4B75]"
+                      className="flex items-center gap-2.5 rounded-xl border border-gray-200/80 bg-white px-3.5 py-4 shadow-[0_1px_3px_rgba(16,42,67,0.06)] active:bg-gray-50 sm:hidden"
                     >
-                      {name}
+                      <Icon className="h-[34px] w-[34px] shrink-0" />
+                      <span className="text-[15px] font-bold leading-[1.15] text-[#191919]">{name}</span>
                     </Link>
-                  </div>
+                  ) : (
+                    <div className="flex items-center gap-2.5 rounded-xl border border-gray-200/80 bg-white px-3.5 py-4 shadow-[0_1px_3px_rgba(16,42,67,0.06)] sm:hidden">
+                      <Icon className="h-[34px] w-[34px] shrink-0" />
+                      <div>
+                        <span className="block text-[15px] font-bold leading-[1.15] text-[#191919]">{name}</span>
+                        <span className="mt-1 inline-block rounded-full bg-gray-100 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-gray-400">
+                          Coming soon
+                        </span>
+                      </div>
+                    </div>
+                  )}
 
-                  <div className="w-px self-stretch bg-gray-200" />
+                  {/* ── Desktop (sm+): rich card with sub-links (or calm name-only) ── */}
+                  {links.length === 0 ? (
+                    <div className="hidden items-center justify-center gap-3 rounded-xl border border-gray-200/80 bg-white px-5 py-5 shadow-[0_1px_3px_rgba(16,42,67,0.06)] sm:flex">
+                      <Icon className="h-[40px] w-[40px] shrink-0" />
+                      <div className="text-left">
+                        <span className="block text-[17px] font-bold leading-snug text-[#191919]">{name}</span>
+                        {!live && (
+                          <span className="mt-1 inline-block rounded-full bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-400">
+                            Coming soon
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="hidden items-stretch gap-4 rounded-xl border border-gray-200/80 bg-white px-4 py-4 shadow-[0_1px_3px_rgba(16,42,67,0.06)] transition-shadow hover:shadow-[0_4px_14px_rgba(16,42,67,0.10)] sm:flex sm:px-5">
+                      {/* Icon + category name */}
+                      <div className="flex w-[92px] shrink-0 flex-col items-center justify-center gap-2 text-center">
+                        <Icon className="h-[40px] w-[40px]" />
+                        <Link
+                          href={`/${v.id}`}
+                          className="text-[15px] font-bold leading-[1.2] text-[#191919] hover:text-[#0C4B75]"
+                        >
+                          {name}
+                        </Link>
+                      </div>
 
-                  {/* Arrow links */}
-                  <div className="flex flex-1 flex-col justify-center gap-[7px] py-0.5">
-                    {links.map((l) => (
-                      <Link
-                        key={l.href}
-                        href={l.href}
-                        className="group inline-flex items-center gap-1.5 text-[13.5px] font-medium leading-snug text-gray-800 hover:text-[#0C4B75]"
-                      >
-                        {l.label}
-                        <ArrowRight
-                          className="h-3.5 w-3.5 shrink-0 text-gray-400 transition-transform group-hover:translate-x-0.5 group-hover:text-[#0C4B75]"
-                          strokeWidth={2.2}
-                        />
-                      </Link>
-                    ))}
-                  </div>
-                </div>
+                      <div className="w-px self-stretch bg-gray-200" />
+
+                      {/* Arrow links */}
+                      <div className="flex flex-1 flex-col justify-center gap-[7px] py-0.5">
+                        {links.map((l) => (
+                          <Link
+                            key={l.href}
+                            href={l.href}
+                            className="group inline-flex items-center gap-1.5 text-[13.5px] font-medium leading-snug text-gray-800 hover:text-[#0C4B75]"
+                          >
+                            {l.label}
+                            <ArrowRight
+                              className="h-3.5 w-3.5 shrink-0 text-gray-400 transition-transform group-hover:translate-x-0.5 group-hover:text-[#0C4B75]"
+                              strokeWidth={2.2}
+                            />
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </Fragment>
               );
             })}
           </div>
