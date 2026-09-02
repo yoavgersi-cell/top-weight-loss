@@ -277,7 +277,7 @@ export interface LandingPageData {
 
 // Stable fallback "last updated" date for schema when an item has no CMS
 // updatedAt. Avoids emitting today's date on every request (fake freshness).
-export const CONTENT_LAST_UPDATED = "2026-08-28";
+export const CONTENT_LAST_UPDATED = "2026-09-01";
 
 // Floor date for battle, review and article pages: the shared page templates
 // were last reworked on this date (quick answer, fit finder, accordions,
@@ -286,7 +286,7 @@ export const CONTENT_LAST_UPDATED = "2026-08-28";
 // when it is newer. Bumped 2026-08-28: sources & methodology blocks, prose
 // readability pass, licensed-badge rollout and the index-everything policy all
 // landed site-wide since the previous floor.
-export const TEMPLATES_LAST_UPDATED = "2026-08-28";
+export const TEMPLATES_LAST_UPDATED = "2026-09-01";
 
 // ISO dates compare lexicographically - returns the newer of an item's own
 // updatedAt and the template-wide floor above.
@@ -298,7 +298,7 @@ export const latestUpdate = (updatedAt?: string) =>
 // "Sources & methodology" block ("Checked August 2026"). Bump this only when
 // the data behind the comparisons is actually re-verified - it is a claim, not
 // a render timestamp.
-export const PROVIDER_DATA_CHECKED = "August 2026";
+export const PROVIDER_DATA_CHECKED = "September 2026";
 
 // ── Verticals ────────────────────────────────────────────────────────────────
 // The hub (treatmentshub.com) is split into fully-separated verticals. Each one
@@ -415,11 +415,11 @@ export interface SiteConfig {
 // providers" query cluster, which GSC shows getting zero impressions on this
 // page. The blob merge in config-store applies this over any CMS-saved hero.
 export const WEIGHT_LOSS_HERO_TEXT = {
-  updatedLabel: "Last Updated: August 2026",
-  h1: "Best Weight Loss Injections & Telehealth Providers of 2026",
+  updatedLabel: "Last Updated: September 2026",
+  h1: "Best GLP-1 Weight Loss Providers of 2026",
   h2: "The top online GLP-1 weight loss programs, ranked and verified",
   description:
-    "Compare 2026's best telehealth weight loss providers and GLP-1 injection programs. Licensed online clinics with verified prices from $59/month semaglutide and $99/month tirzepatide - every price checked against the provider's own site.",
+    "Licensed GLP-1 clinics ranked by verified price - from $59/mo semaglutide and $99/mo tirzepatide.",
 };
 
 export const defaultConfig: SiteConfig = {
