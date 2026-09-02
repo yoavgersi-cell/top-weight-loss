@@ -133,6 +133,14 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
         ],
       },
       {
+        author: "Next_Sector_7726",
+        age: "6d ago",
+        upvotes: 1,
+        body: [
+          "“I got Sema from Embody. I got my order within a week of being approved. They did overnight shipping.”",
+        ],
+      },
+      {
         author: "Comfortable_Whole343",
         body: [
           "“$129 for all levels of tri and no contract - I already moved up my dosages with no issues or kick back.”",
