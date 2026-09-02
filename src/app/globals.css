@@ -76,6 +76,31 @@ html[data-hub] .hub-name {
   100% { transform: translateX(320%); }
 }
 
+/* ───── Logo marquee (single-row, infinite, CSS-only) ─────
+   The track holds the logo set twice back-to-back; translating it exactly
+   -50% lands the second copy where the first began, so the loop is seamless
+   with no JS. Uniform right-margins (not flex gap) keep the spacing even
+   across the seam. Pauses on hover and honors reduced-motion. */
+@keyframes logoMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.logo-marquee-track {
+  animation: logoMarquee 45s linear infinite;
+  width: max-content;
+}
+
+.logo-marquee:hover .logo-marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-marquee-track {
+    animation: none;
+  }
+}
+
 /* ───── Rich article typography (.article-body) ─────
    Article section bodies are author-written HTML (from code seeds or the CMS).
    These rules give plain semantic markup - p, ul, ol, table, strong - an
