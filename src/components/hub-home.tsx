@@ -323,7 +323,7 @@ export async function HubHome() {
   const shelfProviders = order
     .map((id) => wl.providers.find((p) => p.id === id))
     .filter(Boolean)
-    .slice(0, 6) as Provider[];
+    .slice(0, 12) as Provider[];
 
   const articles = (wl.articles ?? []).slice(0, 6);
 
@@ -437,16 +437,29 @@ export async function HubHome() {
             <p className="mx-auto mt-2 max-w-[560px] text-center text-[15px] leading-relaxed text-gray-500">
               Independent reviews of licensed telehealth brands across our categories.
             </p>
-            {/* Even shelf: uniform cells in a responsive grid (3-up on mobile,
-                6-up on desktop) so logos of different intrinsic widths sit on a
-                consistent baseline instead of wrapping with ragged whitespace. */}
-            <div className="mx-auto mt-8 grid max-w-[760px] grid-cols-3 items-center justify-items-center gap-x-4 gap-y-7 sm:grid-cols-6 sm:gap-x-6">
-              {shelfProviders.map((p) => (
-                <div key={p.id} className="flex h-[26px] w-full max-w-[96px] items-center justify-center opacity-55 grayscale sm:h-[28px]">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={p.logo} alt={`${p.name} logo`} className="max-h-full max-w-full object-contain" />
-                </div>
-              ))}
+            {/* Single-row logo marquee: the logos stream past in one endless
+                line (like the big comparison sites) instead of a static grid.
+                The track renders the set twice and animates -50% for a seamless
+                CSS-only loop; the container masks both edges to a soft fade. */}
+            <div
+              className="logo-marquee relative mt-8 overflow-hidden"
+              style={{
+                maskImage: "linear-gradient(to right, transparent, #000 7%, #000 93%, transparent)",
+                WebkitMaskImage: "linear-gradient(to right, transparent, #000 7%, #000 93%, transparent)",
+              }}
+            >
+              <div className="logo-marquee-track flex items-center">
+                {[...shelfProviders, ...shelfProviders].map((p, i) => (
+                  <div
+                    key={`${p.id}-${i}`}
+                    aria-hidden={i >= shelfProviders.length}
+                    className="mr-10 flex h-[26px] w-[84px] shrink-0 items-center justify-center opacity-55 grayscale sm:mr-16 sm:h-[28px] sm:w-[104px]"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={p.logo} alt={`${p.name} logo`} className="max-h-full max-w-full object-contain" />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
