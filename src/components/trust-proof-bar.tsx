@@ -1,4 +1,3 @@
-import { ShieldCheck, Users, Star } from "lucide-react";
 import type { SiteConfig } from "@/lib/config";
 import { PROVIDER_DATA_CHECKED } from "@/lib/config";
 
@@ -29,22 +28,32 @@ function fmt(n: number) {
 
 export function TrustProofBar({ config }: { config: SiteConfig }) {
   const { reviewsFloor, providersCompared } = computeProof(config);
-  const items = [
-    { icon: ShieldCheck, text: `Prices verified ${PROVIDER_DATA_CHECKED}` },
-    providersCompared > 0 && { icon: Users, text: `${providersCompared} providers compared` },
-    reviewsFloor > 0 && { icon: Star, text: `${fmt(reviewsFloor)}+ verified customer reviews analyzed` },
-  ].filter(Boolean) as { icon: typeof ShieldCheck; text: string }[];
 
-  if (items.length === 0) return null;
+  // A "by the numbers" stat strip: value-first hierarchy (big brand-navy
+  // figure, small uppercase label), divided columns, subtle brand tint - so it
+  // reads as a designed trust element, not a checklist of gray one-liners.
+  const stats = [
+    reviewsFloor > 0 && { value: `${fmt(reviewsFloor)}+`, label: "Verified reviews analyzed" },
+    providersCompared > 0 && { value: String(providersCompared), label: "Providers compared" },
+    { value: PROVIDER_DATA_CHECKED.replace(/ 20\d\d$/, ""), label: "Prices last verified" },
+  ].filter(Boolean) as { value: string; label: string }[];
+
+  if (stats.length === 0) return null;
 
   return (
-    <div className="mb-8 flex flex-wrap items-center gap-x-5 gap-y-2 rounded-xl border border-gray-200 bg-white px-4 py-3 sm:gap-x-7">
-      {items.map(({ icon: Icon, text }) => (
-        <span key={text} className="inline-flex items-center gap-1.5 text-[12.5px] font-medium text-gray-700 sm:text-[13px]">
-          <Icon className="h-4 w-4 shrink-0 text-emerald-600" strokeWidth={2} />
-          {text}
-        </span>
-      ))}
+    <div className="mb-8 overflow-hidden rounded-2xl border border-[#0C4B75]/15 bg-gradient-to-br from-[#F4F8FB] to-white shadow-[0_1px_3px_rgba(12,75,117,0.06)]">
+      <div className="grid divide-x divide-[#0C4B75]/10" style={{ gridTemplateColumns: `repeat(${stats.length}, minmax(0, 1fr))` }}>
+        {stats.map((s) => (
+          <div key={s.label} className="flex flex-col items-center justify-center px-2 py-3.5 text-center sm:py-4">
+            <span className="text-[19px] font-extrabold leading-none tracking-[-0.01em] text-[#0C4B75] sm:text-[24px]">
+              {s.value}
+            </span>
+            <span className="mt-1.5 text-[10px] font-semibold uppercase leading-tight tracking-[0.04em] text-gray-500 sm:text-[11px]">
+              {s.label}
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
