@@ -732,57 +732,36 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             </div>
           )}
 
-          {/* ───── EXPERT INTRO ───── */}
-          <div className="mb-8 max-w-[760px]">
-            <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
-              Here&rsquo;s the short version
-            </p>
-            <ReadableProse text={battle.intro} paragraphClassName="text-[16px] leading-[1.85] text-gray-600" />
-          </div>
+          {/* ───── REDDIT COMMUNITY CAROUSEL (verified threads only) ───── */}
+          {ctx.vertical === "weight-loss" && (
+            <RedditThreadCarousel
+              providers={[p1, p2]}
+              reviewHrefFor={(id) => hubLink(ctx, `/reviews/${id}`)}
+            />
+          )}
 
-          {/* ───── EARLY QUICK ANSWER ─────
-              Answers the search intent immediately, built from each battle's
-              own verdict points - no new copy to maintain per page. Renders
-              only when a battle actually names a winner with points. */}
-          {battle.winnerId && verdictWinner && verdictRunnerUp && winnerPts.length > 0 && runnerUpPts.length > 0 && (
-            <div className="mb-12 max-w-[820px] rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6">
-              <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
-                The quick answer
-              </p>
-              <div className="grid gap-5 sm:grid-cols-2">
-                <div>
-                  <p className="mb-2 text-[14px] font-bold text-[#191919]">Go with {verdictWinner.name} if you want</p>
-                  <ul className="space-y-2">
-                    {winnerPts.slice(0, 3).map((pt, i) => (
-                      <li key={i} className="flex items-start gap-2 text-[14px] leading-[1.65] text-gray-600">
-                        <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2.5} />
-                        <span><BoldKeyFacts text={pt} /></span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <p className="mb-2 text-[14px] font-bold text-[#191919]">{verdictRunnerUp.name} makes more sense if you want</p>
-                  <ul className="space-y-2">
-                    {runnerUpPts.slice(0, 3).map((pt, i) => (
-                      <li key={i} className="flex items-start gap-2 text-[14px] leading-[1.65] text-gray-600">
-                        <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#0C4B75]" strokeWidth={2.5} />
-                        <span><BoldKeyFacts text={pt} /></span>
-                      </li>
-                    ))}
-                  </ul>
+          {/* ───── EVIDENCE -> CONCLUSION SYNTHESIS ─────
+              Reads the threads shown directly above and says what keeps coming
+              up - one written summary per provider, from the same registry as
+              the threads themselves, so it only renders on verified material. */}
+          {ctx.vertical === "weight-loss" &&
+            [p1, p2].some((p) => REDDIT_COMMUNITY_FEEDBACK[p.id]?.themes) && (
+              <div className="mb-14 max-w-[820px] rounded-2xl border border-gray-200 bg-gray-50/60 p-5 sm:p-6">
+                <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
+                  What we found
+                </p>
+                <div className="space-y-3 text-[14px] leading-[1.7] text-gray-600">
+                  {[p1, p2].map((p) =>
+                    REDDIT_COMMUNITY_FEEDBACK[p.id]?.themes ? (
+                      <p key={p.id}>
+                        <span className="font-bold text-[#191919]">{p.name}:</span>{" "}
+                        {REDDIT_COMMUNITY_FEEDBACK[p.id].themes}
+                      </p>
+                    ) : null
+                  )}
                 </div>
               </div>
-              <p className="mt-4 border-t border-gray-100 pt-3.5 text-[14px] text-gray-800">
-                <span className="font-bold text-[#191919]">
-                  Had to pick one for most people? {verdictWinner.name}.
-                </span>{" "}
-                <span className="text-gray-500">
-                  The numbers and customer feedback below are why - and where {verdictRunnerUp.name} wins instead.
-                </span>
-              </p>
-            </div>
-          )}
+            )}
 
           {/* ───── ABOVE-THE-FOLD QUICK COMPARISON ─────
               The three decisions searchers came for - price, prescription,
@@ -822,60 +801,6 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   How we verify prices
                 </Link>
               </p>
-            </div>
-          )}
-
-          {/* ───── 12-MONTH COST MATH ─────
-              What a realistic course of treatment costs at each provider -
-              the number searchers actually decide on, not the headline rate. */}
-          {ctx.vertical === "weight-loss" && BATTLE_COST_MATH[slug] && (
-            <div className="mb-12">
-              <h2 className="mb-1.5 text-[22px] font-bold text-[#191919]">
-                What you actually pay over 12 months
-              </h2>
-              <p className="mb-4 max-w-[680px] text-[14px] text-gray-500">
-                Headline prices are the least useful number in a comparison - this is the real math
-                over a course of treatment, promo conditions applied exactly as published.
-              </p>
-              <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
-                <table className="w-full min-w-[520px] border-collapse text-left">
-                  <thead>
-                    <tr className="border-b-2 border-gray-200 bg-gray-50/80">
-                      <th className="w-[34%] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400" />
-                      <th className="px-4 py-3.5 text-[14px] font-bold text-[#191919]">{p1.name}</th>
-                      <th className="px-4 py-3.5 text-[14px] font-bold text-[#191919]">{p2.name}</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-[13.5px]">
-                    {BATTLE_COST_MATH[slug].rows.map(([label, v1, v2], i) => (
-                      <tr key={i} className="border-b border-gray-100 align-top last:border-0">
-                        <td className="px-4 py-3.5 text-[12.5px] font-semibold leading-snug text-gray-500">{label}</td>
-                        <td className="break-words px-4 py-3.5 font-semibold text-[#191919] [font-variant-numeric:tabular-nums]">{v1}</td>
-                        <td className="break-words px-4 py-3.5 font-semibold text-[#191919] [font-variant-numeric:tabular-nums]">{v2}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">{BATTLE_COST_MATH[slug].note}</p>
-            </div>
-          )}
-
-          {/* ───── PRODUCT CAROUSEL ─────
-              Shopping-style product cards for THIS matchup's two providers
-              only - a battle page sells the contenders, not the whole market.
-              Weight-loss only (the catalog is a WL registry). */}
-          {ctx.vertical === "weight-loss" && (
-            <div className="mb-12">
-              <ProductCarousel
-                providers={config.providers}
-                title={`Shop ${p1.name} and ${p2.name} plans`}
-                subtitle="Both contenders' published plans, cheapest first - conditions under every price."
-                onlyProviderIds={[p1.id, p2.id]}
-                pageType="battle"
-                withSchema
-                pageUrl={canonicalUrl(ctx, `/${slug}`)}
-              />
             </div>
           )}
 
@@ -947,6 +872,60 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               );
             })}
           </div>
+
+          {/* ───── 12-MONTH COST MATH ─────
+              What a realistic course of treatment costs at each provider -
+              the number searchers actually decide on, not the headline rate. */}
+          {ctx.vertical === "weight-loss" && BATTLE_COST_MATH[slug] && (
+            <div className="mb-12">
+              <h2 className="mb-1.5 text-[22px] font-bold text-[#191919]">
+                What you actually pay over 12 months
+              </h2>
+              <p className="mb-4 max-w-[680px] text-[14px] text-gray-500">
+                Headline prices are the least useful number in a comparison - this is the real math
+                over a course of treatment, promo conditions applied exactly as published.
+              </p>
+              <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
+                <table className="w-full min-w-[520px] border-collapse text-left">
+                  <thead>
+                    <tr className="border-b-2 border-gray-200 bg-gray-50/80">
+                      <th className="w-[34%] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400" />
+                      <th className="px-4 py-3.5 text-[14px] font-bold text-[#191919]">{p1.name}</th>
+                      <th className="px-4 py-3.5 text-[14px] font-bold text-[#191919]">{p2.name}</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-[13.5px]">
+                    {BATTLE_COST_MATH[slug].rows.map(([label, v1, v2], i) => (
+                      <tr key={i} className="border-b border-gray-100 align-top last:border-0">
+                        <td className="px-4 py-3.5 text-[12.5px] font-semibold leading-snug text-gray-500">{label}</td>
+                        <td className="break-words px-4 py-3.5 font-semibold text-[#191919] [font-variant-numeric:tabular-nums]">{v1}</td>
+                        <td className="break-words px-4 py-3.5 font-semibold text-[#191919] [font-variant-numeric:tabular-nums]">{v2}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">{BATTLE_COST_MATH[slug].note}</p>
+            </div>
+          )}
+
+          {/* ───── PRODUCT CAROUSEL ─────
+              Shopping-style product cards for THIS matchup's two providers
+              only - a battle page sells the contenders, not the whole market.
+              Weight-loss only (the catalog is a WL registry). */}
+          {ctx.vertical === "weight-loss" && (
+            <div className="mb-12">
+              <ProductCarousel
+                providers={config.providers}
+                title={`Shop ${p1.name} and ${p2.name} plans`}
+                subtitle="Both contenders' published plans, cheapest first - conditions under every price."
+                onlyProviderIds={[p1.id, p2.id]}
+                pageType="battle"
+                withSchema
+                pageUrl={canonicalUrl(ctx, `/${slug}`)}
+              />
+            </div>
+          )}
 
           {/* ───── FEATURE COMPARISON TABLE ───── */}
           {battle.features && battle.features.length > 0 && (
@@ -1031,36 +1010,57 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             </div>
           )}
 
-          {/* ───── REDDIT COMMUNITY CAROUSEL (verified threads only) ───── */}
-          {ctx.vertical === "weight-loss" && (
-            <RedditThreadCarousel
-              providers={[p1, p2]}
-              reviewHrefFor={(id) => hubLink(ctx, `/reviews/${id}`)}
-            />
-          )}
+          {/* ───── EXPERT INTRO ───── */}
+          <div className="mb-8 max-w-[760px]">
+            <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
+              Here&rsquo;s the short version
+            </p>
+            <ReadableProse text={battle.intro} paragraphClassName="text-[16px] leading-[1.85] text-gray-600" />
+          </div>
 
-          {/* ───── EVIDENCE -> CONCLUSION SYNTHESIS ─────
-              Reads the threads shown directly above and says what keeps coming
-              up - one written summary per provider, from the same registry as
-              the threads themselves, so it only renders on verified material. */}
-          {ctx.vertical === "weight-loss" &&
-            [p1, p2].some((p) => REDDIT_COMMUNITY_FEEDBACK[p.id]?.themes) && (
-              <div className="mb-14 max-w-[820px] rounded-2xl border border-gray-200 bg-gray-50/60 p-5 sm:p-6">
-                <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
-                  What we found
-                </p>
-                <div className="space-y-3 text-[14px] leading-[1.7] text-gray-600">
-                  {[p1, p2].map((p) =>
-                    REDDIT_COMMUNITY_FEEDBACK[p.id]?.themes ? (
-                      <p key={p.id}>
-                        <span className="font-bold text-[#191919]">{p.name}:</span>{" "}
-                        {REDDIT_COMMUNITY_FEEDBACK[p.id].themes}
-                      </p>
-                    ) : null
-                  )}
+          {/* ───── EARLY QUICK ANSWER ─────
+              Answers the search intent immediately, built from each battle's
+              own verdict points - no new copy to maintain per page. Renders
+              only when a battle actually names a winner with points. */}
+          {battle.winnerId && verdictWinner && verdictRunnerUp && winnerPts.length > 0 && runnerUpPts.length > 0 && (
+            <div className="mb-12 max-w-[820px] rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6">
+              <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
+                The quick answer
+              </p>
+              <div className="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <p className="mb-2 text-[14px] font-bold text-[#191919]">Go with {verdictWinner.name} if you want</p>
+                  <ul className="space-y-2">
+                    {winnerPts.slice(0, 3).map((pt, i) => (
+                      <li key={i} className="flex items-start gap-2 text-[14px] leading-[1.65] text-gray-600">
+                        <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2.5} />
+                        <span><BoldKeyFacts text={pt} /></span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <p className="mb-2 text-[14px] font-bold text-[#191919]">{verdictRunnerUp.name} makes more sense if you want</p>
+                  <ul className="space-y-2">
+                    {runnerUpPts.slice(0, 3).map((pt, i) => (
+                      <li key={i} className="flex items-start gap-2 text-[14px] leading-[1.65] text-gray-600">
+                        <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#0C4B75]" strokeWidth={2.5} />
+                        <span><BoldKeyFacts text={pt} /></span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
-            )}
+              <p className="mt-4 border-t border-gray-100 pt-3.5 text-[14px] text-gray-800">
+                <span className="font-bold text-[#191919]">
+                  Had to pick one for most people? {verdictWinner.name}.
+                </span>{" "}
+                <span className="text-gray-500">
+                  The numbers and customer feedback below are why - and where {verdictRunnerUp.name} wins instead.
+                </span>
+              </p>
+            </div>
+          )}
 
           {/* ───── PER-PROVIDER DEEP DIVES ───── */}
           <div className="mb-14">
