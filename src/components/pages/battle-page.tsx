@@ -517,6 +517,22 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   const winnerPts = battle.verdictWinnerPoints ?? [];
   const runnerUpPts = battle.verdictLoserPoints ?? [];
 
+  // "Short answer" box (top of page): the one-line verdict a searcher came for,
+  // above the fold, before any prose. Numeric scores are our real editorial
+  // ranking scores (the same values shown on ranking/home cards), pulled by the
+  // provider's index in the ranking - shown ONLY when they agree with the
+  // declared winner, so the number never contradicts the verdict. No invented
+  // figures: when scores would conflict or are missing, the box runs without them.
+  const rankingScoreFor = (id: string): number | undefined => {
+    const idx = config.ranking.providerOrder.indexOf(id);
+    return idx >= 0 ? config.ranking.positions[idx]?.score : undefined;
+  };
+  const winnerScore = verdictWinner ? rankingScoreFor(verdictWinner.id) : undefined;
+  const runnerUpScore = verdictRunnerUp ? rankingScoreFor(verdictRunnerUp.id) : undefined;
+  const showShortAnswerScores =
+    winnerScore != null && runnerUpScore != null && winnerScore >= runnerUpScore;
+  const shortAnswerReason = winnerPts[0] ?? runnerUpPts[0] ?? "";
+
   // Above-the-fold quick-comparison rows: the three decisions searchers care
   // about first (price, prescription, delivery), pulled from this battle's own
   // feature data so every value is real. The prescription row is a market
@@ -691,6 +707,31 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
         </section>
 
         <div className="mx-auto max-w-[1100px] px-4 pt-10 pb-28 sm:px-6 sm:pb-10">
+          {/* ───── SHORT ANSWER ─────
+              The verdict a searcher came for, above the fold, before any prose.
+              Left accent bar, one tight sentence, real editorial scores when
+              they agree with the winner. Renders only when a winner is named. */}
+          {verdictWinner && verdictRunnerUp && shortAnswerReason && (
+            <div className="mb-8 max-w-[760px] border-l-[3px] border-[#0C4B75] pl-4 sm:pl-5">
+              <p className="text-[16px] leading-[1.7] text-gray-800 sm:text-[17px]">
+                <span className="font-bold text-[#191919]">Short answer:</span>{" "}
+                <span className="font-semibold text-[#191919]">{verdictWinner.name}</span> is the
+                stronger pick for most people
+                {showShortAnswerScores && (
+                  <>
+                    {" "}
+                    <span className="whitespace-nowrap font-semibold text-[#0C4B75]">
+                      ({winnerScore}/10 vs {runnerUpScore}/10 on our rubric)
+                    </span>
+                  </>
+                )}
+                {" - "}
+                <BoldKeyFacts text={shortAnswerReason.replace(/\.$/, "")} />. Full reasoning, pricing
+                and the cases where {verdictRunnerUp.name} wins are below.
+              </p>
+            </div>
+          )}
+
           {/* ───── EXPERT INTRO ───── */}
           <div className="mb-8 max-w-[760px]">
             <p className="mb-2.5 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
