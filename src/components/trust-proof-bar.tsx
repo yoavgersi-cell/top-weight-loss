@@ -82,19 +82,25 @@ export function TrustProofBar({ config }: { config: SiteConfig }) {
 
   if (stats.length === 0) return null;
 
+  // Two parameters don't need the full column width on desktop - a capped,
+  // left-aligned card reads as intentional, not a stretched dashboard bar.
+  // Mobile keeps full width. The review count carries the wider share of the
+  // split (it's the headline metric, and its label is the longer one).
+  const gridCols =
+    stats.length === 2
+      ? "minmax(0, 1.15fr) minmax(0, 0.85fr)"
+      : `repeat(${stats.length}, minmax(0, 1fr))`;
+
   return (
-    <div className="mb-8 overflow-hidden rounded-2xl border border-[#0C4B75]/15 bg-gradient-to-br from-[#F4F8FB] to-white shadow-[0_1px_3px_rgba(12,75,117,0.06)]">
+    <div className="mb-8 w-full overflow-hidden rounded-2xl border border-[#0C4B75]/15 bg-gradient-to-br from-[#F4F8FB] to-white shadow-[0_1px_3px_rgba(12,75,117,0.06)] sm:max-w-[560px]">
       {/* Big-number row - real magnitudes only */}
-      <div
-        className="grid divide-x divide-[#0C4B75]/10"
-        style={{ gridTemplateColumns: `repeat(${stats.length}, minmax(0, 1fr))` }}
-      >
+      <div className="grid divide-x divide-[#0C4B75]/10" style={{ gridTemplateColumns: gridCols }}>
         {stats.map((s) => (
-          <div key={s.label} className="flex flex-col items-center justify-center px-2 py-3.5 text-center sm:py-4">
-            <span className="text-[20px] font-extrabold leading-none tracking-[-0.01em] text-[#0C4B75] sm:text-[26px]">
+          <div key={s.label} className="flex flex-col items-center justify-center px-2 py-4 text-center sm:py-5">
+            <span className="text-[22px] font-extrabold leading-none tracking-[-0.02em] text-[#0C4B75] sm:text-[28px]">
               {s.value}
             </span>
-            <span className="mt-1.5 text-[10px] font-semibold uppercase leading-tight tracking-[0.04em] text-gray-500 sm:text-[11px]">
+            <span className="mt-2 text-[10px] font-semibold uppercase leading-tight tracking-[0.05em] text-gray-500 sm:text-[11px]">
               {s.label}
             </span>
           </div>
