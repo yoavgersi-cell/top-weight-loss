@@ -672,35 +672,36 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <p className="mt-2 max-w-xl text-[14px] leading-relaxed text-gray-700 sm:mt-3 sm:text-[15px]">
               {battle.subtitle || battle.description}
             </p>
-            <div className="mt-3.5 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-[11.5px] leading-[1.5] sm:mt-4 sm:text-[13px]">
+            {/* One quiet credibility line - byline, medical review and date read
+                as a single strand of muted metadata, so nothing here competes
+                with the H1 above or the value block below. No bold-dark names,
+                no uppercase pseudo-labels: this is a caption, not a headline. */}
+            <div className="mt-3 flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[11.5px] leading-[1.5] text-gray-500 sm:mt-4 sm:text-[12.5px]">
               {config.experts && config.experts.length > 0 && (
-                <>
-                  <p className="text-gray-500">
-                    <span className="font-semibold uppercase tracking-[0.05em] text-gray-400">By </span>
-                    <Link href={hubLink(ctx, "/about")} className="font-semibold text-[#191919] hover:text-[#0C4B75] hover:underline">
-                      The {ctx.brandTeam.replace(/\s+Team$/i, "")} Research Team
-                    </Link>
-                    <span className="hidden text-gray-400 sm:inline"> · {config.experts[0].role}</span>
-                  </p>
-                  <span className="text-gray-300">•</span>
-                </>
+                <span>
+                  By{" "}
+                  <Link href={hubLink(ctx, "/about")} className="font-medium text-gray-600 underline-offset-2 hover:text-[#0C4B75] hover:underline">
+                    The {ctx.brandTeam.replace(/\s+Team$/i, "")} Research Team
+                  </Link>
+                </span>
               )}
               {/* Medical-review credit slot: renders the reviewer from the CMS
                   Team tab. When a credentialed clinician (MD/PharmD/RD) is
                   added there, this line carries their name sitewide. */}
               {config.experts && config.experts.length > 1 && (
                 <>
-                  <p className="text-gray-500">
-                    <span className="font-semibold uppercase tracking-[0.05em] text-gray-400">Reviewed by </span>
-                    <Link href={hubLink(ctx, "/about")} className="font-semibold text-[#191919] hover:text-[#0C4B75] hover:underline">
+                  <span className="text-gray-300">·</span>
+                  <span>
+                    Reviewed by{" "}
+                    <Link href={hubLink(ctx, "/about")} className="font-medium text-gray-600 underline-offset-2 hover:text-[#0C4B75] hover:underline">
                       {config.experts[1].credentials
                         ? `${config.experts[1].name}, ${config.experts[1].credentials}`
                         : config.experts[1].name}
                     </Link>
-                  </p>
-                  <span className="text-gray-300">•</span>
+                  </span>
                 </>
               )}
+              <span className="text-gray-300">·</span>
               <LastUpdated date={battleUpdatedAt} />
             </div>
             <TrustDisclosure disclaimerHref={hubLink(ctx, "/disclaimer")} />
