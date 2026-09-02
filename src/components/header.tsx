@@ -11,15 +11,17 @@ export function Header() {
   const prefix = useNavPrefix();
   const vertical = prefix.replace(/^\//, "");
 
-  // Navigation resolves within the current category (weight loss, etc.).
-  const nav = [
-    // When no vertical prefix resolves (hub home, rewritten shared pages),
-    // fall back to /weight-loss - the bare paths 301 there anyway, so link
-    // straight and save the crawl hop.
-    { label: "Reviews", href: navHref(prefix || "/weight-loss", "/reviews") },
-    { label: "Comparisons", href: `${navHref(prefix || "/weight-loss", "/articles")}#comparisons` },
-    { label: "Guides", href: navHref(prefix || "/weight-loss", "/articles") },
-  ];
+  // Nav links resolve within the current category (weight loss, etc.). On the
+  // hub home there is no single category, so "Reviews / Comparisons / Guides"
+  // would be ambiguous - keep that header clean (logo only), no nav links.
+  const isHubRoot = prefix === "";
+  const nav = isHubRoot
+    ? []
+    : [
+        { label: "Reviews", href: navHref(prefix, "/reviews") },
+        { label: "Comparisons", href: `${navHref(prefix, "/articles")}#comparisons` },
+        { label: "Guides", href: navHref(prefix, "/articles") },
+      ];
 
   return (
     <header className="border-b-2 border-[#D5D5D5] bg-white">
@@ -43,22 +45,24 @@ export function Header() {
           ))}
         </nav>
 
-        {/* Mobile hamburger */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="sm:hidden text-[#191919]"
-          aria-label="Toggle menu"
-        >
-          {isOpen ? (
-            <X className="h-6 w-6" strokeWidth={1.5} />
-          ) : (
-            <Menu className="h-6 w-6" strokeWidth={1.5} />
-          )}
-        </button>
+        {/* Mobile hamburger - only when there are links to show */}
+        {nav.length > 0 && (
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="sm:hidden text-[#191919]"
+            aria-label="Toggle menu"
+          >
+            {isOpen ? (
+              <X className="h-6 w-6" strokeWidth={1.5} />
+            ) : (
+              <Menu className="h-6 w-6" strokeWidth={1.5} />
+            )}
+          </button>
+        )}
       </div>
 
       {/* Mobile menu */}
-      {isOpen && (
+      {isOpen && nav.length > 0 && (
         <nav className="sm:hidden border-t border-[#E5E5E5] bg-white px-4 py-3 space-y-3">
           {nav.map((item) => (
             <Link
