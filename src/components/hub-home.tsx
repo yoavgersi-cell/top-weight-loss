@@ -437,9 +437,12 @@ export async function HubHome() {
             <p className="mx-auto mt-2 max-w-[560px] text-center text-[15px] leading-relaxed text-gray-500">
               Independent reviews of licensed telehealth brands across our categories.
             </p>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-6 sm:gap-x-14">
+            {/* Even shelf: uniform cells in a responsive grid (3-up on mobile,
+                6-up on desktop) so logos of different intrinsic widths sit on a
+                consistent baseline instead of wrapping with ragged whitespace. */}
+            <div className="mx-auto mt-8 grid max-w-[760px] grid-cols-3 items-center justify-items-center gap-x-4 gap-y-7 sm:grid-cols-6 sm:gap-x-6">
               {shelfProviders.map((p) => (
-                <div key={p.id} className="flex h-[34px] w-[120px] items-center opacity-60 grayscale">
+                <div key={p.id} className="flex h-[26px] w-full max-w-[96px] items-center justify-center opacity-55 grayscale sm:h-[28px]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={p.logo} alt={`${p.name} logo`} className="max-h-full max-w-full object-contain" />
                 </div>
