@@ -190,12 +190,22 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "embody ($69/mo semaglutide, 1-2 day shipping, refund policy) vs Medvi ($99/mo promo all-inclusive with high-touch provider support). Price or personal care - see which fits.",
   },
   "embody-vs-ro": {
-    // Reverted Aug 30 to the pre-Aug-24 title: after the Aug 24 rewrite,
-    // impressions held (~55-60/day) while clicks went 3/day -> 0 - a clean
-    // snippet regression in GSC. "the Big Brand" is the hook that clicked.
-    title: "embody vs ro (2026): Flat $69 GLP-1 or the Big Brand?",
+    // Sept 3 CTR pass: 0.5% CTR at avg position 6 over 191 impressions (3d) -
+    // ~10x below the ~4-6% benchmark for that position. SERP has no AI Overview;
+    // the two comparison pages above us (glp1picks, exploretreatments) both LEAD
+    // their snippet with a bolded one-line verdict, while ours led with a price
+    // spec dump. Fix: title-cased for SERP authority + $69 front-loaded, but the
+    // proven "Big Brand?" hook is KEPT (the Aug-24 price-format rewrite tanked
+    // clicks 3/day -> 0; do not drop the hook again). Description now leads with
+    // the difference NEUTRALLY - "embody vs ro" is comparison-research intent,
+    // so the snippet states the real structural difference and lets the reader
+    // decide (matches exploretreatments #2, which leads with a neutral factual
+    // differentiator, not a winner). Also honest: our ranking scores ro (9.5)
+    // ABOVE embody (9.1), so a one-sided "embody wins" frame would be both
+    // off-intent AND in tension with our own ranking.
+    title: "Embody vs Ro (2026): $69 Flat or the Big Brand?",
     description:
-      "embody: $69/mo all-inclusive compounded semaglutide, 1-2 day shipping. ro: $39 first-month membership then $74-149/mo, plus brand-name Wegovy/Zepbound billed separately. Real 12-month math inside.",
+      "embody: flat $69/mo all-in compounded semaglutide. ro: $39-then-$74-149/mo membership plus brand-name Wegovy/Zepbound. Compare price, plans, speed and who each fits.",
   },
   "medvi-vs-trimrx": {
     title: "Medvi vs trimrx (2026): $99 vs $179 GLP-1 Compared",
