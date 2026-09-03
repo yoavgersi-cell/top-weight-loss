@@ -256,6 +256,24 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   },
 };
 
+// Category word used in the uniform battle SERP title, per vertical. Verticals
+// not listed fall back to a category-free title.
+const BATTLE_CATEGORY_BY_VERTICAL: Record<string, string> = {
+  "weight-loss": "GLP-1",
+  trt: "TRT",
+  "hair-loss": "Hair Loss",
+  hrt: "HRT",
+};
+
+// Title-case a "{a} vs {b}" matchup so no SERP title starts lowercase, while
+// preserving any internal brand capitals (altRx -> AltRx, TrimRX -> TrimRX).
+function titleCaseMatchup(label: string): string {
+  return label
+    .split(/\s+vs\s+/i)
+    .map((side) => (side ? side.charAt(0).toUpperCase() + side.slice(1) : side))
+    .join(" vs ");
+}
+
 // Desc-only meta overrides for CMS landing pages: the stored descriptions
 // lack the "GLP-1" category term the audience actually searches (Aug 2026
 // audit). Titles stay whatever the CMS stores - descriptions only.
@@ -324,14 +342,16 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
   const canonicalSlug = samePairSlugs[0] ?? battle.slug;
   const url = canonicalUrl(ctx, `/${canonicalSlug}`);
 
-  // CTR override (code-controlled) wins over the stored meta for top battles.
-  // For battles without a bespoke override whose stored title carries no year,
-  // generate a high-intent pattern instead of shipping a generic title - the
-  // matchup label stays, the intent qualifiers (year, price, verdict) come in.
+  // Uniform clean SERP title for EVERY battle: the neutral, competitor-style
+  // "{A} vs {B} (2026): {Category} Cost, Plans & Meds Compared" pattern, title-
+  // cased so no title starts lowercase (matches how the pages ranking above us
+  // present themselves). Bespoke per-matchup DESCRIPTIONS are still honored
+  // (real prices); only the title is unified. Override titles are intentionally
+  // no longer used - the stored title/year heuristics are retired.
   const override = ctx.vertical === "weight-loss" ? BATTLE_SEO_OVERRIDES[slug] : undefined;
   const baseLabel = (battle.matchupLabel ?? battle.title.split(":")[0]).trim();
-  const generatedTitle = `${baseLabel} (2026): Price, Differences & Verdict`;
-  const metaTitle = override?.title ?? (/20\d{2}/.test(battle.title) ? battle.title : generatedTitle);
+  const battleCategory = BATTLE_CATEGORY_BY_VERTICAL[ctx.vertical];
+  const metaTitle = `${titleCaseMatchup(baseLabel)} (2026): ${battleCategory ? `${battleCategory} ` : ""}Cost, Plans & Meds Compared`;
   const metaDescription = override?.description ?? battle.description;
 
   return {
