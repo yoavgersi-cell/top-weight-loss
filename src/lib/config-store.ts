@@ -4632,7 +4632,7 @@ function buildInitialConfig(): SiteConfig {
 // bare defaults - which would drop CMS-only content and 404 those pages.
 let lastGoodConfig: SiteConfig | null = null;
 
-export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<SiteConfig> {
+async function loadConfigUncached(vertical: string): Promise<SiteConfig> {
   // Non-weight-loss verticals load from their own blob with no weight-loss
   // seeding. weight-loss keeps its original, fully-seeded path below unchanged.
   if (vertical !== DEFAULT_VERTICAL) {
@@ -4787,6 +4787,29 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
   return lastGoodConfig ?? normalizeBrandCasing(buildInitialConfig());
 }
 
+// 60-second in-memory config cache, per server instance. A single page render
+// calls getConfig several times (generateMetadata + the page + components), and
+// every call was paying two uncached network round-trips to Vercel Blob
+// (list() + a no-store fetch) before any HTML could stream - the site's main
+// TTFB cost. Caching the in-flight promise also dedupes concurrent calls
+// within one render. Admin saves still propagate within a minute, matching the
+// pages' existing `revalidate = 60` intent, and saveConfig below invalidates
+// this instance immediately so the admin sees its own write.
+const CONFIG_CACHE_TTL_MS = 60_000;
+const configCache = new Map<string, { at: number; promise: Promise<SiteConfig> }>();
+
+export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<SiteConfig> {
+  const now = Date.now();
+  const hit = configCache.get(vertical);
+  if (hit && now - hit.at < CONFIG_CACHE_TTL_MS) return hit.promise;
+  // loadConfigUncached never rejects (every path catches and falls back), so a
+  // cached promise is always safe to share; transient-failure fallbacks age
+  // out with the same 60s TTL.
+  const promise = loadConfigUncached(vertical);
+  configCache.set(vertical, { at: now, promise });
+  return promise;
+}
+
 export async function saveConfig(config: SiteConfig, vertical: string = DEFAULT_VERTICAL): Promise<void> {
   await put(blobKeyFor(vertical), JSON.stringify(config, null, 2), {
     access: "public",
@@ -4794,4 +4817,6 @@ export async function saveConfig(config: SiteConfig, vertical: string = DEFAULT_
     allowOverwrite: true,
     contentType: "application/json",
   });
+  // The instance that handled the save should serve the new config right away.
+  configCache.delete(vertical);
 }
