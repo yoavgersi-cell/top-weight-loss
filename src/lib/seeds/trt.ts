@@ -1196,36 +1196,6 @@ const articles: ArticleData[] = [
     ],
   },
   {
-    slug: "enclomiphene-vs-trt",
-    title: "Enclomiphene vs TRT: Which Is Right for You?",
-    description:
-      "How enclomiphene differs from traditional testosterone replacement therapy - fertility, how each works, and who each suits.",
-    category: "Comparison",
-    readTime: "6 min read",
-    publishedAt: "2026-07-04",
-    updatedAt: UPDATED,
-    heroColor: "#FBEEF4",
-    author: "TreatmentsHub Staff",
-    sections: [
-      {
-        heading: "How they work differently",
-        body: `Traditional TRT adds testosterone from outside the body. Enclomiphene works the other way - it stimulates your body to produce more of its own testosterone by acting on the brain's hormonal signals. That difference has real consequences, especially around fertility.`,
-      },
-      {
-        heading: "The fertility difference",
-        body: `Traditional testosterone can suppress the body's own production and sperm count, which is a concern for men who want to preserve fertility. Because enclomiphene raises your own testosterone, it can help maintain fertility - a key reason some men choose it. Providers like <a href="/trt/reviews/dudemeds">DudeMeds</a> offer both.`,
-      },
-      {
-        heading: "Who each suits",
-        body: `Enclomiphene may appeal to younger men, men planning to have children, or those who prefer to boost their own production. Traditional TRT may be the better fit when levels are very low or when enclomiphene isn't effective enough. Only a clinician can determine what's appropriate based on your labs.`,
-      },
-      {
-        heading: "How to decide",
-        body: `The right choice depends on your testosterone levels, fertility goals and how your body responds - decisions a licensed provider makes with you after reviewing your labs. Compare providers that offer both approaches on our <a href="/trt">TRT providers</a> page. This article is general information, not medical advice.`,
-      },
-    ],
-  },
-  {
     slug: "does-trt-cause-hair-loss",
     title: "Does TRT Cause Hair Loss? What to Know Before Starting",
     description:
