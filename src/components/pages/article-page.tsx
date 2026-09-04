@@ -200,8 +200,9 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // belong on a page about whether this one provider is legit. Guarded so we
   // only restrict when the subject actually has affiliate catalog products
   // (otherwise fall back to the full catalog rather than an empty carousel).
+  const isLegitArticle = /^is-.+-legit$/.test(slug);
   const restrictCarouselToSubject =
-    /^is-.+-legit$/.test(slug) &&
+    isLegitArticle &&
     !!subjectProvider &&
     PRODUCT_CATALOG.some(
       (p) => p.providerId === subjectProvider.id && AFFILIATE_PROVIDER_IDS.includes(p.providerId),
@@ -412,6 +413,18 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
         {/* Article body */}
         <div className="mx-auto max-w-[1100px] px-4 py-10 sm:px-6">
           <div>
+          {/* On a brand legitimacy article ("is-<brand>-legit"), real user
+              experiences answer the reader's core question first - so the
+              operator-verified Reddit threads lead the page, above everything
+              else. Other articles keep it mid-body (rendered in the loop). */}
+          {isLegitArticle && subjectReddit && (
+            <div className="mb-8">
+              <RedditThreadCarousel
+                providers={[subjectReddit]}
+                reviewHrefFor={(id) => hubLink(ctx, `/reviews/${id}`)}
+              />
+            </div>
+          )}
           {/* Direct answer up top (featured-snippet target) - code-injected so
               it also covers articles whose body lives in the CMS blob. */}
           {ctx.vertical === "weight-loss" && ARTICLE_QUICK_ANSWERS[slug] && (
@@ -487,7 +500,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     />
                   </div>
                 )}
-                {i === Math.min(1, article.sections.length - 1) && subjectReddit && (
+                {!isLegitArticle && i === Math.min(1, article.sections.length - 1) && subjectReddit && (
                   <div className="my-10">
                     <RedditThreadCarousel
                       providers={[subjectReddit]}

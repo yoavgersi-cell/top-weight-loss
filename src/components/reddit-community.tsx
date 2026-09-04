@@ -31,6 +31,42 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
   // the page's vertical so an id collision can never surface the wrong data.
   { intro: string; threads: RedditThread[]; takeaway: string; themes?: string; vertical?: string }
 > = {
+  altrx: {
+    themes:
+      "AltRX's $129 first-month tirzepatide deal, fulfilled through Strive Pharmacy, draws praise for speed - one user was approved for the 15mg dose about four hours after the form and had cooler-shipped vials in hand via UPS Next Day Air within two days, rating it 10/10 while wishing the ongoing monthly price were lower. The honest counterweight: another customer found the compounded additive blend (glycine/B12) caused bad dehydration and arthritis-type pains that faded as levels dropped, and a fresh signup was still waiting on a script 24 hours in.",
+    intro:
+      "AltRX comes up in GLP-1 forums mostly around its $129 first-month tirzepatide offer and Strive Pharmacy fulfillment - here's how real users describe the sign-up, the shipping and the first shots, praise and caveats alike.",
+    threads: [
+      {
+        author: "Any_Style_4939",
+        age: "3mo ago",
+        title: "MY ALTRX EXPERIENCE!!",
+        body: [
+          "On June 1st I signed up with AltRX for their 1st month offer of $129. I was approved for highest dose of 15mg about 4 hours after filling out the form. I was prescribed Tirzepatide with Glycine & B12. It was sent to Strive Pharmacy the same day (Monday). Yesterday (Tuesday June 2) it shipped with UPS Next Day Air Delivery!! I received it this morning!! It came in a cooler with 4 frozen ice packs. I got 2 30mg vials for a total of 60mg!! The BUD on both is August 9, 2026. I'm so happy with this order!! I wish their monthly price was cheaper!! I give them a 10/10 for sure!!",
+        ],
+        replies: [
+          {
+            author: "Spawnofkitty",
+            body: "Awww some strive i love that for you! Glad it went well 💪",
+          },
+          {
+            author: "Western_Silver2004",
+            body: "I placed an order with AltRX yesterday and got a message this morning saying that a medical provider was assigned. How long has it taken from this point? Still no updates",
+          },
+          {
+            author: "Any_Style_4939",
+            body: "I signed up June 1st Monday morning at 8am. Monday afternoon about 12:30pm I had a medical provider. Monday around 1-1:30pm my script was sent to the pharmacy. So for me everything took about 5 1/2 hours. My medication shipped out June 2nd Tuesday. It arrived the next day.",
+          },
+          {
+            author: "IndicationBrave8817",
+            body: "Tell me how you like Strive once you try them. I got the same deal from ALTRx! I tried my first shot the previous week and unfortunately for me it dehydrated me so bad even after having electrolytes & caused arthritis type of pains which went away as the medication levels dropped over the week. I was excited about Strive but looks like my body can't do additives! Would love to hear your experience with strive.",
+          },
+        ],
+      },
+    ],
+    takeaway:
+      "The recurring theme is fast, careful fulfillment: sign-up to prescription in hours, cold-chain shipping (a cooler with ice packs on UPS Next Day Air) and a 10/10 from the original poster - with two honest caveats: the compounded additive blend didn't sit well with one user (dehydration, joint pains that eased as levels dropped), and intake timing can vary (a new signup was still waiting on a script a day in). Real, checkable experiences on both sides.",
+  },
   winona: {
     vertical: "hrt",
     themes:
