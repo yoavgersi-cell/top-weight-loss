@@ -279,9 +279,13 @@ export const brandClusterArticles: Article[] = [
   // ═════ altRx ═════
   {
     slug: "is-altrx-legit",
-    title: "Is altRx Legit? Inside the Two-Lane GLP-1 Model (2026)",
+    // On-page H1 + short editorial dek. The keyword-rich meta title/description
+    // are preserved separately in ARTICLE_SEO_OVERRIDES so trimming the visible
+    // dek never weakens the SERP snippet; the full pricing detail lives in the
+    // opening section body below.
+    title: "Is altRx Legit? Pricing, Prescriptions & What to Know (2026)",
     description:
-      "altRx sells $89 compounded plans and $1,149+ brand-name Ozempic side by side. We examined who prescribes, how the flat-dose pricing works, and the catches.",
+      "We reviewed altRx's pricing, prescriptions, medications, and key trade-offs to see how the service actually works.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-08",

@@ -19,6 +19,13 @@ import { notFound, permanentRedirect } from "next/navigation";
 // on the weight-loss vertical. Prices cited are the providers' real listed
 // prices - keep in sync when pricing changes.
 const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+  "is-altrx-legit": {
+    // Keeps the keyword-rich SERP snippet (prices, flat-dose) even though the
+    // visible on-page dek was shortened to a clean editorial line.
+    title: "Is altRx Legit? Pricing, Prescriptions & What to Know (2026)",
+    description:
+      "altRx sells $89 compounded plans and $1,149+ brand-name Ozempic side by side. We examined who prescribes, how the flat-dose pricing works, and the catches.",
+  },
   "tirzepatide-vs-semaglutide": {
     title: "Tirzepatide vs Semaglutide (2026): Results & Prices",
     description:
@@ -367,7 +374,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
           className="w-full"
           style={{ backgroundColor: article.heroColor }}
         >
-          <div className="mx-auto max-w-[1100px] px-4 py-10 sm:px-6 sm:py-14">
+          <div className="mx-auto max-w-[1100px] px-4 py-7 sm:px-6 sm:py-12">
             <Breadcrumbs
               items={[
                 { label: "Home", href: hubLink(ctx, "/") },
@@ -376,7 +383,11 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               ]}
             />
 
-            <div className="flex items-center gap-3 mb-4">
+            {/* Tight editorial masthead: eyebrow (category + read time) → H1 →
+                short dek → low-weight byline/date. Spacing kept deliberately
+                compact so the first mobile viewport reads like a publication,
+                not a long SEO intro. */}
+            <div className="mb-2.5 flex items-center gap-3">
               <span
                 className={`rounded-full px-2.5 py-0.5 text-[11px] font-semibold ${categoryColors[article.category] || "bg-gray-100 text-gray-600"}`}
               >
@@ -391,16 +402,18 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
             <h1 className="text-[24px] font-bold leading-tight text-[#191919] sm:text-[32px]">
               {article.title}
             </h1>
-            <p className="mt-3 text-[16px] leading-relaxed text-gray-800">
+            <p className="mt-2.5 max-w-[640px] text-[15px] leading-[1.55] text-gray-600 sm:text-[16px]">
               {article.description}
             </p>
-            <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2">
+            <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1.5">
               {author ? (
                 <ExpertByline
                   // Brand the team name from the current context so the hub
                   // shows "TreatmentsHub", not the legacy brand from config.
                   expert={{ ...author, name: author.name.replace(/TopWeightLoss/gi, ctx.brandTeam.replace(/\s+Team$/i, "")) }}
                   label="Written by"
+                  showRole={false}
+                  compact
                 />
               ) : (
                 article.author && <span className="text-[12px] text-gray-500">By {article.author}</span>
