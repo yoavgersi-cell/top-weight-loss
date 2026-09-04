@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Clock, ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
-import { NOINDEX_ARTICLE_SLUGS, latestUpdate } from "@/lib/config";
+import { NOINDEX_ARTICLE_SLUGS, latestUpdate, AFFILIATE_PROVIDER_IDS } from "@/lib/config";
+import { PRODUCT_CATALOG } from "@/lib/product-catalog";
 import { enhanceArticleHtml } from "@/components/prose";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -193,6 +194,18 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // (a shared provider id like directmeds must not inherit those threads).
   const slugParts = slug.split("-");
   const subjectProvider = config.providers.find((p) => slugParts.includes(p.id));
+
+  // On a single-brand legitimacy article ("is-<brand>-legit"), the product
+  // carousel should showcase THAT brand only - competitors' products don't
+  // belong on a page about whether this one provider is legit. Guarded so we
+  // only restrict when the subject actually has affiliate catalog products
+  // (otherwise fall back to the full catalog rather than an empty carousel).
+  const restrictCarouselToSubject =
+    /^is-.+-legit$/.test(slug) &&
+    !!subjectProvider &&
+    PRODUCT_CATALOG.some(
+      (p) => p.providerId === subjectProvider.id && AFFILIATE_PROVIDER_IDS.includes(p.providerId),
+    );
   const subjectTrustpilot =
     subjectProvider?.trustpilotReviews?.length ? subjectProvider : undefined;
   const subjectReddit =
@@ -490,8 +503,19 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     <div className="my-10">
                       <ProductCarousel
                         providers={config.providers}
-                        title="Shop GLP-1 plans by product"
-                        subtitle="Every provider's published plans - cheapest first, conditions under each price."
+                        onlyProviderIds={
+                          restrictCarouselToSubject && subjectProvider ? [subjectProvider.id] : undefined
+                        }
+                        title={
+                          restrictCarouselToSubject && subjectProvider
+                            ? `Shop ${subjectProvider.name}'s GLP-1 plans`
+                            : "Shop GLP-1 plans by product"
+                        }
+                        subtitle={
+                          restrictCarouselToSubject && subjectProvider
+                            ? `${subjectProvider.name}'s published plans - conditions shown under each price.`
+                            : "Every provider's published plans - cheapest first, conditions under each price."
+                        }
                         withSchema
                         pageUrl={canonicalUrl(ctx, `/articles/${slug}`)}
                       />
