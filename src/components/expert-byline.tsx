@@ -13,19 +13,31 @@ export function ExpertByline({
   expert,
   label = "Analysis by",
   href = "/weight-loss/about",
+  showRole = true,
+  compact = false,
 }: {
   expert: Expert;
   label?: string;
   href?: string;
+  /** Hide the trailing "· <role>" - keeps the byline to name only. */
+  showRole?: boolean;
+  /** Smaller avatar + tighter padding for a lower-weight metadata line. */
+  compact?: boolean;
 }) {
   const credit = expert.credentials ? `${expert.name}, ${expert.credentials}` : expert.name;
 
   return (
     <Link
       href={href}
-      className="group inline-flex items-center gap-3 rounded-full border border-gray-200 bg-white py-1.5 pl-1.5 pr-4 transition-colors hover:border-[#0C4B75]/30"
+      className={`group inline-flex items-center rounded-full border border-gray-200 bg-white transition-colors hover:border-[#0C4B75]/30 ${
+        compact ? "gap-2.5 py-1 pl-1 pr-3.5" : "gap-3 py-1.5 pl-1.5 pr-4"
+      }`}
     >
-      <span className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#0C4B75]/10 text-[12px] font-bold text-[#0C4B75]">
+      <span
+        className={`flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#0C4B75]/10 text-[12px] font-bold text-[#0C4B75] ${
+          compact ? "h-7 w-7" : "h-9 w-9"
+        }`}
+      >
         {expert.avatar ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={expert.avatar} alt={expert.name} className="h-full w-full object-cover" loading="lazy" decoding="async" />
@@ -39,7 +51,7 @@ export function ExpertByline({
         </span>
         <span className="block text-[13px] font-bold text-[#191919] group-hover:text-[#0C4B75]">
           {credit}
-          <span className="ml-1 font-medium text-gray-400">· {expert.role}</span>
+          {showRole && <span className="ml-1 font-medium text-gray-400">· {expert.role}</span>}
         </span>
       </span>
     </Link>

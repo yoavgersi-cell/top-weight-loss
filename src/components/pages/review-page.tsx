@@ -31,9 +31,13 @@ import { TrustProofBar } from "@/components/trust-proof-bar";
 // e.g. surging "embody reviews" and "embody glp1".
 const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
   embody: {
-    title: "embody GLP-1 Reviews 2026: Cost, Real Results & Is It Worth It?",
+    // Aligned to the page's real GSC query mix (Sept 2026): "embody weight
+    // loss reviews" (62 impr) and "embody tirzepatide reviews" (40) dominate;
+    // "glp1" phrasing barely registers (1). Lead the title with the searched
+    // language so the snippet reinforces the query at position ~7.
+    title: "embody Weight Loss Reviews 2026: Cost, Real Results & Is It Worth It?",
     description:
-      "embody GLP-1 reviews: compounded semaglutide & tirzepatide shipped in 1-2 days, LegitScript-certified. Real reviews, pricing - and is embody worth it?",
+      "embody weight loss reviews: compounded semaglutide & tirzepatide, shipped in 1-2 days, LegitScript-certified. Real results, pricing - and is embody worth it?",
   },
   medvi: {
     title: "Medvi GLP-1 Reviews 2026: Is It Legit? Cost & Verdict",
