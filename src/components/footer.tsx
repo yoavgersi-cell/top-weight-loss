@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { getConfig } from "@/lib/config-store";
+import { threeWayBySlug } from "@/lib/three-way";
 
 // Umbrella-brand footer. Links point at real routes only; category links are
 // absolute (brand-level) rather than scoped to the current vertical. The brand
@@ -20,7 +22,9 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
     links: [
       { label: "Reviews", href: "/weight-loss/reviews" },
       { label: "Guides", href: "/weight-loss/articles" },
-      { label: "Comparisons", href: "/weight-loss/articles#comparisons" },
+      { label: "Cheapest GLP-1", href: "/weight-loss/cheapest-glp1" },
+      { label: "Ozempic Alternatives", href: "/weight-loss/ozempic-alternatives" },
+      { label: "Switch from Ozempic", href: "/weight-loss/switch-from-ozempic" },
       { label: "How We Rank", href: "/weight-loss/how-we-rank" },
     ],
   },
@@ -33,13 +37,62 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
   },
 ];
 
-export function Footer() {
+// Curated high-value weight-loss comparisons surfaced site-wide so the
+// comparison cluster sits one click from every crawled page (a real crawl-depth
+// lever for pages Google has discovered but not yet indexed). Slugs are
+// resolved against live config below, so an entry that isn't a real battle is
+// silently dropped - the footer never renders a dead link. Mix of two-way
+// battles and three-way matrices; ordering is editorial, not by traffic.
+const FEATURED_COMPARISON_SLUGS = [
+  "embody-vs-wellmedr",
+  "altrx-vs-embody",
+  "embody-vs-ro",
+  "altrx-vs-wellmedr",
+  "embody-vs-altrx-vs-wellmedr",
+];
+
+async function featuredComparisons(): Promise<{ label: string; href: string }[]> {
+  try {
+    const wl = await getConfig("weight-loss");
+    const nameOf = (id: string) => wl.providers.find((p) => p.id === id)?.name;
+    const out: { label: string; href: string }[] = [];
+
+    for (const slug of FEATURED_COMPARISON_SLUGS) {
+      const battle = (wl.battles ?? []).find((b) => b.slug === slug);
+      if (battle) {
+        const label =
+          battle.matchupLabel ||
+          [nameOf(battle.provider1Id), nameOf(battle.provider2Id)].filter(Boolean).join(" vs ");
+        if (label) out.push({ label, href: `/weight-loss/${slug}` });
+        continue;
+      }
+      const three = threeWayBySlug.get(slug);
+      if (three) {
+        const label = three.providerIds.map(nameOf).filter(Boolean).join(" vs ");
+        if (label) out.push({ label, href: `/weight-loss/${slug}` });
+      }
+    }
+    return out;
+  } catch {
+    return [];
+  }
+}
+
+export async function Footer() {
+  const comparisons = await featuredComparisons();
+  const columns = [
+    ...COLUMNS,
+    ...(comparisons.length > 0
+      ? [{ title: "Popular Comparisons", links: comparisons }]
+      : []),
+  ];
+
   return (
     <footer className="mt-auto border-t border-[#E5E5E5] bg-white">
       <div className="mx-auto max-w-6xl px-4 py-10">
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
+        <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
           {/* Brand blurb */}
-          <div className="col-span-2 sm:col-span-1">
+          <div className="col-span-2 sm:col-span-3 lg:col-span-1">
             <p className="text-[13px] leading-relaxed text-gray-500">
               <span className="font-bold text-[#191919]">
                 <span className="legacy-name">TopWeightLoss</span>
@@ -49,7 +102,7 @@ export function Footer() {
             </p>
           </div>
 
-          {COLUMNS.map((col) => (
+          {columns.map((col) => (
             <div key={col.title}>
               <h4 className="mb-2.5 text-[12px] font-bold uppercase tracking-wider text-[#191919]">{col.title}</h4>
               <nav className="space-y-1.5">
