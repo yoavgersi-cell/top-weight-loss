@@ -11,6 +11,7 @@ import { ExpertByline } from "@/components/expert-byline";
 import { MedicalSources } from "@/components/medical-sources";
 import { ProductCarousel } from "@/components/product-carousel";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
+import { TopProvidersBlock } from "@/components/top-providers-block";
 import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/reddit-community";
 import { notFound, permanentRedirect } from "next/navigation";
 
@@ -220,6 +221,14 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     ctx.vertical === "weight-loss" && subjectProvider && REDDIT_COMMUNITY_FEEDBACK[subjectProvider.id]
       ? subjectProvider
       : undefined;
+
+  // Conversion block: on select high-intent buyer guides that are otherwise all
+  // prose, surface the site's top-ranked providers with the same ranked cards +
+  // CTAs the comparison page uses, high on the page. Gated to specific slugs so
+  // it never leaks onto informational articles.
+  const TOP_PROVIDERS_CRO_SLUGS = new Set(["best-tirzepatide-online"]);
+  const showTopProvidersCro =
+    ctx.vertical === "weight-loss" && TOP_PROVIDERS_CRO_SLUGS.has(slug);
 
   // Byline author: match the article's author to a team member, else the lead
   const author = experts.find((e) => e.name === article.author) ?? experts[0];
@@ -497,6 +506,19 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     dangerouslySetInnerHTML={{ __html: enhanceArticleHtml(section.body) }}
                   />
                 </section>
+
+                {/* Top-providers conversion block, right after the intro: the
+                    ranked comparison-page cards + CTAs on an otherwise-prose
+                    buyer guide. Gated per slug (see showTopProvidersCro). */}
+                {i === 0 && showTopProvidersCro && (
+                  <TopProvidersBlock
+                    config={config}
+                    linkPrefix={ctx.prefix}
+                    limit={3}
+                    title="Our top 3 tirzepatide providers"
+                    subtitle="Ranked by price, plans and verified reviews - the same cards from our full comparison."
+                  />
+                )}
 
                 {/* Subject-provider social proof, high on the page: Trustpilot
                     carousel after the first section, Reddit carousel after the
