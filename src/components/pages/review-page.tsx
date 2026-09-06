@@ -374,12 +374,14 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   if (!provider) return notFound();
 
   const legit = REVIEW_LEGIT[slug];
-  const reviewer = config.experts?.[0];
 
   // Site's own editorial rating for this provider (same scoring shown on the
-  // homepage), keyed off its ranking position. Surfaced visibly below and fed
-  // into the Review schema's reviewRating so the page is eligible for star
-  // rich snippets - a major CTR lever on review SERPs.
+  // homepage), keyed off its ranking position. Surfaced visibly on the page.
+  // NOTE: intentionally NOT emitted as review/aggregateRating structured data -
+  // re-publishing Trustpilot's aggregate and self-assigned editorial scores as
+  // Product rating markup to earn SERP stars is a review-snippet policy risk
+  // (and earned ~0 clicks per Search Appearance). The ratings remain visible as
+  // page content; only the star-generating schema is removed.
   const rankIndex = config.ranking.providerOrder.indexOf(provider.id);
   const editorial =
     rankIndex >= 0
@@ -398,68 +400,9 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // moment a provider changes pricing, so on-page pricing tables stay the single
   // source of truth and the search snippet carries no price.
 
-  // Real Trustpilot rating → Product AggregateRating, so the review page is
-  // eligible for the star + review-count rich snippet ("★ 4.7 · 1,205 reviews").
-  // Grounded in the same Trustpilot score shown on the page (only emitted when
-  // both a rating and a count are present, so we never fabricate a rating).
-  const tpRating = provider.trustpilotRating ? parseFloat(provider.trustpilotRating) : NaN;
-  const tpCount = provider.trustpilotReviewCount
-    ? parseInt(provider.trustpilotReviewCount.replace(/[^0-9]/g, ""), 10)
-    : NaN;
-  const aggregateRating =
-    Number.isFinite(tpRating) && tpRating > 0 && Number.isFinite(tpCount) && tpCount > 0
-      ? {
-          "@type": "AggregateRating",
-          ratingValue: tpRating,
-          bestRating: 5,
-          worstRating: 1,
-          reviewCount: tpCount,
-        }
-      : null;
-
-  // JSON-LD: Product with our editorial review, plus the Trustpilot aggregate
-  // rating when a real one exists. Google's Product markup requires at least one
-  // of review / aggregateRating / offers - the editorial review guarantees the
-  // item is valid for every provider, including those (like altRx) that have no
-  // Trustpilot aggregate rating. We intentionally omit `offers` so no (stale)
-  // price surfaces in the rich result.
-  const reviewSchema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: provider.name,
-    description: review.shortSummary,
-    ...(aggregateRating && { aggregateRating }),
-    ...(editorial && {
-      review: {
-        "@type": "Review",
-        name: `${provider.name} Review`,
-        headline: `${provider.name} Review 2026: Cost, Results & Is It Worth It?`,
-        reviewBody: review.reviewIntro,
-        datePublished: "2026-06-01",
-        dateModified: latestUpdate(review.updatedAt),
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: editorial.score,
-          bestRating: 10,
-          worstRating: 1,
-        },
-        author: { "@type": "Organization", name: ctx.brandTeam, url: ctx.origin },
-        ...(reviewer && {
-          reviewedBy: {
-            "@type": "Person",
-            name: reviewer.credentials ? `${reviewer.name}, ${reviewer.credentials}` : reviewer.name,
-            jobTitle: reviewer.role,
-            worksFor: { "@type": "Organization", name: ctx.brandDomain },
-          },
-        }),
-        publisher: { "@type": "Organization", name: ctx.brandDomain, url: ctx.origin },
-      },
-    }),
-  };
-
-  // A Product with neither a review nor an aggregate rating would be flagged
-  // invalid by Google, so only emit the Product markup when at least one exists.
-  const hasProductRichData = Boolean(editorial) || Boolean(aggregateRating);
+  // Review/AggregateRating Product schema deliberately removed - see the note
+  // on the editorial rating above. The visible on-page Trustpilot score and
+  // editorial rating stay; we just don't request star rich snippets.
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -529,9 +472,6 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {hasProductRichData && (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
-      )}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
@@ -653,7 +593,6 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               subtitle="Published prices with their conditions - the whole card links to the provider."
               onlyProviderIds={[provider.id]}
               pageType="review"
-              withSchema
               pageUrl={canonicalUrl(ctx, `/reviews/${slug}`)}
             />
           </div>
