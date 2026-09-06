@@ -46,6 +46,42 @@ const SLUG_ALIASES: Record<string, string> = {
   // the programs comparison landing page. Both orderings.
   "embody-vs-noom": "best-online-weight-loss-programs",
   "noom-vs-embody": "best-online-weight-loss-programs",
+  // Other retired/never-built matchups still indexed on the legacy domain with
+  // residual impressions (found via the old-domain Pages export). Noom is an
+  // app, not a med provider, so every noom matchup routes to the programs page;
+  // the remaining pairs were never built, so they route to the same neutral
+  // multi-provider comparison rather than 301->404. Reverse orderings included.
+  "altrx-vs-noom": "best-online-weight-loss-programs",
+  "noom-vs-altrx": "best-online-weight-loss-programs",
+  "noom-vs-ro": "best-online-weight-loss-programs",
+  "ro-vs-noom": "best-online-weight-loss-programs",
+  "embody-vs-found": "best-online-weight-loss-programs",
+  "ro-vs-found": "best-online-weight-loss-programs",
+  "shed-vs-embody": "best-online-weight-loss-programs",
+  "directmeds-vs-wellorithm": "best-online-weight-loss-programs",
+  "synergyrx-vs-skinnyrx": "best-online-weight-loss-programs",
+};
+
+// Full-path redirects for content pages that were renamed or consolidated (an
+// article slug that moved, or one that became a standalone landing page). The
+// slug-alias map above only rewrites a single trailing segment and re-prefixes
+// bare under /weight-loss, so it can't express an article -> article move (which
+// must keep the /articles segment) or article -> standalone. These entries fill
+// that gap. Keyed by the content-relative path (no vertical prefix); the value
+// is content-relative too, so it re-prefixes onto the requested vertical in a
+// single 301. All targets are verified-live pages. (Sourced from the old-domain
+// Pages export - each key was 301'ing into a 404.)
+const PATH_REDIRECTS: Record<string, string> = {
+  // Became a standalone landing page (dropped the /articles segment).
+  "/articles/glp1-pills-vs-injections": "/glp1-pills-vs-injections",
+  // Renamed article - direct live successor.
+  "/articles/online-vs-clinic-weight-loss": "/articles/in-person-vs-online-weight-loss",
+  // Retired articles with no 1:1 successor -> closest live guide by intent.
+  "/articles/noom-vs-glp1-providers": "/best-online-weight-loss-programs",
+  "/articles/glp1-benefits-beyond-weight-loss": "/articles/how-glp1-medications-work",
+  "/articles/ozempic-face-what-it-is": "/articles/how-glp1-medications-work",
+  "/articles/ozempic-before-and-after-weight-loss": "/articles/how-long-for-semaglutide-to-work",
+  "/articles/telemedicine-weight-loss-guide": "/articles/choosing-telehealth-weight-loss-provider",
 };
 
 // One deployment serves two hosts:
@@ -73,6 +109,17 @@ export function proxy(req: NextRequest) {
     const segments = pathname.split("/").filter(Boolean);
     const first = segments[0];
     const last = segments[segments.length - 1];
+
+    // Full-path content redirect (renamed/consolidated pages) → single 301 to
+    // the live successor. Runs before the slug-alias/prefix logic. Keyed by the
+    // content-relative path, so strip a vertical prefix first; the target is
+    // content-relative and re-prefixes onto the requested vertical.
+    const contentPath = isVertical(first) ? `/${segments.slice(1).join("/")}` : pathname;
+    if (PATH_REDIRECTS[contentPath]) {
+      const url = req.nextUrl.clone();
+      url.pathname = `/${isVertical(first) ? first : "weight-loss"}${PATH_REDIRECTS[contentPath]}`;
+      return NextResponse.redirect(url, 301);
+    }
 
     // Canonical-slug alias → single 301 to the canonical page. Runs before the
     // vertical/prefix logic so both the bare legacy form (/embody-vs-altrx) and
@@ -132,6 +179,12 @@ export function proxy(req: NextRequest) {
     const url = req.nextUrl.clone();
     url.protocol = "https:";
     url.host = "www.treatmentshub.com";
+    // Full-path content redirect (renamed/retired pages) resolves in the same
+    // single 301 as the migration hop.
+    if (PATH_REDIRECTS[url.pathname]) {
+      url.pathname = `/weight-loss${PATH_REDIRECTS[url.pathname]}`;
+      return NextResponse.redirect(url, 301);
+    }
     // Resolve a slug alias in the same pass so an aliased legacy URL lands on
     // the canonical hub page in ONE 301 (no alias-hop → migration-hop chain).
     const segments = url.pathname.split("/").filter(Boolean);
