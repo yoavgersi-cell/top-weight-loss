@@ -40,6 +40,12 @@ const SLUG_ALIASES: Record<string, string> = {
   "medvi-vs-embody": "embody-vs-medvi",
   "ro-vs-embody": "embody-vs-ro",
   "wellmedr-vs-embody": "embody-vs-wellmedr",
+  // Retired battle still indexed with residual traffic (embody vs noom - the
+  // meds-vs-app matchup). No such battle exists anymore, so instead of a
+  // 301->404 during the migration, send it to the closest live intent match:
+  // the programs comparison landing page. Both orderings.
+  "embody-vs-noom": "best-online-weight-loss-programs",
+  "noom-vs-embody": "best-online-weight-loss-programs",
 };
 
 // One deployment serves two hosts:
