@@ -274,6 +274,15 @@ function titleCaseMatchup(label: string): string {
     .join(" vs ");
 }
 
+// Title-case only the leading matchup of a curated override title (the part
+// before the first ":"), so a hand-written title keeps its tested hook/price
+// tail verbatim while never starting lowercase - matching the uniform titles.
+function titleCaseOverrideTitle(title: string): string {
+  const idx = title.indexOf(":");
+  if (idx === -1) return title.charAt(0).toUpperCase() + title.slice(1);
+  return `${titleCaseMatchup(title.slice(0, idx))}${title.slice(idx)}`;
+}
+
 // Desc-only meta overrides for CMS landing pages: the stored descriptions
 // lack the "GLP-1" category term the audience actually searches (Aug 2026
 // audit). Titles stay whatever the CMS stores - descriptions only.
@@ -342,16 +351,20 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
   const canonicalSlug = samePairSlugs[0] ?? battle.slug;
   const url = canonicalUrl(ctx, `/${canonicalSlug}`);
 
-  // Uniform clean SERP title for EVERY battle: the neutral, competitor-style
-  // "{A} vs {B} (2026): {Category} Cost, Plans & Meds Compared" pattern, title-
-  // cased so no title starts lowercase (matches how the pages ranking above us
-  // present themselves). Bespoke per-matchup DESCRIPTIONS are still honored
-  // (real prices); only the title is unified. Override titles are intentionally
-  // no longer used - the stored title/year heuristics are retired.
+  // SERP title: a curated per-matchup override title wins when one exists (these
+  // carry tested CTR hooks/prices - e.g. the question format on altrx-vs-embody
+  // measured 18.2% vs 6.7% for the price format, and embody-vs-ro keeps its
+  // "Big Brand?" hook because the price rewrite tanked its clicks). The override
+  // is title-cased at the matchup so it never starts lowercase. Battles without
+  // an override fall back to the uniform, competitor-style neutral pattern
+  // "{A} vs {B} (2026): {Category} Cost, Plans & Meds Compared". DESCRIPTIONS
+  // are always the bespoke override (real prices) when present.
   const override = ctx.vertical === "weight-loss" ? BATTLE_SEO_OVERRIDES[slug] : undefined;
   const baseLabel = (battle.matchupLabel ?? battle.title.split(":")[0]).trim();
   const battleCategory = BATTLE_CATEGORY_BY_VERTICAL[ctx.vertical];
-  const metaTitle = `${titleCaseMatchup(baseLabel)} (2026): ${battleCategory ? `${battleCategory} ` : ""}Cost, Plans & Meds Compared`;
+  const metaTitle = override?.title
+    ? titleCaseOverrideTitle(override.title)
+    : `${titleCaseMatchup(baseLabel)} (2026): ${battleCategory ? `${battleCategory} ` : ""}Cost, Plans & Meds Compared`;
   const metaDescription = override?.description ?? battle.description;
 
   return {
