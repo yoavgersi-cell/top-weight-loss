@@ -6,6 +6,8 @@ import {
   CONTENT_LAST_UPDATED,
   latestUpdate,
   NOINDEX_ARTICLE_SLUGS,
+  NOINDEX_WL_REVIEW_SLUGS,
+  NOINDEX_WL_BATTLE_SLUGS,
   VERTICAL_IDS,
   DEFAULT_VERTICAL,
   isPublishedVertical,
@@ -84,11 +86,13 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
     entries.push({ url: P("/articles"), lastModified: FALLBACK_DATE, changeFrequency: "weekly", priority: 0.8 });
   }
 
-  // Reviews - all provider reviews are indexable (operator policy, Aug 2026:
-  // impressions on every vertical first, optimize whichever pages earn
-  // clicks), so all of them belong in the sitemap. Matches review-page robots.
+  // Reviews - provider reviews are indexable by default (operator policy, Aug
+  // 2026: impressions on every vertical first). Exception: thin filler reviews
+  // on weight-loss are noindex and dropped here so they match review-page robots
+  // (Sep 2026 crawl-budget pruning).
   entries.push(
     ...(config.reviews ?? [])
+      .filter((r) => !(isWeightLoss && NOINDEX_WL_REVIEW_SLUGS.has(r.slug)))
       .map((r) => ({
         url: P(`/reviews/${r.slug}`),
         lastModified: flooredLastModified(r.updatedAt),
@@ -109,12 +113,14 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
   );
 
   entries.push(
-    ...(config.battles ?? []).map((b) => ({
-      url: P(`/${b.slug}`),
-      lastModified: flooredLastModified(b.updatedAt),
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    }))
+    ...(config.battles ?? [])
+      .filter((b) => !(isWeightLoss && NOINDEX_WL_BATTLE_SLUGS.has(b.slug)))
+      .map((b) => ({
+        url: P(`/${b.slug}`),
+        lastModified: flooredLastModified(b.updatedAt),
+        changeFrequency: "weekly" as const,
+        priority: 0.8,
+      }))
   );
 
   entries.push(
@@ -126,10 +132,11 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
     }))
   );
 
-  // Curated 3-way comparisons (weight-loss only) - registry pages, all indexable.
+  // Curated 3-way comparisons (weight-loss only). Near-zero search demand, so
+  // they're noindex and excluded here (Sep 2026 crawl-budget pruning).
   if (isWeightLoss) {
     entries.push(
-      ...THREE_WAY_COMPARISONS.map((t) => ({
+      ...THREE_WAY_COMPARISONS.filter((t) => !NOINDEX_WL_BATTLE_SLUGS.has(t.slug)).map((t) => ({
         url: P(`/${t.slug}`),
         lastModified: flooredLastModified(),
         changeFrequency: "weekly" as const,
@@ -232,7 +239,9 @@ async function legacySitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   const reviewPages: MetadataRoute.Sitemap = (config.reviews ?? [])
-    // All provider reviews are indexed (operator policy), so all belong here.
+    // Reviews are indexed by default (operator policy); thin filler reviews are
+    // noindex and dropped here too (Sep 2026 crawl-budget pruning).
+    .filter((review) => !NOINDEX_WL_REVIEW_SLUGS.has(review.slug))
     .map((review) => ({
       url: `${BASE_URL}/reviews/${review.slug}`,
       lastModified: flooredLastModified(review.updatedAt),
@@ -258,14 +267,14 @@ async function legacySitemap(): Promise<MetadataRoute.Sitemap> {
       })),
   ];
 
-  const battlePages: MetadataRoute.Sitemap = (config.battles ?? []).map(
-    (battle) => ({
+  const battlePages: MetadataRoute.Sitemap = (config.battles ?? [])
+    .filter((battle) => !NOINDEX_WL_BATTLE_SLUGS.has(battle.slug))
+    .map((battle) => ({
       url: `${BASE_URL}/${battle.slug}`,
       lastModified: flooredLastModified(battle.updatedAt),
       changeFrequency: "weekly" as const,
       priority: 0.8,
-    })
-  );
+    }));
 
   const landingPageEntries: MetadataRoute.Sitemap = (config.landingPages ?? []).map(
     (lp) => ({
