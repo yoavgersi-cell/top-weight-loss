@@ -10,7 +10,7 @@ import { EditorialContent } from "@/components/editorial-content";
 import { LandingEditorial } from "@/components/landing-editorial";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound, permanentRedirect } from "next/navigation";
-import { ArrowRight, Check, Minus, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowRight, Check, Minus, ShieldCheck, Sparkles, Star } from "lucide-react";
 import { LastUpdated } from "@/components/last-updated";
 import { ProviderCta } from "@/components/provider-cta";
 import { BattleStickyCta } from "@/components/battle-sticky-cta";
@@ -763,28 +763,40 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           {/* ───── TRUST PROOF BAR (real numbers only) ───── */}
           <TrustProofBar config={config} />
 
-          {/* ───── SHORT ANSWER ─────
-              The verdict a searcher came for, above the fold, before any prose.
-              Left accent bar, one tight sentence, real editorial scores when
-              they agree with the winner. Renders only when a winner is named. */}
+          {/* ───── THE VERDICT ─────
+              The answer a searcher came for, above the fold, before any prose -
+              in the site's editorial verdict-card style (matches the review
+              "bottom line" and cheapest-glp1 "short answer" cards). Winner logos
+              anchor it; the score pill shows only when our rubric agrees with the
+              named winner. Renders only when a winner is named. */}
           {verdictWinner && verdictRunnerUp && shortAnswerReason && (
-            <div className="mb-8 max-w-[760px] border-l-[3px] border-[#0C4B75] pl-4 sm:pl-5">
-              <p className="text-[16px] leading-[1.7] text-gray-800 sm:text-[17px]">
-                <span className="font-bold text-[#191919]">Short answer:</span>{" "}
-                <span className="font-semibold text-[#191919]">{verdictWinner.name}</span> is the
-                stronger pick for most people
+            <div className="mb-8 max-w-[820px] overflow-hidden rounded-2xl border border-[#0C4B75]/20 bg-white shadow-sm">
+              <div className="flex items-center justify-between gap-3 border-b border-gray-100 bg-[#F3F9FD] px-5 py-3 sm:px-6">
+                <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#0C4B75]">
+                  The verdict
+                </p>
                 {showShortAnswerScores && (
-                  <>
-                    {" "}
-                    <span className="whitespace-nowrap font-semibold text-[#0C4B75]">
-                      ({winnerScore}/10 vs {runnerUpScore}/10 on our rubric)
-                    </span>
-                  </>
+                  <span className="flex items-center gap-1.5 whitespace-nowrap rounded-full bg-white px-2.5 py-1 text-[11.5px] font-bold text-[#0C4B75] shadow-sm ring-1 ring-[#0C4B75]/15">
+                    <Star className="h-3.5 w-3.5 fill-[#FDB515] text-[#FDB515]" strokeWidth={0} />
+                    {winnerScore}/10 vs {runnerUpScore}/10
+                  </span>
                 )}
-                {" - "}
-                <BoldKeyFacts text={shortAnswerReason.replace(/\.$/, "")} />. Full reasoning, pricing
-                and the cases where {verdictRunnerUp.name} wins are below.
-              </p>
+              </div>
+              <div className="flex items-start gap-4 p-5 sm:p-6">
+                <div className="hidden h-[38px] w-[104px] shrink-0 items-center sm:flex">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={verdictWinner.logo}
+                    alt={`${verdictWinner.name} logo`}
+                    className="max-h-full max-w-full object-contain object-left"
+                  />
+                </div>
+                <p className="text-[15.5px] leading-[1.8] text-gray-800 sm:text-[16px]">
+                  <span className="font-bold text-[#191919]">{verdictWinner.name}</span> is the
+                  stronger pick for most people - <BoldKeyFacts text={shortAnswerReason.replace(/\.$/, "")} />.{" "}
+                  Full reasoning, pricing and the cases where {verdictRunnerUp.name} wins are below.
+                </p>
+              </div>
             </div>
           )}
 
