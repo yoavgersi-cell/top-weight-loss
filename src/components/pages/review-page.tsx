@@ -40,9 +40,13 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "embody weight loss reviews: compounded semaglutide & tirzepatide, shipped in 1-2 days, LegitScript-certified. Real results, pricing - and is embody worth it?",
   },
   medvi: {
-    title: "Medvi GLP-1 Reviews 2026: Is It Legit? Cost & Verdict",
+    // Decoupled from the "is medvi legit" query (Sep 2026): that phrase lived in
+    // BOTH this title and the is-medvi-legit article title, splitting the signal.
+    // The review now owns "medvi reviews / cost / verdict"; the article owns the
+    // legitimacy query. Revert if the split doesn't resolve post-migration-swap.
+    title: "Medvi GLP-1 Reviews 2026: Cost, Support & Verdict",
     description:
-      "Medvi reviews: all-inclusive GLP-1 from $99/month promo (reg. $199) and personal support customers praise on Trustpilot. Is Medvi legit? Cost, pros & cons.",
+      "Medvi reviews: all-inclusive GLP-1 from $99/month promo (reg. $199) with video visits and personal support customers praise on Trustpilot. Cost, pros, cons and our verdict.",
   },
   sprout: {
     title: "Sprout Reviews 2026: Is It Legit? GLP-1 Cost & Verdict",
