@@ -1038,7 +1038,7 @@ const defaultReviews: ReviewData[] = [
   {
     slug: "embody",
     providerId: "embody",
-    updatedAt: "2026-08-22",
+    updatedAt: "2026-09-07",
     shortSummary: "Doctor-prescribed GLP-1 treatment - compounded semaglutide from $69/mo and tirzepatide from $119/mo - shipped in 1-2 days with no insurance required. Rated 3.8 across 4,956 Trustpilot reviews.",
     reviewIntro: "embody offers doctor-prescribed GLP-1 weight loss treatment - compounded semaglutide and tirzepatide injections - through a 100% online process. Getting started takes a roughly 5-minute health qualifier, after which a medical practitioner reviews your chart (embody says usually within 24 hours, often under 5). Pricing is flat and simple: $69/month for semaglutide and $119/month for tirzepatide, with no insurance required, no hidden fees, and no clinic visits. Medication ships in 1-2 days in temperature-controlled, tracked, insured packaging, and embody is LegitScript-certified and works with US-based 503A compounding pharmacies. On Trustpilot, embody averages 3.8 across 4,956 reviews - an honest, mixed-to-positive record whose recent reviews cluster around two themes: responsive, proactive customer service ('from my very first inquiry I've had excellent communication... customer service updated me every step,' writes one tirzepatide patient) and the no-surprises pricing ('Love the fact that there are no surprises as in costly up front cost'). A 3.8 also means a minority of customers had negative experiences - worth reading both ends of the reviews before deciding, as with any provider.",
     keyFeatures: [

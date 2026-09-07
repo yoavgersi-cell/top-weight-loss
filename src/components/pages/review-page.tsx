@@ -181,6 +181,16 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
       answer:
         "embody prescribes compounded semaglutide and tirzepatide, so the side effects are those of GLP-1 medications generally - most commonly digestive (nausea, constipation, diarrhea), especially during the first weeks as your dose increases, and usually easing as your body adjusts. Your prescribing provider reviews your history for contraindications, and embody's nursing team is available during treatment. See our full semaglutide side-effects guide for what to expect and when to seek care.",
     },
+    {
+      question: "How much does embody cost per month?",
+      answer:
+        "embody uses flat monthly pricing: $69/month for compounded semaglutide and $119/month for compounded tirzepatide (regularly $79 and $129). The price includes the medication, the doctor review, supplies and free 1-2 day shipping - there's no membership fee and no hidden costs. If a provider doesn't approve your prescription, embody issues a full refund.",
+    },
+    {
+      question: "Is embody FDA-approved?",
+      answer:
+        "embody's medications are compounded semaglutide and tirzepatide, which are not FDA-approved brand-name drugs. They're prepared by US-based, state-licensed 503A compounding pharmacies using the same active ingredients as the FDA-approved brands (semaglutide in Ozempic and Wegovy; tirzepatide in Mounjaro and Zepbound). Compounded medications are legal and prescribed by a licensed provider, but they don't carry FDA brand-drug approval - a distinction worth understanding before starting. embody itself is LegitScript-certified.",
+    },
   ],
   altrx: [
     {
