@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
-import { TEMPLATES_LAST_UPDATED } from "@/lib/config";
+import { TEMPLATES_LAST_UPDATED, NOINDEX_WL_BATTLE_SLUGS } from "@/lib/config";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
@@ -25,10 +25,17 @@ const MATRIX_ROWS: { label: string; key: keyof typeof TRIO_FACTS[string] }[] = [
 
 export function threeWayMetadata(trio: ThreeWayComparison, ctx: SiteContext): Metadata {
   const url = canonicalUrl(ctx, `/${trio.slug}`);
+  // Three-way comparisons have near-zero search demand and are pure crawl-budget
+  // bloat on the young hub, so they're noindex,follow (see NOINDEX_WL_BATTLE_SLUGS).
+  const isThinNoindex = NOINDEX_WL_BATTLE_SLUGS.has(trio.slug);
   return {
     title: { absolute: `${trio.metaTitle} | TreatmentsHub` },
     description: trio.description,
-    robots: ctx.noindex ? { index: false, follow: false } : undefined,
+    robots: ctx.noindex
+      ? { index: false, follow: false }
+      : isThinNoindex
+        ? { index: false, follow: true }
+        : undefined,
     alternates: { canonical: url },
     openGraph: { title: trio.metaTitle, description: trio.description, url, type: "article" },
   };

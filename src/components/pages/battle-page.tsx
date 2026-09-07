@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Fragment } from "react";
 import Link from "next/link";
 import { getConfig } from "@/lib/config-store";
-import { CONTENT_LAST_UPDATED, latestUpdate } from "@/lib/config";
+import { CONTENT_LAST_UPDATED, latestUpdate, NOINDEX_WL_BATTLE_SLUGS } from "@/lib/config";
 import { splitSentences, BoldKeyFacts, ReadableProse } from "@/components/prose";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { ComparisonLayout } from "@/components/comparison-layout";
@@ -367,10 +367,18 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
     : `${titleCaseMatchup(baseLabel)} (2026): ${battleCategory ? `${battleCategory} ` : ""}Cost, Plans & Meds Compared`;
   const metaDescription = override?.description ?? battle.description;
 
+  // Thin, low-demand matchups (Tier-2-brand pairs) are noindex,follow so crawl
+  // budget concentrates on the money battles - see NOINDEX_WL_BATTLE_SLUGS.
+  const isThinNoindex = ctx.vertical === "weight-loss" && NOINDEX_WL_BATTLE_SLUGS.has(slug);
+
   return {
     title: metaTitle,
     description: metaDescription,
-    robots: ctx.noindex ? { index: false, follow: false } : undefined,
+    robots: ctx.noindex
+      ? { index: false, follow: false }
+      : isThinNoindex
+        ? { index: false, follow: true }
+        : undefined,
     alternates: { canonical: url },
     openGraph: {
       title: metaTitle,

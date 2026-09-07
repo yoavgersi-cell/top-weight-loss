@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Check, X, ArrowRight, Users, Clock, Shield, Star, ArrowBigUp, ArrowBigDown, MessageCircle } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
-import { latestUpdate, VERTICALS } from "@/lib/config";
+import { latestUpdate, VERTICALS, NOINDEX_WL_REVIEW_SLUGS } from "@/lib/config";
 import {
   type SiteContext,
   canonicalUrl,
@@ -344,15 +344,22 @@ export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Me
     override?.title ?? `${provider.name}${verticalQualifier}Review 2026: Cost, Results & Is It Worth It?`;
   const pageDescription = override?.description ?? review.shortSummary;
 
-  // Operator policy (Aug 2026): ALL provider reviews are indexable, affiliate
-  // or not - the goal is impressions across every vertical first; pages that
-  // start earning clicks get optimized (and monetized) afterwards.
+  // Operator policy (Aug 2026): provider reviews are indexable by default - the
+  // goal is impressions across every vertical first. Exception (Sep 2026): thin
+  // filler/unmonetized-brand reviews on weight-loss are noindex,follow so crawl
+  // budget on the young hub concentrates on the money pages (see
+  // NOINDEX_WL_REVIEW_SLUGS); "follow" keeps link equity flowing.
   const url = canonicalUrl(ctx, `/reviews/${slug}`);
+  const isThinNoindex = ctx.vertical === "weight-loss" && NOINDEX_WL_REVIEW_SLUGS.has(slug);
 
   return {
     title: pageTitle,
     description: pageDescription,
-    robots: ctx.noindex ? { index: false, follow: false } : undefined,
+    robots: ctx.noindex
+      ? { index: false, follow: false }
+      : isThinNoindex
+        ? { index: false, follow: true }
+        : undefined,
     alternates: {
       canonical: url,
     },
