@@ -1,20 +1,35 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { isPublishedRegion } from "@/lib/regions";
+import { UkWeightLossPage } from "@/components/pages/uk-weight-loss-page";
 
-// UK region placeholder. While GB is unpublished (see PUBLISHED_REGIONS), every
-// /uk/* path resolves here - a noindex "coming soon" page - so the region routes
-// cleanly without leaking US content or advertising unbuilt UK pages to Google.
-// When UK content and its compliant model exist, this is replaced by real
-// region-aware routing.
+// UK region routing. While GB is unpublished (see PUBLISHED_REGIONS) every /uk/*
+// path is kept noindex. Built UK pages (e.g. the compliant /uk/weight-loss
+// service comparison) render here; everything else falls back to a "coming
+// soon" placeholder. No US content is ever served under /uk.
 
 export const metadata: Metadata = {
-  title: "TreatmentsHub UK - Coming Soon",
-  // Never index the placeholder or the unbuilt region.
+  title: "TreatmentsHub UK",
+  // Never index the UK region until it is published and compliance-reviewed.
   robots: { index: false, follow: false },
 };
 
-export default function UkPlaceholderPage() {
+export default async function UkRouter({
+  params,
+}: {
+  params: Promise<{ slug?: string[] }>;
+}) {
+  const { slug } = await params;
+
+  // Built compliant UK pages.
+  if (slug?.length === 1 && slug[0] === "weight-loss") {
+    return <UkWeightLossPage />;
+  }
+
+  return <UkPlaceholderPage />;
+}
+
+function UkPlaceholderPage() {
   // Defensive: if GB is ever marked published without this route being replaced,
   // fail loudly in dev rather than silently serving an empty page.
   const live = isPublishedRegion("gb");
