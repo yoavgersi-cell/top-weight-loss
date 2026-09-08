@@ -1076,6 +1076,264 @@ const articles: ArticleData[] = [
       },
     ],
   },
+  // ───── Depth expansion (Sep 8 2026): the foundational-trust, modality and
+  // condition gaps the platform/cost/insurance cluster was missing - does it
+  // work, therapy vs psychiatry, online psychiatry, anxiety, depression, types
+  // of therapy, and a category-level cost guide. Qualitative established
+  // knowledge only; no invented figures or outcome statistics; clinician-routed,
+  // with crisis-safety framing where relevant.
+  {
+    slug: "does-online-therapy-work",
+    title: "Does Online Therapy Actually Work? An Honest Look at the Evidence (2026)",
+    description:
+      "The research generally finds online therapy comparable to in-person for many common concerns - but 'it works' comes with real caveats about fit, format and severity. The honest picture.",
+    category: "Advice",
+    readTime: "6 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#EEEEF6",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "For many common concerns - like anxiety and depression - research generally finds online therapy comparable in effectiveness to in-person care.",
+      "The biggest driver of whether therapy works isn't the medium - it's the fit with your therapist and your engagement with the process.",
+      "Format matters: live video tends to resemble traditional therapy most closely; message-only support is more variable.",
+      "Severe, complex or crisis situations may need in-person or higher-intensity care - online therapy is not the right tool for every situation.",
+    ],
+    sections: [
+      {
+        heading: "Does the research say online therapy works?",
+        body: `Broadly, yes - for many of the common concerns people seek therapy for, such as anxiety and depression, the body of research generally finds online therapy comparable in effectiveness to in-person care. That is a genuinely reassuring finding and the reason the format went mainstream rather than staying a stopgap. The honest qualifier is that "comparable for many common concerns" is not "identical for everyone in every situation," and the rest of this article is about where that nuance lives - because glossing over it is how people end up disappointed.`,
+      },
+      {
+        heading: "What actually makes therapy work - online or not?",
+        body: `The medium is not the main lever. Across formats, the strongest predictors of whether therapy helps are the <strong>therapeutic relationship</strong> - do you feel understood by and able to work with your therapist - and your own <strong>engagement</strong> between sessions. A good fit over video beats a poor fit in a room. This is why our <a href="/online-therapy/articles/how-to-choose-an-online-therapy-platform">how to choose a platform</a> guide leans so hard on the ease of switching therapists: the ability to change until you find the right person matters more than almost any feature, and it is where online platforms can genuinely shine.`,
+      },
+      {
+        heading: "Does the format (video vs messaging) change the answer?",
+        body: `It can. <strong>Live video sessions</strong> most closely reproduce traditional therapy and carry the evidence most directly. <strong>Messaging-based</strong> support - exchanging texts with a therapist through the week - suits some people and some goals, but it is a different experience and the results are more variable; it is not simply "the same therapy, typed." Knowing which format a platform emphasizes, and which suits how you actually communicate, is part of choosing well. The trade-offs against traditional care are laid out in <a href="/online-therapy/articles/online-therapy-vs-in-person">online therapy vs in-person</a>.`,
+      },
+      {
+        heading: "When is online therapy not the right tool?",
+        body: `When the situation outmatches the format. Severe or complex mental illness, situations needing close medical supervision, and anything involving crisis or risk of harm generally call for in-person or higher-intensity care, not a weekly video call. If you are in crisis or thinking about harming yourself, contact your local emergency services or a crisis line right away rather than waiting for an appointment. For everything short of that - the common, treatable concerns most people face - online therapy is a legitimate, evidence-supported option, and our <a href="/online-therapy">platform comparison</a> maps where to start. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "therapy-vs-psychiatry",
+    title: "Therapist vs Psychiatrist: Do You Need Talk Therapy, Medication, or Both? (2026)",
+    description:
+      "Therapists do talk therapy; psychiatrists diagnose and prescribe medication. How to tell which you need, why many people benefit from both, and where each fits online.",
+    category: "Guide",
+    readTime: "6 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#EDF1F6",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "A therapist provides talk therapy; a psychiatrist is a medical doctor who can diagnose and prescribe medication.",
+      "Which you need depends on what you're facing - many people benefit from talk therapy alone, some from medication, and many from both together.",
+      "The two are complementary, not competing: therapy and medication address mental health from different angles.",
+      "Online platforms differ here - some offer therapy only, some psychiatry/medication, and some both - so the choice shapes which platform fits.",
+    ],
+    sections: [
+      {
+        heading: "What's the actual difference?",
+        body: `A <strong>therapist</strong> (psychologist, counselor, clinical social worker and similar) delivers talk therapy - structured conversation and evidence-based techniques like <a href="/online-therapy/articles/cbt-online">CBT</a> - but does not prescribe medication. A <strong>psychiatrist</strong> is a medical doctor specializing in mental health who can diagnose conditions and <em>prescribe and manage medication</em>. That prescribing ability is the core distinction. Both are legitimate mental-health professionals; they simply do different jobs, and understanding that stops people from booking the wrong kind of appointment for what they need.`,
+      },
+      {
+        heading: "How do you know which one you need?",
+        body: `A reasonable rule of thumb: if you want to work through thoughts, patterns, relationships or life stressors, talk therapy is the natural starting point. If your symptoms are significantly disrupting daily functioning - or a therapist or doctor suggests medication may help - that points toward a psychiatric evaluation. You do not have to diagnose yourself perfectly in advance: many people start with therapy and are referred onward if medication seems warranted. What matters is starting somewhere rather than staying stuck deciding.`,
+      },
+      {
+        heading: "Why do many people use both?",
+        body: `Because they work on different levels and often reinforce each other. Medication can ease symptoms enough that a person has the bandwidth to actually engage with therapy; therapy builds the skills and insight that medication alone does not provide. For a range of conditions, the combination is a well-recognized approach - which is exactly why platforms that connect the two matter. The practical mechanics of getting medication alongside therapy are covered in <a href="/online-therapy/articles/online-therapy-with-medication">online therapy with medication</a>.`,
+      },
+      {
+        heading: "Where does each fit online?",
+        body: `The platform choice follows directly from what you need. Therapy-first platforms such as <a href="/online-therapy/reviews/betterhelp">BetterHelp</a> connect you with therapists for talk therapy; psychiatry-focused services such as <a href="/online-therapy/reviews/talkiatry">Talkiatry</a> center on diagnosis and medication management with psychiatric providers; and some, like <a href="/online-therapy/reviews/talkspace">Talkspace</a>, offer both under one roof. Matching the platform to whether you need therapy, psychiatry or both is one of the highest-leverage decisions here - our <a href="/online-therapy">platform comparison</a> maps who does what. For the medication route specifically, see <a href="/online-therapy/articles/online-psychiatry">online psychiatry</a>. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "online-psychiatry",
+    title: "Online Psychiatry: How to Get Mental-Health Medication Online in 2026",
+    description:
+      "Online psychiatry connects you with a licensed prescriber by video for evaluation, diagnosis and medication management. How it works, what it can and can't prescribe, and how to pick a legitimate service.",
+    category: "Guide",
+    readTime: "7 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#EDF1F6",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Online psychiatry connects you with a licensed psychiatric provider by video for evaluation, diagnosis and ongoing medication management.",
+      "It's well suited to common conditions like anxiety and depression; some medications - notably certain controlled substances - face prescribing restrictions online.",
+      "A legitimate service does a real evaluation and provides ongoing follow-up - not a one-question form and an instant prescription.",
+      "Psychiatry and therapy work best together; many people pair online medication management with talk therapy.",
+    ],
+    sections: [
+      {
+        heading: "What is online psychiatry?",
+        body: `Online psychiatry brings the psychiatric evaluation and medication-management process to video and messaging: a <strong>licensed psychiatric provider</strong> reviews your history and symptoms, works toward a diagnosis, and - where appropriate - prescribes and then manages medication over time, adjusting as needed. It is the medication side of mental-health care delivered remotely, distinct from talk therapy (the difference is in <a href="/online-therapy/articles/therapy-vs-psychiatry">therapist vs psychiatrist</a>). The appeal is access: it removes the long waits and travel that keep many people from ever seeing a psychiatrist at all.`,
+      },
+      {
+        heading: "How does it work in practice?",
+        body: `You book an initial evaluation - typically a video visit longer than a routine appointment - where the provider assesses what is going on and discusses options. If medication is appropriate, they prescribe it and set a follow-up schedule to monitor how you respond and adjust the plan. That ongoing management is the point: psychiatric medication is not fire-and-forget, and the follow-ups are where a good service earns its keep. Services such as <a href="/online-therapy/reviews/talkiatry">Talkiatry</a> are built around exactly this evaluate-prescribe-monitor loop.`,
+      },
+      {
+        heading: "What can and can't be prescribed online?",
+        body: `Common medications for conditions like anxiety and depression are routinely handled through online psychiatry. But some medications - particularly certain <strong>controlled substances</strong> - face additional prescribing rules and restrictions for telehealth, and a responsible provider will be upfront that not everything can be started or managed online, and that some situations need in-person care. Treat any service promising frictionless access to tightly-controlled medications as a warning sign, not a convenience - that is the opposite of careful prescribing.`,
+      },
+      {
+        heading: "How do you choose a legitimate service?",
+        body: `Look for a real evaluation with a licensed provider, genuine ongoing follow-up, and clear, honest limits about what can be prescribed - the same quality signals that separate legitimate telehealth from a prescription vending machine. Pricing and insurance vary, so check those against your situation (<a href="/online-therapy/articles/online-therapy-that-takes-insurance">insurance-friendly options</a> is a start). Many people pair medication management with talk therapy for the reasons in <a href="/online-therapy/articles/online-therapy-with-medication">online therapy with medication</a>. Our <a href="/online-therapy">platform comparison</a> maps the psychiatry-capable options. If you are in crisis, contact emergency services or a crisis line immediately. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "online-therapy-for-anxiety",
+    title: "Online Therapy for Anxiety: What Helps and How to Start (2026)",
+    description:
+      "Anxiety is one of the concerns online therapy handles best. Which approaches have the strongest track record, when medication enters the picture, and how to begin without the process itself becoming a hurdle.",
+    category: "Guide",
+    readTime: "6 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#EAF1EF",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Anxiety is among the concerns online therapy is best supported for - the format handles it comparably to in-person for many people.",
+      "CBT is one of the most established approaches for anxiety, and it translates well to video and structured online formats.",
+      "For some people, medication (via a psychiatric provider) is added to therapy - the two often work well together.",
+      "The hardest part is often starting; the low-friction access of online therapy is a genuine advantage for anxiety specifically.",
+    ],
+    sections: [
+      {
+        heading: "Does online therapy help with anxiety?",
+        body: `Anxiety is one of the concerns where online therapy has the strongest support - it is among the common conditions research generally finds handled comparably to in-person care (the broader evidence is in <a href="/online-therapy/articles/does-online-therapy-work">does online therapy work</a>). That matters because anxiety is extraordinarily common and extraordinarily treatable, yet often goes unaddressed because seeking help feels like one more overwhelming task. Removing the friction of getting started is not a minor convenience here; for anxiety specifically, it can be the difference between getting help and putting it off.`,
+      },
+      {
+        heading: "What approaches work best?",
+        body: `<strong>Cognitive behavioral therapy (CBT)</strong> is one of the most established approaches for anxiety, and it happens to translate especially well online - it is structured, skills-based and works naturally over video with between-session practice, as covered in <a href="/online-therapy/articles/cbt-online">CBT online</a>. Other evidence-based approaches exist too, and the right one depends on you and your therapist (the landscape is in <a href="/online-therapy/articles/types-of-therapy">types of therapy</a>). The common thread is that anxiety responds well to active, skills-oriented work - not just talking about it, but learning to respond to it differently.`,
+      },
+      {
+        heading: "When does medication come in?",
+        body: `For some people, therapy alone is enough; for others, medication is added - and for anxiety, the combination is a well-recognized approach. That decision belongs with a medical provider, which is where online psychiatry fits alongside therapy (see <a href="/online-therapy/articles/therapy-vs-psychiatry">therapist vs psychiatrist</a> and <a href="/online-therapy/articles/online-psychiatry">online psychiatry</a>). You do not need to decide this upfront - many people start with therapy and revisit the medication question with a provider if symptoms warrant it.`,
+      },
+      {
+        heading: "How do you start?",
+        body: `Pick a platform, get matched, and give the fit a fair chance - switching therapists early if the match is not right, which online platforms make easy. Therapy-first services like <a href="/online-therapy/reviews/betterhelp">BetterHelp</a> and <a href="/online-therapy/reviews/talkspace">Talkspace</a> are common starting points; our <a href="/online-therapy">platform comparison</a> weighs them, and <a href="/online-therapy/articles/how-to-choose-an-online-therapy-platform">how to choose a platform</a> walks the decision. If your anxiety is severe or you are in crisis, contact a medical professional or crisis line rather than waiting for a first session. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "online-therapy-for-depression",
+    title: "Online Therapy for Depression: Does It Help, and When Is More Needed? (2026)",
+    description:
+      "Online therapy is well-supported for mild-to-moderate depression, often works best combined with medication for more severe cases, and has clear limits when risk is involved. An honest, careful guide.",
+    category: "Guide",
+    readTime: "6 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#EAF1EF",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "For mild-to-moderate depression, online therapy is well-supported and comparable to in-person care for many people.",
+      "For more severe depression, the combination of therapy and medication is a well-established approach - not therapy alone.",
+      "Depression can affect motivation to start, so the low-friction access of online therapy is a real, practical advantage.",
+      "Depression involving thoughts of self-harm is a medical emergency - reach out to a crisis line or emergency services immediately, not a weekly appointment.",
+    ],
+    sections: [
+      {
+        heading: "A safety note first",
+        body: `Depression is treatable, and reaching out is a strong step. But if you are having thoughts of harming yourself or feel you may be in danger, this is a medical emergency: contact your local emergency services or a crisis line right now rather than waiting for a therapy appointment - online therapy is not built for crisis response. With that essential caveat stated plainly, the rest of this guide is about how online therapy fits the very common, very treatable experience of depression for people who are not in immediate crisis.`,
+      },
+      {
+        heading: "Does online therapy help with depression?",
+        body: `For mild-to-moderate depression, yes - it is one of the common conditions the evidence generally supports for online delivery, comparable to in-person for many people (see <a href="/online-therapy/articles/does-online-therapy-work">does online therapy work</a>). There is also a practical angle specific to depression: the condition itself saps the motivation and energy needed to arrange help, so the reduced friction of getting matched from home genuinely lowers a barrier that stops people from starting. Structured, skills-based approaches like <a href="/online-therapy/articles/cbt-online">CBT</a> have a strong track record here.`,
+      },
+      {
+        heading: "When is medication part of the picture?",
+        body: `For moderate-to-severe depression, the well-established approach is often therapy <em>and</em> medication together rather than therapy alone - they work on different levels and reinforce each other. That means a psychiatric provider enters the picture alongside the therapist; the distinction and how to combine them are in <a href="/online-therapy/articles/therapy-vs-psychiatry">therapist vs psychiatrist</a> and <a href="/online-therapy/articles/online-psychiatry">online psychiatry</a>. Platforms that offer both therapy and medication under one roof - <a href="/online-therapy/reviews/talkspace">Talkspace</a> among them - can make that coordination simpler.`,
+      },
+      {
+        heading: "How do you get started safely?",
+        body: `If you are not in crisis, choose a platform, get matched, and be willing to switch therapists until the fit is right - the single biggest driver of whether therapy helps. Our <a href="/online-therapy">platform comparison</a> and <a href="/online-therapy/articles/how-to-choose-an-online-therapy-platform">how to choose a platform</a> guide the choice, and <a href="/online-therapy/articles/free-and-low-cost-therapy-options">free and low-cost options</a> matter if cost is a barrier. And to repeat the one non-negotiable: any thoughts of self-harm mean contacting emergency services or a crisis line immediately. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "types-of-therapy",
+    title: "Types of Therapy Explained: CBT, DBT and Which Fits What (2026)",
+    description:
+      "The alphabet soup of therapy approaches, demystified. What CBT, DBT and the other common modalities actually do, what each tends to suit, and why the therapist often matters more than the label.",
+    category: "Guide",
+    readTime: "7 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#EEEEF6",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Therapy 'modalities' are different structured approaches - CBT, DBT and others - each with strengths for particular concerns.",
+      "CBT is the most widely-used, evidence-based approach for anxiety and depression, and it translates well online.",
+      "DBT adds skills for emotion regulation and distress tolerance; other approaches focus on relationships, past experiences or acceptance.",
+      "The specific modality matters, but the fit and skill of the therapist often matter more - don't over-optimize the label.",
+    ],
+    sections: [
+      {
+        heading: "Why are there so many types?",
+        body: `Because different problems respond to different tools. A "modality" is just a structured approach to therapy, developed and studied for particular kinds of concerns. The names pile up - CBT, DBT, ACT, psychodynamic and more - which makes the field look more intimidating than it is. You do not need to master the taxonomy to get help; you need a rough sense of the main ones so you can recognize what a therapist is offering and why. That is what this guide is for, not turning you into your own clinician.`,
+      },
+      {
+        heading: "What is CBT, and why is it everywhere?",
+        body: `<strong>Cognitive behavioral therapy (CBT)</strong> is the most widely used and heavily researched approach, especially for anxiety and depression. Its premise is practical: thoughts, feelings and behaviors are linked, so changing unhelpful thought and behavior patterns can change how you feel. It is structured, skills-based, usually time-limited, and involves practice between sessions - which is exactly why it translates so cleanly to online formats, as covered in <a href="/online-therapy/articles/cbt-online">CBT online</a>. If you only recognize one modality name, this is the one worth knowing.`,
+      },
+      {
+        heading: "What about DBT and the others?",
+        body: `<strong>DBT (dialectical behavior therapy)</strong> grew out of CBT and adds a strong focus on emotion regulation, distress tolerance and interpersonal skills - useful for intense emotions and certain specific conditions. Beyond those, <strong>psychodynamic</strong> therapy explores how past experiences shape present patterns; <strong>ACT (acceptance and commitment therapy)</strong> emphasizes accepting difficult feelings while acting on your values; and relationship-focused approaches address couples and family dynamics (see <a href="/online-therapy/articles/online-couples-therapy">online couples therapy</a>). Each has its place; none is universally "best."`,
+      },
+      {
+        heading: "So how much should the modality drive your choice?",
+        body: `Some - but less than you might think. There is good reason to seek a specific approach for a specific concern (CBT for anxiety, for instance), and it is fair to ask a prospective therapist what they practice. But across the research, the <strong>therapeutic relationship</strong> is one of the most consistent predictors of whether therapy helps, often outweighing the label on the technique. So use modality as a filter, not an obsession, and weight finding a therapist you click with just as highly. Our <a href="/online-therapy">platform comparison</a> and <a href="/online-therapy/articles/how-to-choose-an-online-therapy-platform">how to choose a platform</a> help you match on both. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "online-therapy-cost",
+    title: "How Much Does Online Therapy Cost? Pricing Models Compared (2026)",
+    description:
+      "Online therapy pricing comes in a few distinct shapes - weekly subscriptions, per-session fees, and insurance-based models. How they differ, what drives the real cost, and how to find the cheapest legitimate route for you.",
+    category: "Guide",
+    readTime: "7 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#EDF1F6",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Online therapy generally comes in three pricing shapes: weekly/monthly subscriptions, per-session fees, and insurance-based (copay) models.",
+      "Subscription platforms often price below traditional per-session therapy, but what you get per week varies - read what a 'plan' actually includes.",
+      "Insurance can dramatically change the real cost, so checking coverage first is often the highest-value step.",
+      "The cheapest sustainable option depends on your insurance, how often you want sessions, and whether you need therapy, psychiatry or both.",
+    ],
+    sections: [
+      {
+        heading: "Why is online therapy pricing so confusing?",
+        body: `Because platforms use fundamentally different models, so a headline price from one does not compare cleanly to another. The three common shapes: <strong>subscription</strong> (a recurring weekly or monthly fee bundling a set amount of therapist access), <strong>per-session</strong> (you pay for each appointment, like traditional therapy), and <strong>insurance-based</strong> (you pay a copay and insurance covers the rest). Comparing them means normalizing to what you actually get - which is the work this guide, and our <a href="/online-therapy">platform comparison</a>, is built to do.`,
+      },
+      {
+        heading: "What do the subscription platforms actually cost?",
+        body: `Subscription services typically bundle a weekly allotment - often a live session plus messaging access - into a recurring fee, and they frequently land below the per-session cost of traditional therapy, which is much of their appeal. The catch is that "what a plan includes" varies: how many live sessions, how much messaging, and whether extras cost more. So the real question is not the sticker price but the price <em>per live session you'll actually use</em>. The specifics for the biggest platform are worked through in <a href="/online-therapy/articles/how-much-does-betterhelp-cost">how much BetterHelp costs</a>.`,
+      },
+      {
+        heading: "How does insurance change the math?",
+        body: `Often dramatically - a therapist covered by your insurance can reduce your out-of-pocket cost to a copay, which may beat any subscription. That is why checking coverage is frequently the highest-value first move, not an afterthought. Not every online platform takes insurance and the ones that do vary in how, so it is worth confirming for your specific plan - start with <a href="/online-therapy/articles/online-therapy-that-takes-insurance">online therapy that takes insurance</a> and the platform-specific pieces like <a href="/online-therapy/articles/does-betterhelp-take-insurance">does BetterHelp take insurance</a> and <a href="/online-therapy/articles/does-talkspace-take-insurance">does Talkspace take insurance</a>.`,
+      },
+      {
+        heading: "What's the cheapest legitimate route for you?",
+        body: `It depends on three things: whether you have mental-health coverage, how often you want sessions, and whether you need therapy, psychiatry (medication) or both - since psychiatric care is priced differently. If cost is a hard barrier, do not skip <a href="/online-therapy/articles/free-and-low-cost-therapy-options">free and low-cost therapy options</a>, which covers routes beyond the commercial platforms. The honest bottom line: the "cheapest" platform in the abstract is the wrong question - the cheapest <em>sustainable</em> option for your coverage and needs is the right one, and our <a href="/online-therapy">comparison</a> is built to find it. This article is general information, not medical advice.`,
+      },
+    ],
+  },
 ];
 
 const faqs: FaqItem[] = [
