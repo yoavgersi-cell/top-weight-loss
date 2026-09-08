@@ -1433,6 +1433,227 @@ const articles: ArticleData[] = [
       },
     ],
   },
+  // ───── Depth expansion (Sep 8 2026): high-intent TRT questions that deepen the
+  // cluster - the two testosterone numbers, blood-work monitoring, clinic vs
+  // online (commercial intent), the common esters, libido, and estrogen/aromatase
+  // management. Qualitative established knowledge only; no invented figures or lab
+  // values; clinician-decides framing throughout.
+  {
+    slug: "free-vs-total-testosterone",
+    title: "Free vs Total Testosterone: Which Number Actually Matters? (2026)",
+    description:
+      "Your total testosterone can look 'normal' while the free portion - the part your body can actually use - is low. What the two numbers mean, why SHBG ties them together, and why good clinics check both.",
+    category: "Science",
+    readTime: "6 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#EAF0F0",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Total testosterone measures all the testosterone in your blood; free testosterone is the small fraction that's unbound and biologically active.",
+      "A protein called SHBG binds most of your testosterone - so a 'normal' total can hide a low free level when SHBG is high.",
+      "Symptoms often track the free (usable) number more closely than the total, which is why measuring only total can miss the picture.",
+      "A thorough provider looks at both numbers alongside your symptoms - not a single value in isolation.",
+    ],
+    sections: [
+      {
+        heading: "What's the difference between the two?",
+        body: `<strong>Total testosterone</strong> is the whole amount circulating in your blood. But most of that is bound to proteins - chiefly <strong>SHBG</strong> (sex hormone-binding globulin) and albumin - and while it's bound, your body can't use it. <strong>Free testosterone</strong> is the small unbound fraction that's actually available to do the work. The analogy that helps: total is the money in your account; free is the cash you can spend right now. The rest is committed elsewhere. That distinction is the whole reason two men with the same total can feel completely different.`,
+      },
+      {
+        heading: "Why can 'normal' total testosterone still mean low T?",
+        body: `Because SHBG varies a lot between men, and it rises with age and certain conditions. When SHBG is high, it binds up more of your testosterone, leaving less free - so your total can land comfortably in range while the usable portion is genuinely low. A man in that situation who gets tested for total only may be told he's "normal" while still having every symptom of low testosterone. This is one of the most common reasons men bounce off a basic test feeling dismissed, and it's covered from the symptom side in <a href="/trt/articles/low-testosterone-symptoms">signs of low testosterone</a> and the number side in <a href="/trt/articles/normal-testosterone-levels-by-age">normal testosterone levels by age</a>.`,
+      },
+      {
+        heading: "Which number should you focus on?",
+        body: `Neither alone - the honest answer is both, read against your symptoms. Symptoms frequently correlate better with the free level, which is why leaving it out can miss a real problem, but free testosterone is also more finicky to measure and interpret. A good clinician orders both (often with SHBG), interprets them together, and weighs them against how you actually feel rather than treating any single value as a verdict. Chasing one number in isolation - in either direction - is exactly the mistake careful medicine avoids.`,
+      },
+      {
+        heading: "What this means for getting evaluated",
+        body: `When you're comparing providers, whether they assess both numbers and your symptoms - rather than a single total off a cheap panel - is a quality signal worth weighting. Reputable telehealth TRT providers run proper baseline labs and interpret them with a clinician; our <a href="/trt">TRT provider comparison</a> maps who does what, and <a href="/trt/articles/how-to-get-trt-online">how to get TRT online</a> walks the process end to end, including what the initial blood work involves - see also <a href="/trt/articles/trt-blood-work">TRT blood work</a>. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "trt-blood-work",
+    title: "TRT Blood Work: The Labs That Get Monitored and Why (2026)",
+    description:
+      "TRT isn't set-and-forget - it's a monitored treatment. The labs a responsible provider checks before and during therapy, what each one is watching for, and why skipping monitoring is a red flag.",
+    category: "Guide",
+    readTime: "7 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#EAF0F0",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "TRT is a monitored treatment: baseline labs confirm the diagnosis, and follow-up labs keep it safe and dialed in.",
+      "Beyond testosterone itself, providers typically watch red blood cells (hematocrit), estradiol, PSA and other markers depending on your profile.",
+      "Monitoring is what separates legitimate TRT from a testosterone vending machine - a provider who never re-checks bloods is a warning sign.",
+      "The exact panel and schedule are individual and set by your clinician; this is the map, not a prescription.",
+    ],
+    sections: [
+      {
+        heading: "Why does TRT need blood work at all?",
+        body: `Two reasons: to get the diagnosis right before starting, and to keep it safe and effective once you're on it. Testosterone therapy changes more than one system in the body, and the responsible model is to establish a baseline, confirm that low testosterone is actually the problem, and then re-check periodically to catch anything that drifts. This is the single clearest line between real TRT and the "just ship the vial" operations - covered in <a href="/trt/articles/is-trt-bad-for-you">is TRT bad for you</a> - because the risks that matter are mostly the ones monitoring is designed to catch early.`,
+      },
+      {
+        heading: "What gets checked before you start?",
+        body: `A baseline typically includes testosterone itself - ideally both total and free, as explained in <a href="/trt/articles/free-vs-total-testosterone">free vs total testosterone</a> - along with markers that establish your starting point and screen for reasons to be cautious. A careful provider isn't just confirming you're low; they're checking that TRT is appropriate for you specifically and ruling out issues that would change the plan. Guidelines generally recommend confirming low testosterone on more than one morning sample rather than acting on a single reading, because levels fluctuate.`,
+      },
+      {
+        heading: "What gets monitored once you're on TRT?",
+        body: `The commonly watched markers, each with a job: <strong>hematocrit / red blood cells</strong>, because testosterone can raise them and that needs watching; <strong>estradiol (estrogen)</strong>, because some testosterone converts to it and the balance matters - see <a href="/trt/articles/trt-and-estrogen">TRT and estrogen</a>; <strong>PSA and prostate markers</strong>, as part of age-appropriate monitoring; and testosterone levels themselves, to confirm the dose is landing where intended. Exactly which markers, and how often, depends on you and your clinician - but "we'll re-check your bloods" should always be part of the plan, not an upsell.`,
+      },
+      {
+        heading: "How often, and what does this cost?",
+        body: `Typically there's a baseline, a re-check after starting or adjusting to see how you've responded, and periodic monitoring after that - the cadence is individual. On cost: some telehealth TRT programs bundle the required lab work into the membership while others bill it separately, and that difference can change the real annual price meaningfully, which is why it's part of <a href="/trt/articles/trt-cost">TRT cost</a>. When you compare providers in our <a href="/trt">TRT comparison</a>, treat included, regular monitoring as a feature, not a formality. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "trt-clinic-vs-online",
+    title: "TRT Clinic vs Online: Which Route Makes Sense in 2026?",
+    description:
+      "In-person TRT clinic or online telehealth? The honest trade-offs on cost, convenience, monitoring and the quality of care - and the cases where one clearly beats the other.",
+    category: "Guide",
+    readTime: "7 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#ECEFF4",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Online TRT is usually cheaper and far more convenient, with labs done locally and consults handled remotely - and for straightforward cases it can match in-person care.",
+      "An in-person clinic can be the better fit for complicated cases, or if you simply prefer hands-on, face-to-face management.",
+      "The quality question isn't 'online vs clinic' - it's whether the provider does proper diagnosis, real monitoring and reachable clinical support. Both models have good and bad actors.",
+      "Watch the total picture: membership, medication, and whether lab work is included - a cheap headline can hide add-ons.",
+    ],
+    sections: [
+      {
+        heading: "What's actually different between the two?",
+        body: `Less than the framing suggests, and more in logistics than in medicine. A legitimate <strong>online TRT provider</strong> still runs blood work (you get it drawn at a local lab), still has a licensed clinician review and prescribe, and still monitors you over time - the consults just happen by video or messaging and the medication ships to you. An <strong>in-person clinic</strong> does the same clinical work under one roof, with face-to-face visits. The core medicine - diagnosis, prescription, monitoring - is the same job either way; what changes is convenience, cost and how the care is delivered.`,
+      },
+      {
+        heading: "Where does online win?",
+        body: `On <strong>cost and convenience</strong>, usually decisively. Online programs cut the overhead of a physical clinic and tend to price below in-person management, and they remove the friction that stops a lot of men getting evaluated at all - no waiting rooms, no time off work, discreet delivery. For a man with reasonably straightforward low testosterone, that accessibility is the difference between getting treated and putting it off for another year. The realistic price picture is in <a href="/trt/articles/trt-cost">TRT cost</a>, and the step-by-step is in <a href="/trt/articles/how-to-get-trt-online">how to get TRT online</a>.`,
+      },
+      {
+        heading: "Where does an in-person clinic win?",
+        body: `When the case isn't straightforward. If you have complicating conditions, a complicated history, fertility considerations that need close management (see <a href="/trt/articles/trt-and-fertility">TRT and fertility</a>), or you simply want hands-on, face-to-face care, a good in-person clinic earns its place. Some men also just prefer a physical relationship with a provider they can sit across from - that's a legitimate preference, not a lesser one. The point is to match the route to the complexity of your situation rather than assuming online is always enough or always lesser.`,
+      },
+      {
+        heading: "How do I judge quality either way?",
+        body: `Ignore the delivery model for a moment and look at the medicine: does the provider confirm the diagnosis properly (ideally more than one morning test, total and free - see <a href="/trt/articles/free-vs-total-testosterone">free vs total testosterone</a>), do real ongoing <a href="/trt/articles/trt-blood-work">blood-work monitoring</a>, and give you reachable clinical support when something feels off? A provider that skips those is a poor choice whether it's online or on your street. Our <a href="/trt">TRT provider comparison</a> is built around exactly these signals across the telehealth options - <a href="/trt/reviews/hims">Hims</a>, <a href="/trt/reviews/fountain">Fountain</a>, <a href="/trt/reviews/marek">Marek</a> and others. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "testosterone-cypionate-vs-enanthate",
+    title: "Testosterone Cypionate vs Enanthate: Do the Differences Matter? (2026)",
+    description:
+      "The two most common injectable testosterone esters, compared honestly: what actually differs between cypionate and enanthate, what doesn't, and why your clinic's choice matters less than you'd think.",
+    category: "Comparison",
+    readTime: "6 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#EAF0F0",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Cypionate and enanthate are the same testosterone attached to slightly different 'ester' chains that control how slowly it releases.",
+      "The practical differences are small - both are long-acting injectables dosed on a similar schedule, and most men would not notice a switch.",
+      "Cypionate is the more common choice in the US largely for availability reasons, not because it's superior.",
+      "Which ester you're on matters far less than your dose, injection frequency and monitoring - the things your clinician actually tunes.",
+    ],
+    sections: [
+      {
+        heading: "What is an 'ester' anyway?",
+        body: `Injectable testosterone is the same hormone your body makes, attached to a chemical chain called an ester. The ester does one main job: it controls how slowly the testosterone releases from the injection site into your bloodstream. <strong>Cypionate</strong> and <strong>enanthate</strong> are two long-acting esters with very similar release profiles - which is why they're dosed on comparable schedules and treated as broadly interchangeable in practice. The ester is a delivery mechanism, not a different drug; once it's cleaved off in the body, what's left is identical testosterone.`,
+      },
+      {
+        heading: "Is there a real difference between them?",
+        body: `Technically yes, practically very little. Their release timing differs only marginally, and both are established, well-understood options that clinicians have used for decades. Most men switched from one to the other under the same protocol would not notice a difference in how they feel. There are occasional individual reasons a clinician might prefer one - a reaction to a carrier oil, a supply issue - but "which ester" is not the lever that makes or breaks TRT. If you see marketing treating one as dramatically superior, be skeptical.`,
+      },
+      {
+        heading: "Why is cypionate so common in the US?",
+        body: `Largely history and availability rather than clinical superiority. Cypionate became the default US prescription and enanthate the more common choice in other markets, and that pattern has persisted mostly through supply and prescribing habit. So if a US telehealth provider defaults to cypionate, that's normal and not a quality signal in either direction. What you're comparing between providers isn't the ester - it's the medicine around it.`,
+      },
+      {
+        heading: "What should you actually focus on?",
+        body: `The things that genuinely shape your results: the <strong>dose</strong>, the <strong>injection frequency</strong> (some men do better splitting the same weekly amount into smaller, more frequent doses to smooth out levels), the delivery form itself if injections aren't for you - covered in <a href="/trt/articles/testosterone-injections-vs-cream-vs-oral">injections vs cream vs oral</a> - and the <a href="/trt/articles/trt-blood-work">monitoring</a> that keeps it dialed in. Those are what your clinician tunes and what our <a href="/trt">TRT provider comparison</a> weighs. The ester on the label is a footnote by comparison. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "does-trt-increase-libido",
+    title: "Does TRT Increase Libido? What Testosterone Therapy Does for Sex Drive (2026)",
+    description:
+      "For men who are genuinely low, restoring testosterone often improves libido - but it's not a guarantee, not instant, and not the same as an ED treatment. The honest picture, with the timeline.",
+    category: "Science",
+    readTime: "6 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#ECEFF4",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "In men who are genuinely testosterone-deficient, TRT commonly improves libido - low sex drive is one of the more responsive symptoms of low T.",
+      "It is not a guarantee and not immediate: libido changes tend to come in the first weeks to couple of months, and the size of the effect varies.",
+      "Libido and erectile function aren't the same thing - TRT addresses desire more directly than mechanics, and ED can have separate causes.",
+      "If your testosterone is normal, TRT is not a libido enhancer - and shouldn't be used as one.",
+    ],
+    sections: [
+      {
+        heading: "Does TRT actually raise libido?",
+        body: `For men who are genuinely low, it commonly does - low libido is one of the classic symptoms of low testosterone and one of the more reliably responsive to treatment. Restoring testosterone into a healthy range often brings back sex drive that had quietly faded, and for many men that's one of the first improvements they notice. That said, "commonly" is not "always," and the degree varies between men. It fits into the broader arc of what to expect, laid out in <a href="/trt/articles/trt-results-timeline">the TRT results timeline</a>.`,
+      },
+      {
+        heading: "How long does it take?",
+        body: `Libido is generally one of the earlier-responding effects - often changing within the first few weeks to a couple of months, rather than the many months some physical changes take. If you're several months in with proper dosing and monitoring and libido hasn't moved at all, that's worth raising with your clinician, because it may mean the dose needs adjusting or that testosterone wasn't the whole story. Patience plus follow-up beats chasing quick fixes.`,
+      },
+      {
+        heading: "Isn't low libido the same as ED?",
+        body: `No, and conflating them leads men to the wrong treatment. <strong>Libido</strong> is desire - wanting sex - and it's tied fairly directly to testosterone. <strong>Erectile function</strong> is the physical mechanics, which depend heavily on blood flow, nerves and vascular health, and can be impaired even when desire is fine. TRT can help erectile function in some low-testosterone men, but ED often has causes testosterone doesn't touch, and it has its own dedicated treatments. If erections rather than desire are the issue, TRT may not be the right tool - a point worth putting to your provider plainly.`,
+      },
+      {
+        heading: "The honest caveat",
+        body: `If your testosterone is already normal, TRT is not a libido booster, and using it as one means taking on a monitored medical treatment - with its <a href="/trt/articles/trt-side-effects">side effects</a> and its <a href="/trt/articles/trt-and-fertility">fertility considerations</a> - to chase an effect it won't reliably deliver in that situation. The right first step is confirming whether you're actually low, which is what a proper evaluation does. Providers like <a href="/trt/reviews/hims">Hims</a> and <a href="/trt/reviews/fountain">Fountain</a> run that assessment; our <a href="/trt">TRT provider comparison</a> maps the field. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "trt-and-estrogen",
+    title: "TRT and Estrogen: Why Men on Testosterone Watch Their Estradiol (2026)",
+    description:
+      "Some of the testosterone you take converts to estrogen - and that's normal and necessary. Why men on TRT monitor estradiol, what 'aromatization' means, and why crushing estrogen is a mistake.",
+    category: "Science",
+    readTime: "6 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#EAF0F0",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Men need some estrogen: a portion of testosterone naturally converts to estradiol via an enzyme called aromatase, and that estradiol supports bone, mood, libido and more.",
+      "TRT can raise estradiol along with testosterone, which is why it's one of the markers a good provider monitors.",
+      "Problems come from imbalance in either direction - too high or, just as bad, too low from over-aggressive blocking.",
+      "Estrogen management (including whether an aromatase-blocking medication is ever needed) is a clinician decision based on labs and symptoms - not a default add-on.",
+    ],
+    sections: [
+      {
+        heading: "Why is there estrogen in a testosterone conversation at all?",
+        body: `Because men are supposed to have some. An enzyme called <strong>aromatase</strong> converts a portion of testosterone into <strong>estradiol</strong> (the main estrogen), and that estradiol isn't a contaminant - it's essential, supporting bone density, mood, cognition, libido and more in men. So the goal on TRT is never "zero estrogen"; it's the right balance. This surprises men who assume estrogen is purely a female hormone or purely a problem - it's neither, and understanding that prevents a lot of self-inflicted mistakes.`,
+      },
+      {
+        heading: "What does TRT do to estrogen?",
+        body: `Since TRT raises your testosterone, and some testosterone aromatizes to estradiol, TRT can raise estradiol too - roughly tracking the extra testosterone. For most men on a sensible dose this simply settles at a new, still-healthy balance. In some men, or at higher doses, estradiol can climb enough to cause symptoms, which is exactly why it's one of the markers monitored on <a href="/trt/articles/trt-blood-work">TRT blood work</a>. Keeping the testosterone dose reasonable is itself the first and best estrogen-management tool.`,
+      },
+      {
+        heading: "What happens if estrogen is too high - or too low?",
+        body: `Both extremes cause problems, which is the part the internet gets wrong. Estradiol that runs <strong>too high</strong> can contribute to symptoms like fluid retention, moodiness or breast tissue changes. But estradiol pushed <strong>too low</strong> - usually by over-using aromatase-blocking drugs in pursuit of "crushing" estrogen - is arguably worse, dragging down libido, mood, joint comfort and bone health. The bodybuilding-forum instinct to eliminate estrogen is a genuine health mistake, and a good clinician treats symptoms plus labs, not a number in isolation.`,
+      },
+      {
+        heading: "Should you be on an estrogen blocker?",
+        body: `Usually not by default. Aromatase inhibitors are real medications with real downsides when misused, and reputable practice reserves them for men who actually need them based on symptoms and labs - not as a routine companion to every TRT prescription. If a provider hands out estrogen blockers to everyone automatically, that's a flag, not a feature. This ties into judging providers overall (see <a href="/trt/articles/is-trt-bad-for-you">is TRT bad for you</a>); our <a href="/trt">TRT provider comparison</a> weighs how carefully each one manages the whole picture. This article is general information, not medical advice.`,
+      },
+    ],
+  },
 ];
 
 export function trtSeed(base: SiteConfig): SiteConfig {
