@@ -148,6 +148,15 @@ export function proxy(req: NextRequest) {
       return NextResponse.next();
     }
 
+    // UK region (/uk/*): a subdirectory market that inherits the hub's authority.
+    // While GB is unpublished it resolves to the noindex placeholder route at
+    // /uk/[[...slug]] - served as-is so it never falls through to the bare-path
+    // redirect below (which would 301 it under /weight-loss). When GB goes live,
+    // replace this with region-aware routing into the UK content.
+    if (first === "uk") {
+      return NextResponse.next();
+    }
+
     // Generated metadata image routes (e.g. /opengraph-image) have no file
     // extension, so the matcher doesn't exclude them - serve them as-is rather
     // than redirecting the OG/Twitter image URLs into a 404.
