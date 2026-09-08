@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Check, Star, ShieldCheck } from "lucide-react";
-import { VERTICALS, DEFAULT_VERTICAL, isPublishedVertical, type Provider, type RankingPosition, type ReviewData } from "@/lib/config";
+import { VERTICALS, DEFAULT_VERTICAL, isPublishedVertical, isHiddenVertical, type Provider, type RankingPosition, type ReviewData } from "@/lib/config";
 import { getConfig } from "@/lib/config-store";
 import { ProviderCta } from "@/components/provider-cta";
 
@@ -336,7 +336,7 @@ export async function HubHome() {
             Compare the Best Health &amp; Wellness Services for Your Needs
           </h1>
           <p className="mx-auto mt-5 max-w-[760px] text-[16px] leading-relaxed text-gray-700 sm:mt-6 sm:text-[19px]">
-            Independent rankings across weight loss, hair growth, TRT, HRT, hearing aids and online
+            Independent rankings across weight loss, hair growth, TRT, HRT and online
             therapy - real published prices and verified customer reviews.
           </p>
 
@@ -345,7 +345,7 @@ export async function HubHome() {
           {/* Mobile is a compact 2-up grid of tappable category tiles (icon +
               name only); sm+ upgrades to the richer card with sub-links. */}
           <div className="mx-auto mt-10 grid max-w-[1080px] grid-cols-2 gap-3 text-left sm:mt-12 sm:gap-3.5 sm:grid-cols-2 lg:grid-cols-3">
-            {VERTICALS.map((v) => {
+            {VERTICALS.filter((v) => !isHiddenVertical(v.id)).map((v) => {
               const live = isPublishedVertical(v.id);
               const Icon = VERTICAL_ICON[v.id] ?? WeightLossIcon;
               const name = CATEGORY_NAME[v.id] ?? v.name;
