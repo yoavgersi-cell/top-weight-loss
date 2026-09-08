@@ -1535,9 +1535,14 @@ export const articles: Article[] = [
   },
   {
     slug: "is-embody-legit",
-    title: "Is Embody Legit? An Honest Review of Its GLP-1 Program (2026)",
+    // Decoupled from the review's lane (Sep 2026): the title previously said
+    // "An Honest Review" and led with cost, competing with /reviews/embody for
+    // "embody review" queries - both pages then stalled deep for the "embody"
+    // cluster. This owns the legitimacy/safety/trust intent; the review owns
+    // "embody reviews / cost / results". They cross-link.
+    title: "Is Embody Legit? Safety, Pharmacy Standards & What to Check (2026)",
     description:
-      "Is Embody legit? A clear look at Embody's GLP-1 weight-loss program - its LegitScript certification, licensed pharmacies, pricing, how it works, and the pros and cons.",
+      "Is Embody legit and safe? A clear look at Embody's LegitScript certification, its licensed US pharmacies, how the online prescribing process works, and what to check before you start.",
     category: "Advice",
     readTime: "6 min read",
     publishedAt: "2026-08-12",
