@@ -58,6 +58,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 async function hubSitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [
     { url: HUB_URL, lastModified: FALLBACK_DATE, changeFrequency: "weekly", priority: 1 },
+    // UK region (published, compliance-framed). Only built, indexable UK pages
+    // are listed; /uk placeholders are noindex and excluded.
+    { url: `${HUB_URL}/uk/weight-loss`, lastModified: FALLBACK_DATE, changeFrequency: "weekly", priority: 0.7 },
   ];
 
   for (const vertical of VERTICAL_IDS) {

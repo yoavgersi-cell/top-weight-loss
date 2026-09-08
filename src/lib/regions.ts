@@ -32,9 +32,11 @@ export const REGIONS: Region[] = [
 
 export const DEFAULT_REGION = "us";
 
-// Only these regions are live and indexable. UK stays out until its content and
-// compliant model exist - flip it on by adding "gb".
-export const PUBLISHED_REGIONS = ["us"];
+// Live, indexable regions. GB is published: its content is service-framed and
+// compliance-safe (no medicine names / "GLP-1" / injection / efficacy), and it
+// has its own UK chrome. Individual /uk paths still gate their own robots (only
+// built pages are indexable; placeholders stay noindex).
+export const PUBLISHED_REGIONS = ["us", "gb"];
 export const isPublishedRegion = (id: string): boolean => PUBLISHED_REGIONS.includes(id);
 
 export const regionById = (id: string): Region | undefined => REGIONS.find((r) => r.id === id);
