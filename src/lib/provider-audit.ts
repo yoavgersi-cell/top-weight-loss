@@ -29,7 +29,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Shipping", value: "Free 1-2 day, tracked and insured" },
       { label: "Certification", value: "LegitScript-certified; US-based 503A compounding pharmacies" },
       { label: "Refund policy", value: "Full refund if a provider doesn't approve treatment" },
-      { label: "Trustpilot record", value: "3.8 across 4,956 reviews" },
+      { label: "Trustpilot record", value: "3.7 across 7,250 reviews" },
     ],
   },
   "weight-loss:wellmedr": {

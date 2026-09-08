@@ -161,7 +161,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
       {
         question: "Which has the best customer reviews?",
         answer:
-          "Medvi has the strongest verified review record of the three - 4.4 on Trustpilot across 14,372 reviews, with support and communication the recurring themes. embody holds 3.8 across 4,956 reviews. Current ratings for each provider are shown on their cards above.",
+          "Medvi has the strongest verified review record of the three - 4.4 on Trustpilot across 14,372 reviews, with support and communication the recurring themes. embody holds 3.7 across 7,250 reviews. Current ratings for each provider are shown on their cards above.",
       },
       {
         question: "Can I get brand-name Ozempic, Zepbound or Wegovy from any of them?",
@@ -212,7 +212,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     description:
       "Three verified Trustpilot records, three ways to buy the same compounded GLP-1s: embody ($69 flat), Medvi ($99 all-inclusive, 4.4 across 14,372 reviews) and wellmedr ($59 on a 12-month plan, 4.7 rated).",
     intro:
-      "This trio is unusual: all three carry a verified Trustpilot record, so for once the review data can carry as much weight as the price tag. wellmedr is the cheapest at $59/month - a rate that locks on a 12-month plan - and holds the highest rating here, 4.7 across 1,205 reviews. embody's $69 is flat with zero commitment and a refund if a provider doesn't approve you, at 3.8 across 4,956 reviews. Medvi's $99 promo is the all-inclusive, high-touch option - video visits, free dietician, care coaching - with the largest review base of the three: 4.4 across 14,372.",
+      "This trio is unusual: all three carry a verified Trustpilot record, so for once the review data can carry as much weight as the price tag. wellmedr is the cheapest at $59/month - a rate that locks on a 12-month plan - and holds the highest rating here, 4.7 across 1,205 reviews. embody's $69 is flat with zero commitment and a refund if a provider doesn't approve you, at 3.7 across 7,250 reviews. Medvi's $99 promo is the all-inclusive, high-touch option - video visits, free dietician, care coaching - with the largest review base of the three: 4.4 across 14,372.",
     verdict:
       "Decide on commitment first, support second. Ready to commit to a year: wellmedr - the $59 lock is the best per-month rate in the market, its 4.7 rating is the highest here, and its weight-loss warranty backs the plan. Not ready to commit to anything: embody - $69 flat, cancel anytime, refunded if not approved. Know from experience that you quit without someone checking in: Medvi - the $30 premium over embody buys video visits, a dietician and coaching, and 14,372 reviews averaging 4.4 say that model holds up at scale. All three prescribe the same compounded semaglutide after a licensed-provider review.",
     faqs: [
@@ -224,7 +224,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
       {
         question: "Which has the best Trustpilot rating?",
         answer:
-          "wellmedr holds the highest rating of the three - 4.7 across 1,205 reviews. Medvi has the largest verified base: 4.4 across 14,372 reviews. embody sits at 3.8 across 4,956. All three figures are the providers' live Trustpilot aggregates at our last verification.",
+          "wellmedr holds the highest rating of the three - 4.7 across 1,205 reviews. Medvi has the largest verified base: 4.4 across 14,372 reviews. embody sits at 3.7 across 7,250. All three figures are the providers' live Trustpilot aggregates at our last verification.",
       },
       {
         question: "Which is best if I don't want a commitment?",
