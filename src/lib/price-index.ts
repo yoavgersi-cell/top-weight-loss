@@ -41,7 +41,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     tirzepatide: { price: "$119", note: "reg. $129; month-to-month" },
     shipping: "Ships in 1-2 days, cold-chain",
     commitment: "None - month to month, cancel anytime",
-    trustpilot: { rating: "3.8", count: "4,956" },
+    trustpilot: { rating: "3.7", count: "7,250" },
   },
   {
     providerId: "altrx",

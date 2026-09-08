@@ -574,9 +574,75 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
     ],
   },
   embody: {
-    rating: "3.8",
-    reviewCount: "4956",
+    rating: "3.7",
+    reviewCount: "7250",
     reviews: [
+      // Sep 2026 batch (operator-supplied Trustpilot screenshots, Sep 4-7 2026,
+      // plus one Jul 3). Transcribed faithfully with only minimal typo/spacing
+      // cleanup - the reviewers' wording and meaning are kept.
+      {
+        title: "My provider Dana was very pleasant",
+        text: "My provider Dana was very pleasant to talk to and answered all my questions!",
+        name: "Amanda Godoy",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "She was very understanding and helpful",
+        text: "Had an appointment, even set a time, but I guess our time zones were different so she called me. She was very understanding and helpful. She is amazing and very helpful.",
+        name: "Amy Francis",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Honest",
+        text: "Honest, helpful. Great customer service.",
+        name: "Jill Wittekind",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "First consultation",
+        text: "Thorough, quick and easy!",
+        name: "Caitlin Glenn",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "My experience with Embody has been all real and perfect",
+        text: "My experience with Embody has been all perfect and very professional. I had issues with my video connecting so my provider took it upon herself to phone call me - it went perfect, I was heard and understood. So much faith in embody, with the affordable prices that don't change.",
+        name: "Ann Kirch",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Experience",
+        text: "Knowledgeable, friendly.",
+        name: "Kim",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "The ordering experience was excellent",
+        text: "The ordering experience was excellent, all information was given and everything done online. It was a very comfortable process.",
+        name: "Thom K.",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Consult",
+        text: "Very polite.",
+        name: "Karly Martin",
+        location: "US",
+        rating: 4,
+      },
+      {
+        title: "No hassles",
+        text: "No hassles. Free delivery. Explained everything.",
+        name: "Teresa Brown",
+        location: "US",
+        rating: 5,
+      },
       // Four fresh 4-star entries (operator-supplied screenshots, Jul-Aug 2026;
       // Josh/Bryan/Kelli tagged "Invited", "customer" tagged "Verified"). The
       // honest service hiccups they describe are kept verbatim - that mix is
@@ -719,7 +785,7 @@ const defaultReviews: ReviewData[] = [
     providerId: "altrx",
     updatedAt: "2026-08-22",
     shortSummary: "Affordable GLP-1 program from $89/month - compounded semaglutide and tirzepatide plus brand-name options - with clinician-guided, self-pay care and no insurance required.",
-    reviewIntro: "altRx bills itself as \"the #1 most affordable GLP-1 program,\" and its published prices largely back that up: compounded GLP-1 (semaglutide) from $89/month and GLP-1 + GIP (tirzepatide) from $149/month - flat at every dose, so the price doesn't climb as you titrate up - alongside one of the few genuine brand-name shelves in this space (Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 per month). It's a self-pay telehealth service: you complete a short assessment, a licensed provider (physician, PA, or nurse practitioner) reviews it, and if appropriate a prescription goes to a licensed US pharmacy, with free shipping in about 5-7 days. No insurance is required, Buy Now, Pay Later is available, and you can pause or cancel anytime. Two things to know before the details: shipping is slower than the 1-2 day providers (embody, DirectMeds), and Trustpilot does not currently display an aggregate score on altRx's profile - the individual reviews we quote on this page are real, but there's no independent average to lean on the way there is for rivals like Medvi (4.4 across 14,372) or embody (3.8 across 4,956). One of the real 4-star reviews we surface notes a refill 'yet to be fulfilled with zero reason as to why' - worth factoring in alongside the price advantage.",
+    reviewIntro: "altRx bills itself as \"the #1 most affordable GLP-1 program,\" and its published prices largely back that up: compounded GLP-1 (semaglutide) from $89/month and GLP-1 + GIP (tirzepatide) from $149/month - flat at every dose, so the price doesn't climb as you titrate up - alongside one of the few genuine brand-name shelves in this space (Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 per month). It's a self-pay telehealth service: you complete a short assessment, a licensed provider (physician, PA, or nurse practitioner) reviews it, and if appropriate a prescription goes to a licensed US pharmacy, with free shipping in about 5-7 days. No insurance is required, Buy Now, Pay Later is available, and you can pause or cancel anytime. Two things to know before the details: shipping is slower than the 1-2 day providers (embody, DirectMeds), and Trustpilot does not currently display an aggregate score on altRx's profile - the individual reviews we quote on this page are real, but there's no independent average to lean on the way there is for rivals like Medvi (4.4 across 14,372) or embody (3.7 across 7,250). One of the real 4-star reviews we surface notes a refill 'yet to be fulfilled with zero reason as to why' - worth factoring in alongside the price advantage.",
     keyFeatures: [
       "Compounded GLP-1 from $89/mo, GLP-1 + GIP from $149/mo",
       "Brand-name options too: Zepbound and Wegovy",
@@ -1038,9 +1104,9 @@ const defaultReviews: ReviewData[] = [
   {
     slug: "embody",
     providerId: "embody",
-    updatedAt: "2026-09-07",
-    shortSummary: "Doctor-prescribed GLP-1 treatment - compounded semaglutide from $69/mo and tirzepatide from $119/mo - shipped in 1-2 days with no insurance required. Rated 3.8 across 4,956 Trustpilot reviews.",
-    reviewIntro: "embody offers doctor-prescribed GLP-1 weight loss treatment - compounded semaglutide and tirzepatide injections - through a 100% online process. Getting started takes a roughly 5-minute health qualifier, after which a medical practitioner reviews your chart (embody says usually within 24 hours, often under 5). Pricing is flat and simple: $69/month for semaglutide and $119/month for tirzepatide, with no insurance required, no hidden fees, and no clinic visits. Medication ships in 1-2 days in temperature-controlled, tracked, insured packaging, and embody is LegitScript-certified and works with US-based 503A compounding pharmacies. On Trustpilot, embody averages 3.8 across 4,956 reviews - an honest, mixed-to-positive record whose recent reviews cluster around two themes: responsive, proactive customer service ('from my very first inquiry I've had excellent communication... customer service updated me every step,' writes one tirzepatide patient) and the no-surprises pricing ('Love the fact that there are no surprises as in costly up front cost'). A 3.8 also means a minority of customers had negative experiences - worth reading both ends of the reviews before deciding, as with any provider.",
+    updatedAt: "2026-09-08",
+    shortSummary: "Doctor-prescribed GLP-1 treatment - compounded semaglutide from $69/mo and tirzepatide from $119/mo - shipped in 1-2 days with no insurance required. Rated 3.7 across 7,250 Trustpilot reviews.",
+    reviewIntro: "embody offers doctor-prescribed GLP-1 weight loss treatment - compounded semaglutide and tirzepatide injections - through a 100% online process. Getting started takes a roughly 5-minute health qualifier, after which a medical practitioner reviews your chart (embody says usually within 24 hours, often under 5). Pricing is flat and simple: $69/month for semaglutide and $119/month for tirzepatide, with no insurance required, no hidden fees, and no clinic visits. Medication ships in 1-2 days in temperature-controlled, tracked, insured packaging, and embody is LegitScript-certified and works with US-based 503A compounding pharmacies. On Trustpilot, embody averages 3.7 across 7,250 reviews - an honest, mixed-to-positive record whose recent reviews cluster around two themes: responsive, proactive customer service ('from my very first inquiry I've had excellent communication... customer service updated me every step,' writes one tirzepatide patient) and the no-surprises pricing ('Love the fact that there are no surprises as in costly up front cost'). A 3.7 also means a minority of customers had negative experiences - worth reading both ends of the reviews before deciding, as with any provider.",
     keyFeatures: [
       "Compounded semaglutide ($69/mo) and tirzepatide ($119/mo)",
       "5-minute health qualifier; doctor review usually within 24 hrs",
@@ -1063,7 +1129,7 @@ const defaultReviews: ReviewData[] = [
       "LegitScript-certified with US-based 503A pharmacies"
     ],
     cons: [
-      "3.8 Trustpilot average - most reviews are 5-star, but a minority report negative experiences",
+      "3.7 Trustpilot average - most reviews are 5-star, but a minority report negative experiences",
       "Compounded medications only (not brand-name Ozempic/Wegovy/Zepbound)",
       "Injectable options only - no oral or needle-free format",
       "Medication-first model - no dietician or formal coaching layer",
@@ -1074,7 +1140,7 @@ const defaultReviews: ReviewData[] = [
       "Anyone who prefers a fully online process",
       "Those who want fast shipping and simple flat pricing"
     ],
-    finalVerdict: "embody is a strong choice for affordable, doctor-prescribed GLP-1 treatment - and an honest one to recommend, because its record is public: flat $69-$119/month with everything included, free 1-2 day cold shipping, LegitScript certification with US-based 503A pharmacies, a full refund if you're not approved, and 4,956 Trustpilot reviews averaging 3.8 whose recent pages consistently praise the customer-service communication. The realistic caveats: it's compounded-only and injectable-only, there's no coaching layer, and a 3.8 means not every experience lands well. For someone who wants the lowest-friction, no-commitment way to start GLP-1 treatment at a transparent price, it's one of the strongest offers in our ranking - compare it directly in embody vs wellmedr and altRx vs embody before deciding.",
+    finalVerdict: "embody is a strong choice for affordable, doctor-prescribed GLP-1 treatment - and an honest one to recommend, because its record is public: flat $69-$119/month with everything included, free 1-2 day cold shipping, LegitScript certification with US-based 503A pharmacies, a full refund if you're not approved, and 7,250 Trustpilot reviews averaging 3.7 whose recent pages consistently praise the customer-service communication. The realistic caveats: it's compounded-only and injectable-only, there's no coaching layer, and a 3.7 means not every experience lands well. For someone who wants the lowest-friction, no-commitment way to start GLP-1 treatment at a transparent price, it's one of the strongest offers in our ranking - compare it directly in embody vs wellmedr and altRx vs embody before deciding.",
     trustBadges: [
       "Money-back guarantee",
       "Free expedited delivery",
@@ -3726,13 +3792,13 @@ const embodySproutBattle: BattleData = {
   description:
     "embody ($69/mo semaglutide, 1-2 day cold-chain shipping, LegitScript-certified) vs Sprout ($149/mo, ships in 2 days, brand-name Wegovy available). Real prices, honest verdict.",
   intro:
-    "embody and Sprout both move fast - embody ships in 1-2 days with cold-chain packaging, Sprout ships prescriptions within 2 days of approval - so this matchup is really decided elsewhere. embody's case is price and verification: $69/month semaglutide and $119 tirzepatide (regularly $79/$129), flat month to month, LegitScript-certified with US 503A pharmacies and a public Trustpilot record (3.8 across 4,956 reviews). Sprout's case is breadth and personalization: plans built around your goals, $200 off the first month, and - unusually for its tier - brand-name Wegovy on the shelf from $1,799 alongside compounded semaglutide ($149) and tirzepatide ($199).",
+    "embody and Sprout both move fast - embody ships in 1-2 days with cold-chain packaging, Sprout ships prescriptions within 2 days of approval - so this matchup is really decided elsewhere. embody's case is price and verification: $69/month semaglutide and $119 tirzepatide (regularly $79/$129), flat month to month, LegitScript-certified with US 503A pharmacies and a public Trustpilot record (3.7 across 7,250 reviews). Sprout's case is breadth and personalization: plans built around your goals, $200 off the first month, and - unusually for its tier - brand-name Wegovy on the shelf from $1,799 alongside compounded semaglutide ($149) and tirzepatide ($199).",
   verdict:
     "embody wins for most people: it's $80/month cheaper on semaglutide, equally fast, and carries the certifications and public review record Sprout hasn't published yet. Choose Sprout if the brand-name path matters - it's the only one of the two that can put a Wegovy pen in the box - or if its personalized-plan model and $200 first-month discount fit how you want to start. On the same compounded molecules, though, the price gap is hard to argue with.",
   verdictWinnerPoints: [
     "$69/mo semaglutide, $119 tirzepatide - flat, month to month",
     "LegitScript-certified, US 503A pharmacies, refund if not approved",
-    "Public track record: 3.8 on Trustpilot across 4,956 reviews",
+    "Public track record: 3.7 on Trustpilot across 7,250 reviews",
   ],
   verdictLoserPoints: [
     "Brand-name Wegovy available (from $1,799/mo)",
@@ -3777,10 +3843,10 @@ const embodySproutBattle: BattleData = {
       name: "Verification & Track Record",
       winner: "provider1",
       explanation:
-        "embody is LegitScript-certified, names its US 503A pharmacy fulfillment, refunds you if a provider doesn't approve treatment, and carries a public Trustpilot record - 3.8 across 4,956 reviews, mixed but transparent. Sprout's individual reviews are positive and specific, but it publishes no aggregate score and fewer program details.",
+        "embody is LegitScript-certified, names its US 503A pharmacy fulfillment, refunds you if a provider doesn't approve treatment, and carries a public Trustpilot record - 3.7 across 7,250 reviews, mixed but transparent. Sprout's individual reviews are positive and specific, but it publishes no aggregate score and fewer program details.",
       supportingPoints: [
         "LegitScript certification + 503A pharmacies (embody)",
-        "3.8 across 4,956 public Trustpilot reviews (embody)",
+        "3.7 across 7,250 public Trustpilot reviews (embody)",
         "Positive individual reviews, no published aggregate (Sprout)",
       ],
     },
@@ -3790,7 +3856,7 @@ const embodySproutBattle: BattleData = {
     { feature: "First-month offer", provider1Value: "Promo pricing (reg. $79/$129)", provider2Value: "$200 off month one", highlight: "provider2" },
     { feature: "Brand-name option", provider1Value: "None", provider2Value: "Wegovy from $1,799/mo", highlight: "provider2" },
     { feature: "Shipping", provider1Value: "Free 1-2 day, cold-chain, insured", provider2Value: "Ships within 2 days", highlight: "both" },
-    { feature: "Trustpilot", provider1Value: "3.8 across 4,956 reviews", provider2Value: "No published aggregate", highlight: "provider1" },
+    { feature: "Trustpilot", provider1Value: "3.7 across 7,250 reviews", provider2Value: "No published aggregate", highlight: "provider1" },
     { feature: "Certifications", provider1Value: "LegitScript, US 503A pharmacies", provider2Value: "Licensed provider review", highlight: "provider1" },
   ],
 };
