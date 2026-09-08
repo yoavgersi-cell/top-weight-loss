@@ -335,8 +335,19 @@ export const isVertical = (id: string): boolean => VERTICAL_IDS.includes(id);
 // (providers, comparisons, etc.) while still being unpublished - it renders for
 // preview but stays out of the hub card, the sitemap, and the index until its
 // affiliate data is filled in and it's added here. Add a vertical id to launch it.
-export const PUBLISHED_VERTICALS = ["weight-loss", "hair-loss", "trt", "hrt", "hearing-aids", "online-therapy"];
+export const PUBLISHED_VERTICALS = ["weight-loss", "hair-loss", "trt", "hrt", "online-therapy"];
 export const isPublishedVertical = (id: string): boolean => PUBLISHED_VERTICALS.includes(id);
+
+// Retired verticals: off-theme categories we've pulled from the hub (Sep 2026:
+// hearing-aids - OTC devices, off-topic from the GLP-1 / hormone / telehealth-
+// medicine cluster, diluting topical focus). They stay in VERTICAL_IDS so their
+// URLs keep resolving (served noindex, no 404s / no lost link equity), but they
+// are hidden everywhere a user or crawler would discover them: the hub grid, the
+// footer/nav, the sitemap and llms.txt. Being absent from PUBLISHED_VERTICALS
+// already makes their pages noindex and drops them from the sitemap; this list
+// additionally suppresses the "coming soon" placeholder so they vanish entirely.
+export const HIDDEN_VERTICALS = ["hearing-aids"];
+export const isHiddenVertical = (id: string): boolean => HIDDEN_VERTICALS.includes(id);
 
 // Providers we have an affiliate relationship with. Used to gate the product
 // carousel/catalog and affiliate-only landing pages. NOTE: since Aug 2026 this
