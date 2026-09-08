@@ -3,16 +3,40 @@ import Link from "next/link";
 import { isPublishedRegion } from "@/lib/regions";
 import { UkWeightLossPage } from "@/components/pages/uk-weight-loss-page";
 
-// UK region routing. While GB is unpublished (see PUBLISHED_REGIONS) every /uk/*
-// path is kept noindex. Built UK pages (e.g. the compliant /uk/weight-loss
-// service comparison) render here; everything else falls back to a "coming
-// soon" placeholder. No US content is ever served under /uk.
+// UK region routing. Built, compliant UK pages (e.g. /uk/weight-loss) render
+// and are indexable; any other /uk/* path falls back to a noindex "coming soon"
+// placeholder. No US content is ever served under /uk.
 
-export const metadata: Metadata = {
-  title: "TreatmentsHub UK",
-  // Never index the UK region until it is published and compliance-reviewed.
-  robots: { index: false, follow: false },
+const UK_ORIGIN = "https://www.treatmentshub.com";
+const UK_INDEXABLE: Record<string, { title: string; description: string }> = {
+  "weight-loss": {
+    title: "Compare UK Weight-Loss Services (2026) | TreatmentsHub",
+    description:
+      "Compare UK weight-loss services side by side - how you're supported, the process and delivery, programme pricing and verified customer reviews. Independent and honest.",
+  },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug?: string[] }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const key = slug?.length === 1 ? slug[0] : "";
+  const page = UK_INDEXABLE[key];
+  if (page) {
+    const url = `${UK_ORIGIN}/uk/${key}`;
+    return {
+      title: { absolute: page.title },
+      description: page.description,
+      alternates: { canonical: url, languages: { "en-GB": url } },
+      openGraph: { title: page.title, description: page.description, url, type: "website" },
+      robots: { index: true, follow: true },
+    };
+  }
+  // Placeholder and any unbuilt /uk path: not indexable.
+  return { title: "TreatmentsHub UK", robots: { index: false, follow: false } };
+}
 
 export default async function UkRouter({
   params,

@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { DisclosureBar } from "@/components/disclosure-bar";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
 import { MetaPixel } from "@/components/meta-pixel";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { hreflangLanguages } from "@/lib/regions";
@@ -128,10 +125,10 @@ export default function RootLayout({
         <GoogleAnalytics />
         <Analytics />
         <SpeedInsights />
-        <DisclosureBar />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        {/* Chrome (header/footer) is provided per-region by the route-group
+            layouts: (main)/ renders the US chrome, uk/ renders compliant UK
+            chrome. The root stays chrome-free so the two never share it. */}
+        {children}
       </body>
     </html>
   );
