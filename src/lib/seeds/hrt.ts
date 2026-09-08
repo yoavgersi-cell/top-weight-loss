@@ -1052,6 +1052,274 @@ const articles: ArticleData[] = [
       },
     ],
   },
+  // ───── Depth expansion (Sep 8 2026): high-volume HRT questions with thin or
+  // no coverage - side effects, weight, duration, libido, non-hormonal options,
+  // timing, and menopausal hair thinning (cross-linked to hair-loss). Qualitative
+  // established knowledge only; no invented figures; clinician-decides framing.
+  {
+    slug: "hrt-side-effects",
+    title: "HRT Side Effects: What's Common, What's Manageable, and What's Serious (2026)",
+    description:
+      "The side effects women actually report on HRT, which ones usually settle as the body adjusts, which ones a dose or delivery change fixes, and the warning signs that mean call your clinician.",
+    category: "Science",
+    readTime: "7 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#F4EEF3",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Most early HRT side effects - breast tenderness, bloating, spotting, mild headaches - are the body adjusting, and often fade over the first weeks to months.",
+      "Many persistent side effects are a formulation problem, not a verdict on HRT: changing the dose, the hormone, or the delivery route (patch vs pill) resolves a lot of them.",
+      "A smaller set of symptoms are genuine warning signs that warrant prompt medical attention rather than waiting them out.",
+      "Side effects are individual - the point of a prescribing clinician is to tune the regimen to you, which is why 'it didn't agree with me' rarely means 'HRT doesn't work'.",
+    ],
+    sections: [
+      {
+        heading: "What are the common, early side effects?",
+        body: `The ones women report most in the first weeks are the body recalibrating to hormones it had been running short on: <strong>breast tenderness, bloating, mild nausea, headaches, mood shifts, and changes in bleeding or spotting</strong>. On a patch, some women get local skin irritation. The honest framing is that these are common and usually mild, and a large share settle as the regimen beds in over the first one to three months. What matters is not pretending they never happen - it is knowing that "unpleasant for a few weeks" and "wrong regimen for me" are different situations, and a good prescriber will tell you which milestones to expect before you start. If you are still weighing the decision itself, <a href="/hrt/articles/hrt-pros-and-cons">the pros and cons of HRT</a> lays out both sides.`,
+      },
+      {
+        heading: "Which side effects mean the formulation needs adjusting?",
+        body: `This is the part most search results skip. A side effect that persists past the adjustment window is frequently a <em>formulation</em> signal, not a reason to abandon treatment. Persistent bloating or breast tenderness can track to the estrogen dose or the type of progesterone; ongoing headaches or mood effects sometimes improve when a woman moves from an oral pill to a transdermal patch or gel, because the route changes how the hormone is delivered. Breakthrough bleeding often needs the progesterone side of the regimen revisited. None of this is something to self-adjust - but it is exactly why the first few months of HRT are a tuning period with your clinician, and why <a href="/hrt/articles/estrogen-patch-vs-pill">patch vs pill</a> is a real medical choice rather than a preference.`,
+      },
+      {
+        heading: "What are the serious warning signs?",
+        body: `A short, non-negotiable list. Symptoms that point to a possible blood clot - such as sudden leg pain or swelling, chest pain, breathlessness, or a sudden severe headache or vision change - are reasons to seek medical help promptly rather than wait for the next appointment. New or unusual breast changes, or bleeding that is unexpected for your situation, should be reported and evaluated rather than assumed benign. These are uncommon, but they are the reason HRT runs through a licensed clinician who takes your full history first: certain conditions and histories change the risk picture, which is covered honestly in <a href="/hrt/articles/hrt-pros-and-cons">the pros and cons</a>. This article is general information and cannot tell you which category your symptom falls into - that is what your prescriber is for.`,
+      },
+      {
+        heading: "Do side effects depend on the type of HRT?",
+        body: `They do, and that is genuinely good news, because it means side effects are often adjustable. The estrogen dose, whether progesterone is included and in what form, and the delivery route all shape what you feel. It is also why "bioidentical" marketing deserves a clear head - the term describes molecular structure, not a guarantee of fewer side effects, and we untangle that in <a href="/hrt/articles/bioidentical-hormones-explained">bioidentical hormones explained</a>. The practical takeaway: a side effect is information for your clinician to act on, not a fixed property of "HRT" as a single thing.`,
+      },
+      {
+        heading: "How do I manage this in practice?",
+        body: `Track what you feel and when, especially in the first three months, and bring it to your prescriber rather than quietly stopping - stopping abruptly can bring symptoms back and loses the information about what to adjust. Menopause-focused telehealth is built around this kind of iterative tuning: providers like <a href="/hrt/reviews/midi">Midi</a> and <a href="/hrt/reviews/winona">Winona</a> handle follow-ups and dose adjustments as part of the service, and our <a href="/hrt">HRT provider comparison</a> maps who offers what. If you are still at the "is this even for me" stage, start with <a href="/hrt/articles/what-is-hrt">what is HRT</a>. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "does-hrt-cause-weight-gain",
+    title: "Does HRT Cause Weight Gain? Separating Menopause From the Medication (2026)",
+    description:
+      "The honest answer to one of the most-searched HRT fears: what menopause itself does to weight, what HRT does and doesn't do, and why the two get blamed for each other.",
+    category: "Science",
+    readTime: "7 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#EEF2F5",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "The weight changes women notice around this age are driven largely by menopause and aging - shifting metabolism and fat distribution - not by HRT itself.",
+      "HRT is not a weight-loss treatment and should not be sold as one, but it is also not the cause of midlife weight gain it is often blamed for.",
+      "Some early, temporary bloating or fluid shifts on HRT can feel like weight gain without being fat gain - and often settle as the regimen adjusts.",
+      "If weight is the primary concern, that is a separate conversation with its own evidence-based options - not a reason to start or avoid HRT.",
+    ],
+    sections: [
+      {
+        heading: "Does HRT itself make you gain weight?",
+        body: `The fear is understandable and the honest answer is reassuring: HRT is not established as a driver of fat gain, and it is not a weight-loss drug either. What genuinely happens around the menopause transition - a shift in metabolism, muscle mass and where the body stores fat, with more settling around the middle - is largely the work of falling estrogen and aging, and it tends to happen with or without HRT. In other words, the thing women are afraid HRT will cause is often already underway because of menopause itself, which is exactly why the two get tangled together in search results. A responsible clinician will not promise HRT will change your weight in either direction.`,
+      },
+      {
+        heading: "So why do some women feel heavier after starting?",
+        body: `Two honest reasons. First, timing: women often start HRT in the same window that menopausal body changes are accelerating, so changes that would have happened anyway get attributed to the new medication. Second, early <strong>fluid retention and bloating</strong> are among the common initial side effects - covered in <a href="/hrt/articles/hrt-side-effects">HRT side effects</a> - and that can register on the scale or in how clothes fit without being fat gain. That kind of shift frequently settles as the body adjusts over the first weeks to months, and if it does not, the regimen itself can be revisited with your prescriber.`,
+      },
+      {
+        heading: "Can HRT actually help with midlife body changes?",
+        body: `Indirectly, and this is where honesty matters most. By treating the symptoms that wreck sleep and energy - hot flashes, night sweats, disrupted sleep - HRT can make it more feasible to stay active and eat the way you intend, and poor sleep is itself tied to appetite and metabolism. That is a real, plausible benefit. What it is not is a shortcut: HRT does not do the work of a weight strategy, and any provider implying otherwise is overselling. The lever for weight is still the ordinary one - nutrition, activity, sleep, and where appropriate, treatments designed for weight.`,
+      },
+      {
+        heading: "What if weight is my main concern?",
+        body: `Then it deserves its own path rather than being routed through hormone therapy. Weight management has its own evidence-based options, and if that is genuinely the priority, our <a href="/weight-loss">weight-loss provider comparison</a> and guides cover them directly - including how the medical options actually work and what they cost. HRT and weight care can run in parallel under clinical guidance when both are warranted, but they answer different questions. Deciding which conversation you are actually trying to have is the first useful step.`,
+      },
+      {
+        heading: "The honest bottom line",
+        body: `Do not start HRT expecting to lose weight, and do not avoid HRT for fear of gaining it - both are the wrong reasons because neither reflects what the treatment does. Base the HRT decision on your menopause symptoms, history and timing, with a clinician - the framework is in <a href="/hrt/articles/hrt-pros-and-cons">the pros and cons of HRT</a> - and handle weight as its own project. Menopause-focused providers like <a href="/hrt/reviews/midi">Midi</a> and <a href="/hrt/reviews/winona">Winona</a> can evaluate the hormone side; see the field in our <a href="/hrt">HRT comparison</a>. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "how-long-can-you-stay-on-hrt",
+    title: "How Long Can You Stay on HRT? The Honest Answer (2026)",
+    description:
+      "There is no universal expiry date on HRT. Why the old 'shortest time possible' rule has softened, what actually drives the duration decision, and why it's a periodic review rather than a countdown.",
+    category: "Guide",
+    readTime: "6 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#F2EFF6",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "There is no fixed maximum number of years that applies to everyone - the rigid 'stop after five years' rule has given way to individualized, periodically reviewed decisions.",
+      "Duration depends on your symptoms, your risk profile, the formulation, and when you started - the same factors that shaped the decision to begin.",
+      "The right model is a regular check-in with your clinician - typically about once a year - not a countdown to a hard stop.",
+      "If and when you do stop, doing it as a planned, guided step reduces the chance of symptoms rebounding.",
+    ],
+    sections: [
+      {
+        heading: "Is there a hard limit on how long you can take HRT?",
+        body: `No single number applies to every woman, and the blunt "shortest duration possible" guidance that many women still remember has been softened considerably as the understanding matured. The modern approach treats duration as an individual risk-benefit judgment that gets revisited over time, not a fixed prescription length set on day one. For some women that means a few years through the worst of the transition; for others, with their clinician's agreement, it means longer. The key shift is from a rule to a conversation.`,
+      },
+      {
+        heading: "What actually decides how long you stay on it?",
+        body: `The same factors that shaped starting, re-weighed as time passes: how much your symptoms would return without it, your personal and family history, the formulation and dose you are on, and your age and time since menopause. <strong>Timing</strong> matters here as much as it did at the start - the risk-benefit balance can shift as you get older, which is precisely why it is reviewed rather than assumed. Genitourinary symptoms in particular tend to persist or worsen with time rather than resolve, which is one reason some treatment continues in some form. The framework behind all of this is in <a href="/hrt/articles/hrt-pros-and-cons">the pros and cons of HRT</a>.`,
+      },
+      {
+        heading: "How often should the decision be reviewed?",
+        body: `As a rule of thumb, at least once a year - a deliberate check-in where you and your clinician look at whether the benefits still outweigh the considerations for you specifically, whether the dose or form should change, and whether anything in your health has shifted. This is one of the practical advantages of menopause-focused telehealth: providers such as <a href="/hrt/reviews/midi">Midi</a> and <a href="/hrt/reviews/winona">Winona</a> build these periodic reviews into the service rather than letting a prescription roll on untouched. A regimen that is never revisited is the actual thing to avoid - in either direction.`,
+      },
+      {
+        heading: "What happens when you stop?",
+        body: `Stopping is a legitimate decision, and like starting it works best as a planned step rather than an abrupt halt. Some women find symptoms return when they come off - sometimes briefly, sometimes enough to reconsider - and a clinician can guide how to taper or transition to minimize that, and what non-hormonal options exist if symptoms persist. If that scenario is on your mind, <a href="/hrt/articles/non-hormonal-menopause-treatment">non-hormonal menopause treatments</a> covers the alternatives, and the <a href="/hrt">HRT provider comparison</a> maps who supports the full arc. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "hrt-and-libido",
+    title: "HRT and Libido: Can Hormone Therapy Bring Back Sex Drive? (2026)",
+    description:
+      "Low libido in menopause has more than one cause, so HRT helps some women and not others. How estrogen, comfort, sleep and testosterone each play a part - and why it's rarely a one-hormone fix.",
+    category: "Science",
+    readTime: "6 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#F4EEF3",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Menopausal low libido usually has several overlapping causes, so there is no single hormone that reliably 'switches it back on'.",
+      "Standard HRT often helps indirectly and substantially - by relieving painful dryness, restoring sleep, and lifting the mood and energy that desire depends on.",
+      "Estrogen addresses comfort and the physical side; the role of testosterone in women is more limited, specialized and carefully prescribed.",
+      "Because the causes are layered, the fix is usually a combination and a conversation, not a single pill.",
+    ],
+    sections: [
+      {
+        heading: "Why does libido drop in menopause?",
+        body: `Because several things move at once. Falling estrogen brings <strong>vaginal dryness and discomfort</strong> that can make sex painful rather than appealing; hot flashes and night sweats wreck the sleep that desire depends on; mood and energy dip; and life stage and relationship factors sit on top of all of it. That layering is the whole reason low libido is frustrating to treat with a single lever - it is rarely "one hormone went down" and more often "four things went sideways together." Naming which factors are loudest for you is the first genuinely useful step, and it is a conversation a clinician is equipped to have.`,
+      },
+      {
+        heading: "Does standard HRT help libido?",
+        body: `Often, and frequently more than women expect - but usually <em>indirectly</em>, which is worth understanding so the result is not disappointing. Estrogen therapy, including localized vaginal preparations, treats the dryness and discomfort that were making intimacy unappealing; systemic HRT that restores sleep and lifts hot flashes gives back the energy and mood that desire runs on. For many women, fixing the comfort-and-sleep problem does more for libido than any drug aimed at desire directly. The forms and routes that do this are covered in <a href="/hrt/articles/estrogen-patch-vs-pill">estrogen patch vs pill</a>.`,
+      },
+      {
+        heading: "What about testosterone for women?",
+        body: `This is where honesty and caution matter. Testosterone does play a role in female libido, and in specific cases clinicians do prescribe low-dose testosterone for women - but it is a specialized, carefully dosed, closely monitored decision, not a routine add-on, and the products and guidance are more limited than for men. It is emphatically not the same thing as male testosterone therapy: the difference between the two treatments is laid out in <a href="/hrt/articles/is-hrt-the-same-as-trt">is HRT the same as TRT</a>. Anyone marketing testosterone to women as a simple libido switch is overstepping what the evidence and the prescribing norms support.`,
+      },
+      {
+        heading: "How should I approach this with a provider?",
+        body: `Go in ready to describe which piece is loudest - pain, dryness, low desire despite comfort, exhaustion, or mood - because the treatment follows the cause. A menopause-focused provider can address the estrogen-and-comfort side directly and assess whether anything more specialized is warranted; <a href="/hrt/reviews/midi">Midi</a> and <a href="/hrt/reviews/winona">Winona</a> are built for exactly this kind of evaluation, and our <a href="/hrt">HRT provider comparison</a> maps the options. For the broader trade-offs before starting anything, <a href="/hrt/articles/hrt-pros-and-cons">the pros and cons of HRT</a> is the read. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "non-hormonal-menopause-treatment",
+    title: "Non-Hormonal Menopause Treatments: The Options When HRT Isn't Right (2026)",
+    description:
+      "HRT is the most effective menopause treatment, but it isn't for everyone. The legitimate non-hormonal routes - prescription and lifestyle - laid out honestly, without hype and without selling supplements.",
+    category: "Advice",
+    readTime: "7 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#EEF4F1",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "HRT remains the most effective option for hot flashes, but some women can't or would rather not take it - and there are legitimate non-hormonal routes.",
+      "There are prescription non-hormonal medications for hot flashes; whether one fits you is a clinician decision, not an over-the-counter choice.",
+      "Lifestyle measures - sleep, triggers, activity, temperature management - are real, modest levers that help many women and cost nothing to try.",
+      "We don't recommend supplements: the evidence is inconsistent and 'natural' doesn't mean risk-free or interaction-free - run any supplement past your prescriber.",
+    ],
+    sections: [
+      {
+        heading: "Why would someone skip HRT?",
+        body: `Several honest reasons. Some women have a history or condition that makes HRT inappropriate; some weigh the risk-benefit picture and personally prefer not to; some have symptoms that are mild enough not to warrant it; and some simply want to understand the alternatives before deciding. HRT being the <em>most effective</em> option for hot flashes - which it is - does not make it the only legitimate one, and a good clinician will discuss the alternatives rather than treating HRT as all-or-nothing. If you have not yet mapped the HRT side of the ledger, <a href="/hrt/articles/hrt-pros-and-cons">the pros and cons of HRT</a> is the starting point.`,
+      },
+      {
+        heading: "Are there non-hormonal prescription options?",
+        body: `Yes - there are prescription medications used specifically to reduce hot flashes that are not hormones, and they can be a genuine option for women who cannot or prefer not to take estrogen. Because these are prescription decisions with their own considerations and side effects, the responsible thing this article can do is tell you they exist and that they are worth asking about - not steer you toward a specific drug, which is your prescriber's call based on your history. The point is that "no HRT" does not have to mean "no medical help".`,
+      },
+      {
+        heading: "What lifestyle measures actually help?",
+        body: `The unglamorous ones, which nonetheless help a real share of women and carry no downside to trying: identifying and reducing personal <strong>hot-flash triggers</strong> (for many, alcohol, caffeine, spicy food or heat), keeping the sleep environment cool, regular physical activity, layered clothing, and stress and sleep management. None of these is a cure, and it is honest to say they are modest rather than dramatic - but for mild symptoms, or alongside other treatment, they are free, safe and often worthwhile. They are also entirely compatible with HRT for women who do take it.`,
+      },
+      {
+        heading: "What about supplements and 'natural' remedies?",
+        body: `Here we will be straight with you, because a lot of the internet is not: <strong>we do not recommend supplements for menopause.</strong> The evidence for the popular ones is inconsistent at best, "natural" does not mean free of side effects or drug interactions, and the category is poorly regulated compared with prescription medicine. That does not mean nothing in it could ever help anyone - it means the honest position is to run any supplement you are considering past your clinician, who can check it against your medications and history, rather than trusting a product page. Our house rule is that we would rather tell you the evidence is thin than sell you certainty we do not have.`,
+      },
+      {
+        heading: "How do I decide between all this?",
+        body: `Start by sizing the problem - how much your symptoms actually cost you day to day - and take that to a clinician who can lay out the full menu: HRT, non-hormonal prescription options, and lifestyle measures, with the trade-offs of each for your situation. Menopause-focused telehealth providers like <a href="/hrt/reviews/midi">Midi</a> and <a href="/hrt/reviews/winona">Winona</a> can run that evaluation, and our <a href="/hrt">HRT provider comparison</a> shows who covers what. Whichever direction you go, it should be a considered choice, not a default. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "when-to-start-hrt",
+    title: "When Should You Start HRT? The Timing Window, Explained (2026)",
+    description:
+      "Timing is the factor most women never hear about. Why starting near the menopause transition is a different proposition from starting years later, and how to know when your window is open.",
+    category: "Guide",
+    readTime: "6 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#F2EFF6",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "When you start HRT shapes the risk-benefit balance - starting near the menopause transition is generally a more favorable proposition than starting many years afterward.",
+      "The trigger to consider it is symptoms that affect your life, not hitting a particular birthday or a specific lab number.",
+      "'I'll tough it out and decide later' is itself a decision with consequences - including that the favorable window doesn't stay open indefinitely.",
+      "There's no single right age; the right time is individual and best judged with a clinician who knows your history and where you are in the transition.",
+    ],
+    sections: [
+      {
+        heading: "Is there a 'best time' to start HRT?",
+        body: `There is a widely recognized concept that timing matters, often described as a window: starting HRT around the menopause transition - when symptoms begin - generally carries a more favorable risk-benefit balance than starting for the first time many years after menopause. Much of the fear that attached to HRT in the early 2000s traces to studies that averaged together women starting at very different ages and stages, which muddied exactly this point. The practical upshot is that timing is not a footnote - it is one of the main variables, and it is covered as such in <a href="/hrt/articles/hrt-pros-and-cons">the pros and cons of HRT</a>.`,
+      },
+      {
+        heading: "What actually signals it's time to consider it?",
+        body: `Symptoms that are costing you - disrupted sleep from night sweats, hot flashes that interfere with work or life, genitourinary changes, mood and energy shifts tied to the transition. The trigger is impact, not a birthday and not a single hormone reading; menopause is diagnosed clinically far more than by chasing lab numbers, and a good provider treats the woman in front of them rather than a value on a page. If you are unsure whether what you are feeling is even perimenopause yet, <a href="/hrt/articles/perimenopause-vs-menopause">perimenopause vs menopause</a> sorts out the stages.`,
+      },
+      {
+        heading: "What's the risk of waiting?",
+        body: `Two things worth being honest about. First, symptoms you "tough out" are real costs in the meantime - lost sleep, strained work and relationships, and genitourinary changes that tend to worsen rather than pass. Second, the favorable starting window does not stay open forever; deferring the decision for many years can change the risk-benefit math, so "later" is not a risk-free neutral. This is not a scare tactic - it is the reason clinicians frame waiting as an active choice to discuss rather than a safe default.`,
+      },
+      {
+        heading: "So how do I time it right?",
+        body: `Bring it up when symptoms start affecting your life, not when you have endured them long enough to feel you have earned help. Telehealth has removed most of the friction that used to make women wait: <a href="/hrt/reviews/midi">Midi</a> and <a href="/hrt/reviews/winona">Winona</a> run the evaluation online and can judge, with your history, whether now is a sensible time to start - and our <a href="/hrt">HRT provider comparison</a> maps the field. If you decide the time is right, <a href="/hrt/articles/how-to-get-hrt-online">how to get HRT online</a> walks the process. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "hrt-and-hair-thinning",
+    title: "HRT and Hair Thinning in Menopause: What Changes and What Helps (2026)",
+    description:
+      "Many women notice their hair thinning around menopause. How the hormone shift drives it, whether HRT helps, and where dedicated hair-loss treatment fits alongside it.",
+    category: "Science",
+    readTime: "6 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#F3EFEA",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Hair thinning around menopause is common and largely driven by the shift in the estrogen-to-androgen balance as estrogen declines.",
+      "HRT may help hair indirectly for some women by easing the hormonal shift, but it is not a hair-loss treatment and shouldn't be started primarily for hair.",
+      "Female pattern hair thinning has its own dedicated, evidence-based treatments that work on the hair directly.",
+      "Because thinning can have several causes - including iron and thyroid issues - it's worth getting the cause identified rather than guessing.",
+    ],
+    sections: [
+      {
+        heading: "Why does hair thin around menopause?",
+        body: `As estrogen falls, the balance between estrogen and androgens shifts, and for many women that shows up as gradual <strong>thinning across the crown and part line</strong> - the female pattern - rather than the receding hairline men see. Hair may also feel finer or shed more during the transition. This is genuinely common and genuinely distressing, and it is one of the menopause changes women are least warned about. It is also not the only possible cause of thinning at this age, which matters for getting it treated correctly.`,
+      },
+      {
+        heading: "Does HRT help with hair?",
+        body: `Possibly, indirectly, for some women - and it is important not to oversell this. By addressing the underlying hormonal shift, HRT may support hair for certain women, but the evidence is not strong enough to call HRT a hair-loss treatment, and starting hormone therapy <em>primarily</em> to regrow hair is the wrong reason to start it. Base the HRT decision on your menopause symptoms and history - the framework is in <a href="/hrt/articles/hrt-pros-and-cons">the pros and cons of HRT</a> - and treat any hair benefit as a possible bonus rather than the goal.`,
+      },
+      {
+        heading: "What actually treats menopausal hair thinning?",
+        body: `Female pattern thinning has its own dedicated treatments that act on the hair directly, and they are better established for that job than hormone therapy is. If hair is a primary concern, it deserves its own evaluation and its own treatment plan rather than being folded into the menopause visit and hoped for. Our <a href="/hair-loss">hair-loss treatment comparison</a> covers the options that are designed for exactly this, and how women access them - it is a parallel track that can run alongside HRT under clinical guidance.`,
+      },
+      {
+        heading: "What else could be causing it?",
+        body: `Worth ruling out before assuming it is purely hormonal: <strong>iron deficiency</strong> and <strong>thyroid problems</strong> are both common, both more likely around this age, and both very treatable once identified - and either can thin hair on its own. That is why the sensible first move is getting the cause pinned down rather than guessing, whether through your menopause provider or a hair-focused evaluation. Providers like <a href="/hrt/reviews/midi">Midi</a> and <a href="/hrt/reviews/winona">Winona</a> handle the menopause side; the <a href="/hrt">HRT comparison</a> and the <a href="/hair-loss">hair-loss comparison</a> cover the two tracks. This article is general information, not medical advice.`,
+      },
+    ],
+  },
 ];
 
 const faqs: FaqItem[] = [
