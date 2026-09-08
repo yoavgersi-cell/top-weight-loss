@@ -2285,6 +2285,264 @@ const articles: ArticleData[] = [
       },
     ],
   },
+  // ───── Depth expansion (Sep 8 2026): foundational-science and adjacent-decision
+  // gaps - the Norwood scale, DHT, transplant-vs-medication, microneedling, saw
+  // palmetto (honest evidence, no supplement rec), menopausal hair loss (cross-
+  // linked to HRT) and finasteride-vs-testosterone (cross-linked to TRT).
+  // Qualitative established knowledge only; no invented figures; treat-the-cause
+  // framing throughout.
+  {
+    slug: "norwood-scale",
+    title: "The Norwood Scale: The Stages of Male Pattern Baldness, Explained (2026)",
+    description:
+      "The Norwood scale is how clinicians describe male pattern hair loss, from a maturing hairline to advanced balding. What each stage looks like, why it matters for treatment, and why earlier is easier.",
+    category: "Guide",
+    readTime: "6 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#F3EFEA",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "The Norwood scale is the standard 7-stage map clinicians use to describe how far male pattern baldness has progressed.",
+      "It usually moves along two fronts: a receding hairline (especially at the temples) and thinning at the crown, which eventually meet.",
+      "Where you sit on the scale guides what treatment is realistic - medication is most effective at holding and partially reversing earlier stages.",
+      "The single most useful takeaway: the earlier you act, the more there is to save. Treatment protects existing hair better than it regrows lost hair.",
+    ],
+    sections: [
+      {
+        heading: "What is the Norwood scale?",
+        body: `The <strong>Norwood scale</strong> (sometimes Hamilton-Norwood) is the seven-stage system clinicians use to classify male pattern baldness - a shared vocabulary for how far it has progressed. Stage 1 is a full, juvenile hairline; the middle stages describe a receding hairline and a developing thin spot at the crown; the later stages describe those two areas enlarging and merging until only a band of hair remains around the back and sides. It exists because "I'm losing my hair" is too vague to plan treatment around - the stage makes the conversation precise.`,
+      },
+      {
+        heading: "How do the stages actually progress?",
+        body: `Male pattern loss typically advances on two fronts at once. The <strong>hairline recedes</strong>, usually starting at the temples to form an "M" shape, while the <strong>crown</strong> thins from a small spot outward. For many men these two zones expand toward each other over years until they connect. A maturing hairline in your twenties is common and not necessarily "balding" in the Norwood sense - which is exactly the kind of distinction worth getting a clinician's read on rather than diagnosing from a mirror at midnight. If a receding hairline specifically is your concern, <a href="/hair-loss/articles/receding-hairline-treatment">receding hairline treatment</a> goes deeper.`,
+      },
+      {
+        heading: "Why does your Norwood stage matter for treatment?",
+        body: `Because it sets realistic expectations. Medication - the finasteride-and-minoxidil backbone covered in <a href="/hair-loss/articles/finasteride-and-minoxidil-together">using them together</a> - is at its best <em>holding the line</em> and partially thickening thinning-but-living follicles, which is why it works better at earlier stages when there is more to protect. Once follicles are long dormant, medication has less to work with, and that is where procedural options enter the conversation - see <a href="/hair-loss/articles/hair-transplant-vs-medication">hair transplant vs medication</a>. Knowing your stage keeps you from expecting regrowth medication cannot deliver, or from writing off treatment that still could.`,
+      },
+      {
+        heading: "What should you do with this?",
+        body: `Use it as a prompt to act sooner rather than as a label to despair over. The recurring theme in hair loss is that <strong>earlier intervention preserves more</strong> - treatment defends existing hair far more reliably than it resurrects lost hair. A telehealth evaluation can assess where you are and what is realistic; providers like <a href="/hair-loss/reviews/maximus">Maximus</a> and <a href="/hair-loss/reviews/hims">Hims</a> run that assessment online, and our <a href="/hair-loss">hair-loss treatment comparison</a> maps the options. For the fuller playbook, <a href="/hair-loss/articles/how-to-stop-hair-loss">how to stop hair loss</a> is the guide. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "dht-and-hair-loss",
+    title: "DHT and Hair Loss: The Hormone Behind Male Pattern Balding (2026)",
+    description:
+      "Male pattern hair loss is driven by DHT, a testosterone byproduct that shrinks sensitive follicles. What DHT is, why it thins hair, and why the main treatments are built around blocking it.",
+    category: "Science",
+    readTime: "6 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#F0EDE8",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "DHT (dihydrotestosterone) is a potent androgen made from testosterone by an enzyme called 5-alpha-reductase.",
+      "In genetically sensitive follicles, DHT gradually miniaturizes the hair - thinner, shorter, weaker - until it stops growing.",
+      "This is why the cornerstone treatment, finasteride, works by blocking the enzyme that makes DHT.",
+      "It's not about having 'too much' testosterone - it's about follicle sensitivity to DHT, which is largely genetic.",
+    ],
+    sections: [
+      {
+        heading: "What is DHT?",
+        body: `<strong>DHT (dihydrotestosterone)</strong> is a hormone your body makes from testosterone via an enzyme called <strong>5-alpha-reductase</strong>. It is a normal, useful androgen with real jobs in the body - but in the scalp, for men who are genetically susceptible, it is also the main driver of pattern hair loss. The key idea is that DHT is more potent than testosterone at the receptors it acts on, and certain follicles are exquisitely sensitive to it. That sensitivity, not the raw amount of hormone floating around, is what decides whether you lose hair.`,
+      },
+      {
+        heading: "How does DHT cause hair loss?",
+        body: `Through a slow process called <strong>miniaturization</strong>. In susceptible follicles, DHT progressively shortens the growth phase and shrinks the follicle, so each cycle produces a finer, shorter, weaker hair than the last - until the follicle effectively gives up. This is why pattern loss is gradual and why the hair thins before it disappears: you are watching miniaturization play out over years. It also explains the pattern itself - the follicles at the hairline and crown are the DHT-sensitive ones, while the band at the back and sides is largely resistant, which is the whole basis of transplant surgery.`,
+      },
+      {
+        heading: "Why does this make finasteride the cornerstone treatment?",
+        body: `Because if DHT drives the loss, reducing DHT addresses the cause rather than the symptom. <strong>Finasteride</strong> blocks 5-alpha-reductase, cutting the conversion of testosterone into DHT and lowering scalp DHT substantially - which is why it is the most established medical treatment for male pattern loss, covered in <a href="/hair-loss/articles/does-finasteride-work">does finasteride work</a>. <strong>Dutasteride</strong> blocks the enzyme more completely (see <a href="/hair-loss/articles/dutasteride-vs-finasteride">dutasteride vs finasteride</a>). Minoxidil, by contrast, works on the follicle directly rather than on DHT, which is why the two are so often paired in <a href="/hair-loss/articles/finasteride-and-minoxidil-together">combination</a>.`,
+      },
+      {
+        heading: "Does this mean I have too much testosterone?",
+        body: `No - and this is the myth worth killing. Men with pattern hair loss do not generally have abnormally high testosterone or DHT; they have follicles that are genetically <em>sensitive</em> to normal DHT levels. That distinction matters because it means the goal is not to tank your hormones but to reduce DHT's effect at the scalp. It is also why lowering DHT for hair does not have to mean gutting your testosterone - a fear addressed head-on in <a href="/hair-loss/articles/does-finasteride-lower-testosterone">does finasteride lower testosterone</a>. To act on any of this, a clinician evaluation is the start; our <a href="/hair-loss">provider comparison</a> maps the options. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "hair-transplant-vs-medication",
+    title: "Hair Transplant vs Medication: Which Comes First? (2026)",
+    description:
+      "A transplant moves hair; medication protects it. Why they solve different problems, why medication almost always comes first, and why a transplant without ongoing treatment often disappoints.",
+    category: "Comparison",
+    readTime: "7 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#F3EFEA",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Medication (finasteride/minoxidil) slows loss and protects the hair you have; a transplant redistributes hair you already have to where it's thin.",
+      "They're not competitors - most people who get a transplant still need medication to protect the non-transplanted hair from continuing to thin.",
+      "Medication is almost always the sensible first step: it's lower-cost, non-surgical, and preserves the most before anything permanent is decided.",
+      "A transplant done while untreated hair keeps falling can end up looking patchy as the surrounding hair recedes around the grafts.",
+    ],
+    sections: [
+      {
+        heading: "What does each one actually do?",
+        body: `They solve different problems. <strong>Medication</strong> - finasteride to reduce DHT, minoxidil to stimulate follicles - slows or halts ongoing loss and can partially thicken thinning hair, protecting what you still have (the mechanism is in <a href="/hair-loss/articles/dht-and-hair-loss">DHT and hair loss</a>). A <strong>hair transplant</strong> creates nothing new: it relocates DHT-resistant follicles from the back and sides to the thinning areas. So medication is defense and preservation; a transplant is redistribution. Framing them as rivals is the first mistake - they answer different questions.`,
+      },
+      {
+        heading: "Why does medication almost always come first?",
+        body: `Because it is the lower-risk, lower-cost, non-permanent move that preserves the most optionality. Starting treatment early can hold the line well enough that a transplant is never needed, or needed less; it is reversible in a way surgery is not; and it protects the native hair a transplant does not touch. Given that pattern loss is progressive, the sooner you defend existing follicles the better - the recurring theme of <a href="/hair-loss/articles/how-to-stop-hair-loss">how to stop hair loss</a>. Jumping to surgery while skipping the medical basics is usually the expensive way round.`,
+      },
+      {
+        heading: "Why do you still need medication after a transplant?",
+        body: `This is the point that catches people out. A transplant moves resistant follicles into thinning zones, but it does nothing to protect the <em>native, non-transplanted</em> hair around them - and that hair can keep miniaturizing under DHT. The result is a well-known failure mode: transplanted hair sitting amid surrounding hair that continues to recede, leaving an unnatural, patchy look within a few years. That is why reputable surgeons expect patients to stay on medication to protect the rest. A transplant is not an exit from treatment; for most men it is treatment plus a procedure.`,
+      },
+      {
+        heading: "So how should you sequence this?",
+        body: `For most men: start medication, give it the months it needs to show what it can hold (see <a href="/hair-loss/articles/how-long-hair-loss-treatment-works">how long treatment takes</a>), and only then, with a clear-eyed view, consider whether a transplant adds something medication cannot. Get on the medical basics through a telehealth provider - <a href="/hair-loss/reviews/maximus">Maximus</a>, <a href="/hair-loss/reviews/hims">Hims</a> and others in our <a href="/hair-loss">comparison</a> - and treat surgery as a later, separate, in-person decision with a specialist, not an alternative to ever taking treatment. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "microneedling-for-hair-loss",
+    title: "Microneedling for Hair Loss: Does the Derma Roller Actually Work? (2026)",
+    description:
+      "Microneedling is having a moment in hair-loss circles. What the evidence genuinely supports, why it's an add-on rather than a standalone fix, and the safety caveats before you roll spikes on your scalp.",
+    category: "Advice",
+    readTime: "6 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#F0EDE8",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Microneedling shows the most promise as an add-on to minoxidil - the interesting evidence is for the combination, not microneedling alone.",
+      "It is not a replacement for the proven medical treatments; think of it as a possible amplifier, not a foundation.",
+      "Technique matters: needle depth, frequency and hygiene are easy to get wrong at home, and doing so risks irritation or infection.",
+      "Worth raising with your provider before starting - especially how it fits with topical treatments you already use.",
+    ],
+    sections: [
+      {
+        heading: "What is microneedling supposed to do for hair?",
+        body: `Microneedling uses a roller or pen of fine needles to create controlled micro-injuries in the scalp, on the theory that the healing response - growth factors, increased blood flow, better absorption of topical treatments - can support hair growth. It is the same broad idea used for skin, applied to the scalp. The concept is plausible and there is genuine research interest, which is why it keeps trending. But "plausible and trending" is not the same as "proven standalone treatment," and the honest read of the evidence is more specific than the hype.`,
+      },
+      {
+        heading: "Does it actually work?",
+        body: `The most interesting evidence is for microneedling <strong>combined with minoxidil</strong> - studies exploring the pairing have been more encouraging than microneedling by itself, which fits the "amplifier" framing: the needling may help the follicle-stimulating topical do more. As a solo treatment, the case is much weaker. So the fair conclusion is that it is a reasonable potential <em>add-on</em> to a proven regimen, not a substitute for one. If you are not already on the basics, that is the higher priority - start with <a href="/hair-loss/articles/finasteride-and-minoxidil-together">finasteride and minoxidil together</a>.`,
+      },
+      {
+        heading: "What are the risks of doing it at home?",
+        body: `Real, and mostly about technique. Needle depth that is too aggressive can damage skin; poor hygiene can cause infection; and rolling over an irritated or actively treated scalp can make things worse. There is also the question of timing with topicals - applying certain products immediately onto freshly needled skin is not always advisable. None of this makes microneedling reckless, but it does mean it is not a "grab a roller off the internet and go" situation, and getting the details wrong can set you back rather than forward.`,
+      },
+      {
+        heading: "Should you try it?",
+        body: `If your proven treatments are in place and you want to consider adding microneedling, raise it with your provider first - particularly how to sequence it with your topicals and what depth and frequency make sense. It is an adjunct to discuss, not a foundation to build on, and it should never crowd out the treatments with the strongest evidence. A telehealth clinician can tell you whether it is sensible for your situation; our <a href="/hair-loss">provider comparison</a> and <a href="/hair-loss/articles/how-to-stop-hair-loss">how to stop hair loss</a> cover the core plan it would sit on top of. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "saw-palmetto-hair-loss",
+    title: "Saw Palmetto for Hair Loss: What the Evidence Actually Shows (2026)",
+    description:
+      "Saw palmetto is marketed as a natural DHT blocker and finasteride alternative. The honest picture: weaker and less consistent evidence, not an equivalent - and why we don't recommend it as a substitute.",
+    category: "Advice",
+    readTime: "6 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#F0EDE8",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Saw palmetto is a plant extract promoted as a 'natural' DHT blocker - the same mechanism finasteride targets, but far weaker and less consistent.",
+      "The evidence is limited and mixed; it is not established as equivalent to proven prescription treatment.",
+      "'Natural' doesn't mean risk-free or interaction-free, and supplements are loosely regulated - potency and purity vary between products.",
+      "We don't recommend it as a substitute for proven treatment - if you're drawn to it, discuss it with a clinician rather than self-swapping.",
+    ],
+    sections: [
+      {
+        heading: "What's the claim behind saw palmetto?",
+        body: `Saw palmetto is an extract from a palm plant, and the hair-loss pitch is that it acts as a <strong>natural DHT blocker</strong> - inhibiting the same 5-alpha-reductase enzyme finasteride targets (the mechanism is explained in <a href="/hair-loss/articles/dht-and-hair-loss">DHT and hair loss</a>). On paper that sounds like a gentle, over-the-counter version of the real thing, which is exactly why it sells. The question is not whether the theory is coherent - it is whether the effect is strong and reliable enough to matter, and that is where the story gets less flattering.`,
+      },
+      {
+        heading: "What does the evidence actually say?",
+        body: `Limited and inconsistent. There is some research suggesting a modest effect, but it is far weaker and less robust than the large, long-standing body of evidence behind finasteride, and it is not established as an equivalent. The honest translation: saw palmetto is not a proven stand-in for prescription treatment, and treating it as one means trading a well-evidenced option for a poorly-evidenced one. If your goal is to actually hold onto your hair, the proven backbone - covered in <a href="/hair-loss/articles/does-finasteride-work">does finasteride work</a> and <a href="/hair-loss/articles/finasteride-vs-minoxidil">finasteride vs minoxidil</a> - is where the evidence is.`,
+      },
+      {
+        heading: "Is 'natural' actually safer?",
+        body: `Not automatically, and this is where "natural" marketing misleads. Supplements are loosely regulated compared with prescription medicine, so potency and purity vary from product to product, and "natural" says nothing about side effects or interactions with other things you take. A DHT-affecting compound is not inherently harmless just because it came from a plant. That does not make saw palmetto dangerous - it makes "natural equals safe" a false shortcut, and it is why any supplement is worth running past a clinician who knows your medications.`,
+      },
+      {
+        heading: "So should you take it?",
+        body: `We will be straight with you, the same way we are about supplements across the site: <strong>we do not recommend saw palmetto as a substitute for proven treatment.</strong> If you are drawn to it - because prescription treatment is off the table for you, or you want to layer it in - the right move is to discuss it with a clinician rather than quietly swapping it for finasteride and hoping. A telehealth provider can lay out what actually has the evidence for your situation; our <a href="/hair-loss">provider comparison</a> and <a href="/hair-loss/articles/how-to-stop-hair-loss">how to stop hair loss</a> map the proven plan. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "menopause-hair-loss",
+    title: "Menopause and Hair Loss: Why It Happens and What Helps (2026)",
+    description:
+      "Hair thinning is one of menopause's least-discussed changes. Why the hormone shift thins women's hair, how it differs from male pattern loss, and the treatments - hormonal and hair-specific - that help.",
+    category: "Science",
+    readTime: "6 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#F3EDEF",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Menopausal hair thinning is common and driven largely by the shift in the estrogen-to-androgen balance as estrogen declines.",
+      "It usually shows as diffuse thinning across the crown and part line - not the receding hairline men get.",
+      "There are two tracks: menopause-focused care (HRT) for the hormonal side, and dedicated hair-loss treatments that act on the hair directly.",
+      "Because thinning can also stem from iron or thyroid issues, getting the cause identified matters before assuming it's 'just menopause'.",
+    ],
+    sections: [
+      {
+        heading: "Why does hair thin in menopause?",
+        body: `As estrogen falls through the transition, the balance between estrogen and androgens shifts, and for many women that shows up as gradual hair thinning. Estrogen is broadly hair-friendly - it is part of why hair can feel fuller in some life stages - so its decline, combined with the relatively greater androgen influence that follows, tends to work against the hair. This is genuinely common and genuinely under-discussed, which is why so many women are blindsided by it. The companion read from the menopause side is <a href="/hrt/articles/hrt-and-hair-thinning">HRT and hair thinning</a>.`,
+      },
+      {
+        heading: "How is it different from men's hair loss?",
+        body: `The pattern differs. Where male pattern loss recedes at the hairline and balds the crown (the <a href="/hair-loss/articles/norwood-scale">Norwood stages</a>), female thinning is usually <strong>diffuse</strong> - a widening part and reduced density across the top, with the frontal hairline often preserved. Women rarely go bald in the male sense. That difference matters for treatment and expectations, and it is why women's hair loss deserves its own approach rather than being treated as a lighter version of the male condition - covered more fully in <a href="/hair-loss/articles/hair-loss-treatment-for-women">hair-loss treatment for women</a>.`,
+      },
+      {
+        heading: "What actually helps?",
+        body: `Think in two tracks. The <strong>hormonal track</strong>: menopause-focused care can address the broader transition, and for some women that may support hair indirectly - though HRT is not a hair-loss treatment and should not be started primarily for hair (the honest limits are in <a href="/hrt/articles/hrt-and-hair-thinning">HRT and hair thinning</a>, and the whole decision in <a href="/hrt/articles/hrt-pros-and-cons">the pros and cons of HRT</a>). The <strong>hair track</strong>: dedicated treatments that act on the follicle directly are better established for the hair itself, and they can run alongside menopause care under clinical guidance.`,
+      },
+      {
+        heading: "What else could be causing it?",
+        body: `Before chalking it all up to menopause, rule out the common, treatable culprits that peak at the same age: <strong>iron deficiency</strong> (see <a href="/hair-loss/articles/iron-deficiency-hair-loss">iron deficiency and hair loss</a>) and <strong>thyroid problems</strong>, either of which can thin hair on its own and both of which are very fixable once found. Sudden, heavy shedding a few months after a stressful event can also be telogen-related rather than hormonal. The sensible first step is getting the cause identified - our <a href="/hair-loss">hair-loss comparison</a> covers the hair track and the <a href="/hrt">HRT comparison</a> the menopause track. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "does-finasteride-lower-testosterone",
+    title: "Does Finasteride Lower Testosterone? What It Actually Does to Your Hormones (2026)",
+    description:
+      "The most common fear about finasteride, answered honestly. Why finasteride lowers DHT - not testosterone - and can even nudge testosterone slightly up, plus where the real side-effect questions lie.",
+    category: "Science",
+    readTime: "6 min read",
+    publishedAt: "2026-09-08",
+    updatedAt: "2026-09-08",
+    heroColor: "#F0EDE8",
+    author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Finasteride lowers DHT, not testosterone - by blocking the enzyme that converts one into the other.",
+      "Because that conversion is blocked, testosterone can actually tick slightly upward, not down.",
+      "So the popular idea that finasteride 'tanks your testosterone' or 'lowers T' is a misunderstanding of the mechanism.",
+      "The real side-effect conversation is about DHT's other roles - not about low testosterone - and it's an individual, clinician-guided discussion.",
+    ],
+    sections: [
+      {
+        heading: "What does finasteride actually do to your hormones?",
+        body: `Finasteride blocks <strong>5-alpha-reductase</strong>, the enzyme that converts testosterone into DHT. So the direct hormonal effect is a large drop in <strong>DHT</strong> - which is the entire point, since DHT drives pattern hair loss (see <a href="/hair-loss/articles/dht-and-hair-loss">DHT and hair loss</a>). Crucially, the thing it lowers is DHT, not testosterone. This distinction is the whole answer to the question, and it gets lost because people hear "hormone treatment for hair" and assume it must be suppressing the main male hormone. It is not.`,
+      },
+      {
+        heading: "Does it lower testosterone or raise it?",
+        body: `If anything, finasteride tends to nudge <strong>testosterone slightly up</strong>, not down. The logic follows directly from the mechanism: if less testosterone is being converted into DHT, a little more testosterone remains in circulation. The change is generally modest and not the point of the drug, but the direction matters for dispelling the myth - the popular claim that finasteride "tanks your T" or leaves you low has the mechanism backwards. Low testosterone is not the expected hormonal result of taking it.`,
+      },
+      {
+        heading: "So where do the side-effect worries come from?",
+        body: `From DHT's <em>other</em> roles, not from testosterone. DHT is active in more than the scalp, and lowering it is what underlies the sexual and other side effects some men are concerned about - a real, if uncommon and individual, conversation covered honestly in <a href="/hair-loss/articles/finasteride-side-effects">finasteride side effects</a>. Conflating that with "low testosterone" muddies things: the questions worth asking your clinician are about DHT reduction and how your body responds, not about testosterone deficiency, which finasteride does not cause.`,
+      },
+      {
+        heading: "What if you're on - or considering - TRT?",
+        body: `This is where the two topics genuinely meet. If you are on testosterone therapy, more testosterone can mean more raw material for DHT, and the interaction of TRT and hair loss is its own subject - laid out in <a href="/trt/articles/does-trt-cause-hair-loss">does TRT cause hair loss</a>. Managing hair while on TRT, or weighing finasteride alongside it, is a coordinated clinical decision, not a DIY stack. If testosterone therapy itself is on your radar, our <a href="/trt">TRT provider comparison</a> covers it; for the hair side, the <a href="/hair-loss">hair-loss comparison</a> maps the options. This article is general information, not medical advice.`,
+      },
+    ],
+  },
 ];
 
 export function hairLossSeed(base: SiteConfig): SiteConfig {
