@@ -7,6 +7,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { MetaPixel } from "@/components/meta-pixel";
 import { GoogleAnalytics } from "@/components/google-analytics";
+import { hreflangLanguages } from "@/lib/regions";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -57,9 +58,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://www.treatmentshub.com",
-    languages: {
-      "en-US": "https://www.treatmentshub.com",
-    },
+    // hreflang for the home. Region-aware: emits en-US + x-default now, and
+    // auto-includes en-GB once GB is added to PUBLISHED_REGIONS. Per-page
+    // hreflang is wired the same way when UK content is built.
+    languages: hreflangLanguages("https://www.treatmentshub.com", "/"),
   },
   robots: {
     index: true,
