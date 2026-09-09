@@ -367,9 +367,15 @@ export const articles: Article[] = [
     category: "Science",
     readTime: "9 min read",
     publishedAt: "2026-06-18",
-    updatedAt: "2026-08-16",
+    updatedAt: "2026-09-09",
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "Both are highly effective GLP-1 medications; the headline difference is that tirzepatide (dual GLP-1/GIP) has shown greater average weight loss in trials than semaglutide (GLP-1 only).",
+      "In clinical research, tirzepatide reached up to ~22.5% average body-weight loss (SURMOUNT) vs ~15% for semaglutide (STEP) - though these are separate trials, not a head-to-head.",
+      "Side effects are similar for both (mostly GI, worst during dose escalation) and typically ease over time.",
+      "Tirzepatide usually costs $40-$100/month more than semaglutide at the same provider - the price of the stronger average results.",
+    ],
     sections: [
       {
         heading: "How They Work Differently",
@@ -385,7 +391,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What Each Actually Costs at Real Providers (Verified)",
-        body: 'Brand-name versions of both medications run $1,000+ per month at retail. The practical route for most cash-pay patients is compounded medication through licensed telehealth providers - and unlike the ballpark ranges most articles give, these are the real published prices we\'ve verified (August 2026), promotional conditions noted:<table><thead><tr><th>Provider</th><th>Semaglutide /mo</th><th>Tirzepatide /mo</th></tr></thead><tbody><tr><td><a href="/weight-loss/reviews/wellmedr">wellmedr</a></td><td>$59 (12-month plan)</td><td>$99</td></tr><tr><td><a href="/weight-loss/reviews/embody">embody</a></td><td>$69 promo (reg $79)</td><td>$119 promo (reg $129)</td></tr><tr><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td>$89 promo (reg $199)</td><td>$149 promo (reg $299)</td></tr><tr><td><a href="/weight-loss/reviews/medvi">Medvi</a></td><td>$99 promo (reg $199)</td><td>$166 promo (reg $299)</td></tr><tr><td><a href="/weight-loss/reviews/healthrx">HealthRx</a></td><td>$99 (12-month prepaid)</td><td>from $179</td></tr><tr><td><a href="/weight-loss/reviews/directmeds">DirectMeds</a></td><td>$147 flat</td><td>$147 flat</td></tr><tr><td><a href="/weight-loss/reviews/sprout">Sprout</a></td><td>from $149</td><td>from $199</td></tr><tr><td><a href="/weight-loss/reviews/trimrx">trimrx</a></td><td>$179 first month (reg $299)</td><td>$259</td></tr></tbody></table>The pattern: tirzepatide consistently costs $40-$100/month more than semaglutide at the same provider - the price of the stronger average results. Full breakdown in our <a href="/weight-loss/cheapest-glp1">cheapest GLP-1 comparison</a>.',
+        body: 'Brand-name versions of both medications run $1,000+ per month at retail. The practical route for most cash-pay patients is compounded medication through licensed telehealth providers - and unlike the ballpark ranges most articles give, these are the real published prices we\'ve verified (September 2026), promotional conditions noted:<table><thead><tr><th>Provider</th><th>Semaglutide /mo</th><th>Tirzepatide /mo</th></tr></thead><tbody><tr><td><a href="/weight-loss/reviews/wellmedr">wellmedr</a></td><td>$59 (12-month plan)</td><td>$99</td></tr><tr><td><a href="/weight-loss/reviews/embody">embody</a></td><td>$69 promo (reg $79)</td><td>$119 promo (reg $129)</td></tr><tr><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td>$89 promo (reg $199)</td><td>$149 promo (reg $299)</td></tr><tr><td><a href="/weight-loss/reviews/medvi">Medvi</a></td><td>$99 promo (reg $199)</td><td>$166 promo (reg $299)</td></tr><tr><td><a href="/weight-loss/reviews/healthrx">HealthRx</a></td><td>$99 (12-month prepaid)</td><td>from $179</td></tr><tr><td><a href="/weight-loss/reviews/directmeds">DirectMeds</a></td><td>$147 flat</td><td>$147 flat</td></tr><tr><td><a href="/weight-loss/reviews/sprout">Sprout</a></td><td>from $149</td><td>from $199</td></tr><tr><td><a href="/weight-loss/reviews/trimrx">trimrx</a></td><td>$179 first month (reg $299)</td><td>$259</td></tr></tbody></table>The pattern: tirzepatide consistently costs $40-$100/month more than semaglutide at the same provider - the price of the stronger average results. Full breakdown in our <a href="/weight-loss/cheapest-glp1">cheapest GLP-1 comparison</a>, and the aggregate ranges plus brand-vs-compounded math in our <a href="/weight-loss/glp1-weight-loss-statistics">GLP-1 price &amp; statistics report</a>.',
       },
       {
         heading: "Dosing Comparison",
