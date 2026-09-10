@@ -102,6 +102,8 @@ export const articles: Article[] = [
   },
   {
     slug: "choosing-telehealth-weight-loss-provider",
+    image: "/article-images/articleimage3.webp",
+    imageAlt: "Woman at a laptop comparing telehealth weight-loss providers, with a notebook checklist of things to consider - credentials, cost, insurance, reviews and ongoing support",
     title: "How to Choose a Telehealth Weight Loss Provider (2026 Guide)",
     description:
       "Not sure which online weight loss provider to pick? Our 2026 guide covers what to look for, red flags to avoid, pricing traps, and how to compare GLP-1 telehealth programs.",
