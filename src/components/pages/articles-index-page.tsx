@@ -133,12 +133,23 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
         >
           <div className="flex flex-col sm:flex-row">
             <div
-              className="flex h-[180px] items-center justify-center sm:h-auto sm:w-[340px] sm:shrink-0"
+              className="relative flex h-[180px] items-center justify-center overflow-hidden sm:h-auto sm:min-h-[210px] sm:w-[340px] sm:shrink-0"
               style={{ backgroundColor: articles[0].heroColor }}
             >
-              <span className="text-[40px] font-extrabold text-[#191919]/10 select-none">
-                01
-              </span>
+              {articles[0].image ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={articles[0].image}
+                  alt={articles[0].imageAlt || articles[0].title}
+                  className="absolute inset-0 h-full w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              ) : (
+                <span className="text-[40px] font-extrabold text-[#191919]/10 select-none">
+                  01
+                </span>
+              )}
             </div>
             <div className="flex flex-1 flex-col justify-center p-6 sm:p-8">
               <div className="mb-3 flex items-center gap-3">
@@ -175,12 +186,23 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
               className="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition-shadow hover:shadow-md"
             >
               <div
-                className="flex h-[140px] items-center justify-center"
+                className="relative flex h-[140px] items-center justify-center overflow-hidden"
                 style={{ backgroundColor: article.heroColor }}
               >
-                <span className="text-[36px] font-extrabold text-[#191919]/10 select-none">
-                  {String(i + 2).padStart(2, "0")}
-                </span>
+                {article.image ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={article.image}
+                    alt={article.imageAlt || article.title}
+                    className="absolute inset-0 h-full w-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                ) : (
+                  <span className="text-[36px] font-extrabold text-[#191919]/10 select-none">
+                    {String(i + 2).padStart(2, "0")}
+                  </span>
+                )}
               </div>
               <div className="flex flex-1 flex-col p-5">
                 <div className="mb-2.5 flex items-center gap-3">
