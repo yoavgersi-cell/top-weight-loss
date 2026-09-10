@@ -48,6 +48,94 @@ export const SOURCES_BY_VERTICAL: Record<string, MedicalSource[]> = {
       href: "https://medlineplus.gov/druginfo/meds/a618008.html",
     },
   ],
+  "hair-loss": [
+    {
+      label: "Finasteride - drug information",
+      publisher: "MedlinePlus, U.S. National Library of Medicine (NIH)",
+      href: "https://medlineplus.gov/druginfo/meds/a698016.html",
+    },
+    {
+      label: "Minoxidil Topical - drug information",
+      publisher: "MedlinePlus, U.S. National Library of Medicine (NIH)",
+      href: "https://medlineplus.gov/druginfo/meds/a689003.html",
+    },
+    {
+      label: "Hair Loss: Diagnosis and Treatment",
+      publisher: "American Academy of Dermatology (AAD)",
+      href: "https://www.aad.org/public/diseases/hair-loss",
+    },
+    {
+      label: "Androgenetic Alopecia (pattern hair loss) - overview",
+      publisher: "MedlinePlus Genetics, U.S. National Library of Medicine (NIH)",
+      href: "https://medlineplus.gov/genetics/condition/androgenetic-alopecia/",
+    },
+  ],
+  trt: [
+    {
+      label: "Testosterone Therapy in Men With Hypogonadism - Clinical Practice Guideline",
+      publisher: "The Endocrine Society, 2018",
+      href: "https://www.endocrine.org/clinical-practice-guidelines/testosterone-therapy",
+    },
+    {
+      label: "FDA Drug Safety Communication: caution about using testosterone products for low testosterone",
+      publisher: "U.S. Food & Drug Administration",
+      href: "https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-fda-cautions-about-using-testosterone-products-low-testosterone-due",
+    },
+    {
+      label: "Testosterone Levels Test",
+      publisher: "MedlinePlus, U.S. National Library of Medicine (NIH)",
+      href: "https://medlineplus.gov/lab-tests/testosterone-levels-test/",
+    },
+    {
+      label: "Cardiovascular Safety of Testosterone-Replacement Therapy (TRAVERSE trial)",
+      publisher: "New England Journal of Medicine, 2023",
+      href: "https://doi.org/10.1056/NEJMoa2215025",
+    },
+  ],
+  hrt: [
+    {
+      label: "The 2022 Hormone Therapy Position Statement of The North American Menopause Society",
+      publisher: "The Menopause Society (NAMS)",
+      href: "https://www.menopause.org/professional-resources/position-statements",
+    },
+    {
+      label: "Hormone Therapy - patient guidance",
+      publisher: "American College of Obstetricians and Gynecologists (ACOG)",
+      href: "https://www.acog.org/womens-health/faqs/hormone-therapy",
+    },
+    {
+      label: "Menopause: Medicines to Help You",
+      publisher: "U.S. Food & Drug Administration",
+      href: "https://www.fda.gov/consumers/free-publications-women/menopause-medicines-help-you",
+    },
+    {
+      label: "Women's Health Initiative (WHI) - study overview",
+      publisher: "National Heart, Lung, and Blood Institute (NIH)",
+      href: "https://www.nhlbi.nih.gov/science/womens-health-initiative-whi",
+    },
+  ],
+  "online-therapy": [
+    {
+      label: "Psychotherapies - overview of evidence-based approaches",
+      publisher: "National Institute of Mental Health (NIMH), NIH",
+      href: "https://www.nimh.nih.gov/health/topics/psychotherapies",
+    },
+    {
+      label: "Understanding psychotherapy and how it works",
+      publisher: "American Psychological Association (APA)",
+      href: "https://www.apa.org/topics/psychotherapy/understanding",
+    },
+    {
+      label: "Depression - symptoms, treatments and evidence",
+      publisher: "National Institute of Mental Health (NIMH), NIH",
+      href: "https://www.nimh.nih.gov/health/topics/depression",
+    },
+    {
+      label: "SAMHSA National Helpline (free, confidential, 24/7 treatment referral)",
+      publisher: "Substance Abuse and Mental Health Services Administration",
+      href: "https://www.samhsa.gov/find-help/national-helpline",
+    },
+  ],
 };
 
 // Compact citation list for the bottom of YMYL content pages. Renders nothing
