@@ -208,6 +208,20 @@ const CATEGORY_LINKS: Record<string, { label: string; href: string }[]> = {
   ],
 };
 
+// Bento layout for the category grid (desktop). Order + width tile into a
+// balanced mosaic rather than a uniform grid: `wide` cards span two columns and
+// show up to two sub-links; the rest are compact, name-only tiles. On a 4-col
+// desktop grid this fills two clean rows - row 1: one wide + two compact, row 2:
+// two wide - so the sizes vary but stay balanced. Only published, non-hidden
+// verticals render; the link count is deliberately small to avoid CTA clutter.
+const BENTO: { id: string; wide: boolean }[] = [
+  { id: "weight-loss", wide: true },
+  { id: "trt", wide: false },
+  { id: "hrt", wide: false },
+  { id: "hair-loss", wide: true },
+  { id: "online-therapy", wide: true },
+];
+
 function updatedLabel(iso?: string): string {
   if (!iso) return "";
   const d = new Date(iso);
@@ -340,86 +354,70 @@ export async function HubHome() {
             therapy - real published prices and verified customer reviews.
           </p>
 
-          {/* Category cards - icon-led, links behind a divider. Dense 3-up
-              grid (2-up on tablet) so all six verticals sit above the fold. */}
-          {/* Mobile is a compact 2-up grid of tappable category tiles (icon +
-              name only); sm+ upgrades to the richer card with sub-links. */}
-          <div className="mx-auto mt-10 grid max-w-[1080px] grid-cols-2 gap-3 text-left sm:mt-12 sm:gap-3.5 sm:grid-cols-2 lg:grid-cols-3">
-            {VERTICALS.filter((v) => !isHiddenVertical(v.id)).map((v) => {
-              const live = isPublishedVertical(v.id);
+          {/* Category cards - a balanced bento (desktop): `wide` verticals span
+              two columns with up to two sub-links; the rest are compact,
+              name-only tiles. Mobile stacks to a single column, tablet to 2-up,
+              both as compact icon+name tiles (no sub-link clutter on small
+              screens). */}
+          <div className="mx-auto mt-10 grid max-w-[1080px] grid-cols-1 gap-3.5 text-left sm:mt-12 sm:grid-cols-2 lg:grid-cols-4">
+            {BENTO.filter((b) => isPublishedVertical(b.id) && !isHiddenVertical(b.id)).map((b) => {
+              const v = VERTICALS.find((x) => x.id === b.id);
+              if (!v) return null;
               const Icon = VERTICAL_ICON[v.id] ?? WeightLossIcon;
               const name = CATEGORY_NAME[v.id] ?? v.name;
-              const links = live ? CATEGORY_LINKS[v.id] ?? [] : [];
+              const links = b.wide ? (CATEGORY_LINKS[v.id] ?? []).slice(0, 2) : [];
+              const span = b.wide ? "lg:col-span-2" : "lg:col-span-1";
 
               return (
                 <Fragment key={v.id}>
-                  {/* ── Mobile: compact tile, whole card taps through ── */}
-                  {live ? (
-                    <Link
-                      href={`/${v.id}`}
-                      className="flex items-center gap-2.5 rounded-xl border border-gray-200/80 bg-white px-3.5 py-4 shadow-[0_1px_3px_rgba(16,42,67,0.06)] active:bg-gray-50 sm:hidden"
-                    >
-                      <Icon className="h-[34px] w-[34px] shrink-0" />
-                      <span className="text-[15px] font-bold leading-[1.15] text-[#191919]">{name}</span>
-                    </Link>
-                  ) : (
-                    <div className="flex items-center gap-2.5 rounded-xl border border-gray-200/80 bg-white px-3.5 py-4 shadow-[0_1px_3px_rgba(16,42,67,0.06)] sm:hidden">
-                      <Icon className="h-[34px] w-[34px] shrink-0" />
-                      <div>
-                        <span className="block text-[15px] font-bold leading-[1.15] text-[#191919]">{name}</span>
-                        <span className="mt-1 inline-block rounded-full bg-gray-100 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-gray-400">
-                          Coming soon
-                        </span>
-                      </div>
-                    </div>
-                  )}
+                  {/* ── Mobile + tablet: compact tile, whole card taps through ── */}
+                  <Link
+                    href={`/${v.id}`}
+                    className="flex items-center gap-3 rounded-2xl border border-gray-200/80 bg-white px-4 py-4 shadow-[0_1px_3px_rgba(16,42,67,0.06)] active:bg-gray-50 lg:hidden"
+                  >
+                    <Icon className="h-[36px] w-[36px] shrink-0" />
+                    <span className="text-[15px] font-bold leading-[1.15] text-[#191919]">{name}</span>
+                  </Link>
 
-                  {/* ── Desktop (sm+): rich card with sub-links (or calm name-only) ── */}
-                  {links.length === 0 ? (
-                    <div className="hidden items-center justify-center gap-3 rounded-xl border border-gray-200/80 bg-white px-5 py-5 shadow-[0_1px_3px_rgba(16,42,67,0.06)] sm:flex">
-                      <Icon className="h-[40px] w-[40px] shrink-0" />
-                      <div className="text-left">
-                        <span className="block text-[17px] font-bold leading-snug text-[#191919]">{name}</span>
-                        {!live && (
-                          <span className="mt-1 inline-block rounded-full bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-400">
-                            Coming soon
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="hidden items-stretch gap-4 rounded-xl border border-gray-200/80 bg-white px-4 py-4 shadow-[0_1px_3px_rgba(16,42,67,0.06)] transition-shadow hover:shadow-[0_4px_14px_rgba(16,42,67,0.10)] sm:flex sm:px-5">
-                      {/* Icon + category name */}
-                      <div className="flex w-[92px] shrink-0 flex-col items-center justify-center gap-2 text-center">
-                        <Icon className="h-[40px] w-[40px]" />
-                        <Link
-                          href={`/${v.id}`}
-                          className="text-[15px] font-bold leading-[1.2] text-[#191919] hover:text-[#0C4B75]"
-                        >
-                          {name}
-                        </Link>
-                      </div>
-
-                      <div className="w-px self-stretch bg-gray-200" />
-
-                      {/* Arrow links */}
-                      <div className="flex flex-1 flex-col justify-center gap-[7px] py-0.5">
-                        {links.map((l) => (
+                  {/* ── Desktop (lg+): bento tile - wide with links, or compact ── */}
+                  <div
+                    className={`hidden rounded-2xl border border-gray-200/80 bg-white shadow-[0_1px_3px_rgba(16,42,67,0.06)] transition-shadow hover:shadow-[0_5px_18px_rgba(16,42,67,0.10)] lg:flex ${span}`}
+                  >
+                    {links.length === 0 ? (
+                      <Link href={`/${v.id}`} className="flex flex-1 items-center justify-center gap-3 px-5 py-8">
+                        <Icon className="h-[42px] w-[42px] shrink-0" />
+                        <span className="text-[18px] font-bold leading-snug text-[#191919]">{name}</span>
+                      </Link>
+                    ) : (
+                      <div className="flex flex-1 items-stretch gap-5 px-6 py-6">
+                        <div className="flex w-[112px] shrink-0 flex-col items-center justify-center gap-2.5 text-center">
+                          <Icon className="h-[44px] w-[44px]" />
                           <Link
-                            key={l.href}
-                            href={l.href}
-                            className="group inline-flex items-center gap-1.5 text-[13.5px] font-medium leading-snug text-gray-800 hover:text-[#0C4B75]"
+                            href={`/${v.id}`}
+                            className="text-[16px] font-bold leading-[1.2] text-[#191919] hover:text-[#0C4B75]"
                           >
-                            {l.label}
-                            <ArrowRight
-                              className="h-3.5 w-3.5 shrink-0 text-gray-400 transition-transform group-hover:translate-x-0.5 group-hover:text-[#0C4B75]"
-                              strokeWidth={2.2}
-                            />
+                            {name}
                           </Link>
-                        ))}
+                        </div>
+                        <div className="w-px self-stretch bg-gray-200" />
+                        <div className="flex flex-1 flex-col justify-center gap-3">
+                          {links.map((l) => (
+                            <Link
+                              key={l.href}
+                              href={l.href}
+                              className="group inline-flex items-center gap-1.5 text-[14.5px] font-medium leading-snug text-gray-800 hover:text-[#0C4B75]"
+                            >
+                              {l.label}
+                              <ArrowRight
+                                className="h-3.5 w-3.5 shrink-0 text-gray-400 transition-transform group-hover:translate-x-0.5 group-hover:text-[#0C4B75]"
+                                strokeWidth={2.2}
+                              />
+                            </Link>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  )}
+                    )}
+                  </div>
                 </Fragment>
               );
             })}
