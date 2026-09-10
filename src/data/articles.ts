@@ -273,6 +273,8 @@ export const articles: Article[] = [
   },
   {
     slug: "ozempic-vs-wegovy-differences",
+    image: "/article-images/articleimage5.webp",
+    imageAlt: "An Ozempic (semaglutide) injection pen next to a Wegovy 2.4 mg (semaglutide) injection pen on a kitchen counter, comparing the two semaglutide brands",
     title: "Ozempic vs Wegovy (2026): Same Drug, Different Uses - Full Guide",
     description:
       "Ozempic and Wegovy both contain semaglutide but aren't the same drug. FDA approvals, dosing, trial results - and verified prices from $59/month.",
