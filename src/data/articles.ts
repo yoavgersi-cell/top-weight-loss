@@ -233,6 +233,8 @@ export const articles: Article[] = [
   },
   {
     slug: "weight-loss-plateau-what-to-do",
+    image: "/article-images/articleimage4.webp",
+    imageAlt: "Woman pausing with a water bottle at a mountain summit overlooking a valley during a hike - a visual metaphor for pushing past a weight-loss plateau",
     title: "Hit a Weight Loss Plateau? Here's What's Actually Happening",
     description:
       "Why weight loss stalls happen - even on GLP-1 medication - and evidence-based strategies to get past them without frustration.",
