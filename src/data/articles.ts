@@ -62,6 +62,8 @@ export const articles: Article[] = [
   },
   {
     slug: "first-month-weight-loss-medication",
+    image: "/article-images/weightlossarticle2.webp",
+    imageAlt: "A Month 1 calendar with the first week checked off beside a GLP-1 injection pen, a glass of water, a water bottle and a healthy breakfast bowl - the first month on weight-loss medication",
     title: "What to Expect Your First Month on Weight Loss Medication",
     description:
       "A week-by-week guide to your first 30 days on GLP-1 treatment - from the initial injection to early results and managing side effects.",
