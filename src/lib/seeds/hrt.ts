@@ -811,7 +811,7 @@ const articles: ArticleData[] = [
     author: "TreatmentsHub Staff",
     keyTakeaways: [
       "HRT stands for hormone replacement therapy: restoring the hormones - mainly estrogen, often with progesterone - that decline through perimenopause and menopause.",
-      "It remains the most effective treatment for the classic menopause symptoms: hot flashes, night sweats, sleep disruption and genitourinary changes.",
+      "It remains the most effective treatment for the classic menopause symptoms - hot flashes, night sweats and genitourinary changes - and the sleep disruption those night sweats cause.",
       "It comes in multiple forms - pills, patches, gels and creams - and the form choice is a real medical decision, not just a preference.",
       "Whether HRT fits you depends on your symptoms, history and timing - a licensed clinician makes that call, and modern telehealth has made the evaluation genuinely accessible.",
     ],

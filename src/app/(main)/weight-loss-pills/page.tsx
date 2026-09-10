@@ -32,13 +32,13 @@ export const metadata: Metadata = {
 // ── Real, publicly documented medical data (not provider claims) ──
 const oralGlp1: [string, string, string][] = [
   ["Rybelsus (oral semaglutide 7-14mg)", "FDA-approved for type 2 diabetes; taken daily on an empty stomach", "Modest weight loss (a few %); same molecule as Ozempic/Wegovy"],
-  ["Oral semaglutide 25mg (oral Wegovy)", "Higher-dose daily oral semaglutide for weight loss; advancing through FDA review", "~15% weight loss reported in trials (OASIS) - approaching injectable levels"],
+  ["Oral semaglutide 25mg (oral Wegovy)", "Higher-dose daily oral semaglutide for weight loss; advancing through FDA review", "~13-15% weight loss reported in trials (OASIS) - approaching injectable levels"],
   ["Orforglipron (Lilly)", "Oral small-molecule GLP-1, no food/water timing restrictions; in late-stage trials, not yet approved", "Meaningful weight loss reported in Phase 2/3; approval pending"],
 ];
 
 const fdaPills: [string, string, string][] = [
-  ["Qsymia (phentermine/topiramate)", "Appetite suppression + reduced cravings; daily capsule", "Among the most effective oral options - roughly 8-10% average weight loss"],
-  ["Contrave (bupropion/naltrexone)", "Targets appetite and reward-related eating; daily tablet", "Roughly 5-9% average weight loss"],
+  ["Qsymia (phentermine/topiramate)", "Appetite suppression + reduced cravings; daily capsule. Not for use in pregnancy (topiramate is teratogenic); contraindicated in glaucoma and hyperthyroidism", "Among the most effective oral options - roughly 8-10% average weight loss"],
+  ["Contrave (bupropion/naltrexone)", "Targets appetite and reward-related eating; daily tablet. Carries a boxed warning for suicidal thoughts/behavior; avoid with seizure disorders or uncontrolled high blood pressure", "Roughly 5-9% average weight loss"],
   ["Phentermine (Adipex-P)", "Short-term appetite suppressant; controlled substance", "Roughly 3-5% over short-term use"],
   ["Metformin", "Used off-label; improves insulin sensitivity; daily tablet", "Modest (~2-3%); often used as a lower-cost option"],
   ["Orlistat (Xenical / Alli)", "Blocks absorption of some dietary fat; Rx and OTC", "Roughly 3-5%; GI side effects are common"],
@@ -78,7 +78,7 @@ function DataTable({ colA, colB, rows }: { colA: string; colB: string; rows: [st
 
 const faqs: { question: string; answer: string }[] = [
   { question: "Do weight loss pills actually work?", answer: "Prescription weight loss pills can work, but results vary a lot by medication. FDA-approved options like Qsymia and Contrave produce roughly 5-10% average weight loss, while newer high-dose oral semaglutide has reached ~15% in trials. Over-the-counter 'fat burner' or 'natural' pills are largely unproven and are not a substitute for prescription treatment." },
-  { question: "Is there a weight loss pill as effective as Ozempic or Wegovy?", answer: "Getting close. Oral semaglutide at a 25mg dose (an oral version of Wegovy) has shown around 15% weight loss in trials - comparable to the semaglutide injection - and is advancing through FDA review. Orforglipron, an oral GLP-1 from Eli Lilly, is also in late-stage trials. For now, weekly injections still lead on average results." },
+  { question: "Is there a weight loss pill as effective as Ozempic or Wegovy?", answer: "Getting close. Oral semaglutide at a 25mg dose (an oral version of Wegovy) has shown around 13-15% weight loss in trials - approaching the semaglutide injection - and is advancing through FDA review. Orforglipron, an oral GLP-1 from Eli Lilly, is also in late-stage trials. For now, weekly injections still lead on average results." },
   { question: "What is the strongest prescription weight loss pill?", answer: "Among currently FDA-approved oral options, Qsymia (phentermine/topiramate) tends to produce the most weight loss - roughly 8-10% on average. High-dose oral semaglutide, where available, is more effective still." },
   { question: "Can you get weight loss pills online?", answer: "Yes. Licensed telehealth providers can evaluate you online and, when appropriate, prescribe oral weight loss medications. A clinician determines whether an oral or injectable option fits your health profile and goals." },
   { question: "Are weight loss pills or injections better?", answer: "It depends on your priorities. Injections currently produce greater average weight loss, but pills avoid needles, can be simpler to start, and newer oral GLP-1s are closing the gap. The right choice comes down to your goals, tolerance, and what a clinician recommends." },
