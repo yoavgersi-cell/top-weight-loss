@@ -78,6 +78,63 @@ async function getVerticalConfig(vertical: string): Promise<SiteConfig> {
 // Default Trustpilot reviews per provider id. Shown on battle pages until the
 // provider's reviews are edited in the admin CMS, which then takes precedence.
 const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; reviews: TrustpilotReview[] }> = {
+  bmimd: {
+    // Verified from the operator's Trustpilot screenshots (claimed profile,
+    // Sep 2026). Real, unprompted reviews only - an off-topic business review
+    // captured in the same set was deliberately excluded.
+    rating: "4.4",
+    reviewCount: "870",
+    reviews: [
+      {
+        title: "Amazing Customer Service",
+        text: "The customer service I have experienced w/ bmiMD is excellent. They always respond to messages within a timely matter. They always come up with a solution to any issues. I have nothing bad to say about them.",
+        name: "Delaruth Wallace",
+        location: "US",
+        rating: 5,
+        date: "Jul 23, 2026",
+      },
+      {
+        title: "So far...no side effects",
+        text: "So far...no side effects! Just dropping weight that exercise and diet wouldn't. Have gone from 238 to 213 in 3 weeks. Shipping to my front door for easy delivery!",
+        name: "MommaJ",
+        location: "US",
+        rating: 5,
+        date: "Jul 4, 2026",
+      },
+      {
+        title: "Medication works as it should",
+        text: "Medication works as it should. Always delivered on time and packaged properly with cold packs. Customer Service is very responsive.",
+        name: "Anna",
+        location: "US",
+        rating: 5,
+        date: "Jul 3, 2026",
+      },
+      {
+        title: "Excellent customer service",
+        text: "Excellent customer service, quick shipping. The product I ordered is working wonderfully.",
+        name: "Sandra Hansen",
+        location: "US",
+        rating: 5,
+        date: "Jul 2, 2026",
+      },
+      {
+        title: "Great service for all my supplement needs",
+        text: "Great service for all my supplement needs!",
+        name: "Cindy Lew",
+        location: "US",
+        rating: 5,
+        date: "Jul 3, 2026",
+      },
+      {
+        title: "I feel more powerful now",
+        text: "I feel more powerful now, it is a great starting.",
+        name: "Iliet S",
+        location: "US",
+        rating: 5,
+        date: "Jul 3, 2026",
+      },
+    ],
+  },
   wellmedr: {
     rating: "4.7",
     reviewCount: "1,205",
@@ -780,6 +837,47 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
 };
 
 const defaultReviews: ReviewData[] = [
+  {
+    slug: "bmimd",
+    providerId: "bmimd",
+    updatedAt: "2026-09-10",
+    shortSummary:
+      "Established telehealth GLP-1 provider shipping to 49 states, with a 4.4 Trustpilot average across 870 reviews - compounded semaglutide and tirzepatide (plus microdose options), delivered cold-chain, with responsive support.",
+    reviewIntro:
+      "bmiMD is a New York-based telehealth company offering compounded GLP-1 weight-loss treatment - semaglutide and tirzepatide, including microdose versions - prescribed online and shipped to your door in most US states. It carries a solid track record: 4.4 on Trustpilot across 870 reviews, where the recurring themes are responsive customer service and reliable, properly cold-packed delivery. \"Medication works as it should. Always delivered on time and packaged properly with cold packs,\" writes one recent reviewer; another reports going \"from 238 to 213 in 3 weeks.\" The flow is the standard cash-pay one - an online medical intake reviewed by a licensed provider, with a money-back guarantee if you're not approved. Two honest notes before the details: bmiMD publishes its current pricing at checkout rather than a single headline rate, so confirm the plan cost on its site, and support is handled through messaging rather than a phone line.",
+    keyFeatures: [
+      "Compounded semaglutide and tirzepatide, plus microdose options",
+      "Prescribed online by a licensed provider; ships to ~49 states",
+      "Cold-chain delivery to your door",
+      "4.4 Trustpilot average across 870 reviews",
+      "Money-back guarantee if you're not approved",
+    ],
+    pricingSummary:
+      "bmiMD offers its compounded GLP-1 medications on subscription plans, with the current pricing shown on bmiMD's site at intake/checkout rather than as a single published headline rate. Because plan pricing can change, confirm the exact monthly cost on bmiMD before signing up. (We only publish verified prices - we'll add bmiMD's figures here once confirmed.)",
+    treatmentOptions: [
+      "Compounded semaglutide (GLP-1) injection",
+      "Compounded tirzepatide (GLP-1 + GIP) injection",
+      "Microdose versions of each",
+      "Additional weight-related options (e.g. metformin, MIC + B12)",
+    ],
+    pros: [
+      "Strong, high-volume Trustpilot record (4.4 across 870 reviews)",
+      "Responsive customer service is the most consistent praise in reviews",
+      "Reliable cold-chain shipping",
+      "Broad treatment menu, including microdose options",
+      "Money-back guarantee if you're not approved",
+    ],
+    cons: [
+      "Pricing isn't shown as a single headline rate - you see it at intake",
+      "Support is message-based rather than a phone line",
+    ],
+    bestFor: [
+      "People who want an established provider with a broad GLP-1 menu",
+      "Anyone who values responsive support and dependable delivery",
+    ],
+    finalVerdict:
+      "bmiMD is a credible, well-reviewed telehealth GLP-1 provider: its 4.4 Trustpilot average across 870 reviews is a real, high-volume track record, and the recurring praise for responsive support and carefully cold-packed shipping matches what you want from an online pharmacy handling temperature-sensitive medication. The honest caveats are that pricing is revealed at intake rather than published as a headline rate, and support runs through messaging. If you want an established provider with a broad treatment menu and dependable delivery, bmiMD is worth a look - confirm the current plan pricing on its site before you commit.",
+  },
   {
     slug: "altrx",
     providerId: "altrx",
@@ -4856,7 +4954,19 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
             // save time. For cluster slugs the code version always wins so
             // content rewrites actually ship; other articles stay CMS-owned.
             const codeAuthoritative = new Map(brandClusterArticles.map((a) => [a.slug, a]));
-            const merged = savedArticles.map((a) => codeAuthoritative.get(a.slug) ?? a);
+            // Code-side hero images are authoritative: a CMS Save snapshots the
+            // config without the image/imageAlt fields, so overlay them from code
+            // onto every saved article so images added in code always surface
+            // live (the article text stays CMS-owned).
+            const codeBySlug = new Map(initial.articles.map((a) => [a.slug, a]));
+            const merged = savedArticles.map((a) => {
+              const cluster = codeAuthoritative.get(a.slug);
+              if (cluster) return cluster;
+              const code = codeBySlug.get(a.slug);
+              return code && (code.image || code.imageAlt)
+                ? { ...a, image: code.image, imageAlt: code.imageAlt }
+                : a;
+            });
             const newDefaults = initial.articles.filter((a) => !savedSlugs.has(a.slug));
             return [...merged, ...newDefaults];
           })(),
