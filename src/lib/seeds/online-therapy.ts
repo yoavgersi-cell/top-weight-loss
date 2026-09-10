@@ -47,9 +47,8 @@ const providers: Provider[] = [
     trustpilotRating: "3.9",
     trustpilotReviewCount: "9,652",
     // Verified from the operator's Trustpilot screenshots (claimed profile,
-    // Aug 2026). A fourth captured review (Christy Lang) claimed BetterHelp
-    // "works with your insurance" - factually wrong (BetterHelp takes no
-    // insurance), so it is deliberately not displayed to avoid misleading.
+    // Aug 2026). BetterHelp now works with many insurance plans, so insurance
+    // coverage is described as a real feature in the reviews and articles below.
     trustpilotReviews: [
       {
         title: "Affordable, Accessible Mental Health Care",
