@@ -473,7 +473,7 @@ export async function HubHome() {
               <div>
                 <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-[#0C4B75]">Weight loss</p>
                 <h2 className="mt-1.5 text-[26px] font-bold leading-tight tracking-[-0.015em] text-[#191919] sm:text-[32px]">
-                  Top-rated providers this month
+                  Top-rated providers
                 </h2>
               </div>
               <Link
