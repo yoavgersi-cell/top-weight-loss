@@ -1142,7 +1142,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "How do you know which one you need?",
-        body: `A reasonable rule of thumb: if you want to work through thoughts, patterns, relationships or life stressors, talk therapy is the natural starting point. If your symptoms are significantly disrupting daily functioning - or a therapist or doctor suggests medication may help - that points toward a psychiatric evaluation. You do not have to diagnose yourself perfectly in advance: many people start with therapy and are referred onward if medication seems warranted. What matters is starting somewhere rather than staying stuck deciding.`,
+        body: `A reasonable rule of thumb: if you want to work through thoughts, patterns, relationships or life stressors, talk therapy is the natural starting point. If your symptoms are significantly disrupting daily functioning - or a therapist or doctor suggests medication may help - that points toward a psychiatric evaluation. You do not have to diagnose yourself perfectly in advance: many people start with therapy and are referred onward if medication seems warranted. What matters is starting somewhere rather than staying stuck deciding. And if you are in crisis or thinking about harming yourself, contact emergency services or a crisis line (in the US, call or text 988) right away rather than waiting for an appointment.`,
       },
       {
         heading: "Why do many people use both?",

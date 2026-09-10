@@ -46,7 +46,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What to Realistically Expect",
-        body: 'Clinical trials show average weight loss of 15-20% of body weight with semaglutide and up to 22% with tirzepatide over 68-72 weeks. However, results vary significantly between individuals. Most patients begin noticing appetite changes within the first two weeks, with meaningful weight loss becoming visible around weeks 4-8. For a week-by-week breakdown, read our guide on <a href="/weight-loss/articles/first-month-weight-loss-medication">what to expect your first month on medication</a>. The medications are typically administered as once-weekly injections, with doses gradually increased over several months to minimize side effects.',
+        body: 'Clinical trials show average weight loss of about 15% of body weight with semaglutide (STEP trials) and up to ~22.5% with tirzepatide (SURMOUNT trials) over 68-72 weeks. However, results vary significantly between individuals. Most patients begin noticing appetite changes within the first two weeks, with meaningful weight loss becoming visible around weeks 4-8. For a week-by-week breakdown, read our guide on <a href="/weight-loss/articles/first-month-weight-loss-medication">what to expect your first month on medication</a>. The medications are typically administered as once-weekly injections, with doses gradually increased over several months to minimize side effects.',
       },
       {
         heading: "Common Side Effects",
@@ -281,11 +281,11 @@ export const articles: Article[] = [
       },
       {
         heading: "Ozempic vs Wegovy for weight loss: which works better?",
-        body: 'In the STEP clinical trials, Wegovy patients lost an average of about 15% of their body weight over 68 weeks. Ozempic trials (which focused on diabetes outcomes) showed average weight loss of around 10-12%. For a 200-pound person, that\'s roughly 30 lbs with Wegovy vs 20-24 lbs with Ozempic. Both produce meaningful results, but Wegovy\'s higher dose and weight-specific design give it a consistent edge. Curious how these compare to tirzepatide? See our <a href="/weight-loss/articles/mounjaro-vs-ozempic">Mounjaro vs Ozempic comparison</a>.',
+        body: 'In the STEP clinical trials, Wegovy patients lost an average of about 15% of their body weight over 68 weeks. Ozempic trials (which focused on diabetes outcomes) showed more modest average weight loss of around 6-8%. For a 200-pound person, that\'s roughly 30 lbs with Wegovy vs 12-16 lbs with Ozempic. Both produce meaningful results, but Wegovy\'s higher dose and weight-specific design give it a consistent edge. Curious how these compare to tirzepatide? See our <a href="/weight-loss/articles/mounjaro-vs-ozempic">Mounjaro vs Ozempic comparison</a>.',
       },
       {
         heading: "Ozempic vs Wegovy side effects: is there a difference?",
-        body: 'Since both contain the same active ingredient, the side effect profiles are nearly identical. The most common issues are gastrointestinal: nausea (40-45% of patients), diarrhea (~30%), vomiting (~25%), and constipation (~24%). These are typically most pronounced during dose increases and improve over time. Wegovy\'s slightly higher maximum dose may cause somewhat more GI issues at the top end. For detailed management strategies, read our <a href="/weight-loss/articles/semaglutide-side-effects-guide">semaglutide side effects guide</a>.',
+        body: 'Since both contain the same active ingredient, the side effect profiles are nearly identical. The most common issues are gastrointestinal and, in the STEP 1 trial, included nausea (~44% of patients), diarrhea (~30%), vomiting (~24%), and constipation (~23%). These are typically most pronounced during dose increases and improve over time. Wegovy\'s slightly higher maximum dose may cause somewhat more GI issues at the top end. For detailed management strategies, read our <a href="/weight-loss/articles/semaglutide-side-effects-guide">semaglutide side effects guide</a>.',
       },
       {
         heading: "How much do Ozempic and Wegovy cost? (Verified prices)",
@@ -323,7 +323,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "The Most Common Side Effects",
-        body: 'Gastrointestinal issues are by far the most frequently reported side effects of semaglutide. Nausea affects roughly 40-45% of patients, particularly during the first few weeks and after dose increases. Other common GI side effects include diarrhea (about 30%), vomiting (around 25%), and constipation (about 24%). These numbers can sound alarming, but context matters: most side effects are mild to moderate, and they tend to improve significantly over time as your body adjusts. Understanding <a href="/weight-loss/articles/how-glp1-medications-work">how GLP-1 medications work</a> can help explain why these effects occur.',
+        body: 'Gastrointestinal issues are by far the most frequently reported side effects of semaglutide. In the semaglutide STEP trials, nausea affected roughly 40-44% of patients, particularly during the first few weeks and after dose increases. Other common GI side effects include diarrhea (about 30%), vomiting (around 25%), and constipation (about 24%). These numbers can sound alarming, but context matters: most side effects are mild to moderate, and they tend to improve significantly over time as your body adjusts. Understanding <a href="/weight-loss/articles/how-glp1-medications-work">how GLP-1 medications work</a> can help explain why these effects occur.',
       },
       {
         heading: "When Side Effects Typically Start",
@@ -355,7 +355,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Should Side Effects Stop You From Starting?",
-        body: 'For most patients, side effects are temporary and manageable. Clinical trial dropout rates due to side effects were relatively low (5-8%), meaning the vast majority of patients found the benefits outweighed the discomfort. The key is starting with realistic expectations, having a good provider, and using the management strategies above. If you\'re unsure whether semaglutide is right for you, check our <a href="/weight-loss/articles/who-qualifies-for-glp1-weight-loss">eligibility guide</a> or <a href="/weight-loss/find-your-match">take our matching quiz</a> to find a provider who can evaluate your specific situation.',
+        body: 'For most patients, side effects are temporary and manageable. Only a relatively small share of trial participants discontinued because of side effects, meaning the vast majority found the benefits outweighed the discomfort. The key is starting with realistic expectations, having a good provider, and using the management strategies above. If you\'re unsure whether semaglutide is right for you, check our <a href="/weight-loss/articles/who-qualifies-for-glp1-weight-loss">eligibility guide</a> or <a href="/weight-loss/find-your-match">take our matching quiz</a> to find a provider who can evaluate your specific situation.',
       },
     ],
   },
@@ -483,7 +483,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Medications That May Interact",
-        body: 'GLP-1 medications can interact with other drugs, particularly insulin and sulfonylureas (which may increase the risk of hypoglycemia when combined). Because GLP-1 agonists slow gastric emptying, they can also affect the absorption of oral medications. Your provider will review your full medication list during the evaluation process. If you take oral birth control, blood thinners, or thyroid medication, discuss timing and potential interactions with your provider before starting treatment. Learn more about potential side effects in our <a href="/weight-loss/articles/semaglutide-side-effects-guide">semaglutide side effects guide</a>.',
+        body: 'GLP-1 medications can interact with other drugs, particularly insulin and sulfonylureas (which may increase the risk of hypoglycemia when combined). Because GLP-1 agonists slow gastric emptying, they can also affect the absorption of oral medications. Tirzepatide specifically carries a labeled warning that it can reduce the effectiveness of oral hormonal contraceptives - patients are advised to use a barrier method or a non-oral contraceptive for 4 weeks after starting and after each dose increase. Your provider will review your full medication list during the evaluation process. If you take oral birth control, blood thinners, or thyroid medication, discuss timing and potential interactions with your provider before starting treatment. Learn more about potential side effects in our <a href="/weight-loss/articles/semaglutide-side-effects-guide">semaglutide side effects guide</a>.',
       },
       {
         heading: "The Evaluation Process",
@@ -547,7 +547,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "The Muscle Loss Problem",
-        body: 'One of the most important - and often overlooked - concerns with rapid weight loss is the loss of lean muscle mass. Studies show that up to 25-40% of weight lost during caloric restriction can come from muscle rather than fat, especially without resistance training. GLP-1 medications accelerate weight loss, which makes this risk more significant. Muscle isn\'t just about aesthetics - it\'s metabolically active tissue that supports your resting metabolic rate, joint health, and long-term weight maintenance. Preserving it should be a priority. This is also critical for anyone worried about <a href="/weight-loss/articles/stopping-glp1-medication-what-happens">maintaining results after stopping medication</a>.',
+        body: 'One of the most important - and often overlooked - concerns with rapid weight loss is the loss of lean muscle mass. A substantial share of the weight lost through calorie restriction can come from lean muscle rather than fat, especially without resistance training. GLP-1 medications accelerate weight loss, which makes this risk more significant. Muscle isn\'t just about aesthetics - it\'s metabolically active tissue that supports your resting metabolic rate, joint health, and long-term weight maintenance. Preserving it should be a priority. This is also critical for anyone worried about <a href="/weight-loss/articles/stopping-glp1-medication-what-happens">maintaining results after stopping medication</a>.',
       },
       {
         heading: "Why Strength Training Is Essential",
@@ -761,11 +761,11 @@ export const articles: Article[] = [
       },
       {
         heading: "How do Mounjaro and Ozempic work differently in the body?",
-        body: 'Ozempic (semaglutide) mimics the GLP-1 hormone, slowing gastric emptying, reducing appetite, and improving insulin sensitivity. Mounjaro (tirzepatide) does all of this AND activates GIP receptors, which provide additional metabolic benefits including enhanced fat burning and improved nutrient processing. This dual mechanism is why Mounjaro consistently outperforms Ozempic in clinical trials. For a deeper comparison of the active ingredients, see our <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide guide</a>.',
+        body: 'Ozempic (semaglutide) mimics the GLP-1 hormone, slowing gastric emptying, reducing appetite, and improving insulin sensitivity. Mounjaro (tirzepatide) does all of this AND also activates GIP receptors, which may contribute additional metabolic effects (the exact role of GIP in weight loss is still being studied). This dual mechanism is why Mounjaro consistently outperforms Ozempic in clinical trials. For a deeper comparison of the active ingredients, see our <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide guide</a>.',
       },
       {
         heading: "Is Mounjaro better than Ozempic for weight loss?",
-        body: 'On average, yes - the clinical data is clear. In the SURMOUNT trials, Mounjaro (tirzepatide) patients lost up to 22.5% of their body weight at the highest dose over 72 weeks. In the STEP trials, Ozempic/Wegovy (semaglutide) patients lost approximately 15% of body weight over 68 weeks. For a 200-pound person, that\'s roughly 45 lbs with Mounjaro vs 30 lbs with Ozempic. Both significantly outperform older weight loss medications and lifestyle changes alone. Read our <a href="/weight-loss/articles/how-long-for-semaglutide-to-work">semaglutide results timeline</a> for week-by-week expectations.',
+        body: 'On average, yes - the clinical data is clear. In the SURMOUNT trials, Mounjaro (tirzepatide) patients lost up to 22.5% of their body weight at the highest dose over 72 weeks. In the STEP trials, Ozempic/Wegovy (semaglutide) patients lost approximately 15% of body weight over 68 weeks. For a 200-pound person at the maximum studied dose, that\'s roughly 45 lbs with Mounjaro vs 30 lbs with Ozempic - but these are trial averages, and individual results vary widely. Both significantly outperform older weight loss medications and lifestyle changes alone. Read our <a href="/weight-loss/articles/how-long-for-semaglutide-to-work">semaglutide results timeline</a> for week-by-week expectations.',
       },
       {
         heading: "How are Mounjaro and Ozempic dosed?",
@@ -1121,7 +1121,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Liraglutide: The Third Option",
-        body: 'Liraglutide (Saxenda) was the first GLP-1 approved specifically for weight loss. It produces more modest results (~5-8% body weight) compared to semaglutide and tirzepatide, and requires daily rather than weekly injections. It\'s less commonly prescribed now but remains an option for patients who don\'t respond well to other GLP-1s.',
+        body: 'Liraglutide (Saxenda) was the first GLP-1 approved specifically for weight loss. It produces more modest results (~5-8% body weight in the SCALE trial) compared to semaglutide and tirzepatide, and requires daily rather than weekly injections. It\'s less commonly prescribed now but remains an option for patients who don\'t respond well to other GLP-1s.',
       },
       {
         heading: "Cost Comparison",
@@ -1243,7 +1243,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Why GLP-1 Medications Are Popular Among Women",
-        body: '<a href="/weight-loss/articles/how-glp1-medications-work">GLP-1 medications</a> have become the most talked-about weight loss treatment for women in 2026. Clinical trials show they work equally well for women and men, with average weight loss of 15-22% of body weight. For many women who have struggled with diet-resistant weight - especially after pregnancy, during perimenopause, or with PCOS - these medications address the biological factors that make weight loss difficult.',
+        body: '<a href="/weight-loss/articles/how-glp1-medications-work">GLP-1 medications</a> have become the most talked-about weight loss treatment for women in 2026. Clinical trials show they work comparably well for women and men, with average weight loss of about 15% on semaglutide and up to ~22.5% on tirzepatide in their respective trials. For many women who have struggled with diet-resistant weight - especially after pregnancy, during perimenopause, or with PCOS - these medications address the biological factors that make weight loss difficult.',
       },
       {
         heading: "How Hormones Affect the Response",
@@ -1255,7 +1255,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Weight Loss Results for Women",
-        body: 'Clinical trial data shows women achieve results comparable to men. In the STEP trials, women on semaglutide lost an average of 15-17% of body weight. In the SURMOUNT trials, tirzepatide results were even higher. Individual results vary based on starting weight, metabolic health, medication adherence, and lifestyle factors. Read our <a href="/weight-loss/articles/how-long-for-semaglutide-to-work">semaglutide results timeline</a> for realistic expectations.',
+        body: 'Clinical trial data shows women achieve results comparable to men. In the STEP trials, women on semaglutide lost roughly 15% of body weight on average, in line with or slightly above the overall trial average. In the SURMOUNT trials, tirzepatide results were even higher. Individual results vary based on starting weight, metabolic health, medication adherence, and lifestyle factors. Read our <a href="/weight-loss/articles/how-long-for-semaglutide-to-work">semaglutide results timeline</a> for realistic expectations.',
       },
       {
         heading: "Managing Side Effects",
@@ -1285,7 +1285,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Why Weight Loss Gets Harder After 40",
-        body: 'After 40, your resting metabolic rate decreases by about 1-2% per decade. Hormonal changes - declining testosterone in men, perimenopause in women - promote fat storage, especially around the midsection. Muscle mass naturally decreases with age, further reducing calorie burn. Stress, sleep disruption, and decades of dietary habits compound the challenge. None of this means weight loss is impossible - it just means the tools that worked at 25 may not be enough anymore.',
+        body: 'After 40, gradual muscle loss and reduced activity slowly lower how many calories you burn at rest. Hormonal changes - declining testosterone in men, perimenopause in women - promote fat storage, especially around the midsection. Muscle mass naturally decreases with age, further reducing calorie burn. Stress, sleep disruption, and decades of dietary habits compound the challenge. None of this means weight loss is impossible - it just means the tools that worked at 25 may not be enough anymore.',
       },
       {
         heading: "How GLP-1 Medications Help After 40",
@@ -1511,7 +1511,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Weight-Loss Pill (Metformin) - From $89/Month",
-        body: 'Noom also offers a metformin-based weight loss plan starting at <strong>$29 for the first month</strong>, then <strong>$89/month</strong> as a three-month recurring subscription. Metformin is not a GLP-1 medication but is sometimes prescribed off-label for weight loss, particularly for patients with insulin resistance. Results are more modest than GLP-1 medications - typically 3-5% body weight loss.',
+        body: 'Noom also offers a metformin-based weight loss plan starting at <strong>$29 for the first month</strong>, then <strong>$89/month</strong> as a three-month recurring subscription. Metformin is not a GLP-1 medication but is sometimes prescribed off-label for weight loss, particularly for patients with insulin resistance. Results are more modest than GLP-1 medications, and generally much smaller.',
       },
       {
         heading: "Telehealth for Branded Medications - From $69/Month",

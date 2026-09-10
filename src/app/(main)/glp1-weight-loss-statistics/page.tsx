@@ -138,16 +138,16 @@ export default function StatisticsPage() {
                 <tr>
                   <td className="px-5 py-3 font-medium">Ozempic</td>
                   <td className="px-5 py-3">Semaglutide 2mg</td>
-                  <td className="px-5 py-3 font-semibold text-[#0C4B75]">~10-12% of body weight</td>
-                  <td className="px-5 py-3">SUSTAIN</td>
+                  <td className="px-5 py-3 font-semibold text-[#0C4B75]">~6-8% of body weight</td>
+                  <td className="px-5 py-3">SUSTAIN (type 2 diabetes)</td>
                   <td className="hidden sm:table-cell px-5 py-3">40 weeks</td>
                 </tr>
                 <tr className="bg-gray-50/50">
                   <td className="px-5 py-3 font-medium">Mounjaro</td>
                   <td className="px-5 py-3">Tirzepatide 15mg</td>
-                  <td className="px-5 py-3 font-semibold text-[#0C4B75]">Up to 22.5% of body weight</td>
-                  <td className="px-5 py-3">SURMOUNT-1</td>
-                  <td className="hidden sm:table-cell px-5 py-3">72 weeks</td>
+                  <td className="px-5 py-3 font-semibold text-[#0C4B75]">~12-15% of body weight</td>
+                  <td className="px-5 py-3">SURPASS (type 2 diabetes)</td>
+                  <td className="hidden sm:table-cell px-5 py-3">40 weeks</td>
                 </tr>
                 <tr>
                   <td className="px-5 py-3 font-medium">Saxenda</td>
@@ -180,10 +180,10 @@ export default function StatisticsPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
-                <tr><td className="px-5 py-3 font-medium">Nausea</td><td className="px-5 py-3">40-45%</td><td className="px-5 py-3">35-40%</td></tr>
-                <tr className="bg-gray-50/50"><td className="px-5 py-3 font-medium">Diarrhea</td><td className="px-5 py-3">~30%</td><td className="px-5 py-3">~25%</td></tr>
-                <tr><td className="px-5 py-3 font-medium">Vomiting</td><td className="px-5 py-3">~25%</td><td className="px-5 py-3">~20%</td></tr>
-                <tr className="bg-gray-50/50"><td className="px-5 py-3 font-medium">Constipation</td><td className="px-5 py-3">~24%</td><td className="px-5 py-3">~20%</td></tr>
+                <tr><td className="px-5 py-3 font-medium">Nausea</td><td className="px-5 py-3">~40-44%</td><td className="px-5 py-3">~25-33%</td></tr>
+                <tr className="bg-gray-50/50"><td className="px-5 py-3 font-medium">Diarrhea</td><td className="px-5 py-3">~30%</td><td className="px-5 py-3">~19-23%</td></tr>
+                <tr><td className="px-5 py-3 font-medium">Vomiting</td><td className="px-5 py-3">~24%</td><td className="px-5 py-3">~8-13%</td></tr>
+                <tr className="bg-gray-50/50"><td className="px-5 py-3 font-medium">Constipation</td><td className="px-5 py-3">~23%</td><td className="px-5 py-3">~12-17%</td></tr>
               </tbody>
             </table>
           </div>
@@ -204,7 +204,7 @@ export default function StatisticsPage() {
               <tbody className="divide-y divide-gray-100">
                 <tr><td className="px-5 py-3 font-medium">Week 1-2</td><td className="px-5 py-3">Reduced appetite, early satiety, possible mild nausea</td></tr>
                 <tr className="bg-gray-50/50"><td className="px-5 py-3 font-medium">Month 1</td><td className="px-5 py-3">3-5 lbs weight loss (starting dose)</td></tr>
-                <tr><td className="px-5 py-3 font-medium">Month 2-3</td><td className="px-5 py-3">5-10% body weight loss as dose increases</td></tr>
+                <tr><td className="px-5 py-3 font-medium">Month 2-3</td><td className="px-5 py-3">~3-6% body weight loss as the dose increases</td></tr>
                 <tr className="bg-gray-50/50"><td className="px-5 py-3 font-medium">Month 6</td><td className="px-5 py-3">10-15% body weight loss (semaglutide) or 15-20% (tirzepatide)</td></tr>
                 <tr><td className="px-5 py-3 font-medium">Month 12-16</td><td className="px-5 py-3">Maximum results: 15% (semaglutide) to 22.5% (tirzepatide)</td></tr>
               </tbody>
@@ -225,6 +225,14 @@ export default function StatisticsPage() {
               <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0C4B75]" />BMI ≥ 30 (obesity)</li>
               <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0C4B75]" />BMI ≥ 27 with at least one weight-related condition (type 2 diabetes, hypertension, high cholesterol, sleep apnea)</li>
             </ul>
+            <p className="mb-1 text-[13px] font-semibold text-[#191919]">Who should not take them</p>
+            <p className="text-[14px] leading-relaxed text-gray-500">
+              Semaglutide and tirzepatide carry an FDA boxed warning for thyroid C-cell tumors and are
+              contraindicated for anyone with a personal or family history of medullary thyroid carcinoma
+              or MEN 2 syndrome. They are also used with caution in people with a history of pancreatitis
+              or gallbladder disease, and are not for use in pregnancy. Always review your full history
+              with a licensed clinician.
+            </p>
             <p className="text-[14px] text-gray-500">
               Read our complete{" "}
               <Link href="/weight-loss/articles/who-qualifies-for-glp1-weight-loss" className="font-semibold text-[#0C4B75] hover:underline">eligibility guide</Link> or{" "}
@@ -238,7 +246,7 @@ export default function StatisticsPage() {
           <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Key Facts About GLP-1 Weight Loss</h2>
           <div className="rounded-xl border border-gray-200 bg-white p-6">
             <ul className="space-y-3 text-[15px] leading-[1.7] text-gray-600">
-              <li><strong className="text-[#191919]">Most effective prescription weight loss:</strong> GLP-1 medications produce 3-5x more weight loss than older weight loss drugs and lifestyle intervention alone.</li>
+              <li><strong className="text-[#191919]">Among the most effective prescription weight-loss options:</strong> in STEP 1, semaglutide 2.4 mg produced about 15% mean weight loss versus roughly 2.4% in the lifestyle-only (placebo) arm - a substantially larger effect than older weight-loss drugs.</li>
               <li><strong className="text-[#191919]">Once-weekly injection:</strong> Both semaglutide and tirzepatide are administered as once-weekly subcutaneous injections.</li>
               <li><strong className="text-[#191919]">Gradual dose escalation:</strong> Treatment starts at a low dose and increases monthly over 16-20 weeks to minimize side effects.</li>
               <li><strong className="text-[#191919]">Available online:</strong> Licensed telehealth providers can prescribe GLP-1 medications through fully online medical evaluations, with home delivery in most US states.</li>

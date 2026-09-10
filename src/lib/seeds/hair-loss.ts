@@ -103,7 +103,7 @@ const providers: Provider[] = [
     smallLogo: HAPPYHEAD_LOGO,
     highlights: [
       "Custom topical & oral prescription formulas",
-      "FDA-approved actives: finasteride, minoxidil, dutasteride, spironolactone",
+      "Established actives: minoxidil & finasteride (FDA-approved for hair loss), plus dutasteride & spironolactone off-label",
       "Dermatologist-founded; free online consultation",
     ],
     affiliateUrl: HAPPYHEAD_URL,
@@ -266,12 +266,12 @@ const reviews: ReviewData[] = [
     slug: "happyhead",
     providerId: "happyhead",
     shortSummary:
-      "Dermatologist-founded telehealth offering personalized prescription hair-loss formulas - custom topical and oral options with FDA-approved actives - for both men and women.",
+      "Dermatologist-founded telehealth offering personalized prescription hair-loss formulas - custom topical and oral options with established hair-loss actives - for both men and women.",
     reviewIntro:
-      "Happy Head is a dermatologist-founded telehealth service (based in Santa Monica, California) built around personalized prescription hair-loss formulas for men and women. Its customizable topical solutions and oral options combine FDA-approved actives - finasteride, minoxidil, dutasteride and spironolactone - and its topical serums go up to 8% minoxidil, above the 5% typical of over-the-counter products. A free online consultation is included, and prescription products are reviewed by Happy Head's dermatologists.",
+      "Happy Head is a dermatologist-founded telehealth service (based in Santa Monica, California) built around personalized prescription hair-loss formulas for men and women. Its customizable topical solutions and oral options combine established hair-loss actives - topical minoxidil and finasteride (FDA-approved for hair loss), plus dutasteride and spironolactone used off-label under medical supervision - and its topical serums go up to 8% minoxidil, above the 5% typical of over-the-counter products. A free online consultation is included, and prescription products are reviewed by Happy Head's dermatologists.",
     keyFeatures: [
       "Personalized topical and oral prescription formulas",
-      "FDA-approved actives: finasteride, minoxidil, dutasteride, spironolactone",
+      "Established actives: minoxidil & finasteride (FDA-approved for hair loss), plus dutasteride & spironolactone off-label",
       "Topical minoxidil available up to 8% (vs 5% typical OTC)",
       "Formulas for both men and women",
       "Dermatologist-founded; free online consultation",
@@ -1167,7 +1167,7 @@ const articles: ArticleData[] = [
     heroColor: "#F7F0EC",
     author: "TreatmentsHub Staff",
     keyTakeaways: [
-      "Iron deficiency is a recognized, common cause of diffuse hair shedding - and unlike pattern hair loss, it is usually fully reversible once the deficiency is corrected.",
+      "Iron deficiency is a commonly discussed factor in diffuse hair shedding - though the evidence (especially without anemia) is mixed - and where it is the cause, shedding is usually reversible once iron is corrected.",
       "The tell is the pattern: all-over thinning and more hair in the brush or drain, rather than a receding hairline or a widening part alone.",
       "A blood test (including ferritin, your iron stores) settles the question - guessing and self-supplementing without one is the mistake to avoid.",
       "Hair recovers on its own slow clock: cycles take months, so regrowth follows correction with a lag - patience is part of the treatment.",
@@ -1175,7 +1175,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "Does iron deficiency cause hair loss?",
-        body: `Yes - it is one of the best-recognized non-genetic causes of hair shedding, and one of the most common, especially in women. Hair follicles are among the fastest-dividing cells in the body, which makes them early casualties when a key raw material runs short. When iron stores drop low enough, the body triages: it protects essential organs and lets "optional" projects like hair growth slide. Follicles shift out of their growth phase early and shed weeks later - a pattern called telogen effluvium. The practical upside of this diagnosis, compared to genetic pattern loss: fix the deficiency and the shedding typically stops, with regrowth following.`,
+        body: `It is one of the more commonly discussed non-genetic factors in hair shedding, especially in women - though the evidence linking low iron to hair loss, particularly without anemia, is genuinely mixed rather than settled. Hair follicles are among the fastest-dividing cells in the body, which makes them early casualties when a key raw material runs short. When iron stores drop low enough, the body triages: it protects essential organs and lets "optional" projects like hair growth slide. Follicles shift out of their growth phase early and shed weeks later - a pattern called telogen effluvium. The practical upside of this diagnosis, compared to genetic pattern loss: fix the deficiency and the shedding typically stops, with regrowth following.`,
       },
       {
         heading: "Can anemia cause hair loss even if I feel fine?",
@@ -1235,7 +1235,7 @@ const articles: ArticleData[] = [
     slug: "veradermics-vdphl01",
     title: "Veradermics' VDPHL01: The Hair Loss Pill Everyone's Searching (2026)",
     description:
-      "VDPHL01 is an extended-release oral minoxidil in late-stage trials - the potential first FDA-approved hair loss pill for women and men. What the company reports, the timeline, and what you can do today.",
+      "VDPHL01 is an extended-release oral minoxidil in late-stage trials - potentially the first FDA-approved oral minoxidil for hair loss, and the first hair-loss pill approved for women. What the company reports, the timeline, and what you can do today.",
     category: "Science",
     readTime: "6 min read",
     publishedAt: "2026-08-30",
@@ -1243,7 +1243,7 @@ const articles: ArticleData[] = [
     heroColor: "#EEF1F8",
     author: "TreatmentsHub Staff",
     keyTakeaways: [
-      "VDPHL01 is Veradermics' extended-release oral minoxidil, aiming to become the first FDA-approved oral prescription treatment for pattern hair loss.",
+      "VDPHL01 is Veradermics' extended-release oral minoxidil, aiming to become the first FDA-approved oral minoxidil for pattern hair loss - and the first oral hair-loss drug approved for women (oral finasteride is approved only for men).",
       "The company reports positive Phase 2/3 results in men (April 2026) and positive early results in women, with major readouts expected in late 2026 and the first half of 2027.",
       "It is not approved and not available yet - trial success so far is the company's own reporting, and late-stage trials can still surprise.",
       "The active ingredient, minoxidil, is already prescribable today: oral minoxidil is available off-label through hair-loss telehealth providers.",
@@ -1251,7 +1251,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "What is VDPHL01?",
-        body: `VDPHL01 is an <strong>extended-release oral minoxidil</strong> tablet developed by Veradermics, a clinical-stage dermatology company - and the reason searches for it are spiking is its run of trial news. Minoxidil itself is the most familiar name in hair loss, but today's approved products are topical; oral minoxidil is widely prescribed for hair loss only off-label. VDPHL01 is the attempt to change that: run the full FDA trial program and become the <strong>first approved oral prescription treatment for pattern hair loss</strong> - in both men and women, a market the company estimates at 50 million men and 30 million women in the US alone.`,
+        body: `VDPHL01 is an <strong>extended-release oral minoxidil</strong> tablet developed by Veradermics, a clinical-stage dermatology company - and the reason searches for it are spiking is its run of trial news. Minoxidil itself is the most familiar name in hair loss, but today's approved products are topical; oral minoxidil is widely prescribed for hair loss only off-label. VDPHL01 is the attempt to change that: run the full FDA trial program and become the <strong>first FDA-approved oral minoxidil for pattern hair loss</strong> - and the first oral hair-loss drug cleared for women as well as men (today's approved oral option, finasteride, is for men only), a market the company estimates at 50 million men and 30 million women in the US alone.`,
       },
       {
         heading: "What have the trials shown so far?",
@@ -2035,7 +2035,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "Treatments used for women",
-        body: `Minoxidil is one of the most common options for women and is used topically (and sometimes orally by prescription). Some women are prescribed spironolactone, which addresses hormonal drivers of hair loss. Treatment should always be guided by a clinician who can tailor it to your situation.`,
+        body: `Minoxidil is one of the most common options for women and is used topically (and sometimes orally by prescription). Some women are prescribed spironolactone, which addresses hormonal drivers of hair loss; because it can harm a developing fetus, it requires reliable contraception and clinician monitoring in anyone who could become pregnant. Treatment should always be guided by a clinician who can tailor it to your situation.`,
       },
       {
         heading: "What to avoid",
@@ -2061,7 +2061,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "Two medicines, one target",
-        body: `Both dutasteride and finasteride treat pattern hair loss the same fundamental way: they block 5-alpha-reductase, the enzyme that converts testosterone into DHT - the hormone that shrinks hair follicles. The difference is coverage. Finasteride blocks mainly the type II form of the enzyme, cutting DHT levels by roughly 70%. Dutasteride blocks both type I and type II, reducing DHT by around 90% or more. If you're new to how these medicines work, start with <a href="/hair-loss/articles/does-finasteride-work">does finasteride really work</a>.`,
+        body: `Both dutasteride and finasteride treat pattern hair loss the same fundamental way: they block 5-alpha-reductase, the enzyme that converts testosterone into DHT - the hormone that shrinks hair follicles. The difference is coverage. Finasteride blocks mainly the type II form of the enzyme, cutting serum DHT by roughly 70%. Dutasteride blocks both type I and type II, reducing serum DHT by around 90% or more. If you're new to how these medicines work, start with <a href="/hair-loss/articles/does-finasteride-work">does finasteride really work</a>.`,
       },
       {
         heading: "Effectiveness: is stronger better?",

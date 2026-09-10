@@ -483,7 +483,7 @@ const reviews: ReviewData[] = [
       "Online provider evaluation and follow-up",
     ],
     pros: [
-      "One dose combines four ingredients that would otherwise be separate prescriptions and supplements",
+      "One dose combines four ingredients (two of them PDE5-class) - convenient, though combining two PDE5 medications is non-standard and needs provider oversight",
       "Sublingual format - a real alternative for men who won't do injections or dislike pills",
       "Established telehealth brand: 4.4 across 14,372 Trustpilot reviews (brand-wide)",
       "Discreet, fast shipping and a fully online flow",
@@ -1009,7 +1009,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "What's actually in Medvi QUAD?",
-        body: `Medvi's product pages name four ingredients, each with the company's own benefit label. <strong>Sildenafil</strong> - the active ingredient in Viagra - which Medvi labels "peak strength." <strong>Tadalafil</strong> - the active ingredient in Cialis - labeled "lasts 36 hours," a reference to tadalafil's characteristically long duration. <strong>Apomorphine</strong> - a compound that acts on the brain's dopamine system - labeled "ignites desire." And <strong>L-citrulline</strong> - an amino acid involved in the body's nitric-oxide pathway - labeled "rapid flow." The notable design choice is combining sildenafil and tadalafil, two PDE5-class medications, in one formula - that is unusual, and it is exactly the kind of decision a licensed prescriber needs to sign off on for you specifically.`,
+        body: `Medvi's product pages name four ingredients, each with the company's own benefit label. <strong>Sildenafil</strong> - the active ingredient in Viagra - which Medvi labels "peak strength." <strong>Tadalafil</strong> - the active ingredient in Cialis - labeled "lasts 36 hours," a reference to tadalafil's characteristically long duration. <strong>Apomorphine</strong> - a compound that acts on the brain's dopamine system - labeled "ignites desire." And <strong>L-citrulline</strong> - an amino acid involved in the body's nitric-oxide pathway - labeled "rapid flow." The notable design choice is combining sildenafil and tadalafil, two PDE5-class medications, in one formula. This is non-standard: there is no FDA-approved product that combines two PDE5 inhibitors, and stacking them adds their blood-pressure-lowering effects and side-effect risks rather than simply adding convenience - which is exactly why a licensed prescriber has to decide whether it is appropriate for you specifically.`,
       },
       {
         heading: "Is Medvi QUAD for ED?",
@@ -1025,7 +1025,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "Do you need a prescription for Medvi QUAD?",
-        body: `Yes. QUAD is Rx-only: you complete an online medical intake, a licensed provider reviews it, and the medication is prescribed only if it is appropriate for you. Answer the intake honestly - especially about heart conditions and every medication you take. A formula with two PDE5-class ingredients is precisely the kind of product where the medical questions are not friction, they are the safety mechanism. No legitimate seller offers this class of medication without a prescription - a site that does is the red flag to walk away from.`,
+        body: `Yes. QUAD is Rx-only: you complete an online medical intake, a licensed provider reviews it, and the medication is prescribed only if it is appropriate for you. Answer the intake honestly - especially about heart conditions and every medication you take. In particular, PDE5-class medications can cause a dangerous drop in blood pressure if combined with nitrates (heart or chest-pain medicines) or alpha-blockers, so flag those. A formula with two PDE5-class ingredients is precisely the kind of product where the medical questions are not friction, they are the safety mechanism. No legitimate seller offers this class of medication without a prescription - a site that does is the red flag to walk away from.`,
       },
       {
         heading: "The bottom line",
@@ -1213,7 +1213,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "Who's actually at risk",
-        body: `The deciding factor isn't the therapy - it's your follicles. If pattern baldness runs strongly in your family or your hairline was already moving before treatment, TRT may speed that process up. If you've reached your 40s with a full head of hair and no family history, your follicles are likely not DHT-sensitive, and TRT is unlikely to change that. Baldness genetics come from both sides of the family, so look at the whole picture, not just your mother's father.`,
+        body: `The deciding factor isn't the therapy - it's your follicles. If pattern baldness runs strongly in your family or your hairline was already moving before treatment, TRT may speed that process up. If you've reached your 40s with a full head of hair and no family history, your risk is lower - though pattern loss can still begin later in life, so it's worth flagging your history to your provider. Baldness genetics come from both sides of the family, so look at the whole picture, not just your mother's father.`,
       },
       {
         heading: "Early warning signs on TRT",
