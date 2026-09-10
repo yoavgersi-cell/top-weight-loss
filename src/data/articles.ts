@@ -325,6 +325,8 @@ export const articles: Article[] = [
   },
   {
     slug: "semaglutide-side-effects-guide",
+    image: "/article-images/articleimage6.webp",
+    imageAlt: "Woman sitting thoughtfully at a kitchen table with a laptop, notebook and coffee, reflecting on how to manage semaglutide side effects",
     title: "Semaglutide Side Effects (2026): Complete Guide to Managing Them",
     description:
       "Everything you need to know about semaglutide side effects - how common they are, when they start, how long they last, serious warnings, and practical management strategies.",
