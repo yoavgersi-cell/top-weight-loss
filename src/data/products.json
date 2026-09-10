@@ -418,5 +418,27 @@
     "affiliateUrl": "https://www.weightwatchers.com/us/clinic",
     "ctaText": "Visit Site",
     "description": ""
+  },
+  {
+    "id": "bmimd",
+    "rank": 22,
+    "name": "bmiMD",
+    "slug": "bmimd",
+    "tagline": "Compounded GLP-1 weight-loss care, prescribed online and shipped cold-chain",
+    "logo": "/logos/bmimdlogo.webp",
+    "smallLogo": "/logos/bmimdlogo.webp",
+    "rating": 8.7,
+    "ratingLabel": "Very Good",
+    "reviewCount": 870,
+    "highlights": [
+      "Compounded semaglutide & tirzepatide, plus microdose options",
+      "Cold-chain shipping to your door",
+      "4.4 on Trustpilot across 870 reviews",
+      "Licensed provider reviews every intake; money-back if not approved"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://track.revoffers.com/aff_c?offer_id=1332&aff_id=12904",
+    "ctaText": "View Plan",
+    "description": ""
   }
 ]

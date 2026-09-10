@@ -371,6 +371,7 @@ export const AFFILIATE_PROVIDER_IDS = [
   "directmeds",
   "healthrx",
   "sprout",
+  "bmimd",
   // hair-loss
   "maximus",
   "happyhead",
