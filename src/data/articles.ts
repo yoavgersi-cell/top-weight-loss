@@ -22,6 +22,8 @@ export interface Article {
 export const articles: Article[] = [
   {
     slug: "how-glp1-medications-work",
+    image: "/article-images/weightlossarticleimage1.webp",
+    imageAlt: "Woman holding a GLP-1 weight-loss injection pen at a kitchen counter with a healthy salad, water, a measuring tape and dumbbells",
     title: "How GLP-1 Medications Actually Work for Weight Loss",
     description:
       "A clear breakdown of how semaglutide and tirzepatide help with weight loss - the science, the process, and what happens in your body.",
