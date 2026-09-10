@@ -359,7 +359,7 @@ export async function HubHome() {
               name-only tiles. Mobile stacks to a single column, tablet to 2-up,
               both as compact icon+name tiles (no sub-link clutter on small
               screens). */}
-          <div className="mx-auto mt-10 grid max-w-[1080px] grid-cols-1 gap-3.5 text-left sm:mt-12 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto mt-10 grid max-w-[1080px] grid-cols-2 gap-3 text-left sm:mt-12 sm:grid-cols-2 sm:gap-3.5 lg:grid-cols-4">
             {BENTO.filter((b) => isPublishedVertical(b.id) && !isHiddenVertical(b.id)).map((b) => {
               const v = VERTICALS.find((x) => x.id === b.id);
               if (!v) return null;
@@ -373,9 +373,9 @@ export async function HubHome() {
                   {/* ── Mobile + tablet: compact tile, whole card taps through ── */}
                   <Link
                     href={`/${v.id}`}
-                    className="flex items-center gap-3 rounded-2xl border border-gray-200/80 bg-white px-4 py-4 shadow-[0_1px_3px_rgba(16,42,67,0.06)] active:bg-gray-50 lg:hidden"
+                    className="flex items-center gap-2.5 rounded-xl border border-gray-200/80 bg-white px-3.5 py-4 shadow-[0_1px_3px_rgba(16,42,67,0.06)] active:bg-gray-50 lg:hidden"
                   >
-                    <Icon className="h-[36px] w-[36px] shrink-0" />
+                    <Icon className="h-[34px] w-[34px] shrink-0" />
                     <span className="text-[15px] font-bold leading-[1.15] text-[#191919]">{name}</span>
                   </Link>
 
