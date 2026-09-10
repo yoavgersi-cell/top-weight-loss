@@ -332,8 +332,8 @@ export async function HubHome() {
       {/* ───── HERO ───── */}
       <section className="bg-gradient-to-b from-[#E8F3FB] via-[#F3F9FD] to-white">
         <div className="mx-auto max-w-[1100px] px-5 pb-14 pt-14 text-center sm:px-8 sm:pb-20 sm:pt-20">
-          <h1 className="mx-auto max-w-[950px] text-[36px] font-extrabold leading-[1.06] tracking-[-0.025em] text-[#111] sm:text-[62px]">
-            Compare the Best Health &amp; Wellness Services for Your Needs
+          <h1 className="mx-auto max-w-[950px] text-[36px] font-extrabold leading-[1.18] tracking-[-0.025em] text-[#111] sm:text-[62px] sm:leading-[1.07]">
+            Compare the Best Health &amp; Wellness Services
           </h1>
           <p className="mx-auto mt-5 max-w-[760px] text-[16px] leading-relaxed text-gray-700 sm:mt-6 sm:text-[19px]">
             Independent rankings across weight loss, hair growth, TRT, HRT and online
