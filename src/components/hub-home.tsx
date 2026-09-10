@@ -511,10 +511,23 @@ export async function HubHome() {
                   className="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md"
                 >
                   <div
-                    className="relative flex h-[120px] items-end p-4"
+                    className="relative flex h-[120px] items-end overflow-hidden p-4"
                     style={{ background: `linear-gradient(135deg, ${a.heroColor || "#0C4B75"}, #191919)` }}
                   >
-                    <span className="rounded-full bg-white/90 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide text-[#0C4B75]">
+                    {a.image && (
+                      <>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={a.image}
+                          alt={a.imageAlt || a.title}
+                          className="absolute inset-0 h-full w-full object-cover"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" />
+                      </>
+                    )}
+                    <span className="relative z-10 rounded-full bg-white/90 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide text-[#0C4B75]">
                       {a.category || "Guide"}
                     </span>
                   </div>

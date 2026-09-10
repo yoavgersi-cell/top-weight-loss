@@ -9,6 +9,10 @@ export interface Article {
   publishedAt: string;
   updatedAt: string;
   heroColor: string;
+  // Optional 16:9 hero/card image; falls back to the heroColor gradient.
+  image?: string;
+  // Alt text for that image (SEO + accessibility); falls back to the title.
+  imageAlt?: string;
   author?: string;
   // Optional 3-4 verified takeaway bullets rendered in a box above the body.
   keyTakeaways?: string[];

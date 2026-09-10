@@ -186,6 +186,14 @@ export interface ArticleData {
   publishedAt: string;
   updatedAt: string;
   heroColor: string;
+  // Optional 16:9 hero/card image (e.g. "/article-images/how-glp1-work.webp").
+  // When absent, cards and the article masthead fall back to the heroColor
+  // gradient - so adding images is purely additive and never breaks a card.
+  image?: string;
+  // Alt text for that image - required for SEO (Google Images + context) and
+  // accessibility. Falls back to the article title when omitted, but a
+  // descriptive, keyword-relevant alt is strongly preferred.
+  imageAlt?: string;
   author?: string;
   // 3-4 scannable takeaway bullets rendered in a box above the body -
   // verified facts only, written per-article (never auto-generated).
