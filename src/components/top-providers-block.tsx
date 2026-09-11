@@ -15,17 +15,25 @@ export function TopProvidersBlock({
   limit = 3,
   title = "Our top-rated providers",
   subtitle,
+  providerIds,
 }: {
   config: SiteConfig;
   linkPrefix?: string;
   limit?: number;
   title?: string;
   subtitle?: string;
+  // Optional curated set (e.g. affiliate partners). When given, only these
+  // providers render - still ordered by their real ranking and shown with their
+  // real scores/badge, just renumbered 1..N within this block. Omit to show the
+  // ranking's top `limit`.
+  providerIds?: string[];
 }) {
   const { providerOrder, positions } = config.ranking;
 
   const items = providerOrder
-    .map((id, index) => {
+    .map((id, index) => ({ id, index }))
+    .filter(({ id }) => (providerIds ? providerIds.includes(id) : true))
+    .map(({ id, index }, displayIdx) => {
       const provider = config.providers.find((p) => p.id === id);
       if (!provider) return null;
       const position = positions[index] || positions[positions.length - 1];
@@ -36,7 +44,9 @@ export function TopProvidersBlock({
         tagline: provider.tagline,
         highlights: provider.highlights,
         affiliateUrl: provider.affiliateUrl,
-        rank: index + 1,
+        // Renumber within a curated set so the ordinals stay 1..N; the ranking
+        // top-N path keeps the true rank (they're identical there anyway).
+        rank: providerIds ? displayIdx + 1 : index + 1,
         rating: position.score,
         ratingLabel: position.label,
         starRating: position.starRating,
