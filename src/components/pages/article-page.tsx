@@ -227,8 +227,12 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // CTAs the comparison page uses, high on the page. Gated to specific slugs so
   // it never leaks onto informational articles.
   const TOP_PROVIDERS_CRO_SLUGS = new Set(["best-tirzepatide-online"]);
-  const showTopProvidersCro =
-    ctx.vertical === "weight-loss" && TOP_PROVIDERS_CRO_SLUGS.has(slug);
+  const isWeightLoss = ctx.vertical === "weight-loss";
+  const showTopProvidersCro = isWeightLoss && TOP_PROVIDERS_CRO_SLUGS.has(slug);
+  // Every provider-"alternatives" guide (altrx-alternatives, best-ozempic-
+  // alternatives, etc.) gets a CRO block featuring our three GLP-1 partners
+  // (embody, altRx, trimrx) with the same comparison-page cards.
+  const showPartnerCro = isWeightLoss && slug.endsWith("-alternatives");
 
   // Byline author: match the article's author to a team member, else the lead
   const author = experts.find((e) => e.name === article.author) ?? experts[0];
@@ -517,6 +521,19 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     limit={3}
                     title="Our top 3 tirzepatide providers"
                     subtitle="Ranked by price, plans and verified reviews - the same cards from our full comparison."
+                  />
+                )}
+
+                {/* Provider-"alternatives" guides: CRO block of our three GLP-1
+                    partners with the comparison-page cards (see showPartnerCro). */}
+                {i === 0 && showPartnerCro && (
+                  <TopProvidersBlock
+                    config={config}
+                    linkPrefix={ctx.prefix}
+                    limit={3}
+                    providerIds={["embody", "altrx", "trimrx"]}
+                    title="Our top-rated GLP-1 providers"
+                    subtitle="Our recommended telehealth providers - the same cards from our full comparison."
                   />
                 )}
 
