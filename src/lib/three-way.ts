@@ -100,7 +100,7 @@ export const TRIO_FACTS: Record<string, TrioFacts> = {
     shipping: "In-house pharmacy with home delivery",
     support: "Board-certified provider consultations; ongoing dose adjustments",
     guarantee: "-",
-    standout: "3.9 on Trustpilot across 5,860 reviews; insurance can cut the medication cost",
+    standout: "4.0 on Trustpilot across 6,428 reviews; insurance can cut the medication cost",
   },
   sprout: {
     id: "sprout",
@@ -248,7 +248,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     intro:
       "Most GLP-1 comparisons are about compounded medication - this one is about the real branded pens, because these are the three providers in our ranking that publish brand-name pricing, and they sell it three completely different ways. altRx posts flat cash prices next to its $89 compounded plan: Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 a month, with Buy Now, Pay Later. ro sells a membership ($39 the first month, then $74-$149/month) with the medication billed separately - Wegovy pill from $149/month, Zepbound KwikPen from $299 the first month - and it's the one route here where insurance, if it covers you, changes the math completely. Sprout is compounded-first at $149/month but keeps brand-name Wegovy on the shelf at $1,799 for anyone set on the branded pen, and ships prescriptions within 2 days.",
     verdict:
-      "The buying structure decides this one, not the sticker. Any chance your insurance covers GLP-1s: start with ro - membership plus a copay can undercut every cash price on this page, and its 3.9 across 5,860 Trustpilot reviews is a real record for a brand this size. Paying cash and want one flat, published number: altRx - its brand shelf is the cheapest flat-rate Wegovy here and BNPL spreads it, with the $89 compounded plan as the fallback lane. Want compounded speed with a brand option in reserve: Sprout - 2-day fulfillment and $200 off the first month, with the Wegovy shelf there if you upgrade later. Formats and billing differ enough between these three that the right answer is genuinely different per person - check the current price on each site before deciding.",
+      "The buying structure decides this one, not the sticker. Any chance your insurance covers GLP-1s: start with ro - membership plus a copay can undercut every cash price on this page, and its 4.0 across 6,428 Trustpilot reviews is a real record for a brand this size. Paying cash and want one flat, published number: altRx - its brand shelf is the cheapest flat-rate Wegovy here and BNPL spreads it, with the $89 compounded plan as the fallback lane. Want compounded speed with a brand option in reserve: Sprout - 2-day fulfillment and $200 off the first month, with the Wegovy shelf there if you upgrade later. Formats and billing differ enough between these three that the right answer is genuinely different per person - check the current price on each site before deciding.",
     faqs: [
       {
         question: "Which has the cheapest brand-name Wegovy?",

@@ -1,12 +1,12 @@
 [
   {
     "id": "altrx",
-    "rank": 1,
+    "rank": 2,
     "name": "altRx",
     "slug": "altrx",
     "tagline": "The #1 most affordable GLP-1 program, from $89/month",
     "logo": "/logos/altrx.svg",
-    "rating": 9.8,
+    "rating": 9.7,
     "ratingLabel": "Exceptional",
     "reviewCount": 14200,
     "highlights": [
@@ -41,7 +41,7 @@
   },
   {
     "id": "ro",
-    "rank": 2,
+    "rank": 1,
     "name": "Ro",
     "slug": "ro",
     "tagline": "Simple Online Weight Loss Care",
