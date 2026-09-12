@@ -105,7 +105,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
     rows: [
       { label: "Membership", value: "$39 first month, then $74-149/month ($74 on a 12-month prepaid plan)" },
       { label: "Medication cost", value: "Priced separately from membership - e.g. Wegovy pill $149 first month (then $299); Zepbound KwikPen from $299 first month" },
-      { label: "Trustpilot record", value: "3.9 across 5,860 reviews" },
+      { label: "Trustpilot record", value: "4.0 across 6,428 reviews" },
     ],
   },
 

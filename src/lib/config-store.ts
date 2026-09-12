@@ -4394,10 +4394,10 @@ function buildInitialConfig(): SiteConfig {
       trustpilotReviews: seedTrustpilot[p.id]?.reviews,
     })),
     ranking: {
-      providerOrder: ["altrx", "ro", "noom", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm", "synergyrx"],
+      providerOrder: ["ro", "altrx", "noom", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm", "synergyrx"],
       positions: [
         { score: 9.8, starRating: 5, label: "Exceptional", badge: "Our Most Popular" },
-        { score: 9.8, starRating: 5, label: "Exceptional" },
+        { score: 9.7, starRating: 5, label: "Exceptional" },
         { score: 9.6, starRating: 4.5, label: "Excellent" },
         { score: 9.4, starRating: 4, label: "Excellent" },
         { score: 9.3, starRating: 4, label: "Excellent" },
@@ -4489,7 +4489,7 @@ function buildInitialConfig(): SiteConfig {
           { type: "quizCta" as const, enabled: true },
           { type: "relatedArticles" as const, enabled: true },
         ],
-        providerIds: ["altrx", "noom", "ro"],
+        providerIds: ["ro", "altrx", "noom"],
         quizCta: {
           headline: "Not sure which provider is right?",
           description: "Take our free quiz and get a personalized recommendation.",
@@ -4507,7 +4507,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Semaglutide Providers 2026",
         h2: "Compare GLP-1 weight loss programs side by side",
         heroDescription: "Semaglutide (the active ingredient in Ozempic and Wegovy) is one of the most effective GLP-1 medications for weight loss. Compare providers offering semaglutide treatment below.",
-        providerOrder: ["altrx", "noom", "ro", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["ro", "altrx", "noom", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "What Is Semaglutide?",
@@ -4535,7 +4535,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Tirzepatide Providers 2026",
         h2: "Compare dual-action GLP-1 weight loss programs",
         heroDescription: "Tirzepatide (the active ingredient in Mounjaro and Zepbound) targets both GLP-1 and GIP receptors for enhanced weight loss results. Compare providers offering tirzepatide treatment below.",
-        providerOrder: ["altrx", "noom", "ro", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["ro", "altrx", "noom", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "What Is Tirzepatide?",
@@ -4563,7 +4563,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Online Weight Loss Programs 2026",
         h2: "Clinician-guided GLP-1 treatment from home",
         heroDescription: "Online weight loss programs now offer prescription GLP-1 medications with full medical oversight - all from home. We compared the top programs on pricing, clinical support, and results.",
-        providerOrder: ["altrx", "noom", "ro", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["ro", "altrx", "noom", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "How Online Weight Loss Programs Work",
@@ -4591,7 +4591,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Weight Loss Injections 2026",
         h2: "Compare injectable GLP-1 weight loss treatments",
         heroDescription: "GLP-1 weight loss injections like semaglutide and tirzepatide have shown 15-22% average weight loss in clinical trials. Compare providers offering injectable treatment programs below.",
-        providerOrder: ["altrx", "noom", "ro", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["ro", "altrx", "noom", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "How Weight Loss Injections Work",
@@ -4619,7 +4619,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Ozempic for Weight Loss",
         h2: "Compare providers offering semaglutide treatment",
         heroDescription: "Ozempic (semaglutide) is widely used off-label for weight loss, with clinical trials showing 10-15% average weight loss. Compare providers offering semaglutide-based treatment programs below.",
-        providerOrder: ["altrx", "noom", "ro", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["ro", "altrx", "noom", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "Ozempic for Weight Loss: What You Need to Know",
@@ -4647,7 +4647,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Wegovy Providers & Alternatives 2026",
         h2: "Compare semaglutide weight loss programs",
         heroDescription: "Wegovy is the FDA-approved weight loss version of semaglutide, with clinical trials showing 15% average weight loss. Compare providers offering Wegovy and compounded semaglutide alternatives below.",
-        providerOrder: ["altrx", "noom", "ro", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["ro", "altrx", "noom", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "Wegovy vs Compounded Semaglutide",
@@ -4723,7 +4723,7 @@ function buildInitialConfig(): SiteConfig {
           "Checking provider quality...",
           "Finalizing your recommendation...",
         ],
-        providerLogos: ["altrx", "noom", "ro", "trimrx", "shed", "embody", "wellmedr", "sunlight"],
+        providerLogos: ["ro", "altrx", "noom", "trimrx", "shed", "embody", "wellmedr", "sunlight"],
         durationMs: 4400,
       },
       questions: [
