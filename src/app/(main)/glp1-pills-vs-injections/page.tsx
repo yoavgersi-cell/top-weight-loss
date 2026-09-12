@@ -12,7 +12,7 @@ const CANONICAL = "https://www.treatmentshub.com/weight-loss/glp1-pills-vs-injec
 export const metadata: Metadata = {
   title: "GLP-1 Pills vs Injections (2026): Which Is Better?",
   description:
-    "GLP-1 pills vs injections compared for 2026 - average weight loss, cost, convenience, and side effects. See whether oral GLP-1s or injections are the better fit for you.",
+    "GLP-1 pills vs injections compared for 2026 - now that oral Wegovy and orforglipron (Foundayo) are FDA-approved. Average weight loss, cost, convenience, and how to choose.",
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: "GLP-1 Pills vs Injections (2026): Which Is Better?",
@@ -24,20 +24,21 @@ export const metadata: Metadata = {
 };
 
 const compareRows: [string, string, string][] = [
-  ["Average weight loss", "~5-15% depending on the pill (high-dose oral semaglutide reaches ~15%)", "~15% (semaglutide) to ~20%+ (tirzepatide) in trials"],
-  ["How you take it", "Daily tablet or capsule - no needles", "Once-weekly self-injection"],
-  ["Main options", "Rybelsus, oral semaglutide 25mg, orforglipron (pipeline)", "Semaglutide (Wegovy), tirzepatide (Zepbound)"],
-  ["Convenience", "Simple daily pill; some require empty-stomach timing", "One injection a week; no daily routine"],
-  ["Cost (telehealth)", "Varies by medication and provider", "Compounded options often from ~$69-$149/mo"],
-  ["Best for", "People who want to avoid needles or start simply", "People prioritizing the greatest average weight loss"],
+  ["Average weight loss", "~16.6% (oral Wegovy, OASIS-4) to ~12.4% (orforglipron, ATTAIN-1); Rybelsus doses lower", "~15% (semaglutide) to ~22.5% (tirzepatide) in trials"],
+  ["How you take it", "Daily tablet - no needles", "Once-weekly self-injection"],
+  ["Main options", "Oral Wegovy (approved Dec 2025), orforglipron / Foundayo (approved Apr 2026), Rybelsus (diabetes)", "Semaglutide (Wegovy), tirzepatide (Zepbound)"],
+  ["Convenience", "Daily pill; oral semaglutide needs empty-stomach timing, orforglipron has no food/water restrictions", "One injection a week; no daily routine"],
+  ["FDA status", "Two oral GLP-1s now approved for weight management", "Established, long-approved"],
+  ["Cost (telehealth)", "Brand pills new to market - pricing varies; confirm current cash/insurance", "Compounded options often from ~$69-$149/mo"],
+  ["Best for", "People who want to avoid needles or a no-timing daily pill", "People prioritizing the greatest average weight loss"],
 ];
 
 const faqs: { question: string; answer: string }[] = [
-  { question: "Are GLP-1 pills as effective as injections?", answer: "Not quite, on average - but the gap is closing. Injectable GLP-1s like semaglutide and tirzepatide produce roughly 15-20%+ weight loss in trials, while most GLP-1 pills land lower. The exception is high-dose oral semaglutide, which has reached about 15% in trials and rivals the injection. For maximum average results today, injections still lead." },
-  { question: "Which is cheaper, GLP-1 pills or injections?", answer: "It depends on the specific medication and provider. Through telehealth, compounded injectable GLP-1s are often the most affordable route (frequently around $69-$149/month, including consultations). Oral pricing varies. The best value comes down to which medication you're prescribed and the plan you choose." },
+  { question: "Are GLP-1 pills as effective as injections?", answer: "It now depends on which pill. Oral Wegovy (oral semaglutide 25mg) produced about 16.6% mean weight loss in the OASIS-4 trial when taken as directed - roughly matching injectable Wegovy. Orforglipron (Foundayo) reached up to about 12.4% in ATTAIN-1. Injectable tirzepatide (Zepbound) still leads on peak average results, up to ~22.5% in trials. So the newest pills rival semaglutide injections, while tirzepatide injection remains the strongest average performer." },
+  { question: "Which is cheaper, GLP-1 pills or injections?", answer: "It depends on the specific medication and provider. Through telehealth, compounded injectable GLP-1s are often the most affordable route (frequently around $69-$149/month, including consultations). The new brand-name oral pills are just reaching the market, so pricing varies - confirm current cash, insurance, and telehealth pricing before deciding. The best value comes down to which medication you're prescribed and the plan you choose." },
   { question: "Do GLP-1 pills have fewer side effects than injections?", answer: "The side-effect profile is broadly similar because they're the same drug class - most commonly nausea and other GI effects, especially early on. The route (pill vs injection) doesn't dramatically change this; dose and how gradually you titrate matter more." },
-  { question: "Can you switch from injections to pills, or vice versa?", answer: "Often yes, under medical supervision. Many people move between formulations based on tolerance, convenience, or availability. A licensed clinician determines the right medication, dose, and titration when switching." },
-  { question: "Is there a GLP-1 pill approved specifically for weight loss?", answer: "It's arriving. Rybelsus (oral semaglutide) is FDA-approved for type 2 diabetes, and a higher-dose oral semaglutide for weight loss is advancing through FDA review. Orforglipron, an oral GLP-1 from Eli Lilly, is in late-stage trials. Injectable options remain the established, approved choice for now." },
+  { question: "Can you switch from injections to pills, or vice versa?", answer: "Often yes, under medical supervision. Many people move between formulations based on tolerance, convenience, or availability. A licensed clinician determines the right medication, dose, and titration when switching - there's no DIY dose conversion between them." },
+  { question: "Is there a GLP-1 pill approved specifically for weight loss?", answer: "Yes - two, as of 2026. The FDA approved oral Wegovy (oral semaglutide 25mg) in December 2025, the first oral GLP-1 for chronic weight management, and orforglipron (Foundayo) from Eli Lilly in April 2026, the first that can be taken any time of day with no food or water restrictions. Rybelsus (lower-dose oral semaglutide) remains approved for type 2 diabetes rather than weight loss." },
 ];
 
 export default function Glp1PillsVsInjectionsPage() {
@@ -47,7 +48,7 @@ export default function Glp1PillsVsInjectionsPage() {
     headline: "GLP-1 Pills vs Injections (2026): Which Is Better?",
     description: metadata.description,
     datePublished: "2026-08-09",
-    dateModified: "2026-08-09",
+    dateModified: "2026-09-12",
     author: { "@type": "Organization", name: "TreatmentsHub Team", url: "https://www.treatmentshub.com" },
     publisher: { "@type": "Organization", name: "treatmentshub.com", url: "https://www.treatmentshub.com" },
     mainEntityOfPage: CANONICAL,
@@ -80,9 +81,9 @@ export default function Glp1PillsVsInjectionsPage() {
             GLP-1 Pills vs Injections: Which Is Better for Weight Loss?
           </h1>
           <p className="mt-3 max-w-[640px] text-[16px] leading-relaxed text-gray-500">
-            Oral GLP-1 pills are catching up to the injections - but they&rsquo;re not identical.
-            Here&rsquo;s an honest, side-by-side comparison of results, cost, convenience, and how to
-            choose the right one for you.
+            The pills have arrived: two oral GLP-1s are now FDA-approved for weight loss. Here&rsquo;s
+            an honest, side-by-side comparison of results, cost, convenience, and how to choose between
+            a daily tablet and a weekly injection.
           </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
         </div>
@@ -95,11 +96,12 @@ export default function Glp1PillsVsInjectionsPage() {
           <div>
             <h2 className="mb-2 text-[18px] font-bold text-[#191919]">The short answer</h2>
             <p className="text-[15px] leading-[1.75] text-gray-600">
-              <strong className="text-[#191919]">Injections still win on average weight loss</strong>{" "}
-              (~15-20%+ in trials), while <strong className="text-[#191919]">pills win on
-              convenience</strong> - a daily tablet, no needles. The newest high-dose oral GLP-1s are
-              closing the gap. Pick injections for maximum results; pick a pill if avoiding needles
-              matters more to you.
+              <strong className="text-[#191919]">Tirzepatide injection still wins on peak average
+              weight loss</strong> (up to ~22.5% in trials), but{" "}
+              <strong className="text-[#191919]">the newest pills now rival semaglutide injections</strong>
+              {" "}- oral Wegovy hit ~16.6% in its trial. Pills win on convenience: a daily tablet, no
+              needles. Pick tirzepatide for maximum average results; pick an oral GLP-1 if avoiding
+              needles matters more to you.
             </p>
           </div>
         </div>
@@ -136,13 +138,23 @@ export default function Glp1PillsVsInjectionsPage() {
             <h2 className="text-[24px] font-bold text-[#191919]">The pills: oral GLP-1s</h2>
           </div>
           <p className="mb-4">
-            Oral GLP-1s deliver the same class of medication as the injections, in tablet form.{" "}
-            <strong className="text-[#191919]">Rybelsus</strong> (oral semaglutide) is FDA-approved for
-            type 2 diabetes and taken daily. A higher-dose{" "}
-            <strong className="text-[#191919]">oral semaglutide 25mg</strong> for weight loss has reached
-            ~15% weight loss in trials and is advancing through FDA review, and{" "}
-            <strong className="text-[#191919]">orforglipron</strong> (a small-molecule oral GLP-1 from
-            Lilly) is in late-stage trials. See our full{" "}
+            Oral GLP-1s deliver the same class of medication as the injections, in tablet form - and
+            the landscape changed fast. <strong className="text-[#191919]">Oral Wegovy</strong> (oral
+            semaglutide 25mg) was FDA-approved in December 2025 as the first oral GLP-1 for chronic
+            weight management, with about 16.6% mean weight loss in the OASIS-4 trial when taken as
+            directed - roughly matching injectable Wegovy. It&rsquo;s a once-daily tablet, but as a
+            peptide it must be taken on an empty stomach with a small sip of water, waiting about 30
+            minutes before eating, drinking, or other medications.
+          </p>
+          <p className="mb-4">
+            <strong className="text-[#191919]">Orforglipron</strong> (brand name Foundayo, from Eli
+            Lilly) followed with FDA approval in April 2026. As a small-molecule (non-peptide) GLP-1,
+            it&rsquo;s the first weight-loss pill that can be taken any time of day with{" "}
+            <strong className="text-[#191919]">no food or water restrictions</strong> - a real
+            convenience edge. It reached up to about 12.4% weight loss at 72 weeks in the ATTAIN-1
+            trial. Separately, <strong className="text-[#191919]">Rybelsus</strong> (lower-dose oral
+            semaglutide) remains FDA-approved for type 2 diabetes rather than weight loss, at doses that
+            produce less weight loss than the newer 25mg pill. See our full{" "}
             <Link href="/weight-loss/weight-loss-pills" className="font-semibold text-[#0C4B75] hover:underline">
               weight loss pills guide
             </Link>{" "}
@@ -161,8 +173,9 @@ export default function Glp1PillsVsInjectionsPage() {
             <Link href="/weight-loss/semaglutide" className="font-semibold text-[#0C4B75] hover:underline">Semaglutide</Link>{" "}
             (Wegovy) produces ~15% average weight loss in trials, and{" "}
             <Link href="/weight-loss/tirzepatide" className="font-semibold text-[#0C4B75] hover:underline">tirzepatide</Link>{" "}
-            (Zepbound) reaches ~20% or more. Both are once-weekly injections, and through telehealth,
-            compounded versions are often the most affordable path to GLP-1 treatment.
+            (Zepbound) reaches up to ~22.5% - still the strongest average performer of any GLP-1,
+            pill or shot. Both are once-weekly injections, and through telehealth, compounded versions
+            are often the most affordable path to GLP-1 treatment.
           </p>
         </section>
 
@@ -227,9 +240,11 @@ export default function Glp1PillsVsInjectionsPage() {
         {/* Sources + disclaimer */}
         <section>
           <p className="mb-3 text-[13px] leading-relaxed text-gray-400">
-            Sources: FDA approvals and prescribing information; published clinical trial data (STEP and
-            OASIS for semaglutide, SURMOUNT for tirzepatide). Weight loss figures are trial averages;
-            individual results vary. Brand names are trademarks of their respective manufacturers.
+            Sources: FDA approvals and prescribing information - oral Wegovy (oral semaglutide 25mg)
+            approved December 2025 and orforglipron (Foundayo) approved April 2026; published clinical
+            trial data (STEP and OASIS for semaglutide, SURMOUNT for injectable tirzepatide, ATTAIN for
+            orforglipron). Weight loss figures are trial averages; individual results vary. Brand names
+            are trademarks of their respective manufacturers.
           </p>
           <p className="text-[13px] leading-relaxed text-gray-400">
             treatmentshub.com is not a medical provider and does not prescribe medications. This page is
