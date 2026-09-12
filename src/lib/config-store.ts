@@ -4879,13 +4879,17 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
         const savedProviders = (saved.providers || []).map((p) => ({
           ...p,
           smallLogo: p.smallLogo || `/logos/${p.id}-icon.svg`,
-          // Affiliate URL: a CMS-set real link wins, but a placeholder ("#" or
-          // empty) saved into the blob before a partnership existed must not
-          // shadow a real link later added in code (e.g. Sprout).
-          affiliateUrl:
-            p.affiliateUrl && p.affiliateUrl !== "#"
-              ? p.affiliateUrl
-              : seedProviderById.get(p.id)?.affiliateUrl ?? p.affiliateUrl,
+          // Affiliate URL: a real link set in CODE (products.json) is
+          // authoritative and wins - so an operator-confirmed partner link
+          // always goes live even if the blob holds an older homepage URL. If
+          // code has only a placeholder ("#"/empty), a real CMS/blob link wins;
+          // otherwise fall back to whatever exists.
+          affiliateUrl: (() => {
+            const codeUrl = seedProviderById.get(p.id)?.affiliateUrl;
+            if (codeUrl && codeUrl !== "#") return codeUrl;
+            if (p.affiliateUrl && p.affiliateUrl !== "#") return p.affiliateUrl;
+            return codeUrl ?? p.affiliateUrl;
+          })(),
           // Rating/count: CMS-edited values win, seed is a backfill. Use ||
           // so an empty string saved by the admin still falls back to seed.
           trustpilotRating: p.trustpilotRating || seedFor(p)?.rating,
