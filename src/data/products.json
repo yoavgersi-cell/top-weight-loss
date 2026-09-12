@@ -21,7 +21,7 @@
   },
   {
     "id": "noom",
-    "rank": 2,
+    "rank": 3,
     "name": "Noom",
     "slug": "noom",
     "tagline": "Behavior-Based Weight Loss With Medical Support",
@@ -41,13 +41,13 @@
   },
   {
     "id": "ro",
-    "rank": 3,
+    "rank": 2,
     "name": "Ro",
     "slug": "ro",
     "tagline": "Simple Online Weight Loss Care",
     "logo": "/logos/ro.svg",
-    "rating": 9.5,
-    "ratingLabel": "Excellent",
+    "rating": 9.8,
+    "ratingLabel": "Exceptional",
     "reviewCount": 8430,
     "highlights": [
       "Licensed providers review every treatment plan",
