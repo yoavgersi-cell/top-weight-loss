@@ -4394,11 +4394,11 @@ function buildInitialConfig(): SiteConfig {
       trustpilotReviews: seedTrustpilot[p.id]?.reviews,
     })),
     ranking: {
-      providerOrder: ["altrx", "noom", "ro", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm", "synergyrx"],
+      providerOrder: ["altrx", "ro", "noom", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm", "synergyrx"],
       positions: [
         { score: 9.8, starRating: 5, label: "Exceptional", badge: "Our Most Popular" },
+        { score: 9.8, starRating: 5, label: "Exceptional" },
         { score: 9.6, starRating: 4.5, label: "Excellent" },
-        { score: 9.5, starRating: 4.5, label: "Excellent" },
         { score: 9.4, starRating: 4, label: "Excellent" },
         { score: 9.3, starRating: 4, label: "Excellent" },
         { score: 9.1, starRating: 3.5, label: "Excellent" },
@@ -4423,24 +4423,24 @@ function buildInitialConfig(): SiteConfig {
         subtitle: "altRx vs Ro, compared on pricing, medication options, medical support, convenience, and overall value.",
         description: "altRx vs Ro: compare pricing, GLP-1 meds, support & value. altRx: brand-name Zepbound & Wegovy. Ro: established telehealth brand. See which fits you.",
         intro: "altRx and Ro are two of the most popular telehealth weight loss providers offering GLP-1 medications. Both platforms connect patients with licensed providers and deliver prescription medication to your door - but they differ in pricing structure, level of personalization, medication options, and overall patient experience. Here's how they compare across the categories that matter most.",
-        verdict: "altRx edges ahead with its transparent all-inclusive pricing, wider medication selection, and more personalized treatment approach. Ro remains a strong choice for those who value brand reputation and a streamlined, no-frills process. Both are solid options - your best pick depends on whether you prioritize personalization (altRx) or simplicity (Ro).",
+        verdict: "Both are credible online GLP-1 providers, and each has a real case. altRx is the value-and-personalization pick - transparent, all-inclusive pricing, a broad GLP-1 selection, and highly customized protocols make it a strong choice if budgeting and tailored care matter most. But Ro takes it overall: it's one of the largest, most established telehealth brands in the US, with an integrated in-house pharmacy, licensed providers reviewing every plan, and access to FDA-approved brand-name Wegovy and Zepbound when insurance covers them. With a 4.0 rating across 6,428 Trustpilot reviews, Ro is the more complete, more trusted platform for most people. Choose altRx for the lowest all-inclusive price and the most personalized plan; choose Ro for the full-service, brand-backed experience.",
         verdictWinnerPoints: [
+          "Large, established telehealth brand with an integrated in-house pharmacy",
+          "Licensed providers review every plan; access to FDA-approved Wegovy & Zepbound with insurance",
+          "4.0 across 6,428 Trustpilot reviews - responsive, well-reviewed support",
+        ],
+        verdictLoserPoints: [
           "Transparent, all-inclusive pricing",
           "Broader GLP-1 medication selection",
           "More personalized treatment protocols",
         ],
-        verdictLoserPoints: [
-          "A well-known, established telehealth brand",
-          "A simple, streamlined online experience",
-          "Integrated in-house pharmacy fulfillment",
-        ],
-        winnerId: "altrx",
+        winnerId: "ro",
         categories: [
-          { name: "Pricing & Value", winner: "provider1", explanation: "altRx offers clearer, all-inclusive pricing with no hidden fees, making it easier to budget for treatment. Ro is competitively priced but costs can vary depending on the medication and plan selected.", supportingPoints: ["Transparent all-inclusive monthly pricing", "No hidden fees or surprise charges", "Strong overall value for GLP-1 treatment"] },
-          { name: "Medical Support", winner: "tie", explanation: "Both providers deliver medical oversight with licensed providers guiding treatment from start to finish. altRx leans into more personalized care, while Ro leverages its established telehealth infrastructure.", supportingPoints: ["Licensed providers on both platforms", "Ongoing support during treatment", "Provider oversight throughout treatment"] },
-          { name: "Medication Options", winner: "provider1", explanation: "altRx positions itself on comprehensive GLP-1 medication access, its core strength. Ro offers GLP-1 treatment through its established telehealth platform.", supportingPoints: ["Comprehensive GLP-1 access (altRx)", "GLP-1 treatment on both platforms", "Provider-guided medication selection"] },
-          { name: "Convenience", winner: "tie", explanation: "Both platforms offer full telehealth convenience with home delivery of medications. Ro has an integrated in-house pharmacy that can streamline fulfillment, while altRx provides fast nationwide delivery with no contracts required.", supportingPoints: ["Full telehealth - no in-person visits needed", "Home delivery of medications included", "Flexible scheduling for consultations"] },
-          { name: "Customer Experience", winner: "provider1", explanation: "altRx is consistently praised for responsive support and highly customized treatment plans. Ro benefits from strong brand trust and a polished interface, though some users report longer wait times during peak periods.", supportingPoints: ["Highly responsive customer support team", "Personalized treatment plan adjustments", "Strong patient satisfaction ratings"] },
+          { name: "Pricing & Value", winner: "provider1", explanation: "altRx offers clearer, all-inclusive pricing with no hidden fees, making it easier to budget for treatment. Ro is competitively priced but costs can vary depending on the medication and plan selected. For predictable, upfront pricing, altRx comes out ahead.", supportingPoints: ["Transparent all-inclusive monthly pricing (altRx)", "No hidden fees or surprise charges (altRx)", "Competitively priced, costs vary by plan (Ro)"] },
+          { name: "Medical Support", winner: "provider2", explanation: "Both providers deliver medical oversight with licensed providers guiding treatment from start to finish. Ro leverages one of the most established telehealth infrastructures in the US, with an integrated in-house pharmacy and providers reviewing every plan; altRx leans into more personalized care.", supportingPoints: ["Established telehealth infrastructure (Ro)", "Integrated in-house pharmacy, providers review every plan (Ro)", "Personalized medical oversight (altRx)"] },
+          { name: "Medication Options", winner: "tie", explanation: "Both offer comprehensive GLP-1 access. altRx positions itself on a broad selection including brand-name options; Ro provides GLP-1 treatment plus access to FDA-approved brand-name Wegovy and Zepbound when insurance covers them.", supportingPoints: ["Comprehensive GLP-1 access (both)", "Brand-name options (both)", "FDA-approved Wegovy & Zepbound with insurance (Ro)"] },
+          { name: "Convenience", winner: "provider2", explanation: "Both platforms offer full telehealth convenience with home delivery. Ro's integrated in-house pharmacy streamlines fulfillment end to end, while altRx provides fast nationwide delivery with no contracts required.", supportingPoints: ["Integrated in-house pharmacy fulfillment (Ro)", "Full telehealth - no in-person visits (both)", "Fast nationwide delivery, no contracts (altRx)"] },
+          { name: "Customer Experience", winner: "provider2", explanation: "Ro benefits from strong brand trust and a polished, well-reviewed experience - 4.0 across 6,428 Trustpilot reviews. altRx is consistently praised for responsive support and highly customized treatment plans.", supportingPoints: ["4.0 across 6,428 Trustpilot reviews (Ro)", "Established brand trust, polished platform (Ro)", "Responsive support, personalized plans (altRx)"] },
         ],
         features: [
           { feature: "GLP-1 Treatment Access", provider1Value: "Comprehensive GLP-1 access", provider2Value: "GLP-1 treatment options" },
@@ -4449,7 +4449,7 @@ function buildInitialConfig(): SiteConfig {
           { feature: "Ongoing Medical Support", provider1Value: "Continuous monitoring", provider2Value: "Regular check-ins" },
           { feature: "Home Delivery", provider1Value: "Fast nationwide delivery", provider2Value: "In-house pharmacy fulfillment" },
           { feature: "Payment Flexibility", provider1Value: "No long-term contracts", provider2Value: "Monthly plans, FSA/HSA eligible" },
-          { feature: "Best For", provider1Value: "Personalized care, broader options", provider2Value: "Simplicity, brand trust" },
+          { feature: "Best For", provider1Value: "Personalized care, broader options", provider2Value: "Full-service, brand-backed care" },
         ],
       },
       embodywellmedrBattle,
@@ -4911,7 +4911,11 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
           // and alt stay CMS-editable.
           hero: { ...initial.hero, ...(saved.hero ?? {}), ...WEIGHT_LOSS_HERO_TEXT },
           providers,
-          ranking: saved.ranking && saved.ranking.providerOrder && saved.ranking.providerOrder.length > 0 ? saved.ranking : initial.ranking,
+          // Ranking (provider order + scores) is code-authoritative: it's a core
+          // editorial/business decision - and it drives the battle verdict
+          // honesty guard - so it must ship from code rather than be frozen by a
+          // CMS snapshot at an older stance.
+          ranking: initial.ranking,
           reviews: (() => {
             const savedReviews = saved.reviews && saved.reviews.length > 0 ? saved.reviews : [];
             const savedSlugs = new Set(savedReviews.map((r) => r.slug));
