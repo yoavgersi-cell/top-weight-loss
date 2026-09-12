@@ -289,10 +289,10 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
   },
   ro: {
     // Aggregate verified from Ro's claimed Trustpilot profile (operator-
-    // supplied screenshots, Aug 2026): 3.9 across 5,860 reviews, Online
+    // supplied screenshots, Sep 2026): 4.0 across 6,428 reviews, Online
     // Pharmacy category, claimed Nov 2021.
-    rating: "3.9",
-    reviewCount: "5,860",
+    rating: "4.0",
+    reviewCount: "6,428",
     reviews: [
       {
         title: "New to GLP1",
@@ -2494,18 +2494,18 @@ const medviRoBattle: BattleData = {
   subtitle: "We compared personal support, pricing, ongoing care, and brand track record so you can see which one fits you best.",
   description: "Ro vs Medvi: compare pricing, GLP-1 meds, care & track record. Ro: established brand with brand-name GLP-1. Medvi: injections, tablets & coaching. See which fits you.",
   intro: "Medvi and Ro are both online telehealth providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established brand with an integrated in-house pharmacy and licensed providers reviewing every plan. Medvi keeps medical weight loss simple, pairing prescription GLP-1 treatment with attentive provider support, regular monitoring, and transparent all-inclusive pricing. Here's how they compare.",
-  verdict: "Both are credible online GLP-1 providers - but Medvi takes this one for the experience. Its customers consistently praise the personal, attentive service, and its plans bundle medication, provider consultations, and ongoing monitoring into transparent pricing with no surprise charges. Ro is the better pick if brand track record matters most - it's a large, established telehealth company with an integrated in-house pharmacy.",
+  verdict: "Both are credible online GLP-1 providers, and each has a real case. Medvi is the attentive-service and bundled-value pick - customers praise its personal support, and its plans fold consultations and monitoring into one transparent price. But Ro takes it overall: it's one of the largest, most established telehealth companies in the US, with an integrated in-house pharmacy, licensed providers reviewing every plan, and access to FDA-approved brand-name Wegovy and Zepbound when insurance covers them. With a 4.0 rating across 6,428 Trustpilot reviews, Ro is the more complete, more trusted platform for most people - while Medvi is the better fit if hands-on coaching and all-inclusive pricing matter most.",
   verdictWinnerPoints: [
+    "One of the largest, most established US telehealth brands, with an in-house pharmacy",
+    "Licensed providers review every plan; access to FDA-approved Wegovy & Zepbound with insurance",
+    "4.0 across 6,428 Trustpilot reviews - responsive, well-reviewed support",
+  ],
+  verdictLoserPoints: [
     "Personal, attentive service customers rave about",
     "Transparent, all-inclusive pricing - no surprise charges",
     "Provider support with regular check-ins and monitoring",
   ],
-  verdictLoserPoints: [
-    "A large, well-established telehealth brand",
-    "Integrated in-house pharmacy fulfillment",
-    "Licensed providers review every treatment plan",
-  ],
-  winnerId: "medvi",
+  winnerId: "ro",
   categories: [
     {
       name: "Personal Support & Service",
@@ -2553,8 +2553,8 @@ const medviRoBattle: BattleData = {
     },
     {
       name: "Medical Support",
-      winner: "tie",
-      explanation: "Both put licensed providers behind every treatment plan, with oversight from start to finish. Ro leverages its established telehealth infrastructure; Medvi emphasizes attentive, personal provider contact.",
+      winner: "provider2",
+      explanation: "Both put licensed providers behind every treatment plan. Ro edges it on infrastructure - an integrated in-house pharmacy and one of the most established telehealth platforms in the US, with providers reviewing every plan. Medvi counters with attentive, personal provider contact.",
       supportingPoints: [
         "Licensed providers on both platforms",
         "Provider oversight throughout (both)",
@@ -2674,18 +2674,18 @@ const embodyRoBattle: BattleData = {
   subtitle: "Embody vs Ro, compared on pricing, shipping speed, medical model, and overall value - so you can see which one fits you best.",
   description: "embody vs Ro: compare pricing, shipping, GLP-1 meds & care. embody: fast free 1-2 day shipping. Ro: established brand with an in-house pharmacy. See which fits you.",
   intro: "Embody and Ro are both fully online providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established telehealth brand with an integrated in-house pharmacy and licensed providers reviewing every plan. Embody is weight-loss-focused with flat, transparent pricing - $69/month for compounded semaglutide and $119 for tirzepatide - free 1-2 day shipping, and LegitScript-certified 503A pharmacies. Here's how they compare.",
-  verdict: "Both are legitimate online GLP-1 providers - but they sell different things, and the math reflects it. Embody's $69/month is all-inclusive compounded semaglutide, month to month, with free 1-2 day tracked shipping and LegitScript-certified 503A pharmacies. Ro's published pricing (August 2026) is a membership - $39 for the first month, then $74-$149/month by plan - plus brand-name medication billed separately: Wegovy pill from $149/month cash-pay, Wegovy pen from $199 for two months (up to $399/month after), Zepbound KwikPen from $299. Paying cash, Embody costs a fraction of Ro over a year ($828 vs roughly $2,700-$4,500). Ro is the stronger pick when insurance covers your brand-name medication - then you pay the membership plus your copay for FDA-approved Wegovy or Zepbound, which compounded providers can't offer.",
+  verdict: "Both are legitimate online GLP-1 providers, and the right pick depends on what you weigh most. Embody is the budget, no-frills choice - flat $69/month compounded semaglutide, free 1-2 day shipping, cancel anytime - and genuinely cheaper cash-pay over a year. But Ro takes it overall: it's a large, established telehealth brand with an integrated in-house pharmacy, licensed providers reviewing every plan, and - uniquely - access to FDA-approved brand-name Wegovy and Zepbound when your insurance covers them, which compounded-only providers can't match. With a 4.0 rating across 6,428 Trustpilot reviews and a reputation for responsive support, Ro is the more complete, more trusted platform for most people. Choose Embody if the lowest cash price is your priority; choose Ro for the full-service, brand-backed experience.",
   verdictWinnerPoints: [
-    "Flat pricing - $69/mo semaglutide, $119/mo tirzepatide",
+    "Large, established telehealth brand with an integrated in-house pharmacy",
+    "Licensed providers review every plan; access to FDA-approved Wegovy & Zepbound with insurance",
+    "4.0 across 6,428 Trustpilot reviews - responsive, well-reviewed support",
+  ],
+  verdictLoserPoints: [
+    "Cheaper cash-pay: flat $69/mo semaglutide, $119/mo tirzepatide",
     "Free 1-2 day tracked, insured shipping",
     "LegitScript-certified, US-based 503A pharmacies",
   ],
-  verdictLoserPoints: [
-    "A large, well-established telehealth brand",
-    "Integrated in-house pharmacy fulfillment",
-    "Licensed providers review every treatment plan",
-  ],
-  winnerId: "embody",
+  winnerId: "ro",
   categories: [
     {
       name: "Pricing & Value",
@@ -2733,8 +2733,8 @@ const embodyRoBattle: BattleData = {
     },
     {
       name: "Medical Support",
-      winner: "tie",
-      explanation: "Both put licensed clinicians behind every plan. Embody connects you with licensed doctors, a medical director, and a nursing team; Ro has licensed providers review every treatment plan and leverages its established telehealth infrastructure.",
+      winner: "provider2",
+      explanation: "Both put licensed clinicians behind every plan. Ro edges it here on infrastructure: an integrated in-house pharmacy, licensed providers reviewing every treatment plan, and one of the most established telehealth platforms in the US. Embody also connects you with licensed doctors, a medical director, and a nursing team.",
       supportingPoints: [
         "Licensed doctors, medical director, nursing team (Embody)",
         "Licensed providers review every plan (Ro)",
@@ -2762,18 +2762,18 @@ const trimrxRoBattle: BattleData = {
   subtitle: "We compared pricing, plan flexibility, medical support, and overall value so you can see which one fits you best.",
   description: "Ro vs TrimRX: compare pricing, plan flexibility, GLP-1 meds & value. Ro: established telehealth brand. TrimRX: flexible, no-commitment plans. See which fits you.",
   intro: "TrimRX and Ro are both online providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established telehealth brand with an integrated in-house pharmacy and licensed providers reviewing every plan. TrimRX is built around affordable access to GLP-1 programs, with competitive pricing, multi-month discounts, and flexible plans that carry no long-term commitment. Here's how they compare.",
-  verdict: "Both are credible online GLP-1 providers - but TrimRX takes this one on value and flexibility. Its plans are built around affordability, with competitive pricing, multi-month discounts, and no long-term commitment, plus ongoing clinical guidance. Ro is the better pick if you value a large, established brand with an integrated in-house pharmacy.",
+  verdict: "Both are credible online GLP-1 providers, and each wins on different ground. TrimRX is the value-and-flexibility pick - competitive pricing, multi-month discounts, no long-term commitment. But Ro takes it overall: it's a large, established telehealth brand with an integrated in-house pharmacy, licensed providers reviewing every plan, and access to FDA-approved brand-name Wegovy and Zepbound when insurance covers them. With a 4.0 rating across 6,428 Trustpilot reviews, Ro is the more complete, more trusted platform for most people - while TrimRX is the better fit if flexible, low-commitment pricing is your priority.",
   verdictWinnerPoints: [
+    "Large, established telehealth brand with an integrated in-house pharmacy",
+    "Licensed providers review every plan; access to FDA-approved Wegovy & Zepbound with insurance",
+    "4.0 across 6,428 Trustpilot reviews - responsive, well-reviewed support",
+  ],
+  verdictLoserPoints: [
     "Affordability-first pricing with multi-month discounts",
     "Flexible plans with no long-term commitment",
     "Ongoing clinical guidance included",
   ],
-  verdictLoserPoints: [
-    "A large, well-established telehealth brand",
-    "Integrated in-house pharmacy fulfillment",
-    "Licensed providers review every treatment plan",
-  ],
-  winnerId: "trimrx",
+  winnerId: "ro",
   categories: [
     {
       name: "Pricing & Value",
@@ -2821,8 +2821,8 @@ const trimrxRoBattle: BattleData = {
     },
     {
       name: "Medical Support",
-      winner: "tie",
-      explanation: "Both put licensed providers behind every plan with ongoing support. TrimRX includes ongoing clinical guidance throughout treatment; Ro has licensed providers review every plan and leverages its established telehealth infrastructure.",
+      winner: "provider2",
+      explanation: "Both put licensed providers behind every plan. Ro edges it on infrastructure - an integrated in-house pharmacy and one of the most established US telehealth platforms, with providers reviewing every plan. TrimRX counters with ongoing clinical guidance throughout treatment.",
       supportingPoints: [
         "Ongoing clinical guidance (TrimRX)",
         "Licensed providers review every plan (Ro)",
@@ -2937,18 +2937,18 @@ const rowellmedrBattle: BattleData = {
   subtitle: "We compared medications, intro pricing, range of care, and brand track record so you can see which one fits you best.",
   description: "Ro vs wellmedr: compare pricing, GLP-1 meds & reviews. Ro: established in-house pharmacy. wellmedr: 1M+ patients & weight-loss warranty. See which fits you.",
   intro: "wellmedr and Ro are both online providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established telehealth brand with an integrated in-house pharmacy and licensed providers reviewing every plan. wellmedr keeps compounded pricing low - semaglutide from $59/month and tirzepatide from $99 - with board-certified specialists, a Medical Weight-Care Coach, and a weight-loss warranty. Here's how they compare.",
-  verdict: "Both are legitimate online GLP-1 providers. wellmedr stands out on price and value: semaglutide from $59/mo and tirzepatide from $99/mo (same price at every dose), plus board-certified specialists, a Medical Weight-Care Coach, and a weight-loss warranty behind it. Ro is the better pick if brand track record and an integrated in-house pharmacy matter most to you.",
+  verdict: "Both are legitimate online GLP-1 providers, and each has a clear case. wellmedr is the price-and-range pick - semaglutide from $59/mo, tirzepatide from $99/mo (same price at every dose), plus board-certified specialists and a broader wellness range. But Ro takes it overall: it's a large, established telehealth brand with an integrated in-house pharmacy, licensed providers reviewing every plan, and access to FDA-approved brand-name Wegovy and Zepbound when insurance covers them. With a 4.0 rating across 6,428 Trustpilot reviews, Ro is the more complete, more trusted platform for most people - while wellmedr is the better fit if the lowest cash price and widest treatment range matter most.",
   verdictWinnerPoints: [
-    "Tirzepatide (GLP-1/GIP) from $99/mo; semaglutide from $59",
-    "Unique semaglutide + NAD+/B12 microdose option",
-    "Board-certified specialists tailor your plan",
+    "Large, established telehealth brand with an integrated in-house pharmacy",
+    "Licensed providers review every plan; access to FDA-approved Wegovy & Zepbound with insurance",
+    "4.0 across 6,428 Trustpilot reviews - responsive, well-reviewed support",
   ],
   verdictLoserPoints: [
-    "A large, well-established telehealth brand",
-    "Integrated in-house pharmacy fulfillment",
-    "Licensed providers review every plan",
+    "Lower cash price: semaglutide from $59/mo, tirzepatide from $99/mo",
+    "Same price at every dose; unique semaglutide + NAD+/B12 microdose option",
+    "Board-certified specialists and a broad wellness range",
   ],
-  winnerId: "wellmedr",
+  winnerId: "ro",
   categories: [
     {
       name: "Medications & Formulations",
@@ -2996,8 +2996,8 @@ const rowellmedrBattle: BattleData = {
     },
     {
       name: "Medical Support",
-      winner: "tie",
-      explanation: "Both put qualified providers behind treatment. Ro has licensed providers review every case with ongoing dosage adjustments; wellmedr says board-certified specialists tailor your plan, and you can message your provider anytime through your account.",
+      winner: "provider2",
+      explanation: "Both put qualified providers behind treatment. Ro edges it on infrastructure - an integrated in-house pharmacy and one of the most established US telehealth platforms, with licensed providers reviewing every case and ongoing dosage adjustments. wellmedr counters with board-certified specialists and anytime provider messaging.",
       supportingPoints: [
         "Licensed providers review every case (Ro)",
         "Ongoing dosage adjustments (Ro)",
@@ -4981,8 +4981,27 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
             // URLs always resolve - even if the blob is briefly unavailable.
             const savedBattles = saved.battles && saved.battles.length > 0 ? saved.battles : [];
             const savedSlugs = new Set(savedBattles.map((b) => b.slug));
+            const seedBattleBySlug = new Map(initial.battles.map((b) => [b.slug, b]));
+            // Verdict-decision fields are code-authoritative: the "who wins and
+            // why" for a battle is an editorial/business decision that lives in
+            // code, so overlay it onto the saved battle even when the blob has an
+            // older stance. Everything else on the saved battle (intro, pricing
+            // tables, any CMS edits) is preserved.
+            const merged = savedBattles.map((b) => {
+              const code = seedBattleBySlug.get(b.slug);
+              return code
+                ? {
+                    ...b,
+                    winnerId: code.winnerId,
+                    verdict: code.verdict,
+                    verdictWinnerPoints: code.verdictWinnerPoints,
+                    verdictLoserPoints: code.verdictLoserPoints,
+                    categories: code.categories,
+                  }
+                : b;
+            });
             const defaultsToAdd = initial.battles.filter((d) => !savedSlugs.has(d.slug));
-            return [...savedBattles, ...defaultsToAdd];
+            return [...merged, ...defaultsToAdd];
           })(),
           sidebars: saved.sidebars && saved.sidebars.length > 0 ? saved.sidebars : initial.sidebars,
           landingPages: saved.landingPages && saved.landingPages.length > 0 ? saved.landingPages : initial.landingPages,
