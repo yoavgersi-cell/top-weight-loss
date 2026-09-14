@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, X, ArrowRight, Users, Clock, Shield, Star, ArrowBigUp, ArrowBigDown, MessageCircle } from "lucide-react";
+import { Check, X, ArrowRight, Shield, Star, ArrowBigUp, ArrowBigDown, MessageCircle } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { latestUpdate, VERTICALS, NOINDEX_WL_REVIEW_SLUGS } from "@/lib/config";
 import {
@@ -24,7 +24,6 @@ import { REDDIT_COMMUNITY_FEEDBACK as REVIEW_COMMUNITY_FEEDBACK, RedditMark } fr
 import { YoutubeReviewSection } from "@/components/youtube-review";
 import { ReadableProse } from "@/components/prose";
 import { ProviderAudit } from "@/components/provider-audit";
-import { TrustProofBar } from "@/components/trust-proof-bar";
 
 // Per-provider SEO overrides for reviews with distinctive search demand.
 // Code-controlled (not CMS-merged) so they reliably target trending queries -
@@ -566,36 +565,6 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
       </div>
 
       <div className="mx-auto max-w-[1000px] px-4 py-8 sm:px-6">
-        {/* Honest social-proof bar (real numbers derived from config) */}
-        <TrustProofBar config={config} />
-
-        {/* Quick summary strip */}
-        <div className="mb-8 flex flex-wrap items-center gap-4 rounded-xl border border-gray-200 bg-white px-5 py-4 sm:gap-6">
-          {review.trustBadges && review.trustBadges.length > 0 ? (
-            review.trustBadges.map((badge) => (
-              <div key={badge} className="flex items-center gap-2 text-[13px] text-gray-600">
-                <Check className="h-4 w-4 text-emerald-500" strokeWidth={2} />
-                {badge}
-              </div>
-            ))
-          ) : (
-            <>
-              <div className="flex items-center gap-2 text-[13px] text-gray-600">
-                <Shield className="h-4 w-4 text-[#0C4B75]" strokeWidth={1.5} />
-                Licensed Providers
-              </div>
-              <div className="flex items-center gap-2 text-[13px] text-gray-600">
-                <Clock className="h-4 w-4 text-[#0C4B75]" strokeWidth={1.5} />
-                Fast Home Delivery
-              </div>
-              <div className="flex items-center gap-2 text-[13px] text-gray-600">
-                <Users className="h-4 w-4 text-[#0C4B75]" strokeWidth={1.5} />
-                Ongoing Support
-              </div>
-            </>
-          )}
-        </div>
-
         {/* The Bottom Line - the verdict up top, so the answer to "is it worth
             it" doesn't hide at the bottom of the page. */}
         {review.finalVerdict && (
