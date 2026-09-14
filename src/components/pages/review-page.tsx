@@ -810,6 +810,19 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           </div>
         </div>
 
+        {/* Trustpilot Reviews - social proof surfaced above the CTA */}
+        {(provider.trustpilotReviews?.length ?? 0) > 0 && (
+          <div className="mb-6">
+            <TrustpilotCarousel
+              providerName={provider.name}
+              providerLogo={provider.logo}
+              reviews={provider.trustpilotReviews!}
+              rating={provider.trustpilotRating}
+              reviewCount={provider.trustpilotReviewCount}
+            />
+          </div>
+        )}
+
         {/* Mid-page CTA */}
         <div className="mb-6 rounded-xl border border-[#0C4B75]/10 bg-[#0C4B75]/[0.03] p-5 text-center sm:p-6">
           <p className="mb-3 text-[16px] font-bold text-[#191919]">
@@ -842,19 +855,6 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             ))}
           </ul>
         </Section>
-
-        {/* Trustpilot Reviews */}
-        {(provider.trustpilotReviews?.length ?? 0) > 0 && (
-          <div className="mb-6">
-            <TrustpilotCarousel
-              providerName={provider.name}
-              providerLogo={provider.logo}
-              reviews={provider.trustpilotReviews!}
-              rating={provider.trustpilotRating}
-              reviewCount={provider.trustpilotReviewCount}
-            />
-          </div>
-        )}
 
         {/* Community feedback - real Reddit threads, rendered Reddit-style.
             Each registry entry names the vertical its threads were captured
