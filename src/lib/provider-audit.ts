@@ -34,8 +34,8 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
   },
   "weight-loss:wellmedr": {
     rows: [
-      { label: "Semaglutide price", value: "$59/month on a 12-month plan" },
-      { label: "Tirzepatide price", value: "$99/month" },
+      { label: "Semaglutide price", value: "$49/month on a 12-month plan" },
+      { label: "Tirzepatide price", value: "$89/month" },
       { label: "Commitment", value: "12-month plan for the best rate" },
       { label: "Support", value: "Coach included on every plan" },
       { label: "Guarantee", value: "Weight-loss warranty" },

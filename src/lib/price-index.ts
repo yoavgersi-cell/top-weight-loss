@@ -6,7 +6,7 @@
 // Sorted by semaglutide price ascending - the order IS the editorial answer.
 
 export type PriceCell = {
-  /** Headline monthly figure, e.g. "$59" or "from $179". */
+  /** Headline monthly figure, e.g. "$49" or "from $179". */
   price: string;
   /** The honest condition attached to that figure - promo, plan, cadence. */
   note: string;
@@ -28,8 +28,8 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "wellmedr",
     edge: "Lowest ongoing price on the market - same price at every dose",
-    semaglutide: { price: "$59", note: "12-month plan; locked for life" },
-    tirzepatide: { price: "$99", note: "shipped every 4 weeks" },
+    semaglutide: { price: "$49", note: "12-month plan; locked for life" },
+    tirzepatide: { price: "$89", note: "shipped every 4 weeks" },
     shipping: "Ships in 3-5 business days",
     commitment: "12-month plan for the lowest rate; cancel or change anytime",
     trustpilot: { rating: "4.7", count: "1,205" },

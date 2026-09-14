@@ -358,7 +358,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
     ],
     takeaway:
-      "The comment-level picture is mostly positive: “legit,” a named Florida pharmacy, fast delivery, responsive service, and the prices commenters actually paid on annual plans ($88-$99/month) sit right in the range of wellmedr's published 12-month rates ($59/month semaglutide, $99/month tirzepatide). The honest counterweight is one detailed account of being down only 1 pound after 8 weeks on tirzepatide despite good service - a fair reminder that response to GLP-1 medication varies by person, and no provider's service quality can guarantee results.",
+      "The comment-level picture is mostly positive: “legit,” a named Florida pharmacy, fast delivery, responsive service, and the prices commenters actually paid on annual plans ($88-$99/month) sit right in the range of wellmedr's published 12-month rates ($49/month semaglutide, $89/month tirzepatide). The honest counterweight is one detailed account of being down only 1 pound after 8 weeks on tirzepatide despite good service - a fair reminder that response to GLP-1 medication varies by person, and no provider's service quality can guarantee results.",
   },
   betterhelp: {
     vertical: "online-therapy",
