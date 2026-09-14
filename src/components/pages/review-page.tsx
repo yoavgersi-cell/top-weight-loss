@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, X, ArrowRight, Shield, Star, ArrowBigUp, ArrowBigDown, MessageCircle } from "lucide-react";
+import { Check, X, ArrowRight, Shield, Star, ArrowBigUp, ArrowBigDown, MessageCircle, ShieldCheck, UserRound, Users, Stethoscope, type LucideIcon } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { latestUpdate, VERTICALS, NOINDEX_WL_REVIEW_SLUGS } from "@/lib/config";
 import {
@@ -347,6 +347,17 @@ const REVIEW_PROMOS: Record<string, { segments: { text: string; bold?: boolean }
   },
 };
 
+// Per-provider trust strip, shown as a light band under the hero on the
+// provider's review page. Operator-supplied brand claims - keyed by provider.
+const REVIEW_TRUST_STRIP: Record<string, { icon: LucideIcon; label: string }[]> = {
+  altrx: [
+    { icon: ShieldCheck, label: "State-Licensed 503A Compounding Pharmacies" },
+    { icon: UserRound, label: "Personalized Treatment" },
+    { icon: Users, label: "Trusted by 125k+ Americans" },
+    { icon: Stethoscope, label: "1:1 Medical Support" },
+  ],
+};
+
 
 export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Metadata> {
   const config = await getConfig(ctx.vertical);
@@ -433,6 +444,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // provider's own review page. Bold segments render emphasized. Keyed by
   // provider id so only providers with a confirmed standing offer show one.
   const reviewPromo = REVIEW_PROMOS[provider.id];
+  const trustStrip = REVIEW_TRUST_STRIP[provider.id];
 
   // Note: we intentionally do NOT emit an AggregateOffer/price in the schema.
   // A structured price can surface in the SERP rich result and goes stale the
@@ -596,6 +608,21 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 )
               )}
             </p>
+          </div>
+        </div>
+      )}
+
+      {/* Per-provider trust strip - operator-supplied brand claims as free-
+          floating icon + label items under the hero (no box, no background) */}
+      {trustStrip && (
+        <div className="mx-auto max-w-[1000px] px-4 pt-6 sm:px-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-9 gap-y-3 sm:justify-between">
+            {trustStrip.map(({ icon: Icon, label }) => (
+              <div key={label} className="flex items-center gap-2.5">
+                <Icon className="h-[19px] w-[19px] shrink-0 text-[#0C4B75]" strokeWidth={2} />
+                <span className="text-[13px] font-semibold text-[#12355B] sm:text-[13.5px]">{label}</span>
+              </div>
+            ))}
           </div>
         </div>
       )}
