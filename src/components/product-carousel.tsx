@@ -41,7 +41,7 @@ function ProductCard({
 }) {
   const chip = chipFor(product);
   return (
-    <div className="flex w-[200px] shrink-0 snap-start flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition-shadow hover:shadow-md sm:w-[212px]">
+    <div className="group flex w-[200px] shrink-0 snap-start flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition-shadow hover:shadow-md sm:w-[212px]">
       <ProviderCta
         href={provider.affiliateUrl}
         providerName={provider.name}
@@ -93,9 +93,14 @@ function ProductCard({
           </div>
           <p className="mt-0.5 text-[11px] leading-snug text-gray-400">{product.priceNote}</p>
           <p className="mt-1.5 text-[12.5px] font-medium text-gray-800">{provider.name}</p>
-          <div className="mt-auto flex items-center gap-1.5 pt-2 text-[11.5px] text-gray-500">
-            <Truck className="h-3.5 w-3.5 shrink-0" strokeWidth={2} />
-            {product.shipping}
+          <div className="mt-auto pt-2">
+            <div className="flex items-center gap-1.5 text-[11.5px] text-gray-500">
+              <Truck className="h-3.5 w-3.5 shrink-0" strokeWidth={2} />
+              {product.shipping}
+            </div>
+            <div className="mt-2.5 flex h-[38px] w-full items-center justify-center rounded-lg bg-[#0C4B75] text-[12.5px] font-bold text-white transition-colors group-hover:bg-[#093d61]">
+              Check Eligibility
+            </div>
           </div>
         </div>
       </ProviderCta>

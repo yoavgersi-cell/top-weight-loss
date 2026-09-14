@@ -50,7 +50,7 @@ export async function generateMetadata({
     // version Google won't truncate mid-claim. Fallback: hero.description.
     const VERTICAL_META_DESCRIPTION: Record<string, string> = {
       "weight-loss":
-        "Compare 2026's best telehealth weight loss providers. Verified GLP-1 prices from $59/month semaglutide and $99/month tirzepatide - checked at the source.",
+        "Compare 2026's best telehealth weight loss providers. Verified GLP-1 prices from $49/month semaglutide and $89/month tirzepatide - checked at the source.",
       hrt: "Compare the best online HRT and menopause providers of 2026 - care models, insurance friendliness and verified Trustpilot ratings, honestly reviewed.",
       "hearing-aids":
         "Compare over-the-counter hearing devices sold online - how the brands differ, what OTC can and can't do, and what to verify before buying.",

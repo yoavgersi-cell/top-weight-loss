@@ -140,7 +140,7 @@ export const articles: Article[] = [
       },
       {
         heading: "How Much Should a Telehealth Weight Loss Program Cost?",
-        body: 'Compounded semaglutide programs run a verified $59-$199/month, and tirzepatide programs $99-$299/month. The best providers include medication, physician consultations, dose adjustments, and home delivery in one monthly fee. Be wary of providers that quote a low base price but add separate charges for consultations, shipping, or supplies. For a full pricing breakdown, see our <a href="/weight-loss/articles/semaglutide-cost-per-month">semaglutide cost guide</a> and <a href="/weight-loss/articles/weight-loss-medication-cost-guide">complete pricing comparison</a>.',
+        body: 'Compounded semaglutide programs run a verified $49-$199/month, and tirzepatide programs $89-$299/month. The best providers include medication, physician consultations, dose adjustments, and home delivery in one monthly fee. Be wary of providers that quote a low base price but add separate charges for consultations, shipping, or supplies. For a full pricing breakdown, see our <a href="/weight-loss/articles/semaglutide-cost-per-month">semaglutide cost guide</a> and <a href="/weight-loss/articles/weight-loss-medication-cost-guide">complete pricing comparison</a>.',
       },
       {
         heading: "Questions to Ask Before Signing Up",
@@ -178,7 +178,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Do GLP-1 medications work for menopause weight gain?",
-        body: 'GLP-1 medications (semaglutide, tirzepatide) are prescribed based on standard clinical criteria - they aren\'t menopause-specific, and eligibility doesn\'t change at midlife. For women who qualify, they address the appetite and metabolic side of the equation; in trials semaglutide averaged ~15% body-weight loss and tirzepatide up to 22.5%. At verified published prices, compounded semaglutide starts at $59/month (<a href="/weight-loss/reviews/wellmedr">wellmedr</a>) and $69 at <a href="/weight-loss/reviews/embody">embody</a>, with tirzepatide from $99 - see the full <a href="/weight-loss/cheapest-glp1">verified GLP-1 price comparison</a> and the <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">molecule head-to-head</a>. A licensed provider review decides whether treatment is appropriate.',
+        body: 'GLP-1 medications (semaglutide, tirzepatide) are prescribed based on standard clinical criteria - they aren\'t menopause-specific, and eligibility doesn\'t change at midlife. For women who qualify, they address the appetite and metabolic side of the equation; in trials semaglutide averaged ~15% body-weight loss and tirzepatide up to 22.5%. At verified published prices, compounded semaglutide starts at $49/month (<a href="/weight-loss/reviews/wellmedr">wellmedr</a>) and $69 at <a href="/weight-loss/reviews/embody">embody</a>, with tirzepatide from $89 - see the full <a href="/weight-loss/cheapest-glp1">verified GLP-1 price comparison</a> and the <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">molecule head-to-head</a>. A licensed provider review decides whether treatment is appropriate.',
       },
       {
         heading: "What else actually helps at this stage?",
@@ -277,7 +277,7 @@ export const articles: Article[] = [
     imageAlt: "An Ozempic (semaglutide) injection pen next to a Wegovy 2.4 mg (semaglutide) injection pen on a kitchen counter, comparing the two semaglutide brands",
     title: "Ozempic vs Wegovy (2026): Same Drug, Different Uses - Full Guide",
     description:
-      "Ozempic and Wegovy both contain semaglutide but aren't the same drug. FDA approvals, dosing, trial results - and verified prices from $59/month.",
+      "Ozempic and Wegovy both contain semaglutide but aren't the same drug. FDA approvals, dosing, trial results - and verified prices from $49/month.",
     category: "Science",
     readTime: "9 min read",
     publishedAt: "2026-06-10",
@@ -303,7 +303,7 @@ export const articles: Article[] = [
       },
       {
         heading: "How much do Ozempic and Wegovy cost? (Verified prices)",
-        body: 'At verified published prices, <a href="/weight-loss/reviews/altrx">altRx</a> lists brand Ozempic at $1,149/month and Wegovy at $1,579, <a href="/weight-loss/reviews/sprout">Sprout</a> lists Wegovy at $1,799, and <a href="/weight-loss/reviews/ro">ro</a> lists the Wegovy pill at $149 for the first month (then $299, plus a separate membership). Most self-pay patients skip both brands and use compounded semaglutide - the same active ingredient - through licensed telehealth providers:<table><tr><th>Provider</th><th>Compounded semaglutide</th></tr><tr><td><a href="/weight-loss/reviews/wellmedr">wellmedr</a></td><td><strong>$59/mo</strong> (12-month plan)</td></tr><tr><td><a href="/weight-loss/reviews/embody">embody</a></td><td>$69/mo, no commitment</td></tr><tr><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td>$89/mo flat</td></tr><tr><td><a href="/weight-loss/reviews/medvi">Medvi</a></td><td>$99/mo promo (reg. $199), all-inclusive</td></tr></table>Prices as published in August 2026, checked against each provider\'s own site. Full breakdown: <a href="/weight-loss/articles/semaglutide-cost-per-month">semaglutide monthly cost guide</a> and the <a href="/weight-loss/cheapest-glp1">cheapest verified GLP-1 comparison</a>.',
+        body: 'At verified published prices, <a href="/weight-loss/reviews/altrx">altRx</a> lists brand Ozempic at $1,149/month and Wegovy at $1,579, <a href="/weight-loss/reviews/sprout">Sprout</a> lists Wegovy at $1,799, and <a href="/weight-loss/reviews/ro">ro</a> lists the Wegovy pill at $149 for the first month (then $299, plus a separate membership). Most self-pay patients skip both brands and use compounded semaglutide - the same active ingredient - through licensed telehealth providers:<table><tr><th>Provider</th><th>Compounded semaglutide</th></tr><tr><td><a href="/weight-loss/reviews/wellmedr">wellmedr</a></td><td><strong>$49/mo</strong> (12-month plan)</td></tr><tr><td><a href="/weight-loss/reviews/embody">embody</a></td><td>$69/mo, no commitment</td></tr><tr><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td>$89/mo flat</td></tr><tr><td><a href="/weight-loss/reviews/medvi">Medvi</a></td><td>$99/mo promo (reg. $199), all-inclusive</td></tr></table>Prices as published in August 2026, checked against each provider\'s own site. Full breakdown: <a href="/weight-loss/articles/semaglutide-cost-per-month">semaglutide monthly cost guide</a> and the <a href="/weight-loss/cheapest-glp1">cheapest verified GLP-1 comparison</a>.',
       },
       {
         heading: "Does insurance cover Ozempic or Wegovy?",
@@ -407,7 +407,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What Each Actually Costs at Real Providers (Verified)",
-        body: 'Brand-name versions of both medications run $1,000+ per month at retail. The practical route for most cash-pay patients is compounded medication through licensed telehealth providers - and unlike the ballpark ranges most articles give, these are the real published prices we\'ve verified (September 2026), promotional conditions noted:<table><thead><tr><th>Provider</th><th>Semaglutide /mo</th><th>Tirzepatide /mo</th></tr></thead><tbody><tr><td><a href="/weight-loss/reviews/wellmedr">wellmedr</a></td><td>$59 (12-month plan)</td><td>$99</td></tr><tr><td><a href="/weight-loss/reviews/embody">embody</a></td><td>$69 promo (reg $79)</td><td>$119 promo (reg $129)</td></tr><tr><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td>$89 promo (reg $199)</td><td>$149 promo (reg $299)</td></tr><tr><td><a href="/weight-loss/reviews/medvi">Medvi</a></td><td>$99 promo (reg $199)</td><td>$166 promo (reg $299)</td></tr><tr><td><a href="/weight-loss/reviews/healthrx">HealthRx</a></td><td>$99 (12-month prepaid)</td><td>from $179</td></tr><tr><td><a href="/weight-loss/reviews/directmeds">DirectMeds</a></td><td>$147 flat</td><td>$147 flat</td></tr><tr><td><a href="/weight-loss/reviews/sprout">Sprout</a></td><td>from $149</td><td>from $199</td></tr><tr><td><a href="/weight-loss/reviews/trimrx">trimrx</a></td><td>$179 first month (reg $299)</td><td>$259</td></tr></tbody></table>The pattern: tirzepatide consistently costs $40-$100/month more than semaglutide at the same provider - the price of the stronger average results. Full breakdown in our <a href="/weight-loss/cheapest-glp1">cheapest GLP-1 comparison</a>, and the aggregate ranges plus brand-vs-compounded math in our <a href="/weight-loss/glp1-weight-loss-statistics">GLP-1 price &amp; statistics report</a>.',
+        body: 'Brand-name versions of both medications run $1,000+ per month at retail. The practical route for most cash-pay patients is compounded medication through licensed telehealth providers - and unlike the ballpark ranges most articles give, these are the real published prices we\'ve verified (September 2026), promotional conditions noted:<table><thead><tr><th>Provider</th><th>Semaglutide /mo</th><th>Tirzepatide /mo</th></tr></thead><tbody><tr><td><a href="/weight-loss/reviews/wellmedr">wellmedr</a></td><td>$49 (12-month plan)</td><td>$89</td></tr><tr><td><a href="/weight-loss/reviews/embody">embody</a></td><td>$69 promo (reg $79)</td><td>$119 promo (reg $129)</td></tr><tr><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td>$89 promo (reg $199)</td><td>$149 promo (reg $299)</td></tr><tr><td><a href="/weight-loss/reviews/medvi">Medvi</a></td><td>$99 promo (reg $199)</td><td>$166 promo (reg $299)</td></tr><tr><td><a href="/weight-loss/reviews/healthrx">HealthRx</a></td><td>$99 (12-month prepaid)</td><td>from $179</td></tr><tr><td><a href="/weight-loss/reviews/directmeds">DirectMeds</a></td><td>$147 flat</td><td>$147 flat</td></tr><tr><td><a href="/weight-loss/reviews/sprout">Sprout</a></td><td>from $149</td><td>from $199</td></tr><tr><td><a href="/weight-loss/reviews/trimrx">trimrx</a></td><td>$179 first month (reg $299)</td><td>$259</td></tr></tbody></table>The pattern: tirzepatide consistently costs $40-$100/month more than semaglutide at the same provider - the price of the stronger average results. Full breakdown in our <a href="/weight-loss/cheapest-glp1">cheapest GLP-1 comparison</a>, and the aggregate ranges plus brand-vs-compounded math in our <a href="/weight-loss/glp1-weight-loss-statistics">GLP-1 price &amp; statistics report</a>.',
       },
       {
         heading: "Dosing Comparison",
@@ -461,7 +461,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Tirzepatide (Mounjaro/Zepbound) Pricing",
-        body: 'Brand-name Mounjaro costs approximately $1,000-$1,100/month. Zepbound (the weight-loss version) is similarly priced. Compounded tirzepatide through telehealth providers runs a verified $99-$299/month. While more expensive than compounded semaglutide, tirzepatide produces greater average weight loss - so the cost-per-pound-lost may actually be comparable. Compare providers on our <a href="/weight-loss/tirzepatide">tirzepatide comparison page</a>.',
+        body: 'Brand-name Mounjaro costs approximately $1,000-$1,100/month. Zepbound (the weight-loss version) is similarly priced. Compounded tirzepatide through telehealth providers runs a verified $89-$299/month. While more expensive than compounded semaglutide, tirzepatide produces greater average weight loss - so the cost-per-pound-lost may actually be comparable. Compare providers on our <a href="/weight-loss/tirzepatide">tirzepatide comparison page</a>.',
       },
       {
         heading: "HSA, FSA, and Tax Savings",
@@ -605,7 +605,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Is there a protocol for weaning off slowly?",
-        body: 'There is no official self-serve tapering protocol, and that\'s the honest answer: dose reduction is a clinical decision made with your prescriber, who typically steps the dose down over time rather than stopping cold - giving appetite signals time to adjust while you build maintenance habits. What not to do: stretch doses yourself, split doses, or quit abruptly without a plan for the hunger that follows. If cost is the reason for stopping, say so - moving from a brand pen to <a href="/weight-loss/switch-from-ozempic">verified $59-$99/month compounded options</a> is often the alternative your prescriber discusses before stopping entirely.',
+        body: 'There is no official self-serve tapering protocol, and that\'s the honest answer: dose reduction is a clinical decision made with your prescriber, who typically steps the dose down over time rather than stopping cold - giving appetite signals time to adjust while you build maintenance habits. What not to do: stretch doses yourself, split doses, or quit abruptly without a plan for the hunger that follows. If cost is the reason for stopping, say so - moving from a brand pen to <a href="/weight-loss/switch-from-ozempic">verified $49-$99/month compounded options</a> is often the alternative your prescriber discusses before stopping entirely.',
       },
       {
         heading: "The Weight Regain Data",
@@ -731,7 +731,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Semaglutide Base vs Salt Forms: The FDA Warning to Know About?",
-        body: 'One distinction separates legitimate compounded semaglutide from the products the FDA has warned about: the form of the drug. Approved semaglutide (in Ozempic and Wegovy) is the <strong>base</strong> form, and legitimate 503A compounding pharmacies compound that same base form. The FDA has cautioned about products made with <strong>salt forms</strong> - semaglutide sodium and semaglutide acetate - stating it is not aware of any basis for them to meet the compounding requirements, and warning consumers against them. Before ordering anywhere, ask one question: "Do you compound semaglutide base?" A legitimate provider answers instantly; the providers we list work with US state-licensed pharmacies compounding the base form. If a seller dodges the question, or offers "research use" vials with no prescription, walk away - that is not the <a href="/weight-loss/cheapest-glp1">$59-$99/month legitimate market</a>, it is the gray market wearing its clothes.',
+        body: 'One distinction separates legitimate compounded semaglutide from the products the FDA has warned about: the form of the drug. Approved semaglutide (in Ozempic and Wegovy) is the <strong>base</strong> form, and legitimate 503A compounding pharmacies compound that same base form. The FDA has cautioned about products made with <strong>salt forms</strong> - semaglutide sodium and semaglutide acetate - stating it is not aware of any basis for them to meet the compounding requirements, and warning consumers against them. Before ordering anywhere, ask one question: "Do you compound semaglutide base?" A legitimate provider answers instantly; the providers we list work with US state-licensed pharmacies compounding the base form. If a seller dodges the question, or offers "research use" vials with no prescription, walk away - that is not the <a href="/weight-loss/cheapest-glp1">$49-$99/month legitimate market</a>, it is the gray market wearing its clothes.',
       },
       {
         heading: "How Does It Compare in Effectiveness?",
@@ -755,7 +755,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What About Compounded Tirzepatide?",
-        body: 'Compounded tirzepatide follows the same principles - same active ingredient as Mounjaro/Zepbound, produced by licensed compounding pharmacies, at lower cost ($99-$299/month verified vs $1,000+). It\'s increasingly available through telehealth providers. See our <a href="/weight-loss/articles/mounjaro-vs-ozempic">Mounjaro vs Ozempic comparison</a> and <a href="/weight-loss/tirzepatide">tirzepatide provider list</a>.',
+        body: 'Compounded tirzepatide follows the same principles - same active ingredient as Mounjaro/Zepbound, produced by licensed compounding pharmacies, at lower cost ($89-$299/month verified vs $1,000+). It\'s increasingly available through telehealth providers. See our <a href="/weight-loss/articles/mounjaro-vs-ozempic">Mounjaro vs Ozempic comparison</a> and <a href="/weight-loss/tirzepatide">tirzepatide provider list</a>.',
       },
     ],
   },
@@ -763,7 +763,7 @@ export const articles: Article[] = [
     slug: "mounjaro-vs-ozempic",
     title: "Mounjaro vs Ozempic for Weight Loss (2026): Full Comparison",
     description:
-      "Mounjaro vs Ozempic: up to 22.5% vs ~15% average weight loss in trials, side effects, dosing, insurance - and verified compounded prices from $59/month (semaglutide) and $99/month (tirzepatide).",
+      "Mounjaro vs Ozempic: up to 22.5% vs ~15% average weight loss in trials, side effects, dosing, insurance - and verified compounded prices from $49/month (semaglutide) and $89/month (tirzepatide).",
     category: "Science",
     readTime: "10 min read",
     publishedAt: "2026-07-12",
@@ -793,7 +793,7 @@ export const articles: Article[] = [
       },
       {
         heading: "How much do Mounjaro and Ozempic cost? (Verified prices)",
-        body: 'Brand-name pens are four figures a month without coverage - at verified published prices, <a href="/weight-loss/reviews/altrx">altRx</a> lists Ozempic at $1,149/month, Zepbound at $1,249 and Wegovy at $1,579, while <a href="/weight-loss/reviews/ro">ro</a> lists Zepbound KwikPens from $299 for the first month (then $399-449, plus a separate membership). Most self-pay patients instead use compounded versions of the same active ingredients through licensed telehealth providers:<table><tr><th>Option</th><th>Verified monthly price</th><th>Where</th></tr><tr><td>Compounded semaglutide (Ozempic\'s ingredient)</td><td><strong>From $59</strong></td><td><a href="/weight-loss/reviews/wellmedr">wellmedr</a> $59, <a href="/weight-loss/reviews/embody">embody</a> $69, <a href="/weight-loss/reviews/altrx">altRx</a> $89</td></tr><tr><td>Compounded tirzepatide (Mounjaro\'s ingredient)</td><td><strong>From $99</strong></td><td><a href="/weight-loss/reviews/wellmedr">wellmedr</a> $99, <a href="/weight-loss/reviews/embody">embody</a> $119, <a href="/weight-loss/reviews/directmeds">DirectMeds</a> $147</td></tr></table>Prices as published in August 2026, checked against each provider\'s own site. Full breakdowns: <a href="/weight-loss/articles/semaglutide-cost-per-month">semaglutide monthly cost</a> and the <a href="/weight-loss/cheapest-glp1">cheapest verified GLP-1 comparison</a>.',
+        body: 'Brand-name pens are four figures a month without coverage - at verified published prices, <a href="/weight-loss/reviews/altrx">altRx</a> lists Ozempic at $1,149/month, Zepbound at $1,249 and Wegovy at $1,579, while <a href="/weight-loss/reviews/ro">ro</a> lists Zepbound KwikPens from $299 for the first month (then $399-449, plus a separate membership). Most self-pay patients instead use compounded versions of the same active ingredients through licensed telehealth providers:<table><tr><th>Option</th><th>Verified monthly price</th><th>Where</th></tr><tr><td>Compounded semaglutide (Ozempic\'s ingredient)</td><td><strong>From $49</strong></td><td><a href="/weight-loss/reviews/wellmedr">wellmedr</a> $49, <a href="/weight-loss/reviews/embody">embody</a> $69, <a href="/weight-loss/reviews/altrx">altRx</a> $89</td></tr><tr><td>Compounded tirzepatide (Mounjaro\'s ingredient)</td><td><strong>From $89</strong></td><td><a href="/weight-loss/reviews/wellmedr">wellmedr</a> $89, <a href="/weight-loss/reviews/embody">embody</a> $119, <a href="/weight-loss/reviews/directmeds">DirectMeds</a> $147</td></tr></table>Prices as published in August 2026, checked against each provider\'s own site. Full breakdowns: <a href="/weight-loss/articles/semaglutide-cost-per-month">semaglutide monthly cost</a> and the <a href="/weight-loss/cheapest-glp1">cheapest verified GLP-1 comparison</a>.',
       },
       {
         heading: "Does insurance cover Mounjaro or Ozempic for weight loss?",
@@ -809,7 +809,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Who should choose Ozempic?",
-        body: 'Ozempic/semaglutide may be the better choice if you prefer a medication with a longer track record and more real-world data, want the broadest availability through telehealth providers (compounded semaglutide is more widely available than compounded tirzepatide), are looking for the <a href="/weight-loss/cheapest-glp1">lowest cost option</a> (compounded semaglutide starts at a verified $59-$89/month vs $99+ for tirzepatide), or have insurance that covers Ozempic but not Mounjaro.',
+        body: 'Ozempic/semaglutide may be the better choice if you prefer a medication with a longer track record and more real-world data, want the broadest availability through telehealth providers (compounded semaglutide is more widely available than compounded tirzepatide), are looking for the <a href="/weight-loss/cheapest-glp1">lowest cost option</a> (compounded semaglutide starts at a verified $49-$89/month vs $89+ for tirzepatide), or have insurance that covers Ozempic but not Mounjaro.',
       },
       {
         heading: "Can you switch between Mounjaro and Ozempic?",
@@ -817,7 +817,7 @@ export const articles: Article[] = [
       },
       {
         heading: "The bottom line: Mounjaro vs Ozempic",
-        body: 'Both Mounjaro and Ozempic are proven, effective weight loss medications. Mounjaro has a clinical edge in average weight loss (up to 22.5% vs ~15% in trials), while Ozempic has a longer track record, wider compounded availability, and lower compounded pricing (verified from $59/month vs $99 for tirzepatide). The best choice depends on your weight loss goals, budget, insurance situation, and how your body responds. Many patients find success with either option. The most important step is getting started with a licensed provider who can guide your treatment. <a href="/weight-loss/find-your-match">Take our matching quiz</a> to find the right provider for your needs, or <a href="/">compare all providers</a> side by side.',
+        body: 'Both Mounjaro and Ozempic are proven, effective weight loss medications. Mounjaro has a clinical edge in average weight loss (up to 22.5% vs ~15% in trials), while Ozempic has a longer track record, wider compounded availability, and lower compounded pricing (verified from $49/month vs $89 for tirzepatide). The best choice depends on your weight loss goals, budget, insurance situation, and how your body responds. Many patients find success with either option. The most important step is getting started with a licensed provider who can guide your treatment. <a href="/weight-loss/find-your-match">Take our matching quiz</a> to find the right provider for your needs, or <a href="/">compare all providers</a> side by side.',
       },
     ],
   },
@@ -839,7 +839,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Compounded Medications: The Most Popular Option",
-        body: 'The most common path to affordable GLP-1 treatment without insurance is through compounded medications offered by telehealth providers. Compounded semaglutide starts at a verified $59/month and compounded tirzepatide at $99/month - all-inclusive with consultations and delivery. These use the same active ingredients as brand-name drugs, produced by licensed compounding pharmacies. See our <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> for details.',
+        body: 'The most common path to affordable GLP-1 treatment without insurance is through compounded medications offered by telehealth providers. Compounded semaglutide starts at a verified $49/month and compounded tirzepatide at $89/month - all-inclusive with consultations and delivery. These use the same active ingredients as brand-name drugs, produced by licensed compounding pharmacies. See our <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> for details.',
       },
       {
         heading: "Telehealth Providers With All-Inclusive Pricing",
@@ -909,7 +909,7 @@ export const articles: Article[] = [
     slug: "zepbound-vs-wegovy",
     title: "Zepbound vs Wegovy (2026): Full Comparison",
     description:
-      "Zepbound vs Wegovy: up to 22.5% vs ~15% average weight loss in trials, dosing, side effects - and verified prices for both brands plus compounded routes from $59/month.",
+      "Zepbound vs Wegovy: up to 22.5% vs ~15% average weight loss in trials, dosing, side effects - and verified prices for both brands plus compounded routes from $49/month.",
     category: "Science",
     readTime: "6 min read",
     publishedAt: "2026-07-16",
@@ -931,7 +931,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Zepbound vs Wegovy cost: what do they actually run? (Verified prices)",
-        body: 'At verified published prices: <a href="/weight-loss/reviews/altrx">altRx</a> lists Zepbound at $1,249/month and Wegovy at $1,579, <a href="/weight-loss/reviews/sprout">Sprout</a> lists Wegovy at $1,799, and <a href="/weight-loss/reviews/ro">ro</a> lists Zepbound KwikPens from $299 for the first month (then $399-449, plus a separate membership). Insurance coverage is limited for both. Compounded versions of the same active ingredients cost far less through licensed telehealth providers: compounded semaglutide from a verified <strong>$59/month</strong> (<a href="/weight-loss/reviews/wellmedr">wellmedr</a>) and compounded tirzepatide from <strong>$99/month</strong>. Prices as published in August 2026 - see the <a href="/weight-loss/cheapest-glp1">cheapest verified GLP-1 comparison</a> for the full table.',
+        body: 'At verified published prices: <a href="/weight-loss/reviews/altrx">altRx</a> lists Zepbound at $1,249/month and Wegovy at $1,579, <a href="/weight-loss/reviews/sprout">Sprout</a> lists Wegovy at $1,799, and <a href="/weight-loss/reviews/ro">ro</a> lists Zepbound KwikPens from $299 for the first month (then $399-449, plus a separate membership). Insurance coverage is limited for both. Compounded versions of the same active ingredients cost far less through licensed telehealth providers: compounded semaglutide from a verified <strong>$49/month</strong> (<a href="/weight-loss/reviews/wellmedr">wellmedr</a>) and compounded tirzepatide from <strong>$89/month</strong>. Prices as published in August 2026 - see the <a href="/weight-loss/cheapest-glp1">cheapest verified GLP-1 comparison</a> for the full table.',
       },
       {
         heading: "Zepbound or Wegovy: which should you choose?",
@@ -943,7 +943,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Are there cheaper compounded versions?",
-        body: 'Yes - both Wegovy (semaglutide) and Zepbound (tirzepatide) have compounded versions available through licensed telehealth providers at a fraction of brand pricing: compounded semaglutide from a verified $59/month and compounded tirzepatide from $99/month at <a href="/weight-loss/reviews/wellmedr">wellmedr</a>, with <a href="/weight-loss/reviews/embody">embody</a> ($69/$119) and <a href="/weight-loss/reviews/altrx">altRx</a> ($89/$149) close behind. Read our <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> for details on quality and safety.',
+        body: 'Yes - both Wegovy (semaglutide) and Zepbound (tirzepatide) have compounded versions available through licensed telehealth providers at a fraction of brand pricing: compounded semaglutide from a verified $49/month and compounded tirzepatide from $89/month at <a href="/weight-loss/reviews/wellmedr">wellmedr</a>, with <a href="/weight-loss/reviews/embody">embody</a> ($69/$119) and <a href="/weight-loss/reviews/altrx">altRx</a> ($89/$149) close behind. Read our <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> for details on quality and safety.',
       },
       {
         heading: "Can you get Zepbound or Wegovy online?",
@@ -1045,7 +1045,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Compounded Semaglutide Costs",
-        body: 'Compounded semaglutide through telehealth providers costs a verified $59-$199/month, including physician consultations and home delivery. This uses the same active ingredient as Ozempic/Wegovy but is produced by licensed compounding pharmacies. Read our <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name comparison</a> for more details.',
+        body: 'Compounded semaglutide through telehealth providers costs a verified $49-$199/month, including physician consultations and home delivery. This uses the same active ingredient as Ozempic/Wegovy but is produced by licensed compounding pharmacies. Read our <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name comparison</a> for more details.',
       },
       {
         heading: "What's Included in the Monthly Price",
@@ -1061,11 +1061,11 @@ export const articles: Article[] = [
       },
       {
         heading: "Semaglutide vs Tirzepatide: Cost Comparison",
-        body: 'Compounded semaglutide ($59-$199/month verified) is generally cheaper than compounded tirzepatide ($99-$299/month). However, tirzepatide produces greater average weight loss (up to 22.5% vs ~15% in trials), so the cost-per-result may be comparable. See our <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">full comparison</a> and <a href="/weight-loss/articles/mounjaro-vs-ozempic">Mounjaro vs Ozempic guide</a>.',
+        body: 'Compounded semaglutide ($49-$199/month verified) is generally cheaper than compounded tirzepatide ($89-$299/month). However, tirzepatide produces greater average weight loss (up to 22.5% vs ~15% in trials), so the cost-per-result may be comparable. See our <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">full comparison</a> and <a href="/weight-loss/articles/mounjaro-vs-ozempic">Mounjaro vs Ozempic guide</a>.',
       },
       {
         heading: "Where to Find the Cheapest Semaglutide",
-        body: '<a href="/weight-loss/cheapest-glp1">Compare the most affordable providers</a> on our platform. Several offer compounded semaglutide starting at a verified $59/month with everything included. <a href="/weight-loss/find-your-match">Take our quiz</a> to find a provider that fits both your goals and budget.',
+        body: '<a href="/weight-loss/cheapest-glp1">Compare the most affordable providers</a> on our platform. Several offer compounded semaglutide starting at a verified $49/month with everything included. <a href="/weight-loss/find-your-match">Take our quiz</a> to find a provider that fits both your goals and budget.',
       },
     ],
   },
@@ -1141,7 +1141,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Cost Comparison",
-        body: 'Brand-name costs: Wegovy $1,300+/month, Zepbound $1,000+/month, Saxenda $1,300+/month. Compounded versions are significantly cheaper - semaglutide from a verified $59/month and tirzepatide from $99/month. See our <a href="/weight-loss/articles/semaglutide-cost-per-month">semaglutide cost breakdown</a> and <a href="/weight-loss/articles/weight-loss-medication-cost-guide">full cost guide</a>.',
+        body: 'Brand-name costs: Wegovy $1,300+/month, Zepbound $1,000+/month, Saxenda $1,300+/month. Compounded versions are significantly cheaper - semaglutide from a verified $49/month and tirzepatide from $89/month. See our <a href="/weight-loss/articles/semaglutide-cost-per-month">semaglutide cost breakdown</a> and <a href="/weight-loss/articles/weight-loss-medication-cost-guide">full cost guide</a>.',
       },
       {
         heading: "Which Should You Choose?",
@@ -1389,7 +1389,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Compounded Semaglutide - Same Ingredient, Lower Cost",
-        body: 'The most popular Ozempic alternative is <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded semaglutide</a> - the exact same active ingredient made by licensed compounding pharmacies at a verified $59-$199/month instead of $1,149+. Available through telehealth providers like <a href="/weight-loss/reviews/altrx">ALT RX</a>, <a href="/weight-loss/reviews/trimrx">TrimRX</a>, and others. This is what most people actually use when they say they\'re "on Ozempic" through telehealth.',
+        body: 'The most popular Ozempic alternative is <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded semaglutide</a> - the exact same active ingredient made by licensed compounding pharmacies at a verified $49-$199/month instead of $1,149+. Available through telehealth providers like <a href="/weight-loss/reviews/altrx">ALT RX</a>, <a href="/weight-loss/reviews/trimrx">TrimRX</a>, and others. This is what most people actually use when they say they\'re "on Ozempic" through telehealth.',
       },
       {
         heading: "Wegovy - The FDA-Approved Weight Loss Version",
@@ -1397,7 +1397,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Mounjaro/Zepbound (Tirzepatide) - The Stronger Alternative",
-        body: 'If you want something more effective than Ozempic, <a href="/weight-loss/articles/mounjaro-vs-ozempic">tirzepatide</a> (Mounjaro for diabetes, Zepbound for weight loss) targets two receptors instead of one and produced up to 22.5% weight loss in trials vs ~15% for semaglutide. Compounded tirzepatide is available through telehealth providers from a verified $99/month. See our <a href="/weight-loss/tirzepatide">tirzepatide providers page</a>.',
+        body: 'If you want something more effective than Ozempic, <a href="/weight-loss/articles/mounjaro-vs-ozempic">tirzepatide</a> (Mounjaro for diabetes, Zepbound for weight loss) targets two receptors instead of one and produced up to 22.5% weight loss in trials vs ~15% for semaglutide. Compounded tirzepatide is available through telehealth providers from a verified $89/month. See our <a href="/weight-loss/tirzepatide">tirzepatide providers page</a>.',
       },
       {
         heading: "Top Telehealth Providers for Ozempic Alternatives",
@@ -1405,7 +1405,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Comparing Costs: Ozempic vs Alternatives",
-        body: 'At verified published prices, brand-name Ozempic runs $1,149/month and Wegovy $1,579 at altRx (Sprout lists Wegovy at $1,799). Compounded semaglutide: a verified $59-$199/month. Compounded tirzepatide: $99-$299/month. For most patients paying out of pocket, compounded options offer the best value with the same active ingredients. See our <a href="/weight-loss/articles/semaglutide-cost-per-month">semaglutide cost guide</a> and <a href="/weight-loss/cheapest-glp1">cheapest providers page</a>.',
+        body: 'At verified published prices, brand-name Ozempic runs $1,149/month and Wegovy $1,579 at altRx (Sprout lists Wegovy at $1,799). Compounded semaglutide: a verified $49-$199/month. Compounded tirzepatide: $89-$299/month. For most patients paying out of pocket, compounded options offer the best value with the same active ingredients. See our <a href="/weight-loss/articles/semaglutide-cost-per-month">semaglutide cost guide</a> and <a href="/weight-loss/cheapest-glp1">cheapest providers page</a>.',
       },
       {
         heading: "How to Switch from Ozempic to an Alternative",
@@ -1431,11 +1431,11 @@ export const articles: Article[] = [
       },
       {
         heading: "Compounded Semaglutide - The #1 Alternative",
-        body: 'The most direct Wegovy alternative is <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded semaglutide</a> - same active ingredient, same mechanism, a verified $59-$199/month through telehealth providers. Available from providers like <a href="/weight-loss/reviews/altrx">ALT RX</a>, <a href="/weight-loss/reviews/trimrx">TrimRX</a>, and others. See our <a href="/weight-loss/semaglutide">semaglutide providers comparison</a>.',
+        body: 'The most direct Wegovy alternative is <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded semaglutide</a> - same active ingredient, same mechanism, a verified $49-$199/month through telehealth providers. Available from providers like <a href="/weight-loss/reviews/altrx">ALT RX</a>, <a href="/weight-loss/reviews/trimrx">TrimRX</a>, and others. See our <a href="/weight-loss/semaglutide">semaglutide providers comparison</a>.',
       },
       {
         heading: "Zepbound (Tirzepatide) - Even More Effective",
-        body: 'If you want something potentially more effective than Wegovy, <a href="/weight-loss/articles/zepbound-vs-wegovy">Zepbound</a> (tirzepatide) has shown up to 22.5% weight loss vs Wegovy\'s ~15% in clinical trials. Compounded tirzepatide is available from a verified $99/month. See our <a href="/weight-loss/tirzepatide">tirzepatide providers page</a>.',
+        body: 'If you want something potentially more effective than Wegovy, <a href="/weight-loss/articles/zepbound-vs-wegovy">Zepbound</a> (tirzepatide) has shown up to 22.5% weight loss vs Wegovy\'s ~15% in clinical trials. Compounded tirzepatide is available from a verified $89/month. See our <a href="/weight-loss/tirzepatide">tirzepatide providers page</a>.',
       },
       {
         heading: "Ozempic - The Off-Label Option",
@@ -1455,7 +1455,7 @@ export const articles: Article[] = [
     slug: "best-mounjaro-alternatives",
     title: "Best Mounjaro Alternatives in 2026: 7 Real Options, Priced & Verified",
     description:
-      "The best Mounjaro alternatives in 2026: compounded tirzepatide from a verified $99/month, Zepbound, and budget semaglutide - every price checked against the provider's own site.",
+      "The best Mounjaro alternatives in 2026: compounded tirzepatide from a verified $89/month, Zepbound, and budget semaglutide - every price checked against the provider's own site.",
     category: "Advice",
     readTime: "7 min read",
     publishedAt: "2026-07-22",
@@ -1465,7 +1465,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "What is the best alternative to Mounjaro?",
-        body: '<p>The closest Mounjaro alternative is compounded tirzepatide - the same active ingredient, prescribed online by licensed providers, from a verified $99/month. Zepbound is literally the same drug FDA-approved for weight loss, and compounded semaglutide (from $59/month) is the budget path many people start with.</p><table><tr><th>Route</th><th>What it is</th><th>Verified monthly cost</th></tr><tr><td>Compounded tirzepatide</td><td>Mounjaro\'s active ingredient via telehealth</td><td>$99-$299</td></tr><tr><td>Zepbound (brand)</td><td>Same drug, FDA-approved for weight loss</td><td>$299 first month via ro pens; $1,249 at altRx</td></tr><tr><td>Compounded semaglutide</td><td>Ozempic\'s active ingredient, the budget option</td><td>$59-$199</td></tr></table><p>Below: why people switch, what each option actually costs at real providers, and how to pick - with every price checked against the provider\'s own published pricing.</p> The same tirzepatide also powers Zepbound - so if you\'re pricing compounded tirzepatide vs Zepbound, the verified anchors are $99-$147/month compounded versus $1,249/month for brand Zepbound at altRx (KwikPens from $299 first month at ro).',
+        body: '<p>The closest Mounjaro alternative is compounded tirzepatide - the same active ingredient, prescribed online by licensed providers, from a verified $89/month. Zepbound is literally the same drug FDA-approved for weight loss, and compounded semaglutide (from $49/month) is the budget path many people start with.</p><table><tr><th>Route</th><th>What it is</th><th>Verified monthly cost</th></tr><tr><td>Compounded tirzepatide</td><td>Mounjaro\'s active ingredient via telehealth</td><td>$89-$299</td></tr><tr><td>Zepbound (brand)</td><td>Same drug, FDA-approved for weight loss</td><td>$299 first month via ro pens; $1,249 at altRx</td></tr><tr><td>Compounded semaglutide</td><td>Ozempic\'s active ingredient, the budget option</td><td>$49-$199</td></tr></table><p>Below: why people switch, what each option actually costs at real providers, and how to pick - with every price checked against the provider\'s own published pricing.</p> The same tirzepatide also powers Zepbound - so if you\'re pricing compounded tirzepatide vs Zepbound, the verified anchors are $89-$147/month compounded versus $1,249/month for brand Zepbound at altRx (KwikPens from $299 first month at ro).',
       },
       {
         heading: "Why do people look for Mounjaro alternatives?",
@@ -1473,15 +1473,15 @@ export const articles: Article[] = [
       },
       {
         heading: "What is the closest thing to Mounjaro?",
-        body: 'Compounded tirzepatide - the same active ingredient, prepared by US 503A compounding pharmacies and prescribed through licensed telehealth providers. The experience is different from the brand (vials and syringes rather than pens, and compounded drugs are not FDA-approved products), but the molecule is the one that produced Mounjaro\'s trial results. At verified prices it runs $99-$299/month depending on the provider - roughly a tenth of brand cost at the low end. Start with our <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide breakdown</a> if you\'re weighing the two molecules.',
+        body: 'Compounded tirzepatide - the same active ingredient, prepared by US 503A compounding pharmacies and prescribed through licensed telehealth providers. The experience is different from the brand (vials and syringes rather than pens, and compounded drugs are not FDA-approved products), but the molecule is the one that produced Mounjaro\'s trial results. At verified prices it runs $89-$299/month depending on the provider - roughly a tenth of brand cost at the low end. Start with our <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide breakdown</a> if you\'re weighing the two molecules.',
       },
       {
         heading: "What does each Mounjaro alternative actually cost? (Verified prices)",
-        body: 'These are the published tirzepatide prices at every provider in our ranking - checked against each provider\'s own site, not estimated:<table><tr><th>Provider</th><th>Compounded tirzepatide</th><th>Worth knowing</th></tr><tr><td><a href="/weight-loss/reviews/wellmedr">wellmedr</a></td><td><strong>$99/mo</strong></td><td>Cheapest verified; 12-month plan for best rate</td></tr><tr><td><a href="/weight-loss/reviews/embody">embody</a></td><td>$119/mo (reg. $129)</td><td>No commitment, free 1-2 day shipping</td></tr><tr><td><a href="/weight-loss/reviews/directmeds">DirectMeds</a></td><td>$147/mo</td><td>Flat price, needle-free drops option</td></tr><tr><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td>$149/mo</td><td>Also stocks brand Zepbound ($1,249)</td></tr><tr><td><a href="/weight-loss/reviews/medvi">Medvi</a></td><td>$166/mo promo (reg. $299)</td><td>All-inclusive with video visits + dietician</td></tr><tr><td><a href="/weight-loss/reviews/healthrx">HealthRx</a></td><td>From $179/mo</td><td>Overnight cold-chain shipping</td></tr><tr><td><a href="/weight-loss/reviews/sprout">Sprout</a></td><td>$199/mo</td><td>Also stocks brand Wegovy</td></tr><tr><td><a href="/weight-loss/reviews/trimrx">trimrx</a></td><td>$259/mo</td><td>No contract</td></tr><tr><td><a href="/weight-loss/reviews/shed">SHED</a></td><td>$299/mo</td><td>Money-back results guarantee</td></tr></table>Prices as published in August 2026; confirm current pricing on each provider\'s site. For the full market picture, see our <a href="/">ranking of the best GLP-1 weight loss providers</a>.',
+        body: 'These are the published tirzepatide prices at every provider in our ranking - checked against each provider\'s own site, not estimated:<table><tr><th>Provider</th><th>Compounded tirzepatide</th><th>Worth knowing</th></tr><tr><td><a href="/weight-loss/reviews/wellmedr">wellmedr</a></td><td><strong>$89/mo</strong></td><td>Cheapest verified; 12-month plan for best rate</td></tr><tr><td><a href="/weight-loss/reviews/embody">embody</a></td><td>$119/mo (reg. $129)</td><td>No commitment, free 1-2 day shipping</td></tr><tr><td><a href="/weight-loss/reviews/directmeds">DirectMeds</a></td><td>$147/mo</td><td>Flat price, needle-free drops option</td></tr><tr><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td>$149/mo</td><td>Also stocks brand Zepbound ($1,249)</td></tr><tr><td><a href="/weight-loss/reviews/medvi">Medvi</a></td><td>$166/mo promo (reg. $299)</td><td>All-inclusive with video visits + dietician</td></tr><tr><td><a href="/weight-loss/reviews/healthrx">HealthRx</a></td><td>From $179/mo</td><td>Overnight cold-chain shipping</td></tr><tr><td><a href="/weight-loss/reviews/sprout">Sprout</a></td><td>$199/mo</td><td>Also stocks brand Wegovy</td></tr><tr><td><a href="/weight-loss/reviews/trimrx">trimrx</a></td><td>$259/mo</td><td>No contract</td></tr><tr><td><a href="/weight-loss/reviews/shed">SHED</a></td><td>$299/mo</td><td>Money-back results guarantee</td></tr></table>Prices as published in August 2026; confirm current pricing on each provider\'s site. For the full market picture, see our <a href="/">ranking of the best GLP-1 weight loss providers</a>.',
       },
       {
         heading: "Is there a cheaper alternative to Mounjaro?",
-        body: 'Yes - compounded semaglutide, the active ingredient in Ozempic and Wegovy. In trials semaglutide averaged around 15% body-weight loss versus up to 22.5% for tirzepatide, so you trade some average effect for a much lower price: verified rates start at <strong>$59/month at <a href="/weight-loss/reviews/wellmedr">wellmedr</a></strong>, $69 at <a href="/weight-loss/reviews/embody">embody</a> and $89 at <a href="/weight-loss/reviews/altrx">altRx</a>. Many people start on semaglutide and only step up to tirzepatide if results stall. Our <a href="/weight-loss/cheapest-glp1">cheapest verified GLP-1 comparison</a> lays out the whole budget tier.',
+        body: 'Yes - compounded semaglutide, the active ingredient in Ozempic and Wegovy. In trials semaglutide averaged around 15% body-weight loss versus up to 22.5% for tirzepatide, so you trade some average effect for a much lower price: verified rates start at <strong>$49/month at <a href="/weight-loss/reviews/wellmedr">wellmedr</a></strong>, $69 at <a href="/weight-loss/reviews/embody">embody</a> and $89 at <a href="/weight-loss/reviews/altrx">altRx</a>. Many people start on semaglutide and only step up to tirzepatide if results stall. Our <a href="/weight-loss/cheapest-glp1">cheapest verified GLP-1 comparison</a> lays out the whole budget tier.',
       },
       {
         heading: "Is Zepbound the same as Mounjaro?",
@@ -1690,7 +1690,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Should fear of Ozempic face stop you from treating obesity?",
-        body: 'Framed honestly: the trade is between facial volume and the metabolic consequences of the weight itself - and that\'s rarely a close call medically. The better response to the concern isn\'t avoiding treatment; it\'s structuring it - moderate pace, protein, training - with a provider who monitors you. That provider matters: our <a href="/weight-loss">ranked telehealth providers</a> include clinician follow-up in verified $59-$99/month plans, and pace-of-loss is exactly the kind of thing to raise at check-ins. Not medical advice - your clinician\'s guidance comes first.',
+        body: 'Framed honestly: the trade is between facial volume and the metabolic consequences of the weight itself - and that\'s rarely a close call medically. The better response to the concern isn\'t avoiding treatment; it\'s structuring it - moderate pace, protein, training - with a provider who monitors you. That provider matters: our <a href="/weight-loss">ranked telehealth providers</a> include clinician follow-up in verified $49-$99/month plans, and pace-of-loss is exactly the kind of thing to raise at check-ins. Not medical advice - your clinician\'s guidance comes first.',
       },
     ],
   },
@@ -1698,7 +1698,7 @@ export const articles: Article[] = [
     slug: "zepbound-vs-wegovy-vs-ozempic",
     title: "Zepbound vs Wegovy vs Ozempic (2026): Full Comparison",
     description:
-      "Zepbound (tirzepatide) led trials with up to 22.5% average weight loss vs ~15% for Wegovy (semaglutide); Ozempic is the diabetes-approved sibling. Verified prices from $59/month compounded to $1,249 brand.",
+      "Zepbound (tirzepatide) led trials with up to 22.5% average weight loss vs ~15% for Wegovy (semaglutide); Ozempic is the diabetes-approved sibling. Verified prices from $49/month compounded to $1,249 brand.",
     category: "Comparison",
     readTime: "8 min read",
     publishedAt: "2026-08-28",
@@ -1708,7 +1708,7 @@ export const articles: Article[] = [
     keyTakeaways: [
       "Zepbound (tirzepatide) targets two hormone receptors and produced up to 22.5% average weight loss in trials, vs ~15% for Wegovy (semaglutide).",
       "Ozempic contains Wegovy's ingredient at diabetes-approved dosing - it's the same semaglutide, different label.",
-      "Verified brand prices: Zepbound $1,249/mo and Wegovy $1,579 at altRx; compounded routes run $59-$99/month.",
+      "Verified brand prices: Zepbound $1,249/mo and Wegovy $1,579 at altRx; compounded routes run $49-$99/month.",
       "There is no DIY dose conversion between them - switching means restarting titration with your prescriber.",
     ],
     sections: [
@@ -1722,7 +1722,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What do they cost out of pocket?",
-        body: 'The verified numbers, not estimates: brand <strong>Zepbound runs $1,249/month</strong> and brand <strong>Wegovy $1,579</strong> at altRx (Ozempic $1,149; Zepbound KwikPens from $299 first month at ro, then $399-$449 plus membership). The compounded route changes the math entirely: <strong>compounded semaglutide from a verified $59/month</strong> (wellmedr) and <strong>compounded tirzepatide from $99</strong> - the same active ingredients through licensed telehealth with US state-licensed pharmacies. Full ladder on our <a href="/weight-loss/cheapest-glp1">cheapest GLP-1 page</a>, checked against every provider\'s own site.',
+        body: 'The verified numbers, not estimates: brand <strong>Zepbound runs $1,249/month</strong> and brand <strong>Wegovy $1,579</strong> at altRx (Ozempic $1,149; Zepbound KwikPens from $299 first month at ro, then $399-$449 plus membership). The compounded route changes the math entirely: <strong>compounded semaglutide from a verified $49/month</strong> (wellmedr) and <strong>compounded tirzepatide from $89</strong> - the same active ingredients through licensed telehealth with US state-licensed pharmacies. Full ladder on our <a href="/weight-loss/cheapest-glp1">cheapest GLP-1 page</a>, checked against every provider\'s own site.',
       },
       {
         heading: "How do the side effects compare?",
@@ -1734,7 +1734,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Which one should you choose?",
-        body: 'Decision logic, honestly ordered. Chasing maximum average efficacy with budget for brand: Zepbound leads the trial numbers. Insurance covering one of them: the covered one usually wins the math - check your formulary first. Self-pay: the compounded route\'s $59-$99/month changes the entire question, which is why it\'s our default starting point for cash payers - compare on the <a href="/weight-loss">ranking</a>. Diabetes plus weight goals: that\'s an Ozempic/Mounjaro-label conversation with your clinician. Whichever route: prescription required, titration takes months, and the provider\'s follow-up quality matters more than the logo on the pen.',
+        body: 'Decision logic, honestly ordered. Chasing maximum average efficacy with budget for brand: Zepbound leads the trial numbers. Insurance covering one of them: the covered one usually wins the math - check your formulary first. Self-pay: the compounded route\'s $49-$99/month changes the entire question, which is why it\'s our default starting point for cash payers - compare on the <a href="/weight-loss">ranking</a>. Diabetes plus weight goals: that\'s an Ozempic/Mounjaro-label conversation with your clinician. Whichever route: prescription required, titration takes months, and the provider\'s follow-up quality matters more than the logo on the pen.',
       },
     ],
   },
@@ -1742,7 +1742,7 @@ export const articles: Article[] = [
     slug: "glp1-with-insurance",
     title: "GLP-1 With Insurance (2026): Coverage, PA & the Backup Plan",
     description:
-      "How GLP-1 insurance coverage actually works - formularies, prior authorization, why denials happen - and the verified $59-$99/month self-pay backup when coverage falls through.",
+      "How GLP-1 insurance coverage actually works - formularies, prior authorization, why denials happen - and the verified $49-$99/month self-pay backup when coverage falls through.",
     category: "Advice",
     readTime: "7 min read",
     publishedAt: "2026-08-28",
@@ -1753,7 +1753,7 @@ export const articles: Article[] = [
       "Coverage is plan-specific: many plans cover GLP-1s for diabetes, far fewer for weight loss alone - your formulary is the only real answer.",
       "Expect prior authorization: BMI thresholds, documented comorbidities and sometimes step therapy are the usual gates.",
       "Telehealth prescribers can run the insurance route too - coverage applies to the medication, not the visit type.",
-      "The backup plan is real: verified self-pay compounded semaglutide from $59/month beats many post-deductible brand costs.",
+      "The backup plan is real: verified self-pay compounded semaglutide from $49/month beats many post-deductible brand costs.",
     ],
     sections: [
       {
@@ -1770,11 +1770,11 @@ export const articles: Article[] = [
       },
       {
         heading: "What does covered treatment actually cost?",
-        body: 'Coverage is not free: your real number is copay or coinsurance after deductible, and for expensive brands that can still be substantial until deductibles are met. Manufacturer savings cards exist for the commercially insured and can cut copays meaningfully - worth checking the manufacturer\'s site - though they typically exclude government plans. The comparison that matters: your true monthly out-of-pocket under coverage versus the verified <strong>$59-$99/month self-pay compounded route</strong>. Plenty of people with technically-covered plans still choose compounded for predictability alone.',
+        body: 'Coverage is not free: your real number is copay or coinsurance after deductible, and for expensive brands that can still be substantial until deductibles are met. Manufacturer savings cards exist for the commercially insured and can cut copays meaningfully - worth checking the manufacturer\'s site - though they typically exclude government plans. The comparison that matters: your true monthly out-of-pocket under coverage versus the verified <strong>$49-$99/month self-pay compounded route</strong>. Plenty of people with technically-covered plans still choose compounded for predictability alone.',
       },
       {
         heading: "What's the backup plan when insurance says no?",
-        body: 'The one this site exists to document: <strong>self-pay compounded GLP-1s at verified prices</strong> - semaglutide from $59/month (wellmedr), $69 (embody), $89 (altRx); tirzepatide from $99 - visit included, no PA, no formulary. Same active ingredients, prescribed after an online evaluation by licensed clinicians, from US state-licensed pharmacies (the <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded-vs-brand trade-offs, honestly</a>). Start at the <a href="/weight-loss/cheapest-glp1">verified price ladder</a> or the full <a href="/weight-loss">ranking</a>. The wrong backup plan: gray-market vials and "research peptides" - denial is not a reason to leave the licensed system.',
+        body: 'The one this site exists to document: <strong>self-pay compounded GLP-1s at verified prices</strong> - semaglutide from $49/month (wellmedr), $69 (embody), $89 (altRx); tirzepatide from $89 - visit included, no PA, no formulary. Same active ingredients, prescribed after an online evaluation by licensed clinicians, from US state-licensed pharmacies (the <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded-vs-brand trade-offs, honestly</a>). Start at the <a href="/weight-loss/cheapest-glp1">verified price ladder</a> or the full <a href="/weight-loss">ranking</a>. The wrong backup plan: gray-market vials and "research peptides" - denial is not a reason to leave the licensed system.',
       },
     ],
   },
@@ -1782,7 +1782,7 @@ export const articles: Article[] = [
     slug: "is-wellmedr-legit",
     title: "Is wellmedr Legit? Reviews, Complaints & Real Prices (2026)",
     description:
-      "wellmedr holds a verified 4.7 on Trustpilot across 1,205 reviews. What the reviews and complaints actually say, the real $59-$99 GLP-1 pricing structure, and an honest verdict.",
+      "wellmedr holds a verified 4.7 on Trustpilot across 1,205 reviews. What the reviews and complaints actually say, the real $49-$99 GLP-1 pricing structure, and an honest verdict.",
     category: "Advice",
     readTime: "8 min read",
     publishedAt: "2026-08-30",
@@ -1791,14 +1791,14 @@ export const articles: Article[] = [
     author: "TopWeightLoss Team",
     keyTakeaways: [
       "wellmedr holds a verified 4.7 on Trustpilot across 1,205 reviews - the highest rating among the GLP-1 providers we track.",
-      "Real pricing: $59/month compounded semaglutide and $99/month tirzepatide, same price at every dose - but those rates lock on a 12-month plan, billed monthly.",
+      "Real pricing: $49/month compounded semaglutide and $89/month tirzepatide, same price at every dose - but those rates lock on a 12-month plan, billed monthly.",
       "The complaints that exist are specific, not systemic: results vary by person (one detailed account reports 1 pound in 8 weeks despite good service), and the 12-month term is the condition to understand before buying.",
       "Every checkable legitimacy marker is in place: licensed-provider review, prescription required, a named US pharmacy, and a weight-loss warranty (terms on its site).",
     ],
     sections: [
       {
         heading: "What is wellmedr?",
-        body: 'wellmedr is a telehealth weight-loss provider selling compounded GLP-1 treatment - semaglutide and tirzepatide - with a licensed-clinician review before any prescription and a Medical Weight-Care Coach included on every plan. Its pitch is the price: <strong>$59/month for semaglutide and $99/month for tirzepatide, the same price at every dose</strong>, which is the lowest published rate ladder in our <a href="/weight-loss/cheapest-glp1">verified price index</a>. wellmedr itself reports over 1 million patients treated and board-certified weight-loss specialists on staff - those are the company\'s own figures, so treat them as marketing claims, but the review record below is independently verifiable.',
+        body: 'wellmedr is a telehealth weight-loss provider selling compounded GLP-1 treatment - semaglutide and tirzepatide - with a licensed-clinician review before any prescription and a Medical Weight-Care Coach included on every plan. Its pitch is the price: <strong>$49/month for semaglutide and $89/month for tirzepatide, the same price at every dose</strong>, which is the lowest published rate ladder in our <a href="/weight-loss/cheapest-glp1">verified price index</a>. wellmedr itself reports over 1 million patients treated and board-certified weight-loss specialists on staff - those are the company\'s own figures, so treat them as marketing claims, but the review record below is independently verifiable.',
       },
       {
         heading: "Is wellmedr legit?",
@@ -1810,23 +1810,23 @@ export const articles: Article[] = [
       },
       {
         heading: "What complaints come up about wellmedr?",
-        body: 'Searches for "wellmedr complaints" deserve a straight answer, so here is everything critical in the material we verified. The most substantive complaint is about <strong>results, not service</strong>: one detailed Reddit account describes fast shipping and responsive support - and being down only 1 pound after 8 weeks on tirzepatide, after prepaying $1,143 for six months. That is a fair warning about GLP-1 treatment anywhere: response varies by person, and no provider\'s service quality can guarantee your results. The second thing to understand before buying is the <strong>commitment structure</strong>: the headline $59/$99 rates lock on a 12-month plan (billed monthly, not prepaid) - month-to-month flexibility is what competitors like embody charge $10-$20 more for. In the reviews we reviewed, we did not find a pattern of billing traps, non-delivery, or scam-type complaints - the 4.7 aggregate across 1,205 reviews is hard to fake at that volume. If price-per-month matters most and you can commit to the year, the complaint file here is genuinely thin.',
+        body: 'Searches for "wellmedr complaints" deserve a straight answer, so here is everything critical in the material we verified. The most substantive complaint is about <strong>results, not service</strong>: one detailed Reddit account describes fast shipping and responsive support - and being down only 1 pound after 8 weeks on tirzepatide, after prepaying $1,143 for six months. That is a fair warning about GLP-1 treatment anywhere: response varies by person, and no provider\'s service quality can guarantee your results. The second thing to understand before buying is the <strong>commitment structure</strong>: the headline $49/$99 rates lock on a 12-month plan (billed monthly, not prepaid) - month-to-month flexibility is what competitors like embody charge $10-$20 more for. In the reviews we reviewed, we did not find a pattern of billing traps, non-delivery, or scam-type complaints - the 4.7 aggregate across 1,205 reviews is hard to fake at that volume. If price-per-month matters most and you can commit to the year, the complaint file here is genuinely thin.',
       },
       {
-        heading: "Where does the $59 price really come from?",
-        body: 'The price has a structural explanation, not a suspicious one - three ingredients. <strong>Compounding economics:</strong> the active ingredient is not what makes brand-name GLP-1s expensive - the brand premium is. Compounded semaglutide across our entire ranking runs $59-$199/month, so wellmedr sits at the aggressive end of a normal range, not outside it. <strong>Scale:</strong> wellmedr itself reports over one million patients, and high volume is exactly what lets a telehealth operator run thin margins - a million-patient operation also has too much to lose to risk regulatory action on shortcuts. <strong>Commitment pricing:</strong> the headline $59 locks in on a 12-month plan. Do the math: $59 x 12 = <strong>$708 for a full year</strong> of semaglutide treatment with a coach included - less than four months at mid-market rates.',
+        heading: "Where does the $49 price really come from?",
+        body: 'The price has a structural explanation, not a suspicious one - three ingredients. <strong>Compounding economics:</strong> the active ingredient is not what makes brand-name GLP-1s expensive - the brand premium is. Compounded semaglutide across our entire ranking runs $49-$199/month, so wellmedr sits at the aggressive end of a normal range, not outside it. <strong>Scale:</strong> wellmedr itself reports over one million patients, and high volume is exactly what lets a telehealth operator run thin margins - a million-patient operation also has too much to lose to risk regulatory action on shortcuts. <strong>Commitment pricing:</strong> the headline $49 locks in on a 12-month plan. Do the math: $49 x 12 = <strong>$588 for a full year</strong> of semaglutide treatment with a coach included - less than four months at mid-market rates.',
       },
       {
         heading: "Does the price climb as your dose increases?",
-        body: 'No - and this is an industry mechanic most first-time buyers miss. GLP-1 treatment starts at a low dose and titrates up over several months; providers that price per-dose advertise the starting-dose price, so your bill climbs exactly when you are most committed. wellmedr charges the <strong>same price at every dose</strong> - $59 semaglutide, $99 tirzepatide, whether you are on week two or month eight. Shipments arrive every 4 weeks in discreet packaging, and plan changes go through support (several Trustpilot reviews above describe exactly that interaction going well).',
+        body: 'No - and this is an industry mechanic most first-time buyers miss. GLP-1 treatment starts at a low dose and titrates up over several months; providers that price per-dose advertise the starting-dose price, so your bill climbs exactly when you are most committed. wellmedr charges the <strong>same price at every dose</strong> - $49 semaglutide, $89 tirzepatide, whether you are on week two or month eight. Shipments arrive every 4 weeks in discreet packaging, and plan changes go through support (several Trustpilot reviews above describe exactly that interaction going well).',
       },
       {
         heading: "How much does wellmedr cost?",
-        body: 'Published rates, verified at our last content pass: <strong>compounded semaglutide $59/month and tirzepatide $99/month on a 12-month plan, billed monthly, the same price at every dose</strong> - no dose-based price creep. Shipping is free every 4 weeks in discreet packaging, and a weight-loss warranty applies (terms on site). For context against the market: embody charges $69/month semaglutide flat with no commitment, altRx $89 with pause-anytime terms, and Medvi $99 all-inclusive with video visits and coaching - the full ladder is in our <a href="/weight-loss/cheapest-glp1">cheapest GLP-1 index</a>, and the direct matchup is <a href="/weight-loss/embody-vs-wellmedr">embody vs wellmedr</a>.',
+        body: 'Published rates, verified at our last content pass: <strong>compounded semaglutide $49/month and tirzepatide $89/month on a 12-month plan, billed monthly, the same price at every dose</strong> - no dose-based price creep. Shipping is free every 4 weeks in discreet packaging, and a weight-loss warranty applies (terms on site). For context against the market: embody charges $69/month semaglutide flat with no commitment, altRx $89 with pause-anytime terms, and Medvi $99 all-inclusive with video visits and coaching - the full ladder is in our <a href="/weight-loss/cheapest-glp1">cheapest GLP-1 index</a>, and the direct matchup is <a href="/weight-loss/embody-vs-wellmedr">embody vs wellmedr</a>.',
       },
       {
         heading: "Who is wellmedr right for?",
-        body: 'The fit is specific: <strong>you already know you want GLP-1 treatment for the long haul, and price per month is your deciding factor.</strong> A year is the realistic treatment horizon anyway - trials run 68-72 weeks - so the 12-month structure aligns with how the medication is actually used, and $708/year for semaglutide is the lowest committed total in our ranking. Skip it if you are not sure yet: a month-to-month provider (embody at $69, refund if not approved) is the cheaper way to answer the "is this for me" question, and you can move to a committed rate once your first months settle it.',
+        body: 'The fit is specific: <strong>you already know you want GLP-1 treatment for the long haul, and price per month is your deciding factor.</strong> A year is the realistic treatment horizon anyway - trials run 68-72 weeks - so the 12-month structure aligns with how the medication is actually used, and $588/year for semaglutide is the lowest committed total in our ranking. Skip it if you are not sure yet: a month-to-month provider (embody at $69, refund if not approved) is the cheaper way to answer the "is this for me" question, and you can move to a committed rate once your first months settle it.',
       },
       {
         heading: "The verdict",
@@ -1836,9 +1836,9 @@ export const articles: Article[] = [
   },
   {
     slug: "best-tirzepatide-online",
-    title: "Best Tirzepatide Online (2026): 8 Verified Prices From $99",
+    title: "Best Tirzepatide Online (2026): 8 Verified Prices From $89",
     description:
-      "Where to get tirzepatide online in 2026: eight licensed GLP-1 telehealth providers with verified prices from $99/month compounded, brand-name Zepbound routes, and the safety checks that matter.",
+      "Where to get tirzepatide online in 2026: eight licensed GLP-1 telehealth providers with verified prices from $89/month compounded, brand-name Zepbound routes, and the safety checks that matter.",
     category: "Guide",
     readTime: "9 min read",
     publishedAt: "2026-08-30",
@@ -1846,7 +1846,7 @@ export const articles: Article[] = [
     heroColor: "#EDF2F8",
     author: "TopWeightLoss Team",
     keyTakeaways: [
-      "Verified compounded tirzepatide prices run $99-$299/month across the eight licensed providers we track - wellmedr $99 (12-month plan) is the floor, embody $119 the cheapest with no commitment.",
+      "Verified compounded tirzepatide prices run $89-$299/month across the eight licensed providers we track - wellmedr $89 (12-month plan) is the floor, embody $119 the cheapest with no commitment.",
       "Brand-name Zepbound online: $1,249/month cash at altRx, or ro's KwikPen route from $299 the first month (then $399-449) plus membership - where insurance covers it, ro's route can be far cheaper.",
       "Every legitimate source requires a prescription after a licensed-provider review. A site that sells tirzepatide without one is the red flag, not the bargain.",
       "In trials, tirzepatide produced up to 22.5% average body-weight loss versus roughly 15% for semaglutide - it is the stronger molecule, which is why it costs more.",
@@ -1858,7 +1858,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What's the cheapest tirzepatide online?",
-        body: 'These are the eight licensed telehealth providers in our ranking with published compounded tirzepatide rates, verified at our last content pass:<table><thead><tr><th>Provider</th><th>Monthly price</th><th>The condition</th><th>Standout</th></tr></thead><tbody><tr><td>wellmedr</td><td><strong>$99</strong></td><td>Locks on a 12-month plan, billed monthly</td><td>4.7 on Trustpilot (1,205 reviews)</td></tr><tr><td>embody</td><td><strong>$119</strong> (reg. $129)</td><td>Flat, no commitment</td><td>1-2 day shipping; refund if not approved</td></tr><tr><td>DirectMeds</td><td><strong>$147</strong></td><td>Flat, no membership</td><td>Only needle-free sublingual option</td></tr><tr><td>altRx</td><td><strong>$149</strong> (reg. $299)</td><td>Pause or cancel anytime; BNPL</td><td>Brand-name shelf alongside</td></tr><tr><td>Medvi</td><td><strong>$166</strong> promo (reg. $299)</td><td>Monthly, all-inclusive</td><td>4.4 on Trustpilot (14,372 reviews); dietician + coaching</td></tr><tr><td>Sprout</td><td><strong>$199</strong></td><td>Monthly; $200 off first month</td><td>Ships within 2 days</td></tr><tr><td>trimrx</td><td><strong>$259</strong></td><td>No long-term contract</td><td>Clinical guidance through dose changes</td></tr><tr><td>SHED</td><td><strong>$299</strong></td><td>Monthly; 20% off first month</td><td>Lose 5% in 120 days or your money back</td></tr></tbody></table>Prices are each provider\'s published rate at our last verification - promos change, so confirm at checkout. The same providers\' semaglutide rates ($59-$199) are in the <a href="/weight-loss/cheapest-glp1">full price index</a>.',
+        body: 'These are the eight licensed telehealth providers in our ranking with published compounded tirzepatide rates, verified at our last content pass:<table><thead><tr><th>Provider</th><th>Monthly price</th><th>The condition</th><th>Standout</th></tr></thead><tbody><tr><td>wellmedr</td><td><strong>$89</strong></td><td>Locks on a 12-month plan, billed monthly</td><td>4.7 on Trustpilot (1,205 reviews)</td></tr><tr><td>embody</td><td><strong>$119</strong> (reg. $129)</td><td>Flat, no commitment</td><td>1-2 day shipping; refund if not approved</td></tr><tr><td>DirectMeds</td><td><strong>$147</strong></td><td>Flat, no membership</td><td>Only needle-free sublingual option</td></tr><tr><td>altRx</td><td><strong>$149</strong> (reg. $299)</td><td>Pause or cancel anytime; BNPL</td><td>Brand-name shelf alongside</td></tr><tr><td>Medvi</td><td><strong>$166</strong> promo (reg. $299)</td><td>Monthly, all-inclusive</td><td>4.4 on Trustpilot (14,372 reviews); dietician + coaching</td></tr><tr><td>Sprout</td><td><strong>$199</strong></td><td>Monthly; $200 off first month</td><td>Ships within 2 days</td></tr><tr><td>trimrx</td><td><strong>$259</strong></td><td>No long-term contract</td><td>Clinical guidance through dose changes</td></tr><tr><td>SHED</td><td><strong>$299</strong></td><td>Monthly; 20% off first month</td><td>Lose 5% in 120 days or your money back</td></tr></tbody></table>Prices are each provider\'s published rate at our last verification - promos change, so confirm at checkout. The same providers\' semaglutide rates ($49-$199) are in the <a href="/weight-loss/cheapest-glp1">full price index</a>.',
       },
       {
         heading: "Can I get brand-name Zepbound online?",
@@ -1874,11 +1874,11 @@ export const articles: Article[] = [
       },
       {
         heading: "How to choose",
-        body: 'Work down your actual constraint. <strong>Cheapest possible and willing to commit a year:</strong> wellmedr at $99. <strong>Cheapest without commitment:</strong> embody at $119, with 1-2 day shipping. <strong>Hate needles:</strong> DirectMeds - the only sublingual-drops option, $147 flat. <strong>Might want brand-name later:</strong> altRx - $149 compounded with Zepbound on the same shelf. <strong>Want a person in the loop:</strong> Medvi at $166 all-inclusive, with the biggest verified review base. <strong>Need stakes to stick with it:</strong> SHED\'s money-back guarantee. There is no wrong answer on legitimacy in this table - it is a fit decision, not a safety decision.',
+        body: 'Work down your actual constraint. <strong>Cheapest possible and willing to commit a year:</strong> wellmedr at $89. <strong>Cheapest without commitment:</strong> embody at $119, with 1-2 day shipping. <strong>Hate needles:</strong> DirectMeds - the only sublingual-drops option, $147 flat. <strong>Might want brand-name later:</strong> altRx - $149 compounded with Zepbound on the same shelf. <strong>Want a person in the loop:</strong> Medvi at $166 all-inclusive, with the biggest verified review base. <strong>Need stakes to stick with it:</strong> SHED\'s money-back guarantee. There is no wrong answer on legitimacy in this table - it is a fit decision, not a safety decision.',
       },
       {
         heading: "The verdict",
-        body: 'The best tirzepatide online in 2026 is not one provider - it is the short list above, filtered by your commitment appetite and budget. The verified floor is <strong>$99/month (wellmedr, 12-month plan)</strong>, the no-strings floor is <strong>$119 (embody)</strong>, and brand-name Zepbound runs <strong>$1,249 cash (altRx)</strong> or potentially much less through <strong>ro with insurance</strong>. Whatever you pick, stay inside the licensed system: real prescription, real pharmacy, published price. This article is general information, not medical advice - a licensed provider decides whether tirzepatide is appropriate for you.',
+        body: 'The best tirzepatide online in 2026 is not one provider - it is the short list above, filtered by your commitment appetite and budget. The verified floor is <strong>$89/month (wellmedr, 12-month plan)</strong>, the no-strings floor is <strong>$119 (embody)</strong>, and brand-name Zepbound runs <strong>$1,249 cash (altRx)</strong> or potentially much less through <strong>ro with insurance</strong>. Whatever you pick, stay inside the licensed system: real prescription, real pharmacy, published price. This article is general information, not medical advice - a licensed provider decides whether tirzepatide is appropriate for you.',
       },
     ],
   },
@@ -1921,7 +1921,7 @@ export const articles: Article[] = [
       },
       {
         heading: "The bottom line",
-        body: 'Weight and testosterone are a system, not two separate problems. If you are significantly overweight with low-T symptoms, weight loss is the highest-leverage first move - and GLP-1 treatment from <a href="/weight-loss">verified providers from $59/month</a> is the most effective tool most people have for it. If symptoms persist as the weight comes down, test instead of guessing: <a href="/trt">online TRT providers</a> make the lab work and the clinical review straightforward. This article is general information, not medical advice.',
+        body: 'Weight and testosterone are a system, not two separate problems. If you are significantly overweight with low-T symptoms, weight loss is the highest-leverage first move - and GLP-1 treatment from <a href="/weight-loss">verified providers from $49/month</a> is the most effective tool most people have for it. If symptoms persist as the weight comes down, test instead of guessing: <a href="/trt">online TRT providers</a> make the lab work and the clinical review straightforward. This article is general information, not medical advice.',
       },
     ],
   },

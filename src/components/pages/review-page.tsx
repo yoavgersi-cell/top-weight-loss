@@ -255,12 +255,12 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "Does wellmedr's price go up as your dose increases?",
       answer:
-        "No - wellmedr charges the same price regardless of dosage: compounded semaglutide from $59/month and tirzepatide from $99/month. The lowest $59 rate is tied to a 12-month plan.",
+        "No - wellmedr charges the same price regardless of dosage: compounded semaglutide from $49/month and tirzepatide from $89/month. The lowest $49 rate is tied to a 12-month plan.",
     },
     {
       question: "Can you cancel wellmedr anytime?",
       answer:
-        "Yes - you can cancel or change your plan anytime. Keep in mind the headline $59/month rate is locked in via a 12-month plan, and the program is backed by wellmedr's weight-loss warranty.",
+        "Yes - you can cancel or change your plan anytime. Keep in mind the headline $49/month rate is locked in via a 12-month plan, and the program is backed by wellmedr's weight-loss warranty.",
     },
   ],
   medvi: [
@@ -331,6 +331,20 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
         "No - the all-in price covers dose adjustments, so your monthly cost doesn't change as your protocol is titrated up. The price also includes the clinician consult, shipping, and ongoing care-team check-ins.",
     },
   ],
+};
+
+// Operator-verified standing promos, shown as a prominent banner under the hero
+// on the provider's review page. Segments flagged bold render emphasized.
+const REVIEW_PROMOS: Record<string, { segments: { text: string; bold?: boolean }[] }> = {
+  wellmedr: {
+    segments: [
+      { text: "Lock in " },
+      { text: "$200 off", bold: true },
+      { text: " every month, or " },
+      { text: "$49/mo", bold: true },
+      { text: " on 12-month plans — for life." },
+    ],
+  },
 };
 
 
@@ -414,6 +428,11 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
   // Promo popup for this provider, if it has a registered creative.
   const promoPopup = resolvePromoPopup([provider]);
+
+  // Operator-verified promo banner, surfaced prominently under the hero on the
+  // provider's own review page. Bold segments render emphasized. Keyed by
+  // provider id so only providers with a confirmed standing offer show one.
+  const reviewPromo = REVIEW_PROMOS[provider.id];
 
   // Note: we intentionally do NOT emit an AggregateOffer/price in the schema.
   // A structured price can surface in the SERP rich result and goes stale the
@@ -563,6 +582,23 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           <TrustDisclosure disclaimerHref={hubLink(ctx, "/disclaimer")} />
         </div>
       </div>
+
+      {/* Operator-verified promo banner - emphasized directly under the hero */}
+      {reviewPromo && (
+        <div className="border-b border-[#EADFC6] bg-[#FBF6EC]">
+          <div className="mx-auto max-w-[1000px] px-4 py-4 sm:px-6 sm:py-5">
+            <p className="text-center text-[17px] font-semibold leading-snug text-[#1F3345] sm:text-[21px]">
+              {reviewPromo.segments.map((s, i) =>
+                s.bold ? (
+                  <strong key={i} className="font-extrabold text-[#0C4B75]">{s.text}</strong>
+                ) : (
+                  <span key={i}>{s.text}</span>
+                )
+              )}
+            </p>
+          </div>
+        </div>
+      )}
 
       <div className="mx-auto max-w-[1000px] px-4 py-8 sm:px-6">
         {/* The Bottom Line - the verdict up top, so the answer to "is it worth
