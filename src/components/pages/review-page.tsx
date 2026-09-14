@@ -754,7 +754,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   </div>
                   {plan.regularPrice && (
                     <span className="mt-2 inline-block rounded-full bg-emerald-50 px-2.5 py-0.5 text-[11px] font-bold text-emerald-700">
-                      Sale price
+                      {plan.saleEnds ? `Sale ends ${plan.saleEnds}` : "Sale price"}
                     </span>
                   )}
                   {plan.highlights && plan.highlights.length > 0 && (

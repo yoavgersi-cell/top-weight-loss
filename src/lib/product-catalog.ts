@@ -16,6 +16,8 @@ export type CatalogProduct = {
   price: string;
   /** Struck-through regular price when the headline is promotional. */
   regularPrice?: string;
+  /** Short sale-end label, e.g. "Sep 20". Shows a "Sale ends" badge when set. */
+  saleEnds?: string;
   /** The honest condition attached to the price. */
   priceNote: string;
   shipping: string;
@@ -55,6 +57,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     format: "injection",
     price: "$89",
     regularPrice: "$199",
+    saleEnds: "Sep 20",
     priceNote: "flat at every dose",
     shipping: "Free overnight cold shipping",
     image: "/products/altrx-glp1.webp",
@@ -192,6 +195,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     format: "injection",
     price: "$149",
     regularPrice: "$299",
+    saleEnds: "Sep 20",
     priceNote: "flat at every dose",
     shipping: "Free overnight cold shipping",
     image: "/products/altrx-glp1-tight.webp",

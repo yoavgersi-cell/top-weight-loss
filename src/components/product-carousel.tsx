@@ -91,6 +91,11 @@ function ProductCard({
               </span>
             )}
           </div>
+          {product.saleEnds && (
+            <span className="mt-1.5 inline-block self-start rounded-full bg-emerald-50 px-2 py-0.5 text-[10.5px] font-bold text-emerald-700">
+              Sale ends {product.saleEnds}
+            </span>
+          )}
           <p className="mt-0.5 text-[11px] leading-snug text-gray-400">{product.priceNote}</p>
           <p className="mt-1.5 text-[12.5px] font-medium text-gray-800">{provider.name}</p>
           <div className="mt-auto pt-2">

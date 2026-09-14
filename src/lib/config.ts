@@ -71,6 +71,8 @@ export interface ReviewPricingPlan {
   unit?: string;
   cadence?: string;
   highlights?: string[];
+  /** Short sale-end label, e.g. "Sep 20". Shows a "Sale ends" badge when set. */
+  saleEnds?: string;
 }
 
 // A step in the "How <provider> works" timeline on a review page.
