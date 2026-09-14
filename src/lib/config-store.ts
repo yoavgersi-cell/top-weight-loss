@@ -953,7 +953,7 @@ const defaultReviews: ReviewData[] = [
   {
     slug: "altrx",
     providerId: "altrx",
-    updatedAt: "2026-08-22",
+    updatedAt: "2026-09-14",
     shortSummary: "Affordable GLP-1 program from $89/month - compounded semaglutide and tirzepatide plus brand-name options - with clinician-guided, self-pay care and no insurance required.",
     reviewIntro: "altRx bills itself as \"the #1 most affordable GLP-1 program,\" and its published prices largely back that up: compounded GLP-1 (semaglutide) from $89/month and GLP-1 + GIP (tirzepatide) from $149/month - flat at every dose, so the price doesn't climb as you titrate up - alongside one of the few genuine brand-name shelves in this space (Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 per month). It's a self-pay telehealth service: you complete a short assessment, a licensed provider (physician, PA, or nurse practitioner) reviews it, and if appropriate a prescription goes to a licensed US pharmacy, with free shipping in about 5-7 days. No insurance is required, Buy Now, Pay Later is available, and you can pause or cancel anytime. Two things to know before the details: shipping is slower than the 1-2 day providers (embody, DirectMeds), and Trustpilot does not currently display an aggregate score on altRx's profile - the individual reviews we quote on this page are real, but there's no independent average to lean on the way there is for rivals like Medvi (4.4 across 14,372) or embody (3.7 across 7,250). One of the real 4-star reviews we surface notes a refill 'yet to be fulfilled with zero reason as to why' - worth factoring in alongside the price advantage.",
     keyFeatures: [

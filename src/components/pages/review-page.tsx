@@ -351,7 +351,7 @@ const REVIEW_PROMOS: Record<string, { segments: { text: string; bold?: boolean }
 // provider's review page. Operator-supplied brand claims - keyed by provider.
 const REVIEW_TRUST_STRIP: Record<string, { icon: LucideIcon; label: string }[]> = {
   altrx: [
-    { icon: ShieldCheck, label: "State-Licensed 503A Compounding Pharmacies" },
+    { icon: ShieldCheck, label: "State-Licensed 503A Pharmacies" },
     { icon: UserRound, label: "Personalized Treatment" },
     { icon: Users, label: "Trusted by 125k+ Americans" },
     { icon: Stethoscope, label: "1:1 Medical Support" },
@@ -538,13 +538,13 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           />
 
           <div className="mt-4 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex items-center gap-5">
-              <div className="flex h-[50px] w-[130px] shrink-0 items-center">
+            <div className="flex items-center gap-3.5 sm:gap-5">
+              <div className="flex h-[44px] w-[96px] shrink-0 items-center sm:h-[50px] sm:w-[130px]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={provider.logo} alt={`${provider.name} logo`} className="max-h-full max-w-full object-contain" />
+                <img src={provider.logo} alt={`${provider.name} logo`} className="max-h-full max-w-full object-contain object-left" />
               </div>
-              <div>
-                <h1 className="text-[24px] font-bold text-[#191919] sm:text-[28px]">
+              <div className="min-w-0">
+                <h1 className="text-[22px] font-bold text-[#191919] sm:text-[28px]">
                   {provider.name} Reviews
                 </h1>
                 <p className="mt-0.5 text-[14px] text-gray-700">
@@ -552,7 +552,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 </p>
                 <LastUpdated date={latestUpdate(review.updatedAt)} className="mt-1" />
                 {editorial && (
-                  <div className="mt-2 flex items-center gap-2">
+                  <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1">
                     <div className="flex gap-0.5">
                       {Array.from({ length: 5 }).map((_, i) => (
                         <Star
@@ -616,11 +616,11 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           floating icon + label items under the hero (no box, no background) */}
       {trustStrip && (
         <div className="mx-auto max-w-[1000px] px-4 pt-6 sm:px-6">
-          <div className="flex flex-wrap items-center justify-center gap-x-9 gap-y-3 sm:justify-between">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-3 sm:flex-nowrap sm:justify-between sm:gap-x-4">
             {trustStrip.map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center gap-2.5">
-                <Icon className="h-[19px] w-[19px] shrink-0 text-[#0C4B75]" strokeWidth={2} />
-                <span className="text-[13px] font-semibold text-[#12355B] sm:text-[13.5px]">{label}</span>
+              <div key={label} className="flex items-center gap-2 whitespace-nowrap">
+                <Icon className="h-[18px] w-[18px] shrink-0 text-[#0C4B75]" strokeWidth={2} />
+                <span className="text-[13px] font-semibold text-[#12355B] sm:text-[13px]">{label}</span>
               </div>
             ))}
           </div>
