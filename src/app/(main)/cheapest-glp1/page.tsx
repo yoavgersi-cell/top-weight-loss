@@ -206,7 +206,11 @@ export default async function CheapestGlp1Page() {
             promotional against $79 regular). Savings compare against Ozempic&rsquo;s lowest listed
             brand price on our providers&rsquo; shelves ($1,149/month at altRx; wellmedr lists it at
             $1,399). What&rsquo;s bundled differs - Medvi and SHED include coaching layers others
-            don&rsquo;t - so the cheapest row isn&rsquo;t automatically the best fit.
+            don&rsquo;t - so the cheapest row isn&rsquo;t automatically the best fit. The dated,
+            citable version of this data, with its change log, is our{" "}
+            <Link href="/weight-loss/glp1-weight-loss-statistics" className="font-medium text-[#0C4B75] hover:underline">
+              GLP-1 price index
+            </Link>.
           </p>
         </section>
 

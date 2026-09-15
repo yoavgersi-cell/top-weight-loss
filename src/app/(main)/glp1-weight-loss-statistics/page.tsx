@@ -1,15 +1,30 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PRICE_INDEX, BRAND_SHELF } from "@/lib/price-index";
+import { getConfig } from "@/lib/config-store";
+import { PRICE_INDEX, BRAND_SHELF, PRICE_INDEX_VERIFIED, PRICE_CHANGELOG } from "@/lib/price-index";
+
+export const revalidate = 60;
+
+const CANONICAL = "https://www.treatmentshub.com/weight-loss/glp1-weight-loss-statistics";
+const TITLE = "GLP-1 Price Index & Weight Loss Statistics (September 2026)";
+const DESCRIPTION =
+  "Dated, verified prices from 9 US telehealth providers for compounded semaglutide and tirzepatide, with a public change log - next to STEP, SURMOUNT and SCALE trial results.";
 
 export const metadata: Metadata = {
-  title: "GLP-1 Weight Loss Statistics & Price Data (2026)",
-  description:
-    "GLP-1 weight loss statistics plus an original price survey: what 9 telehealth providers actually charge for compounded semaglutide and tirzepatide, next to clinical-trial results from STEP, SURMOUNT and SCALE.",
-  alternates: {
-    canonical: "https://www.treatmentshub.com/weight-loss/glp1-weight-loss-statistics",
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: CANONICAL },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: CANONICAL,
+    type: "article",
+    modifiedTime: PRICE_INDEX_VERIFIED,
   },
 };
+
+const longDate = (iso: string) =>
+  new Date(iso).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
 
 // The compounded-price figures below are computed at render from our verified
 // GLP-1 price index (src/lib/price-index.ts) - every row is a provider-published
@@ -28,21 +43,71 @@ const TIRZ_MIN = Math.min(...tirzPrices);
 const TIRZ_MAX = Math.max(...tirzPrices);
 const usd = (n: number) => `$${n.toLocaleString("en-US")}`;
 
-export default function StatisticsPage() {
+export default async function StatisticsPage() {
+  const config = await getConfig("weight-loss");
+  const providerName = (id: string) => config.providers.find((p) => p.id === id)?.name ?? id;
+
+  // Dataset schema - this page is the citable record of the index, so it is
+  // described as a dataset (with the verification date as dateModified) in
+  // addition to the Article the rest of the site emits.
+  const datasetSchema = {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    name: "TreatmentsHub GLP-1 Price Index",
+    description:
+      `Published monthly prices for compounded semaglutide and tirzepatide at ${PROVIDER_COUNT} US telehealth providers, verified by TreatmentsHub and logged on every change.`,
+    url: CANONICAL,
+    dateModified: PRICE_INDEX_VERIFIED,
+    temporalCoverage: PRICE_INDEX_VERIFIED.slice(0, 7),
+    spatialCoverage: { "@type": "Country", name: "United States" },
+    creator: { "@type": "Organization", name: "TreatmentsHub", url: "https://www.treatmentshub.com" },
+    variableMeasured: [
+      "Compounded semaglutide monthly price (USD)",
+      "Compounded tirzepatide monthly price (USD)",
+      "Pricing condition (promo, plan length, prepaid term)",
+    ],
+    keywords: ["GLP-1 prices", "semaglutide cost", "tirzepatide cost", "compounded GLP-1", "telehealth weight loss"],
+    isAccessibleForFree: true,
+  };
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: TITLE,
+    description: DESCRIPTION,
+    datePublished: "2026-08-01",
+    dateModified: PRICE_INDEX_VERIFIED,
+    author: { "@type": "Organization", name: "TreatmentsHub Research Team", url: "https://www.treatmentshub.com/weight-loss/about" },
+    publisher: { "@type": "Organization", name: "TreatmentsHub", url: "https://www.treatmentshub.com" },
+    mainEntityOfPage: { "@type": "WebPage", "@id": CANONICAL },
+  };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.treatmentshub.com/weight-loss" },
+      { "@type": "ListItem", position: 2, name: "GLP-1 Price Index & Statistics", item: CANONICAL },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <div className="border-b border-gray-200 bg-white">
         <div className="mx-auto max-w-[900px] px-4 py-10 sm:px-6 sm:py-14">
           <h1 className="text-[26px] font-extrabold text-[#191919] sm:text-[34px]">
-            GLP-1 Weight Loss Statistics &amp; Price Data (2026)
+            GLP-1 Price Index &amp; Weight Loss Statistics (September 2026)
           </h1>
           <p className="mt-3 max-w-[640px] text-[15px] leading-relaxed text-gray-500">
-            Published clinical-trial results for GLP-1 weight-loss medications, paired with
-            our own price survey of what US telehealth providers actually charge for the
-            compounded versions. Trial data from STEP, SURMOUNT and SCALE; pricing from our
-            verified GLP-1 price index.
+            The dated, citable record of what {PROVIDER_COUNT} US telehealth providers publish for
+            compounded semaglutide and tirzepatide - every price verified against the provider&rsquo;s
+            own site, every change logged - paired with the published clinical-trial results for
+            GLP-1 weight-loss medications (STEP, SURMOUNT, SCALE).
           </p>
-          <p className="mt-2 text-[12px] text-gray-400">Last updated: September 2026</p>
+          <p className="mt-2 text-[12px] text-gray-400">
+            Prices verified {longDate(PRICE_INDEX_VERIFIED)} · {PRICE_CHANGELOG.length} logged changes this month
+          </p>
         </div>
       </div>
 
@@ -104,6 +169,75 @@ export default function StatisticsPage() {
               cheapest GLP-1 comparison
             </Link>.
           </p>
+        </section>
+
+        {/* ───── The index itself: every provider, both medications, the condition on each price ───── */}
+        <section className="mb-10" id="price-index">
+          <h2 className="mb-3 text-[22px] font-bold text-[#191919]">
+            The GLP-1 price index: all {PROVIDER_COUNT} providers, verified {longDate(PRICE_INDEX_VERIFIED)}
+          </h2>
+          <p className="mb-5 max-w-[680px] text-[15px] leading-[1.7] text-gray-600">
+            Each row records the headline monthly price and the condition attached to it - a
+            promotional rate, a plan length, a prepaid term. A price is never listed without its
+            condition. Sorted by semaglutide price, cheapest first.
+          </p>
+          <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
+            <table className="w-full min-w-[720px] text-left text-[13.5px]">
+              <thead>
+                <tr className="border-b border-gray-200 bg-gray-50">
+                  <th className="px-4 py-3 font-bold text-[#191919]">Provider</th>
+                  <th className="px-4 py-3 font-bold text-[#191919]">Semaglutide /mo</th>
+                  <th className="px-4 py-3 font-bold text-[#191919]">Condition</th>
+                  <th className="px-4 py-3 font-bold text-[#191919]">Tirzepatide /mo</th>
+                  <th className="px-4 py-3 font-bold text-[#191919]">Condition</th>
+                  <th className="px-4 py-3 font-bold text-[#191919]">Commitment</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100 align-top">
+                {PRICE_INDEX.map((row, i) => (
+                  <tr key={row.providerId} className={i % 2 ? "bg-gray-50/50" : ""}>
+                    <td className="px-4 py-3 font-semibold text-[#191919]">
+                      <Link href={`/weight-loss/reviews/${row.providerId}`} className="hover:text-[#0C4B75] hover:underline">
+                        {providerName(row.providerId)}
+                      </Link>
+                    </td>
+                    <td className="px-4 py-3 font-bold text-[#191919] [font-variant-numeric:tabular-nums]">{row.semaglutide?.price ?? "-"}</td>
+                    <td className="px-4 py-3 text-gray-500">{row.semaglutide?.note ?? "not offered"}</td>
+                    <td className="px-4 py-3 font-bold text-[#191919] [font-variant-numeric:tabular-nums]">{row.tirzepatide?.price ?? "-"}</td>
+                    <td className="px-4 py-3 text-gray-500">{row.tirzepatide?.note ?? "not offered"}</td>
+                    <td className="px-4 py-3 text-gray-500">{row.commitment}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-2 text-[12px] text-gray-400">
+            Compounded medications are prepared by state-licensed pharmacies and are not FDA-approved
+            brand products. Every provider listed requires a licensed-clinician review before
+            prescribing. Prices are cash-pay; confirm current terms on each provider&rsquo;s site.
+          </p>
+        </section>
+
+        {/* ───── Change log: the public record of what moved, and when ───── */}
+        <section className="mb-10" id="change-log">
+          <h2 className="mb-3 text-[22px] font-bold text-[#191919]">Price change log</h2>
+          <p className="mb-5 max-w-[680px] text-[15px] leading-[1.7] text-gray-600">
+            Every time a verification pass changes a listing, the change is recorded here with the
+            date, what we listed before, and what we list now. Newest first.
+          </p>
+          <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
+            <ol className="divide-y divide-gray-100">
+              {PRICE_CHANGELOG.map((entry, i) => (
+                <li key={i} className="flex flex-col gap-1 px-5 py-4 sm:flex-row sm:gap-5">
+                  <div className="shrink-0 sm:w-[150px]">
+                    <p className="text-[12.5px] font-semibold text-gray-400 [font-variant-numeric:tabular-nums]">{longDate(entry.date)}</p>
+                    <p className="text-[14px] font-bold text-[#191919]">{providerName(entry.providerId)}</p>
+                  </div>
+                  <p className="text-[14px] leading-[1.7] text-gray-600">{entry.change}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
         </section>
 
         {/* Weight Loss Results */}
@@ -263,9 +397,10 @@ export default function StatisticsPage() {
             <p className="mb-3 text-[14px] leading-[1.7] text-gray-600">
               <strong className="text-[#191919]">Pricing:</strong> our price survey tracks the
               prices {PROVIDER_COUNT} US telehealth providers publish for compounded semaglutide and
-              tirzepatide. Every figure is a published provider price verified by our team, refreshed
-              on an ongoing basis - we do not estimate, model or extrapolate prices. The current
-              snapshot is September 2026.
+              tirzepatide. Every figure is a published provider price verified by our team against the
+              provider&rsquo;s own site - we do not estimate, model or extrapolate prices. The index was
+              last verified on {longDate(PRICE_INDEX_VERIFIED)}, and every change to a listing is
+              recorded in the change log above with its date.
             </p>
             <p className="mb-3 text-[14px] leading-[1.7] text-gray-600">
               <strong className="text-[#191919]">Clinical data:</strong> weight-loss and safety
