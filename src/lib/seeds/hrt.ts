@@ -808,7 +808,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-31",
     updatedAt: "2026-08-31",
     heroColor: "#F7EEF4",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "HRT stands for hormone replacement therapy: restoring the hormones - mainly estrogen, often with progesterone - that decline through perimenopause and menopause.",
       "It remains the most effective treatment for the classic menopause symptoms - hot flashes, night sweats and genitourinary changes - and the sleep disruption those night sweats cause.",
@@ -848,7 +848,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-31",
     updatedAt: "2026-08-31",
     heroColor: "#F2EFF6",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "The pro side is real: HRT is the most effective treatment for hot flashes and night sweats, helps genitourinary symptoms that otherwise worsen, and protects bone.",
       "The con side is real too: side effects exist, some histories rule it out, and the risk conversation - including the breast-cancer question - genuinely depends on your history, the formulation and timing.",
@@ -884,7 +884,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-31",
     updatedAt: "2026-08-31",
     heroColor: "#EFF2F7",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "Both contain hormones, but the jobs are opposite: birth control overrides your cycle at contraceptive doses; HRT tops up declining hormones at substantially lower doses.",
       "HRT does not prevent pregnancy - a genuinely important point for perimenopausal women who can still conceive.",
@@ -920,7 +920,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-28",
     updatedAt: "2026-08-28",
     heroColor: "#F7EEF4",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Can you get HRT prescribed online?",
@@ -950,7 +950,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-28",
     updatedAt: "2026-08-28",
     heroColor: "#EEF4FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "What's the difference between the estrogen patch and the pill?",
@@ -980,7 +980,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-28",
     updatedAt: "2026-08-28",
     heroColor: "#F0FAF5",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "What does \"bioidentical\" actually mean?",
@@ -1010,7 +1010,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-28",
     updatedAt: "2026-08-28",
     heroColor: "#F7EEF4",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "What is the difference between perimenopause and menopause?",
@@ -1036,7 +1036,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-28",
     updatedAt: "2026-08-28",
     heroColor: "#EEF4FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Is HRT the same as TRT?",
@@ -1066,7 +1066,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#F4EEF3",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "Most early HRT side effects - breast tenderness, bloating, spotting, mild headaches - are the body adjusting, and often fade over the first weeks to months.",
       "Many persistent side effects are a formulation problem, not a verdict on HRT: changing the dose, the hormone, or the delivery route (patch vs pill) resolves a lot of them.",
@@ -1106,7 +1106,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#EEF2F5",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "The weight changes women notice around this age are driven largely by menopause and aging - shifting metabolism and fat distribution - not by HRT itself.",
       "HRT is not a weight-loss treatment and should not be sold as one, but it is also not the cause of midlife weight gain it is often blamed for.",
@@ -1146,7 +1146,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#F2EFF6",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "There is no fixed maximum number of years that applies to everyone - the rigid 'stop after five years' rule has given way to individualized, periodically reviewed decisions.",
       "Duration depends on your symptoms, your risk profile, the formulation, and when you started - the same factors that shaped the decision to begin.",
@@ -1182,7 +1182,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#F4EEF3",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "Menopausal low libido usually has several overlapping causes, so there is no single hormone that reliably 'switches it back on'.",
       "Standard HRT often helps indirectly and substantially - by relieving painful dryness, restoring sleep, and lifting the mood and energy that desire depends on.",
@@ -1218,7 +1218,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#EEF4F1",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "HRT remains the most effective option for hot flashes, but some women can't or would rather not take it - and there are legitimate non-hormonal routes.",
       "There are prescription non-hormonal medications for hot flashes; whether one fits you is a clinician decision, not an over-the-counter choice.",
@@ -1258,7 +1258,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#F2EFF6",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "When you start HRT shapes the risk-benefit balance - starting near the menopause transition is generally a more favorable proposition than starting many years afterward.",
       "The trigger to consider it is symptoms that affect your life, not hitting a particular birthday or a specific lab number.",
@@ -1294,7 +1294,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#F3EFEA",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "Hair thinning around menopause is common and largely driven by the shift in the estrogen-to-androgen balance as estrogen declines.",
       "HRT may help hair indirectly for some women by easing the hormonal shift, but it is not a hair-loss treatment and shouldn't be started primarily for hair.",

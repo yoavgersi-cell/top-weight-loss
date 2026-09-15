@@ -481,7 +481,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           url: canonicalUrl(ctx, "/about"),
         }
       : { "@type": "Organization", name: ctx.brandTeam, url: ctx.origin },
-    publisher: { "@type": "Organization", name: ctx.brandDomain, url: ctx.origin },
+    publisher: { "@type": "Organization", name: ctx.brandName, url: ctx.origin },
     about: { "@type": "Organization", name: provider.name },
     mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl(ctx, `/reviews/${slug}`) },
   };
@@ -690,7 +690,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <div className="mt-5">
               <ExpertByline
                 // Brand the team name from the current context so the hub
-                // shows "TreatmentsHub", not the legacy brand from config.
+                // shows "Treatments Hub", not the legacy brand from config.
                 expert={{
                   ...config.experts[0],
                   name: config.experts[0].name.replace(/TopWeightLoss/gi, ctx.brandTeam.replace(/\s+Team$/i, "")),
@@ -807,7 +807,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           <ReadableProse text={review.pricingSummary} paragraphClassName="text-[15px] leading-[1.75] text-gray-600" />
         </Section>
 
-        {/* The TreatmentsHub audit - verified-facts card. Registry-gated:
+        {/* The Treatments Hub audit - verified-facts card. Registry-gated:
             providers whose data isn't fully verified render nothing. */}
         <ProviderAudit providerId={provider.id} providerName={provider.name} vertical={ctx.vertical} />
 

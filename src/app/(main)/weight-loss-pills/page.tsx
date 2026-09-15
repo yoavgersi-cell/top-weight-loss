@@ -98,8 +98,8 @@ export default async function WeightLossPillsPage() {
     description: metadata.description,
     datePublished: "2026-08-01",
     dateModified: "2026-08-09",
-    author: { "@type": "Organization", name: "TreatmentsHub Team", url: "https://www.treatmentshub.com" },
-    publisher: { "@type": "Organization", name: "treatmentshub.com", url: "https://www.treatmentshub.com" },
+    author: { "@type": "Organization", name: "Treatments Hub Team", url: "https://www.treatmentshub.com" },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
     mainEntityOfPage: CANONICAL,
   };
   const breadcrumbSchema = {

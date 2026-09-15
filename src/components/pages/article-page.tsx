@@ -147,7 +147,7 @@ export async function articleMetadata(slug: string, ctx: SiteContext): Promise<M
       type: "article",
       publishedTime: article.publishedAt,
       modifiedTime: latestUpdate(article.updatedAt),
-      authors: [article.author || ctx.brandDomain],
+      authors: [article.author || ctx.brandName],
     },
   };
 }
@@ -290,12 +290,12 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
         }
       : {
           "@type": "Organization",
-          name: article.author || ctx.brandDomain,
+          name: article.author || ctx.brandName,
           url: ctx.origin,
         },
     publisher: {
       "@type": "Organization",
-      name: ctx.brandDomain,
+      name: ctx.brandName,
       url: ctx.origin,
       logo: {
         "@type": "ImageObject",
@@ -422,7 +422,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               {author ? (
                 <ExpertByline
                   // Brand the team name from the current context so the hub
-                  // shows "TreatmentsHub", not the legacy brand from config.
+                  // shows "Treatments Hub", not the legacy brand from config.
                   expert={{ ...author, name: author.name.replace(/TopWeightLoss/gi, ctx.brandTeam.replace(/\s+Team$/i, "")) }}
                   label="Written by"
                   showRole={false}

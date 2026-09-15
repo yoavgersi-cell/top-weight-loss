@@ -496,7 +496,7 @@ export async function HubHome() {
         <section className="border-t border-gray-200 bg-white">
           <div className="mx-auto max-w-[1100px] px-5 py-14 sm:px-8 sm:py-16">
             <h2 className="text-[26px] font-bold tracking-[-0.015em] text-[#191919] sm:text-[32px]">
-              TreatmentsHub Editor&rsquo;s Picks
+              Treatments Hub Editor&rsquo;s Picks
             </h2>
             <p className="mt-2 max-w-[560px] text-[15px] leading-relaxed text-gray-500">
               Independent guides and research from our editorial team.
@@ -535,7 +535,7 @@ export async function HubHome() {
                     </h3>
                     <div className="mt-3 flex-1" />
                     <p className="text-[12.5px] font-medium text-gray-400">
-                      TreatmentsHub Staff
+                      Treatments Hub Staff
                       {a.readTime && <span className="text-gray-300"> · {a.readTime}</span>}
                       {updatedLabel(a.updatedAt) && <span className="text-gray-300"> · {updatedLabel(a.updatedAt)}</span>}
                     </p>
@@ -559,7 +559,7 @@ export async function HubHome() {
         <div className="mx-auto max-w-[1100px] px-5 py-16 sm:px-8 sm:py-20">
           <div className="max-w-[720px]">
             <h2 className="text-[26px] font-bold tracking-[-0.015em] text-[#191919] sm:text-[32px]">
-              How TreatmentsHub compares providers
+              How Treatments Hub compares providers
             </h2>
             <p className="mt-4 text-[16.5px] leading-[1.7] text-gray-600">
               We look at what actually matters when choosing treatment online - price, what&rsquo;s

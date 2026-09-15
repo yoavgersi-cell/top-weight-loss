@@ -29,7 +29,7 @@ export function threeWayMetadata(trio: ThreeWayComparison, ctx: SiteContext): Me
   // bloat on the young hub, so they're noindex,follow (see NOINDEX_WL_BATTLE_SLUGS).
   const isThinNoindex = NOINDEX_WL_BATTLE_SLUGS.has(trio.slug);
   return {
-    title: { absolute: `${trio.metaTitle} | TreatmentsHub` },
+    title: { absolute: `${trio.metaTitle} | Treatments Hub` },
     description: trio.description,
     robots: ctx.noindex
       ? { index: false, follow: false }
@@ -63,7 +63,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
     description: trio.description,
     url,
     dateModified: TEMPLATES_LAST_UPDATED,
-    publisher: { "@type": "Organization", name: ctx.brandDomain, url: ctx.origin },
+    publisher: { "@type": "Organization", name: ctx.brandName, url: ctx.origin },
     mainEntity: {
       "@type": "ItemList",
       itemListElement: providers.map((p, i) => ({

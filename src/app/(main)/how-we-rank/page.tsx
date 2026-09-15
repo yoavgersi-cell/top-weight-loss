@@ -67,7 +67,7 @@ const SOURCES = [
 
 export default async function HowWeRankPage() {
   const config = await getConfig();
-  const experts = (config.experts ?? []).map((e) => ({ ...e, name: e.name.replace(/TopWeightLoss/gi, "TreatmentsHub") }));
+  const experts = (config.experts ?? []).map((e) => ({ ...e, name: e.name.replace(/TopWeightLoss/gi, "Treatments Hub") }));
 
   const webPageSchema = {
     "@context": "https://schema.org",
@@ -76,7 +76,7 @@ export default async function HowWeRankPage() {
     description:
       "Our full methodology for ranking and reviewing GLP-1 weight loss providers: the factors we score, where our data comes from, how we verify accuracy, and how we pick winners.",
     url: CANONICAL,
-    publisher: { "@type": "Organization", name: "treatmentshub.com", url: "https://www.treatmentshub.com" },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
   };
 
   const breadcrumbSchema = {

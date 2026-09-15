@@ -49,8 +49,8 @@ export default function Glp1PillsVsInjectionsPage() {
     description: metadata.description,
     datePublished: "2026-08-09",
     dateModified: "2026-09-12",
-    author: { "@type": "Organization", name: "TreatmentsHub Team", url: "https://www.treatmentshub.com" },
-    publisher: { "@type": "Organization", name: "treatmentshub.com", url: "https://www.treatmentshub.com" },
+    author: { "@type": "Organization", name: "Treatments Hub Team", url: "https://www.treatmentshub.com" },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
     mainEntityOfPage: CANONICAL,
   };
   const breadcrumbSchema = {

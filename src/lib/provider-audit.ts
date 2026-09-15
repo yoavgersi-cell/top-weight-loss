@@ -1,4 +1,4 @@
-// The TreatmentsHub provider audit - the "what we verified" registry.
+// The Treatments Hub provider audit - the "what we verified" registry.
 //
 // Every row is a fact the operator verified against the provider's own
 // published information (pricing pages, plan terms, certification pages).

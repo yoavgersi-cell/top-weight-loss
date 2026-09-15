@@ -3,7 +3,7 @@ import { PROVIDER_AUDITS } from "@/lib/provider-audit";
 import { PROVIDER_DATA_CHECKED } from "@/lib/config";
 import { BoldKeyFacts } from "@/components/prose";
 
-// "What we verified" - the TreatmentsHub audit card for a provider's review
+// "What we verified" - the Treatments Hub audit card for a provider's review
 // page. Renders the verified-facts registry for this provider and vertical;
 // providers without a complete, verified entry render nothing at all (an
 // audit full of gaps would undermine the very trust it exists to build).

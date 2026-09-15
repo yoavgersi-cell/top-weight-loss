@@ -915,7 +915,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-30",
     updatedAt: "2026-08-30",
     heroColor: "#EDF2F8",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "Chemically, yes - testosterone is a steroid hormone. Medically, TRT at prescribed doses under monitoring is a different universe from bodybuilding steroid abuse at many times those doses.",
       "The real, known trade-offs: TRT suppresses your own production and fertility while you are on it, and requires ongoing blood monitoring - which is exactly why legitimate providers require labs.",
@@ -955,7 +955,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-30",
     updatedAt: "2026-08-30",
     heroColor: "#EEF4F1",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "They answer low testosterone from opposite directions: enclomiphene signals your body to make more of its own, TRT supplies testosterone from outside.",
       "The fertility line is the big divider - TRT suppresses sperm production while on it; enclomiphene's whole appeal is working with your own production instead.",
@@ -995,7 +995,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-30",
     updatedAt: "2026-08-30",
     heroColor: "#EFF1F6",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "Medvi QUAD is an Rx-only sublingual performance medication combining four ingredients in one dose: sildenafil, tadalafil, apomorphine and L-citrulline (per Medvi's own product pages).",
       "It is prescribed online: you complete a medical intake and a licensed provider decides whether the medication is appropriate - approval is not automatic.",
@@ -1043,7 +1043,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-01",
     updatedAt: UPDATED,
     heroColor: "#EEF4FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "What online TRT actually involves",
@@ -1081,7 +1081,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-07-28",
     updatedAt: UPDATED,
     heroColor: "#F0FAF5",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "What you're actually paying for",
@@ -1111,7 +1111,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-07-22",
     updatedAt: UPDATED,
     heroColor: "#FBF3EE",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Is this hypogonadism?",
@@ -1145,7 +1145,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-07-16",
     updatedAt: UPDATED,
     heroColor: "#F3EEFB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "The short answer",
@@ -1175,7 +1175,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-07-10",
     updatedAt: UPDATED,
     heroColor: "#EEF7FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Injections",
@@ -1205,7 +1205,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-04",
     updatedAt: UPDATED,
     heroColor: "#EEF4FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "The short answer",
@@ -1239,7 +1239,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-07",
     updatedAt: UPDATED,
     heroColor: "#F0FAF5",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "The paradox nobody warns you about",
@@ -1273,7 +1273,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-10",
     updatedAt: UPDATED,
     heroColor: "#FBF3EE",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "TRT is a commitment, not a supplement",
@@ -1307,7 +1307,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-13",
     updatedAt: UPDATED,
     heroColor: "#EEF7FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "The normal range - and why it's so wide",
@@ -1341,7 +1341,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-15",
     updatedAt: UPDATED,
     heroColor: "#F3EEFB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "The short answer",
@@ -1375,7 +1375,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-17",
     updatedAt: UPDATED,
     heroColor: "#FBEEF4",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Same molecule, different universe",
@@ -1409,7 +1409,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-19",
     updatedAt: UPDATED,
     heroColor: "#EEF4FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "The 'TRT is forever' claim, examined",
@@ -1448,7 +1448,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#EAF0F0",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "Total testosterone measures all the testosterone in your blood; free testosterone is the small fraction that's unbound and biologically active.",
       "A protein called SHBG binds most of your testosterone - so a 'normal' total can hide a low free level when SHBG is high.",
@@ -1484,7 +1484,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#EAF0F0",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "TRT is a monitored treatment: baseline labs confirm the diagnosis, and follow-up labs keep it safe and dialed in.",
       "Beyond testosterone itself, providers typically watch red blood cells (hematocrit), estradiol, PSA and other markers depending on your profile.",
@@ -1520,7 +1520,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#ECEFF4",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "Online TRT is usually cheaper and far more convenient, with labs done locally and consults handled remotely - and for straightforward cases it can match in-person care.",
       "An in-person clinic can be the better fit for complicated cases, or if you simply prefer hands-on, face-to-face management.",
@@ -1556,7 +1556,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#EAF0F0",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "Cypionate and enanthate are the same testosterone attached to slightly different 'ester' chains that control how slowly it releases.",
       "The practical differences are small - both are long-acting injectables dosed on a similar schedule, and most men would not notice a switch.",
@@ -1592,7 +1592,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#ECEFF4",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "In men who are genuinely testosterone-deficient, TRT commonly improves libido - low sex drive is one of the more responsive symptoms of low T.",
       "It is not a guarantee and not immediate: libido changes tend to come in the first weeks to couple of months, and the size of the effect varies.",
@@ -1628,7 +1628,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#EAF0F0",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "Men need some estrogen: a portion of testosterone naturally converts to estradiol via an enzyme called aromatase, and that estradiol supports bone, mood, libido and more.",
       "TRT can raise estradiol along with testosterone, which is why it's one of the markers a good provider monitors.",

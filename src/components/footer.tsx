@@ -95,7 +95,7 @@ export async function Footer() {
             <p className="text-[13px] leading-relaxed text-gray-500">
               <span className="font-bold text-[#191919]">
                 <span className="legacy-name">TopWeightLoss</span>
-                <span className="hub-name">TreatmentsHub</span>
+                <span className="hub-name">Treatments Hub</span>
               </span>{" "}
               is an independent comparison publisher for modern healthcare treatments.
             </p>
@@ -119,7 +119,7 @@ export async function Footer() {
           <p className="mb-4 text-xs text-gray-400">
             <strong className="text-gray-500">Affiliate Disclosure:</strong>{" "}
             <span className="legacy-name">TopWeightLoss</span>
-            <span className="hub-name">TreatmentsHub</span> may earn a commission
+            <span className="hub-name">Treatments Hub</span> may earn a commission
             when you click on links and make a purchase. This does not affect our
             rankings or reviews. We are committed to providing honest, independent
             comparisons to help you make informed decisions.
@@ -128,7 +128,7 @@ export async function Footer() {
             <p className="text-[12px] text-gray-400">
               &copy; {new Date().getFullYear()}{" "}
               <span className="legacy-name">TopWeightLoss</span>
-              <span className="hub-name">TreatmentsHub</span>. All rights reserved.
+              <span className="hub-name">Treatments Hub</span>. All rights reserved.
             </p>
             <p className="text-[11px] text-gray-300">
               <span className="legacy-name">topweightloss.io</span>

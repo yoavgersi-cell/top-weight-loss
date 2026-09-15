@@ -17,7 +17,7 @@ const DESCRIPTION =
   "The cheapest GLP-1 programs of 2026, ranked by verified prices: compounded semaglutide from $49/month, tirzepatide from $89/month - conditions disclosed.";
 
 export const metadata: Metadata = {
-  title: { absolute: `${TITLE} | TreatmentsHub` },
+  title: { absolute: `${TITLE} | Treatments Hub` },
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL },
   openGraph: {
@@ -72,8 +72,8 @@ export default async function CheapestGlp1Page() {
     description: DESCRIPTION,
     datePublished: "2026-08-23",
     dateModified: CONTENT_LAST_UPDATED,
-    author: { "@type": "Organization", name: "TreatmentsHub Team", url: "https://www.treatmentshub.com" },
-    publisher: { "@type": "Organization", name: "treatmentshub.com", url: "https://www.treatmentshub.com" },
+    author: { "@type": "Organization", name: "Treatments Hub Team", url: "https://www.treatmentshub.com" },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
     mainEntityOfPage: CANONICAL,
   };
   const breadcrumbSchema = {

@@ -17,7 +17,7 @@ const DESCRIPTION =
   "Paying $1,000+/month for Ozempic or Wegovy? Compounded semaglutide - the same GLP-1 - runs $49-$299/month at licensed telehealth providers. How switching works.";
 
 export const metadata: Metadata = {
-  title: { absolute: `${TITLE} | TreatmentsHub` },
+  title: { absolute: `${TITLE} | Treatments Hub` },
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL },
   openGraph: { title: TITLE, description: DESCRIPTION, url: CANONICAL, type: "article" },
@@ -95,8 +95,8 @@ export default async function SwitchFromOzempicPage() {
     description: DESCRIPTION,
     datePublished: "2026-08-23",
     dateModified: CONTENT_LAST_UPDATED,
-    author: { "@type": "Organization", name: "TreatmentsHub Team", url: "https://www.treatmentshub.com" },
-    publisher: { "@type": "Organization", name: "treatmentshub.com", url: "https://www.treatmentshub.com" },
+    author: { "@type": "Organization", name: "Treatments Hub Team", url: "https://www.treatmentshub.com" },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
     mainEntityOfPage: CANONICAL,
   };
   const breadcrumbSchema = {

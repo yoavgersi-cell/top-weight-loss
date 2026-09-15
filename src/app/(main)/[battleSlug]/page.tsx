@@ -87,7 +87,7 @@ export default async function BattlePage({
     const author = vConfig.experts?.[0];
     const reviewer = vConfig.experts?.[1];
     // Brand the research-team name from the current context so it reads
-    // "The TreatmentsHub Research Team" on the hub (not the legacy brand).
+    // "The Treatments Hub Research Team" on the hub (not the legacy brand).
     const researchTeam = `The ${ctx.brandTeam.replace(/\s+Team$/i, "")} Research Team`;
 
     // WebPage + ItemList schema (authorship, freshness, ranked entities) and the
@@ -102,14 +102,14 @@ export default async function BattlePage({
       inLanguage: "en-US",
       datePublished: "2026-06-01",
       dateModified: CONTENT_LAST_UPDATED,
-      isPartOf: { "@type": "WebSite", name: ctx.brandDomain, url: ctx.origin },
+      isPartOf: { "@type": "WebSite", name: ctx.brandName, url: ctx.origin },
       ...(author && {
         author: { "@type": "Organization", name: researchTeam, url: canonicalUrl(ctx, "/about") },
       }),
       ...(reviewer && { reviewedBy: { "@type": "Organization", name: reviewer.name } }),
       publisher: {
         "@type": "Organization",
-        name: ctx.brandDomain,
+        name: ctx.brandName,
         url: ctx.origin,
         logo: { "@type": "ImageObject", url: `${ctx.origin}/treatmentshub.png` },
       },

@@ -40,7 +40,7 @@ function verticalSection(vertical: string, config: SiteConfig): string {
   // Curated landing pages (highest-intent marketing pages), then a few top
   // comparisons and reviews - capped so the file stays a hand-picked index.
   for (const lp of (config.landingPages ?? []).slice(0, 3)) {
-    out.push(line(lp.seoTitle.replace(/\s*\|\s*TreatmentsHub\s*$/i, ""), `${base}/${lp.slug}`, lp.seoDescription));
+    out.push(line(lp.seoTitle.replace(/\s*\|\s*Treatments Hub\s*$/i, ""), `${base}/${lp.slug}`, lp.seoDescription));
   }
   for (const b of (config.battles ?? []).slice(0, 5)) {
     out.push(line(b.matchupLabel ?? b.title.split(":")[0], `${base}/${b.slug}`, b.description));
@@ -54,11 +54,11 @@ function verticalSection(vertical: string, config: SiteConfig): string {
 
 export async function GET() {
   const parts: string[] = [
-    "# TreatmentsHub",
+    "# Treatments Hub",
     "",
     "> Independent, side-by-side comparisons of licensed US online treatment providers across weight loss, hair loss, TRT and HRT - with operator-verified pricing, real customer-review data, and clear editorial verdicts.",
     "",
-    "TreatmentsHub compares telehealth providers on source-checked prices and plans. Every price, rating and comparison is verified against the provider or a named public source; where a figure is unavailable we say so rather than estimate. We do not fabricate statistics, reviews, or medical claims, and we do not give medical advice - each page links to the provider for current terms.",
+    "Treatments Hub compares telehealth providers on source-checked prices and plans. Every price, rating and comparison is verified against the provider or a named public source; where a figure is unavailable we say so rather than estimate. We do not fabricate statistics, reviews, or medical claims, and we do not give medical advice - each page links to the provider for current terms.",
     "",
   ];
 
@@ -73,7 +73,7 @@ export async function GET() {
   parts.push("## About");
   parts.push("");
   parts.push(line("How we rank", "/how-we-rank", "Our comparison methodology and how we stay objective"));
-  parts.push(line("About TreatmentsHub", "/about", "Who we are and how our editorial process works"));
+  parts.push(line("About Treatments Hub", "/about", "Who we are and how our editorial process works"));
   parts.push("");
 
   return new NextResponse(parts.join("\n"), {
