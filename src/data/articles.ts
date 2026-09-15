@@ -33,6 +33,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#EEF4FB",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "GLP-1 medications mimic a gut hormone that signals fullness - slowing gastric emptying and turning down \"food noise\". It is biochemistry, not willpower.",
+      "They also regulate blood sugar by stimulating insulin when glucose is high, which blunts the spikes and crashes that trigger cravings.",
+      "Tirzepatide adds a second receptor (GIP): in trials semaglutide averaged about 15% body-weight loss (STEP) and tirzepatide up to ~22.5% (SURMOUNT) over 68-72 weeks.",
+      "Appetite changes usually show within two weeks and visible weight loss around weeks 4-8; GI side effects peak during dose increases and tend to ease.",
+    ],
     sections: [
       {
         heading: "What Are GLP-1 Medications?",
@@ -73,6 +79,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Content Team",
+    keyTakeaways: [
+      "You start at the lowest dose after a medical evaluation; the first injection takes seconds, and subtle appetite changes often appear within days.",
+      "By week two most patients notice clearer appetite reduction - leaving food on the plate and fewer cravings for sugar and processed snacks.",
+      "By the end of month one many patients lose 3-5 pounds, though this varies widely - most acceleration comes as doses increase in later months.",
+      "Nausea and constipation are the most common early side effects; smaller portions, lean protein, hydration and avoiding greasy food help, and your provider can slow titration.",
+    ],
     sections: [
       {
         heading: "Before You Start",
@@ -113,6 +125,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Content Team",
+    keyTakeaways: [
+      "Non-negotiable: treatment prescribed and supervised by a licensed physician, NP or PA, with ongoing access for dose adjustments - not just an initial consult.",
+      "Compare total monthly cost including medication, consultations and delivery, and check for enrollment fees, cancellation fees or minimum commitments.",
+      "Compounded semaglutide programs run a verified $49-$199/month and tirzepatide $89-$299/month; the best providers bundle everything into one fee.",
+      "Red flags: guaranteed weight-loss amounts, medication without a medical evaluation, pressure into long-term contracts, or undisclosed compounding pharmacy sources.",
+    ],
     sections: [
       {
         heading: "Why Provider Choice Matters",
@@ -244,6 +262,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "Plateaus are a normal physiological response - as you lose weight your resting metabolic rate drops, leptin falls and ghrelin can rise - even on medication.",
+      "On GLP-1s a stall often coincides with adapting to a dose; if you have not reached your maximum dose, an adjustment with your provider often restarts progress.",
+      "Reassess portions (they creep back up), prioritize protein, and add resistance training 2-3 times a week plus consistent daily steps.",
+      "A 2-4 week plateau is normal; if weight has stalled for 6+ weeks despite consistent effort, talk to your provider about dosing and factors like thyroid function.",
+    ],
     sections: [
       {
         heading: "Plateaus Are Normal - Even on Medication",
@@ -284,6 +308,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-26",
     heroColor: "#EEF4FB",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "Ozempic and Wegovy both contain semaglutide from Novo Nordisk; Ozempic is FDA-approved for type 2 diabetes, Wegovy specifically for chronic weight management.",
+      "Wegovy's maximum dose is 2.4 mg/week vs 2 mg for Ozempic - one reason it produced more weight loss in trials (~15% in STEP vs roughly 6-8% in Ozempic's diabetes trials).",
+      "Side effects are nearly identical: in STEP 1, nausea ~44%, diarrhea ~30%, vomiting ~24%, constipation ~23%, mostly during dose increases.",
+      "Verified brand prices: Ozempic $1,149/month and Wegovy $1,579 at altRx; most self-pay patients use compounded semaglutide from $49/month (wellmedr), $69 (embody) or $89 (altRx).",
+    ],
     sections: [
       {
         heading: "Is Wegovy the same as Ozempic?",
@@ -336,6 +366,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "GI effects dominate: in the STEP trials nausea affected roughly 40-44% of patients, diarrhea about 30%, vomiting around 25% and constipation about 24% - mostly mild to moderate.",
+      "Side effects usually start within the first week of a new dose and improve meaningfully by weeks four to six at a stable dose - which is why titration is gradual.",
+      "Manage nausea with smaller, more frequent meals, bland protein-rich foods, hydration, eating slowly and avoiding greasy or spicy food; providers can slow titration if needed.",
+      "Seek immediate care for severe persistent abdominal pain, upper-right abdominal pain, allergic swelling or vision changes; semaglutide carries a boxed thyroid C-cell warning and is not for anyone with a personal or family history of medullary thyroid carcinoma.",
+    ],
     sections: [
       {
         heading: "The Most Common Side Effects",
@@ -438,6 +474,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Content Team",
+    keyTakeaways: [
+      "Brand-name retail: Wegovy roughly $1,300-$1,400/month, Ozempic $900-$1,000, Zepbound and Mounjaro about $1,000-$1,100 - before insurance or manufacturer discounts.",
+      "Insurance covers diabetes-labelled drugs (Ozempic, Mounjaro) more readily than weight-loss-labelled ones (Wegovy, Zepbound), which are often excluded or need prior authorization.",
+      "Compounded medication through telehealth is the common affordable path: semaglutide a verified $49-$199/month and tirzepatide $89-$299/month, usually including consultations and shipping.",
+      "Always compare total monthly cost (medication, consultations, dose adjustments, delivery), and use HSA/FSA to cut the effective cost by roughly 20-35%.",
+    ],
     sections: [
       {
         heading: "Brand-Name Pricing",
@@ -449,7 +491,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Compounded Medications: A More Affordable Option",
-        body: "Compounded versions of semaglutide and tirzepatide are available through many telehealth providers at significantly lower prices - often $200 to $500 per month including provider consultations and shipping. These are custom-made by licensed compounding pharmacies (503A or 503B) using the same active ingredients. While compounded medications are legal and regulated, they are not FDA-approved in the same way as brand-name drugs. Reputable providers use only licensed pharmacies that follow strict manufacturing standards. This is currently the most common path to affordable GLP-1 treatment.",
+        body: "Compounded versions of semaglutide and tirzepatide are available through many telehealth providers at significantly lower prices - a verified $49-$199/month for semaglutide and $89-$299 for tirzepatide, usually including provider consultations and shipping. These are custom-made by licensed compounding pharmacies (503A or 503B) using the same active ingredients. While compounded medications are legal and regulated, they are not FDA-approved in the same way as brand-name drugs. Reputable providers use only licensed pharmacies that follow strict manufacturing standards. This is currently the most common path to affordable GLP-1 treatment.",
       },
       {
         heading: "What's Usually Included in the Price",
@@ -484,6 +526,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "FDA-approved criteria: BMI 30+, or BMI 27+ with at least one weight-related condition such as type 2 diabetes, high blood pressure, high cholesterol or sleep apnea.",
+      "Disqualifiers include a personal or family history of medullary thyroid carcinoma, MEN 2, a history of pancreatitis, severe GI disorders like gastroparesis, and pregnancy or breastfeeding.",
+      "Watch interactions: insulin and sulfonylureas raise hypoglycemia risk, slowed gastric emptying affects oral medications, and tirzepatide can reduce oral contraceptive effectiveness for 4 weeks after starting and after each dose increase.",
+      "Telehealth evaluation typically takes one to three days; if you do not qualify, providers may suggest oral options like metformin or bupropion-naltrexone.",
+    ],
     sections: [
       {
         heading: "BMI Requirements for Eligibility",
@@ -522,6 +570,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Content Team",
+    keyTakeaways: [
+      "GLP-1s cut how much you eat by 30-40%, so the quality of every calorie matters more - nutrient-dense meals, not restrictive dieting.",
+      "Protein first: aim for 25-30 g per meal (about 80-120 g daily) to protect muscle during rapid weight loss.",
+      "Well-tolerated foods include lean proteins, cooked vegetables, rice, oatmeal and broth soups; fried, greasy, spicy foods, carbonated drinks and alcohol tend to worsen nausea.",
+      "Drink at least 64 oz of water daily, sipped through the day, and eat slowly - stopping when satisfied rather than full.",
+    ],
     sections: [
       {
         heading: "Why Nutrition Still Matters on Medication",
@@ -560,6 +614,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#EEF4FB",
     author: "TopWeightLoss Content Team",
+    keyTakeaways: [
+      "Rapid weight loss can take lean muscle along with fat, and GLP-1s accelerate loss - so preserving muscle should be a priority.",
+      "Resistance training two to three times a week for 30-45 minutes, built on compound movements, is the most effective way to keep muscle.",
+      "Walking 7,000-10,000 steps a day is the sustainable cardio foundation - no recovery cost, no appetite spike, manageable even on nauseous days.",
+      "Avoid exercising right after meals (slowed gastric emptying), keep high-intensity cardio moderate, and judge progress by strength and energy, not only the scale.",
+    ],
     sections: [
       {
         heading: "The Muscle Loss Problem",
@@ -598,6 +658,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "In the STEP 1 extension, participants who stopped semaglutide regained roughly two-thirds of lost weight within a year; tirzepatide studies show similar regain.",
+      "Regain happens because appetite returns to baseline, hunger hormones reassert themselves and metabolic rate has adapted downward - it is biology, not personal failure.",
+      "There is no self-serve tapering protocol: dose reduction is a clinical decision with your prescriber, often stepping down over weeks or settling on a lower maintenance dose.",
+      "If cost is the reason for stopping, moving from a brand pen to verified $49-$99/month compounded options is often the alternative discussed before stopping entirely.",
+    ],
     sections: [
       {
         heading: "What happens when you stop taking Wegovy specifically?",
@@ -644,6 +710,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "GLP-1 receptors sit in brain regions tied to reward and emotion, and patients commonly report less interest in alcohol, fewer compulsive urges and quieter food thoughts.",
+      "Studies show reduced alcohol consumption on semaglutide, and trials are underway for alcohol, nicotine and opioid use disorders.",
+      "Mood effects are hard to separate from weight loss itself; a subset of patients report emotional blunting, and post-marketing reports of suicidal ideation have not been causally linked by FDA or EMA reviews.",
+      "Monitor mood closely in the first months and after dose changes, and report persistent low mood or numbness to your provider - especially with a history of depression or eating disorders.",
+    ],
     sections: [
       {
         heading: "Beyond Weight Loss: GLP-1 Receptors in the Brain",
@@ -682,6 +754,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "Yes, you can get semaglutide online: licensed telehealth providers handle the evaluation, prescription and home delivery without an office visit.",
+      "The process: choose a provider, complete a health questionnaire (1-3 days for review), receive a prescription at a starting dose, and get medication shipped in 3-7 days.",
+      "Most platforms prescribe compounded semaglutide - the same active ingredient as Ozempic at a far lower cost; brand-name Ozempic is available but considerably more expensive.",
+      "Without insurance, brand Ozempic runs $900-$1,000/month; compounded semaglutide through telehealth runs a verified $49-$199/month, and many providers accept HSA/FSA.",
+    ],
     sections: [
       {
         heading: "Can You Really Get Ozempic Online?",
@@ -705,7 +783,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What It Costs Without Insurance",
-        body: 'Brand-name Ozempic runs $900-$1,000/month without insurance. Compounded semaglutide through telehealth providers typically costs $200-$500/month, often including consultations and delivery. For a full breakdown, read our <a href="/weight-loss/articles/weight-loss-medication-cost-guide">medication cost guide</a>. Many providers also accept HSA/FSA payments.',
+        body: 'Brand-name Ozempic runs $900-$1,000/month without insurance. Compounded semaglutide through telehealth providers costs a verified $49-$199/month, often including consultations and delivery. For a full breakdown, read our <a href="/weight-loss/articles/weight-loss-medication-cost-guide">medication cost guide</a>. Many providers also accept HSA/FSA payments.',
       },
     ],
   },
@@ -720,6 +798,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#EEF4FB",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "Compounded semaglutide is the same active ingredient as Ozempic and Wegovy, made by licensed compounding pharmacies under FDA regulation, but the product itself is not individually FDA-approved.",
+      "Ask one question before ordering: \"Do you compound semaglutide base?\" The FDA has warned against salt forms (semaglutide sodium/acetate) and \"research use\" vials sold without a prescription.",
+      "Safety rests on the pharmacy: 503B facilities follow cGMP standards, and reputable providers disclose their compounding source - avoid any that will not.",
+      "Price is the dramatic difference: Wegovy $1,300-$1,400 and Ozempic $900-$1,000 at retail vs a verified $49-$199/month compounded; compounded tirzepatide runs $89-$299.",
+    ],
     sections: [
       {
         heading: "What Is Compounded Semaglutide?",
@@ -739,7 +823,7 @@ export const articles: Article[] = [
       },
       {
         heading: "The Price Difference",
-        body: 'This is where the difference is most dramatic. Brand-name Wegovy costs $1,300-$1,400/month at retail. Ozempic runs $900-$1,000/month. Compounded semaglutide through telehealth providers typically costs $200-$500/month - often including medical consultations and home delivery. For many patients, this price difference is what makes treatment accessible. See our <a href="/weight-loss/articles/weight-loss-medication-cost-guide">full cost comparison</a>.',
+        body: 'This is where the difference is most dramatic. Brand-name Wegovy costs $1,300-$1,400/month at retail. Ozempic runs $900-$1,000/month. Compounded semaglutide through telehealth providers costs a verified $49-$199/month - often including medical consultations and home delivery. For many patients, this price difference is what makes treatment accessible. See our <a href="/weight-loss/articles/weight-loss-medication-cost-guide">full cost comparison</a>.',
       },
       {
         heading: "Which Should You Choose?",
@@ -838,6 +922,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Content Team",
+    keyTakeaways: [
+      "Many plans exclude weight-loss-labelled drugs like Wegovy and Zepbound, and even covered plans add prior authorization and high copays.",
+      "Compounded semaglutide starts at a verified $49/month and compounded tirzepatide at $89/month through telehealth, all-inclusive with consultations and delivery.",
+      "HSA/FSA funds typically cover medication and consultations - an effective 20-35% discount depending on your tax bracket.",
+      "Manufacturer savings programs from Novo Nordisk and Eli Lilly usually require commercial insurance; for the fully uninsured, compounded telehealth remains the most cost-effective path.",
+    ],
     sections: [
       {
         heading: "Why Insurance Often Doesn't Cover Weight Loss Medication",
@@ -876,6 +966,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "Weeks 1-2: appetite quiets and cravings fade on the lowest starting dose; by the end of month one many patients are down 3-5 pounds.",
+      "Months 2-3 bring the biggest month-over-month changes as doses increase - by month 3 many patients have lost 5-10% of starting weight.",
+      "Trials show average weight loss of 15% at 68 weeks; most patients peak between months 9 and 15, then move to a maintenance plan.",
+      "If results lag by month 3, common causes are not yet reaching your optimal dose or dietary habits offsetting the medication - talk to your provider before assuming it has failed.",
+    ],
     sections: [
       {
         heading: "Week 1-2: Appetite Changes Begin",
@@ -974,6 +1070,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "People leave Ro over pricing, medication variety, state availability or wanting more personalized care - and several providers now match or exceed it in key areas.",
+      "altRx is the strongest overall alternative: both semaglutide and tirzepatide with multiple formulations, transparent all-inclusive pricing and physician oversight.",
+      "Noom adds behavioral coaching to GLP-1 access through Noom Med; SHED emphasizes personalized treatment plans with 20% off the first month.",
+      "Pick by priority - medication options, budget or coaching - or take the matching quiz for a personalized recommendation.",
+    ],
     sections: [
       {
         heading: "Why People Look for Ro Alternatives",
@@ -1012,6 +1114,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Content Team",
+    keyTakeaways: [
+      "Online programs win on convenience, cost and speed: evaluation from home, medication by mail, follow-ups by video or message, and compounded GLP-1s at a fraction of clinic prices.",
+      "In-person clinics offer hands-on exams, in-office labs, face-to-face accountability and sometimes easier insurance access to brand-name medication.",
+      "Choose in-person if you have complex conditions needing physical evaluation or insurance that specifically covers clinic visits; otherwise online fits most people.",
+      "The medication is the same either way - the difference is the delivery experience.",
+    ],
     sections: [
       {
         heading: "The Rise of Online Weight Loss Programs",
@@ -1050,6 +1158,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "Brand-name: Ozempic about $900-$1,000/month and Wegovy $1,300-$1,400 at retail; with coverage, copays range from $25-$500.",
+      "Compounded semaglutide through telehealth runs a verified $49-$199/month including consultations and delivery, with several providers starting at $49.",
+      "Compare the total monthly price - some providers bill consultations or shipping separately - and confirm whether pricing changes by dose.",
+      "Compounded tirzepatide costs more ($89-$299/month) but produced greater average weight loss in trials (up to 22.5% vs ~15%), so cost per result can be comparable.",
+    ],
     sections: [
       {
         heading: "Brand-Name Semaglutide Costs",
@@ -1092,6 +1206,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "Semaglutide is prescription-only - you cannot legally buy it without a prescriber - but you do not need an in-person office visit.",
+      "Telehealth works like this: online health questionnaire, licensed physician review, prescription, and home delivery, typically 1-5 days from sign-up.",
+      "It is safe and legal with a licensed provider offering real physician oversight; most people \"getting Ozempic online\" receive compounded semaglutide.",
+      "Some providers require recent labs (metabolic panel, A1C) or order them; most patients take their first injection within 1-2 weeks of signing up.",
+    ],
     sections: [
       {
         heading: "You Need a Prescription - But Not an Office Visit",
@@ -1134,6 +1254,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#EEF4FB",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "Tirzepatide (Mounjaro/Zepbound) is the most effective - up to 22.5% body-weight loss in SURMOUNT - by targeting both GLP-1 and GIP receptors.",
+      "Semaglutide (Ozempic/Wegovy) is the most established, with ~15% average loss in STEP and the broadest telehealth availability.",
+      "Liraglutide (Saxenda) delivers more modest results (~5-8% in SCALE) and needs daily injections; it remains an option for non-responders.",
+      "Brand prices run $1,000-$1,300+/month; compounded semaglutide starts at a verified $49/month and tirzepatide at $89.",
+    ],
     sections: [
       {
         heading: "The Three Main GLP-1 Medications",
@@ -1172,6 +1298,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "GLP-1s reduce appetite within 1-2 weeks, but meaningful loss builds over months: about 3-5 lbs in month one, 5-10% of body weight by months 2-3, 15-22% at 6-12+ months.",
+      "Tirzepatide produces the fastest average results thanks to its dual mechanism, with semaglutide close behind; phentermine acts within hours but is approved only for short-term use.",
+      "High protein intake, exercise, hydration and sleep speed results; overeating despite reduced appetite, low protein and stress slow them.",
+      "Gradual loss of 1-2 lbs per week is what lasts - \"fast\" should mean faster than without medication, not overnight.",
+    ],
     sections: [
       {
         heading: "How Fast Do GLP-1 Medications Work?",
@@ -1268,6 +1400,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "GLP-1s work comparably for women and men: about 15% average loss on semaglutide (STEP) and up to ~22.5% on tirzepatide (SURMOUNT).",
+      "Stop GLP-1 medication at least 2 months before trying to conceive; it is not safe in pregnancy or breastfeeding, and weight loss can unexpectedly improve fertility (especially with PCOS).",
+      "Some women notice worse nausea in certain menstrual phases, and perimenopause can change weight-loss patterns - but the medication still works with your hormones.",
+      "Protect muscle: 80-120 g of protein daily and resistance training 2-3 times a week.",
+    ],
     sections: [
       {
         heading: "Why GLP-1 Medications Are Popular Among Women",
@@ -1310,6 +1448,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#EEF4FB",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "After 40, muscle loss, hormonal shifts and sleep disruption lower calorie burn and push fat to the midsection - the tools that worked at 25 may not be enough.",
+      "In trials, patients over 40 achieved weight loss comparable to younger participants; GLP-1s address appetite, gastric emptying and insulin sensitivity regardless of age.",
+      "Over-40 patients should watch muscle, bone density and interactions with blood pressure, thyroid or diabetes medications, since slowed gastric emptying affects oral drugs.",
+      "Resistance training 2-3 times weekly plus adequate protein is critical; expect appetite changes within 1-2 weeks and meaningful loss by months 2-3, possibly slightly slower than younger patients.",
+    ],
     sections: [
       {
         heading: "Why Weight Loss Gets Harder After 40",
@@ -1352,6 +1496,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "People leave Noom because the daily lesson format is time-consuming, coaching-plus-medication pricing adds up, or they simply want straightforward GLP-1 access.",
+      "altRx and Ro offer medication with physician oversight and no coaching requirement; Found accepts major insurance plans.",
+      "SHED focuses on personalized treatment with 20% off the first month; TrimRX offers simple enrollment with no contracts.",
+      "Match the alternative to why you are switching: no coaching (altRx, Ro), insurance (Found), personalization (SHED).",
+    ],
     sections: [
       {
         heading: "Why People Look for Noom Alternatives",
@@ -1371,7 +1521,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Shed - Best for Personalized Treatment",
-        body: '<a href="/weight-loss/reviews/shed">Shed</a> focuses on highly personalized treatment plans with multiple GLP-1 medication options. Their approach is more medical than behavioral - less coaching, more treatment customization. Currently offering 30% off your first month. See our <a href="/weight-loss/noom-vs-shed">Noom vs Shed comparison</a>.',
+        body: '<a href="/weight-loss/reviews/shed">Shed</a> focuses on highly personalized treatment plans with multiple GLP-1 medication options. Their approach is more medical than behavioral - less coaching, more treatment customization. Currently offering 20% off your first month. See our <a href="/weight-loss/noom-vs-shed">Noom vs Shed comparison</a>.',
       },
       {
         heading: "TrimRX - Best Budget Alternative",
@@ -1394,6 +1544,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#EEF4FB",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "The most popular Ozempic alternative is compounded semaglutide - the same active ingredient at a verified $49-$199/month instead of $1,149+ for brand.",
+      "Wegovy is the same semaglutide at a higher 2.4 mg maximum dose with FDA approval for weight loss; tirzepatide (Mounjaro/Zepbound) is the stronger option - up to 22.5% loss in trials vs ~15%.",
+      "Verified brand prices: Ozempic $1,149 and Wegovy $1,579 at altRx, Wegovy $1,799 at Sprout; compounded tirzepatide runs $89-$299/month.",
+      "Switching from Ozempic to compounded semaglutide is straightforward (same medication, dose matched); switching to tirzepatide needs a provider consult for the starting dose.",
+    ],
     sections: [
       {
         heading: "Why People Look for Ozempic Alternatives",
@@ -1436,6 +1592,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-16",
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "Wegovy runs $1,300-$1,400/month at retail, with inconsistent insurance coverage and past supply shortages.",
+      "The #1 alternative is compounded semaglutide - same active ingredient and mechanism at a verified $49-$199/month through telehealth.",
+      "Zepbound (tirzepatide) showed up to 22.5% weight loss vs Wegovy's ~15% in trials; compounded tirzepatide starts at a verified $89/month.",
+      "Ozempic is the off-label option: same semaglutide at a lower maximum dose, about $900/month, and often better insurance coverage as a diabetes drug.",
+    ],
     sections: [
       {
         heading: "Why People Look for Wegovy Alternatives",
@@ -1474,6 +1636,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-26",
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "The closest Mounjaro alternative is compounded tirzepatide - the same active ingredient via licensed telehealth from a verified $89/month (wellmedr), vs $1,000+ for brand pens.",
+      "Zepbound is the same drug FDA-approved for weight loss: $1,249/month at altRx, or Zepbound KwikPens from $299 the first month at ro (then $399-449 plus a membership).",
+      "Verified compounded tirzepatide prices: wellmedr $89, embody $119, DirectMeds $147, altRx $149, Medvi $166 promo, HealthRx from $179, Sprout $199, trimrx $259, SHED $299.",
+      "Compounded semaglutide (from $49/month) is the budget path - about 15% average loss in trials vs up to 22.5% for tirzepatide - and many people step up only if results stall.",
+    ],
     sections: [
       {
         heading: "What is the best alternative to Mounjaro?",
