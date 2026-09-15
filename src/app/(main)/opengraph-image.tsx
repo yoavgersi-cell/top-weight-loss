@@ -49,7 +49,7 @@ export default function OGImage() {
               color: "white",
             }}
           >
-            topweightloss.io
+            treatmentshub.com
           </span>
         </div>
         <div

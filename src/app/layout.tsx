@@ -82,14 +82,15 @@ export default function RootLayout({
     <html lang="en-US" className={`${geistSans.variable} h-full antialiased`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* Mark the document as the hub before first paint when served from the
-            treatmentshub host, so the shared header/footer can swap to the
-            TreatmentsHub brand with no flash. The same cached HTML works on both
-            domains because the decision is made client-side at runtime. */}
+        {/* The TreatmentsHub brand is the default in the server HTML (primary
+            domain post-migration - crawlers see it without JS). Only when served
+            from the legacy topweightloss host do we mark the document, before
+            first paint, so the shared header/footer swap to the TopWeightLoss
+            brand with no flash. The same cached HTML works on both domains. */}
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "try{if(location.hostname.indexOf('treatmentshub')>-1)document.documentElement.setAttribute('data-hub','')}catch(e){}",
+              "try{if(location.hostname.indexOf('topweightloss')>-1)document.documentElement.setAttribute('data-legacy','')}catch(e){}",
           }}
         />
       </head>
