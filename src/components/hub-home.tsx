@@ -360,46 +360,13 @@ export async function HubHome() {
               both as compact icon+name tiles (no sub-link clutter on small
               screens). */}
           <div className="mx-auto mt-10 grid max-w-[1080px] grid-cols-2 gap-3 text-left sm:mt-12 sm:grid-cols-2 sm:gap-3.5 lg:grid-cols-4">
-            {BENTO.filter((b) => !isHiddenVertical(b.id)).map((b) => {
+            {BENTO.filter((b) => isPublishedVertical(b.id) && !isHiddenVertical(b.id)).map((b) => {
               const v = VERTICALS.find((x) => x.id === b.id);
               if (!v) return null;
               const Icon = VERTICAL_ICON[v.id] ?? WeightLossIcon;
               const name = CATEGORY_NAME[v.id] ?? v.name;
-              const published = isPublishedVertical(v.id);
-              const links = b.wide && published ? (CATEGORY_LINKS[v.id] ?? []).slice(0, 2) : [];
+              const links = b.wide ? (CATEGORY_LINKS[v.id] ?? []).slice(0, 2) : [];
               const span = b.wide ? "lg:col-span-2" : "lg:col-span-1";
-
-              // Not-yet-published verticals stay visible for brand breadth but
-              // render as inert, greyed-out "coming soon" tiles: no link (kept
-              // out of the crawl/index while weight-loss authority builds first).
-              if (!published) {
-                return (
-                  <Fragment key={v.id}>
-                    {/* Mobile + tablet */}
-                    <div
-                      aria-disabled="true"
-                      className="flex items-center gap-2.5 rounded-xl border border-gray-200/50 bg-gray-50/70 px-3.5 py-4 lg:hidden"
-                    >
-                      <Icon className="h-[34px] w-[34px] shrink-0 opacity-30 grayscale" />
-                      <span className="flex flex-col leading-tight">
-                        <span className="text-[15px] font-bold text-gray-400">{name}</span>
-                        <span className="text-[10.5px] font-semibold uppercase tracking-wide text-gray-300">Coming soon</span>
-                      </span>
-                    </div>
-                    {/* Desktop */}
-                    <div
-                      aria-disabled="true"
-                      className={`hidden items-center justify-center gap-3 rounded-2xl border border-gray-200/50 bg-gray-50/70 px-5 py-8 lg:flex ${span}`}
-                    >
-                      <Icon className="h-[42px] w-[42px] shrink-0 opacity-30 grayscale" />
-                      <span className="flex flex-col leading-tight">
-                        <span className="text-[18px] font-bold text-gray-400">{name}</span>
-                        <span className="text-[11px] font-semibold uppercase tracking-wide text-gray-300">Coming soon</span>
-                      </span>
-                    </div>
-                  </Fragment>
-                );
-              }
 
               return (
                 <Fragment key={v.id}>
