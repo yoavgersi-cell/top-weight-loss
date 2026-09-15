@@ -212,17 +212,17 @@ export const brandClusterArticles: Article[] = [
     slug: "is-trimrx-legit",
     title: "Is trimrx Legit? The No-Contract GLP-1 Model, Examined (2026)",
     description:
-      "trimrx sells GLP-1 treatment with no long-term contract - unusual in this market. We examined its clinical gate, its $179 pricing, and where it fits.",
+      "trimrx sells GLP-1 treatment with no long-term contract - unusual in this market. We examined its clinical gate, its $149 pricing, and where it fits.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-07",
-    updatedAt: "2026-08-21",
+    updatedAt: "2026-09-15",
     heroColor: "#F0FAF5",
     author: "TreatmentsHub Staff",
     keyTakeaways: [
       "trimrx's defining feature is no long-term contract, ever - month-to-month is always available, and multi-month plans exist only as optional discounts.",
       "The clinical gate is real: an online health assessment reviewed by a licensed clinician who can decline, then compounded semaglutide or tirzepatide with support continuing through dose changes.",
-      "Pricing is $179/month for semaglutide (reg. $299) and $259/month for tirzepatide, covering medication, provider consultations and ongoing support - self-pay, no insurance.",
+      "Pricing is $149/month for semaglutide (the same at every dose, with a $140 discount applied) and $259/month for tirzepatide, covering medication, provider consultations and ongoing support - self-pay, no insurance.",
       "Fair criticisms: the same semaglutide runs $49-$99 at wellmedr, embody and HealthRx, it is compounded-only, and there is no money-back or refund-if-not-approved guarantee.",
     ],
     sections: [
@@ -235,8 +235,8 @@ export const brandClusterArticles: Article[] = [
         body: `<p>trimrx runs the full clinical pipeline a legitimate prescriber must: an online health assessment covering history, medications and contraindications; review by a licensed clinician with genuine authority to decline; and - if appropriate - a prescription for compounded semaglutide or tirzepatide with clinical support continuing through dose changes. The process is 100% online with no clinic visit, and support isn't a one-time consult: guidance continues as you titrate, which is when most questions actually arise.</p>`,
       },
       {
-        heading: "What does trimrx's $179 include?",
-        body: `<table><tr><th>Plan</th><th>Medication</th><th>Price</th></tr><tr><td>GLP-1</td><td>Compounded semaglutide, weekly</td><td>$179/mo (reg. $299)</td></tr><tr><td>GLP-1 + GIP</td><td>Compounded tirzepatide, weekly</td><td>$259/mo</td></tr></table><p>The plan covers medication, provider consultations and ongoing support - self-pay, no insurance needed. Two pricing notes worth acting on: the $179 already reflects a discount from the $299 list rate, and <strong>multi-month commitments cut the monthly further</strong> - trimrx's one concession to commitment pricing, offered as a choice rather than a requirement.</p>`,
+        heading: "What does trimrx's $149 include?",
+        body: `<table><tr><th>Plan</th><th>Medication</th><th>Price</th></tr><tr><td>GLP-1</td><td>Compounded semaglutide, weekly</td><td>$149/mo (same at every dose)</td></tr><tr><td>GLP-1 + GIP</td><td>Compounded tirzepatide, weekly</td><td>$259/mo</td></tr></table><p>The plan covers medication, provider consultations and ongoing support - self-pay, no insurance needed. Two pricing notes worth acting on: the $149 already reflects a $140 discount off the list rate and holds at every dose, and <strong>multi-month commitments cut the monthly further</strong> - trimrx's one concession to commitment pricing, offered as a choice rather than a requirement.</p>`,
       },
       {
         heading: "Fair criticisms - and who they matter to",
@@ -250,37 +250,37 @@ export const brandClusterArticles: Article[] = [
   },
   {
     slug: "trimrx-cost",
-    title: "trimrx Cost 2026: $179 Explained - List Price, Discounts, Math",
+    title: "trimrx Cost 2026: $149 Explained - Dose-Flat Pricing, Discounts, Math",
     description:
-      "trimrx charges $179/month for semaglutide (list $299) and $259 for tirzepatide, no contract required. The GLP-1 discount structure and year-cost math, laid out.",
+      "trimrx charges $149/month for semaglutide, the same at every dose, and $259 for tirzepatide with no contract. The discount structure and year-cost math, laid out.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-08-09",
-    updatedAt: "2026-08-21",
+    updatedAt: "2026-09-15",
     heroColor: "#EEF4FB",
     author: "TreatmentsHub Staff",
     keyTakeaways: [
-      "trimrx runs $179/month for compounded semaglutide (discounted from a $299 list rate) and $259/month for tirzepatide, with medication, consultations and clinical support included.",
+      "trimrx runs $149/month for compounded semaglutide (a $140 discount applied, the same price at every dose) and $259/month for tirzepatide, with medication, consultations and clinical support included.",
       "No long-term contract: you pay the listed rate month-to-month with the right to stop at any renewal, or opt into a multi-month plan for a lower rate - chosen per renewal, not at signup.",
-      "Month-to-month for a year costs $2,148 on semaglutide, about $1,560 more than wellmedr's locked $588 - the honest price of flexibility.",
+      "Month-to-month for a year costs $1,788 on semaglutide, about $1,200 more than wellmedr's locked $588 - the honest price of flexibility.",
       "On tirzepatide, trimrx's $259 is beaten by $112/month at DirectMeds ($147 flat), a gap that compounds fast.",
     ],
     sections: [
       {
         heading: "The price, and the discount already inside it",
-        body: `<div class="qa"><strong>At a glance</strong>trimrx runs <strong>$179/month for compounded semaglutide</strong> - already discounted from a $299 list rate - and <strong>$259/month for tirzepatide</strong>, with medication, provider consultations and ongoing clinical support included. No long-term contract; multi-month plans lower the monthly further.</div><p>Self-pay, no insurance, 100% online. The number to anchor on: staying month-to-month costs $179 with total freedom to stop; committing several months at once trades some of that freedom for a lower rate - trimrx is unusual in letting you choose per renewal rather than at signup.</p>`,
+        body: `<div class="qa"><strong>At a glance</strong>trimrx runs <strong>$149/month for compounded semaglutide</strong> - a $140 discount already applied, the same price at every dose - and <strong>$259/month for tirzepatide</strong>, with medication, provider consultations and ongoing clinical support included. No long-term contract; multi-month plans lower the monthly further.</div><p>Self-pay, no insurance, 100% online. The number to anchor on: staying month-to-month costs $149 with total freedom to stop; committing several months at once trades some of that freedom for a lower rate - trimrx is unusual in letting you choose per renewal rather than at signup.</p>`,
       },
       {
-        heading: "Same sticker, different products: the $179 tier",
-        body: `<p>The market moved these two apart: trimrx's $179 first-month semaglutide now faces <a href="/weight-loss/reviews/medvi">Medvi</a> at a $99 promotional rate - and they sell nearly opposite products. Medvi spends the money on high-touch care: video visits, a dietician, coaching, a 4.4 Trustpilot record across 14,372 reviews. trimrx spends it on flexibility: no contract, optional discounts, a leaner clinical-support model. The choice is about what you value - the full head-to-head is in <a href="/weight-loss/medvi-vs-trimrx">Medvi vs trimrx</a>.</p><table><tr><th>Provider</th><th>Semaglutide</th><th>Tirzepatide</th><th>Model</th></tr><tr><td>wellmedr</td><td>$49/mo</td><td>$89/mo</td><td>12-mo lock for best rate</td></tr><tr><td>embody</td><td>$69/mo</td><td>$119/mo</td><td>Flat, no commitment</td></tr><tr><td>altRx</td><td>$89/mo</td><td>$149/mo</td><td>Flat + brand shelf</td></tr><tr><td>HealthRx</td><td>$99/mo*</td><td>from $179</td><td>12-mo prepaid</td></tr><tr><td>DirectMeds</td><td>$147/mo</td><td>$147/mo</td><td>Flat, drops option</td></tr><tr><td><strong>trimrx</strong></td><td><strong>$179/mo</strong></td><td><strong>$259/mo</strong></td><td>No contract, opt-in discounts</td></tr><tr><td>Medvi</td><td>$99/mo promo (reg. $199)</td><td>$166/mo promo (reg. $299)</td><td>All-inclusive high-touch</td></tr></table><p>*prepaid annual. One column worth a second look: on tirzepatide, trimrx's $259 is beaten by $112/month at DirectMeds - if tirzepatide is your medication, that gap compounds fast.</p>`,
+        heading: "Same tier, different products: trimrx vs Medvi",
+        body: `<p>The market moved these two apart: trimrx's $149 semaglutide faces <a href="/weight-loss/reviews/medvi">Medvi</a> at a $99 promotional rate - and they sell nearly opposite products. Medvi spends the money on high-touch care: video visits, a dietician, coaching, a 4.4 Trustpilot record across 14,372 reviews. trimrx spends it on flexibility: no contract, optional discounts, a leaner clinical-support model. The choice is about what you value - the full head-to-head is in <a href="/weight-loss/medvi-vs-trimrx">Medvi vs trimrx</a>.</p><table><tr><th>Provider</th><th>Semaglutide</th><th>Tirzepatide</th><th>Model</th></tr><tr><td>wellmedr</td><td>$49/mo</td><td>$89/mo</td><td>12-mo lock for best rate</td></tr><tr><td>embody</td><td>$69/mo</td><td>$119/mo</td><td>Flat, no commitment</td></tr><tr><td>altRx</td><td>$89/mo</td><td>$149/mo</td><td>Flat + brand shelf</td></tr><tr><td>HealthRx</td><td>$99/mo*</td><td>from $179</td><td>12-mo prepaid</td></tr><tr><td>DirectMeds</td><td>$147/mo</td><td>$147/mo</td><td>Flat, drops option</td></tr><tr><td><strong>trimrx</strong></td><td><strong>$149/mo</strong></td><td><strong>$259/mo</strong></td><td>No contract, opt-in discounts</td></tr><tr><td>Medvi</td><td>$99/mo promo (reg. $199)</td><td>$166/mo promo (reg. $299)</td><td>All-inclusive high-touch</td></tr></table><p>*prepaid annual. One column worth a second look: on tirzepatide, trimrx's $259 is beaten by $112/month at DirectMeds - if tirzepatide is your medication, that gap compounds fast.</p>`,
       },
       {
         heading: "How do trimrx's multi-month discounts work?",
-        body: `<p>trimrx's discount structure rewards commitment without demanding it, and the mechanics matter when budgeting. Month-to-month, you pay the listed $179/$259 with the right to stop at any renewal. Choose a multi-month plan and the per-month rate drops below the listed price - the exact rates are shown at signup and vary by plan length. The strategic play most patients miss: these aren't mutually exclusive forever. Start month-to-month while you and your clinician confirm the medication and dose suit you - the first 8-12 weeks answer that - then switch to a multi-month rate once the uncertainty is gone. You pay a small premium for exactly the months where flexibility has value, and stop paying it the moment it doesn't.</p><p>One number to keep handy while deciding: the titration timeline in <a href="/weight-loss/articles/how-long-for-semaglutide-to-work">how long semaglutide takes to work</a> - it tells you when your own uncertainty window closes.</p>`,
+        body: `<p>trimrx's discount structure rewards commitment without demanding it, and the mechanics matter when budgeting. Month-to-month, you pay the listed $149/$259 with the right to stop at any renewal. Choose a multi-month plan and the per-month rate drops below the listed price - the exact rates are shown at signup and vary by plan length. The strategic play most patients miss: these aren't mutually exclusive forever. Start month-to-month while you and your clinician confirm the medication and dose suit you - the first 8-12 weeks answer that - then switch to a multi-month rate once the uncertainty is gone. You pay a small premium for exactly the months where flexibility has value, and stop paying it the moment it doesn't.</p><p>One number to keep handy while deciding: the titration timeline in <a href="/weight-loss/articles/how-long-for-semaglutide-to-work">how long semaglutide takes to work</a> - it tells you when your own uncertainty window closes.</p>`,
       },
       {
         heading: "What does a flexible year at trimrx cost?",
-        body: `<p>Month-to-month for a year: <strong>$2,148</strong> (semaglutide). Against wellmedr's locked $588, flexibility costs about $1,560/year - the honest number to stare at. It's worth paying when your circumstances genuinely might change: income uncertainty, a possible switch to brand-name, or you're still confirming the medication suits you in the first months. It's not worth paying indefinitely: once you know you're staying, either take trimrx's own multi-month discount or move down-market. Flexibility you no longer need is just margin you're donating.</p><p class="cta-row"><a href="/weight-loss/reviews/trimrx">→ Current plans and multi-month rates in the trimrx review</a></p><p>This article is general information, not medical advice. Prices as listed at the time of writing - confirm current pricing on the provider's site.</p>`,
+        body: `<p>Month-to-month for a year: <strong>$1,788</strong> (semaglutide). Against wellmedr's locked $588, flexibility costs about $1,200/year - the honest number to stare at. It's worth paying when your circumstances genuinely might change: income uncertainty, a possible switch to brand-name, or you're still confirming the medication suits you in the first months. It's not worth paying indefinitely: once you know you're staying, either take trimrx's own multi-month discount or move down-market. Flexibility you no longer need is just margin you're donating.</p><p class="cta-row"><a href="/weight-loss/reviews/trimrx">→ Current plans and multi-month rates in the trimrx review</a></p><p>This article is general information, not medical advice. Prices as listed at the time of writing - confirm current pricing on the provider's site.</p>`,
       },
     ],
   },
@@ -292,11 +292,11 @@ export const brandClusterArticles: Article[] = [
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-08-12",
-    updatedAt: "2026-08-21",
+    updatedAt: "2026-09-15",
     heroColor: "#FBF3EE",
     author: "TreatmentsHub Staff",
     keyTakeaways: [
-      "People leave trimrx for four reasons: $179 feels high, the $259 tirzepatide is beatable, they want a guarantee or deeper support, or brand-name medication is now in the picture.",
+      "People leave trimrx for four reasons: $149 feels high, the $259 tirzepatide is beatable, they want a guarantee or deeper support, or brand-name medication is now in the picture.",
       "Cheaper semaglutide: wellmedr $49 (12-month lock), embody $69 flat with no commitment - the closest philosophical match - and HealthRx $99 on a $1,188 prepaid plan.",
       "Cheaper tirzepatide: DirectMeds charges a flat $147 for the same active ingredient - $1,344 less per year - with the group's only needle-free drops option.",
       "Switching is administratively cheap: a 5-10 minute intake at the new provider, no records transfer, and no exit fee because trimrx has no long-term contract.",
@@ -304,11 +304,11 @@ export const brandClusterArticles: Article[] = [
     sections: [
       {
         heading: "Diagnose the itch before switching",
-        body: `<p>trimrx's deal is specific - mid-market price, zero lock-in, solid clinical support. People shop for alternatives for exactly four reasons: the $179 feels high for what they use, the $259 tirzepatide is objectively beatable, they want a guarantee or deeper support, or brand-name medication has entered the picture. Each reason has one best answer, so let's take them in order rather than listing providers at random.</p>`,
+        body: `<p>trimrx's deal is specific - mid-market price, zero lock-in, solid clinical support. People shop for alternatives for exactly four reasons: the $149 feels high for what they use, the $259 tirzepatide is objectively beatable, they want a guarantee or deeper support, or brand-name medication has entered the picture. Each reason has one best answer, so let's take them in order rather than listing providers at random.</p>`,
       },
       {
-        heading: "\"$179 is too much\" → the sub-$100 tier",
-        body: `<p>Three credible ways down: <a href="/weight-loss/reviews/wellmedr">wellmedr</a> at <strong>$49/month</strong> (12-month lock for the best rate, coach and warranty included), <a href="/weight-loss/reviews/embody">embody</a> at <strong>$69 flat</strong> - keeping trimrx's no-commitment spirit while cutting the price by $110 - and <a href="/weight-loss/reviews/healthrx">HealthRx</a> at <strong>$99 prepaid</strong> ($1,188 upfront) with overnight cold-chain shipping. Note what each trades: wellmedr wants the year, embody runs leaner support, HealthRx wants the lump sum. embody is the closest philosophical match - see <a href="/weight-loss/embody-vs-trimrx">embody vs trimrx</a>.</p>`,
+        heading: "\"$149 is too much\" → the sub-$100 tier",
+        body: `<p>Three credible ways down: <a href="/weight-loss/reviews/wellmedr">wellmedr</a> at <strong>$49/month</strong> (12-month lock for the best rate, coach and warranty included), <a href="/weight-loss/reviews/embody">embody</a> at <strong>$69 flat</strong> - keeping trimrx's no-commitment spirit while cutting the price by $80 - and <a href="/weight-loss/reviews/healthrx">HealthRx</a> at <strong>$99 prepaid</strong> ($1,188 upfront) with overnight cold-chain shipping. Note what each trades: wellmedr wants the year, embody runs leaner support, HealthRx wants the lump sum. embody is the closest philosophical match - see <a href="/weight-loss/embody-vs-trimrx">embody vs trimrx</a>.</p>`,
       },
       {
         heading: "\"Tirzepatide is bleeding me\" → DirectMeds",
@@ -320,7 +320,7 @@ export const brandClusterArticles: Article[] = [
       },
       {
         heading: "\"I want more behind me\" → Medvi or SHED / \"brand-name\" → altRx",
-        body: `<p>For support: <a href="/weight-loss/reviews/medvi">Medvi</a> - now $99 promotional - swaps flexibility for depth - video visits, dietician, coaching, and 14,372 Trustpilot reviews averaging 4.4. <a href="/weight-loss/reviews/shed">SHED</a> ($199, 20% off month one) adds the market's only hard results promise: 5% of body weight in 120 days or your money back. For medication choice: <a href="/weight-loss/reviews/altrx">altRx</a> ($89/$149 flat) stocks the cheapest brand shelf here - Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 - with BNPL; the matchup is in <a href="/weight-loss/altrx-vs-trimrx">altRx vs trimrx</a>.</p><table><tr><th>If you want...</th><th>Go to</th><th>Price</th><th>You give up</th></tr><tr><td>Lowest price</td><td>wellmedr</td><td>$49/mo</td><td>12-mo commitment for best rate</td></tr><tr><td>Cheap + no commitment</td><td>embody</td><td>$69/mo</td><td>Leaner support</td></tr><tr><td>Overnight delivery</td><td>HealthRx</td><td>$99/mo*</td><td>$1,188 prepaid</td></tr><tr><td>Cheap tirzepatide / no needles</td><td>DirectMeds</td><td>$147/mo</td><td>Support depth</td></tr><tr><td>High-touch care</td><td>Medvi</td><td>$99/mo promo</td><td>Very little - currently cheaper than trimrx</td></tr><tr><td>A results guarantee</td><td>SHED</td><td>$199/mo</td><td>$20/mo more</td></tr></table><p>*prepaid annual plan.</p><p class="cta-row"><a href="/weight-loss/find-your-match">→ Or answer 6 questions and let the quiz sort it: find your match</a></p><p>This article is general information, not medical advice. Prices as listed at the time of writing.</p>`,
+        body: `<p>For support: <a href="/weight-loss/reviews/medvi">Medvi</a> - now $99 promotional - swaps flexibility for depth - video visits, dietician, coaching, and 14,372 Trustpilot reviews averaging 4.4. <a href="/weight-loss/reviews/shed">SHED</a> ($199, 20% off month one) adds the market's only hard results promise: 5% of body weight in 120 days or your money back. For medication choice: <a href="/weight-loss/reviews/altrx">altRx</a> ($89/$149 flat) stocks the cheapest brand shelf here - Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 - with BNPL; the matchup is in <a href="/weight-loss/altrx-vs-trimrx">altRx vs trimrx</a>.</p><table><tr><th>If you want...</th><th>Go to</th><th>Price</th><th>You give up</th></tr><tr><td>Lowest price</td><td>wellmedr</td><td>$49/mo</td><td>12-mo commitment for best rate</td></tr><tr><td>Cheap + no commitment</td><td>embody</td><td>$69/mo</td><td>Leaner support</td></tr><tr><td>Overnight delivery</td><td>HealthRx</td><td>$99/mo*</td><td>$1,188 prepaid</td></tr><tr><td>Cheap tirzepatide / no needles</td><td>DirectMeds</td><td>$147/mo</td><td>Support depth</td></tr><tr><td>High-touch care</td><td>Medvi</td><td>$99/mo promo</td><td>Very little - currently cheaper than trimrx</td></tr><tr><td>A results guarantee</td><td>SHED</td><td>$199/mo</td><td>$50/mo more</td></tr></table><p>*prepaid annual plan.</p><p class="cta-row"><a href="/weight-loss/find-your-match">→ Or answer 6 questions and let the quiz sort it: find your match</a></p><p>This article is general information, not medical advice. Prices as listed at the time of writing.</p>`,
       },
     ],
   },
@@ -821,7 +821,7 @@ export const brandClusterArticles: Article[] = [
       },
       {
         heading: "Does Sprout's pricing hold at checkout?",
-        body: `<p>Sprout's published structure is simple and holds: compounded semaglutide from <strong>$149/month</strong>, compounded tirzepatide from <strong>$199/month</strong>, and - genuinely unusual for a mid-tier provider - brand-name <strong>Wegovy from $1,799/month</strong>. A standing offer takes <strong>$200 off the first month</strong>. No teaser rate that balloons after month one (that's <a href="/weight-loss/sprout-vs-trimrx">trimrx's structure</a>, where $179 becomes $299), though Sprout publishes fewer plan-term details than rivals - commitment and cancellation specifics are worth confirming at checkout.</p>`,
+        body: `<p>Sprout's published structure is simple and holds: compounded semaglutide from <strong>$149/month</strong>, compounded tirzepatide from <strong>$199/month</strong>, and - genuinely unusual for a mid-tier provider - brand-name <strong>Wegovy from $1,799/month</strong>. A standing offer takes <strong>$200 off the first month</strong>. No teaser rate that balloons after month one, though Sprout publishes fewer plan-term details than rivals - commitment and cancellation specifics are worth confirming at checkout.</p>`,
       },
       {
         heading: "So - is Sprout legit?",
@@ -843,7 +843,7 @@ export const brandClusterArticles: Article[] = [
     keyTakeaways: [
       "Sprout costs $149/month for compounded semaglutide, $199/month for compounded tirzepatide, or from $1,799/month for brand-name Wegovy, with a standing $200 off the first month.",
       "First-year math with the discount: $1,588 for semaglutide, $2,188 for tirzepatide, and $21,388+ for Wegovy - which altRx lists $220/month cheaper at $1,579.",
-      "On semaglutide, Sprout prices seventh of nine - wellmedr $49, embody $69, altRx $89, Medvi $99 promo, HealthRx $99 prepaid and DirectMeds $147 all undercut it.",
+      "On semaglutide, Sprout prices tied-seventh of nine with trimrx ($149) - wellmedr $49, embody $69, altRx $89, Medvi $99 promo, HealthRx $99 prepaid and DirectMeds $147 all undercut it.",
       "The premium buys 2-day fulfillment, the option to move to brand-name Wegovy without switching providers, and fast named-human support - if none of those matter, the value tier wins.",
     ],
     sections: [
@@ -857,7 +857,7 @@ export const brandClusterArticles: Article[] = [
       },
       {
         heading: "How does Sprout's $149 compare to other providers?",
-        body: `<p>Against every provider's real listed semaglutide price: <a href="/weight-loss/reviews/wellmedr">wellmedr</a> $49 (12-month plan), <a href="/weight-loss/reviews/embody">embody</a> $69 flat, <a href="/weight-loss/reviews/altrx">altRx</a> $89, <a href="/weight-loss/reviews/medvi">Medvi</a> $99 promo, <a href="/weight-loss/reviews/healthrx">HealthRx</a> $99 prepaid, <a href="/weight-loss/reviews/directmeds">DirectMeds</a> $147 - then Sprout at $149, <a href="/weight-loss/reviews/trimrx">trimrx</a> at $179 first month ($299 after), and <a href="/weight-loss/reviews/shed">SHED</a> at $199 with coaching. Sprout prices seventh of nine on the same molecule.</p><p>So what does the premium over the value tier buy? Two concrete things and one soft one: fulfillment within 2 days (only embody, DirectMeds and HealthRx match or beat that), the option to move to brand-name Wegovy without switching providers, and the personalized-plan onboarding its reviews praise. If none of those move you, the <a href="/weight-loss/cheapest-glp1">cheapest-GLP-1 index</a> is the better shopping list.</p>`,
+        body: `<p>Against every provider's real listed semaglutide price: <a href="/weight-loss/reviews/wellmedr">wellmedr</a> $49 (12-month plan), <a href="/weight-loss/reviews/embody">embody</a> $69 flat, <a href="/weight-loss/reviews/altrx">altRx</a> $89, <a href="/weight-loss/reviews/medvi">Medvi</a> $99 promo, <a href="/weight-loss/reviews/healthrx">HealthRx</a> $99 prepaid, <a href="/weight-loss/reviews/directmeds">DirectMeds</a> $147 - then Sprout and <a href="/weight-loss/reviews/trimrx">trimrx</a> tied at $149, and <a href="/weight-loss/reviews/shed">SHED</a> at $199 with coaching. Sprout prices tied-seventh of nine on the same molecule.</p><p>So what does the premium over the value tier buy? Two concrete things and one soft one: fulfillment within 2 days (only embody, DirectMeds and HealthRx match or beat that), the option to move to brand-name Wegovy without switching providers, and the personalized-plan onboarding its reviews praise. If none of those move you, the <a href="/weight-loss/cheapest-glp1">cheapest-GLP-1 index</a> is the better shopping list.</p>`,
       },
       {
         heading: "Worth it, or walk?",

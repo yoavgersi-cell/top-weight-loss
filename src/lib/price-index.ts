@@ -91,7 +91,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "trimrx",
     edge: "Custom dosing with unlimited provider check-ins",
-    semaglutide: { price: "$179", note: "first month; reg. $299" },
+    semaglutide: { price: "$149", note: "same price at every dose; $140 discount applied" },
     tirzepatide: { price: "$259", note: "per month" },
     shipping: "Free tracked delivery, often next-day",
     commitment: "None - month to month",
