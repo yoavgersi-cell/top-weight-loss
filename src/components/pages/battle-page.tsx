@@ -20,6 +20,7 @@ import { LicensedTelehealthBadge } from "@/components/licensed-badge";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
 import { TrustDisclosure } from "@/components/medical-sources";
+import { ExpertByline } from "@/components/expert-byline";
 import { SourcesMethodology } from "@/components/sources-methodology";
 import { TrustProofBar } from "@/components/trust-proof-bar";
 import { ProductCarousel } from "@/components/product-carousel";
@@ -664,6 +665,15 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
   const battleUpdatedAt = latestUpdate(battle.updatedAt);
 
+  // Named author for the byline + schema (same expert the article and review
+  // templates credit), branded for the current context.
+  const battleAuthor = config.experts?.[0]
+    ? {
+        ...config.experts[0],
+        name: config.experts[0].name.replace(/TopWeightLoss/gi, ctx.brandTeam.replace(/\s+Team$/i, "")),
+      }
+    : null;
+
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -671,7 +681,14 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     description: battle.description,
     datePublished: "2026-06-01",
     dateModified: battleUpdatedAt,
-    author: { "@type": "Organization", name: ctx.brandTeam, url: ctx.origin },
+    author: battleAuthor
+      ? {
+          "@type": "Person",
+          name: battleAuthor.credentials ? `${battleAuthor.name}, ${battleAuthor.credentials}` : battleAuthor.name,
+          jobTitle: battleAuthor.role,
+          url: canonicalUrl(ctx, "/about"),
+        }
+      : { "@type": "Organization", name: ctx.brandTeam, url: ctx.origin },
     publisher: { "@type": "Organization", name: ctx.brandDomain, url: ctx.origin },
     mainEntityOfPage: canonicalUrl(ctx, `/${battle.slug}`),
   };
@@ -1341,6 +1358,11 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               Here&rsquo;s the short version
             </p>
             <ReadableProse text={battle.intro} paragraphClassName="text-[16px] leading-[1.85] text-gray-600" />
+            {battleAuthor && (
+              <div className="mt-5">
+                <ExpertByline expert={battleAuthor} label="Analysis by" href={hubLink(ctx, "/about")} />
+              </div>
+            )}
           </div>
 
           {/* ───── EARLY QUICK ANSWER ─────
