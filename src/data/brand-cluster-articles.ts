@@ -78,7 +78,7 @@ export const brandClusterArticles: Article[] = [
     slug: "medvi-alternatives",
     title: "Medvi Alternatives 2026: 6 Real Options, Priced & Compared",
     description:
-      "Six alternatives to Medvi's all-inclusive GLP-1 program (now $99/month promotional) - from wellmedr at $49 to HealthRx's $99 prepaid plan - with the honest trade-off each one asks you to make.",
+      "Six alternatives to Medvi's all-inclusive GLP-1 program (now $99/month promo) - from wellmedr at $49 to HealthRx's $99 prepaid plan - and each trade-off.",
     category: "Comparison",
     readTime: "7 min read",
     publishedAt: "2026-08-10",
@@ -616,7 +616,7 @@ export const brandClusterArticles: Article[] = [
     slug: "healthrx-cost",
     title: "HealthRx Cost 2026: $99/Month Is Really $1,188 - The Math",
     description:
-      "HealthRx's $99/month semaglutide means $1,188 prepaid at checkout for 12 months of GLP-1 care. When that beats monthly rivals, when it doesn't, and what's inside the price.",
+      "HealthRx's $99/month semaglutide means $1,188 prepaid at checkout for 12 months. When that beats monthly rivals, when it doesn't, and what's inside the price.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-08-21",
@@ -646,7 +646,7 @@ export const brandClusterArticles: Article[] = [
     slug: "healthrx-alternatives",
     title: "HealthRx Alternatives 2026: Escaping the $1,188 Prepay",
     description:
-      "Six HealthRx alternatives for anyone unready to prepay $1,188 for a year of GLP-1 treatment - from embody's $69 flat with no commitment to Medvi's 14,000-review support program.",
+      "Six HealthRx alternatives if you won't prepay $1,188 for a year of GLP-1 treatment - from embody's $69 flat with no commitment to Medvi's 14,000-review program.",
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-08-21",
@@ -677,7 +677,7 @@ export const brandClusterArticles: Article[] = [
     slug: "is-sprout-legit",
     title: "Is Sprout Legit? An Honest Audit (2026)",
     description:
-      "Sprout sells compounded GLP-1s - semaglutide from $149/month - with 2-day fulfillment and a brand-name Wegovy option. We audited the process, the reviews and the fine print.",
+      "Sprout sells compounded GLP-1s - semaglutide from $149/month - with 2-day fulfillment and a brand-name Wegovy option. We audited the process and fine print.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-23",
@@ -707,7 +707,7 @@ export const brandClusterArticles: Article[] = [
     slug: "sprout-cost",
     title: "Sprout Cost 2026: The $149/Month Math Explained",
     description:
-      "Sprout's GLP-1 pricing: $149/month for compounded semaglutide, $199 for tirzepatide and $1,799 for brand-name Wegovy, with $200 off month one. The full-year math, honestly.",
+      "Sprout's GLP-1 pricing: $149/month for compounded semaglutide, $199 for tirzepatide and $1,799 for brand-name Wegovy, with $200 off month one. The full math.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-23",

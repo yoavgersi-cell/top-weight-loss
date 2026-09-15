@@ -16,7 +16,7 @@ import { ExpertByline } from "@/components/expert-byline";
 import { LastUpdated } from "@/components/last-updated";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
-import { TrustDisclosure } from "@/components/medical-sources";
+import { TrustDisclosure, MedicalSources } from "@/components/medical-sources";
 import { SourcesMethodology } from "@/components/sources-methodology";
 import { ProductCarousel } from "@/components/product-carousel";
 import { notFound } from "next/navigation";
@@ -406,6 +406,7 @@ export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Me
       description: pageDescription,
       url,
       type: "article",
+      modifiedTime: latestUpdate(review.updatedAt),
     },
   };
 }
@@ -454,6 +455,36 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // Review/AggregateRating Product schema deliberately removed - see the note
   // on the editorial rating above. The visible on-page Trustpilot score and
   // editorial rating stay; we just don't request star rich snippets.
+
+  // Article schema (no rating, no price) - the same shape the article and
+  // battle templates emit. It gives the page a machine-readable headline,
+  // author, publisher and - most importantly for freshness signals - a
+  // dateModified that tracks the review's own updatedAt. `about` names the
+  // reviewed provider so the entity relationship is explicit for LLM/AI
+  // answer engines without requesting review stars.
+  const reviewUpdatedAt = latestUpdate(review.updatedAt);
+  const author = config.experts?.[0];
+  const reviewArticleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: `${provider.name} Review 2026: Cost, Results & Is It Worth It?`,
+    description: review.shortSummary,
+    dateModified: reviewUpdatedAt,
+    author: author
+      ? {
+          "@type": "Person",
+          name: (author.credentials ? `${author.name}, ${author.credentials}` : author.name).replace(
+            /TopWeightLoss/gi,
+            ctx.brandTeam.replace(/\s+Team$/i, "")
+          ),
+          jobTitle: author.role,
+          url: canonicalUrl(ctx, "/about"),
+        }
+      : { "@type": "Organization", name: ctx.brandTeam, url: ctx.origin },
+    publisher: { "@type": "Organization", name: ctx.brandDomain, url: ctx.origin },
+    about: { "@type": "Organization", name: provider.name },
+    mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl(ctx, `/reviews/${slug}`) },
+  };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -523,6 +554,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewArticleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
@@ -550,7 +582,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 <p className="mt-0.5 text-[14px] text-gray-700">
                   {provider.tagline}
                 </p>
-                <LastUpdated date={latestUpdate(review.updatedAt)} className="mt-1" />
+                <LastUpdated date={reviewUpdatedAt} className="mt-1" />
                 {editorial && (
                   <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1">
                     <div className="flex gap-0.5">
@@ -664,6 +696,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   name: config.experts[0].name.replace(/TopWeightLoss/gi, ctx.brandTeam.replace(/\s+Team$/i, "")),
                 }}
                 label="Reviewed by"
+                href={hubLink(ctx, "/about")}
               />
             </div>
           )}
@@ -1115,6 +1148,10 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           headingLabel={provider.name}
           kind="review"
         />
+
+        {/* Authoritative medical citations (FDA / NEJM / NIH) - the same YMYL
+            grounding block the article template carries. */}
+        <MedicalSources vertical={ctx.vertical} />
       </div>
 
       {/* Mobile-only promo popup - shown on the provider's own review page when
