@@ -770,6 +770,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-26",
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "Mounjaro (tirzepatide) targets GLP-1 and GIP receptors; Ozempic (semaglutide) targets GLP-1 only. Both are FDA-approved for type 2 diabetes; their weight-loss versions are Zepbound and Wegovy.",
+      "In trials, Mounjaro reached up to 22.5% average body-weight loss (SURMOUNT, 72 weeks) vs ~15% for semaglutide (STEP, 68 weeks) - separate trials, not a head-to-head.",
+      "Side effects are the same class for both (nausea, vomiting, diarrhea, constipation), worst during dose escalation; both carry the thyroid C-cell boxed warning.",
+      "Verified compounded prices: semaglutide from $49/month (wellmedr) and tirzepatide from $89/month; brand pens run four figures, e.g. Ozempic at $1,149/month at altRx.",
+    ],
     sections: [
       {
         heading: "What is the difference between Mounjaro and Ozempic?",
@@ -916,6 +922,12 @@ export const articles: Article[] = [
     updatedAt: "2026-08-26",
     heroColor: "#EEF4FB",
     author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "Zepbound (tirzepatide) and Wegovy (semaglutide) are the only two GLP-1-based medications FDA-approved specifically for chronic weight management.",
+      "Zepbound produced up to 22.5% average weight loss in SURMOUNT (72 weeks) vs ~15% for Wegovy in STEP (68 weeks) - different trials, so compare with caution.",
+      "Verified brand prices: altRx lists Zepbound at $1,249/month and Wegovy at $1,579; Sprout lists Wegovy at $1,799.",
+      "Compounded versions of the same active ingredients cost far less: semaglutide from $49/month and tirzepatide from $89/month at wellmedr, with embody ($69/$119) and altRx ($89/$149) close behind.",
+    ],
     sections: [
       {
         heading: "What is the difference between Zepbound and Wegovy?",
@@ -1571,6 +1583,11 @@ export const articles: Article[] = [
     updatedAt: "2026-08-19",
     heroColor: "#EEF4FB",
     author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Yes - Embody is LegitScript-certified, works with US-based 503A compounding pharmacies, and requires a licensed medical review before any prescription is issued.",
+      "Pricing is flat and transparent: compounded semaglutide from $69/month and tirzepatide from $119/month, with the doctor review, supplies and shipping included.",
+      "Trade-offs: compounded medication only (not brand-name, and compounded drugs are not FDA-approved), injectables only, and doctor approval is required after the online intake.",
+    ],
     sections: [
       {
         heading: "What is Embody?",
@@ -1605,6 +1622,11 @@ export const articles: Article[] = [
     updatedAt: "2026-08-19",
     heroColor: "#F0FAF5",
     author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "Embody charges a flat $69/month for compounded semaglutide and $119/month for compounded tirzepatide - no insurance, no membership fee, no hidden charges.",
+      "The price includes the medication, doctor review, injection supplies and shipping; if a prescription is not approved, Embody refunds in full.",
+      "At $69, Embody is among the most affordable GLP-1 options online - altRx, for comparison, starts at $89 but adds brand-name options.",
+    ],
     sections: [
       {
         heading: "How much does Embody cost?",
@@ -1635,6 +1657,11 @@ export const articles: Article[] = [
     updatedAt: "2026-08-19",
     heroColor: "#FBF3EE",
     author: "TreatmentsHub Staff",
+    keyTakeaways: [
+      "The main reasons to look past Embody: it is compounded-only (no brand-name), injectables only, and some people want a different treatment mix or faster support.",
+      "altRx is the closest alternative for medication choice - compounded semaglutide from $89 and tirzepatide from $149, plus brand-name options like Zepbound and Wegovy.",
+      "Choose by weighing price against what is included (labs, supplies, shipping), delivery speed, compounded vs brand-name, and how easy it is to pause or cancel.",
+    ],
     sections: [
       {
         heading: "Why look for an Embody alternative?",
