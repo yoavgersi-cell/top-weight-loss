@@ -345,16 +345,7 @@ export const isVertical = (id: string): boolean => VERTICAL_IDS.includes(id);
 // (providers, comparisons, etc.) while still being unpublished - it renders for
 // preview but stays out of the hub card, the sitemap, and the index until its
 // affiliate data is filled in and it's added here. Add a vertical id to launch it.
-// Temporarily narrowed to weight-loss only (Sep 2026). During the topweightloss
-// -> treatmentshub domain migration the young hub domain was spreading thin
-// across five verticals - Google left ~135 other-vertical pages "Discovered,
-// not indexed" and was slow to trust the domain. Concentrating the index +
-// sitemap + nav on the one niche that already ranks (weight-loss, incl. on
-// Bing) sharpens the topical signal so authority builds faster; the other
-// verticals are phased back in here one at a time as the domain matures. Their
-// URLs still resolve (served noindex via VERTICAL_IDS, no 404s), and their
-// homepage cards stay visible as inert "coming soon" tiles.
-export const PUBLISHED_VERTICALS = ["weight-loss"];
+export const PUBLISHED_VERTICALS = ["weight-loss", "hair-loss", "trt", "hrt", "online-therapy"];
 export const isPublishedVertical = (id: string): boolean => PUBLISHED_VERTICALS.includes(id);
 
 // Retired verticals: off-theme categories we've pulled from the hub (Sep 2026:
