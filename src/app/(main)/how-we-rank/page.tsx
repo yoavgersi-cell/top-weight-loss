@@ -67,7 +67,7 @@ const SOURCES = [
 
 export default async function HowWeRankPage() {
   const config = await getConfig();
-  const experts = config.experts ?? [];
+  const experts = (config.experts ?? []).map((e) => ({ ...e, name: e.name.replace(/TopWeightLoss/gi, "TreatmentsHub") }));
 
   const webPageSchema = {
     "@context": "https://schema.org",

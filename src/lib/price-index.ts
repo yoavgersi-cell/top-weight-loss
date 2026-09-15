@@ -108,6 +108,36 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   },
 ];
 
+// Date of the last operator verification pass over the index above. Bump it
+// whenever a row is re-checked or changed - the statistics page prints it as
+// the dataset's "verified as of" date and emits it as schema dateModified.
+export const PRICE_INDEX_VERIFIED = "2026-09-15";
+
+// Public change log for the index. One entry per operator-verified change,
+// newest first, describing what our listing said before and after. Only add
+// an entry when the underlying row actually changed after verification - this
+// log is published on the statistics page as the citable record.
+export const PRICE_CHANGELOG: { date: string; providerId: string; change: string }[] = [
+  {
+    date: "2026-09-15",
+    providerId: "trimrx",
+    change:
+      "Compounded semaglutide now listed at $149/month, the same price at every dose ($140 discount applied). Previously listed as $179 for the first month and $299 regular thereafter. Tirzepatide unchanged at $259/month.",
+  },
+  {
+    date: "2026-09-14",
+    providerId: "altrx",
+    change:
+      "Promotional $89/month semaglutide and $149/month tirzepatide rates confirmed; provider lists the sale as ending September 20. Regular rates remain $199 and $299.",
+  },
+  {
+    date: "2026-09-14",
+    providerId: "wellmedr",
+    change:
+      "Compounded semaglutide now listed at $49/month on the 12-month plan (previously listed $59) and tirzepatide at $89/month (previously $99). Same price at every dose.",
+  },
+];
+
 // Brand-name list prices actually published on our providers' brand shelves -
 // used for the brand-vs-compounded math. Real figures only.
 export const BRAND_SHELF: { drug: string; ingredient: string; price: string; soldAt: string }[] = [
