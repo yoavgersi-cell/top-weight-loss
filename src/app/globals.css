@@ -18,22 +18,31 @@ body {
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
 }
 
-/* Hub vs legacy brand swap. `data-hub` is set (pre-paint) on <html> by an inline
-   script when served from the treatmentshub host, so the shared header/footer
-   show the TreatmentsHub brand with no flash, while the same cached HTML still
-   renders the TopWeightLoss brand on the legacy domain. */
-.hub-brand,
-.hub-name {
-  display: none !important;
-}
-html[data-hub] .legacy-brand,
-html[data-hub] .legacy-name {
-  display: none !important;
-}
-html[data-hub] .hub-brand {
+/* Hub vs legacy brand swap. The TreatmentsHub brand is the DEFAULT in the
+   server-rendered HTML - treatmentshub.com is the primary domain post-migration,
+   so crawlers and no-JS clients see the right brand without waiting for a
+   script. `data-legacy` is set (pre-paint) on <html> by an inline script only
+   when served from the legacy topweightloss.io host (which now 301s to the hub
+   anyway), swapping the TopWeightLoss brand in there. Same cached HTML serves
+   both domains. */
+.hub-brand {
   display: inline-flex !important;
 }
-html[data-hub] .hub-name {
+.hub-name {
+  display: inline !important;
+}
+.legacy-brand,
+.legacy-name {
+  display: none !important;
+}
+html[data-legacy] .hub-brand,
+html[data-legacy] .hub-name {
+  display: none !important;
+}
+html[data-legacy] .legacy-brand {
+  display: flex !important;
+}
+html[data-legacy] .legacy-name {
   display: inline !important;
 }
 
