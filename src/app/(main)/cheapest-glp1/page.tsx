@@ -187,8 +187,8 @@ export default async function CheapestGlp1Page() {
                   ["Medvi", "$99 x 12 (promo; reg. $199) - all-inclusive", "$1,188", "$12,600"],
                   ["HealthRx", "$1,188 prepaid at checkout ($99/mo effective)", "$1,188", "$12,600"],
                   ["DirectMeds", "$147 x 12, flat at every dose", "$1,764", "$12,024"],
+                  ["trimrx", "$149 x 12, same price at every dose", "$1,788", "$12,000"],
                   ["SHED", "$159 first month (20% off) + $199 x 11", "$2,348", "$11,440"],
-                  ["trimrx", "$179 first month + $299 x 11 regular", "$3,468", "$10,320"],
                 ].map(([name, math, total, saved], i) => (
                   <tr key={i} className="border-b border-gray-100 last:border-0">
                     <td className="px-4 py-3.5 font-bold text-[#191919]">{name}</td>
@@ -202,7 +202,7 @@ export default async function CheapestGlp1Page() {
           </div>
           <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">
             Assumes published prices hold for 12 months and promo conditions apply exactly as listed
-            (trimrx&rsquo;s $179 and SHED&rsquo;s 20% off are month-one rates; embody&rsquo;s $69 is
+            (SHED&rsquo;s 20% off is a month-one rate; embody&rsquo;s $69 is
             promotional against $79 regular). Savings compare against Ozempic&rsquo;s lowest listed
             brand price on our providers&rsquo; shelves ($1,149/month at altRx; wellmedr lists it at
             $1,399). What&rsquo;s bundled differs - Medvi and SHED include coaching layers others

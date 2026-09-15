@@ -221,7 +221,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "Is trimrx a subscription with a contract?",
       answer:
-        "No long-term commitment - plans run month to month. Note that the $179 semaglutide price is a first-month rate (regularly $299); compounded tirzepatide runs $259/month, with custom dosing and unlimited provider check-ins included.",
+        "No long-term commitment - plans run month to month. The $149 semaglutide price is the same at every dose; compounded tirzepatide runs $259/month, with custom dosing and unlimited provider check-ins included.",
     },
     {
       question: "What medications does trimrx offer?",

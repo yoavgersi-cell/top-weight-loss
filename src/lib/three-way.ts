@@ -54,7 +54,7 @@ export const TRIO_FACTS: Record<string, TrioFacts> = {
   },
   trimrx: {
     id: "trimrx",
-    semaglutide: "$179/mo (reg. $299)",
+    semaglutide: "$149/mo, same at every dose",
     tirzepatide: "$259/mo",
     billing: "Monthly - no long-term contract; multi-month discounts",
     shipping: "Free home delivery",
@@ -276,23 +276,23 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     slug: "wellmedr-vs-embody-vs-trimrx",
     providerIds: ["wellmedr", "embody", "trimrx"],
     title: "wellmedr vs embody vs trimrx: Price, Freedom, Flexibility",
-    metaTitle: "wellmedr vs embody vs trimrx (2026): $49 vs $69 vs $179",
+    metaTitle: "wellmedr vs embody vs trimrx (2026): $49 vs $69 vs $149",
     description:
-      "wellmedr ($49, 12-month plan), embody ($69 flat) and trimrx ($179, no contract) compared on real GLP-1 prices, commitment terms, shipping and support.",
+      "wellmedr ($49, 12-month plan), embody ($69 flat) and trimrx ($149, no contract) compared on real GLP-1 prices, commitment terms, shipping and support.",
     intro:
-      "This trio spans the market's price range - $49 to $179 for the same compounded semaglutide - which makes it a clean test of what the extra money buys. The answer: commitment structure. wellmedr trades a 12-month plan for the lowest price, embody charges $10 more for total freedom, and trimrx charges a premium for a no-contract model with optional multi-month discounts and closer clinical guidance.",
+      "This trio spans the market's price range - $49 to $149 for the same compounded semaglutide - which makes it a clean test of what the extra money buys. The answer: commitment structure. wellmedr trades a 12-month plan for the lowest price, embody charges $10 more for total freedom, and trimrx charges a premium for a no-contract model with optional multi-month discounts and closer clinical guidance.",
     verdict:
-      "For most budget-driven shoppers this comes down to wellmedr vs embody: $49 with a year's commitment, or $69 with none - both legitimate, both dose-flat. trimrx earns its $179 only if its specific mix matters to you: month-to-month freedom plus ongoing clinical support through dose changes, without the budget tier's leaner service. If you can't articulate why you'd pay the difference, don't.",
+      "For most budget-driven shoppers this comes down to wellmedr vs embody: $49 with a year's commitment, or $69 with none - both legitimate, both dose-flat. trimrx earns its $149 only if its specific mix matters to you: month-to-month freedom plus ongoing clinical support through dose changes, without the budget tier's leaner service. If you can't articulate why you'd pay the difference, don't.",
     faqs: [
       {
         question: "Why does trimrx cost more than wellmedr and embody?",
         answer:
-          "trimrx prices at $179/month (regularly $299) with no long-term contract, multi-month discounts, and clinical support included through treatment. wellmedr ($49 on a 12-month plan) and embody ($69 flat) run leaner support models at lower prices. All three prescribe the same compounded semaglutide after a licensed-provider review.",
+          "trimrx prices at $149/month, the same at every dose, with no long-term contract, multi-month discounts, and clinical support included through treatment. wellmedr ($49 on a 12-month plan) and embody ($69 flat) run leaner support models at lower prices. All three prescribe the same compounded semaglutide after a licensed-provider review.",
       },
       {
         question: "Which is best if I don't want any commitment?",
         answer:
-          "embody - its $69/month is flat with no commitment, and it refunds you in full if a provider doesn't approve treatment. trimrx is also month-to-month with no contract, at $179. wellmedr's best rate ($49) locks on a 12-month plan.",
+          "embody - its $69/month is flat with no commitment, and it refunds you in full if a provider doesn't approve treatment. trimrx is also month-to-month with no contract, at $149. wellmedr's best rate ($49) locks on a 12-month plan.",
       },
       {
         question: "Do any of the three offer a guarantee?",

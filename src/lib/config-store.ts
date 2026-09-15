@@ -1132,17 +1132,17 @@ const defaultReviews: ReviewData[] = [
   {
     slug: "trimrx",
     providerId: "trimrx",
-    updatedAt: "2026-08-22",
-    shortSummary: "Telehealth GLP-1 program built around custom dosing and unlimited provider check-ins - compounded semaglutide $179 for the first month and tirzepatide $259/month. Rated 3.6 across 5,497 Trustpilot reviews.",
-    reviewIntro: "trimrx is a telehealth GLP-1 program built around custom dosing: compounded semaglutide at $179 for the first month (regularly $299) and compounded tirzepatide at $259/month, with the consultation, tracked delivery, and unlimited provider check-ins all included in the price. The flow is the standard cash-pay one - a free 2-minute assessment, review by a qualified doctor (with a telehealth call if more information is needed), then free tracked shipping that often arrives as soon as the next day. On Trustpilot, trimrx averages 3.6 across 5,497 reviews - a genuinely mixed record. The positive end is vivid: 'I have lost 41 lbs... My high blood pressure is gone,' writes one tirzepatide patient, and another praises a rep who was 'very kind and helpful' even as the reviewer ultimately chose their own doctor. But a 3.6 means a meaningful minority report problems, and it's the weakest published average among the affiliate providers in our ranking. Read both ends of its recent reviews before signing up - and weigh the price against the $49-$149 entry tier at wellmedr, altRx and embody.",
+    updatedAt: "2026-09-15",
+    shortSummary: "Telehealth GLP-1 program built around custom dosing and unlimited provider check-ins - compounded semaglutide $149/month, the same at every dose, and tirzepatide $259/month. Rated 3.6 across 5,497 Trustpilot reviews.",
+    reviewIntro: "trimrx is a telehealth GLP-1 program built around custom dosing: compounded semaglutide at $149/month (a $140 discount applied, the same price at every dose) and compounded tirzepatide at $259/month, with the consultation, tracked delivery, and unlimited provider check-ins all included in the price. The flow is the standard cash-pay one - a free 2-minute assessment, review by a qualified doctor (with a telehealth call if more information is needed), then free tracked shipping that often arrives as soon as the next day. On Trustpilot, trimrx averages 3.6 across 5,497 reviews - a genuinely mixed record. The positive end is vivid: 'I have lost 41 lbs... My high blood pressure is gone,' writes one tirzepatide patient, and another praises a rep who was 'very kind and helpful' even as the reviewer ultimately chose their own doctor. But a 3.6 means a meaningful minority report problems, and it's the weakest published average among the affiliate providers in our ranking. Read both ends of its recent reviews before signing up - and weigh the price against the $49-$89 entry tier at wellmedr, embody and altRx.",
     keyFeatures: [
-      "Compounded semaglutide $179 first month (regularly $299)",
+      "Compounded semaglutide $149/month - same price at every dose",
       "Compounded tirzepatide $259/month",
       "Custom dosing with unlimited provider check-ins",
       "Free consultation and free tracked delivery - often next-day",
       "No long-term commitment required"
     ],
-    pricingSummary: "trimrx prices compounded semaglutide at $179 for the first month (regularly $299) and compounded tirzepatide at $259/month. The price includes the medical consultation, custom dosing with unlimited provider check-ins, and free tracked delivery - no insurance needed and no long-term contract. Positioning-wise it sits above the $49-$149 entry tier at wellmedr, altRx and embody: the pitch is the tailored-dosing care model, not the lowest sticker price.",
+    pricingSummary: "trimrx prices compounded semaglutide at $149/month ($140 discount applied, the same price at every dose) and compounded tirzepatide at $259/month. The price includes the medical consultation, custom dosing with unlimited provider check-ins, and free tracked delivery - no insurance needed and no long-term contract. Positioning-wise it sits above the $49-$89 entry tier at wellmedr, embody and altRx: the pitch is the tailored-dosing care model, not the lowest sticker price.",
     treatmentOptions: [
       "Compounded semaglutide (GLP-1) injection",
       "Compounded tirzepatide (GLP-1 + GIP) injection",
@@ -1158,8 +1158,8 @@ const defaultReviews: ReviewData[] = [
     ],
     cons: [
       "3.6 Trustpilot average across 5,497 reviews - the weakest published score among providers we rank",
-      "Mid-tier pricing: $179 first month / $259 tirzepatide vs $49-$149 at wellmedr, altRx and embody",
-      "The $179 semaglutide price is a first-month rate (regularly $299)",
+      "Mid-tier pricing: $149 semaglutide / $259 tirzepatide vs $49-$89 at wellmedr, embody and altRx",
+      "Tirzepatide at $259 is undercut by DirectMeds ($147), embody ($119) and wellmedr ($89)",
       "Compounded only - no brand-name Ozempic/Wegovy/Zepbound option",
       "No formal coaching or dietician layer - support is provider check-ins"
     ],
@@ -1168,7 +1168,7 @@ const defaultReviews: ReviewData[] = [
       "Anyone who values unlimited provider check-ins between refills",
       "Those who've read the mixed reviews and value the care model over price"
     ],
-    finalVerdict: "trimrx's real differentiator is the care model - custom dosing with unlimited provider check-ins, a free consultation, and tracked delivery that often lands next-day - not the sticker price, which at $179 for the first month of semaglutide and $259/month for tirzepatide sits well above the $49-$149 tier at wellmedr, altRx and embody. Its 3.6 across 5,497 Trustpilot reviews is the honest sticking point: the successes in there are striking (41 lbs down, blood pressure resolved), but it's the weakest published average in our ranking, so go in with open eyes. If tailored dosing and hands-on check-ins are what you're paying for, trimrx delivers them; if price or public track record decides it, compare it against embody and wellmedr head-to-head first.",
+    finalVerdict: "trimrx's real differentiator is the care model - custom dosing with unlimited provider check-ins, a free consultation, and tracked delivery that often lands next-day - not the sticker price, which at $149/month for semaglutide and $259/month for tirzepatide sits above the $49-$89 tier at wellmedr, embody and altRx. Its 3.6 across 5,497 Trustpilot reviews is the honest sticking point: the successes in there are striking (41 lbs down, blood pressure resolved), but it's the weakest published average in our ranking, so go in with open eyes. If tailored dosing and hands-on check-ins are what you're paying for, trimrx delivers them; if price or public track record decides it, compare it against embody and wellmedr head-to-head first.",
     trustBadges: [
       "HIPAA compliant",
       "Made in USA",
@@ -1179,9 +1179,9 @@ const defaultReviews: ReviewData[] = [
       {
         name: "GLP-1",
         medication: "Compounded Semaglutide",
-        price: "$179",
-        regularPrice: "$299",
-        unit: "/first month",
+        price: "$149",
+        regularPrice: "$289",
+        unit: "/month",
         highlights: ["Proven, effective, more affordable", "Free consultation & delivery included"],
       },
       {
@@ -3449,11 +3449,11 @@ const foundTrimrxBattle: BattleData = {
   title: "Found vs trimrx: Membership Coaching or Flexible GLP-1 Plans?",
   matchupLabel: "Found vs trimrx",
   subtitle: "Found's coaching membership vs trimrx's contract-free GLP-1 plans - pricing, flexibility and support compared.",
-  description: "Found vs trimrx: coaching membership with variable medication costs vs transparent $179/mo GLP-1 plans with no long-term contract. Compared honestly.",
-  intro: "Found wraps medication in a coached membership - clinician consults, health coaching and an app, with medication costs varying by prescription and coverage. trimrx sells the treatment directly: compounded semaglutide at $179/month (regularly $299) or tirzepatide at $259, clinical support included, no long-term contract. Two philosophies, one decision.",
+  description: "Found vs trimrx: coaching membership with variable medication costs vs transparent $149/mo GLP-1 plans with no long-term contract. Compared honestly.",
+  intro: "Found wraps medication in a coached membership - clinician consults, health coaching and an app, with medication costs varying by prescription and coverage. trimrx sells the treatment directly: compounded semaglutide at $149/month (same price at every dose) or tirzepatide at $259, clinical support included, no long-term contract. Two philosophies, one decision.",
   verdict: "trimrx wins on clarity and flexibility: transparent plans with medication included, multi-month discounts if you want them, and no lock-in. Found earns real credit for its coaching and its non-GLP-1 options - if built-in behavior support is the thing you know you need, weigh it seriously and check current membership pricing on their site.",
   verdictWinnerPoints: [
-    "Transparent pricing with medication included - $179/mo semaglutide",
+    "Transparent pricing with medication included - $149/mo semaglutide",
     "No long-term contract; multi-month discounts optional",
     "Licensed clinical support through treatment",
   ],
@@ -3467,9 +3467,9 @@ const foundTrimrxBattle: BattleData = {
     {
       name: "Pricing Clarity",
       winner: "provider1",
-      explanation: "trimrx's $179/month covers the medication, provider consultations and support - one number you can budget. Found's membership fee plus variable medication costs means your real total depends on what's prescribed and how insurance participates.",
+      explanation: "trimrx's $149/month covers the medication, provider consultations and support - one number you can budget. Found's membership fee plus variable medication costs means your real total depends on what's prescribed and how insurance participates.",
       supportingPoints: [
-        "$179/mo semaglutide, $259 tirzepatide, all-in (trimrx)",
+        "$149/mo semaglutide, $259 tirzepatide, all-in (trimrx)",
         "Multi-month discounts stated upfront (trimrx)",
         "Membership + variable medication costs (Found)",
       ],
@@ -3516,7 +3516,7 @@ const foundTrimrxBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "$179/mo, medication included", provider2Value: "Membership + medication (varies)", highlight: "provider1" },
+    { feature: "Starting Price", provider1Value: "$149/mo, medication included", provider2Value: "Membership + medication (varies)", highlight: "provider1" },
     { feature: "Contract", provider1Value: "None - month-to-month available", provider2Value: "Membership plans", highlight: "provider1" },
     { feature: "Coaching", provider1Value: "Clinical support included", provider2Value: "Dedicated health coaching", highlight: "provider2" },
     { feature: "Medications", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "GLP-1 and non-GLP-1 options", highlight: "both" },
@@ -3698,11 +3698,11 @@ const sequenceTrimrxBattle: BattleData = {
   title: "Sequence (WeightWatchers) vs trimrx: Which GLP-1 Program Wins?",
   matchupLabel: "Sequence vs trimrx",
   subtitle: "WeightWatchers' clinic membership vs flat-priced, contract-free GLP-1 plans - compared on cost, speed and flexibility.",
-  description: "Sequence (WeightWatchers Clinic) vs trimrx: insurance-navigated GLP-1 membership vs transparent $179/mo plans with medication included. Compared.",
-  intro: "Sequence - now WeightWatchers Clinic - pairs clinician-led GLP-1 prescribing with insurance navigation and the WW behavioral program, for a monthly membership with medication billed separately. trimrx keeps it direct: $179/month compounded semaglutide (regularly $299) or $259 tirzepatide, medication and clinical support included, no long-term contract. Here's how the household name stacks up against the focused specialist.",
+  description: "Sequence (WeightWatchers Clinic) vs trimrx: insurance-navigated GLP-1 membership vs transparent $149/mo plans with medication included. Compared.",
+  intro: "Sequence - now WeightWatchers Clinic - pairs clinician-led GLP-1 prescribing with insurance navigation and the WW behavioral program, for a monthly membership with medication billed separately. trimrx keeps it direct: $149/month compounded semaglutide (same price at every dose) or $259 tirzepatide, medication and clinical support included, no long-term contract. Here's how the household name stacks up against the focused specialist.",
   verdict: "trimrx wins on the numbers that matter to a cash-pay shopper: one transparent price with the medication in it, and no lock-in. Sequence earns its place for WW loyalists and the well-insured - if your plan covers GLP-1s, its insurance navigation plus the WW program is a coherent package; check current membership pricing on the WeightWatchers Clinic site.",
   verdictWinnerPoints: [
-    "Medication included - $179/mo semaglutide, $259 tirzepatide",
+    "Medication included - $149/mo semaglutide, $259 tirzepatide",
     "No long-term contract; multi-month discounts optional",
     "Clinical support through dose changes",
   ],
@@ -3718,7 +3718,7 @@ const sequenceTrimrxBattle: BattleData = {
       winner: "provider1",
       explanation: "trimrx's price includes the medication - one number, every month. Sequence's membership covers the clinical care while medication is billed separately, usually through insurance, so your real monthly total depends on coverage you don't control.",
       supportingPoints: [
-        "$179/mo all-in semaglutide (trimrx)",
+        "$149/mo all-in semaglutide (trimrx)",
         "Multi-month discounts available (trimrx)",
         "Membership + separately-billed medication (Sequence)",
       ],
@@ -3765,7 +3765,7 @@ const sequenceTrimrxBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "$179/mo, medication included", provider2Value: "Membership + medication via insurance", highlight: "provider1" },
+    { feature: "Starting Price", provider1Value: "$149/mo, medication included", provider2Value: "Membership + medication via insurance", highlight: "provider1" },
     { feature: "Insurance", provider1Value: "Not needed - self-pay", provider2Value: "Navigation and prior-auth support", highlight: "both" },
     { feature: "Medication", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "Brand-name GLP-1s (via insurance)", highlight: "both" },
     { feature: "Behavior Program", provider1Value: "Clinical support", provider2Value: "Integrated WeightWatchers program", highlight: "provider2" },
@@ -4120,13 +4120,13 @@ const sproutTrimrxBattle: BattleData = {
   matchupLabel: "Sprout vs trimrx",
   subtitle: "Two mid-tier programs, opposite bets: Sprout's speed and brand option vs trimrx's custom dosing and unlimited check-ins.",
   description:
-    "Sprout ($149/mo semaglutide, ships in 2 days, Wegovy available) vs trimrx ($179 first month then $299, custom dosing, unlimited check-ins). Compared honestly.",
+    "Sprout ($149/mo semaglutide, ships in 2 days, Wegovy available) vs trimrx ($149/mo flat at every dose, custom dosing, unlimited check-ins). Compared honestly.",
   intro:
-    "Sprout and trimrx occupy the same mid-market tier with opposite bets. Sprout keeps its price flat-ish and its logistics fast: semaglutide from $149/month, tirzepatide from $199, prescriptions shipped within 2 days, $200 off month one, and a brand-name Wegovy option. trimrx spends its budget on the care model: custom dosing set by your provider with unlimited check-ins included - but its $179 semaglutide is a first-month rate (regularly $299), tirzepatide runs $259, and its Trustpilot record is a mixed 3.6 across 5,497 reviews.",
+    "Sprout and trimrx occupy the same mid-market tier with opposite bets. Sprout keeps its price flat-ish and its logistics fast: semaglutide from $149/month, tirzepatide from $199, prescriptions shipped within 2 days, $200 off month one, and a brand-name Wegovy option. trimrx spends its budget on the care model: custom dosing set by your provider with unlimited check-ins included - priced at $149/month for semaglutide (the same at every dose) and $259 for tirzepatide - but its Trustpilot record is a mixed 3.6 across 5,497 reviews.",
   verdict:
-    "Sprout takes this one on price honesty: its $149/$199 starting prices hold, while trimrx's $179 headline becomes $299 after month one - by month three, Sprout is $150/month cheaper on semaglutide. Add 2-day fulfillment and the Wegovy option, and Sprout is the stronger default. trimrx keeps a real counter-case: if custom dosing with unlimited provider check-ins is the care model you want, it's the only one of the two selling it - just budget for the $299 regular rate, not the $179 door price.",
+    "Sprout takes this one narrowly. The two now match at $149/month on semaglutide, so the gap comes from everything around it: Sprout's tirzepatide is $60/month cheaper ($199 vs $259), it takes $200 off month one, ships within 2 days, and stocks brand-name Wegovy. trimrx keeps a real counter-case: dose-flat $149 with no long-term contract, plus custom dosing with unlimited provider check-ins - the only one of the two selling that care model. Its 3.6 Trustpilot average is the honest caveat.",
   verdictWinnerPoints: [
-    "$149/mo semaglutide holds; trimrx's $179 becomes $299",
+    "$199 vs $259 tirzepatide, and $200 off month one",
     "Prescriptions shipped within 2 days",
     "Brand-name Wegovy available - trimrx is compounded-only",
   ],
@@ -4141,9 +4141,9 @@ const sproutTrimrxBattle: BattleData = {
       name: "Real Monthly Price",
       winner: "provider1",
       explanation:
-        "Sticker vs reality: Sprout starts at $149 semaglutide/$199 tirzepatide and those are the ongoing rates. trimrx advertises $179 - but that's the first-month price; the regular rate is $299, with tirzepatide at $259. Priced over a year, Sprout's $200 first-month discount only widens the gap.",
+        "On semaglutide the two are level: $149/month at both, and both hold that rate at every dose. Sprout pulls ahead on tirzepatide ($199 vs trimrx's $259) and takes $200 off month one; trimrx answers with no long-term contract and optional multi-month discounts. Priced over a year on semaglutide, Sprout's first-month discount is the only difference.",
       supportingPoints: [
-        "$149 ongoing vs $299 after month one (Sprout)",
+        "$149/mo semaglutide at both - same at every dose",
         "$199 vs $259 tirzepatide (Sprout)",
         "$200 off month one on top (Sprout)",
       ],
@@ -4191,8 +4191,8 @@ const sproutTrimrxBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "$149/mo semaglutide · $199 tirzepatide", provider2Value: "$179 first month (reg. $299) · $259 tirzepatide", highlight: "provider1" },
-    { feature: "Price after month one", provider1Value: "$149 (ongoing)", provider2Value: "$299 regular rate", highlight: "provider1" },
+    { feature: "Starting Price", provider1Value: "$149/mo semaglutide · $199 tirzepatide", provider2Value: "$149/mo semaglutide · $259 tirzepatide", highlight: "provider1" },
+    { feature: "Price after month one", provider1Value: "$149 (ongoing)", provider2Value: "$149 (same at every dose)", highlight: "both" },
     { feature: "Brand-name option", provider1Value: "Wegovy from $1,799/mo", provider2Value: "None", highlight: "provider1" },
     { feature: "Shipping", provider1Value: "Ships within 2 days", provider2Value: "Free tracked, often next-day", highlight: "both" },
     { feature: "Care model", provider1Value: "Personalized plans", provider2Value: "Custom dosing + unlimited check-ins", highlight: "provider2" },
@@ -5065,8 +5065,15 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
             // code, so overlay it onto the saved battle even when the blob has an
             // older stance. Everything else on the saved battle (intro, pricing
             // tables, any CMS edits) is preserved.
+            // Battles whose intro / description / price rows carry a pricing
+            // story that changed materially in code (trimrx's $179-then-$299
+            // framing was replaced by a flat $149, Sept 2026). For these the seed
+            // wins wholesale, so a stale blob copy can't keep the old numbers
+            // live. Same pattern as codeAuthoritativeReviews above.
+            const codeAuthoritativeBattles = new Set(["sprout-vs-trimrx"]);
             const merged = savedBattles.map((b) => {
               const code = seedBattleBySlug.get(b.slug);
+              if (code && codeAuthoritativeBattles.has(b.slug)) return code;
               return code
                 ? {
                     ...b,

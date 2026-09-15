@@ -97,7 +97,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
               ["HealthRx", "$99/mo", "from $179/mo", "12-month prepaid"],
               ["DirectMeds", "$147/mo", "$147/mo", "Flat, needle-free option"],
               ["Sprout", "$149/mo", "$199/mo", "Also stocks brand Wegovy"],
-              ["trimrx", "$179 first mo (reg. $299)", "$259/mo", "No contract"],
+              ["trimrx", "$149/mo, same at every dose", "$259/mo", "No contract"],
               ["SHED", "$199/mo", "$299/mo", "Money-back results guarantee"],
             ].map(([name, sema, tirz, model], i) => (
               <tr key={name} className={i % 2 === 1 ? "bg-gray-50/50" : ""}>

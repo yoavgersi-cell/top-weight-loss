@@ -79,7 +79,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
   },
   "weight-loss:trimrx": {
     rows: [
-      { label: "Semaglutide price", value: "$179 first month (reg. $299)" },
+      { label: "Semaglutide price", value: "$149/month, same at every dose" },
       { label: "Tirzepatide price", value: "$259/month" },
       { label: "Commitment", value: "No contract; opt-in discount programs" },
       { label: "Trustpilot record", value: "3.6 across 5,497 reviews" },
