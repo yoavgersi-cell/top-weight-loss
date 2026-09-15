@@ -5069,8 +5069,18 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
             // story that changed materially in code (trimrx's $179-then-$299
             // framing was replaced by a flat $149, Sept 2026). For these the seed
             // wins wholesale, so a stale blob copy can't keep the old numbers
-            // live. Same pattern as codeAuthoritativeReviews above.
-            const codeAuthoritativeBattles = new Set(["sprout-vs-trimrx"]);
+            // live. Same pattern as codeAuthoritativeReviews above. Every trimrx
+            // matchup is listed (operator decision, Sept 15 2026).
+            const codeAuthoritativeBattles = new Set([
+              "sprout-vs-trimrx",
+              "medvi-vs-trimrx",
+              "embody-vs-trimrx",
+              "altrx-vs-trimrx",
+              "trimrx-vs-wellmedr",
+              "trimrx-vs-ro",
+              "found-vs-trimrx",
+              "sequence-vs-trimrx",
+            ]);
             const merged = savedBattles.map((b) => {
               const code = seedBattleBySlug.get(b.slug);
               if (code && codeAuthoritativeBattles.has(b.slug)) return code;
