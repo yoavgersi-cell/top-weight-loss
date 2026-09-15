@@ -184,7 +184,7 @@ export const articles: Article[] = [
     publishedAt: "2026-08-28",
     updatedAt: "2026-08-28",
     heroColor: "#F7EEF4",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Why does menopause cause weight gain?",
@@ -221,7 +221,7 @@ export const articles: Article[] = [
     publishedAt: "2026-08-24",
     updatedAt: "2026-08-24",
     heroColor: "#EEF4FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Is the medication causing it, or the weight loss?",
@@ -1754,7 +1754,7 @@ export const articles: Article[] = [
     publishedAt: "2026-08-12",
     updatedAt: "2026-08-19",
     heroColor: "#EEF4FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "Yes - Embody is LegitScript-certified, works with US-based 503A compounding pharmacies, and requires a licensed medical review before any prescription is issued.",
       "Pricing is flat and transparent: compounded semaglutide from $69/month and tirzepatide from $119/month, with the doctor review, supplies and shipping included.",
@@ -1793,7 +1793,7 @@ export const articles: Article[] = [
     publishedAt: "2026-08-10",
     updatedAt: "2026-08-19",
     heroColor: "#F0FAF5",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "Embody charges a flat $69/month for compounded semaglutide and $119/month for compounded tirzepatide - no insurance, no membership fee, no hidden charges.",
       "The price includes the medication, doctor review, injection supplies and shipping; if a prescription is not approved, Embody refunds in full.",
@@ -1828,7 +1828,7 @@ export const articles: Article[] = [
     publishedAt: "2026-08-08",
     updatedAt: "2026-08-19",
     heroColor: "#FBF3EE",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "The main reasons to look past Embody: it is compounded-only (no brand-name), injectables only, and some people want a different treatment mix or faster support.",
       "altRx is the closest alternative for medication choice - compounded semaglutide from $89 and tirzepatide from $149, plus brand-name options like Zepbound and Wegovy.",

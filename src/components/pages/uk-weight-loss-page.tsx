@@ -98,7 +98,7 @@ export function UkWeightLossPage() {
     <div className="min-h-screen bg-[#FAFAFA]">
       <div className="border-b border-gray-200 bg-white">
         <div className="mx-auto max-w-[1000px] px-4 pb-9 pt-10 sm:px-6 sm:pb-11 sm:pt-12">
-          <p className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#0C4B75]">TreatmentsHub UK</p>
+          <p className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#0C4B75]">Treatments Hub UK</p>
           <h1 className="mt-3 max-w-[720px] text-[27px] font-extrabold leading-[1.15] text-[#191919] sm:text-[36px]">
             Compare UK weight-loss services
           </h1>

@@ -80,8 +80,8 @@ export default function OzempicAlternativesPage() {
     description: DESCRIPTION,
     datePublished: "2026-08-11",
     dateModified: CONTENT_LAST_UPDATED,
-    author: { "@type": "Organization", name: "TreatmentsHub Team", url: "https://www.treatmentshub.com" },
-    publisher: { "@type": "Organization", name: "treatmentshub.com", url: "https://www.treatmentshub.com" },
+    author: { "@type": "Organization", name: "Treatments Hub Team", url: "https://www.treatmentshub.com" },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
     mainEntityOfPage: CANONICAL,
   };
   const breadcrumbSchema = {

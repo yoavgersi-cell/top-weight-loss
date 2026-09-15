@@ -11,12 +11,12 @@ export const revalidate = 60;
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/about";
 
 export const metadata: Metadata = {
-  title: "About TreatmentsHub - Who We Are & How We Verify What We Publish",
+  title: "About Treatments Hub - Who We Are & How We Verify What We Publish",
   description:
-    "Who runs TreatmentsHub, how we verify every GLP-1 price against the provider's own site, how affiliate revenue is handled, and how our rankings and reviews are produced.",
+    "Who runs Treatments Hub, how we verify every GLP-1 price against the provider's own site, how affiliate revenue is handled, and how our rankings and reviews are produced.",
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "About TreatmentsHub - Who We Are & How We Verify What We Publish",
+    title: "About Treatments Hub - Who We Are & How We Verify What We Publish",
     description:
       "How we verify every GLP-1 price, how affiliate revenue is handled, and how our rankings and reviews are produced.",
     url: CANONICAL,
@@ -31,7 +31,7 @@ export default async function AboutPage() {
   const config = await getConfig("weight-loss");
   // Brand the team entries for the hub (the config seed still carries the
   // legacy team name), the same way the article/review templates do.
-  const experts = (config.experts ?? []).map((e) => ({ ...e, name: e.name.replace(/TopWeightLoss/gi, "TreatmentsHub") }));
+  const experts = (config.experts ?? []).map((e) => ({ ...e, name: e.name.replace(/TopWeightLoss/gi, "Treatments Hub") }));
 
   // Every figure on this page is computed from the live config, never typed in,
   // so the "what we cover" numbers can't drift from what the site actually has.
@@ -44,11 +44,11 @@ export default async function AboutPage() {
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    name: "About TreatmentsHub",
+    name: "About Treatments Hub",
     url: CANONICAL,
     mainEntity: {
       "@type": "Organization",
-      name: "TreatmentsHub",
+      name: "Treatments Hub",
       url: "https://www.treatmentshub.com",
       logo: "https://www.treatmentshub.com/treatmentshub.png",
       description:
@@ -72,7 +72,7 @@ export default async function AboutPage() {
       {/* Hero */}
       <div className="border-b border-gray-200 bg-white">
         <div className="mx-auto max-w-[900px] px-4 py-12 sm:px-6 sm:py-16">
-          <h1 className="text-[28px] font-extrabold text-[#191919] sm:text-[36px]">About TreatmentsHub</h1>
+          <h1 className="text-[28px] font-extrabold text-[#191919] sm:text-[36px]">About Treatments Hub</h1>
           <p className="mt-3 max-w-[640px] text-[16px] leading-relaxed text-gray-500">
             We compare online treatment providers so you can choose one on facts: the price
             they actually publish, the condition attached to it, who prescribes, and what real
@@ -109,7 +109,7 @@ export default async function AboutPage() {
             copied from each other. Choosing a provider on that basis is a coin flip.
           </p>
           <p className="text-[16px] leading-[1.75] text-gray-600">
-            TreatmentsHub publishes the number the provider itself publishes, with the condition
+            Treatments Hub publishes the number the provider itself publishes, with the condition
             that goes with it, and says plainly when a provider has no public review record. If we
             cannot verify something, it does not appear on the site.
           </p>
@@ -243,7 +243,7 @@ export default async function AboutPage() {
           </div>
           <div className="rounded-xl border border-gray-200 bg-white p-6">
             <p className="text-[15px] leading-[1.75] text-gray-600">
-              TreatmentsHub is not a medical provider and does not prescribe medication. The
+              Treatments Hub is not a medical provider and does not prescribe medication. The
               information on this site is for education and comparison only and does not replace
               professional medical advice. GLP-1 medications are prescription drugs that require
               evaluation and supervision by a licensed clinician. Always consult a qualified

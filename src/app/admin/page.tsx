@@ -260,7 +260,7 @@ export default function AdminPage() {
       {/* Top bar */}
       <div className="sticky top-0 z-50 flex items-center justify-between border-b bg-white px-6 py-3 shadow-sm">
         <div className="flex items-center gap-4">
-          <h1 className="text-lg font-bold text-[#191919]">TreatmentsHub CMS</h1>
+          <h1 className="text-lg font-bold text-[#191919]">Treatments Hub CMS</h1>
           <div className="flex items-center gap-2 rounded-lg border border-gray-200 bg-gray-50 py-1 pl-3 pr-1">
             <span className="text-[11px] font-semibold uppercase tracking-wide text-gray-400">Vertical</span>
             <select

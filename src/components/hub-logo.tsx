@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { TreatmentsHubWordmark } from "@/components/treatments-hub-wordmark";
 import { VERTICALS } from "@/lib/config";
 
-// Renders the real TreatmentsHub logo image, co-branded to the current vertical
+// Renders the real Treatments Hub logo image, co-branded to the current vertical
 // when one exists. Expects files in /public:
 //   • treatmentshub.png                 (parent brand - hub landing)
 //   • treatmentshub-<vertical>.png      (e.g. treatmentshub-weight-loss.png)
@@ -69,7 +69,7 @@ export function HubLogo({ vertical }: { vertical: string }) {
       <img
         ref={imgRef}
         src={candidates[idx]}
-        alt="TreatmentsHub"
+        alt="Treatments Hub"
         className="h-[22px] w-auto max-w-[290px] object-contain object-left sm:h-[30px] sm:max-w-none"
         onError={() => setFailed({ v: vertical, idx: idx + 1 })}
       />

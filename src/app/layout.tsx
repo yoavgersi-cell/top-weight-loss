@@ -14,9 +14,13 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.treatmentshub.com"),
+  // Site name: Google derives the SERP site name from the homepage's WebSite
+  // schema `name`, og:site_name and the <title> suffix - all three must agree.
+  // The chosen display name is "Treatments Hub" (two words); the one-word
+  // spelling and the bare domain are declared as alternateName in the schema.
   title: {
-    default: "TreatmentsHub - Compare Online Treatment Providers & Prices",
-    template: "%s | TreatmentsHub",
+    default: "Treatments Hub - Compare Online Treatment Providers & Prices",
+    template: "%s | Treatments Hub",
   },
   // Icons come from the App Router file convention (app/icon.png, app/apple-icon.png),
   // which serves them at content-hashed URLs so they cache-bust on every update.
@@ -33,17 +37,17 @@ export const metadata: Metadata = {
     "menopause treatment online",
   ],
   openGraph: {
-    title: "TreatmentsHub - Compare Online Treatment Providers & Prices",
+    title: "Treatments Hub - Compare Online Treatment Providers & Prices",
     description:
       "Independent, side-by-side comparisons of top online providers across weight loss, hair loss, TRT and HRT.",
     type: "website",
-    siteName: "TreatmentsHub",
+    siteName: "Treatments Hub",
     locale: "en_US",
     url: "https://www.treatmentshub.com",
   },
   twitter: {
     card: "summary_large_image",
-    title: "TreatmentsHub - Compare Online Treatment Providers & Prices",
+    title: "Treatments Hub - Compare Online Treatment Providers & Prices",
     description:
       "Independent, side-by-side comparisons of top online providers across weight loss, hair loss, TRT and HRT.",
   },
@@ -82,7 +86,12 @@ export default function RootLayout({
     <html lang="en-US" className={`${geistSans.variable} h-full antialiased`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* The TreatmentsHub brand is the default in the server HTML (primary
+        {/* og:site_name on every page. Page-level `openGraph` metadata replaces
+            the layout's openGraph object wholesale (no deep merge), which
+            silently dropped siteName from most pages - so it is emitted here
+            directly, where no page can override it. */}
+        <meta property="og:site_name" content="Treatments Hub" />
+        {/* The Treatments Hub brand is the default in the server HTML (primary
             domain post-migration - crawlers see it without JS). Only when served
             from the legacy topweightloss host do we mark the document, before
             first paint, so the shared header/footer swap to the TopWeightLoss
@@ -101,7 +110,8 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "TreatmentsHub",
+              name: "Treatments Hub",
+              alternateName: ["TreatmentsHub", "treatmentshub.com"],
               url: "https://www.treatmentshub.com",
               areaServed: { "@type": "Country", name: "United States" },
               logo: "https://www.treatmentshub.com/treatmentshub.png",
@@ -116,7 +126,8 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "TreatmentsHub",
+              name: "Treatments Hub",
+              alternateName: ["TreatmentsHub", "treatmentshub.com"],
               url: "https://www.treatmentshub.com",
               description: "Compare trusted treatment providers side by side across weight loss, hair loss, TRT and HRT",
             }),

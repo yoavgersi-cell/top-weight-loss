@@ -448,7 +448,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
       description: landing.seoDescription,
       url: canonicalUrl(ctx, `/${landing.slug}`),
       dateModified: landing.updatedAt || CONTENT_LAST_UPDATED,
-      publisher: { "@type": "Organization", name: ctx.brandDomain, url: ctx.origin },
+      publisher: { "@type": "Organization", name: ctx.brandName, url: ctx.origin },
     };
 
     const itemListSchema = {
@@ -689,7 +689,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           url: canonicalUrl(ctx, "/about"),
         }
       : { "@type": "Organization", name: ctx.brandTeam, url: ctx.origin },
-    publisher: { "@type": "Organization", name: ctx.brandDomain, url: ctx.origin },
+    publisher: { "@type": "Organization", name: ctx.brandName, url: ctx.origin },
     mainEntityOfPage: canonicalUrl(ctx, `/${battle.slug}`),
   };
 

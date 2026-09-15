@@ -31,8 +31,12 @@ export interface SiteContext {
   origin: string;
   /** Path prefix inside the canonical origin: "" for legacy weight-loss, "/<vertical>" otherwise. */
   canonicalPrefix: string;
-  /** Bare domain for schema Organization names, e.g. "topweightloss.io". */
+  /** Bare domain, e.g. "topweightloss.io" - for URLs and domain-style references. */
   brandDomain: string;
+  /** The site name as Google should display it - used for schema Organization /
+   *  WebSite / publisher names, e.g. "Treatments Hub". Must match og:site_name
+   *  and the <title> suffix in the root layout, or Google falls back to the domain. */
+  brandName: string;
   /** Display name for schema author/publisher, e.g. "TopWeightLoss Team". */
   brandTeam: string;
   /** When true, pages in this context are kept out of the index (unpublished vertical). */
@@ -48,6 +52,7 @@ export const ROOT_CONTEXT: SiteContext = {
   origin: LEGACY_WL_ORIGIN,
   canonicalPrefix: "",
   brandDomain: "topweightloss.io",
+  brandName: "TopWeightLoss",
   brandTeam: "TopWeightLoss Team",
   noindex: false,
 };
@@ -68,7 +73,8 @@ export function hubContext(vertical: string): SiteContext {
     origin: HUB_ORIGIN,
     canonicalPrefix: `/${vertical}`,
     brandDomain: "treatmentshub.com",
-    brandTeam: "TreatmentsHub Team",
+    brandName: "Treatments Hub",
+    brandTeam: "Treatments Hub Team",
     noindex,
   };
 }

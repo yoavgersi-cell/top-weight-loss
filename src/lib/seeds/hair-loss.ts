@@ -1165,7 +1165,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-30",
     updatedAt: "2026-08-30",
     heroColor: "#F7F0EC",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "Iron deficiency is a commonly discussed factor in diffuse hair shedding - though the evidence (especially without anemia) is mixed - and where it is the cause, shedding is usually reversible once iron is corrected.",
       "The tell is the pattern: all-over thinning and more hair in the brush or drain, rather than a receding hairline or a widening part alone.",
@@ -1205,7 +1205,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-30",
     updatedAt: "2026-08-30",
     heroColor: "#EDF3F0",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "No shampoo regrows hair on its own - washing something off seconds after applying it is the wrong delivery system for treating follicles.",
       "One ingredient has meaningful supporting evidence as an add-on: ketoconazole, an antifungal that helps scalp conditions and may modestly help alongside real treatment.",
@@ -1241,7 +1241,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-30",
     updatedAt: "2026-08-30",
     heroColor: "#EEF1F8",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "VDPHL01 is Veradermics' extended-release oral minoxidil, aiming to become the first FDA-approved oral minoxidil for pattern hair loss - and the first oral hair-loss drug approved for women (oral finasteride is approved only for men).",
       "The company reports positive Phase 2/3 results in men (April 2026) and positive early results in women, with major readouts expected in late 2026 and the first half of 2027.",
@@ -1282,7 +1282,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-28",
     updatedAt: "2026-08-28",
     heroColor: "#EEF4FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Why look for a Hims alternative for hair loss?",
@@ -1320,7 +1320,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-28",
     updatedAt: "2026-08-28",
     heroColor: "#F0FAF5",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Why look for a Keeps alternative?",
@@ -1363,7 +1363,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-28",
     updatedAt: "2026-08-28",
     heroColor: "#EEF4FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "What is oral minoxidil for hair loss?",
@@ -1397,7 +1397,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-28",
     updatedAt: "2026-08-28",
     heroColor: "#F0FAF5",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "What is topical finasteride?",
@@ -1427,7 +1427,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-28",
     updatedAt: "2026-08-28",
     heroColor: "#FBF5EE",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Can you get finasteride online without seeing a doctor?",
@@ -1457,7 +1457,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-28",
     updatedAt: "2026-08-28",
     heroColor: "#EEF4FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "What is dutasteride and why do men switch to it?",
@@ -1487,7 +1487,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-28",
     updatedAt: "2026-08-28",
     heroColor: "#F0FAF5",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "How much does hair loss treatment cost per month?",
@@ -1517,7 +1517,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-28",
     updatedAt: "2026-08-28",
     heroColor: "#FBF5EE",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Can you use finasteride and minoxidil at the same time?",
@@ -1551,7 +1551,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-24",
     updatedAt: "2026-08-24",
     heroColor: "#EEF4FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "What is Maximus hair treatment?",
@@ -1589,7 +1589,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-24",
     updatedAt: "2026-08-24",
     heroColor: "#EEF4FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Maximus price list (verified August 2026)",
@@ -1627,7 +1627,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-24",
     updatedAt: "2026-08-24",
     heroColor: "#EEF4FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Why look for a Maximus alternative?",
@@ -1665,7 +1665,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-24",
     updatedAt: "2026-08-24",
     heroColor: "#EEF4FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "What is PeterMD's hair loss treatment?",
@@ -1699,7 +1699,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-24",
     updatedAt: "2026-08-24",
     heroColor: "#EEF4FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "PeterMD hair price list (verified August 2026)",
@@ -1725,7 +1725,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-24",
     updatedAt: "2026-08-24",
     heroColor: "#EEF4FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Why look for a PeterMD alternative?",
@@ -1755,7 +1755,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-24",
     updatedAt: "2026-08-24",
     heroColor: "#EEF4FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "What is Happy Head?",
@@ -1793,7 +1793,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-24",
     updatedAt: "2026-08-24",
     heroColor: "#EEF4FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Happy Head price list (verified August 2026)",
@@ -1827,7 +1827,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-24",
     updatedAt: "2026-08-24",
     heroColor: "#EEF4FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Why look for a Happy Head alternative?",
@@ -1861,7 +1861,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-07-20",
     updatedAt: UPDATED,
     heroColor: "#EEF4FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Why hair loss happens",
@@ -1895,7 +1895,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-07-14",
     updatedAt: UPDATED,
     heroColor: "#F0FAF5",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "How each one works",
@@ -1929,7 +1929,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-07-08",
     updatedAt: UPDATED,
     heroColor: "#FBF3EE",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "What finasteride does",
@@ -1963,7 +1963,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-07-02",
     updatedAt: UPDATED,
     heroColor: "#F3EEFB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "The short answer",
@@ -1993,7 +1993,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-06-26",
     updatedAt: UPDATED,
     heroColor: "#EEF7FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Why treat hair loss online",
@@ -2027,7 +2027,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-06-18",
     updatedAt: UPDATED,
     heroColor: "#FBEEF4",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "How female hair loss is different",
@@ -2057,7 +2057,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-07-26",
     updatedAt: UPDATED,
     heroColor: "#F3EEFB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Two medicines, one target",
@@ -2091,7 +2091,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-01",
     updatedAt: UPDATED,
     heroColor: "#F0FAF5",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Where the fear comes from",
@@ -2125,7 +2125,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-05",
     updatedAt: UPDATED,
     heroColor: "#EEF7FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Same molecule, two very different routes",
@@ -2159,7 +2159,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-09",
     updatedAt: UPDATED,
     heroColor: "#FBF3EE",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "The honest picture",
@@ -2193,7 +2193,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-12",
     updatedAt: UPDATED,
     heroColor: "#EEF4FB",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Maturing hairline or receding?",
@@ -2227,7 +2227,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-15",
     updatedAt: UPDATED,
     heroColor: "#FBEEF4",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "The dread shed is real - and usually good news",
@@ -2261,7 +2261,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-08-18",
     updatedAt: UPDATED,
     heroColor: "#F0FAF5",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     sections: [
       {
         heading: "Yes - and it has a name",
@@ -2301,7 +2301,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#F3EFEA",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "The Norwood scale is the standard 7-stage map clinicians use to describe how far male pattern baldness has progressed.",
       "It usually moves along two fronts: a receding hairline (especially at the temples) and thinning at the crown, which eventually meet.",
@@ -2337,7 +2337,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#F0EDE8",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "DHT (dihydrotestosterone) is a potent androgen made from testosterone by an enzyme called 5-alpha-reductase.",
       "In genetically sensitive follicles, DHT gradually miniaturizes the hair - thinner, shorter, weaker - until it stops growing.",
@@ -2373,7 +2373,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#F3EFEA",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "Medication (finasteride/minoxidil) slows loss and protects the hair you have; a transplant redistributes hair you already have to where it's thin.",
       "They're not competitors - most people who get a transplant still need medication to protect the non-transplanted hair from continuing to thin.",
@@ -2409,7 +2409,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#F0EDE8",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "Microneedling shows the most promise as an add-on to minoxidil - the interesting evidence is for the combination, not microneedling alone.",
       "It is not a replacement for the proven medical treatments; think of it as a possible amplifier, not a foundation.",
@@ -2445,7 +2445,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#F0EDE8",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "Saw palmetto is a plant extract promoted as a 'natural' DHT blocker - the same mechanism finasteride targets, but far weaker and less consistent.",
       "The evidence is limited and mixed; it is not established as equivalent to proven prescription treatment.",
@@ -2481,7 +2481,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#F3EDEF",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "Menopausal hair thinning is common and driven largely by the shift in the estrogen-to-androgen balance as estrogen declines.",
       "It usually shows as diffuse thinning across the crown and part line - not the receding hairline men get.",
@@ -2517,7 +2517,7 @@ const articles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#F0EDE8",
-    author: "TreatmentsHub Staff",
+    author: "Treatments Hub Staff",
     keyTakeaways: [
       "Finasteride lowers DHT, not testosterone - by blocking the enzyme that converts one into the other.",
       "Because that conversion is blocked, testosterone can actually tick slightly upward, not down.",

@@ -53,14 +53,14 @@ export default async function StatisticsPage() {
   const datasetSchema = {
     "@context": "https://schema.org",
     "@type": "Dataset",
-    name: "TreatmentsHub GLP-1 Price Index",
+    name: "Treatments Hub GLP-1 Price Index",
     description:
-      `Published monthly prices for compounded semaglutide and tirzepatide at ${PROVIDER_COUNT} US telehealth providers, verified by TreatmentsHub and logged on every change.`,
+      `Published monthly prices for compounded semaglutide and tirzepatide at ${PROVIDER_COUNT} US telehealth providers, verified by Treatments Hub and logged on every change.`,
     url: CANONICAL,
     dateModified: PRICE_INDEX_VERIFIED,
     temporalCoverage: PRICE_INDEX_VERIFIED.slice(0, 7),
     spatialCoverage: { "@type": "Country", name: "United States" },
-    creator: { "@type": "Organization", name: "TreatmentsHub", url: "https://www.treatmentshub.com" },
+    creator: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
     variableMeasured: [
       "Compounded semaglutide monthly price (USD)",
       "Compounded tirzepatide monthly price (USD)",
@@ -76,8 +76,8 @@ export default async function StatisticsPage() {
     description: DESCRIPTION,
     datePublished: "2026-08-01",
     dateModified: PRICE_INDEX_VERIFIED,
-    author: { "@type": "Organization", name: "TreatmentsHub Research Team", url: "https://www.treatmentshub.com/weight-loss/about" },
-    publisher: { "@type": "Organization", name: "TreatmentsHub", url: "https://www.treatmentshub.com" },
+    author: { "@type": "Organization", name: "Treatments Hub Research Team", url: "https://www.treatmentshub.com/weight-loss/about" },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
     mainEntityOfPage: { "@type": "WebPage", "@id": CANONICAL },
   };
   const breadcrumbSchema = {
@@ -117,7 +117,7 @@ export default async function StatisticsPage() {
         <section className="mb-10">
           <div className="mb-4 flex items-center gap-2">
             <span className="rounded-full bg-[#0C4B75] px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide text-white">
-              TreatmentsHub original data
+              Treatments Hub original data
             </span>
           </div>
           <h2 className="mb-3 text-[22px] font-bold text-[#191919]">
@@ -161,7 +161,7 @@ export default async function StatisticsPage() {
             </table>
           </div>
           <p className="mt-2 text-[12px] text-gray-400">
-            Source: TreatmentsHub GLP-1 price index, {PROVIDER_COUNT} providers, verified published
+            Source: Treatments Hub GLP-1 price index, {PROVIDER_COUNT} providers, verified published
             prices as of September 2026. Brand list prices are manufacturer/pharmacy list prices;
             insurance and manufacturer coupons can lower them. See the full provider-by-provider
             table on our{" "}
@@ -410,7 +410,7 @@ export default async function StatisticsPage() {
             </p>
             <p className="text-[13px] leading-[1.7] text-gray-500">
               <strong className="text-gray-700">Citing this page?</strong> Please attribute to
-              &ldquo;TreatmentsHub GLP-1 Price Index (2026)&rdquo; and link to this page. For the full
+              &ldquo;Treatments Hub GLP-1 Price Index (2026)&rdquo; and link to this page. For the full
               provider-by-provider pricing table, see our{" "}
               <Link href="/weight-loss/cheapest-glp1" className="font-semibold text-[#0C4B75] hover:underline">
                 cheapest GLP-1 comparison
