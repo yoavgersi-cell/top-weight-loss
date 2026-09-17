@@ -4468,7 +4468,7 @@ function buildInitialConfig(): SiteConfig {
       trustpilotReviews: seedTrustpilot[p.id]?.reviews,
     })),
     ranking: {
-      providerOrder: ["ro", "altrx", "noom", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm", "synergyrx"],
+      providerOrder: ["ro", "altrx", "embody", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm", "synergyrx"],
       positions: [
         { score: 9.8, starRating: 5, label: "Exceptional", badge: "Our Most Popular" },
         { score: 9.7, starRating: 5, label: "Exceptional" },
@@ -4563,7 +4563,7 @@ function buildInitialConfig(): SiteConfig {
           { type: "quizCta" as const, enabled: true },
           { type: "relatedArticles" as const, enabled: true },
         ],
-        providerIds: ["ro", "altrx", "noom"],
+        providerIds: ["ro", "altrx", "embody"],
         quizCta: {
           headline: "Not sure which provider is right?",
           description: "Take our free quiz and get a personalized recommendation.",
@@ -4581,7 +4581,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Semaglutide Providers 2026",
         h2: "Compare GLP-1 weight loss programs side by side",
         heroDescription: "Semaglutide (the active ingredient in Ozempic and Wegovy) is one of the most effective GLP-1 medications for weight loss. Compare providers offering semaglutide treatment below.",
-        providerOrder: ["ro", "altrx", "noom", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["ro", "altrx", "embody", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "What Is Semaglutide?",
@@ -4609,7 +4609,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Tirzepatide Providers 2026",
         h2: "Compare dual-action GLP-1 weight loss programs",
         heroDescription: "Tirzepatide (the active ingredient in Mounjaro and Zepbound) targets both GLP-1 and GIP receptors for enhanced weight loss results. Compare providers offering tirzepatide treatment below.",
-        providerOrder: ["ro", "altrx", "noom", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["ro", "altrx", "embody", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "What Is Tirzepatide?",
@@ -4637,7 +4637,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Online Weight Loss Programs 2026",
         h2: "Clinician-guided GLP-1 treatment from home",
         heroDescription: "Online weight loss programs now offer prescription GLP-1 medications with full medical oversight - all from home. We compared the top programs on pricing, clinical support, and results.",
-        providerOrder: ["ro", "altrx", "noom", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["ro", "altrx", "embody", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "How Online Weight Loss Programs Work",
@@ -4665,7 +4665,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Weight Loss Injections 2026",
         h2: "Compare injectable GLP-1 weight loss treatments",
         heroDescription: "GLP-1 weight loss injections like semaglutide and tirzepatide have shown 15-22% average weight loss in clinical trials. Compare providers offering injectable treatment programs below.",
-        providerOrder: ["ro", "altrx", "noom", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["ro", "altrx", "embody", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "How Weight Loss Injections Work",
@@ -4693,7 +4693,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Ozempic for Weight Loss",
         h2: "Compare providers offering semaglutide treatment",
         heroDescription: "Ozempic (semaglutide) is widely used off-label for weight loss, with clinical trials showing 10-15% average weight loss. Compare providers offering semaglutide-based treatment programs below.",
-        providerOrder: ["ro", "altrx", "noom", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["ro", "altrx", "embody", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "Ozempic for Weight Loss: What You Need to Know",
@@ -4721,7 +4721,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Wegovy Providers & Alternatives 2026",
         h2: "Compare semaglutide weight loss programs",
         heroDescription: "Wegovy is the FDA-approved weight loss version of semaglutide, with clinical trials showing 15% average weight loss. Compare providers offering Wegovy and compounded semaglutide alternatives below.",
-        providerOrder: ["ro", "altrx", "noom", "trimrx", "shed", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["ro", "altrx", "embody", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "Wegovy vs Compounded Semaglutide",
@@ -4745,7 +4745,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Most Affordable Weight Loss Medication 2026",
         h2: "Compare the cheapest GLP-1 providers",
         heroDescription: "GLP-1 medications don't have to cost $1,000/month. Compounded semaglutide starts at a verified $49/month and tirzepatide at $89/month from licensed telehealth providers - including medication, consultations, and delivery.",
-        providerOrder: ["altrx", "trimrx", "shed", "ro", "noom", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["altrx", "trimrx", "shed", "ro", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "Why GLP-1 Medication Is Getting More Affordable",
@@ -4797,7 +4797,7 @@ function buildInitialConfig(): SiteConfig {
           "Checking provider quality...",
           "Finalizing your recommendation...",
         ],
-        providerLogos: ["ro", "altrx", "noom", "trimrx", "shed", "embody", "wellmedr", "sunlight"],
+        providerLogos: ["ro", "altrx", "embody", "trimrx", "shed", "wellmedr", "sunlight"],
         durationMs: 4400,
       },
       questions: [
@@ -4875,7 +4875,6 @@ function buildInitialConfig(): SiteConfig {
       ],
       providerProfiles: [
         { providerId: "altrx", priceLevel: "mid", strengths: ["medical", "online", "personalized"], matchReasons: { cost: "Transparent all-inclusive pricing", medical: "Physician-guided treatment plans", online: "Full telehealth platform", personalized: "Customized GLP-1 protocols" } },
-        { providerId: "noom", priceLevel: "mid", strengths: ["personalized", "medical"], matchReasons: { cost: "Flexible subscription options", medical: "Noom Med clinical program", online: "App-based convenience", personalized: "Psychology-based coaching" } },
         { providerId: "ro", priceLevel: "mid", strengths: ["online", "medical"], matchReasons: { cost: "Competitive monthly pricing", medical: "Board-certified providers", online: "Streamlined telehealth experience", personalized: "Provider-guided adjustments" } },
         { providerId: "trimrx", priceLevel: "low", strengths: ["cost", "online"], matchReasons: { cost: "Among the most affordable options", medical: "Clinical guidance included", online: "Simple online enrollment", personalized: "Flexible treatment plans" } },
         { providerId: "shed", priceLevel: "mid", strengths: ["personalized", "online"], matchReasons: { cost: "Competitive plan pricing", medical: "Provider-supervised treatment", online: "Home delivery included", personalized: "Highly personalized programs" } },
@@ -5098,9 +5097,38 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
             const defaultsToAdd = initial.battles.filter((d) => !savedSlugs.has(d.slug));
             return [...merged, ...defaultsToAdd];
           })(),
-          sidebars: saved.sidebars && saved.sidebars.length > 0 ? saved.sidebars : initial.sidebars,
-          landingPages: saved.landingPages && saved.landingPages.length > 0 ? saved.landingPages : initial.landingPages,
-          quiz: saved.quiz && saved.quiz.questions && saved.quiz.questions.length > 0 ? { ...initial.quiz, ...saved.quiz } : initial.quiz,
+          // Provider ORDER on sidebars, landing pages and the quiz is
+          // code-authoritative, like `ranking` above: which providers appear and
+          // in what order is a business decision (e.g. Noom removed - no
+          // affiliate link - and embody promoted, Sept 2026). The blob keeps
+          // every other CMS-edited field on those objects.
+          sidebars: (() => {
+            const base = saved.sidebars && saved.sidebars.length > 0 ? saved.sidebars : initial.sidebars;
+            const seedById = new Map(initial.sidebars.map((s) => [s.id, s]));
+            return base.map((s) => {
+              const seed = seedById.get(s.id);
+              return seed ? { ...s, providerIds: seed.providerIds } : s;
+            });
+          })(),
+          landingPages: (() => {
+            const base = saved.landingPages && saved.landingPages.length > 0 ? saved.landingPages : initial.landingPages;
+            const seedBySlug = new Map(initial.landingPages.map((l) => [l.slug, l]));
+            return base.map((l) => {
+              const seed = seedBySlug.get(l.slug);
+              return seed ? { ...l, providerOrder: seed.providerOrder } : l;
+            });
+          })(),
+          quiz: (() => {
+            const base = saved.quiz && saved.quiz.questions && saved.quiz.questions.length > 0 ? { ...initial.quiz, ...saved.quiz } : initial.quiz;
+            return {
+              ...base,
+              providerOrder: initial.quiz.providerOrder,
+              providerProfiles: initial.quiz.providerProfiles,
+              ...(base.loadingScreen && initial.quiz.loadingScreen && {
+                loadingScreen: { ...base.loadingScreen, providerLogos: initial.quiz.loadingScreen.providerLogos },
+              }),
+            };
+          })(),
           experts: saved.experts && saved.experts.length > 0 ? saved.experts : initial.experts,
         }));
       }
