@@ -257,6 +257,31 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     image: "/products/shed-tirzepatide.webp",
   },
   // ── Brand-name ──
+  // wellmedr brand shelf (operator-supplied card creatives, Sept 2026):
+  // month-to-month plans that include the licensed provider review, a
+  // Medical Weight-Care Coach and tailored dosage adjustments.
+  {
+    id: "wellmedr-ozempic",
+    providerId: "wellmedr",
+    name: "Brand-Name Ozempic (Semaglutide) Pen",
+    medication: "semaglutide",
+    format: "injection",
+    price: "$1,399",
+    priceNote: "brand-name; starting price, month-to-month",
+    shipping: "Provider review, coach and dosage adjustments included",
+    image: "/products/wellmedr-ozempic.webp",
+  },
+  {
+    id: "wellmedr-zepbound",
+    providerId: "wellmedr",
+    name: "Brand-Name Zepbound (Tirzepatide) Pen",
+    medication: "tirzepatide",
+    format: "injection",
+    price: "$1,599",
+    priceNote: "brand-name; starting price, month-to-month",
+    shipping: "Provider review, coach and dosage adjustments included",
+    image: "/products/wellmedr-zepbound.webp",
+  },
   {
     id: "sprout-wegovy",
     providerId: "sprout",
