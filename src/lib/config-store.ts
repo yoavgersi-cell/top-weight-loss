@@ -1055,6 +1055,7 @@ const defaultReviews: ReviewData[] = [
   },
   {
     slug: "noom",
+    updatedAt: "2026-09-02",
     providerId: "noom",
     shortSummary: "Behavior-based weight loss platform combining psychology-driven coaching with optional medical support.",
     reviewIntro: "Noom takes a unique approach to weight loss by combining cognitive behavioral therapy principles with personalized coaching and, more recently, medical weight loss options. Their app-based platform has helped millions build sustainable habits while offering GLP-1 medication access for eligible patients through their Noom Med program.",
@@ -1093,6 +1094,7 @@ const defaultReviews: ReviewData[] = [
   },
   {
     slug: "ro",
+    updatedAt: "2026-09-02",
     providerId: "ro",
     shortSummary: "Established telehealth platform offering straightforward online weight loss care with licensed providers.",
     reviewIntro: "Ro has built a strong reputation as a trusted telehealth provider, and their weight loss program continues that tradition. The platform offers a streamlined process for consulting with licensed providers, getting prescribed weight loss medications, and receiving ongoing support - all from the comfort of home.",
@@ -1212,7 +1214,7 @@ const defaultReviews: ReviewData[] = [
   {
     slug: "shed",
     providerId: "shed",
-    updatedAt: "2026-08-22",
+    updatedAt: "2026-09-14",
     shortSummary: "Coaching-included GLP-1 program - compounded semaglutide from $199/mo and tirzepatide from $299/mo, 20% off month one - backed by a lose-5%-in-120-days money-back guarantee. Rated 4.7 across 1,120 Trustpilot reviews.",
     reviewIntro: "SHED is a telehealth weight-loss program with 150,000+ members, built around compounded GLP-1 medication - semaglutide from $199/month and tirzepatide from $299/month, both with 20% off the first month - paired with health coaching that's included in every plan rather than sold as an upsell. The whole flow is 100% online: complete a visit, and if approved your medication ships straight to your door. Plans are HSA/FSA approved, and SHED backs the program with the most concrete guarantee in our ranking: lose 5% of your body weight in 120 days or your money back. On Trustpilot it averages 4.7 across 1,120 reviews, and the recent pages are dominated by praise for the human layer - 'she was amazing, VERY informative... made me feel very comfortable on my journey,' one member writes about her onboarding call - which matches the coaching-first pitch. The honest catch is price: $199-$299/month is the highest compounded tier among our affiliate providers, so you're paying for the coaching and the guarantee, not just the medication.",
     keyFeatures: [
@@ -1369,7 +1371,7 @@ const defaultReviews: ReviewData[] = [
   {
     slug: "wellmedr",
     providerId: "wellmedr",
-    updatedAt: "2026-08-22",
+    updatedAt: "2026-09-14",
     shortSummary: "Telehealth GLP-1 weight-loss program used by 1,000,000+ patients - compounded semaglutide from $49/mo and tirzepatide from $89/mo, plus brand-name options - with board-certified specialists and a weight-loss warranty. Rated 4.7 across 1,205 Trustpilot reviews.",
     reviewIntro: "wellmedr is a telehealth weight-loss platform whose GLP-1 medications have been used by 1,000,000+ patients. It offers compounded GLP-1 (semaglutide) from $49/month and compounded GLP-1/GIP (tirzepatide) from $89/month - both shipped every 4 weeks at the same price no matter your dose - plus brand-name Ozempic and Zepbound for anyone who wants them. Board-certified specialists tailor your plan, treatment is 100% online with no office visit, and a Medical Weight-Care Coach supports you the whole way. It's backed by a weight-loss warranty, and there's a standing offer to lock in $200 off every month - or $49/mo on a 12-month plan, for life. On Trustpilot, wellmedr averages 4.7 across 1,205 reviews, and the recent pages read like a support log in the best sense: 'I filled out the intake and within 4 days had been approved and meds shipped and received,' writes one reviewer, while another describes the team reworking her plan at a lower rate when money got tight - 'no pressure to accept it.' The realistic caveats are pace and commitment: standard delivery runs 3-5 business days rather than the 1-2 days you get from embody or DirectMeds, and the headline $49/month is tied to a 12-month plan.",
     keyFeatures: [
@@ -1444,6 +1446,7 @@ const defaultReviews: ReviewData[] = [
   },
   {
     slug: "sunlight",
+    updatedAt: "2026-09-02",
     providerId: "sunlight",
     shortSummary: "Flexible telehealth weight loss care with virtual consultations and individualized treatment plans.",
     reviewIntro: "Sunlight offers a flexible telehealth approach to weight loss, providing virtual consultations with licensed providers and individualized treatment plans. Their platform is designed for convenience, allowing patients to access care on their own schedule while receiving personalized attention.",
@@ -1483,7 +1486,7 @@ const defaultReviews: ReviewData[] = [
   {
     slug: "medvi",
     providerId: "medvi",
-    updatedAt: "2026-08-22",
+    updatedAt: "2026-09-14",
     shortSummary: "All-inclusive medical weight-loss program - GLP-1 (semaglutide) now from $99/month (reg. $199) and GLP-1/GIP (tirzepatide) from $166/month (reg. $299) - with provider visits, free dietician and care coaching, and HSA/FSA approval. Rated 4.4 across 14,372 Trustpilot reviews.",
     reviewIntro: "Medvi carries the biggest verified track record in this ranking: 4.4 across 14,372 Trustpilot reviews, a volume most telehealth weight-loss brands can't approach. The program is all-inclusive at one flat price, and its current promotion cuts that price roughly in half: weekly GLP-1 (semaglutide) injections now start at $89/month (regularly $199) and GLP-1/GIP (tirzepatide) at $166/month (regularly $299), with daily oral dissolving tablets at $249/month for the needle-averse - all with no membership fee, no hidden charges, free shipping, and free dietician and care coaching folded in. Care is genuinely hands-on: recent Trustpilot reviews repeatedly describe on-time video visits ('Video visit was made very easy and reminders were sent right before my visit'), providers who 'took her time, answered any questions,' and follow-ups handled through secure messaging. Plans are HSA/FSA approved. At the $99 promotional rate, Medvi's all-inclusive bundle now competes directly with the value tier - the honest caveat is simply that promos can end; the regular rates are $199/$299.",
     keyFeatures: [
@@ -1557,7 +1560,7 @@ const defaultReviews: ReviewData[] = [
   {
     slug: "sprout",
     providerId: "sprout",
-    updatedAt: "2026-08-23",
+    updatedAt: "2026-09-14",
     shortSummary: "Personalized GLP-1 telehealth program - compounded semaglutide from $149/month and tirzepatide from $199/month, with brand-name Wegovy also on the shelf - and prescriptions shipped within 2 days.",
     reviewIntro: "Sprout is a telehealth GLP-1 program with a straightforward pitch: personalized treatment plans built around your health goals, prescriptions shipped within 2 days of approval, and a menu that covers both lanes - compounded semaglutide starting at $149/month and compounded tirzepatide at $199/month, with brand-name Wegovy available from $1,799/month for anyone set on the branded pen. There's a standing offer of $200 off the first month. Sprout doesn't publish an aggregate Trustpilot score, but the individual reviews we surface are real and consistently credit its support team - 'they were quick to respond and the process for approval worked seamlessly,' writes one customer, with several others naming specific support reps who fixed problems fast. Its pricing sits mid-market: above the $49-$99 value tier, below trimrx and SHED - the fair way to read Sprout is speed and personalization at a middle price.",
     keyFeatures: [
@@ -1626,6 +1629,7 @@ const defaultReviews: ReviewData[] = [
   },
   {
     slug: "wellorithm",
+    updatedAt: "2026-09-02",
     providerId: "wellorithm",
     shortSummary: "Algorithm-driven weight loss platform using data insights to match patients with optimal GLP-1 treatment plans.",
     reviewIntro: "Wellorithm takes a technology-forward approach to weight loss, using proprietary algorithms to analyze patient data and recommend personalized treatment plans. Their platform combines data-driven insights with licensed provider oversight to create an efficient, tailored weight loss experience.",
@@ -1665,7 +1669,7 @@ const defaultReviews: ReviewData[] = [
   {
     slug: "directmeds",
     providerId: "directmeds",
-    updatedAt: "2026-08-22",
+    updatedAt: "2026-09-14",
     shortSummary: "Pharmacy-direct GLP-1 treatment at $147/month flat - semaglutide or tirzepatide, injections or sublingual drops - with free 1-2 day shipping and no membership. Rated 4.6 across 13,901 Trustpilot reviews.",
     reviewIntro: "DirectMeds is a pharmacy-direct telehealth program with 250,000+ customers, offering doctor-prescribed GLP-1 weight loss treatment starting at $147/month. You can get compounded semaglutide or tirzepatide as weekly injections - or, if you'd rather skip needles, as sublingual oral drops at the same price. It's 100% online with the telemedicine visit and prescription included, no insurance required, no hidden fees, and no monthly membership. Medication ships free and arrives in 1-2 days, and you can cancel anytime. On Trustpilot, DirectMeds averages 4.6 across 13,901 reviews - one of only two providers in our ranking with a five-figure review base - and the recent pages consistently credit a support team you can actually reach: 'a great personnel... answering the phone and following up,' as one reviewer puts it, with others naming the specific reps who fixed their orders. The model is deliberately stripped down - no coaching program, no brand-name shelf - just the visit, the medication, and fast delivery at one flat price.",
     keyFeatures: [
@@ -1728,6 +1732,7 @@ const defaultReviews: ReviewData[] = [
   },
   {
     slug: "found",
+    updatedAt: "2026-09-02",
     providerId: "found",
     shortSummary: "Science-backed weight loss platform combining prescription medication with personalized coaching and behavior change support.",
     reviewIntro: "Found takes a comprehensive approach to weight loss by combining prescription medication with ongoing health coaching, behavioral science, and personalized treatment plans. Their platform is designed around the idea that sustainable weight loss requires more than just medication - it requires understanding your unique biology, habits, and lifestyle factors.",
@@ -1838,10 +1843,11 @@ const defaultReviews: ReviewData[] = [
       },
     ],
     trustBadges: ["LegitScript certified", "Licensed 503A pharmacies", "Overnight cold-chain shipping"],
-    updatedAt: "2026-08-21",
+    updatedAt: "2026-09-02",
   },
   {
     slug: "calibrate",
+    updatedAt: "2026-09-02",
     providerId: "calibrate",
     shortSummary: "A structured one-year metabolic reset program pairing 1:1 video coaching with brand-name GLP-1 medication obtained through your insurance.",
     reviewIntro: "Calibrate approaches weight loss as a year-long program rather than a monthly prescription. Members get one-on-one video coaching and a structured curriculum alongside brand-name GLP-1 medication, which Calibrate works to get covered through the member's own health insurance - including handling prior authorizations. This review covers how that model works and who it fits.",
@@ -1879,6 +1885,7 @@ const defaultReviews: ReviewData[] = [
   },
   {
     slug: "sequence",
+    updatedAt: "2026-09-02",
     providerId: "sequence",
     shortSummary: "WeightWatchers' clinician-led GLP-1 telehealth program, combining prescription care and insurance coordination with the WW behavioral program.",
     reviewIntro: "Sequence - now operating as WeightWatchers Clinic - brings GLP-1 prescribing into the WeightWatchers ecosystem. Members see licensed clinicians who evaluate and prescribe GLP-1 medication where appropriate, get help navigating insurance coverage and prior authorizations, and have the WW behavioral program integrated alongside. This review covers how it works and who it suits.",
@@ -1916,6 +1923,7 @@ const defaultReviews: ReviewData[] = [
   },
   {
     slug: "yucca",
+    updatedAt: "2026-09-02",
     providerId: "yucca",
     shortSummary: "Modern telehealth weight loss platform offering streamlined GLP-1 access with licensed clinicians and affordable pricing.",
     reviewIntro: "Yucca is a modern telehealth platform focused on making GLP-1 weight loss treatment simple and accessible. Their streamlined process connects patients with licensed clinicians who evaluate eligibility, prescribe medication, and provide ongoing support - all through a clean, easy-to-use online experience.",
@@ -1954,6 +1962,7 @@ const defaultReviews: ReviewData[] = [
   },
   {
     slug: "synergyrx",
+    updatedAt: "2026-09-02",
     providerId: "synergyrx",
     shortSummary: "Medically supervised weight loss platform offering compounded semaglutide and tirzepatide with personalized care in all 50 states.",
     reviewIntro: "SynergyRX positions itself as a personalized, medically supervised weight loss platform. With licensed physicians overseeing every treatment plan, they offer both compounded and brand-name GLP-1 medications at competitive prices. Their standout feature is availability across all 50 states with a fully online process, from evaluation to home delivery. The platform also offers oral dissolving tablets as an alternative to injections.",
@@ -1995,6 +2004,7 @@ const defaultReviews: ReviewData[] = [
   },
   {
     slug: "bodybuildinghealth",
+    updatedAt: "2026-09-02",
     providerId: "bodybuildinghealth",
     shortSummary: "Provider-guided weight loss program offering both GLP-1 and dual-agonist GIP+GLP-1 treatments with no commitment until approved.",
     reviewIntro: "Bodybuilding Health brings a provider-guided approach to medical weight loss, offering patients the choice between GLP-1 and the newer dual-agonist GIP+GLP-1 medications. Their no-commitment-until-approved model removes the financial risk from the evaluation process, and their current $100 off promotion makes the entry point more accessible. The platform is designed for people who want clinician oversight without the hassle of in-person visits.",
@@ -2032,6 +2042,7 @@ const defaultReviews: ReviewData[] = [
   },
   {
     slug: "livbody",
+    updatedAt: "2026-09-02",
     providerId: "livbody",
     shortSummary: "Science-backed weight loss platform offering clinician-prescribed compounded GLP-1 treatments designed to work with your biology.",
     reviewIntro: "LIV Body takes a biology-first approach to weight loss, emphasizing that their treatment plans are designed to work with your body's natural mechanisms rather than against them. Their platform offers clinician-prescribed compounded GLP-1 medications with a focus on sustainable results. The combination of medical oversight and science-backed protocols positions LIV Body as a thoughtful option for patients who want a more personalized treatment experience.",
@@ -2070,6 +2081,7 @@ const defaultReviews: ReviewData[] = [
   },
   {
     slug: "skinnyrx",
+    updatedAt: "2026-09-02",
     providerId: "skinnyrx",
     shortSummary: "Physician-prescribed GLP-1 weight loss platform offering compounded semaglutide and tirzepatide with fast home delivery.",
     reviewIntro: "SkinnyRx offers a straightforward path to physician-prescribed GLP-1 weight loss treatment. Their platform connects patients with licensed providers who evaluate eligibility and prescribe compounded semaglutide or tirzepatide. With a focus on simplicity and fast delivery, SkinnyRx aims to make medical weight loss accessible without the complexity of traditional healthcare channels.",
@@ -2201,6 +2213,7 @@ const embodyAltrxBattle: Omit<BattleData, "slug"> = {
 // battle for this provider pair, so /embody-vs-wellmedr resolves.
 const embodywellmedrBattle: BattleData = {
   slug: "embody-vs-wellmedr",
+  updatedAt: "2026-09-14",
   provider1Id: "embody",
   provider2Id: "wellmedr",
   title: "Embody vs wellmedr: Which Weight Loss Provider Is Right for You in 2026?",
@@ -2293,6 +2306,7 @@ const embodywellmedrBattle: BattleData = {
 // affordability-first, flexible-plan model with multi-month discounts.
 const altrxTrimrxBattle: BattleData = {
   slug: "altrx-vs-trimrx",
+  updatedAt: "2026-09-02",
   provider1Id: "altrx",
   provider2Id: "trimrx",
   title: "altRx vs TrimRX: Which GLP-1 Provider Is Right for You in 2026?",
@@ -2387,6 +2401,7 @@ const altrxTrimrxBattle: BattleData = {
 
 const medviAltrxBattle: BattleData = {
   slug: "medvi-vs-altrx",
+  updatedAt: "2026-09-02",
   provider1Id: "medvi",
   provider2Id: "altrx",
   title: "Medvi vs altRx: Which Weight Loss Provider Is Right for You in 2026?",
@@ -2474,6 +2489,7 @@ const medviAltrxBattle: BattleData = {
 
 const medviTrimrxBattle: BattleData = {
   slug: "medvi-vs-trimrx",
+  updatedAt: "2026-09-02",
   provider1Id: "medvi",
   provider2Id: "trimrx",
   title: "Medvi vs TrimRX: Which Weight Loss Provider Is Right for You in 2026?",
@@ -2561,6 +2577,7 @@ const medviTrimrxBattle: BattleData = {
 
 const medviRoBattle: BattleData = {
   slug: "medvi-vs-ro",
+  updatedAt: "2026-09-12",
   provider1Id: "medvi",
   provider2Id: "ro",
   title: "Ro vs Medvi: Which Weight Loss Provider Is Right for You in 2026?",
@@ -2649,6 +2666,7 @@ const medviRoBattle: BattleData = {
 
 const medviwellmedrBattle: BattleData = {
   slug: "medvi-vs-wellmedr",
+  updatedAt: "2026-09-14",
   provider1Id: "medvi",
   provider2Id: "wellmedr",
   title: "Medvi vs wellmedr: Which Weight Loss Provider Is Right for You in 2026?",
@@ -2741,6 +2759,7 @@ const medviwellmedrBattle: BattleData = {
 
 const embodyRoBattle: BattleData = {
   slug: "embody-vs-ro",
+  updatedAt: "2026-09-12",
   provider1Id: "embody",
   provider2Id: "ro",
   title: "Embody vs Ro: Which GLP-1 Provider Is Right for You in 2026?",
@@ -2829,6 +2848,7 @@ const embodyRoBattle: BattleData = {
 
 const trimrxRoBattle: BattleData = {
   slug: "trimrx-vs-ro",
+  updatedAt: "2026-09-12",
   provider1Id: "trimrx",
   provider2Id: "ro",
   title: "Ro vs TrimRX: Which GLP-1 Provider Is Right for You in 2026?",
@@ -2917,6 +2937,7 @@ const trimrxRoBattle: BattleData = {
 
 const trimrxwellmedrBattle: BattleData = {
   slug: "trimrx-vs-wellmedr",
+  updatedAt: "2026-09-14",
   provider1Id: "trimrx",
   provider2Id: "wellmedr",
   title: "TrimRX vs wellmedr: Which Weight Loss Provider Is Right for You in 2026?",
@@ -3004,6 +3025,7 @@ const trimrxwellmedrBattle: BattleData = {
 
 const rowellmedrBattle: BattleData = {
   slug: "ro-vs-wellmedr",
+  updatedAt: "2026-09-14",
   provider1Id: "wellmedr",
   provider2Id: "ro",
   title: "Ro vs wellmedr: Which GLP-1 Provider Is Right for You in 2026?",
@@ -3094,6 +3116,7 @@ const rowellmedrBattle: BattleData = {
 
 const embodyTrimrxBattle: BattleData = {
   slug: "embody-vs-trimrx",
+  updatedAt: "2026-09-02",
   provider1Id: "embody",
   provider2Id: "trimrx",
   title: "embody vs TrimRX: Which GLP-1 Provider Is Right for You in 2026?",
@@ -3181,6 +3204,7 @@ const embodyTrimrxBattle: BattleData = {
 
 const embodyMedviBattle: BattleData = {
   slug: "embody-vs-medvi",
+  updatedAt: "2026-09-02",
   provider1Id: "embody",
   provider2Id: "medvi",
   title: "embody vs Medvi: Which Weight Loss Provider Is Right for You in 2026?",
@@ -3268,6 +3292,7 @@ const embodyMedviBattle: BattleData = {
 
 const altrxwellmedrBattle: BattleData = {
   slug: "altrx-vs-wellmedr",
+  updatedAt: "2026-09-14",
   provider1Id: "altrx",
   provider2Id: "wellmedr",
   title: "altRx vs wellmedr: Which GLP-1 Provider Is Right for You in 2026?",
@@ -3361,6 +3386,7 @@ const altrxwellmedrBattle: BattleData = {
 
 const foundEmbodyBattle: BattleData = {
   slug: "found-vs-embody",
+  updatedAt: "2026-09-02",
   provider1Id: "embody",
   provider2Id: "found",
   title: "Found vs embody: Which Weight Loss Program Wins in 2026?",
@@ -3444,6 +3470,7 @@ const foundEmbodyBattle: BattleData = {
 
 const foundTrimrxBattle: BattleData = {
   slug: "found-vs-trimrx",
+  updatedAt: "2026-09-15",
   provider1Id: "trimrx",
   provider2Id: "found",
   title: "Found vs trimrx: Membership Coaching or Flexible GLP-1 Plans?",
@@ -3527,6 +3554,7 @@ const foundTrimrxBattle: BattleData = {
 
 const calibrateEmbodyBattle: BattleData = {
   slug: "calibrate-vs-embody",
+  updatedAt: "2026-09-02",
   provider1Id: "embody",
   provider2Id: "calibrate",
   title: "Calibrate vs embody: Insurance Program or Flat-Price GLP-1?",
@@ -3610,6 +3638,7 @@ const calibrateEmbodyBattle: BattleData = {
 
 const calibrateMedviBattle: BattleData = {
   slug: "calibrate-vs-medvi",
+  updatedAt: "2026-09-14",
   provider1Id: "medvi",
   provider2Id: "calibrate",
   title: "Calibrate vs Medvi: Which Weight Loss Program Fits You in 2026?",
@@ -3693,6 +3722,7 @@ const calibrateMedviBattle: BattleData = {
 
 const sequenceTrimrxBattle: BattleData = {
   slug: "sequence-vs-trimrx",
+  updatedAt: "2026-09-15",
   provider1Id: "trimrx",
   provider2Id: "sequence",
   title: "Sequence (WeightWatchers) vs trimrx: Which GLP-1 Program Wins?",
@@ -3776,6 +3806,7 @@ const sequenceTrimrxBattle: BattleData = {
 
 const sequenceMedviBattle: BattleData = {
   slug: "sequence-vs-medvi",
+  updatedAt: "2026-09-14",
   provider1Id: "medvi",
   provider2Id: "sequence",
   title: "Sequence (WeightWatchers) vs Medvi: Which Is Better in 2026?",
@@ -3861,6 +3892,7 @@ const sequenceMedviBattle: BattleData = {
 // Both sides' facts are their real published program details.
 const healthrxMedviBattle: BattleData = {
   slug: "healthrx-vs-medvi",
+  updatedAt: "2026-09-02",
   provider1Id: "medvi",
   provider2Id: "healthrx",
   title: "HealthRx vs Medvi (2026): Two $99 Semaglutide Deals Compared",
@@ -3956,6 +3988,7 @@ const healthrxMedviBattle: BattleData = {
 
 const embodySproutBattle: BattleData = {
   slug: "embody-vs-sprout",
+  updatedAt: "2026-09-08",
   provider1Id: "embody",
   provider2Id: "sprout",
   title: "embody vs Sprout: Which GLP-1 Provider Is Right for You in 2026?",
@@ -4035,6 +4068,7 @@ const embodySproutBattle: BattleData = {
 
 const altrxSproutBattle: BattleData = {
   slug: "altrx-vs-sprout",
+  updatedAt: "2026-09-02",
   provider1Id: "altrx",
   provider2Id: "sprout",
   title: "altRx vs Sprout: Which GLP-1 Provider Is Right for You in 2026?",
@@ -4114,6 +4148,7 @@ const altrxSproutBattle: BattleData = {
 
 const sproutTrimrxBattle: BattleData = {
   slug: "sprout-vs-trimrx",
+  updatedAt: "2026-09-15",
   provider1Id: "sprout",
   provider2Id: "trimrx",
   title: "Sprout vs trimrx: Which GLP-1 Provider Is Right for You in 2026?",
@@ -4202,6 +4237,7 @@ const sproutTrimrxBattle: BattleData = {
 
 const sproutWellmedrBattle: BattleData = {
   slug: "sprout-vs-wellmedr",
+  updatedAt: "2026-09-14",
   provider1Id: "wellmedr",
   provider2Id: "sprout",
   title: "Sprout vs wellmedr: Which GLP-1 Provider Is Right for You in 2026?",
@@ -4450,6 +4486,15 @@ const defaultExperts: Expert[] = [
   },
 ];
 
+// The newer of two ISO dates (YYYY-MM-DD compares lexicographically); either
+// side may be missing. Used when merging CMS-saved items with the code seed so
+// an item's last-modified date never moves backwards.
+function newerDate(a?: string, b?: string): string | undefined {
+  if (!a) return b;
+  if (!b) return a;
+  return b > a ? b : a;
+}
+
 function buildInitialConfig(): SiteConfig {
   return {
     ...defaultConfig,
@@ -4490,6 +4535,7 @@ function buildInitialConfig(): SiteConfig {
     battles: [
       {
         slug: "altrx-vs-ro",
+        updatedAt: "2026-09-12",
         provider1Id: "altrx",
         provider2Id: "ro",
         title: "altRx vs Ro: Which GLP-1 Provider Is Right for You in 2026?",
@@ -5021,6 +5067,10 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
                 pricingPlans: r.pricingPlans ?? seed.pricingPlans,
                 howItWorks: r.howItWorks ?? seed.howItWorks,
                 trustBadges: r.trustBadges ?? seed.trustBadges,
+                // Last-modified: the newer of the CMS date and the seed date, so
+                // a code content pass moves lastmod/dateModified forward even
+                // on a CMS-owned review (and a CMS edit still counts).
+                updatedAt: newerDate(r.updatedAt, seed.updatedAt),
               };
             });
             const newDefaults = initial.reviews.filter((r) => !savedSlugs.has(r.slug));
@@ -5044,9 +5094,14 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
               const cluster = codeAuthoritative.get(a.slug);
               if (cluster) return cluster;
               const code = codeBySlug.get(a.slug);
-              return code && (code.image || code.imageAlt)
-                ? { ...a, image: code.image, imageAlt: code.imageAlt }
-                : a;
+              if (!code) return a;
+              return {
+                ...a,
+                ...((code.image || code.imageAlt) && { image: code.image, imageAlt: code.imageAlt }),
+                // Last-modified: newer of the CMS date and the seed date (see
+                // the reviews merge above for the rationale).
+                updatedAt: newerDate(a.updatedAt, code.updatedAt) ?? a.updatedAt,
+              };
             });
             const newDefaults = initial.articles.filter((a) => !savedSlugs.has(a.slug));
             return [...merged, ...newDefaults];
@@ -5091,6 +5146,7 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
                     verdictWinnerPoints: code.verdictWinnerPoints,
                     verdictLoserPoints: code.verdictLoserPoints,
                     categories: code.categories,
+                    updatedAt: newerDate(b.updatedAt, code.updatedAt),
                   }
                 : b;
             });
