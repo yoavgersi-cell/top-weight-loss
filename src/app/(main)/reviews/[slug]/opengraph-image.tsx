@@ -54,8 +54,12 @@ export default async function OGImage({
         >
           treatmentshub.com
         </span>
+        {/* Single text child: `{name} Review 2026` rendered as two child nodes,
+            which Satori rejects without display:flex - the route had been
+            failing with "failed to pipe response" on every review. */}
         <div
           style={{
+            display: "flex",
             fontSize: "56px",
             fontWeight: 800,
             color: "white",
@@ -63,7 +67,7 @@ export default async function OGImage({
             marginBottom: "24px",
           }}
         >
-          {providerName} Review 2026
+          {`${providerName} Review 2026`}
         </div>
         {score && (
           <div

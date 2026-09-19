@@ -276,7 +276,10 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     "@type": "Article",
     headline: article.title,
     description: article.description,
-    image: canonicalUrl(ctx, `/articles/${slug}/opengraph-image`),
+    // Only a real image: the un-hashed /opengraph-image path is not a served
+    // route (Next hashes the file-convention URL), so pointing schema at it
+    // emitted a 404 image on every article.
+    ...(article.image && { image: `${ctx.origin}${article.image}` }),
     datePublished: article.publishedAt,
     dateModified: latestUpdate(article.updatedAt),
     wordCount,
