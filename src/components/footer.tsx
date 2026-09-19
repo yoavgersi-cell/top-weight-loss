@@ -14,6 +14,7 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "TRT", href: "/trt" },
       { label: "HRT", href: "/hrt" },
       { label: "Online Therapy", href: "/online-therapy" },
+      { label: "Weight Loss (UK)", href: "/uk/weight-loss" },
     ],
   },
   {
@@ -22,6 +23,12 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "Reviews", href: "/weight-loss/reviews" },
       { label: "Guides", href: "/weight-loss/articles" },
       { label: "Cheapest GLP-1", href: "/weight-loss/cheapest-glp1" },
+      // The three ranking landing pages were in the sitemap with zero
+      // internal links (orphans in the Sept 2026 audit) - surfaced here so
+      // every crawled page links to them.
+      { label: "Best Weight Loss Injections", href: "/weight-loss/best-weight-loss-injections" },
+      { label: "Best Online Programs", href: "/weight-loss/best-online-weight-loss-programs" },
+      { label: "Cheapest Weight Loss Medication", href: "/weight-loss/cheapest-weight-loss-medication" },
       { label: "Ozempic Alternatives", href: "/weight-loss/ozempic-alternatives" },
       { label: "Switch from Ozempic", href: "/weight-loss/switch-from-ozempic" },
       { label: "How We Rank", href: "/weight-loss/how-we-rank" },
@@ -47,7 +54,9 @@ const FEATURED_COMPARISON_SLUGS = [
   "altrx-vs-embody",
   "embody-vs-ro",
   "altrx-vs-wellmedr",
-  "embody-vs-altrx-vs-wellmedr",
+  // (the three-way embody-vs-altrx-vs-wellmedr sat here, but three-way pages
+  // are noindex - a sitewide footer link to a noindex page is wasted crawl)
+  "medvi-vs-wellmedr",
 ];
 
 async function featuredComparisons(): Promise<{ label: string; href: string }[]> {
@@ -103,7 +112,10 @@ export async function Footer() {
 
           {columns.map((col) => (
             <div key={col.title}>
-              <h4 className="mb-2.5 text-[12px] font-bold uppercase tracking-wider text-[#191919]">{col.title}</h4>
+              {/* Not a heading: footer column labels were h4s that followed the
+                  page's last h2/h1 and produced a heading-level skip on every
+                  page in the audit. */}
+              <p className="mb-2.5 text-[12px] font-bold uppercase tracking-wider text-[#191919]">{col.title}</p>
               <nav className="space-y-1.5">
                 {col.links.map((l) => (
                   <Link key={l.label} href={l.href} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">

@@ -18,9 +18,13 @@ export const metadata: Metadata = {
   // schema `name`, og:site_name and the <title> suffix - all three must agree.
   // The chosen display name is "Treatments Hub" (two words); the one-word
   // spelling and the bare domain are declared as alternateName in the schema.
+  // Inner pages carry no " | Treatments Hub" suffix: it pushed 255 of 279
+  // titles past 60 characters (SERP truncation), and Google shows the site
+  // name separately from og:site_name / WebSite schema. The homepage title
+  // keeps the name.
   title: {
     default: "Treatments Hub - Compare Online Treatment Providers & Prices",
-    template: "%s | Treatments Hub",
+    template: "%s",
   },
   // Icons come from the App Router file convention (app/icon.png, app/apple-icon.png),
   // which serves them at content-hashed URLs so they cache-bust on every update.
