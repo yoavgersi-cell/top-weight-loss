@@ -18,7 +18,7 @@ export const brandClusterArticles: Article[] = [
     category: "Guide",
     readTime: "8 min read",
     publishedAt: "2026-08-06",
-    updatedAt: "2026-08-21",
+    updatedAt: "2026-09-15",
     heroColor: "#EEF4FB",
     author: "Treatments Hub Staff",
     keyTakeaways: [
@@ -58,7 +58,7 @@ export const brandClusterArticles: Article[] = [
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-08",
-    updatedAt: "2026-08-21",
+    updatedAt: "2026-09-15",
     heroColor: "#F0FAF5",
     author: "Treatments Hub Staff",
     keyTakeaways: [
@@ -94,7 +94,7 @@ export const brandClusterArticles: Article[] = [
     category: "Comparison",
     readTime: "7 min read",
     publishedAt: "2026-08-10",
-    updatedAt: "2026-08-21",
+    updatedAt: "2026-09-15",
     heroColor: "#FBF3EE",
     author: "Treatments Hub Staff",
     keyTakeaways: [
@@ -135,7 +135,7 @@ export const brandClusterArticles: Article[] = [
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-13",
-    updatedAt: "2026-08-21",
+    updatedAt: "2026-09-15",
     heroColor: "#F3EEFB",
     author: "Treatments Hub Staff",
     keyTakeaways: [
@@ -175,7 +175,7 @@ export const brandClusterArticles: Article[] = [
     category: "Comparison",
     readTime: "7 min read",
     publishedAt: "2026-08-15",
-    updatedAt: "2026-08-21",
+    updatedAt: "2026-09-15",
     heroColor: "#FBEEF4",
     author: "Treatments Hub Staff",
     keyTakeaways: [
@@ -337,7 +337,7 @@ export const brandClusterArticles: Article[] = [
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-08",
-    updatedAt: "2026-08-21",
+    updatedAt: "2026-09-15",
     heroColor: "#EEF7FB",
     author: "Treatments Hub Staff",
     keyTakeaways: [
@@ -377,7 +377,7 @@ export const brandClusterArticles: Article[] = [
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-08-14",
-    updatedAt: "2026-08-21",
+    updatedAt: "2026-09-15",
     heroColor: "#F3EEFB",
     author: "Treatments Hub Staff",
     keyTakeaways: [
@@ -413,7 +413,7 @@ export const brandClusterArticles: Article[] = [
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-08-16",
-    updatedAt: "2026-08-21",
+    updatedAt: "2026-09-15",
     heroColor: "#FBEEF4",
     author: "Treatments Hub Staff",
     keyTakeaways: [
@@ -454,7 +454,7 @@ export const brandClusterArticles: Article[] = [
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-09",
-    updatedAt: "2026-08-21",
+    updatedAt: "2026-09-15",
     heroColor: "#EEF4FB",
     author: "Treatments Hub Staff",
     keyTakeaways: [
@@ -494,7 +494,7 @@ export const brandClusterArticles: Article[] = [
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-08-11",
-    updatedAt: "2026-08-21",
+    updatedAt: "2026-09-15",
     heroColor: "#F0FAF5",
     author: "Treatments Hub Staff",
     keyTakeaways: [
@@ -530,7 +530,7 @@ export const brandClusterArticles: Article[] = [
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-08-17",
-    updatedAt: "2026-08-21",
+    updatedAt: "2026-09-15",
     heroColor: "#FBF3EE",
     author: "Treatments Hub Staff",
     keyTakeaways: [
@@ -571,7 +571,7 @@ export const brandClusterArticles: Article[] = [
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-10",
-    updatedAt: "2026-08-21",
+    updatedAt: "2026-09-15",
     heroColor: "#EEF7FB",
     author: "Treatments Hub Staff",
     keyTakeaways: [
@@ -611,7 +611,7 @@ export const brandClusterArticles: Article[] = [
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-08-13",
-    updatedAt: "2026-08-21",
+    updatedAt: "2026-09-15",
     heroColor: "#F3EEFB",
     author: "Treatments Hub Staff",
     keyTakeaways: [
@@ -647,7 +647,7 @@ export const brandClusterArticles: Article[] = [
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-08-18",
-    updatedAt: "2026-08-21",
+    updatedAt: "2026-09-15",
     heroColor: "#FBEEF4",
     author: "Treatments Hub Staff",
     keyTakeaways: [
@@ -688,7 +688,7 @@ export const brandClusterArticles: Article[] = [
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-21",
-    updatedAt: "2026-08-21",
+    updatedAt: "2026-09-15",
     heroColor: "#EEF4FB",
     author: "Treatments Hub Staff",
     keyTakeaways: [
@@ -728,7 +728,7 @@ export const brandClusterArticles: Article[] = [
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-08-21",
-    updatedAt: "2026-08-21",
+    updatedAt: "2026-09-15",
     heroColor: "#F0FAF5",
     author: "Treatments Hub Staff",
     keyTakeaways: [
@@ -764,7 +764,7 @@ export const brandClusterArticles: Article[] = [
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-08-21",
-    updatedAt: "2026-08-21",
+    updatedAt: "2026-09-15",
     heroColor: "#FBF3EE",
     author: "Treatments Hub Staff",
     keyTakeaways: [
@@ -801,7 +801,7 @@ export const brandClusterArticles: Article[] = [
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-23",
-    updatedAt: "2026-08-23",
+    updatedAt: "2026-09-15",
     heroColor: "#EAF6EE",
     author: "Treatments Hub Staff",
     keyTakeaways: [
@@ -837,7 +837,7 @@ export const brandClusterArticles: Article[] = [
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-23",
-    updatedAt: "2026-08-23",
+    updatedAt: "2026-09-15",
     heroColor: "#EAF6EE",
     author: "Treatments Hub Staff",
     keyTakeaways: [
@@ -873,7 +873,7 @@ export const brandClusterArticles: Article[] = [
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-23",
-    updatedAt: "2026-08-23",
+    updatedAt: "2026-09-15",
     heroColor: "#EAF6EE",
     author: "Treatments Hub Staff",
     keyTakeaways: [

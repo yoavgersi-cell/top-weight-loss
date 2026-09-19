@@ -20,9 +20,8 @@ const BASE_URL = "https://www.topweightloss.io";
 const HUB_URL = "https://www.treatmentshub.com";
 const FALLBACK_DATE = new Date(CONTENT_LAST_UPDATED);
 
-// Battles, reviews and articles share a template-wide floor date (see
-// TEMPLATES_LAST_UPDATED) - keep the sitemap's lastmod in sync with the
-// on-page "Last updated" line and schema dateModified.
+// Per-item last-modified (the item's own updatedAt; stable fallback when none)
+// - the same value the on-page "Last updated" line and schema dateModified use.
 const flooredLastModified = (updatedAt?: string) => new Date(latestUpdate(updatedAt));
 
 // Weight-loss-specific standalone pages (custom-coded, not CMS-driven). Shared
@@ -78,15 +77,27 @@ async function hubSitemap(): Promise<MetadataRoute.Sitemap> {
 function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean): MetadataRoute.Sitemap {
   const P = (path: string) => `${base}${path}`;
 
+  // Listing pages (vertical home, /reviews, /articles) change whenever one of
+  // the items they list changes, so their lastmod is the newest child date -
+  // a real value, not a shared constant.
+  const newest = (dates: (string | undefined)[]) => {
+    const real = dates.filter((d): d is string => !!d).sort();
+    return real.length ? new Date(real[real.length - 1]) : FALLBACK_DATE;
+  };
+  const reviewsNewest = newest((config.reviews ?? []).map((r) => r.updatedAt));
+  const articlesNewest = newest((config.articles ?? []).map((a) => a.updatedAt));
+  const battlesNewest = newest((config.battles ?? []).map((b) => b.updatedAt));
+  const homeNewest = new Date(Math.max(reviewsNewest.getTime(), articlesNewest.getTime(), battlesNewest.getTime()));
+
   const entries: MetadataRoute.Sitemap = [
-    { url: base, lastModified: FALLBACK_DATE, changeFrequency: "weekly", priority: 0.9 },
-    { url: P("/reviews"), lastModified: FALLBACK_DATE, changeFrequency: "weekly", priority: 0.9 },
+    { url: base, lastModified: homeNewest, changeFrequency: "weekly", priority: 0.9 },
+    { url: P("/reviews"), lastModified: reviewsNewest, changeFrequency: "weekly", priority: 0.9 },
   ];
 
   // The articles index only earns a sitemap slot once the vertical actually
   // has articles - an empty "No articles" page is thin content.
   if ((config.articles ?? []).length > 0) {
-    entries.push({ url: P("/articles"), lastModified: FALLBACK_DATE, changeFrequency: "weekly", priority: 0.8 });
+    entries.push({ url: P("/articles"), lastModified: articlesNewest, changeFrequency: "weekly", priority: 0.8 });
   }
 
   // Reviews - provider reviews are indexable by default (operator policy, Aug

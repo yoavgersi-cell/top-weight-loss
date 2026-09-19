@@ -298,10 +298,13 @@ export const CONTENT_LAST_UPDATED = "2026-09-01";
 // landed site-wide since the previous floor.
 export const TEMPLATES_LAST_UPDATED = "2026-09-01";
 
-// ISO dates compare lexicographically - returns the newer of an item's own
-// updatedAt and the template-wide floor above.
-export const latestUpdate = (updatedAt?: string) =>
-  updatedAt && updatedAt > TEMPLATES_LAST_UPDATED ? updatedAt : TEMPLATES_LAST_UPDATED;
+// An item's own last-modified date, or the stable fallback when it has none.
+// The template-wide floor is deliberately NOT applied any more (Sept 2026):
+// it stamped one identical date on ~240 sitemap entries, on-page "Last
+// updated" lines and schema dateModified, which Google treats as an untrusted
+// lastmod signal (and, on a young domain, as date manipulation). Every review,
+// battle and article now carries a real per-item updatedAt.
+export const latestUpdate = (updatedAt?: string) => updatedAt || CONTENT_LAST_UPDATED;
 
 // Human-readable month when the operator last verified provider-published
 // pricing, plans and policies against each provider's own site. Shown in the
