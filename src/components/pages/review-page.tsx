@@ -738,6 +738,20 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           </div>
         )}
 
+        {/* Trustpilot Reviews - social proof right after the legitimacy block,
+            before the feature/pricing detail (moved up, operator request Sept 20). */}
+        {(provider.trustpilotReviews?.length ?? 0) > 0 && (
+          <div className="mb-6">
+            <TrustpilotCarousel
+              providerName={provider.name}
+              providerLogo={provider.logo}
+              reviews={provider.trustpilotReviews!}
+              rating={provider.trustpilotRating}
+              reviewCount={provider.trustpilotReviewCount}
+            />
+          </div>
+        )}
+
         {/* Key Features + Pricing side by side on desktop */}
         <div className="mb-6 grid gap-6 sm:grid-cols-2">
           <Section title="Key Features">
@@ -874,19 +888,6 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             </div>
           </div>
         </div>
-
-        {/* Trustpilot Reviews - social proof surfaced above the CTA */}
-        {(provider.trustpilotReviews?.length ?? 0) > 0 && (
-          <div className="mb-6">
-            <TrustpilotCarousel
-              providerName={provider.name}
-              providerLogo={provider.logo}
-              reviews={provider.trustpilotReviews!}
-              rating={provider.trustpilotRating}
-              reviewCount={provider.trustpilotReviewCount}
-            />
-          </div>
-        )}
 
         {/* Mid-page CTA */}
         <div className="mb-6 rounded-xl border border-[#0C4B75]/10 bg-[#0C4B75]/[0.03] p-5 text-center sm:p-6">
