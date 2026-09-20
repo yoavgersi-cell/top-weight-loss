@@ -24,6 +24,7 @@ import { REDDIT_COMMUNITY_FEEDBACK as REVIEW_COMMUNITY_FEEDBACK, RedditMark } fr
 import { YoutubeReviewSection } from "@/components/youtube-review";
 import { ReadableProse } from "@/components/prose";
 import { ProviderAudit } from "@/components/provider-audit";
+import { HowItWorksShowcase, HOW_IT_WORKS_SHOWCASE } from "@/components/how-it-works-showcase";
 
 // Per-provider SEO overrides for reviews with distinctive search demand.
 // Code-controlled (not CMS-merged) so they reliably target trending queries -
@@ -446,6 +447,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // provider id so only providers with a confirmed standing offer show one.
   const reviewPromo = REVIEW_PROMOS[provider.id];
   const trustStrip = REVIEW_TRUST_STRIP[provider.id];
+  const showcase = HOW_IT_WORKS_SHOWCASE[provider.id];
 
   // Note: we intentionally do NOT emit an AggregateOffer/price in the schema.
   // A structured price can surface in the SERP rich result and goes stale the
@@ -825,8 +827,18 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             providers whose data isn't fully verified render nothing. */}
         <ProviderAudit providerId={provider.id} providerName={provider.name} vertical={ctx.vertical} />
 
-        {/* How it works */}
-        {review.howItWorks && review.howItWorks.length > 0 && (
+        {/* How it works - visual showcase from the provider's own creative
+            when one is registered (altRx today); the plain numbered list
+            otherwise. Never both. */}
+        {showcase && (
+          <HowItWorksShowcase
+            spec={showcase}
+            providerName={provider.name}
+            providerId={provider.id}
+            affiliateUrl={provider.affiliateUrl}
+          />
+        )}
+        {!showcase && review.howItWorks && review.howItWorks.length > 0 && (
           <Section title={`How ${provider.name} Works`}>
             <ol className="space-y-4">
               {review.howItWorks.map((step, i) => (
