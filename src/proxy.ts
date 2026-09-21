@@ -60,6 +60,9 @@ const SLUG_ALIASES: Record<string, string> = {
   "shed-vs-embody": "best-online-weight-loss-programs",
   "directmeds-vs-wellorithm": "best-online-weight-loss-programs",
   "synergyrx-vs-skinnyrx": "best-online-weight-loss-programs",
+  // Never built either (old-domain 28-day Pages export); was 301'ing into a 404.
+  "trimrx-vs-shed": "best-online-weight-loss-programs",
+  "shed-vs-trimrx": "best-online-weight-loss-programs",
 };
 
 // Full-path redirects for content pages that were renamed or consolidated (an
@@ -82,6 +85,12 @@ const PATH_REDIRECTS: Record<string, string> = {
   "/articles/ozempic-face-what-it-is": "/articles/how-glp1-medications-work",
   "/articles/ozempic-before-and-after-weight-loss": "/articles/how-long-for-semaglutide-to-work",
   "/articles/telemedicine-weight-loss-guide": "/articles/choosing-telehealth-weight-loss-provider",
+  // Consolidated into the ranking homepage (see article-page.tsx). The page-level
+  // redirect still exists as a fallback, but resolving it here turns the
+  // legacy 301 -> 308 chain into a single hop. Empty target = the vertical root.
+  "/articles/best-weight-loss-telehealth-providers": "",
+  // Stale /articles/ copy of a battle slug - same single-hop reason.
+  "/articles/altrx-vs-ro": "/altrx-vs-ro",
 };
 
 // One deployment serves two hosts:
@@ -115,7 +124,7 @@ export function proxy(req: NextRequest) {
     // content-relative path, so strip a vertical prefix first; the target is
     // content-relative and re-prefixes onto the requested vertical.
     const contentPath = isVertical(first) ? `/${segments.slice(1).join("/")}` : pathname;
-    if (PATH_REDIRECTS[contentPath]) {
+    if (PATH_REDIRECTS[contentPath] !== undefined) {
       const url = req.nextUrl.clone();
       url.pathname = `/${isVertical(first) ? first : "weight-loss"}${PATH_REDIRECTS[contentPath]}`;
       return NextResponse.redirect(url, 301);
@@ -190,7 +199,7 @@ export function proxy(req: NextRequest) {
     url.host = "www.treatmentshub.com";
     // Full-path content redirect (renamed/retired pages) resolves in the same
     // single 301 as the migration hop.
-    if (PATH_REDIRECTS[url.pathname]) {
+    if (PATH_REDIRECTS[url.pathname] !== undefined) {
       url.pathname = `/weight-loss${PATH_REDIRECTS[url.pathname]}`;
       return NextResponse.redirect(url, 301);
     }
