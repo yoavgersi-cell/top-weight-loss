@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { GuideCluster } from "@/components/guide-cluster";
 import { FlaskConical, TriangleAlert, ArrowRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { LastUpdated } from "@/components/last-updated";
@@ -196,6 +197,8 @@ export default function RetatrutidePage() {
             ))}
           </div>
         </section>
+
+        <GuideCluster currentSlug="retatrutide-weight-loss" />
 
         {/* Sources + disclaimer */}
         <section>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { GuideCluster } from "@/components/guide-cluster";
 import { Pill, Syringe, Trophy, ArrowRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { LastUpdated } from "@/components/last-updated";
@@ -236,6 +237,8 @@ export default function Glp1PillsVsInjectionsPage() {
             ))}
           </div>
         </section>
+
+        <GuideCluster currentSlug="glp1-pills-vs-injections" />
 
         {/* Sources + disclaimer */}
         <section>

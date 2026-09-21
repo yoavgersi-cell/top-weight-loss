@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { GuideCluster } from "@/components/guide-cluster";
 import { getConfig } from "@/lib/config-store";
 import { PRICE_INDEX, BRAND_SHELF, PRICE_INDEX_VERIFIED, PRICE_CHANGELOG } from "@/lib/price-index";
 
@@ -418,6 +419,8 @@ export default async function StatisticsPage() {
             </p>
           </div>
         </section>
+
+        <GuideCluster currentSlug="glp1-weight-loss-statistics" />
 
         {/* CTA */}
         <div className="rounded-xl border border-gray-200 bg-white p-6 text-center">
