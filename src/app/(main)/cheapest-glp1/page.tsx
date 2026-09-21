@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { GuideCluster } from "@/components/guide-cluster";
 import { BadgeDollarSign, ScanSearch, Repeat } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED, AFFILIATE_PROVIDER_IDS } from "@/lib/config";
@@ -320,6 +321,8 @@ export default async function CheapestGlp1Page() {
             </Link>
           </p>
         </section>
+
+        <GuideCluster currentSlug="cheapest-glp1" />
 
         <MedicalSources vertical="weight-loss" />
 

@@ -8,6 +8,7 @@ import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { ComparisonLayout } from "@/components/comparison-layout";
 import { EditorialContent } from "@/components/editorial-content";
 import { LandingEditorial } from "@/components/landing-editorial";
+import { GuideCluster } from "@/components/guide-cluster";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound, permanentRedirect } from "next/navigation";
 import { ArrowRight, Check, Minus, ShieldCheck, Sparkles, Star } from "lucide-react";
@@ -501,6 +502,11 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <LandingEditorial sections={landing.editorialSections} />
           ) : (
             <EditorialContent />
+          )}
+          {ctx.vertical === "weight-loss" && (
+            <div className="mx-auto max-w-[1200px] px-4 pb-12">
+              <GuideCluster currentSlug={landing.slug} prefix={ctx.prefix} />
+            </div>
           )}
         </ComparisonLayout>
       </>

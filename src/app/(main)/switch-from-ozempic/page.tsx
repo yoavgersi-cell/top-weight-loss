@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { GuideCluster } from "@/components/guide-cluster";
 import { ShieldCheck, ArrowDownRight } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED, AFFILIATE_PROVIDER_IDS } from "@/lib/config";
@@ -400,6 +401,8 @@ export default async function SwitchFromOzempicPage() {
             ))}
           </div>
         </section>
+
+        <GuideCluster currentSlug="switch-from-ozempic" />
 
         <MedicalSources vertical="weight-loss" />
 

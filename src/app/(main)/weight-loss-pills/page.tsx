@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { GuideCluster } from "@/components/guide-cluster";
 import { Pill, Syringe, ShieldCheck, TriangleAlert, ArrowRight, Check } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
@@ -296,6 +297,8 @@ export default async function WeightLossPillsPage() {
             ))}
           </div>
         </section>
+
+        <GuideCluster currentSlug="weight-loss-pills" />
 
         {/* Sources + disclaimer */}
         <section>

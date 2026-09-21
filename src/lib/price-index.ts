@@ -111,13 +111,19 @@ export const PRICE_INDEX: PriceIndexRow[] = [
 // Date of the last operator verification pass over the index above. Bump it
 // whenever a row is re-checked or changed - the statistics page prints it as
 // the dataset's "verified as of" date and emits it as schema dateModified.
-export const PRICE_INDEX_VERIFIED = "2026-09-15";
+export const PRICE_INDEX_VERIFIED = "2026-09-21";
 
 // Public change log for the index. One entry per operator-verified change,
 // newest first, describing what our listing said before and after. Only add
 // an entry when the underlying row actually changed after verification - this
 // log is published on the statistics page as the citable record.
 export const PRICE_CHANGELOG: { date: string; providerId: string; change: string }[] = [
+  {
+    date: "2026-09-21",
+    providerId: "altrx",
+    change:
+      "Promotional $89/month semaglutide and $149/month tirzepatide rates extended: provider now lists the sale as ending September 25 (previously September 20). Prices unchanged.",
+  },
   {
     date: "2026-09-15",
     providerId: "trimrx",

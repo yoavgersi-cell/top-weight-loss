@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { GuideCluster } from "@/components/guide-cluster";
 import { Pill, ShieldCheck, ArrowRight, DollarSign } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { LastUpdated } from "@/components/last-updated";
@@ -257,6 +258,8 @@ export default function OzempicAlternativesPage() {
             ))}
           </div>
         </section>
+
+        <GuideCluster currentSlug="ozempic-alternatives" />
 
         {/* Sources + disclaimer */}
         <section>
