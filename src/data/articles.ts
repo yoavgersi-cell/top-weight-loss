@@ -42,7 +42,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "What Are GLP-1 Medications?",
-        body: 'GLP-1 receptor agonists are a class of prescription medications originally developed for type 2 diabetes. They mimic a natural hormone called glucagon-like peptide-1, which your gut produces after eating. Medications like semaglutide (the active ingredient in <a href="/weight-loss/articles/ozempic-vs-wegovy-differences">Ozempic and Wegovy</a>) and tirzepatide (used in Mounjaro and Zepbound) have shown remarkable results for weight management in clinical trials, leading to FDA approval specifically for weight loss.',
+        body: 'GLP-1 receptor agonists are a class of prescription medications originally developed for type 2 diabetes. They mimic a natural hormone called <a href="https://www.health.harvard.edu/healthy-aging-and-longevity/how-does-ozempic-work-understanding-glp-1s-for-diabetes-weight-loss-and-beyond" target="_blank" rel="noopener">glucagon-like peptide-1</a>, which your gut produces after eating. Medications like semaglutide (the active ingredient in <a href="/weight-loss/articles/ozempic-vs-wegovy-differences">Ozempic and Wegovy</a>) and tirzepatide (used in Mounjaro and Zepbound) have shown remarkable results for weight management in clinical trials, <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-new-drug-treatment-chronic-weight-management-first-2014" target="_blank" rel="noopener">leading to FDA approval specifically for weight loss</a>.',
       },
       {
         heading: "How do GLP-1 medications reduce appetite?",
@@ -58,11 +58,11 @@ export const articles: Article[] = [
       },
       {
         heading: "How much weight can you expect to lose?",
-        body: 'Clinical trials show average weight loss of about 15% of body weight with semaglutide (STEP trials) and up to ~22.5% with tirzepatide (SURMOUNT trials) over 68-72 weeks. However, results vary significantly between individuals. Most patients begin noticing appetite changes within the first two weeks, with meaningful weight loss becoming visible around weeks 4-8. For a week-by-week breakdown, read our guide on <a href="/weight-loss/articles/first-month-weight-loss-medication">what to expect your first month on medication</a>. The medications are typically administered as once-weekly injections, with doses gradually increased over several months to minimize side effects.',
+        body: 'Clinical trials show average weight loss of about 15% of body weight with semaglutide (<a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">STEP trials</a>) and up to ~22.5% with tirzepatide (<a href="https://pubmed.ncbi.nlm.nih.gov/35658024/" target="_blank" rel="noopener">SURMOUNT trials</a>) over 68-72 weeks. However, results vary significantly between individuals. Most patients begin noticing appetite changes within the first two weeks, with meaningful weight loss becoming visible around weeks 4-8. For a week-by-week breakdown, read our guide on <a href="/weight-loss/articles/first-month-weight-loss-medication">what to expect your first month on medication</a>. The medications are typically administered as once-weekly injections, with doses gradually increased over several months to minimize side effects.',
       },
       {
         heading: "What are the common side effects?",
-        body: 'The most common side effects are gastrointestinal: nausea, vomiting, diarrhea, and constipation. These are usually most pronounced during dose increases and tend to improve over time. Starting at a low dose and gradually titrating up helps most patients manage these effects. For a full breakdown, see our <a href="/weight-loss/articles/semaglutide-side-effects-guide">semaglutide side effects guide</a>. More serious but rare side effects include pancreatitis and gallbladder problems, which is why medical supervision during treatment is important. <a href="/weight-loss/find-your-match">Take our quiz</a> to find a provider with strong clinical oversight.',
+        body: 'The most common side effects are gastrointestinal: nausea, vomiting, diarrhea, and constipation. These are usually most pronounced during dose increases and tend to improve over time. Starting at a low dose and gradually titrating up helps most patients manage these effects. For a full breakdown, see our <a href="/weight-loss/articles/semaglutide-side-effects-guide">semaglutide side effects guide</a>. More serious but rare side effects include <a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener">pancreatitis and gallbladder problems</a>, which is why medical supervision during treatment is important. <a href="/weight-loss/find-your-match">Take our quiz</a> to find a provider with strong clinical oversight.',
       },
     ],
   },
@@ -104,11 +104,11 @@ export const articles: Article[] = [
       },
       {
         heading: "How do you manage side effects in the first month?",
-        body: 'If you experience nausea, constipation, or digestive discomfort, know that these are the most commonly reported side effects and they usually improve. Practical tips that help: eat slowly, choose lean proteins and vegetables, avoid carbonated drinks, stay hydrated throughout the day, and don\'t eat until you\'re overly full. If side effects are severe or persistent, contact your provider - they may adjust your timeline for dose increases. Read our full <a href="/weight-loss/articles/semaglutide-side-effects-guide">side effects guide</a> for more strategies.',
+        body: 'If you experience nausea, constipation, or digestive discomfort, know that these are <a href="https://www.mayoclinic.org/drugs-supplements/semaglutide-subcutaneous-route/description/drg-20406730" target="_blank" rel="noopener">the most commonly reported side effects</a> and they usually improve. Practical tips that help: eat slowly, choose lean proteins and vegetables, avoid carbonated drinks, stay hydrated throughout the day, and don\'t eat until you\'re overly full. If side effects are severe or persistent, contact your provider - they may adjust your timeline for dose increases. Read our full <a href="/weight-loss/articles/semaglutide-side-effects-guide">side effects guide</a> for more strategies.',
       },
       {
         heading: "What should you realistically expect in month one?",
-        body: 'The first month is about building a foundation, not dramatic transformation. The medication needs time to reach effective levels in your body, and dose titration happens gradually for good reason. Patients who see the best long-term results are those who combine medication with sustainable lifestyle changes: regular movement, adequate sleep, stress management, and balanced nutrition. Our guide on <a href="/weight-loss/articles/exercise-while-on-glp1-medication">exercising on GLP-1 medication</a> can help you build an effective routine. Think of the medication as a powerful tool that makes these changes significantly easier - not a replacement for them.',
+        body: 'The first month is about building a foundation, not dramatic transformation. The medication needs time to reach effective levels in your body, and dose titration happens gradually for good reason. Patients who see the best long-term results are those who combine medication with <a href="https://www.cdc.gov/healthy-weight-growth/losing-weight/index.html" target="_blank" rel="noopener">sustainable lifestyle changes</a>: regular movement, adequate sleep, stress management, and balanced nutrition. Our guide on <a href="/weight-loss/articles/exercise-while-on-glp1-medication">exercising on GLP-1 medication</a> can help you build an effective routine. Think of the medication as a powerful tool that makes these changes significantly easier - not a replacement for them.',
       },
     ],
   },
@@ -138,7 +138,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Does the provider use licensed medical prescribers?",
-        body: "This is non-negotiable. Your weight loss treatment should be prescribed and supervised by a licensed physician, nurse practitioner, or physician assistant. Avoid any platform that prescribes medication without a proper medical evaluation. Ask whether you'll have ongoing access to a medical professional for dose adjustments and questions - not just an initial consultation. Good providers include regular check-ins as part of their program.",
+        body: "This is non-negotiable. Your weight loss treatment should be prescribed and supervised by a licensed physician, nurse practitioner, or physician assistant. <a href=\"https://www.fda.gov/drugs/buying-using-medicine-safely/besaferx-your-source-online-pharmacy-information\" target=\"_blank\" rel=\"noopener\">Avoid any platform that prescribes medication without a proper medical evaluation</a>. Ask whether you'll have ongoing access to a medical professional for dose adjustments and questions - not just an initial consultation. Good providers include regular check-ins as part of their program.",
       },
       {
         heading: "What's included in the monthly price?",
@@ -146,7 +146,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Compounded vs. Brand-Name Medications",
-        body: "Some providers offer compounded versions of semaglutide or tirzepatide - medications made by compounding pharmacies rather than the original manufacturer. These are typically less expensive but come with trade-offs. Compounded medications are not FDA-approved in the same way as brand-name drugs, and quality can vary between pharmacies. Reputable providers use licensed 503B compounding pharmacies that follow strict manufacturing standards. Ask your provider which pharmacy they use and verify its credentials.",
+        body: "Some providers offer compounded versions of semaglutide or tirzepatide - medications made by compounding pharmacies rather than the original manufacturer. These are typically less expensive but come with trade-offs. <a href=\"https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss\" target=\"_blank\" rel=\"noopener\">Compounded medications are not FDA-approved in the same way as brand-name drugs</a>, and quality can vary between pharmacies. Reputable providers use <a href=\"https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers\" target=\"_blank\" rel=\"noopener\">licensed 503B compounding pharmacies</a> that follow strict manufacturing standards. Ask your provider which pharmacy they use and verify its credentials.",
       },
       {
         heading: "What ongoing support should a provider include?",
@@ -188,7 +188,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Why does menopause cause weight gain?",
-        body: 'The menopause transition commonly shifts both weight and where the body stores it - more around the middle - through a combination of hormonal changes, natural loss of muscle mass with age (which lowers the calories you burn at rest), and sleep disruption that feeds appetite. The frustrating part women describe is that nothing about their habits changed. That experience is real and physiological - not a willpower failure - and it responds to treatment strategies designed for this stage, not generic advice.',
+        body: 'The menopause transition commonly shifts both weight and where the body stores it - more around the middle - through a combination of hormonal changes, <a href="https://www.mayoclinic.org/healthy-lifestyle/womens-health/in-depth/menopause-weight-gain/art-20046058" target="_blank" rel="noopener">natural loss of muscle mass with age</a> (which lowers the calories you burn at rest), and sleep disruption that feeds appetite. The frustrating part women describe is that nothing about their habits changed. That experience is real and physiological - not a willpower failure - and it responds to treatment strategies designed for this stage, not generic advice.',
       },
       {
         heading: "Does HRT help with menopause weight gain?",
@@ -196,7 +196,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Do GLP-1 medications work for menopause weight gain?",
-        body: 'GLP-1 medications (semaglutide, tirzepatide) are prescribed based on standard clinical criteria - they aren\'t menopause-specific, and eligibility doesn\'t change at midlife. For women who qualify, they address the appetite and metabolic side of the equation; in trials semaglutide averaged ~15% body-weight loss and tirzepatide up to 22.5%. At verified published prices, compounded semaglutide starts at $49/month (<a href="/weight-loss/reviews/wellmedr">wellmedr</a>) and $69 at <a href="/weight-loss/reviews/embody">embody</a>, with tirzepatide from $89 - see the full <a href="/weight-loss/cheapest-glp1">verified GLP-1 price comparison</a> and the <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">molecule head-to-head</a>. A licensed provider review decides whether treatment is appropriate.',
+        body: 'GLP-1 medications (semaglutide, tirzepatide) are prescribed based on standard clinical criteria - they aren\'t menopause-specific, and eligibility doesn\'t change at midlife. For women who qualify, they address the appetite and metabolic side of the equation; in trials semaglutide averaged <a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">~15% body-weight loss</a> and <a href="https://pubmed.ncbi.nlm.nih.gov/35658024/" target="_blank" rel="noopener">tirzepatide up to 22.5%</a>. At verified published prices, compounded semaglutide starts at $49/month (<a href="/weight-loss/reviews/wellmedr">wellmedr</a>) and $69 at <a href="/weight-loss/reviews/embody">embody</a>, with tirzepatide from $89 - see the full <a href="/weight-loss/cheapest-glp1">verified GLP-1 price comparison</a> and the <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">molecule head-to-head</a>. A licensed provider review decides whether treatment is appropriate.',
       },
       {
         heading: "What else actually helps at this stage?",
@@ -229,7 +229,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Does Wegovy cause hair loss?",
-        body: 'Same answer, same mechanism - Wegovy is semaglutide, the identical molecule to Ozempic at weight-loss dosing, and hair shedding shows up among the side effects reported in its trials. The driver is not the drug attacking follicles; it is the speed and size of the weight loss pushing hair into a resting-then-shedding phase (telogen effluvium). That is why the same story appears with tirzepatide, bariatric surgery and aggressive dieting. Everything in this article - the timeline, the recovery expectations, and the levers that help - applies to Wegovy exactly as it does to Ozempic.',
+        body: 'Same answer, same mechanism - Wegovy is semaglutide, the identical molecule to Ozempic at weight-loss dosing, and hair shedding shows up among the <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/215256s000lbl.pdf" target="_blank" rel="noopener">side effects reported in its trials</a>. The driver is not the drug attacking follicles; it is the speed and size of the weight loss pushing hair into a resting-then-shedding phase (telogen effluvium). That is why the same story appears with tirzepatide, bariatric surgery and aggressive dieting. Everything in this article - the timeline, the recovery expectations, and the levers that help - applies to Wegovy exactly as it does to Ozempic.',
       },
       {
         heading: "Is GLP-1 hair loss permanent?",
@@ -271,7 +271,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Is it normal to plateau on weight loss medication?",
-        body: "If your weight loss has stalled after weeks or months of steady progress, you're not doing anything wrong. Plateaus are a well-documented physiological response that nearly every person experiences during weight loss, whether they're using medication or not. Your body is remarkably adaptive - as you lose weight, your metabolism adjusts, your hormonal profile shifts, and your body becomes more efficient at conserving energy. Understanding this process is the first step to moving through it.",
+        body: "If your weight loss has stalled after weeks or months of steady progress, you're not doing anything wrong. Plateaus are a <a href=\"https://pubmed.ncbi.nlm.nih.gov/23535105/\" target=\"_blank\" rel=\"noopener\">well-documented physiological response</a> that nearly every person experiences during weight loss, whether they're using medication or not. Your body is remarkably adaptive - as you lose weight, your metabolism adjusts, your hormonal profile shifts, and your body becomes more efficient at conserving energy. Understanding this process is the first step to moving through it.",
       },
       {
         heading: "What's happening in your body during a plateau?",
@@ -279,7 +279,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Can a dose increase break the plateau?",
-        body: 'For patients on GLP-1 medications, plateaus sometimes coincide with your body adjusting to a particular dose. As your system adapts, the appetite-suppressing effects may feel less pronounced. This is one reason why these medications use a graduated dosing schedule - moving to a higher dose often restarts progress. Talk to your provider about your plateau; if you haven\'t yet reached your maximum dose, an adjustment may be appropriate. Learn more about how these medications work in our <a href="/weight-loss/articles/how-glp1-medications-work">GLP-1 medications guide</a>.',
+        body: 'For patients on GLP-1 medications, plateaus sometimes coincide with your body adjusting to a particular dose. As your system adapts, the appetite-suppressing effects may feel less pronounced. This is one reason why these medications use a <a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener">graduated dosing schedule</a> - moving to a higher dose often restarts progress. Talk to your provider about your plateau; if you haven\'t yet reached your maximum dose, an adjustment may be appropriate. Learn more about how these medications work in our <a href="/weight-loss/articles/how-glp1-medications-work">GLP-1 medications guide</a>.',
       },
       {
         heading: "Reassess Your Nutrition",
@@ -287,7 +287,7 @@ export const articles: Article[] = [
       },
       {
         heading: "The Role of Movement and Muscle",
-        body: 'If you haven\'t incorporated strength training into your routine, a plateau is a compelling reason to start. Resistance exercise builds and preserves lean muscle mass, which is metabolically active tissue that burns calories even at rest. You don\'t need an intense gym routine - bodyweight exercises, resistance bands, or moderate weight training 2-3 times per week can make a meaningful difference. For a complete workout framework, read our guide on <a href="/weight-loss/articles/exercise-while-on-glp1-medication">how to exercise on GLP-1 medication</a>. Walking remains one of the most underrated tools for weight management: aim for consistent daily steps rather than sporadic intense cardio.',
+        body: 'If you haven\'t incorporated <a href="https://www.cdc.gov/physical-activity-basics/guidelines/adults.html" target="_blank" rel="noopener">strength training into your routine</a>, a plateau is a compelling reason to start. Resistance exercise builds and preserves lean muscle mass, which is metabolically active tissue that burns calories even at rest. You don\'t need an intense gym routine - bodyweight exercises, resistance bands, or moderate weight training 2-3 times per week can make a meaningful difference. For a complete workout framework, read our guide on <a href="/weight-loss/articles/exercise-while-on-glp1-medication">how to exercise on GLP-1 medication</a>. Walking remains one of the most underrated tools for weight management: aim for consistent daily steps rather than sporadic intense cardio.',
       },
       {
         heading: "When should you talk to your provider about a plateau?",
@@ -317,7 +317,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Is Wegovy the same as Ozempic?",
-        body: 'Almost - but not quite, and the difference matters. Ozempic and Wegovy both contain semaglutide, a <a href="/weight-loss/articles/how-glp1-medications-work">GLP-1 receptor agonist</a> manufactured by Novo Nordisk. The critical difference is their FDA-approved purpose. Ozempic is approved for type 2 diabetes management. Wegovy is approved specifically for chronic weight management. Many doctors prescribe Ozempic off-label for weight loss, but Wegovy was designed, dosed, and clinically tested specifically for that purpose.',
+        body: 'Almost - but not quite, and the difference matters. Ozempic and Wegovy both contain semaglutide, a <a href="/weight-loss/articles/how-glp1-medications-work">GLP-1 receptor agonist</a> manufactured by Novo Nordisk. The critical difference is their FDA-approved purpose. <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/209637lbl.pdf" target="_blank" rel="noopener">Ozempic is approved for type 2 diabetes management</a>. <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-new-drug-treatment-chronic-weight-management-first-2014" target="_blank" rel="noopener">Wegovy is approved specifically for chronic weight management</a>. Many doctors prescribe Ozempic off-label for weight loss, but Wegovy was designed, dosed, and clinically tested specifically for that purpose.',
       },
       {
         heading: "How are Ozempic and Wegovy dosed differently?",
@@ -325,11 +325,11 @@ export const articles: Article[] = [
       },
       {
         heading: "Ozempic vs Wegovy for weight loss: which works better?",
-        body: 'In the STEP clinical trials, Wegovy patients lost an average of about 15% of their body weight over 68 weeks. Ozempic trials (which focused on diabetes outcomes) showed more modest average weight loss of around 6-8%. For a 200-pound person, that\'s roughly 30 lbs with Wegovy vs 12-16 lbs with Ozempic. Both produce meaningful results, but Wegovy\'s higher dose and weight-specific design give it a consistent edge. Curious how these compare to tirzepatide? See our <a href="/weight-loss/articles/mounjaro-vs-ozempic">Mounjaro vs Ozempic comparison</a>.',
+        body: '<a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">In the STEP clinical trials</a>, Wegovy patients lost an average of about 15% of their body weight over 68 weeks. Ozempic trials (which focused on diabetes outcomes) showed more modest average weight loss of around 6-8%. For a 200-pound person, that\'s roughly 30 lbs with Wegovy vs 12-16 lbs with Ozempic. Both produce meaningful results, but Wegovy\'s higher dose and weight-specific design give it a consistent edge. Curious how these compare to tirzepatide? See our <a href="/weight-loss/articles/mounjaro-vs-ozempic">Mounjaro vs Ozempic comparison</a>.',
       },
       {
         heading: "Ozempic vs Wegovy side effects: is there a difference?",
-        body: 'Since both contain the same active ingredient, the side effect profiles are nearly identical. The most common issues are gastrointestinal and, in the STEP 1 trial, included nausea (~44% of patients), diarrhea (~30%), vomiting (~24%), and constipation (~23%). These are typically most pronounced during dose increases and improve over time. Wegovy\'s slightly higher maximum dose may cause somewhat more GI issues at the top end. For detailed management strategies, read our <a href="/weight-loss/articles/semaglutide-side-effects-guide">semaglutide side effects guide</a>.',
+        body: 'Since both contain the same active ingredient, the side effect profiles are nearly identical. <a href="https://www.mayoclinic.org/drugs-supplements/semaglutide-subcutaneous-route/description/drg-20406730" target="_blank" rel="noopener">The most common issues are gastrointestinal</a> and, in the STEP 1 trial, included nausea (~44% of patients), diarrhea (~30%), vomiting (~24%), and constipation (~23%). These are typically most pronounced during dose increases and improve over time. Wegovy\'s slightly higher maximum dose may cause somewhat more GI issues at the top end. For detailed management strategies, read our <a href="/weight-loss/articles/semaglutide-side-effects-guide">semaglutide side effects guide</a>.',
       },
       {
         heading: "How much do Ozempic and Wegovy cost at verified prices?",
@@ -341,7 +341,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What is compounded semaglutide - and is it cheaper?",
-        body: 'Most patients actually access semaglutide through a third path: compounded versions from licensed telehealth providers. Compounded semaglutide uses the same active ingredient as Ozempic and Wegovy but costs a fraction of the price. It\'s not individually FDA-approved but is produced by licensed compounding pharmacies under FDA regulation. Read our full <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> to understand the trade-offs.',
+        body: 'Most patients actually access semaglutide through a third path: compounded versions from licensed telehealth providers. Compounded semaglutide uses the same active ingredient as Ozempic and Wegovy but costs a fraction of the price. It\'s not individually FDA-approved but is <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">produced by licensed compounding pharmacies under FDA regulation</a>. Read our full <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> to understand the trade-offs.',
       },
       {
         heading: "How do you get semaglutide online?",
@@ -375,11 +375,11 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "What are the most common semaglutide side effects?",
-        body: 'Gastrointestinal issues are by far the most frequently reported side effects of semaglutide. In the semaglutide STEP trials, nausea affected roughly 40-44% of patients, particularly during the first few weeks and after dose increases. Other common GI side effects include diarrhea (about 30%), vomiting (around 25%), and constipation (about 24%). These numbers can sound alarming, but context matters: most side effects are mild to moderate, and they tend to improve significantly over time as your body adjusts. Understanding <a href="/weight-loss/articles/how-glp1-medications-work">how GLP-1 medications work</a> can help explain why these effects occur.',
+        body: 'Gastrointestinal issues are by far the most frequently reported side effects of semaglutide. In the <a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">semaglutide STEP trials</a>, nausea affected roughly 40-44% of patients, particularly during the first few weeks and after dose increases. Other common GI side effects include diarrhea (about 30%), vomiting (around 25%), and constipation (about 24%). These numbers can sound alarming, but context matters: most side effects are mild to moderate, and they tend to improve significantly over time as your body adjusts. Understanding <a href="/weight-loss/articles/how-glp1-medications-work">how GLP-1 medications work</a> can help explain why these effects occur.',
       },
       {
         heading: "When do semaglutide side effects start?",
-        body: 'Most patients notice side effects within the first week of starting semaglutide or after a dose increase. The first two to four weeks on a new dose are usually when symptoms are most noticeable. By weeks four to six at a stable dose, the majority of patients report a meaningful reduction in side effects. This is exactly why the medication uses a gradual titration schedule - starting at a low dose and increasing slowly gives your body time to adapt. For a detailed week-by-week timeline, see our guide on <a href="/weight-loss/articles/first-month-weight-loss-medication">your first month on medication</a>.',
+        body: 'Most patients notice side effects within the first week of starting semaglutide or after a dose increase. The first two to four weeks on a new dose are usually when symptoms are most noticeable. By weeks four to six at a stable dose, the majority of patients report a meaningful reduction in side effects. This is exactly why the medication uses a <a href="https://www.mayoclinic.org/drugs-supplements/semaglutide-subcutaneous-route/description/drg-20406730" target="_blank" rel="noopener">gradual titration schedule - starting at a low dose</a> and increasing slowly gives your body time to adapt. For a detailed week-by-week timeline, see our guide on <a href="/weight-loss/articles/first-month-weight-loss-medication">your first month on medication</a>.',
       },
       {
         heading: "How do you manage nausea on semaglutide?",
@@ -387,7 +387,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Which serious side effects need urgent care?",
-        body: "While rare, some side effects require immediate medical attention. These include severe abdominal pain that doesn't go away (which could indicate pancreatitis), signs of gallbladder problems (intense pain in the upper right abdomen), allergic reactions (swelling of face, lips, or tongue), and changes in vision. Semaglutide also carries a boxed warning about thyroid C-cell tumors observed in animal studies, though this has not been confirmed in humans. Patients with a personal or family history of medullary thyroid carcinoma should not use semaglutide.",
+        body: "While rare, some side effects require immediate medical attention. These include severe abdominal pain that doesn't go away (<a href=\"https://medlineplus.gov/druginfo/meds/a618008.html\" target=\"_blank\" rel=\"noopener\">which could indicate pancreatitis</a>), signs of gallbladder problems (intense pain in the upper right abdomen), allergic reactions (swelling of face, lips, or tongue), and changes in vision. Semaglutide also carries a <a href=\"https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/215256s000lbl.pdf\" target=\"_blank\" rel=\"noopener\">boxed warning about thyroid C-cell tumors</a> observed in animal studies, though this has not been confirmed in humans. Patients with a personal or family history of medullary thyroid carcinoma should not use semaglutide.",
       },
       {
         heading: "Digestive Tips That Actually Help",
@@ -407,7 +407,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Should Side Effects Stop You From Starting?",
-        body: 'For most patients, side effects are temporary and manageable. Only a relatively small share of trial participants discontinued because of side effects, meaning the vast majority found the benefits outweighed the discomfort. The key is starting with realistic expectations, having a good provider, and using the management strategies above. If you\'re unsure whether semaglutide is right for you, check our <a href="/weight-loss/articles/who-qualifies-for-glp1-weight-loss">eligibility guide</a> or <a href="/weight-loss/find-your-match">take our matching quiz</a> to find a provider who can evaluate your specific situation.',
+        body: 'For most patients, side effects are temporary and manageable. <a href="https://www.health.harvard.edu/healthy-aging-and-longevity/harvard-and-cdc-study-serious-side-effects-from-semaglutide-are-uncommon" target="_blank" rel="noopener">Only a relatively small share of trial participants discontinued because of side effects</a>, meaning the vast majority found the benefits outweighed the discomfort. The key is starting with realistic expectations, having a good provider, and using the management strategies above. If you\'re unsure whether semaglutide is right for you, check our <a href="/weight-loss/articles/who-qualifies-for-glp1-weight-loss">eligibility guide</a> or <a href="/weight-loss/find-your-match">take our matching quiz</a> to find a provider who can evaluate your specific situation.',
       },
     ],
   },
@@ -435,7 +435,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What do the clinical trials show?",
-        body: "The SURMOUNT trials for tirzepatide showed average weight loss of up to 22.5% of body weight at the highest dose over 72 weeks. The STEP trials for semaglutide (Wegovy) showed average weight loss of about 15% over 68 weeks. While these numbers come from different trials and direct comparison requires caution, the trend is clear: tirzepatide has consistently shown greater weight loss in clinical research. Both medications significantly outperform older weight loss drugs and lifestyle intervention alone.",
+        body: "<a href=\"https://pubmed.ncbi.nlm.nih.gov/35658024/\" target=\"_blank\" rel=\"noopener\">The SURMOUNT trials for tirzepatide</a> showed average weight loss of up to 22.5% of body weight at the highest dose over 72 weeks. <a href=\"https://pubmed.ncbi.nlm.nih.gov/33567185/\" target=\"_blank\" rel=\"noopener\">The STEP trials for semaglutide (Wegovy)</a> showed average weight loss of about 15% over 68 weeks. While these numbers come from different trials and direct comparison requires caution, the trend is clear: <a href=\"https://pubmed.ncbi.nlm.nih.gov/40353578/\" target=\"_blank\" rel=\"noopener\">tirzepatide has consistently shown greater weight loss in clinical research</a>. Both medications significantly outperform older weight loss drugs and lifestyle intervention alone.",
       },
       {
         heading: "How do the side effects compare?",
@@ -447,7 +447,7 @@ export const articles: Article[] = [
       },
       {
         heading: "How are tirzepatide and semaglutide dosed?",
-        body: 'Semaglutide (Wegovy) titrates from 0.25 mg to a maximum of 2.4 mg weekly over about 16 weeks. Tirzepatide (Mounjaro/Zepbound) starts at 2.5 mg and can go up to 15 mg weekly. Both use gradual dose escalation to minimize side effects. The wider dosing range of tirzepatide gives providers more flexibility in finding the optimal dose. For details on what the first month looks like, see our <a href="/weight-loss/articles/first-month-weight-loss-medication">first month guide</a>.',
+        body: 'Semaglutide (Wegovy) <a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener">titrates from 0.25 mg to a maximum of 2.4 mg weekly</a> over about 16 weeks. Tirzepatide (Mounjaro/Zepbound) <a href="https://medlineplus.gov/druginfo/meds/a622044.html" target="_blank" rel="noopener">starts at 2.5 mg and can go up to 15 mg weekly</a>. Both use gradual dose escalation to minimize side effects. The wider dosing range of tirzepatide gives providers more flexibility in finding the optimal dose. For details on what the first month looks like, see our <a href="/weight-loss/articles/first-month-weight-loss-medication">first month guide</a>.',
       },
       {
         heading: "Can You Switch From Semaglutide to Tirzepatide?",
@@ -483,15 +483,15 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "How much do brand-name GLP-1 medications cost?",
-        body: 'At retail price, brand-name GLP-1 medications are expensive. <a href="/weight-loss/articles/ozempic-vs-wegovy-differences">Wegovy</a> (semaglutide for weight loss) typically costs between $1,300 and $1,400 per month. Ozempic runs around $900 to $1,000 per month. Zepbound (tirzepatide for weight loss) is priced similarly to Wegovy at roughly $1,000 to $1,100 per month. Mounjaro (tirzepatide for diabetes) falls in a similar range. These prices are without insurance or manufacturer discounts, which can significantly reduce out-of-pocket costs for eligible patients.',
+        body: 'At retail price, brand-name GLP-1 medications are expensive. <a href="/weight-loss/articles/ozempic-vs-wegovy-differences">Wegovy</a> (semaglutide for weight loss) typically costs between $1,300 and $1,400 per month. Ozempic runs around $900 to $1,000 per month. <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-new-medication-chronic-weight-management" target="_blank" rel="noopener">Zepbound (tirzepatide for weight loss)</a> is priced similarly to Wegovy at roughly $1,000 to $1,100 per month. Mounjaro (tirzepatide for diabetes) falls in a similar range. These prices are without insurance or manufacturer discounts, which can significantly reduce out-of-pocket costs for eligible patients.',
       },
       {
         heading: "Does insurance cover weight loss medication?",
-        body: "Insurance coverage for weight loss medications is inconsistent. Medications prescribed for diabetes (Ozempic, Mounjaro) tend to have better coverage because diabetes is a well-established medical condition with clear treatment guidelines. Medications prescribed specifically for weight loss (Wegovy, Zepbound) are frequently excluded from formularies or require prior authorization. Even when covered, copays can be substantial. The FDA has recognized obesity as a chronic disease, but insurance policy hasn't fully caught up. Check with your specific plan before assuming coverage.",
+        body: "Insurance coverage for weight loss medications is inconsistent. Medications prescribed for diabetes (Ozempic, Mounjaro) tend to have better coverage because diabetes is a well-established medical condition with clear treatment guidelines. Medications <a href=\"https://www.fda.gov/news-events/press-announcements/fda-approves-new-drug-treatment-chronic-weight-management-first-2014\" target=\"_blank\" rel=\"noopener\">prescribed specifically for weight loss</a> (Wegovy, Zepbound) are frequently excluded from formularies or require prior authorization. Even when covered, copays can be substantial. The FDA has recognized obesity as a chronic disease, but insurance policy hasn't fully caught up. Check with your specific plan before assuming coverage.",
       },
       {
         heading: "How much do compounded GLP-1 medications cost?",
-        body: "Compounded versions of semaglutide and tirzepatide are available through many telehealth providers at significantly lower prices - a verified $49-$199/month for semaglutide and $89-$299 for tirzepatide, usually including provider consultations and shipping. These are custom-made by licensed compounding pharmacies (503A or 503B) using the same active ingredients. While compounded medications are legal and regulated, they are not FDA-approved in the same way as brand-name drugs. Reputable providers use only licensed pharmacies that follow strict manufacturing standards. This is currently the most common path to affordable GLP-1 treatment.",
+        body: "Compounded versions of semaglutide and tirzepatide are available through many telehealth providers at significantly lower prices - a verified $49-$199/month for semaglutide and $89-$299 for tirzepatide, usually including provider consultations and shipping. These are custom-made by <a href=\"https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers\" target=\"_blank\" rel=\"noopener\">licensed compounding pharmacies (503A or 503B)</a> using the same active ingredients. While <a href=\"https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss\" target=\"_blank\" rel=\"noopener\">compounded medications are legal and regulated</a>, they are not FDA-approved in the same way as brand-name drugs. Reputable providers use only licensed pharmacies that follow strict manufacturing standards. This is currently the most common path to affordable GLP-1 treatment.",
       },
       {
         heading: "What's included in the monthly price?",
@@ -535,11 +535,11 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "What BMI do you need to qualify?",
-        body: 'The FDA-approved criteria for weight loss medications like <a href="/weight-loss/articles/ozempic-vs-wegovy-differences">Wegovy</a> and Zepbound require a BMI of 30 or higher (classified as obesity) or a BMI of 27 or higher with at least one weight-related health condition such as type 2 diabetes, high blood pressure, high cholesterol, or obstructive sleep apnea. Many telehealth providers follow these same guidelines, though some may have slightly different thresholds for compounded medications. Your provider will calculate your BMI during the initial evaluation and determine whether you meet the clinical criteria.',
+        body: 'The FDA-approved criteria for weight loss medications like <a href="/weight-loss/articles/ozempic-vs-wegovy-differences">Wegovy</a> and Zepbound <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-new-drug-treatment-chronic-weight-management-first-2014" target="_blank" rel="noopener">require a BMI of 30 or higher</a> (<a href="https://www.cdc.gov/bmi/adult-calculator/bmi-categories.html" target="_blank" rel="noopener">classified as obesity</a>) or a BMI of 27 or higher with at least one weight-related health condition such as type 2 diabetes, high blood pressure, high cholesterol, or obstructive sleep apnea. Many telehealth providers follow these same guidelines, though some may have slightly different thresholds for compounded medications. Your provider will calculate your BMI during the initial evaluation and determine whether you meet the clinical criteria.',
       },
       {
         heading: "Which medical conditions disqualify you?",
-        body: "Certain health conditions make GLP-1 medications unsafe. These include a personal or family history of medullary thyroid carcinoma (MTC), a history of multiple endocrine neoplasia syndrome type 2 (MEN 2), a history of pancreatitis, and known hypersensitivity to semaglutide or tirzepatide. Patients with severe gastrointestinal disorders, including gastroparesis, may also be advised against these medications. Pregnancy and breastfeeding are absolute contraindications - you should stop the medication at least two months before planning to conceive.",
+        body: "Certain health conditions make GLP-1 medications unsafe. These include a personal or family history of <a href=\"https://medlineplus.gov/druginfo/meds/a618008.html\" target=\"_blank\" rel=\"noopener\">medullary thyroid carcinoma (MTC)</a>, a history of multiple endocrine neoplasia syndrome type 2 (MEN 2), a history of pancreatitis, and known hypersensitivity to semaglutide or tirzepatide. Patients with severe gastrointestinal disorders, including gastroparesis, may also be advised against these medications. Pregnancy and breastfeeding are absolute contraindications - you should stop the medication at least two months before planning to conceive.",
       },
       {
         heading: "Is there an age limit for GLP-1 medication?",
@@ -547,7 +547,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Which medications interact with GLP-1s?",
-        body: 'GLP-1 medications can interact with other drugs, particularly insulin and sulfonylureas (which may increase the risk of hypoglycemia when combined). Because GLP-1 agonists slow gastric emptying, they can also affect the absorption of oral medications. Tirzepatide specifically carries a labeled warning that it can reduce the effectiveness of oral hormonal contraceptives - patients are advised to use a barrier method or a non-oral contraceptive for 4 weeks after starting and after each dose increase. Your provider will review your full medication list during the evaluation process. If you take oral birth control, blood thinners, or thyroid medication, discuss timing and potential interactions with your provider before starting treatment. Learn more about potential side effects in our <a href="/weight-loss/articles/semaglutide-side-effects-guide">semaglutide side effects guide</a>.',
+        body: 'GLP-1 medications can interact with other drugs, particularly insulin and sulfonylureas (which may increase the risk of hypoglycemia when combined). Because GLP-1 agonists slow gastric emptying, they can also affect the absorption of oral medications. Tirzepatide specifically <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/217806s000lbl.pdf" target="_blank" rel="noopener">carries a labeled warning that it can reduce the effectiveness of oral hormonal contraceptives</a> - patients are advised to use a barrier method or a non-oral contraceptive for 4 weeks after starting and after each dose increase. Your provider will review your full medication list during the evaluation process. If you take oral birth control, blood thinners, or thyroid medication, discuss timing and potential interactions with your provider before starting treatment. Learn more about potential side effects in our <a href="/weight-loss/articles/semaglutide-side-effects-guide">semaglutide side effects guide</a>.',
       },
       {
         heading: "How does the telehealth evaluation work?",
@@ -579,11 +579,11 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Why does nutrition still matter on GLP-1 medication?",
-        body: 'GLP-1 medications reduce appetite, but they don\'t choose what you eat. Patients who get the best results pair their medication with intentional food choices - not restrictive dieting, but a shift toward nutrient-dense meals that support energy, muscle preservation, and overall health. Because these medications reduce how much you eat, every bite matters more. If you\'re consuming 30-40% fewer calories, the quality of those calories becomes critical to getting adequate protein, vitamins, and minerals. Understanding <a href="/weight-loss/articles/how-glp1-medications-work">how GLP-1 medications affect appetite</a> helps explain why this shift is so important.',
+        body: 'GLP-1 medications reduce appetite, but they don\'t choose what you eat. Patients who get the best results pair their medication with intentional food choices - not restrictive dieting, but a shift toward <a href="https://www.niddk.nih.gov/health-information/weight-management/adult-overweight-obesity/eating-physical-activity" target="_blank" rel="noopener">nutrient-dense meals</a> that support energy, muscle preservation, and overall health. Because these medications reduce how much you eat, every bite matters more. If you\'re consuming 30-40% fewer calories, the quality of those calories becomes critical to getting adequate protein, vitamins, and minerals. Understanding <a href="/weight-loss/articles/how-glp1-medications-work">how GLP-1 medications affect appetite</a> helps explain why this shift is so important.',
       },
       {
         heading: "How much protein do you need on a GLP-1?",
-        body: 'Protein is the single most important macronutrient during medicated weight loss. When you lose weight rapidly, you risk losing muscle mass alongside fat - and protein intake is the primary defense against this. Aim for 25-30 grams of protein per meal, or roughly 80-120 grams daily depending on your body weight. Good sources include chicken, fish, eggs, Greek yogurt, cottage cheese, tofu, and legumes. If you struggle to eat enough volume, consider a protein shake as a supplement - not a replacement - for whole food meals. Pairing adequate protein with <a href="/weight-loss/articles/exercise-while-on-glp1-medication">a strength training routine</a> is the most effective way to preserve muscle during weight loss.',
+        body: 'Protein is the single most important macronutrient during medicated weight loss. When you lose weight rapidly, <a href="https://pubmed.ncbi.nlm.nih.gov/39996356/" target="_blank" rel="noopener">you risk losing muscle mass alongside fat</a> - and protein intake is the primary defense against this. Aim for 25-30 grams of protein per meal, or roughly 80-120 grams daily depending on your body weight. Good sources include chicken, fish, eggs, Greek yogurt, cottage cheese, tofu, and legumes. If you struggle to eat enough volume, consider a protein shake as a supplement - not a replacement - for whole food meals. Pairing adequate protein with <a href="/weight-loss/articles/exercise-while-on-glp1-medication">a strength training routine</a> is the most effective way to preserve muscle during weight loss.',
       },
       {
         heading: "Which foods minimize side effects?",
@@ -591,7 +591,7 @@ export const articles: Article[] = [
       },
       {
         heading: "How much water should you drink on a GLP-1?",
-        body: "Dehydration is a common and underestimated issue on GLP-1 medications. Reduced food intake means you're getting less water from food, and side effects like vomiting or diarrhea can further deplete fluids. Aim for at least 64 ounces of water daily - more if you exercise or experience GI side effects. Sipping water throughout the day is better than drinking large amounts at once, which can increase nausea. Herbal tea, water with electrolytes, and broth also count toward your daily intake. Avoid relying on sugary drinks or excessive caffeine.",
+        body: "Dehydration is a common and underestimated issue on GLP-1 medications. Reduced food intake means you're getting less water from food, and <a href=\"https://www.mayoclinic.org/drugs-supplements/semaglutide-subcutaneous-route/description/drg-20406730\" target=\"_blank\" rel=\"noopener\">side effects like vomiting or diarrhea</a> can further deplete fluids. Aim for at least 64 ounces of water daily - more if you exercise or experience GI side effects. Sipping water throughout the day is better than drinking large amounts at once, which can increase nausea. Herbal tea, water with electrolytes, and broth also count toward your daily intake. Avoid relying on sugary drinks or excessive caffeine.",
       },
       {
         heading: "What should you avoid eating on a GLP-1?",
@@ -623,11 +623,11 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Why do you lose muscle on GLP-1 medication?",
-        body: 'One of the most important - and often overlooked - concerns with rapid weight loss is the loss of lean muscle mass. A substantial share of the weight lost through calorie restriction can come from lean muscle rather than fat, especially without resistance training. GLP-1 medications accelerate weight loss, which makes this risk more significant. Muscle isn\'t just about aesthetics - it\'s metabolically active tissue that supports your resting metabolic rate, joint health, and long-term weight maintenance. Preserving it should be a priority. This is also critical for anyone worried about <a href="/weight-loss/articles/stopping-glp1-medication-what-happens">maintaining results after stopping medication</a>.',
+        body: 'One of the most important - and often overlooked - concerns with rapid weight loss is the loss of lean muscle mass. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13303403/" target="_blank" rel="noopener">A substantial share of the weight lost through calorie restriction can come from lean muscle</a> rather than fat, especially without resistance training. GLP-1 medications accelerate weight loss, which makes this risk more significant. Muscle isn\'t just about aesthetics - it\'s metabolically active tissue that supports your resting metabolic rate, joint health, and long-term weight maintenance. Preserving it should be a priority. This is also critical for anyone worried about <a href="/weight-loss/articles/stopping-glp1-medication-what-happens">maintaining results after stopping medication</a>.',
       },
       {
         heading: "How much strength training do you need?",
-        body: "Resistance training is the most effective way to preserve and build muscle during weight loss. You don't need to become a bodybuilder - two to three sessions per week of 30-45 minutes is enough for most people. Focus on compound movements that work multiple muscle groups: squats, lunges, deadlifts, rows, presses, and pull-ups (or assisted variations). If you're new to strength training, start with bodyweight exercises or light dumbbells and focus on form before adding weight. Even modest resistance training has been shown to significantly reduce muscle loss during medicated weight loss.",
+        body: "<a href=\"https://www.cdc.gov/physical-activity-basics/guidelines/adults.html\" target=\"_blank\" rel=\"noopener\">Resistance training is the most effective way to preserve and build muscle</a> during weight loss. You don't need to become a bodybuilder - two to three sessions per week of 30-45 minutes is enough for most people. Focus on compound movements that work multiple muscle groups: squats, lunges, deadlifts, rows, presses, and pull-ups (or assisted variations). If you're new to strength training, start with bodyweight exercises or light dumbbells and focus on form before adding weight. Even modest resistance training has been shown to significantly reduce muscle loss during medicated weight loss.",
       },
       {
         heading: "Is walking enough exercise on a GLP-1?",
@@ -639,7 +639,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What About Cardio?",
-        body: 'Moderate cardio - like brisk walking, cycling, swimming, or light jogging - supports cardiovascular health and can contribute to caloric deficit. However, excessive high-intensity cardio can accelerate muscle loss and increase hunger, which may counteract some benefits of your medication. A balanced approach works best: prioritize strength training for muscle preservation, use daily walking as your cardio foundation, and add moderate-intensity sessions two to three times per week if you enjoy them. Avoid the common trap of doing only cardio and skipping resistance work. If you\'ve <a href="/weight-loss/articles/weight-loss-plateau-what-to-do">hit a plateau</a>, adjusting your exercise mix is often more effective than simply doing more.',
+        body: '<a href="https://www.cdc.gov/physical-activity-basics/adding-adults/what-counts.html" target="_blank" rel="noopener">Moderate cardio</a> - like brisk walking, cycling, swimming, or light jogging - supports cardiovascular health and can contribute to caloric deficit. However, excessive high-intensity cardio can accelerate muscle loss and increase hunger, which may counteract some benefits of your medication. A balanced approach works best: prioritize strength training for muscle preservation, use daily walking as your cardio foundation, and add moderate-intensity sessions two to three times per week if you enjoy them. Avoid the common trap of doing only cardio and skipping resistance work. If you\'ve <a href="/weight-loss/articles/weight-loss-plateau-what-to-do">hit a plateau</a>, adjusting your exercise mix is often more effective than simply doing more.',
       },
       {
         heading: "Building a Sustainable Routine",
@@ -675,11 +675,11 @@ export const articles: Article[] = [
       },
       {
         heading: "How much weight do people regain after stopping?",
-        body: "This is the topic many patients and providers are reluctant to discuss openly, but the data is clear. The STEP 1 trial extension showed that participants who stopped semaglutide regained approximately two-thirds of their lost weight within one year of discontinuation. Similarly, tirzepatide discontinuation studies have shown significant weight regain in most participants. This isn't a personal failure - it reflects the biological reality that obesity is a chronic condition driven by hormonal and metabolic factors that reassert themselves when medication is removed.",
+        body: "This is the topic many patients and providers are reluctant to discuss openly, but the data is clear. The <a href=\"https://pubmed.ncbi.nlm.nih.gov/35441470/\" target=\"_blank\" rel=\"noopener\">STEP 1 trial extension</a> showed that participants who stopped semaglutide regained approximately two-thirds of their lost weight within one year of discontinuation. Similarly, <a href=\"https://pubmed.ncbi.nlm.nih.gov/38078870/\" target=\"_blank\" rel=\"noopener\">tirzepatide discontinuation studies</a> have shown significant weight regain in most participants. This isn't a personal failure - it reflects the biological reality that obesity is a chronic condition driven by hormonal and metabolic factors that reassert themselves when medication is removed.",
       },
       {
         heading: "Why does the weight come back?",
-        body: 'GLP-1 medications work by suppressing appetite, slowing gastric emptying, and modulating hunger hormones. When you stop the medication, these effects reverse. Appetite returns to pre-treatment levels - often quite rapidly - and the hormonal environment that drove weight gain in the first place re-emerges. For a deeper understanding of these mechanisms, see our guide on <a href="/weight-loss/articles/how-glp1-medications-work">how GLP-1 medications work</a>. Your body\'s metabolic rate has also decreased during weight loss (adaptive thermogenesis), meaning you now burn fewer calories than someone of the same weight who was never heavier. This combination makes weight regain highly likely without ongoing intervention.',
+        body: 'GLP-1 medications work by <a href="https://www.health.harvard.edu/healthy-aging-and-longevity/how-does-ozempic-work-understanding-glp-1s-for-diabetes-weight-loss-and-beyond" target="_blank" rel="noopener">suppressing appetite, slowing gastric emptying</a>, and modulating hunger hormones. When you stop the medication, these effects reverse. Appetite returns to pre-treatment levels - often quite rapidly - and the hormonal environment that drove weight gain in the first place re-emerges. For a deeper understanding of these mechanisms, see our guide on <a href="/weight-loss/articles/how-glp1-medications-work">how GLP-1 medications work</a>. Your body\'s metabolic rate has also decreased during weight loss (adaptive thermogenesis), meaning you now burn fewer calories than someone of the same weight who was never heavier. This combination makes weight regain highly likely without ongoing intervention.',
       },
       {
         heading: "How do you taper off GLP-1 medication safely?",
@@ -691,7 +691,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Should you stay on GLP-1 medication long term?",
-        body: 'Major medical organizations including the American Association of Clinical Endocrinology now recognize obesity as a chronic disease that may require ongoing treatment - similar to hypertension or diabetes. Just as stopping blood pressure medication causes blood pressure to rise, stopping weight loss medication allows weight to return. For many patients, the most effective approach is continued treatment at a maintenance dose, which can be lower than the initial weight-loss dose. For information on long-term costs, see our <a href="/weight-loss/articles/weight-loss-medication-cost-guide">medication cost guide</a>.',
+        body: 'Major medical organizations including the American Association of Clinical Endocrinology now recognize <a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" target="_blank" rel="noopener">obesity as a chronic disease</a> that may require ongoing treatment - similar to hypertension or diabetes. Just as stopping blood pressure medication causes blood pressure to rise, stopping weight loss medication allows weight to return. For many patients, the most effective approach is continued treatment at a maintenance dose, which can be lower than the initial weight-loss dose. For information on long-term costs, see our <a href="/weight-loss/articles/weight-loss-medication-cost-guide">medication cost guide</a>.',
       },
       {
         heading: "Making an Informed Decision",
@@ -719,7 +719,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Beyond Weight Loss: GLP-1 Receptors in the Brain",
-        body: 'GLP-1 receptors aren\'t just found in the gut and pancreas - they\'re widely distributed throughout the brain, including areas involved in reward processing, emotional regulation, and decision-making. This has led researchers to investigate whether <a href="/weight-loss/articles/how-glp1-medications-work">GLP-1 medications</a> might have neuropsychiatric effects beyond appetite suppression. Early findings are intriguing: some studies suggest potential benefits for mood, anxiety, and addictive behaviors, while questions remain about the full scope of these effects.',
+        body: 'GLP-1 receptors aren\'t just found in the gut and pancreas - they\'re <a href="https://www.health.harvard.edu/mind-and-mood/beyond-appetite-suppression" target="_blank" rel="noopener">widely distributed throughout the brain</a>, including areas involved in reward processing, emotional regulation, and decision-making. This has led researchers to investigate whether <a href="/weight-loss/articles/how-glp1-medications-work">GLP-1 medications</a> might have neuropsychiatric effects beyond appetite suppression. Early findings are intriguing: some studies suggest potential benefits for mood, anxiety, and addictive behaviors, while questions remain about the full scope of these effects.',
       },
       {
         heading: "What mental health changes do patients report?",
@@ -727,7 +727,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Do GLP-1s reduce cravings for alcohol and other addictions?",
-        body: "Some of the most compelling emerging research involves GLP-1 medications and addictive behaviors. Several studies have shown reduced alcohol consumption in patients taking semaglutide, and clinical trials are now underway examining its potential for treating alcohol use disorder, nicotine dependence, and opioid addiction. The proposed mechanism involves GLP-1 receptors in the brain's reward circuitry - the same pathways involved in food cravings. By modulating dopamine signaling in these areas, GLP-1 medications may reduce the reinforcing effects of various addictive substances and behaviors.",
+        body: "Some of the most compelling emerging research involves GLP-1 medications and addictive behaviors. <a href=\"https://pubmed.ncbi.nlm.nih.gov/39937469/\" target=\"_blank\" rel=\"noopener\">Several studies have shown reduced alcohol consumption in patients taking semaglutide</a>, and clinical trials are now underway examining its potential for treating alcohol use disorder, nicotine dependence, and opioid addiction. The proposed mechanism involves GLP-1 receptors in the brain's reward circuitry - the same pathways involved in food cravings. By modulating dopamine signaling in these areas, GLP-1 medications may reduce the reinforcing effects of various addictive substances and behaviors.",
       },
       {
         heading: "Do GLP-1 medications affect depression and anxiety?",
@@ -735,7 +735,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What are the mental health risks?",
-        body: 'Not all reported mental health effects are positive. A subset of patients reports emotional blunting - a reduced ability to feel pleasure or emotional range - which some attribute to the medication\'s effects on reward pathways. There have also been post-marketing reports of suicidal ideation, though regulatory reviews by the FDA and EMA have not established a causal link. Patients with a history of depression, eating disorders, or other mental health conditions should discuss these considerations with their provider before starting treatment and report any mood changes promptly. For a broader look at side effect management, see our <a href="/weight-loss/articles/semaglutide-side-effects-guide">side effects guide</a>.',
+        body: 'Not all reported mental health effects are positive. A subset of patients reports emotional blunting - a reduced ability to feel pleasure or emotional range - which some attribute to the medication\'s effects on reward pathways. There have also been <a href="https://www.fda.gov/drugs/drug-safety-communications/fda-requests-removal-suicidal-behavior-and-ideation-warning-glucagon-peptide-1-receptor-agonist-glp" target="_blank" rel="noopener">post-marketing reports of suicidal ideation</a>, though <a href="https://www.fda.gov/drugs/drug-safety-communications/update-fdas-ongoing-evaluation-reports-suicidal-thoughts-or-actions-patients-taking-certain-type" target="_blank" rel="noopener">regulatory reviews by the FDA</a> and EMA have not established a causal link. Patients with a history of depression, eating disorders, or other mental health conditions should discuss these considerations with their provider before starting treatment and report any mood changes promptly. For a broader look at side effect management, see our <a href="/weight-loss/articles/semaglutide-side-effects-guide">side effects guide</a>.',
       },
       {
         heading: "What This Means for You",
@@ -767,7 +767,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Step 1: Choose a Telehealth Provider",
-        body: 'Start by selecting a licensed telehealth platform that offers semaglutide. Look for transparent pricing, licensed physicians, and ongoing medical support. Not sure where to start? <a href="/">Compare top providers</a> on our homepage or <a href="/weight-loss/find-your-match">take our matching quiz</a> for a personalized recommendation. Our guide on <a href="/weight-loss/articles/choosing-telehealth-weight-loss-provider">choosing the right provider</a> covers what to look for.',
+        body: 'Start by selecting a <a href="https://www.fda.gov/drugs/buying-using-medicine-safely/besaferx-your-source-online-pharmacy-information" target="_blank" rel="noopener">licensed telehealth platform</a> that offers semaglutide. Look for transparent pricing, licensed physicians, and ongoing medical support. Not sure where to start? <a href="/">Compare top providers</a> on our homepage or <a href="/weight-loss/find-your-match">take our matching quiz</a> for a personalized recommendation. Our guide on <a href="/weight-loss/articles/choosing-telehealth-weight-loss-provider">choosing the right provider</a> covers what to look for.',
       },
       {
         heading: "Step 2: Complete a Medical Evaluation",
@@ -775,11 +775,11 @@ export const articles: Article[] = [
       },
       {
         heading: "Step 3: Get Your Prescription",
-        body: 'If approved, your provider will prescribe semaglutide at a starting dose. Most telehealth platforms offer compounded semaglutide - the same active ingredient as Ozempic at a significantly lower cost. Brand-name Ozempic is also available through some providers but is considerably more expensive. See our <a href="/weight-loss/articles/ozempic-vs-wegovy-differences">Ozempic vs Wegovy comparison</a> for details on the differences.',
+        body: 'If approved, your provider will prescribe semaglutide at a starting dose. Most telehealth platforms offer compounded semaglutide - <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">the same active ingredient as Ozempic at a significantly lower cost</a>. Brand-name Ozempic is also available through some providers but is considerably more expensive. See our <a href="/weight-loss/articles/ozempic-vs-wegovy-differences">Ozempic vs Wegovy comparison</a> for details on the differences.',
       },
       {
         heading: "Step 4: Receive Your Medication",
-        body: 'Your medication is shipped directly to your home, typically within 3-7 days of approval. Most providers include injection supplies and clear instructions. The medication arrives in temperature-controlled packaging to ensure quality. From there, you\'ll self-administer a once-weekly injection - most patients describe it as quick and nearly painless.',
+        body: 'Your medication is shipped directly to your home, typically within 3-7 days of approval. Most providers include injection supplies and clear instructions. The medication arrives in temperature-controlled packaging to ensure quality. From there, you\'ll self-administer a <a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener">once-weekly injection</a> - most patients describe it as quick and nearly painless.',
       },
       {
         heading: "How much does semaglutide cost online without insurance?",
@@ -807,7 +807,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "What Is Compounded Semaglutide?",
-        body: 'Compounded semaglutide is the same active ingredient used in <a href="/weight-loss/articles/ozempic-vs-wegovy-differences">Ozempic and Wegovy</a>, but it\'s produced by licensed compounding pharmacies rather than the original manufacturer (Novo Nordisk). Compounding pharmacies create customized medications under FDA regulation, though the final compounded product itself is not individually FDA-approved in the same way brand-name drugs are.',
+        body: 'Compounded semaglutide is the same active ingredient used in <a href="/weight-loss/articles/ozempic-vs-wegovy-differences">Ozempic and Wegovy</a>, but it\'s produced by <a href="https://www.health.harvard.edu/healthy-aging-and-longevity/thinking-of-using-a-compounding-pharmacy-what-you-need-to-know" target="_blank" rel="noopener">licensed compounding pharmacies rather than the original manufacturer</a> (Novo Nordisk). Compounding pharmacies create customized medications under FDA regulation, though <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">the final compounded product itself is not individually FDA-approved</a> in the same way brand-name drugs are.',
       },
       {
         heading: "Is It Safe?",
@@ -815,7 +815,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Semaglutide Base vs Salt Forms: The FDA Warning to Know About?",
-        body: 'One distinction separates legitimate compounded semaglutide from the products the FDA has warned about: the form of the drug. Approved semaglutide (in Ozempic and Wegovy) is the <strong>base</strong> form, and legitimate 503A compounding pharmacies compound that same base form. The FDA has cautioned about products made with <strong>salt forms</strong> - semaglutide sodium and semaglutide acetate - stating it is not aware of any basis for them to meet the compounding requirements, and warning consumers against them. Before ordering anywhere, ask one question: "Do you compound semaglutide base?" A legitimate provider answers instantly; the providers we list work with US state-licensed pharmacies compounding the base form. If a seller dodges the question, or offers "research use" vials with no prescription, walk away - that is not the <a href="/weight-loss/cheapest-glp1">$49-$99/month legitimate market</a>, it is the gray market wearing its clothes.',
+        body: 'One distinction separates legitimate compounded semaglutide from the products the FDA has warned about: the form of the drug. Approved semaglutide (in Ozempic and Wegovy) is the <strong>base</strong> form, and legitimate 503A compounding pharmacies compound that same base form. <a href="https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/medications-containing-semaglutide-marketed-type-2-diabetes-or-weight-loss" target="_blank" rel="noopener">The FDA has cautioned about products made with</a> <strong>salt forms</strong> - semaglutide sodium and semaglutide acetate - stating it is not aware of any basis for them to meet the compounding requirements, and warning consumers against them. Before ordering anywhere, ask one question: "Do you compound semaglutide base?" A legitimate provider answers instantly; the providers we list work with US state-licensed pharmacies compounding the base form. If a seller dodges the question, or offers "research use" vials with no prescription, walk away - that is not the <a href="/weight-loss/cheapest-glp1">$49-$99/month legitimate market</a>, it is the gray market wearing its clothes.',
       },
       {
         heading: "How Does It Compare in Effectiveness?",
@@ -831,7 +831,7 @@ export const articles: Article[] = [
       },
       {
         heading: "How are compounding pharmacies regulated?",
-        body: 'Compounding pharmacies operate under FDA regulation through two categories: 503A (smaller, patient-specific) and 503B (larger, manufacturing-scale). 503B pharmacies follow current Good Manufacturing Practice (cGMP) standards similar to traditional drug manufacturers. When choosing a telehealth provider, ask which type of compounding pharmacy they use - 503B is generally considered the higher standard.',
+        body: 'Compounding pharmacies operate under FDA regulation through two categories: <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">503A (smaller, patient-specific) and 503B (larger, manufacturing-scale)</a>. 503B pharmacies follow current Good Manufacturing Practice (cGMP) standards similar to traditional drug manufacturers. When choosing a telehealth provider, ask which type of compounding pharmacy they use - 503B is generally considered the higher standard.',
       },
       {
         heading: "Does Your Provider Matter?",
@@ -863,15 +863,15 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "What is the difference between Mounjaro and Ozempic?",
-        body: 'Mounjaro (tirzepatide) and Ozempic (semaglutide) are both injectable GLP-1 medications used for weight loss, but they are not the same drug. Ozempic targets one receptor (GLP-1), while Mounjaro targets two (GLP-1 and GIP) - making it a dual-agonist with a broader metabolic effect. Both are FDA-approved for type 2 diabetes. Ozempic\'s weight-loss version is <a href="/weight-loss/articles/ozempic-vs-wegovy-differences">Wegovy</a>; Mounjaro\'s is <a href="/weight-loss/articles/zepbound-vs-wegovy">Zepbound</a>. Understanding <a href="/weight-loss/articles/how-glp1-medications-work">how GLP-1 medications work</a> helps explain why these differences matter.',
+        body: 'Mounjaro (tirzepatide) and Ozempic (semaglutide) are both injectable GLP-1 medications used for weight loss, but they are not the same drug. Ozempic targets one receptor (GLP-1), while Mounjaro targets two (GLP-1 and GIP) - making it a dual-agonist with a broader metabolic effect. <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/215866s000lbl.pdf" target="_blank" rel="noopener">Both are FDA-approved for type 2 diabetes</a>. Ozempic\'s weight-loss version is <a href="/weight-loss/articles/ozempic-vs-wegovy-differences">Wegovy</a>; Mounjaro\'s is <a href="/weight-loss/articles/zepbound-vs-wegovy">Zepbound</a>. Understanding <a href="/weight-loss/articles/how-glp1-medications-work">how GLP-1 medications work</a> helps explain why these differences matter.',
       },
       {
         heading: "How do Mounjaro and Ozempic work differently in the body?",
-        body: 'Ozempic (semaglutide) mimics the GLP-1 hormone, slowing gastric emptying, reducing appetite, and improving insulin sensitivity. Mounjaro (tirzepatide) does all of this AND also activates GIP receptors, which may contribute additional metabolic effects (the exact role of GIP in weight loss is still being studied). This dual mechanism is why Mounjaro consistently outperforms Ozempic in clinical trials. For a deeper comparison of the active ingredients, see our <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide guide</a>.',
+        body: 'Ozempic (semaglutide) mimics the GLP-1 hormone, slowing gastric emptying, reducing appetite, and improving insulin sensitivity. Mounjaro (tirzepatide) does all of this AND also activates GIP receptors, which may contribute additional metabolic effects (the exact role of GIP in weight loss is still being studied). This dual mechanism is why <a href="https://pubmed.ncbi.nlm.nih.gov/40353578/" target="_blank" rel="noopener">Mounjaro consistently outperforms Ozempic in clinical trials</a>. For a deeper comparison of the active ingredients, see our <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide guide</a>.',
       },
       {
         heading: "Is Mounjaro better than Ozempic for weight loss?",
-        body: 'On average, yes - the clinical data is clear. In the SURMOUNT trials, Mounjaro (tirzepatide) patients lost up to 22.5% of their body weight at the highest dose over 72 weeks. In the STEP trials, Ozempic/Wegovy (semaglutide) patients lost approximately 15% of body weight over 68 weeks. For a 200-pound person at the maximum studied dose, that\'s roughly 45 lbs with Mounjaro vs 30 lbs with Ozempic - but these are trial averages, and individual results vary widely. Both significantly outperform older weight loss medications and lifestyle changes alone. Read our <a href="/weight-loss/articles/how-long-for-semaglutide-to-work">semaglutide results timeline</a> for week-by-week expectations.',
+        body: 'On average, yes - the clinical data is clear. <a href="https://pubmed.ncbi.nlm.nih.gov/35658024/" target="_blank" rel="noopener">In the SURMOUNT trials</a>, Mounjaro (tirzepatide) patients lost up to 22.5% of their body weight at the highest dose over 72 weeks. <a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">In the STEP trials</a>, Ozempic/Wegovy (semaglutide) patients lost approximately 15% of body weight over 68 weeks. For a 200-pound person at the maximum studied dose, that\'s roughly 45 lbs with Mounjaro vs 30 lbs with Ozempic - but these are trial averages, and individual results vary widely. Both significantly outperform older weight loss medications and lifestyle changes alone. Read our <a href="/weight-loss/articles/how-long-for-semaglutide-to-work">semaglutide results timeline</a> for week-by-week expectations.',
       },
       {
         heading: "How are Mounjaro and Ozempic dosed?",
@@ -879,7 +879,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Mounjaro vs Ozempic side effects: what's the difference?",
-        body: 'Both medications share the same primary side effects: nausea, vomiting, diarrhea, and constipation. These are most common during dose escalation and typically improve over time. In clinical trials, Mounjaro had slightly higher rates of certain GI symptoms at its highest doses (15 mg), but at comparable doses, tolerability was similar. Serious but rare side effects for both include pancreatitis and gallbladder problems. Both carry a boxed warning about thyroid C-cell tumors (observed in animal studies only). For detailed management strategies, read our <a href="/weight-loss/articles/semaglutide-side-effects-guide">side effects guide</a>.',
+        body: 'Both medications share the same primary side effects: nausea, vomiting, diarrhea, and constipation. These are most common during dose escalation and typically improve over time. In clinical trials, Mounjaro had slightly higher rates of certain GI symptoms at its highest doses (15 mg), but at comparable doses, tolerability was similar. <a href="https://medlineplus.gov/druginfo/meds/a622044.html" target="_blank" rel="noopener">Serious but rare side effects</a> for both include pancreatitis and gallbladder problems. Both carry a boxed warning about thyroid C-cell tumors (observed in animal studies only). For detailed management strategies, read our <a href="/weight-loss/articles/semaglutide-side-effects-guide">side effects guide</a>.',
       },
       {
         heading: "How much do Mounjaro and Ozempic cost at verified prices?",
@@ -931,11 +931,11 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Why doesn't insurance cover weight loss medication?",
-        body: 'Despite obesity being recognized as a chronic disease by the AMA and FDA, many insurance plans still exclude weight loss medications from coverage. Medications prescribed specifically for weight loss (Wegovy, Zepbound) are frequently excluded from formularies. Even when covered, prior authorization requirements and high copays can make access difficult. The good news: there are affordable alternatives that don\'t require insurance at all.',
+        body: 'Despite obesity being <a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" target="_blank" rel="noopener">recognized as a chronic disease</a> by the AMA and FDA, many insurance plans still exclude weight loss medications from coverage. Medications prescribed specifically for weight loss (Wegovy, Zepbound) are frequently excluded from formularies. Even when covered, prior authorization requirements and high copays can make access difficult. The good news: there are affordable alternatives that don\'t require insurance at all.',
       },
       {
         heading: "How much does compounded GLP-1 medication cost without insurance?",
-        body: 'The most common path to affordable GLP-1 treatment without insurance is through compounded medications offered by telehealth providers. Compounded semaglutide starts at a verified $49/month and compounded tirzepatide at $89/month - all-inclusive with consultations and delivery. These use the same active ingredients as brand-name drugs, produced by licensed compounding pharmacies. See our <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> for details.',
+        body: 'The most common path to affordable GLP-1 treatment without insurance is through compounded medications offered by telehealth providers. Compounded semaglutide starts at a verified $49/month and compounded tirzepatide at $89/month - all-inclusive with consultations and delivery. These use the same active ingredients as brand-name drugs, <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">produced by licensed compounding pharmacies</a>. See our <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> for details.',
       },
       {
         heading: "Telehealth Providers With All-Inclusive Pricing",
@@ -983,7 +983,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Month 2-3: Dose Increases and Acceleration",
-        body: 'As your provider gradually increases your dose (the standard titration schedule), appetite suppression becomes more pronounced and weight loss typically accelerates. Most patients see the most significant month-over-month changes during this period. By month 3, many patients have lost 5-10% of their starting weight. <a href="/weight-loss/articles/what-to-eat-on-glp1-medication">Nutrition</a> and <a href="/weight-loss/articles/exercise-while-on-glp1-medication">exercise</a> habits amplify results during this phase.',
+        body: 'As your provider gradually increases your dose (<a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener">the standard titration schedule</a>), appetite suppression becomes more pronounced and weight loss typically accelerates. Most patients see the most significant month-over-month changes during this period. By month 3, many patients have lost 5-10% of their starting weight. <a href="/weight-loss/articles/what-to-eat-on-glp1-medication">Nutrition</a> and <a href="/weight-loss/articles/exercise-while-on-glp1-medication">exercise</a> habits amplify results during this phase.',
       },
       {
         heading: "Month 4-6: Steady Progress",
@@ -991,7 +991,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Month 6-12+: Maximum Results",
-        body: 'Clinical trials show the most significant results at 68 weeks (about 16 months), with average weight loss of 15% of body weight. Most patients reach their peak results between months 9-15. After reaching your goal, discuss a maintenance plan with your provider - some patients step down to a lower dose rather than stopping entirely. Read about <a href="/weight-loss/articles/stopping-glp1-medication-what-happens">what happens when you stop</a>.',
+        body: '<a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">Clinical trials show the most significant results at 68 weeks</a> (about 16 months), with average weight loss of 15% of body weight. Most patients reach their peak results between months 9-15. After reaching your goal, discuss a maintenance plan with your provider - some patients step down to a lower dose rather than stopping entirely. Read about <a href="/weight-loss/articles/stopping-glp1-medication-what-happens">what happens when you stop</a>.',
       },
       {
         heading: "What If You Don't See Results?",
@@ -999,7 +999,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Does Exercise Speed Up Results?",
-        body: 'Yes - patients who combine semaglutide with regular exercise, especially strength training, tend to see faster and more sustainable results. Exercise also helps preserve lean muscle during weight loss, which is critical for long-term metabolism. See our <a href="/weight-loss/articles/exercise-while-on-glp1-medication">exercise guide for GLP-1 patients</a>.',
+        body: 'Yes - patients who combine semaglutide with regular exercise, especially strength training, tend to see faster and more sustainable results. Exercise also <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13303403/" target="_blank" rel="noopener">helps preserve lean muscle during weight loss</a>, which is critical for long-term metabolism. See our <a href="/weight-loss/articles/exercise-while-on-glp1-medication">exercise guide for GLP-1 patients</a>.',
       },
       {
         heading: "How should you track progress?",
@@ -1027,7 +1027,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "What is the difference between Zepbound and Wegovy?",
-        body: 'Zepbound (tirzepatide) and Wegovy (semaglutide) are the only two GLP-1-based medications with specific FDA approval for chronic weight management. This sets them apart from Ozempic and Mounjaro, which are approved for diabetes but widely used off-label for weight loss. Having FDA approval for weight loss means these drugs went through rigorous clinical trials specifically measuring their effectiveness for weight management.',
+        body: 'Zepbound (tirzepatide) and Wegovy (semaglutide) are the only two GLP-1-based medications with specific <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-new-medication-chronic-weight-management" target="_blank" rel="noopener">FDA approval for chronic weight management</a>. This sets them apart from Ozempic and Mounjaro, which are approved for diabetes but widely used off-label for weight loss. Having FDA approval for weight loss means these drugs went through rigorous clinical trials specifically measuring their effectiveness for weight management.',
       },
       {
         heading: "How do Zepbound and Wegovy work differently?",
@@ -1035,7 +1035,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Is Zepbound or Wegovy better for weight loss?",
-        body: 'In trials, Zepbound produced greater average weight loss. Wegovy (STEP trials): ~15% average weight loss over 68 weeks. Zepbound (SURMOUNT trials): up to 22.5% average weight loss over 72 weeks. While these come from different trials and direct comparison requires caution, the trend is consistent - tirzepatide-based medications produce greater average weight loss in clinical research.',
+        body: 'In trials, Zepbound produced greater average weight loss. <a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">Wegovy (STEP trials)</a>: ~15% average weight loss over 68 weeks. <a href="https://pubmed.ncbi.nlm.nih.gov/35658024/" target="_blank" rel="noopener">Zepbound (SURMOUNT trials)</a>: up to 22.5% average weight loss over 72 weeks. While these come from different trials and direct comparison requires caution, the trend is consistent - tirzepatide-based medications produce greater average weight loss in clinical research.',
       },
       {
         heading: "How much do Zepbound and Wegovy actually cost?",
@@ -1047,7 +1047,7 @@ export const articles: Article[] = [
       },
       {
         heading: "How are Zepbound and Wegovy dosed?",
-        body: 'Wegovy titrates from 0.25 mg to 2.4 mg over about 16 weeks. Zepbound starts at 2.5 mg and can go up to 15 mg. Both are once-weekly injections. Zepbound\'s wider dose range gives providers more room to optimize treatment. For details on what starting either medication feels like, see our <a href="/weight-loss/articles/first-month-weight-loss-medication">first month guide</a>.',
+        body: '<a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/215256s000lbl.pdf" target="_blank" rel="noopener">Wegovy titrates from 0.25 mg to 2.4 mg over about 16 weeks</a>. Zepbound starts at 2.5 mg and can go up to 15 mg. Both are once-weekly injections. Zepbound\'s wider dose range gives providers more room to optimize treatment. For details on what starting either medication feels like, see our <a href="/weight-loss/articles/first-month-weight-loss-medication">first month guide</a>.',
       },
       {
         heading: "Are there cheaper compounded versions?",
@@ -1079,7 +1079,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Why look for a Ro alternative?",
-        body: '<a href="/weight-loss/reviews/ro">Ro</a> is one of the most established telehealth platforms in the US, with licensed providers and an integrated pharmacy. Its weight-loss program centers on brand-name medication: at verified published prices, Ro lists the Wegovy pill at $149 for the first month (then $299, plus a separate membership) and Zepbound KwikPens from $299 for the first month (then $399-449). That is the main reason people look elsewhere - compounded semaglutide and tirzepatide, the same active ingredients, start far lower through licensed telehealth providers. Other reasons: wanting a wider medication menu, a no-commitment plan, or a deeper support layer. Every alternative below requires a licensed-provider review before prescribing.',
+        body: '<a href="/weight-loss/reviews/ro">Ro</a> is one of the most established telehealth platforms in the US, with licensed providers and an integrated pharmacy. Its weight-loss program centers on brand-name medication: at verified published prices, <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/218316Orig1s000lbl.pdf" target="_blank" rel="noopener">Ro lists the Wegovy pill</a> at $149 for the first month (then $299, plus a separate membership) and Zepbound KwikPens from $299 for the first month (then $399-449). That is the main reason people look elsewhere - compounded semaglutide and tirzepatide, the same active ingredients, start far lower through licensed telehealth providers. Other reasons: wanting a wider medication menu, a no-commitment plan, or a deeper support layer. Every alternative below requires a licensed-provider review before prescribing.',
       },
       {
         heading: "Which Ro alternative is best overall?",
@@ -1091,7 +1091,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Which Ro alternative has no commitment?",
-        body: '<a href="/weight-loss/reviews/embody">embody</a> charges a flat <strong>$69/month</strong> for compounded semaglutide and <strong>$119/month</strong> for tirzepatide with no commitment of any kind - the medication, doctor review, supplies and shipping are all included. It ships free in 1-2 days, is LegitScript-certified, works with US 503A pharmacies, and refunds you in full if a provider does not approve treatment. Head-to-head: <a href="/weight-loss/embody-vs-ro">embody vs Ro</a>.',
+        body: '<a href="/weight-loss/reviews/embody">embody</a> charges a flat <strong>$69/month</strong> for compounded semaglutide and <strong>$119/month</strong> for tirzepatide with no commitment of any kind - the medication, doctor review, supplies and shipping are all included. It ships free in 1-2 days, is LegitScript-certified, works with <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">US 503A pharmacies</a>, and refunds you in full if a provider does not approve treatment. Head-to-head: <a href="/weight-loss/embody-vs-ro">embody vs Ro</a>.',
       },
       {
         heading: "Which Ro alternative offers the most support?",
@@ -1131,11 +1131,11 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "The Rise of Online Weight Loss Programs",
-        body: 'Telehealth weight loss programs have exploded in popularity, making GLP-1 medications like <a href="/weight-loss/semaglutide">semaglutide</a> and <a href="/weight-loss/tirzepatide">tirzepatide</a> accessible without office visits. But are online programs as effective as in-person care? Here\'s an honest comparison of both approaches.',
+        body: '<a href="https://www.niddk.nih.gov/health-information/weight-management/choosing-a-safe-successful-weight-loss-program" target="_blank" rel="noopener">Telehealth weight loss programs</a> have exploded in popularity, making GLP-1 medications like <a href="/weight-loss/semaglutide">semaglutide</a> and <a href="/weight-loss/tirzepatide">tirzepatide</a> accessible without office visits. But are online programs <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11405989/" target="_blank" rel="noopener">as effective as in-person care</a>? Here\'s an honest comparison of both approaches.',
       },
       {
         heading: "What are the advantages of online programs?",
-        body: 'Online programs offer convenience, lower costs, and faster access. You can complete a medical evaluation from home, receive medication by mail, and have follow-up consultations via video or messaging. Most telehealth providers offer compounded GLP-1 medications at a fraction of in-person clinic prices. For a full cost breakdown, see our <a href="/weight-loss/articles/weight-loss-medication-cost-guide">medication cost guide</a>.',
+        body: 'Online programs offer convenience, lower costs, and faster access. You can complete a medical evaluation from home, receive medication by mail, and have follow-up consultations via video or messaging. Most telehealth providers offer <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">compounded GLP-1 medications</a> at a fraction of in-person clinic prices. For a full cost breakdown, see our <a href="/weight-loss/articles/weight-loss-medication-cost-guide">medication cost guide</a>.',
       },
       {
         heading: "What are the advantages of in-person programs?",
@@ -1175,11 +1175,11 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "How much does brand-name semaglutide cost?",
-        body: 'Brand-name semaglutide comes in two FDA-approved forms: <a href="/weight-loss/articles/ozempic-vs-wegovy-differences">Ozempic and Wegovy</a>. Ozempic costs approximately $900-$1,000/month at retail. Wegovy runs $1,300-$1,400/month. These prices are without insurance - with coverage, copays can range from $25-$500 depending on your plan.',
+        body: 'Brand-name semaglutide comes in <a href="https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/medications-containing-semaglutide-marketed-type-2-diabetes-or-weight-loss" target="_blank" rel="noopener">two FDA-approved forms</a>: <a href="/weight-loss/articles/ozempic-vs-wegovy-differences">Ozempic and Wegovy</a>. Ozempic costs approximately $900-$1,000/month at retail. Wegovy runs $1,300-$1,400/month. These prices are without insurance - with coverage, copays can range from $25-$500 depending on your plan.',
       },
       {
         heading: "How much does compounded semaglutide cost per month?",
-        body: 'Compounded semaglutide through telehealth providers costs a verified $49-$199/month, including physician consultations and home delivery. This uses the same active ingredient as Ozempic/Wegovy but is produced by licensed compounding pharmacies. Read our <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name comparison</a> for more details.',
+        body: 'Compounded semaglutide through telehealth providers costs a verified $49-$199/month, including physician consultations and home delivery. This uses the same active ingredient as Ozempic/Wegovy but is <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">produced by licensed compounding pharmacies</a>. Read our <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name comparison</a> for more details.',
       },
       {
         heading: "What's included in the monthly price?",
@@ -1191,7 +1191,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Does semaglutide cost more at higher doses?",
-        body: 'Semaglutide pricing can vary by dose. Lower starting doses (0.25-0.5 mg) are typically less expensive than maintenance doses (1.7-2.4 mg). Most telehealth providers charge a flat monthly rate regardless of dose, which simplifies budgeting. Always confirm whether pricing is dose-dependent before enrolling.',
+        body: 'Semaglutide pricing can vary by dose. Lower starting doses (0.25-0.5 mg) are typically less expensive than <a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener">maintenance doses (1.7-2.4 mg)</a>. Most telehealth providers charge a flat monthly rate regardless of dose, which simplifies budgeting. Always confirm whether pricing is dose-dependent before enrolling.',
       },
       {
         heading: "Is semaglutide cheaper than tirzepatide?",
@@ -1223,7 +1223,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Can you get Ozempic without a prescription?",
-        body: 'Semaglutide (the active ingredient in Ozempic and Wegovy) is a prescription medication - you cannot legally buy it without a doctor\'s authorization. However, you do NOT need to visit a doctor\'s office in person. Telehealth providers offer fully online medical evaluations where a licensed physician reviews your health profile and can prescribe semaglutide remotely.',
+        body: 'Semaglutide (the active ingredient in Ozempic and Wegovy) <a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener">is a prescription medication</a> - you cannot legally buy it without a doctor\'s authorization. However, you do NOT need to visit a doctor\'s office in person. Telehealth providers offer fully online medical evaluations where a licensed physician reviews your health profile and can prescribe semaglutide remotely.',
       },
       {
         heading: "How do online prescriptions work?",
@@ -1231,7 +1231,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Is It Safe and Legal?",
-        body: 'Yes - as long as you use a licensed telehealth provider with real physician oversight. The FDA allows telemedicine prescribing for most medications including GLP-1 drugs. The key is choosing a reputable platform with licensed, board-certified providers. See our guide on <a href="/weight-loss/articles/choosing-telehealth-weight-loss-provider">choosing the right telehealth provider</a>.',
+        body: 'Yes - as long as you use a licensed telehealth provider with real physician oversight. The FDA allows telemedicine prescribing for most medications including GLP-1 drugs. The key is choosing a <a href="https://www.fda.gov/drugs/buying-using-medicine-safely/besaferx-your-source-online-pharmacy-information" target="_blank" rel="noopener">reputable platform</a> with licensed, board-certified providers. See our guide on <a href="/weight-loss/articles/choosing-telehealth-weight-loss-provider">choosing the right telehealth provider</a>.',
       },
       {
         heading: "Where to Get Started",
@@ -1239,7 +1239,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What About Compounded Semaglutide?",
-        body: 'Most patients who "get Ozempic online" are actually getting compounded semaglutide - the same active ingredient at a lower cost. Compounded versions are prescribed by the same licensed physicians through telehealth platforms and delivered to your home. Read our <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> to understand the difference.',
+        body: 'Most patients who "get Ozempic online" are actually getting <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">compounded semaglutide - the same active ingredient at a lower cost</a>. Compounded versions are prescribed by the same licensed physicians through telehealth platforms and delivered to your home. Read our <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> to understand the difference.',
       },
       {
         heading: "Do You Need Lab Work?",
@@ -1275,15 +1275,15 @@ export const articles: Article[] = [
       },
       {
         heading: "Is tirzepatide the most effective GLP-1?",
-        body: 'Clinical data consistently shows tirzepatide produces the greatest weight loss - up to 22.5% of body weight in the SURMOUNT trials. As a dual-agonist targeting both GLP-1 and GIP receptors, it has a broader metabolic effect. Available as Mounjaro (diabetes) and Zepbound (weight loss). See our <a href="/weight-loss/articles/zepbound-vs-wegovy">Zepbound vs Wegovy comparison</a>.',
+        body: 'Clinical data consistently shows tirzepatide produces the greatest weight loss - <a href="https://pubmed.ncbi.nlm.nih.gov/35658024/" target="_blank" rel="noopener">up to 22.5% of body weight in the SURMOUNT trials</a>. As a dual-agonist targeting both GLP-1 and GIP receptors, it has a broader metabolic effect. Available as Mounjaro (diabetes) and Zepbound (weight loss). See our <a href="/weight-loss/articles/zepbound-vs-wegovy">Zepbound vs Wegovy comparison</a>.',
       },
       {
         heading: "Why is semaglutide the most established option?",
-        body: 'Semaglutide is the most widely used GLP-1 for weight loss, with the longest track record and broadest availability through telehealth providers. The STEP trials showed ~15% average weight loss. Available as brand-name (Ozempic, Wegovy) and compounded versions. <a href="/weight-loss/semaglutide">Compare semaglutide providers</a>.',
+        body: 'Semaglutide is the most widely used GLP-1 for weight loss, with the longest track record and broadest availability through telehealth providers. <a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">The STEP trials showed ~15% average weight loss</a>. Available as brand-name (Ozempic, Wegovy) and compounded versions. <a href="/weight-loss/semaglutide">Compare semaglutide providers</a>.',
       },
       {
         heading: "Is liraglutide (Saxenda) still worth considering?",
-        body: 'Liraglutide (Saxenda) was the first GLP-1 approved specifically for weight loss. It produces more modest results (~5-8% body weight in the SCALE trial) compared to semaglutide and tirzepatide, and requires daily rather than weekly injections. It\'s less commonly prescribed now but remains an option for patients who don\'t respond well to other GLP-1s.',
+        body: 'Liraglutide (Saxenda) was <a href="https://www.niddk.nih.gov/health-information/weight-management/prescription-medications-treat-overweight-obesity" target="_blank" rel="noopener">the first GLP-1 approved specifically for weight loss</a>. It produces more modest results (~5-8% body weight in the <a href="https://pubmed.ncbi.nlm.nih.gov/26132939/" target="_blank" rel="noopener">SCALE trial</a>) compared to semaglutide and tirzepatide, and requires daily rather than weekly injections. It\'s less commonly prescribed now but remains an option for patients who don\'t respond well to other GLP-1s.',
       },
       {
         heading: "How do the costs compare?",
@@ -1319,7 +1319,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What is a realistic weight loss timeline?",
-        body: 'Week 1-2: appetite changes begin. Month 1: 3-5 lbs lost. Month 2-3: weight loss accelerates as dose increases (5-10% of body weight). Month 6-12: maximum results (15-22% depending on medication). This is based on clinical trial averages - your results may vary. See our <a href="/weight-loss/articles/first-month-weight-loss-medication">first month guide</a>.',
+        body: 'Week 1-2: appetite changes begin. Month 1: 3-5 lbs lost. Month 2-3: weight loss accelerates as dose increases (5-10% of body weight). Month 6-12: maximum results (15-22% depending on medication). <a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">This is based on clinical trial averages</a> - your results may vary. See our <a href="/weight-loss/articles/first-month-weight-loss-medication">first month guide</a>.',
       },
       {
         heading: "Which Medication Works Fastest?",
@@ -1335,7 +1335,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Which weight loss medication acts fastest?",
-        body: 'In terms of how quickly you feel the effects: both semaglutide and tirzepatide reduce appetite within the first 1-2 weeks. Tirzepatide may have a slight edge in speed of visible results due to its dual mechanism. Older medications like phentermine work within hours but are only approved for short-term use. For long-term weight loss, GLP-1 medications are the clear winner. Compare them in our <a href="/weight-loss/articles/best-glp1-for-weight-loss">best GLP-1 guide</a>.',
+        body: 'In terms of how quickly you feel the effects: both semaglutide and tirzepatide reduce appetite within the first 1-2 weeks. Tirzepatide may have a slight edge in speed of visible results due to its dual mechanism. Older medications like phentermine work within hours but are <a href="https://www.niddk.nih.gov/health-information/weight-management/prescription-medications-treat-overweight-obesity" target="_blank" rel="noopener">only approved for short-term use</a>. For long-term weight loss, GLP-1 medications are the clear winner. Compare them in our <a href="/weight-loss/articles/best-glp1-for-weight-loss">best GLP-1 guide</a>.',
       },
       {
         heading: "What Slows Down Results?",
@@ -1343,7 +1343,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Setting Realistic Expectations",
-        body: 'Sustainable weight loss is not instant weight loss. Providers and clinical data consistently show that patients who lose weight gradually (1-2 lbs per week) are more likely to keep it off long-term. The medications accelerate this process compared to diet alone, but "fast" should mean "faster than without medication" - not overnight. Read about <a href="/weight-loss/articles/stopping-glp1-medication-what-happens">what happens when you stop</a> to understand why sustainability matters.',
+        body: 'Sustainable weight loss is not instant weight loss. Providers and clinical data consistently show that <a href="https://www.cdc.gov/healthy-weight-growth/losing-weight/index.html" target="_blank" rel="noopener">patients who lose weight gradually (1-2 lbs per week) are more likely to keep it off long-term</a>. The medications accelerate this process compared to diet alone, but "fast" should mean "faster than without medication" - not overnight. Read about <a href="/weight-loss/articles/stopping-glp1-medication-what-happens">what happens when you stop</a> to understand why sustainability matters.',
       },
     ],
   },
@@ -1361,7 +1361,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "What Is Noom?",
-        body: 'Noom is a weight loss platform built on cognitive behavioral therapy (CBT) principles. Originally a coaching-only app, Noom now offers <a href="/weight-loss/reviews/noom">Noom Med</a> - a medical program providing access to GLP-1 medications like semaglutide. This combination of behavioral coaching and medical treatment makes Noom unique among weight loss providers.',
+        body: 'Noom is a weight loss platform built on cognitive behavioral therapy (CBT) principles. Originally a coaching-only app, Noom now offers <a href="/weight-loss/reviews/noom">Noom Med</a> - a medical program providing access to <a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener">GLP-1 medications like semaglutide</a>. This combination of behavioral coaching and medical treatment makes Noom unique among weight loss providers.',
       },
       {
         heading: "How Noom Works",
@@ -1417,19 +1417,19 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Why are GLP-1 medications so popular among women?",
-        body: '<a href="/weight-loss/articles/how-glp1-medications-work">GLP-1 medications</a> have become the most talked-about weight loss treatment for women in 2026. Clinical trials show they work comparably well for women and men, with average weight loss of about 15% on semaglutide and up to ~22.5% on tirzepatide in their respective trials. For many women who have struggled with diet-resistant weight - especially after pregnancy, during perimenopause, or with PCOS - these medications address the biological factors that make weight loss difficult.',
+        body: '<a href="/weight-loss/articles/how-glp1-medications-work">GLP-1 medications</a> have become the most talked-about weight loss treatment for women in 2026. Clinical trials show they <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8089676/" target="_blank" rel="noopener">work comparably well for women and men</a>, with average weight loss of about 15% on semaglutide and up to ~22.5% on tirzepatide in their respective trials. For many women who have struggled with diet-resistant weight - especially after pregnancy, during perimenopause, or with PCOS - these medications address the biological factors that make weight loss difficult.',
       },
       {
         heading: "Do hormones change how GLP-1s work?",
-        body: 'Women\'s hormonal fluctuations can influence how GLP-1 medications work. Some women report that side effects like nausea are slightly worse during certain phases of their menstrual cycle. Hormonal changes during perimenopause and menopause can also affect weight loss patterns. The good news: GLP-1 medications work with your hormones, not against them. They mimic natural satiety hormones that help regulate appetite regardless of hormonal status.',
+        body: 'Women\'s hormonal fluctuations can influence how GLP-1 medications work. Some women report that side effects like nausea are slightly worse during certain phases of their menstrual cycle. <a href="https://www.mayoclinic.org/healthy-lifestyle/womens-health/in-depth/menopause-weight-gain/art-20046058" target="_blank" rel="noopener">Hormonal changes during perimenopause and menopause</a> can also affect weight loss patterns. The good news: GLP-1 medications work with your hormones, not against them. They mimic natural satiety hormones that help regulate appetite regardless of hormonal status.',
       },
       {
         heading: "Are GLP-1 medications safe during pregnancy or while trying to conceive?",
-        body: 'GLP-1 medications should be stopped at least 2 months before trying to conceive. They are not safe during pregnancy or breastfeeding. Interestingly, some women on GLP-1 medications have reported unexpected pregnancies - possibly because weight loss can improve fertility, especially in women with PCOS or obesity-related hormonal imbalances. If you are of childbearing age, discuss contraception with your provider. See our <a href="/weight-loss/articles/who-qualifies-for-glp1-weight-loss">eligibility guide</a> for full safety information.',
+        body: 'GLP-1 medications should be <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/215256s000lbl.pdf" target="_blank" rel="noopener">stopped at least 2 months before trying to conceive</a>. They are not safe during pregnancy or breastfeeding. Interestingly, some women on GLP-1 medications have reported unexpected pregnancies - possibly because weight loss can improve fertility, <a href="https://pubmed.ncbi.nlm.nih.gov/40713699/" target="_blank" rel="noopener">especially in women with PCOS</a> or obesity-related hormonal imbalances. If you are of childbearing age, discuss contraception with your provider. See our <a href="/weight-loss/articles/who-qualifies-for-glp1-weight-loss">eligibility guide</a> for full safety information.',
       },
       {
         heading: "How much weight do women lose on GLP-1s?",
-        body: 'Clinical trial data shows women achieve results comparable to men. In the STEP trials, women on semaglutide lost roughly 15% of body weight on average, in line with or slightly above the overall trial average. In the SURMOUNT trials, tirzepatide results were even higher. Individual results vary based on starting weight, metabolic health, medication adherence, and lifestyle factors. Read our <a href="/weight-loss/articles/how-long-for-semaglutide-to-work">semaglutide results timeline</a> for realistic expectations.',
+        body: 'Clinical trial data shows women achieve results comparable to men. In the STEP trials, women on semaglutide lost roughly 15% of body weight on average, in line with or slightly above the overall trial average. <a href="https://pubmed.ncbi.nlm.nih.gov/35658024/" target="_blank" rel="noopener">In the SURMOUNT trials</a>, tirzepatide results were even higher. Individual results vary based on starting weight, metabolic health, medication adherence, and lifestyle factors. Read our <a href="/weight-loss/articles/how-long-for-semaglutide-to-work">semaglutide results timeline</a> for realistic expectations.',
       },
       {
         heading: "Managing Side Effects",
@@ -1465,19 +1465,19 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Why does weight loss get harder after 40?",
-        body: 'After 40, gradual muscle loss and reduced activity slowly lower how many calories you burn at rest. Hormonal changes - declining testosterone in men, perimenopause in women - promote fat storage, especially around the midsection. Muscle mass naturally decreases with age, further reducing calorie burn. Stress, sleep disruption, and decades of dietary habits compound the challenge. None of this means weight loss is impossible - it just means the tools that worked at 25 may not be enough anymore.',
+        body: 'After 40, gradual muscle loss and reduced activity slowly lower how many calories you burn at rest. Hormonal changes - declining testosterone in men, <a href="https://www.mayoclinic.org/healthy-lifestyle/womens-health/in-depth/menopause-weight-gain/art-20046058" target="_blank" rel="noopener">perimenopause in women</a> - promote fat storage, especially around the midsection. Muscle mass naturally decreases with age, further reducing calorie burn. Stress, sleep disruption, and decades of dietary habits compound the challenge. None of this means weight loss is impossible - it just means the tools that worked at 25 may not be enough anymore.',
       },
       {
         heading: "Do GLP-1 medications work after 40?",
-        body: '<a href="/weight-loss/articles/how-glp1-medications-work">GLP-1 medications</a> address the biological barriers that make weight loss harder with age. They reduce appetite, slow gastric emptying, and improve insulin sensitivity - all factors that deteriorate with age. In clinical trials, patients over 40 achieved weight loss results comparable to younger participants. The medications work with your biology regardless of age.',
+        body: '<a href="/weight-loss/articles/how-glp1-medications-work">GLP-1 medications</a> address the biological barriers that make weight loss harder with age. They reduce appetite, slow gastric emptying, and improve insulin sensitivity - all factors that deteriorate with age. In clinical trials, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8089676/" target="_blank" rel="noopener">patients over 40 achieved weight loss results comparable to younger participants</a>. The medications work with your biology regardless of age.',
       },
       {
         heading: "What should over-40 patients watch for?",
-        body: 'Patients over 40 should pay extra attention to muscle preservation, bone density, and medication interactions. If you take blood pressure medications, thyroid medication, or diabetes drugs, your provider will need to monitor for interactions. GLP-1 medications can affect absorption of oral medications due to slowed gastric emptying. See our <a href="/weight-loss/articles/who-qualifies-for-glp1-weight-loss">eligibility guide</a> for full details on medical considerations.',
+        body: 'Patients over 40 should pay extra attention to muscle preservation, bone density, and medication interactions. If you take blood pressure medications, thyroid medication, or diabetes drugs, your provider will need to monitor for interactions. GLP-1 medications can <a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener">affect absorption of oral medications due to slowed gastric emptying</a>. See our <a href="/weight-loss/articles/who-qualifies-for-glp1-weight-loss">eligibility guide</a> for full details on medical considerations.',
       },
       {
         heading: "The Importance of Strength Training",
-        body: 'Muscle preservation becomes critical after 40. Losing weight without maintaining muscle leads to a lower metabolic rate, making regain more likely. Resistance training 2-3 times per week, combined with adequate protein intake (1g per pound of lean body mass), significantly reduces muscle loss during medicated weight loss. Our <a href="/weight-loss/articles/exercise-while-on-glp1-medication">exercise guide</a> covers practical routines.',
+        body: 'Muscle preservation becomes critical after 40. Losing weight without maintaining muscle leads to a lower metabolic rate, making regain more likely. <a href="https://www.cdc.gov/physical-activity-basics/guidelines/adults.html" target="_blank" rel="noopener">Resistance training 2-3 times per week</a>, combined with adequate protein intake (1g per pound of lean body mass), significantly reduces muscle loss during medicated weight loss. Our <a href="/weight-loss/articles/exercise-while-on-glp1-medication">exercise guide</a> covers practical routines.',
       },
       {
         heading: "What to Expect: A Realistic Timeline",
@@ -1557,19 +1557,19 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Why do people look for Ozempic alternatives?",
-        body: 'Ozempic (semaglutide) has become synonymous with GLP-1 weight loss, but there are several reasons people look for alternatives: the high retail cost ($900-$1,000/month), insurance denials, supply shortages, or wanting a medication specifically approved for weight loss rather than diabetes. The good news: multiple effective alternatives exist - both other medications and more affordable ways to access semaglutide itself.',
+        body: 'Ozempic (semaglutide) has become synonymous with GLP-1 weight loss, but there are several reasons people look for alternatives: the high retail cost ($900-$1,000/month), insurance denials, <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fda-clarifies-policies-compounders-national-glp-1-supply-begins-stabilize" target="_blank" rel="noopener">supply shortages</a>, or wanting a medication specifically approved for weight loss rather than diabetes. The good news: multiple effective alternatives exist - both other medications and more affordable ways to access semaglutide itself.',
       },
       {
         heading: "Is compounded semaglutide the same as Ozempic?",
-        body: 'The most popular Ozempic alternative is <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded semaglutide</a> - the exact same active ingredient made by licensed compounding pharmacies at a verified $49-$199/month instead of $1,149+. Available through telehealth providers like <a href="/weight-loss/reviews/altrx">ALT RX</a>, <a href="/weight-loss/reviews/trimrx">TrimRX</a>, and others. This is what most people actually use when they say they\'re "on Ozempic" through telehealth.',
+        body: 'The most popular Ozempic alternative is <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded semaglutide</a> - the exact same active ingredient <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">made by licensed compounding pharmacies</a> at a verified $49-$199/month instead of $1,149+. Available through telehealth providers like <a href="/weight-loss/reviews/altrx">ALT RX</a>, <a href="/weight-loss/reviews/trimrx">TrimRX</a>, and others. This is what most people actually use when they say they\'re "on Ozempic" through telehealth.',
       },
       {
         heading: "Wegovy - The FDA-Approved Weight Loss Version",
-        body: '<a href="/weight-loss/articles/ozempic-vs-wegovy-differences">Wegovy</a> contains the same semaglutide as Ozempic but at a higher maximum dose (2.4 mg vs 2 mg) and with FDA approval specifically for weight loss. It\'s more expensive at retail ($1,300+/month) but is the purpose-built option for weight loss rather than off-label Ozempic use.',
+        body: '<a href="/weight-loss/articles/ozempic-vs-wegovy-differences">Wegovy</a> contains the same semaglutide as Ozempic but at a higher maximum dose (2.4 mg vs 2 mg) and <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-new-drug-treatment-chronic-weight-management-first-2014" target="_blank" rel="noopener">with FDA approval specifically for weight loss</a>. It\'s more expensive at retail ($1,300+/month) but is the purpose-built option for weight loss rather than off-label Ozempic use.',
       },
       {
         heading: "Is tirzepatide stronger than Ozempic?",
-        body: 'If you want something more effective than Ozempic, <a href="/weight-loss/articles/mounjaro-vs-ozempic">tirzepatide</a> (Mounjaro for diabetes, Zepbound for weight loss) targets two receptors instead of one and produced up to 22.5% weight loss in trials vs ~15% for semaglutide. Compounded tirzepatide is available through telehealth providers from a verified $89/month. See our <a href="/weight-loss/tirzepatide">tirzepatide providers page</a>.',
+        body: 'If you want something more effective than Ozempic, <a href="/weight-loss/articles/mounjaro-vs-ozempic">tirzepatide</a> (Mounjaro for diabetes, Zepbound for weight loss) targets two receptors instead of one and <a href="https://pubmed.ncbi.nlm.nih.gov/35658024/" target="_blank" rel="noopener">produced up to 22.5% weight loss in trials</a> vs ~15% for semaglutide. Compounded tirzepatide is available through telehealth providers from a verified $89/month. See our <a href="/weight-loss/tirzepatide">tirzepatide providers page</a>.',
       },
       {
         heading: "Top Telehealth Providers for Ozempic Alternatives",
@@ -1605,7 +1605,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Why do people look for Wegovy alternatives?",
-        body: 'Wegovy is the gold-standard FDA-approved semaglutide for weight loss, but at $1,300-$1,400/month retail, it\'s out of reach for many patients. Insurance coverage is inconsistent, and supply shortages have been an ongoing issue. Fortunately, several alternatives provide the same active ingredient or even better results at a fraction of the cost.',
+        body: 'Wegovy is the <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-new-drug-treatment-chronic-weight-management-first-2014" target="_blank" rel="noopener">gold-standard FDA-approved semaglutide for weight loss</a>, but at $1,300-$1,400/month retail, it\'s out of reach for many patients. Insurance coverage is inconsistent, and <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fda-clarifies-policies-compounders-national-glp-1-supply-begins-stabilize" target="_blank" rel="noopener">supply shortages have been an ongoing issue</a>. Fortunately, several alternatives provide the same active ingredient or even better results at a fraction of the cost.',
       },
       {
         heading: "Is compounded semaglutide the same as Wegovy?",
@@ -1613,11 +1613,11 @@ export const articles: Article[] = [
       },
       {
         heading: "Is Zepbound more effective than Wegovy?",
-        body: 'If you want something potentially more effective than Wegovy, <a href="/weight-loss/articles/zepbound-vs-wegovy">Zepbound</a> (tirzepatide) has shown up to 22.5% weight loss vs Wegovy\'s ~15% in clinical trials. Compounded tirzepatide is available from a verified $89/month. See our <a href="/weight-loss/tirzepatide">tirzepatide providers page</a>.',
+        body: 'If you want something potentially more effective than Wegovy, <a href="/weight-loss/articles/zepbound-vs-wegovy">Zepbound</a> (tirzepatide) has shown <a href="https://pubmed.ncbi.nlm.nih.gov/35658024/" target="_blank" rel="noopener">up to 22.5% weight loss</a> vs Wegovy\'s ~15% in clinical trials. Compounded tirzepatide is available from a verified $89/month. See our <a href="/weight-loss/tirzepatide">tirzepatide providers page</a>.',
       },
       {
         heading: "Can you use Ozempic instead of Wegovy?",
-        body: 'Ozempic contains the same semaglutide as Wegovy but at a lower maximum dose and is approved for diabetes, not weight loss. Some doctors prescribe it off-label for weight loss. It\'s typically cheaper ($900/month) and may have better insurance coverage since it\'s classified as a diabetes drug. Read our <a href="/weight-loss/articles/ozempic-vs-wegovy-differences">Ozempic vs Wegovy comparison</a>.',
+        body: 'Ozempic contains the same semaglutide as Wegovy but at a lower maximum dose and is <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/209637lbl.pdf" target="_blank" rel="noopener">approved for diabetes, not weight loss</a>. Some doctors prescribe it off-label for weight loss. It\'s typically cheaper ($900/month) and may have better insurance coverage since it\'s classified as a diabetes drug. Read our <a href="/weight-loss/articles/ozempic-vs-wegovy-differences">Ozempic vs Wegovy comparison</a>.',
       },
       {
         heading: "Top Affordable Providers",
@@ -1653,11 +1653,11 @@ export const articles: Article[] = [
       },
       {
         heading: "Why do people look for Mounjaro alternatives?",
-        body: 'Mounjaro (tirzepatide) posted the strongest results of any GLP-1 medication in trials, but the brand pens run $1,000+ per month cash, and insurance rarely covers them for weight loss (Mounjaro\'s FDA approval is for type 2 diabetes). That leaves three practical paths: the same molecule compounded at a fraction of the price, the weight-loss-approved brand version (Zepbound), or the cheaper sister molecule semaglutide. All three still require a prescription from a licensed provider - anything sold without one is a red flag, not an alternative.',
+        body: 'Mounjaro (tirzepatide) posted the strongest results of any GLP-1 medication in trials, but the brand pens run $1,000+ per month cash, and insurance rarely covers them for weight loss (Mounjaro\'s <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/215866s000lbl.pdf" target="_blank" rel="noopener">FDA approval is for type 2 diabetes</a>). That leaves three practical paths: the same molecule compounded at a fraction of the price, the weight-loss-approved brand version (Zepbound), or the cheaper sister molecule semaglutide. All three still require a prescription from a licensed provider - anything sold without one is a red flag, not an alternative.',
       },
       {
         heading: "What is the closest thing to Mounjaro?",
-        body: 'Compounded tirzepatide - the same active ingredient, prepared by US 503A compounding pharmacies and prescribed through licensed telehealth providers. The experience is different from the brand (vials and syringes rather than pens, and compounded drugs are not FDA-approved products), but the molecule is the one that produced Mounjaro\'s trial results. At verified prices it runs $89-$299/month depending on the provider - roughly a tenth of brand cost at the low end. Start with our <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide breakdown</a> if you\'re weighing the two molecules.',
+        body: 'Compounded tirzepatide - the same active ingredient, prepared by <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">US 503A compounding pharmacies</a> and prescribed through licensed telehealth providers. The experience is different from the brand (vials and syringes rather than pens, and <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">compounded drugs are not FDA-approved products</a>), but the molecule is the one that produced Mounjaro\'s trial results. At verified prices it runs $89-$299/month depending on the provider - roughly a tenth of brand cost at the low end. Start with our <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide breakdown</a> if you\'re weighing the two molecules.',
       },
       {
         heading: "What does each Mounjaro alternative actually cost?",
@@ -1665,11 +1665,11 @@ export const articles: Article[] = [
       },
       {
         heading: "Is there a cheaper alternative to Mounjaro?",
-        body: 'Yes - compounded semaglutide, the active ingredient in Ozempic and Wegovy. In trials semaglutide averaged around 15% body-weight loss versus up to 22.5% for tirzepatide, so you trade some average effect for a much lower price: verified rates start at <strong>$49/month at <a href="/weight-loss/reviews/wellmedr">wellmedr</a></strong>, $69 at <a href="/weight-loss/reviews/embody">embody</a> and $89 at <a href="/weight-loss/reviews/altrx">altRx</a>. Many people start on semaglutide and only step up to tirzepatide if results stall. Our <a href="/weight-loss/cheapest-glp1">cheapest verified GLP-1 comparison</a> lays out the whole budget tier.',
+        body: 'Yes - compounded semaglutide, the active ingredient in Ozempic and Wegovy. In trials semaglutide averaged around 15% body-weight loss versus <a href="https://pubmed.ncbi.nlm.nih.gov/35658024/" target="_blank" rel="noopener">up to 22.5% for tirzepatide</a>, so you trade some average effect for a much lower price: verified rates start at <strong>$49/month at <a href="/weight-loss/reviews/wellmedr">wellmedr</a></strong>, $69 at <a href="/weight-loss/reviews/embody">embody</a> and $89 at <a href="/weight-loss/reviews/altrx">altRx</a>. Many people start on semaglutide and only step up to tirzepatide if results stall. Our <a href="/weight-loss/cheapest-glp1">cheapest verified GLP-1 comparison</a> lays out the whole budget tier.',
       },
       {
         heading: "Is Zepbound the same as Mounjaro?",
-        body: 'Same active ingredient (tirzepatide), same manufacturer, different label: Zepbound is FDA-approved for chronic weight management, Mounjaro for type 2 diabetes. If you want the brand product for weight loss, Zepbound is the one designed for it. Verified ways to get it: <a href="/weight-loss/reviews/altrx">altRx</a> lists Zepbound at $1,249/month, and <a href="/weight-loss/reviews/ro">ro</a> lists Zepbound KwikPens from $299 for the first month (then $399-449, plus a separate membership). Full brand-vs-brand comparison in <a href="/weight-loss/articles/zepbound-vs-wegovy">Zepbound vs Wegovy</a>.',
+        body: 'Same active ingredient (tirzepatide), same manufacturer, different label: <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-new-medication-chronic-weight-management" target="_blank" rel="noopener">Zepbound is FDA-approved for chronic weight management</a>, Mounjaro for type 2 diabetes. If you want the brand product for weight loss, Zepbound is the one designed for it. Verified ways to get it: <a href="/weight-loss/reviews/altrx">altRx</a> lists Zepbound at $1,249/month, and <a href="/weight-loss/reviews/ro">ro</a> lists Zepbound KwikPens from $299 for the first month (then $399-449, plus a separate membership). Full brand-vs-brand comparison in <a href="/weight-loss/articles/zepbound-vs-wegovy">Zepbound vs Wegovy</a>.',
       },
       {
         heading: "Can you get a Mounjaro alternative online?",
@@ -1707,7 +1707,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Full-Dose GLP-1 Rx - From $279/Month",
-        body: 'The Full-Dose GLP-1 plan starts at <strong>$129 for the initial period</strong>, then <strong>$279/month</strong> with medication included. This provides the standard therapeutic dose of compounded semaglutide, matching the dosing used in clinical trials that showed ~15% average weight loss. This is the most popular Noom Med plan for patients seeking significant weight loss.',
+        body: 'The Full-Dose GLP-1 plan starts at <strong>$129 for the initial period</strong>, then <strong>$279/month</strong> with medication included. This provides the standard therapeutic dose of compounded semaglutide, matching the dosing used in <a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">clinical trials that showed ~15% average weight loss</a>. This is the most popular Noom Med plan for patients seeking significant weight loss.',
       },
       {
         heading: "Weight-Loss Pill (Metformin) - From $89/Month",
@@ -1767,7 +1767,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Is Embody legit?",
-        body: 'Yes - by the signals that matter, Embody is a legitimate telehealth provider. It is <strong>LegitScript-certified</strong> (an independent certification for online healthcare), works with <strong>US-based 503A compounding pharmacies</strong>, and requires a <strong>licensed medical review</strong> before any prescription is issued. Those three things - third-party certification, licensed pharmacies, and real clinician oversight - are exactly what separates a trustworthy provider from one to avoid.',
+        body: 'Yes - by the signals that matter, Embody is a legitimate telehealth provider. It is <strong>LegitScript-certified</strong> (an independent certification for online healthcare), works with <strong><a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">US-based 503A compounding pharmacies</a></strong>, and requires a <strong>licensed medical review</strong> before any prescription is issued. Those three things - third-party certification, licensed pharmacies, and real clinician oversight - are exactly what separates a trustworthy provider from one to avoid.',
       },
       {
         heading: "How much does Embody cost?",
@@ -1775,7 +1775,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What are Embody's pros and cons?",
-        body: 'The upsides: low, flat pricing, fast 1-2 day shipping, a fully online process, and LegitScript certification with US pharmacies. The trade-offs: it offers compounded medications (not brand-name), injectables only, and - like all GLP-1 treatment - requires an online intake and doctor approval. Note that compounded medications are not FDA-approved.',
+        body: 'The upsides: low, flat pricing, fast 1-2 day shipping, a fully online process, and LegitScript certification with US pharmacies. The trade-offs: it offers compounded medications (not brand-name), injectables only, and - like all GLP-1 treatment - requires an online intake and doctor approval. Note that <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">compounded medications are not FDA-approved</a>.',
       },
       {
         heading: "The verdict",
@@ -1814,7 +1814,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Is Embody worth it?",
-        body: 'For men and women who want an affordable, transparent way to start doctor-prescribed GLP-1 treatment, Embody\'s flat pricing and included extras make it strong value - provided compounded medication and injectables fit your needs. Not sure which provider fits your budget? <a href="/weight-loss/find-your-match">Take our matching quiz</a> or read <a href="/weight-loss/articles/is-embody-legit">is Embody legit?</a> This article is general information, not medical advice.',
+        body: 'For men and women who want an affordable, transparent way to start doctor-prescribed GLP-1 treatment, Embody\'s flat pricing and included extras make it strong value - <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">provided compounded medication and injectables fit your needs</a>. Not sure which provider fits your budget? <a href="/weight-loss/find-your-match">Take our matching quiz</a> or read <a href="/weight-loss/articles/is-embody-legit">is Embody legit?</a> This article is general information, not medical advice.',
       },
     ],
   },
@@ -1841,7 +1841,7 @@ export const articles: Article[] = [
       },
       {
         heading: "altRx - broad selection, brand-name options",
-        body: '<a href="/weight-loss/reviews/altrx">altRx</a> offers compounded semaglutide from $89/month and tirzepatide from $149/month, plus brand-name options like Zepbound and Wegovy for those who want them. It\'s a good alternative if you want more medication choice than Embody\'s compounded-only lineup. See the head-to-head in our <a href="/weight-loss/altrx-vs-embody">altRx vs Embody comparison</a>.',
+        body: '<a href="/weight-loss/reviews/altrx">altRx</a> offers compounded semaglutide from $89/month and tirzepatide from $149/month, plus <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-new-medication-chronic-weight-management" target="_blank" rel="noopener">brand-name options like Zepbound and Wegovy</a> for those who want them. It\'s a good alternative if you want more medication choice than Embody\'s compounded-only lineup. See the head-to-head in our <a href="/weight-loss/altrx-vs-embody">altRx vs Embody comparison</a>.',
       },
       {
         heading: "Other providers worth comparing",
@@ -1873,15 +1873,15 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "What is Ozempic face?",
-        body: 'Ozempic face is the internet\'s name for a real phenomenon with a misleading label: the gaunt, deflated look some people notice in their face after losing a lot of weight quickly. Faces store fat too - in the cheeks, temples and around the eyes - and rapid weight loss removes that volume just as it removes it everywhere else. Overlying skin, especially older skin with less elastin, doesn\'t always shrink back at the same pace, which reads as sagging. The name is unfair to the medication: this is a feature of fast, significant weight loss by any method, not a chemical effect of semaglutide on your skin.',
+        body: 'Ozempic face is the internet\'s name for <a href="https://www.health.harvard.edu/healthy-aging-and-longevity/glp-1-diabetes-and-weight-loss-drug-side-effects-ozempic-face-and-more" target="_blank" rel="noopener">a real phenomenon with a misleading label</a>: the gaunt, deflated look some people notice in their face after losing a lot of weight quickly. Faces store fat too - in the cheeks, temples and around the eyes - and rapid weight loss removes that volume just as it removes it everywhere else. Overlying skin, especially older skin with less elastin, doesn\'t always shrink back at the same pace, which reads as sagging. The name is unfair to the medication: this is a feature of fast, significant weight loss by any method, not a chemical effect of semaglutide on your skin.',
       },
       {
         heading: "Does Ozempic cause face sagging directly?",
-        body: 'No - and this distinction matters for what you do about it. Semaglutide and tirzepatide reduce appetite; the weight loss that follows is what changes your face. The same look shows up after bariatric surgery, aggressive dieting, and endurance-training transformations - anywhere large amounts of fat leave quickly. GLP-1s get the blame because they made significant weight loss common enough for the pattern to earn a nickname. The practical upside of the correct explanation: the levers that soften it are about how you lose, not which medication you take.',
+        body: 'No - and this distinction matters for what you do about it. <a href="https://www.health.harvard.edu/healthy-aging-and-longevity/how-does-ozempic-work-understanding-glp-1s-for-diabetes-weight-loss-and-beyond" target="_blank" rel="noopener">Semaglutide and tirzepatide reduce appetite</a>; the weight loss that follows is what changes your face. The same look shows up after bariatric surgery, aggressive dieting, and endurance-training transformations - anywhere large amounts of fat leave quickly. GLP-1s get the blame because they made significant weight loss common enough for the pattern to earn a nickname. The practical upside of the correct explanation: the levers that soften it are about how you lose, not which medication you take.',
       },
       {
         heading: "How do you avoid Ozempic face?",
-        body: 'Four levers, all in your control. <strong>Pace:</strong> the face effect tracks speed - a moderate, steady rate of loss gives skin time to adapt, and your prescriber can titrate dosing with that in mind; losing slower is a legitimate clinical choice, not a failure. <strong>Protein:</strong> adequate protein protects lean tissue everywhere, face included - our <a href="/weight-loss/articles/what-to-eat-on-glp1-medication">GLP-1 nutrition guide</a> covers targets when appetite is suppressed. <strong>Resistance training:</strong> preserving muscle keeps overall composition - and the structural support under skin - in better shape; see <a href="/weight-loss/articles/exercise-while-on-glp1-medication">how to train on a GLP-1 without losing muscle</a>. <strong>Hydration and basics:</strong> dehydrated skin exaggerates every hollow. What we deliberately do not recommend: collagen supplements and "skin elasticity" products marketed at GLP-1 users - the evidence doesn\'t support specific claims, and we don\'t sell hope we can\'t verify.',
+        body: 'Four levers, all in your control. <strong>Pace:</strong> the face effect tracks speed - a moderate, steady rate of loss gives skin time to adapt, and your prescriber can titrate dosing with that in mind; losing slower is a legitimate clinical choice, not a failure. <strong>Protein:</strong> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13303403/" target="_blank" rel="noopener">adequate protein protects lean tissue</a> everywhere, face included - our <a href="/weight-loss/articles/what-to-eat-on-glp1-medication">GLP-1 nutrition guide</a> covers targets when appetite is suppressed. <strong>Resistance training:</strong> preserving muscle keeps overall composition - and the structural support under skin - in better shape; see <a href="/weight-loss/articles/exercise-while-on-glp1-medication">how to train on a GLP-1 without losing muscle</a>. <strong>Hydration and basics:</strong> dehydrated skin exaggerates every hollow. What we deliberately do not recommend: collagen supplements and "skin elasticity" products marketed at GLP-1 users - the evidence doesn\'t support specific claims, and we don\'t sell hope we can\'t verify.',
       },
       {
         heading: "Does Ozempic face go away after stopping?",
@@ -1889,7 +1889,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Should fear of Ozempic face stop you from treating obesity?",
-        body: 'Framed honestly: the trade is between facial volume and the metabolic consequences of the weight itself - and that\'s rarely a close call medically. The better response to the concern isn\'t avoiding treatment; it\'s structuring it - moderate pace, protein, training - with a provider who monitors you. That provider matters: our <a href="/weight-loss">ranked telehealth providers</a> include clinician follow-up in verified $49-$99/month plans, and pace-of-loss is exactly the kind of thing to raise at check-ins. Not medical advice - your clinician\'s guidance comes first.',
+        body: 'Framed honestly: the trade is between facial volume and the <a href="https://www.niddk.nih.gov/health-information/weight-management/adult-overweight-obesity/health-risks" target="_blank" rel="noopener">metabolic consequences of the weight itself</a> - and that\'s rarely a close call medically. The better response to the concern isn\'t avoiding treatment; it\'s structuring it - moderate pace, protein, training - with a provider who monitors you. That provider matters: our <a href="/weight-loss">ranked telehealth providers</a> include clinician follow-up in verified $49-$99/month plans, and pace-of-loss is exactly the kind of thing to raise at check-ins. Not medical advice - your clinician\'s guidance comes first.',
       },
     ],
   },
@@ -1913,11 +1913,11 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "What's the difference between Zepbound, Wegovy and Ozempic?",
-        body: 'Three names, two drugs, three FDA labels. <strong>Zepbound</strong> is tirzepatide, FDA-approved for chronic weight management - it targets two hormone receptors (GIP and GLP-1). <strong>Wegovy</strong> is semaglutide at weight-management dosing (up to 2.4 mg). <strong>Ozempic</strong> is the same semaglutide approved for type 2 diabetes at up to 2 mg - widely used off-label for weight loss, but the weight-loss approval belongs to Wegovy. So the real comparison is tirzepatide vs semaglutide, with Ozempic as semaglutide\'s diabetes-label sibling - our <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">molecule-level comparison</a> goes deeper.',
+        body: 'Three names, two drugs, three FDA labels. <strong>Zepbound</strong> is tirzepatide, <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-new-medication-chronic-weight-management" target="_blank" rel="noopener">FDA-approved for chronic weight management</a> - it targets two hormone receptors (GIP and GLP-1). <strong>Wegovy</strong> is semaglutide at weight-management dosing (up to 2.4 mg). <strong>Ozempic</strong> is the same semaglutide <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/209637lbl.pdf" target="_blank" rel="noopener">approved for type 2 diabetes at up to 2 mg</a> - widely used off-label for weight loss, but the weight-loss approval belongs to Wegovy. So the real comparison is tirzepatide vs semaglutide, with Ozempic as semaglutide\'s diabetes-label sibling - our <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">molecule-level comparison</a> goes deeper.',
       },
       {
         heading: "Which is stronger - Zepbound or Wegovy?",
-        body: 'On trial averages, Zepbound. Tirzepatide produced up to 22.5% average body-weight loss in its trials at the highest dose, versus roughly 15% for semaglutide in Wegovy\'s pivotal trial - a meaningful gap, with the usual honest caveats: averages hide individual variation, the drugs weren\'t compared head-to-head in those trials, and tolerability differs person to person. Plenty of people respond excellently to semaglutide; some tolerate one and not the other. "Stronger on average" is true; "stronger for you" is what titration under a clinician discovers.',
+        body: 'On trial averages, Zepbound. Tirzepatide produced <a href="https://pubmed.ncbi.nlm.nih.gov/35658024/" target="_blank" rel="noopener">up to 22.5% average body-weight loss in its trials</a> at the highest dose, versus <a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">roughly 15% for semaglutide</a> in Wegovy\'s pivotal trial - a meaningful gap, with the usual honest caveats: averages hide individual variation, the drugs weren\'t compared head-to-head in those trials, and tolerability differs person to person. Plenty of people respond excellently to semaglutide; some tolerate one and not the other. "Stronger on average" is true; "stronger for you" is what titration under a clinician discovers.',
       },
       {
         heading: "What do they cost out of pocket?",
@@ -1961,7 +1961,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What is prior authorization and why does it matter?",
-        body: 'Even when a GLP-1 is on your formulary, most plans gate it behind <strong>prior authorization (PA)</strong>: your prescriber documents that you meet criteria before the plan pays. Typical gates: a BMI threshold (commonly 30+, or 27+ with a weight-related condition), documented comorbidities, sometimes proof you tried other approaches first ("step therapy"). PA is paperwork your prescriber files - a provider experienced with GLP-1 PAs materially changes your odds and your wait. Denied? Appeals exist and succeed often enough to be worth filing, especially with better documentation the second time.',
+        body: 'Even when a GLP-1 is on your formulary, most plans gate it behind <strong>prior authorization (PA)</strong>: your prescriber documents that you meet criteria before the plan pays. Typical gates: <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-new-drug-treatment-chronic-weight-management-first-2014" target="_blank" rel="noopener">a BMI threshold (commonly 30+, or 27+ with a weight-related condition)</a>, documented comorbidities, sometimes proof you tried other approaches first ("step therapy"). PA is paperwork your prescriber files - a provider experienced with GLP-1 PAs materially changes your odds and your wait. Denied? Appeals exist and succeed often enough to be worth filing, especially with better documentation the second time.',
       },
       {
         heading: "Can telehealth prescribe GLP-1s through insurance?",
@@ -1973,7 +1973,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What's the backup plan when insurance says no?",
-        body: 'The one this site exists to document: <strong>self-pay compounded GLP-1s at verified prices</strong> - semaglutide from $49/month (wellmedr), $69 (embody), $89 (altRx); tirzepatide from $89 - visit included, no PA, no formulary. Same active ingredients, prescribed after an online evaluation by licensed clinicians, from US state-licensed pharmacies (the <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded-vs-brand trade-offs, honestly</a>). Start at the <a href="/weight-loss/cheapest-glp1">verified price ladder</a> or the full <a href="/weight-loss">ranking</a>. The wrong backup plan: gray-market vials and "research peptides" - denial is not a reason to leave the licensed system.',
+        body: 'The one this site exists to document: <strong><a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">self-pay compounded GLP-1s</a> at verified prices</strong> - semaglutide from $49/month (wellmedr), $69 (embody), $89 (altRx); tirzepatide from $89 - visit included, no PA, no formulary. Same active ingredients, prescribed after an online evaluation by licensed clinicians, from US state-licensed pharmacies (the <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded-vs-brand trade-offs, honestly</a>). Start at the <a href="/weight-loss/cheapest-glp1">verified price ladder</a> or the full <a href="/weight-loss">ranking</a>. The wrong backup plan: gray-market vials and "research peptides" - denial is not a reason to leave the licensed system.',
       },
     ],
   },
@@ -2001,7 +2001,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Is wellmedr legit?",
-        body: 'By every marker we can actually check - yes. A licensed provider reviews your medical intake before prescribing, and approval is not automatic; medication is dispensed through a regulated US pharmacy (Reddit commenters independently name its Florida pharmacy); it holds a <strong>verified 4.7 on Trustpilot across 1,205 reviews</strong>, the highest aggregate among the providers in our ranking; and it backs treatment with a weight-loss warranty, terms published on its site. "Legit" does not mean the medication works identically for everyone - more on that in the complaints section, because that is where the honest caveat lives.',
+        body: 'By every marker we can actually check - yes. A licensed provider reviews your medical intake before prescribing, and approval is not automatic; medication is dispensed through a <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">regulated US pharmacy</a> (Reddit commenters independently name its Florida pharmacy); it holds a <strong>verified 4.7 on Trustpilot across 1,205 reviews</strong>, the highest aggregate among the providers in our ranking; and it backs treatment with a weight-loss warranty, terms published on its site. "Legit" does not mean the medication works identically for everyone - more on that in the complaints section, because that is where the honest caveat lives.',
       },
       {
         heading: "What do wellmedr reviews actually say?",
@@ -2017,7 +2017,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Does the price climb as your dose increases?",
-        body: 'No - and this is an industry mechanic most first-time buyers miss. GLP-1 treatment starts at a low dose and titrates up over several months; providers that price per-dose advertise the starting-dose price, so your bill climbs exactly when you are most committed. wellmedr charges the <strong>same price at every dose</strong> - $49 semaglutide, $89 tirzepatide, whether you are on week two or month eight. Shipments arrive every 4 weeks in discreet packaging, and plan changes go through support (several Trustpilot reviews above describe exactly that interaction going well).',
+        body: 'No - and this is an industry mechanic most first-time buyers miss. <a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener">GLP-1 treatment starts at a low dose and titrates up over several months</a>; providers that price per-dose advertise the starting-dose price, so your bill climbs exactly when you are most committed. wellmedr charges the <strong>same price at every dose</strong> - $49 semaglutide, $89 tirzepatide, whether you are on week two or month eight. Shipments arrive every 4 weeks in discreet packaging, and plan changes go through support (several Trustpilot reviews above describe exactly that interaction going well).',
       },
       {
         heading: "How much does wellmedr cost?",
@@ -2025,7 +2025,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Who is wellmedr right for?",
-        body: 'The fit is specific: <strong>you already know you want GLP-1 treatment for the long haul, and price per month is your deciding factor.</strong> A year is the realistic treatment horizon anyway - trials run 68-72 weeks - so the 12-month structure aligns with how the medication is actually used, and $588/year for semaglutide is the lowest committed total in our ranking. Skip it if you are not sure yet: a month-to-month provider (embody at $69, refund if not approved) is the cheaper way to answer the "is this for me" question, and you can move to a committed rate once your first months settle it.',
+        body: 'The fit is specific: <strong>you already know you want GLP-1 treatment for the long haul, and price per month is your deciding factor.</strong> A year is the realistic treatment horizon anyway - <a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">trials run 68-72 weeks</a> - so the 12-month structure aligns with how the medication is actually used, and $588/year for semaglutide is the lowest committed total in our ranking. Skip it if you are not sure yet: a month-to-month provider (embody at $69, refund if not approved) is the cheaper way to answer the "is this for me" question, and you can move to a committed rate once your first months settle it.',
       },
       {
         heading: "The verdict",
@@ -2053,7 +2053,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "What is tirzepatide, and why do people want it specifically?",
-        body: 'Tirzepatide is the dual-action molecule behind Zepbound and Mounjaro - it activates both GLP-1 and GIP receptors, where semaglutide (Wegovy/Ozempic) works on GLP-1 alone. The trial numbers explain the demand: <strong>up to 22.5% average body-weight loss for tirzepatide versus roughly 15% for semaglutide</strong>. It is the stronger option on the data, and it prices accordingly - which makes knowing the real market rates the whole game. Below is every price we have verified, cheapest first. (Deciding between the two molecules? Start with <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide</a>.)',
+        body: 'Tirzepatide is the dual-action molecule behind Zepbound and Mounjaro - it activates both GLP-1 and GIP receptors, where semaglutide (Wegovy/Ozempic) works on GLP-1 alone. The trial numbers explain the demand: <strong><a href="https://pubmed.ncbi.nlm.nih.gov/35658024/" target="_blank" rel="noopener">up to 22.5% average body-weight loss for tirzepatide</a> versus <a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">roughly 15% for semaglutide</a></strong>. It is the stronger option on the data, and it prices accordingly - which makes knowing the real market rates the whole game. Below is every price we have verified, cheapest first. (Deciding between the two molecules? Start with <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide</a>.)',
       },
       {
         heading: "What's the cheapest tirzepatide online?",
@@ -2065,7 +2065,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Is compounded tirzepatide legit?",
-        body: 'Compounded tirzepatide from the providers above is prescribed by licensed clinicians after a medical review and prepared by US state-licensed compounding pharmacies - that is a legal, regulated channel, and it is how the $99-$299 prices exist at all. The honest trade-off: compounded preparations are not FDA-approved products the way brand Zepbound is - the FDA does not review each pharmacy\'s output - so the pharmacy\'s standards are what you are trusting. That is exactly why we only list providers with licensed-provider review and named, regulated pharmacies. What is <em>not</em> legit: "research chemical" and no-prescription peptide vendors. No clinician, no pharmacy license, no recourse - the discount is not worth what you are giving up.',
+        body: 'Compounded tirzepatide from the providers above is prescribed by licensed clinicians after a medical review and prepared by <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">US state-licensed compounding pharmacies</a> - that is a legal, regulated channel, and it is how the $99-$299 prices exist at all. The honest trade-off: <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">compounded preparations are not FDA-approved products</a> the way brand Zepbound is - the FDA does not review each pharmacy\'s output - so the pharmacy\'s standards are what you are trusting. That is exactly why we only list providers with licensed-provider review and named, regulated pharmacies. What is <em>not</em> legit: "research chemical" and no-prescription peptide vendors. No clinician, no pharmacy license, no recourse - the discount is not worth what you are giving up.',
       },
       {
         heading: "Do I need a prescription for tirzepatide?",
@@ -2104,7 +2104,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "How are testosterone and body weight connected?",
-        body: 'In both directions, which is what makes the topic confusing. Fat tissue is hormonally active: it converts testosterone into estrogen, so the more excess fat a man carries, the more downward pressure on his testosterone. And the loop closes from the other side - lower testosterone shifts body composition toward fat and away from muscle, makes training feel harder, and drags energy down, all of which make weight easier to gain. Neither side of the loop is destiny; the practical point is that the two problems are rarely separate, and improving either one tends to help the other.',
+        body: 'In both directions, which is what makes the topic confusing. Fat tissue is hormonally active: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11745839/" target="_blank" rel="noopener">it converts testosterone into estrogen</a>, so the more excess fat a man carries, the more downward pressure on his testosterone. And the loop closes from the other side - lower testosterone shifts body composition toward fat and away from muscle, makes training feel harder, and drags energy down, all of which make weight easier to gain. Neither side of the loop is destiny; the practical point is that the two problems are rarely separate, and improving either one tends to help the other.',
       },
       {
         heading: "Does losing weight raise testosterone?",
@@ -2112,7 +2112,7 @@ export const articles: Article[] = [
       },
       {
         heading: "I'm on a GLP-1 - what does this mean for me?",
-        body: 'Two things. First, good news: the weight you are losing is likely helping your hormonal picture, not hurting it. Second, a caution we cover in depth in our <a href="/weight-loss/articles/exercise-while-on-glp1-medication">muscle-loss guide</a>: rapid weight loss takes muscle along with fat unless you defend it, and muscle matters for metabolic and hormonal health. The defense is unglamorous - adequate protein and resistance training through the loss - and it is worth doing for reasons beyond the mirror.',
+        body: 'Two things. First, good news: the weight you are losing is likely helping your hormonal picture, not hurting it. Second, a caution we cover in depth in our <a href="/weight-loss/articles/exercise-while-on-glp1-medication">muscle-loss guide</a>: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13303403/" target="_blank" rel="noopener">rapid weight loss takes muscle along with fat</a> unless you defend it, and muscle matters for metabolic and hormonal health. The defense is unglamorous - adequate protein and resistance training through the loss - and it is worth doing for reasons beyond the mirror.',
       },
       {
         heading: "When does testing for low testosterone make sense?",
@@ -2144,7 +2144,7 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Why am I still eating when the medication killed my appetite?",
-        body: 'Because hunger was never the whole story. GLP-1s are remarkably good at what they actually do - quieting the body\'s hunger signaling and food noise. But eating in response to stress, boredom, loneliness or a hard day is not triggered by hunger; it is triggered by the feeling, and it works - briefly - which is why the pattern sticks. People on GLP-1s often describe this discovery in exactly these words: the appetite is gone, and they still find themselves in the kitchen at 10pm after a bad day. That is not a medication failure and it is not a willpower failure. It is a different problem, with a different tool.',
+        body: 'Because hunger was never the whole story. GLP-1s are remarkably good at what they actually do - quieting the body\'s hunger signaling and <a href="https://www.health.harvard.edu/mind-and-mood/beyond-appetite-suppression" target="_blank" rel="noopener">food noise</a>. But eating in response to stress, boredom, loneliness or a hard day is not triggered by hunger; it is triggered by the feeling, and it works - briefly - which is why the pattern sticks. People on GLP-1s often describe this discovery in exactly these words: the appetite is gone, and they still find themselves in the kitchen at 10pm after a bad day. That is not a medication failure and it is not a willpower failure. It is a different problem, with a different tool.',
       },
       {
         heading: "What actually helps with emotional eating?",
