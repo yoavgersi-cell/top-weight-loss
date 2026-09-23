@@ -299,3 +299,22 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
 export function productPriceValue(p: CatalogProduct): number {
   return Number(p.price.replace(/[^0-9]/g, "")) || 9999;
 }
+
+/**
+ * Lowest verified headline price per medication for a provider, as a snippet
+ * for meta descriptions: "semaglutide from $49/mo, tirzepatide from $89/mo".
+ * Reads the catalog at render time so a snippet can never lag a verified
+ * price change. Empty string when the provider has no catalog entry.
+ */
+export function catalogPriceSnippet(providerId: string): string {
+  const parts: string[] = [];
+  for (const med of ["semaglutide", "tirzepatide"] as const) {
+    const cheapest = PRODUCT_CATALOG.filter((p) => p.providerId === providerId && p.medication === med)
+      .sort((a, b) => productPriceValue(a) - productPriceValue(b))[0];
+    if (!cheapest) continue;
+    const value = productPriceValue(cheapest);
+    if (value === 9999) continue;
+    parts.push(`${med} from $${value.toLocaleString("en-US")}/mo`);
+  }
+  return parts.join(", ");
+}

@@ -25,10 +25,16 @@ import { YoutubeReviewSection } from "@/components/youtube-review";
 import { ReadableProse } from "@/components/prose";
 import { ProviderAudit } from "@/components/provider-audit";
 import { HowItWorksShowcase, HOW_IT_WORKS_SHOWCASE } from "@/components/how-it-works-showcase";
+import { catalogPriceSnippet } from "@/lib/product-catalog";
 
 // Per-provider SEO overrides for reviews with distinctive search demand.
 // Code-controlled (not CMS-merged) so they reliably target trending queries -
 // e.g. surging "embody reviews" and "embody glp1".
+// `{prices}` in a description is filled at render time with the provider's
+// lowest verified catalog prices (product-catalog.ts), so the snippet Bing
+// prints almost verbatim always carries current numbers and never a hand-typed
+// price that can go stale. Providers without a catalog entry get the token
+// removed cleanly.
 const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
   embody: {
     // Aligned to the page's real GSC query mix (Sept 2026): "embody weight
@@ -37,7 +43,7 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // language so the snippet reinforces the query at position ~7.
     title: "embody Weight Loss Reviews 2026: Cost, Real Results & Is It Worth It?",
     description:
-      "embody weight loss reviews: compounded semaglutide & tirzepatide, shipped in 1-2 days, LegitScript-certified. Real results, pricing - and is embody worth it?",
+      "embody weight loss reviews: {prices}, 1-2 day shipping, LegitScript-certified. Real results, and is embody worth it?",
   },
   medvi: {
     // Decoupled from the "is medvi legit" query (Sep 2026): that phrase lived in
@@ -46,17 +52,17 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // legitimacy query. Revert if the split doesn't resolve post-migration-swap.
     title: "Medvi GLP-1 Reviews 2026: Cost, Support & Verdict",
     description:
-      "Medvi reviews: all-inclusive GLP-1 from $99/month promo (reg. $199) with video visits and personal support customers praise on Trustpilot. Cost, pros, cons and our verdict.",
+      "Medvi reviews: {prices}, all-inclusive with video visits and personal support. Cost, pros, cons and our verdict.",
   },
   sprout: {
     title: "Sprout Reviews 2026: Is It Legit? GLP-1 Cost & Verdict",
     description:
-      "Sprout reviews: compounded semaglutide from $149/mo, tirzepatide from $199/mo, brand-name Wegovy available. Is Sprout legit? Pricing, pros & cons.",
+      "Sprout reviews: {prices}, brand-name Wegovy available. Is Sprout legit? Pricing, pros & cons.",
   },
   altrx: {
     title: "altRx Reviews 2026: Is It Legit? GLP-1 Cost, Results & Verdict",
     description:
-      "altRx reviews: compounded semaglutide & tirzepatide plus brand-name Zepbound & Wegovy, with Buy Now, Pay Later. Is altRx legit? Pricing, pros & cons.",
+      "altRx reviews: {prices}, plus brand-name Zepbound & Wegovy and Buy Now, Pay Later. Is altRx legit? Pros & cons.",
   },
   ro: {
     // Title matches the generated shared-provider title byte-for-byte - this
@@ -68,27 +74,27 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   trimrx: {
     title: "trimrx Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
     description:
-      "trimrx reviews: budget compounded GLP-1s (semaglutide and tirzepatide), no long-term contract, clinical support included. Is trimrx legit? Cost, pros & cons.",
+      "trimrx reviews: {prices}, no long-term contract, clinical support included. Is trimrx legit? Cost, pros & cons.",
   },
   shed: {
     title: "Shed Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
     description:
-      "Shed reviews: compounded GLP-1 (semaglutide & tirzepatide) with health coaching and a money-back guarantee. Is Shed legit and worth it? Real customer reviews, cost, pros & cons.",
+      "Shed reviews: {prices}, with health coaching and a money-back guarantee. Is Shed legit and worth it? Pros & cons.",
   },
   directmeds: {
     title: "DirectMeds Reviews 2026: Is It Legit? Cost, Results & Verdict",
     description:
-      "DirectMeds reviews: doctor-prescribed GLP-1 as injections or needle-free drops, free 1-2 day shipping, no membership. Is it legit? Cost, pros & cons.",
+      "DirectMeds reviews: {prices} flat at every dose, injections or drops, free 1-2 day shipping. Is it legit?",
   },
   wellmedr: {
     title: "wellmedr Reviews 2026: Is It Legit? Cost, Results & Verdict",
     description:
-      "wellmedr reviews: compounded GLP-1 used by 1M+ patients, board-certified specialists and a weight-loss warranty. Is wellmedr legit and worth it? Real customer reviews, cost, pros & cons.",
+      "wellmedr reviews: {prices}, used by 1M+ patients, weight-loss warranty. Is wellmedr legit? Cost, pros & cons.",
   },
   healthrx: {
     title: "HealthRx Reviews 2026: Is It Legit? $99/mo GLP-1 Examined",
     description:
-      "HealthRx reviews: semaglutide from $99/mo (12-month prepaid), overnight cold-chain shipping, LegitScript-certified. Is HealthRx legit and worth the prepay? Cost, pros & cons.",
+      "HealthRx reviews: {prices} (semaglutide 12-month prepaid), overnight cold shipping, LegitScript-certified. Is it legit?",
   },
 };
 
@@ -360,6 +366,12 @@ const REVIEW_TRUST_STRIP: Record<string, { icon: LucideIcon; label: string }[]> 
 };
 
 
+function fillPrices(text: string, prices: string): string {
+  if (!text.includes("{prices}")) return text;
+  if (prices) return text.replace("{prices}", prices);
+  return text.replace(/\{prices\}(,? ?| ?\([^)]*\) ?)/, "").replace(/:\s+,/, ":").replace(/\s{2,}/g, " ");
+}
+
 export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Metadata> {
   const config = await getConfig(ctx.vertical);
   const review = (config.reviews ?? []).find((r) => r.slug === slug);
@@ -381,7 +393,8 @@ export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Me
     : " ";
   const pageTitle =
     override?.title ?? `${provider.name}${verticalQualifier}Review 2026: Cost, Results & Is It Worth It?`;
-  const pageDescription = override?.description ?? review.shortSummary;
+  const prices = ctx.vertical === "weight-loss" ? catalogPriceSnippet(provider.id) : "";
+  const pageDescription = fillPrices(override?.description ?? review.shortSummary, prices);
 
   // Operator policy (Aug 2026): provider reviews are indexable by default - the
   // goal is impressions across every vertical first. Exception (Sep 2026): thin
