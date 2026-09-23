@@ -1,0 +1,34 @@
+name: IndexNow daily push
+
+# Second trigger for the IndexNow submitter, independent of Vercel's cron
+# scheduler (which was registered since Sep 2 but never fired). Calls the
+# route on the production custom domain, so Deployment Protection on the
+# vercel.app addresses is irrelevant. The key is the public IndexNow key
+# (served at /<key>.txt by protocol design), not a secret; it only authorises
+# submitting this host's own URLs.
+#
+# The route submits only URLs whose sitemap date moved inside the window, so
+# on a quiet day it legitimately reports "no URLs modified" and submits 0.
+
+on:
+  schedule:
+    - cron: "20 6 * * *" # 06:20 UTC daily
+  workflow_dispatch:
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Submit recently changed hub URLs
+        run: |
+          set -euo pipefail
+          KEY=500308dadc1af5a68815ac610218ade9b0afd4a45b3d2a447970ac69a4eb2cb9
+          URL="https://www.treatmentshub.com/api/indexnow?token=${KEY}&since=48"
+          BODY=$(curl -sS --fail-with-body --max-time 120 -A "github-actions-indexnow" "$URL")
+          echo "$BODY"
+          # Fail loudly if IndexNow rejected the batch; a zero-URL day is fine.
+          if echo "$BODY" | grep -q '"ok":false'; then
+            echo "IndexNow rejected the submission" >&2
+            exit 1
+          fi
