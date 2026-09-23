@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import sitemap from "@/app/sitemap";
+import { hubSitemap } from "@/app/sitemap";
 import { INDEXNOW_KEY, INDEXNOW_HOST } from "@/lib/indexnow";
 
 // IndexNow submitter: collects hub URLs whose sitemap lastmod falls inside
@@ -30,10 +30,13 @@ export async function GET(req: NextRequest) {
   // 305 URLs); the cap keeps submissions to the genuinely freshest pages.
   const limit = Math.min(500, Math.max(1, Number(params.get("limit")) || 100));
 
-  // The sitemap module is host-aware via request headers; on the hub host it
-  // returns the full treatmentshub sitemap. Filter to hub URLs modified
-  // inside the window - the key file only vouches for this host.
-  const entries = await sitemap();
+  // Always the hub sitemap, regardless of which host this request arrived on.
+  // The default sitemap export picks the site from the request's host header,
+  // and Vercel's scheduler may call this route through the project's
+  // vercel.app address - on that host it would answer with the legacy-domain
+  // list, which the hub-origin filter below reduces to zero URLs, and the
+  // cron would "succeed" every morning while submitting nothing.
+  const entries = await hubSitemap();
   const urlList = entries
     .filter((e) => e.url.startsWith(HUB_ORIGIN))
     .map((e) => ({ url: e.url, lm: e.lastModified ? new Date(e.lastModified).getTime() : 0 }))

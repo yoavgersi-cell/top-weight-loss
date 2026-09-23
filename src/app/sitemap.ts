@@ -54,7 +54,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 // /<vertical>/ prefix. Weight-loss is withheld until the migration flips it
 // self-canonical (until then those pages canonicalize to the live legacy site,
 // so advertising them here would just point crawlers at duplicate URLs).
-async function hubSitemap(): Promise<MetadataRoute.Sitemap> {
+export async function hubSitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [
     { url: HUB_URL, lastModified: FALLBACK_DATE, changeFrequency: "weekly", priority: 1 },
     // UK region (published, compliance-framed). Only built, indexable UK pages
