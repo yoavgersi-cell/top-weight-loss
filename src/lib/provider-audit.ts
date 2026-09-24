@@ -39,7 +39,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Commitment", value: "12-month plan for the best rate" },
       { label: "Support", value: "Coach included on every plan" },
       { label: "Guarantee", value: "Weight-loss warranty" },
-      { label: "Trustpilot record", value: "4.7 across 1,205 reviews" },
+      { label: "Trustpilot record", value: "4.6 across 1,919 reviews" },
     ],
   },
   "weight-loss:medvi": {

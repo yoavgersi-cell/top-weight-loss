@@ -136,9 +136,135 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
     ],
   },
   wellmedr: {
-    rating: "4.7",
-    reviewCount: "1,205",
+    // Aggregate re-verified Sep 24, 2026 from wellmedr's claimed Trustpilot
+    // profile (operator-supplied screenshot): 4.6 across 1,919 reviews,
+    // Wellness Program category, claimed Feb 2026. (Was 4.7 / 1,205.)
+    rating: "4.6",
+    reviewCount: "1,919",
     reviews: [
+      // Sep 24, 2026 batch (operator-supplied screenshots of the profile's
+      // newest reviews, Sep 15-23 2026). Transcribed faithfully, including
+      // both 1-star reviews; reviewer names reduced to first name + last initial.
+      {
+        title: "I placed an order a week ago",
+        text: "I placed an order a week ago. Everything said approved and moved to shipping the same day. It is 8 days later and all I get is there is a delay in shipping and it should process soon. Definitely feeling like a scam. When I click on website from email, I get a 404 error. No one ever answers the phone. When I contacted support I was told they could not find an account. I did a reply through chat and was informed it is being worked. At this point, I just want a refund and to find a reputable company to get medication.",
+        name: "Keidre",
+        location: "US",
+        rating: 1,
+        date: "Sep 16, 2026",
+      },
+      {
+        title: "They charge you every 21 days",
+        text: "First at all, has to say that the tirzepatide it's compound with Glycine, that's the only point that I like it, because with glycine that's not had bad reports like with Vit B. The medical communication care teams it's horrible, that's false they respond fast, never respond, in my case I just have a check in after the first dose, it make feel the company, that they are just selling merchandise, very poor service. The support email, they never answered, I sent them 2 email with not response. I decide to call and CANCEL. They do answer the call and Cancel my subscription. Why I cancel? Because they CHARGE EVERY 21 DAYS, that's mean you pay more more than the medication you get, that's the worst part. I don't know why the people doesn't mention this issue, they said it's for an advanced, but even there policies says that in 365 days period, you are going to pay 18 quotes.... So I decided to cancel, I don't know you, but I treasure my money, and paying for nothing it's not a option",
+        name: "Francisco",
+        location: "US",
+        rating: 3,
+        date: "Aug 17, 2026",
+      },
+      {
+        title: "Took too long to answer my questions",
+        text: "Took too long to answer my questions",
+        name: "Emery G.",
+        location: "US",
+        rating: 3,
+        date: "Sep 22, 2026",
+      },
+      {
+        title: "Zara was patient and researched my...",
+        text: "Zara was patient and researched my questions. I need to research the information that she provided because I got different information from a different source.",
+        name: "Eva R.",
+        location: "US",
+        rating: 4,
+        date: "Sep 22, 2026",
+      },
+      {
+        title: "Update !!",
+        text: "Update !!!! Autumn from Wellmedr called me and addressed all of my concerns, before the call ended I had a text helping me with the link I needed so therefore I MUST change my review!! 3 star review for now and I will update again when I receive my prescription... customer service ~ can't call and talk to an agent, they never answer and they never reply on the patient portal chat, I'm afraid I've been scammed :(",
+        name: "Kenjula B.",
+        location: "US",
+        rating: 3,
+        date: "Sep 21, 2026",
+      },
+      {
+        title: "Turned a bad review to good!",
+        text: "I had several issues with my order and delivery and I was getting increasingly frustrated... Rob (operations manager) reached out to let me know he was replacing the product in question and reassured me of his oversight of the matter. It was refreshing to see a company react and take care of a situation in a timely fashion. Again Rob saved the day!",
+        name: "Kelly",
+        location: "US",
+        rating: 4,
+        date: "Sep 21, 2026",
+      },
+      {
+        title: "Help did arrive",
+        text: "I am changing my one star to 3 stars since I did get help with getting back on track. My medication is on the way. I still have to say though that it takes an act of congress to get help. They need to come up with a better system. This should not be stressful and you should receive your medication ON TIME AND WITHOUT CONFUSION every time. I got lucky and mine was processed quickly. The last time it sat at the pharmacy for over a week before it shipped out. They may need to slow down on new customers until they get a system in place to accommodate their current customers. Thank you Rob for helping to get my order on track. Hopefully everything will go smoothly on my next delivery.",
+        name: "Renee G.",
+        location: "US",
+        rating: 3,
+        date: "Sep 20, 2026",
+      },
+      {
+        title: "If I had known that they use FedEx I...",
+        text: "Update: customer service reached out to me and informed me that I can expect a delivery tomorrow. Nikki was very helpful and professional. If I had known that they use FedEx I would have gone with a different provider. It's been a month and I still have not received my medication and when it gets here will it even be any good since it needs to be refrigerated?",
+        name: "Veronica K.",
+        location: "US",
+        rating: 4,
+        date: "Sep 20, 2026",
+      },
+      {
+        title: "The product is working very well",
+        text: "The product is working very well, however the company's response to shipping issues hasn't been stellar.",
+        name: "Jason C.",
+        location: "US",
+        rating: 4,
+        date: "Sep 21, 2026",
+      },
+      {
+        title: "I have just started this program",
+        text: "I have just started this program, and only had one issue in the first week that was related to constipation. My questions to the team was answered 3 days later. Fortunately, the symptoms passed away, and now I am having no issues at all. I am excited to start this weight loss journey, and look forward to positive results.",
+        name: "Christina L.",
+        location: "US",
+        rating: 4,
+        date: "Sep 10, 2026",
+      },
+      {
+        title: "I talked to a person within minutes",
+        text: "I talked to a person within minutes, no computer talking to me. He was super nice and helpful",
+        name: "Jill",
+        location: "US",
+        rating: 5,
+        date: "Sep 15, 2026",
+      },
+      {
+        title: "Over 24 hours no contact.",
+        text: "\"It has been over 24 hours and no contact or response from your company.\" This is my latest attempt to request assistance from this company. Horrible customer service.",
+        name: "Jordan W.",
+        location: "US",
+        rating: 1,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "No issues, recommend highly!",
+        text: "I have had no issues or problems since I have joined. I've been kept informed and updated every step of the way even their chat. People are very helpful. I would recommend them to anybody.",
+        name: "Kristine S.",
+        location: "US",
+        rating: 5,
+        date: "Sep 20, 2026",
+      },
+      {
+        title: "I just switched providers to Wellmedr",
+        text: "After two years with another provider, I took a chance and switched providers to Wellmedr. My first couple shipments were slightly delayed and I contacted their Care team with my concerns. I was personally contacted by Rob, who runs their entire operations at Wellmedr, and he went over and beyond to listen to my concerns and then personally ensured everything was corrected. I've never had such great customer service, so quickly. They have earned a loyal customer moving forward. I would highly recommend Wellmedr to anyone.",
+        name: "Jeremy N.",
+        location: "US",
+        rating: 5,
+        date: "Sep 22, 2026",
+      },
+      {
+        title: "Sandra answered my question quickly and...",
+        text: "Sandra answered my question quickly and thoroughly, saving me from some needless worry. She was very pleasant, too.",
+        name: "Emilie A.",
+        location: "US",
+        rating: 5,
+        date: "Sep 18, 2026",
+      },
       // Four fresh "Unprompted review" entries (operator-supplied screenshots,
       // Aug 27-29 2026) - including Louise's critical one, kept deliberately:
       // honest results-vary feedback is the registry's credibility.
@@ -1832,8 +1958,8 @@ const defaultReviews: ReviewData[] = [
     slug: "wellmedr",
     providerId: "wellmedr",
     updatedAt: "2026-09-14",
-    shortSummary: "Telehealth GLP-1 weight-loss program used by 1,000,000+ patients - compounded semaglutide from $49/mo and tirzepatide from $89/mo, plus brand-name options - with board-certified specialists and a weight-loss warranty. Rated 4.7 across 1,205 Trustpilot reviews.",
-    reviewIntro: "wellmedr is a telehealth weight-loss platform whose GLP-1 medications have been used by 1,000,000+ patients. It offers compounded GLP-1 (semaglutide) from $49/month and compounded GLP-1/GIP (tirzepatide) from $89/month - both shipped every 4 weeks at the same price no matter your dose - plus brand-name Ozempic and Zepbound for anyone who wants them. Board-certified specialists tailor your plan, treatment is 100% online with no office visit, and a Medical Weight-Care Coach supports you the whole way. It's backed by a weight-loss warranty, and there's a standing offer to lock in $200 off every month - or $49/mo on a 12-month plan, for life. On Trustpilot, wellmedr averages 4.7 across 1,205 reviews, and the recent pages read like a support log in the best sense: 'I filled out the intake and within 4 days had been approved and meds shipped and received,' writes one reviewer, while another describes the team reworking her plan at a lower rate when money got tight - 'no pressure to accept it.' The realistic caveats are pace and commitment: standard delivery runs 3-5 business days rather than the 1-2 days you get from embody or DirectMeds, and the headline $49/month is tied to a 12-month plan.",
+    shortSummary: "Telehealth GLP-1 weight-loss program used by 1,000,000+ patients - compounded semaglutide from $49/mo and tirzepatide from $89/mo, plus brand-name options - with board-certified specialists and a weight-loss warranty. Rated 4.6 across 1,919 Trustpilot reviews.",
+    reviewIntro: "wellmedr is a telehealth weight-loss platform whose GLP-1 medications have been used by 1,000,000+ patients. It offers compounded GLP-1 (semaglutide) from $49/month and compounded GLP-1/GIP (tirzepatide) from $89/month - both shipped every 4 weeks at the same price no matter your dose - plus brand-name Ozempic and Zepbound for anyone who wants them. Board-certified specialists tailor your plan, treatment is 100% online with no office visit, and a Medical Weight-Care Coach supports you the whole way. It's backed by a weight-loss warranty, and there's a standing offer to lock in $200 off every month - or $49/mo on a 12-month plan, for life. On Trustpilot, wellmedr averages 4.6 across 1,919 reviews, and the recent pages read like a support log in the best sense: 'I filled out the intake and within 4 days had been approved and meds shipped and received,' writes one reviewer, while another describes the team reworking her plan at a lower rate when money got tight - 'no pressure to accept it.' The realistic caveats are pace and commitment: standard delivery runs 3-5 business days rather than the 1-2 days you get from embody or DirectMeds, and the headline $49/month is tied to a 12-month plan.",
     keyFeatures: [
       "Compounded semaglutide from $49/mo, tirzepatide from $89/mo",
       "Same price regardless of dosage; shipped every 4 weeks",
@@ -1859,14 +1985,14 @@ const defaultReviews: ReviewData[] = [
       "Standard delivery is slower - about 3-5 business days vs 1-2 at embody or DirectMeds",
       "Lowest $49/mo pricing is tied to a 12-month plan",
       "US shipping only (no international)",
-      "Smaller Trustpilot base (1,205 reviews) than the five-figure rivals"
+      "Smaller Trustpilot base (1,919 reviews) than the five-figure rivals"
     ],
     bestFor: [
       "People who want the lowest-cost compounded GLP-1 ($49/mo)",
       "Anyone who wants both compounded and brand-name options",
       "Those who value board-certified specialist care + coaching"
     ],
-    finalVerdict: "wellmedr wins our value column outright: $49/month semaglutide and $89/month tirzepatide - the lowest compounded prices in this ranking - at the same price no matter your dose, with board-certified specialists, a Medical Weight-Care Coach, a weight-loss warranty, and brand-name Ozempic and Zepbound on the shelf if you want them. Its 4.7 across 1,205 Trustpilot reviews is strong, and the reviews are specific about fast approvals and flexible, human support. The honest trade-offs: the $49 rate takes a 12-month plan, and 3-5 business-day delivery is slower than the fastest rivals. If you're confident about committing for the year, this is the best per-month math on the site; if you'd rather test the waters month-to-month with faster shipping, embody at $69/$119 is the natural comparison.",
+    finalVerdict: "wellmedr wins our value column outright: $49/month semaglutide and $89/month tirzepatide - the lowest compounded prices in this ranking - at the same price no matter your dose, with board-certified specialists, a Medical Weight-Care Coach, a weight-loss warranty, and brand-name Ozempic and Zepbound on the shelf if you want them. Its 4.6 across 1,919 Trustpilot reviews is strong, and the reviews are specific about fast approvals and flexible, human support. The honest trade-offs: the $49 rate takes a 12-month plan, and 3-5 business-day delivery is slower than the fastest rivals. If you're confident about committing for the year, this is the best per-month math on the site; if you'd rather test the waters month-to-month with faster shipping, embody at $69/$119 is the natural comparison.",
     trustBadges: [
       "1,000,000+ patients",
       "Weight-loss warranty",
@@ -4706,12 +4832,12 @@ const sproutWellmedrBattle: BattleData = {
   description:
     "wellmedr ($49/mo semaglutide, 4.7 on Trustpilot, 1M+ patients) vs Sprout ($149/mo, ships in 2 days, Wegovy available). Real prices and an honest verdict.",
   intro:
-    "On paper this looks lopsided - wellmedr's $49/month semaglutide and $89 tirzepatide are the lowest prices in our ranking, backed by 1,000,000+ patients, a 4.7 Trustpilot average across 1,205 reviews and a weight-loss warranty. But the fine print gives Sprout its openings: wellmedr's headline rate takes a 12-month plan and standard delivery runs 3-5 business days, while Sprout ships within 2 days, takes $200 off your first month, and stocks brand-name Wegovy - something wellmedr's brand shelf (Ozempic $1,399, Zepbound $1,599) doesn't carry.",
+    "On paper this looks lopsided - wellmedr's $49/month semaglutide and $89 tirzepatide are the lowest prices in our ranking, backed by 1,000,000+ patients, a 4.6 Trustpilot average across 1,919 reviews and a weight-loss warranty. But the fine print gives Sprout its openings: wellmedr's headline rate takes a 12-month plan and standard delivery runs 3-5 business days, while Sprout ships within 2 days, takes $200 off your first month, and stocks brand-name Wegovy - something wellmedr's brand shelf (Ozempic $1,399, Zepbound $1,599) doesn't carry.",
   verdict:
     "wellmedr wins for anyone whose priority is price or proof: $90/month cheaper on semaglutide, $100 cheaper on tirzepatide, a 4.7 published record and a warranty behind it. Sprout's case is narrower but real: you want your prescription inside 2 days rather than 3-5, you want Wegovy specifically (wellmedr stocks Ozempic and Zepbound, not Wegovy), or you don't want a 12-month plan attached to your best rate. If none of those three apply, take the $49.",
   verdictWinnerPoints: [
     "$49/mo semaglutide, $89 tirzepatide - lowest in our ranking",
-    "4.7 on Trustpilot across 1,205 reviews; 1M+ patients",
+    "4.6 on Trustpilot across 1,919 reviews; 1M+ patients",
     "Weight-loss warranty + Medical Weight-Care Coach included",
   ],
   verdictLoserPoints: [
@@ -4736,10 +4862,10 @@ const sproutWellmedrBattle: BattleData = {
       name: "Track Record",
       winner: "provider1",
       explanation:
-        "wellmedr pairs scale with score: medications used by over a million patients, a 4.7 Trustpilot average across 1,205 reviews, and a weight-loss warranty. Sprout's visible reviews are positive - responsive support comes up repeatedly - but there's no published aggregate and no comparable scale claim.",
+        "wellmedr pairs scale with score: medications used by over a million patients, a 4.6 Trustpilot average across 1,919 reviews, and a weight-loss warranty. Sprout's visible reviews are positive - responsive support comes up repeatedly - but there's no published aggregate and no comparable scale claim.",
       supportingPoints: [
         "1,000,000+ patients (wellmedr)",
-        "4.7 across 1,205 Trustpilot reviews (wellmedr)",
+        "4.6 across 1,919 Trustpilot reviews (wellmedr)",
         "Positive individual reviews, no aggregate (Sprout)",
       ],
     },
@@ -4780,7 +4906,7 @@ const sproutWellmedrBattle: BattleData = {
     { feature: "Commitment", provider1Value: "12-month plan for the lowest rate", provider2Value: "$200 off month one; see site for terms", highlight: "provider2" },
     { feature: "Shipping", provider1Value: "Free, 3-5 business days, every 4 weeks", provider2Value: "Ships within 2 days", highlight: "provider2" },
     { feature: "Brand-name shelf", provider1Value: "Ozempic $1,399 · Zepbound $1,599", provider2Value: "Wegovy from $1,799", highlight: "both" },
-    { feature: "Trustpilot", provider1Value: "4.7 across 1,205 reviews", provider2Value: "No published aggregate", highlight: "provider1" },
+    { feature: "Trustpilot", provider1Value: "4.6 across 1,919 reviews", provider2Value: "No published aggregate", highlight: "provider1" },
     { feature: "Guarantee", provider1Value: "Weight-loss warranty", provider2Value: "-", highlight: "provider1" },
   ],
 };

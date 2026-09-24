@@ -164,7 +164,7 @@ const ROWS: Row[] = [
     visit: "Online intake, clinician review, coach support",
     pharmacy: "Regulated US pharmacy; Reddit commenters name its Florida pharmacy",
     dosePricing: "Same price at every dose; best rate on a 12-month plan, billed monthly",
-    critics: "The $49 rate requires the 12-month plan. One detailed Reddit account reported fast shipping and responsive support but only one pound lost after eight weeks on tirzepatide.",
+    critics: "Trustpilot 4.6 across 1,919 reviews. The low-star reviews from September are almost all about reaching someone: an order stuck at \"delay in shipping\" for 8 days with support unable to find the account, a request unanswered after 24 hours, chat and phone going unanswered until an operations manager stepped in, one shipment that sat at the pharmacy for over a week. Several of those reviewers raised their rating after that call. One August reviewer states they were charged every 21 days rather than monthly; we have not verified wellmedr's billing cadence and are asking. The $49 rate requires the 12-month plan.",
   },
   {
     id: "medvi",

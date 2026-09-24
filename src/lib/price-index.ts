@@ -32,7 +32,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     tirzepatide: { price: "$89", note: "shipped every 4 weeks" },
     shipping: "Ships in 3-5 business days",
     commitment: "12-month plan for the lowest rate; cancel or change anytime",
-    trustpilot: { rating: "4.7", count: "1,205" },
+    trustpilot: { rating: "4.6", count: "1,919" },
   },
   {
     providerId: "embody",
