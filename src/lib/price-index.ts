@@ -41,7 +41,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     tirzepatide: { price: "$119", note: "reg. $129; month-to-month" },
     shipping: "Ships in 1-2 days, cold-chain",
     commitment: "None - month to month, cancel anytime",
-    trustpilot: { rating: "3.7", count: "7,250" },
+    trustpilot: { rating: "3.8", count: "8,398" },
   },
   {
     providerId: "altrx",
@@ -95,7 +95,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     tirzepatide: { price: "$259", note: "per month" },
     shipping: "Free tracked delivery, often next-day",
     commitment: "None - month to month",
-    trustpilot: { rating: "3.6", count: "5,497" },
+    trustpilot: { rating: "3.7", count: "5,670" },
   },
   {
     providerId: "shed",

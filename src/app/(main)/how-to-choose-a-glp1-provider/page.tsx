@@ -148,7 +148,7 @@ const ROWS: Row[] = [
     visit: "Online assessment; follow-up call if needed; unlimited check-ins",
     pharmacy: "Compounded only; pharmacy not named in our research",
     dosePricing: "Same price at every dose; no long-term contract, optional multi-month discounts",
-    critics: "Trustpilot 3.6 across 5,497 reviews, the lowest aggregate in our ranking. $149 sits well above the budget tier for the same molecule, with no guarantee behind it.",
+    critics: "Trustpilot 3.7 across 5,670 reviews, the lowest aggregate in our ranking, although the newest reviews we captured are consistently positive on intake clarity, communication and cold shipping. $149 sits well above the budget tier for the same molecule, with no guarantee behind it.",
   },
   {
     id: "shed",

@@ -552,9 +552,95 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
     ],
   },
   trimrx: {
-    rating: "3.6",
-    reviewCount: "5497",
+    // Aggregate re-verified Sep 24, 2026 from TrimRx's claimed Trustpilot
+    // profile (operator-supplied screenshot): 3.7 across 5,670 reviews,
+    // Weight Loss Service category, claimed Aug 2024. (Was 3.6 / 5,497.)
+    rating: "3.7",
+    reviewCount: "5,670",
     reviews: [
+      // Sep 24, 2026 batch (operator-supplied screenshots of the profile's
+      // newest reviews, Sep 23-24 2026, all marked Verified). Transcribed
+      // faithfully; reviewer names reduced to first name + last initial.
+      {
+        title: "Priced fairly and easy to use",
+        text: "Priced fairly and easy to use",
+        name: "Jerald W.",
+        location: "US",
+        rating: 5,
+        date: "Sep 24, 2026",
+      },
+      {
+        title: "Screening was more thorough than I...",
+        text: "Screening was more thorough than I expected and the communication has not dropped off since. Two other places went quiet right after payment.",
+        name: "Jean B.",
+        location: "US",
+        rating: 5,
+        date: "Sep 24, 2026",
+      },
+      {
+        title: "The company I used before charged me...",
+        text: "The company I used before charged me every month and never sent anything. Then a separate shipper billed me again for a package that never showed up. I'm still chasing that money and I've mostly given up on it. What's different this time is how many emails TrimRx sends without me asking. Order confirmed, prescription written, label created, out for delivery, four messages in five days.",
+        name: "Narine P.",
+        location: "US",
+        rating: 5,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "Support replies fast and nothing felt...",
+        text: "Support replies fast and nothing felt rushed, super",
+        name: "Mary O.",
+        location: "US",
+        rating: 5,
+        date: "Sep 24, 2026",
+      },
+      {
+        title: "The box is labeled plainly",
+        text: "The box is labeled plainly, nothing that gives it away on the porch, thanks!!",
+        name: "Nicholas H.",
+        location: "US",
+        rating: 5,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "My old provider was charging me close...",
+        text: "My old provider was charging me close to double this!",
+        name: "Sharon B.",
+        location: "US",
+        rating: 5,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "Communication has been the strong point",
+        text: "Communication has been the strong point",
+        name: "James M.",
+        location: "US",
+        rating: 5,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "The intake was clear",
+        text: "The intake was clear, I never had to guess at a question, and getting from submitted to approved took no time at all.",
+        name: "Herminia L.",
+        location: "US",
+        rating: 5,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "Clear pricing",
+        text: "Clear pricing, no hand holding needed.",
+        name: "Alain",
+        location: "US",
+        rating: 5,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "Shipping runs two or three days and the...",
+        text: "Shipping runs two or three days and the box arrives cold.",
+        name: "Jaime D.",
+        location: "US",
+        rating: 5,
+        date: "Sep 23, 2026",
+      },
       {
         title: "I started my weight loss journey on May 1st",
         text: "I started my weight loss journey on May 1st. I have lost 41 lbs. It's more than just the weight loss. The things you used to think were fun like gambling, drinking, and smoking no longer are rewarding. Spending time with my grandson now - that's a good time. My mental clarity has so improved. My high blood pressure is gone. I'm happier than I've been in years. The Trizepatide with B12 from TrimRx really works! I've still got another 50 lbs to go. If you're skeptical about GLP-1s, don't be.",
