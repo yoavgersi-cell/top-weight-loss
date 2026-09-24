@@ -74,7 +74,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Treatment formats", value: "Injections or needle-free oral drops" },
       { label: "Shipping", value: "Free 1-2 day" },
       { label: "Membership fee", value: "None" },
-      { label: "Trustpilot record", value: "4.6 across 13,901 reviews" },
+      { label: "Trustpilot record", value: "4.6 across 15,690 reviews" },
     ],
   },
   "weight-loss:trimrx": {

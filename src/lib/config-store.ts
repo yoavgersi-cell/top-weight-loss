@@ -1369,8 +1369,88 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
   },
   directmeds: {
     rating: "4.6",
-    reviewCount: "13,901",
+    reviewCount: "15,690",
     reviews: [
+      {
+        title: "Thanks to all the help I received",
+        text: "Thanks to all the help I rec'd from both Chelsea King and Matthew Jakins. Both were very professional, helpful, organized, leading me through all the necessary steps involved in this process. If medication is as helpful as these 2 employees it is a win win situation. I can't believe how patient and kind these 2 individuals were in helping with all the questions and confusion there was on my part ! Thank you again Chelsea and Matthew !!!!",
+        name: "Sandra",
+        location: "US",
+        rating: 5,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "The rep was courteous and kind",
+        text: "The rep was courteous and kind. She addressed my problem and promptly took care of the issue. I believe it was Madison.",
+        name: "Lauren",
+        location: "US",
+        rating: 4,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "Happy Customer",
+        text: "Chelsea King helped me. She was fast took time to listen.",
+        name: "Monica N.",
+        location: "US",
+        rating: 5,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "Customer service",
+        text: "Prompt service",
+        name: "Janet G.",
+        location: "US",
+        rating: 4,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "Signup process was straight forward",
+        text: "Signup process was straight forward and easy to navigate. Communication via text and email was almost too much, but nice to have for a new customer",
+        name: "Bryan D.",
+        location: "US",
+        rating: 5,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "I have had a few issues with this company",
+        text: "I have had a few issues with this company but they came through for me and Im doing really well on my meds. Looking forward to the next few months with them. Reasonable prices as well",
+        name: "Gina",
+        location: "US",
+        rating: 3,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "I had an order placed since Sep 4th",
+        text: "I had an order placed since Sep 4th. It did not actually ship until I had called 3 times. It just said \"Label Created\". The order was damaged in transit and the contents discarded. When I went online to the chat, the AI kept saying the order was delivered. I had to call in and get things straightened out. Now I am waiting for the replacement order to ship.",
+        name: "Jackson J.",
+        location: "US",
+        rating: 2,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "Belinda was very good",
+        text: "Belinda was very good. Answered all my questions very efficiently",
+        name: "Mary Ann R.",
+        location: "US",
+        rating: 5,
+        date: "Sep 22, 2026",
+      },
+      {
+        title: "In speaking to your reps I found them very polite and helpful",
+        text: "In speaking to your reps I found them very polite and helpful. I appreciated all the help. However, the doc was not very helpful. I couldn't access his message. However, I did get a message that my meds were on the way. Since I am not good at accessing my account, it is probably my fault. I would prefer to speak to your reps rather than go through an on line account.",
+        name: "Toni R.",
+        location: "US",
+        rating: 4,
+        date: "Sep 22, 2026",
+      },
+      {
+        title: "My first bottle of NAD that I received",
+        text: "My first bottle of NAD that I received was 50 mg. I was to take 20 units Monday through Friday. I only had enough medication for two weeks. I then called and requested an increase to 1000 mg of NAD and I am waiting for it to be delivered. I want to be sure that I will receive enough for 30 days. My first batch was only enough supply for two weeks and I was sent no syringes. Are you going to make up for the shortage?",
+        name: "Julia",
+        location: "US",
+        rating: 3,
+        date: "Sep 22, 2026",
+      },
       {
         title: "A great personnel",
         text: "A great personnel, you have answering the phone and following up. Plus its a wonderful product",
@@ -2330,7 +2410,7 @@ const defaultReviews: ReviewData[] = [
     providerId: "medvi",
     updatedAt: "2026-09-14",
     shortSummary: "All-inclusive medical weight-loss program - GLP-1 (semaglutide) now from $99/month (reg. $199) and GLP-1/GIP (tirzepatide) from $166/month (reg. $299) - with provider visits, free dietician and care coaching, and HSA/FSA approval. Rated 4.3 across 14,821 Trustpilot reviews.",
-    reviewIntro: "Medvi carries the biggest verified track record in this ranking: 4.3 across 14,821 Trustpilot reviews, a volume most telehealth weight-loss brands can't approach. The program is all-inclusive at one flat price, and its current promotion cuts that price roughly in half: weekly GLP-1 (semaglutide) injections now start at $89/month (regularly $199) and GLP-1/GIP (tirzepatide) at $166/month (regularly $299), with daily oral dissolving tablets at $249/month for the needle-averse - all with no membership fee, no hidden charges, free shipping, and free dietician and care coaching folded in. Care is genuinely hands-on: recent Trustpilot reviews repeatedly describe on-time video visits ('Video visit was made very easy and reminders were sent right before my visit'), providers who 'took her time, answered any questions,' and follow-ups handled through secure messaging. Plans are HSA/FSA approved. At the $99 promotional rate, Medvi's all-inclusive bundle now competes directly with the value tier - the honest caveat is simply that promos can end; the regular rates are $199/$299.",
+    reviewIntro: "Medvi carries one of the two biggest verified track records in this ranking: 4.3 across 14,821 Trustpilot reviews, a volume most telehealth weight-loss brands can't approach. The program is all-inclusive at one flat price, and its current promotion cuts that price roughly in half: weekly GLP-1 (semaglutide) injections now start at $89/month (regularly $199) and GLP-1/GIP (tirzepatide) at $166/month (regularly $299), with daily oral dissolving tablets at $249/month for the needle-averse - all with no membership fee, no hidden charges, free shipping, and free dietician and care coaching folded in. Care is genuinely hands-on: recent Trustpilot reviews repeatedly describe on-time video visits ('Video visit was made very easy and reminders were sent right before my visit'), providers who 'took her time, answered any questions,' and follow-ups handled through secure messaging. Plans are HSA/FSA approved. At the $99 promotional rate, Medvi's all-inclusive bundle now competes directly with the value tier - the honest caveat is simply that promos can end; the regular rates are $199/$299.",
     keyFeatures: [
       "GLP-1 (semaglutide) injections now from $99/month (reg. $199)",
       "GLP-1/GIP (tirzepatide) injections from $166/month (reg. $299)",
@@ -2346,7 +2426,7 @@ const defaultReviews: ReviewData[] = [
       "Video visits, free dietician and care coaching"
     ],
     pros: [
-      "4.3 across 14,821 Trustpilot reviews - the largest verified record in our ranking",
+      "4.3 across 14,821 Trustpilot reviews - one of the two largest verified records in our ranking",
       "Current promo roughly halves the price: $89 semaglutide / $166 tirzepatide",
       "Genuinely all-inclusive pricing - visits, medication, shipping, coaching",
       "Needle-free option: daily oral dissolving tablets",
@@ -2363,7 +2443,7 @@ const defaultReviews: ReviewData[] = [
       "Anyone who wants dietician support and coaching bundled, not sold separately",
       "Needle-averse patients who want a daily dissolving tablet instead of injections"
     ],
-    finalVerdict: "Medvi was already the most complete bundle in our ranking - provider visits, dietician access, care coaching and shipping in one HSA/FSA-eligible price, backed by 4.3 across 14,821 Trustpilot reviews, the largest verified record of any provider we cover. The current promotion changes the math: at $99/month semaglutide (regularly $199) and $166 tirzepatide (regularly $299), the all-inclusive program now costs within $30-40 of the bare-bones value tier (wellmedr $49, embody $69) while bundling care those providers don't. As long as the promo holds, Medvi is arguably the best value-per-dollar in the ranking; at the $199/$299 regular rates, it goes back to being the premium-care pick. Needle-averse? The $249 dissolving tablets remain one of the few needle-free GLP-1 formats we track.",
+    finalVerdict: "Medvi was already the most complete bundle in our ranking - provider visits, dietician access, care coaching and shipping in one HSA/FSA-eligible price, backed by 4.3 across 14,821 Trustpilot reviews, one of the two largest verified records of any provider we cover. The current promotion changes the math: at $99/month semaglutide (regularly $199) and $166 tirzepatide (regularly $299), the all-inclusive program now costs within $30-40 of the bare-bones value tier (wellmedr $49, embody $69) while bundling care those providers don't. As long as the promo holds, Medvi is arguably the best value-per-dollar in the ranking; at the $199/$299 regular rates, it goes back to being the premium-care pick. Needle-averse? The $249 dissolving tablets remain one of the few needle-free GLP-1 formats we track.",
     trustBadges: [
       "HSA/FSA approved",
       "No membership or hidden fees",
@@ -2513,8 +2593,8 @@ const defaultReviews: ReviewData[] = [
     slug: "directmeds",
     providerId: "directmeds",
     updatedAt: "2026-09-14",
-    shortSummary: "Pharmacy-direct GLP-1 treatment at $147/month flat - semaglutide or tirzepatide, injections or sublingual drops - with free 1-2 day shipping and no membership. Rated 4.6 across 13,901 Trustpilot reviews.",
-    reviewIntro: "DirectMeds is a pharmacy-direct telehealth program with 250,000+ customers, offering doctor-prescribed GLP-1 weight loss treatment starting at $147/month. You can get compounded semaglutide or tirzepatide as weekly injections - or, if you'd rather skip needles, as sublingual oral drops at the same price. It's 100% online with the telemedicine visit and prescription included, no insurance required, no hidden fees, and no monthly membership. Medication ships free and arrives in 1-2 days, and you can cancel anytime. On Trustpilot, DirectMeds averages 4.6 across 13,901 reviews - one of only two providers in our ranking with a five-figure review base - and the recent pages consistently credit a support team you can actually reach: 'a great personnel... answering the phone and following up,' as one reviewer puts it, with others naming the specific reps who fixed their orders. The model is deliberately stripped down - no coaching program, no brand-name shelf - just the visit, the medication, and fast delivery at one flat price.",
+    shortSummary: "Pharmacy-direct GLP-1 treatment at $147/month flat - semaglutide or tirzepatide, injections or sublingual drops - with free 1-2 day shipping and no membership. Rated 4.6 across 15,690 Trustpilot reviews.",
+    reviewIntro: "DirectMeds is a pharmacy-direct telehealth program with 250,000+ customers, offering doctor-prescribed GLP-1 weight loss treatment starting at $147/month. You can get compounded semaglutide or tirzepatide as weekly injections - or, if you'd rather skip needles, as sublingual oral drops at the same price. It's 100% online with the telemedicine visit and prescription included, no insurance required, no hidden fees, and no monthly membership. Medication ships free and arrives in 1-2 days, and you can cancel anytime. On Trustpilot, DirectMeds averages 4.6 across 15,690 reviews - one of only two providers in our ranking with a five-figure review base - and the recent pages consistently credit a support team you can actually reach: 'a great personnel... answering the phone and following up,' as one reviewer puts it, with others naming the specific reps who fixed their orders. The model is deliberately stripped down - no coaching program, no brand-name shelf - just the visit, the medication, and fast delivery at one flat price.",
     keyFeatures: [
       "Doctor-prescribed GLP-1 starting at $147/month",
       "Injections or needle-free sublingual oral drops",
@@ -2532,7 +2612,7 @@ const defaultReviews: ReviewData[] = [
     pros: [
       "$147/month flat for semaglutide or tirzepatide - same price at every dose",
       "Needle-free option at no premium: sublingual drops cost the same $147",
-      "4.6 across 13,901 Trustpilot reviews with consistent support praise",
+      "4.6 across 15,690 Trustpilot reviews with consistent support praise",
       "Free 1-2 day shipping; telemedicine visit and prescription included",
       "No membership, no hidden fees, cancel anytime"
     ],
@@ -2547,7 +2627,7 @@ const defaultReviews: ReviewData[] = [
       "Anyone who prefers needle-free sublingual drops over injections",
       "Those who want one flat price with no membership on top"
     ],
-    finalVerdict: "DirectMeds keeps the promise it actually makes: $147/month flat for doctor-prescribed semaglutide or tirzepatide - injections or needle-free sublingual drops at the same price - with the telemedicine visit included, free 1-2 day shipping, and no membership to cancel your way out of. A 4.6 average across 13,901 Trustpilot reviews is a serious, verifiable record, and the reviews keep landing on the same point: you can reach a human when something goes wrong. What it deliberately doesn't offer is a program - no coaching, no dietician, no brand-name shelf - and cheaper tirzepatide exists (wellmedr from $89, embody at $119). Pick DirectMeds for the drops format, the speed, and the flat simplicity; pick a program provider if you want support built around the medication.",
+    finalVerdict: "DirectMeds keeps the promise it actually makes: $147/month flat for doctor-prescribed semaglutide or tirzepatide - injections or needle-free sublingual drops at the same price - with the telemedicine visit included, free 1-2 day shipping, and no membership to cancel your way out of. A 4.6 average across 15,690 Trustpilot reviews is a serious, verifiable record, and the reviews keep landing on the same point: you can reach a human when something goes wrong. What it deliberately doesn't offer is a program - no coaching, no dietician, no brand-name shelf - and cheaper tirzepatide exists (wellmedr from $89, embody at $119). Pick DirectMeds for the drops format, the speed, and the flat simplicity; pick a program provider if you want support built around the medication.",
     trustBadges: [
       "Same price, every dose",
       "No hidden fees or membership",

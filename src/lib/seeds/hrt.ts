@@ -541,19 +541,19 @@ const reviews: ReviewData[] = [
     shortSummary:
       "Pharmacy-direct telehealth known from our weight-loss ranking for flat pricing and fast fulfillment - hormone care details to be verified.",
     reviewIntro:
-      "DirectMeds runs a pharmacy-direct telehealth model we know well from our weight-loss ranking, where it earns its place with flat pricing, an included telemedicine visit, no membership fees and fast free shipping - backed by a 4.6 Trustpilot average across 13,901 reviews. For hormone therapy specifically, we haven't yet verified DirectMeds' published treatment menu or pricing, so this review describes the operator honestly and will be completed with exact, verified hormone-care figures once confirmed.",
+      "DirectMeds runs a pharmacy-direct telehealth model we know well from our weight-loss ranking, where it earns its place with flat pricing, an included telemedicine visit, no membership fees and fast free shipping - backed by a 4.6 Trustpilot average across 15,690 reviews. For hormone therapy specifically, we haven't yet verified DirectMeds' published treatment menu or pricing, so this review describes the operator honestly and will be completed with exact, verified hormone-care figures once confirmed.",
     keyFeatures: [
       "Pharmacy-direct fulfillment model",
       "Telemedicine visit included",
       "No membership fees",
-      "4.6 across 13,901 Trustpilot reviews (operator-level record)",
+      "4.6 across 15,690 Trustpilot reviews (operator-level record)",
     ],
     pricingSummary: PRICING_TBD,
     treatmentOptions: [
       "Provider-directed treatment (hormone-care menu to be verified)",
     ],
     pros: [
-      "Operator with a large verified customer record (4.6 across 13,901 reviews)",
+      "Operator with a large verified customer record (4.6 across 15,690 reviews)",
       "Known for flat pricing and 1-2 day shipping in our weight-loss ranking",
       "No membership fees",
     ],
@@ -567,7 +567,7 @@ const reviews: ReviewData[] = [
     ],
     finalVerdict:
       "DirectMeds brings a proven operator record - flat pricing, fast shipping and a five-figure Trustpilot base - into the hormone space. What we can't yet tell you is exactly what its hormone-care menu and prices are; until we verify them, confirm details on DirectMeds' site and compare against the menopause specialists above.",
-    trustBadges: ["4.6 across 13,901 Trustpilot reviews", "No membership fees", "Telemedicine visit included"],
+    trustBadges: ["4.6 across 15,690 Trustpilot reviews", "No membership fees", "Telemedicine visit included"],
     updatedAt: UPDATED,
   },
 ];
