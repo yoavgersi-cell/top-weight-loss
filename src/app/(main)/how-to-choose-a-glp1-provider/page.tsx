@@ -156,7 +156,7 @@ const ROWS: Row[] = [
     visit: "100% online visit and checkout; health coaching on every plan",
     pharmacy: "Compounded semaglutide or tirzepatide; pharmacy not named in our research",
     dosePricing: "Monthly, 20% off month one; HSA/FSA",
-    critics: "The premium of the compounded market at $199. You are paying for coaching and a results guarantee, not for the medication.",
+    critics: "Trustpilot 4.6 across 1,134 reviews, one of the two highest aggregates in our ranking, and the recent reviews we captured are mostly about named support staff resolving issues. The exception is a 1-star from September describing charges that continued for months after stopping, AI-only chat support, and a refused refund of $1,200, now in a card dispute. At $199 it is the premium of the compounded market: you are paying for coaching and a results guarantee, not for the medication.",
   },
   {
     id: "wellmedr",
