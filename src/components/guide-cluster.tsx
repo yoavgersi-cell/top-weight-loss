@@ -22,6 +22,11 @@ export type GuideLink = {
 
 export const WEIGHT_LOSS_GUIDES: GuideLink[] = [
   {
+    slug: "how-to-choose-a-glp1-provider",
+    title: "How to Choose a GLP-1 Provider",
+    blurb: "12 checks, ten providers, verified prices and Trustpilot records.",
+  },
+  {
     slug: "cheapest-glp1",
     title: "Cheapest GLP-1 Online",
     blurb: "Every provider's verified monthly price, lowest first.",

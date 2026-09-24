@@ -88,7 +88,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Amazing Customer Service",
         text: "The customer service I have experienced w/ bmiMD is excellent. They always respond to messages within a timely matter. They always come up with a solution to any issues. I have nothing bad to say about them.",
-        name: "Delaruth Wallace",
+        name: "Delaruth W.",
         location: "US",
         rating: 5,
         date: "Jul 23, 2026",
@@ -112,7 +112,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Excellent customer service",
         text: "Excellent customer service, quick shipping. The product I ordered is working wonderfully.",
-        name: "Sandra Hansen",
+        name: "Sandra H.",
         location: "US",
         rating: 5,
         date: "Jul 2, 2026",
@@ -120,7 +120,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Great service for all my supplement needs",
         text: "Great service for all my supplement needs!",
-        name: "Cindy Lew",
+        name: "Cindy L.",
         location: "US",
         rating: 5,
         date: "Jul 3, 2026",
@@ -128,7 +128,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "I feel more powerful now",
         text: "I feel more powerful now, it is a great starting.",
-        name: "Iliet S",
+        name: "Iliet S.",
         location: "US",
         rating: 5,
         date: "Jul 3, 2026",
@@ -152,28 +152,28 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "So far so good",
         text: "So far so good. The care team has answered any questions I had.",
-        name: "Alexis Peterson",
+        name: "Alexis P.",
         location: "US",
         rating: 4,
       },
       {
         title: "Im not losing as much wt as I was...",
         text: "Im not losing as much wt as I was hoping to. I've been on this over 6 months now. Not sure how much longer I will stay on this because it's getting to expensive for very little results.",
-        name: "Louise Marchese",
+        name: "Louise M.",
         location: "US",
         rating: 4,
       },
       {
         title: "Naomi was awesome",
         text: "Naomi was awesome. Apparently she was new to the company but could not tell. She told me she was. However, she knew the answers to all my questions and even had suggestions that were helpful. Very good experience for me",
-        name: "Tammy heier",
+        name: "Tammy H.",
         location: "US",
         rating: 4,
       },
       {
         title: "Contacted the company to slow my refills",
         text: "Contacted the company to slow my refills. Talked to Shelby. She was so helpful, so fast, and helped me set up exactly what I wanted within 5 minutes. Thank you Shelby",
-        name: "Scott and Lisa Carter",
+        name: "Scott C.",
         location: "US",
         rating: 5,
       },
@@ -194,7 +194,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "This company was very professional",
         text: "This company was very professional and extremely helpful. I filled out the intake and within 4 days had been approved and meds shipped and received. All went very smoothly. They even continued my weight loss journey at the dose that was needed - no problems whatsoever with dosage, timing, or shipping. I have a lot of confidence in this company's process. Thank you.",
-        name: "julia Adams",
+        name: "julia A.",
         location: "US",
         rating: 5,
         date: "Aug 10, 2026",
@@ -210,7 +210,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "I am very impressed with this company",
         text: "I am very impressed with this company. Their customer service, Zia in particular, should be commended. I was afraid I'd have to stop my medication for financial reasons, and Zia worked out a revised plan at a lower rate. No pressure to accept it - but because of it I've been able to continue my weight loss efforts, which I'm killin'!",
-        name: "Deb Z",
+        name: "Deb Z.",
         location: "US",
         rating: 5,
         date: "Aug 10, 2026",
@@ -218,7 +218,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Marley responded quickly",
         text: "Marley responded quickly and clarified some questions I had. Great customer service!",
-        name: "Donna Juszczak",
+        name: "Donna J.",
         location: "US",
         rating: 5,
         date: "Aug 3, 2026",
@@ -235,7 +235,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Best customer experience I've had in a long while",
         text: "I'm just starting out with AltRx and the rep who really, really helped me, Natalie, was so wonderful. She gave me info on the plan and answered all of my questions and concerns. I hope everyone at AltRx is this helpful. Wish me luck. I was able to join the plan with no hassles.",
-        name: "Cindi Palmer",
+        name: "Cindi P.",
         location: "US",
         rating: 5,
         date: "Sep 7, 2026",
@@ -243,7 +243,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "I am going on 3 months with Altrx",
         text: "I am going on 3 months with Altrx and it hasn't been bad. I read these negative reviews and I find it hard to believe that we are all with the same company. They always respond to my messages with in 24 hours. I receive my shipment of tirzepatide with in a couple days after I follow up. Plus they haven't bumped my price it's been $148 since I started. I like Altrx. Plus I've lost 10 pounds. The only side effect I have is being sleepy but it's getting better.",
-        name: "melissa ashba",
+        name: "melissa A.",
         location: "US",
         rating: 5,
         date: "Sep 3, 2026",
@@ -259,7 +259,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Great company that takes care of my needs",
         text: "Great company that takes care of my needs promptly. I'm seeing a lot of negative reviews but I can't help but think they may be coming from another provider. This company is great and takes care of me and my family quickly and they are very customer service oriented. My order came in correct and even after taking a break, was able to use the medication at have at a different dose. They didn't try to sell me another beginner dose. A+",
-        name: "Tammy D",
+        name: "Tammy D.",
         location: "US",
         rating: 5,
         date: "Sep 1, 2026",
@@ -267,7 +267,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "I have been with altrx for few months",
         text: "I have been with altrx for few months. I take tirzepatide from them. I always get everything on time! I just felt they needed a good review since other companies I used suck and scam me.",
-        name: "Shannon Roberson",
+        name: "Shannon R.",
         location: "US",
         rating: 5,
         date: "Sep 1, 2026",
@@ -275,7 +275,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Ive be been using AltRx for 4 months",
         text: "Ive be been using AltRx for 4 months (out of a 6 mo subscription) after switching from another company. Not a single problem. Ive communicated with customer service multiple times and received prompt responses. Ive continually lost 4-5 pounds a month. They accidentally billed me once but after contacting them, I was refunded immediately. Ive been really happy with my experiences using them.",
-        name: "Alicia Veauthier",
+        name: "Alicia V.",
         location: "US",
         rating: 5,
         date: "Aug 31, 2026",
@@ -283,7 +283,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Great experience so far!",
         text: "I don't understand all of the bad reviews because I've had a great experience so far! Paige my care consultant (maybe AI but idk) helped me get a discounted rate and answered all of my questions! I had previously been taking GLP1 from a Medspa and they were great but the price was Insane and it stopped working for me there. With AltRX I've lost 8 lbs and it hasn't even been a month yet since I started.",
-        name: "Tori Smith Whenindoubtpony",
+        name: "Tori W.",
         location: "US",
         rating: 5,
         date: "Aug 26, 2026",
@@ -291,7 +291,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "I signed up on a Friday night at 8pm",
         text: "I signed up on a Friday night at 8pm. A doctor called me at 1045 Saturday morning and we talked for about ten minutes. She ordered the dose and medicine I wanted and I received it by FedEx overnight delivery on Thursday. So far so good.",
-        name: "Carlton Loomis",
+        name: "Carlton L.",
         location: "US",
         rating: 5,
         date: "Aug 14, 2026",
@@ -314,7 +314,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "My first time ordering from AltRx",
         text: "I was looking for a telehealth that utilized the same pharmacy I was already using, and AltRx was one of the ones. Ordering through AltRx was almost a 3rd of the cost I spent the first 3 months through the FSA site. Everything else ran smoothly. I ordered 7/5 and received it today, 7/13. I paid through Afterpay, so they can't renew without my approval.",
-        name: "Kimberly Williams",
+        name: "Kimberly W.",
         location: "US",
         rating: 4,
       },
@@ -328,7 +328,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "pretty good experience",
         text: "I've had a pretty good experience with them. The shipping can take a tad bit longer but they respond when I reach out and the process is seamless in my opinion. Currently on level 2 and no issues",
-        name: "B L",
+        name: "B L.",
         location: "US",
         rating: 4,
         date: "Aug 26, 2026",
@@ -336,7 +336,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "So far so good",
         text: "So far so good. The med arrived promptly in good packaging to keep the med cold. No surprise costs at this time. I'm happy.",
-        name: "Marni Galindez",
+        name: "Marni G.",
         location: "US",
         rating: 4,
         date: "Aug 13, 2026",
@@ -344,7 +344,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "I spoke to someone at Altrx last week",
         text: "I spoke to someone at Altrx last week. I told her I wanted a high dose of Triz since I have been on Triz for one year. My order arrived today, a week after ordering. Everything went very smoothly. The only concern was the tiny vial in comparison to other companies I previously ordered from. I just hope it works as it should.",
-        name: "Paula Freeman Lee",
+        name: "Paula L.",
         location: "US",
         rating: 4,
         date: "Jun 10, 2026",
@@ -352,7 +352,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "I was very skeptical about ordering...",
         text: "I was very skeptical about ordering with this company but thankfully I was proven wrong for the most part. Once I was approved I received email stating that my prescription had been sent to the pharmacy for compounding. It took about 5 days but I finally received an email that it had been shipped & I received it the next day. Total process took about 8 days total. Paige was great about texting me back if I had questions but customer service never responded back to me. However, I did receive them & I'm happy that everything has worked out so far. Overall experience - very satisfied.",
-        name: "Marlie Green Nolan Copeland",
+        name: "Marlie C.",
         location: "US",
         rating: 4,
         date: "May 12, 2026",
@@ -377,7 +377,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "It was easy to answer the questions",
         text: "It was easy to answer the questions & qualify for the medication. I've been overwhelmed with texts and would prefer e-mails, so I can print important info.",
-        name: "Margaret Blasko",
+        name: "Margaret B.",
         location: "US",
         rating: 4,
         date: "Aug 21, 2026",
@@ -385,21 +385,21 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Very easy process!",
         text: "Very easy process!",
-        name: "Jessica Phillips",
+        name: "Jessica P.",
         location: "US",
         rating: 5,
       },
       {
         title: "All has been convenient and affordable",
         text: "All has been convenient and affordable so far.",
-        name: "laura taylor",
+        name: "laura T.",
         location: "US",
         rating: 5,
       },
       {
         title: "The meeting with the NP was on time",
         text: "The meeting with the NP was on time. She was very thorough and I could understand her language.",
-        name: "Rebecca Kimble",
+        name: "Rebecca K.",
         location: "US",
         rating: 5,
       },
@@ -419,7 +419,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "I started my weight loss journey on May 1st",
         text: "I started my weight loss journey on May 1st. I have lost 41 lbs. It's more than just the weight loss. The things you used to think were fun like gambling, drinking, and smoking no longer are rewarding. Spending time with my grandson now - that's a good time. My mental clarity has so improved. My high blood pressure is gone. I'm happier than I've been in years. The Trizepatide with B12 from TrimRx really works! I've still got another 50 lbs to go. If you're skeptical about GLP-1s, don't be.",
-        name: "Steve Toney",
+        name: "Steve T.",
         location: "US",
         rating: 5,
         date: "Aug 3, 2026",
@@ -427,7 +427,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "I opened the first box yesterday",
         text: "I opened the first box yesterday, everything was there and properly sealed. A good start.",
-        name: "Lisa Clark",
+        name: "Lisa C.",
         location: "US",
         rating: 5,
         date: "Jul 18, 2026",
@@ -435,7 +435,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Excellent customer service",
         text: "Cynthia reached out not long after I had gone through the online process. She was very kind and helpful and understanding that I was looking to find the best support and costs for my weightloss. Ultimately I decided to fight my Dr, but for those that need good support along the way you cant go wrong using Trim Rx.",
-        name: "Katrina Campbell",
+        name: "Katrina C.",
         location: "US",
         rating: 5,
         date: "Jul 28, 2026",
@@ -443,7 +443,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Just took my 3rd injection",
         text: "Just took my 3rd injection. Down 4 pounds so far, it's been a good experience.",
-        name: "Nichole Yang",
+        name: "Nichole Y.",
         location: "US",
         rating: 5,
         date: "Jul 18, 2026",
@@ -451,7 +451,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Payment went through without any problems",
         text: "Payment went through without any problems and the box arrived exactly when they promised. Everything correct.",
-        name: "Jessica Jones",
+        name: "Jessica J.",
         location: "US",
         rating: 5,
         date: "Jul 18, 2026",
@@ -459,7 +459,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "They got back to me the same day",
         text: "I had a question and they got back to me the same day. Friendly and to the point.",
-        name: "Nadia Tavakoli",
+        name: "Nadia T.",
         location: "US",
         rating: 5,
         date: "Jul 18, 2026",
@@ -467,7 +467,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "The provider went through my health history",
         text: "The provider went through my health history before approving the prescription. I didn't feel rushed through it.",
-        name: "Alejandro Alexander",
+        name: "Alejandro A.",
         location: "US",
         rating: 5,
         date: "Jul 17, 2026",
@@ -497,7 +497,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "The phone call was very thorough",
         text: "The phone call was very thorough and everything went smoothly",
-        name: "Randy Burton",
+        name: "Randy B.",
         location: "US",
         rating: 5,
         date: "Aug 7, 2026",
@@ -505,7 +505,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "The feedback has been overwhelmingly positive",
         text: "My experience was highly satisfactory, and all my inquiries were addressed to my complete satisfaction.",
-        name: "Traci Frazier",
+        name: "Traci F.",
         location: "US",
         rating: 5,
         date: "Aug 7, 2026",
@@ -520,14 +520,14 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "She took her time",
         text: "She took her time, answered any questions. Very satisfied thank you",
-        name: "Raymond Skwaritch",
+        name: "Raymond S.",
         location: "US",
         rating: 5,
       },
       {
         title: "Friendly, prompt questions answered",
         text: "Friendly professional answered my questions. Thank you!",
-        name: "lisa eckelhoff",
+        name: "lisa E.",
         location: "US",
         rating: 5,
       },
@@ -549,7 +549,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Timely and helpful video call",
         text: "Timely and helpful video call resolving my issues.",
-        name: "Scott Campbell",
+        name: "Scott C.",
         location: "US",
         rating: 5,
         date: "Aug 10, 2026",
@@ -573,7 +573,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "She was very professional",
         text: "She was very professional and considerate. The video call was on time and straightforward.",
-        name: "Greg Russell",
+        name: "Greg R.",
         location: "US",
         rating: 5,
         date: "Jul 28, 2026",
@@ -585,7 +585,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Pleasant Experience Overall",
         text: "I had to reschedule my appointment twice, they should really look into their user experience of their app, but overall the doctor was nice and delivery was quicker then I expected.",
-        name: "Tiro Mandal",
+        name: "Tiro M.",
         location: "US",
         rating: 5,
       },
@@ -598,21 +598,21 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Spoke with Tamika",
         text: "Spoke with Tamika. She was very helpful and informative. She's scheduled a coaching session. Gave me lots of good information.",
-        name: "Cindy Cruse",
+        name: "Cindy C.",
         location: "US",
         rating: 5,
       },
       {
         title: "Jamika was the representative that called me",
         text: "Jamika was the representative that called me and she was amazing VERY informative and nice. Asked me if I had any questions made sure I understood the entire process and made me feel very comfortable on my journey with shed!",
-        name: "Jordan Rae",
+        name: "Jordan R.",
         location: "US",
         rating: 5,
       },
       {
         title: "5 star customer service",
         text: "Amber was quick to respond to my concern and offered a quick solution! Great customer service!",
-        name: "Joyce Headley",
+        name: "Joyce H.",
         location: "US",
         rating: 5,
       },
@@ -623,28 +623,28 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "I have had a great experience with Sprout",
         text: "I have had a great experience with Sprout. They were quick to respond and the process for approval worked seamlessly. Customer service was awesome, shout out to Frank!",
-        name: "Holly Cattrell",
+        name: "Holly C.",
         location: "US",
         rating: 5,
       },
       {
         title: "Great experience!",
         text: "Super easy to join, reasonably priced, effective, and great customer service. Frank Burton with customer support was really helpful and quick to respond when I had an issue with my email. Great experience over all!",
-        name: "Kayte Volz",
+        name: "Kayte V.",
         location: "US",
         rating: 5,
       },
       {
         title: "Excellent Customer Service",
         text: "Customer Service team is very responsive and very helpful",
-        name: "Rajat Rakkhit",
+        name: "Rajat R.",
         location: "GB",
         rating: 5,
       },
       {
         title: "I have been very happy with Sprout",
         text: "I have been very happy with Sprout. When I have had questions or problems their support staff is very quick to respond. Outstanding customer service!!!",
-        name: "Jennifer Volckaert",
+        name: "Jennifer V.",
         location: "US",
         rating: 5,
       },
@@ -682,14 +682,14 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Starting my second yearly subscription",
         text: "Ivy assisted me with my second yearly subscription and was very informative and helpful. I've lost over 45lbs on SkinnyRx so far in one year. Just don't expect to lose it all at once. Eat healthy, and be patient. Thanks Ivy!!!",
-        name: "Jill Wilson",
+        name: "Jill W.",
         location: "US",
         rating: 5,
       },
       {
         title: "Nice experience",
         text: "Great service",
-        name: "mitra shaffy",
+        name: "mitra S.",
         location: "US",
         rating: 5,
       },
@@ -703,44 +703,169 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
     ],
   },
   embody: {
-    rating: "3.7",
-    reviewCount: "7250",
+    // Aggregate re-verified Sep 24, 2026 (operator-supplied screenshot of the
+    // claimed profile): 3.8 across 8,398 reviews.
+    rating: "3.8",
+    reviewCount: "8,398",
     reviews: [
+      // Sep 24, 2026 batch (operator-supplied screenshots of the profile's
+      // newest reviews, all dated Sep 16-23 2026). Transcribed faithfully,
+      // including the 3- and 4-star ones - the low-star reviews stay in.
+      {
+        title: "She was really helpful",
+        text: "She was really helpful, she was there on time, she explained to me what I asked very nicely, she was very patient and helped me understand my weight loss journey a lot better, she gave me some insights too about how the medication should work over time.",
+        name: "Mikaelly M.",
+        location: "US",
+        rating: 5,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "My appointment went great",
+        text: "My appointment went great! Nicole was professional and answered all my questions",
+        name: "Yvette",
+        location: "US",
+        rating: 5,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "I was having the worst issues trying to...",
+        text: "I was having the worst issues trying to get patient care through embody. Patrick called after a month and a half and said he was going to be my account manager. He has managed to fix the patient portal and get me engaged with a registered nurse. Two steps in the right direction thank you Patrick",
+        name: "patti S.",
+        location: "US",
+        rating: 4,
+        date: "Sep 16, 2026",
+      },
+      {
+        title: "So far so good",
+        text: "My visit was really good. The provider listened to me and answered my questions.",
+        name: "Jennifer D.",
+        location: "US",
+        rating: 4,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "The doctor listened to me today",
+        text: "The doctor listened to me today. I will tell you my review once I start taking the medication.",
+        name: "Patti N.",
+        location: "US",
+        rating: 5,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "provider above and beyond",
+        text: "Provider went above and beyond when video call technical issues with audio occurred. Provider called me by phone to ensure that I had my appointment for my second month to increase dosage of medicine.",
+        name: "Frances O.",
+        location: "US",
+        rating: 5,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "I had 3 video appointments that the MD...",
+        text: "I had 3 video appointments that the MD didn't show up to on video. I was told embody was sorry and that I would get put on the priority call list. The priority call was 4 days later than the original appointment. When I actually spoke with a doctor, it was fine.",
+        name: "Kim",
+        location: "US",
+        rating: 3,
+        date: "Sep 22, 2026",
+      },
+      {
+        title: "Understanding Doctor",
+        text: "Understanding doctor, listened to my input and made me feel seen and valued.",
+        name: "Michelle L.",
+        location: "US",
+        rating: 4,
+        date: "Sep 22, 2026",
+      },
+      {
+        title: "I was uncertain about a few things and...",
+        text: "I was uncertain about a few things and got clear answers.",
+        name: "Sandralee D.",
+        location: "US",
+        rating: 4,
+        date: "Sep 21, 2026",
+      },
+      {
+        title: "Used my dosage with Embody!!",
+        text: "Felt a little rushed, but I have been on medication from my own Dr. I have lost 35 pounds before joining Embody, but finding them has been an answered prayer because I couldn't afford to go up in my dosage without Embody! Got about 29 pds. To go on my upped dosage starting in a few days!",
+        name: "Tracy",
+        location: "US",
+        rating: 4,
+        date: "Sep 21, 2026",
+      },
+      {
+        title: "Shipping delays kill score",
+        text: "I will give them a 3 for how easy it is to sign up and understandable questions. Also the medical providers are friendly. What keeps this from being a 4-5 is the shipping delay. First dose said 3-5 days and I got it in 8 days. I'm now on my second dose, money taken out of my bank 2 weeks ago and I'm 3 days past my medication taking day. This is 8 days after my new dose was approved by a N.P. that I had a video chat with. I'm sure this will affect the weight loss!!",
+        name: "Celtic",
+        location: "US",
+        rating: 3,
+        date: "Sep 21, 2026",
+      },
+      {
+        title: "General info",
+        text: "The nurse practitioner provided very helpful information. She listened to my concerns and addressed them positively.",
+        name: "Carole H.",
+        location: "US",
+        rating: 4,
+        date: "Sep 21, 2026",
+      },
+      {
+        title: "Provider heard my feedback and wishes...",
+        text: "Provider heard my feedback and wishes for moving forward. Adjusted dose according to my needs.",
+        name: "Jeri B.",
+        location: "US",
+        rating: 4,
+        date: "Sep 20, 2026",
+      },
+      {
+        title: "Dismal customer support with errors",
+        text: "Signing up is easy. Provider called, payment was issued and medication was shipped. It was when I was charged for something I did not ever get that things went very sideways. Customer service answers without checking full history, they provided multiple texts and emails, all from different people, all saying something different. I paid for something over two weeks ago that I did not get, and each person I talk to says \"no refund policy\" (didn't ask for one) or that I already got the medication. So if you want initial service with no ongoing correct follow up, this is the provider for you.",
+        name: "Michelle G.",
+        location: "US",
+        rating: 2,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "Initially I had great difficulty...",
+        text: "Initially I had great difficulty finding someone who could help me but once I did everyone was excellent and patient. Hoping everything goes smoothly now and hoping the Terzepitide will work as it has been with other pharmacies",
+        name: "Vickie S.",
+        location: "US",
+        rating: 3,
+        date: "Sep 23, 2026",
+      },
       // Sep 2026 batch (operator-supplied Trustpilot screenshots, Sep 4-7 2026,
       // plus one Jul 3). Transcribed faithfully with only minimal typo/spacing
       // cleanup - the reviewers' wording and meaning are kept.
       {
         title: "My provider Dana was very pleasant",
         text: "My provider Dana was very pleasant to talk to and answered all my questions!",
-        name: "Amanda Godoy",
+        name: "Amanda G.",
         location: "US",
         rating: 5,
       },
       {
         title: "She was very understanding and helpful",
         text: "Had an appointment, even set a time, but I guess our time zones were different so she called me. She was very understanding and helpful. She is amazing and very helpful.",
-        name: "Amy Francis",
+        name: "Amy F.",
         location: "US",
         rating: 5,
       },
       {
         title: "Honest",
         text: "Honest, helpful. Great customer service.",
-        name: "Jill Wittekind",
+        name: "Jill W.",
         location: "US",
         rating: 5,
       },
       {
         title: "First consultation",
         text: "Thorough, quick and easy!",
-        name: "Caitlin Glenn",
+        name: "Caitlin G.",
         location: "US",
         rating: 5,
       },
       {
         title: "My experience with Embody has been all real and perfect",
         text: "My experience with Embody has been all perfect and very professional. I had issues with my video connecting so my provider took it upon herself to phone call me - it went perfect, I was heard and understood. So much faith in embody, with the affordable prices that don't change.",
-        name: "Ann Kirch",
+        name: "Ann K.",
         location: "US",
         rating: 5,
       },
@@ -761,14 +886,14 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Consult",
         text: "Very polite.",
-        name: "Karly Martin",
+        name: "Karly M.",
         location: "US",
         rating: 4,
       },
       {
         title: "No hassles",
         text: "No hassles. Free delivery. Explained everything.",
-        name: "Teresa Brown",
+        name: "Teresa B.",
         location: "US",
         rating: 5,
       },
@@ -786,7 +911,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Once the initial problem was resolved",
         text: "Once the initial problem was resolved, and I spoke to customer service about finally setting up an appointment. Everything was smooth. There was confusion because I had been prescribed it previously I no one ever told me I needed to schedule an appointment.",
-        name: "Bryan Tapp",
+        name: "Bryan T.",
         location: "US",
         rating: 4,
       },
@@ -814,28 +939,28 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Love the fact that there are no surprises",
         text: "Love the fact that there are no surprises as in costly up front cost. So happy that it's monthly. Excited to start.",
-        name: "Tiffany Coin",
+        name: "Tiffany C.",
         location: "US",
         rating: 5,
       },
       {
         title: "It went awesome such a nice professional person",
         text: "I've had a great experience with Embody over all. All those I've spoken to have been courteous informative and very helpful.",
-        name: "Rebecca Kirk",
+        name: "Rebecca K.",
         location: "US",
         rating: 5,
       },
       {
         title: "Great customer service",
         text: "Great customer service fast and reliable",
-        name: "Michael Tucker",
+        name: "Michael T.",
         location: "US",
         rating: 5,
       },
       {
         title: "Happy that I chose embody",
         text: "I've been looking for another GLP-1 company and I am happy that I chose embody.",
-        name: "David Mahaney",
+        name: "David M.",
         location: "US",
         rating: 5,
         date: "Aug 10, 2026",
@@ -851,7 +976,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Very nice person",
         text: "Very nice person. She took the time to explain everything and make sure I understood everything we discussed.",
-        name: "Sandra Miner",
+        name: "Sandra M.",
         location: "US",
         rating: 5,
         date: "Aug 10, 2026",
@@ -859,7 +984,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Exactly what was needed",
         text: "The provider gave me an example of exactly what was needed.",
-        name: "Jennifer Pierce",
+        name: "Jennifer P.",
         location: "US",
         rating: 5,
         date: "Aug 10, 2026",
@@ -867,7 +992,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Great customer service",
         text: "Great customer service and my provider was so nice and explained everything very well.",
-        name: "Stephanie Waldrop",
+        name: "Stephanie W.",
         location: "US",
         rating: 5,
         date: "Aug 10, 2026",
@@ -875,7 +1000,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "Answered in a timely and kind manner",
         text: "Kindness, on time, all questions answered properly.",
-        name: "Delilah Rhea",
+        name: "Delilah R.",
         location: "US",
         rating: 5,
         date: "Aug 9, 2026",
@@ -883,7 +1008,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "A doctor phone call and price for life",
         text: "It was the phone call with a doctor and price for life.",
-        name: "Cynthia Glenn",
+        name: "Cynthia G.",
         location: "US",
         rating: 5,
         date: "Aug 9, 2026",
@@ -899,7 +1024,7 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       {
         title: "The appointment was really good",
         text: "The appointment was really good with the doctor, and my medicine came three days later, which was excellent. I've given your name to a friend of mine, so she will be using you as well.",
-        name: "Roberta Robinson",
+        name: "Roberta R.",
         location: "US",
         rating: 5,
         date: "Jul 3, 2026",
@@ -4388,7 +4513,7 @@ function replaceLongDashesDeep(config: SiteConfig): SiteConfig {
 // too. Only known weight-loss-era path roots are rewritten, and only when the
 // href isn't already vertical-prefixed.
 const BARE_WL_LINK_RE =
-  /href="\/(reviews|articles|find-your-match-weight-loss|find-your-match|how-we-rank|about|disclaimer|cheapest-glp1|switch-from-ozempic|ozempic-alternatives|weight-loss-pills|glp1-pills-vs-injections|semaglutide|tirzepatide|wegovy-providers|ozempic-for-weight-loss|retatrutide-weight-loss|glp1-weight-loss-statistics|best-online-weight-loss-programs|best-weight-loss-injections|cheapest-weight-loss-medication)(\/|"|#)/g;
+  /href="\/(reviews|articles|find-your-match-weight-loss|find-your-match|how-we-rank|about|disclaimer|cheapest-glp1|switch-from-ozempic|ozempic-alternatives|weight-loss-pills|glp1-pills-vs-injections|semaglutide|tirzepatide|wegovy-providers|ozempic-for-weight-loss|retatrutide-weight-loss|glp1-weight-loss-statistics|best-online-weight-loss-programs|best-weight-loss-injections|cheapest-weight-loss-medication|how-to-choose-a-glp1-provider)(\/|"|#)/g;
 function rewriteBareWlLinksDeep(config: SiteConfig, prefix: string): SiteConfig {
   return JSON.parse(JSON.stringify(config), (_key, value) =>
     typeof value === "string"

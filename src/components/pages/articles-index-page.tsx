@@ -50,6 +50,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
     ctx.vertical === "weight-loss"
       ? [
           { title: "Weight Loss Pills", href: "/weight-loss-pills", category: "Guide", description: "Oral GLP-1s and FDA-approved prescription pills - and how they compare to injections." },
+          { title: "How to Choose a GLP-1 Provider", href: "/how-to-choose-a-glp1-provider", category: "Guide", description: "12 things to check before you sign up, and how to tell which providers have real doctors involved." },
           { title: "GLP-1 Pills vs Injections", href: "/glp1-pills-vs-injections", category: "Guide", description: "Results, cost, and convenience compared - which is right for you?" },
           { title: "Ozempic, Wegovy & Mounjaro Alternatives", href: "/ozempic-alternatives", category: "Guide", description: "The same active ingredients as the big brands - as affordable compounded options through telehealth." },
           { title: "Retatrutide for Weight Loss", href: "/retatrutide-weight-loss", category: "Science", description: "The triple-agonist drug that hit ~24% in trials - and whether you can get it yet." },
