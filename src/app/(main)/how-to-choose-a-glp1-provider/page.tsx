@@ -574,53 +574,6 @@ export default async function HowToChooseGlp1ProviderPage() {
           </p>
         </section>
 
-        {/* Key patterns */}
-        <section className="mb-12">
-          <div className="mb-4 flex items-center gap-2">
-            <ClipboardList className="h-6 w-6 text-[#0C4B75]" strokeWidth={2} />
-            <h2 className="text-[24px] font-bold text-[#191919]">Key patterns we found</h2>
-          </div>
-          <p className="mb-4 text-[14px] text-gray-500">
-            Five findings drawn only from the table above and the price index.
-          </p>
-          <ol className="space-y-3">
-            {PATTERNS.map((p, i) => (
-              <li key={p.title} className="flex gap-3 rounded-xl border border-gray-200 bg-white p-4">
-                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 text-[12px] font-bold text-[#0C4B75]">{i + 1}</span>
-                <div>
-                  <p className="mb-1 text-[15px] font-bold text-[#191919]">{p.title}</p>
-                  <p className="text-[14px] leading-relaxed text-gray-600">{p.body}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </section>
-
-        {/* Reddit */}
-        {redditProviders.length > 0 && (
-          <section className="mb-4">
-            <RedditThreadCarousel
-              providers={redditProviders}
-              reviewHrefFor={(id) => `/weight-loss/reviews/${id}`}
-              title="What GLP-1 patients report on Reddit"
-              intro={
-                <>
-                  <p className="mb-2">
-                    We reviewed public Reddit discussions about providers in this comparison. Individual Reddit
-                    posts are anecdotes, not evidence that every patient will have the same experience, so we
-                    looked for recurring themes rather than treating any single post as representative.
-                  </p>
-                  <p className="text-[13px] text-gray-500">
-                    Each card names the provider and the topic the thread covers, links to the original thread
-                    where we have its address, and shows the vote count as captured. Providers without verified
-                    Reddit material do not appear here.
-                  </p>
-                </>
-              }
-            />
-          </section>
-        )}
-
         {/* Trustpilot evidence */}
         <section className="mb-12">
           <h2 className="mb-2 text-[24px] font-bold text-[#191919]">Public review evidence, provider by provider</h2>
@@ -682,6 +635,53 @@ export default async function HowToChooseGlp1ProviderPage() {
             estimate one.
           </p>
         </section>
+
+        {/* Key patterns */}
+        <section className="mb-12">
+          <div className="mb-4 flex items-center gap-2">
+            <ClipboardList className="h-6 w-6 text-[#0C4B75]" strokeWidth={2} />
+            <h2 className="text-[24px] font-bold text-[#191919]">Key patterns we found</h2>
+          </div>
+          <p className="mb-4 text-[14px] text-gray-500">
+            Five findings drawn only from the table above and the price index.
+          </p>
+          <ol className="space-y-3">
+            {PATTERNS.map((p, i) => (
+              <li key={p.title} className="flex gap-3 rounded-xl border border-gray-200 bg-white p-4">
+                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 text-[12px] font-bold text-[#0C4B75]">{i + 1}</span>
+                <div>
+                  <p className="mb-1 text-[15px] font-bold text-[#191919]">{p.title}</p>
+                  <p className="text-[14px] leading-relaxed text-gray-600">{p.body}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        {/* Reddit */}
+        {redditProviders.length > 0 && (
+          <section className="mb-4">
+            <RedditThreadCarousel
+              providers={redditProviders}
+              reviewHrefFor={(id) => `/weight-loss/reviews/${id}`}
+              title="What GLP-1 patients report on Reddit"
+              intro={
+                <>
+                  <p className="mb-2">
+                    We reviewed public Reddit discussions about providers in this comparison. Individual Reddit
+                    posts are anecdotes, not evidence that every patient will have the same experience, so we
+                    looked for recurring themes rather than treating any single post as representative.
+                  </p>
+                  <p className="text-[13px] text-gray-500">
+                    Each card names the provider and the topic the thread covers, links to the original thread
+                    where we have its address, and shows the vote count as captured. Providers without verified
+                    Reddit material do not appear here.
+                  </p>
+                </>
+              }
+            />
+          </section>
+        )}
 
         {/* Providers worth exploring further */}
         <section className="mb-12">
