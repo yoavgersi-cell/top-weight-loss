@@ -366,7 +366,7 @@ export default async function HowToChooseGlp1ProviderPage() {
                 <div className="grid gap-3 pl-10 text-[14px] leading-relaxed sm:grid-cols-3">
                   <p className="text-gray-700"><span className="font-bold text-[#191919]">What to check: </span>{c.check}</p>
                   <p className="text-gray-700"><span className="font-bold text-[#191919]">How to verify: </span>{c.verify}</p>
-                  <p className="text-gray-700"><span className="inline-flex items-center gap-1 font-bold text-red-700"><AlertTriangle className="h-3.5 w-3.5" strokeWidth={2.5} />Red flag: </span>{c.redFlag}</p>
+                  <p className="text-gray-700"><span className="mr-1.5 inline-flex items-center gap-1 font-bold text-red-700"><AlertTriangle className="h-3.5 w-3.5" strokeWidth={2.5} />Red flag:</span>{c.redFlag}</p>
                 </div>
               </li>
             ))}
