@@ -88,7 +88,7 @@ const CHECKLIST: { title: string; check: string; verify: string; redFlag: string
   {
     title: "The Trustpilot record, with the count",
     check: "The aggregate score means little without the volume behind it. Read the recurring themes in the low-star reviews, not the headline number.",
-    verify: "We print rating and review count for every provider where we have verified the profile. Medvi's 4.4 across 14,372 reviews and embody's 3.8 across 8,398 are both real records; they tell different stories.",
+    verify: "We print rating and review count for every provider where we have verified the profile. Medvi's 4.3 across 14,821 reviews and embody's 3.8 across 8,398 are both real records; they tell different stories.",
     redFlag: "A perfect 5.0 on a handful of reviews, or a provider with no public review profile at all.",
   },
   {
@@ -172,7 +172,7 @@ const ROWS: Row[] = [
     visit: "Video visits with providers, scheduled monitoring, a dietician and care coaching",
     pharmacy: "Compounded; pharmacy not named in our research",
     dosePricing: "All-inclusive; no dose-based increases; HSA/FSA",
-    critics: "Not the cheapest way to get semaglutide, and the $99 rate is promotional against a $199 regular price. Users in verified threads raise the ongoing monthly cost themselves.",
+    critics: "Trustpilot 4.3 across 14,821 reviews, the largest verified base in our ranking. The 1-star reviews from September are serious and specific: a prepaid annual plan renewed after 11 shipments without notice, refunded only after BBB, FTC and state attorney-general complaints; a charge taken before any clinician contact, followed by a wrong-dose shipment and a refused refund; a transferring patient sent a starter dose repeatedly instead of the maintenance dose; communication stopping after five months and no cancellation confirmation across three calls. The 5-star reviews from the same week are about the video visits and nurse practitioners. One reviewer says tirzepatide tops out at 11.125 mg; we have not verified that. Not the cheapest semaglutide, and the $99 rate is promotional against $199.",
   },
   {
     id: "sprout",
