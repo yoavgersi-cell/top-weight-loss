@@ -987,6 +987,16 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                         <span className="text-gray-400">{t.age}</span>
                       </>
                     )}
+                    {t.url && (
+                      <a
+                        href={t.url}
+                        target="_blank"
+                        rel="nofollow noopener"
+                        className="ml-auto font-semibold text-[#0C4B75] hover:underline"
+                      >
+                        View on Reddit
+                      </a>
+                    )}
                   </div>
 
                   {t.title && (

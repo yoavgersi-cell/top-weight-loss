@@ -485,21 +485,6 @@ export default async function HowToChooseGlp1ProviderPage() {
           />
         </section>
 
-        {/* CTA */}
-        <section className="mb-12 rounded-xl border border-gray-200 bg-white p-6 text-center">
-          <p className="mb-2 text-[18px] font-bold text-[#191919]">Not sure which one fits you?</p>
-          <p className="mb-4 text-[14px] text-gray-500">Sixty seconds of questions, matched against the same verified data on this page.</p>
-          <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <Link href="/weight-loss/find-your-match" className="inline-flex h-[46px] items-center justify-center gap-2 rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]">
-              Take the matching quiz
-              <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
-            </Link>
-            <Link href="/weight-loss" className="inline-flex h-[46px] items-center justify-center rounded-lg border border-gray-200 bg-white px-6 text-[14px] font-semibold text-[#191919] transition-colors hover:bg-gray-50">
-              See the full ranking
-            </Link>
-          </div>
-        </section>
-
         {/* FAQ */}
         <section className="mb-12">
           <h2 className="mb-6 text-[24px] font-bold text-[#191919]">Choosing a GLP-1 provider: FAQ</h2>
