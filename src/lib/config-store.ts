@@ -5852,10 +5852,14 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
             if (p.affiliateUrl && p.affiliateUrl !== "#") return p.affiliateUrl;
             return codeUrl ?? p.affiliateUrl;
           })(),
-          // Rating/count: CMS-edited values win, seed is a backfill. Use ||
-          // so an empty string saved by the admin still falls back to seed.
-          trustpilotRating: p.trustpilotRating || seedFor(p)?.rating,
-          trustpilotReviewCount: p.trustpilotReviewCount || seedFor(p)?.reviewCount,
+          // Rating/count: the seed is the operator-verified, dated record
+          // (seedTrustpilot is re-verified from screenshots and every page's
+          // prose quotes the same figures), so it wins whenever it has a
+          // value. The CMS value is only a fallback for providers without a
+          // seed aggregate - otherwise a stale blob figure contradicts the
+          // text next to it.
+          trustpilotRating: seedFor(p)?.rating || p.trustpilotRating,
+          trustpilotReviewCount: seedFor(p)?.reviewCount || p.trustpilotReviewCount,
           // Reviews: merge seed + CMS so new seed reviews always show.
           trustpilotReviews: mergeTrustpilotReviews(p.trustpilotReviews, seedFor(p)?.reviews),
         }));
