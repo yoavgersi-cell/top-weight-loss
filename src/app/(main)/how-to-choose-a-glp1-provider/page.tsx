@@ -148,7 +148,7 @@ const ROWS: Row[] = [
     visit: "Online assessment; follow-up call if needed; unlimited check-ins",
     pharmacy: "Compounded only; pharmacy not named in our research",
     dosePricing: "Same price at every dose; no long-term contract, optional multi-month discounts",
-    critics: "Trustpilot 3.7 across 5,670 reviews, the lowest aggregate in our ranking, although the newest reviews we captured are consistently positive on intake clarity, communication and cold shipping. $149 sits well above the budget tier for the same molecule, with no guarantee behind it.",
+    critics: "Trustpilot 3.7 across 5,670 reviews, the lowest aggregate in our ranking. The 2-star reviews from the past week are about fulfillment and billing, not the clinic: a box three days late with warm cold packs, a prepaid 6-month plan whose second shipment was 30 days overdue with chat and phone unanswered, a cancelled prescription that Affirm kept trying to bill, and one first order with someone else's prescription in the portal and a bill double the quoted price. The 5-star reviews from the same week praise intake clarity, communication and cold shipping. $149 sits well above the budget tier for the same molecule, with no guarantee behind it.",
   },
   {
     id: "shed",
