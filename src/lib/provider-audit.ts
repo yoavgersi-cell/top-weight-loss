@@ -29,7 +29,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Shipping", value: "Free 1-2 day, tracked and insured" },
       { label: "Certification", value: "LegitScript-certified; US-based 503A compounding pharmacies" },
       { label: "Refund policy", value: "Full refund if a provider doesn't approve treatment" },
-      { label: "Trustpilot record", value: "3.7 across 7,250 reviews" },
+      { label: "Trustpilot record", value: "3.8 across 8,398 reviews" },
     ],
   },
   "weight-loss:wellmedr": {
@@ -105,7 +105,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
     rows: [
       { label: "Membership", value: "$39 first month, then $74-149/month ($74 on a 12-month prepaid plan)" },
       { label: "Medication cost", value: "Priced separately from membership - e.g. Wegovy pill $149 first month (then $299); Zepbound KwikPen from $299 first month" },
-      { label: "Trustpilot record", value: "4.0 across 6,428 reviews" },
+      { label: "Trustpilot record", value: "3.9 across 6,690 reviews" },
     ],
   },
 

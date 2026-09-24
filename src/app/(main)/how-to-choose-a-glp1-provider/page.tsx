@@ -121,10 +121,10 @@ const ROWS: Row[] = [
   {
     id: "ro",
     clinician: "Qualified doctor reviews your assessment",
-    visit: "Online assessment; a short telehealth follow-up if more information is needed",
+    visit: "Online assessment; doctor follow-up (reviewers describe a video call with an MD and messaging support)",
     pharmacy: "Ro's own integrated pharmacy; brand-name medication (Wegovy pill, Zepbound)",
     dosePricing: "Medication billed separately from the membership; insurance can apply",
-    critics: "Cost is the recurring friction in the threads we verified: the most upvoted commenter left over price, another found the cost breakdown confusing.",
+    critics: "Trustpilot 3.9 across 6,690 reviews. Low-star reviews from the past week name three things: the $39 initial fee being for the consultation, not the medication, and a separate subscription charge on top of the monthly one; support by messaging only, with replies in 2-3 business days and no phone number; and delivery, including a 4-day delay that arrived with melted ice packs and no clear answer on whether to use it. One 2-star reviewer chose a medication and was charged before speaking to a physician. In the Reddit threads we verified, cost is the recurring friction.",
   },
   {
     id: "altrx",
