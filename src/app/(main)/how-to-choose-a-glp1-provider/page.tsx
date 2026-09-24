@@ -656,6 +656,22 @@ export default async function HowToChooseGlp1ProviderPage() {
                       <span className="text-gray-400">No individual reviews captured yet.</span>
                     )}
                   </p>
+                  <p className="mt-2 flex flex-wrap gap-x-4 text-[12.5px] font-semibold">
+                    <Link href={`/weight-loss/reviews/${p.id}`} className="text-[#0C4B75] hover:underline">
+                      Read the captured reviews
+                    </Link>
+                    <ProviderCta
+                      href={p.affiliateUrl}
+                      providerName={p.name}
+                      providerSlug={p.id}
+                      pageType="listing"
+                      sourceFlow="main_comparison"
+                      className="inline-flex items-center gap-1 text-[#0C4B75] hover:underline"
+                    >
+                      Visit site
+                      <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
+                    </ProviderCta>
+                  </p>
                 </div>
               );
             })}
