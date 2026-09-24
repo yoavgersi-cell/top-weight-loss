@@ -11,7 +11,7 @@ import { ExpertByline } from "@/components/expert-byline";
 import { MedicalSources } from "@/components/medical-sources";
 import { ProductCarousel } from "@/components/product-carousel";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
-import { TopProvidersBlock } from "@/components/top-providers-block";
+import { TopProvidersBlock, TopTwoPicks } from "@/components/top-providers-block";
 import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/reddit-community";
 import { notFound, permanentRedirect } from "next/navigation";
 
@@ -233,6 +233,10 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // alternatives, etc.) gets a CRO block featuring our three GLP-1 partners
   // (embody, altRx, trimrx) with the same comparison-page cards.
   const showPartnerCro = isWeightLoss && slug.endsWith("-alternatives");
+  // "Our top 2 picks" (embody, altRx) after the intro on every other weight-loss
+  // article. Skipped where a provider block already renders (the two above) and
+  // on "is X legit" trust-check pages, for the same reason as the inline CTA.
+  const showTopTwo = isWeightLoss && !showTopProvidersCro && !showPartnerCro && !/^is-.+-legit$/.test(slug);
 
   // Byline author: match the article's author to a team member, else the lead
   const author = experts.find((e) => e.name === article.author) ?? experts[0];
@@ -526,6 +530,8 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     subtitle="Ranked by price, plans and verified reviews - the same cards from our full comparison."
                   />
                 )}
+
+                {i === 0 && showTopTwo && <TopTwoPicks config={config} linkPrefix={ctx.prefix} />}
 
                 {/* Provider-"alternatives" guides: CRO block of our three GLP-1
                     partners with the comparison-page cards (see showPartnerCro). */}

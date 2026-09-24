@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideCluster } from "@/components/guide-cluster";
+import { TopTwoPicks } from "@/components/top-providers-block";
 import { getConfig } from "@/lib/config-store";
 import { PRICE_INDEX, BRAND_SHELF, PRICE_INDEX_VERIFIED, PRICE_CHANGELOG } from "@/lib/price-index";
 
@@ -240,6 +241,8 @@ export default async function StatisticsPage() {
             </ol>
           </div>
         </section>
+
+        <TopTwoPicks config={config} linkPrefix="/weight-loss" />
 
         {/* Weight Loss Results */}
         <section className="mb-10">

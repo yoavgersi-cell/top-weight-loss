@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideCluster } from "@/components/guide-cluster";
+import { TopTwoPicks } from "@/components/top-providers-block";
 import { Pill, Syringe, ShieldCheck, TriangleAlert, ArrowRight, Check } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
@@ -158,6 +159,8 @@ export default async function WeightLossPillsPage() {
             providers.
           </p>
         </section>
+
+        <TopTwoPicks config={config} linkPrefix="/weight-loss" />
 
         {/* Oral GLP-1s */}
         <section className="mb-12">

@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideCluster } from "@/components/guide-cluster";
+import { TopTwoPicks } from "@/components/top-providers-block";
 import { FlaskConical, TriangleAlert, ArrowRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { LastUpdated } from "@/components/last-updated";
 import { CONTENT_LAST_UPDATED } from "@/lib/config";
+import { getConfig } from "@/lib/config-store";
 
 export const revalidate = 60;
 
@@ -41,7 +43,8 @@ const faqs: { question: string; answer: string }[] = [
   { question: "Can you buy retatrutide now?", answer: "No. Because it isn't FDA-approved, retatrutide is not legitimately available to purchase or be prescribed for weight loss. Be cautious of any site claiming to sell “retatrutide” - sourcing an unapproved drug carries real safety and legal risks. Stick to approved medications prescribed by a licensed clinician." },
 ];
 
-export default function RetatrutidePage() {
+export default async function RetatrutidePage() {
+  const config = await getConfig("weight-loss");
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -104,6 +107,8 @@ export default function RetatrutidePage() {
             </p>
           </div>
         </div>
+
+        <TopTwoPicks config={config} linkPrefix="/weight-loss" />
 
         {/* What it is */}
         <section className="mb-12">

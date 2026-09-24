@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideCluster } from "@/components/guide-cluster";
+import { TopTwoPicks } from "@/components/top-providers-block";
 import { Pill, Syringe, Trophy, ArrowRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { LastUpdated } from "@/components/last-updated";
 import { CONTENT_LAST_UPDATED } from "@/lib/config";
+import { getConfig } from "@/lib/config-store";
 
 export const revalidate = 60;
 
@@ -42,7 +44,8 @@ const faqs: { question: string; answer: string }[] = [
   { question: "Is there a GLP-1 pill approved specifically for weight loss?", answer: "Yes - two, as of 2026. The FDA approved oral Wegovy (oral semaglutide 25mg) in December 2025, the first oral GLP-1 for chronic weight management, and orforglipron (Foundayo) from Eli Lilly in April 2026, the first that can be taken any time of day with no food or water restrictions. Rybelsus (lower-dose oral semaglutide) remains approved for type 2 diabetes rather than weight loss." },
 ];
 
-export default function Glp1PillsVsInjectionsPage() {
+export default async function Glp1PillsVsInjectionsPage() {
+  const config = await getConfig("weight-loss");
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -106,6 +109,8 @@ export default function Glp1PillsVsInjectionsPage() {
             </p>
           </div>
         </div>
+
+        <TopTwoPicks config={config} linkPrefix="/weight-loss" />
 
         {/* Comparison table */}
         <section className="mb-12">
