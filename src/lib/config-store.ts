@@ -1214,7 +1214,129 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
     ],
   },
   sprout: {
+    rating: "4.1",
+    reviewCount: "188",
     reviews: [
+      {
+        title: "Great service",
+        text: "Great service",
+        name: "Ken",
+        location: "US",
+        rating: 5,
+        date: "Sep 21, 2026",
+      },
+      {
+        title: "I already loved Sprout",
+        text: "I already loved Sprout and have had great success, however I started to notice there were cheaper options, emailed with customer service and they quickly and efficiently reduced my cost and update my plan. 100 percent recommended.",
+        name: "Victoria L.",
+        location: "US",
+        rating: 5,
+        date: "Sep 21, 2026",
+      },
+      {
+        title: "Sprout customer service is stellar",
+        text: "Sprout customer service is stellar. Everyone of my questions or concerns have been immediately answered by a LIVE CS rep. No bots. I am a life long customer because of the service they provide.",
+        name: "Lisa M.",
+        location: "US",
+        rating: 5,
+        date: "Sep 21, 2026",
+      },
+      {
+        title: "I lost 20 pounds",
+        text: "I lost 20 pounds, and the team made me feel listened to. Their support team always replied to me right away. It's a good program for anyone looking into better life choices.",
+        name: "Isabel M.",
+        location: "US",
+        rating: 5,
+        date: "Sep 19, 2026",
+      },
+      {
+        title: "Great customer service!",
+        text: "Great customer service! When I had to suspend my subscription they handled it quick and made it very easy. Will definitely continue with them!",
+        name: "Trish",
+        location: "US",
+        rating: 5,
+        date: "Sep 19, 2026",
+      },
+      {
+        title: "Excellent customer service",
+        text: "Excellent customer service, which exceeded my expectations. Quick response time, both in review to shipment. Thank you!",
+        name: "Kimberly",
+        location: "US",
+        rating: 5,
+        date: "Sep 18, 2026",
+      },
+      {
+        title: "Great customer service",
+        text: "My Sprout subscription is the best thing I could have done to help elevate my physical health journey and get those immediate results I'm looking for. I recently need to briefly pause my subscription and when I returned to restart, it was easy. From start to finish they were very accommodating.",
+        name: "Terrie G.",
+        location: "US",
+        rating: 5,
+        date: "Sep 17, 2026",
+      },
+      {
+        title: "I've been a customer for almost a year",
+        text: "I've been a customer for almost a year and have been increasingly pleased with the customer support. Several months into my subscription I had to adjust my plan and the team provided prompt response.",
+        name: "Cindy",
+        location: "US",
+        rating: 5,
+        date: "Sep 17, 2026",
+      },
+      {
+        title: "Enjoyed dealing with them",
+        text: "Enjoyed dealing with them. Customer Service was great!",
+        name: "The Hogans",
+        location: "US",
+        rating: 5,
+        date: "Sep 17, 2026",
+      },
+      {
+        title: "Pleased with Sprout Health",
+        text: "I have been using Sprout for about 6 months. They have been timely, and supportive. I recently had an issue and it was addressed quickly and with satisfaction. I will continue to use Sprout on my weight loss journey.",
+        name: "D M.",
+        location: "US",
+        rating: 4,
+        date: "Sep 11, 2026",
+      },
+      {
+        title: "I'm happy with the overall product and results",
+        text: "I'm happy with the overall product and results. I am very happy with the customer service representative, Frank. I've had a few problems with getting my order on time and reached out to CSR, Frank. He was respectful, polite, and made everything right in a timely manner. I understand that things happen as long as it's resolved and was.",
+        name: "Janet E.",
+        location: "US",
+        rating: 5,
+        date: "Sep 10, 2026",
+      },
+      {
+        title: "I have used several different companies",
+        text: "I have used several different companies for compounded Tirzepatide. All with no side effects. Within 1 month of taking Sprout Health compounded Tirzepatide I began losing handfuls of hair. Starting the second months vial, lost even more hair. Had to throw it away. Would not recommend under any circumstance.",
+        name: "Audrey S.",
+        location: "US",
+        rating: 1,
+        date: "Sep 8, 2026",
+      },
+      {
+        title: "Tracking notification not been good at all",
+        text: "Tracking notification not been good at all. Out of 8 plus shipments, only received tracking twice. Also account had been suspended for no reason and without any notification.",
+        name: "James M.",
+        location: "US",
+        rating: 3,
+        date: "Aug 6, 2026",
+      },
+      {
+        title: "I have lost almost all the weight! I'm feeling great!",
+        text: "I have lost almost all the weight I wanted to lose. My journey was a little difficult because I did not receive any instructions on how to use the medication properly from Sprout. I had to go on google to learn about how to inject the medication and how much I should put in the syringe.",
+        name: "Salvatore C.",
+        location: "US",
+        rating: 4,
+        date: "Aug 5, 2026",
+      },
+      {
+        title: "I am very happy with them overall",
+        text: "I am very happy with them overall, customer service has been responsive when I needed them and the medicine is working. The only reason I didn't give them 5 stars is that if you don't complete your questionnaire they don't remind you, they just don't ship anything and charge you anyway. I know it's on me to complete the monthly check in but I thought that I had, so a tickler would have been nice.",
+        name: "Mark",
+        location: "US",
+        rating: 4,
+        date: "Jun 26, 2026",
+      },
       {
         title: "I have had a great experience with Sprout",
         text: "I have had a great experience with Sprout. They were quick to respond and the process for approval worked seamlessly. Customer service was awesome, shout out to Frank!",
@@ -1675,7 +1797,7 @@ const defaultReviews: ReviewData[] = [
     providerId: "altrx",
     updatedAt: "2026-09-14",
     shortSummary: "Affordable GLP-1 program from $89/month - compounded semaglutide and tirzepatide plus brand-name options - with clinician-guided, self-pay care and no insurance required.",
-    reviewIntro: "altRx bills itself as \"the #1 most affordable GLP-1 program,\" and its published prices largely back that up: compounded GLP-1 (semaglutide) from $89/month and GLP-1 + GIP (tirzepatide) from $149/month - flat at every dose, so the price doesn't climb as you titrate up - alongside one of the few genuine brand-name shelves in this space (Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 per month). It's a self-pay telehealth service: you complete a short assessment, a licensed provider (physician, PA, or nurse practitioner) reviews it, and if appropriate a prescription goes to a licensed US pharmacy, with free shipping in about 5-7 days. No insurance is required, Buy Now, Pay Later is available, and you can pause or cancel anytime. Two things to know before the details: shipping is slower than the 1-2 day providers (embody, DirectMeds), and Trustpilot does not currently display an aggregate score on altRx's profile - the individual reviews we quote on this page are real, but there's no independent average to lean on the way there is for rivals like Medvi (4.3 across 14,821) or embody (3.7 across 7,250). One of the real 4-star reviews we surface notes a refill 'yet to be fulfilled with zero reason as to why' - worth factoring in alongside the price advantage.",
+    reviewIntro: "altRx bills itself as \"the #1 most affordable GLP-1 program,\" and its published prices largely back that up: compounded GLP-1 (semaglutide) from $89/month and GLP-1 + GIP (tirzepatide) from $149/month - flat at every dose, so the price doesn't climb as you titrate up - alongside one of the few genuine brand-name shelves in this space (Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 per month). It's a self-pay telehealth service: you complete a short assessment, a licensed provider (physician, PA, or nurse practitioner) reviews it, and if appropriate a prescription goes to a licensed US pharmacy, with free shipping in about 5-7 days. No insurance is required, Buy Now, Pay Later is available, and you can pause or cancel anytime. Two things to know before the details: shipping is slower than the 1-2 day providers (embody, DirectMeds), and Trustpilot does not currently display an aggregate score on altRx's profile - the individual reviews we quote on this page are real, but there's no independent average to lean on the way there is for rivals like Medvi (4.3 across 14,821) or embody (3.8 across 8,398). One of the real 4-star reviews we surface notes a refill 'yet to be fulfilled with zero reason as to why' - worth factoring in alongside the price advantage.",
     keyFeatures: [
       "Compounded GLP-1 from $89/mo, GLP-1 + GIP from $149/mo",
       "Brand-name options too: Zepbound and Wegovy",
@@ -1855,8 +1977,8 @@ const defaultReviews: ReviewData[] = [
     slug: "trimrx",
     providerId: "trimrx",
     updatedAt: "2026-09-15",
-    shortSummary: "Telehealth GLP-1 program built around custom dosing and unlimited provider check-ins - compounded semaglutide $149/month, the same at every dose, and tirzepatide $259/month. Rated 3.6 across 5,497 Trustpilot reviews.",
-    reviewIntro: "trimrx is a telehealth GLP-1 program built around custom dosing: compounded semaglutide at $149/month (a $140 discount applied, the same price at every dose) and compounded tirzepatide at $259/month, with the consultation, tracked delivery, and unlimited provider check-ins all included in the price. The flow is the standard cash-pay one - a free 2-minute assessment, review by a qualified doctor (with a telehealth call if more information is needed), then free tracked shipping that often arrives as soon as the next day. On Trustpilot, trimrx averages 3.6 across 5,497 reviews - a genuinely mixed record. The positive end is vivid: 'I have lost 41 lbs... My high blood pressure is gone,' writes one tirzepatide patient, and another praises a rep who was 'very kind and helpful' even as the reviewer ultimately chose their own doctor. But a 3.6 means a meaningful minority report problems, and it's the weakest published average among the affiliate providers in our ranking. Read both ends of its recent reviews before signing up - and weigh the price against the $49-$89 entry tier at wellmedr, embody and altRx.",
+    shortSummary: "Telehealth GLP-1 program built around custom dosing and unlimited provider check-ins - compounded semaglutide $149/month, the same at every dose, and tirzepatide $259/month. Rated 3.7 across 5,670 Trustpilot reviews.",
+    reviewIntro: "trimrx is a telehealth GLP-1 program built around custom dosing: compounded semaglutide at $149/month (a $140 discount applied, the same price at every dose) and compounded tirzepatide at $259/month, with the consultation, tracked delivery, and unlimited provider check-ins all included in the price. The flow is the standard cash-pay one - a free 2-minute assessment, review by a qualified doctor (with a telehealth call if more information is needed), then free tracked shipping that often arrives as soon as the next day. On Trustpilot, trimrx averages 3.7 across 5,670 reviews - a genuinely mixed record. The positive end is vivid: 'I have lost 41 lbs... My high blood pressure is gone,' writes one tirzepatide patient, and another praises a rep who was 'very kind and helpful' even as the reviewer ultimately chose their own doctor. But a 3.6 means a meaningful minority report problems, and it's the weakest published average among the affiliate providers in our ranking. Read both ends of its recent reviews before signing up - and weigh the price against the $49-$89 entry tier at wellmedr, embody and altRx.",
     keyFeatures: [
       "Compounded semaglutide $149/month - same price at every dose",
       "Compounded tirzepatide $259/month",
@@ -1879,7 +2001,7 @@ const defaultReviews: ReviewData[] = [
       "HIPAA-compliant, US-made compounded medication"
     ],
     cons: [
-      "3.6 Trustpilot average across 5,497 reviews - the weakest published score among providers we rank",
+      "3.7 Trustpilot average across 5,670 reviews - the weakest published score among providers we rank",
       "Mid-tier pricing: $149 semaglutide / $259 tirzepatide vs $49-$89 at wellmedr, embody and altRx",
       "Tirzepatide at $259 is undercut by DirectMeds ($147), embody ($119) and wellmedr ($89)",
       "Compounded only - no brand-name Ozempic/Wegovy/Zepbound option",
@@ -1890,7 +2012,7 @@ const defaultReviews: ReviewData[] = [
       "Anyone who values unlimited provider check-ins between refills",
       "Those who've read the mixed reviews and value the care model over price"
     ],
-    finalVerdict: "trimrx's real differentiator is the care model - custom dosing with unlimited provider check-ins, a free consultation, and tracked delivery that often lands next-day - not the sticker price, which at $149/month for semaglutide and $259/month for tirzepatide sits above the $49-$89 tier at wellmedr, embody and altRx. Its 3.6 across 5,497 Trustpilot reviews is the honest sticking point: the successes in there are striking (41 lbs down, blood pressure resolved), but it's the weakest published average in our ranking, so go in with open eyes. If tailored dosing and hands-on check-ins are what you're paying for, trimrx delivers them; if price or public track record decides it, compare it against embody and wellmedr head-to-head first.",
+    finalVerdict: "trimrx's real differentiator is the care model - custom dosing with unlimited provider check-ins, a free consultation, and tracked delivery that often lands next-day - not the sticker price, which at $149/month for semaglutide and $259/month for tirzepatide sits above the $49-$89 tier at wellmedr, embody and altRx. Its 3.7 across 5,670 Trustpilot reviews is the honest sticking point: the successes in there are striking (41 lbs down, blood pressure resolved), but it's the weakest published average in our ranking, so go in with open eyes. If tailored dosing and hands-on check-ins are what you're paying for, trimrx delivers them; if price or public track record decides it, compare it against embody and wellmedr head-to-head first.",
     trustBadges: [
       "HIPAA compliant",
       "Made in USA",
@@ -1935,8 +2057,8 @@ const defaultReviews: ReviewData[] = [
     slug: "shed",
     providerId: "shed",
     updatedAt: "2026-09-14",
-    shortSummary: "Coaching-included GLP-1 program - compounded semaglutide from $199/mo and tirzepatide from $299/mo, 20% off month one - backed by a lose-5%-in-120-days money-back guarantee. Rated 4.7 across 1,120 Trustpilot reviews.",
-    reviewIntro: "SHED is a telehealth weight-loss program with 150,000+ members, built around compounded GLP-1 medication - semaglutide from $199/month and tirzepatide from $299/month, both with 20% off the first month - paired with health coaching that's included in every plan rather than sold as an upsell. The whole flow is 100% online: complete a visit, and if approved your medication ships straight to your door. Plans are HSA/FSA approved, and SHED backs the program with the most concrete guarantee in our ranking: lose 5% of your body weight in 120 days or your money back. On Trustpilot it averages 4.7 across 1,120 reviews, and the recent pages are dominated by praise for the human layer - 'she was amazing, VERY informative... made me feel very comfortable on my journey,' one member writes about her onboarding call - which matches the coaching-first pitch. The honest catch is price: $199-$299/month is the highest compounded tier among our affiliate providers, so you're paying for the coaching and the guarantee, not just the medication.",
+    shortSummary: "Coaching-included GLP-1 program - compounded semaglutide from $199/mo and tirzepatide from $299/mo, 20% off month one - backed by a lose-5%-in-120-days money-back guarantee. Rated 4.6 across 1,134 Trustpilot reviews.",
+    reviewIntro: "SHED is a telehealth weight-loss program with 150,000+ members, built around compounded GLP-1 medication - semaglutide from $199/month and tirzepatide from $299/month, both with 20% off the first month - paired with health coaching that's included in every plan rather than sold as an upsell. The whole flow is 100% online: complete a visit, and if approved your medication ships straight to your door. Plans are HSA/FSA approved, and SHED backs the program with the most concrete guarantee in our ranking: lose 5% of your body weight in 120 days or your money back. On Trustpilot it averages 4.6 across 1,134 reviews, and the recent pages are dominated by praise for the human layer - 'she was amazing, VERY informative... made me feel very comfortable on my journey,' one member writes about her onboarding call - which matches the coaching-first pitch. The honest catch is price: $199-$299/month is the highest compounded tier among our affiliate providers, so you're paying for the coaching and the guarantee, not just the medication.",
     keyFeatures: [
       "Compounded semaglutide from $199/mo, tirzepatide from $299/mo",
       "20% off your first month",
@@ -1954,14 +2076,14 @@ const defaultReviews: ReviewData[] = [
     pros: [
       "Health coaching included in every plan, not an add-on",
       "Real money-back guarantee: lose 5% in 120 days or your money back",
-      "4.7 Trustpilot average across 1,120 reviews, heavy on coaching praise",
+      "4.6 Trustpilot average across 1,134 reviews, heavy on coaching praise",
       "20% off the first month; HSA/FSA approved",
       "100% online visit and checkout with home delivery"
     ],
     cons: [
       "Highest compounded pricing in our ranking - $199/mo semaglutide vs $49-$147 elsewhere",
       "The money-back guarantee has conditions (5% in 120 days - check current terms)",
-      "Smaller Trustpilot base (1,120 reviews) than the five-figure rivals",
+      "Smaller Trustpilot base (1,134 reviews) than the five-figure rivals",
       "Compounded only - no brand-name Ozempic/Wegovy/Zepbound shelf"
     ],
     bestFor: [
@@ -1969,7 +2091,7 @@ const defaultReviews: ReviewData[] = [
       "Anyone who wants a concrete money-back guarantee behind the program",
       "Those who plan to pay with HSA/FSA funds"
     ],
-    finalVerdict: "SHED is the coaching-and-accountability pick among our affiliate providers, and its 4.7 across 1,120 Trustpilot reviews - full of specific, named praise for its onboarding and coaching staff - suggests the human layer is genuinely delivered, not just marketed. The 5%-in-120-days money-back guarantee is the most concrete promise in our ranking and takes real risk off the table. What you're weighing is price: at $199-$299/month it costs two to three times the entry tier at wellmedr or embody, and if you'd skip the coaching calls anyway, that premium buys you little. If you want medication plus real support with a safety net, SHED delivers; if you just want the cheapest possible GLP-1 access, look down-market first.",
+    finalVerdict: "SHED is the coaching-and-accountability pick among our affiliate providers, and its 4.6 across 1,134 Trustpilot reviews - full of specific, named praise for its onboarding and coaching staff - suggests the human layer is genuinely delivered, not just marketed. The 5%-in-120-days money-back guarantee is the most concrete promise in our ranking and takes real risk off the table. What you're weighing is price: at $199-$299/month it costs two to three times the entry tier at wellmedr or embody, and if you'd skip the coaching calls anyway, that premium buys you little. If you want medication plus real support with a safety net, SHED delivers; if you just want the cheapest possible GLP-1 access, look down-market first.",
     trustBadges: [
       "5% in 120 days or money back",
       "100% online visit + checkout",
@@ -1999,8 +2121,8 @@ const defaultReviews: ReviewData[] = [
     slug: "embody",
     providerId: "embody",
     updatedAt: "2026-09-08",
-    shortSummary: "Doctor-prescribed GLP-1 treatment - compounded semaglutide from $69/mo and tirzepatide from $119/mo - shipped in 1-2 days with no insurance required. Rated 3.7 across 7,250 Trustpilot reviews.",
-    reviewIntro: "embody offers doctor-prescribed GLP-1 weight loss treatment - compounded semaglutide and tirzepatide injections - through a 100% online process. Getting started takes a roughly 5-minute health qualifier, after which a medical practitioner reviews your chart (embody says usually within 24 hours, often under 5). Pricing is flat and simple: $69/month for semaglutide and $119/month for tirzepatide, with no insurance required, no hidden fees, and no clinic visits. Medication ships in 1-2 days in temperature-controlled, tracked, insured packaging, and embody is LegitScript-certified and works with US-based 503A compounding pharmacies. On Trustpilot, embody averages 3.7 across 7,250 reviews - an honest, mixed-to-positive record whose recent reviews cluster around two themes: responsive, proactive customer service ('from my very first inquiry I've had excellent communication... customer service updated me every step,' writes one tirzepatide patient) and the no-surprises pricing ('Love the fact that there are no surprises as in costly up front cost'). A 3.7 also means a minority of customers had negative experiences - worth reading both ends of the reviews before deciding, as with any provider.",
+    shortSummary: "Doctor-prescribed GLP-1 treatment - compounded semaglutide from $69/mo and tirzepatide from $119/mo - shipped in 1-2 days with no insurance required. Rated 3.8 across 8,398 Trustpilot reviews.",
+    reviewIntro: "embody offers doctor-prescribed GLP-1 weight loss treatment - compounded semaglutide and tirzepatide injections - through a 100% online process. Getting started takes a roughly 5-minute health qualifier, after which a medical practitioner reviews your chart (embody says usually within 24 hours, often under 5). Pricing is flat and simple: $69/month for semaglutide and $119/month for tirzepatide, with no insurance required, no hidden fees, and no clinic visits. Medication ships in 1-2 days in temperature-controlled, tracked, insured packaging, and embody is LegitScript-certified and works with US-based 503A compounding pharmacies. On Trustpilot, embody averages 3.8 across 8,398 reviews - an honest, mixed-to-positive record whose recent reviews cluster around two themes: responsive, proactive customer service ('from my very first inquiry I've had excellent communication... customer service updated me every step,' writes one tirzepatide patient) and the no-surprises pricing ('Love the fact that there are no surprises as in costly up front cost'). A 3.7 also means a minority of customers had negative experiences - worth reading both ends of the reviews before deciding, as with any provider.",
     keyFeatures: [
       "Compounded semaglutide ($69/mo) and tirzepatide ($119/mo)",
       "5-minute health qualifier; doctor review usually within 24 hrs",
@@ -2034,7 +2156,7 @@ const defaultReviews: ReviewData[] = [
       "Anyone who prefers a fully online process",
       "Those who want fast shipping and simple flat pricing"
     ],
-    finalVerdict: "embody is a strong choice for affordable, doctor-prescribed GLP-1 treatment - and an honest one to recommend, because its record is public: flat $69-$119/month with everything included, free 1-2 day cold shipping, LegitScript certification with US-based 503A pharmacies, a full refund if you're not approved, and 7,250 Trustpilot reviews averaging 3.7 whose recent pages consistently praise the customer-service communication. The realistic caveats: it's compounded-only and injectable-only, there's no coaching layer, and a 3.7 means not every experience lands well. For someone who wants the lowest-friction, no-commitment way to start GLP-1 treatment at a transparent price, it's one of the strongest offers in our ranking - compare it directly in embody vs wellmedr and altRx vs embody before deciding.",
+    finalVerdict: "embody is a strong choice for affordable, doctor-prescribed GLP-1 treatment - and an honest one to recommend, because its record is public: flat $69-$119/month with everything included, free 1-2 day cold shipping, LegitScript certification with US-based 503A pharmacies, a full refund if you're not approved, and 8,398 Trustpilot reviews averaging 3.8 whose recent pages consistently praise the customer-service communication. The realistic caveats: it's compounded-only and injectable-only, there's no coaching layer, and a 3.7 means not every experience lands well. For someone who wants the lowest-friction, no-commitment way to start GLP-1 treatment at a transparent price, it's one of the strongest offers in our ranking - compare it directly in embody vs wellmedr and altRx vs embody before deciding.",
     trustBadges: [
       "Money-back guarantee",
       "Free expedited delivery",
@@ -2282,7 +2404,7 @@ const defaultReviews: ReviewData[] = [
     providerId: "sprout",
     updatedAt: "2026-09-14",
     shortSummary: "Personalized GLP-1 telehealth program - compounded semaglutide from $149/month and tirzepatide from $199/month, with brand-name Wegovy also on the shelf - and prescriptions shipped within 2 days.",
-    reviewIntro: "Sprout is a telehealth GLP-1 program with a straightforward pitch: personalized treatment plans built around your health goals, prescriptions shipped within 2 days of approval, and a menu that covers both lanes - compounded semaglutide starting at $149/month and compounded tirzepatide at $199/month, with brand-name Wegovy available from $1,799/month for anyone set on the branded pen. There's a standing offer of $200 off the first month. Sprout doesn't publish an aggregate Trustpilot score, but the individual reviews we surface are real and consistently credit its support team - 'they were quick to respond and the process for approval worked seamlessly,' writes one customer, with several others naming specific support reps who fixed problems fast. Its pricing sits mid-market: above the $49-$99 value tier, below trimrx and SHED - the fair way to read Sprout is speed and personalization at a middle price.",
+    reviewIntro: "Sprout is a telehealth GLP-1 program with a straightforward pitch: personalized treatment plans built around your health goals, prescriptions shipped within 2 days of approval, and a menu that covers both lanes - compounded semaglutide starting at $149/month and compounded tirzepatide at $199/month, with brand-name Wegovy available from $1,799/month for anyone set on the branded pen. There's a standing offer of $200 off the first month. On Trustpilot, Sprout averages 4.1 across 188 reviews - a small base next to Medvi's or embody's, but a real one. The recent reviews consistently credit its support team - 'immediately answered by a LIVE CS rep. No bots,' writes one customer, with several others naming specific support reps who fixed problems fast - while the critical ones cite missing tracking notifications, a charge with no shipment after a skipped monthly check-in, thin injection instructions and one hair-loss report on compounded tirzepatide. Its pricing sits mid-market: above the $49-$99 value tier, below trimrx and SHED - the fair way to read Sprout is speed and personalization at a middle price.",
     keyFeatures: [
       "Compounded semaglutide from $149/mo",
       "Compounded tirzepatide from $199/mo",
@@ -2305,7 +2427,8 @@ const defaultReviews: ReviewData[] = [
       "Personalized plans built around your goals"
     ],
     cons: [
-      "No published Trustpilot aggregate score - individual reviews only",
+      "Small Trustpilot base - 4.1 across 188 reviews vs five-figure records at Medvi and embody",
+      "Reviewers report missing tracking notifications and a charge with no shipment after a skipped monthly check-in",
       "Mid-market pricing: $149 semaglutide vs $49-$99 at the value tier",
       "Plan terms and commitment details are thinner on the public site than rivals' - confirm at checkout"
     ],
@@ -2314,7 +2437,7 @@ const defaultReviews: ReviewData[] = [
       "Anyone who wants a brand-name Wegovy option alongside compounded plans",
       "Those who value personalized plans over the lowest sticker price"
     ],
-    finalVerdict: "Sprout earns its place as a mid-market pick: $149/month semaglutide and $199/month tirzepatide with prescriptions shipped within 2 days, a $200 first-month discount, and - unusually for this tier - a brand-name Wegovy shelf. The honest caveats: there's no published Trustpilot aggregate to verify the experience at scale (the individual reviews we can see skew positive and specific), and the value tier undercuts it by $50-$90/month on the same molecules. Pick Sprout for the speed, the personalization and the brand-name option; pick wellmedr or embody if the lowest compounded price is all that matters.",
+    finalVerdict: "Sprout earns its place as a mid-market pick: $149/month semaglutide and $199/month tirzepatide with prescriptions shipped within 2 days, a $200 first-month discount, and - unusually for this tier - a brand-name Wegovy shelf. The honest caveats: its Trustpilot record is small - 4.1 across 188 reviews, with the recent ones skewing positive about live support but flagging tracking gaps and a charge after a missed check-in - and the value tier undercuts it by $50-$90/month on the same molecules. Pick Sprout for the speed, the personalization and the brand-name option; pick wellmedr or embody if the lowest compounded price is all that matters.",
     trustBadges: [
       "$200 off your first month",
       "Ships within 2 days",
@@ -4717,13 +4840,13 @@ const embodySproutBattle: BattleData = {
   description:
     "embody ($69/mo semaglutide, 1-2 day cold-chain shipping, LegitScript-certified) vs Sprout ($149/mo, ships in 2 days, brand-name Wegovy available). Real prices, honest verdict.",
   intro:
-    "embody and Sprout both move fast - embody ships in 1-2 days with cold-chain packaging, Sprout ships prescriptions within 2 days of approval - so this matchup is really decided elsewhere. embody's case is price and verification: $69/month semaglutide and $119 tirzepatide (regularly $79/$129), flat month to month, LegitScript-certified with US 503A pharmacies and a public Trustpilot record (3.7 across 7,250 reviews). Sprout's case is breadth and personalization: plans built around your goals, $200 off the first month, and - unusually for its tier - brand-name Wegovy on the shelf from $1,799 alongside compounded semaglutide ($149) and tirzepatide ($199).",
+    "embody and Sprout both move fast - embody ships in 1-2 days with cold-chain packaging, Sprout ships prescriptions within 2 days of approval - so this matchup is really decided elsewhere. embody's case is price and verification: $69/month semaglutide and $119 tirzepatide (regularly $79/$129), flat month to month, LegitScript-certified with US 503A pharmacies and a public Trustpilot record (3.8 across 8,398 reviews). Sprout's case is breadth and personalization: plans built around your goals, $200 off the first month, and - unusually for its tier - brand-name Wegovy on the shelf from $1,799 alongside compounded semaglutide ($149) and tirzepatide ($199).",
   verdict:
     "embody wins for most people: it's $80/month cheaper on semaglutide, equally fast, and carries the certifications and public review record Sprout hasn't published yet. Choose Sprout if the brand-name path matters - it's the only one of the two that can put a Wegovy pen in the box - or if its personalized-plan model and $200 first-month discount fit how you want to start. On the same compounded molecules, though, the price gap is hard to argue with.",
   verdictWinnerPoints: [
     "$69/mo semaglutide, $119 tirzepatide - flat, month to month",
     "LegitScript-certified, US 503A pharmacies, refund if not approved",
-    "Public track record: 3.7 on Trustpilot across 7,250 reviews",
+    "Public track record: 3.8 on Trustpilot across 8,398 reviews",
   ],
   verdictLoserPoints: [
     "Brand-name Wegovy available (from $1,799/mo)",
@@ -4768,11 +4891,11 @@ const embodySproutBattle: BattleData = {
       name: "Verification & Track Record",
       winner: "provider1",
       explanation:
-        "embody is LegitScript-certified, names its US 503A pharmacy fulfillment, refunds you if a provider doesn't approve treatment, and carries a public Trustpilot record - 3.7 across 7,250 reviews, mixed but transparent. Sprout's individual reviews are positive and specific, but it publishes no aggregate score and fewer program details.",
+        "embody is LegitScript-certified, names its US 503A pharmacy fulfillment, refunds you if a provider doesn't approve treatment, and carries a public Trustpilot record - 3.8 across 8,398 reviews, mixed but transparent. Sprout scores higher on Trustpilot - 4.1 - but across only 188 reviews, and it publishes fewer program details.",
       supportingPoints: [
         "LegitScript certification + 503A pharmacies (embody)",
-        "3.7 across 7,250 public Trustpilot reviews (embody)",
-        "Positive individual reviews, no published aggregate (Sprout)",
+        "3.8 across 8,398 public Trustpilot reviews (embody)",
+        "4.1 across 188 Trustpilot reviews - higher score, small base (Sprout)",
       ],
     },
   ],
@@ -4781,7 +4904,7 @@ const embodySproutBattle: BattleData = {
     { feature: "First-month offer", provider1Value: "Promo pricing (reg. $79/$129)", provider2Value: "$200 off month one", highlight: "provider2" },
     { feature: "Brand-name option", provider1Value: "None", provider2Value: "Wegovy from $1,799/mo", highlight: "provider2" },
     { feature: "Shipping", provider1Value: "Free 1-2 day, cold-chain, insured", provider2Value: "Ships within 2 days", highlight: "both" },
-    { feature: "Trustpilot", provider1Value: "3.7 across 7,250 reviews", provider2Value: "No published aggregate", highlight: "provider1" },
+    { feature: "Trustpilot", provider1Value: "3.8 across 8,398 reviews", provider2Value: "4.1 across 188 reviews", highlight: "none" },
     { feature: "Certifications", provider1Value: "LegitScript, US 503A pharmacies", provider2Value: "Licensed provider review", highlight: "provider1" },
   ],
 };
@@ -4862,7 +4985,7 @@ const altrxSproutBattle: BattleData = {
     { feature: "Shipping", provider1Value: "Free, about 5-7 days", provider2Value: "Ships within 2 days", highlight: "provider2" },
     { feature: "First-month offer", provider1Value: "Promo pricing (reg. $199/$299)", provider2Value: "$200 off month one", highlight: "provider2" },
     { feature: "Payment", provider1Value: "Buy Now, Pay Later; pause anytime", provider2Value: "Standard monthly billing", highlight: "provider1" },
-    { feature: "Trustpilot", provider1Value: "No published aggregate", provider2Value: "No published aggregate", highlight: "none" },
+    { feature: "Trustpilot", provider1Value: "No published aggregate", provider2Value: "4.1 across 188 reviews", highlight: "provider2" },
   ],
 };
 
@@ -4877,7 +5000,7 @@ const sproutTrimrxBattle: BattleData = {
   description:
     "Sprout ($149/mo semaglutide, ships in 2 days, Wegovy available) vs trimrx ($149/mo flat at every dose, custom dosing, unlimited check-ins). Compared honestly.",
   intro:
-    "Sprout and trimrx occupy the same mid-market tier with opposite bets. Sprout keeps its price flat-ish and its logistics fast: semaglutide from $149/month, tirzepatide from $199, prescriptions shipped within 2 days, $200 off month one, and a brand-name Wegovy option. trimrx spends its budget on the care model: custom dosing set by your provider with unlimited check-ins included - priced at $149/month for semaglutide (the same at every dose) and $259 for tirzepatide - but its Trustpilot record is a mixed 3.6 across 5,497 reviews.",
+    "Sprout and trimrx occupy the same mid-market tier with opposite bets. Sprout keeps its price flat-ish and its logistics fast: semaglutide from $149/month, tirzepatide from $199, prescriptions shipped within 2 days, $200 off month one, and a brand-name Wegovy option. trimrx spends its budget on the care model: custom dosing set by your provider with unlimited check-ins included - priced at $149/month for semaglutide (the same at every dose) and $259 for tirzepatide - but its Trustpilot record is a mixed 3.7 across 5,670 reviews.",
   verdict:
     "Sprout takes this one narrowly. The two now match at $149/month on semaglutide, so the gap comes from everything around it: Sprout's tirzepatide is $60/month cheaper ($199 vs $259), it takes $200 off month one, ships within 2 days, and stocks brand-name Wegovy. trimrx keeps a real counter-case: dose-flat $149 with no long-term contract, plus custom dosing with unlimited provider check-ins - the only one of the two selling that care model. Its 3.6 Trustpilot average is the honest caveat.",
   verdictWinnerPoints: [
@@ -4938,10 +5061,10 @@ const sproutTrimrxBattle: BattleData = {
       name: "Track Record",
       winner: "tie",
       explanation:
-        "Neither side wins this cleanly. trimrx publishes a large record - 5,497 Trustpilot reviews - but at a 3.6 average, the weakest published score among providers we rank. Sprout's visible reviews are positive and name its support team specifically, but it publishes no aggregate at all. Volume with mixed marks vs positivity without scale: call it even, and read both.",
+        "Neither side wins this cleanly. trimrx publishes a large record - 5,670 Trustpilot reviews - but at a 3.7 average, the weakest published score among providers we rank. Sprout scores higher - 4.1 - but across only 188 reviews, with recent ones naming its support team specifically. Volume with mixed marks vs a better score on a small base: call it even, and read both.",
       supportingPoints: [
-        "3.6 across 5,497 reviews - big but mixed (trimrx)",
-        "Positive individual reviews, no aggregate (Sprout)",
+        "3.7 across 5,670 reviews - big but mixed (trimrx)",
+        "4.1 across 188 reviews - higher score, small base (Sprout)",
       ],
     },
   ],
@@ -4951,7 +5074,7 @@ const sproutTrimrxBattle: BattleData = {
     { feature: "Brand-name option", provider1Value: "Wegovy from $1,799/mo", provider2Value: "None", highlight: "provider1" },
     { feature: "Shipping", provider1Value: "Ships within 2 days", provider2Value: "Free tracked, often next-day", highlight: "both" },
     { feature: "Care model", provider1Value: "Personalized plans", provider2Value: "Custom dosing + unlimited check-ins", highlight: "provider2" },
-    { feature: "Trustpilot", provider1Value: "No published aggregate", provider2Value: "3.6 across 5,497 reviews", highlight: "none" },
+    { feature: "Trustpilot", provider1Value: "4.1 across 188 reviews", provider2Value: "3.7 across 5,670 reviews", highlight: "none" },
   ],
 };
 
@@ -4964,7 +5087,7 @@ const sproutWellmedrBattle: BattleData = {
   matchupLabel: "Sprout vs wellmedr",
   subtitle: "The market's lowest prices and a million-patient record vs 2-day fulfillment and a brand-name Wegovy option.",
   description:
-    "wellmedr ($49/mo semaglutide, 4.7 on Trustpilot, 1M+ patients) vs Sprout ($149/mo, ships in 2 days, Wegovy available). Real prices and an honest verdict.",
+    "wellmedr ($49/mo semaglutide, 4.6 on Trustpilot, 1M+ patients) vs Sprout ($149/mo, ships in 2 days, Wegovy available). Real prices and an honest verdict.",
   intro:
     "On paper this looks lopsided - wellmedr's $49/month semaglutide and $89 tirzepatide are the lowest prices in our ranking, backed by 1,000,000+ patients, a 4.6 Trustpilot average across 1,919 reviews and a weight-loss warranty. But the fine print gives Sprout its openings: wellmedr's headline rate takes a 12-month plan and standard delivery runs 3-5 business days, while Sprout ships within 2 days, takes $200 off your first month, and stocks brand-name Wegovy - something wellmedr's brand shelf (Ozempic $1,399, Zepbound $1,599) doesn't carry.",
   verdict:
@@ -4996,11 +5119,11 @@ const sproutWellmedrBattle: BattleData = {
       name: "Track Record",
       winner: "provider1",
       explanation:
-        "wellmedr pairs scale with score: medications used by over a million patients, a 4.6 Trustpilot average across 1,919 reviews, and a weight-loss warranty. Sprout's visible reviews are positive - responsive support comes up repeatedly - but there's no published aggregate and no comparable scale claim.",
+        "wellmedr pairs scale with score: medications used by over a million patients, a 4.6 Trustpilot average across 1,919 reviews, and a weight-loss warranty. Sprout's record is smaller - 4.1 across 188 Trustpilot reviews, with responsive support the recurring praise - and it makes no comparable scale claim.",
       supportingPoints: [
         "1,000,000+ patients (wellmedr)",
         "4.6 across 1,919 Trustpilot reviews (wellmedr)",
-        "Positive individual reviews, no aggregate (Sprout)",
+        "4.1 across 188 Trustpilot reviews (Sprout)",
       ],
     },
     {
@@ -5040,7 +5163,7 @@ const sproutWellmedrBattle: BattleData = {
     { feature: "Commitment", provider1Value: "12-month plan for the lowest rate", provider2Value: "$200 off month one; see site for terms", highlight: "provider2" },
     { feature: "Shipping", provider1Value: "Free, 3-5 business days, every 4 weeks", provider2Value: "Ships within 2 days", highlight: "provider2" },
     { feature: "Brand-name shelf", provider1Value: "Ozempic $1,399 · Zepbound $1,599", provider2Value: "Wegovy from $1,799", highlight: "both" },
-    { feature: "Trustpilot", provider1Value: "4.6 across 1,919 reviews", provider2Value: "No published aggregate", highlight: "provider1" },
+    { feature: "Trustpilot", provider1Value: "4.6 across 1,919 reviews", provider2Value: "4.1 across 188 reviews", highlight: "provider1" },
     { feature: "Guarantee", provider1Value: "Weight-loss warranty", provider2Value: "-", highlight: "provider1" },
   ],
 };

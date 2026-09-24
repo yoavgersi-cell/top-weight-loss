@@ -801,23 +801,23 @@ export const brandClusterArticles: Article[] = [
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-23",
-    updatedAt: "2026-09-15",
+    updatedAt: "2026-09-24",
     heroColor: "#EAF6EE",
     author: "Treatments Hub Staff",
     keyTakeaways: [
       "Sprout passes the clinical test: an online medical intake reviewed by a licensed provider, prescription medication only, and shipping within 2 days of approval.",
-      "Its visible customer reviews consistently praise fast, named support (\"shout out to Frank\"), but Sprout publishes no aggregate Trustpilot score, so there is no large-scale public proof.",
+      "Its Trustpilot record is real but small - 4.1 across 188 reviews - and the recent ones consistently praise fast, named support (\"shout out to Frank\"); the critical ones cite tracking gaps and a charge after a skipped check-in.",
       "Published prices hold at checkout: compounded semaglutide from $149/month, tirzepatide from $199/month, brand-name Wegovy from $1,799/month, with $200 off the first month.",
       "Choosing Sprout trades evidence-at-scale for speed, personalization and the Wegovy option; risk-averse buyers may prefer a provider with a bigger published record.",
     ],
     sections: [
       {
         heading: "The audit has to work differently for a newer brand",
-        body: `<p>For a provider like <a href="/weight-loss/reviews/medvi">Medvi</a>, the legitimacy question is settled by fourteen thousand public reviews. Sprout doesn't have that dataset - it publishes no aggregate Trustpilot score - so the honest audit runs on three other tests: does the clinical process have a real gate, do the published prices survive contact with the checkout page, and do the reviews that DO exist describe a functioning operation or a mailbox company?</p><p>Sprout passes the first test the way every legitimate telehealth provider does: an online medical intake reviewed by a licensed provider who decides whether GLP-1 treatment is appropriate. Prescription medication only - there's no "skip the doctor" path, which is exactly what you want to see. If prescribed, the medication ships within 2 days of approval.</p>`,
+        body: `<p>For a provider like <a href="/weight-loss/reviews/medvi">Medvi</a>, the legitimacy question is settled by fourteen thousand public reviews. Sprout doesn't have that dataset - its Trustpilot profile holds 188 reviews at a 4.1 average - so the honest audit runs on three other tests: does the clinical process have a real gate, do the published prices survive contact with the checkout page, and do the reviews that DO exist describe a functioning operation or a mailbox company?</p><p>Sprout passes the first test the way every legitimate telehealth provider does: an online medical intake reviewed by a licensed provider who decides whether GLP-1 treatment is appropriate. Prescription medication only - there's no "skip the doctor" path, which is exactly what you want to see. If prescribed, the medication ships within 2 days of approval.</p>`,
       },
       {
         heading: "What do Sprout reviews say?",
-        body: `<p>Sprout's visible customer reviews are individually verifiable and strikingly consistent about one thing: the support team responds, fast, and by name. "They were quick to respond and the process for approval worked seamlessly. Customer service was awesome, shout out to Frank!" writes one customer. Another: "Super easy to join, reasonably priced, effective, and great customer service. Frank Burton with customer support was really helpful and quick to respond." A third: "When I have had questions or problems their support staff is very quick to respond."</p><p>Read skeptically, that's a small sample - and we'd say so if the pattern were mixed. But the same named rep appearing across independent reviews is the signature of an actual, reachable support operation. What Sprout lacks is scale of evidence, not quality of it: there is no published aggregate score, so you can't verify the experience across thousands of customers the way you can at <a href="/weight-loss/reviews/wellmedr">wellmedr</a> (4.6 across 1,919) or Medvi (4.3 across 14,821).</p>`,
+        body: `<p>Sprout averages 4.1 across 188 Trustpilot reviews, and the recent ones are strikingly consistent about one thing: the support team responds, fast, and by name. "Everyone of my questions or concerns have been immediately answered by a LIVE CS rep. No bots," writes one customer. Another: "I am very happy with the customer service representative, Frank. I've had a few problems with getting my order on time and reached out to CSR, Frank. He was respectful, polite, and made everything right in a timely manner." A third, after nearly a year: "Several months into my subscription I had to adjust my plan and the team provided prompt response."</p><p>The critical reviews are specific too, which is what makes them useful. One 3-star reviewer received tracking on only two of "8 plus shipments" and reports an account suspended without notice; a 4-star reviewer says a missed monthly check-in meant "they just don't ship anything and charge you anyway"; another 4-star customer lost the weight but had to look up injection instructions on their own; and a 1-star reviewer reports heavy hair loss on Sprout's compounded tirzepatide. Sprout replies to the negative reviews publicly. What Sprout lacks is scale of evidence, not quality of it: 188 reviews is a fraction of the base at <a href="/weight-loss/reviews/wellmedr">wellmedr</a> (4.6 across 1,919) or Medvi (4.3 across 14,821), so the experience is harder to verify across thousands of customers.</p>`,
       },
       {
         heading: "Does Sprout's pricing hold at checkout?",
@@ -825,7 +825,7 @@ export const brandClusterArticles: Article[] = [
       },
       {
         heading: "So - is Sprout legit?",
-        body: `<p>Yes, with the caveats stated plainly: licensed-provider review before any prescription, published prices that hold, 2-day fulfillment, and reviews that describe reachable, named humans. What it can't yet offer is large-scale public proof - no aggregate score, no million-patient claim - so risk-averse buyers may prefer a provider with a bigger published record. If you go with Sprout, you're trading evidence-at-scale for speed, personalization and the Wegovy option.</p><p class="cta-row"><a href="/weight-loss/reviews/sprout">→ Read the full Sprout review: plans, pricing and real customer feedback</a></p><p class="cta-row"><a href="/weight-loss/embody-vs-sprout">→ How Sprout stacks up against embody's $69 flat price</a></p><p>This article is general information, not medical advice.</p>`,
+        body: `<p>Yes, with the caveats stated plainly: licensed-provider review before any prescription, published prices that hold, 2-day fulfillment, and reviews that describe reachable, named humans. What it can't yet offer is large-scale public proof - a 4.1 across 188 Trustpilot reviews, no million-patient claim - so risk-averse buyers may prefer a provider with a bigger published record. If you go with Sprout, you're trading evidence-at-scale for speed, personalization and the Wegovy option.</p><p class="cta-row"><a href="/weight-loss/reviews/sprout">→ Read the full Sprout review: plans, pricing and real customer feedback</a></p><p class="cta-row"><a href="/weight-loss/embody-vs-sprout">→ How Sprout stacks up against embody's $69 flat price</a></p><p>This article is general information, not medical advice.</p>`,
       },
     ],
   },
@@ -837,7 +837,7 @@ export const brandClusterArticles: Article[] = [
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-23",
-    updatedAt: "2026-09-15",
+    updatedAt: "2026-09-24",
     heroColor: "#EAF6EE",
     author: "Treatments Hub Staff",
     keyTakeaways: [
@@ -873,11 +873,11 @@ export const brandClusterArticles: Article[] = [
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-23",
-    updatedAt: "2026-09-15",
+    updatedAt: "2026-09-24",
     heroColor: "#EAF6EE",
     author: "Treatments Hub Staff",
     keyTakeaways: [
-      "People leave Sprout for price (its $149 semaglutide sits $50-90/month above the value tier), evidence (no published aggregate score), or a bigger brand-name selection.",
+      "People leave Sprout for price (its $149 semaglutide sits $50-90/month above the value tier), evidence (a 4.1 Trustpilot average across only 188 reviews), or a bigger brand-name selection.",
       "wellmedr sells the same compounded semaglutide for $49/month on a 12-month plan with a warranty and a 4.6 Trustpilot record across 1,919 reviews - $1,080/year less; Sprout's counter is 2-day fulfillment vs 3-5 days.",
       "altRx is the only other ranked provider with brand-name medication, and does it bigger and cheaper - Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 - plus $89 compounded semaglutide with BNPL.",
       "Other exits: embody $69 flat with 1-2 day cold-chain shipping, Medvi $99 promo with coaching and a 14k-review record, HealthRx $99 on a $1,188 prepaid plan, DirectMeds $147 with needle-free drops.",
@@ -885,7 +885,7 @@ export const brandClusterArticles: Article[] = [
     sections: [
       {
         heading: "Name the reason before you name the alternative",
-        body: `<p>People shop for Sprout alternatives for three distinct reasons, and each points somewhere different. If it's <strong>price</strong> - Sprout's $149 semaglutide sits $50-90/month above the value tier - the answer is the budget lane. If it's <strong>evidence</strong> - Sprout publishes no aggregate review score - the answer is a provider with a big public record. And if it's <strong>brand-name selection</strong> - Sprout stocks Wegovy only, at $1,799 - the answer is the one provider with a bigger, cheaper shelf.</p>`,
+        body: `<p>People shop for Sprout alternatives for three distinct reasons, and each points somewhere different. If it's <strong>price</strong> - Sprout's $149 semaglutide sits $50-90/month above the value tier - the answer is the budget lane. If it's <strong>evidence</strong> - Sprout's Trustpilot record is a 4.1 across just 188 reviews - the answer is a provider with a big public record. And if it's <strong>brand-name selection</strong> - Sprout stocks Wegovy only, at $1,799 - the answer is the one provider with a bigger, cheaper shelf.</p>`,
       },
       {
         heading: "The map, by what you'd actually gain",

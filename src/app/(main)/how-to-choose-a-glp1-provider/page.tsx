@@ -180,7 +180,7 @@ const ROWS: Row[] = [
     visit: "Online intake; ships within 2 days of approval",
     pharmacy: "Compounded plans plus brand-name Wegovy; pharmacy not named in our research",
     dosePricing: "Monthly; $200 off the first month",
-    critics: "Publishes no aggregate Trustpilot score and fewer plan-term details than rivals, so commitment and cancellation specifics are worth confirming before you pay.",
+    critics: "Trustpilot 4.1 across 188 reviews, the smallest base among providers here. Recent reviews praise live, named support; the critical ones cite missing tracking notifications, a charge with no shipment after a skipped monthly check-in, thin injection instructions, and one hair-loss report on tirzepatide.",
   },
   {
     id: "directmeds",

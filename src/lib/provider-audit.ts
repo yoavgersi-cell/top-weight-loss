@@ -99,6 +99,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Semaglutide price", value: "$149/month" },
       { label: "Tirzepatide price", value: "$199/month" },
       { label: "Brand-name option", value: "Wegovy $1,799/month" },
+      { label: "Trustpilot record", value: "4.1 across 188 reviews" },
     ],
   },
   "weight-loss:ro": {

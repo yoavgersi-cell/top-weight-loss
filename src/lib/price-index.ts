@@ -86,7 +86,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     tirzepatide: { price: "$199", note: "starting price" },
     shipping: "Prescription shipped within 2 days",
     commitment: "See provider site for plan terms",
-    trustpilot: null,
+    trustpilot: { rating: "4.1", count: "188" },
   },
   {
     providerId: "trimrx",
