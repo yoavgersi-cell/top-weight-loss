@@ -1,5 +1,6 @@
 import { Check, Star, ArrowUpRight, ShieldCheck } from "lucide-react";
 import { UK_WEIGHT_LOSS_SERVICES, type UkWeightLossService } from "@/data/uk-weight-loss";
+import { tpStarColor } from "@/components/trustpilot-rating";
 
 // UK weight-loss SERVICE comparison (compliance-framed). Compares the providers
 // as services - support model, process, delivery, programme pricing and verified
@@ -19,7 +20,7 @@ function ServiceCard({ s }: { s: UkWeightLossService }) {
         {s.trustpilotRating && (
           <div className="flex shrink-0 flex-col items-end">
             <div className="flex items-center gap-1 text-[14px] font-bold text-[#191919]">
-              <Star className="h-4 w-4 fill-[#00B67A] text-[#00B67A]" strokeWidth={0} />
+              <Star className="h-4 w-4" style={{ fill: tpStarColor(parseFloat(s.trustpilotRating)), color: tpStarColor(parseFloat(s.trustpilotRating)) }} strokeWidth={0} />
               {s.trustpilotRating}
             </div>
             {s.trustpilotReviewCount && (
@@ -77,7 +78,7 @@ function ServiceCard({ s }: { s: UkWeightLossService }) {
             <div key={r.name} className="rounded-lg border border-gray-100 bg-gray-50/60 p-3">
               <div className="flex items-center gap-1.5">
                 {Array.from({ length: r.rating }).map((_, i) => (
-                  <Star key={i} className="h-3 w-3 fill-[#00B67A] text-[#00B67A]" strokeWidth={0} />
+                  <Star key={i} className="h-3 w-3" style={{ fill: tpStarColor(r.rating), color: tpStarColor(r.rating) }} strokeWidth={0} />
                 ))}
                 <span className="ml-1 text-[12.5px] font-semibold text-[#191919]">{r.name}</span>
                 <span className="text-[11px] text-gray-400">· {r.location}</span>

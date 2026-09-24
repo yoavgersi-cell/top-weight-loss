@@ -4,6 +4,7 @@ import { ArrowRight, ArrowUpRight, Check, Star, ShieldCheck } from "lucide-react
 import { VERTICALS, DEFAULT_VERTICAL, isPublishedVertical, isHiddenVertical, type Provider, type RankingPosition, type ReviewData } from "@/lib/config";
 import { getConfig } from "@/lib/config-store";
 import { ProviderCta } from "@/components/provider-cta";
+import { tpStarColor } from "@/components/trustpilot-rating";
 
 // ───── Category icons ─────
 // Hand-drawn two-tone line icons (outline + light fill), matching the
@@ -261,7 +262,7 @@ function ProviderMiniCard({
 
       {provider.trustpilotRating ? (
         <div className="mt-3 flex items-center gap-1.5 text-[12.5px] text-gray-500">
-          <Star className="h-3.5 w-3.5 fill-[#00B67A] text-[#00B67A]" strokeWidth={0} />
+          <Star className="h-3.5 w-3.5" style={{ fill: tpStarColor(parseFloat(provider.trustpilotRating)), color: tpStarColor(parseFloat(provider.trustpilotRating)) }} strokeWidth={0} />
           <span className="font-bold text-gray-800">{provider.trustpilotRating}</span>
           <span>on Trustpilot</span>
           {provider.trustpilotReviewCount && <span className="text-gray-400">({provider.trustpilotReviewCount})</span>}

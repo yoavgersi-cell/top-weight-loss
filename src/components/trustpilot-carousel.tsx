@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { TrustpilotReview } from "@/lib/config";
+import { tpStarColor } from "@/components/trustpilot-rating";
 
 const TP_GREEN = "#00B67A";
 
@@ -15,7 +16,10 @@ function TrustpilotStar({ className }: { className?: string }) {
 }
 
 function TrustpilotStars({ rating, boxClass = "h-5 w-5" }: { rating: number; boxClass?: string }) {
-  // Fractional fill so e.g. 3.6 shows three full boxes + a ~60% box, like Trustpilot.
+  // Fractional fill so e.g. 3.6 shows three full boxes + a ~60% box, like
+  // Trustpilot - and Trustpilot's colour for that score (green only at 5 stars
+  // / 4.3+, light green, yellow, orange, red below).
+  const color = tpStarColor(rating);
   return (
     <div className="flex gap-0.5">
       {[...Array(5)].map((_, i) => {
@@ -24,7 +28,7 @@ function TrustpilotStars({ rating, boxClass = "h-5 w-5" }: { rating: number; box
           <div
             key={i}
             className={`flex items-center justify-center ${boxClass}`}
-            style={{ background: `linear-gradient(90deg, ${TP_GREEN} ${pct}%, #DCDCE6 ${pct}%)` }}
+            style={{ background: `linear-gradient(90deg, ${color} ${pct}%, #DCDCE6 ${pct}%)` }}
           >
             <TrustpilotStar className="h-[68%] w-[68%]" />
           </div>
