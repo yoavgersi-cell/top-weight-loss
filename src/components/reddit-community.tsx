@@ -20,6 +20,7 @@ export type RedditThread = {
   body: string[]; // real excerpt paragraphs
   replies?: RedditReply[];
   url?: string; // the thread's permalink, only when the operator supplied it
+  topic?: string; // why the thread is on the page - derived from its content, e.g. "Fulfillment / pricing"
 };
 
 export const REDDIT_COMMUNITY_FEEDBACK: Record<
@@ -40,6 +41,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
     threads: [
       {
         author: "Any_Style_4939",
+        topic: "Fulfillment / pricing",
         age: "3mo ago",
         title: "MY ALTRX EXPERIENCE!!",
         body: [
@@ -166,6 +168,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
         subreddit: "r/compoundedtirzepatide",
         url: "https://www.reddit.com/r/compoundedtirzepatide/comments/1utd6g7/has_anyone_tried_em_ie_embody_the_price_is_good/",
         author: "thegoldstandard55",
+        topic: "Dose changes / clinician access",
         age: "13d ago",
         upvotes: 4,
         body: [
@@ -177,6 +180,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
         subreddit: "r/compoundedtirzepatide",
         url: "https://www.reddit.com/r/compoundedtirzepatide/comments/1utd6g7/has_anyone_tried_em_ie_embody_the_price_is_good/",
         author: "MsButterflyStarr",
+        topic: "Switching providers / fulfillment",
         age: "6d ago",
         upvotes: 2,
         body: [
@@ -195,6 +199,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "Comfortable_Whole343",
+        topic: "Pricing / refills / support",
         age: "2mo ago",
         upvotes: 5,
         body: [
@@ -221,6 +226,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "SaltAvocado9500",
+        topic: "Clinical follow-up",
         body: [
           "“Nurse called me today asking have I taken the shot and if yes have I experienced any symptoms.”",
           "Ordered on 8/6, medication delivered 8/14 - with a clinical follow-up call after the first dose.",
@@ -228,6 +234,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "Next_Sector_7726",
+        topic: "Fulfillment",
         age: "6d ago",
         upvotes: 1,
         body: [
@@ -236,12 +243,14 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "Comfortable_Whole343",
+        topic: "Pricing / dose changes",
         body: [
           "“$129 for all levels of tri and no contract - I already moved up my dosages with no issues or kick back.”",
         ],
       },
       {
         author: "LondyRocks",
+        topic: "Fulfillment / pricing",
         body: [
           "“Arrived the next day from the pharmacy. Packaged nicely with ice packs.”",
           "Three vials at $129 each; the honest catch: about two weeks between approval and the medication actually shipping - transit itself was next-day.",
@@ -249,6 +258,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "TheseFrosting6548",
+        topic: "Fulfillment / billing",
         body: [
           "Order sat at the pharmacy for a couple of days - then, after a comment on embody's Facebook post: “they contacted me right away... rushed my order. I had it next day.”",
           "“They just billed for the 2nd month - the amount is correct.” Gripes: the pharmacy premixed an anti-nausea ingredient without asking, and the 50-unit doses were larger than expected.",
@@ -256,6 +266,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "Maybee77",
+        topic: "Overall experience",
         body: ["“No complaints.”"],
       },
     ],
@@ -271,6 +282,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       {
         subreddit: "r/telehealth",
         author: "marlsygarlsy",
+        topic: "Results / clinician access / cost",
         age: "6mo ago",
         title: "Medvi GLP-1 telehealth experience breakdown",
         upvotes: 55,
@@ -291,6 +303,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       {
         subreddit: "r/productreview",
         author: "External-Neck-7278",
+        topic: "Results over a full year",
         age: "6mo ago",
         title: "My 2026 MEDVI review after using it for a full year",
         upvotes: 55,
@@ -323,6 +336,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
     threads: [
       {
         author: "Opposite_You3133",
+        topic: "Results / pricing",
         age: "5mo ago",
         upvotes: 11,
         body: [
@@ -332,6 +346,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "Upstairs_Procedure33",
+        topic: "Results / brand-name via insurance",
         age: "5mo ago",
         upvotes: 1,
         body: [
@@ -340,11 +355,13 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "Thick_Ad_2011",
+        topic: "Results",
         age: "5mo ago",
         body: ["“I've been on Ro for 3 months and have lost 22 pounds! Extremely happy!”"],
       },
       {
         author: "PrestigiousRest7476",
+        topic: "Results / cost",
         age: "5mo ago",
         upvotes: 1,
         body: [
@@ -353,6 +370,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "KitchenYam8596",
+        topic: "Pricing clarity",
         age: "4mo ago",
         upvotes: 1,
         body: [
@@ -371,6 +389,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
     threads: [
       {
         author: "Fun-Violinist-6449",
+        topic: "Pharmacy / pricing",
         age: "2mo ago",
         upvotes: 2,
         body: [
@@ -379,6 +398,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "Ok_Rub4064",
+        topic: "Pricing",
         age: "11d ago",
         upvotes: 1,
         body: [
@@ -387,6 +407,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "Useful-Commercial-49",
+        topic: "Switching providers / results",
         age: "4mo ago",
         upvotes: 1,
         body: [
@@ -396,6 +417,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "Fun-Violinist-6449",
+        topic: "Overall experience",
         age: "2mo ago",
         upvotes: 2,
         body: [
@@ -404,12 +426,14 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
       {
         author: "GlippyApp",
+        topic: "Overall experience",
         age: "16d ago",
         upvotes: 2,
         body: ["“We have some members using them and they like them.”"],
       },
       {
         author: "Professional_Tree843",
+        topic: "Legitimacy",
         age: "1mo ago",
         upvotes: 1,
         body: ["“They are legit”"],
@@ -577,6 +601,12 @@ function ThreadCard({
         </span>
       </div>
 
+      {thread.topic && (
+        <p className="mb-2 text-[11.5px] text-gray-500">
+          <span className="font-semibold text-[#191919]">Topic:</span> {thread.topic}
+        </p>
+      )}
+
       {thread.title && (
         <p className="mb-1.5 text-[14px] font-bold leading-snug text-[#191919]">{thread.title}</p>
       )}
@@ -628,9 +658,15 @@ function ThreadCard({
 export function RedditThreadCarousel({
   providers,
   reviewHrefFor,
+  title,
+  intro,
 }: {
   providers: { id: string; name: string }[];
   reviewHrefFor: (providerId: string) => string;
+  /** Override the default "What Reddit says about X and Y" heading. */
+  title?: string;
+  /** Override the default one-line intro (e.g. with a methodology note). */
+  intro?: React.ReactNode;
 }) {
   const withData = providers.filter((p) => REDDIT_COMMUNITY_FEEDBACK[p.id]);
   if (withData.length === 0) return null;
@@ -650,14 +686,18 @@ export function RedditThreadCarousel({
     <div className="mb-14">
       <div className="mb-2 flex items-center gap-2.5">
         <RedditMark className="h-7 w-7 shrink-0" />
-        <h2 className="text-[20px] font-bold text-[#191919]">What Reddit says about {names}</h2>
+        <h2 className="text-[20px] font-bold text-[#191919]">{title ?? `What Reddit says about ${names}`}</h2>
       </div>
-      <p className="mb-5 max-w-[640px] text-[14.5px] leading-relaxed text-gray-700">
-        Excerpts from real public Reddit posts and comments - the strengths and the caveats, in
-        users&rsquo; own words.
-        {withData.length < providers.length &&
-          " We only show providers with verified Reddit material, so not every contender appears here."}
-      </p>
+      {intro ? (
+        <div className="mb-5 max-w-[720px] text-[14.5px] leading-relaxed text-gray-700">{intro}</div>
+      ) : (
+        <p className="mb-5 max-w-[640px] text-[14.5px] leading-relaxed text-gray-700">
+          Excerpts from real public Reddit posts and comments - the strengths and the caveats, in
+          users&rsquo; own words.
+          {withData.length < providers.length &&
+            " We only show providers with verified Reddit material, so not every contender appears here."}
+        </p>
+      )}
 
       <div className="-mx-1 flex snap-x snap-mandatory gap-4 overflow-x-auto px-1 pb-2 [scrollbar-width:thin]">
         {cards.map(({ provider, thread }, i) => (

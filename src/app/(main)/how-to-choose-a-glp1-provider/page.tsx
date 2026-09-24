@@ -1,26 +1,27 @@
 import type { Metadata } from "next";
 import { Fragment } from "react";
 import Link from "next/link";
-import { ShieldCheck, Stethoscope, Search, AlertTriangle } from "lucide-react";
+import { ArrowRight, ShieldCheck, Stethoscope, Search, AlertTriangle, ClipboardList } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { LastUpdated } from "@/components/last-updated";
 import { GuideCluster } from "@/components/guide-cluster";
-import { ProductCarousel } from "@/components/product-carousel";
-import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/reddit-community";
-import { RichComparisonCard } from "@/components/rich-comparison-card";
+import { TrustpilotRating } from "@/components/trustpilot-rating";
+import { ProviderCta } from "@/components/provider-cta";
 import { rankedCardItems } from "@/components/top-providers-block";
-import { MedicalSources } from "@/components/medical-sources";
+import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
 import { getConfig } from "@/lib/config-store";
 import { PRICE_INDEX, PRICE_INDEX_VERIFIED } from "@/lib/price-index";
+import type { TrustpilotReview } from "@/lib/config";
 
 export const revalidate = 60;
 
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/how-to-choose-a-glp1-provider";
 const TITLE = "How to Choose a GLP-1 Provider (2026): 12 Things to Check Before You Sign Up";
 const DESCRIPTION =
-  "How to pick an online GLP-1 provider and tell which ones have real doctors involved: a 12-point checklist, a 10-provider table of clinician access, pharmacies, verified prices and Trustpilot records, plus what critics say about each.";
+  "How to choose an online GLP-1 provider: a 12-point checklist, how involved a licensed clinician really is, and a 10-provider research table of clinician access, pharmacies, verified prices and Trustpilot records, plus what patients report on Reddit.";
 const PUBLISHED = "2026-09-24";
+const UPDATED = "2026-09-24";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -31,92 +32,101 @@ export const metadata: Metadata = {
 
 // ───── The 12-point checklist ─────
 // Every "how to verify" is something a reader can do themselves in minutes.
+// "Red flag" items are due-diligence prompts, not accusations: they name what
+// to investigate or ask before paying.
 const CHECKLIST: { title: string; check: string; verify: string; redFlag: string }[] = [
   {
     title: "A licensed clinician who can say no",
     check: "Who reviews your intake - a physician, physician associate or nurse practitioner - and whether they are allowed to decline you.",
-    verify: "Read the how-it-works page for the words \"licensed provider reviews\" and \"if appropriate\". A provider that refunds you when you are not approved (embody does) has, by definition, a real gate.",
-    redFlag: "Instant approval, or a checkout page you reach before any health question is asked.",
+    verify: "Read the how-it-works page for the words \"licensed provider reviews\" and \"if appropriate\". A refund-if-not-approved policy (embody publishes one) is a sign that declines actually happen.",
+    redFlag: "Worth investigating: approval that appears instant, or a checkout page you reach before any health question is asked.",
   },
   {
     title: "A real medical intake",
-    check: "Whether the questionnaire asks the questions a prescriber legally needs: personal or family history of medullary thyroid carcinoma or MEN 2, pancreatitis, pregnancy or plans to conceive, current medications.",
+    check: "Whether the questionnaire asks the questions a prescriber needs: personal or family history of medullary thyroid carcinoma or MEN 2, pancreatitis, pregnancy or plans to conceive, current medications.",
     verify: "Start the free assessment and stop before payment. If none of those questions appear, nobody is screening for the contraindications on the FDA label.",
-    redFlag: "A three-question form that only asks your weight, height and card number.",
+    redFlag: "Ask before paying if the form only asks your weight, height and card details.",
   },
   {
     title: "Async or live: know which you are buying",
     check: "Most telehealth GLP-1 care is asynchronous: you submit an intake, a clinician reviews it, you message afterward. That is legal and normal. Some providers add live video visits.",
-    verify: "Medvi runs video visits with providers and scheduled monitoring, and embody reviewers describe scheduled appointments and video calls; the others in our ranking are intake-and-message models, some with a follow-up call if the clinician needs more information.",
-    redFlag: "A site that implies a doctor \"consultation\" but never offers a way to reach one after the prescription.",
+    verify: "Medvi describes video visits with providers and scheduled monitoring, and embody reviewers describe scheduled appointments and video calls; the others in our table describe intake-and-message models, some with a follow-up call if the clinician needs more information.",
+    redFlag: "A site that describes a doctor \"consultation\" but states no way to reach a clinician after the prescription. Ask how follow-up works.",
   },
   {
     title: "Which pharmacy fills it",
     check: "Compounded semaglutide and tirzepatide come from a compounding pharmacy, not the brand manufacturer. Ask whether it is a US state-licensed 503A pharmacy or a 503B outsourcing facility, and whether the provider names it.",
     verify: "Look for the pharmacy type on the site, or ask support before paying. LegitScript certification is an independent check that the pharmacy relationships are real; embody and HealthRx publish theirs.",
-    redFlag: "A provider that will not tell you where the medication comes from, or ships from outside the US.",
+    redFlag: "Worth investigating: a provider that will not say where the medication comes from, or ships from outside the US.",
   },
   {
     title: "Base form, not a salt",
     check: "The FDA has warned about compounded products made with semaglutide sodium or semaglutide acetate. Approved semaglutide is the base form, and legitimate compounders use the same.",
     verify: "Ask which form the pharmacy compounds. A legitimate provider answers in one line.",
-    redFlag: "Evasion, or marketing that avoids the word \"compounded\" entirely.",
+    redFlag: "Worth investigating: an evasive answer about the form, or marketing that avoids the word \"compounded\" entirely.",
   },
   {
     title: "The real monthly cost",
     check: "Medication plus membership plus consultation plus shipping plus supplies. Then the difference between the intro price and the ongoing price.",
     verify: "Our price index prints every provider's published rate and the condition attached to it. Ro, for example, bills medication and membership separately; embody's $69 is the whole bill.",
-    redFlag: "A headline price with an asterisk you cannot resolve before checkout.",
+    redFlag: "A headline price with a condition you cannot resolve before checkout. Ask for the full monthly total.",
   },
   {
     title: "What happens to the price when your dose goes up",
     check: "GLP-1 treatment titrates upward over several months. Providers that price per dose quote the starter dose and re-bill you exactly when you are most committed.",
     verify: "Ask one question: \"At my maintenance dose, what do I pay?\" altRx, wellmedr, trimrx, DirectMeds, embody, HealthRx and Medvi all state a flat price at every dose.",
-    redFlag: "\"From $X\" with no maintenance-dose figure anywhere on the site.",
+    redFlag: "\"From $X\" with no maintenance-dose figure anywhere on the site. Ask what you pay at your maintenance dose.",
   },
   {
     title: "Dose changes and refills",
     check: "How you request a dose change, how fast refills ship, and what happens if you transfer from another provider mid-treatment.",
     verify: "Read the refill and shipping terms. trimrx advertises unlimited check-ins; HealthRx and embody state their shipping windows; Medvi builds dose adjustments into monitoring.",
-    redFlag: "No stated refill cadence, or a support address that is only a contact form.",
+    redFlag: "No stated refill cadence, or support reachable only through a contact form. Ask before paying.",
   },
   {
     title: "Cancellation and refunds",
     check: "Whether you can stop at any renewal, whether there is a minimum term, and what you get back if the clinician does not approve you.",
     verify: "embody refunds in full if not approved and has no commitment; trimrx has no long-term contract; wellmedr's $49 rate wants a 12-month plan; HealthRx charges $1,188 upfront. None of these is wrong, but you should know which one you are signing.",
-    redFlag: "Auto-renew terms you can only find in the checkout fine print.",
+    redFlag: "Auto-renew terms you can only find in the checkout fine print. Read them before you pay.",
   },
   {
     title: "The Trustpilot record, with the count",
     check: "The aggregate score means little without the volume behind it. Read the recurring themes in the low-star reviews, not the headline number.",
     verify: "We print rating and review count for every provider where we have verified the profile. Medvi's 4.3 across 14,821 reviews and embody's 3.8 across 8,398 are both real records; they tell different stories.",
-    redFlag: "A perfect 5.0 on a handful of reviews, or a provider with no public review profile at all.",
+    redFlag: "A perfect 5.0 on a handful of reviews, or no public review profile at all. Neither proves anything is wrong; both mean less evidence.",
   },
   {
     title: "What Reddit actually says",
     check: "Not \"Reddit says they're good or bad\", but the themes that repeat across independent posts: shipping delays, dose access, billing surprises, results.",
     verify: "We only quote threads we have verified. Where a provider has them, they are on its review page and summarized below.",
-    redFlag: "A provider whose only mentions are its own promotional posts.",
+    redFlag: "A provider whose only mentions are its own promotional posts. Treat that as an absence of evidence, not a verdict.",
   },
   {
     title: "Whether they are honest about compounded medication",
     check: "Compounded drugs are not FDA-approved products. A legitimate provider says so on the page, near the price, and does not call its vials \"generic Ozempic\".",
-    verify: "Search the site for the disclosure. Every provider in our table carries one.",
-    redFlag: "\"FDA-approved\" used to describe a compounded vial.",
+    verify: "Search the site for the disclosure. Every provider in our table carried one on the pages we reviewed.",
+    redFlag: "\"FDA-approved\" used to describe a compounded vial. That wording is inaccurate; ask the provider to clarify what it is selling.",
   },
 ];
 
 // ───── The provider table ─────
 // Every cell is a verified statement from our review research or the price
 // index. Where we have not verified something, the cell says so rather than
-// guessing. Ordered by the ranking.
+// guessing. Ordered by the ranking. The review lines under each row separate
+// their sources: the Trustpilot aggregate, individual Trustpilot reviews we
+// captured, Reddit threads we verified, and the provider's own published claims.
 type Row = {
   id: string;
   clinician: string;
   visit: string;
   pharmacy: string;
   dosePricing: string;
-  critics: string;
+  /** Recurring positives in the reviews we captured, with the source named. */
+  likes?: string;
+  /** Recurring complaints in the reviews we captured, with the source named. */
+  complaints?: string;
+  /** Structural observations from our research where review evidence is thin. */
+  note?: string;
 };
 const ROWS: Row[] = [
   {
@@ -125,7 +135,8 @@ const ROWS: Row[] = [
     visit: "Online assessment; doctor follow-up (reviewers describe a video call with an MD and messaging support)",
     pharmacy: "Ro's own integrated pharmacy; brand-name medication (Wegovy pill, Zepbound)",
     dosePricing: "Medication billed separately from the membership; insurance can apply",
-    critics: "Trustpilot 3.9 across 6,690 reviews. Low-star reviews from the past week name three things: the $39 initial fee being for the consultation, not the medication, and a separate subscription charge on top of the monthly one; support by messaging only, with replies in 2-3 business days and no phone number; and delivery, including a 4-day delay that arrived with melted ice packs and no clear answer on whether to use it. One 2-star reviewer chose a medication and was charged before speaking to a physician. In the Reddit threads we verified, cost is the recurring friction.",
+    likes: "The 5-star Trustpilot reviews from the same week are about sign-up (\"quick and easy\", \"exceptional in every respect\") and, in one, an NP appointment that ran on time. In the Reddit threads we verified, results of 22 to 60 pounds and a process one user called seamless.",
+    complaints: "Low-star Trustpilot reviews from the past week name three things: the $39 initial fee being for the consultation, not the medication, and a separate subscription charge on top of the monthly one; support by messaging only, with replies in 2-3 business days and no phone number; and delivery, including a 4-day delay that arrived with melted ice packs. One 2-star reviewer chose a medication and was charged before speaking to a physician. On Reddit, cost is the recurring friction: the most upvoted commenter left over price after an otherwise good experience.",
   },
   {
     id: "altrx",
@@ -133,7 +144,8 @@ const ROWS: Row[] = [
     visit: "Online assessment, clinician review, messaging; pause or cancel anytime",
     pharmacy: "Licensed pharmacies in both lanes: compounded plans and a brand-name shelf (Ozempic, Zepbound, Wegovy)",
     dosePricing: "Flat at every dose; Buy Now, Pay Later available",
-    critics: "Self-serve model with no coaching layer and no money-back promise. In one verified Reddit account the compounded additive blend caused dehydration that faded as levels dropped; another user waited more than a day for a script.",
+    likes: "No public Trustpilot aggregate; the individual reviews we captured (4- and 5-star) credit fast sign-up and reachable support. In the verified Reddit thread, approval in about four hours and cold-shipped vials in two days, rated 10/10 by the poster.",
+    complaints: "In the same Reddit thread, one user's compounded additive blend caused dehydration that faded as levels dropped, and another waited more than a day for a script. Structurally: a self-serve model with no coaching layer and no money-back promise.",
   },
   {
     id: "embody",
@@ -141,7 +153,8 @@ const ROWS: Row[] = [
     visit: "Online intake; reviewers describe scheduled provider appointments, including video calls, and dose-increase appointments",
     pharmacy: "US 503A compounding pharmacies; LegitScript-certified",
     dosePricing: "Flat monthly, no commitment; full refund if not approved",
-    critics: "Trustpilot 3.8 across 8,398 reviews. The low-star reviews from the past week are specific: a doctor who missed three video appointments before a call four days late; a first dose that took 8 days against a 3-5 day promise, then a refill 3 days overdue; a billing dispute bounced between support agents with no resolution. The praise is equally specific: providers who listen, dose adjustments made, an account manager who fixed a broken portal. On Reddit the recurring line is 'great if you don't need to actually talk to anyone': same-day approvals and a switcher's order matched to their previous dose, against a refill flow one user couldn't find and support replies another called AI-generated.",
+    likes: "Recent 5-star Trustpilot reviews describe providers who listen, dose adjustments made, and an account manager who fixed a broken portal. On Reddit: same-day approval, a vial within a week, and a switcher whose order was matched to their previous dose.",
+    complaints: "Low-star Trustpilot reviews from the past week are specific: a doctor who missed three video appointments before a call four days late; a first dose that took 8 days against a 3-5 day promise, then a refill 3 days overdue; a billing dispute bounced between support agents. On Reddit the recurring line is \"great if you don't need to actually talk to anyone\": a refill flow one user couldn't find, and support replies another called AI-generated.",
   },
   {
     id: "trimrx",
@@ -149,7 +162,8 @@ const ROWS: Row[] = [
     visit: "Online assessment; follow-up call if needed; unlimited check-ins",
     pharmacy: "Compounded only; pharmacy not named in our research",
     dosePricing: "Same price at every dose; no long-term contract, optional multi-month discounts",
-    critics: "Trustpilot 3.7 across 5,670 reviews, the lowest aggregate in our ranking. The 2-star reviews from the past week are about fulfillment and billing, not the clinic: a box three days late with warm cold packs, a prepaid 6-month plan whose second shipment was 30 days overdue with chat and phone unanswered, a cancelled prescription that Affirm kept trying to bill, and one first order with someone else's prescription in the portal and a bill double the quoted price. The 5-star reviews from the same week praise intake clarity, communication and cold shipping. $149 sits well above the budget tier for the same molecule, with no guarantee behind it.",
+    likes: "The 5-star Trustpilot reviews from the same week praise a thorough screening, a clear intake, clear pricing, fast support replies and plainly labelled 2-3 day shipping.",
+    complaints: "The 2-star reviews from the same week are about fulfillment and billing, not the clinic: a box three days late with warm cold packs, a prepaid 6-month plan whose second shipment was 30 days overdue with chat and phone unanswered, a cancelled prescription that Affirm kept trying to bill, and one first order with someone else's prescription in the portal. At 3.7 across 5,670 the aggregate is the lowest in our table. $149 sits above the budget tier for the same molecule, with no guarantee behind it.",
   },
   {
     id: "shed",
@@ -157,7 +171,8 @@ const ROWS: Row[] = [
     visit: "100% online visit and checkout; health coaching on every plan",
     pharmacy: "Compounded semaglutide or tirzepatide; pharmacy not named in our research",
     dosePricing: "Monthly, 20% off month one; HSA/FSA",
-    critics: "Trustpilot 4.6 across 1,134 reviews, one of the two highest aggregates in our ranking, and the recent reviews we captured are mostly about named support staff resolving issues. The exception is a 1-star from September describing charges that continued for months after stopping, AI-only chat support, and a refused refund of $1,200, now in a card dispute. At $199 it is the premium of the compounded market: you are paying for coaching and a results guarantee, not for the medication.",
+    likes: "The recent Trustpilot reviews we captured are mostly about named support staff resolving issues and a personal touch in communications; 4.6 across 1,134 is one of the two highest aggregates in our table.",
+    complaints: "One 1-star review from September describes charges that continued for months after stopping, AI-only chat support, and a refused refund of $1,200, now in a card dispute. At $199 it is the premium of the compounded market: the price buys coaching and a results guarantee, not a different medication.",
   },
   {
     id: "wellmedr",
@@ -165,7 +180,8 @@ const ROWS: Row[] = [
     visit: "Online intake, clinician review, coach support",
     pharmacy: "Regulated US pharmacy; Reddit commenters name its Florida pharmacy",
     dosePricing: "Same price at every dose; best rate on a 12-month plan, billed monthly",
-    critics: "Trustpilot 4.6 across 1,919 reviews. The low-star reviews from September are almost all about reaching someone: an order stuck at \"delay in shipping\" for 8 days with support unable to find the account, a request unanswered after 24 hours, chat and phone going unanswered until an operations manager stepped in, one shipment that sat at the pharmacy for over a week. Several of those reviewers raised their rating after that call. One August reviewer states they were charged every 21 days rather than monthly; we have not verified wellmedr's billing cadence and are asking. The $49 rate requires the 12-month plan.",
+    likes: "5-star Trustpilot reviews credit reaching a person within minutes, quick answers from named agents, and a smooth switch from another provider; several low-star reviewers raised their rating after an operations manager called. On Reddit, short verdicts: \"legit\", a named Florida pharmacy, and annual-plan prices that match the published rates.",
+    complaints: "Low-star Trustpilot reviews from September are almost all about reaching someone: an order stuck at \"delay in shipping\" for 8 days with support unable to find the account, a request unanswered after 24 hours, chat and phone unanswered until a manager stepped in, one shipment that sat at the pharmacy for over a week. One August reviewer states they were charged every 21 days rather than monthly; we have not verified wellmedr's billing cadence. On Reddit, one detailed account was down only 1 pound after 8 weeks despite good service. The $49 rate requires the 12-month plan.",
   },
   {
     id: "medvi",
@@ -173,7 +189,8 @@ const ROWS: Row[] = [
     visit: "Video visits with providers, scheduled monitoring, a dietician and care coaching",
     pharmacy: "Compounded; pharmacy not named in our research",
     dosePricing: "All-inclusive; no dose-based increases; HSA/FSA",
-    critics: "Trustpilot 4.3 across 14,821 reviews, the largest verified base in our ranking. The 1-star reviews from September are serious and specific: a prepaid annual plan renewed after 11 shipments without notice, refunded only after BBB, FTC and state attorney-general complaints; a charge taken before any clinician contact, followed by a wrong-dose shipment and a refused refund; a transferring patient sent a starter dose repeatedly instead of the maintenance dose; communication stopping after five months and no cancellation confirmation across three calls. The 5-star reviews from the same week are about the video visits and nurse practitioners. One reviewer says tirzepatide tops out at 11.125 mg; we have not verified that. Not the cheapest semaglutide, and the $99 rate is promotional against $199.",
+    likes: "The 5-star Trustpilot reviews from the same week are about the video visits and nurse practitioners: thorough calls, questions answered fully, a provider who \"took her time\". Two year-long Reddit write-ups report 40 pounds and just under 15% of body weight lost, with dose adjustments when progress stalled. 4.3 across 14,821 is the largest verified base in our table.",
+    complaints: "The 1-star Trustpilot reviews from September are serious and specific: a prepaid annual plan renewed after 11 shipments without notice, refunded only after BBB, FTC and state attorney-general complaints; a charge taken before any clinician contact, followed by a wrong-dose shipment and a refused refund; a transferring patient sent a starter dose repeatedly; communication stopping after five months. One reviewer says tirzepatide tops out at 11.125 mg; we have not verified that. The $99 rate is promotional against $199, and Reddit users name the ongoing monthly cost as the caveat.",
   },
   {
     id: "sprout",
@@ -181,7 +198,8 @@ const ROWS: Row[] = [
     visit: "Online intake; ships within 2 days of approval",
     pharmacy: "Compounded plans plus brand-name Wegovy; pharmacy not named in our research",
     dosePricing: "Monthly; $200 off the first month",
-    critics: "Trustpilot 4.1 across 188 reviews, the smallest base among providers here. Recent reviews praise live, named support; the critical ones cite missing tracking notifications, a charge with no shipment after a skipped monthly check-in, thin injection instructions, and one hair-loss report on tirzepatide.",
+    likes: "Recent 5-star Trustpilot reviews praise live, named support (\"a LIVE CS rep. No bots\"), easy pauses and plan changes, and one 20-pound result. 4.1 across 188 reviews is the smallest base among providers here.",
+    complaints: "The 3- and 4-star reviews cite missing tracking notifications on most shipments, a charge with no shipment after a skipped monthly check-in, and thin injection instructions; one 1-star reports heavy hair loss on compounded tirzepatide. No Reddit threads verified yet.",
   },
   {
     id: "directmeds",
@@ -189,7 +207,8 @@ const ROWS: Row[] = [
     visit: "Online intake, physician review; no membership, cancel anytime",
     pharmacy: "Compounded; pharmacy not named in our research",
     dosePricing: "Flat $147 for either medication at any dose, injections or sublingual drops",
-    critics: "No coaching layer and no brand-name shelf. The needle-free drops are a clinician-discretion format: the major trials studied injections.",
+    likes: "The Trustpilot aggregate (4.6 across 13,901) is from an earlier capture, and the three individual reviews we hold are 5-star and about named support agents.",
+    complaints: "None captured in our research yet. Structurally: no coaching layer and no brand-name shelf, and the needle-free drops are a clinician-discretion format - the major trials studied injections.",
   },
   {
     id: "healthrx",
@@ -197,25 +216,72 @@ const ROWS: Row[] = [
     visit: "Free two-minute assessment, clinician review, care-team check-ins",
     pharmacy: "Licensed 503A pharmacies; LegitScript certificate 50087439",
     dosePricing: "Plan price does not change with dose; $99/month is $1,188 prepaid for the year",
-    critics: "You prepay twelve months before knowing how you tolerate the medication, and a newer brand means a thin public review record.",
+    note: "No Trustpilot aggregate verified and no reviews captured; a newer brand with a thin public record. The structural trade-off is the prepayment: twelve months before knowing how you tolerate the medication.",
   },
 ];
+
+// ───── Key patterns ─────
+// Editorial synthesis drawn only from the rows above and the price index.
+const PATTERNS: { title: string; body: string }[] = [
+  {
+    title: "Licensed review is the norm; access afterward is the variable",
+    body: "Every provider in the table describes a licensed clinician reviewing the intake before a prescription. What differs is what happens next: Medvi describes live video visits and scheduled monitoring, trimrx advertises unlimited check-ins, embody reviewers describe scheduled appointments, and the rest are intake-and-message models. The complaints at ro, embody and wellmedr are about reaching someone, not about the review itself.",
+  },
+  {
+    title: "The headline price rarely stands alone",
+    body: "wellmedr's $49 requires a 12-month plan. HealthRx's $99 is $1,188 prepaid. Medvi's $99 and altRx's $89 are promotional rates against $199. Ro bills membership and medication separately. The condition attached to a price is as important as the number, which is why the price index prints both.",
+  },
+  {
+    title: "Flat-dose pricing is common but not universal",
+    body: "Seven of the ten - altRx, wellmedr, trimrx, DirectMeds, embody, HealthRx and Medvi - state one price at every dose. Ro prices medication separately from its membership, and SHED and Sprout publish monthly rates without a single every-dose figure in the material we reviewed. Because treatment titrates upward, the maintenance-dose price is the one to ask for.",
+  },
+  {
+    title: "Pharmacy transparency varies more than clinician claims do",
+    body: "embody and HealthRx name 503A pharmacies and publish LegitScript certification; Ro fills through its own pharmacy; altRx says licensed pharmacies without naming them; wellmedr says a regulated US pharmacy, and only Reddit commenters name it. For five providers - trimrx, SHED, Medvi, Sprout and DirectMeds - the pharmacy is not named in our research, so it is a question to ask support before paying.",
+  },
+  {
+    title: "Review volume stabilizes a score; it does not make experiences uniform",
+    body: "Medvi's 4.3 across 14,821 reviews sits alongside serious 1-star accounts about renewals and refunds. SHED and wellmedr's 4.6 averages come from roughly 1,100 and 1,900 reviews; Sprout's 4.1 from 188; trimrx (3.7) and embody (3.8) have large, mixed records. Across all of them the recurring complaints are operational - shipping, billing, reaching support - rather than about the clinical review.",
+  },
+];
+
+// ───── Providers worth exploring further ─────
+// Use-case labels, each supported by a row in the table above. Not a ranking:
+// the full ranking lives on the comparison page this section links to.
+const EXPLORE: Record<string, { useCase: string; reason: string }> = {
+  embody: {
+    useCase: "Transparent flat pricing with a named pharmacy model",
+    reason: "One flat monthly price at every dose with no commitment, a full refund if a clinician does not approve you, and LegitScript-certified US 503A pharmacies named on the site.",
+  },
+  altrx: {
+    useCase: "Flat-dose compounded pricing plus a brand-name shelf",
+    reason: "Compounded semaglutide and tirzepatide flat at every dose, next to cash prices for Ozempic, Zepbound and Wegovy. No public Trustpilot aggregate, so weigh the individual reviews and the Reddit thread.",
+  },
+  medvi: {
+    useCase: "Live clinician visits and the largest verified review base",
+    reason: "Video visits with providers, scheduled monitoring and a dietician, with 4.3 across 14,821 Trustpilot reviews. The $99 rate is promotional against $199.",
+  },
+  wellmedr: {
+    useCase: "Lowest verified semaglutide price, on a 12-month term",
+    reason: "$49 a month semaglutide, the same at every dose, requires the 12-month plan billed monthly. A weight-care coach on every plan and 4.6 across 1,919 Trustpilot reviews.",
+  },
+};
 
 const FAQS: { question: string; answer: string }[] = [
   {
     question: "How do I know if a GLP-1 provider has real doctors?",
     answer:
-      "Three signals you can check before paying: the intake asks the contraindication questions on the FDA label (thyroid cancer history, MEN 2, pancreatitis, pregnancy), the provider states that a licensed clinician reviews the intake and can decline you, and there is a way to reach that clinician after the prescription. A refund-if-not-approved policy, which embody offers, only exists where a real clinical gate exists.",
+      "Reframe it as clinician involvement, because legitimate care may come from a licensed physician, physician associate or nurse practitioner depending on the service and state law. Three things you can check before paying: the intake asks the contraindication questions on the FDA label (thyroid cancer history, MEN 2, pancreatitis, pregnancy), the provider states that a licensed clinician reviews the intake and can decline you, and there is a stated way to reach a clinician after the prescription. A refund-if-not-approved policy, which embody publishes, is a sign that declines actually happen.",
   },
   {
     question: "Is asynchronous telehealth (no video call) legitimate for GLP-1 prescriptions?",
     answer:
-      "Yes. Most legitimate telehealth GLP-1 care is asynchronous: you complete a medical intake, a licensed clinician reviews it, and you communicate by messaging afterward. Video visits, which Medvi runs, add a live conversation but are not what makes a prescription legitimate. What matters is licensed review with authority to decline, and follow-up access.",
+      "Yes. Most legitimate telehealth GLP-1 care is asynchronous: you complete a medical intake, a licensed clinician reviews it, and you communicate by messaging afterward. Video visits, which Medvi describes, add a live conversation but are not what makes a prescription legitimate. What matters is licensed review with authority to decline, and follow-up access.",
   },
   {
     question: "Are compounded semaglutide and tirzepatide safe?",
     answer:
-      "Compounded drugs are not FDA-approved products, and the FDA has raised concerns about some compounded GLP-1s, including dosing errors and unapproved salt forms. The risk is managed by the pharmacy: a US state-licensed 503A pharmacy or 503B facility, compounding the base form, with a licensed prescriber. Ask the provider which pharmacy and which form; a legitimate one answers.",
+      "Compounded drugs are not FDA-approved products, and the FDA has raised concerns about some compounded GLP-1s, including dosing errors and unapproved salt forms. The risk is managed by the pharmacy: a US state-licensed 503A pharmacy or 503B facility, compounding the base form, with a licensed prescriber. Ask the provider which pharmacy and which form; a legitimate one answers. Talk to a clinician about whether any GLP-1 medication is appropriate for you.",
   },
   {
     question: "What does a GLP-1 provider actually cost per month?",
@@ -230,20 +296,43 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: "What should I do if a provider will not name its pharmacy?",
     answer:
-      "Treat it as a no. Every provider in our table either names its pharmacy type or is marked as not named in our research, and you can ask support directly before paying. The FDA's BeSafeRx program covers the same principle for any online pharmacy: verify the license, do not guess.",
+      "Ask support directly before paying, and treat a non-answer as a reason to look elsewhere. Every provider in our table either names its pharmacy type or is marked as not named in our research. The FDA's BeSafeRx program covers the same principle for any online pharmacy: verify the license, do not guess.",
   },
 ];
 
+// Parse the stored "Sep 21, 2026" review dates so the evidence tiles can say
+// how recent the captured reviews are. Undated reviews are simply skipped.
+function latestReviewDate(reviews: TrustpilotReview[]): string | null {
+  let best: Date | null = null;
+  let label: string | null = null;
+  for (const r of reviews) {
+    if (!r.date) continue;
+    const d = new Date(r.date);
+    if (isNaN(d.getTime())) continue;
+    if (!best || d > best) {
+      best = d;
+      label = r.date;
+    }
+  }
+  return label;
+}
+
+function starMix(reviews: TrustpilotReview[]): string {
+  const counts = [5, 4, 3, 2, 1].map((s) => [s, reviews.filter((r) => r.rating === s).length] as const).filter(([, n]) => n > 0);
+  return counts.map(([s, n]) => `${n} ${s}-star`).join(", ");
+}
+
 export default async function HowToChooseGlp1ProviderPage() {
   const config = await getConfig("weight-loss");
-  const cards = rankedCardItems(config);
   const priceById = new Map(PRICE_INDEX.map((r) => [r.providerId, r]));
   const rows = ROWS.map((r) => ({
     ...r,
     provider: config.providers.find((p) => p.id === r.id),
     price: priceById.get(r.id),
   })).filter((r) => r.provider);
-  const redditProviders = cards.map((c) => ({ id: c.provider.id, name: c.provider.name })).filter((p) => REDDIT_COMMUNITY_FEEDBACK[p.id]);
+  const rowById = new Map(rows.map((r) => [r.id, r]));
+  const redditProviders = rows.map((r) => ({ id: r.provider!.id, name: r.provider!.name })).filter((p) => REDDIT_COMMUNITY_FEEDBACK[p.id]);
+  const explore = rankedCardItems(config, { providerIds: Object.keys(EXPLORE), order: "ranking" });
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -251,7 +340,7 @@ export default async function HowToChooseGlp1ProviderPage() {
     headline: TITLE,
     description: DESCRIPTION,
     datePublished: PUBLISHED,
-    dateModified: PUBLISHED,
+    dateModified: UPDATED,
     author: { "@type": "Organization", name: "Treatments Hub Team", url: "https://www.treatmentshub.com" },
     publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
     mainEntityOfPage: CANONICAL,
@@ -288,12 +377,13 @@ export default async function HowToChooseGlp1ProviderPage() {
             How to Choose a GLP-1 Provider: 12 Things to Check Before You Sign Up
           </h1>
           <p className="mt-3 max-w-[700px] text-[16px] leading-relaxed text-gray-500">
-            Every telehealth site looks the same from the outside. This is how you tell which ones have a
-            real clinician in the loop, which pharmacy fills the vial, and what the price really is at the
-            dose you will end up on. Ten providers checked, with their verified prices, Trustpilot records
-            and what critics say about each.
+            Every telehealth site looks the same from the outside. This guide is how to tell how involved a
+            licensed clinician actually is, which pharmacy fills the vial, and what the price really is at the
+            dose you will end up on. Ten online GLP-1 providers checked against the same list, with verified
+            prices, Trustpilot records, and what reviewers and Reddit patients report about each.
           </p>
-          <LastUpdated date={PUBLISHED} className="mt-4" />
+          <LastUpdated date={UPDATED} className="mt-4" />
+          <TrustDisclosure disclaimerHref="/weight-loss/disclaimer" />
         </div>
       </div>
 
@@ -303,46 +393,55 @@ export default async function HowToChooseGlp1ProviderPage() {
           <ShieldCheck className="mt-0.5 h-6 w-6 shrink-0 text-emerald-600" strokeWidth={2} />
           <div>
             <h2 className="mb-2 text-[18px] font-bold text-[#191919]">The short answer</h2>
+            <p className="mb-2 text-[15px] leading-[1.75] text-gray-600">
+              Before you pay any GLP-1 telehealth provider, verify three things:
+            </p>
+            <ol className="mb-2 list-decimal space-y-1 pl-5 text-[15px] leading-[1.7] text-gray-600">
+              <li><strong className="text-[#191919]">Who reviews and approves your treatment</strong> - a licensed clinician who is allowed to decline you.</li>
+              <li><strong className="text-[#191919]">Which pharmacy fills the medication</strong> - named, US-licensed, and willing to say which form it compounds.</li>
+              <li><strong className="text-[#191919]">What you will actually pay</strong> - after the introductory price, and as your dose goes up.</li>
+            </ol>
             <p className="text-[15px] leading-[1.75] text-gray-600">
-              Three things separate a real prescriber from a checkout page:{" "}
-              <strong className="text-[#191919]">a licensed clinician who is allowed to say no</strong>,{" "}
-              <strong className="text-[#191919]">a named, US-licensed pharmacy</strong>, and{" "}
-              <strong className="text-[#191919]">a price that is the whole price at your maintenance dose</strong>.
-              Every provider in our ranking passes the first test. The table below shows how each one
-              handles the other two, and where the honest catches are.
+              For the providers we reviewed, we found licensed-clinician review described in every published care
+              model. How much access you have to that clinician after approval varies considerably, and it is
+              the fourth thing worth checking.
             </p>
           </div>
         </div>
 
-        {/* Which ones have real doctors */}
+        {/* Clinician involvement */}
         <section className="mb-12">
           <div className="mb-4 flex items-center gap-2">
             <Stethoscope className="h-6 w-6 text-[#0C4B75]" strokeWidth={2} />
-            <h2 className="text-[24px] font-bold text-[#191919]">Which ones actually have real doctors involved?</h2>
+            <h2 className="text-[24px] font-bold text-[#191919]">How involved is a licensed clinician in your care?</h2>
           </div>
           <p className="mb-4">
-            The fair version of this question is not &ldquo;does a doctor exist somewhere&rdquo; but{" "}
-            <strong className="text-[#191919]">&ldquo;can the clinician stop the sale?&rdquo;</strong> A
-            legitimate telehealth prescriber runs a medical intake that asks the contraindication questions
-            on the FDA label, has a licensed clinician review it with the authority to decline, and gives you
-            a way to reach a clinician after the prescription. A prescription-only medication like{" "}
+            People usually ask this as &ldquo;which ones have real doctors?&rdquo;. The more useful version is{" "}
+            <strong className="text-[#191919]">&ldquo;can the clinician stop the sale, and can I reach them afterward?&rdquo;</strong>{" "}
+            Legitimate telehealth care does not require a video appointment with an MD. Depending on the service
+            and state law, the prescriber may be a licensed physician, a physician associate, a nurse practitioner or
+            another qualified prescriber. A prescription-only medication like{" "}
             <a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener" className={ext}>semaglutide</a>{" "}
-            cannot legally skip that step; a site that does is not a provider, whatever its homepage says.
+            still has to pass through a licensed clinician who reviews your medical intake and has the authority to
+            decline; what varies is how much of that clinician you see.
           </p>
           <p className="mb-4">
-            Two honest clarifications. First, most legitimate GLP-1 telehealth is{" "}
-            <strong className="text-[#191919]">asynchronous</strong>: you submit the intake, a clinician
-            reviews it, and you message afterward. That is normal and legal. Medvi is built around live video visits and scheduled monitoring, and embody's own
-            reviewers describe scheduled provider appointments and video calls; the others are
-            intake-and-message models, some with a follow-up call if the clinician needs more information. Second, the clinician
-            and the pharmacy are separate questions. The prescriber decides whether you should be treated;
-            the pharmacy decides what is in the vial. Check both.
+            Two clarifications. First, most legitimate GLP-1 telehealth is{" "}
+            <strong className="text-[#191919]">asynchronous</strong>: you submit the intake, a clinician reviews it,
+            and you message afterward. That is normal and legal. Medvi describes live video visits and scheduled
+            monitoring, and embody&rsquo;s own reviewers describe scheduled provider appointments and video calls; the
+            others in our table describe intake-and-message models, some with a follow-up call if the clinician needs
+            more information. Second, the clinician and the pharmacy are separate questions. The prescriber decides
+            whether you should be treated; the pharmacy decides what is in the vial. Check both.
           </p>
-          <div className="grid gap-3 sm:grid-cols-3">
+          <p className="mb-3 text-[14px] font-bold text-[#191919]">The five questions that matter:</p>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              ["Ask the contraindication questions?", "Thyroid cancer or MEN 2 history, pancreatitis, pregnancy plans, current medications. If the intake never asks, nobody is screening."],
-              ["Can the clinician decline you?", "Look for \"if appropriate\" and refund-if-not-approved language. embody refunds in full when a provider does not approve treatment."],
-              ["Can you reach them afterward?", "Messaging, check-ins or video: trimrx advertises unlimited check-ins, Medvi runs monitoring visits, HealthRx has care-team check-ins."],
+              ["Who reviews the medical intake?", "A named role - physician, physician associate, nurse practitioner - stated on the how-it-works page, and an intake that asks about thyroid cancer or MEN 2 history, pancreatitis, pregnancy plans and current medications."],
+              ["Are they appropriately licensed?", "Licensed in your state. HealthRx states an independent US-licensed clinician in your state; others describe licensed providers without the state detail, which is worth asking about."],
+              ["Can they decline treatment?", "Look for \"if appropriate\" and refund-if-not-approved language. embody refunds in full when a provider does not approve treatment; Medvi states it declines patients for whom treatment is not appropriate."],
+              ["Can you reach a clinician after approval?", "Messaging, check-ins or video: trimrx advertises unlimited check-ins, Medvi describes monitoring visits, HealthRx describes care-team check-ins. Ro reviewers report messaging-only support with 2-3 day replies."],
+              ["How are dose changes and clinical questions handled?", "Ask how a dose increase is requested and who approves it. Medvi builds adjustments into monitoring; embody reviewers describe dose-increase appointments; on Reddit, an embody user's dose was raised at a check-in three weeks in."],
             ].map(([h, b]) => (
               <div key={h} className="rounded-xl border border-gray-200 bg-white p-4">
                 <p className="mb-1 text-[14px] font-bold text-[#191919]">{h}</p>
@@ -358,6 +457,10 @@ export default async function HowToChooseGlp1ProviderPage() {
             <Search className="h-6 w-6 text-[#0C4B75]" strokeWidth={2} />
             <h2 className="text-[24px] font-bold text-[#191919]">The 12 things to check</h2>
           </div>
+          <p className="mb-4 text-[14px] text-gray-500">
+            Each check names what to look at, how to verify it yourself in a few minutes, and what is worth
+            investigating or asking about before you pay. A red flag is a prompt for due diligence, not a verdict.
+          </p>
           <ol className="space-y-4">
             {CHECKLIST.map((c, i) => (
               <li key={c.title} className="rounded-xl border border-gray-200 bg-white p-5">
@@ -374,7 +477,7 @@ export default async function HowToChooseGlp1ProviderPage() {
             ))}
           </ol>
           <p className="mt-4 text-[14px] text-gray-500">
-            Regulatory background for checks 4, 5 and 11:{" "}
+            Regulatory background for checks 4, 5 and 12:{" "}
             <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener" className={ext}>FDA on compounding (503A and 503B)</a>,{" "}
             <a href="https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/medications-containing-semaglutide-marketed-type-2-diabetes-or-weight-loss" target="_blank" rel="noopener" className={ext}>FDA on semaglutide salt forms</a>,{" "}
             <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener" className={ext}>FDA&rsquo;s concerns with unapproved GLP-1 drugs</a>, and{" "}
@@ -385,13 +488,14 @@ export default async function HowToChooseGlp1ProviderPage() {
 
         {/* Provider table */}
         <section className="mb-12" id="provider-table">
-          <h2 className="mb-2 text-[24px] font-bold text-[#191919]">Ten providers, checked against the list</h2>
+          <h2 className="mb-2 text-[24px] font-bold text-[#191919]">Ten providers, checked against the framework</h2>
           <p className="mb-4 text-[14px] text-gray-500">
             Every cell is a verified statement from our provider research or the{" "}
             <Link href="/weight-loss/glp1-weight-loss-statistics#price-index" className={ext}>price index</Link>{" "}
-            (prices verified {PRICE_INDEX_VERIFIED}). Where we have not verified something, the cell says so. Ordered
-            by our ranking, which is not the order of the prices. Mochi Health and Henry Meds are not in our
-            coverage and are left out rather than guessed at.
+            (prices verified {PRICE_INDEX_VERIFIED}). Where we have not verified something, the cell says so. This is
+            publicly available provider information, checked against the framework above; it is not an independent
+            audit of medical quality. Rows follow our ranking, which is not the order of the prices. Mochi Health and
+            Henry Meds are not in our coverage and are left out rather than guessed at.
           </p>
           <div className="overflow-x-auto rounded-xl border border-gray-200">
             <table className="w-full min-w-[900px] text-left text-[13px]">
@@ -430,16 +534,33 @@ export default async function HowToChooseGlp1ProviderPage() {
                           <span className="block text-[12px] text-gray-500">{r.provider!.trustpilotReviewCount} reviews</span>
                         </>
                       ) : (
-                        <span className="text-gray-400">No aggregate verified</span>
+                        <span className="text-gray-400">Not verified</span>
                       )}
                     </td>
                   </tr>
-                  {/* Critics line - full width under the row, so it reads as a
-                      sentence instead of a narrow eighth column */}
+                  {/* Review themes - full width under the row. Sources are
+                      named inside each line: aggregate, individual Trustpilot
+                      reviews, Reddit threads, provider claims. */}
                   <tr className={i % 2 === 1 ? "bg-gray-50/50" : ""}>
                     <td colSpan={7} className="border-t border-dashed border-gray-200 px-3 py-3 text-[12.5px] leading-relaxed text-gray-600">
-                      <span className="font-semibold text-[#191919]">What critics say: </span>
-                      {r.critics}
+                      {r.likes && (
+                        <p className={r.complaints ? "mb-1.5" : ""}>
+                          <span className="font-semibold text-emerald-700">What reviewers like: </span>
+                          {r.likes}
+                        </p>
+                      )}
+                      {r.complaints && (
+                        <p>
+                          <span className="font-semibold text-red-700">Common complaints: </span>
+                          {r.complaints}
+                        </p>
+                      )}
+                      {r.note && (
+                        <p>
+                          <span className="font-semibold text-[#191919]">Research note: </span>
+                          {r.note}
+                        </p>
+                      )}
                     </td>
                   </tr>
                   </Fragment>
@@ -447,54 +568,187 @@ export default async function HowToChooseGlp1ProviderPage() {
               </tbody>
             </table>
           </div>
+          <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">
+            Individual reviews are single accounts, not evidence that every patient has the same experience. Where a
+            line quotes a reviewer&rsquo;s claim we have not verified, it says so.
+          </p>
         </section>
 
-        {/* Ranked cards with each provider's Trustpilot record */}
+        {/* Key patterns */}
         <section className="mb-12">
-          <h2 className="mb-2 text-[24px] font-bold text-[#191919]">Every provider we rank, with its Trustpilot record</h2>
-          <p className="mb-6 text-[14px] text-gray-500">
-            The same ranked cards as our full comparison. Under each card: the aggregate Trustpilot rating and count
-            where we have verified the profile, and reviews we captured from it. We show what we verified, nothing more.
-          </p>
-          <div className="space-y-8">
-            {cards.map(({ product, review, provider }) => (
-              <div key={product.id}>
-                <RichComparisonCard product={product} review={review} linkPrefix="/weight-loss" />
-                {provider.trustpilotReviews && provider.trustpilotReviews.length > 0 && (
-                  <div className="mt-3">
-                    <TrustpilotCarousel
-                      providerName={provider.name}
-                      providerLogo={provider.logo}
-                      reviews={provider.trustpilotReviews}
-                      rating={provider.trustpilotRating}
-                      reviewCount={provider.trustpilotReviewCount}
-                    />
-                  </div>
-                )}
-              </div>
-            ))}
+          <div className="mb-4 flex items-center gap-2">
+            <ClipboardList className="h-6 w-6 text-[#0C4B75]" strokeWidth={2} />
+            <h2 className="text-[24px] font-bold text-[#191919]">Key patterns we found</h2>
           </div>
+          <p className="mb-4 text-[14px] text-gray-500">
+            Five findings drawn only from the table above and the price index.
+          </p>
+          <ol className="space-y-3">
+            {PATTERNS.map((p, i) => (
+              <li key={p.title} className="flex gap-3 rounded-xl border border-gray-200 bg-white p-4">
+                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 text-[12px] font-bold text-[#0C4B75]">{i + 1}</span>
+                <div>
+                  <p className="mb-1 text-[15px] font-bold text-[#191919]">{p.title}</p>
+                  <p className="text-[14px] leading-relaxed text-gray-600">{p.body}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </section>
 
         {/* Reddit */}
         {redditProviders.length > 0 && (
-          <section className="mb-12">
-            <h2 className="mb-2 text-[24px] font-bold text-[#191919]">What Reddit users report</h2>
-            <p className="mb-4 text-[14px] text-gray-500">
-              Verified threads only, good and bad alike, with the recurring themes summarized from the posts shown.
-            </p>
-            <RedditThreadCarousel providers={redditProviders} reviewHrefFor={(id) => `/weight-loss/reviews/${id}`} />
+          <section className="mb-4">
+            <RedditThreadCarousel
+              providers={redditProviders}
+              reviewHrefFor={(id) => `/weight-loss/reviews/${id}`}
+              title="What GLP-1 patients report on Reddit"
+              intro={
+                <>
+                  <p className="mb-2">
+                    We reviewed public Reddit discussions about providers in this comparison. Individual Reddit
+                    posts are anecdotes, not evidence that every patient will have the same experience, so we
+                    looked for recurring themes rather than treating any single post as representative.
+                  </p>
+                  <p className="text-[13px] text-gray-500">
+                    Each card names the provider and the topic the thread covers, links to the original thread
+                    where we have its address, and shows the vote count as captured. Providers without verified
+                    Reddit material do not appear here.
+                  </p>
+                </>
+              }
+            />
           </section>
         )}
 
-        {/* Every plan */}
+        {/* Trustpilot evidence */}
         <section className="mb-12">
-          <ProductCarousel
-            providers={config.providers}
-            title="Every plan, at its published price"
-            subtitle="Product by product, with the condition on each price printed under it. Verified against each provider's own site."
-            pageUrl={CANONICAL}
-          />
+          <h2 className="mb-2 text-[24px] font-bold text-[#191919]">Public review evidence, provider by provider</h2>
+          <p className="mb-4 text-[14px] text-gray-500">
+            The Trustpilot aggregate and review count for each provider where we verified the profile, and the mix of
+            individual reviews we captured from it - positive, middling and negative alike. Trustpilot reflects customer
+            experience; it does not verify the medical quality of a provider. The full captured reviews are on each
+            provider&rsquo;s review page.
+          </p>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {rows.map((r) => {
+              const p = r.provider!;
+              const reviews = p.trustpilotReviews ?? [];
+              const latest = latestReviewDate(reviews);
+              const hasAggregate = !!(p.trustpilotRating && p.trustpilotReviewCount);
+              return (
+                <div key={r.id} className="rounded-xl border border-gray-200 bg-white p-4">
+                  <div className="mb-2 flex items-center justify-between gap-3">
+                    <Link href={`/weight-loss/reviews/${p.id}`} className="text-[15px] font-bold text-[#191919] hover:underline">{p.name}</Link>
+                    {hasAggregate ? (
+                      <TrustpilotRating rating={p.trustpilotRating!} reviewCount={p.trustpilotReviewCount} starSize={15} />
+                    ) : (
+                      <span className="text-[12px] text-gray-400">No public aggregate verified</span>
+                    )}
+                  </div>
+                  <p className="text-[12.5px] leading-relaxed text-gray-600">
+                    {reviews.length > 0 ? (
+                      <>
+                        <span className="font-semibold text-[#191919]">{reviews.length} reviews captured:</span> {starMix(reviews)}
+                        {latest && <span className="text-gray-400">, most recent dated {latest}</span>}.
+                      </>
+                    ) : (
+                      <span className="text-gray-400">No individual reviews captured yet.</span>
+                    )}
+                    {r.id === "directmeds" && hasAggregate && (
+                      <span className="text-gray-400"> Aggregate from an earlier capture.</span>
+                    )}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+          <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">
+            Aggregates for ro, embody, trimrx, SHED, wellmedr, Medvi and Sprout were re-checked against their public
+            Trustpilot profiles in September 2026. Where a provider publishes no aggregate, we say so rather than
+            estimate one.
+          </p>
+        </section>
+
+        {/* Providers worth exploring further */}
+        <section className="mb-12">
+          <h2 className="mb-2 text-[24px] font-bold text-[#191919]">Providers worth exploring further</h2>
+          <p className="mb-5 text-[14px] text-gray-500">
+            Four providers whose published model fits a specific need surfaced by the research above. This is not a
+            ranking; the full ranked comparison is linked below. We may earn a commission if you sign up through a
+            provider link, which does not change what appears in the table.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {explore.map(({ product, provider }) => {
+              const meta = EXPLORE[provider.id];
+              const row = rowById.get(provider.id);
+              const price = priceById.get(provider.id)?.semaglutide;
+              return (
+                <article key={provider.id} className="flex flex-col rounded-xl border border-gray-200 bg-white p-5">
+                  <div className="mb-3 flex items-center gap-3">
+                    <div className="flex h-[32px] w-[110px] items-center">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={product.logo} alt={`${provider.name} logo`} className="max-h-full max-w-full object-contain object-left" />
+                    </div>
+                  </div>
+                  <p className="mb-1 text-[12px] font-bold uppercase tracking-wide text-[#0C4B75]">{meta.useCase}</p>
+                  <p className="mb-4 text-[14px] leading-relaxed text-gray-700">{meta.reason}</p>
+                  <dl className="mb-4 grid gap-x-4 gap-y-2 text-[13px] sm:grid-cols-2">
+                    <div>
+                      <dt className="font-semibold text-gray-500">Semaglutide, verified</dt>
+                      <dd className="text-[#191919]">
+                        {price ? (
+                          <>
+                            <span className="font-bold">{price.price}/mo</span>
+                            <span className="block text-[12px] text-gray-500">{price.note}</span>
+                          </>
+                        ) : (
+                          "Not in price index"
+                        )}
+                      </dd>
+                    </div>
+                    <div>
+                      <dt className="font-semibold text-gray-500">Trustpilot</dt>
+                      <dd className="text-[#191919]">
+                        {provider.trustpilotRating && provider.trustpilotReviewCount
+                          ? `${provider.trustpilotRating} across ${provider.trustpilotReviewCount} reviews`
+                          : "No public aggregate verified"}
+                      </dd>
+                    </div>
+                    <div className="sm:col-span-2">
+                      <dt className="font-semibold text-gray-500">Clinician model</dt>
+                      <dd className="text-[#191919]">{row?.clinician}</dd>
+                    </div>
+                  </dl>
+                  <div className="mt-auto flex flex-wrap items-center gap-3">
+                    <Link href={`/weight-loss/reviews/${provider.id}`} className="inline-flex h-[40px] items-center rounded-lg border border-gray-200 bg-white px-4 text-[13.5px] font-semibold text-[#191919] transition-colors hover:bg-gray-50">
+                      Read full review
+                    </Link>
+                    <ProviderCta
+                      href={provider.affiliateUrl}
+                      providerName={provider.name}
+                      providerSlug={provider.id}
+                      position={product.rank}
+                      pageType="listing"
+                      sourceFlow="main_comparison"
+                      className="inline-flex h-[40px] items-center gap-1.5 rounded-lg bg-[#0C4B75] px-4 text-[13.5px] font-bold text-white transition-colors hover:bg-[#093d61]"
+                    >
+                      Visit provider
+                    </ProviderCta>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+          <div className="mt-5 flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-[14px] text-gray-500">
+              Every provider in the table above, ranked and scored, with each one&rsquo;s full review linked.
+            </p>
+            <Link href="/weight-loss" className="inline-flex h-[44px] items-center gap-2 rounded-lg border border-[#0C4B75] bg-white px-5 text-[14px] font-bold text-[#0C4B75] transition-colors hover:bg-[#F5F9FC]">
+              Compare all GLP-1 providers
+              <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
+            </Link>
+          </div>
         </section>
 
         {/* FAQ */}
@@ -510,23 +764,60 @@ export default async function HowToChooseGlp1ProviderPage() {
           </div>
         </section>
 
-        <p className="mb-10 text-[14px] text-gray-500">
-          Related: our broader guide to{" "}
+        <p className="mb-10 text-[14px] leading-relaxed text-gray-500">
+          Related: the{" "}
+          <Link href="/weight-loss/glp1-weight-loss-statistics#price-index" className={ext}>GLP-1 price index</Link>,{" "}
+          <Link href="/weight-loss/cheapest-glp1" className={ext}>the cheapest GLP-1 online</Link>,{" "}
+          <Link href="/weight-loss/semaglutide" className={ext}>semaglutide providers</Link>,{" "}
+          <Link href="/weight-loss/tirzepatide" className={ext}>tirzepatide providers</Link>,{" "}
+          <Link href="/weight-loss/articles/compounded-semaglutide-vs-brand-name" className={ext}>compounded vs brand-name</Link>,{" "}
+          <Link href="/weight-loss/switch-from-ozempic" className={ext}>switching providers</Link>,{" "}
+          our broader guide to{" "}
           <Link href="/weight-loss/articles/choosing-telehealth-weight-loss-provider" className={ext}>choosing a telehealth weight loss provider</Link>,{" "}
-          the <Link href="/weight-loss/articles/compounded-semaglutide-vs-brand-name" className={ext}>compounded vs brand-name trade-offs</Link>, and{" "}
-          <Link href="/weight-loss/how-we-rank" className={ext}>how we rank</Link>.
+          and <Link href="/weight-loss/how-we-rank" className={ext}>how we rank</Link>.
         </p>
 
         <GuideCluster currentSlug="how-to-choose-a-glp1-provider" />
 
         <MedicalSources vertical="weight-loss" />
 
-        <p className="mt-6 text-[13px] leading-relaxed text-gray-400">
-          Prices are the providers&rsquo; published cash-pay rates at our last verification and can change; confirm
-          on the provider&rsquo;s site. Trustpilot figures are the public aggregate at the time we captured the
-          profile. Compounded medications are not FDA-approved products. treatmentshub.com is not a medical
-          provider; this page is for information only and is not medical advice.
-        </p>
+        {/* Methodology notes */}
+        <section className="mt-6 rounded-2xl border border-gray-200 bg-white p-6 text-[13px] leading-relaxed text-gray-500">
+          <h2 className="mb-2 text-[13px] font-bold uppercase tracking-[0.05em] text-[#191919]">How this page was researched</h2>
+          <ul className="list-disc space-y-1.5 pl-5">
+            <li>
+              <span className="font-semibold text-gray-700">Prices</span> are each provider&rsquo;s published cash-pay rate,
+              with its condition, from our verified registry (last verified {PRICE_INDEX_VERIFIED}). They change; confirm on the
+              provider&rsquo;s site.
+            </li>
+            <li>
+              <span className="font-semibold text-gray-700">Clinician, visit and pharmacy cells</span> come from each provider&rsquo;s
+              published care model and, where stated, from what its own reviewers describe. They are publicly available
+              information, not an independent audit of medical quality.
+            </li>
+            <li>
+              <span className="font-semibold text-gray-700">Trustpilot</span> figures are the public aggregate and review count
+              at the time we captured the profile; the individual reviews we quote were captured from the same profile,
+              positive and negative alike. A Trustpilot score reflects customer experience, not medical safety.
+            </li>
+            <li>
+              <span className="font-semibold text-gray-700">Reddit</span> material is limited to public threads we verified, read for
+              recurring themes; single posts are anecdotes.
+            </li>
+            <li>
+              <span className="font-semibold text-gray-700">TreatmentsHub Scores</span> are not shown on this page. On our ranking and
+              review pages they are editorial comparison scores across six weighted factors - medical credibility, medication
+              access, pricing and value, patient experience, clinical support and flexibility - and are separate from
+              Trustpilot ratings, which are customer reviews. See{" "}
+              <Link href="/weight-loss/how-we-rank" className={ext}>how we score providers</Link>.
+            </li>
+            <li>
+              Compounded semaglutide and tirzepatide are not FDA-approved products. treatmentshub.com is not a medical
+              provider; this page is for information only and is not medical advice or a treatment recommendation for any
+              individual.
+            </li>
+          </ul>
+        </section>
       </div>
     </div>
   );
