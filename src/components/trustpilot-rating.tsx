@@ -5,6 +5,17 @@
 
 const TP_GREEN = "#00B67A";
 
+// Trustpilot's own star colour scale, keyed by the score being shown: a
+// 5-star review or a 4.3+ TrustScore is green, 3.8-4.2 light green, 2.8-3.7
+// yellow, 1.8-2.7 orange, below that red. Shared by every star renderer.
+export function tpStarColor(rating: number): string {
+  if (rating >= 4.3) return TP_GREEN;
+  if (rating >= 3.8) return "#73CF11";
+  if (rating >= 2.8) return "#FFCE00";
+  if (rating >= 1.8) return "#FF8622";
+  return "#FF3722";
+}
+
 function TrustpilotStar({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="white" className={className} aria-hidden="true">
@@ -26,9 +37,9 @@ function TrustpilotWordmark({ starClass = "h-[13px] w-[13px]", textClass = "text
   );
 }
 
-// One Trustpilot-style box: green background filled left-to-right by `fill`
-// (0-1), gray remainder, white star on top.
-function StarBox({ fill, size = 18 }: { fill: number; size?: number }) {
+// One Trustpilot-style box: coloured background filled left-to-right by
+// `fill` (0-1), gray remainder, white star on top.
+function StarBox({ fill, color, size = 18 }: { fill: number; color: string; size?: number }) {
   const pct = Math.max(0, Math.min(1, fill)) * 100;
   return (
     <div
@@ -36,7 +47,7 @@ function StarBox({ fill, size = 18 }: { fill: number; size?: number }) {
       style={{
         width: size,
         height: size,
-        background: `linear-gradient(90deg, ${TP_GREEN} ${pct}%, #DCDCE6 ${pct}%)`,
+        background: `linear-gradient(90deg, ${color} ${pct}%, #DCDCE6 ${pct}%)`,
       }}
     >
       <TrustpilotStar className="h-[68%] w-[68%]" />
@@ -63,12 +74,13 @@ export function TrustpilotRating({
 }) {
   const value = parseFloat(rating);
   if (isNaN(value)) return null;
+  const color = tpStarColor(value);
 
   return (
     <div className={`flex flex-wrap items-center gap-x-2 gap-y-1 ${className}`}>
       <div className="flex gap-0.5">
         {[0, 1, 2, 3, 4].map((i) => (
-          <StarBox key={i} fill={value - i} size={starSize} />
+          <StarBox key={i} fill={value - i} color={color} size={starSize} />
         ))}
       </div>
       {reviewCount && (
