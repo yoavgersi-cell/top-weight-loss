@@ -154,7 +154,7 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   "sprout-vs-wellmedr": {
     title: "Sprout vs wellmedr (2026): $149 vs $49 GLP-1 Compared",
     description:
-      "Sprout ($149/mo, 2-day fulfillment, brand-name Wegovy) vs wellmedr ($49/mo, 4.7 on Trustpilot, 1M+ patients, warranty). Real prices and an honest verdict.",
+      "Sprout ($149/mo, 2-day fulfillment, brand-name Wegovy) vs wellmedr ($49/mo, 4.6 on Trustpilot, 1M+ patients, warranty). Real prices and an honest verdict.",
   },
   "embody-vs-wellmedr": {
     title: "embody vs wellmedr (2026): $69 vs $49 GLP-1 Compared",

@@ -88,7 +88,7 @@ const CHECKLIST: { title: string; check: string; verify: string; redFlag: string
   {
     title: "The Trustpilot record, with the count",
     check: "The aggregate score means little without the volume behind it. Read the recurring themes in the low-star reviews, not the headline number.",
-    verify: "We print rating and review count for every provider where we have verified the profile. Medvi's 4.4 across 14,372 reviews and embody's 3.8 across 8,398 are both real records; they tell different stories.",
+    verify: "We print rating and review count for every provider where we have verified the profile. Medvi's 4.3 across 14,821 reviews and embody's 3.8 across 8,398 are both real records; they tell different stories.",
     redFlag: "A perfect 5.0 on a handful of reviews, or a provider with no public review profile at all.",
   },
   {
@@ -164,7 +164,7 @@ const ROWS: Row[] = [
     visit: "Online intake, clinician review, coach support",
     pharmacy: "Regulated US pharmacy; Reddit commenters name its Florida pharmacy",
     dosePricing: "Same price at every dose; best rate on a 12-month plan, billed monthly",
-    critics: "The $49 rate requires the 12-month plan. One detailed Reddit account reported fast shipping and responsive support but only one pound lost after eight weeks on tirzepatide.",
+    critics: "Trustpilot 4.6 across 1,919 reviews. The low-star reviews from September are almost all about reaching someone: an order stuck at \"delay in shipping\" for 8 days with support unable to find the account, a request unanswered after 24 hours, chat and phone going unanswered until an operations manager stepped in, one shipment that sat at the pharmacy for over a week. Several of those reviewers raised their rating after that call. One August reviewer states they were charged every 21 days rather than monthly; we have not verified wellmedr's billing cadence and are asking. The $49 rate requires the 12-month plan.",
   },
   {
     id: "medvi",
@@ -172,7 +172,7 @@ const ROWS: Row[] = [
     visit: "Video visits with providers, scheduled monitoring, a dietician and care coaching",
     pharmacy: "Compounded; pharmacy not named in our research",
     dosePricing: "All-inclusive; no dose-based increases; HSA/FSA",
-    critics: "Not the cheapest way to get semaglutide, and the $99 rate is promotional against a $199 regular price. Users in verified threads raise the ongoing monthly cost themselves.",
+    critics: "Trustpilot 4.3 across 14,821 reviews, the largest verified base in our ranking. The 1-star reviews from September are serious and specific: a prepaid annual plan renewed after 11 shipments without notice, refunded only after BBB, FTC and state attorney-general complaints; a charge taken before any clinician contact, followed by a wrong-dose shipment and a refused refund; a transferring patient sent a starter dose repeatedly instead of the maintenance dose; communication stopping after five months and no cancellation confirmation across three calls. The 5-star reviews from the same week are about the video visits and nurse practitioners. One reviewer says tirzepatide tops out at 11.125 mg; we have not verified that. Not the cheapest semaglutide, and the $99 rate is promotional against $199.",
   },
   {
     id: "sprout",
@@ -180,7 +180,7 @@ const ROWS: Row[] = [
     visit: "Online intake; ships within 2 days of approval",
     pharmacy: "Compounded plans plus brand-name Wegovy; pharmacy not named in our research",
     dosePricing: "Monthly; $200 off the first month",
-    critics: "Publishes no aggregate Trustpilot score and fewer plan-term details than rivals, so commitment and cancellation specifics are worth confirming before you pay.",
+    critics: "Trustpilot 4.1 across 188 reviews, the smallest base among providers here. Recent reviews praise live, named support; the critical ones cite missing tracking notifications, a charge with no shipment after a skipped monthly check-in, thin injection instructions, and one hair-loss report on tirzepatide.",
   },
   {
     id: "directmeds",

@@ -32,7 +32,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     tirzepatide: { price: "$89", note: "shipped every 4 weeks" },
     shipping: "Ships in 3-5 business days",
     commitment: "12-month plan for the lowest rate; cancel or change anytime",
-    trustpilot: { rating: "4.7", count: "1,205" },
+    trustpilot: { rating: "4.6", count: "1,919" },
   },
   {
     providerId: "embody",
@@ -59,7 +59,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     tirzepatide: { price: "$166", note: "promo; reg. $299" },
     shipping: "Free shipping",
     commitment: "None - no membership or hidden fees; HSA/FSA",
-    trustpilot: { rating: "4.4", count: "14,372" },
+    trustpilot: { rating: "4.3", count: "14,821" },
   },
   {
     providerId: "healthrx",
@@ -86,7 +86,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     tirzepatide: { price: "$199", note: "starting price" },
     shipping: "Prescription shipped within 2 days",
     commitment: "See provider site for plan terms",
-    trustpilot: null,
+    trustpilot: { rating: "4.1", count: "188" },
   },
   {
     providerId: "trimrx",

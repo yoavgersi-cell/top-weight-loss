@@ -70,7 +70,7 @@ export const TRIO_FACTS: Record<string, TrioFacts> = {
     shipping: "Free shipping",
     support: "Video visits + free dietician & care coaching",
     guarantee: "-",
-    standout: "4.4 on Trustpilot across 14,372 reviews",
+    standout: "4.3 on Trustpilot across 14,821 reviews",
   },
   healthrx: {
     id: "healthrx",
@@ -147,11 +147,11 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     title: "embody vs altRx vs Medvi: Our Top Three, One Table",
     metaTitle: "embody vs altRx vs Medvi (2026): $69 vs $89 vs $99",
     description:
-      "Our three most-compared GLP-1 providers in one matrix: embody ($69 flat, 1-2 day shipping), altRx ($89 + a brand-name shelf) and Medvi ($99 all-inclusive, 4.4 on Trustpilot).",
+      "Our three most-compared GLP-1 providers in one matrix: embody ($69 flat, 1-2 day shipping), altRx ($89 + a brand-name shelf) and Medvi ($99 all-inclusive, 4.3 on Trustpilot).",
     intro:
-      "Thirty dollars separates these three, and none of them asks for a commitment - so this comparison is really about what each adds on top of the same compounded semaglutide. embody keeps it lean: $69 flat at every dose, free 1-2 day shipping, and a full refund if a provider doesn't approve you. altRx charges $89 and is the only one with a brand-name shelf - Ozempic, Zepbound and Wegovy at published cash prices - plus Buy Now, Pay Later. Medvi's $99 promo is all-inclusive with video visits, a free dietician and care coaching, backed by the strongest review record of the three: 4.4 across 14,372 Trustpilot reviews.",
+      "Thirty dollars separates these three, and none of them asks for a commitment - so this comparison is really about what each adds on top of the same compounded semaglutide. embody keeps it lean: $69 flat at every dose, free 1-2 day shipping, and a full refund if a provider doesn't approve you. altRx charges $89 and is the only one with a brand-name shelf - Ozempic, Zepbound and Wegovy at published cash prices - plus Buy Now, Pay Later. Medvi's $99 promo is all-inclusive with video visits, a free dietician and care coaching, backed by the strongest review record of the three: 4.3 across 14,821 Trustpilot reviews.",
     verdict:
-      "All three bill monthly with no prepaid term, so the price gap is the honest starting point: $69, $89, $99. Pay the minimum and move fast: embody - cheapest here, quickest shipping, and the refund-if-not-approved policy removes the main risk of trying. Think brand-name Ozempic or Zepbound might be in your future: altRx - it's the only one of the three where that switch happens without changing providers, and BNPL softens the brand prices. Want a person in the loop - video visits, a dietician, someone to call: Medvi, and its 14,372-review Trustpilot record says the support model works. There's no legitimacy gap to worry about: all three run licensed-provider review and dispense through regulated pharmacies.",
+      "All three bill monthly with no prepaid term, so the price gap is the honest starting point: $69, $89, $99. Pay the minimum and move fast: embody - cheapest here, quickest shipping, and the refund-if-not-approved policy removes the main risk of trying. Think brand-name Ozempic or Zepbound might be in your future: altRx - it's the only one of the three where that switch happens without changing providers, and BNPL softens the brand prices. Want a person in the loop - video visits, a dietician, someone to call: Medvi, and its 14,821-review Trustpilot record says the support model works. There's no legitimacy gap to worry about: all three run licensed-provider review and dispense through regulated pharmacies.",
     faqs: [
       {
         question: "Which is cheapest: embody, altRx or Medvi?",
@@ -161,7 +161,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
       {
         question: "Which has the best customer reviews?",
         answer:
-          "Medvi has the strongest verified review record of the three - 4.4 on Trustpilot across 14,372 reviews, with support and communication the recurring themes. embody holds 3.8 across 8,398 reviews. Current ratings for each provider are shown on their cards above.",
+          "Medvi has the strongest verified review record of the three - 4.3 on Trustpilot across 14,821 reviews, with support and communication the recurring themes. embody holds 3.8 across 8,398 reviews. Current ratings for each provider are shown on their cards above.",
       },
       {
         question: "Can I get brand-name Ozempic, Zepbound or Wegovy from any of them?",
@@ -210,11 +210,11 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     title: "embody vs Medvi vs wellmedr: $69, $99 or $49?",
     metaTitle: "embody vs Medvi vs wellmedr (2026): $69 vs $99 vs $49",
     description:
-      "Three verified Trustpilot records, three ways to buy the same compounded GLP-1s: embody ($69 flat), Medvi ($99 all-inclusive, 4.4 across 14,372 reviews) and wellmedr ($49 on a 12-month plan, 4.7 rated).",
+      "Three verified Trustpilot records, three ways to buy the same compounded GLP-1s: embody ($69 flat), Medvi ($99 all-inclusive, 4.3 across 14,821 reviews) and wellmedr ($49 on a 12-month plan, 4.7 rated).",
     intro:
-      "This trio is unusual: all three carry a verified Trustpilot record, so for once the review data can carry as much weight as the price tag. wellmedr is the cheapest at $49/month - a rate that locks on a 12-month plan - and holds the highest rating here, 4.7 across 1,205 reviews. embody's $69 is flat with zero commitment and a refund if a provider doesn't approve you, at 3.8 across 8,398 reviews. Medvi's $99 promo is the all-inclusive, high-touch option - video visits, free dietician, care coaching - with the largest review base of the three: 4.4 across 14,372.",
+      "This trio is unusual: all three carry a verified Trustpilot record, so for once the review data can carry as much weight as the price tag. wellmedr is the cheapest at $49/month - a rate that locks on a 12-month plan - and holds the highest rating here, 4.6 across 1,919 reviews. embody's $69 is flat with zero commitment and a refund if a provider doesn't approve you, at 3.8 across 8,398 reviews. Medvi's $99 promo is the all-inclusive, high-touch option - video visits, free dietician, care coaching - with the largest review base of the three: 4.3 across 14,821.",
     verdict:
-      "Decide on commitment first, support second. Ready to commit to a year: wellmedr - the $49 lock is the best per-month rate in the market, its 4.7 rating is the highest here, and its weight-loss warranty backs the plan. Not ready to commit to anything: embody - $69 flat, cancel anytime, refunded if not approved. Know from experience that you quit without someone checking in: Medvi - the $30 premium over embody buys video visits, a dietician and coaching, and 14,372 reviews averaging 4.4 say that model holds up at scale. All three prescribe the same compounded semaglutide after a licensed-provider review.",
+      "Decide on commitment first, support second. Ready to commit to a year: wellmedr - the $49 lock is the best per-month rate in the market, its 4.7 rating is the highest here, and its weight-loss warranty backs the plan. Not ready to commit to anything: embody - $69 flat, cancel anytime, refunded if not approved. Know from experience that you quit without someone checking in: Medvi - the $30 premium over embody buys video visits, a dietician and coaching, and 14,821 reviews averaging 4.3 say that model holds up at scale. All three prescribe the same compounded semaglutide after a licensed-provider review.",
     faqs: [
       {
         question: "Which is cheapest: embody, Medvi or wellmedr?",
@@ -224,7 +224,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
       {
         question: "Which has the best Trustpilot rating?",
         answer:
-          "wellmedr holds the highest rating of the three - 4.7 across 1,205 reviews. Medvi has the largest verified base: 4.4 across 14,372 reviews. embody sits at 3.8 across 8,398. All three figures are the providers' live Trustpilot aggregates at our last verification.",
+          "wellmedr holds the highest rating of the three - 4.6 across 1,919 reviews. Medvi has the largest verified base: 4.3 across 14,821 reviews. embody sits at 3.8 across 8,398. All three figures are the providers' live Trustpilot aggregates at our last verification.",
       },
       {
         question: "Which is best if I don't want a commitment?",
@@ -307,16 +307,16 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     title: "Medvi vs trimrx vs SHED: The Support-Tier Showdown",
     metaTitle: "Medvi vs trimrx vs SHED (2026): $99-$199 Compared",
     description:
-      "The GLP-1 support tier compared: Medvi's all-inclusive care (4.4 on Trustpilot), trimrx's no-contract flexibility, and SHED's coaching with a money-back guarantee.",
+      "The GLP-1 support tier compared: Medvi's all-inclusive care (4.3 on Trustpilot), trimrx's no-contract flexibility, and SHED's coaching with a money-back guarantee.",
     intro:
-      "These three sell more than medication - each wraps the same compounded GLP-1s in a different support philosophy, from Medvi's current $99 promo to SHED's $199. Medvi bundles video visits, a dietician and care coaching behind a 14,372-review Trustpilot record. trimrx sells flexibility: no contract, optional discounts, clinical guidance. SHED sells accountability: formal health coaching plus the market's only lose-5%-in-120-days-or-your-money-back guarantee.",
+      "These three sell more than medication - each wraps the same compounded GLP-1s in a different support philosophy, from Medvi's current $99 promo to SHED's $199. Medvi bundles video visits, a dietician and care coaching behind a 14,821-review Trustpilot record. trimrx sells flexibility: no contract, optional discounts, clinical guidance. SHED sells accountability: formal health coaching plus the market's only lose-5%-in-120-days-or-your-money-back guarantee.",
     verdict:
       "Match the model to your failure mode. If past attempts failed for lack of guidance, Medvi's high-touch care - with the receipts to prove it works - is the pick. If you want premium care without being locked to anything, trimrx. If you need stakes and structure to follow through, SHED's guarantee literally pays you back if the program doesn't deliver. On current pricing Medvi's $99 promo is also the cheapest of the three - but the support philosophy, not the price, is the real choice.",
     faqs: [
       {
         question: "Is Medvi, trimrx or SHED better for support?",
         answer:
-          "They support differently: Medvi includes video visits with providers plus a free dietician and care coaching (rated 4.4 across 14,372 Trustpilot reviews); SHED includes formal health coaching backed by a money-back guarantee; trimrx includes clinical guidance through dose changes with a flexibility-first, no-contract model.",
+          "They support differently: Medvi includes video visits with providers plus a free dietician and care coaching (rated 4.3 across 14,821 Trustpilot reviews); SHED includes formal health coaching backed by a money-back guarantee; trimrx includes clinical guidance through dose changes with a flexibility-first, no-contract model.",
       },
       {
         question: "Which has a money-back guarantee?",
@@ -367,7 +367,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     description:
       "Medvi's high-touch care vs HealthRx's $99 prepaid with overnight shipping vs DirectMeds' flat $147 with needle-free drops - one matrix, real GLP-1 prices.",
     intro:
-      "Three providers, three completely different bets. Medvi bets on people: video visits, dietician, coaching, and 14,372 Trustpilot reviews averaging 4.4. HealthRx bets on logistics: $99/month semaglutide (12-month prepaid, $1,188 at checkout) with overnight cold-chain delivery. DirectMeds bets on simplicity: one flat $147 for either medication, injections or needle-free sublingual drops, no membership. The matrix below puts the three bets side by side.",
+      "Three providers, three completely different bets. Medvi bets on people: video visits, dietician, coaching, and 14,821 Trustpilot reviews averaging 4.3. HealthRx bets on logistics: $99/month semaglutide (12-month prepaid, $1,188 at checkout) with overnight cold-chain delivery. DirectMeds bets on simplicity: one flat $147 for either medication, injections or needle-free sublingual drops, no membership. The matrix below puts the three bets side by side.",
     verdict:
       "Choose the bet that matches your bottleneck. If support determines your success, Medvi - its review record is the strongest evidence in this trio. If you've committed to a year and want the sharpest committed price with premium delivery, HealthRx. If you want one predictable number forever - or you need the needle-free format nobody else offers - DirectMeds. All three run licensed clinical review; none is a legitimacy risk.",
     faqs: [

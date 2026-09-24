@@ -39,7 +39,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Commitment", value: "12-month plan for the best rate" },
       { label: "Support", value: "Coach included on every plan" },
       { label: "Guarantee", value: "Weight-loss warranty" },
-      { label: "Trustpilot record", value: "4.7 across 1,205 reviews" },
+      { label: "Trustpilot record", value: "4.6 across 1,919 reviews" },
     ],
   },
   "weight-loss:medvi": {
@@ -48,7 +48,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Tirzepatide price", value: "$166/month promotional (reg. $299)" },
       { label: "Support", value: "Video visits and a dietician on every plan" },
       { label: "Commitment", value: "Monthly, all-inclusive billing" },
-      { label: "Trustpilot record", value: "4.4 across 14,372 reviews" },
+      { label: "Trustpilot record", value: "4.3 across 14,821 reviews" },
     ],
   },
   "weight-loss:altrx": {
@@ -99,6 +99,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Semaglutide price", value: "$149/month" },
       { label: "Tirzepatide price", value: "$199/month" },
       { label: "Brand-name option", value: "Wegovy $1,799/month" },
+      { label: "Trustpilot record", value: "4.1 across 188 reviews" },
     ],
   },
   "weight-loss:ro": {

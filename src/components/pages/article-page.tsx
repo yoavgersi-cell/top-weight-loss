@@ -84,7 +84,7 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
 // blob. Every figure is a real, listed price - no invented numbers.
 const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
   "is-wellmedr-legit":
-    "Yes - by every marker we can verify: licensed-provider review before prescribing, a regulated US pharmacy, a weight-loss warranty, and a verified 4.7 on Trustpilot across 1,205 reviews (the highest among providers we track). The honest caveats: the headline $49/$99 rates lock on a 12-month plan, and results vary by person regardless of service quality.",
+    "Yes - by every marker we can verify: licensed-provider review before prescribing, a regulated US pharmacy, a weight-loss warranty, and a verified 4.6 on Trustpilot across 1,919 reviews (the highest among providers we track). The honest caveats: the headline $49/$99 rates lock on a 12-month plan, and results vary by person regardless of service quality.",
   "best-tirzepatide-online":
     "Verified compounded tirzepatide prices run $89-$299/month: wellmedr $89 (12-month plan) is the floor, embody $119 the cheapest with no commitment, and Medvi $166 all-inclusive with the largest review base. Brand-name Zepbound: $1,249/month cash at altRx, or ro's KwikPen from $299 first month plus membership - where insurance applies, ro can be far cheaper. Every legitimate source requires a prescription.",
   "ozempic-face":
