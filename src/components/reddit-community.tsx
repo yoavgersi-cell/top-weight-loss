@@ -157,10 +157,63 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
   },
   embody: {
     themes:
-      "Communication and support come up again and again in the comments above - a nurse calling after the first dose, orders rushed after a quick complaint - and the prices users quote match the ones embody publishes. The one gripe that repeats: the wait between approval and the first shipment.",
+      "Two things repeat across the threads above: speed - same-day approval, a vial within a week, a switcher whose order was approved the next day and shipped two days later at their previous dose - and a self-serve model users describe as 'autopilot' that keeps the price low but means little human contact. The gripes are specific: a refill flow one user couldn't find in the dashboard, support replies another called AI-generated, and the wait between approval and the first shipment. The $129 figure users quote matches embody's regular tirzepatide price.",
     intro:
       "Beyond Trustpilot, recent Reddit comments about embody paint a consistent - and usefully unvarnished - picture. These are excerpts from real public comments:",
     threads: [
+      {
+        author: "thegoldstandard55",
+        age: "13d ago",
+        upvotes: 4,
+        body: [
+          "Embody is great if you don't need to actually talk to anyone. But if you are okay getting the default and starting from the beginning they are great. I used to get Sema from OrderlyMeds and after 1 year and stalling and feeling not so well I quit, then over 5 months I balooned up 20. So I found embody and their new low price for triz and was okay with starting at the 2.5 (or slightly lower because of the b12).",
+          "The med check was quick and I was approved same day, got my vial in just one week. Now 3 weeks in they bumped my dose to 5 (or 4.2) and shipped it out already. When I do the check in they will decide if I stick with 5 or go to 7.5 following month. But yeah if I wanted to get 10 from the start that may not have been possible. Everything is on autopilot, that's how they keep costs low.",
+        ],
+      },
+      {
+        author: "MsButterflyStarr",
+        age: "6d ago",
+        upvotes: 2,
+        body: [
+          "I just switched to Embody from NativeMed. I haven't received my scrip yet but the process has been good so far. I placed my order on Monday, dr approved it Tuesday, it shipped today (Thursday) and scheduled to arrive tomorrow. And they matched my last dosage.",
+        ],
+        replies: [
+          {
+            author: "dreamy-lover",
+            body: "Hi, do you have an update you can share? I was planning on purchasing, but decided to look on Reddit first. Do they send the vial with liquid already mixed in? Also do they send needles?",
+          },
+          {
+            author: "MsButterflyStarr",
+            body: "They sent two small vials and 6 needles with alcohol wipes. Everything is ready to go, I just pull 98 units, so almost a full syringe (15mg)",
+          },
+        ],
+      },
+      {
+        author: "Comfortable_Whole343",
+        age: "2mo ago",
+        upvotes: 5,
+        body: [
+          "I started about a month ago and so far so good. I think they revamped their program cause web med is sponsoring them from what I read. $129 for all levels of tri and no contract and I already moved up my dosages with no issues or kick back. They have been very prompt with responses and mail. My promotion also says if I lose nothing or not satisfied that refund is given.",
+        ],
+        replies: [
+          {
+            author: "ArtisticSalamander16",
+            body: "How do you submit a refill. I just did my third shot and was told to reach out to them for my next fill once I hit the third. My dashboard doesn't show me a message option though or refill request option. So I'm confused.",
+          },
+          {
+            author: "Comfortable_Whole343",
+            body: "Try texting this number [support line] this is how I ask questions and complete my monthly check-ins for refills.",
+          },
+          {
+            author: "Cherryvanillas",
+            body: "You can email them [support address] or text [support line]. Let them know why you're reaching out and they'll help you from there. They've always been quick to respond to me and very kind and helpful. You can schedule appointments with providers through email or text too if you need your dose increased. There should be a monthly check in form in your portal as well that you fill out at the end of each month regarding how everything's going with your GLP1.",
+          },
+          {
+            author: "Comfortable-Song8606",
+            body: "The kind and helpful responses are AI. No ability to help. Just nice words like “I understand your frustration.”",
+          },
+        ],
+      },
       {
         author: "SaltAvocado9500",
         body: [
@@ -202,7 +255,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
     ],
     takeaway:
-      "The community picture matches the Trustpilot one: communication and service are the consistent strength, delivery is fast once medication ships, and the honest watch-out is pipeline time between approval and shipment - if timing matters, order before your current supply runs low. The $129 figures Reddit users mention line up with embody's regular tirzepatide price ($119 promotional / $129 regular).",
+      "The community picture matches the Trustpilot one: delivery is fast once medication ships, dose changes go through without pushback, and the model is deliberately self-serve - 'everything is on autopilot, that's how they keep costs low', as one user put it. The honest watch-outs are the flip side of that: little human contact, a refill process one user had to ask Reddit about, and pipeline time between approval and shipment - if timing matters, order before your current supply runs low. The $129 figures Reddit users mention line up with embody's regular tirzepatide price ($119 promotional / $129 regular).",
   },
   medvi: {
     themes:

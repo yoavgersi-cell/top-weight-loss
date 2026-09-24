@@ -140,7 +140,7 @@ const ROWS: Row[] = [
     visit: "Online intake; reviewers describe scheduled provider appointments, including video calls, and dose-increase appointments",
     pharmacy: "US 503A compounding pharmacies; LegitScript-certified",
     dosePricing: "Flat monthly, no commitment; full refund if not approved",
-    critics: "Trustpilot 3.8 across 8,398 reviews. The low-star reviews from the past week are specific: a doctor who missed three video appointments before a call four days late; a first dose that took 8 days against a 3-5 day promise, then a refill 3 days overdue; a billing dispute bounced between support agents with no resolution. The praise is equally specific: providers who listen, dose adjustments made, an account manager who fixed a broken portal.",
+    critics: "Trustpilot 3.8 across 8,398 reviews. The low-star reviews from the past week are specific: a doctor who missed three video appointments before a call four days late; a first dose that took 8 days against a 3-5 day promise, then a refill 3 days overdue; a billing dispute bounced between support agents with no resolution. The praise is equally specific: providers who listen, dose adjustments made, an account manager who fixed a broken portal. On Reddit the recurring line is 'great if you don't need to actually talk to anyone': same-day approvals and a switcher's order matched to their previous dose, against a refill flow one user couldn't find and support replies another called AI-generated.",
   },
   {
     id: "trimrx",
