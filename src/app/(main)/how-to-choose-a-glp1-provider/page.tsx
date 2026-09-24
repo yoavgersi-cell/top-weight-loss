@@ -7,6 +7,7 @@ import { LastUpdated } from "@/components/last-updated";
 import { GuideCluster } from "@/components/guide-cluster";
 import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/reddit-community";
 import { TrustpilotRating } from "@/components/trustpilot-rating";
+import { MixedTrustpilotCarousel, type MixedReviewItem } from "@/components/trustpilot-carousel";
 import { ProviderCta } from "@/components/provider-cta";
 import { rankedCardItems } from "@/components/top-providers-block";
 import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
@@ -317,6 +318,28 @@ function latestReviewDate(reviews: TrustpilotReview[]): string | null {
   return label;
 }
 
+function reviewTime(r: TrustpilotReview): number {
+  if (!r.date) return 0;
+  const t = new Date(r.date).getTime();
+  return isNaN(t) ? 0 : t;
+}
+
+// The cross-provider carousel's rule, applied identically to every provider:
+// the most recent 4- or 5-star review we captured and the most recent 3-star
+// or lower. If a provider has no low-star review on record, its second most
+// recent review stands in, so every provider shows two cards.
+function pickMix(reviews: TrustpilotReview[]): TrustpilotReview[] {
+  const sorted = [...reviews].sort((a, b) => reviewTime(b) - reviewTime(a));
+  const high = sorted.find((r) => r.rating >= 4);
+  const low = sorted.find((r) => r.rating <= 3);
+  const picks = [high, low].filter((r): r is TrustpilotReview => !!r);
+  if (picks.length < 2) {
+    const next = sorted.find((r) => !picks.includes(r));
+    if (next) picks.push(next);
+  }
+  return picks;
+}
+
 function starMix(reviews: TrustpilotReview[]): string {
   const counts = [5, 4, 3, 2, 1].map((s) => [s, reviews.filter((r) => r.rating === s).length] as const).filter(([, n]) => n > 0);
   return counts.map(([s, n]) => `${n} ${s}-star`).join(", ");
@@ -333,6 +356,15 @@ export default async function HowToChooseGlp1ProviderPage() {
   const rowById = new Map(rows.map((r) => [r.id, r]));
   const redditProviders = rows.map((r) => ({ id: r.provider!.id, name: r.provider!.name })).filter((p) => REDDIT_COMMUNITY_FEEDBACK[p.id]);
   const explore = rankedCardItems(config, { providerIds: Object.keys(EXPLORE), order: "ranking" });
+  const mixedReviews: MixedReviewItem[] = rows
+    .flatMap((r) => {
+      const reviews = r.provider!.trustpilotReviews ?? [];
+      return pickMix(reviews).map((review) => ({
+        review,
+        provider: { name: r.provider!.name, href: `/weight-loss/reviews/${r.provider!.id}`, total: reviews.length },
+      }));
+    })
+    .sort((a, b) => reviewTime(b.review) - reviewTime(a.review));
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -611,7 +643,7 @@ export default async function HowToChooseGlp1ProviderPage() {
                   </p>
                   <p className="mt-2 flex flex-wrap gap-x-4 text-[12.5px] font-semibold">
                     <Link href={`/weight-loss/reviews/${p.id}`} className="text-[#0C4B75] hover:underline">
-                      Read the captured reviews
+                      {reviews.length > 0 ? "Read the captured reviews" : "Read our review"}
                     </Link>
                     <ProviderCta
                       href={p.affiliateUrl}
@@ -628,6 +660,13 @@ export default async function HowToChooseGlp1ProviderPage() {
                 </div>
               );
             })}
+          </div>
+          <div className="mt-4">
+            <MixedTrustpilotCarousel
+              items={mixedReviews}
+              title="The reviews themselves, across providers"
+              subtitle="Two per provider by a fixed rule: the most recent 4- or 5-star review we captured and the most recent 3-star or lower. Newest first, reviewer names shortened."
+            />
           </div>
           <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">
             Aggregates for ro, embody, trimrx, SHED, wellmedr, Medvi, Sprout and DirectMeds were re-checked against their
