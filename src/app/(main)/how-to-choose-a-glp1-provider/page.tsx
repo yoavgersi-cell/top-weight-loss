@@ -271,6 +271,8 @@ export default async function HowToChooseGlp1ProviderPage() {
   };
 
   const ext = "font-semibold text-[#0C4B75] hover:underline";
+  // Table data cell: vertical rule on the right so columns read as columns.
+  const cell = "border-r border-gray-200 px-3 py-3 align-top last:border-r-0";
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -396,21 +398,21 @@ export default async function HowToChooseGlp1ProviderPage() {
               <thead>
                 <tr className="border-b border-gray-200 bg-gray-50">
                   {["Provider", "Clinician gate", "Visit type", "Pharmacy", "Semaglutide / mo", "Dose pricing", "Trustpilot"].map((h) => (
-                    <th key={h} className="px-3 py-3 align-bottom font-bold text-[#191919]">{h}</th>
+                    <th key={h} className="border-r border-gray-200 px-3 py-3 align-bottom font-bold text-[#191919] last:border-r-0">{h}</th>
                   ))}
                 </tr>
               </thead>
               <tbody>
                 {rows.map((r, i) => (
                   <Fragment key={r.id}>
-                  <tr className={`border-t border-gray-100 ${i % 2 === 1 ? "bg-gray-50/50" : ""}`}>
-                    <td className="px-3 pt-3 pb-1 align-top font-semibold text-[#191919]">
+                  <tr className={`border-t-2 border-gray-300 ${i % 2 === 1 ? "bg-gray-50/50" : ""}`}>
+                    <td className={`${cell} font-semibold text-[#191919]`}>
                       <Link href={`/weight-loss/reviews/${r.provider!.id}`} className="hover:underline">{r.provider!.name}</Link>
                     </td>
-                    <td className="px-3 py-3 align-top text-gray-700">{r.clinician}</td>
-                    <td className="px-3 py-3 align-top text-gray-700">{r.visit}</td>
-                    <td className="px-3 py-3 align-top text-gray-700">{r.pharmacy}</td>
-                    <td className="px-3 py-3 align-top text-gray-700">
+                    <td className={`${cell} text-gray-700`}>{r.clinician}</td>
+                    <td className={`${cell} text-gray-700`}>{r.visit}</td>
+                    <td className={`${cell} text-gray-700`}>{r.pharmacy}</td>
+                    <td className={`${cell} text-gray-700`}>
                       {r.price?.semaglutide ? (
                         <>
                           <span className="font-semibold text-[#191919]">{r.price.semaglutide.price}</span>
@@ -420,8 +422,8 @@ export default async function HowToChooseGlp1ProviderPage() {
                         <span className="text-gray-400">Not in price index</span>
                       )}
                     </td>
-                    <td className="px-3 py-3 align-top text-gray-700">{r.dosePricing}</td>
-                    <td className="px-3 py-3 align-top text-gray-700">
+                    <td className={`${cell} text-gray-700`}>{r.dosePricing}</td>
+                    <td className={`${cell} text-gray-700`}>
                       {r.provider!.trustpilotRating && r.provider!.trustpilotReviewCount ? (
                         <>
                           <span className="font-semibold text-[#191919]">{r.provider!.trustpilotRating}</span>
@@ -435,7 +437,7 @@ export default async function HowToChooseGlp1ProviderPage() {
                   {/* Critics line - full width under the row, so it reads as a
                       sentence instead of a narrow eighth column */}
                   <tr className={i % 2 === 1 ? "bg-gray-50/50" : ""}>
-                    <td colSpan={7} className="px-3 pb-3 pt-0 text-[12.5px] leading-relaxed text-gray-600">
+                    <td colSpan={7} className="border-t border-dashed border-gray-200 px-3 py-3 text-[12.5px] leading-relaxed text-gray-600">
                       <span className="font-semibold text-[#191919]">What critics say: </span>
                       {r.critics}
                     </td>
