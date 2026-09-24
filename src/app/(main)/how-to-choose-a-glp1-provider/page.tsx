@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { Fragment } from "react";
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Stethoscope, Search, AlertTriangle } from "lucide-react";
+import { ShieldCheck, Stethoscope, Search, AlertTriangle } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { LastUpdated } from "@/components/last-updated";
 import { GuideCluster } from "@/components/guide-cluster";
@@ -391,18 +392,19 @@ export default async function HowToChooseGlp1ProviderPage() {
             coverage and are left out rather than guessed at.
           </p>
           <div className="overflow-x-auto rounded-xl border border-gray-200">
-            <table className="w-full min-w-[1080px] text-left text-[13px]">
+            <table className="w-full min-w-[900px] text-left text-[13px]">
               <thead>
                 <tr className="border-b border-gray-200 bg-gray-50">
-                  {["Provider", "Clinician gate", "Visit type", "Pharmacy", "Semaglutide / mo", "Dose pricing", "Trustpilot", "What critics say"].map((h) => (
+                  {["Provider", "Clinician gate", "Visit type", "Pharmacy", "Semaglutide / mo", "Dose pricing", "Trustpilot"].map((h) => (
                     <th key={h} className="px-3 py-3 align-bottom font-bold text-[#191919]">{h}</th>
                   ))}
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-100">
+              <tbody>
                 {rows.map((r, i) => (
-                  <tr key={r.id} className={i % 2 === 1 ? "bg-gray-50/50" : ""}>
-                    <td className="px-3 py-3 align-top font-semibold text-[#191919]">
+                  <Fragment key={r.id}>
+                  <tr className={`border-t border-gray-100 ${i % 2 === 1 ? "bg-gray-50/50" : ""}`}>
+                    <td className="px-3 pt-3 pb-1 align-top font-semibold text-[#191919]">
                       <Link href={`/weight-loss/reviews/${r.provider!.id}`} className="hover:underline">{r.provider!.name}</Link>
                     </td>
                     <td className="px-3 py-3 align-top text-gray-700">{r.clinician}</td>
@@ -429,8 +431,16 @@ export default async function HowToChooseGlp1ProviderPage() {
                         <span className="text-gray-400">No aggregate verified</span>
                       )}
                     </td>
-                    <td className="px-3 py-3 align-top text-gray-700">{r.critics}</td>
                   </tr>
+                  {/* Critics line - full width under the row, so it reads as a
+                      sentence instead of a narrow eighth column */}
+                  <tr className={i % 2 === 1 ? "bg-gray-50/50" : ""}>
+                    <td colSpan={7} className="px-3 pb-3 pt-0 text-[12.5px] leading-relaxed text-gray-600">
+                      <span className="font-semibold text-[#191919]">What critics say: </span>
+                      {r.critics}
+                    </td>
+                  </tr>
+                  </Fragment>
                 ))}
               </tbody>
             </table>
