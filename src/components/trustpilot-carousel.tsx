@@ -60,7 +60,9 @@ function TrustpilotWordmark({ starClass = "h-5 w-5", textClass = "text-[17px]" }
   );
 }
 
-function ReviewCard({ r }: { r: TrustpilotReview }) {
+export type ReviewCardProvider = { name: string; href: string; total: number };
+
+function ReviewCard({ r, provider }: { r: TrustpilotReview; provider?: ReviewCardProvider }) {
   return (
     <div className="flex h-full flex-col rounded-xl border border-gray-200 bg-white p-4">
       <div className="mb-2.5 flex items-center justify-between gap-2">
@@ -86,34 +88,31 @@ function ReviewCard({ r }: { r: TrustpilotReview }) {
           <p className="text-[11px] text-gray-400">{r.location}</p>
         </div>
       </div>
+      {provider && (
+        <p className="mt-3 flex items-center justify-between gap-2 border-t border-gray-100 pt-2.5 text-[11.5px]">
+          <span className="font-bold text-[#191919]">{provider.name}</span>
+          <a href={provider.href} className="font-semibold text-[#0C4B75] hover:underline">
+            All {provider.total} captured
+          </a>
+        </p>
+      )}
     </div>
   );
 }
 
-export function TrustpilotCarousel({
-  providerName,
-  providerLogo,
-  reviews,
-  rating,
-  reviewCount,
-}: {
-  providerName: string;
-  providerLogo?: string;
-  reviews: TrustpilotReview[];
-  rating?: string;
-  reviewCount?: string;
-}) {
+// Desktop: paginated grid of up to 4 cards with arrows + dots. Mobile: a
+// horizontal snap carousel with dots + arrows. Shared by the per-provider
+// carousel and the cross-provider one.
+function ReviewPager({ cards }: { cards: { key: string; node: React.ReactNode }[] }) {
   const [current, setCurrent] = useState(0);
   const [page, setPage] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const total = reviews.length;
+  const total = cards.length;
   const perPage = 4;
   const pageCount = Math.ceil(total / perPage);
 
   // Auto-advance is intentionally disabled - the carousel only moves when the
   // reader uses the arrows or dots (no self-scrolling animation).
-
-  // Scroll mobile carousel
   useEffect(() => {
     if (!scrollRef.current) return;
     const card = scrollRef.current.children[current] as HTMLElement;
@@ -122,44 +121,14 @@ export function TrustpilotCarousel({
     }
   }, [current]);
 
-  if (total === 0) return null;
-
-  const desktopVisible = reviews.slice(page * perPage, page * perPage + perPage);
-  const numericRating = rating ? parseFloat(rating) : null;
+  const desktopVisible = cards.slice(page * perPage, page * perPage + perPage);
 
   return (
-    <div className="rounded-2xl border border-gray-200 bg-gray-50/50 p-5 sm:p-6">
-      {/* Header */}
-      <div className="mb-5 flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-          {providerLogo && (
-            <div className="flex h-[28px] w-[90px] items-center">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={providerLogo} alt={`${providerName} logo`} className="max-h-full max-w-full object-contain" />
-            </div>
-          )}
-          <h3 className="text-[16px] font-bold text-[#191919]">
-            {providerName} <span className="font-medium text-gray-400">reviews on</span>
-          </h3>
-          <TrustpilotWordmark />
-        </div>
-        {rating && numericRating !== null && !isNaN(numericRating) ? (
-          <div className="flex items-center gap-2">
-            <TrustpilotStars rating={numericRating} boxClass="h-[20px] w-[20px]" />
-            {reviewCount && (
-              <span className="text-[12px] text-gray-400">({reviewCount} reviews)</span>
-            )}
-          </div>
-        ) : (
-          <span className="text-[12px] text-gray-400">Source: Trustpilot</span>
-        )}
-      </div>
-
-      {/* Desktop: paginated grid - up to 4 per page, arrows + dots to see the rest */}
+    <>
       <div className="hidden sm:block">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {desktopVisible.map((r, i) => (
-            <ReviewCard key={`${page}-${i}`} r={r} />
+          {desktopVisible.map((c) => (
+            <div key={c.key}>{c.node}</div>
           ))}
         </div>
 
@@ -195,26 +164,24 @@ export function TrustpilotCarousel({
         )}
       </div>
 
-      {/* Mobile: horizontal scroll carousel */}
       <div className="sm:hidden">
         <div
           ref={scrollRef}
           className="flex gap-3 overflow-x-auto scroll-smooth pb-3 snap-x snap-mandatory scrollbar-hide"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          {reviews.map((r, i) => (
-            <div key={i} className="w-[85%] shrink-0 snap-center">
-              <ReviewCard r={r} />
+          {cards.map((c) => (
+            <div key={c.key} className="w-[85%] shrink-0 snap-center">
+              {c.node}
             </div>
           ))}
         </div>
 
-        {/* Dots + arrows */}
         <div className="mt-3 flex items-center justify-between px-1">
           <div className="flex gap-1.5">
-            {reviews.map((_, i) => (
+            {cards.map((c, i) => (
               <button
-                key={i}
+                key={c.key}
                 onClick={() => setCurrent(i)}
                 aria-label={`Go to review ${i + 1}`}
                 className={`h-1.5 rounded-full transition-all ${
@@ -241,6 +208,82 @@ export function TrustpilotCarousel({
           </div>
         </div>
       </div>
+    </>
+  );
+}
+
+// Cross-provider carousel: one shared block of captured reviews from several
+// providers, each card tagged with its provider. The caller decides the mix
+// (e.g. the most recent high- and low-star review per provider) so the
+// component never cherry-picks.
+export type MixedReviewItem = { review: TrustpilotReview; provider: ReviewCardProvider };
+
+export function MixedTrustpilotCarousel({ items, title, subtitle }: { items: MixedReviewItem[]; title: string; subtitle?: string }) {
+  if (items.length === 0) return null;
+  return (
+    <div className="rounded-2xl border border-gray-200 bg-gray-50/50 p-5 sm:p-6">
+      <div className="mb-5 flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
+        <div>
+          <h3 className="text-[16px] font-bold text-[#191919]">{title}</h3>
+          {subtitle && <p className="mt-0.5 text-[12.5px] text-gray-500">{subtitle}</p>}
+        </div>
+        <span className="inline-flex items-center gap-1.5 text-[12px] text-gray-400">
+          Source: <TrustpilotWordmark starClass="h-4 w-4" textClass="text-[14px]" />
+        </span>
+      </div>
+      <ReviewPager
+        cards={items.map((it, i) => ({ key: `${it.provider.name}-${i}`, node: <ReviewCard r={it.review} provider={it.provider} /> }))}
+      />
+    </div>
+  );
+}
+
+export function TrustpilotCarousel({
+  providerName,
+  providerLogo,
+  reviews,
+  rating,
+  reviewCount,
+}: {
+  providerName: string;
+  providerLogo?: string;
+  reviews: TrustpilotReview[];
+  rating?: string;
+  reviewCount?: string;
+}) {
+  const total = reviews.length;
+  if (total === 0) return null;
+  const numericRating = rating ? parseFloat(rating) : null;
+
+  return (
+    <div className="rounded-2xl border border-gray-200 bg-gray-50/50 p-5 sm:p-6">
+      {/* Header */}
+      <div className="mb-5 flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+          {providerLogo && (
+            <div className="flex h-[28px] w-[90px] items-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={providerLogo} alt={`${providerName} logo`} className="max-h-full max-w-full object-contain" />
+            </div>
+          )}
+          <h3 className="text-[16px] font-bold text-[#191919]">
+            {providerName} <span className="font-medium text-gray-400">reviews on</span>
+          </h3>
+          <TrustpilotWordmark />
+        </div>
+        {rating && numericRating !== null && !isNaN(numericRating) ? (
+          <div className="flex items-center gap-2">
+            <TrustpilotStars rating={numericRating} boxClass="h-[20px] w-[20px]" />
+            {reviewCount && (
+              <span className="text-[12px] text-gray-400">({reviewCount} reviews)</span>
+            )}
+          </div>
+        ) : (
+          <span className="text-[12px] text-gray-400">Source: Trustpilot</span>
+        )}
+      </div>
+
+      <ReviewPager cards={reviews.map((r, i) => ({ key: String(i), node: <ReviewCard r={r} /> }))} />
     </div>
   );
 }
