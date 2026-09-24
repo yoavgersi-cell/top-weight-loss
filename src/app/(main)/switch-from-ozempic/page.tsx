@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideCluster } from "@/components/guide-cluster";
+import { TopTwoPicks } from "@/components/top-providers-block";
 import { ShieldCheck, ArrowDownRight } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED, AFFILIATE_PROVIDER_IDS } from "@/lib/config";
@@ -198,6 +199,8 @@ export default async function SwitchFromOzempicPage() {
             the quality bar lives with the pharmacy, which is what the checklist below is for.
           </p>
         </section>
+
+        <TopTwoPicks config={config} linkPrefix="/weight-loss" />
 
         {/* How the switch works */}
         <section className="mb-12">

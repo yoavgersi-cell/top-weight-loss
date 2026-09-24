@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideCluster } from "@/components/guide-cluster";
+import { TopTwoPicks } from "@/components/top-providers-block";
 import { BadgeDollarSign, ScanSearch, Repeat } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED, AFFILIATE_PROVIDER_IDS } from "@/lib/config";
@@ -158,6 +159,8 @@ export default async function CheapestGlp1Page() {
           real; where a provider has no published rating, we say so instead of inventing one.
         </p>
         <PriceIndex providers={providers} />
+
+        <TopTwoPicks config={config} linkPrefix="/weight-loss" />
 
         {/* What a year actually costs - promo math done honestly, per provider */}
         <section className="mt-12">

@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideCluster } from "@/components/guide-cluster";
+import { TopTwoPicks } from "@/components/top-providers-block";
 import { Pill, ShieldCheck, ArrowRight, DollarSign } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { LastUpdated } from "@/components/last-updated";
 import { CONTENT_LAST_UPDATED } from "@/lib/config";
+import { getConfig } from "@/lib/config-store";
 
 export const revalidate = 60;
 
@@ -73,7 +75,8 @@ const faqs: { question: string; answer: string }[] = [
   },
 ];
 
-export default function OzempicAlternativesPage() {
+export default async function OzempicAlternativesPage() {
+  const config = await getConfig("weight-loss");
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -137,6 +140,8 @@ export default function OzempicAlternativesPage() {
             </p>
           </div>
         </div>
+
+        <TopTwoPicks config={config} linkPrefix="/weight-loss" />
 
         {/* Brand → alternative table */}
         <section className="mb-12">
