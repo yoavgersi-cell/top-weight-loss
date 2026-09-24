@@ -2073,7 +2073,7 @@ export const articles: Article[] = [
       },
       {
         heading: "How do you choose a tirzepatide provider?",
-        body: 'Work down your actual constraint. <strong>Cheapest possible and willing to commit a year:</strong> wellmedr at $89. <strong>Cheapest without commitment:</strong> embody at $119, with 1-2 day shipping. <strong>Hate needles:</strong> DirectMeds - the only sublingual-drops option, $147 flat. <strong>Might want brand-name later:</strong> altRx - $149 compounded with Zepbound on the same shelf. <strong>Want a person in the loop:</strong> Medvi at $166 all-inclusive, with the biggest verified review base. <strong>Need stakes to stick with it:</strong> SHED\'s money-back guarantee. There is no wrong answer on legitimacy in this table - it is a fit decision, not a safety decision.',
+        body: 'Work down your actual constraint. <strong>Cheapest possible and willing to commit a year:</strong> wellmedr at $89. <strong>Cheapest without commitment:</strong> embody at $119, with 1-2 day shipping. <strong>Hate needles:</strong> DirectMeds - the only sublingual-drops option, $147 flat. <strong>Might want brand-name later:</strong> altRx - $149 compounded with Zepbound on the same shelf. <strong>Want a person in the loop:</strong> Medvi at $166 all-inclusive, with one of the two biggest verified review bases. <strong>Need stakes to stick with it:</strong> SHED\'s money-back guarantee. There is no wrong answer on legitimacy in this table - it is a fit decision, not a safety decision.',
       },
       {
         heading: "The verdict",

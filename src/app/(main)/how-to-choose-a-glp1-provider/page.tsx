@@ -189,7 +189,7 @@ const ROWS: Row[] = [
     visit: "Video visits with providers, scheduled monitoring, a dietician and care coaching",
     pharmacy: "Compounded; pharmacy not named in our research",
     dosePricing: "All-inclusive; no dose-based increases; HSA/FSA",
-    likes: "The 5-star Trustpilot reviews from the same week are about the video visits and nurse practitioners: thorough calls, questions answered fully, a provider who \"took her time\". Two year-long Reddit write-ups report 40 pounds and just under 15% of body weight lost, with dose adjustments when progress stalled. 4.3 across 14,821 is the largest verified base in our table.",
+    likes: "The 5-star Trustpilot reviews from the same week are about the video visits and nurse practitioners: thorough calls, questions answered fully, a provider who \"took her time\". Two year-long Reddit write-ups report 40 pounds and just under 15% of body weight lost, with dose adjustments when progress stalled. 4.3 across 14,821 is one of the two largest verified bases in our table.",
     complaints: "The 1-star Trustpilot reviews from September are serious and specific: a prepaid annual plan renewed after 11 shipments without notice, refunded only after BBB, FTC and state attorney-general complaints; a charge taken before any clinician contact, followed by a wrong-dose shipment and a refused refund; a transferring patient sent a starter dose repeatedly; communication stopping after five months. One reviewer says tirzepatide tops out at 11.125 mg; we have not verified that. The $99 rate is promotional against $199, and Reddit users name the ongoing monthly cost as the caveat.",
   },
   {
@@ -207,8 +207,8 @@ const ROWS: Row[] = [
     visit: "Online intake, physician review; no membership, cancel anytime",
     pharmacy: "Compounded; pharmacy not named in our research",
     dosePricing: "Flat $147 for either medication at any dose, injections or sublingual drops",
-    likes: "The Trustpilot aggregate (4.6 across 13,901) is from an earlier capture, and the three individual reviews we hold are 5-star and about named support agents.",
-    complaints: "None captured in our research yet. Structurally: no coaching layer and no brand-name shelf, and the needle-free drops are a clinician-discretion format - the major trials studied injections.",
+    likes: "Trustpilot 4.6 across 15,690 reviews, the largest base in our table. The 4- and 5-star reviews from the past week are almost all about named support agents: a straightforward sign-up, prompt answers, a rep who fixed a problem on the spot. One 3-star reviewer says the company \"came through\" after a few issues and calls the prices reasonable.",
+    complaints: "A 2-star review from September: an order stuck at \"Label Created\" until three phone calls, then damaged in transit, with the AI chat insisting it had been delivered. A 4-star reviewer could not access the doctor's message and would rather talk to reps than use the online account; a 3-star NAD customer received a two-week supply with no syringes. Structurally: no coaching layer and no brand-name shelf, and the needle-free drops are a clinician-discretion format - the major trials studied injections.",
   },
   {
     id: "healthrx",
@@ -258,7 +258,7 @@ const EXPLORE: Record<string, { useCase: string; reason: string }> = {
     reason: "Compounded semaglutide and tirzepatide flat at every dose, next to cash prices for Ozempic, Zepbound and Wegovy. No public Trustpilot aggregate, so weigh the individual reviews and the Reddit thread.",
   },
   medvi: {
-    useCase: "Live clinician visits and the largest verified review base",
+    useCase: "Live clinician visits and one of the two largest review bases",
     reason: "Video visits with providers, scheduled monitoring and a dietician, with 4.3 across 14,821 Trustpilot reviews. The $99 rate is promotional against $199.",
   },
   wellmedr: {
@@ -655,17 +655,14 @@ export default async function HowToChooseGlp1ProviderPage() {
                     ) : (
                       <span className="text-gray-400">No individual reviews captured yet.</span>
                     )}
-                    {r.id === "directmeds" && hasAggregate && (
-                      <span className="text-gray-400"> Aggregate from an earlier capture.</span>
-                    )}
                   </p>
                 </div>
               );
             })}
           </div>
           <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">
-            Aggregates for ro, embody, trimrx, SHED, wellmedr, Medvi and Sprout were re-checked against their public
-            Trustpilot profiles in September 2026. Where a provider publishes no aggregate, we say so rather than
+            Aggregates for ro, embody, trimrx, SHED, wellmedr, Medvi, Sprout and DirectMeds were re-checked against their
+            public Trustpilot profiles in September 2026. Where a provider publishes no aggregate, we say so rather than
             estimate one.
           </p>
         </section>
