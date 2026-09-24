@@ -19,6 +19,7 @@ export type RedditThread = {
   commentCount?: number; // only when visible in the source screenshot
   body: string[]; // real excerpt paragraphs
   replies?: RedditReply[];
+  url?: string; // the thread's permalink, only when the operator supplied it
 };
 
 export const REDDIT_COMMUNITY_FEEDBACK: Record<
@@ -162,6 +163,8 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       "Beyond Trustpilot, recent Reddit comments about embody paint a consistent - and usefully unvarnished - picture. These are excerpts from real public comments:",
     threads: [
       {
+        subreddit: "r/compoundedtirzepatide",
+        url: "https://www.reddit.com/r/compoundedtirzepatide/comments/1utd6g7/has_anyone_tried_em_ie_embody_the_price_is_good/",
         author: "thegoldstandard55",
         age: "13d ago",
         upvotes: 4,
@@ -171,6 +174,8 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
         ],
       },
       {
+        subreddit: "r/compoundedtirzepatide",
+        url: "https://www.reddit.com/r/compoundedtirzepatide/comments/1utd6g7/has_anyone_tried_em_ie_embody_the_price_is_good/",
         author: "MsButterflyStarr",
         age: "6d ago",
         upvotes: 2,
@@ -605,9 +610,16 @@ function ThreadCard({
             {thread.commentCount}
           </span>
         )}
-        <Link href={reviewHref} className="ml-auto font-semibold text-[#0C4B75] hover:underline">
-          Full thread in review
-        </Link>
+        <span className="ml-auto flex items-center gap-3">
+          {thread.url && (
+            <a href={thread.url} target="_blank" rel="nofollow noopener" className="font-semibold text-gray-500 hover:underline">
+              Source
+            </a>
+          )}
+          <Link href={reviewHref} className="font-semibold text-[#0C4B75] hover:underline">
+            Full thread in review
+          </Link>
+        </span>
       </div>
     </div>
   );
