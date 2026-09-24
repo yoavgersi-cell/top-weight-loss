@@ -36,6 +36,7 @@ const WL_STATIC_PATHS: { path: string; priority: number; changeFrequency: "weekl
   { path: "/cheapest-glp1", priority: 0.8, changeFrequency: "weekly" },
   { path: "/switch-from-ozempic", priority: 0.8, changeFrequency: "weekly" },
   { path: "/glp1-weight-loss-statistics", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/how-to-choose-a-glp1-provider", priority: 0.8, changeFrequency: "weekly" },
   { path: "/how-we-rank", priority: 0.6, changeFrequency: "monthly" },
   { path: "/about", priority: 0.3, changeFrequency: "monthly" },
   { path: "/disclaimer", priority: 0.2, changeFrequency: "monthly" },

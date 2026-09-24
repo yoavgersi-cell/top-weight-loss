@@ -9,6 +9,48 @@ import type { SiteConfig } from "@/lib/config";
 // Everything is pulled from the vertical's ranking config; nothing is invented,
 // and the order (and therefore "top three") is exactly the ranking order the
 // comparison page uses. Providers that don't resolve are skipped.
+export type RankedCardItem = { product: RichCardProduct; review: SiteConfig["reviews"][number] | undefined; provider: SiteConfig["providers"][number] };
+
+/** The same ranked card data TopProvidersBlock renders, for pages that need to interleave other content. */
+export function rankedCardItems(
+  config: SiteConfig,
+  opts: { providerIds?: string[]; order?: "ranking" | "given"; limit?: number } = {},
+): RankedCardItem[] {
+  const { providerIds, order = "ranking", limit = Infinity } = opts;
+  const { providerOrder, positions } = config.ranking;
+  const ranked = providerOrder
+    .map((id, index) => ({ id, index }))
+    .filter(({ id }) => (providerIds ? providerIds.includes(id) : true));
+  const ordered =
+    providerIds && order === "given"
+      ? providerIds.map((id) => ranked.find((r) => r.id === id)).filter((r): r is { id: string; index: number } => !!r)
+      : ranked;
+  return ordered
+    .map(({ id, index }, displayIdx) => {
+      const provider = config.providers.find((p) => p.id === id);
+      if (!provider) return null;
+      const position = positions[index] || positions[positions.length - 1];
+      const product: RichCardProduct = {
+        id: provider.id,
+        name: provider.name,
+        logo: provider.logo,
+        tagline: provider.tagline,
+        highlights: provider.highlights,
+        affiliateUrl: provider.affiliateUrl,
+        rank: providerIds ? displayIdx + 1 : index + 1,
+        rating: position.score,
+        ratingLabel: position.label,
+        starRating: position.starRating,
+        badge: position.badge,
+        trustpilotRating: provider.trustpilotRating,
+        trustpilotReviewCount: provider.trustpilotReviewCount,
+      };
+      return { product, review: (config.reviews ?? []).find((r) => r.providerId === provider.id), provider };
+    })
+    .filter((x): x is RankedCardItem => x !== null)
+    .slice(0, limit);
+}
+
 export function TopProvidersBlock({
   config,
   linkPrefix = "",

@@ -245,7 +245,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "Does SHED include coaching?",
       answer:
-        "Yes - health coaching is included in every plan rather than sold as an add-on, alongside the provider visit and home delivery. Reviewers on Trustpilot (4.7 across 1,120 reviews) most often single out the coaching and onboarding staff by name.",
+        "Yes - health coaching is included in every plan rather than sold as an add-on, alongside the provider visit and home delivery. Reviewers on Trustpilot (4.6 across 1,134 reviews) most often single out the coaching and onboarding staff by name.",
     },
     {
       question: "Can I pay for SHED with HSA/FSA funds?",
