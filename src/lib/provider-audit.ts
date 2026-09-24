@@ -91,7 +91,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Tirzepatide price", value: "$299/month" },
       { label: "Guarantee", value: "5% of body weight in 120 days or your money back" },
       { label: "Payment options", value: "HSA/FSA eligible" },
-      { label: "Trustpilot record", value: "4.7 across 1,120 reviews" },
+      { label: "Trustpilot record", value: "4.6 across 1,134 reviews" },
     ],
   },
   "weight-loss:sprout": {

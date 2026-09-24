@@ -865,8 +865,11 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
     ],
   },
   shed: {
-    rating: "4.7",
-    reviewCount: "1,120",
+    // Aggregate re-verified Sep 24, 2026 from SHED's claimed Trustpilot
+    // profile (operator-supplied screenshot): 4.6 across 1,134 reviews,
+    // Weight Loss Service category, claimed Apr 2025. (Was 4.7 / 1,120.)
+    rating: "4.6",
+    reviewCount: "1,134",
     reviews: [
       {
         title: "Spoke with Tamika",
