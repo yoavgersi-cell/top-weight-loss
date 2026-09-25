@@ -59,7 +59,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     tirzepatide: { price: "$166", note: "promo; reg. $299" },
     shipping: "Free shipping",
     commitment: "None - no membership or hidden fees; HSA/FSA",
-    trustpilot: { rating: "4.3", count: "14,821" },
+    trustpilot: { rating: "4.3", count: "14,836" },
   },
   {
     providerId: "healthrx",

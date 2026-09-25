@@ -93,7 +93,7 @@ const CHECKLIST: { title: string; check: string; verify: string; redFlag: string
   {
     title: "The Trustpilot record, with the count",
     check: "The aggregate score means little without the volume behind it. Read the recurring themes in the low-star reviews, not the headline number.",
-    verify: "We print rating and review count for every provider where we have verified the profile. Medvi's 4.3 across 14,821 reviews and embody's 3.8 across 8,398 are both real records; they tell different stories.",
+    verify: "We print rating and review count for every provider where we have verified the profile. Medvi's 4.3 across 14,836 reviews and embody's 3.8 across 8,398 are both real records; they tell different stories.",
     redFlag: "A perfect 5.0 on a handful of reviews, or no public review profile at all. Neither proves anything is wrong; both mean less evidence.",
   },
   {
@@ -190,8 +190,8 @@ const ROWS: Row[] = [
     visit: "Video visits with providers, scheduled monitoring, a dietician and care coaching",
     pharmacy: "Compounded; pharmacy not named in our research",
     dosePricing: "All-inclusive; no dose-based increases; HSA/FSA",
-    likes: "The 5-star Trustpilot reviews from the same week are about the video visits and nurse practitioners: thorough calls, questions answered fully, a provider who \"took her time\". Two year-long Reddit write-ups report 40 pounds and just under 15% of body weight lost, with dose adjustments when progress stalled. 4.3 across 14,821 is one of the two largest verified bases in our table.",
-    complaints: "The 1-star Trustpilot reviews from September are serious and specific: a prepaid annual plan renewed after 11 shipments without notice, refunded only after BBB, FTC and state attorney-general complaints; a charge taken before any clinician contact, followed by a wrong-dose shipment and a refused refund; a transferring patient sent a starter dose repeatedly; communication stopping after five months. One reviewer says tirzepatide tops out at 11.125 mg; we have not verified that. The $99 rate is promotional against $199, and Reddit users name the ongoing monthly cost as the caveat.",
+    likes: "The 5-star Trustpilot reviews from the same week are about the video visits and nurse practitioners: thorough calls, questions answered fully, a provider who \"took her time\". Two year-long Reddit write-ups report 40 pounds and just under 15% of body weight lost, with dose adjustments when progress stalled. 4.3 across 14,836 is one of the two largest verified bases in our table.",
+    complaints: "The 1-star Trustpilot reviews from September are serious and specific: a prepaid annual plan renewed after 11 shipments without notice, refunded only after BBB, FTC and state attorney-general complaints; a charge taken before any clinician contact, followed by a wrong-dose shipment and a refused refund; a transferring patient sent a starter dose repeatedly; communication stopping after five months. One reviewer says tirzepatide tops out at 11.125 mg; we have not verified that. The 4-star reviews are milder: a cancellation that took effort and a wish for an every-other-month option, since plans are monthly-only. The $99 rate is promotional against $199, and Reddit users name the ongoing monthly cost as the caveat.",
   },
   {
     id: "sprout",
@@ -242,7 +242,7 @@ const PATTERNS: { title: string; body: string }[] = [
   },
   {
     title: "Review volume stabilizes a score; it does not make experiences uniform",
-    body: "Medvi's 4.3 across 14,821 reviews sits alongside serious 1-star accounts about renewals and refunds. SHED and wellmedr's 4.6 averages come from roughly 1,100 and 1,900 reviews; Sprout's 4.1 from 188; trimrx (3.7) and embody (3.8) have large, mixed records. Across all of them the recurring complaints are operational - shipping, billing, reaching support - rather than about the clinical review.",
+    body: "Medvi's 4.3 across 14,836 reviews sits alongside serious 1-star accounts about renewals and refunds. SHED and wellmedr's 4.6 averages come from roughly 1,100 and 1,900 reviews; Sprout's 4.1 from 188; trimrx (3.7) and embody (3.8) have large, mixed records. Across all of them the recurring complaints are operational - shipping, billing, reaching support - rather than about the clinical review.",
   },
 ];
 
@@ -260,7 +260,7 @@ const EXPLORE: Record<string, { useCase: string; reason: string }> = {
   },
   medvi: {
     useCase: "Live clinician visits and one of the two largest review bases",
-    reason: "Video visits with providers, scheduled monitoring and a dietician, with 4.3 across 14,821 Trustpilot reviews. The $99 rate is promotional against $199.",
+    reason: "Video visits with providers, scheduled monitoring and a dietician, with 4.3 across 14,836 Trustpilot reviews. The $99 rate is promotional against $199.",
   },
   wellmedr: {
     useCase: "Lowest verified semaglutide price, on a 12-month term",

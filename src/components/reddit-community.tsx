@@ -277,7 +277,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
     themes:
       "The posts above are full-year stories, not first impressions: steady results (just under 15% body weight, 40 pounds), dose adjustments when progress stalled, and support that answered. The caveat users raise themselves is the ongoing monthly cost.",
     intro:
-      "Beyond its 14,821-review Trustpilot record, the most-upvoted recent Reddit threads about Medvi are full-year write-ups rather than first-week impressions. Excerpts from the real posts:",
+      "Beyond its 14,836-review Trustpilot record, the most-upvoted recent Reddit threads about Medvi are full-year write-ups rather than first-week impressions. Excerpts from the real posts:",
     threads: [
       {
         subreddit: "r/telehealth",
