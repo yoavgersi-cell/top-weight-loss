@@ -41,22 +41,18 @@ const SLUG_ALIASES: Record<string, string> = {
   "medvi-vs-embody": "embody-vs-medvi",
   "ro-vs-embody": "embody-vs-ro",
   "wellmedr-vs-embody": "embody-vs-wellmedr",
-  // Retired battle still indexed with residual traffic (embody vs noom - the
-  // meds-vs-app matchup). No such battle exists anymore, so instead of a
-  // 301->404 during the migration, send it to the closest live intent match:
-  // the programs comparison landing page. Both orderings.
-  "embody-vs-noom": "best-online-weight-loss-programs",
-  "noom-vs-embody": "best-online-weight-loss-programs",
-  // Other retired/never-built matchups still indexed on the legacy domain with
+  // Retired/never-built matchups still indexed on the legacy domain with
   // residual impressions (found via the old-domain Pages export). Noom is an
-  // app, not a med provider, so every noom matchup routes to the programs page;
+  // app, not a med provider, so the noom matchups route to the programs page;
   // the remaining pairs were never built, so they route to the same neutral
   // multi-provider comparison rather than 301->404. Reverse orderings included.
+  // (The embody matchups - embody-vs-noom, embody-vs-found - are in
+  // PATH_REDIRECTS below: they rank for the brand query "embody weight loss",
+  // so they resolve to the embody review, not the programs page.)
   "altrx-vs-noom": "best-online-weight-loss-programs",
   "noom-vs-altrx": "best-online-weight-loss-programs",
   "noom-vs-ro": "best-online-weight-loss-programs",
   "ro-vs-noom": "best-online-weight-loss-programs",
-  "embody-vs-found": "best-online-weight-loss-programs",
   "ro-vs-found": "best-online-weight-loss-programs",
   "shed-vs-embody": "best-online-weight-loss-programs",
   "directmeds-vs-wellorithm": "best-online-weight-loss-programs",
@@ -76,6 +72,14 @@ const SLUG_ALIASES: Record<string, string> = {
 // single 301. All targets are verified-live pages. (Sourced from the old-domain
 // Pages export - each key was 301'ing into a 404.)
 const PATH_REDIRECTS: Record<string, string> = {
+  // Retired embody battles that still rank on the legacy domain for the brand
+  // query "embody weight loss" (embody-vs-noom: 1,131 impressions in the
+  // Sep 2026 old-domain export). The relevant live page for that query is the
+  // embody review, not the generic programs comparison - so the residual
+  // ranking consolidates onto the page that actually answers it.
+  "/embody-vs-noom": "/reviews/embody",
+  "/noom-vs-embody": "/reviews/embody",
+  "/embody-vs-found": "/reviews/embody",
   // Became a standalone landing page (dropped the /articles segment).
   "/articles/glp1-pills-vs-injections": "/glp1-pills-vs-injections",
   // Renamed article - direct live successor.
