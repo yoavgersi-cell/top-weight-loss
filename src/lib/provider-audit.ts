@@ -48,7 +48,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Tirzepatide price", value: "$166/month promotional (reg. $299)" },
       { label: "Support", value: "Video visits and a dietician on every plan" },
       { label: "Commitment", value: "Monthly, all-inclusive billing" },
-      { label: "Trustpilot record", value: "4.3 across 14,821 reviews" },
+      { label: "Trustpilot record", value: "4.3 across 14,836 reviews" },
     ],
   },
   "weight-loss:altrx": {

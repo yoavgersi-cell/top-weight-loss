@@ -874,12 +874,103 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
     ],
   },
   medvi: {
-    // Aggregate re-verified Sep 24, 2026 from MEDVi's claimed Trustpilot
-    // profile (operator-supplied screenshot): 4.3 across 14,821 reviews,
+    // Aggregate re-verified Sep 25, 2026 from MEDVi's claimed Trustpilot
+    // profile (operator-supplied screenshot): 4.3 across 14,836 reviews,
     // Weight Loss Service category, claimed Jan 2025. (Was 4.4 / 14,372.)
     rating: "4.3",
-    reviewCount: "14,821",
+    reviewCount: "14,836",
     reviews: [
+      // Sep 25, 2026 batch (operator-supplied screenshots, newest reviews
+      // Aug 30 - Sep 25 2026): six 5-star, five 4-star. Same transcription
+      // rules; the 4-star middle was previously missing from this record.
+      {
+        title: "Keep your appointment",
+        text: "Very helpful information. Theresa was thoughtful and explained all of her observations.",
+        name: "Eric B.",
+        location: "US",
+        rating: 5,
+        date: "Sep 25, 2026",
+      },
+      {
+        title: "Nurse was very informative and pleasant",
+        text: "Nurse was very informative and pleasant to talk with.",
+        name: "Stephen V.",
+        location: "US",
+        rating: 5,
+        date: "Sep 25, 2026",
+      },
+      {
+        title: "This journey has been great",
+        text: "This journey has been great . Talking with Jessica certainly has answered my questions and concerns.",
+        name: "Linda H.",
+        location: "US",
+        rating: 5,
+        date: "Sep 25, 2026",
+      },
+      {
+        title: "My provider was very helpful",
+        text: "My provider was very helpful. She listened to my concerns and made proper adjustments.",
+        name: "Crystal C.",
+        location: "US",
+        rating: 5,
+        date: "Sep 24, 2026",
+      },
+      {
+        title: "Tomica",
+        text: "Tomica, the company rep was outstanding.",
+        name: "John W.",
+        location: "US",
+        rating: 5,
+        date: "Sep 24, 2026",
+      },
+      {
+        title: "I was able to ask any questions",
+        text: "I was able to ask any questions, she was very informative.",
+        name: "Maria A.",
+        location: "US",
+        rating: 5,
+        date: "Sep 24, 2026",
+      },
+      {
+        title: "Very personal",
+        text: "Very personal, communicated all needs and supported me with advice",
+        name: "Roxanne C.",
+        location: "US",
+        rating: 4,
+        date: "Sep 22, 2026",
+      },
+      {
+        title: "Quick",
+        text: "Quick, easy, to the point.",
+        name: "Shawn E.",
+        location: "US",
+        rating: 4,
+        date: "Sep 21, 2026",
+      },
+      {
+        title: "Helpful personnel",
+        text: "Helpful personnel.",
+        name: "Vivian H.",
+        location: "US",
+        rating: 4,
+        date: "Sep 5, 2026",
+      },
+      {
+        title: "At first had a hard time canceling my monthly subscription",
+        text: "At first had a hard time canceling my monthly subscription, but they did finally get that taken care of. The product is great, I just didnt need/want a monthly prescription. I wish they had more flexibility in that regard. Maybe an every other month, or just buy as needed.",
+        name: "Chris W.",
+        location: "US",
+        rating: 4,
+        date: "Sep 4, 2026",
+      },
+      {
+        title: "GLP-1 (Compounded)",
+        text: "MEDVi offers a lot of assistance with the RN, Provider. and Coaching Support - I like that assistance. However, they need to ensure for a solid audio-video connection to see whom you're speaking with (there's too much FRAUD going on today) especially when it comes to your health. It's very important to see and get there credentials/whom you're speaking with about your health - you know, the HIPPA ACT Policy. Otherwise, I really enjoy this Rx, it really curves your appetite. My PRAYER is NO side effects so that I can continue and accomplish my goal. I started this program in March 2026. It cost too much not to receive stellar service.",
+        name: "A Concerned First Time Consume",
+        location: "US",
+        rating: 4,
+        date: "Aug 31, 2026",
+      },
       // Sep 24, 2026 batch (operator-supplied screenshots of the profile's
       // newest reviews, Sep 1-23 2026). Transcribed faithfully, including all
       // five 1-star reviews; reviewer names reduced to first name + last initial.
@@ -1877,7 +1968,7 @@ const defaultReviews: ReviewData[] = [
     providerId: "altrx",
     updatedAt: "2026-09-14",
     shortSummary: "Affordable GLP-1 program from $89/month - compounded semaglutide and tirzepatide plus brand-name options - with clinician-guided, self-pay care and no insurance required.",
-    reviewIntro: "altRx bills itself as \"the #1 most affordable GLP-1 program,\" and its published prices largely back that up: compounded GLP-1 (semaglutide) from $89/month and GLP-1 + GIP (tirzepatide) from $149/month - flat at every dose, so the price doesn't climb as you titrate up - alongside one of the few genuine brand-name shelves in this space (Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 per month). It's a self-pay telehealth service: you complete a short assessment, a licensed provider (physician, PA, or nurse practitioner) reviews it, and if appropriate a prescription goes to a licensed US pharmacy, with free shipping in about 5-7 days. No insurance is required, Buy Now, Pay Later is available, and you can pause or cancel anytime. Two things to know before the details: shipping is slower than the 1-2 day providers (embody, DirectMeds), and Trustpilot does not currently display an aggregate score on altRx's profile - the individual reviews we quote on this page are real, but there's no independent average to lean on the way there is for rivals like Medvi (4.3 across 14,821) or embody (3.8 across 8,398). One of the real 4-star reviews we surface notes a refill 'yet to be fulfilled with zero reason as to why' - worth factoring in alongside the price advantage.",
+    reviewIntro: "altRx bills itself as \"the #1 most affordable GLP-1 program,\" and its published prices largely back that up: compounded GLP-1 (semaglutide) from $89/month and GLP-1 + GIP (tirzepatide) from $149/month - flat at every dose, so the price doesn't climb as you titrate up - alongside one of the few genuine brand-name shelves in this space (Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 per month). It's a self-pay telehealth service: you complete a short assessment, a licensed provider (physician, PA, or nurse practitioner) reviews it, and if appropriate a prescription goes to a licensed US pharmacy, with free shipping in about 5-7 days. No insurance is required, Buy Now, Pay Later is available, and you can pause or cancel anytime. Two things to know before the details: shipping is slower than the 1-2 day providers (embody, DirectMeds), and Trustpilot does not currently display an aggregate score on altRx's profile - the individual reviews we quote on this page are real, but there's no independent average to lean on the way there is for rivals like Medvi (4.3 across 14,836) or embody (3.8 across 8,398). One of the real 4-star reviews we surface notes a refill 'yet to be fulfilled with zero reason as to why' - worth factoring in alongside the price advantage.",
     keyFeatures: [
       "Compounded GLP-1 from $89/mo, GLP-1 + GIP from $149/mo",
       "Brand-name options too: Zepbound and Wegovy",
@@ -2409,8 +2500,8 @@ const defaultReviews: ReviewData[] = [
     slug: "medvi",
     providerId: "medvi",
     updatedAt: "2026-09-14",
-    shortSummary: "All-inclusive medical weight-loss program - GLP-1 (semaglutide) now from $99/month (reg. $199) and GLP-1/GIP (tirzepatide) from $166/month (reg. $299) - with provider visits, free dietician and care coaching, and HSA/FSA approval. Rated 4.3 across 14,821 Trustpilot reviews.",
-    reviewIntro: "Medvi carries one of the two biggest verified track records in this ranking: 4.3 across 14,821 Trustpilot reviews, a volume most telehealth weight-loss brands can't approach. The program is all-inclusive at one flat price, and its current promotion cuts that price roughly in half: weekly GLP-1 (semaglutide) injections now start at $89/month (regularly $199) and GLP-1/GIP (tirzepatide) at $166/month (regularly $299), with daily oral dissolving tablets at $249/month for the needle-averse - all with no membership fee, no hidden charges, free shipping, and free dietician and care coaching folded in. Care is genuinely hands-on: recent Trustpilot reviews repeatedly describe on-time video visits ('Video visit was made very easy and reminders were sent right before my visit'), providers who 'took her time, answered any questions,' and follow-ups handled through secure messaging. Plans are HSA/FSA approved. At the $99 promotional rate, Medvi's all-inclusive bundle now competes directly with the value tier - the honest caveat is simply that promos can end; the regular rates are $199/$299.",
+    shortSummary: "All-inclusive medical weight-loss program - GLP-1 (semaglutide) now from $99/month (reg. $199) and GLP-1/GIP (tirzepatide) from $166/month (reg. $299) - with provider visits, free dietician and care coaching, and HSA/FSA approval. Rated 4.3 across 14,836 Trustpilot reviews.",
+    reviewIntro: "Medvi carries one of the two biggest verified track records in this ranking: 4.3 across 14,836 Trustpilot reviews, a volume most telehealth weight-loss brands can't approach. The program is all-inclusive at one flat price, and its current promotion cuts that price roughly in half: weekly GLP-1 (semaglutide) injections now start at $89/month (regularly $199) and GLP-1/GIP (tirzepatide) at $166/month (regularly $299), with daily oral dissolving tablets at $249/month for the needle-averse - all with no membership fee, no hidden charges, free shipping, and free dietician and care coaching folded in. Care is genuinely hands-on: recent Trustpilot reviews repeatedly describe on-time video visits ('Video visit was made very easy and reminders were sent right before my visit'), providers who 'took her time, answered any questions,' and follow-ups handled through secure messaging. Plans are HSA/FSA approved. At the $99 promotional rate, Medvi's all-inclusive bundle now competes directly with the value tier - the honest caveat is simply that promos can end; the regular rates are $199/$299.",
     keyFeatures: [
       "GLP-1 (semaglutide) injections now from $99/month (reg. $199)",
       "GLP-1/GIP (tirzepatide) injections from $166/month (reg. $299)",
@@ -2426,7 +2517,7 @@ const defaultReviews: ReviewData[] = [
       "Video visits, free dietician and care coaching"
     ],
     pros: [
-      "4.3 across 14,821 Trustpilot reviews - one of the two largest verified records in our ranking",
+      "4.3 across 14,836 Trustpilot reviews - one of the two largest verified records in our ranking",
       "Current promo roughly halves the price: $89 semaglutide / $166 tirzepatide",
       "Genuinely all-inclusive pricing - visits, medication, shipping, coaching",
       "Needle-free option: daily oral dissolving tablets",
@@ -2443,7 +2534,7 @@ const defaultReviews: ReviewData[] = [
       "Anyone who wants dietician support and coaching bundled, not sold separately",
       "Needle-averse patients who want a daily dissolving tablet instead of injections"
     ],
-    finalVerdict: "Medvi was already the most complete bundle in our ranking - provider visits, dietician access, care coaching and shipping in one HSA/FSA-eligible price, backed by 4.3 across 14,821 Trustpilot reviews, one of the two largest verified records of any provider we cover. The current promotion changes the math: at $99/month semaglutide (regularly $199) and $166 tirzepatide (regularly $299), the all-inclusive program now costs within $30-40 of the bare-bones value tier (wellmedr $49, embody $69) while bundling care those providers don't. As long as the promo holds, Medvi is arguably the best value-per-dollar in the ranking; at the $199/$299 regular rates, it goes back to being the premium-care pick. Needle-averse? The $249 dissolving tablets remain one of the few needle-free GLP-1 formats we track.",
+    finalVerdict: "Medvi was already the most complete bundle in our ranking - provider visits, dietician access, care coaching and shipping in one HSA/FSA-eligible price, backed by 4.3 across 14,836 Trustpilot reviews, one of the two largest verified records of any provider we cover. The current promotion changes the math: at $99/month semaglutide (regularly $199) and $166 tirzepatide (regularly $299), the all-inclusive program now costs within $30-40 of the bare-bones value tier (wellmedr $49, embody $69) while bundling care those providers don't. As long as the promo holds, Medvi is arguably the best value-per-dollar in the ranking; at the $199/$299 regular rates, it goes back to being the premium-care pick. Needle-averse? The $249 dissolving tablets remain one of the few needle-free GLP-1 formats we track.",
     trustBadges: [
       "HSA/FSA approved",
       "No membership or hidden fees",
@@ -4822,14 +4913,14 @@ const healthrxMedviBattle: BattleData = {
   matchupLabel: "HealthRx vs Medvi",
   subtitle: "A 12-month prepaid program with overnight shipping vs month-to-month all-inclusive care with a 14,000-review track record.",
   description:
-    "HealthRx ($99/mo semaglutide, 12-month prepaid, overnight shipping) vs Medvi ($99/mo promo all-inclusive, 4.3 on Trustpilot across 14,821 reviews). Real numbers, honest verdict.",
+    "HealthRx ($99/mo semaglutide, 12-month prepaid, overnight shipping) vs Medvi ($99/mo promo all-inclusive, 4.3 on Trustpilot across 14,836 reviews). Real numbers, honest verdict.",
   intro:
-    "This is a genuinely close matchup, because the two providers price the same medication in opposite ways. HealthRx gets semaglutide down to $99/month by asking for a 12-month commitment upfront - $1,188 due at checkout - and backs it with overnight cold-chain shipping and LegitScript certification. Medvi now matches that $99/month as a promotional rate (regularly $199) with no prepay at all, bundles everything in, and brings the strongest customer record in this matchup: 4.3 on Trustpilot across 14,821 reviews, with the personal provider support those reviews keep praising. The right answer depends on how sure you are about the next twelve months.",
+    "This is a genuinely close matchup, because the two providers price the same medication in opposite ways. HealthRx gets semaglutide down to $99/month by asking for a 12-month commitment upfront - $1,188 due at checkout - and backs it with overnight cold-chain shipping and LegitScript certification. Medvi now matches that $99/month as a promotional rate (regularly $199) with no prepay at all, bundles everything in, and brings the strongest customer record in this matchup: 4.3 on Trustpilot across 14,836 reviews, with the personal provider support those reviews keep praising. The right answer depends on how sure you are about the next twelve months.",
   verdict:
-    "Medvi is our pick for most people: month-to-month flexibility, everything included, and a 14,821-review Trustpilot record at 4.3 - you're not betting a year upfront on a newer brand. HealthRx is the sharper deal only if overnight shipping or its LegitScript pedigree matters most to you: with Medvi's promo matching the $99/month without any prepay, the $1,188-at-checkout structure is now a harder sell - just remember Medvi's regular rate is $199 if the promo ends. Confirm current terms on both sites.",
+    "Medvi is our pick for most people: month-to-month flexibility, everything included, and a 14,836-review Trustpilot record at 4.3 - you're not betting a year upfront on a newer brand. HealthRx is the sharper deal only if overnight shipping or its LegitScript pedigree matters most to you: with Medvi's promo matching the $99/month without any prepay, the $1,188-at-checkout structure is now a harder sell - just remember Medvi's regular rate is $199 if the promo ends. Confirm current terms on both sites.",
   verdictWinnerPoints: [
     "Month-to-month - no $1,188 upfront commitment",
-    "4.3 on Trustpilot across 14,821 reviews",
+    "4.3 on Trustpilot across 14,836 reviews",
     "All-inclusive $99/mo promo (reg. $199) with dietician & care coaching",
   ],
   verdictLoserPoints: [
@@ -4865,9 +4956,9 @@ const healthrxMedviBattle: BattleData = {
       name: "Customer Track Record",
       winner: "provider1",
       explanation:
-        "Medvi's 4.3 across 14,821 Trustpilot reviews - repeatedly praising thorough providers and personal service - is the kind of evidence a newer brand simply can't match yet. HealthRx's program design looks right (LegitScript-certified, clinician-gated), but its public review record is still thin.",
+        "Medvi's 4.3 across 14,836 Trustpilot reviews - repeatedly praising thorough providers and personal service - is the kind of evidence a newer brand simply can't match yet. HealthRx's program design looks right (LegitScript-certified, clinician-gated), but its public review record is still thin.",
       supportingPoints: [
-        "4.3/5 across 14,821 Trustpilot reviews (Medvi)",
+        "4.3/5 across 14,836 Trustpilot reviews (Medvi)",
         "Reviews consistently cite personal provider support (Medvi)",
         "Newer brand, limited public review history (HealthRx)",
       ],
@@ -4897,7 +4988,7 @@ const healthrxMedviBattle: BattleData = {
   features: [
     { feature: "Starting Price", provider1Value: "$99/mo promo semaglutide (reg. $199) · $166 tirzepatide", provider2Value: "$99/mo semaglutide (12-mo prepaid) · tirzepatide from $179", highlight: "both" },
     { feature: "Billing", provider1Value: "Monthly, all-inclusive", provider2Value: "$1,188 prepaid at checkout", highlight: "provider1" },
-    { feature: "Trustpilot", provider1Value: "4.3 across 14,821 reviews", provider2Value: "Newer brand", highlight: "provider1" },
+    { feature: "Trustpilot", provider1Value: "4.3 across 14,836 reviews", provider2Value: "Newer brand", highlight: "provider1" },
     { feature: "Shipping", provider1Value: "Free, standard", provider2Value: "Free, overnight cold-chain", highlight: "provider2" },
     { feature: "Support", provider1Value: "Provider + dietician & care coaching", provider2Value: "Care-team check-ins", highlight: "provider1" },
     { feature: "Certifications", provider1Value: "Licensed providers, HSA/FSA approved", provider2Value: "LegitScript certified, 503A pharmacies", highlight: "both" },
