@@ -1,3 +1,4 @@
+import { pageReviewSchema } from "@/data/reviewers";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -84,6 +85,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
   const collectionSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
+    ...pageReviewSchema(`/${ctx.vertical}/articles`),
     name: `${vName} Articles - Research, Guides & Expert Insights`,
     description: `Evidence-based ${vName.toLowerCase()} guides and research - treatment options, what to expect, and choosing the right online provider.`,
     url: canonicalUrl(ctx, "/articles"),

@@ -108,7 +108,7 @@ export default async function BattlePage({
       ...(author && {
         author: { "@type": "Organization", name: researchTeam, url: canonicalUrl(ctx, "/about") },
       }),
-      ...pageReviewSchema(`/${ctx.vertical}/${battleSlug}`),
+      ...pageReviewSchema(`/${battleSlug}`),
       publisher: {
         "@type": "Organization",
         name: ctx.brandName,
