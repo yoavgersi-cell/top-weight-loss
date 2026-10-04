@@ -9,6 +9,91 @@ import type { Article } from "./articles";
 //   - Dense and useful beats long: concrete numbers, real math, honest
 //     trade-offs. Tables only where the data is genuinely tabular.
 export const brandClusterArticles: Article[] = [
+  // ═════ Ro ═════
+  {
+    slug: "is-ro-legit",
+    title: "Is Ro Legit for Weight Loss? Yes, With Billing Caveats (2026)",
+    description:
+      "Yes. Ro is an established telehealth company with licensed providers and its own pharmacy, rated 3.9 across 6,690 Trustpilot reviews. We read the praise and the complaints about fees, phone support and delivery.",
+    category: "Guide",
+    readTime: "8 min read",
+    publishedAt: "2026-10-04",
+    updatedAt: "2026-10-04",
+    heroColor: "#EEF4FB",
+    author: "Treatments Hub Staff",
+    keyTakeaways: [
+      "Yes, Ro is legitimate: an established US telehealth company, licensed providers who review your intake (reviewers describe a video call with an MD), and medication filled by Ro's own pharmacy.",
+      "Ro sells brand-name medication - the Wegovy pill and pen, Zepbound - billed separately from a Body membership ($39 the first month, then $74-$149/month). Insurance can cover the medication.",
+      "Its Trustpilot record is 3.9 across 6,690 reviews. The September 2026 praise is about speed and thorough providers; the complaints are about the $39 fee being for the consultation, a second subscription charge, messaging-only support with 2-3 day replies, and a delayed delivery with melted ice packs.",
+      "On Reddit the results are real (22 to 60 pounds in the threads we verified) and the recurring friction is cost: one highly upvoted member left over price after a good experience.",
+    ],
+    sections: [
+      {
+        heading: "The short answer, and what \"legit\" covers",
+        body: `<div class="qa"><strong>The short answer</strong>Yes. Ro is one of the longest-established telehealth companies in the US, its weight-loss program runs through licensed providers who review a medical intake and can decline you, and medication ships from Ro's own in-house pharmacy. What \"legit\" does not settle is whether its pricing model suits you: Ro bills a membership and the medication separately, and most of its critical reviews are about understanding that bill, not about the medicine or the clinicians.</div><p>This audit uses the same three tests we apply to every provider in our <a href="/weight-loss/how-to-choose-a-glp1-provider">GLP-1 provider guide</a>: is there a real clinical gate, do the published prices survive contact with the checkout, and what do the public reviews say when you read the low-star ones first.</p>`,
+      },
+      {
+        heading: "How Ro's weight-loss process actually works",
+        body: `<p>You complete an online medical assessment. A qualified provider reviews it - Ro's own reviewers describe a video call with an MD and follow-up by messaging - and decides whether treatment is appropriate. If prescribed, medication is dispensed by Ro's integrated pharmacy and delivered to your home, with dose adjustments handled by the provider over time. One recent 5-star reviewer describes it as \"just as if I was in with my primary care physician. They asked all necessary questions about my health and meds I take daily.\" Another: \"I have had a follow up from a doctor who explained the process, the medication and usage.\"</p><p>Two things make Ro structurally different from the compounded-first providers in our ranking. First, Ro's published weight-loss pricing centers on <strong>brand-name medication</strong> - the <a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener">Wegovy</a> pill and pen and the Zepbound KwikPen - rather than a flat compounded plan. Second, <strong>insurance can apply</strong> to the medication. If your plan covers a GLP-1, Ro's route can cost far less than any cash price on this site; if it does not, you pay Ro's cash rates plus the membership.</p>`,
+      },
+      {
+        heading: "What the Trustpilot reviews say (September 2026)",
+        body: `<p>Ro's company-wide Trustpilot profile stands at <strong>3.9 across 6,690 reviews</strong>. We read the newest reviews at every star level rather than the headline number.</p><p><strong>The 5-star reviews are about speed and the clinician.</strong> \"Applying for RO was quick and easy. I got a response within an hour!\" \"The meeting with the NP was on time. She was very thorough.\" \"They are good to answer questions quickly and not leave you hanging.\" \"All has been convenient and affordable so far.\"</p><p><strong>The 2- and 3-star reviews cluster around three things.</strong> Money first: \"I didn't understand that $39 initial fee was for consultation and not the medicine\"; \"I already saw a second charge for some kind of subscription in addition to the monthly charge\"; \"Would be nice to know the possible fee for medication before paying the $39.\" Then reaching someone: \"I wish you had a phone # for better communication\"; \"Needed to contact Ro by phone to expedite delivery. Impossible! Video call with MD a mere short formality. Messages returned in 2-3 business days\"; a 4-star reviewer adds \"I'd like to be able to chat directly with someone. All I can find are FAQ.\" Then delivery and dosing: one order \"delayed for 4 days\" arrived with \"all of the ice packs totally melted\"; another reviewer \"had to choose a medication without any guidance from a physician\" and was charged before speaking to one; a third received \"the smallest dosage of GLP-1\" among friends on other platforms.</p><p>None of these describe a fake operation. They describe a large company whose billing structure and messaging-only support frustrate a meaningful minority. That is consistent with a 3.9.</p>`,
+      },
+      {
+        heading: "What Ro patients report on Reddit",
+        body: `<p>The Reddit threads we verified are unusually rich in numbers. \"I used Ro for 3 months and dropped 25 lbs... they were seamless throughout the whole process\" - and then: \"The pricing ended up being the deciding factor for me after those few months, I started with another provider.\" A member since January 2024: \"I'm loyal because they delivered what was promised... I've lost 50-60 lbs. I get my Wegovy shots through insurance and Walgreens.\" Another: \"I've been on Ro for 3 months and have lost 22 pounds! Extremely happy!\"</p><p>The counterweights: a Zepbound user two months in on the 2.5 mg starter vials \"lost 1 pound. Just one... It's been expensive and frustrating,\" and a prospective customer asking \"Could someone explain the cost breakdown to me? It's somewhat confusing.\" Results and service draw little criticism; the membership-plus-medication cost is the thing people leave over. Single posts are anecdotes; we quote them because the same theme repeats.</p>`,
+      },
+      {
+        heading: "Where the skepticism is fair",
+        body: `<p>Three places. <strong>The bill is two bills.</strong> A membership ($39 the first month, then $74 to $149 a month depending on plan) plus the medication at Ro's cash rate unless insurance covers it - the Wegovy pill from $149 the first month and then $299, the Zepbound KwikPen from $299 the first month and then more. Every \"I didn't understand the fee\" review traces back to this. Our <a href="/weight-loss/articles/ro-cost">Ro cost guide</a> does the full math. <strong>Support is messaging-first.</strong> Several reviewers wanted a phone number and did not find one, and report 2-3 business-day replies. <strong>It is not the cheap route.</strong> Paying cash, compounded semaglutide at <a href="/weight-loss/reviews/wellmedr">wellmedr</a> ($49), <a href="/weight-loss/reviews/embody">embody</a> ($69) or <a href="/weight-loss/reviews/altrx">altRx</a> ($89) costs a fraction of brand-name medication plus a membership. Ro's case is strongest when insurance pays for the drug.</p>`,
+      },
+      {
+        heading: "So - is Ro legit?",
+        body: `<p>Yes. Licensed providers who can decline you, an in-house pharmacy, brand-name FDA-approved medication, and a public record of 6,690 reviews that reads like a real, large company: fast and professional for most, frustrating for a minority over billing and reachability. Decide on the model, not the legitimacy. If your insurance covers a GLP-1 and you want the branded pen through a reputable platform, Ro is a strong fit. If you are paying cash and want the lowest monthly number, the compounded providers win on price by a wide margin.</p><p class="cta-row"><a href="/weight-loss/reviews/ro">→ Read the full Ro review, with plans and real customer reviews</a></p><p class="cta-row"><a href="/weight-loss/medvi-vs-ro">→ Medvi vs Ro: all-inclusive compounded care vs brand-name plus membership</a></p><p class="cta-row"><a href="/weight-loss/embody-vs-ro">→ embody vs Ro: $69 flat vs the membership model</a></p><p>Prices are Ro's published rates at our last verification and change; confirm on Ro's site. This article is general information, not medical advice.</p>`,
+      },
+    ],
+  },
+  {
+    slug: "ro-cost",
+    title: "Ro Weight Loss Cost (2026): Membership + Medication, Explained",
+    description:
+      "Ro charges a Body membership ($39 the first month, then $74-$149/month) plus the medication - Wegovy pill from $149, Zepbound from $299 - unless insurance covers it. The full math, year one.",
+    category: "Guide",
+    readTime: "7 min read",
+    publishedAt: "2026-10-04",
+    updatedAt: "2026-10-04",
+    heroColor: "#F0FAF5",
+    author: "Treatments Hub Staff",
+    keyTakeaways: [
+      "Ro's weight-loss cost is two charges: the Body membership ($39 for the first month, then $74 to $149 a month; $74 is the 12-month prepaid rate) and the medication, billed separately.",
+      "Published cash medication rates: Wegovy pill $149 the first month then $299; Wegovy pen from $199 at intro rates then $299-$399; Zepbound KwikPen from $299 the first month then $399-$449.",
+      "Paying cash for the Wegovy pill, a first year runs roughly $4,300 including membership. If insurance covers the medication, you pay the membership plus your copays, which can make Ro the cheapest route on this site.",
+      "Compounded semaglutide at wellmedr ($49), embody ($69) or altRx ($89) is all-inclusive and far cheaper for cash payers; Ro's value is brand-name medication and the insurance route.",
+    ],
+    sections: [
+      {
+        heading: "The two charges, and what each one is",
+        body: `<div class="qa"><strong>The short answer</strong>Ro bills a <strong>Body membership</strong> - $39 for the first month, then $74 to $149 a month depending on the plan, with $74 the rate on a 12-month prepaid plan - and, separately, the <strong>medication</strong>, either through your insurance or at Ro's cash price. The $39 pays for the consultation and membership, not the medicine. That single fact is behind most of Ro's low-star reviews, so read it twice before paying.</div><p>The membership covers the provider assessment and follow-up, ongoing dose adjustments and the pharmacy service. The medication is brand-name: Ro's published weight-loss pricing centers on the Wegovy pill and pen and the Zepbound KwikPen rather than a flat compounded plan. Ro says some plans may be HSA/FSA eligible; confirm for your plan.</p>`,
+      },
+      {
+        heading: "Ro's published medication prices",
+        body: `<p>Cash rates at our last verification. Every one has an introductory price and a higher ongoing price, which is the number to budget against:</p><table><tr><th>Medication</th><th>First month</th><th>Ongoing</th></tr><tr><td>Wegovy pill (semaglutide)</td><td>$149</td><td>$299/month</td></tr><tr><td>Wegovy pen (semaglutide)</td><td>from $199</td><td>$299-$399/month</td></tr><tr><td>Zepbound KwikPen (tirzepatide)</td><td>from $299</td><td>$399-$449/month</td></tr></table><p>Where insurance covers a GLP-1, the medication line becomes your copay instead - one Reddit member we verified gets \"Wegovy shots through insurance and Walgreens\" and has stayed with Ro since January 2024. Where it does not, these are the cash figures, on top of the membership.</p>`,
+      },
+      {
+        heading: "What a year on Ro costs",
+        body: `<p>Three realistic scenarios at the published rates, membership included. Monthly membership is taken as $39 for month one and $149 thereafter on the monthly plan; the prepaid plan is $74 a month for twelve months.</p><table><tr><th>Scenario</th><th>Membership, year one</th><th>Medication, year one</th><th>Total</th></tr><tr><td>Wegovy pill, cash, monthly membership</td><td>$39 + 11 × $149 = $1,678</td><td>$149 + 11 × $299 = $3,438</td><td>about $5,100</td></tr><tr><td>Wegovy pill, cash, 12-month prepaid membership</td><td>12 × $74 = $888</td><td>$3,438</td><td>about $4,300</td></tr><tr><td>Insurance covers the medication, prepaid membership</td><td>$888</td><td>Your copays</td><td>$888 + copays</td></tr></table><p>Two things change the math. If insurance pays, Ro is often the cheapest way on this site to be on brand-name medication under medical supervision. If you are paying cash, the medication line dominates everything: the membership is a fifth of the bill.</p>`,
+      },
+      {
+        heading: "How Ro's cost compares to other providers",
+        body: `<p>The honest comparison is route versus route, not number versus number. Compounded providers sell one all-inclusive price for compounded medication; Ro sells brand-name medication plus a membership.</p><table><tr><th>Route</th><th>Semaglutide, monthly</th><th>What is included</th></tr><tr><td><a href="/weight-loss/reviews/wellmedr">wellmedr</a>, compounded</td><td>$49 (12-month plan)</td><td>Medication, provider, coach, shipping</td></tr><tr><td><a href="/weight-loss/reviews/embody">embody</a>, compounded</td><td>$69, no commitment</td><td>Medication, provider, shipping</td></tr><tr><td><a href="/weight-loss/reviews/altrx">altRx</a>, compounded</td><td>$89 flat at every dose</td><td>Medication, provider, shipping</td></tr><tr><td><a href="/weight-loss/reviews/altrx">altRx</a>, brand-name Wegovy</td><td>$1,579 cash, flat</td><td>Medication, provider, shipping; no membership</td></tr><tr><td><strong>Ro</strong>, brand-name Wegovy pill</td><td><strong>$299 ongoing + $74-$149 membership</strong></td><td>Provider, in-house pharmacy, dose adjustments</td></tr><tr><td><strong>Ro</strong>, brand-name via insurance</td><td><strong>copay + $74-$149 membership</strong></td><td>As above</td></tr></table><p>Read it this way: for cash payers who are open to compounded medication, Ro is three to six times the monthly cost of the value tier, which is exactly the friction the Reddit threads describe. For anyone who wants the FDA-approved branded product, Ro's cash pen prices sit below altRx's flat $1,579 once you add the membership, and the insurance route can beat everything. The <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> covers the trade-off itself.</p>`,
+      },
+      {
+        heading: "Is Ro worth the cost?",
+        body: `<p><strong>Worth it</strong> if your insurance covers a GLP-1, or if you specifically want brand-name Wegovy or Zepbound dispensed by an established company with its own pharmacy and provider follow-up. The membership is the price of that structure.</p><p><strong>Not worth it</strong> if you are paying cash and the monthly number is what matters: the same semaglutide molecule, compounded, costs $49 to $89 all-in elsewhere, and over a year the gap is thousands of dollars. Ro's own reviewers say as much - \"the pricing ended up being the deciding factor\" after a good three months.</p><p>Before you pay the $39: know that it is the consultation fee, check whether your insurance covers the medication, and ask what the ongoing (not introductory) medication price will be at your maintenance dose.</p><p class="cta-row"><a href="/weight-loss/reviews/ro">→ Read the full Ro review</a></p><p class="cta-row"><a href="/weight-loss/articles/is-ro-legit">→ Is Ro legit? What 6,690 reviews and Reddit say</a></p><p class="cta-row"><a href="/weight-loss/altrx-vs-ro">→ altRx vs Ro: flat cash prices vs membership plus insurance</a></p><p>Prices are Ro's published rates at our last verification and change; confirm on Ro's site. Brand-name Wegovy and Zepbound are FDA-approved; this article is general information, not medical advice.</p>`,
+      },
+    ],
+  },
   // ═════ Medvi ═════
   {
     slug: "is-medvi-legit",
