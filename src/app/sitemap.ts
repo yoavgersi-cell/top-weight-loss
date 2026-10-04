@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { REVIEWERS } from "@/data/reviewers";
 import { headers } from "next/headers";
 import { getConfig } from "@/lib/config-store";
 import { THREE_WAY_COMPARISONS } from "@/lib/three-way";
@@ -61,6 +62,14 @@ export async function hubSitemap(): Promise<MetadataRoute.Sitemap> {
     // UK region (published, compliance-framed). Only built, indexable UK pages
     // are listed; /uk placeholders are noindex and excluded.
     { url: `${HUB_URL}/uk/weight-loss`, lastModified: FALLBACK_DATE, changeFrequency: "weekly", priority: 0.7 },
+    // Site-level trust pages: the medical review policy and reviewer profiles.
+    { url: `${HUB_URL}/medical-review-policy`, lastModified: new Date("2026-10-04"), changeFrequency: "monthly", priority: 0.4 },
+    ...REVIEWERS.map((r) => ({
+      url: `${HUB_URL}/reviewers/${r.slug}`,
+      lastModified: new Date(`${r.since}-01`),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    })),
   ];
 
   for (const vertical of VERTICAL_IDS) {

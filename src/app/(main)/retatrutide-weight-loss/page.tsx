@@ -1,3 +1,5 @@
+import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideCluster } from "@/components/guide-cluster";
@@ -52,6 +54,7 @@ export default async function RetatrutidePage() {
     description: metadata.description,
     datePublished: "2026-08-09",
     dateModified: "2026-08-09",
+    ...pageReviewSchema("/weight-loss/retatrutide-weight-loss"),
     author: { "@type": "Organization", name: "Treatments Hub Team", url: "https://www.treatmentshub.com" },
     publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
     mainEntityOfPage: CANONICAL,
@@ -89,6 +92,7 @@ export default async function RetatrutidePage() {
             and semaglutide, and an honest answer on whether you can actually get it.
           </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
+          <MedicalReviewBar path="/weight-loss/retatrutide-weight-loss" className="mt-4 max-w-[640px]" />
         </div>
       </div>
 

@@ -1,3 +1,5 @@
+import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
@@ -59,6 +61,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
+    ...pageReviewSchema(`/${ctx.vertical}/${trio.slug}`),
     name: trio.metaTitle,
     description: trio.description,
     url,
@@ -109,6 +112,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
           <div className="mt-3">
             <LastUpdated date={TEMPLATES_LAST_UPDATED} />
           </div>
+          <MedicalReviewBar path={`/${ctx.vertical}/${trio.slug}`} className="mt-4 max-w-[640px]" />
           <TrustDisclosure disclaimerHref={hubLink(ctx, "/disclaimer")} />
         </div>
       </section>

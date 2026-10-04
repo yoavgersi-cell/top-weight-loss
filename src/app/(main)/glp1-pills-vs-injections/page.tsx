@@ -1,3 +1,5 @@
+import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideCluster } from "@/components/guide-cluster";
@@ -53,6 +55,7 @@ export default async function Glp1PillsVsInjectionsPage() {
     description: metadata.description,
     datePublished: "2026-08-09",
     dateModified: "2026-09-12",
+    ...pageReviewSchema("/weight-loss/glp1-pills-vs-injections"),
     author: { "@type": "Organization", name: "Treatments Hub Team", url: "https://www.treatmentshub.com" },
     publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
     mainEntityOfPage: CANONICAL,
@@ -90,6 +93,7 @@ export default async function Glp1PillsVsInjectionsPage() {
             a daily tablet and a weekly injection.
           </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
+          <MedicalReviewBar path="/weight-loss/glp1-pills-vs-injections" className="mt-4 max-w-[640px]" />
         </div>
       </div>
 

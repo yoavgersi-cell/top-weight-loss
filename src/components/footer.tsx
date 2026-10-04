@@ -38,6 +38,8 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
     title: "Company",
     links: [
       { label: "About", href: "/weight-loss/about" },
+      { label: "Medical Review Policy", href: "/medical-review-policy" },
+      { label: "Our Medical Reviewer", href: "/reviewers/francheska-capistrano" },
       { label: "Medical Disclaimer", href: "/weight-loss/disclaimer" },
     ],
   },

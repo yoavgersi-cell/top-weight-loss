@@ -1,3 +1,5 @@
+import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideCluster } from "@/components/guide-cluster";
@@ -97,6 +99,7 @@ export default async function SwitchFromOzempicPage() {
     description: DESCRIPTION,
     datePublished: "2026-08-23",
     dateModified: CONTENT_LAST_UPDATED,
+    ...pageReviewSchema("/weight-loss/switch-from-ozempic"),
     author: { "@type": "Organization", name: "Treatments Hub Team", url: "https://www.treatmentshub.com" },
     publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
     mainEntityOfPage: CANONICAL,
@@ -134,6 +137,7 @@ export default async function SwitchFromOzempicPage() {
             clinician decides, and what to verify before you move.
           </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
+          <MedicalReviewBar path="/weight-loss/switch-from-ozempic" className="mt-4 max-w-[640px]" />
           <TrustDisclosure disclaimerHref="/weight-loss/disclaimer" />
         </div>
       </div>

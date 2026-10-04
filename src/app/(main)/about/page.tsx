@@ -1,3 +1,4 @@
+import { REVIEWERS, reviewerDisplayName, reviewerPath, reviewerPersonSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Shield, BookOpen, Search, BarChart3, BadgeDollarSign, FileCheck2, Stethoscope, RefreshCw } from "lucide-react";
@@ -54,14 +55,15 @@ export default async function AboutPage() {
       description:
         "Independent comparisons of online treatment providers. Every GLP-1 price is verified against the provider's own published rate and logged on change.",
       areaServed: { "@type": "Country", name: "United States" },
-      ...(experts.length > 0 && {
-        employee: experts.map((e) => ({
+      employee: [
+        ...REVIEWERS.map(reviewerPersonSchema),
+        ...experts.map((e) => ({
           "@type": "Person",
           name: e.credentials ? `${e.name}, ${e.credentials}` : e.name,
           jobTitle: e.role,
           description: e.bio,
         })),
-      }),
+      ],
     },
   };
 
@@ -213,6 +215,31 @@ export default async function AboutPage() {
               A reviewer credit appears on a page only when the named reviewer has actually read it.
               We do not put clinician names on content they have not reviewed.
             </p>
+          </div>
+        </section>
+
+        {/* Medical review */}
+        <section className="mb-12">
+          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Medical review</h2>
+          <div className="space-y-3">
+            {REVIEWERS.map((r) => (
+              <div key={r.slug} className="flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-5 sm:flex-row sm:items-start">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={r.image.webp} alt={`${r.name}, ${r.jobTitle}`} width={88} height={88} className="h-[88px] w-[88px] shrink-0 rounded-xl object-cover" />
+                <div className="min-w-0">
+                  <p className="text-[16px] font-bold text-[#191919]">{reviewerDisplayName(r)}</p>
+                  <p className="text-[13px] text-gray-500">{r.jobTitle} · {r.headline}</p>
+                  <p className="mt-2 text-[14px] leading-relaxed text-gray-600">{r.shortBio}</p>
+                  <p className="mt-3 flex flex-wrap gap-x-4 text-[13.5px] font-semibold">
+                    <Link href={reviewerPath(r)} className="text-[#0C4B75] hover:underline">Full profile</Link>
+                    <Link href="/medical-review-policy" className="text-[#0C4B75] hover:underline">How we review</Link>
+                    {r.linkedin && (
+                      <a href={r.linkedin} target="_blank" rel="noopener noreferrer" className="text-[#0C4B75] hover:underline">LinkedIn</a>
+                    )}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 

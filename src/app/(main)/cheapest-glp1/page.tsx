@@ -1,3 +1,5 @@
+import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideCluster } from "@/components/guide-cluster";
@@ -74,6 +76,7 @@ export default async function CheapestGlp1Page() {
     description: DESCRIPTION,
     datePublished: "2026-08-23",
     dateModified: CONTENT_LAST_UPDATED,
+    ...pageReviewSchema("/weight-loss/cheapest-glp1"),
     author: { "@type": "Organization", name: "Treatments Hub Team", url: "https://www.treatmentshub.com" },
     publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
     mainEntityOfPage: CANONICAL,
@@ -111,6 +114,7 @@ export default async function CheapestGlp1Page() {
             cheapest first.
           </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
+          <MedicalReviewBar path="/weight-loss/cheapest-glp1" className="mt-4 max-w-[640px]" />
           <TrustDisclosure disclaimerHref="/weight-loss/disclaimer" />
         </div>
       </div>

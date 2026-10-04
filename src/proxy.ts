@@ -29,6 +29,10 @@ const SHARED_ONE_OFF_PAGES = new Set([
 // Handling it in next.config instead chains an alias hop (308) into the
 // migration/prefix hop (301) - a multi-hop redirect Google reports as a
 // "Redirect error". The key is the alias slug; the value is the canonical slug.
+// Hub-root pages (no vertical prefix, one canonical URL): reviewer profiles
+// and the medical review policy.
+const ROOT_PAGES = new Set(["reviewers", "medical-review-policy"]);
+
 const SLUG_ALIASES: Record<string, string> = {
   "embody-vs-altrx": "altrx-vs-embody",
   // Sprout battles - reverse orderings collapse to the canonical slug.
@@ -148,6 +152,18 @@ export function proxy(req: NextRequest) {
       return NextResponse.redirect(url, 301);
     }
 
+    // Site-level pages that live at the hub root, not under a vertical:
+    // reviewer profiles and the medical review policy. Served as-is; a
+    // vertical-prefixed form 301s to the bare canonical.
+    if (ROOT_PAGES.has(first)) {
+      return NextResponse.next();
+    }
+    if (isVertical(first) && segments[1] && ROOT_PAGES.has(segments[1])) {
+      const url = req.nextUrl.clone();
+      url.pathname = `/${segments.slice(1).join("/")}`;
+      return NextResponse.redirect(url, 301);
+    }
+
     // Already a vertical path - serve it, stripping the prefix only for the
     // shared one-off pages ("/<vertical>/about" → "/about").
     if (isVertical(first)) {
@@ -211,6 +227,9 @@ export function proxy(req: NextRequest) {
     // Resolve a slug alias in the same pass so an aliased legacy URL lands on
     // the canonical hub page in ONE 301 (no alias-hop → migration-hop chain).
     const segments = url.pathname.split("/").filter(Boolean);
+    if (segments[0] && ROOT_PAGES.has(segments[0])) {
+      return NextResponse.redirect(url, 301);
+    }
     const last = segments[segments.length - 1];
     if (last && SLUG_ALIASES[last]) {
       segments[segments.length - 1] = SLUG_ALIASES[last];
