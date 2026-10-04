@@ -159,7 +159,8 @@ export const REVIEWERS: Reviewer[] = [
       { title: "Why are so many referrals lost before screening really begins?", outlet: "Antidote", url: "https://www.antidote.me/blog/why-are-so-many-referrals-lost-before-screening-really-begins" },
       { title: "Neurology enrollment: why sites miss dates even when willing patients are willing to enroll", outlet: "Antidote", url: "https://www.antidote.me/blog/neurology-enrollment-why-sites-miss-dates-even-if-willing-patients-are-willing-to-enroll" },
     ],
-    sameAs: [],
+    sameAs: ["https://www.linkedin.com/in/francheskacapistrano/"],
+    linkedin: "https://www.linkedin.com/in/francheskacapistrano/",
     scope:
       "Reviews the medical and scientific statements on a page: mechanism of action, clinical-trial figures, regulatory status, contraindications, side effects and terminology. Does not review prices, rankings, partner selection or provider descriptions, which are editorial.",
     verticals: ["weight-loss", "hair-loss", "trt", "hrt", "online-therapy"],
