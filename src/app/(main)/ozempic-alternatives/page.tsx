@@ -1,3 +1,5 @@
+import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideCluster } from "@/components/guide-cluster";
@@ -84,6 +86,7 @@ export default async function OzempicAlternativesPage() {
     description: DESCRIPTION,
     datePublished: "2026-08-11",
     dateModified: CONTENT_LAST_UPDATED,
+    ...pageReviewSchema("/weight-loss/ozempic-alternatives"),
     author: { "@type": "Organization", name: "Treatments Hub Team", url: "https://www.treatmentshub.com" },
     publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
     mainEntityOfPage: CANONICAL,
@@ -122,6 +125,7 @@ export default async function OzempicAlternativesPage() {
             to choose one safely.
           </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
+          <MedicalReviewBar path="/weight-loss/ozempic-alternatives" className="mt-4 max-w-[640px]" />
         </div>
       </div>
 

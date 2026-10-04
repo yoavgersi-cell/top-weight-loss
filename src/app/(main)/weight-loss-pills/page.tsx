@@ -1,3 +1,5 @@
+import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideCluster } from "@/components/guide-cluster";
@@ -100,6 +102,7 @@ export default async function WeightLossPillsPage() {
     description: metadata.description,
     datePublished: "2026-08-01",
     dateModified: "2026-08-09",
+    ...pageReviewSchema("/weight-loss/weight-loss-pills"),
     author: { "@type": "Organization", name: "Treatments Hub Team", url: "https://www.treatmentshub.com" },
     publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
     mainEntityOfPage: CANONICAL,
@@ -137,6 +140,7 @@ export default async function WeightLossPillsPage() {
             really compare to injections.
           </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
+          <MedicalReviewBar path="/weight-loss/weight-loss-pills" className="mt-4 max-w-[640px]" />
         </div>
       </div>
 

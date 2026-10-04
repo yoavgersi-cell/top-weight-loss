@@ -12,7 +12,8 @@ import { cn } from "@/lib/utils";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
-import { ExpertByline } from "@/components/expert-byline";
+import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { pageReviewSchema } from "@/data/reviewers";
 import { LastUpdated } from "@/components/last-updated";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
@@ -485,6 +486,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
     headline: `${provider.name} Review 2026: Cost, Results & Is It Worth It?`,
     description: review.shortSummary,
     dateModified: reviewUpdatedAt,
+    ...pageReviewSchema(`/${ctx.vertical}/reviews/${slug}`),
     author: author
       ? {
           "@type": "Person",
@@ -624,6 +626,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                     </span>
                   </div>
                 )}
+                <MedicalReviewBar path={`/${ctx.vertical}/reviews/${slug}`} className="mt-3 max-w-[640px]" compact />
               </div>
             </div>
             <ProviderCta
@@ -701,20 +704,6 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         {/* Intro */}
         <div className="mb-8">
           <ReadableProse text={review.reviewIntro} paragraphClassName="text-[16px] leading-[1.8] text-gray-600" />
-          {config.experts && config.experts.length > 0 && (
-            <div className="mt-5">
-              <ExpertByline
-                // Brand the team name from the current context so the hub
-                // shows "Treatments Hub", not the legacy brand from config.
-                expert={{
-                  ...config.experts[0],
-                  name: config.experts[0].name.replace(/TopWeightLoss/gi, ctx.brandTeam.replace(/\s+Team$/i, "")),
-                }}
-                label="Reviewed by"
-                href={hubLink(ctx, "/about")}
-              />
-            </div>
-          )}
         </div>
 
         {/* Is [brand] legit? - trust block for the "is X legit" query cluster */}

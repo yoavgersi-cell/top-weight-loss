@@ -1,3 +1,5 @@
+import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED, DEFAULT_VERTICAL, isVertical, isPublishedVertical } from "@/lib/config";
@@ -106,7 +108,7 @@ export default async function BattlePage({
       ...(author && {
         author: { "@type": "Organization", name: researchTeam, url: canonicalUrl(ctx, "/about") },
       }),
-      ...(reviewer && { reviewedBy: { "@type": "Organization", name: reviewer.name } }),
+      ...pageReviewSchema(`/${ctx.vertical}/${battleSlug}`),
       publisher: {
         "@type": "Organization",
         name: ctx.brandName,
@@ -132,33 +134,7 @@ export default async function BattlePage({
       })),
     };
 
-    const byline =
-      author || reviewer ? (
-        <div className="space-y-0.5 text-[13.5px] leading-relaxed text-gray-500">
-          {author && (
-            <div>
-              Written by{" "}
-              <Link
-                href={hubLink(ctx, "/about")}
-                className="font-semibold text-[#191919] hover:text-[#0C4B75] hover:underline"
-              >
-                {researchTeam}
-              </Link>
-            </div>
-          )}
-          {reviewer && (
-            <div>
-              Reviewed by{" "}
-              <Link
-                href={hubLink(ctx, "/about")}
-                className="font-semibold text-[#191919] hover:text-[#0C4B75] hover:underline"
-              >
-                {reviewer.name}
-              </Link>
-            </div>
-          )}
-        </div>
-      ) : null;
+    const byline = <MedicalReviewBar path={`/${battleSlug}`} className="max-w-[640px]" />;
 
     return (
       <div className="bg-[#FAFAFA]">

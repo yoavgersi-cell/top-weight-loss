@@ -1,3 +1,4 @@
+import { MedicalReviewBar } from "@/components/medical-review-bar";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ClipboardCheck, Database, ShieldCheck, Scale, Trophy, RefreshCw, BadgeDollarSign, Check, X } from "lucide-react";
@@ -117,6 +118,7 @@ export default async function HowWeRankPage() {
             weight loss provider, where our information comes from, and how we keep it accurate.
           </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
+          <MedicalReviewBar path="/weight-loss/how-we-rank" className="mt-4 max-w-[640px]" />
         </div>
       </div>
 

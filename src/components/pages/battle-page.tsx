@@ -21,7 +21,7 @@ import { LicensedTelehealthBadge } from "@/components/licensed-badge";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
 import { TrustDisclosure } from "@/components/medical-sources";
-import { ExpertByline } from "@/components/expert-byline";
+import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { SourcesMethodology } from "@/components/sources-methodology";
 import { ProductCarousel } from "@/components/product-carousel";
 import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/reddit-community";
@@ -758,25 +758,10 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   </Link>
                 </span>
               )}
-              {/* Medical-review credit slot: renders the reviewer from the CMS
-                  Team tab. When a credentialed clinician (MD/PharmD/RD) is
-                  added there, this line carries their name sitewide. */}
-              {config.experts && config.experts.length > 1 && (
-                <>
-                  <span className="text-gray-300">·</span>
-                  <span>
-                    Reviewed by{" "}
-                    <Link href={hubLink(ctx, "/about")} className="font-medium text-gray-600 underline-offset-2 hover:text-[#0C4B75] hover:underline">
-                      {config.experts[1].credentials
-                        ? `${config.experts[1].name}, ${config.experts[1].credentials}`
-                        : config.experts[1].name}
-                    </Link>
-                  </span>
-                </>
-              )}
               <span className="text-gray-300">·</span>
               <LastUpdated date={battleUpdatedAt} />
             </div>
+            <MedicalReviewBar path={`/${ctx.vertical}/${battle.slug}`} className="mt-4 max-w-[640px]" />
             <TrustDisclosure disclaimerHref={hubLink(ctx, "/disclaimer")} />
           </div>
         </section>
@@ -1360,11 +1345,6 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               Here&rsquo;s the short version
             </p>
             <ReadableProse text={battle.intro} paragraphClassName="text-[16px] leading-[1.85] text-gray-600" />
-            {battleAuthor && (
-              <div className="mt-5">
-                <ExpertByline expert={battleAuthor} label="Analysis by" href={hubLink(ctx, "/about")} />
-              </div>
-            )}
           </div>
 
           {/* ───── EARLY QUICK ANSWER ─────

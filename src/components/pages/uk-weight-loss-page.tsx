@@ -1,3 +1,4 @@
+import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { Check, Star, ArrowUpRight, ShieldCheck } from "lucide-react";
 import { UK_WEIGHT_LOSS_SERVICES, type UkWeightLossService } from "@/data/uk-weight-loss";
 import { tpStarColor } from "@/components/trustpilot-rating";
@@ -108,6 +109,7 @@ export function UkWeightLossPage() {
             supported, the process and delivery, programme pricing, and verified customer
             reviews. Any treatment and eligibility is decided by a licensed clinician.
           </p>
+          <MedicalReviewBar path="/uk/weight-loss" className="mt-4 max-w-[640px]" />
         </div>
       </div>
 

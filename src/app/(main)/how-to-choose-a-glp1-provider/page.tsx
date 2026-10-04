@@ -1,3 +1,5 @@
+import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import { Fragment } from "react";
 import Link from "next/link";
@@ -373,6 +375,7 @@ export default async function HowToChooseGlp1ProviderPage() {
     description: DESCRIPTION,
     datePublished: PUBLISHED,
     dateModified: UPDATED,
+    ...pageReviewSchema("/weight-loss/how-to-choose-a-glp1-provider"),
     author: { "@type": "Organization", name: "Treatments Hub Team", url: "https://www.treatmentshub.com" },
     publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
     mainEntityOfPage: CANONICAL,
@@ -415,6 +418,7 @@ export default async function HowToChooseGlp1ProviderPage() {
             prices, Trustpilot records, and what reviewers and Reddit patients report about each.
           </p>
           <LastUpdated date={UPDATED} className="mt-4" />
+          <MedicalReviewBar path="/weight-loss/how-to-choose-a-glp1-provider" className="mt-4 max-w-[640px]" />
           <TrustDisclosure disclaimerHref="/weight-loss/disclaimer" />
         </div>
       </div>

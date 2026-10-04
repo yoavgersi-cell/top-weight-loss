@@ -1,3 +1,4 @@
+import { MedicalReviewBar } from "@/components/medical-review-bar";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Clock, ArrowRight, Trophy } from "lucide-react";
@@ -125,6 +126,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
             Evidence-based {vName.toLowerCase()} guides - treatment options, what
             to expect, and making informed decisions about your health.
           </p>
+          <MedicalReviewBar path={`/${ctx.vertical}/articles`} className="mt-4 max-w-[640px]" compact />
         </div>
 
         {/* Featured article (first one) */}

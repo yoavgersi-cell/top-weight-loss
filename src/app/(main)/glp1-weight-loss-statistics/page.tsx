@@ -1,3 +1,4 @@
+import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideCluster } from "@/components/guide-cluster";
@@ -78,6 +79,7 @@ export default async function StatisticsPage() {
     description: DESCRIPTION,
     datePublished: "2026-08-01",
     dateModified: PRICE_INDEX_VERIFIED,
+    ...pageReviewSchema("/weight-loss/glp1-weight-loss-statistics"),
     author: { "@type": "Organization", name: "Treatments Hub Research Team", url: "https://www.treatmentshub.com/weight-loss/about" },
     publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
     mainEntityOfPage: { "@type": "WebPage", "@id": CANONICAL },

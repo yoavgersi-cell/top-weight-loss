@@ -1,3 +1,4 @@
+import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { Fragment } from "react";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Check, Star, ShieldCheck } from "lucide-react";
@@ -354,6 +355,9 @@ export async function HubHome() {
             Independent rankings across weight loss, hair growth, TRT, HRT and online
             therapy - real published prices and verified customer reviews.
           </p>
+          <div className="mx-auto mt-6 max-w-[560px] text-left">
+            <MedicalReviewBar path="/" compact />
+          </div>
 
           {/* Category cards - a balanced bento (desktop): `wide` verticals span
               two columns with up to two sub-links; the rest are compact,

@@ -5,7 +5,8 @@ import { SocialProofBand } from "@/components/social-proof-bubble";
 import { Sidebar } from "@/components/sidebar";
 import { EditorialContent } from "@/components/editorial-content";
 import { FaqAccordion } from "@/components/faq-accordion";
-import { ExpertByline } from "@/components/expert-byline";
+import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { pageReviewSchema } from "@/data/reviewers";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED } from "@/lib/config";
 
@@ -124,12 +125,7 @@ export default async function HomePage() {
         url: "https://www.topweightloss.io/about",
       },
     }),
-    ...(reviewer && {
-      reviewedBy: {
-        "@type": "Organization",
-        name: reviewer.name,
-      },
-    }),
+    ...pageReviewSchema("/weight-loss"),
     publisher: {
       "@type": "Organization",
       name: "topweightloss.io",
@@ -170,14 +166,9 @@ export default async function HomePage() {
       />
 
       {/* E-E-A-T byline strip - visible authorship/review + freshness for a YMYL topic */}
-      {(author || reviewer) && (
-        <section className="mx-auto max-w-[1200px] px-4 pt-5">
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-            {author && <ExpertByline expert={author} label="Written by" />}
-            {reviewer && <ExpertByline expert={reviewer} label="Reviewed by" />}
-          </div>
-        </section>
-      )}
+      <section className="mx-auto max-w-[1200px] px-4 pt-5">
+        <MedicalReviewBar path="/weight-loss" className="max-w-[640px]" />
+      </section>
 
       <section className="mx-auto max-w-[1200px] px-4 pt-6 pb-6">
         <div className="flex gap-6 items-start">
