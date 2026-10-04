@@ -48,7 +48,7 @@ export function MedicalReviewBar({
   const size = compact ? 28 : 32;
 
   const nameLink = (
-    <Link href={profile} className="whitespace-nowrap font-bold text-[#191919] hover:text-[#0C4B75] hover:underline">
+    <Link href={profile} className="font-bold text-[#191919] hover:text-[#0C4B75] hover:underline">
       {reviewerDisplayName(reviewer)}
     </Link>
   );
@@ -70,7 +70,7 @@ export function MedicalReviewBar({
   );
 
   return (
-    <div className={`flex items-center gap-2.5 ${className}`} data-review-status={review ? "reviewed" : "staff"}>
+    <div className={`flex min-w-0 items-start gap-2.5 sm:items-center ${className}`} data-review-status={review ? "reviewed" : "staff"}>
       <Link href={profile} className="shrink-0" aria-label={`${reviewer.name}, ${reviewer.jobTitle}`}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -89,7 +89,7 @@ export function MedicalReviewBar({
           <ShieldCheck className="mr-1 inline h-[14px] w-[14px] align-[-2px] text-emerald-600" strokeWidth={2.25} />
           {review ? "Reviewed for medical accuracy by " : "Medical reviewer: "}
           {nameLink}
-          {!compact && <span className="whitespace-nowrap text-gray-500"> · {reviewer.jobTitle}</span>}
+          {!compact && <span className="hidden text-gray-500 sm:inline"> · {reviewer.jobTitle}</span>}
           {linkedin}
           {compact && (
             <span className="text-gray-500">
@@ -114,8 +114,10 @@ export function MedicalReviewBar({
             ) : (
               <>Reviews this site&rsquo;s health content for scientific accuracy · </>
             )}
-            Written by {writer}
-            {" · "}
+            <span className="hidden sm:inline">
+              Written by {writer}
+              {" · "}
+            </span>
             {policy}
           </p>
         )}
