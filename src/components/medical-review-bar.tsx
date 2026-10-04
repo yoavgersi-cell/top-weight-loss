@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ShieldCheck } from "lucide-react";
-import { getPageReview, getReviewer, reviewerDisplayName, reviewerPath, type Reviewer } from "@/data/reviewers";
+import { getPageReview, getReviewer, reviewerPath, type Reviewer } from "@/data/reviewers";
 
 // ───── Medical review bar ─────
 // The one byline that sits under the H1/intro on every content page. Light
@@ -49,7 +49,8 @@ export function MedicalReviewBar({
 
   const nameLink = (
     <Link href={profile} className="font-bold text-[#191919] hover:text-[#0C4B75] hover:underline">
-      {reviewerDisplayName(reviewer)}
+      {reviewer.name}
+      {reviewer.credentials.length > 0 && <span className="whitespace-nowrap">, {reviewer.credentials.join(", ")}</span>}
     </Link>
   );
   const linkedin = reviewer.linkedin && (
@@ -86,8 +87,10 @@ export function MedicalReviewBar({
       </Link>
       <div className={`min-w-0 ${compact ? "text-[12.5px] leading-[1.4]" : "text-[13px] leading-[1.45]"}`}>
         <p className="text-gray-700">
-          <ShieldCheck className="mr-1 inline h-[14px] w-[14px] align-[-2px] text-emerald-600" strokeWidth={2.25} />
-          {review ? "Reviewed for medical accuracy by " : "Medical reviewer: "}
+          <span className={compact ? "" : "block sm:inline"}>
+            <ShieldCheck className="mr-1 inline h-[14px] w-[14px] align-[-2px] text-emerald-600" strokeWidth={2.25} />
+            {review ? "Reviewed for medical accuracy by " : "Medical reviewer: "}
+          </span>
           {nameLink}
           {!compact && <span className="hidden text-gray-500 sm:inline"> · {reviewer.jobTitle}</span>}
           {linkedin}
