@@ -1,3 +1,4 @@
+import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import { Fragment } from "react";
 import Link from "next/link";
@@ -682,6 +683,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Article",
+    ...pageReviewSchema(`/${ctx.vertical}/${battle.slug}`),
     headline: battle.title,
     description: battle.description,
     datePublished: "2026-06-01",
