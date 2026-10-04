@@ -418,7 +418,7 @@ export default async function HowToChooseGlp1ProviderPage() {
             prices, Trustpilot records, and what reviewers and Reddit patients report about each.
           </p>
           <LastUpdated date={UPDATED} className="mt-4" />
-          <MedicalReviewBar path="/weight-loss/how-to-choose-a-glp1-provider" className="mt-4 max-w-[640px]" />
+          <MedicalReviewBar path="/weight-loss/how-to-choose-a-glp1-provider" className="mt-4 max-w-[760px]" />
           <TrustDisclosure disclaimerHref="/weight-loss/disclaimer" />
         </div>
       </div>

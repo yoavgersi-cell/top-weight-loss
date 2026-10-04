@@ -134,7 +134,7 @@ export default async function BattlePage({
       })),
     };
 
-    const byline = <MedicalReviewBar path={`/${battleSlug}`} className="max-w-[640px]" />;
+    const byline = <MedicalReviewBar path={`/${battleSlug}`} className="max-w-[760px]" />;
 
     return (
       <div className="bg-[#FAFAFA]">

@@ -626,7 +626,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                     </span>
                   </div>
                 )}
-                <MedicalReviewBar path={`/${ctx.vertical}/reviews/${slug}`} className="mt-3 max-w-[640px]" compact />
+                <MedicalReviewBar path={`/${ctx.vertical}/reviews/${slug}`} className="mt-3 max-w-[760px]" compact />
               </div>
             </div>
             <ProviderCta

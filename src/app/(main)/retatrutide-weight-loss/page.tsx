@@ -92,7 +92,7 @@ export default async function RetatrutidePage() {
             and semaglutide, and an honest answer on whether you can actually get it.
           </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
-          <MedicalReviewBar path="/weight-loss/retatrutide-weight-loss" className="mt-4 max-w-[640px]" />
+          <MedicalReviewBar path="/weight-loss/retatrutide-weight-loss" className="mt-4 max-w-[760px]" />
         </div>
       </div>
 

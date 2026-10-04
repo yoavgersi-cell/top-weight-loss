@@ -428,7 +428,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               {article.description}
             </p>
             <p className="mt-3 text-[12px] text-gray-400">Updated {formattedDate}</p>
-            <MedicalReviewBar path={`/${ctx.vertical}/articles/${slug}`} className="mt-4 max-w-[640px]" />
+            <MedicalReviewBar path={`/${ctx.vertical}/articles/${slug}`} className="mt-4 max-w-[760px]" />
           </div>
         </div>
 

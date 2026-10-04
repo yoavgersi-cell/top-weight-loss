@@ -167,7 +167,7 @@ export default async function HomePage() {
 
       {/* E-E-A-T byline strip - visible authorship/review + freshness for a YMYL topic */}
       <section className="mx-auto max-w-[1200px] px-4 pt-5">
-        <MedicalReviewBar path="/weight-loss" className="max-w-[640px]" />
+        <MedicalReviewBar path="/weight-loss" className="max-w-[760px]" />
       </section>
 
       <section className="mx-auto max-w-[1200px] px-4 pt-6 pb-6">
