@@ -9,6 +9,51 @@ import type { Article } from "./articles";
 //   - Dense and useful beats long: concrete numbers, real math, honest
 //     trade-offs. Tables only where the data is genuinely tabular.
 export const brandClusterArticles: Article[] = [
+  // ═════ embody ═════
+  {
+    slug: "embody-tirzepatide-review",
+    title: "embody Tirzepatide Review 2026: $119 Flat, Real User Reports",
+    description:
+      "embody's compounded tirzepatide is $119/month (regularly $129), month to month, shipped cold in 1-2 days. What starting, titrating and switching onto it looks like, from verified Trustpilot and Reddit accounts.",
+    category: "Guide",
+    readTime: "7 min read",
+    publishedAt: "2026-10-04",
+    updatedAt: "2026-10-04",
+    heroColor: "#F0FAF5",
+    author: "Treatments Hub Staff",
+    keyTakeaways: [
+      "embody's compounded tirzepatide (GLP-1 + GIP) costs $119/month at the current rate, regularly $129, with no commitment. The price includes the medication, the clinician review, supplies and free 1-2 day cold-chain shipping.",
+      "It is the second-cheapest tirzepatide in our ranking after wellmedr's $89, and the cheapest with no long-term plan: a year is $1,428 at $119 or $1,548 at $129.",
+      "Verified Reddit accounts describe same-day approval, a vial within a week, a dose increase at the three-week check-in, and a switcher's order matched to their previous 15 mg dose.",
+      "The trade-off is a self-serve model: little live contact, a refill flow one user had to ask Reddit about, and a wait between approval and first shipment in some accounts. Trustpilot stands at 3.8 across 8,398 reviews.",
+    ],
+    sections: [
+      {
+        heading: "The price, and what it includes",
+        body: `<div class="qa"><strong>The short answer</strong>embody charges <strong>$119/month for compounded tirzepatide</strong> (regularly $129), billed month to month with no commitment, and <strong>$69/month for compounded semaglutide</strong>. One price covers the medication, the licensed-practitioner review, injection supplies and free shipping - temperature-controlled, tracked and insured, dispatched same day on orders before 2pm CT and typically delivered in 1-2 days. embody is LegitScript-certified, fills through US-based 503A compounding pharmacies, and refunds you in full if a provider does not approve treatment.</div><p>Two things to understand before comparing it. The medication is compounded tirzepatide, not brand-name Zepbound or Mounjaro; the <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">FDA's guidance on compounded GLP-1 drugs</a> applies. And the price is flat at every dose, which matters more for tirzepatide than for semaglutide because the label titrates from 2.5 mg up to as much as 15 mg weekly, and providers that price per dose charge most at exactly the point you are most committed.</p>`,
+      },
+      {
+        heading: "What starting on embody tirzepatide looks like",
+        body: `<p>The most useful evidence we hold is from a verified <a href="https://www.reddit.com/r/compoundedtirzepatide/comments/1utd6g7/has_anyone_tried_em_ie_embody_the_price_is_good/" target="_blank" rel="nofollow noopener">r/compoundedtirzepatide thread</a>, because the posters describe the mechanics rather than a verdict.</p><p><strong>Starting from scratch.</strong> One user who had quit a previous provider after a year of stalling: "I found embody and their new low price for triz and was okay with starting at the 2.5 (or slightly lower because of the b12). The med check was quick and I was approved same day, got my vial in just one week. Now 3 weeks in they bumped my dose to 5 (or 4.2) and shipped it out already. When I do the check in they will decide if I stick with 5 or go to 7.5 following month. But yeah if I wanted to get 10 from the start that may not have been possible. Everything is on autopilot, that's how they keep costs low." Two facts in there to keep: embody starts new patients at the standard <a href="https://medlineplus.gov/druginfo/meds/a622044.html" target="_blank" rel="noopener">2.5 mg titration dose</a> and raises it at check-ins, and the compounded formulation described contains B12.</p><p><strong>Switching from another provider.</strong> "I just switched to Embody from NativeMed... I placed my order on Monday, dr approved it Tuesday, it shipped today (Thursday) and scheduled to arrive tomorrow. And they matched my last dosage." Asked what arrived: "They sent two small vials and 6 needles with alcohol wipes. Everything is ready to go, I just pull 98 units, so almost a full syringe (15mg)." A third user: "$129 for all levels of tri and no contract and I already moved up my dosages with no issues or kick back."</p><p>The less tidy accounts are in the same threads. One customer received three vials at $129 each but waited about two weeks between approval and the medication actually shipping, with transit itself next-day. Another found the pharmacy had premixed an anti-nausea ingredient without asking, and that the 50-unit doses were larger than expected; the second month's bill was correct.</p>`,
+      },
+      {
+        heading: "How $119 compares to every other tirzepatide provider we rank",
+        body: `<p>Published compounded tirzepatide rates at our last verification, with the condition on each:</p><table><tr><th>Provider</th><th>Tirzepatide / month</th><th>The condition</th></tr><tr><td><a href="/weight-loss/reviews/wellmedr">wellmedr</a></td><td>$89</td><td>12-month plan, billed monthly</td></tr><tr><td><strong>embody</strong></td><td><strong>$119 (reg. $129)</strong></td><td>Month to month, no commitment; 1-2 day shipping</td></tr><tr><td><a href="/weight-loss/reviews/directmeds">DirectMeds</a></td><td>$147</td><td>Flat, no membership; injections or sublingual drops</td></tr><tr><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td>$149 (reg. $299)</td><td>Flat at every dose; pause or cancel anytime</td></tr><tr><td><a href="/weight-loss/reviews/medvi">Medvi</a></td><td>$166 (reg. $299)</td><td>Monthly, all-inclusive with video visits and coaching</td></tr><tr><td><a href="/weight-loss/reviews/sprout">Sprout</a></td><td>$199</td><td>Monthly; $200 off the first month</td></tr><tr><td><a href="/weight-loss/reviews/trimrx">trimrx</a></td><td>$259</td><td>No long-term contract; unlimited check-ins</td></tr><tr><td><a href="/weight-loss/reviews/shed">SHED</a></td><td>$299</td><td>Monthly; results guarantee</td></tr></table><p>A year on embody tirzepatide is <strong>$1,428</strong> at the $119 rate or <strong>$1,548</strong> at $129. wellmedr saves $360 a year but asks for a 12-month plan; everyone else costs more. The full dose-by-dose and brand-name picture is in the <a href="/weight-loss/tirzepatide">tirzepatide provider guide</a>, and embody's semaglutide math is in the <a href="/weight-loss/articles/embody-cost">embody cost guide</a>.</p>`,
+      },
+      {
+        heading: "What embody's reviews say",
+        body: `<p>embody's Trustpilot record is <strong>3.8 across 8,398 reviews</strong> - a large, mixed-to-positive base. The recent praise is about communication and the clinical contact: one tirzepatide patient writes that "from my very first inquiry I've had excellent communication... customer service updated me every step"; others describe providers who listen, dose adjustments made, and an account manager who fixed a broken portal. The recent low-star reviews are specific: a doctor who missed three video appointments before a call four days late, a first dose that took 8 days against a 3-5 day promise, a refill three days overdue, and a billing dispute bounced between support agents.</p><p>Read together with Reddit, the pattern is consistent: the medication arrives fast once it ships and the price is what it says, but embody is built to run with little human contact. "Great if you don't need to actually talk to anyone," as the r/compoundedtirzepatide poster put it. Our <a href="/weight-loss/articles/is-embody-legit">legitimacy audit</a> goes through the full record.</p>`,
+      },
+      {
+        heading: "Where embody tirzepatide falls short",
+        body: `<p><strong>You start at the bottom of the ladder.</strong> New patients begin at the standard 2.5 mg dose and move up at check-ins; if you are not switching with a documented dose, you cannot start high. <strong>Support is messaging-first.</strong> One Reddit user could not find a refill option in the dashboard and had to ask the community; another called the replies AI-generated. <strong>Pipeline time varies.</strong> The switcher above went order-to-delivery in four days; another customer waited about two weeks between approval and shipment. Order before your current supply runs low. <strong>No coaching, no dietician, no brand-name shelf.</strong> If you want a human program around the medication, <a href="/weight-loss/articles/medvi-tirzepatide-cost">Medvi's $166 all-inclusive plan</a> is the comparison to make.</p>`,
+      },
+      {
+        heading: "Is embody tirzepatide worth it?",
+        body: `<p><strong>Worth it</strong> if you want the lowest no-commitment price on compounded tirzepatide, fast cold-chain delivery, and you are comfortable with a self-serve program that titrates you on the standard schedule. For switchers with a documented dose it is one of the smoother moves we have verified.</p><p><strong>Look elsewhere</strong> if you want live clinician contact built in, if you need to start above 2.5 mg without documentation, or if $89 on a 12-month plan at wellmedr beats $119 month to month for you.</p><p class="cta-row"><a href="/weight-loss/reviews/embody">→ Read the full embody review, with both plans and real customer reviews</a></p><p class="cta-row"><a href="/weight-loss/embody-vs-wellmedr">→ embody vs wellmedr: $119 month-to-month vs $89 on a 12-month plan</a></p><p>Compounded tirzepatide is not an FDA-approved product. Prices are embody's published rates at our last verification and can change; confirm on embody's site. This article is general information, not medical advice.</p>`,
+      },
+    ],
+  },
   // ═════ Ro ═════
   {
     slug: "is-ro-legit",
