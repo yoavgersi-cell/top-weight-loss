@@ -1054,7 +1054,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               Excerpts from public Reddit posts, lightly trimmed; vote and comment counts shown as
               captured at the time of review. Reddit is a trademark of Reddit, Inc. and is not
               affiliated with this site.
-            </p>
+             Posts are individual experiences, and any weight-loss result mentioned is one person&rsquo;s and is not typical - results vary.</p>
           </div>
         )}
 

@@ -52,9 +52,7 @@ export default function ChatQuizPage() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    fetch("/api/config", {
-      headers: { Authorization: `Bearer ${sessionStorage.getItem("admin_token") || "topweight2026"}` },
-    })
+    fetch("/api/public-config")
       .then((r) => r?.json())
       .then((d) => { if (d && !d.error) setConfig(d); })
       .catch(() => null);

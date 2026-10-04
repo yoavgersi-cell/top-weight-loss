@@ -1,5 +1,5 @@
 /**
- * Analytics helper - fires events to both Meta Pixel and GA4.
+ * Analytics helper - fires events to GA4 (Meta Pixel removed Oct 2026).
  *
  * Usage:
  *   import { trackEvent, trackOnce } from "@/lib/analytics";
@@ -18,20 +18,7 @@ type AnalyticsEvent =
 
 declare global {
   interface Window {
-    fbq?: (...args: unknown[]) => void;
     gtag?: (...args: unknown[]) => void;
-  }
-}
-
-const STANDARD_FB_EVENTS = new Set(["PageView", "Lead", "ViewContent"]);
-
-function fireFB(event: string, params?: Record<string, string | number | boolean>) {
-  if (typeof window === "undefined" || !window.fbq) return;
-  const method = STANDARD_FB_EVENTS.has(event) ? "track" : "trackCustom";
-  if (params) {
-    window.fbq(method, event, params);
-  } else {
-    window.fbq(method, event);
   }
 }
 
@@ -44,7 +31,6 @@ export function trackEvent(
   event: AnalyticsEvent,
   params?: Record<string, string | number | boolean>
 ) {
-  fireFB(event, params);
   fireGA(event, params);
 }
 

@@ -14,7 +14,6 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "TRT", href: "/trt" },
       { label: "HRT", href: "/hrt" },
       { label: "Online Therapy", href: "/online-therapy" },
-      { label: "Weight Loss (UK)", href: "/uk/weight-loss" },
     ],
   },
   {
@@ -40,7 +39,9 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "About", href: "/weight-loss/about" },
       { label: "Medical Review Policy", href: "/medical-review-policy" },
       { label: "Our Medical Reviewer", href: "/reviewers/francheska-capistrano" },
-      { label: "Medical Disclaimer", href: "/weight-loss/disclaimer" },
+      { label: "Disclaimer", href: "/weight-loss/disclaimer" },
+      { label: "Privacy Policy", href: "/weight-loss/privacy" },
+      { label: "Terms of Use", href: "/weight-loss/terms" },
     ],
   },
 ];

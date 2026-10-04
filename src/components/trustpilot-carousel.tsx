@@ -234,6 +234,7 @@ export function MixedTrustpilotCarousel({ items, title, subtitle }: { items: Mix
       <ReviewPager
         cards={items.map((it, i) => ({ key: `${it.provider.name}-${i}`, node: <ReviewCard r={it.review} provider={it.provider} /> }))}
       />
+      <p className="mt-3 text-[11.5px] leading-relaxed text-gray-400">Reviews are individual experiences quoted verbatim from public Trustpilot profiles, names shortened; any weight-loss result mentioned is one person's and is not typical - results vary. Trustpilot is a trademark of Trustpilot A/S and is not affiliated with this site.</p>
     </div>
   );
 }
@@ -284,6 +285,7 @@ export function TrustpilotCarousel({
       </div>
 
       <ReviewPager cards={reviews.map((r, i) => ({ key: String(i), node: <ReviewCard r={r} /> }))} />
+      <p className="mt-3 text-[11.5px] leading-relaxed text-gray-400">Reviews are individual experiences quoted verbatim from public Trustpilot profiles, names shortened; any weight-loss result mentioned is one person's and is not typical - results vary. Trustpilot is a trademark of Trustpilot A/S and is not affiliated with this site.</p>
     </div>
   );
 }

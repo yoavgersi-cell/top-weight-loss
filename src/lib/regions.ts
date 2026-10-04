@@ -36,7 +36,7 @@ export const DEFAULT_REGION = "us";
 // compliance-safe (no medicine names / "GLP-1" / injection / efficacy), and it
 // has its own UK chrome. Individual /uk paths still gate their own robots (only
 // built pages are indexable; placeholders stay noindex).
-export const PUBLISHED_REGIONS = ["us", "gb"];
+export const PUBLISHED_REGIONS = ["us"];
 export const isPublishedRegion = (id: string): boolean => PUBLISHED_REGIONS.includes(id);
 
 export const regionById = (id: string): Region | undefined => REGIONS.find((r) => r.id === id);

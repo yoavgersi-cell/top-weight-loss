@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { MetaPixel } from "@/components/meta-pixel";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { hreflangLanguages } from "@/lib/regions";
 import "./globals.css";
@@ -137,7 +136,6 @@ export default function RootLayout({
             }),
           }}
         />
-        <MetaPixel />
         <GoogleAnalytics />
         <Analytics />
         <SpeedInsights />
