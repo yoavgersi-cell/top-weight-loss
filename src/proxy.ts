@@ -13,6 +13,8 @@ const SHARED_ONE_OFF_PAGES = new Set([
   "about",
   "how-we-rank",
   "disclaimer",
+  "privacy",
+  "terms",
   "weight-loss-pills",
   "glp1-pills-vs-injections",
   "ozempic-alternatives",
@@ -184,7 +186,10 @@ export function proxy(req: NextRequest) {
     // redirect below (which would 301 it under /weight-loss). When GB goes live,
     // replace this with region-aware routing into the UK content.
     if (first === "uk") {
-      return NextResponse.next();
+      // UK section retired (Oct 2026): send any /uk/* URL to the US weight-loss hub.
+      const url = req.nextUrl.clone();
+      url.pathname = "/weight-loss";
+      return NextResponse.redirect(url, 301);
     }
 
     // Generated metadata image routes (e.g. /opengraph-image) have no file

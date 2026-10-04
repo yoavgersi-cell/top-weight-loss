@@ -41,6 +41,8 @@ const WL_STATIC_PATHS: { path: string; priority: number; changeFrequency: "weekl
   { path: "/how-we-rank", priority: 0.6, changeFrequency: "monthly" },
   { path: "/about", priority: 0.3, changeFrequency: "monthly" },
   { path: "/disclaimer", priority: 0.2, changeFrequency: "monthly" },
+  { path: "/privacy", priority: 0.2, changeFrequency: "monthly" },
+  { path: "/terms", priority: 0.2, changeFrequency: "monthly" },
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -59,9 +61,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 export async function hubSitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [
     { url: HUB_URL, lastModified: FALLBACK_DATE, changeFrequency: "weekly", priority: 1 },
-    // UK region (published, compliance-framed). Only built, indexable UK pages
-    // are listed; /uk placeholders are noindex and excluded.
-    { url: `${HUB_URL}/uk/weight-loss`, lastModified: FALLBACK_DATE, changeFrequency: "weekly", priority: 0.7 },
     // Site-level trust pages: the medical review policy and reviewer profiles.
     { url: `${HUB_URL}/medical-review-policy`, lastModified: new Date("2026-10-04"), changeFrequency: "monthly", priority: 0.4 },
     ...REVIEWERS.map((r) => ({
@@ -260,6 +259,8 @@ async function legacySitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly",
       priority: 0.2,
     },
+    { url: `${BASE_URL}/privacy`, lastModified: new Date("2026-10-04"), changeFrequency: "yearly", priority: 0.2 },
+    { url: `${BASE_URL}/terms`, lastModified: new Date("2026-10-04"), changeFrequency: "yearly", priority: 0.2 },
   ];
 
   const reviewPages: MetadataRoute.Sitemap = (config.reviews ?? [])

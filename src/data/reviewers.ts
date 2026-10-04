@@ -342,7 +342,6 @@ const REVIEWED_2026_10_04: string[] = [
   "/trt/reviews/maximus",
   "/trt/reviews/medvi-quad",
   "/trt/reviews/petermd",
-  "/uk/weight-loss",
   "/weight-loss",
   "/weight-loss/altrx-vs-embody",
   "/weight-loss/altrx-vs-ro",
