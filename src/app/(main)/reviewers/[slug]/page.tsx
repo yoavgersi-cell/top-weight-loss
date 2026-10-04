@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ShieldCheck, GraduationCap, BadgeCheck, BookOpen, ClipboardList, ExternalLink } from "lucide-react";
+import { ShieldCheck, GraduationCap, BadgeCheck, BookOpen, ExternalLink } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import {
   HUB_ORIGIN,
   REVIEWERS,
-  REVIEW_LOG,
   getReviewer,
   reviewerDisplayName,
   reviewerPersonSchema,
@@ -47,35 +46,11 @@ function LinkedInMark({ className }: { className?: string }) {
   );
 }
 
-const VERTICAL_LABEL: Record<string, string> = {
-  hub: "Treatments Hub home",
-  uk: "UK weight loss",
-  "weight-loss": "Weight loss (GLP-1)",
-  "hair-loss": "Hair loss",
-  trt: "TRT",
-  hrt: "HRT",
-  "online-therapy": "Online therapy",
-};
 
 export default async function ReviewerProfilePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const r = getReviewer(slug);
   if (!r) notFound();
-
-  const reviewed = Object.entries(REVIEW_LOG)
-    .filter(([, v]) => v.reviewer === r.slug)
-    .sort((a, b) => (a[1].reviewedAt < b[1].reviewedAt ? 1 : -1));
-
-  const latestReview = reviewed[0]?.[1].reviewedAt ?? "";
-  const byVertical: Record<string, { reviews: number; comparisons: number; guides: number }> = {};
-  for (const [path] of reviewed) {
-    const seg = path.split("/").filter(Boolean);
-    const v = path === "/" ? "hub" : seg[0] === "uk" ? "uk" : seg[0];
-    const bucket = (byVertical[v] ??= { reviews: 0, comparisons: 0, guides: 0 });
-    if (seg[1] === "reviews" && seg[2]) bucket.reviews++;
-    else if (/-vs-/.test(path)) bucket.comparisons++;
-    else bucket.guides++;
-  }
 
   const person = reviewerPersonSchema(r);
   const profileSchema = {
@@ -257,68 +232,6 @@ export default async function ReviewerProfilePage({ params }: { params: Promise<
             </ul>
           </section>
         )}
-
-        {/* Review activity - a summary, not a URL list */}
-        <section className="mb-10">
-          <div className="mb-3 flex items-center gap-2">
-            <ClipboardList className="h-5 w-5 text-[#0C4B75]" strokeWidth={2} />
-            <h2 className="text-[24px] font-bold text-[#191919]">Review activity</h2>
-          </div>
-          {reviewed.length > 0 ? (
-            <>
-              <div className="grid gap-3 sm:grid-cols-3">
-                <div className="rounded-xl border border-gray-200 bg-white p-4">
-                  <p className="text-[28px] font-extrabold leading-none text-[#191919]">{reviewed.length}</p>
-                  <p className="mt-1 text-[13px] text-gray-500">pages reviewed for medical accuracy</p>
-                </div>
-                <div className="rounded-xl border border-gray-200 bg-white p-4">
-                  <p className="text-[28px] font-extrabold leading-none text-[#191919]">
-                    {new Date(`${latestReview}T00:00:00Z`).toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" })}
-                  </p>
-                  <p className="mt-1 text-[13px] text-gray-500">most recent review, {latestReview.slice(0, 4)}</p>
-                </div>
-                <div className="rounded-xl border border-gray-200 bg-white p-4">
-                  <p className="text-[28px] font-extrabold leading-none text-[#191919]">{Object.keys(byVertical).length}</p>
-                  <p className="mt-1 text-[13px] text-gray-500">treatment areas covered</p>
-                </div>
-              </div>
-              <div className="mt-3 overflow-hidden rounded-xl border border-gray-200 bg-white">
-                <table className="w-full text-left text-[13.5px]">
-                  <thead>
-                    <tr className="border-b border-gray-200 bg-gray-50 text-[11px] font-bold uppercase tracking-[0.05em] text-gray-500">
-                      <th className="px-4 py-2.5">Treatment area</th>
-                      <th className="px-4 py-2.5 text-right">Provider reviews</th>
-                      <th className="px-4 py-2.5 text-right">Comparisons</th>
-                      <th className="px-4 py-2.5 text-right">Guides &amp; articles</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-100">
-                    {Object.entries(byVertical).map(([v, c]) => (
-                      <tr key={v}>
-                        <td className="px-4 py-2.5 font-semibold text-[#191919]">
-                          <Link href={v === "hub" ? "/" : `/${v}`} className="hover:text-[#0C4B75] hover:underline">{VERTICAL_LABEL[v] ?? v}</Link>
-                        </td>
-                        <td className="px-4 py-2.5 text-right text-gray-700">{c.reviews || "-"}</td>
-                        <td className="px-4 py-2.5 text-right text-gray-700">{c.comparisons || "-"}</td>
-                        <td className="px-4 py-2.5 text-right text-gray-700">{c.guides || "-"}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <p className="mt-3 text-[13px] leading-relaxed text-gray-500">
-                Every reviewed page shows the same review date under its title and names {r.name.split(" ")[0]} in its
-                structured data. Medical reviewer at Treatments Hub since{" "}
-                {new Date(`${r.since}-01T00:00:00Z`).toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" })}.
-              </p>
-            </>
-          ) : (
-            <p className="rounded-xl border border-gray-200 bg-white p-4 text-[14px] text-gray-600">
-              The review log starts in October 2026. As pages are reviewed, their count appears here and each page shows
-              its review date in its byline.
-            </p>
-          )}
-        </section>
 
         <p className="text-[13px] leading-relaxed text-gray-400">
           Reviewers assess medical and scientific statements. They do not choose providers, set prices or rankings, or
