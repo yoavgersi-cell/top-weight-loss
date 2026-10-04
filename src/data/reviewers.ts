@@ -463,9 +463,17 @@ const REVIEWED_2026_10_04: string[] = [
   "/weight-loss/weight-loss-pills",
 ];
 
-export const REVIEW_LOG: Record<string, PageReview> = Object.fromEntries(
-  REVIEWED_2026_10_04.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: "2026-10-04" }]),
-);
+// Pages published and reviewed after the full-site pass.
+const REVIEWED_LATER: Record<string, PageReview> = {
+  "/weight-loss/articles/is-ro-legit": { reviewer: "francheska-capistrano", reviewedAt: "2026-10-04" },
+  "/weight-loss/articles/ro-cost": { reviewer: "francheska-capistrano", reviewedAt: "2026-10-04" },
+  "/weight-loss/articles/embody-tirzepatide-review": { reviewer: "francheska-capistrano", reviewedAt: "2026-10-04" },
+};
+
+export const REVIEW_LOG: Record<string, PageReview> = {
+  ...Object.fromEntries(REVIEWED_2026_10_04.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: "2026-10-04" }])),
+  ...REVIEWED_LATER,
+};
 
 export function getReviewer(slug: string = SITE_REVIEWER_SLUG): Reviewer | undefined {
   return REVIEWERS.find((r) => r.slug === slug);
