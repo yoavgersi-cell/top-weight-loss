@@ -128,7 +128,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
             Evidence-based {vName.toLowerCase()} guides - treatment options, what
             to expect, and making informed decisions about your health.
           </p>
-          <MedicalReviewBar path={`/${ctx.vertical}/articles`} className="mt-4 max-w-[640px]" compact />
+          <MedicalReviewBar path={`/${ctx.vertical}/articles`} className="mt-4 max-w-[760px]" compact />
         </div>
 
         {/* Featured article (first one) */}

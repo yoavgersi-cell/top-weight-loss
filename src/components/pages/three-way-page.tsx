@@ -112,7 +112,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
           <div className="mt-3">
             <LastUpdated date={TEMPLATES_LAST_UPDATED} />
           </div>
-          <MedicalReviewBar path={`/${ctx.vertical}/${trio.slug}`} className="mt-4 max-w-[640px]" />
+          <MedicalReviewBar path={`/${ctx.vertical}/${trio.slug}`} className="mt-4 max-w-[760px]" />
           <TrustDisclosure disclaimerHref={hubLink(ctx, "/disclaimer")} />
         </div>
       </section>

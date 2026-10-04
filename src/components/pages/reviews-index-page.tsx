@@ -1,3 +1,4 @@
+import { pageReviewSchema } from "@/data/reviewers";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -91,8 +92,18 @@ export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
     ],
   };
 
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": canonicalUrl(ctx, "/reviews"),
+    url: canonicalUrl(ctx, "/reviews"),
+    name: `${vName} Provider Reviews`,
+    ...pageReviewSchema(`/${ctx.vertical}/reviews`),
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">

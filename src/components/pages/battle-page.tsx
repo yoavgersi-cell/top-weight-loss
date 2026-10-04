@@ -763,7 +763,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               <span className="text-gray-300">·</span>
               <LastUpdated date={battleUpdatedAt} />
             </div>
-            <MedicalReviewBar path={`/${ctx.vertical}/${battle.slug}`} className="mt-4 max-w-[640px]" />
+            <MedicalReviewBar path={`/${ctx.vertical}/${battle.slug}`} className="mt-4 max-w-[760px]" />
             <TrustDisclosure disclaimerHref={hubLink(ctx, "/disclaimer")} />
           </div>
         </section>

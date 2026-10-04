@@ -125,7 +125,7 @@ export default async function OzempicAlternativesPage() {
             to choose one safely.
           </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
-          <MedicalReviewBar path="/weight-loss/ozempic-alternatives" className="mt-4 max-w-[640px]" />
+          <MedicalReviewBar path="/weight-loss/ozempic-alternatives" className="mt-4 max-w-[760px]" />
         </div>
       </div>
 

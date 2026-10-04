@@ -1,3 +1,4 @@
+import { pageReviewSchema } from "@/data/reviewers";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { Fragment } from "react";
 import Link from "next/link";
@@ -345,6 +346,19 @@ export async function HubHome() {
 
   return (
     <div className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://www.treatmentshub.com/",
+            url: "https://www.treatmentshub.com/",
+            name: "Compare the Best Health & Wellness Services",
+            ...pageReviewSchema("/"),
+          }),
+        }}
+      />
       {/* ───── HERO ───── */}
       <section className="bg-gradient-to-b from-[#E8F3FB] via-[#F3F9FD] to-white">
         <div className="mx-auto max-w-[1100px] px-5 pb-14 pt-14 text-center sm:px-8 sm:pb-20 sm:pt-20">

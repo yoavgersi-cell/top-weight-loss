@@ -118,7 +118,7 @@ export default async function HowWeRankPage() {
             weight loss provider, where our information comes from, and how we keep it accurate.
           </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
-          <MedicalReviewBar path="/weight-loss/how-we-rank" className="mt-4 max-w-[640px]" />
+          <MedicalReviewBar path="/weight-loss/how-we-rank" className="mt-4 max-w-[760px]" />
         </div>
       </div>
 

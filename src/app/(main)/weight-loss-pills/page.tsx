@@ -140,7 +140,7 @@ export default async function WeightLossPillsPage() {
             really compare to injections.
           </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
-          <MedicalReviewBar path="/weight-loss/weight-loss-pills" className="mt-4 max-w-[640px]" />
+          <MedicalReviewBar path="/weight-loss/weight-loss-pills" className="mt-4 max-w-[760px]" />
         </div>
       </div>
 

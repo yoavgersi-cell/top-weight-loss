@@ -137,7 +137,7 @@ export default async function SwitchFromOzempicPage() {
             clinician decides, and what to verify before you move.
           </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
-          <MedicalReviewBar path="/weight-loss/switch-from-ozempic" className="mt-4 max-w-[640px]" />
+          <MedicalReviewBar path="/weight-loss/switch-from-ozempic" className="mt-4 max-w-[760px]" />
           <TrustDisclosure disclaimerHref="/weight-loss/disclaimer" />
         </div>
       </div>

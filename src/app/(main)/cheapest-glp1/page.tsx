@@ -114,7 +114,7 @@ export default async function CheapestGlp1Page() {
             cheapest first.
           </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
-          <MedicalReviewBar path="/weight-loss/cheapest-glp1" className="mt-4 max-w-[640px]" />
+          <MedicalReviewBar path="/weight-loss/cheapest-glp1" className="mt-4 max-w-[760px]" />
           <TrustDisclosure disclaimerHref="/weight-loss/disclaimer" />
         </div>
       </div>

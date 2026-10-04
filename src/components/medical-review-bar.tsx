@@ -3,8 +3,9 @@ import { ShieldCheck } from "lucide-react";
 import { getPageReview, getReviewer, reviewerDisplayName, reviewerPath, type Reviewer } from "@/data/reviewers";
 
 // ───── Medical review bar ─────
-// The one byline block that sits under the H1/intro on every content page.
-// Two honest modes, decided by the review log:
+// The one byline that sits under the H1/intro on every content page. Light
+// by design: no card, a 32px portrait, two short lines. Two honest modes,
+// decided by the review log:
 //   - logged:   "Reviewed for medical accuracy by <name>" + the review date
 //   - unlogged: "Medical reviewer: <name>" - names the site's reviewer as
 //               staff without claiming this page was reviewed.
@@ -36,70 +37,88 @@ export function MedicalReviewBar({
   /** Author credit shown alongside the reviewer. */
   writer?: string;
   className?: string;
-  /** Tighter layout for index pages and cards. */
+  /** Single-line variant for index pages and the hub landing. */
   compact?: boolean;
 }) {
   const review = getPageReview(path);
   const reviewer: Reviewer | undefined = review?.reviewerProfile ?? getReviewer();
   if (!reviewer) return null;
 
-  const label = review ? "Reviewed for medical accuracy by" : "Medical reviewer";
   const profile = reviewerPath(reviewer);
+  const size = compact ? 28 : 32;
+
+  const nameLink = (
+    <Link href={profile} className="whitespace-nowrap font-bold text-[#191919] hover:text-[#0C4B75] hover:underline">
+      {reviewerDisplayName(reviewer)}
+    </Link>
+  );
+  const linkedin = reviewer.linkedin && (
+    <a
+      href={reviewer.linkedin}
+      target="_blank"
+      rel="noopener noreferrer me"
+      className="ml-1.5 inline-flex align-[-2px] text-[#0A66C2] hover:opacity-80"
+      aria-label={`${reviewer.name} on LinkedIn`}
+    >
+      <LinkedInMark className="h-[13px] w-[13px]" />
+    </a>
+  );
+  const policy = (
+    <Link href="/medical-review-policy" className="font-medium text-[#0C4B75] hover:underline">
+      How we review
+    </Link>
+  );
 
   return (
-    <div
-      className={`flex items-start gap-3 rounded-xl border border-gray-200 bg-white ${compact ? "px-3 py-2.5" : "px-4 py-3"} ${className}`}
-      data-review-status={review ? "reviewed" : "staff"}
-    >
+    <div className={`flex items-center gap-2.5 ${className}`} data-review-status={review ? "reviewed" : "staff"}>
       <Link href={profile} className="shrink-0" aria-label={`${reviewer.name}, ${reviewer.jobTitle}`}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={reviewer.image.thumb}
           alt={`${reviewer.name}, ${reviewer.jobTitle}`}
-          width={compact ? 36 : 44}
-          height={compact ? 36 : 44}
-          className={`${compact ? "h-9 w-9" : "h-11 w-11"} rounded-full object-cover`}
+          width={size}
+          height={size}
+          style={{ width: size, height: size }}
+          className="rounded-full object-cover ring-1 ring-gray-200"
           loading="lazy"
           decoding="async"
         />
       </Link>
-      <div className="min-w-0 flex-1 leading-snug">
-        <p className="flex flex-wrap items-center gap-x-1.5 text-[11px] font-semibold uppercase tracking-[0.05em] text-gray-400">
-          <ShieldCheck className="h-3.5 w-3.5 text-emerald-600" strokeWidth={2.25} />
-          {label}
-        </p>
-        <p className="text-[13.5px] text-[#191919]">
-          <Link href={profile} className="font-bold hover:text-[#0C4B75] hover:underline">
-            {reviewerDisplayName(reviewer)}
-          </Link>
-          <span className="text-gray-400"> · {reviewer.jobTitle}</span>
-          {reviewer.linkedin && (
-            <a
-              href={reviewer.linkedin}
-              target="_blank"
-              rel="noopener noreferrer me"
-              className="ml-2 inline-flex align-middle text-[#0A66C2] hover:opacity-80"
-              aria-label={`${reviewer.name} on LinkedIn`}
-            >
-              <LinkedInMark className="h-3.5 w-3.5" />
-            </a>
-          )}
-        </p>
-        <p className="mt-0.5 text-[12px] text-gray-500">
-          {review ? (
-            <>
-              Reviewed <time dateTime={review.reviewedAt}>{formatDate(review.reviewedAt)}</time>
+      <div className={`min-w-0 ${compact ? "text-[12.5px] leading-[1.4]" : "text-[13px] leading-[1.45]"}`}>
+        <p className="text-gray-700">
+          <ShieldCheck className="mr-1 inline h-[14px] w-[14px] align-[-2px] text-emerald-600" strokeWidth={2.25} />
+          {review ? "Reviewed for medical accuracy by " : "Medical reviewer: "}
+          {nameLink}
+          {!compact && <span className="whitespace-nowrap text-gray-500"> · {reviewer.jobTitle}</span>}
+          {linkedin}
+          {compact && (
+            <span className="text-gray-500">
+              {review ? (
+                <>
+                  {" · "}
+                  <time dateTime={review.reviewedAt}>{formatDate(review.reviewedAt)}</time>
+                </>
+              ) : null}
               {" · "}
-            </>
-          ) : (
-            <>Reviews this site&rsquo;s health content for scientific accuracy · </>
+              {policy}
+            </span>
           )}
-          Written by {writer}
-          {" · "}
-          <Link href="/medical-review-policy" className="font-medium text-[#0C4B75] hover:underline">
-            How we review
-          </Link>
         </p>
+        {!compact && (
+          <p className={`${compact ? "" : "mt-0.5"} text-[12.5px] text-gray-500`}>
+            {review ? (
+              <>
+                Reviewed <time dateTime={review.reviewedAt}>{formatDate(review.reviewedAt)}</time>
+                {" · "}
+              </>
+            ) : (
+              <>Reviews this site&rsquo;s health content for scientific accuracy · </>
+            )}
+            Written by {writer}
+            {" · "}
+            {policy}
+          </p>
+        )}
       </div>
     </div>
   );
