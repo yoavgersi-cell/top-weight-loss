@@ -626,8 +626,15 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                     </span>
                   </div>
                 )}
-                <MedicalReviewBar path={`/${ctx.vertical}/reviews/${slug}`} className="mt-3 max-w-[760px]" compact />
+                {/* Desktop: byline inside the title column. Mobile renders it
+                    full-width below the header row instead (see sm:hidden). */}
+                <div className="hidden sm:block">
+                  <MedicalReviewBar path={`/${ctx.vertical}/reviews/${slug}`} className="mt-3 max-w-[760px]" compact />
+                </div>
               </div>
+            </div>
+            <div className="sm:hidden">
+              <MedicalReviewBar path={`/${ctx.vertical}/reviews/${slug}`} />
             </div>
             <ProviderCta
               href={provider.affiliateUrl}
