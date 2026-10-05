@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
+import { TrustpilotSummary } from "@/components/trustpilot-summary";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 import { LastUpdated } from "@/components/last-updated";
@@ -756,7 +757,13 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         {/* Trustpilot Reviews - social proof right after the legitimacy block,
             before the feature/pricing detail (moved up, operator request Sept 20). */}
         {(provider.trustpilotReviews?.length ?? 0) > 0 && (
-          <div className="mb-6">
+          <div className="mb-6 space-y-3">
+            <TrustpilotSummary
+              providerName={provider.name}
+              reviews={provider.trustpilotReviews!}
+              rating={provider.trustpilotRating}
+              reviewCount={provider.trustpilotReviewCount}
+            />
             <TrustpilotCarousel
               providerName={provider.name}
               providerLogo={provider.logo}
