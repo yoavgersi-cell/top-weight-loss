@@ -142,6 +142,58 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
     rating: "4.6",
     reviewCount: "1,919",
     reviews: [
+      // Oct 5, 2026 batch (operator-supplied screenshots of the profile's
+      // newest reviews, Sep 25 - Oct 4 2026): five 5-star, one 4-star.
+      // Transcribed verbatim, typos included; names reduced to first name +
+      // last initial as displayed.
+      {
+        title: "Great product. Good company.",
+        text: "Oliver, in customer service, assisted quickly with my request to cancel service. The product has worked very well for me but I am moving out of state and do not have a new address for delivery yet. I have enough trizepatide to last me long enough to relocate.",
+        name: "T. H.",
+        location: "US",
+        rating: 5,
+        date: "Oct 3, 2026",
+      },
+      {
+        title: "The agent helped me cancel an old plan...",
+        text: "The agent helped me cancel an old plan that was not showing active in my portal but was due to bill on 10/9. He also paused my plan due to a surplus of medication. He was kind, patient and professional.",
+        name: "adrienne A.",
+        location: "US",
+        rating: 5,
+        date: "Oct 4, 2026",
+      },
+      {
+        title: "He was very friendly",
+        text: "He was very friendly. He is very patient. And very kind",
+        name: "Stacey K.",
+        location: "US",
+        rating: 5,
+        date: "Oct 4, 2026",
+      },
+      {
+        title: "Answered but Scripts arrive late",
+        text: "I did receive an answer to my question but I my last injection came a day or two late. So I inquired as to when I will receive my next delivery of my prescription. It appears that it will be shipped the day AFTER my injection day! Not good!",
+        name: "Kathleen W.",
+        location: "US",
+        rating: 4,
+        date: "Sep 25, 2026",
+      },
+      {
+        title: "My experience was excellent no issues",
+        text: "My experience was excellent no issues. My personal rep. Was Ashton Jones which provided great response and customer service.",
+        name: "Lisa R.",
+        location: "US",
+        rating: 5,
+        date: "Oct 4, 2026",
+      },
+      {
+        title: "Zara responded quickly and helped me...",
+        text: "Zara responded quickly and helped me with my question. I really like the chat feature. I wish my primary care doctor offered that feature.",
+        name: "Nancy",
+        location: "US",
+        rating: 5,
+        date: "Sep 26, 2026",
+      },
       // Sep 24, 2026 batch (operator-supplied screenshots of the profile's
       // newest reviews, Sep 15-23 2026). Transcribed faithfully, including
       // both 1-star reviews; reviewer names reduced to first name + last initial.
