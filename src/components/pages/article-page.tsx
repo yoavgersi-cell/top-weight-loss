@@ -14,6 +14,8 @@ import { ProductCarousel } from "@/components/product-carousel";
 import { TrustpilotCarousel, MixedTrustpilotCarousel, type MixedReviewItem } from "@/components/trustpilot-carousel";
 import { TopProvidersBlock, TopTwoPicks } from "@/components/top-providers-block";
 import { TirzepatidePriceTable } from "@/components/tirzepatide-price-table";
+import { TrustpilotSummary } from "@/components/trustpilot-summary";
+import { PRICE_INDEX_VERIFIED } from "@/lib/price-index";
 import { LEGIT_PAGES, LegitChecklist, LegitVerdictCta, PricingCapture } from "@/components/legit-page-blocks";
 import { ProviderCta } from "@/components/provider-cta";
 import { PRICE_INDEX } from "@/lib/price-index";
@@ -525,6 +527,15 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               <div className="qa">
                 <strong>The quick answer</strong>
                 {ARTICLE_QUICK_ANSWERS[slug]}
+                {/* Dated price stamp: answer engines prefer a figure with an
+                    explicit "as of" date; the date is the price index's own
+                    verification date, so it moves only when prices are re-checked. */}
+                {/\$\d/.test(ARTICLE_QUICK_ANSWERS[slug]) && (
+                  <span className="mt-2 block text-[13px] text-gray-500">
+                    Prices verified on each provider&rsquo;s site as of{" "}
+                    {new Date(PRICE_INDEX_VERIFIED).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}.
+                  </span>
+                )}
               </div>
             </div>
           )}
@@ -682,7 +693,13 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     second (or first, on very short articles). Verified data
                     only - providers without it simply render nothing. */}
                 {i === 0 && subjectTrustpilot && (
-                  <div className="my-10">
+                  <div className="my-10 space-y-3">
+                    <TrustpilotSummary
+                      providerName={subjectTrustpilot.name}
+                      reviews={subjectTrustpilot.trustpilotReviews!}
+                      rating={subjectTrustpilot.trustpilotRating}
+                      reviewCount={subjectTrustpilot.trustpilotReviewCount}
+                    />
                     <TrustpilotCarousel
                       providerName={subjectTrustpilot.name}
                       providerLogo={subjectTrustpilot.logo}
