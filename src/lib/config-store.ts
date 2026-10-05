@@ -5527,7 +5527,7 @@ function buildInitialConfig(): SiteConfig {
       trustpilotReviews: seedTrustpilot[p.id]?.reviews,
     })),
     ranking: {
-      providerOrder: ["ro", "altrx", "embody", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm", "synergyrx"],
+      providerOrder: ["embody", "altrx", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm", "synergyrx"],
       positions: [
         { score: 9.8, starRating: 5, label: "Exceptional", badge: "Our Most Popular" },
         { score: 9.7, starRating: 5, label: "Exceptional" },
@@ -5623,7 +5623,7 @@ function buildInitialConfig(): SiteConfig {
           { type: "quizCta" as const, enabled: true },
           { type: "relatedArticles" as const, enabled: true },
         ],
-        providerIds: ["ro", "altrx", "embody"],
+        providerIds: ["embody", "altrx", "ro"],
         quizCta: {
           headline: "Not sure which provider is right?",
           description: "Take our free quiz and get a personalized recommendation.",
@@ -5641,7 +5641,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Semaglutide Providers 2026",
         h2: "Compare GLP-1 weight loss programs side by side",
         heroDescription: "Semaglutide (the active ingredient in Ozempic and Wegovy) is one of the most effective GLP-1 medications for weight loss. Compare providers offering semaglutide treatment below.",
-        providerOrder: ["ro", "altrx", "embody", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["embody", "altrx", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "What Is Semaglutide?",
@@ -5669,7 +5669,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Tirzepatide Providers 2026",
         h2: "Compare dual-action GLP-1 weight loss programs",
         heroDescription: "Tirzepatide (the active ingredient in Mounjaro and Zepbound) targets both GLP-1 and GIP receptors for enhanced weight loss results. Compare providers offering tirzepatide treatment below.",
-        providerOrder: ["ro", "altrx", "embody", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["embody", "altrx", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "What Is Tirzepatide?",
@@ -5697,7 +5697,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Online Weight Loss Programs 2026",
         h2: "Clinician-guided GLP-1 treatment from home",
         heroDescription: "Online weight loss programs now offer prescription GLP-1 medications with full medical oversight - all from home. We compared the top programs on pricing, clinical support, and results.",
-        providerOrder: ["ro", "altrx", "embody", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["embody", "altrx", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "How Online Weight Loss Programs Work",
@@ -5725,7 +5725,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Weight Loss Injections 2026",
         h2: "Compare injectable GLP-1 weight loss treatments",
         heroDescription: "GLP-1 weight loss injections like semaglutide and tirzepatide have shown 15-22% average weight loss in clinical trials. Compare providers offering injectable treatment programs below.",
-        providerOrder: ["ro", "altrx", "embody", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["embody", "altrx", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "How Weight Loss Injections Work",
@@ -5753,7 +5753,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Ozempic for Weight Loss",
         h2: "Compare providers offering semaglutide treatment",
         heroDescription: "Ozempic (semaglutide) is widely used off-label for weight loss, with clinical trials showing 10-15% average weight loss. Compare providers offering semaglutide-based treatment programs below.",
-        providerOrder: ["ro", "altrx", "embody", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["embody", "altrx", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "Ozempic for Weight Loss: What You Need to Know",
@@ -5781,7 +5781,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Wegovy Providers & Alternatives 2026",
         h2: "Compare semaglutide weight loss programs",
         heroDescription: "Wegovy is the FDA-approved weight loss version of semaglutide, with clinical trials showing 15% average weight loss. Compare providers offering Wegovy and compounded semaglutide alternatives below.",
-        providerOrder: ["ro", "altrx", "embody", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["embody", "altrx", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "Wegovy vs Compounded Semaglutide",
@@ -5805,7 +5805,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Most Affordable Weight Loss Medication 2026",
         h2: "Compare the cheapest GLP-1 providers",
         heroDescription: "GLP-1 medications don't have to cost $1,000/month. Compounded semaglutide starts at a verified $49/month and tirzepatide at $89/month from licensed telehealth providers - including medication, consultations, and delivery.",
-        providerOrder: ["altrx", "trimrx", "shed", "ro", "embody", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["altrx", "trimrx", "shed", "embody", "ro", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "Why GLP-1 Medication Is Getting More Affordable",
