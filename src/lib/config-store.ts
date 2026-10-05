@@ -3773,7 +3773,7 @@ const medviwellmedrBattle: BattleData = {
 
 const embodyRoBattle: BattleData = {
   slug: "embody-vs-ro",
-  updatedAt: "2026-09-12",
+  updatedAt: "2026-10-05",
   provider1Id: "embody",
   provider2Id: "ro",
   title: "Embody vs Ro: Which GLP-1 Provider Is Right for You in 2026?",
@@ -3781,18 +3781,18 @@ const embodyRoBattle: BattleData = {
   subtitle: "Embody vs Ro, compared on pricing, shipping speed, medical model, and overall value - so you can see which one fits you best.",
   description: "embody vs Ro: compare pricing, shipping, GLP-1 meds & care. embody: fast free 1-2 day shipping. Ro: established brand with an in-house pharmacy. See which fits you.",
   intro: "Embody and Ro are both fully online providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established telehealth brand with an integrated in-house pharmacy and licensed providers reviewing every plan. Embody is weight-loss-focused with flat, transparent pricing - $69/month for compounded semaglutide and $119 for tirzepatide - free 1-2 day shipping, and LegitScript-certified 503A pharmacies. Here's how they compare.",
-  verdict: "Both are legitimate online GLP-1 providers, and the right pick depends on what you weigh most. Embody is the budget, no-frills choice - flat $69/month compounded semaglutide, free 1-2 day shipping, cancel anytime - and genuinely cheaper cash-pay over a year. But Ro takes it overall: it's a large, established telehealth brand with an integrated in-house pharmacy, licensed providers reviewing every plan, and - uniquely - access to FDA-approved brand-name Wegovy and Zepbound when your insurance covers them, which compounded-only providers can't match. With a 4.0 rating across 6,428 Trustpilot reviews and a reputation for responsive support, Ro is the more complete, more trusted platform for most people. Choose Embody if the lowest cash price is your priority; choose Ro for the full-service, brand-backed experience.",
+  verdict: "Both are legitimate online GLP-1 providers, and the right pick depends on what you weigh most. Embody takes it overall: a flat $69/month for compounded semaglutide and $119 for tirzepatide with the doctor review, supplies and shipping included, free 1-2 day tracked and insured delivery, LegitScript certification with US-based 503A pharmacies, a full refund if you are not approved, and no contract. Over a year that is $828 cash-pay for semaglutide, against roughly $2,676 or more at Ro once the membership and brand-name medication are added. Ro is the larger, more established brand, with an integrated in-house pharmacy and, uniquely, FDA-approved brand-name Wegovy and Zepbound when your insurance covers them, which a compounded-only provider cannot match. On Trustpilot the two are close: Ro holds 3.9 across 6,690 reviews and Embody 3.8 across 8,398. Choose Embody if you are paying cash and want the lowest, most predictable monthly number; choose Ro if your insurance covers a brand-name GLP-1 and you want the branded pen through a big-name platform.",
   verdictWinnerPoints: [
-    "Large, established telehealth brand with an integrated in-house pharmacy",
-    "Licensed providers review every plan; access to FDA-approved Wegovy & Zepbound with insurance",
-    "4.0 across 6,428 Trustpilot reviews - responsive, well-reviewed support",
+    "Flat $69/mo semaglutide, $119/mo tirzepatide - doctor review, supplies and shipping included",
+    "Free 1-2 day tracked, insured shipping; LegitScript-certified, US-based 503A pharmacies",
+    "Full refund if not approved, cancel anytime - $828 for a year of semaglutide",
   ],
   verdictLoserPoints: [
-    "Cheaper cash-pay: flat $69/mo semaglutide, $119/mo tirzepatide",
-    "Free 1-2 day tracked, insured shipping",
-    "LegitScript-certified, US-based 503A pharmacies",
+    "Large, established telehealth brand with an integrated in-house pharmacy",
+    "Licensed providers review every plan; FDA-approved Wegovy & Zepbound when insurance covers them",
+    "3.9 across 6,690 Trustpilot reviews",
   ],
-  winnerId: "ro",
+  winnerId: "embody",
   categories: [
     {
       name: "Pricing & Value",

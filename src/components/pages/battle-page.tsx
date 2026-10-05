@@ -202,9 +202,9 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // the difference NEUTRALLY - "embody vs ro" is comparison-research intent,
     // so the snippet states the real structural difference and lets the reader
     // decide (matches exploretreatments #2, which leads with a neutral factual
-    // differentiator, not a winner). Also honest: our ranking scores ro (9.5)
-    // ABOVE embody (9.1), so a one-sided "embody wins" frame would be both
-    // off-intent AND in tension with our own ranking.
+    // differentiator, not a winner). Oct 5, 2026: the ranking now places embody
+    // (9.8) above ro (9.6) and the battle verdict names embody the winner; the
+    // neutral snippet is kept because it matches the comparison-research intent.
     title: "Embody vs Ro (2026): $69 Flat or the Big Brand?",
     description:
       "embody: flat $69/mo all-in compounded semaglutide. ro: $39-then-$74-149/mo membership plus brand-name Wegovy/Zepbound. Compare price, plans, speed and who each fits.",
