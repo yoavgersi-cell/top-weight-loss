@@ -266,7 +266,7 @@ const EXPLORE: Record<string, { useCase: string; reason: string }> = {
   },
   wellmedr: {
     useCase: "Lowest verified semaglutide price, on a 12-month term",
-    reason: "$49 a month semaglutide, the same at every dose, requires the 12-month plan billed monthly. A weight-care coach on every plan and 4.6 across 1,919 Trustpilot reviews.",
+    reason: "$49 a month semaglutide, the same at every dose, requires the 12-month plan billed monthly. A weight-care coach on every plan and 4.6 across 2,091 Trustpilot reviews.",
   },
 };
 
