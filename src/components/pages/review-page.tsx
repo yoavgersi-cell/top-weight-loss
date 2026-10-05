@@ -38,13 +38,17 @@ import { catalogPriceSnippet } from "@/lib/product-catalog";
 // removed cleanly.
 const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
   embody: {
-    // Aligned to the page's real GSC query mix (Sept 2026): "embody weight
-    // loss reviews" (62 impr) and "embody tirzepatide reviews" (40) dominate;
-    // "glp1" phrasing barely registers (1). Lead the title with the searched
-    // language so the snippet reinforces the query at position ~7.
-    title: "embody Weight Loss Reviews 2026: Cost, Real Results & Is It Worth It?",
+    // Oct 2026, Bing 30-day export: "embody reviews" 411 impressions at
+    // position ~6 with ZERO clicks, and the page's CTR is 0.43% on 1.6K
+    // impressions - the worst of the three top review pages. Bing weights the
+    // exact phrase, so the title now opens with "embody Reviews" (the wellmedr
+    // and altRx titles that open with "<brand> Reviews" earn 1.1% and 0.8%).
+    // "Weight Loss" stays in the title for Google, where "embody weight loss
+    // reviews" is the page's main query, and "Legit" covers the legit/scam
+    // long-tails that convert at 50-100% on Bing.
+    title: "embody Reviews 2026: Weight Loss Cost, Real Results & Is It Legit?",
     description:
-      "embody weight loss reviews: {prices}, 1-2 day shipping, LegitScript-certified. Real results, and is embody worth it?",
+      "embody reviews: {prices}, 1-2 day shipping, LegitScript-certified 503A pharmacies, refund if not approved. Real customer results, and is embody legit?",
   },
   medvi: {
     // Decoupled from the "is medvi legit" query (Sep 2026): that phrase lived in
@@ -61,7 +65,7 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "Sprout reviews: {prices}, brand-name Wegovy available. Is Sprout legit? Pricing, pros & cons.",
   },
   altrx: {
-    title: "altRx Reviews 2026: Is It Legit? GLP-1 Cost, Results & Verdict",
+    title: "altRx Reviews 2026: Is It Legit? Cost, Complaints & Verdict",
     description:
       "altRx reviews: {prices}, plus brand-name Zepbound & Wegovy and Buy Now, Pay Later. Is altRx legit? Pros & cons.",
   },

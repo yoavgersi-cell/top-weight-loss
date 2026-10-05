@@ -26,6 +26,20 @@ import { notFound, permanentRedirect } from "next/navigation";
 // on the weight-loss vertical. Prices cited are the providers' real listed
 // prices - keep in sync when pricing changes.
 const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+  // Oct 2026, Bing 30-day export: the "legit or scam" phrasings convert at
+  // 50-100% ("is embody legit or scam" 2/2, "embody weight loss scam" 2/1,
+  // "is wellmedr a scam" 2/2, "wellmedr scam" 1/1), so the titles name the
+  // question the searcher is actually typing. The pages answer it directly.
+  "is-embody-legit": {
+    title: "Is embody Legit or a Scam? Pharmacy, Pricing & Reviews (2026)",
+    description:
+      "Is embody legit or a scam? LegitScript-certified 503A pharmacies, licensed-provider prescribing, $69 semaglutide and $119 tirzepatide, refund if not approved, and what customers report.",
+  },
+  "is-wellmedr-legit": {
+    title: "Is wellmedr Legit or a Scam? Reviews, Complaints & Real Prices (2026)",
+    description:
+      "Is wellmedr legit or a scam? A verified 4.6 on Trustpilot across 2,091 reviews, what the complaints actually say, the real $49-$89 pricing structure, and our verdict.",
+  },
   "is-altrx-legit": {
     // Keeps the keyword-rich SERP snippet (prices, flat-dose) even though the
     // visible on-page dek was shortened to a clean editorial line.
