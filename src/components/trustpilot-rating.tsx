@@ -25,7 +25,7 @@ function TrustpilotStar({ className }: { className?: string }) {
 }
 
 // Official Trustpilot star mark (green star with dark-green notch) + wordmark
-function TrustpilotWordmark({ starClass = "h-[13px] w-[13px]", textClass = "text-[12px]" }: { starClass?: string; textClass?: string }) {
+export function TrustpilotWordmark({ starClass = "h-[13px] w-[13px]", textClass = "text-[12px]" }: { starClass?: string; textClass?: string }) {
   return (
     <span className="inline-flex items-center gap-1" aria-label="Trustpilot">
       <svg viewBox="0 0 1133 1080" className={starClass} aria-hidden="true">

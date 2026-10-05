@@ -22,6 +22,7 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "Reviews", href: "/weight-loss/reviews" },
       { label: "Guides", href: "/weight-loss/articles" },
       { label: "Cheapest GLP-1", href: "/weight-loss/cheapest-glp1" },
+      { label: "Provider Support Compared", href: "/weight-loss/glp1-provider-support" },
       // The three ranking landing pages were in the sitemap with zero
       // internal links (orphans in the Sept 2026 audit) - surfaced here so
       // every crawled page links to them.
