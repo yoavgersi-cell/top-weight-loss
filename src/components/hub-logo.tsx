@@ -14,9 +14,11 @@ import { VERTICALS } from "@/lib/config";
 // logo with a text "| <Vertical>" suffix so every vertical still shows its
 // name in the navbar (matching the designed lockups' layout).
 export function HubLogo({ vertical }: { vertical: string }) {
+  // WebP lockups (800px wide, ~10KB) are tried first; the original PNGs
+  // (~250KB each, 1,900px wide) stay as fallbacks and for the schema logo.
   const candidates = vertical
-    ? [`/treatmentshub-${vertical}.png`, `/treatmentshub.png`]
-    : [`/treatmentshub.png`];
+    ? [`/treatmentshub-${vertical}.webp`, `/treatmentshub-${vertical}.png`, `/treatmentshub.webp`, `/treatmentshub.png`]
+    : [`/treatmentshub.webp`, `/treatmentshub.png`];
 
   // Track which candidate failed, scoped to the active vertical so the cascade
   // resets on client navigation without a set-state-in-effect.
@@ -70,6 +72,8 @@ export function HubLogo({ vertical }: { vertical: string }) {
         ref={imgRef}
         src={candidates[idx]}
         alt="Treatments Hub"
+        fetchPriority="high"
+        decoding="async"
         className="h-[22px] w-auto max-w-[290px] object-contain object-left sm:h-[30px] sm:max-w-none"
         onError={() => setFailed({ v: vertical, idx: idx + 1 })}
       />
