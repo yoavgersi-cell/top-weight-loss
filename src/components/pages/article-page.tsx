@@ -363,9 +363,14 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
         url: `${ctx.origin}/logo-mark.png`,
       },
     },
+    // Medical content (Science / Guide / Wellness) is typed as a MedicalWebPage
+    // so the reviewedBy / lastReviewed signal sits on the page entity Google
+    // expects it on; provider-business articles (Advice: legit, cost,
+    // alternatives) stay plain WebPage.
     mainEntityOfPage: {
-      "@type": "WebPage",
+      "@type": ["Science", "Guide", "Wellness"].includes(article.category) ? "MedicalWebPage" : "WebPage",
       "@id": canonicalUrl(ctx, `/articles/${slug}`),
+      ...pageReviewSchema(`/${ctx.vertical}/articles/${slug}`),
     },
     keywords: [
       "weight loss",

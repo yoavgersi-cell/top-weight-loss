@@ -1369,7 +1369,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Noom Med: GLP-1 Medication Access",
-        body: 'Noom Med connects patients with licensed providers who can prescribe GLP-1 medications. The program includes medical evaluation, ongoing provider support, and medication delivery. Noom Med focuses primarily on semaglutide-based treatments. See how it compares in our <a href="/weight-loss/noom-vs-ro">Noom vs Ro</a> and <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Found</a> comparisons.',
+        body: 'Noom Med connects patients with licensed providers who can prescribe GLP-1 medications. The program includes medical evaluation, ongoing provider support, and medication delivery. Noom Med focuses primarily on semaglutide-based treatments. See how it compares in our <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Ro</a> and <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Found</a> comparisons.',
       },
       {
         heading: "How Much Does a Noom Subscription Cost?",
@@ -1381,7 +1381,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Noom Med vs Noom Coaching: What's the Difference?",
-        body: 'Noom offers two distinct programs. The original Noom coaching program focuses on behavioral change through daily lessons, food logging, and personal coaching - no medication involved. Noom Med is the newer medical program that adds GLP-1 medication access with physician oversight. You can use one or both. Most people interested in weight loss medication specifically should look at Noom Med. See how it compares in our <a href="/weight-loss/noom-vs-ro">Noom vs Ro</a> comparison.',
+        body: 'Noom offers two distinct programs. The original Noom coaching program focuses on behavioral change through daily lessons, food logging, and personal coaching - no medication involved. Noom Med is the newer medical program that adds GLP-1 medication access with physician oversight. You can use one or both. Most people interested in weight loss medication specifically should look at Noom Med. See how it compares in our <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Ro</a> comparison.',
       },
       {
         heading: "Who Should NOT Choose Noom?",
@@ -1389,7 +1389,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Noom vs Other Providers",
-        body: 'We\'ve compared Noom head-to-head with several providers: <a href="/weight-loss/noom-vs-ro">Noom vs Ro</a> (coaching vs streamlined), <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Found</a> (two comprehensive programs), and <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Shed</a> (coaching vs personalized treatment). Each comparison highlights different trade-offs based on what matters most to you.',
+        body: 'We\'ve compared Noom head-to-head with several providers: <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Ro</a> (coaching vs streamlined), <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Found</a> (two comprehensive programs), and <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Shed</a> (coaching vs personalized treatment). Each comparison highlights different trade-offs based on what matters most to you.',
       },
       {
         heading: "Final Thoughts",
@@ -1727,7 +1727,7 @@ export const articles: Article[] = [
       },
       {
         heading: "How Does Noom Compare to Other Providers?",
-        body: 'We\'ve compared Noom head-to-head with several alternatives: <a href="/weight-loss/noom-vs-ro">Noom vs Ro</a> (coaching vs streamlined telehealth), <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Found</a> (two comprehensive programs), and <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Shed</a> (coaching vs personalized treatment). For a broader comparison, see our <a href="/">ranking of the best telehealth weight loss providers</a> or <a href="/">compare all providers</a> side by side.',
+        body: 'We\'ve compared Noom head-to-head with several alternatives: <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Ro</a> (coaching vs streamlined telehealth), <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Found</a> (two comprehensive programs), and <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Shed</a> (coaching vs personalized treatment). For a broader comparison, see our <a href="/">ranking of the best telehealth weight loss providers</a> or <a href="/">compare all providers</a> side by side.',
       },
       {
         heading: "Can You Get Noom Cheaper?",
