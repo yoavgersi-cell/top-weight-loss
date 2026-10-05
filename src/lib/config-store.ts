@@ -6103,6 +6103,11 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
             // save time. For cluster slugs the code version always wins so
             // content rewrites actually ship; other articles stay CMS-owned.
             const codeAuthoritative = new Map(brandClusterArticles.map((a) => [a.slug, a]));
+            // Buyer guides whose body is rendered partly from code (price table,
+            // CTAs) and whose figures track the verified price index: the seed
+            // wins wholesale so a stale CMS snapshot can never show one price in
+            // the code-rendered quick answer and another in the body.
+            const codeAuthoritativeGuides = new Set(["best-tirzepatide-online"]);
             // Code-side hero images are authoritative: a CMS Save snapshots the
             // config without the image/imageAlt fields, so overlay them from code
             // onto every saved article so images added in code always surface
@@ -6113,6 +6118,7 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
               if (cluster) return cluster;
               const code = codeBySlug.get(a.slug);
               if (!code) return a;
+              if (codeAuthoritativeGuides.has(a.slug)) return code;
               return {
                 ...a,
                 ...((code.image || code.imageAlt) && { image: code.image, imageAlt: code.imageAlt }),

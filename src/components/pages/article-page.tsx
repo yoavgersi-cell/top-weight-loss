@@ -11,8 +11,12 @@ import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 import { MedicalSources } from "@/components/medical-sources";
 import { ProductCarousel } from "@/components/product-carousel";
-import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
+import { TrustpilotCarousel, MixedTrustpilotCarousel, type MixedReviewItem } from "@/components/trustpilot-carousel";
 import { TopProvidersBlock, TopTwoPicks } from "@/components/top-providers-block";
+import { TirzepatidePriceTable } from "@/components/tirzepatide-price-table";
+import { ProviderCta } from "@/components/provider-cta";
+import { PRICE_INDEX } from "@/lib/price-index";
+import type { TrustpilotReview } from "@/lib/config";
 import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/reddit-community";
 import { notFound, permanentRedirect } from "next/navigation";
 
@@ -230,6 +234,46 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   const TOP_PROVIDERS_CRO_SLUGS = new Set(["best-tirzepatide-online"]);
   const isWeightLoss = ctx.vertical === "weight-loss";
   const showTopProvidersCro = isWeightLoss && TOP_PROVIDERS_CRO_SLUGS.has(slug);
+
+  // The tirzepatide buyer guide is tuned as a topic page (Oct 2026 CRO pass):
+  // the top-3 block shows only providers with a verified tirzepatide price and
+  // prints that price on the card; the price table is code-rendered with CTAs;
+  // the product carousel is tirzepatide-only; the cross-provider Trustpilot
+  // carousel shows every stored review that mentions the molecule; and the
+  // generic mid-page blocks (duplicate provider list, stock-photo callout) are
+  // dropped so the page stays on topic.
+  const isTirzGuide = isWeightLoss && slug === "best-tirzepatide-online";
+  const tirzNote = (id: string): string | undefined => {
+    const cell = PRICE_INDEX.find((r) => r.providerId === id)?.tirzepatide;
+    if (!cell) return undefined;
+    const reg = cell.note.match(/reg\.\s*(\$[\d,]+)/i);
+    return `Tirzepatide ${cell.price}/mo${reg ? ` (reg. ${reg[1]})` : ""}`;
+  };
+  const TIRZ_TOP_IDS = ["embody", "altrx", "wellmedr"];
+  const tirzPriceNotes = Object.fromEntries(
+    TIRZ_TOP_IDS.map((id) => [id, tirzNote(id)]).filter((e): e is [string, string] => typeof e[1] === "string"),
+  );
+  const reviewTime = (r: TrustpilotReview): number => {
+    if (!r.date) return 0;
+    const t = new Date(r.date).getTime();
+    return isNaN(t) ? 0 : t;
+  };
+  // Every stored Trustpilot review, across providers, that mentions the
+  // molecule or its brand names - a fixed rule, no cherry-picking - newest first.
+  const tirzReviews: MixedReviewItem[] = isTirzGuide
+    ? config.providers
+        .flatMap((p) =>
+          (p.trustpilotReviews ?? [])
+            .filter((r) => /tirzepatide|zepbound|mounjaro/i.test(`${r.title} ${r.text}`))
+            .map((review) => ({
+              review,
+              provider: { name: p.name, href: hubLink(ctx, `/reviews/${p.id}`), total: p.trustpilotReviews!.length },
+            })),
+        )
+        .sort((a, b) => reviewTime(b.review) - reviewTime(a.review))
+    : [];
+  const tirzEmbody = isTirzGuide ? config.providers.find((p) => p.id === "embody") : undefined;
+  const tirzWellmedr = isTirzGuide ? config.providers.find((p) => p.id === "wellmedr") : undefined;
   // Every provider-"alternatives" guide (altrx-alternatives, best-ozempic-
   // alternatives, etc.) gets a CRO block featuring our three GLP-1 partners
   // (embody, altRx, trimrx) with the same comparison-page cards.
@@ -515,9 +559,70 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     config={config}
                     linkPrefix={ctx.prefix}
                     limit={3}
+                    providerIds={TIRZ_TOP_IDS}
+                    priceNotes={tirzPriceNotes}
                     title="Our top 3 tirzepatide providers"
-                    subtitle="Ranked by price, plans and verified reviews - the same cards from our full comparison."
+                    subtitle="Our highest-ranked providers with a verified compounded tirzepatide price - the same cards as our full comparison, with the tirzepatide rate shown under each starting price."
                   />
+                )}
+
+                {/* Tirzepatide guide: code-rendered price table (CTAs, review
+                    links, Trustpilot per row) right under the "cheapest" section,
+                    then the cross-provider carousel of tirzepatide reviews. */}
+                {isTirzGuide && i === 1 && (
+                  <>
+                    <TirzepatidePriceTable providers={config.providers} linkPrefix={ctx.prefix} />
+                    {tirzReviews.length > 0 && (
+                      <div className="my-10">
+                        <MixedTrustpilotCarousel
+                          items={tirzReviews}
+                          title="What tirzepatide customers say on Trustpilot"
+                          subtitle="Every review we have captured that mentions tirzepatide, Zepbound or Mounjaro, across providers - newest first, reviewer names shortened."
+                        />
+                      </div>
+                    )}
+                  </>
+                )}
+
+                {/* Tirzepatide guide: the verdict gets a CTA - the no-commitment
+                    pick and the 12-month floor, both at their verified rates. */}
+                {isTirzGuide && i === article.sections.length - 1 && tirzEmbody && (
+                  <div className="my-8 rounded-xl border border-[#0C4B75]/15 bg-[#F4F8FB] p-5 sm:flex sm:items-center sm:justify-between sm:gap-6 sm:p-6">
+                    <div>
+                      <p className="text-[15px] font-bold text-[#191919]">Cheapest with no commitment: {tirzEmbody.name}</p>
+                      <p className="mt-1 text-[13.5px] leading-relaxed text-gray-600">
+                        {tirzNote("embody")?.replace("Tirzepatide ", "Compounded tirzepatide ")}, month to month, ships in 1-2 days, full refund if you are not approved.
+                        {tirzWellmedr && tirzNote("wellmedr") && (
+                          <>
+                            {" "}Willing to commit a year?{" "}
+                            <ProviderCta
+                              href={tirzWellmedr.affiliateUrl}
+                              providerName={tirzWellmedr.name}
+                              providerSlug={tirzWellmedr.id}
+                              position={2}
+                              pageType="listing"
+                              sourceFlow="main_comparison"
+                              className="font-semibold text-[#0C4B75] hover:underline"
+                            >
+                              {tirzWellmedr.name} at {PRICE_INDEX.find((r) => r.providerId === "wellmedr")?.tirzepatide?.price}/mo →
+                            </ProviderCta>
+                          </>
+                        )}
+                      </p>
+                    </div>
+                    <ProviderCta
+                      href={tirzEmbody.affiliateUrl}
+                      providerName={tirzEmbody.name}
+                      providerSlug={tirzEmbody.id}
+                      position={1}
+                      pageType="listing"
+                      sourceFlow="main_comparison"
+                      className="mt-4 inline-flex h-[46px] w-full shrink-0 items-center justify-center gap-1.5 rounded-xl bg-[#0C4B75] px-6 text-[14.5px] font-bold text-white transition-colors hover:bg-[#093d61] sm:mt-0 sm:w-auto"
+                    >
+                      Check availability at {tirzEmbody.name}
+                      <ArrowUpRight className="h-4 w-4" strokeWidth={2.5} />
+                    </ProviderCta>
+                  </div>
                 )}
 
                 {i === 0 && showTopTwo && <TopTwoPicks config={config} linkPrefix={ctx.prefix} />}
@@ -569,15 +674,20 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                         onlyProviderIds={
                           restrictCarouselToSubject && subjectProvider ? [subjectProvider.id] : undefined
                         }
+                        onlyMedication={isTirzGuide ? "tirzepatide" : undefined}
                         title={
                           restrictCarouselToSubject && subjectProvider
                             ? `Shop ${subjectProvider.name}'s GLP-1 plans`
-                            : "Shop GLP-1 plans by product"
+                            : isTirzGuide
+                              ? "Shop tirzepatide plans by provider"
+                              : "Shop GLP-1 plans by product"
                         }
                         subtitle={
                           restrictCarouselToSubject && subjectProvider
                             ? `${subjectProvider.name}'s published plans - conditions shown under each price.`
-                            : "Every provider's published plans - cheapest first, conditions under each price."
+                            : isTirzGuide
+                              ? "Every provider's published tirzepatide plan - cheapest first, conditions under each price."
+                              : "Every provider's published plans - cheapest first, conditions under each price."
                         }
                         withSchema
                         pageUrl={canonicalUrl(ctx, `/articles/${slug}`)}
@@ -588,7 +698,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 {/* Editorial callout after 4th section - GLP-1 copy, so
                     weight-loss articles only (it was leaking onto every
                     vertical's articles before this gate). */}
-                {ctx.vertical === "weight-loss" && i === 3 && article.sections.length > 4 && (
+                {ctx.vertical === "weight-loss" && !isTirzGuide && i === 3 && article.sections.length > 4 && (
                   <div className="my-10 overflow-hidden rounded-xl bg-transparent">
                     <div className="flex flex-col sm:flex-row">
                       <div className="flex-1 py-6 pr-6 sm:py-8 sm:pr-8">
@@ -622,7 +732,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     "is X legit" articles: a trust-check page advertising the
                     reviewed provider's competitors undermines the article's
                     credibility and cannibalizes its own conversion. */}
-                {i === 1 && !/^is-.+-legit$/.test(slug) && topProviders.length > 0 && (
+                {i === 1 && !isTirzGuide && !/^is-.+-legit$/.test(slug) && topProviders.length > 0 && (
                   <div className="my-8 rounded-lg border border-gray-200 bg-white px-5 py-4">
                     <p className="mb-3 text-[13px] font-bold uppercase tracking-wider text-gray-400">Top-Rated Providers</p>
                     <div className="space-y-2.5">
@@ -641,9 +751,6 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                         </a>
                       ))}
                     </div>
-                    <Link href={hubLink(ctx, "/find-your-match")} className="mt-3 block text-center text-[13px] font-semibold text-[#0C4B75] hover:underline">
-                      Not sure? Take our free matching quiz →
-                    </Link>
                   </div>
                 )}
               </div>
@@ -653,24 +760,19 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
           {/* CTA box */}
           <div className="mt-12 rounded-xl border border-gray-200 bg-white p-6 text-center sm:p-8">
             <p className="text-[18px] font-bold text-[#191919]">
-              Ready to compare weight loss providers?
+              {isTirzGuide ? "Compare tirzepatide providers side by side" : "Ready to compare weight loss providers?"}
             </p>
             <p className="mt-1 text-[14px] text-gray-500">
-              See how top providers stack up on pricing, medical support, and
-              treatment options.
+              {isTirzGuide
+                ? "Every provider with a verified compounded tirzepatide price, ranked - pricing, plans, shipping and reviews."
+                : "See how top providers stack up on pricing, medical support, and treatment options."}
             </p>
             <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:justify-center">
               <Link
-                href={hubLink(ctx, "/")}
+                href={hubLink(ctx, isTirzGuide ? "/tirzepatide" : "/")}
                 className="inline-flex h-[44px] items-center justify-center rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]"
               >
-                Compare Providers
-              </Link>
-              <Link
-                href={hubLink(ctx, "/find-your-match")}
-                className="inline-flex h-[44px] items-center justify-center rounded-lg border border-gray-200 bg-white px-6 text-[14px] font-semibold text-[#191919] transition-colors hover:bg-gray-50"
-              >
-                Take the Quiz
+                {isTirzGuide ? "Compare tirzepatide providers" : "Compare Providers"}
               </Link>
             </div>
           </div>
