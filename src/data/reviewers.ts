@@ -44,6 +44,8 @@ export interface Reviewer {
   slug: string;
   /** Plain name, no suffixes. */
   name: string;
+  /** Full legal/profile name when it differs from `name` (schema alternateName). */
+  fullName?: string;
   /** Post-nominal letters, in display order. */
   credentials: string[];
   /** Role as shown in bylines and schema jobTitle. */
@@ -75,14 +77,15 @@ export const REVIEWERS: Reviewer[] = [
   {
     slug: "francheska-capistrano",
     name: "Francheska Capistrano",
+    fullName: "Francheska Lynn Capistrano",
     credentials: ["RMT", "MPH"],
     jobTitle: "Medical Content Reviewer",
     headline: "Licensed Medical Laboratory Scientist (Registered Medical Technologist) and Master of Public Health graduate",
     shortBio:
       "Francheska Capistrano is a licensed Medical Laboratory Scientist with a Master of Public Health degree. She has coordinated international clinical trials, with a focus on protocol compliance, clinical documentation and data review, and writes and reviews evidence-based health content for patient and physician audiences.",
     longBio: [
-      "Francheska Capistrano is a licensed Medical Laboratory Scientist (Registered Medical Technologist) with a Master of Public Health degree. She has experience coordinating international clinical trials, with a focus on protocol compliance, clinical documentation, and data review.",
-      "Her medical writing experience includes evidence-based health articles, patient education materials, research summaries, and clinical research content. As a medical content reviewer, she combines scientific accuracy, critical appraisal, and clear communication to ensure content is credible and easy to understand.",
+      "Francheska Capistrano is a licensed Medical Laboratory Scientist (Registered Medical Technologist) with a Master of Public Health degree. She has experience coordinating international clinical trials, with a focus on protocol compliance, study documentation, protocol-related workflows and clinical research systems, and she is building experience in eSource implementation: translating trial protocols, schedules of events, assessments and documentation requirements into accurate, compliant electronic workflows.",
+      "As a content curator for health, medical and wellness businesses, she translates evidence-based knowledge into accessible formats for wider audiences, with a particular interest in sleep science, sleep health and sleep hygiene. Her writing includes evidence-based health articles, patient education materials, research summaries and clinical research content. As a medical content reviewer, she combines scientific accuracy, critical appraisal and clear communication to ensure content is credible and easy to understand.",
       "At Treatments Hub she reviews the medical and scientific statements in our guides, reviews and comparisons: how GLP-1 and other treatments work, what the cited trials and regulators actually say, and whether the terminology and claims match the evidence. She does not choose providers, set prices or rankings, or take part in commercial partnerships.",
     ],
     image: {
@@ -118,6 +121,8 @@ export const REVIEWERS: Reviewer[] = [
         area: "Clinical research",
         items: [
           "Supporting international clinical trials: protocol compliance monitoring, clinical documentation review, source data verification and data quality checks",
+          "Clinical trial coordination, study documentation and protocol-related workflows in clinical research systems",
+          "eSource implementation: translating protocols, schedules of events and assessments into compliant electronic workflows",
           "Regulatory and ethics documentation support; clinical data review and reconciliation",
           "Good Clinical Practice (GCP)-aligned research processes",
         ],
@@ -126,6 +131,7 @@ export const REVIEWERS: Reviewer[] = [
         area: "Medical writing and content review",
         items: [
           "Evidence-based health articles, patient education materials and clinical research summaries",
+          "Content curation for health, medical and wellness businesses: translating evidence into accessible formats",
           "Medical blogs, healthcare content and SEO/AEO medical content",
           "Physician- and patient-facing educational materials",
         ],
@@ -152,6 +158,7 @@ export const REVIEWERS: Reviewer[] = [
       "Epidemiology and biostatistics",
       "Evidence appraisal and medical fact-checking",
       "Patient education and health communication",
+      "Sleep science and sleep health",
     ],
     selectedWork: [
       { title: "The gap your recruitment forecast can't see", outlet: "83bar", url: "https://www.83bar.com/the-gap-your-recruitment-forecast-cant-see/" },
@@ -534,6 +541,7 @@ export function reviewerPersonSchema(r: Reviewer) {
       })),
     ],
   };
+  if (r.fullName && r.fullName !== r.name) schema.alternateName = r.fullName;
   if (r.sameAs.length) schema.sameAs = r.sameAs;
   return schema;
 }
