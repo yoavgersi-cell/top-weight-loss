@@ -14,6 +14,7 @@ import { ProductCarousel } from "@/components/product-carousel";
 import { TrustpilotCarousel, MixedTrustpilotCarousel, type MixedReviewItem } from "@/components/trustpilot-carousel";
 import { TopProvidersBlock, TopTwoPicks } from "@/components/top-providers-block";
 import { TirzepatidePriceTable } from "@/components/tirzepatide-price-table";
+import { LEGIT_PAGES, LegitChecklist, LegitVerdictCta, PricingCapture } from "@/components/legit-page-blocks";
 import { ProviderCta } from "@/components/provider-cta";
 import { PRICE_INDEX } from "@/lib/price-index";
 import type { TrustpilotReview } from "@/lib/config";
@@ -89,7 +90,7 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
 // blob. Every figure is a real, listed price - no invented numbers.
 const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
   "is-wellmedr-legit":
-    "Yes - by every marker we can verify: licensed-provider review before prescribing, a regulated US pharmacy, a weight-loss warranty, and a verified 4.6 on Trustpilot across 1,919 reviews (the highest among providers we track). The honest caveats: the headline $49/$99 rates lock on a 12-month plan, and results vary by person regardless of service quality.",
+    "Yes - by every marker we can verify: licensed-provider review before prescribing, a regulated US pharmacy, a weight-loss warranty, and a verified 4.6 on Trustpilot across 1,919 reviews (tied for the highest among providers we track). The honest caveats: the headline $49/$89 rates lock on a 12-month plan, the complaints that exist are about shipping delays and support response time, and results vary by person regardless of service quality.",
   "best-tirzepatide-online":
     "Verified compounded tirzepatide prices run $89-$299/month: wellmedr $89 (12-month plan) is the floor, embody $119 the cheapest with no commitment, and Medvi $166 all-inclusive with one of the two largest review bases. Brand-name Zepbound: $1,249/month cash at altRx, or ro's KwikPen from $299 first month plus membership - where insurance applies, ro can be far cheaper. Every legitimate source requires a prescription.",
   "ozempic-face":
@@ -274,6 +275,13 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     : [];
   const tirzEmbody = isTirzGuide ? config.providers.find((p) => p.id === "embody") : undefined;
   const tirzWellmedr = isTirzGuide ? config.providers.find((p) => p.id === "wellmedr") : undefined;
+
+  // "is <brand> legit" pages with operator-verified trust blocks (see
+  // LEGIT_PAGES): checklist under the quick answer, dated pricing capture
+  // after the cost section, verdict CTA after the last section.
+  const legitData = isWeightLoss ? LEGIT_PAGES[slug] : undefined;
+  const legitProvider = legitData ? config.providers.find((p) => p.id === legitData.providerId) : undefined;
+  const legitCaptureAfter = legitData ? article.sections.findIndex((s) => /^how much does/i.test(s.heading)) : -1;
   // Every provider-"alternatives" guide (altrx-alternatives, best-ozempic-
   // alternatives, etc.) gets a CRO block featuring our three GLP-1 partners
   // (embody, altRx, trimrx) with the same comparison-page cards.
@@ -501,6 +509,9 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               </div>
             </div>
           )}
+          {legitData && legitProvider && (
+            <LegitChecklist data={legitData} provider={legitProvider} linkPrefix={ctx.prefix} />
+          )}
           {/* Key takeaways - 3-4 verified bullets, scannable and quotable
               (featured snippets / AI overviews lift lists like this whole). */}
           {article.keyTakeaways && article.keyTakeaways.length > 0 && (
@@ -582,6 +593,13 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                       </div>
                     )}
                   </>
+                )}
+
+                {legitData && legitProvider && i === legitCaptureAfter && (
+                  <PricingCapture data={legitData} provider={legitProvider} />
+                )}
+                {legitData && legitProvider && i === article.sections.length - 1 && (
+                  <LegitVerdictCta data={legitData} provider={legitProvider} linkPrefix={ctx.prefix} />
                 )}
 
                 {/* Tirzepatide guide: the verdict gets a CTA - the no-commitment

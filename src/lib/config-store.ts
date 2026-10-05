@@ -6105,7 +6105,7 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
             // CTAs) and whose figures track the verified price index: the seed
             // wins wholesale so a stale CMS snapshot can never show one price in
             // the code-rendered quick answer and another in the body.
-            const codeAuthoritativeGuides = new Set(["best-tirzepatide-online"]);
+            const codeAuthoritativeGuides = new Set(["best-tirzepatide-online", "is-wellmedr-legit"]);
             // Code-side hero images are authoritative: a CMS Save snapshots the
             // config without the image/imageAlt fields, so overlay them from code
             // onto every saved article so images added in code always surface
