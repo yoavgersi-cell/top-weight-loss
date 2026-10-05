@@ -86,6 +86,9 @@ const PATH_REDIRECTS: Record<string, string> = {
   "/embody-vs-noom": "/reviews/embody",
   "/noom-vs-embody": "/reviews/embody",
   "/embody-vs-found": "/reviews/embody",
+  // Still listed by Bing (Oct 2026 Search Performance export) and 404ing;
+  // the embody review is the live page for it.
+  "/articles/embody-weight-loss-review": "/reviews/embody",
   // Became a standalone landing page (dropped the /articles segment).
   "/articles/glp1-pills-vs-injections": "/glp1-pills-vs-injections",
   // Renamed article - direct live successor.
