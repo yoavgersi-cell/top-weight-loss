@@ -2064,7 +2064,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Can I get brand-name Zepbound online?",
-        body: 'Two verified routes. <strong>altRx</strong> lists brand-name Zepbound at a flat $1,249/month cash alongside its compounded plans, with Buy Now, Pay Later available - one number, no membership. <strong>ro</strong> sells the Zepbound KwikPen from $299 for the first month (then $399-449/month) plus its Body membership ($39 the first month, then $74-$149/month) - and because ro bills medication separately, <strong>insurance can apply where your plan covers it</strong>, which can make ro\'s route dramatically cheaper than any cash price on this page. If your plan might cover tirzepatide, check that first - our <a href="/weight-loss/articles/glp1-with-insurance">GLP-1 with insurance guide</a> walks through exactly how.',
+        body: 'Two verified routes. <strong>altRx</strong> lists brand-name Zepbound at a flat $1,249/month cash alongside its compounded plans, with Buy Now, Pay Later available - one number, no membership. <strong>ro</strong> sells the Zepbound KwikPen from $299 for the first month (then $399-449/month) plus its Body membership ($39 the first month, then $74-$149/month) - and because ro bills medication separately, <strong>insurance can apply where your plan covers it</strong>, which can make ro\'s route dramatically cheaper than any cash price on this page. If your plan might cover tirzepatide, check that first - our <a href="/weight-loss/articles/glp1-with-insurance">GLP-1 with insurance guide</a> walks through exactly how. Every brand-name route with what it includes: <a href="/weight-loss/articles/zepbound-price-online">Zepbound price online</a>.',
       },
       {
         heading: "Is compounded tirzepatide legit?",
@@ -2081,6 +2081,50 @@ export const articles: Article[] = [
       {
         heading: "The verdict",
         body: 'The best tirzepatide online in 2026 is not one provider - it is the short list above, filtered by your commitment appetite and budget. The verified floor is <strong>$89/month (<a href="/weight-loss/reviews/wellmedr">wellmedr</a>, 12-month plan)</strong>, the no-strings floor is <strong>$119 (<a href="/weight-loss/reviews/embody">embody</a>)</strong>, and brand-name Zepbound runs <strong>$1,249 cash (<a href="/weight-loss/reviews/altrx">altRx</a>)</strong> or potentially much less through <strong><a href="/weight-loss/reviews/ro">ro</a> with insurance</strong>. Whatever you pick, stay inside the licensed system: real prescription, real pharmacy, published price. This article is general information, not medical advice - a licensed provider decides whether tirzepatide is appropriate for you.',
+      },
+    ],
+  },
+  {
+    slug: "zepbound-price-online",
+    title: "Zepbound Price Online (2026): Brand From $1,249, Compounded Tirzepatide From $89",
+    description:
+      "What Zepbound costs online at verified published prices: $1,249/month cash at altRx, $1,599 at wellmedr, Zepbound KwikPens from $299 the first month plus membership at Ro, and compounded tirzepatide from $89 - with what each route includes.",
+    category: "Guide",
+    readTime: "7 min read",
+    publishedAt: "2026-10-05",
+    updatedAt: "2026-10-05",
+    heroColor: "#EDF2F8",
+    author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "Brand-name Zepbound online, cash: $1,249/month at altRx (flat, Buy Now, Pay Later available) and $1,599/month at wellmedr - both the providers' own published prices, verified by us.",
+      "Ro sells Zepbound KwikPens from $299 for the first month, then $399-449/month, plus its Body membership ($39 the first month, then $74-$149/month). Because Ro bills the medication separately, insurance can apply where your plan covers Zepbound.",
+      "Compounded tirzepatide - the same active ingredient, prepared by a 503A pharmacy - runs a verified $89-$299/month across eight licensed providers. It is not an FDA-approved product, which is the trade-off behind the price.",
+      "Every route requires a prescription from a licensed provider. Zepbound is FDA-approved for chronic weight management; in the SURMOUNT-1 trial, tirzepatide produced up to 22.5% average body-weight loss.",
+    ],
+    sections: [
+      {
+        heading: "What does Zepbound cost online? Verified prices",
+        body: 'Three providers we track sell brand-name Zepbound online, and eight sell compounded tirzepatide. These are their own published prices at our last verification - brand-name rows from the <a href="/weight-loss/glp1-weight-loss-statistics">price index</a> (verified September 21, 2026), Ro\'s from its published pricing in August 2026:<table><thead><tr><th>Route</th><th>Provider</th><th>Monthly price</th><th>What it includes / the condition</th></tr></thead><tbody><tr><td>Brand Zepbound, cash</td><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td><strong>$1,249</strong></td><td>Flat price, no membership; licensed-provider review; Buy Now, Pay Later available</td></tr><tr><td>Brand Zepbound, cash</td><td><a href="/weight-loss/reviews/wellmedr">wellmedr</a></td><td><strong>$1,599</strong></td><td>Brand-name shelf alongside its $49/$89 compounded plans; also lists Ozempic at $1,399</td></tr><tr><td>Brand Zepbound, pen</td><td><a href="/weight-loss/reviews/ro">Ro</a></td><td><strong>from $299</strong> first month, then $399-449</td><td>Zepbound KwikPen billed separately from the Ro Body membership ($39 first month, then $74-$149/month); insurance can apply to the medication where covered</td></tr><tr><td>Compounded tirzepatide</td><td>wellmedr</td><td><strong>$89</strong></td><td>12-month plan, billed monthly; same price at every dose</td></tr><tr><td>Compounded tirzepatide</td><td><a href="/weight-loss/reviews/embody">embody</a></td><td><strong>$119</strong> (reg. $129)</td><td>Flat, month to month; 1-2 day shipping; refund if not approved</td></tr><tr><td>Compounded tirzepatide</td><td>DirectMeds · altRx · Medvi</td><td><strong>$147 · $149 · $166</strong></td><td>Flat (DirectMeds); flat at every dose, reg. $299 (altRx); promo, reg. $299, all-inclusive (Medvi)</td></tr><tr><td>Compounded tirzepatide</td><td>Sprout · trimrx · SHED</td><td><strong>$199 · $259 · $299</strong></td><td>Monthly; no long-term contract (trimrx); 20% off month one (SHED)</td></tr></tbody></table>Prices change - promotions end and plan terms move - so confirm at checkout. The compounded ladder in full, with conditions and Trustpilot records, is in our <a href="/weight-loss/articles/best-tirzepatide-online">best tirzepatide online</a> guide.',
+      },
+      {
+        heading: "Why is there such a gap between $1,249 and $89?",
+        body: 'Both contain tirzepatide. Zepbound is Eli Lilly\'s FDA-approved product: manufactured, inspected and labelled as a finished drug, which is what <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-new-medication-chronic-weight-management" target="_blank" rel="noopener">FDA approval for chronic weight management</a> means. Compounded tirzepatide is prepared by a <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">state-licensed 503A pharmacy</a> for an individual prescription; it is a legal, regulated channel, but the FDA does not review each pharmacy\'s output, so the pharmacy\'s standards are what you are trusting. The brand premium is the finished-product status, the manufacturer\'s quality system and the pen device - not a different molecule. That is why the compounded price sits at roughly a tenth of the brand price, and why the question to ask a compounded provider is which pharmacy fills the vial. Our <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name</a> guide covers the trade-offs in depth.',
+      },
+      {
+        heading: "Can insurance bring the Zepbound price down?",
+        body: 'Only through a route that bills the medication separately. altRx and wellmedr sell brand Zepbound as a cash price. Ro sells the Zepbound KwikPen as its own line item next to the membership, which is what lets a plan that covers Zepbound for weight management pay its share - and where it does, Ro\'s route can cost far less than any cash price on this page. Coverage for weight-loss use is plan-specific and usually gated by prior authorization (BMI thresholds, documented conditions), and many plans still exclude it. Check your formulary before choosing a route; our <a href="/weight-loss/articles/glp1-with-insurance">GLP-1 with insurance guide</a> walks through exactly how.',
+      },
+      {
+        heading: "Zepbound vs Wegovy prices online",
+        body: 'If you are comparing the two brand-name weight-loss injections, the published ladders run in parallel: altRx lists Wegovy at $1,579/month next to Zepbound at $1,249, Sprout lists Wegovy at $1,799, and Ro sells the Wegovy pill from $149 for the first month (then up to $299) plus membership. In trials, tirzepatide (Zepbound) produced up to 22.5% average body-weight loss versus roughly 15% for semaglutide (Wegovy), which is why Zepbound carries the higher demand. Head-to-head on efficacy, dosing and price: <a href="/weight-loss/articles/zepbound-vs-wegovy">Zepbound vs Wegovy</a>.',
+      },
+      {
+        heading: "Which Zepbound route is cheapest for you?",
+        body: 'Work down your situation. <strong>Insurance covers Zepbound for weight management:</strong> Ro, because the pen is billed separately and your plan can pay its share. <strong>Paying cash and you want the brand product:</strong> altRx at $1,249 flat, with Buy Now, Pay Later if you need to spread it. <strong>Paying cash and the molecule matters more than the label:</strong> compounded tirzepatide from $89 (wellmedr, 12-month plan) or $119 flat with no commitment (embody). <strong>Not sure you will stay on it:</strong> a month-to-month compounded plan is the cheapest way to find out before committing to a brand price. Whatever you pick, stay inside the licensed system - a licensed-provider review, a named pharmacy and a published price.',
+      },
+      {
+        heading: "The verdict",
+        body: 'The Zepbound price online in 2026 is <strong>$1,249/month cash at altRx</strong>, <strong>$1,599 at wellmedr</strong>, or <strong>from $299 the first month plus membership at Ro</strong>, where insurance can apply. The same active ingredient as compounded tirzepatide runs <strong>$89-$299/month</strong> through licensed telehealth providers, without FDA-approved product status. All of these are prescription routes; a licensed provider decides whether tirzepatide is appropriate for you. This article is general information, not medical advice.',
       },
     ],
   },
