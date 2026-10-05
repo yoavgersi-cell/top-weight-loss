@@ -136,16 +136,24 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
     ],
   },
   wellmedr: {
-    // Aggregate re-verified Sep 24, 2026 from wellmedr's claimed Trustpilot
-    // profile (operator-supplied screenshot): 4.6 across 1,919 reviews,
+    // Aggregate re-verified Oct 5, 2026 from wellmedr's claimed Trustpilot
+    // profile (operator-supplied screenshot): 4.6 across 2,091 reviews (was 1,919 on Sep 24),
     // Wellness Program category, claimed Feb 2026. (Was 4.7 / 1,205.)
     rating: "4.6",
-    reviewCount: "1,919",
+    reviewCount: "2,091",
     reviews: [
       // Oct 5, 2026 batch (operator-supplied screenshots of the profile's
-      // newest reviews, Sep 25 - Oct 4 2026): five 5-star, one 4-star.
+      // newest reviews, Sep 25 - Oct 4 2026): six 5-star, one 4-star.
       // Transcribed verbatim, typos included; names reduced to first name +
       // last initial as displayed.
+      {
+        title: "Malcom was great he answered all my...",
+        text: "Malcom was great he answered all my questions and explained everything through thumbs up",
+        name: "Nandanie T.",
+        location: "US",
+        rating: 5,
+        date: "Oct 3, 2026",
+      },
       {
         title: "Great product. Good company.",
         text: "Oliver, in customer service, assisted quickly with my request to cancel service. The product has worked very well for me but I am moving out of state and do not have a new address for delivery yet. I have enough trizepatide to last me long enough to relocate.",
@@ -2435,8 +2443,8 @@ const defaultReviews: ReviewData[] = [
     slug: "wellmedr",
     providerId: "wellmedr",
     updatedAt: "2026-09-14",
-    shortSummary: "Telehealth GLP-1 weight-loss program used by 1,000,000+ patients - compounded semaglutide from $49/mo and tirzepatide from $89/mo, plus brand-name options - with board-certified specialists and a weight-loss warranty. Rated 4.6 across 1,919 Trustpilot reviews.",
-    reviewIntro: "wellmedr is a telehealth weight-loss platform whose GLP-1 medications have been used by 1,000,000+ patients. It offers compounded GLP-1 (semaglutide) from $49/month and compounded GLP-1/GIP (tirzepatide) from $89/month - both shipped every 4 weeks at the same price no matter your dose - plus brand-name Ozempic and Zepbound for anyone who wants them. Board-certified specialists tailor your plan, treatment is 100% online with no office visit, and a Medical Weight-Care Coach supports you the whole way. It's backed by a weight-loss warranty, and there's a standing offer to lock in $200 off every month - or $49/mo on a 12-month plan, for life. On Trustpilot, wellmedr averages 4.6 across 1,919 reviews, and the recent pages read like a support log in the best sense: 'I filled out the intake and within 4 days had been approved and meds shipped and received,' writes one reviewer, while another describes the team reworking her plan at a lower rate when money got tight - 'no pressure to accept it.' The realistic caveats are pace and commitment: standard delivery runs 3-5 business days rather than the 1-2 days you get from embody or DirectMeds, and the headline $49/month is tied to a 12-month plan.",
+    shortSummary: "Telehealth GLP-1 weight-loss program used by 1,000,000+ patients - compounded semaglutide from $49/mo and tirzepatide from $89/mo, plus brand-name options - with board-certified specialists and a weight-loss warranty. Rated 4.6 across 2,091 Trustpilot reviews.",
+    reviewIntro: "wellmedr is a telehealth weight-loss platform whose GLP-1 medications have been used by 1,000,000+ patients. It offers compounded GLP-1 (semaglutide) from $49/month and compounded GLP-1/GIP (tirzepatide) from $89/month - both shipped every 4 weeks at the same price no matter your dose - plus brand-name Ozempic and Zepbound for anyone who wants them. Board-certified specialists tailor your plan, treatment is 100% online with no office visit, and a Medical Weight-Care Coach supports you the whole way. It's backed by a weight-loss warranty, and there's a standing offer to lock in $200 off every month - or $49/mo on a 12-month plan, for life. On Trustpilot, wellmedr averages 4.6 across 2,091 reviews, and the recent pages read like a support log in the best sense: 'I filled out the intake and within 4 days had been approved and meds shipped and received,' writes one reviewer, while another describes the team reworking her plan at a lower rate when money got tight - 'no pressure to accept it.' The realistic caveats are pace and commitment: standard delivery runs 3-5 business days rather than the 1-2 days you get from embody or DirectMeds, and the headline $49/month is tied to a 12-month plan.",
     keyFeatures: [
       "Compounded semaglutide from $49/mo, tirzepatide from $89/mo",
       "Same price regardless of dosage; shipped every 4 weeks",
@@ -2462,14 +2470,14 @@ const defaultReviews: ReviewData[] = [
       "Standard delivery is slower - about 3-5 business days vs 1-2 at embody or DirectMeds",
       "Lowest $49/mo pricing is tied to a 12-month plan",
       "US shipping only (no international)",
-      "Smaller Trustpilot base (1,919 reviews) than the five-figure rivals"
+      "Smaller Trustpilot base (2,091 reviews) than the five-figure rivals"
     ],
     bestFor: [
       "People who want the lowest-cost compounded GLP-1 ($49/mo)",
       "Anyone who wants both compounded and brand-name options",
       "Those who value board-certified specialist care + coaching"
     ],
-    finalVerdict: "wellmedr wins our value column outright: $49/month semaglutide and $89/month tirzepatide - the lowest compounded prices in this ranking - at the same price no matter your dose, with board-certified specialists, a Medical Weight-Care Coach, a weight-loss warranty, and brand-name Ozempic and Zepbound on the shelf if you want them. Its 4.6 across 1,919 Trustpilot reviews is strong, and the reviews are specific about fast approvals and flexible, human support. The honest trade-offs: the $49 rate takes a 12-month plan, and 3-5 business-day delivery is slower than the fastest rivals. If you're confident about committing for the year, this is the best per-month math on the site; if you'd rather test the waters month-to-month with faster shipping, embody at $69/$119 is the natural comparison.",
+    finalVerdict: "wellmedr wins our value column outright: $49/month semaglutide and $89/month tirzepatide - the lowest compounded prices in this ranking - at the same price no matter your dose, with board-certified specialists, a Medical Weight-Care Coach, a weight-loss warranty, and brand-name Ozempic and Zepbound on the shelf if you want them. Its 4.6 across 2,091 Trustpilot reviews is strong, and the reviews are specific about fast approvals and flexible, human support. The honest trade-offs: the $49 rate takes a 12-month plan, and 3-5 business-day delivery is slower than the fastest rivals. If you're confident about committing for the year, this is the best per-month math on the site; if you'd rather test the waters month-to-month with faster shipping, embody at $69/$119 is the natural comparison.",
     trustBadges: [
       "1,000,000+ patients",
       "Weight-loss warranty",
@@ -5310,12 +5318,12 @@ const sproutWellmedrBattle: BattleData = {
   description:
     "wellmedr ($49/mo semaglutide, 4.6 on Trustpilot, 1M+ patients) vs Sprout ($149/mo, ships in 2 days, Wegovy available). Real prices and an honest verdict.",
   intro:
-    "On paper this looks lopsided - wellmedr's $49/month semaglutide and $89 tirzepatide are the lowest prices in our ranking, backed by 1,000,000+ patients, a 4.6 Trustpilot average across 1,919 reviews and a weight-loss warranty. But the fine print gives Sprout its openings: wellmedr's headline rate takes a 12-month plan and standard delivery runs 3-5 business days, while Sprout ships within 2 days, takes $200 off your first month, and stocks brand-name Wegovy - something wellmedr's brand shelf (Ozempic $1,399, Zepbound $1,599) doesn't carry.",
+    "On paper this looks lopsided - wellmedr's $49/month semaglutide and $89 tirzepatide are the lowest prices in our ranking, backed by 1,000,000+ patients, a 4.6 Trustpilot average across 2,091 reviews and a weight-loss warranty. But the fine print gives Sprout its openings: wellmedr's headline rate takes a 12-month plan and standard delivery runs 3-5 business days, while Sprout ships within 2 days, takes $200 off your first month, and stocks brand-name Wegovy - something wellmedr's brand shelf (Ozempic $1,399, Zepbound $1,599) doesn't carry.",
   verdict:
     "wellmedr wins for anyone whose priority is price or proof: $90/month cheaper on semaglutide, $100 cheaper on tirzepatide, a 4.7 published record and a warranty behind it. Sprout's case is narrower but real: you want your prescription inside 2 days rather than 3-5, you want Wegovy specifically (wellmedr stocks Ozempic and Zepbound, not Wegovy), or you don't want a 12-month plan attached to your best rate. If none of those three apply, take the $49.",
   verdictWinnerPoints: [
     "$49/mo semaglutide, $89 tirzepatide - lowest in our ranking",
-    "4.6 on Trustpilot across 1,919 reviews; 1M+ patients",
+    "4.6 on Trustpilot across 2,091 reviews; 1M+ patients",
     "Weight-loss warranty + Medical Weight-Care Coach included",
   ],
   verdictLoserPoints: [
@@ -5340,10 +5348,10 @@ const sproutWellmedrBattle: BattleData = {
       name: "Track Record",
       winner: "provider1",
       explanation:
-        "wellmedr pairs scale with score: medications used by over a million patients, a 4.6 Trustpilot average across 1,919 reviews, and a weight-loss warranty. Sprout's record is smaller - 4.1 across 188 Trustpilot reviews, with responsive support the recurring praise - and it makes no comparable scale claim.",
+        "wellmedr pairs scale with score: medications used by over a million patients, a 4.6 Trustpilot average across 2,091 reviews, and a weight-loss warranty. Sprout's record is smaller - 4.1 across 188 Trustpilot reviews, with responsive support the recurring praise - and it makes no comparable scale claim.",
       supportingPoints: [
         "1,000,000+ patients (wellmedr)",
-        "4.6 across 1,919 Trustpilot reviews (wellmedr)",
+        "4.6 across 2,091 Trustpilot reviews (wellmedr)",
         "4.1 across 188 Trustpilot reviews (Sprout)",
       ],
     },
@@ -5384,7 +5392,7 @@ const sproutWellmedrBattle: BattleData = {
     { feature: "Commitment", provider1Value: "12-month plan for the lowest rate", provider2Value: "$200 off month one; see site for terms", highlight: "provider2" },
     { feature: "Shipping", provider1Value: "Free, 3-5 business days, every 4 weeks", provider2Value: "Ships within 2 days", highlight: "provider2" },
     { feature: "Brand-name shelf", provider1Value: "Ozempic $1,399 · Zepbound $1,599", provider2Value: "Wegovy from $1,799", highlight: "both" },
-    { feature: "Trustpilot", provider1Value: "4.6 across 1,919 reviews", provider2Value: "4.1 across 188 reviews", highlight: "provider1" },
+    { feature: "Trustpilot", provider1Value: "4.6 across 2,091 reviews", provider2Value: "4.1 across 188 reviews", highlight: "provider1" },
     { feature: "Guarantee", provider1Value: "Weight-loss warranty", provider2Value: "-", highlight: "provider1" },
   ],
 };
