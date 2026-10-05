@@ -93,6 +93,8 @@ export default async function AboutPage() {
       description:
         "Independent comparisons of online treatment providers. Every GLP-1 price is verified against the provider's own published rate and logged on change; medical statements are checked by a named reviewer.",
       areaServed: { "@type": "Country", name: "United States" },
+      email: "contact@treatmentshub.com",
+      contactPoint: { "@type": "ContactPoint", email: "contact@treatmentshub.com", contactType: "customer support", availableLanguage: "English" },
       knowsAbout: ["GLP-1 weight-loss treatment", "Telehealth providers", "Compounded semaglutide", "Compounded tirzepatide", "Hair loss treatment", "Testosterone replacement therapy", "Hormone replacement therapy", "Online therapy"],
       employee: REVIEWERS.map(reviewerPersonSchema),
     },
@@ -419,7 +421,7 @@ export default async function AboutPage() {
 
         {/* ───── Current, corrections, disclaimer ───── */}
         <section className="mb-14 grid gap-4 sm:grid-cols-3">
-          {[
+          {([
             {
               icon: RefreshCw,
               title: "Keeping it current",
@@ -428,18 +430,24 @@ export default async function AboutPage() {
             {
               icon: Shield,
               title: "Corrections",
-              body: "If a price or claim here does not match what a provider currently publishes, tell us. We verify against the provider's own site, correct the page, and log the change like any other.",
+              body: "If a price or claim here does not match what a provider currently publishes, email contact@treatmentshub.com. We verify against the provider's own site, correct the page, and log the change like any other.",
+              link: { label: "contact@treatmentshub.com", href: "mailto:contact@treatmentshub.com" },
             },
             {
               icon: Stethoscope,
               title: "Not medical advice",
               body: "Treatments Hub is not a medical provider and does not prescribe. GLP-1 medications are prescription drugs that need evaluation by a licensed clinician. Individual results vary.",
             },
-          ].map(({ icon: Icon, title, body }) => (
+          ] as { icon: typeof RefreshCw; title: string; body: string; link?: { label: string; href: string } }[]).map(({ icon: Icon, title, body, link }) => (
             <div key={title} className="rounded-2xl border border-gray-200 bg-white p-5">
               <Icon className="h-5 w-5 text-[#0C4B75]" strokeWidth={2} />
               <h2 className="mt-3 text-[16px] font-bold text-[#191919]">{title}</h2>
               <p className="mt-1.5 text-[14px] leading-[1.7] text-gray-600">{body}</p>
+              {link && (
+                <a href={link.href} className="mt-2 inline-block text-[14px] font-semibold text-[#0C4B75] hover:underline">
+                  {link.label}
+                </a>
+              )}
             </div>
           ))}
         </section>

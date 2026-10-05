@@ -117,6 +117,8 @@ export default function RootLayout({
               alternateName: ["TreatmentsHub", "treatmentshub.com"],
               url: "https://www.treatmentshub.com",
               areaServed: { "@type": "Country", name: "United States" },
+              email: "contact@treatmentshub.com",
+              contactPoint: { "@type": "ContactPoint", email: "contact@treatmentshub.com", contactType: "customer support", availableLanguage: "English" },
               logo: "https://www.treatmentshub.com/treatmentshub.png",
               description: "Independent guides and provider comparisons across weight loss, hair loss, TRT and HRT - expert reviews, pricing research, and side-by-side comparisons.",
               sameAs: [],

@@ -42,6 +42,7 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "Disclaimer", href: "/weight-loss/disclaimer" },
       { label: "Privacy Policy", href: "/weight-loss/privacy" },
       { label: "Terms of Use", href: "/weight-loss/terms" },
+      { label: "Contact", href: "mailto:contact@treatmentshub.com" },
     ],
   },
 ];

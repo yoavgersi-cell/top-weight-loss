@@ -80,7 +80,7 @@ export default function DisclaimerPage() {
         <p>
           We try to keep every page accurate and current, and we log price changes when we find them. We cannot
           guarantee that every provider, price or offer is complete or current at the moment you read it. If you find
-          an error, tell us through our <Link href="/weight-loss/about" className={ext}>about page</Link>; confirmed
+          an error, email <a href="mailto:contact@treatmentshub.com" className={ext}>contact@treatmentshub.com</a>; confirmed
           errors are corrected and, where medical, re-reviewed.
         </p>
 
