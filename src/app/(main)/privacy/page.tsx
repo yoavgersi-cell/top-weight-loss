@@ -71,7 +71,7 @@ export default function PrivacyPage() {
             The site works fully without analytics cookies.
           </li>
           <li>Use your browser&rsquo;s Global Privacy Control or Do Not Track setting; we do not sell or share personal information for targeted advertising in any case.</li>
-          <li>Residents of US states with privacy laws may request access to or deletion of personal information; because we hold none that identifies you, there is normally nothing to return or delete, but you can ask through our <Link href="/weight-loss/about" className={ext}>about page</Link>.</li>
+          <li>Residents of US states with privacy laws may request access to or deletion of personal information; because we hold none that identifies you, there is normally nothing to return or delete, but you can ask at <a href="mailto:contact@treatmentshub.com" className={ext}>contact@treatmentshub.com</a>.</li>
         </ul>
 
         <h2 className="pt-4 text-xl font-semibold text-[#191919]">Children</h2>
