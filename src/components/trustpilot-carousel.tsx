@@ -253,8 +253,15 @@ export function TrustpilotCarousel({
   reviewCount?: string;
 }) {
   const total = reviews.length;
+  // Reader-controlled order. Default is highest rated first (newest within a
+  // band, undated last) - and the lowest-rated reviews are one click away, so
+  // the full captured set, including every 1-star, is always reachable. The
+  // rule is printed under the control so nothing about the order is hidden.
+  const [sort, setSort] = useState<ReviewSort>("highest");
   if (total === 0) return null;
   const numericRating = rating ? parseFloat(rating) : null;
+  const sorted = sortReviews(reviews, sort);
+  const lowest = Math.min(...reviews.map((r) => r.rating));
 
   return (
     <div className="rounded-2xl border border-gray-200 bg-gray-50/50 p-5 sm:p-6">
@@ -284,8 +291,54 @@ export function TrustpilotCarousel({
         )}
       </div>
 
-      <ReviewPager cards={reviews.map((r, i) => ({ key: String(i), node: <ReviewCard r={r} /> }))} />
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+        <p className="text-[12.5px] text-gray-500">
+          All {total} reviews we captured, including every {lowest}-star one.
+        </p>
+        <div className="flex items-center gap-1.5" role="group" aria-label="Sort reviews">
+          <span className="text-[11.5px] font-semibold uppercase tracking-wide text-gray-400">Sort</span>
+          {SORT_OPTIONS.map((o) => (
+            <button
+              key={o.id}
+              type="button"
+              onClick={() => setSort(o.id)}
+              aria-pressed={sort === o.id}
+              className={`rounded-full border px-2.5 py-1 text-[12px] font-semibold transition-colors ${
+                sort === o.id
+                  ? "border-[#0C4B75] bg-[#0C4B75] text-white"
+                  : "border-gray-200 bg-white text-gray-600 hover:border-[#0C4B75]/40 hover:text-[#0C4B75]"
+              }`}
+            >
+              {o.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <ReviewPager key={sort} cards={sorted.map((r, i) => ({ key: `${sort}-${i}`, node: <ReviewCard r={r} /> }))} />
       <p className="mt-3 text-[11.5px] leading-relaxed text-gray-400">Reviews are individual experiences quoted verbatim from public Trustpilot profiles, names shortened; any weight-loss result mentioned is one person's and is not typical - results vary. Trustpilot is a trademark of Trustpilot A/S and is not affiliated with this site.</p>
     </div>
   );
+}
+
+// ───── Reader-controlled review order ─────
+type ReviewSort = "highest" | "newest" | "lowest";
+const SORT_OPTIONS: { id: ReviewSort; label: string }[] = [
+  { id: "highest", label: "Highest rated" },
+  { id: "newest", label: "Newest" },
+  { id: "lowest", label: "Lowest rated" },
+];
+
+function reviewTime(r: TrustpilotReview): number {
+  if (!r.date) return 0;
+  const t = new Date(r.date).getTime();
+  return isNaN(t) ? 0 : t;
+}
+
+function sortReviews(reviews: TrustpilotReview[], sort: ReviewSort): TrustpilotReview[] {
+  const byNewest = (a: TrustpilotReview, b: TrustpilotReview) => reviewTime(b) - reviewTime(a);
+  const list = [...reviews];
+  if (sort === "newest") return list.sort(byNewest);
+  if (sort === "lowest") return list.sort((a, b) => a.rating - b.rating || byNewest(a, b));
+  return list.sort((a, b) => b.rating - a.rating || byNewest(a, b));
 }

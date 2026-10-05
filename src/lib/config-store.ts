@@ -2016,7 +2016,6 @@ const defaultReviews: ReviewData[] = [
         cadence: "Weekly",
         price: "$89",
         regularPrice: "$199",
-        saleEnds: "Sep 25th",
         unit: "/month",
         highlights: ["One simple injection per week", "In stock - no insurance required"],
       },
@@ -2026,7 +2025,6 @@ const defaultReviews: ReviewData[] = [
         cadence: "Weekly",
         price: "$149",
         regularPrice: "$299",
-        saleEnds: "Sep 25th",
         unit: "/month",
         highlights: ["One simple injection per week", "In stock - no insurance required"],
       },
@@ -6107,7 +6105,7 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
             // CTAs) and whose figures track the verified price index: the seed
             // wins wholesale so a stale CMS snapshot can never show one price in
             // the code-rendered quick answer and another in the body.
-            const codeAuthoritativeGuides = new Set(["best-tirzepatide-online"]);
+            const codeAuthoritativeGuides = new Set(["best-tirzepatide-online", "is-wellmedr-legit"]);
             // Code-side hero images are authoritative: a CMS Save snapshots the
             // config without the image/imageAlt fields, so overlay them from code
             // onto every saved article so images added in code always surface
