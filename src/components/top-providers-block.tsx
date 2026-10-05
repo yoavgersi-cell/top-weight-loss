@@ -59,12 +59,15 @@ export function TopProvidersBlock({
   subtitle,
   providerIds,
   order = "ranking",
+  priceNotes,
 }: {
   config: SiteConfig;
   linkPrefix?: string;
   limit?: number;
   title?: string;
   subtitle?: string;
+  /** Per-provider price line shown under the card's starting price (page-specific, e.g. the tirzepatide rate). */
+  priceNotes?: Record<string, string>;
   // Optional curated set (e.g. affiliate partners). When given, only these
   // providers render - still ordered by their real ranking and shown with their
   // real scores/badge, just renumbered 1..N within this block. Omit to show the
@@ -106,6 +109,7 @@ export function TopProvidersBlock({
         badge: position.badge,
         trustpilotRating: provider.trustpilotRating,
         trustpilotReviewCount: provider.trustpilotReviewCount,
+        priceNote: priceNotes?.[provider.id],
       };
       return { product, review: (config.reviews ?? []).find((r) => r.providerId === provider.id) };
     })

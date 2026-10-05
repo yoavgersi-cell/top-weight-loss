@@ -119,6 +119,7 @@ export function ProductCarousel({
   subtitle = "Real published prices from licensed telehealth providers - conditions shown under every price.",
   highlightProviderIds = [],
   onlyProviderIds,
+  onlyMedication,
   pageType = "listing",
   withSchema = false,
   pageUrl,
@@ -130,6 +131,8 @@ export function ProductCarousel({
   highlightProviderIds?: string[];
   /** Restrict to specific providers (e.g. a review page's own provider). */
   onlyProviderIds?: string[];
+  /** Restrict to one medication (e.g. tirzepatide plans on a tirzepatide guide). */
+  onlyMedication?: CatalogProduct["medication"];
   pageType?: "listing" | "review" | "battle";
   /** Emit Product+Offer ItemList schema. Enable on ONE carousel per page. */
   withSchema?: boolean;
@@ -143,6 +146,7 @@ export function ProductCarousel({
     (p) => byId.has(p.providerId) && AFFILIATE_PROVIDER_IDS.includes(p.providerId)
   );
   if (onlyProviderIds) items = items.filter((p) => onlyProviderIds.includes(p.providerId));
+  if (onlyMedication) items = items.filter((p) => p.medication === onlyMedication);
   items = items.sort((a, b) => {
     const ha = highlight.has(a.providerId) ? 0 : 1;
     const hb = highlight.has(b.providerId) ? 0 : 1;

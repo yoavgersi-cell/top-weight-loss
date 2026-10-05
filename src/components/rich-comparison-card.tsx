@@ -18,6 +18,8 @@ export interface RichCardProduct {
   badge?: string;
   trustpilotRating?: string;
   trustpilotReviewCount?: string;
+  /** Page-specific price line under the starting price, e.g. "Tirzepatide $119/mo". */
+  priceNote?: string;
 }
 
 // Large, editorial-style ranking card modeled on the best affiliate comparison
@@ -140,6 +142,9 @@ export function RichComparisonCard({
                       <span className="text-[19px] font-extrabold text-[#191919] sm:text-[20px]">{startingPlan.price}</span>
                       {startingPlan.unit && <span className="text-[12.5px] font-semibold text-gray-500 sm:text-[13px]">{startingPlan.unit}</span>}
                     </p>
+                    {product.priceNote && (
+                      <p className="mt-1 text-[12.5px] font-semibold text-[#0C4B75] sm:text-[13px]">{product.priceNote}</p>
+                    )}
                     {mentionsCompounded && (
                       <p className="mt-1.5 text-[10.5px] leading-snug text-gray-400 sm:text-[11px]">
                         *Compounded medications are not FDA-approved.

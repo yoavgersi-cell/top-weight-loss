@@ -2041,7 +2041,7 @@ export const articles: Article[] = [
     category: "Guide",
     readTime: "9 min read",
     publishedAt: "2026-08-30",
-    updatedAt: "2026-09-15",
+    updatedAt: "2026-10-05",
     heroColor: "#EDF2F8",
     author: "TopWeightLoss Team",
     keyTakeaways: [
@@ -2057,7 +2057,10 @@ export const articles: Article[] = [
       },
       {
         heading: "What's the cheapest tirzepatide online?",
-        body: 'These are the eight licensed telehealth providers in our ranking with published compounded tirzepatide rates, verified at our last content pass:<table><thead><tr><th>Provider</th><th>Monthly price</th><th>The condition</th><th>Standout</th></tr></thead><tbody><tr><td>wellmedr</td><td><strong>$89</strong></td><td>Locks on a 12-month plan, billed monthly</td><td>4.6 on Trustpilot (1,919 reviews)</td></tr><tr><td>embody</td><td><strong>$119</strong> (reg. $129)</td><td>Flat, no commitment</td><td>1-2 day shipping; refund if not approved</td></tr><tr><td>DirectMeds</td><td><strong>$147</strong></td><td>Flat, no membership</td><td>Only needle-free sublingual option</td></tr><tr><td>altRx</td><td><strong>$149</strong> (reg. $299)</td><td>Pause or cancel anytime; BNPL</td><td>Brand-name shelf alongside</td></tr><tr><td>Medvi</td><td><strong>$166</strong> promo (reg. $299)</td><td>Monthly, all-inclusive</td><td>4.3 on Trustpilot (14,836 reviews); dietician + coaching</td></tr><tr><td>Sprout</td><td><strong>$199</strong></td><td>Monthly; $200 off first month</td><td>Ships within 2 days</td></tr><tr><td>trimrx</td><td><strong>$259</strong></td><td>No long-term contract</td><td>Clinical guidance through dose changes</td></tr><tr><td>SHED</td><td><strong>$299</strong></td><td>Monthly; 20% off first month</td><td>Lose 5% in 120 days or your money back</td></tr></tbody></table>Prices are each provider\'s published rate at our last verification - promos change, so confirm at checkout. The same providers\' semaglutide rates ($49-$199) are in the <a href="/weight-loss/cheapest-glp1">full price index</a>.',
+        // The price table itself is code-rendered right under this section
+        // (TirzepatidePriceTable): live CTAs, review links and verified
+        // Trustpilot records per row, with prices from the price index.
+        body: 'These are the eight licensed telehealth providers in our ranking with published compounded tirzepatide rates, cheapest first. Every row links to our full review of that provider, and the price shown is the provider\'s own published rate with its condition spelled out - a 12-month lock, a promo, or a flat month-to-month figure.',
       },
       {
         heading: "Can I get brand-name Zepbound online?",
@@ -2065,7 +2068,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Is compounded tirzepatide legit?",
-        body: 'Compounded tirzepatide from the providers above is prescribed by licensed clinicians after a medical review and prepared by <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">US state-licensed compounding pharmacies</a> - that is a legal, regulated channel, and it is how the $99-$299 prices exist at all. The honest trade-off: <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">compounded preparations are not FDA-approved products</a> the way brand Zepbound is - the FDA does not review each pharmacy\'s output - so the pharmacy\'s standards are what you are trusting. That is exactly why we only list providers with licensed-provider review and named, regulated pharmacies. What is <em>not</em> legit: "research chemical" and no-prescription peptide vendors. No clinician, no pharmacy license, no recourse - the discount is not worth what you are giving up.',
+        body: 'Compounded tirzepatide from the providers above is prescribed by licensed clinicians after a medical review and prepared by <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">US state-licensed compounding pharmacies</a> - that is a legal, regulated channel, and it is how the $89-$299 prices exist at all. The honest trade-off: <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">compounded preparations are not FDA-approved products</a> the way brand Zepbound is - the FDA does not review each pharmacy\'s output - so the pharmacy\'s standards are what you are trusting. That is exactly why we only list providers with licensed-provider review and named, regulated pharmacies. What is <em>not</em> legit: "research chemical" and no-prescription peptide vendors. No clinician, no pharmacy license, no recourse - the discount is not worth what you are giving up.',
       },
       {
         heading: "Do I need a prescription for tirzepatide?",
@@ -2073,11 +2076,11 @@ export const articles: Article[] = [
       },
       {
         heading: "How do you choose a tirzepatide provider?",
-        body: 'Work down your actual constraint. <strong>Cheapest possible and willing to commit a year:</strong> wellmedr at $89. <strong>Cheapest without commitment:</strong> embody at $119, with 1-2 day shipping. <strong>Hate needles:</strong> DirectMeds - the only sublingual-drops option, $147 flat. <strong>Might want brand-name later:</strong> altRx - $149 compounded with Zepbound on the same shelf. <strong>Want a person in the loop:</strong> Medvi at $166 all-inclusive, with one of the two biggest verified review bases. <strong>Need stakes to stick with it:</strong> SHED\'s money-back guarantee. There is no wrong answer on legitimacy in this table - it is a fit decision, not a safety decision.',
+        body: 'Work down your actual constraint. <strong>Cheapest possible and willing to commit a year:</strong> <a href="/weight-loss/reviews/wellmedr">wellmedr</a> at $89. <strong>Cheapest without commitment:</strong> <a href="/weight-loss/reviews/embody">embody</a> at $119, with 1-2 day shipping. <strong>Hate needles:</strong> <a href="/weight-loss/reviews/directmeds">DirectMeds</a> - the only sublingual-drops option, $147 flat. <strong>Might want brand-name later:</strong> <a href="/weight-loss/reviews/altrx">altRx</a> - $149 compounded with Zepbound on the same shelf. <strong>Want a person in the loop:</strong> <a href="/weight-loss/reviews/medvi">Medvi</a> at $166 all-inclusive, with one of the two biggest verified review bases. <strong>Need stakes to stick with it:</strong> <a href="/weight-loss/reviews/shed">SHED</a>\'s money-back guarantee. There is no wrong answer on legitimacy in this table - it is a fit decision, not a safety decision.',
       },
       {
         heading: "The verdict",
-        body: 'The best tirzepatide online in 2026 is not one provider - it is the short list above, filtered by your commitment appetite and budget. The verified floor is <strong>$89/month (wellmedr, 12-month plan)</strong>, the no-strings floor is <strong>$119 (embody)</strong>, and brand-name Zepbound runs <strong>$1,249 cash (altRx)</strong> or potentially much less through <strong>ro with insurance</strong>. Whatever you pick, stay inside the licensed system: real prescription, real pharmacy, published price. This article is general information, not medical advice - a licensed provider decides whether tirzepatide is appropriate for you.',
+        body: 'The best tirzepatide online in 2026 is not one provider - it is the short list above, filtered by your commitment appetite and budget. The verified floor is <strong>$89/month (<a href="/weight-loss/reviews/wellmedr">wellmedr</a>, 12-month plan)</strong>, the no-strings floor is <strong>$119 (<a href="/weight-loss/reviews/embody">embody</a>)</strong>, and brand-name Zepbound runs <strong>$1,249 cash (<a href="/weight-loss/reviews/altrx">altRx</a>)</strong> or potentially much less through <strong><a href="/weight-loss/reviews/ro">ro</a> with insurance</strong>. Whatever you pick, stay inside the licensed system: real prescription, real pharmacy, published price. This article is general information, not medical advice - a licensed provider decides whether tirzepatide is appropriate for you.',
       },
     ],
   },
