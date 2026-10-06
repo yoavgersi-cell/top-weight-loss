@@ -95,6 +95,7 @@ export default async function AboutPage() {
       areaServed: { "@type": "Country", name: "United States" },
       email: "contact@treatmentshub.com",
       contactPoint: { "@type": "ContactPoint", email: "contact@treatmentshub.com", contactType: "customer support", availableLanguage: "English" },
+      sameAs: ["https://www.linkedin.com/company/treatments-hub"],
       knowsAbout: ["GLP-1 weight-loss treatment", "Telehealth providers", "Compounded semaglutide", "Compounded tirzepatide", "Hair loss treatment", "Testosterone replacement therapy", "Hormone replacement therapy", "Online therapy"],
       employee: REVIEWERS.map(reviewerPersonSchema),
     },
