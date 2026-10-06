@@ -342,7 +342,15 @@ export async function HubHome() {
     .filter(Boolean)
     .slice(0, 12) as Provider[];
 
-  const articles = (wl.articles ?? []).slice(0, 6);
+  // Editor's picks: the two buyer guides Google has been slow to index on the
+  // new domain lead (the hub home IS indexed, so this is the shortest crawl
+  // path to them), then the rest in config order.
+  const FEATURED_FIRST = ["best-tirzepatide-online", "zepbound-price-online"];
+  const allArticles = wl.articles ?? [];
+  const articles = [
+    ...FEATURED_FIRST.map((s) => allArticles.find((a) => a.slug === s)).filter((a): a is NonNullable<typeof a> => !!a),
+    ...allArticles.filter((a) => !FEATURED_FIRST.includes(a.slug)),
+  ].slice(0, 6);
 
   return (
     <div className="bg-white">

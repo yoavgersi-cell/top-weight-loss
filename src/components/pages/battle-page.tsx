@@ -1441,6 +1441,38 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             </div>
           )}
 
+          {/* ───── KEEP RESEARCHING (weight-loss) ─────
+              Contextual links from the battle pages Google crawls most to the
+              money pages it has been slow to index on the new domain (Oct 2026
+              URL Inspection: altRx review and the tirzepatide guide "unknown to
+              Google" while this template's pages are indexed). */}
+          {ctx.vertical === "weight-loss" && (
+            <div className="mb-10">
+              <h2 className="mb-1.5 text-[20px] font-bold text-[#191919]">Keep researching</h2>
+              <p className="mb-4 text-[14px] text-gray-500">The pages readers of this comparison open next.</p>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {[
+                  { href: "/articles/best-tirzepatide-online", title: "Best tirzepatide online", blurb: "Eight verified compounded prices from $89, plus every brand-name Zepbound route." },
+                  { href: "/reviews/altrx", title: "altRx review", blurb: "$89 semaglutide, $149 tirzepatide, and the only brand-name shelf next to compounded plans." },
+                  { href: "/glp1-provider-support", title: "Provider customer support, compared", blurb: "What captured Trustpilot reviews say about support, shipping and billing, by provider." },
+                  { href: "/articles/zepbound-price-online", title: "Zepbound price online", blurb: "Brand Zepbound at $1,249 to $1,599 cash, the Ro pen route, and the compounded ladder." },
+                ].map((g) => (
+                  <Link
+                    key={g.href}
+                    href={hubLink(ctx, g.href)}
+                    className="group rounded-xl border border-gray-200 bg-white p-4 transition-shadow hover:shadow-md"
+                  >
+                    <p className="flex items-center justify-between text-[15px] font-bold text-[#191919] group-hover:text-[#0C4B75]">
+                      {g.title}
+                      <ArrowRight className="h-4 w-4 shrink-0 text-gray-300 group-hover:text-[#0C4B75]" strokeWidth={2.5} />
+                    </p>
+                    <p className="mt-1 text-[13px] leading-snug text-gray-500">{g.blurb}</p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* ───── RELATED COMPARISONS ───── */}
           {(relatedBattles.length > 0 || relatedTrios.length > 0) && (
             <div className="mb-10">
