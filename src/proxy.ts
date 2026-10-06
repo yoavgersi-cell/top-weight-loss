@@ -126,6 +126,17 @@ export function proxy(req: NextRequest) {
   if (host.includes("treatmentshub")) {
     const { pathname } = req.nextUrl;
 
+    // Apex → www, one hop. Every canonical, sitemap entry and schema URL is on
+    // www.treatmentshub.com; the bare host must never serve a 200 copy of the
+    // site (Oct 2026: URL Inspection on the bare host read "unknown to Google").
+    // Vercel's domain redirect normally handles this; the proxy guarantees it.
+    if (host.split(":")[0] === "treatmentshub.com") {
+      const url = req.nextUrl.clone();
+      url.protocol = "https:";
+      url.host = "www.treatmentshub.com";
+      return NextResponse.redirect(url, 301);
+    }
+
     if (pathname === "/") {
       return NextResponse.rewrite(new URL("/hub", req.url));
     }
