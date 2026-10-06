@@ -44,6 +44,7 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "Privacy Policy", href: "/weight-loss/privacy" },
       { label: "Terms of Use", href: "/weight-loss/terms" },
       { label: "Contact", href: "mailto:contact@treatmentshub.com" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/company/treatments-hub" },
     ],
   },
 ];
@@ -122,11 +123,23 @@ export async function Footer() {
                   page in the audit. */}
               <p className="mb-2.5 text-[12px] font-bold uppercase tracking-wider text-[#191919]">{col.title}</p>
               <nav className="space-y-1.5">
-                {col.links.map((l) => (
-                  <Link key={l.label} href={l.href} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">
-                    {l.label}
-                  </Link>
-                ))}
+                {col.links.map((l) =>
+                  l.href.startsWith("http") ? (
+                    <a
+                      key={l.label}
+                      href={l.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-[13px] text-gray-500 hover:text-[#0C4B75]"
+                    >
+                      {l.label}
+                    </a>
+                  ) : (
+                    <Link key={l.label} href={l.href} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">
+                      {l.label}
+                    </Link>
+                  ),
+                )}
               </nav>
             </div>
           ))}

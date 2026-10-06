@@ -121,7 +121,7 @@ export default function RootLayout({
               contactPoint: { "@type": "ContactPoint", email: "contact@treatmentshub.com", contactType: "customer support", availableLanguage: "English" },
               logo: "https://www.treatmentshub.com/treatmentshub.png",
               description: "Independent guides and provider comparisons across weight loss, hair loss, TRT and HRT - expert reviews, pricing research, and side-by-side comparisons.",
-              sameAs: [],
+              sameAs: ["https://www.linkedin.com/company/treatments-hub"],
             }),
           }}
         />
