@@ -280,6 +280,43 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     shipping: "Provider review, coach and dosage adjustments included",
     image: "/products/wellmedr-zepbound.webp",
   },
+  // altRx brand-name shelf (operator-supplied screenshots of altRx's product
+  // pages, Oct 6, 2026): Zepbound $1,249, Wegovy $1,579, Ozempic $1,149 per
+  // month, each "Rx only, single-patient-use pen", "No Price Hike, Cancel
+  // anytime". Figures match the brand shelf in the price index.
+  {
+    id: "altrx-zepbound",
+    providerId: "altrx",
+    name: "Brand-Name Zepbound (Tirzepatide) Pen",
+    medication: "tirzepatide",
+    format: "injection",
+    price: "$1,249",
+    priceNote: "brand-name; flat, no price hike; cancel anytime",
+    shipping: "Free overnight cold shipping",
+    image: "/products/altrx-zepbound.webp",
+  },
+  {
+    id: "altrx-wegovy",
+    providerId: "altrx",
+    name: "Brand-Name Wegovy (Semaglutide) Pen",
+    medication: "semaglutide",
+    format: "injection",
+    price: "$1,579",
+    priceNote: "brand-name; flat, no price hike; cancel anytime",
+    shipping: "Free overnight cold shipping",
+    image: "/products/altrx-wegovy.webp",
+  },
+  {
+    id: "altrx-ozempic",
+    providerId: "altrx",
+    name: "Brand-Name Ozempic (Semaglutide) Pen",
+    medication: "semaglutide",
+    format: "injection",
+    price: "$1,149",
+    priceNote: "brand-name; flat, no price hike; cancel anytime",
+    shipping: "Free overnight cold shipping",
+    image: "/products/altrx-ozempic.webp",
+  },
   {
     id: "sprout-wegovy",
     providerId: "sprout",
