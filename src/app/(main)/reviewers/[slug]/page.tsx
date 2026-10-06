@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ShieldCheck, GraduationCap, BadgeCheck, BookOpen, ExternalLink } from "lucide-react";
+import { ShieldCheck, GraduationCap, BadgeCheck } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import {
   HUB_ORIGIN,
@@ -209,29 +209,9 @@ export default async function ReviewerProfilePage({ params }: { params: Promise<
           </div>
         </section>
 
-        {/* Selected work */}
-        {r.selectedWork.length > 0 && (
-          <section className="mb-10">
-            <div className="mb-3 flex items-center gap-2">
-              <BookOpen className="h-5 w-5 text-[#0C4B75]" strokeWidth={2} />
-              <h2 className="text-[24px] font-bold text-[#191919]">Selected writing</h2>
-            </div>
-            <p className="mb-3 text-[14px] text-gray-500">Clinical-research articles written for industry publications.</p>
-            <ul className="divide-y divide-gray-100 overflow-hidden rounded-xl border border-gray-200 bg-white">
-              {r.selectedWork.map((w) => (
-                <li key={w.url}>
-                  <a href={w.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between gap-3 px-4 py-3 hover:bg-gray-50">
-                    <span>
-                      <span className="block text-[14.5px] font-semibold text-[#191919]">{w.title}</span>
-                      <span className="block text-[12.5px] text-gray-500">{w.outlet}</span>
-                    </span>
-                    <ExternalLink className="h-4 w-4 shrink-0 text-gray-300" strokeWidth={2} />
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
+        {/* The "Selected writing" list (external articles) was removed from the
+            profile at the operator's request, Oct 2026. The entries stay in the
+            reviewer record so they can come back without re-sourcing. */}
 
         <p className="text-[13px] leading-relaxed text-gray-400">
           Reviewers assess medical and scientific statements. They do not choose providers, set prices or rankings, or
