@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, X, ArrowRight, Shield, Star, ArrowBigUp, ArrowBigDown, MessageCircle, ShieldCheck, UserRound, Users, Stethoscope, type LucideIcon } from "lucide-react";
+import { Check, X, ArrowRight, ArrowUpRight, Shield, Star, ArrowBigUp, ArrowBigDown, MessageCircle, ShieldCheck, UserRound, Users, Stethoscope, type LucideIcon } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
-import { latestUpdate, VERTICALS, NOINDEX_WL_REVIEW_SLUGS } from "@/lib/config";
+import { latestUpdate, VERTICALS, NOINDEX_WL_REVIEW_SLUGS, NOINDEX_WL_BATTLE_SLUGS } from "@/lib/config";
+import { SLUG_ALIASES } from "@/lib/slug-aliases";
 import {
   type SiteContext,
   canonicalUrl,
@@ -547,9 +548,24 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
     })),
   };
 
-  const relatedBattles = (config.battles ?? []).filter(
-    (b) => b.provider1Id === provider.id || b.provider2Id === provider.id
-  );
+  // Related comparisons: one per opponent, canonical slugs only, opponents
+  // that are still in the ranking, indexable pages only, capped. The raw
+  // battle list carries aliased duplicates (altrx-vs-embody and
+  // embody-vs-altrx) and retired matchups (Noom), which produced a Related
+  // list with repeated and dead entries (operator screenshot, Oct 2026).
+  const ranked = new Set(config.ranking.providerOrder);
+  const seenOpponent = new Set<string>();
+  const relatedBattles = (config.battles ?? [])
+    .filter((b) => b.provider1Id === provider.id || b.provider2Id === provider.id)
+    .filter((b) => !(b.slug in SLUG_ALIASES))
+    .filter((b) => !(ctx.vertical === "weight-loss" && NOINDEX_WL_BATTLE_SLUGS.has(b.slug)))
+    .filter((b) => {
+      const other = b.provider1Id === provider.id ? b.provider2Id : b.provider1Id;
+      if (!ranked.has(other) || seenOpponent.has(other)) return false;
+      seenOpponent.add(other);
+      return true;
+    })
+    .slice(0, 6);
 
   // This provider's own question cluster (is-X-legit / X-cost / X-alternatives)
   // - the highest-intent internal links a review can carry. Rendered only for
@@ -1131,33 +1147,45 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         {(relatedBattles.length > 0 || relatedArticles.length > 0) && (
           <div className="mb-6">
             <h3 className="mb-4 text-[18px] font-bold text-[#191919]">Related</h3>
-            <div className="space-y-2">
-              {relatedBattles.map((battle) => {
-                const otherProvider = config.providers.find(
-                  (p) => p.id === (battle.provider1Id === provider.id ? battle.provider2Id : battle.provider1Id)
-                );
-                return (
-                  <Link
-                    key={battle.slug}
-                    href={hubLink(ctx, `/${battle.slug}`)}
-                    className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-medium text-[#191919] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
-                  >
-                    <span className="text-[#0C4B75]">{provider.name} vs {otherProvider?.name}</span>
-                    <span className="ml-auto text-[12px] text-gray-400">Compare</span>
-                  </Link>
-                );
-              })}
-              {relatedArticles.map((article) => (
-                <Link
-                  key={article.slug}
-                  href={hubLink(ctx, `/articles/${article.slug}`)}
-                  className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-medium text-[#191919] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
-                >
-                  <span className="truncate">{article.title}</span>
-                  <span className="ml-auto shrink-0 text-[12px] text-gray-400">{article.readTime}</span>
-                </Link>
-              ))}
-            </div>
+            {relatedBattles.length > 0 && (
+              <>
+                <p className="mb-2 text-[12px] font-bold uppercase tracking-wider text-gray-400">Head-to-head</p>
+                <div className="mb-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                  {relatedBattles.map((battle) => {
+                    const otherProvider = config.providers.find(
+                      (p) => p.id === (battle.provider1Id === provider.id ? battle.provider2Id : battle.provider1Id)
+                    );
+                    return (
+                      <Link
+                        key={battle.slug}
+                        href={hubLink(ctx, `/${battle.slug}`)}
+                        className="flex items-center justify-between gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
+                      >
+                        <span className="truncate">{provider.name} vs {otherProvider?.name}</span>
+                        <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-gray-300" strokeWidth={2.5} />
+                      </Link>
+                    );
+                  })}
+                </div>
+              </>
+            )}
+            {relatedArticles.length > 0 && (
+              <>
+                <p className="mb-2 text-[12px] font-bold uppercase tracking-wider text-gray-400">Guides</p>
+                <div className="space-y-2">
+                  {relatedArticles.map((article) => (
+                    <Link
+                      key={article.slug}
+                      href={hubLink(ctx, `/articles/${article.slug}`)}
+                      className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-medium text-[#191919] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
+                    >
+                      <span className="truncate">{article.title}</span>
+                      <span className="ml-auto shrink-0 text-[12px] text-gray-400">{article.readTime}</span>
+                    </Link>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         )}
 
