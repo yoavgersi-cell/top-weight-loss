@@ -23,7 +23,7 @@ function chipFor(product: CatalogProduct): { label: string; className: string } 
     return { label: `${product.medication === "semaglutide" ? "Sema" : "Tirz"} drops`, className: "bg-teal-50 text-teal-700 ring-teal-200" };
   if (product.format === "tablet")
     return { label: "Tablets", className: "bg-teal-50 text-teal-700 ring-teal-200" };
-  if (product.id === "sprout-wegovy")
+  if (/^brand-name/i.test(product.name))
     return { label: "Brand-name", className: "bg-amber-50 text-amber-700 ring-amber-200" };
   return MEDICATION_CHIP[product.medication];
 }
