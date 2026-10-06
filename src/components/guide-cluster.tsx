@@ -37,6 +37,16 @@ export const WEIGHT_LOSS_GUIDES: GuideLink[] = [
     blurb: "What captured Trustpilot reviews say about support, shipping and billing, by provider.",
   },
   {
+    slug: "glp1-shipping-times",
+    title: "Shipping Times by Provider",
+    blurb: "Each provider's published delivery promise next to what reviewers report, in days.",
+  },
+  {
+    slug: "glp1-price-changes",
+    title: "GLP-1 Price Changes",
+    blurb: "Every verified change to online GLP-1 prices, dated, with before and after.",
+  },
+  {
     slug: "glp1-weight-loss-statistics",
     title: "GLP-1 Price Index & Statistics",
     blurb: "The dated price index, change log, and clinical-trial results.",
