@@ -224,7 +224,8 @@ export default async function StatisticsPage() {
 
         {/* ───── Change log: the public record of what moved, and when ───── */}
         <section className="mb-10" id="change-log">
-          <h2 className="mb-3 text-[22px] font-bold text-[#191919]">Price change log</h2>
+          <h2 className="mb-1 text-[22px] font-bold text-[#191919]">Price change log</h2>
+          <p className="mb-3 text-[14px] text-gray-500">The full dated feed, with each provider&rsquo;s current listing, is on <Link href="/weight-loss/glp1-price-changes" className="font-semibold text-[#0C4B75] hover:underline">GLP-1 price changes</Link>.</p>
           <p className="mb-5 max-w-[680px] text-[15px] leading-[1.7] text-gray-600">
             Every time a verification pass changes a listing, the change is recorded here with the
             date, what we listed before, and what we list now. Newest first.

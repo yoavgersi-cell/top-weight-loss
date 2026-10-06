@@ -25,6 +25,8 @@ const SHARED_ONE_OFF_PAGES = new Set([
   "switch-from-ozempic",
   "how-to-choose-a-glp1-provider",
   "glp1-provider-support",
+  "glp1-shipping-times",
+  "glp1-price-changes",
 ]);
 
 // Duplicate comparison URLs that consolidate onto a stronger canonical page.
