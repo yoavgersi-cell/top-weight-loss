@@ -611,7 +611,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <div className="flex items-center gap-3.5 sm:gap-5">
               <div className="flex h-[44px] w-[96px] shrink-0 items-center sm:h-[50px] sm:w-[130px]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={provider.logo} alt={`${provider.name} logo`} className="max-h-full max-w-full object-contain object-left" />
+                <img src={provider.logo} alt={`${provider.name} logo`} width={130} height={50} className="max-h-full max-w-full object-contain object-left" />
               </div>
               <div className="min-w-0">
                 <h1 className="text-[22px] font-bold text-[#191919] sm:text-[28px]">

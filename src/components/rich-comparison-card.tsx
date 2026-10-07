@@ -73,6 +73,8 @@ export function RichComparisonCard({
               <img
                 src={product.logo}
                 alt={`${product.name} logo`}
+                width={170}
+                height={46}
                 className="max-h-full max-w-full object-contain object-left"
               />
             </div>

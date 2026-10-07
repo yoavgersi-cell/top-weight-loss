@@ -13,12 +13,27 @@ import { VERTICALS } from "@/lib/config";
 // When a vertical has no dedicated lockup yet, the fallback renders the parent
 // logo with a text "| <Vertical>" suffix so every vertical still shows its
 // name in the navbar (matching the designed lockups' layout).
+// Measured from the 800px WebP lockups in /public ("" = parent brand).
+const LOCKUP_HEIGHTS: Record<string, number> = {
+  "": 71,
+  "weight-loss": 54,
+  "hair-loss": 50,
+  hrt: 60,
+  trt: 59,
+  "online-therapy": 47,
+};
+
 export function HubLogo({ vertical }: { vertical: string }) {
   // WebP lockups (800px wide, ~10KB) are tried first; the original PNGs
   // (~250KB each, 1,900px wide) stay as fallbacks and for the schema logo.
   const candidates = vertical
     ? [`/treatmentshub-${vertical}.webp`, `/treatmentshub-${vertical}.png`, `/treatmentshub.webp`, `/treatmentshub.png`]
     : [`/treatmentshub.webp`, `/treatmentshub.png`];
+  // Intrinsic size of each lockup at 800px wide (the PNGs share the aspect
+  // ratio), so the <img> carries width/height for the CLS audit while CSS
+  // still sets the rendered height. Falls back to the parent lockup's size.
+  const lockupHeight = (src: string) =>
+    src.includes(`-${vertical}.`) ? (LOCKUP_HEIGHTS[vertical] ?? LOCKUP_HEIGHTS[""]) : LOCKUP_HEIGHTS[""];
 
   // Track which candidate failed, scoped to the active vertical so the cascade
   // resets on client navigation without a set-state-in-effect.
@@ -72,6 +87,8 @@ export function HubLogo({ vertical }: { vertical: string }) {
         ref={imgRef}
         src={candidates[idx]}
         alt="Treatments Hub"
+        width={800}
+        height={lockupHeight(candidates[idx])}
         fetchPriority="high"
         decoding="async"
         className="h-[22px] w-auto max-w-[290px] object-contain object-left sm:h-[30px] sm:max-w-none"
