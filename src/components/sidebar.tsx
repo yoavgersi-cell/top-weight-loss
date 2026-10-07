@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Shield, Users, Award, Info } from "lucide-react";
 import type { SidebarConfig, Provider } from "@/lib/config";
+import { SIDEBAR_IMAGE_DIMS, sidebarWebp } from "@/lib/sidebar-images";
 
 const ALL_BLOCKS = ["socialProof", "secureBadge", "featuredImage", "editorialReviews", "rankingMethodology", "disclosure"] as const;
 
@@ -54,15 +55,23 @@ export function Sidebar({ config, providers, linkPrefix = "" }: { config: Sideba
         const featured = topProviders[0];
         const imgSrc = featured?.sidebarImage || config.featuredImageUrl;
         const href = featured?.affiliateUrl || config.featuredImageLink;
+        // CMS paths point at the PNG; serve the WebP twin where one exists
+        // (a fifth of the bytes) and keep the PNG as the fallback.
+        const webp = sidebarWebp(imgSrc);
+        const dims = SIDEBAR_IMAGE_DIMS[imgSrc];
         return (
           <a key="featuredImage" href={href} className="block overflow-hidden rounded-xl border border-[#EAEAEA]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={imgSrc}
-              alt={featured ? `${featured.name} - Editor's Featured Provider` : config.featuredImageAlt}
-              className="w-full h-auto"
-              loading="lazy"
-            />
+            <picture>
+              {webp && <source srcSet={webp} type="image/webp" />}
+              <img
+                src={imgSrc}
+                alt={featured ? `${featured.name} - Editor's Featured Provider` : config.featuredImageAlt}
+                {...(dims && { width: dims.width, height: dims.height })}
+                className="w-full h-auto"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
           </a>
         );
       }

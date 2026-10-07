@@ -71,7 +71,7 @@ function ProductCard({
           ) : (
             <div className="flex h-full w-full items-center justify-center rounded-lg bg-gradient-to-br from-[#EAF2F8] to-white">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={provider.logo} alt={`${provider.name} logo`} className="max-h-[36px] max-w-[120px] object-contain" />
+              <img src={provider.logo} alt={`${provider.name} logo`} width={120} height={36} className="max-h-[36px] max-w-[120px] object-contain" />
             </div>
           )}
         </div>

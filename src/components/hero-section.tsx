@@ -29,11 +29,20 @@ export function HeroSection({
       {/* Hero image positioned on the right (omitted when no image is set) */}
       {backgroundImageUrl && (
         <div className="absolute right-[380px] top-0 h-full w-[50%] hidden sm:block">
+          {/* LCP element on desktop. `preload` + fetchPriority="high" puts the
+              preload <link> in <head> with high priority (the deprecated
+              `priority` prop no longer set fetchpriority on it). `sizes`
+              matches the 50%-wide container above the sm breakpoint; below it
+              the wrapper is display:none, so the browser is told 1px and
+              picks the smallest srcset candidate instead of a full-width
+              rendition it never shows. */}
           <Image
             src={backgroundImageUrl}
             alt={imageAlt}
             fill
-            priority
+            preload
+            fetchPriority="high"
+            sizes="(min-width: 640px) 50vw, 1px"
             className="object-contain object-right-top"
           />
         </div>
