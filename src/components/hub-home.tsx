@@ -345,7 +345,7 @@ export async function HubHome() {
   // Editor's picks: the two buyer guides Google has been slow to index on the
   // new domain lead (the hub home IS indexed, so this is the shortest crawl
   // path to them), then the rest in config order.
-  const FEATURED_FIRST = ["best-tirzepatide-online", "zepbound-price-online"];
+  const FEATURED_FIRST = ["glp1-true-cost-month-1-vs-year-one", "best-tirzepatide-online", "zepbound-price-online"];
   const allArticles = wl.articles ?? [];
   const articles = [
     ...FEATURED_FIRST.map((s) => allArticles.find((a) => a.slug === s)).filter((a): a is NonNullable<typeof a> => !!a),
