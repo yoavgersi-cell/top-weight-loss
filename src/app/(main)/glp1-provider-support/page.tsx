@@ -11,6 +11,7 @@ import { TrustpilotWordmark, tpStarColor } from "@/components/trustpilot-rating"
 import { pageReviewSchema } from "@/data/reviewers";
 import { getConfig } from "@/lib/config-store";
 import type { Provider, TrustpilotReview } from "@/lib/config";
+import { SUPPORT_RE, SHIPPING_RE, BILLING_RE, TIMING_RE, MIN_REVIEWS, SMALL_SAMPLE, theme, pct, type Theme } from "@/lib/review-themes";
 
 export const revalidate = 60;
 
@@ -26,20 +27,9 @@ const CANONICAL = "https://www.treatmentshub.com/weight-loss/glp1-provider-suppo
 const PUBLISHED = "2026-10-05";
 const UPDATED = "2026-10-05";
 
-// Classification rules. A review "mentions" a theme when its title or text
-// matches the pattern. Patterns are deliberately broad and are the same for
-// every provider.
-const SUPPORT_RE = /customer service|support|\brep\b|\bagent\b|respon|answer|\bchat\b|called|\bcall\b|phone|email|staff|nurse|care team|coach/i;
-const SHIPPING_RE = /ship|deliver|arriv|tracking|fedex|package|refill/i;
-const BILLING_RE = /charg|bill|refund|cancel|subscription|renew/i;
-// A support-related review that states a time span ("within an hour",
-// "3 days later", "over 24 hours") - the sentence is quoted as written.
-const TIMING_RE = /(within (a few )?(minutes|an hour|hours|\d+ (minutes|hours|days)))|(\b(\d+|two|three|four|five|six|seven|eight|ten) (minutes|hours|days|weeks)\b)|same day|next day|overnight|24 hours/i;
-
-const MIN_REVIEWS = 5;
-const SMALL_SAMPLE = 10;
-
-type Theme = { n: number; pos: number; neg: number };
+// Classification rules live in src/lib/review-themes.ts and are shared with
+// the comparison-page verdict, so every page that reads the captured reviews
+// classifies them identically. See that file for the patterns.
 type Row = {
   provider: Provider;
   n: number;
@@ -57,13 +47,6 @@ function reviewTime(r: TrustpilotReview): number {
   return isNaN(t) ? 0 : t;
 }
 const fmt = (t: number) => new Date(t).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
-const pct = (part: number, whole: number) => (whole ? Math.round((part / whole) * 100) : 0);
-
-function theme(reviews: TrustpilotReview[], re: RegExp): Theme {
-  const hits = reviews.filter((r) => re.test(`${r.title} ${r.text}`));
-  return { n: hits.length, pos: hits.filter((r) => r.rating >= 4).length, neg: hits.filter((r) => r.rating <= 2).length };
-}
-
 function timingSentences(reviews: TrustpilotReview[]): Row["timing"] {
   return reviews
     .filter((r) => SUPPORT_RE.test(`${r.title} ${r.text}`) && TIMING_RE.test(r.text))
