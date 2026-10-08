@@ -37,7 +37,7 @@ const providers: Provider[] = [
     smallLogo: "/logos/winona-icon.svg",
     highlights: [
       "Free physician consultation - pay only if prescribed",
-      "Flat published prices from $39/month; FSA/HSA eligible",
+      "Flat published prices $39-$149/month by product; FSA/HSA eligible",
       "Discreet monthly home delivery",
     ],
     // Operator-supplied tracking link, Oct 8, 2026.
@@ -689,7 +689,7 @@ const reviews: ReviewData[] = [
       "Those who want hormonal and non-hormonal options from one online provider",
     ],
     finalVerdict:
-      "Gala Health offers the standard modern telehealth flow - evaluate online, prescribe if appropriate, ship, follow up - and a 4.6 Trustpilot average across 4,212 reviews says most customers come away satisfied. Read the record with two things in mind: it speaks for the whole platform, mostly GLP-1 customers, and its most recent low-star reviews describe shipment delays and a refund dispute over an annual prepayment, so pay monthly rather than annually until you've had a few smooth deliveries. On price it is the simplest offer in our HRT ranking: a flat $69/month that Gala says never rises when your dose changes, with free 1-2 day shipping - against Winona's per-product list ($39-$89/month) and Midi's insurance route, which can cost less if your plan participates. Prices as published in October 2026; confirm current rates on Gala's site.",
+      "Gala Health offers the standard modern telehealth flow - evaluate online, prescribe if appropriate, ship, follow up - and a 4.6 Trustpilot average across 4,212 reviews says most customers come away satisfied. Read the record with two things in mind: it speaks for the whole platform, mostly GLP-1 customers, and its most recent low-star reviews describe shipment delays and a refund dispute over an annual prepayment, so pay monthly rather than annually until you've had a few smooth deliveries. On price it is the simplest offer in our HRT ranking: a flat $69/month that Gala says never rises when your dose changes, with free 1-2 day shipping - against Winona's per-product list ($39-$149/month) and Midi's insurance route, which can cost less if your plan participates. Prices as published in October 2026; confirm current rates on Gala's site.",
     trustBadges: ["Flat $69/month", "4.6 across 4,212 Trustpilot reviews", "Licensed US providers"],
     // Oct 8, 2026: Trustpilot record, captured reviews and published pricing added.
     updatedAt: "2026-10-08",
@@ -704,11 +704,11 @@ const reviews: ReviewData[] = [
     keyFeatures: [
       "Dedicated entirely to menopause and perimenopause",
       "Free physician consultation - pay only if prescribed",
-      "Flat published prices; FSA/HSA eligible",
-      "Discreet monthly home delivery",
+      "Flat published prices ($39-$149/month by product); FSA/HSA eligible",
+      "Discreet home delivery in under 5 days; 24-hour physician messaging",
     ],
     pricingSummary:
-      "Winona publishes flat monthly prices, rare in menopause care: Estrogen Body Cream, Progesterone Body Cream, combined Estrogen + Progesterone Body Cream and Vaginal Estrogen Cream each run $89/month; Estrogen Tablets are $54/month, Progesterone Capsules $39/month, and the DHEA supplement is $27 per 3 months. The physician consultation is free - you pay only if prescribed and you approve the plan - and purchases are FSA/HSA eligible. Prices as published in August 2026; confirm current rates on Winona's site.",
+      "Winona publishes flat monthly prices, rare in menopause care: Estrogen Body Cream, Progesterone Body Cream, combined Estrogen + Progesterone Body Cream and Vaginal Estrogen Cream each run $89/month; the Estrogen Patch is $149/month; Estrogen Tablets are $54/month, Progesterone Capsules $39/month, and the DHEA supplement is $27 per 3 months. The physician consultation is free - you pay only if prescribed and you approve the plan - purchases are FSA/HSA eligible, Winona says treatment arrives in under 5 days, and physician messaging is available 24 hours. Cream and patch prices re-verified on Winona's site on October 8, 2026; tablet, capsule and DHEA prices as published in August 2026. Confirm current rates on Winona's site.",
     pricingPlans: [
       { name: "Progesterone Capsules", medication: "Micronized progesterone", price: "$39", unit: "/month" },
       { name: "Estrogen Tablets", medication: "Bioidentical estrogen", price: "$54", unit: "/month" },
@@ -716,13 +716,15 @@ const reviews: ReviewData[] = [
       { name: "Progesterone Body Cream", medication: "Micronized progesterone", price: "$89", unit: "/month" },
       { name: "Estrogen + Progesterone Body Cream", medication: "Combined bioidentical formula", price: "$89", unit: "/month" },
       { name: "Vaginal Estrogen Cream", medication: "Localized bioidentical estrogen", price: "$89", unit: "/month" },
+      // Operator screenshot of Winona's product page, Oct 8, 2026.
+      { name: "Estrogen Patch", medication: "Transdermal bioidentical estrogen", price: "$149", unit: "/month" },
       { name: "DHEA", medication: "DHEA supplement (90 capsules)", price: "$27", unit: "/3 months" },
     ],
     treatmentOptions: [
       "Body creams - estrogen, progesterone, or combined",
       "Vaginal estrogen cream",
       "Estrogen tablets and progesterone capsules",
-      "Patch delivery format",
+      "Estrogen patch (transdermal)",
       "DHEA supplement",
     ],
     pros: [
@@ -741,7 +743,7 @@ const reviews: ReviewData[] = [
       "Those who prefer flat direct-pay pricing over insurance paperwork",
     ],
     finalVerdict:
-      "Winona is the focused, direct-pay counterpart to Midi's insurance-based model: a service built entirely around menopause hormone therapy, with a free physician consultation, flat published prices ($39-$89/month by product), FSA/HSA eligibility and a 4.6 Trustpilot average across 8,678 reviews. If insurance coverage matters more than pricing simplicity, compare Midi Health first - otherwise this is the most transparent offer in our HRT ranking.",
+      "Winona is the focused, direct-pay counterpart to Midi's insurance-based model: a service built entirely around menopause hormone therapy, with a free physician consultation, flat published prices ($39-$149/month by product), FSA/HSA eligibility and a 4.6 Trustpilot average across 8,678 reviews. If insurance coverage matters more than pricing simplicity, compare Midi Health first - otherwise this is the most transparent offer in our HRT ranking.",
     trustBadges: ["Menopause-focused physicians", "Licensed US providers", "Discreet delivery"],
     // Oct 8, 2026: Trustpilot record re-verified (8,678 reviews) and 26 new
     // captured reviews added.
@@ -760,7 +762,7 @@ const battles: BattleData[] = [
     description:
       "Midi Health (menopause-trained clinicians, insurance-friendly) vs Winona (body-identical HRT, direct pay, monthly delivery). An honest comparison.",
     intro:
-      "Midi Health and Winona are both built specifically around menopause - which makes this the most instructive matchup in our HRT ranking. The difference is the model. Midi runs like a virtual specialist clinic: menopause-trained clinicians, visits that many major insurance plans cover, and treatment plans that can be hormonal or non-hormonal. Winona runs like a focused product: physician-prescribed, body-identical hormone therapy on a direct-pay subscription, shipped discreetly every month. Winona publishes flat prices ($39-$89/month by product, verified August 2026) with a free consultation; Midi's cost runs through your insurance plan, and we haven't verified its cash pricing. Beyond that, this comparison is about the care model - the thing that actually separates them.",
+      "Midi Health and Winona are both built specifically around menopause - which makes this the most instructive matchup in our HRT ranking. The difference is the model. Midi runs like a virtual specialist clinic: menopause-trained clinicians, visits that many major insurance plans cover, and treatment plans that can be hormonal or non-hormonal. Winona runs like a focused product: physician-prescribed, body-identical hormone therapy on a direct-pay subscription, shipped discreetly every month. Winona publishes flat prices ($39-$149/month by product, re-verified October 2026) with a free consultation; Midi's cost runs through your insurance plan, and we haven't verified its cash pricing. Beyond that, this comparison is about the care model - the thing that actually separates them.",
     verdict:
       "Choose by how you want to pay and how broad you want the care to be. If you have insurance that participates and want a clinician who can also weigh non-hormonal options, Midi Health is the stronger model - specialist care with coverage is rare in this space. If you've decided on hormone therapy and want a dedicated service with predictable direct-pay delivery, Winona's focus is the draw. Confirm current pricing and availability on both sites before deciding.",
     verdictWinnerPoints: [
@@ -790,10 +792,10 @@ const battles: BattleData[] = [
         name: "Paying for It",
         winner: "provider1",
         explanation:
-          "Midi works with many major insurance plans - genuinely unusual for telehealth menopause care, where direct pay is the norm. Winona is direct-pay by design, which is simpler but entirely out of pocket: flat published prices of $39-$89/month by product, and the consultation is free. We haven't verified Midi's cash pricing, so if your plan participates, coverage is the decidable fact; if it doesn't, Winona's published prices are the only known number.",
+          "Midi works with many major insurance plans - genuinely unusual for telehealth menopause care, where direct pay is the norm. Winona is direct-pay by design, which is simpler but entirely out of pocket: flat published prices of $39-$149/month by product, and the consultation is free. We haven't verified Midi's cash pricing, so if your plan participates, coverage is the decidable fact; if it doesn't, Winona's published prices are the only known number.",
         supportingPoints: [
           "Many major insurance plans accepted (Midi)",
-          "$39-$89/mo published, free consultation (Winona)",
+          "$39-$149/mo published, free consultation (Winona)",
         ],
       },
       {
@@ -822,7 +824,7 @@ const battles: BattleData[] = [
       { feature: "Insurance", provider1Value: "Many major plans accepted", provider2Value: "Direct pay", highlight: "provider1" },
       { feature: "Treatment paths", provider1Value: "Hormonal + non-hormonal", provider2Value: "Body-identical hormone therapy", highlight: "provider1" },
       { feature: "Delivery", provider1Value: "Via plan/pharmacy", provider2Value: "Discreet monthly home delivery", highlight: "provider2" },
-      { feature: "Pricing", provider1Value: "Depends on your insurance plan", provider2Value: "$39-$89/mo published; free consult", highlight: "provider2" },
+      { feature: "Pricing", provider1Value: "Depends on your insurance plan", provider2Value: "$39-$149/mo published; free consult", highlight: "provider2" },
       { feature: "Trustpilot", provider1Value: "4.1 (1,707 reviews)", provider2Value: "4.6 (8,678 reviews)", highlight: "provider2" },
     ],
     // Oct 8, 2026: pricing statements corrected (Winona's published prices
