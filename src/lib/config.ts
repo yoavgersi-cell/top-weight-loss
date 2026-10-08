@@ -386,6 +386,10 @@ export const AFFILIATE_PROVIDER_IDS = [
   "dudemeds",
   "petermd",
   "maleexcel",
+  // hrt (operator-supplied tracking links, Oct 8, 2026)
+  "winona",
+  "midi",
+  "gala",
 ];
 
 // Operator policy (Aug 2026): index everything that can honestly be indexed -
