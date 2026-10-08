@@ -443,20 +443,23 @@ const providers: Provider[] = [
   {
     id: "gala",
     name: "Gala",
-    tagline: "Menopause treatment from a published $69/month, all included, no insurance needed",
+    tagline: "Doctor-prescribed hormone therapy at a flat $69/month - no membership, no insurance, no price rise at dose changes",
     logo: "/logos/gala.svg",
     smallLogo: "/logos/gala-icon.svg",
     // Gala's HRT page, operator screenshots Oct 8, 2026: "Menopause treatment
     // from $69/month - all included, no insurance needed", FSA & HSA accepted,
     // estradiol pill or patch, progesterone, vaginal estradiol and
-    // non-hormonal options, "Provider-led", "Cancel anytime". The page's own
+    // non-hormonal options, "Provider-led", "Cancel anytime". Gala's hormone-
+    // therapy landing page (same screenshots): "Hormone Therapy at $69/month -
+    // flat, forever", "no membership fee, no insurance ... no price rise when
+    // your dose changes", "Free, discreet shipping in 1-2 days". The page's own
     // "4.8 on Trustpilot" badge and its outcome statistics (70% / 30% / 1 in
     // 2) are Gala's marketing claims and are NOT reproduced; the verified
     // profile figure (4.6 across 4,212) is what we show.
     highlights: [
-      "Published starting price: $69/month, all included",
+      "Flat $69/month - no price rise when your dose changes",
       "Estradiol pill or patch, progesterone, vaginal estradiol, non-hormonal options",
-      "No insurance needed; FSA/HSA accepted; cancel anytime",
+      "Free discreet shipping in 1-2 days; FSA/HSA accepted; cancel anytime",
     ],
     // Operator-supplied tracking link, Oct 8, 2026.
     affiliateUrl: "https://track.revoffers.com/aff_c?offer_id=1576&aff_id=12904&url_id=12556",
@@ -643,25 +646,25 @@ const reviews: ReviewData[] = [
     slug: "gala",
     providerId: "gala",
     shortSummary:
-      "Telehealth menopause care from a published $69/month, all included - estradiol pill or patch, progesterone, vaginal estradiol and non-hormonal options after an online provider review.",
+      "Doctor-prescribed hormone therapy at a flat $69/month - no membership, no insurance, no price rise at dose changes - with estradiol pill or patch, progesterone, vaginal estradiol and non-hormonal options after an online provider review.",
     reviewIntro:
-      "Gala Health runs a straightforward telehealth model for hormone care: an online evaluation reviewed by a licensed provider, prescription treatment shipped to your door if appropriate, and ongoing management through its app. The HRT line is priced simply: menopause treatment from a published $69/month, all included, no insurance needed, FSA/HSA accepted, cancel anytime - with estradiol as a pill or patch, progesterone, vaginal estradiol and non-hormonal options on the menu. Its claimed Trustpilot profile averages 4.6 across 4,212 reviews - a large record, with one honest caveat: the profile covers the whole Gala platform, and most recent reviewers are GLP-1 weight-loss customers rather than menopause patients. The recent page splits the way a high-volume telehealth service often does: praise for a quick intake, an easy app and responsive support, next to a cluster of 1- and 2-star reviews about fulfillment delays, a wrong-address shipment and a disputed annual prepayment refund - all quoted in full below. Gala publishes only a starting price, not a per-product list, so the exact monthly cost depends on what a provider prescribes.",
+      "Gala Health runs a straightforward telehealth model for hormone care: an online evaluation reviewed by a licensed provider, prescription treatment shipped to your door if appropriate, and ongoing management through its app. The HRT line is priced as simply as it gets: $69/month, described on Gala's hormone-therapy page as flat for as long as you stay - no membership fee, no insurance, no price rise when your dose changes, free discreet shipping in 1-2 days, FSA/HSA accepted, cancel anytime - with estradiol as a pill or patch, progesterone, vaginal estradiol and non-hormonal options on the menu. Its claimed Trustpilot profile averages 4.6 across 4,212 reviews - a large record, with one honest caveat: the profile covers the whole Gala platform, and most recent reviewers are GLP-1 weight-loss customers rather than menopause patients. The recent page splits the way a high-volume telehealth service often does: praise for a quick intake, an easy app and responsive support, next to a cluster of 1- and 2-star reviews about fulfillment delays, a wrong-address shipment and a disputed annual prepayment refund - all quoted in full below. Gala doesn't publish a per-product price list the way Winona does; its promise is one flat number, with the exact plan shown before you pay.",
     keyFeatures: [
-      "Published starting price: $69/month, all included",
+      "Flat $69/month - no membership fee, no price rise when your dose changes",
       "Estradiol pill or patch, progesterone, vaginal estradiol, non-hormonal options",
-      "Provider-led online evaluation; no insurance needed",
-      "FSA/HSA accepted; cancel anytime",
+      "100% online: telehealth visit, prescription and free discreet 1-2 day shipping",
+      "No insurance needed; FSA/HSA accepted; cancel anytime",
     ],
     pricingSummary:
-      "Gala publishes a single starting price for its menopause line: treatment from $69/month, all included, with no insurance needed, FSA/HSA accepted and the ability to cancel anytime. It does not publish per-product prices the way Winona does, so the exact monthly cost depends on what a provider prescribes after the online assessment. Price as published on Gala's HRT page in October 2026; confirm current rates on Gala's site.",
+      "Gala prices hormone therapy at $69/month and describes it as flat for as long as you stay: no membership fee, no insurance to deal with, and no price rise when your dose changes, with the exact plan and price shown before you pay. Shipping is free and discreet in 1-2 days; purchases are FSA/HSA eligible and you can cancel anytime. Gala's main site phrases it as 'from $69/month', its hormone-therapy page as a flat $69 - we quote both. It does not publish per-product prices the way Winona does. Prices as published in October 2026; confirm current rates on Gala's site.",
     pricingPlans: [
       {
         name: "Menopause treatment",
         medication: "Estradiol (pill or patch), progesterone, vaginal estradiol or non-hormonal options, as prescribed",
         price: "$69",
         unit: "/month",
-        cadence: "starting price, all included",
-        highlights: ["No insurance needed", "FSA/HSA accepted", "Cancel anytime"],
+        cadence: "flat - no price rise at dose changes",
+        highlights: ["No membership fee, no insurance", "Free discreet shipping in 1-2 days", "FSA/HSA accepted; cancel anytime"],
       },
     ],
     treatmentOptions: [
@@ -671,13 +674,13 @@ const reviews: ReviewData[] = [
       "Non-hormonal prescription options",
     ],
     pros: [
-      "Published starting price of $69/month, all included - no insurance needed",
+      "Flat $69/month with no price rise at dose changes - no membership, no insurance",
       "Full menu: estradiol pill or patch, progesterone, vaginal estradiol and non-hormonal options",
       "4.6 Trustpilot average across 4,212 reviews (platform-wide)",
-      "Fully online, provider-led process; FSA/HSA accepted; cancel anytime",
+      "Fully online, provider-led process; free 1-2 day shipping; FSA/HSA accepted; cancel anytime",
     ],
     cons: [
-      "Only a starting price is published - no per-product prices like Winona's",
+      "No per-product price list like Winona's - one flat number, plan shown at checkout",
       "Recent 1- and 2-star reviews cite fulfillment delays and a disputed annual-prepay refund",
       "Trustpilot record covers all of Gala, mostly GLP-1 customers - not menopause care specifically",
     ],
@@ -686,8 +689,8 @@ const reviews: ReviewData[] = [
       "Those who want hormonal and non-hormonal options from one online provider",
     ],
     finalVerdict:
-      "Gala Health offers the standard modern telehealth flow - evaluate online, prescribe if appropriate, ship, follow up - and a 4.6 Trustpilot average across 4,212 reviews says most customers come away satisfied. Read the record with two things in mind: it speaks for the whole platform, mostly GLP-1 customers, and its most recent low-star reviews describe shipment delays and a refund dispute over an annual prepayment, so pay monthly rather than annually until you've had a few smooth deliveries. On price it sits between the other two: a published $69/month all-included starting point beats nothing-published, but Winona's per-product list ($39-$89/month) tells you exactly what you'll pay, and Midi's insurance route can cost less if your plan participates. Prices as published in October 2026; confirm current rates on Gala's site.",
-    trustBadges: ["From $69/month, all included", "4.6 across 4,212 Trustpilot reviews", "Licensed US providers"],
+      "Gala Health offers the standard modern telehealth flow - evaluate online, prescribe if appropriate, ship, follow up - and a 4.6 Trustpilot average across 4,212 reviews says most customers come away satisfied. Read the record with two things in mind: it speaks for the whole platform, mostly GLP-1 customers, and its most recent low-star reviews describe shipment delays and a refund dispute over an annual prepayment, so pay monthly rather than annually until you've had a few smooth deliveries. On price it is the simplest offer in our HRT ranking: a flat $69/month that Gala says never rises when your dose changes, with free 1-2 day shipping - against Winona's per-product list ($39-$89/month) and Midi's insurance route, which can cost less if your plan participates. Prices as published in October 2026; confirm current rates on Gala's site.",
+    trustBadges: ["Flat $69/month", "4.6 across 4,212 Trustpilot reviews", "Licensed US providers"],
     // Oct 8, 2026: Trustpilot record, captured reviews and published pricing added.
     updatedAt: "2026-10-08",
   },
