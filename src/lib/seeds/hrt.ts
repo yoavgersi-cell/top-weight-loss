@@ -43,11 +43,104 @@ const providers: Provider[] = [
     // Operator-supplied tracking link, Oct 8, 2026.
     affiliateUrl: "https://track.revoffers.com/aff_c?offer_id=495&aff_id=12904",
     ctaText: "Visit Site",
-    // Operator-verified from Winona's claimed Trustpilot profile
-    // ("By Winona", Aug 2026 screenshots): 4.6 average across 8,138 reviews.
+    // Operator-verified from Winona's claimed Trustpilot profile ("By Winona",
+    // claimed May 2021): 4.6 average across 8,678 reviews per the operator's
+    // Oct 8, 2026 screenshots (was 8,138 in the Aug 2026 capture). The 26
+    // October-page reviews below were captured in full, including the two
+    // 3-star ones; the four August captures follow them. Names as first name
+    // + initial; dates are Trustpilot's experience dates as displayed.
     trustpilotRating: "4.6",
-    trustpilotReviewCount: "8,138",
+    trustpilotReviewCount: "8,678",
     trustpilotReviews: [
+      { title: "Confident care and medications", text: "The comunication between doctors and patients is wonderful. The doctors are very emphatic.", name: "Lourdes P.", location: "PR", rating: 5, date: "Oct 7, 2026" },
+      { title: "Everything has been as expected", text: "Everything has been as expected! Feeling like my old self again!", name: "Jodi S.", location: "US", rating: 5, date: "Oct 7, 2026" },
+      {
+        title: "Overall pleased with the service",
+        text: "Overall pleased with the service. My one complaint is that meds are reordered and charged without a notice it is about to happen.",
+        name: "Alecia E.",
+        location: "US",
+        rating: 4,
+        date: "Oct 7, 2026",
+      },
+      {
+        title: "I was suffering through the change and...",
+        text: "I was suffering through the change and having hot flashes all day, every day, along with all of the other side effects. As soon as I started my regimen, I have been symptom free and living my best life.",
+        name: "Traci M.",
+        location: "US",
+        rating: 5,
+        date: "Oct 7, 2026",
+      },
+      { title: "Easy to get in touch and get help from...", text: "Easy to get in touch and get help from Winona Doctor.", name: "Donna", location: "US", rating: 5, date: "Oct 7, 2026" },
+      { title: "You've been prompt in your replies and...", text: "You've been prompt in your replies and I feel I've been listened to regarding my personalized plan.", name: "Anne", location: "US", rating: 5, date: "Oct 7, 2026" },
+      { title: "They were very responsive the process...", text: "They were very responsive the process was very smooth. Every communication I sent was responded promptly.", name: "Ria K.", location: "US", rating: 5, date: "Oct 7, 2026" },
+      {
+        title: "Closer to a 4 star rating but I'm still...",
+        text: "Closer to a 4 star rating but I'm still in the beginning stages. The dr has been very responsive and we may still have to make adjustments but I can definitely notice it helping. I love the fact that I don't have to block out large amounts of time to set in a drs office.",
+        name: "Kim R.",
+        location: "US",
+        rating: 3,
+        date: "Oct 7, 2026",
+      },
+      {
+        title: "I've found my fountain of youth",
+        text: "I've found my fountain of youth. Just kidding, but kinda yes lol. My irritation, anxiety, memory, and my night sweats are finally under control. There's really no reason to suffer anymore!",
+        name: "Lynn O.",
+        location: "US",
+        rating: 5,
+        date: "Oct 6, 2026",
+      },
+      { title: "High price and ZERO improvement.", text: "High price and ZERO improvement.", name: "Nicole N.", location: "US", rating: 3, date: "Oct 6, 2026" },
+      {
+        title: "I have recommended Winona to all of my...",
+        text: "I have recommended Winona to all of my perimenopausal friends! The questionnaires are easy to navigate, and my Dr. is fantastic. She responds to me same day with any questions or concerns I have. Where else can you get that?!",
+        name: "Jill J.",
+        location: "US",
+        rating: 5,
+        date: "Oct 6, 2026",
+      },
+      { title: "Immediate response from Doctors", text: "Immediate response from Doctors", name: "Trenny D.", location: "US", rating: 4, date: "Oct 6, 2026" },
+      { title: "Almost 3 months now with Winona", text: "Almost 3 months now with Winona, so far so good!", name: "Tracey J.", location: "US", rating: 5, date: "Oct 1, 2026" },
+      { title: "Very quick and easy", text: "Very quick and easy. Answered all my questions. Service is amazing.", name: "customer", location: "US", rating: 5, date: "Oct 1, 2026" },
+      { title: "Fast and friendly customer service and...", text: "Fast and friendly customer service and support! I'm feeling like myself again, no more hot flashes, body aches and brain fog!", name: "Chris", location: "US", rating: 5, date: "Oct 1, 2026" },
+      {
+        title: "I love that it was easy going online...",
+        text: "I love that it was easy going online expressing what my concerns or questions were and getting to try a product delivered to me. I gave it some time and I don't know that it helped with my sleep or my activity level so I will probably try something different but it was worth a try.",
+        name: "Cherie B.",
+        location: "US",
+        rating: 5,
+        date: "Sep 30, 2026",
+      },
+      { title: "Everything works as it should!", text: "Everything works as it should!", name: "Stacy B.", location: "US", rating: 5, date: "Sep 30, 2026" },
+      {
+        title: "The entire process has been easy",
+        text: "The entire process has been easy! The support I got from the Winona team was great! The Dr. was easy to work with and she suggested things for me I did not even think of! I would Suggest this app to everyone!",
+        name: "Annie S.",
+        location: "US",
+        rating: 5,
+        date: "Sep 30, 2026",
+      },
+      { title: "Winona saved my life!", text: "The hormone replacement therapy is a God send. The meds were so easy to get and I couldn't be happier. I love the service and have recommended it to everyone I know.", name: "Veronica O.", location: "US", rating: 5, date: "Sep 30, 2026" },
+      { title: "I feel like I'm back to my old self", text: "I feel like I'm back to my old self. So happy I started treatment with Winona.", name: "Lamista M.", location: "US", rating: 5, date: "Sep 30, 2026" },
+      { title: "I'm starting my second round of HRT and...", text: "I'm starting my second round of HRT and have noticed a great improvement in my health and well-being.", name: "Mandy S.", location: "US", rating: 5, date: "Sep 30, 2026" },
+      { title: "Highly Recommend", text: "No waiting. No pressure to buy more supplements or products. Supportive. Emails and questions are answered within an hour. Very happy with Winona!", name: "Barbara H.", location: "US", rating: 5, date: "Sep 28, 2026" },
+      { title: "I was able to get my prescriptions...", text: "I was able to get my prescriptions without any issues the Doctor that prescribed them is very helpful and I think I am feeling better,", name: "Maria T.", location: "US", rating: 5, date: "Sep 28, 2026" },
+      { title: "Easy to use website and I'm starting to...", text: "Easy to use website and I'm starting to feel better. My libido is back! I referred my sister in law.", name: "Marcy L.", location: "US", rating: 5, date: "Aug 8, 2026" },
+      {
+        title: "Easy to work with and helped me quickly...",
+        text: "Easy to work with and helped me quickly when other doctors weren't listening to my symptoms and would only prescribe based on blood work, I have high fluctuations so bloodwork is always inaccurate and that was just delaying my treatment. I feel like a totally new person now",
+        name: "Jessica N.",
+        location: "US",
+        rating: 5,
+        date: "Jul 23, 2026",
+      },
+      {
+        title: "I needed help and Winona did that for me.",
+        text: "I was having extreme menopausal symptoms and was so hesitant to try HRT but now i have my life back. The process was easy. Everyone including the doctor, was great. One minor adjustment with meds and i am free to live again. I would recommend ten times over. God bless",
+        name: "Vickie S.",
+        location: "US",
+        rating: 5,
+        date: "Jul 10, 2026",
+      },
       {
         title: "Legit",
         text: "Legit. doctors, easy to use would recommend",
@@ -97,10 +190,214 @@ const providers: Provider[] = [
     affiliateUrl: "https://track.revoffers.com/aff_c?offer_id=1558&aff_id=12904",
     ctaText: "Visit Site",
     // Operator-verified from Midi Health's claimed Trustpilot profile
-    // (Aug 2026 screenshots): 4.1 average across 1,572 reviews.
+    // (claimed Oct 2023): 4.1 average across 1,707 reviews per the operator's
+    // Oct 8, 2026 screenshots (was 1,572 in the Aug 2026 capture). The 32
+    // reviews from the October page were captured in full - three 1-star, one
+    // 2-star, two 3-star included - followed by the five August captures.
+    // Names as first name + initial; dates are the experience dates shown.
     trustpilotRating: "4.1",
-    trustpilotReviewCount: "1,572",
+    trustpilotReviewCount: "1,707",
     trustpilotReviews: [
+      { title: "Understanding an knowledgeable", text: "Understanding an knowledgeable", name: "Felicia M.", location: "US", rating: 5, date: "Oct 6, 2026" },
+      { title: "Midi Health has been life changing", text: "Midi Health has been life changing. I can't recommend them enough. The staff is great and their portal is easy to use.", name: "Lisa", location: "US", rating: 5, date: "Oct 6, 2026" },
+      {
+        title: "What a disappointment",
+        text: "What a disappointment. Stephanie, my provider, listened to my history, then suggested a course of treatment that I said I had already done with low results. I have PMDD and progesterone gives me anxiety, so asked what the thinking is to put me back on it. \"That's what we do\" and she shut down and stopped talking. The whole expressive tone on her face shifted. I tried to open the conversation back up, but she became defensive and quiet. \"Sorry, I don't have an answer for you. I wish you luck on your journey.\" And that was it. No offer to consult with someone else, refer me to someone more versed in my needs, or get back to me after doing some exploring. Just total shut down. I was not expecting to feel so dismissed by a company started by women for women. But, I have been left feeling rather abandoned. I wish there was a way to contact the company prior to making an appointment to ask if my case is something they have experience with. But there is no availability for that, and no way to choose which provider you see. The only positive is having a virtual visit, and being covered under insurance.",
+        name: "customer",
+        location: "US",
+        rating: 2,
+        date: "Oct 6, 2026",
+      },
+      {
+        title: "Visit-Bloodwork-Visit= results. Worth the wait.",
+        text: "Between my first visit, all the blood work and my second visit to get the results was a bit lengthy. BUT all worth it. I felt my clinician was knowledgeable. She came up with a health care plan that I was very pleased with. I have high hopes. Anxious to start my Journey to feeling better..",
+        name: "Kathy F.",
+        location: "US",
+        rating: 5,
+        date: "Oct 5, 2026",
+      },
+      {
+        title: "I was looking for a doctor who could...",
+        text: "I was looking for a doctor who could prescribe the estrogen I had always used since I had a hysterectomy at 16 years old due to ovarian cancer. My oncologist of 30 years went \"concierge\" and I could no longer afford her. I was having such bad night sweats and hot flashes that life became unbearable! My new GYN was too afraid to give me hormones due to my age. Somehow- a google search I think- I came across Midi and it has changed my life!! The PAs are amazing and they care about your quality of life!! I feel so much better and like my old self again!",
+        name: "Debbie B.",
+        location: "US",
+        rating: 5,
+        date: "Oct 5, 2026",
+      },
+      {
+        title: "I am so happy",
+        text: "I am so happy, I'm 47 years old and this is the first time I have felt heard. This is the first time people actually cared how I felt and wanted to help me. And not just gaslight me and make me feel like I was crazy. I would 100% recommend and do recommend all the women in my life to use midi",
+        name: "Nirvana L.",
+        location: "US",
+        rating: 5,
+        date: "Oct 5, 2026",
+      },
+      {
+        title: "quick, fast very convenient and very friendly",
+        text: "I love the flexibility. I had my appointment telehealth in my car. I was going from one place to another place and could not make the meeting on time so I pulled over and had my meeting via telehealth from my car. It was quick, to the point and got everything i needed addressed. No need to go in and wait at a doctor's office.",
+        name: "Mariana M.",
+        location: "US",
+        rating: 5,
+        date: "Oct 5, 2026",
+      },
+      {
+        title: "It's hard to get really personal about...",
+        text: "It's hard to get really personal about our most intimate health issues over a computer camera. Without the in-person care, it can only be so specific. And the 15-minute time slot constraint can really be felt, especially when one has detailed questions. I often feel I'm not getting all the info or guidance I could get.",
+        name: "Angel D.",
+        location: "US",
+        rating: 3,
+        date: "Oct 4, 2026",
+      },
+      { title: "The clinicians are great", text: "The clinicians are great. Highly recommend MIDI Health.", name: "Donna C.", location: "US", rating: 5, date: "Oct 2, 2026" },
+      { title: "Top tier care", text: "Midi was extremely quick and easy to set up an appointment and the care given was excellent. I felt heard for the first time in my menopause journey.", name: "Jane", location: "US", rating: 5, date: "Oct 2, 2026" },
+      {
+        title: "Kind, Caring and Compassionate Care",
+        text: "My primary turned me down on helping me with some issues because it was \"old age\" and I needed to learn to cope with it. After research, I found this place with an NP and decided to try it. I love my NP and highly would recommend her to anyone. The video teleahealth is wonderful and I'm on the road to getting back to where I hoped to be. She is kind, compassionate and listens to everything before making the decision for my plan.",
+        name: "Michael C.",
+        location: "US",
+        rating: 5,
+        date: "Oct 2, 2026",
+      },
+      { title: "Amazing !!", text: "My provider was friendly , understanding and thorough . She made sure I understood everything she recommended and how/why she recommended it .", name: "Carmen", location: "US", rating: 5, date: "Oct 2, 2026" },
+      {
+        title: "Hidden costs and misleading offers that...",
+        text: "Hidden costs and misleading offers that this service is covered and in services with my insurance plan. Months later they charged me $250 for a very short Telehealth visit! I believe this is a deliberate attempt to make an apt with them. Higher than a regular Dr visit. STAY AWAY",
+        name: "Esther K.",
+        location: "US",
+        rating: 1,
+        date: "Oct 2, 2026",
+      },
+      {
+        title: "Convenience and Excellent Provider and Care",
+        text: "The provider has been amazing with listening and changing my treatment plan as needed. She has been friendly, kind, and clearly knowledgeable. She has been careful to make sure my medications are safe, monitor side effects, ensure they are working as they should, and make sure I have refills as needed. The convenience has just been amazing too!",
+        name: "Erin W.",
+        location: "US",
+        rating: 5,
+        date: "Oct 1, 2026",
+      },
+      {
+        title: "What made my experience great is that...I feel heard and seen!",
+        text: "What made my experience great is that they listened to me! I felt heard and seen! My concerns were not dismissed. I was suffering in silence for five years and no one would listen or believe me. The treatment plan put in place for me is changing my life! I am now mending relationships and getting my life back thanks to MIDI Health.",
+        name: "Terri W.",
+        location: "US",
+        rating: 5,
+        date: "Oct 1, 2026",
+      },
+      {
+        title: "I feel incredibly fortunate to have a...",
+        text: "I feel incredibly fortunate to have a knowledgeable, thorough, compassionate clinician who listens to me, takes my concerns seriously, and has helped me become much more proactive and up-to-date with my overall health - not just my peri-menopause symptoms!",
+        name: "Jane A.",
+        location: "US",
+        rating: 5,
+        date: "Sep 30, 2026",
+      },
+      {
+        title: "My health care provider (Holly)...",
+        text: "My health care provider (Holly) listened to my issues and took the time to explain them and address them. She made sure to provide a treatment that my insurance covers, and I am so happy to have received help. I am already feeling the effects of my treatment and I appreciate it a lot.",
+        name: "Julie H.",
+        location: "US",
+        rating: 5,
+        date: "Sep 29, 2026",
+      },
+      {
+        title: "My provider",
+        text: "My provider, Jayne Fortenberry, was kind and very informative! She listened to me and made me feel at ease with the process of starting HRT. I feel so grateful for her! The whole process was seamless!",
+        name: "Candita S.",
+        location: "US",
+        rating: 5,
+        date: "Sep 29, 2026",
+      },
+      {
+        title: "I was a Person and not just a Patient",
+        text: "Since going to the doctor on my own as a young adult until 40+, I have never spent more time with a doctor who saw me as a person and who truly heard me. From scheduling to logging off of the appointment was done with ease. My provider got to know me more in my 30 minute visit than my own PCP. She was very thorough, patient, knowledgeable and willing to see me as person and not just the next patient. I know it's crazy to say but I'm actually excited for my next appointment.",
+        name: "Holman",
+        location: "US",
+        rating: 5,
+        date: "Sep 29, 2026",
+      },
+      { title: "No BS", text: "There is no re-explaining, no over justifying. My clinician listened, she educated, we discussed, then there was a clear plan with clear check-ins. No BS, just women getting healthcare.", name: "Erin O.", location: "US", rating: 5, date: "Sep 28, 2026" },
+      {
+        title: "Feeling great!",
+        text: "My provider was very attentive, listening to my concerns and explaining different treatment options thoroughly, including possible side effects. She is personable and remembers me from one visit to the next. My treatment plan has already alleviated so many of my symptoms. The system is easy to access and use.",
+        name: "Karen M.",
+        location: "US",
+        rating: 5,
+        date: "Sep 28, 2026",
+      },
+      { title: "Recommend Midi 100%", text: "Extremely happy with their service, in the short period I have been with them they have helped me substantially recommend them.", name: "Carmen", location: "US", rating: 5, date: "Sep 28, 2026" },
+      {
+        title: "I was falling apart and was suspicious...",
+        text: "I was falling apart and was suspicious it was perimenopause- hearing that my horrible dizziness was actually low estrogen was such a relief about a year ago. Since then this journey hasn't been easy but if not for Midi I would have fallen apart. There are so few clinicians caught up about perimenopause. I hope Midi continues the important work it is doing but doesn't let their clinicians get burned out- an army is needed to help the huge gap in care for women!!",
+        name: "Natalie",
+        location: "US",
+        rating: 5,
+        date: "Sep 26, 2026",
+      },
+      {
+        title: "Midi Health gets it. Highly recommend.",
+        text: "I recommend Midi Health to anyone I meet that is dealing with symptoms of perimenopause. Tried several other women's health virtual clinics- this is far superior both on ease to work with and their clinical support.",
+        name: "Crosky C.",
+        location: "US",
+        rating: 5,
+        date: "Sep 25, 2026",
+      },
+      {
+        title: "Disappointed",
+        text: "I loved the actual clinical visit. The APRN was warm, friendly, and knowledgeable. My complaint? The communication via the portal. I came to Midi at the end of my rope. I couldn't have made it any clearer about how I was feeling. To write a script that is on back order...Shameful. To basically dangle a carrot in front of a menopausal woman is unkind. I requested an alternative med via the portal. No response. I updated my pharmacy information in my message... That was reviewed and updated. My actual concern? Not so much. I called Midi. I was told by another provider that she would elevate my concerns and make sure the provider reached out. It didn't happen. Very frustrating to know that 2 miles from house, sitting on a pharmacy counter, there's a medication that could help me, but because my provider only wrote for brand name, I couldn't get the generic. I feel very deflated and unheard. I messaged 3 times, called 3 times. Nada. If this relationship is to continue, you all need to do better with your communication.",
+        name: "Laura B.",
+        location: "US",
+        rating: 3,
+        date: "Sep 25, 2026",
+      },
+      {
+        title: "Finally Heard, Finally Hopeful: My Midi Experience",
+        text: "For the first time in years - maybe even decades - I finally felt like I was truly being heard by a healthcare provider. My experience with my Midi provider was exceptional. She listened, validated my concerns, and communicated with such authenticity, compassion, and understanding. I never felt rushed, dismissed, or like I had to convince someone that what I was experiencing was real. I left my appointment feeling something I haven't felt in a very long time: hope. Hope that I finally have someone partnering with me to help me feel like myself again. I am so grateful for this experience. Sometimes, simply being heard and knowing someone genuinely cares makes all the difference. For the first time in a long time, I truly believe I'm on the path to getting back to me.",
+        name: "Jennifer B.",
+        location: "US",
+        rating: 5,
+        date: "Sep 24, 2026",
+      },
+      { title: "Easy to access", text: "Easy to access, great clinicians and same day prescriptions for my needs.", name: "J. C.", location: "US", rating: 5, date: "Sep 24, 2026" },
+      {
+        title: "Avoid like the plague",
+        text: "Avoid like the plague! They assigned me a Clinician, with zero personality, communication skills or empathy, then charged my insurance company for a \"mental health\" assessment on top of the cost for the virtual visit. The \"mental health\" assessment was not mentioned in any of their fees. Also, the Clinician assigned wasn't even credentialed to prescribe BHRT. Convenience does not equal quality!",
+        name: "Debbie C.",
+        location: "US",
+        rating: 1,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "Beyond Grateful",
+        text: "I was diagnosed with Premature Ovarian Insufficiency (POI) in my mid-30s, but no one ever explained what that meant for my long-term health. Every provider has treated my condition as if POI was just early menopause, and I've spent years feeling exhausted, foggy, and unlike myself. My Midi provider, Tracy Pozar, NP, was the first person to connect all the dots, explain POI as an endocrine condition, and start me on a treatment plan that actually addresses the root cause. For the first time, in a long time, I feel hopeful and truly supported.",
+        name: "mrsdsmith",
+        location: "US",
+        rating: 5,
+        date: "Sep 23, 2026",
+      },
+      {
+        title: "Ahhhhhhmazing!",
+        text: "Good goddess, I should have done this years ago! The knowledge, patience, and understanding that my clinician offered was bar none. They were incredibly thorough, patient, kind, fun, treated me like a human, and knew exactly how to get to the bottom of the struggles that I was having. It's only been a handful of days and I already feel like a new person. Thank you, thank you thank you!!",
+        name: "JC",
+        location: "US",
+        rating: 5,
+        date: "Sep 22, 2026",
+      },
+      {
+        title: "No-show clinician, no follow-up, and forced to redo all my paperwork",
+        text: "I was logged in five minutes before my scheduled appointment with everything completed. No one joined. I emailed support while waiting, and their answer was to refresh my browser and check my camera settings. I called as they suggested, and the person I spoke with couldn't help and said the scheduling team would get back to me. No one ever did. Instead, a new appointment was scheduled for me without anyone checking my availability. When I tried to pick a time that worked, the system made me redo all of my intake paperwork, even though I had already completed it for the original appointment. Midi sent an apology and offered to help me reschedule, but when I tried again, it still required me to redo all of the forms. At that point I decided not to move forward. I was excited to talk to menopause experts, but the missed appointment, lack of follow-through, and repeated paperwork made this a very poor first experience. I'll be finding another provider",
+        name: "Jennifer K.",
+        location: "US",
+        rating: 1,
+        date: "Sep 21, 2026",
+      },
+      {
+        title: "Heard, Understood and Supported",
+        text: "As a woman in my early 50s who was surgically induced into menopause more than 10 years ago, I had become exhausted from constantly having to advocate for myself just to get and maintain hormone replacement therapy. Making an appointment with Midi was honestly one of the best decisions I've made for my health. They ordered an extensive panel of bloodwork that helped validate the concerns I had been trying to communicate for years. Instead of dismissing my symptoms, they listened, explained my options, and worked with me to determine what needed to be addressed and how. The follow-up care has also been wonderful. After years of feeling dismissed and, at times, gaslit by clinicians, I finally feel heard, understood, and supported. I'm so grateful to have found a provider that truly listens and takes my concerns seriously. I only wish I had found Midi sooner!",
+        name: "Jessica P.",
+        location: "US",
+        rating: 5,
+        date: "May 29, 2026",
+      },
       {
         title: "Scheduling a telehealth appointment was refreshingly simple",
         text: "The process was straightforward and quick - I was able to book a visit without any hassle or long waits. The clinician I met with was wonderful. She was kind, compassionate, and really took the time to listen and understand what I needed. She clearly knew the issues women face in midlife and approached everything with empathy and practical solutions.",
@@ -297,7 +594,7 @@ const reviews: ReviewData[] = [
     shortSummary:
       "Virtual, insurance-friendly care for perimenopause and menopause with clinicians trained in midlife women's health.",
     reviewIntro:
-      "Midi Health is a virtual clinic built specifically around perimenopause and menopause - \"Insurance-Covered Hormone Replacement Therapy\" is literally its headline. Care starts with an in-depth virtual visit where a clinician reviews your symptoms, health history and genetics before deciding whether HRT is appropriate; Midi itself notes HRT \"is not appropriate for all\", which is the right posture. Treatment paths span estradiol gels, creams, patches and pills, micronized progesterone, testosterone where clinically appropriate, and non-hormonal prescriptions when hormones aren't the answer. Midi says more than 230,000 women use its midlife care, and its claimed Trustpilot profile averages 4.1 across 1,572 reviews. This review covers the model and who it fits.",
+      "Midi Health is a virtual clinic built specifically around perimenopause and menopause - \"Insurance-Covered Hormone Replacement Therapy\" is literally its headline. Care starts with an in-depth virtual visit where a clinician reviews your symptoms, health history and genetics before deciding whether HRT is appropriate; Midi itself notes HRT \"is not appropriate for all\", which is the right posture. Treatment paths span estradiol gels, creams, patches and pills, micronized progesterone, testosterone where clinically appropriate, and non-hormonal prescriptions when hormones aren't the answer. Midi says more than 230,000 women use its midlife care, and its claimed Trustpilot profile averages 4.1 across 1,707 reviews (re-verified October 8, 2026). The October page explains both the 4.1 and the loyalty: most reviews are women saying a Midi clinician was the first to listen after years of being dismissed, and a steady minority describe the other side - an unexpected $250 visit charge after being told insurance covered it, an insurance-billed assessment not listed in the fees, a no-show appointment, a back-ordered prescription with no portal reply. All of it is quoted below. This review covers the model and who it fits.",
     keyFeatures: [
       "Clinicians trained in midlife women's health",
       "Hormonal and non-hormonal treatment paths",
@@ -316,20 +613,24 @@ const reviews: ReviewData[] = [
       "Menopause-specialist care, not general telehealth",
       "Insurance accepted in many cases - rare in this space",
       "Both hormonal and non-hormonal paths after review",
-      "4.1 Trustpilot average across 1,572 reviews",
+      "4.1 Trustpilot average across 1,707 reviews",
     ],
     cons: [
       "We haven't verified current out-of-pocket pricing",
       "Availability and insurance participation vary by state and plan",
+      "Recent 1-star reviews cite surprise billing (a $250 visit, an unlisted assessment charge), a no-show clinician and unanswered portal messages",
+      "15-minute slots feel short to some reviewers; you don't choose your clinician",
     ],
     bestFor: [
       "Women who want specialist menopause care online",
       "Anyone who wants to use insurance rather than pay cash",
     ],
     finalVerdict:
-      "Midi Health is the insurance-friendly specialist of this ranking: dedicated menopause clinicians, a genuinely broad treatment menu (from estradiol formats through testosterone to non-hormonal prescriptions), and coverage through many major plans - backed by a 4.1 Trustpilot average across 1,572 reviews whose recent entries consistently praise clinicians who listen and know midlife medicine. Confirm your plan's participation and current costs on Midi's site - and if you'd rather have simple cash pricing, compare Winona's flat published prices.",
+      "Midi Health is the insurance-friendly specialist of this ranking: dedicated menopause clinicians, a genuinely broad treatment menu (from estradiol formats through testosterone to non-hormonal prescriptions), and coverage through many major plans - backed by a 4.1 Trustpilot average across 1,707 reviews whose recent entries consistently praise clinicians who listen and know midlife medicine. Confirm your plan's participation and current costs on Midi's site - and if you'd rather have simple cash pricing, compare Winona's flat published prices.",
     trustBadges: ["Menopause-trained clinicians", "Licensed US providers", "Insurance-friendly"],
-    updatedAt: UPDATED,
+    // Oct 8, 2026: Trustpilot record re-verified (1,707 reviews) and 32 new
+    // captured reviews added.
+    updatedAt: "2026-10-08",
   },
   {
     slug: "gala",
@@ -375,7 +676,7 @@ const reviews: ReviewData[] = [
     shortSummary:
       "Menopause-focused telehealth prescribing physician-directed, body-identical hormone therapy with discreet monthly delivery.",
     reviewIntro:
-      "Winona does one thing: menopause and perimenopause care. Board-certified physicians prescribe bioidentical hormone therapy after an online medical review - the consultation itself is free, and you pay only if a physician prescribes and you approve the treatment. Prices are flat and published: creams run $89/month, estrogen tablets $54, progesterone capsules $39, with FSA/HSA eligibility and discreet monthly delivery. Its claimed Trustpilot profile averages 4.6 across 8,138 reviews - the strongest verified record in this ranking. Winona itself reports a 4.6/5 rating from 100,000+ women.",
+      "Winona does one thing: menopause and perimenopause care. Board-certified physicians prescribe bioidentical hormone therapy after an online medical review - the consultation itself is free, and you pay only if a physician prescribes and you approve the treatment. Prices are flat and published: creams run $89/month, estrogen tablets $54, progesterone capsules $39, with FSA/HSA eligibility and discreet monthly delivery. Its claimed Trustpilot profile averages 4.6 across 8,678 reviews (re-verified October 8, 2026) - the strongest verified record in this ranking - and the October page reads the way a menopause clinic should: hot flashes, night sweats and brain fog gone, doctors who answer the same day, a free online intake with no video call. The counterweights are there too and quoted below: one reviewer paid and saw no improvement, one was charged for a refill without notice, and one found it did nothing for her sleep. Winona itself reports a 4.6/5 rating from 100,000+ women.",
     keyFeatures: [
       "Dedicated entirely to menopause and perimenopause",
       "Free physician consultation - pay only if prescribed",
@@ -403,21 +704,24 @@ const reviews: ReviewData[] = [
     pros: [
       "Menopause-only focus - the service is built for this",
       "Free consultation; flat published prices from $39/month",
-      "4.6 Trustpilot average across 8,138 reviews",
+      "4.6 Trustpilot average across 8,678 reviews",
       "FSA/HSA eligible with discreet recurring delivery",
     ],
     cons: [
       "Cash-pay model - no insurance path like Midi's",
       "Compounded formulations are not individually FDA-approved products",
+      "A few recent reviewers report refills reordered and charged without notice, or no improvement for the price",
     ],
     bestFor: [
       "Women who want a dedicated menopause HRT service",
       "Those who prefer flat direct-pay pricing over insurance paperwork",
     ],
     finalVerdict:
-      "Winona is the focused, direct-pay counterpart to Midi's insurance-based model: a service built entirely around menopause hormone therapy, with a free physician consultation, flat published prices ($39-$89/month by product), FSA/HSA eligibility and a 4.6 Trustpilot average across 8,138 reviews. If insurance coverage matters more than pricing simplicity, compare Midi Health first - otherwise this is the most transparent offer in our HRT ranking.",
+      "Winona is the focused, direct-pay counterpart to Midi's insurance-based model: a service built entirely around menopause hormone therapy, with a free physician consultation, flat published prices ($39-$89/month by product), FSA/HSA eligibility and a 4.6 Trustpilot average across 8,678 reviews. If insurance coverage matters more than pricing simplicity, compare Midi Health first - otherwise this is the most transparent offer in our HRT ranking.",
     trustBadges: ["Menopause-focused physicians", "Licensed US providers", "Discreet delivery"],
-    updatedAt: UPDATED,
+    // Oct 8, 2026: Trustpilot record re-verified (8,678 reviews) and 26 new
+    // captured reviews added.
+    updatedAt: "2026-10-08",
   },
 ];
 
@@ -495,7 +799,7 @@ const battles: BattleData[] = [
       { feature: "Treatment paths", provider1Value: "Hormonal + non-hormonal", provider2Value: "Body-identical hormone therapy", highlight: "provider1" },
       { feature: "Delivery", provider1Value: "Via plan/pharmacy", provider2Value: "Discreet monthly home delivery", highlight: "provider2" },
       { feature: "Pricing", provider1Value: "Depends on your insurance plan", provider2Value: "$39-$89/mo published; free consult", highlight: "provider2" },
-      { feature: "Trustpilot", provider1Value: "4.1 (1,572 reviews)", provider2Value: "4.6 (8,138 reviews)", highlight: "provider2" },
+      { feature: "Trustpilot", provider1Value: "4.1 (1,707 reviews)", provider2Value: "4.6 (8,678 reviews)", highlight: "provider2" },
     ],
     // Oct 8, 2026: pricing statements corrected (Winona's published prices
     // were already verified when the "neither verified" wording shipped).
