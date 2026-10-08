@@ -1,4 +1,5 @@
 import { brandClusterArticles } from "./brand-cluster-articles";
+import { trueCostTable, budgetList } from "@/lib/true-cost";
 
 export interface Article {
   slug: string;
@@ -2208,6 +2209,322 @@ export const articles: Article[] = [
       {
         heading: "The bottom line",
         body: 'If you eat for reasons that are not hunger, medication alone was never going to be the whole answer - and knowing that early saves months of frustration. Use each tool for its job: <a href="/weight-loss">GLP-1 treatment</a> for the biological side, <a href="/online-therapy">therapy</a> for the patterns, and both together when both problems are real. This article is general information, not medical advice.',
+      },
+    ],
+  },
+  {
+    slug: "glp1-true-cost-month-1-vs-year-one",
+    title: "What Will I Really Pay for a GLP-1? Month 1 vs Month 4 vs Year One (2026)",
+    description:
+      "The real cost of online GLP-1 treatment at verified published prices: what month 1 costs, what you keep paying at the dose you stay on, and what year one adds up to - provider by provider, promos and prepay included.",
+    category: "Guide",
+    readTime: "8 min read",
+    publishedAt: "2026-10-08",
+    updatedAt: "2026-10-08",
+    heroColor: "#EEF3F8",
+    author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "The number that matters is the price you keep paying, not the first-month price. Most providers we track charge one flat price at every dose; three list a promotional price against a higher regular price, and one takes 20% off month one only.",
+      "Year one for compounded semaglutide runs from $588 (wellmedr's 12-month plan) to roughly $1,800-$2,400 at the month-to-month providers, at the prices verified in our index. Tirzepatide runs about $500-$1,200 more.",
+      "The month-2 jump that fills review pages comes from three pricing shapes: an intro price that ends, a membership billed next to the drug, and a prepaid bundle that renews. All three are visible before you pay if you know where to look.",
+      "Every figure on this page is derived from our verified price index and carries its verification date. Prices change monthly; the index and its change log are the live record.",
+    ],
+    sections: [
+      {
+        heading: "Why is the first-month price the wrong number?",
+        body:
+          "Ask a hundred people what their GLP-1 costs and most will quote the number from the sign-up page. That number is right for one month. The price that decides whether you can stay on treatment is the one you pay in month 4, month 9 and month 12, at the dose your clinician settles you on - and across the providers we track it is sometimes the same as month 1, sometimes double. Three pricing shapes produce the gap. An <strong>introductory price</strong> that ends after the first month or two. A <strong>membership or subscription fee</strong> billed next to the medication, so the drug price you saw was never the whole bill. And a <strong>prepaid bundle</strong> that charges the year up front and renews. None of these is hidden, exactly; they are just not the number in the headline. This page puts the number in the headline. Every price below is the provider's own published figure as verified in our <a href=\"/weight-loss/glp1-weight-loss-statistics\">price index</a>, and every change we have logged is in the <a href=\"/weight-loss/glp1-price-changes\">price-change feed</a>.",
+      },
+      {
+        heading: "What do you really pay for compounded semaglutide: month 1, maintenance and year one?",
+        body:
+          "Sorted by year one, lowest first. \"What you keep paying\" is the price the provider publishes for every month after the first, at every dose. Where a provider lists a promotional price next to a struck regular price, we show both, because the page we verified doesn't say when the promotion ends." +
+          trueCostTable("semaglutide") +
+          "Two rows deserve a sentence each. <a href=\"/weight-loss/reviews/wellmedr\">wellmedr</a>'s $49 is the floor of the market, and it is a 12-month plan: the price is locked for the year, which is the point, and the plan terms are the thing to read before you sign. <a href=\"/weight-loss/reviews/healthrx\">HealthRx</a>'s $99 is an average: the plan is $1,188 charged at checkout for twelve months, so month 1 costs the whole year, and nothing comes back if you stop in month 5. The month-to-month rows - embody, altRx, DirectMeds, trimrx - are the ones where month 4 genuinely costs what month 1 did.",
+      },
+      {
+        heading: "What do you really pay for compounded tirzepatide?",
+        body:
+          "Same method, same sort. Tirzepatide costs more at every provider; the shape of each provider's pricing is the same as its semaglutide row." +
+          trueCostTable("tirzepatide") +
+          "If you are choosing between the two molecules, <a href=\"/weight-loss/articles/tirzepatide-vs-semaglutide\">tirzepatide vs semaglutide</a> covers the trial results; this page only covers the money. The cheapest tirzepatide year at a verified published price is wellmedr's $1,068 on its 12-month plan; the cheapest with no commitment is <a href=\"/weight-loss/reviews/embody\">embody</a> at $1,428 if its $119 sale price holds all year, $1,548 at the regular $129.",
+      },
+      {
+        heading: "Where does the month-2 price jump come from?",
+        body:
+          "Reading the two tables, the jump shows up in exactly three places. <strong>Promotional prices with no published end date</strong>: altRx and Medvi both list a struck regular price roughly double the current one. altRx has extended its promotion repeatedly - our change log records two extensions in September alone - but \"extended so far\" is not \"permanent\", so budget for the regular price and treat the promo months as savings. <strong>Month-one discounts</strong>: SHED's 20% off applies to the first month only, and the table shows the $159.20-to-$199 step. <strong>Membership models</strong>: the providers in this index bill one all-in price, but brand-name routes often don't. <a href=\"/weight-loss/reviews/ro\">Ro</a>, for example, sells the Zepbound KwikPen from $299 for the first month, then $399-449, plus a separate Body membership of $39 the first month and $74-$149 after - two line items that both step up after month 1. The full brand-name picture is in <a href=\"/weight-loss/articles/zepbound-price-online\">what Zepbound costs online</a>. The test before you pay is simple: find the sentence that says what month 2 costs. If the page doesn't have one, ask support and keep the reply.",
+      },
+      {
+        heading: "Are prepaid GLP-1 plans worth it?",
+        body:
+          "Prepaying buys the lowest per-month figure in the table and removes the month-2 question entirely - the price can't change because you already paid it. What it adds is a different risk: the money is gone whether or not the shipments arrive, and whether or not the medication suits you. Captured reviews across providers describe both the good version (a locked price that stayed locked) and the bad one (a plan that renewed without notice, or shipments that stopped while the charges didn't). Before any prepaid or 12-month plan, read <a href=\"/weight-loss/articles/before-you-prepay-glp1\">the five questions to ask before you prepay</a>, which quotes the reviews. Our general rule: pay monthly for the first two or three cycles, see whether the provider ships on time and answers when you write, then decide whether a longer plan is worth the discount.",
+      },
+      {
+        heading: "How to use these numbers",
+        body:
+          "Pick your drug, find the row whose <em>year one</em> fits your budget, then check two things the price can't tell you: whether the provider ships on time - the <a href=\"/weight-loss/glp1-shipping-times\">shipping-times page</a> compares each provider's published promise against what reviewers report - and whether someone answers when something goes wrong, which the <a href=\"/weight-loss/glp1-provider-support\">provider-support comparison</a> measures from the same captured reviews. Our <a href=\"/weight-loss/cheapest-glp1\">cheapest GLP-1 ranking</a> and <a href=\"/weight-loss/how-to-choose-a-glp1-provider\">12-point provider checklist</a> cover the rest. All of these treatments require a prescription from a licensed clinician, who decides whether and what to prescribe; this page is about cost, not medical suitability.",
+      },
+    ],
+  },
+  {
+    slug: "before-you-prepay-glp1",
+    title: "Before You Prepay for a GLP-1 Plan: 5 Questions About Refunds and Cancelling (2026)",
+    description:
+      "Prepaid and 12-month GLP-1 plans cost less per month and carry one risk: the money is paid before the shipments arrive. Five questions to settle first, with what real reviewers reported when they didn't.",
+    category: "Guide",
+    readTime: "7 min read",
+    publishedAt: "2026-10-08",
+    updatedAt: "2026-10-08",
+    heroColor: "#F6F0EA",
+    author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "Prepaying buys a lower per-month price and removes the month-2 surprise. What it adds is that your money is committed before you know whether the provider ships on time or answers messages.",
+      "The complaints in captured Trustpilot reviews cluster around five things: being charged before a clinician visit, plans that renewed without notice, cancellations that didn't stick, third-party financing that kept billing, and refunds that never came.",
+      "Every one of those is a question you can ask before paying. If a provider can't answer in writing, pay monthly instead.",
+      "Verified prepaid examples in our index: HealthRx charges $1,188 at checkout for twelve months; wellmedr's $49 price is a 12-month plan; SHED's money-back guarantee is conditional on losing 5% in 120 days.",
+    ],
+    sections: [
+      {
+        heading: "Why this page exists",
+        body:
+          "The cheapest numbers in our <a href=\"/weight-loss/glp1-weight-loss-statistics\">price index</a> belong to longer plans: wellmedr's $49 semaglutide is a 12-month plan, and HealthRx's $99 is a $1,188 year paid at checkout. Those are real savings. They are also the structure behind a specific kind of one-star review - the kind that starts with \"I paid for a year\" - which is why the question is not whether prepaying is good or bad but what you need to know first. Everything quoted below is from reviews we captured on providers' claimed Trustpilot profiles, with the reviewer's first name, star rating and date; you can find each one on the provider's review page on this site.",
+      },
+      {
+        heading: "Question 1: When exactly am I charged, and what have I received by then?",
+        body:
+          "The earliest complaint in the chain is being billed before any clinician contact. Tracy, 2 stars, September 21, 2026, on Ro: \"I was charged before I even talked to a physician about possible side effects/benefits.\" Deborah D., 1 star, September 11, 2026, on Medvi: \"I signed up for medication and was charged without ever having spoken to a medical professional.\" Neither is unusual in telehealth - approval often comes from a form review, and the charge follows approval - but it means the first thing you receive for your money is a prescription decision, not a visit. Ask: is the charge taken at sign-up, at approval, or at shipment, and what happens to it if the clinician declines to prescribe? A clear answer exists at the better providers; bmiMD, for example, publishes a money-back guarantee if you are not approved.",
+      },
+      {
+        heading: "Question 2: Is this a prepaid bundle, and what is refundable if shipments stop?",
+        body:
+          "This is the question that separates \"cheap\" from \"cheap if everything goes right\". Narine P., 5 stars, September 23, 2026, now with trimrx, on the provider she left: \"The company I used before charged me every month and never sent anything. Then a separate shipper billed me again for a package that never showed up. I'm still chasing that money.\" On a monthly plan, that story costs one month. On a prepaid year it can cost the year. Ask, in writing: if a shipment is more than two weeks late, what happens to that month's charge? If I stop treatment on medical advice, what is refunded? Where a guarantee exists, read its conditions - SHED's is \"lose 5% in 120 days or your money back\", which is concrete but conditional. Where no refund policy is published, assume there isn't one.",
+      },
+      {
+        heading: "Question 3: How do I cancel, and will I get written confirmation?",
+        body:
+          "Cancelling is where good and bad providers separate most sharply, and the captured reviews show both. The good version, at wellmedr - adrienne A., 5 stars, October 4, 2026: \"The agent helped me cancel an old plan that was not showing active in my portal but was due to bill on 10/9. He also paused my plan due to a surplus of medication.\" And T. H., 5 stars, October 3, 2026: \"Oliver, in customer service, assisted quickly with my request to cancel service.\" The bad version, at Medvi - Andy W., 1 star, September 22, 2026: \"I called and canceled. But they would not send me a cancellation email.\" Chris W., 4 stars, September 4, 2026, same provider: \"At first had a hard time canceling my monthly subscription, but they did finally get that taken care of.\" The test: can you cancel inside the portal yourself, and does the provider send a confirmation you can keep? If cancellation is phone-only and unconfirmed, you are relying on their records, not yours.",
+      },
+      {
+        heading: "Question 4: Does the plan renew, and will I be told before it does?",
+        body:
+          "A 12-month plan that quietly becomes a 24-month one is the most expensive surprise on this page. Margaret D., 1 star, September 1, 2026, on Medvi: \"Medvi promised GLP 1 medication for $179.00 monthly with a prepaid yearly subscription. Unfortunately the term was not a complete year. After just 11 shipments they renewed my subscription without any advance notice. They did not give me a choice.\" We have not verified Medvi's current plan terms - the price in that review differs from the promotional and regular prices on Medvi's page today - so treat it as one customer's account, not a description of the current plan. The question it raises applies everywhere: what is the term, what triggers renewal, how many days' notice do you get, and can you switch renewal off in the portal now, before you need to?",
+      },
+      {
+        heading: "Question 5: Who else is billing me?",
+        body:
+          "Financing is the piece people forget. Several providers offer Buy Now, Pay Later - altRx lists it on its pricing page - and a financing company is a separate contract. George L., 2 stars, September 23, 2026, on trimrx: \"The medication was not working for me, so I canceled my prescription but I am still receiving text and emails from Affirm saying they have not received cancellation from trim rx and is trying to continue charging me each month.\" Cancelling the medication does not automatically cancel the loan, and the two companies may not talk to each other. If you finance, you need two confirmations. And if a provider's support is automated, factor that in before you prepay anything: Justin J., 1 star, September 14, 2026, on SHED: \"Continued to charge me for months after I stopped the medication. Exclusively AI customer support so don't expect any help. I was told to not expect a refund so I am having to go through my credit card company.\" Our <a href=\"/weight-loss/glp1-provider-support\">provider-support comparison</a> measures from captured reviews which providers answer and how fast.",
+      },
+      {
+        heading: "The rule we would follow",
+        body:
+          "Pay monthly for the first two or three cycles. In that time you learn the three things no pricing page tells you: whether shipments arrive when promised (the <a href=\"/weight-loss/glp1-shipping-times\">shipping-times page</a> shows what reviewers report per provider), whether a person answers when you write, and whether the medication suits you at all. Then, if the provider has earned it, take the longer plan and the discount. The full month-1-to-year-one math for every provider is in <a href=\"/weight-loss/articles/glp1-true-cost-month-1-vs-year-one\">what you will really pay</a>; the <a href=\"/weight-loss/how-to-choose-a-glp1-provider\">12-point provider checklist</a> covers everything beyond billing. A licensed clinician decides whether treatment is appropriate; this page is about protecting your money, not your prescription.",
+      },
+    ],
+  },
+  {
+    slug: "what-100-to-200-a-month-gets-you-glp1",
+    title: "What $100 to $200 a Month Gets You in GLP-1 Treatment (2026)",
+    description:
+      "Every verified GLP-1 option sorted by what you keep paying: under $100, $100-$150, $150-$200 and above - with what each tier buys in shipping speed, support and commitment, and where brand-name pills and injections land.",
+    category: "Guide",
+    readTime: "7 min read",
+    publishedAt: "2026-10-08",
+    updatedAt: "2026-10-08",
+    heroColor: "#EEF5F0",
+    author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "At verified published prices, $100 a month buys compounded semaglutide from several licensed providers; $150 buys compounded tirzepatide from the cheapest ones; $200 buys the all-inclusive and coaching-led programs.",
+      "Above $200 the choice becomes brand-name: Lilly's Foundayo pill lists from $149 a month at the lowest dose and up to $349 at the highest, and brand injections run from roughly $1,150 a month cash at the providers we track.",
+      "Within each tier the price buys different things - 1-2 day cold-chain shipping, unlimited clinician check-ins, a dietician, a money-back guarantee - so the tier is where to start, not where to stop.",
+      "Every figure is derived from our verified price index and dated. Compounded products are not FDA-approved; brand-name products are.",
+    ],
+    sections: [
+      {
+        heading: "How we sorted this",
+        body:
+          "Each provider is placed by the price you keep paying - the maintenance price at the dose you stay on, not the first-month price - exactly as our <a href=\"/weight-loss/articles/glp1-true-cost-month-1-vs-year-one\">month 1 vs year one</a> page derives it from the <a href=\"/weight-loss/glp1-weight-loss-statistics\">price index</a>. Promotional prices are labelled with the regular price beside them; prepaid plans are shown as the monthly average with the checkout total. Compounded semaglutide and tirzepatide are listed separately because the same provider usually charges $30-$150 more for tirzepatide. All of these are compounded products: prepared by a licensed pharmacy from the same active ingredient as the brand drug, not FDA-approved themselves - the distinction is explained in <a href=\"/weight-loss/articles/compounded-semaglutide-vs-brand-name\">compounded vs brand-name</a>.",
+      },
+      {
+        heading: "What does $100-$200 a month buy in compounded semaglutide?",
+        body:
+          budgetList("semaglutide") +
+          "What the tiers buy, beyond the molecule. Under $100 you are choosing between a 12-month commitment at the lowest price (wellmedr), month-to-month with 1-2 day cold-chain shipping (embody), a flat price plus a brand-name shelf (altRx), and an all-inclusive promo that includes dietician and coaching (Medvi, while the promotion holds). $100-$150 adds DirectMeds' one flat price for either drug and trimrx's unlimited provider check-ins. $150-$200 is where coaching-led programs with a money-back guarantee (SHED) and the all-inclusive regular price (Medvi) sit.",
+      },
+      {
+        heading: "What does $100-$200 a month buy in compounded tirzepatide?",
+        body:
+          budgetList("tirzepatide") +
+          "Tirzepatide is the molecule most buyers say they would pick if they could pick one, and the tiers shift up accordingly: under $100 there is one option, on a 12-month plan; the real choice at $100-$150 is between embody's month-to-month price and the flat-price providers; and the coaching-led and all-inclusive programs sit above $150. The clinical case for choosing one molecule over the other is in <a href=\"/weight-loss/articles/tirzepatide-vs-semaglutide\">tirzepatide vs semaglutide</a> and the full tirzepatide ranking in <a href=\"/weight-loss/articles/best-tirzepatide-online\">best tirzepatide online</a>.",
+      },
+      {
+        heading: "What does more than $200 a month buy?",
+        body:
+          "Above the compounded tiers the options change kind, not just price. <strong>Brand-name pills.</strong> Eli Lilly's Foundayo (orforglipron), FDA-approved in April 2026, is sold through LillyDirect at published self-pay prices of <a href=\"https://www.scientificamerican.com/article/how-eli-lillys-new-glp-1-pill-stacks-up-against-wegovy-and-other-weight-loss/\" target=\"_blank\" rel=\"noopener\">$149 a month for the lowest dose up to $349 for the highest</a>, with a $25 price for commercially insured patients using its savings card. Ro sells the Wegovy pill from $149 for the first month, then up to $299, plus membership. <strong>Brand-name injections.</strong> At the providers we track, cash prices for Ozempic, Zepbound and Wegovy run from $1,149 to $1,799 a month - the detail is in <a href=\"/weight-loss/articles/zepbound-price-online\">what Zepbound costs online</a>. <strong>Insurance and Medicare.</strong> Both can change the brand-name math entirely: <a href=\"/weight-loss/articles/lost-insurance-coverage-zepbound-wegovy\">if you have, or have lost, coverage</a>, and <a href=\"/weight-loss/articles/glp1-after-65-medicare\">Medicare's $50 option for people 65 and over</a>.",
+      },
+      {
+        heading: "What can't you buy at any price?",
+        body:
+          "Two things are not for sale at any price here. The first is \"research peptides\" sold online without a prescription at $10-$35 a month, labelled not for human use; they are not a cheaper tier, they are a different thing, and <a href=\"/weight-loss/retatrutide-weight-loss\">our retatrutide page</a> explains why. The second is a guarantee that the medication will work for you: results vary, side effects are real, and a licensed clinician decides whether you are a candidate at all - <a href=\"/weight-loss/articles/who-qualifies-for-glp1-weight-loss\">who qualifies</a> covers the criteria.",
+      },
+      {
+        heading: "Choosing within your tier",
+        body:
+          "Once the price fits, the differences that decide whether you stay on treatment are the ones price doesn't show: whether shipments arrive when promised, and whether someone answers. We measure both from the same captured reviews on the <a href=\"/weight-loss/glp1-shipping-times\">shipping-times</a> and <a href=\"/weight-loss/glp1-provider-support\">provider-support</a> pages. Read those two for the providers in your tier, then the <a href=\"/weight-loss/articles/before-you-prepay-glp1\">five questions before you prepay</a> if the cheapest option is a longer plan.",
+      },
+    ],
+  },
+  {
+    slug: "lost-insurance-coverage-zepbound-wegovy",
+    title: "Lost Insurance Coverage for Zepbound or Wegovy? Your Options in 2026",
+    description:
+      "When a plan drops or denies Zepbound or Wegovy, five routes remain: appeal, manufacturer savings and direct-pay prices, Medicare's $50 option, brand-name cash through telehealth, and compounded versions at verified prices. What each costs and requires.",
+    category: "Guide",
+    readTime: "8 min read",
+    publishedAt: "2026-10-08",
+    updatedAt: "2026-10-08",
+    heroColor: "#F1EEF6",
+    author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "Losing coverage for a weight-loss GLP-1 is common: many plans cover these drugs for diabetes but not for weight management, and prior-authorization denials and formulary changes happen mid-treatment.",
+      "Five routes remain. Appeal or re-authorize. Use the manufacturer's savings card or direct-pay price (Foundayo lists $149-$349 a month self-pay; $25 with commercial insurance). If you are on Medicare, the GLP-1 Bridge pilot charges a flat $50 a month for Wegovy, Zepbound KwikPen and Foundayo through December 2027. Buy brand-name for cash through telehealth ($1,149-$1,799 a month at the providers we track). Or switch to a compounded version at $49-$299 a month.",
+      "Switching routes does not have to mean restarting your dose - but only a licensed clinician can transfer a dose, and compounded products are not FDA-approved.",
+      "Prices are the providers' and manufacturers' own published figures at our last verification; program rules change, so re-check before deciding.",
+    ],
+    sections: [
+      {
+        heading: "What exactly did you lose: a denial or a formulary change?",
+        body:
+          "A denial letter and a formulary change are different problems. A <strong>prior-authorization denial</strong> means the drug is on your plan but you didn't meet its criteria - BMI thresholds, documented conditions, a prior program - and can often be appealed with better documentation from your prescriber. A <strong>formulary exclusion</strong> means your plan no longer covers the drug for weight management at all, and no appeal fixes that; you need a different route. <strong>A plan change at work or through a new year</strong> is the same as an exclusion until proven otherwise. Our guide to <a href=\"/weight-loss/articles/glp1-with-insurance\">GLP-1s with insurance</a> walks through reading the formulary and the appeal; the rest of this page is for when the answer is no.",
+      },
+      {
+        heading: "Can a manufacturer savings card or direct-pay price replace coverage?",
+        body:
+          "Both manufacturers sell direct and both publish prices. The clearest example right now is Eli Lilly's Foundayo (orforglipron), the daily pill FDA-approved in April 2026: through LillyDirect it lists <a href=\"https://www.scientificamerican.com/article/how-eli-lillys-new-glp-1-pill-stacks-up-against-wegovy-and-other-weight-loss/\" target=\"_blank\" rel=\"noopener\">$149 a month at the 0.8 mg starting dose, $199 at 2.5 mg, $299 at 5.5 and 9 mg, and $349 at 14.5 and 17.2 mg</a>, or $25 a month for commercially insured patients with its savings card - which can apply even when the plan itself declines to pay. Savings cards for Zepbound and Wegovy exist too, with their own eligibility rules; we haven't verified their current terms, so check the manufacturer's page directly. Direct-pay still requires a prescription from a licensed clinician.",
+      },
+      {
+        heading: "Does Medicare's $50 GLP-1 Bridge apply to you?",
+        body:
+          "If you are on Medicare, the biggest change of 2026 applies to you. The Medicare GLP-1 Bridge is a CMS pilot that <a href=\"https://www.stlpr.org/npr/2026-05-06/a-new-medicare-option-for-weight-loss-drugs-is-coming-heres-what-to-know\" target=\"_blank\" rel=\"noopener\">runs from July 1, 2026 through December 31, 2027</a> and charges eligible beneficiaries a flat $50 copay at the pharmacy for covered obesity drugs - the Wegovy pill and injection, the Zepbound KwikPen and Foundayo - with the copay staying at $50 as the dose rises. Eligibility runs through clinical criteria and an approval step, and the program is explicitly temporary. Our <a href=\"/weight-loss/articles/glp1-after-65-medicare\">GLP-1s after 65</a> page covers what we could verify and what to ask CMS or your Part D plan.",
+      },
+      {
+        heading: "What does brand-name Zepbound or Wegovy cost for cash online?",
+        body:
+          "If you want to stay on the exact product you were prescribed, several online providers sell it at a cash price. At our last verification, <a href=\"/weight-loss/reviews/altrx\">altRx</a> lists Zepbound at $1,249 a month and Wegovy at $1,579, <a href=\"/weight-loss/reviews/wellmedr\">wellmedr</a> Zepbound at $1,599, and <a href=\"/weight-loss/reviews/sprout\">Sprout</a> Wegovy at $1,799; <a href=\"/weight-loss/reviews/ro\">Ro</a> sells the Zepbound KwikPen from $299 for the first month, then $399-449, plus a membership - and because Ro bills the pen as its own line item, a plan that still covers it can pay its share. The full ladder, with what each route includes, is in <a href=\"/weight-loss/articles/zepbound-price-online\">what Zepbound costs online</a>. This is the most expensive route on the page, and the one with no change in product.",
+      },
+      {
+        heading: "Should you switch to a compounded version?",
+        body:
+          "This is the route most people who lose coverage end up taking, because the arithmetic is stark: compounded semaglutide runs $49-$199 a month and compounded tirzepatide $89-$299 at the licensed providers in our <a href=\"/weight-loss/glp1-weight-loss-statistics\">price index</a>, against $1,149-$1,799 for the brand drugs. The trade-off is just as stark and you should go in knowing it: a compounded product contains the same active ingredient but is prepared by a pharmacy rather than manufactured as an approved drug, it has no trials of its own, insurance never covers it, and the FDA has issued warning letters to dozens of telehealth companies in 2026 over how these products are marketed. <a href=\"/weight-loss/articles/compounded-semaglutide-vs-brand-name\">Compounded vs brand-name</a> lays out the difference honestly; <a href=\"/weight-loss/articles/503a-vs-503b-pharmacy-28-day-rule\">503A vs 503B and the 28-day rule</a> explains how to check who actually makes it.",
+      },
+      {
+        heading: "Can you keep your dose when you switch providers?",
+        body:
+          "The question that worries people most is restarting from the lowest dose after months of titration. It is a clinical question, not a provider policy: a licensed clinician at the new provider reviews your current dose and history and decides whether to continue at that dose or step down, and most telehealth intake forms ask for it. Bring your current prescription and the date of your last injection. The practical steps - timing the switch so you don't run out, what to send, what to ask - are in <a href=\"/weight-loss/switch-from-ozempic\">switching from Ozempic or another GLP-1</a>. What you should not do is bridge the gap with an unregulated \"research peptide\" bought without a prescription; <a href=\"/weight-loss/retatrutide-weight-loss\">here is why</a>.",
+      },
+      {
+        heading: "Which route first",
+        body:
+          "In order of cost to you: appeal if the drug is still on your formulary; check your manufacturer's savings card and direct price; if you are on Medicare, the $50 Bridge; then decide between brand-name cash and a compounded switch based on your budget and your view of the trade-off. For the budget side, <a href=\"/weight-loss/articles/what-100-to-200-a-month-gets-you-glp1\">what $100-$200 a month gets you</a> sorts every verified option by what you keep paying. None of this replaces your clinician's judgement about whether to continue treatment at all, and prices and program rules on this page change often enough that we date every one of them.",
+      },
+    ],
+  },
+  {
+    slug: "503a-vs-503b-pharmacy-28-day-rule",
+    title: "503A vs 503B Pharmacies and the 28-Day Rule: Who Actually Makes Your Compounded GLP-1 (2026)",
+    description:
+      "Experienced buyers judge a compounded GLP-1 provider by the pharmacy behind it. What 503A and 503B mean, why the shortage ending changed the rules, what the 28-day rule is, and the questions that reveal a legitimate operation.",
+    category: "Science",
+    readTime: "8 min read",
+    publishedAt: "2026-10-08",
+    updatedAt: "2026-10-08",
+    heroColor: "#EEF2F7",
+    author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "503A pharmacies compound for a named patient on a prescription and answer to state pharmacy boards; 503B outsourcing facilities are FDA-registered and inspected, and make larger batches under manufacturing standards.",
+      "Semaglutide and tirzepatide are no longer on the FDA shortage list, which closed the bulk-compounding exemption; today a legitimate compounded GLP-1 comes from a licensed pharmacy filling a patient-specific prescription.",
+      "The 28-day rule comes from sterile-compounding standards: an opened multi-dose vial is generally assigned a 28-day use period, which is why plans ship monthly and why a vial sized for far longer is a warning sign.",
+      "Ask any provider three things: the pharmacy's name and state licence, whether it is 503A or 503B, and the beyond-use date on the vial. In 2026 the FDA sent warning letters to dozens of telehealth companies over marketing claims; the pharmacy question is how you check the product itself.",
+    ],
+    sections: [
+      {
+        heading: "Why the pharmacy matters more than the website",
+        body:
+          "An online GLP-1 provider is three things wearing one brand: a website, contracted clinicians who review your form, and a partner pharmacy that actually makes and ships the medication. The first two decide whether you get a prescription; the third decides what is in the vial. Experienced buyers learn to ask about the third first, and the vocabulary they use - 503A, 503B, beyond-use date, the 28-day rule - is the subject of this page. None of it requires a chemistry degree; it requires knowing which questions have checkable answers.",
+      },
+      {
+        heading: "What is a 503A pharmacy?",
+        body:
+          "Section 503A of the federal Food, Drug and Cosmetic Act covers traditional compounding pharmacies: a licensed pharmacist prepares a medication for a specific, named patient on a valid prescription. These pharmacies are licensed and inspected by their state board of pharmacy, must follow the compounding standards published by the United States Pharmacopeia (USP), and cannot make large batches in advance for general sale. When a telehealth provider says its medication comes from \"a licensed US 503A pharmacy\", this is what it means - and because the prescription is patient-specific, it is the model that fits how these providers work. <a href=\"/weight-loss/reviews/embody\">embody</a>, for example, names US-based 503A pharmacies and LegitScript certification on its page; our <a href=\"/weight-loss/how-to-choose-a-glp1-provider\">12-point checklist</a> treats the named pharmacy as a core check.",
+      },
+      {
+        heading: "What is a 503B outsourcing facility?",
+        body:
+          "Section 503B, added in 2013, created a second category: outsourcing facilities that register with the FDA, are inspected by the FDA, and must follow current good manufacturing practice - the same quality framework as drug manufacturers. In exchange they can compound larger batches without a prescription for each patient, typically to supply hospitals and clinics. During the 2022-2024 shortages of semaglutide and tirzepatide, both 503A pharmacies and 503B facilities were permitted to compound them, which is how the market of compounded GLP-1s grew so quickly. Neither category makes an FDA-approved drug: a 503B facility's product is made under manufacturing standards, but it is still a compounded product with no trials of its own.",
+      },
+      {
+        heading: "What changed when the shortages ended?",
+        body:
+          "The FDA removed tirzepatide and then semaglutide from its shortage list between late 2024 and early 2025, and with that the exemption that allowed compounding of \"essentially a copy\" of a commercially available drug closed. The standard rules apply again: compounding has to be for a specific patient on a valid prescription, with a clinical reason, through a 503A pharmacy - not bulk production of a copy of Wegovy or Zepbound. The FDA has followed up on the marketing side: <a href=\"https://www.mondaq.com/unitedstates/healthcare/1814666/fda-takes-aim-at-misleading-online-claims-for-compounded-glp-1-drugs\" target=\"_blank\" rel=\"noopener\">warning letters to telehealth companies in 2026</a> objected to products described as \"generic\" Ozempic or Wegovy, as containing \"the same active ingredient as\" the brand drug, or as coming from an \"FDA-approved pharmacy\" - the FDA approves drugs, not pharmacies. If a provider's page uses that language, it is a signal about the provider, whatever the pharmacy. The honest framing is in <a href=\"/weight-loss/articles/compounded-semaglutide-vs-brand-name\">compounded vs brand-name</a>.",
+      },
+      {
+        heading: "What is the 28-day rule?",
+        body:
+          "Compounded GLP-1 injections are usually dispensed as a multi-dose vial you draw from weekly. Sterile-compounding standards assign every such preparation a <strong>beyond-use date</strong> - the point after which it should not be used - and for an opened multi-dose vial the conventional limit is 28 days from first puncture, which is why experienced buyers talk about \"the 28-day rule\". Two practical consequences. First, this is why legitimate plans ship every four weeks: a vial sized for a month matches the rule. One captured wellmedr reviewer's complaint title was simply \"They charge you every 21 days\" - billing cadence and the vial's use period are worth matching up before you sign. Second, a vial sold as a three-month supply to draw from across 90 days is a warning sign, not a bargain. The beyond-use date should be printed on the label; if it isn't, ask the pharmacy, not the provider.",
+      },
+      {
+        heading: "The questions that separate a legitimate operation",
+        body:
+          "Four, all with checkable answers. <strong>Which pharmacy fills my prescription, and in which state is it licensed?</strong> A legitimate provider names it; you can verify the licence on that state board's website. <strong>Is it 503A or 503B?</strong> Either can be legitimate; evasion is the warning sign. <strong>What is the beyond-use date on the vial, and how is it shipped?</strong> Cold-chain shipping with a dated label is the standard; our <a href=\"/weight-loss/glp1-shipping-times\">shipping-times page</a> records what each provider promises and what reviewers report. <strong>Who decides my dose?</strong> \"A licensed clinician reviews your history and prescribes\" is the right answer; \"guaranteed approval\" is the wrong one. Providers that pass all four are in our <a href=\"/weight-loss/cheapest-glp1\">verified ranking</a>, and the ones we have examined most closely are written up in <a href=\"/weight-loss/articles/is-embody-legit\">is embody legit</a> and <a href=\"/weight-loss/articles/is-wellmedr-legit\">is wellmedr legit</a>. What no pharmacy can supply is an unapproved \"research peptide\" sold without a prescription; <a href=\"/weight-loss/retatrutide-weight-loss\">that is a different market entirely</a>. This article is general information about how compounding is regulated; a licensed clinician decides whether any treatment is appropriate for you.",
+      },
+    ],
+  },
+  {
+    slug: "glp1-after-65-medicare",
+    title: "GLP-1s After 65: Medicare's $50 Option and What It Covers (2026)",
+    description:
+      "Medicare's GLP-1 Bridge pilot charges a flat $50 a month for Wegovy, the Zepbound KwikPen and Foundayo through December 2027. Who it is for, what it covers, what it doesn't, and the cash alternatives if you don't qualify.",
+    category: "Guide",
+    readTime: "7 min read",
+    publishedAt: "2026-10-08",
+    updatedAt: "2026-10-08",
+    heroColor: "#EEF4F1",
+    author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "Since July 1, 2026, a CMS pilot called the Medicare GLP-1 Bridge lets eligible Medicare beneficiaries get covered obesity drugs for a flat $50 copay a month - the Wegovy pill and injection, the Zepbound KwikPen and the Foundayo pill - with the copay unchanged as doses rise.",
+      "It is temporary by design: the pilot runs through December 31, 2027, and a longer-term program after that is possible but not promised. Eligibility runs through clinical criteria and an approval step.",
+      "Medicare never covers compounded GLP-1s. If you don't qualify for the Bridge, the cash options are the same as for everyone else: brand-name direct from the manufacturer or through telehealth, or a compounded version at $49-$299 a month.",
+      "Older adults are a large share of GLP-1 buyers, and muscle and bone considerations matter more with age - a reason to treat through a clinician who monitors, not a form alone.",
+    ],
+    sections: [
+      {
+        heading: "What is the Medicare GLP-1 Bridge?",
+        body:
+          "For years the rule was simple and frustrating: Medicare Part D could cover a GLP-1 prescribed for diabetes but not for weight loss. That changed in 2026. The Centers for Medicare and Medicaid Services launched the <a href=\"https://www.wlrn.org/npr-breaking-news/2026-05-06/some-medicare-beneficiaries-can-now-get-popular-obesity-drugs-for-50-a-month\" target=\"_blank\" rel=\"noopener\">Medicare GLP-1 Bridge</a>, a pilot that began on July 1, 2026 and runs through December 31, 2027, under which eligible beneficiaries pay a flat $50 copay at the pharmacy for covered obesity medications. The $50 does not rise as the dose does, which is unusual: on cash prices, dose increases are where the cost climbs. The name is literal - it is meant to bridge to a longer-term program that may or may not begin in 2028.",
+      },
+      {
+        heading: "Which GLP-1 drugs does Medicare's Bridge cover?",
+        body:
+          "Per <a href=\"https://www.stlpr.org/npr/2026-05-06/a-new-medicare-option-for-weight-loss-drugs-is-coming-heres-what-to-know\" target=\"_blank\" rel=\"noopener\">the reporting on the program</a>, the pilot covers the Wegovy pill and injection (semaglutide), the KwikPen formulation of Zepbound (tirzepatide) and Foundayo (orforglipron), Eli Lilly's daily pill approved in April 2026. Three things it does not cover: Ozempic or Mounjaro prescribed for weight loss (those are the diabetes labels of the same molecules), any compounded version of any of these - Medicare, like every insurer, does not pay for compounded GLP-1s - and, as far as we can verify, products outside that list. The differences between the brand drugs are in <a href=\"/weight-loss/articles/zepbound-vs-wegovy-vs-ozempic\">Zepbound vs Wegovy vs Ozempic</a>; the pill-versus-injection choice in <a href=\"/weight-loss/glp1-pills-vs-injections\">GLP-1 pills vs injections</a>.",
+      },
+      {
+        heading: "Who qualifies for the $50 copay, and what should you ask?",
+        body:
+          "Coverage is not automatic. The program applies clinical criteria and requires approval before the $50 copay applies at the counter - the published reporting describes conditions around clinical guidelines and around what happens when the pilot ends. We have not seen the full eligibility rules in a form we can verify, so we will not summarise them; the right sources are CMS's own program page and your Part D plan. Ask your plan three questions: am I eligible for the GLP-1 Bridge, which of the covered drugs are on your formulary under it, and what documentation does the approval need from my prescriber. Ask your prescriber one: which of the covered drugs is right for me - a decision <a href=\"/weight-loss/articles/who-qualifies-for-glp1-weight-loss\">made on your history</a>, not on price.",
+      },
+      {
+        heading: "What are the options if you don't qualify?",
+        body:
+          "The cash market is the same one everyone else uses, and it has two tiers. <strong>Brand-name.</strong> Foundayo lists self-pay prices of <a href=\"https://www.scientificamerican.com/article/how-eli-lillys-new-glp-1-pill-stacks-up-against-wegovy-and-other-weight-loss/\" target=\"_blank\" rel=\"noopener\">$149 to $349 a month by dose through LillyDirect</a>; brand injections run $1,149-$1,799 a month at the telehealth providers we track, detailed in <a href=\"/weight-loss/articles/zepbound-price-online\">what Zepbound costs online</a>. <strong>Compounded.</strong> Semaglutide from $49 and tirzepatide from $89 a month at verified published prices, with the trade-offs - not FDA-approved, no trials of its own, never covered by insurance or Medicare - set out in <a href=\"/weight-loss/articles/compounded-semaglutide-vs-brand-name\">compounded vs brand-name</a>. <a href=\"/weight-loss/articles/what-100-to-200-a-month-gets-you-glp1\">What $100-$200 a month gets you</a> sorts every option by what you keep paying.",
+      },
+      {
+        heading: "What is different about GLP-1 treatment after 65?",
+        body:
+          "Two things, both clinical. Weight lost on a GLP-1 includes lean mass as well as fat, and preserving muscle and bone matters more with age - which is a case for resistance exercise and adequate protein from the start, and for a clinician who tracks more than the scale. And medication lists are longer at 65 than at 45, so interactions and existing conditions need a real review. <a href=\"/weight-loss/articles/glp1-weight-loss-over-40\">GLP-1 weight loss over 40</a> and <a href=\"/weight-loss/articles/exercise-while-on-glp1-medication\">exercise on a GLP-1</a> cover both. For an older adult, a provider that offers a real clinician conversation and follow-up is worth more than the cheapest row in a price table - our <a href=\"/weight-loss/glp1-provider-support\">provider-support comparison</a> shows, from captured reviews, which providers actually answer.",
+      },
+      {
+        heading: "The bottom line",
+        body:
+          "If you are on Medicare and considering a GLP-1 for weight, ask your Part D plan about the GLP-1 Bridge before you price anything else: $50 a month for a brand-name, FDA-approved drug is the best number on this site, for as long as the pilot lasts. If you don't qualify, the cash options are the same as everyone's, and the <a href=\"/weight-loss/articles/glp1-true-cost-month-1-vs-year-one\">month 1 vs year one</a> page shows what each really costs. Program rules and prices change; everything here is dated and we re-verify. A licensed clinician decides whether treatment is right for you - this page is about paying for it.",
       },
     ],
   },

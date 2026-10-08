@@ -105,6 +105,21 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
 // targets). Code-rendered, so they work for articles whose body lives in the
 // blob. Every figure is a real, listed price - no invented numbers.
 const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
+  // Oct 8, 2026 research-driven cluster. Figures derive from the verified
+  // price index (see src/lib/true-cost.ts) and dated external sources cited
+  // inside each article; the dollar stamp below carries the index date.
+  "glp1-true-cost-month-1-vs-year-one":
+    "The price that matters is the one you keep paying, not month 1. At verified prices, year one of compounded semaglutide runs from $588 on wellmedr's 12-month plan to roughly $1,800-$2,400 at month-to-month providers; tirzepatide about $500-$1,200 more. The month-2 jump comes from promos with no published end date, 20%-off-month-one offers, and memberships billed next to the drug - all visible before you pay.",
+  "before-you-prepay-glp1":
+    "Pay monthly for the first two or three cycles, then prepay only if the provider has shipped on time and answered when you wrote. Before any prepaid or 12-month plan, get written answers to five questions: when you're charged and for what, what is refunded if shipments stop, how you cancel and whether you get confirmation, whether the plan auto-renews and with how much notice, and whether a financing company bills you separately.",
+  "what-100-to-200-a-month-gets-you-glp1":
+    "At verified published prices, under $100 a month buys compounded semaglutide from wellmedr ($49, 12-month plan), embody ($69, month to month), altRx ($89) and Medvi ($99 promo); $100-$150 buys compounded tirzepatide from embody ($119), DirectMeds ($147) and altRx ($149); $150-$200 buys the all-inclusive and coaching-led programs. Above $200 the choice becomes brand-name: Foundayo from $149 a month, brand injections from $1,149.",
+  "lost-insurance-coverage-zepbound-wegovy":
+    "Five routes: appeal if the drug is still on your formulary; use the manufacturer's savings card or direct price (Foundayo lists $149-$349 a month self-pay, $25 with commercial insurance); if you're on Medicare, the GLP-1 Bridge pilot charges a flat $50 a month for Wegovy, the Zepbound KwikPen and Foundayo through December 2027; buy brand-name for cash through telehealth ($1,149-$1,799 a month); or switch to a compounded version at $49-$299 a month. A licensed clinician decides whether your dose transfers.",
+  "503a-vs-503b-pharmacy-28-day-rule":
+    "A 503A pharmacy compounds for a named patient on a prescription and answers to its state board; a 503B outsourcing facility is FDA-registered and makes larger batches under manufacturing standards. Since semaglutide and tirzepatide left the FDA shortage list, a legitimate compounded GLP-1 comes from a licensed pharmacy filling a patient-specific prescription. The 28-day rule is the standard use period for an opened multi-dose vial - which is why plans ship monthly and a 90-day vial is a warning sign. Ask the pharmacy's name, its state licence, and the beyond-use date.",
+  "glp1-after-65-medicare":
+    "Since July 1, 2026, the Medicare GLP-1 Bridge pilot lets eligible beneficiaries get the Wegovy pill and injection, the Zepbound KwikPen and Foundayo for a flat $50 copay a month, unchanged as the dose rises, through December 31, 2027. Eligibility runs through clinical criteria and an approval step via your Part D plan. Medicare never covers compounded GLP-1s; if you don't qualify, the cash routes are brand-name ($149-$349 a month for Foundayo, $1,149+ for injections) or compounded ($49-$299).",
   "is-wellmedr-legit":
     "Yes - by every marker we can verify: licensed-provider review before prescribing, a regulated US pharmacy, a weight-loss warranty, and a verified 4.6 on Trustpilot across 2,091 reviews (tied for the highest among providers we track). The honest caveats: the headline $49/$89 rates lock on a 12-month plan, the complaints that exist are about shipping delays and support response time, and results vary by person regardless of service quality.",
   "zepbound-price-online":
