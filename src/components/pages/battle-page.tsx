@@ -779,7 +779,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <div className="mb-8 max-w-[820px] overflow-hidden rounded-2xl border border-[#0C4B75]/20 bg-white shadow-sm">
               <div className="flex items-center justify-between gap-3 border-b border-gray-100 bg-[#F3F9FD] px-5 py-3 sm:px-6">
                 <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#0C4B75]">
-                  The verdict
+                  Our top choice
                 </p>
                 {showShortAnswerScores && (
                   <span className="flex items-center gap-1.5 whitespace-nowrap rounded-full bg-white px-2.5 py-1 text-[11.5px] font-bold text-[#0C4B75] shadow-sm ring-1 ring-[#0C4B75]/15">
@@ -798,8 +798,8 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   />
                 </div>
                 <p className="text-[15.5px] leading-[1.8] text-gray-800 sm:text-[16px]">
-                  <span className="font-bold text-[#191919]">{verdictWinner.name}</span> is the
-                  stronger pick for most people - <BoldKeyFacts text={shortAnswerReason.replace(/\.$/, "")} />.{" "}
+                  <span className="font-bold text-[#191919]">{verdictWinner.name}</span> is our top
+                  choice for most people: <BoldKeyFacts text={shortAnswerReason.replace(/\.$/, "")} />.{" "}
                   Full reasoning, pricing and the cases where {verdictRunnerUp.name} wins are below.
                 </p>
               </div>
