@@ -327,17 +327,6 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // Byline author: match the article's author to a team member, else the lead
   const author = experts.find((e) => e.name === article.author) ?? experts[0];
 
-  // Top providers for inline CTA
-  const { providerOrder, positions } = config.ranking;
-  const topProviders = providerOrder
-    .map((id, index) => {
-      const provider = config.providers.find((p) => p.id === id);
-      if (!provider) return null;
-      const position = positions[index] || positions[positions.length - 1];
-      return { ...provider, rating: position.score, tagline: provider.tagline };
-    })
-    .filter(Boolean) as Array<{ id: string; name: string; logo: string; tagline: string; affiliateUrl: string; rating: number }>;
-
   // Related articles: same category first, then others, exclude self, max 3
   const relatedArticles = [
     ...articles.filter(
@@ -799,31 +788,10 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                   </div>
                 )}
 
-                {/* Inline provider CTA after 2nd section. Suppressed on
-                    "is X legit" articles: a trust-check page advertising the
-                    reviewed provider's competitors undermines the article's
-                    credibility and cannibalizes its own conversion. */}
-                {i === 1 && !isTirzGuide && !/^is-.+-legit$/.test(slug) && topProviders.length > 0 && (
-                  <div className="my-8 rounded-lg border border-gray-200 bg-white px-5 py-4">
-                    <p className="mb-3 text-[13px] font-bold uppercase tracking-wider text-gray-400">Top-Rated Providers</p>
-                    <div className="space-y-2.5">
-                      {topProviders.slice(0, 3).map((tp) => (
-                        <a
-                          key={tp.id}
-                          href={tp.affiliateUrl}
-                          className="flex items-center justify-between rounded-lg border border-gray-100 bg-[#fafbfc] px-4 py-3 transition-colors hover:border-[#0C4B75]/20 hover:bg-[#0C4B75]/[0.02]"
-                        >
-                          <div className="flex items-center gap-3">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={tp.logo} alt={tp.name} className="h-[24px] w-[80px] object-contain object-left" />
-                            <span className="text-[13px] text-gray-500">{tp.tagline}</span>
-                          </div>
-                          <ArrowUpRight className="h-4 w-4 shrink-0 text-[#0C4B75]" strokeWidth={1.5} />
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                )}
+                {/* The inline "Top-Rated Providers" strip that sat here after
+                    the 2nd section (three logo rows with taglines) was removed
+                    Oct 8, 2026 at the operator's request. The TopProvidersBlock
+                    and the end-of-article CTA remain. */}
               </div>
             ))}
           </article>
