@@ -14,9 +14,14 @@ import type {
 // general descriptions and NO invented data - no fabricated prices, Trustpilot
 // scores, or program claims. Where we haven't verified a provider's published
 // pricing yet, the copy says so and points to the provider's site. All
-// reviews index (Aug 2026 operator policy); affiliate links and verified
-// pricing get filled in as partnerships come online (the same flow used for
-// HealthRx and Sprout in weight-loss).
+// reviews index (Aug 2026 operator policy).
+//
+// Oct 8, 2026 (operator decision): the ranking is the three partner providers
+// only - Winona, Midi Health, Gala - each with an operator-supplied tracking
+// link. Nurx, Inner Balance, Hone, Wisp and DirectMeds were removed along
+// with their reviews and the two comparisons built on them (301s live in
+// src/proxy.ts). This vertical ships from code only: config-store ignores
+// any saved HRT blob, so edits must land here.
 // ─────────────────────────────────────────────────────────────────────────────
 
 const UPDATED = "2026-08-23";
@@ -24,6 +29,59 @@ const PRICING_TBD =
   "We haven't verified this provider's current published pricing yet - plans and treatment costs vary, so check the provider's site for current rates. This page will carry exact verified prices once we've confirmed them.";
 
 const providers: Provider[] = [
+  {
+    id: "winona",
+    name: "Winona",
+    tagline: "Menopause-focused telehealth prescribing body-identical hormone therapy",
+    logo: "/logos/winona.svg",
+    smallLogo: "/logos/winona-icon.svg",
+    highlights: [
+      "Free physician consultation - pay only if prescribed",
+      "Flat published prices from $39/month; FSA/HSA eligible",
+      "Discreet monthly home delivery",
+    ],
+    // Operator-supplied tracking link, Oct 8, 2026.
+    affiliateUrl: "https://track.revoffers.com/aff_c?offer_id=495&aff_id=12904",
+    ctaText: "Visit Site",
+    // Operator-verified from Winona's claimed Trustpilot profile
+    // ("By Winona", Aug 2026 screenshots): 4.6 average across 8,138 reviews.
+    trustpilotRating: "4.6",
+    trustpilotReviewCount: "8,138",
+    trustpilotReviews: [
+      {
+        title: "Legit",
+        text: "Legit. doctors, easy to use would recommend",
+        name: "Sheila B.",
+        location: "US",
+        rating: 5,
+        date: "Aug 26, 2026",
+      },
+      {
+        title: "Great response time and attention to detail",
+        text: "Great response time and attention to detail. Doctors are responsive.",
+        name: "Melissa M.",
+        location: "US",
+        rating: 5,
+        date: "Aug 26, 2026",
+      },
+      {
+        title: "The meds really help",
+        text: "The meds really help",
+        name: "Kathryn J.",
+        location: "US",
+        rating: 5,
+        date: "Aug 26, 2026",
+      },
+      {
+        title: "Helpful",
+        text: "Helpful, efficient, great results. Quick answers to questions.",
+        name: "Ann I.",
+        location: "US",
+        rating: 5,
+        date: "Aug 19, 2026",
+      },
+    ],
+  },
   {
     id: "midi",
     name: "Midi Health",
@@ -35,7 +93,8 @@ const providers: Provider[] = [
       "Hormonal and non-hormonal treatment paths",
       "Works with many major insurance plans",
     ],
-    affiliateUrl: "#",
+    // Operator-supplied tracking link, Oct 8, 2026.
+    affiliateUrl: "https://track.revoffers.com/aff_c?offer_id=1558&aff_id=12904",
     ctaText: "Visit Site",
     // Operator-verified from Midi Health's claimed Trustpilot profile
     // (Aug 2026 screenshots): 4.1 average across 1,572 reviews.
@@ -61,7 +120,7 @@ const providers: Provider[] = [
       {
         title: "Highly recommend",
         text: "My PA was professional and very thorough. She took time to listen and clearly explained options. She verified my medical history. She answered all my questions demonstrating knowledge and understanding.",
-        name: "Kristyn Shipley",
+        name: "Kristyn S.",
         location: "US",
         rating: 5,
         date: "Aug 20, 2026",
@@ -77,7 +136,7 @@ const providers: Provider[] = [
       {
         title: "My provider is amazing and supportive",
         text: "She listens to me and addresses my concerns. She tells me the truth and discusses the pros and cons. I appreciate her so much!",
-        name: "Elizabeth Batson",
+        name: "Elizabeth B.",
         location: "US",
         rating: 5,
         date: "Aug 19, 2026",
@@ -95,162 +154,139 @@ const providers: Provider[] = [
       "Prescription treatment shipped to your door",
       "Ongoing care through the platform",
     ],
-    affiliateUrl: "#",
+    // Operator-supplied tracking link, Oct 8, 2026.
+    affiliateUrl: "https://track.revoffers.com/aff_c?offer_id=1576&aff_id=12904&url_id=12556",
     ctaText: "Visit Site",
-  },
-  {
-    id: "winona",
-    name: "Winona",
-    tagline: "Menopause-focused telehealth prescribing body-identical hormone therapy",
-    logo: "/logos/winona.svg",
-    smallLogo: "/logos/winona-icon.svg",
-    highlights: [
-      "Free physician consultation - pay only if prescribed",
-      "Flat published prices from $39/month; FSA/HSA eligible",
-      "Discreet monthly home delivery",
-    ],
-    affiliateUrl: "#",
-    ctaText: "Visit Site",
-    // Operator-verified from Winona's claimed Trustpilot profile
-    // ("By Winona", Aug 2026 screenshots): 4.6 average across 8,138 reviews.
+    // Operator-verified from Gala Health's claimed Trustpilot profile
+    // (claimed May 2026; operator screenshots Oct 8, 2026): 4.6 average across
+    // 4,212 reviews. The profile covers the whole Gala Health platform - the
+    // recent page is dominated by GLP-1 weight-loss customers, not menopause
+    // care - and the copy says so. Every review on the captured page is kept,
+    // including the 1- and 2-star ones; names stored as first name + initial;
+    // dates are Trustpilot's experience dates as displayed.
     trustpilotRating: "4.6",
-    trustpilotReviewCount: "8,138",
+    trustpilotReviewCount: "4,212",
     trustpilotReviews: [
+      { title: "Easy process to start the program.", text: "Easy process to start the program.", name: "Jo Anne O.", location: "US", rating: 5, date: "Oct 7, 2026" },
+      { title: "Can't wait to try, and I hope it works", text: "Can't wait to try it. I hope it works. Will provide results from beginning to end. Just doing a three month trial", name: "Loth", location: "US", rating: 5, date: "Oct 7, 2026" },
+      { title: "Perfect help", text: "Perfect help", name: "Lori B.", location: "US", rating: 5, date: "Oct 7, 2026" },
       {
-        title: "Legit",
-        text: "Legit. doctors, easy to use would recommend",
-        name: "Sheila Baylis",
+        title: "If I could provide Zero stars I would",
+        text: "If I could provide Zero stars I would. If you have sought treatment with another provider or clinic, DO NOT contact GALA. Payment for services unfilled are not refundable and they will mess up your dosage. Anyone who's been on a glp1 understands the importance of maintaining your scheduled dosage. The contact team will waste valuable time. This company is not worth investing your time, money, or energy into. Please learn from my experience and continue your search for a GLP-1 solution.",
+        name: "Patricia V.",
         location: "US",
-        rating: 5,
-        date: "Aug 26, 2026",
+        rating: 1,
+        date: "Oct 6, 2026",
       },
       {
-        title: "Great response time and attention to detail",
-        text: "Great response time and attention to detail. Doctors are responsive.",
-        name: "Melissa Morehouse",
+        title: "Incorrect addresses, long processing times, incorrect dosage/blends.",
+        text: "All of these positive reviews must be bots or new customers. I had no issues the first two shipments and then things went downhill from there. I've been a customer for 6 months now and every single shipment I have to call in to fix one issue or another. My medication has been delivered to the incorrect address twice now. (I'm pretty sure that's a violation of some sort.) I have wait times of 2 weeks or longer when submitting a new order - this is almost double the time they promise. Their customer service team is among the worst I've seen. I called to change an address on file, the girl said she did, she tried to get off the call with me and I asked her to repeat the address, she froze and didn't say anything for a long time. Turns out she did not update the address. I gave her the correct address again, she repeats it and we end the call. The shipment notification I receive the next day says the incorrect address. This is just one interaction out of several I could share. These are people's medications and they need to be taken seriously. I will be reporting Gala GLP1 and the compounding pharmacy to the Florida Board of Pharmacy, Florida Attorney General, and FDA.",
+        name: "Lindsey",
         location: "US",
-        rating: 5,
-        date: "Aug 26, 2026",
+        rating: 1,
+        date: "Oct 6, 2026",
+      },
+      { title: "Frustrated", text: "Frustrated", name: "Lesleigh H.", location: "US", rating: 2, date: "Oct 5, 2026" },
+      { title: "Helpful", text: "I like the Dr review!", name: "Lynda", location: "US", rating: 5, date: "Oct 5, 2026" },
+      { title: "Very well", text: "Very well, also easy app, that real result", name: "Consumer", location: "CR", rating: 5, date: "Oct 5, 2026" },
+      {
+        title: "Packaging",
+        text: "The shipping method needs to be rethought. It is very easy to throw away the medication due to an unsatisfactory packing method. Don't hide the vial in wrapper paper, please.",
+        name: "Vanessa T.",
+        location: "US",
+        rating: 3,
+        date: "Oct 4, 2026",
       },
       {
-        title: "The meds really help",
-        text: "The meds really help",
-        name: "Kathryn Jones",
+        title: "I thought managing everything would be...",
+        text: "I thought managing everything would be a hassle, but the app is simple to use and my meds arrived really fast. Just what I needed to stay on track.",
+        name: "Faye",
         location: "US",
         rating: 5,
-        date: "Aug 26, 2026",
+        date: "Oct 4, 2026",
       },
       {
-        title: "Helpful",
-        text: "Helpful, efficient, great results. Quick answers to questions.",
-        name: "Ann M Ivins",
+        title: "Real results that only took about 3...",
+        text: "Real results that only took about 3 weeks! I was having hot flashes all day long, night sweats, acne and irritability before I started. Now all symptoms have sunsided and may get only 1 or 2 short hot flashes a day. Life changing! Great customer service.",
+        name: "Shannon H.",
         location: "US",
         rating: 5,
-        date: "Aug 19, 2026",
+        date: "Oct 4, 2026",
       },
-    ],
-  },
-  {
-    id: "nurx",
-    name: "Nurx",
-    tagline: "Telehealth pharmacy whose Solstice HRT system starts at a published $39/month",
-    logo: "/logos/nurx.svg",
-    smallLogo: "/logos/nurx-icon.svg",
-    highlights: [
-      "Published plans starting at $39/month",
-      "Adjustable estrogen/progesterone system (Solstice)",
-      "HSA/FSA eligible; satisfaction guarantee per published terms",
-    ],
-    affiliateUrl: "#",
-    ctaText: "Visit Site",
-    // Operator-verified from Nurx's claimed Trustpilot profile (Aug 2026
-    // screenshots): 4.1 average across 1,839 reviews. The profile covers the
-    // whole Nurx pharmacy platform, not the HRT line alone - the review says
-    // so explicitly.
-    trustpilotRating: "4.1",
-    trustpilotReviewCount: "1,839",
-    trustpilotReviews: [
+      { title: "Super easy", text: "Super easy and I'm excited to start", name: "Peanut", location: "US", rating: 5, date: "Oct 4, 2026" },
+      { title: "I just started", text: "I just started. I haven't received my medication yet", name: "Serena E.", location: "US", rating: 4, date: "Oct 4, 2026" },
+      { title: "So far has been seamless", text: "So far has been seamless", name: "Sue", location: "US", rating: 5, date: "Oct 3, 2026" },
       {
-        title: "Love it!",
-        text: "Website is easy to use. I love that I can get my prescription in the mail. I've been using this service for years. Highly recommend!",
-        name: "Heather",
+        title: "The new patient intake process was...",
+        text: "The new patient intake process was quick. The price was very competitive. And communication with the team was excellent.",
+        name: "Kennetito",
         location: "US",
         rating: 5,
-        date: "Aug 15, 2026",
+        date: "Oct 3, 2026",
       },
+      { title: "Continued live support", text: "Continued live support. Price an results.", name: "Jorge", location: "US", rating: 4, date: "Oct 3, 2026" },
+      { title: "Nice app user friendly", text: "Nice app user friendly", name: "Theresa", location: "US", rating: 4, date: "Oct 3, 2026" },
+      { title: "Easy to use and very productive", text: "Easy to use and very productive", name: "Betsy K.", location: "US", rating: 5, date: "Oct 2, 2026" },
       {
-        title: "Much better than making a dr. appointment",
-        text: "Smooth refills every 3 months. I've tried to get medication from my OBGYN or in person provider's during yearly check ups but they can never get the script right. Nurx wrote my prescription without any problems or errors. Simple, cost effective and provider's who actually listen to what you are requesting.",
-        name: "Michelle",
+        title: "Buyer BEWARE",
+        text: "Buyer BEWARE. Order shipment has been postponed 4 times. They took money from my acct IMMEDIATELY (Sept 21) butorder has not been filled and each time I contact them, they say they're in their fulfillment window.NO THEY'RE NOT Not what's published on their website. Guess they've silently change fulfillment window, getting further and further out each time I call them. Now, instead of medication being shipped Sept 23-28th, it changed to Sept 30th, then Oct 2nd NOW Oct 9th Can we say scammed. If you can't ship in published timeframe, don't debit my acct UNTIL ORDER IS SHIPPED. Will be contacting my bank and refute this charge.",
+        name: "Becky W.",
         location: "US",
-        rating: 5,
-        date: "Aug 13, 2026",
+        rating: 2,
+        date: "Oct 2, 2026",
+      },
+      { title: "Great 😊 pricing good", text: "Great 😊 pricing good Easy to complete Covered everything we wanted", name: "Anna B.", location: "US", rating: 5, date: "Oct 2, 2026" },
+      { title: "I try today", text: "I star today I happy and excited", name: "Silvia A.", location: "US", rating: 5, date: "Oct 2, 2026" },
+      {
+        title: "Mickey Mouse",
+        text: "WARNING: DO NOT PREPAY ANNUALLY. A Complete Mickey Mouse Operation Run by AI Bots. If I could give this company a 0, I would. I paid for a full year in advance, which has turned out to be a massive mistake. Like many others, my medication schedule was completely disrupted by their fulfillment delays, causing dangerous gaps in my medical treatment. This isnt just a generic scam; its a completely Mickey Mouse amateur operation masquerading as a professional medical service. The entire customer service department is an AI bot loop that just echoes back whatever you want to hear to pacify you, without actually solving a single problem. You are promised escalations and resolutions by automated scripts, but there are no real human beings taking accountability. Because I paid a year upfront, they are attempting to hold thousands of my dollars hostage. Their standard defense that the prescription is already at the pharmacy only covers a single shipment - it cannot justify withholding a refund for the remaining unfulfilled months of an annual contract. Worse yet, they have completely ignored my official credit card dispute, completely abandoning their obligations the moment they got my money. Save your money, save your health, and do not trust this amateur setup.",
+        name: "Debby",
+        location: "US",
+        rating: 1,
+        date: "Sep 1, 2026",
       },
       {
-        title: "Very simple and comprehensive",
-        text: "It was very simple and comprehensive with no hidden fees and I was finally able to receive the care I've been needing at a price I can afford",
-        name: "Cate Gray",
+        title: "I was skeptical about trying another...",
+        text: "I was skeptical about trying another program, but the app is actually easy to use. It's made keeping track of everything a lot smoother than I expected.",
+        name: "Szaiffa T.",
+        location: "PH",
+        rating: 5,
+        date: "Oct 2, 2026",
+      },
+      { title: "The oil a long time to ship", text: "The oil a long time to ship", name: "Jennifer", location: "US", rating: 3, date: "Oct 1, 2026" },
+      { title: "I like the product", text: "I like the product", name: "Tony", location: "US", rating: 4, date: "Oct 1, 2026" },
+      {
+        title: "Dropped a dress size and feel great in...",
+        text: "Dropped a dress size and feel great in my clothes. The value I'm getting from this program is honestly impressive.",
+        name: "Francisco C.",
         location: "US",
         rating: 5,
-        date: "Jul 6, 2026",
+        date: "Oct 1, 2026",
       },
+      { title: "Going good losing weights", text: "Going good losing weights", name: "Amy L.", location: "US", rating: 4, date: "Oct 1, 2026" },
+      { title: "give it a try", text: "It was easy to understand and gave the best personal care", name: "anonymous", location: "US", rating: 5, date: "Sep 29, 2026" },
+      { title: "Great start", text: "Great start", name: "Carmen", location: "US", rating: 5, date: "Sep 30, 2026" },
+      {
+        title: "Wasn't expecting the app to be so user-friendly...",
+        text: "Wasn't expecting the app to be so user-friendly. Plus, my medication showed up right on time and the care feels super personalized. I haven't even gotten approved yet. Just super excited!",
+        name: "Alan",
+        location: "US",
+        rating: 5,
+        date: "Oct 1, 2026",
+      },
+      { title: "Lost 8 lbs in just a month", text: "Lost 8 lbs in just a month. The app is straightforward, and delivery was super quick every time.", name: "JMLM", location: "US", rating: 5, date: "Sep 25, 2026" },
+      { title: "Great value", text: "Great value", name: "Nicole", location: "US", rating: 4, date: "Sep 28, 2026" },
+      { title: "Fast service and quality products.", text: "Fast service and quality products.", name: "Mary", location: "US", rating: 5, date: "Sep 28, 2026" },
+      {
+        title: "I've already lost 8 lbs in a month",
+        text: "I've already lost 8 lbs in a month. The app is easy to use, and the support from the team feels really personal.",
+        name: "Martha",
+        location: "US",
+        rating: 5,
+        date: "Sep 28, 2026",
+      },
+      { title: "Quick and easy process and seeing...", text: "Quick and easy process and seeing results at a steady pace", name: "Amanda", location: "US", rating: 5, date: "Sep 5, 2026" },
     ],
-  },
-  {
-    id: "innerbalance",
-    name: "Inner Balance",
-    tagline: "Personalized hormone replacement therapy, managed online",
-    logo: "/logos/innerbalance.svg",
-    smallLogo: "/logos/innerbalance-icon.svg",
-    highlights: [
-      "Provider-guided hormone treatment",
-      "Personalized plans after medical review",
-      "Home delivery of prescriptions",
-    ],
-    affiliateUrl: "#",
-    ctaText: "Visit Site",
-  },
-  {
-    id: "hone",
-    name: "Hone",
-    tagline: "At-home lab testing with physician-led hormone care",
-    logo: "/logos/hone.svg",
-    smallLogo: "/logos/hone-icon.svg",
-    highlights: [
-      "At-home lab test before treatment",
-      "Physician consultation on your results",
-      "Ongoing monitoring and dose management",
-    ],
-    affiliateUrl: "#",
-    ctaText: "Visit Site",
-  },
-  {
-    id: "wisp",
-    name: "Wisp",
-    tagline: "Women's telehealth with menopause care alongside broader sexual health",
-    logo: "/logos/wisp.svg",
-    smallLogo: "/logos/wisp-icon.svg",
-    highlights: [
-      "Menopause and hormone support",
-      "Broader women's health treatment in one place",
-      "Fast online visits, discreet delivery",
-    ],
-    affiliateUrl: "#",
-    ctaText: "Visit Site",
-  },
-  {
-    id: "directmeds",
-    name: "DirectMeds",
-    tagline: "Pharmacy-direct telehealth with straightforward flat pricing",
-    logo: "/logos/directmeds.svg",
-    smallLogo: "/logos/directmeds-icon.svg",
-    highlights: [
-      "Pharmacy-direct fulfillment model",
-      "Telemedicine visit included",
-      "No membership fees",
-    ],
-    affiliateUrl: "#",
-    ctaText: "Visit Site",
   },
 ];
 
@@ -291,7 +327,7 @@ const reviews: ReviewData[] = [
       "Anyone who wants to use insurance rather than pay cash",
     ],
     finalVerdict:
-      "Midi Health is the insurance-friendly specialist of this ranking: dedicated menopause clinicians, a genuinely broad treatment menu (from estradiol formats through testosterone to non-hormonal prescriptions), and coverage through many major plans - backed by a 4.1 Trustpilot average across 1,572 reviews whose recent entries consistently praise clinicians who listen and know midlife medicine. Confirm your plan's participation and current costs on Midi's site - and if you'd rather have simple cash pricing, compare the direct-pay providers below.",
+      "Midi Health is the insurance-friendly specialist of this ranking: dedicated menopause clinicians, a genuinely broad treatment menu (from estradiol formats through testosterone to non-hormonal prescriptions), and coverage through many major plans - backed by a 4.1 Trustpilot average across 1,572 reviews whose recent entries consistently praise clinicians who listen and know midlife medicine. Confirm your plan's participation and current costs on Midi's site - and if you'd rather have simple cash pricing, compare Winona's flat published prices.",
     trustBadges: ["Menopause-trained clinicians", "Licensed US providers", "Insurance-friendly"],
     updatedAt: UPDATED,
   },
@@ -301,7 +337,7 @@ const reviews: ReviewData[] = [
     shortSummary:
       "Telehealth hormone care with online evaluation, prescription treatment and ongoing management.",
     reviewIntro:
-      "Gala runs a straightforward telehealth model for hormone care: an online evaluation reviewed by a licensed provider, prescription treatment shipped to your door if appropriate, and ongoing management through the platform. We haven't yet verified Gala's current published pricing or full treatment menu for hormone therapy, so this review sticks to the model and will carry exact figures once confirmed.",
+      "Gala Health runs a straightforward telehealth model for hormone care: an online evaluation reviewed by a licensed provider, prescription treatment shipped to your door if appropriate, and ongoing management through its app. Its claimed Trustpilot profile averages 4.6 across 4,212 reviews - a large record, with one honest caveat: the profile covers the whole Gala platform, and most recent reviewers are GLP-1 weight-loss customers rather than menopause patients. The recent page splits the way a high-volume telehealth service often does: praise for a quick intake, an easy app and responsive support, next to a cluster of 1- and 2-star reviews about fulfillment delays, a wrong-address shipment and a disputed annual prepayment refund - all quoted in full below. We haven't yet verified Gala's current published pricing or treatment menu for hormone therapy, so this review covers the model and the record and will carry exact figures once confirmed.",
     keyFeatures: [
       "Online provider evaluation",
       "Prescription treatment shipped to your door",
@@ -313,22 +349,25 @@ const reviews: ReviewData[] = [
       "Online follow-up and plan adjustments",
     ],
     pros: [
-      "Fully online process",
+      "4.6 Trustpilot average across 4,212 reviews (platform-wide)",
+      "Fully online process; reviewers praise the intake and app",
       "Licensed provider review before any prescription",
       "Home delivery",
     ],
     cons: [
+      "Recent 1- and 2-star reviews cite fulfillment delays and a disputed annual-prepay refund",
+      "Trustpilot record covers all of Gala, mostly GLP-1 customers - not menopause care specifically",
       "We haven't verified current pricing or the full treatment menu",
-      "Less published detail than the menopause-specialist services",
     ],
     bestFor: [
       "People who want a simple, fully online hormone-care flow",
       "Those comparing direct-pay alternatives to insurance-based care",
     ],
     finalVerdict:
-      "Gala offers the standard modern telehealth flow - evaluate online, prescribe if appropriate, ship, follow up. Until we verify its published pricing and treatment menu, confirm both on Gala's site before comparing it against the specialist services in this ranking.",
-    trustBadges: ["Licensed US providers", "Online evaluation"],
-    updatedAt: UPDATED,
+      "Gala Health offers the standard modern telehealth flow - evaluate online, prescribe if appropriate, ship, follow up - and a 4.6 Trustpilot average across 4,212 reviews says most customers come away satisfied. Read the record with two things in mind: it speaks for the whole platform, mostly GLP-1 customers, and its most recent low-star reviews describe shipment delays and a refund dispute over an annual prepayment, so pay monthly rather than annually until you've had a few smooth deliveries. Until we verify its published hormone-therapy pricing and treatment menu, confirm both on Gala's site before comparing it against Winona's flat prices or Midi's insurance model.",
+    trustBadges: ["4.6 across 4,212 Trustpilot reviews", "Licensed US providers", "Online evaluation"],
+    // Oct 8, 2026: Trustpilot record and captured reviews added.
+    updatedAt: "2026-10-08",
   },
   {
     slug: "winona",
@@ -380,196 +419,6 @@ const reviews: ReviewData[] = [
     trustBadges: ["Menopause-focused physicians", "Licensed US providers", "Discreet delivery"],
     updatedAt: UPDATED,
   },
-  {
-    slug: "nurx",
-    providerId: "nurx",
-    shortSummary:
-      "Large telehealth pharmacy whose Solstice HRT system pairs bioidentical estradiol with progesterone at a published $39/month starting price.",
-    reviewIntro:
-      "Nurx is a different animal from the menopause-only clinics in this ranking: a large telehealth pharmacy (born in birth control and sexual health) that added hormone replacement through its Solstice system. The pitch is personalization at a published price - bioidentical estradiol as a daily tablet or gel, micronized progesterone capsules included when clinically needed, and an optional vaginal estrogen cream, with the estrogen/progesterone ratio adjustable under clinical guidance rather than fixed. Plans start at a published $39/month (a 40% off first-month promotion was live at the time of review), care is HSA/FSA eligible with no insurance needed, and its claimed Trustpilot profile averages 4.1 across 1,839 reviews - covering the whole Nurx platform, not the HRT line alone.",
-    keyFeatures: [
-      "Published starting price: $39/month",
-      "Adjustable estrogen/progesterone ratios (Solstice system)",
-      "HSA/FSA eligible; no insurance needed",
-      "Clinical assistance via messaging; US-based care agents",
-    ],
-    pricingSummary:
-      "Nurx publishes a $39/month starting price for the Solstice All-in-1 HRT system - bioidentical estrogen with daily progesterone capsules included when needed - with a 40% off first-month promotion live at the time of review, free shipping, and published on-time-refill and 100% satisfaction guarantees (per Nurx's terms). Care is HSA/FSA eligible and no insurance is needed. Exact monthly cost depends on the plan a clinician prescribes; prices as published in August 2026 - confirm current rates on Nurx's site.",
-    pricingPlans: [
-      {
-        name: "Solstice All-in-1 HRT System",
-        medication: "Bioidentical estradiol (tablet or gel) + progesterone when needed",
-        price: "$39",
-        unit: "/month",
-        cadence: "starting price",
-        highlights: ["40% off first month at time of review", "Free shipping", "HSA/FSA eligible"],
-      },
-    ],
-    treatmentOptions: [
-      "Bioidentical estradiol - daily tablet or daily gel",
-      "Micronized progesterone capsules (included when needed)",
-      "Vaginal estrogen cream (optional add-on)",
-    ],
-    pros: [
-      "Lowest published starting price in our HRT ranking ($39/mo)",
-      "Adjustable hormone ratios instead of fixed combinations",
-      "Published satisfaction and on-time-refill guarantees (per terms)",
-      "HSA/FSA eligible with messaging-based clinical support",
-    ],
-    cons: [
-      "Trustpilot record (4.1 across 1,839) covers all of Nurx, not HRT specifically",
-      "A broad pharmacy platform rather than a dedicated menopause clinic",
-      "Cash-pay - no insurance path like Midi's",
-    ],
-    bestFor: [
-      "Women who want the lowest published entry price into HRT",
-      "Those comfortable with messaging-based care from a large platform",
-    ],
-    finalVerdict:
-      "Nurx brings the platform playbook to menopause care: the lowest published starting price in our ranking ($39/month), an adjustable-ratio system rather than fixed combinations, and HSA/FSA-eligible care with published guarantees. The trade-off is focus - it's a general telehealth pharmacy, not a dedicated menopause clinic, and its 4.1 Trustpilot record speaks for the whole platform. If specialist depth matters most, compare Midi Health and Winona first; if published price is the deciding factor, Nurx sets the floor.",
-    trustBadges: ["Licensed US providers", "HSA/FSA eligible", "Published pricing"],
-    updatedAt: "2026-08-28",
-  },
-  {
-    slug: "innerbalance",
-    providerId: "innerbalance",
-    shortSummary:
-      "Personalized, provider-guided hormone replacement therapy managed online with home delivery.",
-    reviewIntro:
-      "Inner Balance offers hormone replacement therapy managed online: a medical review, a personalized treatment plan, and prescriptions delivered to your door with ongoing provider guidance. We haven't yet verified Inner Balance's current published pricing or full program details, so this review describes the model conservatively and will be expanded with exact, verified figures once we've confirmed them.",
-    keyFeatures: [
-      "Provider-guided hormone treatment",
-      "Personalized plans after medical review",
-      "Home delivery of prescriptions",
-    ],
-    pricingSummary: PRICING_TBD,
-    treatmentOptions: [
-      "Provider-directed hormone replacement therapy",
-      "Ongoing plan adjustments",
-    ],
-    pros: [
-      "Personalized, provider-guided approach",
-      "Fully online with home delivery",
-    ],
-    cons: [
-      "We haven't verified current pricing or program details",
-      "Less published information than the bigger names in this ranking",
-    ],
-    bestFor: [
-      "People comparing personalized HRT programs online",
-      "Those willing to confirm details directly before enrolling",
-    ],
-    finalVerdict:
-      "Inner Balance follows the personalized-HRT playbook - review, tailored plan, delivery, follow-up. Until we've verified its published pricing and program specifics, treat this as a candidate to compare directly on the provider's site against the better-documented services here.",
-    trustBadges: ["Licensed US providers", "Personalized plans"],
-    updatedAt: UPDATED,
-  },
-  {
-    slug: "hone",
-    providerId: "hone",
-    shortSummary:
-      "At-home lab testing with physician-led hormone care - treatment decisions built on your bloodwork.",
-    reviewIntro:
-      "Hone's model starts where most telehealth ends: with your blood. An at-home lab test kicks off the process, a physician reviews your results in a consultation, and treatment - if appropriate - is prescribed and monitored against follow-up labs. That lab-first structure is Hone's defining trait in this ranking, and it appeals to people who want their hormone care anchored to measured levels rather than symptoms alone. We haven't yet verified Hone's current published membership and treatment pricing, so this review covers the model; verified figures will follow.",
-    keyFeatures: [
-      "At-home lab test before any treatment",
-      "Physician consultation on your results",
-      "Ongoing monitoring with follow-up labs",
-      "Treatment prescribed and adjusted against bloodwork",
-    ],
-    pricingSummary: PRICING_TBD,
-    treatmentOptions: [
-      "Physician-directed hormone therapy based on labs",
-      "Recurring lab work and dose management",
-    ],
-    pros: [
-      "Lab-first process - treatment anchored to measured levels",
-      "Physician consultation included in the flow",
-      "Structured ongoing monitoring",
-    ],
-    cons: [
-      "We haven't verified current membership/treatment pricing",
-      "Lab-first flow takes longer to start than questionnaire-only services",
-    ],
-    bestFor: [
-      "People who want bloodwork behind every treatment decision",
-      "Those who value structured, monitored hormone care",
-    ],
-    finalVerdict:
-      "Hone is the data-driven pick of this ranking: labs before treatment, physician review of actual results, and monitoring against follow-up bloodwork. The trade-off is a slower start and a membership-style structure - confirm current pricing on Hone's site, and weigh it against the faster questionnaire-based services if speed matters most.",
-    trustBadges: ["At-home lab testing", "Physician-led care", "Licensed US providers"],
-    updatedAt: UPDATED,
-  },
-  {
-    slug: "wisp",
-    providerId: "wisp",
-    shortSummary:
-      "Women's telehealth covering menopause and hormone support alongside broader sexual and reproductive health.",
-    reviewIntro:
-      "Wisp is a women's telehealth platform whose menopause and hormone care sits alongside a much broader treatment range - sexual health, reproductive care and everyday prescriptions in one place. That breadth is its angle in this ranking: one account, one pharmacy relationship, multiple needs. We haven't yet verified Wisp's current published pricing for its menopause line, so this review covers the model and will carry verified figures once confirmed.",
-    keyFeatures: [
-      "Menopause and hormone support",
-      "Broader women's health treatment in one platform",
-      "Fast online visits, discreet delivery",
-    ],
-    pricingSummary: PRICING_TBD,
-    treatmentOptions: [
-      "Provider-directed menopause and hormone treatment",
-      "Related women's health prescriptions",
-    ],
-    pros: [
-      "One platform for multiple women's health needs",
-      "Quick online process with discreet delivery",
-      "Established women's telehealth brand",
-    ],
-    cons: [
-      "We haven't verified current menopause-line pricing",
-      "Not a menopause-specialist service like Winona or Midi",
-    ],
-    bestFor: [
-      "Women who want hormone support inside a broader care platform",
-      "Those who value one account for multiple treatments",
-    ],
-    finalVerdict:
-      "Wisp makes sense when menopause care is one of several things you want handled in one place. If dedicated menopause specialization is the priority, Midi Health and Winona are built for exactly that - Wisp's advantage is breadth. Confirm current pricing on Wisp's site.",
-    trustBadges: ["Women's telehealth platform", "Licensed US providers", "Discreet delivery"],
-    updatedAt: UPDATED,
-  },
-  {
-    slug: "directmeds",
-    providerId: "directmeds",
-    shortSummary:
-      "Pharmacy-direct telehealth known from our weight-loss ranking for flat pricing and fast fulfillment - hormone care details to be verified.",
-    reviewIntro:
-      "DirectMeds runs a pharmacy-direct telehealth model we know well from our weight-loss ranking, where it earns its place with flat pricing, an included telemedicine visit, no membership fees and fast free shipping - backed by a 4.6 Trustpilot average across 15,690 reviews. For hormone therapy specifically, we haven't yet verified DirectMeds' published treatment menu or pricing, so this review describes the operator honestly and will be completed with exact, verified hormone-care figures once confirmed.",
-    keyFeatures: [
-      "Pharmacy-direct fulfillment model",
-      "Telemedicine visit included",
-      "No membership fees",
-      "4.6 across 15,690 Trustpilot reviews (operator-level record)",
-    ],
-    pricingSummary: PRICING_TBD,
-    treatmentOptions: [
-      "Provider-directed treatment (hormone-care menu to be verified)",
-    ],
-    pros: [
-      "Operator with a large verified customer record (4.6 across 15,690 reviews)",
-      "Known for flat pricing and 1-2 day shipping in our weight-loss ranking",
-      "No membership fees",
-    ],
-    cons: [
-      "Hormone-care treatment menu and pricing not yet verified by us",
-      "Not a menopause-specialist service",
-    ],
-    bestFor: [
-      "People who already trust the DirectMeds model from other treatment areas",
-      "Those who prioritize simple pricing and fast fulfillment",
-    ],
-    finalVerdict:
-      "DirectMeds brings a proven operator record - flat pricing, fast shipping and a five-figure Trustpilot base - into the hormone space. What we can't yet tell you is exactly what its hormone-care menu and prices are; until we verify them, confirm details on DirectMeds' site and compare against the menopause specialists above.",
-    trustBadges: ["4.6 across 15,690 Trustpilot reviews", "No membership fees", "Telemedicine visit included"],
-    updatedAt: UPDATED,
-  },
 ];
 
 const battles: BattleData[] = [
@@ -583,7 +432,7 @@ const battles: BattleData[] = [
     description:
       "Midi Health (menopause-trained clinicians, insurance-friendly) vs Winona (body-identical HRT, direct pay, monthly delivery). An honest comparison.",
     intro:
-      "Midi Health and Winona are both built specifically around menopause - which makes this the most instructive matchup in our HRT ranking. The difference is the model. Midi runs like a virtual specialist clinic: menopause-trained clinicians, visits that many major insurance plans cover, and treatment plans that can be hormonal or non-hormonal. Winona runs like a focused product: physician-prescribed, body-identical hormone therapy on a direct-pay subscription, shipped discreetly every month. We haven't yet verified either provider's current published pricing, so this comparison is about the care model - the thing that actually separates them.",
+      "Midi Health and Winona are both built specifically around menopause - which makes this the most instructive matchup in our HRT ranking. The difference is the model. Midi runs like a virtual specialist clinic: menopause-trained clinicians, visits that many major insurance plans cover, and treatment plans that can be hormonal or non-hormonal. Winona runs like a focused product: physician-prescribed, body-identical hormone therapy on a direct-pay subscription, shipped discreetly every month. Winona publishes flat prices ($39-$89/month by product, verified August 2026) with a free consultation; Midi's cost runs through your insurance plan, and we haven't verified its cash pricing. Beyond that, this comparison is about the care model - the thing that actually separates them.",
     verdict:
       "Choose by how you want to pay and how broad you want the care to be. If you have insurance that participates and want a clinician who can also weigh non-hormonal options, Midi Health is the stronger model - specialist care with coverage is rare in this space. If you've decided on hormone therapy and want a dedicated service with predictable direct-pay delivery, Winona's focus is the draw. Confirm current pricing and availability on both sites before deciding.",
     verdictWinnerPoints: [
@@ -613,10 +462,10 @@ const battles: BattleData[] = [
         name: "Paying for It",
         winner: "provider1",
         explanation:
-          "Midi works with many major insurance plans - genuinely unusual for telehealth menopause care, where direct pay is the norm. Winona is direct-pay by design, which is simpler but entirely out of pocket. We haven't verified current cash prices at either, so the coverage difference is the decidable fact.",
+          "Midi works with many major insurance plans - genuinely unusual for telehealth menopause care, where direct pay is the norm. Winona is direct-pay by design, which is simpler but entirely out of pocket: flat published prices of $39-$89/month by product, and the consultation is free. We haven't verified Midi's cash pricing, so if your plan participates, coverage is the decidable fact; if it doesn't, Winona's published prices are the only known number.",
         supportingPoints: [
           "Many major insurance plans accepted (Midi)",
-          "Direct-pay simplicity, no claims (Winona)",
+          "$39-$89/mo published, free consultation (Winona)",
         ],
       },
       {
@@ -648,141 +497,9 @@ const battles: BattleData[] = [
       { feature: "Pricing", provider1Value: "Depends on your insurance plan", provider2Value: "$39-$89/mo published; free consult", highlight: "provider2" },
       { feature: "Trustpilot", provider1Value: "4.1 (1,572 reviews)", provider2Value: "4.6 (8,138 reviews)", highlight: "provider2" },
     ],
-    updatedAt: UPDATED,
-  },
-  {
-    slug: "hone-vs-winona",
-    provider1Id: "hone",
-    provider2Id: "winona",
-    title: "Hone vs Winona (2026): Which HRT Model Fits?",
-    matchupLabel: "Hone vs Winona",
-    subtitle: "At-home bloodwork driving treatment decisions vs a dedicated menopause HRT service.",
-    description:
-      "Hone (at-home labs, physician-reviewed results) vs Winona (menopause-focused body-identical HRT). Two models of online hormone care, compared honestly.",
-    intro:
-      "Hone and Winona answer the same question - how should hormone care work online? - with opposite philosophies. Hone starts with data: an at-home lab test, a physician consultation on your actual results, and treatment monitored against follow-up bloodwork. Winona starts with the condition: a service built entirely around menopause, prescribing body-identical hormone therapy after an online medical review, delivered monthly. We haven't verified either provider's current published pricing, so this comparison weighs the models themselves.",
-    verdict:
-      "Pick the philosophy that matches your situation. If you want treatment decisions anchored to measured hormone levels - and don't mind a slower, lab-gated start - Hone's structure is the more rigorous of the two. If you're navigating menopause specifically and want a service purpose-built for it with simple recurring delivery, Winona is the more direct route. Confirm current pricing and program details on both sites.",
-    verdictWinnerPoints: [
-      "At-home labs before any treatment decision",
-      "Physician consultation on your actual results",
-      "Ongoing monitoring against follow-up bloodwork",
-    ],
-    verdictLoserPoints: [
-      "Purpose-built for menopause specifically",
-      "Body-identical HRT with monthly discreet delivery",
-      "Faster start - no lab kit round-trip",
-    ],
-    winnerId: "hone",
-    categories: [
-      {
-        name: "Clinical Rigor",
-        winner: "provider1",
-        explanation:
-          "Hone's lab-first structure means treatment starts from measured levels and is adjusted against follow-up labs - the most data-anchored flow in our HRT ranking. Winona runs a real physician review, but the process is symptom- and history-led rather than lab-gated.",
-        supportingPoints: [
-          "Baseline labs before treatment (Hone)",
-          "Follow-up labs for dose management (Hone)",
-          "Physician review at both",
-        ],
-      },
-      {
-        name: "Menopause Specialization",
-        winner: "provider2",
-        explanation:
-          "Winona is a menopause service, full stop - its treatment formats, physicians and content are built for that population. Hone is a hormone-optimization platform whose scope is broader, which cuts both ways: more flexibility, less singular focus.",
-        supportingPoints: [
-          "Menopause-only service (Winona)",
-          "Broader hormone-care scope (Hone)",
-        ],
-      },
-      {
-        name: "Speed to Start",
-        winner: "provider2",
-        explanation:
-          "Winona's online review can move to treatment quickly. Hone's model requires the lab kit round-trip and a results consultation before anything ships - more rigorous, unavoidably slower.",
-        supportingPoints: [
-          "Questionnaire + review to start (Winona)",
-          "Lab kit round-trip first (Hone)",
-        ],
-      },
-    ],
-    features: [
-      { feature: "Starting point", provider1Value: "At-home lab test", provider2Value: "Online medical review", highlight: "both" },
-      { feature: "Focus", provider1Value: "Hormone care, lab-driven", provider2Value: "Menopause HRT", highlight: "both" },
-      { feature: "Monitoring", provider1Value: "Follow-up labs", provider2Value: "Physician follow-up", highlight: "provider1" },
-      { feature: "Delivery", provider1Value: "Ships after labs + consult", provider2Value: "Discreet monthly delivery", highlight: "provider2" },
-      { feature: "Pricing", provider1Value: "Verify on site", provider2Value: "$39-$89/mo published; free consult", highlight: "provider2" },
-    ],
-    updatedAt: UPDATED,
-  },
-  // The vertical's first fully data-backed battle: verified published pricing
-  // and claimed-profile Trustpilot records on BOTH sides.
-  {
-    slug: "winona-vs-nurx",
-    provider1Id: "winona",
-    provider2Id: "nurx",
-    title: "Winona vs Nurx (2026): Which $39 HRT Wins?",
-    matchupLabel: "Winona vs Nurx",
-    subtitle: "A menopause-only clinic with an 8,138-review record vs a telehealth pharmacy's $39/month HRT system.",
-    description:
-      "Winona vs Nurx for HRT: Winona's menopause-only care (4.6 Trustpilot, 8,138 reviews; $39-$89/mo published) against Nurx's Solstice system from $39/mo. Verified prices, honest trade-offs.",
-    intro:
-      "Winona and Nurx both publish real prices - rare in menopause care - but sell different philosophies. Winona is a dedicated menopause clinic: free physician consultation, bioidentical creams, tablets and capsules at flat prices ($39-$89/month by product), and a 4.6 Trustpilot average across 8,138 reviews. Nurx is a large telehealth pharmacy whose Solstice HRT system starts at a published $39/month with adjustable estrogen/progesterone ratios, HSA/FSA eligibility and published guarantees - carrying a 4.1 Trustpilot average across 1,839 reviews for the platform as a whole. Both are cash-pay; if insurance coverage is your priority, compare Midi Health instead.",
-    verdict:
-      "Winona is our pick for most women here: the entire service is built around menopause, the consultation is free (you pay only if prescribed), and its 4.6 average across 8,138 Trustpilot reviews is the strongest verified record in our HRT ranking. Nurx wins the entry price - its Solstice system starts at a published $39/month against Winona's $39 progesterone capsules and $54-$89 estrogen products - and suits women who already know and trust the platform. Prices as published in August 2026; confirm current rates on both sites.",
-    verdictWinnerPoints: [
-      "Menopause-only clinic - the whole service is built for this",
-      "4.6 Trustpilot average across 8,138 reviews",
-      "Free consultation; flat published prices ($39-$89/mo by product)",
-    ],
-    verdictLoserPoints: [
-      "Published starting price of $39/month (Solstice system)",
-      "Adjustable estrogen/progesterone ratios",
-      "HSA/FSA eligible with published guarantees (per terms)",
-    ],
-    winnerId: "winona",
-    categories: [
-      {
-        name: "Focus",
-        winner: "provider1",
-        explanation:
-          "Winona does menopause and nothing else - physicians, products and follow-up all built for one patient. Nurx's HRT line lives inside a much broader telehealth pharmacy that started in birth control and sexual health.",
-        supportingPoints: [
-          "Dedicated menopause clinic (Winona)",
-          "HRT as one line on a large platform (Nurx)",
-        ],
-      },
-      {
-        name: "Published Pricing",
-        winner: "tie",
-        explanation:
-          "Both publish real numbers - the deciding factor is shape. Nurx sets the lower entry point: Solstice from $39/month all-in. Winona prices per product: progesterone capsules $39, estrogen tablets $54, creams $89 - with a free consultation so you pay nothing unless prescribed.",
-        supportingPoints: [
-          "From $39/mo, 40% off first month at review time (Nurx)",
-          "$39-$89/mo by product; free consult (Winona)",
-        ],
-      },
-      {
-        name: "Track Record",
-        winner: "provider1",
-        explanation:
-          "Winona's claimed Trustpilot profile averages 4.6 across 8,138 reviews - all menopause care. Nurx averages 4.1 across 1,839, and that record speaks for the whole pharmacy platform rather than the HRT line specifically.",
-        supportingPoints: [
-          "4.6 / 8,138 reviews, menopause-specific (Winona)",
-          "4.1 / 1,839 reviews, platform-wide (Nurx)",
-        ],
-      },
-    ],
-    features: [
-      { feature: "Focus", provider1Value: "Menopause only", provider2Value: "Broad telehealth pharmacy", highlight: "provider1" },
-      { feature: "Starting price", provider1Value: "$39/mo (progesterone capsules)", provider2Value: "$39/mo (Solstice system)", highlight: "both" },
-      { feature: "Estrogen products", provider1Value: "Tablets $54; creams $89", provider2Value: "Tablet or gel, in-plan", highlight: "both" },
-      { feature: "Consultation", provider1Value: "Free - pay only if prescribed", provider2Value: "90-second quiz to start", highlight: "provider1" },
-      { feature: "Trustpilot", provider1Value: "4.6 (8,138 reviews)", provider2Value: "4.1 (1,839, platform-wide)", highlight: "provider1" },
-      { feature: "HSA/FSA", provider1Value: "Eligible", provider2Value: "Eligible", highlight: "both" },
-    ],
-    updatedAt: "2026-08-28",
+    // Oct 8, 2026: pricing statements corrected (Winona's published prices
+    // were already verified when the "neither verified" wording shipped).
+    updatedAt: "2026-10-08",
   },
 ];
 
@@ -1336,7 +1053,7 @@ const faqs: FaqItem[] = [
   {
     question: "Do I need lab tests or an evaluation for HRT?",
     answer:
-      "Providers evaluate your symptoms and medical history before prescribing, and some - like lab-first services - require bloodwork up front. Ongoing follow-up helps tailor treatment and monitor your response.",
+      "Providers evaluate your symptoms and medical history before prescribing, and some require bloodwork up front. Ongoing follow-up helps tailor treatment and monitor your response.",
   },
   {
     question: "Can HRT be prescribed online?",
@@ -1363,7 +1080,8 @@ export function hrtSeed(base: SiteConfig): SiteConfig {
       ...base.hero,
       backgroundImageUrl: "",
       imageAlt: "",
-      updatedLabel: "Last Updated: August 2026",
+      // Oct 8, 2026: ranking cut to the three partner providers.
+      updatedLabel: "Last Updated: October 2026",
       h1: "Best HRT & Menopause Providers of 2026",
       h2: "Compare the top online menopause and hormone-therapy providers, side by side",
       description:

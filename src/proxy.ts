@@ -81,6 +81,25 @@ const PATH_REDIRECTS: Record<string, string> = {
   "/articles/altrx-vs-ro": "/altrx-vs-ro",
 };
 
+// Same idea, scoped to one vertical: content-relative key and target, applied
+// only when the request is under that vertical's prefix. Needed where a
+// retired slug still exists in another vertical (DirectMeds is a live
+// weight-loss review, Hone a live TRT review).
+const VERTICAL_PATH_REDIRECTS: Record<string, Record<string, string>> = {
+  hrt: {
+    // Oct 8, 2026: HRT ranking cut to its three partner providers. The five
+    // dropped review pages consolidate onto the reviews index; the two
+    // retired comparisons both featured Winona, so they land on its review.
+    "/reviews/nurx": "/reviews",
+    "/reviews/innerbalance": "/reviews",
+    "/reviews/hone": "/reviews",
+    "/reviews/wisp": "/reviews",
+    "/reviews/directmeds": "/reviews",
+    "/hone-vs-winona": "/reviews/winona",
+    "/winona-vs-nurx": "/reviews/winona",
+  },
+};
+
 // One deployment serves two hosts:
 //
 //   • treatmentshub.com - the hub. "/" is the hub landing; everything else must
@@ -126,6 +145,12 @@ export function proxy(req: NextRequest) {
     if (PATH_REDIRECTS[contentPath] !== undefined) {
       const url = req.nextUrl.clone();
       url.pathname = `/${isVertical(first) ? first : "weight-loss"}${PATH_REDIRECTS[contentPath]}`;
+      return NextResponse.redirect(url, 301);
+    }
+    const verticalRedirect = isVertical(first) ? VERTICAL_PATH_REDIRECTS[first]?.[contentPath] : undefined;
+    if (verticalRedirect !== undefined) {
+      const url = req.nextUrl.clone();
+      url.pathname = `/${first}${verticalRedirect}`;
       return NextResponse.redirect(url, 301);
     }
 

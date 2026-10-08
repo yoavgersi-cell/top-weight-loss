@@ -57,8 +57,18 @@ function seedForVertical(vertical: string): SiteConfig {
 // Per-vertical read for any vertical other than weight-loss. Kept intentionally
 // simple: the heavy seed-merging below is weight-loss-specific, so new verticals
 // just load their own blob (or their code skeleton) with no cross-vertical seeding.
+// Verticals whose content ships from code only. A saved blob is ignored
+// entirely, so what's reviewed in the repo is exactly what's live: provider
+// list, affiliate links, prices, reviews, battles, articles. Added Oct 8, 2026
+// when the HRT ranking was cut to the three partner providers - a blob saved
+// from the admin before that would otherwise resurrect the removed ones.
+const CODE_AUTHORITATIVE_VERTICALS = new Set(["hrt"]);
+
 async function getVerticalConfig(vertical: string): Promise<SiteConfig> {
   const base = seedForVertical(vertical);
+  if (CODE_AUTHORITATIVE_VERTICALS.has(vertical)) {
+    return normalizeBrandCasing(base, `/${vertical}`);
+  }
   try {
     const key = blobKeyFor(vertical);
     const { blobs } = await list({ prefix: key });
