@@ -25,8 +25,6 @@ import type {
 // ─────────────────────────────────────────────────────────────────────────────
 
 const UPDATED = "2026-08-23";
-const PRICING_TBD =
-  "We haven't verified this provider's current published pricing yet - plans and treatment costs vary, so check the provider's site for current rates. This page will carry exact verified prices once we've confirmed them.";
 
 const providers: Provider[] = [
   {
@@ -609,15 +607,39 @@ const reviews: ReviewData[] = [
       "Clinicians trained in midlife women's health",
       "Hormonal and non-hormonal treatment paths",
       "Works with many major insurance plans",
-      "Ongoing virtual follow-up",
+      "Ongoing virtual follow-up; labs ordered when needed",
+      "Optional Midi supplement line, $31.99-$43.99 per product (sale prices, Oct 2026)",
     ],
-    pricingSummary: PRICING_TBD,
+    // Clinic visit pricing is still unverified (Midi bills through insurance
+    // where it participates). The supplement shop prices below come from the
+    // operator's Oct 8, 2026 screenshots of shop.joinmidi.com: sale price with
+    // the struck regular price, free shipping on orders above $65. The shop's
+    // own star ratings and "clinically-proven" wording are Midi's claims and
+    // are not reproduced.
+    pricingSummary:
+      "Two different price questions. The clinic: Midi works with many major insurance plans, so for most patients the visit cost is a copay set by their plan; we haven't verified Midi's cash price for a visit, and one recent reviewer reports a $250 charge for a telehealth visit she believed was covered - ask what you'll owe before the appointment. The shop: Midi also sells its own supplement line separately from clinic care, with published prices we verified in October 2026 - Daily GLP-1 Support $31.99 (regularly $39.99), Daily Omega-3+ and Daily Cortisol Support $39.99 each (regularly $49.99), Daily Fiber+ and Berberine+ $43.99 each (regularly $54.99), with free shipping on orders above $65. Supplements are optional and are not hormone therapy. Prices as published in October 2026; confirm current rates on Midi's site.",
+    pricingPlans: [
+      { name: "Daily GLP-1 Support", medication: "Supplement - Midi shop (optional, not HRT)", price: "$31.99", regularPrice: "$39.99", cadence: "sale price, Oct 2026" },
+      { name: "Daily Omega-3+", medication: "Supplement - Midi shop (optional, not HRT)", price: "$39.99", regularPrice: "$49.99", cadence: "sale price, Oct 2026" },
+      { name: "Daily Cortisol Support", medication: "Supplement - Midi shop (optional, not HRT)", price: "$39.99", regularPrice: "$49.99", cadence: "sale price, Oct 2026" },
+      { name: "Daily Fiber+", medication: "Supplement - Midi shop (optional, not HRT)", price: "$43.99", regularPrice: "$54.99", cadence: "sale price, Oct 2026" },
+      { name: "Berberine+", medication: "Supplement - Midi shop (optional, not HRT)", price: "$43.99", regularPrice: "$54.99", cadence: "sale price, Oct 2026" },
+    ],
     treatmentOptions: [
       "Estradiol gels, creams, patches and pills",
       "Micronized progesterone capsules",
       "Vaginal estrogen therapies (creams or rings)",
       "Testosterone therapy where clinically appropriate",
       "Non-hormonal prescriptions (e.g. SSRIs, neurokinin-3 antagonists) and lifestyle support",
+      "Separate supplement line (Omega-3+, Cortisol Support, Fiber+, GLP-1 Support, Berberine+) - optional, sold through Midi's shop",
+    ],
+    // The flow as Midi describes it and as the captured reviews describe it
+    // ("Visit-Bloodwork-Visit", "same day prescriptions").
+    howItWorks: [
+      { timing: "Day 1", title: "Book a virtual visit", detail: "Choose a time online; many major insurance plans are accepted, otherwise ask the cash price before booking." },
+      { timing: "Visit 1", title: "Clinician reviews your symptoms and history", detail: "A clinician trained in midlife women's health takes your history and decides whether hormone therapy, a non-hormonal path, or labs first is appropriate." },
+      { timing: "If needed", title: "Bloodwork", detail: "Labs are ordered when the clinician wants them before prescribing - reviewers describe a visit, bloodwork, then a results visit." },
+      { timing: "Ongoing", title: "Prescription and follow-up", detail: "Prescriptions go to your pharmacy; follow-up visits and portal messaging adjust the plan over time." },
     ],
     pros: [
       "Menopause-specialist care, not general telehealth",
@@ -626,7 +648,7 @@ const reviews: ReviewData[] = [
       "4.1 Trustpilot average across 1,707 reviews",
     ],
     cons: [
-      "We haven't verified current out-of-pocket pricing",
+      "We haven't verified the cash price of a visit - only the supplement shop prices are verified",
       "Availability and insurance participation vary by state and plan",
       "Recent 1-star reviews cite surprise billing (a $250 visit, an unlisted assessment charge), a no-show clinician and unanswered portal messages",
       "15-minute slots feel short to some reviewers; you don't choose your clinician",
@@ -666,6 +688,12 @@ const reviews: ReviewData[] = [
         cadence: "flat - no price rise at dose changes",
         highlights: ["No membership fee, no insurance", "Free discreet shipping in 1-2 days", "FSA/HSA accepted; cancel anytime"],
       },
+    ],
+    howItWorks: [
+      { timing: "Day 1", title: "Online assessment", detail: "Symptoms and history online; the exact plan and price are shown before you pay." },
+      { timing: "Review", title: "Licensed provider reads your assessment", detail: "Gala describes care as provider-led, not chatbot-led; a provider decides between estradiol, progesterone, vaginal estradiol or non-hormonal options." },
+      { timing: "1-2 days", title: "Free discreet shipping", detail: "Gala states free shipping in 1-2 days - weigh that against the fulfillment-delay reviews quoted on this page." },
+      { timing: "Monthly", title: "Flat $69, cancel anytime", detail: "The same price every cycle with no rise at dose changes; the app handles refills and messaging. Pay monthly rather than annually until deliveries prove smooth." },
     ],
     treatmentOptions: [
       "Estradiol - daily pill or transdermal patch (bioidentical)",
@@ -719,6 +747,12 @@ const reviews: ReviewData[] = [
       // Operator screenshot of Winona's product page, Oct 8, 2026.
       { name: "Estrogen Patch", medication: "Transdermal bioidentical estrogen", price: "$149", unit: "/month" },
       { name: "DHEA", medication: "DHEA supplement (90 capsules)", price: "$27", unit: "/3 months" },
+    ],
+    howItWorks: [
+      { timing: "Day 1", title: "Online questionnaire", detail: "Symptoms and history, all online - reviewers single out that there is no video call. The consultation is free." },
+      { timing: "Within days", title: "Physician review", detail: "A board-certified physician reviews the answers and proposes a treatment; you pay only if prescribed and you approve the plan." },
+      { timing: "Under 5 days", title: "Discreet delivery", detail: "Winona says treatment arrives in under 5 days; shipments then recur monthly." },
+      { timing: "Ongoing", title: "Adjust with your doctor", detail: "24-hour physician messaging; reviewers describe dose adjustments as symptoms settle. Note the refill-charge complaint below - check your reorder settings." },
     ],
     treatmentOptions: [
       "Body creams - estrogen, progesterone, or combined",
