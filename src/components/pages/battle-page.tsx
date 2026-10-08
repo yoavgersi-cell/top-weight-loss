@@ -12,7 +12,7 @@ import { LandingEditorial } from "@/components/landing-editorial";
 import { GuideCluster } from "@/components/guide-cluster";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound, permanentRedirect } from "next/navigation";
-import { ArrowRight, Check, Minus, ShieldCheck, Sparkles, Star } from "lucide-react";
+import { ArrowRight, Check, Minus, ShieldCheck, Sparkles } from "lucide-react";
 import { LastUpdated } from "@/components/last-updated";
 import { ProviderCta } from "@/components/provider-cta";
 import { BattleStickyCta } from "@/components/battle-sticky-cta";
@@ -28,6 +28,7 @@ import { ProductCarousel } from "@/components/product-carousel";
 import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/reddit-community";
 import { threeWayBySlug, THREE_WAY_COMPARISONS } from "@/lib/three-way";
 import { ThreeWayPageView, threeWayMetadata } from "@/components/pages/three-way-page";
+import { BattleVerdict } from "@/components/battle-verdict";
 
 // Code-side CTR overrides for the highest-performing "versus" pages. These
 // pages live in the CMS blob, so their stored titles can't be tuned from code -
@@ -590,14 +591,13 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   const runnerUpScore = verdictRunnerUp ? rankingScoreFor(verdictRunnerUp.id) : undefined;
   const showShortAnswerScores =
     winnerScore != null && runnerUpScore != null && winnerScore >= runnerUpScore;
-  const shortAnswerReason = winnerPts[0] ?? runnerUpPts[0] ?? "";
 
   // Above-the-fold quick-comparison rows: the three decisions searchers care
   // about first (price, prescription, delivery), pulled from this battle's own
   // feature data so every value is real. The prescription row is a market
   // constant - every provider we compare requires a licensed-provider review.
   const findFeature = (re: RegExp) => (battle.features ?? []).find((f) => re.test(f.feature));
-  const priceRow = findFeature(/price|cost/i);
+  const priceRow = findFeature(/pric|cost/i);
   const shippingRow = findFeature(/shipping|delivery|speed/i);
   const medsRow = findFeature(/medication|treatment/i);
   const quickRows = [
@@ -770,40 +770,25 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
         <div className="mx-auto max-w-[1100px] px-4 pt-10 pb-28 sm:px-6 sm:pb-10">
           {/* ───── THE VERDICT ─────
-              The answer a searcher came for, above the fold, before any prose -
-              in the site's editorial verdict-card style (matches the review
-              "bottom line" and cheapest-glp1 "short answer" cards). Winner logos
-              anchor it; the score pill shows only when our rubric agrees with the
+              The answer a searcher came for, above the fold. Rebuilt Oct 8,
+              2026 (see BattleVerdict): the pick, the battle's own three verdict
+              points, then the four things buyers ask about first shown for
+              BOTH providers from verified data, and the cases where the
+              runner-up wins. Score pill only when our rubric agrees with the
               named winner. Renders only when a winner is named. */}
-          {verdictWinner && verdictRunnerUp && shortAnswerReason && (
-            <div className="mb-8 max-w-[820px] overflow-hidden rounded-2xl border border-[#0C4B75]/20 bg-white shadow-sm">
-              <div className="flex items-center justify-between gap-3 border-b border-gray-100 bg-[#F3F9FD] px-5 py-3 sm:px-6">
-                <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#0C4B75]">
-                  The verdict
-                </p>
-                {showShortAnswerScores && (
-                  <span className="flex items-center gap-1.5 whitespace-nowrap rounded-full bg-white px-2.5 py-1 text-[11.5px] font-bold text-[#0C4B75] shadow-sm ring-1 ring-[#0C4B75]/15">
-                    <Star className="h-3.5 w-3.5 fill-[#FDB515] text-[#FDB515]" strokeWidth={0} />
-                    {winnerScore}/10 vs {runnerUpScore}/10
-                  </span>
-                )}
-              </div>
-              <div className="flex items-start gap-4 p-5 sm:p-6">
-                <div className="hidden h-[38px] w-[104px] shrink-0 items-center sm:flex">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={verdictWinner.logo}
-                    alt={`${verdictWinner.name} logo`}
-                    className="max-h-full max-w-full object-contain object-left"
-                  />
-                </div>
-                <p className="text-[15.5px] leading-[1.8] text-gray-800 sm:text-[16px]">
-                  <span className="font-bold text-[#191919]">{verdictWinner.name}</span> is the
-                  stronger pick for most people - <BoldKeyFacts text={shortAnswerReason.replace(/\.$/, "")} />.{" "}
-                  Full reasoning, pricing and the cases where {verdictRunnerUp.name} wins are below.
-                </p>
-              </div>
-            </div>
+          {verdictWinner && verdictRunnerUp && (
+            <BattleVerdict
+              battle={battle}
+              winner={verdictWinner}
+              runnerUp={verdictRunnerUp}
+              winnerIsP1={verdictWinner === p1}
+              winnerScore={winnerScore}
+              runnerUpScore={runnerUpScore}
+              showScores={showShortAnswerScores}
+              priceRow={priceRow}
+              shippingRow={shippingRow}
+              runnerUpReviewHref={hubLink(ctx, `/reviews/${verdictRunnerUp.id}`)}
+            />
           )}
 
           {/* ───── REDDIT COMMUNITY CAROUSEL (verified threads only) ───── */}
@@ -1260,7 +1245,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
           {/* ───── FEATURE COMPARISON TABLE ───── */}
           {battle.features && battle.features.length > 0 && (
-            <div className="mb-14">
+            <div id="difference" className="mb-14 scroll-mt-24">
               <h2 className="text-[22px] font-bold leading-tight text-[#191919] sm:text-[24px]">
                 {p1.name} vs. {p2.name}: What&rsquo;s the Difference?
               </h2>
