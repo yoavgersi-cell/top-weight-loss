@@ -3043,48 +3043,6 @@ const defaultReviews: ReviewData[] = [
     finalVerdict: "Yucca delivers a clean, modern telehealth experience for patients seeking affordable GLP-1 weight loss treatment. While it lacks the coaching depth of some competitors, its streamlined process, transparent pricing, and licensed clinical oversight make it a compelling option for people who want effective treatment without complexity."
   },
   {
-    slug: "synergyrx",
-    updatedAt: "2026-09-02",
-    providerId: "synergyrx",
-    shortSummary: "Medically supervised weight loss platform offering compounded semaglutide and tirzepatide with personalized care in all 50 states.",
-    reviewIntro: "SynergyRX positions itself as a personalized, medically supervised weight loss platform. With licensed physicians overseeing every treatment plan, they offer both compounded and brand-name GLP-1 medications at competitive prices. Their standout feature is availability across all 50 states with a fully online process, from evaluation to home delivery. The platform also offers oral dissolving tablets as an alternative to injections.",
-    keyFeatures: [
-      "Compounded semaglutide starting at $199/month",
-      "Compounded tirzepatide starting at $349/month",
-      "Oral dissolving tablet options available",
-      "Brand-name Wegovy, Ozempic, and Mounjaro available",
-      "Licensed physicians (MD) overseeing all care",
-      "Available in all 50 states"
-    ],
-    pricingSummary: "Compounded semaglutide starts at $199/month and tirzepatide at $349/month. Brand-name options range from $499 to $947/month. A $100 welcome credit is applied at checkout. All plans include medical consultations, ongoing support, and home delivery. FSA/HSA eligible.",
-    treatmentOptions: [
-      "Compounded semaglutide (injectable)",
-      "Compounded tirzepatide (injectable)",
-      "Semaglutide oral dissolving tablets",
-      "Tirzepatide oral dissolving tablets",
-      "Brand-name Wegovy, Ozempic, Mounjaro"
-    ],
-    pros: [
-      "Wide range of medication options including oral tablets",
-      "Competitive pricing on compounded medications",
-      "Available in all 50 states",
-      "$100 welcome credit for new patients",
-      "Monthly check-ins and ongoing medical support",
-      "FSA/HSA eligible"
-    ],
-    cons: [
-      "Brand-name options are significantly more expensive",
-      "Newer platform with less established track record",
-      "No behavioral coaching or nutrition program included"
-    ],
-    bestFor: [
-      "Patients who want both injectable and oral medication options",
-      "Those looking for affordable compounded GLP-1 access",
-      "People in states with limited telehealth provider availability"
-    ],
-    finalVerdict: "SynergyRX offers a solid combination of medication variety, competitive pricing, and nationwide availability. The option to choose between injectable and oral dissolving tablets sets them apart from many competitors. With licensed physician oversight and transparent pricing, SynergyRX is a strong choice for patients seeking flexible, affordable GLP-1 treatment."
-  },
-  {
     slug: "bodybuildinghealth",
     updatedAt: "2026-09-02",
     providerId: "bodybuildinghealth",
@@ -5595,7 +5553,7 @@ function buildInitialConfig(): SiteConfig {
       trustpilotReviews: seedTrustpilot[p.id]?.reviews,
     })),
     ranking: {
-      providerOrder: ["embody", "altrx", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm", "synergyrx"],
+      providerOrder: ["embody", "altrx", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
       positions: [
         { score: 9.8, starRating: 5, label: "Exceptional", badge: "Our Most Popular" },
         { score: 9.7, starRating: 5, label: "Exceptional" },
@@ -6015,7 +5973,6 @@ function buildInitialConfig(): SiteConfig {
         { providerId: "directmeds", priceLevel: "low", strengths: ["cost", "online"], matchReasons: { cost: "Plans starting at just $147", medical: "Online medical visit included", online: "Free shipping in 1-2 days", personalized: "No insurance required to qualify" } },
         { providerId: "found", priceLevel: "mid", strengths: ["medical", "personalized"], matchReasons: { cost: "Up to $100 off membership", medical: "Board-certified provider care", online: "Affordable GLP-1 delivered fast", personalized: "Covered by major insurance plans" } },
         { providerId: "yucca", priceLevel: "low", strengths: ["cost", "online"], matchReasons: { cost: "Weight loss plans from $146", medical: "Licensed providers in all 50 states", online: "Free expedited shipping", personalized: "Trusted by over 20,000 patients" } },
-        { providerId: "synergyrx", priceLevel: "low", strengths: ["cost", "medical"], matchReasons: { cost: "Compounded semaglutide from $199", medical: "Licensed physician oversight", online: "Available in all 50 states", personalized: "Personalized medical supervision" } },
         { providerId: "bodybuildinghealth", priceLevel: "mid", strengths: ["medical", "personalized"], matchReasons: { cost: "$100 off limited-time offer", medical: "Provider-guided weight loss", online: "No commitment until approved", personalized: "Choose GLP-1 or GIP + GLP-1" } },
         { providerId: "livbody", priceLevel: "mid", strengths: ["personalized", "medical"], matchReasons: { cost: "Competitive compounded pricing", medical: "Clinician-prescribed care", online: "Home delivery included", personalized: "Biology-based treatment plans" } },
         { providerId: "skinnyrx", priceLevel: "mid", strengths: ["online", "medical"], matchReasons: { cost: "Competitive compounded pricing", medical: "Physician-prescribed GLP-1 care", online: "Fast home delivery nationwide", personalized: "Provider-guided treatment plans" } },
@@ -6106,7 +6063,12 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
         const newProviders = initial.providers
           .filter((p) => !savedProviderIds.has(p.id))
           .map((p) => ({ ...p, smallLogo: p.smallLogo || `/logos/${p.id}-icon.svg` }));
-        const providers = [...savedProviders, ...newProviders];
+        // Providers retired from the weight-loss ranking (operator decision).
+        // The blob may still hold their records from an earlier admin save,
+        // so they are dropped here, after the merge, from providers, reviews
+        // and battles alike; their retired URLs 301 in src/proxy.ts.
+        const RETIRED_WL_PROVIDER_IDS = new Set(["synergyrx"]);
+        const providers = [...savedProviders, ...newProviders].filter((p) => !RETIRED_WL_PROVIDER_IDS.has(p.id));
         return (lastGoodConfig = normalizeBrandCasing({
           ...initial,
           ...saved,
@@ -6160,7 +6122,7 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
               };
             });
             const newDefaults = initial.reviews.filter((r) => !savedSlugs.has(r.slug));
-            return [...mergedSaved, ...newDefaults];
+            return [...mergedSaved, ...newDefaults].filter((r) => !RETIRED_WL_PROVIDER_IDS.has(r.providerId));
           })(),
           articles: (() => {
             const savedArticles = saved.articles && saved.articles.length > 0 ? saved.articles : [];
@@ -6250,7 +6212,7 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
                 : b;
             });
             const defaultsToAdd = initial.battles.filter((d) => !savedSlugs.has(d.slug));
-            return [...merged, ...defaultsToAdd];
+            return [...merged, ...defaultsToAdd].filter((b) => !RETIRED_WL_PROVIDER_IDS.has(b.provider1Id) && !RETIRED_WL_PROVIDER_IDS.has(b.provider2Id));
           })(),
           // Provider ORDER on sidebars, landing pages and the quiz is
           // code-authoritative, like `ranking` above: which providers appear and

@@ -378,6 +378,8 @@ export const AFFILIATE_PROVIDER_IDS = [
   "sprout",
   "bmimd",
   "ro",
+  // wellorithm: operator-supplied tracking link, Oct 9, 2026
+  "wellorithm",
   // hair-loss
   "maximus",
   "happyhead",
@@ -428,8 +430,6 @@ export const NOINDEX_WL_REVIEW_SLUGS = new Set([
   "bodybuildinghealth",
   "livbody",
   "sunlight",
-  "synergyrx",
-  "wellorithm",
   "yucca",
   "skinnyrx",
   "calibrate",

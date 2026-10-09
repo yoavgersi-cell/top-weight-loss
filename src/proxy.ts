@@ -86,6 +86,10 @@ const PATH_REDIRECTS: Record<string, string> = {
 // retired slug still exists in another vertical (DirectMeds is a live
 // weight-loss review, Hone a live TRT review).
 const VERTICAL_PATH_REDIRECTS: Record<string, Record<string, string>> = {
+  "weight-loss": {
+    // Oct 9, 2026: SYNNERGY RX removed from the ranking (operator decision).
+    "/reviews/synergyrx": "/reviews",
+  },
   hrt: {
     // Oct 8, 2026: HRT ranking cut to its three partner providers. The five
     // dropped review pages consolidate onto the reviews index; the two
