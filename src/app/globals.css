@@ -13,12 +13,12 @@
   /* Tailwind's gray-400 (#9ca3af) is 2.5:1 on white and failed the WCAG AA
      contrast audit on every page (dates, captions, labels, breadcrumbs). It
      is the site's "muted text" colour, so it is darkened once here to
-     #6b7280 (4.8:1 on white, 4.6:1 on gray-50) rather than touched in
+     #626c7c (5.3:1 on white, 4.8:1 on the article hero tints) rather than touched in
      hundreds of class lists. Oct 9, 2026. */
-  --color-gray-400: #6b7280;
+  --color-gray-400: #626c7c;
   /* gray-500 sat at 4.4:1 on the site's tinted panels (bg-[#0C4B75]/[0.03]);
      one step darker clears AA everywhere it is used. */
-  --color-gray-500: #5f6b7a;
+  --color-gray-500: #57606f;
 }
 
 body {
