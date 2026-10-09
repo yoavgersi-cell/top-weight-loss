@@ -215,7 +215,7 @@
       "HSA/FSA eligible treatment plans"
     ],
     "specialOffer": null,
-    "affiliateUrl": "https://wellorithm.com/",
+    "affiliateUrl": "https://track.revoffers.com/aff_c?offer_id=1565&aff_id=12904",
     "ctaText": "View Plan",
     "description": ""
   },
@@ -276,26 +276,6 @@
     ],
     "specialOffer": null,
     "affiliateUrl": "https://tryyucca.com/",
-    "ctaText": "View Plan",
-    "description": ""
-  },
-  {
-    "id": "synergyrx",
-    "rank": 15,
-    "name": "SynergyRX",
-    "slug": "synergyrx",
-    "tagline": "Lose 1-2 lbs per week",
-    "logo": "/logos/synergyrx.svg",
-    "rating": 9.0,
-    "ratingLabel": "Excellent",
-    "reviewCount": 3200,
-    "highlights": [
-      "Personalized medical supervision",
-      "Trusted by over 50,000 patients",
-      "Featured by leading health publications"
-    ],
-    "specialOffer": null,
-    "affiliateUrl": "https://www.synergyrx.co/",
     "ctaText": "View Plan",
     "description": ""
   },
