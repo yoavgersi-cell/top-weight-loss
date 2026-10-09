@@ -141,16 +141,22 @@ function ReviewPager({ cards }: { cards: { key: string; node: React.ReactNode }[
             >
               <ChevronLeft className="h-4 w-4" strokeWidth={2} />
             </button>
-            <div className="flex gap-1.5">
+            {/* 24px hit areas around 6px dots (touch-target audit); the dot
+                itself keeps the original look. */}
+            <div className="flex">
               {Array.from({ length: pageCount }).map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setPage(i)}
                   aria-label={`Go to reviews page ${i + 1}`}
-                  className={`h-1.5 rounded-full transition-all ${
-                    i === page ? "w-5 bg-[#0C4B75]" : "w-1.5 bg-gray-200 hover:bg-gray-300"
-                  }`}
-                />
+                  className="flex h-6 w-6 items-center justify-center"
+                >
+                  <span
+                    className={`h-1.5 rounded-full transition-all ${
+                      i === page ? "w-5 bg-[#0C4B75]" : "w-1.5 bg-gray-200 hover:bg-gray-300"
+                    }`}
+                  />
+                </button>
               ))}
             </div>
             <button
@@ -178,30 +184,24 @@ function ReviewPager({ cards }: { cards: { key: string; node: React.ReactNode }[
         </div>
 
         <div className="mt-3 flex items-center justify-between px-1">
-          <div className="flex gap-1.5">
-            {cards.map((c, i) => (
-              <button
-                key={c.key}
-                onClick={() => setCurrent(i)}
-                aria-label={`Go to review ${i + 1}`}
-                className={`h-1.5 rounded-full transition-all ${
-                  i === current ? "w-5 bg-[#0C4B75]" : "w-1.5 bg-gray-200"
-                }`}
-              />
-            ))}
-          </div>
-          <div className="flex gap-1.5">
+          {/* A "3 / 41" counter replaces the per-review dot row on mobile:
+              one 6px dot per captured review was unreadable and failed the
+              touch-target audit, and 41 tappable dots don't fit a phone. */}
+          <p className="text-[12.5px] font-semibold text-gray-500 [font-variant-numeric:tabular-nums]" aria-live="polite">
+            {current + 1} / {total}
+          </p>
+          <div className="flex gap-2">
             <button
               onClick={() => setCurrent((current - 1 + total) % total)}
               aria-label="Previous review"
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-400 active:bg-gray-50"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 text-gray-500 active:bg-gray-50"
             >
               <ChevronLeft className="h-4 w-4" strokeWidth={2} />
             </button>
             <button
               onClick={() => setCurrent((current + 1) % total)}
               aria-label="Next review"
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-400 active:bg-gray-50"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 text-gray-500 active:bg-gray-50"
             >
               <ChevronRight className="h-4 w-4" strokeWidth={2} />
             </button>
@@ -234,7 +234,7 @@ export function MixedTrustpilotCarousel({ items, title, subtitle }: { items: Mix
       <ReviewPager
         cards={items.map((it, i) => ({ key: `${it.provider.name}-${i}`, node: <ReviewCard r={it.review} provider={it.provider} /> }))}
       />
-      <p className="mt-3 text-[11.5px] leading-relaxed text-gray-400">Reviews are individual experiences quoted verbatim from public Trustpilot profiles, names shortened; any weight-loss result mentioned is one person's and is not typical - results vary. Trustpilot is a trademark of Trustpilot A/S and is not affiliated with this site.</p>
+      <p className="mt-3 text-[11.5px] leading-relaxed text-gray-400">Reviews are individual experiences quoted verbatim from public Trustpilot profiles, names shortened; any weight-loss result mentioned is one person&rsquo;s and is not typical - results vary. Trustpilot is a trademark of Trustpilot A/S and is not affiliated with this site.</p>
     </div>
   );
 }
@@ -316,7 +316,7 @@ export function TrustpilotCarousel({
       </div>
 
       <ReviewPager key={sort} cards={sorted.map((r, i) => ({ key: `${sort}-${i}`, node: <ReviewCard r={r} /> }))} />
-      <p className="mt-3 text-[11.5px] leading-relaxed text-gray-400">Reviews are individual experiences quoted verbatim from public Trustpilot profiles, names shortened; any weight-loss result mentioned is one person's and is not typical - results vary. Trustpilot is a trademark of Trustpilot A/S and is not affiliated with this site.</p>
+      <p className="mt-3 text-[11.5px] leading-relaxed text-gray-400">Reviews are individual experiences quoted verbatim from public Trustpilot profiles, names shortened; any weight-loss result mentioned is one person&rsquo;s and is not typical - results vary. Trustpilot is a trademark of Trustpilot A/S and is not affiliated with this site.</p>
     </div>
   );
 }

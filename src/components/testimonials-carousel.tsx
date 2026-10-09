@@ -95,15 +95,21 @@ export function TestimonialsCarousel({ testimonials }: { testimonials: Testimoni
 
         {/* Dots + arrows */}
         <div className="mt-3 flex items-center justify-between px-1">
-          <div className="flex gap-1.5">
+          {/* 24px hit areas around the 6px dots (touch-target audit). */}
+          <div className="flex">
             {testimonials.map((_, i) => (
               <button
                 key={i}
                 onClick={() => setCurrent(i)}
-                className={`h-1.5 rounded-full transition-all ${
-                  i === current ? "w-5 bg-[#0C4B75]" : "w-1.5 bg-gray-200"
-                }`}
-              />
+                aria-label={`Go to testimonial ${i + 1}`}
+                className="flex h-6 w-6 items-center justify-center"
+              >
+                <span
+                  className={`h-1.5 rounded-full transition-all ${
+                    i === current ? "w-5 bg-[#0C4B75]" : "w-1.5 bg-gray-200"
+                  }`}
+                />
+              </button>
             ))}
           </div>
           <div className="flex gap-1.5">

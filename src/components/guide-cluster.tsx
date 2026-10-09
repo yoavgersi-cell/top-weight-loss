@@ -130,7 +130,7 @@ export function GuideCluster({
                 <span className="block text-[14px] font-bold text-[#191919] group-hover:text-[#0C4B75]">{g.title}</span>
                 <span className="mt-0.5 block text-[12.5px] leading-snug text-gray-500">{g.blurb}</span>
               </span>
-              <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-gray-300 transition-colors group-hover:text-[#0C4B75]" strokeWidth={2.5} />
+              <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-gray-400 transition-colors group-hover:text-[#0C4B75]" strokeWidth={2.5} />
             </Link>
           </li>
         ))}

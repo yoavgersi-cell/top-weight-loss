@@ -161,7 +161,7 @@ export function MedicalSources({ vertical }: { vertical: string }) {
       <ol className="space-y-2">
         {sources.map((s, i) => (
           <li key={i} className="flex gap-2.5 text-[13.5px] leading-relaxed">
-            <span className="shrink-0 font-semibold text-gray-300">{i + 1}.</span>
+            <span className="shrink-0 font-semibold text-gray-400">{i + 1}.</span>
             <span className="text-gray-600">
               <a
                 href={s.href}

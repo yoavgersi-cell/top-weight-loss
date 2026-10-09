@@ -123,7 +123,7 @@ export function SourcesMethodology({
               <ol className="grid gap-x-8 gap-y-2 sm:grid-cols-2">
                 {medicalSources.map((s, i) => (
                   <li key={i} className="flex gap-2 text-[13px] leading-relaxed">
-                    <span className="shrink-0 font-semibold text-gray-300">{i + 1}.</span>
+                    <span className="shrink-0 font-semibold text-gray-400">{i + 1}.</span>
                     <span className="text-gray-600">
                       <a
                         href={s.href}
