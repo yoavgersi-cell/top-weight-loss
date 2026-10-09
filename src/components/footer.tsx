@@ -162,7 +162,7 @@ export async function Footer() {
               <span className="legacy-name">TopWeightLoss</span>
               <span className="hub-name">Treatments Hub</span>. All rights reserved.
             </p>
-            <p className="text-[11px] text-gray-300">
+            <p className="text-[11px] text-gray-400">
               <span className="legacy-name">topweightloss.io</span>
               <span className="hub-name">treatmentshub.com</span> is not a medical provider. Always consult a licensed physician.
             </p>

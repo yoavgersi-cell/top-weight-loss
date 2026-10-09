@@ -992,7 +992,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 <div key={i} className="rounded-xl border border-gray-200 bg-[#FCFCFC] p-4 sm:p-5">
                   {/* Post header - the Reddit identity line */}
                   <div className="mb-2 flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[12px]">
-                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#FF4500] text-[10px] font-bold text-white">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#D93A00] text-[10px] font-bold text-white">
                       r/
                     </span>
                     {t.subreddit ? (
@@ -1162,7 +1162,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                         className="flex items-center justify-between gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
                       >
                         <span className="truncate">{provider.name} vs {otherProvider?.name}</span>
-                        <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-gray-300" strokeWidth={2.5} />
+                        <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-gray-400" strokeWidth={2.5} />
                       </Link>
                     );
                   })}

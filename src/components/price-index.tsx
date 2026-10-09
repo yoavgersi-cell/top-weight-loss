@@ -14,7 +14,7 @@ function Price({ cell }: { cell: PriceCell }) {
   if (!cell) {
     return (
       <div>
-        <span className="text-[15px] font-semibold text-gray-300">-</span>
+        <span className="text-[15px] font-semibold text-gray-400">-</span>
         <p className="mt-0.5 text-[11.5px] leading-snug text-gray-400">not offered</p>
       </div>
     );
@@ -65,7 +65,7 @@ export function PriceIndex({
             {/* Provider */}
             <div className="min-w-0">
               <div className="flex flex-wrap items-center gap-2">
-                <span className="text-[12px] font-bold text-gray-300 [font-variant-numeric:tabular-nums]">
+                <span className="text-[12px] font-bold text-gray-400 [font-variant-numeric:tabular-nums]">
                   {i + 1}
                 </span>
                 <Link href={review} className="text-[16px] font-bold text-[#191919] hover:text-[#0C4B75]">

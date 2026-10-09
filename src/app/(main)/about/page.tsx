@@ -412,7 +412,7 @@ export default async function AboutPage() {
               >
                 <p className="flex items-center justify-between text-[15px] font-bold text-[#191919] group-hover:text-[#0C4B75]">
                   {v.name}
-                  <ArrowRight className="h-4 w-4 text-gray-300 transition-colors group-hover:text-[#0C4B75]" strokeWidth={2.5} />
+                  <ArrowRight className="h-4 w-4 text-gray-400 transition-colors group-hover:text-[#0C4B75]" strokeWidth={2.5} />
                 </p>
                 <p className="mt-1 text-[12.5px] leading-snug text-gray-500">{v.note}</p>
               </Link>

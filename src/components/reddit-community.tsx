@@ -594,7 +594,7 @@ function ThreadCard({
       {/* Identity line - nowrap with a truncating author so the provider tag
           never drops to a second row on long usernames */}
       <div className="mb-2 flex items-center gap-x-1.5 text-[12px]">
-        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#FF4500] text-[10px] font-bold text-white">
+        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#D93A00] text-[10px] font-bold text-white">
           r/
         </span>
         <span className="shrink-0 font-bold text-[#191919]">{thread.subreddit ?? "Reddit"}</span>

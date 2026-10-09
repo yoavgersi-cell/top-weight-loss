@@ -760,7 +760,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   </Link>
                 </span>
               )}
-              <span className="text-gray-300">·</span>
+              <span className="text-gray-400">·</span>
               <LastUpdated date={battleUpdatedAt} />
             </div>
             <MedicalReviewBar path={`/${ctx.vertical}/${battle.slug}`} className="mt-4 max-w-[760px]" />
@@ -1464,7 +1464,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   >
                     <p className="flex items-center justify-between text-[15px] font-bold text-[#191919] group-hover:text-[#0C4B75]">
                       {g.title}
-                      <ArrowRight className="h-4 w-4 shrink-0 text-gray-300 group-hover:text-[#0C4B75]" strokeWidth={2.5} />
+                      <ArrowRight className="h-4 w-4 shrink-0 text-gray-400 group-hover:text-[#0C4B75]" strokeWidth={2.5} />
                     </p>
                     <p className="mt-1 text-[13px] leading-snug text-gray-500">{g.blurb}</p>
                   </Link>
@@ -1491,7 +1491,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       <div className="flex flex-wrap items-center gap-2 text-[13px] font-bold text-[#191919]">
                         {t.names.map((name, ni) => (
                           <Fragment key={ni}>
-                            {ni > 0 && <span className="text-[11px] font-extrabold text-gray-300">VS</span>}
+                            {ni > 0 && <span className="text-[11px] font-extrabold text-gray-500">VS</span>}
                             <span>{name}</span>
                           </Fragment>
                         ))}
@@ -1513,7 +1513,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   >
                     <div className="flex items-center gap-2 text-[13px] font-bold text-[#191919]">
                       <span>{bp1.name}</span>
-                      <span className="text-[11px] font-extrabold text-gray-300">VS</span>
+                      <span className="text-[11px] font-extrabold text-gray-500">VS</span>
                       <span>{bp2.name}</span>
                     </div>
                     <span className="ml-auto inline-flex items-center gap-1 text-[13px] font-semibold text-[#0C4B75] group-hover:underline">
@@ -1531,11 +1531,11 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <Link href={hubLink(ctx, `/reviews/${p1.id}`)} className="font-semibold text-[#0C4B75] hover:underline">
               {p1.name} Review
             </Link>
-            <span className="text-gray-300">|</span>
+            <span className="text-gray-400">|</span>
             <Link href={hubLink(ctx, `/reviews/${p2.id}`)} className="font-semibold text-[#0C4B75] hover:underline">
               {p2.name} Review
             </Link>
-            <span className="text-gray-300">|</span>
+            <span className="text-gray-400">|</span>
             <Link href={hubLink(ctx, "/")} className="font-semibold text-[#0C4B75] hover:underline">
               Compare All Providers
             </Link>

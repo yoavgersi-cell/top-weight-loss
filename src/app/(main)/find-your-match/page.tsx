@@ -626,7 +626,7 @@ function StatePickerInline({
                   : "text-gray-600 hover:bg-gray-50"
               }`}
             >
-              <MapPin className={`h-3.5 w-3.5 shrink-0 ${isActive ? "text-[#0C4B75]" : "text-gray-300"}`} strokeWidth={1.5} />
+              <MapPin className={`h-3.5 w-3.5 shrink-0 ${isActive ? "text-[#0C4B75]" : "text-gray-400"}`} strokeWidth={1.5} />
               {opt.label}
             </button>
           );

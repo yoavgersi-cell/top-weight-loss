@@ -57,9 +57,9 @@ export function BattleStickyCta({
           <div className="mb-2.5 flex items-center justify-center gap-1.5 text-[11px] font-medium text-gray-500">
             <Check className="h-3.5 w-3.5 shrink-0 text-emerald-500" strokeWidth={2.5} />
             <span>100% online</span>
-            <span className="text-gray-300">·</span>
+            <span className="text-gray-400">·</span>
             <span>Doctor-prescribed</span>
-            <span className="text-gray-300">·</span>
+            <span className="text-gray-400">·</span>
             <span>Cancel anytime</span>
           </div>
 
