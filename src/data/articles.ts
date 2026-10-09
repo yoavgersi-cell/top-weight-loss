@@ -2528,5 +2528,125 @@ export const articles: Article[] = [
       },
     ],
   },
+  // Oct 9, 2026: the oral GLP-1 pair. Ro's figures are its own published
+  // prices (verified August 2026). Manufacturer direct-pay prices are quoted
+  // from the dated sources linked inline and labelled as reported - the
+  // NovoCare dose tiers in particular come from third-party trackers and are
+  // flagged for operator verification, not stated as our own.
+  {
+    slug: "wegovy-pill-price-online",
+    title: "Wegovy Pill Price Online (2026): $149 the First Month, What You Pay After",
+    description:
+      "What the Wegovy pill costs online: $149 for the first month then $299 plus membership at Ro, Novo Nordisk's reported self-pay tiers by dose, the $25 savings offer with commercial insurance, Medicare's $50 copay, and compounded semaglutide from $49.",
+    category: "Guide",
+    readTime: "7 min read",
+    publishedAt: "2026-10-09",
+    updatedAt: "2026-10-09",
+    heroColor: "#EDF2F8",
+    author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "The Wegovy pill (oral semaglutide 25 mg) was FDA-approved in December 2025 as the first oral GLP-1 for chronic weight management. It is prescription-only, and the price depends on the route: telehealth, the manufacturer's direct-pay pharmacy, insurance or Medicare.",
+      "Verified telehealth route: Ro sells the Wegovy pill at $149 for the first month, then $299 a month, plus its Body membership ($39 the first month, then $74-$149 a month). Because Ro bills the medication separately, insurance can apply where your plan covers Wegovy.",
+      "Novo Nordisk's own direct-pay tiers are reported by third-party trackers at $149 a month for the starting dose, rising to $299 at the maintenance dose. We have not verified those figures ourselves - confirm them with NovoCare before you budget.",
+      "With commercial insurance that covers Wegovy, the manufacturer's savings offer is reported to bring the pill to as low as $25 a month. On Medicare, the GLP-1 Bridge pilot charges a flat $50 copay through December 2027. Compounded semaglutide - a different, non-FDA-approved product - runs $49-$199 a month at verified prices.",
+    ],
+    sections: [
+      {
+        heading: "What does the Wegovy pill cost online?",
+        body:
+          'Four routes, four very different numbers. The only figure in this table we have verified ourselves is Ro\'s, from its published pricing in August 2026. The manufacturer figures are as reported by the dated sources linked in the right-hand column; Novo Nordisk sells direct through its NovoCare Pharmacy, and trackers disagree on one of the middle tiers, so confirm the price for your dose with NovoCare before you commit.<table><thead><tr><th>Route</th><th>Monthly price</th><th>What it includes / the condition</th></tr></thead><tbody><tr><td><a href="/weight-loss/reviews/ro">Ro</a> (telehealth, verified)</td><td><strong>$149</strong> first month, then <strong>$299</strong></td><td>Plus the Ro Body membership: $39 the first month, then $74-$149 a month. Medication billed separately, so insurance can apply where covered</td></tr><tr><td>NovoCare Pharmacy self-pay (reported)</td><td><strong>$149</strong> starting dose, <strong>$299</strong> at the maintenance dose</td><td>Per <a href="https://www.noom.com/blog/weight-management/wegovy-pill-cost-with-and-without-insurance/" target="_blank" rel="noopener">third-party trackers</a>: $149 at 1.5 mg, $199 at 4 mg, $299 at 9 mg and 25 mg. Not verified by us</td></tr><tr><td>Commercial insurance + savings offer (reported)</td><td><strong>as low as $25</strong></td><td>Plan must cover Wegovy; maximum savings reported at <a href="https://www.singlecare.com/blog/can-you-really-get-wegovy-for-25/" target="_blank" rel="noopener">$100 per 30-day supply</a>; not for Medicare, Medicaid or other government plans</td></tr><tr><td>Medicare GLP-1 Bridge</td><td><strong>$50</strong> flat copay</td><td>CMS pilot, <a href="https://www.stlpr.org/npr/2026-05-06/a-new-medicare-option-for-weight-loss-drugs-is-coming-heres-what-to-know" target="_blank" rel="noopener">July 1, 2026 through December 31, 2027</a>; eligibility and approval through your Part D plan</td></tr><tr><td>Retail pharmacy, no discount (reported)</td><td><strong>about $1,349</strong></td><td>List price reported by third-party trackers; almost nobody pays it, which is why the routes above exist</td></tr></tbody></table>Prices move - introductory offers end and tiers change - so treat every figure as "at our last check" and confirm at checkout.',
+      },
+      {
+        heading: "Why does the Wegovy pill price go up after the first month?",
+        body:
+          "Because the dose does. The Wegovy pill is taken once a day and started low, then stepped up over the first months to the 25 mg maintenance dose that produced the trial results. The reported NovoCare tiers follow that ladder: the lowest price belongs to the starting dose, the $299 price to the dose you stay on. Ro's published structure says the same thing in two numbers - $149 the first month, $299 after - and adds a membership next to it. Put together at Ro's cash prices, a first year comes to roughly $4,300-$5,100 depending on which membership tier you land on: $3,438 of medication plus $853-$1,678 of membership. That is the number to compare against the alternatives, not the $149. Our <a href=\"/weight-loss/articles/glp1-true-cost-month-1-vs-year-one\">month 1 vs year one</a> guide does the same arithmetic for every provider we track.",
+      },
+      {
+        heading: "Can insurance or Medicare bring the Wegovy pill price down?",
+        body:
+          "Yes, and for many people these are the routes that matter most. <strong>Commercial insurance.</strong> If your plan covers Wegovy for weight management, the manufacturer's savings offer is reported to cut the copay to as low as $25 a month, capped at $100 of savings per 30-day supply, for commercially insured adults in the US; the offer excludes anyone on a government plan. Coverage is the gate: many plans still exclude weight-management GLP-1s or require prior authorisation, and <a href=\"/weight-loss/articles/glp1-with-insurance\">our insurance guide</a> walks through checking your formulary first. Ro's route is built for this case, because it bills the pill as its own line item that a plan can pay its share of. <strong>Medicare.</strong> Since July 1, 2026, the Medicare GLP-1 Bridge pilot charges eligible beneficiaries a flat $50 copay for the Wegovy pill and injection, the Zepbound KwikPen and Foundayo, through December 31, 2027. The $50 does not rise with the dose. Eligibility runs through clinical criteria and an approval step via your Part D plan - <a href=\"/weight-loss/articles/glp1-after-65-medicare\">GLP-1s after 65</a> covers what to ask.",
+      },
+      {
+        heading: "How does the Wegovy pill price compare with the Wegovy injection?",
+        body:
+          "At the dose you stay on, the two are priced close together at the telehealth route we have verified. Ro sells the Wegovy pen from $199 a month at introductory rates, rising to $299-$399 a month after, next to the pill's $149-then-$299, with the same membership on top of either. Through Novo Nordisk's direct-pay pharmacy, trackers report the injection at <a href=\"https://www.middlewaynutrition.com/glp-1/novocare-pharmacy-wegovy\" target=\"_blank\" rel=\"noopener\">$349 a month</a>, with a lower introductory price on the first fills; again, reported rather than verified by us. The choice between them is therefore mostly not about price. In OASIS 4, the pill produced <a href=\"https://www.acc.org/latest-in-cardiology/journal-scans/2025/09/24/16/40/oasis-4\" target=\"_blank\" rel=\"noopener\">13.6% mean weight loss at 64 weeks against 2.2% on placebo</a> in the analysis that counts everyone randomised (16.6% among those who stayed on treatment), which the authors describe as similar to the weekly 2.4 mg injection in its own trial. The practical difference is the routine: a daily tablet taken on an empty stomach with a sip of water and a 30-minute wait before food, versus one injection a week. <a href=\"/weight-loss/glp1-pills-vs-injections\">GLP-1 pills vs injections</a> sets the two side by side.",
+      },
+      {
+        heading: "Is the Wegovy pill worth it compared with compounded semaglutide?",
+        body:
+          "They are not the same product, so the comparison is value, not price alone. The Wegovy pill is Novo Nordisk's FDA-approved finished drug, with its own trial behind it. Compounded semaglutide is the same molecule prepared by a licensed 503A pharmacy for an individual prescription - a legal, regulated channel whose output the FDA does not review product by product, and which has no trials of its own; it is also almost always an injection, not a tablet. At verified published prices it runs <strong>$49 a month</strong> at <a href=\"/weight-loss/reviews/wellmedr\">wellmedr</a> on a 12-month plan, <strong>$69</strong> month to month at <a href=\"/weight-loss/reviews/embody\">embody</a>, <strong>$89</strong> flat at <a href=\"/weight-loss/reviews/altrx\">altRx</a> and <strong>$99</strong> all-inclusive at <a href=\"/weight-loss/reviews/medvi\">Medvi</a>, up to $199. The year-one gap against the Wegovy pill at cash prices is therefore several thousand dollars - unless insurance or Medicare applies, in which case the brand pill at $25-$50 a month becomes the cheapest FDA-approved option on this site. The trade-offs are set out in <a href=\"/weight-loss/articles/compounded-semaglutide-vs-brand-name\">compounded vs brand-name</a>.",
+      },
+      {
+        heading: "Which Wegovy pill route is cheapest for you?",
+        body:
+          "Work down your situation. <strong>Commercial insurance covers Wegovy:</strong> use the savings offer through a route that bills the medication separately - Ro, or your own pharmacy - and expect $25 a month if the reported terms hold. <strong>On Medicare:</strong> ask your Part D plan about the GLP-1 Bridge before pricing anything else; $50 flat beats every cash figure here. <strong>Paying cash and you want the FDA-approved pill:</strong> compare Ro's $149-then-$299 plus membership against NovoCare's reported tiers for your dose, and get the month-2 price in writing before you pay. <strong>Paying cash and the molecule matters more than the label:</strong> compounded semaglutide from $49-$99 a month, with the caveats above. <strong>Needle-averse but open to another pill:</strong> Eli Lilly's Foundayo lists $149-$349 a month self-pay and has no food or water timing rules - <a href=\"/weight-loss/articles/foundayo-vs-wegovy-pill\">Foundayo vs the Wegovy pill</a> compares them.",
+      },
+      {
+        heading: "The bottom line",
+        body:
+          "The Wegovy pill price online in 2026 is <strong>$149 for the first month, then $299, plus membership at Ro</strong> - the one figure on this page we have verified - with Novo Nordisk's direct-pay tiers reported in the same $149-$299 range, <strong>as low as $25 with commercial coverage</strong> and <strong>$50 on Medicare's pilot</strong>. Those last two are the numbers that change the decision, so check coverage first. Every route requires a prescription, and a licensed clinician decides whether semaglutide is appropriate for you. This article is general information, not medical advice.",
+      },
+    ],
+  },
+  {
+    slug: "foundayo-vs-wegovy-pill",
+    title: "Foundayo vs the Wegovy Pill (2026): Results, Price and How to Choose",
+    description:
+      "The two FDA-approved GLP-1 pills compared: trial weight loss (OASIS 4 vs ATTAIN-1), the empty-stomach rule that only one of them has, published prices ($149-$349 at LillyDirect; $149 then $299 plus membership at Ro), the $25 insurance offers and Medicare's $50 copay.",
+    category: "Guide",
+    readTime: "8 min read",
+    publishedAt: "2026-10-09",
+    updatedAt: "2026-10-09",
+    heroColor: "#EEF4F1",
+    author: "TopWeightLoss Team",
+    keyTakeaways: [
+      "Both are FDA-approved daily pills for chronic weight management: the Wegovy pill (oral semaglutide 25 mg, Novo Nordisk) since December 2025, and Foundayo (orforglipron, Eli Lilly) since April 1, 2026.",
+      "In their own trials - there is no head-to-head - the Wegovy pill produced 13.6% mean weight loss at 64 weeks (OASIS 4) and Foundayo 11.2% at the top dose over 72 weeks (ATTAIN-1), each against about 2% on placebo. Both companies also publish higher on-treatment figures (16.6% and 12.4%).",
+      "The practical difference is the routine: the Wegovy pill must be taken on an empty stomach with a sip of water and a 30-minute wait before eating; Foundayo can be taken any time of day with no food or water restrictions.",
+      "Price: Foundayo lists $149 to $349 a month self-pay by dose through LillyDirect and $25 with commercial coverage. The Wegovy pill is $149 the first month then $299 plus membership at Ro, with Novo Nordisk's reported direct tiers in the same range and a $25 commercial savings offer. Both are in Medicare's $50 GLP-1 Bridge.",
+    ],
+    sections: [
+      {
+        heading: "What are Foundayo and the Wegovy pill?",
+        body:
+          'They are the first two GLP-1 pills approved for weight management, and they are different kinds of molecule. <strong>The Wegovy pill</strong> is semaglutide - the same peptide as the Wegovy and Ozempic injections - in a 25 mg once-daily tablet, approved by the FDA in <a href="https://www.healio.com/news/endocrinology/20260213/fda-approves-wegovy-pill-the-first-oral-glp1-to-treat-obesity" target="_blank" rel="noopener">December 2025</a> for reducing excess body weight and maintaining the loss in adults with obesity, or overweight with a weight-related condition, and for lowering cardiovascular risk in that group. Because a peptide is poorly absorbed from the gut, the tablet carries a much higher dose than the 2.4 mg weekly injection and has to be taken in a specific way. <strong>Foundayo</strong> is orforglipron, a small-molecule (non-peptide) GLP-1 receptor agonist from Eli Lilly, approved on <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-first-new-molecular-entity-under-national-priority-voucher-program" target="_blank" rel="noopener">April 1, 2026</a> under the FDA\'s national priority voucher programme, 50 days after filing. Being a small molecule is what lets it be taken without food or water rules. Both are prescription-only; neither is a compounded product.',
+      },
+      {
+        heading: "Which pill produces more weight loss?",
+        body:
+          'On the published trial figures, the Wegovy pill - but read the caveat before acting on it. The two drugs were tested in separate trials with different lengths and populations, and nobody has run them head to head.<table><thead><tr><th>Trial</th><th>Drug and dose</th><th>Mean weight change</th><th>Lost 20% or more</th></tr></thead><tbody><tr><td><a href="https://www.acc.org/latest-in-cardiology/journal-scans/2025/09/24/16/40/oasis-4" target="_blank" rel="noopener">OASIS 4</a> (64 weeks, 307 adults)</td><td>Wegovy pill, 25 mg daily</td><td><strong>-13.6%</strong> vs -2.2% placebo</td><td>30% vs 3%</td></tr><tr><td><a href="https://www.acc.org/latest-in-cardiology/journal-scans/2025/09/24/16/48/attain-1" target="_blank" rel="noopener">ATTAIN-1</a> (72 weeks, 3,127 adults)</td><td>Foundayo, 36 mg daily (top dose)</td><td><strong>-11.2%</strong> vs -2.1% placebo</td><td>19% vs 3%</td></tr></tbody></table>Those are the figures from the New England Journal of Medicine papers, counting everyone who was randomised whether or not they stayed on the drug. Both manufacturers also publish an on-treatment figure - 16.6% for the Wegovy pill and 12.4% for Foundayo - which describes people who took the pill as directed to the end; you will see both sets of numbers quoted, and they are not contradictory, just different questions. Two further context points: the OASIS 4 authors describe the pill\'s effect as similar to the weekly semaglutide injection in its own trial, and injectable tirzepatide (Zepbound) still produced the largest average loss of any GLP-1, up to 22.5% in SURMOUNT-1. <a href="/weight-loss/glp1-pills-vs-injections">Pills vs injections</a> covers that comparison.',
+      },
+      {
+        heading: "How do you take Foundayo and the Wegovy pill?",
+        body:
+          "This is the difference most people will feel every day. <strong>The Wegovy pill</strong> is taken once daily on an empty stomach, with a small sip of water, and you then wait about 30 minutes before eating, drinking or taking other medicines; the dose is stepped up over the first months from a 1.5 mg starting tablet to the 25 mg maintenance dose. Miss the timing and absorption drops, which is why the rule exists. <strong>Foundayo</strong> is taken once daily at any time, with or without food or water, and is stepped up across 6 mg, 12 mg and 36 mg tablets. For someone who takes morning medication, drinks coffee on waking or simply does not want a timed routine, that is Foundayo's main argument. Both are started low and increased under a clinician's supervision, and both are long-term treatments: in the GLP-1 trials, weight returns when the drug stops.",
+      },
+      {
+        heading: "What do Foundayo and the Wegovy pill cost?",
+        body:
+          'Close to each other at the entry price, with different structures behind it. Ro\'s figures below are its own published prices, verified by us in August 2026. The manufacturer prices are as reported by the dated sources linked, and the NovoCare tiers in particular come from third-party trackers that do not fully agree with each other - confirm them with NovoCare before budgeting.<table><thead><tr><th>Route</th><th>Foundayo</th><th>Wegovy pill</th></tr></thead><tbody><tr><td>Manufacturer direct, self-pay</td><td><strong>$149-$349</strong> a month by dose through LillyDirect, as reported by <a href="https://www.scientificamerican.com/article/how-eli-lillys-new-glp-1-pill-stacks-up-against-wegovy-and-other-weight-loss/" target="_blank" rel="noopener">Scientific American</a> from Lilly material</td><td><strong>$149-$299</strong> a month by dose through NovoCare Pharmacy, as reported by <a href="https://www.noom.com/blog/weight-management/wegovy-pill-cost-with-and-without-insurance/" target="_blank" rel="noopener">third-party trackers</a>; not verified by us</td></tr><tr><td>Telehealth (verified)</td><td>Lilly says Foundayo is available through LillyDirect and telehealth providers; none of the providers we track has published a price we could verify</td><td><a href="/weight-loss/reviews/ro">Ro</a>: <strong>$149</strong> first month, then <strong>$299</strong>, plus membership ($39 first month, then $74-$149)</td></tr><tr><td>Commercial insurance with coverage</td><td><strong>$25</strong> a month with Lilly\'s savings card, per <a href="https://www.biospace.com/press-releases/foundayo-orforglipron-lillys-new-oral-glp-1-pill-for-weight-loss-now-available-in-the-u-s" target="_blank" rel="noopener">Lilly\'s April 9, 2026 release</a></td><td><strong>as low as $25</strong> a month with Novo Nordisk\'s savings offer, capped at $100 of savings per 30-day supply (reported)</td></tr><tr><td>Medicare GLP-1 Bridge</td><td><strong>$50</strong> flat copay, July 2026 to December 2027</td><td><strong>$50</strong> flat copay, July 2026 to December 2027</td></tr></tbody></table>The gap that matters is at the top dose: Foundayo\'s reported ceiling is $349, the Wegovy pill\'s $299. The gap that matters more is whether your insurance covers either one, because $25 beats both. <a href="/weight-loss/articles/wegovy-pill-price-online">Wegovy pill price online</a> walks the semaglutide side in full.',
+      },
+      {
+        heading: "Do insurance and Medicare cover Foundayo and the Wegovy pill?",
+        body:
+          "Both drugs sit inside the same two programmes. <strong>Commercial insurance.</strong> Each manufacturer offers a savings card for commercially insured patients whose plan covers the drug - Lilly's bringing Foundayo to $25 a month, Novo Nordisk's reported to bring the Wegovy pill to as low as $25 - and neither card is available on Medicare, Medicaid or other government plans. Coverage itself is the hurdle: plans still vary widely on weight-management GLP-1s, and <a href=\"/weight-loss/articles/glp1-with-insurance\">our insurance guide</a> explains how to check before you choose. <strong>Medicare.</strong> The Medicare GLP-1 Bridge, a CMS pilot running <a href=\"https://www.stlpr.org/npr/2026-05-06/a-new-medicare-option-for-weight-loss-drugs-is-coming-heres-what-to-know\" target=\"_blank\" rel=\"noopener\">July 1, 2026 through December 31, 2027</a>, covers the Wegovy pill and injection, the Zepbound KwikPen and Foundayo at a flat $50 copay that does not rise with the dose. If you are on Medicare, that single question - am I eligible for the Bridge - matters more than anything else on this page; <a href=\"/weight-loss/articles/glp1-after-65-medicare\">GLP-1s after 65</a> covers what to ask your Part D plan.",
+      },
+      {
+        heading: "What are the side effects of Foundayo and the Wegovy pill?",
+        body:
+          "The same family as every GLP-1: mostly gastrointestinal, mostly early, mostly during dose increases. In OASIS 4, gastrointestinal adverse events occurred in 74% of people on the Wegovy pill against 42% on placebo, led by nausea and diarrhoea. In ATTAIN-1, gastrointestinal events were also the most frequent with Foundayo and were typically mild to moderate. Neither trial reported a safety signal outside the known class profile, which carries the standard GLP-1 warnings around thyroid C-cell tumours in rodents, pancreatitis and gallbladder disease. Dose and how gradually you step up matter more than which pill you take, and a clinician who manages the titration is the single biggest factor in tolerating either - <a href=\"/weight-loss/articles/semaglutide-side-effects-guide\">our semaglutide side-effects guide</a> covers what helps.",
+      },
+      {
+        heading: "Which should you choose, Foundayo or the Wegovy pill?",
+        body:
+          "Work down the list. <strong>Your insurance covers one and not the other:</strong> take the covered one; at $25 a month the difference between them is a rounding error. <strong>You are on Medicare:</strong> both are in the Bridge at $50, so choose on routine and results, not price. <strong>You want the larger trial result:</strong> the Wegovy pill, on the published figures, with the caveat that the trials are not directly comparable. <strong>You cannot or will not keep an empty-stomach, 30-minute-wait routine every morning:</strong> Foundayo, which has no timing rules at all. <strong>You are paying cash and want a verified telehealth route today:</strong> the Wegovy pill through Ro is the route we have checked; for Foundayo, LillyDirect's published self-pay price is the reference. <strong>You are needle-averse but price-led:</strong> read <a href=\"/weight-loss/articles/what-100-to-200-a-month-gets-you-glp1\">what $100-$200 a month gets you</a> first, because the compounded injections at $49-$199 sit well below either pill at cash prices. Whatever you pick, the prescriber decides on your history, not on a table.",
+      },
+      {
+        heading: "The bottom line",
+        body:
+          "Foundayo and the Wegovy pill are the two FDA-approved GLP-1 pills for weight management, and they split cleanly: <strong>the Wegovy pill has the larger published trial result</strong> (13.6% vs 11.2%, different trials) and <strong>Foundayo has the simpler routine</strong> (no food or water timing). On price they overlap - $149 at the starting dose from either manufacturer as reported, $25 with commercial coverage, $50 on Medicare's pilot - with Foundayo's reported top-dose price $50 higher. Ro's $149-then-$299-plus-membership is the one telehealth price here we have verified. Both are prescription medicines; a licensed clinician decides whether either is appropriate for you. This article is general information, not medical advice.",
+      },
+    ],
+  },
   ...brandClusterArticles,
 ];

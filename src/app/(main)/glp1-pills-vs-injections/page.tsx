@@ -34,7 +34,7 @@ const compareRows: [string, string, string][] = [
   ["Main options", "Oral Wegovy (approved Dec 2025), orforglipron / Foundayo (approved Apr 2026), Rybelsus (diabetes)", "Semaglutide (Wegovy), tirzepatide (Zepbound)"],
   ["Convenience", "Daily pill; oral semaglutide needs empty-stomach timing, orforglipron has no food/water restrictions", "One injection a week; no daily routine"],
   ["FDA status", "Two oral GLP-1s now approved for weight management", "Established, long-approved"],
-  ["Cost (telehealth)", "Brand pills new to market - pricing varies; confirm current cash/insurance", "Compounded options often from ~$69-$149/mo"],
+  ["Cost (telehealth)", "Wegovy pill $149 first month then $299 plus membership at Ro (verified); Foundayo $149-$349/mo self-pay via LillyDirect as reported; $25 with commercial coverage", "Compounded options often from ~$69-$149/mo"],
   ["Best for", "People who want to avoid needles or a no-timing daily pill", "People prioritizing the greatest average weight loss"],
 ];
 
@@ -168,7 +168,15 @@ export default async function Glp1PillsVsInjectionsPage() {
             <Link href="/weight-loss/weight-loss-pills" className="font-semibold text-[#0C4B75] hover:underline">
               weight loss pills guide
             </Link>{" "}
-            for the complete oral landscape.
+            for the complete oral landscape, the two pills head to head in{" "}
+            <Link href="/weight-loss/articles/foundayo-vs-wegovy-pill" className="font-semibold text-[#0C4B75] hover:underline">
+              Foundayo vs the Wegovy pill
+            </Link>
+            , and what the semaglutide pill costs by route in{" "}
+            <Link href="/weight-loss/articles/wegovy-pill-price-online" className="font-semibold text-[#0C4B75] hover:underline">
+              Wegovy pill price online
+            </Link>
+            .
           </p>
         </section>
 

@@ -122,6 +122,13 @@ const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
     "Since July 1, 2026, the Medicare GLP-1 Bridge pilot lets eligible beneficiaries get the Wegovy pill and injection, the Zepbound KwikPen and Foundayo for a flat $50 copay a month, unchanged as the dose rises, through December 31, 2027. Eligibility runs through clinical criteria and an approval step via your Part D plan. Medicare never covers compounded GLP-1s; if you don't qualify, the cash routes are brand-name ($149-$349 a month for Foundayo, $1,149+ for injections) or compounded ($49-$299).",
   "is-wellmedr-legit":
     "Yes - by every marker we can verify: licensed-provider review before prescribing, a regulated US pharmacy, a weight-loss warranty, and a verified 4.6 on Trustpilot across 2,091 reviews (tied for the highest among providers we track). The honest caveats: the headline $49/$89 rates lock on a 12-month plan, the complaints that exist are about shipping delays and support response time, and results vary by person regardless of service quality.",
+  // Oct 9, 2026 oral GLP-1 pair. Ro figures are its verified published
+  // prices; manufacturer figures are as reported by sources dated inside the
+  // articles, so these two carry their own stamp (QUICK_ANSWER_STAMPS).
+  "wegovy-pill-price-online":
+    "The Wegovy pill costs $149 for the first month, then $299 a month, plus a $39-then-$74-149 membership at Ro - the one telehealth price we have verified. Novo Nordisk's direct-pay tiers are reported at $149 for the starting dose up to $299 at the maintenance dose. With commercial insurance that covers Wegovy, the manufacturer's savings offer is reported to bring it to as low as $25 a month; on Medicare, the GLP-1 Bridge pilot charges a flat $50 through December 2027. Every route requires a prescription.",
+  "foundayo-vs-wegovy-pill":
+    "Both are FDA-approved daily GLP-1 pills. The Wegovy pill (oral semaglutide, approved December 2025) produced 13.6% mean weight loss at 64 weeks in OASIS 4; Foundayo (orforglipron, approved April 1, 2026) produced 11.2% at the top dose over 72 weeks in ATTAIN-1 - separate trials, not head to head. The Wegovy pill must be taken on an empty stomach with a 30-minute wait; Foundayo has no food or water rules. Self-pay, Foundayo lists $149-$349 a month by dose and the Wegovy pill $149 then $299 plus membership at Ro; both are $25 with a commercial savings card and $50 on Medicare's pilot.",
   "zepbound-price-online":
     "Brand-name Zepbound online runs $1,249/month cash at altRx and $1,599 at wellmedr, or Zepbound KwikPens from $299 for the first month (then $399-449) plus a $39-then-$74-149 monthly membership at Ro, where insurance can apply. Compounded tirzepatide, the same active ingredient, runs $89-$299/month through licensed telehealth providers. Every route requires a prescription.",
   "best-tirzepatide-online":
@@ -156,6 +163,15 @@ const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
     "You don't need insurance: self-pay compounded GLP-1 plans include the provider visit and medication from $49/month (wellmedr), $69 (embody) or $89 (altRx). Brand-name without coverage runs $1,150+ - which is exactly why the compounded route exists.",
   "compounded-semaglutide-vs-brand-name":
     "Compounded semaglutide contains the same active ingredient as Ozempic and Wegovy, prepared by state-licensed 503A compounding pharmacies, at $49-$199/month versus $1,150+ for brand-name. The trade-off: compounded versions are not FDA-approved products, so provider and pharmacy quality matter most.",
+};
+
+// Per-article override of the dated price stamp under the quick answer, for
+// articles whose dollar figures are not (only) from the verified price index.
+const QUICK_ANSWER_STAMPS: Record<string, string> = {
+  "wegovy-pill-price-online":
+    "Ro's prices are its own published figures, verified August 2026. Manufacturer prices are as reported by the dated sources linked in the article and are not verified by us.",
+  "foundayo-vs-wegovy-pill":
+    "Ro's prices are its own published figures, verified August 2026. Manufacturer prices are as reported by the dated sources linked in the article and are not verified by us.",
 };
 
 export async function articleMetadata(slug: string, ctx: SiteContext): Promise<Metadata> {
@@ -538,8 +554,12 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     verification date, so it moves only when prices are re-checked. */}
                 {/\$\d/.test(ARTICLE_QUICK_ANSWERS[slug]) && (
                   <span className="mt-2 block text-[13px] text-gray-500">
-                    Prices verified on each provider&rsquo;s site as of{" "}
-                    {new Date(PRICE_INDEX_VERIFIED).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}.
+                    {QUICK_ANSWER_STAMPS[slug] ?? (
+                      <>
+                        Prices verified on each provider&rsquo;s site as of{" "}
+                        {new Date(PRICE_INDEX_VERIFIED).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}.
+                      </>
+                    )}
                   </span>
                 )}
               </div>
