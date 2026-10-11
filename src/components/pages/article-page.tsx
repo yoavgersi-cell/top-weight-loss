@@ -338,7 +338,11 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // "Our top 2 picks" (embody, altRx) after the intro on every other weight-loss
   // article. Skipped where a provider block already renders (the two above) and
   // on "is X legit" trust-check pages, for the same reason as the inline CTA.
-  const showTopTwo = isWeightLoss && !showTopProvidersCro && !showPartnerCro && !/^is-.+-legit$/.test(slug);
+  // Also skipped on pages the operator has excluded (Oct 11, 2026: the
+  // wellmedr cost guide - a block ranking other providers made no sense there).
+  const HIDE_TOP_TWO = new Set(["wellmedr-cost"]);
+  const showTopTwo =
+    isWeightLoss && !showTopProvidersCro && !showPartnerCro && !/^is-.+-legit$/.test(slug) && !HIDE_TOP_TWO.has(slug);
 
   // Byline author: match the article's author to a team member, else the lead
   const author = experts.find((e) => e.name === article.author) ?? experts[0];
