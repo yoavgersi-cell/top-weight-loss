@@ -126,7 +126,11 @@ export function proxy(req: NextRequest) {
     // www.treatmentshub.com; the bare host must never serve a 200 copy of the
     // site (Oct 2026: URL Inspection on the bare host read "unknown to Google").
     // Vercel's domain redirect normally handles this; the proxy guarantees it.
-    if (host.split(":")[0] === "treatmentshub.com") {
+    // Oct 11, 2026: widened from the bare apex to every treatmentshub host
+    // that is not www - Search Console's crawl stats showed Googlebot probing
+    // a random subdomain (aqby3.treatmentshub.com), the wildcard-DNS check it
+    // runs; no hostname other than www may ever answer with a 200 copy.
+    if (host.split(":")[0] !== "www.treatmentshub.com") {
       const url = req.nextUrl.clone();
       url.protocol = "https:";
       url.host = "www.treatmentshub.com";
@@ -261,7 +265,14 @@ export function proxy(req: NextRequest) {
     return NextResponse.redirect(url, 301);
   }
 
-  return NextResponse.next();
+  // Any other host - Vercel's *.vercel.app deployment URLs and the production
+  // alias among them - serves the same pages as www.treatmentshub.com. Keep
+  // them reachable for previews, but never indexable: a 200 copy on another
+  // hostname is duplicate content competing with the canonical site.
+  // Oct 11, 2026.
+  const res = NextResponse.next();
+  res.headers.set("X-Robots-Tag", "noindex, nofollow");
+  return res;
 }
 
 export const config = {
