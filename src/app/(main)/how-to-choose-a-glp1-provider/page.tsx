@@ -77,19 +77,19 @@ const CHECKLIST: { title: string; check: string; verify: string; redFlag: string
   {
     title: "What happens to the price when your dose goes up",
     check: "GLP-1 treatment titrates upward over several months. Providers that price per dose quote the starter dose and re-bill you exactly when you are most committed.",
-    verify: "Ask one question: \"At my maintenance dose, what do I pay?\" altRx, wellmedr, trimrx, DirectMeds, embody, HealthRx and Medvi all state a flat price at every dose.",
+    verify: "Ask one question: \"At my maintenance dose, what do I pay?\" altRx, wellmedr, TrimRx, DirectMeds, embody, HealthRx and Medvi all state a flat price at every dose.",
     redFlag: "\"From $X\" with no maintenance-dose figure anywhere on the site. Ask what you pay at your maintenance dose.",
   },
   {
     title: "Dose changes and refills",
     check: "How you request a dose change, how fast refills ship, and what happens if you transfer from another provider mid-treatment.",
-    verify: "Read the refill and shipping terms. trimrx advertises unlimited check-ins; HealthRx and embody state their shipping windows; Medvi builds dose adjustments into monitoring.",
+    verify: "Read the refill and shipping terms. TrimRx advertises unlimited check-ins; HealthRx and embody state their shipping windows; Medvi builds dose adjustments into monitoring.",
     redFlag: "No stated refill cadence, or support reachable only through a contact form. Ask before paying.",
   },
   {
     title: "Cancellation and refunds",
     check: "Whether you can stop at any renewal, whether there is a minimum term, and what you get back if the clinician does not approve you.",
-    verify: "embody refunds in full if not approved and has no commitment; trimrx has no long-term contract; wellmedr's $49 rate wants a 12-month plan; HealthRx charges $1,188 upfront. None of these is wrong, but you should know which one you are signing.",
+    verify: "embody refunds in full if not approved and has no commitment; TrimRx has no long-term contract; wellmedr's $49 rate wants a 12-month plan; HealthRx charges $1,188 upfront. None of these is wrong, but you should know which one you are signing.",
     redFlag: "Auto-renew terms you can only find in the checkout fine print. Read them before you pay.",
   },
   {
@@ -228,7 +228,7 @@ const ROWS: Row[] = [
 const PATTERNS: { title: string; body: string }[] = [
   {
     title: "Licensed review is the norm; access afterward is the variable",
-    body: "Every provider in the table describes a licensed clinician reviewing the intake before a prescription. What differs is what happens next: Medvi describes live video visits and scheduled monitoring, trimrx advertises unlimited check-ins, embody reviewers describe scheduled appointments, and the rest are intake-and-message models. The complaints at ro, embody and wellmedr are about reaching someone, not about the review itself.",
+    body: "Every provider in the table describes a licensed clinician reviewing the intake before a prescription. What differs is what happens next: Medvi describes live video visits and scheduled monitoring, TrimRx advertises unlimited check-ins, embody reviewers describe scheduled appointments, and the rest are intake-and-message models. The complaints at ro, embody and wellmedr are about reaching someone, not about the review itself.",
   },
   {
     title: "The headline price rarely stands alone",
@@ -236,15 +236,15 @@ const PATTERNS: { title: string; body: string }[] = [
   },
   {
     title: "Flat-dose pricing is common but not universal",
-    body: "Seven of the ten - altRx, wellmedr, trimrx, DirectMeds, embody, HealthRx and Medvi - state one price at every dose. Ro prices medication separately from its membership, and SHED and Sprout publish monthly rates without a single every-dose figure in the material we reviewed. Because treatment titrates upward, the maintenance-dose price is the one to ask for.",
+    body: "Seven of the ten - altRx, wellmedr, TrimRx, DirectMeds, embody, HealthRx and Medvi - state one price at every dose. Ro prices medication separately from its membership, and SHED and Sprout publish monthly rates without a single every-dose figure in the material we reviewed. Because treatment titrates upward, the maintenance-dose price is the one to ask for.",
   },
   {
     title: "Pharmacy transparency varies more than clinician claims do",
-    body: "embody and HealthRx name 503A pharmacies and publish LegitScript certification; Ro fills through its own pharmacy; altRx says licensed pharmacies without naming them; wellmedr says a regulated US pharmacy, and only Reddit commenters name it. For five providers - trimrx, SHED, Medvi, Sprout and DirectMeds - the pharmacy is not named in our research, so it is a question to ask support before paying.",
+    body: "embody and HealthRx name 503A pharmacies and publish LegitScript certification; Ro fills through its own pharmacy; altRx says licensed pharmacies without naming them; wellmedr says a regulated US pharmacy, and only Reddit commenters name it. For five providers - TrimRx, SHED, Medvi, Sprout and DirectMeds - the pharmacy is not named in our research, so it is a question to ask support before paying.",
   },
   {
     title: "Review volume stabilizes a score; it does not make experiences uniform",
-    body: "Medvi's 4.3 across 14,836 reviews sits alongside serious 1-star accounts about renewals and refunds. SHED and wellmedr's 4.6 averages come from roughly 1,100 and 1,900 reviews; Sprout's 4.1 from 188; trimrx (3.7) and embody (3.8) have large, mixed records. Across all of them the recurring complaints are operational - shipping, billing, reaching support - rather than about the clinical review.",
+    body: "Medvi's 4.3 across 14,836 reviews sits alongside serious 1-star accounts about renewals and refunds. SHED and wellmedr's 4.6 averages come from roughly 1,100 and 1,900 reviews; Sprout's 4.1 from 188; TrimRx (3.7) and embody (3.8) have large, mixed records. Across all of them the recurring complaints are operational - shipping, billing, reaching support - rather than about the clinical review.",
   },
 ];
 
@@ -476,7 +476,7 @@ export default async function HowToChooseGlp1ProviderPage() {
               ["Who reviews the medical intake?", "A named role - physician, physician associate, nurse practitioner - stated on the how-it-works page, and an intake that asks about thyroid cancer or MEN 2 history, pancreatitis, pregnancy plans and current medications."],
               ["Are they appropriately licensed?", "Licensed in your state. HealthRx states an independent US-licensed clinician in your state; others describe licensed providers without the state detail, which is worth asking about."],
               ["Can they decline treatment?", "Look for \"if appropriate\" and refund-if-not-approved language. embody refunds in full when a provider does not approve treatment; Medvi states it declines patients for whom treatment is not appropriate."],
-              ["Can you reach a clinician after approval?", "Messaging, check-ins or video: trimrx advertises unlimited check-ins, Medvi describes monitoring visits, HealthRx describes care-team check-ins. Ro reviewers report messaging-only support with 2-3 day replies."],
+              ["Can you reach a clinician after approval?", "Messaging, check-ins or video: TrimRx advertises unlimited check-ins, Medvi describes monitoring visits, HealthRx describes care-team check-ins. Ro reviewers report messaging-only support with 2-3 day replies."],
               ["How are dose changes and clinical questions handled?", "Ask how a dose increase is requested and who approves it. Medvi builds adjustments into monitoring; embody reviewers describe dose-increase appointments; on Reddit, an embody user's dose was raised at a check-in three weeks in."],
             ].map(([h, b]) => (
               <div key={h} className="rounded-xl border border-gray-200 bg-white p-4">
@@ -673,7 +673,7 @@ export default async function HowToChooseGlp1ProviderPage() {
             />
           </div>
           <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">
-            Aggregates for ro, embody, trimrx, SHED, wellmedr, Medvi, Sprout and DirectMeds were re-checked against their
+            Aggregates for ro, embody, TrimRx, SHED, wellmedr, Medvi, Sprout and DirectMeds were re-checked against their
             public Trustpilot profiles in September 2026. Where a provider publishes no aggregate, we say so rather than
             estimate one.
           </p>

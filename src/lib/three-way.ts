@@ -275,53 +275,53 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
   {
     slug: "wellmedr-vs-embody-vs-trimrx",
     providerIds: ["wellmedr", "embody", "trimrx"],
-    title: "wellmedr vs embody vs trimrx: Price, Freedom, Flexibility",
-    metaTitle: "wellmedr vs embody vs trimrx (2026): $49 vs $69 vs $149",
+    title: "wellmedr vs embody vs TrimRx: Price, Freedom, Flexibility",
+    metaTitle: "wellmedr vs embody vs TrimRx (2026): $49 vs $69 vs $149",
     description:
-      "wellmedr ($49, 12-month plan), embody ($69 flat) and trimrx ($149, no contract) compared on real GLP-1 prices, commitment terms, shipping and support.",
+      "wellmedr ($49, 12-month plan), embody ($69 flat) and TrimRx ($149, no contract) compared on real GLP-1 prices, commitment terms, shipping and support.",
     intro:
-      "This trio spans the market's price range - $49 to $149 for the same compounded semaglutide - which makes it a clean test of what the extra money buys. The answer: commitment structure. wellmedr trades a 12-month plan for the lowest price, embody charges $10 more for total freedom, and trimrx charges a premium for a no-contract model with optional multi-month discounts and closer clinical guidance.",
+      "This trio spans the market's price range - $49 to $149 for the same compounded semaglutide - which makes it a clean test of what the extra money buys. The answer: commitment structure. wellmedr trades a 12-month plan for the lowest price, embody charges $10 more for total freedom, and TrimRx charges a premium for a no-contract model with optional multi-month discounts and closer clinical guidance.",
     verdict:
-      "For most budget-driven shoppers this comes down to wellmedr vs embody: $49 with a year's commitment, or $69 with none - both legitimate, both dose-flat. trimrx earns its $149 only if its specific mix matters to you: month-to-month freedom plus ongoing clinical support through dose changes, without the budget tier's leaner service. If you can't articulate why you'd pay the difference, don't.",
+      "For most budget-driven shoppers this comes down to wellmedr vs embody: $49 with a year's commitment, or $69 with none - both legitimate, both dose-flat. TrimRx earns its $149 only if its specific mix matters to you: month-to-month freedom plus ongoing clinical support through dose changes, without the budget tier's leaner service. If you can't articulate why you'd pay the difference, don't.",
     faqs: [
       {
-        question: "Why does trimrx cost more than wellmedr and embody?",
+        question: "Why does TrimRx cost more than wellmedr and embody?",
         answer:
-          "trimrx prices at $149/month, the same at every dose, with no long-term contract, multi-month discounts, and clinical support included through treatment. wellmedr ($49 on a 12-month plan) and embody ($69 flat) run leaner support models at lower prices. All three prescribe the same compounded semaglutide after a licensed-provider review.",
+          "TrimRx prices at $149/month, the same at every dose, with no long-term contract, multi-month discounts, and clinical support included through treatment. wellmedr ($49 on a 12-month plan) and embody ($69 flat) run leaner support models at lower prices. All three prescribe the same compounded semaglutide after a licensed-provider review.",
       },
       {
         question: "Which is best if I don't want any commitment?",
         answer:
-          "embody - its $69/month is flat with no commitment, and it refunds you in full if a provider doesn't approve treatment. trimrx is also month-to-month with no contract, at $149. wellmedr's best rate ($49) locks on a 12-month plan.",
+          "embody - its $69/month is flat with no commitment, and it refunds you in full if a provider doesn't approve treatment. TrimRx is also month-to-month with no contract, at $149. wellmedr's best rate ($49) locks on a 12-month plan.",
       },
       {
         question: "Do any of the three offer a guarantee?",
         answer:
-          "wellmedr backs treatment with a weight-loss warranty (terms on its site), and embody offers a full refund if you're not approved. trimrx doesn't advertise a comparable guarantee.",
+          "wellmedr backs treatment with a weight-loss warranty (terms on its site), and embody offers a full refund if you're not approved. TrimRx doesn't advertise a comparable guarantee.",
       },
     ],
   },
   {
     slug: "medvi-vs-trimrx-vs-shed",
     providerIds: ["medvi", "trimrx", "shed"],
-    title: "Medvi vs trimrx vs SHED: The Support-Tier Showdown",
-    metaTitle: "Medvi vs trimrx vs SHED (2026): $99-$199 Compared",
+    title: "Medvi vs TrimRx vs SHED: The Support-Tier Showdown",
+    metaTitle: "Medvi vs TrimRx vs SHED (2026): $99-$199 Compared",
     description:
-      "The GLP-1 support tier compared: Medvi's all-inclusive care (4.3 on Trustpilot), trimrx's no-contract flexibility, and SHED's coaching with a money-back guarantee.",
+      "The GLP-1 support tier compared: Medvi's all-inclusive care (4.3 on Trustpilot), TrimRx's no-contract flexibility, and SHED's coaching with a money-back guarantee.",
     intro:
-      "These three sell more than medication - each wraps the same compounded GLP-1s in a different support philosophy, from Medvi's current $99 promo to SHED's $199. Medvi bundles video visits, a dietician and care coaching behind a 14,836-review Trustpilot record. trimrx sells flexibility: no contract, optional discounts, clinical guidance. SHED sells accountability: formal health coaching plus the market's only lose-5%-in-120-days-or-your-money-back guarantee.",
+      "These three sell more than medication - each wraps the same compounded GLP-1s in a different support philosophy, from Medvi's current $99 promo to SHED's $199. Medvi bundles video visits, a dietician and care coaching behind a 14,836-review Trustpilot record. TrimRx sells flexibility: no contract, optional discounts, clinical guidance. SHED sells accountability: formal health coaching plus the market's only lose-5%-in-120-days-or-your-money-back guarantee.",
     verdict:
-      "Match the model to your failure mode. If past attempts failed for lack of guidance, Medvi's high-touch care - with the receipts to prove it works - is the pick. If you want premium care without being locked to anything, trimrx. If you need stakes and structure to follow through, SHED's guarantee literally pays you back if the program doesn't deliver. On current pricing Medvi's $99 promo is also the cheapest of the three - but the support philosophy, not the price, is the real choice.",
+      "Match the model to your failure mode. If past attempts failed for lack of guidance, Medvi's high-touch care - with the receipts to prove it works - is the pick. If you want premium care without being locked to anything, TrimRx. If you need stakes and structure to follow through, SHED's guarantee literally pays you back if the program doesn't deliver. On current pricing Medvi's $99 promo is also the cheapest of the three - but the support philosophy, not the price, is the real choice.",
     faqs: [
       {
-        question: "Is Medvi, trimrx or SHED better for support?",
+        question: "Is Medvi, TrimRx or SHED better for support?",
         answer:
-          "They support differently: Medvi includes video visits with providers plus a free dietician and care coaching (rated 4.3 across 14,836 Trustpilot reviews); SHED includes formal health coaching backed by a money-back guarantee; trimrx includes clinical guidance through dose changes with a flexibility-first, no-contract model.",
+          "They support differently: Medvi includes video visits with providers plus a free dietician and care coaching (rated 4.3 across 14,836 Trustpilot reviews); SHED includes formal health coaching backed by a money-back guarantee; TrimRx includes clinical guidance through dose changes with a flexibility-first, no-contract model.",
       },
       {
         question: "Which has a money-back guarantee?",
         answer:
-          "SHED - lose 5% of your body weight in 120 days or your money back, conditioned on following the program (terms on its site). Medvi and trimrx don't advertise results guarantees.",
+          "SHED - lose 5% of your body weight in 120 days or your money back, conditioned on following the program (terms on its site). Medvi and TrimRx don't advertise results guarantees.",
       },
       {
         question: "Are these worth it over cheaper GLP-1 providers?",

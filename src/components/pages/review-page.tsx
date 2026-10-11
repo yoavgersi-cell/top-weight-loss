@@ -79,9 +79,9 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "ro weight loss review: membership from $39 first month plus brand-name GLP-1s (Wegovy, Zepbound) billed separately - insurance can apply. Verified pricing, pros & cons.",
   },
   trimrx: {
-    title: "trimrx Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
+    title: "TrimRx Reviews 2026 (Trim Rx): Is It Legit? Cost, Real Results & Verdict",
     description:
-      "trimrx reviews: {prices}, no long-term contract, clinical support included. Is trimrx legit? Cost, pros & cons.",
+      "TrimRx (Trim Rx) reviews: {prices}, no long-term contract, clinical support included. Is TrimRx legit? Cost, pros & cons.",
   },
   shed: {
     title: "Shed Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
@@ -134,7 +134,7 @@ const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
   },
   trimrx: {
     verdict:
-      "Yes - trimrx is a legitimate telehealth GLP-1 provider. Licensed clinicians guide treatment, medications are compounded semaglutide and tirzepatide prescribed after a medical review, and pricing is transparent with no long-term contract.",
+      "Yes - TrimRx is a legitimate telehealth GLP-1 provider. Licensed clinicians guide treatment, medications are compounded semaglutide and tirzepatide prescribed after a medical review, and pricing is transparent with no long-term contract.",
     signals: [
       "Licensed clinical guidance throughout treatment",
       "Compounded semaglutide & tirzepatide, prescribed after review",
@@ -228,17 +228,17 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
   ],
   trimrx: [
     {
-      question: "How fast does trimrx ship?",
+      question: "How fast does TrimRx ship?",
       answer:
         "Delivery is free and tracked, often arriving as soon as the next day after your prescription is issued. The process starts with a free 2-minute online assessment, and the consultation itself costs nothing.",
     },
     {
-      question: "Is trimrx a subscription with a contract?",
+      question: "Is TrimRx a subscription with a contract?",
       answer:
         "No long-term commitment - plans run month to month. The $149 semaglutide price is the same at every dose; compounded tirzepatide runs $259/month, with custom dosing and unlimited provider check-ins included.",
     },
     {
-      question: "What medications does trimrx offer?",
+      question: "What medications does TrimRx offer?",
       answer:
         "Compounded semaglutide (GLP-1) and compounded tirzepatide (GLP-1 + GIP), both weekly injections with dosing customized by your provider. There's no brand-name or oral option - if you want those, compare altRx (brand-name shelf) or Medvi (dissolving tablets).",
     },

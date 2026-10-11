@@ -222,7 +222,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
           altRx vs Ro
         </Link>,{" "}
         <Link href="/weight-loss/altrx-vs-trimrx" className="font-semibold text-[#0C4B75] hover:underline">
-          altRx vs trimrx
+          altRx vs TrimRx
         </Link>, or{" "}
         <Link href="/weight-loss/embody-vs-ro" className="font-semibold text-[#0C4B75] hover:underline">
           Embody vs Ro

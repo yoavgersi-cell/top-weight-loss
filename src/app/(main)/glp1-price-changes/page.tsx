@@ -104,7 +104,7 @@ export default async function PriceChangesPage() {
             <p>
               <strong className="text-[#191919]">{entries.length} verified changes</strong> across {providersChanged} providers since{" "}
               {monthLabel(earliest)}, {thisMonth} of them in {monthLabel(PRICE_INDEX_VERIFIED)}. The direction has been down or
-              extended: wellmedr cut its 12-month rates to $49 semaglutide and $89 tirzepatide, trimrx moved semaglutide to a flat
+              extended: wellmedr cut its 12-month rates to $49 semaglutide and $89 tirzepatide, TrimRx moved semaglutide to a flat
               $149 at every dose, and altRx extended its $89 / $149 promotion twice. The full current ladder, with conditions, is
               on the <Link href="/weight-loss/cheapest-glp1" className={ext}>cheapest GLP-1 comparison</Link>; the index itself was
               last verified {longDate(PRICE_INDEX_VERIFIED)}.

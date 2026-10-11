@@ -333,7 +333,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   const legitCaptureAfter = legitData ? article.sections.findIndex((s) => /^how much does/i.test(s.heading)) : -1;
   // Every provider-"alternatives" guide (altrx-alternatives, best-ozempic-
   // alternatives, etc.) gets a CRO block featuring our three GLP-1 partners
-  // (embody, altRx, trimrx) with the same comparison-page cards.
+  // (embody, altRx, TrimRx) with the same comparison-page cards.
   const showPartnerCro = isWeightLoss && slug.endsWith("-alternatives");
   // "Our top 2 picks" (embody, altRx) after the intro on every other weight-loss
   // article. Skipped where a provider block already renders (the two above) and
