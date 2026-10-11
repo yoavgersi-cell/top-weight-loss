@@ -25,7 +25,7 @@ export const PROVIDER_NAMES: Record<string, string> = {
   healthrx: "HealthRx",
   directmeds: "DirectMeds",
   sprout: "Sprout",
-  trimrx: "trimrx",
+  trimrx: "TrimRx",
   shed: "SHED",
 };
 

@@ -227,7 +227,7 @@ export default async function OzempicAlternativesPage() {
             affordable, legitimate access are{" "}
             <Link href="/weight-loss/reviews/embody" className="font-semibold text-[#0C4B75] hover:underline">embody</Link>,{" "}
             <Link href="/weight-loss/reviews/altrx" className="font-semibold text-[#0C4B75] hover:underline">altRx</Link>, and{" "}
-            <Link href="/weight-loss/reviews/trimrx" className="font-semibold text-[#0C4B75] hover:underline">trimrx</Link>{" "}
+            <Link href="/weight-loss/reviews/trimrx" className="font-semibold text-[#0C4B75] hover:underline">TrimRx</Link>{" "}
             - but the right fit depends on your goals and budget.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
