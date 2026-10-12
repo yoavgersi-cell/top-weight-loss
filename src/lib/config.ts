@@ -417,47 +417,13 @@ export const NOINDEX_ARTICLE_SLUGS = [
   // cannibalization between the two and consider re-parking this article.
 ];
 
-// Thin weight-loss pages deliberately kept out of the index so crawl budget on
-// the young hub domain concentrates on the money pages (Sep 2026 pruning pass).
-// These render normally but carry robots noindex,follow and are dropped from the
-// sitemap - reversible by removing a slug here. "follow" is kept so any link
-// equity still flows through to the ranked providers.
-//
-// Reviews: providers that aren't affiliate partners and carry ~0 impressions
-// (obscure/filler brands, plus real-but-unmonetized brands with negligible
-// demand: calibrate, found, sequence).
-export const NOINDEX_WL_REVIEW_SLUGS = new Set([
-  "bodybuildinghealth",
-  "livbody",
-  "sunlight",
-  "yucca",
-  "skinnyrx",
-  "calibrate",
-  "found",
-  "sequence",
-]);
+// Weight-loss review and comparison pages were kept out of the index from
+// Sep 2026 to concentrate crawl budget on the money pages. Operator decision,
+// Oct 12, 2026: index everything that renders. Both sets are kept (empty) so
+// a slug can be parked again without touching the page templates or sitemap.
+export const NOINDEX_WL_REVIEW_SLUGS = new Set<string>([]);
 
-// Battles: low-demand two-way matchups tied to a filler/unmonetized brand, plus
-// every three-way (X-vs-Y-vs-Z queries have almost no search volume and are pure
-// crawl-budget bloat on a young domain).
-export const NOINDEX_WL_BATTLE_SLUGS = new Set([
-  // Two-way, Tier-2-brand matchups.
-  "calibrate-vs-embody",
-  "calibrate-vs-medvi",
-  "found-vs-embody",
-  "found-vs-trimrx",
-  "sequence-vs-medvi",
-  "sequence-vs-trimrx",
-  // Three-way comparisons (all).
-  "altrx-vs-ro-vs-sprout",
-  "embody-vs-altrx-vs-medvi",
-  "embody-vs-altrx-vs-wellmedr",
-  "embody-vs-medvi-vs-wellmedr",
-  "healthrx-vs-embody-vs-wellmedr",
-  "medvi-vs-healthrx-vs-directmeds",
-  "medvi-vs-trimrx-vs-shed",
-  "wellmedr-vs-embody-vs-trimrx",
-]);
+export const NOINDEX_WL_BATTLE_SLUGS = new Set<string>([]);
 
 export interface SiteConfig {
   providers: Provider[];
