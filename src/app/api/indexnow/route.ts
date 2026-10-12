@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { hubSitemap } from "@/app/sitemap";
+import { hubSitemap } from "@/lib/sitemaps";
 import { INDEXNOW_KEY, INDEXNOW_HOST } from "@/lib/indexnow";
 
 // IndexNow submitter: collects hub URLs whose sitemap lastmod falls inside

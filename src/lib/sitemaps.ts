@@ -1,6 +1,11 @@
+// ───── Sitemaps ─────
+// Hub (treatmentshub.com): /sitemap.xml is a sitemap index pointing at
+// /sitemap-site.xml and one /sitemap-<vertical>.xml per published vertical,
+// so Search Console can report indexing per vertical. The legacy host keeps
+// a single urlset at /sitemap.xml. All routes are handlers under src/app and
+// read from this module; nothing here depends on the request host.
 import type { MetadataRoute } from "next";
 import { REVIEWERS } from "@/data/reviewers";
-import { headers } from "next/headers";
 import { getConfig } from "@/lib/config-store";
 import { THREE_WAY_COMPARISONS } from "@/lib/three-way";
 import {
@@ -48,23 +53,16 @@ const WL_STATIC_PATHS: { path: string; priority: number; changeFrequency: "weekl
   { path: "/terms", priority: 0.2, changeFrequency: "monthly" },
 ];
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  // One deployment serves both hosts, so the correct sitemap depends on which
-  // domain the crawler asked. Reading the host header makes this route dynamic.
-  const host = (await headers()).get("host") || "";
-  if (host.includes("treatmentshub")) return hubSitemap();
-  return legacySitemap();
-}
-
 // ───── treatmentshub.com - the hub sitemap ─────
 // Lists the hub landing plus every vertical that has content, under its
 // /<vertical>/ prefix. Weight-loss is withheld until the migration flips it
 // self-canonical (until then those pages canonicalize to the live legacy site,
 // so advertising them here would just point crawlers at duplicate URLs).
-export async function hubSitemap(): Promise<MetadataRoute.Sitemap> {
-  const entries: MetadataRoute.Sitemap = [
+// Site-level entries: the hub landing, the medical review policy and the
+// reviewer profiles. Served as /sitemap-site.xml.
+export function hubSiteEntries(): MetadataRoute.Sitemap {
+  return [
     { url: HUB_URL, lastModified: FALLBACK_DATE, changeFrequency: "weekly", priority: 1 },
-    // Site-level trust pages: the medical review policy and reviewer profiles.
     { url: `${HUB_URL}/medical-review-policy`, lastModified: new Date("2026-10-04"), changeFrequency: "monthly", priority: 0.4 },
     ...REVIEWERS.map((r) => ({
       url: `${HUB_URL}/reviewers/${r.slug}`,
@@ -73,16 +71,72 @@ export async function hubSitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.5,
     })),
   ];
+}
 
-  for (const vertical of VERTICAL_IDS) {
-    if (!isPublishedVertical(vertical)) continue; // unpublished skeletons stay out
-    if (vertical === DEFAULT_VERTICAL && !WEIGHT_LOSS_MIGRATED) continue;
-    const config = await getConfig(vertical);
-    if ((config.providers ?? []).length === 0) continue; // nothing to index yet
-    entries.push(...verticalEntries(`${HUB_URL}/${vertical}`, config, vertical === DEFAULT_VERTICAL));
+// Every URL of one vertical under its /<vertical>/ prefix, or [] when the
+// vertical is unpublished, unmigrated or empty. Served as
+// /sitemap-<vertical>.xml, one file per vertical so Search Console reports
+// coverage per vertical (Oct 12, 2026).
+export async function hubVerticalSitemap(vertical: string): Promise<MetadataRoute.Sitemap> {
+  if (!VERTICAL_IDS.includes(vertical)) return [];
+  if (!isPublishedVertical(vertical)) return []; // unpublished skeletons stay out
+  if (vertical === DEFAULT_VERTICAL && !WEIGHT_LOSS_MIGRATED) return [];
+  const config = await getConfig(vertical);
+  if ((config.providers ?? []).length === 0) return []; // nothing to index yet
+  return verticalEntries(`${HUB_URL}/${vertical}`, config, vertical === DEFAULT_VERTICAL);
+}
+
+// The verticals that currently have a sitemap file - the sitemap index lists
+// exactly these.
+export async function hubSitemapVerticals(): Promise<string[]> {
+  const out: string[] = [];
+  for (const v of VERTICAL_IDS) {
+    if ((await hubVerticalSitemap(v)).length > 0) out.push(v);
   }
+  return out;
+}
 
+// The whole hub in one list (IndexNow submitter).
+export async function hubSitemap(): Promise<MetadataRoute.Sitemap> {
+  const entries: MetadataRoute.Sitemap = [...hubSiteEntries()];
+  for (const v of VERTICAL_IDS) entries.push(...(await hubVerticalSitemap(v)));
   return entries;
+}
+
+// ───── XML serializers ─────
+const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const iso = (d: MetadataRoute.Sitemap[number]["lastModified"]) =>
+  d ? new Date(d).toISOString() : undefined;
+
+export function urlsetXml(entries: MetadataRoute.Sitemap): string {
+  const body = entries
+    .map((e) => {
+      const lm = iso(e.lastModified);
+      return (
+        "<url>" +
+        `<loc>${esc(e.url)}</loc>` +
+        (lm ? `<lastmod>${lm}</lastmod>` : "") +
+        (e.changeFrequency ? `<changefreq>${e.changeFrequency}</changefreq>` : "") +
+        (e.priority !== undefined ? `<priority>${e.priority}</priority>` : "") +
+        "</url>"
+      );
+    })
+    .join("\n");
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
+}
+
+export function sitemapIndexXml(sitemaps: { loc: string; lastmod?: Date }[]): string {
+  const body = sitemaps
+    .map((s) => `<sitemap><loc>${esc(s.loc)}</loc>${s.lastmod ? `<lastmod>${s.lastmod.toISOString()}</lastmod>` : ""}</sitemap>`)
+    .join("\n");
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</sitemapindex>\n`;
+}
+
+export const XML_HEADERS = { "Content-Type": "application/xml; charset=utf-8", "Cache-Control": "public, max-age=0, must-revalidate" };
+
+export function newestLastModified(entries: MetadataRoute.Sitemap): Date | undefined {
+  const times = entries.map((e) => (e.lastModified ? new Date(e.lastModified).getTime() : 0)).filter((t) => t > 0);
+  return times.length ? new Date(Math.max(...times)) : undefined;
 }
 
 // Sitemap entries for one vertical, rooted at `base` (origin + /<vertical>).
@@ -185,8 +239,8 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
   return entries;
 }
 
-// ───── topweightloss.io - the legacy sitemap (unchanged) ─────
-async function legacySitemap(): Promise<MetadataRoute.Sitemap> {
+// ───── topweightloss.io - the legacy sitemap (unchanged, one urlset) ─────
+export async function legacySitemap(): Promise<MetadataRoute.Sitemap> {
   const config = await getConfig();
 
   const staticPages: MetadataRoute.Sitemap = [
