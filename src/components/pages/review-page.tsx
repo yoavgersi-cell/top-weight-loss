@@ -590,6 +590,11 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
       .sort((a, b) => (b.publishedAt ?? "").localeCompare(a.publishedAt ?? "")),
   ].slice(0, 3);
 
+  // The evidence-led seven-provider comparison (Oct 12, 2026) covers these
+  // weight-loss partners; link it from each of their reviews.
+  const COMPARED_PROVIDER_IDS = new Set(["wellmedr", "embody", "directmeds", "medvi", "trimrx", "altrx", "ro"]);
+  const showComparisonLink = ctx.vertical === "weight-loss" && COMPARED_PROVIDER_IDS.has(provider.id);
+
   return (
     <div className="min-h-screen bg-gray-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewArticleSchema) }} />
@@ -1144,7 +1149,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         </div>
 
         {/* Related content */}
-        {(relatedBattles.length > 0 || relatedArticles.length > 0) && (
+        {(relatedBattles.length > 0 || relatedArticles.length > 0 || showComparisonLink) && (
           <div className="mb-6">
             <h3 className="mb-4 text-[18px] font-bold text-[#191919]">Related</h3>
             {relatedBattles.length > 0 && (
@@ -1169,10 +1174,19 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 </div>
               </>
             )}
-            {relatedArticles.length > 0 && (
+            {(relatedArticles.length > 0 || showComparisonLink) && (
               <>
                 <p className="mb-2 text-[12px] font-bold uppercase tracking-wider text-gray-400">Guides</p>
                 <div className="space-y-2">
+                  {showComparisonLink && (
+                    <Link
+                      href="/weight-loss/glp1-provider-comparison"
+                      className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-medium text-[#191919] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
+                    >
+                      <span className="truncate">GLP-1 Telehealth Providers Compared: {provider.name} and six others on verified prices, Trustpilot and Reddit</span>
+                      <span className="ml-auto shrink-0 text-[12px] text-gray-400">Comparison</span>
+                    </Link>
+                  )}
                   {relatedArticles.map((article) => (
                     <Link
                       key={article.slug}
