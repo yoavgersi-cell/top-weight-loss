@@ -469,6 +469,8 @@ const REVIEWED_LATER: Record<string, PageReview> = {
   "/weight-loss/articles/is-ro-legit": { reviewer: "francheska-capistrano", reviewedAt: "2026-10-04" },
   "/weight-loss/articles/ro-cost": { reviewer: "francheska-capistrano", reviewedAt: "2026-10-04" },
   "/weight-loss/articles/embody-tirzepatide-review": { reviewer: "francheska-capistrano", reviewedAt: "2026-10-04" },
+  // Operator confirmed the review on Oct 12, 2026, the day the page shipped.
+  "/weight-loss/glp1-provider-comparison": { reviewer: "francheska-capistrano", reviewedAt: "2026-10-12" },
 };
 
 export const REVIEW_LOG: Record<string, PageReview> = {
