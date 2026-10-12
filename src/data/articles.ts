@@ -1096,7 +1096,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Which Ro alternative offers the most support?",
-        body: 'Two options. <a href="/weight-loss/reviews/medvi">Medvi</a> bundles video visits with providers, regular monitoring, a dietician and care coaching into one all-inclusive price - <strong>$99/month</strong> for semaglutide (promo, reg. $199) or <strong>$166/month</strong> for tirzepatide (reg. $299) - backed by a 4.3 on Trustpilot across 14,836 reviews. Head-to-head: <a href="/weight-loss/medvi-vs-ro">Medvi vs Ro</a>. <a href="/weight-loss/reviews/shed">SHED</a> goes further on accountability: <strong>$199/month</strong> semaglutide or $299 tirzepatide (20% off month one), with health coaching on every plan and the market\'s firmest promise - lose 5% of your body weight in 120 days or your money back.',
+        body: 'Two options. <a href="/weight-loss/reviews/medvi">Medvi</a> bundles video visits with providers, regular monitoring, a dietician and care coaching into one all-inclusive price - <strong>$99/month</strong> for semaglutide (promo, reg. $199) or <strong>$166/month</strong> for tirzepatide (reg. $299) - backed by a 4.3 on Trustpilot across 14,987 reviews. Head-to-head: <a href="/weight-loss/medvi-vs-ro">Medvi vs Ro</a>. <a href="/weight-loss/reviews/shed">SHED</a> goes further on accountability: <strong>$199/month</strong> semaglutide or $299 tirzepatide (20% off month one), with health coaching on every plan and the market\'s firmest promise - lose 5% of your body weight in 120 days or your money back.',
       },
       {
         heading: "Is Noom a good Ro alternative?",
@@ -1526,7 +1526,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Which Noom alternative keeps the coaching?",
-        body: 'If coaching is the part of Noom you value and the lessons are the part you do not, two providers keep the human layer without the app homework. <a href="/weight-loss/reviews/medvi">Medvi</a> bundles video visits, regular monitoring, a dietician and care coaching into one all-inclusive price - <strong>$99/month</strong> semaglutide (promo, reg. $199) or $166 tirzepatide (reg. $299), HSA/FSA approved - and holds a 4.3 on Trustpilot across 14,836 reviews. <a href="/weight-loss/reviews/shed">SHED</a> puts health coaching on every plan at <strong>$199/month</strong> semaglutide or $299 tirzepatide (20% off month one) and backs the program with the firmest promise in the market: lose 5% of your body weight in 120 days or your money back.',
+        body: 'If coaching is the part of Noom you value and the lessons are the part you do not, two providers keep the human layer without the app homework. <a href="/weight-loss/reviews/medvi">Medvi</a> bundles video visits, regular monitoring, a dietician and care coaching into one all-inclusive price - <strong>$99/month</strong> semaglutide (promo, reg. $199) or $166 tirzepatide (reg. $299), HSA/FSA approved - and holds a 4.3 on Trustpilot across 14,987 reviews. <a href="/weight-loss/reviews/shed">SHED</a> puts health coaching on every plan at <strong>$199/month</strong> semaglutide or $299 tirzepatide (20% off month one) and backs the program with the firmest promise in the market: lose 5% of your body weight in 120 days or your money back.',
       },
       {
         heading: "What about TrimRx?",
