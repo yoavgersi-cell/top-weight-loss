@@ -62,7 +62,11 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         for detailed breakdowns, or jump straight to a head-to-head like{" "}
         <Link href="/weight-loss/altrx-vs-embody" className="font-semibold text-[#0C4B75] hover:underline">
           altRx vs embody
-        </Link>.
+        </Link>. Prefer an evidence-led view without scores? Our{" "}
+        <Link href="/weight-loss/glp1-provider-comparison" className="font-semibold text-[#0C4B75] hover:underline">
+          GLP-1 provider comparison
+        </Link>{" "}
+        sets seven providers side by side on verified prices, Trustpilot patterns, Reddit experiences and cancellation terms.
       </p>
       <p className="mb-8">
         Our goal is to help you identify the provider that best aligns with your health goals, budget, and treatment preferences.
