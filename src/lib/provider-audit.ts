@@ -29,7 +29,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Shipping", value: "Free 1-2 day, tracked and insured" },
       { label: "Certification", value: "LegitScript-certified; US-based 503A compounding pharmacies" },
       { label: "Refund policy", value: "Full refund if a provider doesn't approve treatment" },
-      { label: "Trustpilot record", value: "3.8 across 8,398 reviews" },
+      { label: "Trustpilot record", value: "3.8 across 9,604 reviews" },
     ],
   },
   "weight-loss:wellmedr": {
@@ -39,7 +39,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Commitment", value: "12-month plan for the best rate" },
       { label: "Support", value: "Coach included on every plan" },
       { label: "Guarantee", value: "Weight-loss warranty" },
-      { label: "Trustpilot record", value: "4.6 across 2,091 reviews" },
+      { label: "Trustpilot record", value: "4.6 across 2,188 reviews" },
     ],
   },
   "weight-loss:medvi": {
@@ -74,7 +74,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Treatment formats", value: "Injections or needle-free oral drops" },
       { label: "Shipping", value: "Free 1-2 day" },
       { label: "Membership fee", value: "None" },
-      { label: "Trustpilot record", value: "4.6 across 15,690 reviews" },
+      { label: "Trustpilot record", value: "4.6 across 16,390 reviews" },
     ],
   },
   "weight-loss:trimrx": {
@@ -82,7 +82,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Semaglutide price", value: "$149/month, same at every dose" },
       { label: "Tirzepatide price", value: "$259/month" },
       { label: "Commitment", value: "No contract; opt-in discount programs" },
-      { label: "Trustpilot record", value: "3.7 across 5,670 reviews" },
+      { label: "Trustpilot record", value: "3.8 across 5,392 reviews" },
     ],
   },
   "weight-loss:shed": {
@@ -106,7 +106,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
     rows: [
       { label: "Membership", value: "$39 first month, then $74-149/month ($74 on a 12-month prepaid plan)" },
       { label: "Medication cost", value: "Priced separately from membership - e.g. Wegovy pill $149 first month (then $299); Zepbound KwikPen from $299 first month" },
-      { label: "Trustpilot record", value: "3.9 across 6,690 reviews" },
+      { label: "Trustpilot record", value: "3.9 across 7,105 reviews" },
     ],
   },
 

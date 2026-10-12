@@ -32,6 +32,7 @@ const WL_STATIC_PATHS: { path: string; priority: number; changeFrequency: "weekl
   { path: "/glp1-provider-support", priority: 0.8, changeFrequency: "weekly" },
   { path: "/glp1-shipping-times", priority: 0.8, changeFrequency: "weekly" },
   { path: "/glp1-price-changes", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/glp1-provider-comparison", priority: 0.8, changeFrequency: "weekly" },
   { path: "/weight-loss-pills", priority: 0.8, changeFrequency: "weekly" },
   { path: "/glp1-pills-vs-injections", priority: 0.8, changeFrequency: "weekly" },
   { path: "/retatrutide-weight-loss", priority: 0.8, changeFrequency: "weekly" },

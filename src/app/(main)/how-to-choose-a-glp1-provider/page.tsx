@@ -95,7 +95,7 @@ const CHECKLIST: { title: string; check: string; verify: string; redFlag: string
   {
     title: "The Trustpilot record, with the count",
     check: "The aggregate score means little without the volume behind it. Read the recurring themes in the low-star reviews, not the headline number.",
-    verify: "We print rating and review count for every provider where we have verified the profile. Medvi's 4.3 across 14,836 reviews and embody's 3.8 across 8,398 are both real records; they tell different stories.",
+    verify: "We print rating and review count for every provider where we have verified the profile. Medvi's 4.3 across 14,836 reviews and embody's 3.8 across 9,604 are both real records; they tell different stories.",
     redFlag: "A perfect 5.0 on a handful of reviews, or no public review profile at all. Neither proves anything is wrong; both mean less evidence.",
   },
   {
@@ -166,7 +166,7 @@ const ROWS: Row[] = [
     pharmacy: "Compounded only; pharmacy not named in our research",
     dosePricing: "Same price at every dose; no long-term contract, optional multi-month discounts",
     likes: "The 5-star Trustpilot reviews from the same week praise a thorough screening, a clear intake, clear pricing, fast support replies and plainly labelled 2-3 day shipping.",
-    complaints: "The 2-star reviews from the same week are about fulfillment and billing, not the clinic: a box three days late with warm cold packs, a prepaid 6-month plan whose second shipment was 30 days overdue with chat and phone unanswered, a cancelled prescription that Affirm kept trying to bill, and one first order with someone else's prescription in the portal. At 3.7 across 5,670 the aggregate is the lowest in our table. $149 sits above the budget tier for the same molecule, with no guarantee behind it.",
+    complaints: "The 2-star reviews from the same week are about fulfillment and billing, not the clinic: a box three days late with warm cold packs, a prepaid 6-month plan whose second shipment was 30 days overdue with chat and phone unanswered, a cancelled prescription that Affirm kept trying to bill, and one first order with someone else's prescription in the portal. At 3.8 across 5,392 the aggregate is the lowest in our table. $149 sits above the budget tier for the same molecule, with no guarantee behind it.",
   },
   {
     id: "shed",
@@ -210,7 +210,7 @@ const ROWS: Row[] = [
     visit: "Online intake, physician review; no membership, cancel anytime",
     pharmacy: "Compounded; pharmacy not named in our research",
     dosePricing: "Flat $147 for either medication at any dose, injections or sublingual drops",
-    likes: "Trustpilot 4.6 across 15,690 reviews, the largest base in our table. The 4- and 5-star reviews from the past week are almost all about named support agents: a straightforward sign-up, prompt answers, a rep who fixed a problem on the spot. One 3-star reviewer says the company \"came through\" after a few issues and calls the prices reasonable.",
+    likes: "Trustpilot 4.6 across 16,390 reviews, the largest base in our table. The 4- and 5-star reviews from the past week are almost all about named support agents: a straightforward sign-up, prompt answers, a rep who fixed a problem on the spot. One 3-star reviewer says the company \"came through\" after a few issues and calls the prices reasonable.",
     complaints: "A 2-star review from September: an order stuck at \"Label Created\" until three phone calls, then damaged in transit, with the AI chat insisting it had been delivered. A 4-star reviewer could not access the doctor's message and would rather talk to reps than use the online account; a 3-star NAD customer received a two-week supply with no syringes. Structurally: no coaching layer and no brand-name shelf, and the needle-free drops are a clinician-discretion format - the major trials studied injections.",
   },
   {
@@ -266,7 +266,7 @@ const EXPLORE: Record<string, { useCase: string; reason: string }> = {
   },
   wellmedr: {
     useCase: "Lowest verified semaglutide price, on a 12-month term",
-    reason: "$49 a month semaglutide, the same at every dose, requires the 12-month plan billed monthly. A weight-care coach on every plan and 4.6 across 2,091 Trustpilot reviews.",
+    reason: "$49 a month semaglutide, the same at every dose, requires the 12-month plan billed monthly. A weight-care coach on every plan and 4.6 across 2,188 Trustpilot reviews.",
   },
 };
 

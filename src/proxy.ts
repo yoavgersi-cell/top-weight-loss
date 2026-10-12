@@ -27,6 +27,7 @@ const SHARED_ONE_OFF_PAGES = new Set([
   "glp1-provider-support",
   "glp1-shipping-times",
   "glp1-price-changes",
+  "glp1-provider-comparison",
 ]);
 
 // Duplicate comparison URLs that consolidate onto a stronger canonical page.
