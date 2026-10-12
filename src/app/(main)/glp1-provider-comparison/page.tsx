@@ -8,8 +8,9 @@ import { GuideCluster } from "@/components/guide-cluster";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { LastUpdated } from "@/components/last-updated";
 import { ProviderCta } from "@/components/provider-cta";
-import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
-import { RedditMark } from "@/components/reddit-community";
+import { MedicalSources } from "@/components/medical-sources";
+import { RedditMark, RedditThreadCarousel } from "@/components/reddit-community";
+import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { getConfig } from "@/lib/config-store";
 import { PRICE_INDEX_VERIFIED } from "@/lib/price-index";
 
@@ -154,7 +155,7 @@ const ROWS: Row[] = [
     name: "Ro",
     medications: "Brand-name Wegovy (pill and pen) and Zepbound; medication billed separately",
     entry: "$39 membership",
-    entryNote: "first month; medication separate",
+    entryNote: "first month; the only provider with a membership; medication billed separately",
     after: "Membership $74-$149/mo; medication $149-$449 by product and dose",
     membership: "Yes",
     shipping: "In-house pharmacy",
@@ -168,7 +169,7 @@ const ROWS: Row[] = [
 
 type Section = {
   id: Pid;
-  overview: string;
+  overview: ReactNode;
   pricing: ReactNode;
   support: string;
   trustpilotHeading: string;
@@ -191,11 +192,14 @@ const Ext = ({ href, children }: { href: string; children: ReactNode }) => (
 const SECTIONS: Section[] = [
   {
     id: "wellmedr",
-    overview:
-      "wellmedr sells compounded semaglutide and tirzepatide on a twelve-month plan at the lowest ongoing price we track, with the same price at every dose, a coach included on every plan and a brand-name shelf for people who want Ozempic or Zepbound. It is the provider for readers who have decided to stay on treatment and want the cheapest sustainable rate.",
+    overview: (
+      <>
+        wellmedr sells compounded semaglutide and tirzepatide on a twelve-month plan <strong className="text-[#191919]">at the lowest ongoing price we track</strong>, with the same price at every dose, a coach included on every plan and a brand-name shelf for people who want Ozempic or Zepbound. It is the provider for readers who have decided to stay on treatment and want the cheapest sustainable rate.
+      </>
+    ),
     pricing: (
       <>
-        Semaglutide is $49 a month and tirzepatide $89 a month on the twelve-month plan, shipped every four weeks, verified September 21, 2026 (both figures came down on September 14, from $59 and $99). Brand-name Ozempic is $1,399 and Zepbound $1,599 a month. Shipping is standard, three to five business days. There is no membership. The plan is the condition: the $49 rate belongs to the twelve-month commitment, and reviewers who pay month to month report $129. A year on the plan is $588 for semaglutide, the lowest year-one figure on this page.
+        <strong className="text-[#191919]">Semaglutide is $49 a month and tirzepatide $89 a month on the twelve-month plan</strong>, shipped every four weeks, verified September 21, 2026 (both figures came down on September 14, from $59 and $99). Brand-name Ozempic is $1,399 and Zepbound $1,599 a month. Shipping is standard, three to five business days. There is no membership. The plan is the condition: the $49 rate belongs to the twelve-month commitment, and reviewers who pay month to month report $129. A year on the plan is $588 for semaglutide, the lowest year-one figure on this page.
       </>
     ),
     support:
@@ -203,12 +207,12 @@ const SECTIONS: Section[] = [
     trustpilotHeading: "4.6 across 2,188 reviews",
     trustpilot: (
       <>
-        Checked {TRUSTPILOT_CHECKED} (<Ext href="https://www.trustpilot.com/review/wellmedr.com">profile</Ext>; claimed profile, paid Trustpilot subscription). Recent positive reviews are about people: &ldquo;Malcom was great&rdquo;, &ldquo;Zara responded quickly&rdquo;, &ldquo;I talked to a person within minutes&rdquo;, and a switcher who found the move smooth. The negative themes are time and cadence: one reviewer waited a week for an order, another reported &ldquo;over 24 hours no contact&rdquo;, a third said scripts arrive late even when questions are answered, and one three-star review says the company &ldquo;charges you every 21 days&rdquo;. The 4.6 is earned mostly on service; the complaints are about speed.
+        Checked {TRUSTPILOT_CHECKED} (<Ext href="https://www.trustpilot.com/review/wellmedr.com">profile</Ext>; claimed profile, paid Trustpilot subscription). Recent positive reviews are about people: &ldquo;Malcom was great&rdquo;, &ldquo;Zara responded quickly&rdquo;, &ldquo;I talked to a person within minutes&rdquo;, and a switcher who found the move smooth. The negative themes are time and cadence: one reviewer waited a week for an order, another reported &ldquo;over 24 hours no contact&rdquo;, a third said scripts arrive late even when questions are answered, and one three-star review says the company &ldquo;charges you every 21 days&rdquo;. <strong className="text-[#191919]">The 4.6 is earned mostly on service; the complaints are about speed.</strong>
       </>
     ),
     reddit: (
       <>
-        wellmedr&rsquo;s Reddit footprint is comment-level: short, recent verdicts from people on annual plans. &ldquo;They are legit with their pharmacy in Florida. I did a ton of research and ended up paying for a whole year at 88 a month,&rdquo; one user wrote two months before our capture. Another pays $129 month to month and says it is the only charge. A third was considering switching because &ldquo;I can get a whole year for $99/month, that&rsquo;s the lowest I&rsquo;ve seen.&rdquo; The counterweight is one detailed account from a user who switched from another provider, was kept at the 15 mg tirzepatide dose, received the order right away, and was still only one pound down after eight weeks on a prepaid six-month supply. That is a reminder about the medication, not the service. Excerpts captured from GLP-1 subreddits, July to September 2026.
+        wellmedr&rsquo;s Reddit footprint is comment-level: short, recent verdicts from people on annual plans. &ldquo;They are legit with their pharmacy in Florida. I did a ton of research and ended up <strong className="text-[#191919]">paying for a whole year at 88 a month</strong>,&rdquo; one user wrote two months before our capture. Another pays $129 month to month and says it is the only charge. A third was considering switching because &ldquo;I can get a whole year for $99/month, that&rsquo;s the lowest I&rsquo;ve seen.&rdquo; The counterweight is one detailed account from a user who switched from another provider, was kept at the 15 mg tirzepatide dose, received the order right away, and was still only one pound down after eight weeks on a prepaid six-month supply. That is a reminder about the medication, not the service. Excerpts captured from GLP-1 subreddits, July to September 2026.
       </>
     ),
     cancellation:
@@ -218,17 +222,20 @@ const SECTIONS: Section[] = [
     suits: "Readers who already know they will stay on treatment for a year, want the lowest total cost, and value a coach and a phone-answering support desk over next-day delivery.",
     assessment: (
       <>
-        On the evidence, wellmedr&rsquo;s value case is the strongest here for long-term users: the lowest verified ongoing price, a service record that both Trustpilot and Reddit describe as responsive, and refund terms that are kinder than most. The trade is commitment and patience with shipping. If you are not sure you will stay on treatment, start somewhere month to month and come back.
+        On the evidence, wellmedr&rsquo;s value case is <strong className="text-[#191919]">the strongest here for long-term users</strong>: the lowest verified ongoing price, a service record that both Trustpilot and Reddit describe as responsive, and refund terms that are kinder than most. The trade is commitment and patience with shipping. If you are not sure you will stay on treatment, start somewhere month to month and come back.
       </>
     ),
   },
   {
     id: "embody",
-    overview:
-      "embody is the cheapest way on this page to try a compounded GLP-1 without committing: month-to-month pricing, same price at every dose, and the fastest shipping in the set. Reddit users describe the model as \"autopilot\", which is both its appeal and its limitation.",
+    overview: (
+      <>
+        embody is <strong className="text-[#191919]">the cheapest way on this page to try a compounded GLP-1 without committing</strong>: month-to-month pricing, same price at every dose, and the fastest shipping in the set. Reddit users describe the model as &ldquo;autopilot&rdquo;, which is both its appeal and its limitation.
+      </>
+    ),
     pricing: (
       <>
-        Semaglutide $69 a month (regular $79) and tirzepatide $119 (regular $129), month to month, verified September 21, 2026. Free one-to-two-day cold-chain shipping. No membership. A full refund if a provider does not approve treatment. embody is LegitScript-certified and names US-based 503A compounding pharmacies, the clearest pharmacy statement among the compounded providers here.
+        <strong className="text-[#191919]">Semaglutide $69 a month (regular $79) and tirzepatide $119 (regular $129), month to month</strong>, verified September 21, 2026. Free one-to-two-day cold-chain shipping. No membership. <strong className="text-[#191919]">A full refund if a provider does not approve treatment.</strong> embody is LegitScript-certified and names US-based 503A compounding pharmacies, the clearest pharmacy statement among the compounded providers here.
       </>
     ),
     support:
@@ -236,14 +243,14 @@ const SECTIONS: Section[] = [
     trustpilotHeading: "3.8 across 9,604 reviews",
     trustpilot: (
       <>
-        Checked {TRUSTPILOT_CHECKED} (<Ext href="https://www.trustpilot.com/review/joinem.co">profile</Ext>; claimed profile, paid Trustpilot subscription). Positive reviews focus on clinicians: &ldquo;The doctor listened to me today&rdquo;, &ldquo;provider above and beyond&rdquo;, &ldquo;My appointment went great&rdquo;. The negative themes are shipping and support: a three-star review titled &ldquo;Shipping delays kill score&rdquo;, a two-star &ldquo;Dismal customer support with errors&rdquo;, and a three-star account of three video appointments the doctor did not attend. A 3.8 on nearly ten thousand reviews is a genuinely mixed record, and the pattern is consistent: good when it works, thin when it does not.
+        Checked {TRUSTPILOT_CHECKED} (<Ext href="https://www.trustpilot.com/review/joinem.co">profile</Ext>; claimed profile, paid Trustpilot subscription). Positive reviews focus on clinicians: &ldquo;The doctor listened to me today&rdquo;, &ldquo;provider above and beyond&rdquo;, &ldquo;My appointment went great&rdquo;. The negative themes are shipping and support: a three-star review titled &ldquo;Shipping delays kill score&rdquo;, a two-star &ldquo;Dismal customer support with errors&rdquo;, and a three-star account of three video appointments the doctor did not attend. A 3.8 on nearly ten thousand reviews is a genuinely mixed record, and the pattern is consistent: <strong className="text-[#191919]">good when it works, thin when it does not</strong>.
       </>
     ),
     reddit: (
       <>
         In a{" "}
         <Ext href="https://www.reddit.com/r/compoundedtirzepatide/comments/1utd6g7/has_anyone_tried_em_ie_embody_the_price_is_good/">thread on r/compoundedtirzepatide</Ext>{" "}
-        asking whether anyone had tried embody because &ldquo;the price is good&rdquo;, one user who had switched after a previous provider stalled wrote: &ldquo;The med check was quick and I was approved same day, got my vial in just one week. Now 3 weeks in they bumped my dose... Everything is on autopilot, that&rsquo;s how they keep costs low.&rdquo; Another in the same thread switched from a different provider, was approved the next day, shipped two days later and matched at their previous dose. Elsewhere, captured comments describe $129 tirzepatide &ldquo;for all levels&rdquo; with no contract, a refill flow one user could not find in the dashboard (others pointed to the text line and the monthly check-in form), support replies one user believed were AI-generated, and a two-week gap between approval and shipment in one case.
+        asking whether anyone had tried embody because &ldquo;the price is good&rdquo;, one user who had switched after a previous provider stalled wrote: &ldquo;The med check was quick and I was <strong className="text-[#191919]">approved same day, got my vial in just one week</strong>. Now 3 weeks in they bumped my dose... Everything is on autopilot, that&rsquo;s how they keep costs low.&rdquo; Another in the same thread switched from a different provider, was approved the next day, shipped two days later and matched at their previous dose. Elsewhere, captured comments describe $129 tirzepatide &ldquo;for all levels&rdquo; with no contract, a refill flow one user could not find in the dashboard (others pointed to the text line and the monthly check-in form), support replies one user believed were AI-generated, and a two-week gap between approval and shipment in one case.
       </>
     ),
     cancellation:
@@ -253,17 +260,20 @@ const SECTIONS: Section[] = [
     suits: "Readers who want to try treatment without a plan, know their way around a patient portal, and would rather have fast delivery than a coach.",
     assessment: (
       <>
-        embody is the sensible first provider for someone unsure whether a GLP-1 is for them: low cost, no commitment, fast delivery, and a refund if not approved. Both review platforms agree on what you give up, which is a person to talk to when something goes wrong. Order before your supply runs low; the gap between approval and shipment is the complaint that recurs.
+        embody is <strong className="text-[#191919]">the sensible first provider for someone unsure whether a GLP-1 is for them</strong>: low cost, no commitment, fast delivery, and a refund if not approved. Both review platforms agree on what you give up, which is a person to talk to when something goes wrong. Order before your supply runs low; the gap between approval and shipment is the complaint that recurs.
       </>
     ),
   },
   {
     id: "directmeds",
-    overview:
-      "DirectMeds is a pharmacy-direct telehealth service with the simplest pricing on this page: one flat price for compounded semaglutide or tirzepatide, as a weekly injection or as sublingual drops, with the telemedicine visit included and no membership. It also has the largest Trustpilot record of the seven.",
+    overview: (
+      <>
+        DirectMeds is a pharmacy-direct telehealth service with <strong className="text-[#191919]">the simplest pricing on this page</strong>: one flat price for compounded semaglutide or tirzepatide, as a weekly injection or as sublingual drops, with the telemedicine visit included and no membership. It also has <strong className="text-[#191919]">the largest Trustpilot record of the seven</strong>.
+      </>
+    ),
     pricing: (
       <>
-        $147 a month for either molecule in either format, the same at every dose, verified September 21, 2026. Free one-to-two-day shipping. No membership, no hidden fees, cancel anytime. The needle-free drops cost the same $147, which no other provider here matches (Medvi&rsquo;s tablets are $249).
+        <strong className="text-[#191919]">$147 a month for either molecule in either format, the same at every dose</strong>, verified September 21, 2026. Free one-to-two-day shipping. No membership, no hidden fees, cancel anytime. The needle-free drops cost the same $147, which no other provider here matches (Medvi&rsquo;s tablets are $249).
       </>
     ),
     support:
@@ -271,12 +281,12 @@ const SECTIONS: Section[] = [
     trustpilotHeading: "4.6 across 16,390 reviews",
     trustpilot: (
       <>
-        Checked {TRUSTPILOT_CHECKED} (<Ext href="https://www.trustpilot.com/review/directmeds.com">profile</Ext>; claimed profile, paid Trustpilot subscription). The recent pages are dominated by named-agent praise: &ldquo;Chelsea King and Matthew Jakins... patient and kind&rdquo;, &ldquo;Belinda was very good&rdquo;, &ldquo;Signup process was straight forward&rdquo;. The negative reviews are about fulfilment: a two-star review of an order placed September 4 and still open on September 23, and a three-star &ldquo;I have had a few issues with this company&rdquo;. DirectMeds also sells non-GLP-1 products, and a complaint about a NAD order appears in the same stream. The pattern: support is the strength, delivery timing the weakness.
+        Checked {TRUSTPILOT_CHECKED} (<Ext href="https://www.trustpilot.com/review/directmeds.com">profile</Ext>; claimed profile, paid Trustpilot subscription). The recent pages are dominated by named-agent praise: &ldquo;Chelsea King and Matthew Jakins... patient and kind&rdquo;, &ldquo;Belinda was very good&rdquo;, &ldquo;Signup process was straight forward&rdquo;. The negative reviews are about fulfilment: a two-star review of an order placed September 4 and still open on September 23, and a three-star &ldquo;I have had a few issues with this company&rdquo;. DirectMeds also sells non-GLP-1 products, and a complaint about a NAD order appears in the same stream. The pattern: <strong className="text-[#191919]">support is the strength, delivery timing the weakness</strong>.
       </>
     ),
     reddit: (
       <>
-        We found no substantive, verifiable Reddit discussion of DirectMeds in the communities we searched. One third-party review site summarises Reddit complaints about shipments sent to wrong addresses and semaglutide sent instead of tirzepatide, but gives no thread links, so we do not treat those reports as established. For now, the Trustpilot profile is the fuller independent record.
+        We found <strong className="text-[#191919]">no substantive, verifiable Reddit discussion of DirectMeds</strong> in the communities we searched. One third-party review site summarises Reddit complaints about shipments sent to wrong addresses and semaglutide sent instead of tirzepatide, but gives no thread links, so we do not treat those reports as established. For now, the Trustpilot profile is the fuller independent record.
       </>
     ),
     cancellation:
@@ -286,17 +296,20 @@ const SECTIONS: Section[] = [
     suits: "Readers who want predictable billing with no arithmetic, or who want a needle-free option without paying extra for it, and who do not need coaching.",
     assessment: (
       <>
-        DirectMeds is the easiest budget on this page to understand, and its support reputation is as strong as any here. The missing Reddit record means we have one independent lens rather than two, and the delivery complaints are specific enough to take seriously: ask for the shipping timeline in writing before you pay.
+        DirectMeds is <strong className="text-[#191919]">the easiest budget on this page to understand</strong>, and its support reputation is as strong as any here. The missing Reddit record means we have one independent lens rather than two, and the delivery complaints are specific enough to take seriously: ask for the shipping timeline in writing before you pay.
       </>
     ),
   },
   {
     id: "medvi",
-    overview:
-      "Medvi wraps compounded semaglutide or tirzepatide in the most clinical structure on this page: video visits with a provider or nurse practitioner, a dietician, care coaching, medication and shipping in one price, with HSA/FSA approval and a needle-free tablet option. Its reviews, on both platforms, are about the care more than the price.",
+    overview: (
+      <>
+        Medvi wraps compounded semaglutide or tirzepatide in <strong className="text-[#191919]">the most clinical structure on this page</strong>: video visits with a provider or nurse practitioner, a dietician, care coaching, medication and shipping in one price, with HSA/FSA approval and a needle-free tablet option. Its reviews, on both platforms, are about the care more than the price.
+      </>
+    ),
     pricing: (
       <>
-        Semaglutide $99 a month and tirzepatide $166 a month at the current promotion, against regular prices of $199 and $299; oral dissolving tablets $249. Verified September 21, 2026. Free shipping, no membership, monthly billing. The promotion has no published end date, so budget for the regular price.
+        <strong className="text-[#191919]">Semaglutide $99 a month and tirzepatide $166 a month at the current promotion</strong>, against regular prices of $199 and $299; oral dissolving tablets $249. Verified September 21, 2026. Free shipping, no membership, monthly billing. The promotion has no published end date, so budget for the regular price.
       </>
     ),
     support:
@@ -304,12 +317,12 @@ const SECTIONS: Section[] = [
     trustpilotHeading: "4.3 across 14,836 reviews",
     trustpilot: (
       <>
-        Checked September 25, 2026 (<Ext href="https://www.trustpilot.com/review/medvi.org">profile</Ext>; claimed profile, paid Trustpilot subscription). Positive reviews are about clinicians: &ldquo;Nurse was very informative and pleasant&rdquo;, &ldquo;Great check-in appointment&rdquo;, &ldquo;The RN was very helpful with my medical history&rdquo;, &ldquo;that you meet with a real provider... via video call&rdquo;. The negative reviews cluster on billing and leaving: &ldquo;At first had a hard time canceling my monthly subscription&rdquo; (four stars, resolved), and a run of one-star reviews titled &ldquo;Caution is advised&rdquo;, &ldquo;Lots of confusion and delays&rdquo;, &ldquo;Started great, ended poorly&rdquo; and &ldquo;Medvi shady practices&rdquo;. Medvi replies to nearly all negative reviews. The pattern: the clinical experience is well regarded; the subscription mechanics generate the complaints.
+        Checked September 25, 2026 (<Ext href="https://www.trustpilot.com/review/medvi.org">profile</Ext>; claimed profile, paid Trustpilot subscription). Positive reviews are about clinicians: &ldquo;Nurse was very informative and pleasant&rdquo;, &ldquo;Great check-in appointment&rdquo;, &ldquo;The RN was very helpful with my medical history&rdquo;, &ldquo;that you meet with a real provider... via video call&rdquo;. The negative reviews cluster on billing and leaving: &ldquo;At first had a hard time canceling my monthly subscription&rdquo; (four stars, resolved), and a run of one-star reviews titled &ldquo;Caution is advised&rdquo;, &ldquo;Lots of confusion and delays&rdquo;, &ldquo;Started great, ended poorly&rdquo; and &ldquo;Medvi shady practices&rdquo;. Medvi replies to nearly all negative reviews. The pattern: <strong className="text-[#191919]">the clinical experience is well regarded; the subscription mechanics generate the complaints</strong>.
       </>
     ),
     reddit: (
       <>
-        Medvi&rsquo;s most-upvoted recent threads are full-year accounts rather than first impressions. In r/telehealth, a user&rsquo;s &ldquo;Medvi GLP-1 telehealth experience breakdown&rdquo; (55 upvotes, 8 comments, about six months before our capture) describes hearing from a licensed provider within days, mild nausea at dose increases, a plateau mid-year resolved by a dose adjustment through messaging, and just under 15 percent of starting body weight lost in twelve months; &ldquo;the main factor to consider is cost since it is an ongoing monthly expense.&rdquo; In r/productreview, &ldquo;My 2026 MEDVI review after using it for a full year&rdquo; (55 upvotes, 31 comments) reports just over 40 pounds lost and a calmer relationship with hunger; replies from other users call it &ldquo;the best triz provider I ever had&rdquo; after three providers. Both are firsthand accounts; neither is verifiable beyond the author&rsquo;s word.
+        Medvi&rsquo;s most-upvoted recent threads are full-year accounts rather than first impressions. In r/telehealth, a user&rsquo;s &ldquo;Medvi GLP-1 telehealth experience breakdown&rdquo; (55 upvotes, 8 comments, about six months before our capture) describes hearing from a licensed provider within days, mild nausea at dose increases, a plateau mid-year resolved by a dose adjustment through messaging, and <strong className="text-[#191919]">just under 15 percent of starting body weight lost in twelve months</strong>; &ldquo;the main factor to consider is cost since it is an ongoing monthly expense.&rdquo; In r/productreview, &ldquo;My 2026 MEDVI review after using it for a full year&rdquo; (55 upvotes, 31 comments) reports <strong className="text-[#191919]">just over 40 pounds lost</strong> and a calmer relationship with hunger; replies from other users call it &ldquo;the best triz provider I ever had&rdquo; after three providers. Both are firsthand accounts; neither is verifiable beyond the author&rsquo;s word.
       </>
     ),
     cancellation:
@@ -319,17 +332,20 @@ const SECTIONS: Section[] = [
     suits: "Readers whose previous attempts failed for lack of structure and who want scheduled clinical contact, or who can use HSA/FSA funds.",
     assessment: (
       <>
-        Medvi is the provider to choose for care rather than price, and the evidence supports the care: two platforms, hundreds of recent reviews and two long Reddit accounts say the same thing. The caution is equally consistent: understand the renewal date, the 72-hour rule and the regular price before you start, because that is where Medvi&rsquo;s unhappy customers were caught.
+        Medvi is <strong className="text-[#191919]">the provider to choose for care rather than price</strong>, and the evidence supports the care: two platforms, hundreds of recent reviews and two long Reddit accounts say the same thing. The caution is equally consistent: understand the renewal date, the 72-hour rule and the regular price before you start, because that is where Medvi&rsquo;s unhappy customers were caught.
       </>
     ),
   },
   {
     id: "trimrx",
-    overview:
-      "TrimRx sells compounded semaglutide and tirzepatide with custom dosing and unlimited provider check-ins, no long-term contract, and a results guarantee for new patients. Its Trustpilot record is the most polarised on this page, and its praise and complaints point at different parts of the business.",
+    overview: (
+      <>
+        TrimRx sells compounded semaglutide and tirzepatide with <strong className="text-[#191919]">custom dosing and unlimited provider check-ins, no long-term contract</strong>, and a results guarantee for new patients. Its Trustpilot record is the most polarised on this page, and its praise and complaints point at different parts of the business.
+      </>
+    ),
     pricing: (
       <>
-        Semaglutide $149 a month, the same at every dose, with a $140 discount already applied against a regular price of $289; tirzepatide $259. Verified September 21, 2026, and consistent with the &ldquo;Save $140, plans from $149&rdquo; offer on TrimRx&rsquo;s homepage on October 11, 2026. Free tracked delivery; consultation included; no insurance needed. TrimRx is the platform; its terms state it is not itself a healthcare provider, and the operating company is MetaFit Pharma Solutions LLC.
+        <strong className="text-[#191919]">Semaglutide $149 a month, the same at every dose</strong>, with a $140 discount already applied against a regular price of $289; tirzepatide $259. Verified September 21, 2026, and consistent with the &ldquo;Save $140, plans from $149&rdquo; offer on TrimRx&rsquo;s homepage on October 11, 2026. Free tracked delivery; consultation included; no insurance needed. TrimRx is the platform; its terms state it is not itself a healthcare provider, and the operating company is MetaFit Pharma Solutions LLC.
       </>
     ),
     support:
@@ -337,12 +353,12 @@ const SECTIONS: Section[] = [
     trustpilotHeading: "3.8 across 5,392 reviews",
     trustpilot: (
       <>
-        Checked {TRUSTPILOT_CHECKED} (<Ext href="https://www.trustpilot.com/review/trimrx.com">profile</Ext>; claimed profile, paid Trustpilot subscription). The five-star reviews are about clarity and price: &ldquo;Clear pricing&rdquo;, &ldquo;Priced fairly and easy to use&rdquo;, &ldquo;Screening was more thorough than I expected&rdquo;, &ldquo;My old provider was charging me close to double&rdquo;, &ldquo;Shipping runs two or three days&rdquo;. The low reviews are about money and delivery: a first order billed at double the quoted amount with no reply, &ldquo;Unreliable! Potentially crooks!&rdquo;, a tracking date that moved twice, and a refund not issued a month after a cancellation made within an hour of ordering. Trustpilot&rsquo;s own summary of the profile notes significant dissatisfaction with payment practices. Two things are true at once: many customers find the pricing clear, and a recurring minority report billing they did not expect.
+        Checked {TRUSTPILOT_CHECKED} (<Ext href="https://www.trustpilot.com/review/trimrx.com">profile</Ext>; claimed profile, paid Trustpilot subscription). The five-star reviews are about clarity and price: &ldquo;Clear pricing&rdquo;, &ldquo;Priced fairly and easy to use&rdquo;, &ldquo;Screening was more thorough than I expected&rdquo;, &ldquo;My old provider was charging me close to double&rdquo;, &ldquo;Shipping runs two or three days&rdquo;. The low reviews are about money and delivery: a first order billed at double the quoted amount with no reply, &ldquo;Unreliable! Potentially crooks!&rdquo;, a tracking date that moved twice, and a refund not issued a month after a cancellation made within an hour of ordering. Trustpilot&rsquo;s own summary of the profile notes significant dissatisfaction with payment practices. Two things are true at once: <strong className="text-[#191919]">many customers find the pricing clear, and a recurring minority report billing they did not expect</strong>.
       </>
     ),
     reddit: (
       <>
-        We found no substantive Reddit discussion of TrimRx in the communities we searched; the one Reddit reference we saw was a Trustpilot reviewer saying they found TrimRx &ldquo;through a reddit thread&rdquo;. We are not going to invent one. If you are researching TrimRx, Trustpilot is the independent record available, and it is worth reading both ends of it.
+        We found <strong className="text-[#191919]">no substantive Reddit discussion of TrimRx</strong> in the communities we searched; the one Reddit reference we saw was a Trustpilot reviewer saying they found TrimRx &ldquo;through a reddit thread&rdquo;. We are not going to invent one. If you are researching TrimRx, Trustpilot is the independent record available, and it is worth reading both ends of it.
       </>
     ),
     cancellation:
@@ -352,17 +368,20 @@ const SECTIONS: Section[] = [
     suits: "Readers who want a clinician adjusting the dose to them rather than a fixed protocol, with frequent check-ins, and who will pay month to month rather than prepay.",
     assessment: (
       <>
-        TrimRx&rsquo;s care model is its argument, and recent reviewers who got it are clearly pleased. The billing record is the reason to go in carefully: pay monthly, keep the quoted price in writing, and treat the guarantee as conditional. On this evidence it is a reasonable choice for people who value check-ins, not the one we would send a price-first reader to.
+        TrimRx&rsquo;s care model is its argument, and recent reviewers who got it are clearly pleased. The billing record is the reason to go in carefully: <strong className="text-[#191919]">pay monthly, keep the quoted price in writing, and treat the guarantee as conditional</strong>. On this evidence it is a reasonable choice for people who value check-ins, not the one we would send a price-first reader to.
       </>
     ),
   },
   {
     id: "altrx",
-    overview:
-      "altRx combines flat compounded pricing at every dose with a brand-name shelf (Ozempic, Zepbound, Wegovy) and Buy Now, Pay Later, which makes it the one provider here that serves both the cash-pay compounded buyer and the person who wants the FDA-approved product without insurance.",
+    overview: (
+      <>
+        altRx combines <strong className="text-[#191919]">flat compounded pricing at every dose with a brand-name shelf</strong> (Ozempic, Zepbound, Wegovy) and Buy Now, Pay Later, which makes it the one provider here that serves both the cash-pay compounded buyer and the person who wants the FDA-approved product without insurance.
+      </>
+    ),
     pricing: (
       <>
-        Compounded semaglutide $89 a month and tirzepatide $149 a month, promotional, against regular prices of $199 and $299, the same at every dose; brand-name Ozempic $1,149, Zepbound $1,249 and Wegovy $1,579. Verified September 21, 2026. Free five-to-seven-day shipping. No membership; pause or cancel anytime; BNPL available. The promotion&rsquo;s published end date has been extended at least twice (September 20, then September 25 in our <L href="/weight-loss/glp1-price-changes">change log</L>), which has so far meant the price held; it does not mean it is permanent. A Reddit user three months before our capture cited a $129 first-month tirzepatide offer, so promotions move.
+        <strong className="text-[#191919]">Compounded semaglutide $89 a month and tirzepatide $149 a month, promotional</strong>, against regular prices of $199 and $299, the same at every dose; brand-name Ozempic $1,149, Zepbound $1,249 and Wegovy $1,579. Verified September 21, 2026. Free five-to-seven-day shipping. No membership; pause or cancel anytime; BNPL available. The promotion&rsquo;s published end date has been extended at least twice (September 20, then September 25 in our <L href="/weight-loss/glp1-price-changes">change log</L>), which has so far meant the price held; it does not mean it is permanent. A Reddit user three months before our capture cited a $129 first-month tirzepatide offer, so promotions move.
       </>
     ),
     support:
@@ -370,12 +389,12 @@ const SECTIONS: Section[] = [
     trustpilotHeading: "No Trustpilot profile",
     trustpilot: (
       <>
-        altRx has no Trustpilot profile. The individual reviews captured on <L href="/weight-loss/reviews/altrx">our altRx review page</L> are four- and five-star accounts of named, helpful support and smooth sign-up, including one from a customer four months in. Reviews surfaced through search describe promo-tier mismatches: a charge $40 above the advertised $89, an order filled with semaglutide after paying for tirzepatide, and a customer approved for a different tier than they selected. We cannot weigh these against an aggregate, so treat them as individual reports.
+        <strong className="text-[#191919]">altRx has no Trustpilot profile.</strong> The individual reviews captured on <L href="/weight-loss/reviews/altrx">our altRx review page</L> are four- and five-star accounts of named, helpful support and smooth sign-up, including one from a customer four months in. Reviews surfaced through search describe promo-tier mismatches: a charge $40 above the advertised $89, an order filled with semaglutide after paying for tirzepatide, and a customer approved for a different tier than they selected. We cannot weigh these against an aggregate, so treat them as individual reports.
       </>
     ),
     reddit: (
       <>
-        A thread titled &ldquo;MY ALTRX EXPERIENCE!!&rdquo;, captured about three months before our research, is the most detailed firsthand account we have: the user signed up for the first-month tirzepatide offer at 8am, had a provider at 12:30pm, a prescription at the pharmacy by 1:30pm, and two vials in a cooler via UPS Next Day Air the following morning, with beyond-use dates printed; &ldquo;I wish their monthly price was cheaper! I give them a 10/10.&rdquo; Replies add the counterweight: one user&rsquo;s compounded blend with glycine and B12 caused dehydration and joint pain that eased as the dose cleared, and another new sign-up was still waiting for a prescription 24 hours in.
+        A thread titled &ldquo;MY ALTRX EXPERIENCE!!&rdquo;, captured about three months before our research, is the most detailed firsthand account we have: the user signed up for the first-month tirzepatide offer at 8am, had a provider at 12:30pm, a prescription at the pharmacy by 1:30pm, and two vials in a cooler via UPS Next Day Air the following morning, with beyond-use dates printed; &ldquo;I wish their monthly price was cheaper! <strong className="text-[#191919]">I give them a 10/10</strong>.&rdquo; Replies add the counterweight: one user&rsquo;s compounded blend with glycine and B12 caused dehydration and joint pain that eased as the dose cleared, and another new sign-up was still waiting for a prescription 24 hours in.
       </>
     ),
     cancellation:
@@ -387,17 +406,20 @@ const SECTIONS: Section[] = [
       <>
         In June 2026 the FDA sent altRx&rsquo;s parent company, Trinity HealthCare Supply, LLC, a{" "}
         <Ext href="https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/trinity-healthcare-supply-llc-dba-altrx-728236-06082026">warning letter</Ext>{" "}
-        about two aspects of its website marketing: product images that carried the altRx name, which the agency said could suggest altRx compounds the medication itself, and the phrase &ldquo;clinically proven,&rdquo; which the agency said could imply FDA evaluation of a compounded product. The letter concerns marketing language, not a finding about the medication or patient safety, and it sits within a broader FDA campaign that has sent well over a hundred similar letters to telehealth companies since 2025. We note it because readers deserve to know, and because it is a useful reminder that no compounded GLP-1, from any provider, is FDA-approved. On the rest of the evidence, altRx&rsquo;s offer is distinctive and its one detailed firsthand account is strongly positive; the absence of an aggregate review record and the promo-tier reports argue for reading the checkout page slowly and keeping the confirmation.
+        about two aspects of its website marketing: product images that carried the altRx name, which the agency said could suggest altRx compounds the medication itself, and the phrase &ldquo;clinically proven,&rdquo; which the agency said could imply FDA evaluation of a compounded product. <strong className="text-[#191919]">The letter concerns marketing language, not a finding about the medication or patient safety</strong>, and it sits within a broader FDA campaign that has sent well over a hundred similar letters to telehealth companies since 2025. We note it because readers deserve to know, and because it is a useful reminder that no compounded GLP-1, from any provider, is FDA-approved. On the rest of the evidence, altRx&rsquo;s offer is distinctive and its one detailed firsthand account is strongly positive; the absence of an aggregate review record and the promo-tier reports argue for reading the checkout page slowly and keeping the confirmation.
       </>
     ),
   },
   {
     id: "ro",
-    overview:
-      "Ro is the only provider on this page whose primary offer is FDA-approved medication: the Wegovy pill and pen and the Zepbound KwikPen, dispensed through its own pharmacy, with a membership billed separately from the drug. That structure is the reason insurance can apply, and the reason its customers on both platforms find the cost confusing.",
+    overview: (
+      <>
+        Ro is <strong className="text-[#191919]">the only provider on this page whose primary offer is FDA-approved medication</strong>: the Wegovy pill and pen and the Zepbound KwikPen, dispensed through its own pharmacy, with a membership billed separately from the drug. That structure is the reason insurance can apply, and the reason its customers on both platforms find the cost confusing.
+      </>
+    ),
     pricing: (
       <>
-        The Body membership is $39 the first month, then $74 to $149 a month depending on plan ($74 on a twelve-month prepaid plan, $149 month to month). Medication is billed separately: the Wegovy pill $149 the first month then $299; the Wegovy pen from $199 at introductory rates then $299 to $399; the Zepbound KwikPen from $299 the first month then $399 to $449, rising with dose. Ro&rsquo;s published pricing, captured August 2026. Where a commercial plan covers the medication, you pay the membership plus your copay. Paying cash for the Wegovy pill month to month, a first year runs roughly $4,300 to $5,100 including membership, depending on the membership tier; our <L href="/weight-loss/articles/wegovy-pill-price-online">Wegovy pill price guide</L> shows the arithmetic.
+        The Body membership is <strong className="text-[#191919]">$39 the first month, then $74 to $149 a month</strong> depending on plan ($74 on a twelve-month prepaid plan, $149 month to month). <strong className="text-[#191919]">Medication is billed separately</strong>: the Wegovy pill $149 the first month then $299; the Wegovy pen from $199 at introductory rates then $299 to $399; the Zepbound KwikPen from $299 the first month then $399 to $449, rising with dose. Ro&rsquo;s published pricing, captured August 2026. Where a commercial plan covers the medication, you pay the membership plus your copay. Paying cash for the Wegovy pill month to month, a first year runs roughly $4,300 to $5,100 including membership, depending on the membership tier; our <L href="/weight-loss/articles/wegovy-pill-price-online">Wegovy pill price guide</L> shows the arithmetic.
       </>
     ),
     support:
@@ -405,12 +427,12 @@ const SECTIONS: Section[] = [
     trustpilotHeading: "3.9 across 7,105 reviews",
     trustpilot: (
       <>
-        Checked {TRUSTPILOT_CHECKED} (<Ext href="https://www.trustpilot.com/review/ro.co">profile</Ext>; claimed profile, paid Trustpilot subscription). Positive reviews describe an easy application, on-time nurse-practitioner appointments and questions answered. The negative themes are specific and repeat: &ldquo;I wish you had a phone # for better service&rdquo;, &ldquo;Needed to contact Ro by phone&rdquo;, &ldquo;My delivery was delayed for 4 days&rdquo;, &ldquo;I didn&rsquo;t understand that $39 initial&rdquo; was not the ongoing price, &ldquo;Would be nice to know the possible fee&rdquo; before signing, and one reviewer who received the lowest dose without discussion. The pattern across both platforms is the same: results and ease of starting are praised; price structure and reachability are the friction.
+        Checked {TRUSTPILOT_CHECKED} (<Ext href="https://www.trustpilot.com/review/ro.co">profile</Ext>; claimed profile, paid Trustpilot subscription). Positive reviews describe an easy application, on-time nurse-practitioner appointments and questions answered. The negative themes are specific and repeat: &ldquo;I wish you had a phone # for better service&rdquo;, &ldquo;Needed to contact Ro by phone&rdquo;, &ldquo;My delivery was delayed for 4 days&rdquo;, &ldquo;I didn&rsquo;t understand that $39 initial&rdquo; was not the ongoing price, &ldquo;Would be nice to know the possible fee&rdquo; before signing, and one reviewer who received the lowest dose without discussion. The pattern across both platforms is the same: <strong className="text-[#191919]">results and ease of starting are praised; price structure and reachability are the friction</strong>.
       </>
     ),
     reddit: (
       <>
-        Ro&rsquo;s threads are unusually rich in numbers. &ldquo;I used Ro for 3 months and dropped 25 lbs... I personally had a great experience with Ro and they were seamless throughout the whole process. The pricing ended up being the deciding factor for me after those few months,&rdquo; wrote the most-upvoted commenter we captured, who then moved to a cheaper provider. A member since January 2024 reports 50 to 60 pounds lost getting Wegovy through insurance at a retail pharmacy. Another reports 22 pounds in three months. On the other side, a Zepbound user on two months of 2.5 mg vials had lost one pound and called it &ldquo;expensive and frustrating&rdquo;, and a prospective customer asked, &ldquo;Could someone explain the cost breakdown to me? It&rsquo;s somewhat confusing.&rdquo; Excerpts captured four to five months before our research.
+        Ro&rsquo;s threads are unusually rich in numbers. &ldquo;I used Ro for 3 months and <strong className="text-[#191919]">dropped 25 lbs</strong>... I personally had a great experience with Ro and they were seamless throughout the whole process. <strong className="text-[#191919]">The pricing ended up being the deciding factor</strong> for me after those few months,&rdquo; wrote the most-upvoted commenter we captured, who then moved to a cheaper provider. A member since January 2024 reports 50 to 60 pounds lost getting Wegovy through insurance at a retail pharmacy. Another reports 22 pounds in three months. On the other side, a Zepbound user on two months of 2.5 mg vials had lost one pound and called it &ldquo;expensive and frustrating&rdquo;, and a prospective customer asked, &ldquo;Could someone explain the cost breakdown to me? It&rsquo;s somewhat confusing.&rdquo; Excerpts captured four to five months before our research.
       </>
     ),
     cancellation: "Cancel at least 48 hours before membership renewal; membership fees are generally non-refundable.",
@@ -419,7 +441,7 @@ const SECTIONS: Section[] = [
     suits: "Readers whose insurance covers Wegovy or Zepbound, or who want the brand-name product and understand the membership-plus-medication arithmetic before they start.",
     assessment: (
       <>
-        With coverage, Ro can be the cheapest FDA-approved route on this page and the simplest to defend clinically. Paying cash, it is the most expensive by a wide margin, and the people who left were mostly leaving over price, not service. Do the two-line arithmetic (membership plus medication at the dose you expect to stay on) before the $39 month, and keep the answer.
+        <strong className="text-[#191919]">With coverage, Ro can be the cheapest FDA-approved route on this page</strong> and the simplest to defend clinically. Paying cash, it is the most expensive by a wide margin, and the people who left were mostly leaving over price, not service. Do the two-line arithmetic (membership plus medication at the dose you expect to stay on) before the $39 month, and keep the answer.
       </>
     ),
   },
@@ -459,6 +481,7 @@ const FAQS: { question: string; answer: string }[] = [
 ];
 
 const fmt = (iso: string) => new Date(iso).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
+const short = (iso: string) => new Date(iso).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
 
 function H2({ id, children }: { id: string; children: ReactNode }) {
   return (
@@ -524,14 +547,12 @@ export default async function Glp1ProviderComparisonPage() {
             Trustpilot records, what people say about them on Reddit, and the cancellation terms in their policies.
             Everything is dated, everything is linked, and where we could not verify something we say so.
           </p>
-          <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-[12px] font-semibold text-gray-500">
-            <span>Published {fmt(PUBLISHED)}</span>
+          <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[12px] font-bold text-gray-500">
             <LastUpdated date={UPDATED} />
-            <span>Prices verified {fmt(PRICE_INDEX_VERIFIED)} (Ro: August 2026)</span>
-            <span>Trustpilot checked {TRUSTPILOT_CHECKED}</span>
+            <span>Prices verified {short(PRICE_INDEX_VERIFIED)} (Ro: Aug 2026)</span>
+            <span>Trustpilot checked {short(UPDATED)}</span>
           </div>
           <MedicalReviewBar path="/weight-loss/glp1-provider-comparison" className="mt-4 max-w-[760px]" />
-          <TrustDisclosure disclaimerHref="/weight-loss/disclaimer" />
         </div>
       </div>
 
@@ -584,11 +605,11 @@ export default async function Glp1ProviderComparisonPage() {
 
           {/* Desktop table */}
           <div className="hidden overflow-x-auto rounded-xl border border-gray-200 bg-white sm:block">
-            <table className="w-full min-w-[1180px] text-left text-[13px] leading-snug">
+            <table className="w-full min-w-[900px] text-left text-[13px] leading-snug">
               <caption className="sr-only">Seven GLP-1 telehealth providers compared on medications, price, membership, shipping, support and Trustpilot record</caption>
               <thead>
                 <tr className="border-b border-gray-200 bg-gray-50">
-                  {["Provider", "Medications", "Entry price", "After month 1", "Membership", "Shipping", "Clinical support", "Trustpilot", "Key advantage", "Key limitation", ""].map((h, i) => (
+                  {["Provider", "Medications", "Entry price", "After month 1", "Shipping", "Clinical support", "Trustpilot", "Advantage and limitation"].map((h, i) => (
                     <th key={i} scope="col" className={`px-3 py-3 font-bold text-[#191919] ${i === 0 ? "sticky left-0 z-10 bg-gray-50" : ""}`}>{h}</th>
                   ))}
                 </tr>
@@ -598,19 +619,24 @@ export default async function Glp1ProviderComparisonPage() {
                   const p = byId(r.id);
                   return (
                     <tr key={r.id} className="align-top">
-                      <th scope="row" className="sticky left-0 z-10 bg-white px-3 py-3 font-semibold text-[#191919]">
+                      <th scope="row" className="sticky left-0 z-10 bg-white px-3 py-3">
+                        <Link href={`/weight-loss/reviews/${r.id}`} className="flex h-[30px] w-[96px] items-center" title={`${r.name} review`}>
+                          {p ? (
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img src={p.logo} alt={r.name} width={96} height={30} className="max-h-full max-w-full object-contain object-left" loading="lazy" decoding="async" />
+                          ) : (
+                            <span className="font-semibold text-[#191919]">{r.name}</span>
+                          )}
+                        </Link>
                         {p && (
-                          <div className="mb-1.5 flex h-[26px] w-[90px] items-center">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={p.logo} alt={`${r.name} logo`} width={90} height={26} className="max-h-full max-w-full object-contain object-left" loading="lazy" decoding="async" />
-                          </div>
+                          <ProviderCta href={p.affiliateUrl} providerName={r.name} providerSlug={r.id} pageType="comparison" sourceFlow="provider_comparison" className={`${ctaClass} mt-3 h-[34px] whitespace-nowrap px-3 text-[12.5px]`}>
+                            Check pricing <ArrowRight className="h-3 w-3" strokeWidth={2.5} />
+                          </ProviderCta>
                         )}
-                        <Link href={`/weight-loss/reviews/${r.id}`} className="text-[#0C4B75] hover:underline">{r.name}</Link>
                       </th>
                       <td className="px-3 py-3 text-gray-600">{r.medications}</td>
                       <td className="px-3 py-3 text-gray-800"><strong className="text-[#191919]">{r.entry}</strong><br /><span className="text-[12px] text-gray-500">{r.entryNote}</span></td>
                       <td className="px-3 py-3 text-gray-600">{r.after}</td>
-                      <td className="px-3 py-3 text-gray-600">{r.membership}</td>
                       <td className="px-3 py-3 text-gray-600">{r.shipping}</td>
                       <td className="px-3 py-3 text-gray-600">{r.support}</td>
                       <td className="px-3 py-3 text-gray-600">
@@ -618,20 +644,15 @@ export default async function Glp1ProviderComparisonPage() {
                           <>
                             <strong className="text-[#191919]">{r.trustpilot.rating}</strong> across {r.trustpilot.count}
                             <br />
-                            <a href={r.trustpilot.url} target="_blank" rel="noopener" className="text-[12px] text-[#0C4B75] hover:underline">checked {r.trustpilot.checked}</a>
+                            <a href={r.trustpilot.url} target="_blank" rel="noopener" className="text-[12px] text-[#0C4B75] hover:underline">profile, checked {r.trustpilot.checked.replace("October", "Oct").replace("September", "Sep")}</a>
                           </>
                         ) : (
                           "No Trustpilot profile"
                         )}
                       </td>
-                      <td className="px-3 py-3 text-gray-600">{r.advantage}</td>
-                      <td className="px-3 py-3 text-gray-600">{r.limitation}</td>
-                      <td className="px-3 py-3">
-                        {p && (
-                          <ProviderCta href={p.affiliateUrl} providerName={r.name} providerSlug={r.id} pageType="comparison" sourceFlow="provider_comparison" className={`${ctaClass} whitespace-nowrap`}>
-                            Check pricing <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
-                          </ProviderCta>
-                        )}
+                      <td className="px-3 py-3 text-gray-600">
+                        <span className="block text-emerald-700"><span aria-hidden="true">+ </span>{r.advantage}</span>
+                        <span className="mt-1 block text-gray-500"><span aria-hidden="true">&minus; </span>{r.limitation}</span>
                       </td>
                     </tr>
                   );
@@ -652,27 +673,23 @@ export default async function Glp1ProviderComparisonPage() {
               );
               return (
                 <div key={r.id} className="rounded-xl border border-gray-200 bg-white p-4">
-                  <div className="mb-3 flex items-center justify-between gap-3">
-                    <div className="flex items-center gap-3">
-                      {p && (
-                        <div className="flex h-[26px] w-[84px] items-center">
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img src={p.logo} alt={`${r.name} logo`} width={84} height={26} className="max-h-full max-w-full object-contain object-left" loading="lazy" decoding="async" />
-                        </div>
-                      )}
-                      <Link href={`/weight-loss/reviews/${r.id}`} className="text-[15px] font-bold text-[#191919]">{r.name}</Link>
-                    </div>
-                  </div>
+                  <Link href={`/weight-loss/reviews/${r.id}`} className="mb-3 flex h-[30px] w-[110px] items-center" title={`${r.name} review`}>
+                    {p ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={p.logo} alt={r.name} width={110} height={30} className="max-h-full max-w-full object-contain object-left" loading="lazy" decoding="async" />
+                    ) : (
+                      <span className="text-[15px] font-bold text-[#191919]">{r.name}</span>
+                    )}
+                  </Link>
                   <div className="grid grid-cols-2 gap-x-4 gap-y-3">
                     {cell("Entry price", <><strong className="text-[#191919]">{r.entry}</strong> <span className="text-[12px] text-gray-500">{r.entryNote}</span></>)}
                     {cell("After month 1", r.after)}
                     {cell("Medications", r.medications)}
                     {cell("Clinical support", r.support)}
-                    {cell("Membership", r.membership)}
                     {cell("Shipping", r.shipping)}
                     {cell("Trustpilot", r.trustpilot ? <><strong className="text-[#191919]">{r.trustpilot.rating}</strong> across {r.trustpilot.count} <a href={r.trustpilot.url} target="_blank" rel="noopener" className="text-[12px] text-[#0C4B75] underline">checked {r.trustpilot.checked}</a></> : "No Trustpilot profile")}
-                    {cell("Key advantage", r.advantage)}
-                    {cell("Key limitation", r.limitation)}
+                    {cell("Advantage", r.advantage)}
+                    {cell("Limitation", r.limitation)}
                   </div>
                   {p && (
                     <ProviderCta href={p.affiliateUrl} providerName={r.name} providerSlug={r.id} pageType="comparison" sourceFlow="provider_comparison" className={`${ctaClass} mt-4 w-full`}>
@@ -707,17 +724,12 @@ export default async function Glp1ProviderComparisonPage() {
               const p = byId(s.id);
               return (
                 <article key={s.id} id={s.id} className="scroll-mt-24 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-7">
-                  <div className="mb-4 flex items-center justify-between gap-4">
-                    <div className="flex items-center gap-3">
-                      {p && (
-                        <div className="flex h-[32px] w-[110px] items-center">
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img src={p.logo} alt={`${r.name} logo`} width={110} height={32} className="max-h-full max-w-full object-contain object-left" loading="lazy" decoding="async" />
-                        </div>
-                      )}
-                      <h3 className="text-[22px] font-bold text-[#191919]">{r.name}</h3>
-                    </div>
-                    <Link href={`/weight-loss/reviews/${s.id}`} className="hidden text-[13px] font-bold text-[#0C4B75] hover:underline sm:inline">Full review →</Link>
+                  <div className="mb-4 flex h-[36px] w-[140px] items-center">
+                    {p ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={p.logo} alt="" width={140} height={36} className="max-h-full max-w-full object-contain object-left" loading="lazy" decoding="async" />
+                    ) : null}
+                    <h3 className="sr-only">{r.name}</h3>
                   </div>
 
                   <p className="mb-2 text-[15.5px] leading-[1.75]">{s.overview}</p>
@@ -731,9 +743,28 @@ export default async function Glp1ProviderComparisonPage() {
                   <H3>What Trustpilot reviewers are saying</H3>
                   <p className="mb-1 text-[15px] font-semibold text-[#191919]">{s.trustpilotHeading}</p>
                   <p className="text-[15px] leading-[1.75]">{s.trustpilot}</p>
+                  {p && (p.trustpilotReviews?.length ?? 0) > 0 && (
+                    <div className="mt-4">
+                      <TrustpilotCarousel
+                        providerName={r.name}
+                        providerLogo={p.logo}
+                        reviews={p.trustpilotReviews!}
+                        rating={r.trustpilot?.rating}
+                        reviewCount={r.trustpilot?.count}
+                      />
+                    </div>
+                  )}
 
                   <H3><span className="inline-flex items-center gap-1.5"><RedditMark className="h-4 w-4" /> What Reddit users are discussing</span></H3>
                   <p className="text-[15px] leading-[1.75]">{s.reddit}</p>
+                  <div className="mt-4">
+                    <RedditThreadCarousel
+                      providers={[{ id: s.id, name: r.name }]}
+                      reviewHrefFor={(id) => `/weight-loss/reviews/${id}`}
+                      title={`Reddit threads about ${r.name}`}
+                      intro="Real excerpts from the public threads we captured; usernames shown as posted, nothing paraphrased."
+                    />
+                  </div>
 
                   <H3>Cancellation and refunds</H3>
                   <p className="text-[15px] leading-[1.75]">
@@ -835,10 +866,7 @@ export default async function Glp1ProviderComparisonPage() {
         {/* Neutral mid-page block */}
         <div className="mb-12 rounded-xl border border-[#0C4B75]/10 bg-[#0C4B75]/[0.03] p-5 text-center sm:p-6">
           <p className="mb-3 text-[16px] font-bold text-[#191919]">Compare the seven side by side</p>
-          <div className="flex flex-col justify-center gap-3 sm:flex-row">
-            <a href="#comparison-table" className="inline-flex h-[44px] items-center justify-center rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]">Back to the table</a>
-            <Link href="/weight-loss/find-your-match" className="inline-flex h-[44px] items-center justify-center rounded-lg border border-gray-200 bg-white px-6 text-[14px] font-semibold text-[#191919] transition-colors hover:bg-gray-50">Take the quiz</Link>
-          </div>
+          <a href="#comparison-table" className="inline-flex h-[44px] items-center justify-center rounded-lg bg-[#0C4B75] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#093d61]">Back to the table</a>
         </div>
 
         {/* Section 6 */}
