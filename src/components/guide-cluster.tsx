@@ -32,6 +32,11 @@ export const WEIGHT_LOSS_GUIDES: GuideLink[] = [
     blurb: "Every provider's verified monthly price, lowest first.",
   },
   {
+    slug: "glp1-provider-comparison",
+    title: "GLP-1 Providers Compared",
+    blurb: "Seven providers on verified prices, Trustpilot patterns, Reddit and refund terms.",
+  },
+  {
     slug: "glp1-provider-support",
     title: "Provider Customer Support Compared",
     blurb: "What captured Trustpilot reviews say about support, shipping and billing, by provider.",

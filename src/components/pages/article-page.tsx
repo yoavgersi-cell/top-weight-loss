@@ -40,7 +40,7 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
   "is-wellmedr-legit": {
     title: "Is wellmedr Legit or a Scam? Reviews, Complaints & Real Prices (2026)",
     description:
-      "Is wellmedr legit or a scam? A verified 4.6 on Trustpilot across 2,091 reviews, what the complaints actually say, the real $49-$89 pricing structure, and our verdict.",
+      "Is wellmedr legit or a scam? A verified 4.6 on Trustpilot across 2,188 reviews, what the complaints actually say, the real $49-$89 pricing structure, and our verdict.",
   },
   "is-altrx-legit": {
     // Keeps the keyword-rich SERP snippet (prices, flat-dose) even though the
@@ -121,7 +121,7 @@ const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
   "glp1-after-65-medicare":
     "Since July 1, 2026, the Medicare GLP-1 Bridge pilot lets eligible beneficiaries get the Wegovy pill and injection, the Zepbound KwikPen and Foundayo for a flat $50 copay a month, unchanged as the dose rises, through December 31, 2027. Eligibility runs through clinical criteria and an approval step via your Part D plan. Medicare never covers compounded GLP-1s; if you don't qualify, the cash routes are brand-name ($149-$349 a month for Foundayo, $1,149+ for injections) or compounded ($49-$299).",
   "is-wellmedr-legit":
-    "Yes - by every marker we can verify: licensed-provider review before prescribing, a regulated US pharmacy, a weight-loss warranty, and a verified 4.6 on Trustpilot across 2,091 reviews (tied for the highest among providers we track). The honest caveats: the headline $49/$89 rates lock on a 12-month plan, the complaints that exist are about shipping delays and support response time, and results vary by person regardless of service quality.",
+    "Yes - by every marker we can verify: licensed-provider review before prescribing, a regulated US pharmacy, a weight-loss warranty, and a verified 4.6 on Trustpilot across 2,188 reviews (tied for the highest among providers we track). The honest caveats: the headline $49/$89 rates lock on a 12-month plan, the complaints that exist are about shipping delays and support response time, and results vary by person regardless of service quality.",
   // Oct 9, 2026 oral GLP-1 pair. Ro figures are its verified published
   // prices; manufacturer figures are as reported by sources dated inside the
   // articles, so these two carry their own stamp (QUICK_ANSWER_STAMPS).
