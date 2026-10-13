@@ -58,7 +58,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     price: "$99",
     priceNote: "flat every month, every dose; no membership",
     shipping: "Home delivery",
-    image: null,
+    image: "/products/eden-semaglutide.webp",
   },
   {
     id: "altrx-semaglutide",
@@ -206,7 +206,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     price: "$129",
     priceNote: "flat every month, every dose; no membership",
     shipping: "Home delivery",
-    image: null,
+    image: "/products/eden-tirzepatide.webp",
   },
   {
     id: "altrx-tirzepatide",
