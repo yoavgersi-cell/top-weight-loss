@@ -1528,6 +1528,83 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       },
     ],
   },
+  eden: {
+    // Aggregate verified Oct 13, 2026 from Eden's claimed Trustpilot profile
+    // (operator-supplied screenshot): 4.5 across 4,917 reviews, Weight Loss
+    // Service category, claimed June 2024, paid Trustpilot subscription.
+    rating: "4.5",
+    reviewCount: "4,917",
+    reviews: [
+      // Oct 13, 2026 batch (operator-supplied screenshots of the profile's
+      // newest reviews, Oct 1-12 2026, all marked "Unprompted review").
+      // Transcribed faithfully; reviewer names reduced to first name + last
+      // initial. One review's date badge was outside the capture, so it
+      // carries no date.
+      {
+        title: "Ann was a great help",
+        text: "Ann was a great help. She got back to me with a resolution to my problem with quick action.",
+        name: "Jessica L.",
+        location: "US",
+        rating: 5,
+        date: "Oct 12, 2026",
+      },
+      {
+        title: "Prompt and helpful",
+        text: "The team was prompt, kind and helpful.",
+        name: "Amy B.",
+        location: "US",
+        rating: 5,
+        date: "Oct 12, 2026",
+      },
+      {
+        title: "MELANIE was fantastic!!",
+        text: "MELANIE was fantastic!!! Super helpful and responsive",
+        name: "Leanne",
+        location: "US",
+        rating: 5,
+        date: "Oct 12, 2026",
+      },
+      {
+        title: "Sandra was super helpful!",
+        text: "Sandra was super helpful in resolving my question. She was on point, answered directly and very nice & polite! Thank you, Sandra!",
+        name: "Mary Lou J.",
+        location: "US",
+        rating: 5,
+        date: "Oct 12, 2026",
+      },
+      {
+        title: "Joanne with customer support was great",
+        text: "Joanne with customer support was great, answered all my questions",
+        name: "Jenni",
+        location: "US",
+        rating: 5,
+        date: "Oct 11, 2026",
+      },
+      {
+        title: "Ann did an excellent job",
+        text: "Ann did an excellent job. She answered my question and thoroughly explained the issue. She also responded quickly. This process worked much better than trying to get someone on the phone.",
+        name: "Frances",
+        location: "US",
+        rating: 5,
+        date: "Oct 8, 2026",
+      },
+      {
+        title: "The Positive Comments are True",
+        text: "When the pricing at the company I had been using went up I knew I had to look for a better option. I was \"only\" looking for maintenance support, but it was not possible with many other companies, or they were more expensive, or had membership fees, or monthly billing, or bad customer service, or found other ways to take advantage of you. Checking out Eden on Trust Pilot made a world of difference. The high ratings for fair pricing, customer service, and support of the doctors was the deciding factor for me, and they were spot on. The people I have dealt with have been great, especially Nick who I spoke to the most, and they should all be commended!",
+        name: "Tikvah",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Melanie was very patient and helpful...",
+        text: "Melanie was patient, helpful, and friendly throughout the call, offering courteous assistance from beginning to end.",
+        name: "RC",
+        location: "US",
+        rating: 5,
+        date: "Oct 1, 2026",
+      },
+    ],
+  },
   directmeds: {
     // Aggregate re-verified Oct 12, 2026 from DirectMeds' claimed Trustpilot
     // profile (operator-supplied screenshot): 4.6 across 16,390 reviews (was 15,690).
