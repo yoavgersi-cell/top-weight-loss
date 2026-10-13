@@ -1528,6 +1528,83 @@ const seedTrustpilot: Record<string, { rating?: string; reviewCount?: string; re
       },
     ],
   },
+  eden: {
+    // Aggregate verified Oct 13, 2026 from Eden's claimed Trustpilot profile
+    // (operator-supplied screenshot): 4.5 across 4,917 reviews, Weight Loss
+    // Service category, claimed June 2024, paid Trustpilot subscription.
+    rating: "4.5",
+    reviewCount: "4,917",
+    reviews: [
+      // Oct 13, 2026 batch (operator-supplied screenshots of the profile's
+      // newest reviews, Oct 1-12 2026, all marked "Unprompted review").
+      // Transcribed faithfully; reviewer names reduced to first name + last
+      // initial. One review's date badge was outside the capture, so it
+      // carries no date.
+      {
+        title: "Ann was a great help",
+        text: "Ann was a great help. She got back to me with a resolution to my problem with quick action.",
+        name: "Jessica L.",
+        location: "US",
+        rating: 5,
+        date: "Oct 12, 2026",
+      },
+      {
+        title: "Prompt and helpful",
+        text: "The team was prompt, kind and helpful.",
+        name: "Amy B.",
+        location: "US",
+        rating: 5,
+        date: "Oct 12, 2026",
+      },
+      {
+        title: "MELANIE was fantastic!!",
+        text: "MELANIE was fantastic!!! Super helpful and responsive",
+        name: "Leanne",
+        location: "US",
+        rating: 5,
+        date: "Oct 12, 2026",
+      },
+      {
+        title: "Sandra was super helpful!",
+        text: "Sandra was super helpful in resolving my question. She was on point, answered directly and very nice & polite! Thank you, Sandra!",
+        name: "Mary Lou J.",
+        location: "US",
+        rating: 5,
+        date: "Oct 12, 2026",
+      },
+      {
+        title: "Joanne with customer support was great",
+        text: "Joanne with customer support was great, answered all my questions",
+        name: "Jenni",
+        location: "US",
+        rating: 5,
+        date: "Oct 11, 2026",
+      },
+      {
+        title: "Ann did an excellent job",
+        text: "Ann did an excellent job. She answered my question and thoroughly explained the issue. She also responded quickly. This process worked much better than trying to get someone on the phone.",
+        name: "Frances",
+        location: "US",
+        rating: 5,
+        date: "Oct 8, 2026",
+      },
+      {
+        title: "The Positive Comments are True",
+        text: "When the pricing at the company I had been using went up I knew I had to look for a better option. I was \"only\" looking for maintenance support, but it was not possible with many other companies, or they were more expensive, or had membership fees, or monthly billing, or bad customer service, or found other ways to take advantage of you. Checking out Eden on Trust Pilot made a world of difference. The high ratings for fair pricing, customer service, and support of the doctors was the deciding factor for me, and they were spot on. The people I have dealt with have been great, especially Nick who I spoke to the most, and they should all be commended!",
+        name: "Tikvah",
+        location: "US",
+        rating: 5,
+      },
+      {
+        title: "Melanie was very patient and helpful...",
+        text: "Melanie was patient, helpful, and friendly throughout the call, offering courteous assistance from beginning to end.",
+        name: "RC",
+        location: "US",
+        rating: 5,
+        date: "Oct 1, 2026",
+      },
+    ],
+  },
   directmeds: {
     // Aggregate re-verified Oct 12, 2026 from DirectMeds' claimed Trustpilot
     // profile (operator-supplied screenshot): 4.6 across 16,390 reviews (was 15,690).
@@ -2751,6 +2828,75 @@ const defaultReviews: ReviewData[] = [
     finalVerdict: "Wellorithm offers a fresh, technology-driven approach to weight loss that appeals to patients who value efficiency and data-informed treatment. While the platform is newer than some competitors, its algorithmic matching and transparent pricing make it a noteworthy option for those comfortable with a tech-forward healthcare experience."
   },
   {
+    slug: "eden",
+    providerId: "eden",
+    updatedAt: "2026-10-13",
+    shortSummary: "Compounded GLP-1 program at one flat monthly price - semaglutide $99/month and tirzepatide $129/month, the same at every dose, with no annual or long-term plan required and doctor-guided care with 24/7 human support. Rated 4.5 across 4,917 Trustpilot reviews.",
+    reviewIntro: "Eden sells compounded semaglutide and tirzepatide at one flat, all-inclusive monthly price: $99/month for semaglutide and $129/month for tirzepatide, the same in month one, month two and every month after, at every dose - Eden's own pricing page puts it as 'the price you start with is the price you keep'. There is no membership, no annual plan and no long-term commitment; the clinical side is doctor-guided care with 24/7 human support, the medication is made in the US under what Eden describes as strict quality oversight, and sign-up is a free assessment that takes about three minutes with no insurance needed. On Trustpilot, Eden holds a 4.5 across 4,917 reviews on a claimed profile (June 2024), and the recent pages read like a roll call of support staff: 'Ann was a great help', 'MELANIE was fantastic!!', 'Sandra was super helpful!', 'Joanne with customer support was great' - every one of the newest reviews we captured names the person who helped. One reviewer who switched after a previous provider raised prices wrote that Eden's 'high ratings for fair pricing, customer service, and support of the doctors was the deciding factor for me, and they were spot on.' One thing to know: in June 2026 the FDA sent Eden a warning letter about compounded GLP-1 marketing claims on its website, part of a batch sent to 25 telehealth companies that month. The letter concerns marketing language, not a finding about the medication or patient safety, and it is the same kind of letter altRx received in the same batch; we note it because readers deserve to know, and because no compounded GLP-1, from any provider, is FDA-approved.",
+    keyFeatures: [
+      "Compounded semaglutide $99/month - same price at every dose",
+      "Compounded tirzepatide $129/month - same price at every dose",
+      "One all-inclusive price: no membership, no annual or long-term plans",
+      "Doctor-guided clinical care with 24/7 human support",
+      "Free 3-minute assessment; no insurance needed"
+    ],
+    pricingSummary: "Eden charges $99/month for compounded semaglutide and $129/month for compounded tirzepatide. The price is flat: Eden's pricing table shows the same figure in month one, month two, month three and every month after, and the same at every dose, with no membership fee and no annual or long-term plan required. That puts Eden's semaglutide alongside Medvi's $99 promotional rate and above the $49-$89 entry tier at wellmedr, embody and altRx - but Eden's figure is not a promotion with an end date, and its tirzepatide at $129 is among the lowest flat, no-commitment tirzepatide prices we track.",
+    treatmentOptions: [
+      "Compounded semaglutide (GLP-1) injection",
+      "Compounded tirzepatide (GLP-1 + GIP) injection",
+      "Doctor-guided dosing with ongoing clinical care",
+      "24/7 human support"
+    ],
+    pros: [
+      "Flat pricing with no month-one trick: $99 semaglutide, $129 tirzepatide, every month, every dose",
+      "No membership, no annual plan, no long-term commitment",
+      "4.5 across 4,917 Trustpilot reviews - recent reviews consistently name helpful support staff",
+      "24/7 human support and doctor-guided care included in the price",
+      "Low flat tirzepatide price for a no-commitment plan"
+    ],
+    cons: [
+      "Compounded only - no brand-name Ozempic, Wegovy or Zepbound option",
+      "Shipping speed is not stated on the pricing page we captured",
+      "No formal coaching or dietician layer described",
+      "FDA marketing warning letter (June 2026) over website claims - about wording, not product safety"
+    ],
+    bestFor: [
+      "People who want one number that never changes, without committing to a plan",
+      "Anyone who values reachable, human support alongside the medication",
+      "Tirzepatide buyers who want a flat, no-commitment price"
+    ],
+    finalVerdict: "Eden's case is simplicity: $99 for semaglutide and $129 for tirzepatide, the same every month and at every dose, with no membership and no plan to sign, and a 4.5 across 4,917 Trustpilot reviews in which the newest reviewers name the people who helped them. If the lowest possible sticker price is your only criterion, wellmedr's $49 plan and embody's $69 month-to-month undercut it on semaglutide; if you want a flat price you can budget on, support that answers, and tirzepatide without a premium, Eden is one of the strongest no-commitment options we track. Read the FDA note above with the same weight you would give it for any compounded provider, and confirm shipping times at checkout.",
+    trustBadges: [
+      "Same price, every dose",
+      "No membership or long-term plans",
+      "24/7 human support",
+      "No insurance needed"
+    ],
+    pricingPlans: [
+      {
+        name: "Semaglutide",
+        medication: "Compounded semaglutide (GLP-1) injection",
+        price: "$99",
+        unit: "/month",
+        cadence: "Monthly",
+        highlights: ["Same price every month and at every dose", "No membership or long-term plan", "Doctor-guided care and 24/7 support included"]
+      },
+      {
+        name: "Tirzepatide",
+        medication: "Compounded tirzepatide (GLP-1 + GIP) injection",
+        price: "$129",
+        unit: "/month",
+        cadence: "Monthly",
+        highlights: ["Same price every month and at every dose", "No membership or long-term plan", "Doctor-guided care and 24/7 support included"]
+      }
+    ],
+    howItWorks: [
+      { timing: "Free · ~3 minutes", title: "Start the free assessment", detail: "Answer the health questions online - no insurance needed." },
+      { title: "A doctor reviews your plan", detail: "Doctor-guided clinical care decides whether semaglutide or tirzepatide is appropriate and sets your dose." },
+      { timing: "Delivered to your door", title: "Receive your medication", detail: "Compounded GLP-1 made in the US, shipped to you, with 24/7 human support throughout." }
+    ]
+  },
+  {
     slug: "directmeds",
     providerId: "directmeds",
     updatedAt: "2026-09-14",
@@ -3885,6 +4031,210 @@ const embodyRoBattle: BattleData = {
     { feature: "Pharmacy", provider1Value: "LegitScript-certified 503A pharmacies", provider2Value: "Integrated in-house pharmacy", highlight: "both" },
     { feature: "Care Model", provider1Value: "Licensed doctors, medical director, nursing team", provider2Value: "Licensed providers review every plan", highlight: "both" },
     { feature: "Payment", provider1Value: "No insurance required", provider2Value: "Monthly plans, FSA/HSA eligible", highlight: "provider2" },
+  ],
+};
+
+// ── Eden battles (added Oct 13, 2026). Eden's figures are its own published
+// pricing (flat $99 / $129, every month, every dose) and its Trustpilot record
+// (4.5 across 4,917, operator screenshot Oct 13, 2026). ──
+const edenEmbodyBattle: BattleData = {
+  slug: "eden-vs-embody",
+  updatedAt: "2026-10-13",
+  provider1Id: "eden",
+  provider2Id: "embody",
+  title: "Eden vs embody: Which Flat-Price GLP-1 Provider Fits You in 2026?",
+  subtitle: "Two no-commitment compounded GLP-1 providers compared on price, speed, support and track record.",
+  description: "Eden ($99/mo semaglutide, $129/mo tirzepatide, flat every month, 24/7 support) vs embody ($69/$119, free 1-2 day shipping). Price, support and Trustpilot records compared.",
+  intro: "Eden and embody both sell compounded semaglutide and tirzepatide month to month with no membership and no long-term plan, and both state one price at every dose. embody is cheaper - $69/month for semaglutide and $119 for tirzepatide against Eden's $99 and $129 - and ships in 1-2 days. Eden's pitch is the rest of the experience: doctor-guided care with 24/7 human support, and a 4.5 across 4,917 Trustpilot reviews whose newest pages name the support staff one by one, against embody's 3.8 across 9,604. This is a price-versus-service decision, and both answers are reasonable.",
+  verdict: "Eden takes this one on support and track record. The $30 and $10 monthly gaps are real, but Eden pairs its flat price with 24/7 human support and a 4.5 Trustpilot average across 4,917 reviews in which reviewers consistently name the person who helped them - the two things embody's own reviewers most often say they miss. embody remains the pick if the lowest no-commitment price and the fastest shipping are what matter most: $69 semaglutide, free 1-2 day cold-chain delivery and a refund if you are not approved.",
+  verdictWinnerPoints: [
+    "$99 semaglutide / $129 tirzepatide - the same every month, every dose",
+    "24/7 human support and doctor-guided care included",
+    "4.5 across 4,917 Trustpilot reviews; recent reviews name helpful staff",
+    "No membership, no annual or long-term plan",
+  ],
+  verdictLoserPoints: [
+    "Cheapest no-commitment price: $69 semaglutide, $119 tirzepatide",
+    "Free 1-2 day cold-chain shipping",
+    "Refund if a provider does not approve treatment",
+    "LegitScript-certified; US 503A pharmacies named",
+  ],
+  winnerId: "eden",
+  categories: [
+    {
+      name: "Pricing",
+      winner: "provider2",
+      explanation: "embody is cheaper on both molecules: $69/month semaglutide and $119 tirzepatide against Eden's $99 and $129. Both are flat at every dose and month to month; embody's figures are promotional against regular prices of $79 and $129, while Eden's are its standard rates with no end date.",
+      supportingPoints: ["$69 / $119 month to month (embody)", "$99 / $129 every month, no promo to expire (Eden)", "Neither charges a membership"],
+    },
+    {
+      name: "Medication Options",
+      winner: "tie",
+      explanation: "The same two compounded medications at both: semaglutide and tirzepatide as weekly injections, each stated at one price regardless of dose. Neither offers brand-name Ozempic, Wegovy or Zepbound.",
+      supportingPoints: ["Compounded semaglutide and tirzepatide (both)", "Same price at every dose (both)", "No brand-name shelf at either"],
+    },
+    {
+      name: "Medical Support",
+      winner: "provider1",
+      explanation: "Eden includes doctor-guided clinical care with 24/7 human support, and its recent Trustpilot reviews are about exactly that - named agents resolving questions quickly. embody's model is deliberately self-serve: a nursing team by message, with reviewers on both Trustpilot and Reddit asking for more human contact.",
+      supportingPoints: ["24/7 human support, doctor-guided care (Eden)", "Reviewers name the agent who helped in nearly every recent review (Eden)", "Nursing team by message; 'autopilot' by design (embody)"],
+    },
+    {
+      name: "Flexibility",
+      winner: "tie",
+      explanation: "Both are month to month with no membership and no long-term plan. embody adds a refund if a provider does not approve treatment; Eden states no annual or long-term plans are ever required.",
+      supportingPoints: ["Month to month, no membership (both)", "Refund if not approved (embody)", "'No annual or long-term plans required' (Eden)"],
+    },
+    {
+      name: "Track Record",
+      winner: "provider1",
+      explanation: "Eden: 4.5 across 4,917 Trustpilot reviews. embody: 3.8 across 9,604. embody's base is larger, but its average is the more mixed of the two, with shipping delays and support the recurring complaints.",
+      supportingPoints: ["4.5 across 4,917 reviews (Eden)", "3.8 across 9,604 reviews (embody)", "Both profiles claimed with paid Trustpilot subscriptions"],
+    },
+  ],
+  features: [
+    { feature: "Semaglutide price", provider1Value: "$99/mo, flat every month and every dose", provider2Value: "$69/mo (reg. $79), month to month", highlight: "provider2" },
+    { feature: "Tirzepatide price", provider1Value: "$129/mo, flat every month and every dose", provider2Value: "$119/mo (reg. $129), month to month", highlight: "provider2" },
+    { feature: "Membership fee", provider1Value: "None", provider2Value: "None", highlight: "both" },
+    { feature: "Commitment", provider1Value: "None - no annual or long-term plans", provider2Value: "None - month to month", highlight: "both" },
+    { feature: "Shipping", provider1Value: "Home delivery; timing not stated on the pricing page", provider2Value: "Free 1-2 day cold-chain", highlight: "provider2" },
+    { feature: "Clinical support", provider1Value: "Doctor-guided care, 24/7 human support", provider2Value: "Nursing team by message, video appointments", highlight: "provider1" },
+    { feature: "Trustpilot", provider1Value: "4.5 across 4,917 (Oct 13, 2026)", provider2Value: "3.8 across 9,604 (Oct 12, 2026)", highlight: "provider1" },
+    { feature: "Brand-name options", provider1Value: "No", provider2Value: "No", highlight: "none" },
+  ],
+};
+
+const altrxEdenBattle: BattleData = {
+  slug: "altrx-vs-eden",
+  updatedAt: "2026-10-13",
+  provider1Id: "altrx",
+  provider2Id: "eden",
+  title: "altRx vs Eden: Flat GLP-1 Pricing Compared (2026)",
+  subtitle: "Both state one price at every dose - we compared the prices, the plans, the support and the public records.",
+  description: "altRx ($89/mo semaglutide, $149 tirzepatide promo, brand-name shelf, Buy Now, Pay Later) vs Eden ($99 / $129 flat every month, 24/7 support, 4.5 Trustpilot). Compared honestly.",
+  intro: "altRx and Eden both promise one price at every dose, and both run without a membership. The prices cross: altRx is cheaper on semaglutide ($89 against Eden's $99) while Eden is cheaper on tirzepatide ($129 against altRx's $149) - and altRx's figures are promotional rates against regular prices of $199 and $299, with a sale end date that has been extended more than once, while Eden's are its standard every-month rates. altRx adds a brand-name shelf (Ozempic, Zepbound, Wegovy) and Buy Now, Pay Later; Eden adds 24/7 human support and a published Trustpilot record of 4.5 across 4,917 reviews, where altRx has no Trustpilot profile.",
+  verdict: "Eden edges this one. The deciding factors are the things you can check: a flat price with no promotion to expire, 24/7 human support, and a 4.5 across 4,917 Trustpilot reviews, against altRx's promotional pricing and the absence of a public review aggregate. altRx is the better pick if you want brand-name medication at a cash price, financing through Buy Now, Pay Later, or the lowest semaglutide figure of the two while its promotion holds - and its one detailed firsthand Reddit account describes approval and cold-chain delivery within a day.",
+  verdictWinnerPoints: [
+    "$99 semaglutide / $129 tirzepatide - standard rates, no promo end date",
+    "Cheaper tirzepatide of the two",
+    "24/7 human support, doctor-guided care",
+    "4.5 across 4,917 Trustpilot reviews",
+  ],
+  verdictLoserPoints: [
+    "$89 semaglutide - cheaper while the promotion holds",
+    "Brand-name Ozempic, Zepbound and Wegovy on the shelf",
+    "Buy Now, Pay Later available",
+    "Pause or cancel anytime",
+  ],
+  winnerId: "eden",
+  categories: [
+    {
+      name: "Pricing",
+      winner: "tie",
+      explanation: "A split decision. altRx's $89 semaglutide is $10 cheaper than Eden's $99; Eden's $129 tirzepatide is $20 cheaper than altRx's $149. Both are the same at every dose. The structural difference: altRx's rates are promotional against $199 and $299 regular prices, with an end date that has moved more than once, while Eden's are its standard rates every month.",
+      supportingPoints: ["$89 semaglutide, promotional (altRx)", "$129 tirzepatide, standard rate (Eden)", "No membership at either"],
+    },
+    {
+      name: "Medication Options",
+      winner: "provider1",
+      explanation: "altRx offers compounded semaglutide and tirzepatide plus brand-name Ozempic ($1,149), Zepbound ($1,249) and Wegovy ($1,579) at cash prices. Eden offers the two compounded medications only.",
+      supportingPoints: ["Compounded plus brand-name shelf (altRx)", "Compounded semaglutide and tirzepatide (Eden)", "Buy Now, Pay Later (altRx)"],
+    },
+    {
+      name: "Medical Support",
+      winner: "provider2",
+      explanation: "Eden includes doctor-guided clinical care and 24/7 human support, and its newest reviews name the agents who resolved questions. altRx describes clinician-guided support with everything in the box; its captured reviews also praise named representatives, but it publishes less about ongoing contact.",
+      supportingPoints: ["24/7 human support (Eden)", "Clinician-guided; pause or cancel anytime (altRx)", "Named-agent praise in recent reviews (both)"],
+    },
+    {
+      name: "Flexibility",
+      winner: "tie",
+      explanation: "Neither requires a membership or a long-term plan. altRx lets you pause or cancel anytime and offers financing; Eden states no annual or long-term plans are required. altRx's multi-month plans are not refundable once paid, per its terms.",
+      supportingPoints: ["No membership (both)", "Pause or cancel anytime; BNPL (altRx)", "No annual or long-term plans (Eden)"],
+    },
+    {
+      name: "Track Record",
+      winner: "provider2",
+      explanation: "Eden publishes a Trustpilot record: 4.5 across 4,917 reviews on a claimed profile. altRx has no Trustpilot profile, so its public record is the individual reviews and the one Reddit thread we have captured. Both companies received FDA warning letters about compounded GLP-1 marketing claims in June 2026.",
+      supportingPoints: ["4.5 across 4,917 Trustpilot reviews (Eden)", "No Trustpilot profile (altRx)", "FDA marketing warning letters, June 2026 (both)"],
+    },
+  ],
+  features: [
+    { feature: "Semaglutide price", provider1Value: "$89/mo promo (reg. $199), flat at every dose", provider2Value: "$99/mo, flat every month and every dose", highlight: "provider1" },
+    { feature: "Tirzepatide price", provider1Value: "$149/mo promo (reg. $299), flat at every dose", provider2Value: "$129/mo, flat every month and every dose", highlight: "provider2" },
+    { feature: "Brand-name options", provider1Value: "Ozempic $1,149, Zepbound $1,249, Wegovy $1,579", provider2Value: "No", highlight: "provider1" },
+    { feature: "Membership fee", provider1Value: "None", provider2Value: "None", highlight: "both" },
+    { feature: "Shipping", provider1Value: "Free 5-7 day", provider2Value: "Home delivery; timing not stated on the pricing page", highlight: "none" },
+    { feature: "Clinical support", provider1Value: "Clinician-guided", provider2Value: "Doctor-guided care, 24/7 human support", highlight: "provider2" },
+    { feature: "Trustpilot", provider1Value: "No profile", provider2Value: "4.5 across 4,917 (Oct 13, 2026)", highlight: "provider2" },
+    { feature: "Financing", provider1Value: "Buy Now, Pay Later", provider2Value: "Not stated", highlight: "provider1" },
+  ],
+};
+
+const edenRoBattle: BattleData = {
+  slug: "eden-vs-ro",
+  updatedAt: "2026-10-13",
+  provider1Id: "eden",
+  provider2Id: "ro",
+  title: "Eden vs Ro: Flat Compounded Pricing or Brand-Name With a Membership?",
+  subtitle: "A compounded provider with one flat price against a brand-name provider that bills a membership plus the medication.",
+  description: "Eden ($99/mo semaglutide, $129 tirzepatide, flat, no membership) vs Ro ($39-then-$74-149 membership plus Wegovy or Zepbound billed separately; insurance can apply). Which fits you.",
+  intro: "Eden and Ro sit at opposite ends of the GLP-1 telehealth market. Eden sells compounded semaglutide at $99/month and tirzepatide at $129/month, flat every month and at every dose, with no membership. Ro sells FDA-approved medication - the Wegovy pill and pen, the Zepbound KwikPen - billed separately from a Body membership of $39 the first month and $74-$149 after, which is the structure that lets insurance pay for the drug. Paying cash, the two are not close; with coverage, Ro can be the cheaper route. The rest of the comparison is support and reputation: Eden's 24/7 human support and 4.5 across 4,917 Trustpilot reviews against Ro's message-based follow-up and 3.9 across 7,105.",
+  verdict: "For cash-pay buyers, Eden wins: one flat price with no membership, 24/7 human support, and the stronger Trustpilot average. Ro wins the moment insurance enters the picture, and it is the only one of the two selling FDA-approved medication - if your plan covers Wegovy or Zepbound, Ro's membership-plus-copay can cost far less than any compounded price, and that is a clinical as well as a financial advantage. Decide on coverage first, then on price.",
+  verdictWinnerPoints: [
+    "$99 semaglutide / $129 tirzepatide, flat every month, no membership",
+    "24/7 human support, doctor-guided care",
+    "4.5 across 4,917 Trustpilot reviews",
+    "No annual or long-term plans required",
+  ],
+  verdictLoserPoints: [
+    "FDA-approved Wegovy and Zepbound as the primary product",
+    "Insurance can apply to the medication",
+    "In-house pharmacy",
+    "Established brand with a long Trustpilot history",
+  ],
+  winnerId: "eden",
+  categories: [
+    {
+      name: "Pricing",
+      winner: "provider1",
+      explanation: "Eden is one number: $99 or $129 a month, every month. Ro is two: a membership of $39 the first month then $74-$149, plus the medication - the Wegovy pill $149 the first month then $299, the Zepbound KwikPen from $299 then $399-$449. Paying cash, Eden costs a fraction of Ro; with insurance covering the drug, Ro's membership plus a copay can be the cheaper route.",
+      supportingPoints: ["$99 / $129 flat, no membership (Eden)", "$39-then-$74-149 membership plus medication (Ro)", "Insurance can apply to Ro's medication"],
+    },
+    {
+      name: "Medication Options",
+      winner: "provider2",
+      explanation: "Ro sells FDA-approved brand-name medication through its own pharmacy: the Wegovy pill and pen and the Zepbound KwikPen. Eden sells compounded semaglutide and tirzepatide, which are not FDA-approved products.",
+      supportingPoints: ["FDA-approved Wegovy and Zepbound (Ro)", "Compounded semaglutide and tirzepatide (Eden)", "In-house pharmacy (Ro)"],
+    },
+    {
+      name: "Medical Support",
+      winner: "provider1",
+      explanation: "Eden includes doctor-guided care with 24/7 human support, the theme of nearly every recent review. Ro's licensed providers review every case and follow up by message; the lack of a phone line is the most repeated request in Ro's recent reviews.",
+      supportingPoints: ["24/7 human support (Eden)", "Licensed providers, message-based follow-up (Ro)", "'I wish you had a phone #' recurs in Ro's reviews"],
+    },
+    {
+      name: "Flexibility",
+      winner: "provider1",
+      explanation: "Eden has no membership and no annual or long-term plan. Ro's membership renews monthly or on a prepaid plan, requires 48 hours' notice to cancel before renewal, and membership fees are generally non-refundable.",
+      supportingPoints: ["No membership, no plan (Eden)", "48 hours' notice before renewal; fees non-refundable (Ro)", "Prepaid membership tiers lower Ro's monthly rate"],
+    },
+    {
+      name: "Track Record",
+      winner: "provider1",
+      explanation: "Eden: 4.5 across 4,917 Trustpilot reviews. Ro: 3.9 across 7,105 on a profile claimed in 2021. Ro's base is larger and older; Eden's average is higher, and its recent reviews are more consistently positive about support.",
+      supportingPoints: ["4.5 across 4,917 (Eden)", "3.9 across 7,105 (Ro)", "Both claimed profiles with paid subscriptions"],
+    },
+  ],
+  features: [
+    { feature: "Semaglutide route", provider1Value: "Compounded, $99/mo flat", provider2Value: "Wegovy pill $149 first month then $299, plus membership", highlight: "provider1" },
+    { feature: "Tirzepatide route", provider1Value: "Compounded, $129/mo flat", provider2Value: "Zepbound KwikPen from $299 then $399-$449, plus membership", highlight: "provider1" },
+    { feature: "Membership fee", provider1Value: "None", provider2Value: "$39 first month, then $74-$149/mo", highlight: "provider1" },
+    { feature: "FDA-approved medication", provider1Value: "No (compounded)", provider2Value: "Yes", highlight: "provider2" },
+    { feature: "Insurance", provider1Value: "Not needed; cash-pay", provider2Value: "Can apply to the medication", highlight: "provider2" },
+    { feature: "Clinical support", provider1Value: "Doctor-guided care, 24/7 human support", provider2Value: "Licensed providers, message-based", highlight: "provider1" },
+    { feature: "Trustpilot", provider1Value: "4.5 across 4,917 (Oct 13, 2026)", provider2Value: "3.9 across 7,105 (Oct 12, 2026)", highlight: "provider1" },
+    { feature: "Cancellation", provider1Value: "No long-term plan to cancel", provider2Value: "48 hours before renewal; fees non-refundable", highlight: "provider1" },
   ],
 };
 
@@ -5564,7 +5914,7 @@ function buildInitialConfig(): SiteConfig {
       trustpilotReviews: seedTrustpilot[p.id]?.reviews,
     })),
     ranking: {
-      providerOrder: ["embody", "altrx", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+      providerOrder: ["embody", "altrx", "eden", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
       positions: [
         { score: 9.8, starRating: 5, label: "Exceptional", badge: "Our Most Popular" },
         { score: 9.7, starRating: 5, label: "Exceptional" },
@@ -5648,6 +5998,9 @@ function buildInitialConfig(): SiteConfig {
       altrxSproutBattle,
       sproutTrimrxBattle,
       sproutWellmedrBattle,
+      edenEmbodyBattle,
+      altrxEdenBattle,
+      edenRoBattle,
     ],
     sidebars: [
       {
@@ -5678,7 +6031,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Semaglutide Providers 2026",
         h2: "Compare GLP-1 weight loss programs side by side",
         heroDescription: "Semaglutide (the active ingredient in Ozempic and Wegovy) is one of the most effective GLP-1 medications for weight loss. Compare providers offering semaglutide treatment below.",
-        providerOrder: ["embody", "altrx", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["embody", "altrx", "eden", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "What Is Semaglutide?",
@@ -5706,7 +6059,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Tirzepatide Providers 2026",
         h2: "Compare dual-action GLP-1 weight loss programs",
         heroDescription: "Tirzepatide (the active ingredient in Mounjaro and Zepbound) targets both GLP-1 and GIP receptors for enhanced weight loss results. Compare providers offering tirzepatide treatment below.",
-        providerOrder: ["embody", "altrx", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["embody", "altrx", "eden", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "What Is Tirzepatide?",
@@ -5734,7 +6087,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Online Weight Loss Programs 2026",
         h2: "Clinician-guided GLP-1 treatment from home",
         heroDescription: "Online weight loss programs now offer prescription GLP-1 medications with full medical oversight - all from home. We compared the top programs on pricing, clinical support, and results.",
-        providerOrder: ["embody", "altrx", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["embody", "altrx", "eden", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "How Online Weight Loss Programs Work",
@@ -5762,7 +6115,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Weight Loss Injections 2026",
         h2: "Compare injectable GLP-1 weight loss treatments",
         heroDescription: "GLP-1 weight loss injections like semaglutide and tirzepatide have shown 15-22% average weight loss in clinical trials. Compare providers offering injectable treatment programs below.",
-        providerOrder: ["embody", "altrx", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["embody", "altrx", "eden", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "How Weight Loss Injections Work",
@@ -5790,7 +6143,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Ozempic for Weight Loss",
         h2: "Compare providers offering semaglutide treatment",
         heroDescription: "Ozempic (semaglutide) is widely used off-label for weight loss, with clinical trials showing 10-15% average weight loss. Compare providers offering semaglutide-based treatment programs below.",
-        providerOrder: ["embody", "altrx", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["embody", "altrx", "eden", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "Ozempic for Weight Loss: What You Need to Know",
@@ -5818,7 +6171,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Wegovy Providers & Alternatives 2026",
         h2: "Compare semaglutide weight loss programs",
         heroDescription: "Wegovy is the FDA-approved weight loss version of semaglutide, with clinical trials showing 15% average weight loss. Compare providers offering Wegovy and compounded semaglutide alternatives below.",
-        providerOrder: ["embody", "altrx", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["embody", "altrx", "eden", "ro", "trimrx", "shed", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "Wegovy vs Compounded Semaglutide",
@@ -5842,7 +6195,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Most Affordable Weight Loss Medication 2026",
         h2: "Compare the cheapest GLP-1 providers",
         heroDescription: "GLP-1 medications don't have to cost $1,000/month. Compounded semaglutide starts at a verified $49/month and tirzepatide at $89/month from licensed telehealth providers - including medication, consultations, and delivery.",
-        providerOrder: ["altrx", "trimrx", "shed", "embody", "ro", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["altrx", "trimrx", "shed", "embody", "eden", "ro", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
         editorialSections: [
           {
             heading: "Why GLP-1 Medication Is Getting More Affordable",
@@ -6107,6 +6460,7 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
             // slugs the seed wins wholesale; all other reviews stay CMS-owned
             // with the seed backfilling only the rich fields below.
             const codeAuthoritativeReviews = new Set([
+              "eden",
               "embody",
               "altrx",
               "trimrx",

@@ -380,6 +380,8 @@ export const AFFILIATE_PROVIDER_IDS = [
   "ro",
   // wellorithm: operator-supplied tracking link, Oct 9, 2026
   "wellorithm",
+  // eden: operator-supplied tracking link, Oct 13, 2026
+  "eden",
   // hair-loss
   "maximus",
   "happyhead",

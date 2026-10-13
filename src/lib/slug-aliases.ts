@@ -3,6 +3,10 @@
 // the same map to avoid linking to an aliased URL in the first place.
 // The key is the alias slug; the value is the canonical slug.
 export const SLUG_ALIASES: Record<string, string> = {
+  // Eden matchups (Oct 13, 2026) - reverse orderings collapse to the canonical slug.
+  "embody-vs-eden": "eden-vs-embody",
+  "eden-vs-altrx": "altrx-vs-eden",
+  "ro-vs-eden": "eden-vs-ro",
   "embody-vs-altrx": "altrx-vs-embody",
   // Sprout battles - reverse orderings collapse to the canonical slug.
   "sprout-vs-embody": "embody-vs-sprout",

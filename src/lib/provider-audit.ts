@@ -102,6 +102,16 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Trustpilot record", value: "4.1 across 188 reviews" },
     ],
   },
+  "weight-loss:eden": {
+    rows: [
+      { label: "Semaglutide price", value: "$99/month, flat every month and at every dose" },
+      { label: "Tirzepatide price", value: "$129/month, flat every month and at every dose" },
+      { label: "Membership fee", value: "None" },
+      { label: "Commitment", value: "None - no annual or long-term plans required" },
+      { label: "Support", value: "Doctor-guided care with 24/7 human support" },
+      { label: "Trustpilot record", value: "4.5 across 4,917 reviews" },
+    ],
+  },
   "weight-loss:ro": {
     rows: [
       { label: "Membership", value: "$39 first month, then $74-149/month ($74 on a 12-month prepaid plan)" },
