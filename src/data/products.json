@@ -20,8 +20,28 @@
     "description": ""
   },
   {
-    "id": "noom",
+    "id": "eden",
     "rank": 3,
+    "name": "Eden",
+    "slug": "eden",
+    "tagline": "Compounded GLP-1 at one flat price - $99 semaglutide, $129 tirzepatide, every month",
+    "logo": "/logos/eden.png",
+    "rating": 9.6,
+    "ratingLabel": "Excellent",
+    "reviewCount": 4917,
+    "highlights": [
+      "Semaglutide $99/mo, tirzepatide $129/mo - the same price at every dose",
+      "Doctor-guided care with 24/7 human support, no insurance needed",
+      "No annual or long-term plans required"
+    ],
+    "affiliateUrl": "https://track.revoffers.com/aff_c?offer_id=1435&aff_id=12904",
+    "ctaText": "View Plan",
+    "description": "",
+    "specialOffer": null
+  },
+  {
+    "id": "noom",
+    "rank": 4,
     "name": "Noom",
     "slug": "noom",
     "tagline": "Behavior-Based Weight Loss With Medical Support",
@@ -61,7 +81,7 @@
   },
   {
     "id": "trimrx",
-    "rank": 4,
+    "rank": 5,
     "name": "TrimRx",
     "slug": "trimrx",
     "tagline": "Affordable Access To GLP-1 Programs",
@@ -81,7 +101,7 @@
   },
   {
     "id": "shed",
-    "rank": 5,
+    "rank": 6,
     "name": "SHED",
     "slug": "shed",
     "tagline": "Get 30% off your first month",
@@ -101,7 +121,7 @@
   },
   {
     "id": "embody",
-    "rank": 6,
+    "rank": 7,
     "name": "embody",
     "slug": "embody",
     "tagline": "Compounded GLP-1 from $69/month, shipped in 1-2 days",
@@ -121,7 +141,7 @@
   },
   {
     "id": "wellmedr",
-    "rank": 7,
+    "rank": 8,
     "name": "wellmedr",
     "slug": "wellmedr",
     "tagline": "AI-driven telehealth: compounded GLP-1/GIP + longevity care",
@@ -141,7 +161,7 @@
   },
   {
     "id": "sunlight",
-    "rank": 8,
+    "rank": 9,
     "name": "Sunlight",
     "slug": "sunlight",
     "tagline": "Flexible Telehealth Weight Loss Care",
@@ -161,7 +181,7 @@
   },
   {
     "id": "medvi",
-    "rank": 9,
+    "rank": 10,
     "name": "Medvi",
     "slug": "medvi",
     "tagline": "Medical Weight Loss Made Simple",
@@ -181,7 +201,7 @@
   },
   {
     "id": "sprout",
-    "rank": 10,
+    "rank": 11,
     "name": "Sprout",
     "slug": "sprout",
     "tagline": "Save $200 on your first month",
@@ -201,7 +221,7 @@
   },
   {
     "id": "wellorithm",
-    "rank": 11,
+    "rank": 12,
     "name": "Wellorithm",
     "slug": "wellorithm",
     "tagline": "Start today for just $147",
@@ -221,7 +241,7 @@
   },
   {
     "id": "directmeds",
-    "rank": 12,
+    "rank": 13,
     "name": "DirectMeds",
     "slug": "directmeds",
     "tagline": "Plans starting at just $147",
@@ -241,7 +261,7 @@
   },
   {
     "id": "found",
-    "rank": 13,
+    "rank": 14,
     "name": "found",
     "slug": "found",
     "tagline": "Up to $100 off your membership plan",
@@ -261,7 +281,7 @@
   },
   {
     "id": "yucca",
-    "rank": 14,
+    "rank": 15,
     "name": "Yucca",
     "slug": "yucca",
     "tagline": "Weight loss plans from $146",
@@ -281,7 +301,7 @@
   },
   {
     "id": "bodybuildinghealth",
-    "rank": 16,
+    "rank": 17,
     "name": "Bodybuilding Health",
     "slug": "bodybuildinghealth",
     "tagline": "$100 Off Limited-Time Offer",
@@ -301,7 +321,7 @@
   },
   {
     "id": "livbody",
-    "rank": 17,
+    "rank": 18,
     "name": "LIV Body",
     "slug": "livbody",
     "tagline": "Works With Your Biology",
@@ -321,7 +341,7 @@
   },
   {
     "id": "skinnyrx",
-    "rank": 18,
+    "rank": 19,
     "name": "skinnyRx",
     "slug": "skinnyrx",
     "tagline": "Physician-Prescribed GLP-1 Weight Loss",
@@ -341,7 +361,7 @@
   },
   {
     "id": "healthrx",
-    "rank": 19,
+    "rank": 20,
     "name": "HealthRx",
     "slug": "healthrx",
     "tagline": "GLP-1 program from $99/month - clinician consult to overnight delivery",
@@ -361,7 +381,7 @@
   },
   {
     "id": "calibrate",
-    "rank": 20,
+    "rank": 21,
     "name": "Calibrate",
     "slug": "calibrate",
     "tagline": "One-year metabolic reset program with 1:1 coaching and insurance-covered GLP-1 medication",
@@ -381,7 +401,7 @@
   },
   {
     "id": "sequence",
-    "rank": 21,
+    "rank": 22,
     "name": "Sequence",
     "slug": "sequence",
     "tagline": "WeightWatchers' clinician-led GLP-1 program with insurance coordination",
@@ -401,7 +421,7 @@
   },
   {
     "id": "bmimd",
-    "rank": 22,
+    "rank": 23,
     "name": "bmiMD",
     "slug": "bmimd",
     "tagline": "Compounded GLP-1 weight-loss care, prescribed online and shipped cold-chain",
