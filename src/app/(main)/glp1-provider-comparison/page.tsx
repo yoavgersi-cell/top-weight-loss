@@ -780,7 +780,7 @@ export default async function Glp1ProviderComparisonPage() {
                   <div className="mb-4 flex h-[36px] w-[140px] items-center">
                     {p ? (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img src={p.logo} alt="" width={140} height={36} className="max-h-full max-w-full object-contain object-left" loading="lazy" decoding="async" />
+                      <img src={p.logo} alt={`${r.name} logo`} width={140} height={36} className="max-h-full max-w-full object-contain object-left" loading="lazy" decoding="async" />
                     ) : null}
                     <h3 className="sr-only">{r.name}</h3>
                   </div>
