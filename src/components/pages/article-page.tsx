@@ -202,7 +202,8 @@ export async function articleMetadata(slug: string, ctx: SiteContext): Promise<M
       type: "article",
       publishedTime: article.publishedAt,
       modifiedTime: latestUpdate(article.updatedAt),
-      authors: [article.author || ctx.brandName],
+      // Older articles store the pre-migration team name; brand it for the hub.
+      authors: [(article.author || ctx.brandName).replace(/TopWeightLoss/gi, ctx.brandTeam.replace(/\s+Team$/i, ""))],
     },
   };
 }
@@ -384,18 +385,12 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     wordCount,
     articleSection: article.category,
     ...pageReviewSchema(`/${ctx.vertical}/articles/${slug}`),
-    author: author
-      ? {
-          "@type": "Person",
-          name: author.credentials ? `${author.name}, ${author.credentials}` : author.name,
-          jobTitle: author.role,
-          url: canonicalUrl(ctx, "/about"),
-        }
-      : {
-          "@type": "Organization",
-          name: article.author || ctx.brandName,
-          url: ctx.origin,
-        },
+    // The research team is a group, so it is an Organization, not a Person.
+    author: {
+      "@type": "Organization",
+      name: author ? author.name.replace(/TopWeightLoss/gi, ctx.brandTeam.replace(/\s+Team$/i, "")) : article.author || ctx.brandName,
+      url: canonicalUrl(ctx, "/about"),
+    },
     publisher: {
       "@type": "Organization",
       name: ctx.brandName,

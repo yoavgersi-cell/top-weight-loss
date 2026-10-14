@@ -23,7 +23,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const r = getReviewer(slug);
   if (!r) return {};
   const title = `${reviewerDisplayName(r)} - ${r.jobTitle} | Treatments Hub`;
-  const description = r.shortBio;
+  // Meta description: the bio's first sentence (the full bio runs past 300
+  // characters and was truncated in results).
+  const description = `${r.shortBio.split(". ")[0]}.`;
   return {
     title,
     description,

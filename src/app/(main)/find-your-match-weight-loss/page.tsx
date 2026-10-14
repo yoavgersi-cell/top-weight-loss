@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect, useRef, useMemo } from "react";
+import Link from "next/link";
+import { HubLogo } from "@/components/hub-logo";
 import { Check, Search } from "lucide-react";
 import { trackOnce, trackEvent } from "@/lib/analytics";
 import { ComparisonCard } from "@/components/comparison-card";
@@ -366,10 +368,9 @@ export default function ChatQuizPage() {
       <div className="fixed inset-0 flex flex-col bg-[#F7F8FA]">
         {/* Logo bar */}
         <div className="shrink-0 border-b border-[#E5E7EB] bg-white px-4 py-3">
-          <a href="/" className="flex items-center">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo.png" alt="TopWeightLoss.io" className="h-[28px] w-auto" />
-          </a>
+          <Link href="/weight-loss" className="flex items-center">
+            <HubLogo vertical="weight-loss" />
+          </Link>
         </div>
 
         {/* Header */}
