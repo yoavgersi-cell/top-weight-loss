@@ -550,8 +550,21 @@ export function reviewerPersonSchema(r: Reviewer) {
 export function pageReviewSchema(path: string): Record<string, unknown> {
   const review = getPageReview(path);
   if (!review) return {};
+  // A compact Person node (same @id as the profile page's full node) rather
+  // than a bare @id reference: Google parses JSON-LD per page and does not
+  // fetch the profile, so a reference alone carried no reviewer identity.
+  const r = review.reviewerProfile;
   return {
-    reviewedBy: { "@id": `${reviewerUrl(review.reviewerProfile)}#person` },
+    reviewedBy: {
+      "@type": "Person",
+      "@id": `${reviewerUrl(r)}#person`,
+      name: r.name,
+      honorificSuffix: r.credentials.join(", "),
+      jobTitle: r.jobTitle,
+      url: reviewerUrl(r),
+      image: `${HUB_ORIGIN}${r.image.src}`,
+      ...(r.sameAs.length && { sameAs: r.sameAs }),
+    },
     lastReviewed: review.reviewedAt,
   };
 }

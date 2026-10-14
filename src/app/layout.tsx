@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { hreflangLanguages } from "@/lib/regions";
+import { WEIGHT_LOSS_MIGRATED } from "@/lib/site-context";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -99,12 +100,14 @@ export default function RootLayout({
             from the legacy topweightloss host do we mark the document, before
             first paint, so the shared header/footer swap to the TopWeightLoss
             brand with no flash. The same cached HTML works on both domains. */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              "try{if(location.hostname.indexOf('topweightloss')>-1)document.documentElement.setAttribute('data-legacy','')}catch(e){}",
-          }}
-        />
+        {!WEIGHT_LOSS_MIGRATED && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html:
+                "try{if(location.hostname.indexOf('topweightloss')>-1)document.documentElement.setAttribute('data-legacy','')}catch(e){}",
+            }}
+          />
+        )}
       </head>
       <body className="min-h-full flex flex-col overflow-x-hidden">
         <script

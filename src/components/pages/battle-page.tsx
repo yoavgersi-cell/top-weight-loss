@@ -686,17 +686,20 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     ...pageReviewSchema(`/${ctx.vertical}/${battle.slug}`),
     headline: battle.title,
     description: battle.description,
-    datePublished: "2026-06-01",
+    datePublished: battle.publishedAt ?? "2026-06-01",
     dateModified: battleUpdatedAt,
-    author: battleAuthor
-      ? {
-          "@type": "Person",
-          name: battleAuthor.credentials ? `${battleAuthor.name}, ${battleAuthor.credentials}` : battleAuthor.name,
-          jobTitle: battleAuthor.role,
-          url: canonicalUrl(ctx, "/about"),
-        }
-      : { "@type": "Organization", name: ctx.brandTeam, url: ctx.origin },
-    publisher: { "@type": "Organization", name: ctx.brandName, url: ctx.origin },
+    // The research team is a group, so it is an Organization, not a Person.
+    author: {
+      "@type": "Organization",
+      name: battleAuthor ? battleAuthor.name : ctx.brandTeam,
+      url: canonicalUrl(ctx, "/about"),
+    },
+    publisher: {
+      "@type": "Organization",
+      name: ctx.brandName,
+      url: ctx.origin,
+      logo: { "@type": "ImageObject", url: `${ctx.origin}/treatmentshub.png` },
+    },
     mainEntityOfPage: canonicalUrl(ctx, `/${battle.slug}`),
   };
 

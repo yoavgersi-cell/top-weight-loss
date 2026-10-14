@@ -4040,6 +4040,7 @@ const embodyRoBattle: BattleData = {
 const edenEmbodyBattle: BattleData = {
   slug: "eden-vs-embody",
   updatedAt: "2026-10-13",
+  publishedAt: "2026-10-13",
   provider1Id: "eden",
   provider2Id: "embody",
   title: "Eden vs embody: Which Flat-Price GLP-1 Provider Fits You in 2026?",
@@ -4107,6 +4108,7 @@ const edenEmbodyBattle: BattleData = {
 const altrxEdenBattle: BattleData = {
   slug: "altrx-vs-eden",
   updatedAt: "2026-10-13",
+  publishedAt: "2026-10-13",
   provider1Id: "altrx",
   provider2Id: "eden",
   title: "altRx vs Eden: Flat GLP-1 Pricing Compared (2026)",
@@ -4174,6 +4176,7 @@ const altrxEdenBattle: BattleData = {
 const edenRoBattle: BattleData = {
   slug: "eden-vs-ro",
   updatedAt: "2026-10-13",
+  publishedAt: "2026-10-13",
   provider1Id: "eden",
   provider2Id: "ro",
   title: "Eden vs Ro: Flat Compounded Pricing or Brand-Name With a Membership?",

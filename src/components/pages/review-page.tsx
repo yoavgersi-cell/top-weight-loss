@@ -498,18 +498,18 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
     description: review.shortSummary,
     dateModified: reviewUpdatedAt,
     ...pageReviewSchema(`/${ctx.vertical}/reviews/${slug}`),
-    author: author
-      ? {
-          "@type": "Person",
-          name: (author.credentials ? `${author.name}, ${author.credentials}` : author.name).replace(
-            /TopWeightLoss/gi,
-            ctx.brandTeam.replace(/\s+Team$/i, "")
-          ),
-          jobTitle: author.role,
-          url: canonicalUrl(ctx, "/about"),
-        }
-      : { "@type": "Organization", name: ctx.brandTeam, url: ctx.origin },
-    publisher: { "@type": "Organization", name: ctx.brandName, url: ctx.origin },
+    // The research team is a group, so it is an Organization, not a Person.
+    author: {
+      "@type": "Organization",
+      name: author ? author.name.replace(/TopWeightLoss/gi, ctx.brandTeam.replace(/\s+Team$/i, "")) : ctx.brandTeam,
+      url: canonicalUrl(ctx, "/about"),
+    },
+    publisher: {
+      "@type": "Organization",
+      name: ctx.brandName,
+      url: ctx.origin,
+      logo: { "@type": "ImageObject", url: `${ctx.origin}/treatmentshub.png` },
+    },
     about: { "@type": "Organization", name: provider.name },
     mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl(ctx, `/reviews/${slug}`) },
   };

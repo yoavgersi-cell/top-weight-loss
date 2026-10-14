@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useNavPrefix, navHref } from "@/lib/nav-prefix";
 import { HubLogo } from "@/components/hub-logo";
+import { WEIGHT_LOSS_MIGRATED } from "@/lib/site-context";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,11 +28,16 @@ export function Header() {
     <header className="border-b-2 border-[#D5D5D5] bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         {/* Brand - TopWeightLoss on the legacy domain, Treatments Hub on the hub.
-            Only one is shown; the swap is driven by the data-hub attribute. */}
-        <Link href={navHref(prefix, "/")} className="legacy-brand flex items-center">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.png" alt="TopWeightLoss.io" className="h-[36px] sm:h-[42px] w-auto" />
-        </Link>
+            Only one is shown; the swap is driven by the data-legacy attribute.
+            Once the legacy host 301s everywhere, the legacy markup is not
+            rendered at all: hidden "TopWeightLoss" text and alt on every hub
+            page was a stale brand signal for crawlers (Oct 14, 2026). */}
+        {!WEIGHT_LOSS_MIGRATED && (
+          <Link href={navHref(prefix, "/")} className="legacy-brand flex items-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo.png" alt="TopWeightLoss.io" className="h-[36px] sm:h-[42px] w-auto" />
+          </Link>
+        )}
         <Link href={navHref(prefix, "/")} className="hub-brand items-center">
           <HubLogo vertical={vertical} />
         </Link>

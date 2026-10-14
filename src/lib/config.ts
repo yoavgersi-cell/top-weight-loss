@@ -242,6 +242,9 @@ export interface BattleData {
   categories: BattleCategory[];
   features: BattleFeatureRow[];
   updatedAt?: string;
+  // Set only when the real creation date is known; older battles fall back
+  // to the template's long-standing default.
+  publishedAt?: string;
 }
 
 export interface SidebarBlock {
