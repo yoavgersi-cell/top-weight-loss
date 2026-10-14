@@ -66,7 +66,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         <Link href="/weight-loss/glp1-provider-comparison" className="font-semibold text-[#0C4B75] hover:underline">
           GLP-1 provider comparison
         </Link>{" "}
-        sets seven providers side by side on verified prices, Trustpilot patterns, Reddit experiences and cancellation terms, and the{" "}
+        sets eight providers side by side on verified prices, Trustpilot patterns, Reddit experiences and cancellation terms, and the{" "}
         <Link href="/weight-loss/glp1-weight-loss-statistics" className="font-semibold text-[#0C4B75] hover:underline">
           GLP-1 price index
         </Link>{" "}
