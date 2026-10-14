@@ -764,7 +764,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               <LastUpdated date={battleUpdatedAt} />
             </div>
             <MedicalReviewBar path={`/${ctx.vertical}/${battle.slug}`} className="mt-4 max-w-[760px]" />
-            <TrustDisclosure disclaimerHref={hubLink(ctx, "/disclaimer")} />
+            <TrustDisclosure disclaimerHref={"/weight-loss/disclaimer"} />
           </div>
         </section>
 
@@ -871,7 +871,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               <p className="border-t border-gray-100 px-4 py-2.5 text-[11.5px] text-gray-400">
                 Prices are the providers&rsquo; published rates at our last verification - confirm the
                 final figure at checkout, as offers change.{" "}
-                <Link href={hubLink(ctx, "/how-we-rank")} className="font-medium text-gray-500 underline underline-offset-2 hover:text-[#0C4B75]">
+                <Link href={"/weight-loss/how-we-rank"} className="font-medium text-gray-500 underline underline-offset-2 hover:text-[#0C4B75]">
                   How we verify prices
                 </Link>
               </p>

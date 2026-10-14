@@ -679,7 +679,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </ProviderCta>
           </div>
-          <TrustDisclosure disclaimerHref={hubLink(ctx, "/disclaimer")} />
+          <TrustDisclosure disclaimerHref={"/weight-loss/disclaimer"} />
         </div>
       </div>
 
@@ -1145,7 +1145,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           <p className="mb-1 text-[15px] font-bold text-[#191919]">Not sure if {provider.name} is right for you?</p>
           <p className="mb-4 text-[13px] text-gray-500">Take our free quiz and get a personalized provider recommendation.</p>
           <Link
-            href={hubLink(ctx, "/find-your-match")}
+            href={"/weight-loss/find-your-match"}
             className="inline-flex h-[42px] items-center justify-center gap-2 rounded-lg border border-[#0C4B75] px-6 text-[14px] font-bold text-[#0C4B75] transition-colors hover:bg-[#0C4B75]/5"
           >
             Find Your Match

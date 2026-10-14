@@ -192,6 +192,16 @@ export function proxy(req: NextRequest) {
     // shared one-off pages ("/<vertical>/about" → "/about").
     if (isVertical(first)) {
       if (segments.length === 2 && SHARED_ONE_OFF_PAGES.has(segments[1])) {
+        // The shared pages canonicalize to their /weight-loss/ URL (the only
+        // copy in the sitemap). Oct 14, 2026: another vertical's prefixed form
+        // (/hair-loss/disclaimer, /trt/find-your-match) used to answer 200 with
+        // a cross-vertical canonical - a duplicate URL for Google to crawl and
+        // fold; it now 301s to the canonical in one hop.
+        if (first !== "weight-loss") {
+          const url = req.nextUrl.clone();
+          url.pathname = `/weight-loss/${segments[1]}`;
+          return NextResponse.redirect(url, 301);
+        }
         return NextResponse.rewrite(new URL(`/${segments[1]}`, req.url));
       }
       return NextResponse.next();
