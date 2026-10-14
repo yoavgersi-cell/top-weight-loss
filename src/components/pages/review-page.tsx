@@ -597,7 +597,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
   // The evidence-led seven-provider comparison (Oct 12, 2026) covers these
   // weight-loss partners; link it from each of their reviews.
-  const COMPARED_PROVIDER_IDS = new Set(["wellmedr", "embody", "directmeds", "medvi", "trimrx", "altrx", "ro"]);
+  const COMPARED_PROVIDER_IDS = new Set(["wellmedr", "embody", "eden", "directmeds", "medvi", "trimrx", "altrx", "ro"]);
   const showComparisonLink = ctx.vertical === "weight-loss" && COMPARED_PROVIDER_IDS.has(provider.id);
 
   return (
@@ -1188,7 +1188,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       href="/weight-loss/glp1-provider-comparison"
                       className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-medium text-[#191919] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
                     >
-                      <span className="truncate">GLP-1 Telehealth Providers Compared: {provider.name} and six others on verified prices, Trustpilot and Reddit</span>
+                      <span className="truncate">GLP-1 Telehealth Providers Compared: {provider.name} and seven others on verified prices, Trustpilot and Reddit</span>
                       <span className="ml-auto shrink-0 text-[12px] text-gray-400">Comparison</span>
                     </Link>
                   )}

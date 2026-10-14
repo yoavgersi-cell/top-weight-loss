@@ -34,7 +34,7 @@ export const WEIGHT_LOSS_GUIDES: GuideLink[] = [
   {
     slug: "glp1-provider-comparison",
     title: "GLP-1 Providers Compared",
-    blurb: "Seven providers on verified prices, Trustpilot patterns, Reddit and refund terms.",
+    blurb: "Eight providers on verified prices, Trustpilot patterns, Reddit and refund terms.",
   },
   {
     slug: "glp1-provider-support",
