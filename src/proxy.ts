@@ -135,6 +135,7 @@ export function proxy(req: NextRequest) {
       const url = req.nextUrl.clone();
       url.protocol = "https:";
       url.host = "www.treatmentshub.com";
+      url.port = "";
       return NextResponse.redirect(url, 301);
     }
 
@@ -246,6 +247,7 @@ export function proxy(req: NextRequest) {
     const url = req.nextUrl.clone();
     url.protocol = "https:";
     url.host = "www.treatmentshub.com";
+    url.port = "";
     url.pathname = url.pathname === "/" ? "/hair-loss" : `/hair-loss${url.pathname}`;
     return NextResponse.redirect(url, 301);
   }
@@ -255,6 +257,7 @@ export function proxy(req: NextRequest) {
     const url = req.nextUrl.clone();
     url.protocol = "https:";
     url.host = "www.treatmentshub.com";
+    url.port = "";
     // Full-path content redirect (renamed/retired pages) resolves in the same
     // single 301 as the migration hop.
     if (PATH_REDIRECTS[url.pathname] !== undefined) {
