@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Clock, ArrowRight, Trophy } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
-import { VERTICALS } from "@/lib/config";
+import { VERTICALS, DEFAULT_ROBOTS } from "@/lib/config";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 
 function verticalName(id: string): string {
@@ -22,7 +22,7 @@ export async function articlesIndexMetadata(ctx: SiteContext): Promise<Metadata>
   return {
     title,
     description,
-    robots: ctx.noindex ? { index: false, follow: false } : undefined,
+    robots: ctx.noindex ? { index: false, follow: false } : DEFAULT_ROBOTS,
     alternates: {
       canonical: url,
     },

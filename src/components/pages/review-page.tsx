@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Check, X, ArrowRight, ArrowUpRight, Shield, Star, ArrowBigUp, ArrowBigDown, MessageCircle, ShieldCheck, UserRound, Users, Stethoscope, type LucideIcon } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
-import { latestUpdate, VERTICALS, NOINDEX_WL_REVIEW_SLUGS, NOINDEX_WL_BATTLE_SLUGS } from "@/lib/config";
+import { latestUpdate, VERTICALS, NOINDEX_WL_REVIEW_SLUGS, NOINDEX_WL_BATTLE_SLUGS, DEFAULT_ROBOTS } from "@/lib/config";
 import { SLUG_ALIASES } from "@/lib/slug-aliases";
 import {
   type SiteContext,
@@ -423,7 +423,7 @@ export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Me
       ? { index: false, follow: false }
       : isThinNoindex
         ? { index: false, follow: true }
-        : undefined,
+        : DEFAULT_ROBOTS,
     alternates: {
       canonical: url,
     },

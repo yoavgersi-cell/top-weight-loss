@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
-import { TEMPLATES_LAST_UPDATED, NOINDEX_WL_BATTLE_SLUGS } from "@/lib/config";
+import { TEMPLATES_LAST_UPDATED, NOINDEX_WL_BATTLE_SLUGS, DEFAULT_ROBOTS } from "@/lib/config";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
@@ -37,7 +37,7 @@ export function threeWayMetadata(trio: ThreeWayComparison, ctx: SiteContext): Me
       ? { index: false, follow: false }
       : isThinNoindex
         ? { index: false, follow: true }
-        : undefined,
+        : DEFAULT_ROBOTS,
     alternates: { canonical: url },
     openGraph: { title: trio.metaTitle, description: trio.description, url, type: "article" },
   };

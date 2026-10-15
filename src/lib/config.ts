@@ -369,6 +369,23 @@ export const isHiddenVertical = (id: string): boolean => HIDDEN_VERTICALS.includ
 // carousel/catalog and affiliate-only landing pages. NOTE: since Aug 2026 this
 // list no longer gates indexing - all provider reviews are indexable
 // (operator policy: impressions everywhere first, optimize what earns clicks).
+// Default robots directive for every indexable page. The root layout sets
+// this, but a page-level `robots: undefined` wipes it in the metadata merge,
+// so most pages emitted no robots meta at all. max-snippet:-1 and
+// max-image-preview:large tell Google (Search and AI Overviews) it may use
+// full-length text and large images from the page.
+export const DEFAULT_ROBOTS = {
+  index: true,
+  follow: true,
+  googleBot: {
+    index: true,
+    follow: true,
+    "max-video-preview": -1,
+    "max-image-preview": "large" as const,
+    "max-snippet": -1,
+  },
+};
+
 export const AFFILIATE_PROVIDER_IDS = [
   "altrx",
   "embody",
