@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Clock, ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
-import { NOINDEX_ARTICLE_SLUGS, latestUpdate, AFFILIATE_PROVIDER_IDS } from "@/lib/config";
+import { NOINDEX_ARTICLE_SLUGS, latestUpdate, AFFILIATE_PROVIDER_IDS, DEFAULT_ROBOTS } from "@/lib/config";
 import { PRODUCT_CATALOG } from "@/lib/product-catalog";
 import { enhanceArticleHtml } from "@/components/prose";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
@@ -191,7 +191,7 @@ export async function articleMetadata(slug: string, ctx: SiteContext): Promise<M
       ? { index: false, follow: false }
       : NOINDEX_ARTICLE_SLUGS.includes(slug)
         ? { index: false, follow: true }
-        : undefined,
+        : DEFAULT_ROBOTS,
     alternates: {
       canonical: url,
     },

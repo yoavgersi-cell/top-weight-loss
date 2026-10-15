@@ -3,7 +3,7 @@ import { MedicalReviewBar } from "@/components/medical-review-bar";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getConfig } from "@/lib/config-store";
-import { VERTICALS } from "@/lib/config";
+import { VERTICALS, DEFAULT_ROBOTS } from "@/lib/config";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { RatingBadge } from "@/components/rating-badge";
 
@@ -32,7 +32,7 @@ export async function reviewsIndexMetadata(ctx: SiteContext): Promise<Metadata> 
   return {
     title,
     description,
-    robots: ctx.noindex ? { index: false, follow: false } : undefined,
+    robots: ctx.noindex ? { index: false, follow: false } : DEFAULT_ROBOTS,
     alternates: {
       canonical: url,
     },

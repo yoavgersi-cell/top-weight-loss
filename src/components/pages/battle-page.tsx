@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Fragment } from "react";
 import Link from "next/link";
 import { getConfig } from "@/lib/config-store";
-import { CONTENT_LAST_UPDATED, latestUpdate, NOINDEX_WL_BATTLE_SLUGS } from "@/lib/config";
+import { CONTENT_LAST_UPDATED, latestUpdate, NOINDEX_WL_BATTLE_SLUGS, DEFAULT_ROBOTS } from "@/lib/config";
 import { splitSentences, BoldKeyFacts, ReadableProse } from "@/components/prose";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { ComparisonLayout } from "@/components/comparison-layout";
@@ -325,7 +325,7 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
     return {
       title: landing.seoTitle,
       description: landingDesc,
-      robots: ctx.noindex ? { index: false, follow: false } : undefined,
+      robots: ctx.noindex ? { index: false, follow: false } : DEFAULT_ROBOTS,
       alternates: { canonical: url },
       openGraph: {
         title: landing.seoTitle,
@@ -381,7 +381,7 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
       ? { index: false, follow: false }
       : isThinNoindex
         ? { index: false, follow: true }
-        : undefined,
+        : DEFAULT_ROBOTS,
     alternates: { canonical: url },
     openGraph: {
       title: metaTitle,
