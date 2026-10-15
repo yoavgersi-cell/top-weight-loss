@@ -65,7 +65,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
     name: trio.metaTitle,
     description: trio.description,
     url,
-    dateModified: TEMPLATES_LAST_UPDATED,
+    dateModified: trio.updatedAt ?? TEMPLATES_LAST_UPDATED,
     publisher: { "@type": "Organization", name: ctx.brandName, url: ctx.origin },
     mainEntity: {
       "@type": "ItemList",
@@ -110,7 +110,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
           <Breadcrumbs items={[{ label: "Home", href: hubLink(ctx, "/") }, { label: trio.title }]} />
           <h1 className="text-[26px] font-extrabold leading-[1.15] text-[#191919] sm:text-[36px]">{trio.title}</h1>
           <div className="mt-3">
-            <LastUpdated date={TEMPLATES_LAST_UPDATED} />
+            <LastUpdated date={trio.updatedAt ?? TEMPLATES_LAST_UPDATED} />
           </div>
           <MedicalReviewBar path={`/${ctx.vertical}/${trio.slug}`} className="mt-4 max-w-[760px]" />
           <TrustDisclosure disclaimerHref={"/weight-loss/disclaimer"} />
