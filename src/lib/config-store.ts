@@ -4333,12 +4333,13 @@ const trimrxRoBattle: BattleData = {
 const trimrxwellmedrBattle: BattleData = {
   slug: "trimrx-vs-wellmedr",
   updatedAt: "2026-10-15",
-  provider1Id: "trimrx",
-  provider2Id: "wellmedr",
-  title: "TrimRx vs wellmedr: Which Weight Loss Provider Is Right for You in 2026?",
+  provider1Id: "wellmedr",
+  provider2Id: "trimrx",
+  matchupLabel: "wellmedr vs TrimRx",
+  title: "wellmedr vs TrimRx: Which Weight Loss Provider Is Right for You in 2026?",
   subtitle: "We compared verified pricing, plan flexibility, support, and customer feedback so you can see which one fits you best.",
-  description: "TrimRx vs wellmedr: compare pricing, plans & reviews. wellmedr: $49/mo semaglutide, weight-loss warranty, 4.6 on Trustpilot. TrimRx: $149 flat, custom dosing, no contract. See which fits you.",
-  intro: "TrimRx and wellmedr both offer online GLP-1 weight-loss treatment, but they take different approaches. wellmedr pairs the lowest compounded prices in our ranking - semaglutide from $49/month and tirzepatide from $89/month, the same price at every dose - with board-certified specialists, a Medical Weight-Care Coach, a weight-loss warranty, and brand-name Ozempic and Zepbound on the shelf. TrimRx is built around custom dosing with unlimited provider check-ins, one flat $149/month price for semaglutide at every dose, and no long-term commitment. Here's how they compare for weight loss specifically.",
+  description: "wellmedr vs TrimRx: compare pricing, plans & reviews. wellmedr: $49/mo semaglutide, weight-loss warranty, 4.6 on Trustpilot. TrimRx: $149 flat, custom dosing, no contract. See which fits you.",
+  intro: "wellmedr and TrimRx both offer online GLP-1 weight-loss treatment, but they take different approaches. wellmedr pairs the lowest compounded prices in our ranking - semaglutide from $49/month and tirzepatide from $89/month, the same price at every dose - with board-certified specialists, a Medical Weight-Care Coach, a weight-loss warranty, and brand-name Ozempic and Zepbound on the shelf. TrimRx is built around custom dosing with unlimited provider check-ins, one flat $149/month price for semaglutide at every dose, and no long-term commitment. Here's how they compare for weight loss specifically.",
   verdict: "Both are credible online GLP-1 providers - but wellmedr takes this comparison. On verified pricing it is the clear value pick: $49/month semaglutide and $89/month tirzepatide against TrimRx's $149 and $259, and that gap holds at every dose. It also backs the program with a weight-loss warranty and carries the stronger public record - 4.6 across 2,188 Trustpilot reviews, with reviewers describing fast approvals and flexible, human support. TrimRx is the better fit if custom dosing with unlimited provider check-ins, free consultation, and tracked delivery that often lands next-day matter more to you than price - its care model is genuinely hands-on, and there is no long-term commitment. Just note the $49 wellmedr rate is tied to a 12-month plan, and its 3-5 business-day delivery is slower than TrimRx's.",
   verdictWinnerPoints: [
     "Lower verified pricing: semaglutide from $49/mo, tirzepatide from $89/mo, the same at every dose",
@@ -4354,7 +4355,7 @@ const trimrxwellmedrBattle: BattleData = {
   categories: [
     {
       name: "Pricing & Value",
-      winner: "provider2",
+      winner: "provider1",
       explanation: "wellmedr lists the lowest compounded prices in our ranking - semaglutide from $49/month and tirzepatide from $89/month, shipped every 4 weeks at the same price no matter your dose, with a standing $200-off offer. TrimRx charges $149/month for semaglutide (a $140 discount already applied, the same at every dose) and $259/month for tirzepatide, with the consultation, delivery, and check-ins included. The honest caveat on wellmedr's side: the $49 headline rate is tied to a 12-month plan.",
       supportingPoints: [
         "From $49/mo semaglutide, $89/mo tirzepatide (wellmedr)",
@@ -4365,7 +4366,7 @@ const trimrxwellmedrBattle: BattleData = {
     },
     {
       name: "Plan Flexibility",
-      winner: "provider1",
+      winner: "provider2",
       explanation: "TrimRx's flat monthly price comes with no long-term commitment, so you can start and stop on your own terms. wellmedr lets you message your provider anytime and adjust your plan, but its best rate rewards a 12-month commitment - TrimRx has the edge if you want to keep your options open.",
       supportingPoints: [
         "No long-term commitment (TrimRx)",
@@ -4376,7 +4377,7 @@ const trimrxwellmedrBattle: BattleData = {
     },
     {
       name: "Customer Feedback",
-      winner: "provider2",
+      winner: "provider1",
       explanation: "wellmedr averages 4.6 across 2,188 Trustpilot reviews, and the recent pages read like a support log in the best sense - fast approvals and a team willing to rework a plan when money gets tight. TrimRx averages 3.8 across 5,392 reviews: the successes in there are striking, but a meaningful minority report problems, so read both ends before signing up.",
       supportingPoints: [
         "4.6 across 2,188 Trustpilot reviews (wellmedr)",
@@ -4387,7 +4388,7 @@ const trimrxwellmedrBattle: BattleData = {
     },
     {
       name: "Range Beyond Weight Loss",
-      winner: "provider2",
+      winner: "provider1",
       explanation: "wellmedr is a broader platform - alongside compounded GLP-1 it offers brand-name Ozempic and Zepbound, plus TRT, NAD+, hair, and sexual health, and its weight-loss line includes a microdose pairing semaglutide with NAD+ and Vitamin B12. TrimRx focuses specifically on GLP-1 weight-loss treatment.",
       supportingPoints: [
         "Brand-name Ozempic and Zepbound available (wellmedr)",
@@ -4409,13 +4410,13 @@ const trimrxwellmedrBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "$149/mo semaglutide · $259/mo tirzepatide", provider2Value: "$49/mo semaglutide · $89/mo tirzepatide", highlight: "provider2" },
+    { feature: "Starting Price", provider1Value: "$49/mo semaglutide · $89/mo tirzepatide", provider2Value: "$149/mo semaglutide · $259/mo tirzepatide", highlight: "provider1" },
     { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
-    { feature: "Medications", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "Compounded GLP-1/GIP, NAD+/B12 microdose, brand-name Ozempic & Zepbound", highlight: "provider2" },
-    { feature: "Trustpilot", provider1Value: "3.8 across 5,392 reviews", provider2Value: "4.6 across 2,188 reviews", highlight: "provider2" },
-    { feature: "Commitment", provider1Value: "No long-term commitment", provider2Value: "Best rate on a 12-month plan", highlight: "provider1" },
-    { feature: "Delivery", provider1Value: "Tracked, often next day", provider2Value: "3-5 business days", highlight: "provider1" },
-    { feature: "Beyond Weight Loss", provider1Value: "GLP-1 weight loss focus", provider2Value: "TRT, NAD+, hair, sexual health", highlight: "provider2" },
+    { feature: "Medications", provider1Value: "Compounded GLP-1/GIP, NAD+/B12 microdose, brand-name Ozempic & Zepbound", provider2Value: "Compounded semaglutide & tirzepatide", highlight: "provider1" },
+    { feature: "Trustpilot", provider1Value: "4.6 across 2,188 reviews", provider2Value: "3.8 across 5,392 reviews", highlight: "provider1" },
+    { feature: "Commitment", provider1Value: "Best rate on a 12-month plan", provider2Value: "No long-term commitment", highlight: "provider2" },
+    { feature: "Delivery", provider1Value: "3-5 business days", provider2Value: "Tracked, often next day", highlight: "provider2" },
+    { feature: "Beyond Weight Loss", provider1Value: "TRT, NAD+, hair, sexual health", provider2Value: "GLP-1 weight loss focus", highlight: "provider1" },
   ],
 };
 

@@ -225,9 +225,10 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "Medvi ($99/mo promo all-inclusive, personal support) vs altRx ($89/mo flat + brand-name options with BNPL). Pricing, medications and support compared honestly.",
   },
   "trimrx-vs-wellmedr": {
-    title: "TrimRx vs wellmedr (2026): $149 vs $49 GLP-1 Compared",
+    // Oct 15, 2026: wellmedr leads (named winner, shown first on the page).
+    title: "wellmedr vs TrimRx (2026): $49 vs $149 GLP-1 Compared",
     description:
-      "TrimRx ($149/mo, flexible no-contract plans) vs wellmedr ($49/mo semaglutide at every dose, weight-loss warranty). We compared price, flexibility and support.",
+      "wellmedr ($49/mo semaglutide at every dose, weight-loss warranty, 4.6 on Trustpilot) vs TrimRx ($149/mo flat, custom dosing, no contract). We compared price, flexibility and support.",
   },
   "trimrx-vs-ro": {
     title: "TrimRx vs ro (2026): Which GLP-1 Provider Fits You?",
