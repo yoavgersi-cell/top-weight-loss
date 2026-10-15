@@ -138,6 +138,9 @@ export interface ThreeWayComparison {
   intro: string;
   verdict: string;
   faqs: ThreeWayFaq[];
+  // Set when the trio's editorial content was last revised; otherwise the
+  // template-wide date applies.
+  updatedAt?: string;
 }
 
 export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
@@ -275,19 +278,25 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
   {
     slug: "wellmedr-vs-embody-vs-trimrx",
     providerIds: ["wellmedr", "embody", "trimrx"],
+    updatedAt: "2026-10-15",
     title: "wellmedr vs embody vs TrimRx: Price, Freedom, Flexibility",
     metaTitle: "wellmedr vs embody vs TrimRx (2026): $49 vs $69 vs $149",
     description:
-      "wellmedr ($49, 12-month plan), embody ($69 flat) and TrimRx ($149, no contract) compared on real GLP-1 prices, commitment terms, shipping and support.",
+      "wellmedr ($49 semaglutide, weight-loss warranty, 4.6 on Trustpilot) vs embody ($69 flat, 1-2 day shipping) vs TrimRx ($149, no contract, custom dosing) on real GLP-1 prices, terms and support.",
     intro:
-      "This trio spans the market's price range - $49 to $149 for the same compounded semaglutide - which makes it a clean test of what the extra money buys. The answer: commitment structure. wellmedr trades a 12-month plan for the lowest price, embody charges $10 more for total freedom, and TrimRx charges a premium for a no-contract model with optional multi-month discounts and closer clinical guidance.",
+      "This trio spans the market's price range - $49 to $149 for the same compounded semaglutide - which makes it a clean test of what the extra money buys. wellmedr sets the floor: $49/month semaglutide and $89 tirzepatide, the same price at every dose, with a weight-loss warranty, a Medical Weight-Care Coach on every plan, and brand-name Ozempic and Zepbound if you ever want them. embody charges $20 more for total freedom - flat, no commitment, shipped in 1-2 days, refunded if you're not approved. TrimRx charges a premium for custom dosing with unlimited provider check-ins and a no-contract model.",
     verdict:
-      "For most budget-driven shoppers this comes down to wellmedr vs embody: $49 with a year's commitment, or $69 with none - both legitimate, both dose-flat. TrimRx earns its $149 only if its specific mix matters to you: month-to-month freedom plus ongoing clinical support through dose changes, without the budget tier's leaner service. If you can't articulate why you'd pay the difference, don't.",
+      "wellmedr is our pick of the three. It has the lowest verified price at every dose, backs the program with a weight-loss warranty, and carries the strongest public record here - 4.6 across 2,188 Trustpilot reviews, with reviewers describing fast approvals and flexible, human support. The honest condition: the $49 rate locks on a 12-month plan, so it rewards people who have decided to commit. If you haven't, embody is the right second choice - $69 flat with no commitment, 1-2 day shipping, and a full refund if a provider doesn't approve you. TrimRx earns its $149 when its specific mix matters to you: custom dosing adjusted by your provider, unlimited check-ins, free consultation, and month-to-month freedom. All three run licensed-provider review and dispense through regulated pharmacies, so there is no legitimacy gap - only a difference in what you are paying for.",
     faqs: [
+      {
+        question: "Which is best overall: wellmedr, embody or TrimRx?",
+        answer:
+          "wellmedr, on verified pricing and public record: $49/month semaglutide and $89 tirzepatide at every dose, a weight-loss warranty, and 4.6 across 2,188 Trustpilot reviews. Its best rate takes a 12-month plan; if you want no commitment, embody at $69 flat with 1-2 day shipping is the natural alternative, and TrimRx is the choice if custom dosing with unlimited provider check-ins is worth $149 to you.",
+      },
       {
         question: "Why does TrimRx cost more than wellmedr and embody?",
         answer:
-          "TrimRx prices at $149/month, the same at every dose, with no long-term contract, multi-month discounts, and clinical support included through treatment. wellmedr ($49 on a 12-month plan) and embody ($69 flat) run leaner support models at lower prices. All three prescribe the same compounded semaglutide after a licensed-provider review.",
+          "TrimRx prices at $149/month, the same at every dose, with no long-term contract, custom dosing set by your provider, unlimited check-ins, a free consultation and tracked delivery included. wellmedr ($49 on a 12-month plan) and embody ($69 flat) run leaner models at lower prices. All three prescribe the same compounded semaglutide after a licensed-provider review.",
       },
       {
         question: "Which is best if I don't want any commitment?",
