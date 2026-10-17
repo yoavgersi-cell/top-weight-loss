@@ -19,13 +19,21 @@ interface ComparisonLayoutProps {
   // Optional E-E-A-T byline strip rendered directly under the hero.
   byline?: React.ReactNode;
   children?: React.ReactNode;
+  /** Card intro text: the full review intro (ranking page) or the one-line summary (keyword landings). */
+  cardIntroMode?: "full" | "short";
+  /** Page-specific verified price line under each card's starting price (keyword landings). */
+  priceNotes?: Record<string, string>;
+  /** Render only these providers, renumbered 1..N (a molecule landing lists the providers that publish it). */
+  onlyProviderIds?: string[];
 }
 
-export function ComparisonLayout({ config, heroOverrides, linkPrefix = "", byline, children }: ComparisonLayoutProps) {
+export function ComparisonLayout({ config, heroOverrides, linkPrefix = "", byline, children, cardIntroMode = "full", priceNotes, onlyProviderIds }: ComparisonLayoutProps) {
   const { providerOrder, positions } = config.ranking;
 
-  const displayList = providerOrder
-    .map((id, index) => {
+  const shown = onlyProviderIds ? providerOrder.filter((id) => onlyProviderIds.includes(id)) : providerOrder;
+  const displayList = shown
+    .map((id, displayIdx) => {
+      const index = providerOrder.indexOf(id);
       const provider = config.providers.find((p) => p.id === id);
       if (!provider) return null;
       const position = positions[index] || positions[positions.length - 1];
@@ -38,13 +46,14 @@ export function ComparisonLayout({ config, heroOverrides, linkPrefix = "", bylin
         highlights: provider.highlights,
         affiliateUrl: provider.affiliateUrl,
         ctaText: provider.ctaText,
-        rank: index + 1,
+        rank: displayIdx + 1,
         rating: position.score,
         ratingLabel: position.label,
         starRating: position.starRating,
         badge: position.badge,
         trustpilotRating: provider.trustpilotRating,
         trustpilotReviewCount: provider.trustpilotReviewCount,
+        priceNote: priceNotes?.[provider.id],
       };
     })
     .filter(Boolean) as Array<{
@@ -62,9 +71,10 @@ export function ComparisonLayout({ config, heroOverrides, linkPrefix = "", bylin
       badge?: string;
       trustpilotRating?: string;
       trustpilotReviewCount?: string;
+      priceNote?: string;
     }>;
 
-  const sidebarProviders = providerOrder
+  const sidebarProviders = shown
     .map((id) => config.providers.find((p) => p.id === id))
     .filter(Boolean) as typeof config.providers;
 
@@ -94,6 +104,7 @@ export function ComparisonLayout({ config, heroOverrides, linkPrefix = "", bylin
                   product={product}
                   review={(config.reviews ?? []).find((r) => r.providerId === product.id)}
                   linkPrefix={linkPrefix}
+                  introMode={cardIntroMode}
                 />
                 {idx === 0 && config.cardSocialProof && (
                   <SocialProofBand number={config.cardSocialProof.number} text={config.cardSocialProof.text} />
