@@ -32,10 +32,16 @@ export function RichComparisonCard({
   product,
   review,
   linkPrefix = "",
+  introMode = "full",
 }: {
   product: RichCardProduct;
   review?: ReviewData;
   linkPrefix?: string;
+  /** "short" uses the review's one-line summary as the intro. The paragraph is
+   *  clamped to 2-3 lines either way, so the visible card is the same; the
+   *  difference is ~150 fewer words of review text repeated in the HTML of
+   *  every page that embeds the card (Oct 2026 duplicate-text pass). */
+  introMode?: "full" | "short";
 }) {
   const stars = product.starRating ?? Math.round(product.rating / 2);
   const treatments = review?.treatmentOptions ?? [];
@@ -43,7 +49,10 @@ export function RichComparisonCard({
   const pills = (review?.trustBadges ?? []).slice(0, 3);
   const startingPlan = review?.pricingPlans?.[0];
   const reviewHref = `${linkPrefix}/reviews/${review?.slug ?? product.id}`;
-  const intro = review?.reviewIntro ?? review?.shortSummary ?? product.tagline;
+  const intro =
+    introMode === "short"
+      ? (review?.shortSummary ?? product.tagline)
+      : (review?.reviewIntro ?? review?.shortSummary ?? product.tagline);
 
   // FDA disclaimer only where it's actually warranted - i.e. the offering
   // includes compounded medication. Detected from real copy, never assumed.
