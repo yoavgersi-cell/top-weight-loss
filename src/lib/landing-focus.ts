@@ -39,13 +39,14 @@ const isBrand = (p: CatalogProduct) => /^brand-name/i.test(p.name);
 const byPrice = (a: CatalogProduct, b: CatalogProduct) =>
   (Number(a.price.replace(/[^0-9]/g, "")) || 9999) - (Number(b.price.replace(/[^0-9]/g, "")) || 9999);
 
-function compoundedLine(providerId: string, medication: Medication): string | undefined {
+function compoundedLine(providerId: string, medication: Medication): { text: string; source: "catalog" | "fact" } | undefined {
   const p = PRODUCT_CATALOG.filter((x) => x.providerId === providerId && x.medication === medication && !isBrand(x)).sort(byPrice)[0];
-  if (p) return `${cap(medication)} ${p.price}/mo · ${p.priceNote}`;
+  if (p) return { text: `${cap(medication)} ${p.price}/mo · ${p.priceNote}`, source: "catalog" };
   // Providers the catalog does not carry (e.g. ro) fall back to the verified
-  // fact line published on the three-way comparisons.
+  // fact line published on the three-way comparisons - which may itself be a
+  // brand-name figure, so callers never label it "compounded".
   const fact = TRIO_FACTS[providerId]?.[medication];
-  return fact ? `${cap(medication)}: ${fact}` : undefined;
+  return fact ? { text: `${cap(medication)}: ${fact}`, source: "fact" } : undefined;
 }
 
 function brandLine(providerId: string, brand: "Ozempic" | "Wegovy"): string | undefined {
@@ -67,12 +68,20 @@ export function landingFocusFor(
     let line: string | undefined;
     if (focus.brand && focus.medication) {
       // Brand page: the brand price where the provider sells it, otherwise the
-      // compounded alternative for the same molecule.
+      // compounded alternative for the same molecule. A fact-line fallback is
+      // printed as-is (it may be the brand itself, e.g. ro's Wegovy pen).
       const b = brandLine(id, focus.brand);
       const c = compoundedLine(id, focus.medication);
-      line = b ? (c ? `${b} · compounded from ${c.split(" ")[1]}` : b) : c ? `No brand-name ${focus.brand}; compounded ${c.charAt(0).toLowerCase()}${c.slice(1)}` : undefined;
+      const compounded = c?.source === "catalog" ? c.text : undefined;
+      line = b
+        ? compounded
+          ? `${b} · compounded from ${compounded.split(" ")[1]}`
+          : b
+        : compounded
+          ? `No brand-name ${focus.brand}; compounded ${compounded.charAt(0).toLowerCase()}${compounded.slice(1)}`
+          : c?.text;
     } else if (focus.medication) {
-      line = compoundedLine(id, focus.medication);
+      line = compoundedLine(id, focus.medication)?.text;
     } else {
       // Generic pages: both molecules' verified figures on one line.
       const s = PRODUCT_CATALOG.filter((x) => x.providerId === id && x.medication === "semaglutide" && !isBrand(x)).sort(byPrice)[0];
