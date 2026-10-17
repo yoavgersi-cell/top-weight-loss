@@ -17,7 +17,10 @@ export const metadata: Metadata = {
   // Site name: Google derives the SERP site name from the homepage's WebSite
   // schema `name`, og:site_name and the <title> suffix - all three must agree.
   // The chosen display name is "Treatments Hub" (two words); the one-word
-  // spelling and the bare domain are declared as alternateName in the schema.
+  // spelling is declared as alternateName. The bare domain was removed from
+  // alternateName on Oct 17, 2026: Google was showing "treatmentshub.com" as
+  // the site name in results, and listing the domain as an alternate name
+  // invites exactly that choice.
   // Inner pages carry no " | Treatments Hub" suffix: it pushed 255 of 279
   // titles past 60 characters (SERP truncation), and Google shows the site
   // name separately from og:site_name / WebSite schema. The homepage title
@@ -117,7 +120,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Treatments Hub",
-              alternateName: ["TreatmentsHub", "treatmentshub.com"],
+              alternateName: ["TreatmentsHub"],
               url: "https://www.treatmentshub.com",
               areaServed: { "@type": "Country", name: "United States" },
               email: "contact@treatmentshub.com",
@@ -135,7 +138,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "Treatments Hub",
-              alternateName: ["TreatmentsHub", "treatmentshub.com"],
+              alternateName: ["TreatmentsHub"],
               url: "https://www.treatmentshub.com",
               description: "Compare trusted treatment providers side by side across weight loss, hair loss, TRT and HRT",
             }),
