@@ -1235,7 +1235,7 @@ const articles: ArticleData[] = [
     slug: "veradermics-vdphl01",
     title: "Veradermics' VDPHL01: The Hair Loss Pill Everyone's Searching (2026)",
     description:
-      "VDPHL01 is an extended-release oral minoxidil in late-stage trials - potentially the first FDA-approved oral minoxidil for hair loss, and the first hair-loss pill approved for women. What the company reports, the timeline, and what you can do today.",
+      "VDPHL01, an extended-release oral minoxidil in late-stage trials, could be the first FDA-approved oral minoxidil for hair loss. What is known so far.",
     category: "Science",
     readTime: "6 min read",
     publishedAt: "2026-08-30",
@@ -2293,7 +2293,7 @@ const articles: ArticleData[] = [
   // framing throughout.
   {
     slug: "norwood-scale",
-    title: "The Norwood Scale: The Stages of Male Pattern Baldness, Explained (2026)",
+    title: "The Norwood Scale: Stages of Male Pattern Baldness (2026)",
     description:
       "The Norwood scale is how clinicians describe male pattern hair loss, from a maturing hairline to advanced balding. What each stage looks like, why it matters for treatment, and why earlier is easier.",
     category: "Guide",
@@ -2401,9 +2401,9 @@ const articles: ArticleData[] = [
   },
   {
     slug: "microneedling-for-hair-loss",
-    title: "Microneedling for Hair Loss: Does the Derma Roller Actually Work? (2026)",
+    title: "Microneedling for Hair Loss: Does a Derma Roller Work? (2026)",
     description:
-      "Microneedling is having a moment in hair-loss circles. What the evidence genuinely supports, why it's an add-on rather than a standalone fix, and the safety caveats before you roll spikes on your scalp.",
+      "What the evidence genuinely supports for microneedling, why it is an add-on rather than a standalone fix, and the safety caveats before you start.",
     category: "Advice",
     readTime: "6 min read",
     publishedAt: "2026-09-08",
@@ -2439,7 +2439,7 @@ const articles: ArticleData[] = [
     slug: "saw-palmetto-hair-loss",
     title: "Saw Palmetto for Hair Loss: What the Evidence Actually Shows (2026)",
     description:
-      "Saw palmetto is marketed as a natural DHT blocker and finasteride alternative. The honest picture: weaker and less consistent evidence, not an equivalent - and why we don't recommend it as a substitute.",
+      "Saw palmetto is marketed as a natural DHT blocker. The evidence is weaker and less consistent than finasteride's, and why we don't recommend it as a substitute.",
     category: "Advice",
     readTime: "6 min read",
     publishedAt: "2026-09-08",
@@ -2475,7 +2475,7 @@ const articles: ArticleData[] = [
     slug: "menopause-hair-loss",
     title: "Menopause and Hair Loss: Why It Happens and What Helps (2026)",
     description:
-      "Hair thinning is one of menopause's least-discussed changes. Why the hormone shift thins women's hair, how it differs from male pattern loss, and the treatments - hormonal and hair-specific - that help.",
+      "Why the menopause hormone shift thins women's hair, how it differs from male pattern loss, and the hormonal and hair-specific treatments that help.",
     category: "Science",
     readTime: "6 min read",
     publishedAt: "2026-09-08",
@@ -2509,7 +2509,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "does-finasteride-lower-testosterone",
-    title: "Does Finasteride Lower Testosterone? What It Actually Does to Your Hormones (2026)",
+    title: "Does Finasteride Lower Testosterone? (2026 Evidence Review)",
     description:
       "The most common fear about finasteride, answered honestly. Why finasteride lowers DHT - not testosterone - and can even nudge testosterone slightly up, plus where the real side-effect questions lie.",
     category: "Science",

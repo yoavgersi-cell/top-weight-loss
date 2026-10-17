@@ -107,9 +107,15 @@ async function ensureServer() {
   throw new Error(`server did not come up on ${BASE}`);
 }
 
-const attr = (tag, name) => (tag.match(new RegExp(`\\s${name}="([^"]*)"`)) || [])[1] ?? "";
+// Lengths are measured on decoded text (&amp; is one character in a SERP).
+const decode = (t) =>
+  t
+    .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, "\"")
+    .replace(/&#x27;|&#39;|&apos;/g, "'").replace(/&rsquo;/g, "\u2019").replace(/&lsquo;/g, "\u2018")
+    .replace(/&ldquo;/g, "\u201c").replace(/&rdquo;/g, "\u201d").replace(/&nbsp;/g, " ").replace(/&ndash;/g, "\u2013").replace(/&mdash;/g, "\u2014");
+const attr = (tag, name) => decode((tag.match(new RegExp(`\\s${name}="([^"]*)"`)) || [])[1] ?? "");
 function parse(html) {
-  const title = (html.match(/<title[^>]*>([^<]*)<\/title>/) || [])[1]?.trim() ?? "";
+  const title = decode((html.match(/<title[^>]*>([^<]*)<\/title>/) || [])[1]?.trim() ?? "");
   const canonical = attr(html.match(/<link[^>]*rel="canonical"[^>]*>/)?.[0] ?? "", "href");
   const robots = attr(html.match(/<meta[^>]*name="robots"[^>]*>/)?.[0] ?? "", "content");
   const description = attr(html.match(/<meta[^>]*name="description"[^>]*>/)?.[0] ?? "", "content");

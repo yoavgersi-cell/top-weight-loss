@@ -668,7 +668,7 @@ const reviews: ReviewData[] = [
     slug: "gala",
     providerId: "gala",
     shortSummary:
-      "Doctor-prescribed hormone therapy at a flat $69/month - no membership, no insurance, no price rise at dose changes - with estradiol pill or patch, progesterone, vaginal estradiol and non-hormonal options after an online provider review.",
+      "Flat $69/month doctor-prescribed hormone therapy - no membership, no price rise at dose changes - estradiol pill or patch, progesterone and vaginal estradiol.",
     reviewIntro:
       "Gala Health runs a straightforward telehealth model for hormone care: an online evaluation reviewed by a licensed provider, prescription treatment shipped to your door if appropriate, and ongoing management through its app. The HRT line is priced as simply as it gets: $69/month, described on Gala's hormone-therapy page as flat for as long as you stay - no membership fee, no insurance, no price rise when your dose changes, free discreet shipping in 1-2 days, FSA/HSA accepted, cancel anytime - with estradiol as a pill or patch, progesterone, vaginal estradiol and non-hormonal options on the menu. Its claimed Trustpilot profile averages 4.6 across 4,212 reviews - a large record, with one honest caveat: the profile covers the whole Gala platform, and most recent reviewers are GLP-1 weight-loss customers rather than menopause patients. The recent page splits the way a high-volume telehealth service often does: praise for a quick intake, an easy app and responsive support, next to a cluster of 1- and 2-star reviews about fulfillment delays, a wrong-address shipment and a disputed annual prepayment refund - all quoted in full below. Gala doesn't publish a per-product price list the way Winona does; its promise is one flat number, with the exact plan shown before you pay.",
     keyFeatures: [
@@ -1139,7 +1139,7 @@ const articles: ArticleData[] = [
   // established knowledge only; no invented figures; clinician-decides framing.
   {
     slug: "hrt-side-effects",
-    title: "HRT Side Effects: What's Common, What's Manageable, and What's Serious (2026)",
+    title: "HRT Side Effects: Common, Manageable and Serious (2026)",
     description:
       "The side effects women actually report on HRT, which ones usually settle as the body adjusts, which ones a dose or delivery change fixes, and the warning signs that mean call your clinician.",
     category: "Science",
@@ -1179,7 +1179,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "does-hrt-cause-weight-gain",
-    title: "Does HRT Cause Weight Gain? Separating Menopause From the Medication (2026)",
+    title: "Does HRT Cause Weight Gain? Menopause vs the Medication (2026)",
     description:
       "The honest answer to one of the most-searched HRT fears: what menopause itself does to weight, what HRT does and doesn't do, and why the two get blamed for each other.",
     category: "Science",
@@ -1291,9 +1291,9 @@ const articles: ArticleData[] = [
   },
   {
     slug: "non-hormonal-menopause-treatment",
-    title: "Non-Hormonal Menopause Treatments: The Options When HRT Isn't Right (2026)",
+    title: "Non-Hormonal Menopause Treatments When HRT Isn't Right (2026)",
     description:
-      "HRT is the most effective menopause treatment, but it isn't for everyone. The legitimate non-hormonal routes - prescription and lifestyle - laid out honestly, without hype and without selling supplements.",
+      "HRT is the most effective menopause treatment, but it isn't for everyone. The legitimate non-hormonal routes, prescription and lifestyle, laid out without hype.",
     category: "Advice",
     readTime: "7 min read",
     publishedAt: "2026-09-08",

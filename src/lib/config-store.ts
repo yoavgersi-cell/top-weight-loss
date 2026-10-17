@@ -2076,7 +2076,7 @@ const defaultReviews: ReviewData[] = [
     providerId: "bmimd",
     updatedAt: "2026-09-10",
     shortSummary:
-      "Established telehealth GLP-1 provider shipping to 49 states, with a 4.4 Trustpilot average across 870 reviews - compounded semaglutide and tirzepatide (plus microdose options), delivered cold-chain, with responsive support.",
+      "Established telehealth GLP-1 provider shipping to 49 states - compounded semaglutide and tirzepatide delivered cold-chain, 4.4 across 870 Trustpilot reviews.",
     reviewIntro:
       "bmiMD is a New York-based telehealth company offering compounded GLP-1 weight-loss treatment - semaglutide and tirzepatide, including microdose versions - prescribed online and shipped to your door in most US states. It carries a solid track record: 4.4 on Trustpilot across 870 reviews, where the recurring themes are responsive customer service and reliable, properly cold-packed delivery. \"Medication works as it should. Always delivered on time and packaged properly with cold packs,\" writes one recent reviewer; another reports going \"from 238 to 213 in 3 weeks.\" The flow is the standard cash-pay one - an online medical intake reviewed by a licensed provider, with a money-back guarantee if you're not approved. Two honest notes before the details: bmiMD publishes its current pricing at checkout rather than a single headline rate, so confirm the plan cost on its site, and support is handled through messaging rather than a phone line.",
     keyFeatures: [

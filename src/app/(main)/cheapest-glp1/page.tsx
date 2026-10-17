@@ -21,7 +21,7 @@ const DESCRIPTION =
   "The cheapest GLP-1 programs of 2026, ranked by verified prices: compounded semaglutide from $49/month, tirzepatide from $89/month - conditions disclosed.";
 
 export const metadata: Metadata = {
-  title: { absolute: `${TITLE} | Treatments Hub` },
+  title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL },
   openGraph: {

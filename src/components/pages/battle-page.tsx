@@ -238,7 +238,7 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   "medvi-vs-ro": {
     title: "Medvi vs ro (2026): $99 All-In or Membership + Brand-Name?",
     description:
-      "Medvi: $99/mo promo all-inclusive compounded GLP-1 (semaglutide) with provider support. ro: $39 first-month membership then $74-149/mo plus brand-name Wegovy/Zepbound billed separately. Full comparison.",
+      "Medvi: $99/mo promo, all-inclusive compounded semaglutide. ro: $39 first-month membership, then $74-149/mo, plus brand-name Wegovy/Zepbound billed separately.",
   },
   "altrx-vs-ro": {
     title: "altRx vs ro (2026): $89 Flat GLP-1 or Membership + Brand-Name?",
@@ -367,7 +367,7 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
   const battleCategory = BATTLE_CATEGORY_BY_VERTICAL[ctx.vertical];
   const metaTitle = override?.title
     ? titleCaseOverrideTitle(override.title)
-    : `${titleCaseMatchup(baseLabel)} (2026): ${battleCategory ? `${battleCategory} ` : ""}Cost, Plans & Meds Compared`;
+    : `${titleCaseMatchup(baseLabel)} (2026): ${battleCategory && !baseLabel.toLowerCase().includes(battleCategory.toLowerCase()) ? `${battleCategory} ` : ""}Cost, Plans & Meds Compared`;
   const metaDescription = override?.description ?? battle.description;
 
   // Thin, low-demand matchups (Tier-2-brand pairs) are noindex,follow so crawl

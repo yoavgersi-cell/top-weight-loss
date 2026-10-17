@@ -31,7 +31,7 @@ const earliest = entries[entries.length - 1]?.date ?? PRICE_INDEX_VERIFIED;
 
 export const metadata: Metadata = {
   title: `GLP-1 Price Changes (2026): ${entries.length} Logged Changes to Online Provider Prices`,
-  description: `A dated log of every verified change to online GLP-1 provider prices - semaglutide and tirzepatide - with what we listed before and after, and each provider's current rate. ${entries.length} entries since ${monthLabel(earliest)}; index last verified ${longDate(PRICE_INDEX_VERIFIED)}.`,
+  description: `A dated log of every verified change to online GLP-1 prices - semaglutide and tirzepatide - with before and after. ${entries.length} entries since ${monthLabel(earliest)}; index verified ${longDate(PRICE_INDEX_VERIFIED)}.`,
   alternates: { canonical: CANONICAL },
   openGraph: { title: `GLP-1 Price Changes (2026): ${entries.length} Logged Changes`, description: "Every verified change to online GLP-1 provider prices, dated, with before and after.", url: CANONICAL, type: "article" },
 };

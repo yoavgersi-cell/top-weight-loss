@@ -23,12 +23,12 @@ export const revalidate = 60;
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/weight-loss-pills";
 
 export const metadata: Metadata = {
-  title: "Weight Loss Pills 2026: Wegovy Pill, Foundayo, Rybelsus & Other Rx Options",
+  title: "Weight Loss Pills 2026: Wegovy Pill, Foundayo, Rybelsus & More",
   description:
-    "Prescription weight loss pills in 2026: the FDA-approved GLP-1 pills (Wegovy pill, Foundayo, Rybelsus) with trial results and published prices, the other FDA-approved pills (Qsymia, Contrave, phentermine, orlistat), and compounded oral options - clearly labelled.",
+    "Prescription weight loss pills in 2026: the FDA-approved GLP-1 pills (Wegovy pill, Foundayo, Rybelsus), other approved pills, and compounded oral options.",
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "Weight Loss Pills 2026: Wegovy Pill, Foundayo, Rybelsus & Other Rx Options",
+    title: "Weight Loss Pills 2026: Wegovy Pill, Foundayo, Rybelsus & More",
     description:
       "The FDA-approved GLP-1 pills, the other prescription pills, and compounded oral options - results, prices and how they compare to injections.",
     url: CANONICAL,
