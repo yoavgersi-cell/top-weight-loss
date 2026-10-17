@@ -30,7 +30,7 @@ const TITLE = "GLP-1 Provider Comparison 2026: Prices, Reviews, Real Costs";
 const DESCRIPTION =
   "Eight GLP-1 telehealth providers compared on verified pricing, what you keep paying, Trustpilot patterns, Reddit experiences and cancellation terms. Updated Oct 2026.";
 const PUBLISHED = "2026-10-12";
-const UPDATED = "2026-10-14";
+const UPDATED = "2026-10-17";
 const TRUSTPILOT_CHECKED = "October 12, 2026";
 const TERMS_REVIEWED = "October 12, 2026";
 
@@ -214,7 +214,7 @@ const SECTIONS: Section[] = [
     ),
     pricing: (
       <>
-        <strong className="text-[#191919]">Semaglutide is $49 a month and tirzepatide $89 a month on the twelve-month plan</strong>, shipped every four weeks, verified September 21, 2026 (both figures came down on September 14, from $59 and $99). Brand-name Ozempic is $1,399 and Zepbound $1,599 a month. Shipping is standard, three to five business days. There is no membership. The plan is the condition: the $49 rate belongs to the twelve-month commitment, and reviewers who pay month to month report $129. A year on the plan is $588 for semaglutide, the lowest year-one figure on this page.
+        <strong className="text-[#191919]">Semaglutide is $49 a month and tirzepatide $89 a month on the twelve-month plan</strong>, shipped every four weeks, verified October 16, 2026 (both figures came down on September 14, from $59 and $99). Brand-name Ozempic is $1,399 and Zepbound $1,599 a month. Shipping is standard, three to five business days. There is no membership. The plan is the condition: the $49 rate belongs to the twelve-month commitment, and reviewers who pay month to month report $129. A year on the plan is $588 for semaglutide, the lowest year-one figure on this page.
       </>
     ),
     support:
@@ -250,7 +250,7 @@ const SECTIONS: Section[] = [
     ),
     pricing: (
       <>
-        <strong className="text-[#191919]">Semaglutide $69 a month (regular $79) and tirzepatide $119 (regular $129), month to month</strong>, verified September 21, 2026. Free one-to-two-day cold-chain shipping. No membership. <strong className="text-[#191919]">A full refund if a provider does not approve treatment.</strong> embody is LegitScript-certified and names US-based 503A compounding pharmacies, the clearest pharmacy statement among the compounded providers here.
+        <strong className="text-[#191919]">Semaglutide $69 a month (regular $79) and tirzepatide $119 (regular $129), month to month</strong>, verified October 16, 2026. Free one-to-two-day cold-chain shipping. No membership. <strong className="text-[#191919]">A full refund if a provider does not approve treatment.</strong> embody is LegitScript-certified and names US-based 503A compounding pharmacies, the clearest pharmacy statement among the compounded providers here.
       </>
     ),
     support:
@@ -326,7 +326,7 @@ const SECTIONS: Section[] = [
     ),
     pricing: (
       <>
-        <strong className="text-[#191919]">$147 a month for either molecule in either format, the same at every dose</strong>, verified September 21, 2026. Free one-to-two-day shipping. No membership, no hidden fees, cancel anytime. The needle-free drops cost the same $147, which no other provider here matches (Medvi&rsquo;s tablets are $249).
+        <strong className="text-[#191919]">$147 a month for either molecule in either format, the same at every dose</strong>, verified October 16, 2026. Free one-to-two-day shipping. No membership, no hidden fees, cancel anytime. The needle-free drops cost the same $147, which no other provider here matches (Medvi&rsquo;s tablets are $249).
       </>
     ),
     support:
@@ -362,7 +362,7 @@ const SECTIONS: Section[] = [
     ),
     pricing: (
       <>
-        <strong className="text-[#191919]">Semaglutide $99 a month and tirzepatide $166 a month at the current promotion</strong>, against regular prices of $199 and $299; oral dissolving tablets $249. Verified September 21, 2026. Free shipping, no membership, monthly billing. The promotion has no published end date, so budget for the regular price.
+        <strong className="text-[#191919]">Semaglutide $99 a month and tirzepatide $166 a month at the current promotion</strong>, against regular prices of $199 and $299; oral dissolving tablets $249. Verified October 16, 2026. Free shipping, no membership, monthly billing. The promotion has no published end date, so budget for the regular price.
       </>
     ),
     support:
@@ -398,7 +398,7 @@ const SECTIONS: Section[] = [
     ),
     pricing: (
       <>
-        <strong className="text-[#191919]">Semaglutide $149 a month, the same at every dose</strong>, with a $140 discount already applied against a regular price of $289; tirzepatide $259. Verified September 21, 2026, and consistent with the &ldquo;Save $140, plans from $149&rdquo; offer on TrimRx&rsquo;s homepage on October 11, 2026. Free tracked delivery; consultation included; no insurance needed. TrimRx is the platform; its terms state it is not itself a healthcare provider, and the operating company is MetaFit Pharma Solutions LLC.
+        <strong className="text-[#191919]">Semaglutide $149 a month, the same at every dose</strong>, with a $140 discount already applied against a regular price of $289; tirzepatide $259. Verified October 16, 2026, and consistent with the &ldquo;Save $140, plans from $149&rdquo; offer on TrimRx&rsquo;s homepage on October 11, 2026. Free tracked delivery; consultation included; no insurance needed. TrimRx is the platform; its terms state it is not itself a healthcare provider, and the operating company is MetaFit Pharma Solutions LLC.
       </>
     ),
     support:
@@ -434,7 +434,7 @@ const SECTIONS: Section[] = [
     ),
     pricing: (
       <>
-        <strong className="text-[#191919]">Compounded semaglutide $89 a month and tirzepatide $149 a month, promotional</strong>, against regular prices of $199 and $299, the same at every dose; brand-name Ozempic $1,149, Zepbound $1,249 and Wegovy $1,579. Verified September 21, 2026. Free five-to-seven-day shipping. No membership; pause or cancel anytime; BNPL available. The promotion&rsquo;s published end date has been extended at least twice (September 20, then September 25 in our <L href="/weight-loss/glp1-price-changes">change log</L>), which has so far meant the price held; it does not mean it is permanent. A Reddit user three months before our capture cited a $129 first-month tirzepatide offer, so promotions move.
+        <strong className="text-[#191919]">Compounded semaglutide $89 a month and tirzepatide $149 a month, promotional</strong>, against regular prices of $199 and $299, the same at every dose; brand-name Ozempic $1,149, Zepbound $1,249 and Wegovy $1,579. Verified October 16, 2026. Free five-to-seven-day shipping. No membership; pause or cancel anytime; BNPL available. The promotion&rsquo;s published end date has been extended at least twice (September 20, then September 25 in our <L href="/weight-loss/glp1-price-changes">change log</L>), which has so far meant the price held; it does not mean it is permanent. A Reddit user three months before our capture cited a $129 first-month tirzepatide offer, so promotions move.
       </>
     ),
     support:
