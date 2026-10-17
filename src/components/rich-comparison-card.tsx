@@ -135,7 +135,7 @@ export function RichComparisonCard({
         <div className="mt-4 flex flex-col gap-4 sm:mt-5 sm:gap-5 lg:flex-row lg:items-start">
           <div className="min-w-0 flex-1 space-y-3.5 sm:space-y-4">
             {/* Info block: treatments + starting price */}
-            {(treatments.length > 0 || startingPlan?.price) && (
+            {(treatments.length > 0 || startingPlan?.price || product.priceNote) && (
               <div className="rounded-xl border border-gray-100 bg-[#F7F8FA] p-3.5 sm:p-4">
                 {treatments.length > 0 && (
                   <div>
@@ -161,6 +161,14 @@ export function RichComparisonCard({
                         *Compounded medications are not FDA-approved.
                       </p>
                     )}
+                  </div>
+                )}
+                {/* Page-specific price line when the review carries no starting plan
+                    (e.g. a brand-name-only provider on a molecule landing). */}
+                {!startingPlan?.price && product.priceNote && (
+                  <div className={treatments.length > 0 ? "mt-2.5 border-t border-gray-200 pt-2.5 sm:mt-3 sm:pt-3" : ""}>
+                    <p className="text-[10.5px] font-bold uppercase tracking-wide text-gray-500 sm:text-[11px]">Verified price</p>
+                    <p className="mt-1 text-[12.5px] font-semibold text-[#0C4B75] sm:text-[13px]">{product.priceNote}</p>
                   </div>
                 )}
               </div>

@@ -9,6 +9,7 @@ import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { ComparisonLayout } from "@/components/comparison-layout";
 import { EditorialContent } from "@/components/editorial-content";
 import { LandingEditorial } from "@/components/landing-editorial";
+import { landingFocusFor } from "@/lib/landing-focus";
 import { GuideCluster } from "@/components/guide-cluster";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound, permanentRedirect } from "next/navigation";
@@ -441,7 +442,11 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
       },
     };
 
-    const providerOrder = landing.providerOrder.length > 0 ? landing.providerOrder : config.ranking.providerOrder;
+    const baseOrder = landing.providerOrder.length > 0 ? landing.providerOrder : config.ranking.providerOrder;
+    // Page-specific card facts (verified molecule/brand price per provider) and,
+    // on molecule pages, only the providers that publish that molecule.
+    const focus = ctx.vertical === "weight-loss" ? landingFocusFor(landing.slug, baseOrder) : null;
+    const providerOrder = focus ? focus.providerIds : baseOrder;
 
     const schemaData = {
       "@context": "https://schema.org",
@@ -493,6 +498,9 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
         <ComparisonLayout
           config={customConfig}
           linkPrefix={ctx.prefix}
+          cardIntroMode={focus ? "short" : "full"}
+          priceNotes={focus?.priceNotes}
+          onlyProviderIds={focus ? focus.providerIds : undefined}
           heroOverrides={{
             h1: landing.h1,
             h2: landing.h2,
