@@ -120,6 +120,8 @@ export function ProductCarousel({
   highlightProviderIds = [],
   onlyProviderIds,
   onlyMedication,
+  onlyFormat,
+  limit,
   pageType = "listing",
   withSchema = false,
   pageUrl,
@@ -133,6 +135,11 @@ export function ProductCarousel({
   onlyProviderIds?: string[];
   /** Restrict to one medication (e.g. tirzepatide plans on a tirzepatide guide). */
   onlyMedication?: CatalogProduct["medication"];
+  /** Restrict to one format (e.g. tablets on an oral-GLP-1 article). */
+  onlyFormat?: CatalogProduct["format"];
+  /** Cap the strip (cheapest first). Embedded on articles so the same 29-card
+   *  catalog is not repeated in full on every page. */
+  limit?: number;
   pageType?: "listing" | "review" | "battle";
   /** Emit Product+Offer ItemList schema. Enable on ONE carousel per page. */
   withSchema?: boolean;
@@ -147,12 +154,14 @@ export function ProductCarousel({
   );
   if (onlyProviderIds) items = items.filter((p) => onlyProviderIds.includes(p.providerId));
   if (onlyMedication) items = items.filter((p) => p.medication === onlyMedication);
+  if (onlyFormat) items = items.filter((p) => p.format === onlyFormat);
   items = items.sort((a, b) => {
     const ha = highlight.has(a.providerId) ? 0 : 1;
     const hb = highlight.has(b.providerId) ? 0 : 1;
     if (ha !== hb) return ha - hb;
     return productPriceValue(a) - productPriceValue(b);
   });
+  if (limit) items = items.slice(0, limit);
 
   if (items.length === 0) return null;
 

@@ -294,6 +294,33 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // generic mid-page blocks (duplicate provider list, stock-photo callout) are
   // dropped so the page stays on topic.
   const isTirzGuide = isWeightLoss && slug === "best-tirzepatide-online";
+  // Mid-article product carousel: topic-matched and capped (Oct 2026). The full
+  // 29-card catalog on every article put ~550 identical words on 80 pages; an
+  // article about tirzepatide now shows tirzepatide plans, a semaglutide or
+  // Ozempic/Wegovy article shows semaglutide plans, an oral-GLP-1 article shows
+  // tablets, and everything else shows the eight cheapest plans.
+  const topicText = `${slug} ${article.title}`.toLowerCase();
+  const tirzTopic = /tirzepatide|zepbound|mounjaro/.test(topicText);
+  const semaTopic = /semaglutide|ozempic|wegovy/.test(topicText);
+  // The catalog has no oral products yet, so pill articles fall back to the
+  // medication rule (the Wegovy pill is semaglutide) rather than an empty strip.
+  const carouselMedication: "tirzepatide" | "semaglutide" | undefined = isTirzGuide
+    ? "tirzepatide"
+    : tirzTopic && !semaTopic
+      ? "tirzepatide"
+      : semaTopic && !tirzTopic
+        ? "semaglutide"
+        : undefined;
+  const carouselTitle = isTirzGuide
+    ? "Shop tirzepatide plans by provider"
+    : carouselMedication
+      ? `Shop ${carouselMedication} plans by provider`
+      : "Shop GLP-1 plans by product";
+  const carouselSubtitle = isTirzGuide
+    ? "Every provider's published tirzepatide plan - cheapest first, conditions under each price."
+    : carouselMedication
+      ? `Published ${carouselMedication} plans - cheapest first, conditions under each price.`
+      : "The lowest published plans - cheapest first, conditions under each price.";
   const tirzNote = (id: string): string | undefined => {
     const cell = PRICE_INDEX.find((r) => r.providerId === id)?.tirzepatide;
     if (!cell) return undefined;
@@ -627,6 +654,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     limit={3}
                     providerIds={TIRZ_TOP_IDS}
                     priceNotes={tirzPriceNotes}
+                    introMode="short"
                     title="Our top 3 tirzepatide providers"
                     subtitle="Our highest-ranked providers with a verified compounded tirzepatide price - the same cards as our full comparison, with the tirzepatide rate shown under each starting price."
                   />
@@ -708,6 +736,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     linkPrefix={ctx.prefix}
                     limit={3}
                     providerIds={["embody", "altrx", "trimrx"]}
+                    introMode="short"
                     title="Our top-rated GLP-1 providers"
                     subtitle="Our recommended telehealth providers - the same cards from our full comparison."
                   />
@@ -753,20 +782,17 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                         onlyProviderIds={
                           restrictCarouselToSubject && subjectProvider ? [subjectProvider.id] : undefined
                         }
-                        onlyMedication={isTirzGuide ? "tirzepatide" : undefined}
+                        onlyMedication={restrictCarouselToSubject && subjectProvider ? undefined : carouselMedication}
+                        limit={restrictCarouselToSubject && subjectProvider ? undefined : isTirzGuide ? undefined : 8}
                         title={
                           restrictCarouselToSubject && subjectProvider
                             ? `Shop ${subjectProvider.name}'s GLP-1 plans`
-                            : isTirzGuide
-                              ? "Shop tirzepatide plans by provider"
-                              : "Shop GLP-1 plans by product"
+                            : carouselTitle
                         }
                         subtitle={
                           restrictCarouselToSubject && subjectProvider
                             ? `${subjectProvider.name}'s published plans - conditions shown under each price.`
-                            : isTirzGuide
-                              ? "Every provider's published tirzepatide plan - cheapest first, conditions under each price."
-                              : "Every provider's published plans - cheapest first, conditions under each price."
+                            : carouselSubtitle
                         }
                         withSchema
                         pageUrl={canonicalUrl(ctx, `/articles/${slug}`)}

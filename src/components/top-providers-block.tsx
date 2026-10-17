@@ -60,12 +60,15 @@ export function TopProvidersBlock({
   providerIds,
   order = "ranking",
   priceNotes,
+  introMode = "full",
 }: {
   config: SiteConfig;
   linkPrefix?: string;
   limit?: number;
   title?: string;
   subtitle?: string;
+  /** Card intro text: the full review intro (ranking pages) or the one-line summary (embedded on articles). */
+  introMode?: "full" | "short";
   /** Per-provider price line shown under the card's starting price (page-specific, e.g. the tirzepatide rate). */
   priceNotes?: Record<string, string>;
   // Optional curated set (e.g. affiliate partners). When given, only these
@@ -128,7 +131,7 @@ export function TopProvidersBlock({
       </div>
       <div className="space-y-4">
         {items.map(({ product, review }) => (
-          <RichComparisonCard key={product.id} product={product} review={review} linkPrefix={linkPrefix} />
+          <RichComparisonCard key={product.id} product={product} review={review} linkPrefix={linkPrefix} introMode={introMode} />
         ))}
       </div>
     </section>
@@ -150,6 +153,7 @@ export function TopTwoPicks({ config, linkPrefix = "" }: { config: SiteConfig; l
       limit={2}
       providerIds={[...TOP_TWO_PICK_IDS]}
       order="given"
+      introMode="short"
       title="Our top 2 picks"
       subtitle="Our two recommended GLP-1 providers, shown with the same verified pricing and ratings as our full comparison."
     />
