@@ -523,7 +523,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               below the sm breakpoint). Verticals without a hero image render
               nothing here, exactly like their ranking pages. Oct 17, 2026. */}
           {config.hero?.backgroundImageUrl && (
-            <div className="absolute right-[380px] top-0 hidden h-full max-h-[270px] w-[50%] sm:block lg:max-h-[300px]">
+            <div className="absolute right-[380px] top-1/2 hidden h-[270px] w-[50%] -translate-y-1/2 sm:block lg:h-[300px]">
               <Image
                 src={config.hero.backgroundImageUrl}
                 alt={config.hero.imageAlt || ""}
@@ -531,7 +531,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 preload
                 fetchPriority="high"
                 sizes="(min-width: 640px) 50vw, 1px"
-                className="object-contain object-right-top"
+                className="object-contain object-right"
               />
             </div>
           )}
