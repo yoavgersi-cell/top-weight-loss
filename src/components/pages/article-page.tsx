@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Clock, ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { NOINDEX_ARTICLE_SLUGS, latestUpdate, AFFILIATE_PROVIDER_IDS, DEFAULT_ROBOTS } from "@/lib/config";
@@ -514,10 +515,27 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
       <div className="min-h-screen bg-gray-50">
         {/* Hero band */}
         <div
-          className="w-full"
+          className="relative w-full overflow-hidden"
           style={{ backgroundColor: article.heroColor }}
         >
-          <div className="mx-auto max-w-[1100px] px-4 py-7 sm:px-6 sm:py-12">
+          {/* The vertical's hero image, in the same spot and at the same size as
+              on the ranking page (desktop only; the wrapper is display:none
+              below the sm breakpoint). Verticals without a hero image render
+              nothing here, exactly like their ranking pages. Oct 17, 2026. */}
+          {config.hero?.backgroundImageUrl && (
+            <div className="absolute right-[380px] top-0 hidden h-full max-h-[270px] w-[50%] sm:block lg:max-h-[300px]">
+              <Image
+                src={config.hero.backgroundImageUrl}
+                alt={config.hero.imageAlt || ""}
+                fill
+                preload
+                fetchPriority="high"
+                sizes="(min-width: 640px) 50vw, 1px"
+                className="object-contain object-right-top"
+              />
+            </div>
+          )}
+          <div className="relative z-10 mx-auto max-w-[1100px] px-4 py-7 sm:px-6 sm:py-12">
             <Breadcrumbs
               items={[
                 { label: "Home", href: hubLink(ctx, "/") },
@@ -542,7 +560,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               </span>
             </div>
 
-            <h1 className="text-[24px] font-bold leading-tight text-[#191919] sm:text-[32px]">
+            <h1 className="text-[24px] font-bold leading-tight text-[#191919] sm:max-w-[640px] sm:text-[32px]">
               {article.title}
             </h1>
             <p className="mt-2.5 max-w-[640px] text-[15px] leading-[1.55] text-gray-600 sm:text-[16px]">
