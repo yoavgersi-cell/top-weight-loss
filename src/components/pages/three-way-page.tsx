@@ -31,7 +31,7 @@ export function threeWayMetadata(trio: ThreeWayComparison, ctx: SiteContext): Me
   // bloat on the young hub, so they're noindex,follow (see NOINDEX_WL_BATTLE_SLUGS).
   const isThinNoindex = NOINDEX_WL_BATTLE_SLUGS.has(trio.slug);
   return {
-    title: { absolute: `${trio.metaTitle} | Treatments Hub` },
+    title: { absolute: trio.metaTitle },
     description: trio.description,
     robots: ctx.noindex
       ? { index: false, follow: false }

@@ -79,12 +79,12 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "ro weight loss review: membership from $39 first month plus brand-name GLP-1s (Wegovy, Zepbound) billed separately - insurance can apply. Verified pricing, pros & cons.",
   },
   eden: {
-    title: "Eden Reviews 2026: Is It Legit? $99 Flat GLP-1 Pricing, Support & Verdict",
+    title: "Eden Reviews 2026: Is It Legit? $99 Flat GLP-1 Pricing & Verdict",
     description:
       "Eden reviews: {prices}, flat every month and every dose, no membership, 24/7 human support. Is Eden legit? Trustpilot record, pros & cons.",
   },
   trimrx: {
-    title: "TrimRx Reviews 2026 (Trim Rx): Is It Legit? Cost, Real Results & Verdict",
+    title: "TrimRx Reviews 2026 (Trim Rx): Is It Legit? Cost & Verdict",
     description:
       "TrimRx (Trim Rx) reviews: {prices}, no long-term contract, clinical support included. Is TrimRx legit? Cost, pros & cons.",
   },

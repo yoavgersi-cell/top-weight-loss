@@ -14,7 +14,7 @@ export const brandClusterArticles: Article[] = [
     slug: "embody-tirzepatide-review",
     title: "embody Tirzepatide Review 2026: $119 Flat, Real User Reports",
     description:
-      "embody's compounded tirzepatide is $119/month (regularly $129), month to month, shipped cold in 1-2 days. What starting, titrating and switching onto it looks like, from verified Trustpilot and Reddit accounts.",
+      "embody's compounded tirzepatide: $119/month (regularly $129), month to month, shipped cold in 1-2 days. Starting, titrating and switching, from real accounts.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-10-04",
@@ -59,7 +59,7 @@ export const brandClusterArticles: Article[] = [
     slug: "is-ro-legit",
     title: "Is Ro Legit for Weight Loss? Yes, With Billing Caveats (2026)",
     description:
-      "Yes. Ro is an established telehealth company with licensed providers and its own pharmacy, rated 3.9 across 7,105 Trustpilot reviews. We read the praise and the complaints about fees, phone support and delivery.",
+      "Yes. Ro is an established telehealth company with licensed providers and its own pharmacy, rated 3.9 across 7,105 Trustpilot reviews, complaints included.",
     category: "Guide",
     readTime: "8 min read",
     publishedAt: "2026-10-04",
@@ -388,7 +388,7 @@ export const brandClusterArticles: Article[] = [
   // ═════ TrimRx ═════
   {
     slug: "is-trimrx-legit",
-    title: "Is TrimRx (Trim Rx) Legit? The No-Contract GLP-1 Model, Examined (2026)",
+    title: "Is TrimRx (Trim Rx) Legit? The No-Contract GLP-1 Model (2026)",
     description:
       "TrimRx (Trim Rx) sells GLP-1 treatment with no long-term contract - unusual in this market. We examined its clinical gate, its $149 pricing, and where it fits.",
     category: "Guide",
@@ -428,7 +428,7 @@ export const brandClusterArticles: Article[] = [
   },
   {
     slug: "trimrx-cost",
-    title: "TrimRx Cost 2026 (Trim Rx): $149 Explained - Dose-Flat Pricing, Discounts, Math",
+    title: "TrimRx Cost 2026 (Trim Rx): $149 Dose-Flat Pricing Explained",
     description:
       "TrimRx (Trim Rx) charges $149/month for semaglutide, the same at every dose, and $259 for tirzepatide with no contract. The discount structure and year-cost math, laid out.",
     category: "Guide",

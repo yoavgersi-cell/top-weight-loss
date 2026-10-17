@@ -5,7 +5,7 @@ const CANONICAL = "https://www.treatmentshub.com/weight-loss/disclaimer";
 const UPDATED = "2026-10-04";
 
 export const metadata: Metadata = {
-  title: "Disclaimer: Advertising Disclosure, Medical Disclaimer & How We Use Reviews",
+  title: "Disclaimer: Advertising, Medical & Review Policy",
   description:
     "How Treatments Hub earns money, what that does and does not affect, the medical disclaimer, and how customer reviews, Reddit posts and provider information are used on this site.",
   alternates: { canonical: CANONICAL },

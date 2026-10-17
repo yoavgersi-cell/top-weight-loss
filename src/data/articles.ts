@@ -2087,9 +2087,9 @@ export const articles: Article[] = [
   },
   {
     slug: "zepbound-price-online",
-    title: "Zepbound Price Online (2026): Brand From $1,249, Compounded Tirzepatide From $89",
+    title: "Zepbound Price Online (2026): $1,249 Brand vs $89 Compounded",
     description:
-      "What Zepbound costs online at verified published prices: $1,249/month cash at altRx, $1,599 at wellmedr, Zepbound KwikPens from $299 the first month plus membership at Ro, and compounded tirzepatide from $89 - with what each route includes.",
+      "Zepbound online at verified prices: $1,249/month cash at altRx, $1,599 at wellmedr, KwikPens from $299 first month plus membership at ro, compounded from $89.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-10-05",
@@ -2214,9 +2214,9 @@ export const articles: Article[] = [
   },
   {
     slug: "glp1-true-cost-month-1-vs-year-one",
-    title: "What Will I Really Pay for a GLP-1? Month 1 vs Month 4 vs Year One (2026)",
+    title: "What Will I Really Pay for a GLP-1? Month 1 to Year One (2026)",
     description:
-      "The real cost of online GLP-1 treatment at verified published prices: what month 1 costs, what you keep paying at the dose you stay on, and what year one adds up to - provider by provider, promos and prepay included.",
+      "The real cost of online GLP-1 treatment at verified prices: month 1, what you keep paying at your dose, and what year one adds up to, provider by provider.",
     category: "Guide",
     readTime: "8 min read",
     publishedAt: "2026-10-08",
@@ -2268,9 +2268,9 @@ export const articles: Article[] = [
   },
   {
     slug: "before-you-prepay-glp1",
-    title: "Before You Prepay for a GLP-1 Plan: 5 Questions About Refunds and Cancelling (2026)",
+    title: "Before You Prepay for a GLP-1 Plan: 5 Refund Questions (2026)",
     description:
-      "Prepaid and 12-month GLP-1 plans cost less per month and carry one risk: the money is paid before the shipments arrive. Five questions to settle first, with what real reviewers reported when they didn't.",
+      "Prepaid and 12-month GLP-1 plans cost less per month, but the money is paid before shipments arrive. Five questions to settle first, with reviewer reports.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-10-08",
@@ -2325,7 +2325,7 @@ export const articles: Article[] = [
     slug: "what-100-to-200-a-month-gets-you-glp1",
     title: "What $100 to $200 a Month Gets You in GLP-1 Treatment (2026)",
     description:
-      "Every verified GLP-1 option sorted by what you keep paying: under $100, $100-$150, $150-$200 and above - with what each tier buys in shipping speed, support and commitment, and where brand-name pills and injections land.",
+      "Every verified GLP-1 option sorted by what you keep paying: under $100, $100-$150, $150-$200 and above, with what each tier buys in shipping and support.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-10-08",
@@ -2377,7 +2377,7 @@ export const articles: Article[] = [
     slug: "lost-insurance-coverage-zepbound-wegovy",
     title: "Lost Insurance Coverage for Zepbound or Wegovy? Your Options in 2026",
     description:
-      "When a plan drops or denies Zepbound or Wegovy, five routes remain: appeal, manufacturer savings and direct-pay prices, Medicare's $50 option, brand-name cash through telehealth, and compounded versions at verified prices. What each costs and requires.",
+      "When a plan drops Zepbound or Wegovy, five routes remain: appeal, manufacturer savings, Medicare's $50 option, brand-name cash by telehealth, or compounded.",
     category: "Guide",
     readTime: "8 min read",
     publishedAt: "2026-10-08",
@@ -2430,9 +2430,9 @@ export const articles: Article[] = [
   },
   {
     slug: "503a-vs-503b-pharmacy-28-day-rule",
-    title: "503A vs 503B Pharmacies and the 28-Day Rule: Who Actually Makes Your Compounded GLP-1 (2026)",
+    title: "503A vs 503B Pharmacies and the 28-Day Rule for Compounded GLP-1s",
     description:
-      "Experienced buyers judge a compounded GLP-1 provider by the pharmacy behind it. What 503A and 503B mean, why the shortage ending changed the rules, what the 28-day rule is, and the questions that reveal a legitimate operation.",
+      "What 503A and 503B mean for compounded GLP-1s, why the shortage ending changed the rules, what the 28-day rule is, and how to spot a legitimate operation.",
     category: "Science",
     readTime: "8 min read",
     publishedAt: "2026-10-08",
@@ -2482,7 +2482,7 @@ export const articles: Article[] = [
     slug: "glp1-after-65-medicare",
     title: "GLP-1s After 65: Medicare's $50 Option and What It Covers (2026)",
     description:
-      "Medicare's GLP-1 Bridge pilot charges a flat $50 a month for Wegovy, the Zepbound KwikPen and Foundayo through December 2027. Who it is for, what it covers, what it doesn't, and the cash alternatives if you don't qualify.",
+      "Medicare's GLP-1 Bridge pilot: a flat $50 a month for Wegovy, the Zepbound KwikPen and Foundayo through December 2027. Who qualifies and the cash alternatives.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-10-08",
@@ -2535,9 +2535,9 @@ export const articles: Article[] = [
   // flagged for operator verification, not stated as our own.
   {
     slug: "wegovy-pill-price-online",
-    title: "Wegovy Pill Price Online (2026): $149 the First Month, What You Pay After",
+    title: "Wegovy Pill Price Online (2026): $149 First Month, Then $299",
     description:
-      "What the Wegovy pill costs online: $149 for the first month then $299 plus membership at Ro, Novo Nordisk's reported self-pay tiers by dose, the $25 savings offer with commercial insurance, Medicare's $50 copay, and compounded semaglutide from $49.",
+      "The Wegovy pill online: $149 the first month then $299 plus membership at ro, the reported self-pay tiers, the $25 insurance offer and Medicare's $50 copay.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-10-09",
@@ -2592,7 +2592,7 @@ export const articles: Article[] = [
     slug: "foundayo-vs-wegovy-pill",
     title: "Foundayo vs the Wegovy Pill (2026): Results, Price and How to Choose",
     description:
-      "The two FDA-approved GLP-1 pills compared: trial weight loss (OASIS 4 vs ATTAIN-1), the empty-stomach rule that only one of them has, published prices ($149-$349 at LillyDirect; $149 then $299 plus membership at Ro), the $25 insurance offers and Medicare's $50 copay.",
+      "The two FDA-approved GLP-1 pills compared: trial results, the empty-stomach rule only one has, prices from $149, $25 insurance offers and Medicare's $50 copay.",
     category: "Guide",
     readTime: "8 min read",
     publishedAt: "2026-10-09",

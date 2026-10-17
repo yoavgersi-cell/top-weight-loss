@@ -108,8 +108,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const config = await getConfig("weight-loss");
   const rows = buildRows(config.providers);
   const total = rows.reduce((s, r) => s + r.n, 0);
-  const title = `GLP-1 Provider Customer Support Compared (2026): What ${total} Trustpilot Reviews Say`;
-  const description = `Which online GLP-1 providers get praised or criticised for support, shipping and billing, from ${total} Trustpilot reviews captured verbatim across ${rows.length} providers - with every reviewer-reported response time quoted.`;
+  const title = `GLP-1 Provider Support Compared: ${total} Trustpilot Reviews (2026)`;
+  const description = `Which online GLP-1 providers get praised or criticised for support, shipping and billing, from 232 Trustpilot reviews captured verbatim across 11 providers.`;
   return {
     title,
     description,

@@ -88,8 +88,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const config = await getConfig("weight-loss");
   const rows = buildRows(config.providers);
   const total = rows.reduce((s, r) => s + r.mentions.length, 0);
-  const title = `GLP-1 Shipping Times by Provider (2026): Published Promise vs What ${total} Reviewers Report`;
-  const description = `How fast online GLP-1 providers say they ship (1-2 days, overnight, 3-5 days) against what ${total} Trustpilot reviewers who mention delivery actually report, with every stated day count quoted - across ${rows.length} providers.`;
+  const title = `GLP-1 Shipping Times by Provider: Promise vs Reviews (2026)`;
+  const description = `How fast online GLP-1 providers say they ship (1-2 days, overnight, 3-5 days) against what 52 Trustpilot reviewers who mention delivery report.`;
   return { title, description, alternates: { canonical: CANONICAL }, openGraph: { title, description, url: CANONICAL, type: "article" } };
 }
 

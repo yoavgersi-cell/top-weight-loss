@@ -911,7 +911,7 @@ const articles: ArticleData[] = [
     slug: "does-talkspace-take-insurance",
     title: "Talkspace Insurance Coverage 2026: $0 Copays & EAPs",
     description:
-      "Talkspace is covered by many major insurance plans and employer EAPs - and says most insured members pay a $0 copay. How to check your plan, what psychiatry coverage looks like, and the honest caveats.",
+      "Talkspace is covered by many major insurance plans and employer EAPs; most insured members pay a $0 copay. How to check your plan and the caveats.",
     category: "Advice",
     readTime: "6 min read",
     publishedAt: UPDATED,
@@ -1083,7 +1083,7 @@ const articles: ArticleData[] = [
   // with crisis-safety framing where relevant.
   {
     slug: "does-online-therapy-work",
-    title: "Does Online Therapy Actually Work? An Honest Look at the Evidence (2026)",
+    title: "Does Online Therapy Work? What the Evidence Shows (2026)",
     description:
       "The research generally finds online therapy comparable to in-person for many common concerns - but 'it works' comes with real caveats about fit, format and severity. The honest picture.",
     category: "Advice",
@@ -1119,7 +1119,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "therapy-vs-psychiatry",
-    title: "Therapist vs Psychiatrist: Do You Need Talk Therapy, Medication, or Both? (2026)",
+    title: "Therapist vs Psychiatrist: Therapy, Medication or Both? (2026)",
     description:
       "Therapists do talk therapy; psychiatrists diagnose and prescribe medication. How to tell which you need, why many people benefit from both, and where each fits online.",
     category: "Guide",
@@ -1157,7 +1157,7 @@ const articles: ArticleData[] = [
     slug: "online-psychiatry",
     title: "Online Psychiatry: How to Get Mental-Health Medication Online in 2026",
     description:
-      "Online psychiatry connects you with a licensed prescriber by video for evaluation, diagnosis and medication management. How it works, what it can and can't prescribe, and how to pick a legitimate service.",
+      "Online psychiatry: a licensed prescriber by video for diagnosis and medication management. What it can and can't prescribe, and how to pick a legit service.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-09-08",
@@ -1193,7 +1193,7 @@ const articles: ArticleData[] = [
     slug: "online-therapy-for-anxiety",
     title: "Online Therapy for Anxiety: What Helps and How to Start (2026)",
     description:
-      "Anxiety is one of the concerns online therapy handles best. Which approaches have the strongest track record, when medication enters the picture, and how to begin without the process itself becoming a hurdle.",
+      "Anxiety is one of the concerns online therapy handles best. Which approaches have the strongest track record, when medication enters, and how to begin.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-09-08",
@@ -1227,7 +1227,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "online-therapy-for-depression",
-    title: "Online Therapy for Depression: Does It Help, and When Is More Needed? (2026)",
+    title: "Online Therapy for Depression: Does It Help? (2026)",
     description:
       "Online therapy is well-supported for mild-to-moderate depression, often works best combined with medication for more severe cases, and has clear limits when risk is involved. An honest, careful guide.",
     category: "Guide",
@@ -1301,7 +1301,7 @@ const articles: ArticleData[] = [
     slug: "online-therapy-cost",
     title: "How Much Does Online Therapy Cost? Pricing Models Compared (2026)",
     description:
-      "Online therapy pricing comes in a few distinct shapes - weekly subscriptions, per-session fees, and insurance-based models. How they differ, what drives the real cost, and how to find the cheapest legitimate route for you.",
+      "Online therapy pricing comes in three shapes: weekly subscriptions, per-session fees and insurance models. How they differ and the cheapest legitimate route.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-09-08",

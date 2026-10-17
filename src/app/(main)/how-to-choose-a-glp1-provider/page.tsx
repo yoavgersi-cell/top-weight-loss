@@ -20,9 +20,9 @@ import type { TrustpilotReview } from "@/lib/config";
 export const revalidate = 60;
 
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/how-to-choose-a-glp1-provider";
-const TITLE = "How to Choose a GLP-1 Provider (2026): 12 Things to Check Before You Sign Up";
+const TITLE = "How to Choose a GLP-1 Provider: 12 Checks Before You Sign Up";
 const DESCRIPTION =
-  "How to choose an online GLP-1 provider: a 12-point checklist, how involved a licensed clinician really is, and a 10-provider research table of clinician access, pharmacies, verified prices and Trustpilot records, plus what patients report on Reddit.";
+  "How to choose an online GLP-1 provider: a 12-point checklist, how involved the clinician is, and a 10-provider table of pharmacies, prices and Trustpilot.";
 const PUBLISHED = "2026-09-24";
 const UPDATED = "2026-09-24";
 

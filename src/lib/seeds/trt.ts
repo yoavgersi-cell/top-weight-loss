@@ -1442,7 +1442,7 @@ const articles: ArticleData[] = [
     slug: "free-vs-total-testosterone",
     title: "Free vs Total Testosterone: Which Number Actually Matters? (2026)",
     description:
-      "Your total testosterone can look 'normal' while the free portion - the part your body can actually use - is low. What the two numbers mean, why SHBG ties them together, and why good clinics check both.",
+      "Total testosterone can look normal while the usable free portion is low. What the two numbers mean, why SHBG links them, and why good clinics check both.",
     category: "Science",
     readTime: "6 min read",
     publishedAt: "2026-09-08",
@@ -1584,7 +1584,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "does-trt-increase-libido",
-    title: "Does TRT Increase Libido? What Testosterone Therapy Does for Sex Drive (2026)",
+    title: "Does TRT Increase Libido? Testosterone and Sex Drive (2026)",
     description:
       "For men who are genuinely low, restoring testosterone often improves libido - but it's not a guarantee, not instant, and not the same as an ED treatment. The honest picture, with the timeline.",
     category: "Science",

@@ -16,7 +16,7 @@ const CANONICAL = "https://www.treatmentshub.com/weight-loss/how-we-rank";
 export const metadata: Metadata = {
   title: "How We Rank & Review Weight Loss Providers - Our Methodology",
   description:
-    "Our full methodology for ranking and reviewing GLP-1 weight loss providers: the factors we score, where our data comes from, how we verify accuracy, and how we pick winners in head-to-head comparisons.",
+    "Our methodology for ranking GLP-1 weight loss providers: the factors we score, where data comes from, how we verify it, and how we pick head-to-head winners.",
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: "How We Rank & Review Weight Loss Providers - Our Methodology",
@@ -75,7 +75,7 @@ export default async function HowWeRankPage() {
     "@type": "WebPage",
     name: "How We Rank & Review Weight Loss Providers - Our Methodology",
     description:
-      "Our full methodology for ranking and reviewing GLP-1 weight loss providers: the factors we score, where our data comes from, how we verify accuracy, and how we pick winners.",
+      "Our methodology for ranking GLP-1 weight loss providers: the factors we score, where data comes from, how we verify it, and how we pick head-to-head winners.",
     url: CANONICAL,
     publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
   };

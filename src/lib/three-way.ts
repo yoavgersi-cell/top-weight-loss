@@ -213,7 +213,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     title: "embody vs Medvi vs wellmedr: $69, $99 or $49?",
     metaTitle: "embody vs Medvi vs wellmedr (2026): $69 vs $99 vs $49",
     description:
-      "Three verified Trustpilot records, three ways to buy the same compounded GLP-1s: embody ($69 flat), Medvi ($99 all-inclusive, 4.3 across 14,987 reviews) and wellmedr ($49 on a 12-month plan, 4.7 rated).",
+      "Three ways to buy the same compounded GLP-1s: embody ($69 flat), Medvi ($99 all-inclusive, 4.3 on Trustpilot) and wellmedr ($49 on a 12-month plan, 4.6 rated).",
     intro:
       "This trio is unusual: all three carry a verified Trustpilot record, so for once the review data can carry as much weight as the price tag. wellmedr is the cheapest at $49/month - a rate that locks on a 12-month plan - and holds the highest rating here, 4.6 across 2,188 reviews. embody's $69 is flat with zero commitment and a refund if a provider doesn't approve you, at 3.8 across 9,604 reviews. Medvi's $99 promo is the all-inclusive, high-touch option - video visits, free dietician, care coaching - with the largest review base of the three: 4.3 across 14,987.",
     verdict:
