@@ -111,7 +111,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
 // Date of the last operator verification pass over the index above. Bump it
 // whenever a row is re-checked or changed - the statistics page prints it as
 // the dataset's "verified as of" date and emits it as schema dateModified.
-export const PRICE_INDEX_VERIFIED = "2026-09-21";
+export const PRICE_INDEX_VERIFIED = "2026-10-16";
 
 // Public change log for the index. One entry per operator-verified change,
 // newest first, describing what our listing said before and after. Only add

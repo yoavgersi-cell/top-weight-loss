@@ -110,7 +110,8 @@ export default async function StatisticsPage() {
             GLP-1 weight-loss medications (STEP, SURMOUNT, SCALE).
           </p>
           <p className="mt-2 text-[12px] text-gray-400">
-            Prices verified {longDate(PRICE_INDEX_VERIFIED)} · {PRICE_CHANGELOG.length} logged changes this month
+            Prices verified {longDate(PRICE_INDEX_VERIFIED)} · {PRICE_CHANGELOG.length} logged changes since{" "}
+            {longDate(PRICE_CHANGELOG[PRICE_CHANGELOG.length - 1]?.date ?? PRICE_INDEX_VERIFIED)}
           </p>
         </div>
       </div>
