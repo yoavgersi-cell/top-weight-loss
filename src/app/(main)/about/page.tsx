@@ -96,6 +96,7 @@ export default async function AboutPage() {
       email: "contact@treatmentshub.com",
       contactPoint: { "@type": "ContactPoint", email: "contact@treatmentshub.com", contactType: "customer support", availableLanguage: "English" },
       sameAs: ["https://www.linkedin.com/company/treatments-hub"],
+      foundingDate: "2026",
       knowsAbout: ["GLP-1 weight-loss treatment", "Telehealth providers", "Compounded semaglutide", "Compounded tirzepatide", "Hair loss treatment", "Testosterone replacement therapy", "Hormone replacement therapy", "Online therapy"],
       employee: REVIEWERS.map(reviewerPersonSchema),
     },
@@ -209,9 +210,9 @@ export default async function AboutPage() {
               provider on that basis is a coin flip, with your health and several hundred dollars a month on the table.
             </p>
             <p>
-              Treatments Hub publishes the number the provider itself publishes, with the condition that goes with it,
-              quotes customers in their own words, and says plainly when something cannot be verified. If we cannot
-              check it, it does not appear on the site.
+              Treatments Hub was founded in 2026 to publish the number the provider itself publishes, with the
+              condition that goes with it, quote customers in their own words, and say plainly when something cannot
+              be verified. If we cannot check it, it does not appear on the site.
             </p>
           </div>
         </section>
