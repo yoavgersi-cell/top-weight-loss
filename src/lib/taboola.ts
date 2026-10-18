@@ -1,8 +1,10 @@
-// Taboola (Realize) pixel ID. Set NEXT_PUBLIC_TABOOLA_PIXEL_ID in Vercel
-// (Project → Settings → Environment Variables) and redeploy; the pixel and
-// its events stay off until then. Pixel IDs are public (they ship in page
-// source), so an env var is a convenience, not a secret.
-export const TABOOLA_PIXEL_ID: string = process.env.NEXT_PUBLIC_TABOOLA_PIXEL_ID ?? "";
+// Taboola (Realize) pixel ID, from the Realize campaign wizard ("Manually
+// add the Taboola Pixel", Oct 18, 2026). Pixel IDs are public - they ship in
+// every page's source - so it lives in code; NEXT_PUBLIC_TABOOLA_PIXEL_ID
+// overrides it (set it to "off" to disable without a code change).
+const DEFAULT_TABOOLA_PIXEL_ID = "2126966";
+const envId = process.env.NEXT_PUBLIC_TABOOLA_PIXEL_ID;
+export const TABOOLA_PIXEL_ID: string = envId === "off" ? "" : envId || DEFAULT_TABOOLA_PIXEL_ID;
 
 // Event names used for Realize conversion rules. Create each rule in Realize
 // as type "Event", with this exact name.
