@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@/components/google-analytics";
+import { TaboolaPixel } from "@/components/taboola-pixel";
 import { hreflangLanguages } from "@/lib/regions";
 import { WEIGHT_LOSS_MIGRATED } from "@/lib/site-context";
 import "./globals.css";
@@ -145,6 +146,7 @@ export default function RootLayout({
           }}
         />
         <GoogleAnalytics />
+        <TaboolaPixel />
         <Analytics />
         <SpeedInsights />
         {/* Chrome (header/footer) is provided per-region by the route-group

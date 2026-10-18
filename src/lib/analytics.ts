@@ -1,5 +1,9 @@
+import { TABOOLA_EVENTS, taboolaEvent } from "@/lib/taboola";
+
 /**
- * Analytics helper - fires events to GA4 (Meta Pixel removed Oct 2026).
+ * Analytics helper - fires events to GA4 and mirrors the conversion events
+ * to the Taboola (Realize) pixel when it is configured (Meta Pixel removed
+ * Oct 2026).
  *
  * Usage:
  *   import { trackEvent, trackOnce } from "@/lib/analytics";
@@ -27,11 +31,20 @@ function fireGA(event: string, params?: Record<string, string | number | boolean
   window.gtag("event", event, params);
 }
 
+// Events mirrored to the Taboola (Realize) pixel as conversion events.
+const TABOOLA_MIRROR: Partial<Record<AnalyticsEvent, string>> = {
+  ProviderClick: TABOOLA_EVENTS.providerClick,
+  CompleteMatch: TABOOLA_EVENTS.completeMatch,
+  StartMatch: TABOOLA_EVENTS.startMatch,
+};
+
 export function trackEvent(
   event: AnalyticsEvent,
   params?: Record<string, string | number | boolean>
 ) {
   fireGA(event, params);
+  const tb = TABOOLA_MIRROR[event];
+  if (tb) taboolaEvent(tb);
 }
 
 /**
