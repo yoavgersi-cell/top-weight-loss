@@ -7,6 +7,7 @@ import { VERTICALS, DEFAULT_VERTICAL, isPublishedVertical, isHiddenVertical, typ
 import { getConfig } from "@/lib/config-store";
 import { ProviderCta } from "@/components/provider-cta";
 import { tpStarColor } from "@/components/trustpilot-rating";
+import { LatestGuides, newestGuides } from "@/components/latest-guides";
 
 // ───── Category icons ─────
 // Hand-drawn two-tone line icons (outline + light fill), matching the
@@ -225,12 +226,6 @@ const BENTO: { id: string; wide: boolean }[] = [
   { id: "online-therapy", wide: true },
 ];
 
-function updatedLabel(iso?: string): string {
-  if (!iso) return "";
-  const d = new Date(iso);
-  if (Number.isNaN(d.getTime())) return "";
-  return d.toLocaleDateString("en-US", { month: "short", year: "numeric" });
-}
 
 // Compact provider card for the homepage shelf - mirrors the ranking card's
 // data but in a lighter, three-up form. Every value (logo, score, Trustpilot
@@ -346,11 +341,23 @@ export async function HubHome() {
   // new domain lead (the hub home IS indexed, so this is the shortest crawl
   // path to them), then the rest in config order.
   const FEATURED_FIRST = ["glp1-true-cost-month-1-vs-year-one", "best-tirzepatide-online", "zepbound-price-online"];
-  const allArticles = wl.articles ?? [];
-  const articles = [
-    ...FEATURED_FIRST.map((s) => allArticles.find((a) => a.slug === s)).filter((a): a is NonNullable<typeof a> => !!a),
-    ...allArticles.filter((a) => !FEATURED_FIRST.includes(a.slug)),
-  ].slice(0, 6);
+  // Then the newest guides from every published vertical, dated - so the front
+  // door shows dated, attributed editorial across the whole hub, not only
+  // weight loss.
+  const otherVerticals = VERTICALS.filter((v) => isPublishedVertical(v.id) && v.id !== DEFAULT_VERTICAL);
+  const otherConfigs = await Promise.all(otherVerticals.map((v) => getConfig(v.id)));
+  const guidesByVertical: Record<string, typeof wl.articles> = { [DEFAULT_VERTICAL]: wl.articles ?? [] };
+  otherVerticals.forEach((v, i) => {
+    guidesByVertical[v.id] = otherConfigs[i].articles ?? [];
+  });
+  // Three rows: the pinned weight-loss guides, the newest guide from each of
+  // the other verticals (so every category is represented, whatever the
+  // dates), then the newest remaining guides hub-wide to fill nine.
+  const pinnedGuides = newestGuides({ [DEFAULT_VERTICAL]: wl.articles ?? [] }, FEATURED_FIRST.length, FEATURED_FIRST);
+  const perVertical = otherVerticals.flatMap((v) => newestGuides({ [v.id]: guidesByVertical[v.id] ?? [] }, 1));
+  const shown = new Set([...pinnedGuides, ...perVertical].map((g) => `${g.vertical}/${g.article.slug}`));
+  const fill = newestGuides(guidesByVertical, 9).filter((g) => !shown.has(`${g.vertical}/${g.article.slug}`));
+  const guides = [...pinnedGuides, ...perVertical, ...fill].slice(0, 9);
 
   return (
     <div className="bg-white">
@@ -518,65 +525,18 @@ export async function HubHome() {
         </section>
       )}
 
-      {/* ───── EDITOR'S PICKS ───── */}
-      {articles.length > 0 && (
+      {/* ───── LATEST GUIDES ───── */}
+      {guides.length > 0 && (
         <section className="border-t border-gray-200 bg-white">
           <div className="mx-auto max-w-[1100px] px-5 py-14 sm:px-8 sm:py-16">
-            <h2 className="text-[26px] font-bold tracking-[-0.015em] text-[#191919] sm:text-[32px]">
-              Treatments Hub Editor&rsquo;s Picks
-            </h2>
-            <p className="mt-2 max-w-[560px] text-[15px] leading-relaxed text-gray-500">
-              Independent guides and research from our editorial team.
-            </p>
-            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {articles.map((a) => (
-                <Link
-                  key={a.slug}
-                  href={`/${DEFAULT_VERTICAL}/articles/${a.slug}`}
-                  className="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md"
-                >
-                  <div
-                    className="relative flex h-[120px] items-end overflow-hidden p-4"
-                    style={{ background: `linear-gradient(135deg, ${a.heroColor || "#0C4B75"}, #191919)` }}
-                  >
-                    {a.image && (
-                      <>
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src={a.image}
-                          alt={a.imageAlt || a.title}
-                          className="absolute inset-0 h-full w-full object-cover"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" />
-                      </>
-                    )}
-                    <span className="relative z-10 rounded-full bg-white/90 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide text-[#0C4B75]">
-                      {a.category || "Guide"}
-                    </span>
-                  </div>
-                  <div className="flex flex-1 flex-col p-5">
-                    <h3 className="text-[16px] font-bold leading-snug text-[#191919] transition-colors group-hover:text-[#0C4B75] line-clamp-3">
-                      {a.title}
-                    </h3>
-                    <div className="mt-3 flex-1" />
-                    <p className="text-[12.5px] font-medium text-gray-400">
-                      Treatments Hub Staff
-                      {a.readTime && <span className="text-gray-400"> · {a.readTime}</span>}
-                      {updatedLabel(a.updatedAt) && <span className="text-gray-400"> · {updatedLabel(a.updatedAt)}</span>}
-                    </p>
-                  </div>
-                </Link>
-              ))}
-            </div>
-            <Link
-              href={`/${DEFAULT_VERTICAL}/articles`}
-              className="mt-8 inline-flex items-center gap-1.5 text-[14px] font-bold text-[#0C4B75] hover:underline underline-offset-4"
-            >
-              All guides
-              <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
-            </Link>
+            <LatestGuides
+              items={guides}
+              title="Latest guides from Treatments Hub"
+              subtitle="Independent, dated guides and research from our editorial team, across every category we cover."
+              allHref={`/${DEFAULT_VERTICAL}/articles`}
+              allLabel="All guides"
+              showVertical
+            />
           </div>
         </section>
       )}

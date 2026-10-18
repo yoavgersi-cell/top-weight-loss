@@ -2,7 +2,7 @@ import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import { getConfig } from "@/lib/config-store";
-import { CONTENT_LAST_UPDATED, DEFAULT_VERTICAL, isVertical, isPublishedVertical } from "@/lib/config";
+import { CONTENT_LAST_UPDATED, DEFAULT_VERTICAL, VERTICALS, isVertical, isPublishedVertical } from "@/lib/config";
 import { ROOT_CONTEXT, hubContext, canonicalUrl, hubLink, WEIGHT_LOSS_MIGRATED } from "@/lib/site-context";
 import Link from "next/link";
 import { ComparisonLayout } from "@/components/comparison-layout";
@@ -14,9 +14,10 @@ import { HearingAidsEditorialContent } from "@/components/editorial-content-hear
 import { OnlineTherapyEditorialContent } from "@/components/editorial-content-online-therapy";
 import { BattlePageView, battleMetadata } from "@/components/pages/battle-page";
 import { ProductCarousel } from "@/components/product-carousel";
+import { LatestGuides, newestGuides } from "@/components/latest-guides";
 import { notFound } from "next/navigation";
 
-export const revalidate = 60;
+export const revalidate = 3600;
 
 const RESERVED_SLUGS = [
   "about",
@@ -91,6 +92,7 @@ export default async function BattlePage({
     // Brand the research-team name from the current context so it reads
     // "The Treatments Hub Research Team" on the hub (not the legacy brand).
     const researchTeam = `The ${ctx.brandTeam.replace(/\s+Team$/i, "")} Research Team`;
+    const verticalName = VERTICALS.find((v) => v.id === battleSlug)?.name ?? battleSlug;
 
     // WebPage + ItemList schema (authorship, freshness, ranked entities) and the
     // FAQ schema - the same E-E-A-T / rich-result signals the standalone home
@@ -168,6 +170,18 @@ export default async function BattlePage({
           ) : battleSlug === "online-therapy" ? (
             <OnlineTherapyEditorialContent />
           ) : null}
+          {/* The vertical's newest guides, dated and attributed. The TRT and
+              HRT editorials link to no articles at all, so without this the
+              only path from a vertical home to its guides was the nav. */}
+          <section className="mx-auto max-w-[1200px] px-4 pb-12">
+            <LatestGuides
+              items={newestGuides({ [battleSlug]: vConfig.articles ?? [] }, 6)}
+              title={`Latest ${verticalName} guides`}
+              subtitle="Independent, dated guides from our editorial team - newest updates first."
+              allHref={`/${battleSlug}/articles`}
+              allLabel={`All ${verticalName} guides`}
+            />
+          </section>
         </ComparisonLayout>
       </div>
     );

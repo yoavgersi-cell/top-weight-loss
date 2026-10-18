@@ -10,7 +10,7 @@ import { pageReviewSchema } from "@/data/reviewers";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED } from "@/lib/config";
 
-export const revalidate = 60;
+export const revalidate = 3600;
 
 // Homepage-specific metadata targeting the high-intent "best weight loss"
 // commercial queries (best weight loss injections / programs / providers).

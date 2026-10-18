@@ -99,6 +99,10 @@ export default function RootLayout({
             silently dropped siteName from most pages - so it is emitted here
             directly, where no page can override it. */}
         <meta property="og:site_name" content="Treatments Hub" />
+        {/* Feed autodiscovery: the RSS feed of every published guide (see
+            app/feed.xml). Emitted here rather than via metadata.alternates,
+            which pages replace wholesale when they set their own canonical. */}
+        <link rel="alternate" type="application/rss+xml" title="Treatments Hub - Guides" href="https://www.treatmentshub.com/feed.xml" />
         {/* The Treatments Hub brand is the default in the server HTML (primary
             domain post-migration - crawlers see it without JS). Only when served
             from the legacy topweightloss host do we mark the document, before

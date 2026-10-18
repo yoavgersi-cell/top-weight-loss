@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { HubHome } from "@/components/hub-home";
 import { hreflangLanguages } from "@/lib/regions";
 
-export const revalidate = 300;
+// Content only changes through deploys (which purge the cache), so an hourly
+// regeneration is plenty; the previous 5-minute window meant more first-hit
+// renders for no freshness gain.
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: {
