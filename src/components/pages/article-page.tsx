@@ -662,10 +662,14 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                   />
                 </section>
 
-                {/* Top-providers conversion block, right after the intro: the
-                    ranked comparison-page cards + CTAs on an otherwise-prose
-                    buyer guide. Gated per slug (see showTopProvidersCro). */}
-                {i === 0 && showTopProvidersCro && (
+                {/* Top-providers conversion block: the ranked comparison-page
+                    cards + CTAs on an otherwise-prose buyer guide. Placed after
+                    the third section (below the price table and Trustpilot
+                    carousel that follow the "cheapest" section) so the reader
+                    meets the explainer and the prices before the cards; the
+                    product carousel follows one section later. Gated per slug
+                    (see showTopProvidersCro). */}
+                {i === 2 && showTopProvidersCro && (
                   <TopProvidersBlock
                     config={config}
                     linkPrefix={ctx.prefix}
