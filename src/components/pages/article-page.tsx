@@ -535,7 +535,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               />
             </div>
           )}
-          <div className="relative z-10 mx-auto max-w-[1100px] px-4 py-7 sm:px-6 sm:py-12">
+          <div className="relative z-10 mx-auto max-w-[1100px] px-4 pt-4 pb-5 sm:px-6 sm:py-10">
             <Breadcrumbs
               items={[
                 { label: "Home", href: hubLink(ctx, "/") },
@@ -548,7 +548,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 short dek → low-weight byline/date. Spacing kept deliberately
                 compact so the first mobile viewport reads like a publication,
                 not a long SEO intro. */}
-            <div className="mb-2.5 flex items-center gap-3">
+            <div className="mb-2 flex items-center gap-3">
               <span
                 className={`rounded-full px-2.5 py-0.5 text-[11px] font-semibold ${categoryColors[article.category] || "bg-gray-100 text-gray-600"}`}
               >
@@ -560,14 +560,17 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               </span>
             </div>
 
-            <h1 className="text-[24px] font-bold leading-tight text-[#191919] sm:max-w-[640px] sm:text-[32px]">
+            {/* Mobile sizes chosen so a typical title wraps to two lines and
+                the dek to three on a 390px viewport (Oct 18, 2026); desktop
+                sizes unchanged. */}
+            <h1 className="text-[22px] font-bold leading-[1.2] tracking-[-0.01em] text-[#191919] sm:max-w-[640px] sm:text-[32px] sm:leading-tight sm:tracking-normal">
               {article.title}
             </h1>
-            <p className="mt-2.5 max-w-[640px] text-[15px] leading-[1.55] text-gray-600 sm:text-[16px]">
+            <p className="mt-2 max-w-[640px] text-[14px] leading-[1.45] text-gray-600 sm:text-[16px] sm:leading-[1.55]">
               {article.description}
             </p>
-            <p className="mt-3 text-[12px] text-gray-400">Updated {formattedDate}</p>
-            <MedicalReviewBar path={`/${ctx.vertical}/articles/${slug}`} className="mt-4 max-w-[760px]" />
+            <p className="mt-2 text-[12px] text-gray-400">Updated {formattedDate}</p>
+            <MedicalReviewBar path={`/${ctx.vertical}/articles/${slug}`} className="mt-3 max-w-[760px]" />
           </div>
         </div>
 
