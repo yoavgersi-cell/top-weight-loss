@@ -277,7 +277,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     image: "/products/shed-tirzepatide.webp",
   },
   // ── Brand-name ──
-  // wellmedr brand shelf (operator-supplied card creatives, Sept 2026):
+  // welludr brand shelf (operator-supplied card creatives, Sept 2026):
   // month-to-month plans that include the licensed provider review, a
   // Medical Weight-Care Coach and tailored dosage adjustments.
   {

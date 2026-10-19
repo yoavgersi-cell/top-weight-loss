@@ -18,7 +18,7 @@ export const SLUG_ALIASES: Record<string, string> = {
   "medvi-vs-embody": "embody-vs-medvi",
   "ro-vs-embody": "embody-vs-ro",
   "wellmedr-vs-embody": "embody-vs-wellmedr",
-  // Oct 15, 2026: the page now leads with wellmedr, so the reverse order is a likely typed URL.
+  // Oct 15, 2026: the page now leads with welludr, so the reverse order is a likely typed URL.
   "wellmedr-vs-trimrx": "trimrx-vs-wellmedr",
   // Retired/never-built matchups still indexed on the legacy domain with
   // residual impressions (found via the old-domain Pages export). Noom is an

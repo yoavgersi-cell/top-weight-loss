@@ -36,12 +36,12 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "What is the cheapest GLP-1 medication in 2026?",
     answer:
-      "The cheapest GLP-1 program among the providers we track is wellmedr, at $49/month for compounded semaglutide on a 12-month plan - the same price at every dose. The cheapest with no commitment is embody at $69/month, month to month. All prices on this page are the providers' real published rates, with their conditions disclosed.",
+      "The cheapest GLP-1 program among the providers we track is welludr, at $49/month for compounded semaglutide on a 12-month plan - the same price at every dose. The cheapest with no commitment is embody at $69/month, month to month. All prices on this page are the providers' real published rates, with their conditions disclosed.",
   },
   {
     question: "What is the cheapest tirzepatide?",
     answer:
-      "wellmedr lists compounded tirzepatide from $89/month, the lowest published tirzepatide price we track. embody is the cheapest month-to-month option at $119/month ($129 regular), and DirectMeds charges a flat $147/month for either medication - including a needle-free sublingual drops format at the same price.",
+      "welludr lists compounded tirzepatide from $89/month, the lowest published tirzepatide price we track. embody is the cheapest month-to-month option at $119/month ($129 regular), and DirectMeds charges a flat $147/month for either medication - including a needle-free sublingual drops format at the same price.",
   },
   {
     question: "Why are these so much cheaper than Ozempic?",
@@ -56,7 +56,7 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "What's the catch with the lowest prices?",
     answer:
-      "Commitment and speed. The $49/month headline at wellmedr is tied to a 12-month plan, and HealthRx's $99/month is a 12-month prepaid plan with $1,188 due at checkout. Month-to-month flexibility costs slightly more (embody at $69/$119). Slower shipping is the other trade: altRx at $89 ships in about 5-7 days versus 1-2 days at embody and DirectMeds. Every condition is listed under each price above - there are no unlisted catches we're aware of.",
+      "Commitment and speed. The $49/month headline at welludr is tied to a 12-month plan, and HealthRx's $99/month is a 12-month prepaid plan with $1,188 due at checkout. Month-to-month flexibility costs slightly more (embody at $69/$119). Slower shipping is the other trade: altRx at $89 ships in about 5-7 days versus 1-2 days at embody and DirectMeds. Every condition is listed under each price above - there are no unlisted catches we're aware of.",
   },
   {
     question: "Are cheap compounded GLP-1s safe?",
@@ -127,7 +127,7 @@ export default async function CheapestGlp1Page() {
           </p>
           <p className="text-[15.5px] leading-[1.85] text-gray-800">
             The cheapest GLP-1 we track is{" "}
-            <Link href="/weight-loss/reviews/wellmedr" className="font-semibold text-[#0C4B75] hover:underline">wellmedr</Link>{" "}
+            <Link href="/weight-loss/reviews/wellmedr" className="font-semibold text-[#0C4B75] hover:underline">welludr</Link>{" "}
             - compounded semaglutide at <strong className="text-[#191919]">$49/month</strong> on a
             12-month plan, and the cheapest tirzepatide at{" "}
             <strong className="text-[#191919]">$89/month</strong>. If you don&rsquo;t want a
@@ -189,7 +189,7 @@ export default async function CheapestGlp1Page() {
               </thead>
               <tbody className="text-[13.5px]">
                 {[
-                  ["wellmedr", "$49 x 12 (12-month plan rate)", "$588", "$13,200"],
+                  ["welludr", "$49 x 12 (12-month plan rate)", "$588", "$13,200"],
                   ["embody", "$69 x 12 (promo; $948 at the $79 regular rate)", "$828", "$12,960"],
                   ["altRx", "$89 x 12, flat at every dose", "$1,068", "$12,720"],
                   ["Medvi", "$99 x 12 (promo; reg. $199) - all-inclusive", "$1,188", "$12,600"],
@@ -212,7 +212,7 @@ export default async function CheapestGlp1Page() {
             Assumes published prices hold for 12 months and promo conditions apply exactly as listed
             (SHED&rsquo;s 20% off is a month-one rate; embody&rsquo;s $69 is
             promotional against $79 regular). Savings compare against Ozempic&rsquo;s lowest listed
-            brand price on our providers&rsquo; shelves ($1,149/month at altRx; wellmedr lists it at
+            brand price on our providers&rsquo; shelves ($1,149/month at altRx; welludr lists it at
             $1,399). What&rsquo;s bundled differs - Medvi and SHED include coaching layers others
             don&rsquo;t - so the cheapest row isn&rsquo;t automatically the best fit. The dated,
             citable version of this data, with its change log, is our{" "}
@@ -250,7 +250,7 @@ export default async function CheapestGlp1Page() {
                     "~21% average body-weight loss at 72 weeks (SURMOUNT-1, 15 mg)",
                   ],
                   ["Dosing", "One injection per week", "One injection per week"],
-                  ["Cheapest compounded price", "$49/mo (wellmedr, 12-month plan)", "$89/mo (wellmedr)"],
+                  ["Cheapest compounded price", "$49/mo (welludr, 12-month plan)", "$89/mo (welludr)"],
                   ["Cheapest month-to-month", "$69/mo (embody)", "$119/mo (embody)"],
                   ["Same price for both", "$147/mo flat (DirectMeds - injections or drops)", "$147/mo flat (DirectMeds)"],
                 ].map(([label, sema, tirz], i) => (
@@ -320,7 +320,7 @@ export default async function CheapestGlp1Page() {
             </Link>
             {" · "}
             <Link href="/weight-loss/embody-vs-wellmedr" className="font-semibold text-[#0C4B75] hover:underline">
-              embody vs wellmedr
+              embody vs welludr
             </Link>
             {" · "}
             <Link href="/weight-loss/reviews" className="font-semibold text-[#0C4B75] hover:underline">

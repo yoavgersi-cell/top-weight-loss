@@ -69,12 +69,12 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "Will I keep my current dose when I switch?",
     answer:
-      "That's the reviewing clinician's call, and it's made from your intake - which is why disclosing your exact current medication and dose matters. Many providers charge the same price at every dose (wellmedr, altRx, DirectMeds, embody), so a higher continuation dose doesn't cost more at those programs. Never adjust your own dose during a switch without clinical guidance.",
+      "That's the reviewing clinician's call, and it's made from your intake - which is why disclosing your exact current medication and dose matters. Many providers charge the same price at every dose (welludr, altRx, DirectMeds, embody), so a higher continuation dose doesn't cost more at those programs. Never adjust your own dose during a switch without clinical guidance.",
   },
   {
     question: "What about switching from Zepbound or Mounjaro?",
     answer:
-      "Same logic, different molecule: Zepbound and Mounjaro are tirzepatide, and compounded tirzepatide is available from $89/month (wellmedr) to $299/month (SHED), versus $1,249-$1,599/month for brand Zepbound. Disclose your current dose in the intake exactly as you would with semaglutide.",
+      "Same logic, different molecule: Zepbound and Mounjaro are tirzepatide, and compounded tirzepatide is available from $89/month (welludr) to $299/month (SHED), versus $1,249-$1,599/month for brand Zepbound. Disclose your current dose in the intake exactly as you would with semaglutide.",
   },
   {
     question: "Is switching to compounded safe?",
@@ -198,7 +198,7 @@ export default async function SwitchFromOzempicPage() {
             </table>
           </div>
           <p className="mt-3 text-[13px] text-gray-400">
-            At the widest gap - Wegovy $1,579 vs wellmedr&rsquo;s $49 semaglutide plan - the
+            At the widest gap - Wegovy $1,579 vs welludr&rsquo;s $49 semaglutide plan - the
             difference is over $18,000 a year. Compounded products are not FDA-approved brand drugs;
             the quality bar lives with the pharmacy, which is what the checklist below is for.
           </p>
@@ -280,7 +280,7 @@ export default async function SwitchFromOzempicPage() {
             deviated from them. Compounded programs dose in the same molecule but their clinician sets
             your continuation dose individually - being mid-ladder on the brand doesn&rsquo;t
             guarantee the same rung on the new program. Several providers charge the same price at
-            every dose (wellmedr, altRx, DirectMeds, embody), so a higher continuation dose
+            every dose (welludr, altRx, DirectMeds, embody), so a higher continuation dose
             doesn&rsquo;t have to cost more.
           </p>
         </section>
@@ -369,7 +369,7 @@ export default async function SwitchFromOzempicPage() {
                   [
                     "Price at YOUR dose, not the headline",
                     "Switchers often arrive mid-titration; per-dose pricing can beat the advertised rate out of you.",
-                    "Flat at every dose: wellmedr, altRx, DirectMeds, embody",
+                    "Flat at every dose: welludr, altRx, DirectMeds, embody",
                   ],
                 ].map(([check, why, who], i) => (
                   <tr key={i} className="border-b border-gray-100 align-top last:border-0">

@@ -32,7 +32,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Trustpilot record", value: "3.8 across 9,604 reviews" },
     ],
   },
-  "weight-loss:wellmedr": {
+  "weight-loss:welludr": {
     rows: [
       { label: "Semaglutide price", value: "$49/month on a 12-month plan" },
       { label: "Tirzepatide price", value: "$89/month" },
