@@ -608,7 +608,9 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
       {/* Hero header */}
       <div className="border-b border-gray-200 bg-white">
-        <div className="mx-auto max-w-[1000px] px-4 pb-8 pt-8 sm:px-6 sm:pt-10">
+        {/* Phone-tight masthead (Oct 2026): less padding above the breadcrumbs
+            and between the rows; desktop spacing unchanged. */}
+        <div className="mx-auto max-w-[1000px] px-4 pb-5 pt-4 sm:px-6 sm:pb-8 sm:pt-10">
           <Breadcrumbs
             items={[
               { label: "Home", href: hubLink(ctx, "/") },
@@ -617,7 +619,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             ]}
           />
 
-          <div className="mt-4 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-2 flex flex-col gap-4 sm:mt-4 sm:flex-row sm:items-center sm:justify-between sm:gap-5">
             <div className="flex items-center gap-3.5 sm:gap-5">
               <div className="flex h-[44px] w-[96px] shrink-0 items-center sm:h-[50px] sm:w-[130px]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
