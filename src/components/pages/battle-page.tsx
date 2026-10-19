@@ -745,7 +745,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           {/* Mobile-tight hero: less padding, a smaller subtitle, and a single
               wrapping byline row - the fold should reach real content, not
               spend itself on credits. Desktop keeps its previous scale. */}
-          <div className="mx-auto max-w-[1100px] px-4 pb-6 pt-5 sm:px-6 sm:pb-14 sm:pt-12">
+          <div className="mx-auto max-w-[1100px] px-4 pb-5 pt-4 sm:px-6 sm:pb-14 sm:pt-12">
             <Breadcrumbs
               items={[
                 { label: "Home", href: hubLink(ctx, "/") },
@@ -753,17 +753,17 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               ]}
             />
 
-            <h1 className="text-[24px] font-extrabold leading-[1.18] text-[#191919] sm:text-[38px] sm:leading-[1.15]">
+            <h1 className="text-[22px] font-extrabold leading-[1.2] tracking-[-0.01em] text-[#191919] sm:text-[38px] sm:leading-[1.15] sm:tracking-normal">
               {battle.title}
             </h1>
-            <p className="mt-2 max-w-xl text-[14px] leading-relaxed text-gray-700 sm:mt-3 sm:text-[15px]">
+            <p className="mt-2 max-w-xl text-[14px] leading-[1.45] text-gray-700 sm:mt-3 sm:text-[15px] sm:leading-relaxed">
               {battle.subtitle || battle.description}
             </p>
             {/* One quiet credibility line - byline, medical review and date read
                 as a single strand of muted metadata, so nothing here competes
                 with the H1 above or the value block below. No bold-dark names,
                 no uppercase pseudo-labels: this is a caption, not a headline. */}
-            <div className="mt-3 flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[11.5px] leading-[1.5] text-gray-500 sm:mt-4 sm:text-[12.5px]">
+            <div className="mt-2 flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[11.5px] leading-[1.5] text-gray-500 sm:mt-4 sm:text-[12.5px]">
               {config.experts && config.experts.length > 0 && (
                 <span>
                   By{" "}
@@ -775,7 +775,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               <span className="text-gray-400">·</span>
               <LastUpdated date={battleUpdatedAt} />
             </div>
-            <MedicalReviewBar path={`/${ctx.vertical}/${battle.slug}`} className="mt-4 max-w-[760px]" />
+            <MedicalReviewBar path={`/${ctx.vertical}/${battle.slug}`} className="mt-3 max-w-[760px] sm:mt-4" />
             <TrustDisclosure disclaimerHref={"/weight-loss/disclaimer"} />
           </div>
         </section>
