@@ -62,7 +62,7 @@ type Row = {
 const ROWS: Row[] = [
   {
     id: "wellmedr",
-    name: "wellmedr",
+    name: "welludr",
     medications: "Compounded semaglutide and tirzepatide; brand-name Ozempic and Zepbound",
     entry: "$49 sema / $89 tirz",
     entryNote: "12-month plan, same price at every dose",
@@ -73,7 +73,7 @@ const ROWS: Row[] = [
     trustpilot: { rating: "4.6", count: "2,188", checked: TRUSTPILOT_CHECKED, url: "https://www.trustpilot.com/review/wellmedr.com" },
     advantage: "Lowest ongoing price; weight-loss warranty",
     limitation: "Lowest rate needs a 12-month plan; slower shipping",
-    cta: "Check wellmedr's 12-month rate",
+    cta: "Check welludr's 12-month rate",
   },
   {
     id: "embody",
@@ -209,7 +209,7 @@ const SECTIONS: Section[] = [
     id: "wellmedr",
     overview: (
       <>
-        wellmedr sells compounded semaglutide and tirzepatide on a twelve-month plan <strong className="text-[#191919]">at the lowest ongoing price we track</strong>, with the same price at every dose, a coach included on every plan and a brand-name shelf for people who want Ozempic or Zepbound. It is the provider for readers who have decided to stay on treatment and want the cheapest sustainable rate.
+        welludr sells compounded semaglutide and tirzepatide on a twelve-month plan <strong className="text-[#191919]">at the lowest ongoing price we track</strong>, with the same price at every dose, a coach included on every plan and a brand-name shelf for people who want Ozempic or Zepbound. It is the provider for readers who have decided to stay on treatment and want the cheapest sustainable rate.
       </>
     ),
     pricing: (
@@ -218,7 +218,7 @@ const SECTIONS: Section[] = [
       </>
     ),
     support:
-      "Board-certified specialists review the intake and a Medical Weight-Care Coach is included. Reviewers name support agents repeatedly, which is unusual in this market and suggests a staffed, human support desk. Reddit users name a Florida compounding pharmacy; one names Logos, a 503A pharmacy. wellmedr has not confirmed its pharmacy to us.",
+      "Board-certified specialists review the intake and a Medical Weight-Care Coach is included. Reviewers name support agents repeatedly, which is unusual in this market and suggests a staffed, human support desk. Reddit users name a Florida compounding pharmacy; one names Logos, a 503A pharmacy. welludr has not confirmed its pharmacy to us.",
     trustpilotHeading: "4.6 across 2,188 reviews",
     trustpilot: (
       <>
@@ -227,7 +227,7 @@ const SECTIONS: Section[] = [
     ),
     reddit: (
       <>
-        wellmedr&rsquo;s Reddit footprint is comment-level: short, recent verdicts from people on annual plans. &ldquo;They are legit with their pharmacy in Florida. I did a ton of research and ended up <strong className="text-[#191919]">paying for a whole year at 88 a month</strong>,&rdquo; one user wrote two months before our capture. Another pays $129 month to month and says it is the only charge. A third was considering switching because &ldquo;I can get a whole year for $99/month, that&rsquo;s the lowest I&rsquo;ve seen.&rdquo; The counterweight is one detailed account from a user who switched from another provider, was kept at the 15 mg tirzepatide dose, received the order right away, and was still only one pound down after eight weeks on a prepaid six-month supply. That is a reminder about the medication, not the service. Excerpts captured from GLP-1 subreddits, July to September 2026.
+        welludr&rsquo;s Reddit footprint is comment-level: short, recent verdicts from people on annual plans. &ldquo;They are legit with their pharmacy in Florida. I did a ton of research and ended up <strong className="text-[#191919]">paying for a whole year at 88 a month</strong>,&rdquo; one user wrote two months before our capture. Another pays $129 month to month and says it is the only charge. A third was considering switching because &ldquo;I can get a whole year for $99/month, that&rsquo;s the lowest I&rsquo;ve seen.&rdquo; The counterweight is one detailed account from a user who switched from another provider, was kept at the 15 mg tirzepatide dose, received the order right away, and was still only one pound down after eight weeks on a prepaid six-month supply. That is a reminder about the medication, not the service. Excerpts captured from GLP-1 subreddits, July to September 2026.
       </>
     ),
     cancellation:
@@ -237,7 +237,7 @@ const SECTIONS: Section[] = [
     suits: "Readers who already know they will stay on treatment for a year, want the lowest total cost, and value a coach and a phone-answering support desk over next-day delivery.",
     assessment: (
       <>
-        On the evidence, wellmedr&rsquo;s value case is <strong className="text-[#191919]">the strongest here for long-term users</strong>: the lowest verified ongoing price, a service record that both Trustpilot and Reddit describe as responsive, and refund terms that are kinder than most. The trade is commitment and patience with shipping. If you are not sure you will stay on treatment, start somewhere month to month and come back.
+        On the evidence, welludr&rsquo;s value case is <strong className="text-[#191919]">the strongest here for long-term users</strong>: the lowest verified ongoing price, a service record that both Trustpilot and Reddit describe as responsive, and refund terms that are kinder than most. The trade is commitment and patience with shipping. If you are not sure you will stay on treatment, start somewhere month to month and come back.
       </>
     ),
   },
@@ -330,7 +330,7 @@ const SECTIONS: Section[] = [
       </>
     ),
     support:
-      "The telemedicine visit and prescription are included. There is no coaching or dietician layer; this is a medication-and-visit service. Reviewers name support representatives repeatedly, in the same way wellmedr's do. The dispensing pharmacy is not named on the site; \"pharmacy-direct\" is the company's description of its model.",
+      "The telemedicine visit and prescription are included. There is no coaching or dietician layer; this is a medication-and-visit service. Reviewers name support representatives repeatedly, in the same way welludr's do. The dispensing pharmacy is not named on the site; \"pharmacy-direct\" is the company's description of its model.",
     trustpilotHeading: "4.6 across 16,390 reviews",
     trustpilot: (
       <>
@@ -596,7 +596,7 @@ export default async function Glp1ProviderComparisonPage() {
           <p className="mt-3 max-w-[720px] text-[15.5px] leading-relaxed text-gray-500">
             Eight online providers, four pricing models, two kinds of medication, and one question every reader is
             really asking: what will this cost me in month three, and will anyone answer when something goes wrong?
-            We compared wellmedr, embody, Eden, DirectMeds, Medvi, TrimRx, altRx and Ro on their published prices, their
+            We compared welludr, embody, Eden, DirectMeds, Medvi, TrimRx, altRx and Ro on their published prices, their
             Trustpilot records, what people say about them on Reddit, and the cancellation terms in their policies.
             Everything is dated, everything is linked, and where we could not verify something we say so.
           </p>
@@ -768,7 +768,7 @@ export default async function Glp1ProviderComparisonPage() {
         <section className="mb-12">
           <H2 id="in-depth">In-depth: the eight providers</H2>
           <p className="mb-2 text-[14px] text-gray-500">
-            Ordered by model so that neighbours contrast: flat-price compounded providers first (wellmedr, embody, Eden, DirectMeds), then the care-led
+            Ordered by model so that neighbours contrast: flat-price compounded providers first (welludr, embody, Eden, DirectMeds), then the care-led
             ones, then the brand-name shelf, then membership-plus-medication. Not a ranking.
           </p>
           <div className="space-y-8">
@@ -867,12 +867,12 @@ export default async function Glp1ProviderComparisonPage() {
         <section className="mb-12">
           <H2 id="what-reviews-reveal">What Trustpilot and Reddit reveal about GLP-1 telehealth providers</H2>
           <p className="mb-4">Read across all eight, the two platforms agree more often than they disagree, and the agreements are the useful part.</p>
-          <p className="mb-4"><strong className="text-[#191919]">Pricing transparency.</strong> The complaint that recurs most is not a high price but a surprise: a first month mistaken for the ongoing rate (Ro), a promotional tier billed differently from the one advertised (altRx), a charge arriving sooner than a month (wellmedr), a first order billed at double the quote (TrimRx), a renewal that was hard to stop (Medvi). The providers with flat, dose-independent pricing and one bill (DirectMeds, Eden, embody, wellmedr on its plan) generate fewer of these complaints, and when they do it is about timing rather than amount.</p>
-          <p className="mb-4"><strong className="text-[#191919]">Shipping reliability.</strong> Every provider has delivery complaints. They concentrate where the published promise is fastest: embody&rsquo;s one-to-two-day shipping is praised when it happens and attacked when the order sits at the pharmacy; DirectMeds&rsquo; recent two-star review is an order open for nineteen days; Ro&rsquo;s is a four-day delay; TrimRx&rsquo;s is a tracking date that moved. wellmedr promises three to five days and is criticised for slowness, not for broken promises. The honest reading is that transit is fast at all of them and pipeline time before dispatch is where the variance lives. Our <L href="/weight-loss/glp1-shipping-times">shipping-times page</L> sets each provider&rsquo;s promise next to what reviewers report.</p>
-          <p className="mb-4"><strong className="text-[#191919]">Customer service.</strong> Named-agent praise is the strongest positive signal on Trustpilot and it clusters at Eden, wellmedr, DirectMeds, Medvi and altRx. embody and Ro draw the opposite: requests for a human, a phone number, or a reply that does not read as automated. Reddit says the same about embody in different words (&ldquo;if you don&rsquo;t need to actually talk to anyone&rdquo;). Our <L href="/weight-loss/glp1-provider-support">provider-support comparison</L> goes deeper on this from the captured reviews.</p>
-          <p className="mb-4"><strong className="text-[#191919]">Medical support.</strong> Medvi is the clear outlier on clinical contact: video visits, a dietician and coaching are what its reviewers write about. TrimRx&rsquo;s check-ins and wellmedr&rsquo;s coach are the next tier. embody&rsquo;s and DirectMeds&rsquo; models are visit-plus-portal. Ro&rsquo;s is clinician-reviewed but message-only. None of this says anything about results; the Reddit threads with the biggest numbers (Ro, Medvi) and the one with the smallest (wellmedr, one pound in eight weeks) are about the medication and the person, not the provider.</p>
-          <p className="mb-4"><strong className="text-[#191919]">Cancellation.</strong> Reviews and terms line up. The providers with 72-hour rules and payments-final language (embody, altRx, Medvi) are the ones whose negative reviews mention cancelling; wellmedr, with the most refund-friendly terms, has the fewest such reviews. TrimRx&rsquo;s prepaid non-refundability and its refund complaints are the same fact seen twice.</p>
-          <p className="mb-4"><strong className="text-[#191919]">Pharmacy information.</strong> Only embody (US 503A, LegitScript-certified) and Ro (in-house) state their pharmacy arrangement clearly. For the others, the pharmacy names in circulation (Logos for wellmedr, Strive for altRx, Casa for TrimRx) come from customers, not providers, and we have not confirmed them. It is a fair question to ask any provider before paying, and the <L href="/weight-loss/articles/503a-vs-503b-pharmacy-28-day-rule">503A versus 503B guide</L> explains why.</p>
+          <p className="mb-4"><strong className="text-[#191919]">Pricing transparency.</strong> The complaint that recurs most is not a high price but a surprise: a first month mistaken for the ongoing rate (Ro), a promotional tier billed differently from the one advertised (altRx), a charge arriving sooner than a month (welludr), a first order billed at double the quote (TrimRx), a renewal that was hard to stop (Medvi). The providers with flat, dose-independent pricing and one bill (DirectMeds, Eden, embody, welludr on its plan) generate fewer of these complaints, and when they do it is about timing rather than amount.</p>
+          <p className="mb-4"><strong className="text-[#191919]">Shipping reliability.</strong> Every provider has delivery complaints. They concentrate where the published promise is fastest: embody&rsquo;s one-to-two-day shipping is praised when it happens and attacked when the order sits at the pharmacy; DirectMeds&rsquo; recent two-star review is an order open for nineteen days; Ro&rsquo;s is a four-day delay; TrimRx&rsquo;s is a tracking date that moved. welludr promises three to five days and is criticised for slowness, not for broken promises. The honest reading is that transit is fast at all of them and pipeline time before dispatch is where the variance lives. Our <L href="/weight-loss/glp1-shipping-times">shipping-times page</L> sets each provider&rsquo;s promise next to what reviewers report.</p>
+          <p className="mb-4"><strong className="text-[#191919]">Customer service.</strong> Named-agent praise is the strongest positive signal on Trustpilot and it clusters at Eden, welludr, DirectMeds, Medvi and altRx. embody and Ro draw the opposite: requests for a human, a phone number, or a reply that does not read as automated. Reddit says the same about embody in different words (&ldquo;if you don&rsquo;t need to actually talk to anyone&rdquo;). Our <L href="/weight-loss/glp1-provider-support">provider-support comparison</L> goes deeper on this from the captured reviews.</p>
+          <p className="mb-4"><strong className="text-[#191919]">Medical support.</strong> Medvi is the clear outlier on clinical contact: video visits, a dietician and coaching are what its reviewers write about. TrimRx&rsquo;s check-ins and welludr&rsquo;s coach are the next tier. embody&rsquo;s and DirectMeds&rsquo; models are visit-plus-portal. Ro&rsquo;s is clinician-reviewed but message-only. None of this says anything about results; the Reddit threads with the biggest numbers (Ro, Medvi) and the one with the smallest (welludr, one pound in eight weeks) are about the medication and the person, not the provider.</p>
+          <p className="mb-4"><strong className="text-[#191919]">Cancellation.</strong> Reviews and terms line up. The providers with 72-hour rules and payments-final language (embody, altRx, Medvi) are the ones whose negative reviews mention cancelling; welludr, with the most refund-friendly terms, has the fewest such reviews. TrimRx&rsquo;s prepaid non-refundability and its refund complaints are the same fact seen twice.</p>
+          <p className="mb-4"><strong className="text-[#191919]">Pharmacy information.</strong> Only embody (US 503A, LegitScript-certified) and Ro (in-house) state their pharmacy arrangement clearly. For the others, the pharmacy names in circulation (Logos for welludr, Strive for altRx, Casa for TrimRx) come from customers, not providers, and we have not confirmed them. It is a fair question to ask any provider before paying, and the <L href="/weight-loss/articles/503a-vs-503b-pharmacy-28-day-rule">503A versus 503B guide</L> explains why.</p>
           <p><strong className="text-[#191919]">What these sources cannot tell you.</strong> Trustpilot reviews are self-selected, and six of the seven Trustpilot profiles here are paid subscriptions (we did not check Eden&rsquo;s plan), which allows the business to invite reviews and reply to them. Reddit accounts are anonymous and unverifiable, and a handful of threads is not a customer base. Three providers (DirectMeds, Eden, TrimRx) have no Reddit record we could find and one (altRx) has no Trustpilot profile, so for them we have one lens where the others have two. We have tried to describe patterns only where more than one source shows them.</p>
         </section>
 
@@ -885,8 +885,8 @@ export default async function Glp1ProviderComparisonPage() {
             <li className="list-disc"><strong className="text-[#191919]">Consultation costs.</strong> All eight include the initial consultation in the price. Follow-up visits are included everywhere we could verify; Medvi and TrimRx make the most of them.</li>
             <li className="list-disc"><strong className="text-[#191919]">Medication charges by dose.</strong> Ro&rsquo;s brand-name medication rises with dose ($299 to $449 for Zepbound). The compounded providers here all state one price at every dose, which is a real advantage of the model and worth confirming in writing.</li>
             <li className="list-disc"><strong className="text-[#191919]">Shipping.</strong> Free at the seven that state it; Eden does not publish shipping terms. Speed is the variable, from one to two days (embody, DirectMeds) to five to seven (altRx).</li>
-            <li className="list-disc"><strong className="text-[#191919]">Billing cadence.</strong> &ldquo;Every four weeks&rdquo; (wellmedr&rsquo;s stated cadence) is thirteen charges a year, not twelve. One reviewer reports 21 days. Ask.</li>
-            <li className="list-disc"><strong className="text-[#191919]">Prescription changes.</strong> If a clinician moves you to tirzepatide from semaglutide, the price changes at every provider here; the gap ranges from $40 (wellmedr) to $110 (TrimRx).</li>
+            <li className="list-disc"><strong className="text-[#191919]">Billing cadence.</strong> &ldquo;Every four weeks&rdquo; (welludr&rsquo;s stated cadence) is thirteen charges a year, not twelve. One reviewer reports 21 days. Ask.</li>
+            <li className="list-disc"><strong className="text-[#191919]">Prescription changes.</strong> If a clinician moves you to tirzepatide from semaglutide, the price changes at every provider here; the gap ranges from $40 (welludr) to $110 (TrimRx).</li>
             <li className="list-disc"><strong className="text-[#191919]">Cancellation conditions.</strong> 48 hours at Ro, 72 hours at embody, altRx and Medvi, and prepaid plans that are not refundable at altRx and TrimRx.</li>
           </ul>
           <p className="mb-3 text-[15px] font-semibold text-[#191919]">A three-month illustration using verified prices</p>
@@ -902,7 +902,7 @@ export default async function Glp1ProviderComparisonPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
-                <tr><th scope="row" className="px-4 py-3 font-medium text-[#191919]">wellmedr, semaglutide on the 12-month plan</th><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-800"><strong>$147</strong> (with nine more months committed)</td></tr>
+                <tr><th scope="row" className="px-4 py-3 font-medium text-[#191919]">welludr, semaglutide on the 12-month plan</th><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-800"><strong>$147</strong> (with nine more months committed)</td></tr>
                 <tr className="bg-gray-50/50"><th scope="row" className="px-4 py-3 font-medium text-[#191919]">embody, semaglutide month to month</th><td className="px-4 py-3 text-gray-600">$69</td><td className="px-4 py-3 text-gray-600">$69</td><td className="px-4 py-3 text-gray-600">$69</td><td className="px-4 py-3 text-gray-800"><strong>$207</strong> (no further commitment)</td></tr>
                 <tr><th scope="row" className="px-4 py-3 font-medium text-[#191919]">Ro, Wegovy pill plus membership, month to month</th><td className="px-4 py-3 text-gray-600">$39 + $149 = $188</td><td className="px-4 py-3 text-gray-600">$149 + $299 = $448</td><td className="px-4 py-3 text-gray-600">$149 + $299 = $448</td><td className="px-4 py-3 text-gray-800"><strong>$1,084</strong> (FDA-approved product; insurance may change this entirely)</td></tr>
               </tbody>
@@ -945,7 +945,7 @@ export default async function Glp1ProviderComparisonPage() {
         <section className="mb-12">
           <H2 id="methodology">Our research methodology</H2>
           <p className="mb-4"><strong className="text-[#191919]">Provider selection.</strong> The eight providers are the GLP-1 telehealth companies TreatmentsHub currently works with as commercial partners; Eden was added on October 14, 2026, after joining the partner list. That is the pool, stated plainly. Within it, nothing was ranked, and every provider is held to the same four sources. For the brand-name reference prices every cash-pay reader compares against, see our <L href="/weight-loss/articles/zepbound-price-online">Zepbound price guide</L> and <L href="/weight-loss/articles/wegovy-pill-price-online">Wegovy pill price guide</L>, which cite the manufacturers&rsquo; published and reported self-pay prices with dates.</p>
-          <p className="mb-4"><strong className="text-[#191919]">Official website research and pricing verification.</strong> Prices were captured from each provider&rsquo;s own pricing pages and recorded in our <L href="/weight-loss/glp1-weight-loss-statistics">price index</L>, last verified {fmt(PRICE_INDEX_VERIFIED)}, with a <L href="/weight-loss/glp1-price-changes">public change log</L> of every movement we have recorded (altRx September 14 and 21; TrimRx September 15; wellmedr September 14). Ro&rsquo;s membership and medication prices were captured from its published pricing in August 2026. Promotional, prepaid and first-month conditions are stated with every figure.</p>
+          <p className="mb-4"><strong className="text-[#191919]">Official website research and pricing verification.</strong> Prices were captured from each provider&rsquo;s own pricing pages and recorded in our <L href="/weight-loss/glp1-weight-loss-statistics">price index</L>, last verified {fmt(PRICE_INDEX_VERIFIED)}, with a <L href="/weight-loss/glp1-price-changes">public change log</L> of every movement we have recorded (altRx September 14 and 21; TrimRx September 15; welludr September 14). Ro&rsquo;s membership and medication prices were captured from its published pricing in August 2026. Promotional, prepaid and first-month conditions are stated with every figure.</p>
           <p className="mb-4"><strong className="text-[#191919]">Trustpilot analysis.</strong> For each provider we recorded the profile, the TrustScore and the review count as displayed on {TRUSTPILOT_CHECKED} (Eden: October 13, 2026), and read the most recent pages of reviews to identify themes that recur rather than single complaints. We note where a profile is a paid Trustpilot subscription. We summarise in our own words and quote only short review titles.</p>
           <p className="mb-4"><strong className="text-[#191919]">Reddit research.</strong> We searched GLP-1 communities (r/glp1, r/Semaglutide, r/tirzepatidecompound, r/compoundedtirzepatide, r/WegovyWeightLoss, r/telehealth and others) for discussions from the past twelve months, kept firsthand accounts over secondhand ones, and recorded the subreddit and date for each excerpt; thread links are given where we hold the permalink. Where we could find no substantive discussion we say so rather than fill the gap. Reddit excerpts are anonymous accounts and are presented as such.</p>
           <p className="mb-4"><strong className="text-[#191919]">Medical and regulatory sources.</strong> FDA pages on compounding and on compounded GLP-1 drugs; the FDA approval announcements for Zepbound and Foundayo and coverage of the Wegovy pill approval; the published OASIS 4 and ATTAIN-1 trials via the American College of Cardiology&rsquo;s summaries; the FDA&rsquo;s June 8, 2026 warning letter concerning altRx; and coverage of the FDA&rsquo;s March 2026 warning letters. All are linked in the sources list below.</p>

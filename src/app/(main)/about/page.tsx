@@ -54,7 +54,7 @@ const CAPTURES_DATE = "2026-10-05";
 const CAPTURES = [
   { provider: "embody", image: "/verification/tirzepatide-embody.webp", width: 900, height: 368, shows: "$69/mo semaglutide and $119/mo tirzepatide, flat pricing" },
   { provider: "altRx", image: "/verification/tirzepatide-altrx.webp", width: 900, height: 638, shows: "tirzepatide from $149 and semaglutide from $89" },
-  { provider: "wellmedr", image: "/verification/tirzepatide-wellmedr.webp", width: 900, height: 325, shows: "tirzepatide from $89 and semaglutide from $49 a month" },
+  { provider: "welludr", image: "/verification/tirzepatide-wellmedr.webp", width: 900, height: 325, shows: "tirzepatide from $89 and semaglutide from $49 a month" },
 ];
 
 const VERTICAL_LINKS = [

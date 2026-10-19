@@ -43,7 +43,7 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // Oct 2026, Bing 30-day export: "embody reviews" 411 impressions at
     // position ~6 with ZERO clicks, and the page's CTR is 0.43% on 1.6K
     // impressions - the worst of the three top review pages. Bing weights the
-    // exact phrase, so the title now opens with "embody Reviews" (the wellmedr
+    // exact phrase, so the title now opens with "embody Reviews" (the welludr
     // and altRx titles that open with "<brand> Reviews" earn 1.1% and 0.8%).
     // "Weight Loss" stays in the title for Google, where "embody weight loss
     // reviews" is the page's main query, and "Legit" covers the legit/scam
@@ -99,9 +99,11 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "DirectMeds reviews: {prices} flat at every dose, injections or drops, free 1-2 day shipping. Is it legit?",
   },
   wellmedr: {
-    title: "wellmedr Reviews 2026: Is It Legit? Cost, Results & Verdict",
+    // Rebranded Oct 2026; the old name stays in the title so searches for
+    // "wellmedr reviews" still match this page.
+    title: "welludr (formerly wellmedr) Reviews 2026: Legit? Cost & Verdict",
     description:
-      "wellmedr reviews: {prices}, used by 1M+ patients, weight-loss warranty. Is wellmedr legit? Cost, pros & cons.",
+      "welludr (formerly wellmedr) reviews: {prices}, used by 1M+ patients, weight-loss warranty. Is welludr legit? Cost, pros & cons.",
   },
   healthrx: {
     title: "HealthRx Reviews 2026: Is It Legit? $99/mo GLP-1 Examined",
@@ -161,7 +163,7 @@ const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
   },
   wellmedr: {
     verdict:
-      "Yes - wellmedr is a legitimate telehealth platform. Board-certified specialists tailor your plan, and medications are made in US state-licensed pharmacies following FDA compounding standards after a medical review.",
+      "Yes - welludr is a legitimate telehealth platform. Board-certified specialists tailor your plan, and medications are made in US state-licensed pharmacies following FDA compounding standards after a medical review.",
     signals: [
       "Board-certified specialists tailor your treatment plan",
       "US state-licensed pharmacies following FDA compounding standards",
@@ -267,19 +269,19 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
   ],
   wellmedr: [
     {
-      question: "How fast does wellmedr ship?",
+      question: "How fast does welludr ship?",
       answer:
         "Standard delivery takes about 3-5 business days, with refills shipped every 4 weeks. That's slower than the 1-2 day providers like embody and DirectMeds - the trade-off for the lowest compounded prices in our ranking.",
     },
     {
-      question: "Does wellmedr's price go up as your dose increases?",
+      question: "Does welludr's price go up as your dose increases?",
       answer:
-        "No - wellmedr charges the same price regardless of dosage: compounded semaglutide from $49/month and tirzepatide from $89/month. The lowest $49 rate is tied to a 12-month plan.",
+        "No - welludr charges the same price regardless of dosage: compounded semaglutide from $49/month and tirzepatide from $89/month. The lowest $49 rate is tied to a 12-month plan.",
     },
     {
-      question: "Can you cancel wellmedr anytime?",
+      question: "Can you cancel welludr anytime?",
       answer:
-        "Yes - you can cancel or change your plan anytime. Keep in mind the headline $49/month rate is locked in via a 12-month plan, and the program is backed by wellmedr's weight-loss warranty.",
+        "Yes - you can cancel or change your plan anytime. Keep in mind the headline $49/month rate is locked in via a 12-month plan, and the program is backed by welludr's weight-loss warranty.",
     },
   ],
   medvi: [
@@ -377,6 +379,13 @@ const REVIEW_TRUST_STRIP: Record<string, { icon: LucideIcon; label: string }[]> 
   ],
 };
 
+
+// Providers that changed their brand name. The old name is shown under the H1
+// and declared as the Organization's alternateName, so returning readers and
+// searches for the old name still land on the right page.
+const FORMER_NAMES: Record<string, string> = {
+  wellmedr: "wellmedr", // welludr since Oct 2026; id and slug unchanged
+};
 
 function fillPrices(text: string, prices: string): string {
   if (!text.includes("{prices}")) return text;
@@ -510,7 +519,11 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
       url: ctx.origin,
       logo: { "@type": "ImageObject", url: `${ctx.origin}/treatmentshub.png` },
     },
-    about: { "@type": "Organization", name: provider.name },
+    about: {
+      "@type": "Organization",
+      name: provider.name,
+      ...(FORMER_NAMES[provider.id] && { alternateName: FORMER_NAMES[provider.id] }),
+    },
     mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl(ctx, `/reviews/${slug}`) },
   };
 
@@ -629,6 +642,9 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 <h1 className="text-[22px] font-bold text-[#191919] sm:text-[28px]">
                   {provider.name} Reviews
                 </h1>
+                {FORMER_NAMES[provider.id] && (
+                  <p className="mt-0.5 text-[13px] text-gray-500">Formerly {FORMER_NAMES[provider.id]}</p>
+                )}
                 <p className="mt-0.5 text-[14px] text-gray-700">
                   {provider.tagline}
                 </p>

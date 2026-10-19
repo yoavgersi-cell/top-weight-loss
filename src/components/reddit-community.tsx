@@ -385,7 +385,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
     themes:
       "Most comments above are short and positive - \"legit,\" a named pharmacy, annual plans at $88-$99/month that match the published rates, and one long-term user paying $129 month to month. The honest exception: one detailed account got fast shipping and good service but saw little progress after 8 weeks.",
     intro:
-      "wellmedr's Reddit footprint is comment-level rather than long write-ups: short, recent verdicts, mostly from people who paid for annual plans. Excerpts from the real public comments:",
+      "welludr's Reddit footprint is comment-level rather than long write-ups: short, recent verdicts, mostly from people who paid for annual plans. Excerpts from the real public comments:",
     threads: [
       {
         author: "GiraffeNo9896",
@@ -450,7 +450,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
     ],
     takeaway:
-      "The comment-level picture is mostly positive: “legit,” a named pharmacy (one commenter says Florida, another names Logos, a 503A compounder), fast delivery, responsive service, and the prices commenters actually paid on annual plans ($88-$99/month) sit right in the range of wellmedr's published 12-month rates ($49/month semaglutide, $89/month tirzepatide). One long-term user reports paying $129 month to month and that it is the only charge - which is what the 12-month pricing structure implies for anyone who skips the annual plan. The honest counterweight is one detailed account of being down only 1 pound after 8 weeks on tirzepatide despite good service - a fair reminder that response to GLP-1 medication varies by person, and no provider's service quality can guarantee results.",
+      "The comment-level picture is mostly positive: “legit,” a named pharmacy (one commenter says Florida, another names Logos, a 503A compounder), fast delivery, responsive service, and the prices commenters actually paid on annual plans ($88-$99/month) sit right in the range of welludr's published 12-month rates ($49/month semaglutide, $89/month tirzepatide). One long-term user reports paying $129 month to month and that it is the only charge - which is what the 12-month pricing structure implies for anyone who skips the annual plan. The honest counterweight is one detailed account of being down only 1 pound after 8 weeks on tirzepatide despite good service - a fair reminder that response to GLP-1 medication varies by person, and no provider's service quality can guarantee results.",
   },
   betterhelp: {
     vertical: "online-therapy",

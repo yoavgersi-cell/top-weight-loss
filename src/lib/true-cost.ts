@@ -18,7 +18,7 @@ import { PRICE_INDEX, PRICE_INDEX_VERIFIED, type PriceCell } from "./price-index
 // published, the truth sits between the two - and the article says so.
 
 export const PROVIDER_NAMES: Record<string, string> = {
-  wellmedr: "wellmedr",
+  wellmedr: "welludr",
   embody: "embody",
   altrx: "altRx",
   medvi: "Medvi",

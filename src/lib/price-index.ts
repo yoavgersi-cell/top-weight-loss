@@ -147,7 +147,7 @@ export const PRICE_CHANGELOG: { date: string; providerId: string; change: string
 // Brand-name list prices actually published on our providers' brand shelves -
 // used for the brand-vs-compounded math. Real figures only.
 export const BRAND_SHELF: { drug: string; ingredient: string; price: string; soldAt: string }[] = [
-  { drug: "Ozempic", ingredient: "Semaglutide", price: "$1,149-$1,399/mo", soldAt: "altRx $1,149 · wellmedr $1,399" },
-  { drug: "Zepbound", ingredient: "Tirzepatide", price: "$1,249-$1,599/mo", soldAt: "altRx $1,249 · wellmedr $1,599" },
+  { drug: "Ozempic", ingredient: "Semaglutide", price: "$1,149-$1,399/mo", soldAt: "altRx $1,149 · welludr $1,399" },
+  { drug: "Zepbound", ingredient: "Tirzepatide", price: "$1,249-$1,599/mo", soldAt: "altRx $1,249 · welludr $1,599" },
   { drug: "Wegovy", ingredient: "Semaglutide", price: "$1,579-$1,799/mo", soldAt: "altRx $1,579 · Sprout $1,799" },
 ];
