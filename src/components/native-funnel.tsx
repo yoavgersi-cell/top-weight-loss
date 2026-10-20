@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { ArrowRight, Check, Star } from "lucide-react";
+import { ArrowRight, Check, Loader2, Star } from "lucide-react";
 import { ProviderCta } from "@/components/provider-cta";
 import { trackEvent, trackOnce } from "@/lib/analytics";
 import { captureClickId, withClickId } from "@/lib/click-id";
@@ -122,7 +122,22 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
   // that uses it renders before the visitor's first tap, so no hydration gap.
   const [click] = useState<{ id: string; source: string } | null>(() => captureClickId());
 
-  const step = med === null ? 1 : pay === null ? 2 : speed === null ? 3 : 4;
+  const answered = med !== null && pay !== null && speed !== null;
+  // A short "finding your match" beat after the third tap, so the result
+  // reads as computed from the answers rather than pre-loaded. The timer
+  // only runs once per completed set of answers; "Start over" resets it.
+  const [matching, setMatching] = useState(false);
+  const [matchTick, setMatchTick] = useState(0);
+  useEffect(() => {
+    if (!answered) return;
+    const steps = setInterval(() => setMatchTick((n) => n + 1), 450);
+    const done = setTimeout(() => setMatching(false), 1500);
+    return () => {
+      clearInterval(steps);
+      clearTimeout(done);
+    };
+  }, [answered]);
+  const step = !answered ? (med === null ? 1 : pay === null ? 2 : 3) : matching ? 3.5 : 4;
   const byId = useMemo(() => new Map(providers.map((p) => [p.id, p])), [providers]);
   const [leadId, altId] = pick(pay, speed);
   const lead = byId.get(leadId);
@@ -136,8 +151,13 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
   const answer = <T extends string>(set: (v: T | null) => void, n: number) => (v: T) => {
     trackOnce("StartMatch");
     trackEvent("QuizStep", { step: n, value: v });
+    if (n === 3) {
+      setMatching(true);
+      setMatchTick(0);
+    }
     set(v);
   };
+  const MATCHING_STEPS = ["Checking verified prices", "Comparing shipping and commitment", "Matching your answers"];
 
   const cta = (p: FunnelProvider, position: number, className: string) => (
     <ProviderCta
@@ -157,7 +177,7 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
   return (
     <section id="match" className="mx-auto max-w-[640px] px-4">
       <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6">
-        {step < 4 && (
+        {(step === 1 || step === 2 || step === 3) && (
           <>
             <p className="text-[12px] font-bold uppercase tracking-wider text-[#0C4B75]">Question {step} of 3</p>
             <h2 className="mt-1.5 text-[20px] font-bold leading-snug text-[#191919] sm:text-[22px]">
@@ -172,6 +192,25 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
             </div>
             <p className="mt-4 text-[12px] text-gray-400">No sign-up. Your answers only pick which verified provider we show first.</p>
           </>
+        )}
+
+        {step === 3.5 && (
+          <div className="py-6 text-center" role="status" aria-live="polite">
+            <Loader2 className="mx-auto h-8 w-8 animate-spin text-[#0C4B75]" strokeWidth={2} />
+            <p className="mt-4 text-[17px] font-bold text-[#191919]">Finding your match</p>
+            <ul className="mx-auto mt-3 max-w-[300px] space-y-1.5 text-left text-[14px] text-gray-600">
+              {MATCHING_STEPS.map((s, i) => (
+                <li key={s} className="flex items-center gap-2">
+                  {i < matchTick ? (
+                    <Check className="h-4 w-4 shrink-0 text-emerald-600" strokeWidth={2.5} />
+                  ) : (
+                    <span className={`h-4 w-4 shrink-0 rounded-full border-2 ${i === matchTick ? "border-[#0C4B75]" : "border-gray-200"}`} />
+                  )}
+                  <span className={i <= matchTick ? "text-[#191919]" : ""}>{s}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         )}
 
         {step === 4 && lead && (
@@ -227,7 +266,7 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
 
             <button
               type="button"
-              onClick={() => { setMed(null); setPay(null); setSpeed(null); }}
+              onClick={() => { setMed(null); setPay(null); setSpeed(null); setMatching(false); }}
               className="mt-4 text-[13px] font-medium text-gray-500 underline underline-offset-2 hover:text-[#0C4B75]"
             >
               Start over
