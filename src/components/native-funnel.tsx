@@ -217,26 +217,38 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
 
         {step === 4 && lead && (
           <>
-            <p className="text-[12px] font-bold uppercase tracking-wider text-emerald-700">Your match</p>
-            <div className="mt-3 flex items-center gap-4">
-              <div className="flex h-[44px] w-[120px] shrink-0 items-center">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={lead.logo} alt={`${lead.name} logo`} width={120} height={44} className="max-h-full max-w-full object-contain object-left" />
-              </div>
+            {/* Header: badge row, then the logo on its own line, then the
+                verdict line and a single-line Trustpilot record. Keeps the
+                logo and the rating from fighting for the same row on phones. */}
+            <div className="flex items-center justify-between gap-3">
+              <p className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[11.5px] font-bold uppercase tracking-wider text-emerald-700">
+                <Check className="h-3.5 w-3.5" strokeWidth={3} />
+                Your match
+              </p>
               {lead.trustpilot && (
-                <p className="text-[12.5px] text-gray-600">
-                  <Stars rating={lead.trustpilot.rating} /> <strong className="text-[#191919]">{lead.trustpilot.rating}</strong> on Trustpilot
-                  <span className="block text-gray-400">{lead.trustpilot.count} reviews</span>
+                <p className="flex items-center gap-1.5 whitespace-nowrap text-[12.5px] text-gray-600">
+                  <Stars rating={lead.trustpilot.rating} />
+                  <strong className="text-[#191919]">{lead.trustpilot.rating}</strong>
+                  <span className="text-gray-400">({lead.trustpilot.count})</span>
                 </p>
               )}
             </div>
-            <p className="mt-3 text-[15px] font-semibold text-[#191919]">{lead.edge}</p>
+            <div className="mt-4 flex h-[48px] items-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={lead.logo} alt={`${lead.name} logo`} width={160} height={48} className="max-h-[48px] max-w-[170px] object-contain object-left" />
+            </div>
+            <p className="mt-2 text-[16px] font-bold leading-snug text-[#191919]">{lead.edge}</p>
+            {lead.trustpilot && (
+              <p className="mt-1 text-[12.5px] text-gray-500">
+                Rated {lead.trustpilot.rating} across {lead.trustpilot.count} Trustpilot reviews
+              </p>
+            )}
             <div className="mt-3 rounded-xl bg-[#F4F8FB] p-4">
               <PriceLine p={lead} med={med ?? "unsure"} />
             </div>
             <ul className="mt-3 space-y-1.5 text-[14px] text-gray-700">
               <li className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" strokeWidth={2.5} /><span>{lead.shipping}</span></li>
-              <li className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" strokeWidth={2.5} /><span>{lead.commitment}</span></li>
+              <li className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" strokeWidth={2.5} /><span>{lead.commitment.replace(/^None - /, "No commitment: ")}</span></li>
               <li className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" strokeWidth={2.5} /><span>Online intake reviewed by a licensed US clinician{NO_INSURANCE_STATED.has(lead.id) ? "; no insurance required" : ""}</span></li>
             </ul>
             {cta(lead, 1, "mt-4 inline-flex h-[50px] w-full items-center justify-center gap-2 rounded-xl bg-[#0C4B75] px-6 text-[15.5px] font-bold text-white transition-colors hover:bg-[#093d61]")}
