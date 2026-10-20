@@ -12,7 +12,7 @@ import { NativeFunnel, type FunnelProvider } from "@/components/native-funnel";
 // ───── Paid-traffic landing page: /weight-loss/go/glp1 ─────
 // Built for native (Taboola) visitors, who arrive cold, on a phone, from a
 // headline - not from a search. The page has no site navigation, continues
-// the ad's promise in its headline, qualifies the visitor with three taps and
+// the ad's promise in its headline, qualifies the visitor with four taps and
 // shows one provider. Two providers are offered (operator decision, Oct 20,
 // 2026): embody and Eden. It is noindex and absent from the sitemap, so it
 // never competes with the search pages. Every figure is a verified record.
@@ -22,7 +22,7 @@ export const revalidate = 3600;
 const PAGES: Record<string, { h1: string; sub: string }> = {
   glp1: {
     h1: "Doctor-prescribed GLP-1 weight loss online, from $69 a month, without insurance",
-    sub: "Compounded semaglutide and tirzepatide from licensed US telehealth providers, at flat cash prices verified on their own sites. Three taps and we show you the provider that fits.",
+    sub: "Compounded semaglutide and tirzepatide from licensed US telehealth providers, at flat cash prices verified on their own sites. Four quick taps and we show you the provider that fits.",
   },
 };
 
