@@ -177,7 +177,7 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
   return (
     <section id="match" className="mx-auto max-w-[640px] px-4">
       <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6">
-        {step < 4 && (
+        {(step === 1 || step === 2 || step === 3) && (
           <>
             <p className="text-[12px] font-bold uppercase tracking-wider text-[#0C4B75]">Question {step} of 3</p>
             <h2 className="mt-1.5 text-[20px] font-bold leading-snug text-[#191919] sm:text-[22px]">
