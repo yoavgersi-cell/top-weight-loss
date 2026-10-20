@@ -8,10 +8,10 @@ import { captureClickId, withClickId } from "@/lib/click-id";
 
 // ───── Native-traffic qualifier ─────
 // Three taps replace the eleven-card ranking for paid (Taboola) visitors:
-// each answer is a small commitment, and the result shows one match and one
-// alternative instead of a table. Every price, note, shipping and commitment
-// line is the verified price-index record passed in by the page - nothing
-// here is written by the component.
+// each answer is a small commitment, and the result shows one provider. The
+// page offers two providers (operator decision, Oct 20, 2026): embody and
+// Eden. Every price, note and fact line is passed in by the page from the
+// verified records - nothing here is written by the component.
 
 export type FunnelProvider = {
   id: string;
@@ -21,43 +21,43 @@ export type FunnelProvider = {
   edge: string;
   semaglutide: { price: string; note: string } | null;
   tirzepatide: { price: string; note: string } | null;
-  shipping: string;
-  commitment: string;
+  /** Three verified fact lines shown under the price. */
+  facts: string[];
   trustpilot: { rating: string; count: string } | null;
 };
 
 type Med = "semaglutide" | "tirzepatide" | "unsure";
-type Pay = "m2m" | "12mo" | "flat";
-type Speed = "fast" | "ok";
+type Priority = "price" | "shipping" | "support";
+type Contact = "portal" | "human" | "either";
 
 const MED_OPTIONS: { value: Med; label: string; hint: string }[] = [
   { value: "semaglutide", label: "Semaglutide", hint: "The active ingredient in Ozempic and Wegovy" },
   { value: "tirzepatide", label: "Tirzepatide", hint: "The active ingredient in Mounjaro and Zepbound" },
   { value: "unsure", label: "Not sure yet", hint: "Show me both" },
 ];
-const PAY_OPTIONS: { value: Pay; label: string; hint: string }[] = [
-  { value: "m2m", label: "Month to month", hint: "Cancel anytime, no commitment" },
-  { value: "12mo", label: "12-month plan", hint: "Lowest monthly price, longer commitment" },
-  { value: "flat", label: "One flat price", hint: "Same price at every dose" },
+const PRIORITY_OPTIONS: { value: Priority; label: string; hint: string }[] = [
+  { value: "price", label: "The lowest monthly price", hint: "Same medication, least money each month" },
+  { value: "shipping", label: "The fastest delivery", hint: "At my door in a day or two" },
+  { value: "support", label: "Support I can reach any time", hint: "A person to talk to, around the clock" },
 ];
-const SPEED_OPTIONS: { value: Speed; label: string; hint: string }[] = [
-  { value: "fast", label: "As fast as possible", hint: "1-2 day shipping matters to me" },
-  { value: "ok", label: "A few days is fine", hint: "Price matters more than speed" },
+const CONTACT_OPTIONS: { value: Contact; label: string; hint: string }[] = [
+  { value: "portal", label: "Messaging through a patient portal is fine", hint: "I mostly want the medication handled well" },
+  { value: "human", label: "I want 24/7 human support included", hint: "Questions answered by a person, any hour" },
+  { value: "either", label: "No strong preference", hint: "Pick what fits my other answers" },
 ];
 
-// Providers whose own published copy states that no insurance is required
-// (carried on their ranking cards); the line is shown only for these.
-const NO_INSURANCE_STATED = new Set(["embody", "altrx", "directmeds"]);
-
-// Answer → [lead, runner-up]. Only the lead is rendered; the runner-up is
-// kept so the rule stays readable and a second card can return if wanted. The rule is the price index's own ordering:
-// cheapest no-commitment price (embody), cheapest committed price (welludr),
-// cheapest flat-at-every-dose price (altRx), and the 1-2 day flat-price
-// option (DirectMeds) when speed is the deciding factor.
-function pick(pay: Pay | null, speed: Speed | null): [string, string] {
-  if (pay === "12mo") return ["wellmedr", "embody"];
-  if (pay === "flat") return speed === "fast" ? ["directmeds", "altrx"] : ["altrx", "directmeds"];
-  return ["embody", "altrx"];
+// Answer → provider. Each answer is a vote for the provider whose verified
+// record matches it: embody for price (cheapest no-commitment price we track)
+// and shipping (1-2 days); Eden for support (24/7 human support included).
+// Ties and "no preference" go to embody, the page's default.
+function pick(priority: Priority | null, contact: Contact | null): string {
+  let eden = 0;
+  let embody = 0;
+  if (priority === "support") eden++;
+  if (priority === "price" || priority === "shipping") embody++;
+  if (contact === "human") eden++;
+  if (contact === "portal") embody++;
+  return eden > embody ? "eden" : "embody";
 }
 
 function Stars({ rating }: { rating: string }) {
@@ -115,18 +115,19 @@ function PriceLine({ p, med }: { p: FunnelProvider; med: Med }) {
   );
 }
 
+const MATCHING_STEPS = ["Checking verified prices", "Comparing support and delivery", "Matching your answers"];
+
 export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvider[]; verifiedOn: string }) {
   const [med, setMed] = useState<Med | null>(null);
-  const [pay, setPay] = useState<Pay | null>(null);
-  const [speed, setSpeed] = useState<Speed | null>(null);
+  const [priority, setPriority] = useState<Priority | null>(null);
+  const [contact, setContact] = useState<Contact | null>(null);
   // Read once on the client; the server initializer returns null and nothing
   // that uses it renders before the visitor's first tap, so no hydration gap.
   const [click] = useState<{ id: string; source: string } | null>(() => captureClickId());
 
-  const answered = med !== null && pay !== null && speed !== null;
+  const answered = med !== null && priority !== null && contact !== null;
   // A short "finding your match" beat after the third tap, so the result
-  // reads as computed from the answers rather than pre-loaded. The timer
-  // only runs once per completed set of answers; "Start over" resets it.
+  // reads as computed from the answers rather than pre-loaded.
   const [matching, setMatching] = useState(false);
   const [matchTick, setMatchTick] = useState(0);
   useEffect(() => {
@@ -138,15 +139,13 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
       clearTimeout(done);
     };
   }, [answered]);
-  const step = !answered ? (med === null ? 1 : pay === null ? 2 : 3) : matching ? 3.5 : 4;
+  const step = !answered ? (med === null ? 1 : priority === null ? 2 : 3) : matching ? 3.5 : 4;
+
   const byId = useMemo(() => new Map(providers.map((p) => [p.id, p])), [providers]);
-  // One result only (operator decision, Oct 20, 2026): the alternative card
-  // was removed so the page ends in a single provider and a single button.
-  const [leadId] = pick(pay, speed);
-  const lead = byId.get(leadId);
+  const lead = byId.get(pick(priority, contact)) ?? providers[0];
 
   useEffect(() => {
-    if (step === 4 && lead) trackEvent("CompleteMatch", { provider: lead.id, medication: med ?? "", pay: pay ?? "", speed: speed ?? "" });
+    if (step === 4 && lead) trackEvent("CompleteMatch", { provider: lead.id, medication: med ?? "", priority: priority ?? "", contact: contact ?? "" });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [step]);
 
@@ -159,14 +158,13 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
     }
     set(v);
   };
-  const MATCHING_STEPS = ["Checking verified prices", "Comparing shipping and commitment", "Matching your answers"];
 
-  const cta = (p: FunnelProvider, position: number, className: string) => (
+  const cta = (p: FunnelProvider, className: string) => (
     <ProviderCta
       href={withClickId(p.affiliateUrl, click)}
       providerName={p.name}
       providerSlug={p.id}
-      position={position}
+      position={1}
       pageType="quiz_results"
       sourceFlow="matching_flow"
       className={className}
@@ -184,15 +182,15 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
             <p className="text-[12px] font-bold uppercase tracking-wider text-[#0C4B75]">Question {step} of 3</p>
             <h2 className="mt-1.5 text-[20px] font-bold leading-snug text-[#191919] sm:text-[22px]">
               {step === 1 && "Which medication are you looking at?"}
-              {step === 2 && "How do you want to pay?"}
-              {step === 3 && "How fast do you need it?"}
+              {step === 2 && "What matters most to you?"}
+              {step === 3 && "How do you want to reach your care team?"}
             </h2>
             <div className="mt-4 space-y-2.5">
               {step === 1 && MED_OPTIONS.map((o) => <Option key={o.value} o={o} selected={med === o.value} onPick={answer<Med>(setMed, 1)} />)}
-              {step === 2 && PAY_OPTIONS.map((o) => <Option key={o.value} o={o} selected={pay === o.value} onPick={answer<Pay>(setPay, 2)} />)}
-              {step === 3 && SPEED_OPTIONS.map((o) => <Option key={o.value} o={o} selected={speed === o.value} onPick={answer<Speed>(setSpeed, 3)} />)}
+              {step === 2 && PRIORITY_OPTIONS.map((o) => <Option key={o.value} o={o} selected={priority === o.value} onPick={answer<Priority>(setPriority, 2)} />)}
+              {step === 3 && CONTACT_OPTIONS.map((o) => <Option key={o.value} o={o} selected={contact === o.value} onPick={answer<Contact>(setContact, 3)} />)}
             </div>
-            <p className="mt-4 text-[12px] text-gray-400">No sign-up. Your answers only pick which verified provider we show first.</p>
+            <p className="mt-4 text-[12px] text-gray-400">No sign-up. Your answers only pick which verified provider we show.</p>
           </>
         )}
 
@@ -217,9 +215,6 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
 
         {step === 4 && lead && (
           <>
-            {/* Header: badge row, then the logo on its own line, then the
-                verdict line and a single-line Trustpilot record. Keeps the
-                logo and the rating from fighting for the same row on phones. */}
             <div className="flex items-center justify-between gap-3">
               <p className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[11.5px] font-bold uppercase tracking-wider text-emerald-700">
                 <Check className="h-3.5 w-3.5" strokeWidth={3} />
@@ -247,18 +242,20 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
               <PriceLine p={lead} med={med ?? "unsure"} />
             </div>
             <ul className="mt-3 space-y-1.5 text-[14px] text-gray-700">
-              <li className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" strokeWidth={2.5} /><span>{lead.shipping}</span></li>
-              <li className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" strokeWidth={2.5} /><span>{lead.commitment.replace(/^None - /, "No commitment: ")}</span></li>
-              <li className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" strokeWidth={2.5} /><span>Online intake reviewed by a licensed US clinician{NO_INSURANCE_STATED.has(lead.id) ? "; no insurance required" : ""}</span></li>
+              {lead.facts.map((f) => (
+                <li key={f} className="flex gap-2">
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" strokeWidth={2.5} />
+                  <span>{f}</span>
+                </li>
+              ))}
             </ul>
-            {cta(lead, 1, "mt-4 inline-flex h-[50px] w-full items-center justify-center gap-2 rounded-xl bg-[#0C4B75] px-6 text-[15.5px] font-bold text-white transition-colors hover:bg-[#093d61]")}
+            {cta(lead, "mt-4 inline-flex h-[50px] w-full items-center justify-center gap-2 rounded-xl bg-[#0C4B75] px-6 text-[15.5px] font-bold text-white transition-colors hover:bg-[#093d61]")}
             <p className="mt-2 text-center text-[11.5px] text-gray-400">
               Prices verified on {lead.name}&rsquo;s site as of {verifiedOn}. Compounded medications are not FDA-approved.
             </p>
-
             <button
               type="button"
-              onClick={() => { setMed(null); setPay(null); setSpeed(null); setMatching(false); }}
+              onClick={() => { setMed(null); setPriority(null); setContact(null); setMatching(false); }}
               className="mt-4 text-[13px] font-medium text-gray-500 underline underline-offset-2 hover:text-[#0C4B75]"
             >
               Start over
@@ -266,7 +263,6 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
           </>
         )}
       </div>
-
     </section>
   );
 }
