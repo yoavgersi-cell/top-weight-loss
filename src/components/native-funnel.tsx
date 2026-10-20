@@ -49,7 +49,8 @@ const SPEED_OPTIONS: { value: Speed; label: string; hint: string }[] = [
 // (carried on their ranking cards); the line is shown only for these.
 const NO_INSURANCE_STATED = new Set(["embody", "altrx", "directmeds"]);
 
-// Answer → [lead, alternative]. The rule is the price index's own ordering:
+// Answer → [lead, runner-up]. Only the lead is rendered; the runner-up is
+// kept so the rule stays readable and a second card can return if wanted. The rule is the price index's own ordering:
 // cheapest no-commitment price (embody), cheapest committed price (welludr),
 // cheapest flat-at-every-dose price (altRx), and the 1-2 day flat-price
 // option (DirectMeds) when speed is the deciding factor.
@@ -139,9 +140,10 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
   }, [answered]);
   const step = !answered ? (med === null ? 1 : pay === null ? 2 : 3) : matching ? 3.5 : 4;
   const byId = useMemo(() => new Map(providers.map((p) => [p.id, p])), [providers]);
-  const [leadId, altId] = pick(pay, speed);
+  // One result only (operator decision, Oct 20, 2026): the alternative card
+  // was removed so the page ends in a single provider and a single button.
+  const [leadId] = pick(pay, speed);
   const lead = byId.get(leadId);
-  const alt = byId.get(altId);
 
   useEffect(() => {
     if (step === 4 && lead) trackEvent("CompleteMatch", { provider: lead.id, medication: med ?? "", pay: pay ?? "", speed: speed ?? "" });
@@ -241,28 +243,6 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
             <p className="mt-2 text-center text-[11.5px] text-gray-400">
               Prices verified on {lead.name}&rsquo;s site as of {verifiedOn}. Compounded medications are not FDA-approved.
             </p>
-
-            {alt && (
-              <div className="mt-5 rounded-xl border border-gray-200 p-4">
-                <p className="text-[11.5px] font-bold uppercase tracking-wider text-gray-400">Also worth a look</p>
-                <div className="mt-2 flex items-center justify-between gap-3">
-                  <div>
-                    <p className="text-[15px] font-bold text-[#191919]">{alt.name}</p>
-                    <p className="text-[13px] text-gray-600">{alt.edge}</p>
-                    <div className="mt-1.5 text-[13px] text-gray-700">
-                      {(med === "tirzepatide" ? alt.tirzepatide : alt.semaglutide) && (
-                        <span>
-                          <span className="capitalize">{med === "tirzepatide" ? "tirzepatide" : "semaglutide"}</span>{" "}
-                          <strong>{(med === "tirzepatide" ? alt.tirzepatide : alt.semaglutide)!.price}/mo</strong>
-                          <span className="text-gray-500"> · {(med === "tirzepatide" ? alt.tirzepatide : alt.semaglutide)!.note}</span>
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                </div>
-                {cta(alt, 2, "mt-3 inline-flex h-[42px] w-full items-center justify-center gap-2 rounded-xl border-2 border-[#0C4B75] px-5 text-[14px] font-bold text-[#0C4B75] transition-colors hover:bg-[#F4F8FB]")}
-              </div>
-            )}
 
             <button
               type="button"
