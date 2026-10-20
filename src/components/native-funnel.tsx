@@ -7,7 +7,7 @@ import { trackEvent, trackOnce } from "@/lib/analytics";
 import { captureClickId, withClickId } from "@/lib/click-id";
 
 // ───── Native-traffic qualifier ─────
-// Three taps replace the eleven-card ranking for paid (Taboola) visitors:
+// Four taps replace the eleven-card ranking for paid (Taboola) visitors:
 // each answer is a small commitment, and the result shows one provider. The
 // page offers two providers (operator decision, Oct 20, 2026): embody and
 // Eden. Every price, note and fact line is passed in by the page from the
@@ -26,10 +26,19 @@ export type FunnelProvider = {
   trustpilot: { rating: string; count: string } | null;
 };
 
+type Experience = "first" | "switching" | "unsure";
 type Med = "semaglutide" | "tirzepatide" | "unsure";
 type Priority = "price" | "shipping" | "support";
 type Contact = "portal" | "human" | "either";
 
+// Question one. It never changes the provider (neither has a verified
+// "better for switchers" fact); it changes one advice line on the result and
+// is recorded in the quiz events so the operator learns who is clicking.
+const EXPERIENCE_OPTIONS: { value: Experience; label: string; hint: string }[] = [
+  { value: "first", label: "This would be my first time", hint: "I have not used a GLP-1 before" },
+  { value: "switching", label: "I am switching from another provider", hint: "Already on semaglutide or tirzepatide" },
+  { value: "unsure", label: "Not sure yet", hint: "Just looking at my options" },
+];
 const MED_OPTIONS: { value: Med; label: string; hint: string }[] = [
   { value: "semaglutide", label: "Semaglutide", hint: "The active ingredient in Ozempic and Wegovy" },
   { value: "tirzepatide", label: "Tirzepatide", hint: "The active ingredient in Mounjaro and Zepbound" },
@@ -117,7 +126,20 @@ function PriceLine({ p, med }: { p: FunnelProvider; med: Med }) {
 
 const MATCHING_STEPS = ["Checking verified prices", "Comparing support and delivery", "Matching your answers"];
 
+// One line of advice on the result, chosen by question one. Each line is a
+// fact the provider publishes (embody: full refund if not approved; Eden:
+// free 3-minute assessment) or general guidance that names no provider.
+function adviceFor(exp: Experience | null, providerId: string): string | null {
+  if (exp === "first") {
+    if (providerId === "embody") return "First time? embody refunds you in full if a clinician does not approve you, so there is no cost to finding out.";
+    if (providerId === "eden") return "First time? Eden's online assessment is free and takes about 3 minutes, before you pay anything.";
+  }
+  if (exp === "switching") return "Switching? Have your current dose and your pharmacy's name ready for the intake - the clinician decides whether to continue it.";
+  return null;
+}
+
 export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvider[]; verifiedOn: string }) {
+  const [exp, setExp] = useState<Experience | null>(null);
   const [med, setMed] = useState<Med | null>(null);
   const [priority, setPriority] = useState<Priority | null>(null);
   const [contact, setContact] = useState<Contact | null>(null);
@@ -125,34 +147,36 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
   // that uses it renders before the visitor's first tap, so no hydration gap.
   const [click] = useState<{ id: string; source: string } | null>(() => captureClickId());
 
-  const answered = med !== null && priority !== null && contact !== null;
+  const answered = exp !== null && med !== null && priority !== null && contact !== null;
   // A short "finding your match" beat after the third tap, so the result
   // reads as computed from the answers rather than pre-loaded.
   const [matching, setMatching] = useState(false);
   const [matchTick, setMatchTick] = useState(0);
   useEffect(() => {
     if (!answered) return;
-    const steps = setInterval(() => setMatchTick((n) => n + 1), 450);
-    const done = setTimeout(() => setMatching(false), 1500);
+    // 2.2 seconds, three steps ticking at 650ms: long enough to read, short
+    // enough not to feel like waiting (operator: "a bit slower, not much").
+    const steps = setInterval(() => setMatchTick((n) => n + 1), 650);
+    const done = setTimeout(() => setMatching(false), 2200);
     return () => {
       clearInterval(steps);
       clearTimeout(done);
     };
   }, [answered]);
-  const step = !answered ? (med === null ? 1 : priority === null ? 2 : 3) : matching ? 3.5 : 4;
+  const step = !answered ? (exp === null ? 1 : med === null ? 2 : priority === null ? 3 : 4) : matching ? 4.5 : 5;
 
   const byId = useMemo(() => new Map(providers.map((p) => [p.id, p])), [providers]);
   const lead = byId.get(pick(priority, contact)) ?? providers[0];
 
   useEffect(() => {
-    if (step === 4 && lead) trackEvent("CompleteMatch", { provider: lead.id, medication: med ?? "", priority: priority ?? "", contact: contact ?? "" });
+    if (step === 5 && lead) trackEvent("CompleteMatch", { provider: lead.id, experience: exp ?? "", medication: med ?? "", priority: priority ?? "", contact: contact ?? "" });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [step]);
 
   const answer = <T extends string>(set: (v: T | null) => void, n: number) => (v: T) => {
     trackOnce("StartMatch");
     trackEvent("QuizStep", { step: n, value: v });
-    if (n === 3) {
+    if (n === 4) {
       setMatching(true);
       setMatchTick(0);
     }
@@ -177,24 +201,26 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
   return (
     <section id="match" className="mx-auto max-w-[640px] px-4">
       <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6">
-        {(step === 1 || step === 2 || step === 3) && (
+        {(step === 1 || step === 2 || step === 3 || step === 4) && (
           <>
-            <p className="text-[12px] font-bold uppercase tracking-wider text-[#0C4B75]">Question {step} of 3</p>
+            <p className="text-[12px] font-bold uppercase tracking-wider text-[#0C4B75]">Question {step} of 4</p>
             <h2 className="mt-1.5 text-[20px] font-bold leading-snug text-[#191919] sm:text-[22px]">
-              {step === 1 && "Which medication are you looking at?"}
-              {step === 2 && "What matters most to you?"}
-              {step === 3 && "How do you want to reach your care team?"}
+              {step === 1 && "Have you used a GLP-1 medication before?"}
+              {step === 2 && "Which medication are you looking at?"}
+              {step === 3 && "What matters most to you?"}
+              {step === 4 && "How do you want to reach your care team?"}
             </h2>
             <div className="mt-4 space-y-2.5">
-              {step === 1 && MED_OPTIONS.map((o) => <Option key={o.value} o={o} selected={med === o.value} onPick={answer<Med>(setMed, 1)} />)}
-              {step === 2 && PRIORITY_OPTIONS.map((o) => <Option key={o.value} o={o} selected={priority === o.value} onPick={answer<Priority>(setPriority, 2)} />)}
-              {step === 3 && CONTACT_OPTIONS.map((o) => <Option key={o.value} o={o} selected={contact === o.value} onPick={answer<Contact>(setContact, 3)} />)}
+              {step === 1 && EXPERIENCE_OPTIONS.map((o) => <Option key={o.value} o={o} selected={exp === o.value} onPick={answer<Experience>(setExp, 1)} />)}
+              {step === 2 && MED_OPTIONS.map((o) => <Option key={o.value} o={o} selected={med === o.value} onPick={answer<Med>(setMed, 2)} />)}
+              {step === 3 && PRIORITY_OPTIONS.map((o) => <Option key={o.value} o={o} selected={priority === o.value} onPick={answer<Priority>(setPriority, 3)} />)}
+              {step === 4 && CONTACT_OPTIONS.map((o) => <Option key={o.value} o={o} selected={contact === o.value} onPick={answer<Contact>(setContact, 4)} />)}
             </div>
             <p className="mt-4 text-[12px] text-gray-400">No sign-up. Your answers only pick which verified provider we show.</p>
           </>
         )}
 
-        {step === 3.5 && (
+        {step === 4.5 && (
           <div className="py-6 text-center" role="status" aria-live="polite">
             <Loader2 className="mx-auto h-8 w-8 animate-spin text-[#0C4B75]" strokeWidth={2} />
             <p className="mt-4 text-[17px] font-bold text-[#191919]">Finding your match</p>
@@ -213,7 +239,7 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
           </div>
         )}
 
-        {step === 4 && lead && (
+        {step === 5 && lead && (
           <>
             <div className="flex items-center justify-between gap-3">
               <p className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[11.5px] font-bold uppercase tracking-wider text-emerald-700">
@@ -249,13 +275,16 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
                 </li>
               ))}
             </ul>
+            {adviceFor(exp, lead.id) && (
+              <p className="mt-3 rounded-lg bg-amber-50 px-3 py-2 text-[13px] leading-relaxed text-amber-900">{adviceFor(exp, lead.id)}</p>
+            )}
             {cta(lead, "mt-4 inline-flex h-[50px] w-full items-center justify-center gap-2 rounded-xl bg-[#0C4B75] px-6 text-[15.5px] font-bold text-white transition-colors hover:bg-[#093d61]")}
             <p className="mt-2 text-center text-[11.5px] text-gray-400">
               Prices verified on {lead.name}&rsquo;s site as of {verifiedOn}. Compounded medications are not FDA-approved.
             </p>
             <button
               type="button"
-              onClick={() => { setMed(null); setPriority(null); setContact(null); setMatching(false); }}
+              onClick={() => { setExp(null); setMed(null); setPriority(null); setContact(null); setMatching(false); }}
               className="mt-4 text-[13px] font-medium text-gray-500 underline underline-offset-2 hover:text-[#0C4B75]"
             >
               Start over
