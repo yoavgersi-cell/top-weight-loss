@@ -213,7 +213,7 @@ export default async function GoPage({ params }: { params: Promise<{ battleSlug:
         </dl>
       </section>
 
-      <footer className="mx-auto max-w-[640px] px-4 pb-24 pt-10 sm:pb-12">
+      <footer className="mx-auto max-w-[640px] px-4 pb-12 pt-10">
         <p className="text-[12px] leading-relaxed text-gray-400">
           Compounded medications are not FDA-approved. This page is for information only and is not medical advice - whether a GLP-1 is right for you is a decision for you and a licensed clinician. We may earn a commission from links on this page; it never affects the prices shown. Prices verified on each provider&rsquo;s site as of {verifiedOn}.
         </p>
