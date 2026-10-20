@@ -106,6 +106,10 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
 // targets). Code-rendered, so they work for articles whose body lives in the
 // blob. Every figure is a real, listed price - no invented numbers.
 const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
+  // Oct 20, 2026 pillar. Figures are the verified price index and the two
+  // pivotal trials cited inside the article.
+  "glp1-weight-loss-online-complete-guide":
+    "You can get a GLP-1 online three ways, each needing a licensed clinician's prescription: brand-name Wegovy or Zepbound (pens or the new pills) through a telehealth prescriber or your insurance, or compounded semaglutide or tirzepatide from a state-licensed pharmacy through a telehealth provider. Verified compounded prices run $49-$199/month for semaglutide and $89-$299/month for tirzepatide; brand-name cash starts around $1,249/month. The pivotal trials showed about 15% mean weight loss on semaglutide and up to 21% on tirzepatide after 15-17 months, with most of it regained within a year of stopping.",
   // Oct 8, 2026 research-driven cluster. Figures derive from the verified
   // price index (see src/lib/true-cost.ts) and dated external sources cited
   // inside each article; the dollar stamp below carries the index date.

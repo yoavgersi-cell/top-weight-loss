@@ -1,4 +1,5 @@
 import { brandClusterArticles } from "./brand-cluster-articles";
+import { pillarGlp1Online } from "./pillar-glp1-online";
 import { trueCostTable, budgetList } from "@/lib/true-cost";
 
 export interface Article {
@@ -2649,4 +2650,5 @@ export const articles: Article[] = [
     ],
   },
   ...brandClusterArticles,
+  pillarGlp1Online,
 ];
