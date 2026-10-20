@@ -87,9 +87,12 @@ export function MedicalReviewBar({
       </Link>
       <div className={`min-w-0 ${compact ? "text-[12.5px] leading-[1.4]" : "text-[13px] leading-[1.45]"}`}>
         <p className="text-gray-700">
-          <span className={compact ? "" : "block sm:inline"}>
+          {/* Phones: the name leads and the "reviewed for medical accuracy"
+              wording moves to the second line, so the strip is two lines
+              instead of three. Desktop keeps the full sentence. */}
+          <span className={compact ? "" : "inline"}>
             <ShieldCheck className="mr-1 inline h-[14px] w-[14px] align-[-2px] text-emerald-600" strokeWidth={2.25} />
-            {review ? "Reviewed for medical accuracy by " : "Medical reviewer: "}
+            <span className={compact ? "" : "hidden sm:inline"}>{review ? "Reviewed for medical accuracy by " : "Medical reviewer: "}</span>
           </span>
           {nameLink}
           {!compact && <span className="hidden text-gray-500 sm:inline"> · {reviewer.jobTitle}</span>}
@@ -108,14 +111,19 @@ export function MedicalReviewBar({
           )}
         </p>
         {!compact && (
-          <p className={`${compact ? "" : "mt-0.5"} text-[12.5px] text-gray-500`}>
+          <p className="mt-0.5 text-[12.5px] text-gray-500">
             {review ? (
               <>
-                Reviewed <time dateTime={review.reviewedAt}>{formatDate(review.reviewedAt)}</time>
+                <span className="sm:hidden">Medically reviewed </span>
+                <span className="hidden sm:inline">Reviewed </span>
+                <time dateTime={review.reviewedAt}>{formatDate(review.reviewedAt)}</time>
                 {" · "}
               </>
             ) : (
-              <>Reviews this site&rsquo;s health content for scientific accuracy · </>
+              <>
+                <span className="sm:hidden">Medical reviewer · </span>
+                <span className="hidden sm:inline">Reviews this site&rsquo;s health content for scientific accuracy · </span>
+              </>
             )}
             <span className="hidden sm:inline">
               Written by {writer}

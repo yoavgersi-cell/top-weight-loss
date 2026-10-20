@@ -90,12 +90,12 @@ export function ComparisonLayout({ config, heroOverrides, linkPrefix = "", bylin
       />
 
       {byline && (
-        <section className="mx-auto max-w-[1200px] px-4 pt-5">
+        <section className="mx-auto max-w-[1200px] px-4 pt-3 sm:pt-5">
           <div className="flex flex-wrap items-center gap-x-3 gap-y-2">{byline}</div>
         </section>
       )}
 
-      <section className="mx-auto max-w-[1200px] px-4 pt-6 pb-6">
+      <section className="mx-auto max-w-[1200px] px-4 pt-4 pb-6 sm:pt-6">
         <div className="flex gap-6 items-start">
           <div className="min-w-0 flex-1 space-y-4">
             {displayList.map((product, idx) => (
