@@ -255,12 +255,6 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
         )}
       </div>
 
-      {/* Sticky phone CTA once a match exists */}
-      {step === 4 && lead && (
-        <div className="fixed inset-x-0 bottom-0 z-40 border-t border-gray-200 bg-white/95 p-3 backdrop-blur sm:hidden">
-          {cta(lead, 1, "inline-flex h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-[#0C4B75] px-5 text-[15px] font-bold text-white")}
-        </div>
-      )}
     </section>
   );
 }
