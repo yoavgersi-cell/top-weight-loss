@@ -248,7 +248,7 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
             </div>
             <ul className="mt-3 space-y-1.5 text-[14px] text-gray-700">
               <li className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" strokeWidth={2.5} /><span>{lead.shipping}</span></li>
-              <li className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" strokeWidth={2.5} /><span>{lead.commitment}</span></li>
+              <li className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" strokeWidth={2.5} /><span>{lead.commitment.replace(/^None - /, "No commitment: ")}</span></li>
               <li className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" strokeWidth={2.5} /><span>Online intake reviewed by a licensed US clinician{NO_INSURANCE_STATED.has(lead.id) ? "; no insurance required" : ""}</span></li>
             </ul>
             {cta(lead, 1, "mt-4 inline-flex h-[50px] w-full items-center justify-center gap-2 rounded-xl bg-[#0C4B75] px-6 text-[15.5px] font-bold text-white transition-colors hover:bg-[#093d61]")}
