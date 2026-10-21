@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Clock, ArrowRight, Trophy } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { VERTICALS, DEFAULT_ROBOTS } from "@/lib/config";
-import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
+import { type SiteContext, canonicalUrl, hubLink, verticalNameInProse } from "@/lib/site-context";
 
 function verticalName(id: string): string {
   return VERTICALS.find((v) => v.id === id)?.name ?? "Treatment";
@@ -18,7 +18,7 @@ export async function articlesIndexMetadata(ctx: SiteContext): Promise<Metadata>
   const description =
     ctx.vertical === "weight-loss"
       ? `Evidence-based weight loss guides for 2026 - GLP-1 treatment options, verified costs, what to expect, and how to choose the right online provider.`
-      : `Evidence-based ${vName.toLowerCase()} guides for 2026 - treatment options, verified costs, what to expect, and how to choose the right online provider.`;
+      : `Evidence-based ${verticalNameInProse(vName)} guides for 2026 - treatment options, verified costs, what to expect, and how to choose the right online provider.`;
   return {
     title,
     description,
@@ -87,7 +87,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
     "@type": "CollectionPage",
     ...pageReviewSchema(`/${ctx.vertical}/articles`),
     name: `${vName} Articles - Research, Guides & Expert Insights`,
-    description: `Evidence-based ${vName.toLowerCase()} guides and research - treatment options, what to expect, and choosing the right online provider.`,
+    description: `Evidence-based ${verticalNameInProse(vName)} guides and research - treatment options, what to expect, and choosing the right online provider.`,
     url: canonicalUrl(ctx, "/articles"),
     mainEntity: {
       "@type": "ItemList",
@@ -125,7 +125,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
             Articles
           </h1>
           <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-gray-500">
-            Evidence-based {vName.toLowerCase()} guides - treatment options, what
+            Evidence-based {verticalNameInProse(vName)} guides - treatment options, what
             to expect, and making informed decisions about your health.
           </p>
           <MedicalReviewBar path={`/${ctx.vertical}/articles`} className="mt-4 max-w-[760px]" compact />

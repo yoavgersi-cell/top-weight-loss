@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getConfig } from "@/lib/config-store";
 import { VERTICALS, DEFAULT_ROBOTS } from "@/lib/config";
-import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
+import { type SiteContext, canonicalUrl, hubLink, verticalNameInProse } from "@/lib/site-context";
 import { RatingBadge } from "@/components/rating-badge";
 
 function verticalName(id: string): string {
@@ -27,7 +27,7 @@ export async function reviewsIndexMetadata(ctx: SiteContext): Promise<Metadata> 
       : `${vName} Reviews 2026 - Every Provider Tested`;
   // Weight-loss names the category searchers actually use (GLP-1); other
   // verticals keep the vertical name.
-  const categoryLabel = ctx.vertical === "weight-loss" ? "GLP-1 weight loss" : vName.toLowerCase();
+  const categoryLabel = ctx.vertical === "weight-loss" ? "GLP-1 weight loss" : verticalNameInProse(vName);
   const description = `Independent 2026 reviews of ${config.reviews?.length ?? "the top"} online ${categoryLabel} providers${topNames.length ? ` - ${topNames.join(", ")} and more` : ""} - with verified ratings, pricing, pros and cons.`;
   return {
     title,
@@ -73,7 +73,7 @@ export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: `${vName} Provider Reviews`,
-    description: `Expert reviews of top online ${vName.toLowerCase()} providers.`,
+    description: `Expert reviews of top online ${verticalNameInProse(vName)} providers.`,
     numberOfItems: items.length,
     itemListElement: items.map(({ review, provider }, i) => ({
       "@type": "ListItem",
@@ -112,7 +112,7 @@ export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
             {vName} Provider Reviews
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base text-gray-600">
-            In-depth reviews of the top online {vName.toLowerCase()} providers.
+            In-depth reviews of the top online {verticalNameInProse(vName)} providers.
             Read our expert analysis of each to find the best fit for your goals,
             budget, and lifestyle.
           </p>

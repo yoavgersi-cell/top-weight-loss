@@ -1,4 +1,5 @@
 import type { SiteConfig } from "../config";
+import { ED_GUIDES_2026_10 } from "./ed-guides-2026-10";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // ED (erectile dysfunction) vertical content - treatmentshub.com/ed
@@ -7,7 +8,9 @@ import type { SiteConfig } from "../config";
 // src/lib/seeds/ed.ts, operator-maintained there through Oct 17, 2026), with
 // every internal link re-prefixed under /ed and the editorial voice set to the
 // hub's research team. Seven providers, seven reviews, seven head-to-heads,
-// seventeen guides, eight FAQs and the matching quiz. Carried over unchanged:
+// seventeen guides, eight FAQs and the matching quiz. Seven further guides,
+// written for the hub on Oct 21, 2026, live in ./ed-guides-2026-10.ts and are
+// spread into the articles list below. Carried over unchanged:
 // the providers' published terms and the Trustpilot quotes the operator
 // captured for Hims and BraveRX. Deliberately NOT carried over: the site's
 // own "men compared this month" social-proof figures and the unattributed
@@ -2003,6 +2006,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
           },
         ],
       },
+      ...ED_GUIDES_2026_10,
     ],
 
     faqs: [

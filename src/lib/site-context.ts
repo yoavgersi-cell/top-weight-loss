@@ -92,6 +92,16 @@ export function canonicalUrl(ctx: SiteContext, path: string): string {
 const SHARED_ONE_OFF = new Set(["about", "how-we-rank", "disclaimer", "privacy", "terms", "find-your-match", "find-your-match-weight-loss"]);
 
 // Internal <Link> href for an internal path.
+// Vertical name for mid-sentence use: "Hair Loss" -> "hair loss", but the
+// acronym verticals keep their capitals ("ED Treatment" -> "ED treatment",
+// "TRT" stays "TRT"). A plain toLowerCase() printed "ed treatment" and "trt".
+export function verticalNameInProse(name: string): string {
+  return name
+    .split(" ")
+    .map((w) => (w.length <= 4 && w === w.toUpperCase() ? w : w.toLowerCase()))
+    .join(" ");
+}
+
 export function hubLink(ctx: SiteContext, path: string): string {
   if (path === "/") return ctx.prefix || "/";
   const first = path.split("/").filter(Boolean)[0];
