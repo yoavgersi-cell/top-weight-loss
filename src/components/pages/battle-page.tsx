@@ -267,6 +267,7 @@ const BATTLE_CATEGORY_BY_VERTICAL: Record<string, string> = {
   trt: "TRT",
   "hair-loss": "Hair Loss",
   hrt: "HRT",
+  ed: "ED Treatment",
 };
 
 // Title-case a "{a} vs {b}" matchup so no SERP title starts lowercase, while

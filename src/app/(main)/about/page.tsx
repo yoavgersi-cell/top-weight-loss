@@ -148,7 +148,7 @@ export default async function AboutPage() {
           <p className="mt-4 max-w-[700px] text-[16px] leading-relaxed text-gray-700 sm:text-[18px]">
             We compare online treatment providers on the price they actually publish, the condition attached to it,
             who prescribes, and what real customers report - and we show our evidence. Weight loss is where we started;
-            hair loss, TRT, HRT and online therapy follow the same rules.
+            hair loss, TRT, HRT, online therapy and ED follow the same rules.
           </p>
 
           <ul className="mt-6 flex flex-wrap gap-2.5 text-[13px] font-semibold text-[#191919]">

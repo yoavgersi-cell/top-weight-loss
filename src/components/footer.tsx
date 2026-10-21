@@ -15,6 +15,7 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "TRT", href: "/trt" },
       { label: "HRT", href: "/hrt" },
       { label: "Online Therapy", href: "/online-therapy" },
+      { label: "ED Treatment", href: "/ed" },
     ],
   },
   {

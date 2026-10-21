@@ -86,8 +86,17 @@ export function canonicalUrl(ctx: SiteContext, path: string): string {
   return `${ctx.origin}${ctx.canonicalPrefix}${tail}`;
 }
 
+// Site-wide one-off pages that exist once, under /weight-loss (the proxy 301s
+// any other vertical's prefixed form there). Linking them from another
+// vertical must point at the canonical URL directly, not through the redirect.
+const SHARED_ONE_OFF = new Set(["about", "how-we-rank", "disclaimer", "privacy", "terms", "find-your-match", "find-your-match-weight-loss"]);
+
 // Internal <Link> href for an internal path.
 export function hubLink(ctx: SiteContext, path: string): string {
   if (path === "/") return ctx.prefix || "/";
+  const first = path.split("/").filter(Boolean)[0];
+  if (first && SHARED_ONE_OFF.has(first) && ctx.prefix && ctx.prefix !== `/${DEFAULT_VERTICAL}`) {
+    return `/${DEFAULT_VERTICAL}${path}`;
+  }
   return `${ctx.prefix}${path}`;
 }

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   // Icons come from the App Router file convention (app/icon.png, app/apple-icon.png),
   // which serves them at content-hashed URLs so they cache-bust on every update.
   description:
-    "Compare top online treatment providers across weight loss, hair loss, TRT and HRT - independent rankings on pricing, medical support and real customer reviews.",
+    "Compare top online treatment providers across weight loss, hair loss, TRT, HRT, online therapy and ED - independent rankings on pricing, medical support and real customer reviews.",
   keywords: [
     "treatment comparison",
     "telehealth comparison",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Treatments Hub - Compare Online Treatment Providers & Prices",
     description:
-      "Independent, side-by-side comparisons of top online providers across weight loss, hair loss, TRT and HRT.",
+      "Independent, side-by-side comparisons of top online providers across weight loss, hair loss, TRT, HRT, online therapy and ED.",
     type: "website",
     siteName: "Treatments Hub",
     locale: "en_US",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Treatments Hub - Compare Online Treatment Providers & Prices",
     description:
-      "Independent, side-by-side comparisons of top online providers across weight loss, hair loss, TRT and HRT.",
+      "Independent, side-by-side comparisons of top online providers across weight loss, hair loss, TRT, HRT, online therapy and ED.",
   },
   other: {
     "geo.region": "US",
@@ -131,7 +131,7 @@ export default function RootLayout({
               email: "contact@treatmentshub.com",
               contactPoint: { "@type": "ContactPoint", email: "contact@treatmentshub.com", contactType: "customer support", availableLanguage: "English" },
               logo: "https://www.treatmentshub.com/treatmentshub.png",
-              description: "Independent guides and provider comparisons across weight loss, hair loss, TRT and HRT - expert reviews, pricing research, and side-by-side comparisons.",
+              description: "Independent guides and provider comparisons across weight loss, hair loss, TRT, HRT, online therapy and ED - expert reviews, pricing research, and side-by-side comparisons.",
               sameAs: ["https://www.linkedin.com/company/treatments-hub"],
               // Operator-supplied, Oct 18, 2026. Year only: no founding day on record.
               foundingDate: "2026",
@@ -147,7 +147,7 @@ export default function RootLayout({
               name: "Treatments Hub",
               alternateName: ["TreatmentsHub"],
               url: "https://www.treatmentshub.com",
-              description: "Compare trusted treatment providers side by side across weight loss, hair loss, TRT and HRT",
+              description: "Compare trusted treatment providers side by side across weight loss, hair loss, TRT, HRT, online therapy and ED",
             }),
           }}
         />

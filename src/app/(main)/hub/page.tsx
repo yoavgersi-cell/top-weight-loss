@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     absolute: "Treatments Hub - Compare Online Treatment Providers & Prices",
   },
   description:
-    "Compare top online treatment providers across weight loss, hair loss, TRT and HRT - independent rankings on pricing, medical support and real customer reviews.",
+    "Compare top online treatment providers across weight loss, hair loss, TRT, HRT, online therapy and ED - independent rankings on pricing, medical support and real customer reviews.",
   // Region-aware hreflang: en-US + x-default today; gains en-GB automatically
   // when GB joins PUBLISHED_REGIONS. Other pages adopt the same helper as UK
   // content is built.
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Treatments Hub - Compare Online Treatment Providers & Prices",
     description:
-      "Independent, side-by-side comparisons of top online providers across weight loss, hair loss, TRT and HRT.",
+      "Independent, side-by-side comparisons of top online providers across weight loss, hair loss, TRT, HRT, online therapy and ED.",
     url: "https://www.treatmentshub.com",
     type: "website",
   },

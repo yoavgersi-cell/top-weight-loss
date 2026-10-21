@@ -473,8 +473,48 @@ const REVIEWED_LATER: Record<string, PageReview> = {
   "/weight-loss/glp1-provider-comparison": { reviewer: "francheska-capistrano", reviewedAt: "2026-10-12" },
 };
 
+// ED vertical, ported from edtreatmenthub.com on Oct 21, 2026. The reviewer
+// signed off these pages on that site on Oct 14, 2026; the content moved to
+// the hub unchanged, so the same review date applies under the /ed prefix.
+const ED_REVIEWED_2026_10_14 = [
+  "/ed",
+  "/ed/ed-cost-index",
+  "/ed/reviews/quad",
+  "/ed/reviews/directmeds",
+  "/ed/reviews/hims",
+  "/ed/reviews/dudemeds",
+  "/ed/reviews/braverx",
+  "/ed/reviews/petermd",
+  "/ed/reviews/shed",
+  "/ed/quad-vs-hims",
+  "/ed/quad-vs-dudemeds",
+  "/ed/quad-vs-braverx",
+  "/ed/quad-vs-directmeds",
+  "/ed/hims-vs-dudemeds",
+  "/ed/hims-vs-braverx",
+  "/ed/dudemeds-vs-braverx",
+  "/ed/articles/what-causes-erectile-dysfunction",
+  "/ed/articles/latest-ed-treatments",
+  "/ed/articles/best-ed-medicine",
+  "/ed/articles/best-ed-treatments-compared",
+  "/ed/articles/natural-ed-remedies",
+  "/ed/articles/can-low-testosterone-cause-ed",
+  "/ed/articles/alternatives-to-viagra-and-cialis",
+  "/ed/articles/sildenafil-vs-cialis",
+  "/ed/articles/quad-vs-bluechew",
+  "/ed/articles/best-4-in-1-ed-medication",
+  "/ed/articles/quad-vs-rugiet",
+  "/ed/articles/how-to-get-ed-treatment-online",
+  "/ed/articles/ed-medication-side-effects",
+  "/ed/articles/ed-treatment-cost",
+  "/ed/articles/over-the-counter-ed-treatment",
+  "/ed/articles/trimix-for-ed",
+  "/ed/articles/ed-treatment-near-me",
+];
+
 export const REVIEW_LOG: Record<string, PageReview> = {
   ...Object.fromEntries(REVIEWED_2026_10_04.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: "2026-10-04" }])),
+  ...Object.fromEntries(ED_REVIEWED_2026_10_14.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: "2026-10-14" }])),
   ...REVIEWED_LATER,
 };
 
