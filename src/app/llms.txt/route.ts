@@ -113,7 +113,7 @@ export async function GET() {
   const parts: string[] = [
     "# Treatments Hub",
     "",
-    "> Independent, side-by-side comparisons of licensed US online treatment providers across weight loss, hair loss, TRT, HRT and online therapy - with operator-verified pricing, real customer-review data, and clear editorial verdicts.",
+    "> Independent, side-by-side comparisons of licensed US online treatment providers across weight loss, hair loss, TRT, HRT, online therapy and ED - with operator-verified pricing, real customer-review data, and clear editorial verdicts.",
     "",
     "Treatments Hub compares telehealth providers on source-checked prices and plans. Every price, rating and comparison is verified against the provider or a named public source; where a figure is unavailable we say so rather than estimate. We do not fabricate statistics, reviews, or medical claims, and we do not give medical advice - each page links to the provider for current terms. Medical and scientific statements are checked by a named reviewer (see the medical review policy below); prices, rankings and verdicts are editorial.",
     "",

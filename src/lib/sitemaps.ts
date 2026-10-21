@@ -53,6 +53,12 @@ const WL_STATIC_PATHS: { path: string; priority: number; changeFrequency: "weekl
   { path: "/terms", priority: 0.2, changeFrequency: "monthly" },
 ];
 
+// Custom-coded pages owned by a single non-weight-loss vertical (served at
+// /<vertical>/<path> by a static folder under [battleSlug]).
+const VERTICAL_STATIC_PATHS: Record<string, { path: string; updatedAt: string }[]> = {
+  ed: [{ path: "/ed-cost-index", updatedAt: "2026-10-09" }],
+};
+
 // ───── treatmentshub.com - the hub sitemap ─────
 // Lists the hub landing plus every vertical that has content, under its
 // /<vertical>/ prefix. Weight-loss is withheld until the migration flips it
@@ -164,6 +170,11 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
   // has articles - an empty "No articles" page is thin content.
   if ((config.articles ?? []).length > 0) {
     entries.push({ url: P("/articles"), lastModified: articlesNewest, changeFrequency: "weekly", priority: 0.8 });
+  }
+  // Custom-coded pages that belong to one non-weight-loss vertical.
+  const verticalId = base.split("/").pop() ?? "";
+  for (const s of VERTICAL_STATIC_PATHS[verticalId] ?? []) {
+    entries.push({ url: P(s.path), lastModified: new Date(s.updatedAt), changeFrequency: "weekly", priority: 0.8 });
   }
 
   // Reviews - provider reviews are indexable by default (operator policy, Aug

@@ -45,7 +45,7 @@ export async function GET() {
     `<title>Treatments Hub - Guides</title>`,
     `<link>${HUB}</link>`,
     `<atom:link href="${HUB}/feed.xml" rel="self" type="application/rss+xml" />`,
-    `<description>Independent, medically reviewed guides and provider comparisons across weight loss, hair loss, TRT, HRT and online therapy.</description>`,
+    `<description>Independent, medically reviewed guides and provider comparisons across weight loss, hair loss, TRT, HRT, online therapy and ED.</description>`,
     `<language>en-us</language>`,
     `<lastBuildDate>${lastBuild}</lastBuildDate>`,
     ...items.map(({ vertical, article: a }) => {

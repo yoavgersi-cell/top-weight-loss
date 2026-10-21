@@ -25,7 +25,7 @@ import { ProductCarousel } from "@/components/product-carousel";
 import { notFound } from "next/navigation";
 import { REDDIT_COMMUNITY_FEEDBACK as REVIEW_COMMUNITY_FEEDBACK, RedditMark } from "@/components/reddit-community";
 import { YoutubeReviewSection } from "@/components/youtube-review";
-import { ReadableProse } from "@/components/prose";
+import { ReadableProse, enhanceArticleHtml } from "@/components/prose";
 import { ProviderAudit } from "@/components/provider-audit";
 import { HowItWorksShowcase, HOW_IT_WORKS_SHOWCASE } from "@/components/how-it-works-showcase";
 import { catalogPriceSnippet } from "@/lib/product-catalog";
@@ -39,6 +39,12 @@ import { catalogPriceSnippet } from "@/lib/product-catalog";
 // price that can go stale. Providers without a catalog entry get the token
 // removed cleanly.
 const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+  // ED vertical (ported from edtreatmenthub.com, Oct 21, 2026)
+  quad: {
+    title: "Quad by MEDVi Review 2026: Cost, Ingredients & Is It Legit?",
+    description:
+      "Independent review of Quad by MEDVi, the compounded 4-in-1 dissolvable ED medication: what is in it, monthly cost, who it suits, and whether it is legit.",
+  },
   embody: {
     // Oct 2026, Bing 30-day export: "embody reviews" 411 impressions at
     // position ~6 with ZERO clicks, and the page's CTR is 0.43% on 1.6K
@@ -189,6 +195,46 @@ const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
 // schema) - high-intent questions grounded in each provider's real published
 // terms. Side-effect answers stay at medication level and link the full guide.
 const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> = {
+  // ED vertical (ported from edtreatmenthub.com, Oct 21, 2026). Specifics are
+  // deliberately hedged: Quad is a compounded product whose formula, dose and
+  // price are set at prescribing, so we point to MEDVi rather than assert them.
+  quad: [
+    {
+      question: "What is in Quad by MEDVi?",
+      answer:
+        "Quad by MEDVi is a compounded, multi-ingredient (\"4-in-1\") ED medication - it blends several active ingredients into a single dose rather than relying on one. Because it is compounded and prescription-only, the exact actives and strengths are determined by the prescribing clinician for your intake; confirm the specific formulation with MEDVi before starting.",
+    },
+    {
+      question: "What is the Quad by MEDVi dosage?",
+      answer:
+        "There is no one-size-fits-all dose. As a compounded medication, Quad's strength and how often you take it are set by the licensed clinician who reviews your health questionnaire, and can be adjusted over time. Follow the dosing on your prescription and the guidance from MEDVi's providers rather than a generic dosage chart.",
+    },
+    {
+      question: "How much does Quad by MEDVi cost per month?",
+      answer:
+        "Quad is billed as a monthly telehealth plan rather than a per-pill price, and compounded multi-ingredient programs typically cost more than a plain generic pill. Promotions and plan tiers change often, so treat any figure you see as approximate and confirm the current monthly cost on MEDVi's own site before subscribing.",
+    },
+    {
+      question: "Is Quad by MEDVi a liquid, drops or dissolvable?",
+      answer:
+        "Quad is delivered in a fast-dissolving format rather than a traditional pill you swallow - which is why it is sometimes searched for as \"quad drops\" or \"quad liquid.\" The dissolvable format is a convenience for men who dislike swallowing tablets; the medication inside is still a prescription compound.",
+    },
+    {
+      question: "Does Quad by MEDVi work?",
+      answer:
+        "For appropriate candidates, the active ingredients in compounded ED medications like Quad work the same way proven ED medicines do - by improving blood flow - and the multi-ingredient approach is aimed at men for whom a single standard pill underperformed. Individual results vary, and whether it is right for you is a licensed clinician's decision based on your health.",
+    },
+    {
+      question: "Is Quad by MEDVi safe?",
+      answer:
+        "Compounded ED medications are used routinely for appropriate candidates when prescribed and monitored by a licensed clinician - but \"safe\" depends on that screening. Quad should never be combined with nitrate medications, and certain heart conditions and other drugs matter, which is exactly what MEDVi's provider review is for. Compounded products are not FDA-approved the way brand and generic pills are, so the clinician's sign-off is the key safeguard.",
+    },
+    {
+      question: "Is Quad by MEDVi FDA-approved?",
+      answer:
+        "No. Quad is a compounded medication prepared by a compounding pharmacy, so it does not go through the FDA approval process that covers brand-name and generic drugs. That is not unusual or illegal - compounding is long-established - but it is why a licensed clinician deciding whether it is appropriate for you does real safety work.",
+    },
+  ],
   embody: [
     {
       question: "How fast does embody ship?",
@@ -404,11 +450,17 @@ export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Me
   // Overrides are written against weight-loss offers (GLP-1 pricing etc.), so
   // a shared provider id on another vertical (directmeds on HRT) falls back to
   // the generic template instead of inheriting weight-loss claims.
-  const override = ctx.vertical === "weight-loss" ? REVIEW_SEO_OVERRIDES[slug] : undefined;
+  // Oct 21, 2026: ED overrides (quad) joined the map; quad exists only on /ed.
+  // The weight-loss maps share slugs with ED (shed, directmeds), so ED may
+  // only read its own keys.
+  const ED_OVERRIDE_SLUGS = new Set(["quad"]);
+  const override =
+    ctx.vertical === "weight-loss" || (ctx.vertical === "ed" && ED_OVERRIDE_SLUGS.has(slug)) ? REVIEW_SEO_OVERRIDES[slug] : undefined;
   // Providers reviewed in more than one vertical (Ro, Maximus, PeterMD, Hims)
   // would otherwise emit identical <title>s on two URLs - a duplicate-title
   // signal. Their titles carry the vertical name to differentiate.
-  const SHARED_REVIEW_PROVIDER_IDS = ["ro", "maximus", "petermd", "hims"];
+  // Oct 21, 2026: dudemeds (TRT + ED), shed and directmeds (weight-loss + ED) joined.
+  const SHARED_REVIEW_PROVIDER_IDS = ["ro", "maximus", "petermd", "hims", "dudemeds", "shed", "directmeds"];
   const verticalQualifier = SHARED_REVIEW_PROVIDER_IDS.includes(provider.id)
     ? ` ${VERTICALS.find((v) => v.id === ctx.vertical)?.name ?? ""}`.trimEnd() + " "
     : " ";
@@ -553,7 +605,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
     // Extra FAQs are all researched against weight-loss offers, so they only
     // apply there - a provider id shared across verticals (e.g. directmeds on
     // HRT) must not inherit another vertical's prices and shipping claims.
-    ...(ctx.vertical === "weight-loss" ? REVIEW_EXTRA_FAQS[slug] ?? [] : []),
+    ...(ctx.vertical === "weight-loss" || (ctx.vertical === "ed" && slug === "quad") ? REVIEW_EXTRA_FAQS[slug] ?? [] : []),
   ].filter((f): f is { question: string; answer: string } => !!f && !!f.answer);
 
   const faqSchema = {
@@ -800,6 +852,21 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
         {/* Trustpilot Reviews - social proof right after the legitimacy block,
             before the feature/pricing detail (moved up, operator request Sept 20). */}
+        {/* In-depth editorial deep-dive (long-form review sections, rendered when present) */}
+        {review.sections && review.sections.length > 0 && (
+          <article className="mb-8 space-y-8 border-t border-gray-200 pt-8">
+            {review.sections.map((section, i) => (
+              <section key={i}>
+                <h2 className="mb-3 text-[20px] font-bold text-[#191919]">{section.heading}</h2>
+                <div
+                  className="article-body text-[16px] leading-[1.75] text-gray-800 [&_a]:text-[#0C4B75] [&_a]:font-medium [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-[#093d61]"
+                  dangerouslySetInnerHTML={{ __html: enhanceArticleHtml(section.body) }}
+                />
+              </section>
+            ))}
+          </article>
+        )}
+
         {(provider.trustpilotReviews?.length ?? 0) > 0 && (
           <div className="mb-6 space-y-3">
             <TrustpilotSummary

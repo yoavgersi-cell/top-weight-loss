@@ -9,6 +9,7 @@ import { trtSeed } from "./seeds/trt";
 import { hrtSeed } from "./seeds/hrt";
 import { hearingAidsSeed } from "./seeds/hearing-aids";
 import { onlineTherapySeed } from "./seeds/online-therapy";
+import { edSeed } from "./seeds/ed";
 
 // weight-loss keeps the original key for full back-compatibility with the live
 // site; every other vertical is stored in its own separate blob.
@@ -51,6 +52,7 @@ function seedForVertical(vertical: string): SiteConfig {
   if (vertical === "hrt") return hrtSeed(base);
   if (vertical === "hearing-aids") return hearingAidsSeed(base);
   if (vertical === "online-therapy") return onlineTherapySeed(base);
+  if (vertical === "ed") return edSeed(base);
   return base;
 }
 
@@ -62,7 +64,7 @@ function seedForVertical(vertical: string): SiteConfig {
 // list, affiliate links, prices, reviews, battles, articles. Added Oct 8, 2026
 // when the HRT ranking was cut to the three partner providers - a blob saved
 // from the admin before that would otherwise resurrect the removed ones.
-const CODE_AUTHORITATIVE_VERTICALS = new Set(["hrt"]);
+const CODE_AUTHORITATIVE_VERTICALS = new Set(["hrt", "ed"]);
 
 async function getVerticalConfig(vertical: string): Promise<SiteConfig> {
   const base = seedForVertical(vertical);

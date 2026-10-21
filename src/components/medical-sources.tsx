@@ -11,6 +11,33 @@ export interface MedicalSource {
 }
 
 export const SOURCES_BY_VERTICAL: Record<string, MedicalSource[]> = {
+  ed: [
+    {
+      label: "Erectile Dysfunction - definition, causes and treatment",
+      publisher: "National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK), NIH",
+      href: "https://www.niddk.nih.gov/health-information/urologic-diseases/erectile-dysfunction",
+    },
+    {
+      label: "Sildenafil - drug information",
+      publisher: "MedlinePlus, U.S. National Library of Medicine (NIH)",
+      href: "https://medlineplus.gov/druginfo/meds/a699015.html",
+    },
+    {
+      label: "Tadalafil - drug information",
+      publisher: "MedlinePlus, U.S. National Library of Medicine (NIH)",
+      href: "https://medlineplus.gov/druginfo/meds/a604008.html",
+    },
+    {
+      label: "Erectile dysfunction - overview",
+      publisher: "MedlinePlus, U.S. National Library of Medicine (NIH)",
+      href: "https://medlineplus.gov/erectiledysfunction.html",
+    },
+    {
+      label: "Hidden Risks of Erectile Dysfunction \"Treatments\" Sold Online",
+      publisher: "U.S. Food & Drug Administration",
+      href: "https://www.fda.gov/consumers/consumer-updates/hidden-risks-erectile-dysfunction-treatments-sold-online",
+    },
+  ],
   "weight-loss": [
     {
       label: "Once-Weekly Semaglutide in Adults with Overweight or Obesity (STEP 1 trial)",

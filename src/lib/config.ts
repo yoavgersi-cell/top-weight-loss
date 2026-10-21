@@ -83,6 +83,8 @@ export interface ReviewHowItWorksStep {
 }
 
 export interface ReviewData {
+  /** Optional long-form review body (see ReviewSection). */
+  sections?: ReviewSection[];
   slug: string;
   providerId: string;
   shortSummary: string;
@@ -99,6 +101,14 @@ export interface ReviewData {
   pricingPlans?: ReviewPricingPlan[];
   howItWorks?: ReviewHowItWorksStep[];
   trustBadges?: string[];
+}
+
+// Long-form editorial deep-dive on a review: hand-written HTML section bodies
+// (same authoring model as articles), rendered as the in-depth review body
+// when present. Ported with the ED vertical, Oct 21, 2026.
+export interface ReviewSection {
+  heading: string;
+  body: string;
 }
 
 export interface FaqItem {
@@ -340,6 +350,8 @@ export const VERTICALS: Vertical[] = [
   { id: "hrt", name: "HRT", tagline: "Hormone replacement therapy for menopause & more", accent: "#7A3B6B" },
   { id: "hearing-aids", name: "Hearing Aids", tagline: "OTC hearing devices you can order online, compared", accent: "#1673B9" },
   { id: "online-therapy", name: "Online Therapy", tagline: "Therapy, psychiatry & mental-health platforms, compared", accent: "#5C55A6" },
+  // Oct 21, 2026: ported from the standalone edtreatmenthub.com site.
+  { id: "ed", name: "ED Treatment", tagline: "Online erectile-dysfunction treatment - pills, compounded options & clinics, compared", accent: "#1E3A5F" },
 ];
 
 export const DEFAULT_VERTICAL = "weight-loss";
@@ -351,7 +363,7 @@ export const isVertical = (id: string): boolean => VERTICAL_IDS.includes(id);
 // (providers, comparisons, etc.) while still being unpublished - it renders for
 // preview but stays out of the hub card, the sitemap, and the index until its
 // affiliate data is filled in and it's added here. Add a vertical id to launch it.
-export const PUBLISHED_VERTICALS = ["weight-loss", "hair-loss", "trt", "hrt", "online-therapy"];
+export const PUBLISHED_VERTICALS = ["weight-loss", "hair-loss", "trt", "hrt", "online-therapy", "ed"];
 export const isPublishedVertical = (id: string): boolean => PUBLISHED_VERTICALS.includes(id);
 
 // Retired verticals: off-theme categories we've pulled from the hub (Sep 2026:
@@ -410,6 +422,9 @@ export const AFFILIATE_PROVIDER_IDS = [
   "dudemeds",
   "petermd",
   "maleexcel",
+  // ed (Oct 21, 2026; directmeds, shed, hims, dudemeds, petermd already listed)
+  "quad",
+  "braverx",
   // hrt (operator-supplied tracking links, Oct 8, 2026)
   "winona",
   "midi",

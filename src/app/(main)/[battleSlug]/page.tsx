@@ -12,6 +12,7 @@ import { TrtEditorialContent } from "@/components/editorial-content-trt";
 import { HrtEditorialContent } from "@/components/editorial-content-hrt";
 import { HearingAidsEditorialContent } from "@/components/editorial-content-hearing-aids";
 import { OnlineTherapyEditorialContent } from "@/components/editorial-content-online-therapy";
+import { EdEditorialContent } from "@/components/editorial-content-ed";
 import { BattlePageView, battleMetadata } from "@/components/pages/battle-page";
 import { ProductCarousel } from "@/components/product-carousel";
 import { LatestGuides, newestGuides } from "@/components/latest-guides";
@@ -169,6 +170,8 @@ export default async function BattlePage({
             <HearingAidsEditorialContent />
           ) : battleSlug === "online-therapy" ? (
             <OnlineTherapyEditorialContent />
+          ) : battleSlug === "ed" ? (
+            <EdEditorialContent />
           ) : null}
           {/* The vertical's newest guides, dated and attributed. The TRT and
               HRT editorials link to no articles at all, so without this the

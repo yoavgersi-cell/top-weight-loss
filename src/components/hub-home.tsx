@@ -157,8 +157,25 @@ function OnlineTherapyIcon({ className }: { className?: string }) {
   );
 }
 
+function EdIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 64" fill="none" className={className} aria-hidden="true">
+      {/* heart + pulse line - circulation, legible at small sizes */}
+      <path
+        d="M32 54s-20-12.2-20-27a11 11 0 0 1 20-6.3A11 11 0 0 1 52 27c0 14.8-20 27-20 27Z"
+        fill={ICON_FILL}
+        stroke={ICON_STROKE}
+        strokeWidth="2.2"
+        strokeLinejoin="round"
+      />
+      <path d="M16 31h8l3-6 5 12 4-8 2 2h10" stroke={ICON_STROKE} strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 const VERTICAL_ICON: Record<string, (p: { className?: string }) => React.JSX.Element> = {
   "weight-loss": WeightLossIcon,
+  ed: EdIcon,
   "hair-loss": HairGrowthIcon,
   trt: TrtIcon,
   hrt: HrtIcon,
@@ -175,6 +192,7 @@ const CATEGORY_NAME: Record<string, string> = {
   hrt: "HRT",
   "hearing-aids": "Hearing Aids",
   "online-therapy": "Online Therapy",
+  ed: "ED Treatment",
 };
 
 // Real, keyword-rich internal links surfaced on a live category card. Only
@@ -210,6 +228,12 @@ const CATEGORY_LINKS: Record<string, { label: string; href: string }[]> = {
     { label: "Reviews", href: "/online-therapy/reviews" },
     { label: "Guides", href: "/online-therapy/articles" },
   ],
+  ed: [
+    { label: "All treatments", href: "/ed" },
+    { label: "Reviews", href: "/ed/reviews" },
+    { label: "Cost index", href: "/ed/ed-cost-index" },
+    { label: "Guides", href: "/ed/articles" },
+  ],
 };
 
 // Bento layout for the category grid (desktop). Order + width tile into a
@@ -223,7 +247,8 @@ const BENTO: { id: string; wide: boolean }[] = [
   { id: "trt", wide: false },
   { id: "hrt", wide: false },
   { id: "hair-loss", wide: true },
-  { id: "online-therapy", wide: true },
+  { id: "online-therapy", wide: false },
+  { id: "ed", wide: false },
 ];
 
 
@@ -381,8 +406,8 @@ export async function HubHome() {
             Compare the Best Health &amp; Wellness Services
           </h1>
           <p className="mx-auto mt-5 max-w-[760px] text-[16px] leading-relaxed text-gray-700 sm:mt-6 sm:text-[19px]">
-            Independent rankings across weight loss, hair growth, TRT, HRT and online
-            therapy - real published prices and verified customer reviews.
+            Independent rankings across weight loss, hair growth, TRT, HRT, online therapy
+            and ED - real published prices and verified customer reviews.
           </p>
           <div className="mx-auto mt-6 max-w-[560px] text-left">
             <MedicalReviewBar path="/" compact />
