@@ -271,7 +271,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
         slug: "quad",
         providerId: "quad",
         shortSummary:
-          "A compounded 4-in-1 ED medication from MEDVi's telehealth service, delivered in a fast-dissolving format and pitched at men for whom a single generic pill underperformed.",
+          "A compounded 4-in-1 ED medication from MEDVi's telehealth service, in a fast-dissolving format, aimed at men for whom a single generic pill underperformed.",
         reviewIntro:
           "Quad by MEDVi is a compounded, multi-ingredient ED medication prescribed through MEDVi's online telehealth service. Rather than a single active ingredient, it blends several into one dissolvable dose - the pitch is a stronger, faster response for men who found the standard \"blue pill\" didn't do enough on its own. It is prescription-only: you complete an online intake, a licensed provider decides whether it is appropriate for you, and it ships discreetly to your door. This review covers what it offers and who it fits.",
         keyFeatures: [
@@ -593,7 +593,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
         slug: "petermd",
         providerId: "petermd",
         shortSummary:
-          "A broad men's-health telehealth brand that treats ED online - typically generic sildenafil and tadalafil - alongside TRT and other men's services, after a licensed-clinician review.",
+          "A broad men's-health telehealth brand that treats ED online, typically with generic sildenafil and tadalafil, alongside TRT, after a licensed-clinician review.",
         reviewIntro:
           "Peter MD is a men's-health telehealth company whose remit runs wider than ED alone - it also offers testosterone therapy and other men's services - with erectile dysfunction treatment prescribed online. The ED path is the familiar one: you complete an online intake, a licensed clinician reviews whether treatment is appropriate, and, if so, medication ships discreetly to your door. This review covers what it offers for ED and who it fits.",
         keyFeatures: [
@@ -654,7 +654,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
         slug: "shed",
         providerId: "shed",
         shortSummary:
-          "A men's-health telehealth brand whose ED product, Roxus, is an intranasal vardenafil nasal spray rather than a pill - prescribed online after a licensed-provider review, and pitched on fast, on-demand onset.",
+          "A men's-health telehealth brand whose ED product, Roxus, is an intranasal vardenafil nasal spray rather than a pill, prescribed online after a provider review.",
         reviewIntro:
           "SHED is a men's-health telehealth brand that treats ED online, but its ED product stands out from almost every clinic we cover: instead of a tablet, SHED prescribes Roxus, an intranasal vardenafil nasal spray. Vardenafil is an established PDE5 inhibitor (the same drug class as sildenafil and tadalafil); SHED's angle is the delivery route - a spray absorbed through the nose, which the brand markets as working faster than a swallowed pill. It is prescription-only: you complete an online intake, a licensed U.S. provider decides whether treatment is appropriate, and it ships discreetly to your door. This review covers what SHED offers for ED and who it fits.",
         keyFeatures: [
@@ -745,7 +745,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
         slug: "directmeds",
         providerId: "directmeds",
         shortSummary:
-          "An online telehealth service that prescribes ED treatment after a licensed-clinician review and ships it discreetly to your door - the familiar online flow, with the specific medications and pricing best confirmed on its own site.",
+          "An online telehealth service that prescribes ED treatment after a licensed-clinician review and ships it discreetly; confirm medications and prices on its site.",
         reviewIntro:
           "DirectMeds is an online telehealth service that treats erectile dysfunction through the now-standard route: you complete an online intake, a licensed clinician reviews whether treatment is appropriate, and, if so, medication is shipped discreetly to your door - no in-person visit. It sits in the same lane as the other licensed online clinics we rank, competing on process, price and convenience rather than on a single headline product. This review covers what it offers for ED and who it fits. Because we haven't independently verified its exact ED medications and current pricing, we flag those clearly as things to confirm on DirectMeds' own site rather than asserting figures we can't stand behind.",
         keyFeatures: [
