@@ -248,7 +248,8 @@ export function edSeed(base: SiteConfig): SiteConfig {
           "Generic sildenafil and tadalafil options",
           "Discreet home delivery",
         ],
-        affiliateUrl: "https://track.revoffers.com/aff_c?offer_id=1344&aff_id=12904&url_id=10961",
+        // Oct 22, 2026: operator-supplied tracking link for the ED vertical.
+        affiliateUrl: "https://track.revoffers.com/aff_c?offer_id=1344&aff_id=12904&url_id=12582",
         ctaText: "Visit Site",
       },
       {
