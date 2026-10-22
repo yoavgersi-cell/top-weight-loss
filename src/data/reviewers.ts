@@ -451,7 +451,6 @@ const REVIEWED_2026_10_04: string[] = [
   "/weight-loss/trimrx-vs-ro",
   "/weight-loss/trimrx-vs-wellmedr",
   "/weight-loss/wegovy-providers",
-  "/weight-loss/weight-loss-pills",
 ];
 
 // Pages published and reviewed after the full-site pass.
@@ -532,8 +531,9 @@ const HRT_PORTED_2026_10_06 = [
 // replaced by the fuller versions from that site, which had no medical review
 // log of its own; their Oct 4 entries were therefore removed, and the 38 new
 // /trt pages are not listed. Add them when the reviewer actually signs off.
-// Oct 22, 2026: /weight-loss/glp1-pills-vs-injections was rebuilt from a 700-word
-// summary into a full guide, so its Oct 4 entry is dropped until re-reviewed.
+// Oct 22, 2026: /weight-loss/glp1-pills-vs-injections and /weight-loss/weight-loss-pills
+// were rebuilt from summaries into full guides, so their Oct 4 entries are dropped
+// until re-reviewed.
 export const REVIEW_LOG: Record<string, PageReview> = {
   ...Object.fromEntries(REVIEWED_2026_10_04.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: "2026-10-04" }])),
   ...Object.fromEntries(ED_REVIEWED_2026_10_14.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: "2026-10-14" }])),
