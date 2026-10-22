@@ -257,7 +257,6 @@ const REVIEWED_2026_10_04: string[] = [
   "/hrt/articles/does-hrt-cause-weight-gain",
   "/hrt/articles/estrogen-patch-vs-pill",
   "/hrt/articles/how-long-can-you-stay-on-hrt",
-  "/hrt/articles/how-to-get-hrt-online",
   "/hrt/articles/hrt-and-hair-thinning",
   "/hrt/articles/hrt-and-libido",
   "/hrt/articles/hrt-pros-and-cons",
@@ -512,9 +511,35 @@ const ED_REVIEWED_2026_10_14 = [
   "/ed/articles/ed-treatment-near-me",
 ];
 
+// HRT content ported from hrtwomen.com on Oct 22, 2026. The reviewer signed
+// off these pages on that site (operator-confirmed there: the full-site pass
+// on Oct 4, 2026 and the five brand pages on Oct 6, 2026); the content moved
+// to the hub unchanged, so the same dates apply under the /hrt prefix. The
+// two pillars (menopause-complete-guide, how-to-get-hrt-online) and the
+// Winona / Midi "legit" pages were published after those passes and are NOT
+// listed until they are actually reviewed.
+const HRT_PORTED_2026_10_04 = [
+  "/hrt/winona-vs-gala",
+  "/hrt/gala-vs-midi",
+  "/hrt/articles/perimenopause-symptoms",
+  "/hrt/articles/is-hrt-safe",
+  "/hrt/articles/best-online-hrt-providers-compared",
+  "/hrt/articles/hrt-for-perimenopause",
+  "/hrt/articles/progesterone-side-effects",
+];
+const HRT_PORTED_2026_10_06 = [
+  "/hrt/articles/gala-cost",
+  "/hrt/articles/is-gala-legit",
+  "/hrt/articles/winona-cost",
+  "/hrt/articles/winona-products",
+  "/hrt/articles/midi-cost",
+];
+
 export const REVIEW_LOG: Record<string, PageReview> = {
   ...Object.fromEntries(REVIEWED_2026_10_04.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: "2026-10-04" }])),
   ...Object.fromEntries(ED_REVIEWED_2026_10_14.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: "2026-10-14" }])),
+  ...Object.fromEntries(HRT_PORTED_2026_10_04.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: "2026-10-04" }])),
+  ...Object.fromEntries(HRT_PORTED_2026_10_06.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: "2026-10-06" }])),
   ...REVIEWED_LATER,
 };
 

@@ -766,14 +766,18 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 no uppercase pseudo-labels: this is a caption, not a headline. */}
             <div className="mt-2 flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[11.5px] leading-[1.5] text-gray-500 sm:mt-4 sm:text-[12.5px]">
               {config.experts && config.experts.length > 0 && (
-                <span>
-                  By{" "}
-                  <Link href={hubLink(ctx, "/about")} className="font-medium text-gray-600 underline-offset-2 hover:text-[#0C4B75] hover:underline">
-                    The {ctx.brandTeam.replace(/\s+Team$/i, "")} Research Team
-                  </Link>
-                </span>
+                <>
+                  <span>
+                    By{" "}
+                    <Link href={hubLink(ctx, "/about")} className="font-medium text-gray-600 underline-offset-2 hover:text-[#0C4B75] hover:underline">
+                      The {ctx.brandTeam.replace(/\s+Team$/i, "")} Research Team
+                    </Link>
+                  </span>
+                  {/* Separator belongs to the byline: without it the line
+                      opened on a stray dot (seen on HRT, which had no byline). */}
+                  <span className="text-gray-400">·</span>
+                </>
               )}
-              <span className="text-gray-400">·</span>
               <LastUpdated date={battleUpdatedAt} />
             </div>
             <MedicalReviewBar path={`/${ctx.vertical}/${battle.slug}`} className="mt-3 max-w-[760px] sm:mt-4" />
