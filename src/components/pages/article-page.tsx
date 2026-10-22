@@ -669,26 +669,6 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                   />
                 </section>
 
-                {/* Top-providers conversion block: the ranked comparison-page
-                    cards + CTAs on an otherwise-prose buyer guide. Placed after
-                    the third section (below the price table and Trustpilot
-                    carousel that follow the "cheapest" section) so the reader
-                    meets the explainer and the prices before the cards; the
-                    product carousel follows one section later. Gated per slug
-                    (see showTopProvidersCro). */}
-                {i === 2 && showTopProvidersCro && (
-                  <TopProvidersBlock
-                    config={config}
-                    linkPrefix={ctx.prefix}
-                    limit={3}
-                    providerIds={TIRZ_TOP_IDS}
-                    priceNotes={tirzPriceNotes}
-                    introMode="short"
-                    title="Our top 3 tirzepatide providers"
-                    subtitle="Our highest-ranked providers with a verified compounded tirzepatide price - the same cards as our full comparison, with the tirzepatide rate shown under each starting price."
-                  />
-                )}
-
                 {/* Tirzepatide guide: code-rendered price table (CTAs, review
                     links, Trustpilot per row) right under the "cheapest" section,
                     then the cross-provider carousel of tirzepatide reviews. */}
@@ -703,6 +683,25 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                           subtitle="Every review we have captured that mentions tirzepatide, Zepbound or Mounjaro, across providers - newest first, reviewer names shortened."
                         />
                       </div>
+                    )}
+                    {/* Top-providers conversion block: the ranked comparison-page
+                        cards + CTAs on an otherwise-prose buyer guide. Oct 22,
+                        2026 (operator request): moved up one notch, from under
+                        the third section to here, directly after the price
+                        table and Trustpilot carousel, so the cards follow the
+                        prices without a section of prose in between. Gated per
+                        slug (see showTopProvidersCro). */}
+                    {showTopProvidersCro && (
+                      <TopProvidersBlock
+                        config={config}
+                        linkPrefix={ctx.prefix}
+                        limit={3}
+                        providerIds={TIRZ_TOP_IDS}
+                        priceNotes={tirzPriceNotes}
+                        introMode="short"
+                        title="Our top 3 tirzepatide providers"
+                        subtitle="Our highest-ranked providers with a verified compounded tirzepatide price - the same cards as our full comparison, with the tirzepatide rate shown under each starting price."
+                      />
                     )}
                   </>
                 )}
