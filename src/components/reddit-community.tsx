@@ -35,10 +35,41 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
 > = {
   altrx: {
     themes:
-      "AltRX's $129 first-month tirzepatide deal, fulfilled through Strive Pharmacy, draws praise for speed - one user was approved for the 15mg dose about four hours after the form and had cooler-shipped vials in hand via UPS Next Day Air within two days, rating it 10/10 while wishing the ongoing monthly price were lower. The honest counterweight: another customer found the compounded additive blend (glycine/B12) caused bad dehydration and arthritis-type pains that faded as levels dropped, and a fresh signup was still waiting on a script 24 hours in.",
+      "Two first-order threads tell the same story: an asynchronous sign-up with no video visit, approval within hours to a day, a nurse practitioner's message spelling out the approved doses, and cooler-shipped vials on UPS Next Day Air - a 10/10 from one poster and 'probably the best deal I've seen' from the other, who paid $780 for six months through AfterPay. The honest counterweights: one customer found the compounded additive blend (glycine/B12) caused dehydration and arthritis-type pains that faded as levels dropped, a fresh signup was still waiting on a script a day in, one cooler arrived with its ice packs melted, and the second poster notes that the main concern she sees from others is protecting your payment method.",
     intro:
-      "AltRX comes up in GLP-1 forums mostly around its $129 first-month tirzepatide offer and Strive Pharmacy fulfillment - here's how real users describe the sign-up, the shipping and the first shots, praise and caveats alike.",
+      "AltRX comes up in GLP-1 forums mostly around its first-month tirzepatide offers and the pharmacies that fill them - here's how real users describe the sign-up, the approval, the shipping and the first shots, praise and caveats alike.",
     threads: [
+      // Operator-supplied screenshots, Oct 22, 2026 (r/tirzdeals, "3mo ago" as
+      // displayed). Post and replies transcribed verbatim; the post's upvote
+      // count was not in the capture, so it is omitted.
+      {
+        subreddit: "r/tirzdeals",
+        author: "nurse-emc4527",
+        topic: "First order / approval / shipping",
+        age: "3mo ago",
+        title: "AltRx Experience :)",
+        body: [
+          "Okay, so I am new to GLP and was really just waiting to find a more affordable option to start and AltRx came up. I have never posted a Reddit thread until now and I felt the need to share my experience because I know there's a lot of negative reviews about this telehealth platform and wanted to give other people hope!! Lol. So I live in Ohio and everything was asynchronous meaning no video appointment was needed. I signed up and requested treatment 7/11 (chose 6 month option and paid with AfterPay with my first payment not being due until August which was great!! Total was $780 so payments with a little interest comes out to ~$140 a month for 6 months) and got approved next day 7/12. The NP sent a long message thru my portal including what she approved me for (three month supply of Tirz/b12 2.5 mg, 5 mg, and 7.5 mg increasing dose every 4 weeks from Evoluciona) and risks/benefits which I appreciated. After three months I am expected to check in and request a refill for another 3 months that I paid for. Anyway, I didn't get shipping notification until Friday that same week 7/17 and it was by UPS Next Day Air Saver. Being that it was the weekend, it arrived 7/20 which I'm not mad about because I've read that 3-day shipping is standard. I received my package in a cooler with ice packs which were melted and meds were room temperature but I'm assuming not for too long. Everything was well-packaged!! Placed them in the fridge right away and waiting until tonight to administer first dose! I'll continue posting my updates on this thread :)",
+        ],
+        replies: [
+          {
+            author: "Goats-n-Hens",
+            body: "Yes, AltRX has been good to deal with every single time. I like them!!!",
+          },
+          {
+            author: "nurse-emc4527",
+            body: "I really hope I do well with it because, if so, I'm sticking with them! It's probably the best deal I've seen.",
+          },
+          {
+            author: "Particular_Baby_2081",
+            body: "Thank you for the update I'm thinking of placing an order but was worried.",
+          },
+          {
+            author: "nurse-emc4527",
+            body: "No I get it. I think the main concern I'm noticing from everyone with altrx is having to protect your payment method. Otherwise, I've had a great experience so far and I've read some good things about Evoluciona",
+          },
+        ],
+      },
       {
         author: "Any_Style_4939",
         topic: "Fulfillment / pricing",
@@ -68,7 +99,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
     ],
     takeaway:
-      "The recurring theme is fast, careful fulfillment: sign-up to prescription in hours, cold-chain shipping (a cooler with ice packs on UPS Next Day Air) and a 10/10 from the original poster - with two honest caveats: the compounded additive blend didn't sit well with one user (dehydration, joint pains that eased as levels dropped), and intake timing can vary (a new signup was still waiting on a script a day in). Real, checkable experiences on both sides.",
+      "The recurring theme is fast, careful fulfillment: sign-up to prescription in hours or by the next day, a clinician's message laying out the approved doses, cold-chain shipping (a cooler with ice packs on UPS Next Day Air) and strong first impressions - a 10/10 from one poster, 'probably the best deal I've seen' from another who chose a six-month plan on AfterPay. The honest caveats: the compounded additive blend didn't sit well with one user (dehydration, joint pains that eased as levels dropped), intake timing can vary (a new signup was still waiting on a script a day in), one cooler's ice packs had melted by delivery, and the forum's recurring worry is protecting your payment method. Real, checkable experiences on both sides.",
   },
   winona: {
     vertical: "hrt",
