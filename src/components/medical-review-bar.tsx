@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ShieldCheck } from "lucide-react";
 import { getPageReview, getReviewer, reviewerPath, type Reviewer } from "@/data/reviewers";
+import { ReviewerBubble, type ReviewerBubbleData } from "@/components/reviewer-bubble";
 
 // ───── Medical review bar ─────
 // The one byline that sits under the H1/intro on every content page. Light
@@ -9,8 +10,21 @@ import { getPageReview, getReviewer, reviewerPath, type Reviewer } from "@/data/
 //   - logged:   "Reviewed for medical accuracy by <name>" + the review date
 //   - unlogged: "Medical reviewer: <name>" - names the site's reviewer as
 //               staff without claiming this page was reviewed.
-// Always links to the reviewer profile and the review policy, and to LinkedIn
-// when a URL is on file. Renders nothing if no reviewer exists.
+// Oct 22, 2026: the name and portrait open an in-page bubble (see
+// reviewer-bubble.tsx) rather than navigating to the profile page, which was
+// taking readers away from the content. The policy link and LinkedIn mark
+// stay. Renders nothing if no reviewer exists.
+
+// The bubble's narrative, per reviewer: written for a reader deciding whether
+// to trust the page, in plain words. Facts match the reviewer record and the
+// profile page; nothing here claims a credential the record does not carry.
+const BUBBLE_PARAGRAPHS: Record<string, string[]> = {
+  "francheska-capistrano": [
+    "Francheska Capistrano is a licensed Medical Laboratory Scientist (a Registered Medical Technologist) with a Master of Public Health from the University of Essex. Her training is in clinical laboratory medicine and in epidemiology and biostatistics, which is to say in how diagnostic tests, trial results and population statistics are produced, and where they go wrong.",
+    "Before reviewing for Treatments Hub she coordinated international clinical trials, where her work was protocol compliance, clinical documentation and data review: checking that what a study recorded matched what its protocol required. She has also written and reviewed evidence-based health content for physicians and patients, from research summaries to patient education materials.",
+    "On this site she reads every medical and scientific statement in our guides, reviews and comparisons against the cited trials, labels and regulators, and flags anything the evidence does not support, including outdated figures and loose terminology. She has no part in choosing providers, setting prices or rankings, or in any commercial partnership, so her review is independent of what a page recommends.",
+  ],
+};
 
 function formatDate(iso: string): string {
   const d = new Date(iso + "T00:00:00Z");
@@ -47,11 +61,44 @@ export function MedicalReviewBar({
   const profile = reviewerPath(reviewer);
   const size = compact ? 28 : 32;
 
-  const nameLink = (
-    <Link href={profile} className="font-bold text-[#191919] hover:text-[#0C4B75] hover:underline">
+  // Everything the bubble needs, as plain data (it is a client component).
+  const bubble: ReviewerBubbleData = {
+    name: reviewer.name,
+    credentials: reviewer.credentials,
+    jobTitle: reviewer.jobTitle,
+    headline: reviewer.headline,
+    paragraphs: BUBBLE_PARAGRAPHS[reviewer.slug] ?? [reviewer.shortBio],
+    scope: reviewer.scope,
+    qualifications: [
+      ...reviewer.licensure.map((l) => l.title),
+      ...reviewer.education.map((e) => `${e.degree}, ${e.school}`),
+    ],
+    specialties: reviewer.specialties,
+    since: reviewer.since,
+    image: { thumb: reviewer.image.thumb, webp: reviewer.image.webp },
+    profileHref: profile,
+    linkedin: reviewer.linkedin,
+    reviewedAt: review?.reviewedAt,
+    reviewedLabel: review ? formatDate(review.reviewedAt) : undefined,
+  };
+  const nameText = (
+    <>
       {reviewer.name}
       {reviewer.credentials.length > 0 && <span className="whitespace-nowrap">, {reviewer.credentials.join(", ")}</span>}
-    </Link>
+    </>
+  );
+  const portraitImg = (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={reviewer.image.thumb}
+      alt={`${reviewer.name}, ${reviewer.jobTitle}`}
+      width={size}
+      height={size}
+      style={{ width: size, height: size }}
+      className="rounded-full object-cover ring-1 ring-gray-200"
+      loading="lazy"
+      decoding="async"
+    />
   );
   const linkedin = reviewer.linkedin && (
     <a
@@ -72,19 +119,7 @@ export function MedicalReviewBar({
 
   return (
     <div className={`flex min-w-0 items-start gap-2.5 sm:items-center ${className}`} data-review-status={review ? "reviewed" : "staff"}>
-      <Link href={profile} className="shrink-0" aria-label={`${reviewer.name}, ${reviewer.jobTitle}`}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={reviewer.image.thumb}
-          alt={`${reviewer.name}, ${reviewer.jobTitle}`}
-          width={size}
-          height={size}
-          style={{ width: size, height: size }}
-          className="rounded-full object-cover ring-1 ring-gray-200"
-          loading="lazy"
-          decoding="async"
-        />
-      </Link>
+      <ReviewerBubble reviewer={bubble} trigger={portraitImg} className="shrink-0 [&>button]:font-normal [&>button]:no-underline" />
       <div className={`min-w-0 ${compact ? "text-[12.5px] leading-[1.4]" : "text-[13px] leading-[1.45]"}`}>
         <p className="text-gray-700">
           {/* Phones: the name leads and the "reviewed for medical accuracy"
@@ -94,7 +129,7 @@ export function MedicalReviewBar({
             <ShieldCheck className="mr-1 inline h-[14px] w-[14px] align-[-2px] text-emerald-600" strokeWidth={2.25} />
             <span className={compact ? "" : "hidden sm:inline"}>{review ? "Reviewed for medical accuracy by " : "Medical reviewer: "}</span>
           </span>
-          {nameLink}
+          <ReviewerBubble reviewer={bubble} trigger={nameText} />
           {!compact && <span className="hidden text-gray-500 sm:inline"> · {reviewer.jobTitle}</span>}
           {linkedin}
           {compact && (
