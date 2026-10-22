@@ -207,6 +207,7 @@ const CATEGORY_LINKS: Record<string, { label: string; href: string }[]> = {
   ],
   "hair-loss": [
     { label: "All treatments", href: "/hair-loss" },
+    { label: "For women", href: "/hair-loss/women" },
     { label: "Reviews", href: "/hair-loss/reviews" },
     { label: "Guides", href: "/hair-loss/articles" },
   ],

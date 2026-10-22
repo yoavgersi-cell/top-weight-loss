@@ -7,6 +7,13 @@ import type {
   RankingPosition,
   ArticleData,
 } from "../config";
+import {
+  HAIR_LOSS_PROVIDERS_PORTED,
+  HAIR_LOSS_REVIEWS_PORTED,
+  HAIR_LOSS_BATTLES_PORTED,
+  HAIR_LOSS_GUIDES_PORTED,
+  HAIR_LOSS_FAQS_PORTED,
+} from "./hair-loss-ported";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Hair-loss content
@@ -18,7 +25,8 @@ import type {
 //   • no specific prices         (pricing text points to the provider's site)
 //   • affiliateUrl / logo are filled with the real links & brand logos before
 //     the vertical is added to PUBLISHED_VERTICALS.
-// Everything here is overridden the moment it's edited in the CMS.
+// Oct 22, 2026: code-authoritative like the other ported verticals (a CMS blob
+// is ignored); the tophairloss.io leftovers live in ./hair-loss-ported.ts.
 // ─────────────────────────────────────────────────────────────────────────────
 
 // Real brand wordmarks + affiliate links for the launch providers.
@@ -2551,15 +2559,19 @@ export function hairLossSeed(base: SiteConfig): SiteConfig {
     siteName: "treatmentshub.com",
     hero: {
       ...base.hero,
-      backgroundImageUrl: "",
-      imageAlt: "",
-      updatedLabel: "Last Updated: August 2026",
+      // Oct 22, 2026: the tophairloss.io hero cutout, so the ranking page and
+      // the article mastheads carry an image like the other verticals.
+      backgroundImageUrl: "/hero-hair-loss.png",
+      imageAlt: "Man with thick, healthy hair",
+      updatedLabel: "Last Updated: October 2026",
       h1: "Best Hair Loss Treatments & Providers of 2026",
       h2: "Compare the top hair-loss telehealth providers, side by side",
       description:
         "Compare the best online hair-loss providers - finasteride, minoxidil, dutasteride and doctor-led regrowth programs - on treatment options, medical support, and overall value.",
     },
-    providers,
+    // Oct 22, 2026: Nutrafol joins (unranked) from the tophairloss.io port, for
+    // the Nutrafol comparisons and the women's hub.
+    providers: [...providers, ...HAIR_LOSS_PROVIDERS_PORTED],
     sidebar: {
       ...base.sidebar,
       blockOrder: ["secureBadge", "editorialReviews", "rankingMethodology", "disclosure"],
@@ -2570,9 +2582,9 @@ export function hairLossSeed(base: SiteConfig): SiteConfig {
       providerOrder: ["maximus", "happyhead", "petermd"],
       positions,
     },
-    reviews,
-    battles,
-    faqs,
-    articles,
+    reviews: [...reviews, ...HAIR_LOSS_REVIEWS_PORTED],
+    battles: [...battles, ...HAIR_LOSS_BATTLES_PORTED],
+    faqs: [...faqs, ...HAIR_LOSS_FAQS_PORTED],
+    articles: [...articles, ...HAIR_LOSS_GUIDES_PORTED],
   };
 }

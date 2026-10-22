@@ -57,6 +57,7 @@ const WL_STATIC_PATHS: { path: string; priority: number; changeFrequency: "weekl
 // /<vertical>/<path> by a static folder under [battleSlug]).
 const VERTICAL_STATIC_PATHS: Record<string, { path: string; updatedAt: string }[]> = {
   ed: [{ path: "/ed-cost-index", updatedAt: "2026-10-09" }],
+  "hair-loss": [{ path: "/women", updatedAt: "2026-10-22" }],
 };
 
 // ───── treatmentshub.com - the hub sitemap ─────
