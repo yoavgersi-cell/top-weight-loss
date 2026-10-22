@@ -64,7 +64,8 @@ function seedForVertical(vertical: string): SiteConfig {
 // list, affiliate links, prices, reviews, battles, articles. Added Oct 8, 2026
 // when the HRT ranking was cut to the three partner providers - a blob saved
 // from the admin before that would otherwise resurrect the removed ones.
-const CODE_AUTHORITATIVE_VERTICALS = new Set(["hrt", "ed"]);
+// Oct 22, 2026: TRT joined when the toptrt.io content was folded in.
+const CODE_AUTHORITATIVE_VERTICALS = new Set(["hrt", "ed", "trt"]);
 
 async function getVerticalConfig(vertical: string): Promise<SiteConfig> {
   const base = seedForVertical(vertical);

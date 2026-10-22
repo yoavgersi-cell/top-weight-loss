@@ -304,14 +304,12 @@ const REVIEWED_2026_10_04: string[] = [
   "/online-therapy/reviews/talkiatry",
   "/online-therapy/reviews/talkspace",
   "/online-therapy/talkspace-vs-talkiatry",
-  "/trt",
   "/trt/articles",
   "/trt/articles/can-you-stop-trt",
   "/trt/articles/does-trt-cause-hair-loss",
   "/trt/articles/does-trt-increase-libido",
   "/trt/articles/enclomiphene-vs-trt",
   "/trt/articles/free-vs-total-testosterone",
-  "/trt/articles/how-to-get-trt-online",
   "/trt/articles/is-trt-bad-for-you",
   "/trt/articles/is-trt-covered-by-insurance",
   "/trt/articles/low-testosterone-symptoms",
@@ -319,12 +317,8 @@ const REVIEWED_2026_10_04: string[] = [
   "/trt/articles/testosterone-cypionate-vs-enanthate",
   "/trt/articles/testosterone-injections-vs-cream-vs-oral",
   "/trt/articles/trt-and-estrogen",
-  "/trt/articles/trt-and-fertility",
   "/trt/articles/trt-blood-work",
   "/trt/articles/trt-clinic-vs-online",
-  "/trt/articles/trt-cost",
-  "/trt/articles/trt-results-timeline",
-  "/trt/articles/trt-side-effects",
   "/trt/articles/trt-vs-steroids",
   "/trt/articles/what-is-medvi-quad",
   "/trt/dudemeds-vs-petermd",
@@ -337,8 +331,6 @@ const REVIEWED_2026_10_04: string[] = [
   "/trt/reviews/dudemeds",
   "/trt/reviews/fountain",
   "/trt/reviews/hims",
-  "/trt/reviews/hone",
-  "/trt/reviews/maleexcel",
   "/trt/reviews/marek",
   "/trt/reviews/maximus",
   "/trt/reviews/medvi-quad",
@@ -535,6 +527,12 @@ const HRT_PORTED_2026_10_06 = [
   "/hrt/articles/midi-cost",
 ];
 
+// Oct 22, 2026: the toptrt.io content was folded into /trt. The TRT home, the
+// Hone Health and Male Excel reviews and five guides (how-to-get-trt-online,
+// trt-cost, trt-results-timeline, trt-and-fertility, trt-side-effects) were
+// replaced by the fuller versions from that site, which had no medical review
+// log of its own; their Oct 4 entries were therefore removed, and the 38 new
+// /trt pages are not listed. Add them when the reviewer actually signs off.
 export const REVIEW_LOG: Record<string, PageReview> = {
   ...Object.fromEntries(REVIEWED_2026_10_04.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: "2026-10-04" }])),
   ...Object.fromEntries(ED_REVIEWED_2026_10_14.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: "2026-10-14" }])),

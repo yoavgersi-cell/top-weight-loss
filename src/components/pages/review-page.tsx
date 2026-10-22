@@ -229,6 +229,72 @@ const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
 // Extra code-controlled FAQs appended to specific reviews (and their FAQPage
 // schema) - high-intent questions grounded in each provider's real published
 // terms. Side-effect answers stay at medication level and link the full guide.
+// TRT vertical (ported from toptrt.io, Oct 22, 2026). Kept in its own map and
+// read only on /trt: dudemeds is also reviewed on /ed, and a TRT verdict must
+// not surface there.
+const REVIEW_LEGIT_TRT: Record<string, { verdict: string; signals: string[] }> = {
+  hone: {
+    verdict:
+      "Yes - Hone Health is a legitimate, established telehealth provider. It doesn't sell testosterone off a shelf: treatment starts with real lab testing to confirm low testosterone and a licensed clinician's review, then continues with ongoing monitoring. That testing-first, clinician-directed model is exactly what a responsible TRT service should look like.",
+    signals: [
+      "Requires bloodwork confirming low testosterone before any prescription",
+      "Licensed clinicians review your results and direct treatment",
+      "Ongoing monitoring with follow-up labs and dose adjustments",
+      "Established, recognizable men's-health brand",
+    ],
+  },
+  tmates: {
+    verdict:
+      "Yes - TMates is a legitimate TRT-focused telehealth membership. It's built around the responsible path: lab testing to establish your levels, a licensed clinician's review, and ongoing monitoring over time rather than a one-off prescription.",
+    signals: [
+      "Lab testing before any prescription",
+      "Licensed clinicians involved throughout",
+      "Membership built around ongoing monitoring",
+      "Dedicated, TRT-first program",
+    ],
+  },
+  maleexcel: {
+    verdict:
+      "Yes - Male Excel is a legitimate, established men's-health telehealth brand with a strong track record, rated 4.5 on Trustpilot across thousands of reviews. It runs comprehensive at-home labs and a licensed-clinician review before prescribing, with unlimited provider follow-ups.",
+    signals: [
+      "Rated 4.5 on Trustpilot from thousands of reviews",
+      "Comprehensive at-home lab testing before any prescription",
+      "Licensed clinicians review your results",
+      "Unlimited provider follow-ups",
+    ],
+  },
+  taurus: {
+    verdict:
+      "Yes - Taurus Meds is a legitimate men's-health telehealth service. TRT is prescribed only after lab-based diagnosis and a licensed clinician's review, the same medical safeguards any responsible provider follows. Confirm its current treatment lineup and pricing on its own site.",
+    signals: [
+      "Lab-based diagnosis before any prescription",
+      "Licensed clinicians review your results",
+      "Fully online men's-health service",
+      "Discreet, direct-to-door delivery",
+    ],
+  },
+  dudemeds: {
+    verdict:
+      "Yes - DudeMeds is a legitimate, value-minded men's telehealth service. Even at its lower price point it still runs the required lab testing and a licensed-clinician review before prescribing TRT - 'cheaper' means fewer frills, not fewer safeguards.",
+    signals: [
+      "Required lab testing before any prescription",
+      "Licensed-clinician review",
+      "Fully online and discreet",
+      "Value-minded pricing without skipping oversight",
+    ],
+  },
+  fridays: {
+    verdict:
+      "Yes - Fridays is a legitimate men's-health telehealth brand. TRT is offered only after lab-based diagnosis and a licensed clinician's review. Confirm its current TRT lineup, monitoring and pricing on its own site.",
+    signals: [
+      "Lab-based diagnosis before any prescription",
+      "Licensed clinicians review your results",
+      "Fully online men's-health platform",
+      "Discreet, direct-to-door delivery",
+    ],
+  },
+};
+
 const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> = {
   // HRT vertical (ported from hrtwomen.com, Oct 22, 2026). Figures are the
   // provider-published prices verified there on Oct 6, 2026 and match the
@@ -601,7 +667,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   const provider = config.providers.find((p) => p.id === review.providerId);
   if (!provider) return notFound();
 
-  const legit = REVIEW_LEGIT[slug];
+  const legit = ctx.vertical === "trt" ? REVIEW_LEGIT_TRT[slug] : REVIEW_LEGIT[slug];
 
   // Site's own editorial rating for this provider (same scoring shown on the
   // homepage), keyed off its ranking position. Surfaced visibly on the page.
