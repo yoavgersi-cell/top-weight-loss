@@ -56,6 +56,7 @@ export async function generateMetadata({
       "weight-loss":
         "Compare 2026's best telehealth weight loss providers. Verified GLP-1 prices from $49/month semaglutide and $89/month tirzepatide - checked at the source.",
       hrt: "Compare the best online HRT providers for women in 2026 - Winona, Gala and Midi Health - on treatment options, price, insurance and clinician support.",
+      trt: "Compare the best online TRT clinics of 2026 - Hone, TMates, Male Excel and more - on lab testing, treatment options, price and ongoing monitoring.",
       "hearing-aids":
         "Compare over-the-counter hearing devices sold online - how the brands differ, what OTC can and can't do, and what to verify before buying.",
     };
