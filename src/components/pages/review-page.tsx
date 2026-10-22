@@ -39,6 +39,24 @@ import { catalogPriceSnippet } from "@/lib/product-catalog";
 // price that can go stale. Providers without a catalog entry get the token
 // removed cleanly.
 const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+  // HRT vertical (ported from hrtwomen.com, Oct 22, 2026). Titles shaped by
+  // that site's Search Console queries: "winona hrt reviews", "how much does
+  // winona cost", "does winona take insurance", "is midi health legit".
+  winona: {
+    title: "Winona HRT Reviews 2026: Cost, Insurance & Is It Legit?",
+    description:
+      "Honest Winona HRT review: what it costs per month, whether it takes insurance, which estrogen and progesterone products it prescribes, and whether it's legit.",
+  },
+  gala: {
+    title: "Gala HRT Reviews 2026: Cost, Hormone Therapy & Is It Legit?",
+    description:
+      "Gala hormone therapy reviewed: flat monthly pricing, estradiol and progesterone options, what's included and whether Gala is a legit option for menopause HRT.",
+  },
+  midi: {
+    title: "Midi Health Reviews 2026: Cost, Insurance & Is It Worth It?",
+    description:
+      "Midi Health review: insurance-covered video visits with menopause clinicians, self-pay cost, what it treats, where it's available and whether it's worth it.",
+  },
   // ED vertical (ported from edtreatmenthub.com, Oct 21, 2026)
   quad: {
     title: "Quad by MEDVi Review 2026: Cost, Ingredients & Is It Legit?",
@@ -123,6 +141,23 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
 // Only defined for providers where the legitimacy signals are genuinely verifiable;
 // each signal is grounded in that provider's real credentials/practices.
 const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
+  // HRT vertical (ported from hrtwomen.com, Oct 22, 2026); facts as verified
+  // in src/lib/seeds/hrt.ts.
+  winona: {
+    verdict:
+      "Yes - Winona is a legitimate US telehealth company. Treatment is prescribed by board-certified physicians after an online medical questionnaire, and ongoing care runs through secure doctor messaging. As with any HRT, whether it's appropriate for you is a medical decision, so answer the intake honestly.",
+    signals: ["Board-certified physicians", "Prescription-only, after a medical review", "Secure doctor messaging and follow-ups"],
+  },
+  gala: {
+    verdict:
+      "Yes - Gala is a legitimate telehealth service. US-licensed clinicians review your health history before prescribing, and its HRT plan uses estradiol and progesterone with check-ins and dose adjustments included. Confirm current pricing and availability on Gala's own site.",
+    signals: ["US-licensed clinicians", "Estradiol and progesterone", "Check-ins and dose adjustments included"],
+  },
+  midi: {
+    verdict:
+      "Yes - Midi Health is a legitimate virtual menopause clinic. Care is delivered over video by women's-health nurse practitioners and certified nurse midwives, it is in-network with most major commercial insurance plans, and prescriptions go to the pharmacy you choose.",
+    signals: ["Video visits with menopause-trained clinicians", "In-network with most major commercial insurance", "Prescriptions sent to your own pharmacy"],
+  },
   embody: {
     verdict:
       "Yes - embody is a legitimate, US-based telehealth weight-loss provider. It's LegitScript-certified, works with US-based state-licensed 503A compounding pharmacies, and connects you with state-licensed doctors overseen by its own medical director.",
@@ -195,6 +230,60 @@ const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
 // schema) - high-intent questions grounded in each provider's real published
 // terms. Side-effect answers stay at medication level and link the full guide.
 const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> = {
+  // HRT vertical (ported from hrtwomen.com, Oct 22, 2026). Figures are the
+  // provider-published prices verified there on Oct 6, 2026 and match the
+  // pricing plans in src/lib/seeds/hrt.ts; each answer says to confirm at checkout.
+  winona: [
+    {
+      question: "Does Winona take insurance?",
+      answer:
+        "No. Winona does not bill insurance directly - treatment is a monthly self-pay subscription. Its HRT prescriptions are generally HSA/FSA eligible, and some patients submit receipts to their insurer for possible reimbursement, but that depends entirely on your plan.",
+    },
+    {
+      question: "How much does Winona cost per month?",
+      answer:
+        "Listed starting prices are about $39/month for progesterone capsules, $54/month for estradiol tablets, $89/month for the estrogen body cream (with or without progesterone) or vaginal estrogen cream, and $149/month for the estrogen patch; combining products costs more. The subscription includes the physician review, unlimited messaging and follow-ups, and free shipping. Prices change, so confirm at checkout.",
+    },
+    {
+      question: "What products does Winona prescribe?",
+      answer:
+        "Winona's HRT options include estradiol as a pill, patch or cream, estriol, progesterone pills, and vaginal estrogen cream for dryness and urinary symptoms. It also offers non-HRT add-ons such as an arousal cream and hair and skin products. It does not prescribe testosterone.",
+    },
+    {
+      question: "Is Winona safe?",
+      answer:
+        "Winona prescribes hormone therapy only after a physician reviews your medical history, which is the key safety step. HRT itself carries real risks - including blood clots, stroke and breast-cancer considerations - and is not right for everyone, so answer the intake completely and ask your doctor about side effects such as breast tenderness, bloating, spotting or (with progesterone) drowsiness.",
+    },
+  ],
+  gala: [
+    {
+      question: "Does Gala take insurance?",
+      answer:
+        "No. Gala charges a single flat monthly price for its HRT plan rather than billing insurance. That price includes the clinician, check-ins, dose adjustments and medication shipping. Confirm the current price on Gala's site.",
+    },
+    {
+      question: "What hormone therapy does Gala offer?",
+      answer:
+        "Gala prescribes estradiol as a pill or patch, oral or vaginal progesterone, and vaginal estradiol, after a review by a US-licensed clinician. Its site carries a compounded-medication disclaimer, so ask whether your product is FDA-approved or compounded.",
+    },
+  ],
+  midi: [
+    {
+      question: "Does Midi Health take insurance?",
+      answer:
+        "Yes. Midi is in-network with most major commercial and PPO insurance plans, so visits usually cost your normal specialist copay, coinsurance or deductible. Midi does not bill Medicare, and some services (such as testosterone) are out of pocket. Check your coverage when you register.",
+    },
+    {
+      question: "How much does Midi Health cost without insurance?",
+      answer:
+        "Self-pay visits have been listed at roughly $250 for the first visit and $150 for follow-ups. Medication is billed separately through your pharmacy. Confirm current prices when you book.",
+    },
+    {
+      question: "Is Midi Health available in Canada?",
+      answer:
+        "No. Midi Health serves patients in the United States; it is not a telehealth option for people living in Canada.",
+    },
+  ],
   // ED vertical (ported from edtreatmenthub.com, Oct 21, 2026). Specifics are
   // deliberately hedged: Quad is a compounded product whose formula, dose and
   // price are set at prescribing, so we point to MEDVi rather than assert them.
@@ -454,8 +543,14 @@ export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Me
   // The weight-loss maps share slugs with ED (shed, directmeds), so ED may
   // only read its own keys.
   const ED_OVERRIDE_SLUGS = new Set(["quad"]);
+  // Oct 22, 2026: HRT's three providers (winona, gala, midi) exist only on /hrt.
+  const HRT_OVERRIDE_SLUGS = new Set(["winona", "gala", "midi"]);
   const override =
-    ctx.vertical === "weight-loss" || (ctx.vertical === "ed" && ED_OVERRIDE_SLUGS.has(slug)) ? REVIEW_SEO_OVERRIDES[slug] : undefined;
+    ctx.vertical === "weight-loss" ||
+    (ctx.vertical === "ed" && ED_OVERRIDE_SLUGS.has(slug)) ||
+    (ctx.vertical === "hrt" && HRT_OVERRIDE_SLUGS.has(slug))
+      ? REVIEW_SEO_OVERRIDES[slug]
+      : undefined;
   // Providers reviewed in more than one vertical (Ro, Maximus, PeterMD, Hims)
   // would otherwise emit identical <title>s on two URLs - a duplicate-title
   // signal. Their titles carry the vertical name to differentiate.
@@ -605,7 +700,11 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
     // Extra FAQs are all researched against weight-loss offers, so they only
     // apply there - a provider id shared across verticals (e.g. directmeds on
     // HRT) must not inherit another vertical's prices and shipping claims.
-    ...(ctx.vertical === "weight-loss" || (ctx.vertical === "ed" && slug === "quad") ? REVIEW_EXTRA_FAQS[slug] ?? [] : []),
+    ...(ctx.vertical === "weight-loss" ||
+    (ctx.vertical === "ed" && slug === "quad") ||
+    (ctx.vertical === "hrt" && ["winona", "gala", "midi"].includes(slug))
+      ? REVIEW_EXTRA_FAQS[slug] ?? []
+      : []),
   ].filter((f): f is { question: string; answer: string } => !!f && !!f.answer);
 
   const faqSchema = {

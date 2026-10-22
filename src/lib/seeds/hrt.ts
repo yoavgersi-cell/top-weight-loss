@@ -6,6 +6,8 @@ import type {
   FaqItem,
   ArticleData,
 } from "../config";
+import { HRT_GUIDES_PORTED } from "./hrt-guides";
+import { HRT_BATTLES_PORTED } from "./hrt-battles";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // HRT (menopause / hormone replacement therapy) vertical
@@ -22,9 +24,14 @@ import type {
 // with their reviews and the two comparisons built on them (301s live in
 // src/proxy.ts). This vertical ships from code only: config-store ignores
 // any saved HRT blob, so edits must land here.
+//
+// Oct 22, 2026: the hrtwomen.com content (operator-designated source: its
+// claude branch) was folded in. Providers, reviews and the Midi vs Winona
+// comparison stay as the hub verified them on Oct 8, 2026 (newer Trustpilot
+// captures and pricing). From hrtwomen: 13 new guides and the full versions
+// of 4 stubs (./hrt-guides.ts), 2 comparisons (./hrt-battles.ts), the FAQ
+// set, hero copy, the editorial home body and the medical sources list.
 // ─────────────────────────────────────────────────────────────────────────────
-
-const UPDATED = "2026-08-23";
 
 const providers: Provider[] = [
   {
@@ -880,46 +887,6 @@ const articles: ArticleData[] = [
   // (The breast-cancer risk question is deliberately NOT a standalone
   // article per operator decision; pros-and-cons routes it to a clinician.)
   {
-    slug: "what-is-hrt",
-    title: "What Is HRT? Hormone Replacement Therapy, Explained (2026)",
-    description:
-      "HRT stands for hormone replacement therapy - restoring the estrogen (and often progesterone) that decline through menopause. What it treats, the forms it comes in, and how women start it online.",
-    category: "Guide",
-    readTime: "6 min read",
-    publishedAt: "2026-08-31",
-    updatedAt: "2026-08-31",
-    heroColor: "#F7EEF4",
-    author: "Treatments Hub Staff",
-    keyTakeaways: [
-      "HRT stands for hormone replacement therapy: restoring the hormones - mainly estrogen, often with progesterone - that decline through perimenopause and menopause.",
-      "It remains the most effective treatment for the classic menopause symptoms - hot flashes, night sweats and genitourinary changes - and the sleep disruption those night sweats cause.",
-      "It comes in multiple forms - pills, patches, gels and creams - and the form choice is a real medical decision, not just a preference.",
-      "Whether HRT fits you depends on your symptoms, history and timing - a licensed clinician makes that call, and modern telehealth has made the evaluation genuinely accessible.",
-    ],
-    sections: [
-      {
-        heading: "What does HRT stand for?",
-        body: `HRT stands for <strong>hormone replacement therapy</strong> (you will also see "menopausal hormone therapy" or MHT in medical writing - same thing). The idea is in the name: through perimenopause and menopause, the ovaries wind down production of estrogen and progesterone, and the symptoms that follow - covered below - trace back to that decline. HRT replaces what declined, at doses meant to relieve symptoms. One important scoping note: this article covers menopause-related HRT for women; testosterone therapy for men is a different treatment with its own rules - the differences are in <a href="/hrt/articles/is-hrt-the-same-as-trt">is HRT the same as TRT</a>.`,
-      },
-      {
-        heading: "What does HRT actually treat?",
-        body: `The strongest case is the classic menopause cluster: <strong>hot flashes and night sweats</strong> (where HRT remains the most effective treatment available), the sleep disruption they cause, mood changes tied to the transition, and the genitourinary symptoms - dryness, discomfort, urinary changes - that tend to worsen rather than pass with time. Estrogen also protects bone, which is part of the long-term conversation with your clinician. What it is not: an anti-aging cure-all, and a legitimate prescriber will frame it around your actual symptoms, not a promise of turning back clocks. If you are not sure whether what you are feeling is perimenopause yet, start with <a href="/hrt/articles/perimenopause-vs-menopause">perimenopause vs menopause</a>.`,
-      },
-      {
-        heading: "Why do some women take estrogen and progesterone together?",
-        body: `Because the two hormones have different jobs in treatment. Estrogen does the symptom-relief work - and for a woman who still has her uterus, taking estrogen alone lets the uterine lining build up, which is why progesterone (or a progestin) is added to protect it. Women who have had a hysterectomy typically use estrogen alone. This single distinction explains most of the "estrogen vs progesterone" confusion in search results, and it is one of the first things a prescriber sorts out from your history.`,
-      },
-      {
-        heading: "What forms does HRT come in?",
-        body: `More than most women expect: pills, skin patches, gels, sprays, creams and vaginal preparations for localized symptoms. The delivery route is a genuine medical decision - how the hormone enters the body affects the risk conversation, and localized symptoms sometimes need only localized treatment - which is why the form gets chosen with a clinician rather than off a shelf. The trade-offs between the two most common routes are covered in <a href="/hrt/articles/estrogen-patch-vs-pill">estrogen patch vs pill</a>.`,
-      },
-      {
-        heading: "How do I find out if HRT is right for me?",
-        body: `Through an evaluation, and it has gotten dramatically easier to get one. Telehealth menopause providers - <a href="/hrt/reviews/midi">Midi</a> and <a href="/hrt/reviews/winona">Winona</a> among the ones we review - run the intake, history and clinician consultation online, and prescribe when appropriate. The decision weighs your symptoms, your medical history, and timing relative to menopause; there are real contraindications, which is exactly why this runs through a licensed clinician and not a checkout page. Our <a href="/hrt">HRT provider comparison</a> maps the options, and <a href="/hrt/articles/how-to-get-hrt-online">how to get HRT online</a> walks the process. For the balanced picture before you decide, read <a href="/hrt/articles/hrt-pros-and-cons">the pros and cons of HRT</a>. This article is general information, not medical advice.`,
-      },
-    ],
-  },
-  {
     slug: "hrt-pros-and-cons",
     title: "The Pros and Cons of HRT: A Balanced Look (2026)",
     description:
@@ -988,96 +955,6 @@ const articles: ArticleData[] = [
       {
         heading: "When do women switch from birth control to HRT?",
         body: `When the goal changes: from controlling a cycle (and preventing pregnancy) to treating the symptoms of hormone decline. In practice the switch is a judgment call built from your age, your symptoms, your contraception needs and your history - contraceptive doses carry their own considerations as women get older, which is part of why clinicians revisit the question rather than letting the prescription roll on by inertia. Menopause-focused telehealth providers handle exactly this transition: <a href="/hrt/reviews/midi">Midi</a> and <a href="/hrt/reviews/winona">Winona</a> both evaluate where you are and what fits next, and our <a href="/hrt">HRT provider comparison</a> maps the options. Before deciding anything, <a href="/hrt/articles/hrt-pros-and-cons">the pros and cons of HRT</a> is the balanced read. This article is general information, not medical advice.`,
-      },
-    ],
-  },
-  {
-    slug: "how-to-get-hrt-online",
-    title: "How to Get HRT Online in 2026: The Legitimate Route",
-    description:
-      "How hormone replacement therapy is prescribed online: the telehealth process, what a legitimate provider always requires, and how to compare menopause care models.",
-    category: "Guide",
-    readTime: "5 min read",
-    publishedAt: "2026-08-28",
-    updatedAt: "2026-08-28",
-    heroColor: "#F7EEF4",
-    author: "Treatments Hub Staff",
-    sections: [
-      {
-        heading: "Can you get HRT prescribed online?",
-        body: `Yes - menopause care has moved online the same way other specialties have. Licensed clinicians evaluate your symptoms, health history and risk factors through a telehealth visit, and if hormone therapy is appropriate, prescriptions are filled through licensed pharmacies and shipped or sent to your local pharmacy. What never changes: HRT is prescription-only, and a legitimate service always puts a licensed clinician's evaluation before any treatment. Anything that skips that step isn't a shortcut - it's a red flag.`,
-      },
-      {
-        heading: "How does the online HRT process work?",
-        body: `The typical flow has three steps. First, an intake: your symptoms, cycle history, medical and family history, and any prior hormone use. Second, a clinician visit - at specialist menopause services this is usually a real video appointment rather than a questionnaire review, because hormone therapy decisions are individual and risk-dependent. Third, if prescribed, treatment ships with ongoing follow-up to adjust dose and delivery method. Compare how the leading services structure this in our <a href="/hrt/midi-vs-winona">Midi Health vs Winona</a> comparison.`,
-      },
-      {
-        heading: "What should you check before choosing an online HRT provider?",
-        body: `Four things separate serious menopause care from a checkout page: a licensed clinician who actually evaluates you (and can decline treatment); clarity about what's included in the visit and follow-up; transparency about whether they work with insurance or are cash-pay; and a real conversation about risks and alternatives, not just a yes. Our <a href="/hrt">HRT provider ranking</a> compares the care models side by side - and where we haven't verified a provider's pricing, we say so rather than guessing.`,
-      },
-      {
-        heading: "Is online HRT right for everyone?",
-        body: `No - and a good provider will tell you that. Hormone therapy has real contraindications, and the right first step depends on your history; some situations call for in-person care and exams. Telehealth shines for access and follow-up convenience, especially where menopause specialists are scarce locally. Start with <a href="/hrt/articles/perimenopause-vs-menopause">perimenopause vs menopause</a> to map where you are, and bring that picture to a licensed clinician.`,
-      },
-    ],
-  },
-  {
-    slug: "estrogen-patch-vs-pill",
-    title: "Estrogen Patch vs Pill: Which HRT Delivery Fits You?",
-    description:
-      "Estrogen patch vs pill for HRT: how the delivery methods differ, why clinicians weigh them differently, and the questions to bring to your prescriber.",
-    category: "Guide",
-    readTime: "5 min read",
-    publishedAt: "2026-08-28",
-    updatedAt: "2026-08-28",
-    heroColor: "#EEF4FB",
-    author: "Treatments Hub Staff",
-    sections: [
-      {
-        heading: "What's the difference between the estrogen patch and the pill?",
-        body: `Same hormone family, different route into the body. A patch delivers estrogen through the skin directly into the bloodstream and is typically changed once or twice a week; a pill is taken daily and is processed through the digestive system and liver first. That routing difference is why clinicians often weigh the two differently for different women - it's a genuine clinical decision, not a preference checkbox.`,
-      },
-      {
-        heading: "Why do clinicians often prefer transdermal options?",
-        body: `Because skin delivery bypasses first-pass liver processing, transdermal estrogen is often discussed for women where that pathway matters to risk assessment. Whether that applies to you depends on your personal and family history - which is exactly what the prescribing visit is for. The honest takeaway: neither format is universally "better"; the right one is the one your clinician matches to your profile and that you'll use consistently.`,
-      },
-      {
-        heading: "Are there other HRT delivery methods?",
-        body: `Yes - gels and sprays (also transdermal), vaginal formulations for localized symptoms, and progesterone components in their own forms for women with a uterus. Online menopause services differ in which formats they prescribe and whether they use standard FDA-approved products or compounded formulations - see <a href="/hrt/articles/bioidentical-hormones-explained">what "bioidentical" actually means</a> for that distinction, and compare provider approaches on our <a href="/hrt">HRT ranking</a>.`,
-      },
-      {
-        heading: "How do you decide - patch, pill, or something else?",
-        body: `Bring three things to a licensed clinician: your symptom picture, your health history (including clotting, cardiovascular and cancer history in you and your family), and your honest preference about daily pills versus weekly patches - adherence is a real clinical factor. A specialist visit is where this gets settled; our <a href="/hrt/midi-vs-winona">comparison of menopause care models</a> shows how the leading online services run that conversation.`,
-      },
-    ],
-  },
-  {
-    slug: "bioidentical-hormones-explained",
-    title: "Bioidentical Hormones: What the Term Actually Means",
-    description:
-      "\"Bioidentical\" is one of the most misused words in menopause care. What it really means, the difference between FDA-approved and compounded bioidenticals, and the questions that matter.",
-    category: "Science",
-    readTime: "5 min read",
-    publishedAt: "2026-08-28",
-    updatedAt: "2026-08-28",
-    heroColor: "#F0FAF5",
-    author: "Treatments Hub Staff",
-    sections: [
-      {
-        heading: "What does \"bioidentical\" actually mean?",
-        body: `Chemically, it means the hormone molecule matches the one your body produces - estradiol that is structurally estradiol, progesterone that is structurally progesterone. Here's what marketing often skips: many standard, FDA-approved HRT products are already bioidentical by that definition. The word describes the molecule, not the manufacturer, and it isn't a synonym for "natural" or "safer".`,
-      },
-      {
-        heading: "FDA-approved vs compounded bioidenticals: what's the difference?",
-        body: `FDA-approved bioidentical products are manufactured at standardized doses with regulatory oversight of quality and labeling. Compounded bioidentical hormone therapy is mixed per-prescription by a compounding pharmacy - which allows customized doses and combinations, with the trade-off that compounded preparations are not individually FDA-approved products. Online menopause services differ on exactly this line, and it's worth knowing which model a provider uses before you start - our <a href="/hrt">HRT provider comparison</a> notes each service's approach.`,
-      },
-      {
-        heading: "Is compounded HRT right for you?",
-        body: `That's a clinician conversation, not a marketing one. Reasonable candidates include women who need doses or combinations standard products don't offer. The important questions to ask any provider: why compounded rather than an FDA-approved product for my case, which pharmacy compounds it, and how will dosing be monitored and adjusted. A provider comfortable with those questions is a good sign in itself.`,
-      },
-      {
-        heading: "What are the red flags to avoid?",
-        body: `Claims that bioidentical means risk-free; hormone "pellets" or protocols sold with promises no evidence supports; salivary-test-driven dosing pitched as precision; and anyone prescribing without a real clinical evaluation. Hormone therapy is legitimate medicine with real trade-offs - treat any provider who pretends otherwise accordingly. Start from <a href="/hrt/articles/how-to-get-hrt-online">how legitimate online HRT works</a> and compare real services on our <a href="/hrt">ranking</a>.`,
       },
     ],
   },
@@ -1403,31 +1280,68 @@ const articles: ArticleData[] = [
   },
 ];
 
+// Oct 22, 2026: the eleven FAQs from hrtwomen.com (sourced, FDA-dated) replace
+// the hub's six; the two hub questions they did not cover are kept at the end.
 const faqs: FaqItem[] = [
   {
     question: "What is HRT for menopause?",
     answer:
-      "Hormone replacement therapy (HRT) uses estrogen - often with progesterone - to relieve menopause symptoms such as hot flashes and night sweats. It's a prescription treatment that a licensed provider tailors to your history and needs.",
+      "Hormone replacement therapy (HRT), also called menopausal hormone therapy, replaces some of the estrogen - and, for women with a uterus, progesterone - that the body makes less of during perimenopause and menopause. It is the most effective treatment for hot flashes and night sweats and can also help with sleep, vaginal dryness and bone health. Whether it is right for you depends on your age, symptoms and health history, so a licensed clinician should decide.",
   },
   {
-    question: "Is hormone replacement therapy safe?",
+    question: "Is HRT safe?",
     answer:
-      "HRT has benefits and risks that depend on your age, health history, and the type and timing of treatment. A licensed provider will review your situation to determine whether it's appropriate for you - it isn't right for everyone.",
+      "For many healthy women who start it before age 60 or within about 10 years of menopause, major medical societies consider HRT an appropriate option for bothersome symptoms. It does carry real risks, including blood clots, stroke and breast-cancer considerations, and it is generally not recommended for women with a history of certain cancers, blood clots, stroke or unexplained bleeding. The FDA began removing several boxed warnings from menopausal HRT labels in November 2025 (the first updated labels were approved in February 2026), but the risks remain part of the prescribing information.",
+  },
+  {
+    question: "Can I get HRT online?",
+    answer:
+      "Yes. Licensed telehealth providers can evaluate you and prescribe HRT online. Some use a detailed online questionnaire reviewed by a physician; others use video visits. A legitimate service always has a licensed clinician review your health history before prescribing - a site that skips that step is a red flag.",
+  },
+  {
+    question: "Does insurance cover online HRT?",
+    answer:
+      "It depends on the provider. Some online menopause clinics, such as Midi Health, are in-network with many commercial insurance plans for visits, with medication costs depending on your pharmacy benefit. Subscription services such as Winona and Gala are self-pay. Medicare coverage for telehealth menopause care varies by provider, so check before booking.",
+  },
+  {
+    question: "What's the difference between an estrogen patch and a pill?",
+    answer:
+      "Both deliver estradiol, but pills pass through the liver first, which is associated with a higher risk of blood clots than transdermal forms like patches and gels. Patches avoid daily dosing but can irritate skin. Your clinician will recommend a route based on your health history and preferences.",
+  },
+  {
+    question: "Are bioidentical hormones safer?",
+    answer:
+      "\"Bioidentical\" means chemically identical to the hormones your body makes, and FDA-approved bioidentical estradiol and progesterone are widely available. Compounded bioidentical hormones are custom-mixed and not FDA-approved, and the evidence does not show they are safer or more effective than FDA-approved products. Any estrogen carries the same class of risks.",
+  },
+  {
+    question: "Are Winona's hormones FDA-approved?",
+    answer:
+      "Some are. Winona's estradiol tablets, estrogen patch and progesterone capsules are FDA-approved products. Its estrogen body creams (estradiol plus estriol, with or without progesterone) are compounded in Winona's own pharmacies and are not FDA-approved. Compounded hormones are not shown to be safer or more effective than FDA-approved ones, so it is reasonable to ask your physician which product you are getting and why.",
+  },
+  {
+    question: "Do I need progesterone with estrogen?",
+    answer:
+      "If you have a uterus and take systemic estrogen, you generally need a progestogen such as progesterone to protect the uterine lining, because estrogen alone increases the risk of endometrial cancer. Women who have had a hysterectomy usually don't need it. Your clinician will decide what's appropriate.",
+  },
+  {
+    question: "Are there non-hormonal options for menopause symptoms?",
+    answer:
+      "Yes. FDA-approved non-hormonal prescriptions for hot flashes include fezolinetant (Veozah) and, since October 2025, elinzanetant (Lynkuet), and clinicians also use other medicines such as certain antidepressants (SSRIs/SNRIs) and gabapentin. Cognitive behavioral therapy also has good evidence, as do vaginal moisturizers and lubricants for dryness. Non-hormonal options can be especially relevant for women who can't or prefer not to take hormones. A menopause-trained clinician can help you compare them.",
+  },
+  {
+    question: "Can I take HRT during perimenopause?",
+    answer:
+      "Yes. Clinicians commonly prescribe HRT during perimenopause when symptoms are bothersome - you don't have to wait until your periods stop. Regimens often pair estradiol with a cyclical progestogen, and some women are offered low-dose hormonal contraception instead. Menopausal HRT is not birth control, and heavy or unusual bleeding should be checked, so a licensed clinician should decide what fits your history.",
+  },
+  {
+    question: "What are the side effects of progesterone?",
+    answer:
+      "Common side effects of progesterone taken with HRT include drowsiness or dizziness (which is why oral progesterone is usually taken at bedtime), breast tenderness, bloating, mood changes, headache and spotting or bleeding. Prometrium capsules contain peanut oil and shouldn't be used by people allergic to peanuts. Symptoms such as chest pain, leg swelling, sudden severe headache or vision changes need urgent medical attention.",
   },
   {
     question: "Do I need lab tests or an evaluation for HRT?",
     answer:
       "Providers evaluate your symptoms and medical history before prescribing, and some require bloodwork up front. Ongoing follow-up helps tailor treatment and monitor your response.",
-  },
-  {
-    question: "Can HRT be prescribed online?",
-    answer:
-      "Yes - reputable telehealth services connect you with licensed clinicians who review your information before prescribing, and dispense through licensed pharmacies. Always confirm a provider's licensing and practices.",
-  },
-  {
-    question: "Does insurance cover online menopause care?",
-    answer:
-      "It depends on the provider and your plan. Most telehealth HRT services are direct-pay, but some - Midi Health among them - work with many major insurance plans. Check both the provider's site and your plan before assuming either way.",
   },
   {
     question: "What symptoms can HRT help with?",
@@ -1443,13 +1357,15 @@ export function hrtSeed(base: SiteConfig): SiteConfig {
     hero: {
       ...base.hero,
       backgroundImageUrl: "",
-      imageAlt: "",
-      // Oct 8, 2026: ranking cut to the three partner providers.
+      imageAlt: "Online hormone replacement therapy for women in menopause",
+      // Oct 22, 2026: title and subtitle adopted from hrtwomen.com, whose
+      // Search Console data showed the "online HRT for women" phrasing wins
+      // the commercial cluster; the ranking stayed the three partner providers.
       updatedLabel: "Last Updated: October 2026",
-      h1: "Best HRT & Menopause Providers of 2026",
-      h2: "Compare the top online menopause and hormone-therapy providers, side by side",
+      h1: "Best Online HRT for Women of 2026",
+      h2: "The top online menopause & HRT providers, ranked and reviewed",
       description:
-        "Compare the best online HRT and menopause providers - care models, specialist focus, insurance friendliness and treatment options - to find the program that fits you. Where we haven't verified a provider's pricing yet, we say so instead of guessing.",
+        "Compare licensed online menopause clinics by treatment options, price, insurance and real clinician support - care models, specialist focus and what each one actually prescribes.",
     },
     providers,
     sidebar: {
@@ -1461,8 +1377,21 @@ export function hrtSeed(base: SiteConfig): SiteConfig {
       positions: base.ranking.positions,
     },
     reviews,
-    battles,
-    articles,
+    // Research-team byline (hrtwomen's editorial record, renamed for the hub),
+    // so comparisons and guides carry the same author line as the other
+    // verticals.
+    experts: [
+      {
+        id: "editorial",
+        name: "Treatments Hub Research Team",
+        role: "Editorial & Research",
+        bio: "The Treatments Hub research team researches and compares online menopause and HRT providers, reads the clinical evidence and guidance behind each option, and writes plain-English, compliance-minded guides. We prioritize accuracy and honesty over hype - including being clear about the risks of hormone therapy and who it is not suitable for.",
+        specialties: ["Provider comparison and research", "Telehealth and online prescribing", "Evidence-based health writing", "Consumer education"],
+      },
+    ],
+    battles: [...battles, ...HRT_BATTLES_PORTED],
+    // Ported pillars and brand pages first, then the hub's own guides.
+    articles: [...HRT_GUIDES_PORTED, ...articles],
     faqs,
   };
 }

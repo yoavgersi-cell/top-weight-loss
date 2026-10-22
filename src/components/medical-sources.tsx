@@ -121,24 +121,49 @@ export const SOURCES_BY_VERTICAL: Record<string, MedicalSource[]> = {
   ],
   hrt: [
     {
-      label: "The 2022 Hormone Therapy Position Statement of The North American Menopause Society",
-      publisher: "The Menopause Society (NAMS)",
-      href: "https://www.menopause.org/professional-resources/position-statements",
+      label: "FDA Approves Labeling Changes to Menopausal Hormone Therapy Products",
+      publisher: "U.S. Food & Drug Administration - February 2026",
+      href: "https://www.fda.gov/news-events/press-announcements/fda-approves-labeling-changes-menopausal-hormone-therapy-products",
     },
     {
-      label: "Hormone Therapy - patient guidance",
+      label: "FDA Requests Labeling Changes to Clarify the Benefit/Risk Considerations for Menopausal Hormone Therapies",
+      publisher: "U.S. Food & Drug Administration - November 2025",
+      href: "https://www.fda.gov/drugs/drug-alerts-and-statements/fda-requests-labeling-changes-related-safety-information-clarify-benefitrisk-considerations",
+    },
+    {
+      label: "The Women's Health Initiative Randomized Trials and Clinical Practice: A Review",
+      publisher: "Manson JE et al., JAMA - 2024;331(20):1748-1760",
+      href: "https://doi.org/10.1001/jama.2024.6542",
+    },
+    {
+      label: "The 2022 hormone therapy position statement of The North American Menopause Society",
+      publisher: "Menopause (journal), The Menopause Society - 2022;29(7):767-794",
+      href: "https://doi.org/10.1097/GME.0000000000002028",
+    },
+    {
+      label: "The 2023 nonhormone therapy position statement of The North American Menopause Society",
+      publisher: "Menopause (journal), The Menopause Society - 2023",
+      href: "https://doi.org/10.1097/GME.0000000000002200",
+    },
+    {
+      label: "Menopause: identification and management (NG23, updated November 2024)",
+      publisher: "National Institute for Health and Care Excellence (NICE)",
+      href: "https://www.nice.org.uk/guidance/ng23",
+    },
+    {
+      label: "FDA Update on Estradiol Transdermal Patch Availability",
+      publisher: "U.S. Food & Drug Administration - 2026",
+      href: "https://www.fda.gov/drugs/drug-alerts-and-statements/fda-update-estradiol-transdermal-patch-availability",
+    },
+    {
+      label: "Hormone Therapy for Menopause - patient FAQ",
       publisher: "American College of Obstetricians and Gynecologists (ACOG)",
-      href: "https://www.acog.org/womens-health/faqs/hormone-therapy",
+      href: "https://www.acog.org/womens-health/faqs/hormone-therapy-for-menopause",
     },
     {
-      label: "Menopause: Medicines to Help You",
-      publisher: "U.S. Food & Drug Administration",
-      href: "https://www.fda.gov/consumers/free-publications-women/menopause-medicines-help-you",
-    },
-    {
-      label: "Women's Health Initiative (WHI) - study overview",
-      publisher: "National Heart, Lung, and Blood Institute (NIH)",
-      href: "https://www.nhlbi.nih.gov/science/womens-health-initiative-whi",
+      label: "Menopause - overview",
+      publisher: "National Institute on Aging (NIA), NIH",
+      href: "https://www.nia.nih.gov/health/menopause",
     },
   ],
   "online-therapy": [
