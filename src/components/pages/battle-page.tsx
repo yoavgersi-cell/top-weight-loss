@@ -262,6 +262,11 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
 
 // Category word used in the uniform battle SERP title, per vertical. Verticals
 // not listed fall back to a category-free title.
+// Oct 22, 2026: Nutrafol (hair-loss) is an over-the-counter supplement, the one
+// provider we compare that is not prescribed - no "licensed telehealth" badge
+// and a "not required" prescription row.
+const OTC_PROVIDERS = new Set(["nutrafol"]);
+
 const BATTLE_CATEGORY_BY_VERTICAL: Record<string, string> = {
   "weight-loss": "GLP-1",
   trt: "TRT",
@@ -607,13 +612,14 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // feature data so every value is real. The prescription row is a market
   // constant - every provider we compare requires a licensed-provider review.
   const findFeature = (re: RegExp) => (battle.features ?? []).find((f) => re.test(f.feature));
+  const rxRow = (id: string) => (OTC_PROVIDERS.has(id) ? "Not required - over-the-counter supplement" : "Required - online provider review");
   const priceRow = findFeature(/price|cost/i);
   const shippingRow = findFeature(/shipping|delivery|speed/i);
   const medsRow = findFeature(/medication|treatment/i);
   const quickRows = [
     priceRow && { label: "Starting price", v1: priceRow.provider1Value, v2: priceRow.provider2Value },
     medsRow && { label: "Medications", v1: medsRow.provider1Value, v2: medsRow.provider2Value },
-    { label: "Prescription", v1: "Required - online provider review", v2: "Required - online provider review" },
+    { label: "Prescription", v1: rxRow(p1.id), v2: rxRow(p2.id) },
     shippingRow && { label: "Delivery", v1: shippingRow.provider1Value, v2: shippingRow.provider2Value },
   ].filter(Boolean) as { label: string; v1: string; v2: string }[];
 
@@ -931,7 +937,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       starSize={16}
                     />
                   )}
-                  {ctx.vertical !== "hearing-aids" && <LicensedTelehealthBadge />}
+                  {ctx.vertical !== "hearing-aids" && !OTC_PROVIDERS.has(provider.id) && <LicensedTelehealthBadge />}
                 </div>
 
                 <p className="mb-4 text-[14px] leading-relaxed text-gray-500">
@@ -1019,7 +1025,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                               />
                             </div>
                           )}
-                          {ctx.vertical !== "hearing-aids" && (
+                          {ctx.vertical !== "hearing-aids" && !OTC_PROVIDERS.has(provider.id) && (
                             <div className="border-l border-gray-200 pl-4">
                               <LicensedTelehealthBadge />
                             </div>
