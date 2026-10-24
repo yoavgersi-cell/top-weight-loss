@@ -106,6 +106,10 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
 // targets). Code-rendered, so they work for articles whose body lives in the
 // blob. Every figure is a real, listed price - no invented numbers.
 const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
+  // Oct 24, 2026 pillar on stopping. Trial figures are the dated reports cited
+  // inside the article; the dollar figures are the verified price index.
+  "stopping-glp1-weight-regain-complete-guide":
+    "When you stop semaglutide or tirzepatide, appetite returns over three to five weeks as the drug clears, and in every randomized withdrawal trial most of the lost weight came back within a year: about two-thirds in the STEP 1 extension, 6.9 points of a 10.6% loss in STEP 4, 14.0 points of a 20.9% loss in SURMOUNT-4. A January 2026 BMJ meta-analysis of 37 studies put regain at about 0.4 kg a month, roughly 0.8 kg for the newer drugs. Real-world regain is smaller mainly because people restart or switch. The tested ways to keep it off are a maintenance dose (tirzepatide 5 mg held 16.6% of a 22% loss in SURMOUNT-MAINTAIN, May 2026), switching rather than stopping, and protecting muscle. Staying on compounded semaglutide costs a verified $49-$199 a month.",
   // Oct 20, 2026 pillar. Figures are the verified price index and the two
   // pivotal trials cited inside the article.
   "glp1-weight-loss-online-complete-guide":

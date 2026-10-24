@@ -366,7 +366,7 @@ export async function HubHome() {
   // Editor's picks: the two buyer guides Google has been slow to index on the
   // new domain lead (the hub home IS indexed, so this is the shortest crawl
   // path to them), then the rest in config order.
-  const FEATURED_FIRST = ["glp1-weight-loss-online-complete-guide", "glp1-true-cost-month-1-vs-year-one", "best-tirzepatide-online"];
+  const FEATURED_FIRST = ["stopping-glp1-weight-regain-complete-guide", "glp1-weight-loss-online-complete-guide", "glp1-true-cost-month-1-vs-year-one", "best-tirzepatide-online"];
   // Then the newest guides from every published vertical, dated - so the front
   // door shows dated, attributed editorial across the whole hub, not only
   // weight loss.
