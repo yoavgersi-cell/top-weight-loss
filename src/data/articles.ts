@@ -1,5 +1,6 @@
 import { brandClusterArticles } from "./brand-cluster-articles";
 import { pillarGlp1Online } from "./pillar-glp1-online";
+import { pillarGlp1StoppingWeightRegain } from "./pillar-glp1-stopping-weight-regain";
 import { trueCostTable, budgetList } from "@/lib/true-cost";
 
 export interface Article {
@@ -697,7 +698,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Making an Informed Decision",
-        body: 'Whether to continue or discontinue GLP-1 medication is a personal decision that should be made with full information. Consider your reasons for stopping - cost, side effects, reaching a goal weight - and weigh them against the statistical likelihood of regain. If cost is the primary factor, explore compounded options or lower maintenance doses that may be more affordable. If you\'ve reached your goal, discuss a maintenance protocol with your provider rather than simply stopping. <a href="/">Compare providers</a> that offer flexible maintenance plans, or <a href="/weight-loss/find-your-match">take our quiz</a> to find the right fit for long-term care.',
+        body: 'Whether to continue or discontinue GLP-1 medication is a personal decision that should be made with full information. Consider your reasons for stopping - cost, side effects, reaching a goal weight - and weigh them against the statistical likelihood of regain. If cost is the primary factor, explore compounded options or lower maintenance doses that may be more affordable. If you\'ve reached your goal, discuss a maintenance protocol with your provider rather than simply stopping. <a href="/">Compare providers</a> that offer flexible maintenance plans, or <a href="/weight-loss/find-your-match">take our quiz</a> to find the right fit for long-term care. For the full evidence on regain - every withdrawal trial, the 2026 meta-analyses, the first randomized maintenance-dose trial, tapering, microdosing, muscle and cost - read our <a href="/weight-loss/articles/stopping-glp1-weight-regain-complete-guide">complete guide to stopping GLP-1s and keeping the weight off</a>.',
       },
     ],
   },
@@ -2651,4 +2652,5 @@ export const articles: Article[] = [
   },
   ...brandClusterArticles,
   pillarGlp1Online,
+  pillarGlp1StoppingWeightRegain,
 ];
