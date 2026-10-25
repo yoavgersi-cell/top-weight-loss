@@ -1018,13 +1018,20 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           </div>
         )}
 
-        {/* This provider's products, shopping-style (weight-loss catalog only) */}
-        {ctx.vertical === "weight-loss" && (
+        {/* This provider's products, shopping-style. Weight-loss draws on the
+            GLP-1 catalog; HRT on its own shelf (Winona and Gala products -
+            renders nothing for Midi, which prescribes to your pharmacy). */}
+        {(ctx.vertical === "weight-loss" || ctx.vertical === "hrt") && (
           <div className="mb-8">
             <ProductCarousel
               providers={config.providers}
+              vertical={ctx.vertical}
               title={`${provider.name} products & prices`}
-              subtitle="Published prices with their conditions - the whole card links to the provider."
+              subtitle={
+                ctx.vertical === "hrt"
+                  ? `${provider.name}'s HRT products with published prices and what each price includes.`
+                  : "Published prices with their conditions - the whole card links to the provider."
+              }
               onlyProviderIds={[provider.id]}
               pageType="review"
               pageUrl={canonicalUrl(ctx, `/reviews/${slug}`)}

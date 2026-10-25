@@ -274,12 +274,22 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // only restrict when the subject actually has affiliate catalog products
   // (otherwise fall back to the full catalog rather than an empty carousel).
   const isLegitArticle = /^is-.+-legit$/.test(slug);
-  const restrictCarouselToSubject =
-    isLegitArticle &&
+  // HRT (Oct 2026): the brand cost/products/legit guides are provider pages
+  // too, so they show their own provider's shelf - and nothing at all when
+  // that provider has no products (Midi prescribes to your pharmacy), rather
+  // than competitors' products on a page about one brand.
+  const isHrtArticle = ctx.vertical === "hrt";
+  const isProviderGuide = isLegitArticle || (isHrtArticle && article.category === "Provider Guide");
+  const subjectHasProducts =
     !!subjectProvider &&
     PRODUCT_CATALOG.some(
-      (p) => p.providerId === subjectProvider.id && AFFILIATE_PROVIDER_IDS.includes(p.providerId),
+      (p) =>
+        p.providerId === subjectProvider.id &&
+        (p.vertical ?? "weight-loss") === ctx.vertical &&
+        AFFILIATE_PROVIDER_IDS.includes(p.providerId),
     );
+  const restrictCarouselToSubject = isProviderGuide && subjectHasProducts;
+  const hideCarouselForSubject = isHrtArticle && isProviderGuide && !!subjectProvider && !subjectHasProducts;
   const subjectTrustpilot =
     subjectProvider?.trustpilotReviews?.length ? subjectProvider : undefined;
   const subjectReddit =
@@ -804,27 +814,40 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                   </div>
                 )}
 
-                {/* Full-catalog product carousel mid-article (weight-loss only) -
-                    after roughly the halfway section, never at the bottom. */}
-                {ctx.vertical === "weight-loss" &&
+                {/* Product carousel mid-article (weight-loss catalog, or the
+                    HRT shelf) - after roughly the halfway section, never at
+                    the bottom. */}
+                {(ctx.vertical === "weight-loss" || isHrtArticle) &&
+                  !hideCarouselForSubject &&
                   i === Math.max(0, Math.ceil(article.sections.length / 2) - 1) && (
                     <div className="my-10">
                       <ProductCarousel
                         providers={config.providers}
+                        vertical={isHrtArticle ? "hrt" : "weight-loss"}
                         onlyProviderIds={
                           restrictCarouselToSubject && subjectProvider ? [subjectProvider.id] : undefined
                         }
-                        onlyMedication={restrictCarouselToSubject && subjectProvider ? undefined : carouselMedication}
+                        onlyMedication={
+                          isHrtArticle || (restrictCarouselToSubject && subjectProvider) ? undefined : carouselMedication
+                        }
                         limit={restrictCarouselToSubject && subjectProvider ? undefined : isTirzGuide ? undefined : 8}
                         title={
                           restrictCarouselToSubject && subjectProvider
-                            ? `Shop ${subjectProvider.name}'s GLP-1 plans`
-                            : carouselTitle
+                            ? isHrtArticle
+                              ? `${subjectProvider.name} products & prices`
+                              : `Shop ${subjectProvider.name}'s GLP-1 plans`
+                            : isHrtArticle
+                              ? "HRT products from top online providers"
+                              : carouselTitle
                         }
                         subtitle={
                           restrictCarouselToSubject && subjectProvider
-                            ? `${subjectProvider.name}'s published plans - conditions shown under each price.`
-                            : carouselSubtitle
+                            ? isHrtArticle
+                              ? `${subjectProvider.name}'s HRT products with published prices and what each price includes.`
+                              : `${subjectProvider.name}'s published plans - conditions shown under each price.`
+                            : isHrtArticle
+                              ? "Real HRT products and published prices from the online providers we rank."
+                              : carouselSubtitle
                         }
                         withSchema
                         pageUrl={canonicalUrl(ctx, `/articles/${slug}`)}
