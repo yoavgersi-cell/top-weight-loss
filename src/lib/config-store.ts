@@ -2900,6 +2900,171 @@ const defaultReviews: ReviewData[] = [
     ]
   },
   {
+    slug: "luvo",
+    providerId: "luvo",
+    updatedAt: "2026-10-25",
+    // Prices and inclusions read from Luvo's product pages on October 25,
+    // 2026 (operator-supplied captures). Luvo bills every 4 weeks, not
+    // monthly; the "per month" arithmetic below is ours and says so.
+    shortSummary: "Compounded semaglutide and tirzepatide as weekly injections, plus a daily semaglutide tablet and brand-name Ozempic, with 50% off the first four weeks ($104.50 semaglutide, $124.50 tirzepatide, $129.50 tablets) and then $209, $249 or $259 every four weeks. Clinician review, check-ins and discreet shipping are included, there are no membership fees and you can cancel anytime. No Trustpilot profile yet.",
+    reviewIntro: "Luvo is a telehealth weight-loss provider that sells compounded semaglutide and tirzepatide as weekly injections, compounded semaglutide as a daily tablet, and brand-name Ozempic, each after an online clinician review. Its pricing is built around one offer and one cadence: 50% off the first four weeks, then a fixed price every four weeks from the second delivery, with the medication, the clinician review, ongoing support and check-ins and discreet shipping all inside that price and no separate membership fee. The first-month figures are among the lower entry prices we track; the ongoing prices sit in the mid-to-upper range for compounded GLP-1s, so the honest comparison is the second-delivery number, not the launch offer. Luvo does not yet have a Trustpilot profile, so what follows is built from its published pricing and terms rather than a review record.",
+    keyFeatures: [
+      "Compounded semaglutide injection: $104.50 for the first 4 weeks, then $209 every 4 weeks",
+      "Compounded tirzepatide injection: $124.50 for the first 4 weeks, then $249 every 4 weeks",
+      "Compounded semaglutide tablets (daily): $129.50 for the first 4 weeks, then $259 every 4 weeks",
+      "Brand-name Ozempic: $1,299 per 4 weeks of injections",
+      "Medication, clinician review, ongoing support and check-ins and discreet shipping included; no membership fees; cancel anytime"
+    ],
+    pricingSummary: "Luvo prices by four-week delivery, not by calendar month. Compounded semaglutide injections are $104.50 for the first four weeks (50% off the regular $209) and $209 every four weeks from the second delivery; compounded tirzepatide is $124.50 and then $249; compounded semaglutide tablets are $129.50 and then $259; brand-name Ozempic is $1,299 per four weeks. Every price includes the medication, the clinician review, ongoing support and check-ins and discreet shipping, and Luvo states there are no membership fees and that you can cancel anytime. Because a four-week cycle repeats 13 times a year, the ongoing prices work out to roughly $226 (semaglutide), $270 (tirzepatide) and $281 (tablets) per calendar month - our arithmetic, shown so the comparison with monthly-billed providers is fair. Prices read from Luvo's product pages on October 25, 2026; the provider's site is the live source.",
+    treatmentOptions: [
+      "Compounded semaglutide (GLP-1) weekly injection",
+      "Compounded tirzepatide (GLP-1 + GIP) weekly injection",
+      "Compounded semaglutide daily tablet",
+      "Brand-name Ozempic (semaglutide) pen"
+    ],
+    pros: [
+      "Low first-month entry: 50% off the first four weeks on every compounded option",
+      "One all-in price - medication, clinician review, check-ins and shipping - with no membership fee",
+      "Three compounded formats (two injections and a daily tablet) plus brand-name Ozempic from one provider",
+      "Cancel anytime, stated on every product page",
+      "Dosing described as individualized and adjusted over time by the clinician"
+    ],
+    cons: [
+      "Ongoing prices ($209-$259 every 4 weeks) are above most compounded plans we track once the first-month offer ends",
+      "Billing every 4 weeks means 13 charges a year, not 12",
+      "No Trustpilot profile yet, so no independent review record to check",
+      "Shipping times and the pharmacy that fills the prescription are not stated on the pages we captured - ask before paying"
+    ],
+    bestFor: [
+      "People who want a low-cost first month to find out how they tolerate a GLP-1",
+      "Anyone who prefers a daily semaglutide tablet to a weekly injection",
+      "Buyers who want compounded and brand-name options from the same provider"
+    ],
+    finalVerdict: "Luvo's offer is clear and its inclusions are generous: one price covers the medication, the clinician, the check-ins and the shipping, and there is no membership fee or contract. The first four weeks are inexpensive. The decision should be made on the second-delivery price - $209 for semaglutide, $249 for tirzepatide, $259 for tablets, billed every four weeks - which is a mid-to-upper price for compounded GLP-1s next to the $49-$149 plans on our comparison. If a cheap trial month, a tablet option or a cancel-anytime structure matters more than the lowest ongoing price, Luvo is a reasonable choice; confirm shipping times and the dispensing pharmacy at checkout, and check back for a review record as the brand builds one.",
+    trustBadges: [
+      "No membership fees",
+      "Cancel anytime",
+      "Clinician review and check-ins included",
+      "Discreet shipping included"
+    ],
+    pricingPlans: [
+      {
+        name: "Semaglutide injection",
+        medication: "Compounded semaglutide (GLP-1) weekly injection",
+        price: "$104.50",
+        unit: "/first 4 weeks",
+        cadence: "Then $209 every 4 weeks",
+        highlights: ["50% off the first 4 weeks (regular $209)", "Medication, clinician review, check-ins and shipping included", "No membership fees; cancel anytime"]
+      },
+      {
+        name: "Tirzepatide injection",
+        medication: "Compounded tirzepatide (GLP-1 + GIP) weekly injection",
+        price: "$124.50",
+        unit: "/first 4 weeks",
+        cadence: "Then $249 every 4 weeks",
+        highlights: ["50% off the first 4 weeks (regular $249)", "Medication, clinician review, check-ins and shipping included", "No membership fees; cancel anytime"]
+      },
+      {
+        name: "Semaglutide tablets",
+        medication: "Compounded semaglutide daily tablet",
+        price: "$129.50",
+        unit: "/first 4 weeks",
+        cadence: "Then $259 every 4 weeks",
+        highlights: ["50% off the first 4 weeks (regular $259)", "One tablet a day, no injection", "No membership fees; cancel anytime"]
+      },
+      {
+        name: "Ozempic",
+        medication: "Brand-name Ozempic (semaglutide) pen",
+        price: "$1,299",
+        unit: "/4 weeks",
+        cadence: "Delivered every 4 weeks",
+        highlights: ["FDA-approved brand-name pen", "Clinician review, check-ins and shipping included", "Cancel anytime"]
+      }
+    ],
+    howItWorks: [
+      { title: "Choose a treatment and complete the online intake", detail: "Pick the injection, tablet or brand-name option and answer the health questions." },
+      { title: "A clinician reviews your plan", detail: "Dosing is individualized and adjusted over time for response and tolerability; medication is shipped only if prescribed." },
+      { timing: "Every 4 weeks", title: "Receive your medication", detail: "Four weeks of medication per delivery, shipped discreetly, with ongoing support and check-ins included." }
+    ]
+  },
+  {
+    slug: "medgm",
+    providerId: "medgm",
+    updatedAt: "2026-10-25",
+    // Prices read from MEDGm's product tiles on October 25, 2026
+    // (operator-supplied capture). The tiles give starting prices by format
+    // without naming the molecule behind each, so this review does the same.
+    shortSummary: "Prescription GLP-1 weight-loss medication in three formats: compounded weekly injections starting at $169, compounded daily dissolvable tablets starting at $239, and brand-name Zepbound on a $99 membership plus the medication cost. No Trustpilot profile yet; the molecule behind each starting price and the shipping terms are not stated on the pricing tiles, so confirm them at checkout.",
+    reviewIntro: "MEDGm is a telehealth provider selling prescription GLP-1 medication for weight loss in three formats. Its pricing tiles list compounded GLP-1 injections - one injection per week - starting at $169, compounded GLP-1 tablets - one dissolvable tablet per day - starting at $239, and brand-name Zepbound injections on a $99 membership plus the cost of the medication, with a note that Zepbound availability is subject to change. All three are prescription-only. What the tiles do not say is which molecule (semaglutide or tirzepatide) sits behind each starting price, how the dose steps up and what that does to the price, how fast it ships, or which pharmacy fills the prescription; those are the questions to ask before paying. MEDGm has no Trustpilot profile yet, so this review rests on its published offer rather than a review record.",
+    keyFeatures: [
+      "Compounded GLP-1 weekly injections starting at $169",
+      "Compounded GLP-1 daily dissolvable tablets starting at $239",
+      "Brand-name Zepbound: $99 membership plus medication cost (availability subject to change)",
+      "All medication is prescription-only (Rx)",
+      "Injection, tablet and brand-name routes from one provider"
+    ],
+    pricingSummary: "MEDGm publishes starting prices by format: compounded GLP-1 injections from $169, compounded GLP-1 tablets from $239, and brand-name Zepbound on a $99 membership with the medication billed on top. 'Starting at' means the entry dose; the pricing tiles do not show the price at higher doses, which molecule each price covers, or whether the figures are monthly or per supply period, so treat them as the floor rather than the ongoing cost and confirm the full dose schedule before you commit. Prices read from MEDGm's site on October 25, 2026; the provider's site is the live source.",
+    treatmentOptions: [
+      "Compounded GLP-1 weekly injection",
+      "Compounded GLP-1 daily dissolvable tablet",
+      "Brand-name Zepbound (tirzepatide) injection"
+    ],
+    pros: [
+      "Three routes in one place: compounded injection, compounded tablet and brand-name Zepbound",
+      "A dissolvable daily tablet for people who do not want a weekly injection",
+      "Brand-name Zepbound access on a membership model rather than full cash price up front",
+      "Prescription-only, which means a clinician decision sits in front of every order"
+    ],
+    cons: [
+      "Starting prices ($169 injections, $239 tablets) are above most compounded plans we track",
+      "The pricing tiles do not name the molecule behind each price or the cost at higher doses",
+      "Shipping times, the dispensing pharmacy and cancellation terms are not shown on the pages we captured",
+      "No Trustpilot profile yet, so no independent review record to check"
+    ],
+    bestFor: [
+      "People who want compounded and brand-name Zepbound options from the same provider",
+      "Anyone who prefers a daily dissolvable tablet to injections",
+      "Buyers comfortable confirming dose pricing and shipping terms directly before paying"
+    ],
+    finalVerdict: "MEDGm's strength is range: a weekly injection, a daily dissolvable tablet and brand-name Zepbound under one roof, all prescription-only. Its published starting prices - $169 for injections and $239 for tablets - sit above the $49-$149 compounded plans on our comparison, and the tiles leave the questions that decide value unanswered: which molecule, what the dose steps cost, how fast it ships and who fills it. If the tablet format or the Zepbound membership route is what you want, MEDGm is worth a look; get those answers in writing before you pay, and we will add a review record here as one builds.",
+    trustBadges: [
+      "Prescription-only medication",
+      "Injection, tablet and brand-name options",
+      "Zepbound membership route"
+    ],
+    pricingPlans: [
+      {
+        name: "GLP-1 injections",
+        medication: "Compounded GLP-1 weekly injection",
+        price: "from $169",
+        unit: "",
+        cadence: "One injection per week",
+        highlights: ["Starting price; confirm the cost at higher doses", "Prescription-only", "Molecule not named on the pricing tile"]
+      },
+      {
+        name: "GLP-1 tablets",
+        medication: "Compounded GLP-1 daily dissolvable tablet",
+        price: "from $239",
+        unit: "",
+        cadence: "One dissolvable tablet per day",
+        highlights: ["Starting price; confirm the cost at higher doses", "No injection", "Prescription-only"]
+      },
+      {
+        name: "Zepbound",
+        medication: "Brand-name Zepbound (tirzepatide) injection",
+        price: "$99",
+        unit: " membership",
+        cadence: "Plus medication cost",
+        highlights: ["FDA-approved brand-name pen", "Availability subject to change", "Medication billed on top of the membership"]
+      }
+    ],
+    howItWorks: [
+      { title: "Choose a format", detail: "Weekly compounded injection, daily compounded tablet or brand-name Zepbound." },
+      { title: "Complete the online intake", detail: "Every option is prescription-only, so a licensed clinician reviews your health history before anything is dispensed." },
+      { title: "Receive your medication if prescribed", detail: "Confirm shipping times, the dispensing pharmacy and the price at your maintenance dose before you pay." }
+    ]
+  },
+  {
     slug: "directmeds",
     providerId: "directmeds",
     updatedAt: "2026-09-14",
@@ -5928,7 +6093,7 @@ function buildInitialConfig(): SiteConfig {
       trustpilotReviews: seedTrustpilot[p.id]?.reviews,
     })),
     ranking: {
-      providerOrder: ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "wellorithm"],
+      providerOrder: ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
       positions: [
         { score: 9.8, starRating: 5, label: "Exceptional", badge: "Our Most Popular" },
         { score: 9.7, starRating: 5, label: "Exceptional" },
@@ -6045,7 +6210,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Semaglutide Providers 2026",
         h2: "Compare GLP-1 weight loss programs side by side",
         heroDescription: "Semaglutide (the active ingredient in Ozempic and Wegovy) is one of the most effective GLP-1 medications for weight loss. Compare providers offering semaglutide treatment below.",
-        providerOrder: ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
         editorialSections: [
           {
             heading: "What Is Semaglutide?",
@@ -6073,7 +6238,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Tirzepatide Providers 2026",
         h2: "Compare dual-action GLP-1 weight loss programs",
         heroDescription: "Tirzepatide (the active ingredient in Mounjaro and Zepbound) targets both GLP-1 and GIP receptors for enhanced weight loss results. Compare providers offering tirzepatide treatment below.",
-        providerOrder: ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
         editorialSections: [
           {
             heading: "What Is Tirzepatide?",
@@ -6101,7 +6266,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Online Weight Loss Programs 2026",
         h2: "Clinician-guided GLP-1 treatment from home",
         heroDescription: "Online weight loss programs now offer prescription GLP-1 medications with full medical oversight - all from home. We compared the top programs on pricing, clinical support, and results.",
-        providerOrder: ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
         editorialSections: [
           {
             heading: "How Online Weight Loss Programs Work",
@@ -6129,7 +6294,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Weight Loss Injections 2026",
         h2: "Compare injectable GLP-1 weight loss treatments",
         heroDescription: "GLP-1 weight loss injections like semaglutide and tirzepatide have shown 15-22% average weight loss in clinical trials. Compare providers offering injectable treatment programs below.",
-        providerOrder: ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
         editorialSections: [
           {
             heading: "How Weight Loss Injections Work",
@@ -6157,7 +6322,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Ozempic for Weight Loss",
         h2: "Compare providers offering semaglutide treatment",
         heroDescription: "Ozempic (semaglutide) is widely used off-label for weight loss, with clinical trials showing 10-15% average weight loss. Compare providers offering semaglutide-based treatment programs below.",
-        providerOrder: ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
         editorialSections: [
           {
             heading: "Ozempic for Weight Loss: What You Need to Know",
@@ -6185,7 +6350,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Wegovy Providers & Alternatives 2026",
         h2: "Compare semaglutide weight loss programs",
         heroDescription: "Wegovy is the FDA-approved weight loss version of semaglutide, with clinical trials showing 15% average weight loss. Compare providers offering Wegovy and compounded semaglutide alternatives below.",
-        providerOrder: ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
         editorialSections: [
           {
             heading: "Wegovy vs Compounded Semaglutide",
@@ -6209,7 +6374,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Most Affordable Weight Loss Medication 2026",
         h2: "Compare the cheapest GLP-1 providers",
         heroDescription: "GLP-1 medications don't have to cost $1,000/month. Compounded semaglutide starts at a verified $49/month and tirzepatide at $89/month from licensed telehealth providers - including medication, consultations, and delivery.",
-        providerOrder: ["altrx", "trimrx", "shed", "embody", "eden", "ro", "wellmedr", "sunlight", "medvi", "sprout", "wellorithm"],
+        providerOrder: ["altrx", "trimrx", "shed", "embody", "eden", "ro", "wellmedr", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
         editorialSections: [
           {
             heading: "Why GLP-1 Medication Is Getting More Affordable",
@@ -6347,6 +6512,8 @@ function buildInitialConfig(): SiteConfig {
         { providerId: "sunlight", priceLevel: "mid", strengths: ["online", "personalized"], matchReasons: { cost: "Flexible pricing options", medical: "Licensed provider consultations", online: "Easy online follow-up care", personalized: "Treatment adapted to your needs" } },
         { providerId: "medvi", priceLevel: "mid", strengths: ["online", "medical"], matchReasons: { cost: "Straightforward monthly pricing", medical: "Provider support throughout program", online: "Simple online enrollment", personalized: "Prescription-based treatment plans" } },
         { providerId: "sprout", priceLevel: "mid", strengths: ["personalized", "cost"], matchReasons: { cost: "Save $200 on your first month", medical: "Provider-guided weight loss", online: "Prescription shipped within 2 days", personalized: "Designed around your health goals" } },
+        { providerId: "luvo", priceLevel: "mid", strengths: ["cost", "personalized"], matchReasons: { cost: "50% off your first 4 weeks, no membership fees", medical: "Clinician review and ongoing check-ins included", online: "Discreet shipping to your door, cancel anytime", personalized: "Weekly injection or daily tablet, dosing adjusted over time" } },
+        { providerId: "medgm", priceLevel: "mid", strengths: ["personalized", "online"], matchReasons: { cost: "Compounded GLP-1 injections from $169", medical: "Prescription-only GLP-1 medication", online: "Injections, tablets and brand-name Zepbound in one place", personalized: "Weekly injection, daily tablet or brand-name options" } },
         { providerId: "wellorithm", priceLevel: "low", strengths: ["cost", "online"], matchReasons: { cost: "Plans starting at just $147", medical: "No membership or hidden fees", online: "Free shipping included nationwide", personalized: "HSA/FSA eligible treatment plans" } },
         { providerId: "directmeds", priceLevel: "low", strengths: ["cost", "online"], matchReasons: { cost: "Plans starting at just $147", medical: "Online medical visit included", online: "Free shipping in 1-2 days", personalized: "No insurance required to qualify" } },
         { providerId: "found", priceLevel: "mid", strengths: ["medical", "personalized"], matchReasons: { cost: "Up to $100 off membership", medical: "Board-certified provider care", online: "Affordable GLP-1 delivered fast", personalized: "Covered by major insurance plans" } },
@@ -6474,6 +6641,8 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
             // slugs the seed wins wholesale; all other reviews stay CMS-owned
             // with the seed backfilling only the rich fields below.
             const codeAuthoritativeReviews = new Set([
+              "luvo",
+              "medgm",
               "eden",
               "embody",
               "altrx",

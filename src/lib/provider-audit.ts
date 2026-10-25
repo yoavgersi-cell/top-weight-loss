@@ -112,6 +112,26 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Trustpilot record", value: "4.5 across 4,917 reviews" },
     ],
   },
+  "weight-loss:luvo": {
+    rows: [
+      { label: "Semaglutide price", value: "$104.50 for the first 4 weeks, then $209 every 4 weeks" },
+      { label: "Tirzepatide price", value: "$124.50 for the first 4 weeks, then $249 every 4 weeks" },
+      { label: "Semaglutide tablets", value: "$129.50 for the first 4 weeks, then $259 every 4 weeks" },
+      { label: "Brand-name Ozempic", value: "$1,299 per 4 weeks" },
+      { label: "Membership fee", value: "None" },
+      { label: "Commitment", value: "None - cancel anytime" },
+      { label: "Trustpilot record", value: "No profile yet" },
+    ],
+  },
+  "weight-loss:medgm": {
+    rows: [
+      { label: "GLP-1 injections", value: "Starting at $169 (weekly injection; molecule not stated on the pricing tile)" },
+      { label: "GLP-1 tablets", value: "Starting at $239 (daily dissolvable tablet)" },
+      { label: "Brand-name Zepbound", value: "$99 membership plus medication cost; availability subject to change" },
+      { label: "Prescription", value: "Required - all options are Rx-only" },
+      { label: "Trustpilot record", value: "No profile yet" },
+    ],
+  },
   "weight-loss:ro": {
     rows: [
       { label: "Membership", value: "$39 first month, then $74-149/month ($74 on a 12-month prepaid plan)" },

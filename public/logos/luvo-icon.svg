@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="Luvo">
+  <rect width="80" height="80" rx="18" fill="#1A2B3C"/>
+  <text x="40" y="56" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="44" font-weight="500" fill="#ffffff">L</text>
+  <path d="M26 18 q7 -7 14 0 q7 7 14 0" stroke="#5FB3A0" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

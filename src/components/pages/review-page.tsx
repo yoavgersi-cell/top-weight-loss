@@ -102,10 +102,21 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     description:
       "ro weight loss review: membership from $39 the first month plus brand-name Wegovy or Zepbound billed separately; insurance can apply. Pros and cons.",
   },
-  eden: {
-    title: "Eden Reviews 2026: Is It Legit? $99 Flat GLP-1 & Verdict",
+  // Oct 25, 2026: two operator-added providers without Trustpilot profiles.
+  luvo: {
+    title: "Luvo Reviews 2026: GLP-1 Cost, 50% Off Offer & Verdict",
     description:
-      "Eden reviews: {prices}, flat at every dose, no membership, 24/7 support. Is Eden legit? Pros and cons.",
+      "Luvo reviews: compounded semaglutide $104.50 and tirzepatide $124.50 for the first 4 weeks, then $209 and $249, plus tablets and Ozempic. No membership fees.",
+  },
+  medgm: {
+    title: "MEDGm Reviews 2026: GLP-1 Injections, Tablets & Zepbound",
+    description:
+      "MEDGm reviews: compounded GLP-1 injections from $169, daily GLP-1 tablets from $239 and brand-name Zepbound on a $99 membership plus medication. Pros and cons.",
+  },
+  eden: {
+    title: "Eden Reviews 2026: 4.5 Trustpilot, $99 Flat GLP-1 & Verdict",
+    description:
+      "Eden reviews: {prices}, flat at every dose, no membership, 4.5 on Trustpilot across 4,917 reviews. Is Eden legit?",
   },
   trimrx: {
     title: "TrimRx Reviews 2026 (Trim Rx): Is It Legit? Cost & Verdict",
