@@ -77,7 +77,7 @@ function ReviewCard({ r, provider }: { r: TrustpilotReview; provider?: ReviewCar
       {/* Clamp to 4 lines with an automatic ellipsis; min-height keeps every
           card the same size regardless of review length. */}
       <p className="mb-3.5 line-clamp-4 min-h-[76px] text-[12.5px] leading-[1.5] text-gray-600">
-        &ldquo;{r.text}&rdquo;
+        {r.text ? <>&ldquo;{r.text}&rdquo;</> : <span className="italic text-gray-400">Title only; the reviewer left no further text.</span>}
       </p>
       <div className="mt-auto flex items-center gap-2">
         <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0C4B75]/10 text-[11px] font-bold text-[#0C4B75]">
@@ -245,12 +245,15 @@ export function TrustpilotCarousel({
   reviews,
   rating,
   reviewCount,
+  profileUrl,
 }: {
   providerName: string;
   providerLogo?: string;
   reviews: TrustpilotReview[];
   rating?: string;
   reviewCount?: string;
+  /** The provider's own Trustpilot profile (from the review registry); renders a "see all" link. */
+  profileUrl?: string;
 }) {
   const total = reviews.length;
   // Reader-controlled order. Default is highest rated first (newest within a
@@ -279,16 +282,28 @@ export function TrustpilotCarousel({
           </h3>
           <TrustpilotWordmark />
         </div>
-        {rating && numericRating !== null && !isNaN(numericRating) ? (
-          <div className="flex items-center gap-2">
-            <TrustpilotStars rating={numericRating} boxClass="h-[20px] w-[20px]" />
-            {reviewCount && (
-              <span className="text-[12px] text-gray-400">({reviewCount} reviews)</span>
-            )}
-          </div>
-        ) : (
-          <span className="text-[12px] text-gray-400">Source: Trustpilot</span>
-        )}
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+          {rating && numericRating !== null && !isNaN(numericRating) ? (
+            <div className="flex items-center gap-2">
+              <TrustpilotStars rating={numericRating} boxClass="h-[20px] w-[20px]" />
+              {reviewCount && (
+                <span className="text-[12px] text-gray-400">({reviewCount} reviews)</span>
+              )}
+            </div>
+          ) : (
+            <span className="text-[12px] text-gray-400">Source: Trustpilot</span>
+          )}
+          {profileUrl && (
+            <a
+              href={profileUrl}
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              className="text-[12px] font-semibold text-[#0C4B75] underline underline-offset-2 hover:text-[#093d61]"
+            >
+              See all reviews on Trustpilot ↗
+            </a>
+          )}
+        </div>
       </div>
 
       <div className="mb-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">

@@ -196,7 +196,7 @@ export default async function GoPage({ params }: { params: Promise<{ battleSlug:
             <p className="text-[15px] font-bold">4. Know what each one is best at</p>
             <p className="mt-1 text-[14px] leading-relaxed text-gray-600">
               {embody && <>embody is the cheaper of the two and ships in 1-2 days, cold-chain, with a LegitScript certification and a 3.8 across {embody.trustpilot?.count ?? "its"} Trustpilot reviews.</>}{" "}
-              {eden && <>Eden costs $30 more a month for semaglutide and $10 more for tirzepatide, and includes doctor-guided care with 24/7 human support, with a {eden.trustpilot?.rating ?? "4.5"} across {eden.trustpilot?.count ?? "4,917"} Trustpilot reviews in which recent reviewers name the staff who helped them. Confirm Eden&rsquo;s shipping time at checkout; it does not publish one.</>}
+              {eden && <>Eden costs $30 more a month for semaglutide and $10 more for tirzepatide, and includes doctor-guided care with 24/7 human support, with a {eden.trustpilot?.rating ?? "4.5"} across {eden.trustpilot?.count ?? "5,019"} Trustpilot reviews in which recent reviewers name the staff who helped them. Confirm Eden&rsquo;s shipping time at checkout; it does not publish one.</>}
             </p>
           </li>
         </ol>

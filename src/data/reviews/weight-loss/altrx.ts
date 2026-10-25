@@ -1,0 +1,147 @@
+import type { ProviderReviewRecord } from "../types";
+
+// altrx: customer reviews transcribed from the provider's Trustpilot profile.
+// Moved out of config-store on Oct 25, 2026 with every review, note and date
+// unchanged; see ../types.ts for the house rules.
+// Record note: altRx: we do NOT show an aggregate Trustpilot rating (its profile is flagged by Trustpilot - rating removed for a guidelines breach / fake reviews), and we never fabricate one; its cards fall back to a "Licensed US telehealth" trust chip where the rating would sit. The individual review cards below are real Trustpilot reviews and are shown without an invented aggregate score.
+
+export const ALTRX_REVIEWS: ProviderReviewRecord = {
+  providerId: "altrx",
+  vertical: "weight-loss",
+  source: "trustpilot",
+  profileUrl: "https://www.trustpilot.com/review/altrx.com",
+  profileStatus: "flagged",
+  aggregateNote: "Trustpilot has removed altRx's public rating (the profile is flagged for a guidelines breach), so no aggregate is shown and none is ever estimated; the individual reviews below are real Trustpilot reviews from that profile.",
+  batches: [
+    {
+      method: "operator screenshots",
+      reviews: [
+          {
+            title: "Best customer experience I've had in a long while",
+            text: "I'm just starting out with AltRx and the rep who really, really helped me, Natalie, was so wonderful. She gave me info on the plan and answered all of my questions and concerns. I hope everyone at AltRx is this helpful. Wish me luck. I was able to join the plan with no hassles.",
+            name: "Cindi P.",
+            location: "US",
+            rating: 5,
+            date: "Sep 7, 2026",
+          },
+          {
+            title: "I am going on 3 months with Altrx",
+            text: "I am going on 3 months with Altrx and it hasn't been bad. I read these negative reviews and I find it hard to believe that we are all with the same company. They always respond to my messages with in 24 hours. I receive my shipment of tirzepatide with in a couple days after I follow up. Plus they haven't bumped my price it's been $148 since I started. I like Altrx. Plus I've lost 10 pounds. The only side effect I have is being sleepy but it's getting better.",
+            name: "melissa A.",
+            location: "US",
+            rating: 5,
+            date: "Sep 3, 2026",
+          },
+          {
+            title: "Would recommend!",
+            text: "I do not understand how everyone has all of these “negative” reviews. I was skeptical at first due to reading through these but I am very happy with this company. 3 of my other coworkers use them as well and they are happy as well.",
+            name: "Angela",
+            location: "US",
+            rating: 5,
+            date: "Sep 2, 2026",
+          },
+          {
+            title: "Great company that takes care of my needs",
+            text: "Great company that takes care of my needs promptly. I'm seeing a lot of negative reviews but I can't help but think they may be coming from another provider. This company is great and takes care of me and my family quickly and they are very customer service oriented. My order came in correct and even after taking a break, was able to use the medication at have at a different dose. They didn't try to sell me another beginner dose. A+",
+            name: "Tammy D.",
+            location: "US",
+            rating: 5,
+            date: "Sep 1, 2026",
+          },
+          {
+            title: "I have been with altrx for few months",
+            text: "I have been with altrx for few months. I take tirzepatide from them. I always get everything on time! I just felt they needed a good review since other companies I used suck and scam me.",
+            name: "Shannon R.",
+            location: "US",
+            rating: 5,
+            date: "Sep 1, 2026",
+          },
+          {
+            title: "Ive be been using AltRx for 4 months",
+            text: "Ive be been using AltRx for 4 months (out of a 6 mo subscription) after switching from another company. Not a single problem. Ive communicated with customer service multiple times and received prompt responses. Ive continually lost 4-5 pounds a month. They accidentally billed me once but after contacting them, I was refunded immediately. Ive been really happy with my experiences using them.",
+            name: "Alicia V.",
+            location: "US",
+            rating: 5,
+            date: "Aug 31, 2026",
+          },
+          {
+            title: "Great experience so far!",
+            text: "I don't understand all of the bad reviews because I've had a great experience so far! Paige my care consultant (maybe AI but idk) helped me get a discounted rate and answered all of my questions! I had previously been taking GLP1 from a Medspa and they were great but the price was Insane and it stopped working for me there. With AltRX I've lost 8 lbs and it hasn't even been a month yet since I started.",
+            name: "Tori W.",
+            location: "US",
+            rating: 5,
+            date: "Aug 26, 2026",
+          },
+          {
+            title: "I signed up on a Friday night at 8pm",
+            text: "I signed up on a Friday night at 8pm. A doctor called me at 1045 Saturday morning and we talked for about ten minutes. She ordered the dose and medicine I wanted and I received it by FedEx overnight delivery on Thursday. So far so good.",
+            name: "Carlton L.",
+            location: "US",
+            rating: 5,
+            date: "Aug 14, 2026",
+          },
+          {
+            title: "So far so good!",
+            text: "I joined in June 2026. At first I was worried cause the ad I saw said $129 a month for tirzepatide but when I signed up they said it was an error and it would be $149 a month forever. And so far it's been great. My dose has increased but my price hasn't. I haven't had any trouble with communication via messaging them. My experience so far has been great, but I am not a social person I appreciate them checking up on me monthly and not annoying me with weekly check ins.",
+            name: "ZC",
+            location: "US",
+            rating: 5,
+            date: "Jun 16, 2026",
+          },
+          {
+            title: "Good experience but a little frustration",
+            text: "I'm on my third month with altRx and while my first two months were very smooth, this third one has been terrible. My refill order has yet to be fulfilled with zero reason as to why. Customer service says they requested to “expedite it” but nothing yet. We shall see. I've been happy otherwise.",
+            name: "jb",
+            location: "US",
+            rating: 4,
+          },
+          {
+            title: "My first time ordering from AltRx",
+            text: "I was looking for a telehealth that utilized the same pharmacy I was already using, and AltRx was one of the ones. Ordering through AltRx was almost a 3rd of the cost I spent the first 3 months through the FSA site. Everything else ran smoothly. I ordered 7/5 and received it today, 7/13. I paid through Afterpay, so they can't renew without my approval.",
+            name: "Kimberly W.",
+            location: "US",
+            rating: 4,
+          },
+          {
+            title: "Fantastic customer service",
+            text: "Fantastic customer service! I had a quick question about tracking my delivery, and their support team responded within an hour with all the details. The product quality is top-notch. Highly recommend",
+            name: "Lenden",
+            location: "US",
+            rating: 4,
+          },
+          {
+            title: "pretty good experience",
+            text: "I've had a pretty good experience with them. The shipping can take a tad bit longer but they respond when I reach out and the process is seamless in my opinion. Currently on level 2 and no issues",
+            name: "B L.",
+            location: "US",
+            rating: 4,
+            date: "Aug 26, 2026",
+          },
+          {
+            title: "So far so good",
+            text: "So far so good. The med arrived promptly in good packaging to keep the med cold. No surprise costs at this time. I'm happy.",
+            name: "Marni G.",
+            location: "US",
+            rating: 4,
+            date: "Aug 13, 2026",
+          },
+          {
+            title: "I spoke to someone at Altrx last week",
+            text: "I spoke to someone at Altrx last week. I told her I wanted a high dose of Triz since I have been on Triz for one year. My order arrived today, a week after ordering. Everything went very smoothly. The only concern was the tiny vial in comparison to other companies I previously ordered from. I just hope it works as it should.",
+            name: "Paula L.",
+            location: "US",
+            rating: 4,
+            date: "Jun 10, 2026",
+          },
+          {
+            title: "I was very skeptical about ordering...",
+            text: "I was very skeptical about ordering with this company but thankfully I was proven wrong for the most part. Once I was approved I received email stating that my prescription had been sent to the pharmacy for compounding. It took about 5 days but I finally received an email that it had been shipped & I received it the next day. Total process took about 8 days total. Paige was great about texting me back if I had questions but customer service never responded back to me. However, I did receive them & I'm happy that everything has worked out so far. Overall experience - very satisfied.",
+            name: "Marlie C.",
+            location: "US",
+            rating: 4,
+            date: "May 12, 2026",
+          },
+      ],
+    },
+  ],
+};
