@@ -2,6 +2,10 @@ import type { ArticleData } from "../config";
 import { MENOPAUSE_COMPLETE_GUIDE } from "./hrt-articles/menopause-complete-guide";
 import { HOW_TO_GET_HRT_ONLINE } from "./hrt-articles/how-to-get-hrt-online";
 import { IS_WINONA_LEGIT, IS_MIDI_LEGIT } from "./hrt-articles/provider-legit";
+import { HRT_BLACK_BOX_WARNING } from "./hrt-articles/hrt-black-box-warning";
+import { ONLINE_HRT_COST } from "./hrt-articles/online-hrt-cost";
+import { PROGESTERONE_GUIDE } from "./hrt-articles/progesterone-guide";
+import { ESTROGEN_PATCH_VS_PILL } from "./hrt-articles/estrogen-patch-vs-pill";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // HRT guides ported from hrtwomen.com on Oct 22, 2026 (its claude branch at
@@ -23,6 +27,12 @@ export const HRT_GUIDES_PORTED: ArticleData[] = [
   HOW_TO_GET_HRT_ONLINE,
   IS_WINONA_LEGIT,
   IS_MIDI_LEGIT,
+  // Oct 25, 2026: hrtwomen.com's newer pieces, rewritten for the hub -
+  // the black-box-warning explainer, the cross-provider cost page, and the
+  // deepened progesterone and patch-vs-pill guides (same slugs as the stubs
+  // they replace below).
+  HRT_BLACK_BOX_WARNING,
+  ONLINE_HRT_COST,
   {
     slug: "perimenopause-symptoms",
     title: "Perimenopause Symptoms: What's Normal and When to Get Help",
@@ -87,7 +97,7 @@ export const HRT_GUIDES_PORTED: ArticleData[] = [
       },
       {
         heading: "What changed: the FDA's 2025-2026 labeling decision",
-        body: `<p>In <strong>November 2025</strong>, the FDA <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fda-requests-labeling-changes-related-safety-information-clarify-benefitrisk-considerations" target="_blank" rel="noopener noreferrer">asked manufacturers</a> to remove the boxed warnings about cardiovascular disease, breast cancer and probable dementia from menopausal hormone therapy products, and to add more age-specific context about starting therapy. On <strong>February 12, 2026</strong> it <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-labeling-changes-menopausal-hormone-therapy-products" target="_blank" rel="noopener noreferrer">approved the first six updated labels</a> - including Prometrium (progesterone), Divigel (estradiol gel) and Estring (vaginal estradiol) - with other products following as their manufacturers' changes are reviewed. The agency pointed to evidence that HRT started within about 10 years of menopause, generally before age 60, has a more favorable balance of benefits and risks.</p><p>That matches the long-term findings of the Women's Health Initiative itself: a <a href="https://doi.org/10.1001/jama.2024.6542" target="_blank" rel="noopener noreferrer">2024 review of the trials in <em>JAMA</em></a> concluded that women who start hormone therapy in early menopause have lower absolute risks than women who start it later.</p><p>Two important caveats: the FDA did <strong>not</strong> remove the boxed warning about <strong>endometrial cancer</strong> for systemic estrogen-alone products (which is why women with a uterus are generally prescribed a progestogen alongside estrogen), and removing a boxed warning does <strong>not</strong> mean the risks disappeared. They remain part of the prescribing information and part of the conversation with your clinician.</p>`,
+        body: `<p>In <strong>November 2025</strong>, the FDA <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fda-requests-labeling-changes-related-safety-information-clarify-benefitrisk-considerations" target="_blank" rel="noopener noreferrer">asked manufacturers</a> to remove the boxed warnings about cardiovascular disease, breast cancer and probable dementia from menopausal hormone therapy products, and to add more age-specific context about starting therapy. On <strong>February 12, 2026</strong> it <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-labeling-changes-menopausal-hormone-therapy-products" target="_blank" rel="noopener noreferrer">approved the first six updated labels</a> - including Prometrium (progesterone), Divigel (estradiol gel) and Estring (vaginal estradiol) - with other products following as their manufacturers' changes are reviewed. The agency pointed to evidence that HRT started within about 10 years of menopause, generally before age 60, has a more favorable balance of benefits and risks.</p><p>That matches the long-term findings of the Women's Health Initiative itself: a <a href="https://doi.org/10.1001/jama.2024.6542" target="_blank" rel="noopener noreferrer">2024 review of the trials in <em>JAMA</em></a> concluded that women who start hormone therapy in early menopause have lower absolute risks than women who start it later.</p><p>Two important caveats: the FDA did <strong>not</strong> remove the boxed warning about <strong>endometrial cancer</strong> for systemic estrogen-alone products (which is why women with a uterus are generally prescribed a progestogen alongside estrogen), and removing a boxed warning does <strong>not</strong> mean the risks disappeared. They remain part of the prescribing information and part of the conversation with your clinician.</p><p>The full story - the 2002 trial behind the box, the July 2025 panel, what the FDA kept and what the societies said - is in our guide to the <a href="/hrt/articles/hrt-black-box-warning-removed">HRT black box warning removal</a>.</p>`,
       },
       {
         heading: "The real risks to understand",
@@ -107,54 +117,7 @@ export const HRT_GUIDES_PORTED: ArticleData[] = [
       },
     ],
   },
-  {
-    slug: "estrogen-patch-vs-pill",
-    title: "Estrogen Patch vs Pill: Which Form of HRT Is Right for You?",
-    description:
-      "Estradiol comes as pills, patches, gels, creams and vaginal products. How the main forms differ in convenience, side effects and clot-risk considerations.",
-    category: "Treatments",
-    readTime: "7 min read",
-    publishedAt: "2026-09-26",
-    updatedAt: "2026-09-27",
-    heroColor: "#FBE9F0",
-    author: "Treatments Hub Research Team",
-    keyTakeaways: [
-      "Estradiol can be taken by mouth (pill), through the skin (patch, gel, spray or cream) or vaginally for local symptoms.",
-      "Oral estrogen passes through the liver first, which is associated with a higher risk of blood clots than transdermal routes.",
-      "Pills are simple and inexpensive; patches avoid daily dosing and first-pass liver metabolism but can irritate skin or fall off.",
-      "Women with a uterus taking systemic estrogen generally also need a progestogen to protect the uterine lining.",
-    ],
-    sections: [
-      {
-        heading: "The main ways to take estrogen",
-        body: `<p>Most modern HRT uses <strong>estradiol</strong>, the same estrogen the ovaries produce. What differs is how it gets into your body:</p><ul><li><strong>Oral (pill)</strong> - swallowed daily.</li><li><strong>Transdermal</strong> - absorbed through the skin via a <strong>patch</strong> (changed once or twice a week), <strong>gel</strong>, <strong>spray</strong> or <strong>cream</strong>.</li><li><strong>Vaginal</strong> - low-dose creams, tablets or rings aimed at local symptoms like dryness and urinary discomfort.</li></ul><p>Pills and transdermal products are "systemic" - they treat whole-body symptoms like hot flashes. Low-dose vaginal products work mainly locally.</p>`,
-      },
-      {
-        heading: "Estrogen pills: pros and cons",
-        body: `<p><strong>Pros:</strong> pills are familiar, easy to take, widely available as generics and usually inexpensive. There's nothing to stick on or rub in.</p><p><strong>Cons:</strong> oral estrogen is processed by the liver first ("first-pass metabolism"). That is associated with changes in clotting factors, and oral estrogen has been linked to a <strong>higher risk of blood clots</strong> and possibly stroke compared with transdermal estrogen. For women with certain risk factors, clinicians often prefer a transdermal route for that reason.</p>`,
-      },
-      {
-        heading: "Estrogen patches: pros and cons",
-        body: `<p><strong>Pros:</strong> patches deliver estradiol steadily through the skin and bypass first-pass liver metabolism, which is why transdermal estrogen is thought to carry a <strong>lower clot risk</strong> than pills. Changing a patch once or twice a week also suits women who forget daily pills.</p><p><strong>Cons:</strong> patches can cause skin irritation, sometimes loosen with heat, sweat or swimming, and can cost more than generic pills. Gels and sprays are alternatives for women who don't get on with patches.</p>`,
-      },
-      {
-        heading: "Creams, gels and vaginal estrogen",
-        body: `<p>Transdermal <strong>gels and creams</strong> offer flexible dosing without a patch. Note that some creams sold online are <strong>compounded</strong> - prepared by a pharmacy rather than manufactured as an FDA-approved product - so it's worth asking your clinician which you are getting and why.</p><p><strong>Vaginal estrogen</strong> is in a category of its own: low-dose and aimed at dryness, pain with sex and urinary symptoms. Because very little is absorbed into the bloodstream, clinicians consider it for some women who aren't candidates for systemic HRT - but that is an individual decision.</p>`,
-      },
-      {
-        heading: "Don't forget progesterone",
-        body: `<p>If you still have a uterus, taking systemic estrogen on its own raises the risk of endometrial (uterine lining) cancer. That's why women with a uterus are generally prescribed a <strong>progestogen</strong> - often micronized progesterone - alongside estrogen. Women who have had a hysterectomy typically don't need it. Your clinician will decide on the right combination and schedule.</p>`,
-      },
-      {
-        heading: "A note on patch availability in 2026",
-        body: `<p>Demand for estradiol patches rose sharply after the FDA's 2025-2026 boxed-warning changes, and some women have had trouble finding their usual brand or strength at the pharmacy. The <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fda-update-estradiol-transdermal-patch-availability" target="_blank" rel="noopener noreferrer">FDA says</a> estradiol patches remain available and that manufacturers have been expanding production, but availability can still vary by pharmacy and brand.</p><p>If your patch is hard to find, don't switch products or doses on your own - ask your clinician or pharmacist. Options can include a different patch brand, a gel or spray, or another route your clinician thinks suits you.</p>`,
-      },
-      {
-        heading: "How to choose - and where to get it",
-        body: `<p>The right form depends on your health history, clot and stroke risk, symptoms, skin and preferences - a clinician should make the call with you. Online providers differ in what they offer: <a href="/hrt/reviews/winona">Winona</a> offers estradiol as pill, patch or cream; <a href="/hrt/reviews/gala">Gala</a> offers pill or patch estradiol; and <a href="/hrt/reviews/midi">Midi Health</a> prescribes through your own pharmacy and insurance. See <a href="/hrt/winona-vs-gala">Winona vs Gala</a> for a closer look.</p><p><em>This article is general information, not medical advice. A licensed clinician should decide which form of HRT, if any, is right for you.</em></p>`,
-      },
-    ],
-  },
+  ESTROGEN_PATCH_VS_PILL,
   {
     slug: "bioidentical-hormones-explained",
     title: "Bioidentical Hormones Explained: FDA-Approved vs Compounded",
@@ -343,54 +306,7 @@ export const HRT_GUIDES_PORTED: ArticleData[] = [
       },
     ],
   },
-  {
-    slug: "progesterone-side-effects",
-    title: "Progesterone for Menopause: Benefits and Side Effects",
-    description:
-      "Why progesterone is prescribed with estrogen, micronized progesterone vs progestins, common progesterone side effects and when to call a clinician.",
-    category: "Treatments",
-    readTime: "7 min read",
-    publishedAt: "2026-09-30",
-    updatedAt: "2026-09-30",
-    heroColor: "#FBE9F0",
-    author: "Treatments Hub Research Team",
-    keyTakeaways: [
-      "If you have a uterus and take systemic estrogen, a progestogen such as progesterone is generally needed to protect the uterine lining.",
-      "Micronized progesterone (for example, Prometrium) is chemically identical to the body's own progesterone; synthetic progestins are related but different molecules.",
-      "Common side effects include drowsiness or dizziness, breast tenderness, bloating, mood changes and spotting - oral progesterone is usually taken at bedtime.",
-      "Prometrium capsules contain peanut oil and should not be used by people allergic to peanuts; serious symptoms need prompt medical attention.",
-    ],
-    sections: [
-      {
-        heading: "Why progesterone is part of HRT",
-        body: `<p>Estrogen is the part of HRT that relieves hot flashes and night sweats. But in a woman who still has a uterus, systemic estrogen taken on its own stimulates the uterine lining (endometrium) to grow, which raises the risk of endometrial hyperplasia and endometrial cancer. Adding a <strong>progestogen</strong> - the umbrella term for progesterone and synthetic progestins - counteracts that effect.</p><p>That is why women with a uterus are generally prescribed combined HRT, while women who have had a hysterectomy usually take estrogen alone. Progesterone's main job in menopausal HRT is <strong>endometrial protection</strong>, not symptom relief.</p>`,
-      },
-      {
-        heading: "Micronized progesterone vs synthetic progestins",
-        body: `<p><strong>Micronized progesterone</strong> is chemically identical to the progesterone the ovaries make; "micronized" refers to the fine particle size that helps it be absorbed when swallowed. The best-known FDA-approved product is <strong>Prometrium</strong>, and generic versions are widely available. <strong>Synthetic progestins</strong> - such as medroxyprogesterone acetate or norethindrone - are related molecules with somewhat different effects, and they're used in some combined pills and patches and in the levonorgestrel IUD.</p><p>Many menopause clinicians favor micronized progesterone for its side-effect profile, but progestins remain valid options, and some women tolerate one better than the other. As with estrogen, "bioidentical" doesn't mean risk-free - see <a href="/hrt/articles/bioidentical-hormones-explained">bioidentical hormones explained</a>.</p>`,
-      },
-      {
-        heading: "Oral vs vaginal, cyclical vs continuous",
-        body: `<p><strong>Oral micronized progesterone</strong> is the standard, FDA-approved form for protecting the uterine lining in menopausal HRT. Some clinicians prescribe <strong>vaginal progesterone</strong> for women who get side effects from the oral form; in the US this is generally an off-label use for endometrial protection, and the evidence is more limited than for oral progesterone, so it's worth asking your clinician why it's being recommended.</p><p>Progesterone can be taken on two main schedules:</p><ul><li><strong>Cyclical (sequential)</strong> - taken for part of each month. The Prometrium label, for example, describes 200 mg at bedtime for 12 days of each 28-day cycle alongside daily estrogen. This usually brings a monthly withdrawal bleed and is common in perimenopause.</li><li><strong>Continuous</strong> - a lower dose every day, usually aiming for no bleeding once things settle. It is more often used after menopause.</li></ul><p>Your clinician will choose the product, dose and schedule based on your bleeding pattern and history - don't change them on your own. If you're still having periods, see <a href="/hrt/articles/hrt-for-perimenopause">HRT for perimenopause</a>.</p>`,
-      },
-      {
-        heading: "Common progesterone side effects",
-        body: `<p>Many women take progesterone without much trouble, but side effects are common, especially in the first few months. The ones most often reported include:</p><ul><li><strong>Drowsiness or dizziness</strong> - which is why oral progesterone is usually taken at bedtime. Be cautious driving or operating machinery until you know how it affects you.</li><li><strong>Breast tenderness</strong>.</li><li><strong>Bloating</strong> and other stomach upset.</li><li><strong>Mood changes</strong> - some women notice low mood, irritability or PMS-like symptoms, particularly on the progestogen days of a cyclical regimen.</li><li><strong>Headache</strong>.</li><li><strong>Spotting or bleeding</strong> - irregular bleeding is common early on, and cyclical regimens usually produce a regular monthly bleed.</li></ul><p>If side effects are bothering you, tell your clinician. Options can include changing the timing, dose, schedule or type of progestogen - but those are decisions to make together.</p>`,
-      },
-      {
-        heading: "Less common and serious warnings",
-        body: `<p>A few important points from the prescribing information:</p><ul><li><strong>Peanut allergy</strong> - Prometrium capsules contain peanut oil and should not be used by anyone allergic to peanuts. Tell your clinician about any food allergies, and ask whether a generic you're given has the same ingredients.</li><li><strong>Severe dizziness or drowsiness</strong> - during early treatment some women have had extreme dizziness or drowsiness, along with symptoms like blurred vision, slurred speech or difficulty walking. These need medical attention.</li><li><strong>Contraindications</strong> - progesterone is generally not used in women with unexplained vaginal bleeding, known or suspected breast cancer, active or past blood clots or stroke, or significant liver disease, among others.</li></ul><p>On <strong>February 12, 2026</strong>, the FDA approved updated labeling for Prometrium as one of the first six menopausal hormone therapy products to drop the boxed warning about cardiovascular disease, breast cancer and probable dementia. That reflects newer evidence about timing and age - it does <strong>not</strong> mean those risks disappeared. They remain in the prescribing information, and combined estrogen-plus-progestogen therapy is still associated with a small increase in breast-cancer risk with longer use. Read more in <a href="/hrt/articles/is-hrt-safe">is HRT safe?</a></p>`,
-      },
-      {
-        heading: "When to call a clinician",
-        body: `<p><strong>Seek emergency care</strong> for possible signs of a blood clot, stroke or heart attack: chest pain, sudden shortness of breath, pain or swelling in one leg, a sudden severe headache, sudden vision changes, or weakness, numbness or trouble speaking. Also get urgent help for signs of a serious allergic reaction.</p><p><strong>Contact your clinician soon</strong> if you notice a new breast lump, yellowing of your skin or eyes, heavy or persistent bleeding (or any bleeding after you had stopped bleeding for 12 months), significant mood changes or depression, or side effects that don't settle after the first few months.</p>`,
-      },
-      {
-        heading: "Getting progesterone through an online provider",
-        body: `<p>If you take estrogen and have a uterus, any legitimate HRT provider should include a progestogen in your plan. <a href="/hrt/reviews/winona">Winona</a> prescribes progesterone alongside its estradiol options, <a href="/hrt/reviews/gala">Gala</a> offers oral or vaginal progesterone with estradiol, and <a href="/hrt/reviews/midi">Midi Health</a> sends prescriptions to your own pharmacy. See how they compare in <a href="/hrt/winona-vs-gala">Winona vs Gala</a>, <a href="/hrt/gala-vs-midi">Gala vs Midi Health</a>, or our guide to <a href="/hrt/articles/what-is-hrt">what HRT is</a>.</p><p><em>This article is general information, not medical advice. A licensed clinician should decide which progestogen, dose and schedule, if any, is right for you.</em></p>`,
-      },
-    ],
-  },
+  PROGESTERONE_GUIDE,
   // ═════ Brand clusters (is-X-legit / X-cost / X-products) ═════
   // Same house rules as the sister site's brand-cluster pieces: every price,
   // fact and quote is real (provider pages as surfaced in search, Midi's own
@@ -417,7 +333,7 @@ export const HRT_GUIDES_PORTED: ArticleData[] = [
     sections: [
       {
         heading: "What Gala charges for menopause HRT",
-        body: `<div class="qa"><strong>The short answer</strong>Gala advertises its hormone therapy plan <strong>from about $79 a month</strong>, paid in cash with no insurance involved. Third-party reviews that walked through the checkout report a lower entry point for pills (<strong>from $69 a month, billed $207 every 12 weeks</strong>) and a higher one for patches (<strong>from $99 a month, billed $297 every 12 weeks</strong>). The fee covers the clinician, ongoing check-ins and dose adjustments, the medication and shipping. Prices move with promotions, so the number on Gala's checkout is the one that counts.</div><p>We have seen Gala's starting price quoted as both $69 and $79 in different places, and the explanation is most likely the route: the cheaper figure is for estradiol pills and the advertised "from $79" is the headline. Gala's HRT sits on the same site as its GLP-1 weight-loss program (galaglp1.com/hormone-health), and those GLP-1 prices ($149 and up) are a separate product. If a page quotes you three figures, check that you are reading the hormone health plan.</p>`,
+        body: `<div class="qa"><strong>The short answer</strong>Gala advertises its hormone therapy plan <strong>from about $79 a month</strong>, paid in cash with no insurance involved. Third-party reviews that walked through the checkout report a lower entry point for pills (<strong>from $69 a month, billed $207 every 12 weeks</strong>) and a higher one for patches (<strong>from $99 a month, billed $297 every 12 weeks</strong>). The fee covers the clinician, ongoing check-ins and dose adjustments, the medication and shipping. Prices move with promotions, so the number on Gala's checkout is the one that counts.</div><table><tr><th>Gala HRT plan</th><th>Per month</th><th>Billing</th><th>First year</th></tr><tr><td>Flat price on Gala's hormone-therapy page (our Oct 8, 2026 capture)</td><td>$69</td><td>Monthly</td><td>About $828</td></tr><tr><td>Advertised "from" headline</td><td>$79</td><td>Monthly</td><td>About $948</td></tr><tr><td>Estradiol pill plan (third-party reports)</td><td>From $69</td><td>$207 every 12 weeks</td><td>About $828-$897</td></tr><tr><td>Estradiol patch plan (third-party reports)</td><td>From $99</td><td>$297 every 12 weeks</td><td>About $1,188-$1,287</td></tr><tr><td>What every plan includes</td><td colspan="3">US-licensed clinician, messaging, check-ins, dose adjustments, medication (estradiol, progesterone, vaginal estradiol as prescribed) and free 1-2 day shipping. No insurance billing; FSA/HSA accepted.</td></tr></table><p>Compare every provider's prices in one place in <a href="/hrt/articles/online-hrt-cost">how much HRT costs online</a>.</p><p>We have seen Gala's starting price quoted as both $69 and $79 in different places, and the explanation is most likely the route: the cheaper figure is for estradiol pills and the advertised "from $79" is the headline. Gala's HRT sits on the same site as its GLP-1 weight-loss program (galaglp1.com/hormone-health), and those GLP-1 prices ($149 and up) are a separate product. If a page quotes you three figures, check that you are reading the hormone health plan.</p>`,
       },
       {
         heading: "What the monthly fee covers, and what to ask about",
@@ -504,7 +420,7 @@ export const HRT_GUIDES_PORTED: ArticleData[] = [
     sections: [
       {
         heading: "Winona's prices, treatment by treatment",
-        body: `<div class="qa"><strong>The short answer</strong>Winona is self-pay and priced per treatment. At listed starting prices, <strong>progesterone capsules are about $39/month</strong>, <strong>estradiol tablets about $54</strong>, the <strong>estrogen body cream about $89</strong> (also about $89 in the version with progesterone), <strong>vaginal estrogen cream about $89</strong> and the <strong>estrogen patch about $149</strong>. Every subscription includes the physician's review, unlimited messaging and follow-ups, and free shipping. Winona does not take insurance, but HSA and FSA cards work.</div><table><tr><th>Treatment</th><th>Listed from</th><th>Per year at that price</th></tr><tr><td>Progesterone capsules</td><td>$39/mo</td><td>$468</td></tr><tr><td>Estradiol tablets</td><td>$54/mo</td><td>$648</td></tr><tr><td>Estrogen body cream</td><td>$89/mo</td><td>$1,068</td></tr><tr><td>Estrogen body cream with progesterone</td><td>$89/mo</td><td>$1,068</td></tr><tr><td>Vaginal estrogen cream</td><td>$89/mo</td><td>$1,068</td></tr><tr><td>Estrogen patch</td><td>$149/mo</td><td>$1,788</td></tr><tr><td>Blossom arousal cream (non-HRT)</td><td>$79 per order</td><td>-</td></tr></table><p>The $39 and $89 figures match what we have tracked since launch; the $54, $149 and $79 figures come from Winona's product pages as shown in search results and from third-party reviews, because Winona's site could not be loaded directly. "From" means the lowest dose or plan, so a higher dose can cost more, and promotions change. Your checkout is the final word.</p>`,
+        body: `<div class="qa"><strong>The short answer</strong>Winona is self-pay and priced per treatment. At listed starting prices, <strong>progesterone capsules are about $39/month</strong>, <strong>estradiol tablets about $54</strong>, the <strong>estrogen body cream about $89</strong> (also about $89 in the version with progesterone), <strong>vaginal estrogen cream about $89</strong> and the <strong>estrogen patch about $149</strong>. Every subscription includes the physician's review, unlimited messaging and follow-ups, and free shipping. Winona does not take insurance, but HSA and FSA cards work.</div><table><tr><th>Treatment</th><th>Listed from</th><th>Per year at that price</th></tr><tr><td>Progesterone capsules</td><td>$39/mo</td><td>$468</td></tr><tr><td>Estradiol tablets</td><td>$54/mo</td><td>$648</td></tr><tr><td>Estrogen body cream</td><td>$89/mo</td><td>$1,068</td></tr><tr><td>Estrogen body cream with progesterone</td><td>$89/mo</td><td>$1,068</td></tr><tr><td>Vaginal estrogen cream</td><td>$89/mo</td><td>$1,068</td></tr><tr><td>Estrogen patch</td><td>$149/mo</td><td>$1,788</td></tr><tr><td>Blossom arousal cream (non-HRT)</td><td>$79 per order</td><td>-</td></tr></table><p>The $39 and $89 figures match what we have tracked since launch; the $54, $149 and $79 figures come from Winona's product pages as shown in search results and from third-party reviews, because Winona's site could not be loaded directly. "From" means the lowest dose or plan, so a higher dose can cost more, and promotions change. Your checkout is the final word.</p><p>Compare every provider's prices in one place in <a href="/hrt/articles/online-hrt-cost">how much HRT costs online</a>.</p>`,
       },
       {
         heading: "What a typical Winona plan costs per month",
@@ -588,7 +504,7 @@ export const HRT_GUIDES_PORTED: ArticleData[] = [
     sections: [
       {
         heading: "What Midi Health costs, in one paragraph",
-        body: `<div class="qa"><strong>The short answer</strong>Midi is a per-visit clinic, not a subscription. With <strong>in-network insurance</strong> (most PPO plans) you pay your usual specialist copay, coinsurance or deductible; Midi says patients pay <strong>about $50 per visit on average</strong>. <strong>Without insurance</strong> the first visit is <strong>$250</strong> and follow-ups are <strong>$150</strong>. Medication goes to your own pharmacy and is paid through your drug coverage or at the pharmacy's cash price. Midi does <strong>not bill Medicare</strong>.</div><p>That makes Midi's cost harder to predict than a flat subscription and, for many insured women, lower. The rest of this guide shows where the money goes and when the math favors Midi over a cash-pay service.</p>`,
+        body: `<div class="qa"><strong>The short answer</strong>Midi is a per-visit clinic, not a subscription. With <strong>in-network insurance</strong> (most PPO plans) you pay your usual specialist copay, coinsurance or deductible; Midi says patients pay <strong>about $50 per visit on average</strong>. <strong>Without insurance</strong> the first visit is <strong>$250</strong> and follow-ups are <strong>$150</strong>. Medication goes to your own pharmacy and is paid through your drug coverage or at the pharmacy's cash price. Midi does <strong>not bill Medicare</strong>.</div><p>That makes Midi's cost harder to predict than a flat subscription and, for many insured women, lower. The rest of this guide shows where the money goes and when the math favors Midi over a cash-pay service.</p><p>Compare every provider's prices in one place in <a href="/hrt/articles/online-hrt-cost">how much HRT costs online</a>.</p>`,
       },
       {
         heading: "The insurance path: what you actually pay",

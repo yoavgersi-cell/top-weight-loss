@@ -166,7 +166,18 @@ export default async function BattlePage({
           ) : battleSlug === "trt" ? (
             <TrtEditorialContent />
           ) : battleSlug === "hrt" ? (
-            <HrtEditorialContent />
+            <HrtEditorialContent
+              midSlot={
+                <ProductCarousel
+                  providers={vConfig.providers}
+                  vertical="hrt"
+                  title="Shop HRT treatments from top online providers"
+                  subtitle="Real HRT products and published prices from the online menopause providers we rank - what each price includes, under every card."
+                  withSchema
+                  pageUrl={canonicalUrl(ctx, "/")}
+                />
+              }
+            />
           ) : battleSlug === "hearing-aids" ? (
             <HearingAidsEditorialContent />
           ) : battleSlug === "online-therapy" ? (

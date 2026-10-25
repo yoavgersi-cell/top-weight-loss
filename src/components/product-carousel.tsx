@@ -1,5 +1,10 @@
-import { Truck } from "lucide-react";
-import { PRODUCT_CATALOG, productPriceValue, type CatalogProduct } from "@/lib/product-catalog";
+import { Truck, ShieldCheck, FlaskConical } from "lucide-react";
+import {
+  PRODUCT_CATALOG,
+  HRT_PRODUCT_PRICES_AS_OF,
+  productPriceValue,
+  type CatalogProduct,
+} from "@/lib/product-catalog";
 import { ProviderCta } from "@/components/provider-cta";
 import type { Provider } from "@/lib/config";
 import { AFFILIATE_PROVIDER_IDS } from "@/lib/config";
@@ -18,7 +23,10 @@ const MEDICATION_CHIP: Record<string, { label: string; className: string }> = {
   tirzepatide: { label: "Tirzepatide", className: "bg-violet-50 text-violet-700 ring-violet-200" },
 };
 
-function chipFor(product: CatalogProduct): { label: string; className: string } {
+function chipFor(product: CatalogProduct): { label: string; className: string } | undefined {
+  // HRT cards (Oct 2026): the chip names the form - patch, body cream,
+  // pill or patch - because the medication is the same across most cards.
+  if (product.form) return { label: product.form, className: "bg-rose-50 text-rose-700 ring-rose-200" };
   if (product.format === "drops")
     return { label: `${product.medication === "semaglutide" ? "Sema" : "Tirz"} drops`, className: "bg-teal-50 text-teal-700 ring-teal-200" };
   if (product.format === "tablet")
@@ -26,6 +34,26 @@ function chipFor(product: CatalogProduct): { label: string; className: string } 
   if (/^brand-name/i.test(product.name))
     return { label: "Brand-name", className: "bg-amber-50 text-amber-700 ring-amber-200" };
   return MEDICATION_CHIP[product.medication];
+}
+
+// Verified regulatory status on HRT cards. Only rendered when the catalog
+// entry sets fdaStatus from the provider's own copy; unresolved = no badge.
+function FdaBadge({ status }: { status: CatalogProduct["fdaStatus"] }) {
+  if (status === "fda-approved")
+    return (
+      <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[10.5px] font-bold text-emerald-800 ring-1 ring-emerald-200">
+        <ShieldCheck className="h-3 w-3" strokeWidth={2.5} />
+        FDA-approved
+      </span>
+    );
+  if (status === "compounded")
+    return (
+      <span className="inline-flex items-center gap-1 rounded-full bg-amber-50 px-2 py-0.5 text-[10.5px] font-bold text-amber-800 ring-1 ring-amber-200">
+        <FlaskConical className="h-3 w-3" strokeWidth={2.5} />
+        Compounded
+      </span>
+    );
+  return null;
 }
 
 function ProductCard({
@@ -80,11 +108,22 @@ function ProductCard({
           <p className="text-[13px] font-semibold leading-snug text-[#0C4B75] line-clamp-2">
             {product.name}
           </p>
+          {product.fdaStatus && (
+            <div className="mt-1.5">
+              <FdaBadge status={product.fdaStatus} />
+            </div>
+          )}
+          {product.description && (
+            <p className="mt-1.5 text-[11.5px] leading-snug text-gray-600 line-clamp-3">{product.description}</p>
+          )}
           <div className="mt-2 flex items-baseline gap-1.5">
+            {product.pricePrefix && (
+              <span className="text-[11px] font-semibold text-gray-500">{product.pricePrefix}</span>
+            )}
             <span className="text-[17px] font-extrabold tracking-tight text-[#191919] [font-variant-numeric:tabular-nums]">
               {product.price}
             </span>
-            <span className="text-[11px] font-semibold text-gray-400">/mo</span>
+            <span className="text-[11px] font-semibold text-gray-400">{product.priceUnit ?? "/mo"}</span>
             {product.regularPrice && (
               <span className="text-[12px] font-medium text-gray-400 line-through [font-variant-numeric:tabular-nums]">
                 {product.regularPrice}
@@ -125,8 +164,11 @@ export function ProductCarousel({
   pageType = "listing",
   withSchema = false,
   pageUrl,
+  vertical = "weight-loss",
 }: {
   providers: Provider[];
+  /** Which shelf to draw from: the GLP-1 catalog (default) or the HRT shelf. */
+  vertical?: "weight-loss" | "hrt";
   title?: string;
   subtitle?: string;
   /** These providers' products sort first (e.g. a battle's two contenders). */
@@ -150,7 +192,10 @@ export function ProductCarousel({
   const highlight = new Set(highlightProviderIds);
 
   let items = PRODUCT_CATALOG.filter(
-    (p) => byId.has(p.providerId) && AFFILIATE_PROVIDER_IDS.includes(p.providerId)
+    (p) =>
+      (p.vertical ?? "weight-loss") === vertical &&
+      byId.has(p.providerId) &&
+      AFFILIATE_PROVIDER_IDS.includes(p.providerId)
   );
   if (onlyProviderIds) items = items.filter((p) => onlyProviderIds.includes(p.providerId));
   if (onlyMedication) items = items.filter((p) => p.medication === onlyMedication);
@@ -198,8 +243,14 @@ export function ProductCarousel({
             const tpCount = provider.trustpilotReviewCount
               ? parseInt(provider.trustpilotReviewCount.replace(/,/g, ""), 10)
               : NaN;
+            // HRT shelf: no rating markup. Gala's Trustpilot profile covers its
+            // whole platform (mostly GLP-1 customers), so re-publishing it as
+            // a rating on an HRT product would misdescribe the product.
             const hasAggregate =
-              !!provider.trustpilotRating && Number.isFinite(tpCount) && tpCount > 0;
+              vertical === "weight-loss" &&
+              !!provider.trustpilotRating &&
+              Number.isFinite(tpCount) &&
+              tpCount > 0;
             const firstReview = provider.trustpilotReviews?.[0];
             // "included" (SHED's "home delivery included") means no shipping
             // charge, same as free - both earn the $0 shippingRate.
@@ -210,7 +261,7 @@ export function ProductCarousel({
               item: {
                 "@type": "Product",
                 name: `${provider.name} ${p.name}`,
-                description: `${p.name} from ${provider.name} - $${productPriceValue(p)}/month (${p.priceNote}). ${p.shipping}.`,
+                description: `${p.description ?? `${p.name} from ${provider.name}`} - ${p.pricePrefix ? `${p.pricePrefix.toLowerCase()} ` : ""}$${productPriceValue(p)}/month (${p.priceNote}). ${p.shipping}.`,
                 ...(p.image ? { image: `https://www.treatmentshub.com${p.image}` } : {}),
                 brand: { "@type": "Brand", name: provider.name },
                 ...(hasAggregate && {
@@ -288,6 +339,12 @@ export function ProductCarousel({
           ))}
         </div>
       </div>
+      {vertical === "hrt" && (
+        <p className="mt-2 text-[11.5px] leading-snug text-gray-400">
+          Prescription required: a licensed clinician reviews your health history first. Prices as published in{" "}
+          {HRT_PRODUCT_PRICES_AS_OF}; confirm at checkout.
+        </p>
+      )}
     </div>
   );
 }

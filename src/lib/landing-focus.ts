@@ -14,7 +14,9 @@ import { TRIO_FACTS } from "@/lib/three-way";
 // a provider with no verified figure for the page's subject gets no line, and
 // on a molecule page it is left out.
 
-type Medication = CatalogProduct["medication"];
+// GLP-1 molecules only: the landing pages read the weight-loss catalog, never
+// the HRT shelf (estradiol/progesterone entries) that shares the type.
+type Medication = Extract<CatalogProduct["medication"], "semaglutide" | "tirzepatide">;
 
 type Focus = {
   medication?: Medication;

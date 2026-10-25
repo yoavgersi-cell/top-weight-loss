@@ -8,12 +8,24 @@
 export type CatalogProduct = {
   id: string;
   providerId: string;
+  /** Which vertical's pages show the product. Defaults to weight-loss. */
+  vertical?: "weight-loss" | "hrt";
   /** Shopping-card product title, e.g. "Compounded Semaglutide Injection". */
   name: string;
-  medication: "semaglutide" | "tirzepatide";
-  format: "injection" | "drops" | "tablet";
+  medication: "semaglutide" | "tirzepatide" | "estradiol" | "progesterone" | "estrogen-progesterone";
+  format: "injection" | "drops" | "tablet" | "patch" | "cream" | "capsule" | "pill-or-patch" | "vaginal";
+  /** Short form label for the image chip on HRT cards, e.g. "Patch", "Body cream". */
+  form?: string;
+  /** Verified regulatory status; set only when confirmed from the provider's own copy. */
+  fdaStatus?: "fda-approved" | "compounded";
+  /** One factual sentence (HRT cards): what it is and what it is used for. */
+  description?: string;
   /** Headline monthly price, digits only after $ (used for sorting + schema). */
   price: string;
+  /** Shown before the price, e.g. "From" for a starting price. */
+  pricePrefix?: string;
+  /** Shown after the price; defaults to "/mo". */
+  priceUnit?: string;
   /** Struck-through regular price when the headline is promotional. */
   regularPrice?: string;
   /** Short sale-end label, e.g. "Sep 20". Shows a "Sale ends" badge when set. */
@@ -400,7 +412,121 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     shipping: "Ships within 2 days",
     image: "/products/sprout-wegovy.webp",
   },
+
+  // ═════ HRT (treatmentshub.com/hrt) ═════
+  // Oct 25, 2026: the HRT product shelf, the idea ported from hrtwomen.com's
+  // carousel with the hub's own verified figures. Images are crops of the
+  // providers' product creatives supplied by the operator. Honesty rules:
+  //  - fdaStatus only where the provider's own copy confirms it (Winona:
+  //    tablets, patch and progesterone capsules FDA-approved; body creams
+  //    compounded). Gala's approved-vs-compounded status is unresolved, so
+  //    its entries carry no badge.
+  //  - Prices match src/lib/seeds/hrt.ts: Winona per-product list ($89
+  //    creams, $149 patch); Gala's hormone-therapy page showed a flat $69 a
+  //    month on the operator's Oct 8, 2026 screenshots ("from $69" on its
+  //    main site), covering every product in the plan. Gala has also been
+  //    quoted "from $79" elsewhere - the Gala cost guide explains the spread.
+  //  - No marketing adjectives in names or descriptions; plain product facts.
+  {
+    id: "winona-estrogen-progesterone-cream",
+    providerId: "winona",
+    vertical: "hrt",
+    name: "Estrogen + Progesterone Body Cream",
+    medication: "estrogen-progesterone",
+    format: "cream",
+    form: "Body cream",
+    fdaStatus: "compounded",
+    description:
+      "A compounded body cream combining estrogen and progesterone, applied to the skin for whole-body menopause symptoms.",
+    price: "$89",
+    priceNote: "Monthly subscription; physician review, messaging and shipping included",
+    shipping: "Free shipping",
+    image: "/products/winona-estrogen-progesterone-cream.webp",
+  },
+  {
+    id: "winona-estrogen-cream",
+    providerId: "winona",
+    vertical: "hrt",
+    name: "Estrogen Body Cream",
+    medication: "estradiol",
+    format: "cream",
+    form: "Body cream",
+    fdaStatus: "compounded",
+    description:
+      "A compounded estrogen body cream applied to the skin for hot flashes, night sweats and other whole-body symptoms.",
+    price: "$89",
+    priceNote: "Monthly subscription; physician review, messaging and shipping included",
+    shipping: "Free shipping",
+    image: "/products/winona-estrogen-cream.webp",
+  },
+  {
+    id: "winona-estrogen-patch",
+    providerId: "winona",
+    vertical: "hrt",
+    name: "Estrogen Patch",
+    medication: "estradiol",
+    format: "patch",
+    form: "Patch",
+    fdaStatus: "fda-approved",
+    description:
+      "An FDA-approved estradiol skin patch that delivers a steady dose of estrogen through the skin for hot flashes and night sweats.",
+    price: "$149",
+    priceNote: "Monthly subscription; physician review, messaging and shipping included",
+    shipping: "Free shipping",
+    image: "/products/winona-estrogen-patch.webp",
+  },
+  {
+    id: "gala-estradiol",
+    providerId: "gala",
+    vertical: "hrt",
+    name: "Estradiol (Pill or Patch)",
+    medication: "estradiol",
+    format: "pill-or-patch",
+    form: "Pill or patch",
+    description:
+      "Estradiol, the main estrogen the ovaries stop making, as a daily pill or a skin patch for hot flashes, sleep and mood symptoms.",
+    price: "$69",
+    pricePrefix: "From",
+    priceNote: "One flat plan; clinician, check-ins, medication and 1-2 day shipping included",
+    shipping: "Free 1-2 day shipping",
+    image: "/products/gala-estradiol.webp",
+  },
+  {
+    id: "gala-progesterone",
+    providerId: "gala",
+    vertical: "hrt",
+    name: "Progesterone",
+    medication: "progesterone",
+    format: "capsule",
+    form: "Oral or vaginal",
+    description:
+      "Progesterone that protects the uterine lining when you take estrogen and still have a uterus; oral or vaginal as prescribed.",
+    price: "$69",
+    pricePrefix: "From",
+    priceNote: "Covered by the same flat plan; not billed separately",
+    shipping: "Free 1-2 day shipping",
+    image: "/products/gala-progesterone.webp",
+  },
+  {
+    id: "gala-vaginal-estradiol",
+    providerId: "gala",
+    vertical: "hrt",
+    name: "Vaginal Estradiol",
+    medication: "estradiol",
+    format: "vaginal",
+    form: "Local treatment",
+    description:
+      "Low-dose vaginal estradiol that treats vaginal dryness and urinary symptoms locally rather than whole-body symptoms.",
+    price: "$69",
+    pricePrefix: "From",
+    priceNote: "Covered by the same flat plan; not billed separately",
+    shipping: "Free 1-2 day shipping",
+    image: "/products/gala-vaginal-estradiol.webp",
+  },
 ];
+
+/** Month the HRT shelf's prices were last checked against hrt.ts. */
+export const HRT_PRODUCT_PRICES_AS_OF = "October 2026";
 
 /** Numeric value for sorting ("from $179" → 179). */
 export function productPriceValue(p: CatalogProduct): number {
