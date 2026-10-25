@@ -47,7 +47,7 @@ import { catalogPriceSnippet } from "@/lib/product-catalog";
 // has no public review record yet. Weight-loss vertical only.
 const REVIEW_COMPLAINTS: Record<string, { intro: string; themes: { label: string; detail: string }[]; outro: string }> = {
   embody: {
-    intro: "Of the 97 Trustpilot reviews transcribed on this page, 15 rate embody three stars or lower, 11 of them from the newest page we captured on October 25, 2026. They are specific, and they cluster around five things:",
+    intro: "Of the 96 Trustpilot reviews transcribed on this page, 15 rate embody three stars or lower, 11 of them from the newest page we captured on October 25, 2026. They are specific, and they cluster around five things:",
     themes: [
       { label: "Orders that ship late or not at all", detail: "The most common complaint in the October page: a three-month order still not received after a month, a refill the pharmacy had held since mid-October while the reviewer ran out, and a shipment sent to an old address after the new one was on file. Earlier reviews describe a first dose quoted at 3-5 days arriving in 8." },
       { label: "Refunds under the no-refund policy", detail: "Three October reviewers who say they received no medication were refused refunds; one disputes a payment the company says it never received." },
@@ -55,7 +55,7 @@ const REVIEW_COMPLAINTS: Record<string, { intro: string; themes: { label: string
       { label: "Reaching a person", detail: "Chat and AI support that loops without an answer, unreturned calls, and appointments booked a week out; several 5-star reviews describe the same chat frustration ending well once a nurse called." },
       { label: "Video appointments and billing follow-through", detail: "From the earlier captures: a doctor not appearing for three scheduled visits, and a charge for something never received that support answered without checking the account." },
     ],
-    outro: "Set against the record, the complaints are a minority: 80 of the 97 reviews rate embody 4 or 5 stars, and the praise is consistent about the nurses and providers, fast appointments and the flat price. The pattern in the complaints is operational - fulfilment, dose changes and reaching a human when something goes wrong - which matters most if you are switching mid-course or starting at a time-sensitive moment. The full set of reviews, newest first, is below.",
+    outro: "Set against the record, the complaints are a minority: 79 of the 96 reviews rate embody 4 or 5 stars, and the praise is consistent about the nurses and providers, fast appointments and the flat price. The pattern in the complaints is operational - fulfilment, dose changes and reaching a human when something goes wrong - which matters most if you are switching mid-course or starting at a time-sensitive moment. The full set of reviews, newest first, is below.",
   },
   wellmedr: {
     intro: "Of the 90 Trustpilot reviews transcribed on this page, 11 rate welludr three stars or lower, six of them one star. The themes:",
