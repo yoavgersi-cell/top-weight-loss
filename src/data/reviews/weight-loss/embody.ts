@@ -22,7 +22,7 @@ export const EMBODY_REVIEWS: ProviderReviewRecord = {
     {
       capturedOn: "2026-10-25",
       method: "operator text copy",
-      note: "Oct 25, 2026 batch: the operator's text copy of the profile's newest reviews page (56 reviews: 43 5-star, 2 4-star, 2 3-star, 2 2-star, 7 1-star), transcribed verbatim, typos included, every low-star review kept. Trustpilot showed relative times (\"9 hours ago\", \"A day ago\", \"2 days ago\"), so dates are derived from the Oct 25 capture: hours-ago entries as Oct 25 (those 14-21 hours old may have been posted late on Oct 24), day-ago entries as Oct 24, two-days-ago entries as Oct 23. \"Invited\" and \"Verified\" tags were present on most 4- and 5-star entries and absent on the 1-star ones. Five reviews had a title only. The profile header read: Claimed profile Feb 2026, Paid Trustpilot subscription, Weight Loss Service, 3.8 across 10,689 reviews.",
+      note: "Oct 25, 2026 batch: the operator's text copy of the profile's newest reviews page (55 reviews stored: 42 5-star, 2 4-star, 2 3-star, 2 2-star, 7 1-star), transcribed verbatim, typos included, every low-star review kept. Trustpilot showed relative times (\"9 hours ago\", \"A day ago\", \"2 days ago\"), so dates are derived from the Oct 25 capture: hours-ago entries as Oct 25 (those 14-21 hours old may have been posted late on Oct 24), day-ago entries as Oct 24, two-days-ago entries as Oct 23. \"Invited\" and \"Verified\" tags were present on most 4- and 5-star entries and absent on the 1-star ones. Five reviews had a title only. One 5-star review from this page was deliberately omitted because its text is about a different provider we rank rather than about embody. The profile header read: Claimed profile Feb 2026, Paid Trustpilot subscription, Weight Loss Service, 3.8 across 10,689 reviews.",
       reviews: [
         {
           title: "Easy communication",
@@ -316,14 +316,6 @@ export const EMBODY_REVIEWS: ProviderReviewRecord = {
           title: "They were very helpful with a portal…",
           text: "They were very helpful with a portal problem. The meds work great. Down 20 pounds in the first month. Meds are prompt in arriving.",
           name: "Claire F.",
-          location: "US",
-          rating: 5,
-          date: "Oct 25, 2026",
-        },
-        {
-          title: "Embody cares about the customer experience",
-          text: "I changed to Embody after a horrible experience with Trim Rx where non one responded to calls or messages and I went 2 wks with no medication. Total different experience with embody. I had questions about my dose and shipment that was not answered through AI rep so I was transferred to an actual person who was very helpful and pleasant and because she wasn’t able to fully answer my questions she arranged for a nurse call. After speaking with the nurse, all my questions were answered, and I am extremely satisfied with the services here.",
-          name: "Anonymous",
           location: "US",
           rating: 5,
           date: "Oct 25, 2026",
