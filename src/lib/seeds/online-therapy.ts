@@ -819,7 +819,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "The honest bottom line",
-        body: 'Money should narrow your options, not close them. In order: check your EAP and employer benefits, run the insurance eligibility checks at <a href="/online-therapy/reviews/talkspace">Talkspace</a> and <a href="/online-therapy/reviews/talkiatry">Talkiatry</a>, look at community and training clinics locally, ask about sliding scales, and use BetterHelp\'s financial-aid questionnaire if you go the subscription route. Our <a href="/online-therapy">online therapy ranking</a> covers the platforms honestly. And the one option that\'s always free, always open: 988, call or text, US - use it any time things feel unmanageable.',
+        body: 'Money should narrow your options, not close them. In order: check your EAP and employer benefits, run the insurance eligibility checks at <a href="/online-therapy/reviews/talkspace">Talkspace</a> and <a href="/online-therapy/reviews/talkiatry">Talkiatry</a>, look at community and training clinics locally, ask about sliding scales, and use BetterHelp\'s financial-aid questionnaire if you go the subscription route. Our <a href="/online-therapy">online therapy ranking</a> covers the platforms honestly. And the one option that\'s always free, always open: 988, call or text, US - use it any time things feel unmanageable.<p>For what the paid platforms charge, with and without insurance, see <a href="/online-therapy/articles/online-therapy-cost">how much online therapy costs</a>.</p>',
       },
     ],
   },
@@ -1027,7 +1027,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "The bottom line",
-        body: 'Get your two real numbers before deciding: the insurance coverage check at signup (minutes, and the ~$23/session cited copay beats most alternatives if you\'re covered), and the financial-aid-adjusted self-pay quote if you\'re not. Then compare against your plan\'s covered options. Full platform verdict in our <a href="/online-therapy/reviews/betterhelp">BetterHelp review</a>. In crisis, cost math is the wrong tool: call or text 988 (US), free and open 24/7.',
+        body: 'Get your two real numbers before deciding: the insurance coverage check at signup (minutes, and the ~$23/session cited copay beats most alternatives if you\'re covered), and the financial-aid-adjusted self-pay quote if you\'re not. Then compare against your plan\'s covered options. Full platform verdict in our <a href="/online-therapy/reviews/betterhelp">BetterHelp review</a>. In crisis, cost math is the wrong tool: call or text 988 (US), free and open 24/7.<p>To see BetterHelp\'s price next to every other platform we cover, read <a href="/online-therapy/articles/online-therapy-cost">how much online therapy costs</a>.</p>',
       },
     ],
   },

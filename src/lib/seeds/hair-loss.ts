@@ -1957,7 +1957,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "Is it right for you?",
-        body: `Finasteride is generally used by men and isn't recommended for most women, especially during pregnancy. A licensed clinician can confirm whether it fits your situation and monitor you over time. This article is general information, not medical advice.`,
+        body: `Finasteride is generally used by men and isn't recommended for most women, especially during pregnancy. A licensed clinician can confirm whether it fits your situation and monitor you over time. This article is general information, not medical advice.<p>New to the condition itself? Start with <a href="/hair-loss/articles/male-pattern-baldness-explained">male pattern baldness explained</a>.</p>`,
       },
     ],
   },
@@ -2367,7 +2367,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "Does this mean I have too much testosterone?",
-        body: `No - and this is the myth worth killing. Men with pattern hair loss do not generally have abnormally high testosterone or DHT; they have follicles that are genetically <em>sensitive</em> to normal DHT levels. That distinction matters because it means the goal is not to tank your hormones but to reduce DHT's effect at the scalp. It is also why lowering DHT for hair does not have to mean gutting your testosterone - a fear addressed head-on in <a href="/hair-loss/articles/does-finasteride-lower-testosterone">does finasteride lower testosterone</a>. To act on any of this, a clinician evaluation is the start; our <a href="/hair-loss">provider comparison</a> maps the options. This article is general information, not medical advice.`,
+        body: `No - and this is the myth worth killing. Men with pattern hair loss do not generally have abnormally high testosterone or DHT; they have follicles that are genetically <em>sensitive</em> to normal DHT levels. That distinction matters because it means the goal is not to tank your hormones but to reduce DHT's effect at the scalp. It is also why lowering DHT for hair does not have to mean gutting your testosterone - a fear addressed head-on in <a href="/hair-loss/articles/does-finasteride-lower-testosterone">does finasteride lower testosterone</a>. To act on any of this, a clinician evaluation is the start; our <a href="/hair-loss">provider comparison</a> maps the options. This article is general information, not medical advice.<p>For how DHT sensitivity turns into the receding hairline and crown thinning most men recognize, read <a href="/hair-loss/articles/male-pattern-baldness-explained">male pattern baldness explained</a>.</p>`,
       },
     ],
   },
