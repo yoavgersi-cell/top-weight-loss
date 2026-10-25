@@ -18,6 +18,7 @@ import { LastUpdated } from "@/components/last-updated";
 import { ProviderCta } from "@/components/provider-cta";
 import { BattleStickyCta } from "@/components/battle-sticky-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
+import { getReviewRecord } from "@/data/reviews";
 import { TrustpilotRating } from "@/components/trustpilot-rating";
 import { LicensedTelehealthBadge } from "@/components/licensed-badge";
 import { PromoPopup } from "@/components/promo-popup";
@@ -1217,6 +1218,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                             reviews={provider.trustpilotReviews!}
                             rating={provider.trustpilotRating}
                             reviewCount={provider.trustpilotReviewCount}
+                            profileUrl={getReviewRecord(ctx.vertical, provider.id)?.profileUrl}
                           />
                         </div>
                       )}

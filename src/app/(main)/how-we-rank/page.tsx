@@ -252,6 +252,26 @@ export default async function HowWeRankPage() {
           </div>
         </section>
 
+        {/* Customer reviews - how the Trustpilot records on our pages are built */}
+        <section className="mb-12 scroll-mt-24" id="customer-reviews">
+          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">How we collect customer reviews</h2>
+          <p className="mb-4 text-[16px] leading-[1.75] text-gray-600">
+            The customer reviews on our provider pages are not scraped and not summarized from memory.
+            Each one is transcribed from the provider&rsquo;s own Trustpilot profile, and the page tells you
+            where it came from and when.
+          </p>
+          <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
+            <div className="divide-y divide-gray-100 text-[14.5px] leading-[1.75] text-gray-600">
+              <p className="p-5"><strong className="text-[#191919]">One profile per provider, linked.</strong> We identify the provider&rsquo;s own Trustpilot profile (the claimed one where it exists) and link to it from the review block, so you can check the live page against ours.</p>
+              <p className="p-5"><strong className="text-[#191919]">The aggregate is dated.</strong> The rating and review count we print are the figures shown on that profile on a stated date, read from a screenshot taken that day. When a provider&rsquo;s score moves, we update the figure and keep the earlier readings on file.</p>
+              <p className="p-5"><strong className="text-[#191919]">Reviews are transcribed verbatim, in batches.</strong> We copy the newest page of reviews as they appear, typos included, and store each batch with its capture date. Low-star reviews are never left out. Reviewer names are shortened to first name and initial, and personal details inside a review (a full-name signature, a prescription number) are removed.</p>
+              <p className="p-5"><strong className="text-[#191919]">Every review keeps its date.</strong> Each card shows the date Trustpilot displayed. When Trustpilot showed only a relative time (&ldquo;2 days ago&rdquo;), we derive the date from the capture date and say so in the batch note.</p>
+              <p className="p-5"><strong className="text-[#191919]">No aggregate means no aggregate.</strong> If Trustpilot has removed a provider&rsquo;s public rating, or the provider has no profile, we show no score and say why. We never estimate one.</p>
+              <p className="p-5"><strong className="text-[#191919]">No rating markup for search.</strong> We do not republish Trustpilot scores as structured-data ratings to earn stars in search results. The figures are page content, readable by anyone, including AI assistants, with their source and date next to them.</p>
+            </div>
+          </div>
+        </section>
+
         {/* Data sources */}
         <section className="mb-12">
           <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Where our data comes from</h2>

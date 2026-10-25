@@ -71,7 +71,7 @@ const ROWS: Row[] = [
     membership: "None",
     shipping: "3-5 business days",
     support: "Board-certified specialists plus a weight-care coach",
-    trustpilot: { rating: "4.6", count: "2,188", checked: TRUSTPILOT_CHECKED, url: "https://www.trustpilot.com/review/wellmedr.com" },
+    trustpilot: { rating: "4.6", count: "2,679", checked: "October 25, 2026", url: "https://www.trustpilot.com/review/wellmedr.com" },
     advantage: "Lowest ongoing price; weight-loss warranty",
     limitation: "Lowest rate needs a 12-month plan; slower shipping",
     cta: "Check welludr's 12-month rate",
@@ -86,7 +86,7 @@ const ROWS: Row[] = [
     membership: "None",
     shipping: "Free 1-2 day, cold-chain",
     support: "Nursing team, 1:1 messaging, video appointments",
-    trustpilot: { rating: "3.8", count: "9,604", checked: TRUSTPILOT_CHECKED, url: "https://www.trustpilot.com/review/joinem.co" },
+    trustpilot: { rating: "3.8", count: "10,689", checked: "October 25, 2026", url: "https://www.trustpilot.com/review/joinem.co" },
     advantage: "Cheapest with no commitment; fastest shipping",
     limitation: "Self-serve model; mixed support reviews",
     cta: "See embody's month-to-month pricing",
@@ -101,7 +101,7 @@ const ROWS: Row[] = [
     membership: "None",
     shipping: "Home delivery; timing not stated on the pricing page",
     support: "Doctor-guided care, 24/7 human support",
-    trustpilot: { rating: "4.5", count: "4,917", checked: "October 13, 2026", url: "https://www.trustpilot.com/review/tryeden.com" },
+    trustpilot: { rating: "4.5", count: "5,019", checked: "October 25, 2026", url: "https://www.trustpilot.com/review/tryeden.com" },
     advantage: "Flat price with no promo to expire; strongest recent support reviews",
     limitation: "No Reddit record; shipping time not published; FDA marketing warning letter (June 2026)",
     cta: "Check Eden's flat pricing",
@@ -131,7 +131,7 @@ const ROWS: Row[] = [
     membership: "None",
     shipping: "Free",
     support: "Video visits with a provider or NP, dietician, care coaching",
-    trustpilot: { rating: "4.3", count: "14,987", checked: TRUSTPILOT_CHECKED, url: "https://www.trustpilot.com/review/medvi.org" },
+    trustpilot: { rating: "4.3", count: "15,097", checked: "October 25, 2026", url: "https://www.trustpilot.com/review/medvi.org" },
     advantage: "All-inclusive care; second-largest review base",
     limitation: "Promo pricing; cancellation and billing complaints recur",
     cta: "See Medvi's current pricing",
@@ -146,7 +146,7 @@ const ROWS: Row[] = [
     membership: "None",
     shipping: "Free tracked; often next-day (provider claim)",
     support: "Custom dosing, unlimited provider check-ins",
-    trustpilot: { rating: "3.8", count: "5,392", checked: TRUSTPILOT_CHECKED, url: "https://www.trustpilot.com/review/trimrx.com" },
+    trustpilot: { rating: "3.4", count: "4,931", checked: "October 25, 2026", url: "https://www.trustpilot.com/review/trimrx.com" },
     advantage: "No long-term contract; custom dosing; results guarantee (conditions apply)",
     limitation: "Payment-practice complaints are a recurring theme",
     cta: "Check TrimRx's current plans",
@@ -176,7 +176,7 @@ const ROWS: Row[] = [
     membership: "Yes",
     shipping: "In-house pharmacy",
     support: "Licensed providers, messaging-based follow-up",
-    trustpilot: { rating: "3.9", count: "7,105", checked: TRUSTPILOT_CHECKED, url: "https://www.trustpilot.com/review/ro.co" },
+    trustpilot: { rating: "3.9", count: "7,380", checked: "October 25, 2026", url: "https://www.trustpilot.com/review/ro.co" },
     advantage: "Only FDA-approved-product route here; insurance can apply to the medication",
     limitation: "Two bills a month; cost confuses users on both platforms",
     cta: "View Ro's membership and medication prices",
@@ -220,7 +220,7 @@ const SECTIONS: Section[] = [
     ),
     support:
       "Board-certified specialists review the intake and a Medical Weight-Care Coach is included. Reviewers name support agents repeatedly, which is unusual in this market and suggests a staffed, human support desk. Reddit users name a Florida compounding pharmacy; one names Logos, a 503A pharmacy. welludr has not confirmed its pharmacy to us.",
-    trustpilotHeading: "4.6 across 2,188 reviews",
+    trustpilotHeading: "4.6 across 2,679 reviews",
     trustpilot: (
       <>
         Checked {TRUSTPILOT_CHECKED} (<Ext href="https://www.trustpilot.com/review/wellmedr.com">profile</Ext>; claimed profile, paid Trustpilot subscription). Recent positive reviews are about people: &ldquo;Malcom was great&rdquo;, &ldquo;Zara responded quickly&rdquo;, &ldquo;I talked to a person within minutes&rdquo;, and a switcher who found the move smooth. The negative themes are time and cadence: one reviewer waited a week for an order, another reported &ldquo;over 24 hours no contact&rdquo;, a third said scripts arrive late even when questions are answered, and one three-star review says the company &ldquo;charges you every 21 days&rdquo;. <strong className="text-[#191919]">The 4.6 is earned mostly on service; the complaints are about speed.</strong>
@@ -256,7 +256,7 @@ const SECTIONS: Section[] = [
     ),
     support:
       "A licensed provider writes the prescription, typically within a day; a nursing team handles check-ins by message, and video appointments appear in reviews. The model is deliberately self-serve. Reddit users report dose increases approved without pushback at the monthly check-in, and one describes a nurse calling after the first dose to ask about symptoms.",
-    trustpilotHeading: "3.8 across 9,604 reviews",
+    trustpilotHeading: "3.8 across 10,689 reviews",
     trustpilot: (
       <>
         Checked {TRUSTPILOT_CHECKED} (<Ext href="https://www.trustpilot.com/review/joinem.co">profile</Ext>; claimed profile, paid Trustpilot subscription). Positive reviews focus on clinicians: &ldquo;The doctor listened to me today&rdquo;, &ldquo;provider above and beyond&rdquo;, &ldquo;My appointment went great&rdquo;. The negative themes are shipping and support: a three-star review titled &ldquo;Shipping delays kill score&rdquo;, a two-star &ldquo;Dismal customer support with errors&rdquo;, and a three-star account of three video appointments the doctor did not attend. A 3.8 on nearly ten thousand reviews is a genuinely mixed record, and the pattern is consistent: <strong className="text-[#191919]">good when it works, thin when it does not</strong>.
@@ -294,10 +294,10 @@ const SECTIONS: Section[] = [
     ),
     support:
       "Doctor-guided clinical care with 24/7 human support, which Eden lists as part of the price. Eden describes its medication as made in the US with strict quality oversight; the compounding pharmacy is not named on the pages we captured. The recent Trustpilot reviews are the evidence for the support claim: nearly every one names the agent who resolved the question, and one notes the message process \"worked much better than trying to get someone on the phone.\"",
-    trustpilotHeading: "4.5 across 4,917 reviews",
+    trustpilotHeading: "4.5 across 5,019 reviews",
     trustpilot: (
       <>
-        Checked October 13, 2026 (<Ext href="https://www.trustpilot.com/review/tryeden.com">profile</Ext>; claimed profile since June 2024, paid Trustpilot subscription). The newest reviews we captured, from October 1 to 12, are all five stars and all about people: &ldquo;Ann was a great help&rdquo;, &ldquo;MELANIE was fantastic!!&rdquo;, &ldquo;Sandra was super helpful!&rdquo;, &ldquo;Joanne with customer support was great&rdquo;, &ldquo;Prompt and helpful&rdquo;. One switcher who left a provider after a price rise wrote that Eden&rsquo;s &ldquo;high ratings for fair pricing, customer service, and support of the doctors was the deciding factor for me, and they were spot on.&rdquo; Eden replies to reviews under a named support lead. <strong className="text-[#191919]">The pattern is the strongest support record on this page; the sample we read is the newest page, not the full 4,917.</strong>
+        Checked October 25, 2026 (<Ext href="https://www.trustpilot.com/review/tryeden.com">profile</Ext>; claimed profile since June 2024, paid Trustpilot subscription). The newest reviews we captured, from October 1 to 12, are all five stars and all about people: &ldquo;Ann was a great help&rdquo;, &ldquo;MELANIE was fantastic!!&rdquo;, &ldquo;Sandra was super helpful!&rdquo;, &ldquo;Joanne with customer support was great&rdquo;, &ldquo;Prompt and helpful&rdquo;. One switcher who left a provider after a price rise wrote that Eden&rsquo;s &ldquo;high ratings for fair pricing, customer service, and support of the doctors was the deciding factor for me, and they were spot on.&rdquo; Eden replies to reviews under a named support lead. <strong className="text-[#191919]">The pattern is the strongest support record on this page; the sample we read is the newest page, not the full 5,019.</strong>
       </>
     ),
     reddit: (
@@ -307,7 +307,7 @@ const SECTIONS: Section[] = [
     ),
     cancellation:
       "Eden's published terms were not part of our October 12 review, so we do not summarise them here. Eden's pricing page states that no annual or long-term plans are required. We will add the cancellation and refund terms once reviewed.",
-    pros: ["Flat $99 / $129 with no month-one trick and no promotion to expire", "No membership, no annual or long-term plan", "4.5 across 4,917 Trustpilot reviews, with named-agent praise in nearly every recent review", "24/7 human support and doctor-guided care included"],
+    pros: ["Flat $99 / $129 with no month-one trick and no promotion to expire", "No membership, no annual or long-term plan", "4.5 across 5,019 Trustpilot reviews, with named-agent praise in nearly every recent review", "24/7 human support and doctor-guided care included"],
     cons: ["No Reddit record to triangulate against", "Shipping time and cost not stated on the pricing page", "Compounded only; no brand-name shelf; pharmacy not named", "FDA marketing warning letter, June 2026 (see below)"],
     suits: "Readers who want one number they can budget on for a year without committing to a plan, who value reachable human support, and tirzepatide buyers who want a flat price without a premium.",
     assessment: (
@@ -368,7 +368,7 @@ const SECTIONS: Section[] = [
     ),
     support:
       "Clinical evaluations and prescribing run through a network of licensed providers; the patient-facing experience is video visits and secure messaging, with a dietician and coaching included. This is the single most consistent praise theme in Medvi's reviews. The pharmacy is not named on the site.",
-    trustpilotHeading: "4.3 across 14,987 reviews",
+    trustpilotHeading: "4.3 across 15,097 reviews",
     trustpilot: (
       <>
         Checked {TRUSTPILOT_CHECKED} (<Ext href="https://www.trustpilot.com/review/medvi.org">profile</Ext>; claimed profile, paid Trustpilot subscription). Positive reviews are about clinicians: &ldquo;Nurse was very informative and pleasant&rdquo;, &ldquo;Great check-in appointment&rdquo;, &ldquo;The RN was very helpful with my medical history&rdquo;, &ldquo;that you meet with a real provider... via video call&rdquo;. The negative reviews cluster on billing and leaving: &ldquo;At first had a hard time canceling my monthly subscription&rdquo; (four stars, resolved), and a run of one-star reviews titled &ldquo;Caution is advised&rdquo;, &ldquo;Lots of confusion and delays&rdquo;, &ldquo;Started great, ended poorly&rdquo; and &ldquo;Medvi shady practices&rdquo;. Medvi replies to nearly all negative reviews. The pattern: <strong className="text-[#191919]">the clinical experience is well regarded; the subscription mechanics generate the complaints</strong>.
@@ -404,7 +404,7 @@ const SECTIONS: Section[] = [
     ),
     support:
       "A free two-minute assessment, review by a licensed clinician, then custom dosing with unlimited check-ins included. Reviewers describe the screening as thorough and the intake as clear. The compounding pharmacy is not named on the site. The advertised three-month results guarantee is conditional on following the plan and completing monthly check-ins.",
-    trustpilotHeading: "3.8 across 5,392 reviews",
+    trustpilotHeading: "3.4 across 4,931 reviews",
     trustpilot: (
       <>
         Checked {TRUSTPILOT_CHECKED} (<Ext href="https://www.trustpilot.com/review/trimrx.com">profile</Ext>; claimed profile, paid Trustpilot subscription). The five-star reviews are about clarity and price: &ldquo;Clear pricing&rdquo;, &ldquo;Priced fairly and easy to use&rdquo;, &ldquo;Screening was more thorough than I expected&rdquo;, &ldquo;My old provider was charging me close to double&rdquo;, &ldquo;Shipping runs two or three days&rdquo;. The low reviews are about money and delivery: a first order billed at double the quoted amount with no reply, &ldquo;Unreliable! Potentially crooks!&rdquo;, a tracking date that moved twice, and a refund not issued a month after a cancellation made within an hour of ordering. Trustpilot&rsquo;s own summary of the profile notes significant dissatisfaction with payment practices. Two things are true at once: <strong className="text-[#191919]">many customers find the pricing clear, and a recurring minority report billing they did not expect</strong>.
@@ -478,7 +478,7 @@ const SECTIONS: Section[] = [
     ),
     support:
       "Licensed providers review every case; follow-up is message-based, and the lack of a phone line is the single most repeated request in recent reviews. Ro fills through its in-house pharmacy, the clearest pharmacy answer on this page. Ro was reported as not among the thirty telehealth companies that received FDA marketing warning letters in March 2026.",
-    trustpilotHeading: "3.9 across 7,105 reviews",
+    trustpilotHeading: "3.9 across 7,380 reviews",
     trustpilot: (
       <>
         Checked {TRUSTPILOT_CHECKED} (<Ext href="https://www.trustpilot.com/review/ro.co">profile</Ext>; claimed profile, paid Trustpilot subscription). Positive reviews describe an easy application, on-time nurse-practitioner appointments and questions answered. The negative themes are specific and repeat: &ldquo;I wish you had a phone # for better service&rdquo;, &ldquo;Needed to contact Ro by phone&rdquo;, &ldquo;My delivery was delayed for 4 days&rdquo;, &ldquo;I didn&rsquo;t understand that $39 initial&rdquo; was not the ongoing price, &ldquo;Would be nice to know the possible fee&rdquo; before signing, and one reviewer who received the lowest dose without discussion. The pattern across both platforms is the same: <strong className="text-[#191919]">results and ease of starting are praised; price structure and reachability are the friction</strong>.

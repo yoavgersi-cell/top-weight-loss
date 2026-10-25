@@ -14,6 +14,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { TrustpilotSummary } from "@/components/trustpilot-summary";
+import { getReviewRecord } from "@/data/reviews";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 import { LastUpdated } from "@/components/last-updated";
@@ -46,24 +47,26 @@ import { catalogPriceSnippet } from "@/lib/product-catalog";
 // has no public review record yet. Weight-loss vertical only.
 const REVIEW_COMPLAINTS: Record<string, { intro: string; themes: { label: string; detail: string }[]; outro: string }> = {
   embody: {
-    intro: "Of the 41 Trustpilot reviews transcribed on this page, four rate embody three stars or lower. They are specific, and they cluster around four things:",
+    intro: "Of the 97 Trustpilot reviews transcribed on this page, 15 rate embody three stars or lower, 11 of them from the newest page we captured on October 25, 2026. They are specific, and they cluster around five things:",
     themes: [
-      { label: "Shipping slower than quoted", detail: "One reviewer was told 3-5 days for a first dose and received it in 8; a second-dose delay is the reason another stops at three stars despite liking the sign-up and the clinicians." },
-      { label: "Video appointments", detail: "One reviewer reports a doctor not appearing for three scheduled video visits, with the promised priority call coming four days after the original slot; the visit, once it happened, was fine." },
-      { label: "Billing follow-through", detail: "One two-star review describes being charged for something never received and a support team that answered without checking the account history." },
-      { label: "Reaching support at first", detail: "One reviewer found it hard to get hold of anyone initially, then describes everyone as excellent and patient once connected." },
+      { label: "Orders that ship late or not at all", detail: "The most common complaint in the October page: a three-month order still not received after a month, a refill the pharmacy had held since mid-October while the reviewer ran out, and a shipment sent to an old address after the new one was on file. Earlier reviews describe a first dose quoted at 3-5 days arriving in 8." },
+      { label: "Refunds under the no-refund policy", detail: "Three October reviewers who say they received no medication were refused refunds; one disputes a payment the company says it never received." },
+      { label: "Dose and order changes nobody asked for", detail: "Two reviewers report a next order placed at a different dose than agreed, and one says a prescription arrived at roughly triple her dose and the pharmacy told her not to take it. These are the most serious complaints in the set." },
+      { label: "Reaching a person", detail: "Chat and AI support that loops without an answer, unreturned calls, and appointments booked a week out; several 5-star reviews describe the same chat frustration ending well once a nurse called." },
+      { label: "Video appointments and billing follow-through", detail: "From the earlier captures: a doctor not appearing for three scheduled visits, and a charge for something never received that support answered without checking the account." },
     ],
-    outro: "What the complaints do not say is as telling: none questions the medication, the pharmacy or the legitimacy of the service, and the same reviews praise the intake and the providers. The pattern is operational - shipping windows, scheduling and billing follow-through - which is worth knowing if you are starting at a time-sensitive moment. The full set of reviews, newest first, is below.",
+    outro: "Set against the record, the complaints are a minority: 80 of the 97 reviews rate embody 4 or 5 stars, and the praise is consistent about the nurses and providers, fast appointments and the flat price. The pattern in the complaints is operational - fulfilment, dose changes and reaching a human when something goes wrong - which matters most if you are switching mid-course or starting at a time-sensitive moment. The full set of reviews, newest first, is below.",
   },
   wellmedr: {
-    intro: "Of the 33 Trustpilot reviews transcribed on this page, six rate welludr three stars or lower, two of them one star. The themes:",
+    intro: "Of the 90 Trustpilot reviews transcribed on this page, 11 rate welludr three stars or lower, six of them one star. The themes:",
     themes: [
-      { label: "Shipping after approval", detail: "The sharpest complaint: an order marked approved and moved to shipping the same day, then eight days of 'delay in shipping' messages, which left that reviewer feeling the service was a scam." },
-      { label: "Support response time", detail: "Several reviewers describe slow answers to questions, and one reports more than 24 hours without a reply to a request for help." },
-      { label: "Billing cadence", detail: "One three-star reviewer reports being charged every 21 days rather than monthly. We have not verified that cadence; welludr's published terms describe 4-week shipments, so confirm the charge schedule before you prepay a 12-month plan." },
-      { label: "How complaints get resolved", detail: "Two of the six are updated reviews: both reviewers raised one-star ratings to three after a call back from the care team resolved the problem, and one names the staff member who called." },
+      { label: "Billing cadence and double charges", detail: "The sharpest October 2026 complaint is a detailed one: a $99-a-month plan charged every 21 days, which the reviewer works out to about $1,721 a year rather than $1,188. Two others report being charged twice for one order, and one says a 3-month plan was charged again two days after it was reinstated. We have not verified the 21-day cadence; welludr's published terms describe 4-week shipments, so confirm the charge schedule in writing before you prepay." },
+      { label: "The quoted price versus the enrolled price", detail: "One 1-star reviewer says the $39 quote became $199 or $249 once enrolled. The $39 figure does not match any price welludr publishes, so read the plan term and the per-shipment charge at checkout." },
+      { label: "Shipping after approval", detail: "An order marked approved and moved to shipping the same day, then eight days of 'delay in shipping' messages; a reorder that took weeks and a BBB complaint; a vial with one dose left and a 48-hour support window that passed without a fix." },
+      { label: "Support response time", detail: "Slow answers in the app and chat loops are a recurring minor theme, often inside otherwise positive reviews that end with a named agent fixing the problem by phone." },
+      { label: "How complaints get resolved", detail: "Several reviews are updates: ratings raised after a call back from the care team, and the October page is full of 5-star reviews naming the agent who reversed a charge or reset a portal." },
     ],
-    outro: "None of the six questions the medication or the pharmacy; the complaints are about the gap between approval and the box arriving, and how quickly someone answers in between. Set against a verified 4.6 across 2,188 reviews they are a minority, but the shipping theme recurs often enough that a first-time buyer should allow more than the quoted window. The full set is below.",
+    outro: "None of the 11 questions the medication or the pharmacy; the complaints are about billing mechanics and the gap between approval and the box arriving. Set against a verified 4.6 across 2,679 reviews, and 79 of the 90 transcribed reviews at 4 or 5 stars, they are a minority, but the billing theme recurs often enough that a first-time buyer should confirm the charge interval and allow more than the quoted shipping window. The full set is below.",
   },
   altrx: {
     intro: "altRx does not have a Trustpilot profile, so there is no public review record to summarise, and we do not reproduce unverified complaints from forums. What that means for you:",
@@ -155,7 +158,7 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   eden: {
     title: "Eden Reviews 2026: 4.5 Trustpilot, $99 Flat GLP-1 & Verdict",
     description:
-      "Eden reviews: {prices}, flat at every dose, no membership, 4.5 on Trustpilot across 4,917 reviews. Is Eden legit?",
+      "Eden reviews: {prices}, flat at every dose, no membership, 4.5 on Trustpilot across 5,019 reviews. Is Eden legit?",
   },
   trimrx: {
     title: "TrimRx Reviews 2026 (Trim Rx): Is It Legit? Cost & Verdict",
@@ -1124,6 +1127,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               reviews={provider.trustpilotReviews!}
               rating={provider.trustpilotRating}
               reviewCount={provider.trustpilotReviewCount}
+              record={getReviewRecord(ctx.vertical, provider.id)}
             />
             <TrustpilotCarousel
               providerName={provider.name}
@@ -1131,6 +1135,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               reviews={provider.trustpilotReviews!}
               rating={provider.trustpilotRating}
               reviewCount={provider.trustpilotReviewCount}
+              profileUrl={getReviewRecord(ctx.vertical, provider.id)?.profileUrl}
             />
           </div>
         )}
