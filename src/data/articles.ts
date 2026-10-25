@@ -2044,7 +2044,7 @@ export const articles: Article[] = [
     category: "Guide",
     readTime: "9 min read",
     publishedAt: "2026-08-30",
-    updatedAt: "2026-10-05",
+    updatedAt: "2026-10-25",
     heroColor: "#EDF2F8",
     author: "TopWeightLoss Team",
     keyTakeaways: [
@@ -2064,6 +2064,16 @@ export const articles: Article[] = [
         // (TirzepatidePriceTable): live CTAs, review links and verified
         // Trustpilot records per row, with prices from the price index.
         body: 'These are the eight licensed telehealth providers in our ranking with published compounded tirzepatide rates, cheapest first. Every row links to our full review of that provider, and the price shown is the provider\'s own published rate with its condition spelled out - a 12-month lock, a promo, or a flat month-to-month figure.',
+      },
+      {
+        heading: 'Who has the best price for tirzepatide online right now?',
+        body:
+          'As of our October 16, 2026 verification pass, the lowest published compounded tirzepatide price is <strong>$89 a month at <a href="/weight-loss/reviews/wellmedr">welludr</a></strong>, which requires a 12-month plan; the lowest with no commitment is <strong>$119 a month at <a href="/weight-loss/reviews/embody">embody</a></strong>. The rest of the field, in price order: <a href="/weight-loss/reviews/directmeds">DirectMeds</a> $147 flat at every dose, <a href="/weight-loss/reviews/altrx">altRx</a> $149 flat, <a href="/weight-loss/reviews/medvi">Medvi</a> $166 on promotion (regularly $299, all-inclusive), <a href="/weight-loss/reviews/healthrx">HealthRx</a> from $179, <a href="/weight-loss/reviews/sprout">Sprout</a> from $199, <a href="/weight-loss/reviews/trimrx">TrimRx</a> $259 and <a href="/weight-loss/reviews/shed">SHED</a> $299 with 20% off month one. Two newer entries, read from their own sites on October 25, 2026 and not yet in the verified index: <a href="/weight-loss/reviews/luvo">Luvo</a> at $124.50 for the first four weeks and then $249 every four weeks, and <a href="/weight-loss/reviews/medgm">MEDGm</a>, whose compounded GLP-1 injections start at $169 without stating the molecule. One caution on "best price": the price that matters is the one at your maintenance dose in month four, not month one, which is why the table marks every promotion and plan condition. Our <a href="/weight-loss/articles/glp1-true-cost-month-1-vs-year-one">true-cost guide</a> runs the year-one math for each.',
+      },
+      {
+        heading: 'What is the best online pharmacy for tirzepatide?',
+        body:
+          'A distinction worth knowing first: you do not buy from a pharmacy, you buy from a telehealth provider, and a state-licensed 503A compounding pharmacy fills the prescription that provider\'s clinician writes. The "best pharmacy" question therefore has two parts. First, the provider: licensed-clinician review, published prices, clear cancellation terms and a review record (the table shows each provider\'s verified Trustpilot figures). Second, the pharmacy behind it: ask which pharmacy fills your prescription, confirm it is state-licensed (every state board of pharmacy publishes a licence lookup), and check that the vial arrives labelled with the pharmacy\'s name, your name and a beyond-use date. Providers that name their pharmacy up front, as embody does with its LegitScript-certified partners, make this easy; a provider that will not name the pharmacy is the one to walk away from. Our <a href="/weight-loss/articles/503a-vs-503b-pharmacy-28-day-rule">503A vs 503B explainer</a> covers what the licence types mean and why plans ship monthly.',
       },
       {
         heading: "Can I get brand-name Zepbound online?",
@@ -2596,9 +2606,9 @@ export const articles: Article[] = [
     description:
       "The two FDA-approved GLP-1 pills compared: trial results, the empty-stomach rule only one has, prices from $149, $25 insurance offers and Medicare's $50 copay.",
     category: "Guide",
-    readTime: "8 min read",
+    readTime: "15 min read",
     publishedAt: "2026-10-09",
-    updatedAt: "2026-10-09",
+    updatedAt: "2026-10-25",
     heroColor: "#EEF4F1",
     author: "TopWeightLoss Team",
     keyTakeaways: [
@@ -2637,6 +2647,51 @@ export const articles: Article[] = [
         heading: "What are the side effects of Foundayo and the Wegovy pill?",
         body:
           "The same family as every GLP-1: mostly gastrointestinal, mostly early, mostly during dose increases. In OASIS 4, gastrointestinal adverse events occurred in 74% of people on the Wegovy pill against 42% on placebo, led by nausea and diarrhoea. In ATTAIN-1, gastrointestinal events were also the most frequent with Foundayo and were typically mild to moderate. Neither trial reported a safety signal outside the known class profile, which carries the standard GLP-1 warnings around thyroid C-cell tumours in rodents, pancreatitis and gallbladder disease. Dose and how gradually you step up matter more than which pill you take, and a clinician who manages the titration is the single biggest factor in tolerating either - <a href=\"/weight-loss/articles/semaglutide-side-effects-guide\">our semaglutide side-effects guide</a> covers what helps.",
+      },
+      {
+        heading: 'How fast do Foundayo and the Wegovy pill work?',
+        body:
+          'Neither trial reported a head-to-head speed comparison, so the honest answer comes from how each pill is dosed and how long each trial ran. Both start low and step up: the Wegovy pill from a 1.5 mg starting tablet to the 25 mg maintenance dose over the first months, Foundayo across 6 mg, 12 mg and 36 mg tablets, each step held long enough for the gut to adapt. Appetite effects are usually noticed within the first weeks at the starting doses; measurable weight loss builds as the dose rises and keeps accumulating for months. The headline results are end-of-trial numbers, measured at week 64 for the Wegovy pill (OASIS 4) and week 72 for Foundayo (ATTAIN-1), roughly 15 and 17 months in. A 12-week result on either pill is therefore not the trial figure; it is an early point on a curve that was still falling through the first year in both studies. The practical reading: give either pill a full titration plus several months at the maintenance dose before judging it, and expect the first months to be as much about tolerability as about weight. Our guide to <a href="/weight-loss/articles/how-long-for-semaglutide-to-work">how long semaglutide takes to work</a> gives the week-by-week picture for the molecule in the Wegovy pill.',
+      },
+      {
+        heading: 'What is the 25 mg dose, and what does \'2.5 mg\' mean?',
+        body:
+          'Three different numbers get mixed up in searches about these pills. <strong>25 mg</strong> is the Wegovy pill\'s maintenance dose: one 25 mg semaglutide tablet a day, reached after the 1.5 mg starting steps. It is far higher than the injection\'s dose because only a small fraction of an oral peptide is absorbed. <strong>2.4 mg</strong> is the weekly maintenance dose of the Wegovy injection. <strong>2.5 mg</strong> has nothing to do with either pill: it is the starting dose of Zepbound and Mounjaro (tirzepatide), a different injectable molecule. Foundayo\'s doses are <strong>6 mg, 12 mg and 36 mg</strong> once daily; 36 mg was the top dose in ATTAIN-1 and the one behind the 11.2% figure. If you are comparing "Wegovy 25 mg vs Foundayo", the fair pairing is the Wegovy pill at 25 mg against Foundayo at 36 mg: both maintenance doses, both from their own trials.',
+      },
+      {
+        heading: 'Do Foundayo and the Wegovy pill work for adults without diabetes?',
+        body:
+          'Yes, and that is exactly who the headline trials studied. OASIS 4 (Wegovy pill) and ATTAIN-1 (Foundayo) both enrolled adults with obesity, or overweight with at least one weight-related condition, and both excluded people with diabetes, so the 13.6% and 11.2% figures are results in people without diabetes. Each drug has separate trials in type 2 diabetes, and as with every GLP-1, average weight loss in those populations is smaller; a diabetes trial figure should never be set against a non-diabetes one. For someone without diabetes deciding between the two pills, the numbers in the table above are the right ones to use, with the standing caveat that they come from two different trials of different sizes (307 participants versus 3,127) and different lengths.',
+      },
+      {
+        heading: 'What do the FDA labels say that the marketing does not?',
+        body:
+          'Both labels carry the GLP-1 class warnings, and they matter more than the brand differences. Each has a boxed warning about thyroid C-cell tumours seen in rodents, and each is contraindicated for anyone with a personal or family history of medullary thyroid carcinoma or Multiple Endocrine Neoplasia syndrome type 2. Both warn about pancreatitis, gallbladder disease, dehydration-related kidney injury, low blood sugar when combined with insulin or sulfonylureas, and use in pregnancy. Where they differ: the Wegovy pill\'s label is built around absorption, with the instruction to take it on an empty stomach with a small amount of plain water and to wait at least 30 minutes before food, drink or other oral medicines, and its approval covers reducing cardiovascular risk as well as weight management, as the injection\'s does. Foundayo\'s label has no food, water or timing instructions, and its approval is for chronic weight management. Neither label is a reason to self-select: a prescriber reads your history against these lists, which is the point of the prescription.',
+      },
+      {
+        heading: 'Which pill is more cost-effective?',
+        body:
+          'Price per month is close; price per year and price per unit of result are where the two separate, and only one of those is a fair calculation. <strong>Per year, self-pay, as reported:</strong> Foundayo at $149 to $349 a month by dose is $1,788 to $4,188; the Wegovy pill at the reported $149 to $299 tiers is $1,788 to $3,588; through Ro, the Wegovy pill\'s $149 first month then $299 comes to $3,438 for the medication plus the membership ($39 the first month, then $74 to $149, so $853 to $1,678 more). <strong>With commercial coverage</strong> both are $25 a month, $300 a year, and <strong>on Medicare\'s Bridge</strong> both are $50 a month, $600 a year, which is why coverage decides this question before anything else. <strong>Per percentage point of weight lost</strong> is the calculation to resist: dividing a price by a trial average mixes two different studies, two different durations and your own unknown response, and no clinician would choose that way. What the numbers do support: at the maintenance dose, Foundayo\'s reported ceiling is $50 a month ($600 a year) higher than the Wegovy pill\'s, while the Wegovy pill\'s published trial result is 2.4 percentage points larger. Whether that trade is worth it turns on whether you can keep the empty-stomach routine, which is the one factor that decides whether you get the Wegovy pill\'s result at all.',
+      },
+      {
+        heading: 'Besides cost, what else is different?',
+        body:
+          'Six things, in rough order of how much they matter day to day.<ul><li><strong>The routine.</strong> Empty stomach, a little water and a 30-minute wait every morning for the Wegovy pill; any time, with or without food, for Foundayo.</li><li><strong>Other morning medicines.</strong> The Wegovy pill\'s wait applies to other oral medicines too, which matters if you take thyroid medication, blood-pressure tablets or anything else on waking. Foundayo has no such rule.</li><li><strong>The molecule.</strong> The Wegovy pill is a peptide, the same semaglutide as the injection, formulated to survive the stomach. Foundayo is a small molecule, orforglipron, which is why it needs no absorption rules.</li><li><strong>The dose ladder.</strong> 1.5 mg to 25 mg for the Wegovy pill; 6 mg, 12 mg and 36 mg for Foundayo. Both are stepped up by a clinician.</li><li><strong>The evidence base.</strong> OASIS 4 enrolled 307 people for 64 weeks; ATTAIN-1 enrolled 3,127 for 72 weeks. Foundayo\'s trial is larger; the Wegovy pill\'s result is higher. Neither is head to head.</li><li><strong>Where you can get it.</strong> The Wegovy pill through <a href="/weight-loss/reviews/ro">Ro</a> is the telehealth route we have verified; Foundayo through LillyDirect at Lilly\'s published self-pay tiers, with telehealth availability stated by Lilly but no provider price we could verify yet.</li></ul>Everything else, including the side-effect profile and the warnings, is shared.',
+      },
+      {
+        heading: 'Are there real patient reviews of Foundayo and the Wegovy pill yet?',
+        body:
+          'Not in any form we can verify, and we do not quote what we cannot verify. Trustpilot and similar sites rate providers, not medicines: the Trustpilot records on this site belong to telehealth services such as <a href="/weight-loss/reviews/ro">Ro</a>, which sells the Wegovy pill, and say nothing about the pill itself. Forum and social posts about both pills exist, but they are unverified, often from people a few weeks in, and frequently about the injections. Until a verified review record exists, the trial reports above, which recorded the experience of 3,434 people over 15 to 17 months, are the best patient evidence there is; they are also the source of the side-effect rates in the section below. We will add a verified review record here when one exists.',
+      },
+      {
+        heading: 'Can you switch from a weekly injection to one of the pills?',
+        body:
+          'Yes, under a prescriber, and there is now trial evidence for one direction. Lilly\'s ATTAIN-MAINTAIN trial (topline results announced December 18, 2025; full publication pending) took people who had lost weight on Wegovy or Zepbound injections and switched them to daily orforglipron, the molecule in Foundayo, or to placebo for a year. Those switched from Wegovy held their weight almost exactly; those switched from Zepbound regained about 5 kg of a much larger loss; the placebo groups had regained roughly 9 kg within six months. These are company-reported figures. There is no equivalent published switch trial for the Wegovy pill, although moving from the semaglutide injection to the semaglutide pill keeps the same molecule. Either switch is a prescriber\'s decision, usually with a new titration. Our guide to <a href="/weight-loss/articles/stopping-glp1-weight-regain-complete-guide">stopping GLP-1s and keeping the weight off</a> covers the maintenance evidence in full.',
+      },
+      {
+        heading: 'Is the Wegovy pill the same as Rybelsus, and is Foundayo a version of Wegovy?',
+        body:
+          'The Wegovy pill and Rybelsus are both oral semaglutide from Novo Nordisk, but they are not interchangeable: Rybelsus is approved for type 2 diabetes at 3 mg, 7 mg and 14 mg, while the Wegovy pill is approved for weight management at 25 mg. Foundayo is not a version of Wegovy at all; it is a different molecule, orforglipron, from a different company, Eli Lilly, that acts on the same GLP-1 receptor. The only things the two pills share are the receptor and the once-daily tablet form.',
       },
       {
         heading: "Which should you choose, Foundayo or the Wegovy pill?",

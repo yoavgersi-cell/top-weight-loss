@@ -38,6 +38,45 @@ import { catalogPriceSnippet } from "@/lib/product-catalog";
 // prints almost verbatim always carries current numbers and never a hand-typed
 // price that can go stale. Providers without a catalog entry get the token
 // removed cleanly.
+
+// Oct 25, 2026: "<provider> reviews and complaints" is among the most common
+// ways people reach these pages (Copilot citation data). The block answers it
+// on the page itself from the lowest-rated Trustpilot reviews we already hold
+// and transcribe below - no outside claims - and says plainly when a provider
+// has no public review record yet. Weight-loss vertical only.
+const REVIEW_COMPLAINTS: Record<string, { intro: string; themes: { label: string; detail: string }[]; outro: string }> = {
+  embody: {
+    intro: "Of the 41 Trustpilot reviews transcribed on this page, four rate embody three stars or lower. They are specific, and they cluster around four things:",
+    themes: [
+      { label: "Shipping slower than quoted", detail: "One reviewer was told 3-5 days for a first dose and received it in 8; a second-dose delay is the reason another stops at three stars despite liking the sign-up and the clinicians." },
+      { label: "Video appointments", detail: "One reviewer reports a doctor not appearing for three scheduled video visits, with the promised priority call coming four days after the original slot; the visit, once it happened, was fine." },
+      { label: "Billing follow-through", detail: "One two-star review describes being charged for something never received and a support team that answered without checking the account history." },
+      { label: "Reaching support at first", detail: "One reviewer found it hard to get hold of anyone initially, then describes everyone as excellent and patient once connected." },
+    ],
+    outro: "What the complaints do not say is as telling: none questions the medication, the pharmacy or the legitimacy of the service, and the same reviews praise the intake and the providers. The pattern is operational - shipping windows, scheduling and billing follow-through - which is worth knowing if you are starting at a time-sensitive moment. The full set of reviews, newest first, is below.",
+  },
+  wellmedr: {
+    intro: "Of the 33 Trustpilot reviews transcribed on this page, six rate welludr three stars or lower, two of them one star. The themes:",
+    themes: [
+      { label: "Shipping after approval", detail: "The sharpest complaint: an order marked approved and moved to shipping the same day, then eight days of 'delay in shipping' messages, which left that reviewer feeling the service was a scam." },
+      { label: "Support response time", detail: "Several reviewers describe slow answers to questions, and one reports more than 24 hours without a reply to a request for help." },
+      { label: "Billing cadence", detail: "One three-star reviewer reports being charged every 21 days rather than monthly. We have not verified that cadence; welludr's published terms describe 4-week shipments, so confirm the charge schedule before you prepay a 12-month plan." },
+      { label: "How complaints get resolved", detail: "Two of the six are updated reviews: both reviewers raised one-star ratings to three after a call back from the care team resolved the problem, and one names the staff member who called." },
+    ],
+    outro: "None of the six questions the medication or the pharmacy; the complaints are about the gap between approval and the box arriving, and how quickly someone answers in between. Set against a verified 4.6 across 2,188 reviews they are a minority, but the shipping theme recurs often enough that a first-time buyer should allow more than the quoted window. The full set is below.",
+  },
+  altrx: {
+    intro: "altRx does not have a Trustpilot profile, so there is no public review record to summarise, and we do not reproduce unverified complaints from forums. What that means for you:",
+    themes: [
+      { label: "The usual check is missing", detail: "Hundreds of dated, attributable reviews are how a provider's service is normally gauged. That record does not exist for altRx yet, so the checks below carry more weight." },
+      { label: "Pricing after the promotion", detail: "The $89 semaglutide and $149 tirzepatide rates are promotional against $199 and $299 regular prices. Confirm in writing what you will pay when the promotion ends." },
+      { label: "The pharmacy", detail: "Ask which state-licensed pharmacy fills the prescription and check the licence with that state's board of pharmacy before the first charge." },
+      { label: "Buy Now, Pay Later", detail: "It is financing through a third party. Read who bills you and what happens to the instalments if you cancel mid-plan." },
+    ],
+    outro: "We will add a review summary here as soon as a verified record exists. In the meantime, the brand-name shelf (Zepbound, Wegovy and Ozempic at listed cash prices) and the flat-at-every-dose pricing are the reasons altRx ranks where it does; the lack of a public review record is the reason to ask the questions above before paying.",
+  },
+};
+
 const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
   // HRT vertical (ported from hrtwomen.com, Oct 22, 2026). Titles shaped by
   // that site's Search Console queries: "winona hrt reviews", "how much does
@@ -1049,6 +1088,26 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               </section>
             ))}
           </article>
+        )}
+
+        {ctx.vertical === "weight-loss" && REVIEW_COMPLAINTS[provider.id] && (
+          <section className="mb-8 rounded-2xl border border-gray-200 bg-white p-6 sm:p-7" aria-labelledby="complaints-heading">
+            <h2 id="complaints-heading" className="mb-3 text-[22px] font-bold text-[#191919]">
+              What the complaints about {provider.name} say
+            </h2>
+            <p className="mb-4 text-[15px] leading-[1.75] text-gray-700">{REVIEW_COMPLAINTS[provider.id].intro}</p>
+            <ul className="mb-4 space-y-2.5">
+              {REVIEW_COMPLAINTS[provider.id].themes.map((t) => (
+                <li key={t.label} className="flex gap-2.5 text-[15px] leading-[1.7] text-gray-700">
+                  <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#0C4B75]" aria-hidden />
+                  <span>
+                    <strong className="text-[#191919]">{t.label}.</strong> {t.detail}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-[15px] leading-[1.75] text-gray-700">{REVIEW_COMPLAINTS[provider.id].outro}</p>
+          </section>
         )}
 
         {(provider.trustpilotReviews?.length ?? 0) > 0 && (
