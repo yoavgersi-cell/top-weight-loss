@@ -6,16 +6,22 @@ import { WEIGHT_LOSS_MIGRATED } from "@/lib/site-context";
 // Umbrella-brand footer. Links point at real routes only; category links are
 // absolute (brand-level) rather than scoped to the current vertical. The brand
 // name still swaps between the legacy and hub domains via the data-hub CSS.
-const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
+// Oct 25, 2026: each treatment entry also carries its Reviews and Guides
+// index links. Search Console listed the non-weight-loss review and guide
+// indexes (and most pages under them) as "discovered, not indexed" - they had
+// internal links only from inside their own vertical. A sitewide footer link
+// puts every index one click from every crawled page.
+type FooterLink = { label: string; href: string; sub?: { label: string; href: string }[] };
+const COLUMNS: { title: string; links: FooterLink[] }[] = [
   {
     title: "Treatments",
     links: [
-      { label: "Weight Loss", href: "/weight-loss" },
-      { label: "Hair Loss", href: "/hair-loss" },
-      { label: "TRT", href: "/trt" },
-      { label: "HRT", href: "/hrt" },
-      { label: "Online Therapy", href: "/online-therapy" },
-      { label: "ED Treatment", href: "/ed" },
+      { label: "Weight Loss", href: "/weight-loss", sub: [{ label: "Reviews", href: "/weight-loss/reviews" }, { label: "Guides", href: "/weight-loss/articles" }] },
+      { label: "Hair Loss", href: "/hair-loss", sub: [{ label: "Reviews", href: "/hair-loss/reviews" }, { label: "Guides", href: "/hair-loss/articles" }, { label: "For women", href: "/hair-loss/women" }] },
+      { label: "TRT", href: "/trt", sub: [{ label: "Reviews", href: "/trt/reviews" }, { label: "Guides", href: "/trt/articles" }] },
+      { label: "HRT", href: "/hrt", sub: [{ label: "Reviews", href: "/hrt/reviews" }, { label: "Guides", href: "/hrt/articles" }] },
+      { label: "Online Therapy", href: "/online-therapy", sub: [{ label: "Reviews", href: "/online-therapy/reviews" }, { label: "Guides", href: "/online-therapy/articles" }] },
+      { label: "ED Treatment", href: "/ed", sub: [{ label: "Reviews", href: "/ed/reviews" }, { label: "Guides", href: "/ed/articles" }] },
     ],
   },
   {
@@ -99,7 +105,7 @@ async function featuredComparisons(): Promise<{ label: string; href: string }[]>
 
 export async function Footer() {
   const comparisons = await featuredComparisons();
-  const columns = [
+  const columns: { title: string; links: FooterLink[] }[] = [
     ...COLUMNS,
     ...(comparisons.length > 0
       ? [{ title: "Popular Comparisons", links: comparisons }]
@@ -140,9 +146,24 @@ export async function Footer() {
                       {l.label}
                     </a>
                   ) : (
-                    <Link key={l.label} href={l.href} className="block text-[13px] text-gray-500 hover:text-[#0C4B75]">
-                      {l.label}
-                    </Link>
+                    <span key={l.label} className="block">
+                      <Link href={l.href} className="text-[13px] text-gray-500 hover:text-[#0C4B75]">
+                        {l.label}
+                      </Link>
+                      {l.sub && (
+                        <span className="ml-1.5 text-[12px] text-gray-400">
+                          {l.sub.map((x, i) => (
+                            <span key={x.href}>
+                              {i > 0 ? " · " : "("}
+                              <Link href={x.href} className="hover:text-[#0C4B75]">
+                                {x.label}
+                              </Link>
+                              {i === l.sub!.length - 1 ? ")" : ""}
+                            </span>
+                          ))}
+                        </span>
+                      )}
+                    </span>
                   ),
                 )}
               </nav>

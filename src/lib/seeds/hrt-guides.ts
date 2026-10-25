@@ -201,7 +201,7 @@ export const HRT_GUIDES_PORTED: ArticleData[] = [
   },
   {
     slug: "best-online-hrt-providers-compared",
-    title: "Best Online HRT Providers Compared: Winona vs Gala vs Midi Health",
+    title: "Best Online HRT Providers: Winona vs Gala vs Midi Health",
     description:
       "A side-by-side look at three leading online menopause providers - how they work, what they prescribe, how you pay and which fits your situation.",
     category: "Comparison",
@@ -297,7 +297,7 @@ export const HRT_GUIDES_PORTED: ArticleData[] = [
   },
   {
     slug: "hrt-for-perimenopause",
-    title: "HRT for Perimenopause: Can You Start Before Your Periods Stop?",
+    title: "HRT for Perimenopause: Can You Start Before Periods Stop?",
     description:
       "You don't have to wait for menopause. How HRT for perimenopause works, why irregular bleeding complicates it and other perimenopause treatment options.",
     category: "Treatments",
@@ -399,7 +399,7 @@ export const HRT_GUIDES_PORTED: ArticleData[] = [
   // the checkout. Facts checked 2026-10-06 - see the top-of-file comment.
   {
     slug: "gala-cost",
-    title: "Gala Health HRT Cost (2026): One Flat Monthly Price, Explained",
+    title: "Gala Health HRT Cost (2026): One Flat Monthly Price",
     description:
       "Gala's menopause HRT is advertised from about $79/month cash-pay, with clinician, check-ins, dose changes and shipping included. Year-one math and comparisons.",
     category: "Provider Guide",
@@ -486,7 +486,7 @@ export const HRT_GUIDES_PORTED: ArticleData[] = [
   IS_MIDI_LEGIT,
   {
     slug: "winona-cost",
-    title: "Winona Cost Per Month (2026): Prices by Treatment & Insurance",
+    title: "Winona Cost Per Month (2026): Prices by Treatment",
     description:
       "Winona costs about $39/month for progesterone up to about $149 for the estrogen patch. No insurance billing, but HSA/FSA works. Prices, bundles and yearly math.",
     category: "Provider Guide",
@@ -570,7 +570,7 @@ export const HRT_GUIDES_PORTED: ArticleData[] = [
   },
   {
     slug: "midi-cost",
-    title: "Midi Health Cost (2026): Insurance, Self-Pay & Is It Worth It?",
+    title: "Midi Health Cost (2026): Insurance, Self-Pay & Verdict",
     description:
       "With in-network PPO insurance Midi visits average about $50; self-pay is $250 first visit, $150 follow-ups. Medicare isn't billed. Full first-year math inside.",
     category: "Provider Guide",

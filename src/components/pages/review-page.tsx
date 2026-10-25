@@ -72,9 +72,9 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // "Weight Loss" stays in the title for Google, where "embody weight loss
     // reviews" is the page's main query, and "Legit" covers the legit/scam
     // long-tails that convert at 50-100% on Bing.
-    title: "embody Reviews 2026: Weight Loss Cost, Real Results & Is It Legit?",
+    title: "embody Reviews 2026: Cost, Results & Is It Legit?",
     description:
-      "embody reviews: {prices}, 1-2 day shipping, LegitScript-certified 503A pharmacies, refund if not approved. Real customer results, and is embody legit?",
+      "embody reviews: {prices}, 1-2 day shipping, LegitScript-certified, refund if not approved. Is embody legit?",
   },
   medvi: {
     // Decoupled from the "is medvi legit" query (Sep 2026): that phrase lived in
@@ -100,17 +100,17 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // entry exists only to put "GLP-1" in the description (desc-only pass).
     title: "ro Weight Loss Review 2026: Cost, Results & Is It Worth It?",
     description:
-      "ro weight loss review: membership from $39 first month plus brand-name GLP-1s (Wegovy, Zepbound) billed separately - insurance can apply. Verified pricing, pros & cons.",
+      "ro weight loss review: membership from $39 the first month plus brand-name Wegovy or Zepbound billed separately; insurance can apply. Pros and cons.",
   },
   eden: {
-    title: "Eden Reviews 2026: Is It Legit? $99 Flat GLP-1 Pricing & Verdict",
+    title: "Eden Reviews 2026: Is It Legit? $99 Flat GLP-1 & Verdict",
     description:
-      "Eden reviews: {prices}, flat every month and every dose, no membership, 24/7 human support. Is Eden legit? Trustpilot record, pros & cons.",
+      "Eden reviews: {prices}, flat at every dose, no membership, 24/7 support. Is Eden legit? Pros and cons.",
   },
   trimrx: {
     title: "TrimRx Reviews 2026 (Trim Rx): Is It Legit? Cost & Verdict",
     description:
-      "TrimRx (Trim Rx) reviews: {prices}, no long-term contract, clinical support included. Is TrimRx legit? Cost, pros & cons.",
+      "TrimRx (Trim Rx) reviews: {prices}, no contract, clinical support included. Is TrimRx legit? Pros and cons.",
   },
   shed: {
     title: "Shed Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
@@ -118,16 +118,16 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "Shed reviews: {prices}, with health coaching and a money-back guarantee. Is Shed legit and worth it? Pros & cons.",
   },
   directmeds: {
-    title: "DirectMeds Reviews 2026: Is It Legit? Cost, Results & Verdict",
+    title: "DirectMeds Reviews 2026: Is It Legit? Cost & Verdict",
     description:
       "DirectMeds reviews: {prices} flat at every dose, injections or drops, free 1-2 day shipping. Is it legit?",
   },
   wellmedr: {
     // Rebranded Oct 2026; the old name stays in the title so searches for
     // "wellmedr reviews" still match this page.
-    title: "welludr (formerly wellmedr) Reviews 2026: Legit? Cost & Verdict",
+    title: "welludr (formerly wellmedr) Reviews 2026: Cost & Verdict",
     description:
-      "welludr (formerly wellmedr) reviews: {prices}, used by 1M+ patients, weight-loss warranty. Is welludr legit? Cost, pros & cons.",
+      "welludr (formerly wellmedr) reviews: {prices}, 1M+ patients, weight-loss warranty. Is welludr legit? Pros and cons.",
   },
   healthrx: {
     title: "HealthRx Reviews 2026: Is It Legit? $99/mo GLP-1 Examined",
@@ -625,8 +625,16 @@ export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Me
   const verticalQualifier = SHARED_REVIEW_PROVIDER_IDS.includes(provider.id)
     ? ` ${VERTICALS.find((v) => v.id === ctx.vertical)?.name ?? ""}`.trimEnd() + " "
     : " ";
+  // Oct 25, 2026: keep every generated title within 60 characters (Ahrefs
+  // "title too long"); long names with a vertical qualifier step down to a
+  // shorter tail rather than overflowing.
+  const reviewTitleCandidates = [
+    `${provider.name}${verticalQualifier}Review 2026: Cost, Results & Is It Worth It?`,
+    `${provider.name}${verticalQualifier}Review 2026: Cost & Is It Worth It?`,
+    `${provider.name}${verticalQualifier}Review 2026: Cost & Verdict`,
+  ];
   const pageTitle =
-    override?.title ?? `${provider.name}${verticalQualifier}Review 2026: Cost, Results & Is It Worth It?`;
+    override?.title ?? (reviewTitleCandidates.find((t) => t.length <= 60) ?? reviewTitleCandidates[reviewTitleCandidates.length - 1]);
   const prices = ctx.vertical === "weight-loss" ? catalogPriceSnippet(provider.id) : "";
   const pageDescription = fillPrices(override?.description ?? review.shortSummary, prices);
 

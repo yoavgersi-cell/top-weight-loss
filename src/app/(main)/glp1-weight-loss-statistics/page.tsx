@@ -1,4 +1,5 @@
 import { pageReviewSchema } from "@/data/reviewers";
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideCluster } from "@/components/guide-cluster";
@@ -11,13 +12,13 @@ export const revalidate = 60;
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/glp1-weight-loss-statistics";
 const TITLE = "GLP-1 Price Index & Weight Loss Statistics (September 2026)";
 const DESCRIPTION =
-  "Dated, verified prices from 9 US telehealth providers for compounded semaglutide and tirzepatide, with a public change log - next to STEP, SURMOUNT and SCALE trial results.";
+  "Verified prices from 9 US telehealth providers for compounded semaglutide and tirzepatide, with a public change log, next to STEP and SURMOUNT trial results.";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL },
-  openGraph: {
+  openGraph: { images: [DEFAULT_OG_IMAGE],
     title: TITLE,
     description: DESCRIPTION,
     url: CANONICAL,

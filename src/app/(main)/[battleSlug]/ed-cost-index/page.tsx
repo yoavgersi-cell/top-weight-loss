@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import Link from "next/link";
 import { ShieldCheck, TrendingDown, TrendingUp, Layers, Quote } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -22,11 +23,11 @@ const VERTICAL_URL = `${SITE_URL}/ed`;
 const CANONICAL = `${VERTICAL_URL}/ed-cost-index`;
 
 export const metadata: Metadata = {
-  title: "ED Treatment Cost Index 2026: What ED Meds Actually Cost Online",
+  title: "ED Treatment Cost Index 2026: What ED Meds Cost Online",
   description:
     "A sourced index of what ED treatment costs online in 2026: generic pills, brand-name, compounded 4-in-1, nasal spray and injectables, per dose and per month.",
   alternates: { canonical: CANONICAL },
-  openGraph: {
+  openGraph: { images: [DEFAULT_OG_IMAGE],
     title: "ED Treatment Cost Index (2026)",
     description:
       "What ED treatment actually costs online in 2026 - generics, brand, compounded, nasal spray and injectables, compared per dose and per month.",

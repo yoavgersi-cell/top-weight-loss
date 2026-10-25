@@ -216,7 +216,7 @@ export const articles: Article[] = [
     // hair-loss vertical, on a genuinely huge cross-topic query. Medication-
     // level claims only, hedged where evidence is directional.
     slug: "ozempic-hair-loss",
-    title: "Does Ozempic Cause Hair Loss? What's Actually Happening (2026)",
+    title: "Does Ozempic Cause Hair Loss? What's Really Happening",
     description:
       "Hair shedding on Ozempic, Wegovy or Zepbound is usually telogen effluvium from rapid weight loss - and typically temporary. Why it happens and what helps.",
     category: "Science",
@@ -302,7 +302,7 @@ export const articles: Article[] = [
     slug: "ozempic-vs-wegovy-differences",
     image: "/article-images/articleimage5.webp",
     imageAlt: "An Ozempic (semaglutide) injection pen next to a Wegovy 2.4 mg (semaglutide) injection pen on a kitchen counter, comparing the two semaglutide brands",
-    title: "Ozempic vs Wegovy (2026): Same Drug, Different Uses - Full Guide",
+    title: "Ozempic vs Wegovy (2026): Same Drug, Different Uses",
     description:
       "Ozempic and Wegovy both contain semaglutide but aren't the same drug. FDA approvals, dosing, trial results - and verified prices from $49/month.",
     category: "Science",
@@ -360,7 +360,7 @@ export const articles: Article[] = [
     slug: "semaglutide-side-effects-guide",
     image: "/article-images/articleimage6.webp",
     imageAlt: "Woman sitting thoughtfully at a kitchen table with a laptop, notebook and coffee, reflecting on how to manage semaglutide side effects",
-    title: "Semaglutide Side Effects (2026): Complete Guide to Managing Them",
+    title: "Semaglutide Side Effects (2026): How to Manage Them",
     description:
       "Semaglutide side effects explained - how common they are, when they start, how long they last, the serious warnings, and practical ways to manage them.",
     category: "Guide",
@@ -470,7 +470,7 @@ export const articles: Article[] = [
     slug: "weight-loss-medication-cost-guide",
     title: "Weight Loss Medication Cost Guide (2026)",
     description:
-      "How much do GLP-1 weight loss medications cost in 2026? Full pricing for Ozempic, Wegovy, Mounjaro, Zepbound, and compounded alternatives with and without insurance.",
+      "GLP-1 weight loss medication costs in 2026: Ozempic, Wegovy, Mounjaro, Zepbound and compounded alternatives, with and without insurance.",
     category: "Advice",
     readTime: "8 min read",
     publishedAt: "2026-06-20",
@@ -654,7 +654,7 @@ export const articles: Article[] = [
     slug: "stopping-glp1-medication-what-happens",
     title: "What Happens When You Stop Taking GLP-1 Medication?",
     description:
-      "Thinking about discontinuing semaglutide or tirzepatide? Here's what the research shows about weight regain, how to taper safely, and how to maintain your results.",
+      "Thinking about stopping semaglutide or tirzepatide? What the research shows about weight regain, how to taper safely and how to maintain your results.",
     category: "Science",
     readTime: "7 min read",
     publishedAt: "2026-07-01",
@@ -1452,7 +1452,7 @@ export const articles: Article[] = [
     slug: "glp1-weight-loss-over-40",
     title: "GLP-1 Weight Loss After 40: A Complete Guide for 2026",
     description:
-      "Weight loss after 40 is harder due to metabolic changes. Here's how GLP-1 medications can help - what to expect, special considerations, and how to find a provider.",
+      "Weight loss after 40 is harder because of metabolic changes. How GLP-1 medications help, what to expect, special considerations and how to find a provider.",
     category: "Wellness",
     readTime: "7 min read",
     publishedAt: "2026-07-22",
@@ -2136,7 +2136,7 @@ export const articles: Article[] = [
   // preceded hair-loss becoming the first new vertical to earn impressions.
   {
     slug: "testosterone-and-weight-loss",
-    title: "Testosterone and Weight Loss: The Two-Way Link, Explained (2026)",
+    title: "Testosterone and Weight Loss: The Two-Way Link (2026)",
     description:
       "Low testosterone and excess weight feed each other - improving either can improve both. How the link works, what GLP-1 users should know, and when to test.",
     category: "Science",
@@ -2176,7 +2176,7 @@ export const articles: Article[] = [
   },
   {
     slug: "emotional-eating-and-weight-loss",
-    title: "Emotional Eating: When Therapy Helps More Than Medication (2026)",
+    title: "Emotional Eating: When Therapy Beats Medication (2026)",
     description:
       "GLP-1s quiet appetite but don't touch why you eat when you're not hungry. How emotional eating works, where medication stops, and when therapy fills the gap.",
     category: "Wellness",
@@ -2216,7 +2216,7 @@ export const articles: Article[] = [
   },
   {
     slug: "glp1-true-cost-month-1-vs-year-one",
-    title: "What Will I Really Pay for a GLP-1? Month 1 to Year One (2026)",
+    title: "What Will I Really Pay for a GLP-1? Month 1 to Year One",
     description:
       "The real cost of online GLP-1 treatment at verified prices: month 1, what you keep paying at your dose, and what year one adds up to, provider by provider.",
     category: "Guide",
@@ -2270,7 +2270,7 @@ export const articles: Article[] = [
   },
   {
     slug: "before-you-prepay-glp1",
-    title: "Before You Prepay for a GLP-1 Plan: 5 Refund Questions (2026)",
+    title: "Before You Prepay for a GLP-1 Plan: 5 Refund Questions",
     description:
       "Prepaid and 12-month GLP-1 plans cost less per month, but the money is paid before shipments arrive. Five questions to settle first, with reviewer reports.",
     category: "Guide",
@@ -2377,7 +2377,7 @@ export const articles: Article[] = [
   },
   {
     slug: "lost-insurance-coverage-zepbound-wegovy",
-    title: "Lost Insurance Coverage for Zepbound or Wegovy? Your Options in 2026",
+    title: "Lost Coverage for Zepbound or Wegovy? Your Options (2026)",
     description:
       "When a plan drops Zepbound or Wegovy, five routes remain: appeal, manufacturer savings, Medicare's $50 option, brand-name cash by telehealth, or compounded.",
     category: "Guide",
@@ -2432,7 +2432,7 @@ export const articles: Article[] = [
   },
   {
     slug: "503a-vs-503b-pharmacy-28-day-rule",
-    title: "503A vs 503B Pharmacies and the 28-Day Rule for Compounded GLP-1s",
+    title: "503A vs 503B Pharmacies & the 28-Day Rule for GLP-1s",
     description:
       "What 503A and 503B mean for compounded GLP-1s, why the shortage ending changed the rules, what the 28-day rule is, and how to spot a legitimate operation.",
     category: "Science",
@@ -2482,7 +2482,7 @@ export const articles: Article[] = [
   },
   {
     slug: "glp1-after-65-medicare",
-    title: "GLP-1s After 65: Medicare's $50 Option and What It Covers (2026)",
+    title: "GLP-1s After 65: Medicare's $50 Option Explained (2026)",
     description:
       "Medicare's GLP-1 Bridge pilot: a flat $50 a month for Wegovy, the Zepbound KwikPen and Foundayo through December 2027. Who qualifies and the cash alternatives.",
     category: "Guide",
@@ -2592,7 +2592,7 @@ export const articles: Article[] = [
   },
   {
     slug: "foundayo-vs-wegovy-pill",
-    title: "Foundayo vs the Wegovy Pill (2026): Results, Price and How to Choose",
+    title: "Foundayo vs Wegovy Pill (2026): Results, Price & Choice",
     description:
       "The two FDA-approved GLP-1 pills compared: trial results, the empty-stomach rule only one has, prices from $149, $25 insurance offers and Medicare's $50 copay.",
     category: "Guide",

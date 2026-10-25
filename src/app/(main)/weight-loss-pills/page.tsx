@@ -1,4 +1,5 @@
 import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -42,12 +43,12 @@ const HERO_COLOR = "#EEF4F1";
 const READ_TIME = "17 min read";
 
 export const metadata: Metadata = {
-  title: "Weight Loss Pills 2026: Wegovy Pill, Foundayo, Rybelsus & More",
+  title: "Weight Loss Pills 2026: Wegovy Pill, Foundayo & More",
   description:
-    "Prescription weight loss pills in 2026: the FDA-approved GLP-1 pills (Wegovy pill, Foundayo, Rybelsus), Qsymia, Contrave, phentermine, orlistat and compounded oral options.",
+    "Prescription weight loss pills in 2026: FDA-approved GLP-1 pills (Wegovy pill, Foundayo, Rybelsus), Qsymia, Contrave, phentermine and compounded options.",
   alternates: { canonical: CANONICAL },
-  openGraph: {
-    title: "Weight Loss Pills 2026: Wegovy Pill, Foundayo, Rybelsus & More",
+  openGraph: { images: [DEFAULT_OG_IMAGE],
+    title: "Weight Loss Pills 2026: Wegovy Pill, Foundayo & More",
     description:
       "Every prescription weight loss pill, compared: the FDA-approved GLP-1 pills, the older approved pills, compounded oral options, results, prices and safety.",
     url: CANONICAL,

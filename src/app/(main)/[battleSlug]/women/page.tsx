@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ComparisonLayout } from "@/components/comparison-layout";
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   description:
     "Compare the best hair loss treatments for women in 2026: Hers, Nutrafol and Happy Head on minoxidil, drug-free options, medical support and value.",
   alternates: { canonical: CANONICAL },
-  openGraph: {
+  openGraph: { images: [DEFAULT_OG_IMAGE],
     title: "Best Hair Loss Treatments for Women 2026: Top Providers",
     description:
       "Compare the best women's hair loss treatments of 2026 - top providers ranked by treatments, support and value.",

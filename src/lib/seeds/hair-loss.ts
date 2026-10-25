@@ -226,7 +226,7 @@ const reviews: ReviewData[] = [
     slug: "maximus",
     providerId: "maximus",
     shortSummary:
-      "Doctor-prescribed hair-loss treatment for men - oral finasteride, minoxidil and dutasteride plus a compounded topical formula - reviewed by board-certified doctors and delivered to your door.",
+      "Doctor-prescribed hair-loss treatment for men: oral finasteride, minoxidil and dutasteride plus a compounded topical formula, delivered to your door.",
     reviewIntro:
       "Maximus offers personalized, doctor-prescribed hair-loss treatment for men, spanning oral finasteride, oral minoxidil and oral dutasteride, as well as a compounded topical formula (dutasteride, minoxidil, tretinoin and fexofenadine). You complete a short medical questionnaire, a board-certified doctor reviews whether the protocol is appropriate, and approved medication ships free and discreetly. This review covers what Maximus offers, how it works, and who it fits.",
     keyFeatures: [
@@ -274,7 +274,7 @@ const reviews: ReviewData[] = [
     slug: "happyhead",
     providerId: "happyhead",
     shortSummary:
-      "Dermatologist-founded telehealth offering personalized prescription hair-loss formulas - custom topical and oral options with established hair-loss actives - for both men and women.",
+      "Dermatologist-founded telehealth with personalized prescription hair-loss formulas: custom topical and oral options with proven actives, for men and women.",
     reviewIntro:
       "Happy Head is a dermatologist-founded telehealth service (based in Santa Monica, California) built around personalized prescription hair-loss formulas for men and women. Its customizable topical solutions and oral options combine established hair-loss actives - topical minoxidil and finasteride (FDA-approved for hair loss), plus dutasteride and spironolactone used off-label under medical supervision - and its topical serums go up to 8% minoxidil, above the 5% typical of over-the-counter products. A free online consultation is included, and prescription products are reviewed by Happy Head's dermatologists.",
     keyFeatures: [
@@ -320,7 +320,7 @@ const reviews: ReviewData[] = [
     slug: "petermd",
     providerId: "petermd",
     shortSummary:
-      "Physician-prescribed men's hair-loss treatment - finasteride 1mg from $60 per 30 tablets, and Follicure RX, a 3-in-1 topical combining minoxidil, finasteride and ketoconazole.",
+      "Physician-prescribed men's hair-loss treatment: finasteride 1mg from $60 per 30 tablets and Follicure RX, a 3-in-1 topical with minoxidil and finasteride.",
     reviewIntro:
       "PeterMD is a men's telehealth clinic whose hair-loss line centers on two things: oral finasteride 1mg, and Follicure RX - a prescription topical spray that combines minoxidil, finasteride and ketoconazole in one daily formula. Treatment is physician-prescribed, shipped discreetly to your door, and priced openly: finasteride from $60 per 30 tablets (regularly $74) and the Follicure RX spray at $70 per 50mL bottle (regularly $80). This review covers the lineup, the verified prices and who it fits.",
     keyFeatures: [
@@ -992,7 +992,7 @@ const battles: BattleData[] = [
     matchupLabel: "Happy Head vs PeterMD",
     subtitle: "Dermatologist-personalized compounds vs a focused finasteride + 3-in-1 topical lineup.",
     description:
-      "Happy Head (custom topical & SuperCapsule, $49 first order, reg $89/mo) vs PeterMD (finasteride from $60/30 tablets, Follicure RX $70). Verified prices, honest trade-offs.",
+      "Happy Head (custom topical and SuperCapsule, $49 first order, reg $89/mo) vs PeterMD (finasteride from $60 per 30 tablets, Follicure RX $70). Verified prices.",
     intro:
       "Happy Head and PeterMD sell opposite philosophies at similar sticker prices. Happy Head compounds personalized formulas after a dermatologist-directed review - its Custom Topical runs dutasteride 0.3% with 8% minoxidil, its SuperCapsule pairs dutasteride with oral minoxidil, and both are $49 on the first order (regularly $89/month). PeterMD keeps it off the shelf: standard finasteride 1mg from $60 per 30 tablets, and the Follicure RX spray combining minoxidil, finasteride and ketoconazole at $70 per bottle. Both publish real prices, which is exactly why this comparison can be honest.",
     verdict:
@@ -1061,7 +1061,7 @@ const battles: BattleData[] = [
     matchupLabel: "Hims vs Keeps",
     subtitle: "The two best-known names in online hair loss, compared honestly",
     description:
-      "Hims vs Keeps for hair loss: how the two most recognizable telehealth brands compare on focus, treatment range and experience - and the verified-price alternatives worth checking first.",
+      "Hims vs Keeps for hair loss: how the two best-known telehealth brands compare on focus, treatment range and experience, plus verified-price alternatives.",
     intro:
       "Hims and Keeps are the two names most men run into first when they look for hair loss treatment online. They share the same backbone - an online visit, a licensed provider review, and the standard prescriptions (finasteride and minoxidil) shipped to your door. The real difference is focus: Keeps does hair and only hair, while Hims is a broad men's health platform where hair is one product line among many. Neither publishes pricing we have verified on our pages, so this comparison sticks to what's structural - and points you to the providers whose prices we have checked.",
     verdict:
@@ -1167,7 +1167,7 @@ const articles: ArticleData[] = [
     slug: "iron-deficiency-hair-loss",
     title: "Iron Deficiency and Hair Loss: The Link, Explained (2026)",
     description:
-      "Low iron is one of the most common - and most fixable - causes of hair shedding, especially in women. How the link works, the blood test that settles it, and what recovery looks like.",
+      "Low iron is one of the most common and most fixable causes of hair shedding, especially in women. How the link works, the test that settles it, and recovery.",
     category: "Science",
     readTime: "7 min read",
     publishedAt: "2026-08-30",
@@ -1207,7 +1207,7 @@ const articles: ArticleData[] = [
     slug: "do-hair-loss-shampoos-work",
     title: "Do Hair Loss Shampoos Actually Work? An Honest Answer (2026)",
     description:
-      "Shampoo spends seconds on your scalp - here's what that can and can't do for hair loss, which ingredient has real supporting evidence, and where regrowth actually comes from.",
+      "Shampoo spends seconds on your scalp. What that can and can't do for hair loss, which ingredient has real evidence, and where regrowth actually comes from.",
     category: "Advice",
     readTime: "6 min read",
     publishedAt: "2026-08-30",
@@ -1241,7 +1241,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "veradermics-vdphl01",
-    title: "Veradermics' VDPHL01: The Hair Loss Pill Everyone's Searching (2026)",
+    title: "Veradermics VDPHL01: The Hair Loss Pill Everyone Wants",
     description:
       "VDPHL01, an extended-release oral minoxidil in late-stage trials, could be the first FDA-approved oral minoxidil for hair loss. What is known so far.",
     category: "Science",
@@ -1282,7 +1282,7 @@ const articles: ArticleData[] = [
   // verified providers.
   {
     slug: "hims-alternatives",
-    title: "Best Hims Alternatives for Hair Loss in 2026 (Verified Prices)",
+    title: "Best Hims Alternatives for Hair Loss in 2026",
     description:
       "The best Hims alternatives for hair loss in 2026: Maximus from $24.99/month, Happy Head's custom formulas from $49, PeterMD's flat pricing - verified.",
     category: "Advice",
@@ -1320,7 +1320,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "keeps-alternatives",
-    title: "Best Keeps Alternatives for Hair Loss in 2026 (Verified Prices)",
+    title: "Best Keeps Alternatives for Hair Loss in 2026",
     description:
       "The best Keeps alternatives in 2026: Maximus from $24.99/month, Happy Head's personalized formulas from $49, PeterMD's flat finasteride - verified.",
     category: "Advice",
@@ -1365,7 +1365,7 @@ const articles: ArticleData[] = [
     slug: "oral-minoxidil-online",
     title: "Oral Minoxidil for Hair Loss: How to Get It Online in 2026",
     description:
-      "Oral minoxidil for hair loss explained: how low-dose minoxidil pills are prescribed online, how they differ from the topical, and verified pricing from $24.99/month at Maximus.",
+      "Oral minoxidil for hair loss: how low-dose pills are prescribed online, how they differ from the topical, and verified pricing from $24.99/month at Maximus.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-08-28",
@@ -1397,9 +1397,9 @@ const articles: ArticleData[] = [
   },
   {
     slug: "topical-finasteride",
-    title: "Topical Finasteride in 2026: What It Is & Who Sells It Online",
+    title: "Topical Finasteride (2026): What It Is & Who Sells It",
     description:
-      "Topical finasteride explained: how the compounded scalp version differs from the pill, what's actually known, and the verified option online - PeterMD's Follicure RX 3-in-1 spray at $70.",
+      "Topical finasteride: how the compounded scalp version differs from the pill, what's known, and the verified option online, PeterMD's Follicure RX at $70.",
     category: "Guide",
     readTime: "5 min read",
     publishedAt: "2026-08-28",
@@ -1429,7 +1429,7 @@ const articles: ArticleData[] = [
     slug: "how-to-get-finasteride-online",
     title: "How to Get Finasteride Online in 2026 (Verified Prices)",
     description:
-      "How to get finasteride prescribed online in 2026: the legitimate 3-step telehealth route and verified prices - $34.99/month at Maximus, $60 per 30 tablets at PeterMD.",
+      "How to get finasteride prescribed online in 2026: the legitimate 3-step telehealth route and verified prices, $34.99/month at Maximus, $60 per 30 at PeterMD.",
     category: "Guide",
     readTime: "5 min read",
     publishedAt: "2026-08-28",
@@ -1459,7 +1459,7 @@ const articles: ArticleData[] = [
     slug: "dutasteride-online",
     title: "Dutasteride for Hair Loss: How to Get It Online in 2026",
     description:
-      "Dutasteride for hair loss: how the stronger DHT blocker is prescribed off-label online, and verified prices - $34.99/month at Maximus, in Happy Head's custom formulas from $49.",
+      "Dutasteride for hair loss: how the stronger DHT blocker is prescribed off-label online, and verified prices, $34.99/month at Maximus and from $49 at Happy Head.",
     category: "Guide",
     readTime: "5 min read",
     publishedAt: "2026-08-28",
@@ -1489,7 +1489,7 @@ const articles: ArticleData[] = [
     slug: "hair-loss-treatment-cost",
     title: "Hair Loss Treatment Cost in 2026 (Verified Prices)",
     description:
-      "What hair loss treatment actually costs online in 2026: verified published prices from $24.99/month - every plan at Maximus, Happy Head and PeterMD, compared honestly.",
+      "What hair loss treatment costs online in 2026: verified published prices from $24.99/month, every plan at Maximus, Happy Head and PeterMD, compared honestly.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-08-28",
@@ -1519,7 +1519,7 @@ const articles: ArticleData[] = [
     slug: "finasteride-and-minoxidil-together",
     title: "Can You Take Finasteride and Minoxidil Together?",
     description:
-      "Finasteride and minoxidil work through different mechanisms and are commonly combined under medical guidance. How the combo works, and verified combo options from $59.99/month.",
+      "Finasteride and minoxidil work through different mechanisms and are often combined under medical guidance. How the combo works, and options from $59.99.",
     category: "Guide",
     readTime: "5 min read",
     publishedAt: "2026-08-28",
@@ -1553,7 +1553,7 @@ const articles: ArticleData[] = [
     slug: "is-maximus-legit",
     title: "Is Maximus Legit? An Honest Maximus Hair Loss Review (2026)",
     description:
-      "Is Maximus legit for hair loss? A clear look at Maximus' doctor-prescribed oral and topical treatments, real published prices from $24.99/mo, its 4.4 Trustpilot rating, and the pros and cons.",
+      "Is Maximus legit for hair loss? Its doctor-prescribed oral and topical treatments, published prices from $24.99/mo, a 4.4 Trustpilot rating, and the verdict.",
     category: "Advice",
     readTime: "6 min read",
     publishedAt: "2026-08-24",
@@ -1589,7 +1589,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "maximus-cost",
-    title: "Maximus Hair Loss Cost: Full 2026 Price List (From $24.99/mo)",
+    title: "Maximus Hair Loss Cost: 2026 Price List From $24.99/mo",
     description:
       "Maximus cost, verified for 2026: oral minoxidil $24.99/mo, finasteride $34.99, dutasteride $34.99, All-in-One Gel $64.99 - plus how 90-day billing works.",
     category: "Advice",
@@ -1667,7 +1667,7 @@ const articles: ArticleData[] = [
     slug: "is-petermd-legit",
     title: "Is PeterMD Legit for Hair Loss? An Honest Review (2026)",
     description:
-      "Is PeterMD legit? A clear look at its physician-prescribed hair-loss line - finasteride from $60/30 tablets and the Follicure RX 3-in-1 topical - with verified prices and honest pros and cons.",
+      "Is PeterMD legit? Its physician-prescribed hair-loss line: finasteride from $60 per 30 tablets and the Follicure RX 3-in-1 topical. Verified prices and verdict.",
     category: "Advice",
     readTime: "5 min read",
     publishedAt: "2026-08-24",
@@ -1701,7 +1701,7 @@ const articles: ArticleData[] = [
     slug: "petermd-cost",
     title: "PeterMD Hair Loss Cost: 2026 Prices (Finasteride From $60)",
     description:
-      "How much does PeterMD cost for hair loss? Verified 2026 prices: finasteride 1mg $60/30 tablets (reg $74), $90/60 (reg $110), Follicure RX 3-in-1 spray $70 (reg $80) - and how it compares.",
+      "How much does PeterMD cost for hair loss? Verified 2026 prices: finasteride 1mg $60 per 30 tablets (reg $74), $90 per 60, Follicure RX spray $70 (reg $80).",
     category: "Advice",
     readTime: "4 min read",
     publishedAt: "2026-08-24",
@@ -1795,7 +1795,7 @@ const articles: ArticleData[] = [
     slug: "happyhead-cost",
     title: "Happy Head Cost 2026: $49 First Order, $89 After",
     description:
-      "How much does Happy Head cost? Verified 2026 pricing: Custom Topical and SuperCapsule $49 first order (reg $89/mo), Dual Action Bundle $98 (reg $178), 20% subscribe savings - and how it compares.",
+      "Happy Head cost, verified for 2026: Custom Topical and SuperCapsule $49 first order (reg $89/mo), Dual Action Bundle $98 (reg $178), 20% off when you subscribe.",
     category: "Advice",
     readTime: "5 min read",
     publishedAt: "2026-08-24",
@@ -1829,7 +1829,7 @@ const articles: ArticleData[] = [
     slug: "happyhead-alternatives",
     title: "Best Happy Head Alternatives in 2026 (Compared Honestly)",
     description:
-      "Looking for a Happy Head alternative? Compare Maximus, Hims, Keeps and Ro on treatments, verified pricing and fit - including the honest answer on options for women.",
+      "Looking for a Happy Head alternative? Compare Maximus, Hims, Keeps and Ro on treatments, verified pricing and fit, including the honest answer for women.",
     category: "Advice",
     readTime: "5 min read",
     publishedAt: "2026-08-24",
@@ -1995,7 +1995,7 @@ const articles: ArticleData[] = [
     slug: "best-online-hair-loss-treatment",
     title: "Best Online Hair Loss Treatment: How to Choose (2026)",
     description:
-      "How online hair-loss treatment works, what to look for in a telehealth provider, and how the top options compare on treatments, personalization and who they serve.",
+      "How online hair-loss treatment works, what to look for in a telehealth provider, and how the top options compare on treatments, personalization and fit.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-06-26",
@@ -2057,7 +2057,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "dutasteride-vs-finasteride",
-    title: "Dutasteride vs Finasteride for Hair Loss: What's the Difference?",
+    title: "Dutasteride vs Finasteride for Hair Loss: The Difference",
     description:
       "Dutasteride blocks more DHT than finasteride - but is stronger better? How the two compare on effectiveness, side effects, and who each is right for.",
     category: "Comparison",
@@ -2091,7 +2091,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "does-creatine-cause-hair-loss",
-    title: "Does Creatine Cause Hair Loss? What the Science Actually Says",
+    title: "Does Creatine Cause Hair Loss? What the Science Says",
     description:
       "The creatine-hair loss fear traces back to a single small study. What that study found, what's been shown since, and what actually drives thinning.",
     category: "Science",
@@ -2161,7 +2161,7 @@ const articles: ArticleData[] = [
     slug: "finasteride-side-effects",
     title: "Finasteride Side Effects: What's Common & What's Rare",
     description:
-      "An honest look at finasteride's side effects - how often sexual side effects actually occur in studies, what usually happens if you stop, and who should avoid it.",
+      "An honest look at finasteride's side effects: how often sexual side effects occur in studies, what usually happens if you stop, and who should avoid it.",
     category: "Science",
     readTime: "6 min read",
     publishedAt: "2026-08-09",
@@ -2193,7 +2193,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "receding-hairline-treatment",
-    title: "Receding Hairline: Early Signs, Norwood Stages & How to Stop It",
+    title: "Receding Hairline: Early Signs, Stages & How to Stop It",
     description:
       "Maturing hairline or early Norwood? How to tell, why the temples go first, and the treatments with real evidence for stopping a receding hairline.",
     category: "Guide",
@@ -2303,7 +2303,7 @@ const articles: ArticleData[] = [
     slug: "norwood-scale",
     title: "The Norwood Scale: Stages of Male Pattern Baldness (2026)",
     description:
-      "The Norwood scale is how clinicians describe male pattern hair loss, from a maturing hairline to advanced balding. What each stage looks like, why it matters for treatment, and why earlier is easier.",
+      "The Norwood scale is how clinicians describe male pattern hair loss, from a maturing hairline to advanced balding. Each stage, and why earlier is easier.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-09-08",
@@ -2337,9 +2337,9 @@ const articles: ArticleData[] = [
   },
   {
     slug: "dht-and-hair-loss",
-    title: "DHT and Hair Loss: The Hormone Behind Male Pattern Balding (2026)",
+    title: "DHT and Hair Loss: The Hormone Behind Male Balding",
     description:
-      "Male pattern hair loss is driven by DHT, a testosterone byproduct that shrinks sensitive follicles. What DHT is, why it thins hair, and why the main treatments are built around blocking it.",
+      "Male pattern hair loss is driven by DHT, a testosterone byproduct that shrinks sensitive follicles. What DHT is, why it thins hair, and why treatments block it.",
     category: "Science",
     readTime: "6 min read",
     publishedAt: "2026-09-08",
@@ -2375,7 +2375,7 @@ const articles: ArticleData[] = [
     slug: "hair-transplant-vs-medication",
     title: "Hair Transplant vs Medication: Which Comes First? (2026)",
     description:
-      "A transplant moves hair; medication protects it. Why they solve different problems, why medication almost always comes first, and why a transplant without ongoing treatment often disappoints.",
+      "A transplant moves hair; medication protects it. Why they solve different problems, why medication comes first, and why a transplant alone often disappoints.",
     category: "Comparison",
     readTime: "7 min read",
     publishedAt: "2026-09-08",
@@ -2409,7 +2409,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "microneedling-for-hair-loss",
-    title: "Microneedling for Hair Loss: Does a Derma Roller Work? (2026)",
+    title: "Microneedling for Hair Loss: Does a Derma Roller Work?",
     description:
       "What the evidence genuinely supports for microneedling, why it is an add-on rather than a standalone fix, and the safety caveats before you start.",
     category: "Advice",
@@ -2445,7 +2445,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "saw-palmetto-hair-loss",
-    title: "Saw Palmetto for Hair Loss: What the Evidence Actually Shows (2026)",
+    title: "Saw Palmetto for Hair Loss: What the Evidence Shows",
     description:
       "Saw palmetto is marketed as a natural DHT blocker. The evidence is weaker and less consistent than finasteride's, and why we don't recommend it as a substitute.",
     category: "Advice",
@@ -2481,7 +2481,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "menopause-hair-loss",
-    title: "Menopause and Hair Loss: Why It Happens and What Helps (2026)",
+    title: "Menopause and Hair Loss: Why It Happens and What Helps",
     description:
       "Why the menopause hormone shift thins women's hair, how it differs from male pattern loss, and the hormonal and hair-specific treatments that help.",
     category: "Science",
@@ -2519,7 +2519,7 @@ const articles: ArticleData[] = [
     slug: "does-finasteride-lower-testosterone",
     title: "Does Finasteride Lower Testosterone? (2026 Evidence Review)",
     description:
-      "The most common fear about finasteride, answered honestly. Why finasteride lowers DHT - not testosterone - and can even nudge testosterone slightly up, plus where the real side-effect questions lie.",
+      "The most common finasteride fear, answered: it lowers DHT, not testosterone, and can nudge testosterone slightly up. Where the real side-effect questions lie.",
     category: "Science",
     readTime: "6 min read",
     publishedAt: "2026-09-08",
@@ -2567,7 +2567,7 @@ export function hairLossSeed(base: SiteConfig): SiteConfig {
       h1: "Best Hair Loss Treatments & Providers of 2026",
       h2: "Compare the top hair-loss telehealth providers, side by side",
       description:
-        "Compare the best online hair-loss providers - finasteride, minoxidil, dutasteride and doctor-led regrowth programs - on treatment options, medical support, and overall value.",
+        "Compare the best online hair-loss providers (finasteride, minoxidil, dutasteride and doctor-led regrowth programs) on treatments, medical support and value.",
     },
     // Oct 22, 2026: Nutrafol joins (unranked) from the tophairloss.io port, for
     // the Nutrafol comparisons and the women's hub.

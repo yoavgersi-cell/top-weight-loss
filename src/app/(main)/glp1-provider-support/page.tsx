@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import Link from "next/link";
 import { ArrowUpRight, MessageSquareQuote, ShieldCheck } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -108,13 +109,13 @@ export async function generateMetadata(): Promise<Metadata> {
   const config = await getConfig("weight-loss");
   const rows = buildRows(config.providers);
   const total = rows.reduce((s, r) => s + r.n, 0);
-  const title = `GLP-1 Provider Support Compared: ${total} Trustpilot Reviews (2026)`;
+  const title = `GLP-1 Provider Support: ${total} Trustpilot Reviews (2026)`;
   const description = `Which online GLP-1 providers get praised or criticised for support, shipping and billing, from 232 Trustpilot reviews captured verbatim across 11 providers.`;
   return {
     title,
     description,
     alternates: { canonical: CANONICAL },
-    openGraph: { title, description, url: CANONICAL, type: "article" },
+    openGraph: { images: [DEFAULT_OG_IMAGE], title, description, url: CANONICAL, type: "article" },
   };
 }
 

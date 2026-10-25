@@ -213,7 +213,7 @@ const reviews: ReviewData[] = [
     slug: "betterhelp",
     providerId: "betterhelp",
     shortSummary:
-      "The largest online-therapy platform: weekly live sessions plus ongoing messaging, now with insurance accepted - copays from around $23/session for covered members. Therapy only - no psychiatry.",
+      "The largest online-therapy platform: weekly live sessions plus messaging, insurance accepted with copays from about $23/session. Therapy only, no psychiatry.",
     reviewIntro:
       "BetterHelp is the biggest name in online therapy - a subscription platform that matches you with a licensed therapist for weekly live sessions (video, phone or live chat, your choice) plus messaging between sessions. BetterHelp itself reports 31,739 therapists on the platform and more than 6.6 million people helped - those are its own numbers, but the scale is real, and it shows in how fast matching and re-matching work. On Trustpilot it holds 3.9 across 9,652 reviews - solid, but the mixed band, not the stellar one; praise for accessibility and therapist quality runs alongside fit and billing complaints. It's talk therapy only - no psychiatry or medication management - but the old no-insurance knock is out of date: BetterHelp now accepts insurance, with copays cited from around $23/session for covered members, alongside self-pay subscriptions (commonly with a first-month discount) and a financial-aid questionnaire. Self-pay cost still varies by location and we haven't verified current rates, so confirm your number - covered or not - at signup. One more thing an honest review can't skip: in 2023 BetterHelp settled with the FTC over sharing user data with advertisers - the company has since updated its practices, but if data privacy is a top concern for you, read its current privacy policy before signing up.",
     keyFeatures: [
@@ -293,7 +293,7 @@ const reviews: ReviewData[] = [
     slug: "headspace",
     providerId: "headspace",
     shortSummary:
-      "The best-known mindfulness app - guided meditation, sleep and stress tools - which now also offers online therapy that accepts insurance. The app is daily practice, not treatment.",
+      "The best-known mindfulness app, with meditation, sleep and stress tools, now also offering online therapy that takes insurance. Practice, not treatment.",
     reviewIntro:
       "Headspace is the app that took meditation mainstream: guided sessions for stress, focus and sleep, structured courses, sleepcasts, and lately Ebb, an AI companion - all in a famously well-designed subscription app that Headspace says has passed 105 million downloads. Two honest lines have to be drawn. First, the app is mental fitness, not mental-health treatment - but Headspace now also offers actual online therapy that accepts insurance, with a coverage check on its site (HSA/FSA eligible too), alongside the coaching and EAP services it sells through employers. Second, its Trustpilot profile stands at just 1.5 across 770 reviews - a strikingly low number for so popular an app, and we show it as-is; weigh it alongside the app-store popularity Headspace cites, and read recent reviews yourself before subscribing. We haven't verified current pricing for the app or therapy; both are on Headspace's site.",
     keyFeatures: [
@@ -513,7 +513,7 @@ const battles: BattleData[] = [
     matchupLabel: "Headspace vs BetterHelp",
     subtitle: "A daily mindfulness practice vs licensed talk therapy - different tools that people keep cross-shopping.",
     description:
-      "Headspace vs BetterHelp: one is a meditation and sleep app, the other is licensed therapy with a real clinician. An honest guide to which you actually need - and when the answer is both.",
+      "Headspace vs BetterHelp: one is a meditation and sleep app, the other licensed therapy with a real clinician. Which you need, and when the answer is both.",
     intro:
       "People compare Headspace and BetterHelp constantly, and the honest answer starts with naming the category difference: Headspace's core product is a mindfulness app - guided meditation, sleep content, stress tools - while BetterHelp is licensed therapy with a real clinician. The line has blurred a little: Headspace now also sells online therapy that accepts insurance, per its own site. But the products remain different at heart - one builds a daily practice, the other treats what you're going through with a professional - and the comparison still turns on one question: is what you need right now a habit or a therapist? Worth weighing too: BetterHelp holds 3.9 on Trustpilot across 9,652 reviews, while Headspace's profile sits at a strikingly low 1.5 across 770.",
     verdict:
@@ -583,9 +583,9 @@ const articles: ArticleData[] = [
   // knowledge with provider-decides framing.
   {
     slug: "online-therapy-reddit",
-    title: "Online Therapy According to Reddit: What Real Users Say (2026)",
+    title: "Online Therapy According to Reddit: What Users Say (2026)",
     description:
-      "We collected real Reddit comments on BetterHelp, Talkspace and Talkiatry - the praise and the complaints, quoted as written. What the threads agree on, and what to check before you book.",
+      "Real Reddit comments on BetterHelp, Talkspace and Talkiatry, praise and complaints quoted as written. What the threads agree on and what to check first.",
     category: "Advice",
     readTime: "7 min read",
     publishedAt: "2026-08-31",
@@ -625,7 +625,7 @@ const articles: ArticleData[] = [
     slug: "cbt-online",
     title: "CBT Online: What It Is & Why Every Platform Offers It (2026)",
     description:
-      "Cognitive behavioral therapy is the approach most online platforms are built around. What CBT actually involves, why it translates so well to video and messaging, and how to start online.",
+      "CBT is the approach most online platforms are built around. What it involves, why it translates so well to video and messaging, and how to start online.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-08-31",
@@ -661,7 +661,7 @@ const articles: ArticleData[] = [
     slug: "online-therapy-that-takes-insurance",
     title: "Online Therapy That Takes Insurance (2026 Guide)",
     description:
-      "Which online mental-health platforms take insurance, how coverage actually works, and how to check your plan in minutes - Talkspace and Talkiatry lead, and BetterHelp sits it out.",
+      "Which online mental-health platforms take insurance, how coverage works, and how to check your plan in minutes, with Talkspace and Talkiatry leading.",
     category: "Advice",
     readTime: "7 min read",
     publishedAt: UPDATED,
@@ -729,7 +729,7 @@ const articles: ArticleData[] = [
     slug: "online-therapy-with-medication",
     title: "Online Therapy With Medication Management: Your 2026 Options",
     description:
-      "Which online platforms offer psychiatry alongside therapy, how medication management works via telehealth, and what it can't do remotely - Talkiatry and Talkspace compared.",
+      "Which online platforms offer psychiatry alongside therapy, how medication management works by telehealth, and what it can't do remotely. Talkiatry vs Talkspace.",
     category: "Advice",
     readTime: "7 min read",
     publishedAt: UPDATED,
@@ -761,9 +761,9 @@ const articles: ArticleData[] = [
   },
   {
     slug: "how-to-choose-an-online-therapy-platform",
-    title: "How to Choose an Online Therapy Platform in 2026 (4 Questions)",
+    title: "How to Choose an Online Therapy Platform: 4 Questions",
     description:
-      "Four questions that sort the online mental-health market: insurance, medication, therapy vs daily practice, and format - mapped honestly to BetterHelp, Talkspace, Headspace and Talkiatry.",
+      "Four questions that sort the online mental-health market: insurance, medication, therapy vs daily practice, and format, mapped to the main platforms.",
     category: "Advice",
     readTime: "6 min read",
     publishedAt: UPDATED,
@@ -793,7 +793,7 @@ const articles: ArticleData[] = [
     slug: "free-and-low-cost-therapy-options",
     title: "Free Online Therapy: The Options That Actually Exist (2026)",
     description:
-      "Real routes to affordable mental-health support - EAPs, community clinics, sliding-scale therapists, training clinics, support lines - and where the online platforms fit in.",
+      "Affordable mental-health support: EAPs, community clinics, sliding-scale therapists, training clinics and support lines, and where the online platforms fit in.",
     category: "Advice",
     readTime: "8 min read",
     publishedAt: UPDATED,
@@ -827,7 +827,7 @@ const articles: ArticleData[] = [
     slug: "does-betterhelp-take-insurance",
     title: "Does BetterHelp Take Insurance? Yes - Here's How",
     description:
-      "BetterHelp now accepts insurance, with copays cited from around $23/session for covered members. How coverage works, what self-pay costs depend on, and how it compares to Talkspace.",
+      "BetterHelp now accepts insurance, with copays cited from around $23/session. How coverage works, what self-pay depends on, and how it compares to Talkspace.",
     category: "Advice",
     readTime: "6 min read",
     publishedAt: UPDATED,
@@ -867,7 +867,7 @@ const articles: ArticleData[] = [
     slug: "is-betterhelp-legit",
     title: "Is BetterHelp Legit in 2026? The Honest Answer",
     description:
-      "BetterHelp is legitimate - licensed therapists, 9,652 Trustpilot reviews averaging 3.9, and insurance now accepted. The honest answer also covers the FTC settlement and what real users say.",
+      "BetterHelp is legitimate: licensed therapists, 9,652 Trustpilot reviews averaging 3.9, insurance now accepted. The honest answer covers the FTC settlement too.",
     category: "Advice",
     readTime: "7 min read",
     publishedAt: UPDATED,
@@ -951,7 +951,7 @@ const articles: ArticleData[] = [
     slug: "is-talkiatry-legit",
     title: "Is Talkiatry Legit in 2026? The Honest Answer",
     description:
-      "Talkiatry is a legitimate psychiatrist-led practice billed through insurance - and its 2.5 Trustpilot average is real too. What the split record means and how to protect yourself when booking.",
+      "Talkiatry is a legitimate psychiatrist-led practice billed through insurance, and its 2.5 Trustpilot average is real too. What the split record means for you.",
     category: "Advice",
     readTime: "7 min read",
     publishedAt: UPDATED,
@@ -991,7 +991,7 @@ const articles: ArticleData[] = [
     slug: "how-much-does-betterhelp-cost",
     title: "How Much Does BetterHelp Cost Per Month? (2026)",
     description:
-      "BetterHelp has no single price: insured members see copays cited from ~$23/session, self-pay varies by location, and financial aid cuts it further. The honest cost breakdown.",
+      "BetterHelp has no single price: insured members see copays cited from ~$23/session, self-pay varies by location, and financial aid cuts it further.",
     category: "Advice",
     readTime: "6 min read",
     publishedAt: UPDATED,
@@ -1033,9 +1033,9 @@ const articles: ArticleData[] = [
   },
   {
     slug: "online-couples-therapy",
-    title: "Online Couples Therapy in 2026: Options, Costs & How It Works",
+    title: "Online Couples Therapy 2026: Options, Costs & How It Works",
     description:
-      "Where to actually get online couples therapy in 2026 - BetterHelp's couples offering and Talkspace's couples plans compared honestly, plus what remote sessions can and can't do.",
+      "Where to get online couples therapy in 2026: BetterHelp's couples offering and Talkspace's couples plans compared, plus what remote sessions can and can't do.",
     category: "Advice",
     readTime: "6 min read",
     publishedAt: UPDATED,
@@ -1085,7 +1085,7 @@ const articles: ArticleData[] = [
     slug: "does-online-therapy-work",
     title: "Does Online Therapy Work? What the Evidence Shows (2026)",
     description:
-      "The research generally finds online therapy comparable to in-person for many common concerns - but 'it works' comes with real caveats about fit, format and severity. The honest picture.",
+      "Research generally finds online therapy comparable to in-person for many common concerns, but 'it works' comes with real caveats about fit, format and severity.",
     category: "Advice",
     readTime: "6 min read",
     publishedAt: "2026-09-08",
@@ -1119,9 +1119,9 @@ const articles: ArticleData[] = [
   },
   {
     slug: "therapy-vs-psychiatry",
-    title: "Therapist vs Psychiatrist: Therapy, Medication or Both? (2026)",
+    title: "Therapist vs Psychiatrist: Therapy, Medication or Both?",
     description:
-      "Therapists do talk therapy; psychiatrists diagnose and prescribe medication. How to tell which you need, why many people benefit from both, and where each fits online.",
+      "Therapists do talk therapy; psychiatrists diagnose and prescribe medication. How to tell which you need, why many benefit from both, and where each fits online.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-09-08",
@@ -1155,7 +1155,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "online-psychiatry",
-    title: "Online Psychiatry: How to Get Mental-Health Medication Online in 2026",
+    title: "Online Psychiatry: How to Get Medication Online in 2026",
     description:
       "Online psychiatry: a licensed prescriber by video for diagnosis and medication management. What it can and can't prescribe, and how to pick a legit service.",
     category: "Guide",
@@ -1191,7 +1191,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "online-therapy-for-anxiety",
-    title: "Online Therapy for Anxiety: What Helps and How to Start (2026)",
+    title: "Online Therapy for Anxiety: What Helps and How to Start",
     description:
       "Anxiety is one of the concerns online therapy handles best. Which approaches have the strongest track record, when medication enters, and how to begin.",
     category: "Guide",
@@ -1229,7 +1229,7 @@ const articles: ArticleData[] = [
     slug: "online-therapy-for-depression",
     title: "Online Therapy for Depression: Does It Help? (2026)",
     description:
-      "Online therapy is well-supported for mild-to-moderate depression, often works best combined with medication for more severe cases, and has clear limits when risk is involved. An honest, careful guide.",
+      "Online therapy is well-supported for mild-to-moderate depression, often works best with medication for severe cases, and has clear limits when risk is involved.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-09-08",
@@ -1263,9 +1263,9 @@ const articles: ArticleData[] = [
   },
   {
     slug: "types-of-therapy",
-    title: "Types of Therapy Explained: CBT, DBT and Which Fits What (2026)",
+    title: "Types of Therapy Explained: CBT, DBT and Which Fits What",
     description:
-      "The alphabet soup of therapy approaches, demystified. What CBT, DBT and the other common modalities actually do, what each tends to suit, and why the therapist often matters more than the label.",
+      "What CBT, DBT and the other common therapy modalities actually do, what each tends to suit, and why the therapist often matters more than the label.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-09-08",
@@ -1299,7 +1299,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "online-therapy-cost",
-    title: "How Much Does Online Therapy Cost? Pricing Models Compared (2026)",
+    title: "How Much Does Online Therapy Cost? Pricing Compared (2026)",
     description:
       "Online therapy pricing comes in three shapes: weekly subscriptions, per-session fees and insurance models. How they differ and the cheapest legitimate route.",
     category: "Guide",

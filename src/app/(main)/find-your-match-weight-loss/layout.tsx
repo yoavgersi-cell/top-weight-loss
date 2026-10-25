@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Find Your Weight Loss Provider Match - Free Quiz",
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.treatmentshub.com/weight-loss/find-your-match-weight-loss",
   },
-  openGraph: {
+  openGraph: { images: [DEFAULT_OG_IMAGE],
     title: "Find Your Weight Loss Provider Match",
     description:
       "Chat with us and get matched with the best weight loss provider for your goals and budget.",

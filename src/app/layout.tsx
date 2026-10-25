@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import { Geist } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -27,13 +28,13 @@ export const metadata: Metadata = {
   // name separately from og:site_name / WebSite schema. The homepage title
   // keeps the name.
   title: {
-    default: "Treatments Hub - Compare Online Treatment Providers & Prices",
+    default: "Treatments Hub - Compare Online Treatment Providers",
     template: "%s",
   },
   // Icons come from the App Router file convention (app/icon.png, app/apple-icon.png),
   // which serves them at content-hashed URLs so they cache-bust on every update.
   description:
-    "Compare top online treatment providers across weight loss, hair loss, TRT, HRT, online therapy and ED - independent rankings on pricing, medical support and real customer reviews.",
+    "Compare top online providers for weight loss, hair loss, TRT, HRT, online therapy and ED: independent rankings on pricing, medical support and real reviews.",
   keywords: [
     "treatment comparison",
     "telehealth comparison",
@@ -44,8 +45,8 @@ export const metadata: Metadata = {
     "online HRT",
     "menopause treatment online",
   ],
-  openGraph: {
-    title: "Treatments Hub - Compare Online Treatment Providers & Prices",
+  openGraph: { images: [DEFAULT_OG_IMAGE],
+    title: "Treatments Hub - Compare Online Treatment Providers",
     description:
       "Independent, side-by-side comparisons of top online providers across weight loss, hair loss, TRT, HRT, online therapy and ED.",
     type: "website",
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Treatments Hub - Compare Online Treatment Providers & Prices",
+    title: "Treatments Hub - Compare Online Treatment Providers",
     description:
       "Independent, side-by-side comparisons of top online providers across weight loss, hair loss, TRT, HRT, online therapy and ED.",
   },

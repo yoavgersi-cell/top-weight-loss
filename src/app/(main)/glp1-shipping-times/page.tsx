@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import Link from "next/link";
 import { ArrowUpRight, Truck, ShieldCheck, MessageSquareQuote } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -90,7 +91,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const total = rows.reduce((s, r) => s + r.mentions.length, 0);
   const title = `GLP-1 Shipping Times by Provider: Promise vs Reviews (2026)`;
   const description = `How fast online GLP-1 providers say they ship (1-2 days, overnight, 3-5 days) against what 52 Trustpilot reviewers who mention delivery report.`;
-  return { title, description, alternates: { canonical: CANONICAL }, openGraph: { title, description, url: CANONICAL, type: "article" } };
+  return { title, description, alternates: { canonical: CANONICAL }, openGraph: { images: [DEFAULT_OG_IMAGE], title, description, url: CANONICAL, type: "article" } };
 }
 
 export default async function ShippingTimesPage() {

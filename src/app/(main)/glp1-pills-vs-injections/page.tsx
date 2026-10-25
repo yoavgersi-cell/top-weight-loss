@@ -1,4 +1,5 @@
 import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
   description:
     "GLP-1 pills vs injections in 2026: the Wegovy pill and Foundayo against Wegovy and Zepbound on trial results, price by route, side effects and daily routine.",
   alternates: { canonical: CANONICAL },
-  openGraph: {
+  openGraph: { images: [DEFAULT_OG_IMAGE],
     title: "GLP-1 Pills vs Injections (2026): Results, Cost & Routine",
     description:
       "The two FDA-approved GLP-1 pills against the weekly injections: trial results, verified prices, side effects and how to choose.",
