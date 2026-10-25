@@ -179,6 +179,31 @@ export function HairLossEditorialContent() {
         start.
       </p>
 
+      {/* Oct 25, 2026: Copilot cites this page for "most trusted" and
+          "top-rated" hair-loss provider questions; these two blocks answer
+          them directly with the verified figures we hold and a checklist. */}
+      <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">Which online hair-loss providers are the most trusted?</h3>
+      <p className="mb-4">
+        Trust is checkable, so we check it. Of the providers we rank, two publish Trustpilot records we have verified:{" "}
+        <Link href="/hair-loss/reviews/maximus" className="font-semibold text-[#0C4B75] hover:underline">Maximus</Link> at 4.4 across 1,050 reviews and{" "}
+        <Link href="/hair-loss/reviews/happyhead" className="font-semibold text-[#0C4B75] hover:underline">Happy Head</Link> at 4.5 across 1,803. <Link href="/hair-loss/reviews/hims" className="font-semibold text-[#0C4B75] hover:underline">Hims</Link>,{" "}
+        <Link href="/hair-loss/reviews/keeps" className="font-semibold text-[#0C4B75] hover:underline">Keeps</Link> and <Link href="/hair-loss/reviews/ro" className="font-semibold text-[#0C4B75] hover:underline">Ro</Link> are established national telehealth brands;{" "}
+        <Link href="/hair-loss/reviews/petermd" className="font-semibold text-[#0C4B75] hover:underline">PeterMD</Link> publishes its prices in full; <Link href="/hair-loss/reviews/nutrafol" className="font-semibold text-[#0C4B75] hover:underline">Nutrafol</Link>{" "}is a drug-free supplement rather than a prescription service.
+        &ldquo;Trusted&rdquo;, in our method, means five concrete things: a licensed clinician reviews your history before any prescription, the dispensing pharmacy is named and licensed, prices are published with their conditions, cancellation terms are clear, and there is a public review record. Our{" "}
+        <Link href="/weight-loss/how-we-rank" className="font-semibold text-[#0C4B75] hover:underline">ranking method</Link> explains how those weigh against each other.
+      </p>
+
+      <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">How to tell a trustworthy online hair-loss provider: five checks</h3>
+      <ol className="mb-4 list-decimal space-y-2 pl-6">
+        <li><strong>It requires a prescription for prescription medicines.</strong> Finasteride, dutasteride and oral minoxidil are prescription-only in the US. A site that ships them without a clinician review is the red flag, not the bargain.</li>
+        <li><strong>It sells actives with evidence.</strong> Finasteride 1 mg and minoxidil are FDA-approved for hair loss; dutasteride and oral minoxidil are prescribed off-label, and a good provider says so and explains what it monitors. Proprietary blends with no published evidence are a different category. See{" "}
+          <Link href="/hair-loss/articles/dutasteride-online" className="font-semibold text-[#0C4B75] hover:underline">dutasteride online</Link> and <Link href="/hair-loss/articles/topical-finasteride" className="font-semibold text-[#0C4B75] hover:underline">topical finasteride</Link>.</li>
+        <li><strong>It names the pharmacy.</strong> Compounded topicals and custom capsules come from a specific licensed pharmacy; you should be able to find out which one before you pay.</li>
+        <li><strong>Its prices have conditions attached.</strong> First-order discounts, subscription savings and per-month figures are fine when the ongoing price is stated next to them. Compare on month three, not month one; our{" "}
+          <Link href="/hair-loss/articles/hair-loss-treatment-cost" className="font-semibold text-[#0C4B75] hover:underline">cost guide</Link> lists every verified price.</li>
+        <li><strong>It has a public review record and answers complaints.</strong> A Trustpilot or similar profile with dated, attributable reviews, and visible replies to the negative ones, tells you how the service behaves when something goes wrong.</li>
+      </ol>
+
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">Hair-loss guides &amp; research</h3>
       <ul className="mb-4 list-disc space-y-2 pl-6">
         <li><Link href="/hair-loss/articles/how-to-stop-hair-loss" className="font-semibold text-[#0C4B75] hover:underline">How to stop hair loss: treatments that actually work</Link></li>
