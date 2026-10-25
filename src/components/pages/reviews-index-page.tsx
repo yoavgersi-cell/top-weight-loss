@@ -1,4 +1,5 @@
 import { pageReviewSchema } from "@/data/reviewers";
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -21,10 +22,12 @@ export async function reviewsIndexMetadata(ctx: SiteContext): Promise<Metadata> 
     .slice(0, 2)
     .map((id) => config.providers.find((p) => p.id === id)?.name)
     .filter(Boolean) as string[];
-  const title =
+  const indexTitleCandidates =
     topNames.length === 2
-      ? `${vName} Reviews 2026: ${topNames[0]}, ${topNames[1]} & More`
-      : `${vName} Reviews 2026 - Every Provider Tested`;
+      ? [`${vName} Reviews 2026: ${topNames[0]}, ${topNames[1]} & More`, `${vName} Reviews 2026: ${topNames[0]} & More`, `${vName} Reviews 2026`]
+      : [`${vName} Reviews 2026 - Every Provider Tested`, `${vName} Reviews 2026`];
+  // Within 60 characters (Ahrefs "title too long"), Oct 25, 2026.
+  const title = indexTitleCandidates.find((t) => t.length <= 60) ?? indexTitleCandidates[indexTitleCandidates.length - 1];
   // Weight-loss names the category searchers actually use (GLP-1); other
   // verticals keep the vertical name.
   const categoryLabel = ctx.vertical === "weight-loss" ? "GLP-1 weight loss" : verticalNameInProse(vName);
@@ -36,7 +39,7 @@ export async function reviewsIndexMetadata(ctx: SiteContext): Promise<Metadata> 
     alternates: {
       canonical: url,
     },
-    openGraph: {
+    openGraph: { images: [DEFAULT_OG_IMAGE],
       title,
       description,
       url,

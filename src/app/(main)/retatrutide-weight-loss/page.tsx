@@ -1,4 +1,5 @@
 import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "Retatrutide ('reta') is the next-generation triple agonist (GLP-1, GIP, glucagon) that hit ~24% weight loss in trials. How it compares and if you can get it.",
   alternates: { canonical: CANONICAL },
-  openGraph: {
+  openGraph: { images: [DEFAULT_OG_IMAGE],
     title: "Retatrutide for Weight Loss (2026): Results & Status",
     description:
       "The triple-agonist weight loss drug that reached ~24% in trials - explained, with an honest look at availability.",

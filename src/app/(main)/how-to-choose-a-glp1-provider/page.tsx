@@ -1,4 +1,5 @@
 import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import { Fragment } from "react";
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL },
-  openGraph: { title: TITLE, description: DESCRIPTION, url: CANONICAL, type: "article" },
+  openGraph: { images: [DEFAULT_OG_IMAGE], title: TITLE, description: DESCRIPTION, url: CANONICAL, type: "article" },
 };
 
 // ───── The 12-point checklist ─────

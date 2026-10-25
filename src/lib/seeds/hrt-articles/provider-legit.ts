@@ -15,7 +15,7 @@ const BBB_MIDI = "https://www.bbb.org/us/ca/palo-alto/profile/health-care/midi-1
 
 export const IS_WINONA_LEGIT: ArticleData = {
   slug: "is-winona-legit",
-  title: "Is Winona Legit? Yes - What 8,631 Reviews and the BBB Show (2026)",
+  title: "Is Winona Legit? Yes - What 8,631 Reviews and the BBB Show",
   description:
     "Yes. Winona's board-certified physicians review every intake before prescribing, and it holds a 4.6 Trustpilot rating across 8,631 reviews. What the BBB shows.",
   category: "Provider Guide",
@@ -64,7 +64,7 @@ export const IS_WINONA_LEGIT: ArticleData = {
 
 export const IS_MIDI_LEGIT: ArticleData = {
   slug: "is-midi-legit",
-  title: "Is Midi Health Legit? Yes - Reviews, BBB Complaints & Billing",
+  title: "Is Midi Health Legit? Yes - Reviews, BBB & Billing",
   description:
     "Yes. Midi Health is a BBB-accredited virtual menopause clinic with video visits and insurance billing. What 1,695 Trustpilot reviews and BBB complaints show.",
   category: "Provider Guide",

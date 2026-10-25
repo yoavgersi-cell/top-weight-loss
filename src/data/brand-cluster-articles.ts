@@ -57,7 +57,7 @@ export const brandClusterArticles: Article[] = [
   // ═════ Ro ═════
   {
     slug: "is-ro-legit",
-    title: "Is Ro Legit for Weight Loss? Yes, With Billing Caveats (2026)",
+    title: "Is Ro Legit for Weight Loss? Yes, With Billing Caveats",
     description:
       "Yes. Ro is an established telehealth company with licensed providers and its own pharmacy, rated 3.9 across 7,105 Trustpilot reviews, complaints included.",
     category: "Guide",
@@ -101,9 +101,9 @@ export const brandClusterArticles: Article[] = [
   },
   {
     slug: "ro-cost",
-    title: "Ro Weight Loss Cost (2026): Membership + Medication, Explained",
+    title: "Ro Weight Loss Cost (2026): Membership Plus Medication",
     description:
-      "Ro charges a Body membership ($39 the first month, then $74-$149/month) plus the medication - Wegovy pill from $149, Zepbound from $299 - unless insurance covers it. The full math, year one.",
+      "Ro charges a Body membership ($39 the first month, then $74-$149/month) plus the medication: Wegovy pill from $149, Zepbound from $299. The full year-one math.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-10-04",
@@ -226,9 +226,9 @@ export const brandClusterArticles: Article[] = [
   },
   {
     slug: "medvi-tirzepatide-cost",
-    title: "Medvi Tirzepatide Cost (2026): $166/Month Promo, All-Inclusive",
+    title: "Medvi Tirzepatide Cost (2026): $166/Month All-Inclusive",
     description:
-      "Medvi's compounded tirzepatide is $166/month on promotion (regularly $299), with visits, monitoring, coaching and shipping included. The year math, what it covers, and how it compares.",
+      "Medvi's compounded tirzepatide is $166/month on promotion (regularly $299) with visits, monitoring, coaching and shipping included. The year math, compared.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-09-27",
@@ -388,7 +388,7 @@ export const brandClusterArticles: Article[] = [
   // ═════ TrimRx ═════
   {
     slug: "is-trimrx-legit",
-    title: "Is TrimRx (Trim Rx) Legit? The No-Contract GLP-1 Model (2026)",
+    title: "Is TrimRx (Trim Rx) Legit? The No-Contract GLP-1 Model",
     description:
       "TrimRx (Trim Rx) sells GLP-1 treatment with no long-term contract - unusual in this market. We examined its clinical gate, its $149 pricing, and where it fits.",
     category: "Guide",
@@ -430,7 +430,7 @@ export const brandClusterArticles: Article[] = [
     slug: "trimrx-cost",
     title: "TrimRx Cost 2026 (Trim Rx): $149 Dose-Flat Pricing Explained",
     description:
-      "TrimRx (Trim Rx) charges $149/month for semaglutide, the same at every dose, and $259 for tirzepatide with no contract. The discount structure and year-cost math, laid out.",
+      "TrimRx (Trim Rx) charges $149/month for semaglutide, the same at every dose, and $259 for tirzepatide with no contract. The discounts and year-cost math.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-08-09",
@@ -464,9 +464,9 @@ export const brandClusterArticles: Article[] = [
   },
   {
     slug: "trimrx-alternatives",
-    title: "TrimRx Alternatives 2026 (Trim Rx): Cheaper, Faster, or More Support",
+    title: "TrimRx (Trim Rx) Alternatives 2026: Cheaper or More Support",
     description:
-      "Six TrimRx (Trim Rx) alternatives sorted by what you actually want to change - GLP-1 price, tirzepatide cost, delivery speed, brand-name access, or support depth.",
+      "Six TrimRx (Trim Rx) alternatives sorted by what you want to change: GLP-1 price, tirzepatide cost, delivery speed, brand-name access or support depth.",
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-08-12",
@@ -587,7 +587,7 @@ export const brandClusterArticles: Article[] = [
     slug: "altrx-alternatives",
     title: "altRx Alternatives 2026: Six Rivals, Sorted by What They Fix",
     description:
-      "The best altRx alternatives depend on what you'd change: GLP-1 price ($49-$69 rivals), delivery speed, support depth, or a results guarantee. Six options, sorted.",
+      "The best altRx alternatives depend on what you'd change: GLP-1 price ($49-$69 rivals), delivery speed, support depth or a results guarantee. Six options.",
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-08-16",
@@ -785,7 +785,7 @@ export const brandClusterArticles: Article[] = [
     slug: "directmeds-cost",
     title: "DirectMeds Cost 2026: The Flat $147 - When It Wins and Loses",
     description:
-      "DirectMeds charges one flat $147/month for semaglutide or tirzepatide, injections or drops. The math on when that flat GLP-1 rate is a steal - and when it isn't.",
+      "DirectMeds charges one flat $147/month for semaglutide or tirzepatide, injections or drops. When that flat GLP-1 rate is a steal, and when it isn't.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-08-13",
@@ -860,7 +860,7 @@ export const brandClusterArticles: Article[] = [
   // ═════ HealthRx ═════
   {
     slug: "is-healthrx-legit",
-    title: "Is HealthRx Legit? The $99 Prepaid GLP-1, Investigated (2026)",
+    title: "Is HealthRx Legit? The $99 Prepaid GLP-1, Investigated",
     description:
       "HealthRx sells semaglutide at $99/month - if you prepay $1,188 for a year. We verified its LegitScript certification, clinician gate, and where the risk sits.",
     category: "Guide",

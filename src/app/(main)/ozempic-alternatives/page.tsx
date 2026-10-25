@@ -1,4 +1,5 @@
 import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL },
-  openGraph: {
+  openGraph: { images: [DEFAULT_OG_IMAGE],
     title: "Ozempic, Wegovy & Mounjaro Alternatives That Actually Work (2026)",
     description:
       "The most effective alternatives to brand-name GLP-1s are often the same active ingredient - for a fraction of the price. Here's how it works.",

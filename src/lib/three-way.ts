@@ -150,7 +150,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     title: "embody vs altRx vs Medvi: Our Top Three, One Table",
     metaTitle: "embody vs altRx vs Medvi (2026): $69 vs $89 vs $99",
     description:
-      "Our three most-compared GLP-1 providers in one matrix: embody ($69 flat, 1-2 day shipping), altRx ($89 + a brand-name shelf) and Medvi ($99 all-inclusive, 4.3 on Trustpilot).",
+      "Our three most-compared GLP-1 providers in one matrix: embody ($69 flat, 1-2 day shipping), altRx ($89 plus a brand-name shelf) and Medvi ($99 all-inclusive).",
     intro:
       "Thirty dollars separates these three, and none of them asks for a commitment - so this comparison is really about what each adds on top of the same compounded semaglutide. embody keeps it lean: $69 flat at every dose, free 1-2 day shipping, and a full refund if a provider doesn't approve you. altRx charges $89 and is the only one with a brand-name shelf - Ozempic, Zepbound and Wegovy at published cash prices - plus Buy Now, Pay Later. Medvi's $99 promo is all-inclusive with video visits, a free dietician and care coaching, backed by the strongest review record of the three: 4.3 across 14,987 Trustpilot reviews.",
     verdict:
@@ -247,7 +247,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     title: "altRx vs ro vs Sprout: Three Ways to Brand-Name GLP-1s",
     metaTitle: "altRx vs ro vs Sprout (2026): Brand-Name GLP-1s Compared",
     description:
-      "The three providers on our ranking that sell brand-name GLP-1s online, compared: altRx's flat cash prices, ro's membership-plus-insurance model, and Sprout's Wegovy shelf with 2-day shipping.",
+      "The three providers on our ranking that sell brand-name GLP-1s online: altRx's flat cash prices, ro's membership-plus-insurance model and Sprout's Wegovy shelf.",
     intro:
       "Most GLP-1 comparisons are about compounded medication - this one is about the real branded pens, because these are the three providers in our ranking that publish brand-name pricing, and they sell it three completely different ways. altRx posts flat cash prices next to its $89 compounded plan: Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 a month, with Buy Now, Pay Later. ro sells a membership ($39 the first month, then $74-$149/month) with the medication billed separately - Wegovy pill from $149/month, Zepbound KwikPen from $299 the first month - and it's the one route here where insurance, if it covers you, changes the math completely. Sprout is compounded-first at $149/month but keeps brand-name Wegovy on the shelf at $1,799 for anyone set on the branded pen, and ships prescriptions within 2 days.",
     verdict:
@@ -282,7 +282,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     title: "welludr vs embody vs TrimRx: Price, Freedom, Flexibility",
     metaTitle: "welludr vs embody vs TrimRx (2026): $49 vs $69 vs $149",
     description:
-      "welludr ($49 semaglutide, weight-loss warranty, 4.6 on Trustpilot) vs embody ($69 flat, 1-2 day shipping) vs TrimRx ($149, no contract, custom dosing) on real GLP-1 prices, terms and support.",
+      "welludr ($49 semaglutide, weight-loss warranty, 4.6 on Trustpilot) vs embody ($69 flat, 1-2 day shipping) vs TrimRx ($149, no contract) on real GLP-1 prices.",
     intro:
       "This trio spans the market's price range - $49 to $149 for the same compounded semaglutide - which makes it a clean test of what the extra money buys. welludr sets the floor: $49/month semaglutide and $89 tirzepatide, the same price at every dose, with a weight-loss warranty, a Medical Weight-Care Coach on every plan, and brand-name Ozempic and Zepbound if you ever want them. embody charges $20 more for total freedom - flat, no commitment, shipped in 1-2 days, refunded if you're not approved. TrimRx charges a premium for custom dosing with unlimited provider check-ins and a no-contract model.",
     verdict:
@@ -316,7 +316,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     title: "Medvi vs TrimRx vs SHED: The Support-Tier Showdown",
     metaTitle: "Medvi vs TrimRx vs SHED (2026): $99-$199 Compared",
     description:
-      "The GLP-1 support tier compared: Medvi's all-inclusive care (4.3 on Trustpilot), TrimRx's no-contract flexibility, and SHED's coaching with a money-back guarantee.",
+      "The GLP-1 support tier: Medvi's all-inclusive care (4.3 on Trustpilot), TrimRx's no-contract flexibility and SHED's coaching with a money-back guarantee.",
     intro:
       "These three sell more than medication - each wraps the same compounded GLP-1s in a different support philosophy, from Medvi's current $99 promo to SHED's $199. Medvi bundles video visits, a dietician and care coaching behind a 14,987-review Trustpilot record. TrimRx sells flexibility: no contract, optional discounts, clinical guidance. SHED sells accountability: formal health coaching plus the market's only lose-5%-in-120-days-or-your-money-back guarantee.",
     verdict:
@@ -343,7 +343,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     slug: "healthrx-vs-embody-vs-wellmedr",
     providerIds: ["healthrx", "embody", "wellmedr"],
     title: "HealthRx vs embody vs welludr: Three Ways to Pay for GLP-1",
-    metaTitle: "HealthRx vs embody vs welludr (2026): Prepaid vs Flat vs Lock",
+    metaTitle: "HealthRx vs embody vs welludr (2026): Prepaid, Flat or Lock?",
     description:
       "Three pricing models for the same GLP-1 medication: HealthRx's $99 prepaid year, embody's $69 flat monthly, welludr's $49 12-month lock - compared honestly.",
     intro:

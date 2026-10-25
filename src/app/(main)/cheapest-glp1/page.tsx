@@ -1,4 +1,5 @@
 import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -16,7 +17,7 @@ import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
 export const revalidate = 60;
 
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/cheapest-glp1";
-const TITLE = "Cheapest GLP-1 in 2026: Real Prices From 8 Providers ($49-$299)";
+const TITLE = "Cheapest GLP-1 in 2026: Real Prices From 8 Providers";
 const DESCRIPTION =
   "The cheapest GLP-1 programs of 2026, ranked by verified prices: compounded semaglutide from $49/month, tirzepatide from $89/month - conditions disclosed.";
 
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL },
-  openGraph: {
+  openGraph: { images: [DEFAULT_OG_IMAGE],
     title: TITLE,
     description: DESCRIPTION,
     url: CANONICAL,

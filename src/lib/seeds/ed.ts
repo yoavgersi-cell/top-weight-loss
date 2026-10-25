@@ -1525,7 +1525,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
       },
       {
         slug: "sildenafil-vs-cialis",
-        title: "Sildenafil vs Tadalafil (Cialis) & Alternatives to Viagra - 2026",
+        title: "Sildenafil vs Tadalafil (Cialis) & Viagra Alternatives 2026",
         description:
           "Sildenafil vs tadalafil (Cialis) side by side: onset, duration, food effects, side effects, daily vs on-demand dosing and cost, plus other alternatives.",
         category: "Medications",
@@ -1967,7 +1967,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
         slug: "ed-treatment-near-me",
         title: "ED Treatment Near You vs Online: How to Choose",
         description:
-          "Searching \"ED treatment near me\"? Compare in-person clinics and urologists with online telehealth on discretion, speed, cost and convenience to choose what fits.",
+          "Searching \"ED treatment near me\"? Compare in-person clinics and urologists with online telehealth on discretion, speed, cost and convenience.",
         category: "Guides",
         readTime: "7 min read",
         publishedAt: "2026-09-13",

@@ -141,17 +141,17 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   "embody-vs-sprout": {
     title: "embody vs Sprout (2026): $69 vs $149 GLP-1 Compared",
     description:
-      "embody ($69/mo semaglutide, 1-2 day cold-chain shipping, LegitScript) vs Sprout ($149/mo, ships in 2 days, brand-name Wegovy available). Real prices, honest verdict.",
+      "embody ($69/mo semaglutide, 1-2 day cold-chain shipping, LegitScript) vs Sprout ($149/mo, ships in 2 days, brand-name Wegovy available). Honest verdict.",
   },
   "altrx-vs-sprout": {
     title: "altRx vs Sprout (2026): $89 vs $149 GLP-1 Compared",
     description:
-      "The brand-shelf matchup: altRx ($89/mo + Ozempic/Zepbound/Wegovy, BNPL) vs Sprout ($149/mo, Wegovy available, 2-day fulfillment). Price, selection and speed compared.",
+      "altRx ($89/mo plus Ozempic, Zepbound and Wegovy, BNPL) vs Sprout ($149/mo, Wegovy available, 2-day fulfillment). Price, selection and speed compared.",
   },
   "sprout-vs-trimrx": {
-    title: "Sprout vs TrimRx (2026): Both $149 - Which GLP-1 Provider Wins?",
+    title: "Sprout vs TrimRx (2026): Both $149 - Which GLP-1 Wins?",
     description:
-      "Sprout ($149/mo semaglutide that holds, ships in 2 days, Wegovy option) vs TrimRx ($149/mo flat at every dose, custom dosing, unlimited check-ins, no contract). Compared honestly.",
+      "Sprout ($149/mo semaglutide, ships in 2 days, Wegovy option) vs TrimRx ($149/mo flat at every dose, custom dosing, no contract). Compared honestly.",
   },
   "sprout-vs-wellmedr": {
     title: "Sprout vs welludr (2026): $149 vs $49 GLP-1 Compared",
@@ -161,21 +161,21 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   "embody-vs-wellmedr": {
     title: "embody vs welludr (2026): $69 vs $49 GLP-1 Compared",
     description:
-      "embody ($69/mo semaglutide, free 1-2 day shipping, refund if not approved) vs welludr ($49/mo, 1M+ patients, weight-loss warranty). Real prices, real trade-offs - see which fits you.",
+      "embody ($69/mo semaglutide, 1-2 day shipping, refund if not approved) vs welludr ($49/mo, 1M+ patients, weight-loss warranty). Real prices, real trade-offs.",
   },
   "altrx-vs-embody": {
     // Measured winner, restored Aug 30: when both reverse slugs were live, the
     // question-format title on /embody-vs-altrx did 18.2% CTR on the "altrx vs
     // embody" query vs 6.7% for the price-format title on this slug - same
     // page, same query. Do not switch back to price format without new data.
-    title: "altRx vs embody: Which GLP-1 Provider Is Right for You in 2026?",
+    title: "altRx vs embody (2026): Which GLP-1 Provider Fits You?",
     description:
-      "altRx ($89/mo semaglutide + brand-name Zepbound & Wegovy, BNPL) vs embody ($69/mo flat, 1-2 day shipping, LegitScript-certified). Which GLP-1 provider wins? Full comparison.",
+      "altRx ($89/mo semaglutide, brand-name Zepbound and Wegovy, BNPL) vs embody ($69/mo flat, 1-2 day shipping, LegitScript-certified). Which GLP-1 provider wins?",
   },
   "altrx-vs-trimrx": {
     title: "altRx vs TrimRx (2026): $89 vs $149 GLP-1 Compared",
     description:
-      "altRx ($89/mo semaglutide, flat at every dose, brand-name options) vs TrimRx ($149/mo, no contract, multi-month discounts). Pricing, medications and flexibility compared.",
+      "altRx ($89/mo semaglutide, flat at every dose, brand-name options) vs TrimRx ($149/mo, no contract, multi-month discounts). Pricing and flexibility compared.",
   },
   "altrx-vs-wellmedr": {
     title: "altRx vs welludr (2026): $89 vs $49 GLP-1 Compared",
@@ -190,7 +190,7 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   "embody-vs-medvi": {
     title: "embody vs Medvi (2026): $69 vs $99 GLP-1 Compared",
     description:
-      "embody ($69/mo semaglutide, 1-2 day shipping, refund policy) vs Medvi ($99/mo promo all-inclusive with high-touch provider support). Price or personal care - see which fits.",
+      "embody ($69/mo semaglutide, 1-2 day shipping, refund policy) vs Medvi ($99/mo promo, all-inclusive, high-touch provider support). Price or personal care?",
   },
   "embody-vs-ro": {
     // Sept 3 CTR pass: 0.5% CTR at avg position 6 over 191 impressions (3d) -
@@ -208,17 +208,17 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // neutral snippet is kept because it matches the comparison-research intent.
     title: "Embody vs Ro (2026): $69 Flat or the Big Brand?",
     description:
-      "embody: flat $69/mo all-in compounded semaglutide. ro: $39-then-$74-149/mo membership plus brand-name Wegovy/Zepbound. Compare price, plans, speed and who each fits.",
+      "embody: flat $69/mo all-in compounded semaglutide. ro: $39-then-$74-149/mo membership plus brand-name Wegovy or Zepbound. Price, speed and fit compared.",
   },
   "medvi-vs-trimrx": {
     title: "Medvi vs TrimRx (2026): $99 vs $149 GLP-1 Compared",
     description:
-      "Medvi ($99/mo promo all-inclusive, Trustpilot-praised support) vs TrimRx ($149/mo flat at every dose, no long-term contract). Close prices, different strengths - here's how to pick.",
+      "Medvi ($99/mo promo, all-inclusive, praised support) vs TrimRx ($149/mo flat at every dose, no long-term contract). Close prices, different strengths.",
   },
   "medvi-vs-wellmedr": {
     title: "Medvi vs welludr (2026): $99 or $49 GLP-1 Compared",
     description:
-      "Medvi ($99/mo promo with personal provider support) vs welludr ($49/mo semaglutide, 1M+ patients, warranty). Is high-touch care worth the difference? Full comparison.",
+      "Medvi ($99/mo promo with personal provider support) vs welludr ($49/mo semaglutide, 1M+ patients, warranty). Is high-touch care worth the difference?",
   },
   "medvi-vs-altrx": {
     title: "Medvi vs altRx (2026): $99 vs $89 GLP-1 Compared",
@@ -229,12 +229,12 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // Oct 15, 2026: welludr leads (named winner, shown first on the page).
     title: "welludr vs TrimRx (2026): $49 vs $149 GLP-1 Compared",
     description:
-      "welludr ($49/mo semaglutide at every dose, weight-loss warranty, 4.6 on Trustpilot) vs TrimRx ($149/mo flat, custom dosing, no contract). We compared price, flexibility and support.",
+      "welludr ($49/mo semaglutide, weight-loss warranty, 4.6 on Trustpilot) vs TrimRx ($149/mo flat, custom dosing, no contract). Price and support compared.",
   },
   "trimrx-vs-ro": {
     title: "TrimRx vs ro (2026): Which GLP-1 Provider Fits You?",
     description:
-      "TrimRx ($149/mo, no long-term contract, clinical support included) vs ro (established brand, in-house pharmacy). Pricing clarity vs brand trust - full comparison.",
+      "TrimRx ($149/mo, no long-term contract, clinical support included) vs ro (established brand, in-house pharmacy). Pricing clarity vs brand trust, compared.",
   },
   "medvi-vs-ro": {
     title: "Medvi vs ro (2026): $99 All-In or Membership + Brand-Name?",
@@ -242,21 +242,21 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "Medvi: $99/mo promo, all-inclusive compounded semaglutide. ro: $39 first-month membership, then $74-149/mo, plus brand-name Wegovy/Zepbound billed separately.",
   },
   "altrx-vs-ro": {
-    title: "altRx vs ro (2026): $89 Flat GLP-1 or Membership + Brand-Name?",
+    title: "altRx vs ro (2026): $89 Flat GLP-1 or Membership + Brand?",
     description:
-      "altRx: $89/mo promo flat compounded semaglutide (reg $199), BNPL available. ro: $39 first-month membership then $74-149/mo plus brand-name medication billed separately. Which model fits you?",
+      "altRx: $89/mo flat compounded semaglutide (reg $199), BNPL. ro: $39 first-month membership, then $74-149/mo, plus brand-name medication. Which model fits you?",
   },
   "healthrx-vs-medvi": {
     // Title matches the stored (CMS) title byte-for-byte - this entry exists
     // only to put "GLP-1" in the description (desc-only pass, Aug 30).
     title: "HealthRx vs Medvi (2026): Two $99 Semaglutide Deals Compared",
     description:
-      "Two $99/month GLP-1 deals, opposite structures: HealthRx's prepaid year ($1,188 at checkout) vs Medvi's monthly promo all-inclusive plan. The honest math inside.",
+      "Two $99/month GLP-1 deals, opposite structures: HealthRx's prepaid year ($1,188 at checkout) vs Medvi's monthly all-inclusive promo. The honest math.",
   },
   "ro-vs-wellmedr": {
     title: "ro vs welludr (2026): Big Brand or $49 GLP-1?",
     description:
-      "ro (major telehealth brand with in-house pharmacy) vs welludr ($49/mo semaglutide, 1M+ patients, weight-loss warranty). Brand trust vs the lowest price, compared.",
+      "ro (major telehealth brand with in-house pharmacy) vs welludr ($49/mo semaglutide, 1M+ patients, weight-loss warranty). Brand trust vs the lowest price.",
   },
 };
 
@@ -372,9 +372,22 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
   const override = ctx.vertical === "weight-loss" ? BATTLE_SEO_OVERRIDES[slug] : undefined;
   const baseLabel = (battle.matchupLabel ?? battle.title.split(":")[0]).trim();
   const battleCategory = BATTLE_CATEGORY_BY_VERTICAL[ctx.vertical];
+  // Oct 25, 2026: Ahrefs flags titles over 60 characters, and long matchup
+  // names ("Taurus Meds vs Brightmeds") overflowed the uniform pattern. The
+  // pattern now degrades in steps until it fits: drop the category, then the
+  // "Meds", then the detail - the matchup and year always stay.
+  const matchupLabel = titleCaseMatchup(baseLabel);
+  const categoryPrefix =
+    battleCategory && !baseLabel.toLowerCase().includes(battleCategory.toLowerCase()) ? `${battleCategory} ` : "";
+  const titleCandidates = [
+    `${matchupLabel} (2026): ${categoryPrefix}Cost, Plans & Meds Compared`,
+    `${matchupLabel} (2026): Cost, Plans & Meds Compared`,
+    `${matchupLabel} (2026): Cost & Plans Compared`,
+    `${matchupLabel} (2026): Compared`,
+  ];
   const metaTitle = override?.title
     ? titleCaseOverrideTitle(override.title)
-    : `${titleCaseMatchup(baseLabel)} (2026): ${battleCategory && !baseLabel.toLowerCase().includes(battleCategory.toLowerCase()) ? `${battleCategory} ` : ""}Cost, Plans & Meds Compared`;
+    : (titleCandidates.find((t) => t.length <= 60) ?? titleCandidates[titleCandidates.length - 1]);
   const metaDescription = override?.description ?? battle.description;
 
   // Thin, low-demand matchups (Tier-2-brand pairs) are noindex,follow so crawl

@@ -1,4 +1,5 @@
 import { pageReviewSchema } from "@/data/reviewers";
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -26,7 +27,7 @@ export async function articlesIndexMetadata(ctx: SiteContext): Promise<Metadata>
     alternates: {
       canonical: url,
     },
-    openGraph: {
+    openGraph: { images: [DEFAULT_OG_IMAGE],
       title,
       description,
       url,

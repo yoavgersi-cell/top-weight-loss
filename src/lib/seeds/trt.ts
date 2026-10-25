@@ -403,7 +403,7 @@ const reviews: ReviewData[] = [
     slug: "medvi-quad",
     providerId: "medvi-quad",
     shortSummary:
-      "Medvi's 4-in-1 sublingual performance medication - sildenafil, tadalafil, apomorphine and L-citrulline in a single Rx-only dose, prescribed after an online provider review and shipped discreetly.",
+      "Medvi's 4-in-1 sublingual performance medication: sildenafil, tadalafil, apomorphine and L-citrulline in one Rx-only dose, prescribed after an online review.",
     reviewIntro:
       "QUAD is Medvi's entry into men's performance medicine, and its pitch is the formula: a single sublingual dose that Medvi describes as \"4-IN-1 PERFORMANCE,\" combining sildenafil (the active ingredient in Viagra), tadalafil (the active ingredient in Cialis, which Medvi labels \"lasts 36 hours\"), apomorphine (\"ignites desire,\" in Medvi's words) and L-citrulline (\"rapid flow\"). It is Rx-only: you complete an online intake, a licensed provider decides whether the medication is appropriate for you, and it ships fast in discreet packaging. Behind it stands a brand with a real record - Medvi holds a verified 4.3 on Trustpilot across 14,987 reviews - though that record was earned mostly on its weight-loss line, and QUAD itself is too new to have its own aggregate. Pricing is published and straightforward: QUAD starts at $114/month at the current promotional rate (regularly $179 - Medvi frames it as 36% off retail, with bundle discounts beyond that), and the price includes the doctor consultation, free rush shipping and 24/7 medical support, with cancel-anytime terms. Medvi also commits to a clean risk rule: if a provider does not qualify you for the medication, you do not pay.",
     keyFeatures: [
@@ -806,7 +806,7 @@ const articles: ArticleData[] = [
     slug: "is-trt-bad-for-you",
     title: "Is TRT Bad for You? Is It a Steroid? Straight Answers (2026)",
     description:
-      "TRT is testosterone - chemically a steroid hormone, medically nothing like a bodybuilding cycle. The real risks, what monitoring exists for, the fertility caveat, and who shouldn't be on it.",
+      "TRT is testosterone, a steroid hormone, but nothing like a bodybuilding cycle. The real risks, what monitoring is for, and who should avoid it.",
     category: "Guide",
     readTime: "8 min read",
     publishedAt: "2026-08-30",
@@ -846,7 +846,7 @@ const articles: ArticleData[] = [
     slug: "enclomiphene-vs-trt",
     title: "Enclomiphene vs TRT: Boost Your Own or Replace It? (2026)",
     description:
-      "Enclomiphene stimulates your own testosterone production and preserves fertility; TRT replaces production outright with the stronger established effect. How the two paths differ and who fits each.",
+      "Enclomiphene stimulates your own testosterone and preserves fertility; TRT replaces production with the stronger effect. How the two differ and who fits each.",
     category: "Comparison",
     readTime: "7 min read",
     publishedAt: "2026-08-30",
@@ -886,7 +886,7 @@ const articles: ArticleData[] = [
     slug: "what-is-medvi-quad",
     title: "What Is Medvi QUAD? The 4-in-1 Formula, Explained (2026)",
     description:
-      "Medvi QUAD is a prescription-only sublingual for men combining sildenafil, tadalafil, apomorphine and L-citrulline in one dose, from $114/month promo (reg. $179). What's in it and how ordering works.",
+      "Medvi QUAD is a prescription-only sublingual combining sildenafil, tadalafil, apomorphine and L-citrulline in one dose, from $114/month promo (reg. $179).",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-08-30",
@@ -1098,7 +1098,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "trt-vs-steroids",
-    title: "TRT vs Steroids: Why Testosterone Therapy Isn't 'Taking Gear'",
+    title: "TRT vs Steroids: Why Testosterone Therapy Isn't 'Gear'",
     description:
       "TRT and steroid use both involve testosterone - that's where the similarity ends. Doses, supervision, legality, and goals compared honestly.",
     category: "Science",
@@ -1171,7 +1171,7 @@ const articles: ArticleData[] = [
   // values; clinician-decides framing throughout.
   {
     slug: "free-vs-total-testosterone",
-    title: "Free vs Total Testosterone: Which Number Actually Matters? (2026)",
+    title: "Free vs Total Testosterone: Which Number Matters? (2026)",
     description:
       "Total testosterone can look normal while the usable free portion is low. What the two numbers mean, why SHBG links them, and why good clinics check both.",
     category: "Science",
@@ -1209,7 +1209,7 @@ const articles: ArticleData[] = [
     slug: "trt-blood-work",
     title: "TRT Blood Work: The Labs That Get Monitored and Why (2026)",
     description:
-      "TRT isn't set-and-forget - it's a monitored treatment. The labs a responsible provider checks before and during therapy, what each one is watching for, and why skipping monitoring is a red flag.",
+      "TRT is a monitored treatment. The labs a responsible provider checks before and during therapy, what each watches for, and why skipping them is a red flag.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-09-08",
@@ -1245,7 +1245,7 @@ const articles: ArticleData[] = [
     slug: "trt-clinic-vs-online",
     title: "TRT Clinic vs Online: Which Route Makes Sense in 2026?",
     description:
-      "In-person TRT clinic or online telehealth? The honest trade-offs on cost, convenience, monitoring and the quality of care - and the cases where one clearly beats the other.",
+      "In-person TRT clinic or online telehealth? The trade-offs on cost, convenience, monitoring and quality of care, and the cases where one clearly beats the other.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-09-08",
@@ -1279,9 +1279,9 @@ const articles: ArticleData[] = [
   },
   {
     slug: "testosterone-cypionate-vs-enanthate",
-    title: "Testosterone Cypionate vs Enanthate: Do the Differences Matter? (2026)",
+    title: "Testosterone Cypionate vs Enanthate: Does It Matter?",
     description:
-      "The two most common injectable testosterone esters, compared honestly: what actually differs between cypionate and enanthate, what doesn't, and why your clinic's choice matters less than you'd think.",
+      "The two most common injectable testosterone esters: what differs between cypionate and enanthate, what doesn't, and why the choice matters less than you think.",
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-09-08",
@@ -1317,7 +1317,7 @@ const articles: ArticleData[] = [
     slug: "does-trt-increase-libido",
     title: "Does TRT Increase Libido? Testosterone and Sex Drive (2026)",
     description:
-      "For men who are genuinely low, restoring testosterone often improves libido - but it's not a guarantee, not instant, and not the same as an ED treatment. The honest picture, with the timeline.",
+      "For men who are genuinely low, restoring testosterone often improves libido, but it isn't guaranteed, instant, or an ED treatment. The honest timeline.",
     category: "Science",
     readTime: "6 min read",
     publishedAt: "2026-09-08",
@@ -1351,9 +1351,9 @@ const articles: ArticleData[] = [
   },
   {
     slug: "trt-and-estrogen",
-    title: "TRT and Estrogen: Why Men on Testosterone Watch Their Estradiol (2026)",
+    title: "TRT and Estrogen: Why Men on Testosterone Watch Estradiol",
     description:
-      "Some of the testosterone you take converts to estrogen - and that's normal and necessary. Why men on TRT monitor estradiol, what 'aromatization' means, and why crushing estrogen is a mistake.",
+      "Some testosterone converts to estrogen, and that's normal. Why men on TRT monitor estradiol, what aromatization means, and why crushing estrogen is a mistake.",
     category: "Science",
     readTime: "6 min read",
     publishedAt: "2026-09-08",

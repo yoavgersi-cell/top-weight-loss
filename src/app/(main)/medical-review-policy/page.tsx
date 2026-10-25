@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import Link from "next/link";
 import { ArrowRight, BookOpenCheck, ClipboardCheck, FileSearch, Mail, ShieldCheck, Stethoscope } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -19,16 +20,16 @@ import { verticalNameInProse } from "@/lib/site-context";
 export const revalidate = 3600;
 
 const CANONICAL = `${HUB_ORIGIN}/medical-review-policy`;
-const TITLE = "Medical Review Policy: How Treatments Hub Checks Health Content";
+const TITLE = "Medical Review Policy: How We Check Health Content";
 const DESCRIPTION =
-  "Who reviews the medical statements on Treatments Hub, what the review covers and does not, the evidence we accept, how review dates work, and how to report an error.";
+  "Who reviews the medical statements on Treatments Hub, what the review covers, the evidence we accept, how review dates work and how to report an error.";
 const UPDATED = "2026-10-22";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL },
-  openGraph: { title: TITLE, description: DESCRIPTION, url: CANONICAL, type: "article" },
+  openGraph: { images: [DEFAULT_OG_IMAGE], title: TITLE, description: DESCRIPTION, url: CANONICAL, type: "article" },
 };
 
 const fmt = (iso: string) =>

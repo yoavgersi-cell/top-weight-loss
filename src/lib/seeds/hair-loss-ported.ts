@@ -553,7 +553,7 @@ export const HAIR_LOSS_BATTLES_PORTED: BattleData[] = [
 export const HAIR_LOSS_GUIDES_PORTED: ArticleData[] = [
   {
     "slug": "does-minoxidil-work",
-    "title": "Does Minoxidil Work? What to Expect from Rogaine and Generics",
+    "title": "Does Minoxidil Work? What to Expect From Rogaine",
     "description": "Minoxidil is a proven regrowth treatment for men and women — here's how it works, how long it takes, and why the early 'shed' is normal.",
     "category": "Science",
     "readTime": "5 min read",

@@ -36,7 +36,7 @@ const DISCLAIMER =
 
 export const MENOPAUSE_COMPLETE_GUIDE: ArticleData = {
   slug: "menopause-complete-guide",
-  title: "Menopause: The Complete Guide to Stages, Symptoms & Treatment",
+  title: "Menopause: The Complete Guide to Stages & Treatment",
   description:
     "Everything about menopause in one evidence-based guide: stages, common symptoms, diagnosis, long-term health and every hormonal and non-hormonal option in 2026.",
   category: "Guide",

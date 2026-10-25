@@ -1,4 +1,5 @@
 import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -21,10 +22,10 @@ const DESCRIPTION =
   "Paying $1,000+/month for Ozempic or Wegovy? Compounded semaglutide - the same GLP-1 - runs $49-$299/month at licensed telehealth providers. How switching works.";
 
 export const metadata: Metadata = {
-  title: { absolute: `${TITLE} | Treatments Hub` },
+  title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL },
-  openGraph: { title: TITLE, description: DESCRIPTION, url: CANONICAL, type: "article" },
+  openGraph: { images: [DEFAULT_OG_IMAGE], title: TITLE, description: DESCRIPTION, url: CANONICAL, type: "article" },
 };
 
 const steps: { title: string; detail: string }[] = [

@@ -34,14 +34,14 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
   // "is welludr a scam" 2/2, "welludr scam" 1/1), so the titles name the
   // question the searcher is actually typing. The pages answer it directly.
   "is-embody-legit": {
-    title: "Is embody Legit or a Scam? Pharmacy, Pricing & Reviews (2026)",
+    title: "Is embody Legit or a Scam? Pharmacy, Pricing & Reviews",
     description:
-      "Is embody legit or a scam? LegitScript-certified 503A pharmacies, licensed-provider prescribing, $69 semaglutide and $119 tirzepatide, refund if not approved, and what customers report.",
+      "Is embody legit or a scam? LegitScript-certified 503A pharmacies, licensed-provider prescribing, $69 semaglutide, $119 tirzepatide, refund if not approved.",
   },
   "is-wellmedr-legit": {
-    title: "Is welludr Legit or a Scam? Reviews, Complaints & Real Prices (2026)",
+    title: "Is welludr Legit or a Scam? Reviews, Complaints & Prices",
     description:
-      "Is welludr legit or a scam? A verified 4.6 on Trustpilot across 2,188 reviews, what the complaints actually say, the real $49-$89 pricing structure, and our verdict.",
+      "Is welludr legit or a scam? A verified 4.6 on Trustpilot across 2,188 reviews, what the complaints say, the real $49-$89 pricing and our verdict.",
   },
   "is-altrx-legit": {
     // Keeps the keyword-rich SERP snippet (prices, flat-dose) even though the
@@ -53,7 +53,7 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
   "tirzepatide-vs-semaglutide": {
     title: "Tirzepatide vs Semaglutide (2026): Results & Prices",
     description:
-      "Tirzepatide vs semaglutide, the two leading GLP-1s: up to 22.5% vs ~15% weight loss in trials, side effects, dosing - verified compounded prices from $49 and $89/month.",
+      "Tirzepatide vs semaglutide, the two leading GLP-1s: up to 22.5% vs ~15% weight loss in trials, side effects, dosing, and verified compounded prices from $49.",
   },
   "best-mounjaro-alternatives": {
     title: "7 Best Mounjaro Alternatives in 2026 (From $89/Month)",
@@ -73,7 +73,7 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
   "can-you-get-ozempic-without-doctor": {
     title: "Can You Get Ozempic Without Seeing a Doctor? (2026)",
     description:
-      "No - GLP-1s legally require a prescription. But you don't need an office visit: licensed telehealth providers evaluate you online, with treatment from $49/month.",
+      "No. GLP-1s legally require a prescription, but you don't need an office visit: licensed telehealth providers evaluate you online, from $49/month.",
   },
   "weight-loss-medication-that-works-fast": {
     title: "Weight Loss Medication That Actually Works Fast (2026)",

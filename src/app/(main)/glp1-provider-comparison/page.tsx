@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { ArrowRight, Check, X, ExternalLink } from "lucide-react";
@@ -28,7 +29,7 @@ export const revalidate = 60;
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/glp1-provider-comparison";
 const TITLE = "GLP-1 Provider Comparison 2026: Prices, Reviews, Real Costs";
 const DESCRIPTION =
-  "Eight GLP-1 telehealth providers compared on verified pricing, what you keep paying, Trustpilot patterns, Reddit experiences and cancellation terms. Updated Oct 2026.";
+  "Eight GLP-1 telehealth providers compared on verified pricing, what you keep paying, Trustpilot patterns, Reddit experiences and cancellation terms.";
 const PUBLISHED = "2026-10-12";
 const UPDATED = "2026-10-17";
 const TRUSTPILOT_CHECKED = "October 12, 2026";
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL },
-  openGraph: { title: TITLE, description: DESCRIPTION, url: CANONICAL, type: "article" },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: CANONICAL, type: "article", images: [DEFAULT_OG_IMAGE] },
 };
 
 type Pid = "wellmedr" | "embody" | "eden" | "directmeds" | "medvi" | "trimrx" | "altrx" | "ro";

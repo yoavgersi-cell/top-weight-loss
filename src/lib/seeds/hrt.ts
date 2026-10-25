@@ -890,7 +890,7 @@ const articles: ArticleData[] = [
     slug: "hrt-pros-and-cons",
     title: "The Pros and Cons of HRT: A Balanced Look (2026)",
     description:
-      "What HRT genuinely does well, the trade-offs and risks that deserve a clinician conversation, and how timing changes the picture - laid out without selling either direction.",
+      "What HRT genuinely does well, the trade-offs and risks that deserve a clinician conversation, and how timing changes the picture. No selling either way.",
     category: "Advice",
     readTime: "7 min read",
     publishedAt: "2026-08-31",
@@ -924,9 +924,9 @@ const articles: ArticleData[] = [
   },
   {
     slug: "hrt-vs-birth-control",
-    title: "HRT vs Birth Control: Not the Same Pills, Not the Same Job (2026)",
+    title: "HRT vs Birth Control: Not the Same Pills or the Same Job",
     description:
-      "Birth control suppresses your cycle with contraceptive-dose hormones; HRT replaces declining hormones at lower doses - and doesn't prevent pregnancy. How the two differ and when women switch.",
+      "Birth control suppresses your cycle with contraceptive-dose hormones; HRT replaces declining hormones at lower doses and doesn't prevent pregnancy.",
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-08-31",
@@ -1018,7 +1018,7 @@ const articles: ArticleData[] = [
     slug: "hrt-side-effects",
     title: "HRT Side Effects: Common, Manageable and Serious (2026)",
     description:
-      "The side effects women actually report on HRT, which ones usually settle as the body adjusts, which ones a dose or delivery change fixes, and the warning signs that mean call your clinician.",
+      "HRT side effects women actually report: which settle as the body adjusts, which a dose or delivery change fixes, and the warning signs to call about.",
     category: "Science",
     readTime: "7 min read",
     publishedAt: "2026-09-08",
@@ -1056,9 +1056,9 @@ const articles: ArticleData[] = [
   },
   {
     slug: "does-hrt-cause-weight-gain",
-    title: "Does HRT Cause Weight Gain? Menopause vs the Medication (2026)",
+    title: "Does HRT Cause Weight Gain? Menopause vs the Medication",
     description:
-      "The honest answer to one of the most-searched HRT fears: what menopause itself does to weight, what HRT does and doesn't do, and why the two get blamed for each other.",
+      "One of the most-searched HRT fears, answered: what menopause itself does to weight, what HRT does and doesn't do, and why the two get blamed for each other.",
     category: "Science",
     readTime: "7 min read",
     publishedAt: "2026-09-08",
@@ -1098,7 +1098,7 @@ const articles: ArticleData[] = [
     slug: "how-long-can-you-stay-on-hrt",
     title: "How Long Can You Stay on HRT? The Honest Answer (2026)",
     description:
-      "There is no universal expiry date on HRT. Why the old 'shortest time possible' rule has softened, what actually drives the duration decision, and why it's a periodic review rather than a countdown.",
+      "There is no universal expiry date on HRT. Why the 'shortest time possible' rule has softened, what drives the duration decision, and why it's a periodic review.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-09-08",
@@ -1132,9 +1132,9 @@ const articles: ArticleData[] = [
   },
   {
     slug: "hrt-and-libido",
-    title: "HRT and Libido: Can Hormone Therapy Bring Back Sex Drive? (2026)",
+    title: "HRT and Libido: Can Hormone Therapy Bring Back Sex Drive?",
     description:
-      "Low libido in menopause has more than one cause, so HRT helps some women and not others. How estrogen, comfort, sleep and testosterone each play a part - and why it's rarely a one-hormone fix.",
+      "Low libido in menopause has more than one cause, so HRT helps some women and not others. How estrogen, comfort, sleep and testosterone each play a part.",
     category: "Science",
     readTime: "6 min read",
     publishedAt: "2026-09-08",
@@ -1168,7 +1168,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "non-hormonal-menopause-treatment",
-    title: "Non-Hormonal Menopause Treatments When HRT Isn't Right (2026)",
+    title: "Non-Hormonal Menopause Treatments When HRT Isn't Right",
     description:
       "HRT is the most effective menopause treatment, but it isn't for everyone. The legitimate non-hormonal routes, prescription and lifestyle, laid out without hype.",
     category: "Advice",
@@ -1208,9 +1208,9 @@ const articles: ArticleData[] = [
   },
   {
     slug: "when-to-start-hrt",
-    title: "When Should You Start HRT? The Timing Window, Explained (2026)",
+    title: "When Should You Start HRT? The Timing Window, Explained",
     description:
-      "Timing is the factor most women never hear about. Why starting near the menopause transition is a different proposition from starting years later, and how to know when your window is open.",
+      "Why starting HRT near the menopause transition is a different proposition from starting years later, and how to know whether your window is open.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-09-08",
@@ -1244,9 +1244,9 @@ const articles: ArticleData[] = [
   },
   {
     slug: "hrt-and-hair-thinning",
-    title: "HRT and Hair Thinning in Menopause: What Changes and What Helps (2026)",
+    title: "HRT and Hair Thinning in Menopause: What Helps (2026)",
     description:
-      "Many women notice their hair thinning around menopause. How the hormone shift drives it, whether HRT helps, and where dedicated hair-loss treatment fits alongside it.",
+      "Many women notice hair thinning around menopause. How the hormone shift drives it, whether HRT helps, and where dedicated hair-loss treatment fits alongside it.",
     category: "Science",
     readTime: "6 min read",
     publishedAt: "2026-09-08",

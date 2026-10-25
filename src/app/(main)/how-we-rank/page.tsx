@@ -1,4 +1,5 @@
 import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ClipboardCheck, Database, ShieldCheck, Scale, Trophy, RefreshCw, BadgeDollarSign, Check, X } from "lucide-react";
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   description:
     "Our methodology for ranking GLP-1 weight loss providers: the factors we score, where data comes from, how we verify it, and how we pick head-to-head winners.",
   alternates: { canonical: CANONICAL },
-  openGraph: {
+  openGraph: { images: [DEFAULT_OG_IMAGE],
     title: "How We Rank & Review Weight Loss Providers - Our Methodology",
     description:
       "The factors we score, where our data comes from, how we verify accuracy, and how we pick winners in our weight loss provider comparisons.",

@@ -323,7 +323,7 @@ export const ED_GUIDES_2026_10: ArticleData[] = [
     slug: "buying-ed-medication-online-safely",
     title: "How to Buy ED Medication Online Safely: A Checklist",
     description:
-      "A legitimate online ED pharmacy requires a prescription, is state-licensed and has a US pharmacist and address. The FDA checklist, and the hidden-ingredient risk.",
+      "A legitimate online ED pharmacy requires a prescription, is state-licensed and lists a US pharmacist and address. The FDA checklist and hidden-ingredient risk.",
     category: "Safety",
     readTime: "8 min read",
     publishedAt: PUBLISHED,

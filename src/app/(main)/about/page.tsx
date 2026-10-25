@@ -1,4 +1,5 @@
 import { REVIEWERS, REVIEW_LOG, reviewerDisplayName, reviewerPath, reviewerPersonSchema } from "@/data/reviewers";
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
@@ -23,12 +24,12 @@ export const revalidate = 60;
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/about";
 
 export const metadata: Metadata = {
-  title: "About Treatments Hub - Who We Are & How We Verify What We Publish",
+  title: "About Treatments Hub: Who We Are & How We Verify",
   description:
-    "Who runs Treatments Hub, how we verify every GLP-1 price against the provider's own site, who checks the medical statements, how affiliate revenue is handled, and how rankings are produced.",
+    "Who runs Treatments Hub, how we verify every price on the provider's own site, who checks the medical statements, and how affiliate revenue and rankings work.",
   alternates: { canonical: CANONICAL },
-  openGraph: {
-    title: "About Treatments Hub - Who We Are & How We Verify What We Publish",
+  openGraph: { images: [DEFAULT_OG_IMAGE],
+    title: "About Treatments Hub: Who We Are & How We Verify",
     description:
       "How we verify every GLP-1 price, who reviews the medical statements, how affiliate revenue is handled, and how our rankings and reviews are produced.",
     url: CANONICAL,

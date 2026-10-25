@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import Link from "next/link";
 import { ArrowUpRight, History, ShieldCheck } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -30,10 +31,10 @@ const latest = entries[0]?.date ?? PRICE_INDEX_VERIFIED;
 const earliest = entries[entries.length - 1]?.date ?? PRICE_INDEX_VERIFIED;
 
 export const metadata: Metadata = {
-  title: `GLP-1 Price Changes (2026): ${entries.length} Logged Changes to Online Provider Prices`,
-  description: `A dated log of every verified change to online GLP-1 prices - semaglutide and tirzepatide - with before and after. ${entries.length} entries since ${monthLabel(earliest)}; index verified ${longDate(PRICE_INDEX_VERIFIED)}.`,
+  title: `GLP-1 Price Changes (2026): ${entries.length} Logged Provider Price Changes`,
+  description: `A dated log of every verified change to online GLP-1 prices, semaglutide and tirzepatide, with before and after. ${entries.length} entries; index verified ${longDate(PRICE_INDEX_VERIFIED)}.`,
   alternates: { canonical: CANONICAL },
-  openGraph: { title: `GLP-1 Price Changes (2026): ${entries.length} Logged Changes`, description: "Every verified change to online GLP-1 provider prices, dated, with before and after.", url: CANONICAL, type: "article" },
+  openGraph: { images: [DEFAULT_OG_IMAGE], title: `GLP-1 Price Changes (2026): ${entries.length} Logged Changes`, description: "Every verified change to online GLP-1 provider prices, dated, with before and after.", url: CANONICAL, type: "article" },
 };
 
 export default async function PriceChangesPage() {

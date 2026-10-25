@@ -7,7 +7,7 @@ const UPDATED = "2026-10-04";
 export const metadata: Metadata = {
   title: "Disclaimer: Advertising, Medical & Review Policy",
   description:
-    "How Treatments Hub earns money, what that does and does not affect, the medical disclaimer, and how customer reviews, Reddit posts and provider information are used on this site.",
+    "How Treatments Hub earns money, what that does and does not affect, the medical disclaimer, and how reviews, Reddit posts and provider information are used.",
   alternates: { canonical: CANONICAL },
 };
 
