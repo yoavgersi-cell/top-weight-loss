@@ -220,8 +220,48 @@
     "description": ""
   },
   {
-    "id": "wellorithm",
+    "id": "luvo",
     "rank": 12,
+    "name": "Luvo",
+    "slug": "luvo",
+    "tagline": "50% off your first 4 weeks - semaglutide from $104.50, tirzepatide from $124.50",
+    "logo": "/logos/luvo.svg",
+    "rating": null,
+    "ratingLabel": null,
+    "reviewCount": null,
+    "highlights": [
+      "Semaglutide injection $104.50 for the first 4 weeks, then $209",
+      "Tirzepatide $124.50 for the first 4 weeks, then $249; tablets and Ozempic too",
+      "Clinician review, check-ins and shipping included - no membership fees"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://track.revoffers.com/aff_c?offer_id=1633&aff_id=12904",
+    "ctaText": "Get Started",
+    "description": ""
+  },
+  {
+    "id": "medgm",
+    "rank": 13,
+    "name": "MEDGm",
+    "slug": "medgm",
+    "tagline": "Compounded GLP-1 injections from $169, tablets from $239",
+    "logo": "/logos/medgm.svg",
+    "rating": null,
+    "ratingLabel": null,
+    "reviewCount": null,
+    "highlights": [
+      "Weekly compounded GLP-1 injections starting at $169",
+      "Daily dissolvable GLP-1 tablets starting at $239",
+      "Brand-name Zepbound: $99 membership plus medication cost"
+    ],
+    "specialOffer": null,
+    "affiliateUrl": "https://track.revoffers.com/aff_c?offer_id=1656&aff_id=12904",
+    "ctaText": "Get Started",
+    "description": ""
+  },
+  {
+    "id": "wellorithm",
+    "rank": 14,
     "name": "Wellorithm",
     "slug": "wellorithm",
     "tagline": "Start today for just $147",
@@ -241,7 +281,7 @@
   },
   {
     "id": "directmeds",
-    "rank": 13,
+    "rank": 15,
     "name": "DirectMeds",
     "slug": "directmeds",
     "tagline": "Plans starting at just $147",
@@ -261,7 +301,7 @@
   },
   {
     "id": "found",
-    "rank": 14,
+    "rank": 16,
     "name": "found",
     "slug": "found",
     "tagline": "Up to $100 off your membership plan",
@@ -281,7 +321,7 @@
   },
   {
     "id": "yucca",
-    "rank": 15,
+    "rank": 17,
     "name": "Yucca",
     "slug": "yucca",
     "tagline": "Weight loss plans from $146",
@@ -301,7 +341,7 @@
   },
   {
     "id": "bodybuildinghealth",
-    "rank": 17,
+    "rank": 19,
     "name": "Bodybuilding Health",
     "slug": "bodybuildinghealth",
     "tagline": "$100 Off Limited-Time Offer",
@@ -321,7 +361,7 @@
   },
   {
     "id": "livbody",
-    "rank": 18,
+    "rank": 20,
     "name": "LIV Body",
     "slug": "livbody",
     "tagline": "Works With Your Biology",
@@ -341,7 +381,7 @@
   },
   {
     "id": "skinnyrx",
-    "rank": 19,
+    "rank": 21,
     "name": "skinnyRx",
     "slug": "skinnyrx",
     "tagline": "Physician-Prescribed GLP-1 Weight Loss",
@@ -361,7 +401,7 @@
   },
   {
     "id": "healthrx",
-    "rank": 20,
+    "rank": 22,
     "name": "HealthRx",
     "slug": "healthrx",
     "tagline": "GLP-1 program from $99/month - clinician consult to overnight delivery",
@@ -381,7 +421,7 @@
   },
   {
     "id": "calibrate",
-    "rank": 21,
+    "rank": 23,
     "name": "Calibrate",
     "slug": "calibrate",
     "tagline": "One-year metabolic reset program with 1:1 coaching and insurance-covered GLP-1 medication",
@@ -401,7 +441,7 @@
   },
   {
     "id": "sequence",
-    "rank": 22,
+    "rank": 24,
     "name": "Sequence",
     "slug": "sequence",
     "tagline": "WeightWatchers' clinician-led GLP-1 program with insurance coordination",
@@ -421,7 +461,7 @@
   },
   {
     "id": "bmimd",
-    "rank": 23,
+    "rank": 25,
     "name": "bmiMD",
     "slug": "bmimd",
     "tagline": "Compounded GLP-1 weight-loss care, prescribed online and shipped cold-chain",

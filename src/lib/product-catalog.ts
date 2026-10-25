@@ -60,6 +60,33 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     shipping: "Home delivery",
     image: "/products/eden-semaglutide.webp",
   },
+  // Luvo (Oct 25, 2026): prices read from the provider's product pages;
+  // billed every 4 weeks. No operator-supplied product shots yet, so the
+  // logo tile renders until they are added under /public/products.
+  {
+    id: "luvo-semaglutide",
+    providerId: "luvo",
+    name: "Compounded Semaglutide Injection",
+    medication: "semaglutide",
+    format: "injection",
+    price: "$104.50",
+    regularPrice: "$209",
+    priceNote: "50% off the first 4 weeks; $209 every 4 weeks from the second delivery",
+    shipping: "Discreet shipping included",
+    image: null,
+  },
+  {
+    id: "luvo-semaglutide-tablets",
+    providerId: "luvo",
+    name: "Compounded Semaglutide Tablets",
+    medication: "semaglutide",
+    format: "tablet",
+    price: "$129.50",
+    regularPrice: "$259",
+    priceNote: "50% off the first 4 weeks; $259 every 4 weeks from the second delivery",
+    shipping: "Discreet shipping included",
+    image: null,
+  },
   {
     id: "altrx-semaglutide",
     providerId: "altrx",
@@ -209,6 +236,18 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     image: "/products/eden-tirzepatide.webp",
   },
   {
+    id: "luvo-tirzepatide",
+    providerId: "luvo",
+    name: "Compounded Tirzepatide Injection",
+    medication: "tirzepatide",
+    format: "injection",
+    price: "$124.50",
+    regularPrice: "$249",
+    priceNote: "50% off the first 4 weeks; $249 every 4 weeks from the second delivery",
+    shipping: "Discreet shipping included",
+    image: null,
+  },
+  {
     id: "altrx-tirzepatide",
     providerId: "altrx",
     name: "Compounded GLP-1 + GIP (Tirzepatide) Injection",
@@ -340,6 +379,17 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     image: "/products/altrx-ozempic.webp",
   },
   {
+    id: "luvo-ozempic",
+    providerId: "luvo",
+    name: "Brand-Name Ozempic (Semaglutide) Pen",
+    medication: "semaglutide",
+    format: "injection",
+    price: "$1,299",
+    priceNote: "brand-name; 4 weeks of injections, delivered every 4 weeks; cancel anytime",
+    shipping: "Discreet shipping included",
+    image: null,
+  },
+  {
     id: "sprout-wegovy",
     providerId: "sprout",
     name: "Brand-Name Wegovy (Semaglutide) Pen",
@@ -354,7 +404,8 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
 
 /** Numeric value for sorting ("from $179" → 179). */
 export function productPriceValue(p: CatalogProduct): number {
-  return Number(p.price.replace(/[^0-9]/g, "")) || 9999;
+  // Keep decimals (Luvo prices its first four weeks at $104.50), strip $ and commas.
+  return Number(p.price.replace(/[^0-9.]/g, "")) || 9999;
 }
 
 /**
