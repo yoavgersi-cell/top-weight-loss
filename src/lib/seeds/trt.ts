@@ -822,7 +822,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "Is TRT a steroid?",
-        body: `The honest answer has two halves, and both matter. Chemically: yes - testosterone is literally a steroid hormone, the original one that anabolic steroids are derived from, so "TRT is a steroid" is technically true. Medically, the comparison collapses: TRT means restoring a deficient man to normal physiological levels, at prescribed doses, with blood monitoring - while steroid abuse means stacking supraphysiological doses, often several compounds at once, with no medical oversight, chasing levels far beyond anything a body naturally produces. Same molecule family, opposite practices. The question worth asking is not "is it a steroid" but "is it a diagnosis" - which is the next section.`,
+        body: `<div class="qa"><strong>The short answer</strong>Testosterone is chemically a steroid hormone, but TRT at prescribed doses under monitoring is a different proposition from bodybuilding steroid use at many times those doses. The real trade-offs are suppressed natural production and fertility while on it and the need for ongoing blood tests. Whether it is bad for you mostly turns on whether your levels are genuinely low on testing or you are medicating normal aging.</div>The honest answer has two halves, and both matter. Chemically: yes - testosterone is literally a steroid hormone, the original one that anabolic steroids are derived from, so "TRT is a steroid" is technically true. Medically, the comparison collapses: TRT means restoring a deficient man to normal physiological levels, at prescribed doses, with blood monitoring - while steroid abuse means stacking supraphysiological doses, often several compounds at once, with no medical oversight, chasing levels far beyond anything a body naturally produces. Same molecule family, opposite practices. The question worth asking is not "is it a steroid" but "is it a diagnosis" - which is the next section.`,
       },
       {
         heading: "Is TRT bad for you?",
@@ -862,7 +862,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "What's the actual difference?",
-        body: `Two opposite strategies for the same problem. <strong>TRT replaces</strong>: testosterone arrives from outside - injections, creams, or oral formulations - and your levels rise regardless of what your own testes do. It is the established, decades-old approach with the most robust track record. <strong>Enclomiphene stimulates</strong>: it works upstream, at the brain's signaling level, prompting your own natural production to increase. It is taken as a simple oral tablet and used off-label for testosterone support. Same goal, different machinery - and the machinery difference is what drives every trade-off below.`,
+        body: `<div class="qa"><strong>The short answer</strong>Enclomiphene signals your body to make more of its own testosterone; TRT supplies it from outside. Fertility is the dividing line, since TRT suppresses sperm production while you are on it and enclomiphene works with your own production. TRT has the longer track record; enclomiphene is oral, needle-free and used off-label, and a clinician chooses between them from your labs and life stage.</div>Two opposite strategies for the same problem. <strong>TRT replaces</strong>: testosterone arrives from outside - injections, creams, or oral formulations - and your levels rise regardless of what your own testes do. It is the established, decades-old approach with the most robust track record. <strong>Enclomiphene stimulates</strong>: it works upstream, at the brain's signaling level, prompting your own natural production to increase. It is taken as a simple oral tablet and used off-label for testosterone support. Same goal, different machinery - and the machinery difference is what drives every trade-off below.`,
       },
       {
         heading: "Why does fertility decide this for so many men?",
@@ -902,7 +902,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "What is Medvi QUAD?",
-        body: `Medvi QUAD is a men's performance medication from Medvi, the telehealth brand best known for its weight-loss program. Its pitch is consolidation: instead of separate prescriptions and add-ons, QUAD packs four ingredients into a single sublingual dose - a liquid absorbed under the tongue, with no injections and no pills to swallow. Medvi frames the product around "energy, hormones, and performance" and lists physical performance, hormone balance, energy levels and mental focus among its target benefits - those are the company's own marketing claims, and the ingredient list below tells you what the product actually is: a sexual-performance formula. It is Rx-only, prescribed after an online provider review, and ships in discreet packaging.`,
+        body: `<div class="qa"><strong>The short answer</strong>Medvi QUAD is an Rx-only sublingual medication combining sildenafil, tadalafil, apomorphine and L-citrulline in one dose, per Medvi's product pages. It is prescribed online after a licensed provider reviews your intake, starts at $114 a month promotional (regularly $179) with the consultation, rush shipping and support included, and you do not pay if a provider does not qualify you.</div>Medvi QUAD is a men's performance medication from Medvi, the telehealth brand best known for its weight-loss program. Its pitch is consolidation: instead of separate prescriptions and add-ons, QUAD packs four ingredients into a single sublingual dose - a liquid absorbed under the tongue, with no injections and no pills to swallow. Medvi frames the product around "energy, hormones, and performance" and lists physical performance, hormone balance, energy levels and mental focus among its target benefits - those are the company's own marketing claims, and the ingredient list below tells you what the product actually is: a sexual-performance formula. It is Rx-only, prescribed after an online provider review, and ships in discreet packaging.`,
       },
       {
         heading: "What's actually in Medvi QUAD?",
@@ -944,22 +944,22 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "Is this hypogonadism?",
-        body: `Hypogonadism is the clinical name for what most men search as "low testosterone" - a state where the body does not produce enough of the hormone, whether the issue starts in the testes or in the brain's signaling to them. If a clinician uses the word, it is not a scarier diagnosis than "low T" - it is the same conversation with its medical label, and it is the term that unlocks proper evaluation: symptoms plus confirmed low levels on blood testing, not either one alone. The symptoms below are the checklist that starts that conversation.`,
+        body: `<div class="qa"><strong>The short answer</strong>The common signs of low testosterone are persistent fatigue, reduced muscle and strength, more body fat, lower sex drive or erectile changes, and changes in mood, motivation, sleep and focus. They overlap with many other conditions, so they point to a blood test rather than a diagnosis; hypogonadism is confirmed by symptoms plus low levels on testing.</div>Hypogonadism is the clinical name for what most men search as "low testosterone" - a state where the body does not produce enough of the hormone, whether the issue starts in the testes or in the brain's signaling to them. If a clinician uses the word, it is not a scarier diagnosis than "low T" - it is the same conversation with its medical label, and it is the term that unlocks proper evaluation: symptoms plus confirmed low levels on blood testing, not either one alone. The symptoms below are the checklist that starts that conversation.`,
       },
       {
-        heading: "What low testosterone is",
+        heading: "What is low testosterone?",
         body: `Testosterone naturally declines with age, but some men have levels low enough - confirmed by bloodwork - to cause symptoms. This is sometimes called "low T." Only a lab test alongside symptoms can confirm it, which is why testing is the first step in any legitimate TRT program.`,
       },
       {
-        heading: "Common physical signs",
+        heading: "What are the common physical signs of low testosterone?",
         body: `Frequently reported physical symptoms include persistent fatigue and low energy, reduced muscle mass or strength, increased body fat, and reduced sex drive or erectile changes. These symptoms overlap with many other conditions, so they point to testing rather than a diagnosis on their own.`,
       },
       {
-        heading: "Mood, sleep and focus",
+        heading: "How does low testosterone affect mood, sleep and focus?",
         body: `Low testosterone can also affect mood, motivation, sleep quality and mental focus. Many men describe a general loss of drive or "flatness." Again, these are reasons to get evaluated, not proof of low T by themselves.`,
       },
       {
-        heading: "When to get tested",
+        heading: "When should you get tested?",
         body: `If several of these symptoms are persistent and affecting your life, it's worth getting your testosterone checked. Online providers make this easy with at-home or lab-based testing followed by a clinician review - see how the top options compare on our <a href="/trt">best TRT providers</a> page. This article is general information, not medical advice.`,
       },
     ],
@@ -977,15 +977,15 @@ const articles: ArticleData[] = [
     author: "Treatments Hub Staff",
     sections: [
       {
-        heading: "Injections",
-        body: `Injectable testosterone (usually cypionate) is the most common and typically most cost-effective route. It's given weekly or twice-weekly, self-administered, and provides stable levels. The main downside is the needle - though many men adjust quickly. Providers like <a href="/trt/reviews/dudemeds">DudeMeds</a> and <a href="/trt/reviews/petermd">PeterMD</a> center on injections.`,
+        heading: "How do testosterone injections work?",
+        body: `<div class="qa"><strong>The short answer</strong>Injections (usually cypionate) are the most common and cost-effective route and give stable levels, at the price of a needle. Creams and gels are needle-free and steady but must dry and can transfer to others. Oral testosterone undecanoate avoids both but is newer, costs more and is taken with food. The right route depends on preference, budget and your clinician's assessment.</div>Injectable testosterone (usually cypionate) is the most common and typically most cost-effective route. It's given weekly or twice-weekly, self-administered, and provides stable levels. The main downside is the needle - though many men adjust quickly. Providers like <a href="/trt/reviews/dudemeds">DudeMeds</a> and <a href="/trt/reviews/petermd">PeterMD</a> center on injections.`,
       },
       {
-        heading: "Cream and gel",
+        heading: "How do testosterone creams and gels work?",
         body: `Topical testosterone is applied to the skin daily - needle-free and steady, with a microdosing approach some men prefer. The trade-offs: it must be allowed to dry and there's a risk of transferring it to others through skin contact. <a href="/trt/reviews/maleexcel">Male Excel</a> is known for its daily microdosing cream.`,
       },
       {
-        heading: "Oral options",
+        heading: "What are the oral testosterone options?",
         body: `Modern oral testosterone (such as testosterone undecanoate) avoids needles entirely and is taken as a capsule. It's newer, tends to cost more, and requires taking it with food as directed. It's a good fit for men who want to avoid both needles and skin transfer.`,
       },
       {
@@ -1007,19 +1007,19 @@ const articles: ArticleData[] = [
     author: "Treatments Hub Staff",
     sections: [
       {
-        heading: "The short answer",
-        body: `TRT doesn't cause hair loss by itself - but it can accelerate it in men who are genetically predisposed to pattern baldness. Some of the testosterone you take converts, via the 5-alpha-reductase enzyme, into DHT: the hormone that gradually miniaturizes scalp follicles in men who carry the sensitivity. More circulating testosterone can mean more DHT, and for a predisposed scalp, a faster version of the timeline your genes had already written.`,
+        heading: "Does TRT cause hair loss?",
+        body: `<div class="qa"><strong>The short answer</strong>TRT does not cause hair loss by itself, but it can speed it up in men genetically prone to pattern baldness, because some testosterone converts to DHT. Your family history and hairline before treatment are the deciding factors, and DHT-blocking medicines such as finasteride, including topical routes, are commonly used alongside TRT if it starts.</div>TRT doesn't cause hair loss by itself - but it can accelerate it in men who are genetically predisposed to pattern baldness. Some of the testosterone you take converts, via the 5-alpha-reductase enzyme, into DHT: the hormone that gradually miniaturizes scalp follicles in men who carry the sensitivity. More circulating testosterone can mean more DHT, and for a predisposed scalp, a faster version of the timeline your genes had already written.`,
       },
       {
-        heading: "Who's actually at risk",
+        heading: "Who is actually at risk of hair loss on TRT?",
         body: `The deciding factor isn't the therapy - it's your follicles. If pattern baldness runs strongly in your family or your hairline was already moving before treatment, TRT may speed that process up. If you've reached your 40s with a full head of hair and no family history, your risk is lower - though pattern loss can still begin later in life, so it's worth flagging your history to your provider. Baldness genetics come from both sides of the family, so look at the whole picture, not just your mother's father.`,
       },
       {
-        heading: "Early warning signs on TRT",
+        heading: "What are the early warning signs on TRT?",
         body: `Watch for the classic pattern-loss signature after starting therapy: more hairs on the pillow, temples pulling back, a thinning crown under bright light. Diffuse all-over shedding shortly after a new medication can have other causes, but progressive recession at the temples and crown is the DHT fingerprint. Catching it in the first months matters - pattern loss is much easier to stop than to reverse.`,
       },
       {
-        heading: "What you can do about it",
+        heading: "What can you do about hair loss on TRT?",
         body: `The good news: this is one of the most treatable side effects of TRT. DHT-blocking medicines like finasteride are commonly used alongside testosterone therapy, and topical routes (finasteride or minoxidil applied to the scalp) are options for men who prefer to limit systemic exposure. This is a conversation for your prescribing clinician, since your hormone panel and goals both matter. Our sister guide on <a href="/hair-loss">hair-loss treatment providers</a> covers the full toolkit, and <a href="/hair-loss/articles/dutasteride-vs-finasteride">dutasteride vs finasteride</a> explains the DHT-blocker options.`,
       },
       {
@@ -1041,23 +1041,23 @@ const articles: ArticleData[] = [
     author: "Treatments Hub Staff",
     sections: [
       {
-        heading: "The normal range - and why it's so wide",
-        body: `For adult men, most labs place normal total testosterone somewhere around 300 to 1,000 ng/dL - a deliberately wide range, because healthy men genuinely vary that much. Two men can both be "normal" with one at triple the other's level. That width is also why a single number rarely tells the whole story: where you sit in the range, your symptoms, and your trend over time matter more than clearing the minimum bar.`,
+        heading: "What is the normal testosterone range, and why is it so wide?",
+        body: `<div class="qa"><strong>The short answer</strong>Most labs put normal total testosterone for adult men at roughly 300 to 1,000 ng/dL, a deliberately wide range, and levels decline about 1% a year from the thirties. The American Urological Association's working cutoff for low is 300 ng/dL, confirmed on two separate morning draws alongside symptoms, and free testosterone can be low even when total looks normal.</div>For adult men, most labs place normal total testosterone somewhere around 300 to 1,000 ng/dL - a deliberately wide range, because healthy men genuinely vary that much. Two men can both be "normal" with one at triple the other's level. That width is also why a single number rarely tells the whole story: where you sit in the range, your symptoms, and your trend over time matter more than clearing the minimum bar.`,
       },
       {
-        heading: "What happens with age",
+        heading: "What happens to testosterone with age?",
         body: `Testosterone typically peaks in the late teens and twenties, then declines gradually - commonly cited at roughly 1% per year from the thirties onward. That slope is normal aging, not a disease. The clinical question isn't whether your level at 45 matches your level at 22 (it won't); it's whether your level is low enough, alongside real symptoms, to explain how you feel. The symptom side of that equation is covered in <a href="/trt/articles/low-testosterone-symptoms">low testosterone symptoms</a>.`,
       },
       {
-        heading: "When a number officially counts as low",
+        heading: "When does a number officially count as low?",
         body: `The American Urological Association uses 300 ng/dL as the working cutoff for low testosterone - confirmed on two separate morning blood draws, alongside symptoms. All three parts matter. Testosterone peaks in the early morning and can swing meaningfully day to day, which is why guidelines require morning samples (roughly 7-10am) and a repeat test before anyone diagnoses anything. A single afternoon reading of 280 is a reason to retest properly, not a diagnosis.`,
       },
       {
-        heading: "Total vs free testosterone",
+        heading: "What is the difference between total and free testosterone?",
         body: `Most of the testosterone in your blood is bound to proteins and unavailable to your tissues; the small unbound fraction - free testosterone - does the actual work. Some men have normal total testosterone but low free testosterone (often due to elevated binding proteins), which can produce classic low-T symptoms despite a "normal" report. A thorough workup measures or calculates both, which is worth checking when comparing providers' lab panels.`,
       },
       {
-        heading: "Getting properly tested",
+        heading: "How do you get properly tested?",
         body: `Testing is the easy part now: online TRT clinics arrange baseline labs - typically at a local draw station or via at-home kit - and have a licensed clinician interpret them against your symptoms, with treatment only when both justify it. That two-morning-tests standard is a good litmus test for clinic quality. See <a href="/trt/articles/how-to-get-trt-online">how to get TRT online</a> for the process end to end, and our <a href="/trt">best TRT providers</a> ranking for who does testing right. This article is general information, not medical advice. For the complete picture - the harmonized reference range, decade by decade, why charts disagree and how a diagnosis is actually made - read our in-depth guide to <a href="/trt/articles/testosterone-levels-by-age">testosterone levels by age</a>.`,
       },
     ],
@@ -1075,19 +1075,19 @@ const articles: ArticleData[] = [
     author: "Treatments Hub Staff",
     sections: [
       {
-        heading: "The short answer",
-        body: `Insurance can cover TRT - but usually only when you fit the strict clinical definition of hypogonadism: documented low testosterone on two separate morning blood tests, plus symptoms, often with prior-authorization paperwork on top. Men whose levels hover just above the cutoff, or who don't want to route their care through referrals and waiting rooms, frequently find coverage more theoretical than real. That gap is precisely the market online TRT clinics grew to fill.`,
+        heading: "Is TRT covered by insurance?",
+        body: `<div class="qa"><strong>The short answer</strong>Insurance can cover TRT, but usually only when you meet the strict definition of hypogonadism: low testosterone on two separate morning tests plus symptoms, often with prior authorization. When you qualify, generic injectable testosterone through your doctor is usually the cheapest route on paper; online clinics are cash-pay memberships that bundle medication, visits, labs and shipping, and HSA or FSA funds can generally be used.</div>Insurance can cover TRT - but usually only when you fit the strict clinical definition of hypogonadism: documented low testosterone on two separate morning blood tests, plus symptoms, often with prior-authorization paperwork on top. Men whose levels hover just above the cutoff, or who don't want to route their care through referrals and waiting rooms, frequently find coverage more theoretical than real. That gap is precisely the market online TRT clinics grew to fill.`,
       },
       {
-        heading: "What insurance-covered TRT looks like",
+        heading: "What does insurance-covered TRT look like?",
         body: `The covered path typically runs through your primary-care doctor or an endocrinologist/urologist: labs, a diagnosis that meets your insurer's criteria, and a prescription - commonly for generic injectable testosterone, which is an inexpensive, decades-old medication. When you qualify, this is usually the cheapest route on paper. The costs are in time and friction: appointments, prior authorizations, refill logistics, and coverage rules that can treat borderline numbers as "not medically necessary."`,
       },
       {
-        heading: "Why online clinics are cash-pay",
+        heading: "Why are online TRT clinics cash-pay?",
         body: `Most telehealth TRT providers don't bill insurance at all. Instead they charge a flat monthly membership that bundles the medication, clinical visits, follow-up labs and shipping into one price. You're paying for convenience and access - no referrals, no prior auth, treatment protocols decided between you and the clinician rather than an insurer's checklist. Real prices for the major clinics are broken down in our <a href="/trt/articles/trt-cost">what does TRT cost</a> guide, with current numbers on each provider's page.`,
       },
       {
-        heading: "Making the comparison honestly",
+        heading: "How do you compare insured and cash-pay TRT honestly?",
         body: `If your levels are clearly low and you have a doctor you like, the insurance route can be genuinely cheaper - generic testosterone itself costs little. The cash route wins on speed, privacy and simplicity, and bundled memberships often cost less than people assume once labs and visits are counted in. One tip either way: HSA/FSA funds can generally be used for legitimate medical care, which softens the cash-pay math. Ask any provider what their price actually includes before comparing.`,
       },
       {
@@ -1110,14 +1110,14 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "Same molecule, different universe",
-        body: `The confusion is understandable: TRT and anabolic steroid use can involve literally the same compound. But the comparison ends at the molecule. TRT restores a deficient man to the normal physiological range under medical supervision; steroid use pushes levels far beyond anything a human body produces naturally, in pursuit of maximum muscle growth. One is replacement; the other is enhancement - and the risk profiles are worlds apart.`,
+        body: `<div class="qa"><strong>The short answer</strong>TRT and anabolic steroid use can involve the same molecule, but TRT restores a deficient man to the normal 300 to 1,000 ng/dL range under medical supervision, while steroid protocols push levels to multiples of that, often stacking compounds never approved for human use. TRT is legal, prescribed medicine with monitored labs; it will not make you jacked, it gives back what deficiency took.</div>The confusion is understandable: TRT and anabolic steroid use can involve literally the same compound. But the comparison ends at the molecule. TRT restores a deficient man to the normal physiological range under medical supervision; steroid use pushes levels far beyond anything a human body produces naturally, in pursuit of maximum muscle growth. One is replacement; the other is enhancement - and the risk profiles are worlds apart.`,
       },
       {
-        heading: "The dose makes the difference",
+        heading: "Why does the dose make the difference?",
         body: `TRT aims to bring your blood levels into the same 300-1,000 ng/dL range as any healthy man, with labs to verify you're there and not beyond. Performance-focused steroid protocols commonly involve multiples of replacement dosing, often stacking several compounds - including synthetic derivatives never approved for human therapeutic use. The side effects people associate with "steroids" scale with those supraphysiologic doses; therapy at replacement levels is a fundamentally different exposure.`,
       },
       {
-        heading: "Supervision and legality",
+        heading: "How do supervision and legality differ?",
         body: `TRT is legal medicine: testosterone is a Schedule III controlled substance in the US, prescribed after documented low levels, with monitoring of blood counts and other markers over time - see <a href="/trt/articles/trt-side-effects">what providers monitor and why</a>. Non-prescribed steroid use sits outside that entirely: illegally sourced, unverified products, no baseline labs, no one watching hematocrit or blood pressure. Much of the harm attributed to steroids traces to that unsupervised context.`,
       },
       {
@@ -1143,19 +1143,19 @@ const articles: ArticleData[] = [
     author: "Treatments Hub Staff",
     sections: [
       {
-        heading: "The 'TRT is forever' claim, examined",
-        body: `You'll hear it stated as law: once you start testosterone, you can never stop. The truth is less dramatic. You can stop TRT - men do, for fertility plans, cost, side effects, or simply reconsidering. What's true is that stopping has a physiological cost you should understand in advance: your body's own production has been switched off, and it doesn't switch back on overnight.`,
+        heading: "Is TRT really forever?",
+        body: `<div class="qa"><strong>The short answer</strong>Yes, you can stop TRT. Your own production has been switched off and takes weeks to months to restart, so testosterone can dip below where you started and symptoms often return in that gap. Most men recover over a few months, a minority do not fully return to baseline, and stopping should be planned with your clinician, sometimes with restart support such as enclomiphene or hCG.</div>You'll hear it stated as law: once you start testosterone, you can never stop. The truth is less dramatic. You can stop TRT - men do, for fertility plans, cost, side effects, or simply reconsidering. What's true is that stopping has a physiological cost you should understand in advance: your body's own production has been switched off, and it doesn't switch back on overnight.`,
       },
       {
-        heading: "What happens when you stop",
+        heading: "What happens when you stop TRT?",
         body: `On TRT, your brain stops signaling your testes to produce testosterone. Stop the therapy abruptly, and you enter a gap: the external supply is gone, but natural production hasn't resumed. During that window - typically weeks to months - testosterone can sit lower than where you started, and low-T symptoms like fatigue, low mood and reduced libido often return, sometimes more noticeably than before. This gap, not any permanent switch, is what the "forever" folklore is describing.`,
       },
       {
-        heading: "How long recovery takes",
+        heading: "How long does recovery take after stopping TRT?",
         body: `Most men's natural production recovers over a few months, though the timeline varies with how long you were on therapy, your age, and where your system started. Sperm production follows its own, often slower, recovery arc - covered in <a href="/trt/articles/trt-and-fertility">TRT and fertility</a>. A minority of men, particularly after long-term use or with pre-existing testicular issues, don't return fully to their old baseline - which is a genuine reason to treat starting TRT as a considered decision, not a casual one.`,
       },
       {
-        heading: "Coming off safely",
+        heading: "How do you come off TRT safely?",
         body: `If you decide to stop, do it with your clinician rather than cold turkey. Providers can monitor your labs through the transition and, where appropriate, use restart support - medications like enclomiphene or hCG that stimulate the brain-testes signal to shorten the low-hormone gap. (Enclomiphene is also what some men switch <em>to</em> rather than fully stopping; see <a href="/trt/articles/enclomiphene-vs-trt">enclomiphene vs TRT</a>.) A planned exit with monitoring beats an abrupt one every time.`,
       },
       {
@@ -1189,7 +1189,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "What's the difference between the two?",
-        body: `<strong>Total testosterone</strong> is the whole amount circulating in your blood. But most of that is bound to proteins - chiefly <strong>SHBG</strong> (sex hormone-binding globulin) and albumin - and while it's bound, your body can't use it. <strong>Free testosterone</strong> is the small unbound fraction that's actually available to do the work. The analogy that helps: total is the money in your account; free is the cash you can spend right now. The rest is committed elsewhere. That distinction is the whole reason two men with the same total can feel completely different.`,
+        body: `<div class="qa"><strong>The short answer</strong>Total testosterone counts all the testosterone in your blood; free testosterone is the small unbound fraction that is biologically active. Because SHBG binds most of it, a normal total can hide a low free level, and symptoms often track the free number more closely. A thorough provider reads both alongside your symptoms.</div><strong>Total testosterone</strong> is the whole amount circulating in your blood. But most of that is bound to proteins - chiefly <strong>SHBG</strong> (sex hormone-binding globulin) and albumin - and while it's bound, your body can't use it. <strong>Free testosterone</strong> is the small unbound fraction that's actually available to do the work. The analogy that helps: total is the money in your account; free is the cash you can spend right now. The rest is committed elsewhere. That distinction is the whole reason two men with the same total can feel completely different.`,
       },
       {
         heading: "Why can 'normal' total testosterone still mean low T?",
@@ -1225,7 +1225,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "Why does TRT need blood work at all?",
-        body: `Two reasons: to get the diagnosis right before starting, and to keep it safe and effective once you're on it. Testosterone therapy changes more than one system in the body, and the responsible model is to establish a baseline, confirm that low testosterone is actually the problem, and then re-check periodically to catch anything that drifts. This is the single clearest line between real TRT and the "just ship the vial" operations - covered in <a href="/trt/articles/is-trt-bad-for-you">is TRT bad for you</a> - because the risks that matter are mostly the ones monitoring is designed to catch early.`,
+        body: `<div class="qa"><strong>The short answer</strong>TRT is a monitored treatment: baseline labs confirm the diagnosis and follow-up labs keep it safe. Beyond testosterone, providers typically watch hematocrit, estradiol and PSA, among other markers depending on your profile. A provider who never re-checks bloods is a warning sign; the exact panel and schedule are set by your clinician.</div>Two reasons: to get the diagnosis right before starting, and to keep it safe and effective once you're on it. Testosterone therapy changes more than one system in the body, and the responsible model is to establish a baseline, confirm that low testosterone is actually the problem, and then re-check periodically to catch anything that drifts. This is the single clearest line between real TRT and the "just ship the vial" operations - covered in <a href="/trt/articles/is-trt-bad-for-you">is TRT bad for you</a> - because the risks that matter are mostly the ones monitoring is designed to catch early.`,
       },
       {
         heading: "What gets checked before you start?",
@@ -1261,7 +1261,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "What's actually different between the two?",
-        body: `Less than the framing suggests, and more in logistics than in medicine. A legitimate <strong>online TRT provider</strong> still runs blood work (you get it drawn at a local lab), still has a licensed clinician review and prescribe, and still monitors you over time - the consults just happen by video or messaging and the medication ships to you. An <strong>in-person clinic</strong> does the same clinical work under one roof, with face-to-face visits. The core medicine - diagnosis, prescription, monitoring - is the same job either way; what changes is convenience, cost and how the care is delivered.`,
+        body: `<div class="qa"><strong>The short answer</strong>Online TRT is usually cheaper and more convenient, with labs done locally and consults handled remotely, and for straightforward cases it can match in-person care. An in-person clinic suits complicated cases or men who prefer face-to-face management. Either way, judge the provider on proper diagnosis, real monitoring, reachable support and what the membership actually includes.</div>Less than the framing suggests, and more in logistics than in medicine. A legitimate <strong>online TRT provider</strong> still runs blood work (you get it drawn at a local lab), still has a licensed clinician review and prescribe, and still monitors you over time - the consults just happen by video or messaging and the medication ships to you. An <strong>in-person clinic</strong> does the same clinical work under one roof, with face-to-face visits. The core medicine - diagnosis, prescription, monitoring - is the same job either way; what changes is convenience, cost and how the care is delivered.`,
       },
       {
         heading: "Where does online win?",
@@ -1297,7 +1297,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "What is an 'ester' anyway?",
-        body: `Injectable testosterone is the same hormone your body makes, attached to a chemical chain called an ester. The ester does one main job: it controls how slowly the testosterone releases from the injection site into your bloodstream. <strong>Cypionate</strong> and <strong>enanthate</strong> are two long-acting esters with very similar release profiles - which is why they're dosed on comparable schedules and treated as broadly interchangeable in practice. The ester is a delivery mechanism, not a different drug; once it's cleaved off in the body, what's left is identical testosterone.`,
+        body: `<div class="qa"><strong>The short answer</strong>Cypionate and enanthate are the same testosterone attached to slightly different ester chains that control release. Both are long-acting injectables on similar schedules, most men would not notice a switch, and cypionate is more common in the US mainly for availability. Dose, injection frequency and monitoring matter far more than which ester you are on.</div>Injectable testosterone is the same hormone your body makes, attached to a chemical chain called an ester. The ester does one main job: it controls how slowly the testosterone releases from the injection site into your bloodstream. <strong>Cypionate</strong> and <strong>enanthate</strong> are two long-acting esters with very similar release profiles - which is why they're dosed on comparable schedules and treated as broadly interchangeable in practice. The ester is a delivery mechanism, not a different drug; once it's cleaved off in the body, what's left is identical testosterone.`,
       },
       {
         heading: "Is there a real difference between them?",
@@ -1333,7 +1333,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "Does TRT actually raise libido?",
-        body: `For men who are genuinely low, it commonly does - low libido is one of the classic symptoms of low testosterone and one of the more reliably responsive to treatment. Restoring testosterone into a healthy range often brings back sex drive that had quietly faded, and for many men that's one of the first improvements they notice. That said, "commonly" is not "always," and the degree varies between men. It fits into the broader arc of what to expect, laid out in <a href="/trt/articles/trt-results-timeline">the TRT results timeline</a>.`,
+        body: `<div class="qa"><strong>The short answer</strong>In men who are genuinely testosterone-deficient, TRT commonly improves libido, usually over the first weeks to a couple of months, with an effect size that varies. Libido and erectile function are different things, and ED can have separate causes. If your testosterone is normal, TRT is not a libido enhancer.</div>For men who are genuinely low, it commonly does - low libido is one of the classic symptoms of low testosterone and one of the more reliably responsive to treatment. Restoring testosterone into a healthy range often brings back sex drive that had quietly faded, and for many men that's one of the first improvements they notice. That said, "commonly" is not "always," and the degree varies between men. It fits into the broader arc of what to expect, laid out in <a href="/trt/articles/trt-results-timeline">the TRT results timeline</a>.`,
       },
       {
         heading: "How long does it take?",
@@ -1369,7 +1369,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "Why is there estrogen in a testosterone conversation at all?",
-        body: `Because men are supposed to have some. An enzyme called <strong>aromatase</strong> converts a portion of testosterone into <strong>estradiol</strong> (the main estrogen), and that estradiol isn't a contaminant - it's essential, supporting bone density, mood, cognition, libido and more in men. So the goal on TRT is never "zero estrogen"; it's the right balance. This surprises men who assume estrogen is purely a female hormone or purely a problem - it's neither, and understanding that prevents a lot of self-inflicted mistakes.`,
+        body: `<div class="qa"><strong>The short answer</strong>Men need some estrogen: part of testosterone converts to estradiol via aromatase, and that estradiol supports bone, mood and libido. TRT can raise estradiol along with testosterone, so a good provider monitors it. Problems come from imbalance in either direction, including too low from over-aggressive blocking, and whether an aromatase inhibitor is ever needed is a clinician's call from labs and symptoms.</div>Because men are supposed to have some. An enzyme called <strong>aromatase</strong> converts a portion of testosterone into <strong>estradiol</strong> (the main estrogen), and that estradiol isn't a contaminant - it's essential, supporting bone density, mood, cognition, libido and more in men. So the goal on TRT is never "zero estrogen"; it's the right balance. This surprises men who assume estrogen is purely a female hormone or purely a problem - it's neither, and understanding that prevents a lot of self-inflicted mistakes.`,
       },
       {
         heading: "What does TRT do to estrogen?",
