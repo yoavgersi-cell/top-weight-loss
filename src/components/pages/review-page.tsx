@@ -15,6 +15,7 @@ import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { TrustpilotSummary } from "@/components/trustpilot-summary";
 import { getReviewRecord } from "@/data/reviews";
+import { CustomerThemes } from "@/components/customer-themes";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 import { LastUpdated } from "@/components/last-updated";
@@ -45,40 +46,6 @@ import { catalogPriceSnippet } from "@/lib/product-catalog";
 // on the page itself from the lowest-rated Trustpilot reviews we already hold
 // and transcribe below - no outside claims - and says plainly when a provider
 // has no public review record yet. Weight-loss vertical only.
-const REVIEW_COMPLAINTS: Record<string, { intro: string; themes: { label: string; detail: string }[]; outro: string }> = {
-  embody: {
-    intro: "Of the 96 Trustpilot reviews transcribed on this page, 15 rate embody three stars or lower, 11 of them from the newest page we captured on October 25, 2026. They are specific, and they cluster around five things:",
-    themes: [
-      { label: "Orders that ship late or not at all", detail: "The most common complaint in the October page: a three-month order still not received after a month, a refill the pharmacy had held since mid-October while the reviewer ran out, and a shipment sent to an old address after the new one was on file. Earlier reviews describe a first dose quoted at 3-5 days arriving in 8." },
-      { label: "Refunds under the no-refund policy", detail: "Three October reviewers who say they received no medication were refused refunds; one disputes a payment the company says it never received." },
-      { label: "Dose and order changes nobody asked for", detail: "Two reviewers report a next order placed at a different dose than agreed, and one says a prescription arrived at roughly triple her dose and the pharmacy told her not to take it. These are the most serious complaints in the set." },
-      { label: "Reaching a person", detail: "Chat and AI support that loops without an answer, unreturned calls, and appointments booked a week out; several 5-star reviews describe the same chat frustration ending well once a nurse called." },
-      { label: "Video appointments and billing follow-through", detail: "From the earlier captures: a doctor not appearing for three scheduled visits, and a charge for something never received that support answered without checking the account." },
-    ],
-    outro: "Set against the record, the complaints are a minority: 79 of the 96 reviews rate embody 4 or 5 stars, and the praise is consistent about the nurses and providers, fast appointments and the flat price. The pattern in the complaints is operational - fulfilment, dose changes and reaching a human when something goes wrong - which matters most if you are switching mid-course or starting at a time-sensitive moment. The full set of reviews, newest first, is below.",
-  },
-  wellmedr: {
-    intro: "Of the 90 Trustpilot reviews transcribed on this page, 11 rate welludr three stars or lower, six of them one star. The themes:",
-    themes: [
-      { label: "Billing cadence and double charges", detail: "The sharpest October 2026 complaint is a detailed one: a $99-a-month plan charged every 21 days, which the reviewer works out to about $1,721 a year rather than $1,188. Two others report being charged twice for one order, and one says a 3-month plan was charged again two days after it was reinstated. We have not verified the 21-day cadence; welludr's published terms describe 4-week shipments, so confirm the charge schedule in writing before you prepay." },
-      { label: "The quoted price versus the enrolled price", detail: "One 1-star reviewer says the $39 quote became $199 or $249 once enrolled. The $39 figure does not match any price welludr publishes, so read the plan term and the per-shipment charge at checkout." },
-      { label: "Shipping after approval", detail: "An order marked approved and moved to shipping the same day, then eight days of 'delay in shipping' messages; a reorder that took weeks and a BBB complaint; a vial with one dose left and a 48-hour support window that passed without a fix." },
-      { label: "Support response time", detail: "Slow answers in the app and chat loops are a recurring minor theme, often inside otherwise positive reviews that end with a named agent fixing the problem by phone." },
-      { label: "How complaints get resolved", detail: "Several reviews are updates: ratings raised after a call back from the care team, and the October page is full of 5-star reviews naming the agent who reversed a charge or reset a portal." },
-    ],
-    outro: "None of the 11 questions the medication or the pharmacy; the complaints are about billing mechanics and the gap between approval and the box arriving. Set against a verified 4.6 across 2,679 reviews, and 79 of the 90 transcribed reviews at 4 or 5 stars, they are a minority, but the billing theme recurs often enough that a first-time buyer should confirm the charge interval and allow more than the quoted shipping window. The full set is below.",
-  },
-  altrx: {
-    intro: "altRx does not have a Trustpilot profile, so there is no public review record to summarise, and we do not reproduce unverified complaints from forums. What that means for you:",
-    themes: [
-      { label: "The usual check is missing", detail: "Hundreds of dated, attributable reviews are how a provider's service is normally gauged. That record does not exist for altRx yet, so the checks below carry more weight." },
-      { label: "Pricing after the promotion", detail: "The $89 semaglutide and $149 tirzepatide rates are promotional against $199 and $299 regular prices. Confirm in writing what you will pay when the promotion ends." },
-      { label: "The pharmacy", detail: "Ask which state-licensed pharmacy fills the prescription and check the licence with that state's board of pharmacy before the first charge." },
-      { label: "Buy Now, Pay Later", detail: "It is financing through a third party. Read who bills you and what happens to the instalments if you cancel mid-plan." },
-    ],
-    outro: "We will add a review summary here as soon as a verified record exists. In the meantime, the brand-name shelf (Zepbound, Wegovy and Ozempic at listed cash prices) and the flat-at-every-dose pricing are the reasons altRx ranks where it does; the lack of a public review record is the reason to ask the questions above before paying.",
-  },
-};
 
 const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
   // HRT vertical (ported from hrtwomen.com, Oct 22, 2026). Titles shaped by
@@ -1100,24 +1067,15 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           </article>
         )}
 
-        {ctx.vertical === "weight-loss" && REVIEW_COMPLAINTS[provider.id] && (
-          <section className="mb-8 rounded-2xl border border-gray-200 bg-white p-6 sm:p-7" aria-labelledby="complaints-heading">
-            <h2 id="complaints-heading" className="mb-3 text-[22px] font-bold text-[#191919]">
-              What the complaints about {provider.name} say
-            </h2>
-            <p className="mb-4 text-[15px] leading-[1.75] text-gray-700">{REVIEW_COMPLAINTS[provider.id].intro}</p>
-            <ul className="mb-4 space-y-2.5">
-              {REVIEW_COMPLAINTS[provider.id].themes.map((t) => (
-                <li key={t.label} className="flex gap-2.5 text-[15px] leading-[1.7] text-gray-700">
-                  <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#0C4B75]" aria-hidden />
-                  <span>
-                    <strong className="text-[#191919]">{t.label}.</strong> {t.detail}
-                  </span>
-                </li>
-              ))}
-            </ul>
-            <p className="text-[15px] leading-[1.75] text-gray-700">{REVIEW_COMPLAINTS[provider.id].outro}</p>
-          </section>
+        {/* What customers say - praise and complaint themes computed from the
+            stored reviews (weight-loss registry; renders nothing without a
+            record or themes). */}
+        {ctx.vertical === "weight-loss" && getReviewRecord(ctx.vertical, provider.id) && (
+          <CustomerThemes
+            providerName={provider.name}
+            record={getReviewRecord(ctx.vertical, provider.id)!}
+            className="mb-8"
+          />
         )}
 
         {(provider.trustpilotReviews?.length ?? 0) > 0 && (
