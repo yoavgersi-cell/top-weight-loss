@@ -838,7 +838,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "So who should - and shouldn't - consider TRT?",
-        body: `Consider it if the symptoms are real, the levels are confirmed low on proper testing, fertility plans are accounted for, and you are prepared for ongoing monitoring - that combination is what TRT is for, and modern telehealth makes it accessible: the <a href="/trt">providers we compare</a> run labs first and clinician review always, with oral options at <a href="/trt/reviews/maximus">Maximus</a> alongside traditional protocols. Skip it - or expect a legitimate provider to turn you away - if levels are normal, if it is a shortcut around training and sleep, or if you want children soon and have not discussed the alternatives. Start with the <a href="/trt/articles/low-testosterone-symptoms">symptoms guide</a> if you are not sure which group you are in. This article is general information, not medical advice.`,
+        body: `Consider it if the symptoms are real, the levels are confirmed low on proper testing, fertility plans are accounted for, and you are prepared for ongoing monitoring - that combination is what TRT is for, and modern telehealth makes it accessible: the <a href="/trt">providers we compare</a> run labs first and clinician review always, with oral options at <a href="/trt/reviews/maximus">Maximus</a> alongside traditional protocols. Skip it - or expect a legitimate provider to turn you away - if levels are normal, if it is a shortcut around training and sleep, or if you want children soon and have not discussed the alternatives. Start with the <a href="/trt/articles/low-testosterone-symptoms">symptoms guide</a> if you are not sure which group you are in. This article is general information, not medical advice. For the full evidence - the TRAVERSE trial, the FDA's 2025 label change and every monitored risk - read our in-depth guide <a href="/trt/articles/is-trt-safe">Is TRT safe?</a>.`,
       },
     ],
   },
@@ -1058,7 +1058,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "Getting properly tested",
-        body: `Testing is the easy part now: online TRT clinics arrange baseline labs - typically at a local draw station or via at-home kit - and have a licensed clinician interpret them against your symptoms, with treatment only when both justify it. That two-morning-tests standard is a good litmus test for clinic quality. See <a href="/trt/articles/how-to-get-trt-online">how to get TRT online</a> for the process end to end, and our <a href="/trt">best TRT providers</a> ranking for who does testing right. This article is general information, not medical advice.`,
+        body: `Testing is the easy part now: online TRT clinics arrange baseline labs - typically at a local draw station or via at-home kit - and have a licensed clinician interpret them against your symptoms, with treatment only when both justify it. That two-morning-tests standard is a good litmus test for clinic quality. See <a href="/trt/articles/how-to-get-trt-online">how to get TRT online</a> for the process end to end, and our <a href="/trt">best TRT providers</a> ranking for who does testing right. This article is general information, not medical advice. For the complete picture - the harmonized reference range, decade by decade, why charts disagree and how a diagnosis is actually made - read our in-depth guide to <a href="/trt/articles/testosterone-levels-by-age">testosterone levels by age</a>.`,
       },
     ],
   },
