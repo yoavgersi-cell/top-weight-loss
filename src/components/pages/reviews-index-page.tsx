@@ -7,6 +7,7 @@ import { getConfig } from "@/lib/config-store";
 import { VERTICALS, DEFAULT_ROBOTS } from "@/lib/config";
 import { type SiteContext, canonicalUrl, hubLink, verticalNameInProse } from "@/lib/site-context";
 import { RatingBadge } from "@/components/rating-badge";
+import { THREE_WAY_COMPARISONS } from "@/lib/three-way";
 
 function verticalName(id: string): string {
   return VERTICALS.find((v) => v.id === id)?.name ?? "Treatment";
@@ -70,6 +71,22 @@ export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
     })
     .filter((item): item is NonNullable<typeof item> => item !== null)
     .sort((a, b) => a.rank - b.rank);
+
+  // Comparisons featuring the vertical's providers: every two-way battle in
+  // config order, then (weight loss only) the curated three-way pages.
+  const providerName = (id: string) => config.providers.find((p) => p.id === id)?.name;
+  const comparisons: { slug: string; label: string; kind: string }[] = [
+    ...(config.battles ?? [])
+      .map((b) => {
+        const a = providerName(b.provider1Id);
+        const c = providerName(b.provider2Id);
+        return a && c ? { slug: b.slug, label: `${a} vs ${c}`, kind: "Head-to-head" } : null;
+      })
+      .filter((x): x is NonNullable<typeof x> => x !== null),
+    ...(ctx.vertical === "weight-loss"
+      ? THREE_WAY_COMPARISONS.map((t) => ({ slug: t.slug, label: t.title, kind: "Three-way" }))
+      : []),
+  ];
 
   // JSON-LD: ItemList schema for reviews listing
   const itemListSchema = {
@@ -163,6 +180,34 @@ export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
             </Link>
           ))}
         </div>
+
+        {/* Every head-to-head (and, for weight loss, three-way) comparison in
+            the vertical. The reviews index is the one hub page every reader
+            reaches, so each comparison gets a stable inbound link from here
+            rather than only from its two providers' review pages (Oct 25,
+            2026 link audit: several battles had two inlinks in total). */}
+        {comparisons.length > 0 && (
+          <section className="mt-14" aria-labelledby="comparisons-heading">
+            <h2 id="comparisons-heading" className="text-2xl font-bold text-[#191919]">
+              {vName} provider comparisons
+            </h2>
+            <p className="mt-2 mb-6 max-w-2xl text-[15px] text-gray-600">
+              Side-by-side verdicts on the providers above: pricing, what each prescribes, and which one we would pick for whom.
+            </p>
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+              {comparisons.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={hubLink(ctx, `/${c.slug}`)}
+                  className="flex items-center justify-between gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
+                >
+                  <span className="truncate">{c.label}</span>
+                  <span className="shrink-0 text-[11px] font-medium text-gray-400">{c.kind}</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
     </div>
   );

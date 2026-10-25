@@ -462,7 +462,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Which One Is Right for You?",
-        body: 'There\'s no universal answer. Tirzepatide may produce greater weight loss on average, which could be important for patients with more significant weight loss goals. Semaglutide has a longer track record, more real-world data, and broader availability through telehealth providers. Some patients start with semaglutide and transition to tirzepatide if they <a href="/weight-loss/articles/weight-loss-plateau-what-to-do">hit a plateau</a>, while others begin with tirzepatide based on their provider\'s recommendation. The best choice depends on your health profile, weight loss goals, budget, and provider availability. <a href="/weight-loss/find-your-match">Take our quiz</a> to find a provider that offers the medication best suited to your needs.',
+        body: 'There\'s no universal answer. Tirzepatide may produce greater weight loss on average, which could be important for patients with more significant weight loss goals. Semaglutide has a longer track record, more real-world data, and broader availability through telehealth providers. Some patients start with semaglutide and transition to tirzepatide if they <a href="/weight-loss/articles/weight-loss-plateau-what-to-do">hit a plateau</a>, while others begin with tirzepatide based on their provider\'s recommendation. The best choice depends on your health profile, weight loss goals, budget, and provider availability. <a href="/weight-loss/find-your-match">Take our quiz</a> to find a provider that offers the medication best suited to your needs.<p>For the speed question on its own, see <a href="/weight-loss/articles/weight-loss-medication-that-works-fast">which weight-loss medication works fastest</a>.</p>',
       },
     ],
   },
@@ -910,7 +910,7 @@ export const articles: Article[] = [
       },
       {
         heading: "The bottom line: Mounjaro vs Ozempic",
-        body: 'Both Mounjaro and Ozempic are proven, effective weight loss medications. Mounjaro has a clinical edge in average weight loss (up to 22.5% vs ~15% in trials), while Ozempic has a longer track record, wider compounded availability, and lower compounded pricing (verified from $49/month vs $89 for tirzepatide). The best choice depends on your weight loss goals, budget, insurance situation, and how your body responds. Many patients find success with either option. The most important step is getting started with a licensed provider who can guide your treatment. <a href="/weight-loss/find-your-match">Take our matching quiz</a> to find the right provider for your needs, or <a href="/">compare all providers</a> side by side.',
+        body: 'Both Mounjaro and Ozempic are proven, effective weight loss medications. Mounjaro has a clinical edge in average weight loss (up to 22.5% vs ~15% in trials), while Ozempic has a longer track record, wider compounded availability, and lower compounded pricing (verified from $49/month vs $89 for tirzepatide). The best choice depends on your weight loss goals, budget, insurance situation, and how your body responds. Many patients find success with either option. The most important step is getting started with a licensed provider who can guide your treatment. <a href="/weight-loss/find-your-match">Take our matching quiz</a> to find the right provider for your needs, or <a href="/">compare all providers</a> side by side.<p>If Mounjaro itself is out of reach on price or stock, our guide to the <a href="/weight-loss/articles/best-mounjaro-alternatives">best Mounjaro alternatives</a> compares the compounded and brand-name options.</p>',
       },
     ],
   },
@@ -1006,7 +1006,7 @@ export const articles: Article[] = [
       },
       {
         heading: "How should you track progress?",
-        body: 'Don\'t rely solely on the scale. Track waist measurements, how clothes fit, energy levels, and appetite changes. Some patients lose inches before they see scale movement. Taking progress photos monthly can also reveal changes that day-to-day weighing misses. <a href="/weight-loss/find-your-match">Find a provider</a> that includes progress tracking in their program.',
+        body: 'Don\'t rely solely on the scale. Track waist measurements, how clothes fit, energy levels, and appetite changes. Some patients lose inches before they see scale movement. Taking progress photos monthly can also reveal changes that day-to-day weighing misses. <a href="/weight-loss/find-your-match">Find a provider</a> that includes progress tracking in their program.<p>Wondering which option works fastest? Read <a href="/weight-loss/articles/weight-loss-medication-that-works-fast">which weight-loss medication works fastest</a>.</p>',
       },
     ],
   },
@@ -2137,7 +2137,7 @@ export const articles: Article[] = [
       },
       {
         heading: "The verdict",
-        body: 'The Zepbound price online in 2026 is <strong>$1,249/month cash at altRx</strong>, <strong>$1,599 at welludr</strong>, or <strong>from $299 the first month plus membership at Ro</strong>, where insurance can apply. The same active ingredient as compounded tirzepatide runs <strong>$89-$299/month</strong> through licensed telehealth providers, without FDA-approved product status. All of these are prescription routes; a licensed provider decides whether tirzepatide is appropriate for you. This article is general information, not medical advice.',
+        body: 'The Zepbound price online in 2026 is <strong>$1,249/month cash at altRx</strong>, <strong>$1,599 at welludr</strong>, or <strong>from $299 the first month plus membership at Ro</strong>, where insurance can apply. The same active ingredient as compounded tirzepatide runs <strong>$89-$299/month</strong> through licensed telehealth providers, without FDA-approved product status. All of these are prescription routes; a licensed provider decides whether tirzepatide is appropriate for you. This article is general information, not medical advice.<p>When the price is the obstacle, see the <a href="/weight-loss/articles/best-mounjaro-alternatives">best Mounjaro and Zepbound alternatives</a>.</p>',
       },
     ],
   },

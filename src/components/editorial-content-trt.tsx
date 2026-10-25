@@ -287,7 +287,11 @@ export function TrtEditorialContent({ midSlot }: { midSlot?: React.ReactNode }) 
         <Link href="/trt/articles/trt-cost" className="font-semibold text-[#111111] hover:underline">
           our guide to TRT cost
         </Link>{" "}
-        breaks down what to expect.
+        breaks down what to expect, while the{" "}
+        <Link href="/trt/cheapest-online-trt" className="font-semibold text-[#111111] hover:underline">
+          cheapest online TRT ranking
+        </Link>{" "}
+        lists every verified price, lowest first.
       </p>
 
       <hr className="mb-8 border-gray-200" />

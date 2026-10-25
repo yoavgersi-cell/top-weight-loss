@@ -15,6 +15,7 @@ import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { TrustpilotSummary } from "@/components/trustpilot-summary";
 import { getReviewRecord } from "@/data/reviews";
+import { THREE_WAY_COMPARISONS } from "@/lib/three-way";
 import { CustomerThemes } from "@/components/customer-themes";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
@@ -818,6 +819,12 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // list with repeated and dead entries (operator screenshot, Oct 2026).
   const ranked = new Set(config.ranking.providerOrder);
   const seenOpponent = new Set<string>();
+  // Curated three-way comparisons featuring this provider (weight loss only):
+  // the trio pages otherwise reach readers only through the two-way battles.
+  const relatedTrios =
+    ctx.vertical === "weight-loss"
+      ? THREE_WAY_COMPARISONS.filter((t) => t.providerIds.includes(provider.id)).map((t) => ({ slug: t.slug, title: t.title }))
+      : [];
   const relatedBattles = (config.battles ?? [])
     .filter((b) => b.provider1Id === provider.id || b.provider2Id === provider.id)
     .filter((b) => !(b.slug in SLUG_ALIASES))
@@ -1452,7 +1459,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         </div>
 
         {/* Related content */}
-        {(relatedBattles.length > 0 || relatedArticles.length > 0 || showComparisonLink) && (
+        {(relatedBattles.length > 0 || relatedTrios.length > 0 || relatedArticles.length > 0 || showComparisonLink) && (
           <div className="mb-6">
             <h3 className="mb-4 text-[18px] font-bold text-[#191919]">Related</h3>
             {relatedBattles.length > 0 && (
@@ -1474,6 +1481,23 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       </Link>
                     );
                   })}
+                </div>
+              </>
+            )}
+            {relatedTrios.length > 0 && (
+              <>
+                <p className="mb-2 text-[12px] font-bold uppercase tracking-wider text-gray-400">Three-way comparisons</p>
+                <div className="mb-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                  {relatedTrios.map((t) => (
+                    <Link
+                      key={t.slug}
+                      href={hubLink(ctx, `/${t.slug}`)}
+                      className="flex items-center justify-between gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
+                    >
+                      <span className="truncate">{t.title}</span>
+                      <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-gray-400" strokeWidth={2.5} />
+                    </Link>
+                  ))}
                 </div>
               </>
             )}
