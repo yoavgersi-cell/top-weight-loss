@@ -39,4 +39,9 @@ export const SLUG_ALIASES: Record<string, string> = {
   // Never built either (old-domain 28-day Pages export); was 301'ing into a 404.
   "trimrx-vs-shed": "best-online-weight-loss-programs",
   "shed-vs-trimrx": "best-online-weight-loss-programs",
+  // Oct 26, 2026: Bing's AI Performance export shows Copilot citing this
+  // reverse ordering (17 citations) while it answered 404. The battle page also
+  // redirects any unknown "a-vs-b" to a live "b-vs-a" generically; this alias
+  // keeps the known case to a single proxy-level 301.
+  "ro-vs-trimrx": "trimrx-vs-ro",
 };
