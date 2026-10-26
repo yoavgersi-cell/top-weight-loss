@@ -6,6 +6,7 @@ import { CONTENT_LAST_UPDATED, DEFAULT_VERTICAL, VERTICALS, isVertical, isPublis
 import { ROOT_CONTEXT, hubContext, canonicalUrl, hubLink, WEIGHT_LOSS_MIGRATED } from "@/lib/site-context";
 import Link from "next/link";
 import { ComparisonLayout } from "@/components/comparison-layout";
+import { MedicalDisclaimer } from "@/components/medical-disclaimer";
 import { EditorialContent } from "@/components/editorial-content";
 import { HairLossEditorialContent } from "@/components/editorial-content-hair-loss";
 import { TrtEditorialContent } from "@/components/editorial-content-trt";
@@ -197,6 +198,9 @@ export default async function BattlePage({
               allLabel={`All ${verticalName} guides`}
             />
           </section>
+          <div className="mx-auto max-w-[1200px] px-4 pb-12">
+            <MedicalDisclaimer vertical={battleSlug} />
+          </div>
         </ComparisonLayout>
       </div>
     );

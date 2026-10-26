@@ -25,6 +25,7 @@ import { LastUpdated } from "@/components/last-updated";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
 import { TrustDisclosure, MedicalSources } from "@/components/medical-sources";
+import { MedicalDisclaimer } from "@/components/medical-disclaimer";
 import { SourcesMethodology } from "@/components/sources-methodology";
 import { ProductCarousel } from "@/components/product-carousel";
 import { notFound } from "next/navigation";
@@ -1589,6 +1590,8 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           headingLabel={provider.name}
           kind="review"
         />
+
+        <MedicalDisclaimer vertical={ctx.vertical} className="mb-8" />
 
         {/* Authoritative medical citations (FDA / NEJM / NIH) - the same YMYL
             grounding block the article template carries. */}

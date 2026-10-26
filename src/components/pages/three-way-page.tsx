@@ -12,6 +12,7 @@ import { TrustpilotRating } from "@/components/trustpilot-rating";
 import { LicensedTelehealthBadge } from "@/components/licensed-badge";
 import { LastUpdated } from "@/components/last-updated";
 import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
+import { MedicalDisclaimer } from "@/components/medical-disclaimer";
 import { TRIO_FACTS, type ThreeWayComparison } from "@/lib/three-way";
 
 // Matrix rows rendered for every trio - one place to add a row site-wide.
@@ -236,6 +237,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
           </div>
         )}
 
+        <MedicalDisclaimer vertical={ctx.vertical} className="mb-8" />
         <MedicalSources vertical={ctx.vertical} />
       </div>
     </div>

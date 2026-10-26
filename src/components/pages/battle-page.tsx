@@ -25,6 +25,7 @@ import { LicensedTelehealthBadge } from "@/components/licensed-badge";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
 import { TrustDisclosure } from "@/components/medical-sources";
+import { MedicalDisclaimer } from "@/components/medical-disclaimer";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { SourcesMethodology } from "@/components/sources-methodology";
 import { ProductCarousel } from "@/components/product-carousel";
@@ -543,6 +544,9 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               <GuideCluster currentSlug={landing.slug} prefix={ctx.prefix} />
             </div>
           )}
+          <div className="mx-auto max-w-[1200px] px-4 pb-12">
+            <MedicalDisclaimer vertical={ctx.vertical} />
+          </div>
         </ComparisonLayout>
       </>
     );
@@ -1552,6 +1556,8 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               </div>
             </div>
           )}
+
+          <MedicalDisclaimer vertical={ctx.vertical} className="mb-10" />
 
           {/* ───── RELATED COMPARISONS ───── */}
           {(relatedBattles.length > 0 || relatedTrios.length > 0) && (
