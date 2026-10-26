@@ -476,6 +476,10 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
       description: landing.seoDescription,
       url: canonicalUrl(ctx, `/${landing.slug}`),
       dateModified: landing.updatedAt || CONTENT_LAST_UPDATED,
+      // reviewedBy / lastReviewed only when REVIEW_LOG holds an entry for this
+      // landing page (Oct 26, 2026: the keyword and TRT landings were the last
+      // template without it).
+      ...pageReviewSchema(`/${ctx.vertical}/${landing.slug}`),
       publisher: { "@type": "Organization", name: ctx.brandName, url: ctx.origin },
     };
 
@@ -527,6 +531,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             h2: landing.h2,
             description: landing.heroDescription,
           }}
+          byline={<MedicalReviewBar path={`/${ctx.vertical}/${landing.slug}`} compact />}
         >
           {landing.editorialSections && landing.editorialSections.length > 0 ? (
             <LandingEditorial sections={landing.editorialSections} />
