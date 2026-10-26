@@ -10,7 +10,10 @@ import { PRICE_INDEX, BRAND_SHELF, PRICE_INDEX_VERIFIED, PRICE_CHANGELOG } from 
 export const revalidate = 60;
 
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/glp1-weight-loss-statistics";
-const TITLE = "GLP-1 Price Index & Weight Loss Statistics (September 2026)";
+// The month in the title and hero follows the index's verification date, so
+// the page can never claim a month older than the data it shows.
+const MONTH_LABEL = new Date(PRICE_INDEX_VERIFIED).toLocaleDateString("en-US", { year: "numeric", month: "long", timeZone: "UTC" });
+const TITLE = `GLP-1 Price Index & Weight Loss Statistics (${MONTH_LABEL})`;
 const DESCRIPTION =
   "Verified prices from 9 US telehealth providers for compounded semaglutide and tirzepatide, with a public change log, next to STEP and SURMOUNT trial results.";
 
@@ -46,6 +49,42 @@ const SEMA_MAX = Math.max(...semaPrices);
 const TIRZ_MIN = Math.min(...tirzPrices);
 const TIRZ_MAX = Math.max(...tirzPrices);
 const usd = (n: number) => `$${n.toLocaleString("en-US")}`;
+
+// Question-and-answer pairs for the FAQ schema. Every answer restates a figure
+// that is already on this page (trial averages from the cited papers, prices
+// from the verified index) - nothing is introduced here that the page does not
+// show and source.
+const FAQS: { question: string; answer: string }[] = [
+  {
+    question: "How much weight do GLP-1 medications cause on average?",
+    answer:
+      "In the pivotal trials, semaglutide 2.4 mg (Wegovy) produced about 15% mean weight loss at 68 weeks in STEP 1, tirzepatide 15 mg (Zepbound) up to 22.5% at 72 weeks in SURMOUNT-1, and liraglutide 3 mg (Saxenda) about 5-8% at 56 weeks in SCALE. The lifestyle-only placebo arm in STEP 1 lost about 2.4%. These are trial averages; individual results vary.",
+  },
+  {
+    question: "What does compounded GLP-1 medication cost per month?",
+    answer: `At verified published prices from ${PROVIDER_COUNT} US telehealth providers, compounded semaglutide ranges from ${usd(SEMA_MIN)} to ${usd(SEMA_MAX)} per month and compounded tirzepatide from ${usd(TIRZ_MIN)} to ${usd(TIRZ_MAX)} per month, each with its pricing condition (promotional rate, plan length or prepaid term) recorded in the index. Last verified ${longDate(PRICE_INDEX_VERIFIED)}.`,
+  },
+  {
+    question: "How fast does weight loss happen on a GLP-1?",
+    answer:
+      "Appetite usually drops within the first one to two weeks. Trial averages show roughly 3-5 lbs in the first month at the starting dose, about 3-6% of body weight by months two to three as the dose rises, 10-15% (semaglutide) or 15-20% (tirzepatide) by month six, and maximum results of about 15% (semaglutide) to 22.5% (tirzepatide) around months 12 to 16.",
+  },
+  {
+    question: "What are the most common GLP-1 side effects?",
+    answer:
+      "Gastrointestinal effects lead: nausea in roughly 40-44% of people on semaglutide and 25-33% on tirzepatide, diarrhea in about 30% and 19-23%, vomiting in about 24% and 8-13%, and constipation in about 23% and 12-17%, per FDA prescribing information and the STEP and SURMOUNT safety data. They typically ease as the dose stabilises.",
+  },
+  {
+    question: "Who qualifies for GLP-1 weight-loss treatment?",
+    answer:
+      "Under the FDA-approved prescribing criteria, adults with a BMI of 30 or more, or a BMI of 27 or more with at least one weight-related condition such as type 2 diabetes, hypertension, high cholesterol or sleep apnea. Semaglutide and tirzepatide are contraindicated with a personal or family history of medullary thyroid carcinoma or MEN 2, and are not used in pregnancy.",
+  },
+  {
+    question: "How much weight comes back after stopping a GLP-1?",
+    answer:
+      "In the STEP 1 trial extension, participants regained about two-thirds of the weight they had lost within one year of stopping semaglutide, which is why these are treated as ongoing medications rather than short courses.",
+  },
+];
 
 export default async function StatisticsPage() {
   const config = await getConfig("weight-loss");
@@ -93,16 +132,22 @@ export default async function StatisticsPage() {
       { "@type": "ListItem", position: 2, name: "GLP-1 Price Index & Statistics", item: CANONICAL },
     ],
   };
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((f) => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })),
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="border-b border-gray-200 bg-white">
         <div className="mx-auto max-w-[900px] px-4 py-10 sm:px-6 sm:py-14">
           <h1 className="text-[26px] font-extrabold text-[#191919] sm:text-[34px]">
-            GLP-1 Price Index &amp; Weight Loss Statistics (September 2026)
+            GLP-1 Price Index &amp; Weight Loss Statistics ({MONTH_LABEL})
           </h1>
           <p className="mt-3 max-w-[640px] text-[15px] leading-relaxed text-gray-500">
             The dated, citable record of what {PROVIDER_COUNT} US telehealth providers publish for
@@ -119,6 +164,19 @@ export default async function StatisticsPage() {
 
       <div className="mx-auto max-w-[900px] px-4 py-10 sm:px-6">
 
+        {/* Short answer - the figures a reader (or an AI answer) most often wants from this page */}
+        <section className="mb-10 rounded-xl border border-emerald-100 bg-emerald-50/40 p-5 sm:p-6">
+          <h2 className="mb-2 text-[18px] font-bold text-[#191919]">The short answer</h2>
+          <p className="text-[15px] leading-[1.75] text-gray-600">
+            In the pivotal trials, <strong className="text-[#191919]">semaglutide 2.4 mg (Wegovy) produced about 15% mean weight loss at 68 weeks</strong> and{" "}
+            <strong className="text-[#191919]">tirzepatide 15 mg (Zepbound) up to 22.5% at 72 weeks</strong>, against about 2.4% on
+            lifestyle-only placebo in STEP 1. At verified published prices, {PROVIDER_COUNT} US telehealth providers list
+            compounded semaglutide from {usd(SEMA_MIN)} to {usd(SEMA_MAX)} a month and compounded tirzepatide from{" "}
+            {usd(TIRZ_MIN)} to {usd(TIRZ_MAX)}, last checked {longDate(PRICE_INDEX_VERIFIED)}. Results typically peak around
+            months 12 to 16, and about two-thirds of the lost weight returned within a year of stopping in the STEP 1 extension.
+          </p>
+        </section>
+
         {/* ───── Flagship: original price survey (the citable, proprietary data) ───── */}
         <section className="mb-10">
           <div className="mb-4 flex items-center gap-2">
@@ -127,11 +185,11 @@ export default async function StatisticsPage() {
             </span>
           </div>
           <h2 className="mb-3 text-[22px] font-bold text-[#191919]">
-            What compounded GLP-1 actually costs: a {PROVIDER_COUNT}-provider price survey
+            What does compounded GLP-1 actually cost? A {PROVIDER_COUNT}-provider price survey
           </h2>
           <p className="mb-5 max-w-[680px] text-[15px] leading-[1.7] text-gray-600">
-            We track published prices across {PROVIDER_COUNT} US telehealth providers. As of
-            September 2026, <strong className="text-[#191919]">compounded semaglutide ranged
+            We track published prices across {PROVIDER_COUNT} US telehealth providers. As of{" "}
+            {MONTH_LABEL}, <strong className="text-[#191919]">compounded semaglutide ranged
             from {usd(SEMA_MIN)} to {usd(SEMA_MAX)} per month</strong> and{" "}
             <strong className="text-[#191919]">compounded tirzepatide from {usd(TIRZ_MIN)} to{" "}
             {usd(TIRZ_MAX)} per month</strong> - a fraction of the brand-name list prices for
@@ -168,7 +226,7 @@ export default async function StatisticsPage() {
           </div>
           <p className="mt-2 text-[12px] text-gray-400">
             Source: Treatments Hub GLP-1 price index, {PROVIDER_COUNT} providers, verified published
-            prices as of September 2026. Brand list prices are manufacturer/pharmacy list prices;
+            prices as of {MONTH_LABEL}. Brand list prices are manufacturer/pharmacy list prices;
             insurance and manufacturer coupons can lower them. See the full provider-by-provider
             table on our{" "}
             <Link href="/weight-loss/cheapest-glp1" className="font-semibold text-[#0C4B75] hover:underline">
@@ -180,7 +238,7 @@ export default async function StatisticsPage() {
         {/* ───── The index itself: every provider, both medications, the condition on each price ───── */}
         <section className="mb-10" id="price-index">
           <h2 className="mb-3 text-[22px] font-bold text-[#191919]">
-            The GLP-1 price index: all {PROVIDER_COUNT} providers, verified {longDate(PRICE_INDEX_VERIFIED)}
+            What does each of the {PROVIDER_COUNT} providers charge? The index, verified {longDate(PRICE_INDEX_VERIFIED)}
           </h2>
           <p className="mb-5 max-w-[680px] text-[15px] leading-[1.7] text-gray-600">
             Each row records the headline monthly price and the condition attached to it - a
@@ -226,7 +284,7 @@ export default async function StatisticsPage() {
 
         {/* ───── Change log: the public record of what moved, and when ───── */}
         <section className="mb-10" id="change-log">
-          <h2 className="mb-1 text-[22px] font-bold text-[#191919]">Price change log</h2>
+          <h2 className="mb-1 text-[22px] font-bold text-[#191919]">Which prices changed, and when?</h2>
           <p className="mb-3 text-[14px] text-gray-500">The full dated feed, with each provider&rsquo;s current listing, is on <Link href="/weight-loss/glp1-price-changes" className="font-semibold text-[#0C4B75] hover:underline">GLP-1 price changes</Link>.</p>
           <p className="mb-5 max-w-[680px] text-[15px] leading-[1.7] text-gray-600">
             Every time a verification pass changes a listing, the change is recorded here with the
@@ -251,7 +309,7 @@ export default async function StatisticsPage() {
 
         {/* Weight Loss Results */}
         <section className="mb-10">
-          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Average Weight Loss by Medication</h2>
+          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">How much weight do GLP-1 medications cause on average?</h2>
           <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
             <table className="w-full text-left text-[14px]">
               <thead>
@@ -312,7 +370,7 @@ export default async function StatisticsPage() {
 
         {/* Side Effects */}
         <section className="mb-10">
-          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Most Common Side Effects</h2>
+          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">What are the most common GLP-1 side effects?</h2>
           <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
             <table className="w-full text-left text-[14px]">
               <thead>
@@ -335,7 +393,7 @@ export default async function StatisticsPage() {
 
         {/* Timeline */}
         <section className="mb-10">
-          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Weight Loss Timeline</h2>
+          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">How fast does weight loss happen on a GLP-1?</h2>
           <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
             <table className="w-full text-left text-[14px]">
               <thead>
@@ -386,11 +444,13 @@ export default async function StatisticsPage() {
 
         {/* Key Facts */}
         <section className="mb-10">
-          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Key Facts About GLP-1 Weight Loss</h2>
+          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">What are the key facts about GLP-1 weight loss?</h2>
           <div className="rounded-xl border border-gray-200 bg-white p-6">
             <ul className="space-y-3 text-[15px] leading-[1.7] text-gray-600">
               <li><strong className="text-[#191919]">Among the most effective prescription weight-loss options:</strong> in STEP 1, semaglutide 2.4 mg produced about 15% mean weight loss versus roughly 2.4% in the lifestyle-only (placebo) arm - a substantially larger effect than older weight-loss drugs.</li>
-              <li><strong className="text-[#191919]">Once-weekly injection:</strong> Both semaglutide and tirzepatide are administered as once-weekly subcutaneous injections.</li>
+              <li><strong className="text-[#191919]">Once-weekly injection:</strong> Both Wegovy (semaglutide) and Zepbound (tirzepatide) are administered as once-weekly subcutaneous injections.</li>
+              <li><strong className="text-[#191919]">Two daily pills are now approved too:</strong> the Wegovy pill (oral semaglutide 25 mg, December 2025) and Foundayo (orforglipron, April 2026) produced 13.6% and 11.2% mean weight loss in their own trials (OASIS 4 at 64 weeks; ATTAIN-1 at 72 weeks), which are not head to head. See{" "}
+                <Link href="/weight-loss/articles/foundayo-vs-wegovy-pill" className="font-semibold text-[#0C4B75] hover:underline">Foundayo vs the Wegovy pill</Link>.</li>
               <li><strong className="text-[#191919]">Gradual dose escalation:</strong> Treatment starts at a low dose and increases monthly over 16-20 weeks to minimize side effects.</li>
               <li><strong className="text-[#191919]">Available online:</strong> Licensed telehealth providers can prescribe GLP-1 medications through fully online medical evaluations, with home delivery in most US states.</li>
               <li><strong className="text-[#191919]">Weight regain risk:</strong> The STEP 1 trial extension showed approximately two-thirds of weight lost was regained within one year of stopping semaglutide, supporting the case for ongoing treatment.</li>
@@ -401,7 +461,7 @@ export default async function StatisticsPage() {
 
         {/* Methodology & citation - makes the page safe and easy for writers to cite */}
         <section className="mb-10">
-          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Methodology &amp; citation</h2>
+          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">How was this data gathered, and how should you cite it?</h2>
           <div className="rounded-xl border border-gray-200 bg-white p-6">
             <p className="mb-3 text-[14px] leading-[1.7] text-gray-600">
               <strong className="text-[#191919]">Pricing:</strong> our price survey tracks the

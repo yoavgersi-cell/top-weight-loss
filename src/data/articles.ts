@@ -169,7 +169,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Which telehealth weight loss providers do we recommend?",
-        body: 'Based on our evaluation of 18+ providers, here are our top picks by category: <strong>Best overall:</strong> <a href="/weight-loss/reviews/altrx">altRx</a> - compounded semaglutide from $89 and tirzepatide from $149, flat at every dose, plus the cheapest brand-name shelf. <strong>Best budget:</strong> <a href="/weight-loss/reviews/wellmedr">welludr</a> - $49/month semaglutide on a 12-month plan, the lowest verified price in our ranking. <strong>Best no-commitment:</strong> <a href="/weight-loss/reviews/embody">embody</a> - $69/month flat, cancel anytime. <strong>Best for support:</strong> <a href="/weight-loss/reviews/medvi">Medvi</a> - all-inclusive video visits and a dietician at $99/month promo. <strong>Best for coaching:</strong> <a href="/weight-loss/reviews/noom">Noom</a> - behavioral change program with GLP-1 access through Noom Med. <a href="/weight-loss/find-your-match">Take our matching quiz</a> for a personalized recommendation, or <a href="/">compare all providers</a> side by side.',
+        body: 'Based on our evaluation of 18+ providers, here are our top picks by category: <strong>Best overall:</strong> <a href="/weight-loss/reviews/altrx">altRx</a> - compounded semaglutide from $89 and tirzepatide from $149, flat at every dose, plus the cheapest brand-name shelf. <strong>Best budget:</strong> <a href="/weight-loss/reviews/wellmedr">welludr</a> - $49/month semaglutide on a 12-month plan, the lowest verified price in our ranking. <strong>Best no-commitment:</strong> <a href="/weight-loss/reviews/embody">embody</a> - $69/month flat, cancel anytime. <strong>Best for support:</strong> <a href="/weight-loss/reviews/medvi">Medvi</a> - all-inclusive video visits and a dietician at $99/month promo. <strong>Best for coaching:</strong> <a href="/weight-loss/reviews/noom">Noom</a> - behavioral change program with GLP-1 access through Noom Med. <a href="/weight-loss/find-your-match">Take our matching quiz</a> for a personalized recommendation, or <a href="/">compare all providers</a> side by side. Still weighing telehealth against a local clinic or an app? Read <a href="/weight-loss/articles/in-person-vs-online-weight-loss">in-person vs online weight loss programs</a>. For the legitimacy checks we ran on each provider, start with <a href="/weight-loss/articles/is-wellmedr-legit">is welludr legit</a>, <a href="/weight-loss/articles/is-embody-legit">is embody legit</a> and <a href="/weight-loss/articles/is-altrx-legit">is altRx legit</a>. ',
       },
     ],
   },
@@ -920,9 +920,9 @@ export const articles: Article[] = [
     description:
       "No insurance coverage for weight loss medication? Here are the most affordable ways to access GLP-1 treatments like semaglutide and tirzepatide without insurance.",
     category: "Advice",
-    readTime: "6 min read",
+    readTime: "7 min read",
     publishedAt: "2026-07-14",
-    updatedAt: "2026-09-15",
+    updatedAt: "2026-10-26",
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Content Team",
     keyTakeaways: [
@@ -934,15 +934,19 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "Why doesn't insurance cover weight loss medication?",
-        body: 'Despite obesity being <a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" target="_blank" rel="noopener">recognized as a chronic disease</a> by the AMA and FDA, many insurance plans still exclude weight loss medications from coverage. Medications prescribed specifically for weight loss (Wegovy, Zepbound) are frequently excluded from formularies. Even when covered, prior authorization requirements and high copays can make access difficult. The good news: there are affordable alternatives that don\'t require insurance at all.',
+        body: '<div class="qa"><strong>The short answer</strong>Without insurance, the most affordable route to a GLP-1 is compounded medication through telehealth: semaglutide from a verified $49 a month and tirzepatide from $89, with the clinician review and delivery included. HSA and FSA funds usually apply. Manufacturer savings cards mostly need commercial insurance, and the two FDA-approved GLP-1 pills list self-pay prices from a reported $149 a month. Pick a provider whose clinician review, pharmacy, prices and review record you can check.</div>Despite obesity being <a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" target="_blank" rel="noopener">recognized as a chronic disease</a> by the AMA and FDA, many insurance plans still exclude weight loss medications from coverage. Medications prescribed specifically for weight loss (Wegovy, Zepbound) are frequently excluded from formularies. Even when covered, prior authorization requirements and high copays can make access difficult. The good news: there are affordable alternatives that don\'t require insurance at all.',
       },
       {
         heading: "How much does compounded GLP-1 medication cost without insurance?",
         body: 'The most common path to affordable GLP-1 treatment without insurance is through compounded medications offered by telehealth providers. Compounded semaglutide starts at a verified $49/month and compounded tirzepatide at $89/month - all-inclusive with consultations and delivery. These use the same active ingredients as brand-name drugs, <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">produced by licensed compounding pharmacies</a>. See our <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name guide</a> for details.',
       },
       {
-        heading: "Telehealth Providers With All-Inclusive Pricing",
+        heading: "Which telehealth providers bundle everything into one price?",
         body: 'The best telehealth providers for uninsured patients bundle everything into one monthly fee: medication, medical consultations, dose adjustments, and home delivery. No surprise bills. <a href="/">Compare providers</a> on our platform to find all-inclusive options, or check our <a href="/weight-loss/cheapest-glp1">affordable providers page</a> for the lowest-cost options.',
+      },
+      {
+        heading: "Which online weight-loss clinics are reputable if you have no insurance?",
+        body: 'Reputable means checkable: a licensed clinician reviews your intake, a state-licensed pharmacy fills the prescription, the full cash price is published, and there is a public review record. These are the cash-pay providers in our ranking with a claimed Trustpilot profile that we read from the profile itself, with the date we read it.<table><thead><tr><th>Provider</th><th>Trustpilot record (date read)</th><th>What we checked</th></tr></thead><tbody><tr><td><a href="/weight-loss/reviews/wellmedr">welludr</a></td><td>4.6 across 2,679 reviews (Oct 25, 2026)</td><td><a href="/weight-loss/articles/is-wellmedr-legit">Is welludr legit?</a></td></tr><tr><td><a href="/weight-loss/reviews/directmeds">DirectMeds</a></td><td>4.6 across 16,390 reviews (Oct 12, 2026)</td><td><a href="/weight-loss/articles/is-directmeds-legit">Is DirectMeds legit?</a></td></tr><tr><td><a href="/weight-loss/reviews/shed">SHED</a></td><td>4.6 across 1,134 reviews (Sep 24, 2026)</td><td><a href="/weight-loss/articles/is-shed-legit">Is SHED legit?</a></td></tr><tr><td><a href="/weight-loss/reviews/eden">Eden</a></td><td>4.5 across 5,019 reviews (Oct 25, 2026)</td><td><a href="/weight-loss/reviews/eden">Eden review</a></td></tr><tr><td><a href="/weight-loss/reviews/medvi">Medvi</a></td><td>4.3 across 15,097 reviews (Oct 25, 2026)</td><td><a href="/weight-loss/articles/is-medvi-legit">Is Medvi legit?</a></td></tr><tr><td><a href="/weight-loss/reviews/found">Found</a></td><td>4.2 across 773 reviews (Oct 25, 2026)</td><td><a href="/weight-loss/reviews/found">Found review</a></td></tr><tr><td><a href="/weight-loss/reviews/embody">embody</a></td><td>3.8 across 10,689 reviews (Oct 25, 2026)</td><td><a href="/weight-loss/articles/is-embody-legit">Is embody legit?</a></td></tr></tbody></table><a href="/weight-loss/reviews/altrx">altRx</a> publishes its prices and passed the same checks, but has no public Trustpilot rating at the moment; <a href="/weight-loss/articles/is-altrx-legit">is altRx legit</a> sets out what we verified instead. A rating is one signal, not a verdict: read the praise and criticism themes on each review page, and treat any site that sells a GLP-1 without a clinician review as the opposite of reputable. Whether an online program or a local clinic suits you better is covered in <a href="/weight-loss/articles/in-person-vs-online-weight-loss">in-person vs online weight loss programs</a>.',
       },
       {
         heading: "Can you pay with HSA or FSA funds?",
@@ -950,10 +954,10 @@ export const articles: Article[] = [
       },
       {
         heading: "Do manufacturer savings programs help without insurance?",
-        body: 'Novo Nordisk (maker of Ozempic/Wegovy) and Eli Lilly (maker of Mounjaro/Zepbound) both offer savings programs for eligible patients. These can reduce brand-name costs significantly, though they typically require commercial insurance. For patients without any insurance, compounded options through telehealth remain the most cost-effective path.',
+        body: 'Novo Nordisk (maker of Ozempic/Wegovy) and Eli Lilly (maker of Mounjaro/Zepbound) both offer savings programs for eligible patients. These can reduce brand-name costs significantly, though they typically require commercial insurance. For patients without any insurance, compounded options through telehealth remain the most cost-effective path. If you want an FDA-approved product and can pay cash, the two GLP-1 pills list self-pay prices from a reported $149 a month at the starting dose, rising with the dose; <a href="/weight-loss/articles/foundayo-vs-wegovy-pill">Foundayo vs the Wegovy pill</a> sets out both price ladders and the one telehealth price we have verified.',
       },
       {
-        heading: "Finding the Right Provider for Your Budget",
+        heading: "How do you find the right provider for your budget?",
         body: 'The key is comparing total monthly cost - not just medication price. Some providers quote low base prices but charge separately for consultations, shipping, or supplies. <a href="/weight-loss/articles/choosing-telehealth-weight-loss-provider">Learn what to look for</a> in a provider, or <a href="/weight-loss/find-your-match">take our matching quiz</a> to find options that fit your budget and goals.',
       },
     ],
@@ -1118,23 +1122,35 @@ export const articles: Article[] = [
     slug: "in-person-vs-online-weight-loss",
     title: "In-Person vs Online Weight Loss Programs: Which Is Better?",
     description:
-      "Comparing in-person and online weight loss programs. Understand the pros and cons of telehealth vs clinic-based treatment for GLP-1 medications.",
+      "In-person clinics, online programs and weight-loss apps compared on cost, convenience, clinician oversight and insurance, with how to check each is legitimate.",
     category: "Advice",
-    readTime: "5 min read",
+    readTime: "8 min read",
     publishedAt: "2026-07-19",
-    updatedAt: "2026-09-15",
+    updatedAt: "2026-10-26",
     heroColor: "#F5F0FB",
     author: "TopWeightLoss Content Team",
     keyTakeaways: [
-      "Online programs win on convenience, cost and speed: evaluation from home, medication by mail, follow-ups by video or message, and compounded GLP-1s at a fraction of clinic prices.",
+      "Online programs win on convenience, cost and speed: evaluation from home, medication by mail, follow-ups by video or message, and compounded GLP-1s from a verified $49 a month with the clinician review and delivery included.",
       "In-person clinics offer hands-on exams, in-office labs, face-to-face accountability and sometimes easier insurance access to brand-name medication.",
-      "Choose in-person if you have complex conditions needing physical evaluation or insurance that specifically covers clinic visits; otherwise online fits most people.",
-      "The medication is the same either way - the difference is the delivery experience.",
+      "A weight-loss app is not a medical program: apps track and coach, while an online medical program has a licensed clinician in your state reviewing your history before anything is prescribed.",
+      "Choose in-person if you have complex conditions needing physical evaluation or insurance that specifically covers clinic visits; otherwise online fits most people. The medication is the same either way.",
     ],
     sections: [
       {
-        heading: "The Rise of Online Weight Loss Programs",
-        body: '<a href="https://www.niddk.nih.gov/health-information/weight-management/choosing-a-safe-successful-weight-loss-program" target="_blank" rel="noopener">Telehealth weight loss programs</a> have exploded in popularity, making GLP-1 medications like <a href="/weight-loss/semaglutide">semaglutide</a> and <a href="/weight-loss/tirzepatide">tirzepatide</a> accessible without office visits. But are online programs <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11405989/" target="_blank" rel="noopener">as effective as in-person care</a>? Here\'s an honest comparison of both approaches.',
+        heading: "Are online weight loss programs as effective as in-person care?",
+        body: '<div class="qa"><strong>The short answer</strong>For most people the medication is identical either way, so the choice is about delivery. Online programs win on cost, speed and convenience: a medical intake from home, a licensed clinician reviewing it, and compounded GLP-1s from a verified $49 a month with the consultation and delivery included. In-person clinics win when you need a hands-on exam, in-office labs or insurance that only pays for clinic visits. Apps and coaching-only programs are a third thing: support, not prescribing.</div><a href="https://www.niddk.nih.gov/health-information/weight-management/choosing-a-safe-successful-weight-loss-program" target="_blank" rel="noopener">Telehealth weight loss programs</a> have exploded in popularity, making GLP-1 medications like <a href="/weight-loss/semaglutide">semaglutide</a> and <a href="/weight-loss/tirzepatide">tirzepatide</a> accessible without office visits. But are online programs <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11405989/" target="_blank" rel="noopener">as effective as in-person care</a>? Here\'s an honest comparison of both approaches, and of the apps that are often mistaken for either.',
+      },
+      {
+        heading: "Is a weight-loss app the same as an online medical program?",
+        body: 'No, and comparisons of "weight management apps" with in-person programs usually mix two different products. A weight-loss app - habit tracking, meal logging, coaching messages - is a behaviour tool. It cannot prescribe anything, and its results depend on what you log and do. An online medical weight-loss program is a telehealth clinic: a clinician licensed in your state reviews your medical intake, decides whether a GLP-1 is appropriate (and says no when it is not), and a state-licensed pharmacy ships the medication. Some products sit between the two. <a href="/weight-loss/reviews/noom">Noom</a> pairs its behaviour program with prescribing through Noom Med, and clinician-led programs such as <a href="/weight-loss/reviews/medvi">Medvi</a> (video visits and a dietitian included) and <a href="/weight-loss/reviews/shed">SHED</a> (coaching included) put the support alongside the medication rather than instead of it. The test is simple: if nobody licensed is reviewing your history, it is an app, however medical the branding. <a href="/weight-loss/how-to-choose-a-glp1-provider">How to choose a GLP-1 provider</a> sets out what clinician involvement should look like.',
+      },
+      {
+        heading: "How do costs compare between a telehealth program and a local clinic?",
+        body: 'Online, the price is published and bundled. At verified published prices, compounded semaglutide runs from $49 a month and compounded tirzepatide from $89 a month, with the clinician review, dose adjustments and delivery included; the provider-by-provider list is on our <a href="/weight-loss/cheapest-glp1">cheapest GLP-1 index</a> and the year math in <a href="/weight-loss/articles/glp1-true-cost-month-1-vs-year-one">month 1 vs year one</a>. A local clinic prices itemised: a visit fee, labs, and medication filled at a pharmacy or dispensed in-house, usually without a published total. We do not list clinic prices because we have not verified any - ask for the all-in monthly figure in writing before you compare. Where insurance covers brand-name Wegovy or Zepbound, the clinic route can come out cheaper on paper; <a href="/weight-loss/articles/glp1-with-insurance">our insurance guide</a> explains how to check your formulary first, and <a href="/weight-loss/articles/weight-loss-medication-without-insurance">weight loss medication without insurance</a> covers the cash-pay options.',
+      },
+      {
+        heading: "Does it matter whether the provider is national or local to your state?",
+        body: 'Less than the branding suggests, because the rules are the same. Any clinician who prescribes for you - through a national telehealth platform or a clinic down the road - must be licensed in the state where you are when you are seen, and the pharmacy that fills the prescription must be licensed to ship into your state. National platforms meet this by routing your intake to a clinician licensed where you live, which is why availability varies by state and a provider may not serve yours yet. What a local clinic adds is physical presence: an exam, labs drawn on site, a face you can return to. What a national program adds is choice and price competition. For a GLP-1 that is self-injected at home either way, most people are choosing between those two lists, not between safe and unsafe.',
       },
       {
         heading: "What are the advantages of online programs?",
@@ -1153,7 +1169,11 @@ export const articles: Article[] = [
         body: 'In-person programs may be better if you have complex medical conditions that require hands-on evaluation, prefer face-to-face interactions with your provider, or have insurance that specifically covers in-person weight loss clinic visits.',
       },
       {
-        heading: "The Bottom Line",
+        heading: "How do you check a program is legitimate, online or in person?",
+        body: 'Four checks work for both. A licensed clinician reviews your history before anything is prescribed, and will decline when it is not appropriate. The medication comes from a state-licensed pharmacy you can name - for compounded GLP-1s, a 503A pharmacy filling your individual prescription (<a href="/weight-loss/articles/503a-vs-503b-pharmacy-28-day-rule">503A vs 503B explained</a>). The full monthly price is published, with the regular rate shown next to any promotion. And there is a public review record you can read yourself. We have run those checks on the online providers we rank - see <a href="/weight-loss/articles/is-wellmedr-legit">is welludr legit</a>, <a href="/weight-loss/articles/is-embody-legit">is embody legit</a>, <a href="/weight-loss/articles/is-altrx-legit">is altRx legit</a> and <a href="/weight-loss/articles/is-medvi-legit">is Medvi legit</a> - and the same four questions apply to a clinic.',
+      },
+      {
+        heading: "Online or in-person: which should you choose?",
         body: 'For most people, online weight loss programs offer the best combination of convenience, cost, and clinical quality. The medication is the same whether prescribed online or in-person - the difference is in the delivery experience. <a href="/weight-loss/find-your-match">Take our quiz</a> to find the best online provider for your goals, or <a href="/weight-loss/articles/choosing-telehealth-weight-loss-provider">read our guide</a> on choosing the right telehealth provider.',
       },
     ],
@@ -1202,7 +1222,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Where is the cheapest semaglutide?",
-        body: '<a href="/weight-loss/cheapest-glp1">Compare the most affordable providers</a> on our platform. Several offer compounded semaglutide starting at a verified $49/month with everything included. <a href="/weight-loss/find-your-match">Take our quiz</a> to find a provider that fits both your goals and budget.',
+        body: '<a href="/weight-loss/cheapest-glp1">Compare the most affordable providers</a> on our platform. Several offer compounded semaglutide starting at a verified $49/month with everything included. <a href="/weight-loss/find-your-match">Take our quiz</a> to find a provider that fits both your goals and budget. Prefer a tablet to a weekly pen? The two FDA-approved GLP-1 pills are compared in <a href="/weight-loss/articles/foundayo-vs-wegovy-pill">Foundayo vs the Wegovy pill</a>, and the semaglutide tablet\'s own price ladder is in <a href="/weight-loss/articles/wegovy-pill-price-online">Wegovy pill price online</a>. ',
       },
     ],
   },
@@ -1628,7 +1648,7 @@ export const articles: Article[] = [
       },
       {
         heading: "How do you choose a Wegovy alternative?",
-        body: 'Want the same semaglutide at lower cost? Compounded semaglutide through any reputable telehealth provider. Want stronger results? Consider tirzepatide. Want insurance coverage? Check if <a href="/weight-loss/reviews/found">Found</a> works with your plan. Not sure? <a href="/weight-loss/find-your-match">Take our matching quiz</a> for a personalized recommendation based on your goals and budget.',
+        body: 'Want the same semaglutide at lower cost? Compounded semaglutide through any reputable telehealth provider. Want stronger results? Consider tirzepatide. Want insurance coverage? Check if <a href="/weight-loss/reviews/found">Found</a> works with your plan. Not sure? <a href="/weight-loss/find-your-match">Take our matching quiz</a> for a personalized recommendation based on your goals and budget. Needle-averse? Two FDA-approved daily GLP-1 pills now exist, and <a href="/weight-loss/articles/foundayo-vs-wegovy-pill">Foundayo vs the Wegovy pill</a> compares them on results, routine and price. ',
       },
     ],
   },
@@ -1782,7 +1802,7 @@ export const articles: Article[] = [
       },
       {
         heading: "The verdict",
-        body: 'Embody is a legitimate, affordable way to start doctor-prescribed GLP-1 treatment online, backed by real certification and licensed pharmacies. Whether it\'s the right pick depends on price and features versus other providers - see how it stacks up in our <a href="/weight-loss/reviews">weight-loss provider rankings</a>, or compare cheaper and comparable options in <a href="/weight-loss/articles/embody-alternatives">Embody alternatives</a>. This article is general information, not medical advice.',
+        body: 'Embody is a legitimate, affordable way to start doctor-prescribed GLP-1 treatment online, backed by real certification and licensed pharmacies. Whether it\'s the right pick depends on price and features versus other providers - see how it stacks up in our <a href="/weight-loss/reviews">weight-loss provider rankings</a>, or compare cheaper and comparable options in <a href="/weight-loss/articles/embody-alternatives">Embody alternatives</a>.  The same checks for the other budget picks are in <a href="/weight-loss/articles/is-wellmedr-legit">is welludr legit</a> and <a href="/weight-loss/articles/is-altrx-legit">is altRx legit</a>. This article is general information, not medical advice.',
       },
     ],
   },
@@ -1936,7 +1956,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Which one should you choose?",
-        body: 'Decision logic, honestly ordered. Chasing maximum average efficacy with budget for brand: Zepbound leads the trial numbers. Insurance covering one of them: the covered one usually wins the math - check your formulary first. Self-pay: the compounded route\'s $49-$99/month changes the entire question, which is why it\'s our default starting point for cash payers - compare on the <a href="/weight-loss">ranking</a>. Diabetes plus weight goals: that\'s an Ozempic/Mounjaro-label conversation with your clinician. Whichever route: prescription required, titration takes months, and the provider\'s follow-up quality matters more than the logo on the pen.',
+        body: 'Decision logic, honestly ordered. Chasing maximum average efficacy with budget for brand: Zepbound leads the trial numbers. Insurance covering one of them: the covered one usually wins the math - check your formulary first. Self-pay: the compounded route\'s $49-$99/month changes the entire question, which is why it\'s our default starting point for cash payers - compare on the <a href="/weight-loss">ranking</a>. Diabetes plus weight goals: that\'s an Ozempic/Mounjaro-label conversation with your clinician. Whichever route: prescription required, titration takes months, and the provider\'s follow-up quality matters more than the logo on the pen. If a daily tablet suits you better than any of these pens, <a href="/weight-loss/articles/foundayo-vs-wegovy-pill">Foundayo vs the Wegovy pill</a> compares the two approved GLP-1 pills. ',
       },
     ],
   },
@@ -2032,7 +2052,7 @@ export const articles: Article[] = [
       },
       {
         heading: "The verdict",
-        body: 'welludr is legit by every marker we can verify: one of the strongest Trustpilot records among the providers we track (4.6 across 2,679), a real prescription process, a named pharmacy, published prices that match what buyers report paying, and a warranty behind it. The honest caveats are the two above - results vary by person no matter how good the service is, and the headline price requires a 12-month commitment. Read the <a href="/weight-loss/reviews/wellmedr">full welludr review</a> for the complete record, or compare it against the no-commitment alternative in <a href="/weight-loss/embody-vs-wellmedr">embody vs welludr</a>. This article is general information, not medical advice.',
+        body: 'welludr is legit by every marker we can verify: one of the strongest Trustpilot records among the providers we track (4.6 across 2,679), a real prescription process, a named pharmacy, published prices that match what buyers report paying, and a warranty behind it. The honest caveats are the two above - results vary by person no matter how good the service is, and the headline price requires a 12-month commitment. Read the <a href="/weight-loss/reviews/wellmedr">full welludr review</a> for the complete record, or compare it against the no-commitment alternative in <a href="/weight-loss/embody-vs-wellmedr">embody vs welludr</a>.  Comparing the budget trio? The same checks are in <a href="/weight-loss/articles/is-embody-legit">is embody legit</a> and <a href="/weight-loss/articles/is-altrx-legit">is altRx legit</a>. This article is general information, not medical advice.',
       },
     ],
   },
@@ -2621,7 +2641,7 @@ export const articles: Article[] = [
       {
         heading: "What are Foundayo and the Wegovy pill?",
         body:
-          'They are the first two GLP-1 pills approved for weight management, and they are different kinds of molecule. <strong>The Wegovy pill</strong> is semaglutide - the same peptide as the Wegovy and Ozempic injections - in a 25 mg once-daily tablet, approved by the FDA in <a href="https://www.healio.com/news/endocrinology/20260213/fda-approves-wegovy-pill-the-first-oral-glp1-to-treat-obesity" target="_blank" rel="noopener">December 2025</a> for reducing excess body weight and maintaining the loss in adults with obesity, or overweight with a weight-related condition, and for lowering cardiovascular risk in that group. Because a peptide is poorly absorbed from the gut, the tablet carries a much higher dose than the 2.4 mg weekly injection and has to be taken in a specific way. <strong>Foundayo</strong> is orforglipron, a small-molecule (non-peptide) GLP-1 receptor agonist from Eli Lilly, approved on <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-first-new-molecular-entity-under-national-priority-voucher-program" target="_blank" rel="noopener">April 1, 2026</a> under the FDA\'s national priority voucher programme, 50 days after filing. Being a small molecule is what lets it be taken without food or water rules. Both are prescription-only; neither is a compounded product.',
+          '<div class="qa"><strong>The short answer</strong>Both are FDA-approved daily GLP-1 pills for weight management. The Wegovy pill (oral semaglutide 25 mg) has the larger published trial result, 13.6% mean weight loss at 64 weeks in OASIS 4, against Foundayo\'s 11.2% at 72 weeks in ATTAIN-1; the trials are not head to head. Foundayo has the simpler routine, with no food or water timing, while the Wegovy pill needs an empty stomach and a 30-minute wait. Self-pay prices start at a reported $149 a month from either maker, $25 with commercial coverage, and $50 on Medicare\'s pilot.</div><table><thead><tr><th>At a glance</th><th>Wegovy pill</th><th>Foundayo</th></tr></thead><tbody><tr><td>Molecule</td><td>Semaglutide (a peptide)</td><td>Orforglipron (a small molecule)</td></tr><tr><td>Maker and FDA approval</td><td>Novo Nordisk, December 2025</td><td>Eli Lilly, April 1, 2026</td></tr><tr><td>Trial result, everyone randomised</td><td><strong>13.6%</strong> at 64 weeks, OASIS 4 (307 adults)</td><td><strong>11.2%</strong> at 72 weeks, ATTAIN-1 (3,127 adults)</td></tr><tr><td>Daily routine</td><td>Empty stomach, a sip of water, 30-minute wait</td><td>Any time, with or without food</td></tr><tr><td>Doses</td><td>1.5 mg start, 25 mg maintenance</td><td>6 mg, 12 mg, 36 mg</td></tr><tr><td>Self-pay, maker direct (reported)</td><td>$149 to $299 a month by dose</td><td>$149 to $349 a month by dose</td></tr><tr><td>Verified telehealth price</td><td>Ro: $149 first month, then $299, plus membership</td><td>None we could verify yet</td></tr><tr><td>Commercial insurance with coverage</td><td>As low as $25 (reported)</td><td>$25 with the Lilly savings card</td></tr><tr><td>Medicare GLP-1 Bridge</td><td>$50 flat copay</td><td>$50 flat copay</td></tr></tbody></table>They are the first two GLP-1 pills approved for weight management, and they are different kinds of molecule. <strong>The Wegovy pill</strong> is semaglutide - the same peptide as the Wegovy and Ozempic injections - in a 25 mg once-daily tablet, approved by the FDA in <a href="https://www.healio.com/news/endocrinology/20260213/fda-approves-wegovy-pill-the-first-oral-glp1-to-treat-obesity" target="_blank" rel="noopener">December 2025</a> for reducing excess body weight and maintaining the loss in adults with obesity, or overweight with a weight-related condition, and for lowering cardiovascular risk in that group. Because a peptide is poorly absorbed from the gut, the tablet carries a much higher dose than the 2.4 mg weekly injection and has to be taken in a specific way. <strong>Foundayo</strong> is orforglipron, a small-molecule (non-peptide) GLP-1 receptor agonist from Eli Lilly, approved on <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-first-new-molecular-entity-under-national-priority-voucher-program" target="_blank" rel="noopener">April 1, 2026</a> under the FDA\'s national priority voucher programme, 50 days after filing. Being a small molecule is what lets it be taken without food or water rules. Both are prescription-only; neither is a compounded product.',
       },
       {
         heading: "Which pill produces more weight loss?",

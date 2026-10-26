@@ -544,7 +544,20 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
   // ───── BATTLE PAGE ─────
   const battle = (config.battles ?? []).find((b) => b.slug === slug);
-  if (!battle) return notFound();
+  if (!battle) {
+    // A reversed ordering of a live matchup ("ro-vs-trimrx" for "trimrx-vs-ro")
+    // is a typed or AI-constructed URL for the same page, not a missing page.
+    // Oct 26, 2026: Bing's AI Performance export showed Copilot citing one
+    // such URL 17 times while it 404'd. Redirect to the live slug instead.
+    const parts = slug.split("-vs-");
+    if (parts.length === 2) {
+      const reversed = `${parts[1]}-vs-${parts[0]}`;
+      if ((config.battles ?? []).some((b) => b.slug === reversed)) {
+        permanentRedirect(hubLink(ctx, `/${reversed}`));
+      }
+    }
+    return notFound();
+  }
 
   // Collapse reverse-pair duplicates (e.g. embody-vs-altrx ↔ altrx-vs-embody):
   // both slugs render the same matchup and compete in search. 308-redirect any
