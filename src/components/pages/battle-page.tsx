@@ -19,6 +19,7 @@ import { ProviderCta } from "@/components/provider-cta";
 import { BattleStickyCta } from "@/components/battle-sticky-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { getReviewRecord } from "@/data/reviews";
+import { ReviewFaceoff } from "@/components/review-faceoff";
 import { TrustpilotRating } from "@/components/trustpilot-rating";
 import { LicensedTelehealthBadge } from "@/components/licensed-badge";
 import { PromoPopup } from "@/components/promo-popup";
@@ -927,6 +928,20 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               </p>
             </div>
           )}
+
+          {/* ───── CUSTOMER REVIEWS, SIDE BY SIDE ─────
+              Both providers' stored review sets by experience area, from the
+              review registry and its themes (weight-loss only; renders nothing
+              unless both sides have themes and eight or more stored reviews). */}
+          {ctx.vertical === "weight-loss" &&
+            getReviewRecord(ctx.vertical, p1.id) &&
+            getReviewRecord(ctx.vertical, p2.id) && (
+              <ReviewFaceoff
+                a={{ name: p1.name, href: hubLink(ctx, `/reviews/${p1.id}`), record: getReviewRecord(ctx.vertical, p1.id)! }}
+                b={{ name: p2.name, href: hubLink(ctx, `/reviews/${p2.id}`), record: getReviewRecord(ctx.vertical, p2.id)! }}
+                className="mb-12"
+              />
+            )}
 
           {/* ───── PROVIDER CARDS (enriched) ───── */}
           <div className="relative mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
