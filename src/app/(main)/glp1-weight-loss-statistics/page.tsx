@@ -3,6 +3,7 @@ import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideCluster } from "@/components/guide-cluster";
+import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { TopTwoPicks } from "@/components/top-providers-block";
 import { getConfig } from "@/lib/config-store";
 import { PRICE_INDEX, BRAND_SHELF, PRICE_INDEX_VERIFIED, PRICE_CHANGELOG } from "@/lib/price-index";
@@ -159,6 +160,7 @@ export default async function StatisticsPage() {
             Prices verified {longDate(PRICE_INDEX_VERIFIED)} · {PRICE_CHANGELOG.length} logged changes since{" "}
             {longDate(PRICE_CHANGELOG[PRICE_CHANGELOG.length - 1]?.date ?? PRICE_INDEX_VERIFIED)}
           </p>
+          <MedicalReviewBar path="/weight-loss/glp1-weight-loss-statistics" className="mt-4 max-w-[760px]" />
         </div>
       </div>
 
