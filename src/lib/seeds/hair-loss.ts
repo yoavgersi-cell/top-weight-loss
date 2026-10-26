@@ -1183,7 +1183,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "Does iron deficiency cause hair loss?",
-        body: `It is one of the more commonly discussed non-genetic factors in hair shedding, especially in women - though the evidence linking low iron to hair loss, particularly without anemia, is genuinely mixed rather than settled. Hair follicles are among the fastest-dividing cells in the body, which makes them early casualties when a key raw material runs short. When iron stores drop low enough, the body triages: it protects essential organs and lets "optional" projects like hair growth slide. Follicles shift out of their growth phase early and shed weeks later - a pattern called telogen effluvium. The practical upside of this diagnosis, compared to genetic pattern loss: fix the deficiency and the shedding typically stops, with regrowth following.`,
+        body: `<div class="qa"><strong>The short answer</strong>Iron deficiency can contribute to diffuse hair shedding, though the evidence is mixed, especially without anemia. The tell is all-over thinning rather than a receding hairline, a blood test that includes ferritin settles the question, and where low iron is the cause, shedding usually reverses once it is corrected, with regrowth lagging by months.</div>It is one of the more commonly discussed non-genetic factors in hair shedding, especially in women - though the evidence linking low iron to hair loss, particularly without anemia, is genuinely mixed rather than settled. Hair follicles are among the fastest-dividing cells in the body, which makes them early casualties when a key raw material runs short. When iron stores drop low enough, the body triages: it protects essential organs and lets "optional" projects like hair growth slide. Follicles shift out of their growth phase early and shed weeks later - a pattern called telogen effluvium. The practical upside of this diagnosis, compared to genetic pattern loss: fix the deficiency and the shedding typically stops, with regrowth following.`,
       },
       {
         heading: "Can anemia cause hair loss even if I feel fine?",
@@ -1223,7 +1223,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "Can a shampoo really stop hair loss?",
-        body: `Here is the physics problem no shampoo marketing mentions: a shampoo touches your scalp for seconds, diluted in water, and is then rinsed away. Treatments that actually change what follicles do - <a href="/hair-loss/articles/finasteride-vs-minoxidil">minoxidil and finasteride</a> - work because they stay in contact with the follicle or circulate through it continuously. That contact time gap is why no shampoo has ever demonstrated the kind of regrowth that the real treatments show, and why "shampoo for hair loss" is mostly a category of hope. Mostly - because there is one honest exception worth knowing about.`,
+        body: `<div class="qa"><strong>The short answer</strong>No shampoo regrows hair on its own: something rinsed off seconds after applying is the wrong delivery system for treating follicles. Ketoconazole shampoo has modest supporting evidence as an add-on for scalp health, 'DHT-blocking' shampoos borrow finasteride's language without its evidence, and the proven regrowth tools remain minoxidil and finasteride.</div>Here is the physics problem no shampoo marketing mentions: a shampoo touches your scalp for seconds, diluted in water, and is then rinsed away. Treatments that actually change what follicles do - <a href="/hair-loss/articles/finasteride-vs-minoxidil">minoxidil and finasteride</a> - work because they stay in contact with the follicle or circulate through it continuously. That contact time gap is why no shampoo has ever demonstrated the kind of regrowth that the real treatments show, and why "shampoo for hair loss" is mostly a category of hope. Mostly - because there is one honest exception worth knowing about.`,
       },
       {
         heading: "The one ingredient with real evidence: ketoconazole",
@@ -1259,7 +1259,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "What is VDPHL01?",
-        body: `VDPHL01 is an <strong>extended-release oral minoxidil</strong> tablet developed by Veradermics, a clinical-stage dermatology company - and the reason searches for it are spiking is its run of trial news. Minoxidil itself is the most familiar name in hair loss, but today's approved products are topical; oral minoxidil is widely prescribed for hair loss only off-label. VDPHL01 is the attempt to change that: run the full FDA trial program and become the <strong>first FDA-approved oral minoxidil for pattern hair loss</strong> - and the first oral hair-loss drug cleared for women as well as men (today's approved oral option, finasteride, is for men only), a market the company estimates at 50 million men and 30 million women in the US alone.`,
+        body: `<div class="qa"><strong>The short answer</strong>VDPHL01 is Veradermics' extended-release oral minoxidil, in late-stage trials to become the first FDA-approved oral minoxidil for pattern hair loss and the first oral hair-loss drug approved for women. The company reported positive Phase 2/3 results in men in April 2026, with major readouts expected in late 2026 and the first half of 2027. It is not approved or available yet, but oral minoxidil is already prescribable off-label through hair-loss telehealth providers.</div>VDPHL01 is an <strong>extended-release oral minoxidil</strong> tablet developed by Veradermics, a clinical-stage dermatology company - and the reason searches for it are spiking is its run of trial news. Minoxidil itself is the most familiar name in hair loss, but today's approved products are topical; oral minoxidil is widely prescribed for hair loss only off-label. VDPHL01 is the attempt to change that: run the full FDA trial program and become the <strong>first FDA-approved oral minoxidil for pattern hair loss</strong> - and the first oral hair-loss drug cleared for women as well as men (today's approved oral option, finasteride, is for men only), a market the company estimates at 50 million men and 30 million women in the US alone.`,
       },
       {
         heading: "What have the trials shown so far?",
@@ -1294,7 +1294,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "Why look for a Hims alternative for hair loss?",
-        body: `Hims is a legitimate, well-known men's health platform - but hair loss is one product line among many there, and its lineup centers on the two standard prescriptions (finasteride and minoxidil). The usual reasons men shop for an alternative: wanting a wider prescription toolkit (oral dutasteride, stronger compounded topicals), wanting a formula personalized to their case, or simply wanting clearly published pricing they can compare before signing up. All three exist in this market - at providers whose prices we have verified against their own sites.`,
+        body: `<div class="qa"><strong>The short answer</strong>The best Hims alternatives for hair loss, at prices we verified in August 2026, are Maximus (oral minoxidil from $24.99/month, plus dutasteride and compounded gels), Happy Head (custom-compounded formulas at $49 for the first order, then $89/month, and it serves women) and PeterMD (finasteride from $60 per 30 tablets). The medicines are the same prescriptions wherever you buy them; what changes is the toolkit, the personalization and the published price.</div>Hims is a legitimate, well-known men's health platform - but hair loss is one product line among many there, and its lineup centers on the two standard prescriptions (finasteride and minoxidil). The usual reasons men shop for an alternative: wanting a wider prescription toolkit (oral dutasteride, stronger compounded topicals), wanting a formula personalized to their case, or simply wanting clearly published pricing they can compare before signing up. All three exist in this market - at providers whose prices we have verified against their own sites.`,
       },
       {
         heading: "What is the best alternative to Hims for hair loss?",
@@ -1332,7 +1332,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "Why look for a Keeps alternative?",
-        body: `Keeps does one thing - men's hair loss - and its focused, simple experience is exactly why many men start there. It's also why some outgrow it: the lineup centers on the two standard prescriptions (finasteride and minoxidil), so men who want oral dutasteride, stronger compounded topicals, or a formula personalized to their case end up looking at providers built around a wider toolkit. Here are the alternatives whose prices we have verified against their own published pages.`,
+        body: `<div class="qa"><strong>The short answer</strong>The best Keeps alternatives, at prices we verified in August 2026, are Maximus (oral minoxidil from $24.99/month, plus oral dutasteride and compounded gels), Happy Head (personalized formulas at $49 for the first order, then $89/month, and it treats women) and PeterMD (finasteride from $60 per 30 tablets). Switching is mostly about continuity: time the new order to your remaining supply and never stack DHT blockers from two services.</div>Keeps does one thing - men's hair loss - and its focused, simple experience is exactly why many men start there. It's also why some outgrow it: the lineup centers on the two standard prescriptions (finasteride and minoxidil), so men who want oral dutasteride, stronger compounded topicals, or a formula personalized to their case end up looking at providers built around a wider toolkit. Here are the alternatives whose prices we have verified against their own published pages.`,
       },
       {
         heading: "What is the best alternative to Keeps?",
@@ -1375,7 +1375,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "What is oral minoxidil for hair loss?",
-        body: `Minoxidil started as a blood-pressure medication, and dermatologists have increasingly prescribed it off-label at much lower doses as a once-daily pill for hair loss. The appeal over the topical version is practical: no twice-daily application, no residue, no scalp irritation from the solution - you just take a tablet. Because it's a prescription used off-label, a licensed provider has to evaluate whether it's appropriate for you, including your blood-pressure history. For how the two formats compare in practice, see our <a href="/hair-loss/articles/oral-minoxidil-vs-topical-minoxidil">oral vs topical minoxidil breakdown</a>.`,
+        body: `<div class="qa"><strong>The short answer</strong>Yes, oral minoxidil can be prescribed online: a licensed provider reviews your intake, including your blood-pressure history, and the pills ship if appropriate. It is a once-daily low-dose tablet used off-label, which many men find easier to stick with than a twice-daily topical. Maximus lists it at $24.99/month as a 90-day supply, verified August 2026.</div>Minoxidil started as a blood-pressure medication, and dermatologists have increasingly prescribed it off-label at much lower doses as a once-daily pill for hair loss. The appeal over the topical version is practical: no twice-daily application, no residue, no scalp irritation from the solution - you just take a tablet. Because it's a prescription used off-label, a licensed provider has to evaluate whether it's appropriate for you, including your blood-pressure history. For how the two formats compare in practice, see our <a href="/hair-loss/articles/oral-minoxidil-vs-topical-minoxidil">oral vs topical minoxidil breakdown</a>.`,
       },
       {
         heading: "Can you get oral minoxidil prescribed online?",
@@ -1409,7 +1409,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "What is topical finasteride?",
-        body: `Topical finasteride is the same DHT-blocking active as the familiar pill, compounded into a solution or spray applied to the scalp. The idea behind it: deliver the medicine where the hair is and potentially limit how much circulates through the rest of the body. It's a compounded, prescription-only formulation - not a separate FDA-approved product - so quality depends on the pharmacy and the provider prescribing it. Background on the oral version is in <a href="/hair-loss/articles/does-finasteride-work">does finasteride work</a>.`,
+        body: `<div class="qa"><strong>The short answer</strong>Topical finasteride is the same DHT blocker as the pill, compounded into a scalp solution or spray to deliver it locally and potentially limit how much circulates through the body. It is prescription-only and not a separate FDA-approved product. The verified option online is PeterMD's Follicure RX, a minoxidil, finasteride and ketoconazole spray at $70 per bottle (August 2026).</div>Topical finasteride is the same DHT-blocking active as the familiar pill, compounded into a solution or spray applied to the scalp. The idea behind it: deliver the medicine where the hair is and potentially limit how much circulates through the rest of the body. It's a compounded, prescription-only formulation - not a separate FDA-approved product - so quality depends on the pharmacy and the provider prescribing it. Background on the oral version is in <a href="/hair-loss/articles/does-finasteride-work">does finasteride work</a>.`,
       },
       {
         heading: "Topical finasteride vs the pill: what's the difference?",
@@ -1439,7 +1439,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "Can you get finasteride online without seeing a doctor?",
-        body: `Without an office visit - yes. Without a doctor - no, and that's the line that separates legitimate telehealth from sketchy pill sites. Finasteride is prescription-only in the US: a licensed provider must review your health information before prescribing, and reputable services dispense through licensed pharmacies. The whole process is online and usually takes minutes to complete on your side.`,
+        body: `<div class="qa"><strong>The short answer</strong>You can get finasteride online without an office visit, but not without a doctor: it is prescription-only, so a licensed provider reviews your intake before a licensed pharmacy ships it. The route is intake, provider review, delivery. Verified prices (August 2026): $34.99/month at Maximus as a 90-day supply, or $60 per 30 tablets at PeterMD.</div>Without an office visit - yes. Without a doctor - no, and that's the line that separates legitimate telehealth from sketchy pill sites. Finasteride is prescription-only in the US: a licensed provider must review your health information before prescribing, and reputable services dispense through licensed pharmacies. The whole process is online and usually takes minutes to complete on your side.`,
       },
       {
         heading: "How do you get finasteride prescribed online?",
@@ -1469,7 +1469,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "What is dutasteride and why do men switch to it?",
-        body: `Dutasteride blocks DHT more broadly than finasteride - it inhibits both types of the converting enzyme, where finasteride targets one. It's FDA-approved for enlarged prostate and prescribed off-label for hair loss, typically for men who plateaued on finasteride or want the stronger blocker from the start under medical guidance. The full comparison is in <a href="/hair-loss/articles/dutasteride-vs-finasteride">dutasteride vs finasteride</a>.`,
+        body: `<div class="qa"><strong>The short answer</strong>Dutasteride blocks both forms of the DHT-converting enzyme, where finasteride targets one, and is prescribed off-label for hair loss. You can get it online through the standard telehealth route, but not every service offers it. Verified options (August 2026): oral dutasteride at Maximus for $34.99/month, or Happy Head's custom formulas built around dutasteride at $49 for the first order, then $89/month.</div>Dutasteride blocks DHT more broadly than finasteride - it inhibits both types of the converting enzyme, where finasteride targets one. It's FDA-approved for enlarged prostate and prescribed off-label for hair loss, typically for men who plateaued on finasteride or want the stronger blocker from the start under medical guidance. The full comparison is in <a href="/hair-loss/articles/dutasteride-vs-finasteride">dutasteride vs finasteride</a>.`,
       },
       {
         heading: "Can you get dutasteride prescribed online?",
@@ -1499,7 +1499,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "How much does hair loss treatment cost per month?",
-        body: `At verified published prices, prescription hair-loss treatment online runs <strong>$24.99 to $89 per month</strong> depending on the medication and how personalized the formula is - a fraction of what most men assume. The floor is single-medication oral treatment (Maximus oral minoxidil, $24.99/month); the top is custom-compounded multi-active formulas (Happy Head, $89/month regular rate after a $49 first order). Every number on this page was checked against the provider's own published pricing in August 2026.`,
+        body: `<div class="qa"><strong>The short answer</strong>At verified published prices (August 2026), prescription hair-loss treatment online runs about $24.99 to $89 per month. The floor is single-medication oral treatment, such as Maximus oral minoxidil at $24.99/month; the top is custom-compounded multi-active formulas, such as Happy Head at $89/month after a $49 first order. Over a year that is roughly $300 to $1,017.</div>At verified published prices, prescription hair-loss treatment online runs <strong>$24.99 to $89 per month</strong> depending on the medication and how personalized the formula is - a fraction of what most men assume. The floor is single-medication oral treatment (Maximus oral minoxidil, $24.99/month); the top is custom-compounded multi-active formulas (Happy Head, $89/month regular rate after a $49 first order). Every number on this page was checked against the provider's own published pricing in August 2026.`,
       },
       {
         heading: "What does every verified provider charge?",
@@ -1529,7 +1529,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "Can you use finasteride and minoxidil at the same time?",
-        body: `Yes - under medical guidance, combining them is one of the most common approaches in hair-loss treatment, because the two work through different, complementary mechanisms: finasteride reduces DHT (the hormone driving follicle miniaturization), while minoxidil supports the growth phase of the hair cycle. One defends, one builds. A licensed provider should confirm the combination fits your health profile - that's part of every legitimate telehealth intake.`,
+        body: `<div class="qa"><strong>The short answer</strong>Yes. Under medical guidance, combining finasteride and minoxidil is one of the most common approaches in hair-loss treatment, because they work through different, complementary mechanisms: finasteride lowers DHT and minoxidil supports the growth phase. Verified combo options (August 2026) include Maximus' oral combo at $59.99/month, PeterMD's Follicure RX spray at $70 and Happy Head's custom formulas from $49.</div>Yes - under medical guidance, combining them is one of the most common approaches in hair-loss treatment, because the two work through different, complementary mechanisms: finasteride reduces DHT (the hormone driving follicle miniaturization), while minoxidil supports the growth phase of the hair cycle. One defends, one builds. A licensed provider should confirm the combination fits your health profile - that's part of every legitimate telehealth intake.`,
       },
       {
         heading: "Is the combination better than either alone?",
@@ -1563,7 +1563,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "What is Maximus hair treatment?",
-        body: `Maximus is an online men's health clinic whose hair-loss program covers a wider prescription toolkit than most telehealth services: oral finasteride, oral minoxidil and oral dutasteride, plus compounded topical gels - up to an All-in-One Gel that combines dutasteride, minoxidil, tretinoin and fexofenadine in a single application. You complete a medical questionnaire online, a board-certified doctor reviews it, and approved treatment ships free and discreetly. For the full breakdown, see our <a href="/hair-loss/reviews/maximus">in-depth Maximus review</a>.`,
+        body: `<div class="qa"><strong>The short answer</strong>Yes. Maximus is a legitimate online men's health clinic: every hair treatment is prescription-only behind a board-certified doctor's review, its actives are established hair-loss medications, it publishes its prices openly, and it holds a claimed Trustpilot profile rated 4.4 across 1,050 reviews. Verified plans start at $24.99/month for oral minoxidil, billed as a 90-day supply.</div>Maximus is an online men's health clinic whose hair-loss program covers a wider prescription toolkit than most telehealth services: oral finasteride, oral minoxidil and oral dutasteride, plus compounded topical gels - up to an All-in-One Gel that combines dutasteride, minoxidil, tretinoin and fexofenadine in a single application. You complete a medical questionnaire online, a board-certified doctor reviews it, and approved treatment ships free and discreetly. For the full breakdown, see our <a href="/hair-loss/reviews/maximus">in-depth Maximus review</a>.`,
       },
       {
         heading: "Is Maximus legit and safe?",
@@ -1574,11 +1574,11 @@ const articles: ArticleData[] = [
         body: `Verified from Maximus' published pricing (August 2026), billed as a 90-day supply: oral minoxidil is <strong>$24.99/month</strong> - its most affordable entry point - oral finasteride and oral dutasteride are $34.99/month each, the topical gels run $44.99-$54.99/month, the oral minoxidil + dutasteride combination is $59.99/month, and the flagship All-in-One Gel is $64.99/month, which works out to about $2 a day. The full price list, and how it compares to other providers, is in our <a href="/hair-loss/articles/maximus-cost">Maximus cost guide</a>.`,
       },
       {
-        heading: "What real customers say",
+        heading: "What do real customers say about Maximus?",
         body: `From Maximus' Trustpilot page (all recent, unprompted, 5-star): "Highly knowledgeable physician who prescribed a protocol that works, great products, lots of treatment options not available elsewhere" (David Epstein). "Excellent customer service... The products are also 100% as advertised" (Ben Vangarde). "Shipping was fast for a year... a real person responding on the weekend" (Nathan Bennett). The consistent themes across reviews: physician quality, service responsiveness and shipping speed.`,
       },
       {
-        heading: "Maximus pros and cons",
+        heading: "What are Maximus' pros and cons?",
         body: `<strong>Pros:</strong> the broadest prescription toolkit in our ranking (including dutasteride and oral minoxidil), a genuinely accessible $24.99/month entry price, board-certified doctor oversight, free discreet shipping, and a 4.4 Trustpilot average across 1,050 reviews. <strong>Cons:</strong> plans are billed as a 90-day supply rather than month-to-month, it's built for men only, and - like all hair-loss treatment - results require ongoing use. If you're a woman looking for treatment, see <a href="/hair-loss/articles/hair-loss-treatment-for-women">hair-loss treatment for women</a> or <a href="/hair-loss/reviews/happyhead">Happy Head</a>, which serves both.`,
       },
       {
@@ -1600,23 +1600,23 @@ const articles: ArticleData[] = [
     author: "Treatments Hub Staff",
     sections: [
       {
-        heading: "Maximus price list (verified August 2026)",
-        body: `Every price below comes from Maximus' own published pricing, and all plans are billed as a 90-day supply:<table><thead><tr><th>Treatment</th><th>Price</th><th>Actives</th></tr></thead><tbody><tr><td>Oral Minoxidil</td><td><strong>$24.99/mo</strong></td><td>Minoxidil (its most affordable option)</td></tr><tr><td>Oral Finasteride</td><td>$34.99/mo</td><td>Finasteride</td></tr><tr><td>Oral Dutasteride</td><td>$34.99/mo</td><td>Dutasteride</td></tr><tr><td>Minoxidil+ Gel</td><td>$44.99/mo</td><td>Minoxidil, tretinoin, fexofenadine</td></tr><tr><td>Dutasteride+ Gel</td><td>$54.99/mo</td><td>Dutasteride, tretinoin, fexofenadine</td></tr><tr><td>Oral Minoxidil + Dutasteride</td><td>$59.99/mo</td><td>Both orals combined</td></tr><tr><td>All-in-One Gel</td><td>$64.99/mo</td><td>Dutasteride, minoxidil, tretinoin, fexofenadine</td></tr></tbody></table>`,
+        heading: "What does Maximus charge? (price list verified August 2026)",
+        body: `<div class="qa"><strong>The short answer</strong>Maximus' hair-loss plans, verified from its published pricing in August 2026 and billed as 90-day supplies, run from $24.99/month for oral minoxidil to $64.99/month for the All-in-One Gel. Oral finasteride and oral dutasteride are $34.99/month each, the topical gels $44.99 to $54.99, and the oral combo $59.99. The price includes the doctor review and free discreet shipping.</div>Every price below comes from Maximus' own published pricing, and all plans are billed as a 90-day supply:<table><thead><tr><th>Treatment</th><th>Price</th><th>Actives</th></tr></thead><tbody><tr><td>Oral Minoxidil</td><td><strong>$24.99/mo</strong></td><td>Minoxidil (its most affordable option)</td></tr><tr><td>Oral Finasteride</td><td>$34.99/mo</td><td>Finasteride</td></tr><tr><td>Oral Dutasteride</td><td>$34.99/mo</td><td>Dutasteride</td></tr><tr><td>Minoxidil+ Gel</td><td>$44.99/mo</td><td>Minoxidil, tretinoin, fexofenadine</td></tr><tr><td>Dutasteride+ Gel</td><td>$54.99/mo</td><td>Dutasteride, tretinoin, fexofenadine</td></tr><tr><td>Oral Minoxidil + Dutasteride</td><td>$59.99/mo</td><td>Both orals combined</td></tr><tr><td>All-in-One Gel</td><td>$64.99/mo</td><td>Dutasteride, minoxidil, tretinoin, fexofenadine</td></tr></tbody></table>`,
       },
       {
-        heading: "What's included in the price",
+        heading: "What's included in the price?",
         body: `The monthly rate covers the medication, the board-certified doctor review of your questionnaire, and free discreet shipping - there's no separate consultation or membership fee in the published pricing. Prescription treatments still require the doctor to approve you as a candidate.`,
       },
       {
-        heading: "How the 90-day billing works",
+        heading: "How does the 90-day billing work?",
         body: `Maximus quotes prices per month but supplies and bills in 90-day cycles - so the $24.99/month oral minoxidil arrives as a three-month supply. The per-month math is honest, but plan for the larger upfront charge rather than a small monthly one. That structure is common for prescription subscriptions and cuts down shipping churn; it's just worth knowing before checkout.`,
       },
       {
-        heading: "The cheapest way to start with Maximus",
+        heading: "What is the cheapest way to start with Maximus?",
         body: `At <strong>$24.99/month, oral minoxidil is the lowest-cost entry point</strong> - and for many men a reasonable first step, since minoxidil promotes regrowth without affecting hormones. If DHT is the driver of your loss, finasteride or dutasteride at $34.99/month targets the cause directly - our <a href="/hair-loss/articles/dutasteride-vs-finasteride">dutasteride vs finasteride guide</a> explains the difference. The doctor review determines which route fits your case.`,
       },
       {
-        heading: "How Maximus pricing compares",
+        heading: "How does Maximus pricing compare?",
         body: `Against the field: <a href="/hair-loss/reviews/happyhead">Happy Head</a>'s flagship products are $49 on the first order and $89/month at the regular rate - so Maximus' single-active treatments ($24.99-$34.99) undercut it, while Happy Head competes on personalized multi-active formulas. Mainstream options like Hims and Keeps don't publish comparable verified pricing on our pages yet - we list prices only after verifying them. Head-to-heads: <a href="/hair-loss/maximus-vs-happy-head">Maximus vs Happy Head</a>, <a href="/hair-loss/hims-vs-maximus">Hims vs Maximus</a>, <a href="/hair-loss/keeps-vs-maximus">Keeps vs Maximus</a>.`,
       },
       {
@@ -1639,26 +1639,26 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "Why look for a Maximus alternative?",
-        body: `Maximus tops our <a href="/hair-loss">hair-loss ranking</a> for men who want a broad prescription toolkit at verified prices from $24.99/month. But it isn't built for everyone: it's men-only, its plans bill as 90-day supplies, and some people specifically want a personalized compounded formula or a familiar mainstream brand. Here's how the real alternatives compare.`,
+        body: `<div class="qa"><strong>The short answer</strong>The strongest Maximus alternative is Happy Head if you want a personalized compounded formula or you are a woman, since Maximus treats men only: $49 on the first order, regularly $89/month, with a 4.5 Trustpilot average across 1,803 reviews. Hims, Keeps and Ro cover the basics (finasteride and minoxidil) with a narrower toolkit, and we have not verified their current pricing.</div>Maximus tops our <a href="/hair-loss">hair-loss ranking</a> for men who want a broad prescription toolkit at verified prices from $24.99/month. But it isn't built for everyone: it's men-only, its plans bill as 90-day supplies, and some people specifically want a personalized compounded formula or a familiar mainstream brand. Here's how the real alternatives compare.`,
       },
       {
-        heading: "Happy Head - best for personalized formulas (and the only pick here for women)",
+        heading: "Is Happy Head the best Maximus alternative for personalized formulas, and for women?",
         body: `<a href="/hair-loss/reviews/happyhead">Happy Head</a> is dermatologist-founded and builds custom prescription formulas - its Custom Topical combines dutasteride 0.3%, minoxidil 8%, retinoic acid and hydrocortisone, and its 3-in-1 SuperCapsule pairs dutasteride 0.5mg with minoxidil 1.25mg and vitamin D3. Verified pricing: <strong>$49 first order</strong> on either flagship (regularly $89/month), or both bundled at $98 (regularly $178), with a 4.5 Trustpilot average across 1,803 reviews. Crucially, it serves <strong>both men and women</strong> - the single biggest gap in Maximus' offer. Head to head: <a href="/hair-loss/maximus-vs-happy-head">Maximus vs Happy Head</a>.`,
       },
       {
-        heading: "Hims - best for mainstream familiarity",
+        heading: "Is Hims a good Maximus alternative for mainstream familiarity?",
         body: `<a href="/hair-loss/reviews/hims">Hims</a> is the most recognizable name in men's telehealth, offering prescription finasteride and minoxidil through a simple online flow. The toolkit is narrower than Maximus' - dutasteride and compounded topicals aren't its core offer - and we haven't verified its current hair pricing, so check its site. Comparison: <a href="/hair-loss/hims-vs-maximus">Hims vs Maximus</a>.`,
       },
       {
-        heading: "Keeps - best if you only want the generic basics",
+        heading: "Is Keeps a good Maximus alternative if you only want the generic basics?",
         body: `Keeps focuses on generic finasteride and minoxidil at budget positioning, plus hair-care add-ons like ketoconazole shampoo. If all you want is the two proven basics and the lowest sticker, it's a fair route - just know there's nowhere to go inside Keeps if first-line treatment underdelivers. We haven't verified its current pricing. Comparison: <a href="/hair-loss/keeps-vs-maximus">Keeps vs Maximus</a>.`,
       },
       {
-        heading: "Ro - best if you want one platform for many things",
+        heading: "Is Ro a good Maximus alternative if you want one platform for many things?",
         body: `Ro offers finasteride and minoxidil inside a large multi-category telehealth platform - convenient if you already use it for other care. For hair specifically, dedicated providers offer deeper toolkits. Comparison: <a href="/hair-loss/ro-vs-maximus">Ro vs Maximus</a>.`,
       },
       {
-        heading: "The bottom line",
+        heading: "Which Maximus alternative should you pick?",
         body: `<table><thead><tr><th>Provider</th><th>Best for</th><th>Verified pricing</th></tr></thead><tbody><tr><td>Maximus</td><td>Men wanting the widest prescription toolkit</td><td>From $24.99/mo (90-day supply)</td></tr><tr><td>Happy Head</td><td>Personalized formulas; men and women</td><td>$49 first order, reg $89/mo</td></tr><tr><td>Hims</td><td>Mainstream basics</td><td>Not yet verified</td></tr><tr><td>Keeps</td><td>Budget generics</td><td>Not yet verified</td></tr><tr><td>Ro</td><td>Multi-category convenience</td><td>Not yet verified</td></tr></tbody></table>If personalization or treatment for women is the priority, Happy Head is the strongest alternative; if you just want the basics cheaper, compare Keeps. Start from our <a href="/hair-loss">full ranking</a>. General information, not medical advice.`,
       },
     ],
@@ -1677,7 +1677,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "What is PeterMD's hair loss treatment?",
-        body: `PeterMD is a men's telehealth clinic whose hair-loss line is deliberately simple: oral finasteride 1mg, and Follicure RX - a prescription topical spray combining minoxidil, finasteride and ketoconazole in one daily formula. Everything is physician-prescribed and shipped discreetly to your door. Full details in our <a href="/hair-loss/reviews/petermd">PeterMD hair review</a>.`,
+        body: `<div class="qa"><strong>The short answer</strong>Yes. PeterMD is a legitimate men's telehealth clinic: its hair treatments are prescription-only behind a physician review, the actives are established hair-loss medications, and it publishes real prices with the regular rate shown next to promotions. Finasteride 1mg is $60 per 30 tablets (regularly $74) and the Follicure RX 3-in-1 spray is $70, verified August 2026. Its third-party review footprint is still too small to weigh.</div>PeterMD is a men's telehealth clinic whose hair-loss line is deliberately simple: oral finasteride 1mg, and Follicure RX - a prescription topical spray combining minoxidil, finasteride and ketoconazole in one daily formula. Everything is physician-prescribed and shipped discreetly to your door. Full details in our <a href="/hair-loss/reviews/petermd">PeterMD hair review</a>.`,
       },
       {
         heading: "Is PeterMD legit and safe?",
@@ -1688,11 +1688,11 @@ const articles: ArticleData[] = [
         body: `Verified from PeterMD's published pricing (August 2026): finasteride 1mg is <strong>$60 for 30 tablets</strong> (regularly $74) or $90 for 60 (regularly $110) - about $45/month at the 60-count rate. The Follicure RX 3-in-1 spray is <strong>$70 per 50mL bottle</strong> (regularly $80), or $140 for two. The full breakdown: <a href="/hair-loss/articles/petermd-cost">PeterMD cost guide</a>.`,
       },
       {
-        heading: "PeterMD pros and cons",
+        heading: "What are PeterMD's pros and cons?",
         body: `<strong>Pros:</strong> clear published pricing, the only ketoconazole-containing 3-in-1 topical in our ranking, physician-prescribed process, discreet delivery. <strong>Cons:</strong> a narrower menu than the leaders (no dutasteride or oral minoxidil published), men-only, and a review footprint too thin to weigh. For the head-to-heads, see <a href="/hair-loss/maximus-vs-petermd">Maximus vs PeterMD</a> and <a href="/hair-loss/happyhead-vs-petermd">Happy Head vs PeterMD</a>.`,
       },
       {
-        heading: "The verdict",
+        heading: "The verdict: is PeterMD worth it?",
         body: `PeterMD is a legitimate, simple route to standard finasteride and a distinctive 3-in-1 topical at honest prices. Men wanting more treatment options should compare <a href="/hair-loss/reviews/maximus">Maximus</a>; anyone wanting a personalized formula - or treatment for women - should look at <a href="/hair-loss/reviews/happyhead">Happy Head</a>. General information, not medical advice.`,
       },
     ],
@@ -1710,11 +1710,11 @@ const articles: ArticleData[] = [
     author: "Treatments Hub Staff",
     sections: [
       {
-        heading: "PeterMD hair price list (verified August 2026)",
-        body: `<table><thead><tr><th>Product</th><th>Price</th><th>Regular</th><th>Notes</th></tr></thead><tbody><tr><td>Finasteride 1mg, 30 tablets</td><td><strong>$60</strong></td><td>$74</td><td>About a month at one a day</td></tr><tr><td>Finasteride 1mg, 60 tablets</td><td><strong>$90</strong></td><td>$110</td><td>About $45/month - the better rate</td></tr><tr><td>ReGenX Bundle</td><td><strong>$130</strong></td><td>$160</td><td>Confirm current bundle contents on site</td></tr><tr><td>Follicure RX 3-in-1 spray, 50mL</td><td><strong>$70</strong></td><td>$80</td><td>Minoxidil + finasteride + ketoconazole</td></tr><tr><td>Follicure RX, 2 x 50mL</td><td><strong>$140</strong></td><td>$160</td><td></td></tr></tbody></table>Prices are per supply rather than a monthly subscription quote - the 60-count finasteride is the cheapest per-tablet route.`,
+        heading: "What does PeterMD charge for hair loss? (price list verified August 2026)",
+        body: `<div class="qa"><strong>The short answer</strong>PeterMD's hair-loss prices, verified in August 2026: finasteride 1mg is $60 for 30 tablets (regularly $74) or $90 for 60 (regularly $110), about $45/month at the 60-count rate, and the Follicure RX 3-in-1 spray is $70 per 50mL bottle (regularly $80) or $140 for two. Prices are per supply rather than a monthly subscription.</div><table><thead><tr><th>Product</th><th>Price</th><th>Regular</th><th>Notes</th></tr></thead><tbody><tr><td>Finasteride 1mg, 30 tablets</td><td><strong>$60</strong></td><td>$74</td><td>About a month at one a day</td></tr><tr><td>Finasteride 1mg, 60 tablets</td><td><strong>$90</strong></td><td>$110</td><td>About $45/month - the better rate</td></tr><tr><td>ReGenX Bundle</td><td><strong>$130</strong></td><td>$160</td><td>Confirm current bundle contents on site</td></tr><tr><td>Follicure RX 3-in-1 spray, 50mL</td><td><strong>$70</strong></td><td>$80</td><td>Minoxidil + finasteride + ketoconazole</td></tr><tr><td>Follicure RX, 2 x 50mL</td><td><strong>$140</strong></td><td>$160</td><td></td></tr></tbody></table>Prices are per supply rather than a monthly subscription quote - the 60-count finasteride is the cheapest per-tablet route.`,
       },
       {
-        heading: "How PeterMD pricing compares",
+        heading: "How does PeterMD pricing compare?",
         body: `On standard finasteride, <a href="/hair-loss/reviews/maximus">Maximus</a> is cheaper month to month ($34.99/mo, billed as 90-day supplies) vs PeterMD's ~$45-$60/month equivalent. On flagship topicals the field converges: PeterMD's Follicure RX $70, Maximus' All-in-One Gel $64.99/mo, <a href="/hair-loss/reviews/happyhead">Happy Head</a>'s Custom Topical $49 first order then $89/mo. What PeterMD uniquely publishes is ketoconazole in the topical formula. Head to head: <a href="/hair-loss/maximus-vs-petermd">Maximus vs PeterMD</a>.`,
       },
       {
@@ -1737,18 +1737,18 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "Why look for a PeterMD alternative?",
-        body: `PeterMD's hair line is simple and honestly priced - finasteride from $60/30 tablets and the Follicure RX 3-in-1 spray at $70 - but its menu is narrow (no dutasteride or oral minoxidil published), it's men-only, and some people want a personalized formula. Here's how the field compares, using verified prices wherever we have them.`,
+        body: `<div class="qa"><strong>The short answer</strong>The main PeterMD alternatives are Maximus, with the broadest menu and the lowest single-active prices (oral minoxidil $24.99/month, finasteride or dutasteride $34.99/month, verified August 2026), and Happy Head, which compounds personalized formulas and treats women ($49 first order, then $89/month). Hims and Keeps cover the mainstream basics, but we have not verified their pricing.</div>PeterMD's hair line is simple and honestly priced - finasteride from $60/30 tablets and the Follicure RX 3-in-1 spray at $70 - but its menu is narrow (no dutasteride or oral minoxidil published), it's men-only, and some people want a personalized formula. Here's how the field compares, using verified prices wherever we have them.`,
       },
       {
-        heading: "Maximus - broadest menu, lowest single-active prices",
+        heading: "Is Maximus the best PeterMD alternative for treatment range and price?",
         body: `<a href="/hair-loss/reviews/maximus">Maximus</a> tops our ranking: oral minoxidil $24.99/month, finasteride or dutasteride $34.99/month, topical gels up to the four-active All-in-One at $64.99 - all verified, with a 4.4/1,050 Trustpilot record. If PeterMD's two-product lineup feels limiting, this is the upgrade path. Head to head: <a href="/hair-loss/maximus-vs-petermd">Maximus vs PeterMD</a>.`,
       },
       {
-        heading: "Happy Head - personalization, and the pick for women",
+        heading: "Is Happy Head the best PeterMD alternative for personalization, and for women?",
         body: `<a href="/hair-loss/reviews/happyhead">Happy Head</a> compounds custom formulas (8% minoxidil, dutasteride options) after a dermatologist-directed review, serves both men and women, and holds a 4.5/1,803 Trustpilot record - $49 on the first order, regularly $89/month. Head to head: <a href="/hair-loss/happyhead-vs-petermd">Happy Head vs PeterMD</a>.`,
       },
       {
-        heading: "The bottom line",
+        heading: "Which PeterMD alternative should you pick?",
         body: `<table><thead><tr><th>If you want...</th><th>Pick</th><th>Verified pricing</th></tr></thead><tbody><tr><td>Simple finasteride + a ketoconazole topical</td><td>PeterMD</td><td>From $60/30 tablets</td></tr><tr><td>Lowest single-active prices, widest menu</td><td>Maximus</td><td>From $24.99/mo</td></tr><tr><td>Personalized formula, or you're a woman</td><td>Happy Head</td><td>$49 first order, reg $89/mo</td></tr><tr><td>Mainstream basics</td><td>Hims / Keeps</td><td>Not yet verified</td></tr></tbody></table>Start from our <a href="/hair-loss">full hair-loss ranking</a>. General information, not medical advice.`,
       },
     ],
@@ -1767,7 +1767,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "What is Happy Head?",
-        body: `Happy Head is a dermatologist-founded telehealth service (based in Santa Monica, California) built around personalized prescription hair-loss formulas for <strong>both men and women</strong>. Its flagship products are the Custom Topical - dutasteride 0.3%, minoxidil 8%, retinoic acid 0.001% and hydrocortisone 1% in one solution - and the 3-in-1 Daily SuperCapsule combining dutasteride 0.5mg, minoxidil 1.25mg and vitamin D3. Formulas are compounded fresh and delivered monthly. Full details in our <a href="/hair-loss/reviews/happyhead">in-depth Happy Head review</a>.`,
+        body: `<div class="qa"><strong>The short answer</strong>Yes. Happy Head is a legitimate, dermatologist-founded telehealth service: prescriptions go through a licensed medical review, its actives are established hair-loss medications, it serves both men and women, and it holds a claimed Trustpilot profile rated 4.5 across 1,803 reviews. Verified pricing (August 2026) is $49 on the first order and $89/month at the regular rate.</div>Happy Head is a dermatologist-founded telehealth service (based in Santa Monica, California) built around personalized prescription hair-loss formulas for <strong>both men and women</strong>. Its flagship products are the Custom Topical - dutasteride 0.3%, minoxidil 8%, retinoic acid 0.001% and hydrocortisone 1% in one solution - and the 3-in-1 Daily SuperCapsule combining dutasteride 0.5mg, minoxidil 1.25mg and vitamin D3. Formulas are compounded fresh and delivered monthly. Full details in our <a href="/hair-loss/reviews/happyhead">in-depth Happy Head review</a>.`,
       },
       {
         heading: "Is Happy Head legit and safe?",
@@ -1778,11 +1778,11 @@ const articles: ArticleData[] = [
         body: `Verified from Happy Head's published pricing (August 2026): the Custom Topical and the SuperCapsule are each <strong>$49 on the first order</strong> and <strong>$89/month at the regular rate</strong>; the Dual Action Bundle (both together) is $98 first order, regularly $178. Subscribing saves 20%. The full breakdown - including how it compares to Maximus - is in our <a href="/hair-loss/articles/happyhead-cost">Happy Head cost guide</a>.`,
       },
       {
-        heading: "What real customers say",
+        heading: "What do real customers say about Happy Head?",
         body: `From Happy Head's Trustpilot page (recent, unprompted, 5-star): "Love the Super capsule... I'm very satisfied with the results. My hair has become much more thicker and fuller" (Ron Cee). "The customer service person listen to my complaints and resolved the issues quickly and satisfactorily!" (Dennis). The recurring themes: visible results from the oral capsule and responsive service.`,
       },
       {
-        heading: "Happy Head pros and cons",
+        heading: "What are Happy Head's pros and cons?",
         body: `<strong>Pros:</strong> genuinely personalized prescription formulas, treatment for both men and women, high-strength 8% topical minoxidil, dermatologist-founded, a 4.5/1,803 Trustpilot record, and clear published pricing. <strong>Cons:</strong> the $49 price is a first-order promotion - the regular rate is $89/month, roughly double Maximus' single-active treatments - and, like all prescription hair-loss care, it requires a medical review and ongoing use. For the male-focused budget comparison, see <a href="/hair-loss/maximus-vs-happy-head">Maximus vs Happy Head</a>.`,
       },
       {
@@ -1804,19 +1804,19 @@ const articles: ArticleData[] = [
     author: "Treatments Hub Staff",
     sections: [
       {
-        heading: "Happy Head price list (verified August 2026)",
-        body: `<table><thead><tr><th>Product</th><th>First order</th><th>Regular</th><th>What's in it</th></tr></thead><tbody><tr><td>Custom Topical</td><td><strong>$49</strong></td><td>$89/mo</td><td>Dutasteride 0.3%, minoxidil 8%, retinoic acid 0.001%, hydrocortisone 1%</td></tr><tr><td>3-in-1 Daily SuperCapsule</td><td><strong>$49</strong></td><td>$89/mo</td><td>Dutasteride 0.5mg, minoxidil 1.25mg, vitamin D3</td></tr><tr><td>Dual Action Bundle (both)</td><td><strong>$98</strong></td><td>$178/mo</td><td>Topical + oral together - "Dr. Ben's Pick"</td></tr></tbody></table>Subscribing saves 20%, and the company advertises a 6-month growth guarantee - read its terms on their site.`,
+        heading: "What does Happy Head charge? (price list verified August 2026)",
+        body: `<div class="qa"><strong>The short answer</strong>Happy Head's Custom Topical and SuperCapsule are each $49 on the first order and $89/month at the regular rate; the Dual Action Bundle of both is $98 on the first order, regularly $178. Subscribing saves 20%. Verified from Happy Head's published pricing in August 2026; the number to budget for is the $89/month regular rate.</div><table><thead><tr><th>Product</th><th>First order</th><th>Regular</th><th>What's in it</th></tr></thead><tbody><tr><td>Custom Topical</td><td><strong>$49</strong></td><td>$89/mo</td><td>Dutasteride 0.3%, minoxidil 8%, retinoic acid 0.001%, hydrocortisone 1%</td></tr><tr><td>3-in-1 Daily SuperCapsule</td><td><strong>$49</strong></td><td>$89/mo</td><td>Dutasteride 0.5mg, minoxidil 1.25mg, vitamin D3</td></tr><tr><td>Dual Action Bundle (both)</td><td><strong>$98</strong></td><td>$178/mo</td><td>Topical + oral together - "Dr. Ben's Pick"</td></tr></tbody></table>Subscribing saves 20%, and the company advertises a 6-month growth guarantee - read its terms on their site.`,
       },
       {
-        heading: "The honest math: promo vs regular price",
+        heading: "What is the honest math on the promo vs the regular price?",
         body: `The $49 first-order price is real, but the number to budget for is the <strong>$89/month regular rate</strong> - that's what month two onward costs on a single product. Over a first year on one flagship product, that's roughly $49 + 11 x $89 with monthly delivery, before the 20% subscription savings. We always show promotional prices next to the regular rate so there are no surprises - the same standard we hold every provider to.`,
       },
       {
-        heading: "What you get for the price",
+        heading: "What do you get for the price?",
         body: `Unlike generic one-size products, Happy Head's formulas are compounded fresh monthly and personalized after a dermatologist-directed review - the free online consultation is included. The topical's 8% minoxidil concentration is notably above the 5% typical of over-the-counter products, and the multi-active approach (DHT blocker + growth stimulant + absorption support) is the core of what you're paying for.`,
       },
       {
-        heading: "Happy Head vs Maximus on price",
+        heading: "How does Happy Head compare with Maximus on price?",
         body: `<a href="/hair-loss/reviews/maximus">Maximus</a> undercuts Happy Head on single actives - oral minoxidil $24.99/month and finasteride or dutasteride $34.99/month (billed as 90-day supplies) - while Happy Head's argument is the personalized multi-active formula and its coverage of women. At the bundle level they converge: Happy Head's Dual Action at $98 first order vs Maximus' oral combo at $59.99 or All-in-One Gel at $64.99. The full matchup: <a href="/hair-loss/maximus-vs-happy-head">Maximus vs Happy Head</a>.`,
       },
       {
@@ -1839,22 +1839,22 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "Why look for a Happy Head alternative?",
-        body: `Happy Head earns its place in our <a href="/hair-loss">ranking</a> on personalization and its 4.5/1,803 Trustpilot record - but its $89/month regular rate (after the $49 first order) is roughly double what single-active treatment costs elsewhere, and some people simply don't need a custom formula. Here's the honest field.`,
+        body: `<div class="qa"><strong>The short answer</strong>For men, Maximus is the strongest Happy Head alternative on price and treatment range: oral minoxidil $24.99/month and finasteride or dutasteride $34.99/month, verified August 2026, with a 4.4 Trustpilot average across 1,050 reviews. Hims, Keeps and Ro cover the basics without personalization. For women the honest answer is that most online hair-loss clinics treat men only, so the real alternatives are few.</div>Happy Head earns its place in our <a href="/hair-loss">ranking</a> on personalization and its 4.5/1,803 Trustpilot record - but its $89/month regular rate (after the $49 first order) is roughly double what single-active treatment costs elsewhere, and some people simply don't need a custom formula. Here's the honest field.`,
       },
       {
-        heading: "Maximus - best for men on price and treatment range",
+        heading: "Is Maximus the best Happy Head alternative for men?",
         body: `<a href="/hair-loss/reviews/maximus">Maximus</a> is our top-ranked provider for men: oral minoxidil at a verified <strong>$24.99/month</strong>, finasteride or dutasteride at $34.99, up to an All-in-One topical (dutasteride, minoxidil, tretinoin, fexofenadine) at $64.99 - all doctor-prescribed with free discreet shipping and a 4.4/1,050 Trustpilot record. What it doesn't do: treat women, or compound a formula personalized to you. Head to head: <a href="/hair-loss/maximus-vs-happy-head">Maximus vs Happy Head</a>.`,
       },
       {
-        heading: "Hims, Keeps and Ro - the mainstream basics",
+        heading: "How do Hims, Keeps and Ro compare as Happy Head alternatives?",
         body: `All three offer the proven basics (finasteride, minoxidil) through simple online flows: <a href="/hair-loss/reviews/hims">Hims</a> with the biggest brand, Keeps with budget generics, Ro inside a multi-category platform. None matches Happy Head's personalization or women's coverage, and we haven't verified current pricing at any of the three - check their sites. Comparisons: <a href="/hair-loss/hims-vs-happy-head">Hims vs Happy Head</a>, <a href="/hair-loss/keeps-vs-happy-head">Keeps vs Happy Head</a>, <a href="/hair-loss/ro-vs-happy-head">Ro vs Happy Head</a>.`,
       },
       {
-        heading: "The honest answer for women",
+        heading: "What is the honest answer for women?",
         body: `Here's the uncomfortable truth about "alternatives": most online hair-loss clinics - Maximus included - treat men only. If you're a woman, Happy Head's dermatologist-directed formulas (which can include actives like spironolactone) make it one of the few full-service prescription options in this ranking, and the real alternatives are fewer than the listicles suggest. Start with <a href="/hair-loss/articles/hair-loss-treatment-for-women">hair-loss treatment for women</a> for the medication-level picture.`,
       },
       {
-        heading: "The bottom line",
+        heading: "Which Happy Head alternative should you pick?",
         body: `<table><thead><tr><th>If you want...</th><th>Pick</th><th>Verified pricing</th></tr></thead><tbody><tr><td>Lowest price on single actives (men)</td><td>Maximus</td><td>From $24.99/mo</td></tr><tr><td>Personalized formula, or you're a woman</td><td>Happy Head</td><td>$49 first order, reg $89/mo</td></tr><tr><td>A familiar mainstream brand</td><td>Hims</td><td>Not yet verified</td></tr><tr><td>Cheapest generics, nothing more</td><td>Keeps</td><td>Not yet verified</td></tr></tbody></table>Our <a href="/hair-loss">full ranking</a> has the complete picture. General information, not medical advice.`,
       },
     ],
@@ -1872,23 +1872,23 @@ const articles: ArticleData[] = [
     author: "Treatments Hub Staff",
     sections: [
       {
-        heading: "Why hair loss happens",
-        body: `The most common cause of hair loss in men - and a frequent cause in women - is androgenetic alopecia, better known as male- or female-pattern hair loss. It's driven largely by DHT (dihydrotestosterone), a hormone that gradually shrinks hair follicles over time, leading to thinning, a receding hairline, or a widening part. Genetics play a big role, which is why pattern hair loss often runs in families. The good news: because the process is gradual, starting treatment early gives you the best chance to keep the hair you have.`,
+        heading: "Why does hair loss happen?",
+        body: `<div class="qa"><strong>The short answer</strong>The treatments with real evidence for pattern hair loss are finasteride and dutasteride, prescription medicines that lower DHT, and minoxidil, which supports the growth phase; they are often combined under medical guidance. Starting early protects the most hair, results typically take 3 to 6 months, and stopping generally reverses the gains. You can start through a telehealth provider after a licensed clinician reviews your intake.</div>The most common cause of hair loss in men - and a frequent cause in women - is androgenetic alopecia, better known as male- or female-pattern hair loss. It's driven largely by DHT (dihydrotestosterone), a hormone that gradually shrinks hair follicles over time, leading to thinning, a receding hairline, or a widening part. Genetics play a big role, which is why pattern hair loss often runs in families. The good news: because the process is gradual, starting treatment early gives you the best chance to keep the hair you have.`,
       },
       {
-        heading: "The treatments proven to help",
+        heading: "Which treatments are proven to help?",
         body: `Most evidence-based hair-loss treatment comes down to a few actives. <strong>Finasteride</strong> and <strong>dutasteride</strong> are prescription medicines that lower DHT to slow loss and help regrow hair. <strong>Minoxidil</strong> is a topical (and sometimes oral) treatment that supports growth through a separate mechanism, and is the active many people know from over-the-counter products. These are often combined under medical guidance. For a side-by-side look, read <a href="/hair-loss/articles/finasteride-vs-minoxidil">finasteride vs minoxidil</a>.`,
       },
       {
-        heading: "Starting treatment online",
+        heading: "How do you start treatment online?",
         body: `You no longer need an in-person visit to get started. Telehealth providers let you complete a short medical intake, have a licensed clinician review it, and - if appropriate - ship prescription treatment to your door. Providers differ in what they offer and who they serve: see our ranked <a href="/hair-loss">best hair-loss providers</a>, or compare two directly in <a href="/hair-loss/maximus-vs-happy-head">Maximus vs Happy Head</a>.`,
       },
       {
-        heading: "Setting realistic expectations",
+        heading: "What should you realistically expect?",
         body: `Hair-loss treatment rewards patience. It typically takes several months of consistent use - often 3 to 6 - before visible changes appear, and it's normal to see some early shedding as new growth cycles begin. Because these treatments work by maintaining an active growth environment, stopping them generally reverses the gains. For the full timeline, read <a href="/hair-loss/articles/how-long-hair-loss-treatment-works">how long hair-loss treatment takes to work</a>.`,
       },
       {
-        heading: "When to talk to a professional",
+        heading: "When should you talk to a professional?",
         body: `Sudden, patchy, or unusual hair loss - or loss with other symptoms - can have causes beyond pattern baldness and is worth discussing with a clinician. A licensed provider can confirm what's going on and recommend a treatment plan that fits you. This guide is general information, not medical advice.`,
       },
     ],
@@ -1906,11 +1906,11 @@ const articles: ArticleData[] = [
     author: "Treatments Hub Staff",
     sections: [
       {
-        heading: "How each one works",
-        body: `Finasteride is an oral prescription that lowers DHT, the hormone behind pattern hair loss, tackling the root cause. Minoxidil works differently - applied to the scalp (or taken orally by prescription), it supports the growth phase of the hair cycle. Because they act through separate mechanisms, they're frequently used together.`,
+        heading: "How does each one work?",
+        body: `<div class="qa"><strong>The short answer</strong>Finasteride is an oral prescription that lowers DHT, the hormone behind pattern hair loss; minoxidil supports the growth phase of the hair cycle and is available over the counter as a topical. Because they work through different mechanisms, many plans use both. Finasteride is generally for men, while certain minoxidil formulas are used by women.</div>Finasteride is an oral prescription that lowers DHT, the hormone behind pattern hair loss, tackling the root cause. Minoxidil works differently - applied to the scalp (or taken orally by prescription), it supports the growth phase of the hair cycle. Because they act through separate mechanisms, they're frequently used together.`,
       },
       {
-        heading: "The key differences",
+        heading: "What are the key differences?",
         body: `Finasteride is prescription-only and generally used by men (it isn't recommended for most women, especially during pregnancy). Minoxidil is available over the counter at 5% and, by prescription, at higher strengths or combined with other actives - and certain minoxidil formulas are used by women. Finasteride is a daily tablet; minoxidil is usually a topical you apply to the scalp.`,
       },
       {
@@ -1918,7 +1918,7 @@ const articles: ArticleData[] = [
         body: `Yes - many effective plans combine finasteride and minoxidil, and some providers offer formulas that blend multiple actives into a single topical. A clinician can advise whether a combination is right for you and at what strengths. See how leading providers approach this in our <a href="/hair-loss">provider rankings</a>.`,
       },
       {
-        heading: "Side effects to know",
+        heading: "What side effects should you know about?",
         body: `Both treatments are generally well tolerated, but each can have side effects. Finasteride can, in a minority of men, cause sexual side effects; minoxidil can cause scalp irritation or unwanted facial hair with topical use. A licensed provider reviews your history and helps weigh the benefits and risks for your situation.`,
       },
       {
@@ -1940,19 +1940,19 @@ const articles: ArticleData[] = [
     author: "Treatments Hub Staff",
     sections: [
       {
-        heading: "What finasteride does",
-        body: `Finasteride reduces the body's production of DHT, the hormone that gradually shrinks hair follicles in pattern hair loss. By lowering DHT, it slows the loss and, for many men, helps regrow some hair over time. It targets the underlying hormonal driver rather than just supporting growth.`,
+        heading: "What does finasteride do?",
+        body: `<div class="qa"><strong>The short answer</strong>Yes, for many men. Finasteride lowers DHT, the hormone that shrinks follicles in pattern hair loss, which slows or stops the loss and helps some men regrow hair. It works best when started early, takes roughly 3 to 6 months to show changes, and is a maintenance treatment: the benefits fade if you stop.</div>Finasteride reduces the body's production of DHT, the hormone that gradually shrinks hair follicles in pattern hair loss. By lowering DHT, it slows the loss and, for many men, helps regrow some hair over time. It targets the underlying hormonal driver rather than just supporting growth.`,
       },
       {
-        heading: "What to realistically expect",
+        heading: "What should you realistically expect?",
         body: `For many men, finasteride helps slow or stop hair loss and can lead to some regrowth, though results vary from person to person. It tends to work best when started early, before significant loss. It's a maintenance treatment: benefits are sustained with continued use and generally fade if you stop.`,
       },
       {
-        heading: "How long it takes",
+        heading: "How long does finasteride take to work?",
         body: `Finasteride isn't an overnight fix. Most people need several months of daily use - commonly 3 to 6 months - before noticing changes, with fuller results developing over a year. Some early shedding as the hair cycle resets is normal. Read more on the <a href="/hair-loss/articles/how-long-hair-loss-treatment-works">hair-loss treatment timeline</a>.`,
       },
       {
-        heading: "Oral vs topical finasteride",
+        heading: "Oral or topical finasteride: what is the difference?",
         body: `Finasteride comes as an oral tablet and, increasingly, as a topical applied to the scalp - sometimes blended with minoxidil. Topical formulas aim to limit how much of the medicine reaches the rest of the body. Providers like <a href="/hair-loss/reviews/happyhead">Happy Head</a> offer customizable topical options, while <a href="/hair-loss/reviews/maximus">Maximus</a> offers oral finasteride and dutasteride plus a compounded topical.`,
       },
       {
@@ -1974,19 +1974,19 @@ const articles: ArticleData[] = [
     author: "Treatments Hub Staff",
     sections: [
       {
-        heading: "The short answer",
-        body: `Most hair-loss treatments take several months of consistent use before you see visible changes - commonly around 3 to 6 months, with fuller results developing over 12 months. Hair grows slowly, and treatments work by gradually shifting more follicles into an active growth phase, so patience is essential.`,
+        heading: "How long does hair loss treatment take to work?",
+        body: `<div class="qa"><strong>The short answer</strong>Most hair-loss treatments take several months of consistent use before you see visible changes, commonly around 3 to 6 months, with fuller results developing over 12 months. Some early shedding in the first weeks is normal, and the gains generally reverse within months of stopping.</div>Most hair-loss treatments take several months of consistent use before you see visible changes - commonly around 3 to 6 months, with fuller results developing over 12 months. Hair grows slowly, and treatments work by gradually shifting more follicles into an active growth phase, so patience is essential.`,
       },
       {
-        heading: "What early shedding means",
+        heading: "What does early shedding mean?",
         body: `In the first weeks to months, some people notice increased shedding. This can be unsettling, but it's often a normal part of the process as resting hairs are pushed out and replaced by new growth. It typically settles as treatment continues. If you're concerned, check in with your provider.`,
       },
       {
-        heading: "A rough month-by-month guide",
+        heading: "What does a month-by-month timeline look like?",
         body: `Months 1-3: little visible change; early shedding possible. Months 3-6: reduced loss and the first signs of regrowth for many people. Months 6-12: thicker, fuller results become more apparent. Individual timelines vary based on the treatment, your hair, and how consistently you use it.`,
       },
       {
-        heading: "Why consistency is everything",
+        heading: "Why is consistency everything?",
         body: `These treatments only work while you use them - the gains generally reverse within months of stopping. Building a simple daily routine (and choosing a provider that makes refills easy) is one of the biggest predictors of success. Compare providers on our <a href="/hair-loss">best hair-loss providers</a> page.`,
       },
     ],
@@ -2004,19 +2004,19 @@ const articles: ArticleData[] = [
     author: "Treatments Hub Staff",
     sections: [
       {
-        heading: "Why treat hair loss online",
-        body: `Online hair-loss treatment has made getting started far simpler: complete a short intake, have a licensed clinician review it, and receive prescription treatment at your door - usually for less hassle than an in-person visit. The trade-off is choosing wisely, since providers vary widely in what they offer.`,
+        heading: "Why treat hair loss online?",
+        body: `<div class="qa"><strong>The short answer</strong>The best online hair-loss treatment is prescription care with real medical oversight: a licensed clinician reviews your intake and the right medicines (finasteride, minoxidil or dutasteride, oral or topical) ship to your door. In our rankings, Maximus stands out for men who want a broad prescription toolkit, and Happy Head, dermatologist-founded, serves both men and women with customizable formulas.</div>Online hair-loss treatment has made getting started far simpler: complete a short intake, have a licensed clinician review it, and receive prescription treatment at your door - usually for less hassle than an in-person visit. The trade-off is choosing wisely, since providers vary widely in what they offer.`,
       },
       {
-        heading: "What to look for in a provider",
+        heading: "What should you look for in a provider?",
         body: `Prioritize real medical oversight (a licensed clinician who reviews your intake), the right treatments for you (finasteride, minoxidil, dutasteride; topical or oral), personalization, and transparent terms - pricing, what's included, and how easy it is to pause or cancel. Beware anything that prescribes without a proper review.`,
       },
       {
-        heading: "How the top providers compare",
+        heading: "How do the top providers compare?",
         body: `In our rankings, <a href="/hair-loss/reviews/maximus">Maximus</a> stands out for men wanting a broad prescription toolkit - oral finasteride, minoxidil and dutasteride plus a compounded topical - while <a href="/hair-loss/reviews/happyhead">Happy Head</a> is dermatologist-founded and serves both men and women with highly customizable formulas. See them head to head in <a href="/hair-loss/maximus-vs-happy-head">Maximus vs Happy Head</a>.`,
       },
       {
-        heading: "Men vs women",
+        heading: "Does the provider treat men, women or both?",
         body: `Not every provider treats everyone. Some, like Maximus, focus on men; others, like Happy Head, formulate for both men and women. If you're a woman, make sure a provider offers options appropriate for you - see our guide to <a href="/hair-loss/articles/hair-loss-treatment-for-women">hair loss treatment for women</a>.`,
       },
       {
@@ -2038,19 +2038,19 @@ const articles: ArticleData[] = [
     author: "Treatments Hub Staff",
     sections: [
       {
-        heading: "How female hair loss is different",
-        body: `Women more often experience diffuse thinning across the top of the scalp or a widening part, rather than the receding hairline typical in men. Causes can include female-pattern hair loss, hormonal changes, thyroid issues, stress, and nutritional factors - so an accurate assessment matters before choosing a treatment.`,
+        heading: "How is female hair loss different?",
+        body: `<div class="qa"><strong>The short answer</strong>Women's hair loss usually shows as diffuse thinning or a widening part rather than a receding hairline, and the causes range from female-pattern hair loss to hormonal changes, thyroid issues, stress and nutrition. Minoxidil is the most common treatment, and some women are prescribed spironolactone with reliable contraception and monitoring. Finasteride and dutasteride are generally not recommended for most women, especially in pregnancy.</div>Women more often experience diffuse thinning across the top of the scalp or a widening part, rather than the receding hairline typical in men. Causes can include female-pattern hair loss, hormonal changes, thyroid issues, stress, and nutritional factors - so an accurate assessment matters before choosing a treatment.`,
       },
       {
-        heading: "Treatments used for women",
+        heading: "Which treatments are used for women?",
         body: `Minoxidil is one of the most common options for women and is used topically (and sometimes orally by prescription). Some women are prescribed spironolactone, which addresses hormonal drivers of hair loss; because it can harm a developing fetus, it requires reliable contraception and clinician monitoring in anyone who could become pregnant. Treatment should always be guided by a clinician who can tailor it to your situation.`,
       },
       {
-        heading: "What to avoid",
+        heading: "What should women avoid?",
         body: `Finasteride and dutasteride are generally not recommended for most women - especially during pregnancy or if you may become pregnant - because of the risk to a developing baby. This is why it's important to use options that are formulated and approved for women under medical guidance.`,
       },
       {
-        heading: "Starting treatment online",
+        heading: "How do you start treatment online?",
         body: `Some telehealth providers formulate specifically for women. In our rankings, <a href="/hair-loss/reviews/happyhead">Happy Head</a> is dermatologist-founded and offers personalized formulas for both men and women, including options like spironolactone. Compare your choices on our <a href="/hair-loss">best hair-loss providers</a> page. This article is general information, not medical advice.`,
       },
     ],
@@ -2068,19 +2068,19 @@ const articles: ArticleData[] = [
     author: "Treatments Hub Staff",
     sections: [
       {
-        heading: "Two medicines, one target",
-        body: `Both dutasteride and finasteride treat pattern hair loss the same fundamental way: they block 5-alpha-reductase, the enzyme that converts testosterone into DHT - the hormone that shrinks hair follicles. The difference is coverage. Finasteride blocks mainly the type II form of the enzyme, cutting serum DHT by roughly 70%. Dutasteride blocks both type I and type II, reducing serum DHT by around 90% or more. If you're new to how these medicines work, start with <a href="/hair-loss/articles/does-finasteride-work">does finasteride really work</a>.`,
+        heading: "How do dutasteride and finasteride work?",
+        body: `<div class="qa"><strong>The short answer</strong>Both block the enzyme that turns testosterone into DHT. Finasteride targets mainly the type II form and cuts serum DHT by roughly 70%; dutasteride blocks both types and cuts it by around 90% or more, so it is generally at least as effective. Finasteride 1 mg is FDA-approved for hair loss and clears in days; dutasteride is off-label for hair and lingers for months. A common path is finasteride first, then dutasteride if results plateau.</div>Both dutasteride and finasteride treat pattern hair loss the same fundamental way: they block 5-alpha-reductase, the enzyme that converts testosterone into DHT - the hormone that shrinks hair follicles. The difference is coverage. Finasteride blocks mainly the type II form of the enzyme, cutting serum DHT by roughly 70%. Dutasteride blocks both type I and type II, reducing serum DHT by around 90% or more. If you're new to how these medicines work, start with <a href="/hair-loss/articles/does-finasteride-work">does finasteride really work</a>.`,
       },
       {
         heading: "Effectiveness: is stronger better?",
         body: `Because it suppresses more DHT, dutasteride is generally considered at least as effective as finasteride for hair, and head-to-head studies have tended to favor it on measures like hair count. That doesn't automatically make it the right first choice: finasteride has decades of use at the 1&nbsp;mg hair-loss dose and a deep safety record, which is why many clinicians start there and consider dutasteride when response is limited.`,
       },
       {
-        heading: "Approval status and access",
+        heading: "Which one is FDA-approved, and how do you get each?",
         body: `Here's a practical difference: in the United States, finasteride 1&nbsp;mg is FDA-approved specifically for male pattern hair loss. Dutasteride is FDA-approved for enlarged prostate (BPH) and is prescribed off-label for hair loss - a common, legal practice when a clinician judges it appropriate (it is approved for hair loss in countries like Japan and South Korea). Telehealth providers such as <a href="/hair-loss/reviews/maximus">Maximus</a> prescribe both, when suitable, after a medical intake.`,
       },
       {
-        heading: "Side effects and half-life",
+        heading: "How do side effects and half-life differ?",
         body: `Both medicines are generally well tolerated, with a small minority of men reporting sexual side effects. One meaningful difference is how long they stay in your system: finasteride clears within days, while dutasteride has a very long half-life and lingers for months. That matters if you experience side effects and stop - finasteride leaves your body much faster. Neither should be handled or used by women who are or may become pregnant.`,
       },
       {
@@ -2102,23 +2102,23 @@ const articles: ArticleData[] = [
     author: "Treatments Hub Staff",
     sections: [
       {
-        heading: "Where the fear comes from",
-        body: `The entire creatine-hair loss worry traces back largely to one small 2009 study of college rugby players, which reported that a creatine loading protocol raised levels of DHT - the hormone that drives pattern hair loss. The study didn't measure hair loss at all, only hormone levels, and it involved a small group over a few weeks. From that single data point, a decade and a half of gym-floor folklore was born.`,
+        heading: "Where does the creatine hair-loss fear come from?",
+        body: `<div class="qa"><strong>The short answer</strong>No study has shown that creatine causes hair loss. The fear traces back to one small 2009 study of rugby players that reported higher DHT after a loading protocol, did not measure hair loss at all, and has not been convincingly replicated. If your hairline is receding, genetics and DHT are the likely cause, and the proven responses are finasteride, dutasteride and minoxidil.</div>The entire creatine-hair loss worry traces back largely to one small 2009 study of college rugby players, which reported that a creatine loading protocol raised levels of DHT - the hormone that drives pattern hair loss. The study didn't measure hair loss at all, only hormone levels, and it involved a small group over a few weeks. From that single data point, a decade and a half of gym-floor folklore was born.`,
       },
       {
-        heading: "What the evidence actually shows",
+        heading: "What does the evidence actually show?",
         body: `No study to date has directly shown that creatine causes hair loss, and the DHT finding from 2009 has not been convincingly replicated. Reviews of creatine research - one of the most-studied sports supplements in existence - have not identified hair loss as an established side effect. That's not the same as absolute proof of safety, but it means the claim rests on far weaker ground than most people assume.`,
       },
       {
-        heading: "The caveat if baldness runs in your family",
+        heading: "What if baldness runs in your family?",
         body: `Pattern hair loss is driven by how sensitive your follicles are to DHT, and that sensitivity is genetic. In theory, anything that nudged DHT upward could matter slightly more for someone strongly predisposed. If you're already noticing thinning and it runs in your family, the meaningful move isn't dropping creatine - it's addressing the actual mechanism. Read <a href="/hair-loss/articles/how-to-stop-hair-loss">how to stop hair loss</a> for the treatments with real evidence.`,
       },
       {
-        heading: "What actually drives thinning",
+        heading: "What actually drives thinning?",
         body: `If your hairline is receding, the cause is almost certainly genetics and DHT - not your post-workout shake. Proven responses target that mechanism directly: finasteride and dutasteride lower DHT, and minoxidil supports the growth phase of the follicle. See how the main options compare in <a href="/hair-loss/articles/finasteride-vs-minoxidil">finasteride vs minoxidil</a>.`,
       },
       {
-        heading: "Bottom line",
+        heading: "So does creatine cause hair loss?",
         body: `Creatine is not an established cause of hair loss; the concern comes from one small, unreplicated hormone study. If you're seeing genuine thinning, get ahead of it early - pattern loss is progressive, and treatment works best before follicles miniaturize. Our ranked <a href="/hair-loss">best hair-loss providers</a> page shows where to start with a licensed clinician online. This article is general information, not medical advice.`,
       },
     ],
@@ -2136,15 +2136,15 @@ const articles: ArticleData[] = [
     author: "Treatments Hub Staff",
     sections: [
       {
-        heading: "Same molecule, two very different routes",
-        body: `Minoxidil started life decades ago as an oral blood-pressure medication; hair growth was a side effect so consistent it was turned into a product. Topical minoxidil (the classic 5% solution or foam) is FDA-approved for hair loss and available over the counter. Oral minoxidil for hair is different: it's prescribed off-label at low doses - a fraction of the old blood-pressure dosing - and has surged in popularity among dermatologists in recent years.`,
+        heading: "How do oral and topical minoxidil differ?",
+        body: `<div class="qa"><strong>The short answer</strong>Both routes grow hair. Topical minoxidil (the 5% solution or foam) is FDA-approved, sold over the counter and stays mostly local, but it takes daily discipline and can irritate the scalp. Low-dose oral minoxidil is a prescription used off-label, easier to stick with and comparable in the studies so far, but it circulates through the whole body, so a clinician monitors it. Pick the format you will actually use every day.</div>Minoxidil started life decades ago as an oral blood-pressure medication; hair growth was a side effect so consistent it was turned into a product. Topical minoxidil (the classic 5% solution or foam) is FDA-approved for hair loss and available over the counter. Oral minoxidil for hair is different: it's prescribed off-label at low doses - a fraction of the old blood-pressure dosing - and has surged in popularity among dermatologists in recent years.`,
       },
       {
-        heading: "The case for topical",
+        heading: "What is the case for topical minoxidil?",
         body: `Topical minoxidil delivers the medicine where you want it with minimal absorption into the rest of the body, which keeps systemic side effects rare. It's accessible, doesn't require a prescription at standard strengths, and has decades of safety data. The trade-offs are practical: daily application takes discipline, it can leave residue in styled hair, and some people develop scalp irritation - often from propylene glycol in solutions rather than the minoxidil itself.`,
       },
       {
-        heading: "The case for low-dose oral",
+        heading: "What is the case for low-dose oral minoxidil?",
         body: `The appeal of oral minoxidil is consistency and convenience: swallowing a small tablet daily is easier to sustain than coating your scalp, and adherence is most of the battle in hair-loss treatment. Some people who respond poorly to topical do better on oral. The trade-off is that the medicine circulates through your whole body, so effects like unwanted hair growth elsewhere (face, arms), fluid retention, or a faster heartbeat are possible - which is why it's prescription-only and clinician-monitored.`,
       },
       {
@@ -2152,7 +2152,7 @@ const articles: ArticleData[] = [
         body: `Both routes grow hair. Head-to-head evidence is still limited, but studies so far suggest low-dose oral minoxidil performs comparably to 5% topical, and dermatologists often reach for oral when topical hasn't delivered or isn't practical. Remember that minoxidil addresses growth, not the hormonal cause - many plans pair it with a DHT blocker; see <a href="/hair-loss/articles/dutasteride-vs-finasteride">dutasteride vs finasteride</a>.`,
       },
       {
-        heading: "How to decide",
+        heading: "How do you decide?",
         body: `Start with the format you'll actually use every day for years. If that's a topical, the OTC route or a prescription formula works; if you know you'll skip applications, ask a clinician about low-dose oral. Telehealth providers like <a href="/hair-loss/reviews/maximus">Maximus</a> and <a href="/hair-loss/reviews/happyhead">Happy Head</a> offer minoxidil in multiple formats, often combined with other actives. Expect the usual timeline either way - see <a href="/hair-loss/articles/how-long-hair-loss-treatment-works">how long treatment takes</a>. This article is general information, not medical advice.`,
       },
     ],
@@ -2170,23 +2170,23 @@ const articles: ArticleData[] = [
     author: "Treatments Hub Staff",
     sections: [
       {
-        heading: "The honest picture",
-        body: `Finasteride is one of the most-prescribed hair-loss medicines in the world, and most men take it without noticeable side effects. But "most" isn't "all," and the internet fills that gap with extremes - either dismissing side effects entirely or treating them as inevitable. The reality documented in clinical studies sits in between, and knowing it helps you make a calm, informed decision with your clinician.`,
+        heading: "How common are finasteride side effects?",
+        body: `<div class="qa"><strong>The short answer</strong>Most men take finasteride without noticeable side effects. In the trials behind the 1 mg dose, sexual side effects were reported by a small minority, on the order of a few percent, with placebo not far behind, and they usually resolve after stopping because finasteride clears the body within days. Persistent symptoms after stopping are reported but appear rare and are not well understood. Women who are or may become pregnant should not take or handle broken tablets.</div>Finasteride is one of the most-prescribed hair-loss medicines in the world, and most men take it without noticeable side effects. But "most" isn't "all," and the internet fills that gap with extremes - either dismissing side effects entirely or treating them as inevitable. The reality documented in clinical studies sits in between, and knowing it helps you make a calm, informed decision with your clinician.`,
       },
       {
-        heading: "Sexual side effects: the real numbers",
+        heading: "What are the real numbers on sexual side effects?",
         body: `In the clinical trials behind the 1&nbsp;mg hair-loss dose, sexual side effects - reduced libido, erectile difficulties, or reduced ejaculate volume - were reported by a small minority of men, on the order of a few percent, and notably, men taking placebo reported similar issues at rates not far behind. For most men who do experience them, symptoms resolve after stopping the medicine, and in studies many resolved even with continued use.`,
       },
       {
-        heading: "The persistence controversy",
+        heading: "Can finasteride side effects persist after stopping?",
         body: `You may have read about men reporting symptoms that persist after stopping - sometimes called post-finasteride syndrome. It's a real patient community and the reports deserve to be taken seriously; it's also an area where the science is genuinely unsettled, and regulators have responded mainly with label updates rather than restrictions. A fair summary: persistent problems appear to be rare, they're not well understood, and they're worth discussing openly with a clinician rather than discovering in a forum at 2am.`,
       },
       {
-        heading: "Other things to know",
+        heading: "What else should you know?",
         body: `Finasteride can lower PSA (a prostate blood marker) - something your doctor should know when interpreting future tests. Women who are or may become pregnant should not take or handle crushed or broken tablets, because DHT suppression can harm a developing male fetus. And because finasteride clears the body within days, side effects that do appear typically fade quickly after stopping - one practical difference from the longer-acting <a href="/hair-loss/articles/dutasteride-vs-finasteride">dutasteride</a>.`,
       },
       {
-        heading: "Making the decision",
+        heading: "How do you make the decision?",
         body: `The question isn't "does finasteride have side effects" - every effective medicine does - but whether the realistic risk profile is acceptable to you for the realistic benefit: keeping your hair. A licensed clinician can walk through your history, and topical formulations aim to limit systemic exposure for those who prefer it; providers like <a href="/hair-loss/reviews/happyhead">Happy Head</a> and <a href="/hair-loss/reviews/maximus">Maximus</a> offer both routes. Start with <a href="/hair-loss/articles/does-finasteride-work">what finasteride actually does</a>. This article is general information, not medical advice.`,
       },
     ],
@@ -2205,22 +2205,22 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "Maturing hairline or receding?",
-        body: `Almost every man's hairline shifts back somewhat from its teenage position - a "maturing" hairline that settles slightly higher and is not balding. A receding hairline is different: the temples pull back progressively, the corners deepen into an M-shape, and the change continues year over year. Useful tells: compare photos a year apart, watch the temple corners rather than the middle, and note whether hairs at the edge are becoming finer and shorter - miniaturization is the signature of pattern loss.`,
+        body: `<div class="qa"><strong>The short answer</strong>A maturing hairline settles slightly higher and stops; a receding hairline keeps pulling back at the temples into an M-shape, with the edge hairs growing finer. The temples go first because those follicles are the most sensitive to DHT. The evidence-based treatment is a DHT blocker (finasteride, sometimes dutasteride), often paired with minoxidil, and acting early matters because treatment keeps hair far better than it regrows it.</div>Almost every man's hairline shifts back somewhat from its teenage position - a "maturing" hairline that settles slightly higher and is not balding. A receding hairline is different: the temples pull back progressively, the corners deepen into an M-shape, and the change continues year over year. Useful tells: compare photos a year apart, watch the temple corners rather than the middle, and note whether hairs at the edge are becoming finer and shorter - miniaturization is the signature of pattern loss.`,
       },
       {
-        heading: "The Norwood scale, briefly",
+        heading: "What is the Norwood scale?",
         body: `Clinicians grade male pattern loss with the Norwood scale, from stage 1 (no meaningful recession) through stage 7 (a horseshoe of remaining hair). Early recession at the temples is typically stage 2-3 - and that early window matters enormously, because treatment is far better at keeping hair than regrowing it. A follicle that has fully miniaturized rarely comes back with medication alone.`,
       },
       {
-        heading: "Why the temples go first",
+        heading: "Why do the temples go first?",
         body: `The follicles along the temples and crown are genetically the most sensitive to DHT, the hormone that gradually shrinks follicles in pattern loss. That's why recession usually starts there while the sides and back - largely DHT-resistant - hang on for life (and why those areas supply grafts for transplants). The mechanism also explains the treatment logic: lower DHT, and you slow or stop the retreat.`,
       },
       {
-        heading: "What actually works",
+        heading: "What actually works for a receding hairline?",
         body: `The evidence-based playbook for a receding hairline is the same as for pattern loss generally: a DHT blocker (finasteride, or sometimes dutasteride) to address the cause, often paired with minoxidil to support growth. Hairline regrowth tends to be harder to achieve than crown regrowth, which makes early action the single highest-leverage move. See the full breakdown in <a href="/hair-loss/articles/how-to-stop-hair-loss">how to stop hair loss</a> and <a href="/hair-loss/articles/finasteride-vs-minoxidil">finasteride vs minoxidil</a>.`,
       },
       {
-        heading: "Getting started without a waiting room",
+        heading: "How do you get started without a waiting room?",
         body: `If your temples are moving, the cost of waiting a year is real and mostly one-directional. Telehealth makes starting simple: a medical intake, a licensed clinician's review, and treatment shipped to you. Compare the leading options on our <a href="/hair-loss">best hair-loss providers</a> ranking, or see how the top two stack up in <a href="/hair-loss/maximus-vs-happy-head">Maximus vs Happy Head</a>. This article is general information, not medical advice.`,
       },
     ],
@@ -2238,23 +2238,23 @@ const articles: ArticleData[] = [
     author: "Treatments Hub Staff",
     sections: [
       {
-        heading: "The dread shed is real - and usually good news",
-        body: `A few weeks into minoxidil, many people see more hair in the drain, not less. It's alarming enough to have a nickname - the "dread shed" - and it's the single most common reason people quit right before the treatment starts paying off. Counterintuitively, this shedding is usually a sign the medicine is doing exactly what it's supposed to do.`,
+        heading: "Is the minoxidil shed normal?",
+        body: `<div class="qa"><strong>The short answer</strong>Shedding a few weeks into minoxidil is usually a sign it is working. Minoxidil pushes resting follicles back into the growth phase, and the old resting hairs have to fall out first. The shed typically appears in the first several weeks and settles within a couple of months, with visible results commonly around months 3 to 6. Do not quit mid-shed: the gains reverse when you stop.</div>A few weeks into minoxidil, many people see more hair in the drain, not less. It's alarming enough to have a nickname - the "dread shed" - and it's the single most common reason people quit right before the treatment starts paying off. Counterintuitively, this shedding is usually a sign the medicine is doing exactly what it's supposed to do.`,
       },
       {
-        heading: "Why it happens",
+        heading: "Why does minoxidil shedding happen?",
         body: `Hair grows in cycles: a long growth phase (anagen), a short transition, and a resting phase (telogen) that ends with the hair being released. Minoxidil pushes resting follicles to re-enter the growth phase early - and to do that, the old resting hair has to be shed first. The hairs you're losing were already at the end of their cycle; minoxidil is evicting them to make room for new, hopefully thicker growth underneath.`,
       },
       {
-        heading: "How long it lasts",
+        heading: "How long does minoxidil shedding last?",
         body: `Shedding typically shows up in the first several weeks of treatment and settles down within a couple of months as follicles synchronize into their new growth phase. It's temporary. The visible payoff comes later - commonly around months 3 to 6, with fuller results over a year. For the full arc, see our <a href="/hair-loss/articles/how-long-hair-loss-treatment-works">month-by-month treatment timeline</a>.`,
       },
       {
-        heading: "When shedding isn't the shed",
+        heading: "When is shedding not the minoxidil shed?",
         body: `Shedding that starts months into treatment, keeps worsening past the early window, or comes with scalp symptoms like itching, burning or patches is a different story and worth a clinician's look. Diffuse shedding can also follow illness, major stress or medication changes - see <a href="/hair-loss/articles/can-stress-cause-hair-loss">can stress cause hair loss</a> - so context matters before blaming the minoxidil.`,
       },
       {
-        heading: "The one rule: don't quit mid-shed",
+        heading: "Should you stop minoxidil during the shed?",
         body: `Stopping minoxidil during the shed gets you the worst of both worlds - you've paid the shedding cost and walked away before the growth arrives (and treatment gains reverse when you stop). If the shed worries you, talk to your provider rather than going cold turkey. Providers on our <a href="/hair-loss">best hair-loss providers</a> ranking include clinician follow-up, which is exactly what this phase is for. This article is general information, not medical advice.`,
       },
     ],
@@ -2272,23 +2272,23 @@ const articles: ArticleData[] = [
     author: "Treatments Hub Staff",
     sections: [
       {
-        heading: "Yes - and it has a name",
-        body: `Significant stress can absolutely cause hair loss. The most common form is telogen effluvium: a major stressor - serious illness, surgery, high fever, crash dieting, childbirth, or an intensely stressful life period - shocks a large share of follicles out of their growth phase and into the resting phase at once. When those resting hairs release together, you get sudden, diffuse shedding that can be genuinely dramatic.`,
+        heading: "Can stress really cause hair loss?",
+        body: `<div class="qa"><strong>The short answer</strong>Yes. Significant stress can trigger telogen effluvium, where a major stressor pushes a large share of follicles into the resting phase at once and they shed together two to three months later. It is diffuse, all-over thinning rather than the temple and crown pattern of male-pattern loss, and it is usually temporary, with regrowth over about six months once the trigger resolves.</div>Significant stress can absolutely cause hair loss. The most common form is telogen effluvium: a major stressor - serious illness, surgery, high fever, crash dieting, childbirth, or an intensely stressful life period - shocks a large share of follicles out of their growth phase and into the resting phase at once. When those resting hairs release together, you get sudden, diffuse shedding that can be genuinely dramatic.`,
       },
       {
-        heading: "The confusing two-to-three-month delay",
+        heading: "Why does stress shedding start months later?",
         body: `Here's the part that trips people up: the shedding doesn't start during the stressful event. Follicles pushed into the resting phase hold their hair for roughly two to three months before releasing it - so the hair falls out after things have calmed down, and the trigger is easy to miss. If you're shedding heavily now, think back a season, not a week.`,
       },
       {
-        heading: "How it differs from pattern hair loss",
+        heading: "How does it differ from pattern hair loss?",
         body: `Telogen effluvium is diffuse - thinning all over, often noticed as a smaller ponytail or more hair on the pillow - while pattern loss is regional: temples, hairline, crown. The other big difference is trajectory. Stress shedding is usually temporary, with regrowth over about six months once the trigger resolves; pattern loss is progressive. The two can also overlap, with a stress shed unmasking underlying pattern loss earlier than it would have appeared. See <a href="/hair-loss/articles/receding-hairline-treatment">receding hairline signs</a> for what pattern loss looks like.`,
       },
       {
-        heading: "What helps",
+        heading: "What helps stress-related hair loss?",
         body: `For classic telogen effluvium, the honest answer is: resolve the trigger, support the basics (adequate protein, iron and general nutrition - deficiencies are common contributors), and give it time; follicles recover on their own. Minoxidil is sometimes used to speed regrowth. Persistent shedding beyond six months, patchy loss, or loss with other symptoms deserves a clinician's evaluation - causes like thyroid issues and iron deficiency are checkable and treatable.`,
       },
       {
-        heading: "When it's not just stress",
+        heading: "When is it not just stress?",
         body: `If the shedding settles but your hairline keeps moving, you're likely looking at pattern loss - which, unlike stress shedding, won't resolve on its own but responds well to treatment, especially early. Read <a href="/hair-loss/articles/how-to-stop-hair-loss">how to stop hair loss</a>, and for women navigating this territory, <a href="/hair-loss/articles/hair-loss-treatment-for-women">hair-loss treatment for women</a> covers the options formulated for you. Our <a href="/hair-loss">provider rankings</a> show where to get a proper evaluation online. This article is general information, not medical advice.`,
       },
     ],
@@ -2319,7 +2319,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "What is the Norwood scale?",
-        body: `The <strong>Norwood scale</strong> (sometimes Hamilton-Norwood) is the seven-stage system clinicians use to classify male pattern baldness - a shared vocabulary for how far it has progressed. Stage 1 is a full, juvenile hairline; the middle stages describe a receding hairline and a developing thin spot at the crown; the later stages describe those two areas enlarging and merging until only a band of hair remains around the back and sides. It exists because "I'm losing my hair" is too vague to plan treatment around - the stage makes the conversation precise.`,
+        body: `<div class="qa"><strong>The short answer</strong>The Norwood scale is the standard 7-stage map clinicians use to describe how far male pattern baldness has progressed, usually along two fronts: a receding hairline at the temples and thinning at the crown, which eventually meet. Your stage guides what treatment is realistic. Medication is most effective at holding and partially reversing the earlier stages, so the earlier you act, the more there is to save.</div>The <strong>Norwood scale</strong> (sometimes Hamilton-Norwood) is the seven-stage system clinicians use to classify male pattern baldness - a shared vocabulary for how far it has progressed. Stage 1 is a full, juvenile hairline; the middle stages describe a receding hairline and a developing thin spot at the crown; the later stages describe those two areas enlarging and merging until only a band of hair remains around the back and sides. It exists because "I'm losing my hair" is too vague to plan treatment around - the stage makes the conversation precise.`,
       },
       {
         heading: "How do the stages actually progress?",
@@ -2355,7 +2355,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "What is DHT?",
-        body: `<strong>DHT (dihydrotestosterone)</strong> is a hormone your body makes from testosterone via an enzyme called <strong>5-alpha-reductase</strong>. It is a normal, useful androgen with real jobs in the body - but in the scalp, for men who are genetically susceptible, it is also the main driver of pattern hair loss. The key idea is that DHT is more potent than testosterone at the receptors it acts on, and certain follicles are exquisitely sensitive to it. That sensitivity, not the raw amount of hormone floating around, is what decides whether you lose hair.`,
+        body: `<div class="qa"><strong>The short answer</strong>DHT (dihydrotestosterone) is a potent androgen made from testosterone by the enzyme 5-alpha-reductase. In genetically sensitive follicles it gradually miniaturizes the hair until it stops growing, which is why finasteride, which blocks that enzyme, is the cornerstone treatment. Pattern baldness is not about having too much testosterone; it is about follicle sensitivity to DHT, which is largely genetic.</div><strong>DHT (dihydrotestosterone)</strong> is a hormone your body makes from testosterone via an enzyme called <strong>5-alpha-reductase</strong>. It is a normal, useful androgen with real jobs in the body - but in the scalp, for men who are genetically susceptible, it is also the main driver of pattern hair loss. The key idea is that DHT is more potent than testosterone at the receptors it acts on, and certain follicles are exquisitely sensitive to it. That sensitivity, not the raw amount of hormone floating around, is what decides whether you lose hair.`,
       },
       {
         heading: "How does DHT cause hair loss?",
@@ -2391,7 +2391,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "What does each one actually do?",
-        body: `They solve different problems. <strong>Medication</strong> - finasteride to reduce DHT, minoxidil to stimulate follicles - slows or halts ongoing loss and can partially thicken thinning hair, protecting what you still have (the mechanism is in <a href="/hair-loss/articles/dht-and-hair-loss">DHT and hair loss</a>). A <strong>hair transplant</strong> creates nothing new: it relocates DHT-resistant follicles from the back and sides to the thinning areas. So medication is defense and preservation; a transplant is redistribution. Framing them as rivals is the first mistake - they answer different questions.`,
+        body: `<div class="qa"><strong>The short answer</strong>Medication almost always comes first. Finasteride and minoxidil slow loss and protect the hair you have; a transplant redistributes hair you already have to where it is thin. Most people who get a transplant still need medication to protect the non-transplanted hair, and a transplant done while untreated hair keeps falling can end up looking patchy as the surrounding hair recedes.</div>They solve different problems. <strong>Medication</strong> - finasteride to reduce DHT, minoxidil to stimulate follicles - slows or halts ongoing loss and can partially thicken thinning hair, protecting what you still have (the mechanism is in <a href="/hair-loss/articles/dht-and-hair-loss">DHT and hair loss</a>). A <strong>hair transplant</strong> creates nothing new: it relocates DHT-resistant follicles from the back and sides to the thinning areas. So medication is defense and preservation; a transplant is redistribution. Framing them as rivals is the first mistake - they answer different questions.`,
       },
       {
         heading: "Why does medication almost always come first?",
@@ -2427,7 +2427,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "What is microneedling supposed to do for hair?",
-        body: `Microneedling uses a roller or pen of fine needles to create controlled micro-injuries in the scalp, on the theory that the healing response - growth factors, increased blood flow, better absorption of topical treatments - can support hair growth. It is the same broad idea used for skin, applied to the scalp. The concept is plausible and there is genuine research interest, which is why it keeps trending. But "plausible and trending" is not the same as "proven standalone treatment," and the honest read of the evidence is more specific than the hype.`,
+        body: `<div class="qa"><strong>The short answer</strong>Microneedling shows the most promise as an add-on to minoxidil; the interesting evidence is for the combination, not microneedling alone. It is not a replacement for proven medical treatment. Needle depth, frequency and hygiene are easy to get wrong at home, which risks irritation or infection, so raise it with your provider before starting.</div>Microneedling uses a roller or pen of fine needles to create controlled micro-injuries in the scalp, on the theory that the healing response - growth factors, increased blood flow, better absorption of topical treatments - can support hair growth. It is the same broad idea used for skin, applied to the scalp. The concept is plausible and there is genuine research interest, which is why it keeps trending. But "plausible and trending" is not the same as "proven standalone treatment," and the honest read of the evidence is more specific than the hype.`,
       },
       {
         heading: "Does it actually work?",
@@ -2463,7 +2463,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "What's the claim behind saw palmetto?",
-        body: `Saw palmetto is an extract from a palm plant, and the hair-loss pitch is that it acts as a <strong>natural DHT blocker</strong> - inhibiting the same 5-alpha-reductase enzyme finasteride targets (the mechanism is explained in <a href="/hair-loss/articles/dht-and-hair-loss">DHT and hair loss</a>). On paper that sounds like a gentle, over-the-counter version of the real thing, which is exactly why it sells. The question is not whether the theory is coherent - it is whether the effect is strong and reliable enough to matter, and that is where the story gets less flattering.`,
+        body: `<div class="qa"><strong>The short answer</strong>Saw palmetto is a plant extract promoted as a natural DHT blocker, the same mechanism finasteride targets but far weaker and less consistent. The evidence is limited and mixed, it is not established as equivalent to prescription treatment, and supplements are loosely regulated, so potency varies. We do not recommend it as a substitute for proven treatment; discuss it with a clinician rather than self-swapping.</div>Saw palmetto is an extract from a palm plant, and the hair-loss pitch is that it acts as a <strong>natural DHT blocker</strong> - inhibiting the same 5-alpha-reductase enzyme finasteride targets (the mechanism is explained in <a href="/hair-loss/articles/dht-and-hair-loss">DHT and hair loss</a>). On paper that sounds like a gentle, over-the-counter version of the real thing, which is exactly why it sells. The question is not whether the theory is coherent - it is whether the effect is strong and reliable enough to matter, and that is where the story gets less flattering.`,
       },
       {
         heading: "What does the evidence actually say?",
@@ -2499,7 +2499,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "Why does hair thin in menopause?",
-        body: `As estrogen falls through the transition, the balance between estrogen and androgens shifts, and for many women that shows up as gradual hair thinning. Estrogen is broadly hair-friendly - it is part of why hair can feel fuller in some life stages - so its decline, combined with the relatively greater androgen influence that follows, tends to work against the hair. This is genuinely common and genuinely under-discussed, which is why so many women are blindsided by it. The companion read from the menopause side is <a href="/hrt/articles/hrt-and-hair-thinning">HRT and hair thinning</a>.`,
+        body: `<div class="qa"><strong>The short answer</strong>Menopausal hair thinning is common and driven largely by the shift in the estrogen-to-androgen balance as estrogen declines. It usually shows as diffuse thinning across the crown and part line, not the receding hairline men get. Two tracks help: menopause-focused care such as HRT for the hormonal side, and dedicated hair-loss treatments that act on the hair directly. Iron and thyroid issues should be ruled out first.</div>As estrogen falls through the transition, the balance between estrogen and androgens shifts, and for many women that shows up as gradual hair thinning. Estrogen is broadly hair-friendly - it is part of why hair can feel fuller in some life stages - so its decline, combined with the relatively greater androgen influence that follows, tends to work against the hair. This is genuinely common and genuinely under-discussed, which is why so many women are blindsided by it. The companion read from the menopause side is <a href="/hrt/articles/hrt-and-hair-thinning">HRT and hair thinning</a>.`,
       },
       {
         heading: "How is it different from men's hair loss?",
@@ -2535,7 +2535,7 @@ const articles: ArticleData[] = [
     sections: [
       {
         heading: "What does finasteride actually do to your hormones?",
-        body: `Finasteride blocks <strong>5-alpha-reductase</strong>, the enzyme that converts testosterone into DHT. So the direct hormonal effect is a large drop in <strong>DHT</strong> - which is the entire point, since DHT drives pattern hair loss (see <a href="/hair-loss/articles/dht-and-hair-loss">DHT and hair loss</a>). Crucially, the thing it lowers is DHT, not testosterone. This distinction is the whole answer to the question, and it gets lost because people hear "hormone treatment for hair" and assume it must be suppressing the main male hormone. It is not.`,
+        body: `<div class="qa"><strong>The short answer</strong>No. Finasteride lowers DHT, not testosterone, by blocking the enzyme that converts one into the other; because that conversion is blocked, testosterone can tick slightly upward. The popular idea that finasteride tanks your testosterone is a misunderstanding of the mechanism. The real side-effect conversation is about DHT's other roles, and it is an individual, clinician-guided discussion.</div>Finasteride blocks <strong>5-alpha-reductase</strong>, the enzyme that converts testosterone into DHT. So the direct hormonal effect is a large drop in <strong>DHT</strong> - which is the entire point, since DHT drives pattern hair loss (see <a href="/hair-loss/articles/dht-and-hair-loss">DHT and hair loss</a>). Crucially, the thing it lowers is DHT, not testosterone. This distinction is the whole answer to the question, and it gets lost because people hear "hormone treatment for hair" and assume it must be suppressing the main male hormone. It is not.`,
       },
       {
         heading: "Does it lower testosterone or raise it?",
