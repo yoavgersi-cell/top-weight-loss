@@ -1447,7 +1447,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
         sections: [
           {
             heading: "Can low testosterone cause ED?",
-            body: `<p>Yes - low testosterone can contribute to erectile dysfunction. But it's important to keep it in proportion: low-T is <strong>one</strong> of several possible causes, and for most men it's not the primary one. The biggest drivers of ED are vascular (blood-flow) and, often, psychological. So while it's worth checking, low testosterone is a piece of the puzzle, not usually the whole picture.</p>`,
+            body: `<div class="qa"><strong>The short answer</strong>Yes, low testosterone can contribute to ED, but it is one of several causes and not the most common one; the biggest drivers are vascular and often psychological. Low-T affects libido more directly than the mechanics of an erection, which depend on blood flow. TRT helps erectile function mainly when low testosterone is the actual cause, and most ED is treated with PDE5 inhibitors such as sildenafil and tadalafil regardless of testosterone level.</div><p>Yes - low testosterone can contribute to erectile dysfunction. But it's important to keep it in proportion: low-T is <strong>one</strong> of several possible causes, and for most men it's not the primary one. The biggest drivers of ED are vascular (blood-flow) and, often, psychological. So while it's worth checking, low testosterone is a piece of the puzzle, not usually the whole picture.</p>`,
           },
           {
             heading: "Why is libido different from erections?",
