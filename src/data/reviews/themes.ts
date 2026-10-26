@@ -12,8 +12,25 @@ import type { TrustpilotReview } from "@/lib/config";
 // Written by reading every stored review (Oct 25, 2026). Add the newest
 // batch's reviews to the themes when a batch is added.
 
+// The experience area a theme belongs to. Shared across providers so two
+// providers' review sets can be set side by side on a comparison page.
+export type ThemeCategory = "support" | "clinician" | "delivery" | "pricing" | "results" | "process";
+
+export const THEME_CATEGORY_LABELS: Record<ThemeCategory, string> = {
+  support: "Support & communication",
+  clinician: "Clinicians & dosing",
+  delivery: "Shipping & delivery",
+  pricing: "Price, billing & refunds",
+  results: "Results & medication",
+  process: "Sign-up, app & account",
+};
+
+export const THEME_CATEGORY_ORDER: ThemeCategory[] = ["support", "clinician", "delivery", "pricing", "results", "process"];
+
 export interface ReviewTheme {
   label: string;
+  /** The experience area this theme belongs to. */
+  category: ThemeCategory;
   /** One or two sentences, in plain words, describing what those reviews say. */
   detail: string;
   /** "Name|Displayed date" keys of the stored reviews that mention this theme. */
@@ -22,7 +39,26 @@ export interface ReviewTheme {
   quote?: string;
 }
 
+export interface FeaturedRef {
+  /** "Name|Displayed date" key of a stored review. */
+  ref: string;
+  /** The experience area the review is mainly about. */
+  topic: ThemeCategory;
+}
+
 export interface ProviderThemes {
+  /**
+   * Three or four sentences summarising the whole stored set - written from
+   * the themes below and nothing else. No counts, so it cannot drift when a
+   * batch is added; the numbers come from the resolved themes at render time.
+   */
+  summary?: string;
+  /**
+   * Four or five stored reviews chosen as representative of the praise themes,
+   * deliberately different from the reviews quoted under the themes so the
+   * page does not repeat itself. A ref that does not resolve is dropped.
+   */
+  featured?: FeaturedRef[];
   praise: ReviewTheme[];
   criticism: ReviewTheme[];
   /** Anything the reader should know about this provider's set (e.g. the profile covers other products). */
@@ -34,6 +70,43 @@ export const reviewKey = (r: TrustpilotReview) => `${r.name}|${r.date ?? "undate
 export interface ResolvedTheme extends ReviewTheme {
   count: number;
   quoted?: TrustpilotReview;
+}
+
+/** The featured reviews that resolve against the registry, in the stored order. */
+export function resolveFeatured(
+  record: ProviderReviewRecord,
+  themes: ProviderThemes,
+): { review: TrustpilotReview; topic: ThemeCategory }[] {
+  const byKey = new Map<string, TrustpilotReview>();
+  for (const b of record.batches) for (const r of b.reviews) if (!byKey.has(reviewKey(r))) byKey.set(reviewKey(r), r);
+  return (themes.featured ?? [])
+    .map((f) => ({ review: byKey.get(f.ref), topic: f.topic }))
+    .filter((f): f is { review: TrustpilotReview; topic: ThemeCategory } => f.review !== undefined);
+}
+
+export interface CategoryBreakdown {
+  category: ThemeCategory;
+  /** Distinct stored reviews that praise something in this category. */
+  praise: number;
+  /** Distinct stored reviews that criticise something in this category. */
+  criticism: number;
+}
+
+/**
+ * Per-category counts of distinct reviews, from the resolved theme refs. One
+ * review that mentions two praise themes in the same category counts once.
+ */
+export function categoryBreakdown(record: ProviderReviewRecord, themes: ProviderThemes): { rows: CategoryBreakdown[]; total: number } {
+  const keys = new Set<string>();
+  for (const b of record.batches) for (const r of b.reviews) keys.add(reviewKey(r));
+  const rows = THEME_CATEGORY_ORDER.map((category) => {
+    const praise = new Set<string>();
+    const criticism = new Set<string>();
+    for (const t of themes.praise) if (t.category === category) for (const k of t.refs) if (keys.has(k)) praise.add(k);
+    for (const t of themes.criticism) if (t.category === category) for (const k of t.refs) if (keys.has(k)) criticism.add(k);
+    return { category, praise: praise.size, criticism: criticism.size };
+  });
+  return { rows, total: keys.size };
 }
 
 export function resolveThemes(
@@ -61,9 +134,19 @@ export function resolveThemes(
 
 export const REVIEW_THEMES: Record<string, ProviderThemes> = {
   embody: {
+    summary:
+      "embody's reviews are dominated by the people: nurses and providers who take time to explain and adjust doses, and named support staff who fix portal, billing and shipping problems. Reviewers who mention price credit the flat monthly rate, and those reporting results describe fast, cold deliveries. The complaints cluster around logistics and money: orders that shipped late or not at all, refunds refused under the no-refund policy, and a few dose or order changes reviewers say they never agreed to. Several of the critical reviews note that a nurse or account manager eventually called and resolved it.",
+    featured: [
+      { ref: "Melanie A.|Oct 25, 2026", topic: "clinician" },
+      { ref: "Danielle V.|Oct 25, 2026", topic: "support" },
+      { ref: "Tracy|Sep 21, 2026", topic: "pricing" },
+      { ref: "Claire F.|Oct 25, 2026", topic: "results" },
+      { ref: "Elizabeth|Oct 23, 2026", topic: "support" },
+    ],
     praise: [
       {
         label: "Nurses and providers who listen and explain",
+        category: "clinician",
         detail:
           "By far the most common thing embody reviewers write about: a nurse or provider who took time, answered everything, adjusted the dose when asked, and called back when a video link failed.",
         refs: [
@@ -81,6 +164,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Support staff, often named, who fixed the problem",
+        category: "support",
         detail:
           "Reviewers thank specific team members for sorting out a portal issue, a billing question or a shipment, and several say chat connected them to a person straight away.",
         refs: [
@@ -93,6 +177,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "A price that stays flat",
+        category: "pricing",
         detail:
           "The flat monthly price, with no change at dose increases, is why several reviewers chose embody or could afford to go up a dose. One two-star reviewer still calls the pricing reasonable.",
         refs: [
@@ -103,6 +188,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Fast delivery and medication that works",
+        category: "delivery",
         detail:
           "Reviewers who report results mention 20 pounds in a month, 36 pounds by the third shot and 5 pounds in three weeks, and describe boxes arriving in two or three days with the cold packs still frozen.",
         refs: [
@@ -115,6 +201,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
     criticism: [
       {
         label: "Orders that shipped late or not at all",
+        category: "delivery",
         detail:
           "The main complaint in the October reviews: a prepaid three-month order not received after a month, a refill held at the pharmacy while the reviewer ran out, a box sent to an old address, and earlier a first dose quoted at 3 to 5 days that took 8.",
         refs: [
@@ -125,6 +212,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Refunds refused and disputed charges",
+        category: "pricing",
         detail:
           "Reviewers who say they received no medication were refused refunds under the no-refund policy, and two describe charges for something that never arrived.",
         refs: [
@@ -135,6 +223,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Dose or order changes nobody agreed to",
+        category: "clinician",
         detail:
           "The most serious complaints: a prescription that arrived at roughly triple the expected dose, a next order placed at a different dose than discussed, and a formulation mixed with NAD unless you ask otherwise.",
         refs: ["Courtney S.|Oct 25, 2026", "Jeff M.|Oct 25, 2026", "Geraldine P.|Oct 23, 2026"],
@@ -142,6 +231,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Reaching a person when something goes wrong",
+        category: "support",
         detail:
           "Chat that loops, unreturned calls, a doctor who missed three video slots, and a subscription cancelled without notice. Several of these reviewers say it ended well once a nurse or account manager called.",
         refs: [
@@ -155,9 +245,19 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
   },
 
   wellmedr: {
+    summary:
+      "Most welludr reviews are a thank-you to a named support agent who picked up the phone and fixed something: a portal reset, a reversed charge, a paused plan. The set price with no membership fee is the other recurring reason reviewers chose it, and several report steady results or reaching their goal. The criticism is about billing and shipping: a disputed charge interval, double charges, reorders that stalled, and chat that loops before a person steps in. A notable share of those critical reviews were raised to four or five stars after an operations manager called.",
+    featured: [
+      { ref: "Cindy S.|Oct 25, 2026", topic: "support" },
+      { ref: "Jalinda|Oct 25, 2026", topic: "pricing" },
+      { ref: "julia A.|Aug 10, 2026", topic: "delivery" },
+      { ref: "Robert O.|Oct 25, 2026", topic: "results" },
+      { ref: "Stephanie G.|Oct 25, 2026", topic: "support" },
+    ],
     praise: [
       {
         label: "Support that answers and fixes it, usually by name",
+        category: "support",
         detail:
           "Two thirds of welludr's reviews are about a specific agent who answered the phone, reset a portal, reversed a charge or paused a plan. Reviewers repeatedly note that a human picked up quickly.",
         refs: [
@@ -180,6 +280,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "The price, and medication that works",
+        category: "pricing",
         detail:
           "Reviewers who switched from another provider say the set price with no membership fee is what they can afford, and several report reaching their goal or steady results.",
         refs: [
@@ -191,6 +292,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Fast approval and a cold, well-packed box",
+        category: "delivery",
         detail:
           "When the process runs as designed, reviewers describe approval and shipping within days and medication arriving cold.",
         refs: ["Jalinda|Oct 25, 2026", "Scott B.|Oct 23, 2026", "julia A.|Aug 10, 2026", "Amy R.|Oct 24, 2026", "Kristine S.|Sep 20, 2026"],
@@ -200,6 +302,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
     criticism: [
       {
         label: "Billing: the charge interval, double charges and a disputed quote",
+        category: "pricing",
         detail:
           "The most detailed complaint says a $99-a-month plan was charged every 21 days; an August reviewer says the same. Others report being charged twice for one order (reversed in the 5-star versions), a 3-month plan charged again after reinstatement, and a $39 quote that became $199 or $249. We have not verified the 21-day cadence; confirm the interval in writing before you prepay.",
         refs: [
@@ -211,6 +314,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Shipping delays and reorders that stall",
+        category: "delivery",
         detail:
           "An order marked approved then stuck in 'delay in shipping' for eight days, a reorder that took weeks and a BBB complaint, a refill scheduled to ship after the injection day, and a first delivery a month late. Several of these reviewers raised their rating after an operations manager called.",
         refs: [
@@ -221,6 +325,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Slow or circular support before a person steps in",
+        category: "support",
         detail:
           "Chat and app messages that take days or loop between agents. Most of these reviews end with a named agent fixing it by phone, which is why several are still four or five stars.",
         refs: [
@@ -232,6 +337,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Results slower than hoped",
+        category: "results",
         detail: "One reviewer six months in says the weight loss has been small for the cost.",
         refs: ["Louise M.|undated"],
         quote: "Louise M.|undated",
@@ -240,9 +346,19 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
   },
 
   medvi: {
+    summary:
+      "MEDVi reviewers write mostly about the visit itself: a nurse practitioner or doctor who was on time, unhurried and clear about dosing and side effects, with video visits and reminders that work. A second group thanks a specific account rep or coach, and reviewers call the access affordable. The complaints are operational: medication that arrived late or not at all, no simple cancellation path, a wrong dose shipped to patients transferring from elsewhere, and support that goes quiet or sends canned replies. Two five-star reviewers blame the pharmacy rather than MEDVi for the delays.",
+    featured: [
+      { ref: "A. A.|Oct 22, 2026", topic: "clinician" },
+      { ref: "Jason B.|Oct 22, 2026", topic: "clinician" },
+      { ref: "Terre C.|Oct 22, 2026", topic: "support" },
+      { ref: "Nan|Sep 23, 2026", topic: "results" },
+      { ref: "Jennifer P.|Sep 22, 2026", topic: "clinician" },
+    ],
     praise: [
       {
         label: "Clinicians who take time on the phone and video visits",
+        category: "clinician",
         detail:
           "Most MEDVi reviews describe the visit itself: a nurse practitioner or doctor who was on time, not rushed, explained dosing and side effects, and adjusted the plan. Video visits with reminders come up often.",
         refs: [
@@ -262,6 +378,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Account reps and coaches named and thanked",
+        category: "support",
         detail:
           "A second group thanks a specific representative for appointments, renewals and follow-up calls; one says a new account rep turned a rocky start around.",
         refs: [
@@ -273,6 +390,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Affordable access and results",
+        category: "pricing",
         detail: "Reviewers call the access affordable and describe the program working, appetite curbed and a prior mistake corrected.",
         refs: ["Kelly G.|Sep 23, 2026", "Terre C.|Oct 22, 2026", "Nan|Sep 23, 2026", "Jennifer P.|Sep 22, 2026", "A Concerned First Time Consume|Aug 31, 2026"],
         quote: "Kelly G.|Sep 23, 2026",
@@ -281,6 +399,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
     criticism: [
       {
         label: "Medication late or not sent",
+        category: "delivery",
         detail:
           "A year-and-a-half customer two weeks without medication, two months of late shipments, a prepaid trial that kept charging without shipping, and an order billed but never sent. Two 5-star reviewers blame the pharmacy rather than MEDVi.",
         refs: [
@@ -291,6 +410,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Billing, cancellation and refunds",
+        category: "pricing",
         detail:
           "No online cancellation path, a yearly plan renewed without notice that took regulator complaints to refund, a refund promised then refused, and a monthly subscription that was hard to stop.",
         refs: [
@@ -301,6 +421,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Wrong dose shipped",
+        category: "clinician",
         detail:
           "Two reviewers transferring from another provider were sent a starting dose instead of their current one, and one says the correction never came; a 5-star reviewer says the doctor spotted and fixed the same mistake.",
         refs: ["Deborah D.|Sep 11, 2026", "N R|Sep 16, 2026", "Nan|Sep 23, 2026", "Mndy J.|Oct 22, 2026"],
@@ -308,6 +429,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Support that goes quiet or sends canned replies",
+        category: "support",
         detail: "Communication that stopped after a good start, canned responses, and reps other than the one being praised showing little follow-through.",
         refs: [
           "Mndy J.|Oct 22, 2026", "Michael|Oct 23, 2026", "Aly|Oct 22, 2026", "Kearsley R.|Sep 23, 2026", "Andy W.|Sep 22, 2026",
@@ -319,9 +441,18 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
   },
 
   eden: {
+    summary:
+      "Eden's review set is almost entirely about support: named agents who replied fast, unpaused a plan, corrected a mistake or sent a prescription to the pharmacy, and a phone line with a real person when the portal's AI chat fell short. The flat price and on-time first deliveries are the other praise. The small number of critical reviews describe cancellation and recurring-charge problems, orders that took repeated calls to sort out, and one terse complaint about the product. Even one one-star reviewer calls the pricing good.",
+    featured: [
+      { ref: "Regina C.|Oct 25, 2026", topic: "support" },
+      { ref: "Kensha F.|Oct 21, 2026", topic: "pricing" },
+      { ref: "John V.|Oct 21, 2026", topic: "support" },
+      { ref: "Cala I.|Oct 20, 2026", topic: "support" },
+    ],
     praise: [
       {
         label: "A support agent, named, who answered fast and fixed it",
+        category: "support",
         detail:
           "Almost every Eden review is a thank-you to a named support agent: Joanne, Lupe, Nathalie, Erin, Kim, Danifer and others, for a quick reply, an unpaused plan, a corrected mistake or a prescription sent to the pharmacy.",
         refs: [
@@ -343,6 +474,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "The price, and delivery on time",
+        category: "pricing",
         detail:
           "Reviewers mention the $129 flat price, help finding the best pricing, and a first order delivered four days after ordering. Even one 1-star reviewer calls the pricing good.",
         refs: [
@@ -353,6 +485,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "A phone line with a real person when the AI chat falls short",
+        category: "support",
         detail: "Several reviewers say the portal's AI chat did not answer them, and that the phone line, with a short wait, did.",
         refs: ["Nicole|Oct 21, 2026", "Cala I.|Oct 20, 2026", "John V.|Oct 21, 2026", "Jacqueline B.|Oct 25, 2026", "EB|Oct 21, 2026"],
         quote: "Nicole|Oct 21, 2026",
@@ -361,6 +494,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
     criticism: [
       {
         label: "Cancelling, recurring charges and refunds",
+        category: "pricing",
         detail:
           "An hour-long wait to cancel, six months of recurring-payment problems ending in a refused refund, and a treatment cancelled by email two weeks after the last dose arrived.",
         refs: ["Jennie|Oct 21, 2026", "anon|Oct 20, 2026", "Kenny|Oct 18, 2026"],
@@ -368,6 +502,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Orders and account issues that took repeated contact",
+        category: "process",
         detail:
           "Three consecutive orders needing around ten calls each, inconsistent shipments, an AI chat that promised to look into it and did not, and one call that ended without the promised link. One 5-star reviewer also notes she needed help on her account many times.",
         refs: ["Kenny|Oct 18, 2026", "anon|Oct 20, 2026", "Jay S.|Oct 20, 2026", "Nicole|Oct 21, 2026", "Mister M.|Oct 21, 2026"],
@@ -375,6 +510,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "The product itself",
+        category: "results",
         detail: "One two-word review calls the products inferior, with no detail.",
         refs: ["Mary H.|Oct 19, 2026"],
         quote: "Mary H.|Oct 19, 2026",
@@ -383,9 +519,19 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
   },
 
   ro: {
+    summary:
+      "Ro's praise is about speed: a questionnaire that takes minutes, approval the same day and medication within days, plus clinicians who listen. Many of these reviews were written before the first shipment arrived. The most frequent complaint, from one- to four-star reviewers alike, is the monthly membership fee charged on top of the medication, which several say was not clear before paying; others cite the lack of a phone number, slow messages, late or warm deliveries and dosing decided before any conversation. Ro's profile covers all its services, so a few stored reviews concern other Ro products.",
+    featured: [
+      { ref: "Orville H.|Oct 25, 2026", topic: "process" },
+      { ref: "Amanda S.|Oct 25, 2026", topic: "delivery" },
+      { ref: "Nancy|Oct 25, 2026", topic: "clinician" },
+      { ref: "qp|Oct 25, 2026", topic: "delivery" },
+      { ref: "Jeff B.|Oct 25, 2026", topic: "support" },
+    ],
     praise: [
       {
         label: "Fast, easy sign-up and approval",
+        category: "process",
         detail:
           "The dominant theme: an online questionnaire that takes minutes, a response within hours, and approval the same day. Many of these reviews were written before the first shipment arrived.",
         refs: [
@@ -399,6 +545,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Clinicians who listen and quick answers",
+        category: "clinician",
         detail: "Reviewers describe the provider visit as thorough, like a primary-care appointment, and say questions were answered promptly.",
         refs: [
           "Jeff B.|Oct 25, 2026", "Nancy|Oct 25, 2026", "Marlene H.|Oct 25, 2026", "Melodie|Oct 25, 2026", "Janet|Oct 25, 2026",
@@ -409,6 +556,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Delivery within days",
+        category: "delivery",
         detail: "Medication in four days from starting the process, two days after approval, and one day with insurance.",
         refs: ["Orville H.|Oct 25, 2026", "Amanda S.|Oct 25, 2026", "qp|Oct 25, 2026", "Mary P.|Oct 23, 2026"],
         quote: "Mary P.|Oct 23, 2026",
@@ -417,6 +565,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
     criticism: [
       {
         label: "A membership fee on top of the medication",
+        category: "pricing",
         detail:
           "The most frequent complaint, from one- to four-star reviewers alike: a $39 first charge that turned out to be the consultation, then a monthly membership fee (quoted at $149) in addition to the medication, which several say was not clear before paying.",
         refs: [
@@ -427,18 +576,21 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "No phone number and slow messages",
+        category: "support",
         detail: "Reviewers wanting to cancel, expedite a delivery or ask a question could find only FAQs, with replies in two to three business days.",
         refs: ["Jennifer L.|Oct 25, 2026", "Lisa R.|Sep 21, 2026", "Elizabeth M.|Sep 22, 2026", "Gary G.|Sep 22, 2026", "Kay K.|Oct 25, 2026"],
         quote: "Lisa R.|Sep 21, 2026",
       },
       {
         label: "Delivery delays and a warm box",
+        category: "delivery",
         detail: "A delivery four days late with melted ice packs and no clear answer on whether to use it, plus shorter delays and missing tracking.",
         refs: ["Frank R.|Oct 25, 2026", "Gary G.|Sep 22, 2026", "John|Sep 22, 2026", "Robyn M.|Sep 21, 2026"],
         quote: "John|Sep 22, 2026",
       },
       {
         label: "Dosing decided before the conversation",
+        category: "clinician",
         detail:
           "Being restarted at the lowest dose after a higher one elsewhere, choosing a medication and being charged before any physician input, and a smaller starting dose than friends received.",
         refs: ["Sherry P.|Oct 25, 2026", "Tracy|Sep 21, 2026", "Shane D.|Sep 22, 2026", "Gary G.|Sep 22, 2026"],
@@ -446,6 +598,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "No results yet, and one reaction",
+        category: "results",
         detail: "No weight change after a week and a half, one reviewer who says nothing happened, and one allergic reaction with a refund request.",
         refs: ["Gordon K.|Oct 25, 2026", "Sonia|Oct 24, 2026", "Dossie D.|Oct 25, 2026"],
         quote: "Sonia|Oct 24, 2026",
@@ -456,9 +609,19 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
   },
 
   trimrx: {
+    summary:
+      "When TrimRx works as designed, reviewers describe a thorough screening, steady status emails, quick cold deliveries with plain labels, and a price well below their previous provider or med spa, with real results reported months in. The complaints concentrate on prepaid multi-month plans: orders that did not ship, refunds promised but not paid, charges after cancelling, and an AI phone line and unanswered messages that made those problems hard to resolve. The experience reviewers describe depends heavily on whether something went wrong with an order.",
+    featured: [
+      { ref: "Dayna G.|Oct 21, 2026", topic: "support" },
+      { ref: "Sean J.|Oct 21, 2026", topic: "delivery" },
+      { ref: "Elisa M.|Oct 21, 2026", topic: "pricing" },
+      { ref: "Juan B.|Oct 21, 2026", topic: "results" },
+      { ref: "Lorene C.|Oct 18, 2026", topic: "pricing" },
+    ],
     praise: [
       {
         label: "Support and communication, when it works",
+        category: "support",
         detail:
           "A thorough screening, steady status emails from order to delivery, and reps who answer the same day. Reviewers who had this experience often contrast it with a previous provider that went quiet after payment.",
         refs: [
@@ -471,6 +634,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Quick, cold, plainly labelled delivery",
+        category: "delivery",
         detail: "Boxes in two to five days, arriving cold and sealed, with nothing on the label to give the contents away.",
         refs: [
           "Kenneth B.|Oct 22, 2026", "Dayna G.|Oct 21, 2026", "Sean J.|Oct 21, 2026", "James L.|Oct 21, 2026", "Titaayo Y.|Oct 19, 2026",
@@ -481,6 +645,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "A lower price than the previous provider or med spa",
+        category: "pricing",
         detail: "Reviewers who switched say they pay a half to a quarter of what they paid before, and that the pricing was clear at checkout.",
         refs: [
           "Elisa M.|Oct 21, 2026", "Juan B.|Oct 21, 2026", "Caden M.|Oct 20, 2026", "Jada S.|Oct 18, 2026", "Lorene C.|Oct 18, 2026",
@@ -490,6 +655,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Results",
+        category: "results",
         detail: "51 pounds, 41 pounds with blood pressure normalised, and steady losses reported by reviewers months in.",
         refs: [
           "Casey B.|Oct 23, 2026", "Juan B.|Oct 21, 2026", "Lorene C.|Oct 18, 2026", "Supersaver Chic|Oct 20, 2026", "Steve T.|Aug 3, 2026",
@@ -501,6 +667,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
     criticism: [
       {
         label: "Prepaid multi-month orders that did not ship",
+        category: "delivery",
         detail:
           "The largest group of complaints: the second half of a 6-month plan a month late, a 3-month plan that delivered one vial, a first order not shipped after three weeks, and a 12-month plan with a $1,663.50 refund outstanding. Most say nobody answered.",
         refs: [
@@ -511,6 +678,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Charges after cancelling, and refunds not issued",
+        category: "pricing",
         detail:
           "A $909 refill charged four months after a confirmed cancellation, a card charged before final approval, a financed plan still billing after cancellation, and refunds promised but not paid.",
         refs: [
@@ -521,6 +689,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "An AI phone line and unanswered messages",
+        category: "support",
         detail:
           "The complaint that ties the others together: the 888 number answered by an AI attendant, chat bots, support links that do not work, and emails that go unanswered for weeks. One 5-star reviewer says the same.",
         refs: [
@@ -532,12 +701,14 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "The price after the first charge",
+        category: "pricing",
         detail: "A next bill double the quoted figure ($399 for a month of tirzepatide), a goal timeline that lengthened after payment, and two reviewers who like the service but find it expensive.",
         refs: ["Casey B.|Oct 23, 2026", "Mark M.|Oct 20, 2026", "Mrs V|Sep 20, 2026", "Tiffany C.|Sep 22, 2026"],
         quote: "Mrs V|Sep 20, 2026",
       },
       {
         label: "Late boxes and warm cold packs",
+        category: "delivery",
         detail: "A tracking date that moved twice, a 48-hour promise that took five days, and packages left on the ground.",
         refs: ["Holly H.|Sep 23, 2026", "Michael H.|Sep 21, 2026", "Angelia F.|Oct 21, 2026"],
         quote: "Holly H.|Sep 23, 2026",
@@ -548,9 +719,18 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
   },
 
   found: {
+    summary:
+      "Found's reviewers describe a program rather than a pharmacy: named doctors, nurses and coaches who listen, an app with weekly weigh-ins and progress tracking, a member community, and results measured in years rather than weeks. The few complaints concern refill windows and refunds on multi-month plans, an AI-only phone line, and one shipment that did not arrive and was resent straight away.",
+    featured: [
+      { ref: "Jesse H.|Oct 22, 2026", topic: "clinician" },
+      { ref: "Jackie|Oct 22, 2026", topic: "process" },
+      { ref: "Tamra H.|Oct 14, 2026", topic: "results" },
+      { ref: "Denise D.|Oct 15, 2026", topic: "results" },
+    ],
     praise: [
       {
         label: "Doctors, nurses and coaches who listen",
+        category: "clinician",
         detail:
           "Named clinicians who give feedback, answer questions with research attached, prescribe something for nausea when needed, and a nurse check-in reviewers look forward to.",
         refs: [
@@ -564,6 +744,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Results over the long haul",
+        category: "results",
         detail: "90 pounds over two years, 50-plus pounds, 36 pounds over three years, food noise gone after decades, and reviewers who describe a changed relationship with eating.",
         refs: [
           "Jesse H.|Oct 22, 2026", "Christina P.|Oct 21, 2026", "Tamra H.|Oct 14, 2026", "Denise D.|Oct 15, 2026", "Ana C.|Sep 16, 2026",
@@ -573,6 +754,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "The app, the community and the coaching",
+        category: "process",
         detail: "Weight tracking with percentage lost, a weekly weigh-in rhythm, meal guidance, a member community and help with an insurance authorization.",
         refs: [
           "Christina P.|Oct 21, 2026", "Claire G.|Oct 21, 2026", "Jackie|Oct 22, 2026", "Tiasha|Sep 26, 2026", "Eva M.|Sep 8, 2026",
@@ -585,6 +767,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
     criticism: [
       {
         label: "Refill windows, refunds and pricing",
+        category: "pricing",
         detail:
           "A 3-month plan whose third refill was forfeited by missing the request window, a $3,000 charge before any consultation with the refund still pending, and a Medicare price that was not honored.",
         refs: ["Natalie P.|Oct 20, 2026", "Marie B.|Oct 20, 2026", "customer|Sep 14, 2026"],
@@ -592,12 +775,14 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Reaching support",
+        category: "support",
         detail: "A phone line that goes to an AI bot with no human phone support, and an account frozen in a way that blocked customer service.",
         refs: ["Marie B.|Oct 20, 2026", "Linda P.|Sep 22, 2026"],
         quote: "Linda P.|Sep 22, 2026",
       },
       {
         label: "A shipment that did not arrive",
+        category: "delivery",
         detail: "One 4-star reviewer's medication did not show up; it was resent right away.",
         refs: ["Kristi|Oct 15, 2026"],
         quote: "Kristi|Oct 15, 2026",
@@ -606,9 +791,19 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
   },
 
   sprout: {
+    summary:
+      "Nearly every Sprout review is about support: a live rep rather than a bot, immediate replies and one agent named by several reviewers, along with plans that were paused, changed or re-priced on request. Reviewers report results and reaching most of a goal. The complaints are about tracking that is not always sent, a monthly check-in that can block shipping while still charging, and one reviewer's side effect.",
+    featured: [
+      { ref: "Victoria L.|Sep 21, 2026", topic: "pricing" },
+      { ref: "Kayte V.|undated", topic: "support" },
+      { ref: "Terrie G.|Sep 17, 2026", topic: "process" },
+      { ref: "Cindy|Sep 17, 2026", topic: "support" },
+      { ref: "Salvatore C.|Aug 5, 2026", topic: "results" },
+    ],
     praise: [
       {
         label: "Live customer service that replies right away",
+        category: "support",
         detail: "Nearly every Sprout review is about support: a live rep rather than a bot, immediate replies, and one agent (Frank) named by several reviewers.",
         refs: [
           "Ken|Sep 21, 2026", "Victoria L.|Sep 21, 2026", "Lisa M.|Sep 21, 2026", "Isabel M.|Sep 19, 2026", "Trish|Sep 19, 2026",
@@ -620,12 +815,14 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "Results and a price they will adjust",
+        category: "results",
         detail: "20 pounds lost, most of a goal reached, and a plan re-priced on request when the customer found cheaper options.",
         refs: ["Victoria L.|Sep 21, 2026", "Isabel M.|Sep 19, 2026", "Salvatore C.|Aug 5, 2026", "Kayte V.|undated", "Mark|Jun 26, 2026", "Janet E.|Sep 10, 2026"],
         quote: "Isabel M.|Sep 19, 2026",
       },
       {
         label: "Pausing or changing a plan is easy",
+        category: "process",
         detail: "Reviewers who paused for travel or adjusted a plan say it was handled quickly.",
         refs: ["Trish|Sep 19, 2026", "Terrie G.|Sep 17, 2026", "Cindy|Sep 17, 2026", "Victoria L.|Sep 21, 2026"],
         quote: "Trish|Sep 19, 2026",
@@ -634,12 +831,14 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
     criticism: [
       {
         label: "Tracking, check-ins and instructions",
+        category: "delivery",
         detail: "Tracking sent on two of eight shipments, a monthly check-in that silently blocks shipping while still charging, orders occasionally late, and no injection instructions for one reviewer.",
         refs: ["James M.|Aug 6, 2026", "Mark|Jun 26, 2026", "Janet E.|Sep 10, 2026", "Salvatore C.|Aug 5, 2026"],
         quote: "Mark|Jun 26, 2026",
       },
       {
         label: "A side effect",
+        category: "results",
         detail: "One reviewer reports significant hair loss within a month of starting Sprout's compounded tirzepatide after none with other providers.",
         refs: ["Audrey S.|Sep 8, 2026"],
         quote: "Audrey S.|Sep 8, 2026",
@@ -648,9 +847,19 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
   },
 
   altrx: {
+    summary:
+      "altRx has an unusual review set: more than a third of the stored reviewers say they signed up despite negative reviews they had read and found the opposite. They credit a price that stayed flat as the dose went up, prompt replies by message, on-time delivery and steady results. The few complaints are a refill that stalled, billing hiccups that were refunded, and one smaller-than-expected vial. Trustpilot has removed altRx's public rating, so no aggregate appears on this page.",
+    featured: [
+      { ref: "melissa A.|Sep 3, 2026", topic: "pricing" },
+      { ref: "Tammy D.|Sep 1, 2026", topic: "support" },
+      { ref: "Shannon R.|Sep 1, 2026", topic: "delivery" },
+      { ref: "Marni G.|Aug 13, 2026", topic: "delivery" },
+      { ref: "Kimberly W.|undated", topic: "pricing" },
+    ],
     praise: [
       {
         label: "Reviewers who expected the worst and were proven wrong",
+        category: "process",
         detail:
           "An unusual pattern: six of the sixteen reviewers say they signed up despite negative reviews they had read and found the opposite. Trustpilot has removed altRx's public rating, which is why no aggregate appears on this page.",
         refs: ["melissa A.|Sep 3, 2026", "Angela|Sep 2, 2026", "Tammy D.|Sep 1, 2026", "Shannon R.|Sep 1, 2026", "Tori W.|Aug 26, 2026", "Marlie C.|May 12, 2026"],
@@ -658,18 +867,21 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
       },
       {
         label: "A price that did not rise with the dose",
+        category: "pricing",
         detail: "Reviewers report paying the same $148 or $149 as their dose went up, a third of what they paid elsewhere, and no surprise charges.",
         refs: ["melissa A.|Sep 3, 2026", "ZC|Jun 16, 2026", "Tori W.|Aug 26, 2026", "Kimberly W.|undated", "Marni G.|Aug 13, 2026", "Tammy D.|Sep 1, 2026"],
         quote: "ZC|Jun 16, 2026",
       },
       {
         label: "Prompt replies by message",
+        category: "support",
         detail: "Replies within 24 hours, a care consultant (Paige) who texts back, and a rep who walked a new customer through the plan.",
         refs: ["Cindi P.|Sep 7, 2026", "melissa A.|Sep 3, 2026", "Tammy D.|Sep 1, 2026", "Alicia V.|Aug 31, 2026", "Tori W.|Aug 26, 2026", "Lenden|undated", "B L.|Aug 26, 2026", "Marlie C.|May 12, 2026"],
         quote: "Cindi P.|Sep 7, 2026",
       },
       {
         label: "Delivery on time and results",
+        category: "delivery",
         detail: "Overnight FedEx after a Saturday doctor call, cold packaging, and 4 to 5 pounds a month or 8 to 10 pounds in the first weeks.",
         refs: ["Shannon R.|Sep 1, 2026", "Alicia V.|Aug 31, 2026", "Tori W.|Aug 26, 2026", "Carlton L.|Aug 14, 2026", "Kimberly W.|undated", "Marni G.|Aug 13, 2026", "Paula L.|Jun 10, 2026", "Marlie C.|May 12, 2026", "melissa A.|Sep 3, 2026"],
         quote: "Carlton L.|Aug 14, 2026",
@@ -678,18 +890,21 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
     criticism: [
       {
         label: "A refill that stalled",
+        category: "delivery",
         detail: "A third-month refill unfulfilled with no reason given, shipping that can take a little longer, and one case where support never replied though the consultant did.",
         refs: ["jb|undated", "B L.|Aug 26, 2026", "Marlie C.|May 12, 2026"],
         quote: "jb|undated",
       },
       {
         label: "Billing hiccups, resolved",
+        category: "pricing",
         detail: "One accidental charge refunded immediately, and an ad showing $129 corrected to $149 at sign-up.",
         refs: ["Alicia V.|Aug 31, 2026", "ZC|Jun 16, 2026"],
         quote: "Alicia V.|Aug 31, 2026",
       },
       {
         label: "A smaller vial than elsewhere",
+        category: "results",
         detail: "One reviewer on a high dose noticed the vial was smaller than from previous providers.",
         refs: ["Paula L.|Jun 10, 2026"],
         quote: "Paula L.|Jun 10, 2026",
@@ -698,15 +913,24 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
   },
 
   directmeds: {
+    summary:
+      "DirectMeds reviewers mostly thank a specific phone rep, one named three times, for patiently walking them through the steps, and describe a simple sign-up with frequent updates and reasonable prices. The complaints are about orders that stalled or came up short and a portal message one reviewer could not open.",
+    featured: [
+      { ref: "Lauren|Sep 23, 2026", topic: "support" },
+      { ref: "Mary Ann R.|Sep 22, 2026", topic: "support" },
+      { ref: "Gina|Sep 23, 2026", topic: "pricing" },
+    ],
     praise: [
       {
         label: "Phone reps who are patient and named",
+        category: "support",
         detail: "Most DirectMeds reviews thank a specific rep (Chelsea King is named three times) for walking a new customer through the steps by phone.",
         refs: ["Sandra|Sep 23, 2026", "Lauren|Sep 23, 2026", "Monica N.|Sep 23, 2026", "Janet G.|Sep 23, 2026", "Mary Ann R.|Sep 22, 2026", "Toni R.|Sep 22, 2026", "John|undated", "Charisse|undated", "Customer|undated"],
         quote: "Sandra|Sep 23, 2026",
       },
       {
         label: "A simple sign-up and reasonable prices",
+        category: "process",
         detail: "A straightforward sign-up with frequent text and email updates, and prices one reviewer calls reasonable.",
         refs: ["Bryan D.|Sep 23, 2026", "Gina|Sep 23, 2026"],
         quote: "Bryan D.|Sep 23, 2026",
@@ -715,12 +939,14 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
     criticism: [
       {
         label: "Orders that stalled or came up short",
+        category: "delivery",
         detail: "An order stuck at 'label created' until three calls, then damaged in transit while the AI chat insisted it was delivered; a first NAD bottle that covered two weeks, not a month, with no syringes.",
         refs: ["Jackson J.|Sep 23, 2026", "Gina|Sep 23, 2026", "Julia|Sep 22, 2026"],
         quote: "Jackson J.|Sep 23, 2026",
       },
       {
         label: "The online account",
+        category: "process",
         detail: "One reviewer could not open the doctor's message in the portal and would rather deal with reps by phone.",
         refs: ["Toni R.|Sep 22, 2026"],
         quote: "Toni R.|Sep 22, 2026",
@@ -729,9 +955,17 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
   },
 
   shed: {
+    summary:
+      "SHED's small review set is about people who follow up: a real phone call instead of a robocall, agents who fixed a duplicate account, moved a refill date and scheduled coaching. The one critical review describes charges after stopping and AI-only chat, and a five-star reviewer also calls the app and chat clunky until a person took over by email.",
+    featured: [
+      { ref: "BAG|Sep 23, 2026", topic: "support" },
+      { ref: "BB|Sep 15, 2026", topic: "support" },
+      { ref: "R M|Sep 15, 2026", topic: "support" },
+    ],
     praise: [
       {
         label: "Real people who follow up",
+        category: "support",
         detail: "A phone call from a person instead of a robocall, agents who resolved a duplicate account, moved a refill date so a shot day was not missed, and scheduled coaching.",
         refs: ["BAG|Sep 23, 2026", "BB|Sep 15, 2026", "R M|Sep 15, 2026", "Maria M.|Sep 11, 2026", "Victoria C.|Sep 2, 2026", "Michelle W.|Sep 2, 2026", "Cindy C.|undated", "Jordan R.|undated", "Joyce H.|undated"],
         quote: "Michelle W.|Sep 2, 2026",
@@ -740,6 +974,7 @@ export const REVIEW_THEMES: Record<string, ProviderThemes> = {
     criticism: [
       {
         label: "Charges after stopping, and AI-only chat",
+        category: "pricing",
         detail: "One reviewer says he was charged for months after stopping, was told not to expect a refund, and found only AI support; a 5-star reviewer also calls the app and chat clunky until a person took over by email.",
         refs: ["Justin J.|Sep 14, 2026", "R M|Sep 15, 2026"],
         quote: "Justin J.|Sep 14, 2026",

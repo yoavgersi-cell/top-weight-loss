@@ -17,6 +17,8 @@ import { TrustpilotSummary } from "@/components/trustpilot-summary";
 import { getReviewRecord } from "@/data/reviews";
 import { THREE_WAY_COMPARISONS } from "@/lib/three-way";
 import { CustomerThemes } from "@/components/customer-themes";
+import { ReviewInsights } from "@/components/review-insights";
+import { FeaturedReviews } from "@/components/featured-reviews";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 import { LastUpdated } from "@/components/last-updated";
@@ -761,10 +763,16 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
       url: ctx.origin,
       logo: { "@type": "ImageObject", url: `${ctx.origin}/treatmentshub.png` },
     },
+    // The provider as an entity. sameAs points at its verified Trustpilot
+    // profile so machines can connect the page to the public review record
+    // without us republishing the rating as markup (see the note above).
     about: {
       "@type": "Organization",
       name: provider.name,
       ...(FORMER_NAMES[provider.id] && { alternateName: FORMER_NAMES[provider.id] }),
+      ...(getReviewRecord(ctx.vertical, provider.id)?.profileUrl && {
+        sameAs: [getReviewRecord(ctx.vertical, provider.id)!.profileUrl],
+      }),
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl(ctx, `/reviews/${slug}`) },
   };
@@ -1057,6 +1065,17 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           </div>
         )}
 
+        {/* Review insights - the summary and the top three praise and complaint
+            themes from the stored reviews, high on the page; the full themes
+            block with excerpts sits further down (weight-loss registry). */}
+        {ctx.vertical === "weight-loss" && getReviewRecord(ctx.vertical, provider.id) && (
+          <ReviewInsights
+            providerName={provider.name}
+            record={getReviewRecord(ctx.vertical, provider.id)!}
+            className="mb-8"
+          />
+        )}
+
         {/* Trustpilot Reviews - social proof right after the legitimacy block,
             before the feature/pricing detail (moved up, operator request Sept 20). */}
         {/* In-depth editorial deep-dive (long-form review sections, rendered when present) */}
@@ -1072,6 +1091,16 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               </section>
             ))}
           </article>
+        )}
+
+        {/* Featured reviews - four or five stored reviews chosen as representative
+            of the praise themes, each tagged by topic (weight-loss registry). */}
+        {ctx.vertical === "weight-loss" && getReviewRecord(ctx.vertical, provider.id) && (
+          <FeaturedReviews
+            providerName={provider.name}
+            record={getReviewRecord(ctx.vertical, provider.id)!}
+            className="mb-8"
+          />
         )}
 
         {/* What customers say - praise and complaint themes computed from the
