@@ -11,6 +11,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 import { MedicalSources } from "@/components/medical-sources";
+import { MedicalDisclaimer } from "@/components/medical-disclaimer";
 import { ProductCarousel } from "@/components/product-carousel";
 import { TrustpilotCarousel, MixedTrustpilotCarousel, type MixedReviewItem } from "@/components/trustpilot-carousel";
 import { getReviewRecord } from "@/data/reviews";
@@ -1015,6 +1016,8 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               </div>
             </div>
           )}
+
+          <MedicalDisclaimer vertical={ctx.vertical} className="mb-8" />
 
           <MedicalSources vertical={ctx.vertical} />
 

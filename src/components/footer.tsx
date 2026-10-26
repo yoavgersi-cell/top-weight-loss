@@ -51,7 +51,7 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
       { label: "About", href: "/weight-loss/about" },
       { label: "Medical Review Policy", href: "/medical-review-policy" },
       { label: "Our Medical Reviewer", href: "/reviewers/francheska-capistrano" },
-      { label: "Disclaimer", href: "/weight-loss/disclaimer" },
+      { label: "Medical disclaimer", href: "/weight-loss/disclaimer" },
       { label: "Privacy Policy", href: "/weight-loss/privacy" },
       { label: "Terms of Use", href: "/weight-loss/terms" },
       { label: "Contact", href: "mailto:contact@treatmentshub.com" },
