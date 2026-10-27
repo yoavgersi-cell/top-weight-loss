@@ -688,7 +688,7 @@ function ThreadCard({
             </a>
           )}
           <Link href={reviewHref} className="font-semibold text-[#0C4B75] hover:underline">
-            Full thread in review
+            Full thread in the {providerName} review
           </Link>
         </span>
       </div>

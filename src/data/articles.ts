@@ -170,7 +170,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Which telehealth weight loss providers do we recommend?",
-        body: 'Based on our evaluation of 18+ providers, here are our top picks by category: <strong>Best overall:</strong> <a href="/weight-loss/reviews/altrx">altRx</a> - compounded semaglutide from $89 and tirzepatide from $149, flat at every dose, plus the cheapest brand-name shelf. <strong>Best budget:</strong> <a href="/weight-loss/reviews/wellmedr">welludr</a> - $49/month semaglutide on a 12-month plan, the lowest verified price in our ranking. <strong>Best no-commitment:</strong> <a href="/weight-loss/reviews/embody">embody</a> - $69/month flat, cancel anytime. <strong>Best for support:</strong> <a href="/weight-loss/reviews/medvi">Medvi</a> - all-inclusive video visits and a dietician at $99/month promo. <strong>Best for coaching:</strong> <a href="/weight-loss/reviews/noom">Noom</a> - behavioral change program with GLP-1 access through Noom Med. <a href="/weight-loss/find-your-match">Take our matching quiz</a> for a personalized recommendation, or <a href="/">compare all providers</a> side by side. Still weighing telehealth against a local clinic or an app? Read <a href="/weight-loss/articles/in-person-vs-online-weight-loss">in-person vs online weight loss programs</a>. For the legitimacy checks we ran on each provider, start with <a href="/weight-loss/articles/is-wellmedr-legit">is welludr legit</a>, <a href="/weight-loss/articles/is-embody-legit">is embody legit</a> and <a href="/weight-loss/articles/is-altrx-legit">is altRx legit</a>. ',
+        body: 'Based on our evaluation of 18+ providers, here are our top picks by category: <strong>Best overall:</strong> <a href="/weight-loss/reviews/altrx">altRx</a> - compounded semaglutide from $89 and tirzepatide from $149, flat at every dose, plus the cheapest brand-name shelf. <strong>Best budget:</strong> <a href="/weight-loss/reviews/wellmedr">welludr</a> - $49/month semaglutide on a 12-month plan, the lowest verified price in our ranking. <strong>Best no-commitment:</strong> <a href="/weight-loss/reviews/embody">embody</a> - $69/month flat, cancel anytime. <strong>Best for support:</strong> <a href="/weight-loss/reviews/medvi">Medvi</a> - all-inclusive video visits and a dietician at $99/month promo. <strong>Best for coaching:</strong> <a href="/weight-loss/reviews/noom">Noom</a> - behavioral change program with GLP-1 access through Noom Med. <a href="/weight-loss/find-your-match">Take our matching quiz</a> for a personalized recommendation, or <a href="/">compare all providers</a> side by side. Still weighing telehealth against a local clinic or an app? Read <a href="/weight-loss/articles/in-person-vs-online-weight-loss">in-person vs online weight loss programs</a>. For the legitimacy checks we ran on each provider, start with <a href="/weight-loss/articles/is-wellmedr-legit">is welludr legit</a>, <a href="/weight-loss/articles/is-embody-legit">is embody legit</a> and <a href="/weight-loss/articles/is-altrx-legit">is altRx legit</a>.  Once you know what you want from a provider, our ranking of the <a href="/weight-loss/best-online-weight-loss-programs">best online weight loss programs</a> applies these checks to every provider we review. ',
       },
     ],
   },
@@ -515,7 +515,7 @@ export const articles: Article[] = [
       },
       {
         heading: "How to Compare Total Monthly Cost",
-        body: 'When comparing providers, look at the total monthly price - not just medication cost. The best providers include everything: medication, physician consultations, dose adjustments, ongoing support, and home delivery. Some quote a low base price but charge separately for consultations or shipping. <a href="/">Compare all-inclusive providers</a> on our platform or <a href="/weight-loss/find-your-match">take our quiz</a> for a personalized recommendation. To see what any of these prices add up to over the months you have in mind, use the <a href="/weight-loss/glp1-cost-calculator">GLP-1 cost calculator</a>, which multiplies every verified price in our index by your timeframe and shows the regular price next to each promotion. ',
+        body: 'When comparing providers, look at the total monthly price - not just medication cost. The best providers include everything: medication, physician consultations, dose adjustments, ongoing support, and home delivery. Some quote a low base price but charge separately for consultations or shipping. <a href="/">Compare all-inclusive providers</a> on our platform or <a href="/weight-loss/find-your-match">take our quiz</a> for a personalized recommendation. To see what any of these prices add up to over the months you have in mind, use the <a href="/weight-loss/glp1-cost-calculator">GLP-1 cost calculator</a>, which multiplies every verified price in our index by your timeframe and shows the regular price next to each promotion.  For the lowest verified prices across every medication we track, see the <a href="/weight-loss/cheapest-weight-loss-medication">most affordable weight loss medication</a> ranking. ',
       },
     ],
   },
@@ -1175,7 +1175,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Online or in-person: which should you choose?",
-        body: 'For most people, online weight loss programs offer the best combination of convenience, cost, and clinical quality. The medication is the same whether prescribed online or in-person - the difference is in the delivery experience. <a href="/weight-loss/find-your-match">Take our quiz</a> to find the best online provider for your goals, or <a href="/weight-loss/articles/choosing-telehealth-weight-loss-provider">read our guide</a> on choosing the right telehealth provider.',
+        body: 'For most people, online weight loss programs offer the best combination of convenience, cost, and clinical quality. The medication is the same whether prescribed online or in-person - the difference is in the delivery experience. <a href="/weight-loss/find-your-match">Take our quiz</a> to find the best online provider for your goals, or <a href="/weight-loss/articles/choosing-telehealth-weight-loss-provider">read our guide</a> on choosing the right telehealth provider. If online wins for you, start with our ranking of the <a href="/weight-loss/best-online-weight-loss-programs">best online weight loss programs</a>. ',
       },
     ],
   },
@@ -1223,7 +1223,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Where is the cheapest semaglutide?",
-        body: '<a href="/weight-loss/cheapest-glp1">Compare the most affordable providers</a> on our platform. Several offer compounded semaglutide starting at a verified $49/month with everything included. <a href="/weight-loss/find-your-match">Take our quiz</a> to find a provider that fits both your goals and budget. Prefer a tablet to a weekly pen? The two FDA-approved GLP-1 pills are compared in <a href="/weight-loss/articles/foundayo-vs-wegovy-pill">Foundayo vs the Wegovy pill</a>, and the semaglutide tablet\'s own price ladder is in <a href="/weight-loss/articles/wegovy-pill-price-online">Wegovy pill price online</a>.  The <a href="/weight-loss/glp1-cost-calculator">GLP-1 cost calculator</a> turns these monthly figures into 1-to-24-month totals for every provider in the index. ',
+        body: '<a href="/weight-loss/cheapest-glp1">Compare the most affordable providers</a> on our platform. Several offer compounded semaglutide starting at a verified $49/month with everything included. <a href="/weight-loss/find-your-match">Take our quiz</a> to find a provider that fits both your goals and budget. Prefer a tablet to a weekly pen? The two FDA-approved GLP-1 pills are compared in <a href="/weight-loss/articles/foundayo-vs-wegovy-pill">Foundayo vs the Wegovy pill</a>, and the semaglutide tablet\'s own price ladder is in <a href="/weight-loss/articles/wegovy-pill-price-online">Wegovy pill price online</a>.  The <a href="/weight-loss/glp1-cost-calculator">GLP-1 cost calculator</a> turns these monthly figures into 1-to-24-month totals for every provider in the index.  Semaglutide is not the only option at the low end: our <a href="/weight-loss/cheapest-weight-loss-medication">most affordable weight loss medication</a> ranking puts every verified price side by side. ',
       },
     ],
   },
@@ -1271,7 +1271,7 @@ export const articles: Article[] = [
       },
       {
         heading: "How Fast Can You Get Started?",
-        body: 'Most telehealth providers can complete your evaluation within 1-3 days and ship medication within 3-7 days of approval. Some offer expedited shipping. From first sign-up to first injection, most patients are started within 1-2 weeks. <a href="/">Compare provider shipping speeds</a> on our platform.',
+        body: 'Most telehealth providers can complete your evaluation within 1-3 days and ship medication within 3-7 days of approval. Some offer expedited shipping. From first sign-up to first injection, most patients are started within 1-2 weeks. <a href="/">Compare provider shipping speeds</a> on our platform. For the legitimate route, our guide to <a href="/weight-loss/ozempic-for-weight-loss">Ozempic for weight loss</a> covers the providers who prescribe it off-label, the pricing and the alternatives. ',
       },
     ],
   },
@@ -1315,7 +1315,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Which Should You Choose?",
-        body: 'For maximum weight loss: tirzepatide. For the most established option with widest availability: semaglutide. For patients who prefer or need an alternative: liraglutide. Your provider can help determine which is best based on your health profile. <a href="/weight-loss/find-your-match">Take our quiz</a> to find a provider that offers the medication best suited to your goals.',
+        body: 'For maximum weight loss: tirzepatide. For the most established option with widest availability: semaglutide. For patients who prefer or need an alternative: liraglutide. Your provider can help determine which is best based on your health profile. <a href="/weight-loss/find-your-match">Take our quiz</a> to find a provider that offers the medication best suited to your goals. If you have settled on a weekly injection and want to see who prescribes each one, our <a href="/weight-loss/best-weight-loss-injections">best weight loss injections</a> page compares the providers by medication. ',
       },
     ],
   },
@@ -1367,7 +1367,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Setting Realistic Expectations",
-        body: 'Sustainable weight loss is not instant weight loss. Providers and clinical data consistently show that <a href="https://www.cdc.gov/healthy-weight-growth/losing-weight/index.html" target="_blank" rel="noopener">patients who lose weight gradually (1-2 lbs per week) are more likely to keep it off long-term</a>. The medications accelerate this process compared to diet alone, but "fast" should mean "faster than without medication" - not overnight. Read about <a href="/weight-loss/articles/stopping-glp1-medication-what-happens">what happens when you stop</a> to understand why sustainability matters.',
+        body: 'Sustainable weight loss is not instant weight loss. Providers and clinical data consistently show that <a href="https://www.cdc.gov/healthy-weight-growth/losing-weight/index.html" target="_blank" rel="noopener">patients who lose weight gradually (1-2 lbs per week) are more likely to keep it off long-term</a>. The medications accelerate this process compared to diet alone, but "fast" should mean "faster than without medication" - not overnight. Read about <a href="/weight-loss/articles/stopping-glp1-medication-what-happens">what happens when you stop</a> to understand why sustainability matters. For the injectable options specifically, see our comparison of the <a href="/weight-loss/best-weight-loss-injections">best weight loss injections</a> and who prescribes them online. ',
       },
     ],
   },
@@ -1393,7 +1393,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Noom Med: GLP-1 Medication Access",
-        body: 'Noom Med connects patients with licensed providers who can prescribe GLP-1 medications. The program includes medical evaluation, ongoing provider support, and medication delivery. Noom Med focuses primarily on semaglutide-based treatments. See how it compares in our <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Ro</a> and <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Found</a> comparisons.',
+        body: 'Noom Med connects patients with licensed providers who can prescribe GLP-1 medications. The program includes medical evaluation, ongoing provider support, and medication delivery. Noom Med focuses primarily on semaglutide-based treatments. See where it sits in our ranking of the <a href="/weight-loss/best-online-weight-loss-programs">best online weight loss programs</a>.',
       },
       {
         heading: "How Much Does a Noom Subscription Cost?",
@@ -1405,7 +1405,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Noom Med vs Noom Coaching: What's the Difference?",
-        body: 'Noom offers two distinct programs. The original Noom coaching program focuses on behavioral change through daily lessons, food logging, and personal coaching - no medication involved. Noom Med is the newer medical program that adds GLP-1 medication access with physician oversight. You can use one or both. Most people interested in weight loss medication specifically should look at Noom Med. See how it compares in our <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Ro</a> comparison.',
+        body: 'Noom offers two distinct programs. The original Noom coaching program focuses on behavioral change through daily lessons, food logging, and personal coaching - no medication involved. Noom Med is the newer medical program that adds GLP-1 medication access with physician oversight. You can use one or both. Most people interested in weight loss medication specifically should look at Noom Med. See where it sits in our ranking of the <a href="/weight-loss/best-online-weight-loss-programs">best online weight loss programs</a>.',
       },
       {
         heading: "Who Should NOT Choose Noom?",
@@ -1413,7 +1413,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Noom vs Other Providers",
-        body: 'We\'ve compared Noom head-to-head with several providers: <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Ro</a> (coaching vs streamlined), <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Found</a> (two comprehensive programs), and <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Shed</a> (coaching vs personalized treatment). Each comparison highlights different trade-offs based on what matters most to you.',
+        body: 'Noom sits alongside Ro, Found and SHED in our ranking of the <a href="/weight-loss/best-online-weight-loss-programs">best online weight loss programs</a>, which sets out the trade-offs between coaching-led and medication-first providers; the individual reviews of <a href="/weight-loss/reviews/ro">ro</a> and <a href="/weight-loss/reviews/shed">SHED</a> cover each in depth.',
       },
       {
         heading: "Final Thoughts",
@@ -1605,7 +1605,7 @@ export const articles: Article[] = [
       },
       {
         heading: "How do you switch from Ozempic to an alternative?",
-        body: 'If you\'re currently on Ozempic, switching to compounded semaglutide is straightforward - it\'s the same medication. Your telehealth provider can match your current dose. Switching to tirzepatide requires a provider consultation to determine the appropriate starting dose. Either way, the transition is typically seamless. <a href="/weight-loss/find-your-match">Take our quiz</a> to find the right provider, or <a href="/weight-loss/articles/how-to-get-ozempic-online">read our guide</a> on getting semaglutide online.',
+        body: 'If you\'re currently on Ozempic, switching to compounded semaglutide is straightforward - it\'s the same medication. Your telehealth provider can match your current dose. Switching to tirzepatide requires a provider consultation to determine the appropriate starting dose. Either way, the transition is typically seamless. <a href="/weight-loss/find-your-match">Take our quiz</a> to find the right provider, or <a href="/weight-loss/articles/how-to-get-ozempic-online">read our guide</a> on getting semaglutide online. If you would still rather have Ozempic itself, our <a href="/weight-loss/ozempic-for-weight-loss">Ozempic for weight loss</a> guide covers the providers, the off-label pricing and the alternatives in one place. ',
       },
     ],
   },
@@ -1649,7 +1649,7 @@ export const articles: Article[] = [
       },
       {
         heading: "How do you choose a Wegovy alternative?",
-        body: 'Want the same semaglutide at lower cost? Compounded semaglutide through any reputable telehealth provider. Want stronger results? Consider tirzepatide. Want insurance coverage? Check if <a href="/weight-loss/reviews/found">Found</a> works with your plan. Not sure? <a href="/weight-loss/find-your-match">Take our matching quiz</a> for a personalized recommendation based on your goals and budget. Needle-averse? Two FDA-approved daily GLP-1 pills now exist, and <a href="/weight-loss/articles/foundayo-vs-wegovy-pill">Foundayo vs the Wegovy pill</a> compares them on results, routine and price. ',
+        body: 'Want the same semaglutide at lower cost? Compounded semaglutide through any reputable telehealth provider. Want stronger results? Consider tirzepatide. Want insurance coverage? Check if <a href="/weight-loss/reviews/found">Found</a> works with your plan. Not sure? <a href="/weight-loss/find-your-match">Take our matching quiz</a> for a personalized recommendation based on your goals and budget. Needle-averse? Two FDA-approved daily GLP-1 pills now exist, and <a href="/weight-loss/articles/foundayo-vs-wegovy-pill">Foundayo vs the Wegovy pill</a> compares them on results, routine and price.  Still want the brand? Our <a href="/weight-loss/wegovy-providers">best Wegovy providers</a> page lists who prescribes Wegovy online and what each charges, next to the alternatives above. ',
       },
     ],
   },
@@ -1751,7 +1751,7 @@ export const articles: Article[] = [
       },
       {
         heading: "How Does Noom Compare to Other Providers?",
-        body: 'We\'ve compared Noom head-to-head with several alternatives: <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Ro</a> (coaching vs streamlined telehealth), <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Found</a> (two comprehensive programs), and <a href="/weight-loss/best-online-weight-loss-programs">Noom vs Shed</a> (coaching vs personalized treatment). For a broader comparison, see our <a href="/">ranking of the best telehealth weight loss providers</a> or <a href="/">compare all providers</a> side by side.',
+        body: 'Noom sits alongside Ro, Found and SHED in our ranking of the <a href="/weight-loss/best-online-weight-loss-programs">best online weight loss programs</a>, which sets out the trade-offs between coaching-led and medication-first providers. For a broader comparison, see our <a href="/">ranking of the best telehealth weight loss providers</a> or <a href="/">compare all providers</a> side by side.',
       },
       {
         heading: "Can You Get Noom Cheaper?",
@@ -1957,7 +1957,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Which one should you choose?",
-        body: 'Decision logic, honestly ordered. Chasing maximum average efficacy with budget for brand: Zepbound leads the trial numbers. Insurance covering one of them: the covered one usually wins the math - check your formulary first. Self-pay: the compounded route\'s $49-$99/month changes the entire question, which is why it\'s our default starting point for cash payers - compare on the <a href="/weight-loss">ranking</a>. Diabetes plus weight goals: that\'s an Ozempic/Mounjaro-label conversation with your clinician. Whichever route: prescription required, titration takes months, and the provider\'s follow-up quality matters more than the logo on the pen. If a daily tablet suits you better than any of these pens, <a href="/weight-loss/articles/foundayo-vs-wegovy-pill">Foundayo vs the Wegovy pill</a> compares the two approved GLP-1 pills. ',
+        body: 'Decision logic, honestly ordered. Chasing maximum average efficacy with budget for brand: Zepbound leads the trial numbers. Insurance covering one of them: the covered one usually wins the math - check your formulary first. Self-pay: the compounded route\'s $49-$99/month changes the entire question, which is why it\'s our default starting point for cash payers - compare on the <a href="/weight-loss">ranking</a>. Diabetes plus weight goals: that\'s an Ozempic/Mounjaro-label conversation with your clinician. Whichever route: prescription required, titration takes months, and the provider\'s follow-up quality matters more than the logo on the pen. If a daily tablet suits you better than any of these pens, <a href="/weight-loss/articles/foundayo-vs-wegovy-pill">Foundayo vs the Wegovy pill</a> compares the two approved GLP-1 pills.  To get any of the three prescribed online, see <a href="/weight-loss/wegovy-providers">where to get Wegovy</a> and our guide to <a href="/weight-loss/ozempic-for-weight-loss">Ozempic for weight loss</a>, which covers the off-label route and its alternatives.  If none of the three fits your budget, see the <a href="/weight-loss/articles/best-wegovy-alternatives">best Wegovy alternatives</a> and the <a href="/weight-loss/articles/best-mounjaro-alternatives">best Mounjaro alternatives</a>. ',
       },
     ],
   },
@@ -1997,7 +1997,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What's the backup plan when insurance says no?",
-        body: 'The one this site exists to document: <strong><a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">self-pay compounded GLP-1s</a> at verified prices</strong> - semaglutide from $49/month (welludr), $69 (embody), $89 (altRx); tirzepatide from $89 - visit included, no PA, no formulary. Same active ingredients, prescribed after an online evaluation by licensed clinicians, from US state-licensed pharmacies (the <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded-vs-brand trade-offs, honestly</a>). Start at the <a href="/weight-loss/cheapest-glp1">verified price ladder</a> or the full <a href="/weight-loss">ranking</a>. The wrong backup plan: gray-market vials and "research peptides" - denial is not a reason to leave the licensed system.',
+        body: 'The one this site exists to document: <strong><a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">self-pay compounded GLP-1s</a> at verified prices</strong> - semaglutide from $49/month (welludr), $69 (embody), $89 (altRx); tirzepatide from $89 - visit included, no PA, no formulary. Same active ingredients, prescribed after an online evaluation by licensed clinicians, from US state-licensed pharmacies (the <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded-vs-brand trade-offs, honestly</a>). Start at the <a href="/weight-loss/cheapest-glp1">verified price ladder</a> or the full <a href="/weight-loss">ranking</a>. The wrong backup plan: gray-market vials and "research peptides" - denial is not a reason to leave the licensed system. If coverage falls through, the cash prices on our <a href="/weight-loss/cheapest-weight-loss-medication">most affordable weight loss medication</a> page are the fallback.  When a plan excludes Wegovy outright, the <a href="/weight-loss/articles/best-wegovy-alternatives">best Wegovy alternatives</a> guide covers the cash-pay routes. ',
       },
     ],
   },
@@ -2617,7 +2617,7 @@ export const articles: Article[] = [
       {
         heading: "The bottom line",
         body:
-          "The Wegovy pill price online in 2026 is <strong>$149 for the first month, then $299, plus membership at Ro</strong> - the one figure on this page we have verified - with Novo Nordisk's direct-pay tiers reported in the same $149-$299 range, <strong>as low as $25 with commercial coverage</strong> and <strong>$50 on Medicare's pilot</strong>. Those last two are the numbers that change the decision, so check coverage first. Every route requires a prescription, and a licensed clinician decides whether semaglutide is appropriate for you. This article is general information, not medical advice.",
+          "The Wegovy pill price online in 2026 is <strong>$149 for the first month, then $299, plus membership at Ro</strong> - the one figure on this page we have verified - with Novo Nordisk's direct-pay tiers reported in the same $149-$299 range, <strong>as low as $25 with commercial coverage</strong> and <strong>$50 on Medicare's pilot</strong>. Those last two are the numbers that change the decision, so check coverage first. Every route requires a prescription, and a licensed clinician decides whether semaglutide is appropriate for you.  For the injectable Wegovy and where to get it, see our <a href=\"/weight-loss/wegovy-providers\">best Wegovy providers</a> comparison.  If the brand price is the sticking point in either form, our guide to the <a href=\"/weight-loss/articles/best-wegovy-alternatives\">best Wegovy alternatives</a> covers the compounded and other brand routes. This article is general information, not medical advice.",
       },
     ],
   },
