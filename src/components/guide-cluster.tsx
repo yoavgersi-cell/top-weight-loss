@@ -133,29 +133,60 @@ export const WEIGHT_LOSS_GUIDES: GuideLink[] = [
   },
 ];
 
+// ───── ED guide cluster ─────
+// The same block for the erectile-dysfunction vertical: the cost index and
+// the core treatment guides, cross-linked from every ED guide, the cost
+// index and the vertical home. Slugs are relative to /ed (guides live under
+// /ed/articles/...). Titles mirror the destination H1s; blurbs carry no
+// figures.
+export const ED_GUIDES: GuideLink[] = [
+  { slug: "ed-cost-index", title: "ED Treatment Cost Index", blurb: "Every treatment route priced per dose and per month, with its source labelled." },
+  { slug: "articles/best-ed-treatments-compared", title: "Best ED Treatments Compared", blurb: "Pills, compounded formulas, sprays and injectables side by side." },
+  { slug: "articles/best-ed-medicine", title: "Best ED Medicine", blurb: "Which prescription ED medicines have the strongest evidence, and for whom." },
+  { slug: "articles/how-to-get-ed-treatment-online", title: "How to Get ED Treatment Online", blurb: "The four-step process a legitimate telehealth clinic follows." },
+  { slug: "articles/ed-treatment-cost", title: "How Much ED Treatment Costs", blurb: "What drives the price: the drug, the format and the provider." },
+  { slug: "articles/sildenafil-vs-cialis", title: "Sildenafil vs Tadalafil (Cialis)", blurb: "Onset, duration, food and which fits your routine." },
+  { slug: "articles/alternatives-to-viagra-and-cialis", title: "Alternatives to Viagra & Cialis", blurb: "Generic, compounded and non-pill options beyond the two famous brands." },
+  { slug: "articles/best-4-in-1-ed-medication", title: "Best 4-in-1 ED Medications", blurb: "Compounded multi-ingredient formulas compared, with the compounding caveat." },
+  { slug: "articles/ed-medication-side-effects", title: "ED Medication Side Effects", blurb: "What is common, what is rare and when to stop and call." },
+  { slug: "articles/ed-pills-and-blood-pressure-medication", title: "ED Pills and Blood Pressure Medication", blurb: "Nitrates, alpha-blockers and the combinations that are never safe." },
+  { slug: "articles/over-the-counter-ed-treatment", title: "Over-the-Counter ED Pills", blurb: "What actually works without a prescription and what does not." },
+  { slug: "articles/trimix-for-ed", title: "Trimix for ED", blurb: "The compounded injectable: how it works and how it compares." },
+  { slug: "articles/buying-ed-medication-online-safely", title: "Buying ED Medication Online Safely", blurb: "The checklist for a licensed clinic and a licensed pharmacy." },
+  { slug: "articles/what-causes-erectile-dysfunction", title: "What Causes Erectile Dysfunction", blurb: "Vascular, hormonal, neurological and psychological causes explained." },
+  { slug: "articles/ed-treatment-near-me", title: "ED Treatment Near You vs Online", blurb: "When a local clinic is the better call and when telehealth is." },
+];
+
 export function GuideCluster({
   currentSlug,
   prefix = "/weight-loss",
   className = "",
+  guides = WEIGHT_LOSS_GUIDES,
+  heading = "More GLP-1 guides",
+  intro = "The rest of our weight-loss medication guides, kept to the same verified-price standard.",
 }: {
   /** Slug of the page rendering the block - excluded from the list. */
   currentSlug: string;
   /** Link prefix; "/weight-loss" on the hub, "" on the legacy root routes. */
   prefix?: string;
   className?: string;
+  /** The cluster to render; defaults to the weight-loss guides. */
+  guides?: GuideLink[];
+  heading?: string;
+  intro?: string;
 }) {
-  const guides = WEIGHT_LOSS_GUIDES.filter((g) => g.slug !== currentSlug);
-  if (guides.length === 0) return null;
+  const list = guides.filter((g) => g.slug !== currentSlug);
+  if (list.length === 0) return null;
   return (
     <section className={`mt-10 ${className}`} aria-labelledby="guide-cluster-heading">
       <h2 id="guide-cluster-heading" className="mb-1 text-[20px] font-bold text-[#191919]">
-        More GLP-1 guides
+        {heading}
       </h2>
       <p className="mb-4 text-[14px] text-gray-500">
-        The rest of our weight-loss medication guides, kept to the same verified-price standard.
+        {intro}
       </p>
       <ul className="grid gap-2.5 sm:grid-cols-2">
-        {guides.map((g) => (
+        {list.map((g) => (
           <li key={g.slug}>
             <Link
               href={`${prefix}/${g.slug}`}

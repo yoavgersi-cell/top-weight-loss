@@ -21,7 +21,7 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
       { label: "TRT", href: "/trt", sub: [{ label: "Reviews", href: "/trt/reviews" }, { label: "Guides", href: "/trt/articles" }] },
       { label: "HRT", href: "/hrt", sub: [{ label: "Reviews", href: "/hrt/reviews" }, { label: "Guides", href: "/hrt/articles" }] },
       { label: "Online Therapy", href: "/online-therapy", sub: [{ label: "Reviews", href: "/online-therapy/reviews" }, { label: "Guides", href: "/online-therapy/articles" }] },
-      { label: "ED Treatment", href: "/ed", sub: [{ label: "Reviews", href: "/ed/reviews" }, { label: "Guides", href: "/ed/articles" }] },
+      { label: "Erectile Dysfunction (ED)", href: "/ed", sub: [{ label: "Reviews", href: "/ed/reviews" }, { label: "Guides", href: "/ed/articles" }] },
     ],
   },
   {

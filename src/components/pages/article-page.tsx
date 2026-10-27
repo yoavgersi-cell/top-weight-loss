@@ -27,6 +27,7 @@ import type { TrustpilotReview } from "@/lib/config";
 import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/reddit-community";
 import { notFound, permanentRedirect } from "next/navigation";
 import { relatedArticles as pickRelatedArticles } from "@/lib/related-content";
+import { GuideCluster, ED_GUIDES } from "@/components/guide-cluster";
 
 // Code-side CTR overrides for high-impression articles whose stored meta lives
 // in the CMS blob (so it can't be tuned from the content files). Applied only
@@ -941,6 +942,19 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 ))}
               </div>
             </div>
+          )}
+
+          {/* ED guide cluster: every ED guide links the cost index and the
+              core treatment guides, so each is reachable from all the others. */}
+          {ctx.vertical === "ed" && (
+            <GuideCluster
+              currentSlug={`articles/${slug}`}
+              prefix="/ed"
+              guides={ED_GUIDES}
+              heading="More erectile dysfunction (ED) guides"
+              intro="The rest of our ED treatment guides, from the same research team and the same sourcing standard."
+              className="mt-12"
+            />
           )}
 
           {/* Prev / Next navigation */}

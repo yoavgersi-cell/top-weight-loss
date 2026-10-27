@@ -192,7 +192,7 @@ const CATEGORY_NAME: Record<string, string> = {
   hrt: "HRT",
   "hearing-aids": "Hearing Aids",
   "online-therapy": "Online Therapy",
-  ed: "ED Treatment",
+  ed: "Erectile Dysfunction (ED)",
 };
 
 // Real, keyword-rich internal links surfaced on a live category card. Only

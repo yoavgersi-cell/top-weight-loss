@@ -7,6 +7,7 @@ import { LastUpdated } from "@/components/last-updated";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { notFound } from "next/navigation";
 import { pageReviewSchema } from "@/data/reviewers";
+import { GuideCluster, ED_GUIDES } from "@/components/guide-cluster";
 import {
   COST_INDEX,
   COST_INDEX_UPDATED,
@@ -23,9 +24,9 @@ const VERTICAL_URL = `${SITE_URL}/ed`;
 const CANONICAL = `${VERTICAL_URL}/ed-cost-index`;
 
 export const metadata: Metadata = {
-  title: "ED Treatment Cost Index 2026: What ED Meds Cost Online",
+  title: "Erectile Dysfunction (ED) Treatment Cost Index 2026",
   description:
-    "A sourced index of what ED treatment costs online in 2026: generic pills, brand-name, compounded 4-in-1, nasal spray and injectables, per dose and per month.",
+    "A sourced index of what erectile dysfunction (ED) treatment costs online in 2026: generic pills, brand-name, compounded 4-in-1, nasal spray and injectables.",
   alternates: { canonical: CANONICAL },
   openGraph: { images: [DEFAULT_OG_IMAGE],
     title: "ED Treatment Cost Index (2026)",
@@ -138,9 +139,9 @@ export default async function EdCostIndexPage({ params }: { params: Promise<{ ba
       {/* Hero */}
       <div className="border-b border-gray-200 bg-white">
         <div className="mx-auto max-w-[1000px] px-4 py-12 sm:px-6 sm:py-16">
-          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "ED Treatment", href: "/ed" }, { label: "ED Treatment Cost Index" }]} />
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Erectile Dysfunction (ED) Treatment", href: "/ed" }, { label: "ED Treatment Cost Index" }]} />
           <h1 className="text-[28px] font-extrabold text-[#191919] sm:text-[36px]">
-            ED Treatment Cost Index (2026)
+            Erectile Dysfunction (ED) Treatment Cost Index (2026)
           </h1>
           <p className="mt-3 max-w-[680px] text-[16px] leading-relaxed text-gray-500">
             What does erectile-dysfunction treatment actually cost online? We compiled the prices
@@ -305,6 +306,14 @@ export default async function EdCostIndexPage({ params }: { params: Promise<{ ba
             clinician. Confirm current pricing directly with each provider.
           </p>
         </section>
+        <GuideCluster
+          currentSlug="ed-cost-index"
+          prefix="/ed"
+          guides={ED_GUIDES}
+          heading="More erectile dysfunction (ED) guides"
+          intro="Our ED treatment guides, from the same research team and the same sourcing standard."
+          className="mt-4 pb-12"
+        />
       </div>
     </div>
   );

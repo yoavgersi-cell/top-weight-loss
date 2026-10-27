@@ -55,7 +55,7 @@ export const ED_GUIDES_2026_10: ArticleData[] = [
     sections: [
       {
         heading: "How long does sildenafil last?",
-        body: `<div class="qa"><strong>How long does sildenafil last?</strong><p>Sildenafil is taken about one hour before sexual activity, any time from 30 minutes to 4 hours beforehand, and it should not be taken more than once in 24 hours. During that window it helps an erection happen when you are sexually stimulated. It does not keep working all day, and a high-fat meal can delay when it starts. Source: ${ext(SOURCES.sildenafil, "MedlinePlus sildenafil monograph")}, checked October 21, 2026.</p></div>`,
+        body: `<div class="qa"><strong>How long does sildenafil last?</strong><p>Sildenafil, the standard erectile dysfunction (ED) medicine, is taken about one hour before sexual activity, any time from 30 minutes to 4 hours beforehand, and it should not be taken more than once in 24 hours. During that window it helps an erection happen when you are sexually stimulated. It does not keep working all day, and a high-fat meal can delay when it starts. Source: ${ext(SOURCES.sildenafil, "MedlinePlus sildenafil monograph")}, checked October 21, 2026.</p></div>`,
       },
       {
         heading: "When should you take sildenafil?",
@@ -243,7 +243,7 @@ export const ED_GUIDES_2026_10: ArticleData[] = [
     sections: [
       {
         heading: "Why does diabetes cause ED, and how is it treated?",
-        body: `<div class="qa"><strong>Why does diabetes cause ED?</strong><p>High blood glucose over time damages the small blood vessels and the nerves that an erection depends on, so less blood gets in and the signal to start the process is weaker. The NIDDK states that more than half of men with diabetes will get ED, that they are more than three times as likely to develop it as men without diabetes, and that it tends to start 10 to 15 years earlier. Managing glucose may help prevent and treat it, and a clinician can also treat it directly with medication. Source: ${ext(SOURCES.niddkDiabetes, "NIDDK, Diabetes, Sexual, and Bladder Problems")}, checked October 21, 2026.</p></div>`,
+        body: `<div class="qa"><strong>Why does diabetes cause erectile dysfunction (ED)?</strong><p>High blood glucose over time damages the small blood vessels and the nerves that an erection depends on, so less blood gets in and the signal to start the process is weaker. The NIDDK states that more than half of men with diabetes will get ED, that they are more than three times as likely to develop it as men without diabetes, and that it tends to start 10 to 15 years earlier. Managing glucose may help prevent and treat it, and a clinician can also treat it directly with medication. Source: ${ext(SOURCES.niddkDiabetes, "NIDDK, Diabetes, Sexual, and Bladder Problems")}, checked October 21, 2026.</p></div>`,
       },
       {
         heading: "How common is ED in men with diabetes?",
@@ -289,7 +289,7 @@ export const ED_GUIDES_2026_10: ArticleData[] = [
     sections: [
       {
         heading: "Can you take ED pills with blood pressure medication?",
-        body: `<div class="qa"><strong>Can I take ED pills with my blood pressure medication?</strong><p>It depends which one. Nitrates of any kind are never combined with sildenafil or tadalafil, because together they can drop blood pressure dangerously. Alpha-blockers can be combined once you are stable on the alpha-blocker and the ED drug is started at its lowest dose. Most other blood-pressure medicines combine with only a small extra drop in pressure, which a clinician accounts for. Bring your full medication list to the intake. Sources: ${ext(SOURCES.sildenafil, "MedlinePlus sildenafil")} and ${ext(SOURCES.tadalafil, "MedlinePlus tadalafil")} monographs, checked October 21, 2026.</p></div>`,
+        body: `<div class="qa"><strong>Can I take erectile dysfunction (ED) pills with my blood pressure medication?</strong><p>It depends which one. Nitrates of any kind are never combined with sildenafil or tadalafil, because together they can drop blood pressure dangerously. Alpha-blockers can be combined once you are stable on the alpha-blocker and the ED drug is started at its lowest dose. Most other blood-pressure medicines combine with only a small extra drop in pressure, which a clinician accounts for. Bring your full medication list to the intake. Sources: ${ext(SOURCES.sildenafil, "MedlinePlus sildenafil")} and ${ext(SOURCES.tadalafil, "MedlinePlus tadalafil")} monographs, checked October 21, 2026.</p></div>`,
       },
       {
         heading: "Why blood pressure is the whole question",
@@ -339,7 +339,7 @@ export const ED_GUIDES_2026_10: ArticleData[] = [
     sections: [
       {
         heading: "How do you buy ED medication online safely?",
-        body: `<div class="qa"><strong>Is it safe to buy ED pills online?</strong><p>Yes, through a licensed telehealth clinic and a licensed pharmacy, and no, from a site that sells them without a prescription. The FDA's BeSafeRx guidance says a safe online pharmacy always requires a valid prescription, is licensed by a state board of pharmacy, has a US-licensed pharmacist available to answer questions, and lists a US street address and phone number. Sites that skip the prescription, sell "herbal" ED products, or ship from unknown locations are the ones the FDA has caught selling pills with hidden or wrong ingredients. Sources: ${ext(SOURCES.fdaBeSafeRx, "FDA BeSafeRx")} and ${ext(SOURCES.fdaTainted, "FDA tainted sexual enhancement products")}, checked October 21, 2026.</p></div>`,
+        body: `<div class="qa"><strong>Is it safe to buy erectile dysfunction (ED) pills online?</strong><p>Yes, through a licensed telehealth clinic and a licensed pharmacy, and no, from a site that sells them without a prescription. The FDA's BeSafeRx guidance says a safe online pharmacy always requires a valid prescription, is licensed by a state board of pharmacy, has a US-licensed pharmacist available to answer questions, and lists a US street address and phone number. Sites that skip the prescription, sell "herbal" ED products, or ship from unknown locations are the ones the FDA has caught selling pills with hidden or wrong ingredients. Sources: ${ext(SOURCES.fdaBeSafeRx, "FDA BeSafeRx")} and ${ext(SOURCES.fdaTainted, "FDA tainted sexual enhancement products")}, checked October 21, 2026.</p></div>`,
       },
       {
         heading: "Why is 'no prescription needed' the warning sign?",
