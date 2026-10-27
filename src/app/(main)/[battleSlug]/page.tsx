@@ -1,5 +1,5 @@
 import { MedicalReviewBar } from "@/components/medical-review-bar";
-import { pageReviewSchema } from "@/data/reviewers";
+import { medicalWebPageFields } from "@/lib/medical-schema";
 import type { Metadata } from "next";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED, DEFAULT_VERTICAL, VERTICALS, isVertical, isPublishedVertical } from "@/lib/config";
@@ -100,12 +100,13 @@ export default async function BattlePage({
     // WebPage + ItemList schema (authorship, freshness, ranked entities) and the
     // FAQ schema - the same E-E-A-T / rich-result signals the standalone home
     // carried, so the vertical home isn't a thinner page than before.
+    // Top-level page node: a MedicalWebPage with audience, condition and
+    // (where logged) reviewer - see src/lib/medical-schema.ts.
     const webPageSchema = {
       "@context": "https://schema.org",
-      "@type": "WebPage",
+      ...medicalWebPageFields(battleSlug, canonicalUrl(ctx, "/"), `/${battleSlug}`),
       name: vConfig.hero.h1,
       description: vConfig.hero.description,
-      url: canonicalUrl(ctx, "/"),
       inLanguage: "en-US",
       datePublished: "2026-06-01",
       dateModified: CONTENT_LAST_UPDATED,
@@ -113,7 +114,6 @@ export default async function BattlePage({
       ...(author && {
         author: { "@type": "Organization", name: researchTeam, url: canonicalUrl(ctx, "/about") },
       }),
-      ...pageReviewSchema(`/${battleSlug}`),
       publisher: {
         "@type": "Organization",
         name: ctx.brandName,
