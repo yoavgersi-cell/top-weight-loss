@@ -1,4 +1,5 @@
 import { pageReviewSchema } from "@/data/reviewers";
+import { medicalWebPageFields } from "@/lib/medical-schema";
 import type { Metadata } from "next";
 import { Fragment } from "react";
 import Link from "next/link";
@@ -470,17 +471,14 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     const focus = ctx.vertical === "weight-loss" ? landingFocusFor(landing.slug, baseOrder) : null;
     const providerOrder = focus ? focus.providerIds : baseOrder;
 
+    // Top-level page node: a MedicalWebPage with audience, condition and
+    // (where logged) reviewer - see src/lib/medical-schema.ts.
     const schemaData = {
       "@context": "https://schema.org",
-      "@type": "WebPage",
+      ...medicalWebPageFields(ctx.vertical, canonicalUrl(ctx, `/${landing.slug}`), `/${ctx.vertical}/${landing.slug}`),
       name: landing.seoTitle,
       description: landing.seoDescription,
-      url: canonicalUrl(ctx, `/${landing.slug}`),
       dateModified: landing.updatedAt || CONTENT_LAST_UPDATED,
-      // reviewedBy / lastReviewed only when REVIEW_LOG holds an entry for this
-      // landing page (Oct 26, 2026: the keyword and TRT landings were the last
-      // template without it).
-      ...pageReviewSchema(`/${ctx.vertical}/${landing.slug}`),
       publisher: { "@type": "Organization", name: ctx.brandName, url: ctx.origin },
     };
 
@@ -753,7 +751,9 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
       url: ctx.origin,
       logo: { "@type": "ImageObject", url: `${ctx.origin}/treatmentshub.png` },
     },
-    mainEntityOfPage: canonicalUrl(ctx, `/${battle.slug}`),
+    // Page entity: a MedicalWebPage with audience, condition and (where logged)
+    // reviewer - see src/lib/medical-schema.ts.
+    mainEntityOfPage: medicalWebPageFields(ctx.vertical, canonicalUrl(ctx, `/${battle.slug}`), `/${ctx.vertical}/${battle.slug}`),
   };
 
   const battleBreadcrumbSchema = {

@@ -1,5 +1,5 @@
 import { MedicalReviewBar } from "@/components/medical-review-bar";
-import { pageReviewSchema } from "@/data/reviewers";
+import { medicalWebPageFields } from "@/lib/medical-schema";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
@@ -59,13 +59,13 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
     (b) => ids.has(b.provider1Id) && ids.has(b.provider2Id)
   );
 
+  // Top-level page node: a MedicalWebPage with audience, condition and (where
+  // logged) reviewer - see src/lib/medical-schema.ts.
   const webPageSchema = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    ...pageReviewSchema(`/${ctx.vertical}/${trio.slug}`),
+    ...medicalWebPageFields(ctx.vertical, url, `/${ctx.vertical}/${trio.slug}`),
     name: trio.metaTitle,
     description: trio.description,
-    url,
     dateModified: trio.updatedAt ?? TEMPLATES_LAST_UPDATED,
     publisher: { "@type": "Organization", name: ctx.brandName, url: ctx.origin },
     mainEntity: {

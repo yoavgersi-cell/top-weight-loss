@@ -21,6 +21,7 @@ import { ReviewInsights } from "@/components/review-insights";
 import { FeaturedReviews } from "@/components/featured-reviews";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
+import { medicalWebPageFields } from "@/lib/medical-schema";
 import { LastUpdated } from "@/components/last-updated";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
@@ -775,7 +776,9 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         sameAs: [getReviewRecord(ctx.vertical, provider.id)!.profileUrl],
       }),
     },
-    mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl(ctx, `/reviews/${slug}`) },
+    // Page entity: a MedicalWebPage with audience, condition and (where logged)
+    // reviewer - see src/lib/medical-schema.ts.
+    mainEntityOfPage: medicalWebPageFields(ctx.vertical, canonicalUrl(ctx, `/reviews/${slug}`), `/${ctx.vertical}/reviews/${slug}`),
   };
 
   const breadcrumbSchema = {

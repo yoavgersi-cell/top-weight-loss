@@ -10,6 +10,7 @@ import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
+import { medicalWebPageFields } from "@/lib/medical-schema";
 import { MedicalSources } from "@/components/medical-sources";
 import { MedicalDisclaimer } from "@/components/medical-disclaimer";
 import { ProductCarousel } from "@/components/product-carousel";
@@ -448,15 +449,11 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
         url: `${ctx.origin}/logo-mark.png`,
       },
     },
-    // Medical content (Science / Guide / Wellness) is typed as a MedicalWebPage
-    // so the reviewedBy / lastReviewed signal sits on the page entity Google
-    // expects it on; provider-business articles (Advice: legit, cost,
-    // alternatives) stay plain WebPage.
-    mainEntityOfPage: {
-      "@type": ["Science", "Guide", "Wellness"].includes(article.category) ? "MedicalWebPage" : "WebPage",
-      "@id": canonicalUrl(ctx, `/articles/${slug}`),
-      ...pageReviewSchema(`/${ctx.vertical}/articles/${slug}`),
-    },
+    // Every article's page entity is a MedicalWebPage (Oct 27, 2026: was
+    // Science/Guide/Wellness only) with its audience, the condition the
+    // vertical addresses, and reviewedBy / lastReviewed where the log has an
+    // entry - the page entity Google expects those signals on.
+    mainEntityOfPage: medicalWebPageFields(ctx.vertical, canonicalUrl(ctx, `/articles/${slug}`), `/${ctx.vertical}/articles/${slug}`),
     keywords: [
       "weight loss",
       "GLP-1",
