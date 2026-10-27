@@ -92,7 +92,11 @@ export default async function ReviewAnalysisPage({ params }: { params: Promise<{
   const nameOfCategory = (c: keyof typeof THEME_CATEGORY_LABELS) => THEME_CATEGORY_LABELS[c];
   const busiest = [...a.months.rows].sort((x, y) => y.count - x.count)[0];
 
-  const title = `What ${a.total} ${name} Customers Say: An Analysis of Their Trustpilot Reviews`;
+  // Providers that changed their trading name keep the old one in brackets so
+  // readers who know the former name recognise the page (id and slug unchanged).
+  const FORMER_NAMES: Record<string, string> = { wellmedr: "wellmedr" };
+  const former = FORMER_NAMES[providerId];
+  const title = `What ${a.total} ${name}${former ? ` (formerly ${former})` : ""} Customers Say: An Analysis of Their Trustpilot Reviews`;
 
   const FAQS = [
     {
@@ -155,7 +159,7 @@ export default async function ReviewAnalysisPage({ params }: { params: Promise<{
           <Breadcrumbs items={[{ label: "Home", href: "/weight-loss" }, { label: "Reviews", href: "/weight-loss/reviews" }, { label: `${name} review`, href: reviewHref }, { label: "Review analysis" }]} />
           <h1 className="max-w-[860px] text-[27px] font-extrabold leading-[1.15] text-[#191919] sm:text-[36px]">{title}</h1>
           <p className="mt-3 max-w-[760px] text-[16px] leading-relaxed text-gray-500">
-            We transcribed {a.total} reviews from {name}&rsquo;s public Trustpilot profile
+            We transcribed {a.total} reviews from {name}&rsquo;s{former ? ` (formerly ${former}&rsquo;s)` : ""} public Trustpilot profile
             {a.range && <> (dated {longDate(a.range.from)} to {longDate(a.range.to)})</>}
             {captured && <>, most recently captured {captured}</>}, read every one, and tagged what it praises and what it
             complains about. This page is the result as a data set: the star split, the themes ranked by how many reviews

@@ -307,9 +307,9 @@ export const brandClusterArticles: Article[] = [
   // ═════ welludr ═════
   {
     slug: "wellmedr-cost",
-    title: "welludr Cost 2026: The Full $49/Month Math, Dose by Dose",
+    title: "welludr (formerly wellmedr) Cost 2026: The $49/Month Math",
     description:
-      "welludr's real GLP-1 cost: $49/month semaglutide and $89 tirzepatide at every dose, $588 for a full year. How the lock-in works and where brand-name fits.",
+      "welludr's (formerly wellmedr) real GLP-1 cost: $49/month semaglutide and $89 tirzepatide at every dose, $588 a year. How the 12-month lock-in works.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-13",
@@ -347,9 +347,9 @@ export const brandClusterArticles: Article[] = [
   },
   {
     slug: "wellmedr-alternatives",
-    title: "welludr Alternatives 2026: What Beats $49/Month, and How",
+    title: "welludr (formerly wellmedr) Alternatives 2026, Compared",
     description:
-      "Nothing undercuts welludr's $49/month GLP-1 plan - so every alternative competes on something else. Six rivals compared on the specific thing each does better.",
+      "Nothing undercuts the $49/month GLP-1 plan at welludr (formerly wellmedr), so every alternative competes on something else. Six rivals compared.",
     category: "Comparison",
     readTime: "7 min read",
     publishedAt: "2026-08-15",
