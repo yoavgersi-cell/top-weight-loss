@@ -140,6 +140,7 @@ export const WEIGHT_LOSS_GUIDES: GuideLink[] = [
 // /ed/articles/...). Titles mirror the destination H1s; blurbs carry no
 // figures.
 export const ED_GUIDES: GuideLink[] = [
+  { slug: "articles/erectile-dysfunction-treatment-complete-guide", title: "Erectile Dysfunction Treatment: The Complete Guide", blurb: "Causes, diagnosis, every treatment class, what to do when pills fail, and getting treated online." },
   { slug: "ed-cost-index", title: "ED Treatment Cost Index", blurb: "Every treatment route priced per dose and per month, with its source labelled." },
   { slug: "articles/best-ed-treatments-compared", title: "Best ED Treatments Compared", blurb: "Pills, compounded formulas, sprays and injectables side by side." },
   { slug: "articles/best-ed-medicine", title: "Best ED Medicine", blurb: "Which prescription ED medicines have the strongest evidence, and for whom." },
