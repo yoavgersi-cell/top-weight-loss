@@ -22,6 +22,21 @@ export type GuideLink = {
 
 export const WEIGHT_LOSS_GUIDES: GuideLink[] = [
   {
+    slug: "glp1-cost-calculator",
+    title: "GLP-1 Cost Calculator",
+    blurb: "Pick a provider, a medication and a number of months; totals from the verified price index.",
+  },
+  {
+    slug: "glp1-bmi-calculator",
+    title: "BMI & GLP-1 Eligibility Check",
+    blurb: "Your BMI and whether it meets the Wegovy and Zepbound label criteria.",
+  },
+  {
+    slug: "glp1-dose-schedule",
+    title: "Dose Schedule Timeline",
+    blurb: "The labelled escalation steps for Wegovy and Zepbound mapped to your calendar.",
+  },
+  {
     slug: "how-to-choose-a-glp1-provider",
     title: "How to Choose a GLP-1 Provider",
     blurb: "12 checks, ten providers, verified prices and Trustpilot records.",
