@@ -15,6 +15,7 @@ import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { TrustpilotSummary } from "@/components/trustpilot-summary";
 import { getReviewRecord } from "@/data/reviews";
+import { analysisPath, hasReviewAnalysis } from "@/lib/review-analysis";
 import { THREE_WAY_COMPARISONS } from "@/lib/three-way";
 import { CustomerThemes } from "@/components/customer-themes";
 import { ReviewInsights } from "@/components/review-insights";
@@ -1076,6 +1077,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           <ReviewInsights
             providerName={provider.name}
             record={getReviewRecord(ctx.vertical, provider.id)!}
+            analysisHref={hasReviewAnalysis(provider.id) ? analysisPath(provider.id) : undefined}
             className="mb-8"
           />
         )}
