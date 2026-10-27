@@ -19,7 +19,9 @@ export async function articlesIndexMetadata(ctx: SiteContext): Promise<Metadata>
   const description =
     ctx.vertical === "weight-loss"
       ? `Evidence-based weight loss guides for 2026 - GLP-1 treatment options, verified costs, what to expect, and how to choose the right online provider.`
-      : `Evidence-based ${verticalNameInProse(vName)} guides for 2026 - treatment options, verified costs, what to expect, and how to choose the right online provider.`;
+      : ctx.vertical === "ed"
+        ? `Evidence-based erectile dysfunction (ED) guides for 2026 - treatment options, verified costs, what to expect, and how to choose an online provider.`
+        : `Evidence-based ${verticalNameInProse(vName)} guides for 2026 - treatment options, verified costs, what to expect, and how to choose the right online provider.`;
   return {
     title,
     description,

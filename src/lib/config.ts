@@ -351,7 +351,7 @@ export const VERTICALS: Vertical[] = [
   { id: "hearing-aids", name: "Hearing Aids", tagline: "OTC hearing devices you can order online, compared", accent: "#1673B9" },
   { id: "online-therapy", name: "Online Therapy", tagline: "Therapy, psychiatry & mental-health platforms, compared", accent: "#5C55A6" },
   // Oct 21, 2026: ported from the standalone edtreatmenthub.com site.
-  { id: "ed", name: "ED Treatment", tagline: "Online erectile-dysfunction treatment - pills, compounded options & clinics, compared", accent: "#1E3A5F" },
+  { id: "ed", name: "Erectile Dysfunction (ED) Treatment", tagline: "Online erectile dysfunction treatment - pills, compounded options & clinics, compared", accent: "#1E3A5F" },
 ];
 
 export const DEFAULT_VERTICAL = "weight-loss";

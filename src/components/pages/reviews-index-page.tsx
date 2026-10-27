@@ -31,7 +31,7 @@ export async function reviewsIndexMetadata(ctx: SiteContext): Promise<Metadata> 
   const title = indexTitleCandidates.find((t) => t.length <= 60) ?? indexTitleCandidates[indexTitleCandidates.length - 1];
   // Weight-loss names the category searchers actually use (GLP-1); other
   // verticals keep the vertical name.
-  const categoryLabel = ctx.vertical === "weight-loss" ? "GLP-1 weight loss" : verticalNameInProse(vName);
+  const categoryLabel = ctx.vertical === "weight-loss" ? "GLP-1 weight loss" : ctx.vertical === "ed" ? "erectile dysfunction (ED)" : verticalNameInProse(vName);
   const description = `Independent 2026 reviews of ${config.reviews?.length ?? "the top"} online ${categoryLabel} providers${topNames.length ? ` - ${topNames.join(", ")} and more` : ""} - with verified ratings, pricing, pros and cons.`;
   return {
     title,

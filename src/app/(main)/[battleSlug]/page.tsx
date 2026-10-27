@@ -17,6 +17,7 @@ import { EdEditorialContent } from "@/components/editorial-content-ed";
 import { BattlePageView, battleMetadata } from "@/components/pages/battle-page";
 import { ProductCarousel } from "@/components/product-carousel";
 import { LatestGuides, newestGuides } from "@/components/latest-guides";
+import { GuideCluster, ED_GUIDES } from "@/components/guide-cluster";
 import { notFound } from "next/navigation";
 
 export const revalidate = 3600;
@@ -197,6 +198,15 @@ export default async function BattlePage({
               allHref={`/${battleSlug}/articles`}
               allLabel={`All ${verticalName} guides`}
             />
+            {battleSlug === "ed" && (
+              <GuideCluster
+                currentSlug=""
+                prefix="/ed"
+                guides={ED_GUIDES}
+                heading="Erectile dysfunction (ED) treatment guides"
+                intro="The cost index and the core treatment guides behind this ranking."
+              />
+            )}
           </section>
           <div className="mx-auto max-w-[1200px] px-4 pb-12">
             <MedicalDisclaimer vertical={battleSlug} />

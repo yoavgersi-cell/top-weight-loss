@@ -648,9 +648,11 @@ export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Me
   // signal. Their titles carry the vertical name to differentiate.
   // Oct 21, 2026: dudemeds (TRT + ED), shed and directmeds (weight-loss + ED) joined.
   const SHARED_REVIEW_PROVIDER_IDS = ["ro", "maximus", "petermd", "hims", "dudemeds", "shed", "directmeds"];
-  const verticalQualifier = SHARED_REVIEW_PROVIDER_IDS.includes(provider.id)
-    ? ` ${VERTICALS.find((v) => v.id === ctx.vertical)?.name ?? ""}`.trimEnd() + " "
-    : " ";
+  // The ED vertical's full name ("Erectile Dysfunction (ED) Treatment") would
+  // push every shared-provider title past 60 characters; the review titles
+  // keep the short form and the pages carry the full term in the body.
+  const verticalLabel = ctx.vertical === "ed" ? "ED Treatment" : (VERTICALS.find((v) => v.id === ctx.vertical)?.name ?? "");
+  const verticalQualifier = SHARED_REVIEW_PROVIDER_IDS.includes(provider.id) ? ` ${verticalLabel}`.trimEnd() + " " : " ";
   // Oct 25, 2026: keep every generated title within 60 characters (Ahrefs
   // "title too long"); long names with a vertical qualifier step down to a
   // shorter tail rather than overflowing.
