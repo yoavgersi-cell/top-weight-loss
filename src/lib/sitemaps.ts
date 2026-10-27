@@ -21,6 +21,7 @@ import {
 } from "@/lib/config";
 import { WEIGHT_LOSS_MIGRATED } from "@/lib/site-context";
 import { articles } from "@/data/articles";
+import { analysisPath, reviewAnalysisRecords } from "@/lib/review-analysis";
 
 const BASE_URL = "https://www.topweightloss.io";
 const HUB_URL = "https://www.treatmentshub.com";
@@ -247,6 +248,17 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
         lastModified: FALLBACK_DATE,
         changeFrequency: s.changeFrequency,
         priority: s.priority,
+      }))
+    );
+    // Review-analysis pages: one per provider whose stored review set is
+    // large enough (src/lib/review-analysis). Rendered from the registry, so
+    // the list here is derived from it too.
+    entries.push(
+      ...reviewAnalysisRecords().map((r) => ({
+        url: P(analysisPath(r.providerId).replace(/^\/weight-loss/, "")),
+        lastModified: FALLBACK_DATE,
+        changeFrequency: "weekly" as const,
+        priority: 0.8,
       }))
     );
   }

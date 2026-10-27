@@ -8,6 +8,7 @@ import {
   type ThemeCategory,
 } from "@/data/reviews/themes";
 import { formatReviewDate } from "@/data/reviews";
+import { analysisPath, hasReviewAnalysis } from "@/lib/review-analysis";
 
 // ───── Review face-off ─────
 // Two providers' stored review sets side by side, by experience area. For
@@ -148,6 +149,17 @@ export function ReviewFaceoff({
           ranking. The themes behind each number, with excerpts, are on the{" "}
           <Link href={A.href} className="text-[#0C4B75] underline underline-offset-2 hover:text-[#093d61]">{A.name} review</Link> and the{" "}
           <Link href={B.href} className="text-[#0C4B75] underline underline-offset-2 hover:text-[#093d61]">{B.name} review</Link>.{" "}
+          {(hasReviewAnalysis(A.record.providerId) || hasReviewAnalysis(B.record.providerId)) && (
+            <>
+              Full analysis of each stored set:{" "}
+              {[A, B].filter((s) => hasReviewAnalysis(s.record.providerId)).map((s, i, arr) => (
+                <span key={s.record.providerId}>
+                  <Link href={analysisPath(s.record.providerId)} className="text-[#0C4B75] underline underline-offset-2 hover:text-[#093d61]">{s.name}</Link>
+                  {i < arr.length - 1 ? " and " : ". "}
+                </span>
+              ))}
+            </>
+          )}
           <Link href="/weight-loss/how-we-rank#customer-reviews" className="text-[#0C4B75] underline underline-offset-2 hover:text-[#093d61]">
             How we collect customer reviews
           </Link>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { ProviderReviewRecord } from "@/data/reviews/types";
 import { REVIEW_THEMES, resolveThemes } from "@/data/reviews/themes";
 
@@ -17,11 +18,14 @@ export function ReviewInsights({
   providerName,
   record,
   fullHref = "#customer-themes-heading",
+  analysisHref,
   className = "",
 }: {
   providerName: string;
   record: ProviderReviewRecord;
   fullHref?: string;
+  /** The provider's review-analysis page, when its stored set is large enough to have one. */
+  analysisHref?: string;
   className?: string;
 }) {
   const themes = REVIEW_THEMES[record.providerId];
@@ -71,6 +75,14 @@ export function ReviewInsights({
         <a href={fullHref} className="text-[#0C4B75] underline underline-offset-2 hover:text-[#093d61]">
           Every theme, with excerpts
         </a>
+        {analysisHref && (
+          <>
+            {" "}&middot;{" "}
+            <Link href={analysisHref} className="text-[#0C4B75] underline underline-offset-2 hover:text-[#093d61]">
+              Full analysis of all {total} reviews
+            </Link>
+          </>
+        )}
       </p>
     </section>
   );
