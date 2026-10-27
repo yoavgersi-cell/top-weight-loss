@@ -3963,7 +3963,9 @@ function fixBrandText(s: string): string {
     .replace(/(?<![/\w"'.-])trimrx(?![\w"-]|'(?!s\b))/g, "TrimRx")
     // wellmedr -> welludr rebrand (Oct 19, 2026): prose only, same guards, so
     // CMS-saved text follows the new name while paths and slugs stay intact.
-    .replace(/(?<![/\w"'.-])wellmedr(?![\w"-]|'(?!s\b))/g, "welludr");
+    // "(formerly wellmedr)" is the one place the old name must survive, so
+    // readers and searches that know it still recognise the page.
+    .replace(/(?<![/\w"'.-])(?<!formerly )wellmedr(?![\w"-]|'(?!s\b))/g, "welludr");
   // Skip all-lowercase single-token matches (likely slugs/URLs in HTML bodies)
   return BRAND_TEXT_FIXES.reduce(
     (acc, [re, to]) => acc.replace(re, (m) => (m === m.toLowerCase() && !/\s/.test(m) ? m : to)),

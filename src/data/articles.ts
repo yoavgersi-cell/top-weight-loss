@@ -2003,9 +2003,9 @@ export const articles: Article[] = [
   },
   {
     slug: "is-wellmedr-legit",
-    title: "Is welludr Legit? Reviews, Complaints & Real Prices (2026)",
+    title: "Is welludr (formerly wellmedr) Legit? Reviews, Prices (2026)",
     description:
-      "welludr holds a verified 4.6 on Trustpilot across 2,679 reviews. What reviews and complaints say, the real $49-$89 GLP-1 pricing structure, and our verdict.",
+      "welludr (formerly wellmedr) holds a verified 4.6 on Trustpilot across 2,679 reviews. What complaints say, the real $49-$89 GLP-1 pricing, and our verdict.",
     category: "Advice",
     readTime: "8 min read",
     publishedAt: "2026-08-30",

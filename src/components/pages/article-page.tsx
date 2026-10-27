@@ -44,9 +44,9 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
       "Is embody legit or a scam? LegitScript-certified 503A pharmacies, licensed-provider prescribing, $69 semaglutide, $119 tirzepatide, refund if not approved.",
   },
   "is-wellmedr-legit": {
-    title: "Is welludr Legit or a Scam? Reviews, Complaints & Prices",
+    title: "Is welludr (formerly wellmedr) Legit or a Scam? Reviews",
     description:
-      "Is welludr legit or a scam? A verified 4.6 on Trustpilot across 2,679 reviews, what the complaints say, the real $49-$89 pricing and our verdict.",
+      "Is welludr (formerly wellmedr) legit or a scam? A verified 4.6 on Trustpilot across 2,679 reviews, what the complaints say, the $49-$89 pricing and our verdict.",
   },
   "is-altrx-legit": {
     // Keeps the keyword-rich SERP snippet (prices, flat-dose) even though the
