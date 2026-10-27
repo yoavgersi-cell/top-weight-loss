@@ -26,6 +26,7 @@ import { PRICE_INDEX } from "@/lib/price-index";
 import type { TrustpilotReview } from "@/lib/config";
 import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/reddit-community";
 import { notFound, permanentRedirect } from "next/navigation";
+import { relatedArticles as pickRelatedArticles } from "@/lib/related-content";
 
 // Code-side CTR overrides for high-impression articles whose stored meta lives
 // in the CMS blob (so it can't be tuned from the content files). Applied only
@@ -397,15 +398,10 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // Byline author: match the article's author to a team member, else the lead
   const author = experts.find((e) => e.name === article.author) ?? experts[0];
 
-  // Related articles: same category first, then others, exclude self, max 3
-  const relatedArticles = [
-    ...articles.filter(
-      (a) => a.slug !== slug && a.category === article.category
-    ),
-    ...articles.filter(
-      (a) => a.slug !== slug && a.category !== article.category
-    ),
-  ].slice(0, 3);
+  // Related articles: the three whose title, slug and description share the
+  // most words with this one (category as a tie-break), so every article is
+  // linked from its closest siblings rather than the same three every time.
+  const relatedArticles = pickRelatedArticles(articles, article, 3);
 
   const formattedDate = new Date(latestUpdate(article.updatedAt)).toLocaleDateString(
     "en-US",

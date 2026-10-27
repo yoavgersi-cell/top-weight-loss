@@ -7,6 +7,8 @@ import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED, latestUpdate, NOINDEX_WL_BATTLE_SLUGS, DEFAULT_ROBOTS } from "@/lib/config";
 import { splitSentences, BoldKeyFacts, ReadableProse } from "@/components/prose";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
+import { providerArticles } from "@/lib/related-content";
+import { analysisPath, hasReviewAnalysis } from "@/lib/review-analysis";
 import { ComparisonLayout } from "@/components/comparison-layout";
 import { EditorialContent } from "@/components/editorial-content";
 import { LandingEditorial } from "@/components/landing-editorial";
@@ -1611,6 +1613,44 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               </div>
             </div>
           )}
+
+          {/* ───── MORE ON EACH PROVIDER ─────
+              The brand-question cluster for each side (is-X-legit, X-cost,
+              X-alternatives ...) plus the review analysis where one exists.
+              Anchors are the pieces' own titles. */}
+          {(() => {
+            const vArticles = config.articles ?? [];
+            const sides = [p1, p2].map((p) => ({
+              p,
+              items: [
+                ...providerArticles(vArticles, p.id).map((a) => ({ href: hubLink(ctx, `/articles/${a.slug}`), label: a.title })),
+                ...(ctx.vertical === "weight-loss" && hasReviewAnalysis(p.id) ? [{ href: analysisPath(p.id), label: `What ${p.name} reviewers say: analysis of every stored review` }] : []),
+              ],
+            })).filter((s) => s.items.length > 0);
+            if (sides.length === 0) return null;
+            return (
+              <div className="mb-10">
+                <h2 className="mb-4 text-[20px] font-bold text-[#191919]">More on {sides.map((s) => s.p.name).join(" and ")}</h2>
+                <div className={`grid gap-4 ${sides.length > 1 ? "sm:grid-cols-2" : ""}`}>
+                  {sides.map(({ p, items }) => (
+                    <div key={p.id} className="rounded-xl border border-gray-200 bg-white p-4">
+                      <p className="mb-2 text-[12px] font-bold uppercase tracking-wide text-gray-500">{p.name}</p>
+                      <ul className="space-y-1.5">
+                        {items.map((it) => (
+                          <li key={it.href}>
+                            <Link href={it.href} className="inline-flex items-start gap-1.5 text-[14px] font-medium text-[#0C4B75] hover:underline">
+                              <ArrowRight className="mt-1 h-3.5 w-3.5 shrink-0" strokeWidth={2.5} />
+                              <span>{it.label}</span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })()}
 
           {/* Related links */}
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 py-4 text-[13px]">

@@ -116,6 +116,21 @@ export const WEIGHT_LOSS_GUIDES: GuideLink[] = [
     title: "Ozempic for Weight Loss",
     blurb: "Providers, pricing and alternatives for off-label Ozempic.",
   },
+  {
+    slug: "best-weight-loss-injections",
+    title: "Best Weight Loss Injections",
+    blurb: "Weekly GLP-1 injections compared: which providers prescribe them and what each charges.",
+  },
+  {
+    slug: "best-online-weight-loss-programs",
+    title: "Best Online Weight Loss Programs",
+    blurb: "Clinician-guided programs with medication, support and delivery, compared.",
+  },
+  {
+    slug: "cheapest-weight-loss-medication",
+    title: "Most Affordable Weight Loss Medication",
+    blurb: "The lowest verified prices for prescription weight-loss medication online.",
+  },
 ];
 
 export function GuideCluster({
