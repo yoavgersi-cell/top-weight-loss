@@ -112,7 +112,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What should you realistically expect in month one?",
-        body: 'The first month is about building a foundation, not dramatic transformation. The medication needs time to reach effective levels in your body, and dose titration happens gradually for good reason. Patients who see the best long-term results are those who combine medication with <a href="https://www.cdc.gov/healthy-weight-growth/losing-weight/index.html" target="_blank" rel="noopener">sustainable lifestyle changes</a>: regular movement, adequate sleep, stress management, and balanced nutrition. Our guide on <a href="/weight-loss/articles/exercise-while-on-glp1-medication">exercising on GLP-1 medication</a> can help you build an effective routine. Think of the medication as a powerful tool that makes these changes significantly easier - not a replacement for them.',
+        body: 'The first month is about building a foundation, not dramatic transformation. The medication needs time to reach effective levels in your body, and dose titration happens gradually for good reason. Patients who see the best long-term results are those who combine medication with <a href="https://www.cdc.gov/healthy-weight-growth/losing-weight/index.html" target="_blank" rel="noopener">sustainable lifestyle changes</a>: regular movement, adequate sleep, stress management, and balanced nutrition. Our guide on <a href="/weight-loss/articles/exercise-while-on-glp1-medication">exercising on GLP-1 medication</a> can help you build an effective routine. Think of the medication as a powerful tool that makes these changes significantly easier - not a replacement for them. To see the labelled dose steps on your own calendar, enter your first injection date in the <a href="/weight-loss/glp1-dose-schedule">Wegovy and Zepbound dose schedule timeline</a>. ',
       },
     ],
   },
@@ -515,7 +515,7 @@ export const articles: Article[] = [
       },
       {
         heading: "How to Compare Total Monthly Cost",
-        body: 'When comparing providers, look at the total monthly price - not just medication cost. The best providers include everything: medication, physician consultations, dose adjustments, ongoing support, and home delivery. Some quote a low base price but charge separately for consultations or shipping. <a href="/">Compare all-inclusive providers</a> on our platform or <a href="/weight-loss/find-your-match">take our quiz</a> for a personalized recommendation.',
+        body: 'When comparing providers, look at the total monthly price - not just medication cost. The best providers include everything: medication, physician consultations, dose adjustments, ongoing support, and home delivery. Some quote a low base price but charge separately for consultations or shipping. <a href="/">Compare all-inclusive providers</a> on our platform or <a href="/weight-loss/find-your-match">take our quiz</a> for a personalized recommendation. To see what any of these prices add up to over the months you have in mind, use the <a href="/weight-loss/glp1-cost-calculator">GLP-1 cost calculator</a>, which multiplies every verified price in our index by your timeframe and shows the regular price next to each promotion. ',
       },
     ],
   },
@@ -559,7 +559,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What If You Don't Qualify?",
-        body: 'If you don\'t meet the criteria for GLP-1 medication, you still have options. Providers may recommend oral weight loss medications like metformin or bupropion-naltrexone, which have different eligibility criteria. Structured programs that focus on nutrition, behavioral change, and exercise can also produce meaningful results. Some patients who don\'t initially qualify may become eligible as their health profile changes. The key is to work with a licensed provider who can evaluate all available options and build a plan tailored to your situation. <a href="/weight-loss/find-your-match">Take our quiz</a> to find a provider that matches your specific needs.',
+        body: 'If you don\'t meet the criteria for GLP-1 medication, you still have options. Providers may recommend oral weight loss medications like metformin or bupropion-naltrexone, which have different eligibility criteria. Structured programs that focus on nutrition, behavioral change, and exercise can also produce meaningful results. Some patients who don\'t initially qualify may become eligible as their health profile changes. The key is to work with a licensed provider who can evaluate all available options and build a plan tailored to your situation. <a href="/weight-loss/find-your-match">Take our quiz</a> to find a provider that matches your specific needs. Want the number first? Our <a href="/weight-loss/glp1-bmi-calculator">BMI and GLP-1 eligibility check</a> works out your BMI and states which label criterion it meets, in your browser. ',
       },
     ],
   },
@@ -1011,7 +1011,7 @@ export const articles: Article[] = [
       },
       {
         heading: "How should you track progress?",
-        body: 'Don\'t rely solely on the scale. Track waist measurements, how clothes fit, energy levels, and appetite changes. Some patients lose inches before they see scale movement. Taking progress photos monthly can also reveal changes that day-to-day weighing misses. <a href="/weight-loss/find-your-match">Find a provider</a> that includes progress tracking in their program.<p>Wondering which option works fastest? Read <a href="/weight-loss/articles/weight-loss-medication-that-works-fast">which weight-loss medication works fastest</a>.</p>',
+        body: 'Don\'t rely solely on the scale. Track waist measurements, how clothes fit, energy levels, and appetite changes. Some patients lose inches before they see scale movement. Taking progress photos monthly can also reveal changes that day-to-day weighing misses. <a href="/weight-loss/find-your-match">Find a provider</a> that includes progress tracking in their program.<p>Wondering which option works fastest? Read <a href="/weight-loss/articles/weight-loss-medication-that-works-fast">which weight-loss medication works fastest</a>.</p> The <a href="/weight-loss/glp1-dose-schedule">dose schedule timeline</a> maps the Wegovy label\'s 16-week ramp onto calendar dates from your first injection, so you can see which week you are in. ',
       },
     ],
   },
@@ -1223,7 +1223,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Where is the cheapest semaglutide?",
-        body: '<a href="/weight-loss/cheapest-glp1">Compare the most affordable providers</a> on our platform. Several offer compounded semaglutide starting at a verified $49/month with everything included. <a href="/weight-loss/find-your-match">Take our quiz</a> to find a provider that fits both your goals and budget. Prefer a tablet to a weekly pen? The two FDA-approved GLP-1 pills are compared in <a href="/weight-loss/articles/foundayo-vs-wegovy-pill">Foundayo vs the Wegovy pill</a>, and the semaglutide tablet\'s own price ladder is in <a href="/weight-loss/articles/wegovy-pill-price-online">Wegovy pill price online</a>. ',
+        body: '<a href="/weight-loss/cheapest-glp1">Compare the most affordable providers</a> on our platform. Several offer compounded semaglutide starting at a verified $49/month with everything included. <a href="/weight-loss/find-your-match">Take our quiz</a> to find a provider that fits both your goals and budget. Prefer a tablet to a weekly pen? The two FDA-approved GLP-1 pills are compared in <a href="/weight-loss/articles/foundayo-vs-wegovy-pill">Foundayo vs the Wegovy pill</a>, and the semaglutide tablet\'s own price ladder is in <a href="/weight-loss/articles/wegovy-pill-price-online">Wegovy pill price online</a>.  The <a href="/weight-loss/glp1-cost-calculator">GLP-1 cost calculator</a> turns these monthly figures into 1-to-24-month totals for every provider in the index. ',
       },
     ],
   },
@@ -2295,7 +2295,7 @@ export const articles: Article[] = [
       {
         heading: "How to use these numbers",
         body:
-          "Pick your drug, find the row whose <em>year one</em> fits your budget, then check two things the price can't tell you: whether the provider ships on time - the <a href=\"/weight-loss/glp1-shipping-times\">shipping-times page</a> compares each provider's published promise against what reviewers report - and whether someone answers when something goes wrong, which the <a href=\"/weight-loss/glp1-provider-support\">provider-support comparison</a> measures from the same captured reviews. Our <a href=\"/weight-loss/cheapest-glp1\">cheapest GLP-1 ranking</a> and <a href=\"/weight-loss/how-to-choose-a-glp1-provider\">12-point provider checklist</a> cover the rest. All of these treatments require a prescription from a licensed clinician, who decides whether and what to prescribe; this page is about cost, not medical suitability.",
+          "Pick your drug, find the row whose <em>year one</em> fits your budget, then check two things the price can't tell you: whether the provider ships on time - the <a href=\"/weight-loss/glp1-shipping-times\">shipping-times page</a> compares each provider's published promise against what reviewers report - and whether someone answers when something goes wrong, which the <a href=\"/weight-loss/glp1-provider-support\">provider-support comparison</a> measures from the same captured reviews. Our <a href=\"/weight-loss/cheapest-glp1\">cheapest GLP-1 ranking</a> and <a href=\"/weight-loss/how-to-choose-a-glp1-provider\">12-point provider checklist</a> cover the rest. All of these treatments require a prescription from a licensed clinician, who decides whether and what to prescribe; this page is about cost, not medical suitability. Run your own numbers in the <a href=\"/weight-loss/glp1-cost-calculator\">GLP-1 cost calculator</a>: pick the medication and months, and it totals every verified price with the regular price alongside each promotion. ",
       },
     ],
   },
