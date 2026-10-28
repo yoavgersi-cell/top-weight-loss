@@ -59,13 +59,39 @@ export const HOLIDAY_OFFERS: HolidayOffer[] = [
   },
 ];
 
+/**
+ * Providers the operator checked for a holiday offer and found none, with
+ * the date and what the site showed instead. "Checked, nothing published"
+ * is information the reader can use; "not checked yet" is the default.
+ */
+export interface HolidayCheck {
+  vertical: HolidayVertical;
+  providerId: string;
+  checkedOn: string;
+  /** What the provider's site showed on that date, in words. */
+  found: string;
+}
+
+export const HOLIDAY_CHECKS: HolidayCheck[] = [
+  {
+    vertical: "weight-loss",
+    providerId: "altrx",
+    checkedOn: "2026-10-28",
+    found: "homepage shows the everyday plan from $89/month with the price locked at every dose; no Black Friday or Cyber Monday offer",
+  },
+];
+
+export function latestCheck(providerId: string, vertical: HolidayVertical = "weight-loss"): HolidayCheck | undefined {
+  return HOLIDAY_CHECKS.filter((c) => c.vertical === vertical && c.providerId === providerId).sort((a, b) => b.checkedOn.localeCompare(a.checkedOn))[0];
+}
+
 export function offersFor(vertical: HolidayVertical): HolidayOffer[] {
   return HOLIDAY_OFFERS.filter((o) => o.vertical === vertical);
 }
 
 export function latestVerified(): string {
-  const dates = HOLIDAY_OFFERS.map((o) => o.verifiedOn).sort();
-  return dates.length ? dates[dates.length - 1] : HOLIDAY_SEASON.pageUpdated;
+  const dates = [...HOLIDAY_OFFERS.map((o) => o.verifiedOn), ...HOLIDAY_CHECKS.map((c) => c.checkedOn), HOLIDAY_SEASON.pageUpdated].sort();
+  return dates[dates.length - 1];
 }
 
 export type OfferStatus = "upcoming" | "live" | "ended" | "unstated";
