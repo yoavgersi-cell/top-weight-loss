@@ -2,6 +2,7 @@ import { brandClusterArticles } from "./brand-cluster-articles";
 import { pillarGlp1Online } from "./pillar-glp1-online";
 import { pillarGlp1StoppingWeightRegain } from "./pillar-glp1-stopping-weight-regain";
 import { pillarGlp1Microdosing } from "./pillar-glp1-microdosing";
+import { glp1MuscleLossArticle } from "./glp1-muscle-loss";
 import { trueCostTable, budgetList } from "@/lib/true-cost";
 
 export interface Article {
@@ -2730,4 +2731,5 @@ export const articles: Article[] = [
   pillarGlp1Online,
   pillarGlp1StoppingWeightRegain,
   pillarGlp1Microdosing,
+  glp1MuscleLossArticle,
 ];

@@ -8,6 +8,7 @@ import type {
 } from "../config";
 import { HRT_GUIDES_PORTED } from "./hrt-guides";
 import { HRT_BATTLES_PORTED } from "./hrt-battles";
+import { HRT_TESTOSTERONE_FOR_WOMEN } from "./hrt-articles/testosterone-for-women";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // HRT (menopause / hormone replacement therapy) vertical
@@ -1391,7 +1392,7 @@ export function hrtSeed(base: SiteConfig): SiteConfig {
     ],
     battles: [...battles, ...HRT_BATTLES_PORTED],
     // Ported pillars and brand pages first, then the hub's own guides.
-    articles: [...HRT_GUIDES_PORTED, ...articles],
+    articles: [...HRT_GUIDES_PORTED, ...articles, HRT_TESTOSTERONE_FOR_WOMEN],
     faqs,
   };
 }
