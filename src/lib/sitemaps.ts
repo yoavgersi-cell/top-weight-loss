@@ -50,6 +50,7 @@ const WL_STATIC_PATHS: { path: string; priority: number; changeFrequency: "weekl
   { path: "/glp1-bmi-calculator", priority: 0.8, changeFrequency: "monthly" },
   { path: "/glp1-cost-calculator", priority: 0.8, changeFrequency: "weekly" },
   { path: "/glp1-dose-schedule", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/black-friday-glp1-deals", priority: 0.8, changeFrequency: "weekly" },
   { path: "/how-we-rank", priority: 0.6, changeFrequency: "monthly" },
   { path: "/about", priority: 0.3, changeFrequency: "monthly" },
   { path: "/disclaimer", priority: 0.2, changeFrequency: "monthly" },

@@ -195,7 +195,8 @@ export default async function CostCalculatorPage() {
             are not yet sure you qualify, the{" "}
             <Link href="/weight-loss/glp1-bmi-calculator" className={ext}>BMI and eligibility check</Link> applies the label criteria,
             and the <Link href="/weight-loss/glp1-dose-schedule" className={ext}>dose schedule timeline</Link> shows how long a
-            labelled ramp takes.
+            labelled ramp takes. Seasonal promotions are tracked on our{" "}
+            <Link href="/weight-loss/black-friday-glp1-deals" className={ext}>Black Friday GLP-1 deals</Link> page, each verified and judged against these same regular prices.
           </p>
         </section>
 

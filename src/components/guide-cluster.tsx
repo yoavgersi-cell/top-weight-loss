@@ -22,6 +22,11 @@ export type GuideLink = {
 
 export const WEIGHT_LOSS_GUIDES: GuideLink[] = [
   {
+    slug: "black-friday-glp1-deals",
+    title: "Black Friday GLP-1 Deals",
+    blurb: "Every verified holiday offer by provider, dated, next to the regular price it has to beat.",
+  },
+  {
     slug: "glp1-cost-calculator",
     title: "GLP-1 Cost Calculator",
     blurb: "Pick a provider, a medication and a number of months; totals from the verified price index.",

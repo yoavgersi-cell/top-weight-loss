@@ -31,6 +31,7 @@ const SHARED_ONE_OFF_PAGES = new Set([
   "glp1-bmi-calculator",
   "glp1-cost-calculator",
   "glp1-dose-schedule",
+  "black-friday-glp1-deals",
 ]);
 
 // Duplicate comparison URLs that consolidate onto a stronger canonical page.
