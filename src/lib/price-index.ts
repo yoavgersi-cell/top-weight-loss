@@ -37,8 +37,8 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "embody",
     edge: "Cheapest with no commitment - month to month, ships in 1-2 days",
-    semaglutide: { price: "$69", note: "reg. $79; month-to-month" },
-    tirzepatide: { price: "$119", note: "reg. $129; month-to-month" },
+    semaglutide: { price: "$49", note: "pre-Black Friday sale (seen Oct 28, 2026); reg. $79; month-to-month" },
+    tirzepatide: { price: "$99", note: "pre-Black Friday sale (seen Oct 28, 2026); reg. $129; month-to-month" },
     shipping: "Ships in 1-2 days, cold-chain",
     commitment: "None - month to month, cancel anytime",
     trustpilot: { rating: "3.8", count: "10,689" },
@@ -118,6 +118,12 @@ export const PRICE_INDEX_VERIFIED = "2026-10-16";
 // an entry when the underlying row actually changed after verification - this
 // log is published on the statistics page as the citable record.
 export const PRICE_CHANGELOG: { date: string; providerId: string; change: string }[] = [
+  {
+    date: "2026-10-28",
+    providerId: "embody",
+    change:
+      "Pre-Black Friday sale: compounded semaglutide now listed at $49/month (previously $69) and tirzepatide at $99/month (previously $119), month to month with no commitment, per the banner on embody's site. Published regular prices remain $79 and $129; no end date is stated.",
+  },
   {
     date: "2026-09-21",
     providerId: "altrx",

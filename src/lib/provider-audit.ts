@@ -23,8 +23,8 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
   // ── Weight loss ────────────────────────────────────────────────────────────
   "weight-loss:embody": {
     rows: [
-      { label: "Semaglutide price", value: "$69/month promotional (reg. $79), flat at every dose" },
-      { label: "Tirzepatide price", value: "$119/month promotional (reg. $129)" },
+      { label: "Semaglutide price", value: "$49/month promotional (reg. $79), flat at every dose" },
+      { label: "Tirzepatide price", value: "$99/month promotional (reg. $129)" },
       { label: "Commitment", value: "Month-to-month, no contract" },
       { label: "Shipping", value: "Free 1-2 day, tracked and insured" },
       { label: "Certification", value: "LegitScript-certified; US-based 503A compounding pharmacies" },

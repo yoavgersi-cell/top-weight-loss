@@ -191,7 +191,7 @@ const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
       "LegitScript-certified telehealth provider",
       "US-based, state-licensed 503A compounding pharmacies",
       "State-licensed doctors, a medical director, and a nursing team",
-      "Transparent flat pricing - $69/mo semaglutide, $119 tirzepatide",
+      "Transparent flat pricing - $49/mo semaglutide, $99 tirzepatide (pre-Black Friday sale)",
       "Full refund if you're not approved",
     ],
   },
@@ -435,7 +435,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "How much does embody cost per month?",
       answer:
-        "embody uses flat monthly pricing: $69/month for compounded semaglutide and $119/month for compounded tirzepatide (regularly $79 and $129). The price includes the medication, the doctor review, supplies and free 1-2 day shipping - there's no membership fee and no hidden costs. If a provider doesn't approve your prescription, embody issues a full refund.",
+        "embody uses flat monthly pricing: $49/month for compounded semaglutide and $99/month for compounded tirzepatide on its pre-Black Friday sale, seen October 28, 2026 (previously $69 and $119; regularly $79 and $129). The price includes the medication, the doctor review, supplies and free 1-2 day shipping - there's no membership fee and no hidden costs. If a provider doesn't approve your prescription, embody issues a full refund.",
     },
     {
       question: "Is embody FDA-approved?",

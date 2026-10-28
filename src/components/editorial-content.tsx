@@ -99,7 +99,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
           <tbody className="divide-y divide-gray-100">
             {[
               ["welludr", "$49/mo", "$89/mo", "12-month plan for best rate"],
-              ["embody", "$69/mo", "$119/mo", "Flat monthly, no commitment"],
+              ["embody", "$49/mo", "$99/mo", "Flat monthly, no commitment"],
               ["altRx", "$89/mo", "$149/mo", "Flat at every dose, BNPL"],
               ["Medvi", "$99/mo promo (reg. $199)", "$166/mo promo (reg. $299)", "All-inclusive + dietician"],
               ["HealthRx", "$99/mo", "from $179/mo", "12-month prepaid"],

@@ -212,7 +212,7 @@ export default async function BlackFridayDealsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="border-b border-gray-200 bg-white">
-        <div className="mx-auto max-w-[960px] px-4 py-12 sm:px-6 sm:py-16">
+        <div className="mx-auto max-w-[1100px] px-4 py-12 sm:px-6 sm:py-16">
           <Breadcrumbs items={[{ label: "Home", href: "/weight-loss" }, { label: "Black Friday GLP-1 Deals" }]} />
           <h1 className="max-w-[860px] text-[27px] font-extrabold leading-[1.15] text-[#191919] sm:text-[36px]">{title}</h1>
           <p className="mt-3 max-w-[760px] text-[16px] leading-relaxed text-gray-500">
@@ -226,7 +226,7 @@ export default async function BlackFridayDealsPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-[960px] px-4 py-10 text-[16px] leading-[1.75] text-gray-800 sm:px-6">
+      <div className="mx-auto max-w-[1100px] px-4 py-10 text-[16px] leading-[1.75] text-gray-800 sm:px-6">
         <div className="qa mb-10 flex items-start gap-4 rounded-2xl border border-emerald-100 bg-emerald-50/50 p-6">
           <ShieldCheck className="mt-0.5 h-6 w-6 shrink-0 text-emerald-600" strokeWidth={2} />
           <div className="text-[15px] leading-[1.75] text-gray-600">

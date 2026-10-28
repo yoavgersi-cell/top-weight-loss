@@ -53,7 +53,7 @@ const longDate = (iso: string) =>
 // verification looks like"; captions state only what each crop shows.
 const CAPTURES_DATE = "2026-10-05";
 const CAPTURES = [
-  { provider: "embody", image: "/verification/tirzepatide-embody.webp", width: 900, height: 368, shows: "$69/mo semaglutide and $119/mo tirzepatide, flat pricing" },
+  { provider: "embody", image: "/verification/tirzepatide-embody.webp", width: 900, height: 368, shows: "$49/mo semaglutide and $99/mo tirzepatide, flat pricing" },
   { provider: "altRx", image: "/verification/tirzepatide-altrx.webp", width: 900, height: 638, shows: "tirzepatide from $149 and semaglutide from $89" },
   { provider: "welludr", image: "/verification/tirzepatide-wellmedr.webp", width: 900, height: 325, shows: "tirzepatide from $89 and semaglutide from $49 a month" },
 ];

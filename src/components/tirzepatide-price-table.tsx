@@ -54,7 +54,7 @@ function TpBadge({ rating, count }: { rating: string; count?: string }) {
 // caption states exactly what the crop shows, nothing more.
 const VERIFIED_SCREENSHOTS_DATE = "2026-10-05";
 const VERIFIED_SCREENSHOTS: { id: string; image: string; shows: string; width: number; height: number }[] = [
-  { id: "embody", image: "/verification/tirzepatide-embody.webp", shows: "$119/month compounded tirzepatide and $69 semaglutide, flat pricing, in stock", width: 900, height: 368 },
+  { id: "embody", image: "/verification/tirzepatide-embody.webp", shows: "$99/month compounded tirzepatide and $49 semaglutide, flat pricing, in stock", width: 900, height: 368 },
   { id: "altrx", image: "/verification/tirzepatide-altrx.webp", shows: "compounded tirzepatide starting at $149 and semaglutide at $89, one injection per week", width: 900, height: 638 },
   { id: "wellmedr", image: "/verification/tirzepatide-wellmedr.webp", shows: "tirzepatide monthly plan starting at $89, shipped every 4 weeks, same price regardless of dosage", width: 900, height: 325 },
 ];

@@ -302,7 +302,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
     ],
     takeaway:
-      "The community picture matches the Trustpilot one: delivery is fast once medication ships, dose changes go through without pushback, and the model is deliberately self-serve - 'everything is on autopilot, that's how they keep costs low', as one user put it. The honest watch-outs are the flip side of that: little human contact, a refill process one user had to ask Reddit about, and pipeline time between approval and shipment - if timing matters, order before your current supply runs low. The $129 figures Reddit users mention line up with embody's regular tirzepatide price ($119 promotional / $129 regular).",
+      "The community picture matches the Trustpilot one: delivery is fast once medication ships, dose changes go through without pushback, and the model is deliberately self-serve - 'everything is on autopilot, that's how they keep costs low', as one user put it. The honest watch-outs are the flip side of that: little human contact, a refill process one user had to ask Reddit about, and pipeline time between approval and shipment - if timing matters, order before your current supply runs low. The $129 figures Reddit users mention line up with embody's regular tirzepatide price ($99 promotional / $129 regular).",
   },
   medvi: {
     themes:

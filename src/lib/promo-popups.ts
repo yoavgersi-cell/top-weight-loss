@@ -40,7 +40,7 @@ export const PROMO_POPUPS: PromoPopupSpec[] = [
     providerId: "embody",
     providerName: "Embody",
     image: "/embodypopup.webp",
-    alt: "Embody - GLP-1 from $69/mo. Start now and save.",
+    alt: "Embody - GLP-1 from $49/mo. Start now and save.",
     priority: 2,
     timer: {
       startSeconds: 5 * 86400 + 21 * 3600 + 52 * 60 + 30,
