@@ -15,7 +15,7 @@ import { getConfig } from "@/lib/config-store";
 import { VERTICALS } from "@/lib/config";
 import { medicalWebPageFields } from "@/lib/medical-schema";
 import { PRICE_INDEX, PRICE_INDEX_VERIFIED } from "@/lib/price-index";
-import { HOLIDAY_OFFERS, HOLIDAY_SEASON, latestVerified, offerStatus, type HolidayOffer, type HolidayVertical } from "@/lib/holiday-offers";
+import { HOLIDAY_OFFERS, HOLIDAY_SEASON, latestCheck, latestVerified, offerStatus, type HolidayOffer, type HolidayVertical } from "@/lib/holiday-offers";
 
 export const revalidate = 3600;
 
@@ -262,35 +262,9 @@ export default async function BlackFridayDealsPage() {
             <h2 id="offers-heading" className="text-[22px] font-bold text-[#191919]">Verified offers{count ? ` (${count})` : ""}</h2>
           </div>
           {count === 0 ? (
-            <>
-              <p className="mb-4 text-[15px] text-gray-500">
-                Nothing yet. The table is every provider in our weight-loss price index with the price a holiday offer has to beat: the everyday listed rate and, where the provider publishes one, the regular rate it reverts to. Prices verified {indexVerified}.
-              </p>
-              <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
-                <table className="w-full min-w-[720px] border-collapse">
-                  <thead>
-                    <tr className="border-b border-gray-200 bg-[#F7F8FA]">
-                      <th className={th}>Provider</th>
-                      <th className={th}>Semaglutide, everyday</th>
-                      <th className={th}>Tirzepatide, everyday</th>
-                      <th className={th}>Holiday offer</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-100">
-                    {PRICE_INDEX.map((r) => (
-                      <tr key={r.providerId}>
-                        <td className={`${cell} font-semibold text-[#191919]`}><Link href={reviewHref(r.providerId)} className="hover:text-[#0C4B75] hover:underline">{nameOf(r.providerId)}</Link></td>
-                        <td className={cell}>{r.semaglutide ? <><strong className="text-[#191919]">{r.semaglutide.price}</strong><span className="block text-[12px] text-gray-500">{r.semaglutide.note}</span></> : <span className="text-gray-400">Not published</span>}</td>
-                        <td className={cell}>{r.tirzepatide ? <><strong className="text-[#191919]">{r.tirzepatide.price}</strong><span className="block text-[12px] text-gray-500">{r.tirzepatide.note}</span></> : <span className="text-gray-400">Not published</span>}</td>
-                        <td className={`${cell}`}><span className="rounded-full bg-gray-100 px-2.5 py-1 text-[11.5px] font-bold text-gray-600">Not published yet</span></td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </>
+            <p className="mb-4 text-[15px] text-gray-500">Nothing verified yet. We add each offer the day we see it on the provider&rsquo;s own site.</p>
           ) : (
-            <div className="space-y-8">
+            <div className="mb-8 space-y-8">
               {byVertical.filter((g) => g.offers.length > 0).map((g) => (
                 <div key={g.v}>
                   <h3 className="mb-3 text-[17px] font-bold text-[#191919]">{verticalLabel(g.v)}</h3>
@@ -301,13 +275,46 @@ export default async function BlackFridayDealsPage() {
                   </ul>
                 </div>
               ))}
-              {PRICE_INDEX.some((r) => !HOLIDAY_OFFERS.some((o) => o.providerId === r.providerId)) && (
-                <p className="text-[14px] text-gray-500">
-                  No offer verified yet from {PRICE_INDEX.filter((r) => !HOLIDAY_OFFERS.some((o) => o.providerId === r.providerId)).map((r) => nameOf(r.providerId)).join(", ")}. Their everyday prices are in the <Link href="/weight-loss/cheapest-glp1" className={ext}>cheapest GLP-1 comparison</Link>.
-                </p>
-              )}
             </div>
           )}
+          <h3 className="mb-2 text-[17px] font-bold text-[#191919]">Every provider in the index: the price to beat, and where we stand</h3>
+          <p className="mb-4 text-[15px] text-gray-500">
+            The everyday listed rate and, where the provider publishes one, the regular rate it reverts to, with the date we last checked the provider&rsquo;s site for a holiday offer. Prices verified {indexVerified}.
+          </p>
+          <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
+            <table className="w-full min-w-[760px] border-collapse">
+              <thead>
+                <tr className="border-b border-gray-200 bg-[#F7F8FA]">
+                  <th className={th}>Provider</th>
+                  <th className={th}>Semaglutide, everyday</th>
+                  <th className={th}>Tirzepatide, everyday</th>
+                  <th className={th}>Holiday offer</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {PRICE_INDEX.map((r) => {
+                  const offer = HOLIDAY_OFFERS.find((o) => o.vertical === "weight-loss" && o.providerId === r.providerId);
+                  const check = latestCheck(r.providerId);
+                  return (
+                    <tr key={r.providerId}>
+                      <td className={`${cell} font-semibold text-[#191919]`}><Link href={reviewHref(r.providerId)} className="hover:text-[#0C4B75] hover:underline">{nameOf(r.providerId)}</Link></td>
+                      <td className={cell}>{r.semaglutide ? <><strong className="text-[#191919]">{r.semaglutide.price}</strong><span className="block text-[12px] text-gray-500">{r.semaglutide.note}</span></> : <span className="text-gray-400">Not published</span>}</td>
+                      <td className={cell}>{r.tirzepatide ? <><strong className="text-[#191919]">{r.tirzepatide.price}</strong><span className="block text-[12px] text-gray-500">{r.tirzepatide.note}</span></> : <span className="text-gray-400">Not published</span>}</td>
+                      <td className={cell}>
+                        {offer ? (
+                          <><span className={`rounded-full px-2.5 py-1 text-[11.5px] font-bold ${statusChip(offerStatus(offer, today))}`}>Verified offer</span><span className="mt-1 block text-[12px] text-gray-500">{offer.headline}; verified {shortDate(offer.verifiedOn)}</span></>
+                        ) : check ? (
+                          <><span className="rounded-full bg-gray-100 px-2.5 py-1 text-[11.5px] font-bold text-gray-600">None as of {shortDate(check.checkedOn)}</span><span className="mt-1 block text-[12px] text-gray-500">Checked {longDate(check.checkedOn)}: {check.found}.</span></>
+                        ) : (
+                          <span className="rounded-full bg-gray-100 px-2.5 py-1 text-[11.5px] font-bold text-gray-600">Not checked yet</span>
+                        )}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section className="mb-12" aria-labelledby="checker-heading">
