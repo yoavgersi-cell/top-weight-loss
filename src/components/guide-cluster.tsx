@@ -160,6 +160,7 @@ export const ED_GUIDES: GuideLink[] = [
   { slug: "articles/trimix-for-ed", title: "Trimix for ED", blurb: "The compounded injectable: how it works and how it compares." },
   { slug: "articles/buying-ed-medication-online-safely", title: "Buying ED Medication Online Safely", blurb: "The checklist for a licensed clinic and a licensed pharmacy." },
   { slug: "articles/what-causes-erectile-dysfunction", title: "What Causes Erectile Dysfunction", blurb: "Vascular, hormonal, neurological and psychological causes explained." },
+  { slug: "articles/erectile-dysfunction-heart-disease-warning-sign", title: "ED as a Heart Warning Sign", blurb: "Why ED often appears years before heart disease, and the tests to ask for." },
   { slug: "articles/ed-treatment-near-me", title: "ED Treatment Near You vs Online", blurb: "When a local clinic is the better call and when telehealth is." },
 ];
 

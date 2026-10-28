@@ -6,6 +6,7 @@ import type {
   ArticleData,
   FaqItem,
 } from "../config";
+import { ONLINE_THERAPY_ARTICLES_2026_10 } from "./online-therapy-articles-2026-10";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Online Therapy vertical
@@ -1393,7 +1394,7 @@ export function onlineTherapySeed(base: SiteConfig): SiteConfig {
     },
     reviews,
     battles,
-    articles,
+    articles: [...articles, ...ONLINE_THERAPY_ARTICLES_2026_10],
     faqs,
   };
 }

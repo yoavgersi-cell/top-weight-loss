@@ -1,6 +1,7 @@
 import type { SiteConfig } from "../config";
 import { ED_GUIDES_2026_10 } from "./ed-guides-2026-10";
 import { ED_PILLAR_2026_10 } from "./ed-pillar-2026-10";
+import { ED_ARTICLES_2026_10 } from "./ed-articles-2026-10";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // ED (erectile dysfunction) vertical content - treatmentshub.com/ed
@@ -2022,6 +2023,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
       },
       ...ED_GUIDES_2026_10,
       ED_PILLAR_2026_10,
+      ...ED_ARTICLES_2026_10,
     ],
 
     faqs: [
