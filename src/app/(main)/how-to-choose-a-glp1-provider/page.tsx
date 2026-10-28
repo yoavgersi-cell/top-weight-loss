@@ -72,7 +72,7 @@ const CHECKLIST: { title: string; check: string; verify: string; redFlag: string
   {
     title: "The real monthly cost",
     check: "Medication plus membership plus consultation plus shipping plus supplies. Then the difference between the intro price and the ongoing price.",
-    verify: "Our price index prints every provider's published rate and the condition attached to it. Ro, for example, bills medication and membership separately; embody's $69 is the whole bill.",
+    verify: "Our price index prints every provider's published rate and the condition attached to it. Ro, for example, bills medication and membership separately; embody's $49 is the whole bill.",
     redFlag: "A headline price with a condition you cannot resolve before checkout. Ask for the full monthly total.",
   },
   {

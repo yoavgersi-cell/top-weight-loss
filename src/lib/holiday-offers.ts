@@ -50,13 +50,12 @@ export const HOLIDAY_OFFERS: HolidayOffer[] = [
   {
     vertical: "weight-loss",
     providerId: "embody",
-    headline: "Exclusive-page offer: $49/month semaglutide, $99/month tirzepatide",
+    headline: "Pre-Black Friday sale: $49/month semaglutide, $99/month tirzepatide",
     detail:
-      "embody's exclusive landing page (exclusive.joinem.co) shows a \"TOP10 exclusive offer\" of compounded semaglutide at $49/month, with $299 struck through, and tirzepatide at $99/month, shipped in 1-2 days with no insurance. A countdown on the page read just under six days on October 28, so the end date below is taken from that timer, not from a stated date. It is not labelled a Black Friday offer. Our index lists embody's everyday month-to-month rates at $69 and $119 against published regular prices of $79 and $129, so both figures are below the everyday price. The offer appears on that landing page; embody's main site may show its standard pricing. No code is required.",
+      "embody's site banner reads \"Pre-Black Friday sale discount applied\" with compounded semaglutide at $49/month and tirzepatide at $99/month, month to month, shipped in 1-2 days. Before the sale our index listed $69 and $119; embody's published regular prices are $79 and $129, so both sale figures are $30/month below the regular rate and $20 below the previous everyday rate. The same prices appear on embody's exclusive landing page, where a countdown read just under six days on October 28; the main-site banner states no end date and no code.",
     offerMonthly: { semaglutide: 49, tirzepatide: 99 },
-    endsOn: "2026-11-02",
     verifiedOn: "2026-10-28",
-    source: "embody's exclusive landing page (exclusive.joinem.co), operator screenshot",
+    source: "banner on embody's homepage and its exclusive landing page, operator screenshots",
   },
   {
     vertical: "weight-loss",

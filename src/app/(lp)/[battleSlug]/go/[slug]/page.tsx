@@ -21,7 +21,7 @@ export const revalidate = 3600;
 
 const PAGES: Record<string, { h1: string; sub: string }> = {
   glp1: {
-    h1: "Doctor-prescribed GLP-1 weight loss online, from $69 a month, without insurance",
+    h1: "Doctor-prescribed GLP-1 weight loss online, from $49 a month, without insurance",
     sub: "Compounded semaglutide and tirzepatide from licensed US telehealth providers, at flat cash prices verified on their own sites. Four quick taps and we show you the provider that fits.",
   },
 };

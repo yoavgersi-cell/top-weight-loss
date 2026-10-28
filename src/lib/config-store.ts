@@ -348,7 +348,7 @@ const defaultReviews: ReviewData[] = [
     cons: [
       "3.4 Trustpilot average across 4,931 reviews - the weakest published score among providers we rank",
       "Mid-tier pricing: $149 semaglutide / $259 tirzepatide vs $49-$89 at welludr, embody and altRx",
-      "Tirzepatide at $259 is undercut by DirectMeds ($147), embody ($119) and welludr ($89)",
+      "Tirzepatide at $259 is undercut by DirectMeds ($147), embody ($99) and welludr ($89)",
       "Compounded only - no brand-name Ozempic/Wegovy/Zepbound option",
       "No formal coaching or dietician layer - support is provider check-ins"
     ],
@@ -466,16 +466,16 @@ const defaultReviews: ReviewData[] = [
     slug: "embody",
     providerId: "embody",
     updatedAt: "2026-09-08",
-    shortSummary: "Doctor-prescribed GLP-1 treatment - compounded semaglutide from $69/mo and tirzepatide from $119/mo - shipped in 1-2 days with no insurance required. Rated 3.8 across 10,689 Trustpilot reviews.",
-    reviewIntro: "embody offers doctor-prescribed GLP-1 weight loss treatment - compounded semaglutide and tirzepatide injections - through a 100% online process. Getting started takes a roughly 5-minute health qualifier, after which a medical practitioner reviews your chart (embody says usually within 24 hours, often under 5). Pricing is flat and simple: $69/month for semaglutide and $119/month for tirzepatide, with no insurance required, no hidden fees, and no clinic visits. Medication ships in 1-2 days in temperature-controlled, tracked, insured packaging, and embody is LegitScript-certified and works with US-based 503A compounding pharmacies. On Trustpilot, embody averages 3.8 across 10,689 reviews - an honest, mixed-to-positive record whose recent reviews cluster around two themes: responsive, proactive customer service ('from my very first inquiry I've had excellent communication... customer service updated me every step,' writes one tirzepatide patient) and the no-surprises pricing ('Love the fact that there are no surprises as in costly up front cost'). A 3.8 also means a minority of customers had negative experiences - worth reading both ends of the reviews before deciding, as with any provider.",
+    shortSummary: "Doctor-prescribed GLP-1 treatment - compounded semaglutide from $49/mo and tirzepatide from $99/mo - shipped in 1-2 days with no insurance required. Rated 3.8 across 10,689 Trustpilot reviews.",
+    reviewIntro: "embody offers doctor-prescribed GLP-1 weight loss treatment - compounded semaglutide and tirzepatide injections - through a 100% online process. Getting started takes a roughly 5-minute health qualifier, after which a medical practitioner reviews your chart (embody says usually within 24 hours, often under 5). Pricing is flat and simple: $49/month for semaglutide and $99/month for tirzepatide on the pre-Black Friday sale seen October 28, 2026 (regularly $79 and $129), with no insurance required, no hidden fees, and no clinic visits. Medication ships in 1-2 days in temperature-controlled, tracked, insured packaging, and embody is LegitScript-certified and works with US-based 503A compounding pharmacies. On Trustpilot, embody averages 3.8 across 10,689 reviews - an honest, mixed-to-positive record whose recent reviews cluster around two themes: responsive, proactive customer service ('from my very first inquiry I've had excellent communication... customer service updated me every step,' writes one tirzepatide patient) and the no-surprises pricing ('Love the fact that there are no surprises as in costly up front cost'). A 3.8 also means a minority of customers had negative experiences - worth reading both ends of the reviews before deciding, as with any provider.",
     keyFeatures: [
-      "Compounded semaglutide ($69/mo) and tirzepatide ($119/mo)",
+      "Compounded semaglutide ($49/mo) and tirzepatide ($99/mo)",
       "5-minute health qualifier; doctor review usually within 24 hrs",
       "Free 1-2 day shipping - temperature-controlled, tracked, insured",
       "No insurance required, no clinic visits, cancel anytime",
       "LegitScript-certified, US-based 503A pharmacies"
     ],
-    pricingSummary: "Embody uses flat monthly pricing: $69/month for compounded semaglutide and $119/month for compounded tirzepatide. The price includes the medication, doctor review, supplies, and shipping - with no hidden fees, no monthly membership, and the option to cancel anytime. If a prescription isn't approved, Embody offers a full refund.",
+    pricingSummary: "Embody uses flat monthly pricing: $49/month for compounded semaglutide and $99/month for compounded tirzepatide. The price includes the medication, doctor review, supplies, and shipping - with no hidden fees, no monthly membership, and the option to cancel anytime. If a prescription isn't approved, Embody offers a full refund.",
     treatmentOptions: [
       "Compounded semaglutide injections (GLP-1)",
       "Compounded tirzepatide injections (GLP-1 + GIP)",
@@ -483,7 +483,7 @@ const defaultReviews: ReviewData[] = [
       "Dosage adjustments through the patient portal"
     ],
     pros: [
-      "Low, flat pricing - $69/mo semaglutide, $119/mo tirzepatide",
+      "Low, flat pricing - $49/mo semaglutide, $99/mo tirzepatide (pre-Black Friday sale)",
       "Fast shipping - same-day dispatch on orders before 2pm CT, next-day via UPS",
       "100% online - no insurance or clinic visits",
       "Dedicated nursing team and 1:1 medical support",
@@ -501,7 +501,7 @@ const defaultReviews: ReviewData[] = [
       "Anyone who prefers a fully online process",
       "Those who want fast shipping and simple flat pricing"
     ],
-    finalVerdict: "embody is a strong choice for affordable, doctor-prescribed GLP-1 treatment - and an honest one to recommend, because its record is public: flat $69-$119/month with everything included, free 1-2 day cold shipping, LegitScript certification with US-based 503A pharmacies, a full refund if you're not approved, and 10,689 Trustpilot reviews averaging 3.8 whose recent pages consistently praise the customer-service communication. The realistic caveats: it's compounded-only and injectable-only, there's no coaching layer, and a 3.7 means not every experience lands well. For someone who wants the lowest-friction, no-commitment way to start GLP-1 treatment at a transparent price, it's one of the strongest offers in our ranking - compare it directly in embody vs welludr and altRx vs embody before deciding.",
+    finalVerdict: "embody is a strong choice for affordable, doctor-prescribed GLP-1 treatment - and an honest one to recommend, because its record is public: flat $49-$99/month with everything included, free 1-2 day cold shipping, LegitScript certification with US-based 503A pharmacies, a full refund if you're not approved, and 10,689 Trustpilot reviews averaging 3.8 whose recent pages consistently praise the customer-service communication. The realistic caveats: it's compounded-only and injectable-only, there's no coaching layer, and a 3.7 means not every experience lands well. For someone who wants the lowest-friction, no-commitment way to start GLP-1 treatment at a transparent price, it's one of the strongest offers in our ranking - compare it directly in embody vs welludr and altRx vs embody before deciding.",
     trustBadges: [
       "Money-back guarantee",
       "Free expedited delivery",
@@ -513,7 +513,7 @@ const defaultReviews: ReviewData[] = [
         name: "GLP-1 Injections",
         medication: "Compounded Semaglutide",
         cadence: "Weekly",
-        price: "$69",
+        price: "$49",
         regularPrice: "$79",
         unit: "/month",
         highlights: ["One simple injection once a week", "No hidden fees - shipped to your door"],
@@ -522,7 +522,7 @@ const defaultReviews: ReviewData[] = [
         name: "GLP-1 / GIP Injections",
         medication: "Compounded Tirzepatide",
         cadence: "Weekly",
-        price: "$119",
+        price: "$99",
         regularPrice: "$129",
         unit: "/month",
         highlights: ["One simple injection once a week", "No hidden fees - shipped to your door"],
@@ -532,7 +532,7 @@ const defaultReviews: ReviewData[] = [
       {
         timing: "Today",
         title: "Lock in flat monthly pricing",
-        detail: "Choose your plan - $69/month semaglutide or $119/month tirzepatide. Your price stays the same each month on the same medication and plan.",
+        detail: "Choose your plan - $49/month semaglutide or $99/month tirzepatide on the pre-Black Friday sale (regularly $79 and $129). Your price stays the same each month on the same medication and plan.",
       },
       {
         timing: "In ~1 day",
@@ -593,7 +593,7 @@ const defaultReviews: ReviewData[] = [
       "Anyone who wants both compounded and brand-name options",
       "Those who value board-certified specialist care + coaching"
     ],
-    finalVerdict: "welludr wins our value column outright: $49/month semaglutide and $89/month tirzepatide - the lowest compounded prices in this ranking - at the same price no matter your dose, with board-certified specialists, a Medical Weight-Care Coach, a weight-loss warranty, and brand-name Ozempic and Zepbound on the shelf if you want them. Its 4.6 across 2,679 Trustpilot reviews is strong, and the reviews are specific about fast approvals and flexible, human support. The honest trade-offs: the $49 rate takes a 12-month plan, and 3-5 business-day delivery is slower than the fastest rivals. If you're confident about committing for the year, this is the best per-month math on the site; if you'd rather test the waters month-to-month with faster shipping, embody at $69/$119 is the natural comparison.",
+    finalVerdict: "welludr wins our value column outright: $49/month semaglutide and $89/month tirzepatide - the lowest compounded prices in this ranking - at the same price no matter your dose, with board-certified specialists, a Medical Weight-Care Coach, a weight-loss warranty, and brand-name Ozempic and Zepbound on the shelf if you want them. Its 4.6 across 2,679 Trustpilot reviews is strong, and the reviews are specific about fast approvals and flexible, human support. The honest trade-offs: the $49 rate takes a 12-month plan, and 3-5 business-day delivery is slower than the fastest rivals. If you're confident about committing for the year, this is the best per-month math on the site; if you'd rather test the waters month-to-month with faster shipping, embody at $49/$99 is the natural comparison.",
     trustBadges: [
       "1,000,000+ patients",
       "Weight-loss warranty",
@@ -683,7 +683,7 @@ const defaultReviews: ReviewData[] = [
       "Video visits, free dietician and care coaching included",
       "HSA/FSA approved; no membership or hidden fees"
     ],
-    pricingSummary: "Medvi charges one flat, all-inclusive price, currently promotional: weekly GLP-1 (semaglutide) injections from $89/month (regularly $199), GLP-1/GIP (tirzepatide) from $166/month (regularly $299), and daily oral dissolving GLP-1 tablets at $249/month. The price covers the provider visits, the medication, free shipping, and free dietician and care coaching - there's no membership fee and no hidden charges, and plans are HSA/FSA approved. At the promo rate the math gets aggressive: only welludr ($49) and embody ($69) list semaglutide cheaper, and neither bundles dietician access and coaching into the number.",
+    pricingSummary: "Medvi charges one flat, all-inclusive price, currently promotional: weekly GLP-1 (semaglutide) injections from $89/month (regularly $199), GLP-1/GIP (tirzepatide) from $166/month (regularly $299), and daily oral dissolving GLP-1 tablets at $249/month. The price covers the provider visits, the medication, free shipping, and free dietician and care coaching - there's no membership fee and no hidden charges, and plans are HSA/FSA approved. At the promo rate the math gets aggressive: only welludr ($49) and embody ($49) list semaglutide cheaper, and neither bundles dietician access and coaching into the number.",
     treatmentOptions: [
       "GLP-1 (semaglutide) weekly injections",
       "GLP-1/GIP (tirzepatide) weekly injections",
@@ -708,7 +708,7 @@ const defaultReviews: ReviewData[] = [
       "Anyone who wants dietician support and coaching bundled, not sold separately",
       "Needle-averse patients who want a daily dissolving tablet instead of injections"
     ],
-    finalVerdict: "Medvi was already the most complete bundle in our ranking - provider visits, dietician access, care coaching and shipping in one HSA/FSA-eligible price, backed by 4.3 across 15,097 Trustpilot reviews, one of the two largest verified records of any provider we cover. The current promotion changes the math: at $99/month semaglutide (regularly $199) and $166 tirzepatide (regularly $299), the all-inclusive program now costs within $30-40 of the bare-bones value tier (welludr $49, embody $69) while bundling care those providers don't. As long as the promo holds, Medvi is arguably the best value-per-dollar in the ranking; at the $199/$299 regular rates, it goes back to being the premium-care pick. Needle-averse? The $249 dissolving tablets remain one of the few needle-free GLP-1 formats we track.",
+    finalVerdict: "Medvi was already the most complete bundle in our ranking - provider visits, dietician access, care coaching and shipping in one HSA/FSA-eligible price, backed by 4.3 across 15,097 Trustpilot reviews, one of the two largest verified records of any provider we cover. The current promotion changes the math: at $99/month semaglutide (regularly $199) and $166 tirzepatide (regularly $299), the all-inclusive program now costs within $30-40 of the bare-bones value tier (welludr $49, embody $49) while bundling care those providers don't. As long as the promo holds, Medvi is arguably the best value-per-dollar in the ranking; at the $199/$299 regular rates, it goes back to being the premium-care pick. Needle-averse? The $249 dissolving tablets remain one of the few needle-free GLP-1 formats we track.",
     trustBadges: [
       "HSA/FSA approved",
       "No membership or hidden fees",
@@ -757,7 +757,7 @@ const defaultReviews: ReviewData[] = [
       "Prescriptions shipped within 2 days",
       "$200 off your first month (confirm current offer on site)"
     ],
-    pricingSummary: "Sprout prices compounded semaglutide from $149/month and compounded tirzepatide from $199/month, with brand-name Wegovy from $1,799/month for those who want the branded pen. A standing offer takes $200 off the first month. That positions Sprout mid-market: the value tier (welludr $49, embody $69, Medvi's $99 promo) is cheaper for compounded medication, but few mid-tier rivals also stock a brand-name option. Confirm current plan terms and the first-month offer on Sprout's site before checkout.",
+    pricingSummary: "Sprout prices compounded semaglutide from $149/month and compounded tirzepatide from $199/month, with brand-name Wegovy from $1,799/month for those who want the branded pen. A standing offer takes $200 off the first month. That positions Sprout mid-market: the value tier (welludr $49, embody $49, Medvi's $99 promo) is cheaper for compounded medication, but few mid-tier rivals also stock a brand-name option. Confirm current plan terms and the first-month offer on Sprout's site before checkout.",
     treatmentOptions: [
       "Compounded semaglutide (GLP-1) injection",
       "Compounded tirzepatide (GLP-1 + GIP) injection",
@@ -892,7 +892,7 @@ const defaultReviews: ReviewData[] = [
       "Anyone who values reachable, human support alongside the medication",
       "Tirzepatide buyers who want a flat, no-commitment price"
     ],
-    finalVerdict: "Eden's case is simplicity: $99 for semaglutide and $129 for tirzepatide, the same every month and at every dose, with no membership and no plan to sign, and a 4.5 across 5,019 Trustpilot reviews in which the newest reviewers name the people who helped them. If the lowest possible sticker price is your only criterion, welludr's $49 plan and embody's $69 month-to-month undercut it on semaglutide; if you want a flat price you can budget on, support that answers, and tirzepatide without a premium, Eden is one of the strongest no-commitment options we track. Read the FDA note above with the same weight you would give it for any compounded provider, and confirm shipping times at checkout.",
+    finalVerdict: "Eden's case is simplicity: $99 for semaglutide and $129 for tirzepatide, the same every month and at every dose, with no membership and no plan to sign, and a 4.5 across 5,019 Trustpilot reviews in which the newest reviewers name the people who helped them. If the lowest possible sticker price is your only criterion, welludr's $49 plan and embody's $49 month-to-month undercut it on semaglutide; if you want a flat price you can budget on, support that answers, and tirzepatide without a premium, Eden is one of the strongest no-commitment options we track. Read the FDA note above with the same weight you would give it for any compounded provider, and confirm shipping times at checkout.",
     trustBadges: [
       "Same price, every dose",
       "No membership or long-term plans",
@@ -1118,7 +1118,7 @@ const defaultReviews: ReviewData[] = [
     cons: [
       "No coaching or dietician layer - it's a medication-and-visit service",
       "Compounded medications only (no brand-name Ozempic/Wegovy/Zepbound)",
-      "Cheaper tirzepatide exists elsewhere (welludr from $89, embody $119)",
+      "Cheaper tirzepatide exists elsewhere (welludr from $89, embody $99)",
       "Availability may vary by state"
     ],
     bestFor: [
@@ -1126,7 +1126,7 @@ const defaultReviews: ReviewData[] = [
       "Anyone who prefers needle-free sublingual drops over injections",
       "Those who want one flat price with no membership on top"
     ],
-    finalVerdict: "DirectMeds keeps the promise it actually makes: $147/month flat for doctor-prescribed semaglutide or tirzepatide - injections or needle-free sublingual drops at the same price - with the telemedicine visit included, free 1-2 day shipping, and no membership to cancel your way out of. A 4.6 average across 16,390 Trustpilot reviews is a serious, verifiable record, and the reviews keep landing on the same point: you can reach a human when something goes wrong. What it deliberately doesn't offer is a program - no coaching, no dietician, no brand-name shelf - and cheaper tirzepatide exists (welludr from $89, embody at $119). Pick DirectMeds for the drops format, the speed, and the flat simplicity; pick a program provider if you want support built around the medication.",
+    finalVerdict: "DirectMeds keeps the promise it actually makes: $147/month flat for doctor-prescribed semaglutide or tirzepatide - injections or needle-free sublingual drops at the same price - with the telemedicine visit included, free 1-2 day shipping, and no membership to cancel your way out of. A 4.6 average across 16,390 Trustpilot reviews is a serious, verifiable record, and the reviews keep landing on the same point: you can reach a human when something goes wrong. What it deliberately doesn't offer is a program - no coaching, no dietician, no brand-name shelf - and cheaper tirzepatide exists (welludr from $89, embody at $99). Pick DirectMeds for the drops format, the speed, and the flat simplicity; pick a program provider if you want support built around the medication.",
     trustBadges: [
       "Same price, every dose",
       "No hidden fees or membership",
@@ -1509,10 +1509,10 @@ const embodyAltrxBattle: Omit<BattleData, "slug"> = {
   matchupLabel: "altRx vs embody",
   subtitle: "altRx vs embody, compared on pricing, GLP-1 medications, shipping speed, and medical support - so you can see which one fits you best.",
   description: "altRx vs embody: compare pricing, GLP-1 medications, shipping & real reviews. altRx: brand-name Zepbound & Wegovy. embody: free 1-2 day delivery. See which fits you.",
-  intro: "If you're deciding between altRx and embody, both are fully online GLP-1 weight-loss providers with transparent pricing and no insurance required. altRx bills itself as \"the #1 most affordable GLP-1 program\" from $89/month and stands out with a broader lineup - adding brand-name Zepbound and Wegovy plus Buy Now, Pay Later - while embody offers compounded semaglutide ($69/mo) and tirzepatide ($119/mo) with free 1-2 day shipping. Here's how altRx and embody compare on the factors that matter most.",
-  verdict: "Both altRx and embody are legitimate, well-reviewed, fully online GLP-1 providers with transparent pricing and no insurance required - but embody takes this one. It's cheaper on both compounded options ($69/$119 vs altRx's $89/$149) and ships in 1-2 days versus altRx's 5-7. altRx is the better pick if you want the widest selection, including brand-name Zepbound or Wegovy, or Buy Now, Pay Later.",
+  intro: "If you're deciding between altRx and embody, both are fully online GLP-1 weight-loss providers with transparent pricing and no insurance required. altRx bills itself as \"the #1 most affordable GLP-1 program\" from $89/month and stands out with a broader lineup - adding brand-name Zepbound and Wegovy plus Buy Now, Pay Later - while embody offers compounded semaglutide ($49/mo) and tirzepatide ($99/mo) with free 1-2 day shipping. Here's how altRx and embody compare on the factors that matter most.",
+  verdict: "Both altRx and embody are legitimate, well-reviewed, fully online GLP-1 providers with transparent pricing and no insurance required - but embody takes this one. It's cheaper on both compounded options ($49/$99 vs altRx's $89/$149) and ships in 1-2 days versus altRx's 5-7. altRx is the better pick if you want the widest selection, including brand-name Zepbound or Wegovy, or Buy Now, Pay Later.",
   verdictWinnerPoints: [
-    "Cheaper - $69/mo semaglutide, $119/mo tirzepatide",
+    "Cheaper - $49/mo semaglutide, $99/mo tirzepatide",
     "Free 1-2 day shipping (vs altRx's 5-7 days)",
     "Licensed doctors, a medical director, and a nursing team",
   ],
@@ -1526,9 +1526,9 @@ const embodyAltrxBattle: Omit<BattleData, "slug"> = {
     {
       name: "Pricing & Value",
       winner: "provider1",
-      explanation: "Embody is cheaper on both compounded options - $69/month for semaglutide and $119 for tirzepatide, versus altRx's $89 (GLP-1) and $149 (GLP-1 + GIP). Both offer flat, transparent pricing with no insurance required; altRx also offers Buy Now, Pay Later.",
+      explanation: "Embody is cheaper on both compounded options - $49/month for semaglutide and $99 for tirzepatide, versus altRx's $89 (GLP-1) and $149 (GLP-1 + GIP). Both offer flat, transparent pricing with no insurance required; altRx also offers Buy Now, Pay Later.",
       supportingPoints: [
-        "$69/$119 compounded pricing (Embody)",
+        "$49/$99 compounded pricing (Embody)",
         "$89/$149 compounded pricing (altRx)",
         "No insurance required (both)",
         "Buy Now, Pay Later (altRx)",
@@ -1580,7 +1580,7 @@ const embodyAltrxBattle: Omit<BattleData, "slug"> = {
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "$69/mo semaglutide · $119 tirzepatide", provider2Value: "$89/mo GLP-1 · $149 GLP-1+GIP", highlight: "provider1" },
+    { feature: "Starting Price", provider1Value: "$49/mo semaglutide · $99 tirzepatide (pre-Black Friday sale)", provider2Value: "$89/mo GLP-1 · $149 GLP-1+GIP", highlight: "provider1" },
     { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
     { feature: "Shipping", provider1Value: "Free, 1-2 days (tracked, insured)", provider2Value: "Free, 5-7 days", highlight: "provider1" },
     { feature: "Medications", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "Compounded + brand-name (Zepbound, Wegovy)", highlight: "provider2" },
@@ -1599,10 +1599,10 @@ const embodywellmedrBattle: BattleData = {
   title: "Embody vs welludr: Which Weight Loss Provider Is Right for You in 2026?",
   subtitle: "We compared pricing, medical support, long-term care, and real customer experience so you can see which one fits you best.",
   description: "embody vs welludr: compare pricing, GLP-1 meds, support & reviews. embody: fast free shipping. welludr: 1M+ patients & weight-loss warranty. See which fits you.",
-  intro: "Embody and welludr both offer compounded GLP-1 weight-loss treatment through a fully online experience - but they take different approaches. Embody is weight-loss-focused with flat $69/$119 pricing and fast 1-2 day shipping, while welludr is an AI-driven telehealth brand that reaches beyond weight loss into longevity, hormones, and more - pairing GLP-1 with add-ons like NAD+ and B12, overseen by board-certified specialists. Here's how they compare.",
-  verdict: "Both are credible online GLP-1 providers with genuinely close pricing. Embody keeps it simple: unconditional flat pricing ($69/$119), free 1-2 day shipping, and strong recent customer feedback. welludr lists an even lower headline - semaglutide from $49/mo, tirzepatide from $89/mo (best rate on a 12-month plan) - plus board-certified specialists and a broader wellness range. Go with embody for simple, fast, month-to-month treatment; go with welludr for the lowest annual price and a wider platform.",
+  intro: "Embody and welludr both offer compounded GLP-1 weight-loss treatment through a fully online experience - but they take different approaches. Embody is weight-loss-focused with flat $49/$99 pricing and fast 1-2 day shipping, while welludr is an AI-driven telehealth brand that reaches beyond weight loss into longevity, hormones, and more - pairing GLP-1 with add-ons like NAD+ and B12, overseen by board-certified specialists. Here's how they compare.",
+  verdict: "Both are credible online GLP-1 providers with genuinely close pricing. Embody keeps it simple: unconditional flat pricing ($49/$99), free 1-2 day shipping, and strong recent customer feedback. welludr lists an even lower headline - semaglutide from $49/mo, tirzepatide from $89/mo (best rate on a 12-month plan) - plus board-certified specialists and a broader wellness range. Go with embody for simple, fast, month-to-month treatment; go with welludr for the lowest annual price and a wider platform.",
   verdictWinnerPoints: [
-    "Flat pricing - $69/mo semaglutide, $119/mo tirzepatide",
+    "Flat pricing - $49/mo semaglutide, $99/mo tirzepatide",
     "Free 1-2 day shipping (vs welludr's ~3-5 days)",
     "Licensed doctors, a medical director, and a nursing team",
   ],
@@ -1616,9 +1616,9 @@ const embodywellmedrBattle: BattleData = {
     {
       name: "Pricing & Value",
       winner: "provider1",
-      explanation: "Both publish flat pricing at the same rate every dose. Embody is $69/month for compounded semaglutide and $119 for tirzepatide - unconditional, with no insurance, no hidden fees, and fast free shipping. welludr lists a lower headline - semaglutide from $49/month and tirzepatide from $89 - though its best $49 rate is tied to a 12-month plan. On entry price they're very close: welludr edges lower on the annual plan, while Embody keeps it simple month-to-month.",
+      explanation: "Both publish flat pricing at the same rate every dose. Embody is $49/month for compounded semaglutide and $99 for tirzepatide - unconditional, with no insurance, no hidden fees, and fast free shipping. welludr lists a lower headline - semaglutide from $49/month and tirzepatide from $89 - though its best $49 rate is tied to a 12-month plan. On entry price they're very close: welludr edges lower on the annual plan, while Embody keeps it simple month-to-month.",
       supportingPoints: [
-        "$69/mo semaglutide, $119/mo tirzepatide (Embody)",
+        "$49/mo semaglutide, $99/mo tirzepatide (Embody)",
         "No insurance, no hidden fees, cancel anytime (Embody)",
         "$49/mo semaglutide, $89/mo tirzepatide (welludr)",
         "Prescription treatment access (both)",
@@ -1670,7 +1670,7 @@ const embodywellmedrBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "$69/mo semaglutide · $119/mo tirzepatide", provider2Value: "$49/mo semaglutide · $89/mo tirzepatide", highlight: "both" },
+    { feature: "Starting Price", provider1Value: "$49/mo semaglutide · $99/mo tirzepatide (pre-Black Friday sale)", provider2Value: "$49/mo semaglutide · $89/mo tirzepatide", highlight: "both" },
     { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
     { feature: "Shipping", provider1Value: "Free, 1-2 days (tracked, insured)", provider2Value: "~3-5 business days, discreet packaging", highlight: "provider1" },
     { feature: "Medications", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "GLP-1/GIP + semaglutide/NAD+/B12 microdose", highlight: "both" },
@@ -2146,12 +2146,12 @@ const embodyRoBattle: BattleData = {
   matchupLabel: "Embody vs Ro",
   subtitle: "Embody vs Ro, compared on pricing, shipping speed, medical model, and overall value - so you can see which one fits you best.",
   description: "embody vs Ro: compare pricing, shipping, GLP-1 meds & care. embody: fast free 1-2 day shipping. Ro: established brand with an in-house pharmacy. See which fits you.",
-  intro: "Embody and Ro are both fully online providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established telehealth brand with an integrated in-house pharmacy and licensed providers reviewing every plan. Embody is weight-loss-focused with flat, transparent pricing - $69/month for compounded semaglutide and $119 for tirzepatide - free 1-2 day shipping, and LegitScript-certified 503A pharmacies. Here's how they compare.",
-  verdict: "Both are legitimate online GLP-1 providers, and the right pick depends on what you weigh most. Embody takes it overall: a flat $69/month for compounded semaglutide and $119 for tirzepatide with the doctor review, supplies and shipping included, free 1-2 day tracked and insured delivery, LegitScript certification with US-based 503A pharmacies, a full refund if you are not approved, and no contract. Over a year that is $828 cash-pay for semaglutide, against roughly $2,676 or more at Ro once the membership and brand-name medication are added. Ro is the larger, more established brand, with an integrated in-house pharmacy and, uniquely, FDA-approved brand-name Wegovy and Zepbound when your insurance covers them, which a compounded-only provider cannot match. On Trustpilot the two are close: Ro holds 3.9 across 7,380 reviews and Embody 3.8 across 10,689. Choose Embody if you are paying cash and want the lowest, most predictable monthly number; choose Ro if your insurance covers a brand-name GLP-1 and you want the branded pen through a big-name platform.",
+  intro: "Embody and Ro are both fully online providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established telehealth brand with an integrated in-house pharmacy and licensed providers reviewing every plan. Embody is weight-loss-focused with flat, transparent pricing - $49/month for compounded semaglutide and $99 for tirzepatide - free 1-2 day shipping, and LegitScript-certified 503A pharmacies. Here's how they compare.",
+  verdict: "Both are legitimate online GLP-1 providers, and the right pick depends on what you weigh most. Embody takes it overall: a flat $49/month for compounded semaglutide and $99 for tirzepatide with the doctor review, supplies and shipping included, free 1-2 day tracked and insured delivery, LegitScript certification with US-based 503A pharmacies, a full refund if you are not approved, and no contract. Over a year that is $588 cash-pay for semaglutide, against roughly $2,676 or more at Ro once the membership and brand-name medication are added. Ro is the larger, more established brand, with an integrated in-house pharmacy and, uniquely, FDA-approved brand-name Wegovy and Zepbound when your insurance covers them, which a compounded-only provider cannot match. On Trustpilot the two are close: Ro holds 3.9 across 7,380 reviews and Embody 3.8 across 10,689. Choose Embody if you are paying cash and want the lowest, most predictable monthly number; choose Ro if your insurance covers a brand-name GLP-1 and you want the branded pen through a big-name platform.",
   verdictWinnerPoints: [
-    "Flat $69/mo semaglutide, $119/mo tirzepatide - doctor review, supplies and shipping included",
+    "Flat $49/mo semaglutide, $99/mo tirzepatide - doctor review, supplies and shipping included",
     "Free 1-2 day tracked, insured shipping; LegitScript-certified, US-based 503A pharmacies",
-    "Full refund if not approved, cancel anytime - $828 for a year of semaglutide",
+    "Full refund if not approved, cancel anytime - $588 for a year of semaglutide at the sale price",
   ],
   verdictLoserPoints: [
     "Large, established telehealth brand with an integrated in-house pharmacy",
@@ -2163,9 +2163,9 @@ const embodyRoBattle: BattleData = {
     {
       name: "Pricing & Value",
       winner: "provider1",
-      explanation: "Embody uses simple flat pricing - $69/month for compounded semaglutide and $119 for tirzepatide - with no insurance required and no hidden fees. Ro is competitively priced, but costs can vary depending on the medication and plan you choose. For predictable, upfront pricing, Embody comes out ahead.",
+      explanation: "Embody uses simple flat pricing - $49/month for compounded semaglutide and $99 for tirzepatide - with no insurance required and no hidden fees. Ro is competitively priced, but costs can vary depending on the medication and plan you choose. For predictable, upfront pricing, Embody comes out ahead.",
       supportingPoints: [
-        "$69/mo semaglutide, $119/mo tirzepatide (Embody)",
+        "$49/mo semaglutide, $99/mo tirzepatide (Embody)",
         "Flat, transparent pricing, no hidden fees (Embody)",
         "Costs can vary by medication/plan (Ro)",
         "No insurance required (both)",
@@ -2217,7 +2217,7 @@ const embodyRoBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "$69/mo semaglutide · $119 tirzepatide", provider2Value: "$39 first mo membership, then $74-149/mo + medication", highlight: "provider1" },
+    { feature: "Starting Price", provider1Value: "$49/mo semaglutide · $99 tirzepatide (pre-Black Friday sale)", provider2Value: "$39 first mo membership, then $74-149/mo + medication", highlight: "provider1" },
     { feature: "Shipping", provider1Value: "Free, 1-2 days (tracked, insured)", provider2Value: "Standard home delivery", highlight: "provider1" },
     { feature: "Medications", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "GLP-1 treatment options", highlight: "both" },
     { feature: "Pharmacy", provider1Value: "LegitScript-certified 503A pharmacies", provider2Value: "Integrated in-house pharmacy", highlight: "both" },
@@ -2237,9 +2237,9 @@ const edenEmbodyBattle: BattleData = {
   provider2Id: "embody",
   title: "Eden vs embody: Which Flat-Price GLP-1 Provider Fits You in 2026?",
   subtitle: "Two no-commitment compounded GLP-1 providers compared on price, speed, support and track record.",
-  description: "Eden ($99/mo semaglutide, $129/mo tirzepatide, flat every month, 24/7 support) vs embody ($69/$119, 1-2 day shipping). Price, support and Trustpilot compared.",
-  intro: "Eden and embody both sell compounded semaglutide and tirzepatide month to month with no membership and no long-term plan, and both state one price at every dose. embody is cheaper - $69/month for semaglutide and $119 for tirzepatide against Eden's $99 and $129 - and ships in 1-2 days. Eden's pitch is the rest of the experience: doctor-guided care with 24/7 human support, and a 4.5 across 5,019 Trustpilot reviews whose newest pages name the support staff one by one, against embody's 3.8 across 10,689. This is a price-versus-service decision, and both answers are reasonable.",
-  verdict: "Eden takes this one on support and track record. The $30 and $10 monthly gaps are real, but Eden pairs its flat price with 24/7 human support and a 4.5 Trustpilot average across 5,019 reviews in which reviewers consistently name the person who helped them - the two things embody's own reviewers most often say they miss. embody remains the pick if the lowest no-commitment price and the fastest shipping are what matter most: $69 semaglutide, free 1-2 day cold-chain delivery and a refund if you are not approved.",
+  description: "Eden ($99/mo semaglutide, $129/mo tirzepatide, flat every month, 24/7 support) vs embody ($49/$99, 1-2 day shipping). Price, support and Trustpilot compared.",
+  intro: "Eden and embody both sell compounded semaglutide and tirzepatide month to month with no membership and no long-term plan, and both state one price at every dose. embody is cheaper - $49/month for semaglutide and $99 for tirzepatide against Eden's $99 and $129 - and ships in 1-2 days. Eden's pitch is the rest of the experience: doctor-guided care with 24/7 human support, and a 4.5 across 5,019 Trustpilot reviews whose newest pages name the support staff one by one, against embody's 3.8 across 10,689. This is a price-versus-service decision, and both answers are reasonable.",
+  verdict: "Eden takes this one on support and track record. The $30 and $10 monthly gaps are real, but Eden pairs its flat price with 24/7 human support and a 4.5 Trustpilot average across 5,019 reviews in which reviewers consistently name the person who helped them - the two things embody's own reviewers most often say they miss. embody remains the pick if the lowest no-commitment price and the fastest shipping are what matter most: $49 semaglutide, free 1-2 day cold-chain delivery and a refund if you are not approved.",
   verdictWinnerPoints: [
     "$99 semaglutide / $129 tirzepatide - the same every month, every dose",
     "24/7 human support and doctor-guided care included",
@@ -2247,7 +2247,7 @@ const edenEmbodyBattle: BattleData = {
     "No membership, no annual or long-term plan",
   ],
   verdictLoserPoints: [
-    "Cheapest no-commitment price: $69 semaglutide, $119 tirzepatide",
+    "Cheapest no-commitment price: $49 semaglutide, $99 tirzepatide (pre-Black Friday sale)",
     "Free 1-2 day cold-chain shipping",
     "Refund if a provider does not approve treatment",
     "LegitScript-certified; US 503A pharmacies named",
@@ -2257,8 +2257,8 @@ const edenEmbodyBattle: BattleData = {
     {
       name: "Pricing",
       winner: "provider2",
-      explanation: "embody is cheaper on both molecules: $69/month semaglutide and $119 tirzepatide against Eden's $99 and $129. Both are flat at every dose and month to month; embody's figures are promotional against regular prices of $79 and $129, while Eden's are its standard rates with no end date.",
-      supportingPoints: ["$69 / $119 month to month (embody)", "$99 / $129 every month, no promo to expire (Eden)", "Neither charges a membership"],
+      explanation: "embody is cheaper on both molecules: $49/month semaglutide and $99 tirzepatide against Eden's $99 and $129. Both are flat at every dose and month to month; embody's figures are promotional against regular prices of $79 and $129, while Eden's are its standard rates with no end date.",
+      supportingPoints: ["$49 / $99 month to month (embody)", "$99 / $129 every month, no promo to expire (Eden)", "Neither charges a membership"],
     },
     {
       name: "Medication Options",
@@ -2286,8 +2286,8 @@ const edenEmbodyBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Semaglutide price", provider1Value: "$99/mo, flat every month and every dose", provider2Value: "$69/mo (reg. $79), month to month", highlight: "provider2" },
-    { feature: "Tirzepatide price", provider1Value: "$129/mo, flat every month and every dose", provider2Value: "$119/mo (reg. $129), month to month", highlight: "provider2" },
+    { feature: "Semaglutide price", provider1Value: "$99/mo, flat every month and every dose", provider2Value: "$49/mo (reg. $79), month to month, pre-Black Friday sale", highlight: "provider2" },
+    { feature: "Tirzepatide price", provider1Value: "$129/mo, flat every month and every dose", provider2Value: "$99/mo (reg. $129), month to month, pre-Black Friday sale", highlight: "provider2" },
     { feature: "Membership fee", provider1Value: "None", provider2Value: "None", highlight: "both" },
     { feature: "Commitment", provider1Value: "None - no annual or long-term plans", provider2Value: "None - month to month", highlight: "both" },
     { feature: "Shipping", provider1Value: "Home delivery; timing not stated on the pricing page", provider2Value: "Free 1-2 day cold-chain", highlight: "provider2" },
@@ -2711,10 +2711,10 @@ const embodyTrimrxBattle: BattleData = {
   title: "embody vs TrimRX: Which GLP-1 Provider Is Right for You in 2026?",
   subtitle: "We compared pricing, shipping speed, plan flexibility, and medications so you can see which affordable option fits you best.",
   description: "embody vs TrimRX: compare pricing, shipping, plans & GLP-1 meds. embody: fast free 1-2 day shipping. TrimRX: flexible, no-commitment plans. See which fits you.",
-  intro: "embody and TrimRX are both affordable, weight-loss-focused telehealth providers offering compounded GLP-1 with home delivery. embody uses flat pricing - $69/month for compounded semaglutide and $119 for tirzepatide - with free 1-2 day shipping and LegitScript-certified 503A pharmacies. TrimRX focuses on budget-friendly access with flexible plans, multi-month discounts, and no long-term commitment. Here's how they compare.",
-  verdict: "Both are strong budget picks - but embody edges ahead on entry price and speed. It offers flat $69/month compounded semaglutide, free 1-2 day tracked shipping, and LegitScript-certified 503A pharmacies. TrimRX is the better fit if you want flexible plans and multi-month discounts with no long-term contract.",
+  intro: "embody and TrimRX are both affordable, weight-loss-focused telehealth providers offering compounded GLP-1 with home delivery. embody uses flat pricing - $49/month for compounded semaglutide and $99 for tirzepatide - with free 1-2 day shipping and LegitScript-certified 503A pharmacies. TrimRX focuses on budget-friendly access with flexible plans, multi-month discounts, and no long-term commitment. Here's how they compare.",
+  verdict: "Both are strong budget picks - but embody edges ahead on entry price and speed. It offers flat $49/month compounded semaglutide, free 1-2 day tracked shipping, and LegitScript-certified 503A pharmacies. TrimRX is the better fit if you want flexible plans and multi-month discounts with no long-term contract.",
   verdictWinnerPoints: [
-    "$69/mo semaglutide, $119/mo tirzepatide - flat pricing",
+    "$49/mo semaglutide, $99/mo tirzepatide - flat pricing",
     "Free 1-2 day tracked shipping",
     "LegitScript-certified 503A pharmacies",
   ],
@@ -2728,9 +2728,9 @@ const embodyTrimrxBattle: BattleData = {
     {
       name: "Pricing & Value",
       winner: "provider1",
-      explanation: "embody uses flat, published pricing - $69/month compounded semaglutide and $119 tirzepatide, the same at every dose. TrimRX is competitively priced too, with multi-month discounts, but its entry price runs a little higher. For the lowest transparent starting price, embody comes out ahead.",
+      explanation: "embody uses flat, published pricing - $49/month compounded semaglutide and $99 tirzepatide, the same at every dose. TrimRX is competitively priced too, with multi-month discounts, but its entry price runs a little higher. For the lowest transparent starting price, embody comes out ahead.",
       supportingPoints: [
-        "$69/mo semaglutide, $119/mo tirzepatide (embody)",
+        "$49/mo semaglutide, $99/mo tirzepatide (embody)",
         "Flat pricing, same at every dose (embody)",
         "Competitive with multi-month discounts (TrimRX)",
         "No insurance required (both)",
@@ -2782,7 +2782,7 @@ const embodyTrimrxBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Pricing", provider1Value: "Flat $69 sema / $119 tirz", provider2Value: "Competitive, multi-month discounts", highlight: "provider1" },
+    { feature: "Pricing", provider1Value: "Flat $49 sema / $99 tirz (sale)", provider2Value: "Competitive, multi-month discounts", highlight: "provider1" },
     { feature: "Shipping", provider1Value: "Free 1-2 day tracked", provider2Value: "Standard home delivery", highlight: "provider1" },
     { feature: "Plan Flexibility", provider1Value: "Simple monthly plans", provider2Value: "Flexible, no long-term contract", highlight: "provider2" },
     { feature: "Medications", provider1Value: "Compounded sema + tirz", provider2Value: "Compounded sema + tirz", highlight: "both" },
@@ -2799,10 +2799,10 @@ const embodyMedviBattle: BattleData = {
   title: "embody vs Medvi: Which Weight Loss Provider Is Right for You in 2026?",
   subtitle: "We compared pricing, shipping speed, medications, and personal support so you can see which one fits you best.",
   description: "embody vs Medvi: compare pricing, shipping, GLP-1 meds & support. embody: fast free 1-2 day shipping. Medvi: injections, tablets & coaching. See which fits you.",
-  intro: "embody and Medvi both offer online GLP-1 weight-loss treatment with provider support and home delivery. embody is built for affordable speed - flat $69/$119 pricing, free 1-2 day shipping, and LegitScript-certified 503A pharmacies. Medvi keeps things simple and personal, pairing prescription GLP-1 treatment with attentive provider support and transparent, all-inclusive pricing. Here's how they compare.",
-  verdict: "Both are credible, transparent providers - but embody takes it on price, speed, and published medication options. It offers $69/month semaglutide, $119 tirzepatide, and free 1-2 day shipping. Medvi is the better pick if personal, attentive provider service is your top priority.",
+  intro: "embody and Medvi both offer online GLP-1 weight-loss treatment with provider support and home delivery. embody is built for affordable speed - flat $49/$99 pricing, free 1-2 day shipping, and LegitScript-certified 503A pharmacies. Medvi keeps things simple and personal, pairing prescription GLP-1 treatment with attentive provider support and transparent, all-inclusive pricing. Here's how they compare.",
+  verdict: "Both are credible, transparent providers - but embody takes it on price, speed, and published medication options. It offers $49/month semaglutide, $99 tirzepatide, and free 1-2 day shipping. Medvi is the better pick if personal, attentive provider service is your top priority.",
   verdictWinnerPoints: [
-    "$69/mo semaglutide, $119/mo tirzepatide - flat pricing",
+    "$49/mo semaglutide, $99/mo tirzepatide - flat pricing",
     "Free 1-2 day tracked shipping",
     "Compounded semaglutide & tirzepatide",
   ],
@@ -2816,9 +2816,9 @@ const embodyMedviBattle: BattleData = {
     {
       name: "Pricing & Value",
       winner: "provider1",
-      explanation: "embody publishes flat pricing - $69/month compounded semaglutide and $119 tirzepatide, the same at every dose. Medvi's plans are transparent and all-inclusive, but it doesn't lead with a published low entry price. For upfront, lowest-price transparency, embody comes out ahead.",
+      explanation: "embody publishes flat pricing - $49/month compounded semaglutide and $99 tirzepatide, the same at every dose. Medvi's plans are transparent and all-inclusive, but it doesn't lead with a published low entry price. For upfront, lowest-price transparency, embody comes out ahead.",
       supportingPoints: [
-        "$69/mo semaglutide, $119/mo tirzepatide (embody)",
+        "$49/mo semaglutide, $99/mo tirzepatide (embody)",
         "Published flat pricing (embody)",
         "Transparent all-inclusive plans (Medvi)",
         "No insurance required (both)",
@@ -2838,7 +2838,7 @@ const embodyMedviBattle: BattleData = {
     {
       name: "Medications & Options",
       winner: "provider1",
-      explanation: "embody spells out its options - compounded semaglutide at $69 and tirzepatide at $119. Medvi prescribes GLP-1 treatment with provider-guided plans, but with fewer medication options highlighted up front.",
+      explanation: "embody spells out its options - compounded semaglutide at $49 and tirzepatide at $99. Medvi prescribes GLP-1 treatment with provider-guided plans, but with fewer medication options highlighted up front.",
       supportingPoints: [
         "Compounded semaglutide + tirzepatide (embody)",
         "Clear per-medication pricing (embody)",
@@ -2870,7 +2870,7 @@ const embodyMedviBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Pricing", provider1Value: "Flat $69 sema / $119 tirz", provider2Value: "Transparent, all-inclusive", highlight: "provider1" },
+    { feature: "Pricing", provider1Value: "Flat $49 sema / $99 tirz (sale)", provider2Value: "Transparent, all-inclusive", highlight: "provider1" },
     { feature: "Shipping", provider1Value: "Free 1-2 day tracked", provider2Value: "Home delivery", highlight: "provider1" },
     { feature: "Medications", provider1Value: "Compounded sema + tirz", provider2Value: "Prescription GLP-1 treatment", highlight: "provider1" },
     { feature: "Personal Support", provider1Value: "Solid standard support", provider2Value: "Attentive, highly rated service", highlight: "provider2" },
@@ -2981,11 +2981,11 @@ const foundEmbodyBattle: BattleData = {
   title: "Found vs embody: Which Weight Loss Program Wins in 2026?",
   matchupLabel: "Found vs embody",
   subtitle: "A coaching-first membership vs flat-priced GLP-1 treatment - compared on pricing, speed, and what you actually get.",
-  description: "Found vs embody compared: membership + coaching vs flat $69/mo compounded GLP-1 with 1-2 day shipping. See which model fits you better.",
-  intro: "Found and embody answer the same question with different models. Found is a membership: clinician consultations, health coaching and an app, with medication (GLP-1 or non-GLP-1) prescribed on top and its cost varying by treatment and insurance. embody is flat-priced medication-first treatment: $69/month for compounded semaglutide or $119 for tirzepatide, everything included, shipped free in 1-2 days. Here's how they compare.",
-  verdict: "embody takes this one on price certainty and speed: $69/$119 flat with medication included, free 1-2 day shipping, LegitScript-certified pharmacies and a full refund if you're not approved. Found is the better fit if you specifically want coaching built around your treatment and are open to non-GLP-1 medication options - check current membership and medication costs on their site.",
+  description: "Found vs embody compared: membership + coaching vs flat $49/mo compounded GLP-1 with 1-2 day shipping. See which model fits you better.",
+  intro: "Found and embody answer the same question with different models. Found is a membership: clinician consultations, health coaching and an app, with medication (GLP-1 or non-GLP-1) prescribed on top and its cost varying by treatment and insurance. embody is flat-priced medication-first treatment: $49/month for compounded semaglutide or $99 for tirzepatide, everything included, shipped free in 1-2 days. Here's how they compare.",
+  verdict: "embody takes this one on price certainty and speed: $49/$99 flat with medication included, free 1-2 day shipping, LegitScript-certified pharmacies and a full refund if you're not approved. Found is the better fit if you specifically want coaching built around your treatment and are open to non-GLP-1 medication options - check current membership and medication costs on their site.",
   verdictWinnerPoints: [
-    "Flat pricing with medication included - $69/mo semaglutide, $119/mo tirzepatide",
+    "Flat pricing with medication included - $49/mo semaglutide, $99/mo tirzepatide",
     "Free 1-2 day tracked, insured shipping",
     "Full refund if you're not approved",
   ],
@@ -2999,9 +2999,9 @@ const foundEmbodyBattle: BattleData = {
     {
       name: "Pricing & Value",
       winner: "provider1",
-      explanation: "embody's price is the whole price: $69/month for compounded semaglutide or $119 for tirzepatide, medication included. Found charges a membership for consultations and coaching, with medication costs varying by what's prescribed and whether insurance participates - the total is harder to predict.",
+      explanation: "embody's price is the whole price: $49/month for compounded semaglutide or $99 for tirzepatide, medication included. Found charges a membership for consultations and coaching, with medication costs varying by what's prescribed and whether insurance participates - the total is harder to predict.",
       supportingPoints: [
-        "$69/mo semaglutide, $119/mo tirzepatide, all-in (embody)",
+        "$49/mo semaglutide, $99/mo tirzepatide, all-in (embody)",
         "No hidden fees, cancel anytime (embody)",
         "Membership plus variable medication costs (Found)",
       ],
@@ -3048,7 +3048,7 @@ const foundEmbodyBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "$69/mo semaglutide · $119 tirzepatide, all-in", provider2Value: "Membership + medication (varies)", highlight: "provider1" },
+    { feature: "Starting Price", provider1Value: "$49/mo semaglutide · $99 tirzepatide, all-in (pre-Black Friday sale)", provider2Value: "Membership + medication (varies)", highlight: "provider1" },
     { feature: "Shipping", provider1Value: "Free, 1-2 days (tracked, insured)", provider2Value: "Standard delivery", highlight: "provider1" },
     { feature: "Coaching", provider1Value: "Medical oversight", provider2Value: "Dedicated health coaching", highlight: "provider2" },
     { feature: "Medications", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "GLP-1 and non-GLP-1 options", highlight: "both" },
@@ -3148,12 +3148,12 @@ const calibrateEmbodyBattle: BattleData = {
   provider2Id: "calibrate",
   title: "Calibrate vs embody: Insurance Program or Flat-Price GLP-1?",
   matchupLabel: "Calibrate vs embody",
-  subtitle: "Calibrate's year-long insurance-based program vs embody's flat $69/mo compounded GLP-1 - which model fits your situation?",
-  description: "Calibrate vs embody: a 1-year coached program with insurance-covered brand GLP-1s vs flat $69/mo compounded semaglutide shipped in 1-2 days.",
-  intro: "Calibrate and embody sit at opposite ends of the GLP-1 market. Calibrate is a structured one-year program: 1:1 video coaching, a lifestyle curriculum, and brand-name GLP-1 medication that Calibrate works to get covered through your insurance. embody is flat-price simplicity: $69/month compounded semaglutide or $119 tirzepatide, medication included, no insurance involved at all, shipped free in 1-2 days. Which is better depends almost entirely on your insurance and your appetite for structure.",
+  subtitle: "Calibrate's year-long insurance-based program vs embody's flat $49/mo compounded GLP-1 - which model fits your situation?",
+  description: "Calibrate vs embody: a 1-year coached program with insurance-covered brand GLP-1s vs flat $49/mo compounded semaglutide shipped in 1-2 days.",
+  intro: "Calibrate and embody sit at opposite ends of the GLP-1 market. Calibrate is a structured one-year program: 1:1 video coaching, a lifestyle curriculum, and brand-name GLP-1 medication that Calibrate works to get covered through your insurance. embody is flat-price simplicity: $49/month compounded semaglutide or $99 tirzepatide, medication included, no insurance involved at all, shipped free in 1-2 days. Which is better depends almost entirely on your insurance and your appetite for structure.",
   verdict: "For most self-pay shoppers, embody wins: flat transparent pricing, medication included, 1-2 day shipping and a refund if you're not approved - no insurance gymnastics. Calibrate is the stronger choice for the specific person whose insurance covers GLP-1s and who wants brand-name medication inside a seriously structured, coached year - check current program pricing on their site.",
   verdictWinnerPoints: [
-    "Flat $69/mo semaglutide, $119/mo tirzepatide - medication included",
+    "Flat $49/mo semaglutide, $99/mo tirzepatide - medication included",
     "No insurance required at any step",
     "Free 1-2 day tracked shipping; refund if not approved",
   ],
@@ -3167,7 +3167,7 @@ const calibrateEmbodyBattle: BattleData = {
     {
       name: "Cost Predictability",
       winner: "provider1",
-      explanation: "embody's flat $69/$119 with medication included is fully predictable from day one. Calibrate's economics hinge on your insurance: when coverage comes through, brand-name medication gets affordable - but the program fee plus coverage uncertainty makes the total harder to know in advance.",
+      explanation: "embody's flat $49/$99 with medication included is fully predictable from day one. Calibrate's economics hinge on your insurance: when coverage comes through, brand-name medication gets affordable - but the program fee plus coverage uncertainty makes the total harder to know in advance.",
       supportingPoints: [
         "Flat all-in pricing (embody)",
         "No insurance dependency (embody)",
@@ -3216,7 +3216,7 @@ const calibrateEmbodyBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "$69/mo semaglutide · $119 tirzepatide, all-in", provider2Value: "Program fee + insurance-covered medication", highlight: "provider1" },
+    { feature: "Starting Price", provider1Value: "$49/mo semaglutide · $99 tirzepatide, all-in (pre-Black Friday sale)", provider2Value: "Program fee + insurance-covered medication", highlight: "provider1" },
     { feature: "Insurance", provider1Value: "Not needed", provider2Value: "Central to the model (prior-auths handled)", highlight: "both" },
     { feature: "Medication", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "Brand-name GLP-1s", highlight: "both" },
     { feature: "Coaching", provider1Value: "Medical oversight", provider2Value: "1:1 video coaching, full curriculum", highlight: "provider2" },
@@ -3582,15 +3582,15 @@ const embodySproutBattle: BattleData = {
   provider2Id: "sprout",
   title: "embody vs Sprout: Which GLP-1 Provider Is Right for You in 2026?",
   matchupLabel: "embody vs Sprout",
-  subtitle: "The $69 flat-price speed specialist vs a personalized mid-tier program with a brand-name Wegovy option.",
+  subtitle: "The $49 flat-price speed specialist vs a personalized mid-tier program with a brand-name Wegovy option.",
   description:
-    "embody ($69/mo semaglutide, 1-2 day cold-chain shipping, LegitScript-certified) vs Sprout ($149/mo, ships in 2 days, brand-name Wegovy available). Real prices, honest verdict.",
+    "embody ($49/mo semaglutide, 1-2 day cold-chain shipping, LegitScript-certified) vs Sprout ($149/mo, ships in 2 days, brand-name Wegovy available). Real prices, honest verdict.",
   intro:
-    "embody and Sprout both move fast - embody ships in 1-2 days with cold-chain packaging, Sprout ships prescriptions within 2 days of approval - so this matchup is really decided elsewhere. embody's case is price and verification: $69/month semaglutide and $119 tirzepatide (regularly $79/$129), flat month to month, LegitScript-certified with US 503A pharmacies and a public Trustpilot record (3.8 across 10,689 reviews). Sprout's case is breadth and personalization: plans built around your goals, $200 off the first month, and - unusually for its tier - brand-name Wegovy on the shelf from $1,799 alongside compounded semaglutide ($149) and tirzepatide ($199).",
+    "embody and Sprout both move fast - embody ships in 1-2 days with cold-chain packaging, Sprout ships prescriptions within 2 days of approval - so this matchup is really decided elsewhere. embody's case is price and verification: $49/month semaglutide and $99 tirzepatide (regularly $79/$129), flat month to month, LegitScript-certified with US 503A pharmacies and a public Trustpilot record (3.8 across 10,689 reviews). Sprout's case is breadth and personalization: plans built around your goals, $200 off the first month, and - unusually for its tier - brand-name Wegovy on the shelf from $1,799 alongside compounded semaglutide ($149) and tirzepatide ($199).",
   verdict:
     "embody wins for most people: it's $80/month cheaper on semaglutide, equally fast, and carries the certifications and public review record Sprout hasn't published yet. Choose Sprout if the brand-name path matters - it's the only one of the two that can put a Wegovy pen in the box - or if its personalized-plan model and $200 first-month discount fit how you want to start. On the same compounded molecules, though, the price gap is hard to argue with.",
   verdictWinnerPoints: [
-    "$69/mo semaglutide, $119 tirzepatide - flat, month to month",
+    "$49/mo semaglutide, $99 tirzepatide - flat, month to month",
     "LegitScript-certified, US 503A pharmacies, refund if not approved",
     "Public track record: 3.8 on Trustpilot across 10,689 reviews",
   ],
@@ -3605,10 +3605,10 @@ const embodySproutBattle: BattleData = {
       name: "Price",
       winner: "provider1",
       explanation:
-        "embody's $69/month semaglutide and $119 tirzepatide (regularly $79/$129) undercut Sprout's $149/$199 starting prices by $80/month on each molecule. Sprout's $200 first-month discount narrows year-one math, but embody stays cheaper every month after.",
+        "embody's $49/month semaglutide and $99 tirzepatide (regularly $79/$129) undercut Sprout's $149/$199 starting prices by $80/month on each molecule. Sprout's $200 first-month discount narrows year-one math, but embody stays cheaper every month after.",
       supportingPoints: [
-        "$69 vs $149 semaglutide - $960/year apart (embody)",
-        "$119 vs $199 tirzepatide (embody)",
+        "$49 vs $149 semaglutide - $960/year apart (embody)",
+        "$99 vs $199 tirzepatide (embody)",
         "$200 off month one softens the gap early (Sprout)",
       ],
     },
@@ -3646,7 +3646,7 @@ const embodySproutBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "$69/mo semaglutide · $119 tirzepatide", provider2Value: "$149/mo semaglutide · $199 tirzepatide", highlight: "provider1" },
+    { feature: "Starting Price", provider1Value: "$49/mo semaglutide · $99 tirzepatide (pre-Black Friday sale)", provider2Value: "$149/mo semaglutide · $199 tirzepatide", highlight: "provider1" },
     { feature: "First-month offer", provider1Value: "Promo pricing (reg. $79/$129)", provider2Value: "$200 off month one", highlight: "provider2" },
     { feature: "Brand-name option", provider1Value: "None", provider2Value: "Wegovy from $1,799/mo", highlight: "provider2" },
     { feature: "Shipping", provider1Value: "Free 1-2 day, cold-chain, insured", provider2Value: "Ships within 2 days", highlight: "both" },
