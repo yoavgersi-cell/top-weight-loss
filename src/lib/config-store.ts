@@ -4119,9 +4119,9 @@ function buildInitialConfig(): SiteConfig {
       trustpilotReviews: seedTrustpilot[p.id]?.reviews,
     })),
     ranking: {
-      providerOrder: ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
+      providerOrder: ["eden", "embody", "altrx", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
       positions: [
-        { score: 9.8, starRating: 5, label: "Exceptional", badge: "Our Most Popular" },
+        { score: 9.8, starRating: 5, label: "Exceptional", badge: "Our Top Pick" },
         { score: 9.7, starRating: 5, label: "Exceptional" },
         { score: 9.6, starRating: 4.5, label: "Excellent" },
         { score: 9.4, starRating: 4, label: "Excellent" },
@@ -4236,7 +4236,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Semaglutide Providers 2026",
         h2: "Compare GLP-1 weight loss programs side by side",
         heroDescription: "Semaglutide (the active ingredient in Ozempic and Wegovy) is one of the most effective GLP-1 medications for weight loss. Compare providers offering semaglutide treatment below.",
-        providerOrder: ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
+        providerOrder: ["eden", "embody", "altrx", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
         editorialSections: [
           {
             heading: "What Is Semaglutide?",
@@ -4264,7 +4264,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Tirzepatide Providers 2026",
         h2: "Compare dual-action GLP-1 weight loss programs",
         heroDescription: "Tirzepatide (the active ingredient in Mounjaro and Zepbound) targets both GLP-1 and GIP receptors for enhanced weight loss results. Compare providers offering tirzepatide treatment below.",
-        providerOrder: ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
+        providerOrder: ["eden", "embody", "altrx", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
         editorialSections: [
           {
             heading: "What Is Tirzepatide?",
@@ -4292,7 +4292,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Online Weight Loss Programs 2026",
         h2: "Clinician-guided GLP-1 treatment from home",
         heroDescription: "Online weight loss programs now offer prescription GLP-1 medications with full medical oversight - all from home. We compared the top programs on pricing, clinical support, and results.",
-        providerOrder: ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
+        providerOrder: ["eden", "embody", "altrx", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
         editorialSections: [
           {
             heading: "How Online Weight Loss Programs Work",
@@ -4320,7 +4320,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Weight Loss Injections 2026",
         h2: "Compare injectable GLP-1 weight loss treatments",
         heroDescription: "GLP-1 weight loss injections like semaglutide and tirzepatide have shown 15-22% average weight loss in clinical trials. Compare providers offering injectable treatment programs below.",
-        providerOrder: ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
+        providerOrder: ["eden", "embody", "altrx", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
         editorialSections: [
           {
             heading: "How Weight Loss Injections Work",
@@ -4348,7 +4348,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Ozempic for Weight Loss",
         h2: "Compare providers offering semaglutide treatment",
         heroDescription: "Ozempic (semaglutide) is widely used off-label for weight loss, with clinical trials showing 10-15% average weight loss. Compare providers offering semaglutide-based treatment programs below.",
-        providerOrder: ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
+        providerOrder: ["eden", "embody", "altrx", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
         editorialSections: [
           {
             heading: "Ozempic for Weight Loss: What You Need to Know",
@@ -4376,7 +4376,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Wegovy Providers & Alternatives 2026",
         h2: "Compare semaglutide weight loss programs",
         heroDescription: "Wegovy is the FDA-approved weight loss version of semaglutide, with clinical trials showing 15% average weight loss. Compare providers offering Wegovy and compounded semaglutide alternatives below.",
-        providerOrder: ["embody", "altrx", "eden", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
+        providerOrder: ["eden", "embody", "altrx", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
         editorialSections: [
           {
             heading: "Wegovy vs Compounded Semaglutide",
