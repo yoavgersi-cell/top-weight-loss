@@ -44,8 +44,8 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     name: "Compounded Semaglutide (GLP-1) Injection",
     medication: "semaglutide",
     format: "injection",
-    price: "$49",
-    priceNote: "12-month plan; same price at every dose",
+    price: "$41",
+    priceNote: "12-month plan; same price at every dose; pre-Black Friday sale seen Oct 28, 2026",
     shipping: "Free discreet shipping, 3-5 day delivery",
     image: "/products/wellmedr-semaglutide.webp",
   },
@@ -197,8 +197,8 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     name: "Compounded Tirzepatide (GLP-1/GIP) Injection",
     medication: "tirzepatide",
     format: "injection",
-    price: "$89",
-    priceNote: "shipped every 4 weeks",
+    price: "$71",
+    priceNote: "shipped every 4 weeks; pre-Black Friday sale seen Oct 28, 2026",
     shipping: "Free discreet shipping, 3-5 day delivery",
     image: "/products/wellmedr-tirzepatide.webp",
   },
@@ -536,7 +536,7 @@ export function productPriceValue(p: CatalogProduct): number {
 
 /**
  * Lowest verified headline price per medication for a provider, as a snippet
- * for meta descriptions: "semaglutide from $49/mo, tirzepatide from $89/mo".
+ * for meta descriptions: "semaglutide from $41/mo, tirzepatide from $71/mo".
  * Reads the catalog at render time so a snippet can never lag a verified
  * price change. Empty string when the provider has no catalog entry.
  */

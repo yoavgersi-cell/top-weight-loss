@@ -60,12 +60,12 @@ export const HOLIDAY_OFFERS: HolidayOffer[] = [
   {
     vertical: "weight-loss",
     providerId: "wellmedr",
-    headline: "Pre-Black Friday sale: $49/month semaglutide, $89/month tirzepatide",
+    headline: "Pre-Black Friday sale: $41/month semaglutide, $71/month tirzepatide",
     detail:
-      "welludr's site banner reads \"Pre-Black Friday sale discount applied\" with compounded semaglutide at $49/month and tirzepatide at $89/month. Those are the same rates already in our index, where they are tied to a 12-month plan at the same price at every dose; the banner states no code and no end date.",
-    offerMonthly: { semaglutide: 49, tirzepatide: 89 },
+      "welludr lowered its pre-Black Friday sale on October 28 to compounded semaglutide from $41/month and tirzepatide from $71/month, down from the $49 and $89 its banner showed earlier the same day, per its partner pricing notice; the rates sit on the 12-month plan at the same price at every dose, the provider says they hold for the immediate future, and no code or end date is stated.",
+    offerMonthly: { semaglutide: 41, tirzepatide: 71 },
     verifiedOn: "2026-10-28",
-    source: "banner on welludr's homepage, operator screenshot",
+    source: "welludr partner pricing notice of October 28, 2026 and the homepage banner, operator screenshots",
   },
 ];
 

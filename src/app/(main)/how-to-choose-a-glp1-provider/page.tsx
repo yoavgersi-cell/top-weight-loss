@@ -90,7 +90,7 @@ const CHECKLIST: { title: string; check: string; verify: string; redFlag: string
   {
     title: "Cancellation and refunds",
     check: "Whether you can stop at any renewal, whether there is a minimum term, and what you get back if the clinician does not approve you.",
-    verify: "embody refunds in full if not approved and has no commitment; TrimRx has no long-term contract; welludr's $49 rate wants a 12-month plan; HealthRx charges $1,188 upfront. None of these is wrong, but you should know which one you are signing.",
+    verify: "embody refunds in full if not approved and has no commitment; TrimRx has no long-term contract; welludr's $41 rate wants a 12-month plan; HealthRx charges $1,188 upfront. None of these is wrong, but you should know which one you are signing.",
     redFlag: "Auto-renew terms you can only find in the checkout fine print. Read them before you pay.",
   },
   {
@@ -185,7 +185,7 @@ const ROWS: Row[] = [
     pharmacy: "Regulated US pharmacy; Reddit commenters name its Florida pharmacy",
     dosePricing: "Same price at every dose; best rate on a 12-month plan, billed monthly",
     likes: "5-star Trustpilot reviews credit reaching a person within minutes, quick answers from named agents, and a smooth switch from another provider; several low-star reviewers raised their rating after an operations manager called. On Reddit, short verdicts: \"legit\", a named Florida pharmacy, and annual-plan prices that match the published rates.",
-    complaints: "Low-star Trustpilot reviews from September are almost all about reaching someone: an order stuck at \"delay in shipping\" for 8 days with support unable to find the account, a request unanswered after 24 hours, chat and phone unanswered until a manager stepped in, one shipment that sat at the pharmacy for over a week. One August reviewer states they were charged every 21 days rather than monthly; we have not verified welludr's billing cadence. On Reddit, one detailed account was down only 1 pound after 8 weeks despite good service. The $49 rate requires the 12-month plan.",
+    complaints: "Low-star Trustpilot reviews from September are almost all about reaching someone: an order stuck at \"delay in shipping\" for 8 days with support unable to find the account, a request unanswered after 24 hours, chat and phone unanswered until a manager stepped in, one shipment that sat at the pharmacy for over a week. One August reviewer states they were charged every 21 days rather than monthly; we have not verified welludr's billing cadence. On Reddit, one detailed account was down only 1 pound after 8 weeks despite good service. The $41 rate requires the 12-month plan.",
   },
   {
     id: "medvi",
@@ -233,7 +233,7 @@ const PATTERNS: { title: string; body: string }[] = [
   },
   {
     title: "The headline price rarely stands alone",
-    body: "welludr's $49 requires a 12-month plan. HealthRx's $99 is $1,188 prepaid. Medvi's $99 and altRx's $89 are promotional rates against $199. Ro bills membership and medication separately. The condition attached to a price is as important as the number, which is why the price index prints both.",
+    body: "welludr's $41 requires a 12-month plan. HealthRx's $99 is $1,188 prepaid. Medvi's $99 and altRx's $89 are promotional rates against $199. Ro bills membership and medication separately. The condition attached to a price is as important as the number, which is why the price index prints both.",
   },
   {
     title: "Flat-dose pricing is common but not universal",
@@ -290,7 +290,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: "What does a GLP-1 provider actually cost per month?",
     answer:
-      "At verified published prices in our index, compounded semaglutide runs $49 to $199 a month and compounded tirzepatide $89 to $299, usually with the consultation and shipping included. Brand-name Wegovy, Zepbound and Ozempic run four figures a month cash. Always price the maintenance dose, not the starter dose, and add any membership billed separately.",
+      "At verified published prices in our index, compounded semaglutide runs $41 to $199 a month and compounded tirzepatide $71 to $299, usually with the consultation and shipping included. Brand-name Wegovy, Zepbound and Ozempic run four figures a month cash. Always price the maintenance dose, not the starter dose, and add any membership billed separately.",
   },
   {
     question: "Which providers does this table not cover?",
