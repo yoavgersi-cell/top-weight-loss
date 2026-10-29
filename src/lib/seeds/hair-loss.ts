@@ -1148,6 +1148,11 @@ const faqs: FaqItem[] = [
       "Some options are formulated for women - for example certain minoxidil and spironolactone formulas - while others, such as finasteride and dutasteride, are generally not recommended for women, especially during pregnancy. Women should use options approved for them under medical guidance. Happy Head offers formulas for women; Maximus is focused on men.",
   },
   {
+    question: "Which online hair-loss provider is the most trusted?",
+    answer:
+      "Trust on this site is measured on published, checkable records rather than asserted. Of the providers we compare, two hold Trustpilot records we have verified: Happy Head, rated 4.5 across 1,803 reviews, and Maximus, rated 4.4 across 1,050, both on claimed profiles, and both run every prescription through a licensed medical review with FDA-approved actives (finasteride, minoxidil) at the core of their plans. The other providers we list publish no Trustpilot record we can verify, so judge them on the structural markers instead: a licensed clinician reviewing your intake, a licensed pharmacy, and prices stated before you check out.",
+  },
+  {
     question: "Are online hair-loss treatments legitimate?",
     answer:
       "Reputable telehealth providers connect you with licensed clinicians who review your information before prescribing, and dispense medication through licensed pharmacies. Always confirm a provider's licensing and details before starting.",
@@ -1773,6 +1778,10 @@ const articles: ArticleData[] = [
       {
         heading: "Is Happy Head legit and safe?",
         body: `Yes - by the checkable signals, Happy Head is a legitimate provider. It's founded by dermatologists, prescriptions go through a licensed medical review with a free online consultation, its actives are established hair-loss medications (finasteride and topical minoxidil are FDA-approved; dutasteride and oral minoxidil are prescribed off-label under supervision), and it holds a <strong>claimed Trustpilot profile rated 4.5 across 1,803 reviews</strong>, listed in the Pharmacy category and claimed since March 2022. It also publishes real prices - and advertises a 6-month growth guarantee, whose terms you should read on their site before counting on it.`,
+      },
+      {
+        heading: "Is Happy Head a scam?",
+        body: `No. The markers that separate a real provider from a scam are all present and checkable: dermatologist founders, a licensed medical review before any prescription, established actives (FDA-approved finasteride and topical minoxidil, with dutasteride and oral minoxidil prescribed off-label under supervision), published prices, and a claimed Trustpilot profile rated 4.5 across 1,803 reviews. The sensible precautions are the same as for any subscription telehealth service: read the 6-month growth guarantee's terms on its site before counting on it, and note the regular price that applies after the $49 first-order rate - both are covered in <a href="/hair-loss/articles/happyhead-cost">how much Happy Head costs</a>.`,
       },
       {
         heading: "How much does Happy Head cost?",

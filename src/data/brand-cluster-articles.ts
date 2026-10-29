@@ -405,11 +405,11 @@ export const brandClusterArticles: Article[] = [
     ],
     sections: [
       {
-        heading: "The contract question is the tell",
+        heading: "Is TrimRx legit?",
         body: `<div class="qa"><strong>The short answer</strong>Yes. TrimRx's defining feature is no long-term contract, ever: month-to-month is always available and multi-month plans are optional discounts. The clinical gate is real, with an online health assessment reviewed by a licensed clinician who can decline, then compounded semaglutide at $149 a month (the same at every dose, with a $140 discount applied) or tirzepatide at $259, with consultations and ongoing support included. The fair criticisms are that the same semaglutide runs $41 to $99 elsewhere, it is compounded-only, and there is no money-back guarantee.</div><p>Here's a useful heuristic for judging telehealth weight-loss companies: look at what happens when you try to leave. Operations built on trapping customers hide terms, auto-renew aggressively, and make cancellation a phone maze. TrimRx's (Trim Rx) answer to the leave question is its defining feature: <strong>no long-term contract, ever</strong>. Month-to-month is always available; multi-month plans exist purely as optional discounts.</p><p>A company that lets you leave freely is betting you'll stay because treatment works. That structural honesty is the first legitimacy signal - and the rest of the operation backs it up.</p>`,
       },
       {
-        heading: "The clinical gate, inspected",
+        heading: "Who prescribes at TrimRx?",
         body: `<p>TrimRx runs the full clinical pipeline a legitimate prescriber must: an online health assessment covering history, medications and <a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener">contraindications</a>; review by a licensed clinician with genuine authority to decline; and - if appropriate - <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">a prescription for compounded semaglutide or tirzepatide</a> with clinical support continuing through dose changes. The process is 100% online with no clinic visit, and support isn't a one-time consult: guidance continues as you titrate, which is when most questions actually arise.</p>`,
       },
       {
@@ -417,7 +417,7 @@ export const brandClusterArticles: Article[] = [
         body: `<table><tr><th>Plan</th><th>Medication</th><th>Price</th></tr><tr><td>GLP-1</td><td>Compounded semaglutide, weekly</td><td>$149/mo (same at every dose)</td></tr><tr><td>GLP-1 + GIP</td><td>Compounded tirzepatide, weekly</td><td>$259/mo</td></tr></table><p>The plan covers medication, provider consultations and ongoing support - self-pay, no insurance needed. Two pricing notes worth acting on: the $149 already reflects a $140 discount off the list rate and holds at every dose, and <strong>multi-month commitments cut the monthly further</strong> - TrimRx's one concession to commitment pricing, offered as a choice rather than a requirement.</p>`,
       },
       {
-        heading: "Fair criticisms - and who they matter to",
+        heading: "What are the fair criticisms of TrimRx?",
         body: `<p>The budget tier undercuts TrimRx significantly: the same semaglutide runs $41-$99 at <a href="/weight-loss/reviews/wellmedr">welludr</a>, <a href="/weight-loss/reviews/embody">embody</a> and <a href="/weight-loss/reviews/healthrx">HealthRx</a> - though each asks for either commitment or a leaner service in exchange. TrimRx is compounded-only, so brand-name shoppers need <a href="/weight-loss/reviews/altrx">altRx</a>. And it offers no headline guarantee - no money-back promise like SHED's, no refund-if-not-approved like embody's. If a safety net is what gets you to start, that's a real gap.</p>`,
       },
       {
@@ -526,7 +526,7 @@ export const brandClusterArticles: Article[] = [
     ],
     sections: [
       {
-        heading: "The unusual thing altRx does",
+        heading: "What is altRx?",
         body: `<div class="qa"><strong>The short answer</strong>Yes. Every altRx intake is reviewed by a licensed physician, physician associate or nurse practitioner who can decline treatment, and prescriptions are filled by licensed pharmacies. It is the one provider in our ranking running both lanes: compounded semaglutide from $89 and tirzepatide from $149, plus brand-name Ozempic ($1,149), Zepbound ($1,249) and Wegovy ($1,579), with the same price at every dose, pause-or-cancel-anytime terms and Buy Now, Pay Later. The trade-offs are that welludr and embody are cheaper on compounded plans, there is no coaching and no money-back guarantee.</div><p>Most GLP-1 telehealth companies pick a lane: cheap compounded plans, or brand-name fulfillment. altRx runs both lanes under one roof - compounded semaglutide from $89 and tirzepatide from $149, next to brand-name <strong>Ozempic at $1,149, Zepbound at $1,249 and Wegovy at $1,579</strong>. That structure is itself a trust signal worth pausing on: a company dispensing <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-new-drug-treatment-chronic-weight-management-first-2014" target="_blank" rel="noopener">FDA-approved brand products</a> has pharmacy relationships and compliance obligations that fly-by-night compounding shops never touch. You don't get a Wegovy supply chain by cutting corners.</p>`,
       },
       {
@@ -534,7 +534,15 @@ export const brandClusterArticles: Article[] = [
         body: `<p>Every altRx assessment is reviewed by a licensed provider - a physician, physician associate, or nurse practitioner - with the authority to decline treatment. Prescriptions are filled by licensed pharmacies in both lanes. The intake is genuinely medical (history, medications, <a href="https://medlineplus.gov/druginfo/meds/a618008.html" target="_blank" rel="noopener">contraindications</a>), and the whole process runs online with the ability to pause or cancel anytime - no clinic visit, no lock-in, no cancellation maze.</p><p>One structural honesty marker deserves its own sentence: altRx charges the <strong>same price at every dose</strong>. The industry's quietest markup - bills that climb as you titrate up - simply doesn't exist here.</p>`,
       },
       {
-        heading: "The money layer: flat pricing and BNPL",
+        heading: "Is altRx reputable?",
+        body: `<p>Reputation on this site is judged on what can be checked, not asserted. altRx does not publish a Trustpilot record we can verify, so we do not quote one. What it does publish is checkable: a licensed-prescriber gate on every intake, licensed pharmacies filling both lanes, the same price at every dose, pause-or-cancel-anytime terms, and <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-new-drug-treatment-chronic-weight-management-first-2014" target="_blank" rel="noopener">FDA-approved brand-name products</a> on the same shelf as its compounded plans - a supply chain that requires pharmacy relationships and compliance obligations a fly-by-night operation never has. If a third-party rating is what you weigh most, the published records in this price tier are <a href="/weight-loss/reviews/wellmedr">welludr</a> (4.6 across 2,679 Trustpilot reviews) and <a href="/weight-loss/reviews/embody">embody</a> (3.8 across 10,689).</p>`,
+      },
+      {
+        heading: "Is altRx legit for tirzepatide?",
+        body: `<p>Yes, on the same markers as the rest of its menu. Compounded tirzepatide is <strong>$149 a month (regular $299), the same price at every dose</strong>, prescribed after the licensed-provider review and filled by a licensed pharmacy. Brand-name Zepbound (tirzepatide) sits on the same shelf at $1,249 a month, the lowest brand-name Zepbound list price on the shelves we track, so a patient can start compounded and move to the FDA-approved pen without changing providers. Two honest notes: <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">compounded tirzepatide is not FDA-approved</a>, and cheaper compounded tirzepatide exists - welludr at $71 on a 12-month plan and embody at $99 month to month. altRx's edge is the brand lane and Buy Now, Pay Later, not the lowest number. The full comparison is in <a href="/weight-loss/articles/best-tirzepatide-online">best tirzepatide online</a>.</p>`,
+      },
+      {
+        heading: "How much does altRx cost?",
         body: `<table><tr><th>Lane</th><th>Medication</th><th>Price</th></tr><tr><td>Compounded</td><td>Semaglutide (weekly)</td><td>$89/mo - reg. $199</td></tr><tr><td>Compounded</td><td>Tirzepatide (weekly)</td><td>$149/mo - reg. $299</td></tr><tr><td>Brand-name</td><td>Ozempic</td><td>$1,149/mo</td></tr><tr><td>Brand-name</td><td>Zepbound</td><td>$1,249/mo</td></tr><tr><td>Brand-name</td><td>Wegovy</td><td>$1,579/mo</td></tr></table><p>Two financing details separate altRx from the pack. It's the only provider in our ranking offering <strong>Buy Now, Pay Later</strong>, which spreads even the compounded plans into smaller payments. And its brand-name prices undercut every other brand shelf we track - welludr's Ozempic starts $250/month higher. For how the compounded and brand lanes actually differ medically, read <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name semaglutide</a>.</p>`,
       },
       {

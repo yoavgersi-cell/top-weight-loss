@@ -1795,6 +1795,10 @@ export const articles: Article[] = [
         body: 'Yes - by the signals that matter, Embody is a legitimate telehealth provider. It is <strong>LegitScript-certified</strong> (an independent certification for online healthcare), works with <strong><a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">US-based 503A compounding pharmacies</a></strong>, and requires a <strong>licensed medical review</strong> before any prescription is issued. Those three things - third-party certification, licensed pharmacies, and real clinician oversight - are exactly what separates a trustworthy provider from one to avoid.',
       },
       {
+        heading: "Is Embody a good company?",
+        body: 'Judged on what can be checked, yes - with one honest caveat. The structure is sound: LegitScript certification, US-based 503A pharmacies, a licensed medical review that can decline treatment, a full refund if a provider does not approve you, flat published pricing with no commitment, and 1-2 day shipping. The caveat is the customer record: Embody holds a <strong>verified 3.8 on Trustpilot across 10,689 reviews</strong>, a very large base with a lower average than welludr\'s 4.6, so read the recent reviews on our <a href="/weight-loss/reviews/embody">Embody review</a> before you decide. "Embody GLP-1" simply means its two compounded products - semaglutide (a GLP-1) and tirzepatide (a GLP-1/GIP) - prescribed online and shipped to you.',
+      },
+      {
         heading: "How much does Embody cost?",
         body: 'Embody uses flat, transparent pricing: compounded semaglutide from <strong>$49/month</strong> and compounded tirzepatide from <strong>$99/month</strong>, with the medication, doctor review, supplies and shipping included - no insurance and no hidden fees. For a full breakdown, read <a href="/weight-loss/articles/embody-cost">how much Embody costs</a>.',
       },
@@ -2027,6 +2031,10 @@ export const articles: Article[] = [
       {
         heading: "Is welludr legit?",
         body: 'By every marker we can actually check - yes. A licensed provider reviews your medical intake before prescribing, and approval is not automatic; medication is dispensed through a <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">regulated US pharmacy</a> (Reddit commenters independently name its Florida pharmacy); it holds a <strong>verified 4.6 on Trustpilot across 2,679 reviews</strong>, tied for the highest aggregate among the providers in our ranking; and it backs treatment with a weight-loss warranty, terms published on its site. "Legit" does not mean the medication works identically for everyone - more on that in the complaints section, because that is where the honest caveat lives.',
+      },
+      {
+        heading: "Is welludr a scam?",
+        body: 'No. The markers that separate a real provider from a scam are all present and checkable: a licensed provider who can decline treatment, a regulated US pharmacy, published prices with the plan condition stated, a weight-loss warranty with its terms on the site, and a <strong>verified 4.6 on Trustpilot across 2,679 reviews</strong>. The word "scam" does appear in our material - once, in a 1-star Trustpilot review from the September 2026 capture about an eight-day shipping delay ("Definitely feeling like a scam") - and that is a service complaint about a late order, not a report of being charged without product. The same company shows up in searches under several spellings: <strong>wellmedr</strong> (its former name), <strong>wellmed</strong>, <strong>wellmedoc</strong> and <strong>welludr.com</strong> all refer to this one provider, which rebranded from wellmedr to welludr in 2026 with the same plans, pharmacy and Trustpilot record. If you are checking before you pay, the two things to confirm on its site are the 12-month plan condition behind the $41 rate and the warranty terms.',
       },
       {
         heading: "What do welludr reviews actually say?",

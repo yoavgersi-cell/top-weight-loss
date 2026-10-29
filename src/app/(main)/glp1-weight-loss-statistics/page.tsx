@@ -71,6 +71,11 @@ const FAQS: { question: string; answer: string }[] = [
       "Appetite usually drops within the first one to two weeks. Trial averages show roughly 3-5 lbs in the first month at the starting dose, about 3-6% of body weight by months two to three as the dose rises, 10-15% (semaglutide) or 15-20% (tirzepatide) by month six, and maximum results of about 15% (semaglutide) to 22.5% (tirzepatide) around months 12 to 16.",
   },
   {
+    question: "What is the average monthly weight loss on prescription weight-loss drugs?",
+    answer:
+      "There is no single monthly figure, because loss is front-loaded and slows toward a plateau. Dividing the trial averages above by time gives the working rate: roughly 3-5 lbs in the first month at the starting dose, then about 1.5-2.5% of body weight a month through month six on semaglutide (10-15% by month six) and about 2.5-3.5% a month on tirzepatide (15-20% by month six), tapering toward the maximum of about 15% and 22.5% around months 12 to 16. Liraglutide averages less, about 5-8% in total over 56 weeks. These are derived from trial means; individual results vary.",
+  },
+  {
     question: "What are the most common GLP-1 side effects?",
     answer:
       "Gastrointestinal effects lead: nausea in roughly 40-44% of people on semaglutide and 25-33% on tirzepatide, diarrhea in about 30% and 19-23%, vomiting in about 24% and 8-13%, and constipation in about 23% and 12-17%, per FDA prescribing information and the STEP and SURMOUNT safety data. They typically ease as the dose stabilises.",
