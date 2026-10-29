@@ -1261,15 +1261,15 @@ const articles: ArticleData[] = [
     ],
     sections: [
       {
-        heading: "What's actually different between the two?",
+        heading: "What is the difference between a TRT clinic and online TRT?",
         body: `<div class="qa"><strong>The short answer</strong>Online TRT is usually cheaper and more convenient, with labs done locally and consults handled remotely, and for straightforward cases it can match in-person care. An in-person clinic suits complicated cases or men who prefer face-to-face management. Either way, judge the provider on proper diagnosis, real monitoring, reachable support and what the membership actually includes.</div>Less than the framing suggests, and more in logistics than in medicine. A legitimate <strong>online TRT provider</strong> still runs blood work (you get it drawn at a local lab), still has a licensed clinician review and prescribe, and still monitors you over time - the consults just happen by video or messaging and the medication ships to you. An <strong>in-person clinic</strong> does the same clinical work under one roof, with face-to-face visits. The core medicine - diagnosis, prescription, monitoring - is the same job either way; what changes is convenience, cost and how the care is delivered.`,
       },
       {
-        heading: "Where does online win?",
+        heading: "Is online TRT cheaper and more convenient than a clinic?",
         body: `On <strong>cost and convenience</strong>, usually decisively. Online programs cut the overhead of a physical clinic and tend to price below in-person management, and they remove the friction that stops a lot of men getting evaluated at all - no waiting rooms, no time off work, discreet delivery. For a man with reasonably straightforward low testosterone, that accessibility is the difference between getting treated and putting it off for another year. The realistic price picture is in <a href="/trt/articles/trt-cost">TRT cost</a>, and the step-by-step is in <a href="/trt/articles/how-to-get-trt-online">how to get TRT online</a>.`,
       },
       {
-        heading: "Where does an in-person clinic win?",
+        heading: "When is an in-person TRT clinic the better choice?",
         body: `When the case isn't straightforward. If you have complicating conditions, a complicated history, fertility considerations that need close management (see <a href="/trt/articles/trt-and-fertility">TRT and fertility</a>), or you simply want hands-on, face-to-face care, a good in-person clinic earns its place. Some men also just prefer a physical relationship with a provider they can sit across from - that's a legitimate preference, not a lesser one. The point is to match the route to the complexity of your situation rather than assuming online is always enough or always lesser.`,
       },
       {
