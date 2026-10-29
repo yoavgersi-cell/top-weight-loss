@@ -503,12 +503,12 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "Does welludr's price go up as your dose increases?",
       answer:
-        "No - welludr charges the same price regardless of dosage: compounded semaglutide from $49/month and tirzepatide from $89/month. The lowest $49 rate is tied to a 12-month plan.",
+        "No - welludr charges the same price regardless of dosage: compounded semaglutide from $41/month and tirzepatide from $71/month. The lowest $41 rate is tied to a 12-month plan.",
     },
     {
       question: "Can you cancel welludr anytime?",
       answer:
-        "Yes - you can cancel or change your plan anytime. Keep in mind the headline $49/month rate is locked in via a 12-month plan, and the program is backed by welludr's weight-loss warranty.",
+        "Yes - you can cancel or change your plan anytime. Keep in mind the headline $41/month rate is locked in via a 12-month plan, and the program is backed by welludr's weight-loss warranty.",
     },
   ],
   medvi: [

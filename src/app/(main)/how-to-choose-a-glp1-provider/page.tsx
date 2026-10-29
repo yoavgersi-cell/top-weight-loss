@@ -90,7 +90,7 @@ const CHECKLIST: { title: string; check: string; verify: string; redFlag: string
   {
     title: "Cancellation and refunds",
     check: "Whether you can stop at any renewal, whether there is a minimum term, and what you get back if the clinician does not approve you.",
-    verify: "embody refunds in full if not approved and has no commitment; TrimRx has no long-term contract; welludr's $49 rate wants a 12-month plan; HealthRx charges $1,188 upfront. None of these is wrong, but you should know which one you are signing.",
+    verify: "embody refunds in full if not approved and has no commitment; TrimRx has no long-term contract; welludr's $41 rate wants a 12-month plan; HealthRx charges $1,188 upfront. None of these is wrong, but you should know which one you are signing.",
     redFlag: "Auto-renew terms you can only find in the checkout fine print. Read them before you pay.",
   },
   {
@@ -233,7 +233,7 @@ const PATTERNS: { title: string; body: string }[] = [
   },
   {
     title: "The headline price rarely stands alone",
-    body: "welludr's $49 requires a 12-month plan. HealthRx's $99 is $1,188 prepaid. Medvi's $99 and altRx's $89 are promotional rates against $199. Ro bills membership and medication separately. The condition attached to a price is as important as the number, which is why the price index prints both.",
+    body: "welludr's $41 requires a 12-month plan. HealthRx's $99 is $1,188 prepaid. Medvi's $99 and altRx's $89 are promotional rates against $199. Ro bills membership and medication separately. The condition attached to a price is as important as the number, which is why the price index prints both.",
   },
   {
     title: "Flat-dose pricing is common but not universal",

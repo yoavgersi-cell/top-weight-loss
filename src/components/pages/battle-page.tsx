@@ -100,13 +100,13 @@ const BATTLE_COST_MATH: Record<
   // provider1 = embody, provider2 = welludr
   "embody-vs-wellmedr": {
     rows: [
-      ["First month (semaglutide)", "$49", "$49"],
-      ["6-month total", "$294", "$294"],
-      ["12-month total", "$588", "$588"],
-      ["Tirzepatide, monthly", "$99 (reg. $129)", "$89"],
+      ["First month (semaglutide)", "$49", "$41"],
+      ["6-month total", "$294", "$246"],
+      ["12-month total", "$588", "$492"],
+      ["Tirzepatide, monthly", "$99 (reg. $129)", "$71"],
       ["The condition", "$49 is promotional (reg. $79); month to month", "$49 locks on a 12-month plan"],
     ],
-    note: "Semaglutide at each provider's published rate: embody $49/mo promotional (regularly $79) with no commitment; welludr $49/mo on a 12-month plan, billed monthly, same price at every dose. welludr wins the year by $240 - embody wins the exit terms.",
+    note: "Semaglutide at each provider's published rate: embody $49/mo promotional (regularly $79) with no commitment; welludr $41/mo on a 12-month plan, billed monthly, same price at every dose. welludr wins the year by $240 - embody wins the exit terms.",
   },
   // provider1 = Medvi, provider2 = HealthRx
   "healthrx-vs-medvi": {
@@ -160,14 +160,14 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "Sprout ($149/mo semaglutide, ships in 2 days, Wegovy option) vs TrimRx ($149/mo flat at every dose, custom dosing, no contract). Compared honestly.",
   },
   "sprout-vs-wellmedr": {
-    title: "Sprout vs welludr (2026): $149 vs $49 GLP-1 Compared",
+    title: "Sprout vs welludr (2026): $149 vs $41 GLP-1 Compared",
     description:
-      "Sprout ($149/mo, 2-day fulfillment, brand-name Wegovy) vs welludr ($49/mo, 4.6 on Trustpilot, 1M+ patients, warranty). Real prices and an honest verdict.",
+      "Sprout ($149/mo, 2-day fulfillment, brand-name Wegovy) vs welludr ($41/mo, 4.6 on Trustpilot, 1M+ patients, warranty). Real prices and an honest verdict.",
   },
   "embody-vs-wellmedr": {
-    title: "embody vs welludr (2026): $49 vs $49 GLP-1 Compared",
+    title: "embody vs welludr (2026): $49 vs $41 GLP-1 Compared",
     description:
-      "embody ($49/mo semaglutide, 1-2 day shipping, refund if not approved) vs welludr ($49/mo, 1M+ patients, weight-loss warranty). Real prices, real trade-offs.",
+      "embody ($49/mo semaglutide, 1-2 day shipping, refund if not approved) vs welludr ($41/mo, 1M+ patients, weight-loss warranty). Real prices, real trade-offs.",
   },
   "altrx-vs-embody": {
     // Measured winner, restored Aug 30: when both reverse slugs were live, the
@@ -184,9 +184,9 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "altRx ($89/mo semaglutide, flat at every dose, brand-name options) vs TrimRx ($149/mo, no contract, multi-month discounts). Pricing and flexibility compared.",
   },
   "altrx-vs-wellmedr": {
-    title: "altRx vs welludr (2026): $89 vs $49 GLP-1 Compared",
+    title: "altRx vs welludr (2026): $89 vs $41 GLP-1 Compared",
     description:
-      "altRx ($89/mo semaglutide + the cheapest brand-name shelf) vs welludr ($49/mo, used by 1M+ patients). We compared price, medications, support and guarantees.",
+      "altRx ($89/mo semaglutide + the cheapest brand-name shelf) vs welludr ($41/mo, used by 1M+ patients). We compared price, medications, support and guarantees.",
   },
   "embody-vs-trimrx": {
     title: "embody vs TrimRx (2026): $49 vs $149 GLP-1 Compared",
@@ -222,9 +222,9 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "Medvi ($99/mo promo, all-inclusive, praised support) vs TrimRx ($149/mo flat at every dose, no long-term contract). Close prices, different strengths.",
   },
   "medvi-vs-wellmedr": {
-    title: "Medvi vs welludr (2026): $99 or $49 GLP-1 Compared",
+    title: "Medvi vs welludr (2026): $99 or $41 GLP-1 Compared",
     description:
-      "Medvi ($99/mo promo with personal provider support) vs welludr ($49/mo semaglutide, 1M+ patients, warranty). Is high-touch care worth the difference?",
+      "Medvi ($99/mo promo with personal provider support) vs welludr ($41/mo semaglutide, 1M+ patients, warranty). Is high-touch care worth the difference?",
   },
   "medvi-vs-altrx": {
     title: "Medvi vs altRx (2026): $99 vs $89 GLP-1 Compared",
@@ -233,9 +233,9 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   },
   "trimrx-vs-wellmedr": {
     // Oct 15, 2026: welludr leads (named winner, shown first on the page).
-    title: "welludr vs TrimRx (2026): $49 vs $149 GLP-1 Compared",
+    title: "welludr vs TrimRx (2026): $41 vs $149 GLP-1 Compared",
     description:
-      "welludr ($49/mo semaglutide, weight-loss warranty, 4.6 on Trustpilot) vs TrimRx ($149/mo flat, custom dosing, no contract). Price and support compared.",
+      "welludr ($41/mo semaglutide, weight-loss warranty, 4.6 on Trustpilot) vs TrimRx ($149/mo flat, custom dosing, no contract). Price and support compared.",
   },
   "trimrx-vs-ro": {
     title: "TrimRx vs ro (2026): Which GLP-1 Provider Fits You?",
@@ -260,9 +260,9 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "Two $99/month GLP-1 deals, opposite structures: HealthRx's prepaid year ($1,188 at checkout) vs Medvi's monthly all-inclusive promo. The honest math.",
   },
   "ro-vs-wellmedr": {
-    title: "ro vs welludr (2026): Big Brand or $49 GLP-1?",
+    title: "ro vs welludr (2026): Big Brand or $41 GLP-1?",
     description:
-      "ro (major telehealth brand with in-house pharmacy) vs welludr ($49/mo semaglutide, 1M+ patients, weight-loss warranty). Brand trust vs the lowest price.",
+      "ro (major telehealth brand with in-house pharmacy) vs welludr ($41/mo semaglutide, 1M+ patients, weight-loss warranty). Brand trust vs the lowest price.",
   },
 };
 

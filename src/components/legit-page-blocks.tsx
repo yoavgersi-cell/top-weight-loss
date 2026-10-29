@@ -32,7 +32,7 @@ export const LEGIT_PAGES: Record<string, LegitPageData> = {
       { ok: true, text: "Weight-loss warranty, with its terms published on the provider's site" },
       { ok: false, text: "The $49 / $89 rates are tied to a 12-month plan, billed monthly; standard delivery is 3-5 business days" },
     ],
-    priceLine: "$49/mo compounded semaglutide · $89/mo tirzepatide, the same price at every dose",
+    priceLine: "$49/mo compounded semaglutide · $71/mo tirzepatide, the same price at every dose",
     alternative: { text: "Not sure about a 12-month plan? Compare the month-to-month alternative in embody vs welludr", href: "/embody-vs-wellmedr" },
     capture: {
       image: "/verification/wellmedr-pricing-2026-10-05.webp",

@@ -65,7 +65,7 @@ const ROWS: Row[] = [
     id: "wellmedr",
     name: "welludr",
     medications: "Compounded semaglutide and tirzepatide; brand-name Ozempic and Zepbound",
-    entry: "$49 sema / $89 tirz",
+    entry: "$41 sema / $71 tirz",
     entryNote: "12-month plan, same price at every dose",
     after: "Same, locked on the plan; month to month is higher",
     membership: "None",
@@ -903,7 +903,7 @@ export default async function Glp1ProviderComparisonPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
-                <tr><th scope="row" className="px-4 py-3 font-medium text-[#191919]">welludr, semaglutide on the 12-month plan</th><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-800"><strong>$147</strong> (with nine more months committed)</td></tr>
+                <tr><th scope="row" className="px-4 py-3 font-medium text-[#191919]">welludr, semaglutide on the 12-month plan</th><td className="px-4 py-3 text-gray-600">$41</td><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-800"><strong>$147</strong> (with nine more months committed)</td></tr>
                 <tr className="bg-gray-50/50"><th scope="row" className="px-4 py-3 font-medium text-[#191919]">embody, semaglutide month to month</th><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-800"><strong>$207</strong> (no further commitment)</td></tr>
                 <tr><th scope="row" className="px-4 py-3 font-medium text-[#191919]">Ro, Wegovy pill plus membership, month to month</th><td className="px-4 py-3 text-gray-600">$39 + $149 = $188</td><td className="px-4 py-3 text-gray-600">$149 + $299 = $448</td><td className="px-4 py-3 text-gray-600">$149 + $299 = $448</td><td className="px-4 py-3 text-gray-800"><strong>$1,084</strong> (FDA-approved product; insurance may change this entirely)</td></tr>
               </tbody>
