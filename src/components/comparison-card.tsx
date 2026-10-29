@@ -3,6 +3,12 @@ import { RatingBadge } from "./rating-badge";
 import { ProviderCta } from "./provider-cta";
 import { SocialProofBubble } from "./social-proof-bubble";
 
+// The "Free & Discreet Shipping" line on the #1 card is a factual claim, so it
+// shows only for providers whose shipping terms we have verified as such. A
+// provider moved to #1 without that record gets no badge rather than an
+// inherited one.
+const FREE_DISCREET_SHIPPING_VERIFIED = new Set(["embody"]);
+
 interface ComparisonCardProduct {
   id: string;
   name: string;
@@ -99,7 +105,7 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
               {arrowSvg}
             </ProviderCta>
           </div>
-          {product.rank === 1 && (
+          {product.rank === 1 && FREE_DISCREET_SHIPPING_VERIFIED.has(product.id) && (
             <div className="absolute bottom-4.5 left-0 right-0 hidden sm:flex items-center justify-center">
               <ShippingBadge />
             </div>
@@ -135,7 +141,7 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
           ))}
         </ul>
 
-        {product.rank === 1 && (
+        {product.rank === 1 && FREE_DISCREET_SHIPPING_VERIFIED.has(product.id) && (
           <div className="sm:hidden"><ShippingBadge /></div>
         )}
 
