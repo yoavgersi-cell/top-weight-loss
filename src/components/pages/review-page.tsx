@@ -589,7 +589,7 @@ const REVIEW_PROMOS: Record<string, { segments: { text: string; bold?: boolean }
       { text: "Lock in " },
       { text: "$200 off", bold: true },
       { text: " every month, or " },
-      { text: "$49/mo", bold: true },
+      { text: "$41/mo", bold: true },
       { text: " on 12-month plans — for life." },
     ],
   },

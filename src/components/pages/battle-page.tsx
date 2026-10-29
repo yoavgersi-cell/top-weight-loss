@@ -304,17 +304,17 @@ function titleCaseOverrideTitle(title: string): string {
 // audit). Titles stay whatever the CMS stores - descriptions only.
 const LANDING_META_DESCRIPTION: Record<string, string> = {
   semaglutide:
-    "Compare the best semaglutide (GLP-1) providers of 2026 - verified prices from $49/month, licensed online prescribing, and honest reviews of every program.",
+    "Compare the best semaglutide (GLP-1) providers of 2026 - verified prices from $41/month, licensed online prescribing, and honest reviews of every program.",
   tirzepatide:
-    "The best tirzepatide providers of 2026 compared - verified GLP-1 prices from $89/month compounded, licensed online prescribing, honest pros and cons.",
+    "The best tirzepatide providers of 2026 compared - verified GLP-1 prices from $71/month compounded, licensed online prescribing, honest pros and cons.",
   "ozempic-for-weight-loss":
-    "Ozempic for weight loss in 2026: how the GLP-1 works, who prescribes it online, and verified alternatives from $49/month compared honestly.",
+    "Ozempic for weight loss in 2026: how the GLP-1 works, who prescribes it online, and verified alternatives from $41/month compared honestly.",
   "wegovy-providers":
-    "Where to get Wegovy online in 2026 - providers compared, plus verified GLP-1 alternatives from $49/month when brand-name pricing doesn't fit.",
+    "Where to get Wegovy online in 2026 - providers compared, plus verified GLP-1 alternatives from $41/month when brand-name pricing doesn't fit.",
   "ozempic-alternatives":
-    "Ozempic, Wegovy & Mounjaro alternatives for 2026 - verified GLP-1 options from $49/month, compared honestly on price, terms and support.",
+    "Ozempic, Wegovy & Mounjaro alternatives for 2026 - verified GLP-1 options from $41/month, compared honestly on price, terms and support.",
   "switch-from-ozempic":
-    "Switching from Ozempic to compounded semaglutide - how the GLP-1 switch works, verified prices from $49/month, and what to ask your prescriber.",
+    "Switching from Ozempic to compounded semaglutide - how the GLP-1 switch works, verified prices from $41/month, and what to ask your prescriber.",
   "retatrutide-weight-loss":
     "Retatrutide in 2026: where the next-generation GLP-1-class candidate stands, what its trials report, and the approved options available now.",
 };
@@ -1538,7 +1538,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               <p className="mb-4 text-[14px] text-gray-500">The pages readers of this comparison open next.</p>
               <div className="grid gap-3 sm:grid-cols-2">
                 {[
-                  { href: "/articles/best-tirzepatide-online", title: "Best tirzepatide online", blurb: "Eight verified compounded prices from $89, plus every brand-name Zepbound route." },
+                  { href: "/articles/best-tirzepatide-online", title: "Best tirzepatide online", blurb: "Eight verified compounded prices from $71, plus every brand-name Zepbound route." },
                   { href: "/reviews/altrx", title: "altRx review", blurb: "$89 semaglutide, $149 tirzepatide, and the only brand-name shelf next to compounded plans." },
                   { href: "/glp1-provider-support", title: "Provider customer support, compared", blurb: "What captured Trustpilot reviews say about support, shipping and billing, by provider." },
                   { href: "/articles/zepbound-price-online", title: "Zepbound price online", blurb: "Brand Zepbound at $1,249 to $1,599 cash, the Ro pen route, and the compounded ladder." },

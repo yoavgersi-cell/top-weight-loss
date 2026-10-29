@@ -19,7 +19,7 @@ export const revalidate = 60;
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/switch-from-ozempic";
 const TITLE = "Switch From Ozempic to Compounded Semaglutide (2026)";
 const DESCRIPTION =
-  "Paying $1,000+/month for Ozempic or Wegovy? Compounded semaglutide - the same GLP-1 - runs $49-$299/month at licensed telehealth providers. How switching works.";
+  "Paying $1,000+/month for Ozempic or Wegovy? Compounded semaglutide - the same GLP-1 - runs $41-$299/month at licensed telehealth providers. How switching works.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
@@ -65,7 +65,7 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "How much cheaper is compounded semaglutide than Ozempic?",
     answer:
-      "Substantially. On our providers' own brand shelves, Ozempic lists at $1,149-$1,399/month and Wegovy at $1,579/month, while compounded semaglutide runs $49-$199/month depending on the provider and plan. Even at the most expensive compounded tier, the difference is roughly $950/month - over $11,000 a year.",
+      "Substantially. On our providers' own brand shelves, Ozempic lists at $1,149-$1,399/month and Wegovy at $1,579/month, while compounded semaglutide runs $41-$199/month depending on the provider and plan. Even at the most expensive compounded tier, the difference is roughly $950/month - over $11,000 a year.",
   },
   {
     question: "Will I keep my current dose when I switch?",
@@ -134,7 +134,7 @@ export default async function SwitchFromOzempicPage() {
           </h1>
           <p className="mt-3 max-w-[680px] text-[15.5px] leading-relaxed text-gray-500">
             If you&rsquo;re already injecting a GLP-1 and paying brand prices, this is the guide to
-            moving to the same active ingredient at $49-$299/month - what actually happens, what the
+            moving to the same active ingredient at $41-$299/month - what actually happens, what the
             clinician decides, and what to verify before you move.
           </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
@@ -153,7 +153,7 @@ export default async function SwitchFromOzempicPage() {
             Ozempic and Wegovy are <strong className="text-[#191919]">semaglutide</strong>; Zepbound
             and Mounjaro are <strong className="text-[#191919]">tirzepatide</strong>. Licensed
             telehealth providers prescribe compounded versions of the same molecules for{" "}
-            <strong className="text-[#191919]">$49-$299/month</strong> - versus $1,149-$1,599/month
+            <strong className="text-[#191919]">$41-$299/month</strong> - versus $1,149-$1,599/month
             at brand list prices. Switching means completing the new provider&rsquo;s medical intake,
             disclosing your current medication and dose, and letting its licensed clinician set your
             continuation dose. Start before your current supply runs out: approval-to-delivery takes
@@ -191,7 +191,7 @@ export default async function SwitchFromOzempicPage() {
                       <p className="mt-0.5 text-[11.5px] text-gray-400">{row.soldAt}</p>
                     </td>
                     <td className="px-4 py-4 text-[14.5px] font-extrabold text-emerald-700 [font-variant-numeric:tabular-nums]">
-                      {row.ingredient === "Tirzepatide" ? "$89/mo" : "$49/mo"}
+                      {row.ingredient === "Tirzepatide" ? "$71/mo" : "$41/mo"}
                     </td>
                   </tr>
                 ))}

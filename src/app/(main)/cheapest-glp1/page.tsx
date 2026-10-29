@@ -19,7 +19,7 @@ export const revalidate = 60;
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/cheapest-glp1";
 const TITLE = "Cheapest GLP-1 in 2026: Real Prices From 8 Providers";
 const DESCRIPTION =
-  "The cheapest GLP-1 programs of 2026, ranked by verified prices: compounded semaglutide from $49/month, tirzepatide from $89/month - conditions disclosed.";
+  "The cheapest GLP-1 programs of 2026, ranked by verified prices: compounded semaglutide from $41/month, tirzepatide from $71/month - conditions disclosed.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
@@ -129,9 +129,9 @@ export default async function CheapestGlp1Page() {
           <p className="text-[15.5px] leading-[1.85] text-gray-800">
             The cheapest GLP-1 we track is{" "}
             <Link href="/weight-loss/reviews/wellmedr" className="font-semibold text-[#0C4B75] hover:underline">welludr</Link>{" "}
-            - compounded semaglutide at <strong className="text-[#191919]">$49/month</strong> on a
+            - compounded semaglutide at <strong className="text-[#191919]">$41/month</strong> on a
             12-month plan, and the cheapest tirzepatide at{" "}
-            <strong className="text-[#191919]">$89/month</strong>. If you don&rsquo;t want a
+            <strong className="text-[#191919]">$71/month</strong>. If you don&rsquo;t want a
             commitment,{" "}
             <Link href="/weight-loss/reviews/embody" className="font-semibold text-[#0C4B75] hover:underline">embody</Link>{" "}
             is the cheapest month to month at <strong className="text-[#191919]">$49/$99</strong> on its pre-Black Friday sale{" "}

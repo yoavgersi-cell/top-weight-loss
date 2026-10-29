@@ -34,8 +34,8 @@ export const TRIO_FACTS: Record<string, TrioFacts> = {
   },
   wellmedr: {
     id: "wellmedr",
-    semaglutide: "$49/mo (12-month plan), same price at every dose",
-    tirzepatide: "$89/mo",
+    semaglutide: "$41/mo (12-month plan), same price at every dose",
+    tirzepatide: "$71/mo",
     billing: "Monthly billing - best rate locks on a 12-month plan",
     shipping: "Free, every 4 weeks, discreet packaging",
     support: "Medical Weight-Care Coach on every plan",
@@ -335,7 +335,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
       {
         question: "Are these worth it over cheaper GLP-1 providers?",
         answer:
-          "The active ingredients are the same as the $49-$99 budget tier - the premium buys the support layer. If coaching, accountability or a personal provider relationship is what determines whether you stick with treatment, the tier can pay for itself; if you're self-directed, the budget tier delivers the same medication for less.",
+          "The active ingredients are the same as the $41-$99 budget tier - the premium buys the support layer. If coaching, accountability or a personal provider relationship is what determines whether you stick with treatment, the tier can pay for itself; if you're self-directed, the budget tier delivers the same medication for less.",
       },
     ],
   },
@@ -347,7 +347,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     description:
       "Three pricing models for the same GLP-1 medication: HealthRx's $99 prepaid year, embody's $49 flat monthly, welludr's $41 12-month lock - compared honestly.",
     intro:
-      "Same compounded semaglutide, three opposite ways to buy it. HealthRx wants the year upfront - $1,188 at checkout, working out to $99/month with overnight cold-chain shipping. embody bills $49 monthly with the right to stop anytime. welludr bills monthly too, but its $49 rate locks on a 12-month plan. This is the clearest commitment-structure comparison in the market, and the right answer depends on exactly one thing: how certain you are about the next twelve months.",
+      "Same compounded semaglutide, three opposite ways to buy it. HealthRx wants the year upfront - $1,188 at checkout, working out to $99/month with overnight cold-chain shipping. embody bills $49 monthly with the right to stop anytime. welludr bills monthly too, but its $41 rate locks on a 12-month plan. This is the clearest commitment-structure comparison in the market, and the right answer depends on exactly one thing: how certain you are about the next twelve months.",
     verdict:
       "Certain about the year and cash-flow comfortable: HealthRx's prepaid $99 buys the best logistics in our ranking (overnight, lot-tracked). Certain about the year but prefer monthly billing: welludr's $41 lock is the best per-month rate anywhere. Not certain yet: embody - $49, no strings, refund if not approved - and revisit the committed options once your first months settle the question. Starting flexible and committing later costs surprisingly little.",
     faqs: [

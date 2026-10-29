@@ -536,7 +536,7 @@ export function productPriceValue(p: CatalogProduct): number {
 
 /**
  * Lowest verified headline price per medication for a provider, as a snippet
- * for meta descriptions: "semaglutide from $49/mo, tirzepatide from $89/mo".
+ * for meta descriptions: "semaglutide from $41/mo, tirzepatide from $71/mo".
  * Reads the catalog at render time so a snippet can never lag a verified
  * price change. Empty string when the provider has no catalog entry.
  */

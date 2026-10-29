@@ -185,7 +185,7 @@ const ROWS: Row[] = [
     pharmacy: "Regulated US pharmacy; Reddit commenters name its Florida pharmacy",
     dosePricing: "Same price at every dose; best rate on a 12-month plan, billed monthly",
     likes: "5-star Trustpilot reviews credit reaching a person within minutes, quick answers from named agents, and a smooth switch from another provider; several low-star reviewers raised their rating after an operations manager called. On Reddit, short verdicts: \"legit\", a named Florida pharmacy, and annual-plan prices that match the published rates.",
-    complaints: "Low-star Trustpilot reviews from September are almost all about reaching someone: an order stuck at \"delay in shipping\" for 8 days with support unable to find the account, a request unanswered after 24 hours, chat and phone unanswered until a manager stepped in, one shipment that sat at the pharmacy for over a week. One August reviewer states they were charged every 21 days rather than monthly; we have not verified welludr's billing cadence. On Reddit, one detailed account was down only 1 pound after 8 weeks despite good service. The $49 rate requires the 12-month plan.",
+    complaints: "Low-star Trustpilot reviews from September are almost all about reaching someone: an order stuck at \"delay in shipping\" for 8 days with support unable to find the account, a request unanswered after 24 hours, chat and phone unanswered until a manager stepped in, one shipment that sat at the pharmacy for over a week. One August reviewer states they were charged every 21 days rather than monthly; we have not verified welludr's billing cadence. On Reddit, one detailed account was down only 1 pound after 8 weeks despite good service. The $41 rate requires the 12-month plan.",
   },
   {
     id: "medvi",
@@ -290,7 +290,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: "What does a GLP-1 provider actually cost per month?",
     answer:
-      "At verified published prices in our index, compounded semaglutide runs $49 to $199 a month and compounded tirzepatide $89 to $299, usually with the consultation and shipping included. Brand-name Wegovy, Zepbound and Ozempic run four figures a month cash. Always price the maintenance dose, not the starter dose, and add any membership billed separately.",
+      "At verified published prices in our index, compounded semaglutide runs $41 to $199 a month and compounded tirzepatide $71 to $299, usually with the consultation and shipping included. Brand-name Wegovy, Zepbound and Ozempic run four figures a month cash. Always price the maintenance dose, not the starter dose, and add any membership billed separately.",
   },
   {
     question: "Which providers does this table not cover?",

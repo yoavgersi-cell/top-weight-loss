@@ -215,7 +215,7 @@ const SECTIONS: Section[] = [
     ),
     pricing: (
       <>
-        <strong className="text-[#191919]">Semaglutide is $49 a month and tirzepatide $89 a month on the twelve-month plan</strong>, shipped every four weeks, verified October 16, 2026 (both figures came down on September 14, from $59 and $99). Brand-name Ozempic is $1,399 and Zepbound $1,599 a month. Shipping is standard, three to five business days. There is no membership. The plan is the condition: the $49 rate belongs to the twelve-month commitment, and reviewers who pay month to month report $129. A year on the plan is $588 for semaglutide, the lowest year-one figure on this page.
+        <strong className="text-[#191919]">Semaglutide is $41 a month and tirzepatide $71 a month on the twelve-month plan</strong>, shipped every four weeks, verified October 16, 2026 (both figures came down on September 14, from $59 and $99). Brand-name Ozempic is $1,399 and Zepbound $1,599 a month. Shipping is standard, three to five business days. There is no membership. The plan is the condition: the $41 rate belongs to the twelve-month commitment, and reviewers who pay month to month report $129. A year on the plan is $588 for semaglutide, the lowest year-one figure on this page.
       </>
     ),
     support:
@@ -903,7 +903,7 @@ export default async function Glp1ProviderComparisonPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
-                <tr><th scope="row" className="px-4 py-3 font-medium text-[#191919]">welludr, semaglutide on the 12-month plan</th><td className="px-4 py-3 text-gray-600">$41</td><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-800"><strong>$147</strong> (with nine more months committed)</td></tr>
+                <tr><th scope="row" className="px-4 py-3 font-medium text-[#191919]">welludr, semaglutide on the 12-month plan</th><td className="px-4 py-3 text-gray-600">$41</td><td className="px-4 py-3 text-gray-600">$41</td><td className="px-4 py-3 text-gray-600">$41</td><td className="px-4 py-3 text-gray-800"><strong>$123</strong> (with nine more months committed)</td></tr>
                 <tr className="bg-gray-50/50"><th scope="row" className="px-4 py-3 font-medium text-[#191919]">embody, semaglutide month to month</th><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-800"><strong>$207</strong> (no further commitment)</td></tr>
                 <tr><th scope="row" className="px-4 py-3 font-medium text-[#191919]">Ro, Wegovy pill plus membership, month to month</th><td className="px-4 py-3 text-gray-600">$39 + $149 = $188</td><td className="px-4 py-3 text-gray-600">$149 + $299 = $448</td><td className="px-4 py-3 text-gray-600">$149 + $299 = $448</td><td className="px-4 py-3 text-gray-800"><strong>$1,084</strong> (FDA-approved product; insurance may change this entirely)</td></tr>
               </tbody>
