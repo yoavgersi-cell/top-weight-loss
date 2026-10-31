@@ -7,6 +7,7 @@ import type {
   FaqItem,
 } from "../config";
 import { ONLINE_THERAPY_ARTICLES_2026_10 } from "./online-therapy-articles-2026-10";
+import { OT_TELEHEALTH_CONTROLLED } from "./online-therapy-articles/telehealth-controlled-substances";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Online Therapy vertical
@@ -1394,7 +1395,7 @@ export function onlineTherapySeed(base: SiteConfig): SiteConfig {
     },
     reviews,
     battles,
-    articles: [...articles, ...ONLINE_THERAPY_ARTICLES_2026_10],
+    articles: [...articles, ...ONLINE_THERAPY_ARTICLES_2026_10, OT_TELEHEALTH_CONTROLLED],
     faqs,
   };
 }
