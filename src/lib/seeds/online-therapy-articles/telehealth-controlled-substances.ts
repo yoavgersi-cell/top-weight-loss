@@ -90,7 +90,7 @@ export const OT_TELEHEALTH_CONTROLLED: ArticleData = {
   description:
     "The DEA telehealth rules for stimulants, benzodiazepines and buprenorphine, the Dec 31, 2026 expiry, three Jan 2027 scenarios and what patients can do now.",
   category: "Guide",
-  readTime: "52 min read",
+  readTime: "50 min read",
   publishedAt: "2026-10-31",
   updatedAt: "2026-10-31",
   heroColor: "#EEF1F7",
@@ -166,11 +166,9 @@ export const OT_TELEHEALTH_CONTROLLED: ArticleData = {
 </tbody>
 </table>
 <h3>What the pattern shows, and what it does not</h3>
-<p>Every extension so far has arrived late. The first came days before the public health emergency ended; the last was published on December 31, 2025, one day before the flexibilities were due to expire, according to ${ext(S.hk2026, "Holland &amp; Knight")}. That history is a reason not to read anything into the absence of an announcement in October or November. It is not evidence that a fifth extension will come. Each extension was a separate decision, and the agency's own stated purpose for the fourth was to give it time to finish permanent rules, not to keep extending. ${ext(S.mcd2026, "McDermott reported in December 2025")} that DEA was not planning a new proposed rule and would instead finalise one of its previous proposals. One reported discrepancy worth noting: ${ext(S.fierce4, "Fierce Healthcare")} gave the end date as December 30, 2026, while the Federal Register and DEA give December 31; we use the Federal Register date.</p>`,
-    },
-    {
-      heading: "How did the four temporary rules differ?",
-      body: `<p>Patients often talk about "the extension" as one thing. There have been four, and the first was different in a way that matters for thinking about January 2027. The table compares them using the agency releases and law-firm summaries in our references.</p>
+<p>Every extension so far has arrived late. The first came days before the public health emergency ended; the last was published on December 31, 2025, one day before the flexibilities were due to expire, according to ${ext(S.hk2026, "Holland &amp; Knight")}. That history is a reason not to read anything into the absence of an announcement in October or November. It is not evidence that a fifth extension will come. Each extension was a separate decision, and the agency's own stated purpose for the fourth was to give it time to finish permanent rules, not to keep extending. ${ext(S.mcd2026, "McDermott reported in December 2025")} that DEA was not planning a new proposed rule and would instead finalise one of its previous proposals. One reported discrepancy worth noting: ${ext(S.fierce4, "Fierce Healthcare")} gave the end date as December 30, 2026, while the Federal Register and DEA give December 31; we use the Federal Register date.</p>
+<h3>How the four temporary rules differed</h3>
+<p>Patients often talk about "the extension" as one thing. There have been four, and the first was different in a way that matters for thinking about January 2027. The table compares them using the agency releases and law-firm summaries in our references.</p>
 <table>
 <thead><tr><th>Temporary rule</th><th>When</th><th>How long it ran</th><th>Treatment of existing patients</th><th>Source</th></tr></thead>
 <tbody>
@@ -404,6 +402,13 @@ export const OT_TELEHEALTH_CONTROLLED: ArticleData = {
 <p>Talkiatry is a psychiatry-first practice. Care is led by psychiatrists who evaluate, diagnose and manage medication, with therapy available alongside, and it is in-network with many major insurance plans; our <a href="/online-therapy/reviews/talkiatry">Talkiatry review</a> covers the detail. On controlled substances, the company says its psychiatrists can prescribe Adderall and other controlled medications through virtual visits where clinically appropriate and legally permissible, that the answer depends on your state's laws, and that a prescription is never guaranteed. Its June 2026 blog states that under current federal rules, through December 31, 2026, its DEA-registered psychiatrists can prescribe Schedule II-V controlled substances by telehealth without an in-person visit first. Talkiatry also says it does not currently provide treatment for schizophrenia, primary eating disorder treatment, or medication-assisted treatment for substance use disorders, so buprenorphine for opioid use disorder is outside its services. Sources: ${ext(S.talkiatryHelp, "Talkiatry help centre")}; ${ext(S.talkiatryBlog, "Talkiatry blog")}; ${ext(S.talkiatryAdhd, "Talkiatry, ADHD medication")}, checked October 31, 2026.</p>
 <p>On October 22, 2026 Talkiatry announced that its therapy services are now available in all 50 states alongside its psychiatric care. Healthcare IT News reported the expansion on October 23, 2026. The company says it directly employs more than 400 full-time therapists and 800 full-time psychiatrists rather than contractors, and that it works with more than 100 insurers; the expansion followed a $210 million Series D financing earlier in 2026, as reported. Sources: ${ext(S.hitnTalkiatry, "Healthcare IT News, October 23, 2026")}; ${ext(S.fierceTalkiatry, "Fierce Healthcare, October 2026")}. Therapy availability nationwide does not change the state-law position on controlled prescriptions described above.</p>
 <p>One fact a fair account has to carry: Talkiatry's Trustpilot profile stands at 2.5 across 956 reviews, with clinicians widely praised and billing and administration drawing most complaints, as covered in <a href="/online-therapy/articles/is-talkiatry-legit">is Talkiatry legit</a>. For a patient planning around January, the practical implication is to get answers about in-person options in writing.</p>
+<h3>If you are a Talkiatry patient on a controlled medication</h3>
+<ol>
+<li>Send a portal message asking how Talkiatry will handle your prescription if the flexibilities lapse on December 31, 2026, and keep the reply.</li>
+<li>Ask whether your psychiatrist can see you in person, or whether Talkiatry can help arrange an in-person evaluation that would count.</li>
+<li>Check your state against the company's own list of states where it says telehealth prescribing of controlled substances is prohibited; if you are in one, your care has already been arranged around that rule.</li>
+<li>If you also use Talkiatry's therapy, now available in all 50 states, note that the therapy side is not affected by the DEA date.</li>
+</ol>
 <h3>Talkspace</h3>
 <p>Talkspace offers therapy and psychiatry on one platform, with insurance coverage through many major plans and employee assistance programmes; see our <a href="/online-therapy/reviews/talkspace">Talkspace review</a>. Its help centre is explicit: "for safety and legal reasons", Talkspace does not prescribe controlled substances, naming Adderall, Vyvanse, Ritalin, Concerta, Xanax, Ativan and Klonopin as examples and noting the list is not exhaustive. Its psychiatric providers can prescribe antidepressants, anti-anxiety medications and other non-controlled medications, and no referral is needed. In 2022 a Talkspace executive told Behavioral Health Business the company had never prescribed controlled substances. Sources: ${ext(S.talkspaceHelp, "Talkspace help centre")}; ${ext(S.bhbTalkspace2022, "Behavioral Health Business, June 7, 2022")}.</p>
 <p>The consequence for this guide: Talkspace's psychiatry patients are unaffected by the December 31 deadline, because none of them receive controlled prescriptions from Talkspace. That is a deliberate design choice and, for depression and anxiety treated with non-controlled medication, a stable one.</p>
@@ -417,11 +422,9 @@ export const OT_TELEHEALTH_CONTROLLED: ArticleData = {
 <tr><td>BetterHelp</td><td>No</td><td>No</td><td>No</td><td>${ext(S.betterhelpFaq, "BetterHelp")}</td></tr>
 <tr><td>Headspace</td><td>Not in our coverage</td><td>Not in our coverage</td><td>Not as a prescriber</td><td>Our review</td></tr>
 </tbody>
-</table>`,
-    },
-    {
-      heading: "Can therapy-only platforms like BetterHelp and Talkspace help if you need a controlled medication?",
-      body: `<p>They can help, but not by prescribing it. The distinction matters because people sometimes sign up for a therapy platform expecting medication and find out later that the platform does not offer it, or does not offer the drug they need.</p>
+</table>
+<h3>Can therapy-only platforms help if you need a controlled medication?</h3>
+<p>They can help, but not by prescribing it. The distinction matters because people sometimes sign up for a therapy platform expecting medication and find out later that the platform does not offer it, or does not offer the drug they need.</p>
 <h3>What therapy-only and non-controlled platforms do</h3>
 <ul>
 <li><strong>Therapy for the condition itself.</strong> Therapy can run alongside medication from another prescriber; our <a href="/online-therapy/articles/online-therapy-for-anxiety">anxiety guide</a> covers the approaches used online for anxiety.</li>
@@ -435,11 +438,9 @@ export const OT_TELEHEALTH_CONTROLLED: ArticleData = {
 <li>Neither is an emergency service. In crisis, call or text 988 in the US.</li>
 </ul>
 <h3>The sensible combination</h3>
-<p>If you need a controlled medication and want online therapy, the arrangement that holds up under every January scenario is a therapy platform for therapy and a prescriber who can see you in person when the rules require it. The difference between the two roles is explained in our guide to <a href="/online-therapy/articles/therapy-vs-psychiatry">therapy vs psychiatry</a>, and the options for getting both online are in <a href="/online-therapy/articles/online-therapy-with-medication">online therapy with medication</a>.</p>`,
-    },
-    {
-      heading: "What might a change of prescriber cost, and how do you check?",
-      body: `<p>If January means an in-person visit or a new prescriber, cost is the next question. We do not have verified prices for in-person psychiatry visits, which vary by plan, region and clinician, and we will not guess. What we can give is the verified insurance position of the platforms in our coverage and a method for checking your own costs.</p>
+<p>If you need a controlled medication and want online therapy, the arrangement that holds up under every January scenario is a therapy platform for therapy and a prescriber who can see you in person when the rules require it. The difference between the two roles is explained in our guide to <a href="/online-therapy/articles/therapy-vs-psychiatry">therapy vs psychiatry</a>, and the options for getting both online are in <a href="/online-therapy/articles/online-therapy-with-medication">online therapy with medication</a>.</p>
+<h3>What a change of prescriber might cost, and how to check</h3>
+<p>If January means an in-person visit or a new prescriber, cost is the next question. We do not have verified prices for in-person psychiatry visits, which vary by plan, region and clinician, and we will not guess. What we can give is the verified insurance position of the platforms in our coverage and a method for checking your own costs.</p>
 <table>
 <thead><tr><th>Platform</th><th>Insurance position (from our reviews)</th><th>What we have not verified</th></tr></thead>
 <tbody>
@@ -489,11 +490,9 @@ export const OT_TELEHEALTH_CONTROLLED: ArticleData = {
 <li><strong>Watch for the notice.</strong> Check the Federal Register and DEA in mid to late December, and read every message your practice sends.</li>
 <li><strong>Have a fallback prescriber.</strong> Your primary care doctor may be willing to bridge or take over; ask before you need it.</li>
 <li><strong>Keep crisis numbers handy.</strong> If a medication change affects your mood or safety, call or text 988.</li>
-</ol>`,
-    },
-    {
-      heading: "The terms you will see in notices, defined",
-      body: `<p>Practice emails and news reports about the deadline use regulatory language. These are the terms, defined as the sources in this guide use them.</p>
+</ol>
+<h3>The terms you will see in notices, defined</h3>
+<p>Practice emails and news reports about the deadline use regulatory language. These are the terms, defined as the sources in this guide use them.</p>
 <table>
 <thead><tr><th>Term</th><th>What it means here</th><th>Source</th></tr></thead>
 <tbody>
