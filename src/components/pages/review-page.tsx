@@ -78,6 +78,12 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     description:
       "Independent review of Quad by MEDVi, the compounded 4-in-1 dissolvable ED medication: what is in it, monthly cost, who it suits, and whether it is legit.",
   },
+  // Ported from edtreatmenthub.com, Oct 31, 2026.
+  rexmd: {
+    title: "Rex MD Review 2026: Cost, Results & Is It Worth It?",
+    description:
+      "Rex MD review: branded and generic Viagra and Cialis, daily tadalafil and the Ignite gummy, its 4.7 Trustpilot score, and the billing complaints to know.",
+  },
   embody: {
     // Oct 2026, Bing 30-day export: "embody reviews" 411 impressions at
     // position ~6 with ZERO clicks, and the page's CTR is 0.43% on 1.6K
@@ -634,7 +640,7 @@ export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Me
   // Oct 21, 2026: ED overrides (quad) joined the map; quad exists only on /ed.
   // The weight-loss maps share slugs with ED (shed, directmeds), so ED may
   // only read its own keys.
-  const ED_OVERRIDE_SLUGS = new Set(["quad"]);
+  const ED_OVERRIDE_SLUGS = new Set(["quad", "rexmd"]);
   // Oct 22, 2026: HRT's three providers (winona, gala, midi) exist only on /hrt.
   const HRT_OVERRIDE_SLUGS = new Set(["winona", "gala", "midi"]);
   const override =
