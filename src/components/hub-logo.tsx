@@ -21,6 +21,7 @@ const LOCKUP_HEIGHTS: Record<string, number> = {
   hrt: 60,
   trt: 59,
   "online-therapy": 47,
+  ed: 44,
 };
 
 export function HubLogo({ vertical }: { vertical: string }) {
