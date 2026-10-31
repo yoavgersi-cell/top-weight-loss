@@ -61,6 +61,7 @@ export function TopProvidersBlock({
   order = "ranking",
   priceNotes,
   introMode = "full",
+  keepRankingNumbers = false,
 }: {
   config: SiteConfig;
   linkPrefix?: string;
@@ -80,6 +81,9 @@ export function TopProvidersBlock({
   // "given" renders in the order the ids were passed (an editorial pick order).
   // Scores, badges and copy still come from each provider's real ranking slot.
   order?: "ranking" | "given";
+  /** Show each card's true ranking position instead of renumbering 1..N - for
+   *  a single subject-provider card, where "1" would misstate its rank. */
+  keepRankingNumbers?: boolean;
 }) {
   const { providerOrder, positions } = config.ranking;
 
@@ -105,7 +109,7 @@ export function TopProvidersBlock({
         affiliateUrl: provider.affiliateUrl,
         // Renumber within a curated set so the ordinals stay 1..N; the ranking
         // top-N path keeps the true rank (they're identical there anyway).
-        rank: providerIds ? displayIdx + 1 : index + 1,
+        rank: providerIds && !keepRankingNumbers ? displayIdx + 1 : index + 1,
         rating: position.score,
         ratingLabel: position.label,
         starRating: position.starRating,
@@ -145,13 +149,22 @@ export function TopProvidersBlock({
 // vertical's ranking; on any other config the block renders nothing.
 export const TOP_TWO_PICK_IDS = ["embody", "altrx"] as const;
 
-export function TopTwoPicks({ config, linkPrefix = "" }: { config: SiteConfig; linkPrefix?: string }) {
+export function TopTwoPicks({
+  config,
+  linkPrefix = "",
+  providerIds = TOP_TWO_PICK_IDS,
+}: {
+  config: SiteConfig;
+  linkPrefix?: string;
+  /** Page-specific pair, in pick order (operator choice per page); defaults to the sitewide pair. */
+  providerIds?: readonly string[];
+}) {
   return (
     <TopProvidersBlock
       config={config}
       linkPrefix={linkPrefix}
       limit={2}
-      providerIds={[...TOP_TWO_PICK_IDS]}
+      providerIds={[...providerIds]}
       order="given"
       introMode="short"
       title="Our top 2 picks"
