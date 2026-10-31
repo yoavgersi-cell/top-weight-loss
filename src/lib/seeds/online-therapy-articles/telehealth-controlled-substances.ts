@@ -452,11 +452,11 @@ export const OT_TELEHEALTH_CONTROLLED: ArticleData = {
 <p>The figures above are the ones in our <a href="/online-therapy/reviews/talkiatry">Talkiatry</a>, <a href="/online-therapy/reviews/talkspace">Talkspace</a>, <a href="/online-therapy/reviews/betterhelp">BetterHelp</a> and <a href="/online-therapy/reviews/headspace">Headspace</a> reviews, with their conditions. They are company statements or plan-dependent figures, not quotes for your plan.</p>
 <h3>How to check your own cost before January</h3>
 <ol>
-<li><strong>Find out whether the in-person clinician is in-network.</strong> Use your insurer's directory, then confirm with the clinician's office. Directories can be out of date.</li>
+<li><strong>Find out whether the in-person clinician is in-network.</strong> Use your insurer's directory, then confirm with the clinician's office.</li>
 <li><strong>Ask for the eligibility confirmation in writing.</strong> Our <a href="/online-therapy/articles/is-talkiatry-legit">Talkiatry guide</a> recommends this for any insurance-billed practice: an email you can keep, not a phone reassurance.</li>
-<li><strong>Ask how the visit will be billed.</strong> A first in-person evaluation may be billed as a new-patient visit, which can cost more than a follow-up. Ask the office which applies.</li>
+<li><strong>Ask how the visit will be billed.</strong> Ask the office what you will owe for the first visit and for follow-ups, before you book.</li>
 <li><strong>Check the claim after the visit.</strong> Look in your insurer's portal to confirm it posted. Catching a billing problem after one visit is easier than after five.</li>
-<li><strong>Use an employee assistance programme if you have one.</strong> EAPs often cover therapy sessions, though not usually prescribing; check what yours includes. Our <a href="/online-therapy/articles/online-therapy-that-takes-insurance">insurance guide</a> has the steps.</li>
+<li><strong>Use an employee assistance programme if you have one.</strong> Some employer EAPs include covered therapy sessions; check what yours includes, including whether it covers any prescribing. Our <a href="/online-therapy/articles/online-therapy-that-takes-insurance">insurance guide</a> has the steps.</li>
 </ol>`,
     },
     {
@@ -490,6 +490,28 @@ export const OT_TELEHEALTH_CONTROLLED: ArticleData = {
 <li><strong>Have a fallback prescriber.</strong> Your primary care doctor may be willing to bridge or take over; ask before you need it.</li>
 <li><strong>Keep crisis numbers handy.</strong> If a medication change affects your mood or safety, call or text 988.</li>
 </ol>`,
+    },
+    {
+      heading: "The terms you will see in notices, defined",
+      body: `<p>Practice emails and news reports about the deadline use regulatory language. These are the terms, defined as the sources in this guide use them.</p>
+<table>
+<thead><tr><th>Term</th><th>What it means here</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>Controlled substance</td><td>A medication on the DEA's controlled substances list, sorted into schedules. Stimulants such as Adderall and benzodiazepines such as Xanax are examples named by Talkspace</td><td>${ext(S.talkspaceHelp, "Talkspace")}</td></tr>
+<tr><td>Schedule II, Schedule III-V</td><td>The schedules the rules treat differently. The temporary rule covers II-V; the 2025 proposal's ordinary registration covered III-V and reserved II for the Advanced registration</td><td>${ext(S.fr4, "Federal Register")}; ${ext(S.foleySR, "Foley")}</td></tr>
+<tr><td>DEA registration</td><td>The registration a clinician needs to prescribe controlled substances at all. The temporary rule applies to DEA-registered practitioners</td><td>${ext(S.fr4, "Federal Register")}</td></tr>
+<tr><td>In-person medical evaluation</td><td>The Ryan Haight Act's default condition: at least one before a controlled prescription by telemedicine</td><td>${ext(S.foleyWhite, "Foley")}</td></tr>
+<tr><td>Practice of telemedicine exceptions</td><td>The seven situations in the Act in which a prescription after telemedicine is lawful without that evaluation</td><td>${ext(S.foleyWhite, "Foley")}</td></tr>
+<tr><td>Special registration</td><td>One of those exceptions, created by the 2008 Act but never put into effect; the 2025 proposal would implement it with three registrations</td><td>${ext(S.foleyWhite, "Foley")}; ${ext(S.srNprm, "Federal Register")}</td></tr>
+<tr><td>State telemedicine registration</td><td>In the 2025 proposal, a DEA-issued registration for each state where the clinician's patients are located</td><td>${ext(S.srNprm, "Federal Register")}; ${ext(S.techtargetSR, "TechTarget")}</td></tr>
+<tr><td>PDMP</td><td>A state prescription drug monitoring programme, the database of controlled prescriptions. The buprenorphine rule requires a check before prescribing; the 2025 proposal would require checking every state's</td><td>${ext(S.bupRule, "buprenorphine rule")}; ${ext(S.apaSR, "APA")}</td></tr>
+<tr><td>Temporary rule or extension</td><td>A time-limited rule keeping the pandemic-era flexibilities. Four have been issued since 2023</td><td>${ext(S.fr4, "Federal Register")}</td></tr>
+<tr><td>Final rule</td><td>A rule that has completed rulemaking and has an effective date. The buprenorphine and VA rules are final; the special registration rule is not yet</td><td>${ext(S.dea2025, "DEA")}</td></tr>
+<tr><td>OIRA review</td><td>Review of a draft rule by the White House Office of Information and Regulatory Affairs before publication. The special registration rule has been there since August 25, 2026</td><td>${ext(S.mcdOira, "McDermott")}</td></tr>
+<tr><td>Audio-only</td><td>A telephone encounter without video, allowed for buprenorphine under its final rule</td><td>${ext(S.bupRule, "buprenorphine rule")}</td></tr>
+</tbody>
+</table>
+<p>If a notice from your practice uses a term not in this list, ask the practice to explain it in writing. A practice that can explain its own notice clearly is more likely to handle the change well.</p>`,
     },
     {
       heading: "Who this guide is for, and who it isn't for",
