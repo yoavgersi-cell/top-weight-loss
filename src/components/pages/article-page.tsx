@@ -307,6 +307,8 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // CTAs the comparison page uses, high on the page. Gated to specific slugs so
   // it never leaks onto informational articles.
   const TOP_PROVIDERS_CRO_SLUGS = new Set(["best-tirzepatide-online"]);
+  // Articles that carry the subject provider's own ranking card (operator picks).
+  const SUBJECT_CARD_SLUGS = new Set(ctx.vertical === "weight-loss" ? ["wellmedr-cost"] : []);
   const isWeightLoss = ctx.vertical === "weight-loss";
   const showTopProvidersCro = isWeightLoss && TOP_PROVIDERS_CRO_SLUGS.has(slug);
 
@@ -810,6 +812,21 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                       reviewHrefFor={(id) => hubLink(ctx, `/reviews/${id}`)}
                     />
                   </div>
+                )}
+
+                {/* Subject provider's own ranking card after its Reddit block
+                    (operator request, Oct 31, 2026), with its true rank number. */}
+                {SUBJECT_CARD_SLUGS.has(slug) && subjectProvider && i === Math.min(1, article.sections.length - 1) && (
+                  <TopProvidersBlock
+                    config={config}
+                    linkPrefix={ctx.prefix}
+                    limit={1}
+                    providerIds={[subjectProvider.id]}
+                    keepRankingNumbers
+                    introMode="short"
+                    title={`${subjectProvider.name} at a glance`}
+                    subtitle="The same card, verified pricing and ratings as our full comparison."
+                  />
                 )}
 
                 {/* Product carousel mid-article (weight-loss catalog, or the

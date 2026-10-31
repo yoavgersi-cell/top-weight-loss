@@ -376,11 +376,12 @@ export default async function Glp1PillsVsInjectionsPage() {
                     dangerouslySetInnerHTML={{ __html: enhanceArticleHtml(section.body) }}
                   />
                 </section>
-                {/* The ranked provider picks follow the cost section, where the
-                    reader has just seen the prices those cards carry. */}
-                {i === 4 && (
+                {/* The two picks sit after the trial results, high on the page
+                    (operator request, Oct 31, 2026): embody and Eden, in that
+                    order, on this page only. */}
+                {i === 1 && (
                   <div className="mt-8">
-                    <TopTwoPicks config={config} linkPrefix="/weight-loss" />
+                    <TopTwoPicks config={config} linkPrefix="/weight-loss" providerIds={["embody", "eden"]} />
                   </div>
                 )}
               </div>
