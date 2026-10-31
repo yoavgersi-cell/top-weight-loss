@@ -101,7 +101,7 @@ export const nextGenWeightLossDrugsArticle: Article = {
   keyTakeaways: [
     "Two candidates are closest to US pharmacies. Novo Nordisk filed CagriSema with the FDA on December 18, 2025 and expects a decision in the fourth quarter of 2026; Lilly says it will file retatrutide in the first quarter of 2027. Both dates are company statements, not approvals.",
     "Retatrutide has the largest published phase 3 result: 25.0% average weight loss at 80 weeks on the top dose in TRIUMPH-1, counting everyone randomised, against 3.9% on placebo (NEJM, September 2026). Lilly's own on-treatment figure is 28.3%.",
-    "Amylin is the next mechanism. CagriSema, amycretin, petrelintide and eloralintide all add or use amylin signalling, but in the one head-to-head trial so far (REDEFINE 4) CagriSema produced less weight loss than tirzepatide 15 mg, 20.2% versus 23.6%.",
+    "Amylin is the next mechanism. CagriSema, amycretin, petrelintide and eloralintide all add or use amylin signalling, but in the only completed phase 3 head-to-head so far (REDEFINE 4) CagriSema produced less weight loss than tirzepatide 15 mg, 20.2% versus 23.6%.",
     "None of the pipeline drugs can be legally compounded, and the FDA has warned sellers of \"research use\" retatrutide. If you need treatment now, the approved drugs work now; a prescriber can move you to a new one later if it is approved and suits you.",
   ],
   sections: [
@@ -120,7 +120,7 @@ export const nextGenWeightLossDrugsArticle: Article = {
 <tr><td>MariTide (maridebart cafraglutide)</td><td>Amgen</td><td>GLP-1 agonist + GIP receptor blocker, monthly or less often injection</td><td>Phase 3 (MARITIME), ongoing</td><td>Up to 16.2% vs 2.5% at 52 weeks, everyone randomised (phase 2, NEJM 2025)</td><td>No filing date stated</td></tr>
 <tr><td>Survodutide</td><td>Boehringer Ingelheim</td><td>Glucagon + GLP-1 agonist, weekly injection</td><td>Phase 3 reported (SYNCHRONIZE)</td><td>12.2% to 13.0% vs 5.4% at 76 weeks, everyone randomised; up to 16.6% on treatment (SYNCHRONIZE-1, NEJM 2026)</td><td>No filing date found</td></tr>
 <tr><td>Eloralintide</td><td>Eli Lilly</td><td>Amylin receptor agonist, weekly injection</td><td>Phase 3 (registered 2026)</td><td>Up to 20.1% vs 0.4% at 48 weeks, on treatment (phase 2, Lancet 2025)</td><td>Combination with tirzepatide to enter phase 3 by end 2026</td></tr>
-<tr><td>Petrelintide</td><td>Zealand Pharma / Roche</td><td>Amylin analogue, weekly injection</td><td>Moving to phase 3</td><td>Up to 10.7% vs 1.7% at 42 weeks (ZUPREME-1 topline, Roche, March 2026)</td><td>Phase 3 start announced for 2026</td></tr>
+<tr><td>Petrelintide</td><td>Zealand Pharma / Roche</td><td>Amylin analogue, weekly injection</td><td>Moving to phase 3</td><td>Up to 10.7% vs 1.7% at 42 weeks (ZUPREME-1 topline, Roche, March 2026)</td><td>Companies say it will advance to phase 3; start dates reported differently</td></tr>
 <tr><td>Aleniglipron</td><td>Structure Therapeutics</td><td>Small-molecule GLP-1 agonist, daily pill</td><td>Phase 3 (ACCOMPLISH), first patients dosed</td><td>11.3% placebo-adjusted at 36 weeks (ACCESS, company topline, December 2025)</td><td>No filing date stated</td></tr>
 <tr><td>Bimagrumab (+ semaglutide)</td><td>Eli Lilly</td><td>Activin type II receptor antibody, aims to spare muscle</td><td>Phase 2</td><td>22.1% vs 15.7% semaglutide alone at 72 weeks (BELIEVE, Nature Medicine 2026)</td><td>None stated</td></tr>
 <tr><td>Ecnoglutide</td><td>Sciwind Biosciences</td><td>GLP-1 agonist, weekly injection</td><td>Approved in China, March 2026; not in US trials we could find</td><td>15.4% at 48 weeks, top dose (SLIMMER, as reported)</td><td>China only</td></tr>
@@ -564,7 +564,7 @@ export const nextGenWeightLossDrugsArticle: Article = {
 <li><strong>Anyone looking for a way to get an unapproved drug.</strong> We do not describe sources, doses or preparation for retatrutide, cagrilintide or any other pipeline drug, and the only legitimate route is a clinical trial.</li>
 <li><strong>Anyone planning to stop a current treatment to wait.</strong> That is a decision for you and a prescriber, and the regain evidence argues against doing it without a plan.</li>
 <li><strong>Investors.</strong> We report trial results for patients. Company timelines here are quoted to explain access, not to forecast markets.</li>
-<li><strong>Children and adolescents, pregnant people and anyone with a history of medullary thyroid cancer or MEN2.</strong> The pipeline trials largely excluded these groups, and the approved labels carry specific restrictions; a specialist needs to be involved.</li>
+<li><strong>Children and adolescents, pregnant people and anyone with a history of medullary thyroid cancer or MEN2.</strong> The trials in this guide enrolled adults, and the approved labels carry specific restrictions for these groups; a specialist needs to be involved.</li>
 <li><strong>People outside the US.</strong> Approval status differs elsewhere; ecnoglutide, for example, is approved in China and not here.</li>
 </ul>`,
     },
@@ -575,7 +575,7 @@ export const nextGenWeightLossDrugsArticle: Article = {
 <li><strong>Long-term safety.</strong> The longest phase 3 trials in this guide ran 80 to 84 weeks. The approved drugs have years of use behind them; the new mechanisms do not. Glucagon activation, GIP blockade and amylin combinations each need long-term data.</li>
 <li><strong>What dysesthesia is.</strong> It appeared with retatrutide and with high-dose semaglutide, more at higher doses. Its cause and whether it matters long term are not established.</li>
 <li><strong>Cardiovascular outcomes.</strong> Semaglutide has outcome data; most pipeline drugs do not yet. Lilly has said TRIUMPH-3's cardiovascular data will be presented later.</li>
-<li><strong>Head-to-head results.</strong> Only one pipeline drug, CagriSema, has reported a head-to-head against tirzepatide, and it lost. Retatrutide, amycretin, MariTide and the amylin drugs have no published head-to-head against the best approved drug.</li>
+<li><strong>Head-to-head results.</strong> Only one pipeline drug, CagriSema, has reported a phase 3 head-to-head against tirzepatide, and it lost; EloraTZP's phase 2b included a tirzepatide arm, in people with diabetes. Retatrutide, amycretin, MariTide and the amylin drugs have no published head-to-head against the best approved drug.</li>
 <li><strong>Real-world persistence.</strong> Trials keep people on drug with support. ${ext(S.time, "Time's reported figure")} that about 40% stop within a year applies to the current drugs; whether the new ones are easier to stay on is unknown.</li>
 <li><strong>What happens when they stop.</strong> With every GLP-1, weight returns after stopping. There is no reason yet to expect the new drugs to be different, and little data either way.</li>
 <li><strong>Price and coverage.</strong> No company has published a US price for any pipeline drug in the sources we found.</li>
