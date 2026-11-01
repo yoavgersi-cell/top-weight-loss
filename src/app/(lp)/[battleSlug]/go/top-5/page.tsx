@@ -63,19 +63,6 @@ const PICKS: Record<string, string[]> = {
   "weight-loss": ["embody", "wellmedr", "eden", "altrx", "gala"],
 };
 
-// Page-specific bullets where a provider's stored highlights lag its verified
-// record (welludr's still describe an older first-month promo). Each line is
-// from the price index (Oct 28, 2026 partner notice) or its verified review.
-const BULLETS: Record<string, Record<string, string[]>> = {
-  "weight-loss": {
-    wellmedr: [
-      "Semaglutide from $41/mo, tirzepatide from $71/mo on a 12-month plan (pre-Black Friday sale)",
-      "Same price at every dose; Medical Weight-Care Coach included",
-      "Weight-loss warranty; ships in 3-5 business days",
-    ],
-  },
-};
-
 function pickIds(vertical: string, providerOrder: string[], providerIds: string[]): string[] {
   const ids = PICKS[vertical] ?? providerOrder;
   return ids.filter((id) => providerIds.includes(id)).slice(0, 5);
@@ -132,7 +119,7 @@ export default async function TopFivePage({ params }: { params: Promise<{ battle
         name: p.name,
         logo: p.logo,
         tagline: p.tagline,
-        bullets: (BULLETS[vertical]?.[id] ?? p.highlights ?? []).slice(0, 3),
+        bullets: (p.highlights ?? []).slice(0, 3),
         score: pos.score,
         label: pos.label,
         stars: pos.starRating ?? Math.round(pos.score / 2),

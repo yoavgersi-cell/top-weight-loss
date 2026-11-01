@@ -4605,6 +4605,7 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
           return [...seedList, ...cmsOnly];
         };
         const seedProviderById = new Map(initial.providers.map((p) => [p.id, p]));
+        const CODE_AUTHORITATIVE_HIGHLIGHTS = new Set(["wellmedr"]);
         const savedProviders = (saved.providers || []).map((p) => ({
           ...p,
           smallLogo: p.smallLogo || `/logos/${p.id}-icon.svg`,
@@ -4629,6 +4630,12 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
           trustpilotReviewCount: seedFor(p)?.reviewCount || p.trustpilotReviewCount,
           // Reviews: merge seed + CMS so new seed reviews always show.
           trustpilotReviews: mergeTrustpilotReviews(p.trustpilotReviews, seedFor(p)?.reviews),
+          // Highlights carry prices, so for providers whose prices change with
+          // verified sweeps the code (products.json) wins over a CMS snapshot.
+          // Nov 1, 2026: welludr's $41/$71 sale highlights.
+          highlights: CODE_AUTHORITATIVE_HIGHLIGHTS.has(p.id)
+            ? (seedProviderById.get(p.id)?.highlights ?? p.highlights)
+            : p.highlights,
         }));
         const savedProviderIds = new Set(savedProviders.map((p) => p.id));
         const newProviders = initial.providers
