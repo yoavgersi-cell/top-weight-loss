@@ -5,6 +5,7 @@ import { ArrowRight, Check, ShieldCheck, Star } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { VERTICALS } from "@/lib/config";
 import { HubLogo } from "@/components/hub-logo";
+import productsJson from "@/data/products.json";
 
 // ───── Paid-social landing page: /<vertical>/go/top-5 ─────
 // Built for Facebook/Instagram ad traffic: cold, on a phone, one scroll. No
@@ -53,14 +54,12 @@ const COPY: Record<string, { h1: string; sub: string; note?: string }> = {
   },
 };
 
-// Operator's pick order per category (Nov 1, 2026; Eden first). Categories without an
+// Operator's pick order per category (Nov 1, 2026; Eden first, TrimRx fifth). Categories without an
 // entry use their live ranking's top five. Ids that have no record in the
-// category's config are skipped, never faked: Gala is listed for weight loss
-// but only has an HRT record so far, so its card appears once a verified
-// GLP-1 record (prices, plan terms, partner link) is added to the
-// weight-loss config.
+// category's config are skipped, never faked; providers recorded in another
+// category are resolved through CROSS_VERTICAL below.
 const PICKS: Record<string, string[]> = {
-  "weight-loss": ["eden", "embody", "wellmedr", "altrx", "gala"],
+  "weight-loss": ["eden", "embody", "wellmedr", "altrx", "trimrx"],
 };
 
 // Page-only scores in card order (operator, Nov 1, 2026). They replace the
@@ -76,6 +75,22 @@ const PAGE_SCORES: Record<string, { score: number; starRating: number; label: st
   ],
 };
 
+// Weight-loss card text comes straight from the verified code copy
+// (products.json), never from a saved CMS snapshot: an ad page has to show
+// exactly what was checked (Nov 1, 2026: the CMS copy still read embody
+// "GLP-1 for $69/mon" against the verified $49 sale).
+const CODE_COPY: Record<string, { tagline: string; highlights: string[] }> = Object.fromEntries(
+  (productsJson as { id: string; tagline: string; highlights: string[] }[]).map((p) => [p.id, { tagline: p.tagline, highlights: p.highlights }]),
+);
+
+// Providers shown on a category's ad page whose only record lives in another
+// category's config (operator pick, Nov 1, 2026). The card uses that record's
+// logo, partner link and verified Trustpilot figure, with category-specific
+// copy limited to facts verified for the provider, and no review link when
+// the only review is in the other category. No entries at present.
+const CROSS_VERTICAL: Record<string, Record<string, { from: string; tagline: string; highlights: string[] }>> = {
+};
+
 function pickIds(vertical: string, providerOrder: string[], providerIds: string[]): string[] {
   const ids = PICKS[vertical] ?? providerOrder;
   return ids.filter((id) => providerIds.includes(id)).slice(0, 5);
@@ -86,11 +101,14 @@ export async function generateMetadata({ params }: { params: Promise<{ battleSlu
   const copy = COPY[battleSlug];
   if (!copy) return {};
   const config = await getConfig(battleSlug);
-  const n = pickIds(battleSlug, config.ranking.providerOrder, config.providers.map((p) => p.id)).length;
+  const crossIds = Object.keys(CROSS_VERTICAL[battleSlug] ?? {});
+  const n = pickIds(battleSlug, config.ranking.providerOrder, [...config.providers.map((p) => p.id), ...crossIds]).length;
   return {
     title: { absolute: `${copy.h1.replace("{n}", String(n))} - Treatments Hub` },
     description: copy.sub,
-    robots: { index: false, follow: true },
+    // Paid-traffic page: never indexed or cached by search engines, and its
+    // links pass nothing. Not blocked in robots.txt, so crawlers can read this.
+    robots: { index: false, follow: false, nocache: true, googleBot: { index: false, follow: false } },
   };
 }
 
@@ -122,10 +140,18 @@ export default async function TopFivePage({ params }: { params: Promise<{ battle
 
   const config = await getConfig(vertical);
   const { providerOrder, positions } = config.ranking;
-  const cards = pickIds(vertical, providerOrder, config.providers.map((p) => p.id))
+  const cross = CROSS_VERTICAL[vertical] ?? {};
+  const crossProviders = (
+    await Promise.all(
+      Object.entries(cross).map(async ([id, c]) => (await getConfig(c.from)).providers.find((x) => x.id === id)),
+    )
+  ).filter((x): x is NonNullable<typeof x> => !!x);
+  const allProviders = [...config.providers, ...crossProviders];
+  const cards = pickIds(vertical, providerOrder, allProviders.map((p) => p.id))
     .map((id, displayIdx) => {
-      const p = config.providers.find((x) => x.id === id);
+      const p = allProviders.find((x) => x.id === id);
       if (!p) return null;
+      const crossCopy = cross[id];
       // Score, label and stars come from the provider's real ranking slot;
       // the card number and the "Our Top Pick" tag follow this page's order.
       const index = providerOrder.indexOf(id);
@@ -141,15 +167,15 @@ export default async function TopFivePage({ params }: { params: Promise<{ battle
         rank: displayIdx + 1,
         name: p.name,
         logo: p.logo,
-        tagline: p.tagline,
-        bullets: (p.highlights ?? []).slice(0, 3),
+        tagline: crossCopy?.tagline || (vertical === "weight-loss" && CODE_COPY[id]?.tagline) || p.tagline,
+        bullets: (crossCopy?.highlights || (vertical === "weight-loss" && CODE_COPY[id]?.highlights) || p.highlights || []).slice(0, 3),
         score: pos.score,
         label: pos.label,
         stars: pos.starRating ?? Math.round(pos.score / 2),
         badge: displayIdx === 0 ? "Our Top Pick" : undefined,
         trustpilot: p.trustpilotRating && p.trustpilotReviewCount ? `${p.trustpilotRating} on Trustpilot (${p.trustpilotReviewCount} reviews)` : null,
         href,
-        reviewHref: `/${vertical}/reviews/${review?.slug ?? id}`,
+        reviewHref: crossCopy ? null : `/${vertical}/reviews/${review?.slug ?? id}`,
       };
     })
     .filter((c): c is NonNullable<typeof c> => c !== null);
@@ -245,9 +271,11 @@ export default async function TopFivePage({ params }: { params: Promise<{ battle
                 >
                   Visit Site <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
                 </a>
-                <Link href={c.reviewHref} className="text-center text-[13.5px] font-semibold text-[#0C4B75] hover:underline">
-                  Read {c.name} review
-                </Link>
+                {c.reviewHref && (
+                  <Link href={c.reviewHref} className="text-center text-[13.5px] font-semibold text-[#0C4B75] hover:underline">
+                    Read {c.name} review
+                  </Link>
+                )}
               </div>
             </div>
           </li>
