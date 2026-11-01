@@ -53,14 +53,27 @@ const COPY: Record<string, { h1: string; sub: string; note?: string }> = {
   },
 };
 
-// Operator's pick order per category (Nov 1, 2026). Categories without an
+// Operator's pick order per category (Nov 1, 2026; Eden first). Categories without an
 // entry use their live ranking's top five. Ids that have no record in the
 // category's config are skipped, never faked: Gala is listed for weight loss
 // but only has an HRT record so far, so its card appears once a verified
 // GLP-1 record (prices, plan terms, partner link) is added to the
 // weight-loss config.
 const PICKS: Record<string, string[]> = {
-  "weight-loss": ["embody", "wellmedr", "eden", "altrx", "gala"],
+  "weight-loss": ["eden", "embody", "wellmedr", "altrx", "gala"],
+};
+
+// Page-only scores in card order (operator, Nov 1, 2026). They replace the
+// ranking-slot scores on this page only; label and stars follow the same
+// bands the comparison page uses for those scores.
+const PAGE_SCORES: Record<string, { score: number; starRating: number; label: string }[]> = {
+  "weight-loss": [
+    { score: 9.8, starRating: 5, label: "Exceptional" },
+    { score: 9.6, starRating: 4.5, label: "Excellent" },
+    { score: 9.2, starRating: 4, label: "Excellent" },
+    { score: 8.9, starRating: 3.5, label: "Very Good" },
+    { score: 8.7, starRating: 3, label: "Very Good" },
+  ],
 };
 
 function pickIds(vertical: string, providerOrder: string[], providerIds: string[]): string[] {
@@ -84,13 +97,20 @@ export async function generateMetadata({ params }: { params: Promise<{ battleSlu
 function Stars({ n }: { n: number }) {
   return (
     <span className="flex gap-0.5" aria-hidden>
-      {[0, 1, 2, 3, 4].map((i) => (
-        <Star
-          key={i}
-          className={`h-4 w-4 ${i < Math.round(n) ? "fill-amber-400 text-amber-400" : "fill-gray-200 text-gray-200"}`}
-          strokeWidth={0}
-        />
-      ))}
+      {[0, 1, 2, 3, 4].map((i) => {
+        // Fill fraction for this star: 1, 0.5 or 0 (half stars for x.5 ratings).
+        const fill = Math.max(0, Math.min(1, n - i));
+        return (
+          <span key={i} className="relative inline-block h-4 w-4">
+            <Star className="absolute inset-0 h-4 w-4 fill-gray-200 text-gray-200" strokeWidth={0} />
+            {fill > 0 && (
+              <span className="absolute inset-0 overflow-hidden" style={{ width: `${fill * 100}%` }}>
+                <Star className="h-4 w-4 fill-amber-400 text-amber-400" strokeWidth={0} />
+              </span>
+            )}
+          </span>
+        );
+      })}
     </span>
   );
 }
@@ -109,7 +129,10 @@ export default async function TopFivePage({ params }: { params: Promise<{ battle
       // Score, label and stars come from the provider's real ranking slot;
       // the card number and the "Our Top Pick" tag follow this page's order.
       const index = providerOrder.indexOf(id);
-      const pos = (index >= 0 ? positions[index] : undefined) || positions[positions.length - 1];
+      const pos =
+        PAGE_SCORES[vertical]?.[displayIdx] ??
+        (index >= 0 ? positions[index] : undefined) ??
+        positions[positions.length - 1];
       const review = (config.reviews ?? []).find((r) => r.providerId === id);
       // Never ship a dead button: a placeholder link falls back to the review.
       const href = p.affiliateUrl && p.affiliateUrl !== "#" ? p.affiliateUrl : `/${vertical}/reviews/${review?.slug ?? id}`;
@@ -234,7 +257,7 @@ export default async function TopFivePage({ params }: { params: Promise<{ battle
       {/* Short text below the chart */}
       <section className="mx-auto mt-8 max-w-[880px] space-y-3 px-4 text-[14.5px] leading-relaxed text-gray-600">
         <h2 className="text-[17px] font-bold text-[#191919]">How we picked</h2>
-        <p>We compare published prices, what each plan includes, how care works and real customer reviews. Scores are the same ones shown in our full comparison.</p>
+        <p>We compare published prices, what each plan includes, how care works and real customer reviews.</p>
         <p>
           Want the details? See the <Link href={`/${vertical}`} className="font-semibold text-[#0C4B75] underline underline-offset-2">full comparison</Link>.
         </p>
