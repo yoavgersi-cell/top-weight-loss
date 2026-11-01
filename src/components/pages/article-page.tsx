@@ -307,8 +307,13 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // CTAs the comparison page uses, high on the page. Gated to specific slugs so
   // it never leaks onto informational articles.
   const TOP_PROVIDERS_CRO_SLUGS = new Set(["best-tirzepatide-online"]);
-  // Articles that carry the subject provider's own ranking card (operator picks).
-  const SUBJECT_CARD_SLUGS = new Set(ctx.vertical === "weight-loss" ? ["wellmedr-cost"] : []);
+  // Articles that carry the subject provider's own ranking card (operator picks),
+  // and which on-page component the card sits directly below.
+  const SUBJECT_CARD_PLACEMENT: Record<string, "afterReddit" | "afterCarousel"> =
+    ctx.vertical === "weight-loss"
+      ? { "wellmedr-cost": "afterReddit", "is-embody-legit": "afterCarousel" }
+      : {};
+  const subjectCardPlacement = SUBJECT_CARD_PLACEMENT[slug];
   const isWeightLoss = ctx.vertical === "weight-loss";
   const showTopProvidersCro = isWeightLoss && TOP_PROVIDERS_CRO_SLUGS.has(slug);
 
@@ -816,7 +821,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
 
                 {/* Subject provider's own ranking card after its Reddit block
                     (operator request, Oct 31, 2026), with its true rank number. */}
-                {SUBJECT_CARD_SLUGS.has(slug) && subjectProvider && i === Math.min(1, article.sections.length - 1) && (
+                {subjectCardPlacement === "afterReddit" && subjectProvider && i === Math.min(1, article.sections.length - 1) && (
                   <TopProvidersBlock
                     config={config}
                     linkPrefix={ctx.prefix}
@@ -868,6 +873,26 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                         pageUrl={canonicalUrl(ctx, `/articles/${slug}`)}
                       />
                     </div>
+                  )}
+
+                {/* Subject provider's ranking card directly below its plans
+                    carousel (operator request, Nov 1, 2026). Same render
+                    condition as the carousel, so it never floats alone. */}
+                {subjectCardPlacement === "afterCarousel" &&
+                  subjectProvider &&
+                  (ctx.vertical === "weight-loss" || isHrtArticle) &&
+                  !hideCarouselForSubject &&
+                  i === Math.max(0, Math.ceil(article.sections.length / 2) - 1) && (
+                    <TopProvidersBlock
+                      config={config}
+                      linkPrefix={ctx.prefix}
+                      limit={1}
+                      providerIds={[subjectProvider.id]}
+                      keepRankingNumbers
+                      introMode="short"
+                      title={`${subjectProvider.name} at a glance`}
+                      subtitle="The same card, verified pricing and ratings as our full comparison."
+                    />
                   )}
 
                 {/* Editorial callout after 4th section - GLP-1 copy, so
