@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, Check, ShieldCheck, Star } from "lucide-react";
+import { ArrowRight, Check, Star } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { VERTICALS } from "@/lib/config";
-import { HubLogo } from "@/components/hub-logo";
+import { DisclosureBar } from "@/components/disclosure-bar";
+import { Header } from "@/components/header";
+import { HeroSection } from "@/components/hero-section";
+import { Sidebar } from "@/components/sidebar";
 import productsJson from "@/data/products.json";
 
 // ───── Paid-social landing page: /<vertical>/go/top-5 ─────
@@ -201,33 +204,32 @@ export default async function TopFivePage({ params }: { params: Promise<{ battle
 
   const month = new Date().toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
 
+  // Hero copy split the way the home page shows it: blue subtitle + grey line.
+  const [heroSub, ...heroRest] = copy.sub.split(". ");
+  const sidebarProviders = cards
+    .map((c) => allProviders.find((p) => p.id === c.id))
+    .filter((p): p is NonNullable<typeof p> => !!p);
+
   return (
-    <div className="bg-[#F4F7F9] pb-12 text-[#191919]">
-      {/* Logo + disclosure */}
-      <div className="border-b border-gray-200 bg-white">
-        <div className="mx-auto flex max-w-[880px] items-center justify-between px-4 py-2.5">
-          <Link href={`/${vertical}`} aria-label="Treatments Hub">
-            <HubLogo vertical={vertical} />
-          </Link>
-        </div>
-        <p className="bg-[#f0f4f8] px-4 py-1.5 text-center text-[10.5px] leading-tight text-gray-600 sm:text-[12px]">
-          We may earn a commission from links on this page. It never changes our ratings.{" "}
-          <Link href="/weight-loss/disclaimer" className="font-bold underline underline-offset-2">Advertising disclosure</Link>
-        </p>
-      </div>
+    <div className="bg-white pb-12 text-[#191919]">
+      {/* Same disclosure bar, header and hero as the category home page. */}
+      <DisclosureBar />
+      <Header />
+      <HeroSection
+        backgroundImageUrl={config.hero?.backgroundImageUrl}
+        imageAlt={config.hero?.imageAlt}
+        updatedLabel={`Last Updated: ${month}`}
+        h1={copy.h1.replace("{n}", String(cards.length))}
+        h2={heroSub.endsWith(".") ? heroSub : `${heroSub}.`}
+        description={heroRest.join(". ")}
+      />
 
-      {/* Headline */}
-      <header className="mx-auto max-w-[880px] px-4 pt-6 pb-5 sm:pt-9">
-        <p className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[11.5px] font-bold text-emerald-700">
-          <ShieldCheck className="h-3.5 w-3.5" strokeWidth={2.5} />
-          Updated {month}
-        </p>
-        <h1 className="mt-3 text-[26px] font-extrabold leading-[1.15] tracking-tight sm:text-[34px]">{copy.h1.replace("{n}", String(cards.length))}</h1>
-        <p className="mt-2.5 text-[15px] leading-relaxed text-gray-600 sm:text-[16.5px]">{copy.sub}</p>
-      </header>
-
+      {/* Lean cards (wider than the home page's) + the home page's sidebar on desktop. */}
+      <section className="mx-auto max-w-[1320px] px-4 pt-6 sm:pt-8">
+        <div className="flex items-start gap-6">
+          <div className="min-w-0 flex-1">
       {/* Lean cards */}
-      <ol className="mx-auto max-w-[880px] space-y-4 px-4">
+      <ol className="space-y-4">
         {cards.map((c) => (
           <li key={c.id} className="relative overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
             <div className="flex items-stretch">
@@ -237,7 +239,7 @@ export default async function TopFivePage({ params }: { params: Promise<{ battle
               )}
             </div>
 
-            <div className="grid gap-4 px-4 pt-3 pb-5 sm:grid-cols-[180px_1fr_200px] sm:items-center sm:gap-6 sm:px-6 sm:pt-2">
+            <div className="grid gap-4 px-4 pt-3 pb-5 sm:grid-cols-[180px_1fr_210px] lg:grid-cols-[200px_1fr_220px] sm:items-center sm:gap-6 sm:px-6 sm:pt-2">
               {/* Logo + score (score sits beside the logo on mobile, right column on desktop) */}
               <div className="flex items-center justify-between sm:block">
                 <div className="flex h-[44px] w-[150px] items-center sm:h-[56px] sm:w-[170px]">
@@ -300,25 +302,29 @@ export default async function TopFivePage({ params }: { params: Promise<{ battle
         ))}
       </ol>
 
-      {/* Short text below the chart */}
-      <section className="mx-auto mt-8 max-w-[880px] space-y-3 px-4 text-[14.5px] leading-relaxed text-gray-600">
-        <h2 className="text-[17px] font-bold text-[#191919]">How we picked</h2>
-        <p>We compare published prices, what each plan includes, how care works and real customer reviews.</p>
-        <p>
-          Want the details? See the <Link href={`/${vertical}`} className="font-semibold text-[#0C4B75] underline underline-offset-2">full comparison</Link>.
-        </p>
-      </section>
+            {/* Short text below the chart */}
+            <section className="mt-8 space-y-3 text-[14.5px] leading-relaxed text-gray-600">
+              <h2 className="text-[17px] font-bold text-[#191919]">How we picked</h2>
+              <p>We compare published prices, what each plan includes, how care works and real customer reviews.</p>
+              <p>
+                Want the details? See the <Link href={`/${vertical}`} className="font-semibold text-[#0C4B75] underline underline-offset-2">full comparison</Link>.
+              </p>
+            </section>
 
-      <footer className="mx-auto mt-8 max-w-[880px] px-4 text-[11.5px] leading-relaxed text-gray-400">
-        <p>
-          {copy.note} This page is for information only and is not medical advice. Prices and offers can change; confirm them on the provider&rsquo;s site.
-        </p>
-        <p className="mt-2">
-          <Link href="/weight-loss/disclaimer" className="underline underline-offset-2">Disclaimer</Link>
-          {" · "}
-          <Link href="/weight-loss/privacy" className="underline underline-offset-2">Privacy</Link>
-        </p>
-      </footer>
+            <footer className="mt-8 text-[11.5px] leading-relaxed text-gray-400">
+              <p>
+                {copy.note}{" "}This page is for information only and is not medical advice. We may earn a commission from links on this page; it never changes our ratings. Prices and offers can change; confirm them on the provider&rsquo;s site.
+              </p>
+              <p className="mt-2">
+                <Link href="/weight-loss/disclaimer" className="underline underline-offset-2">Disclaimer</Link>
+                {" · "}
+                <Link href="/weight-loss/privacy" className="underline underline-offset-2">Privacy</Link>
+              </p>
+            </footer>
+          </div>
+          <Sidebar config={config.sidebar} providers={sidebarProviders} linkPrefix={`/${vertical}`} />
+        </div>
+      </section>
     </div>
   );
 }
