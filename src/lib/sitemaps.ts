@@ -34,7 +34,6 @@ const flooredLastModified = (updatedAt?: string) => new Date(latestUpdate(update
 // Weight-loss-specific standalone pages (custom-coded, not CMS-driven). Shared
 // across hosts: on the hub they live under /weight-loss/... via the proxy.
 const WL_STATIC_PATHS: { path: string; priority: number; changeFrequency: "weekly" | "monthly" }[] = [
-  { path: "/find-your-match", priority: 0.8, changeFrequency: "monthly" },
   { path: "/glp1-provider-support", priority: 0.8, changeFrequency: "weekly" },
   { path: "/glp1-shipping-times", priority: 0.8, changeFrequency: "weekly" },
   { path: "/glp1-price-changes", priority: 0.8, changeFrequency: "weekly" },
@@ -53,9 +52,10 @@ const WL_STATIC_PATHS: { path: string; priority: number; changeFrequency: "weekl
   { path: "/black-friday-glp1-deals", priority: 0.8, changeFrequency: "weekly" },
   { path: "/how-we-rank", priority: 0.6, changeFrequency: "monthly" },
   { path: "/about", priority: 0.3, changeFrequency: "monthly" },
-  { path: "/disclaimer", priority: 0.2, changeFrequency: "monthly" },
-  { path: "/privacy", priority: 0.2, changeFrequency: "monthly" },
-  { path: "/terms", priority: 0.2, changeFrequency: "monthly" },
+  // Nov 2026: the quiz and the legal pages (disclaimer, privacy, terms) are
+  // out of the sitemap so Google's small crawl budget goes to content pages
+  // (Page indexing: ~240 content URLs never crawled). They stay live, linked
+  // from every footer, and indexable.
 ];
 
 // Custom-coded pages owned by a single non-weight-loss vertical (served at
