@@ -3,6 +3,7 @@ import { ED_GUIDES_2026_10 } from "./ed-guides-2026-10";
 import { ED_PILLAR_2026_10 } from "./ed-pillar-2026-10";
 import { ED_ARTICLES_2026_10 } from "./ed-articles-2026-10";
 import { ED_GLP1_ARTICLE } from "./ed-articles/glp1-and-erectile-dysfunction";
+import { ED_STATISTICS_ARTICLE } from "./ed-articles/erectile-dysfunction-statistics";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // ED (erectile dysfunction) vertical content - treatmentshub.com/ed
@@ -2251,6 +2252,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
       ED_PILLAR_2026_10,
       ...ED_ARTICLES_2026_10,
       ED_GLP1_ARTICLE,
+      ED_STATISTICS_ARTICLE,
     ],
 
     faqs: [
