@@ -313,7 +313,16 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     ctx.vertical === "weight-loss"
       ? { "wellmedr-cost": "afterReddit", "is-embody-legit": "afterCarousel" }
       : {};
-  const subjectCardPlacement = SUBJECT_CARD_PLACEMENT[slug];
+  // Every "is-<provider>-legit" page carries its provider's own ranking card
+  // (operator request, Nov 2, 2026): below the provider's plans carousel where
+  // that renders, otherwise after the second section. Only for providers in
+  // this vertical's ranking - an unranked provider has no score or rank to
+  // show, so it gets no card rather than an invented one.
+  const subjectRanked = !!subjectProvider && config.ranking.providerOrder.includes(subjectProvider.id);
+  const carouselRenders = (ctx.vertical === "weight-loss" || isHrtArticle) && !hideCarouselForSubject;
+  const legitCardPlacement: "afterReddit" | "afterCarousel" | undefined =
+    isLegitArticle && subjectRanked ? (carouselRenders ? "afterCarousel" : "afterReddit") : undefined;
+  const subjectCardPlacement = SUBJECT_CARD_PLACEMENT[slug] ?? legitCardPlacement;
   const isWeightLoss = ctx.vertical === "weight-loss";
   const showTopProvidersCro = isWeightLoss && TOP_PROVIDERS_CRO_SLUGS.has(slug);
 
