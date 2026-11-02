@@ -5,6 +5,7 @@ import { pillarGlp1Microdosing } from "./pillar-glp1-microdosing";
 import { glp1MuscleLossArticle } from "./glp1-muscle-loss";
 import { nextGenWeightLossDrugsArticle } from "./next-generation-weight-loss-drugs";
 import { glp1Coverage2027Article } from "./glp1-coverage-2027";
+import { glp1ProvidersSameCompanyArticle } from "./glp1-providers-same-company";
 import { trueCostTable, budgetList } from "@/lib/true-cost";
 
 export interface Article {
@@ -1797,6 +1798,10 @@ export const articles: Article[] = [
         body: 'Yes - by the signals that matter, Embody is a legitimate telehealth provider. It is <strong>LegitScript-certified</strong> (an independent certification for online healthcare), works with <strong><a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">US-based 503A compounding pharmacies</a></strong>, and requires a <strong>licensed medical review</strong> before any prescription is issued. Those three things - third-party certification, licensed pharmacies, and real clinician oversight - are exactly what separates a trustworthy provider from one to avoid.',
       },
       {
+        heading: "Is embody the same company as altRx or welludr?",
+        body: 'No. embody is operated by Modern Metabolic Medicine, Inc., and its prescribing clinicians come from OpenLoop Health (<a href="https://joinem.co/pages/terms-conditions" target="_blank" rel="noopener noreferrer">embody terms</a>). altRx and welludr name the same clinician network, which is why the three can feel alike, but each is a separate company with its own prices, plans and support. The full side-by-side is in <a href="/weight-loss/articles/are-altrx-embody-welludr-same-company">are altRx, embody and welludr the same company?</a>',
+      },
+      {
         heading: "Is Embody a good company?",
         body: 'Judged on what can be checked, yes - with one honest caveat. The structure is sound: LegitScript certification, US-based 503A pharmacies, a licensed medical review that can decline treatment, a full refund if a provider does not approve you, flat published pricing with no commitment, and 1-2 day shipping. The caveat is the customer record: Embody holds a <strong>verified 3.8 on Trustpilot across 10,689 reviews</strong>, a very large base with a lower average than welludr\'s 4.6, so read the recent reviews on our <a href="/weight-loss/reviews/embody">Embody review</a> before you decide. "Embody GLP-1" simply means its two compounded products - semaglutide (a GLP-1) and tirzepatide (a GLP-1/GIP) - prescribed online and shipped to you.',
       },
@@ -2033,6 +2038,10 @@ export const articles: Article[] = [
       {
         heading: "Is welludr legit?",
         body: 'By every marker we can actually check - yes. A licensed provider reviews your medical intake before prescribing, and approval is not automatic; medication is dispensed through a <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">regulated US pharmacy</a> (Reddit commenters independently name its Florida pharmacy); it holds a <strong>verified 4.6 on Trustpilot across 2,679 reviews</strong>, tied for the highest aggregate among the providers in our ranking; and it backs treatment with a weight-loss warranty, terms published on its site. "Legit" does not mean the medication works identically for everyone - more on that in the complaints section, because that is where the honest caveat lives.',
+      },
+      {
+        heading: "Is welludr the same company as embody, altRx or Medvi?",
+        body: 'No. welludr is its own company with its own prices and plans. Like embody and altRx, it names OpenLoop Health as its clinician network (<a href="https://www.wellmedr.com/pages/privacy-policy-1" target="_blank" rel="noopener noreferrer">welludr privacy policy</a>), which is why their intake steps can feel similar, and it lists the licensed pharmacies that fill its prescriptions. The full side-by-side, from each company\'s own documents, is in <a href="/weight-loss/articles/are-altrx-embody-welludr-same-company">are altRx, embody and welludr the same company?</a>',
       },
       {
         heading: "Is welludr a scam?",
@@ -2744,4 +2753,5 @@ export const articles: Article[] = [
   glp1MuscleLossArticle,
   nextGenWeightLossDrugsArticle,
   glp1Coverage2027Article,
+  glp1ProvidersSameCompanyArticle,
 ];
