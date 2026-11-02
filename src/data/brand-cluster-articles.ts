@@ -464,7 +464,7 @@ export const brandClusterArticles: Article[] = [
   },
   {
     slug: "trimrx-alternatives",
-    title: "TrimRx (Trim Rx) Alternatives 2026: Cheaper or More Support",
+    title: "Best TrimRx Alternatives (2026): 6 Cheaper or Better Options",
     description:
       "Six TrimRx (Trim Rx) alternatives sorted by what you want to change: GLP-1 price, tirzepatide cost, delivery speed, brand-name access or support depth.",
     category: "Comparison",

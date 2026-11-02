@@ -93,7 +93,7 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // "Weight Loss" stays in the title for Google, where "embody weight loss
     // reviews" is the page's main query, and "Legit" covers the legit/scam
     // long-tails that convert at 50-100% on Bing.
-    title: "embody Reviews 2026: Cost, Results & Is It Legit?",
+    title: "embody Weight Loss Reviews 2026: Cost & Is It Legit?",
     description:
       "embody reviews: {prices}, 1-2 day shipping, LegitScript-certified, refund if not approved. Is embody legit?",
   },

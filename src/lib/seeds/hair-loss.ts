@@ -1172,7 +1172,7 @@ const articles: ArticleData[] = [
   // and no supplement recommendations (house rule).
   {
     slug: "iron-deficiency-hair-loss",
-    title: "Iron Deficiency and Hair Loss: The Link, Explained (2026)",
+    title: "Can Iron Deficiency Cause Hair Loss? What to Know (2026)",
     description:
       "Low iron is one of the most common and most fixable causes of hair shedding, especially in women. How the link works, the test that settles it, and recovery.",
     category: "Science",
@@ -1248,33 +1248,38 @@ const articles: ArticleData[] = [
   },
   {
     slug: "veradermics-vdphl01",
-    title: "Veradermics VDPHL01: The Hair Loss Pill Everyone Wants",
+    title: "VDPHL01 Phase 3 Results and FDA Timeline (2026)",
     description:
-      "VDPHL01, an extended-release oral minoxidil in late-stage trials, could be the first FDA-approved oral minoxidil for hair loss. What is known so far.",
+      "Veradermics' extended-release oral minoxidil met its phase 3 goals in 536 men (Oct 19, 2026). The results, the safety signal and when it could reach the FDA.",
     category: "Science",
     readTime: "6 min read",
     publishedAt: "2026-08-30",
-    updatedAt: "2026-08-30",
+    updatedAt: "2026-11-02",
     heroColor: "#EEF1F8",
     author: "Treatments Hub Staff",
     keyTakeaways: [
       "VDPHL01 is Veradermics' extended-release oral minoxidil, aiming to become the first FDA-approved oral minoxidil for pattern hair loss - and the first oral hair-loss drug approved for women (oral finasteride is approved only for men).",
-      "The company reports positive Phase 2/3 results in men (April 2026) and positive early results in women, with major readouts expected in late 2026 and the first half of 2027.",
+      "On October 19, 2026 the company reported that its phase 3 Study 304 in 536 men met both co-primary endpoints: an average gain of 28.6 hairs/cm² once daily and 36.4 twice daily at six months, against 6.6 on placebo.",
+      "No FDA submission date has been given: Medscape reported on October 22, 2026 that the company did not share its filing plans.",
       "It is not approved and not available yet - trial success so far is the company's own reporting, and late-stage trials can still surprise.",
       "The active ingredient, minoxidil, is already prescribable today: oral minoxidil is available off-label through hair-loss telehealth providers.",
     ],
     sections: [
       {
         heading: "What is VDPHL01?",
-        body: `<div class="qa"><strong>The short answer</strong>VDPHL01 is Veradermics' extended-release oral minoxidil, in late-stage trials to become the first FDA-approved oral minoxidil for pattern hair loss and the first oral hair-loss drug approved for women. The company reported positive Phase 2/3 results in men in April 2026, with major readouts expected in late 2026 and the first half of 2027. It is not approved or available yet, but oral minoxidil is already prescribable off-label through hair-loss telehealth providers.</div>VDPHL01 is an <strong>extended-release oral minoxidil</strong> tablet developed by Veradermics, a clinical-stage dermatology company - and the reason searches for it are spiking is its run of trial news. Minoxidil itself is the most familiar name in hair loss, but today's approved products are topical; oral minoxidil is widely prescribed for hair loss only off-label. VDPHL01 is the attempt to change that: run the full FDA trial program and become the <strong>first FDA-approved oral minoxidil for pattern hair loss</strong> - and the first oral hair-loss drug cleared for women as well as men (today's approved oral option, finasteride, is for men only), a market the company estimates at 50 million men and 30 million women in the US alone.`,
+        body: `<div class="qa"><strong>The short answer</strong>VDPHL01 is Veradermics' extended-release oral minoxidil, aiming to be the first FDA-approved oral minoxidil for pattern hair loss. On October 19, 2026 the company reported a positive phase 3 trial in 536 men (Study 304), after positive phase 2/3 results in April. No FDA filing date has been announced, so it is not approved or available yet; oral minoxidil is already prescribable off-label through hair-loss telehealth providers.</div>VDPHL01 is an <strong>extended-release oral minoxidil</strong> tablet developed by Veradermics, a clinical-stage dermatology company - and the reason searches for it are spiking is its run of trial news. Minoxidil itself is the most familiar name in hair loss, but today's approved products are topical; oral minoxidil is widely prescribed for hair loss only off-label. VDPHL01 is the attempt to change that: run the full FDA trial program and become the <strong>first FDA-approved oral minoxidil for pattern hair loss</strong> - and the first oral hair-loss drug cleared for women as well as men (today's approved oral option, finasteride, is for men only), a market the company estimates at 50 million men and 30 million women in the US alone.`,
       },
       {
-        heading: "What have the trials shown so far?",
+        heading: "What did the phase 3 trial show?",
+        body: `<p>On October 19, 2026, Veradermics announced topline results from Part A of Study 304, a phase 3 trial in 536 men with mild-to-moderate male pattern hair loss randomised to VDPHL01 8.5 mg once daily, 8.5 mg twice daily, or placebo. Both doses beat placebo on the two co-primary endpoints, target-area non-vellus hair count and a patient-reported outcome, with p&lt;0.0001. At six months the once-daily arm had gained an average of 28.6 hairs per square centimetre and the twice-daily arm 36.4, against 6.6 for placebo. The company reported no treatment-related serious adverse events and no cardiac adverse events of special interest. Sources: <a href="https://www.businesswire.com/news/home/20261019684103/en/Veradermics-Oral-VDPHL01-Achieved-Early-Consistent-and-Robust-Hair-Growth-in-Positive-Phase-3-304-Clinical-Trial-in-Male-Pattern-Hair-Loss" target="_blank" rel="noopener noreferrer">Veradermics release, Business Wire, October 19, 2026</a>; <a href="https://www.sec.gov/Archives/edgar/data/1827635/000182763526000036/exhibit991datarelease101926.htm" target="_blank" rel="noopener noreferrer">the same data filed with the SEC</a>; <a href="https://www.medscape.com/viewarticle/male-pattern-baldness-extended-release-minoxidil-regrows-2026a10013pk" target="_blank" rel="noopener noreferrer">Medscape, October 22, 2026</a>.</p><table><thead><tr><th>Arm (Study 304, six months)</th><th>Average hair-count gain</th></tr></thead><tbody><tr><td>VDPHL01 8.5 mg once daily</td><td>+28.6 hairs/cm²</td></tr><tr><td>VDPHL01 8.5 mg twice daily</td><td>+36.4 hairs/cm²</td></tr><tr><td>Placebo</td><td>+6.6 hairs/cm²</td></tr></tbody></table><p>These are company-reported topline figures, not yet peer-reviewed. Every new hair-loss development we track, including this one, is set out with its sources in our <a href="/hair-loss/articles/new-hair-loss-treatments-pipeline">new hair-loss treatments pipeline</a> guide.</p>`,
+      },
+      {
+        heading: "What did the earlier trials show?",
         body: `Per the company's own announcements - the honest framing, since peer review and FDA review are still ahead: the Phase 2/3 "302" trial in male pattern hair loss reported positive results in April 2026, described as early, consistent and robust hair growth, and its CEO has claimed faster, stronger growth versus standard minoxidil. On the women's side, an open-label Phase 2 study reported rapid-onset growth, and enrollment is complete in a 556-participant registration-directed Phase 2/3 trial. The catch to keep in view: these are company-reported topline results, and late-stage programs can and do surprise - which is exactly what the remaining readouts are for.`,
       },
       {
-        heading: "When could it actually be available?",
-        body: `Not soon enough for anyone shedding hair today. The company's stated timeline puts 12-month male data and a confirmatory Phase 3 readout in late 2026, and the women's registration trial readout in the first half of 2027 - and only after successful readouts does an FDA submission and review process begin. Realistically, that puts any approval well down the road. Treat VDPHL01 as a genuinely promising pipeline story to watch, not a reason to wait: untreated pattern loss progresses, and follicles that spend years miniaturizing are harder to rescue later.`,
+        heading: "When could VDPHL01 get FDA approval?",
+        body: `Not soon enough for anyone shedding hair today. The October 2026 phase 3 result is a step toward an FDA submission, but the company has not given a submission date: <a href="https://www.medscape.com/viewarticle/male-pattern-baldness-extended-release-minoxidil-regrows-2026a10013pk" target="_blank" rel="noopener noreferrer">Medscape reported on October 22, 2026</a> that Veradermics did not provide information on its filing plans. The women's registration trial was due to read out in the first half of 2027 on the company's earlier timeline, and approval can only follow a submission and the FDA's review. Realistically, that still puts any approval well down the road. Treat VDPHL01 as a genuinely promising pipeline story to watch, not a reason to wait: untreated pattern loss progresses, and follicles that spend years miniaturizing are harder to rescue later.`,
       },
       {
         heading: "What can you do today instead of waiting?",
