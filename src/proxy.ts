@@ -78,6 +78,8 @@ const PATH_REDIRECTS: Record<string, string> = {
   "/articles/ozempic-face-what-it-is": "/articles/how-glp1-medications-work",
   "/articles/ozempic-before-and-after-weight-loss": "/articles/how-long-for-semaglutide-to-work",
   "/articles/telemedicine-weight-loss-guide": "/articles/choosing-telehealth-weight-loss-provider",
+  // Still in Google's Nov 2026 Pages report and 404ing (no PCOS guide on the hub).
+  "/articles/glp1-weight-loss-pcos": "/articles/glp1-weight-loss-for-women",
   // Consolidated into the ranking homepage (see article-page.tsx). The page-level
   // redirect still exists as a fallback, but resolving it here turns the
   // legacy 301 -> 308 chain into a single hop. Empty target = the vertical root.
