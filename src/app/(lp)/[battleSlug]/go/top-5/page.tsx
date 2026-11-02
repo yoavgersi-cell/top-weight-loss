@@ -54,12 +54,13 @@ const COPY: Record<string, { h1: string; sub: string; note?: string }> = {
   },
 };
 
-// Operator's pick order per category (Nov 1, 2026; Eden first, TrimRx fifth). Categories without an
+// Operator's pick order per category (Nov 2, 2026: Ro first on this ad page only;
+// the main ranking is unchanged). Categories without an
 // entry use their live ranking's top five. Ids that have no record in the
 // category's config are skipped, never faked; providers recorded in another
 // category are resolved through CROSS_VERTICAL below.
 const PICKS: Record<string, string[]> = {
-  "weight-loss": ["eden", "embody", "wellmedr", "altrx", "trimrx"],
+  "weight-loss": ["ro", "eden", "embody", "wellmedr", "altrx"],
 };
 
 // Page-only scores in card order (operator, Nov 1, 2026). They replace the
@@ -89,6 +90,23 @@ const CODE_COPY: Record<string, { tagline: string; highlights: string[] }> = Obj
 // copy limited to facts verified for the provider, and no review link when
 // the only review is in the other category. No entries at present.
 const CROSS_VERTICAL: Record<string, Record<string, { from: string; tagline: string; highlights: string[] }>> = {
+};
+
+// Card copy written for this page only, from facts already verified on the
+// provider's review (ro: membership from $39 the first month, brand-name
+// Wegovy or Zepbound billed separately, insurance can apply). The provider's
+// copy elsewhere on the site is unchanged.
+const PAGE_COPY: Record<string, Record<string, { tagline: string; highlights: string[] }>> = {
+  "weight-loss": {
+    ro: {
+      tagline: "FDA-approved Wegovy and Zepbound, prescribed online",
+      highlights: [
+        "Brand-name Wegovy and Zepbound - FDA-approved, not compounded",
+        "Membership from $39 the first month; medication billed separately",
+        "Insurance can apply; licensed providers review every plan",
+      ],
+    },
+  },
 };
 
 function pickIds(vertical: string, providerOrder: string[], providerIds: string[]): string[] {
@@ -167,8 +185,8 @@ export default async function TopFivePage({ params }: { params: Promise<{ battle
         rank: displayIdx + 1,
         name: p.name,
         logo: p.logo,
-        tagline: crossCopy?.tagline || (vertical === "weight-loss" && CODE_COPY[id]?.tagline) || p.tagline,
-        bullets: (crossCopy?.highlights || (vertical === "weight-loss" && CODE_COPY[id]?.highlights) || p.highlights || []).slice(0, 3),
+        tagline: PAGE_COPY[vertical]?.[id]?.tagline || crossCopy?.tagline || (vertical === "weight-loss" && CODE_COPY[id]?.tagline) || p.tagline,
+        bullets: (PAGE_COPY[vertical]?.[id]?.highlights || crossCopy?.highlights || (vertical === "weight-loss" && CODE_COPY[id]?.highlights) || p.highlights || []).slice(0, 3),
         score: pos.score,
         label: pos.label,
         stars: pos.starRating ?? Math.round(pos.score / 2),
