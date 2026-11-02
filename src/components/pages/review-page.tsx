@@ -27,6 +27,7 @@ import { LastUpdated } from "@/components/last-updated";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
 import { TrustDisclosure, MedicalSources } from "@/components/medical-sources";
+import { PopularGuides } from "@/components/popular-guides";
 import { MedicalDisclaimer } from "@/components/medical-disclaimer";
 import { SourcesMethodology } from "@/components/sources-methodology";
 import { ProductCarousel } from "@/components/product-carousel";
@@ -1605,6 +1606,9 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         />
 
         <MedicalDisclaimer vertical={ctx.vertical} className="mb-8" />
+
+        {/* Crawl paths to priority pages Google has not crawled yet (hub only). */}
+        {ctx.vertical === "weight-loss" && ctx.prefix === "/weight-loss" && <PopularGuides />}
 
         {/* Authoritative medical citations (FDA / NEJM / NIH) - the same YMYL
             grounding block the article template carries. */}

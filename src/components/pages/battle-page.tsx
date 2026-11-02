@@ -14,6 +14,7 @@ import { EditorialContent } from "@/components/editorial-content";
 import { LandingEditorial } from "@/components/landing-editorial";
 import { landingFocusFor } from "@/lib/landing-focus";
 import { GuideCluster } from "@/components/guide-cluster";
+import { PopularGuides } from "@/components/popular-guides";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound, permanentRedirect } from "next/navigation";
 import { ArrowRight, Check, Minus, ShieldCheck, Sparkles, Star } from "lucide-react";
@@ -1560,6 +1561,9 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           )}
 
           <MedicalDisclaimer vertical={ctx.vertical} className="mb-10" />
+
+          {/* Crawl paths to priority pages Google has not crawled yet (hub only). */}
+          {ctx.vertical === "weight-loss" && ctx.prefix === "/weight-loss" && <PopularGuides />}
 
           {/* ───── RELATED COMPARISONS ───── */}
           {(relatedBattles.length > 0 || relatedTrios.length > 0) && (

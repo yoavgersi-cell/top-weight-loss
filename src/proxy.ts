@@ -80,6 +80,9 @@ const PATH_REDIRECTS: Record<string, string> = {
   "/articles/telemedicine-weight-loss-guide": "/articles/choosing-telehealth-weight-loss-provider",
   // Still in Google's Nov 2026 Pages report and 404ing (no PCOS guide on the hub).
   "/articles/glp1-weight-loss-pcos": "/articles/glp1-weight-loss-for-women",
+  // In Google's Nov 2026 report (linked from an older page version); no such
+  // matchup exists, and the TrimRx alternatives guide compares both.
+  "/trimrx-vs-directmeds": "/articles/trimrx-alternatives",
   // Consolidated into the ranking homepage (see article-page.tsx). The page-level
   // redirect still exists as a fallback, but resolving it here turns the
   // legacy 301 -> 308 chain into a single hop. Empty target = the vertical root.
