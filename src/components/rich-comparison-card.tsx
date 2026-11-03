@@ -134,9 +134,11 @@ export function RichComparisonCard({
         {/* ── Body: facts (left) + CTA rail (right) ── */}
         <div className="mt-4 flex flex-col gap-4 sm:mt-5 sm:gap-5 lg:flex-row lg:items-start">
           <div className="min-w-0 flex-1 space-y-3.5 sm:space-y-4">
-            {/* Info block: treatments + starting price */}
+            {/* Info block: treatments + starting price. Desktop only - on
+                mobile it was removed to keep the cards short (operator
+                request, Nov 3, 2026). */}
             {(treatments.length > 0 || startingPlan?.price || product.priceNote) && (
-              <div className="rounded-xl border border-gray-100 bg-[#F7F8FA] p-3.5 sm:p-4">
+              <div className="hidden rounded-xl border border-gray-100 bg-[#F7F8FA] p-3.5 sm:block sm:p-4">
                 {treatments.length > 0 && (
                   <div>
                     <p className="text-[10.5px] font-bold uppercase tracking-wide text-gray-500 sm:text-[11px]">Treatments offered</p>
