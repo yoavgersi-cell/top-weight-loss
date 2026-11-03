@@ -68,8 +68,8 @@ export const WEIGHT_LOSS_GUIDES: GuideLink[] = [
   },
   {
     slug: "glp1-price-changes",
-    title: "GLP-1 Price Changes",
-    blurb: "Every verified change to online GLP-1 prices, dated, with before and after.",
+    title: "GLP-1 Price Tracker",
+    blurb: "Current semaglutide and tirzepatide prices by provider, and every verified change, dated.",
   },
   {
     slug: "glp1-weight-loss-statistics",

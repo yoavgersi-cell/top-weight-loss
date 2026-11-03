@@ -113,48 +113,144 @@ export const PRICE_INDEX: PriceIndexRow[] = [
 // the dataset's "verified as of" date and emits it as schema dateModified.
 export const PRICE_INDEX_VERIFIED = "2026-10-16";
 
-// Public change log for the index. One entry per operator-verified change,
-// newest first, describing what our listing said before and after. Only add
-// an entry when the underlying row actually changed after verification - this
-// log is published on the statistics page as the citable record.
-export const PRICE_CHANGELOG: { date: string; providerId: string; change: string }[] = [
+// ───── Public change log ─────
+// One entry per operator-verified change, newest first, describing what our
+// listing said before and after. Only add an entry when the underlying row
+// actually changed after verification - this log is the citable record behind
+// the GLP-1 price tracker page, its RSS feed (/glp1-price-changes.xml) and its
+// CSV download (/glp1-price-changes.csv).
+//
+// `moves` is the machine-readable half of the entry: the before and after
+// headline monthly price per medication, copied from the same verified figures
+// the `change` sentence states. Leave `moves` out when only a condition moved
+// (a promotion extended, plan terms reworded) - the entry then reads as a
+// terms change, never as an invented price move. `from: null` = a medication
+// newly listed. `source` names where the new figure was read.
+//
+// Adding a change (the whole workflow): update the row in PRICE_INDEX above,
+// add one entry here with its date, `change`, `moves` and `source`, and bump
+// PRICE_INDEX_VERIFIED. Every page, the feed and the CSV update from that.
+export type PriceMove = {
+  drug: "semaglutide" | "tirzepatide";
+  /** Previous listed headline monthly price in USD; null when newly listed. */
+  from: number | null;
+  /** New listed headline monthly price in USD. */
+  to: number;
+  /** Condition attached to the new figure, as the provider states it. */
+  condition?: string;
+};
+
+export type PriceChange = {
+  date: string;
+  providerId: string;
+  change: string;
+  moves?: PriceMove[];
+  source?: string;
+};
+
+export const PRICE_CHANGELOG: PriceChange[] = [
   {
     date: "2026-10-28",
     providerId: "wellmedr",
     change:
       "Pre-Black Friday sale: compounded semaglutide now listed from $41/month (previously $49) and tirzepatide from $71/month (previously $89) on the 12-month plan, the same price at every dose, per welludr's partner pricing notice of October 28; the provider says the rate holds for the immediate future with no end date stated.",
+    moves: [
+      { drug: "semaglutide", from: 49, to: 41, condition: "12-month plan, same price at every dose" },
+      { drug: "tirzepatide", from: 89, to: 71, condition: "12-month plan, same price at every dose" },
+    ],
+    source: "welludr partner pricing notice, October 28, 2026",
   },
   {
     date: "2026-10-28",
     providerId: "embody",
     change:
       "Pre-Black Friday sale: compounded semaglutide now listed at $49/month (previously $69) and tirzepatide at $99/month (previously $119), month to month with no commitment, per the banner on embody's site. Published regular prices remain $79 and $129; no end date is stated.",
+    moves: [
+      { drug: "semaglutide", from: 69, to: 49, condition: "month to month, no commitment" },
+      { drug: "tirzepatide", from: 119, to: 99, condition: "month to month, no commitment" },
+    ],
+    source: "Sale banner on embody's website, October 28, 2026",
   },
   {
     date: "2026-09-21",
     providerId: "altrx",
     change:
       "Promotional $89/month semaglutide and $149/month tirzepatide rates extended: provider now lists the sale as ending September 25 (previously September 20). Prices unchanged.",
+    source: "altRx website, September 21, 2026",
   },
   {
     date: "2026-09-15",
     providerId: "trimrx",
     change:
       "Compounded semaglutide now listed at $149/month, the same price at every dose ($140 discount applied). Previously listed as $179 for the first month and $299 regular thereafter. Tirzepatide unchanged at $259/month.",
+    moves: [
+      { drug: "semaglutide", from: 179, to: 149, condition: "same price at every dose; previously $179 first month, $299 thereafter" },
+    ],
+    source: "TrimRx website, September 15, 2026",
   },
   {
     date: "2026-09-14",
     providerId: "altrx",
     change:
       "Promotional $89/month semaglutide and $149/month tirzepatide rates confirmed; provider lists the sale as ending September 20. Regular rates remain $199 and $299.",
+    source: "altRx website, September 14, 2026",
   },
   {
     date: "2026-09-14",
     providerId: "wellmedr",
     change:
       "Compounded semaglutide now listed at $49/month on the 12-month plan (previously listed $59) and tirzepatide at $89/month (previously $99). Same price at every dose.",
+    moves: [
+      { drug: "semaglutide", from: 59, to: 49, condition: "12-month plan, same price at every dose" },
+      { drug: "tirzepatide", from: 99, to: 89, condition: "12-month plan, same price at every dose" },
+    ],
+    source: "welludr website, September 14, 2026",
   },
 ];
+
+// ───── Derived values (no new data - computed from the records above) ─────
+
+/** Numeric monthly price from a cell ("$49", "from $179" → 49, 179). */
+export function priceValue(cell: PriceCell): number | null {
+  const m = cell?.price.match(/\$([\d,]+)/);
+  return m ? Number(m[1].replace(/,/g, "")) : null;
+}
+
+/** Stable anchor for a log entry - the feed and CSV link to it. */
+export const changeId = (c: PriceChange) => `${c.date}-${c.providerId}`;
+
+export type ChangeKind = "cut" | "increase" | "mixed" | "new" | "terms";
+
+/** What kind of change an entry records, read from its moves. */
+export function changeKind(c: PriceChange): ChangeKind {
+  const moves = c.moves ?? [];
+  if (moves.length === 0) return "terms";
+  if (moves.every((m) => m.from === null)) return "new";
+  const priced = moves.filter((m): m is PriceMove & { from: number } => m.from !== null);
+  const down = priced.some((m) => m.to < m.from);
+  const up = priced.some((m) => m.to > m.from);
+  if (down && up) return "mixed";
+  if (up) return "increase";
+  if (down) return "cut";
+  return "terms";
+}
+
+export const CHANGE_KIND_LABEL: Record<ChangeKind, string> = {
+  cut: "Price cut",
+  increase: "Price increase",
+  mixed: "Price change",
+  new: "New listing",
+  terms: "Terms change",
+};
+
+/** Percent change of a move, rounded; null for a new listing. */
+export const movePercent = (m: PriceMove) => (m.from ? Math.round(((m.to - m.from) / m.from) * 100) : null);
+
+/** The change log, newest first (ties keep their written order). */
+export const PRICE_CHANGES_NEWEST: PriceChange[] = [...PRICE_CHANGELOG].sort((a, b) => b.date.localeCompare(a.date));
+
+/** When the price data last changed: the later of the verification pass and the newest log entry. */
+export const PRICE_DATA_UPDATED: string = [PRICE_INDEX_VERIFIED, PRICE_CHANGES_NEWEST[0]?.date ?? ""].sort().at(-1)!;
 
 // Brand-name list prices actually published on our providers' brand shelves -
 // used for the brand-vs-compounded math. Real figures only.
