@@ -59,10 +59,11 @@ export function PriceTicker({ items, verifiedLabel, trackerHref }: { items: Tick
   return (
     <div className="border-b border-gray-200 bg-[#F5F8FB]" role="region" aria-label="Verified GLP-1 starting prices">
       <div className="mx-auto flex max-w-[1320px] items-stretch">
-        <p className="hidden shrink-0 items-center gap-2 border-r border-gray-200 px-4 text-[11px] font-bold uppercase tracking-[0.06em] text-[#0C4B75] sm:flex">
+        <p className="flex shrink-0 items-center gap-1.5 border-r border-gray-200 px-3 text-[10.5px] font-bold uppercase tracking-[0.06em] text-[#0C4B75] sm:gap-2 sm:px-4 sm:text-[11px]">
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" aria-hidden />
           Verified prices
-          <span className="font-semibold normal-case tracking-normal text-gray-500">· we may earn a commission</span>
+          {/* Mobile shows the label alone; the disclosure bar above carries the commission note there. */}
+          <span className="hidden font-semibold normal-case tracking-normal text-gray-500 sm:inline">· we may earn a commission</span>
         </p>
         <div className="price-ticker relative min-w-0 flex-1 overflow-hidden motion-reduce:overflow-x-auto">
           <div
@@ -78,10 +79,10 @@ export function PriceTicker({ items, verifiedLabel, trackerHref }: { items: Tick
         </div>
         <Link
           href={trackerHref}
-          className="flex shrink-0 items-center gap-1 border-l border-gray-200 px-3 text-[12px] font-semibold text-[#0C4B75] hover:underline sm:px-4"
+          className="relative flex shrink-0 items-center gap-1 border-l border-gray-200 px-3 text-[12px] font-semibold text-[#0C4B75] hover:underline sm:px-4"
         >
           <span className="hidden md:inline">{verifiedLabel}</span>
-          <span className="md:hidden">All prices</span>
+          <span className="sr-only md:hidden">All verified prices</span>
           <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
         </Link>
       </div>
