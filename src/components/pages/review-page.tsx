@@ -566,7 +566,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "How much does Sprout cost per month?",
       answer:
-        "Compounded semaglutide starts at $99/month and compounded tirzepatide at $149/month on the 12-month plan ($1,188 and $1,788 billed upfront). The 6-month plan is $110 and $160, the 3-month plan $125 and $180, and the monthly plan with no commitment $149 and $199, with a standing $200 discount on the first month. Every plan is the same price at any dose, with no membership fee. Brand-name Wegovy starts at $1,799/month. Confirm current plan terms and the first-month offer on Sprout's site.",
+        "Compounded semaglutide starts at $99/month and compounded tirzepatide at $149/month on the 12-month plan ($1,188 and $1,788 billed upfront). The 6-month plan is $110 and $160, the 3-month plan $125 and $180 and the monthly plan with no commitment $149 and $199. Every plan is the same price at any dose, with no membership fee. Brand-name Wegovy starts at $1,799/month. Confirm current plan terms and the first-month offer on Sprout's site.",
     },
   ],
   healthrx: [
