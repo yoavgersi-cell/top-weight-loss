@@ -244,3 +244,21 @@ html[data-legacy] .legacy-name {
   color: #093d61;
   border-bottom-color: #093d61;
 }
+
+/* Weight-loss price ticker (components/price-ticker.tsx). The loop runs only
+   once the aria-hidden second copy exists (after hydration); paused on hover
+   and keyboard focus, and off under reduced motion. */
+@keyframes priceTicker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.price-ticker-track.is-looping {
+  animation: priceTicker var(--ticker-duration, 40s) linear infinite;
+}
+.price-ticker:hover .price-ticker-track,
+.price-ticker:focus-within .price-ticker-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .price-ticker-track.is-looping { animation: none; }
+}
