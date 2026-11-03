@@ -13,10 +13,10 @@ export const TRIMRX_REVIEWS: ProviderReviewRecord = {
   profileStatus: "claimed",
   aggregate: {
     rating: "3.4",
-    reviewCount: "4,931",
-    verifiedOn: "2026-10-25",
-    note: "Aggregate re-verified Oct 25, 2026 from the operator's screenshot of the claimed profile (claimed Aug 2024, paid Trustpilot subscription, Weight Loss Service category): 3.4 across 4,931 reviews - both the score and the count fell since Oct 12, which means Trustpilot removed reviews from the profile. Earlier: 3.8 across 5,392 on Oct 12, 2026 (was 3.7 / 5,670 on Sep 24), Weight Loss Service category, claimed Aug 2024. (Was 3.6 / 5,497.)",
-    history: [{"rating":"3.8","reviewCount":"5,392","on":"2026-10-12"},{"rating":"3.7","reviewCount":"5,670","on":"2026-09-24"},{"rating":"3.6","reviewCount":"5,497","on":"2026-09"}],
+    reviewCount: "4,894",
+    verifiedOn: "2026-11-03",
+    note: "Aggregate re-verified Nov 3, 2026 from the operator's screenshot of the claimed profile: 3.4 across 4,894 reviews (score unchanged, count down from 4,931). Previous check: aggregate re-verified Oct 25, 2026 from the operator's screenshot of the claimed profile (claimed Aug 2024, paid Trustpilot subscription, Weight Loss Service category): 3.4 across 4,931 reviews - both the score and the count fell since Oct 12, which means Trustpilot removed reviews from the profile. Earlier: 3.8 across 5,392 on Oct 12, 2026 (was 3.7 / 5,670 on Sep 24), Weight Loss Service category, claimed Aug 2024. (Was 3.6 / 5,497.)",
+    history: [{"rating":"3.4","reviewCount":"4,931","on":"2026-10-25"},{"rating":"3.8","reviewCount":"5,392","on":"2026-10-12"},{"rating":"3.7","reviewCount":"5,670","on":"2026-09-24"},{"rating":"3.6","reviewCount":"5,497","on":"2026-09"}],
   },
   batches: [
     {

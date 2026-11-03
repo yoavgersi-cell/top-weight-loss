@@ -146,7 +146,7 @@ const ROWS: Row[] = [
     membership: "None",
     shipping: "Free tracked; often next-day (provider claim)",
     support: "Custom dosing, unlimited provider check-ins",
-    trustpilot: { rating: "3.4", count: "4,931", checked: "October 25, 2026", url: "https://www.trustpilot.com/review/trimrx.com" },
+    trustpilot: { rating: "3.4", count: "4,894", checked: "November 3, 2026", url: "https://www.trustpilot.com/review/trimrx.com" },
     advantage: "No long-term contract; custom dosing; results guarantee (conditions apply)",
     limitation: "Payment-practice complaints are a recurring theme",
     cta: "Check TrimRx's current plans",
@@ -404,7 +404,7 @@ const SECTIONS: Section[] = [
     ),
     support:
       "A free two-minute assessment, review by a licensed clinician, then custom dosing with unlimited check-ins included. Reviewers describe the screening as thorough and the intake as clear. The compounding pharmacy is not named on the site. The advertised three-month results guarantee is conditional on following the plan and completing monthly check-ins.",
-    trustpilotHeading: "3.4 across 4,931 reviews",
+    trustpilotHeading: "3.4 across 4,894 reviews",
     trustpilot: (
       <>
         Checked {TRUSTPILOT_CHECKED} (<Ext href="https://www.trustpilot.com/review/trimrx.com">profile</Ext>; claimed profile, paid Trustpilot subscription). The five-star reviews are about clarity and price: &ldquo;Clear pricing&rdquo;, &ldquo;Priced fairly and easy to use&rdquo;, &ldquo;Screening was more thorough than I expected&rdquo;, &ldquo;My old provider was charging me close to double&rdquo;, &ldquo;Shipping runs two or three days&rdquo;. The low reviews are about money and delivery: a first order billed at double the quoted amount with no reply, &ldquo;Unreliable! Potentially crooks!&rdquo;, a tracking date that moved twice, and a refund not issued a month after a cancellation made within an hour of ordering. Trustpilot&rsquo;s own summary of the profile notes significant dissatisfaction with payment practices. Two things are true at once: <strong className="text-[#191919]">many customers find the pricing clear, and a recurring minority report billing they did not expect</strong>.
