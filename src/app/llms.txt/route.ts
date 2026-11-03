@@ -127,6 +127,15 @@ export async function GET() {
     parts.push(vertical === DEFAULT_VERTICAL ? weightLossSection(config) : verticalSection(vertical, config));
   }
 
+  // Machine-readable price data: the same verified records as the tracker page.
+  parts.push("## Data");
+  parts.push("");
+  parts.push(line("GLP-1 price tracker", "/weight-loss/glp1-price-changes", "Current compounded semaglutide and tirzepatide prices by provider, with every verified change, dated"));
+  parts.push(line("GLP-1 price change feed (RSS)", "/glp1-price-changes.xml", "One item per verified price change, newest first"));
+  parts.push(line("Current GLP-1 prices (CSV)", "/glp1-prices.csv", "One row per provider: listed monthly price and condition per medication"));
+  parts.push(line("GLP-1 price change log (CSV)", "/glp1-price-changes.csv", "One row per price move: date, previous and new price, percent change, source"));
+  parts.push("");
+
   const reviewer = getReviewer();
   parts.push("## About");
   parts.push("");

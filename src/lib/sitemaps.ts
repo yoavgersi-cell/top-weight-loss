@@ -20,6 +20,7 @@ import {
   type SiteConfig,
 } from "@/lib/config";
 import { WEIGHT_LOSS_MIGRATED } from "@/lib/site-context";
+import { PRICE_DATA_UPDATED } from "@/lib/price-index";
 import { articles } from "@/data/articles";
 import { analysisPath, reviewAnalysisRecords } from "@/lib/review-analysis";
 
@@ -33,10 +34,12 @@ const flooredLastModified = (updatedAt?: string) => new Date(latestUpdate(update
 
 // Weight-loss-specific standalone pages (custom-coded, not CMS-driven). Shared
 // across hosts: on the hub they live under /weight-loss/... via the proxy.
-const WL_STATIC_PATHS: { path: string; priority: number; changeFrequency: "weekly" | "monthly" }[] = [
+const WL_STATIC_PATHS: { path: string; priority: number; changeFrequency: "weekly" | "monthly"; lastModified?: string }[] = [
   { path: "/glp1-provider-support", priority: 0.8, changeFrequency: "weekly" },
   { path: "/glp1-shipping-times", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/glp1-price-changes", priority: 0.8, changeFrequency: "weekly" },
+  // The price tracker's lastmod is the date its data last changed, so a
+  // verified price change re-submits it through IndexNow the same day.
+  { path: "/glp1-price-changes", priority: 0.8, changeFrequency: "weekly", lastModified: PRICE_DATA_UPDATED },
   { path: "/glp1-provider-comparison", priority: 0.8, changeFrequency: "weekly" },
   { path: "/weight-loss-pills", priority: 0.8, changeFrequency: "weekly" },
   { path: "/glp1-pills-vs-injections", priority: 0.8, changeFrequency: "weekly" },
@@ -246,7 +249,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
     entries.push(
       ...WL_STATIC_PATHS.map((s) => ({
         url: P(s.path),
-        lastModified: FALLBACK_DATE,
+        lastModified: s.lastModified && s.lastModified > CONTENT_LAST_UPDATED ? new Date(s.lastModified) : FALLBACK_DATE,
         changeFrequency: s.changeFrequency,
         priority: s.priority,
       }))

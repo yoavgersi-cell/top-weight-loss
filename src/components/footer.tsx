@@ -33,7 +33,7 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
       { label: "GLP-1 Providers Compared", href: "/weight-loss/glp1-provider-comparison" },
       { label: "Provider Support Compared", href: "/weight-loss/glp1-provider-support" },
       { label: "Shipping Times", href: "/weight-loss/glp1-shipping-times" },
-      { label: "Price Changes", href: "/weight-loss/glp1-price-changes" },
+      { label: "GLP-1 Price Tracker", href: "/weight-loss/glp1-price-changes" },
       // The three ranking landing pages were in the sitemap with zero
       // internal links (orphans in the Sept 2026 audit) - surfaced here so
       // every crawled page links to them.
