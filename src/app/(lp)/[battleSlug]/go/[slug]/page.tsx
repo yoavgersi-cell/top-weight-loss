@@ -181,7 +181,7 @@ export default async function GoPage({ params }: { params: Promise<{ battleSlug:
           <li className="rounded-xl border border-gray-200 p-4">
             <p className="text-[15px] font-bold">2. Check the price you will still pay in month four</p>
             <p className="mt-1 text-[14px] leading-relaxed text-gray-600">
-              {embody && <>embody&rsquo;s {embody.semaglutide?.price} semaglutide and {embody.tirzepatide?.price} tirzepatide are its current rates against a regular $79 and $129.</>}{" "}
+              {embody && <>embody&rsquo;s {embody.semaglutide?.price} semaglutide and {embody.tirzepatide?.price} tirzepatide are its current rates, flat month to month.</>}{" "}
               {eden && <>Eden&rsquo;s {eden.semaglutide?.price} and {eden.tirzepatide?.price} are flat: its pricing table shows the same figure in month one, month two and every month after.</>}{" "}
               Both publish one price per medication at every dose, so the number you see does not climb as your dose does.
             </p>
@@ -236,7 +236,7 @@ export default async function GoPage({ params }: { params: Promise<{ battleSlug:
           </div>
           <div>
             <dt className="text-[15px] font-bold">Does the price go up as my dose increases?</dt>
-            <dd className="mt-1 text-[14px] leading-relaxed text-gray-600">No. embody and Eden each publish one price per medication that stays the same at every dose. embody&rsquo;s current rates sit below its regular $79 and $129; Eden&rsquo;s are flat with no promotional period.</dd>
+            <dd className="mt-1 text-[14px] leading-relaxed text-gray-600">No. embody and Eden each publish one price per medication that stays the same at every dose. embody&rsquo;s are flat month to month; Eden&rsquo;s are flat with no promotional period.</dd>
           </div>
           <div>
             <dt className="text-[15px] font-bold">How does it work?</dt>

@@ -21,6 +21,7 @@ export async function GET() {
     const now = [
       row?.semaglutide && `semaglutide ${row.semaglutide.price}/month: ${row.semaglutide.note}`,
       row?.tirzepatide && `tirzepatide ${row.tirzepatide.price}/month: ${row.tirzepatide.note}`,
+      row?.plan && !row.semaglutide && !row.tirzepatide && `plans ${row.plan.price}/month: ${row.plan.note}`,
     ].filter(Boolean);
     const description = [
       c.change,

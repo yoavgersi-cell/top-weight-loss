@@ -90,7 +90,7 @@ const CHECKLIST: { title: string; check: string; verify: string; redFlag: string
   {
     title: "Cancellation and refunds",
     check: "Whether you can stop at any renewal, whether there is a minimum term, and what you get back if the clinician does not approve you.",
-    verify: "embody refunds in full if not approved and has no commitment; TrimRx has no long-term contract; welludr's $41 rate wants a 12-month plan; HealthRx charges $1,188 upfront. None of these is wrong, but you should know which one you are signing.",
+    verify: "embody refunds in full if not approved and has no commitment; TrimRx has no long-term contract; welludr's $41 rate wants a 12-month plan; HealthRx's lowest rate is on a 12-month plan. None of these is wrong, but you should know which one you are signing.",
     redFlag: "Auto-renew terms you can only find in the checkout fine print. Read them before you pay.",
   },
   {
@@ -219,7 +219,7 @@ const ROWS: Row[] = [
     clinician: "Independent US-licensed clinician in your state reviews your full history before any charge",
     visit: "Free two-minute assessment, clinician review, care-team check-ins",
     pharmacy: "Licensed 503A pharmacies; LegitScript certificate 50087439",
-    dosePricing: "Plan price does not change with dose; $99/month is $1,188 prepaid for the year",
+    dosePricing: "Plan price does not change with dose; lowest rate, $97/month, on the 12-month plan",
     note: "No Trustpilot aggregate verified and no reviews captured; a newer brand with a thin public record. The structural trade-off is the prepayment: twelve months before knowing how you tolerate the medication.",
   },
 ];
@@ -233,11 +233,11 @@ const PATTERNS: { title: string; body: string }[] = [
   },
   {
     title: "The headline price rarely stands alone",
-    body: "welludr's $41 requires a 12-month plan. HealthRx's $99 is $1,188 prepaid. Medvi's $99 and altRx's $89 are promotional rates against $199. Ro bills membership and medication separately. The condition attached to a price is as important as the number, which is why the price index prints both.",
+    body: "welludr's $41 requires a 12-month plan. HealthRx's $97 is a 12-month plan rate. Medvi's $99 and altRx's $89 are starting prices. Ro bills membership and medication separately. The condition attached to a price is as important as the number, which is why the price index prints both.",
   },
   {
     title: "Flat-dose pricing is common but not universal",
-    body: "Seven of the ten - altRx, welludr, TrimRx, DirectMeds, embody, HealthRx and Medvi - state one price at every dose. Ro prices medication separately from its membership, and SHED and Sprout publish monthly rates without a single every-dose figure in the material we reviewed. Because treatment titrates upward, the maintenance-dose price is the one to ask for.",
+    body: "Eight of the ten - altRx, welludr, TrimRx, DirectMeds, embody, HealthRx, Medvi and Sprout - state one price at every dose. Ro prices medication separately from its membership, and SHED publishes starting rates without a single every-dose figure in the material we reviewed. Because treatment titrates upward, the maintenance-dose price is the one to ask for.",
   },
   {
     title: "Pharmacy transparency varies more than clinician claims do",
@@ -559,6 +559,11 @@ export default async function HowToChooseGlp1ProviderPage() {
                           <span className="font-semibold text-[#191919]">{r.price.semaglutide.price}</span>
                           <span className="block text-[12px] text-gray-500">{r.price.semaglutide.note}</span>
                         </>
+                      ) : r.price?.plan ? (
+                        <>
+                          <span className="font-semibold text-[#191919]">Plans {r.price.plan.price}</span>
+                          <span className="block text-[12px] text-gray-500">{r.price.plan.note}</span>
+                        </>
                       ) : (
                         <span className="text-gray-400">Not in price index</span>
                       )}
@@ -739,7 +744,8 @@ export default async function HowToChooseGlp1ProviderPage() {
             {explore.map(({ product, provider }) => {
               const meta = EXPLORE[provider.id];
               const row = rowById.get(provider.id);
-              const price = priceById.get(provider.id)?.semaglutide;
+              const indexRow = priceById.get(provider.id);
+              const price = indexRow?.semaglutide ?? (indexRow?.plan ? { price: `Plans ${indexRow.plan.price}`, note: indexRow.plan.note } : null);
               return (
                 <article key={provider.id} className="flex flex-col rounded-xl border border-gray-200 bg-white p-5">
                   <div className="mb-3 flex items-center gap-3">
@@ -752,7 +758,7 @@ export default async function HowToChooseGlp1ProviderPage() {
                   <p className="mb-4 text-[14px] leading-relaxed text-gray-700">{meta.reason}</p>
                   <dl className="mb-4 grid gap-x-4 gap-y-2 text-[13px] sm:grid-cols-2">
                     <div>
-                      <dt className="font-semibold text-gray-500">Semaglutide, verified</dt>
+                      <dt className="font-semibold text-gray-500">{indexRow?.semaglutide || !indexRow?.plan ? "Semaglutide, verified" : "Price, verified"}</dt>
                       <dd className="text-[#191919]">
                         {price ? (
                           <>

@@ -52,7 +52,7 @@ export const HOLIDAY_OFFERS: HolidayOffer[] = [
     providerId: "embody",
     headline: "Pre-Black Friday sale: $49/month semaglutide, $99/month tirzepatide",
     detail:
-      "embody's site banner reads \"Pre-Black Friday sale discount applied\" with compounded semaglutide at $49/month and tirzepatide at $99/month, month to month, shipped in 1-2 days. Before the sale our index listed $69 and $119; embody's published regular prices are $79 and $129, so both sale figures are $30/month below the regular rate and $20 below the previous everyday rate. The same prices appear on embody's exclusive landing page, where a countdown read just under six days on October 28; the main-site banner states no end date and no code.",
+      "embody's site banner reads \"Pre-Black Friday sale discount applied\" with compounded semaglutide at $49/month and tirzepatide at $99/month, month to month, shipped in 1-2 days. Before the sale our index listed $69 and $119, so both sale figures are $20/month below the previous everyday rate. The same prices appear on embody's exclusive landing page, where a countdown read just under six days on October 28; the main-site banner states no end date and no code.",
     offerMonthly: { semaglutide: 49, tirzepatide: 99 },
     verifiedOn: "2026-10-28",
     source: "banner on embody's homepage and its exclusive landing page, operator screenshots",

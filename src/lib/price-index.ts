@@ -18,18 +18,26 @@ export type PriceIndexRow = {
   edge: string;
   semaglutide: PriceCell;
   tirzepatide: PriceCell;
+  /**
+   * A single published "plans from" price, used when the provider's page
+   * does not tie its starting price to one medication. Set it with both
+   * medication cells null; the row then reads "Plans from $X" and stays out
+   * of the per-medication price ranges (the figure can't be attributed).
+   */
+  plan?: { price: string; note: string };
   shipping: string;
   commitment: string;
   /** Verified Trustpilot record, or null when none is published. */
   trustpilot: { rating: string; count: string } | null;
 };
 
+// Rows below: operator check of each provider's own site, November 3, 2026.
 export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "wellmedr",
     edge: "Lowest ongoing price on the market - same price at every dose",
-    semaglutide: { price: "$41", note: "pre-Black Friday sale (partner notice, Oct 28, 2026); 12-month plan; previously $49" },
-    tirzepatide: { price: "$71", note: "pre-Black Friday sale (partner notice, Oct 28, 2026); shipped every 4 weeks; previously $89" },
+    semaglutide: { price: "$41", note: "pre-Black Friday sale (shown on welludr's site, Nov 3, 2026); 12-month plan; previously $49" },
+    tirzepatide: { price: "$71", note: "pre-Black Friday sale (shown on welludr's site, Nov 3, 2026); shipped every 4 weeks; previously $89" },
     shipping: "Ships in 3-5 business days",
     commitment: "12-month plan for the lowest rate; cancel or change anytime",
     trustpilot: { rating: "4.6", count: "2,679" },
@@ -37,71 +45,92 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "embody",
     edge: "Cheapest with no commitment - month to month, ships in 1-2 days",
-    semaglutide: { price: "$49", note: "pre-Black Friday sale (seen Oct 28, 2026); reg. $79; month-to-month" },
-    tirzepatide: { price: "$99", note: "pre-Black Friday sale (seen Oct 28, 2026); reg. $129; month-to-month" },
+    semaglutide: { price: "$49", note: "sale price, flat month to month; site shows a countdown to a price increase (Nov 3, 2026)" },
+    tirzepatide: { price: "$99", note: "sale price, flat month to month" },
     shipping: "Ships in 1-2 days, cold-chain",
     commitment: "None - month to month, cancel anytime",
     trustpilot: { rating: "3.8", count: "10,689" },
   },
   {
     providerId: "altrx",
-    edge: "Flat pricing at every dose, plus a real brand-name shelf",
-    semaglutide: { price: "$89", note: "reg. $199; flat at every dose" },
-    tirzepatide: { price: "$149", note: "reg. $299; flat at every dose" },
+    edge: "Low starting prices, plus a real brand-name shelf",
+    semaglutide: { price: "from $89", note: "starting price" },
+    tirzepatide: { price: "from $149", note: "starting price" },
     shipping: "Free shipping in 5-7 days",
     commitment: "None - pause or cancel anytime; Buy Now, Pay Later",
     trustpilot: null,
   },
   {
+    providerId: "healthrx",
+    edge: "Lowest rates on a 12-month plan, with overnight cold-chain delivery",
+    semaglutide: { price: "from $97", note: "12-month plan; $99 first month on the monthly plan; 3-month $125, 6-month $115" },
+    tirzepatide: { price: "from $177", note: "12-month plan; $99 first month on the monthly plan; 3-month $201, 6-month $195" },
+    shipping: "Overnight cold-chain shipping",
+    commitment: "12-month plan for the lowest rate; monthly, 3- and 6-month plans also offered",
+    trustpilot: null,
+  },
+  {
+    providerId: "eden",
+    edge: "One flat price every month and at every dose, with 24/7 human support",
+    semaglutide: { price: "$99", note: "flat every month, same price at every dose" },
+    tirzepatide: { price: "$129", note: "flat every month, same price at every dose" },
+    shipping: "Shipping time not published - confirm at checkout",
+    commitment: "None - no membership, no annual or long-term plan",
+    trustpilot: { rating: "4.5", count: "5,019" },
+  },
+  {
+    providerId: "sprout",
+    edge: "Same price at any dose, with 12-, 6- and 3-month plans below the monthly rate",
+    semaglutide: { price: "from $99", note: "12-month plan, $1,188 billed upfront; monthly $149, no commitment" },
+    tirzepatide: { price: "from $149", note: "12-month plan, $1,788 billed upfront; monthly $199, no commitment" },
+    shipping: "Prescription shipped within 2 days",
+    commitment: "No membership fee; monthly option with no commitment; plans renew until cancelled",
+    trustpilot: { rating: "4.1", count: "188" },
+  },
+  {
     providerId: "medvi",
     edge: "All-inclusive care: visits, dietician and coaching in the price",
-    semaglutide: { price: "$99", note: "promo; reg. $199 - all-inclusive" },
-    tirzepatide: { price: "$166", note: "promo; reg. $299" },
+    semaglutide: null,
+    tirzepatide: null,
+    plan: { price: "from $99", note: "\"start for just $99\"; no membership or hidden fees; dietician visits and care coaching included" },
     shipping: "Free shipping",
     commitment: "None - no membership or hidden fees; HSA/FSA",
     trustpilot: { rating: "4.3", count: "15,097" },
   },
   {
-    providerId: "healthrx",
-    edge: "All-in prepaid year with overnight cold-chain delivery",
-    semaglutide: { price: "$99", note: "12-mo prepaid - $1,188 at checkout" },
-    tirzepatide: { price: "from $179", note: "per month" },
-    shipping: "Overnight cold-chain shipping",
-    commitment: "12-month prepaid plan",
-    trustpilot: null,
-  },
-  {
     providerId: "directmeds",
-    edge: "One flat price for both medications - injections or drops",
-    semaglutide: { price: "$147", note: "flat at every dose" },
-    tirzepatide: { price: "$147", note: "flat at every dose" },
-    shipping: "Free 1-2 day shipping",
+    edge: "Same price at every dose, delivered in 1-2 days",
+    semaglutide: null,
+    tirzepatide: null,
+    plan: { price: "from $147", note: "starting price; same price at every dose" },
+    shipping: "Free shipping, arrives in 1-2 days",
     commitment: "None - no membership, cancel anytime",
     trustpilot: { rating: "4.6", count: "16,390" },
   },
   {
-    providerId: "sprout",
-    edge: "Compounded plans plus a brand-name Wegovy option",
-    semaglutide: { price: "$149", note: "starting price" },
-    tirzepatide: { price: "$199", note: "starting price" },
-    shipping: "Prescription shipped within 2 days",
-    commitment: "See provider site for plan terms",
-    trustpilot: { rating: "4.1", count: "188" },
-  },
-  {
     providerId: "trimrx",
     edge: "Custom dosing with unlimited provider check-ins",
-    semaglutide: { price: "$149", note: "same price at every dose; $140 discount applied" },
-    tirzepatide: { price: "$259", note: "per month" },
+    semaglutide: null,
+    tirzepatide: null,
+    plan: { price: "from $149", note: "weight loss plans starting at $149" },
     shipping: "Free tracked delivery, often next-day",
-    commitment: "None - month to month",
+    commitment: "Month to month - cancel before your next billing cycle",
     trustpilot: { rating: "3.4", count: "4,931" },
+  },
+  {
+    providerId: "bmimd",
+    edge: "Same price at every dose; fully refundable if you're not eligible",
+    semaglutide: { price: "$149", note: "3-month plan ($447); limited-time price" },
+    tirzepatide: { price: "$159", note: "3-month plan ($477); limited-time price" },
+    shipping: "Free shipping on subscription orders",
+    commitment: "3-month plan shown; 12-, 6- and 1-month plans also offered",
+    trustpilot: { rating: "4.4", count: "870" },
   },
   {
     providerId: "shed",
     edge: "Coaching included and a 5%-in-120-days money-back guarantee",
-    semaglutide: { price: "$199", note: "20% off month one" },
-    tirzepatide: { price: "$299", note: "20% off month one" },
+    semaglutide: { price: "from $199", note: "starting price" },
+    tirzepatide: { price: "from $299", note: "starting price" },
     shipping: "Home delivery included",
     commitment: "None - HSA/FSA approved",
     trustpilot: { rating: "4.6", count: "1,134" },
@@ -111,7 +140,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
 // Date of the last operator verification pass over the index above. Bump it
 // whenever a row is re-checked or changed - the statistics page prints it as
 // the dataset's "verified as of" date and emits it as schema dateModified.
-export const PRICE_INDEX_VERIFIED = "2026-10-16";
+export const PRICE_INDEX_VERIFIED = "2026-11-03";
 
 // ───── Public change log ─────
 // One entry per operator-verified change, newest first, describing what our
@@ -149,6 +178,71 @@ export type PriceChange = {
 };
 
 export const PRICE_CHANGELOG: PriceChange[] = [
+  {
+    date: "2026-11-03",
+    providerId: "sprout",
+    change:
+      "Lowest listed price now on the 12-month plan: compounded semaglutide from $99/month and tirzepatide from $149/month, billed upfront ($1,188 and $1,788 for 52 weeks). Previously listed from $149 and $199, which remain Sprout's monthly, no-commitment prices. 6- and 3-month plans sit in between (semaglutide $110 and $125, tirzepatide $160 and $180); same price at any dose.",
+    moves: [
+      { drug: "semaglutide", from: 149, to: 99, condition: "12-month plan, $1,188 billed upfront" },
+      { drug: "tirzepatide", from: 199, to: 149, condition: "12-month plan, $1,788 billed upfront" },
+    ],
+    source: "Sprout website, November 3, 2026",
+  },
+  {
+    date: "2026-11-03",
+    providerId: "healthrx",
+    change:
+      "Lowest listed rates now from $97/month for compounded semaglutide (previously $99, listed as a 12-month prepaid plan) and from $177/month for tirzepatide (previously from $179), both on the 12-month plan. The monthly plan is $99 for the first month; 3- and 6-month plans are also offered (semaglutide $125 and $115, tirzepatide $201 and $195).",
+    moves: [
+      { drug: "semaglutide", from: 99, to: 97, condition: "12-month plan" },
+      { drug: "tirzepatide", from: 179, to: 177, condition: "12-month plan" },
+    ],
+    source: "HealthRx website, November 3, 2026",
+  },
+  {
+    date: "2026-11-03",
+    providerId: "eden",
+    change:
+      "Added to the tracker: compounded semaglutide $99/month and tirzepatide $129/month, the same price every month and at every dose, with no membership and no annual or long-term plan.",
+    moves: [
+      { drug: "semaglutide", from: null, to: 99, condition: "flat every month, same price at every dose" },
+      { drug: "tirzepatide", from: null, to: 129, condition: "flat every month, same price at every dose" },
+    ],
+    source: "Eden website, checked November 3, 2026",
+  },
+  {
+    date: "2026-11-03",
+    providerId: "bmimd",
+    change:
+      "Added to the tracker at its 3-month plan price, shown as a limited-time price: compounded semaglutide $149/month ($447 for 3 months) and tirzepatide $159/month ($477), the same price at every dose. Prices for the 12-, 6- and 1-month plans were not captured.",
+    moves: [
+      { drug: "semaglutide", from: null, to: 149, condition: "3-month plan; limited-time price" },
+      { drug: "tirzepatide", from: null, to: 159, condition: "3-month plan; limited-time price" },
+    ],
+    source: "bmiMD website, November 3, 2026",
+  },
+  {
+    date: "2026-11-03",
+    providerId: "trimrx",
+    change:
+      "Listing now shows TrimRx's published \"plans starting at $149\". Its site does not show a separate tirzepatide price, so the $259/month tirzepatide figure from our earlier check is no longer listed.",
+    source: "TrimRx website, November 3, 2026",
+  },
+  {
+    date: "2026-11-03",
+    providerId: "medvi",
+    change:
+      "Listing now shows Medvi's published \"start for just $99\", with no membership or hidden fees and dietician visits and coaching included. Its page does not show a separate tirzepatide price, so the $166/month promotional tirzepatide figure from our earlier check is no longer listed.",
+    source: "Medvi website, November 3, 2026",
+  },
+  {
+    date: "2026-11-03",
+    providerId: "directmeds",
+    change:
+      "Listing now shows DirectMeds' published \"starting at $147\", the same price at every dose. Its page does not tie the price to one medication, so we no longer list $147 separately for semaglutide and tirzepatide.",
+    source: "DirectMeds website, November 3, 2026",
+  },
   {
     date: "2026-10-28",
     providerId: "wellmedr",
@@ -211,7 +305,7 @@ export const PRICE_CHANGELOG: PriceChange[] = [
 // ───── Derived values (no new data - computed from the records above) ─────
 
 /** Numeric monthly price from a cell ("$49", "from $179" → 49, 179). */
-export function priceValue(cell: PriceCell): number | null {
+export function priceValue(cell: PriceCell | { price: string; note: string } | undefined): number | null {
   const m = cell?.price.match(/\$([\d,]+)/);
   return m ? Number(m[1].replace(/,/g, "")) : null;
 }
