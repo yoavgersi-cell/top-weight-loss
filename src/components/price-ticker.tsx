@@ -53,9 +53,9 @@ export function PriceTicker({ items, verifiedLabel, trackerHref }: { items: Tick
   const isWeightLoss = prefix === "/weight-loss" || (prefix === "" && !!first && !NOT_WEIGHT_LOSS.has(first));
   if (!isWeightLoss || items.length === 0) return null;
 
-  // ~12s per item: a slow, easy-to-read pace whatever the list length
-  // (slowed twice on operator request, Nov 3, 2026: 3.5s → 7s → 12s).
-  const duration = `${Math.max(60, items.length * 12)}s`;
+  // ~9.5s per item: a slow, easy-to-read pace whatever the list length
+  // (tuned on operator request, Nov 3, 2026: 3.5s → 7s → 12s → 9.5s).
+  const duration = `${Math.max(50, items.length * 9.5)}s`;
 
   return (
     <div className="border-b border-gray-200 bg-[#F5F8FB]" role="region" aria-label="Verified GLP-1 starting prices">
