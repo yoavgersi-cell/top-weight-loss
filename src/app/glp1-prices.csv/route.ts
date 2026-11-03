@@ -17,14 +17,16 @@ export async function GET() {
       "provider", "provider_id",
       "semaglutide_usd_per_month", "semaglutide_condition",
       "tirzepatide_usd_per_month", "tirzepatide_condition",
+      "plans_from_usd_per_month", "plans_from_condition",
       "commitment", "shipping", "index_verified_on", "last_logged_change", "review_url",
     ],
   ];
   for (const r of await currentRows()) {
     rows.push([
       r.name, r.providerId,
-      r.semaValue, condition(r.semaglutide),
-      r.tirzValue, condition(r.tirzepatide),
+      r.semaValue, r.planValue !== null ? "see plans_from" : condition(r.semaglutide),
+      r.tirzValue, r.planValue !== null ? "see plans_from" : condition(r.tirzepatide),
+      r.planValue, r.planValue !== null ? r.plan!.note : "",
       r.commitment, r.shipping, PRICE_INDEX_VERIFIED, r.lastChange, `${HUB}/weight-loss/reviews/${r.providerId}`,
     ]);
   }

@@ -272,10 +272,19 @@ export default async function StatisticsPage() {
                         {providerName(row.providerId)}
                       </Link>
                     </td>
-                    <td className="px-4 py-3 font-bold text-[#191919] [font-variant-numeric:tabular-nums]">{row.semaglutide?.price ?? "-"}</td>
-                    <td className="px-4 py-3 text-gray-500">{row.semaglutide?.note ?? "not offered"}</td>
-                    <td className="px-4 py-3 font-bold text-[#191919] [font-variant-numeric:tabular-nums]">{row.tirzepatide?.price ?? "-"}</td>
-                    <td className="px-4 py-3 text-gray-500">{row.tirzepatide?.note ?? "not offered"}</td>
+                    {row.plan && !row.semaglutide && !row.tirzepatide ? (
+                      <>
+                        <td className="px-4 py-3 font-bold text-[#191919] [font-variant-numeric:tabular-nums]">Plans {row.plan.price}</td>
+                        <td colSpan={3} className="px-4 py-3 text-gray-500">{row.plan.note}; no separate price per medication published</td>
+                      </>
+                    ) : (
+                      <>
+                        <td className="px-4 py-3 font-bold text-[#191919] [font-variant-numeric:tabular-nums]">{row.semaglutide?.price ?? "-"}</td>
+                        <td className="px-4 py-3 text-gray-500">{row.semaglutide?.note ?? "not offered"}</td>
+                        <td className="px-4 py-3 font-bold text-[#191919] [font-variant-numeric:tabular-nums]">{row.tirzepatide?.price ?? "-"}</td>
+                        <td className="px-4 py-3 text-gray-500">{row.tirzepatide?.note ?? "not offered"}</td>
+                      </>
+                    )}
                     <td className="px-4 py-3 text-gray-500">{row.commitment}</td>
                   </tr>
                 ))}

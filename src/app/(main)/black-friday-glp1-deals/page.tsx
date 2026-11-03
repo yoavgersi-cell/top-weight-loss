@@ -91,7 +91,7 @@ export default async function BlackFridayDealsPage() {
   const verticalLabel = (v: HolidayVertical) => VERTICALS.find((x) => x.id === v)?.name ?? v;
 
   const checkerRows: CheckerRow[] = PRICE_INDEX.map((r) => ({ providerId: r.providerId, name: nameOf(r.providerId), reviewHref: reviewHref(r.providerId), semaglutide: r.semaglutide, tirzepatide: r.tirzepatide }));
-  const everydayPromos = PRICE_INDEX.filter((r) => /promo|off|discount|reg\./i.test(`${r.semaglutide?.note ?? ""} ${r.tirzepatide?.note ?? ""}`));
+  const everydayPromos = PRICE_INDEX.filter((r) => /promo|off|discount|reg\.|sale/i.test(`${r.semaglutide?.note ?? ""} ${r.tirzepatide?.note ?? ""} ${r.plan?.note ?? ""}`));
   const indexVerified = longDate(PRICE_INDEX_VERIFIED);
   const count = HOLIDAY_OFFERS.length;
   const live = HOLIDAY_OFFERS.filter((o) => offerStatus(o, today) === "live").length;
@@ -298,8 +298,14 @@ export default async function BlackFridayDealsPage() {
                   return (
                     <tr key={r.providerId}>
                       <td className={`${cell} font-semibold text-[#191919]`}><Link href={reviewHref(r.providerId)} className="hover:text-[#0C4B75] hover:underline">{nameOf(r.providerId)}</Link></td>
-                      <td className={cell}>{r.semaglutide ? <><strong className="text-[#191919]">{r.semaglutide.price}</strong><span className="block text-[12px] text-gray-500">{r.semaglutide.note}</span></> : <span className="text-gray-400">Not published</span>}</td>
-                      <td className={cell}>{r.tirzepatide ? <><strong className="text-[#191919]">{r.tirzepatide.price}</strong><span className="block text-[12px] text-gray-500">{r.tirzepatide.note}</span></> : <span className="text-gray-400">Not published</span>}</td>
+                      {r.plan && !r.semaglutide && !r.tirzepatide ? (
+                        <td className={cell} colSpan={2}><strong className="text-[#191919]">Plans {r.plan.price}</strong><span className="block text-[12px] text-gray-500">{r.plan.note}</span></td>
+                      ) : (
+                        <>
+                          <td className={cell}>{r.semaglutide ? <><strong className="text-[#191919]">{r.semaglutide.price}</strong><span className="block text-[12px] text-gray-500">{r.semaglutide.note}</span></> : <span className="text-gray-400">Not published</span>}</td>
+                          <td className={cell}>{r.tirzepatide ? <><strong className="text-[#191919]">{r.tirzepatide.price}</strong><span className="block text-[12px] text-gray-500">{r.tirzepatide.note}</span></> : <span className="text-gray-400">Not published</span>}</td>
+                        </>
+                      )}
                       <td className={cell}>
                         {offer ? (
                           <><span className={`rounded-full px-2.5 py-1 text-[11.5px] font-bold ${statusChip(offerStatus(offer, today))}`}>Verified offer</span><span className="mt-1 block text-[12px] text-gray-500">{offer.headline}; verified {shortDate(offer.verifiedOn)}</span></>
@@ -341,6 +347,7 @@ export default async function BlackFridayDealsPage() {
                   <ul className="mt-1 text-gray-600">
                     {r.semaglutide && <li>Semaglutide {r.semaglutide.price}/mo, {r.semaglutide.note}</li>}
                     {r.tirzepatide && <li>Tirzepatide {r.tirzepatide.price}/mo, {r.tirzepatide.note}</li>}
+                    {r.plan && !r.semaglutide && !r.tirzepatide && <li>Plans {r.plan.price}/mo, {r.plan.note}</li>}
                   </ul>
                 </li>
               ))}

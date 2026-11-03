@@ -96,6 +96,12 @@ export default async function PriceTrackerPage() {
   // ── Derived summary figures (all from the index and the log) ──
   const sema = priceRange(rows.map((r) => r.semaValue));
   const tirz = priceRange(rows.map((r) => r.tirzValue));
+  const semaCount = rows.filter((r) => r.semaValue !== null).length;
+  const tirzCount = rows.filter((r) => r.tirzValue !== null).length;
+  const planRows = rows.filter((r) => r.planValue !== null);
+  const planNote = planRows.length
+    ? `${planRows.map((r) => r.name).join(", ").replace(/, ([^,]*)$/, " and $1")} publish a single starting price (${planRows.map((r) => `${r.name} ${r.plan!.price}`).join(", ")}) rather than a price per medication.`
+    : "";
   const cheapestSema = rows.filter((r) => r.semaValue !== null).sort((a, b) => a.semaValue! - b.semaValue!)[0];
   const cheapestTirz = rows.filter((r) => r.tirzValue !== null).sort((a, b) => a.tirzValue! - b.tirzValue!)[0];
   const entries = PRICE_CHANGES_NEWEST;
@@ -131,20 +137,20 @@ export default async function PriceTrackerPage() {
 
   const shortAnswer =
     sema && tirz && cheapestSema && cheapestTirz
-      ? `As of ${longDate(PRICE_DATA_UPDATED)}, listed compounded semaglutide prices at the ${rows.length} US telehealth providers we track run from ${usd(sema.min)} to ${usd(sema.max)} a month, and compounded tirzepatide from ${usd(tirz.min)} to ${usd(tirz.max)} a month. The lowest semaglutide price is ${cheapestSema.name} at ${cheapestSema.semaglutide!.price} a month, and the lowest tirzepatide price is ${cheapestTirz.name} at ${cheapestTirz.tirzepatide!.price} a month. Every price is read on the provider's own site, and the condition attached to it is shown next to it.`
+      ? `As of ${longDate(PRICE_DATA_UPDATED)}, listed compounded semaglutide prices run from ${usd(sema.min)} to ${usd(sema.max)} a month across the ${semaCount} providers that publish one, and compounded tirzepatide from ${usd(tirz.min)} to ${usd(tirz.max)} a month across ${tirzCount}. The lowest semaglutide price is ${cheapestSema.name} at ${cheapestSema.semaglutide!.price} a month, and the lowest tirzepatide price is ${cheapestTirz.name} at ${cheapestTirz.tirzepatide!.price} a month. ${planNote} Every price is read on the provider's own site, and the condition attached to it is shown next to it.`
       : "";
 
   const faqs: { question: string; answer: string }[] = [
     ...(sema && cheapestSema
       ? [{
           question: "How much does compounded semaglutide cost online?",
-          answer: `At the ${rows.length} US telehealth providers in our index, listed compounded semaglutide runs from ${usd(sema.min)} to ${usd(sema.max)} a month as of ${longDate(PRICE_DATA_UPDATED)}. The lowest listing is ${cheapestSema.name} at ${cheapestSema.semaglutide!.price} a month; its condition: ${cheapestSema.semaglutide!.note}. Low headline prices are often tied to a promotion or a plan length, so check the condition next to each price.`,
+          answer: `Across the ${semaCount} US telehealth providers in our index that publish a semaglutide price, listed compounded semaglutide runs from ${usd(sema.min)} to ${usd(sema.max)} a month as of ${longDate(PRICE_DATA_UPDATED)}. The lowest listing is ${cheapestSema.name} at ${cheapestSema.semaglutide!.price} a month; its condition: ${cheapestSema.semaglutide!.note}. Low headline prices are often tied to a promotion or a plan length, so check the condition next to each price.`,
         }]
       : []),
     ...(tirz && cheapestTirz
       ? [{
           question: "How much does compounded tirzepatide cost online?",
-          answer: `Listed compounded tirzepatide runs from ${usd(tirz.min)} to ${usd(tirz.max)} a month across the providers we track, as of ${longDate(PRICE_DATA_UPDATED)}. The lowest listing is ${cheapestTirz.name} at ${cheapestTirz.tirzepatide!.price} a month; its condition: ${cheapestTirz.tirzepatide!.note}.`,
+          answer: `Listed compounded tirzepatide runs from ${usd(tirz.min)} to ${usd(tirz.max)} a month across the ${tirzCount} providers we track that publish a tirzepatide price, as of ${longDate(PRICE_DATA_UPDATED)}. The lowest listing is ${cheapestTirz.name} at ${cheapestTirz.tirzepatide!.price} a month; its condition: ${cheapestTirz.tirzepatide!.note}.`,
         }]
       : []),
     {
@@ -294,7 +300,14 @@ export default async function PriceTrackerPage() {
                         <Link href={`/weight-loss/reviews/${p.id}`} className="text-[15px] font-bold text-[#191919] hover:text-[#0C4B75]">{p.name}</Link>
                         <p className="mt-0.5 max-w-[220px] text-[12.5px] leading-snug text-gray-500">{r.edge}</p>
                       </th>
-                      {[r.semaglutide, r.tirzepatide].map((c, i) => (
+                      {r.planValue !== null ? (
+                        <td colSpan={2} className="px-4 py-4">
+                          <span className="text-[12px] font-semibold text-gray-500">Plans </span>
+                          <span className="text-[18px] font-extrabold text-[#191919] [font-variant-numeric:tabular-nums]">{r.plan!.price}</span>
+                          <span className="ml-0.5 text-[12px] font-semibold text-gray-400">/mo</span>
+                          <p className="mt-0.5 max-w-[380px] text-[12px] leading-snug text-gray-500">{r.plan!.note}; no separate price per medication published</p>
+                        </td>
+                      ) : [r.semaglutide, r.tirzepatide].map((c, i) => (
                         <td key={i} className="px-4 py-4">
                           {c ? (
                             <>
@@ -337,7 +350,7 @@ export default async function PriceTrackerPage() {
                   </div>
                   <p className="mt-0.5 text-[12.5px] leading-snug text-gray-500">{r.edge}</p>
                   <dl className="mt-3 grid grid-cols-2 gap-3">
-                    {([["Semaglutide", r.semaglutide], ["Tirzepatide", r.tirzepatide]] as const).map(([label, c]) => (
+                    {(r.planValue !== null ? ([["Plans", r.plan!]] as const) : ([["Semaglutide", r.semaglutide], ["Tirzepatide", r.tirzepatide]] as const)).map(([label, c]) => (
                       <div key={label}>
                         <dt className="text-[11px] font-bold uppercase tracking-[0.06em] text-gray-400">{label}</dt>
                         <dd>

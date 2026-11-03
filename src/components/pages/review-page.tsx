@@ -163,9 +163,9 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "welludr (formerly wellmedr) reviews: {prices}, 1M+ patients, weight-loss warranty. Is welludr legit? Pros and cons.",
   },
   healthrx: {
-    title: "HealthRx Reviews 2026: Is It Legit? $99/mo GLP-1 Examined",
+    title: "HealthRx Reviews 2026: Is It Legit? $97/mo GLP-1 Examined",
     description:
-      "HealthRx reviews: {prices} (semaglutide 12-month prepaid), overnight cold shipping, LegitScript-certified. Is it legit?",
+      "HealthRx reviews: {prices} (semaglutide 12-month plan), overnight cold shipping, LegitScript-certified. Is it legit?",
   },
 };
 
@@ -254,7 +254,7 @@ const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
       "Independent US-licensed clinician reviews every request; approval is never automatic",
       "Licensed 503A pharmacy fulfillment",
       "Overnight cold-chain shipping, lot-tracked through delivery",
-      "Transparent prepaid pricing - $99/mo semaglutide ($1,188 at checkout), no hidden fees",
+      "Transparent pricing - from $97/mo semaglutide on the 12-month plan, no hidden fees",
     ],
   },
 };
@@ -442,7 +442,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "How much does embody cost per month?",
       answer:
-        "embody uses flat monthly pricing: $49/month for compounded semaglutide and $99/month for compounded tirzepatide on its pre-Black Friday sale, seen October 28, 2026 (previously $69 and $119; regularly $79 and $129). The price includes the medication, the doctor review, supplies and free 1-2 day shipping - there's no membership fee and no hidden costs. If a provider doesn't approve your prescription, embody issues a full refund.",
+        "embody uses flat monthly pricing: $49/month for compounded semaglutide and $99/month for compounded tirzepatide on its pre-Black Friday sale, seen October 28, 2026 (previously $69 and $119). The price includes the medication, the doctor review, supplies and free 1-2 day shipping - there's no membership fee and no hidden costs. If a provider doesn't approve your prescription, embody issues a full refund.",
     },
     {
       question: "Is embody FDA-approved?",
@@ -561,19 +561,19 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "Does Sprout offer brand-name medication?",
       answer:
-        "Yes - alongside compounded semaglutide (from $149/month) and compounded tirzepatide (from $199/month), Sprout lists brand-name Wegovy from $1,799/month, making it one of the few mid-tier providers with a branded option on the shelf.",
+        "Yes - alongside compounded semaglutide (from $99/month on the 12-month plan) and compounded tirzepatide (from $149/month), Sprout lists brand-name Wegovy from $1,799/month, making it one of the few mid-tier providers with a branded option on the shelf.",
     },
     {
       question: "How much does Sprout cost per month?",
       answer:
-        "Compounded semaglutide starts at $149/month and compounded tirzepatide at $199/month, with a standing $200 discount on the first month. Brand-name Wegovy starts at $1,799/month. Confirm current plan terms and the first-month offer on Sprout's site.",
+        "Compounded semaglutide starts at $99/month and compounded tirzepatide at $149/month on the 12-month plan ($1,188 and $1,788 billed upfront). The 6-month plan is $110 and $160, the 3-month plan $125 and $180, and the monthly plan with no commitment $149 and $199, with a standing $200 discount on the first month. Every plan is the same price at any dose, with no membership fee. Brand-name Wegovy starts at $1,799/month. Confirm current plan terms and the first-month offer on Sprout's site.",
     },
   ],
   healthrx: [
     {
-      question: "Do I have to pay for HealthRx's full year upfront?",
+      question: "Do I have to commit to a full year with HealthRx?",
       answer:
-        "The headline $99/month semaglutide price is a 12-month prepaid plan - $1,188 due at checkout - with tirzepatide plans from $179/month. The initial 60-second assessment is free with no payment to start, and approval is never automatic.",
+        "No - the lowest rates are on the 12-month plan (compounded semaglutide from $97/month, tirzepatide from $177/month), but 6-month ($115 / $195), 3-month ($125 / $201) and monthly plans are also offered, with the monthly plan at $99 for the first month. Confirm how your plan is billed at checkout. The initial 60-second assessment is free with no payment to start, and approval is never automatic.",
     },
     {
       question: "How fast does HealthRx ship?",

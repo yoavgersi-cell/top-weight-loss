@@ -70,6 +70,8 @@ export async function currentRows() {
     name: names.get(r.providerId)!,
     semaValue: priceValue(r.semaglutide),
     tirzValue: priceValue(r.tirzepatide),
+    /** Single "plans from" price when no per-medication price is published. */
+    planValue: !r.semaglutide && !r.tirzepatide ? priceValue(r.plan) : null,
     lastChange: last.get(r.providerId) ?? null,
   }));
 }

@@ -22,9 +22,9 @@ const ROWS: RowNote[] = [
   { id: "directmeds", condition: "Flat, no membership", standout: "Only needle-free sublingual option" },
   { id: "altrx", condition: "Pause or cancel anytime; BNPL", standout: "Brand-name shelf alongside" },
   { id: "medvi", condition: "Monthly, all-inclusive", standout: "Dietician + coaching included" },
-  { id: "sprout", condition: "Monthly; $200 off first month", standout: "Ships within 2 days" },
+  { id: "sprout", condition: "12-month plan, billed upfront; monthly $199, no commitment", standout: "Ships within 2 days" },
   { id: "trimrx", condition: "No long-term contract", standout: "Clinical guidance through dose changes" },
-  { id: "shed", condition: "Monthly; 20% off first month", standout: "Lose 5% in 120 days or your money back" },
+  { id: "shed", condition: "Starting price, monthly", standout: "Lose 5% in 120 days or your money back" },
 ];
 
 function regularFrom(note: string): string | null {

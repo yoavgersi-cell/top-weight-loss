@@ -559,6 +559,11 @@ export default async function HowToChooseGlp1ProviderPage() {
                           <span className="font-semibold text-[#191919]">{r.price.semaglutide.price}</span>
                           <span className="block text-[12px] text-gray-500">{r.price.semaglutide.note}</span>
                         </>
+                      ) : r.price?.plan ? (
+                        <>
+                          <span className="font-semibold text-[#191919]">Plans {r.price.plan.price}</span>
+                          <span className="block text-[12px] text-gray-500">{r.price.plan.note}</span>
+                        </>
                       ) : (
                         <span className="text-gray-400">Not in price index</span>
                       )}
@@ -739,7 +744,8 @@ export default async function HowToChooseGlp1ProviderPage() {
             {explore.map(({ product, provider }) => {
               const meta = EXPLORE[provider.id];
               const row = rowById.get(provider.id);
-              const price = priceById.get(provider.id)?.semaglutide;
+              const indexRow = priceById.get(provider.id);
+              const price = indexRow?.semaglutide ?? (indexRow?.plan ? { price: `Plans ${indexRow.plan.price}`, note: indexRow.plan.note } : null);
               return (
                 <article key={provider.id} className="flex flex-col rounded-xl border border-gray-200 bg-white p-5">
                   <div className="mb-3 flex items-center gap-3">
@@ -752,7 +758,7 @@ export default async function HowToChooseGlp1ProviderPage() {
                   <p className="mb-4 text-[14px] leading-relaxed text-gray-700">{meta.reason}</p>
                   <dl className="mb-4 grid gap-x-4 gap-y-2 text-[13px] sm:grid-cols-2">
                     <div>
-                      <dt className="font-semibold text-gray-500">Semaglutide, verified</dt>
+                      <dt className="font-semibold text-gray-500">{indexRow?.semaglutide || !indexRow?.plan ? "Semaglutide, verified" : "Price, verified"}</dt>
                       <dd className="text-[#191919]">
                         {price ? (
                           <>

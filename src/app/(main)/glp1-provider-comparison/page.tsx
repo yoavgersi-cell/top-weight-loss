@@ -81,7 +81,7 @@ const ROWS: Row[] = [
     name: "embody",
     medications: "Compounded semaglutide and tirzepatide",
     entry: "$49 sema / $99 tirz",
-    entryNote: "reg. $79 / $129; month to month",
+    entryNote: "month to month",
     after: "Same, month to month",
     membership: "None",
     shipping: "Free 1-2 day, cold-chain",
@@ -251,7 +251,7 @@ const SECTIONS: Section[] = [
     ),
     pricing: (
       <>
-        <strong className="text-[#191919]">Semaglutide $49 a month (regular $79) and tirzepatide $99 (regular $129), month to month</strong>, a pre-Black Friday sale seen October 28, 2026 (previously $69 and $119). Free one-to-two-day cold-chain shipping. No membership. <strong className="text-[#191919]">A full refund if a provider does not approve treatment.</strong> embody is LegitScript-certified and names US-based 503A compounding pharmacies, the clearest pharmacy statement among the compounded providers here.
+        <strong className="text-[#191919]">Semaglutide $49 a month and tirzepatide $99, month to month</strong>, a pre-Black Friday sale seen October 28, 2026 (previously $69 and $119). Free one-to-two-day cold-chain shipping. No membership. <strong className="text-[#191919]">A full refund if a provider does not approve treatment.</strong> embody is LegitScript-certified and names US-based 503A compounding pharmacies, the clearest pharmacy statement among the compounded providers here.
       </>
     ),
     support:

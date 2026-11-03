@@ -88,20 +88,30 @@ export function PriceIndex({
             </div>
 
             {/* Prices - side-by-side mini-grid on mobile, columns on desktop */}
-            <div className="mt-4 grid grid-cols-2 gap-4 sm:contents">
-              <div>
+            {row.plan && !row.semaglutide && !row.tirzepatide ? (
+              // One "plans from" price the provider doesn't tie to a medication.
+              <div className="mt-4 sm:col-span-2 sm:mt-0">
                 <p className="mb-1 text-[10.5px] font-bold uppercase tracking-[0.06em] text-gray-400 sm:hidden">
-                  Semaglutide
+                  Plans from
                 </p>
-                <Price cell={row.semaglutide} />
+                <Price cell={row.plan} />
               </div>
-              <div>
-                <p className="mb-1 text-[10.5px] font-bold uppercase tracking-[0.06em] text-gray-400 sm:hidden">
-                  Tirzepatide
-                </p>
-                <Price cell={row.tirzepatide} />
+            ) : (
+              <div className="mt-4 grid grid-cols-2 gap-4 sm:contents">
+                <div>
+                  <p className="mb-1 text-[10.5px] font-bold uppercase tracking-[0.06em] text-gray-400 sm:hidden">
+                    Semaglutide
+                  </p>
+                  <Price cell={row.semaglutide} />
+                </div>
+                <div>
+                  <p className="mb-1 text-[10.5px] font-bold uppercase tracking-[0.06em] text-gray-400 sm:hidden">
+                    Tirzepatide
+                  </p>
+                  <Price cell={row.tirzepatide} />
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Actions - plain text links, no button chrome */}
             <div className="mt-4 flex items-center gap-4 sm:mt-0 sm:flex-col sm:items-end sm:gap-1.5">
