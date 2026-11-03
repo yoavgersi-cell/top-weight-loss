@@ -115,7 +115,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     plan: { price: "from $149", note: "weight loss plans starting at $149" },
     shipping: "Free tracked delivery, often next-day",
     commitment: "Month to month - cancel before your next billing cycle",
-    trustpilot: { rating: "3.4", count: "4,931" },
+    trustpilot: { rating: "3.4", count: "4,894" },
   },
   {
     providerId: "bmimd",

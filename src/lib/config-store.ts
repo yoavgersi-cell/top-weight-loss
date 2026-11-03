@@ -322,8 +322,8 @@ const defaultReviews: ReviewData[] = [
     slug: "trimrx",
     providerId: "trimrx",
     updatedAt: "2026-09-15",
-    shortSummary: "Telehealth GLP-1 program built around custom dosing and unlimited provider check-ins - compounded semaglutide $149/month, the same at every dose, and tirzepatide $259/month. Rated 3.4 across 4,931 Trustpilot reviews.",
-    reviewIntro: "TrimRx (Trim Rx) is a telehealth GLP-1 program built around custom dosing: compounded semaglutide at $149/month (a $140 discount applied, the same price at every dose) and compounded tirzepatide at $259/month, with the consultation, tracked delivery, and unlimited provider check-ins all included in the price. The flow is the standard cash-pay one - a free 2-minute assessment, review by a qualified doctor (with a telehealth call if more information is needed), then free tracked shipping that often arrives as soon as the next day. On Trustpilot, TrimRx averages 3.4 across 4,931 reviews - a genuinely mixed record. The positive end is vivid: 'I have lost 41 lbs... My high blood pressure is gone,' writes one tirzepatide patient, and another praises a rep who was 'very kind and helpful' even as the reviewer ultimately chose their own doctor. But a 3.8 means a meaningful minority report problems, and it ties for the weakest published average among the affiliate providers in our ranking. Read both ends of its recent reviews before signing up - and weigh the price against the $41-$89 entry tier at welludr, embody and altRx.",
+    shortSummary: "Telehealth GLP-1 program built around custom dosing and unlimited provider check-ins - compounded semaglutide $149/month, the same at every dose, and tirzepatide $259/month. Rated 3.4 across 4,894 Trustpilot reviews.",
+    reviewIntro: "TrimRx (Trim Rx) is a telehealth GLP-1 program built around custom dosing: compounded semaglutide at $149/month (a $140 discount applied, the same price at every dose) and compounded tirzepatide at $259/month, with the consultation, tracked delivery, and unlimited provider check-ins all included in the price. The flow is the standard cash-pay one - a free 2-minute assessment, review by a qualified doctor (with a telehealth call if more information is needed), then free tracked shipping that often arrives as soon as the next day. On Trustpilot, TrimRx averages 3.4 across 4,894 reviews - a genuinely mixed record. The positive end is vivid: 'I have lost 41 lbs... My high blood pressure is gone,' writes one tirzepatide patient, and another praises a rep who was 'very kind and helpful' even as the reviewer ultimately chose their own doctor. But a 3.8 means a meaningful minority report problems, and it ties for the weakest published average among the affiliate providers in our ranking. Read both ends of its recent reviews before signing up - and weigh the price against the $41-$89 entry tier at welludr, embody and altRx.",
     keyFeatures: [
       "Compounded semaglutide $149/month - same price at every dose",
       "Compounded tirzepatide $259/month",
@@ -346,7 +346,7 @@ const defaultReviews: ReviewData[] = [
       "HIPAA-compliant, US-made compounded medication"
     ],
     cons: [
-      "3.4 Trustpilot average across 4,931 reviews - the weakest published score among providers we rank",
+      "3.4 Trustpilot average across 4,894 reviews - the weakest published score among providers we rank",
       "Mid-tier pricing: $149 semaglutide / $259 tirzepatide vs $41-$89 at welludr, embody and altRx",
       "Tirzepatide at $259 is undercut by DirectMeds ($147), embody ($99) and welludr ($71)",
       "Compounded only - no brand-name Ozempic/Wegovy/Zepbound option",
@@ -357,7 +357,7 @@ const defaultReviews: ReviewData[] = [
       "Anyone who values unlimited provider check-ins between refills",
       "Those who've read the mixed reviews and value the care model over price"
     ],
-    finalVerdict: "trimrx's real differentiator is the care model - custom dosing with unlimited provider check-ins, a free consultation, and tracked delivery that often lands next-day - not the sticker price, which at $149/month for semaglutide and $259/month for tirzepatide sits above the $41-$89 tier at welludr, embody and altRx. Its 3.4 across 4,931 Trustpilot reviews is the honest sticking point: the successes in there are striking (41 lbs down, blood pressure resolved), but it ties for the weakest published average in our ranking, so go in with open eyes. If tailored dosing and hands-on check-ins are what you're paying for, TrimRx delivers them; if price or public track record decides it, compare it against embody and welludr head-to-head first.",
+    finalVerdict: "trimrx's real differentiator is the care model - custom dosing with unlimited provider check-ins, a free consultation, and tracked delivery that often lands next-day - not the sticker price, which at $149/month for semaglutide and $259/month for tirzepatide sits above the $41-$89 tier at welludr, embody and altRx. Its 3.4 across 4,894 Trustpilot reviews is the honest sticking point: the successes in there are striking (41 lbs down, blood pressure resolved), but it ties for the weakest published average in our ranking, so go in with open eyes. If tailored dosing and hands-on check-ins are what you're paying for, TrimRx delivers them; if price or public track record decides it, compare it against embody and welludr head-to-head first.",
     trustBadges: [
       "HIPAA compliant",
       "Made in USA",
@@ -2566,11 +2566,11 @@ const trimrxwellmedrBattle: BattleData = {
     {
       name: "Customer Feedback",
       winner: "provider1",
-      explanation: "welludr averages 4.6 across 2,679 Trustpilot reviews, and the recent pages read like a support log in the best sense - fast approvals and a team willing to rework a plan when money gets tight. TrimRx averages 3.4 across 4,931 reviews: the successes in there are striking, but a meaningful minority report problems, so read both ends before signing up.",
+      explanation: "welludr averages 4.6 across 2,679 Trustpilot reviews, and the recent pages read like a support log in the best sense - fast approvals and a team willing to rework a plan when money gets tight. TrimRx averages 3.4 across 4,894 reviews: the successes in there are striking, but a meaningful minority report problems, so read both ends before signing up.",
       supportingPoints: [
         "4.6 across 2,679 Trustpilot reviews (welludr)",
         "Reviews praise fast approvals and flexible support (welludr)",
-        "3.4 across 4,931 Trustpilot reviews, a mixed record (TrimRx)",
+        "3.4 across 4,894 Trustpilot reviews, a mixed record (TrimRx)",
         "Vivid success stories in TrimRx's reviews (TrimRx)",
       ],
     },
@@ -2601,7 +2601,7 @@ const trimrxwellmedrBattle: BattleData = {
     { feature: "Starting Price", provider1Value: "$41/mo semaglutide · $71/mo tirzepatide", provider2Value: "$149/mo semaglutide · $259/mo tirzepatide", highlight: "provider1" },
     { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
     { feature: "Medications", provider1Value: "Compounded GLP-1/GIP, NAD+/B12 microdose, brand-name Ozempic & Zepbound", provider2Value: "Compounded semaglutide & tirzepatide", highlight: "provider1" },
-    { feature: "Trustpilot", provider1Value: "4.6 across 2,679 reviews", provider2Value: "3.4 across 4,931 reviews", highlight: "provider1" },
+    { feature: "Trustpilot", provider1Value: "4.6 across 2,679 reviews", provider2Value: "3.4 across 4,894 reviews", highlight: "provider1" },
     { feature: "Commitment", provider1Value: "Best rate on a 12-month plan", provider2Value: "No long-term commitment", highlight: "provider2" },
     { feature: "Delivery", provider1Value: "3-5 business days", provider2Value: "Tracked, often next day", highlight: "provider2" },
     { feature: "Beyond Weight Loss", provider1Value: "TRT, NAD+, hair, sexual health", provider2Value: "GLP-1 weight loss focus", highlight: "provider1" },
@@ -3737,9 +3737,9 @@ const sproutTrimrxBattle: BattleData = {
   description:
     "Sprout (from $99/mo semaglutide on a 12-month plan, ships in 2 days, Wegovy available) vs TrimRx ($149/mo flat at every dose, custom dosing, unlimited check-ins). Compared honestly.",
   intro:
-    "Sprout and TrimRx occupy the same mid-market tier with opposite bets. Sprout keeps its price flat-ish and its logistics fast: semaglutide from $99/month and tirzepatide from $149 on its 12-month plan ($149 and $199 month to month), prescriptions shipped within 2 days, and a brand-name Wegovy option. TrimRx spends its budget on the care model: custom dosing set by your provider with unlimited check-ins included - priced at $149/month for semaglutide (the same at every dose) and $259 for tirzepatide - but its Trustpilot record is a mixed 3.4 across 4,931 reviews.",
+    "Sprout and TrimRx occupy the same mid-market tier with opposite bets. Sprout keeps its price flat-ish and its logistics fast: semaglutide from $99/month and tirzepatide from $149 on its 12-month plan ($149 and $199 month to month), prescriptions shipped within 2 days, and a brand-name Wegovy option. TrimRx spends its budget on the care model: custom dosing set by your provider with unlimited check-ins included - priced at $149/month for semaglutide (the same at every dose) and $259 for tirzepatide - but its Trustpilot record is a mixed 3.4 across 4,894 reviews.",
   verdict:
-    "Sprout takes this one narrowly. The two match at $149/month on semaglutide month to month (Sprout's 12-month plan drops it to $99), so the gap comes from everything around it: Sprout's tirzepatide is $60/month cheaper month to month ($199 vs $259), it ships within 2 days, and stocks brand-name Wegovy. TrimRx keeps a real counter-case: dose-flat $149 with no long-term contract, plus custom dosing with unlimited provider check-ins - the only one of the two selling that care model. Its 3.6 Trustpilot average is the honest caveat.",
+    "Sprout takes this one narrowly. The two match at $149/month on semaglutide month to month (Sprout's 12-month plan drops it to $99), so the gap comes from everything around it: Sprout's tirzepatide is $60/month cheaper month to month ($199 vs $259), it ships within 2 days, and stocks brand-name Wegovy. TrimRx keeps a real counter-case: dose-flat $149 with no long-term contract, plus custom dosing with unlimited provider check-ins - the only one of the two selling that care model. Its 3.4 Trustpilot average is the honest caveat.",
   verdictWinnerPoints: [
     "$199 vs $259 tirzepatide month to month",
     "Prescriptions shipped within 2 days",
@@ -3797,9 +3797,9 @@ const sproutTrimrxBattle: BattleData = {
       name: "Track Record",
       winner: "tie",
       explanation:
-        "Neither side wins this cleanly. TrimRx publishes a large record - 4,931 Trustpilot reviews - but at a 3.4 average, the weakest published score among providers we rank. Sprout scores higher - 4.1 - but across only 188 reviews, with recent ones naming its support team specifically. Volume with mixed marks vs a better score on a small base: call it even, and read both.",
+        "Neither side wins this cleanly. TrimRx publishes a large record - 4,894 Trustpilot reviews - but at a 3.4 average, the weakest published score among providers we rank. Sprout scores higher - 4.1 - but across only 188 reviews, with recent ones naming its support team specifically. Volume with mixed marks vs a better score on a small base: call it even, and read both.",
       supportingPoints: [
-        "3.4 across 4,931 reviews - big but mixed (TrimRx)",
+        "3.4 across 4,894 reviews - big but mixed (TrimRx)",
         "4.1 across 188 reviews - higher score, small base (Sprout)",
       ],
     },
@@ -3810,7 +3810,7 @@ const sproutTrimrxBattle: BattleData = {
     { feature: "Brand-name option", provider1Value: "Wegovy from $1,799/mo", provider2Value: "None", highlight: "provider1" },
     { feature: "Shipping", provider1Value: "Ships within 2 days", provider2Value: "Free tracked, often next-day", highlight: "both" },
     { feature: "Care model", provider1Value: "Personalized plans", provider2Value: "Custom dosing + unlimited check-ins", highlight: "provider2" },
-    { feature: "Trustpilot", provider1Value: "4.1 across 188 reviews", provider2Value: "3.4 across 4,931 reviews", highlight: "none" },
+    { feature: "Trustpilot", provider1Value: "4.1 across 188 reviews", provider2Value: "3.4 across 4,894 reviews", highlight: "none" },
   ],
 };
 

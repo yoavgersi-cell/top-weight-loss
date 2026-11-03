@@ -82,7 +82,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Semaglutide price", value: "$149/month, same at every dose" },
       { label: "Tirzepatide price", value: "$259/month" },
       { label: "Commitment", value: "No contract; opt-in discount programs" },
-      { label: "Trustpilot record", value: "3.4 across 4,931 reviews" },
+      { label: "Trustpilot record", value: "3.4 across 4,894 reviews" },
     ],
   },
   "weight-loss:shed": {

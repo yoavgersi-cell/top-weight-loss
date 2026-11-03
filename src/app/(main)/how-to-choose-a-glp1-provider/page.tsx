@@ -167,7 +167,7 @@ const ROWS: Row[] = [
     pharmacy: "Compounded only; pharmacy not named in our research",
     dosePricing: "Same price at every dose; no long-term contract, optional multi-month discounts",
     likes: "The 5-star Trustpilot reviews from the same week praise a thorough screening, a clear intake, clear pricing, fast support replies and plainly labelled 2-3 day shipping.",
-    complaints: "The 2-star reviews from the same week are about fulfillment and billing, not the clinic: a box three days late with warm cold packs, a prepaid 6-month plan whose second shipment was 30 days overdue with chat and phone unanswered, a cancelled prescription that Affirm kept trying to bill, and one first order with someone else's prescription in the portal. At 3.4 across 4,931 the aggregate is the lowest in our table. $149 sits above the budget tier for the same molecule, with no guarantee behind it.",
+    complaints: "The 2-star reviews from the same week are about fulfillment and billing, not the clinic: a box three days late with warm cold packs, a prepaid 6-month plan whose second shipment was 30 days overdue with chat and phone unanswered, a cancelled prescription that Affirm kept trying to bill, and one first order with someone else's prescription in the portal. At 3.4 across 4,894 the aggregate is the lowest in our table. $149 sits above the budget tier for the same molecule, with no guarantee behind it.",
   },
   {
     id: "shed",
@@ -245,7 +245,7 @@ const PATTERNS: { title: string; body: string }[] = [
   },
   {
     title: "Review volume stabilizes a score; it does not make experiences uniform",
-    body: "Medvi's 4.3 across 15,097 reviews sits alongside serious 1-star accounts about renewals and refunds. SHED and welludr's 4.6 averages come from roughly 1,100 and 1,900 reviews; Sprout's 4.1 from 188; TrimRx (3.7) and embody (3.8) have large, mixed records. Across all of them the recurring complaints are operational - shipping, billing, reaching support - rather than about the clinical review.",
+    body: "Medvi's 4.3 across 15,097 reviews sits alongside serious 1-star accounts about renewals and refunds. SHED and welludr's 4.6 averages come from roughly 1,100 and 1,900 reviews; Sprout's 4.1 from 188; TrimRx (3.4) and embody (3.8) have large, mixed records. Across all of them the recurring complaints are operational - shipping, billing, reaching support - rather than about the clinical review.",
   },
 ];
 
