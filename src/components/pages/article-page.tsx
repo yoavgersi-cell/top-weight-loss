@@ -324,6 +324,20 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     isLegitArticle && subjectRanked ? (carouselRenders ? "afterCarousel" : "afterReddit") : undefined;
   const subjectCardPlacement = SUBJECT_CARD_PLACEMENT[slug] ?? legitCardPlacement;
   const isWeightLoss = ctx.vertical === "weight-loss";
+  // Top-3 provider cards on every non-weight-loss guide (weight-loss guides
+  // carry their own picks blocks). Placed after the second section; moved to
+  // the first when the HRT product carousel already takes that slot.
+  const TOP_THREE_LABEL: Record<string, string> = {
+    "hair-loss": "hair loss",
+    trt: "TRT",
+    hrt: "HRT",
+    "online-therapy": "online therapy",
+    ed: "ED",
+  };
+  const topThreeVertical = TOP_THREE_LABEL[ctx.vertical];
+  const hrtCarouselAt = Math.max(0, Math.ceil(article.sections.length / 2) - 1);
+  let topThreeAt = Math.min(1, article.sections.length - 1);
+  if (isHrtArticle && topThreeAt === hrtCarouselAt && topThreeAt > 0) topThreeAt = 0;
   const showTopProvidersCro = isWeightLoss && TOP_PROVIDERS_CRO_SLUGS.has(slug);
 
   // The tirzepatide buyer guide is tuned as a topic page (Oct 2026 CRO pass):
@@ -781,6 +795,20 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 )}
 
                 {i === 0 && showTopTwo && <TopTwoPicks config={config} linkPrefix={ctx.prefix} />}
+
+                {/* Non-weight-loss guides: the vertical's top 3 ranked provider
+                    cards between sections (operator request, Nov 3, 2026) -
+                    after the second section, or the first on short guides. */}
+                {topThreeVertical && i === topThreeAt && (
+                  <TopProvidersBlock
+                    config={config}
+                    linkPrefix={ctx.prefix}
+                    limit={3}
+                    introMode="short"
+                    title={`Our top 3 ${topThreeVertical} providers`}
+                    subtitle="Our highest-ranked providers - the same cards, scores and verified details as our full comparison."
+                  />
+                )}
 
                 {/* Provider-"alternatives" guides: CRO block of our three GLP-1
                     partners with the comparison-page cards (see showPartnerCro). */}
