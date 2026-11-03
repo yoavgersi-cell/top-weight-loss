@@ -23,8 +23,8 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
   // ── Weight loss ────────────────────────────────────────────────────────────
   "weight-loss:embody": {
     rows: [
-      { label: "Semaglutide price", value: "$49/month promotional (reg. $79), flat at every dose" },
-      { label: "Tirzepatide price", value: "$99/month promotional (reg. $129)" },
+      { label: "Semaglutide price", value: "$49/month promotional, flat at every dose" },
+      { label: "Tirzepatide price", value: "$99/month promotional" },
       { label: "Commitment", value: "Month-to-month, no contract" },
       { label: "Shipping", value: "Free 1-2 day, tracked and insured" },
       { label: "Certification", value: "LegitScript-certified; US-based 503A compounding pharmacies" },
@@ -62,8 +62,8 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
   },
   "weight-loss:healthrx": {
     rows: [
-      { label: "Semaglutide price", value: "$99/month on a 12-month prepaid plan ($1,188 at checkout)" },
-      { label: "Tirzepatide price", value: "From $179/month" },
+      { label: "Semaglutide price", value: "From $97/month on the 12-month plan" },
+      { label: "Tirzepatide price", value: "From $177/month on the 12-month plan" },
       { label: "Shipping", value: "Free overnight cold-chain delivery" },
       { label: "Certification", value: "LegitScript-certified" },
     ],
@@ -96,8 +96,8 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
   },
   "weight-loss:sprout": {
     rows: [
-      { label: "Semaglutide price", value: "$149/month" },
-      { label: "Tirzepatide price", value: "$199/month" },
+      { label: "Semaglutide price", value: "From $99/month on the 12-month plan; $149/month with no commitment" },
+      { label: "Tirzepatide price", value: "From $149/month on the 12-month plan; $199/month with no commitment" },
       { label: "Brand-name option", value: "Wegovy $1,799/month" },
       { label: "Trustpilot record", value: "4.1 across 188 reviews" },
     ],

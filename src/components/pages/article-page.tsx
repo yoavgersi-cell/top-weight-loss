@@ -1059,7 +1059,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 {[
                   { href: "/weight-loss/embody-vs-wellmedr", label: "embody vs welludr - $49 vs $41" },
                   { href: "/weight-loss/altrx-vs-embody", label: "altRx vs embody - $89 vs $49" },
-                  { href: "/weight-loss/healthrx-vs-medvi", label: "HealthRx vs Medvi - prepaid vs monthly" },
+                  { href: "/weight-loss/healthrx-vs-medvi", label: "HealthRx vs Medvi - 12-month plan vs monthly" },
                   { href: "/weight-loss/embody-vs-altrx-vs-wellmedr", label: "The budget trio: embody vs altRx vs welludr" },
                 ].map((c) => (
                   <Link

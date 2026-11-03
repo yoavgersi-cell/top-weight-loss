@@ -309,12 +309,12 @@ export const glp1Coverage2027Article: Article = {
 <tbody>
 <tr><td>Medicare GLP-1 Bridge</td><td>$50 copay, if eligible; runs through December 31, 2027</td><td>12 x $50</td><td>$600</td></tr>
 <tr><td>Compounded semaglutide, welludr</td><td>$41, 12-month plan; pre-Black Friday sale (October 28, 2026), no end date stated</td><td>12 x $41</td><td>$492</td></tr>
-<tr><td>Compounded semaglutide, embody</td><td>$49 sale (October 28, 2026), month to month; regular $79</td><td>12 x $49; at regular price 12 x $79</td><td>$588 at sale price; $948 at regular price</td></tr>
+<tr><td>Compounded semaglutide, embody</td><td>$49 sale (October 28, 2026), month to month</td><td>12 x $49</td><td>$588 at sale price</td></tr>
 <tr><td>Compounded semaglutide, altRx</td><td>$89 listed; regular $199; flat at every dose</td><td>12 x $89; at regular price 12 x $199</td><td>$1,068; $2,388 at regular price</td></tr>
 <tr><td>Compounded semaglutide, Medvi</td><td>$99 promo, all-inclusive; regular $199</td><td>12 x $99; at regular price 12 x $199</td><td>$1,188; $2,388 at regular price</td></tr>
-<tr><td>Compounded semaglutide, HealthRx</td><td>$99 a month on a 12-month prepaid plan</td><td>$1,188 at checkout</td><td>$1,188</td></tr>
+<tr><td>Compounded semaglutide, HealthRx</td><td>$97 a month on the 12-month plan; billing terms not confirmed</td><td>Not computed</td><td>Not confirmed</td></tr>
 <tr><td>Compounded tirzepatide, welludr</td><td>$71 sale (October 28, 2026); shipped every 4 weeks</td><td>12 x $71; if billed per 4-week shipment, 13 x $71</td><td>$852; $923 at 13 shipments</td></tr>
-<tr><td>Compounded tirzepatide, embody</td><td>$99 sale, month to month; regular $129</td><td>12 x $99; at regular price 12 x $129</td><td>$1,188; $1,548 at regular price</td></tr>
+<tr><td>Compounded tirzepatide, embody</td><td>$99 sale, month to month</td><td>12 x $99</td><td>$1,188 at sale price</td></tr>
 <tr><td>Compounded tirzepatide, altRx</td><td>$149 listed; regular $299</td><td>12 x $149; at regular price 12 x $299</td><td>$1,788; $3,588 at regular price</td></tr>
 <tr><td>Compounded semaglutide or tirzepatide, DirectMeds</td><td>$147 flat at every dose</td><td>12 x $147</td><td>$1,764</td></tr>
 <tr><td>Wegovy pill, Ro</td><td>$149 first month, then $299; membership $39 first month, then $74-$149 (verified August 2026)</td><td>$149 + 11 x $299 = $3,438; membership $39 + 11 x $74 = $853 to $39 + 11 x $149 = $1,678</td><td>$4,291 to $5,116</td></tr>
@@ -334,7 +334,7 @@ export const glp1Coverage2027Article: Article = {
 <li><strong>Premiums are part of the comparison.</strong> If choosing a plan that covers the drug costs more in premiums, add the difference to that route's total before you compare.</li>
 </ul>
 <h3>A worked example</h3>
-<p>Take an employee whose 2026 plan covered Zepbound and whose 2027 plan excludes it. Staying on brand-name tirzepatide for cash costs $14,988 over 2027 at altRx's published price. Ro's KwikPen route costs $5,541 to $6,916 with membership. Compounded tirzepatide costs $852 at welludr's sale price, or $1,188 to $1,548 at embody depending on whether its sale price holds. The gap between the brand cash route and the cheapest compounded route is $14,136 a year ($14,988 minus $852). That gap is the price of staying on the FDA-approved product, and only the employee, with a clinician, can decide whether it is worth paying. Our <a href="/weight-loss/glp1-cost-calculator">cost calculator</a> runs the same arithmetic for any provider and dose.</p>`,
+<p>Take an employee whose 2026 plan covered Zepbound and whose 2027 plan excludes it. Staying on brand-name tirzepatide for cash costs $14,988 over 2027 at altRx's published price. Ro's KwikPen route costs $5,541 to $6,916 with membership. Compounded tirzepatide costs $852 at welludr's sale price, or $1,188 at embody if its sale price holds. The gap between the brand cash route and the cheapest compounded route is $14,136 a year ($14,988 minus $852). That gap is the price of staying on the FDA-approved product, and only the employee, with a clinician, can decide whether it is worth paying. Our <a href="/weight-loss/glp1-cost-calculator">cost calculator</a> runs the same arithmetic for any provider and dose.</p>`,
     },
     {
       heading: "Can you use an HSA or FSA to pay for a GLP-1 in 2027?",

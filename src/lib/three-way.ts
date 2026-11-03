@@ -74,9 +74,9 @@ export const TRIO_FACTS: Record<string, TrioFacts> = {
   },
   healthrx: {
     id: "healthrx",
-    semaglutide: "$99/mo on a 12-month prepaid plan ($1,188 at checkout)",
-    tirzepatide: "from $179/mo",
-    billing: "12-month prepaid - full year due at checkout",
+    semaglutide: "from $97/mo on the 12-month plan",
+    tirzepatide: "from $177/mo on the 12-month plan",
+    billing: "12-month plan for the lowest rate; 6-month, 3-month and monthly plans also offered",
     shipping: "Free overnight cold-chain, lot-tracked",
     support: "Care-team check-ins; clinician review on every request",
     guarantee: "Free assessment - no payment to start",
@@ -104,9 +104,9 @@ export const TRIO_FACTS: Record<string, TrioFacts> = {
   },
   sprout: {
     id: "sprout",
-    semaglutide: "$149/mo compounded; brand-name Wegovy from $1,799",
-    tirzepatide: "$199/mo",
-    billing: "Monthly; $200 off your first month (confirm current offer on site)",
+    semaglutide: "from $99/mo compounded on the 12-month plan ($149/mo monthly); brand-name Wegovy from $1,799",
+    tirzepatide: "from $149/mo on the 12-month plan ($199/mo monthly)",
+    billing: "12-month plan billed upfront, 6- and 3-month plans, or monthly with no commitment; $200 off your first month (confirm current offer on site)",
     shipping: "Prescriptions shipped within 2 days",
     support: "Personalized, provider-guided treatment plans",
     guarantee: "-",
@@ -159,7 +159,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
       {
         question: "Which is cheapest: embody, altRx or Medvi?",
         answer:
-          "For compounded semaglutide: embody at $49/month flat (regularly $79), then altRx at $89/month promotional (regularly $199), then Medvi at $99/month promotional (regularly $199) all-inclusive. For tirzepatide: embody $99, altRx $149 (regularly $299), Medvi $166 promotional (regularly $299). All three bill monthly with no prepaid commitment.",
+          "For compounded semaglutide: embody at $49/month flat, then altRx at $89/month promotional (regularly $199), then Medvi at $99/month promotional (regularly $199) all-inclusive. For tirzepatide: embody $99, altRx $149 (regularly $299), Medvi $166 promotional (regularly $299). All three bill monthly with no prepaid commitment.",
       },
       {
         question: "Which has the best customer reviews?",
@@ -249,7 +249,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     description:
       "The three providers on our ranking that sell brand-name GLP-1s online: altRx's flat cash prices, ro's membership-plus-insurance model and Sprout's Wegovy shelf.",
     intro:
-      "Most GLP-1 comparisons are about compounded medication - this one is about the real branded pens, because these are the three providers in our ranking that publish brand-name pricing, and they sell it three completely different ways. altRx posts flat cash prices next to its $89 compounded plan: Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 a month, with Buy Now, Pay Later. ro sells a membership ($39 the first month, then $74-$149/month) with the medication billed separately - Wegovy pill from $149/month, Zepbound KwikPen from $299 the first month - and it's the one route here where insurance, if it covers you, changes the math completely. Sprout is compounded-first at $149/month but keeps brand-name Wegovy on the shelf at $1,799 for anyone set on the branded pen, and ships prescriptions within 2 days.",
+      "Most GLP-1 comparisons are about compounded medication - this one is about the real branded pens, because these are the three providers in our ranking that publish brand-name pricing, and they sell it three completely different ways. altRx posts flat cash prices next to its $89 compounded plan: Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 a month, with Buy Now, Pay Later. ro sells a membership ($39 the first month, then $74-$149/month) with the medication billed separately - Wegovy pill from $149/month, Zepbound KwikPen from $299 the first month - and it's the one route here where insurance, if it covers you, changes the math completely. Sprout is compounded-first from $99/month on its 12-month plan ($149 month to month) but keeps brand-name Wegovy on the shelf at $1,799 for anyone set on the branded pen, and ships prescriptions within 2 days.",
     verdict:
       "The buying structure decides this one, not the sticker. Any chance your insurance covers GLP-1s: start with ro - membership plus a copay can undercut every cash price on this page, and its 3.9 across 7,380 Trustpilot reviews is a real record for a brand this size. Paying cash and want one flat, published number: altRx - its brand shelf is the cheapest flat-rate Wegovy here and BNPL spreads it, with the $89 compounded plan as the fallback lane. Want compounded speed with a brand option in reserve: Sprout - 2-day fulfillment and $200 off the first month, with the Wegovy shelf there if you upgrade later. Formats and billing differ enough between these three that the right answer is genuinely different per person - check the current price on each site before deciding.",
     faqs: [
@@ -261,7 +261,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
       {
         question: "Do all three also offer compounded semaglutide?",
         answer:
-          "altRx ($89/month promotional, flat at every dose) and Sprout ($149/month) publish flat compounded semaglutide rates. ro's published weight-loss pricing centers on brand-name medication plus its Body membership rather than a flat compounded plan.",
+          "altRx ($89/month promotional, flat at every dose) and Sprout (from $99/month on the 12-month plan, $149/month with no commitment) publish flat compounded semaglutide rates. ro's published weight-loss pricing centers on brand-name medication plus its Body membership rather than a flat compounded plan.",
       },
       {
         question: "How does ro's membership pricing actually work?",
@@ -343,18 +343,18 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     slug: "healthrx-vs-embody-vs-wellmedr",
     providerIds: ["healthrx", "embody", "wellmedr"],
     title: "HealthRx vs embody vs welludr: Three Ways to Pay for GLP-1",
-    metaTitle: "HealthRx vs embody vs welludr (2026): Prepaid, Flat or Lock?",
+    metaTitle: "HealthRx vs embody vs welludr (2026): Pricing Models Compared",
     description:
-      "Three pricing models for the same GLP-1 medication: HealthRx's $99 prepaid year, embody's $49 flat monthly, welludr's $41 12-month lock - compared honestly.",
+      "Three pricing models for the same GLP-1 medication: HealthRx's $97 12-month plan, embody's $49 flat monthly, welludr's $41 12-month lock - compared honestly.",
     intro:
-      "Same compounded semaglutide, three opposite ways to buy it. HealthRx wants the year upfront - $1,188 at checkout, working out to $99/month with overnight cold-chain shipping. embody bills $49 monthly with the right to stop anytime. welludr bills monthly too, but its $41 rate locks on a 12-month plan. This is the clearest commitment-structure comparison in the market, and the right answer depends on exactly one thing: how certain you are about the next twelve months.",
+      "Same compounded semaglutide, three opposite ways to buy it. HealthRx's lowest rate, $97/month, comes on its 12-month plan (6- and 3-month plans are $115 and $125), with overnight cold-chain shipping. embody bills $49 monthly with the right to stop anytime. welludr bills monthly too, but its $41 rate locks on a 12-month plan. This is the clearest commitment-structure comparison in the market, and the right answer depends on exactly one thing: how certain you are about the next twelve months.",
     verdict:
-      "Certain about the year and cash-flow comfortable: HealthRx's prepaid $99 buys the best logistics in our ranking (overnight, lot-tracked). Certain about the year but prefer monthly billing: welludr's $41 lock is the best per-month rate anywhere. Not certain yet: embody - $49, no strings, refund if not approved - and revisit the committed options once your first months settle the question. Starting flexible and committing later costs surprisingly little.",
+      "Certain about the year and want premium delivery: HealthRx's $97 12-month plan buys the best logistics in our ranking (overnight, lot-tracked). Certain about the year and price comes first: welludr's $41 lock is the best per-month rate anywhere. Not certain yet: embody - $49, no strings, refund if not approved - and revisit the committed options once your first months settle the question. Starting flexible and committing later costs surprisingly little.",
     faqs: [
       {
-        question: "Is HealthRx's $99/month real?",
+        question: "Is HealthRx's $97/month real?",
         answer:
-          "Yes, with a structure to understand: it's a 12-month prepaid semaglutide plan - $1,188 due at checkout - that works out to $99/month, including the clinician consult, overnight cold-chain shipping and dose adjustments. Tirzepatide plans start at $179/month. HealthRx is LegitScript-certified (cert. 50087439).",
+          "Yes, with a structure to understand: $97/month is the rate on HealthRx's 12-month semaglutide plan, including the clinician consult, overnight cold-chain shipping and dose adjustments. The 6-month plan is $115/month, the 3-month plan $125/month, and the monthly plan $99 for the first month. Tirzepatide starts at $177/month on the 12-month plan. HealthRx is LegitScript-certified (cert. 50087439).",
       },
       {
         question: "Which of the three is safest to try first?",
@@ -364,7 +364,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
       {
         question: "What's the cheapest over a full year?",
         answer:
-          "At listed rates for semaglutide: welludr $492/year ($41 x 12, billed monthly on a 12-month plan), embody $588 ($49 flat), HealthRx $1,188 (prepaid upfront). HealthRx's premium over the other two buys overnight cold-chain delivery on every shipment.",
+          "At listed rates for semaglutide: welludr $492/year ($41 x 12, billed monthly on a 12-month plan), embody $588 ($49 flat). HealthRx's 12-month plan is $97/month; we haven't confirmed how that plan is billed, so we don't list a year total for it. HealthRx's premium over the other two buys overnight cold-chain delivery on every shipment.",
       },
     ],
   },
@@ -374,16 +374,16 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     title: "Medvi vs HealthRx vs DirectMeds: Support, Speed, Simplicity",
     metaTitle: "Medvi vs HealthRx vs DirectMeds (2026): Compared Honestly",
     description:
-      "Medvi's high-touch care vs HealthRx's $99 prepaid with overnight shipping vs DirectMeds' flat $147 with needle-free drops - one matrix, real GLP-1 prices.",
+      "Medvi's high-touch care vs HealthRx's $97 12-month plan with overnight shipping vs DirectMeds' flat $147 with needle-free drops - one matrix, real GLP-1 prices.",
     intro:
-      "Three providers, three completely different bets. Medvi bets on people: video visits, dietician, coaching, and 15,097 Trustpilot reviews averaging 4.3. HealthRx bets on logistics: $99/month semaglutide (12-month prepaid, $1,188 at checkout) with overnight cold-chain delivery. DirectMeds bets on simplicity: one flat $147 for either medication, injections or needle-free sublingual drops, no membership. The matrix below puts the three bets side by side.",
+      "Three providers, three completely different bets. Medvi bets on people: video visits, dietician, coaching, and 15,097 Trustpilot reviews averaging 4.3. HealthRx bets on logistics: $97/month semaglutide on its 12-month plan, with overnight cold-chain delivery. DirectMeds bets on simplicity: one flat $147 for either medication, injections or needle-free sublingual drops, no membership. The matrix below puts the three bets side by side.",
     verdict:
       "Choose the bet that matches your bottleneck. If support determines your success, Medvi - its review record is the strongest evidence in this trio. If you've committed to a year and want the sharpest committed price with premium delivery, HealthRx. If you want one predictable number forever - or you need the needle-free format nobody else offers - DirectMeds. All three run licensed clinical review; none is a legitimacy risk.",
     faqs: [
       {
         question: "Which is cheapest: Medvi, HealthRx or DirectMeds?",
         answer:
-          "For semaglutide, Medvi and HealthRx both work out to $99/month - but the structures differ: Medvi's is a monthly promotional rate (regularly $199) with no prepay, while HealthRx's is a 12-month prepaid plan with $1,188 due at checkout. DirectMeds charges a flat $147/month. For tirzepatide, DirectMeds' flat $147 leads, with Medvi at $166 promotional (regularly $299) and HealthRx from $179.",
+          "For semaglutide, HealthRx is $97/month and Medvi $99/month - but the structures differ: Medvi's is a monthly promotional rate (regularly $199) with no prepay, while HealthRx's $97 is its 12-month plan rate. DirectMeds charges a flat $147/month. For tirzepatide, DirectMeds' flat $147 leads, with Medvi at $166 promotional (regularly $299) and HealthRx from $177 on its 12-month plan.",
       },
       {
         question: "Which one has a needle-free option?",

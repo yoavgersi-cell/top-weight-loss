@@ -9,7 +9,7 @@ export const revalidate = 3600;
 
 // "from $179" keeps its "starting price" meaning once reduced to a number.
 const condition = (c: PriceCell) =>
-  !c ? "not offered" : `${/^from\b/i.test(c.price) ? "starting price; " : ""}${c.note}`;
+  !c ? "not offered" : `${/^from\b/i.test(c.price) && !/starting/i.test(c.note) ? "starting price; " : ""}${c.note}`;
 
 export async function GET() {
   const rows: (string | number | null)[][] = [
