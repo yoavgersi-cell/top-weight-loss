@@ -201,7 +201,7 @@ const ROWS: Row[] = [
     clinician: "Licensed-provider review before any prescription",
     visit: "Online intake; ships within 2 days of approval",
     pharmacy: "Compounded plans plus brand-name Wegovy; pharmacy not named in our research",
-    dosePricing: "Monthly; $200 off the first month",
+    dosePricing: "Same price at any dose; 12-, 6- and 3-month plans or monthly",
     likes: "Recent 5-star Trustpilot reviews praise live, named support (\"a LIVE CS rep. No bots\"), easy pauses and plan changes, and one 20-pound result. 4.1 across 188 reviews is the smallest base among providers here.",
     complaints: "The 3- and 4-star reviews cite missing tracking notifications on most shipments, a charge with no shipment after a skipped monthly check-in, and thin injection instructions; one 1-star reports heavy hair loss on compounded tirzepatide. No Reddit threads verified yet.",
   },

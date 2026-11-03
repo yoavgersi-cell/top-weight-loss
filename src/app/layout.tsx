@@ -104,6 +104,10 @@ export default function RootLayout({
             app/feed.xml). Emitted here rather than via metadata.alternates,
             which pages replace wholesale when they set their own canonical. */}
         <link rel="alternate" type="application/rss+xml" title="Treatments Hub - Guides" href="https://www.treatmentshub.com/feed.xml" />
+        {/* GLP-1 price change feed (app/glp1-price-changes.xml), declared on
+            every page so feed readers and crawlers find it from any URL, not
+            only from the tracker page. */}
+        <link rel="alternate" type="application/rss+xml" title="Treatments Hub GLP-1 Price Tracker" href="https://www.treatmentshub.com/glp1-price-changes.xml" />
         {/* The Treatments Hub brand is the default in the server HTML (primary
             domain post-migration - crawlers see it without JS). Only when served
             from the legacy topweightloss host do we mark the document, before

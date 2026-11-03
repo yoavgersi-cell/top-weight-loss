@@ -62,7 +62,6 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: {
     canonical: TRACKER_URL,
-    types: { "application/rss+xml": [{ url: `${HUB}${FEED_PATH}`, title: "Treatments Hub GLP-1 Price Tracker" }] },
   },
   openGraph: { images: [DEFAULT_OG_IMAGE], title: TITLE, description: DESCRIPTION, url: TRACKER_URL, type: "article" },
 };
