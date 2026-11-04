@@ -13,6 +13,7 @@ import { cn } from "@/lib/utils";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
 import { ReviewStickyCta } from "@/components/review-sticky-cta";
+import { SiblingLinks, CATEGORY_LABEL, reviewSiblings, comparisonSiblings, articleSiblings, pickSiblings } from "@/components/sibling-links";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { TrustpilotSummary } from "@/components/trustpilot-summary";
 import { getReviewRecord } from "@/data/reviews";
@@ -1499,6 +1500,13 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
           </Link>
         </div>
+
+        {/* Every other review in this category (internal-link audit, Nov 4, 2026). */}
+        <SiblingLinks
+          className="mb-6"
+          title={`More ${CATEGORY_LABEL[ctx.vertical] ?? ""} provider reviews`.replace(/\s+/g, " ")}
+          links={pickSiblings(reviewSiblings(config, ctx), hubLink(ctx, `/reviews/${slug}`))}
+        />
 
         {/* Related content */}
         {(relatedBattles.length > 0 || relatedTrios.length > 0 || relatedArticles.length > 0 || showComparisonLink) && (

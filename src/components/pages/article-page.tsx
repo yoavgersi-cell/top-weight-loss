@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiblingLinks, CATEGORY_LABEL, reviewSiblings, comparisonSiblings, articleSiblings, pickSiblings } from "@/components/sibling-links";
 import Link from "next/link";
 import Image from "next/image";
 import { Clock, ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
@@ -992,6 +993,13 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               </Link>
             </div>
           </div>
+
+          {/* Eight sibling guides in this category (internal-link audit, Nov 4, 2026). */}
+          <SiblingLinks
+            className="mt-12"
+            title={`More ${CATEGORY_LABEL[ctx.vertical] ?? ""} guides`.replace(/\s+/g, " ")}
+            links={pickSiblings(articleSiblings(config, ctx), hubLink(ctx, `/articles/${slug}`), 8)}
+          />
 
           {/* Related Articles */}
           {relatedArticles.length > 0 && (

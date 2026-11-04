@@ -1,4 +1,5 @@
 import { pageReviewSchema } from "@/data/reviewers";
+import { SiblingLinks, CATEGORY_LABEL, reviewSiblings, comparisonSiblings, articleSiblings, pickSiblings } from "@/components/sibling-links";
 import { medicalWebPageFields } from "@/lib/medical-schema";
 import type { Metadata } from "next";
 import { Fragment } from "react";
@@ -545,6 +546,12 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               <GuideCluster currentSlug={landing.slug} prefix={ctx.prefix} />
             </div>
           )}
+          <div className="mx-auto max-w-[1200px] px-4 pb-12">
+            <SiblingLinks
+              title={`More ${CATEGORY_LABEL[ctx.vertical] ?? ""} comparisons`.replace(/\s+/g, " ")}
+              links={pickSiblings(comparisonSiblings(config, ctx), hubLink(ctx, `/${landing.slug}`), 10)}
+            />
+          </div>
           <div className="mx-auto max-w-[1200px] px-4 pb-12">
             <MedicalDisclaimer vertical={ctx.vertical} />
           </div>
@@ -1564,6 +1571,13 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
           {/* Crawl paths to priority pages Google has not crawled yet (hub only). */}
           {ctx.vertical === "weight-loss" && ctx.prefix === "/weight-loss" && <PopularGuides />}
+
+          {/* Ten sibling comparisons in this category (internal-link audit, Nov 4, 2026). */}
+          <SiblingLinks
+            className="mb-10"
+            title={`More ${CATEGORY_LABEL[ctx.vertical] ?? ""} comparisons`.replace(/\s+/g, " ")}
+            links={pickSiblings(comparisonSiblings(config, ctx), hubLink(ctx, `/${slug}`), 10)}
+          />
 
           {/* ───── RELATED COMPARISONS ───── */}
           {(relatedBattles.length > 0 || relatedTrios.length > 0) && (
