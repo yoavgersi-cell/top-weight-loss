@@ -11,6 +11,7 @@ import { CONTENT_LAST_UPDATED, AFFILIATE_PROVIDER_IDS } from "@/lib/config";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { LastUpdated } from "@/components/last-updated";
 import { PriceIndex } from "@/components/price-index";
+import { PRICE_INDEX, PRICE_INDEX_VERIFIED } from "@/lib/price-index";
 import { ProductCarousel } from "@/components/product-carousel";
 import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
 
@@ -76,7 +77,7 @@ export default async function CheapestGlp1Page() {
     headline: TITLE,
     description: DESCRIPTION,
     datePublished: "2026-08-23",
-    dateModified: CONTENT_LAST_UPDATED,
+    dateModified: PRICE_INDEX_VERIFIED > CONTENT_LAST_UPDATED ? PRICE_INDEX_VERIFIED : CONTENT_LAST_UPDATED,
     ...pageReviewSchema("/weight-loss/cheapest-glp1"),
     author: { "@type": "Organization", name: "Treatments Hub Team", url: "https://www.treatmentshub.com" },
     publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
@@ -114,7 +115,7 @@ export default async function CheapestGlp1Page() {
             promo pricing, prepaid plans, first-month rates - printed right under the number. Sorted
             cheapest first.
           </p>
-          <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
+          <LastUpdated date={PRICE_INDEX_VERIFIED > CONTENT_LAST_UPDATED ? PRICE_INDEX_VERIFIED : CONTENT_LAST_UPDATED} className="mt-4" />
           <MedicalReviewBar path="/weight-loss/cheapest-glp1" className="mt-4 max-w-[760px]" />
           <TrustDisclosure disclaimerHref="/weight-loss/disclaimer" />
         </div>
@@ -160,7 +161,7 @@ export default async function CheapestGlp1Page() {
           <h2 className="text-[22px] font-bold text-[#191919]">The 2026 GLP-1 price index</h2>
         </div>
         <p className="mb-5 max-w-[680px] text-[14px] text-gray-500">
-          Eight providers, ranked by their published semaglutide price. Trustpilot records shown are
+          {PRICE_INDEX.filter((r) => providers.some((p) => p.id === r.providerId)).length} providers, ranked by their published starting price. Trustpilot records shown are
           real; where a provider has no published rating, we say so instead of inventing one.
         </p>
         <PriceIndex providers={providers} />
