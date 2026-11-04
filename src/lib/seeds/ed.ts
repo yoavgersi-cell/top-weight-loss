@@ -178,7 +178,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
           {
             title: "It has been great so far",
             text: "It has been great so far. I'm only missing one package delivery but other than that I love the results I'm getting.",
-            name: "Annina Swayze",
+            name: "Annina S.",
             location: "US",
             rating: 5,
             date: "Sep 20, 2026",
@@ -247,7 +247,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
           {
             title: "A really positive experience",
             text: "A really positive experience and not just with the product (which is epic). I had a shipping issue - I'd typed in the wrong street - but I emailed in and spoke with Kyle and he was great and helped me sort it out in a matter of minutes. Just started my second month and will be a lifer.",
-            name: "Jeff Gonzales",
+            name: "Jeff G.",
             location: "US",
             rating: 5,
             date: "Jul 10, 2026",
@@ -271,7 +271,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
           {
             title: "It has been great so far",
             text: "It has been great so far, the product works wonders for me and my wife. I've been with Brave for a few months and have had a better experience than with any similar products.",
-            name: "William Vermette",
+            name: "William V.",
             location: "US",
             rating: 5,
             date: "Feb 24, 2026",
@@ -287,7 +287,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
           {
             title: "Consistently delivers!",
             text: "I've tried a few different options, but this is the first one that consistently delivers. Also them being based out of the US adds a lot of confidence to the product's quality.",
-            name: "Jayme Tharp",
+            name: "Jayme T.",
             location: "US",
             rating: 5,
             date: "Jan 22, 2026",

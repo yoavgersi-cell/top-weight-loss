@@ -84,7 +84,7 @@ export const SPROUT_REVIEWS: ProviderReviewRecord = {
           {
             title: "Enjoyed dealing with them",
             text: "Enjoyed dealing with them. Customer Service was great!",
-            name: "The Hogans",
+            name: "The H.",
             location: "US",
             rating: 5,
             date: "Sep 17, 2026",

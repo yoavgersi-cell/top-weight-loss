@@ -74,7 +74,7 @@ const providers: Provider[] = [
       {
         title: "Super positive experience",
         text: "Super positive experience really great doctors very proactive experience super open with their background I get open conversations about doing this what it meant long-term short-term only great things to say turning 50 this year if you're not doing this and you're an athlete, you've got injuries and you wanna feel young again you are missing one of the cooler things happening in 2026 being able to do this online... telehealth testosterone very cool.",
-        name: "Joshua Walker",
+        name: "Joshua W.",
         location: "US",
         rating: 5,
         date: "Aug 22, 2026",
@@ -82,7 +82,7 @@ const providers: Provider[] = [
       {
         title: "Excellent customer service",
         text: "Excellent customer service. Whenever I have had an issue with shipping or a refund, the team has been responsive and eager to solve the problem. The products are also 100% as advertised. It is refreshing to deal with a company that makes customer satisfaction a priority.",
-        name: "Ben Vangarde",
+        name: "Ben V.",
         location: "US",
         rating: 5,
         date: "Aug 17, 2026",
@@ -90,7 +90,7 @@ const providers: Provider[] = [
       {
         title: "Fast shipping and good customer service",
         text: "Shipping was fast for a year. Left for a few months and ended up waiting after my resubscription. Customer service was able to quickly resolve the issue when I sent an email in, with a real person responding on the weekend.",
-        name: "Nathan Bennett",
+        name: "Nathan B.",
         location: "US",
         rating: 5,
         date: "Aug 13, 2026",
@@ -98,7 +98,7 @@ const providers: Provider[] = [
       {
         title: "Highly knowledgeable physician",
         text: "Highly knowledgeable physician who prescribed a protocol that works, great products, lots of treatment options not available elsewhere.",
-        name: "David Epstein",
+        name: "David E.",
         location: "US",
         rating: 5,
         date: "Jul 26, 2026",
@@ -106,7 +106,7 @@ const providers: Provider[] = [
       {
         title: "A very pleasant experience",
         text: "This has been a very pleasant experience with Maximus. They are attentive, professional, and fast!",
-        name: "Floyd Gaugh",
+        name: "Floyd G.",
         location: "US",
         rating: 5,
         date: "Aug 10, 2026",

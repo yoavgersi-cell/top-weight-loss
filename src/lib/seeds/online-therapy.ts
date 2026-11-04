@@ -71,7 +71,7 @@ const providers: Provider[] = [
       {
         title: "BetterHelp has been a wonderful resource",
         text: "BetterHelp has been a wonderful resource for me. It has helped me through many different situations by providing support, guidance, and useful tools. The classes are excellent and have given me valuable insights and strategies to improve my well-being and handle life's challenges more effectively.",
-        name: "Donna Alexander",
+        name: "Donna A.",
         location: "US",
         rating: 5,
         date: "Aug 18, 2026",
@@ -101,7 +101,7 @@ const providers: Provider[] = [
       {
         title: "I've had multiple therapists... this one is the best!",
         text: "I've had multiple therapists throughout my lifetime, but this is the first therapist who has actually helped. She is amazing. I've been with Talkspace for over 2 years now, and I've made huge progress. I highly recommend them.",
-        name: "Elizabeth Bissett",
+        name: "Elizabeth B.",
         location: "US",
         rating: 5,
         date: "Aug 26, 2026",
@@ -163,7 +163,7 @@ const providers: Provider[] = [
       {
         title: "Love it",
         text: "Love this app. In difficult moment can really help you.",
-        name: "Nicol\u00f2 Dardi",
+        name: "Nicol\u00f2 D.",
         location: "IT",
         rating: 5,
         date: "Mar 15, 2026",
