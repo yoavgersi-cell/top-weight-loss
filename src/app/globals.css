@@ -262,3 +262,15 @@ html[data-legacy] .legacy-name {
 @media (prefers-reduced-motion: reduce) {
   .price-ticker-track.is-looping { animation: none; }
 }
+
+/* Mobile legibility (Nov 4, 2026 audit): the smallest fine print - price
+   conditions, notes, footer small print - was 11-11.5px on phones. Lift it to
+   12px below the sm breakpoint. Unlayered, so it wins over the utility layer;
+   desktop sizes are untouched. Badge-style labels (10-10.5px, uppercase) keep
+   their size by design. */
+@media (max-width: 639px) {
+  .text-\[11px\],
+  .text-\[11\.5px\] {
+    font-size: 12px;
+  }
+}
