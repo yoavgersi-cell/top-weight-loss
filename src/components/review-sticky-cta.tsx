@@ -7,8 +7,8 @@ import { ProviderCta } from "./provider-cta";
 // Mobile-only sticky bar for provider review pages: the provider's logo and
 // one classic CTA. Deliberately quiet (operator brief, Nov 4, 2026: "not
 // aggressive"):
-//   - hidden until the reader has scrolled past the hero, whose own CTA is
-//     the first one they see;
+//   - hidden until the reader starts scrolling (about 280px, roughly past
+//     the hero's own CTA);
 //   - steps aside near the end of the page, where the closing CTA and the
 //     footer take over;
 //   - one tap on the X hides it for the rest of the session on that review;
@@ -38,7 +38,7 @@ export function ReviewStickyCta({
       // storage unavailable: the bar still works, it just won't remember a dismiss
     }
     const onScroll = () => {
-      const pastHero = window.scrollY > 520;
+      const pastHero = window.scrollY > 280;
       const nearEnd = window.scrollY + window.innerHeight > document.documentElement.scrollHeight - 900;
       setShow(pastHero && !nearEnd);
     };
