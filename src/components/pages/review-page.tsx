@@ -12,6 +12,7 @@ import {
 import { cn } from "@/lib/utils";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
+import { ReviewStickyCta } from "@/components/review-sticky-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { TrustpilotSummary } from "@/components/trustpilot-summary";
 import { getReviewRecord } from "@/data/reviews";
@@ -1518,7 +1519,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       <Link
                         key={battle.slug}
                         href={hubLink(ctx, `/${battle.slug}`)}
-                        className="flex items-center justify-between gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
+                        className="flex min-w-0 items-center justify-between gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
                       >
                         <span className="truncate">{provider.name} vs {otherProvider?.name}</span>
                         <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-gray-400" strokeWidth={2.5} />
@@ -1536,7 +1537,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                     <Link
                       key={t.slug}
                       href={hubLink(ctx, `/${t.slug}`)}
-                      className="flex items-center justify-between gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
+                      className="flex min-w-0 items-center justify-between gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
                     >
                       <span className="truncate">{t.title}</span>
                       <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-gray-400" strokeWidth={2.5} />
@@ -1625,6 +1626,15 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           position={rankIndex >= 0 ? rankIndex + 1 : undefined}
         />
       )}
+
+      {/* Mobile-only sticky logo + CTA bar (operator request, Nov 4, 2026). */}
+      <ReviewStickyCta
+        providerId={provider.id}
+        name={provider.name}
+        logo={provider.logo}
+        href={provider.affiliateUrl}
+        position={rankIndex >= 0 ? rankIndex + 1 : undefined}
+      />
     </div>
   );
 }
