@@ -199,7 +199,7 @@ export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
                 <Link
                   key={c.slug}
                   href={hubLink(ctx, `/${c.slug}`)}
-                  className="flex items-center justify-between gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
+                  className="flex min-w-0 items-center justify-between gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
                 >
                   <span className="truncate">{c.label}</span>
                   <span className="shrink-0 text-[11px] font-medium text-gray-400">{c.kind}</span>
