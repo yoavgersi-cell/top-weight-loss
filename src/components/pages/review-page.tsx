@@ -25,8 +25,6 @@ import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 import { medicalWebPageFields } from "@/lib/medical-schema";
 import { LastUpdated } from "@/components/last-updated";
-import { PromoPopup } from "@/components/promo-popup";
-import { resolvePromoPopup } from "@/lib/promo-popups";
 import { TrustDisclosure, MedicalSources } from "@/components/medical-sources";
 import { PopularGuides } from "@/components/popular-guides";
 import { MedicalDisclaimer } from "@/components/medical-disclaimer";
@@ -731,7 +729,6 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   const editorialHasHalf = editorialStars % 1 >= 0.5;
 
   // Promo popup for this provider, if it has a registered creative.
-  const promoPopup = resolvePromoPopup([provider]);
 
   // Operator-verified promo banner, surfaced prominently under the hero on the
   // provider's own review page. Bold segments render emphasized. Keyed by
@@ -1619,15 +1616,9 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
       {/* Mobile-only promo popup - shown on the provider's own review page when
           it has a registered creative (same once-per-session behavior as on
           comparisons). */}
-      {promoPopup && (
-        <PromoPopup
-          spec={promoPopup}
-          href={provider.affiliateUrl}
-          position={rankIndex >= 0 ? rankIndex + 1 : undefined}
-        />
-      )}
-
-      {/* Mobile-only sticky logo + CTA bar (operator request, Nov 4, 2026). */}
+      {/* Mobile-only sticky logo + CTA bar (operator request, Nov 4, 2026).
+          It replaces the mobile promo popup on review pages: one quiet,
+          dismissible bar instead of a timed overlay. */}
       <ReviewStickyCta
         providerId={provider.id}
         name={provider.name}
