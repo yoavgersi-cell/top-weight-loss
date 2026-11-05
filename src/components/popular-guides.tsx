@@ -15,6 +15,8 @@ const WEIGHT_LOSS_GUIDES: GuideLink[] = [
   { href: "/weight-loss/cheapest-glp1", label: "Cheapest GLP-1 online" },
   { href: "/weight-loss/glp1-weight-loss-statistics", label: "GLP-1 price index & weight loss statistics" },
   { href: "/weight-loss/tirzepatide", label: "Best tirzepatide providers" },
+  { href: "/weight-loss/articles/glp1-weight-loss-results", label: "GLP-1 weight loss results" },
+  { href: "/weight-loss/articles/how-to-start-glp1-treatment-online", label: "How to start GLP-1 treatment online" },
   { href: "/weight-loss/retatrutide-weight-loss", label: "Retatrutide for weight loss" },
   { href: "/weight-loss/weight-loss-pills", label: "Weight loss pills" },
   { href: "/weight-loss/articles/glp1-coverage-2027-employers-dropping", label: "GLP-1 coverage in 2027" },

@@ -4715,6 +4715,10 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
             const codeAuthoritativeGuides = new Set([
               "best-tirzepatide-online",
               "is-wellmedr-legit",
+              // Nov 5, 2026: trial-sourced results guide and the screenshot-
+              // illustrated intake guide (figures built from the gallery data).
+              "glp1-weight-loss-results",
+              "how-to-start-glp1-treatment-online",
               // Internal links in these were pointed at a retired battle slug;
               // the fix lives in code and must not be shadowed by the snapshot.
               "noom-weight-loss-review",

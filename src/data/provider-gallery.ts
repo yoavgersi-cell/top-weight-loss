@@ -273,3 +273,19 @@ export function getGallery(providerId: string): ProviderGallery | null {
   });
   return slides.length ? { ...g, slides } : null;
 }
+
+/**
+ * One gallery slide as an article figure (plain HTML for article bodies),
+ * with its provider attribution and capture date. Slides that show a price
+ * are refused, so an article can never embed a screenshot that the price
+ * index might later contradict.
+ */
+export function galleryFigureHtml(providerId: string, file: string): string {
+  const g = GALLERIES[providerId];
+  const s = g?.slides.find((x) => x.src.endsWith(`/${file}`));
+  if (!g || !s) throw new Error(`[provider-gallery] no slide ${providerId}/${file}`);
+  if (s.price) throw new Error(`[provider-gallery] ${providerId}/${file} shows a price; not for articles`);
+  const esc = (t: string) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
+  const date = new Date(g.capturedOn).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
+  return `<figure class="shot"><img src="${s.src}" width="${s.width}" height="${s.height}" alt="${esc(s.alt)}" loading="lazy" decoding="async"><figcaption>${esc(s.caption)} <span class="shot-src">Screenshot of ${esc(g.source)}, captured ${date}.</span></figcaption></figure>`;
+}

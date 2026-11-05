@@ -97,10 +97,17 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
     description:
       "Compounded semaglutide runs $41-$199/month all-in via telehealth; brand-name Ozempic/Wegovy runs $1,150-$1,600 without insurance. Full real-price breakdown.",
   },
+  // Nov 5, 2026 keyword pass: the searcher types "GLP-1" / "semaglutide"
+  // with "without insurance" / "no insurance", so the title names both.
   "weight-loss-medication-without-insurance": {
-    title: "Weight Loss Medication Without Insurance (From $49/mo)",
+    title: "GLP-1 Without Insurance (2026): Semaglutide & Tirzepatide",
     description:
-      "No coverage? Self-pay compounded GLP-1s start at $41-$89/month with the provider visit included. Real prices from licensed telehealth providers, compared.",
+      "No insurance? Self-pay compounded semaglutide and tirzepatide start at $41-$89/month with the provider visit included. Verified prices, compared.",
+  },
+  "semaglutide-side-effects-guide": {
+    title: "Semaglutide Side Effects & Nausea: How to Manage Them (2026)",
+    description:
+      "Semaglutide side effects explained: how common nausea and other GI effects are in the STEP trials, when they start, how long they last and how to manage them.",
   },
   "compounded-semaglutide-vs-brand-name": {
     title: "Compounded Semaglutide vs Brand Name: Real Differences",
