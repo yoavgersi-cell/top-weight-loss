@@ -77,10 +77,55 @@ const GALLERIES: Record<string, ProviderGallery> = {
         src: "/provider-gallery/embody/embody-first-months.webp",
         width: 1400,
         height: 1175,
-        title: "What month one looks like",
+        title: "Month 0-1, per embody",
         caption:
           "embody's month-by-month timeline starts with \"Month 0-1: Getting Started & Adjusting\". Individual results vary; your clinician sets and adjusts the dose.",
         alt: "embody timeline card Month 0-1 Getting Started and Adjusting, from the section What your first 6 months on Embody really look like",
+      },
+      {
+        src: "/provider-gallery/embody/embody-month-1-2.webp",
+        width: 1400,
+        height: 1206,
+        title: "Month 1-2, per embody",
+        caption:
+          "embody's timeline calls months one to two \"Appetite Changes & Early Signals\". These are embody's descriptions; individual results vary and your clinician adjusts the dose.",
+        alt: "embody timeline card Month 1-2 Appetite Changes and Early Signals",
+      },
+      {
+        src: "/provider-gallery/embody/embody-month-2-3.webp",
+        width: 1400,
+        height: 1203,
+        title: "Month 2-3, per embody",
+        caption:
+          "Months two to three on embody's timeline: \"Real Weight Loss Starts Showing\". embody's own wording; results vary from person to person.",
+        alt: "embody timeline card Month 2-3 Real Weight Loss Starts Showing",
+      },
+      {
+        src: "/provider-gallery/embody/embody-month-3-4.webp",
+        width: 1400,
+        height: 1200,
+        title: "Month 3-4, per embody",
+        caption:
+          "embody describes months three to four as \"Real Life, Real Adjustments\", fitting treatment around busy weeks and social events.",
+        alt: "embody timeline card Month 3-4 Real Life, Real Adjustments",
+      },
+      {
+        src: "/provider-gallery/embody/embody-month-4-6.webp",
+        width: 1400,
+        height: 1196,
+        title: "Month 4-6, per embody",
+        caption:
+          "The last stage on embody's timeline, months four to six: \"Sustainable, Ongoing Results\". embody's description, not a guaranteed outcome.",
+        alt: "embody timeline card Month 4-6 Sustainable, Ongoing Results",
+      },
+      {
+        src: "/provider-gallery/embody/embody-whats-included.webp",
+        width: 1400,
+        height: 637,
+        title: "What's included",
+        caption:
+          "embody lists six features: clinician-guided care, 24/7 messaging with its care team, no insurance needed, free expedited delivery, transparent monthly pricing with no hidden fees, and the option to pause or adjust anytime.",
+        alt: "embody feature grid: medical expertise with personalized support, 24/7 access to care team, no insurance barriers, free expedited delivery, transparent monthly pricing, pause or adjust any time",
       },
     ],
   },
@@ -124,6 +169,85 @@ const GALLERIES: Record<string, ProviderGallery> = {
         caption:
           "altRx lists four features: care guidance, free and fast delivery from a licensed pharmacy, plans reviewed by licensed healthcare providers, and transparent pricing with no membership fees and the option to cancel anytime.",
         alt: "altRx section Bring quality care home, 100% online, with four feature cards: care guidance, free and fast delivery, recommended by altRx, transparent pricing",
+      },
+    ],
+  },
+  wellmedr: {
+    capturedOn: "2026-11-05",
+    source: "welludr's website",
+    slides: [
+      {
+        src: "/provider-gallery/wellmedr/welludr-homepage.webp",
+        width: 1400,
+        height: 709,
+        title: "The homepage",
+        caption:
+          "welludr's homepage: \"See if you qualify for GLP-1 weight-loss medication\", with a quiz the site says takes 3 minutes and a clinician review before anything is prescribed.",
+        alt: "welludr homepage headline See if you qualify for GLP-1 weight-loss medication with a Check Eligibility button and a weight loss warranty badge",
+      },
+      {
+        src: "/provider-gallery/wellmedr/welludr-bmi-step.webp",
+        width: 1400,
+        height: 862,
+        title: "The intake: BMI step",
+        caption:
+          "One step of welludr's intake asks for height and weight to calculate BMI, which welludr says helps determine eligibility for weight-loss medication.",
+        alt: "welludr intake step titled Let's calculate your BMI with feet, inches and weight fields",
+      },
+      {
+        src: "/provider-gallery/wellmedr/welludr-next-steps-1-2.webp",
+        width: 1400,
+        height: 988,
+        title: "What happens next: steps 1-2",
+        caption:
+          "welludr's four-step flow starts with activating your plan (the site lists same-day slots) and a licensed clinician reviewing your intake and building a personalized treatment plan.",
+        alt: "welludr What happens next timeline: step 1 activate your weight loss plan, step 2 clinician builds your program",
+      },
+      {
+        src: "/provider-gallery/wellmedr/welludr-next-steps-3-4.webp",
+        width: 1400,
+        height: 931,
+        title: "What happens next: steps 3-4",
+        caption:
+          "Steps three and four: medication delivered discreetly to your door, then refills shipped before you run out, per welludr's site.",
+        alt: "welludr What happens next timeline: step 3 medication delivered to your doorstep, step 4 on-time refills",
+      },
+      {
+        src: "/provider-gallery/wellmedr/welludr-plans.webp",
+        width: 1400,
+        height: 1785,
+        title: "Plans and prices",
+        caption:
+          "welludr's plan page lists compounded tirzepatide from $71 a month and compounded semaglutide from $41 a month, each shipped every 4 weeks, with dosing adjusted as you respond.",
+        alt: "welludr Choose your GLP-1 plan section: tirzepatide starting at $71 a month and semaglutide starting at $41 a month",
+        price: { semaglutide: 41, tirzepatide: 71 },
+      },
+      {
+        src: "/provider-gallery/wellmedr/welludr-brand-name.webp",
+        width: 1400,
+        height: 1155,
+        title: "Brand-name options",
+        caption:
+          "welludr also lists brand-name Ozempic from $1,399 and Zepbound from $1,599 a month, with provider review, a Medical Weight-Care Coach and dose adjustments included, and its required safety notice on compounded GLP-1s.",
+        alt: "welludr brand-name section: Ozempic starting at $1,399 and Zepbound starting at $1,599 with month-to-month plan inclusions",
+      },
+      {
+        src: "/provider-gallery/wellmedr/welludr-why-choose.webp",
+        width: 1400,
+        height: 854,
+        title: "What's included",
+        caption:
+          "welludr lists what its program includes: unlimited messaging with licensed clinicians, a care platform with progress tracking, and refills shipped before you run out.",
+        alt: "welludr Why people choose welludr section with included features: unlimited messaging with licensed clinicians, real-time access to your care platform, on-time refills",
+      },
+      {
+        src: "/provider-gallery/wellmedr/welludr-guarantee.webp",
+        width: 1400,
+        height: 795,
+        title: "The money-back guarantee",
+        caption:
+          "welludr's site states a money-back guarantee: if you don't lose weight in 90 days, it refunds 100% of your money. Check the full terms on welludr's site before you sign up.",
+        alt: "welludr money-back guarantee banner: if you don't lose weight in 90 days we will refund 100% of your money",
       },
     ],
   },
