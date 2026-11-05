@@ -84,6 +84,49 @@ const GALLERIES: Record<string, ProviderGallery> = {
       },
     ],
   },
+  altrx: {
+    capturedOn: "2026-11-05",
+    source: "altRx's website",
+    slides: [
+      {
+        src: "/provider-gallery/altrx/altrx-homepage.webp",
+        width: 1400,
+        height: 931,
+        title: "The homepage",
+        caption:
+          "altRx's homepage: \"Start for $89/mo\", HSA/FSA approved, no insurance required and free shipping, per altRx's site. The page carries the FDA notice that compounded medications are not FDA-approved, and GLP-1 safety information.",
+        alt: "altRx homepage headline Transforming Care, Redefining Weight Management with a Start for $89 per month offer and a Get Started Today button",
+        price: { semaglutide: 89 },
+      },
+      {
+        src: "/provider-gallery/altrx/altrx-how-it-works.webp",
+        width: 1400,
+        height: 853,
+        title: "How it works, in 3 steps",
+        caption:
+          "altRx's three steps: a free 2-minute assessment with no cost or obligation; if a provider decides treatment is appropriate, a personalized care plan with compounded semaglutide or tirzepatide; then medication shipped from a licensed pharmacy, with ongoing support.",
+        alt: "altRx How it works section with three cards: Start your free 2-minute assessment, Get your treatment plan, Receive your medication",
+      },
+      {
+        src: "/provider-gallery/altrx/altrx-what-arrives.webp",
+        width: 1400,
+        height: 808,
+        title: "What the delivery looks like",
+        caption:
+          "How altRx presents its delivery box: compounded GLP-1 and GLP-1/GIP vials alongside a printed treatment plan with injection steps.",
+        alt: "altRx branded delivery box holding compounded GLP-1 and GLP-1/GIP vials and a printed treatment plan card",
+      },
+      {
+        src: "/provider-gallery/altrx/altrx-why-altrx.webp",
+        width: 1400,
+        height: 844,
+        title: "What's included",
+        caption:
+          "altRx lists four features: care guidance, free and fast delivery from a licensed pharmacy, plans reviewed by licensed healthcare providers, and transparent pricing with no membership fees and the option to cancel anytime.",
+        alt: "altRx section Bring quality care home, 100% online, with four feature cards: care guidance, free and fast delivery, recommended by altRx, transparent pricing",
+      },
+    ],
+  },
 };
 
 /** The provider's gallery with any price-stale slide removed, or null. */
