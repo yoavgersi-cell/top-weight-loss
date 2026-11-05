@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { readableHeroColor } from "@/lib/hero-color";
 import { SiblingLinks, CATEGORY_LABEL, reviewSiblings, comparisonSiblings, articleSiblings, pickSiblings } from "@/components/sibling-links";
 import Link from "next/link";
 import Image from "next/image";
@@ -336,6 +337,15 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     ed: "ED",
   };
   const topThreeVertical = TOP_THREE_LABEL[ctx.vertical];
+  // Product carousel slot: after roughly the halfway section by default;
+  // per-slug overrides move it higher (operator request, Nov 5, 2026: the
+  // welludr plans carousel - and the provider card that follows it - right
+  // after "Is welludr legit?" on its legit page).
+  const CAROUSEL_AT: Record<string, number> = { "is-wellmedr-legit": 1 };
+  const carouselAt = Math.min(
+    CAROUSEL_AT[slug] ?? Math.max(0, Math.ceil(article.sections.length / 2) - 1),
+    Math.max(0, article.sections.length - 1),
+  );
   const hrtCarouselAt = Math.max(0, Math.ceil(article.sections.length / 2) - 1);
   let topThreeAt = Math.min(1, article.sections.length - 1);
   if (isHrtArticle && topThreeAt === hrtCarouselAt && topThreeAt > 0) topThreeAt = 0;
@@ -561,26 +571,29 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
         {/* Hero band */}
         <div
           className="relative w-full overflow-hidden"
-          style={{ backgroundColor: article.heroColor }}
+          style={{ backgroundColor: readableHeroColor(article.heroColor) }}
         >
           {/* The vertical's hero image, in the same spot and at the same size as
               on the ranking page (desktop only; the wrapper is display:none
               below the sm breakpoint). Verticals without a hero image render
               nothing here, exactly like their ranking pages. Oct 17, 2026. */}
-          {config.hero?.backgroundImageUrl && (
-            <div className="absolute right-[380px] top-1/2 hidden h-[270px] w-[50%] -translate-y-1/2 sm:block lg:h-[300px]">
-              <Image
-                src={config.hero.backgroundImageUrl}
-                alt={config.hero.imageAlt || ""}
-                fill
-                preload
-                fetchPriority="high"
-                sizes="(min-width: 640px) 50vw, 1px"
-                className="object-contain object-right"
-              />
-            </div>
-          )}
           <div className="relative z-10 mx-auto max-w-[1100px] px-4 pt-4 pb-5 sm:px-6 sm:py-10">
+            {/* Nov 5, 2026: the image now sits at the right edge of the text
+                container and only from xl (1280px), so it can never cover the
+                title, intro or review line (it overlapped them at 640-1440px). */}
+            {config.hero?.backgroundImageUrl && (
+              <div className="pointer-events-none absolute right-6 top-1/2 hidden h-[280px] w-[380px] -translate-y-1/2 xl:block">
+                <Image
+                  src={config.hero.backgroundImageUrl}
+                  alt={config.hero.imageAlt || ""}
+                  fill
+                  preload
+                  fetchPriority="high"
+                  sizes="(min-width: 1280px) 380px, 1px"
+                  className="object-contain object-right"
+                />
+              </div>
+            )}
             <Breadcrumbs
               items={[
                 { label: "Home", href: hubLink(ctx, "/") },
@@ -599,7 +612,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               >
                 {article.category}
               </span>
-              <span className="flex items-center gap-1 text-[12px] text-gray-400">
+              <span className="flex items-center gap-1 text-[12px] text-gray-600">
                 <Clock className="h-3 w-3" strokeWidth={1.5} />
                 {article.readTime}
               </span>
@@ -614,8 +627,8 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
             <p className="mt-2 max-w-[640px] text-[14px] leading-[1.45] text-gray-600 sm:text-[16px] sm:leading-[1.55]">
               {article.description}
             </p>
-            <p className="mt-2 text-[12px] text-gray-400">Updated {formattedDate}</p>
-            <MedicalReviewBar path={`/${ctx.vertical}/articles/${slug}`} className="mt-3 max-w-[760px]" />
+            <p className="mt-2 text-[12px] text-gray-600">Updated {formattedDate}</p>
+            <MedicalReviewBar path={`/${ctx.vertical}/articles/${slug}`} className={`mt-3 max-w-[760px] ${config.hero?.backgroundImageUrl ? "xl:max-w-[640px]" : ""}`} />
           </div>
         </div>
 
@@ -877,7 +890,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     the bottom. */}
                 {(ctx.vertical === "weight-loss" || isHrtArticle) &&
                   !hideCarouselForSubject &&
-                  i === Math.max(0, Math.ceil(article.sections.length / 2) - 1) && (
+                  i === carouselAt && (
                     <div className="my-10">
                       <ProductCarousel
                         providers={config.providers}
@@ -920,7 +933,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                   subjectProvider &&
                   (ctx.vertical === "weight-loss" || isHrtArticle) &&
                   !hideCarouselForSubject &&
-                  i === Math.max(0, Math.ceil(article.sections.length / 2) - 1) && (
+                  i === carouselAt && (
                     <TopProvidersBlock
                       config={config}
                       linkPrefix={ctx.prefix}

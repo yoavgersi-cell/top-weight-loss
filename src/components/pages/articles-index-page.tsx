@@ -1,4 +1,5 @@
 import { pageReviewSchema } from "@/data/reviewers";
+import { readableHeroColor } from "@/lib/hero-color";
 import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import type { Metadata } from "next";
@@ -142,7 +143,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
           <div className="flex flex-col sm:flex-row">
             <div
               className="relative flex h-[180px] items-center justify-center overflow-hidden sm:h-auto sm:min-h-[210px] sm:w-[340px] sm:shrink-0"
-              style={{ backgroundColor: articles[0].heroColor }}
+              style={{ backgroundColor: readableHeroColor(articles[0].heroColor) }}
             >
               {articles[0].image ? (
                 // eslint-disable-next-line @next/next/no-img-element
@@ -195,7 +196,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
             >
               <div
                 className="relative flex h-[140px] items-center justify-center overflow-hidden"
-                style={{ backgroundColor: article.heroColor }}
+                style={{ backgroundColor: readableHeroColor(article.heroColor) }}
               >
                 {article.image ? (
                   // eslint-disable-next-line @next/next/no-img-element
