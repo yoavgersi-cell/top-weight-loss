@@ -577,20 +577,23 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               on the ranking page (desktop only; the wrapper is display:none
               below the sm breakpoint). Verticals without a hero image render
               nothing here, exactly like their ranking pages. Oct 17, 2026. */}
-          {config.hero?.backgroundImageUrl && (
-            <div className="absolute right-[380px] top-1/2 hidden h-[270px] w-[50%] -translate-y-1/2 sm:block lg:h-[300px]">
-              <Image
-                src={config.hero.backgroundImageUrl}
-                alt={config.hero.imageAlt || ""}
-                fill
-                preload
-                fetchPriority="high"
-                sizes="(min-width: 640px) 50vw, 1px"
-                className="object-contain object-right"
-              />
-            </div>
-          )}
           <div className="relative z-10 mx-auto max-w-[1100px] px-4 pt-4 pb-5 sm:px-6 sm:py-10">
+            {/* Nov 5, 2026: the image now sits at the right edge of the text
+                container and only from xl (1280px), so it can never cover the
+                title, intro or review line (it overlapped them at 640-1440px). */}
+            {config.hero?.backgroundImageUrl && (
+              <div className="pointer-events-none absolute right-6 top-1/2 hidden h-[280px] w-[380px] -translate-y-1/2 xl:block">
+                <Image
+                  src={config.hero.backgroundImageUrl}
+                  alt={config.hero.imageAlt || ""}
+                  fill
+                  preload
+                  fetchPriority="high"
+                  sizes="(min-width: 1280px) 380px, 1px"
+                  className="object-contain object-right"
+                />
+              </div>
+            )}
             <Breadcrumbs
               items={[
                 { label: "Home", href: hubLink(ctx, "/") },
@@ -625,7 +628,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               {article.description}
             </p>
             <p className="mt-2 text-[12px] text-gray-600">Updated {formattedDate}</p>
-            <MedicalReviewBar path={`/${ctx.vertical}/articles/${slug}`} className="mt-3 max-w-[760px]" />
+            <MedicalReviewBar path={`/${ctx.vertical}/articles/${slug}`} className={`mt-3 max-w-[760px] ${config.hero?.backgroundImageUrl ? "xl:max-w-[640px]" : ""}`} />
           </div>
         </div>
 
