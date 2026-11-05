@@ -13,6 +13,8 @@ import { cn } from "@/lib/utils";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
 import { ReviewStickyCta } from "@/components/review-sticky-cta";
+import { ProviderGallery } from "@/components/provider-gallery";
+import { getGallery } from "@/data/provider-gallery";
 import { SiblingLinks, CATEGORY_LABEL, reviewSiblings, comparisonSiblings, articleSiblings, pickSiblings } from "@/components/sibling-links";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { TrustpilotSummary } from "@/components/trustpilot-summary";
@@ -735,6 +737,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // provider's own review page. Bold segments render emphasized. Keyed by
   // provider id so only providers with a confirmed standing offer show one.
   const reviewPromo = REVIEW_PROMOS[provider.id];
+  const gallery = getGallery(provider.id);
   const trustStrip = REVIEW_TRUST_STRIP[provider.id];
   const showcase = HOW_IT_WORKS_SHOWCASE[provider.id];
 
@@ -1041,6 +1044,13 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         <div className="mb-8">
           <ReadableProse text={review.reviewIntro} paragraphClassName="text-[16px] leading-[1.8] text-gray-600" />
         </div>
+
+        {/* Dated screenshots of the provider's own site (Nov 5, 2026). Renders
+            only for providers with a gallery; price slides self-hide when the
+            price index moves. */}
+        {gallery && (
+          <ProviderGallery providerName={provider.name} gallery={gallery} pageUrl={canonicalUrl(ctx, `/reviews/${slug}`)} />
+        )}
 
         {/* Is [brand] legit? - trust block for the "is X legit" query cluster */}
         {legit && (
