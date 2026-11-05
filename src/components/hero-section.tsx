@@ -25,7 +25,7 @@ export function HeroSection({
   maxTextWidth = "640px",
 }: HeroSectionProps) {
   return (
-    <section className="relative w-full min-h-[190px] py-3 sm:py-0 sm:h-[270px] lg:h-[300px] overflow-hidden bg-[#f5f5f7]">
+    <section className="relative w-full min-h-[190px] py-3 sm:py-0 sm:min-h-[270px] lg:min-h-[300px] overflow-hidden bg-[#f5f5f7]">
       {/* Hero image positioned on the right (omitted when no image is set) */}
       {backgroundImageUrl && (
         <div className="absolute right-[380px] top-0 h-full w-[50%] hidden sm:block">
@@ -51,11 +51,15 @@ export function HeroSection({
       {/* Content */}
       <div
         className={cn(
-          "relative z-10 mx-auto flex h-full max-w-[1280px] flex-col justify-center px-4 py-3 sm:px-10 sm:py-8 lg:px-16 lg:py-12",
+          "relative z-10 mx-auto flex min-h-[inherit] max-w-[1280px] flex-col justify-center px-4 py-3 sm:px-10 sm:py-8 lg:px-16 lg:py-12",
           textAlign === "center" && "items-center text-center"
         )}
       >
-        <div className="max-w-[640px] lg:max-w-[900px]" style={{ maxWidth: maxTextWidth !== "640px" ? maxTextWidth : undefined }}>
+        {/* With a hero image the text column stops short of it, so no line
+            runs over the photo (Nov 5, 2026: the hair-loss subtitle sat on the
+            model's dark shoulder). The section grows with its text instead of
+            clipping at a fixed height. */}
+        <div className={backgroundImageUrl ? "max-w-[640px] lg:max-w-[600px]" : "max-w-[640px] lg:max-w-[900px]"} style={{ maxWidth: maxTextWidth !== "640px" ? maxTextWidth : undefined }}>
           {updatedLabel && (
             <span className="mb-2.5 sm:mb-5 inline-flex items-center gap-1.5 text-[13px] text-gray-600">
               <svg className="h-4 w-4 text-green-500" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
@@ -63,7 +67,7 @@ export function HeroSection({
             </span>
           )}
 
-          <h1 className="text-[22px] sm:text-[28px] lg:text-[30px] leading-[1.12] font-extrabold text-[#191919] lg:whitespace-nowrap">
+          <h1 className={`text-[22px] sm:text-[28px] lg:text-[30px] leading-[1.12] font-extrabold text-[#191919] ${backgroundImageUrl ? "" : "lg:whitespace-nowrap"}`}>
             {h1}
           </h1>
 
