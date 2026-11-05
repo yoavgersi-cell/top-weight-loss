@@ -382,6 +382,13 @@ export default async function StatisticsPage() {
             2022) for tirzepatide 15mg; SCALE (Pi-Sunyer et al., <em>NEJM</em>, 2015) for liraglutide
             3mg; SUSTAIN program for semaglutide 2mg. Figures are trial averages; individual results vary.
           </p>
+          <p className="mt-3 text-[14px] text-gray-700">
+            What these averages mean in pounds, who reaches 10% or 20%, and the head-to-head result:{" "}
+            <Link href="/weight-loss/articles/glp1-weight-loss-results" className="font-semibold text-[#0C4B75] hover:underline">
+              GLP-1 weight loss results, trial by trial
+            </Link>
+            .
+          </p>
         </section>
 
         {/* Side Effects */}

@@ -146,6 +146,13 @@ const BATTLE_COST_MATH: Record<
 };
 
 const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+  // Nov 5, 2026 keyword pass: searches are "eden semaglutide" / "embody glp-1",
+  // so the snippet names the molecules. Prices are the verified index figures.
+  "eden-vs-embody": {
+    title: "Eden vs embody (2026): GLP-1 Semaglutide & Tirzepatide",
+    description:
+      "Eden semaglutide ($99/mo) and tirzepatide ($129/mo), flat every month with 24/7 support, vs embody GLP-1 ($49/$99, 1-2 day shipping), compared.",
+  },
   "embody-vs-sprout": {
     title: "embody vs Sprout (2026): $49 vs $99 GLP-1 Compared",
     description:

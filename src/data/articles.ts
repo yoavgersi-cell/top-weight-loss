@@ -6,6 +6,8 @@ import { glp1MuscleLossArticle } from "./glp1-muscle-loss";
 import { nextGenWeightLossDrugsArticle } from "./next-generation-weight-loss-drugs";
 import { glp1Coverage2027Article } from "./glp1-coverage-2027";
 import { glp1ProvidersSameCompanyArticle } from "./glp1-providers-same-company";
+import { glp1WeightLossResultsArticle } from "./glp1-weight-loss-results";
+import { howToStartGlp1OnlineArticle } from "./how-to-start-glp1-online";
 import { trueCostTable, budgetList } from "@/lib/true-cost";
 
 export interface Article {
@@ -2754,4 +2756,6 @@ export const articles: Article[] = [
   nextGenWeightLossDrugsArticle,
   glp1Coverage2027Article,
   glp1ProvidersSameCompanyArticle,
+  glp1WeightLossResultsArticle,
+  howToStartGlp1OnlineArticle,
 ];

@@ -77,6 +77,16 @@ export const WEIGHT_LOSS_GUIDES: GuideLink[] = [
     blurb: "The dated price index, change log, and clinical-trial results.",
   },
   {
+    slug: "articles/glp1-weight-loss-results",
+    title: "GLP-1 Weight Loss Results",
+    blurb: "How much weight people lose on semaglutide and tirzepatide, from the published trials.",
+  },
+  {
+    slug: "articles/how-to-start-glp1-treatment-online",
+    title: "How to Start GLP-1 Treatment Online",
+    blurb: "The intake process step by step, with screenshots of real provider sites.",
+  },
+  {
     slug: "semaglutide",
     title: "Best Semaglutide Providers",
     blurb: "Who prescribes semaglutide online and what each one charges.",
