@@ -10,7 +10,7 @@ import { useNavPrefix } from "@/lib/nav-prefix";
 import { CHATBOT_NAME, CHAT_FLOWS, type ChatFlow, type ChatMatch, type ChatOption } from "@/lib/chatbot";
 
 // ───── Chat helper ─────
-// A small, friendly guide in the corner: a smiling launcher bubble that opens
+// A small, friendly guide in the corner: a smiling little bot that opens
 // a chat-style panel. One question at a time, tap-to-answer chips, and a
 // provider match at the end with verified prices (see src/lib/chatbot.ts).
 //   Mobile: a bottom sheet (85% of the screen), scroll-locked page behind.
@@ -30,29 +30,38 @@ type MsgBody =
   | { from: "tip"; text: string; href?: string; linkLabel?: string };
 type Msg = MsgBody & { id: number };
 
-// ── The mascot: a round, smiling face with a little sprout ──
+// ── The mascot: a friendly little bot with a smiling visor ──
+// Happy closed-eye arcs and a smile on a dark visor, a soft white head in
+// the site's blue outline, rosy cheeks, and an antenna light that glows.
 export function HelperFace({ className = "" }: { className?: string }) {
   const gid = useId().replace(/:/g, "");
   return (
     <svg viewBox="0 0 64 64" className={className} aria-hidden="true">
       <defs>
-        <linearGradient id={`pip-g-${gid}`} x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#2E93CF" />
-          <stop offset="1" stopColor="#0C4B75" />
+        <linearGradient id={`pip-head-${gid}`} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#FFFFFF" />
+          <stop offset="1" stopColor="#DDEBF5" />
+        </linearGradient>
+        <linearGradient id={`pip-visor-${gid}`} x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#16679E" />
+          <stop offset="1" stopColor="#0A3756" />
         </linearGradient>
       </defs>
-      <path d="M32 13c0-5 4-8.5 9.5-8.5-.4 5.4-4.3 8.5-9.5 8.5Z" fill="#5BD59A" />
-      <path d="M32 13c0-4-3-6.5-7-6.5.3 4 3.2 6.5 7 6.5Z" fill="#3FBF80" />
-      <circle cx="32" cy="36" r="25" fill={`url(#pip-g-${gid})`} />
+      <line x1="32" y1="12" x2="32" y2="6" stroke="#0C4B75" strokeWidth="2.4" strokeLinecap="round" />
+      <circle className="pip-light" cx="32" cy="5.2" r="3.4" fill="#3FD3A0" />
+      <circle cx="31" cy="4.2" r="1" fill="#fff" opacity=".85" />
+      <rect x="4.5" y="25" width="6" height="14" rx="3" fill="#0C4B75" />
+      <rect x="53.5" y="25" width="6" height="14" rx="3" fill="#0C4B75" />
+      <rect x="8" y="12" width="48" height="43" rx="17" fill={`url(#pip-head-${gid})`} stroke="#0C4B75" strokeWidth="2.4" />
+      <rect x="14" y="18.5" width="36" height="25" rx="11" fill={`url(#pip-visor-${gid})`} />
+      <path d="M17.5 22.5q4-2.6 9-2.2" fill="none" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" opacity=".25" />
       <g className="pip-eyes">
-        <ellipse cx="23.5" cy="33" rx="3.4" ry="4" fill="#fff" />
-        <ellipse cx="40.5" cy="33" rx="3.4" ry="4" fill="#fff" />
-        <circle cx="24.3" cy="34" r="1.7" fill="#0B2F4A" />
-        <circle cx="41.3" cy="34" r="1.7" fill="#0B2F4A" />
+        <path d="M20.5 30.5q3.5-4.5 7 0" fill="none" stroke="#5CF2C9" strokeWidth="3" strokeLinecap="round" />
+        <path d="M36.5 30.5q3.5-4.5 7 0" fill="none" stroke="#5CF2C9" strokeWidth="3" strokeLinecap="round" />
       </g>
-      <circle cx="17" cy="42" r="3.6" fill="#FF9AAE" opacity=".6" />
-      <circle cx="47" cy="42" r="3.6" fill="#FF9AAE" opacity=".6" />
-      <path d="M23 42.5c5 6 13 6 18 0" fill="none" stroke="#fff" strokeWidth="3.2" strokeLinecap="round" />
+      <path d="M27 35.5q5 4.5 10 0" fill="none" stroke="#5CF2C9" strokeWidth="2.6" strokeLinecap="round" />
+      <circle cx="17" cy="48.5" r="2.5" fill="#FF9AAE" opacity=".75" />
+      <circle cx="47" cy="48.5" r="2.5" fill="#FF9AAE" opacity=".75" />
     </svg>
   );
 }
