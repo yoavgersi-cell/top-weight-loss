@@ -15,7 +15,7 @@ import { PRICE_INDEX, priceValue } from "@/lib/price-index";
 import type { SiteConfig } from "@/lib/config";
 
 /** The helper's display name. One place to rename it. */
-export const CHATBOT_NAME = "Pip";
+export const CHATBOT_NAME = "Lily";
 
 export type ChatOption = {
   id: string;
