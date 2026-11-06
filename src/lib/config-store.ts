@@ -80,7 +80,14 @@ async function getVerticalConfig(vertical: string): Promise<SiteConfig> {
       const res = await fetch(blobs[0].url, { cache: "no-store" });
       if (res.ok) {
         const saved = (await res.json()) as Partial<SiteConfig>;
-        return normalizeBrandCasing({ ...base, ...saved }, `/${vertical}`);
+        // Articles added in code after the last CMS save still ship: the
+        // saved list wins for slugs it has, and new seed articles append.
+        const savedArticles = saved.articles ?? [];
+        const savedSlugs = new Set(savedArticles.map((a) => a.slug));
+        const articles = saved.articles
+          ? [...savedArticles, ...(base.articles ?? []).filter((a) => !savedSlugs.has(a.slug))]
+          : base.articles;
+        return normalizeBrandCasing({ ...base, ...saved, articles }, `/${vertical}`);
       }
     }
   } catch {
