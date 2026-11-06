@@ -4726,6 +4726,7 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
               // illustrated intake guide (figures built from the gallery data).
               "glp1-weight-loss-results",
               "how-to-start-glp1-treatment-online",
+              "glp1-and-alcohol",
               // Internal links in these were pointed at a retired battle slug;
               // the fix lives in code and must not be shadowed by the snapshot.
               "noom-weight-loss-review",

@@ -35,7 +35,14 @@ import { GuideCluster, ED_GUIDES } from "@/components/guide-cluster";
 // than after the second section (operator request, Nov 6, 2026: the
 // trend articles, one per category). On weight loss the block replaces the
 // "top 2 picks" opener and the product carousel moves down to make room.
-const MID_TOP_THREE_SLUGS = new Set<string>([]);
+const MID_TOP_THREE_SLUGS = new Set<string>([
+  "glp1-and-alcohol",
+  "glp1-hair-loss",
+  "online-trt-dea-deadline-2026",
+  "estrogen-patch-shortage",
+  "does-medicare-cover-online-therapy",
+  "fastest-acting-ed-treatments",
+]);
 
 // Code-side CTR overrides for high-impression articles whose stored meta lives
 // in the CMS blob (so it can't be tuned from the content files). Applied only

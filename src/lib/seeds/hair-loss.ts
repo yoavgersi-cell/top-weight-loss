@@ -9,6 +9,7 @@ import type {
 } from "../config";
 import { HAIR_LOSS_ARTICLES_2026_10 } from "./hair-loss-articles-2026-10";
 import { HL_PIPELINE_ARTICLE } from "./hair-loss-articles/new-hair-loss-treatments-pipeline";
+import { HL_GLP1_HAIR_LOSS } from "./hair-loss-articles/glp1-hair-loss";
 import {
   HAIR_LOSS_PROVIDERS_PORTED,
   HAIR_LOSS_REVIEWS_PORTED,
@@ -2601,6 +2602,6 @@ export function hairLossSeed(base: SiteConfig): SiteConfig {
     reviews: [...reviews, ...HAIR_LOSS_REVIEWS_PORTED],
     battles: [...battles, ...HAIR_LOSS_BATTLES_PORTED],
     faqs: [...faqs, ...HAIR_LOSS_FAQS_PORTED],
-    articles: [...articles, ...HAIR_LOSS_GUIDES_PORTED, ...HAIR_LOSS_ARTICLES_2026_10, HL_PIPELINE_ARTICLE],
+    articles: [...articles, ...HAIR_LOSS_GUIDES_PORTED, ...HAIR_LOSS_ARTICLES_2026_10, HL_PIPELINE_ARTICLE, HL_GLP1_HAIR_LOSS],
   };
 }
