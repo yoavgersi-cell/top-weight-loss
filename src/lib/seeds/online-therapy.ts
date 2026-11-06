@@ -8,6 +8,7 @@ import type {
 } from "../config";
 import { ONLINE_THERAPY_ARTICLES_2026_10 } from "./online-therapy-articles-2026-10";
 import { OT_TELEHEALTH_CONTROLLED } from "./online-therapy-articles/telehealth-controlled-substances";
+import { OT_MEDICARE_ONLINE_THERAPY } from "./online-therapy-articles/medicare-online-therapy";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Online Therapy vertical
@@ -1395,7 +1396,7 @@ export function onlineTherapySeed(base: SiteConfig): SiteConfig {
     },
     reviews,
     battles,
-    articles: [...articles, ...ONLINE_THERAPY_ARTICLES_2026_10, OT_TELEHEALTH_CONTROLLED],
+    articles: [...articles, ...ONLINE_THERAPY_ARTICLES_2026_10, OT_TELEHEALTH_CONTROLLED, OT_MEDICARE_ONLINE_THERAPY],
     faqs,
   };
 }

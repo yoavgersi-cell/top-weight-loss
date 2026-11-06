@@ -8,6 +8,7 @@ import { glp1Coverage2027Article } from "./glp1-coverage-2027";
 import { glp1ProvidersSameCompanyArticle } from "./glp1-providers-same-company";
 import { glp1WeightLossResultsArticle } from "./glp1-weight-loss-results";
 import { howToStartGlp1OnlineArticle } from "./how-to-start-glp1-online";
+import { glp1AndAlcoholArticle } from "./glp1-and-alcohol";
 import { trueCostTable, budgetList } from "@/lib/true-cost";
 
 export interface Article {
@@ -2758,4 +2759,5 @@ export const articles: Article[] = [
   glp1ProvidersSameCompanyArticle,
   glp1WeightLossResultsArticle,
   howToStartGlp1OnlineArticle,
+  glp1AndAlcoholArticle,
 ];

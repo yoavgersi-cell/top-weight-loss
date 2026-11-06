@@ -31,6 +31,19 @@ import { notFound, permanentRedirect } from "next/navigation";
 import { relatedArticles as pickRelatedArticles } from "@/lib/related-content";
 import { GuideCluster, ED_GUIDES } from "@/components/guide-cluster";
 
+// Guides whose top-3 provider cards sit in the middle of the article rather
+// than after the second section (operator request, Nov 6, 2026: the
+// trend articles, one per category). On weight loss the block replaces the
+// "top 2 picks" opener and the product carousel moves down to make room.
+const MID_TOP_THREE_SLUGS = new Set<string>([
+  "glp1-and-alcohol",
+  "glp1-hair-loss",
+  "online-trt-dea-deadline-2026",
+  "estrogen-patch-shortage",
+  "does-medicare-cover-online-therapy",
+  "fastest-acting-ed-treatments",
+]);
+
 // Code-side CTR overrides for high-impression articles whose stored meta lives
 // in the CMS blob (so it can't be tuned from the content files). Applied only
 // on the weight-loss vertical. Prices cited are the providers' real listed
@@ -349,13 +362,15 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // welludr plans carousel - and the provider card that follows it - right
   // after "Is welludr legit?" on its legit page).
   const CAROUSEL_AT: Record<string, number> = { "is-wellmedr-legit": 1 };
+  const midTopThree = MID_TOP_THREE_SLUGS.has(slug);
+  const midIndex = Math.max(0, Math.ceil(article.sections.length / 2) - 1);
   const carouselAt = Math.min(
-    CAROUSEL_AT[slug] ?? Math.max(0, Math.ceil(article.sections.length / 2) - 1),
+    CAROUSEL_AT[slug] ?? (midTopThree ? Math.max(0, article.sections.length - 2) : midIndex),
     Math.max(0, article.sections.length - 1),
   );
   const hrtCarouselAt = Math.max(0, Math.ceil(article.sections.length / 2) - 1);
-  let topThreeAt = Math.min(1, article.sections.length - 1);
-  if (isHrtArticle && topThreeAt === hrtCarouselAt && topThreeAt > 0) topThreeAt = 0;
+  let topThreeAt = midTopThree ? midIndex : Math.min(1, article.sections.length - 1);
+  if (isHrtArticle && topThreeAt === hrtCarouselAt && topThreeAt > 0) topThreeAt = midTopThree ? topThreeAt + 1 : 0;
   const showTopProvidersCro = isWeightLoss && TOP_PROVIDERS_CRO_SLUGS.has(slug);
 
   // The tirzepatide buyer guide is tuned as a topic page (Oct 2026 CRO pass):
@@ -442,7 +457,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // ranking two other providers made no sense on a page about what one
   // provider costs.
   const showTopTwo =
-    isWeightLoss && !showTopProvidersCro && !showPartnerCro && !/^is-.+-legit$/.test(slug) && !/-cost$/.test(slug);
+    isWeightLoss && !midTopThree && !showTopProvidersCro && !showPartnerCro && !/^is-.+-legit$/.test(slug) && !/-cost$/.test(slug);
 
   // Byline author: match the article's author to a team member, else the lead
   const author = experts.find((e) => e.name === article.author) ?? experts[0];
@@ -820,6 +835,16 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 {/* Non-weight-loss guides: the vertical's top 3 ranked provider
                     cards between sections (operator request, Nov 3, 2026) -
                     after the second section, or the first on short guides. */}
+                {isWeightLoss && midTopThree && i === topThreeAt && (
+                  <TopProvidersBlock
+                    config={config}
+                    linkPrefix={ctx.prefix}
+                    limit={3}
+                    introMode="short"
+                    title="Our top 3 GLP-1 providers"
+                    subtitle="Our highest-ranked providers - the same cards, scores and verified prices as our full comparison."
+                  />
+                )}
                 {topThreeVertical && i === topThreeAt && (
                   <TopProvidersBlock
                     config={config}

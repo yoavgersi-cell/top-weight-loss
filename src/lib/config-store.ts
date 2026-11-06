@@ -80,7 +80,14 @@ async function getVerticalConfig(vertical: string): Promise<SiteConfig> {
       const res = await fetch(blobs[0].url, { cache: "no-store" });
       if (res.ok) {
         const saved = (await res.json()) as Partial<SiteConfig>;
-        return normalizeBrandCasing({ ...base, ...saved }, `/${vertical}`);
+        // Articles added in code after the last CMS save still ship: the
+        // saved list wins for slugs it has, and new seed articles append.
+        const savedArticles = saved.articles ?? [];
+        const savedSlugs = new Set(savedArticles.map((a) => a.slug));
+        const articles = saved.articles
+          ? [...savedArticles, ...(base.articles ?? []).filter((a) => !savedSlugs.has(a.slug))]
+          : base.articles;
+        return normalizeBrandCasing({ ...base, ...saved, articles }, `/${vertical}`);
       }
     }
   } catch {
@@ -4719,6 +4726,7 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
               // illustrated intake guide (figures built from the gallery data).
               "glp1-weight-loss-results",
               "how-to-start-glp1-treatment-online",
+              "glp1-and-alcohol",
               // Internal links in these were pointed at a retired battle slug;
               // the fix lives in code and must not be shadowed by the snapshot.
               "noom-weight-loss-review",
