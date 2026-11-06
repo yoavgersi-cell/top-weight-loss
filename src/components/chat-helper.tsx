@@ -15,8 +15,8 @@ import { CHATBOT_NAME, CHAT_FLOWS, type ChatFlow, type ChatMatch, type ChatOptio
 // provider match at the end with verified prices (see src/lib/chatbot.ts).
 //   Mobile: a bottom sheet (85% of the screen), scroll-locked page behind.
 //   Desktop: a 384px card above the launcher, page stays usable.
-// Quiet by design: a single teaser bubble once per session after a few
-// seconds, dismissible; nothing opens by itself. Sits above the review
+// Quiet by design: a single teaser bubble once per session (10 seconds in,
+// or after a 40% scroll), dismissible; nothing opens by itself. Sits above the review
 // pages' sticky CTA (z-30) and below promo modals (z-70).
 
 const NOT_WEIGHT_LOSS = new Set(["hub", "reviewers", "medical-review-policy", "uk"]);
@@ -265,18 +265,53 @@ export function ChatHelper({ matches, verifiedLabel }: { matches: Record<string,
     say([...reply, ...next.say.map((text) => ({ from: "bot" as const, text }))], () => setStepId(next.id));
   };
 
-  // Teaser: once per session, a few seconds in, never over an open panel.
+  // Teaser: the common chat-widget pattern - wait for a sign of interest,
+  // then say hello once. It shows after 10 seconds on the site, or earlier
+  // once the reader has scrolled 40% of a page (but never in the first 5
+  // seconds). Once per session; never once Lily has been opened (opening
+  // her before the timer used to leave the hello to pop up after closing);
+  // and it waits while another popup is on screen.
   useEffect(() => {
     if (!flow) return;
-    let seen = false;
-    try {
-      seen = !!sessionStorage.getItem(TEASER_KEY);
-    } catch {
-      seen = false;
+    const seenNow = () => {
+      try {
+        return !!sessionStorage.getItem(TEASER_KEY);
+      } catch {
+        return false;
+      }
+    };
+    if (seenNow()) return;
+    const start = Date.now();
+    let done = false;
+    const otherPopupOpen = () =>
+      [...document.querySelectorAll<HTMLElement>('[role="dialog"]')].some(
+        (el) => !el.dataset.chatHelper && getComputedStyle(el).opacity !== "0" && el.getBoundingClientRect().height > 0,
+      );
+    const tryShow = () => {
+      if (done) return;
+      if (started.current || seenNow()) {
+        done = true;
+        stop();
+        return;
+      }
+      if (otherPopupOpen()) return; // try again on the next tick
+      done = true;
+      stop();
+      setTeaser(true);
+    };
+    const tick = window.setInterval(() => {
+      if (Date.now() - start >= 10000) tryShow();
+    }, 1000);
+    const onScroll = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      if (max > 0 && window.scrollY / max >= 0.4 && Date.now() - start >= 5000) tryShow();
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    function stop() {
+      window.clearInterval(tick);
+      window.removeEventListener("scroll", onScroll);
     }
-    if (seen) return;
-    const t = window.setTimeout(() => setTeaser(true), 7000);
-    return () => window.clearTimeout(t);
+    return stop;
   }, [flow]);
 
   const dismissTeaser = () => {
@@ -351,6 +386,7 @@ export function ChatHelper({ matches, verifiedLabel }: { matches: Record<string,
         <div
           ref={panel}
           role="dialog"
+          data-chat-helper="1"
           aria-modal="false"
           aria-labelledby={titleId}
           tabIndex={-1}
