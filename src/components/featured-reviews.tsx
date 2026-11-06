@@ -1,3 +1,4 @@
+import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import { Star } from "lucide-react";
 import type { ProviderReviewRecord } from "@/data/reviews/types";
 import { REVIEW_THEMES, THEME_CATEGORY_LABELS, resolveFeatured, type ThemeCategory } from "@/data/reviews/themes";
@@ -39,7 +40,7 @@ export function FeaturedReviews({
   className?: string;
 }) {
   const themes = REVIEW_THEMES[record.providerId];
-  if (!themes) return null;
+  if (!themes || !SHOW_TRUSTPILOT_WIDGETS) return null;
   const featured = resolveFeatured(record, themes);
   if (featured.length < MIN_FEATURED) return null;
   const total = record.batches.reduce((n, b) => n + b.reviews.length, 0);

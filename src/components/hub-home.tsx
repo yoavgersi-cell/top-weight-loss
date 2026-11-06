@@ -1,3 +1,4 @@
+import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import { pageReviewSchema } from "@/data/reviewers";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { Fragment } from "react";
@@ -283,7 +284,7 @@ function ProviderMiniCard({
         </div>
       </div>
 
-      {provider.trustpilotRating ? (
+      {SHOW_TRUSTPILOT_WIDGETS && provider.trustpilotRating ? (
         <div className="mt-3 flex items-center gap-1.5 text-[12.5px] text-gray-500">
           <Star className="h-3.5 w-3.5" style={{ fill: tpStarColor(parseFloat(provider.trustpilotRating)), color: tpStarColor(parseFloat(provider.trustpilotRating)) }} strokeWidth={0} />
           <span className="font-bold text-gray-800">{provider.trustpilotRating}</span>

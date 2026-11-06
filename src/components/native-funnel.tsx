@@ -1,5 +1,6 @@
 "use client";
 
+import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import { useEffect, useMemo, useState } from "react";
 import { ArrowRight, Check, Loader2, Star } from "lucide-react";
 import { ProviderCta } from "@/components/provider-cta";
@@ -248,7 +249,7 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
               </p>
               {lead.trustpilot && (
                 <p className="flex items-center gap-1.5 whitespace-nowrap text-[12.5px] text-gray-600">
-                  <Stars rating={lead.trustpilot.rating} />
+                  {SHOW_TRUSTPILOT_WIDGETS && <Stars rating={lead.trustpilot.rating} />}
                   <strong className="text-[#191919]">{lead.trustpilot.rating}</strong>
                   <span className="text-gray-400">({lead.trustpilot.count})</span>
                 </p>

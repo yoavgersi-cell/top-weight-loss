@@ -1,3 +1,4 @@
+import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import type { Metadata } from "next";
 import { readableHeroColor } from "@/lib/hero-color";
 import { SiblingLinks, CATEGORY_LABEL, reviewSiblings, comparisonSiblings, articleSiblings, pickSiblings } from "@/components/sibling-links";
@@ -751,7 +752,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 {isTirzGuide && i === 1 && (
                   <>
                     <TirzepatidePriceTable providers={config.providers} linkPrefix={ctx.prefix} />
-                    {tirzReviews.length > 0 && (
+                    {SHOW_TRUSTPILOT_WIDGETS && tirzReviews.length > 0 && (
                       <div className="my-10">
                         <MixedTrustpilotCarousel
                           items={tirzReviews}
@@ -874,7 +875,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     carousel after the first section, Reddit carousel after the
                     second (or first, on very short articles). Verified data
                     only - providers without it simply render nothing. */}
-                {i === 0 && subjectTrustpilot && (
+                {SHOW_TRUSTPILOT_WIDGETS && i === 0 && subjectTrustpilot && (
                   <div className="my-10 space-y-3">
                     <TrustpilotSummary
                       providerName={subjectTrustpilot.name}

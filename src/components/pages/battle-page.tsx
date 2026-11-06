@@ -1,3 +1,4 @@
+import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import { pageReviewSchema } from "@/data/reviewers";
 import { SiblingLinks, CATEGORY_LABEL, reviewSiblings, comparisonSiblings, articleSiblings, pickSiblings } from "@/components/sibling-links";
 import { medicalWebPageFields } from "@/lib/medical-schema";
@@ -1084,7 +1085,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img src={provider.logo} alt={`${provider.name} logo`} className="max-h-full max-w-full object-contain" />
                           </div>
-                          {provider.trustpilotRating && (
+                          {SHOW_TRUSTPILOT_WIDGETS && provider.trustpilotRating && (
                             <div className="border-l border-gray-200 pl-4">
                               <TrustpilotRating
                                 rating={provider.trustpilotRating}
@@ -1261,7 +1262,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       )}
 
                       {/* This provider's Trustpilot reviews */}
-                      {reviewCount > 0 && (
+                      {SHOW_TRUSTPILOT_WIDGETS && reviewCount > 0 && (
                         <div className="mb-8">
                           <h4 className="mb-4 text-[17px] font-bold text-[#191919]">
                             What real {provider.name} customers are saying
@@ -1392,16 +1393,16 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                     return (
                       <tr key={i} className="border-b border-gray-100 align-top">
                         <td
-                          className={`py-3 pr-2 text-[12.5px] leading-snug sm:py-3.5 sm:text-[14px] ${
+                          className={`[overflow-wrap:anywhere] py-3 pr-2 text-[12.5px] leading-snug sm:py-3.5 sm:text-[14px] ${
                             bestFor ? "font-semibold text-[#191919]" : "font-medium text-gray-500"
                           }`}
                         >
                           {row.feature}
                         </td>
-                        <td className={`py-3 px-2 text-[12.5px] leading-snug sm:py-3.5 sm:px-3 sm:text-[14.5px] ${value}`}>
+                        <td className={`[overflow-wrap:anywhere] py-3 px-2 text-[12.5px] leading-snug sm:py-3.5 sm:px-3 sm:text-[14.5px] ${value}`}>
                           {row.provider1Value}
                         </td>
-                        <td className={`py-3 pl-2 text-[12.5px] leading-snug sm:py-3.5 sm:pl-3 sm:text-[14.5px] ${value}`}>
+                        <td className={`[overflow-wrap:anywhere] py-3 pl-2 text-[12.5px] leading-snug sm:py-3.5 sm:pl-3 sm:text-[14.5px] ${value}`}>
                           {row.provider2Value}
                         </td>
                       </tr>

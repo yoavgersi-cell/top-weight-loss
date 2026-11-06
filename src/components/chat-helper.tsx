@@ -1,5 +1,6 @@
 "use client";
 
+import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -90,7 +91,7 @@ function MatchCard({ m, med }: { m: ChatMatch; med: string }) {
         )}
       </div>
       <div className="space-y-3 px-4 py-3">
-        {m.trustpilot && (
+        {SHOW_TRUSTPILOT_WIDGETS && m.trustpilot && (
           <p className="flex items-center gap-1.5 text-[13px] text-gray-700">
             <Star className="h-4 w-4 fill-[#00B67A] text-[#00B67A]" strokeWidth={0} />
             <span className="font-bold text-[#191919]">{m.trustpilot.rating}</span> on Trustpilot · {m.trustpilot.count} reviews

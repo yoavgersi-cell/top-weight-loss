@@ -1,3 +1,4 @@
+import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import type { TrustpilotReview } from "@/lib/config";
 import type { ProviderReviewRecord } from "@/data/reviews/types";
 import { formatReviewDate } from "@/data/reviews";
@@ -44,6 +45,7 @@ export function TrustpilotSummary({
   methodologyHref?: string;
   className?: string;
 }) {
+  if (!SHOW_TRUSTPILOT_WIDGETS) return null;
   const n = reviews.length;
   if (n === 0) return null;
   const dist = [5, 4, 3, 2, 1].map((s) => ({ star: s, count: reviews.filter((r) => r.rating === s).length }));

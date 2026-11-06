@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowBigUp, MessageSquare } from "lucide-react";
+import { ExpandableText } from "./expandable-text";
 
 // ───── Verified Reddit community feedback ─────
 // Single source of truth for real Reddit material, shared by the review pages
@@ -652,20 +653,24 @@ function ThreadCard({
         <p className="mb-1.5 text-[14px] font-bold leading-snug text-[#191919]">{thread.title}</p>
       )}
 
-      <div className="space-y-2">
-        {thread.body.slice(0, 2).map((p, i) => (
-          <p key={i} className="text-[13px] leading-relaxed text-gray-800">
-            {p}
-          </p>
-        ))}
-      </div>
-
-      {thread.replies && thread.replies.length > 0 && (
-        <div className="mt-3 border-l-2 border-gray-200 pl-3">
-          <p className="text-[11.5px] font-semibold text-gray-500">u/{thread.replies[0].author}</p>
-          <p className="mt-0.5 text-[12.5px] leading-relaxed text-gray-700">{thread.replies[0].body}</p>
+      {/* Long posts are capped with a "Read more" so one thread can't
+          stretch the whole row (operator request, Nov 6, 2026). */}
+      <ExpandableText>
+        <div className="space-y-2">
+          {thread.body.slice(0, 2).map((p, i) => (
+            <p key={i} className="text-[13px] leading-relaxed text-gray-800">
+              {p}
+            </p>
+          ))}
         </div>
-      )}
+
+        {thread.replies && thread.replies.length > 0 && (
+          <div className="mt-3 border-l-2 border-gray-200 pl-3">
+            <p className="text-[11.5px] font-semibold text-gray-500">u/{thread.replies[0].author}</p>
+            <p className="mt-0.5 text-[12.5px] leading-relaxed text-gray-700">{thread.replies[0].body}</p>
+          </div>
+        )}
+      </ExpandableText>
 
       {/* Footer - counts only when the screenshot captured them */}
       <div className="mt-auto flex items-center gap-4 pt-3 text-[12px] font-semibold text-gray-500">
