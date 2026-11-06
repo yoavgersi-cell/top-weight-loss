@@ -8,7 +8,7 @@ interface ProviderCtaProps {
   providerSlug: string;
   position?: number;
   pageType: "listing" | "review" | "battle" | "quiz_results" | "comparison";
-  sourceFlow: "main_comparison" | "provider_review" | "battle_page" | "matching_flow" | "provider_comparison";
+  sourceFlow: "main_comparison" | "provider_review" | "battle_page" | "matching_flow" | "provider_comparison" | "chat_helper";
   className: string;
   children: React.ReactNode;
 }

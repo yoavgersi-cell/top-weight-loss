@@ -1121,7 +1121,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                   <Link
                     key={c.href}
                     href={c.href}
-                    className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
+                    className="flex min-w-0 items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-semibold text-[#0C4B75] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
                   >
                     <span className="truncate">{c.label}</span>
                     <ArrowRight className="ml-auto h-3.5 w-3.5 shrink-0" strokeWidth={2} />

@@ -55,7 +55,7 @@ export function trackProviderClick(params: {
   provider_slug: string;
   provider_position?: number;
   page_type: "listing" | "review" | "battle" | "quiz_results" | "comparison";
-  source_flow: "main_comparison" | "provider_review" | "battle_page" | "matching_flow" | "provider_comparison";
+  source_flow: "main_comparison" | "provider_review" | "battle_page" | "matching_flow" | "provider_comparison" | "chat_helper";
 }) {
   trackEvent("ProviderClick", {
     ...params,

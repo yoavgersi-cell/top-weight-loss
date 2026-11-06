@@ -4,6 +4,8 @@ import { Footer } from "@/components/footer";
 import { PriceTicker, type TickerItem } from "@/components/price-ticker";
 import { getConfig } from "@/lib/config-store";
 import { PRICE_INDEX, PRICE_INDEX_VERIFIED } from "@/lib/price-index";
+import { ChatHelper } from "@/components/chat-helper";
+import { buildChatMatches } from "@/lib/chatbot";
 
 // Ticker items: each indexed provider's verified starting price, in the
 // weight-loss ranking order (providers the ranking doesn't list follow in
@@ -32,6 +34,7 @@ async function tickerItems(): Promise<TickerItem[]> {
 // chrome under /uk and never inherits this footer's US weight-loss drug links.
 export default async function MainLayout({ children }: { children: React.ReactNode }) {
   const items = await tickerItems();
+  const chatMatches = buildChatMatches(await getConfig("weight-loss"));
   const verified = new Date(PRICE_INDEX_VERIFIED).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
   return (
     <>
@@ -40,6 +43,7 @@ export default async function MainLayout({ children }: { children: React.ReactNo
       <PriceTicker items={items} verifiedLabel={`Prices verified ${verified}`} trackerHref="/weight-loss/glp1-price-changes" />
       <main className="flex-1">{children}</main>
       <Footer />
+      <ChatHelper matches={chatMatches} verifiedLabel={`Prices verified ${verified}`} />
     </>
   );
 }
