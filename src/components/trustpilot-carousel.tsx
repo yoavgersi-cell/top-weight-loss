@@ -1,5 +1,6 @@
 "use client";
 
+import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { TrustpilotReview } from "@/lib/config";
@@ -219,7 +220,7 @@ function ReviewPager({ cards }: { cards: { key: string; node: React.ReactNode }[
 export type MixedReviewItem = { review: TrustpilotReview; provider: ReviewCardProvider };
 
 export function MixedTrustpilotCarousel({ items, title, subtitle }: { items: MixedReviewItem[]; title: string; subtitle?: string }) {
-  if (items.length === 0) return null;
+  if (items.length === 0 || !SHOW_TRUSTPILOT_WIDGETS) return null;
   return (
     <div className="rounded-2xl border border-gray-200 bg-gray-50/50 p-5 sm:p-6">
       <div className="mb-5 flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
@@ -239,7 +240,12 @@ export function MixedTrustpilotCarousel({ items, title, subtitle }: { items: Mix
   );
 }
 
-export function TrustpilotCarousel({
+export function TrustpilotCarousel(props: Parameters<typeof TrustpilotCarouselView>[0]) {
+  if (!SHOW_TRUSTPILOT_WIDGETS) return null;
+  return <TrustpilotCarouselView {...props} />;
+}
+
+function TrustpilotCarouselView({
   providerName,
   providerLogo,
   reviews,

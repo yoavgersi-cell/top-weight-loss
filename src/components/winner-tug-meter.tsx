@@ -1,5 +1,6 @@
 "use client";
 
+import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import { useEffect, useRef, useState } from "react";
 import { Trophy, ArrowRight } from "lucide-react";
 import { ProviderCta } from "./provider-cta";
@@ -129,7 +130,7 @@ export function WinnerTugMeter({
             <span className="font-bold uppercase tracking-[0.06em]">Sources</span>
             <span className="text-gray-400">·</span>
             <span className="inline-flex items-center gap-1">
-              <TrustpilotStar className="h-3 w-3" />
+              {SHOW_TRUSTPILOT_WIDGETS && <TrustpilotStar className="h-3 w-3" />}
               Trustpilot reviews
             </span>
             <span className="text-gray-400">·</span>

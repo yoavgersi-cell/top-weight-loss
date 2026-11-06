@@ -1,3 +1,4 @@
+import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import Link from "next/link";
 import { ArrowUpRight, Star } from "lucide-react";
 import { ProviderCta } from "@/components/provider-cta";
@@ -36,7 +37,7 @@ function regularFrom(note: string): string | null {
 // own colour for that rating, the figure, and the review count.
 function TpBadge({ rating, count }: { rating: string; count?: string }) {
   const value = parseFloat(rating);
-  if (isNaN(value)) return null;
+  if (isNaN(value) || !SHOW_TRUSTPILOT_WIDGETS) return null;
   const color = tpStarColor(value);
   return (
     <span className="inline-flex items-center gap-1.5 whitespace-nowrap text-[12.5px] text-gray-500">
@@ -147,7 +148,7 @@ export function TirzepatidePriceTable({ providers, linkPrefix = "" }: { provider
               <th className="px-4 py-3">Provider</th>
               <th className="px-4 py-3">Monthly price</th>
               <th className="px-4 py-3">The condition</th>
-              <th className="px-4 py-3">Trustpilot</th>
+              {SHOW_TRUSTPILOT_WIDGETS && <th className="px-4 py-3">Trustpilot</th>}
               <th className="px-4 py-3" />
             </tr>
           </thead>
@@ -211,7 +212,9 @@ export function TirzepatidePriceTable({ providers, linkPrefix = "" }: { provider
               </div>
             </div>
             <div className="mt-3 flex items-center justify-between gap-3 border-t border-gray-100 pt-3">
-              {r.tpRating ? (
+              {!SHOW_TRUSTPILOT_WIDGETS ? (
+                <span />
+              ) : r.tpRating ? (
                 <TpBadge rating={r.tpRating} count={r.tpCount} />
               ) : (
                 <span className="text-[12px] text-gray-400">Trustpilot: not published</span>

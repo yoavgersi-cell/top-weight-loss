@@ -1,3 +1,4 @@
+import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -203,7 +204,7 @@ export default async function GoPage({ params }: { params: Promise<{ battleSlug:
       </section>
 
       {/* Verified customer quotes */}
-      {quotes.length > 0 && (
+      {SHOW_TRUSTPILOT_WIDGETS && quotes.length > 0 && (
         <section className="mx-auto max-w-[640px] px-4 pt-10">
           <h2 className="text-[20px] font-bold sm:text-[22px]">What customers wrote on Trustpilot</h2>
           <p className="mt-1 text-[13.5px] text-gray-500">Real reviews from the provider&rsquo;s public Trustpilot profile; names shortened.</p>

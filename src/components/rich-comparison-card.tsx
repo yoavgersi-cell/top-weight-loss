@@ -1,3 +1,4 @@
+import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import { Check, ArrowUpRight, Star, ShieldCheck, BadgeCheck } from "lucide-react";
 import Link from "next/link";
 import { ProviderCta } from "./provider-cta";
@@ -222,7 +223,7 @@ export function RichComparisonCard({
               >
                 Read full review
               </Link>
-              {product.trustpilotRating && (
+              {SHOW_TRUSTPILOT_WIDGETS && product.trustpilotRating && (
                 <div className="mt-0.5 flex items-center justify-center gap-1.5 border-t border-gray-200 pt-2 text-[11.5px] text-gray-500">
                   <Star className="h-3.5 w-3.5" style={{ fill: tpStarColor(parseFloat(product.trustpilotRating)), color: tpStarColor(parseFloat(product.trustpilotRating)) }} strokeWidth={0} />
                   <span className="font-bold text-gray-800">{product.trustpilotRating}</span>

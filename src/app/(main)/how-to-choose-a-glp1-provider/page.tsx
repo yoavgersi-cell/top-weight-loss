@@ -1,3 +1,4 @@
+import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import { pageReviewSchema } from "@/data/reviewers";
@@ -635,7 +636,7 @@ export default async function HowToChooseGlp1ProviderPage() {
                 <div key={r.id} className="rounded-xl border border-gray-200 bg-white p-4">
                   <div className="mb-2 flex items-center justify-between gap-3">
                     <Link href={`/weight-loss/reviews/${p.id}`} className="text-[15px] font-bold text-[#191919] hover:underline">{p.name}</Link>
-                    {hasAggregate ? (
+                    {!SHOW_TRUSTPILOT_WIDGETS ? null : hasAggregate ? (
                       <TrustpilotRating rating={p.trustpilotRating!} reviewCount={p.trustpilotReviewCount} starSize={15} />
                     ) : (
                       <span className="text-[12px] text-gray-400">No public aggregate verified</span>

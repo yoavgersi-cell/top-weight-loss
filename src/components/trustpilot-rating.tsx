@@ -1,3 +1,4 @@
+import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 // Compact Trustpilot trust signal: the star rating rendered visually (with
 // fractional fill, like Trustpilot's own widget) plus the review count and a
 // clear "Trustpilot" attribution. Intentionally shows NO numeric score - just
@@ -9,6 +10,7 @@ const TP_GREEN = "#00B67A";
 // 5-star review or a 4.3+ TrustScore is green, 3.8-4.2 light green, 2.8-3.7
 // yellow, 1.8-2.7 orange, below that red. Shared by every star renderer.
 export function tpStarColor(rating: number): string {
+  if (!SHOW_TRUSTPILOT_WIDGETS) return "#94A3B8";
   if (rating >= 4.3) return TP_GREEN;
   if (rating >= 3.8) return "#73CF11";
   if (rating >= 2.8) return "#FFCE00";
@@ -26,6 +28,8 @@ function TrustpilotStar({ className }: { className?: string }) {
 
 // Official Trustpilot star mark (green star with dark-green notch) + wordmark
 export function TrustpilotWordmark({ starClass = "h-[13px] w-[13px]", textClass = "text-[12px]" }: { starClass?: string; textClass?: string }) {
+  // Widgets hidden: a plain-text source name, no logo mark.
+  if (!SHOW_TRUSTPILOT_WIDGETS) return <span className={`${textClass} font-semibold text-gray-600`}>Trustpilot</span>;
   return (
     <span className="inline-flex items-center gap-1" aria-label="Trustpilot">
       <svg viewBox="0 0 1133 1080" className={starClass} aria-hidden="true">
@@ -73,7 +77,7 @@ export function TrustpilotRating({
   className?: string;
 }) {
   const value = parseFloat(rating);
-  if (isNaN(value)) return null;
+  if (isNaN(value) || !SHOW_TRUSTPILOT_WIDGETS) return null;
   const color = tpStarColor(value);
 
   return (
