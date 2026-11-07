@@ -62,6 +62,7 @@ export function TopProvidersBlock({
   priceNotes,
   introMode = "full",
   keepRankingNumbers = false,
+  hideRankNumbers = false,
 }: {
   config: SiteConfig;
   linkPrefix?: string;
@@ -84,6 +85,8 @@ export function TopProvidersBlock({
   /** Show each card's true ranking position instead of renumbering 1..N - for
    *  a single subject-provider card, where "1" would misstate its rank. */
   keepRankingNumbers?: boolean;
+  /** Hide the ordinal badge (single-provider cards on provider pages). */
+  hideRankNumbers?: boolean;
 }) {
   const { providerOrder, positions } = config.ranking;
 
@@ -117,6 +120,7 @@ export function TopProvidersBlock({
         trustpilotRating: provider.trustpilotRating,
         trustpilotReviewCount: provider.trustpilotReviewCount,
         priceNote: priceNotes?.[provider.id],
+        hideRank: hideRankNumbers,
       };
       return { product, review: (config.reviews ?? []).find((r) => r.providerId === provider.id) };
     })
