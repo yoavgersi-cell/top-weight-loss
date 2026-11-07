@@ -904,7 +904,9 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 )}
 
                 {/* Subject provider's own ranking card after its Reddit block
-                    (operator request, Oct 31, 2026), with its true rank number. */}
+                    (operator request, Oct 31, 2026). No ordinal badge on these
+                    single-provider cards (operator request, Nov 7, 2026); the
+                    true rank still goes to click tracking. */}
                 {subjectCardPlacement === "afterReddit" && subjectProvider && i === Math.min(1, article.sections.length - 1) && (
                   <TopProvidersBlock
                     config={config}
@@ -912,6 +914,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     limit={1}
                     providerIds={[subjectProvider.id]}
                     keepRankingNumbers
+                    hideRankNumbers
                     introMode="short"
                     title={`${subjectProvider.name} at a glance`}
                     subtitle="The same card, verified pricing and ratings as our full comparison."
@@ -973,6 +976,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                       limit={1}
                       providerIds={[subjectProvider.id]}
                       keepRankingNumbers
+                      hideRankNumbers
                       introMode="short"
                       title={`${subjectProvider.name} at a glance`}
                       subtitle="The same card, verified pricing and ratings as our full comparison."

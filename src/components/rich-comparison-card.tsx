@@ -13,6 +13,8 @@ export interface RichCardProduct {
   highlights: string[];
   affiliateUrl: string;
   rank: number;
+  /** Single-provider cards (provider pages): no ordinal badge, operator request Nov 7, 2026. */
+  hideRank?: boolean;
   rating: number;
   ratingLabel: string;
   starRating?: number;
@@ -75,9 +77,11 @@ export function RichComparisonCard({
         {/* ── Header: rank + logo, score box ── */}
         <div className="flex flex-row items-center justify-between gap-3 sm:gap-4">
           <div className="flex items-center gap-2.5 sm:gap-3.5">
-            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#191919] text-[12px] font-extrabold text-white sm:h-8 sm:w-8 sm:text-[13px]">
-              {product.rank}
-            </span>
+            {!product.hideRank && (
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#191919] text-[12px] font-extrabold text-white sm:h-8 sm:w-8 sm:text-[13px]">
+                {product.rank}
+              </span>
+            )}
             <div className="flex h-[38px] w-[120px] items-center sm:h-[46px] sm:w-[170px]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
