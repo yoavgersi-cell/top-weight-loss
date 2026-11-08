@@ -1,3 +1,4 @@
+import { RANKING_UPDATED_LABEL } from "../config";
 import type {
   SiteConfig,
   Provider,
@@ -1399,7 +1400,7 @@ export function trtSeed(base: SiteConfig): SiteConfig {
       backgroundImageUrl: "",
       imageAlt: "Testosterone replacement therapy options",
       // Oct 22, 2026: copy adopted from toptrt.io when its content was folded in.
-      updatedLabel: "Last Updated: October 2026",
+      updatedLabel: RANKING_UPDATED_LABEL,
       h1: "Best Online TRT Clinics of 2026",
       h2: "The top online testosterone replacement therapy providers, ranked and reviewed",
       description:

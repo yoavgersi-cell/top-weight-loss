@@ -100,7 +100,10 @@ async function getVerticalConfig(vertical: string): Promise<SiteConfig> {
         const articles = saved.articles
           ? [...savedArticles, ...(base.articles ?? []).filter((a) => !savedSlugs.has(a.slug))]
           : base.articles;
-        return normalizeBrandCasing({ ...base, ...saved, articles }, `/${vertical}`);
+        // The ranking date is code-authoritative (RANKING_UPDATED_LABEL), like
+        // the weight-loss hero text, so a CMS snapshot can't freeze it.
+        const hero = { ...base.hero, ...(saved.hero ?? {}), updatedLabel: base.hero.updatedLabel };
+        return normalizeBrandCasing({ ...base, ...saved, hero, articles }, `/${vertical}`);
       }
     }
   } catch {

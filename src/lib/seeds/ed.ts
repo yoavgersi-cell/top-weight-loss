@@ -1,3 +1,4 @@
+import { RANKING_UPDATED_LABEL } from "../config";
 import type { SiteConfig } from "../config";
 import { ED_GUIDES_2026_10 } from "./ed-guides-2026-10";
 import { ED_PILLAR_2026_10 } from "./ed-pillar-2026-10";
@@ -36,7 +37,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
     hero: {
       backgroundImageUrl: "",
       imageAlt: "Erectile dysfunction treatment options",
-      updatedLabel: "Last Updated: October 2026",
+      updatedLabel: RANKING_UPDATED_LABEL,
       h1: "Best Erectile Dysfunction (ED) Treatments Online 2026",
       h2: "The top online ED treatment providers, ranked and reviewed",
       description:

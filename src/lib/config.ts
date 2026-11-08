@@ -494,8 +494,13 @@ export interface SiteConfig {
 // the main lever for the "best telehealth weight loss / online GLP-1
 // providers" query cluster, which GSC shows getting zero impressions on this
 // page. The blob merge in config-store applies this over any CMS-saved hero.
+// The "Last Updated" line on every category's ranking page, in one place.
+// Operator-set when the rankings are reviewed (Nov 8, 2026); not computed
+// from the clock, so it only moves when someone actually updates it.
+export const RANKING_UPDATED_LABEL = "Last Updated: November 2026";
+
 export const WEIGHT_LOSS_HERO_TEXT = {
-  updatedLabel: "Last Updated: October 2026",
+  updatedLabel: RANKING_UPDATED_LABEL,
   h1: "Best GLP-1 Weight Loss Providers of 2026",
   h2: "The top online GLP-1 weight loss programs, ranked and verified",
   description:
