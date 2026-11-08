@@ -7,8 +7,8 @@ import type { ArticleData } from "../../config";
 // CMS fact sheet; the 2027 extension links the ABA summary of the
 // Consolidated Appropriations Act, 2026. Platform policies are each
 // company's own published statements and are labelled that way;
-// BetterHelp's Medicare status could not be confirmed from BetterHelp, so
-// the page says so. Consistent with the DEA guide
+// BetterHelp's insurance page (checked Nov 8, 2026) says Medicare, Medicaid
+// and TRICARE aren't accepted. Consistent with the DEA guide
 // (telehealth-controlled-substances-dea-rules-2026): the Medicare waiver runs
 // to Dec 31, 2027, the DEA flexibilities to Dec 31, 2026.
 
@@ -27,6 +27,7 @@ const S = {
   talkiatry: "https://www.talkiatry.com/help-center-articles/do-you-take-medicare-or-medicaid",
   headspace: "https://help.headspace.com/hc/en-us/articles/37974782380827",
   lifeline: "https://988lifeline.org/",
+  betterhelpIns: "https://www.betterhelp.com/insurance2026",
 };
 
 export const OT_MEDICARE_ONLINE_THERAPY: ArticleData = {
@@ -37,7 +38,7 @@ export const OT_MEDICARE_ONLINE_THERAPY: ArticleData = {
   category: "Advice",
   readTime: "7 min read",
   publishedAt: "2026-11-06",
-  updatedAt: "2026-11-06",
+  updatedAt: "2026-11-08",
   heroColor: "#EEF4EE",
   author: "Treatments Hub Research Team",
   keyTakeaways: [
@@ -65,7 +66,7 @@ export const OT_MEDICARE_ONLINE_THERAPY: ArticleData = {
 <tr><td><a href="/online-therapy/reviews/talkspace">Talkspace</a></td><td>Yes, in all 50 states and DC, ${ext(S.talkspace, "per Talkspace")}</td><td>Check your plan</td><td>Therapy only; Talkspace says psychiatry isn't yet covered under Original Medicare</td></tr>
 <tr><td><a href="/online-therapy/reviews/talkiatry">Talkiatry</a></td><td>Yes, ${ext(S.talkiatry, "per Talkiatry")}</td><td>Select plans, by state</td><td>Psychiatry and medication management; doesn't take Medicaid</td></tr>
 <tr><td><a href="/online-therapy/reviews/headspace">Headspace</a></td><td>No: not enrolled as a direct Medicare provider, ${ext(S.headspace, "per Headspace")}</td><td>In network with select plans</td><td>Check your Advantage plan's network</td></tr>
-<tr><td><a href="/online-therapy/reviews/betterhelp">BetterHelp</a></td><td>Not confirmed</td><td>Not confirmed</td><td>BetterHelp now takes some insurance (see <a href="/online-therapy/articles/does-betterhelp-take-insurance">our guide</a>), but we couldn't confirm Medicare from BetterHelp itself; use its eligibility check</td></tr>
+<tr><td><a href="/online-therapy/reviews/betterhelp">BetterHelp</a></td><td>No, ${ext(S.betterhelpIns, "per BetterHelp")}</td><td>No</td><td>BetterHelp takes some commercial insurance (see <a href="/online-therapy/articles/does-betterhelp-take-insurance">our guide</a>), but says Medicare, Medicaid and TRICARE aren't accepted</td></tr>
 </tbody></table><p>For private insurance, our guides to <a href="/online-therapy/articles/does-talkspace-take-insurance">Talkspace insurance</a> and <a href="/online-therapy/articles/online-therapy-that-takes-insurance">online therapy that takes insurance</a> go further.</p>`,
     },
     {

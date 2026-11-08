@@ -45,7 +45,11 @@ export function TrustpilotSummary({
   methodologyHref?: string;
   className?: string;
 }) {
-  if (!SHOW_TRUSTPILOT_WIDGETS) return null;
+  // With the Trustpilot widgets hidden (Nov 6, 2026) this still renders as a
+  // plain-text citation - the source named in words, no logo, colours, star
+  // bars or review cards (operator decision, Nov 8, 2026: the summary is a
+  // factual citation, and the paragraph AI engines quote for review queries).
+  const widgets = SHOW_TRUSTPILOT_WIDGETS;
   const n = reviews.length;
   if (n === 0) return null;
   const dist = [5, 4, 3, 2, 1].map((s) => ({ star: s, count: reviews.filter((r) => r.rating === s).length }));
@@ -72,7 +76,7 @@ export function TrustpilotSummary({
 
   return (
     <div className={`rounded-xl border border-gray-200 bg-white p-4 sm:p-5 ${className}`}>
-      <p className="text-[12px] font-bold uppercase tracking-wider text-gray-400">Trustpilot summary</p>
+      <p className="text-[12px] font-bold uppercase tracking-wider text-gray-400">{widgets ? "Trustpilot summary" : "Customer review summary"}</p>
       <p className="mt-1.5 text-[15px] leading-relaxed text-gray-800">
         {rating && reviewCount ? (
           <>
@@ -93,12 +97,13 @@ export function TrustpilotSummary({
             {" "}(reviews dated {fmt(range.from)} to {fmt(range.to)})
           </>
         )}
-        , {distText}: {pct(positive)}% rate it 4 or 5 stars and {pct(critical)}% rate it 1 or 2 stars. Reviewer names are shortened to first name and initial; every captured review, including the lowest-rated, is shown below.{" "}
+        , {distText}: {pct(positive)}% rate it 4 or 5 stars and {pct(critical)}% rate it 1 or 2 stars.{" "}
+        {widgets && <>Reviewer names are shortened to first name and initial; every captured review, including the lowest-rated, is shown below.{" "}</>}
         <a href={methodologyHref} className="text-[#0C4B75] underline underline-offset-2 hover:text-[#093d61]">
           How we collect customer reviews
         </a>
       </p>
-      <div className="mt-3 space-y-1">
+      {widgets && <div className="mt-3 space-y-1">
         {dist.map((d) => (
           <div key={d.star} className="flex items-center gap-2 text-[12px] text-gray-500">
             <span className="w-[42px] shrink-0 font-semibold text-gray-700">{d.star} star</span>
@@ -110,7 +115,7 @@ export function TrustpilotSummary({
             </span>
           </div>
         ))}
-      </div>
+      </div>}
     </div>
   );
 }

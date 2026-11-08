@@ -875,7 +875,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     carousel after the first section, Reddit carousel after the
                     second (or first, on very short articles). Verified data
                     only - providers without it simply render nothing. */}
-                {SHOW_TRUSTPILOT_WIDGETS && i === 0 && subjectTrustpilot && (
+                {i === 0 && subjectTrustpilot && (
                   <div className="my-10 space-y-3">
                     <TrustpilotSummary
                       providerName={subjectTrustpilot.name}

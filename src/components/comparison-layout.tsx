@@ -18,6 +18,8 @@ interface ComparisonLayoutProps {
   linkPrefix?: string;
   // Optional E-E-A-T byline strip rendered directly under the hero.
   byline?: React.ReactNode;
+  /** Optional block between the byline and the cards (e.g. a ranking snapshot). */
+  intro?: React.ReactNode;
   children?: React.ReactNode;
   /** Card intro text: the full review intro (ranking page) or the one-line summary (keyword landings). */
   cardIntroMode?: "full" | "short";
@@ -27,7 +29,7 @@ interface ComparisonLayoutProps {
   onlyProviderIds?: string[];
 }
 
-export function ComparisonLayout({ config, heroOverrides, linkPrefix = "", byline, children, cardIntroMode = "full", priceNotes, onlyProviderIds }: ComparisonLayoutProps) {
+export function ComparisonLayout({ config, heroOverrides, linkPrefix = "", byline, intro, children, cardIntroMode = "full", priceNotes, onlyProviderIds }: ComparisonLayoutProps) {
   const { providerOrder, positions } = config.ranking;
 
   const shown = onlyProviderIds ? providerOrder.filter((id) => onlyProviderIds.includes(id)) : providerOrder;
@@ -94,6 +96,8 @@ export function ComparisonLayout({ config, heroOverrides, linkPrefix = "", bylin
           <div className="flex flex-wrap items-center gap-x-3 gap-y-2">{byline}</div>
         </section>
       )}
+
+      {intro}
 
       <section className="mx-auto max-w-[1200px] px-4 pt-4 pb-6 sm:pt-6">
         <div className="flex gap-6 items-start">

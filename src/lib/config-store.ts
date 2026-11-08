@@ -67,6 +67,13 @@ function seedForVertical(vertical: string): SiteConfig {
 // from the admin before that would otherwise resurrect the removed ones.
 // Oct 22, 2026: TRT joined when the toptrt.io content was folded in.
 const CODE_AUTHORITATIVE_VERTICALS = new Set(["hrt", "ed", "trt", "hair-loss"]);
+// Articles in blob-backed verticals whose code version always wins (Nov 8,
+// 2026: the online-therapy free-options table, refreshed from Bing AI data).
+const CODE_AUTHORITATIVE_BLOB_ARTICLES = new Set([
+  "free-and-low-cost-therapy-options",
+  "is-betterhelp-legit",
+  "is-talkiatry-legit",
+]);
 
 async function getVerticalConfig(vertical: string): Promise<SiteConfig> {
   const base = seedForVertical(vertical);
@@ -82,7 +89,13 @@ async function getVerticalConfig(vertical: string): Promise<SiteConfig> {
         const saved = (await res.json()) as Partial<SiteConfig>;
         // Articles added in code after the last CMS save still ship: the
         // saved list wins for slugs it has, and new seed articles append.
-        const savedArticles = saved.articles ?? [];
+        // A few articles are code-authoritative: their seed version replaces
+        // any saved copy, so code updates (dated tables, sourced figures)
+        // can't be shadowed by an older CMS snapshot.
+        const seedBySlug = new Map((base.articles ?? []).map((a) => [a.slug, a]));
+        const savedArticles = (saved.articles ?? []).map((a) =>
+          CODE_AUTHORITATIVE_BLOB_ARTICLES.has(a.slug) && seedBySlug.has(a.slug) ? seedBySlug.get(a.slug)! : a,
+        );
         const savedSlugs = new Set(savedArticles.map((a) => a.slug));
         const articles = saved.articles
           ? [...savedArticles, ...(base.articles ?? []).filter((a) => !savedSlugs.has(a.slug))]
