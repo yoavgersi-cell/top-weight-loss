@@ -13,7 +13,9 @@ import type { Article } from "./articles";
 //   SURMOUNT-5  Aronne et al., NEJM 2025 (tirzepatide vs semaglutide, open label)
 // No provider outcome statistics, no before/after material, no anecdotes:
 // provider-reported results are self-reported and are not repeated here.
-// The pounds table is plain arithmetic on the trial averages.
+// The pounds table and the per-month figures are plain arithmetic on the
+// trial averages (per-month section added Nov 8, 2026 for Copilot's
+// "average monthly weight loss" queries).
 
 const ext = (href: string, text: string) => `<a href="${href}" target="_blank" rel="noopener noreferrer">${text}</a>`;
 
@@ -30,6 +32,12 @@ const S = {
 };
 
 const lb = (start: number, pct: number) => Math.round((start * pct) / 100);
+// Average per month across a trial: weeks / (52 / 12) months. Rounded to one
+// decimal for percentages and whole-ish pounds; arithmetic on the published
+// averages, labelled as such on the page.
+const months = (weeks: number) => (weeks * 12) / 52;
+const perMonth = (pct: number, weeks: number) => (pct / months(weeks)).toFixed(1);
+const lbPerMonth = (start: number, pct: number, weeks: number) => ((start * pct) / 100 / months(weeks)).toFixed(1);
 const poundsRows = [180, 220, 260]
   .map(
     (w) =>
@@ -45,7 +53,7 @@ export const glp1WeightLossResultsArticle: Article = {
   category: "Science",
   readTime: "8 min read",
   publishedAt: "2026-11-05",
-  updatedAt: "2026-11-05",
+  updatedAt: "2026-11-08",
   heroColor: "#EEF4FB",
   author: "Treatments Hub Research Team",
   keyTakeaways: [
@@ -83,6 +91,10 @@ ${poundsRows}
     {
       heading: "Does tirzepatide cause more weight loss than semaglutide?",
       body: `<p>On the published evidence, yes, on average. ${ext(S.surmount5, "SURMOUNT-5")}, the only trial so far to compare them directly, gave 751 adults the highest dose each could tolerate for 72 weeks: average weight loss was 20.2% with tirzepatide and 13.7% with semaglutide, a gap of 6.5 percentage points. The trial was open label (participants knew which drug they were on) and was run by tirzepatide's manufacturer, Eli Lilly, so it is strong evidence but not the last word.</p><p>The separate trials point the same way: about 15% for semaglutide in STEP 1 against 15% to 21% by dose for tirzepatide in SURMOUNT-1, though those were different trials in different people. More weight loss is not the only consideration. Side effects, cost and how you respond matter too; our <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide comparison</a> covers the full picture and the <a href="/weight-loss/glp1-price-changes">GLP-1 price tracker</a> has current verified prices for both.</p>`,
+    },
+    {
+      heading: "How much weight do people lose per month on a GLP-1?",
+      body: `<p>Spread evenly across the trials, about ${perMonth(14.9, 68)}% of body weight a month on semaglutide 2.4 mg (STEP 1: 14.9% over 68 weeks) and about ${perMonth(20.9, 72)}% a month on tirzepatide 15 mg (SURMOUNT-1: 20.9% over 72 weeks). For someone starting at 220 lb, that works out to roughly ${lbPerMonth(220, 14.9, 68)} lb a month on semaglutide and ${lbPerMonth(220, 20.9, 72)} lb a month on tirzepatide, against about ${lbPerMonth(220, 2.4, 68)} lb a month on placebo with the same diet and exercise counseling.</p><p>Treat those as averages over a year and a half, not a monthly target. The trials reported where people ended up, not a steady rate, and the loss isn't spread evenly: the dose is still being raised for the first four to five months, and individual results vary widely. Our <a href="/weight-loss/glp1-cost-calculator">cost calculator</a> shows what the same months cost at verified prices.</p>`,
     },
     {
       heading: "How fast does the weight come off?",

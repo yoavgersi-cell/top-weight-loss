@@ -1,4 +1,3 @@
-import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Check, X, ArrowRight, ArrowUpRight, Shield, Star, ArrowBigUp, ArrowBigDown, MessageCircle, ShieldCheck, UserRound, Users, Stethoscope, type LucideIcon } from "lucide-react";
@@ -1139,7 +1138,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           />
         )}
 
-        {SHOW_TRUSTPILOT_WIDGETS && (provider.trustpilotReviews?.length ?? 0) > 0 && (
+        {(provider.trustpilotReviews?.length ?? 0) > 0 && (
           <div className="mb-6 space-y-3">
             <TrustpilotSummary
               providerName={provider.name}

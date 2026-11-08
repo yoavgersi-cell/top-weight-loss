@@ -1,3 +1,4 @@
+import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import type { ProviderReviewRecord } from "@/data/reviews/types";
 import { REVIEW_THEMES, resolveThemes, type ResolvedTheme } from "@/data/reviews/themes";
 import type { TrustpilotReview } from "@/lib/config";
@@ -100,7 +101,7 @@ export function CustomerThemes({
       </div>
       {themes.note && <p className="mt-5 text-[13.5px] leading-[1.7] text-gray-600">{themes.note}</p>}
       <p className="mt-4 text-[12.5px] leading-relaxed text-gray-400">
-        Counts are computed from the reviews stored for this page, each of which appears in full below.{" "}
+        Counts are computed from the reviews stored for this page{SHOW_TRUSTPILOT_WIDGETS ? ", each of which appears in full below" : ""}.{" "}
         <a href={methodologyHref} className="text-[#0C4B75] underline underline-offset-2 hover:text-[#093d61]">
           How we collect customer reviews
         </a>

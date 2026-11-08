@@ -6,6 +6,7 @@ import { CONTENT_LAST_UPDATED, DEFAULT_VERTICAL, VERTICALS, isVertical, isPublis
 import { ROOT_CONTEXT, hubContext, canonicalUrl, hubLink, WEIGHT_LOSS_MIGRATED } from "@/lib/site-context";
 import Link from "next/link";
 import { ComparisonLayout } from "@/components/comparison-layout";
+import { RankingSnapshot } from "@/components/ranking-snapshot";
 import { MedicalDisclaimer } from "@/components/medical-disclaimer";
 import { EditorialContent } from "@/components/editorial-content";
 import { HairLossEditorialContent } from "@/components/editorial-content-hair-loss";
@@ -152,7 +153,21 @@ export default async function BattlePage({
             )}
           </>
         )}
-        <ComparisonLayout config={vConfig} linkPrefix={`/${battleSlug}`} byline={byline}>
+        <ComparisonLayout
+          config={vConfig}
+          linkPrefix={`/${battleSlug}`}
+          byline={byline}
+          intro={
+            battleSlug === "hair-loss" ? (
+              <RankingSnapshot
+                config={vConfig}
+                linkPrefix={`/${battleSlug}`}
+                categoryLabel="hair-loss"
+                asOf={vConfig.hero.updatedLabel?.replace(/^Last Updated:\s*/i, "")}
+              />
+            ) : undefined
+          }
+        >
           {isWL ? (
             <EditorialContent
               midSlot={

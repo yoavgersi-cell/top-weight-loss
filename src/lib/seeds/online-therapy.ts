@@ -794,19 +794,41 @@ const articles: ArticleData[] = [
   },
   {
     slug: "free-and-low-cost-therapy-options",
-    title: "Free Online Therapy: The Options That Actually Exist (2026)",
+    title: "Free & Low-Cost Therapy: The Options That Exist (2026)",
     description:
-      "Affordable mental-health support: EAPs, community clinics, sliding-scale therapists, training clinics and support lines, and where the online platforms fit in.",
+      "Free therapy and cheap counseling that actually exist: 988, EAP sessions, NAMI groups, sliding-scale health centers, training clinics, and online options.",
     category: "Advice",
     readTime: "8 min read",
     publishedAt: UPDATED,
-    updatedAt: UPDATED,
+    // Nov 8, 2026: options table added (Bing AI: "free therapy" cited at 5.7%,
+    // "cheap counseling" 22%); contact details checked against each source.
+    updatedAt: "2026-11-08",
     heroColor: "#F1F6EE",
     author: "Treatments Hub Research Team",
+    keyTakeaways: [
+      "Free, right now: 988 (call, text or chat, 24/7), SAMHSA's National Helpline (1-800-662-4357, 24/7, treatment referrals) and the NAMI HelpLine (800-950-6264, weekdays).",
+      "Free sessions you may already have: an employer EAP usually covers a handful of counseling sessions at no cost. Check your benefits portal.",
+      "Low-cost care: HRSA-funded health centers discount fees by income, university training clinics charge reduced fees, and many therapists keep sliding-scale slots.",
+      "Online with insurance, Medicare or Medicaid, therapy can cost no more than a copay; check eligibility before paying cash.",
+    ],
     sections: [
       {
         heading: "Is free therapy a real thing?",
         body: "<div class=\"qa\"><strong>The short answer</strong>Genuinely free routes exist: employer EAPs often include several fully covered sessions, the 988 Suicide & Crisis Lifeline (call or text 988, US) is free and 24/7 for any overwhelming moment, and warmlines and peer-support groups cost nothing. Low-cost care hides in community mental-health centers, university training clinics and sliding-scale therapists. If you are insured, in-network online care at Talkspace or Talkiatry can drop to copay level.</div>Some genuinely free routes exist, and knowing them matters even if you end up paying: employer EAPs (employee-assistance programs) commonly include several fully covered sessions per issue per year and go chronically unused because people don't know they have one - check with HR or your benefits portal today, and while you're there check whether your benefits include Headspace or Talkspace access. The 988 Suicide & Crisis Lifeline (call or text 988, US) is free, 24/7, and not only for suicidal crises - it's a legitimate immediate-support line for any overwhelming moment. Warmlines - non-crisis peer-support phone lines run in many states - fill the space below that.",
+      },
+      {
+        heading: "What free and low-cost options are there?",
+        body: '<p>The options below are free or priced by what you can pay. Contact details checked November 8, 2026.</p><table><thead><tr><th>Option</th><th>Cost</th><th>What it is</th><th>How to reach it</th></tr></thead><tbody>' +
+          '<tr><td><a href="https://988lifeline.org/" target="_blank" rel="noopener noreferrer">988 Suicide &amp; Crisis Lifeline</a></td><td>Free</td><td>24/7 support for any overwhelming moment, not only suicidal crises</td><td>Call or text 988, or chat online</td></tr>' +
+          '<tr><td><a href="https://www.samhsa.gov/find-help/helplines/national-helpline" target="_blank" rel="noopener noreferrer">SAMHSA National Helpline</a></td><td>Free, confidential</td><td>24/7 referrals to local treatment and support, including low-cost options</td><td>1-800-662-4357</td></tr>' +
+          '<tr><td><a href="https://www.nami.org/support-education/nami-helpline/" target="_blank" rel="noopener noreferrer">NAMI HelpLine</a></td><td>Free</td><td>Information and referrals from trained volunteers, Monday to Friday, 10am to 10pm ET</td><td>800-950-6264, or text "helpline" to 62640</td></tr>' +
+          '<tr><td><a href="https://www.nami.org/support-education/" target="_blank" rel="noopener noreferrer">NAMI Connection groups</a></td><td>Free</td><td>Peer-led recovery support groups for adults, run by local NAMI affiliates</td><td>Your local NAMI affiliate</td></tr>' +
+          '<tr><td>Employer EAP</td><td>Free sessions</td><td>A set number of counseling sessions paid for by your employer, confidential from your manager</td><td>HR or your benefits portal</td></tr>' +
+          '<tr><td><a href="https://findahealthcenter.hrsa.gov/" target="_blank" rel="noopener noreferrer">HRSA-funded health centers</a></td><td>Sliding scale by income</td><td>Community health centers that offer behavioral health and must discount fees for patients on lower incomes, under <a href="https://bphc.hrsa.gov/es/node/1789" target="_blank" rel="noopener noreferrer">HRSA\'s sliding fee rules</a></td><td>Search by ZIP code</td></tr>' +
+          '<tr><td>University training clinics</td><td>Reduced fees</td><td>Supervised therapy from graduate trainees</td><td>Psychology or counseling departments near you</td></tr>' +
+          '<tr><td><a href="https://openpathcollective.org/" target="_blank" rel="noopener noreferrer">Open Path Collective</a></td><td>Low fixed range, plus a one-time membership</td><td>A nonprofit network of therapists who offer reduced-rate sessions; fees recently changed, so check the current range on its site</td><td>openpathcollective.org</td></tr>' +
+          '<tr><td>Medicare or Medicaid</td><td>Copay or coinsurance</td><td>Both cover outpatient therapy, including by video; see <a href="/online-therapy/articles/does-medicare-cover-online-therapy">does Medicare cover online therapy</a></td><td>Your plan</td></tr>' +
+          '</tbody></table><p>If you\'re not sure where to start, call the SAMHSA line: it exists to point you to care you can afford, near you.</p>',
       },
       {
         heading: "Where can I find cheap counseling in person?",
@@ -874,7 +896,7 @@ const articles: ArticleData[] = [
     category: "Advice",
     readTime: "7 min read",
     publishedAt: UPDATED,
-    updatedAt: UPDATED,
+    updatedAt: "2026-11-08",
     heroColor: "#EEF2F8",
     author: "Treatments Hub Research Team",
     keyTakeaways: [
@@ -898,11 +920,11 @@ const articles: ArticleData[] = [
       },
       {
         heading: "What about the FTC privacy settlement?",
-        body: 'In 2023, BetterHelp settled with the US Federal Trade Commission over sharing user data - including health questionnaire data - with advertisers like Facebook and Snapchat. That happened; no legitimate review should bury it. The company has since updated its practices, and the settlement itself forced changes. What it means for you: read the current privacy policy before signing up, and opt out of data sharing where offered. If privacy is your deciding factor, weigh insurance-billed alternatives too - though those create claims records with your insurer instead, a different trade rather than a free lunch.',
+        body: 'In 2023, BetterHelp settled with the US Federal Trade Commission over sharing user data - including health questionnaire data - with advertisers like Facebook and Snapchat. That happened; no legitimate review should bury it. The FTC order bars BetterHelp from sharing health data for advertising and requires consent before sharing health information with third parties, and in May 2024 the FTC <a href="https://www.ftc.gov/news-events/news/press-releases/2024/05/betterhelp-customers-will-begin-receiving-notices-about-refunds-related-2023-privacy-settlement-ftc" target="_blank" rel="noopener noreferrer">began sending refund notices</a> from the $7.8 million settlement to about 800,000 people who paid for the service between August 2017 and December 2020. BetterHelp did not admit wrongdoing. What it means for you: read the current privacy policy before signing up, and opt out of data sharing where offered. If privacy is your deciding factor, weigh insurance-billed alternatives too - though those create claims records with your insurer instead, a different trade rather than a free lunch.',
       },
       {
         heading: "Does BetterHelp take insurance now?",
-        body: 'Yes - new as of recently, and most articles haven\'t caught up: BetterHelp now accepts insurance, with copays cited from around $23/session for covered members, alongside self-pay subscriptions and a financial-aid questionnaire. Full details in our <a href="/online-therapy/articles/does-betterhelp-take-insurance">BetterHelp insurance guide</a>.',
+        body: 'Yes - new as of recently, and most articles haven\'t caught up: BetterHelp now accepts insurance, with copays cited from around $23/session for covered members, alongside self-pay subscriptions and a financial-aid questionnaire. Its own <a href="https://www.betterhelp.com/insurance2026" target="_blank" rel="noopener noreferrer">insurance page</a> says Medicare, Medicaid and TRICARE aren\'t accepted (checked November 8, 2026). Full details in our <a href="/online-therapy/articles/does-betterhelp-take-insurance">BetterHelp insurance guide</a>.',
       },
       {
         heading: "Who should choose BetterHelp - and who shouldn't?",
@@ -958,7 +980,7 @@ const articles: ArticleData[] = [
     category: "Advice",
     readTime: "7 min read",
     publishedAt: UPDATED,
-    updatedAt: UPDATED,
+    updatedAt: "2026-11-08",
     heroColor: "#F7F3EA",
     author: "Treatments Hub Research Team",
     keyTakeaways: [
@@ -982,7 +1004,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "How do I protect myself when booking Talkiatry?",
-        body: 'Three defenses, all cheap. One: confirm your insurance eligibility in writing before the first visit - not by phone reassurance; ask for the confirmation email and keep it. Two: keep copies of everything you send them (forms, faxes, portal messages) with dates. Three: after each visit, check the claim actually posted with your insurer - a two-minute portal check that catches billing failures while they\'re one visit deep instead of five. None of this is unique to Talkiatry, but the community record says it matters more here.',
+        body: 'Three defenses, all cheap. One: confirm your insurance eligibility in writing before the first visit - not by phone reassurance; ask for the confirmation email and keep it. Two: keep copies of everything you send them (forms, faxes, portal messages) with dates. Three: after each visit, check the claim actually posted with your insurer - a two-minute portal check that catches billing failures while they\'re one visit deep instead of five. None of this is unique to Talkiatry, but the community record says it matters more here. On Medicare? Talkiatry <a href="https://www.talkiatry.com/help-center-articles/do-you-take-medicare-or-medicaid" target="_blank" rel="noopener noreferrer">says it accepts Original Medicare and select Medicare Advantage plans</a> (not Medicaid); our guide to <a href="/online-therapy/articles/does-medicare-cover-online-therapy">Medicare and online therapy</a> covers what you\'d pay.',
       },
       {
         heading: "Who is Talkiatry right for?",
