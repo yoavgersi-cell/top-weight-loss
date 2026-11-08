@@ -1,3 +1,4 @@
+import { RANKING_UPDATED_LABEL } from "../config";
 import type {
   SiteConfig,
   Provider,
@@ -2580,7 +2581,7 @@ export function hairLossSeed(base: SiteConfig): SiteConfig {
       // the article mastheads carry an image like the other verticals.
       backgroundImageUrl: "/hero-hair-loss.png",
       imageAlt: "Man with thick, healthy hair",
-      updatedLabel: "Last Updated: October 2026",
+      updatedLabel: RANKING_UPDATED_LABEL,
       h1: "Best Hair Loss Treatments & Providers of 2026",
       h2: "Compare the top hair-loss telehealth providers, side by side",
       description:

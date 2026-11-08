@@ -1,3 +1,4 @@
+import { RANKING_UPDATED_LABEL } from "../config";
 import type {
   SiteConfig,
   Provider,
@@ -1364,7 +1365,7 @@ export function hrtSeed(base: SiteConfig): SiteConfig {
       // Oct 22, 2026: title and subtitle adopted from hrtwomen.com, whose
       // Search Console data showed the "online HRT for women" phrasing wins
       // the commercial cluster; the ranking stayed the three partner providers.
-      updatedLabel: "Last Updated: October 2026",
+      updatedLabel: RANKING_UPDATED_LABEL,
       h1: "Best Online HRT for Women of 2026",
       h2: "The top online menopause & HRT providers, ranked and reviewed",
       description:

@@ -1,3 +1,4 @@
+import { RANKING_UPDATED_LABEL } from "../config";
 import type {
   SiteConfig,
   Provider,
@@ -1401,7 +1402,7 @@ export function onlineTherapySeed(base: SiteConfig): SiteConfig {
       ...base.hero,
       backgroundImageUrl: "",
       imageAlt: "",
-      updatedLabel: "Last Updated: August 2026",
+      updatedLabel: RANKING_UPDATED_LABEL,
       h1: "Best Online Therapy Platforms of 2026",
       h2: "The top therapy & psychiatry platforms, compared honestly",
       description:

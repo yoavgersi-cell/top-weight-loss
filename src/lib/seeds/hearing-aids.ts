@@ -1,3 +1,4 @@
+import { RANKING_UPDATED_LABEL } from "../config";
 import type {
   SiteConfig,
   Provider,
@@ -237,7 +238,7 @@ export function hearingAidsSeed(base: SiteConfig): SiteConfig {
       ...base.hero,
       backgroundImageUrl: "",
       imageAlt: "",
-      updatedLabel: "Last Updated: August 2026",
+      updatedLabel: RANKING_UPDATED_LABEL,
       h1: "Best OTC Hearing Aids of 2026",
       h2: "Compare over-the-counter hearing devices you can order online, side by side",
       description:
