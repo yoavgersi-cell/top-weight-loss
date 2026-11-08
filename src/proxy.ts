@@ -72,6 +72,9 @@ const PATH_REDIRECTS: Record<string, string> = {
   "/articles/glp1-pills-vs-injections": "/glp1-pills-vs-injections",
   // Renamed article - direct live successor.
   "/articles/online-vs-clinic-weight-loss": "/articles/in-person-vs-online-weight-loss",
+  // Nov 8, 2026: Bing AI Performance export shows Copilot citing this slug
+  // (6 citations) while it answered 404; the live guide is embody-alternatives.
+  "/articles/best-embody-alternatives": "/articles/embody-alternatives",
   // Retired articles with no 1:1 successor -> closest live guide by intent.
   "/articles/noom-vs-glp1-providers": "/best-online-weight-loss-programs",
   "/articles/glp1-benefits-beyond-weight-loss": "/articles/how-glp1-medications-work",

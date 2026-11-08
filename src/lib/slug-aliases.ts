@@ -44,4 +44,8 @@ export const SLUG_ALIASES: Record<string, string> = {
   // redirects any unknown "a-vs-b" to a live "b-vs-a" generically; this alias
   // keeps the known case to a single proxy-level 301.
   "ro-vs-trimrx": "trimrx-vs-ro",
+  // Nov 8, 2026: cited by Copilot (8 citations) while answering 404; never
+  // built, so it joins the other unbuilt SHED/Found pairs on the programs page.
+  "shed-vs-found": "best-online-weight-loss-programs",
+  "found-vs-shed": "best-online-weight-loss-programs",
 };
