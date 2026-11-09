@@ -176,7 +176,7 @@ const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
   "zepbound-price-online":
     "Brand-name Zepbound online runs $1,249/month cash at altRx and $1,599 at welludr, or Zepbound KwikPens from $299 for the first month (then $399-449) plus a $39-then-$74-149 monthly membership at Ro, where insurance can apply. Compounded tirzepatide, the same active ingredient, runs $71-$299/month through licensed telehealth providers. Every route requires a prescription.",
   "best-tirzepatide-online":
-    "Verified compounded tirzepatide prices run $71-$299/month: welludr $71 (12-month plan) is the floor, embody $99 the cheapest with no commitment, and Medvi $166 all-inclusive with one of the two largest review bases. Brand-name Zepbound: $1,249/month cash at altRx, or ro's KwikPen from $299 first month plus membership - where insurance applies, ro can be far cheaper. Every legitimate source requires a prescription.",
+    "Verified compounded tirzepatide prices run $71-$129/month: welludr $71 (12-month plan) is the floor, embody $99 the cheapest with no commitment, and Eden $129 flat at every dose. altRx lists compounded tirzepatide from $149. Brand-name Zepbound: $1,249/month cash at altRx. Every legitimate source requires a prescription after a licensed-provider review.",
   "ozempic-face":
     "Ozempic face is facial volume loss caused by losing weight quickly - not a chemical side effect of the drug. It can happen with any GLP-1 or any rapid weight loss. The levers that soften it: a moderate pace of loss, adequate protein, resistance training and hydration - and facial volume often partially recovers as weight stabilizes.",
   "zepbound-vs-wegovy-vs-ozempic":
@@ -337,6 +337,16 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // CTAs the comparison page uses, high on the page. Gated to specific slugs so
   // it never leaks onto informational articles.
   const TOP_PROVIDERS_CRO_SLUGS = new Set(["best-tirzepatide-online"]);
+  // The tirzepatide guide compares these four providers only (cheapest first).
+  const TIRZ_GUIDE_PROVIDER_IDS = ["wellmedr", "embody", "eden", "altrx"];
+  // Head-to-head links on the tirzepatide guide: only comparisons among those four.
+  const TIRZ_COMPARISON_HREFS = new Set([
+    "/weight-loss/embody-vs-wellmedr",
+    "/weight-loss/altrx-vs-embody",
+    "/weight-loss/eden-vs-embody",
+    "/weight-loss/altrx-vs-eden",
+    "/weight-loss/embody-vs-altrx-vs-wellmedr",
+  ]);
   // Articles that carry the subject provider's own ranking card (operator picks),
   // and which on-page component the card sits directly below.
   const SUBJECT_CARD_PLACEMENT: Record<string, "afterReddit" | "afterCarousel"> =
@@ -939,7 +949,11 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                         providers={config.providers}
                         vertical={isHrtArticle ? "hrt" : "weight-loss"}
                         onlyProviderIds={
-                          restrictCarouselToSubject && subjectProvider ? [subjectProvider.id] : undefined
+                          restrictCarouselToSubject && subjectProvider
+                            ? [subjectProvider.id]
+                            : isTirzGuide
+                              ? TIRZ_GUIDE_PROVIDER_IDS
+                              : undefined
                         }
                         onlyMedication={
                           isHrtArticle || (restrictCarouselToSubject && subjectProvider) ? undefined : carouselMedication
@@ -1152,9 +1166,12 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 {[
                   { href: "/weight-loss/embody-vs-wellmedr", label: "embody vs welludr - $49 vs $41" },
                   { href: "/weight-loss/altrx-vs-embody", label: "altRx vs embody - $89 vs $49" },
-                  { href: "/weight-loss/healthrx-vs-medvi", label: "HealthRx vs Medvi - 12-month plan vs monthly" },
+                  { href: "/weight-loss/eden-vs-embody", label: "Eden vs embody - $129 vs $99 flat" },
+                  { href: "/weight-loss/altrx-vs-eden", label: "altRx vs Eden - $149 vs $129" },
                   { href: "/weight-loss/embody-vs-altrx-vs-wellmedr", label: "The budget trio: embody vs altRx vs welludr" },
-                ].map((c) => (
+                ]
+                  .filter((c) => !isTirzGuide || TIRZ_COMPARISON_HREFS.has(c.href))
+                  .map((c) => (
                   <Link
                     key={c.href}
                     href={c.href}

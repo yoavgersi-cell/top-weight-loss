@@ -20,12 +20,8 @@ type RowNote = { id: string; condition: string; standout: string };
 const ROWS: RowNote[] = [
   { id: "wellmedr", condition: "Locks on a 12-month plan, billed monthly", standout: "Same price at every dose" },
   { id: "embody", condition: "Flat, no commitment", standout: "1-2 day shipping; refund if not approved" },
-  { id: "directmeds", condition: "Flat, no membership", standout: "Only needle-free sublingual option" },
+  { id: "eden", condition: "Flat every month, no membership", standout: "Same price at every dose; 24/7 human support" },
   { id: "altrx", condition: "Pause or cancel anytime; BNPL", standout: "Brand-name shelf alongside" },
-  { id: "medvi", condition: "Monthly, all-inclusive", standout: "Dietician + coaching included" },
-  { id: "sprout", condition: "12-month plan, billed upfront; monthly $199, no commitment", standout: "Ships within 2 days" },
-  { id: "trimrx", condition: "No long-term contract", standout: "Clinical guidance through dose changes" },
-  { id: "shed", condition: "Starting price, monthly", standout: "Lose 5% in 120 days or your money back" },
 ];
 
 function regularFrom(note: string): string | null {
