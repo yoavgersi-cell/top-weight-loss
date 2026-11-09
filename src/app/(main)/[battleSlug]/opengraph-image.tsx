@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { getConfig } from "@/lib/config-store";
 
-export const runtime = "edge";
+export const runtime = "nodejs"; // Node, not Edge: Edge bundles are capped at 2 MB and this imports the full content store.
 export const alt = "Provider Comparison - treatmentshub.com";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
