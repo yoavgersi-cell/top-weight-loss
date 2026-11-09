@@ -12,6 +12,7 @@ import { HRT_BATTLES_PORTED } from "./hrt-battles";
 import { HRT_TESTOSTERONE_FOR_WOMEN } from "./hrt-articles/testosterone-for-women";
 import { HRT_MHT_2026_CHANGES } from "./hrt-articles/menopause-hormone-therapy-2026";
 import { HRT_ESTROGEN_PATCH_SHORTAGE } from "./hrt-articles/estrogen-patch-shortage";
+import { HRT_FOR_MENOPAUSE_GUIDE } from "./hrt-articles/hrt-for-menopause-guide";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // HRT (menopause / hormone replacement therapy) vertical
@@ -1395,7 +1396,7 @@ export function hrtSeed(base: SiteConfig): SiteConfig {
     ],
     battles: [...battles, ...HRT_BATTLES_PORTED],
     // Ported pillars and brand pages first, then the hub's own guides.
-    articles: [...HRT_GUIDES_PORTED, ...articles, HRT_TESTOSTERONE_FOR_WOMEN, HRT_MHT_2026_CHANGES, HRT_ESTROGEN_PATCH_SHORTAGE],
+    articles: [...HRT_GUIDES_PORTED, ...articles, HRT_TESTOSTERONE_FOR_WOMEN, HRT_MHT_2026_CHANGES, HRT_ESTROGEN_PATCH_SHORTAGE, HRT_FOR_MENOPAUSE_GUIDE],
     faqs,
   };
 }

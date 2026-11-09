@@ -1,4 +1,4 @@
-import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
+import { SHOW_TRUSTPILOT_WIDGETS, visibleTrustBadges } from "@/lib/trustpilot-display";
 import { pageReviewSchema } from "@/data/reviewers";
 import { SiblingLinks, CATEGORY_LABEL, reviewSiblings, comparisonSiblings, articleSiblings, pickSiblings } from "@/components/sibling-links";
 import { medicalWebPageFields } from "@/lib/medical-schema";
@@ -1065,7 +1065,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 const plans = review?.pricingPlans ?? [];
                 const pros = review?.pros ?? [];
                 const cons = review?.cons ?? [];
-                const badges = review?.trustBadges ?? [];
+                const badges = visibleTrustBadges(review?.trustBadges);
                 const lead = review?.reviewIntro || provider.tagline;
                 const reviewCount = provider.trustpilotReviews?.length ?? 0;
 

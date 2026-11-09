@@ -43,6 +43,13 @@ const MID_TOP_THREE_SLUGS = new Set<string>([
   "estrogen-patch-shortage",
   "does-medicare-cover-online-therapy",
   "fastest-acting-ed-treatments",
+  // Nov 9, 2026 pillar guides: top 3 at the midpoint, after a written lead-in.
+  "glp1-weight-loss-medications-guide",
+  "online-hair-loss-treatment-guide",
+  "ed-treatment-options-compared",
+  "online-trt-guide",
+  "hrt-for-menopause-guide",
+  "online-therapy-psychiatry-guide",
 ]);
 
 // Code-side CTR overrides for high-impression articles whose stored meta lives

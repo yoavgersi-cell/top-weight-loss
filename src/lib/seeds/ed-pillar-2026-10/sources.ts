@@ -23,7 +23,7 @@ export const SRC = {
   alprostadil: "https://medlineplus.gov/druginfo/meds/a695022.html",
   viagraLabel: "https://labeling.pfizer.com/ShowLabeling.aspx?id=652",
   fdaCompounding: "https://www.fda.gov/drugs/human-drug-compounding/consumer-and-health-care-professional-information",
-  fdaHiddenRisks: "https://www.fda.gov/consumers/consumer-updates/hidden-risks-erectile-dysfunction-treatments-sold-online",
+  fdaHiddenRisks: "https://www.fda.gov/drugs/medication-health-fraud-notifications/sexual-enhancement-and-energy-product-notifications",
   fdaTainted: "https://www.fda.gov/drugs/medication-health-fraud/tainted-sexual-enhancement-and-energy-products",
   fdaBeSafeRx: "https://www.fda.gov/drugs/quick-tips-buying-medicines-over-internet/besaferx-your-source-online-pharmacy-information",
   nabp: "https://safe.pharmacy/buy-safely/",

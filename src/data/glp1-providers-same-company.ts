@@ -21,7 +21,7 @@ const S = {
   welludrRefund: "https://www.wellmedr.com/pages/refund-and-cancellation-policy",
   welludrTerms: "https://www.wellmedr.com/pages/terms-conditions",
   trimrxTerms: "https://trimrx.com/terms-and-conditions",
-  fdaCompounding: "https://www.fda.gov/drugs/human-drug-compounding",
+  fdaCompounding: "https://www.fda.gov/drugs/guidance-compliance-regulatory-information/human-drug-compounding",
 };
 
 export const glp1ProvidersSameCompanyArticle: Article = {

@@ -10,6 +10,7 @@ import type {
 import { ONLINE_THERAPY_ARTICLES_2026_10 } from "./online-therapy-articles-2026-10";
 import { OT_TELEHEALTH_CONTROLLED } from "./online-therapy-articles/telehealth-controlled-substances";
 import { OT_MEDICARE_ONLINE_THERAPY } from "./online-therapy-articles/medicare-online-therapy";
+import { OT_ONLINE_THERAPY_PSYCHIATRY_GUIDE } from "./online-therapy-articles/online-therapy-psychiatry-guide";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Online Therapy vertical
@@ -1419,7 +1420,7 @@ export function onlineTherapySeed(base: SiteConfig): SiteConfig {
     },
     reviews,
     battles,
-    articles: [...articles, ...ONLINE_THERAPY_ARTICLES_2026_10, OT_TELEHEALTH_CONTROLLED, OT_MEDICARE_ONLINE_THERAPY],
+    articles: [...articles, ...ONLINE_THERAPY_ARTICLES_2026_10, OT_TELEHEALTH_CONTROLLED, OT_MEDICARE_ONLINE_THERAPY, OT_ONLINE_THERAPY_PSYCHIATRY_GUIDE],
     faqs,
   };
 }

@@ -28,7 +28,7 @@ const S = {
   surmount2: "https://pubmed.ncbi.nlm.nih.gov/37385275/",
   surmount5: "https://www.nejm.org/doi/full/10.1056/NEJMoa2416394",
   wegovyLabel: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/215256s000lbl.pdf",
-  fdaCompounding: "https://www.fda.gov/drugs/human-drug-compounding",
+  fdaCompounding: "https://www.fda.gov/drugs/guidance-compliance-regulatory-information/human-drug-compounding",
 };
 
 const lb = (start: number, pct: number) => Math.round((start * pct) / 100);

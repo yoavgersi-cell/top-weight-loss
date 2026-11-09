@@ -33,9 +33,9 @@ export const SOURCES_BY_VERTICAL: Record<string, MedicalSource[]> = {
       href: "https://medlineplus.gov/erectiledysfunction.html",
     },
     {
-      label: "Hidden Risks of Erectile Dysfunction \"Treatments\" Sold Online",
+      label: "Sexual enhancement product notifications (hidden drug ingredients)",
       publisher: "U.S. Food & Drug Administration",
-      href: "https://www.fda.gov/consumers/consumer-updates/hidden-risks-erectile-dysfunction-treatments-sold-online",
+      href: "https://www.fda.gov/drugs/medication-health-fraud-notifications/sexual-enhancement-and-energy-product-notifications",
     },
   ],
   "weight-loss": [
@@ -67,7 +67,7 @@ export const SOURCES_BY_VERTICAL: Record<string, MedicalSource[]> = {
     {
       label: "Human Drug Compounding (503A pharmacy standards)",
       publisher: "U.S. Food & Drug Administration",
-      href: "https://www.fda.gov/drugs/human-drug-compounding",
+      href: "https://www.fda.gov/drugs/guidance-compliance-regulatory-information/human-drug-compounding",
     },
     {
       label: "Semaglutide Injection - drug information",
@@ -104,9 +104,9 @@ export const SOURCES_BY_VERTICAL: Record<string, MedicalSource[]> = {
       href: "https://www.endocrine.org/clinical-practice-guidelines/testosterone-therapy",
     },
     {
-      label: "FDA Drug Safety Communication: caution about using testosterone products for low testosterone",
+      label: "FDA class-wide labeling changes for testosterone products (incl. the 2015 safety communication)",
       publisher: "U.S. Food & Drug Administration",
-      href: "https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-fda-cautions-about-using-testosterone-products-low-testosterone-due",
+      href: "https://www.fda.gov/drugs/drug-alerts-and-statements/fda-issues-class-wide-labeling-changes-testosterone-products",
     },
     {
       label: "Testosterone Levels Test",

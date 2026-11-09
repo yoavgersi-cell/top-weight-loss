@@ -79,7 +79,7 @@ const SRC = {
   qsymia: "https://medlineplus.gov/druginfo/meds/a612037.html",
   contrave: "https://medlineplus.gov/druginfo/meds/a619020.html",
   fdaConcerns: "https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss",
-  fdaCompounding: "https://www.fda.gov/drugs/human-drug-compounding",
+  fdaCompounding: "https://www.fda.gov/drugs/guidance-compliance-regulatory-information/human-drug-compounding",
   fdaAlfia: "https://www.fda.gov/drugs/medication-health-fraud/public-notification-alfia-weight-loss-capsules-contain-hidden-drug-ingredient",
   lillyRelease: "https://www.biospace.com/press-releases/foundayo-orforglipron-lillys-new-oral-glp-1-pill-for-weight-loss-now-available-in-the-u-s",
   sciam: "https://www.scientificamerican.com/article/how-eli-lillys-new-glp-1-pill-stacks-up-against-wegovy-and-other-weight-loss/",

@@ -1,4 +1,4 @@
-import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
+import { SHOW_TRUSTPILOT_WIDGETS, visibleTrustBadges } from "@/lib/trustpilot-display";
 import { Check, ArrowUpRight, Star, ShieldCheck, BadgeCheck } from "lucide-react";
 import Link from "next/link";
 import { ProviderCta } from "./provider-cta";
@@ -49,7 +49,7 @@ export function RichComparisonCard({
   const stars = product.starRating ?? Math.round(product.rating / 2);
   const treatments = review?.treatmentOptions ?? [];
   const facts = (review?.keyFeatures ?? product.highlights).slice(0, 4);
-  const pills = (review?.trustBadges ?? []).slice(0, 3);
+  const pills = visibleTrustBadges(review?.trustBadges).slice(0, 3);
   const startingPlan = review?.pricingPlans?.[0];
   const reviewHref = `${linkPrefix}/reviews/${review?.slug ?? product.id}`;
   const intro =

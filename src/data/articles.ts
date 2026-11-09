@@ -9,6 +9,7 @@ import { glp1ProvidersSameCompanyArticle } from "./glp1-providers-same-company";
 import { glp1WeightLossResultsArticle } from "./glp1-weight-loss-results";
 import { howToStartGlp1OnlineArticle } from "./how-to-start-glp1-online";
 import { glp1AndAlcoholArticle } from "./glp1-and-alcohol";
+import { glp1WeightLossMedicationsGuideArticle } from "./glp1-weight-loss-medications-guide";
 import { trueCostTable, budgetList } from "@/lib/true-cost";
 
 export interface Article {
@@ -2760,4 +2761,5 @@ export const articles: Article[] = [
   glp1WeightLossResultsArticle,
   howToStartGlp1OnlineArticle,
   glp1AndAlcoholArticle,
+  glp1WeightLossMedicationsGuideArticle,
 ];
