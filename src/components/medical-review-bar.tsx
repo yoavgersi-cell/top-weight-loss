@@ -179,7 +179,7 @@ export function MedicalReviewBar({
     </div>
     {secondary && pageReview && (
       <p className="mt-3 text-[13px] leading-[1.45] text-gray-600">
-        Also reviewed by{" "}
+        Medical fact-checking by{" "}
         <Link href={reviewerPath(secondary)} className="font-semibold text-[#0C4B75] hover:underline">
           {secondary.name}
           {secondary.credentials.length > 0 && <span className="whitespace-nowrap">, {secondary.credentials.join(", ")}</span>}
