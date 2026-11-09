@@ -1136,8 +1136,102 @@ export const REVIEW_LOG: Record<string, PageReview> = {
   ...Object.fromEntries(REVIEWED_2026_10_30.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: "2026-10-30" }])),
 };
 
+
+// Profile-only reviewers: they get a profile page at /reviewers/<slug> but are
+// NOT in REVIEWERS, so they don't appear in the About or review-policy schema,
+// the sitemap, or any byline. Move an entry into REVIEWERS when the operator
+// says so. Every credential, date and link is as supplied by the reviewer.
+export const PROFILE_ONLY_REVIEWERS: Reviewer[] = [
+  {
+    slug: "buddhini-dolapihilla",
+    name: "Dr. B. Dolapihilla",
+    fullName: "Buddhini Niroshika Dolapihilla",
+    credentials: ["MBBS"],
+    jobTitle: "Medical Doctor and Medical Writer",
+    headline: "Medical doctor (MBBS, University of Colombo) and medical writer specialising in evidence-based content",
+    shortBio:
+      "Dr. B. Dolapihilla is a medical doctor (MBBS) and medical writer who graduated from the Faculty of Medicine, University of Colombo, Sri Lanka. She specialises in evidence-based medical writing, research synthesis and literature searching across MEDLINE, PubMed, Scopus and the Cochrane Library.",
+    longBio: [
+      "Dr. B. Dolapihilla is a medical doctor (MBBS, University of Colombo) and medical writer. Her portfolio includes systematic and narrative reviews, quantitative research projects, four medical device manuals, 16 medical white papers, four eBooks and 12 pharmaceutical investigator's brochures.",
+      "She also contributes as an author and medical reviewer to health websites, translating complex scientific information into clear, accessible content. Combining clinical knowledge with research and writing expertise, she supports clients in developing accurate, well-referenced medical content for professional and public audiences.",
+      "Since September 2025 she has been the Medical Officer in Charge of the Blood Bank at Mullaitivu District General Hospital, National Blood Transfusion Service, Sri Lanka. Her clinical training includes postings in general surgery, neuro-trauma, rheumatology, internal medicine and paediatric surgery at the National Hospital of Sri Lanka and Lady Ridgeway Hospital for Children.",
+      "Her role with Treatments Hub is medical content review. It does not involve prescribing or treating patients.",
+    ],
+    image: {
+      src: "/reviewers/buddhini-dolapihilla.jpg",
+      webp: "/reviewers/buddhini-dolapihilla.webp",
+      thumb: "/reviewers/buddhini-dolapihilla-160.webp",
+      width: 800,
+      height: 800,
+    },
+    licensure: [
+      { title: "MBBS (Bachelor of Medicine, Bachelor of Surgery)", issuer: "Faculty of Medicine, University of Colombo" },
+      {
+        title: "Eligible for Limited Registration with APHRA",
+        issuer: "Australian Health Practitioner Regulation Agency",
+        detail: "Eligibility as stated on her CV; this is not full registration",
+      },
+      { title: "EPIC Verified", issuer: "EPIC", detail: "Primary-source credential verification" },
+      { title: "Advanced Life Support Provider (ALS ERC certified)", issuer: "European Resuscitation Council" },
+      { title: "Basic Life Support certified", issuer: "As listed on her CV" },
+    ],
+    education: [
+      {
+        degree: "MBBS (Bachelor of Medicine, Bachelor of Surgery)",
+        school: "Faculty of Medicine, University of Colombo",
+        location: "Sri Lanka",
+        detail: "2016 to 2023",
+      },
+    ],
+    experience: [
+      {
+        area: "Clinical (Sri Lanka)",
+        items: [
+          "Medical Officer in Charge, Blood Bank, District General Hospital Mullaitivu, National Blood Transfusion Service (Sep 2025 to present)",
+          "Resident Medical Officer, General Surgery, National Hospital of Sri Lanka (Feb 2025 to present)",
+          "Resident House Officer, Neuro Trauma ETU/ICU, National Hospital of Sri Lanka (Dec 2024 to Feb 2025)",
+          "Resident House Officer, Rheumatology and Rehabilitation, National Hospital of Sri Lanka (Oct to Dec 2024)",
+          "Intern Medical Officer, Internal Medicine, National Hospital of Sri Lanka (Apr to Oct 2024)",
+          "Intern Medical Officer, Professorial Paediatric Surgical Unit, Lady Ridgeway Hospital for Children (Oct 2023 to Apr 2024)",
+        ],
+      },
+      {
+        area: "Medical writing and research",
+        items: [
+          "Systematic and narrative reviews, quantitative research projects",
+          "Four medical device manuals, 16 medical white papers, four eBooks, 12 pharmaceutical investigator's brochures",
+          "Author and medical reviewer for health websites",
+        ],
+      },
+    ],
+    specialties: [
+      "Evidence-based medical writing",
+      "Research synthesis and systematic reviews",
+      "Literature searching: MEDLINE, PubMed, Scopus, Cochrane Library",
+      "Medical white papers and device manuals",
+      "Pharmaceutical investigator's brochures",
+    ],
+    selectedWork: [
+      {
+        title: "Impact of COVID-19 pandemic on caregivers of persons with epilepsy: a systematic review",
+        outlet: "Epilepsy & Behavior (2023)",
+        url: "https://doi.org/10.1016/j.yebeh.2023.109516",
+      },
+      {
+        title: "Morphology of ejaculatory ducts: a systematic review",
+        outlet: "Clinical Anatomy",
+        url: "https://doi.org/10.1002/ca.23557",
+      },
+    ],
+    sameAs: [],
+    scope: "Reviews the medical and scientific statements in the content she is assigned to. A review is listed on a page only once it has actually been done.",
+    verticals: [],
+    since: "",
+  },
+];
+
 export function getReviewer(slug: string = SITE_REVIEWER_SLUG): Reviewer | undefined {
-  return REVIEWERS.find((r) => r.slug === slug);
+  return REVIEWERS.find((r) => r.slug === slug) ?? PROFILE_ONLY_REVIEWERS.find((r) => r.slug === slug);
 }
 
 export function reviewerDisplayName(r: Reviewer): string {
