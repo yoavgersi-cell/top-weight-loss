@@ -594,6 +594,89 @@ export const HL_ONLINE_TREATMENT_GUIDE: ArticleData = {
 <h3>Can you ever stop?</h3>
 <p>Some people decide the trade-off isn't worth it anymore, and that's a legitimate choice. ${ext(S.mlMalePattern, "MedlinePlus")} points out that treatment isn't necessary if you're comfortable with your appearance, and that hairstyles, hairpieces or weaves can disguise hair loss safely and cheaply. If you do stop a prescription medicine, talk to the clinician who prescribed it first.</p>`,
     },
-    // __SECTIONS__
+    {
+      heading: "How much does online hair loss treatment cost?",
+      body: `<p>Among the providers we rank, prescription hair-loss treatment started at $24.99 a month in August 2026 (Maximus's oral minoxidil, billed as a 90-day supply), with personalized and combination products costing more. Price shouldn't be the first thing you choose on, but it matters because you'll probably be paying it for years.</p>
+<table><thead><tr><th>Provider</th><th>Lowest published option</th><th>Typical combination option</th><th>Billing note</th></tr></thead><tbody>
+<tr><td><a href="/hair-loss/reviews/maximus">Maximus</a></td><td>$24.99/mo oral minoxidil</td><td>$59.99/mo oral combo; $64.99/mo All-in-One Gel</td><td>Billed as a 90-day supply</td></tr>
+<tr><td><a href="/hair-loss/reviews/happyhead">Happy Head</a></td><td>$49 first order, Custom Topical or SuperCapsule</td><td>$98 first order for both (regularly $178)</td><td>Regular price $89 each; 20% off subscriptions</td></tr>
+<tr><td><a href="/hair-loss/reviews/petermd">PeterMD</a></td><td>$60 for 30 finasteride tablets</td><td>$70 per 50mL Follicure RX spray</td><td>Promotional prices shown with regular rates</td></tr>
+</tbody></table>
+<p>All prices are from our verified provider records, checked in August 2026, and can change. We don't hold verified prices for Hims, Keeps or Ro, so we don't quote them.</p>
+<h3>What to compare beyond the headline price</h3>
+<ul>
+<li><strong>The regular price</strong> after any first-order promotion.</li>
+<li><strong>Billing frequency:</strong> a 90-day bill is a bigger single charge even if the monthly rate is lower.</li>
+<li><strong>What's included:</strong> the consultation, follow-up messages and shipping.</li>
+<li><strong>Generic pill vs custom formula:</strong> compounded topicals usually cost more than a generic tablet.</li>
+<li><strong>Cancellation:</strong> how easy it is to stop or pause.</li>
+</ul>
+<p>The ${ext(S.nhs, "NHS")} notes that in the UK, finasteride and minoxidil aren't generally available on the NHS for hair loss, so people there may have to pay privately. Wherever you are, budget for an ongoing cost rather than a one-off purchase. Our <a href="/hair-loss/articles/hair-loss-treatment-cost">hair loss treatment cost guide</a> compares the numbers in full.</p>`,
+    },
+    {
+      heading: "Is online hair loss treatment discreet and private?",
+      body: `<p>Generally, yes. The providers we rank all ship discreetly to your door, according to our provider records, and the whole consultation happens on your phone or computer. For many people that privacy is the main reason to go online rather than book an appointment, and there's nothing wrong with that.</p>
+<h3>Privacy rules that apply</h3>
+<p>The ${ext(S.aadQuality, "American Academy of Dermatology")} notes that HIPAA requires health care professionals to keep your health information and medical records secure during telemedicine appointments, which is why they use secure platforms. Even so, it's worth reading a provider's privacy policy before you sign up. The ${ext(S.fdaOnlinePharmacy, "FDA's BeSafeRx guidance")} lists, among the warning signs of an unsafe online pharmacy, a site that doesn't clearly protect your personal and financial information or sells it to other websites.</p>
+<h3>Simple ways to keep things private</h3>
+<ul>
+<li>Use an email address you check privately, since order and refill messages go there.</li>
+<li>Check how the package is labeled and what appears on your card statement before ordering.</li>
+<li>Store medicines safely: ${ext(S.mlFinasteride, "MedlinePlus")} advises keeping medication in its original container, out of sight and reach of children.</li>
+<li>If you use a topical containing finasteride, ask your prescriber how to avoid transferring it to others. The ${ext(S.fdaTopicalFin, "FDA")} flagged a greater risk of accidental exposure, specifically for females, with topical forms than with coated tablets.</li>
+</ul>
+<p>Discreet doesn't have to mean secret from your own doctor. If you have a regular physician, telling them what you're taking helps them avoid interactions and makes sense of any blood tests.</p>`,
+    },
+    {
+      heading: "What new hair loss treatments are coming?",
+      body: `<p>Several new treatments are in late-stage trials, but none is approved or on sale for pattern hair loss in the US as of November 9, 2026, so finasteride and minoxidil remain the treatments to start with now. The two names you'll hear most are VDPHL01 and clascoterone.</p>
+<ul>
+<li><strong>VDPHL01 (Veradermics):</strong> an extended-release oral minoxidil tablet. On October 19, 2026, ${ext(S.vd304, "Veradermics reported")} that its phase 3 Study 304 in 536 men met both co-primary endpoints, with average gains of 28.6 hairs per square centimetre on the once-daily dose and 36.4 on the twice-daily dose at six months, against 6.6 on placebo. These are company-reported results. ${ext(S.vdMedscape, "Medscape reported on October 22, 2026")} that the company didn't share its FDA filing plans. If approved, it would be the first FDA-approved oral minoxidil for hair loss; today, oral minoxidil is off-label. Details are in our <a href="/hair-loss/articles/veradermics-vdphl01">VDPHL01 guide</a>.</li>
+<li><strong>Clascoterone (Breezula):</strong> a topical androgen receptor blocker from Cosmo Pharmaceuticals, which stops DHT from acting on the follicle rather than lowering DHT itself. Our <a href="/hair-loss/articles/breezula-clascoterone-hair-loss">Breezula guide</a> covers its phase 3 results and the planned US filing.</li>
+<li><strong>Other candidates:</strong> earlier-stage topicals and new mechanisms are covered, with sources, in our <a href="/hair-loss/articles/new-hair-loss-treatments-pipeline">new hair loss treatments pipeline</a>.</li>
+</ul>
+<h3>Should you wait for them?</h3>
+<p>We wouldn't. Pattern hair loss tends to progress without treatment, and the ${ext(S.aadMale, "AAD")} says the men who see the best results start treatment soon after noticing hair loss. Even if a new drug is approved, it will take time to reach patients. Starting with what's available now protects the hair you have, and you can always talk to your clinician about switching later.</p>
+<p>One note on alopecia areata, which is a different condition: several JAK-inhibitor pills are already FDA-approved for severe alopecia areata, which our pipeline guide also covers. They aren't treatments for pattern hair loss.</p>`,
+    },
+    {
+      heading: "When should you see a dermatologist in person instead?",
+      body: `<p>See a clinician in person, ideally a dermatologist, if your hair loss doesn't look like ordinary pattern loss or shedding, or if it comes with other symptoms. Online care is well suited to straightforward pattern hair loss; it isn't the right first stop for everything.</p>
+<p>${ext(S.mlHairLoss, "MedlinePlus")} advises contacting a health care provider if you have any of the following:</p>
+<ul>
+<li>Hair loss in an unusual pattern, or rapid hair loss, or hair loss at an early age such as your teens or twenties.</li>
+<li>Pain or itching with the hair loss, or a red, scaly or otherwise abnormal scalp.</li>
+<li>Acne, facial hair or an abnormal menstrual cycle alongside hair loss, or a male-pattern hair-loss shape in a woman.</li>
+<li>Bald spots in your beard or eyebrows.</li>
+<li>Weight gain, muscle weakness, feeling cold or fatigue, which can point to thyroid problems.</li>
+<li>Areas of infection on your scalp.</li>
+</ul>
+<p>${ext(S.mlMalePattern, "MedlinePlus's male pattern baldness page")} adds hair loss that begins after starting a medicine. The ${ext(S.nhs, "NHS")} also advises seeing a GP to find out what's causing hair loss before going to a commercial hair clinic.</p>
+<h3>What an in-person visit adds</h3>
+<p>A dermatologist can examine your scalp closely, order blood tests, and, if needed, take a small scalp biopsy, which the ${ext(S.aadTransplant, "AAD")} describes as a quick procedure that can be done during a consultation. That matters for conditions such as scarring alopecia, where the ${ext(S.aadCauses, "AAD")} warns that destroyed follicles can't regrow hair and early treatment can prevent further loss.</p>
+<p>A good online provider will tell you when it can't help. If it never does, that's worth noticing.</p>`,
+    },
+    {
+      heading: "What mistakes should you avoid when starting treatment?",
+      body: `<p>The most common mistakes are waiting too long, quitting too early, and spending money on products without evidence before trying the ones that work. Here are the ones we see most often, and what to do instead.</p>
+<ol>
+<li><strong>Waiting to "see how it goes."</strong> Pattern hair loss usually keeps going, and the ${ext(S.aadCauses, "AAD")} says the earlier treatment is started, the better it works.</li>
+<li><strong>Judging results at six weeks.</strong> The proven treatments take months. Give them the time the ${ext(S.mlFinasteride, "MedlinePlus")} and AAD timelines describe.</li>
+<li><strong>Panicking at the minoxidil shed.</strong> Early shedding is common and usually temporary.</li>
+<li><strong>Buying "DHT-blocking" shampoos and gummies first.</strong> Put your budget into evidence-backed treatment, then add extras if you want them.</li>
+<li><strong>Self-prescribing from unverified websites.</strong> The ${ext(S.fdaOnlinePharmacy, "FDA")} warns against sites that don't require a prescription or offer prices that seem too good to be true.</li>
+<li><strong>Not mentioning other medicines.</strong> Blood-pressure medicines, GLP-1 drugs and supplements such as biotin all matter to your prescriber.</li>
+<li><strong>Assuming a topical has no side effects.</strong> The ${ext(S.fdaTopicalFin, "FDA")} specifically flagged patients being told topical finasteride carried no risk.</li>
+<li><strong>Stopping without a plan.</strong> Benefits fade within months of stopping, so if you want to stop or switch, talk to your clinician first.</li>
+<li><strong>Treating a symptom without a diagnosis.</strong> Patchy loss, scalp pain or sudden heavy shedding need an assessment, not a hair-growth serum.</li>
+</ol>
+<p>If you'd like a single plan to follow, our guide to <a href="/hair-loss/articles/how-to-stop-hair-loss">how to stop hair loss</a> sets out the evidence-backed steps in order.</p>`,
+    },
+    {
+      heading: "The bottom line",
+      body: `<p>Online hair loss treatment in 2026 gives you easy access to the same evidence-backed medicines a dermatologist would discuss: finasteride for men, minoxidil for men and women, and, off-label, dutasteride, low-dose oral minoxidil and, for women, spironolactone. They work best when started early, judged over months rather than weeks, and kept up long term. Shampoos, lasers, PRP and supplements can play supporting roles, with weaker or more variable evidence. A transplant can help the right candidate but still needs medicine alongside it.</p>
+<p>The provider matters as much as the pill. Choose one where a licensed clinician reviews your history and photos, the treatments are clearly labeled as approved, off-label or compounded, prices and cancellation terms are published, and you can reach someone if side effects appear. Among the providers we compare, <a href="/hair-loss/reviews/maximus">Maximus</a> has the broadest prescription toolkit for men, <a href="/hair-loss/reviews/happyhead">Happy Head</a> leads on personalization and options for women, and <a href="/hair-loss/reviews/petermd">PeterMD</a> keeps it simple at published prices. You can compare them all on our <a href="/hair-loss">hair loss provider rankings</a>.</p>
+<p>This guide is general information, not medical advice. Talk to a licensed clinician before starting, stopping or changing any treatment.</p>`,
+    },
   ],
 };
