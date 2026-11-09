@@ -5,7 +5,7 @@
 // a single urlset at /sitemap.xml. All routes are handlers under src/app and
 // read from this module; nothing here depends on the request host.
 import type { MetadataRoute } from "next";
-import { REVIEWERS } from "@/data/reviewers";
+import { REVIEWERS, PROFILE_ONLY_REVIEWERS } from "@/data/reviewers";
 import { getConfig } from "@/lib/config-store";
 import { THREE_WAY_COMPARISONS } from "@/lib/three-way";
 import {
@@ -79,7 +79,7 @@ export function hubSiteEntries(): MetadataRoute.Sitemap {
   return [
     { url: HUB_URL, lastModified: FALLBACK_DATE, changeFrequency: "weekly", priority: 1 },
     { url: `${HUB_URL}/medical-review-policy`, lastModified: new Date("2026-10-04"), changeFrequency: "monthly", priority: 0.4 },
-    ...REVIEWERS.map((r) => ({
+    ...[...REVIEWERS, ...PROFILE_ONLY_REVIEWERS].map((r) => ({
       url: `${HUB_URL}/reviewers/${r.slug}`,
       lastModified: new Date(`${r.since}-01`),
       changeFrequency: "monthly" as const,
