@@ -69,9 +69,9 @@ export const HL_ONLINE_TREATMENT_GUIDE: ArticleData = {
   slug: "online-hair-loss-treatment-guide",
   title: "Online Hair Loss Treatment in 2026: The Complete Guide",
   description:
-    "How online hair loss treatment works in 2026: finasteride, dutasteride, oral vs topical minoxidil, shampoos, lasers and PRP compared, and how to pick a provider.",
+    "How online hair loss treatment works in 2026: finasteride, dutasteride, oral vs topical minoxidil, lasers and PRP compared, and how to pick a trusted provider.",
   category: "Guide",
-  readTime: "54 min read",
+  readTime: "55 min read",
   publishedAt: "2026-11-09",
   updatedAt: "2026-11-09",
   heroColor: "#EFF4F1",
@@ -113,11 +113,11 @@ export const HL_ONLINE_TREATMENT_GUIDE: ArticleData = {
 <h3>The main types, in plain English</h3>
 <table><thead><tr><th>Type</th><th>What it usually looks like</th><th>Does it grow back?</th></tr></thead><tbody>
 <tr><td>Male pattern hair loss</td><td>A receding hairline, often in an M shape, and thinning at the crown; ${ext(S.mlMalePattern, "MedlinePlus")} says it can end as a horseshoe of hair around the sides and back</td><td>Not on its own; treatment can slow it and regrow some hair</td></tr>
-<tr><td>Female pattern hair loss</td><td>A widening part and overall thinning on top, with the front hairline usually kept, per the ${ext(S.aadFemale, "AAD")}</td><td>Not on its own; treatment can slow it and help regrowth</td></tr>
+<tr><td>Female pattern hair loss</td><td>A widening part and overall thinning on top; women don't usually lose all their hair the way some men do, per the ${ext(S.aadFemale, "AAD")}</td><td>Not on its own; treatment can slow it and help regrowth</td></tr>
 <tr><td>Telogen effluvium (shedding)</td><td>Much more hair than usual in the shower or brush, all over, a few months after a trigger</td><td>Usually yes, once the trigger passes</td></tr>
 <tr><td>Alopecia areata</td><td>Round, smooth bald patches, sometimes in the beard or eyebrows</td><td>Often, and there are specific treatments</td></tr>
 <tr><td>Traction alopecia</td><td>Thinning where hair is pulled tight by a hairstyle</td><td>Early on, yes; long-term pulling can cause permanent loss, the ${ext(S.aadCauses, "AAD")} warns</td></tr>
-<tr><td>Scarring alopecia</td><td>Patches with inflammation, sometimes itchy or painful</td><td>No, once follicles are destroyed; early care matters</td></tr>
+<tr><td>Scarring alopecia</td><td>Areas where inflammation destroys hair follicles, per the ${ext(S.aadCauses, "AAD")}</td><td>No, once follicles are destroyed; early care matters</td></tr>
 </tbody></table>
 <h3>Other causes worth ruling out</h3>
 <p>The AAD's list of causes also includes thyroid disease, hormonal imbalance such as polycystic ovary syndrome (PCOS), scalp psoriasis, scalp infection, some medications, and getting too little biotin, iron, protein or zinc. ${ext(S.mlHairLoss, "MedlinePlus")} adds anemia and crash diets, especially those without enough protein, to the list of triggers. The ${ext(S.nhs, "NHS")} (reviewed January 2024) names illness, stress, cancer treatment, weight loss and iron deficiency as common causes of temporary hair loss.</p>
@@ -140,8 +140,7 @@ export const HL_ONLINE_TREATMENT_GUIDE: ArticleData = {
 <li><strong>Off-label.</strong> When a doctor prescribes an approved medicine for a use the FDA hasn't approved. It's legal and common. Oral minoxidil and dutasteride are both used off-label for hair loss.</li>
 <li><strong>Compounded medicine.</strong> A custom formula mixed by a pharmacy, such as a topical with several ingredients. ${ext(S.fdaTopicalFin, "The FDA")} notes that compounded drugs are not FDA-approved, so the agency hasn't evaluated their safety, effectiveness or quality before marketing.</li>
 <li><strong>5-alpha reductase inhibitor (5-ARI).</strong> The drug class that includes finasteride and dutasteride.</li>
-</ul>
-<p>With those in hand, the rest of this guide should read much more easily.</p>`,
+</ul>`,
     },
     {
       heading: "What are the early signs of male pattern baldness?",
@@ -155,8 +154,7 @@ export const HL_ONLINE_TREATMENT_GUIDE: ArticleData = {
 <tr><td>Norwood VI to VII</td><td>The front and crown areas merge, leaving a horseshoe of hair at the sides and back</td><td>Medication protects what remains; a transplant or cosmetic options are often discussed</td></tr>
 </tbody></table>
 <p>These are broad groupings, not a diagnosis. A clinician uses your photos, family history and how fast things are changing to judge where you are. Our <a href="/hair-loss/articles/norwood-scale">Norwood scale guide</a> walks through each stage, and our page on <a href="/hair-loss/articles/receding-hairline-treatment">receding hairline treatment</a> covers the front-of-head question specifically.</p>
-<h3>When a receding hairline isn't balding</h3>
-<p>Many men's hairlines mature in their late teens and twenties, moving back slightly without continuing to recede. That's not the same as progressive pattern loss. The difference usually shows over time: a mature hairline settles, while pattern loss keeps going and is often joined by crown thinning. If you're unsure, take photos in the same light every few months; it's one of the most useful things you can bring to a consultation.</p>
+<p>If you're unsure whether anything is changing, take photos in the same light every few months; they're one of the most useful things you can bring to a consultation.</p>
 <h3>When it might not be pattern loss at all</h3>
 <p>${ext(S.mlMalePattern, "MedlinePlus")} advises contacting a health care provider if hair loss happens in an atypical pattern, including rapid loss, widespread shedding, patches or breakage; if it comes with itching, redness, scaling or pain; or if it begins after starting a new medicine. Those signs call for a proper diagnosis before you start any hair-loss product. Our longer explainer on <a href="/hair-loss/articles/male-pattern-baldness-explained">male pattern baldness</a> covers causes and treatment in more detail.</p>`,
     },
@@ -196,7 +194,7 @@ export const HL_ONLINE_TREATMENT_GUIDE: ArticleData = {
     },
     {
       heading: "What are the side effects of finasteride?",
-      body: `<p>Most men who take finasteride don't have problems with it, but a minority do, and the possible side effects are serious enough that a good clinician will talk them through before prescribing. The ${ext(S.aadMale, "AAD")} lists loss of libido, trouble getting or keeping an erection, breast swelling and tenderness, and depression, and notes that sexual side effects have been reported to continue after a patient stops taking it. Because of how serious those side effects can be, the AAD says a dermatologist will want to know about your existing conditions and medications before prescribing.</p>
+      body: `<p>Many men take finasteride without problems, but some do have side effects, and the possible side effects are serious enough that a good clinician will talk them through before prescribing. The ${ext(S.aadMale, "AAD")} lists loss of libido, trouble getting or keeping an erection, breast swelling and tenderness, and depression, and notes that sexual side effects have been reported to continue after a patient stops taking it. Because of how serious those side effects can be, the AAD says a dermatologist will want to know about your existing conditions and medications before prescribing.</p>
 <h3>What MedlinePlus lists</h3>
 <p>${ext(S.mlFinasteride, "MedlinePlus")} (revised June 15, 2026) groups finasteride's side effects into two tiers:</p>
 <ul>
@@ -205,7 +203,7 @@ export const HL_ONLINE_TREATMENT_GUIDE: ArticleData = {
 </ul>
 <p>MedlinePlus also says finasteride may decrease fertility in men, that sexual side effects may occur during treatment and after it's stopped, and that taking finasteride may increase the risk of a fast-growing, high-grade form of prostate cancer. It advises talking to your doctor about the risks.</p>
 <h3>Putting the risk in proportion</h3>
-<p>Two things are true at once. Finasteride has been prescribed for hair loss since 1997 and most men tolerate it, and some men have side effects that are distressing and, in a minority of reports, persistent. The responsible approach is neither to dismiss the risk nor to treat it as inevitable. Tell your prescriber about any history of depression, sexual health concerns or fertility plans; know which symptoms to report; and make sure your provider makes it easy to reach a clinician if something changes.</p>
+<p>Two things are true at once. Finasteride has been prescribed for hair loss since 1997 and many men take it without trouble, and some men have side effects that are distressing and, according to the AAD, have been reported to continue after stopping. The responsible approach is neither to dismiss the risk nor to treat it as inevitable. Tell your prescriber about any history of depression, sexual health concerns or fertility plans; know which symptoms to report; and make sure your provider makes it easy to reach a clinician if something changes.</p>
 <p>If you want to know whether finasteride affects testosterone, the short answer is that it lowers DHT, not testosterone; see <a href="/hair-loss/articles/does-finasteride-lower-testosterone">does finasteride lower testosterone</a>. Our dedicated guide to <a href="/hair-loss/articles/finasteride-side-effects">finasteride side effects</a> separates the common from the rare in more detail.</p>
 <h3>What about topical finasteride?</h3>
 <p>Some men look to topical finasteride hoping to avoid side effects. The trial data for a manufactured spray are encouraging, but the FDA's April 2025 alert on compounded topical versions is important reading, and we cover both in the topical finasteride section below.</p>`,
