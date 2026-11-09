@@ -50,6 +50,7 @@ const MID_TOP_THREE_SLUGS = new Set<string>([
   "online-trt-guide",
   "hrt-for-menopause-guide",
   "online-therapy-psychiatry-guide",
+  "embody-vs-ro-weight-loss",
 ]);
 
 // Code-side CTR overrides for high-impression articles whose stored meta lives

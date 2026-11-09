@@ -10,6 +10,7 @@ import { glp1WeightLossResultsArticle } from "./glp1-weight-loss-results";
 import { howToStartGlp1OnlineArticle } from "./how-to-start-glp1-online";
 import { glp1AndAlcoholArticle } from "./glp1-and-alcohol";
 import { glp1WeightLossMedicationsGuideArticle } from "./glp1-weight-loss-medications-guide";
+import { embodyVsRoWeightLossArticle } from "./embody-vs-ro-weight-loss";
 import { trueCostTable, budgetList } from "@/lib/true-cost";
 
 export interface Article {
@@ -2762,4 +2763,5 @@ export const articles: Article[] = [
   howToStartGlp1OnlineArticle,
   glp1AndAlcoholArticle,
   glp1WeightLossMedicationsGuideArticle,
+  embodyVsRoWeightLossArticle,
 ];
