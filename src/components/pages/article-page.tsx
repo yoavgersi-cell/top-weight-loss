@@ -432,7 +432,8 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     const reg = cell.note.match(/reg\.\s*(\$[\d,]+)/i);
     return `Tirzepatide ${cell.price}/mo${reg ? ` (reg. ${reg[1]})` : ""}`;
   };
-  const TIRZ_TOP_IDS = ["embody", "altrx", "wellmedr"];
+  // Editorial order for the tirzepatide top three: Eden, embody, welludr.
+  const TIRZ_TOP_IDS = ["eden", "embody", "wellmedr"];
   const tirzPriceNotes = Object.fromEntries(
     TIRZ_TOP_IDS.map((id) => [id, tirzNote(id)]).filter((e): e is [string, string] => typeof e[1] === "string"),
   );
@@ -791,6 +792,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                         linkPrefix={ctx.prefix}
                         limit={3}
                         providerIds={TIRZ_TOP_IDS}
+                        order="given"
                         priceNotes={tirzPriceNotes}
                         introMode="short"
                         title="Our top 3 tirzepatide providers"
