@@ -143,31 +143,43 @@ export function MedicalReviewBar({
   // single byline: one short line per reviewer (lead first), then the writer
   // credit and policy link in small type underneath.
   if (extras.length > 0) {
-    const rows = [
+    const [lead, ...rest] = [
       ...leadExtras.map((x) => ({ r: x, date: x.reviewedAt })),
       { r: reviewer, date: review?.reviewedAt },
       ...otherExtras.map((x) => ({ r: x, date: x.reviewedAt })),
     ];
+    const nameLine = (r: Reviewer) => (
+      <Link href={reviewerPath(r)} className="font-semibold text-[#0C4B75] hover:underline">
+        {r.name}
+        {r.credentials.length > 0 && <span className="whitespace-nowrap">, {r.credentials.join(", ")}</span>}
+      </Link>
+    );
     return (
-      <div className={`min-w-0 space-y-2.5 ${className}`} data-review-status="multi">
-        {rows.map(({ r, date }) => (
-          <div key={r.slug} className="flex min-w-0 items-center gap-2.5">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={r.image.thumb} alt={`${r.name}, ${r.jobTitle}`} width={36} height={36} style={{ width: 36, height: 36 }} className="shrink-0 rounded-full object-cover ring-1 ring-gray-200" loading="lazy" decoding="async" />
-            <p className="min-w-0 text-[14px] leading-[1.4] text-gray-700">
-              <ShieldCheck className="mr-1 inline h-[14px] w-[14px] align-[-2px] text-emerald-600" strokeWidth={2.25} />
-              {date ? "Reviewed by " : "Medical reviewer: "}
-              <Link href={reviewerPath(r)} className="font-semibold text-[#0C4B75] hover:underline">
-                {r.name}
-                {r.credentials.length > 0 && <span className="whitespace-nowrap">, {r.credentials.join(", ")}</span>}
-              </Link>
-              {date && <span className="text-gray-500"> · <time dateTime={date}>{formatDate(date)}</time></span>}
+      <div className={`min-w-0 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm ${className}`} data-review-status="multi">
+        <div className="flex items-start justify-between gap-4">
+          <div className="min-w-0">
+            <p className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.04em] text-gray-500">
+              Reviewed for medical accuracy by
+              <ShieldCheck className="h-[14px] w-[14px] text-emerald-600" strokeWidth={2.25} />
             </p>
+            <p className="mt-1.5 text-[17px] font-bold leading-snug text-[#191919]">{nameLine(lead.r)}</p>
+            {lead.date && <p className="mt-0.5 text-[13px] text-gray-500"><time dateTime={lead.date}>{formatDate(lead.date)}</time></p>}
           </div>
-        ))}
-        <p className="pl-[46px] text-[12.5px] text-gray-500">
-          Written by {writer} · {policy}
-        </p>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={lead.r.image.thumb} alt={`${lead.r.name}, ${lead.r.jobTitle}`} width={36} height={36} style={{ width: 36, height: 36 }} className="shrink-0 rounded-full object-cover ring-1 ring-gray-200" loading="lazy" decoding="async" />
+        </div>
+        {rest.length > 0 && (
+          <div className="mt-4 space-y-2 border-t border-gray-100 pt-4 text-[13.5px] text-gray-600">
+            {rest.map(({ r, date }) => (
+              <p key={r.slug}>
+                {date ? "Also reviewed by " : "Medical reviewer: "}
+                {nameLine(r)}
+                {date && <span className="text-gray-500"> · <time dateTime={date}>{formatDate(date)}</time></span>}
+              </p>
+            ))}
+          </div>
+        )}
+        <p className="mt-4 text-[12.5px] text-gray-500">Written by {writer} · {policy}</p>
       </div>
     );
   }
