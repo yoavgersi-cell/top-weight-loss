@@ -177,12 +177,16 @@ export function MedicalReviewBar({
         <img src={x.image.thumb} alt={`${x.name}, ${x.jobTitle}`} width={32} height={32} style={{ width: 32, height: 32 }} className="rounded-full object-cover ring-1 ring-gray-200" loading="lazy" decoding="async" />
         <p className="text-[13px] leading-[1.45] text-gray-700">
           <ShieldCheck className="mr-1 inline h-[14px] w-[14px] align-[-2px] text-emerald-600" strokeWidth={2.25} />
-          Medical reviewer:{" "}
+          {x.reviewedAt ? "Reviewed for medical accuracy by " : "Medical reviewer: "}
           <Link href={reviewerPath(x)} className="font-semibold text-[#0C4B75] hover:underline">
             {x.name}
             {x.credentials.length > 0 && <span className="whitespace-nowrap">, {x.credentials.join(", ")}</span>}
           </Link>
-          <span className="hidden text-gray-500 sm:inline"> · {x.jobTitle}</span>
+          {x.reviewedAt ? (
+            <span className="text-gray-500"> · <time dateTime={x.reviewedAt}>{formatDate(x.reviewedAt)}</time></span>
+          ) : (
+            <span className="hidden text-gray-500 sm:inline"> · {x.jobTitle}</span>
+          )}
         </p>
       </div>
     ))}
