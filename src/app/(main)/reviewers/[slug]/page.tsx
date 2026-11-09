@@ -6,6 +6,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import {
   HUB_ORIGIN,
   REVIEWERS,
+  PROFILE_ONLY_REVIEWERS,
   getReviewer,
   reviewerDisplayName,
   reviewerPersonSchema,
@@ -15,7 +16,7 @@ import {
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return REVIEWERS.map((r) => ({ slug: r.slug }));
+  return [...REVIEWERS, ...PROFILE_ONLY_REVIEWERS].map((r) => ({ slug: r.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -25,7 +26,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const title = `${reviewerDisplayName(r)} - ${r.jobTitle}`;
   // Meta description: the bio's first sentence (the full bio runs past 300
   // characters and was truncated in results).
-  const description = `${r.shortBio.split(". ")[0]}.`;
+  // A first sentence under 40 characters is an abbreviation ("Dr. ..."), so use a clipped bio instead.
+  const firstSentence = r.shortBio.split(". ")[0];
+  const description =
+    firstSentence.length < 40
+      ? `${r.shortBio.slice(0, 157).replace(/\s+\S*$/, "")}...`
+      : `${firstSentence}.`;
   return {
     title,
     description,
@@ -61,7 +67,7 @@ export default async function ReviewerProfilePage({ params }: { params: Promise<
     "@id": reviewerUrl(r),
     url: reviewerUrl(r),
     name: `${reviewerDisplayName(r)} - ${r.jobTitle}`,
-    dateCreated: `${r.since}-01`,
+    ...(r.since ? { dateCreated: `${r.since}-01` } : {}),
     mainEntity: person,
     isPartOf: { "@type": "WebSite", name: "Treatments Hub", url: HUB_ORIGIN },
   };
