@@ -1308,8 +1308,19 @@ export function pageReviewSchema(path: string): Record<string, unknown> {
   // fetch the profile, so a reference alone carried no reviewer identity.
   const r = review.reviewerProfile;
   const extra = getExtraPageReviewers(path).filter((x) => x.reviewedAt);
+  const leadExtra = extra.filter((x) => x.lead);
   return {
     reviewedBy: [
+      ...leadExtra.map((x) => ({
+        "@type": "Person",
+        "@id": `${reviewerUrl(x)}#person`,
+        name: x.name,
+        honorificSuffix: x.credentials.join(", "),
+        jobTitle: x.jobTitle,
+        url: reviewerUrl(x),
+        image: `${HUB_ORIGIN}${x.image.src}`,
+        ...(x.sameAs.length && { sameAs: x.sameAs }),
+      })),
       {
       "@type": "Person",
       "@id": `${reviewerUrl(r)}#person`,
@@ -1320,7 +1331,7 @@ export function pageReviewSchema(path: string): Record<string, unknown> {
       image: `${HUB_ORIGIN}${r.image.src}`,
       ...(r.sameAs.length && { sameAs: r.sameAs }),
     },
-      ...extra.map((x) => ({
+      ...extra.filter((x) => !x.lead).map((x) => ({
         "@type": "Person",
         "@id": `${reviewerUrl(x)}#person`,
         name: x.name,
@@ -1338,13 +1349,13 @@ export function pageReviewSchema(path: string): Record<string, unknown> {
 // Extra reviewers shown on a page as "Medical reviewer" (staff wording, no
 // review claim). A page is only described as reviewed by someone through
 // REVIEW_LOG, with a date. Keyed by hub path.
-export const EXTRA_PAGE_REVIEWERS: Record<string, { slug: string; reviewedAt?: string }[]> = {
-  "/weight-loss/articles/best-tirzepatide-online": [{ slug: "buddhini-dolapihilla", reviewedAt: "2026-11-09" }],
+export const EXTRA_PAGE_REVIEWERS: Record<string, { slug: string; reviewedAt?: string; lead?: boolean }[]> = {
+  "/weight-loss/articles/best-tirzepatide-online": [{ slug: "buddhini-dolapihilla", reviewedAt: "2026-11-09", lead: true }],
 };
 
-export function getExtraPageReviewers(path: string): (Reviewer & { reviewedAt?: string })[] {
-  return (EXTRA_PAGE_REVIEWERS[path] ?? []).flatMap(({ slug, reviewedAt }) => {
+export function getExtraPageReviewers(path: string): (Reviewer & { reviewedAt?: string; lead?: boolean })[] {
+  return (EXTRA_PAGE_REVIEWERS[path] ?? []).flatMap(({ slug, reviewedAt, lead }) => {
     const r = REVIEWERS.find((x) => x.slug === slug);
-    return r ? [{ ...r, reviewedAt }] : [];
+    return r ? [{ ...r, reviewedAt, lead }] : [];
   });
 }
