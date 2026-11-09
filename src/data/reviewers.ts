@@ -257,7 +257,7 @@ export const REVIEWERS: Reviewer[] = [
     sameAs: [],
     scope: "Reviews the medical and scientific statements in the content she is assigned to. A review is listed on a page only once it has actually been done.",
     verticals: [],
-    since: "",
+    since: "2026-11",
   },
 
 ];
