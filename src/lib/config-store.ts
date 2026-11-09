@@ -4739,6 +4739,7 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
               "glp1-and-alcohol",
               // Nov 9, 2026: medication pillar (FDA-label figures; code is the source of truth).
               "glp1-weight-loss-medications-guide",
+              "embody-vs-ro-weight-loss",
               // Internal links in these were pointed at a retired battle slug;
               // the fix lives in code and must not be shadowed by the snapshot.
               "noom-weight-loss-review",
