@@ -5,7 +5,7 @@ import Base from "@/app/(main)/reviews/[slug]/opengraph-image";
 // exist here too, or the page ships with no og:image (Sept 2026 audit: 273 of
 // 279 hub pages had none). Delegates to the shared generator. Next requires the
 // config fields below to be literal exports (not re-exports).
-export const runtime = "edge";
+export const runtime = "nodejs";
 export const alt = "Provider Review - Treatments Hub";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";

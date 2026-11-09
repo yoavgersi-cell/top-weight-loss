@@ -3,7 +3,7 @@ import { ImageResponse } from "next/og";
 // OG image for the hub landing (treatmentshub.com/, rewritten to /hub by the
 // proxy, which passes /hub/* through unprefixed - so this file-convention URL
 // resolves on the hub host). Before this the hub home shipped no og:image.
-export const runtime = "edge";
+export const runtime = "nodejs";
 export const alt = "Treatments Hub - Compare Online Treatment Providers";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
