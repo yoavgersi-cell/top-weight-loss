@@ -54,7 +54,14 @@ export function MedicalReviewBar({
   /** Single-line variant for index pages and the hub landing. */
   compact?: boolean;
 }) {
-  const review = getPageReview(path);
+  const pageReview = getPageReview(path);
+  // A lead reviewer (flagged in EXTRA_PAGE_REVIEWERS) takes the main slot of
+  // this same bar; the page's logged reviewer moves to a text line below.
+  const leadExtra = getExtraPageReviewers(path).find((x) => x.lead && x.reviewedAt);
+  const review = leadExtra
+    ? ({ reviewedAt: leadExtra.reviewedAt, reviewerProfile: leadExtra } as unknown as NonNullable<typeof pageReview>)
+    : pageReview;
+  const secondary = leadExtra && pageReview ? pageReview.reviewerProfile : null;
   const reviewer: Reviewer | undefined = review?.reviewerProfile ?? getReviewer();
   if (!reviewer) return null;
 
@@ -117,76 +124,8 @@ export function MedicalReviewBar({
     </Link>
   );
 
-  const extras = getExtraPageReviewers(path);
-  const leadExtras = extras.filter((x) => x.lead);
-  const otherExtras = extras.filter((x) => !x.lead);
-  const extraLine = (x: (typeof extras)[number]) => (
-      <div key={x.slug} className={`mt-3 flex min-w-0 items-center gap-2.5 ${className}`}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={x.image.thumb} alt={`${x.name}, ${x.jobTitle}`} width={32} height={32} style={{ width: 32, height: 32 }} className="rounded-full object-cover ring-1 ring-gray-200" loading="lazy" decoding="async" />
-        <p className="text-[13px] leading-[1.45] text-gray-700">
-          <ShieldCheck className="mr-1 inline h-[14px] w-[14px] align-[-2px] text-emerald-600" strokeWidth={2.25} />
-          {x.reviewedAt ? "Reviewed for medical accuracy by " : "Medical reviewer: "}
-          <Link href={reviewerPath(x)} className="font-semibold text-[#0C4B75] hover:underline">
-            {x.name}
-            {x.credentials.length > 0 && <span className="whitespace-nowrap">, {x.credentials.join(", ")}</span>}
-          </Link>
-          {x.reviewedAt ? (
-            <span className="text-gray-500"> · <time dateTime={x.reviewedAt}>{formatDate(x.reviewedAt)}</time></span>
-          ) : (
-            <span className="hidden text-gray-500 sm:inline"> · {x.jobTitle}</span>
-          )}
-        </p>
-      </div>
-  );
-  // Pages with more than one reviewer get a compact stack instead of the long
-  // single byline: one short line per reviewer (lead first), then the writer
-  // credit and policy link in small type underneath.
-  if (extras.length > 0) {
-    const [lead, ...rest] = [
-      ...leadExtras.map((x) => ({ r: x, date: x.reviewedAt })),
-      { r: reviewer, date: review?.reviewedAt },
-      ...otherExtras.map((x) => ({ r: x, date: x.reviewedAt })),
-    ];
-    const nameLine = (r: Reviewer) => (
-      <Link href={reviewerPath(r)} className="font-semibold text-[#0C4B75] hover:underline">
-        {r.name}
-        {r.credentials.length > 0 && <span className="whitespace-nowrap">, {r.credentials.join(", ")}</span>}
-      </Link>
-    );
-    return (
-      <div className={`min-w-0 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm ${className}`} data-review-status="multi">
-        <div className="flex items-start justify-between gap-4">
-          <div className="min-w-0">
-            <p className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.04em] text-gray-500">
-              Reviewed for medical accuracy by
-              <ShieldCheck className="h-[14px] w-[14px] text-emerald-600" strokeWidth={2.25} />
-            </p>
-            <p className="mt-1.5 text-[17px] font-bold leading-snug text-[#191919]">{nameLine(lead.r)}</p>
-            {lead.date && <p className="mt-0.5 text-[13px] text-gray-500"><time dateTime={lead.date}>{formatDate(lead.date)}</time></p>}
-          </div>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={lead.r.image.thumb} alt={`${lead.r.name}, ${lead.r.jobTitle}`} width={36} height={36} style={{ width: 36, height: 36 }} className="shrink-0 rounded-full object-cover ring-1 ring-gray-200" loading="lazy" decoding="async" />
-        </div>
-        {rest.length > 0 && (
-          <div className="mt-4 space-y-2 border-t border-gray-100 pt-4 text-[13.5px] text-gray-600">
-            {rest.map(({ r, date }) => (
-              <p key={r.slug}>
-                {date ? "Also reviewed by " : "Medical reviewer: "}
-                {nameLine(r)}
-                {date && <span className="text-gray-500"> · <time dateTime={date}>{formatDate(date)}</time></span>}
-              </p>
-            ))}
-          </div>
-        )}
-        <p className="mt-4 text-[12.5px] text-gray-500">Written by {writer} · {policy}</p>
-      </div>
-    );
-  }
-
   return (
     <>
-    {leadExtras.map(extraLine)}
     <div className={`flex min-w-0 items-start gap-2.5 sm:items-center ${className}`} data-review-status={review ? "reviewed" : "staff"}>
       <ReviewerBubble reviewer={bubble} trigger={portraitImg} className="shrink-0 [&>button]:font-normal [&>button]:no-underline" />
       <div className={`min-w-0 ${compact ? "text-[12.5px] leading-[1.4]" : "text-[13px] leading-[1.45]"}`}>
@@ -238,7 +177,16 @@ export function MedicalReviewBar({
         )}
       </div>
     </div>
-    {otherExtras.map(extraLine)}
+    {secondary && pageReview && (
+      <p className="mt-3 text-[13px] leading-[1.45] text-gray-600">
+        Also reviewed by{" "}
+        <Link href={reviewerPath(secondary)} className="font-semibold text-[#0C4B75] hover:underline">
+          {secondary.name}
+          {secondary.credentials.length > 0 && <span className="whitespace-nowrap">, {secondary.credentials.join(", ")}</span>}
+        </Link>
+        <span className="text-gray-500"> · <time dateTime={pageReview.reviewedAt}>{formatDate(pageReview.reviewedAt)}</time></span>
+      </p>
+    )}
     </>
   );
 }
