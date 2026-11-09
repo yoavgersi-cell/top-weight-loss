@@ -11,6 +11,7 @@ import { TRT_GUIDES_PORTED } from "./trt-guides";
 import { TRT_ARTICLES_2026_10 } from "./trt-articles-2026-10";
 import { TRT_LOW_T_DIAGNOSIS } from "./trt-articles/how-low-testosterone-is-diagnosed";
 import { TRT_DEA_DEADLINE } from "./trt-articles/online-trt-dea-deadline";
+import { TRT_ONLINE_GUIDE } from "./trt-articles/online-trt-guide";
 import {
   TRT_PROVIDERS_PORTED,
   TRT_REVIEWS_PORTED,
@@ -1436,7 +1437,7 @@ export function trtSeed(base: SiteConfig): SiteConfig {
     // The ported set first, then the hub's three questions it did not cover.
     faqs: [...TRT_FAQS_PORTED, ...faqs],
     // Ported pillars and guides first, then the hub's own guides.
-    articles: [...TRT_GUIDES_PORTED, ...articles, ...TRT_ARTICLES_2026_10, TRT_LOW_T_DIAGNOSIS, TRT_DEA_DEADLINE],
+    articles: [...TRT_GUIDES_PORTED, ...articles, ...TRT_ARTICLES_2026_10, TRT_LOW_T_DIAGNOSIS, TRT_DEA_DEADLINE, TRT_ONLINE_GUIDE],
     quiz: TRT_QUIZ,
   };
 }

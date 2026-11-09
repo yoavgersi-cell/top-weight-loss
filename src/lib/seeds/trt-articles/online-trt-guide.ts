@@ -81,7 +81,7 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
   description:
     "Online TRT explained: who qualifies, the first telehealth consult, baseline and monitoring labs, formats, results, safety, DEA rules and choosing a clinic.",
   category: "Guide",
-  readTime: "54 min read",
+  readTime: "56 min read",
   publishedAt: "2026-11-09",
   updatedAt: "2026-11-09",
   heroColor: "#EAF1F6",
@@ -89,13 +89,13 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
   keyTakeaways: [
     "TRT treats diagnosed low testosterone, not a number alone: the Endocrine Society's July 2026 statement asks for symptoms plus at least two early-morning, fasting tests, with about 300 ng/dL as the common clinical threshold, and the AUA uses 300 ng/dL.",
     "No head-to-head trial has compared online and in-person TRT. A 2021 review in the International Journal of Impotence Research concluded telemedicine alone can deliver AUA guideline-concordant care, while noting it loses the physical exam and doesn't suit pellets.",
-    "Once you start, monitoring is part of the treatment: testosterone level, hematocrit and, by age, PSA at roughly 3 to 6 months and then at regular intervals. In the TRAVERSE trial of 5,246 men, major heart events were 7.0% on testosterone gel and 7.3% on placebo, but atrial fibrillation and pulmonary embolism were more common.",
+    "Once you start, monitoring is part of the treatment: the Endocrine Society's schedule rechecks testosterone and hematocrit at 3 to 6 months and then annually, with PSA by age and risk. In the TRAVERSE trial of 5,246 men, major heart events were 7.0% on testosterone gel and 7.3% on placebo, but atrial fibrillation and pulmonary embolism were more common.",
     "Testosterone is a Schedule III controlled substance, and the federal rule that lets clinicians prescribe it by video with no in-person visit runs through December 31, 2026. Exogenous testosterone also suppresses sperm production, so fertility plans belong in the first conversation.",
   ],
   sections: [
     {
       heading: "What is online TRT, and how does it work in 2026?",
-      body: `<div class="qa"><strong>The short answer</strong><p>Online TRT is testosterone replacement therapy that is assessed, prescribed and monitored through a telehealth clinic instead of a local office. You complete a health questionnaire, do blood tests (with a home kit or at a lab), speak to a licensed clinician by video or message, and, if low testosterone is confirmed and treatment is safe for you, the prescription is shipped to your door, followed by regular check-up labs. Done properly, it follows the same rules as in-person care: symptoms plus low testosterone on at least two early-morning tests, a baseline blood count and age-appropriate PSA, a frank question about fertility, and ongoing monitoring. A 2021 review found that telemedicine alone can deliver care that meets the American Urological Association guideline. Sources: ${ext(S.esStatement, "Endocrine Society, July 16, 2026")}; ${ext(S.dubinTele, "Dubin et al., 2021")}.</p></div>
+      body: `<div class="qa"><strong>The short answer</strong><p>Online TRT is testosterone replacement therapy that is assessed, prescribed and monitored through a telehealth clinic instead of a local office. You complete a health questionnaire, do blood tests (with a home kit or at a lab), speak to a licensed clinician by video or message, and, if low testosterone is confirmed and treatment is safe for you, the prescription is shipped to your door, followed by regular check-up labs. Done properly, it follows the same rules as in-person care: symptoms plus low testosterone on at least two early-morning tests, baseline safety labs, a fertility conversation and ongoing monitoring. A 2021 review found that telemedicine alone can deliver care that meets the American Urological Association guideline. Sources: ${ext(S.esStatement, "Endocrine Society, July 16, 2026")}; ${ext(S.dubinTele, "Dubin et al., 2021")}.</p></div>
 <p>Getting testosterone online has become a normal way to be treated. A man can order a home blood kit, have a video appointment the following week and receive treatment by mail. That convenience raises fair questions: is a video visit as good as an exam room, can a clinic diagnose you properly from a home kit, what happens if the telehealth prescribing rules change at the end of 2026, and how do you tell a careful clinic from one mainly selling a subscription? This guide answers them in order, for men in the United States weighing online TRT for the first time or thinking about switching providers. It is long because the decision is long-term: for most men who start, TRT continues for years.</p>
 <p>The first sections cover what TRT is, who qualifies and whether an online clinic can diagnose you properly. The middle walks through the telehealth process: onboarding, baseline labs, the first consultation, formats, memberships, costs and how the leading providers compare. The later sections cover monitoring, results, safety, fertility, alternatives, the DEA deadline, red flags and switching. Each section opens with a direct answer.</p>
 <h3>How we researched and compared</h3>
@@ -119,7 +119,7 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
     {
       heading: "Are HRT and TRT the same thing?",
       body: `<p><strong>Not quite. TRT is one kind of hormone replacement therapy, but in everyday use "HRT" usually means menopausal hormone therapy for women, built on estrogen with or without a progestogen, while "TRT" means testosterone for men with low testosterone.</strong> They treat different conditions with different hormones, and the safety evidence for one does not transfer to the other.</p>
-<p>The overlap is real, which is where the confusion comes from. Menopause is itself a form of hypogonadism: MedlinePlus calls it the most common reason for hypogonadism and describes it as a normal change that occurs in women on average around age 50. In its treatment section, MedlinePlus says estrogen and progesterone are used for girls and women, and testosterone for boys and men. Source: ${ext(S.mpHypo, "MedlinePlus, hypogonadism")}, read November 9, 2026.</p>
+<p>The confusion is understandable: MedlinePlus calls menopause the most common reason for hypogonadism, and says estrogen and progesterone are used for women and testosterone for men. Source: ${ext(S.mpHypo, "MedlinePlus, hypogonadism")}, read November 9, 2026.</p>
 <table>
 <thead><tr><th></th><th>TRT (men)</th><th>HRT / menopausal hormone therapy (women)</th></tr></thead>
 <tbody>
@@ -142,7 +142,7 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
 <p>The Endocrine Society's guideline separates symptoms that are more specific to low testosterone, chiefly reduced sexual desire and fewer spontaneous or morning erections, from less specific ones such as low energy, low mood, poor concentration and reduced physical performance, which have many other causes. Source: ${ext(S.esGuideline, "Endocrine Society guideline, 2018")}. Our guide to <a href="/trt/articles/low-testosterone-symptoms">low testosterone symptoms</a> goes through them one by one.</p>
 <h3>Who usually should not start, at least not yet</h3>
 <p>The Endocrine Society's 2018 guideline lists situations in which testosterone should not be started, including breast or prostate cancer, a palpable prostate nodule, an elevated hematocrit, untreated severe obstructive sleep apnea, severe lower urinary tract symptoms, uncontrolled heart failure, a heart attack or stroke within the last six months, thrombophilia, and men planning fertility in the near term. The AUA recommends against prescribing exogenous testosterone to men who are currently trying to conceive. Sources: ${ext(S.esGuideline, "Endocrine Society guideline, 2018")}; ${ext(S.aua, "AUA guideline")}, as summarized in our <a href="/trt/articles/how-low-testosterone-is-diagnosed">diagnosis guide</a>.</p>
-<p>And for men whose low testosterone comes with excess weight and no other cause, the Endocrine Society's 2026 statement is direct: "weight loss is typically the first-line therapy" for appropriately diagnosed hypogonadism due to overweight or obesity (BMI above 27). See <a href="/trt/articles/weight-loss-testosterone-glp1-vs-trt">low testosterone and obesity: weight loss or TRT?</a></p>
+<p>For men whose low testosterone comes with excess weight and no other cause, the Endocrine Society says "weight loss is typically the first-line therapy." See <a href="/trt/articles/weight-loss-testosterone-glp1-vs-trt">low testosterone and obesity: weight loss or TRT?</a></p>
 <p>Age alone is not a reason either way: the diagnosis is the same "for a man of any age," in the Endocrine Society's words. See <a href="/trt/articles/normal-testosterone-levels-by-age">normal testosterone levels by age</a>.</p>`,
     },
     {
@@ -183,7 +183,7 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
 <p>The review cites estimates that telemedicine saved patients $888 per visit on average in one practice (counting travel, meals and missed work, driven mainly by patients who lived very far away) and $124 per visit among veterans with shorter journeys. On satisfaction, the review cites a survey of more than 38,000 urology patients, including 620 video visits, in which satisfaction scores were higher for video visits than for in-person visits (94.9% vs 92.5%). Those studies were not specific to TRT, and the authors say data on TRT-specific cost savings are lacking. Source: ${ext(S.dubinTele, "Dubin et al., 2021")}, read November 9, 2026.</p>
 <p>The price of treatment itself depends more on the clinic's pricing model, format and included monitoring than on the visit type; see the cost section below and <a href="/trt/articles/trt-clinic-vs-online">TRT clinic vs online</a>.</p>
 <h3>Our view</h3>
-<p>For a man with clear symptoms, two low morning tests, no complicating conditions and no near-term plans for children, a well-run online clinic offers the same medicine with less friction. The value is lost when convenience comes at the expense of the workup.</p>`,
+<p>For a man with clear symptoms, two low morning tests, no complicating conditions and no near-term plans for children, a well-run online clinic offers the same medicine with less friction, as long as convenience doesn't replace the workup.</p>`,
     },
     {
       heading: "Local TRT clinic or national telehealth platform: which gives better continuity of care?",
@@ -196,13 +196,13 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
 <tbody>
 <tr><td>Will I see the same clinician?</td><td>Often</td><td>Ask whether you get an assigned clinician or a rotating team</td></tr>
 <tr><td>What if I move states?</td><td>You will usually need a new local prescriber</td><td>Often seamless if the platform is licensed in your new state; confirm before moving</td></tr>
-<tr><td>Who examines me if I need it?</td><td>The clinic itself</td><td>Your own primary care doctor or a local clinic; the 2021 review recommends a local exam where an in-person one isn't possible</td></tr>
+<tr><td>Who examines me if I need it?</td><td>The clinic itself</td><td>Your primary care doctor or a local clinic</td></tr>
 <tr><td>Exposure to telehealth rule changes</td><td>None</td><td>Depends on what replaces the DEA flexibility after December 31, 2026</td></tr>
 </tbody>
 </table>
-<h3>The hybrid most experts describe</h3>
+<h3>The hybrid model one review proposes</h3>
 <p>The workflow proposed in the 2021 review is a useful template whichever route you choose. The authors recommend that the first evaluation be done in person by the prescribing physician if possible, or, if not, that the patient be examined by a local primary care provider "in conjunction with the initial telehealth consultation." After that, follow-up "should be performed via telemedicine, ideally through video visits," with the recommended labs done before each appointment, and telemedicine follow-up "can continue indefinitely" unless the patient asks for an in-person visit or develops a sign or symptom that needs a physical exam. Source: ${ext(S.dubinTele, "Dubin et al., 2021")}, read November 9, 2026.</p>
-<p>In practice, keep a primary care doctor in the loop: share your labs and know where you would go for an exam. If you would rather not depend on telehealth, see <a href="/trt/articles/trt-clinic-vs-online">TRT clinics vs online providers</a> and our guide to <a href="/trt/articles/online-trt-dea-deadline-2026">the December 31, 2026 DEA deadline</a> explains the regulatory risk for telehealth patients.</p>`,
+<p>In practice, keep a primary care doctor in the loop: share your labs and know where you would go for an exam. If you would rather not depend on telehealth, see <a href="/trt/articles/trt-clinic-vs-online">TRT clinics vs online providers</a>; for the regulatory risk, see our guide to <a href="/trt/articles/online-trt-dea-deadline-2026">the December 31, 2026 DEA deadline</a>.</p>`,
     },
     {
       heading: "How do you find a legitimate TRT doctor online?",
@@ -219,7 +219,7 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
 <h3>Where to start</h3>
 <p>Our <a href="/trt">online TRT clinic ranking</a> lists the providers we have reviewed in order, and each has a full review: <a href="/trt/reviews/hone">Hone Health</a>, <a href="/trt/reviews/tmates">TMates</a>, <a href="/trt/reviews/maleexcel">Male Excel</a>, <a href="/trt/reviews/taurus">Taurus Meds</a>, <a href="/trt/reviews/dudemeds">DudeMeds</a>, <a href="/trt/reviews/fridays">Fridays</a> and <a href="/trt/reviews/brightmeds">Brightmeds</a> among them. If you want a shortlist built around a particular need, we also publish the <a href="/trt/best-trt-for-beginners">best TRT for beginners</a>, the <a href="/trt/best-at-home-trt">best at-home TRT clinics</a> and the <a href="/trt/best-trt-for-fertility">best options for fertility-conscious men</a>. Our guide to <a href="/trt/articles/online-doctors-that-prescribe-testosterone">online doctors that prescribe testosterone</a> covers the legal side of who can prescribe.</p>
 <h3>When an in-person specialist is the better first stop</h3>
-<p>Some situations call for a urologist or endocrinologist in person before, or instead of, an online clinic: a very low testosterone with a low LH, especially with headaches or vision changes (which raise the question of the pituitary); a history of prostate or breast cancer; a recent heart attack or stroke; untreated sleep apnea; or active plans to have children. A good online clinic will tell you so itself and refer you on.</p>`,
+<p>See a urologist or endocrinologist in person first if you have a very low testosterone with a low LH (especially with headaches or vision changes), a history of prostate or breast cancer, a recent heart attack or stroke, untreated sleep apnea, or active plans for children. A good online clinic will tell you so itself and refer you on.</p>`,
     },
     {
       heading: "What are the onboarding steps at an online testosterone clinic?",
@@ -235,13 +235,7 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
 </ol>
 <h3>How long it takes</h3>
 <p>We don't publish timeframes for individual clinics because they change. What usually slows men down is the guideline itself: a second morning test, a retest after an illness, or a referral when LH or prolactin is unusual. Those delays are features, not bugs. Our guides to <a href="/trt/articles/how-to-get-trt-online">how to get TRT online</a> and <a href="/trt/articles/easiest-way-to-get-trt-online">the easiest way to get TRT online</a> cover the practical side of moving through the steps quickly without cutting corners.</p>
-<h3>What to have ready</h3>
-<ul>
-<li>A list of your current medicines and supplements, including anything for pain, sleep or mood.</li>
-<li>Any previous testosterone results, with the time of day they were taken.</li>
-<li>A short written note of your symptoms and how long you have had them, so you can compare at your first follow-up.</li>
-<li>Your plans, if any, for children in the next few years.</li>
-</ul>`,
+<p><strong>Have ready:</strong> a list of your medicines and supplements, any previous testosterone results with the time of day they were taken, a short note of your symptoms to compare against later, and your plans, if any, for children.</p>`,
     },
     {
       heading: "Which baseline lab tests should come before an online TRT prescription?",
@@ -312,19 +306,19 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
 <li>Is anything reversible, such as weight, sleep, a medicine or a recent illness, likely to be lowering my levels?</li>
 </ol>
 <h3>About safety</h3>
-<ol start="5">
+<ol start="4">
 <li>What was my baseline hematocrit, and at what level would you change or pause treatment?</li>
 <li>Do I need a PSA, and when will it be rechecked?</li>
 <li>Do I need a sleep apnea assessment before starting?</li>
 </ol>
 <h3>About fertility and alternatives</h3>
-<ol start="8">
+<ol start="7">
 <li>How will testosterone affect my sperm count, and is it reversible for me?</li>
 <li>Should I have a semen analysis first?</li>
 <li>Am I a candidate for a treatment that raises my own testosterone instead, and is that use off-label?</li>
 </ol>
 <h3>About the service</h3>
-<ol start="11">
+<ol start="10">
 <li>Who is my prescribing clinician, and how do I reach them between visits?</li>
 <li>When are my follow-up labs, and are they included in the price?</li>
 <li>What is the total monthly cost, including medicine, labs, visits and supplies?</li>
@@ -341,10 +335,10 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
 <table>
 <thead><tr><th>Format</th><th>How it's used</th><th>What the patient information highlights</th><th>Online-friendly?</th></tr></thead>
 <tbody>
-<tr><td>Intramuscular injection (for example testosterone cypionate)</td><td>Injected into a muscle; MedlinePlus describes injection by a doctor or nurse in an office or clinic, and many men are taught to self-inject</td><td>Injection-site pain, redness or bruising among common side effects</td><td>Usually, once you've been taught; the 2021 review notes some men may need an in-person demonstration first</td></tr>
+<tr><td>Intramuscular injection (for example testosterone cypionate)</td><td>Injected into a muscle</td><td>Injection-site pain, redness or bruising among common side effects</td><td>Usually; the 2021 review notes some men need an in-person demonstration before self-injecting</td></tr>
 <tr><td>Subcutaneous injection</td><td>Injected under the skin once a week by the patient or a caregiver, per MedlinePlus</td><td>MedlinePlus says the first dose of this product is given in the doctor's office</td><td>Yes, after the first supervised dose</td></tr>
-<tr><td>Testosterone undecanoate injection (Aveed)</td><td>Given by a doctor or nurse in a healthcare setting</td><td>Can cause serious breathing problems and allergic reactions; you must stay at least 30 minutes afterwards; available only through a special REMS program</td><td>No; requires an in-person visit</td></tr>
-<tr><td>Gel or solution (topical)</td><td>Applied to the skin once a day in the morning</td><td>Can harm women and children who touch treated skin; cover the area and wash hands; flammable until dry</td><td>Yes</td></tr>
+<tr><td>Testosterone undecanoate injection (Aveed)</td><td>Given by a doctor or nurse in a healthcare setting</td><td>Risk of serious breathing problems and allergic reactions; 30-minute observation; special REMS program only</td><td>No; requires an in-person visit</td></tr>
+<tr><td>Gel or solution (topical)</td><td>Applied to the skin once a day in the morning</td><td>Can harm women and children who touch treated skin; flammable until dry</td><td>Yes</td></tr>
 <tr><td>Patch or buccal system</td><td>Worn on the skin, or applied to the upper gum or inner cheek</td><td>Listed by the FDA as approved forms</td><td>Yes</td></tr>
 <tr><td>Oral testosterone</td><td>Taken by mouth</td><td>Listed by the FDA as an approved form; the FDA says premarket blood pressure studies of an oral and a subcutaneous product first raised the blood pressure concern behind its 2025 warning</td><td>Yes</td></tr>
 <tr><td>Pellets</td><td>Implanted under the skin by a doctor or nurse in an office or clinic</td><td>Requires a minimally invasive in-office procedure, per the 2021 review</td><td>No; men choosing pellets are not eligible for telemedicine-only follow-up, per the review</td></tr>
@@ -358,10 +352,10 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
     },
     {
       heading: "How do people choose between injections, gels and creams?",
-      body: `<p><strong>The choice comes down to how you feel about needles, how steady you want your levels, whether anyone at home could touch treated skin, what your clinic offers, and cost. Your clinician weighs those preferences against your labs and history and makes the prescribing decision.</strong> There is no single best format, and many men change format at least once.</p>
+      body: `<p><strong>The choice comes down to how you feel about needles, how steady you want your levels, whether anyone at home could touch treated skin, what your clinic offers, and cost. Your clinician weighs those preferences against your labs and history and makes the prescribing decision.</strong> No guidance we know of names a single best format, and the format can be changed later if it doesn't suit you.</p>
 <h3>The practical trade-offs</h3>
 <ul>
-<li><strong>Needles.</strong> Injections mean a needle on a regular schedule, which some men find routine within weeks and others never get used to. Topicals avoid needles entirely but are a daily job.</li>
+<li><strong>Needles.</strong> Injections mean a needle on a regular schedule; topicals avoid needles but are a daily job.</li>
 <li><strong>Household contact.</strong> MedlinePlus warns that topical testosterone "may harm women and children who touch your skin where it has been applied," and gives detailed precautions: let it dry, cover the area with clothing, wash your hands, and wash the area before skin-to-skin contact. It lists signs to watch for in a woman (new hair growth, acne) or a child (enlarged genitals, pubic hair growth, increased erections or sexual desire, aggressive behavior). Source: ${ext(S.mpTop, "MedlinePlus, testosterone topical")}, read November 9, 2026. For a man with young children or a pregnant partner, that can tip the decision towards injections.</li>
 <li><strong>Skin.</strong> Dry or itchy skin, redness and irritation are among the side effects MedlinePlus lists for topicals.</li>
 <li><strong>Injection sites.</strong> Pain, redness, bruising, bleeding or hardness at the injection site are among the common side effects MedlinePlus lists for injections. Source: ${ext(S.mpInj, "MedlinePlus, testosterone injection")}.</li>
@@ -376,7 +370,6 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
       heading: "What does an online TRT membership usually include?",
       body: `<p><strong>Most online TRT is sold as a program or membership with a recurring fee that, depending on the plan, bundles clinician visits, follow-up labs, the medication, supplies and shipping. What is included varies widely, so compare the inclusions, not just the headline price.</strong> The cheapest-looking plan can become the most expensive once labs and follow-up visits are added back in.</p>
 <h3>How the leading providers describe their model</h3>
-<p>Our reviews describe the three highest-ranked providers' pricing models in general terms; none publishes a single fixed price we could verify, so confirm current pricing on each clinic's site.</p>
 <ul>
 <li><strong>Hone Health</strong>: programs like Hone's "typically bundle an initial testing/diagnostic step with an ongoing monthly or membership fee that covers clinician oversight, follow-up labs and the medication," with exact costs depending on the format and how often you are monitored.</li>
 <li><strong>TMates</strong>: a membership-style program with an ongoing monthly fee that "bundles clinician oversight, monitoring and, depending on the plan, testing and medication."</li>
@@ -419,7 +412,7 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
 <li><strong>Count the alternative.</strong> If you have insurance and a local doctor willing to prescribe, the cash price of a telehealth membership competes with copays, deductibles and the cost of your time and travel. The review cites studies estimating patient savings from avoided travel and time off of $888 per visit on average in one practice, driven by patients who lived very far away, and $124 per visit in another. Source: ${ext(S.dubinTele, "Dubin et al., 2021")}.</li>
 </ul>
 <h3>Value is not only price</h3>
-<p>The cheapest plan is good value only if it includes the monitoring that keeps treatment safe. As our Hone Health review puts it, "a comprehensive program usually costs more than a bare-bones prescription service." Our <a href="/trt/hone-health-alternatives">Hone Health alternatives</a> page compares the field on exactly that trade-off.</p>`,
+<p>Value means monitoring included. As our Hone Health review puts it, "a comprehensive program usually costs more than a bare-bones prescription service." Our <a href="/trt/hone-health-alternatives">Hone Health alternatives</a> page compares the field on exactly that trade-off.</p>`,
     },
     {
       heading: "How do the top online TRT providers compare?",
@@ -464,11 +457,11 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
 <p><strong>If you are new to TRT</strong>, see the <a href="/trt/best-trt-for-beginners">best TRT for beginners</a>. <strong>If you might want children</strong>, raise it before anything is prescribed and look at clinics that offer fertility-sparing alternatives; see the <a href="/trt/best-trt-for-fertility">best TRT for fertility-conscious men</a> and our section on fertility below. <strong>If cost is the deciding factor</strong>, compare annual all-in costs with matching inclusions; see <a href="/trt/cheapest-online-trt">cheapest online TRT</a>.</p>
 <h3>More head-to-heads</h3>
 <p>We also compare <a href="/trt/hone-vs-dudemeds">Hone vs DudeMeds</a>, <a href="/trt/tmates-vs-dudemeds">TMates vs DudeMeds</a>, <a href="/trt/hone-vs-taurus">Hone vs Taurus</a>, <a href="/trt/hone-health-vs-maximus">Hone Health vs Maximus</a> and <a href="/trt/maximus-vs-hims">Maximus vs Hims</a>. Each one sets out where the two differ on testing, monitoring, formats and support.</p>
-<p>Each of these providers describes a process that starts with lab work and ends with a licensed clinician's decision, which is the right foundation. We can't verify from the outside exactly which tests each orders at intake on a given day, so send the question list above to whichever clinic you choose.</p>`,
+<p>Each of these providers starts with lab work and ends with a licensed clinician's decision. We can't verify exactly which tests each orders on a given day, so send the question list above to whichever you choose.</p>`,
     },
     {
       heading: "Which blood markers are monitored on TRT, and how often?",
-      body: `<p><strong>On TRT, the core monitoring markers are testosterone level, hematocrit (with hemoglobin) and, in men of screening age, PSA, plus blood pressure, symptoms and side effects. Both US guidelines put the first recheck at about 3 to 6 months after starting, with regular monitoring after that: annually under the Endocrine Society's schedule, and every 6 to 12 months for testosterone and hematocrit under the AUA's.</strong> Estradiol is checked when there are breast symptoms, not routinely in every man.</p>
+      body: `<p><strong>On TRT, the core monitoring markers are testosterone level, hematocrit (with hemoglobin) and, in men of screening age, PSA, plus blood pressure, symptoms and side effects. The Endocrine Society puts the first recheck at 3 to 6 months after starting and then annually; the AUA's follow-up table monitors testosterone and hematocrit every 6 to 12 months.</strong> Estradiol is checked when there are breast symptoms, not routinely in every man.</p>
 <table>
 <thead><tr><th>Marker</th><th>Endocrine Society (2018)</th><th>AUA (2018, validity confirmed 2024)</th><th>Action thresholds in the guidelines</th></tr></thead>
 <tbody>
@@ -502,7 +495,7 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
 <li><strong>Next steps</strong>: dose, format, fertility plans and the date of the next labs.</li>
 </ul>
 <h3>When follow-up should move to an in-person visit</h3>
-<p>The review lists the triggers for returning to an in-person appointment: "a patient request or any patient sign or symptom that requires a physical exam," which can be done by the TRT provider or a local primary care doctor. MedlinePlus lists symptoms that need a call to the doctor right away, including lower leg pain, swelling, warmth or redness; difficulty breathing, especially during sleep; erections that happen too often or last too long; urinary difficulty or blood in the urine; signs of liver problems; mood changes including depression or suicidal thoughts; and enlarged or painful breasts. Source: ${ext(S.mpInj, "MedlinePlus, testosterone injection")}. MedlinePlus also says to call your doctor immediately for chest pain, shortness of breath, slow or difficult speech, or weakness or numbness of an arm or leg, because testosterone can raise blood pressure and with it the risk of heart attack or stroke.</p>
+<p>The review's triggers for an in-person appointment are "a patient request or any patient sign or symptom that requires a physical exam." MedlinePlus lists symptoms that need a call to the doctor right away, including lower leg pain, swelling, warmth or redness; difficulty breathing, especially during sleep; erections that happen too often or last too long; urinary difficulty or blood in the urine; signs of liver problems; mood changes including depression or suicidal thoughts; and enlarged or painful breasts. Source: ${ext(S.mpInj, "MedlinePlus, testosterone injection")}. MedlinePlus also says to call your doctor immediately for chest pain, shortness of breath, slow or difficult speech, or weakness or numbness of an arm or leg, because testosterone can raise blood pressure and with it the risk of heart attack or stroke.</p>
 <h3>How the leading providers handle ongoing care</h3>
 <p>According to our reviews, Hone Health provides "ongoing monitoring with follow-up bloodwork and dose adjustments" and support for men managing therapy long-term; TMates includes "ongoing check-ins and dose management" in its membership; and Male Excel offers "unlimited provider follow-ups." See <a href="/trt/reviews/hone">Hone Health</a>, <a href="/trt/reviews/tmates">TMates</a> and <a href="/trt/reviews/maleexcel">Male Excel</a>. The test of ongoing care is simple: does someone review every result with you, and act when one is out of range?</p>
 <p>Keep every lab report and a simple log of dates, doses and symptoms; it makes each follow-up more useful and any switch easier.</p>`,
@@ -526,12 +519,12 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
 </table>
 <p>Source: ${ext(S.saad, "Saad et al., Eur J Endocrinol, 2011 (PMC full text)")}, read November 9, 2026. The authors note the time course varies considerably between studies, probably partly because of differences in testosterone preparations, and that the studies were not designed to measure onset, so treat the table as approximate.</p>
 <h3>What that means for judging whether TRT is working</h3>
-<p>Give it time before deciding. A first follow-up at around three months is a reasonable point to check levels, hematocrit and early symptom changes; a fair judgement on body composition and erections needs closer to six months. If your testosterone is in range on treatment and the symptoms that justified it haven't changed, that is useful information: it suggests the symptoms may have another cause, and a good clinician will say so rather than simply raise the dose. Our week-by-week <a href="/trt/articles/trt-results-timeline">TRT results timeline</a> and the guide to <a href="/trt/articles/trt-benefits">the benefits of TRT</a> go deeper, and both warn against "before and after" marketing that promises fixed results by a set date.</p>`,
+<p>Give it time: early follow-up checks levels, hematocrit and early changes, but a fair judgement on body composition and erections needs closer to six months. If your testosterone is in range on treatment and the symptoms that justified it haven't changed, that is useful information: it suggests the symptoms may have another cause, and a good clinician will say so rather than simply raise the dose. Our week-by-week <a href="/trt/articles/trt-results-timeline">TRT results timeline</a> and <a href="/trt/articles/trt-benefits">the benefits of TRT</a> go deeper; be wary of "before and after" marketing that promises fixed results.</p>`,
     },
     {
       heading: "Does TRT increase libido?",
       body: `<p><strong>For men with genuinely low testosterone, yes, sexual desire is the symptom most consistently helped, and it tends to respond early: the Saad review found effects on sexual interest appear after about three weeks and plateau at about six.</strong> Effects on erections and ejaculation may take up to six months. Source: ${ext(S.saad, "Saad et al., 2011")}.</p>
-<p>That fits the diagnosis guidelines. The Endocrine Society's guideline treats reduced sexual desire and fewer spontaneous or morning erections as the symptoms most specific to testosterone deficiency, more so than tiredness or low mood. Source: ${ext(S.esGuideline, "Endocrine Society guideline, 2018")}.</p>
+<p>The Endocrine Society's guideline treats reduced sexual desire and fewer spontaneous or morning erections as the symptoms most specific to testosterone deficiency, more so than tiredness or low mood. Source: ${ext(S.esGuideline, "Endocrine Society guideline, 2018")}.</p>
 <h3>Where TRT won't help libido</h3>
 <ul>
 <li><strong>Normal testosterone.</strong> If your levels are already normal, there is no deficiency to correct; the guidelines don't support treating for "optimization."</li>
@@ -556,8 +549,8 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
 <table>
 <thead><tr><th>Date</th><th>Action</th></tr></thead>
 <tbody>
-<tr><td>February 28, 2025</td><td>FDA class-wide changes: TRAVERSE results added to all testosterone labels; cardiovascular-risk language removed from the boxed warning; the "Limitation of Use" for age-related hypogonadism retained at that time; a blood pressure warning added for products that lacked one, after ambulatory blood pressure studies "confirmed an increase in blood pressure with use of all testosterone products, class-wide"</td></tr>
-<tr><td>December 10, 2025</td><td>FDA expert panel on testosterone; some panelists argued against excluding age-related hypogonadism and for removing testosterone from the controlled-substance list. Panel views are not FDA decisions</td></tr>
+<tr><td>February 28, 2025</td><td>FDA class-wide changes: TRAVERSE results added to labels; cardiovascular-risk language removed from the boxed warning; age-related "Limitation of Use" retained at that time; blood pressure warning added after studies "confirmed an increase in blood pressure with use of all testosterone products, class-wide"</td></tr>
+<tr><td>December 10, 2025</td><td>FDA expert panel; some panelists argued for treating age-related hypogonadism and descheduling testosterone (not FDA decisions)</td></tr>
 <tr><td>June 2026</td><td>FDA requested updates: remove the limitation of use on age-related hypogonadism and revise safety information on prostate cancer and benign prostatic hyperplasia; HHS said the prostate cancer contraindication would apply only to metastatic disease, with screening and monitoring still recommended</td></tr>
 </tbody>
 </table>
@@ -601,7 +594,7 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
       body: `<p><strong>For some men, yes, but they are off-label options. Clomiphene's approved use is to induce ovulation in women, and both clomiphene and enclomiphene are prescribed to men off-label, to stimulate the body's own testosterone rather than replace it, which is why they come up for men who want to protect fertility.</strong> They only make sense when the testes can still respond, which is why LH and FSH must be measured first.</p>
 <p>MedlinePlus describes clomiphene as used "to induce ovulation (egg production) in women," and adds that it is "also sometimes used to treat male infertility." Source: ${ext(S.mpClomid, "MedlinePlus, clomiphene (last revised September 15, 2017)")}, read November 9, 2026. Use in men for low testosterone is therefore off-label: a clinician prescribing it outside its approved indication. The AUA lists selective estrogen receptor modulators, the class clomiphene belongs to, among the options clinicians may use for men with testosterone deficiency who want to maintain fertility. Source: ${ext(S.aua, "AUA guideline")}.</p>
 <h3>Who they may suit</h3>
-<p>The candidates are usually men with secondary hypogonadism (low or inappropriately normal LH) whose system is suppressed but intact, particularly those who want children. A man with primary hypogonadism, where the testes themselves are failing, is less likely to respond, because the medicine works through the signal to the testes. That is why the LH result at intake matters so much: as our <a href="/trt/articles/how-low-testosterone-is-diagnosed">diagnosis guide</a> puts it, the option only exists if LH was measured and the pattern recognized.</p>
+<p>Our <a href="/trt/articles/how-low-testosterone-is-diagnosed">diagnosis guide</a> describes the typical candidate as a man with the secondary pattern (low or inappropriately normal LH), whose system is suppressed but intact, and who has fertility plans. Whether these medicines can work depends on whether the testes can respond to a stronger signal, which is why the LH result at intake matters: the option only exists if LH was measured and the pattern recognized.</p>
 <h3>What to ask a clinic offering it</h3>
 <ul>
 <li>Is this use off-label, and what evidence supports it for someone like me?</li>
@@ -613,12 +606,12 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
     {
       heading: "Do you need bloodwork for enclomiphene?",
       body: `<p><strong>Yes. Enclomiphene is a treatment for low testosterone, so it should start from the same diagnosis as TRT, symptoms plus repeat low early-morning testosterone, and it particularly depends on LH and FSH, which show whether your testes can respond to it.</strong> Follow-up blood tests show whether your own testosterone has actually risen and whether anything else needs attention.</p>
-<p>The diagnostic standard in the Endocrine Society's July 2026 statement, at least two early-morning, fasting tests plus symptoms, is about diagnosing hypogonadism, not about which medicine treats it. Source: ${ext(S.esStatement, "Endocrine Society, 2026")}. A clinic that prescribes enclomiphene without labs, or on one reading, is skipping the same steps that would be red flags for testosterone. Because its use for low testosterone in men is off-label, there is no FDA-approved monitoring schedule for it; ask your prescriber exactly what will be rechecked and when, and treat a clear answer as a sign of a careful clinic.</p>`,
+<p>The Endocrine Society's diagnostic standard, at least two early-morning, fasting tests plus symptoms, applies whatever medicine is used. Source: ${ext(S.esStatement, "Endocrine Society, 2026")}. A clinic that prescribes enclomiphene without labs, or on one reading, is skipping the same steps that would be red flags for testosterone. Because its use for low testosterone in men is off-label, there is no FDA-approved monitoring schedule for it; ask your prescriber exactly what will be rechecked and when, and treat a clear answer as a sign of a careful clinic.</p>`,
     },
     {
       heading: "Can online clinics keep prescribing testosterone after December 31, 2026?",
       body: `<p><strong>Possibly, but it depends on what the DEA does in the next few weeks. Testosterone is a Schedule III controlled substance, and the temporary federal rule that lets clinicians prescribe it by video with no prior in-person visit runs through December 31, 2026. If no replacement or extension arrives, the older law generally requiring at least one in-person medical evaluation would apply again.</strong></p>
-<p>The 2021 telemedicine review notes that all TRT formulations are Schedule III substances and that requirements for prescribing controlled substances online vary by state. Source: ${ext(S.dubinTele, "Dubin et al., 2021")}. Federally, the Ryan Haight Act of 2008 ${ext(S.mondaq, "generally requires at least one in-person medical evaluation")} before a controlled drug is prescribed by telemedicine. The pandemic-era waiver has been extended four times; the latest, ${ext(S.hklaw, "published at the end of 2025")}, lets DEA-registered clinicians prescribe Schedule II to V drugs by audio-video telemedicine with no prior in-person visit until ${ext(S.deaExtension, "December 31, 2026")}.</p>
+<p>The 2021 review notes that all TRT formulations are Schedule III and that online-prescribing requirements vary by state. Source: ${ext(S.dubinTele, "Dubin et al., 2021")}. Federally, the Ryan Haight Act of 2008 ${ext(S.mondaq, "generally requires at least one in-person medical evaluation")} before a controlled drug is prescribed by telemedicine. The pandemic-era waiver has been extended four times; the latest, ${ext(S.hklaw, "published at the end of 2025")}, lets DEA-registered clinicians prescribe Schedule II to V drugs by audio-video telemedicine with no prior in-person visit until ${ext(S.deaExtension, "December 31, 2026")}.</p>
 <h3>What could happen</h3>
 <ol>
 <li><strong>A final "special registration" rule.</strong> The DEA's ${ext(S.deaProposed, "January 2025 proposal")} would create a special telemedicine registration for prescribing Schedule III to V drugs, including state-by-state registration and prescription-monitoring checks, as summarized by the ${ext(S.aha, "American Hospital Association")}. The DEA sent a final version to White House review on ${ext(S.frierOira, "August 25, 2026")}; its text is ${ext(S.mcdermott, "not public")}.</li>
@@ -654,16 +647,16 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
 <li>Download your lab results, prescriptions and visit notes.</li>
 <li>Choose the new clinic and confirm it treats your state and offers your current format.</li>
 <li>Book the new clinic's intake before your current supply ends; share your history and labs.</li>
-<li>Expect the new clinician to want their own labs before continuing; that is a good sign, not a hassle.</li>
+<li>Expect the new clinician to want their own labs; that is a good sign.</li>
 <li>Cancel the old membership only once the new prescription is in place, and check the cancellation terms.</li>
 </ol>
-<p>If you are comparing where to go next, our <a href="/trt/hone-health-alternatives">Hone Health alternatives</a> page and the <a href="/trt">full ranking</a> are good starting points.</p>`,
+<p>Comparing where to go next? Start with our <a href="/trt/hone-health-alternatives">Hone Health alternatives</a> page.</p>`,
     },
     {
       heading: "What don't we know yet about online TRT?",
       body: `<p><strong>Several important questions are still open: there is no head-to-head trial of telehealth versus in-person TRT, long-term safety including for prostate cancer is not established, and the rules for prescribing testosterone by video after December 31, 2026 are not yet public.</strong></p>
 <ul>
-<li><strong>Telehealth outcomes.</strong> We found no study comparing testosterone levels, symptom relief or side effects between online and in-person care; the 2021 review called the data on TRT in the telemedicine era "limited." Source: ${ext(S.dubinTele, "Dubin et al., 2021")}.</li>
+<li><strong>Telehealth outcomes.</strong> We found no study comparing outcomes between online and in-person care; the 2021 review called the data "limited." Source: ${ext(S.dubinTele, "Dubin et al., 2021")}.</li>
 <li><strong>Long-term safety.</strong> The Endocrine Society says long-term safety, including for prostate cancer, "remains unestablished," and has called for a long-term "Men's Health Initiative," analogous to the Women's Health Initiative. Source: ${ext(S.esStatement, "Endocrine Society, July 16, 2026")}.</li>
 <li><strong>Labels.</strong> Whether and when the June 2026 label changes are finalized. Source: ${ext(S.fdaInfo, "FDA")}.</li>
 <li><strong>The DEA rule.</strong> What the final special-registration rule says, or whether the waiver is extended again.</li>
@@ -679,7 +672,7 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
     },
     {
       heading: "References",
-      body: `<p><strong>Read for this guide on November 9, 2026:</strong> ${ext(S.esStatement, "Endocrine Society, Statement on Testosterone Replacement Therapy, July 16, 2026")}; ${ext(S.aua, "American Urological Association, Evaluation and Management of Testosterone Deficiency (2018, validity confirmed 2024), guideline page")}; ${ext(S.fdaLabel, "FDA, class-wide labeling changes for testosterone products, February 28, 2025")}; ${ext(S.fdaInfo, "FDA, Testosterone Information, content current as of June 23, 2026")}; ${ext(S.mpInj, "MedlinePlus, testosterone injection, last revised May 15, 2025")}; ${ext(S.mpTop, "MedlinePlus, testosterone topical, last revised May 15, 2025")}; ${ext(S.mpHypo, "MedlinePlus, hypogonadism, reviewed July 21, 2024")}; ${ext(S.mpClomid, "MedlinePlus, clomiphene, last revised September 15, 2017")}; ${ext(S.nhsMM, "NHS, the 'male menopause', last reviewed October 13, 2022")}; ${ext(S.niaTT, "National Institute on Aging, T Trials results, February 21, 2017")}; ${ext(S.saad, "Saad F et al., Onset of effects of testosterone treatment and time span until maximum effects are achieved, Eur J Endocrinol, 2011")}; ${ext(S.dubinTele, "Dubin JM, Fantus RJ, Halpern JA, Testosterone replacement therapy in the era of telemedicine, Int J Impot Res, 2021")}.</p>
+      body: `<p><strong>Read for this guide on November 9, 2026:</strong> ${ext(S.esStatement, "Endocrine Society, Statement on Testosterone Replacement Therapy, July 16, 2026")}; ${ext(S.aua, "AUA testosterone deficiency guideline page (2018, validity confirmed 2024)")}; ${ext(S.fdaLabel, "FDA, class-wide labeling changes for testosterone products, February 28, 2025")}; ${ext(S.fdaInfo, "FDA, Testosterone Information, content current as of June 23, 2026")}; ${ext(S.mpInj, "MedlinePlus, testosterone injection, last revised May 15, 2025")}; ${ext(S.mpTop, "MedlinePlus, testosterone topical, last revised May 15, 2025")}; ${ext(S.mpHypo, "MedlinePlus, hypogonadism, reviewed July 21, 2024")}; ${ext(S.mpClomid, "MedlinePlus, clomiphene, last revised September 15, 2017")}; ${ext(S.nhsMM, "NHS, the 'male menopause', last reviewed October 13, 2022")}; ${ext(S.niaTT, "National Institute on Aging, T Trials results, February 21, 2017")}; ${ext(S.saad, "Saad F et al., Eur J Endocrinol, 2011")}; ${ext(S.dubinTele, "Dubin JM, Fantus RJ, Halpern JA, Int J Impot Res, 2021")}.</p>
 <p><strong>Carried over from our earlier guides (checked October 31 and November 6, 2026):</strong> ${ext(S.esGuideline, "Bhasin S et al., Endocrine Society guideline, JCEM, 2018")}; ${ext(S.auaTable7, "AUA follow-up laboratory testing table")}; ${ext(S.bssm, "BSSM guideline")}; ${ext(S.traverse, "Lincoff AM et al., TRAVERSE, NEJM, 2023")}; ${ext(S.traverseFx, "Snyder PJ et al., NEJM, 2024")}; ${ext(S.hhs2026, "HHS, June 2026")}; ${ext(S.fdaPanel, "Healio, FDA expert panel, December 10, 2025")}; ${ext(S.dubin, "Dubin JM et al., JAMA Internal Medicine, 2022")}; ${ext(S.dubinNU, "Northwestern Medicine, January 2023")}; ${ext(S.epic, "Epic Research, 2026")}; ${ext(S.endo26PR, "Endocrine Society, ENDO 2026 press release")}; ${ext(S.endo26RUN, "Renal and Urology News, ENDO 2026")}; ${ext(S.nma, "Journal of Sexual Medicine network meta-analysis, 2026")}; ${ext(S.who1990, "WHO Task Force, Lancet, 1990")}; ${ext(S.esDha, "Endocrine Society, statement on the DHA guideline, September 24, 2026")}; ${ext(S.brambilla09, "Brambilla DJ et al., JCEM, 2009")}; ${ext(S.caronia, "Caronia LM et al., Clinical Endocrinology, 2013")}; DEA and telehealth-rule sources as linked in the DEA section above.</p>`,
     },
   ],

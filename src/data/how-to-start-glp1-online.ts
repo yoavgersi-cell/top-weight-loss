@@ -18,7 +18,7 @@ const ext = (href: string, text: string) => `<a href="${href}" target="_blank" r
 const S = {
   wegovyLabel: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/215256s000lbl.pdf",
   surmount1: "https://pubmed.ncbi.nlm.nih.gov/35658024/",
-  fdaCompounding: "https://www.fda.gov/drugs/human-drug-compounding",
+  fdaCompounding: "https://www.fda.gov/drugs/guidance-compliance-regulatory-information/human-drug-compounding",
 };
 
 export const howToStartGlp1OnlineArticle: Article = {

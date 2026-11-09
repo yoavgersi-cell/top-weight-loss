@@ -9,3 +9,12 @@
 // plain-text citations in prose ("4.6 across 2,679 reviews") are unaffected.
 // Set to true to bring everything back exactly as it was.
 export const SHOW_TRUSTPILOT_WIDGETS = false;
+
+// Card trust pills ("4.4 across 1,050 Trustpilot reviews") are stored as
+// plain text in the review data, so the flag above didn't reach them. They
+// render as badge chips naming Trustpilot, so they're hidden with the widgets
+// (Nov 9, 2026). The data is untouched; the other pills still show.
+export function visibleTrustBadges(badges: string[] | undefined): string[] {
+  const list = badges ?? [];
+  return SHOW_TRUSTPILOT_WIDGETS ? list : list.filter((b) => !/trustpilot/i.test(b));
+}

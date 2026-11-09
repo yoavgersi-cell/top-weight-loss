@@ -6,6 +6,7 @@ import { ED_ARTICLES_2026_10 } from "./ed-articles-2026-10";
 import { ED_GLP1_ARTICLE } from "./ed-articles/glp1-and-erectile-dysfunction";
 import { ED_STATISTICS_ARTICLE } from "./ed-articles/erectile-dysfunction-statistics";
 import { ED_FASTEST_ACTING } from "./ed-articles/fastest-acting-ed-treatments";
+import { ED_TREATMENT_OPTIONS_COMPARED } from "./ed-articles/ed-treatment-options-compared";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // ED (erectile dysfunction) vertical content - treatmentshub.com/ed
@@ -2051,7 +2052,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
           },
           {
             heading: "Why can't you take ED pills with nitrates?",
-            body: `<p>This is the single most important safety point: <strong>PDE5 inhibitors must not be taken with nitrate medications.</strong> Nitrates (such as nitroglycerin, isosorbide and related "poppers"-type recreational drugs) are commonly prescribed for chest pain (angina) and some heart conditions. Both nitrates and ED medications lower blood pressure, and taken together they can cause a <strong>sudden, dangerous drop in blood pressure</strong> - the core danger the <a href="https://www.fda.gov/consumers/consumer-updates/hidden-risks-erectile-dysfunction-treatments-sold-online" target="_blank" rel="noopener noreferrer">FDA</a> warns about with unscreened ED products. Certain blood-pressure medications and alpha-blockers also warrant caution. This is precisely why the medical intake asks about your heart history and medications - answer it completely and honestly.</p>`,
+            body: `<p>This is the single most important safety point: <strong>PDE5 inhibitors must not be taken with nitrate medications.</strong> Nitrates (such as nitroglycerin, isosorbide and related "poppers"-type recreational drugs) are commonly prescribed for chest pain (angina) and some heart conditions. Both nitrates and ED medications lower blood pressure, and taken together they can cause a <strong>sudden, dangerous drop in blood pressure</strong> - the core danger the <a href="https://www.fda.gov/drugs/medication-health-fraud-notifications/sexual-enhancement-and-energy-product-notifications" target="_blank" rel="noopener noreferrer">FDA</a> warns about with unscreened ED products. Certain blood-pressure medications and alpha-blockers also warrant caution. This is precisely why the medical intake asks about your heart history and medications - answer it completely and honestly.</p>`,
           },
           {
             heading: "When should you seek care, and how do you lower your risk?",
@@ -2128,7 +2129,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
           },
           {
             heading: "The real risks of unregulated products",
-            body: `<p>The biggest problem isn't just that these products may not work - it's what can be hidden inside them. The <a href="https://www.fda.gov/consumers/consumer-updates/hidden-risks-erectile-dysfunction-treatments-sold-online" target="_blank" rel="noopener noreferrer"><strong>FDA has repeatedly issued public warnings</strong></a> that many \"male enhancement\" and \"herbal\" ED products sold over the counter contain <strong>undisclosed prescription drug ingredients</strong>, often the same active ingredients found in prescription ED pills, sometimes in unpredictable amounts.</p><p>Why that matters:</p><ul><li>A hidden active ingredient can interact dangerously with <strong>nitrate medications</strong> (for chest pain or heart conditions) or certain blood-pressure drugs, causing a sudden, dangerous drop in blood pressure.</li><li>You have no idea of the dose, purity or what else is in the capsule.</li><li>There is no clinician screening your health history for conditions that make these ingredients unsafe for you.</li></ul><p>In other words, an \"over-the-counter\" product can quietly expose you to a prescription-strength drug with none of the safeguards that make that drug safe.</p>`,
+            body: `<p>The biggest problem isn't just that these products may not work - it's what can be hidden inside them. The <a href="https://www.fda.gov/drugs/medication-health-fraud-notifications/sexual-enhancement-and-energy-product-notifications" target="_blank" rel="noopener noreferrer"><strong>FDA has repeatedly issued public warnings</strong></a> that many \"male enhancement\" and \"herbal\" ED products sold over the counter contain <strong>undisclosed prescription drug ingredients</strong>, often the same active ingredients found in prescription ED pills, sometimes in unpredictable amounts.</p><p>Why that matters:</p><ul><li>A hidden active ingredient can interact dangerously with <strong>nitrate medications</strong> (for chest pain or heart conditions) or certain blood-pressure drugs, causing a sudden, dangerous drop in blood pressure.</li><li>You have no idea of the dose, purity or what else is in the capsule.</li><li>There is no clinician screening your health history for conditions that make these ingredients unsafe for you.</li></ul><p>In other words, an \"over-the-counter\" product can quietly expose you to a prescription-strength drug with none of the safeguards that make that drug safe.</p>`,
           },
           {
             heading: "What about natural approaches?",
@@ -2256,6 +2257,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
       ED_GLP1_ARTICLE,
       ED_STATISTICS_ARTICLE,
       ED_FASTEST_ACTING,
+      ED_TREATMENT_OPTIONS_COMPARED,
     ],
 
     faqs: [

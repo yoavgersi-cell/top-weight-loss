@@ -73,6 +73,7 @@ const CODE_AUTHORITATIVE_BLOB_ARTICLES = new Set([
   "free-and-low-cost-therapy-options",
   "is-betterhelp-legit",
   "is-talkiatry-legit",
+  "online-therapy-psychiatry-guide",
 ]);
 
 async function getVerticalConfig(vertical: string): Promise<SiteConfig> {
@@ -4743,6 +4744,8 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
               "glp1-weight-loss-results",
               "how-to-start-glp1-treatment-online",
               "glp1-and-alcohol",
+              // Nov 9, 2026: medication pillar (FDA-label figures; code is the source of truth).
+              "glp1-weight-loss-medications-guide",
               // Internal links in these were pointed at a retired battle slug;
               // the fix lives in code and must not be shadowed by the snapshot.
               "noom-weight-loss-review",

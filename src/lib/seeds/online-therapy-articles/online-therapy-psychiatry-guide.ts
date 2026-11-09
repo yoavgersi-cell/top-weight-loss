@@ -104,7 +104,7 @@ export const OT_ONLINE_THERAPY_PSYCHIATRY_GUIDE: ArticleData = {
     },
     {
       heading: "How did we research this guide?",
-      body: `<p>Treatments Hub is a comparison site, not a healthcare provider. This guide hasn't been medically reviewed. What we can do is read the primary sources carefully, keep them separate from company marketing, and tell you exactly where each fact comes from. Here's how this page was put together.</p>
+      body: `<p>Treatments Hub is a comparison site, not a healthcare provider. This guide hasn't yet been through our medical-accuracy review. What we can do is read the primary sources carefully, keep them separate from company marketing, and tell you exactly where each fact comes from. Here's how this page was put together.</p>
 <ul>
 <li><strong>Public health and evidence facts</strong> link to the page we read, with the date we read it. For this guide that means the National Institute of Mental Health, SAMHSA, MedlinePlus (from the National Library of Medicine), Medicare.gov, the Centers for Medicare and Medicaid Services, the NHS, and peer-reviewed studies that are free to read on PubMed Central. Everything in that group was checked on November 9, 2026, unless a different date is given.</li>
 <li><strong>Platform facts</strong> come from our own reviews of <a href="/online-therapy/reviews/betterhelp">BetterHelp</a>, <a href="/online-therapy/reviews/talkspace">Talkspace</a>, <a href="/online-therapy/reviews/headspace">Headspace</a> and <a href="/online-therapy/reviews/talkiatry">Talkiatry</a>, last updated August 28, 2026, and from the companies' own help pages, which we label as the company's statements and date.</li>

@@ -73,7 +73,7 @@ const SRC = {
   wegovyApproval: "https://www.fda.gov/news-events/press-announcements/fda-approves-new-drug-treatment-chronic-weight-management-first-2014",
   zepboundApproval: "https://www.fda.gov/news-events/press-announcements/fda-approves-new-medication-chronic-weight-management",
   fdaConcerns: "https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss",
-  fdaCompounding: "https://www.fda.gov/drugs/human-drug-compounding",
+  fdaCompounding: "https://www.fda.gov/drugs/guidance-compliance-regulatory-information/human-drug-compounding",
   medlineSema: "https://medlineplus.gov/druginfo/meds/a618008.html",
   medlineTirz: "https://medlineplus.gov/druginfo/meds/a622044.html",
   lillyRelease: "https://www.biospace.com/press-releases/foundayo-orforglipron-lillys-new-oral-glp-1-pill-for-weight-loss-now-available-in-the-u-s",
