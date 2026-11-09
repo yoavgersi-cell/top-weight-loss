@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ShieldCheck } from "lucide-react";
-import { getPageReview, getReviewer, reviewerPath, type Reviewer } from "@/data/reviewers";
+import { getExtraPageReviewers, getPageReview, getReviewer, reviewerPath, type Reviewer } from "@/data/reviewers";
 import { ReviewerBubble, type ReviewerBubbleData } from "@/components/reviewer-bubble";
 
 // ───── Medical review bar ─────
@@ -117,7 +117,9 @@ export function MedicalReviewBar({
     </Link>
   );
 
+  const extras = getExtraPageReviewers(path);
   return (
+    <>
     <div className={`flex min-w-0 items-start gap-2.5 sm:items-center ${className}`} data-review-status={review ? "reviewed" : "staff"}>
       <ReviewerBubble reviewer={bubble} trigger={portraitImg} className="shrink-0 [&>button]:font-normal [&>button]:no-underline" />
       <div className={`min-w-0 ${compact ? "text-[12.5px] leading-[1.4]" : "text-[13px] leading-[1.45]"}`}>
@@ -169,5 +171,21 @@ export function MedicalReviewBar({
         )}
       </div>
     </div>
+    {extras.map((x) => (
+      <div key={x.slug} className={`mt-3 flex min-w-0 items-center gap-2.5 ${className}`}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={x.image.thumb} alt={`${x.name}, ${x.jobTitle}`} width={32} height={32} style={{ width: 32, height: 32 }} className="rounded-full object-cover ring-1 ring-gray-200" loading="lazy" decoding="async" />
+        <p className="text-[13px] leading-[1.45] text-gray-700">
+          <ShieldCheck className="mr-1 inline h-[14px] w-[14px] align-[-2px] text-emerald-600" strokeWidth={2.25} />
+          Medical reviewer:{" "}
+          <Link href={reviewerPath(x)} className="font-semibold text-[#0C4B75] hover:underline">
+            {x.name}
+            {x.credentials.length > 0 && <span className="whitespace-nowrap">, {x.credentials.join(", ")}</span>}
+          </Link>
+          <span className="hidden text-gray-500 sm:inline"> · {x.jobTitle}</span>
+        </p>
+      </div>
+    ))}
+    </>
   );
 }
