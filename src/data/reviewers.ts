@@ -1321,3 +1321,16 @@ export function pageReviewSchema(path: string): Record<string, unknown> {
     lastReviewed: review.reviewedAt,
   };
 }
+
+// Extra reviewers shown on a page as "Medical reviewer" (staff wording, no
+// review claim). A page is only described as reviewed by someone through
+// REVIEW_LOG, with a date. Keyed by hub path.
+export const EXTRA_PAGE_REVIEWERS: Record<string, string[]> = {
+  "/weight-loss/articles/best-tirzepatide-online": ["buddhini-dolapihilla"],
+};
+
+export function getExtraPageReviewers(path: string): Reviewer[] {
+  return (EXTRA_PAGE_REVIEWERS[path] ?? [])
+    .map((slug) => REVIEWERS.find((r) => r.slug === slug))
+    .filter((r): r is Reviewer => Boolean(r));
+}
