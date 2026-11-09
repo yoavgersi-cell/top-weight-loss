@@ -44,6 +44,7 @@ const S = {
   fdaCompounding: "https://www.fda.gov/drugs/human-drug-compounding/consumer-and-health-care-professional-information",
   fdaTainted: "https://www.fda.gov/drugs/medication-health-fraud/tainted-sexual-enhancement-and-energy-products",
   fdaOnlinePharmacy: "https://www.fda.gov/drugs/besaferx-your-source-online-pharmacy-information/considering-online-pharmacy",
+  niddkDiabetes: "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/sexual-bladder-problems",
   fdaErectus: "https://www.fda.gov/drugs/medication-health-fraud-notifications/erectus-plus-may-be-harmful-due-hidden-drug-ingredients",
   // Trials and reviews (PubMed abstracts, read Nov 9, 2026)
   cochraneLiswt: "https://pubmed.ncbi.nlm.nih.gov/40654049/",
@@ -103,15 +104,15 @@ export const ED_TREATMENT_OPTIONS_COMPARED: ArticleData = {
 <tr><td>Compounded multi-ingredient tablets</td><td>Two or more actives, often sildenafil plus tadalafil, in one dose</td><td>Varies by product</td><td>Not FDA-approved; ingredients studied separately, blends not</td><td>Cost; thinner evidence; same nitrate rule</td><td>Yes</td></tr>
 <tr><td>Alprostadil injection</td><td>Widens penile blood vessels directly, no nerve signal needed</td><td>Erection within 5 to 20 minutes</td><td>AUA Moderate Recommendation; FDA-approved</td><td>Needle; pain; prolonged erection risk; scarring over time</td><td>Yes, with in-office test</td></tr>
 <tr><td>Trimix and other mixed injections</td><td>Alprostadil plus papaverine and phentolamine</td><td>Minutes</td><td>Established use; not FDA-approved as a product</td><td>As above, plus compounding quality</td><td>Yes, with in-office test</td></tr>
-<tr><td>Urethral pellet (alprostadil)</td><td>Pellet absorbed through the urethra</td><td>Erection within 5 to 10 minutes</td><td>AUA Conditional Recommendation; FDA-approved</td><td>Less reliable; burning or aching</td><td>Yes, with in-office test</td></tr>
-<tr><td>Vacuum erection device</td><td>Pump draws blood in; ring holds it</td><td>A few minutes of pumping</td><td>AUA Moderate Recommendation</td><td>Less spontaneous; cold or numb feel; bruising</td><td>No (over the counter or by prescription)</td></tr>
-<tr><td>Penile implant</td><td>Surgically placed inflatable or bendable cylinders</td><td>On demand once healed</td><td>AUA Strong Recommendation to inform men</td><td>Surgery; infection; mechanical failure; irreversible</td><td>Surgical referral</td></tr>
-<tr><td>Low-intensity shockwave</td><td>Acoustic pulses aimed at stimulating blood vessels</td><td>Over weeks of sessions</td><td>AUA: investigational</td><td>Uncertain benefit; cost; many sessions</td><td>Clinic procedure</td></tr>
+<tr><td>Urethral pellet (alprostadil)</td><td>Pellet absorbed through the urethra</td><td>Erection within 5 to 10 minutes</td><td>AUA Conditional Recommendation; FDA-approved</td><td>Less reliable than injections; penile pain</td><td>Yes, with in-office test</td></tr>
+<tr><td>Vacuum erection device</td><td>Pump draws blood in; ring holds it</td><td>Set up just before sex</td><td>AUA Moderate Recommendation</td><td>Less spontaneous; cold or numb feel; bruising</td><td>No (over the counter or by prescription)</td></tr>
+<tr><td>Penile implant</td><td>Surgically placed inflatable device or rods</td><td>On demand once healed</td><td>AUA Strong Recommendation to inform men</td><td>Surgery; infection; mechanical failure; irreversible</td><td>Surgical referral</td></tr>
+<tr><td>Low-intensity shockwave</td><td>Acoustic pulses aimed at stimulating blood vessels</td><td>Over a course of sessions (trials ran up to three months)</td><td>AUA: investigational</td><td>Uncertain benefit; cost; many sessions</td><td>Clinic procedure</td></tr>
 <tr><td>PRP ("P-shot") and stem cells</td><td>Injected blood products or cells</td><td>Unclear</td><td>AUA: PRP experimental, stem cells investigational</td><td>No reliable evidence of benefit</td><td>Research setting only</td></tr>
-<tr><td>Testosterone (if low)</td><td>Restores a deficient hormone</td><td>Weeks to months</td><td>AUA: helps pills work; not a stand-alone ED treatment</td><td>Needs blood tests and monitoring; affects fertility</td><td>Yes</td></tr>
-<tr><td>Lifestyle change</td><td>Improves the blood vessels erections depend on</td><td>Months</td><td>AUA Moderate Recommendation</td><td>Slow; takes effort</td><td>No</td></tr>
-<tr><td>Pelvic floor training</td><td>Strengthens muscles involved in erection</td><td>About three months in the trial</td><td>Small randomized trials</td><td>Needs consistency and good technique</td><td>No</td></tr>
-<tr><td>Therapy and sex counselling</td><td>Reduces anxiety; improves communication</td><td>Weeks to months</td><td>AUA Moderate Recommendation to consider referral</td><td>Access and cost; needs engagement</td><td>No</td></tr>
+<tr><td>Testosterone (if low)</td><td>Restores a deficient hormone</td><td>Not a direct erection treatment</td><td>AUA: helps pills work; not a stand-alone ED treatment</td><td>Needs blood tests and monitoring</td><td>Yes</td></tr>
+<tr><td>Lifestyle change</td><td>Improves the blood vessels erections depend on</td><td>Months to years (two years in the key trial)</td><td>AUA Moderate Recommendation</td><td>Slow; takes effort</td><td>No</td></tr>
+<tr><td>Pelvic floor training</td><td>Strengthens muscles involved in erection</td><td>About three months in the trial</td><td>A small randomized trial</td><td>Needs consistency and good technique</td><td>No</td></tr>
+<tr><td>Therapy and sex counselling</td><td>Reduces anxiety; improves communication</td><td>Over a course of sessions</td><td>AUA Moderate Recommendation to consider referral</td><td>Access and cost; needs engagement</td><td>No</td></tr>
 </tbody></table>
 <p>Timing figures come from the MedlinePlus monographs for ${ext(S.mpSild, "sildenafil")}, ${ext(S.mpVard, "vardenafil")}, ${ext(S.mpAvan, "avanafil")} and ${ext(S.mpAlpro, "alprostadil")}, and from the ${ext(S.cialisLabel, "Cialis prescribing information")} on DailyMed. Treat them as typical ranges rather than promises. Every pill in the table needs sexual arousal to work; the injections and the pellet do not.</p>`,
     },
@@ -147,7 +148,7 @@ export const ED_TREATMENT_OPTIONS_COMPARED: ArticleData = {
     },
     {
       heading: "Which ED treatment is most effective?",
-      body: `<p>Measured by reliability alone, penile implants and injections sit at the top, pills and vacuum devices close behind for most men, and shockwave therapy well below. But "most effective" isn't the same as "best for you": the most reliable options are also the most invasive. Here are the headline results, each from its own source and measured its own way.</p>
+      body: `<p>In the published figures, injections and implants report the highest success and satisfaction, pills and vacuum devices work for most men, and shockwave therapy trails well behind. But "most effective" isn't the same as "best for you": the most reliable options are also the most invasive. Here are the headline results, each from its own source and measured its own way.</p>
 <table><thead><tr><th>Treatment</th><th>Headline result</th><th>Measure</th><th>Source</th></tr></thead><tbody>
 <tr><td>Sildenafil</td><td>Improved erections in 65% to 82% of men, vs 18% to 26% on placebo</td><td>Global improvement across 21 randomized trials</td><td>${ext(S.finkMeta, "Fink et al., Archives of Internal Medicine, 2002")}</td></tr>
 <tr><td>Sildenafil, tadalafil, vardenafil</td><td>Around 71% to 76% improved, vs 22% to 24% on placebo</td><td>Improved erections in published trials</td><td>${ext(S.pde5Compare, "Systematic review, BMJ, 2005")}</td></tr>
@@ -166,7 +167,7 @@ export const ED_TREATMENT_OPTIONS_COMPARED: ArticleData = {
     },
     {
       heading: "Which ED treatment is the best value?",
-      body: `<div class="qa"><strong>The short answer</strong>For most men, generic sildenafil or generic tadalafil is the best value by a wide margin: they're the least expensive prescription ED treatments in our cost index and among the best studied. A vacuum device is the other low-cost option, since the AUA calls it "effective and low-cost" for select men and it's a one-off purchase. Compounded blends, nasal sprays and brand-name pills cost considerably more per month.</div>
+      body: `<div class="qa"><strong>The short answer</strong>For most men, generic sildenafil or generic tadalafil is the best value by a wide margin: they're among the least expensive prescription ED treatments in our cost index and the best studied. A vacuum device is the other low-cost option, since the AUA calls it "effective and low-cost" for select men and it's a one-off purchase. Compounded blends, nasal sprays and brand-name pills cost considerably more per month.</div>
 <p>Value means cost per successful use, not price per pill. A cheap treatment you stop using is poor value; a pricier one that works reliably and fits your life may be better. With that in mind, here's how the main routes compared in our <a href="/ed/ed-cost-index">ED treatment cost index</a>, last updated October 14, 2026. Ranges are the index's representative US online ranges, not quotes from a single seller; always confirm the price at checkout.</p>
 <table><thead><tr><th>Route</th><th>Cost index figure (Oct 2026)</th><th>Basis</th></tr></thead><tbody>
 <tr><td>Generic sildenafil</td><td>About $1 to $3 per dose</td><td>Representative US online-pharmacy range</td></tr>
@@ -228,9 +229,9 @@ export const ED_TREATMENT_OPTIONS_COMPARED: ArticleData = {
       body: `<p>There isn't one pill that's gentlest for everyone, but the pattern is consistent. The AUA guideline lists the most frequently reported side effects of PDE5 inhibitors as indigestion, headache, flushing, back pain, nasal congestion, muscle aches, visual disturbance and dizziness, and found average rates similar across the four drugs, with three exceptions: indigestion was lowest with avanafil, flushing lowest with tadalafil, and muscle aches lowest with vardenafil and avanafil. Most side effects followed a dose-response pattern, meaning they became more common as the dose went up. Source: ${ext(S.aua, "AUA guideline, 2018")}.</p>
 <h3>What the side effects look like in practice</h3>
 <ul>
-<li><strong>Headache, flushing and a stuffy nose</strong> are the classic trio, the predictable result of a drug that widens blood vessels. They're usually mild and short-lived.</li>
+<li><strong>Headache, flushing and a stuffy nose</strong> are the classic trio, the predictable result of a drug that widens blood vessels.</li>
 <li><strong>Back and muscle ache</strong> is more associated with tadalafil; MedlinePlus lists pain in the back, muscles, arms or legs among its side effects. Source: ${ext(S.mpTad, "MedlinePlus, tadalafil")}.</li>
-<li><strong>Visual changes</strong>, such as a blue tinge or difficulty telling blue from green, appear in the monographs and are usually temporary.</li>
+<li><strong>Visual changes</strong>, such as a blue tinge or difficulty telling blue from green, appear in the monographs.</li>
 <li><strong>Indigestion or heartburn</strong> is common across the class.</li>
 </ul>
 <h3>The rare effects that need urgent care</h3>
@@ -286,10 +287,10 @@ export const ED_TREATMENT_OPTIONS_COMPARED: ArticleData = {
     },
     {
       heading: "Are over-the-counter ED pills and supplements a real option?",
-      body: `<div class="qa"><strong>The short answer</strong>In the US, no ED drug is sold over the counter, and supplements marketed for erections are a risky bet. The FDA warns that many products sold for sexual enhancement are "likely to be contaminated with dangerous hidden ingredients," often undeclared prescription drugs. A licensed online prescription is now quick and inexpensive enough that the supplement aisle rarely makes sense.</div>
+      body: `<div class="qa"><strong>The short answer</strong>In the US, approved ED pills such as Viagra and Cialis need a prescription, and supplements marketed for erections are a risky bet. The FDA warns that many products sold for sexual enhancement are "likely to be contaminated with dangerous hidden ingredients," often undeclared prescription drugs. A licensed online prescription is now quick and inexpensive enough that the supplement aisle rarely makes sense.</div>
 <p>The FDA's sexual enhancement notifications page is blunt. Products that claim to help with sexual enhancement or treat sexual dysfunction, including "male enhancement supplements, erectile dysfunction treatments, male energy pills and stamina pills," are likely to be contaminated with dangerous hidden ingredients. They're "sometimes falsely advertised as dietary supplements, food and/or all-natural treatments," often have many positive reviews, are sold online and in stores, and "pose a serious health risk and are not guaranteed to work." The page, updated as recently as October 15, 2026, lists new products almost every month, and the FDA says the list "covers only a small fraction" of contaminated products. Source: ${ext(S.fdaTainted, "FDA, sexual enhancement and energy product notifications")}.</p>
 <h3>Why hidden ingredients are dangerous</h3>
-<p>One example from May 29, 2026 shows the problem. FDA laboratory analysis of Erectus Plus, a male enhancement product sold on websites including eBay, found sildenafil, tadalafil and testosterone propionate that weren't on the label. The FDA warned that these undeclared ingredients "may interact with nitrates found in some prescription drugs, such as nitroglycerin, and may lower blood pressure to dangerous levels." Source: ${ext(S.fdaErectus, "FDA, Erectus Plus notification, May 29, 2026")}. For a man who takes nitrates for his heart, an "herbal" product secretly containing a prescription drug is exactly the combination the warnings exist to prevent. That's the real risk of OTC ED products: not that they don't work, but that you can't know what's in them.</p>
+<p>One example from May 29, 2026 shows the problem. FDA laboratory analysis of Erectus Plus, a male enhancement product sold on websites including eBay, found sildenafil, tadalafil and testosterone propionate that weren't on the label. The FDA warned that these undeclared ingredients "may interact with nitrates found in some prescription drugs, such as nitroglycerin, and may lower blood pressure to dangerous levels." The same notice reminds readers that FDA approval of Viagra and Cialis "is restricted to use under the supervision of a licensed health care professional." Source: ${ext(S.fdaErectus, "FDA, Erectus Plus notification, May 29, 2026")}. For a man who takes nitrates for his heart, an "herbal" product secretly containing a prescription drug is exactly the combination the warnings exist to prevent. That's the real risk of OTC ED products: not that they don't work, but that you can't know what's in them.</p>
 <h3>What about the UK?</h3>
 <p>Readers outside the US may have seen that sildenafil can be bought from a pharmacy without a GP prescription in the UK. The ${ext(S.nhsEd, "NHS")} confirms you can get sildenafil "on prescription or you can buy it from a pharmacy," but you need a prescription for the other PDE5 inhibitors, and it urges care buying online "as many websites sell fake medicines."</p>
 <h3>Natural approaches that do have evidence</h3>
@@ -297,7 +298,7 @@ export const ED_TREATMENT_OPTIONS_COMPARED: ArticleData = {
     },
     {
       heading: "Do lifestyle changes work as well as medication?",
-      body: `<p>Not usually on their own, and not quickly, but they're the only ED treatment that also improves your heart, blood sugar and lifespan, and for some men they're enough. The AUA gives a Moderate Recommendation that clinicians counsel men with ED and related health conditions that lifestyle changes, including diet and more physical activity, "improve overall health and may improve erectile function." It describes the effect on erections as "small positive," with "broader, positive effects on overall health," and notes that a healthier lifestyle can make other ED treatments more likely to work. Source: ${ext(S.aua, "AUA guideline")}.</p>
+      body: `<p>Not usually on their own, and not quickly, but they're the one ED treatment that, in the AUA's words, also improves "overall health," and for some men they're enough. The AUA gives a Moderate Recommendation that clinicians counsel men with ED and related health conditions that lifestyle changes, including diet and more physical activity, "improve overall health and may improve erectile function." It describes the effect on erections as "small positive," with "broader, positive effects on overall health," and notes that a healthier lifestyle can make other ED treatments more likely to work. Source: ${ext(S.aua, "AUA guideline")}.</p>
 <h3>The trial that's still the reference point</h3>
 <p>A randomized trial published in JAMA in 2004 followed 110 obese men aged 35 to 55 with ED but without diabetes, high blood pressure or high cholesterol. Half got detailed support to lose at least 10% of their body weight through eating less and exercising more; the other half got general advice. After two years, the intervention group's average erectile function score rose from 13.9 to 17, while the control group's stayed flat, and 17 men in the intervention group reached a normal score against 3 in the control group. The authors concluded that lifestyle changes were associated with improved sexual function "in about one third of obese men." Source: ${ext(S.esposito, "Esposito et al., JAMA, 2004")}.</p>
 <h3>What the official advice includes</h3>
@@ -307,14 +308,14 @@ export const ED_TREATMENT_OPTIONS_COMPARED: ArticleData = {
     },
     {
       heading: "Do pelvic floor exercises help erectile dysfunction?",
-      body: `<p>They can, according to a small but well-designed trial, and they're free, drug-free and safe to try alongside anything else. The trial described below started from a simple observation: the pelvic floor muscles are active in normal erectile function, so weak ones could be part of the problem, and strengthening them might help.</p>
+      body: `<p>They can, according to a small randomized trial, and they're drug-free and can be done alongside other treatments. The trial described below started from a simple observation: the pelvic floor muscles are active in normal erectile function, so weak ones could be part of the problem, and strengthening them might help.</p>
 <h3>What the trial found</h3>
 <p>A randomized controlled trial published in the British Journal of General Practice in 2004 enrolled 55 men with ED, with a median age of 59. Men in the intervention group did pelvic floor exercises with biofeedback plus lifestyle advice; the control group got lifestyle advice only for three months, then switched to exercises. At three months, the exercise group's erectile function score had improved by 6.74 points more than controls, and it improved further at six months. Overall, 40% of participants regained normal erectile function, 34.5% improved and 25.5% did not improve. Source: ${ext(S.pelvicFloor, "Dorey et al., Br J Gen Pract, 2004")}.</p>
 <h3>How to read that result</h3>
 <ul>
 <li><strong>It's one modest-sized trial</strong>, run by a specialist team with biofeedback equipment and supervised technique, so results from exercises learned from an app or video may differ.</li>
 <li><strong>It needs consistency.</strong> The benefit built over months of regular practice.</li>
-<li><strong>It's low risk.</strong> Unlike most treatments on this page, there's no obvious downside to trying it.</li>
+<li><strong>It involves no drugs or devices</strong>, so it doesn't add interactions to anything else you take.</li>
 </ul>
 <h3>Who it suits</h3>
 <p>Men who'd like to try a non-drug approach first, and men who'd like to add something to a pill that's only partly working. A physiotherapist with experience in men's pelvic health can teach the technique properly. It isn't a replacement for a medical check if your ED is new, worsening or comes with other symptoms, since ED can be a sign of a vascular problem worth investigating.</p>`,
@@ -325,11 +326,11 @@ export const ED_TREATMENT_OPTIONS_COMPARED: ArticleData = {
 <h3>What the reviews show</h3>
 <p>A Cochrane review of psychosocial interventions, covering 11 trials and 398 men, found that group psychotherapy reduced the number of men with persistent ED compared with men on a waiting list, with the benefit maintained at six months. A related meta-analysis in the Journal of Sexual Medicine in 2008 found that men given psychotherapy plus sildenafil improved significantly and were less likely to drop out than men given sildenafil alone, and found no difference between psychological treatment and injections or vacuum devices in the trials that compared them. The studies are small and old, so the certainty is modest. Sources: ${ext(S.psychCochrane, "Cochrane Database of Systematic Reviews, 2007")}; ${ext(S.psychMeta, "Journal of Sexual Medicine, 2008")}.</p>
 <h3>Signs psychology is playing a part</h3>
-<p>The AUA notes that the presence of nighttime or morning erections suggests, though doesn't confirm, a psychological component. Other clues are ED that comes and goes with stress, happens with a partner but not alone, or started suddenly after one difficult experience. Physical and psychological causes often overlap: a small physical problem can trigger anxiety that makes it much bigger.</p>
+<p>The AUA notes that the presence of nighttime or morning erections suggests, though doesn't confirm, a psychological component, and lists situational factors clinicians ask about, such as ED that happens only in specific contexts or only with a partner. It also points out that psychological factors such as depression, anxiety and relationship conflict can be either a primary cause or a secondary one, layered on top of a physical problem.</p>
 <h3>Therapy compared with pills</h3>
 <ul>
-<li><strong>Pills</strong> work quickly and can break the anxiety cycle by restoring confidence, but they don't address the cause.</li>
-<li><strong>Therapy</strong> takes longer and needs engagement, but its effects can outlast the sessions, and it helps couples talk about sex and fold any treatment into their relationship.</li>
+<li><strong>Pills</strong> work quickly, but they don't address anxiety or relationship strain themselves.</li>
+<li><strong>Therapy</strong> takes longer and needs engagement, but the Cochrane review found group therapy's benefit maintained at six months, and the AUA describes it as helping couples communicate about sex and fold treatments into their relationship.</li>
 <li><strong>Together</strong>, the evidence suggests, they do better than either alone for many men.</li>
 </ul>
 <p>The NIDDK notes that a counselor may suggest bringing a partner to sessions. In the UK, the NHS points to accredited sex therapists through the College of Sexual and Relationship Therapists. Sources: ${ext(S.niddkTreat, "NIDDK")}; ${ext(S.nhsEd, "NHS")}. If you're younger and anxiety feels like the main issue, our guide to <a href="/ed/articles/ed-in-your-20s-and-30s">ED in your 20s and 30s</a> is written for you, and <a href="/ed/articles/what-causes-erectile-dysfunction">what causes erectile dysfunction</a> explains how the causes interact.</p>`,
@@ -374,20 +375,19 @@ export const ED_TREATMENT_OPTIONS_COMPARED: ArticleData = {
     {
       heading: "Does testosterone therapy help erectile dysfunction?",
       body: `<div class="qa"><strong>The short answer</strong>Only if your testosterone is genuinely low, and even then mainly by helping other treatments work. The AUA says testosterone therapy "is not an effective monotherapy for ED," but that men with confirmed testosterone deficiency should be told a PDE5 inhibitor "may be more effective if combined with testosterone therapy." A large 2024 trial found testosterone improved sexual activity and desire in men with low levels, but not erectile function itself.</div>
-<p>Testosterone gets blamed for ED more often than it deserves. It drives sexual desire and supports the erectile tissue, but most men with ED have normal levels, and for them extra testosterone won't help and carries its own risks. The AUA recommends that men with ED have a morning total testosterone level measured, and defines testosterone deficiency as a total level below 300 ng/dL together with symptoms and signs. Source: ${ext(S.aua, "AUA guideline")}.</p>
+<p>Testosterone often gets the blame for ED, but the evidence gives it a narrower role: it's a treatment for a confirmed deficiency, not for erections as such. The AUA recommends that men with ED have a morning total testosterone level measured, and defines testosterone deficiency as a total level below 300 ng/dL together with symptoms and signs. A man whose level is normal has no deficiency to treat. Source: ${ext(S.aua, "AUA guideline")}.</p>
 <h3>What the best recent trial showed</h3>
 <p>The TRAVERSE trial enrolled 5,204 men aged 45 to 80 with two testosterone readings below 300 ng/dL, symptoms of low testosterone, and heart disease or raised heart risk. Within it, 1,161 men with low libido joined a sexual function study and were randomized to testosterone gel or placebo gel. Over two years, testosterone improved sexual activity, symptoms of low testosterone and sexual desire, "but not erectile function," compared with placebo. Source: ${ext(S.traverse, "TRAVERSE Sexual Function Study, J Clin Endocrinol Metab, 2024")}.</p>
 <h3>How testosterone fits alongside other treatments</h3>
 <ul>
 <li><strong>Low desire plus ED, with a confirmed low level:</strong> testosterone may restore desire and help a PDE5 inhibitor work better. The NIDDK notes that clinicians may prescribe testosterone with PDE5 inhibitors for men who have ED and low testosterone, given as an oral medicine, a patch or a gel. Source: ${ext(S.niddkTreat, "NIDDK, treatment")}.</li>
 <li><strong>ED with a normal level:</strong> testosterone isn't the answer; the other treatments on this page are.</li>
-<li><strong>Men hoping to have children:</strong> testosterone therapy can suppress fertility, which needs discussing before starting.</li>
 </ul>
 <p>Testosterone needs blood tests before treatment and monitoring during it, which is why it sits on a different track from an ED prescription. Our guide to <a href="/ed/articles/can-low-testosterone-cause-ed">whether low testosterone causes ED</a> explains the test results, and our <a href="/trt">testosterone replacement therapy comparison</a> reviews clinics that test and treat it.</p>`,
     },
     {
       heading: "How do ED injections compare with pills?",
-      body: `<p>Injections are generally more reliable than pills and work in many men pills don't help, but they involve a needle and need training to start. They work by a different route: alprostadil, a synthetic form of prostaglandin E1, relaxes the muscles and blood vessels of the penis directly, so it doesn't depend on the nerve signal a PDE5 inhibitor protects. MedlinePlus says an erection may occur within 5 to 20 minutes after an injection and should last about 30 to 60 minutes. Source: ${ext(S.mpAlpro, "MedlinePlus, alprostadil (urogenital)")}.</p>
+      body: `<p>Injections are among the most reliable ED treatments and often work where pills don't, but they involve a needle and need training to start. They work by a different route: alprostadil, a synthetic form of prostaglandin E1, relaxes the muscles and blood vessels of the penis directly, so it doesn't depend on the nerve signal a PDE5 inhibitor protects. MedlinePlus says an erection may occur within 5 to 20 minutes after an injection and should last about 30 to 60 minutes. Source: ${ext(S.mpAlpro, "MedlinePlus, alprostadil (urogenital)")}.</p>
 <table><thead><tr><th></th><th>PDE5 pills</th><th>Alprostadil injection</th></tr></thead><tbody>
 <tr><td>Needs sexual arousal?</td><td>Yes</td><td>No; the NIDDK calls it a "quick, automatic erection"</td></tr>
 <tr><td>Onset</td><td>About 15 to 60 minutes</td><td>About 5 to 20 minutes</td></tr>
@@ -407,7 +407,7 @@ export const ED_TREATMENT_OPTIONS_COMPARED: ArticleData = {
       heading: "What is Trimix, and how is it different from alprostadil alone?",
       body: `<p>Trimix is a compounded injection that combines alprostadil with two other medicines that widen blood vessels, papaverine and phentolamine. The AUA explains that alprostadil is the only injectable ED medicine FDA-approved in the US and the only one typically used alone; the others "are typically used in combination with one another," including alprostadil plus papaverine plus phentolamine (Trimix) and a four-drug mix that adds atropine. It adds that although these non-prostaglandin agents have been used successfully for decades, "none are formally FDA-approved for this indication." Source: ${ext(S.aua, "AUA guideline")}.</p>
 <h3>Why clinicians use mixtures</h3>
-<p>Combining drugs that work by different mechanisms can produce an erection where one drug alone doesn't, and the AUA notes that pain rates are highest when papaverine or alprostadil are used as single agents, and when papaverine is combined with phentolamine. That's part of why mixtures including alprostadil are common, especially after prostate surgery. The AUA also reports that satisfaction was lowest in studies using papaverine (a mean of 53.4%), so the specific recipe matters.</p>
+<p>Combining drugs that work by different mechanisms can produce an erection where one drug alone doesn't, and the AUA notes that pain rates are highest when papaverine or alprostadil are used as single agents, and when papaverine is combined with phentolamine. The AUA also reports that satisfaction was lowest in studies using papaverine (a mean of 53.4%), so the specific recipe matters.</p>
 <h3>Trimix compared with alprostadil alone</h3>
 <table><thead><tr><th></th><th>Alprostadil (Caverject, Edex)</th><th>Trimix</th></tr></thead><tbody>
 <tr><td>FDA status</td><td>FDA-approved</td><td>Compounded; not FDA-approved as a product</td></tr>
@@ -416,8 +416,8 @@ export const ED_TREATMENT_OPTIONS_COMPARED: ArticleData = {
 <tr><td>Start</td><td>In-office test dose</td><td>In-office test dose</td></tr>
 <tr><td>Cost (our index)</td><td>Not tracked</td><td>About $1 to $6 per dose, varying widely (Oct 2026)</td></tr>
 </tbody></table>
-<p>Because Trimix is compounded, everything the FDA says about compounding applies: no pre-market review for safety or effectiveness, and quality that depends on the pharmacy. Source: ${ext(S.fdaCompounding, "FDA, human drug compounding")}. That doesn't make it a poor choice; it's widely used by urologists. It does mean it should come from a clinician who examines you, tests your response in the office and teaches you to adjust the dose, not from an online checkout.</p>
-<p>Our full guide to <a href="/ed/articles/trimix-for-ed">Trimix for ED</a> covers how it's started, how it's stored and what it costs.</p>`,
+<p>Because Trimix is compounded, everything the FDA says about compounding applies: no pre-market review for safety or effectiveness, and quality that depends on the pharmacy. Source: ${ext(S.fdaCompounding, "FDA, human drug compounding")}. That doesn't make it a poor choice; the AUA notes these agents have been used to manage ED successfully for decades. It does mean it should come from a clinician who examines you, tests your response in the office and teaches you to adjust the dose, not from an online checkout.</p>
+<p>Our full guide to <a href="/ed/articles/trimix-for-ed">Trimix for ED</a> covers how it's started and what it costs.</p>`,
     },
     {
       heading: "Is the urethral suppository a good alternative to injections?",
@@ -426,10 +426,10 @@ export const ED_TREATMENT_OPTIONS_COMPARED: ArticleData = {
 <p>The main trial, published in the New England Journal of Medicine in 1997, tested the pellet in 1,511 men aged 27 to 88 with ED from physical causes. In the clinic, 65.9% had erections sufficient for intercourse. Those men then went home with either alprostadil or placebo for three months: 64.9% of the alprostadil group had intercourse at least once, against 18.6% on placebo, and on average 7 of 10 uses were followed by intercourse in men who responded. Efficacy was similar regardless of age or cause, including vascular disease, diabetes, surgery and trauma. Source: ${ext(S.museTrial, "MUSE Study Group, NEJM, 1997")}.</p>
 <p>Other studies have been less impressive. The AUA reports successful intercourse rates from 29.5% to 78.1% across studies, and classes the pellet as a Conditional Recommendation, a notch below injections. Source: ${ext(S.aua, "AUA guideline")}.</p>
 <h3>Side effects</h3>
-<p>In the 1997 trial, the most common side effect was mild penile pain, after 10.8% of treatments, and low blood pressure occurred in the clinic in 3.3% of men; no men had priapism or penile scarring. Because of that blood-pressure effect, the AUA says the pellet shouldn't be prescribed until a man has had instruction, an initial dose test in the office and counselling about side effects.</p>
+<p>In the 1997 trial, the most common side effect was mild penile pain, after 10.8% of treatments, and low blood pressure occurred in the clinic in 3.3% of men; no men had priapism or penile scarring. The AUA says the pellet shouldn't be prescribed until a man has had instruction, an initial dose test in the office and counselling about side effects.</p>
 <h3>Pellet or injection?</h3>
 <ul>
-<li><strong>Choose the pellet</strong> if you can't face a needle, or as a stepping stone before deciding on injections.</li>
+<li><strong>Choose the pellet</strong> if you can't face a needle.</li>
 <li><strong>Choose an injection</strong> if reliability matters most; the AUA's ranges for injections sit higher.</li>
 <li><strong>Either</strong> suits men who can't take PDE5 inhibitors; the AUA names both as options for them.</li>
 </ul>`,
@@ -443,7 +443,7 @@ export const ED_TREATMENT_OPTIONS_COMPARED: ArticleData = {
 <h3>The trade-offs</h3>
 <ul>
 <li><strong>It feels different.</strong> The NIDDK says VEDs can make the penis feel cold or numb, look purple or bruised (bruises are usually painless and fade in a few days), and may weaken ejaculation, though this doesn't affect the pleasure of orgasm.</li>
-<li><strong>It's less spontaneous.</strong> Pumping takes a few minutes, which some couples fold into foreplay and others never get used to.</li>
+<li><strong>It's less spontaneous.</strong> It has to be set up before sex, which some couples fold into foreplay and others never get used to.</li>
 <li><strong>Some men should take care.</strong> The AUA advises caution for men on blood thinners, with bleeding disorders, or with a history of priapism.</li>
 </ul>
 <h3>Who a pump suits</h3>
@@ -451,8 +451,8 @@ export const ED_TREATMENT_OPTIONS_COMPARED: ArticleData = {
     },
     {
       heading: "Is shockwave therapy for ED worth it?",
-      body: `<div class="qa"><strong>The short answer</strong>Not yet, for most men. The AUA guideline says low-intensity shockwave therapy "should be considered investigational," because sham-controlled trials didn't clearly show that benefits reliably outweigh risks and burdens. A 2025 Cochrane review of 21 trials rated all the evidence low-certainty and found a short-term improvement that may be too small for men to notice. It appears safe; the question is whether it's worth the money and time.</div>
-<p>Low-intensity extracorporeal shockwave therapy (Li-ESWT, often shortened to LiSWT) delivers low-energy acoustic pulses to the penis over several sessions, with the aim of stimulating new blood vessel growth. It's widely advertised, and clinics often present it as a way to fix ED rather than manage it. The evidence is more cautious.</p>
+      body: `<div class="qa"><strong>The short answer</strong>Not yet, for most men. The AUA guideline says low-intensity shockwave therapy "should be considered investigational," because sham-controlled trials didn't clearly show that benefits reliably outweigh risks and burdens. A 2025 Cochrane review of 21 trials rated all the evidence low-certainty and found a short-term improvement that may be too small for men to notice. Side effects looked similar to sham treatment; the question is whether it's worth the money and time.</div>
+<p>Low-intensity extracorporeal shockwave therapy (Li-ESWT, often shortened to LiSWT) delivers low-energy acoustic pulses to the penis over several sessions, with the aim of stimulating new blood vessel growth. It's widely advertised. The evidence is more cautious than the advertising.</p>
 <h3>What the guideline says</h3>
 <p>The AUA classes Li-ESWT as investigational (a Conditional Recommendation on Grade C evidence), because "findings from randomized sham-controlled trials... do not clearly indicate that benefits reliably outweigh risks/burdens." A 2019 review comparing guidelines noted that European guidance is more permissive, allowing it with a weak recommendation in mild vascular ED or in men who respond poorly to pills. Sources: ${ext(S.aua, "AUA guideline")}; ${ext(S.liswtReview, "International Journal of Impotence Research, 2019")}.</p>
 <h3>What the best review found</h3>
@@ -473,11 +473,11 @@ export const ED_TREATMENT_OPTIONS_COMPARED: ArticleData = {
       body: `<p>Neither is a recommended ED treatment. The AUA guideline says intracavernosal stem cell therapy "should be considered investigational," and platelet-rich plasma (PRP) "should be considered experimental." On PRP it goes further: it "should not be offered to men with ED unless it is administered in the context of an institutional review board approved experimental clinical research protocol," and when the guideline was written, "no full-text peer-reviewed publications" were available to form an evidence base. Source: ${ext(S.aua, "AUA guideline")}.</p>
 <h3>What these treatments are</h3>
 <ul>
-<li><strong>PRP</strong>, sometimes sold as a "P-shot," involves drawing your blood, concentrating the platelets, and injecting the result into the penis, on the theory that growth factors in platelets promote tissue repair.</li>
+<li><strong>PRP</strong>, sometimes sold as a "P-shot," involves drawing your blood, concentrating the platelets, and injecting the result into the penis.</li>
 <li><strong>Stem cell therapy</strong> injects cells intended to regenerate erectile tissue or blood vessels.</li>
 </ul>
 <h3>How to tell research from a sales pitch</h3>
-<p>A legitimate research protocol is approved by an ethics committee (an institutional review board), usually costs you nothing, explains that the treatment is unproven, and collects data. A clinic charging a fee for a "P-shot" or "stem cell" package is not running a research protocol, whatever its marketing says. If you're interested in contributing to research, ask a urologist about trials, or search the US registry at clinicaltrials.gov.</p>
+<p>A legitimate research protocol is approved by an ethics committee (an institutional review board), explains that the treatment is unproven, and collects data. A clinic charging a fee for a "P-shot" or "stem cell" package is not running a research protocol, whatever its marketing says. If you're interested in contributing to research, ask a urologist about trials, or search the US registry at clinicaltrials.gov.</p>
 <h3>Compared with treatments that work</h3>
 <p>The contrast is stark. Injections, the urethral pellet, vacuum devices and implants each have decades of data, defined risks and guideline support; PRP and stem cells have none of those yet. For a man who's tried pills without success, those established options are the evidence-based next steps.</p>`,
     },
@@ -485,13 +485,13 @@ export const ED_TREATMENT_OPTIONS_COMPARED: ArticleData = {
       heading: "When is a penile implant the right choice?",
       body: `<p>An implant is the right choice for men who want a permanent, on-demand solution, usually after other treatments haven't worked or haven't suited them, and who accept that surgery is irreversible. The AUA gives a Strong Recommendation that men with ED be informed about penile prosthesis implantation, and says it has been performed successfully in the general ED population and in many special groups. Source: ${ext(S.aua, "AUA guideline")}.</p>
 <h3>How implants work</h3>
-<p>The NIDDK describes two kinds: a device inflated using a pump placed in the scrotum, and a rod the man positions himself. Inflatable implants produce an erection when needed and a softer state otherwise; bendable rods are simpler but always firm. The NIDDK also notes that most men with ED do not need surgery, and that implants are considered when other options haven't helped. Source: ${ext(S.niddkTreat, "NIDDK, treatment")}.</p>
+<p>The NIDDK describes two kinds: a device made erect using a pump placed in the scrotum, and a rod the man controls himself. It also notes that most men with ED do not need surgery, and that implants are considered when other options haven't helped. Source: ${ext(S.niddkTreat, "NIDDK, treatment")}.</p>
 <h3>Satisfaction and complications</h3>
 <p>A systematic review and meta-analysis published in Andrology in 2025 pooled 83 studies covering 12,132 men followed for an average of almost four years. It found 83% of men were satisfied, with satisfaction higher with three-piece inflatable devices, independent of age and increasing over time; partners' satisfaction was somewhat lower than men's. Long-term complications were limited, from 3% for erosion to 4.6% for mechanical failure, and complications were strongly associated with diabetes. Source: ${ext(S.implantMeta, "Andrology, 2025")}.</p>
 <p>The AUA describes infection as the most serious complication: it usually occurs within the first three months and typically means removing the device. Observational studies suggest models with infection-inhibiting coatings have much lower infection rates, with most series reporting 1% to 2%. Surgery shouldn't be done when there's an active infection anywhere, including a urinary infection. Source: ${ext(S.aua, "AUA guideline")}.</p>
 <h3>Implants compared with other treatments</h3>
 <ul>
-<li><strong>Versus pills and injections:</strong> no timing, no needles, no medicine; but it's surgery, and it permanently changes the erectile tissue, so other treatments are no longer an option afterwards.</li>
+<li><strong>Versus pills and injections:</strong> no timing, no needles, no medicine; but it's surgery that the AUA describes as "invasive and essentially irreversible."</li>
 <li><strong>Versus vacuum devices:</strong> far more spontaneous, and satisfaction is high; but a pump is reversible and cheap.</li>
 <li><strong>Versus vascular surgery:</strong> the AUA does not recommend penile venous surgery, and limits arterial reconstruction to young men with a specific arterial blockage and no wider vascular disease.</li>
 </ul>
@@ -517,7 +517,7 @@ export const ED_TREATMENT_OPTIONS_COMPARED: ArticleData = {
 <h3>Three questions that narrow it down</h3>
 <ol>
 <li><strong>Can you safely take a PDE5 inhibitor?</strong> If you take nitrates or riociguat, the answer is no, and the choice moves straight to the non-pill options.</li>
-<li><strong>How much do you value spontaneity versus effort?</strong> Daily tadalafil and implants are the most spontaneous; vacuum devices and injections need a few minutes of preparation.</li>
+<li><strong>How much do you value spontaneity versus effort?</strong> Daily tadalafil and implants are the most spontaneous; vacuum devices and injections need some preparation each time.</li>
 <li><strong>How do you feel about needles, devices and surgery?</strong> There are good options at every level of invasiveness, and the right one is the one you'll actually use.</li>
 </ol>
 <p>For men under 40, our guide to <a href="/ed/articles/ed-in-your-20s-and-30s">ED in your 20s and 30s</a> covers the causes and options that matter most at that age. For a comparison of the pill brands and their alternatives, see <a href="/ed/articles/alternatives-to-viagra-and-cialis">alternatives to Viagra and Cialis</a>.</p>`,
@@ -526,9 +526,9 @@ export const ED_TREATMENT_OPTIONS_COMPARED: ArticleData = {
       heading: "What's the best ED treatment with diabetes, heart disease or after prostate surgery?",
       body: `<p>These three groups often need a different plan, because their ED tends to be more severe and pills tend to work less strongly. The AUA notes that men with diabetes and men who have had their prostate removed "have more severe ED at baseline and respond less robustly to PDE5i." That doesn't mean pills won't help; it means the plan should include the stronger options from the start if needed. Source: ${ext(S.aua, "AUA guideline")}.</p>
 <h3>Diabetes</h3>
-<p>PDE5 inhibitors remain a reasonable first choice for most men with diabetes, and controlling blood sugar, blood pressure and cholesterol protects the blood vessels and nerves erections depend on. If pills don't do enough, the evidence for other options holds up well: the AUA says injections and vacuum devices are effective in men with diabetes, the 2026 vacuum meta-analysis found 73.0% efficacy in that group, and the urethral pellet trial found similar efficacy regardless of cause, including diabetes. One caution: the 2025 implant meta-analysis found complications strongly associated with diabetes, which is worth discussing with a surgeon. Sources: ${ext(S.vedMeta, "Int J Impot Res, 2026")}; ${ext(S.museTrial, "NEJM, 1997")}; ${ext(S.implantMeta, "Andrology, 2025")}. Our guide to <a href="/ed/articles/ed-and-diabetes">ED and diabetes</a> goes further.</p>
+<p>PDE5 inhibitors remain a reasonable first choice for most men with diabetes, and the ${ext(S.niddkDiabetes, "NIDDK")} advises keeping blood glucose, blood pressure and cholesterol close to target to help prevent and treat sexual problems, noting that men with diabetes may develop ED 10 to 15 years earlier than men without it. If pills don't do enough, the evidence for other options holds up well: the AUA says injections and vacuum devices are effective in men with diabetes, the 2026 vacuum meta-analysis found 73.0% efficacy in that group, and the urethral pellet trial found similar efficacy regardless of cause, including diabetes. One caution: the 2025 implant meta-analysis found complications strongly associated with diabetes, which is worth discussing with a surgeon. Sources: ${ext(S.vedMeta, "Int J Impot Res, 2026")}; ${ext(S.museTrial, "NEJM, 1997")}; ${ext(S.implantMeta, "Andrology, 2025")}. Our guide to <a href="/ed/articles/ed-and-diabetes">ED and diabetes</a> goes further.</p>
 <h3>Heart disease</h3>
-<p>The AUA says men should be counselled that ED is a risk marker for underlying cardiovascular disease, and cites findings from the Prostate Cancer Prevention Trial that ED was as strong a predictor of future cardiac events as smoking or a family history of heart attack. For men with known heart disease, the big question is nitrates: if you take them, PDE5 inhibitors are out and non-drug or local treatments are in. If you don't, a cardiologist or primary care doctor should confirm you're fit for sexual activity first. Source: ${ext(S.aua, "AUA guideline")}. See <a href="/ed/articles/erectile-dysfunction-heart-disease-warning-sign">ED as a warning sign of heart disease</a>.</p>
+<p>The AUA says men should be counselled that ED is a risk marker for underlying cardiovascular disease, and cites findings from the Prostate Cancer Prevention Trial that ED was as strong a predictor of future cardiac events as smoking or a family history of heart attack. For men with known heart disease, the big question is nitrates: if you take them, PDE5 inhibitors are out and non-drug or local treatments are in. If you don't, it's worth having a cardiologist or primary care doctor confirm you're fit for sexual activity first. Source: ${ext(S.aua, "AUA guideline")}. See <a href="/ed/articles/erectile-dysfunction-heart-disease-warning-sign">ED as a warning sign of heart disease</a>.</p>
 <h3>After prostate cancer treatment</h3>
 <p>Even with nerve-sparing surgery, many men experience ED afterwards, and the AUA reports that about 36% of men develop new ED within two years of pelvic radiation. It also advises that early use of PDE5 inhibitors after surgery or radiotherapy "may not improve spontaneous, unassisted erectile function," though pills can still help erections on demand. Injections, vacuum devices (84.5% efficacy after prostate removal in the 2026 meta-analysis) and implants all work well in this group, and the AUA notes that psychological support is an integral part of recovery. Sources: ${ext(S.aua, "AUA guideline")}; ${ext(S.vedMeta, "Int J Impot Res, 2026")}.</p>`,
     },
@@ -544,7 +544,7 @@ export const ED_TREATMENT_OPTIONS_COMPARED: ArticleData = {
 </ul>
 <p>Sources: ${ext(S.aua, "AUA guideline")}; ${ext(S.mpSild, "MedlinePlus, sildenafil")}. Our guide to <a href="/ed/articles/sildenafil-doses-explained">sildenafil doses explained</a> covers what a "failed" dose usually means.</p>
 <h3>Step 2: look for something blunting the response</h3>
-<p>Very low testosterone, uncontrolled diabetes, a new medicine, heavy drinking or untreated anxiety or depression can each weaken the effect of a pill. The AUA's advice that PDE5 inhibitors "may be more effective if combined with testosterone therapy" in men with confirmed deficiency is one example.</p>
+<p>The conditions behind ED can also blunt a pill. The AUA notes that men with diabetes respond less robustly, and that PDE5 inhibitors "may be more effective if combined with testosterone therapy" in men with confirmed deficiency. The NIDDK notes that some medicines for other conditions cause ED, and that a clinician may change the dose or switch the drug. Sources: ${ext(S.aua, "AUA guideline")}; ${ext(S.niddkTreat, "NIDDK")}.</p>
 <h3>Step 3: change within the pill family</h3>
 <p>A different PDE5 inhibitor, daily rather than as-needed tadalafil, or a compounded blend are all options to discuss. Expectations should be realistic: the AUA found the four drugs similar on average, so switching helps some men more than others.</p>
 <h3>Step 4: move to a different mechanism</h3>
@@ -552,7 +552,7 @@ export const ED_TREATMENT_OPTIONS_COMPARED: ArticleData = {
     },
     {
       heading: "Can ED treatments be combined?",
-      body: `<p>Some can, and combinations are often how clinicians rescue a partial response, but certain combinations are dangerous and every one should be set up by a prescriber. The rule of thumb: combine across categories with a clinician's guidance, never stack products from the same category on your own.</p>
+      body: `<p>Some can, and a few combinations have evidence behind them, but certain combinations are dangerous and every one should be set up by a prescriber. The rule of thumb: combine across categories with a clinician's guidance, never stack products from the same category on your own.</p>
 <h3>Combinations with evidence or guideline support</h3>
 <ul>
 <li><strong>PDE5 inhibitor plus testosterone</strong>, in men with confirmed deficiency. The AUA says the pill "may be more effective if combined with testosterone therapy." Source: ${ext(S.aua, "AUA guideline")}.</li>

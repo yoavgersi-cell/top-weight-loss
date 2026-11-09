@@ -530,6 +530,180 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
 <h3>Keep your own records</h3>
 <p>Download every lab report and keep a simple log of dates, doses and symptoms. It makes each follow-up more useful, it lets your primary care doctor stay informed, and it means you can switch clinics or move to in-person care without starting from scratch.</p>`,
     },
-    // @@MORE@@
+    {
+      heading: "What is a realistic TRT results timeline?",
+      body: `<p><strong>Most men who notice a benefit feel changes in sexual interest and mood first, within about three to six weeks; changes in erections, body composition and strength take three to six months or longer; and bone effects build over years.</strong> That is the picture from a 2011 review of published trials by Saad and colleagues in the European Journal of Endocrinology, the most widely cited summary of how quickly testosterone's effects appear.</p>
+<table>
+<thead><tr><th>Effect</th><th>When it starts</th><th>When it peaks or stabilizes</th></tr></thead>
+<tbody>
+<tr><td>Sexual interest</td><td>About 3 weeks</td><td>Plateaus at about 6 weeks</td></tr>
+<tr><td>Erections and ejaculation</td><td>Variable</td><td>May take up to 6 months</td></tr>
+<tr><td>Quality of life</td><td>3 to 4 weeks</td><td>Maximum benefit takes longer</td></tr>
+<tr><td>Depressive mood</td><td>3 to 6 weeks</td><td>Maximum at 18 to 30 weeks</td></tr>
+<tr><td>Fat mass, lean mass, muscle strength</td><td>12 to 16 weeks</td><td>Stabilize at 6 to 12 months, may continue marginally over years</td></tr>
+<tr><td>Lipids</td><td>About 4 weeks</td><td>Maximal at 6 to 12 months</td></tr>
+<tr><td>Glycemic control</td><td>3 to 12 months</td><td>Insulin sensitivity may improve within days</td></tr>
+<tr><td>Red blood cells</td><td>Evident at 3 months</td><td>Peak at 9 to 12 months</td></tr>
+<tr><td>Bone</td><td>Detectable after 6 months</td><td>Continues for at least 3 years</td></tr>
+</tbody>
+</table>
+<p>Source: ${ext(S.saad, "Saad et al., Eur J Endocrinol, 2011 (PMC full text)")}, read November 9, 2026. The authors note the time course varies considerably between studies, probably partly because of differences in testosterone preparations, and that the studies were not designed to measure onset, so treat the table as approximate.</p>
+<h3>What that means for judging whether TRT is working</h3>
+<p>Give it time before deciding. A first follow-up at around three months is a reasonable point to check levels, hematocrit and early symptom changes; a fair judgement on body composition and erections needs closer to six months. If your testosterone is in range on treatment and the symptoms that justified it haven't changed, that is useful information: it suggests the symptoms may have another cause, and a good clinician will say so rather than simply raise the dose. Our week-by-week <a href="/trt/articles/trt-results-timeline">TRT results timeline</a> and the guide to <a href="/trt/articles/trt-benefits">the benefits of TRT</a> go deeper, and both warn against "before and after" marketing that promises fixed results by a set date.</p>`,
+    },
+    {
+      heading: "Does TRT increase libido?",
+      body: `<p><strong>For men with genuinely low testosterone, yes, sexual desire is the symptom most consistently helped, and it tends to respond early: the Saad review found effects on sexual interest appear after about three weeks and plateau at about six.</strong> Effects on erections and ejaculation may take up to six months. Source: ${ext(S.saad, "Saad et al., 2011")}.</p>
+<p>That fits the diagnosis guidelines. The Endocrine Society's guideline treats reduced sexual desire and fewer spontaneous or morning erections as the symptoms most specific to testosterone deficiency, more so than tiredness or low mood. Source: ${ext(S.esGuideline, "Endocrine Society guideline, 2018")}.</p>
+<h3>Where TRT won't help libido</h3>
+<ul>
+<li><strong>Normal testosterone.</strong> If your levels are already normal, there is no deficiency to correct; the guidelines don't support treating for "optimization."</li>
+<li><strong>Other causes.</strong> The NHS notes that erectile dysfunction, low sex drive and mood swings may result from stress, depression or anxiety, and that physical causes such as smoking or heart problems can sit alongside them. Source: ${ext(S.nhsMM, "NHS")}.</li>
+<li><strong>Erectile problems with a vascular cause.</strong> New erectile difficulty deserves its own assessment; testosterone is not a substitute for ED treatment.</li>
+</ul>
+<p>Our guide to <a href="/trt/articles/does-trt-increase-libido">whether TRT increases libido</a> covers the evidence in more depth.</p>`,
+    },
+    {
+      heading: "Can testosterone speed up weight loss?",
+      body: `<p><strong>Testosterone tends to shift body composition, with less fat and more lean mass, rather than produce large drops on the scale, and for men whose low testosterone is linked to excess weight, the Endocrine Society says weight loss itself is typically the first-line treatment.</strong> TRT is not a weight-loss drug.</p>
+<p>The Saad review describes a decrease in fat mass and an increase in lean body mass with testosterone, adding that "the net result is often, but not always, that total body weight does not show major changes," with body-composition changes appearing within 12 to 16 weeks and stabilizing at 6 to 12 months. Source: ${ext(S.saad, "Saad et al., 2011")}. A 2026 network meta-analysis of 23 randomized trials in men with obesity and functional hypogonadism found testosterone reduced waist circumference and increased lean mass, but also increased hematocrit; lifestyle therapy and GLP-1 medicines were among the strategies compared, and many comparisons were rated low or very low certainty. Source: ${ext(S.nma, "Journal of Sexual Medicine, 2026")}.</p>
+<p>The Endocrine Society's July 2026 statement says that for appropriately diagnosed hypogonadism "due to being overweight or obese (BMI >27) and no other identified cause, weight loss is typically the first-line therapy." Source: ${ext(S.esStatement, "Endocrine Society, July 16, 2026")}. Excess weight can suppress the signal from the brain to the testes, so losing weight can let a man's own production recover. Our guide to <a href="/trt/articles/weight-loss-testosterone-glp1-vs-trt">low testosterone and obesity: weight loss or TRT?</a> sets out both routes, and our <a href="/weight-loss">GLP-1 weight-loss comparison</a> covers the medical weight-loss side.</p>`,
+    },
+    {
+      heading: "Is TRT safe long term? What did TRAVERSE and the FDA label changes show?",
+      body: `<p><strong>The best evidence so far, the TRAVERSE trial, found testosterone did not increase major heart events over its follow-up compared with placebo, which led the FDA to remove cardiovascular-risk language from the boxed warning in February 2025. But the same trial found more atrial fibrillation, pulmonary embolism and acute kidney injury, a later analysis found more fractures, and the Endocrine Society says long-term safety, including for prostate cancer, "remains unestablished."</strong></p>
+<h3>What TRAVERSE found</h3>
+<p>TRAVERSE, published in the New England Journal of Medicine in 2023, randomized 5,246 men aged 45 to 80 with existing cardiovascular disease or high cardiovascular risk, hypogonadal symptoms and two fasting testosterone levels below 300 ng/dL to testosterone gel or placebo. Major adverse cardiac events occurred in 7.0% on testosterone and 7.3% on placebo. Atrial fibrillation (3.5% vs 2.4%), acute kidney injury and pulmonary embolism (0.9% vs 0.5%) were more common with testosterone. Source: ${ext(S.traverse, "Lincoff et al., NEJM, 2023")}. The FDA's testosterone page describes the trial as following more than 5,200 men given AndroGel 1.62% and says the FDA "determined that the results of TRAVERSE did not demonstrate a new safety signal or trend in adverse cardiovascular outcomes." Source: ${ext(S.fdaInfo, "FDA, current as of June 23, 2026")}. A TRAVERSE sub-study reported more fractures in the testosterone group. Source: ${ext(S.traverseFx, "Snyder et al., NEJM, 2024")}.</p>
+<p>The Endocrine Society's July 2026 statement summarizes it this way: TRAVERSE "found no meaningful increase in heart attack and stroke over a 1- to 4-year period," but showed "roughly a 50% relative increase in pulmonary embolism and an increased incidence of bone fractures." Source: ${ext(S.esStatement, "Endocrine Society, July 16, 2026")}. Note that TRAVERSE enrolled men diagnosed the way the guidelines describe; it tells us little about men started on a single reading.</p>
+<h3>What changed on the label</h3>
+<table>
+<thead><tr><th>Date</th><th>Action</th></tr></thead>
+<tbody>
+<tr><td>February 28, 2025</td><td>FDA class-wide changes: TRAVERSE results added to all testosterone labels; cardiovascular-risk language removed from the boxed warning; the "Limitation of Use" for age-related hypogonadism retained at that time; a blood pressure warning added for products that lacked one, after ambulatory blood pressure studies "confirmed an increase in blood pressure with use of all testosterone products, class-wide"</td></tr>
+<tr><td>December 10, 2025</td><td>FDA expert panel on testosterone; some panelists argued against excluding age-related hypogonadism and for removing testosterone from the controlled-substance list. Panel views are not FDA decisions</td></tr>
+<tr><td>June 2026</td><td>FDA requested updates: remove the limitation of use on age-related hypogonadism and revise safety information on prostate cancer and benign prostatic hyperplasia; HHS said the prostate cancer contraindication would apply only to metastatic disease, with screening and monitoring still recommended</td></tr>
+</tbody>
+</table>
+<p>Sources: ${ext(S.fdaLabel, "FDA, February 28, 2025")}; ${ext(S.fdaInfo, "FDA testosterone information")} (both read November 9, 2026); ${ext(S.fdaPanel, "Healio, December 10, 2025")}; ${ext(S.hhs2026, "HHS, June 2026")}. The June 2026 changes were requests to manufacturers; check whether your product's label has been updated.</p>
+<h3>The older-men trials</h3>
+<p>The NIH-funded Testosterone Trials, in 790 men aged 65 and older with low testosterone, found one year of testosterone gel improved bone density and corrected anemia in many men, had no effect on memory or other cognition, and increased noncalcified coronary plaque volume in the 170 men who had heart scans; NIA said the clinical importance of the plaque finding was uncertain and larger, longer trials were needed. Source: ${ext(S.niaTT, "National Institute on Aging, February 21, 2017")}, read November 9, 2026. For the full safety picture, see <a href="/trt/articles/is-trt-safe">is TRT safe?</a></p>`,
+    },
+    {
+      heading: "What are the long-term risks of testosterone therapy?",
+      body: `<p><strong>The main long-term risks to monitor are a rising red blood cell count (hematocrit), higher blood pressure, blood clots including pulmonary embolism, atrial fibrillation, fractures, effects on the prostate, worsening sleep apnea, and suppressed sperm production; and because TRT controls rather than cures low testosterone, symptoms usually return if you stop.</strong> Regular monitoring is how each is caught early.</p>
+<table>
+<thead><tr><th>Risk</th><th>What the sources say</th><th>How it's watched</th></tr></thead>
+<tbody>
+<tr><td>High hematocrit</td><td>Red cell effect evident at 3 months, peaking at 9 to 12 months (Saad, 2011)</td><td>Blood count at baseline and follow-up; act above 54% (AUA)</td></tr>
+<tr><td>Blood pressure</td><td>FDA: increase confirmed class-wide (2025)</td><td>Blood pressure checks before and during treatment</td></tr>
+<tr><td>Pulmonary embolism, atrial fibrillation</td><td>More common on testosterone in TRAVERSE</td><td>History and symptoms; report leg swelling or pain and breathlessness promptly</td></tr>
+<tr><td>Fractures</td><td>Increased incidence in TRAVERSE (Endocrine Society, 2026)</td><td>Discuss falls and bone health with your clinician</td></tr>
+<tr><td>Prostate</td><td>Long-term prostate cancer safety "remains unestablished" (Endocrine Society, 2026); PSA rises marginally and plateaus at about 12 months (Saad, 2011)</td><td>PSA by age at baseline and follow-up</td></tr>
+<tr><td>Sleep apnea</td><td>Endocrine Society: don't start in untreated severe sleep apnea; MedlinePlus lists difficulty breathing during sleep as a reason to call your doctor</td><td>Ask about snoring and daytime sleepiness</td></tr>
+<tr><td>Fertility</td><td>MedlinePlus: may decrease sperm count, especially at high doses</td><td>Discuss before starting and at each review</td></tr>
+</tbody>
+</table>
+<p>Sources: ${ext(S.saad, "Saad et al., 2011")}; ${ext(S.fdaLabel, "FDA, 2025")}; ${ext(S.traverse, "TRAVERSE, NEJM, 2023")}; ${ext(S.esStatement, "Endocrine Society, 2026")}; ${ext(S.esGuideline, "Endocrine Society guideline, 2018")}; ${ext(S.auaTable7, "AUA table 7")}; ${ext(S.mpInj, "MedlinePlus, testosterone injection")}.</p>
+<h3>Everyday side effects</h3>
+<p>MedlinePlus lists acne, injection-site pain or bruising, tiredness, trouble sleeping, mood swings, weight gain, headache and joint or back pain for injections, and skin redness, irritation and dryness among the effects of topicals. It also warns that testosterone used at higher doses or in ways other than directed can cause serious problems, including heart attack, stroke, liver disease and mental health changes, and that people who misuse high doses may get withdrawal symptoms if they stop suddenly. Sources: ${ext(S.mpInj, "MedlinePlus, injection")}; ${ext(S.mpTop, "MedlinePlus, topical")}. That is one more reason never to buy testosterone outside a prescription. Our guides to <a href="/trt/articles/trt-side-effects">TRT side effects</a> and <a href="/trt/articles/does-trt-cause-hair-loss">TRT and hair loss</a> cover the common ones in detail.</p>`,
+    },
+    {
+      heading: "Will TRT affect your fertility?",
+      body: `<p><strong>Yes, it can. Testosterone from outside the body signals the pituitary to cut the hormones (LH and FSH) the testes need to make sperm, so TRT can reduce sperm production sharply, sometimes to zero. The AUA says not to prescribe it to men who are currently trying to conceive.</strong> For many men the effect reverses after stopping, but recovery is not guaranteed and can take months.</p>
+<h3>How strong the effect is</h3>
+<p>The clearest data come from male contraception research. In a World Health Organization trial published in The Lancet in 1990, 271 healthy men received weekly testosterone injections; the cumulative rate of azoospermia (no sperm) was 65% at six months, with a mean time of about 120 days, and the estimated median time to recovery of a normal sperm concentration after stopping was 3.7 months. Those were young, healthy volunteers using testosterone for a limited period, so recovery in an older man after years of treatment may be slower. Source: ${ext(S.who1990, "WHO Task Force, Lancet, 1990")}, as described in our diagnosis guide. MedlinePlus says testosterone injection "may cause a decrease in the number of sperm" and advises men who would like children to talk to their doctor about the risks. Source: ${ext(S.mpInj, "MedlinePlus")}.</p>
+<h3>What the guidelines say</h3>
+<ul>
+<li><strong>AUA:</strong> don't prescribe exogenous testosterone to men currently trying to conceive; men interested in fertility should have a reproductive health evaluation first; clinicians may use aromatase inhibitors, hCG, selective estrogen receptor modulators or a combination for men who want to maintain fertility. Source: ${ext(S.aua, "AUA guideline")}.</li>
+<li><strong>Endocrine Society:</strong> don't start testosterone in men planning fertility in the near term. In September 2026 it also disputed pairing testosterone with hCG as a fertility-preservation strategy, arguing that it does not address the suppression of FSH. Sources: ${ext(S.esGuideline, "2018 guideline")}; ${ext(S.esDha, "statement, September 24, 2026")}.</li>
+</ul>
+<p>MedlinePlus notes that injections of pituitary hormone may be used to help men produce sperm. Source: ${ext(S.mpHypo, "MedlinePlus, hypogonadism")}. If there is any chance you want children, say so in your first online questionnaire and make sure the clinician addresses it. Our guides to <a href="/trt/articles/trt-and-fertility">TRT and fertility</a> and <a href="/trt/articles/can-you-stop-trt">whether you can stop TRT</a> go further.</p>`,
+    },
+    {
+      heading: "Are enclomiphene and clomiphene alternatives to TRT?",
+      body: `<p><strong>For some men, yes, but they are off-label options. Clomiphene's approved use is to induce ovulation in women, and both clomiphene and enclomiphene are prescribed to men off-label, to stimulate the body's own testosterone rather than replace it, which is why they come up for men who want to protect fertility.</strong> They only make sense when the testes can still respond, which is why LH and FSH must be measured first.</p>
+<p>MedlinePlus describes clomiphene as used "to induce ovulation (egg production) in women," and adds that it is "also sometimes used to treat male infertility." Source: ${ext(S.mpClomid, "MedlinePlus, clomiphene (last revised September 15, 2017)")}, read November 9, 2026. Use in men for low testosterone is therefore off-label: a clinician prescribing it outside its approved indication. The AUA lists selective estrogen receptor modulators, the class clomiphene belongs to, among the options clinicians may use for men with testosterone deficiency who want to maintain fertility. Source: ${ext(S.aua, "AUA guideline")}.</p>
+<h3>Who they may suit</h3>
+<p>The candidates are usually men with secondary hypogonadism (low or inappropriately normal LH) whose system is suppressed but intact, particularly those who want children. A man with primary hypogonadism, where the testes themselves are failing, is less likely to respond, because the medicine works through the signal to the testes. That is why the LH result at intake matters so much: as our <a href="/trt/articles/how-low-testosterone-is-diagnosed">diagnosis guide</a> puts it, the option only exists if LH was measured and the pattern recognized.</p>
+<h3>What to ask a clinic offering it</h3>
+<ul>
+<li>Is this use off-label, and what evidence supports it for someone like me?</li>
+<li>Is the product an FDA-approved medicine or a compounded preparation, and from which pharmacy?</li>
+<li>What will be monitored, and when will we decide whether it is working?</li>
+</ul>
+<p>Among the providers we review, DudeMeds offers enclomiphene alongside injectable testosterone, according to our <a href="/trt/reviews/dudemeds">DudeMeds review</a>. Our comparison of <a href="/trt/articles/enclomiphene-vs-trt">enclomiphene vs TRT</a> explains the trade-offs, and <a href="/trt/articles/natural-ways-to-boost-testosterone">natural ways to boost testosterone</a> covers what lifestyle changes can and can't do.</p>`,
+    },
+    {
+      heading: "Do you need bloodwork for enclomiphene?",
+      body: `<p><strong>Yes. Enclomiphene is a treatment for low testosterone, so it should start from the same diagnosis as TRT, symptoms plus repeat low early-morning testosterone, and it particularly depends on LH and FSH, which show whether your testes can respond to it.</strong> Follow-up blood tests show whether your own testosterone has actually risen and whether anything else needs attention.</p>
+<p>The diagnostic standard in the Endocrine Society's July 2026 statement, at least two early-morning, fasting tests plus symptoms, is about diagnosing hypogonadism, not about which medicine treats it. Source: ${ext(S.esStatement, "Endocrine Society, 2026")}. A clinic that prescribes enclomiphene without labs, or on one reading, is skipping the same steps that would be red flags for testosterone. Because its use for low testosterone in men is off-label, there is no FDA-approved monitoring schedule for it; ask your prescriber exactly what will be rechecked and when, and treat a clear answer as a sign of a careful clinic.</p>`,
+    },
+    {
+      heading: "Can online clinics keep prescribing testosterone after December 31, 2026?",
+      body: `<p><strong>Possibly, but it depends on what the DEA does in the next few weeks. Testosterone is a Schedule III controlled substance, and the temporary federal rule that lets clinicians prescribe it by video with no prior in-person visit runs through December 31, 2026. If no replacement or extension arrives, the older law generally requiring at least one in-person medical evaluation would apply again.</strong></p>
+<p>The 2021 telemedicine review notes that all TRT formulations are Schedule III substances and that requirements for prescribing controlled substances online vary by state. Source: ${ext(S.dubinTele, "Dubin et al., 2021")}. Federally, the Ryan Haight Act of 2008 ${ext(S.mondaq, "generally requires at least one in-person medical evaluation")} before a controlled drug is prescribed by telemedicine. The pandemic-era waiver has been extended four times; the latest, ${ext(S.hklaw, "published at the end of 2025")}, lets DEA-registered clinicians prescribe Schedule II to V drugs by audio-video telemedicine with no prior in-person visit until ${ext(S.deaExtension, "December 31, 2026")}.</p>
+<h3>What could happen</h3>
+<ol>
+<li><strong>A final "special registration" rule.</strong> The DEA's ${ext(S.deaProposed, "January 2025 proposal")} would create a special telemedicine registration for prescribing Schedule III to V drugs, including state-by-state registration and prescription-monitoring checks, as summarized by the ${ext(S.aha, "American Hospital Association")}. The DEA sent a final version to White House review on ${ext(S.frierOira, "August 25, 2026")}; its text is ${ext(S.mcdermott, "not public")}.</li>
+<li><strong>Another extension</strong>, as at every deadline since 2023.</li>
+<li><strong>A lapse</strong>, in which case clinics would need patients to have an in-person evaluation.</li>
+</ol>
+<p>State rules can be stricter than federal ones in any scenario. Ask your clinic now what its plan is for January 1, 2027, keep your labs current, and don't stockpile or buy testosterone from unlicensed sellers. Our guide to <a href="/trt/articles/online-trt-dea-deadline-2026">online TRT and the DEA deadline</a> is updated as things change, and our online-therapy team covers the same rules in <a href="/online-therapy/articles/telehealth-controlled-substances-dea-rules-2026">telehealth prescribing and the DEA in 2026</a>. DEA facts as checked November 6, 2026.</p>`,
+    },
+    {
+      heading: "What are the red flags of a poor online TRT clinic?",
+      body: `<p><strong>The biggest red flags are a prescription on a single blood test, no interest in the time of the draw, no LH, no fertility question, no baseline hematocrit or PSA, an offer to treat normal levels, and monitoring sold as an optional extra.</strong> Any one of them is a reason to ask questions; several together are a reason to walk away.</p>
+<table>
+<thead><tr><th>Red flag</th><th>Why it matters</th></tr></thead>
+<tbody>
+<tr><td>Prescription on one reading</td><td>Both US guidelines require at least two low early-morning results</td></tr>
+<tr><td>No interest in timing or fasting</td><td>Afternoon and post-meal samples read lower</td></tr>
+<tr><td>No LH or FSH before starting</td><td>The cause can't be classified, and LH can't be measured cleanly once treatment starts</td></tr>
+<tr><td>No fertility question</td><td>Exogenous testosterone suppresses sperm production</td></tr>
+<tr><td>No baseline hematocrit or PSA</td><td>Both are needed before treatment, and to compare against later</td></tr>
+<tr><td>Treatment offered with normal levels</td><td>Not a guideline indication; the 2022 secret-shopper study found six of seven platforms offered it</td></tr>
+<tr><td>No named clinician, no way to reach one</td><td>Dose and safety decisions need a clinician</td></tr>
+<tr><td>Hard to cancel; monitoring as an upsell</td><td>Monitoring is part of safe treatment, not an add-on</td></tr>
+</tbody>
+</table>
+<p>Sources: ${ext(S.aua, "AUA")}; ${ext(S.esStatement, "Endocrine Society, 2026")}; ${ext(S.dubin, "Dubin et al., JAMA Internal Medicine, 2022")}. The green flags are the mirror image: a clinic that explains your results, writes down your monitoring plan, discusses alternatives and is willing to say no. Our guide to <a href="/trt/articles/how-to-get-trt-online">how to get TRT online</a> shows what that looks like in practice.</p>`,
+    },
+    {
+      heading: "How do you stop, pause or switch online TRT providers?",
+      body: `<p><strong>Don't stop on your own: talk to your prescriber first, because symptoms usually return and your body's own production can take months to recover. To switch providers, get copies of your records and recent labs, line up the new clinic before the old supply runs out, and avoid gaps or doubling up.</strong></p>
+<p>MedlinePlus advises not to stop topical testosterone without talking to your doctor and says symptoms may return if you do. Source: ${ext(S.mpTop, "MedlinePlus, topical testosterone")}. Because testosterone suppresses LH and FSH, the body's own production restarts only gradually after stopping, and the prescriber may plan how to come off. Our guide to <a href="/trt/articles/can-you-stop-trt">whether you can stop TRT</a> covers what recovery looks like.</p>
+<h3>A clean switch</h3>
+<ol>
+<li>Download your lab results, prescriptions and visit notes.</li>
+<li>Choose the new clinic and confirm it treats your state and offers your current format.</li>
+<li>Book the new clinic's intake before your current supply ends; share your history and labs.</li>
+<li>Expect the new clinician to want their own labs before continuing; that is a good sign, not a hassle.</li>
+<li>Cancel the old membership only once the new prescription is in place, and check the cancellation terms.</li>
+</ol>
+<p>If you are comparing where to go next, our <a href="/trt/hone-health-alternatives">Hone Health alternatives</a> page and the <a href="/trt">full ranking</a> are good starting points.</p>`,
+    },
+    {
+      heading: "What don't we know yet about online TRT?",
+      body: `<p><strong>Several important questions are still open: there is no head-to-head trial of telehealth versus in-person TRT, long-term safety including for prostate cancer is not established, and the rules for prescribing testosterone by video after December 31, 2026 are not yet public.</strong></p>
+<ul>
+<li><strong>Telehealth outcomes.</strong> We found no study comparing testosterone levels, symptom relief or side effects between online and in-person care; the 2021 review called the data on TRT in the telemedicine era "limited." Source: ${ext(S.dubinTele, "Dubin et al., 2021")}.</li>
+<li><strong>Long-term safety.</strong> The Endocrine Society says long-term safety, including for prostate cancer, "remains unestablished," and has called for a long-term "Men's Health Initiative," analogous to the Women's Health Initiative. Source: ${ext(S.esStatement, "Endocrine Society, July 16, 2026")}.</li>
+<li><strong>Labels.</strong> Whether and when the June 2026 label changes are finalized. Source: ${ext(S.fdaInfo, "FDA")}.</li>
+<li><strong>The DEA rule.</strong> What the final special-registration rule says, or whether the waiver is extended again.</li>
+<li><strong>Current clinic practice.</strong> The secret-shopper data are from 2022, and the 2026 records studies are not specific to online clinics.</li>
+</ul>
+<p>We will update this guide as these questions are answered.</p>`,
+    },
+    {
+      heading: "The bottom line",
+      body: `<p>Online TRT is a legitimate way to be treated for low testosterone when the clinic does what the guidelines ask: symptoms plus at least two low early-morning tests, LH and a blood count before starting, PSA by age, an honest conversation about fertility, and monitoring that continues for as long as you are treated. No trial shows online care is better or worse than in-person care; the medicine is the same, and the standard of the clinic matters more than the format of the visit. Keep a primary care doctor in the loop, keep copies of your labs, and ask your clinic what it plans to do if the DEA rules change on January 1, 2027.</p>
+<p>If you are ready to compare, start with our <a href="/trt">online TRT clinic ranking</a>, led by <a href="/trt/reviews/hone">Hone Health</a>, <a href="/trt/reviews/tmates">TMates</a> and <a href="/trt/reviews/maleexcel">Male Excel</a>. If you are still deciding whether your testosterone is truly low, read <a href="/trt/articles/how-low-testosterone-is-diagnosed">how low testosterone is diagnosed</a>, and for the clinical background, our <a href="/trt/articles/trt-guide">complete guide to TRT</a>.</p>
+<p>Last checked November 9, 2026. This guide is general information, not medical advice. A licensed clinician who knows your history and results decides whether TRT, or any alternative, is right for you.</p>`,
+    },
+    {
+      heading: "References",
+      body: `<p><strong>Read for this guide on November 9, 2026:</strong> ${ext(S.esStatement, "Endocrine Society, Statement on Testosterone Replacement Therapy, July 16, 2026")}; ${ext(S.aua, "American Urological Association, Evaluation and Management of Testosterone Deficiency (2018, validity confirmed 2024), guideline page")}; ${ext(S.fdaLabel, "FDA, class-wide labeling changes for testosterone products, February 28, 2025")}; ${ext(S.fdaInfo, "FDA, Testosterone Information, content current as of June 23, 2026")}; ${ext(S.mpInj, "MedlinePlus, testosterone injection, last revised May 15, 2025")}; ${ext(S.mpTop, "MedlinePlus, testosterone topical, last revised May 15, 2025")}; ${ext(S.mpHypo, "MedlinePlus, hypogonadism, reviewed July 21, 2024")}; ${ext(S.mpClomid, "MedlinePlus, clomiphene, last revised September 15, 2017")}; ${ext(S.nhsMM, "NHS, the 'male menopause', last reviewed October 13, 2022")}; ${ext(S.niaTT, "National Institute on Aging, T Trials results, February 21, 2017")}; ${ext(S.saad, "Saad F et al., Onset of effects of testosterone treatment and time span until maximum effects are achieved, Eur J Endocrinol, 2011")}; ${ext(S.dubinTele, "Dubin JM, Fantus RJ, Halpern JA, Testosterone replacement therapy in the era of telemedicine, Int J Impot Res, 2021")}.</p>
+<p><strong>Carried over from our earlier guides (checked October 31 and November 6, 2026):</strong> ${ext(S.esGuideline, "Bhasin S et al., Endocrine Society guideline, JCEM, 2018")}; ${ext(S.auaTable7, "AUA follow-up laboratory testing table")}; ${ext(S.bssm, "BSSM guideline")}; ${ext(S.traverse, "Lincoff AM et al., TRAVERSE, NEJM, 2023")}; ${ext(S.traverseFx, "Snyder PJ et al., NEJM, 2024")}; ${ext(S.hhs2026, "HHS, June 2026")}; ${ext(S.fdaPanel, "Healio, FDA expert panel, December 10, 2025")}; ${ext(S.dubin, "Dubin JM et al., JAMA Internal Medicine, 2022")}; ${ext(S.dubinNU, "Northwestern Medicine, January 2023")}; ${ext(S.epic, "Epic Research, 2026")}; ${ext(S.endo26PR, "Endocrine Society, ENDO 2026 press release")}; ${ext(S.endo26RUN, "Renal and Urology News, ENDO 2026")}; ${ext(S.nma, "Journal of Sexual Medicine network meta-analysis, 2026")}; ${ext(S.who1990, "WHO Task Force, Lancet, 1990")}; ${ext(S.esDha, "Endocrine Society, statement on the DHA guideline, September 24, 2026")}; ${ext(S.brambilla09, "Brambilla DJ et al., JCEM, 2009")}; ${ext(S.caronia, "Caronia LM et al., Clinical Endocrinology, 2013")}; ${ext(S.deaExtension, "DEA, December 31, 2025")}; ${ext(S.hklaw, "Holland & Knight, January 2026")}; ${ext(S.mondaq, "Mondaq")}; ${ext(S.deaProposed, "DEA, January 16, 2025")}; ${ext(S.aha, "American Hospital Association, January 2025")}; ${ext(S.frierOira, "Frier Levitt, law-firm analysis")}; ${ext(S.mcdermott, "McDermott, law-firm analysis")}.</p>`,
+    },
   ],
 };

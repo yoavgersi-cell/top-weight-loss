@@ -374,6 +374,226 @@ export const HL_ONLINE_TREATMENT_GUIDE: ArticleData = {
 </ol>
 <p>Nothing on that list is exotic, and the providers we rank meet the core of it: each uses licensed medical review before prescribing and publishes its prices. Where they differ is in treatment range, personalization and who they serve, which is what the comparison below is for. Our three highest-ranked online hair-loss providers are below.</p>`,
     },
+    {
+      heading: "How do Maximus, Happy Head and PeterMD compare?",
+      body: `<p>The three providers we rank highest all offer licensed, prescription hair-loss care online, but they suit different people. <a href="/hair-loss/reviews/maximus">Maximus</a> has the broadest prescription menu for men, including dutasteride and oral minoxidil. <a href="/hair-loss/reviews/happyhead">Happy Head</a> is dermatologist-founded and builds personalized formulas for both men and women. <a href="/hair-loss/reviews/petermd">PeterMD</a> keeps things simple with finasteride and a single 3-in-1 topical at published prices. The table below uses our verified provider records, checked in August 2026.</p>
+<table><thead><tr><th></th><th>Maximus</th><th>Happy Head</th><th>PeterMD</th></tr></thead><tbody>
+<tr><td>Our rank</td><td>#1</td><td>#2</td><td>#3</td></tr>
+<tr><td>Who it serves</td><td>Men</td><td>Men and women</td><td>Men</td></tr>
+<tr><td>Medical review</td><td>Board-certified doctor reviews your questionnaire</td><td>Dermatologist-founded; prescriptions reviewed by its dermatologists; free online consultation</td><td>Physician-prescribed</td></tr>
+<tr><td>Oral options</td><td>Finasteride, minoxidil (off-label), dutasteride (off-label), and a minoxidil plus dutasteride combination</td><td>3-in-1 SuperCapsule with dutasteride and minoxidil (both off-label) plus vitamin D3</td><td>Finasteride</td></tr>
+<tr><td>Topical options</td><td>Minoxidil+ Gel, Dutasteride+ Gel, All-in-One Gel (dutasteride, minoxidil, tretinoin, fexofenadine)</td><td>Custom Topical (dutasteride, minoxidil up to 8%, retinoic acid, hydrocortisone), adjustable after review</td><td>Follicure RX spray (minoxidil, finasteride, ketoconazole)</td></tr>
+<tr><td>Starting price (Aug 2026)</td><td>$24.99/mo for oral minoxidil, billed as a 90-day supply</td><td>$49 first order (regularly $89)</td><td>Finasteride $60 for 30 tablets (regularly $74)</td></tr>
+<tr><td>Stand-out strength</td><td>Widest prescription toolkit, including dutasteride</td><td>Personalization and options for women</td><td>Simple lineup; the only ranked topical with ketoconazole</td></tr>
+<tr><td>Limits to know</td><td>Plans billed as 90-day supplies; men only</td><td>$49 is promotional; custom formulas can cost more than generics</td><td>Narrower menu; small third-party review footprint so far</td></tr>
+</tbody></table>
+<h3>A quick way to choose</h3>
+<ul>
+<li><strong>You're a man who wants the most options, or dutasteride specifically:</strong> start with Maximus.</li>
+<li><strong>You're a woman, or you want a formula tailored to you by a dermatologist-led team:</strong> start with Happy Head.</li>
+<li><strong>You want plain finasteride and one combination spray at a clear price:</strong> look at PeterMD.</li>
+</ul>
+<p>We've compared each pair head to head: <a href="/hair-loss/maximus-vs-happy-head">Maximus vs Happy Head</a>, <a href="/hair-loss/maximus-vs-petermd">Maximus vs PeterMD</a> and <a href="/hair-loss/happyhead-vs-petermd">Happy Head vs PeterMD</a>. Each provider also has a full review linked above.</p>`,
+    },
+    {
+      heading: "Is Happy Head legit, and what does it cost?",
+      body: `<p>Yes. Happy Head is a legitimate, dermatologist-founded telehealth service based in Santa Monica, California, and it ranks second on our list. It prescribes personalized topical and oral hair-loss formulas for men and women after a medical review, and it includes a free online consultation. Its formulas use established hair-loss actives: minoxidil and finasteride, plus dutasteride and spironolactone, which it describes as used off-label under medical supervision.</p>
+<h3>What Happy Head offers</h3>
+<ul>
+<li><strong>Custom Topical:</strong> dutasteride, minoxidil, retinoic acid and hydrocortisone, with strengths adjustable after review. Its topical serums go up to 8% minoxidil, above the 5% typical of over-the-counter products.</li>
+<li><strong>3-in-1 Daily SuperCapsule:</strong> an oral capsule combining dutasteride and minoxidil, both off-label for hair loss, with vitamin D3.</li>
+<li><strong>Dual Action Bundle:</strong> the topical and the capsule together.</li>
+<li><strong>Formulas for women</strong> as well as men, which sets it apart from the other two providers we rank.</li>
+</ul>
+<h3>Happy Head pricing (verified August 2026)</h3>
+<table><thead><tr><th>Product</th><th>First-order price</th><th>Regular price</th></tr></thead><tbody>
+<tr><td>Custom Topical</td><td>$49</td><td>$89</td></tr>
+<tr><td>3-in-1 Daily SuperCapsule</td><td>$49</td><td>$89</td></tr>
+<tr><td>Dual Action Bundle (both)</td><td>$98</td><td>$178</td></tr>
+</tbody></table>
+<p>Our records also show that subscribing saves 20%, and that the company advertises a six-month growth guarantee; check the guarantee's terms on its site before relying on it. Prices change, so confirm current pricing at checkout. Our <a href="/hair-loss/articles/happyhead-cost">Happy Head cost guide</a> has the full breakdown.</p>
+<h3>Who it suits, and the honest limits</h3>
+<p>Happy Head is the strongest fit in our ranking for women, for anyone who wants a formula tailored by a dermatologist-led team, and for people who want higher-strength topical minoxidil under medical guidance. The limits: the $49 price is a first-order promotion, custom compounded formulas can cost more than generic pills, and, like every treatment here, results last only as long as you keep using it. Because several of its formulas contain dutasteride, a woman who is or could become pregnant needs to discuss suitability carefully with its clinicians.</p>
+<p>Read our full <a href="/hair-loss/reviews/happyhead">Happy Head review</a>, the deeper <a href="/hair-loss/articles/is-happyhead-legit">is Happy Head legit</a> analysis, or <a href="/hair-loss/articles/happyhead-alternatives">Happy Head alternatives</a> if you want to compare. Head-to-heads with the big brands are in <a href="/hair-loss/hims-vs-happy-head">Hims vs Happy Head</a>, <a href="/hair-loss/keeps-vs-happy-head">Keeps vs Happy Head</a> and <a href="/hair-loss/ro-vs-happy-head">Ro vs Happy Head</a>.</p>`,
+    },
+    {
+      heading: "Why is Maximus our top-ranked hair loss provider?",
+      body: `<p>Maximus ranks first because it gives men the broadest set of prescription hair-loss options of any provider we rank, under board-certified doctor review, at entry prices that are genuinely accessible. It's the clearest choice if you want a telehealth service that prescribes dutasteride, oral minoxidil or a compounded combination gel, and it's a sensible one if you just want finasteride.</p>
+<h3>What Maximus offers</h3>
+<ul>
+<li><strong>Oral finasteride</strong>, the FDA-approved starting point for men.</li>
+<li><strong>Oral minoxidil</strong>, prescribed off-label, and <strong>oral dutasteride</strong>, also off-label, on their own or as a combination.</li>
+<li><strong>Compounded gels:</strong> Minoxidil+, Dutasteride+, and an All-in-One Gel combining dutasteride, minoxidil, tretinoin and fexofenadine.</li>
+<li><strong>Process:</strong> a short medical questionnaire reviewed by a board-certified doctor, then free, discreet delivery.</li>
+</ul>
+<h3>Maximus pricing (verified August 2026)</h3>
+<table><thead><tr><th>Treatment</th><th>Price</th></tr></thead><tbody>
+<tr><td>Oral minoxidil</td><td>$24.99/mo</td></tr>
+<tr><td>Oral finasteride</td><td>$34.99/mo</td></tr>
+<tr><td>Oral dutasteride</td><td>$34.99/mo</td></tr>
+<tr><td>Minoxidil+ Gel</td><td>$44.99/mo</td></tr>
+<tr><td>Dutasteride+ Gel</td><td>$54.99/mo</td></tr>
+<tr><td>Oral minoxidil + oral dutasteride</td><td>$59.99/mo</td></tr>
+<tr><td>All-in-One Gel</td><td>$64.99/mo</td></tr>
+</tbody></table>
+<p>All plans are billed as a 90-day supply rather than month to month, which is worth knowing before you check out. Our <a href="/hair-loss/articles/maximus-cost">Maximus cost guide</a> explains the billing in detail.</p>
+<h3>Who it suits, and the honest limits</h3>
+<p>Maximus fits men who want prescription-strength options beyond the two basics, men open to oral dutasteride or a compounded topical, and anyone who prefers a fully online, doctor-reviewed process. The limits: it's built for men and isn't formulated for women; its plans are billed in 90-day blocks; prescriptions require medical approval; and, as with any hair-loss treatment, ongoing use is needed to keep results. Because several of its products are off-label or compounded, it's worth reading the side-effect sections of this guide before choosing a stronger protocol.</p>
+<p>For more, see our <a href="/hair-loss/reviews/maximus">Maximus review</a>, <a href="/hair-loss/articles/is-maximus-legit">is Maximus legit</a>, and <a href="/hair-loss/articles/maximus-alternatives">Maximus alternatives</a>. Comparisons with the mainstream brands are in <a href="/hair-loss/hims-vs-maximus">Hims vs Maximus</a>, <a href="/hair-loss/keeps-vs-maximus">Keeps vs Maximus</a> and <a href="/hair-loss/ro-vs-maximus">Ro vs Maximus</a>, and for a drug-free comparison see <a href="/hair-loss/maximus-vs-nutrafol">Maximus vs Nutrafol</a>.</p>`,
+    },
+    {
+      heading: "Who is PeterMD best for?",
+      body: `<p>PeterMD is best for men who want straightforward, physician-prescribed finasteride at a clearly published price, or who are interested in a single combination spray that includes ketoconazole. It ranks third on our list. Its hair-loss lineup is deliberately small, which is a strength if you don't want to wade through a big menu and a limitation if you want options such as dutasteride or oral minoxidil.</p>
+<h3>What PeterMD offers</h3>
+<ul>
+<li><strong>Finasteride 1mg</strong>, physician-prescribed, as tablets.</li>
+<li><strong>Follicure RX</strong>, a prescription topical spray combining minoxidil, finasteride and ketoconazole. It's the only topical in our ranking that adds ketoconazole.</li>
+<li><strong>ReGenX Bundle</strong>, a bundled option; confirm its current contents on PeterMD's site.</li>
+<li>Discreet delivery to your door.</li>
+</ul>
+<h3>PeterMD pricing (verified August 2026)</h3>
+<table><thead><tr><th>Product</th><th>Price</th><th>Regular price</th></tr></thead><tbody>
+<tr><td>Finasteride, 30 tablets</td><td>$60</td><td>$74</td></tr>
+<tr><td>Finasteride, 60 tablets</td><td>$90 (about $45 a month)</td><td>$110</td></tr>
+<tr><td>Follicure RX, 50mL</td><td>$70</td><td>$80</td></tr>
+<tr><td>Follicure RX, two bottles</td><td>$140</td><td>$160</td></tr>
+<tr><td>ReGenX Bundle</td><td>$130</td><td>$160</td></tr>
+</tbody></table>
+<p>The prices shown are current promotions, with PeterMD's regular rates listed alongside, which we appreciate. Our <a href="/hair-loss/articles/petermd-cost">PeterMD cost guide</a> has the details.</p>
+<h3>The honest limits</h3>
+<p>PeterMD is built for men, so it isn't an option for women. It doesn't publish dutasteride or oral minoxidil. And its third-party review footprint is still small and early, too thin for us to weigh either way, so we rank it on what we can verify: its products, its prescribing model and its published prices. Because Follicure RX contains finasteride, the ${ext(S.fdaTopicalFin, "FDA's April 2025 alert")} on compounded topical finasteride is relevant reading, particularly the advice about avoiding transfer to partners.</p>
+<p>See our full <a href="/hair-loss/reviews/petermd">PeterMD review</a>, <a href="/hair-loss/articles/is-petermd-legit">is PeterMD legit</a>, and <a href="/hair-loss/articles/petermd-alternatives">PeterMD alternatives</a>.</p>`,
+    },
+    {
+      heading: "What are the best alternatives to Hims for hair loss?",
+      body: `<p>If you're looking beyond Hims, the providers we rank highest, Maximus, Happy Head and PeterMD, are the main alternatives, and each answers a different reason for switching. Hims is a well-known, mainstream men's telehealth brand that offers prescription finasteride and minoxidil along with combination and other hair products. People usually look elsewhere because they want a wider prescription toolkit, more personalization, or options for women.</p>
+<h3>Hims, Keeps and Ro, briefly and fairly</h3>
+<p>We don't rank Hims, Keeps or Ro, and we don't hold verified prices for them, so we describe them only in general terms from our provider records:</p>
+<ul>
+<li><a href="/hair-loss/reviews/hims">Hims</a>: a recognizable men's brand with a simple, fully online process, prescription finasteride and minoxidil, and a broad men's-health range. It offers a more standard treatment set and less personalization than custom-formula services.</li>
+<li><a href="/hair-loss/reviews/keeps">Keeps</a>: a budget-focused men's hair-loss specialist built around generic finasteride and minoxidil, with hair-care add-ons such as ketoconazole shampoo. It doesn't offer personalized compounded formulas.</li>
+<li><a href="/hair-loss/reviews/ro">Ro</a>: a large telehealth platform where hair loss is one category among many, offering finasteride and topical minoxidil. Handy if you already use Ro for other care.</li>
+</ul>
+<h3>Which alternative for which reason</h3>
+<table><thead><tr><th>If you want...</th><th>Look at</th><th>Why</th></tr></thead><tbody>
+<tr><td>Dutasteride or oral minoxidil</td><td>Maximus</td><td>Broadest prescription menu we rank</td></tr>
+<tr><td>A personalized formula, or care for women</td><td>Happy Head</td><td>Dermatologist-founded, custom formulas for men and women</td></tr>
+<tr><td>Simple finasteride at a published price</td><td>PeterMD</td><td>Clear pricing with regular rates shown</td></tr>
+<tr><td>A drug-free option</td><td>Nutrafol</td><td>A supplement, not a prescription service</td></tr>
+</tbody></table>
+<h3>Keeps vs Hims</h3>
+<p>Keeps and Hims are often compared because both cover the same two basics. Broadly, Keeps leans into budget generics while Hims leans into brand recognition and a wider men's-health catalogue. Our full <a href="/hair-loss/hims-vs-keeps">Hims vs Keeps comparison</a> goes through them side by side, and <a href="/hair-loss/hims-vs-ro">Hims vs Ro</a> and <a href="/hair-loss/keeps-vs-ro">Keeps vs Ro</a> round out the mainstream matchups.</p>
+<p>For the full switching guides, read <a href="/hair-loss/articles/hims-alternatives">best Hims alternatives</a> and <a href="/hair-loss/articles/keeps-alternatives">best Keeps alternatives</a>. If you're weighing a prescription against a supplement, see <a href="/hair-loss/hims-vs-nutrafol">Hims vs Nutrafol</a>.</p>`,
+    },
+    {
+      heading: "How do we rank online hair loss providers?",
+      body: `<p>We rank providers on what we can verify, and we say plainly what we couldn't. Our current hair-loss ranking is Maximus first, Happy Head second and PeterMD third. Hims, Keeps and Ro have review pages and comparisons on the site so you can see how they stack up, but they aren't part of the ranking.</p>
+<h3>What we look at</h3>
+<ul>
+<li><strong>Medical oversight:</strong> whether a licensed clinician reviews your history before prescribing, and who that clinician is, such as a board-certified doctor or a dermatologist-led team.</li>
+<li><strong>Treatment range:</strong> which evidence-backed treatments are available, oral and topical, and whether off-label and compounded options are labeled as such.</li>
+<li><strong>Who it serves:</strong> men, women or both.</li>
+<li><strong>Price transparency:</strong> whether prices are published, with promotional and regular rates and billing terms shown.</li>
+<li><strong>Terms:</strong> how billing, renewals and cancellation work.</li>
+<li><strong>Public record:</strong> whether there's enough third-party feedback to judge the service, and what it says.</li>
+</ul>
+<h3>Where our data comes from</h3>
+<p>Provider details and prices in this guide come from the providers' own published information, verified in August 2026 and stored in our provider records. When a provider changes its prices, the figures here can lag, so always confirm at checkout. Medical facts come from the sources linked inline, each dated.</p>
+<h3>How we handle money</h3>
+<p>Treatments Hub may earn compensation from some providers featured on our pages, and our rankings and reviews are determined independently by our editorial team. Partnerships don't change the medical information in this guide, and our <a href="/weight-loss/how-we-rank">site-wide ranking method</a> sets out how commercial relationships are kept separate from scores and verdicts. The current ranking and scores are on our <a href="/hair-loss">hair loss provider comparison</a>.</p>
+<h3>What we don't do</h3>
+<p>We don't invent ratings, prices or reviews, we don't quote anonymous forum posts as evidence, and we don't claim a medical review we haven't had. This guide was written by the Treatments Hub Research Team from the sources linked throughout. If something here is out of date, the source link next to it is the place to check.</p>`,
+    },
+    {
+      heading: "What are the best hair loss treatments for women?",
+      body: `<p>For most women with female pattern hair loss, minoxidil is the first-line treatment, and some women are also prescribed spironolactone off-label. The ${ext(S.aadFemale, "American Academy of Dermatology")} calls minoxidil the most-recommended treatment for female pattern hair loss and says products containing 2% or 5% minoxidil have been approved for it. The ${ext(S.nhs, "NHS")} likewise says minoxidil can be used for female pattern baldness.</p>
+<h3>What female pattern hair loss looks like</h3>
+<p>The AAD describes it as most often starting in a woman's 40s, 50s or 60s, sometimes earlier, with a widening part, a thinner ponytail, and sometimes receding hair at the temples. Without treatment, some women develop widespread thinning, but women don't usually lose all their hair the way some men do. The AAD's advice is to see a dermatologist to confirm it, because other causes can look similar, and our page on <a href="/hair-loss/articles/menopause-hair-loss">menopause and hair loss</a> covers the hormonal side.</p>
+<h3>The main options</h3>
+<table><thead><tr><th>Option</th><th>Status for female pattern hair loss</th><th>What to know</th></tr></thead><tbody>
+<tr><td>Topical minoxidil</td><td>FDA-approved (2% and 5%)</td><td>May cause a temporary increase in shedding for the first two to eight weeks; possible unwanted facial hair; avoid in pregnancy and breastfeeding, per the AAD</td></tr>
+<tr><td>Low-dose oral minoxidil</td><td>Off-label</td><td>Unwanted hair growth and fluid retention are more common in women, per a ${ext(S.ldomSafety, "2025 safety review")}</td></tr>
+<tr><td>Spironolactone</td><td>Off-label</td><td>A diuretic the AAD says has been prescribed for decades for hair loss and can help restore growth; tell your doctor about kidney or adrenal problems</td></tr>
+<tr><td>Finasteride or dutasteride</td><td>Off-label; generally not recommended for women</td><td>Never in pregnancy or when pregnancy is possible; the AAD says premenopausal women taking these medicines should use birth control</td></tr>
+<tr><td>Laser devices</td><td>Some FDA-cleared</td><td>A few studies show benefit; must keep using</td></tr>
+<tr><td>PRP</td><td>Procedure</td><td>Early findings promising; more studies needed, per the AAD</td></tr>
+<tr><td>Hair transplant</td><td>Procedure</td><td>An option for some women; not if hair is sparse all over</td></tr>
+</tbody></table>
+<h3>Pregnancy matters</h3>
+<p>The AAD is clear that the prescription hair-loss medicines dermatologists use for women may cause birth defects and are not an option for women who are pregnant or planning to become pregnant. It also says women who are pregnant, planning a pregnancy or breastfeeding should avoid minoxidil. If any of that applies to you, tell your clinician before starting anything.</p>
+<h3>Timelines for women</h3>
+<p>The AAD says to expect six to 12 months with minoxidil before you know how well it's working, and six to 12 months with a prescription pill, adding that no growth within 12 months means the medicine won't work for you. Hair regained on a prescription medicine is lost about three to four months after stopping.</p>
+<h3>Online options for women</h3>
+<p>Of the providers we rank, <a href="/hair-loss/reviews/happyhead">Happy Head</a> is the one that formulates for women, with custom topical and oral options and spironolactone among its actives. Maximus and PeterMD are built for men. Our <a href="/hair-loss/women">women's hair loss hub</a> compares the options for women, including the drug-free <a href="/hair-loss/reviews/nutrafol">Nutrafol</a>, and our full guide to <a href="/hair-loss/articles/hair-loss-treatment-for-women">hair loss treatment for women</a> goes deeper.</p>`,
+    },
+    {
+      heading: "Can iron deficiency cause hair loss?",
+      body: `<p>Yes, low iron can contribute to hair shedding, though the research on exactly how much is mixed, and it's worth checking with a simple blood test rather than guessing. The ${ext(S.aadCauses, "American Academy of Dermatology")} lists getting too little iron, along with biotin, protein or zinc, as a cause of noticeable hair loss, and the ${ext(S.nhs, "NHS")} names iron deficiency among the causes of temporary hair loss. ${ext(S.mlHairLoss, "MedlinePlus")} includes anemia in its list of other causes of hair loss.</p>
+<h3>What the research says</h3>
+<p>${ext(S.micronutrients, "A 2018 review of vitamins, minerals and hair loss in Dermatology and Therapy")} describes iron deficiency as the most common nutritional deficiency in the world and says it contributes to telogen effluvium, the diffuse shedding type of hair loss. It also notes that iron deficiency is common in women with hair loss, but that the link between hair loss and low ferritin, the blood marker for stored iron, has been debated for years, with some studies supporting it and others not. Menstruation is the biggest cause of iron deficiency in otherwise healthy premenopausal women, the review adds.</p>
+<h3>When it's worth asking about</h3>
+<ul>
+<li>You're a woman who still has periods, particularly heavy ones, since menstruation is the main cause of low iron in otherwise healthy premenopausal women, per the 2018 review.</li>
+<li>Your hair loss is diffuse shedding rather than a receding hairline or widening part, which fits telogen effluvium.</li>
+<li>You've recently given birth, been ill, or lost a lot of weight; the ${ext(S.aadShedding, "AAD")} lists all three as shedding triggers, and ${ext(S.mlHairLoss, "MedlinePlus")} flags crash diets that lack protein.</li>
+<li>You've been told you're anemic, or you have symptoms such as unusual tiredness.</li>
+</ul>
+<h3>How to find out</h3>
+<p>Ask a clinician for blood tests that include ferritin, not just a standard blood count. The 2018 review notes that ferritin is considered a good indicator of total body iron stores but can be raised by inflammation, infection and liver problems, which is one reason a clinician should interpret the results. If you're low, the clinician will also want to know why, because the underlying cause matters as much as the number.</p>
+<h3>Should you just take an iron supplement?</h3>
+<p>Not without a test. The right approach depends on your levels and on what's causing them, and only a blood test and a clinician can tell you that. If a deficiency is confirmed, treating it under a clinician's guidance is the sensible route; shedding typically settles before regrowth becomes visible, because hair grows slowly. If your hair loss has a clear pattern, such as a receding hairline or a widening part, iron may be only part of the story. Our full guide to <a href="/hair-loss/articles/iron-deficiency-hair-loss">iron deficiency and hair loss</a> covers testing and recovery timelines.</p>`,
+    },
+    {
+      heading: "Do supplements like biotin or saw palmetto help hair loss?",
+      body: `<p>For most people without a diagnosed deficiency, hair supplements have weak or mixed evidence, and none is a substitute for the treatments covered above. The ${ext(S.aadFemale, "American Academy of Dermatology")} says that in studies of supplements such as biotin and folic acid, the findings have been mixed and, in most studies, the supplements had no effect on hair growth or thickness. It does mention one study in which 120 healthy women had thicker hair and less hair loss after six months on a specific omega-3, omega-6 and antioxidant combination, and says that if those results can be repeated there would be evidence to recommend it.</p>
+<h3>Biotin</h3>
+<p>Biotin deficiency does cause hair loss, but ${ext(S.micronutrients, "the 2018 Dermatology and Therapy review")} says there's no evidence-based data that supplementing biotin promotes hair growth. It also warns that biotin can interfere with some laboratory tests, including thyroid and hormone tests, producing falsely high or low results. If you take biotin, tell your clinician before any blood work.</p>
+<h3>Saw palmetto and "natural DHT blockers"</h3>
+<p>Saw palmetto is marketed as a natural DHT blocker, the same idea behind finasteride, but its evidence is far weaker and less consistent. Supplements are regulated much more loosely than medicines, so strength and purity vary between products. Our guide to <a href="/hair-loss/articles/saw-palmetto-hair-loss">saw palmetto for hair loss</a> explains why we don't recommend it as a substitute for proven treatment.</p>
+<h3>Physician-formulated supplements</h3>
+<p>Some people prefer a drug-free route, or want to add a supplement to a treatment plan. <a href="/hair-loss/reviews/nutrafol">Nutrafol</a> is a drug-free, physician-formulated supplement for men and women that needs no prescription, and ${ext(S.regrowthNma, "the 2023 Frontiers in Medicine network meta-analysis")} included it among the treatments it compared, finding a significant regrowth effect for it in women at 24 weeks. That's a modest result next to minoxidil's, and it's a supplement, not a medicine. Our comparisons <a href="/hair-loss/maximus-vs-nutrafol">Maximus vs Nutrafol</a> and <a href="/hair-loss/hims-vs-nutrafol">Hims vs Nutrafol</a> lay out the prescription-versus-supplement trade-off.</p>
+<h3>The practical rule</h3>
+<p>Test, don't guess. If a blood test shows a real deficiency, correcting it under a clinician's care makes sense. If it doesn't, put your money into a treatment with evidence first. Any supplement can interact with medicines, which is why the AAD suggests checking with a dermatologist before starting one.</p>`,
+    },
+    {
+      heading: "How long does hair loss treatment take to work?",
+      body: `<p>Expect three to six months before you notice a change and about a year before you can fairly judge a treatment. Hair grows slowly, so every proven treatment needs time. The sources agree on the broad shape even if their exact numbers differ slightly.</p>
+<table><thead><tr><th>Treatment</th><th>First changes</th><th>Fair point to judge</th><th>Source</th></tr></thead><tbody>
+<tr><td>Oral finasteride</td><td>At least 3 months</td><td>About 6 months to see results; if nothing by 12 months, more is unlikely to help</td><td>${ext(S.aadMale, "AAD")}, ${ext(S.mlFinasteride, "MedlinePlus")}</td></tr>
+<tr><td>Topical minoxidil</td><td>At least 4 months</td><td>6 to 12 months; up to a year</td><td>${ext(S.aadMale, "AAD")}, ${ext(S.mlMinoxidil, "MedlinePlus")}</td></tr>
+<tr><td>Prescription pills for women (e.g. spironolactone)</td><td>Variable</td><td>6 to 12 months; no growth by 12 months means it won't work</td><td>${ext(S.aadFemale, "AAD")}</td></tr>
+<tr><td>Hair transplant</td><td>Transplanted hair sheds at 2 to 8 weeks</td><td>6 to 9 months, sometimes 12</td><td>${ext(S.aadTransplant, "AAD")}</td></tr>
+<tr><td>PRP</td><td>Less shedding within a few months</td><td>After the initial monthly sessions</td><td>${ext(S.aadMale, "AAD")}</td></tr>
+<tr><td>Recovery from telogen effluvium</td><td>Shedding stops once the trigger passes</td><td>Normal fullness in about 6 to 9 months</td><td>${ext(S.aadShedding, "AAD")}</td></tr>
+</tbody></table>
+<h3>The early shed is often a good sign</h3>
+<p>Many people see more shedding in the first weeks of minoxidil and panic. The ${ext(S.aadFemale, "AAD")} says a temporary increase in hair loss in the first two to eight weeks is common and stops when hair begins to regrow. Our guide to the <a href="/hair-loss/articles/minoxidil-shedding-phase">minoxidil shedding phase</a> explains why it happens.</p>
+<h3>How to track progress honestly</h3>
+<ul>
+<li>Take photos before you start, in the same spot, light and hairstyle.</li>
+<li>Repeat every two to three months, not every day.</li>
+<li>Judge maintenance as a win. With pattern hair loss, no further loss is itself a good result.</li>
+<li>Share photos with your clinician at follow-ups; they're more useful than memory.</li>
+</ul>
+<p>Our full timeline guide, <a href="/hair-loss/articles/how-long-hair-loss-treatment-works">how long hair loss treatment takes to work</a>, goes month by month.</p>`,
+    },
+    {
+      heading: "What happens if you stop hair loss treatment?",
+      body: `<p>With pattern hair loss, stopping treatment generally means losing the benefit, usually within months. That's the most important thing to understand before you start, because it turns hair-loss treatment into an ongoing routine rather than a one-off course.</p>
+<ul>
+<li><strong>Finasteride:</strong> the ${ext(S.aadMale, "AAD")} says hair loss returns once you stop taking it, and ${ext(S.mlFinasteride, "MedlinePlus")} says you'll probably lose any hair that grew back within 12 months of stopping.</li>
+<li><strong>Minoxidil:</strong> ${ext(S.mlMinoxidil, "MedlinePlus")} says most new hair is lost within a few months after stopping, and the ${ext(S.aadMale, "AAD")} notes some hairs may look and feel thinner and shedding gradually increases.</li>
+<li><strong>Prescription pills for women:</strong> the ${ext(S.aadFemale, "AAD")} says hair that grew is lost about three to four months after stopping.</li>
+<li><strong>Laser devices:</strong> you must keep using them to keep results, per the AAD.</li>
+<li><strong>PRP:</strong> not permanent; maintenance sessions are needed.</li>
+<li><strong>Hair transplant:</strong> transplanted hair is designed to be permanent, but the native hair around it can keep thinning without medicine, per the ${ext(S.aadTransplant, "AAD")}.</li>
+</ul>
+<p>The ${ext(S.nhs, "NHS")} sums it up: finasteride and minoxidil don't work for everyone, and they only work for as long as they're used.</p>
+<h3>What this means when choosing a provider</h3>
+<p>Because you'll likely be on treatment for years, the long-term terms matter more than a first-order discount. Look at the regular price after any promotion, how billing works, whether you can change or pause your plan, and whether you can easily reach a clinician if side effects appear months in. A treatment you can afford and tolerate for the long run will usually do more than a stronger one you abandon after six months.</p>
+<h3>Can you ever stop?</h3>
+<p>Some people decide the trade-off isn't worth it anymore, and that's a legitimate choice. ${ext(S.mlMalePattern, "MedlinePlus")} points out that treatment isn't necessary if you're comfortable with your appearance, and that hairstyles, hairpieces or weaves can disguise hair loss safely and cheaply. If you do stop a prescription medicine, talk to the clinician who prescribed it first.</p>`,
+    },
     // __SECTIONS__
   ],
 };

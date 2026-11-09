@@ -67,7 +67,7 @@ export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
   description:
     "HRT for menopause explained: who it suits, the starting window, how long to stay on it, patch vs pill, side effects, the label change and online care.",
   category: "Guide",
-  readTime: "54 min read",
+  readTime: "56 min read",
   publishedAt: "2026-11-09",
   updatedAt: "2026-11-09",
   heroColor: "#F5EEF6",
@@ -110,8 +110,8 @@ export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
 <tr><td>Micronized progesterone</td><td>A progestogen that is chemically identical to the body's own progesterone, usually taken as a capsule. See our <a href="/hrt/articles/progesterone-side-effects">progesterone guide</a>.</td></tr>
 <tr><td>Systemic HRT</td><td>Pills, patches, gels and sprays that raise estrogen throughout the body; used for hot flashes, night sweats and bone protection.</td></tr>
 <tr><td>Vaginal (local) estrogen</td><td>Low-dose cream, tablet, ring or pessary placed in the vagina for dryness, discomfort and pain with sex.</td></tr>
-<tr><td>Vasomotor symptoms (VMS)</td><td>The medical term for hot flashes and night sweats.</td></tr>
-<tr><td>Genitourinary syndrome of menopause (GSM)</td><td>Vaginal dryness, irritation, pain with sex and urinary changes caused by lower estrogen. The FDA uses this term, alongside the older "vulvovaginal atrophy" (${ext(S.fdaRequest, "FDA")}).</td></tr>
+<tr><td>Vasomotor symptoms (VMS)</td><td>Hot flashes and night sweats.</td></tr>
+<tr><td>Genitourinary syndrome of menopause (GSM)</td><td>Vaginal, vulvar and urinary changes caused by lower estrogen; the FDA's term, alongside the older "vulvovaginal atrophy" (${ext(S.fdaRequest, "FDA")}).</td></tr>
 <tr><td>Bioidentical</td><td>Hormones chemically identical to those the body makes. Many FDA-approved products are bioidentical; "bioidentical" does not mean compounded. See <a href="/hrt/articles/bioidentical-hormones-explained">bioidentical hormones explained</a>.</td></tr>
 <tr><td>Compounded hormones</td><td>Custom mixes made by a pharmacy. They are not individually FDA-approved.</td></tr>
 </tbody>
@@ -195,14 +195,12 @@ export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
     {
       heading: "Will I have to be on HRT forever?",
       body: `<p><strong>No. HRT is something you can stop, and many women do after a few years. Stopping is best planned with your clinician: the NHS says reducing the dose gradually over 3 to 6 months is usually recommended, and that symptoms may come back for a while. If they return and don't settle within about 3 months, other treatments or a low dose of HRT can be discussed.</strong></p>
-<p>The fear of being "stuck" on HRT is common, and understandable. The reality is more flexible. Some women take it through the worst few years of the transition and stop; some find symptoms return and decide the benefits are still worth it; some switch from systemic HRT to vaginal estrogen alone once hot flashes have faded but dryness hasn't.</p>
+<p>The reality is flexible. Some women take it through the worst few years and stop; some find symptoms return and decide it's still worth it; some switch to vaginal estrogen alone once hot flashes fade but dryness doesn't.</p>
 <h3>What happens when you stop</h3>
 <p>According to the NHS (${ext(S.nhsWhen, "NHS, when to take HRT")}):</p>
 <ul><li>Talk to your doctor before stopping.</li><li>You can stop suddenly, but reducing gradually over 3 to 6 months is usually recommended.</li><li>Symptoms may come back for a short time; this is less likely with a gradual reduction.</li><li>If symptoms return and don't go away after 3 months, a doctor may suggest other treatments or restarting a low dose of HRT.</li></ul>
 <p>Two things are worth knowing. First, hot flashes don't always end on a schedule; in many women they last for years, which is one reason some women choose to stay on treatment. Second, vaginal symptoms tend to persist or worsen with time rather than fade. The NHS says vaginal estrogen doesn't carry the same risks as other types of HRT, so you can keep using it for as long as you need it (${ext(S.nhsWhen, "NHS")}).</p>
-<h3>Questions to ask before you stop</h3>
-<ul><li>Should I taper, and over what period?</li><li>If I have a uterus and I'm on combined HRT, how should the estrogen and progestogen be reduced together?</li><li>What should I do if symptoms come back?</li><li>Would vaginal estrogen on its own cover what's left?</li><li>Is there a non-hormonal option if I don't want to restart?</li></ul>
-<p>Don't stop abruptly because of a headline or a supply problem. The FDA's advice during the 2026 patch shortages was explicit: do not stop or change your medication without talking with your healthcare provider (${ext(S.fdaPatch, "FDA, September 3, 2026")}). Our menopause pillar also covers <a href="/hrt/articles/menopause-complete-guide">what happens if symptoms come back after stopping HRT</a>.</p>`,
+<p>Before stopping, ask whether to taper, how your progestogen should be reduced alongside the estrogen, and whether vaginal estrogen or a non-hormonal option would cover what's left. Don't stop abruptly because of a headline or a supply problem. The FDA's advice during the 2026 patch shortages was explicit: do not stop or change your medication without talking with your healthcare provider (${ext(S.fdaPatch, "FDA, September 3, 2026")}). Our menopause pillar also covers <a href="/hrt/articles/menopause-complete-guide">what happens if symptoms come back after stopping HRT</a>.</p>`,
     },
     {
       heading: "What's the difference between estrogen-only and combined HRT?",
@@ -212,7 +210,7 @@ export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
 <h3>Ways to get the progestogen</h3>
 <ul><li><strong>Capsules or tablets.</strong> Micronized progesterone capsules are common in the US; see our <a href="/hrt/articles/progesterone-side-effects">progesterone guide</a>.</li><li><strong>A combined product.</strong> Pills or patches that contain both hormones, like Climara Pro and its new generic.</li><li><strong>A hormonal IUD.</strong> The NHS describes the Mirena coil as a way to provide the progestogen alongside estrogen tablets, patches, gel or spray; it can stay in place for up to 5 years and also works as contraception (${ext(S.nhsTypes, "NHS")}).</li></ul>
 <h3>Sequential vs continuous</h3>
-<p>Combined HRT can be taken in two patterns. The NHS describes sequential (cyclical) combined HRT, usually for women who still have periods, where it's normal to have a withdrawal bleed at the end of each progestogen course, and continuous combined HRT, usually once periods have stopped, where irregular bleeding or spotting is common in the first 4 to 6 months (${ext(S.nhsSide, "NHS")}). Which pattern you're prescribed depends on where you are in the transition; your clinician will choose.</p>
+<p>The NHS describes sequential (cyclical) combined HRT, usually while you still have periods, with a withdrawal bleed after each progestogen course, and continuous combined HRT, usually once periods have stopped, where irregular spotting is common in the first 4 to 6 months (${ext(S.nhsSide, "NHS")}). Your clinician chooses the pattern.</p>
 <p>One caution worth repeating: a progesterone cream from a compounding pharmacy is not interchangeable with progesterone capsules for protecting the uterus, as our <a href="/hrt/articles/is-winona-legit">Winona legitimacy review</a> notes. If you have a uterus, ask specifically how your plan protects the lining, and keep taking your progestogen whatever happens with your estrogen supply.</p>`,
     },
     {
@@ -231,7 +229,7 @@ export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
 <tr><td>Hormonal IUD (progestogen only)</td><td>Fitted in the uterus</td><td>Provides the progestogen; also contraception (${ext(S.nhsTypes, "NHS")})</td><td>Can cause pain and bleeding</td><td>Protects the uterine lining; not a source of estrogen</td></tr>
 </tbody>
 </table>
-<p>Gels and sprays need a little care at home. The NHS says not to let anyone, especially a child, touch the area until it's dry, and to wash any skin that does touch it with soap and water straight away (${ext(S.nhsOestrogen, "NHS")}). If you're due to have surgery, the NHS says you may need to stop estrogen gel or spray 4 to 6 weeks beforehand because of clot risk; tell your surgical team you're on HRT (${ext(S.nhsOestrogen, "NHS")}).</p>
+<p>With gels and sprays, the NHS says not to let anyone, especially a child, touch the area until it's dry, and notes you may need to stop them 4 to 6 weeks before surgery because of clot risk, so tell your surgical team you're on HRT (${ext(S.nhsOestrogen, "NHS")}).</p>
 <p>Which route is "best" depends on you: your clot risk, your skin, your routine and what you're treating. For a head-to-head on the two most common choices, read <a href="/hrt/articles/estrogen-patch-vs-pill">estrogen patch vs pill</a>.</p>`,
     },
     {
@@ -247,9 +245,9 @@ export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
     {
       heading: "What is vaginal estrogen, and is it safer than systemic HRT?",
       body: `<p><strong>Vaginal estrogen is low-dose estrogen in a cream, tablet, ring or pessary placed in the vagina to treat dryness, irritation, pain with sex and some urinary symptoms. The NHS says it does not increase the risk of breast cancer, blood clots or other conditions, very little reaches the rest of the body, and it's safe to use long-term. It does not treat hot flashes.</strong></p>
-<p>Genitourinary symptoms are often the ones women mention last, and the ones that most often get worse over time. The FDA's 2025 labeling page describes them as changes to the vagina, vulva and urinary tract caused by decreased estrogen, now commonly called the genitourinary syndrome of menopause (${ext(S.fdaRequest, "FDA")}).</p>
+<p>Genitourinary symptoms are often the ones women mention last, and the ones most likely to get worse over time.</p>
 <h3>What the NHS says about vaginal estrogen</h3>
-<ul><li>It's available as a cream, gel, vaginal tablet, pessary or ring, and can help with vaginal dryness, burning and pain during sex (${ext(S.nhsTypes, "NHS")}).</li><li>It does not carry the usual risks of HRT, does not increase breast cancer risk, and can be used without a progestogen even if you still have a womb (${ext(S.nhsTypes, "NHS")}).</li><li>The dose is low and very little gets into the rest of the body, so it's safe to use for a long time (${ext(S.nhsBenefits, "NHS")}).</li><li>Common side effects include headache in the first days, unexpected bleeding in the first 3 to 6 months, vaginal discomfort or itching, and urinary or vaginal infections. Bleeding after 6 months, or heavy bleeding, should be reported (${ext(S.nhsVaginalSide, "NHS")}).</li></ul>
+<ul><li>It comes as a cream, gel, vaginal tablet, pessary or ring, and doesn't need a progestogen even if you still have a womb (${ext(S.nhsTypes, "NHS")}).</li><li>Very little gets into the rest of the body, so it's safe to use for a long time (${ext(S.nhsBenefits, "NHS")}).</li><li>Common side effects include headache in the first days, unexpected bleeding in the first 3 to 6 months, vaginal discomfort or itching, and urinary or vaginal infections. Bleeding after 6 months, or heavy bleeding, should be reported (${ext(S.nhsVaginalSide, "NHS")}).</li></ul>
 <h3>How US labels treat vaginal estrogen now</h3>
 <p>The FDA's November 2025 request applied to all menopausal hormone therapies, systemic and vaginal: remove heart disease, breast cancer and probable dementia from the boxed warning, and remove endometrial cancer from the box except on systemic estrogen-alone drugs. For local vaginal products specifically, labels were to condense safety information and prioritise what's relevant to the local formulation (${ext(S.fdaRequest, "FDA")}). The first six products approved under the new labeling on February 12, 2026 included a topical vaginal estrogen (${ext(S.fdaFeb2026, "FDA")}). When the change was announced, The Menopause Society agreed with removing the box from low-dose vaginal estrogen (${ext(S.tmsFdaComment, "Menopause Society comment")}).</p>
 <p>An FDA-approved estradiol patch label we read on DailyMed shows how this plays out in prescribing: when a doctor is treating only vaginal and vulvar symptoms, the label says to first consider topical vaginal products (${ext(S.dmPatch, "DailyMed, estradiol patch label")}).</p>
@@ -261,7 +259,7 @@ export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
 <p>This question comes up a lot because estriol is a licensed medicine in some other countries. The NHS, for example, lists "Estriol" among UK vaginal estrogen brand names (${ext(S.nhsVaginalSide, "NHS")}). US women who read British or European advice and then ask for estriol at home often find that it can only be supplied by a compounding pharmacy.</p>
 <p>Here is the FDA's own answer, from its consumer menopause page: "FDA does not have evidence that drugs containing estriol are safe and effective, or are 'safer forms of estrogen.' There are no FDA-approved drugs containing estriol. Marketed drugs that contain estriol are compounded drugs, which are not FDA-approved." (${ext(S.fdaMenopause, "FDA menopause page")})</p>
 <h3>What that means in practice</h3>
-<ul><li><strong>No FDA label, so no boxed warning, but also no FDA review.</strong> The absence of a box on a compounded product is not reassurance; it means no FDA-approved prescribing information exists for it. Compounded products don't go through FDA approval for safety, effectiveness or quality.</li><li><strong>Approved alternatives exist.</strong> Low-dose vaginal estradiol creams, tablets and rings are FDA-approved, and The Menopause Society supported removing the boxed warning from low-dose vaginal estrogen (${ext(S.tmsFdaComment, "Menopause Society")}).</li><li><strong>ACOG's position on compounding.</strong> ACOG says compounded bioidentical hormone therapy should not be prescribed routinely when FDA-approved formulations exist (${ext(S.acogCompounded, "ACOG Clinical Consensus No. 6")}).</li></ul>
+<ul><li><strong>No FDA label, so no box, but also no FDA review.</strong> The absence of a box on a compounded product is not reassurance.</li><li><strong>Approved alternatives exist.</strong> Low-dose vaginal estradiol creams, tablets and rings are FDA-approved, and The Menopause Society supported removing the boxed warning from low-dose vaginal estrogen (${ext(S.tmsFdaComment, "Menopause Society")}).</li><li><strong>ACOG's position on compounding.</strong> ACOG says compounded bioidentical hormone therapy should not be prescribed routinely when FDA-approved formulations exist (${ext(S.acogCompounded, "ACOG Clinical Consensus No. 6")}).</li></ul>
 <p>If a provider offers you estriol, it's fair to ask why an approved vaginal estradiol product wouldn't work as well, and what the compounding pharmacy's quality standards are. Our hub's <a href="/hrt/articles/is-winona-legit">Winona legitimacy review</a> lists estriol among Winona's options; by the FDA's statement above, any estriol product in the US is compounded. That doesn't make a provider untrustworthy, but you should know what you're getting. More in <a href="/hrt/articles/bioidentical-hormones-explained">FDA-approved vs compounded hormones</a>.</p>`,
     },
     {
@@ -291,12 +289,12 @@ export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
 <p>The FDA said 29 companies submitted proposed labeling changes, and six products were approved in the first batch on February 12, 2026 (${ext(S.fdaFeb2026, "FDA")}); three patches followed on October 30, for a total of nine (${ext(S.hhsOct30, "HHS")}). That leaves many products still in the queue. As an example, the once-weekly estradiol patch label we read on DailyMed on November 9, 2026 (revised June 2025) still opened with "WARNING: ENDOMETRIAL CANCER, CARDIOVASCULAR DISORDERS, PROBABLE DEMENTIA and BREAST CANCER" (${ext(S.dmPatch, "DailyMed")}). If your box looks like that, nothing is wrong with your medicine; its label simply hasn't been updated yet.</p>
 <h3>What still holds</h3>
 <ul><li>Estrogen alone raises the risk of endometrial cancer in women with a uterus; a progestogen is needed (${ext(S.medlineEstrogen, "MedlinePlus")}).</li><li>For some women, hormone therapy may increase the risk of blood clots, heart attack, stroke, breast cancer and gallbladder disease, with the level of risk depending on the type, how long it's used and your history (${ext(S.medlineHrt, "MedlinePlus")}).</li><li>Hormone therapy should not be used to prevent heart disease or dementia (${ext(S.fdaMenopause, "FDA")}).</li><li>Who should not take it is unchanged: certain cancers, past clots, stroke or heart attack, liver disease, unexplained bleeding or pregnancy (${ext(S.medlineHrt, "MedlinePlus")}).</li></ul>
-<p>What did change is the framing. The boxed warning no longer leads with risks that, for a healthy 52-year-old, are small in absolute terms, and the labels now point to starting near menopause. That's a better basis for an honest conversation, and it's why demand for HRT rose sharply in 2026. For a balanced read of where the evidence stands, see <a href="/hrt/articles/is-hrt-safe">is HRT safe?</a></p>`,
+<p>What changed is the framing: the box no longer leads with risks that are small in absolute terms for a healthy 52-year-old, and labels now point to starting near menopause. For a balanced read of where the evidence stands, see <a href="/hrt/articles/is-hrt-safe">is HRT safe?</a></p>`,
     },
     {
       heading: "How do you choose an online menopause provider?",
       body: `<p><strong>Look for a real clinical gate (a licensed clinician reviews your full history before prescribing), FDA-approved options alongside any compounded ones, clear pricing and cancellation terms, and ongoing follow-up. Then choose the care model that fits you: an insurance-billed virtual clinic with video visits, or a cash-pay subscription that delivers medication to your door.</strong></p>
-<p>Online menopause care exists because so many women struggled to find a clinician who would take symptoms seriously, or waited weeks for an appointment. It can be excellent. It can also be thin, if a low price comes from skipping the medical review. Here's the checklist we use, and that you can use on any provider.</p>
+<p>Online menopause care can be excellent, and it can be thin if a low price comes from skipping the medical review. Here's the checklist we use on any provider.</p>
 <h3>Green flags</h3>
 <ul><li><strong>A licensed clinician makes the decision</strong> after a full medical history, and can say no.</li><li><strong>FDA-approved products are available</strong>, and the provider tells you which products are approved and which, if any, are compounded.</li><li><strong>A progestogen plan for women with a uterus</strong> is explained clearly.</li><li><strong>Follow-up is built in</strong>: messaging, scheduled reviews, dose and route changes.</li><li><strong>Prices and cancellation terms are published</strong> before you pay.</li><li><strong>Non-hormonal options</strong> are offered when hormones aren't right.</li></ul>
 <h3>Red flags</h3>
@@ -316,7 +314,7 @@ export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
     {
       heading: "Winona vs Midi vs Gala: how do the top online HRT providers compare?",
       body: `<p><strong>Winona is our top pick: a menopause-only, physician-led service with a free consultation, published per-product prices and no video visit. Midi Health is the insurance option: video visits with menopause-trained clinicians, billed to most commercial PPO plans, with prescriptions sent to your pharmacy. Gala is the flat-price option: one monthly price for hormone therapy with no insurance involved.</strong></p>
-<p>All three are legitimate US telehealth services with licensed clinicians who review your history before anything is prescribed. They differ in how you see a clinician, how you pay and what they prescribe. The facts below come from our provider reviews; prices are as published when we last checked, and several are approximate, so confirm current rates on each provider's site.</p>
+<p>All three are legitimate US telehealth services where licensed clinicians review your history before prescribing. Facts below come from our provider reviews; prices are as published when we last checked, several are approximate, so confirm current rates.</p>
 <table>
 <thead><tr><th></th><th><a href="/hrt/reviews/winona">Winona</a> (#1)</th><th><a href="/hrt/reviews/midi">Midi Health</a> (#2)</th><th><a href="/hrt/reviews/gala">Gala</a> (#3)</th></tr></thead>
 <tbody>
@@ -355,12 +353,12 @@ export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
     {
       heading: "Why do HRT patches cause bloating?",
       body: `<p><strong>Bloating is a recognised side effect of estrogen, whatever the route. The patient information for one FDA-approved estradiol patch lists "stomach or abdominal cramps, bloating" and fluid retention among its common side effects. It often settles within the first few months; if it doesn't, the dose or the progestogen may need adjusting, which is your prescriber's call.</strong></p>
-<p>Women searching "bloating on HRT patches" are often surprised, because patches are supposed to be the gentler route. They are for clot risk, and they can avoid indigestion (${ext(S.nhsTypes, "NHS")}). But the estrogen itself still circulates, and fluid retention and bloating can come with it.</p>
+<p>Patches are the gentler route for clot risk and can avoid indigestion (${ext(S.nhsTypes, "NHS")}), but the estrogen still circulates, and bloating can come with it.</p>
 <p>The once-weekly estradiol patch label we read on DailyMed lists these common side effects in its patient information: headache; breast tenderness or pain; irregular vaginal bleeding or spotting; stomach or abdominal cramps, bloating; nausea and vomiting; hair loss; fluid retention; and vaginal yeast infection (${ext(S.dmPatch, "DailyMed")}). Its list of most common reactions in trials includes abdominal pain and edema (${ext(S.dmPatch, "DailyMed")}).</p>
 <h3>Is it the estrogen or the progestogen?</h3>
 <p>It can be either. Progestogens are linked to several of the same complaints, including breast tenderness, nausea and mood changes (${ext(S.nhsUtroSide, "NHS, Utrogestan side effects")}). If your bloating comes and goes with a cyclical progestogen, mention that pattern; it's useful information for your prescriber.</p>
 <h3>What to do about it</h3>
-<ul><li><strong>Give it time if it's mild.</strong> The NHS suggests continuing for at least 3 months where possible, because side effects usually improve (${ext(S.nhsSide, "NHS")}).</li><li><strong>Keep a short diary.</strong> Note when bloating happens, how bad it is and where you are in any progestogen cycle.</li><li><strong>Talk to your prescriber</strong> if it's severe or lasts beyond 3 months. Options can include a different dose, a different progestogen or a different route.</li><li><strong>Don't assume it's weight gain.</strong> The NHS says there's little evidence most types of HRT make you put on weight; weight often changes around menopause whether or not you take HRT (${ext(S.nhsSide, "NHS")}).</li></ul>
+<p>If it's mild, give it time: the NHS suggests continuing for at least 3 months where possible (${ext(S.nhsSide, "NHS")}). Keep a short diary of when it happens, and talk to your prescriber if it's severe or lasts beyond 3 months; options include a different dose, progestogen or route. And don't assume it's weight gain: the NHS says there's little evidence most types of HRT make you put on weight (${ext(S.nhsSide, "NHS")}).</p>
 <h3>When bloating isn't a side effect</h3>
 <p>Persistent bloating, especially with pelvic pain, feeling full quickly or changes in bowel habit, shouldn't simply be put down to HRT. Get it checked, particularly if it's new after menopause. Swelling and pain in one leg is different again: the NHS lists it as a possible sign of a deep vein thrombosis that needs urgent advice (${ext(S.nhsOestrogen, "NHS")}).</p>`,
     },
@@ -374,8 +372,7 @@ export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
 <p>Many of these settle as your body adjusts. If they don't, the answer may be a smaller step, a different route or a change in progestogen rather than going back to square one.</p>
 <h3>The progestogen has to keep up</h3>
 <p>If you have a uterus, an increase in estrogen may need a matching change in your progestogen to keep protecting the lining. This is one of the reasons dose changes belong with a clinician who knows your full regimen. Unexpected bleeding after a dose change should be reported, not ignored (${ext(S.medlineEstrogen, "MedlinePlus")}).</p>
-<h3>Don't adjust on your own</h3>
-<ul><li>Don't double up on patches or pump extra gel to "catch up."</li><li>Don't cut patches to make them go further during a shortage.</li><li>If you miss a dose, follow the leaflet; the NHS says not to take 2 doses to make up for a forgotten one (${ext(S.nhsOestrogen, "NHS")}).</li></ul>
+<p>Don't adjust on your own: no doubling up, no cutting patches, and if you miss a dose, follow the leaflet; the NHS says not to take 2 doses to make up for a forgotten one (${ext(S.nhsOestrogen, "NHS")}).</p>
 <p>Online providers make dose changes fairly easy: Winona offers physician messaging, Midi uses follow-up visits, and Gala says its price doesn't rise when your dose changes. See the <a href="/hrt/winona-vs-gala">Winona vs Gala</a> comparison for how the two cash-pay models handle changes.</p>`,
     },
     {
@@ -388,8 +385,6 @@ export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
 <p>HRT tablets can increase the risk of blood clots and slightly increase the risk of stroke, though the risk is still very low, particularly under 60; patches, gels and sprays do not increase clot risk (${ext(S.nhsBenefits, "NHS")}). This is the single biggest reason route matters.</p>
 <h3>Endometrial cancer</h3>
 <p>Estrogen on its own increases the risk of cancer of the uterine lining in women who still have a uterus, and a progestogen lowers that risk (${ext(S.fdaMenopause, "FDA")}; ${ext(S.medlineEstrogen, "MedlinePlus")}). It's the one boxed warning the FDA kept on systemic estrogen-alone products (${ext(S.fdaNov2025, "FDA")}).</p>
-<h3>Heart disease and dementia</h3>
-<p>The NHS says research shows HRT has little or no effect on coronary heart disease risk, and it's not known whether HRT reduces the risk of dementia (${ext(S.nhsBenefits, "NHS")}). The FDA says not to use hormone therapy to prevent heart attacks, strokes, memory loss or Alzheimer's disease (${ext(S.fdaMenopause, "FDA")}).</p>
 <h3>Warning signs: get help right away</h3>
 <p>The NHS lists these possible signs of a serious problem on estrogen (${ext(S.nhsOestrogen, "NHS")}):</p>
 <ul><li>Pain and swelling in a leg (possible deep vein thrombosis)</li><li>Sudden chest pain or difficulty breathing (possible pulmonary embolism)</li><li>Weakness on one side of the face, difficulty raising the arms, or difficulty speaking (possible stroke)</li><li>Yellowing of the eyes or skin (possible jaundice)</li><li>Swelling of the throat or tongue, or difficulty breathing (possible allergic reaction)</li></ul>
@@ -416,12 +411,11 @@ export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
 <p>These steps come from the guidance summarised in our testosterone guide. Be wary of any service that sells testosterone to women for "energy" or general wellbeing without a diagnosis.</p>
 <h3>Which online providers prescribe it?</h3>
 <p>Among the providers we rank, <a href="/hrt/reviews/midi">Midi Health</a> prescribes testosterone in selected cases and only in some states; our records show it is self-pay at about $45 for 30 days to $100+ for 90 days (Midi's figures, October 2026), and extra labs and visits may be needed because it's a controlled substance. <a href="/hrt/reviews/winona">Winona</a> does not prescribe testosterone. Gala's menopause menu as we recorded it lists estradiol, progesterone, vaginal estradiol and non-hormonal options. Details in our <a href="/hrt/articles/midi-cost">Midi cost guide</a>.</p>
-<p>New research is still arriving. Our <a href="/hrt/articles/menopause-hormone-therapy-2026-what-changed">2026 changes guide</a> covers conference data from October 2026 on testosterone and cardiovascular events, which was preliminary and not yet peer-reviewed. It's a reason to ask about monitoring, not to stop a prescribed treatment on your own.</p>`,
+<p>Our <a href="/hrt/articles/menopause-hormone-therapy-2026-what-changed">2026 changes guide</a> covers preliminary October 2026 conference data on testosterone and cardiovascular events, a reason to ask about monitoring rather than to stop on your own.</p>`,
     },
     {
       heading: "What's the difference between HRT and birth control?",
       body: `<p><strong>Both can contain estrogen and a progestogen, but they do different jobs. Birth control uses hormones to stop ovulation and prevent pregnancy. HRT replaces hormones that have fallen at menopause to relieve symptoms, and it does not prevent pregnancy. The NHS says you can't take HRT at the same time as the combined pill, though the progestogen-only pill can usually be taken alongside HRT.</strong></p>
-<p>This is one of the most-searched HRT questions, and the confusion is understandable: the ingredients overlap, and many women in their 40s are on the pill when perimenopause symptoms begin.</p>
 <table>
 <thead><tr><th></th><th>Combined birth control pill</th><th>HRT</th></tr></thead>
 <tbody>
@@ -435,8 +429,6 @@ export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
 </table>
 <h3>Why the pill makes menopause hard to spot</h3>
 <p>The NHS explains that hormonal contraception can affect your periods, so you may not know when you reach perimenopause or menopause, and that the combined pill can mask or improve menopause symptoms because it contains estrogen (${ext(S.nhsWhen, "NHS")}). The FDA adds a warning about home menopause tests: don't stop your birth control because of a positive result, because you may still be able to get pregnant (${ext(S.fdaMenopause, "FDA")}).</p>
-<h3>The hormonal IUD: a bridge</h3>
-<p>A levonorgestrel IUD (the NHS names Mirena) is the one method that can both prevent pregnancy and provide the progestogen part of HRT alongside estrogen (${ext(S.nhsTypes, "NHS")}). For some women in perimenopause, that's a tidy way to cover both needs.</p>
 <p>Our dedicated page, <a href="/hrt/articles/hrt-vs-birth-control">HRT vs birth control</a>, goes into when and how women usually switch.</p>`,
     },
     {
@@ -445,14 +437,12 @@ export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
 <p>Fertility falls in perimenopause, but it doesn't vanish on a predictable date. Ovulation can still happen even when periods are irregular. The NHS is explicit that it's still possible to get pregnant while taking HRT, which is why it says to use contraception until 2 years after your last period if you're under 50, or for 1 year after your last period if you're over 50 (${ext(S.nhsAbout, "NHS")}). It adds that you'll no longer need contraception after 55, as natural pregnancy is very rare by then (${ext(S.nhsWhen, "NHS")}).</p>
 <h3>Contraception options that work with HRT</h3>
 <ul><li><strong>Progestogen-only pill.</strong> The NHS says you can usually take it alongside HRT (${ext(S.nhsWhen, "NHS")}).</li><li><strong>Hormonal IUD.</strong> Provides contraception and the progestogen component of HRT (${ext(S.nhsTypes, "NHS")}).</li><li><strong>Barrier methods.</strong> Condoms also protect against sexually transmitted infections, which the NHS notes remain a consideration at any age (${ext(S.nhsWhen, "NHS")}).</li><li><strong>Not the combined pill.</strong> The NHS says you can't take HRT at the same time as the combined pill (${ext(S.nhsWhen, "NHS")}).</li></ul>
-<h3>Why it matters for treatment, too</h3>
-<p>Pregnancy is a contraindication for hormone therapy (${ext(S.medlineHrt, "MedlinePlus")}), and some non-hormonal hot flash medicines are also unsafe in pregnancy; the Lynkuet label, for example, says it is contraindicated in pregnancy and that pregnancy should be excluded in women of reproductive potential before starting (${ext(S.dmLynkuet, "DailyMed, Lynkuet label")}). If there's any chance you could be pregnant, tell your prescriber before starting anything.</p>
+<p>Pregnancy is a contraindication for hormone therapy (${ext(S.medlineHrt, "MedlinePlus")}) and for some non-hormonal hot flash medicines too; the Lynkuet label says pregnancy should be excluded before starting (${ext(S.dmLynkuet, "DailyMed, Lynkuet label")}).</p>
 <p>US guidance on exactly when to stop contraception can differ from the NHS rules above, so confirm with your own clinician. If you're on the combined pill now and wondering when to move to HRT, our <a href="/hrt/articles/hrt-vs-birth-control">HRT vs birth control</a> page walks through the switch.</p>`,
     },
     {
       heading: "What are the non-hormonal alternatives to HRT?",
       body: `<p><strong>If you can't or would rather not take hormones, there are FDA-approved non-hormonal medicines for hot flashes, including two neurokinin receptor antagonists: Veozah (fezolinetant) and Lynkuet (elinzanetant). ACOG's 2026 guideline also reviews SSRIs and SNRIs, and non-drug options such as cognitive behavioural therapy, clinical hypnosis, mindfulness, exercise and acupuncture. It says the evidence does not support phytoestrogens or herbal supplements.</strong></p>
-<p>ACOG's October 2026 guidance covers non-hormonal options in detail, including neurokinin receptor antagonists such as fezolinetant and elinzanetant, SSRIs and SNRIs, and non-drug approaches; it describes the non-drug approaches as generally best used in combination with medication (${ext(S.acogNews, "ACOG")}).</p>
 <h3>The neurokinin receptor antagonists</h3>
 <p><strong>Veozah (fezolinetant)</strong> is a nonhormonal NK3 receptor antagonist the FDA approved in May 2023 for moderate to severe hot flashes due to menopause. It works on the brain's temperature control centre (${ext(S.fdaVeozah, "FDA")}). Its label now carries a boxed warning for hepatotoxicity (liver injury), added in December 2024, and requires liver blood tests before starting, monthly for the first 3 months, and at 6 and 9 months (${ext(S.dmVeozah, "DailyMed, Veozah label, revised 2/2026")}). The FDA says to stop it and call your prescriber if you notice signs such as unusual tiredness, nausea, itching, yellow eyes or skin, dark urine or pain in the upper right abdomen (${ext(S.fdaVeozah, "FDA")}).</p>
 <p><strong>Lynkuet (elinzanetant)</strong> is an NK1 and NK3 receptor antagonist, first approved in 2025, for moderate to severe hot flashes due to menopause. Its label warns about sleepiness and daytime impairment: in the three OASIS trials, nervous system effects such as somnolence, fatigue and dizziness occurred in 11.9% of patients on Lynkuet versus 3.5% on placebo. It is contraindicated in pregnancy, and the most frequent side effects were headache, fatigue, dizziness and somnolence (${ext(S.dmLynkuet, "DailyMed, Lynkuet label, revised 8/2026")}).</p>
@@ -482,8 +472,7 @@ export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
 <tbody>
 <tr><td>Examples</td><td>Estradiol pills, patches, gels, sprays; micronized progesterone capsules; vaginal estradiol</td><td>Custom creams, troches, pellets; any estriol product in the US (${ext(S.fdaMenopause, "FDA")})</td></tr>
 <tr><td>Reviewed for safety, effectiveness and quality</td><td>Yes, as a finished product</td><td>No individual FDA approval</td></tr>
-<tr><td>Standard label and patient leaflet</td><td>Yes</td><td>No FDA-approved label</td></tr>
-<tr><td>Dose consistency</td><td>Manufactured to approved standards</td><td>Depends on the pharmacy</td></tr>
+<tr><td>FDA-approved label and leaflet</td><td>Yes</td><td>No</td></tr>
 <tr><td>When it may make sense</td><td>First choice for most women</td><td>A documented reason an approved product won't work, such as an allergy to an ingredient</td></tr>
 </tbody>
 </table>
@@ -492,7 +481,7 @@ export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
     {
       heading: "How much does HRT cost, and does insurance cover it?",
       body: `<p><strong>It depends mostly on whether you use insurance. Generic estradiol and progesterone through a pharmacy are often on lower insurance tiers. Online, cash-pay HRT runs from about $39 to $149 a month per product at Winona, $69 a month flat at Gala (as captured October 8, 2026), or about $50 a visit in-network at Midi Health (Midi's average) plus pharmacy costs. Prices change, so confirm before you pay.</strong></p>
-<p>Price matters, but it shouldn't decide everything; the clinical process and follow-up matter more. Here's how the three providers we rank charge, from our records:</p>
+<p>How the three providers we rank charge, from our records:</p>
 <table>
 <thead><tr><th>Provider</th><th>How you pay</th><th>Published prices (as stored)</th><th>Insurance</th></tr></thead>
 <tbody>
@@ -501,8 +490,7 @@ export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
 <tr><td><a href="/hrt/reviews/midi">Midi Health</a></td><td>Per visit, plus your pharmacy for medication</td><td>About $50 per visit on average in-network (Midi's figure); self-pay $250 first visit, $150 follow-ups (October 2026, approximate)</td><td>Most commercial PPO plans; not HMO, Medicare or Medicaid</td></tr>
 </tbody>
 </table>
-<h3>When insurance wins, and when it doesn't</h3>
-<ul><li><strong>Good PPO coverage:</strong> an insurance-billed clinic plus generic hormones from your pharmacy is often the cheapest route. Our <a href="/hrt/articles/midi-cost">Midi cost guide</a> works through a first year.</li><li><strong>HMO, high deductible or no coverage:</strong> a flat cash plan can be simpler and sometimes cheaper; compare <a href="/hrt/articles/gala-cost">Gala cost</a> and <a href="/hrt/articles/winona-cost">Winona cost</a>.</li><li><strong>Medicare:</strong> Midi does not bill Medicare; Medicare beneficiaries can be seen self-pay. A cash-pay service may be simpler.</li><li><strong>FSA/HSA:</strong> Winona and Gala accept them.</li></ul>
+<p>With good PPO coverage, an insurance-billed clinic plus generic hormones from your pharmacy is often the cheapest route (our <a href="/hrt/articles/midi-cost">Midi cost guide</a> works through a first year). With an HMO, Medicare, a high deductible or no coverage, a flat cash plan can be simpler; compare <a href="/hrt/articles/gala-cost">Gala cost</a> and <a href="/hrt/articles/winona-cost">Winona cost</a>.</p>
 <h3>Generics and new options</h3>
 <p>Generic competition helps. The FDA notes that nine out of ten prescriptions filled in the US are for generics, and on October 20, 2026 it announced the first generic of Climara Pro, a once-weekly combined estradiol and levonorgestrel patch; it directs patients to contact the manufacturer about availability (${ext(S.fdaGeneric, "FDA")}). In November 2025 the FDA also approved the first generic of Premarin (conjugated estrogens) in more than 30 years (${ext(S.fdaNov2025, "FDA")}).</p>
 <p>For every price in one place, plus year-one totals, see <a href="/hrt/articles/online-hrt-cost">how much HRT costs online</a>.</p>`,
@@ -510,8 +498,8 @@ export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
     {
       heading: "Is Winona legit, or is it a scam?",
       body: `<p><strong>Winona is legitimate, not a scam. It's a US telehealth company focused only on menopause and perimenopause: a board-certified physician reviews your online health intake and prescribes only if hormone therapy is appropriate, with ongoing care by secure messaging. Its estrogen tablets, patch and progesterone capsules are FDA-approved products; its body creams are compounded.</strong></p>
-<p>People search "is Winona a scam" for understandable reasons: it's an online-only service, there's no video visit, and it sends hormones by mail. Those are features of its model, not signs of a scam. Here's what our research found, as recorded in our <a href="/hrt/articles/is-winona-legit">Winona legitimacy review</a> and <a href="/hrt/reviews/winona">full Winona review</a>:</p>
-<ul><li><strong>A real clinical gate.</strong> A board-certified physician reviews your symptoms, history and medications and can decline or ask follow-up questions.</li><li><strong>Mainstream treatments.</strong> Estradiol tablets, an estrogen patch and body creams; progesterone capsules for women with a uterus; vaginal estrogen cream.</li><li><strong>A free consultation.</strong> You pay only if a physician prescribes and you approve the plan.</li><li><strong>Published prices.</strong> From $39 a month for progesterone capsules to $149 for the patch, FSA/HSA eligible (see the cost section above for dates).</li><li><strong>Ongoing care.</strong> Physician messaging, with dose and route adjustments over time.</li></ul>
+<p>People search "is Winona a scam" because it's online-only, has no video visit and sends hormones by mail. Those are features of its model, not signs of a scam. From our <a href="/hrt/articles/is-winona-legit">Winona legitimacy review</a> and <a href="/hrt/reviews/winona">full Winona review</a>:</p>
+<ul><li><strong>A real clinical gate.</strong> A board-certified physician reviews your symptoms, history and medications and can decline.</li><li><strong>A free consultation.</strong> You pay only if a physician prescribes and you approve the plan.</li><li><strong>Published prices.</strong> From $39 a month for progesterone capsules to $149 for the patch, FSA/HSA eligible (dates in the cost section above).</li><li><strong>Ongoing care.</strong> Physician messaging, with dose and route adjustments over time.</li></ul>
 <h3>The fair caveats</h3>
 <ul><li><strong>Cash only.</strong> Winona doesn't bill insurance. If you have good PPO coverage, an insurance-billed clinic may cost less; compare <a href="/hrt/midi-vs-winona">Midi Health vs Winona</a>.</li><li><strong>No video visit.</strong> Many women like this. If you want to talk to a clinician face to face, Midi offers scheduled video visits.</li><li><strong>Compounded creams.</strong> Ask which product you're prescribed if FDA approval matters to you.</li><li><strong>Billing friction.</strong> The complaints we reviewed centre on billing and cancellation, as with most subscription telehealth. Check your reorder settings, cancel in writing and keep the confirmation.</li><li><strong>No testosterone.</strong> Midi is the option for that among those we rank.</li></ul>
 <h3>Winona's vaginal health options</h3>
@@ -521,7 +509,7 @@ export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
     {
       heading: "Midi Health or Winona: which is better for you?",
       body: `<p><strong>Choose Midi Health if you have a commercial PPO plan, want a live video visit, or want a clinician who can weigh non-hormonal options or testosterone too. Choose Winona if you've decided on hormone therapy and want a dedicated, appointment-free service with flat published prices and home delivery. Both are menopause specialists.</strong></p>
-<p>This is the most common head-to-head we're asked about, and it's a genuine choice between two good models. Midi runs like a virtual specialist clinic; Winona runs like a focused hormone-therapy subscription.</p>
+<p>It's a genuine choice between two good models: Midi runs like a virtual specialist clinic, Winona like a focused hormone-therapy subscription.</p>
 <table>
 <thead><tr><th></th><th><a href="/hrt/reviews/midi">Midi Health</a></th><th><a href="/hrt/reviews/winona">Winona</a></th></tr></thead>
 <tbody>
@@ -557,8 +545,8 @@ export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
 <h3>What we left out</h3>
 <p>We don't give doses or conversions between products; your prescriber sets those. We don't quote customer ratings or social-media posts. Where a figure appeared only in a search snippet, we left it out. Where sources disagree, such as the average age of menopause (50 per ACOG, 51 per the FDA), we show both.</p>
 <h3>How the providers are ranked</h3>
-<p>Our HRT ranking order is Winona, Midi Health, Gala. It reflects the clinical process, the range of FDA-approved treatment options, pricing transparency and insurance options as described in each <a href="/hrt">provider review</a>. We may earn a commission when you visit a provider through our links; it does not change the facts we print, and each review lists the provider's weak points.</p>
-<p>We'll update this guide as more products receive new labels and as guidance changes. If you spot an error, our provider and article pages are corrected as soon as we can verify the fix.</p>`,
+<p>Our HRT ranking order is Winona, Midi Health, Gala, using the criteria described in the provider-choice section above (full list on our <a href="/hrt">HRT rankings</a>). We may earn a commission through our links; it doesn't change the facts we print.</p>
+<p>We'll update this guide as more products receive new labels and as guidance changes.</p>`,
     },
     {
       heading: "The bottom line",
