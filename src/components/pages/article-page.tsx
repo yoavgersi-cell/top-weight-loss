@@ -28,6 +28,7 @@ import { ProviderCta } from "@/components/provider-cta";
 import { PRICE_INDEX } from "@/lib/price-index";
 import type { TrustpilotReview } from "@/lib/config";
 import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/reddit-community";
+import { FacebookCommunityBlock, FACEBOOK_COMMUNITY_FEEDBACK } from "@/components/facebook-community";
 import { notFound, permanentRedirect } from "next/navigation";
 import { relatedArticles as pickRelatedArticles } from "@/lib/related-content";
 import { GuideCluster, ED_GUIDES } from "@/components/guide-cluster";
@@ -707,6 +708,11 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 reviewHrefFor={(id) => hubLink(ctx, `/reviews/${id}`)}
               />
             </div>
+          )}
+          {/* Facebook group voices on legitimacy pages (Nov 10, 2026): same
+              idea as the Reddit block, transcribed and anonymised. */}
+          {isLegitArticle && subjectProvider && FACEBOOK_COMMUNITY_FEEDBACK[subjectProvider.id] && (
+            <FacebookCommunityBlock providerId={subjectProvider.id} providerName={subjectProvider.name} vertical={ctx.vertical} className="mb-8" />
           )}
           {/* Direct answer up top (featured-snippet target) - code-injected so
               it also covers articles whose body lives in the CMS blob. */}
