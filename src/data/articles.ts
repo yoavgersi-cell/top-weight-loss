@@ -2084,6 +2084,8 @@ export const articles: Article[] = [
   },
   {
     slug: "best-tirzepatide-online",
+    image: "/article-images/best-tirzepatide-online.webp",
+    imageAlt: "A tirzepatide injection pen on a desk with a tape measure, in front of a laptop showing a clinician on a video call",
     title: "Best Tirzepatide Online (2026): 4 Verified Prices From $71",
     description:
       "Where to get tirzepatide online in 2026: four licensed GLP-1 telehealth providers with verified prices from $71/month compounded, plus Zepbound routes.",

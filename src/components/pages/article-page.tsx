@@ -624,9 +624,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
             {/* Nov 5, 2026: the image now sits at the right edge of the text
                 container and only from xl (1280px), so it can never cover the
                 title, intro or review line (it overlapped them at 640-1440px). */}
-            {/* Nov 10, 2026: an article with its own image (article.image) shows it
-                as the lead figure below the masthead instead of the vertical hero. */}
-            {config.hero?.backgroundImageUrl && !article.image && (
+            {config.hero?.backgroundImageUrl && (
               <div className="pointer-events-none absolute right-6 top-1/2 hidden h-[280px] w-[380px] -translate-y-1/2 xl:block">
                 <Image
                   src={config.hero.backgroundImageUrl}
@@ -680,23 +678,6 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
         {/* Article body */}
         <div className="mx-auto max-w-[1100px] px-4 py-10 sm:px-6">
           <div>
-          {/* Lead image: the same 16:9 file the article cards and the Article
-              schema use (article.image / imageAlt), so what readers see in the
-              grid is what they get on the page. Nov 10, 2026. */}
-          {article.image && (
-            <figure className="mb-8 overflow-hidden rounded-2xl border border-gray-200 bg-white">
-              <Image
-                src={article.image}
-                alt={article.imageAlt || article.title}
-                width={1600}
-                height={900}
-                preload
-                fetchPriority="high"
-                sizes="(min-width: 1100px) 1052px, 100vw"
-                className="h-auto w-full object-cover"
-              />
-            </figure>
-          )}
           {/* On a brand legitimacy article ("is-<brand>-legit"), real user
               experiences answer the reader's core question first - so the
               operator-verified Reddit threads lead the page, above everything
@@ -778,10 +759,26 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
           <article className="space-y-8">
             {article.sections.map((section, i) => (
               <div key={i}>
-                <section id={slugifyHeading(section.heading)}>
+                <section id={slugifyHeading(section.heading)} className="flow-root">
                   <h2 className="mb-3 text-[20px] font-bold text-[#191919] scroll-mt-24">
                     {section.heading}
                   </h2>
+                  {/* Article image (the same file as the grid card and the Article
+                      schema) sits beside the first section's text rather than in
+                      the masthead: floated right from sm, full width on phones.
+                      The 1600px file keeps the page eligible for Discover. Nov 10, 2026. */}
+                  {i === 0 && article.image && (
+                    <figure className="mb-4 overflow-hidden rounded-xl border border-gray-200 bg-white sm:float-right sm:ml-6 sm:w-[44%] sm:max-w-[420px]">
+                      <Image
+                        src={article.image}
+                        alt={article.imageAlt || article.title}
+                        width={1600}
+                        height={900}
+                        sizes="(min-width: 640px) 420px, 100vw"
+                        className="h-auto w-full object-cover"
+                      />
+                    </figure>
+                  )}
                   {/* div (not p) so author HTML can include block elements -
                       lists, tables, callouts - styled via .article-body css */}
                   <div
