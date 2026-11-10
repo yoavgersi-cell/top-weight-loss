@@ -1303,46 +1303,17 @@ export function reviewerPersonSchema(r: Reviewer) {
 export function pageReviewSchema(path: string): Record<string, unknown> {
   const review = getPageReview(path);
   if (!review) return {};
-  // A compact Person node (same @id as the profile page's full node) rather
-  // than a bare @id reference: Google parses JSON-LD per page and does not
-  // fetch the profile, so a reference alone carried no reviewer identity.
-  const r = review.reviewerProfile;
+  // Each reviewer is emitted as the same full Person node the profile page
+  // carries (same @id, plus alumniOf, hasCredential, knowsAbout, sameAs):
+  // Google and Bing parse JSON-LD per page and do not fetch the profile, so a
+  // thin node or a bare @id reference carried no credential signal.
   const extra = getExtraPageReviewers(path).filter((x) => x.reviewedAt);
-  const leadExtra = extra.filter((x) => x.lead);
+  const ordered = [...extra.filter((x) => x.lead), review.reviewerProfile, ...extra.filter((x) => !x.lead)];
+  const dates = [review.reviewedAt, ...extra.map((x) => x.reviewedAt as string)];
   return {
-    reviewedBy: [
-      ...leadExtra.map((x) => ({
-        "@type": "Person",
-        "@id": `${reviewerUrl(x)}#person`,
-        name: x.name,
-        honorificSuffix: x.credentials.join(", "),
-        jobTitle: x.jobTitle,
-        url: reviewerUrl(x),
-        image: `${HUB_ORIGIN}${x.image.src}`,
-        ...(x.sameAs.length && { sameAs: x.sameAs }),
-      })),
-      {
-      "@type": "Person",
-      "@id": `${reviewerUrl(r)}#person`,
-      name: r.name,
-      honorificSuffix: r.credentials.join(", "),
-      jobTitle: r.jobTitle,
-      url: reviewerUrl(r),
-      image: `${HUB_ORIGIN}${r.image.src}`,
-      ...(r.sameAs.length && { sameAs: r.sameAs }),
-    },
-      ...extra.filter((x) => !x.lead).map((x) => ({
-        "@type": "Person",
-        "@id": `${reviewerUrl(x)}#person`,
-        name: x.name,
-        honorificSuffix: x.credentials.join(", "),
-        jobTitle: x.jobTitle,
-        url: reviewerUrl(x),
-        image: `${HUB_ORIGIN}${x.image.src}`,
-        ...(x.sameAs.length && { sameAs: x.sameAs }),
-      })),
-    ],
-    lastReviewed: review.reviewedAt,
+    reviewedBy: ordered.map((x) => reviewerPersonSchema(x)),
+    // The most recent review on the page, whichever reviewer did it.
+    lastReviewed: dates.sort().at(-1),
   };
 }
 
