@@ -48,8 +48,11 @@ export interface Reviewer {
   fullName?: string;
   /** Post-nominal letters, in display order. */
   credentials: string[];
-  /** Role as shown in bylines and schema jobTitle. */
+  /** Role as shown on the profile page and as schema jobTitle. */
   jobTitle: string;
+  /** Byline override: a shorter role, or "" to show none (when the name and
+   *  credentials already say it, e.g. "Dr. ..., MBBS"). Defaults to jobTitle. */
+  bylineTitle?: string;
   /** One line under the name: what the person is, in plain words. */
   headline: string;
   /** 40-60 words, third person. */
@@ -179,6 +182,7 @@ export const REVIEWERS: Reviewer[] = [
     fullName: "Buddhini Niroshika Dolapihilla",
     credentials: ["MBBS"],
     jobTitle: "Medical Doctor and Medical Writer",
+    bylineTitle: "",
     headline: "Medical doctor (MBBS, University of Colombo) and medical writer specialising in evidence-based content",
     shortBio:
       "Dr. B. Dolapihilla is a medical doctor (MBBS) and medical writer who graduated from the Faculty of Medicine, University of Colombo, Sri Lanka. She specialises in evidence-based medical writing, research synthesis and literature searching across MEDLINE, PubMed, Scopus and the Cochrane Library.",
