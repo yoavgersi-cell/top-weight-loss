@@ -1322,6 +1322,7 @@ export function pageReviewSchema(path: string): Record<string, unknown> {
 // REVIEW_LOG, with a date. Keyed by hub path.
 export const EXTRA_PAGE_REVIEWERS: Record<string, { slug: string; reviewedAt?: string; lead?: boolean }[]> = {
   "/weight-loss/articles/best-tirzepatide-online": [{ slug: "buddhini-dolapihilla", reviewedAt: "2026-11-09", lead: true }],
+  "/weight-loss/articles/is-wellmedr-legit": [{ slug: "buddhini-dolapihilla", reviewedAt: "2026-11-10", lead: true }],
 };
 
 export function getExtraPageReviewers(path: string): (Reviewer & { reviewedAt?: string; lead?: boolean })[] {
