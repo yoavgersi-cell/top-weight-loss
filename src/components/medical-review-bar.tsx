@@ -126,10 +126,10 @@ export function MedicalReviewBar({
 
   return (
     <>
-    <div className={`flex min-w-0 items-start gap-2.5 sm:items-center ${className}`} data-review-status={review ? "reviewed" : "staff"}>
+    <div className={`flex min-w-0 items-start gap-2.5 ${className}`} data-review-status={review ? "reviewed" : "staff"}>
       <ReviewerBubble reviewer={bubble} trigger={portraitImg} className="shrink-0 [&>button]:font-normal [&>button]:no-underline" />
       <div className={`min-w-0 ${compact ? "text-[12.5px] leading-[1.4]" : "text-[13px] leading-[1.45]"}`}>
-        <p className="text-gray-700">
+        <p className={compact ? "text-gray-700 [text-wrap:balance]" : "text-gray-700"}>
           {/* Phones: the name leads and the "reviewed for medical accuracy"
               wording moves to the second line, so the strip is two lines
               instead of three. Desktop keeps the full sentence. */}
@@ -137,9 +137,15 @@ export function MedicalReviewBar({
             <ShieldCheck className="mr-1 inline h-[14px] w-[14px] align-[-2px] text-emerald-600" strokeWidth={2.25} />
             <span className={compact ? "" : "hidden sm:inline"}>{review ? "Reviewed for medical accuracy by " : "Medical reviewer: "}</span>
           </span>
-          <ReviewerBubble reviewer={bubble} trigger={nameText} />
-          {!compact && <span className="hidden text-gray-500 sm:inline"> · {reviewer.jobTitle}</span>}
-          {linkedin}
+          {/* Name + LinkedIn mark kept together (nowrap) so the mark never
+              drops onto a line of its own; the job title wraps after it. */}
+          <span className="whitespace-nowrap">
+            <ReviewerBubble reviewer={bubble} trigger={nameText} />
+            {linkedin}
+          </span>
+          {!compact && (reviewer.bylineTitle ?? reviewer.jobTitle) && (
+            <span className="hidden whitespace-nowrap text-gray-500 sm:inline"> · {reviewer.bylineTitle ?? reviewer.jobTitle}</span>
+          )}
           {compact && (
             <span className="text-gray-500">
               {review ? (
@@ -175,18 +181,18 @@ export function MedicalReviewBar({
             {policy}
           </p>
         )}
+        {secondary && pageReview && (
+          <p className="mt-1.5 text-[12.5px] leading-[1.45] text-gray-600">
+            Medical fact-checking by{" "}
+            <Link href={reviewerPath(secondary)} className="font-semibold text-[#0C4B75] hover:underline">
+              {secondary.name}
+              {secondary.credentials.length > 0 && <span className="whitespace-nowrap">, {secondary.credentials.join(", ")}</span>}
+            </Link>
+            <span className="text-gray-500"> · <time dateTime={pageReview.reviewedAt}>{formatDate(pageReview.reviewedAt)}</time></span>
+          </p>
+        )}
       </div>
     </div>
-    {secondary && pageReview && (
-      <p className="mt-3 text-[13px] leading-[1.45] text-gray-600">
-        Medical fact-checking by{" "}
-        <Link href={reviewerPath(secondary)} className="font-semibold text-[#0C4B75] hover:underline">
-          {secondary.name}
-          {secondary.credentials.length > 0 && <span className="whitespace-nowrap">, {secondary.credentials.join(", ")}</span>}
-        </Link>
-        <span className="text-gray-500"> · <time dateTime={pageReview.reviewedAt}>{formatDate(pageReview.reviewedAt)}</time></span>
-      </p>
-    )}
     </>
   );
 }
