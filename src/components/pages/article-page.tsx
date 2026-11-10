@@ -759,10 +759,26 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
           <article className="space-y-8">
             {article.sections.map((section, i) => (
               <div key={i}>
-                <section id={slugifyHeading(section.heading)}>
+                <section id={slugifyHeading(section.heading)} className="flow-root">
                   <h2 className="mb-3 text-[20px] font-bold text-[#191919] scroll-mt-24">
                     {section.heading}
                   </h2>
+                  {/* Article image (the same file as the grid card and the Article
+                      schema) sits beside the first section's text rather than in
+                      the masthead: floated right from sm, full width on phones.
+                      The 1600px file keeps the page eligible for Discover. Nov 10, 2026. */}
+                  {i === 0 && article.image && (
+                    <figure className="mb-4 overflow-hidden rounded-xl border border-gray-200 bg-white sm:float-right sm:ml-6 sm:w-[44%] sm:max-w-[420px]">
+                      <Image
+                        src={article.image}
+                        alt={article.imageAlt || article.title}
+                        width={1600}
+                        height={900}
+                        sizes="(min-width: 640px) 420px, 100vw"
+                        className="h-auto w-full object-cover"
+                      />
+                    </figure>
+                  )}
                   {/* div (not p) so author HTML can include block elements -
                       lists, tables, callouts - styled via .article-body css */}
                   <div
