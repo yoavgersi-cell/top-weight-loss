@@ -426,6 +426,8 @@ export const articles: Article[] = [
   },
   {
     slug: "tirzepatide-vs-semaglutide",
+    image: "/article-images/tirzepatide-vs-semaglutide.webp",
+    imageAlt: "Two unbranded GLP-1 injection pens side by side on a marble counter, one blue and one teal, compared next to a bowl of berries and a glass of water",
     title: "Tirzepatide vs Semaglutide (2026): Which GLP-1 Is More Effective?",
     description:
       "Tirzepatide vs semaglutide - comparing the two leading GLP-1 medications for weight loss. Clinical results, side effects, dosing, cost, and how to choose.",
@@ -478,6 +480,8 @@ export const articles: Article[] = [
   },
   {
     slug: "weight-loss-medication-cost-guide",
+    image: "/article-images/weight-loss-medication-cost-guide.webp",
+    imageAlt: "Hands holding a wallet over a desk with a calculator, a GLP-1 injection pen and a pale-blue insurance folder, planning weight-loss medication costs",
     title: "Weight Loss Medication Cost Guide (2026)",
     description:
       "GLP-1 weight loss medication costs in 2026: Ozempic, Wegovy, Mounjaro, Zepbound and compounded alternatives, with and without insurance.",
@@ -530,6 +534,8 @@ export const articles: Article[] = [
   },
   {
     slug: "who-qualifies-for-glp1-weight-loss",
+    image: "/article-images/who-qualifies-for-glp1-weight-loss.webp",
+    imageAlt: "Clipboard with a blank checklist, stethoscope, blood-pressure cuff and tape measure on a clinic table, the eligibility check for GLP-1 weight-loss medication",
     title: "Do You Qualify for GLP-1 Weight Loss Medication?",
     description:
       "Not everyone is eligible for semaglutide or tirzepatide. Here's a clear look at the medical criteria, BMI requirements, and conditions that affect eligibility.",
@@ -574,6 +580,8 @@ export const articles: Article[] = [
   },
   {
     slug: "what-to-eat-on-glp1-medication",
+    image: "/article-images/what-to-eat-on-glp1-medication.webp",
+    imageAlt: "A balanced plate of salmon, quinoa, roasted vegetables and greens with yogurt and water on a kitchen counter, a GLP-1 pen set to one side",
     title: "What to Eat While Taking GLP-1 Medication: A Practical Guide",
     description:
       "Your diet matters just as much on medication. Here's what to eat, what to avoid, and how to structure meals to maximize results and minimize side effects.",
@@ -618,6 +626,8 @@ export const articles: Article[] = [
   },
   {
     slug: "exercise-while-on-glp1-medication",
+    image: "/article-images/exercise-while-on-glp1-medication.webp",
+    imageAlt: "Dumbbells, a resistance band, a yoga mat and a water bottle on a wooden floor with a person stepping onto the mat, strength training while on GLP-1 medication",
     title: "How to Exercise on GLP-1 Medication Without Losing Muscle",
     description:
       "Losing weight too fast without exercise risks muscle loss. Here's how to build an effective, sustainable exercise routine while on semaglutide or tirzepatide.",
@@ -662,6 +672,8 @@ export const articles: Article[] = [
   },
   {
     slug: "stopping-glp1-medication-what-happens",
+    image: "/article-images/stopping-glp1-medication-what-happens.webp",
+    imageAlt: "An unbranded GLP-1 injection pen being put away in a small box beside a blank calendar and a glass of water, with walking shoes in the background",
     title: "What Happens When You Stop Taking GLP-1 Medication?",
     description:
       "Thinking about stopping semaglutide or tirzepatide? What the research shows about weight regain, how to taper safely and how to maintain your results.",
@@ -714,6 +726,8 @@ export const articles: Article[] = [
   },
   {
     slug: "glp1-and-mental-health",
+    image: "/article-images/glp1-and-mental-health.webp",
+    imageAlt: "A mug of tea, a closed journal and a folded blanket on a sunlit windowsill beside a plant, a calm scene about mood and GLP-1 medication",
     title: "GLP-1 Medications and Mental Health: What We Know So Far",
     description:
       "Emerging research shows GLP-1 medications may affect mood, anxiety, and addictive behaviors. Here's what the science says - and what patients are reporting.",
@@ -758,6 +772,8 @@ export const articles: Article[] = [
   },
   {
     slug: "how-to-get-ozempic-online",
+    image: "/article-images/how-to-get-ozempic-online.webp",
+    imageAlt: "Laptop showing a blurred telehealth intake form, a phone, and an open delivery box holding an unbranded injection pen on a kitchen table, getting semaglutide online",
     title: "How to Get Ozempic Online in 2026: A Step-by-Step Guide",
     description:
       "Want to get Ozempic or semaglutide online? Here's exactly how the process works - from evaluation to delivery - and what to expect at each step.",
@@ -802,6 +818,8 @@ export const articles: Article[] = [
   },
   {
     slug: "compounded-semaglutide-vs-brand-name",
+    image: "/article-images/compounded-semaglutide-vs-brand-name.webp",
+    imageAlt: "A plain glass vial with a capped syringe beside an unbranded injection pen on a white pharmacy counter, compounded semaglutide compared with brand-name",
     title: "Compounded Semaglutide vs Brand-Name: What's the Difference?",
     description:
       "Compounded semaglutide costs a fraction of Ozempic or Wegovy. But is it the same? Here's what you need to know about safety, quality, and effectiveness.",
@@ -858,6 +876,8 @@ export const articles: Article[] = [
   },
   {
     slug: "mounjaro-vs-ozempic",
+    image: "/article-images/mounjaro-vs-ozempic.webp",
+    imageAlt: "Two unbranded injection pens, navy and blue, on either side of a small empty balance scale on a desk, comparing tirzepatide and semaglutide",
     title: "Mounjaro vs Ozempic for Weight Loss (2026): Full Comparison",
     description:
       "Mounjaro vs Ozempic: up to 22.5% vs ~15% average weight loss in trials, side effects, dosing, insurance - and verified compounded prices from $41/month.",
