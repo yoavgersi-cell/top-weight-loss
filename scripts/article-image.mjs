@@ -44,17 +44,19 @@ const outFile = path.join(outDir, `${slug}.webp`);
 // daylight, periwinkle-blue devices, white/marble surfaces). Rules at the end
 // are hard constraints: a fabricated label, brand or chart would be a claim.
 const HOUSE_STYLE = `Editorial lifestyle photograph for a health-comparison website, 3:2 landscape.
-Style: bright natural daylight, shallow depth of field, clean modern home or desk setting, white and light-grey surfaces (marble, oak, linen), accents in soft periwinkle blue and navy, a touch of green from a plant. Calm, trustworthy, premium but approachable. Photorealistic, 50mm look, no HDR.
+Style: photorealistic, natural light, shallow depth of field, 35-50mm look, no HDR, no stock-photo gloss. Palette leans white, light wood, linen and soft periwinkle blue / navy accents, with one warm or green note. Calm, trustworthy, approachable.
+People: show real-looking, AI-generated people as the heart of the picture whenever the scene allows. Varied body sizes, including plus-size and mid-weight-loss bodies shown with dignity and ease, varied ages (30s-60s), skin tones and genders. Natural expressions and candid moments: cooking, walking the dog, tying trainers, on a video call, unpacking a delivery, laughing with a friend. Faces are fine, but they must be generic, not resembling any real or famous person, and never shown as a before/after.
+Variety: avoid the default "pen on a desk" still life. Rotate settings (kitchen, park path, bathroom mirror from behind, office break room, car passenger seat, pharmacy pickup counter, café, bedroom morning), times of day and camera angles (over the shoulder, low angle, candid wide, intimate close-up of hands). Each image should feel like a different moment in a different life.
 Composition: the main subject sits in the centre third of the frame with breathing room on both sides, because the image is also cropped to a wide 2.5:1 strip and to a near-square left panel. Nothing important near the edges.
 
 Scene: ${scene}
 
 Hard rules:
-- No readable text, numbers, words, labels, logos or brand names anywhere, including on boxes, pens, screens, packaging or notebooks. Screens may show abstract blurred shapes only.
-- Any medication device is a generic, unbranded injection pen or vial with no visible needle. No pills unless the scene asks for them.
-- No faces: people, if any, are shown from the shoulders down or from behind.
-- No before/after bodies, no scales showing numbers, no measurement readouts, no charts with values.
-- No medical staff in uniform unless the scene asks for a clinician on a video call, and then only on a screen and without a face.`;
+- No readable text, numbers, words, labels, logos or brand names anywhere, including on boxes, pens, screens, packaging, clothing or notebooks. Screens may show abstract blurred shapes only.
+- Any medication device is a generic, unbranded injection pen or capped syringe with no visible needle. No pills unless the scene asks for them.
+- No before/after bodies, no split frames, no scales showing numbers, no measurement readouts, no charts with values.
+- No one in a white coat or scrubs unless the scene asks for a clinician, and then only generic and never as an endorsement.
+- Nothing that implies a specific result, speed or guarantee.`;
 
 async function generate() {
   const key = process.env.OPENAI_API_KEY || "proxy-injected";
