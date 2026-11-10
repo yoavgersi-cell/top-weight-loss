@@ -11,6 +11,24 @@ to its `heroColor` gradient, so nothing breaks if this folder is empty.
 - **Composition:** keep the subject centered — cards crop to a wider strip
   (~2.5:1) and the featured card crops a near-square left panel.
 
+## Generating one (OpenAI image model)
+`scripts/article-image.mjs` renders a photo in the house style (bright
+daylight, white/oak surfaces, periwinkle-blue generic devices, no text, no
+logos, no faces), writes the 1600×900 WebP here under the slug, and inserts
+`image` + `imageAlt` into the article record:
+
+```
+NODE_USE_ENV_PROXY=1 node scripts/article-image.mjs \
+  --slug best-tirzepatide-online --data src/data/articles.ts \
+  --scene "what the picture shows, in plain words" \
+  --alt "the alt text that ships with it"
+```
+
+The scene is the only creative input; the style and the hard rules (nothing
+readable, unbranded pens, no measurement readouts) are fixed in the script so
+every article image looks like it belongs to the same set. The key is the
+environment's network secret for api.openai.com (or `OPENAI_API_KEY`).
+
 ## How to reference from code
 On disk the file lives here (`public/article-images/…`), but in code the URL
 drops the `public/` prefix:

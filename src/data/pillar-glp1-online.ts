@@ -10,6 +10,8 @@ import type { Article } from "./articles";
 
 export const pillarGlp1Online: Article = {
   slug: "glp1-weight-loss-online-complete-guide",
+  image: "/article-images/glp1-weight-loss-online-complete-guide.webp",
+  imageAlt: "Tablet on a desk showing a telehealth dashboard with weight and progress charts, beside a weight-tracking journal and pen",
   title: "GLP-1 Weight Loss Online: The Complete 2026 Guide",
   description:
     "How to get GLP-1 weight-loss medication online in 2026: who qualifies, verified prices from $41/month, how to choose a provider, dosing, results and safety.",

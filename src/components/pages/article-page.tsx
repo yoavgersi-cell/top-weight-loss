@@ -624,9 +624,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
             {/* Nov 5, 2026: the image now sits at the right edge of the text
                 container and only from xl (1280px), so it can never cover the
                 title, intro or review line (it overlapped them at 640-1440px). */}
-            {/* Nov 10, 2026: an article with its own image (article.image) shows it
-                as the lead figure below the masthead instead of the vertical hero. */}
-            {config.hero?.backgroundImageUrl && !article.image && (
+            {config.hero?.backgroundImageUrl && (
               <div className="pointer-events-none absolute right-6 top-1/2 hidden h-[280px] w-[380px] -translate-y-1/2 xl:block">
                 <Image
                   src={config.hero.backgroundImageUrl}
@@ -680,23 +678,6 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
         {/* Article body */}
         <div className="mx-auto max-w-[1100px] px-4 py-10 sm:px-6">
           <div>
-          {/* Lead image: the same 16:9 file the article cards and the Article
-              schema use (article.image / imageAlt), so what readers see in the
-              grid is what they get on the page. Nov 10, 2026. */}
-          {article.image && (
-            <figure className="mb-8 overflow-hidden rounded-2xl border border-gray-200 bg-white">
-              <Image
-                src={article.image}
-                alt={article.imageAlt || article.title}
-                width={1600}
-                height={900}
-                preload
-                fetchPriority="high"
-                sizes="(min-width: 1100px) 1052px, 100vw"
-                className="h-auto w-full object-cover"
-              />
-            </figure>
-          )}
           {/* On a brand legitimacy article ("is-<brand>-legit"), real user
               experiences answer the reader's core question first - so the
               operator-verified Reddit threads lead the page, above everything
