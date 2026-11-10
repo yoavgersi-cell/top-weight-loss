@@ -35,6 +35,7 @@ import { SourcesMethodology } from "@/components/sources-methodology";
 import { ProductCarousel } from "@/components/product-carousel";
 import { notFound } from "next/navigation";
 import { REDDIT_COMMUNITY_FEEDBACK as REVIEW_COMMUNITY_FEEDBACK, RedditMark } from "@/components/reddit-community";
+import { FacebookCommunityBlock } from "@/components/facebook-community";
 import { YoutubeReviewSection } from "@/components/youtube-review";
 import { ReadableProse, enhanceArticleHtml } from "@/components/prose";
 import { ProviderAudit } from "@/components/provider-audit";
@@ -1337,6 +1338,10 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             ))}
           </ul>
         </Section>
+
+        {/* Facebook group voices (Nov 10, 2026): transcribed, anonymised. */}
+
+        <FacebookCommunityBlock providerId={provider.id} providerName={provider.name} vertical={ctx.vertical} />
 
         {/* Community feedback - real Reddit threads, rendered Reddit-style.
             Each registry entry names the vertical its threads were captured
