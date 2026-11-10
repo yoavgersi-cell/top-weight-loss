@@ -23,7 +23,7 @@ import { TopProvidersBlock, TopTwoPicks } from "@/components/top-providers-block
 import { TirzepatidePriceTable } from "@/components/tirzepatide-price-table";
 import { TrustpilotSummary } from "@/components/trustpilot-summary";
 import { PRICE_INDEX_VERIFIED } from "@/lib/price-index";
-import { LEGIT_PAGES, LegitChecklist, LegitVerdictCta, PricingCapture } from "@/components/legit-page-blocks";
+import { LEGIT_PAGES, LegitChecklist, LegitVerdictCta, PricingCapture, ProviderPeek } from "@/components/legit-page-blocks";
 import { ProviderCta } from "@/components/provider-cta";
 import { PRICE_INDEX } from "@/lib/price-index";
 import type { TrustpilotReview } from "@/lib/config";
@@ -825,6 +825,9 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                   </>
                 )}
 
+                {/* "A peek at the provider's own site" right after the opening
+                    "What is <brand>?" section, before the legitimacy analysis. */}
+                {legitData && legitProvider && i === 0 && <ProviderPeek data={legitData} provider={legitProvider} />}
                 {legitData && legitProvider && i === legitCaptureAfter && (
                   <PricingCapture data={legitData} provider={legitProvider} />
                 )}
