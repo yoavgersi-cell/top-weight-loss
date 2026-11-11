@@ -353,7 +353,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // and which on-page component the card sits directly below.
   const SUBJECT_CARD_PLACEMENT: Record<string, "afterReddit" | "afterCarousel"> =
     ctx.vertical === "weight-loss"
-      ? { "wellmedr-cost": "afterReddit", "is-embody-legit": "afterCarousel" }
+      ? { "wellmedr-cost": "afterReddit", "is-embody-legit": "afterCarousel", "is-wellmedr-legit": "afterReddit" /* operator: higher up, Nov 11, 2026 */ }
       : {};
   // Every "is-<provider>-legit" page carries its provider's own ranking card
   // (operator request, Nov 2, 2026): below the provider's plans carousel where
