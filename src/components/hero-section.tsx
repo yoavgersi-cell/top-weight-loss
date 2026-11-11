@@ -84,7 +84,7 @@ export function HeroSection({
             </p>
           )}
 
-          <div className="mt-3.5 sm:mt-4 flex items-center gap-3 sm:gap-5">
+          <div className="mt-3.5 flex flex-wrap items-center gap-x-3 gap-y-1.5 sm:mt-4 sm:gap-x-5">
             {[
               { label: "Licensed Providers", icon: Stethoscope },
               { label: "Top-Rated Options", icon: Star },

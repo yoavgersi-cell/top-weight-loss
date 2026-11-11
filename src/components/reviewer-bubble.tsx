@@ -141,7 +141,7 @@ export function ReviewerBubble({
         aria-expanded={open}
         aria-haspopup="dialog"
         aria-controls={id}
-        className="cursor-pointer font-bold text-[#191919] underline decoration-dotted decoration-gray-400 underline-offset-[3px] hover:text-[#0C4B75] hover:decoration-[#0C4B75]"
+        className="-my-1 py-1 cursor-pointer font-bold text-[#191919] underline decoration-dotted decoration-gray-400 underline-offset-[3px] hover:text-[#0C4B75] hover:decoration-[#0C4B75]"
       >
         {trigger}
       </button>

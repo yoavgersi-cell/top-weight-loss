@@ -105,11 +105,11 @@ export function RichComparisonCard({
                   />
                 ))}
               </div>
-              <p className="mt-0.5 text-[10px] font-bold uppercase tracking-wide text-[#0C4B75] sm:text-[11px]">{product.ratingLabel}</p>
+              <p className="mt-0.5 text-[11px] font-bold uppercase tracking-wide text-[#0C4B75]">{product.ratingLabel}</p>
             </div>
             <div className="flex flex-col items-center justify-center rounded-lg bg-[#0C4B75] px-2.5 py-1 text-white sm:rounded-xl sm:px-3 sm:py-1.5">
               <span className="text-[20px] font-extrabold leading-none sm:text-[24px]">{product.rating.toFixed(1)}</span>
-              <span className="mt-0.5 text-[8px] font-semibold uppercase tracking-wide text-white/70 sm:text-[9px]">out of 10</span>
+              <span className="mt-0.5 text-[9px] font-semibold uppercase tracking-wide text-white/70">out of 10</span>
             </div>
           </div>
         </div>

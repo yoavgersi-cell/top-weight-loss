@@ -112,7 +112,7 @@ export function MedicalReviewBar({
       href={reviewer.linkedin}
       target="_blank"
       rel="noopener noreferrer me"
-      className="ml-1.5 inline-flex align-[-2px] text-[#0A66C2] hover:opacity-80"
+      className="-my-1.5 ml-0.5 inline-flex p-1.5 align-[-5px] text-[#0A66C2] hover:opacity-80"
       aria-label={`${reviewer.name} on LinkedIn`}
     >
       <LinkedInMark className="h-[13px] w-[13px]" />

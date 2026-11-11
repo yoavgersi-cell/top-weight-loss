@@ -17,7 +17,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
         <span key={i} className="flex items-center gap-1.5">
           {i > 0 && <ChevronRight className="h-3 w-3 shrink-0" strokeWidth={1.5} />}
           {item.href ? (
-            <Link href={item.href} className="hover:text-[#0C4B75] transition-colors">
+            <Link href={item.href} className="-my-1.5 py-1.5 hover:text-[#0C4B75] transition-colors">
               {item.label}
             </Link>
           ) : (

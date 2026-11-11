@@ -83,7 +83,7 @@ function ProductCard({
         <div className="relative flex h-[150px] items-center justify-center border-b border-gray-100 bg-white p-3">
           {chip && (
             <span
-              className={`absolute left-2 top-2 z-10 rounded-full px-2 py-0.5 text-[10px] font-bold ring-1 ${chip.className}`}
+              className={`absolute left-2 top-2 z-10 rounded-full px-2 py-0.5 text-[11px] font-bold ring-1 ${chip.className}`}
             >
               {chip.label}
             </span>
