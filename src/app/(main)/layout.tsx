@@ -1,9 +1,11 @@
 import { DisclosureBar } from "@/components/disclosure-bar";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { PriceTicker, type TickerItem } from "@/components/price-ticker";
+import { PriceTicker, type TickerItem, type TickerStrip } from "@/components/price-ticker";
 import { getConfig } from "@/lib/config-store";
 import { PRICE_INDEX, PRICE_INDEX_VERIFIED } from "@/lib/price-index";
+import { ED_PRICE_INDEX_VERIFIED } from "@/lib/ed-price-index";
+import { ED_TRACKER_PATH, edTickerItems } from "@/lib/ed-price-feed";
 import { ChatHelper } from "@/components/chat-helper";
 import { buildChatMatches } from "@/lib/chatbot";
 
@@ -24,7 +26,7 @@ async function tickerItems(): Promise<TickerItem[]> {
     .map(({ r }) => {
       const cell = r.semaglutide ?? r.tirzepatide;
       const price = cell ? cell.price : r.plan ? `plans ${r.plan.price}` : "";
-      return { id: r.providerId, name: byId.get(r.providerId)!.name, price, href: `/weight-loss/reviews/${r.providerId}` };
+      return { id: r.providerId, name: byId.get(r.providerId)!.name, price: `${price}/mo`, href: `/weight-loss/reviews/${r.providerId}` };
     })
     .filter((it) => it.price);
 }
@@ -35,15 +37,21 @@ async function tickerItems(): Promise<TickerItem[]> {
 export default async function MainLayout({ children }: { children: React.ReactNode }) {
   const items = await tickerItems();
   const chatMatches = buildChatMatches(await getConfig("weight-loss"));
-  const verified = new Date(PRICE_INDEX_VERIFIED).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
+  const fmt = (iso: string) => new Date(iso).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
+  // One price strip per vertical with a verified index: weight loss (GLP-1)
+  // and, since Nov 11, 2026, ED. Each reads its own index and tracker.
+  const strips: Record<string, TickerStrip> = {
+    "/weight-loss": { items, verifiedLabel: `Prices verified ${fmt(PRICE_INDEX_VERIFIED)}`, trackerHref: "/weight-loss/glp1-price-changes", ariaLabel: "Verified GLP-1 starting prices" },
+    "/ed": { items: await edTickerItems(), verifiedLabel: `Prices verified ${fmt(ED_PRICE_INDEX_VERIFIED)}`, trackerHref: ED_TRACKER_PATH, ariaLabel: "Verified ED treatment starting prices" },
+  };
   return (
     <>
       <DisclosureBar />
       <Header />
-      <PriceTicker items={items} verifiedLabel={`Prices verified ${verified}`} trackerHref="/weight-loss/glp1-price-changes" />
+      <PriceTicker strips={strips} />
       <main className="flex-1">{children}</main>
       <Footer />
-      <ChatHelper matches={chatMatches} verifiedLabel={`Prices verified ${verified}`} />
+      <ChatHelper matches={chatMatches} verifiedLabel={`Prices verified ${fmt(PRICE_INDEX_VERIFIED)}`} />
     </>
   );
 }

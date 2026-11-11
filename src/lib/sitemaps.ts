@@ -20,6 +20,7 @@ import {
   type SiteConfig,
 } from "@/lib/config";
 import { WEIGHT_LOSS_MIGRATED } from "@/lib/site-context";
+import { ED_PRICE_DATA_UPDATED } from "@/lib/ed-price-index";
 import { PRICE_DATA_UPDATED } from "@/lib/price-index";
 import { articles } from "@/data/articles";
 import { analysisPath, reviewAnalysisRecords } from "@/lib/review-analysis";
@@ -64,7 +65,10 @@ const WL_STATIC_PATHS: { path: string; priority: number; changeFrequency: "weekl
 // Custom-coded pages owned by a single non-weight-loss vertical (served at
 // /<vertical>/<path> by a static folder under [battleSlug]).
 const VERTICAL_STATIC_PATHS: Record<string, { path: string; updatedAt: string }[]> = {
-  ed: [{ path: "/ed-cost-index", updatedAt: "2026-10-09" }],
+  ed: [
+    { path: "/ed-cost-index", updatedAt: "2026-10-09" },
+    { path: "/ed-price-changes", updatedAt: ED_PRICE_DATA_UPDATED },
+  ],
   "hair-loss": [{ path: "/women", updatedAt: "2026-10-22" }],
 };
 
