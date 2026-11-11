@@ -157,6 +157,7 @@ export const WEIGHT_LOSS_GUIDES: GuideLink[] = [
 export const ED_GUIDES: GuideLink[] = [
   { slug: "articles/erectile-dysfunction-treatment-complete-guide", title: "Erectile Dysfunction Treatment: The Complete Guide", blurb: "Causes, diagnosis, every treatment class, what to do when pills fail, and getting treated online." },
   { slug: "ed-cost-index", title: "ED Treatment Cost Index", blurb: "Every treatment route priced per dose and per month, with its source labelled." },
+  { slug: "ed-price-changes", title: "ED Treatment Price Tracker", blurb: "What each provider publishes as its price, verified on its own site, with a dated change log." },
   { slug: "articles/best-ed-treatments-compared", title: "Best ED Treatments Compared", blurb: "Pills, compounded formulas, sprays and injectables side by side." },
   { slug: "articles/best-ed-medicine", title: "Best ED Medicine", blurb: "Which prescription ED medicines have the strongest evidence, and for whom." },
   { slug: "articles/how-to-get-ed-treatment-online", title: "How to Get ED Treatment Online", blurb: "The four-step process a legitimate telehealth clinic follows." },

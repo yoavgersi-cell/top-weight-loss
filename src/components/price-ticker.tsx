@@ -25,6 +25,9 @@ const NOT_WEIGHT_LOSS = new Set(["hub", "reviewers", "medical-review-policy", "u
 
 export type TickerItem = { id: string; name: string; price: string; href: string };
 
+/** One vertical's strip: its items, the "verified" label and where the tracker lives. */
+export type TickerStrip = { items: TickerItem[]; verifiedLabel: string; trackerHref: string; ariaLabel: string };
+
 function Items({ items, hidden = false }: { items: TickerItem[]; hidden?: boolean }) {
   return (
     <ul className="flex shrink-0 items-center" aria-hidden={hidden || undefined}>
@@ -36,7 +39,7 @@ function Items({ items, hidden = false }: { items: TickerItem[]; hidden?: boolea
             className="flex items-baseline gap-1.5 whitespace-nowrap px-4 py-2 text-[13px] text-gray-600 hover:text-[#0C4B75]"
           >
             <span className="font-medium">{it.name}</span>
-            <span className="font-bold text-[#0C4B75] [font-variant-numeric:tabular-nums]">{it.price}/mo</span>
+            <span className="font-bold text-[#0C4B75] [font-variant-numeric:tabular-nums]">{it.price}</span>
           </Link>
           <span className="text-gray-300" aria-hidden>·</span>
         </li>
@@ -45,20 +48,25 @@ function Items({ items, hidden = false }: { items: TickerItem[]; hidden?: boolea
   );
 }
 
-export function PriceTicker({ items, verifiedLabel, trackerHref }: { items: TickerItem[]; verifiedLabel: string; trackerHref: string }) {
+// Nov 11, 2026: the strip became per-vertical. `strips` is keyed by nav
+// prefix ("/weight-loss", "/ed"); bare weight-loss routes resolve to the
+// weight-loss strip as before. Verticals without a strip show nothing.
+export function PriceTicker({ strips }: { strips: Record<string, TickerStrip> }) {
   const prefix = useNavPrefix();
   const first = (usePathname() || "/").split("/").filter(Boolean)[0];
   const [loop, setLoop] = useState(false);
   useEffect(() => setLoop(true), []);
-  const isWeightLoss = prefix === "/weight-loss" || (prefix === "" && !!first && !NOT_WEIGHT_LOSS.has(first));
-  if (!isWeightLoss || items.length === 0) return null;
+  const isBareWeightLoss = prefix === "" && !!first && !NOT_WEIGHT_LOSS.has(first);
+  const strip = strips[prefix] ?? (isBareWeightLoss ? strips["/weight-loss"] : undefined);
+  if (!strip || strip.items.length === 0) return null;
+  const { items, verifiedLabel, trackerHref, ariaLabel } = strip;
 
   // ~9.5s per item: a slow, easy-to-read pace whatever the list length
   // (tuned on operator request, Nov 3, 2026: 3.5s → 7s → 12s → 9.5s).
   const duration = `${Math.max(50, items.length * 9.5)}s`;
 
   return (
-    <div className="border-b border-gray-200 bg-[#F5F8FB]" role="region" aria-label="Verified GLP-1 starting prices">
+    <div className="border-b border-gray-200 bg-[#F5F8FB]" role="region" aria-label={ariaLabel}>
       <div className="mx-auto flex max-w-[1320px] items-stretch">
         <p className="flex shrink-0 items-center gap-1.5 border-r border-gray-200 px-3 text-[10.5px] font-bold uppercase tracking-[0.06em] text-[#0C4B75] sm:gap-2 sm:px-4 sm:text-[11px]">
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" aria-hidden />
