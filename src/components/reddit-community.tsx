@@ -638,7 +638,7 @@ function ThreadCard({
             <span className="shrink-0 text-gray-500">{thread.age}</span>
           </>
         )}
-        <span className="ml-auto shrink-0 rounded-full bg-gray-100 px-2 py-0.5 text-[10.5px] font-semibold text-gray-500">
+        <span className="ml-auto shrink-0 rounded-full bg-gray-100 px-2 py-0.5 text-[11px] font-semibold text-gray-500">
           about {providerName}
         </span>
       </div>

@@ -33,12 +33,12 @@ export function Header() {
             rendered at all: hidden "TopWeightLoss" text and alt on every hub
             page was a stale brand signal for crawlers (Oct 14, 2026). */}
         {!WEIGHT_LOSS_MIGRATED && (
-          <Link href={navHref(prefix, "/")} className="legacy-brand flex items-center">
+          <Link href={navHref(prefix, "/")} className="legacy-brand -my-2 flex items-center py-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/logo.png" alt="TopWeightLoss.io" className="h-[36px] sm:h-[42px] w-auto" />
           </Link>
         )}
-        <Link href={navHref(prefix, "/")} className="hub-brand items-center">
+        <Link href={navHref(prefix, "/")} className="hub-brand -my-2 items-center py-2">
           <HubLogo vertical={vertical} />
         </Link>
 
@@ -55,7 +55,7 @@ export function Header() {
         {nav.length > 0 && (
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="sm:hidden text-[#191919]"
+            className="sm:hidden -m-2.5 p-2.5 text-[#191919]"
             aria-label="Toggle menu"
           >
             {isOpen ? (

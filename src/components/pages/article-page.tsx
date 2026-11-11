@@ -1114,7 +1114,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     className="group rounded-xl border border-gray-200 bg-white p-5 transition-shadow hover:shadow-md"
                   >
                     <span
-                      className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-semibold mb-2 ${categoryColors[ra.category] || "bg-gray-100 text-gray-600"}`}
+                      className={`inline-block rounded-full px-2 py-0.5 text-[11px] font-semibold mb-2 ${categoryColors[ra.category] || "bg-gray-100 text-gray-600"}`}
                     >
                       {ra.category}
                     </span>

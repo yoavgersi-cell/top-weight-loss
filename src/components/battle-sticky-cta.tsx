@@ -73,7 +73,7 @@ export function BattleStickyCta({
                 <div key={p.id} className="min-w-0">
                   {recommendedId != null && (
                     <p
-                      className={`mb-1 text-center text-[10px] font-bold uppercase tracking-[0.08em] ${
+                      className={`mb-1 text-center text-[11px] font-bold uppercase tracking-[0.08em] ${
                         isPick ? "text-[#0C4B75]" : "text-transparent"
                       }`}
                     >
