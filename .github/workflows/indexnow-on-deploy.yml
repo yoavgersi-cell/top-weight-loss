@@ -1,0 +1,51 @@
+name: IndexNow on production deploy
+
+# Submits recently changed hub URLs to IndexNow (Bing, Copilot and the other
+# participating engines) as soon as Vercel reports a successful Production
+# deployment, instead of waiting for the daily 06:20 UTC push. Uses the same
+# /api/indexnow route and the same rule: only URLs whose sitemap lastmod moved
+# inside the window are sent, newest first, so a deploy that changed nothing
+# dated submits 0 and that is fine.
+#
+# Vercel's GitHub integration emits `deployment_status` events for every
+# deployment; we act only on a successful Production one.
+
+on:
+  deployment_status:
+  workflow_dispatch:
+    inputs:
+      since:
+        description: "Window in hours (URLs whose sitemap date moved inside it are submitted)"
+        required: false
+        default: "24"
+
+permissions:
+  contents: read
+
+jobs:
+  push:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+       (github.event.deployment.environment == 'Production' || github.event.deployment.environment == 'production'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Wait for the production domain to serve the new deployment
+        run: |
+          # The status event can arrive a few seconds before the custom domain
+          # alias flips; give it a short, bounded grace period.
+          sleep 45
+      - name: Submit recently changed hub URLs
+        env:
+          SINCE: ${{ github.event.inputs.since || '24' }}
+        run: |
+          set -euo pipefail
+          KEY=500308dadc1af5a68815ac610218ade9b0afd4a45b3d2a447970ac69a4eb2cb9
+          URL="https://www.treatmentshub.com/api/indexnow?token=${KEY}&since=${SINCE}&limit=200"
+          BODY=$(curl -sS --fail-with-body --max-time 120 -A "github-actions-indexnow-deploy" "$URL")
+          echo "$BODY"
+          if echo "$BODY" | grep -q '"ok":false'; then
+            echo "IndexNow rejected the submission" >&2
+            exit 1
+          fi
