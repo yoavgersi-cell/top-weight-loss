@@ -58,6 +58,12 @@ import { catalogPriceSnippet } from "@/lib/product-catalog";
 // has no public review record yet. Weight-loss vertical only.
 
 const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+  // Collective (weight loss), added Nov 11, 2026; figures from collective.org.
+  collective: {
+    title: "Collective Review 2026: $59 Semaglutide, $69 Tirzepatide + Fee",
+    description:
+      "Collective charges $59/mo for compounded semaglutide and $69/mo for tirzepatide at any dose, plus a $199/year membership. Shipping, states served and our verdict.",
+  },
   // HRT vertical (ported from hrtwomen.com, Oct 22, 2026). Titles shaped by
   // that site's Search Console queries: "winona hrt reviews", "how much does
   // winona cost", "does winona take insurance", "is midi health legit".

@@ -70,6 +70,15 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     trustpilot: null,
   },
   {
+    providerId: "collective",
+    edge: "Lowest tirzepatide price we track, flat at every dose, with a $199/year membership instead of a markup",
+    semaglutide: { price: "$59", note: "same price at every dose; plus $199/year membership (21-day free trial)" },
+    tirzepatide: { price: "$69", note: "same price at every dose; plus $199/year membership (21-day free trial)" },
+    shipping: "2-day express cold shipping included; most orders within 7 days of the medical review",
+    commitment: "Month to month, no multi-month orders, cancel anytime; membership billed annually after the trial",
+    trustpilot: null,
+  },
+  {
     providerId: "eden",
     edge: "One flat price every month and at every dose, with 24/7 human support",
     semaglutide: { price: "$99", note: "flat every month, same price at every dose" },
@@ -178,6 +187,17 @@ export type PriceChange = {
 };
 
 export const PRICE_CHANGELOG: PriceChange[] = [
+  {
+    date: "2026-11-11",
+    providerId: "collective",
+    change:
+      "Newly listed. Compounded semaglutide $59/month and tirzepatide $69/month, the same price at every dose, month to month with no multi-month orders. A $199 annual membership (billed yearly, 21-day free trial) covers unlimited doctor messaging, check-ins and 2-day express cold shipping; averaged over a year it adds about $16.58 a month.",
+    moves: [
+      { drug: "semaglutide", from: null, to: 59, condition: "plus $199/year membership after a 21-day free trial" },
+      { drug: "tirzepatide", from: null, to: 69, condition: "plus $199/year membership after a 21-day free trial" },
+    ],
+    source: "collective.org homepage and FAQ, November 11, 2026",
+  },
   {
     date: "2026-11-03",
     providerId: "sprout",

@@ -874,6 +874,87 @@ const defaultReviews: ReviewData[] = [
     finalVerdict: "Wellorithm offers a fresh, technology-driven approach to weight loss that appeals to patients who value efficiency and data-informed treatment. While the platform is newer than some competitors, its algorithmic matching and transparent pricing make it a noteworthy option for those comfortable with a tech-forward healthcare experience."
   },
   {
+    slug: "collective",
+    providerId: "collective",
+    updatedAt: "2026-11-11",
+    // Every figure here was read from collective.org on November 11, 2026
+    // (homepage, including its FAQ): $59/mo semaglutide, $69/mo tirzepatide,
+    // same price at any dose, $199 annual membership billed annually with a
+    // 21-day free trial, 2-day express cold shipping, most orders within 7
+    // days of the medical review, 44 states. The per-month membership
+    // arithmetic is ours and says so.
+    shortSummary: "Compounded semaglutide at $59/month and tirzepatide at $69/month, the same price at every dose, plus a $199 annual membership (21-day free trial, billed yearly) that covers unlimited doctor messaging, check-ins and dose changes, nutrition support and 2-day express cold shipping. No multi-month orders, cancel anytime, HSA/FSA eligible. Founded by the founder of Thrive Market; available in 44 states.",
+    reviewIntro: "Collective is a telehealth GLP-1 provider built around one idea, stated on its own site: charge the real cost of the medication and fund the care with a flat membership. The medication prices are the lowest tirzepatide and among the lowest semaglutide figures we track - compounded semaglutide at $59 a month and compounded tirzepatide at $69 a month, 'the same price at any dose', with no multi-month orders and cancellation the site describes as a one-click process. The second half of the price is a $199 annual membership, billed annually rather than monthly, with a 21-day free trial during which you pay only for the medication; cancel before the 21 days end and the membership fee is never charged. The membership is what pays for the care around the drug: unlimited messaging with US-licensed doctors, ongoing check-ins and dose adjustments, nutrition and lifestyle support, and 2-day express cold shipping, with most orders arriving within 7 days of the medical review. Prescriptions are filled by state-licensed US pharmacies the site says are third-party tested for purity and potency, and a twice-a-week dosing option is offered for people who find once-weekly doses hard on the stomach. Collective was started by Gunnar Lovelace, founder of Thrive Market, and is currently available in 44 states (not yet Alabama, California, Louisiana, Massachusetts, Mississippi or Washington). It does not bill insurance; both the medication and the membership may qualify for HSA/FSA reimbursement, which your plan administrator decides. Spread over twelve months, the membership adds about $16.58 a month, so the all-in average works out to roughly $76 a month for semaglutide and $86 for tirzepatide - our arithmetic, not a figure Collective quotes.",
+    keyFeatures: [
+      "Compounded semaglutide $59/month - the same price at every dose",
+      "Compounded tirzepatide $69/month - the same price at every dose, the lowest tirzepatide price we track",
+      "$199 annual membership, billed yearly, with a 21-day free trial (pay only for medication during the trial)",
+      "Membership covers unlimited doctor messaging, check-ins and dose changes, nutrition support and 2-day express cold shipping",
+      "No multi-month orders, cancel anytime, HSA/FSA eligible; 44 states"
+    ],
+    pricingSummary: "Collective charges $59 a month for compounded semaglutide and $69 a month for compounded tirzepatide, the same at every dose, billed month to month with no multi-month order. On top of that is a $199 annual membership, billed once a year, with a 21-day free trial; during the trial you pay only for the medication, and if you cancel before day 21 the membership is never charged. Averaged over a year the membership adds about $16.58 a month, so the realistic all-in cost is roughly $76 a month for semaglutide and $86 for tirzepatide (our arithmetic). For comparison, the cheapest compounded semaglutide we track is welludr at $41 on a 12-month plan and embody at $49 promotional; on tirzepatide, Collective's $69 undercuts welludr's $71 (12-month plan) and embody's $99 promotional rate, before the membership is counted. Shipping is 2-day express and cold-chain, included; most orders arrive within 7 days of the medical review. Collective does not bill insurance.",
+    treatmentOptions: [
+      "Compounded semaglutide (GLP-1) injection",
+      "Compounded tirzepatide (GLP-1 + GIP) injection",
+      "Twice-a-week dosing option, personalised by the prescribing doctor",
+      "Microdosing protocols on request, decided by the doctor",
+      "Switching from another provider: keep your current dose if your doctor approves"
+    ],
+    pros: [
+      "Lowest tirzepatide price we track ($69/month) and one of the lowest semaglutide prices ($59/month), flat at every dose",
+      "No multi-month orders - month to month, cancel anytime",
+      "Membership includes unlimited doctor messaging, check-ins, dose adjustments and nutrition support",
+      "2-day express cold shipping included; most orders within 7 days of the medical review",
+      "US-licensed doctors and state-licensed US pharmacies, with third-party testing stated on the site; HSA/FSA eligible"
+    ],
+    cons: [
+      "The $199 annual membership is the real second line on the bill: about $16.58 a month averaged, and it is billed once a year, not monthly",
+      "Not yet available in Alabama, California, Louisiana, Massachusetts, Mississippi or Washington",
+      "Compounded only - no brand-name Ozempic, Wegovy or Zepbound",
+      "New to our ranking (November 2026) and we have not yet built an independent review record for it",
+      "Does not bill insurance"
+    ],
+    bestFor: [
+      "People who want the lowest tirzepatide price without a 12-month plan",
+      "Anyone who values unlimited doctor messaging and fast cold shipping being included",
+      "Buyers who want to try one month, with the membership on a free trial, before committing"
+    ],
+    finalVerdict: "On the medication itself, Collective is the cheapest tirzepatide and one of the cheapest semaglutide options we track, and the price does not move as your dose does. Read it together with the $199 annual membership: averaged out, you are paying roughly $76 or $86 a month all-in, which is still at the low end of the market and buys unlimited doctor messaging, check-ins and 2-day cold shipping. The 21-day free trial means you can see the service before the membership is charged. If you live in one of the 44 states it serves and want compounded medication at a flat price without a long contract, it is a strong choice; just note the membership renews yearly and cancel it if you stop.",
+    trustBadges: [
+      "Same price at any dose",
+      "No multi-month orders",
+      "Cancel anytime",
+      "2-day express cold shipping included",
+      "HSA/FSA eligible"
+    ],
+    pricingPlans: [
+      {
+        name: "Compounded semaglutide",
+        medication: "Compounded semaglutide (GLP-1) weekly injection",
+        price: "$59",
+        unit: "/month",
+        cadence: "Plus $199/year membership after a 21-day free trial",
+        highlights: ["Same price at every dose", "No multi-month orders; cancel anytime", "About $76/month all-in with the membership averaged over a year (our arithmetic)"]
+      },
+      {
+        name: "Compounded tirzepatide",
+        medication: "Compounded tirzepatide (GLP-1 + GIP) weekly injection",
+        price: "$69",
+        unit: "/month",
+        cadence: "Plus $199/year membership after a 21-day free trial",
+        highlights: ["Same price at every dose", "No multi-month orders; cancel anytime", "About $86/month all-in with the membership averaged over a year (our arithmetic)"]
+      },
+      {
+        name: "Collective membership",
+        medication: "Unlimited doctor messaging, check-ins and dose changes, nutrition support, 2-day express cold shipping",
+        price: "$199",
+        unit: "/year",
+        cadence: "21-day free trial, then billed annually; cancel anytime",
+        highlights: ["Pay only for medication during the trial", "Never charged if you cancel before day 21", "May qualify for HSA/FSA reimbursement"]
+      }
+    ]
+  },
+  {
     slug: "eden",
     providerId: "eden",
     updatedAt: "2026-10-13",
@@ -4126,7 +4207,7 @@ function buildInitialConfig(): SiteConfig {
       trustpilotReviews: seedTrustpilot[p.id]?.reviews,
     })),
     ranking: {
-      providerOrder: ["embody", "eden", "altrx", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
+      providerOrder: ["embody", "eden", "collective", "altrx", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
       positions: [
         { score: 9.8, starRating: 5, label: "Exceptional", badge: "Our Top Pick" },
         { score: 9.7, starRating: 5, label: "Exceptional" },
@@ -4243,7 +4324,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Semaglutide Providers 2026",
         h2: "Compare GLP-1 weight loss programs side by side",
         heroDescription: "Semaglutide (the active ingredient in Ozempic and Wegovy) is one of the most effective GLP-1 medications for weight loss. Compare providers offering semaglutide treatment below.",
-        providerOrder: ["embody", "eden", "altrx", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
+        providerOrder: ["embody", "eden", "collective", "altrx", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
         editorialSections: [
           {
             heading: "What Is Semaglutide?",
@@ -4271,7 +4352,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Tirzepatide Providers 2026",
         h2: "Compare dual-action GLP-1 weight loss programs",
         heroDescription: "Tirzepatide (the active ingredient in Mounjaro and Zepbound) targets both GLP-1 and GIP receptors for enhanced weight loss results. Compare providers offering tirzepatide treatment below.",
-        providerOrder: ["embody", "eden", "altrx", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
+        providerOrder: ["embody", "eden", "collective", "altrx", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
         editorialSections: [
           {
             heading: "What Is Tirzepatide?",
@@ -4299,7 +4380,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Online Weight Loss Programs 2026",
         h2: "Clinician-guided GLP-1 treatment from home",
         heroDescription: "Online weight loss programs now offer prescription GLP-1 medications with full medical oversight - all from home. We compared the top programs on pricing, clinical support, and results.",
-        providerOrder: ["embody", "eden", "altrx", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
+        providerOrder: ["embody", "eden", "collective", "altrx", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
         editorialSections: [
           {
             heading: "How Online Weight Loss Programs Work",
@@ -4327,7 +4408,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Weight Loss Injections 2026",
         h2: "Compare injectable GLP-1 weight loss treatments",
         heroDescription: "GLP-1 weight loss injections like semaglutide and tirzepatide have shown 15-22% average weight loss in clinical trials. Compare providers offering injectable treatment programs below.",
-        providerOrder: ["embody", "eden", "altrx", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
+        providerOrder: ["embody", "eden", "collective", "altrx", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
         editorialSections: [
           {
             heading: "How Weight Loss Injections Work",
@@ -4355,7 +4436,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Ozempic for Weight Loss",
         h2: "Compare providers offering semaglutide treatment",
         heroDescription: "Ozempic (semaglutide) is widely used off-label for weight loss, with clinical trials showing 10-15% average weight loss. Compare providers offering semaglutide-based treatment programs below.",
-        providerOrder: ["embody", "eden", "altrx", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
+        providerOrder: ["embody", "eden", "collective", "altrx", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
         editorialSections: [
           {
             heading: "Ozempic for Weight Loss: What You Need to Know",
@@ -4383,7 +4464,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Best Wegovy Providers & Alternatives 2026",
         h2: "Compare semaglutide weight loss programs",
         heroDescription: "Wegovy is the FDA-approved weight loss version of semaglutide, with clinical trials showing 15% average weight loss. Compare providers offering Wegovy and compounded semaglutide alternatives below.",
-        providerOrder: ["embody", "eden", "altrx", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
+        providerOrder: ["embody", "eden", "collective", "altrx", "wellmedr", "ro", "trimrx", "shed", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
         editorialSections: [
           {
             heading: "Wegovy vs Compounded Semaglutide",
@@ -4407,7 +4488,7 @@ function buildInitialConfig(): SiteConfig {
         h1: "Most Affordable Weight Loss Medication 2026",
         h2: "Compare the cheapest GLP-1 providers",
         heroDescription: "GLP-1 medications don't have to cost $1,000/month. Compounded semaglutide starts at a verified $41/month and tirzepatide at $71/month from licensed telehealth providers - including medication, consultations, and delivery.",
-        providerOrder: ["altrx", "trimrx", "shed", "embody", "eden", "ro", "wellmedr", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
+        providerOrder: ["altrx", "trimrx", "collective", "shed", "embody", "eden", "ro", "wellmedr", "sunlight", "medvi", "sprout", "luvo", "medgm", "wellorithm"],
         editorialSections: [
           {
             heading: "Why GLP-1 Medication Is Getting More Affordable",
@@ -4536,6 +4617,7 @@ function buildInitialConfig(): SiteConfig {
         },
       ],
       providerProfiles: [
+        { providerId: "collective", priceLevel: "low", strengths: ["cost", "medical", "online"], matchReasons: { cost: "Semaglutide $59, tirzepatide $69 a month at any dose, plus $199/year membership", medical: "Unlimited messaging with US-licensed doctors included", online: "2-day express cold shipping; 21-day free trial", personalized: "Twice-a-week dosing and microdosing options from your doctor" } },
         { providerId: "altrx", priceLevel: "mid", strengths: ["medical", "online", "personalized"], matchReasons: { cost: "Transparent all-inclusive pricing", medical: "Physician-guided treatment plans", online: "Full telehealth platform", personalized: "Customized GLP-1 protocols" } },
         { providerId: "ro", priceLevel: "mid", strengths: ["online", "medical"], matchReasons: { cost: "Competitive monthly pricing", medical: "Board-certified providers", online: "Streamlined telehealth experience", personalized: "Provider-guided adjustments" } },
         { providerId: "trimrx", priceLevel: "low", strengths: ["cost", "online"], matchReasons: { cost: "Among the most affordable options", medical: "Clinical guidance included", online: "Simple online enrollment", personalized: "Flexible treatment plans" } },
