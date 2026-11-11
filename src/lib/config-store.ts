@@ -4319,6 +4319,7 @@ function buildInitialConfig(): SiteConfig {
     landingPages: [
       {
         slug: "semaglutide",
+        updatedAt: "2026-11-11", // verified-price table added
         seoTitle: "Best Semaglutide Providers 2026 (From $41/mo)",
         seoDescription: "Compare the top semaglutide weight loss providers of 2026. Side-by-side pricing, medical support, and treatment options for Ozempic and Wegovy alternatives.",
         h1: "Best Semaglutide Providers 2026",
@@ -4347,6 +4348,7 @@ function buildInitialConfig(): SiteConfig {
       },
       {
         slug: "tirzepatide",
+        updatedAt: "2026-11-11", // verified-price table added
         seoTitle: "Best Tirzepatide Providers 2026 (From $71/mo)",
         seoDescription: "Compare the top tirzepatide weight loss providers of 2026. Side-by-side pricing, medical support, and treatment options for Mounjaro and Zepbound alternatives.",
         h1: "Best Tirzepatide Providers 2026",
@@ -4375,6 +4377,7 @@ function buildInitialConfig(): SiteConfig {
       },
       {
         slug: "best-online-weight-loss-programs",
+        updatedAt: "2026-11-11", // verified-price table added
         seoTitle: "Best Online Weight Loss Programs of 2026",
         seoDescription: "Compare the best online weight loss programs of 2026. Clinician-guided GLP-1 treatment with semaglutide and tirzepatide from trusted telehealth providers.",
         h1: "Best Online Weight Loss Programs 2026",
@@ -4403,6 +4406,7 @@ function buildInitialConfig(): SiteConfig {
       },
       {
         slug: "best-weight-loss-injections",
+        updatedAt: "2026-11-11", // verified-price table added
         seoTitle: "Best Weight Loss Injections of 2026 (GLP-1)",
         seoDescription: "Compare the best weight loss injection providers of 2026. Semaglutide and tirzepatide injections with pricing, medical support, and home delivery options.",
         h1: "Best Weight Loss Injections 2026",
@@ -4431,6 +4435,7 @@ function buildInitialConfig(): SiteConfig {
       },
       {
         slug: "ozempic-for-weight-loss",
+        updatedAt: "2026-11-11", // verified-price table added
         seoTitle: "Ozempic for Weight Loss 2026: Providers & Alternatives",
         seoDescription: "Compare providers offering Ozempic (semaglutide) for weight loss. Pricing, eligibility, alternatives, and how to get started with online treatment.",
         h1: "Ozempic for Weight Loss",
@@ -4459,6 +4464,7 @@ function buildInitialConfig(): SiteConfig {
       },
       {
         slug: "wegovy-providers",
+        updatedAt: "2026-11-11", // verified-price table added
         seoTitle: "Best Wegovy Providers & Alternatives 2026",
         seoDescription: "Compare Wegovy providers and affordable semaglutide alternatives in 2026. Side-by-side pricing, clinical support, and treatment options for weight loss.",
         h1: "Best Wegovy Providers & Alternatives 2026",
@@ -4483,6 +4489,7 @@ function buildInitialConfig(): SiteConfig {
       },
       {
         slug: "cheapest-weight-loss-medication",
+        updatedAt: "2026-11-11", // verified-price table added
         seoTitle: "Cheapest Weight Loss Medication 2026 - GLP-1 From $41",
         seoDescription: "Find the most affordable GLP-1 weight loss medication in 2026. Compare compounded semaglutide and tirzepatide providers by price, with total cost breakdowns.",
         h1: "Most Affordable Weight Loss Medication 2026",

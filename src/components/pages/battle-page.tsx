@@ -38,6 +38,7 @@ import { ProductCarousel } from "@/components/product-carousel";
 import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/reddit-community";
 import { threeWayBySlug, THREE_WAY_COMPARISONS } from "@/lib/three-way";
 import { ThreeWayPageView, threeWayMetadata } from "@/components/pages/three-way-page";
+import { VerifiedPricesGlance } from "@/components/verified-prices-glance";
 
 // Code-side CTR overrides for the highest-performing "versus" pages. These
 // pages live in the CMS blob, so their stored titles can't be tuned from code -
@@ -544,6 +545,17 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           }}
           byline={<MedicalReviewBar path={`/${ctx.vertical}/${landing.slug}`} compact />}
         >
+          {/* Verified price table + key facts from the price index, above
+              the editorial sections on every weight-loss landing page
+              (content refresh for Bing/Copilot, Nov 11, 2026). */}
+          {ctx.vertical === "weight-loss" && (
+            <div className="mx-auto max-w-[1200px] px-4 pt-10">
+              <VerifiedPricesGlance
+                config={config}
+                focus={/semaglutide|wegovy|ozempic/.test(landing.slug) ? "semaglutide" : /tirzepatide|zepbound|mounjaro/.test(landing.slug) ? "tirzepatide" : "both"}
+              />
+            </div>
+          )}
           {landing.editorialSections && landing.editorialSections.length > 0 ? (
             <LandingEditorial sections={landing.editorialSections} />
           ) : (

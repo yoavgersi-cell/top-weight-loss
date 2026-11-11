@@ -51,7 +51,8 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
     links: [
       { label: "About", href: "/weight-loss/about" },
       { label: "Medical Review Policy", href: "/medical-review-policy" },
-      { label: "Our Medical Reviewer", href: "/reviewers/francheska-capistrano" },
+      { label: "Medical Reviewer: Francheska Capistrano", href: "/reviewers/francheska-capistrano" },
+      { label: "Medical Reviewer: Dr. B. Dolapihilla", href: "/reviewers/buddhini-dolapihilla" },
       { label: "Medical disclaimer", href: "/weight-loss/disclaimer" },
       { label: "Privacy Policy", href: "/weight-loss/privacy" },
       { label: "Terms of Use", href: "/weight-loss/terms" },

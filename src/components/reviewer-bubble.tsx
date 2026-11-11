@@ -135,16 +135,21 @@ export function ReviewerBubble({
           {portrait}
         </button>
       )}
-      <button
-        type="button"
-        onClick={toggle}
+      {/* A real link to the profile (crawlable, works without JS); a click
+          opens the in-page bubble instead of navigating. Nov 11, 2026. */}
+      <a
+        href={reviewer.profileHref}
+        onClick={(e) => {
+          e.preventDefault();
+          toggle();
+        }}
         aria-expanded={open}
         aria-haspopup="dialog"
         aria-controls={id}
-        className="-my-1 py-1 cursor-pointer font-bold text-[#191919] underline decoration-dotted decoration-gray-400 underline-offset-[3px] hover:text-[#0C4B75] hover:decoration-[#0C4B75]"
+        className="-my-1 inline-block py-1 cursor-pointer font-bold text-[#191919] underline decoration-dotted decoration-gray-400 underline-offset-[3px] hover:text-[#0C4B75] hover:decoration-[#0C4B75]"
       >
         {trigger}
-      </button>
+      </a>
 
       {open && pos && createPortal(
         <div
