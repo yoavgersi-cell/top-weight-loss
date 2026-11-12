@@ -199,6 +199,42 @@ export function LegitVerdictCta({ data, provider, linkPrefix = "" }: { data: Leg
   );
 }
 
+// ───── Inline text CTA ─────
+// A one-line, text-link way out to the provider's site between sections
+// (operator request, Nov 12, 2026: "more text links with CTA"). Plain
+// sentence, no box, so it reads as part of the article; tracked like every
+// other provider click. Copy is factual: nothing here states a price or a
+// timing we have not verified.
+export function LegitInlineCta({
+  provider,
+  text,
+  linkText,
+  position = 1,
+}: {
+  provider: Provider;
+  text: string;
+  linkText: string;
+  position?: number;
+}) {
+  return (
+    <p className="my-6 text-[15px] leading-relaxed text-gray-700">
+      {text}{" "}
+      <ProviderCta
+        href={provider.affiliateUrl}
+        providerName={provider.name}
+        providerSlug={provider.id}
+        position={position}
+        pageType="listing"
+        sourceFlow="main_comparison"
+        className="font-semibold text-[#0C4B75] underline underline-offset-2 hover:text-[#093d61]"
+      >
+        {linkText} →
+      </ProviderCta>
+      <span className="text-[12.5px] text-gray-400"> (opens {provider.name}&rsquo;s site)</span>
+    </p>
+  );
+}
+
 export function PricingCapture({ data, provider }: { data: LegitPageData; provider: Provider }) {
   const c = data.capture;
   if (!c) return null;
@@ -222,7 +258,20 @@ export function PricingCapture({ data, provider }: { data: LegitPageData; provid
           className="mx-auto max-h-[360px] w-auto max-w-full rounded-lg border border-gray-200 bg-white object-contain"
         />
       </a>
-      <figcaption className="px-5 py-3 text-[12.5px] leading-snug text-gray-500">Pricing page showed {c.shows}.</figcaption>
+      <figcaption className="px-5 py-3 text-[12.5px] leading-snug text-gray-500">
+        Pricing page showed {c.shows}.{" "}
+        <ProviderCta
+          href={provider.affiliateUrl}
+          providerName={provider.name}
+          providerSlug={provider.id}
+          position={1}
+          pageType="listing"
+          sourceFlow="main_comparison"
+          className="font-semibold text-[#0C4B75] hover:underline"
+        >
+          See today&rsquo;s price on {provider.name}&rsquo;s site →
+        </ProviderCta>
+      </figcaption>
     </figure>
   );
 }

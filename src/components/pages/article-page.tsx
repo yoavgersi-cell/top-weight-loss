@@ -23,7 +23,7 @@ import { TOP_TWO_PICK_IDS, TopProvidersBlock, TopTwoPicks } from "@/components/t
 import { TirzepatidePriceTable } from "@/components/tirzepatide-price-table";
 import { TrustpilotSummary } from "@/components/trustpilot-summary";
 import { PRICE_INDEX_VERIFIED } from "@/lib/price-index";
-import { LEGIT_PAGES, LegitChecklist, LegitVerdictCta, PricingCapture, ProviderPeek } from "@/components/legit-page-blocks";
+import { LEGIT_PAGES, LegitChecklist, LegitInlineCta, LegitVerdictCta, PricingCapture, ProviderPeek } from "@/components/legit-page-blocks";
 import { ProviderCta } from "@/components/provider-cta";
 import { PRICE_INDEX } from "@/lib/price-index";
 import type { TrustpilotReview } from "@/lib/config";
@@ -354,7 +354,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // and which on-page component the card sits directly below.
   const SUBJECT_CARD_PLACEMENT: Record<string, "afterReddit" | "afterCarousel"> =
     ctx.vertical === "weight-loss"
-      ? { "wellmedr-cost": "afterReddit", "is-embody-legit": "afterCarousel", "is-wellmedr-legit": "afterReddit" /* operator: higher up, Nov 11, 2026 */ }
+      ? { "wellmedr-cost": "afterReddit", "is-embody-legit": "afterReddit" /* operator: higher up, Nov 12, 2026 */, "is-wellmedr-legit": "afterReddit" /* operator: higher up, Nov 11, 2026 */ }
       : {};
   // Every "is-<provider>-legit" page carries its provider's own ranking card
   // (operator request, Nov 2, 2026): below the provider's plans carousel where
@@ -468,6 +468,11 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   const legitData = isWeightLoss ? LEGIT_PAGES[slug] : undefined;
   const legitProvider = legitData ? config.providers.find((p) => p.id === legitData.providerId) : undefined;
   const legitCaptureAfter = legitData ? article.sections.findIndex((s) => /^how much does/i.test(s.heading)) : -1;
+  // Text-link CTAs on every "is <brand> legit" page whose subject is a ranked
+  // provider with an outbound link (operator request, Nov 12, 2026), whether or
+  // not the page has a LEGIT_PAGES entry.
+  const legitCtaProvider = isLegitArticle && subjectProvider?.affiliateUrl ? subjectProvider : undefined;
+  const legitCostAt = legitCtaProvider ? article.sections.findIndex((s) => /^how much does/i.test(s.heading)) : -1;
   // Every provider-"alternatives" guide (altrx-alternatives, best-ozempic-
   // alternatives, etc.) gets a CRO block featuring our three GLP-1 partners
   // (embody, altRx, TrimRx) with the same comparison-page cards.
@@ -694,7 +699,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
           {/* Facebook group voices on legitimacy pages (Nov 10, 2026): same
               idea as the Reddit block, transcribed and anonymised. */}
           {isLegitArticle && subjectProvider && FACEBOOK_COMMUNITY_FEEDBACK[subjectProvider.id] && (
-            <FacebookCommunityBlock providerId={subjectProvider.id} providerName={subjectProvider.name} vertical={ctx.vertical} className="mb-8" />
+            <FacebookCommunityBlock providerId={subjectProvider.id} providerName={subjectProvider.name} vertical={ctx.vertical} className="mb-8" cta={subjectProvider} />
           )}
           {/* Direct answer up top (featured-snippet target) - code-injected so
               it also covers articles whose body lives in the CMS blob. */}
@@ -831,6 +836,32 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 {legitData && legitProvider && i === 0 && <ProviderPeek data={legitData} provider={legitProvider} />}
                 {legitData && legitProvider && i === legitCaptureAfter && (
                   <PricingCapture data={legitData} provider={legitProvider} />
+                )}
+                {/* Text-link ways out to the provider's site between sections
+                    (operator request, Nov 12, 2026): after the company-structure
+                    section, after the price capture, and after pros and cons. */}
+                {legitCtaProvider && i === 2 && (
+                  <LegitInlineCta
+                    provider={legitCtaProvider}
+                    text={`Prefer to see ${legitCtaProvider.name} for yourself before reading on?`}
+                    linkText={`Open ${legitCtaProvider.name}'s eligibility check`}
+                  />
+                )}
+                {legitCtaProvider && i === legitCostAt && legitCostAt > 0 && (
+                  <LegitInlineCta
+                    provider={legitCtaProvider}
+                    text="Prices and promotions move; the provider's checkout is the final word."
+                    linkText={`Check ${legitCtaProvider.name}'s current price`}
+                    position={2}
+                  />
+                )}
+                {legitCtaProvider && i === article.sections.length - 2 && (
+                  <LegitInlineCta
+                    provider={legitCtaProvider}
+                    text="If the pros outweigh the cons for you, the intake is the next step."
+                    linkText={`Start ${legitCtaProvider.name}'s online intake`}
+                    position={3}
+                  />
                 )}
                 {legitData && legitProvider && i === article.sections.length - 1 && (
                   <LegitVerdictCta data={legitData} provider={legitProvider} linkPrefix={ctx.prefix} />
