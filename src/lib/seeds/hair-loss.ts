@@ -2580,7 +2580,7 @@ export function hairLossSeed(base: SiteConfig): SiteConfig {
       ...base.hero,
       // Oct 22, 2026: the tophairloss.io hero cutout, so the ranking page and
       // the article mastheads carry an image like the other verticals.
-      backgroundImageUrl: "/hero-hair-loss.png",
+      backgroundImageUrl: "/hero-hair-loss.webp",
       imageAlt: "Man with thick, healthy hair",
       updatedLabel: RANKING_UPDATED_LABEL,
       h1: "Best Hair Loss Treatments & Providers of 2026",

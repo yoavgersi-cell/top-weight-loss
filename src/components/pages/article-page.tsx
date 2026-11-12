@@ -32,6 +32,7 @@ import { FacebookCommunityBlock, FACEBOOK_COMMUNITY_FEEDBACK } from "@/component
 import { notFound, permanentRedirect } from "next/navigation";
 import { relatedArticles as pickRelatedArticles } from "@/lib/related-content";
 import { GuideCluster, ED_GUIDES } from "@/components/guide-cluster";
+import { imgDims } from "@/lib/image-dims";
 
 // Guides whose top-3 provider cards sit in the middle of the article rather
 // than after the second section (operator request, Nov 6, 2026: the
@@ -1055,7 +1056,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                       <div className="flex items-center justify-center sm:w-[260px] sm:shrink-0">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                          src="/editorial-injection.png"
+                          src="/editorial-injection.webp" {...imgDims("/editorial-injection.webp")}
                           alt="Woman preparing GLP-1 weight loss injection"
                           className="h-[200px] w-full object-cover sm:h-full sm:rounded-r-xl"
                           loading="lazy"

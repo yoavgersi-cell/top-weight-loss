@@ -514,7 +514,7 @@ export const defaultConfig: SiteConfig = {
   disclosureText:
     "Some providers featured on this site may compensate us. This may affect the order and placement of listings but does not influence our editorial ratings or reviews.",
   hero: {
-    backgroundImageUrl: "/hero.png",
+    backgroundImageUrl: "/hero.webp",
     imageAlt: "Weight loss medications",
     ...WEIGHT_LOSS_HERO_TEXT,
   },

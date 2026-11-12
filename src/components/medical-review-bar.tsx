@@ -175,7 +175,12 @@ export function MedicalReviewBar({
                 <span className="hidden sm:inline">Reviews this site&rsquo;s health content for scientific accuracy · </span>
               </>
             )}
-            <span className="hidden sm:inline">Written by {writer}</span>
+            <span className="hidden sm:inline">
+              Written by{" "}
+              <Link href="/weight-loss/about" className="hover:text-[#0C4B75] hover:underline">
+                {writer}
+              </Link>
+            </span>
           </p>
         )}
         {secondary && pageReview && (

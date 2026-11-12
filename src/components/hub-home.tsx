@@ -9,6 +9,9 @@ import { getConfig } from "@/lib/config-store";
 import { ProviderCta } from "@/components/provider-cta";
 import { tpStarColor } from "@/components/trustpilot-rating";
 import { LatestGuides, newestGuides } from "@/components/latest-guides";
+import { PRICE_DATA_UPDATED } from "@/lib/price-index";
+import { ED_PRICE_DATA_UPDATED } from "@/lib/ed-price-index";
+import { imgDims } from "@/lib/image-dims";
 
 // ───── Category icons ─────
 // Hand-drawn two-tone line icons (outline + light fill), matching the
@@ -276,7 +279,7 @@ function ProviderMiniCard({
       <div className="flex items-center justify-between gap-3">
         <div className="flex h-[40px] w-[130px] items-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={provider.logo} alt={`${provider.name} logo`} className="max-h-full max-w-full object-contain object-left" />
+          <img src={provider.logo} {...imgDims(provider.logo)} alt={`${provider.name} logo`} className="max-h-full max-w-full object-contain object-left" />
         </div>
         <div className="flex flex-col items-center rounded-lg bg-[#0C4B75] px-2.5 py-1 text-white">
           <span className="text-[17px] font-extrabold leading-none">{position.score.toFixed(1)}</span>
@@ -397,6 +400,9 @@ export async function HubHome() {
             "@id": "https://www.treatmentshub.com/",
             url: "https://www.treatmentshub.com/",
             name: "Compare the Best Health & Wellness Services",
+            // Real freshness: the newest of the verified price indexes and
+            // the newest guide shown on this page (not a render timestamp).
+            dateModified: [PRICE_DATA_UPDATED, ED_PRICE_DATA_UPDATED, ...pinnedGuides.map((g) => g.article.updatedAt || g.article.publishedAt || "")].sort().at(-1),
             ...pageReviewSchema("/"),
           }),
         }}
@@ -515,7 +521,7 @@ export async function HubHome() {
                     className="mr-10 flex h-[26px] w-[84px] shrink-0 items-center justify-center opacity-55 grayscale sm:mr-16 sm:h-[28px] sm:w-[104px]"
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={p.logo} alt={`${p.name} logo`} className="max-h-full max-w-full object-contain" />
+                    <img src={p.logo} {...imgDims(p.logo)} alt={`${p.name} logo`} className="max-h-full max-w-full object-contain" />
                   </div>
                 ))}
               </div>

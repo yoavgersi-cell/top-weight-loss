@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Shield, Users, Award, Info } from "lucide-react";
 import type { SidebarConfig, Provider } from "@/lib/config";
 import { SIDEBAR_IMAGE_DIMS, sidebarWebp } from "@/lib/sidebar-images";
+import { imgDims } from "@/lib/image-dims";
 
 const ALL_BLOCKS = ["socialProof", "secureBadge", "featuredImage", "editorialReviews", "rankingMethodology", "disclosure"] as const;
 
@@ -85,7 +86,7 @@ export function Sidebar({ config, providers, linkPrefix = "" }: { config: Sideba
                 <Link key={p.id} href={`${linkPrefix}/reviews/${p.id}`} className="flex items-center gap-4 group">
                   <div className="flex h-[56px] w-[56px] shrink-0 items-center justify-center rounded-full bg-white border border-gray-200 shadow-[0_1px_2px_rgba(0,0,0,0.04)] overflow-hidden p-2">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={p.smallLogo || p.logo} alt={p.name} className="max-h-full max-w-full object-contain" />
+                    <img src={p.smallLogo || p.logo} {...imgDims(p.smallLogo || p.logo)} alt={p.name} className="max-h-full max-w-full object-contain" />
                   </div>
                   <div>
                     <p className="text-[15px] font-bold text-[#191919] group-hover:text-[#0B5E9E] transition-colors">{p.name}</p>
