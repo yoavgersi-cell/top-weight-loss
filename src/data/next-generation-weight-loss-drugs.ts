@@ -182,7 +182,7 @@ export const nextGenWeightLossDrugsArticle: Article = {
 <tr><td>Semaglutide 2.4 mg (Wegovy)</td><td>STEP UP (comparator arm)</td><td>72 weeks</td><td>15.6%</td><td>3.9%</td><td>Approved</td></tr>
 <tr><td>Oral semaglutide 25 mg (Wegovy pill)</td><td>OASIS 4</td><td>64 weeks</td><td>13.6%</td><td>2.2%</td><td>Approved</td></tr>
 <tr><td>Survodutide 6.0 mg</td><td>SYNCHRONIZE-1</td><td>76 weeks</td><td>13.0%</td><td>5.4%</td><td>Phase 3 reported</td></tr>
-<tr><td>Orforglipron 36 mg (Foundayo)</td><td>ATTAIN-1</td><td>72 weeks</td><td>11.2%</td><td>2.1%</td><td>Approved</td></tr>
+<tr><td>Orforglipron 17.2 mg (Foundayo, top approved strength)</td><td>ATTAIN-1 (as presented in the FDA label)</td><td>72 weeks</td><td>11.1%</td><td>2.1%</td><td>Approved</td></tr>
 <tr><td>Petrelintide, top dose</td><td>ZUPREME-1, phase 2</td><td>42 weeks</td><td>10.2%</td><td>1.4%</td><td>Moving to phase 3</td></tr>
 </tbody>
 </table>

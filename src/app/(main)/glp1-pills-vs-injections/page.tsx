@@ -158,7 +158,7 @@ const SECTIONS: Section[] = [
 <tr><td>Zepbound (tirzepatide 5 mg weekly injection)</td><td>SURMOUNT-1</td><td>72 weeks</td><td>-15.0%</td><td>-3.1%</td></tr>
 <tr><td>Wegovy (semaglutide 2.4 mg weekly injection)</td><td>${ext(SRC.step1, "STEP 1")}, NEJM, March 18, 2021</td><td>68 weeks</td><td><strong>-14.9%</strong></td><td>-2.4%</td></tr>
 <tr><td>Wegovy pill (oral semaglutide 25 mg daily)</td><td>${ext(SRC.oasis4, "OASIS 4")}, NEJM, September 2025</td><td>64 weeks</td><td><strong>-13.6%</strong></td><td>-2.2%</td></tr>
-<tr><td>Foundayo (orforglipron 36 mg daily)</td><td>${ext(SRC.attain1, "ATTAIN-1")}, NEJM, September 2025</td><td>72 weeks</td><td><strong>-11.2%</strong></td><td>-2.1%</td></tr>
+<tr><td>Foundayo (orforglipron 17.2 mg daily, the top approved strength)</td><td>${ext(SRC.attain1, "ATTAIN-1")}, NEJM, September 2025; figure as presented in the FDA label (rev. 7/2026)</td><td>72 weeks</td><td><strong>-11.1%</strong></td><td>-2.1%</td></tr>
 </tbody></table>
 <p>Two sets of numbers circulate for each of these trials, and both are real. The figures above count everyone who was randomized, whether or not they stayed on the drug (the treatment-policy or treatment-regimen analysis). Each manufacturer also publishes an on-treatment figure describing people who took the drug as directed to the end: 22.5% for tirzepatide at 15 mg, 16.6% for the Wegovy pill and 12.4% for Foundayo. Marketing tends to quote the second set; this guide uses the first, because it is closer to what a population of real patients experiences. They are not contradictory, just answers to different questions.</p>
 <h3>How to read the gap</h3>
@@ -175,7 +175,7 @@ const SECTIONS: Section[] = [
     body: `<p>For most people this is the difference they will feel every day, and it is where the "pills are more convenient" assumption needs unpacking.</p>
 <table><thead><tr><th>Product</th><th>How often</th><th>The rules</th></tr></thead><tbody>
 <tr><td>Wegovy pill</td><td>Once a day</td><td>On an empty stomach, with a small sip of water, then a 30-minute wait before food, drink or other medicines. Dose stepped up from 1.5 mg to 25 mg over the first months.</td></tr>
-<tr><td>Foundayo</td><td>Once a day</td><td>Any time of day, with or without food or water. Stepped up across 6, 12 and 36 mg tablets.</td></tr>
+<tr><td>Foundayo</td><td>Once a day</td><td>Any time of day, with or without food or water. Six tablet strengths from 0.8 mg to 17.2 mg, stepped up at least 30 days apart.</td></tr>
 <tr><td>Wegovy or Zepbound pen</td><td>Once a week</td><td>A self-injection under the skin from a pre-filled, factory-sealed pen. No daily routine; dose stepped up every few weeks.</td></tr>
 <tr><td>Compounded injection</td><td>Once a week</td><td>Drawn from a multi-dose vial into a syringe. You measure the dose in units yourself, which is where the FDA has recorded dosing errors.</td></tr>
 </tbody></table>

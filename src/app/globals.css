@@ -205,10 +205,21 @@ html[data-legacy] .legacy-name {
   color: #191919;
 }
 @media (max-width: 640px) {
+  /* Nov 12, 2026: cells wrap inside a minimum width instead of nowrap, so a
+     phone shows two or three readable columns and scrolls for the rest,
+     rather than one column and a long horizontal scroll. */
   .article-body table {
     display: block;
     overflow-x: auto;
-    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .article-body table th,
+  .article-body table td {
+    min-width: 9.5rem;
+    white-space: normal;
+  }
+  .article-body table caption {
+    white-space: normal;
   }
 }
 /* Provider-site screenshots embedded in articles (galleryFigureHtml). */
