@@ -19,7 +19,7 @@ import { MedicalDisclaimer } from "@/components/medical-disclaimer";
 import { ProductCarousel } from "@/components/product-carousel";
 import { TrustpilotCarousel, MixedTrustpilotCarousel, type MixedReviewItem } from "@/components/trustpilot-carousel";
 import { getReviewRecord } from "@/data/reviews";
-import { TopProvidersBlock, TopTwoPicks } from "@/components/top-providers-block";
+import { TOP_TWO_PICK_IDS, TopProvidersBlock, TopTwoPicks } from "@/components/top-providers-block";
 import { TirzepatidePriceTable } from "@/components/tirzepatide-price-table";
 import { TrustpilotSummary } from "@/components/trustpilot-summary";
 import { PRICE_INDEX_VERIFIED } from "@/lib/price-index";
@@ -878,6 +878,22 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 )}
 
                 {i === 0 && showTopTwo && <TopTwoPicks config={config} linkPrefix={ctx.prefix} />}
+                {/* ro-cost (operator request, Nov 12, 2026): the top-2 cards in
+                    the middle of the page, right after the year-one totals and
+                    before the route-vs-route comparison, where a cash payer has
+                    just seen that the medication line dominates the bill. */}
+                {slug === "ro-cost" && i === 2 && (
+                  <TopProvidersBlock
+                    config={config}
+                    linkPrefix={ctx.prefix}
+                    limit={2}
+                    providerIds={[...TOP_TWO_PICK_IDS]}
+                    order="given"
+                    introMode="short"
+                    title="Paying cash? Our top 2 picks"
+                    subtitle="Two all-inclusive compounded semaglutide plans (compounded medication is not FDA-approved) at a fraction of Ro's cash price - the same cards, verified pricing and ratings as our full comparison."
+                  />
+                )}
 
                 {/* Non-weight-loss guides: the vertical's top 3 ranked provider
                     cards between sections (operator request, Nov 3, 2026) -

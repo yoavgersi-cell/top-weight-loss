@@ -2,17 +2,18 @@ import Link from "next/link";
 import { imgDims } from "@/lib/image-dims";
 
 const tirzVsSemaRows: [string, string, string][] = [
-  ["Average Weight Loss in Trials", "~15.0%-20.9% average loss at 72 weeks (SURMOUNT)", "~14.9% mean loss at 68 weeks (STEP)"],
-  ["FDA Approval Status", "FDA-approved for chronic weight management (Zepbound®); also approved for type 2 diabetes as Mounjaro®", "FDA-approved for chronic weight management (Wegovy®); also approved for type 2 diabetes as Ozempic®"],
-  ["Dosing Schedule", "Weekly injection", "Weekly injection"],
+  ["Drug class", "Dual GIP/GLP-1 receptor agonist", "GLP-1 receptor agonist"],
+  ["Average Weight Loss in Trials", "~15.0%-20.9% average loss measured at the 72-week assessment point (SURMOUNT)", "~14.9% mean loss measured at the 68-week assessment point (STEP)"],
+  ["FDA Approval Status", "Zepbound® injection is FDA-approved for chronic weight management; the same molecule is approved for type 2 diabetes as Mounjaro® injection", "Wegovy® injection and Wegovy® tablets are FDA-approved for chronic weight management; the same molecule is approved for type 2 diabetes as Ozempic® injection"],
+  ["Dosing Schedule", "Once-weekly injection", "Once-weekly injection (Wegovy®, Ozempic®); Wegovy® tablets are taken once daily"],
   ["Best For", "Patients seeking greater average weight loss observed in clinical trials, when appropriate", "Patients seeking an FDA-approved GLP-1 therapy with extensive long-term safety and outcomes data"],
   ["Insurance Coverage", "May not always be covered by insurance yet", "Coverage varies; may be available on more formularies depending on insurer"],
 ];
 
 const wegovyVsOzempicRows: [string, string, string][] = [
-  ["Average Weight Loss in Trials", "~14.9% mean weight loss at 68 weeks in obesity-specific trials (STEP-1)", "5-10% weight loss observed in type 2 diabetes trials, depending on dose"],
-  ["FDA Approval Status", "Yes, FDA-approved specifically for weight management", "FDA-approved for type 2 diabetes; weight loss use is off-label"],
-  ["Dosing Schedule", "Weekly injection", "Weekly injection"],
+  ["Average Weight Loss in Trials", "~14.9% mean weight loss measured at the 68-week assessment point (STEP 1, injection)", "5-10% weight loss observed in type 2 diabetes trials, depending on dose"],
+  ["FDA Approval Status", "Wegovy® injection and Wegovy® tablets are FDA-approved for chronic weight management", "Ozempic® injection is FDA-approved for type 2 diabetes; use for weight loss is off-label"],
+  ["Dosing Schedule", "Once-weekly injection; Wegovy® tablets are taken once daily", "Once-weekly injection"],
   ["Best For", "Patients seeking an FDA-approved medication for long-term weight management", "Patients with diabetes who may also benefit from weight loss"],
   ["Insurance Coverage", "Coverage varies; often limited for obesity medications", "May have broader insurance coverage when prescribed for diabetes"],
 ];
@@ -239,6 +240,46 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         - can help you better understand the differences and make a more informed decision.
       </p>
 
+      {/* Safety section added at the medical reviewer's request, Nov 12, 2026.
+          Every statement is taken from the current FDA labels (Zepbound rev.
+          01/2026, Wegovy June 2026, read on DailyMed) or FDA's page on
+          compounded GLP-1 drugs; nothing here is our own clinical claim. */}
+      <section id="safety" className="mb-8 rounded-2xl border border-amber-200 bg-amber-50/40 p-5 sm:p-6" aria-labelledby="safety-heading">
+        <h2 id="safety-heading" className="mb-2 text-[22px] font-bold text-[#191919]">
+          Safety: what to know before you start
+        </h2>
+        <p className="mb-4 text-[15px] text-gray-700">
+          Semaglutide and tirzepatide are prescription medicines. The points below come from the <a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee06186f-2aa3-4990-a760-757579d8f77b" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#0C4B75] hover:underline">Wegovy label</a> and the <a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=487cd7e7-434c-4925-99fa-aa80b1cc776b" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#0C4B75] hover:underline">Zepbound label</a> and from the <a href="https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#0C4B75] hover:underline">FDA guidance on compounded GLP-1 drugs</a>; a licensed prescriber decides whether either medicine is right for you.
+        </p>
+
+        <h3 className="mb-1.5 text-[16px] font-bold text-[#191919]">Side effects</h3>
+        <ul className="mb-4 list-disc space-y-1 pl-6 text-[15px]">
+          <li><strong>Common:</strong> nausea, vomiting, diarrhoea and constipation, most often when starting or after a dose increase.</li>
+          <li><strong>Serious but less common:</strong> pancreatitis, gallbladder disease, and kidney injury from dehydration after prolonged vomiting or diarrhoea.</li>
+          <li><strong>Seek urgent assessment</strong> for persistent severe abdominal pain, an inability to keep fluids down, or signs of an allergic reaction (swelling of the face, lips or throat, trouble breathing, a spreading rash).</li>
+        </ul>
+
+        <h3 className="mb-1.5 text-[16px] font-bold text-[#191919]">Who should not take them</h3>
+        <ul className="mb-4 list-disc space-y-1 pl-6 text-[15px]">
+          <li>Anyone with a personal or family history of medullary thyroid carcinoma (MTC) or Multiple Endocrine Neoplasia syndrome type 2 (MEN 2), the boxed warning on both labels.</li>
+          <li>Anyone who has had a serious allergic reaction to the medicine.</li>
+          <li>Severe gastroparesis is a reason these medicines are not recommended.</li>
+        </ul>
+
+        <h3 className="mb-1.5 text-[16px] font-bold text-[#191919]">Pregnancy and contraception</h3>
+        <ul className="mb-4 list-disc space-y-1 pl-6 text-[15px]">
+          <li>These medicines should not be used for weight loss during pregnancy. Semaglutide should be stopped at least two months before a planned pregnancy.</li>
+          <li>Tirzepatide can reduce the effectiveness of oral contraceptives: use a non-oral method, or add barrier contraception, for four weeks after starting and for four weeks after every dose increase.</li>
+        </ul>
+
+        <h3 className="mb-1.5 text-[16px] font-bold text-[#191919]">Dosing and medication review</h3>
+        <ul className="list-disc space-y-1 pl-6 text-[15px]">
+          <li>Doses are increased step by step, and only under prescriber supervision.</li>
+          <li>With compounded injections, your instructions should state the dose in milligrams, the concentration of the vial, and the matching syringe volume. Syringe &ldquo;units&rdquo; alone cause confusion: FDA has received reports of dosing errors, some requiring hospital care, from patients measuring the wrong dose.</li>
+          <li>If you take insulin or a sulfonylurea, those doses may need review because of the risk of low blood sugar (hypoglycaemia).</li>
+        </ul>
+      </section>
+
       <hr className="mb-8 border-gray-200" />
 
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">
@@ -292,21 +333,21 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
           </thead>
           <tbody className="divide-y divide-gray-100">
             <tr>
-              <td className="px-4 py-3 font-medium">Semaglutide (Wegovy)</td>
-              <td className="px-4 py-3">~15% of body weight</td>
-              <td className="px-4 py-3">68 weeks (STEP trials)</td>
-              <td className="hidden sm:table-cell px-4 py-3">From $199/month</td>
+              <td className="px-4 py-3 font-medium">Semaglutide injection (Wegovy®)<span className="block text-xs font-normal text-gray-500">GLP-1 receptor agonist</span></td>
+              <td className="px-4 py-3">~15% of body weight (average)</td>
+              <td className="px-4 py-3">Measured at 68 weeks (STEP trials)</td>
+              <td className="hidden sm:table-cell px-4 py-3">From $41/month (verified)</td>
             </tr>
             <tr className="bg-gray-50/50">
-              <td className="px-4 py-3 font-medium">Tirzepatide (Zepbound)</td>
-              <td className="px-4 py-3">Up to 22.5% of body weight</td>
-              <td className="px-4 py-3">72 weeks (SURMOUNT trials)</td>
-              <td className="hidden sm:table-cell px-4 py-3">From $300/month</td>
+              <td className="px-4 py-3 font-medium">Tirzepatide injection (Zepbound®)<span className="block text-xs font-normal text-gray-500">Dual GIP/GLP-1 receptor agonist</span></td>
+              <td className="px-4 py-3">Up to 22.5% of body weight (average at the top dose)</td>
+              <td className="px-4 py-3">Measured at 72 weeks (SURMOUNT trials)</td>
+              <td className="hidden sm:table-cell px-4 py-3">From $69/month (verified)</td>
             </tr>
             <tr>
-              <td className="px-4 py-3 font-medium">Liraglutide (Saxenda)</td>
-              <td className="px-4 py-3">~5-8% of body weight</td>
-              <td className="px-4 py-3">56 weeks</td>
+              <td className="px-4 py-3 font-medium">Liraglutide injection (Saxenda®)<span className="block text-xs font-normal text-gray-500">GLP-1 receptor agonist</span></td>
+              <td className="px-4 py-3">~5-8% of body weight (average)</td>
+              <td className="px-4 py-3">Measured at 56 weeks (SCALE)</td>
               <td className="hidden sm:table-cell px-4 py-3">$1,300+/month (brand only)</td>
             </tr>
           </tbody>
@@ -314,8 +355,10 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       </div>
       <p className="mb-4 text-[13px] text-gray-400">
         Source: Published results from STEP (semaglutide), SURMOUNT (tirzepatide), and SCALE (liraglutide)
-        clinical trials. Individual results vary. Compounded pricing reflects typical telehealth provider
-        rates as of August 2026.
+        clinical trials; the percentages are trial averages measured at each trial&apos;s assessment point, and
+        individual response and timing vary. Compounded prices are the lowest listed rates in our verified
+        price index as of November 2026 (semaglutide: welludr, 12-month plan; tirzepatide: Collective, plus a
+        $199/year membership).
       </p>
 
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">
@@ -367,9 +410,12 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         How Long Does It Take for GLP-1 Medication to Work?
       </h3>
       <p className="mb-3">
-        Most patients notice reduced appetite within the first 1-2 weeks of starting GLP-1 medication.
-        Visible weight loss typically begins around weeks 4-8. Clinical trial results show maximum
-        weight loss at 68-72 weeks of treatment. Read our{" "}
+        Many people notice a change in appetite within the first weeks, but response and timing vary
+        from person to person, and there is no fixed week by which visible weight loss begins. The
+        68-week (STEP) and 72-week (SURMOUNT) figures quoted on this page are the points at which those
+        trials measured <em>average</em> results; they are study assessment points, not a universal time
+        at which weight loss stops. Doses are increased step by step under prescriber supervision, and
+        the trials measured results at the maintenance doses. Read our{" "}
         <Link href="/weight-loss/articles/how-long-for-semaglutide-to-work" className="font-semibold text-[#0C4B75] hover:underline">
           detailed semaglutide timeline
         </Link>.

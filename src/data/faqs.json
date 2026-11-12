@@ -9,7 +9,7 @@
   },
   {
     "question": "What kind of weight loss can I expect?",
-    "answer": "Results vary by medication and individual factors. Clinical trials show average weight loss of 15-20% of body weight with semaglutide (Ozempic/Wegovy) and up to 22% with tirzepatide (Mounjaro) over 68-72 weeks. Oral medications like Contrave typically show 5-10% weight loss."
+    "answer": "Results vary by medication and from person to person. In clinical trials, average weight loss was about 15% of body weight with semaglutide (Wegovy injection, measured at 68 weeks in STEP) and up to about 22% with tirzepatide, a dual GIP/GLP-1 receptor agonist (Zepbound injection, measured at 72 weeks in SURMOUNT). Those weeks are the trials' assessment points, not a universal time when weight loss stops, and individual response and timing differ. Oral medications like Contrave typically show 5-10% weight loss."
   },
   {
     "question": "Are these medications covered by insurance?",
@@ -17,7 +17,7 @@
   },
   {
     "question": "What are the common side effects?",
-    "answer": "The most common side effects of GLP-1 medications include nausea, vomiting, diarrhea, and constipation, especially when starting or increasing doses. These typically improve over time. Serious but rare side effects can include pancreatitis and gallbladder issues. Always discuss risks with your healthcare provider."
+    "answer": "The most common side effects of GLP-1 medications are nausea, vomiting, diarrhea and constipation, especially when starting or increasing doses; these typically ease over time. Serious but less common effects include pancreatitis, gallbladder disease and kidney injury from dehydration. Persistent severe abdominal pain, an inability to keep fluids down, or an allergic reaction needs urgent assessment. These medicines are not for anyone with a personal or family history of medullary thyroid carcinoma or MEN 2, and are not recommended in severe gastroparesis. Always discuss risks with your prescriber."
   },
   {
     "question": "How long do I need to take weight-loss medication?",
