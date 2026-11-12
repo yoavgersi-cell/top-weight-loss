@@ -2,6 +2,8 @@ import Link from "next/link";
 import { getConfig } from "@/lib/config-store";
 import { threeWayBySlug } from "@/lib/three-way";
 import { WEIGHT_LOSS_MIGRATED } from "@/lib/site-context";
+import { SOCIAL_PROFILES } from "@/lib/social";
+import { SocialLinks } from "@/components/social-links";
 
 // Umbrella-brand footer. Links point at real routes only; category links are
 // absolute (brand-level) rather than scoped to the current vertical. The brand
@@ -57,7 +59,7 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
       { label: "Privacy Policy", href: "/weight-loss/privacy" },
       { label: "Terms of Use", href: "/weight-loss/terms" },
       { label: "Contact", href: "mailto:contact@treatmentshub.com" },
-      { label: "LinkedIn", href: "https://www.linkedin.com/company/treatments-hub" },
+      ...SOCIAL_PROFILES.map((p) => ({ label: p.label, href: p.href })),
     ],
   },
 ];
@@ -183,11 +185,14 @@ export async function Footer() {
             comparisons to help you make informed decisions.
           </p>
           <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
-            <p className="text-[12px] text-gray-400">
-              &copy; {new Date().getFullYear()}{" "}
-              {!WEIGHT_LOSS_MIGRATED && <span className="legacy-name">TopWeightLoss</span>}
-              <span className="hub-name">Treatments Hub</span>. All rights reserved.
-            </p>
+            <div className="flex items-center gap-3">
+              <p className="text-[12px] text-gray-400">
+                &copy; {new Date().getFullYear()}{" "}
+                {!WEIGHT_LOSS_MIGRATED && <span className="legacy-name">TopWeightLoss</span>}
+                <span className="hub-name">Treatments Hub</span>. All rights reserved.
+              </p>
+              <SocialLinks className="-my-2" />
+            </div>
             <p className="text-[11px] text-gray-400">
               {!WEIGHT_LOSS_MIGRATED && <span className="legacy-name">topweightloss.io</span>}
               <span className="hub-name">treatmentshub.com</span> is not a medical provider. Always consult a licensed physician.
