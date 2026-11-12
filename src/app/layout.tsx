@@ -1,3 +1,4 @@
+import { ORG_SAME_AS } from "@/lib/social";
 import type { Metadata } from "next";
 import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import { Geist } from "next/font/google";
@@ -137,7 +138,7 @@ export default function RootLayout({
               contactPoint: { "@type": "ContactPoint", email: "contact@treatmentshub.com", contactType: "customer support", availableLanguage: "English" },
               logo: "https://www.treatmentshub.com/treatmentshub.png",
               description: "Independent guides and provider comparisons across weight loss, hair loss, TRT, HRT, online therapy and ED - expert reviews, pricing research, and side-by-side comparisons.",
-              sameAs: ["https://www.linkedin.com/company/treatments-hub"],
+              sameAs: ORG_SAME_AS,
               // Operator-supplied, Oct 18, 2026. Year only: no founding day on record.
               foundingDate: "2026",
             }),

@@ -18,6 +18,8 @@ import { getConfig } from "@/lib/config-store";
 import { PRICE_INDEX, PRICE_INDEX_VERIFIED, PRICE_CHANGELOG } from "@/lib/price-index";
 import { NOINDEX_WL_REVIEW_SLUGS, NOINDEX_ARTICLE_SLUGS } from "@/lib/config";
 import { REDDIT_COMMUNITY_FEEDBACK } from "@/components/reddit-community";
+import { ORG_SAME_AS } from "@/lib/social";
+import { SocialLinks } from "@/components/social-links";
 
 export const revalidate = 60;
 
@@ -96,7 +98,7 @@ export default async function AboutPage() {
       areaServed: { "@type": "Country", name: "United States" },
       email: "contact@treatmentshub.com",
       contactPoint: { "@type": "ContactPoint", email: "contact@treatmentshub.com", contactType: "customer support", availableLanguage: "English" },
-      sameAs: ["https://www.linkedin.com/company/treatments-hub"],
+      sameAs: ORG_SAME_AS,
       foundingDate: "2026",
       knowsAbout: ["GLP-1 weight-loss treatment", "Telehealth providers", "Compounded semaglutide", "Compounded tirzepatide", "Hair loss treatment", "Testosterone replacement therapy", "Hormone replacement therapy", "Online therapy"],
       employee: REVIEWERS.map(reviewerPersonSchema),
@@ -453,6 +455,17 @@ export default async function AboutPage() {
               )}
             </div>
           ))}
+        </section>
+
+        {/* ───── Follow ───── */}
+        <section className="mb-14 flex flex-col gap-3 rounded-2xl border border-gray-200 bg-white p-5 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h2 className="text-[16px] font-bold text-[#191919]">Follow Treatments Hub</h2>
+            <p className="mt-1 text-[14px] leading-[1.7] text-gray-600">
+              Price changes, new provider reviews and the occasional explainer, on the channels where we publish.
+            </p>
+          </div>
+          <SocialLinks withLabels className="shrink-0" />
         </section>
 
         {/* ───── CTA ───── */}
