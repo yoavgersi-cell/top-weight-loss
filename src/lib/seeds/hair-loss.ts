@@ -1175,9 +1175,9 @@ const articles: ArticleData[] = [
   // and no supplement recommendations (house rule).
   {
     slug: "iron-deficiency-hair-loss",
-    title: "Can Iron Deficiency Cause Hair Loss? What to Know (2026)",
+    title: "Iron Deficiency Hair Loss: The Blood Test That Settles It",
     description:
-      "Low iron is one of the most common and most fixable causes of hair shedding, especially in women. How the link works, the test that settles it, and recovery.",
+      "Low iron is a common, fixable cause of shedding, especially in women. The blood test to ask for, what the number means and how long regrowth takes.",
     category: "Science",
     readTime: "7 min read",
     publishedAt: "2026-08-30",

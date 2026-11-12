@@ -64,21 +64,21 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
   // "is welludr a scam" 2/2, "welludr scam" 1/1), so the titles name the
   // question the searcher is actually typing. The pages answer it directly.
   "is-embody-legit": {
-    title: "Is embody Legit or a Scam? Pharmacy, Pricing & Reviews",
+    title: "Is embody Legit or a Scam? We Checked the Pharmacy & Refunds",
     description:
-      "Is embody legit or a scam? LegitScript-certified 503A pharmacies, licensed-provider prescribing, $49 semaglutide, $99 tirzepatide, refund if not approved.",
+      "Is embody legit or a scam? LegitScript-certified 503A pharmacies, a licensed prescriber and a full refund if you're not approved. Plus the complaints, honestly.",
   },
   "is-wellmedr-legit": {
-    title: "Is welludr (formerly wellmedr) Legit or a Scam? Reviews",
+    title: "Is welludr (wellmedr) Legit or a Scam? Reviews Checked",
     description:
-      "Is welludr (formerly wellmedr) legit or a scam? A verified 4.6 on Trustpilot across 2,679 reviews, what the complaints say, the $41-$71 pricing and our verdict.",
+      "Is welludr (wellmedr) legit or a scam? Yes, with one catch. We verified the prescriber, the US pharmacy, the $41-$71 prices and the 4.6 Trustpilot score.",
   },
   "is-altrx-legit": {
     // Keeps the keyword-rich SERP snippet (prices, flat-dose) even though the
     // visible on-page dek was shortened to a clean editorial line.
-    title: "Is altRx Legit? Pricing, Prescriptions & What to Know (2026)",
+    title: "Is altRx Legit or a Scam? What We Found Before You Pay $89",
     description:
-      "altRx sells $89 compounded plans and $1,149+ brand-name Ozempic side by side. We examined who prescribes, how the flat-dose pricing works, and the catches.",
+      "Is altRx legit? A real telehealth provider with a licensed prescriber review, $89 compounded plans and brand-name Ozempic at $1,149+. The catches to know first.",
   },
   "tirzepatide-vs-semaglutide": {
     title: "Tirzepatide vs Semaglutide (2026): Results & Prices",

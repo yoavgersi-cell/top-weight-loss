@@ -976,9 +976,9 @@ const articles: ArticleData[] = [
   },
   {
     slug: "is-talkiatry-legit",
-    title: "Is Talkiatry Legit in 2026? The Honest Answer",
+    title: "Is Talkiatry Legit? Why Real Doctors Get a 2.5 Trustpilot",
     description:
-      "Talkiatry is a legitimate psychiatrist-led practice billed through insurance, and its 2.5 Trustpilot average is real too. What the split record means for you.",
+      "Talkiatry is a real, insurance-billed psychiatry practice, and its 2.5 Trustpilot score is real too. What the complaints are about and whether they'd hit you.",
     category: "Advice",
     readTime: "7 min read",
     publishedAt: UPDATED,
