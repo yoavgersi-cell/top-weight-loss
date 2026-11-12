@@ -2,6 +2,7 @@ import { Check, Truck } from "lucide-react";
 import { RatingBadge } from "./rating-badge";
 import { ProviderCta } from "./provider-cta";
 import { SocialProofBubble } from "./social-proof-bubble";
+import { imgDims } from "@/lib/image-dims";
 
 // The "Free & Discreet Shipping" line on the #1 card is a factual claim, so it
 // shows only for providers whose shipping terms we have verified as such. A
@@ -61,6 +62,7 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={product.logo}
+                {...imgDims(product.logo)}
               alt={`${product.name} logo`}
               className="max-h-full max-w-full object-contain"
             />
@@ -121,6 +123,7 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={product.logo}
+                {...imgDims(product.logo)}
               alt={`${product.name} logo`}
               className="max-h-full max-w-full object-contain"
             />

@@ -29,6 +29,7 @@ function HideChrome() {
 }
 import { ComparisonCard } from "@/components/comparison-card";
 import type { SiteConfig, Provider, QuizConfig, RankingPageConfig } from "@/lib/config";
+import { imgDims } from "@/lib/image-dims";
 
 /** Provider merged with quiz-generated display data */
 interface QuizMatchedProvider extends Provider {
@@ -304,6 +305,7 @@ export default function FindYourMatchPage() {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={p.logo}
+                {...imgDims(p.logo)}
                       alt={p.name}
                       className="max-h-full max-w-full object-contain opacity-50 grayscale"
                     />
@@ -367,6 +369,7 @@ export default function FindYourMatchPage() {
               <img
                 key={loadingIdx}
                 src={currentProvider.logo}
+                {...imgDims(currentProvider.logo)}
                 alt={currentProvider.name}
                 className="max-h-[36px] max-w-[130px] object-contain grayscale brightness-[1.3] opacity-0 animate-[logoFade_1s_ease-in-out_forwards]"
               />

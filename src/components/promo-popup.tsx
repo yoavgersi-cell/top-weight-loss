@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import { trackProviderClick } from "@/lib/analytics";
 import type { PromoPopupSpec } from "@/lib/promo-popups";
+import { imgDims } from "@/lib/image-dims";
 
 const APPEAR_AFTER_MS = 15000;
 const pad = (n: number) => String(n).padStart(2, "0");
@@ -95,7 +96,7 @@ export function PromoPopup({
         className="relative block"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={image} alt={spec.alt} className="block h-auto w-full rounded-[24px] shadow-2xl" />
+        <img src={image} {...imgDims(image)} alt={spec.alt} className="block h-auto w-full rounded-[24px] shadow-2xl" />
         {/* Live countdown overlay - sits over the creative's printed timer boxes */}
         {timer &&
           countdown(secs).map((v, i) => (

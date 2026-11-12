@@ -8,6 +8,7 @@ import { Clock, ArrowRight, Trophy } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { VERTICALS, DEFAULT_ROBOTS } from "@/lib/config";
 import { type SiteContext, canonicalUrl, hubLink, verticalNameInProse } from "@/lib/site-context";
+import { imgDims } from "@/lib/image-dims";
 
 function verticalName(id: string): string {
   return VERTICALS.find((v) => v.id === id)?.name ?? "Treatment";
@@ -149,6 +150,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                   src={articles[0].image}
+                {...imgDims(articles[0].image)}
                   alt={articles[0].imageAlt || articles[0].title}
                   className="absolute inset-0 h-full w-full object-cover"
                   loading="lazy"
@@ -202,6 +204,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
                     src={article.image}
+                {...imgDims(article.image)}
                     alt={article.imageAlt || article.title}
                     className="absolute inset-0 h-full w-full object-cover"
                     loading="lazy"
@@ -306,6 +309,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={p1.logo}
+                {...imgDims(p1.logo)}
                         alt={`${p1.name} logo`}
                         className="max-h-full max-w-[110px] object-contain"
                       />
@@ -317,6 +321,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={p2.logo}
+                {...imgDims(p2.logo)}
                         alt={`${p2.name} logo`}
                         className="max-h-full max-w-[110px] object-contain"
                       />

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { imgDims } from "@/lib/image-dims";
 
 const tirzVsSemaRows: [string, string, string][] = [
   ["Average Weight Loss in Trials", "~15.0%-20.9% average loss at 72 weeks (SURMOUNT)", "~14.9% mean loss at 68 weeks (STEP)"],
@@ -195,7 +196,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
           <div className="flex items-center justify-center sm:w-[260px] sm:shrink-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/editorial-injection.png"
+              src="/editorial-injection.webp" {...imgDims("/editorial-injection.webp")}
               alt="Woman preparing GLP-1 weight loss injection"
               className="h-[200px] w-full object-cover sm:h-full sm:rounded-r-xl"
               loading="lazy"

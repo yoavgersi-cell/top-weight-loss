@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ProviderCta } from "./provider-cta";
 import type { SidebarConfigData, Provider, ArticleData } from "@/lib/config";
+import { imgDims } from "@/lib/image-dims";
 
 interface ContentSidebarProps {
   config: SidebarConfigData;
@@ -41,6 +42,7 @@ export function ContentSidebar({ config, providers, articles, pageType, sourceFl
                           {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img
                             src={provider.logo}
+                {...imgDims(provider.logo)}
                             alt={provider.name}
                             className="max-h-full max-w-full object-contain"
                           />
@@ -149,7 +151,7 @@ export function ContentSidebar({ config, providers, articles, pageType, sourceFl
                     <div key={provider.id} className="flex items-center gap-3">
                       <div className="flex h-[28px] w-[90px] shrink-0 items-center">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={provider.logo} alt={provider.name} className="max-h-full max-w-full object-contain" />
+                        <img src={provider.logo} {...imgDims(provider.logo)} alt={provider.name} className="max-h-full max-w-full object-contain" />
                       </div>
                       <div className="flex-1" />
                       <ProviderCta

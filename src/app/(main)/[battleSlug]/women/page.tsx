@@ -183,7 +183,7 @@ export default async function WomenHairLossPage({ params }: { params: Promise<{ 
     ...config,
     hero: {
       ...config.hero,
-      backgroundImageUrl: "/hero-hair-loss-women.png",
+      backgroundImageUrl: "/hero-hair-loss-women.webp",
       imageAlt: "Woman with thick, healthy hair",
       h1: "Best Hair Loss Treatments for Women in 2026",
       h2: "Compare the top women's hair loss treatments, side by side",

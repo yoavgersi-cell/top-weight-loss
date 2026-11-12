@@ -8,6 +8,7 @@ import {
 import { ProviderCta } from "@/components/provider-cta";
 import type { Provider } from "@/lib/config";
 import { AFFILIATE_PROVIDER_IDS } from "@/lib/config";
+import { imgDims } from "@/lib/image-dims";
 
 // ───── Product carousel ─────
 // Google-Shopping-style product cards in a scroll-snap strip: product image,
@@ -92,6 +93,7 @@ function ProductCard({
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={product.image}
+              {...imgDims(product.image)}
               alt={`${provider.name} ${product.name}`}
               loading="lazy"
               className="max-h-full max-w-full object-contain"

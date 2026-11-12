@@ -39,6 +39,7 @@ import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/re
 import { threeWayBySlug, THREE_WAY_COMPARISONS } from "@/lib/three-way";
 import { ThreeWayPageView, threeWayMetadata } from "@/components/pages/three-way-page";
 import { VerifiedPricesGlance } from "@/components/verified-prices-glance";
+import { imgDims } from "@/lib/image-dims";
 
 // Code-side CTR overrides for the highest-performing "versus" pages. These
 // pages live in the CMS blob, so their stored titles can't be tuned from code -
@@ -883,6 +884,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={verdictWinner.logo}
+                {...imgDims(verdictWinner.logo)}
                     alt={`${verdictWinner.name} logo`}
                     className="max-h-full max-w-full object-contain object-left"
                   />
@@ -1006,7 +1008,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 <div className="mb-3 flex items-center justify-between">
                   <div className="flex h-[40px] w-[110px] items-center">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={provider.logo} alt={`${provider.name} logo`} className="max-h-full max-w-full object-contain" />
+                    <img src={provider.logo} {...imgDims(provider.logo)} alt={`${provider.name} logo`} className="max-h-full max-w-full object-contain" />
                   </div>
                 </div>
 
@@ -1095,7 +1097,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                         <div className="flex flex-wrap items-center gap-4">
                           <div className="flex h-[44px] w-[130px] items-center">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={provider.logo} alt={`${provider.name} logo`} className="max-h-full max-w-full object-contain" />
+                            <img src={provider.logo} {...imgDims(provider.logo)} alt={`${provider.name} logo`} className="max-h-full max-w-full object-contain" />
                           </div>
                           {SHOW_TRUSTPILOT_WIDGETS && provider.trustpilotRating && (
                             <div className="border-l border-gray-200 pl-4">
@@ -1526,6 +1528,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={provider.logo}
+                {...imgDims(provider.logo)}
                     alt={`${provider.name} logo`}
                     className="max-h-full max-w-full object-contain"
                   />
