@@ -2110,9 +2110,9 @@ export const articles: Article[] = [
     slug: "best-tirzepatide-online",
     image: "/article-images/best-tirzepatide-online.webp",
     imageAlt: "A tirzepatide injection pen on a desk with a tape measure, in front of a laptop showing a clinician on a video call",
-    title: "Best Tirzepatide Online (2026): 4 Verified Prices From $71",
+    title: "Cheapest Tirzepatide Online 2026: 4 Verified Prices From $71",
     description:
-      "Where to get tirzepatide online in 2026: four licensed GLP-1 telehealth providers with verified prices from $71/month compounded, plus Zepbound routes.",
+      "We read each price on the provider's own site: tirzepatide $71 at welludr, $99 at embody, $129 at Eden, from $149 at altRx. The plan terms behind each number.",
     category: "Guide",
     readTime: "9 min read",
     publishedAt: "2026-08-30",
@@ -2674,9 +2674,9 @@ export const articles: Article[] = [
   },
   {
     slug: "foundayo-vs-wegovy-pill",
-    title: "Foundayo vs Wegovy Pill (2026): Results, Price & Choice",
+    title: "Foundayo vs Wegovy Pill: Results, Price & the Catch (2026)",
     description:
-      "The two FDA-approved GLP-1 pills compared: trial results, the empty-stomach rule only one has, prices from $149, $25 insurance offers and Medicare's $50 copay.",
+      "Two FDA-approved GLP-1 pills: one lost more weight in trials, the other has no food rules. Reported prices from $149, $25 with coverage, $50 on Medicare.",
     category: "Guide",
     readTime: "15 min read",
     publishedAt: "2026-10-09",

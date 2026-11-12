@@ -101,9 +101,9 @@ export const brandClusterArticles: Article[] = [
   },
   {
     slug: "ro-cost",
-    title: "Ro Weight Loss Cost (2026): Membership Plus Medication",
+    title: "ro Weight Loss Cost 2026: The Membership Math Nobody Shows",
     description:
-      "Ro charges a Body membership ($39 the first month, then $74-$149/month) plus the medication: Wegovy pill from $149, Zepbound from $299. The full year-one math.",
+      "ro charges a $39 first-month membership, then $74-$149, plus the medication on top: Wegovy pill from $149, Zepbound from $299. Your real year-one total.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-10-04",
@@ -468,9 +468,9 @@ export const brandClusterArticles: Article[] = [
   },
   {
     slug: "trimrx-alternatives",
-    title: "Best TrimRx Alternatives (2026): 6 Cheaper or Better Options",
+    title: "6 TrimRx Alternatives (2026): Cheaper, Faster or Brand-Name",
     description:
-      "Six TrimRx (Trim Rx) alternatives sorted by what you want to change: GLP-1 price, tirzepatide cost, delivery speed, brand-name access or support depth.",
+      "Leaving TrimRx? Six alternatives sorted by what you want fixed: lower GLP-1 price (from $41), faster delivery (1-2 days), brand-name Ozempic or deeper support.",
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-08-12",

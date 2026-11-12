@@ -37,12 +37,12 @@ const HERO_COLOR = "#EDF2F8";
 const READ_TIME = "16 min read";
 
 export const metadata: Metadata = {
-  title: "GLP-1 Pills vs Injections (2026): Results, Cost & Routine",
+  title: "GLP-1 Pills vs Injections: Which Loses More Weight? (2026)",
   description:
-    "GLP-1 pills vs injections in 2026: the Wegovy pill and Foundayo against Wegovy and Zepbound on trial results, price by route, side effects and daily routine.",
+    "Wegovy pill vs Foundayo vs the injections: trial results side by side, the real price by route, side effects and the daily routine. The numbers decide it.",
   alternates: { canonical: CANONICAL },
   openGraph: { images: [DEFAULT_OG_IMAGE],
-    title: "GLP-1 Pills vs Injections (2026): Results, Cost & Routine",
+    title: "GLP-1 Pills vs Injections: Which Loses More Weight? (2026)",
     description:
       "The two FDA-approved GLP-1 pills against the weekly injections: trial results, verified prices, side effects and how to choose.",
     url: CANONICAL,
@@ -245,7 +245,7 @@ export default async function Glp1PillsVsInjectionsPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "GLP-1 Pills vs Injections (2026): Results, Cost & Routine",
+    headline: "GLP-1 Pills vs Injections: Which Loses More Weight? (2026)",
     description: metadata.description,
     datePublished: PAGE_PUBLISHED,
     dateModified: PAGE_UPDATED,

@@ -103,18 +103,18 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // "Weight Loss" stays in the title for Google, where "embody weight loss
     // reviews" is the page's main query, and "Legit" covers the legit/scam
     // long-tails that convert at 50-100% on Bing.
-    title: "embody Weight Loss Reviews 2026: Cost & Is It Legit?",
+    title: "embody Reviews 2026: $49 Semaglutide in 1-2 Days? Verified",
     description:
-      "embody reviews: {prices}, 1-2 day shipping, LegitScript-certified, refund if not approved. Is embody legit?",
+      "embody: flat $49 semaglutide, $99 tirzepatide, 1-2 day shipping, refund if not approved. What its 10,689 Trustpilot reviews actually complain about.",
   },
   medvi: {
     // Decoupled from the "is medvi legit" query (Sep 2026): that phrase lived in
     // BOTH this title and the is-medvi-legit article title, splitting the signal.
     // The review now owns "medvi reviews / cost / verdict"; the article owns the
     // legitimacy query. Revert if the split doesn't resolve post-migration-swap.
-    title: "Medvi GLP-1 Reviews 2026: Cost, Support & Verdict",
+    title: "Medvi Reviews 2026: $99 All-In GLP-1 Plan, Honestly Rated",
     description:
-      "Medvi reviews: {prices}, all-inclusive with video visits and personal support. Cost, pros, cons and our verdict.",
+      "Medvi's $99 semaglutide and $166 tirzepatide include video visits, a dietician and coaching. 4.3 on Trustpilot (15,097 reviews). What you get and what you don't",
   },
   sprout: {
     title: "Sprout Reviews 2026: Is It Legit? GLP-1 Cost & Verdict",
@@ -122,16 +122,16 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "Sprout reviews: {prices}, brand-name Wegovy available. Is Sprout legit? Pricing, pros & cons.",
   },
   altrx: {
-    title: "altRx Reviews 2026: Is It Legit? Cost, Complaints & Verdict",
+    title: "altRx Reviews 2026: What $89 Really Buys (Read First)",
     description:
-      "altRx reviews: {prices}, plus brand-name Zepbound & Wegovy and Buy Now, Pay Later. Is altRx legit? Pros & cons.",
+      "We checked altRx's $89 semaglutide and $149 tirzepatide plans, the $1,149 brand-name Ozempic shelf, shipping and the complaints. The catches other reviews skip.",
   },
   ro: {
     // Title matches the generated shared-provider title byte-for-byte - this
     // entry exists only to put "GLP-1" in the description (desc-only pass).
-    title: "ro Weight Loss Review 2026: Cost, Results & Is It Worth It?",
+    title: "ro Weight Loss Review 2026: Worth the Membership Fee?",
     description:
-      "ro weight loss review: membership from $39 the first month plus brand-name Wegovy or Zepbound billed separately; insurance can apply. Pros and cons.",
+      "ro bills a membership ($39, then $74-$149) plus brand-name Wegovy or Zepbound; insurance can apply. 3.9 on Trustpilot from 7,380 reviews. Who should skip it.",
   },
   // Oct 25, 2026: two operator-added providers without Trustpilot profiles.
   luvo: {
@@ -167,9 +167,9 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   wellmedr: {
     // Rebranded Oct 2026; the old name stays in the title so searches for
     // "wellmedr reviews" still match this page.
-    title: "welludr (formerly wellmedr) Reviews 2026: Cost & Verdict",
+    title: "welludr Reviews 2026: $41 GLP-1 and the 12-Month Catch",
     description:
-      "welludr (formerly wellmedr) reviews: {prices}, 1M+ patients, weight-loss warranty. Is welludr legit? Pros and cons.",
+      "welludr (ex-wellmedr) sells semaglutide at $41 and tirzepatide at $71, flat at every dose, 4.6 on Trustpilot (2,679 reviews). The plan term to read first.",
   },
   healthrx: {
     title: "HealthRx Reviews 2026: Is It Legit? $97/mo GLP-1 Examined",

@@ -16,12 +16,12 @@ export const revalidate = 60;
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/retatrutide-weight-loss";
 
 export const metadata: Metadata = {
-  title: "Retatrutide for Weight Loss (2026): Results & Status",
+  title: "Retatrutide for Weight Loss: ~24% in Trials. Can You Get It?",
   description:
-    "Retatrutide ('reta') is the next-generation triple agonist (GLP-1, GIP, glucagon) that hit ~24% weight loss in trials. How it compares and if you can get it.",
+    "The triple agonist that hit about 24% weight loss in trials: where it stands with the FDA, what is really sold as 'reta' online, and what you can get today.",
   alternates: { canonical: CANONICAL },
   openGraph: { images: [DEFAULT_OG_IMAGE],
-    title: "Retatrutide for Weight Loss (2026): Results & Status",
+    title: "Retatrutide for Weight Loss: ~24% in Trials. Can You Get It?",
     description:
       "The triple-agonist weight loss drug that reached ~24% in trials - explained, with an honest look at availability.",
     url: CANONICAL,
@@ -51,7 +51,7 @@ export default async function RetatrutidePage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Retatrutide for Weight Loss (2026): Results & Status",
+    headline: "Retatrutide for Weight Loss: ~24% in Trials. Can You Get It?",
     description: metadata.description,
     datePublished: "2026-08-09",
     dateModified: "2026-08-09",
