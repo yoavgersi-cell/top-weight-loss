@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ShieldCheck } from "lucide-react";
+import { ArrowUpRight, ShieldCheck } from "lucide-react";
 import { getExtraPageReviewers, getPageReview, getReviewer, reviewerPath, type Reviewer } from "@/data/reviewers";
 import { ReviewerBubble, type ReviewerBubbleData } from "@/components/reviewer-bubble";
 
@@ -7,7 +7,9 @@ import { ReviewerBubble, type ReviewerBubbleData } from "@/components/reviewer-b
 // The one byline that sits under the H1/intro on every content page. Light
 // by design: no card, a 32px portrait, two short lines. Two honest modes,
 // decided by the review log:
-//   - logged:   "Reviewed for medical accuracy by <name>" + the review date
+//   - logged:   "Medically reviewed by <name>" + the review date (Nov 12, 2026: name
+//               first, green check after it, muted second line, fact-checking line
+//               muted without a date, "How we review" on its own line)
 //   - unlogged: "Medical reviewer: <name>" - names the site's reviewer as
 //               staff without claiming this page was reviewed.
 // Oct 22, 2026: the name and portrait open an in-page bubble (see
@@ -119,7 +121,8 @@ export function MedicalReviewBar({
     </a>
   );
   const policy = (
-    <Link href="/medical-review-policy" className="font-medium text-[#0C4B75] hover:underline">
+    <Link href="/medical-review-policy" className="inline-flex items-center gap-1 font-medium text-[#0C4B75] hover:underline">
+      <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.25} aria-hidden />
       How we review
     </Link>
   );
@@ -133,14 +136,12 @@ export function MedicalReviewBar({
           {/* Phones: the name leads and the "reviewed for medical accuracy"
               wording moves to the second line, so the strip is two lines
               instead of three. Desktop keeps the full sentence. */}
-          <span className={compact ? "" : "inline"}>
-            <ShieldCheck className="mr-1 inline h-[14px] w-[14px] align-[-2px] text-emerald-600" strokeWidth={2.25} />
-            <span className={compact ? "" : "hidden sm:inline"}>{review ? "Reviewed for medical accuracy by " : "Medical reviewer: "}</span>
-          </span>
+          <span className={compact ? "" : "hidden sm:inline"}>{review ? "Medically reviewed by " : "Medical reviewer: "}</span>
           {/* Name + LinkedIn mark kept together (nowrap) so the mark never
               drops onto a line of its own; the job title wraps after it. */}
           <span className="whitespace-nowrap">
             <ReviewerBubble reviewer={bubble} trigger={nameText} />
+            <ShieldCheck className="ml-1 inline h-[14px] w-[14px] align-[-2px] text-emerald-600" strokeWidth={2.25} aria-label="Verified reviewer" />
             {linkedin}
           </span>
           {!compact && (reviewer.bylineTitle ?? reviewer.jobTitle) && (
@@ -160,37 +161,33 @@ export function MedicalReviewBar({
           )}
         </p>
         {!compact && (
-          <p className="mt-0.5 text-[12.5px] text-gray-500">
+          <p className="mt-0.5 text-[12.5px] leading-[1.45] text-gray-500">
             {review ? (
               <>
                 <span className="sm:hidden">Medically reviewed </span>
                 <span className="hidden sm:inline">Reviewed </span>
                 <time dateTime={review.reviewedAt}>{formatDate(review.reviewedAt)}</time>
-                {" · "}
+                <span className="hidden sm:inline"> · </span>
               </>
             ) : (
               <>
-                <span className="sm:hidden">Medical reviewer · </span>
+                <span className="sm:hidden">Medical reviewer</span>
                 <span className="hidden sm:inline">Reviews this site&rsquo;s health content for scientific accuracy · </span>
               </>
             )}
-            <span className="hidden sm:inline">
-              Written by {writer}
-              {" · "}
-            </span>
-            {policy}
+            <span className="hidden sm:inline">Written by {writer}</span>
           </p>
         )}
         {secondary && pageReview && (
-          <p className="mt-1.5 text-[12.5px] leading-[1.45] text-gray-600">
+          <p className="mt-0.5 text-[12px] leading-[1.45] text-gray-500">
             Medical fact-checking by{" "}
-            <Link href={reviewerPath(secondary)} className="font-semibold text-[#0C4B75] hover:underline">
+            <Link href={reviewerPath(secondary)} className="font-medium text-gray-600 hover:text-[#0C4B75] hover:underline">
               {secondary.name}
               {secondary.credentials.length > 0 && <span className="whitespace-nowrap">, {secondary.credentials.join(", ")}</span>}
             </Link>
-            <span className="text-gray-500"> · <time dateTime={pageReview.reviewedAt}>{formatDate(pageReview.reviewedAt)}</time></span>
           </p>
         )}
+        {!compact && <p className="mt-1.5 text-[12.5px] leading-none">{policy}</p>}
       </div>
     </div>
     </>
