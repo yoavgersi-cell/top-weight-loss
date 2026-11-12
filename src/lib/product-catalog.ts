@@ -50,6 +50,20 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     image: "/products/wellmedr-semaglutide.webp",
   },
   {
+    // Collective: read from collective.org on Nov 11, 2026 (medication price;
+    // a $199/year membership with a 21-day free trial is billed separately).
+    id: "collective-semaglutide",
+    providerId: "collective",
+    name: "Compounded Semaglutide Injection",
+    medication: "semaglutide",
+    format: "injection",
+    fdaStatus: "compounded",
+    price: "$59",
+    priceNote: "same price at any dose; month to month; plus $199/year membership after a 21-day free trial",
+    shipping: "2-day express cold shipping included",
+    image: "/products/collective-semaglutide.webp",
+  },
+  {
     id: "embody-semaglutide",
     providerId: "embody",
     name: "Compounded Semaglutide Injection",
@@ -202,6 +216,18 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     priceNote: "shipped every 4 weeks; pre-Black Friday sale seen Oct 28, 2026",
     shipping: "Free discreet shipping, 3-5 day delivery",
     image: "/products/wellmedr-tirzepatide.webp",
+  },
+  {
+    id: "collective-tirzepatide",
+    providerId: "collective",
+    name: "Compounded Tirzepatide Injection",
+    medication: "tirzepatide",
+    format: "injection",
+    fdaStatus: "compounded",
+    price: "$69",
+    priceNote: "same price at any dose; month to month; plus $199/year membership after a 21-day free trial",
+    shipping: "2-day express cold shipping included",
+    image: "/products/collective-tirzepatide.webp",
   },
   {
     id: "embody-tirzepatide",
