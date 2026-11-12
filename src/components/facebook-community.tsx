@@ -1,11 +1,13 @@
-import { MessageCircle, Users } from "lucide-react";
+import { Users } from "lucide-react";
+import { FacebookPost } from "@/components/facebook-post";
 
 // ───── Community voices: Facebook group discussions ─────
 // Operator-supplied screenshots of Facebook group threads, transcribed as text.
 // Privacy rules (Nov 10, 2026): no real names, photos or profile links - every
 // commenter is "Group member" plus a role tag taken only from their own words
-// ("3 months in", "family member"); the group is described generically; no
-// link out (private groups). Quotes are verbatim, lightly trimmed with "…";
+// ("3 months in", "family member"); the group is named only by its generic
+// descriptive name (operator's Nov 12, 2026 brief), never linked (private
+// groups). Quotes are verbatim, lightly trimmed with "…";
 // medication doses are removed from quotes. Positives and complaints are both
 // kept; the "What we found" line is written from the displayed quotes only.
 // No ratings and no Review/AggregateRating schema: a screenshot cannot support
@@ -20,8 +22,12 @@ export type FacebookComment = {
 export type FacebookThread = {
   /** Generic description of the group, never its exact name. */
   group: string;
+  /** Display name for the post header (generic descriptive name, no link). */
+  groupName: string;
   /** Date the operator supplied the screenshot (YYYY-MM-DD). */
   capturedAt: string;
+  /** Date the post was made (YYYY-MM-DD), from the capture ("4d" before a Nov 10 capture = Nov 6). */
+  postedAt: string;
   /** Relative age of the post as displayed in the capture, e.g. "4 days before capture". */
   age?: string;
   /** The original post, verbatim. */
@@ -46,7 +52,9 @@ export const FACEBOOK_COMMUNITY_FEEDBACK: Record<
       // group; post shown as "4d" old. Names removed; one dose figure removed.
       {
         group: "A Zepbound weight-loss support group",
+        groupName: "Zepbound Weight Loss Support Group",
         capturedAt: "2026-11-10",
+        postedAt: "2026-11-06",
         age: "4 days before capture",
         topic: "Results / shipping / first order",
         question: "I'm looking into going with Embody. Anybody have good or bad reviews while using this company?",
@@ -76,7 +84,9 @@ export const FACEBOOK_COMMUNITY_FEEDBACK: Record<
       // mention of another provider the member was considering are not shown.
       {
         group: "The same Zepbound weight-loss support group",
+        groupName: "Zepbound Weight Loss Support Group",
         capturedAt: "2026-11-10",
+        postedAt: "2026-10-28",
         age: "Posted Oct 28, 2026",
         topic: "Flat price / membership / shipping",
         question: "Does anyone go through Embody? Give me your input please and thank u!",
@@ -97,10 +107,6 @@ export const FACEBOOK_COMMUNITY_FEEDBACK: Record<
     ],
   },
 };
-
-function formatDate(iso: string): string {
-  return new Date(iso + "T00:00:00Z").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
-}
 
 export function FacebookCommunityBlock({
   providerId,
@@ -126,39 +132,12 @@ export function FacebookCommunityBlock({
         </h2>
       </div>
       <p className="mb-5 max-w-[680px] text-[14.5px] leading-relaxed text-gray-700">
-        Real discussions from Facebook support groups, transcribed as text with names removed. Positives and
-        complaints both included, in members&rsquo; own words.
+        Real conversations from Facebook support groups. Shared anonymously, including both positive and
+        negative experiences.
       </p>
 
       {data.threads.map((t, i) => (
-        <article key={i} className="mb-6 overflow-hidden rounded-2xl border border-gray-200 bg-white">
-          <div className="border-b border-gray-100 bg-[#F7F8FA] px-5 py-3 text-[12.5px] text-gray-500">
-            <span className="font-semibold text-gray-700">{t.group}</span>
-            {" · "}captured {formatDate(t.capturedAt)}
-            {t.age && <> · post {t.age}</>}
-            {t.topic && <span className="ml-2 rounded-full bg-white px-2 py-0.5 text-[11px] font-semibold text-gray-600 ring-1 ring-gray-200">{t.topic}</span>}
-          </div>
-          <div className="px-5 pt-4">
-            <p className="text-[12.5px] font-semibold text-gray-500">Original post · Group member</p>
-            <blockquote className="mt-1 text-[16px] font-semibold leading-snug text-[#191919]">&ldquo;{t.question}&rdquo;</blockquote>
-            {typeof t.commentCount === "number" && (
-              <p className="mt-2 flex items-center gap-1.5 text-[12.5px] text-gray-500">
-                <MessageCircle className="h-3.5 w-3.5" strokeWidth={2} /> {t.commentCount} comments
-              </p>
-            )}
-          </div>
-          <ul className="space-y-3 px-5 py-4">
-            {t.comments.map((c, j) => (
-              <li key={j} className="rounded-2xl rounded-tl-md bg-[#F0F2F5] px-4 py-3">
-                <p className="mb-1 flex flex-wrap items-center gap-1.5 text-[12.5px] font-semibold text-gray-700">
-                  Group member
-                  {c.role && <span className="rounded-full bg-white px-2 py-0.5 text-[11px] font-semibold text-[#0C4B75] ring-1 ring-[#0C4B75]/15">{c.role}</span>}
-                </p>
-                <blockquote className="text-[14.5px] leading-relaxed text-gray-800">{c.body}</blockquote>
-              </li>
-            ))}
-          </ul>
-        </article>
+        <FacebookPost key={i} thread={t} />
       ))}
 
       <div className="rounded-xl border-l-[3px] border-[#0C4B75] bg-[#0C4B75]/[0.04] px-4 py-3">
