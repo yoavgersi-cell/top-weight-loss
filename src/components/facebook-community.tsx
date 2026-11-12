@@ -1,5 +1,6 @@
 import { Users } from "lucide-react";
 import { FacebookPost } from "@/components/facebook-post";
+import { ProviderCta } from "@/components/provider-cta";
 
 // ───── Community voices: Facebook group discussions ─────
 // Operator-supplied screenshots of Facebook group threads, transcribed as text.
@@ -113,11 +114,14 @@ export function FacebookCommunityBlock({
   providerName,
   vertical,
   className = "",
+  cta,
 }: {
   providerId: string;
   providerName: string;
   vertical: string;
   className?: string;
+  /** When given, a text link out to the provider's site under "What we found" (operator request, Nov 12, 2026). */
+  cta?: { id: string; name: string; affiliateUrl: string };
 }) {
   const data = FACEBOOK_COMMUNITY_FEEDBACK[providerId];
   if (!data || data.vertical !== vertical) return null;
@@ -143,6 +147,22 @@ export function FacebookCommunityBlock({
       <div className="rounded-xl border-l-[3px] border-[#0C4B75] bg-[#0C4B75]/[0.04] px-4 py-3">
         <p className="text-[12px] font-bold uppercase tracking-wider text-[#0C4B75]">What we found</p>
         <p className="mt-1 text-[14px] leading-relaxed text-gray-800">{data.themes}</p>
+        {cta && (
+          <p className="mt-2 text-[14px] leading-relaxed text-gray-700">
+            Want to check the price and plan for yourself?{" "}
+            <ProviderCta
+              href={cta.affiliateUrl}
+              providerName={cta.name}
+              providerSlug={cta.id}
+              position={1}
+              pageType="listing"
+              sourceFlow="main_comparison"
+              className="font-semibold text-[#0C4B75] underline underline-offset-2 hover:text-[#093d61]"
+            >
+              Visit {cta.name}&rsquo;s site →
+            </ProviderCta>
+          </p>
+        )}
       </div>
       <p className="mt-3 text-[11.5px] leading-relaxed text-gray-400">
         Quotes are transcribed from screenshots of Facebook group discussions supplied to our editors; names,
