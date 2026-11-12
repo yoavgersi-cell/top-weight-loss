@@ -1,4 +1,4 @@
-import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
+import { SHOW_TRUSTPILOT_WIDGETS, TRUSTPILOT_WIDGET_ARTICLE_SLUGS } from "@/lib/trustpilot-display";
 import type { Metadata } from "next";
 import { readableHeroColor } from "@/lib/hero-color";
 import { SiblingLinks, CATEGORY_LABEL, reviewSiblings, comparisonSiblings, articleSiblings, pickSiblings } from "@/components/sibling-links";
@@ -330,6 +330,9 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   const hideCarouselForSubject = isHrtArticle && isProviderGuide && !!subjectProvider && !subjectHasProducts;
   const subjectTrustpilot =
     subjectProvider?.trustpilotReviews?.length ? subjectProvider : undefined;
+  // Full Trustpilot section on the one article the operator allowed (Nov 12,
+  // 2026); every other page keeps the sitewide flag.
+  const forceTrustpilot = TRUSTPILOT_WIDGET_ARTICLE_SLUGS.has(slug);
   const subjectReddit =
     ctx.vertical === "weight-loss" && subjectProvider && REDDIT_COMMUNITY_FEEDBACK[subjectProvider.id]
       ? subjectProvider
@@ -976,6 +979,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                       rating={subjectTrustpilot.trustpilotRating}
                       reviewCount={subjectTrustpilot.trustpilotReviewCount}
                       record={getReviewRecord(ctx.vertical, subjectTrustpilot.id)}
+                      force={forceTrustpilot}
                     />
                     <TrustpilotCarousel
                       providerName={subjectTrustpilot.name}
@@ -984,6 +988,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                       rating={subjectTrustpilot.trustpilotRating}
                       reviewCount={subjectTrustpilot.trustpilotReviewCount}
                       profileUrl={getReviewRecord(ctx.vertical, subjectTrustpilot.id)?.profileUrl}
+                      force={forceTrustpilot}
                     />
                   </div>
                 )}

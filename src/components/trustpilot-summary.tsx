@@ -35,6 +35,7 @@ export function TrustpilotSummary({
   record,
   methodologyHref = "/weight-loss/how-we-rank#customer-reviews",
   className = "",
+  force = false,
 }: {
   providerName: string;
   reviews: TrustpilotReview[];
@@ -44,12 +45,14 @@ export function TrustpilotSummary({
   record?: ProviderReviewRecord;
   methodologyHref?: string;
   className?: string;
+  /** Show the full widget (star bars, "Trustpilot summary" label) on a page allowed by TRUSTPILOT_WIDGET_ARTICLE_SLUGS even while the sitewide flag is off. */
+  force?: boolean;
 }) {
   // With the Trustpilot widgets hidden (Nov 6, 2026) this still renders as a
   // plain-text citation - the source named in words, no logo, colours, star
   // bars or review cards (operator decision, Nov 8, 2026: the summary is a
   // factual citation, and the paragraph AI engines quote for review queries).
-  const widgets = SHOW_TRUSTPILOT_WIDGETS;
+  const widgets = SHOW_TRUSTPILOT_WIDGETS || force;
   const n = reviews.length;
   if (n === 0) return null;
   const dist = [5, 4, 3, 2, 1].map((s) => ({ star: s, count: reviews.filter((r) => r.rating === s).length }));
@@ -108,7 +111,7 @@ export function TrustpilotSummary({
           <div key={d.star} className="flex items-center gap-2 text-[12px] text-gray-500">
             <span className="w-[42px] shrink-0 font-semibold text-gray-700">{d.star} star</span>
             <div className="h-2 flex-1 overflow-hidden rounded-full bg-gray-100">
-              <div className="h-full rounded-full" style={{ width: `${pct(d.count)}%`, backgroundColor: tpStarColor(d.star) }} />
+              <div className="h-full rounded-full" style={{ width: `${pct(d.count)}%`, backgroundColor: tpStarColor(d.star, force) }} />
             </div>
             <span className="w-[56px] shrink-0 text-right [font-variant-numeric:tabular-nums]">
               {d.count} ({pct(d.count)}%)

@@ -16,11 +16,11 @@ function TrustpilotStar({ className }: { className?: string }) {
   );
 }
 
-function TrustpilotStars({ rating, boxClass = "h-5 w-5" }: { rating: number; boxClass?: string }) {
+function TrustpilotStars({ rating, boxClass = "h-5 w-5", force = false }: { rating: number; boxClass?: string; force?: boolean }) {
   // Fractional fill so e.g. 3.6 shows three full boxes + a ~60% box, like
   // Trustpilot - and Trustpilot's colour for that score (green only at 5 stars
   // / 4.3+, light green, yellow, orange, red below).
-  const color = tpStarColor(rating);
+  const color = tpStarColor(rating, force);
   return (
     <div className="flex gap-0.5">
       {[...Array(5)].map((_, i) => {
@@ -63,11 +63,11 @@ function TrustpilotWordmark({ starClass = "h-5 w-5", textClass = "text-[17px]" }
 
 export type ReviewCardProvider = { name: string; href: string; total: number };
 
-function ReviewCard({ r, provider }: { r: TrustpilotReview; provider?: ReviewCardProvider }) {
+function ReviewCard({ r, provider, force = false }: { r: TrustpilotReview; provider?: ReviewCardProvider; force?: boolean }) {
   return (
     <div className="flex h-full flex-col rounded-xl border border-gray-200 bg-white p-4">
       <div className="mb-2.5 flex items-center justify-between gap-2">
-        <TrustpilotStars rating={r.rating} boxClass="h-4 w-4" />
+        <TrustpilotStars rating={r.rating} boxClass="h-4 w-4" force={force} />
         {r.date && (
           <span className="shrink-0 text-[11px] text-gray-400">{r.date}</span>
         )}
@@ -241,7 +241,7 @@ export function MixedTrustpilotCarousel({ items, title, subtitle }: { items: Mix
 }
 
 export function TrustpilotCarousel(props: Parameters<typeof TrustpilotCarouselView>[0]) {
-  if (!SHOW_TRUSTPILOT_WIDGETS) return null;
+  if (!SHOW_TRUSTPILOT_WIDGETS && !props.force) return null;
   return <TrustpilotCarouselView {...props} />;
 }
 
@@ -252,6 +252,7 @@ function TrustpilotCarouselView({
   rating,
   reviewCount,
   profileUrl,
+  force = false,
 }: {
   providerName: string;
   providerLogo?: string;
@@ -260,6 +261,8 @@ function TrustpilotCarouselView({
   reviewCount?: string;
   /** The provider's own Trustpilot profile (from the review registry); renders a "see all" link. */
   profileUrl?: string;
+  /** Render on a page allowed by TRUSTPILOT_WIDGET_ARTICLE_SLUGS even while the sitewide flag is off. */
+  force?: boolean;
 }) {
   const total = reviews.length;
   // Reader-controlled order. Default is highest rated first (newest within a
@@ -291,7 +294,7 @@ function TrustpilotCarouselView({
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
           {rating && numericRating !== null && !isNaN(numericRating) ? (
             <div className="flex items-center gap-2">
-              <TrustpilotStars rating={numericRating} boxClass="h-[20px] w-[20px]" />
+              <TrustpilotStars rating={numericRating} boxClass="h-[20px] w-[20px]" force={force} />
               {reviewCount && (
                 <span className="text-[12px] text-gray-400">({reviewCount} reviews)</span>
               )}
@@ -336,7 +339,7 @@ function TrustpilotCarouselView({
         </div>
       </div>
 
-      <ReviewPager key={sort} cards={sorted.map((r, i) => ({ key: `${sort}-${i}`, node: <ReviewCard r={r} /> }))} />
+      <ReviewPager key={sort} cards={sorted.map((r, i) => ({ key: `${sort}-${i}`, node: <ReviewCard r={r} force={force} /> }))} />
       <p className="mt-3 text-[11.5px] leading-relaxed text-gray-400">Reviews are individual experiences quoted verbatim from public Trustpilot profiles, names shortened; any weight-loss result mentioned is one person&rsquo;s and is not typical - results vary. Trustpilot is a trademark of Trustpilot A/S and is not affiliated with this site.</p>
     </div>
   );
