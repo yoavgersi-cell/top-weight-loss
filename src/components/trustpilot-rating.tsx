@@ -9,8 +9,8 @@ const TP_GREEN = "#00B67A";
 // Trustpilot's own star colour scale, keyed by the score being shown: a
 // 5-star review or a 4.3+ TrustScore is green, 3.8-4.2 light green, 2.8-3.7
 // yellow, 1.8-2.7 orange, below that red. Shared by every star renderer.
-export function tpStarColor(rating: number): string {
-  if (!SHOW_TRUSTPILOT_WIDGETS) return "#94A3B8";
+export function tpStarColor(rating: number, force = false): string {
+  if (!SHOW_TRUSTPILOT_WIDGETS && !force) return "#94A3B8";
   if (rating >= 4.3) return TP_GREEN;
   if (rating >= 3.8) return "#73CF11";
   if (rating >= 2.8) return "#FFCE00";
