@@ -121,7 +121,7 @@ export function MedicalReviewBar({
     </a>
   );
   const policy = (
-    <Link href="/medical-review-policy" className="inline-flex items-center gap-1 font-medium text-[#0C4B75] hover:underline">
+    <Link href="/medical-review-policy" className="inline-flex items-center gap-1 font-normal text-[#0C4B75] hover:underline sm:font-medium">
       <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.25} aria-hidden />
       How we review
     </Link>
@@ -164,7 +164,7 @@ export function MedicalReviewBar({
           <p className="mt-0.5 text-[12.5px] leading-[1.45] text-gray-500">
             {review ? (
               <>
-                <span className="sm:hidden">Medically reviewed </span>
+                <span className="sm:hidden">Medically reviewed on </span>
                 <span className="hidden sm:inline">Reviewed </span>
                 <time dateTime={review.reviewedAt}>{formatDate(review.reviewedAt)}</time>
                 <span className="hidden sm:inline"> · </span>
@@ -179,15 +179,15 @@ export function MedicalReviewBar({
           </p>
         )}
         {secondary && pageReview && (
-          <p className="mt-0.5 text-[12px] leading-[1.45] text-gray-500">
+          <p className="mt-px text-[11px] leading-[1.45] text-gray-400 sm:mt-0.5 sm:text-[12px] sm:text-gray-500">
             Medical fact-checking by{" "}
-            <Link href={reviewerPath(secondary)} className="font-medium text-gray-600 hover:text-[#0C4B75] hover:underline">
+            <Link href={reviewerPath(secondary)} className="font-medium text-gray-500 hover:text-[#0C4B75] hover:underline sm:text-gray-600">
               {secondary.name}
               {secondary.credentials.length > 0 && <span className="whitespace-nowrap">, {secondary.credentials.join(", ")}</span>}
             </Link>
           </p>
         )}
-        {!compact && <p className="mt-1.5 text-[12.5px] leading-none">{policy}</p>}
+        {!compact && <p className="mt-1 text-[12px] leading-none sm:mt-1.5 sm:text-[12.5px]">{policy}</p>}
       </div>
     </div>
     </>
