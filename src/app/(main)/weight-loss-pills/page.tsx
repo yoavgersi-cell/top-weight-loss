@@ -1,3 +1,5 @@
+import { imgDims } from "@/lib/image-dims";
+import { AffiliateNote } from "@/components/affiliate-note";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import { pageReviewSchema } from "@/data/reviewers";
@@ -272,6 +274,7 @@ export default async function WeightLossPillsPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    image: ["https://www.treatmentshub.com/og-default.png"],
     headline: "Weight Loss Pills 2026: Wegovy Pill, Foundayo, Rybelsus & Every Other Prescription Option",
     description: metadata.description,
     datePublished: PAGE_PUBLISHED,
@@ -279,7 +282,7 @@ export default async function WeightLossPillsPage() {
     wordCount,
     ...pageReviewSchema("/weight-loss/weight-loss-pills"),
     author: { "@type": "Organization", name: "Treatments Hub Research Team", url: "https://www.treatmentshub.com" },
-    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com", logo: { "@type": "ImageObject", url: "https://www.treatmentshub.com/treatmentshub.png" } },
     mainEntityOfPage: CANONICAL,
   };
   const breadcrumbSchema = {
@@ -305,7 +308,7 @@ export default async function WeightLossPillsPage() {
           <div key={p.id} className="flex flex-col rounded-xl border border-gray-200 bg-white p-5">
             <div className="mb-4 flex h-[34px] w-[120px] items-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={p.logo} alt={`${p.name} logo`} className="max-h-full max-w-full object-contain" loading="lazy" decoding="async" />
+              <img {...imgDims(p.logo)} src={p.logo} alt={`${p.name} logo`} className="max-h-full max-w-full object-contain" loading="lazy" decoding="async" />
             </div>
             {p.highlights?.length > 0 && (
               <ul className="mb-5 space-y-2">
@@ -380,6 +383,7 @@ export default async function WeightLossPillsPage() {
             <h1 className="text-[22px] font-bold leading-[1.2] tracking-[-0.01em] text-[#191919] sm:max-w-[640px] sm:text-[32px] sm:leading-tight sm:tracking-normal">
               Weight Loss Pills in 2026: Every Prescription Option, Compared
             </h1>
+            <AffiliateNote className="mt-3" />
             <p className="mt-2 max-w-[640px] text-[14px] leading-[1.45] text-gray-600 sm:text-[16px] sm:leading-[1.55]">
               The two FDA-approved GLP-1 pills, the older prescription pills, the compounded tablets
               and the over-the-counter products, clearly labelled: what each one does, what the

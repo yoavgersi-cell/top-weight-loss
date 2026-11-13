@@ -1,3 +1,4 @@
+import { AffiliateNote } from "@/components/affiliate-note";
 import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import { pageReviewSchema } from "@/data/reviewers";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
@@ -417,6 +418,7 @@ export async function HubHome() {
             Independent rankings across weight loss, hair growth, TRT, HRT, online therapy
             and ED - real published prices and verified customer reviews.
           </p>
+          <AffiliateNote className="mx-auto mt-3 max-w-[640px] text-center" />
           <div className="mx-auto mt-6 max-w-[560px] text-left">
             <MedicalReviewBar path="/" compact />
           </div>

@@ -63,8 +63,8 @@ const WOMEN_LINEUP: Pick<Provider, "id" | "name" | "logo" | "smallLogo" | "tagli
   {
     id: "happyhead",
     name: "Happy Head",
-    logo: "/logos/happyheadlogo.png",
-    smallLogo: "/logos/happyheadlogo.png",
+    logo: "/logos/happyheadlogo.webp",
+    smallLogo: "/logos/happyheadlogo.webp",
     tagline: "Dermatologist-formulated custom hair loss prescriptions for women - topical and oral",
     highlights: [
       "Personalized topical formulas (minoxidil and more)",

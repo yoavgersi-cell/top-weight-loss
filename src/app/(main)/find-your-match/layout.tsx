@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.treatmentshub.com/weight-loss/find-your-match",
   },
-  openGraph: { images: [DEFAULT_OG_IMAGE],
+  openGraph: { images: [DEFAULT_OG_IMAGE], type: "website",
     title: "Find Your Best Weight Loss Provider Match",
     description:
       "Take our free quiz and get matched with the best weight loss provider for your goals and budget.",

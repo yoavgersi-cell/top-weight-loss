@@ -74,13 +74,14 @@ export default async function CheapestGlp1Page() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    image: ["https://www.treatmentshub.com/og-default.png"],
     headline: TITLE,
     description: DESCRIPTION,
     datePublished: "2026-08-23",
     dateModified: PRICE_INDEX_VERIFIED > CONTENT_LAST_UPDATED ? PRICE_INDEX_VERIFIED : CONTENT_LAST_UPDATED,
     ...pageReviewSchema("/weight-loss/cheapest-glp1"),
     author: { "@type": "Organization", name: "Treatments Hub Team", url: "https://www.treatmentshub.com" },
-    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com", logo: { "@type": "ImageObject", url: "https://www.treatmentshub.com/treatmentshub.png" } },
     mainEntityOfPage: CANONICAL,
   };
   const breadcrumbSchema = {

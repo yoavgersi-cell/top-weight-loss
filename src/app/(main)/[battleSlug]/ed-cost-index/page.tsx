@@ -1,3 +1,4 @@
+import { AffiliateNote } from "@/components/affiliate-note";
 import type { Metadata } from "next";
 import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import Link from "next/link";
@@ -147,6 +148,7 @@ export default async function EdCostIndexPage({ params }: { params: Promise<{ ba
           <h1 className="text-[28px] font-extrabold text-[#191919] sm:text-[36px]">
             Erectile Dysfunction (ED) Treatment Cost Index (2026)
           </h1>
+          <AffiliateNote className="mt-3" />
           <p className="mt-3 max-w-[680px] text-[16px] leading-relaxed text-gray-500">
             What does erectile-dysfunction treatment actually cost online? We compiled the prices
             across every category - generic pills, brand-name, compounded multi-ingredient formulas,

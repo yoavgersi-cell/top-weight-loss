@@ -60,8 +60,8 @@ const providers: Provider[] = [
     id: "maximus",
     name: "Maximus",
     tagline: "Telehealth testosterone support for men - including oral protocol options - with at-home testing",
-    logo: "/maximuslogo.png",
-    smallLogo: "/maximuslogo.png",
+    logo: "/maximuslogo.webp",
+    smallLogo: "/maximuslogo.webp",
     highlights: [
       "Oral protocol options plus traditional TRT",
       "At-home testing to start",

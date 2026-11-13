@@ -1,3 +1,4 @@
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Check, X, ArrowRight, ArrowUpRight, Shield, Star, ArrowBigUp, ArrowBigDown, MessageCircle, ShieldCheck, UserRound, Users, Stethoscope, type LucideIcon } from "lucide-react";
@@ -60,9 +61,9 @@ import { catalogPriceSnippet } from "@/lib/product-catalog";
 const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
   // Collective (weight loss), added Nov 11, 2026; figures from collective.org.
   collective: {
-    title: "Collective Review 2026: $59 Semaglutide, $69 Tirzepatide + Fee",
+    title: "Collective Review 2026: $59 Semaglutide, $69 Tirzepatide",
     description:
-      "Collective charges $59/mo for compounded semaglutide and $69/mo for tirzepatide at any dose, plus a $199/year membership. Shipping, states served and our verdict.",
+      "Collective charges $59/mo for compounded semaglutide and $69/mo for tirzepatide at any dose, plus a $199/year membership. States, shipping and our verdict.",
   },
   // HRT vertical (ported from hrtwomen.com, Oct 22, 2026). Titles shaped by
   // that site's Search Console queries: "winona hrt reviews", "how much does
@@ -770,6 +771,9 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
     "@type": "Article",
     headline: `${provider.name} Review 2026: Cost, Results & Is It Worth It?`,
     description: review.shortSummary,
+    // Google's Article guidelines want an image; the branded 1200x630 default
+    // stands in because provider logos are small and not ours (Nov 13, 2026).
+    image: [DEFAULT_OG_IMAGE.url],
     dateModified: reviewUpdatedAt,
     ...pageReviewSchema(`/${ctx.vertical}/reviews/${slug}`),
     // The research team is a group, so it is an Organization, not a Person.
@@ -923,7 +927,9 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               </div>
               <div className="min-w-0">
                 <h1 className="text-[22px] font-bold text-[#191919] sm:text-[28px]">
-                  {provider.name} Reviews
+                  {/* Providers reviewed on more than one vertical (Hims, Ro,
+                      Maximus...) name the vertical, so no two pages share an H1. */}
+                  {provider.name} {MULTI_VERTICAL_PROVIDERS.has(provider.id) ? `${verticalH1Label(ctx.vertical)} ` : ""}Reviews
                 </h1>
                 {FORMER_NAMES[provider.id] && (
                   <p className="mt-0.5 text-[13px] text-gray-500">Formerly {FORMER_NAMES[provider.id]}</p>
@@ -1197,7 +1203,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               {review.pricingPlans.map((plan) => (
                 <div key={plan.name} className="rounded-xl border border-gray-200 bg-gray-50/60 p-5">
                   <div className="flex items-center justify-between gap-2">
-                    <h4 className="text-[15px] font-bold text-[#191919]">{plan.name}</h4>
+                    <h3 className="text-[15px] font-bold text-[#191919]">{plan.name}</h3>
                     {plan.cadence && (
                       <span className="rounded-full bg-[#0C4B75]/10 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-[#0C4B75]">
                         {plan.cadence}
@@ -1659,6 +1665,9 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   );
 }
 
+const MULTI_VERTICAL_PROVIDERS = new Set(["hims", "maximus", "petermd", "ro", "dudemeds", "shed", "directmeds"]);
+const verticalH1Label = (id: string) => (id === "ed" ? "ED" : VERTICALS.find((v) => v.id === id)?.name ?? "");
+
 function Section({
   title,
   children,
@@ -1668,7 +1677,7 @@ function Section({
 }) {
   return (
     <div className="mb-6 rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-      <h3 className="mb-4 text-[17px] font-bold text-[#191919]">{title}</h3>
+      <h2 className="mb-4 text-[17px] font-bold text-[#191919]">{title}</h2>
       {children}
     </div>
   );

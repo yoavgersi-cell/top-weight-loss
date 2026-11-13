@@ -1,3 +1,4 @@
+import { AffiliateNote } from "@/components/affiliate-note";
 import { pageReviewSchema } from "@/data/reviewers";
 import { readableHeroColor } from "@/lib/hero-color";
 import { DEFAULT_OG_IMAGE } from "@/lib/og";
@@ -35,6 +36,7 @@ export async function articlesIndexMetadata(ctx: SiteContext): Promise<Metadata>
       title,
       description,
       url,
+      type: "website",
     },
   };
 }
@@ -49,6 +51,8 @@ const categoryColors: Record<string, string> = {
 export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
   const config = await getConfig(ctx.vertical);
   const articles = config.articles ?? [];
+  // Newest per-article updatedAt: a true freshness signal for the listing.
+  const newestArticle = articles.map((a) => a.updatedAt).filter((d): d is string => !!d).sort().pop();
   const vName = verticalName(ctx.vertical);
 
   // Standalone in-depth guide pages (custom weight-loss landing pages, not CMS
@@ -123,17 +127,36 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
   return (
     <div className="min-h-screen bg-gray-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: canonicalUrl(ctx, "/") },
+              { "@type": "ListItem", position: 2, name: `${vName} Guides & Articles`, item: canonicalUrl(ctx, "/articles") },
+            ],
+          }),
+        }}
+      />
       <div className="mx-auto max-w-[1100px] px-4 py-12 sm:px-6">
         {/* Page header */}
         <div className="mb-10">
           <h1 className="text-[28px] font-bold text-[#191919] sm:text-[36px]">
-            Articles
+            {`${vName} Guides & Articles`}
           </h1>
           <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-gray-500">
             Evidence-based {verticalNameInProse(vName)} guides - treatment options, what
             to expect, and making informed decisions about your health.
           </p>
           <MedicalReviewBar path={`/${ctx.vertical}/articles`} className="mt-4 max-w-[760px]" compact />
+          <AffiliateNote className="mt-2 max-w-[760px]" />
+          {newestArticle && (
+            <p className="mt-2 text-[12.5px] text-gray-500">
+              Index updated <time dateTime={newestArticle}>{new Date(newestArticle + "T00:00:00Z").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" })}</time>
+            </p>
+          )}
         </div>
 
         {/* Featured article (first one) */}

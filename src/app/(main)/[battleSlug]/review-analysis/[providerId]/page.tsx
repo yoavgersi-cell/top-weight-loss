@@ -120,11 +120,12 @@ export default async function ReviewAnalysisPage({ params }: { params: Promise<{
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    image: ["https://www.treatmentshub.com/og-default.png"],
     headline: title,
     datePublished: PUBLISHED,
     dateModified: UPDATED,
     author: { "@type": "Organization", name: "Treatments Hub Team", url: SITE },
-    publisher: { "@type": "Organization", name: "Treatments Hub", url: SITE },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: SITE, logo: { "@type": "ImageObject", url: `${SITE}/treatmentshub.png` } },
     about: { "@type": "Organization", name, ...(record.profileUrl && { sameAs: [record.profileUrl] }) },
     mainEntityOfPage: medicalWebPageFields("weight-loss", canonical, path),
   };

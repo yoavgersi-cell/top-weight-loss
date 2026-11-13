@@ -71,7 +71,7 @@ const SAFETY =
 
 export const ED_TREATMENT_OPTIONS_COMPARED: ArticleData = {
   slug: "ed-treatment-options-compared",
-  title: "ED Treatment Options Compared: Effectiveness, Cost & Fit (2026)",
+  title: "ED Treatments Compared (2026): Effectiveness, Cost & Fit",
   description:
     "Every ED treatment side by side: pills, compounded blends, injections, pumps, shockwave, implants and therapy, with evidence, cost and who each one suits.",
   category: "Guide",

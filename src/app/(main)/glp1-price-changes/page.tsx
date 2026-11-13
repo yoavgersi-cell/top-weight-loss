@@ -179,7 +179,7 @@ export default async function PriceTrackerPage() {
     temporalCoverage: `${earliest}/${PRICE_DATA_UPDATED}`,
     spatialCoverage: "United States",
     creator: { "@type": "Organization", name: "Treatments Hub", url: HUB },
-    publisher: { "@type": "Organization", name: "Treatments Hub", url: HUB },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: HUB, logo: { "@type": "ImageObject", url: "https://www.treatmentshub.com/treatmentshub.png" } },
     isAccessibleForFree: true,
     // Search Console (Nov 13, 2026): Dataset needs a license URL, and
     // spatialCoverage must be Text or Place, not Country.
@@ -201,13 +201,14 @@ export default async function PriceTrackerPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    image: ["https://www.treatmentshub.com/og-default.png"],
     headline: TITLE,
     description: DESCRIPTION,
     datePublished: PUBLISHED,
     dateModified: PRICE_DATA_UPDATED,
     ...pageReviewSchema(TRACKER_PATH),
     author: { "@type": "Organization", name: "Treatments Hub Research Team", url: `${HUB}/weight-loss/about` },
-    publisher: { "@type": "Organization", name: "Treatments Hub", url: HUB },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: HUB, logo: { "@type": "ImageObject", url: "https://www.treatmentshub.com/treatmentshub.png" } },
     mainEntityOfPage: { "@type": "WebPage", "@id": TRACKER_URL },
     about: { "@id": `${TRACKER_URL}#dataset` },
   };

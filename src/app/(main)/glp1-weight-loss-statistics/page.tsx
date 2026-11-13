@@ -1,3 +1,4 @@
+import { AffiliateNote } from "@/components/affiliate-note";
 import { pageReviewSchema } from "@/data/reviewers";
 import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import type { Metadata } from "next";
@@ -124,13 +125,14 @@ export default async function StatisticsPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    image: ["https://www.treatmentshub.com/og-default.png"],
     headline: TITLE,
     description: DESCRIPTION,
     datePublished: "2026-08-01",
     dateModified: PRICE_INDEX_VERIFIED,
     ...pageReviewSchema("/weight-loss/glp1-weight-loss-statistics"),
     author: { "@type": "Organization", name: "Treatments Hub Research Team", url: "https://www.treatmentshub.com/weight-loss/about" },
-    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com", logo: { "@type": "ImageObject", url: "https://www.treatmentshub.com/treatmentshub.png" } },
     mainEntityOfPage: { "@type": "WebPage", "@id": CANONICAL },
   };
   const breadcrumbSchema = {
@@ -158,6 +160,7 @@ export default async function StatisticsPage() {
           <h1 className="text-[26px] font-extrabold text-[#191919] sm:text-[34px]">
             GLP-1 Price Index &amp; Weight Loss Statistics ({MONTH_LABEL})
           </h1>
+          <AffiliateNote className="mt-3" />
           <p className="mt-3 max-w-[640px] text-[15px] leading-relaxed text-gray-500">
             The dated, citable record of what {PROVIDER_COUNT} US telehealth providers publish for
             compounded semaglutide and tirzepatide - every price verified against the provider&rsquo;s

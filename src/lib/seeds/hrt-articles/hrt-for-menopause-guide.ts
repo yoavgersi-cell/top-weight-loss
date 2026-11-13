@@ -63,7 +63,7 @@ const S = {
 
 export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
   slug: "hrt-for-menopause-guide",
-  title: "HRT for Menopause: The Complete 2026 Guide to Hormone Therapy",
+  title: "HRT for Menopause: The Complete 2026 Guide",
   description:
     "HRT for menopause explained: who it suits, the starting window, how long to stay on it, patch vs pill, side effects, the label change and online care.",
   category: "Guide",

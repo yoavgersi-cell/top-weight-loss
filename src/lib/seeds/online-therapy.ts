@@ -39,8 +39,8 @@ const providers: Provider[] = [
     id: "betterhelp",
     name: "BetterHelp",
     tagline: "The largest online therapy platform - subscription talk therapy with live sessions and messaging",
-    logo: "/logos/betterhelplogo.png",
-    smallLogo: "/logos/betterhelplogo.png",
+    logo: "/logos/betterhelplogo.webp",
+    smallLogo: "/logos/betterhelplogo.webp",
     highlights: [
       "Now accepts insurance - copays from around $23/session for covered members",
       "Match with a licensed therapist in as little as 2 days",
@@ -85,8 +85,8 @@ const providers: Provider[] = [
     id: "talkspace",
     name: "Talkspace",
     tagline: "Online therapy and psychiatry that many major insurance plans cover",
-    logo: "/logos/talkspacelogo.png",
-    smallLogo: "/logos/talkspacelogo.png",
+    logo: "/logos/talkspacelogo.webp",
+    smallLogo: "/logos/talkspacelogo.webp",
     highlights: [
       "Most insured members pay a $0 copay (per Talkspace)",
       "Therapy and psychiatry (medication management) on one platform",
@@ -139,8 +139,8 @@ const providers: Provider[] = [
     id: "headspace",
     name: "Headspace",
     tagline: "The mindfulness and meditation app - now also offering online therapy that accepts insurance",
-    logo: "/logos/headspacelogo.png",
-    smallLogo: "/logos/headspacelogo.png",
+    logo: "/logos/headspacelogo.webp",
+    smallLogo: "/logos/headspacelogo.webp",
     highlights: [
       "Guided meditation, sleep and stress content in one app",
       "Online therapy that accepts insurance - coverage check on its site",
@@ -177,8 +177,8 @@ const providers: Provider[] = [
     id: "talkiatry",
     name: "Talkiatry",
     tagline: "Psychiatry-first online care - psychiatrist visits billed through your insurance",
-    logo: "/logos/talkiatrylogo.png",
-    smallLogo: "/logos/talkiatrylogo.png",
+    logo: "/logos/talkiatrylogo.webp",
+    smallLogo: "/logos/talkiatrylogo.webp",
     highlights: [
       "Care led by psychiatrists, not matched generalists",
       "In-network with many major insurance plans",

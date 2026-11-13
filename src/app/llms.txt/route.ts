@@ -6,6 +6,8 @@ import {
   DEFAULT_VERTICAL,
   AFFILIATE_PROVIDER_IDS,
   isPublishedVertical,
+  NOINDEX_WL_REVIEW_SLUGS,
+  NOINDEX_ARTICLE_SLUGS,
   type SiteConfig,
 } from "@/lib/config";
 import { WEIGHT_LOSS_MIGRATED } from "@/lib/site-context";
@@ -147,7 +149,37 @@ export async function GET() {
   }
   parts.push("");
 
-  return new NextResponse(parts.join("\n"), {
+    // "## Optional" (llmstxt.org): the complete index of reviews and guides
+  // across every published vertical, so an engine that wants the whole
+  // catalogue has it without crawling the sitemap. Deduped by slug; noindex
+  // slugs are left out, matching the sitemap. Nov 13, 2026 audit.
+  parts.push("## Optional");
+  parts.push("");
+  for (const vertical of VERTICAL_IDS) {
+    if (!isPublishedVertical(vertical)) continue;
+    if (vertical === DEFAULT_VERTICAL && !WEIGHT_LOSS_MIGRATED) continue;
+    const config = await getConfig(vertical);
+    if ((config.providers ?? []).length === 0) continue;
+    const vName = NAME_BY_VERTICAL.get(vertical) ?? vertical;
+    const providerName = (id: string) => config.providers?.find((p) => p.id === id)?.name ?? id;
+    const seen = new Set<string>();
+    parts.push(`### All ${vName} reviews`);
+    for (const r of config.reviews ?? []) {
+      if (seen.has(`r:${r.slug}`) || (vertical === DEFAULT_VERTICAL && NOINDEX_WL_REVIEW_SLUGS.has(r.slug))) continue;
+      seen.add(`r:${r.slug}`);
+      parts.push(line(`${providerName(r.providerId)} review`, `/${vertical}/reviews/${r.slug}`));
+    }
+    parts.push("");
+    parts.push(`### All ${vName} guides`);
+    for (const a of config.articles ?? []) {
+      if (seen.has(`a:${a.slug}`) || NOINDEX_ARTICLE_SLUGS.includes(a.slug)) continue;
+      seen.add(`a:${a.slug}`);
+      parts.push(line(a.title, `/${vertical}/articles/${a.slug}`));
+    }
+    parts.push("");
+  }
+
+return new NextResponse(parts.join("\n"), {
     headers: {
       "content-type": "text/plain; charset=utf-8",
       // Cache at the edge - the content only changes when config does.

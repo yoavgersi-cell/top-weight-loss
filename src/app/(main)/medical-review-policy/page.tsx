@@ -1,3 +1,4 @@
+import { imgDims } from "@/lib/image-dims";
 import type { Metadata } from "next";
 import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import Link from "next/link";
@@ -422,7 +423,7 @@ export default async function MedicalReviewPolicyPage() {
                   className="mr-10 flex h-[26px] w-[84px] shrink-0 items-center justify-center opacity-55 grayscale sm:mr-14 sm:h-[28px] sm:w-[104px]"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={p.logo} alt={`${p.name} logo`} className="max-h-full max-w-full object-contain" loading="lazy" decoding="async" />
+                  <img {...imgDims(p.logo)} src={p.logo} alt={`${p.name} logo`} className="max-h-full max-w-full object-contain" loading="lazy" decoding="async" />
                 </div>
               ))}
             </div>

@@ -140,6 +140,19 @@ export default async function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.treatmentshub.com/weight-loss" },
+              { "@type": "ListItem", position: 2, name: "About Treatments Hub", item: CANONICAL },
+            ],
+          }),
+        }}
+      />
 
       {/* ───── Hero ───── */}
       <section className="border-b border-gray-200 bg-gradient-to-b from-[#E8F3FB] via-[#F3F9FD] to-white">

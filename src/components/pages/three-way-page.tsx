@@ -1,3 +1,4 @@
+import { imgDims } from "@/lib/image-dims";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { medicalWebPageFields } from "@/lib/medical-schema";
 import type { Metadata } from "next";
@@ -133,7 +134,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
             <div key={p.id} className="flex flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
               <div className="mb-3 flex h-[38px] items-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.logo} alt={`${p.name} logo`} className="max-h-full max-w-[130px] object-contain" />
+                <img {...imgDims(p.logo)} src={p.logo} alt={`${p.name} logo`} className="max-h-full max-w-[130px] object-contain" />
               </div>
               <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-2 border-b border-gray-100 pb-3">
                 {p.trustpilotRating && (

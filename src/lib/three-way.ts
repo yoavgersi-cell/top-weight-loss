@@ -343,7 +343,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     slug: "healthrx-vs-embody-vs-wellmedr",
     providerIds: ["healthrx", "embody", "wellmedr"],
     title: "HealthRx vs embody vs welludr: Three Ways to Pay for GLP-1",
-    metaTitle: "HealthRx vs embody vs welludr (2026): Pricing Models Compared",
+    metaTitle: "HealthRx vs embody vs welludr (2026): Pricing Compared",
     description:
       "Three pricing models for the same GLP-1 medication: HealthRx's $97 12-month plan, embody's $49 flat monthly, welludr's $41 12-month lock - compared honestly.",
     intro:

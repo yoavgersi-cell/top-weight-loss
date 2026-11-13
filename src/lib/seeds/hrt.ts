@@ -1396,7 +1396,8 @@ export function hrtSeed(base: SiteConfig): SiteConfig {
     ],
     battles: [...battles, ...HRT_BATTLES_PORTED],
     // Ported pillars and brand pages first, then the hub's own guides.
-    articles: [...HRT_GUIDES_PORTED, ...articles, HRT_TESTOSTERONE_FOR_WOMEN, HRT_MHT_2026_CHANGES, HRT_ESTROGEN_PATCH_SHORTAGE, HRT_FOR_MENOPAUSE_GUIDE],
+    // Deduped by slug (first wins): the legit articles were listed twice, which put the same URL in the sitemap twice (Nov 13, 2026 audit).
+    articles: [...new Map([...HRT_GUIDES_PORTED, ...articles, HRT_TESTOSTERONE_FOR_WOMEN, HRT_MHT_2026_CHANGES, HRT_ESTROGEN_PATCH_SHORTAGE, HRT_FOR_MENOPAUSE_GUIDE].map((a) => [a.slug, a] as const)).values()],
     faqs,
   };
 }
