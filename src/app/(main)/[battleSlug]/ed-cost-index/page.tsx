@@ -103,6 +103,7 @@ export default async function EdCostIndexPage({ params }: { params: Promise<{ ba
     "@context": "https://schema.org",
     "@type": "Dataset",
     name: "ED Treatment Cost Index (2026)",
+    spatialCoverage: "United States",
     description:
       "Normalized per-dose and per-month cost of online erectile-dysfunction treatments in the US - generic pills, brand-name, compounded multi-ingredient, nasal spray and injectables. Figures are either provider-published ('verified') or representative market ranges ('est. range').",
     url: CANONICAL,
@@ -110,6 +111,9 @@ export default async function EdCostIndexPage({ params }: { params: Promise<{ ba
     dateModified: COST_INDEX_UPDATED,
     datePublished: COST_INDEX_UPDATED,
     isAccessibleForFree: true,
+    // Search Console (Nov 13, 2026): Dataset needs a license URL, and
+    // spatialCoverage must be Text or Place, not Country.
+    license: "https://creativecommons.org/licenses/by/4.0/",
     variableMeasured: ["Cost per dose (USD)", "Cost per month (USD)", "Treatment category"],
     keywords: [
       "ED treatment cost",

@@ -177,10 +177,13 @@ export default async function PriceTrackerPage() {
     datePublished: PUBLISHED,
     dateModified: PRICE_DATA_UPDATED,
     temporalCoverage: `${earliest}/${PRICE_DATA_UPDATED}`,
-    spatialCoverage: { "@type": "Country", name: "United States" },
+    spatialCoverage: "United States",
     creator: { "@type": "Organization", name: "Treatments Hub", url: HUB },
     publisher: { "@type": "Organization", name: "Treatments Hub", url: HUB },
     isAccessibleForFree: true,
+    // Search Console (Nov 13, 2026): Dataset needs a license URL, and
+    // spatialCoverage must be Text or Place, not Country.
+    license: "https://creativecommons.org/licenses/by/4.0/",
     measurementTechnique: "Manual verification of each provider's published price on its own website, with the condition attached to the price",
     variableMeasured: [
       "Compounded semaglutide listed monthly price (USD)",

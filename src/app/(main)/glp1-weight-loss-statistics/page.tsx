@@ -108,7 +108,7 @@ export default async function StatisticsPage() {
     url: CANONICAL,
     dateModified: PRICE_INDEX_VERIFIED,
     temporalCoverage: PRICE_INDEX_VERIFIED.slice(0, 7),
-    spatialCoverage: { "@type": "Country", name: "United States" },
+    spatialCoverage: "United States",
     creator: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
     variableMeasured: [
       "Compounded semaglutide monthly price (USD)",
@@ -117,6 +117,9 @@ export default async function StatisticsPage() {
     ],
     keywords: ["GLP-1 prices", "semaglutide cost", "tirzepatide cost", "compounded GLP-1", "telehealth weight loss"],
     isAccessibleForFree: true,
+    // Search Console (Nov 13, 2026): Dataset needs a license URL, and
+    // spatialCoverage must be Text or Place, not Country.
+    license: "https://creativecommons.org/licenses/by/4.0/",
   };
   const articleSchema = {
     "@context": "https://schema.org",
