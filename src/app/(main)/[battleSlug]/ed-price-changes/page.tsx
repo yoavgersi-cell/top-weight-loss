@@ -144,10 +144,13 @@ export default async function EdPriceTrackerPage({ params }: { params: Promise<{
     datePublished: PUBLISHED,
     dateModified: ED_PRICE_DATA_UPDATED,
     temporalCoverage: `${earliest}/${ED_PRICE_DATA_UPDATED}`,
-    spatialCoverage: { "@type": "Country", name: "United States" },
+    spatialCoverage: "United States",
     creator: { "@type": "Organization", name: "Treatments Hub", url: HUB },
     publisher: { "@type": "Organization", name: "Treatments Hub", url: HUB },
     isAccessibleForFree: true,
+    // Search Console (Nov 13, 2026): Dataset needs a license URL, and
+    // spatialCoverage must be Text or Place, not Country.
+    license: "https://creativecommons.org/licenses/by/4.0/",
     measurementTechnique: "Manual verification of each provider's published price on its own website, with the unit and condition attached to the price",
     variableMeasured: [
       "Lowest listed generic sildenafil or tadalafil price (USD, per dose or per month)",
