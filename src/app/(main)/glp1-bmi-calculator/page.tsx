@@ -65,11 +65,12 @@ export default function BmiCalculatorPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    image: ["https://www.treatmentshub.com/og-default.png"],
     headline: TITLE,
     datePublished: PUBLISHED,
     dateModified: UPDATED,
     author: { "@type": "Organization", name: "Treatments Hub Team", url: "https://www.treatmentshub.com" },
-    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com", logo: { "@type": "ImageObject", url: "https://www.treatmentshub.com/treatmentshub.png" } },
     mainEntityOfPage: medicalWebPageFields("weight-loss", CANONICAL, PATH),
   };
   const appSchema = {
@@ -81,7 +82,7 @@ export default function BmiCalculatorPage() {
     operatingSystem: "Any",
     browserRequirements: "Requires JavaScript",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com", logo: { "@type": "ImageObject", url: "https://www.treatmentshub.com/treatmentshub.png" } },
   };
   const breadcrumbSchema = {
     "@context": "https://schema.org",

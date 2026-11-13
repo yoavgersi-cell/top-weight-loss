@@ -373,13 +373,14 @@ export default async function HowToChooseGlp1ProviderPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    image: ["https://www.treatmentshub.com/og-default.png"],
     headline: TITLE,
     description: DESCRIPTION,
     datePublished: PUBLISHED,
     dateModified: UPDATED,
     ...pageReviewSchema("/weight-loss/how-to-choose-a-glp1-provider"),
     author: { "@type": "Organization", name: "Treatments Hub Team", url: "https://www.treatmentshub.com" },
-    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com", logo: { "@type": "ImageObject", url: "https://www.treatmentshub.com/treatmentshub.png" } },
     mainEntityOfPage: CANONICAL,
   };
   const breadcrumbSchema = {

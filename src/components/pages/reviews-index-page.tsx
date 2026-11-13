@@ -1,3 +1,5 @@
+import { imgDims } from "@/lib/image-dims";
+import { AffiliateNote } from "@/components/affiliate-note";
 import { pageReviewSchema } from "@/data/reviewers";
 import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
@@ -44,6 +46,7 @@ export async function reviewsIndexMetadata(ctx: SiteContext): Promise<Metadata> 
       title,
       description,
       url,
+      type: "website",
     },
   };
 }
@@ -52,6 +55,7 @@ export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
   const config = await getConfig(ctx.vertical);
   const vName = verticalName(ctx.vertical);
   const { providerOrder, positions } = config.ranking;
+  const newestReview = (config.reviews ?? []).map((r) => r.updatedAt).filter((d): d is string => !!d).sort().pop();
 
   // Every review in the CMS is listed. Providers in the homepage ranking come
   // first (in ranking order, with their score); unranked providers follow.
@@ -138,6 +142,12 @@ export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
           </p>
           <div className="mx-auto mt-5 max-w-[640px] text-left">
             <MedicalReviewBar path={`/${ctx.vertical}/reviews`} compact />
+            <AffiliateNote className="mt-2" />
+            {newestReview && (
+              <p className="mt-2 text-[12.5px] text-gray-500">
+                Index updated <time dateTime={newestReview}>{new Date(newestReview + "T00:00:00Z").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" })}</time>
+              </p>
+            )}
           </div>
         </div>
 
@@ -151,6 +161,7 @@ export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
               <div className="mb-4 flex h-[50px] w-[130px] items-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
+                  {...imgDims(provider.logo)}
                   src={provider.logo}
                   alt={`${provider.name} logo`}
                   className="max-h-full max-w-full object-contain"

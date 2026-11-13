@@ -27,7 +27,7 @@ export function ProviderCta({
     <a
       href={href}
       target="_blank"
-      rel="noopener noreferrer nofollow"
+      rel="sponsored nofollow noopener noreferrer"
       className={className}
       onClick={() => {
         trackProviderClick({

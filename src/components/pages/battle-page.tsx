@@ -1,3 +1,4 @@
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import { SHOW_TRUSTPILOT_WIDGETS, visibleTrustBadges } from "@/lib/trustpilot-display";
 import { pageReviewSchema } from "@/data/reviewers";
 import { SiblingLinks, CATEGORY_LABEL, reviewSiblings, comparisonSiblings, articleSiblings, pickSiblings } from "@/components/sibling-links";
@@ -159,22 +160,22 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   "embody-vs-sprout": {
     title: "embody vs Sprout (2026): $49 vs $99 GLP-1 Compared",
     description:
-      "embody ($49/mo semaglutide, 1-2 day cold-chain shipping, LegitScript) vs Sprout (from $99/mo on a 12-month plan, ships in 2 days, brand-name Wegovy available). Honest verdict.",
+      "embody ($49/mo semaglutide, 1-2 day cold-chain shipping, LegitScript) vs Sprout (from $99/mo on a 12-month plan, brand-name Wegovy available). Honest verdict.",
   },
   "altrx-vs-sprout": {
     title: "altRx vs Sprout (2026): $89 vs $99 GLP-1 Compared",
     description:
-      "altRx ($89/mo plus Ozempic, Zepbound and Wegovy, BNPL) vs Sprout (from $99/mo on a 12-month plan, Wegovy available, 2-day fulfillment). Price, selection and speed compared.",
+      "altRx ($89/mo plus Ozempic, Zepbound and Wegovy, BNPL) vs Sprout (from $99/mo on a 12-month plan, Wegovy available, 2-day fulfillment). Price and selection.",
   },
   "sprout-vs-trimrx": {
     title: "Sprout vs TrimRx (2026): $99 vs $149 - Which GLP-1 Wins?",
     description:
-      "Sprout (from $99/mo semaglutide on a 12-month plan, ships in 2 days, Wegovy option) vs TrimRx ($149/mo flat at every dose, custom dosing, no contract). Compared honestly.",
+      "Sprout (from $99/mo semaglutide on a 12-month plan, Wegovy option) vs TrimRx ($149/mo flat at every dose, custom dosing, no contract). Compared honestly.",
   },
   "sprout-vs-wellmedr": {
     title: "Sprout vs welludr (formerly wellmedr): $99 vs $41 GLP-1",
     description:
-      "Sprout (from $99/mo on a 12-month plan, 2-day fulfillment, brand-name Wegovy) vs welludr ($41/mo, 4.6 on Trustpilot, 1M+ patients, warranty). Real prices and an honest verdict.",
+      "Sprout (from $99/mo on a 12-month plan, 2-day fulfillment, brand-name Wegovy) vs welludr ($41/mo, 4.6 on Trustpilot, warranty). Real prices, honest verdict.",
   },
   "embody-vs-wellmedr": {
     title: "embody vs welludr (formerly wellmedr): $49 vs $41 GLP-1",
@@ -267,7 +268,7 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   "healthrx-vs-medvi": {
     // Originally matched the stored (CMS) title byte-for-byte (desc-only pass,
     // Aug 30); title updated Nov 3, 2026 when HealthRx's 12-month rate moved to $97.
-    title: "HealthRx vs Medvi (2026): $97 vs $99 Semaglutide Deals Compared",
+    title: "HealthRx vs Medvi (2026): $97 vs $99 Semaglutide Compared",
     description:
       "Two GLP-1 deals, opposite structures: HealthRx's 12-month plan from $97/month vs Medvi's $99/month all-inclusive promo. The honest math.",
   },
@@ -356,6 +357,7 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
         title: landing.seoTitle,
         description: landingDesc,
         url,
+        type: "website",
       },
     };
   }
@@ -768,6 +770,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     ...pageReviewSchema(`/${ctx.vertical}/${battle.slug}`),
     headline: battle.title,
     description: battle.description,
+    image: [DEFAULT_OG_IMAGE.url],
     datePublished: battle.publishedAt ?? "2026-06-01",
     dateModified: battleUpdatedAt,
     // The research team is a group, so it is an Organization, not a Person.

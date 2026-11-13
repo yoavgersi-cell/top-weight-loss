@@ -78,7 +78,7 @@ export default async function HowWeRankPage() {
     description:
       "Our methodology for ranking GLP-1 weight loss providers: the factors we score, where data comes from, how we verify it, and how we pick head-to-head winners.",
     url: CANONICAL,
-    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com", logo: { "@type": "ImageObject", url: "https://www.treatmentshub.com/treatmentshub.png" } },
   };
 
   const breadcrumbSchema = {

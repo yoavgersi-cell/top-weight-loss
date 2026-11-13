@@ -91,8 +91,8 @@ export const TRT_PROVIDERS_PORTED: Provider[] = [
     name: "Fridays",
     tagline:
       "A men's-health telehealth brand offering testosterone therapy online after lab testing and a licensed-clinician review",
-    logo: "/logos/fridayslogo.png",
-    smallLogo: "/logos/fridayslogo.png",
+    logo: "/logos/fridayslogo.webp",
+    smallLogo: "/logos/fridayslogo.webp",
     highlights: [
       "Fully online men's-health platform",
       "Lab-based diagnosis before treatment",
@@ -107,8 +107,8 @@ export const TRT_PROVIDERS_PORTED: Provider[] = [
     name: "Brightmeds",
     tagline:
       "A highly-rated online telehealth service offering TRT with its own testosterone formula, prescribed after a licensed-clinician review",
-    logo: "/logos/brightmedslogo.png",
-    smallLogo: "/logos/brightmedslogo.png",
+    logo: "/logos/brightmedslogo.webp",
+    smallLogo: "/logos/brightmedslogo.webp",
     highlights: [
       "Online TRT after a licensed-clinician review",
       "Its own testosterone formula",

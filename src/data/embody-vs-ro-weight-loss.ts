@@ -29,7 +29,7 @@ const S = {
 
 export const embodyVsRoWeightLossArticle: Article = {
   slug: "embody-vs-ro-weight-loss",
-  title: "Embody vs Ro Weight Loss (2026): Cost, Meds & Insurance Compared",
+  title: "Embody vs Ro Weight Loss (2026): Cost, Meds & Insurance",
   description:
     "embody ($49 flat compounded semaglutide) vs Ro ($39-then-$74-$149 membership plus brand-name Wegovy or Zepbound): cost, meds, insurance and intake compared.",
   category: "Guide",

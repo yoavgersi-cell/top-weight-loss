@@ -233,8 +233,8 @@ export function edSeed(base: SiteConfig): SiteConfig {
         name: "BraveRX",
         tagline:
           "A men's-health Rx telehealth brand offering ED treatment online with licensed clinicians",
-        logo: "/logos/braverx.png",
-        smallLogo: "/logos/braverx.png",
+        logo: "/logos/braverx.webp",
+        smallLogo: "/logos/braverx.webp",
         highlights: [
           "Fully online consultation",
           "Licensed clinicians review your intake",
@@ -971,7 +971,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
         matchupLabel: "DirectMeds vs Rex MD",
         subtitle: "A focused 3-in-1 compounded dose vs a big-brand, full-menu platform",
         description:
-          "DirectMeds vs Rex MD for online ED treatment in 2026 - a compounded 3-in-1 rapid-dissolve tablet vs an established brand with the widest menu. Formula, pricing, billing and which fits you.",
+          "DirectMeds vs Rex MD for online ED treatment in 2026: a compounded 3-in-1 rapid-dissolve tablet vs an established brand with the widest menu. Price and fit.",
         intro:
           "DirectMeds and Rex MD are both legitimate men's-health telehealth brands, but they're built differently. DirectMeds is focused: its DirectMax is a compounded 3-in-1 rapid-dissolve tablet (sildenafil, tadalafil and apomorphine in one dose), priced transparently per dose. Rex MD is the broad, established brand - branded and generic Viagra and Cialis, daily tadalafil, and its exclusive Ignite gummy - with a strong Trustpilot record but a subscription-billing model worth watching. Here's how they compare.",
         verdict:

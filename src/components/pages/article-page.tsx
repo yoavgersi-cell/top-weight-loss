@@ -1,3 +1,4 @@
+import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import { SHOW_TRUSTPILOT_WIDGETS, TRUSTPILOT_WIDGET_ARTICLE_SLUGS } from "@/lib/trustpilot-display";
 import type { Metadata } from "next";
 import { readableHeroColor } from "@/lib/hero-color";
@@ -518,7 +519,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     // Only a real image: the un-hashed /opengraph-image path is not a served
     // route (Next hashes the file-convention URL), so pointing schema at it
     // emitted a 404 image on every article.
-    ...(article.image && { image: `${ctx.origin}${article.image}` }),
+    image: [article.image ? `${ctx.origin}${article.image}` : DEFAULT_OG_IMAGE.url],
     datePublished: article.publishedAt,
     dateModified: latestUpdate(article.updatedAt),
     wordCount,

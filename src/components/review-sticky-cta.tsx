@@ -1,5 +1,6 @@
 "use client";
 
+import { imgDims } from "@/lib/image-dims";
 import { useEffect, useState } from "react";
 import { ArrowRight, X } from "lucide-react";
 import { ProviderCta } from "./provider-cta";
@@ -75,7 +76,7 @@ export function ReviewStickyCta({
         <div className="flex items-center gap-3">
           <div className="flex h-[34px] min-w-0 flex-1 items-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={logo} alt={`${name} logo`} className="max-h-[30px] max-w-[120px] object-contain object-left" loading="lazy" />
+            <img {...imgDims(logo)} src={logo} alt={`${name} logo`} className="max-h-[30px] max-w-[120px] object-contain object-left" loading="lazy" />
           </div>
           <ProviderCta
             href={href}

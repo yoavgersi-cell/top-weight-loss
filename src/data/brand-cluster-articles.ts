@@ -916,9 +916,9 @@ export const brandClusterArticles: Article[] = [
   },
   {
     slug: "healthrx-cost",
-    title: "HealthRx Cost 2026: From $97/Month on a 12-Month Plan - The Math",
+    title: "HealthRx Cost 2026: From $97/Month on a 12-Month Plan",
     description:
-      "HealthRx's semaglutide runs from $97/month on its 12-month plan to $125/month on its 3-month plan. When that beats monthly rivals, when it doesn't, and what's inside the price.",
+      "HealthRx semaglutide runs $97/month on the 12-month plan to $125/month on 3 months. When that beats monthly rivals, and what is inside the price.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-08-21",
@@ -991,7 +991,7 @@ export const brandClusterArticles: Article[] = [
     slug: "is-sprout-legit",
     title: "Is Sprout Legit? An Honest Audit (2026)",
     description:
-      "Sprout sells compounded GLP-1s - semaglutide from $99/month on a 12-month plan - with 2-day fulfillment and a brand-name Wegovy option. We audited the process and fine print.",
+      "Sprout sells compounded semaglutide from $99/month on a 12-month plan, with 2-day fulfillment and a brand-name Wegovy option. We audited the fine print.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-23",
@@ -1027,7 +1027,7 @@ export const brandClusterArticles: Article[] = [
     slug: "sprout-cost",
     title: "Sprout Cost 2026: From $99/Month - The Math Explained",
     description:
-      "Sprout's GLP-1 pricing: compounded semaglutide from $99/month and tirzepatide from $149 on the 12-month plan ($149 and $199 month to month), and $1,799 for brand-name Wegovy. The full math.",
+      "Sprout's GLP-1 pricing: semaglutide from $99/month and tirzepatide from $149 on the 12-month plan ($149/$199 monthly); brand Wegovy $1,799. The full math.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-23",
@@ -1063,7 +1063,7 @@ export const brandClusterArticles: Article[] = [
     slug: "sprout-alternatives",
     title: "Best Sprout Alternatives 2026 (From $49/mo)",
     description:
-      "Six real alternatives to Sprout's GLP-1 program ($99/month on a 12-month plan, $149 month to month) - from welludr at $41 to altRx's three-brand shelf - organized by the reason you'd actually switch.",
+      "Six real alternatives to Sprout's GLP-1 program ($99/month on a 12-month plan), from welludr at $41 to altRx's three-brand shelf, by reason to switch.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-23",

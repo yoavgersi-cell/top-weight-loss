@@ -49,9 +49,9 @@ const PUBLISHED = "2026-11-11";
 const earliest = ED_PRICE_CHANGES_NEWEST[ED_PRICE_CHANGES_NEWEST.length - 1]?.date ?? ED_PRICE_INDEX_VERIFIED;
 const shortDate = (iso: string) => new Date(iso).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
 
-const TITLE = "ED Treatment Price Tracker (2026): Sildenafil, Tadalafil & Compounded";
+const TITLE = "ED Price Tracker (2026): Sildenafil, Tadalafil & Compounded";
 const DESCRIPTION =
-  "What online ED treatment costs right now: generic sildenafil and tadalafil, compounded formulas and nasal spray at US telehealth providers, verified on each site, with a dated change log.";
+  "What online ED treatment costs: sildenafil, tadalafil, compounded formulas and nasal spray at US telehealth providers, verified on each site, with a change log.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -146,7 +146,7 @@ export default async function EdPriceTrackerPage({ params }: { params: Promise<{
     temporalCoverage: `${earliest}/${ED_PRICE_DATA_UPDATED}`,
     spatialCoverage: "United States",
     creator: { "@type": "Organization", name: "Treatments Hub", url: HUB },
-    publisher: { "@type": "Organization", name: "Treatments Hub", url: HUB },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: HUB, logo: { "@type": "ImageObject", url: "https://www.treatmentshub.com/treatmentshub.png" } },
     isAccessibleForFree: true,
     // Search Console (Nov 13, 2026): Dataset needs a license URL, and
     // spatialCoverage must be Text or Place, not Country.
@@ -169,6 +169,8 @@ export default async function EdPriceTrackerPage({ params }: { params: Promise<{
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    image: ["https://www.treatmentshub.com/og-default.png"],
+    mainEntityOfPage: ED_TRACKER_URL,
     "@id": `${ED_TRACKER_URL}#article`,
     headline: TITLE,
     description: DESCRIPTION,
@@ -176,7 +178,7 @@ export default async function EdPriceTrackerPage({ params }: { params: Promise<{
     datePublished: PUBLISHED,
     dateModified: ED_PRICE_DATA_UPDATED,
     author: { "@type": "Organization", name: "Treatments Hub", url: HUB },
-    publisher: { "@type": "Organization", name: "Treatments Hub", url: HUB },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: HUB, logo: { "@type": "ImageObject", url: "https://www.treatmentshub.com/treatmentshub.png" } },
     about: { "@id": `${ED_TRACKER_URL}#dataset` },
     ...(review ?? {}),
   };
@@ -190,7 +192,7 @@ export default async function EdPriceTrackerPage({ params }: { params: Promise<{
 
   return (
     <div className="bg-[#FAFBFC]">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([datasetSchema, articleSchema, faqSchema]) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([datasetSchema, articleSchema, faqSchema, { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: HUB }, { "@type": "ListItem", position: 2, name: "ED Treatment", item: `${HUB}/ed` }, { "@type": "ListItem", position: 3, name: "ED Price Tracker", item: ED_TRACKER_URL }] }]) }} />
       <div className="mx-auto max-w-[1100px] px-4 py-8 sm:px-6">
         <Breadcrumbs items={[{ label: "Home", href: "/ed" }, { label: "ED Treatment Price Tracker" }]} />
 

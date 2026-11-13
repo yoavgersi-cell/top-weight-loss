@@ -1,5 +1,6 @@
 "use client";
 
+import { imgDims } from "@/lib/image-dims";
 import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
@@ -83,7 +84,7 @@ function MatchCard({ m, med }: { m: ChatMatch; med: string }) {
     <div className="w-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
       <div className="flex items-center justify-between gap-3 border-b border-gray-100 px-4 py-3">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={m.logo} alt={`${m.name} logo`} className="max-h-[28px] max-w-[130px] object-contain object-left" />
+        <img {...imgDims(m.logo)} src={m.logo} alt={`${m.name} logo`} className="max-h-[28px] max-w-[130px] object-contain object-left" />
         {m.rank && (
           <span className="shrink-0 rounded-full bg-[#EAF6EF] px-2.5 py-1 text-[12px] font-bold text-[#17804B]">
             #{m.rank} in our ranking

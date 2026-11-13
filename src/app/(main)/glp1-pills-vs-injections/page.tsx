@@ -1,3 +1,4 @@
+import { AffiliateNote } from "@/components/affiliate-note";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import { pageReviewSchema } from "@/data/reviewers";
@@ -245,6 +246,7 @@ export default async function Glp1PillsVsInjectionsPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    image: ["https://www.treatmentshub.com/og-default.png"],
     headline: "GLP-1 Pills vs Injections: Which Loses More Weight? (2026)",
     description: metadata.description,
     datePublished: PAGE_PUBLISHED,
@@ -252,7 +254,7 @@ export default async function Glp1PillsVsInjectionsPage() {
     wordCount,
     ...pageReviewSchema("/weight-loss/glp1-pills-vs-injections"),
     author: { "@type": "Organization", name: "Treatments Hub Research Team", url: "https://www.treatmentshub.com" },
-    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com", logo: { "@type": "ImageObject", url: "https://www.treatmentshub.com/treatmentshub.png" } },
     mainEntityOfPage: CANONICAL,
   };
   const breadcrumbSchema = {
@@ -313,6 +315,7 @@ export default async function Glp1PillsVsInjectionsPage() {
             <h1 className="text-[22px] font-bold leading-[1.2] tracking-[-0.01em] text-[#191919] sm:max-w-[640px] sm:text-[32px] sm:leading-tight sm:tracking-normal">
               GLP-1 Pills vs Injections (2026): Results, Cost and Routine
             </h1>
+            <AffiliateNote className="mt-3" />
             <p className="mt-2 max-w-[640px] text-[14px] leading-[1.45] text-gray-600 sm:text-[16px] sm:leading-[1.55]">
               The two FDA-approved GLP-1 pills against the weekly injections: what the trials showed,
               what each route costs at verified prices, the side effects they share, and the daily

@@ -1,5 +1,6 @@
 "use client";
 
+import { imgDims } from "@/lib/image-dims";
 import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -283,7 +284,7 @@ function TrustpilotCarouselView({
           {providerLogo && (
             <div className="flex h-[28px] w-[90px] items-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={providerLogo} alt={`${providerName} logo`} className="max-h-full max-w-full object-contain" />
+              <img {...imgDims(providerLogo)} src={providerLogo} alt={`${providerName} logo`} className="max-h-full max-w-full object-contain" />
             </div>
           )}
           <h3 className="text-[16px] font-bold text-[#191919]">

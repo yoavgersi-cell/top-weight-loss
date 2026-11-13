@@ -1,3 +1,4 @@
+import { AffiliateNote } from "@/components/affiliate-note";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import { pageReviewSchema } from "@/data/reviewers";
@@ -51,13 +52,14 @@ export default async function RetatrutidePage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    image: ["https://www.treatmentshub.com/og-default.png"],
     headline: "Retatrutide for Weight Loss: ~24% in Trials. Can You Get It?",
     description: metadata.description,
     datePublished: "2026-08-09",
     dateModified: "2026-08-09",
     ...pageReviewSchema("/weight-loss/retatrutide-weight-loss"),
     author: { "@type": "Organization", name: "Treatments Hub Team", url: "https://www.treatmentshub.com" },
-    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com", logo: { "@type": "ImageObject", url: "https://www.treatmentshub.com/treatmentshub.png" } },
     mainEntityOfPage: CANONICAL,
   };
   const breadcrumbSchema = {
@@ -87,6 +89,7 @@ export default async function RetatrutidePage() {
           <h1 className="text-[28px] font-extrabold text-[#191919] sm:text-[36px]">
             Retatrutide for Weight Loss: The Next-Gen Drug, Explained
           </h1>
+          <AffiliateNote className="mt-3" />
           <p className="mt-3 max-w-[640px] text-[16px] leading-relaxed text-gray-500">
             Retatrutide (&ldquo;reta&rdquo;) reached roughly 24% weight loss in trials - the most of
             any weight loss drug so far. Here&rsquo;s what it is, how it stacks up against tirzepatide

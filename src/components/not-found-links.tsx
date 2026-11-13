@@ -1,5 +1,6 @@
 "use client";
 
+import { imgDims } from "@/lib/image-dims";
 import Link from "next/link";
 import { ArrowRight, Home, Search } from "lucide-react";
 import { useNavPrefix, navHref } from "@/lib/nav-prefix";
@@ -51,7 +52,7 @@ export function NotFoundLinks({
               >
                 <div className="flex h-[26px] w-[90px] items-center">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={p.logo} alt={`${p.name} logo`} className="max-h-full max-w-full object-contain" />
+                  <img {...imgDims(p.logo)} src={p.logo} alt={`${p.name} logo`} className="max-h-full max-w-full object-contain" />
                 </div>
                 <span className="ml-auto text-[13px] font-semibold text-[#0C4B75] group-hover:underline">Read review</span>
               </Link>

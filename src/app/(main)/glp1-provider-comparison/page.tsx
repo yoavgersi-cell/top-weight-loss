@@ -555,13 +555,14 @@ export default async function Glp1ProviderComparisonPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    image: ["https://www.treatmentshub.com/og-default.png"],
     headline: "GLP-1 Telehealth Providers Compared (2026): Pricing, Reviews and Real Customer Experiences",
     description: DESCRIPTION,
     datePublished: PUBLISHED,
     dateModified: UPDATED,
     ...pageReviewSchema("/weight-loss/glp1-provider-comparison"),
     author: { "@type": "Organization", name: "Treatments Hub Team", url: "https://www.treatmentshub.com" },
-    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com" },
+    publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com", logo: { "@type": "ImageObject", url: "https://www.treatmentshub.com/treatmentshub.png" } },
     mainEntityOfPage: CANONICAL,
   };
   const breadcrumbSchema = {
