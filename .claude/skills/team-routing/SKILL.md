@@ -1,0 +1,44 @@
+---
+name: team-routing
+description: How Quinn delegates to the Treatments Hub specialists as subagents, briefs them, chains the content pipeline, posts to Slack, and keeps the task ledger. Load when coordinating more than one agent.
+---
+
+# Team routing
+
+## Delegating
+Use the Agent tool with `subagent_type` set to the specialist's name (`cleo`, `atlas`, `sloane`, `felix`, `rio`). Run independent work in parallel; run dependent steps in sequence and read the output file between them. Prefer `run_in_background: false` for a step the next step depends on.
+
+A good brief contains, in this order:
+1. Who they are and which files to load ("You are Atlas. Read .claude/agents/atlas.md and load house-rules and research-method.").
+2. The goal in one sentence, and the request it comes from.
+3. Input paths (the brief, the research file, the PR number).
+4. Output path and format (the template from their skill).
+5. What is already decided (title, angle, provider block) and what they must not do.
+6. "Report back in under ten lines: what you produced, the path, what you could not do."
+
+## The content pipeline
+```
+request → ops/briefs/<date>-<slug>.md (Cleo)
+        → ops/research/<slug>.md (Atlas)
+        → article file + PR (Sloane)            ← gate: operator merges
+        → ops/qa/<slug>.md + PR review (Felix)
+        → ops/social/<date>-<slug>.md (Rio)     ← gate: operator approves each draft
+```
+Skip a stage only when its output already exists and is marked `ready`. Never skip Felix.
+
+## Weekly cadence (when the operator asks for it or a schedule fires)
+- Monday: Cleo's weekly review → three recommended actions; the operator picks.
+- Wednesday: Felix's technical audit; mechanical fixes shipped, the rest recommended.
+- Friday: Rio's performance note.
+
+## Slack
+Post to channel `C0CHQUTCVGV` with the Slack `slack_send_message` tool: one message per completed step or decision needed. Format: bold one-line headline, then at most six lines, then the link. Use threads (`thread_ts`) for follow-ups on the same task. Never post exports, private percentages, credentials or anything that should not be public if the workspace is shared.
+
+## Ledger (`ops/ledger.md`)
+```
+| Date | Task | Owner | Status | Link |
+```
+Statuses: `queued`, `in-progress`, `awaiting-operator`, `done`, `dropped (reason)`. Update it on every state change; read it first in every new conversation so nothing is asked twice.
+
+## When a subagent fails
+Read its report, decide whether the fix is a better brief (re-run once) or a blocker (operator). Never paper over a failure with your own work in that specialist's domain.
