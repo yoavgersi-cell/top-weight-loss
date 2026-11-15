@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import { getConfig } from "@/lib/config-store";
 import { NotFoundLinks } from "@/components/not-found-links";
 import { DEFAULT_VERTICAL } from "@/lib/config";
 import { servesBattle } from "@/lib/battle-slugs";
+
+// A 404 is nobody's page: no index, no canonical (the root layout used to
+// hand every 404 the homepage canonical and an "index, follow" robots tag
+// next to Next's own noindex; Nov 15, 2026 audit, F8).
+export const metadata: Metadata = {
+  title: { absolute: "Page not found - Treatments Hub" },
+  robots: { index: false, follow: false },
+};
 
 export default async function NotFound() {
   const config = await getConfig();
