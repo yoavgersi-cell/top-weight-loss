@@ -1,4 +1,4 @@
-2026-11-15 · Author: Rio · Status: approved (operator, 2026-11-15; main caption) · Source page: https://www.treatmentshub.com/weight-loss/how-we-rank (section "How we verify prices", read 2026-11-15; page states "Last updated: Sep 1, 2026", medically reviewed Oct 30, 2026)
+2026-11-15 · Author: Rio · Status: published (2026-11-15 14:53 UTC, on operator instruction) · Source page: https://www.treatmentshub.com/weight-loss/how-we-rank (section "How we verify prices", read 2026-11-15; page states "Last updated: Sep 1, 2026", medically reviewed Oct 30, 2026)
 
 Request: operator asked for the first Instagram post of the new cycle; reference account top10.com; keep the tone, vibe and theme of the three existing posts; informative, not clickbait; purpose is an active owned asset for SEO/GEO/AEO. Input file: ops/social/2026-11-15-account-snapshot.md.
 
@@ -109,7 +109,7 @@ Monday 2026-11-17, 14:00 UTC (09:00 ET). The three existing posts went out at 13
 - Instagram limits: caption under 2,200 chars, 5 hashtags, JPEG under 8 MB, 4:5 ✓
 
 ## After publishing
-media id: —
-time: —
-link: —
-(not published; awaiting operator approval of this specific draft, and a live 200 on the public image URL)
+media id: 18136733377780556
+time: 2026-11-15 14:53:55 UTC
+link: https://www.instagram.com/p/DfxCpDKjdYo/
+(published via Windsor.ai create_image_post; image URL verified 200 before publishing)

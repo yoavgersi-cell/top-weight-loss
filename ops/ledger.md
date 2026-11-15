@@ -1,4 +1,4 @@
 | Date | Task | Owner | Status | Link |
 |---|---|---|---|---|
-| 2026-11-15 | First Instagram image post (reference: top10.com IG; same tone as existing 3 posts; informative, not clickbait) | Rio | in-progress (approved; PR #613 merged, image live; publish scheduled Mon 2026-11-17 14:00 UTC) | ops/social/2026-11-15-first-post.md |
-| 2026-11-15 | Full-site technical SEO audit, report only (operator decides fixes) | Felix | awaiting-operator (27 findings; operator picks what to fix) | ops/qa/2026-11-15-technical-audit.md |
+| 2026-11-15 | First Instagram image post (reference: top10.com IG; same tone as existing 3 posts; informative, not clickbait) | Rio | done | https://www.instagram.com/p/DfxCpDKjdYo/ |
+| 2026-11-15 | Full-site technical SEO audit, report only (operator decides fixes) | Felix | partly shipped (approved mechanical fixes F1, F2, F3, F5, F6 code, F8, F9, F16, F17, F18, F21, F24 merged in PRs #614 to #617 and verified live; remaining for operator: retired CMS items, Blob token or CI job for the gate, F30/F31 new; F4 with Sloane; F7/F14 held; O-type rows open) | ops/qa/2026-11-15-technical-audit.md |
