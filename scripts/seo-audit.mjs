@@ -9,8 +9,9 @@
 // With an https AUDIT_BASE every request goes straight to the hostname it is
 // meant for (the hub, the legacy host for the migration checks, the bare apex
 // for the apex check), so the live run needs no forwarder. Behind an egress
-// proxy, Node's http/https honour it with NODE_USE_ENV_PROXY=1 (add
-// NODE_EXTRA_CA_CERTS=<bundle> if the proxy re-signs TLS). The live site
+// proxy set NODE_USE_ENV_PROXY=1 (and NODE_EXTRA_CA_CERTS=<bundle> if the
+// proxy re-signs TLS); hosts the proxy cannot reach come back as status 0
+// FAIL lines (the legacy host from a restricted environment). The live site
 // renders the CMS config stored in Blob, which the local build does not read
 // (Nov 15, 2026 audit, F6), so the live run is the one that counts after a
 // deploy; the local run is the pre-merge gate.
@@ -45,7 +46,6 @@
 //   - HTML over 1 MB
 import { spawn } from "node:child_process";
 import http from "node:http";
-import https from "node:https";
 import { setTimeout as sleep } from "node:timers/promises";
 
 const HOST = "www.treatmentshub.com";
@@ -64,36 +64,46 @@ const warns = [];
 const fail = (m) => fails.push(m);
 const warn = (m) => warns.push(m);
 
-// node:http(s) rather than fetch: undici silently drops a caller-set Host
-// header, and the proxy routes on Host (hub vs legacy vs other), so fetch
-// would audit the wrong site. Over https the connection goes to `host`
-// itself (TLS SNI = Host), so each check reaches its real hostname.
+// Local: node:http rather than fetch, because undici silently drops a
+// caller-set Host header and the proxy routes on Host (hub vs legacy vs
+// other). Live: fetch to https://<host><path> - the Host is the real hostname
+// so nothing needs overriding, and undici's proxy support (NODE_USE_ENV_PROXY)
+// reports a reset tunnel as a rejected promise, where node:https emitted an
+// unhandled socket 'error' and killed the run.
 function get(path, { host = HOST, ua = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" } = {}) {
-  const base = new URL(BASE);
-  const headers = { Host: host, "User-Agent": ua };
-  const opts = SECURE
-    ? { hostname: host, port: 443, servername: host, path, method: "GET", headers }
-    : { hostname: base.hostname, port: base.port || 80, path, method: "GET", headers };
-  const once = () =>
-    new Promise((resolve) => {
-      const failed = (e) => resolve({ status: 0, location: "", body: "", headers: {}, error: e.message });
-      const req = (SECURE ? https : http).request(opts, (res) => {
-        const chunks = [];
-        res.on("data", (c) => chunks.push(c));
-        res.on("error", failed); // a reset mid-body surfaces here, not on req
-        res.on("end", () =>
-          resolve({
-            status: res.statusCode ?? 0,
-            location: res.headers.location || "",
-            body: Buffer.concat(chunks).toString("utf8"),
-            headers: res.headers,
-          }),
-        );
-      });
-      req.setTimeout(60_000, () => req.destroy(new Error("timeout")));
-      req.on("error", failed);
-      req.end();
-    });
+  const failed = (e) => ({ status: 0, location: "", body: "", headers: {}, error: e?.cause?.message || e?.message || String(e) });
+  const once = SECURE
+    ? async () => {
+        try {
+          const r = await fetch(`https://${host}${path}`, { redirect: "manual", headers: { "User-Agent": ua }, signal: AbortSignal.timeout(60_000) });
+          return { status: r.status, location: r.headers.get("location") || "", body: await r.text(), headers: Object.fromEntries(r.headers) };
+        } catch (e) {
+          return failed(e);
+        }
+      }
+    : () =>
+        new Promise((resolve) => {
+          const base = new URL(BASE);
+          const req = http.request(
+            { hostname: base.hostname, port: base.port || 80, path, method: "GET", headers: { Host: host, "User-Agent": ua } },
+            (res) => {
+              const chunks = [];
+              res.on("data", (c) => chunks.push(c));
+              res.on("error", (e) => resolve(failed(e)));
+              res.on("end", () =>
+                resolve({
+                  status: res.statusCode ?? 0,
+                  location: res.headers.location || "",
+                  body: Buffer.concat(chunks).toString("utf8"),
+                  headers: res.headers,
+                }),
+              );
+            },
+          );
+          req.setTimeout(60_000, () => req.destroy(new Error("timeout")));
+          req.on("error", (e) => resolve(failed(e)));
+          req.end();
+        });
   // A network error (unreachable host, reset, timeout) is retried once, then
   // reported as status 0 - a FAIL line, never a crash of the whole crawl.
   return once().then((r) => (r.status === 0 ? sleep(1500).then(once) : r));
