@@ -5,7 +5,7 @@ description: The standing rules for every agent working on treatmentshub.com (da
 
 # Treatments Hub house rules
 
-These rules override convenience. Every agent on this repository (Imogen, Atlas, Sloane, Felix, Rio) loads them first. When a rule and a task conflict, stop and say so instead of bending the rule.
+These rules override convenience. Every agent on this repository (Cleo, Atlas, Sloane, Felix, Rio) loads them first. When a rule and a task conflict, stop and say so instead of bending the rule.
 
 ## 1. Data integrity (non-negotiable)
 - Never fabricate prices, Trustpilot ratings, statistics, Reddit or Facebook content, testimonials, or medical claims. Operator-verified data only.
@@ -50,7 +50,7 @@ These rules override convenience. Every agent on this repository (Imogen, Atlas,
 
 ## 7. Hand-offs
 Work passes between agents as files, not chat:
-- `ops/briefs/YYYY-MM-DD-<slug>.md` (Imogen → Atlas/Sloane)
+- `ops/briefs/YYYY-MM-DD-<slug>.md` (Cleo → Atlas/Sloane)
 - `ops/research/<slug>.md` (Atlas → Sloane)
 - `ops/qa/<slug>.md` (Felix → operator)
 - `ops/social/YYYY-MM-DD-<slug>.md` (Rio → operator)
