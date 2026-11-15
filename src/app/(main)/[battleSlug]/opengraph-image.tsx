@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 import { getConfig } from "@/lib/config-store";
+import { findBattleForSlug } from "@/lib/battle-slugs";
 
 export const runtime = "nodejs"; // Node, not Edge: Edge bundles are capped at 2 MB and this imports the full content store.
 export const alt = "Provider Comparison - treatmentshub.com";
@@ -17,7 +18,7 @@ export default async function OGImage({
   let subline = "Side-by-side comparison";
   try {
     const config = await getConfig();
-    const battle = (config.battles ?? []).find((b) => b.slug === battleSlug);
+    const battle = findBattleForSlug(config, battleSlug);
     if (battle) {
       const p1 = config.providers.find((p) => p.id === battle.provider1Id);
       const p2 = config.providers.find((p) => p.id === battle.provider2Id);

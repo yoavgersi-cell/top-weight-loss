@@ -10,6 +10,7 @@ import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED, latestUpdate, NOINDEX_WL_BATTLE_SLUGS, DEFAULT_ROBOTS } from "@/lib/config";
 import { splitSentences, BoldKeyFacts, ReadableProse } from "@/components/prose";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
+import { findBattleForSlug, canonicalPairSlug } from "@/lib/battle-slugs";
 import { providerArticles } from "@/lib/related-content";
 import { analysisPath, hasReviewAnalysis } from "@/lib/review-analysis";
 import { ComparisonLayout } from "@/components/comparison-layout";
@@ -362,23 +363,17 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
     };
   }
 
-  const battle = (config.battles ?? []).find((b) => b.slug === slug);
+  const battle = findBattleForSlug(config, slug);
   if (!battle) return { title: "Not Found" };
 
   // Reverse-pair canonicalization: if another battle compares the same two
   // providers in the opposite order (e.g. altrx-vs-noom and noom-vs-altrx),
   // both target the same query intent and split ranking signals. Point every
   // page for a given provider pair at one deterministic canonical - the
-  // alphabetically-first slug - so Google consolidates them into one result.
-  const samePairSlugs = (config.battles ?? [])
-    .filter(
-      (b) =>
-        (b.provider1Id === battle.provider1Id && b.provider2Id === battle.provider2Id) ||
-        (b.provider1Id === battle.provider2Id && b.provider2Id === battle.provider1Id)
-    )
-    .map((b) => b.slug)
-    .sort();
-  const canonicalSlug = samePairSlugs[0] ?? battle.slug;
+  // alphabetically-first SERVED slug (stored slugs mapped through
+  // SLUG_ALIASES, see src/lib/battle-slugs.ts) - so Google consolidates them
+  // into one result and the canonical is never a URL the proxy redirects.
+  const canonicalSlug = canonicalPairSlug(config, battle);
   const url = canonicalUrl(ctx, `/${canonicalSlug}`);
 
   // SERP title: a curated per-matchup override title wins when one exists (these
@@ -584,7 +579,9 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   }
 
   // ───── BATTLE PAGE ─────
-  const battle = (config.battles ?? []).find((b) => b.slug === slug);
+  // Direct match, or a stored battle whose slug is an alias of this one (the
+  // blob may hold "ro-vs-trimrx" while the proxy serves it at "trimrx-vs-ro").
+  const battle = findBattleForSlug(config, slug);
   if (!battle) {
     // A reversed ordering of a live matchup ("ro-vs-trimrx" for "trimrx-vs-ro")
     // is a typed or AI-constructed URL for the same page, not a missing page.
@@ -592,9 +589,12 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     // such URL 17 times while it 404'd. Redirect to the live slug instead.
     const parts = slug.split("-vs-");
     if (parts.length === 2) {
-      const reversed = `${parts[1]}-vs-${parts[0]}`;
-      if ((config.battles ?? []).some((b) => b.slug === reversed)) {
-        permanentRedirect(hubLink(ctx, `/${reversed}`));
+      const reversedBattle = (config.battles ?? []).find((b) => b.slug === `${parts[1]}-vs-${parts[0]}`);
+      if (reversedBattle) {
+        // Through canonicalPairSlug, never to a slug the proxy aliases away
+        // (Nov 15, 2026 audit F1: that bounced back here in a loop).
+        const target = canonicalPairSlug(config, reversedBattle);
+        if (target !== slug) permanentRedirect(hubLink(ctx, `/${target}`));
       }
     }
     return notFound();
@@ -602,19 +602,12 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
   // Collapse reverse-pair duplicates (e.g. embody-vs-altrx ↔ altrx-vs-embody):
   // both slugs render the same matchup and compete in search. 308-redirect any
-  // non-canonical slug to the single canonical (alphabetically-first) slug for
-  // this provider pair so only one URL is indexed and its authority is pooled.
-  const samePairSlugs = (config.battles ?? [])
-    .filter(
-      (b) =>
-        (b.provider1Id === battle.provider1Id && b.provider2Id === battle.provider2Id) ||
-        (b.provider1Id === battle.provider2Id && b.provider2Id === battle.provider1Id)
-    )
-    .map((b) => b.slug)
-    .sort();
-  const canonicalPairSlug = samePairSlugs[0] ?? battle.slug;
-  if (canonicalPairSlug !== slug) {
-    permanentRedirect(hubLink(ctx, `/${canonicalPairSlug}`));
+  // non-canonical slug to the single canonical slug for this provider pair
+  // (alphabetically-first SERVED slug, see src/lib/battle-slugs.ts) so only
+  // one URL is indexed and its authority is pooled.
+  const pairSlug = canonicalPairSlug(config, battle);
+  if (pairSlug !== slug) {
+    permanentRedirect(hubLink(ctx, `/${pairSlug}`));
   }
 
   const p1 = config.providers.find((p) => p.id === battle.provider1Id);
@@ -767,7 +760,9 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    ...pageReviewSchema(`/${ctx.vertical}/${battle.slug}`),
+    // Keyed by the SERVED slug (= the requested one, past the canonical check
+    // above), not the stored slug, which may be an alias.
+    ...pageReviewSchema(`/${ctx.vertical}/${slug}`),
     headline: battle.title,
     description: battle.description,
     image: [DEFAULT_OG_IMAGE.url],
@@ -787,7 +782,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     },
     // Page entity: a MedicalWebPage with audience, condition and (where logged)
     // reviewer - see src/lib/medical-schema.ts.
-    mainEntityOfPage: medicalWebPageFields(ctx.vertical, canonicalUrl(ctx, `/${battle.slug}`), `/${ctx.vertical}/${battle.slug}`),
+    mainEntityOfPage: medicalWebPageFields(ctx.vertical, canonicalUrl(ctx, `/${slug}`), `/${ctx.vertical}/${slug}`),
   };
 
   const battleBreadcrumbSchema = {
@@ -795,7 +790,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: canonicalUrl(ctx, "/") },
-      { "@type": "ListItem", position: 2, name: matchupLabel, item: canonicalUrl(ctx, `/${battle.slug}`) },
+      { "@type": "ListItem", position: 2, name: matchupLabel, item: canonicalUrl(ctx, `/${slug}`) },
     ],
   };
 
@@ -857,7 +852,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               )}
               <LastUpdated date={battleUpdatedAt} />
             </div>
-            <MedicalReviewBar path={`/${ctx.vertical}/${battle.slug}`} className="mt-3 max-w-[760px] sm:mt-4" />
+            <MedicalReviewBar path={`/${ctx.vertical}/${slug}`} className="mt-3 max-w-[760px] sm:mt-4" />
             <TrustDisclosure disclaimerHref={"/weight-loss/disclaimer"} />
           </div>
         </section>
