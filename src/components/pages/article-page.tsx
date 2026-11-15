@@ -381,7 +381,11 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     "online-therapy": "online therapy",
     ed: "ED",
   };
-  const topThreeVertical = TOP_THREE_LABEL[ctx.vertical];
+  // Operator request (Nov 15, 2026): the two-card block on selected
+  // non-weight-loss guides, in place of the vertical's top-3 block.
+  const TOP_TWO_SLUGS_BY_VERTICAL: Record<string, Set<string>> = { ed: new Set(["sildenafil-not-working"]) };
+  const showVerticalTopTwo = !!TOP_TWO_SLUGS_BY_VERTICAL[ctx.vertical]?.has(slug);
+  const topThreeVertical = showVerticalTopTwo ? undefined : TOP_THREE_LABEL[ctx.vertical];
   // Product carousel slot: after roughly the halfway section by default;
   // per-slug overrides move it higher (operator request, Nov 5, 2026: the
   // welludr plans carousel - and the provider card that follows it - right
@@ -941,6 +945,16 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     introMode="short"
                     title="Our top 3 GLP-1 providers"
                     subtitle="Our highest-ranked providers - the same cards, scores and verified prices as our full comparison."
+                  />
+                )}
+                {showVerticalTopTwo && i === 0 && (
+                  <TopProvidersBlock
+                    config={config}
+                    linkPrefix={ctx.prefix}
+                    limit={2}
+                    introMode="short"
+                    title={`Our top 2 ${TOP_THREE_LABEL[ctx.vertical]} providers`}
+                    subtitle="Our two highest-ranked providers - the same cards, scores and verified details as our full comparison."
                   />
                 )}
                 {topThreeVertical && i === topThreeAt && (
