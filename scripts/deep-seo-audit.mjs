@@ -8,7 +8,7 @@
 //   Live site:     AUDIT_BASE=https://www.treatmentshub.com node scripts/deep-seo-audit.mjs
 //
 // With an https AUDIT_BASE the requests go straight to the hub over TLS (no
-// forwarder). Behind an egress proxy set NODE_USE_ENV_PROXY=1 (and
+// forwarder) via fetch. Behind an egress proxy set NODE_USE_ENV_PROXY=1 (and
 // NODE_EXTRA_CA_CERTS=<bundle> if the proxy re-signs TLS). The live site
 // renders the Blob-stored CMS config that the local build does not read, so
 // run it against live after each deploy and compare counts with the previous
@@ -21,7 +21,6 @@
 // files, 404 handling. A sitemap URL that is not a 200 is counted under
 // page.status and skipped; a network error counts as status 0.
 import http from "node:http";
-import https from "node:https";
 import fs from "node:fs";
 import { parse } from "node-html-parser";
 
@@ -32,25 +31,37 @@ const SECURE = new URL(BASE).protocol === "https:";
 const OUT = process.env.AUDIT_OUT || "/tmp/deep-seo-audit-report.json";
 const TODAY = new Date().toISOString().slice(0, 10);
 
+// Local: node:http (a caller-set Host header, which undici drops). Live:
+// fetch to https://www.treatmentshub.com<path>; undici's proxy support
+// (NODE_USE_ENV_PROXY) reports a reset tunnel as a rejection, where
+// node:https emitted an unhandled socket 'error' and killed the run.
 function get(path, ua = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)", extra = {}) {
-  const base = new URL(BASE);
-  const headers = { Host: HOST, "User-Agent": ua, ...extra };
-  const opts = SECURE
-    ? { hostname: HOST, port: 443, servername: HOST, path, method: "GET", headers }
-    : { hostname: base.hostname, port: base.port || 80, path, method: "GET", headers };
-  const once = () =>
-    new Promise((resolve) => {
-      const failed = (e) => resolve({ status: 0, headers: {}, body: "", error: e.message });
-      const req = (SECURE ? https : http).request(opts, (res) => {
-        const chunks = [];
-        res.on("data", (c) => chunks.push(c));
-        res.on("error", failed); // a reset mid-body surfaces here, not on req
-        res.on("end", () => resolve({ status: res.statusCode ?? 0, headers: res.headers, body: Buffer.concat(chunks).toString("utf8") }));
-      });
-      req.setTimeout(60_000, () => req.destroy(new Error("timeout")));
-      req.on("error", failed);
-      req.end();
-    });
+  const failed = (e) => ({ status: 0, headers: {}, body: "", error: e?.cause?.message || e?.message || String(e) });
+  const once = SECURE
+    ? async () => {
+        try {
+          const r = await fetch(`${ORIGIN}${path}`, { redirect: "manual", headers: { "User-Agent": ua, ...extra }, signal: AbortSignal.timeout(60_000) });
+          return { status: r.status, headers: Object.fromEntries(r.headers), body: await r.text() };
+        } catch (e) {
+          return failed(e);
+        }
+      }
+    : () =>
+        new Promise((resolve) => {
+          const base = new URL(BASE);
+          const req = http.request(
+            { hostname: base.hostname, port: base.port || 80, path, method: "GET", headers: { Host: HOST, "User-Agent": ua, ...extra } },
+            (res) => {
+              const chunks = [];
+              res.on("data", (c) => chunks.push(c));
+              res.on("error", (e) => resolve(failed(e)));
+              res.on("end", () => resolve({ status: res.statusCode ?? 0, headers: res.headers, body: Buffer.concat(chunks).toString("utf8") }));
+            },
+          );
+          req.setTimeout(60_000, () => req.destroy(new Error("timeout")));
+          req.on("error", (e) => resolve(failed(e)));
+          req.end();
+        });
   // One retry on a network error, then status 0 (counted, never a crash).
   return once().then((r) => (r.status === 0 ? new Promise((d) => setTimeout(d, 1500)).then(once) : r));
 }

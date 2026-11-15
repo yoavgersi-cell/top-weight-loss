@@ -60,8 +60,17 @@ export function Sidebar({ config, providers, linkPrefix = "" }: { config: Sideba
         // (a fifth of the bytes) and keep the PNG as the fallback.
         const webp = sidebarWebp(imgSrc);
         const dims = SIDEBAR_IMAGE_DIMS[imgSrc];
+        // The link is the provider's affiliate URL (house rule 4: paid links
+        // carry sponsored nofollow); an internal fallback link carries none.
+        // Nov 15, 2026 audit F28: it rendered with no rel on eight money pages.
+        const external = /^https?:\/\//i.test(href ?? "");
         return (
-          <a key="featuredImage" href={href} className="block overflow-hidden rounded-xl border border-[#EAEAEA]">
+          <a
+            key="featuredImage"
+            href={href}
+            {...(external && { rel: "sponsored nofollow noopener" })}
+            className="block overflow-hidden rounded-xl border border-[#EAEAEA]"
+          >
             <picture>
               {webp && <source srcSet={webp} type="image/webp" />}
               <img
