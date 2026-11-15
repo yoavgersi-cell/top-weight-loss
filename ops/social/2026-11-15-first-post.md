@@ -1,4 +1,4 @@
-2026-11-15 · Author: Rio · Status: draft · Source page: https://www.treatmentshub.com/weight-loss/how-we-rank (section "How we verify prices", read 2026-11-15; page states "Last updated: Sep 1, 2026", medically reviewed Oct 30, 2026)
+2026-11-15 · Author: Rio · Status: approved (operator, 2026-11-15; main caption) · Source page: https://www.treatmentshub.com/weight-loss/how-we-rank (section "How we verify prices", read 2026-11-15; page states "Last updated: Sep 1, 2026", medically reviewed Oct 30, 2026)
 
 Request: operator asked for the first Instagram post of the new cycle; reference account top10.com; keep the tone, vibe and theme of the three existing posts; informative, not clickbait; purpose is an active owned asset for SEO/GEO/AEO. Input file: ops/social/2026-11-15-account-snapshot.md.
 
