@@ -85,6 +85,15 @@ export function proxy(req: NextRequest) {
       return NextResponse.redirect(url, 301);
     }
 
+    // Upper-case paths 301 to lower case: /weight-loss/Reviews answered 200 as
+    // a crawlable duplicate of /weight-loss/reviews (Nov 15, 2026 audit, F18).
+    // Dotted paths, /_next, /api and /admin never reach here (matcher).
+    if (pathname !== pathname.toLowerCase()) {
+      const url = req.nextUrl.clone();
+      url.pathname = pathname.toLowerCase();
+      return NextResponse.redirect(url, 301);
+    }
+
     if (pathname === "/") {
       return NextResponse.rewrite(new URL("/hub", req.url));
     }
@@ -154,8 +163,16 @@ export function proxy(req: NextRequest) {
       return NextResponse.next();
     }
 
-    // The hub landing's own route (rewritten from "/").
+    // The hub landing's own route, reached only by the internal rewrite from
+    // "/". A direct request for /hub is a duplicate of the homepage and 301s
+    // to it (Nov 15, 2026 audit, F9); the route's own metadata image
+    // (/hub/opengraph-image-<hash>) is still served.
     if (first === "hub") {
+      if (segments.length === 1) {
+        const url = req.nextUrl.clone();
+        url.pathname = "/";
+        return NextResponse.redirect(url, 301);
+      }
       return NextResponse.next();
     }
 
@@ -171,10 +188,12 @@ export function proxy(req: NextRequest) {
       return NextResponse.redirect(url, 301);
     }
 
-    // Generated metadata image routes (e.g. /opengraph-image) have no file
-    // extension, so the matcher doesn't exclude them - serve them as-is rather
-    // than redirecting the OG/Twitter image URLs into a 404.
-    if (last === "opengraph-image" || last === "twitter-image") {
+    // Generated metadata image routes have no file extension, so the matcher
+    // doesn't exclude them - serve them as-is rather than redirecting the
+    // OG/Twitter image URLs into a 404. Next hashes the segment in production
+    // (/opengraph-image-12jlf3), which the exact match used to miss (Nov 15,
+    // 2026 audit, F17).
+    if (last && /^(opengraph|twitter)-image(-\w+)?$/.test(last)) {
       return NextResponse.next();
     }
 

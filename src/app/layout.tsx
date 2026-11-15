@@ -6,7 +6,6 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { TaboolaPixel } from "@/components/taboola-pixel";
-import { hreflangLanguages } from "@/lib/regions";
 import { WEIGHT_LOSS_MIGRATED } from "@/lib/site-context";
 import "./globals.css";
 
@@ -67,13 +66,10 @@ export const metadata: Metadata = {
     "ICBM": "37.0902, -95.7129",
     "content-language": "en-US",
   },
-  alternates: {
-    canonical: "https://www.treatmentshub.com",
-    // hreflang for the home. Region-aware: emits en-US + x-default now, and
-    // auto-includes en-GB once GB is added to PUBLISHED_REGIONS. Per-page
-    // hreflang is wired the same way when UK content is built.
-    languages: hreflangLanguages("https://www.treatmentshub.com", "/"),
-  },
+  // No canonical or hreflang here: the homepage declares its own in
+  // (main)/hub/page.tsx. Set on the root layout, every route without its own
+  // alternates (404s, the noindex paid landing pages) inherited a canonical
+  // pointing at the homepage (Nov 15, 2026 audit, F8/F24).
   robots: {
     index: true,
     follow: true,
