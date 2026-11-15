@@ -1,5 +1,7 @@
 import { getConfig } from "@/lib/config-store";
 import { NotFoundLinks } from "@/components/not-found-links";
+import { DEFAULT_VERTICAL } from "@/lib/config";
+import { servesBattle } from "@/lib/battle-slugs";
 
 export default async function NotFound() {
   const config = await getConfig();
@@ -12,6 +14,7 @@ export default async function NotFound() {
     .map((p) => ({ id: p.id, name: p.name, logo: p.logo }));
 
   const comparisons = (config.battles ?? [])
+    .filter((b) => servesBattle(config, DEFAULT_VERTICAL, b))
     .map((b) => {
       const p1 = config.providers.find((p) => p.id === b.provider1Id);
       const p2 = config.providers.find((p) => p.id === b.provider2Id);

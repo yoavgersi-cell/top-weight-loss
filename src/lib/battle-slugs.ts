@@ -9,6 +9,7 @@
 // slug the proxy will serve. The sitemap and llms.txt use the same rule, so a
 // URL is listed only when it answers 200.
 import { SLUG_ALIASES } from "@/lib/slug-aliases";
+import { isRedirectedContentPath } from "@/lib/path-redirects";
 import type { BattleData, SiteConfig } from "@/lib/config";
 
 /** The slug a stored battle is reachable at: its own, unless the proxy aliases it away. */
@@ -41,3 +42,12 @@ export function canonicalPairSlug(config: SiteConfig, battle: BattleData): strin
 /** True when a stored battle's own slug is the URL that answers 200 for its pair. */
 export const isCanonicalBattleSlug = (config: SiteConfig, battle: BattleData): boolean =>
   !(battle.slug in SLUG_ALIASES) && canonicalPairSlug(config, battle) === battle.slug;
+
+/**
+ * True when /<vertical>/<battle.slug> is a page (canonical for its pair and
+ * not a retired path the proxy 301s). The sitemap, llms.txt and every list
+ * that links comparisons use this one test, so no page links a URL that
+ * redirects.
+ */
+export const servesBattle = (config: SiteConfig, vertical: string, battle: BattleData): boolean =>
+  isCanonicalBattleSlug(config, battle) && !isRedirectedContentPath(vertical, `/${battle.slug}`);

@@ -10,6 +10,7 @@ import { VERTICALS, DEFAULT_ROBOTS } from "@/lib/config";
 import { type SiteContext, canonicalUrl, hubLink, verticalNameInProse } from "@/lib/site-context";
 import { RatingBadge } from "@/components/rating-badge";
 import { THREE_WAY_COMPARISONS } from "@/lib/three-way";
+import { servesBattle } from "@/lib/battle-slugs";
 
 function verticalName(id: string): string {
   return VERTICALS.find((v) => v.id === id)?.name ?? "Treatment";
@@ -77,10 +78,13 @@ export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
     .sort((a, b) => a.rank - b.rank);
 
   // Comparisons featuring the vertical's providers: every two-way battle in
-  // config order, then (weight loss only) the curated three-way pages.
+  // config order (only the slugs that answer 200: retired and aliased battles
+  // 301 away, Nov 15, 2026 audit F2), then (weight loss only) the curated
+  // three-way pages.
   const providerName = (id: string) => config.providers.find((p) => p.id === id)?.name;
   const comparisons: { slug: string; label: string; kind: string }[] = [
     ...(config.battles ?? [])
+      .filter((b) => servesBattle(config, ctx.vertical, b))
       .map((b) => {
         const a = providerName(b.provider1Id);
         const c = providerName(b.provider2Id);

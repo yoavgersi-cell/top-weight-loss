@@ -13,6 +13,7 @@ import {
 import { WEIGHT_LOSS_MIGRATED } from "@/lib/site-context";
 import { WEIGHT_LOSS_GUIDES } from "@/components/guide-cluster";
 import { getReviewer, reviewerDisplayName, reviewerPath } from "@/data/reviewers";
+import { hubSitemap } from "@/lib/sitemaps";
 
 // llms.txt (llmstxt.org): a curated, human-readable index of the site's most
 // useful pages, written for AI answer engines (ChatGPT Search, Perplexity,
@@ -179,7 +180,17 @@ export async function GET() {
     parts.push("");
   }
 
-return new NextResponse(parts.join("\n"), {
+  // Every page link must be a URL the sitemap lists, which is exactly the set
+  // that answers 200 (the sitemap already drops aliased, redirected and
+  // non-canonical records). Data files (.xml/.csv) are not pages and stay.
+  // Nov 15, 2026 audit (F3): 13 links here were 301s to retired slugs.
+  const listed = new Set((await hubSitemap()).map((e) => new URL(e.url).pathname));
+  const answers = (l: string) => {
+    const m = l.match(/^- \[[^\]]*\]\(https:\/\/www\.treatmentshub\.com(\/[^)\s]*)\)/);
+    return !m || listed.has(m[1]) || /\.[a-z0-9]+$/i.test(m[1]);
+  };
+
+  return new NextResponse(parts.filter(answers).join("\n"), {
     headers: {
       "content-type": "text/plain; charset=utf-8",
       // Cache at the edge - the content only changes when config does.

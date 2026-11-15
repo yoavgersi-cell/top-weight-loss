@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Check, X, ArrowRight, ArrowUpRight, Shield, Star, ArrowBigUp, ArrowBigDown, MessageCircle, ShieldCheck, UserRound, Users, Stethoscope, type LucideIcon } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { latestUpdate, VERTICALS, NOINDEX_WL_REVIEW_SLUGS, NOINDEX_WL_BATTLE_SLUGS, DEFAULT_ROBOTS } from "@/lib/config";
-import { SLUG_ALIASES } from "@/lib/slug-aliases";
+import { servesBattle } from "@/lib/battle-slugs";
 import {
   type SiteContext,
   canonicalUrl,
@@ -862,7 +862,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
       : [];
   const relatedBattles = (config.battles ?? [])
     .filter((b) => b.provider1Id === provider.id || b.provider2Id === provider.id)
-    .filter((b) => !(b.slug in SLUG_ALIASES))
+    .filter((b) => servesBattle(config, ctx.vertical, b))
     .filter((b) => !(ctx.vertical === "weight-loss" && NOINDEX_WL_BATTLE_SLUGS.has(b.slug)))
     .filter((b) => {
       const other = b.provider1Id === provider.id ? b.provider2Id : b.provider1Id;

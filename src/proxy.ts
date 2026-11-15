@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { isVertical } from "@/lib/config";
 import { WEIGHT_LOSS_MIGRATED } from "@/lib/site-context";
 import { SLUG_ALIASES } from "@/lib/slug-aliases";
+import { PATH_REDIRECTS, VERTICAL_PATH_REDIRECTS } from "@/lib/path-redirects";
 
 // Single-segment pages that are shared across the hub rather than owned by a
 // vertical's CMS config (the quiz, editorial guides, and static info pages).
@@ -45,77 +46,10 @@ const SHARED_ONE_OFF_PAGES = new Set([
 const ROOT_PAGES = new Set(["reviewers", "medical-review-policy"]);
 
 // SLUG_ALIASES lives in @/lib/slug-aliases so page templates can avoid
-// linking to an aliased (redirecting) comparison URL.
-
-// Full-path redirects for content pages that were renamed or consolidated (an
-// article slug that moved, or one that became a standalone landing page). The
-// slug-alias map above only rewrites a single trailing segment and re-prefixes
-// bare under /weight-loss, so it can't express an article -> article move (which
-// must keep the /articles segment) or article -> standalone. These entries fill
-// that gap. Keyed by the content-relative path (no vertical prefix); the value
-// is content-relative too, so it re-prefixes onto the requested vertical in a
-// single 301. All targets are verified-live pages. (Sourced from the old-domain
-// Pages export - each key was 301'ing into a 404.)
-const PATH_REDIRECTS: Record<string, string> = {
-  // Retired embody battles that still rank on the legacy domain for the brand
-  // query "embody weight loss" (embody-vs-noom: 1,131 impressions in the
-  // Sep 2026 old-domain export). The relevant live page for that query is the
-  // embody review, not the generic programs comparison - so the residual
-  // ranking consolidates onto the page that actually answers it.
-  "/embody-vs-noom": "/reviews/embody",
-  "/noom-vs-embody": "/reviews/embody",
-  "/embody-vs-found": "/reviews/embody",
-  // Still listed by Bing (Oct 2026 Search Performance export) and 404ing;
-  // the embody review is the live page for it.
-  "/articles/embody-weight-loss-review": "/reviews/embody",
-  // Became a standalone landing page (dropped the /articles segment).
-  "/articles/glp1-pills-vs-injections": "/glp1-pills-vs-injections",
-  // Renamed article - direct live successor.
-  "/articles/online-vs-clinic-weight-loss": "/articles/in-person-vs-online-weight-loss",
-  // Nov 8, 2026: Bing AI Performance export shows Copilot citing this slug
-  // (6 citations) while it answered 404; the live guide is embody-alternatives.
-  "/articles/best-embody-alternatives": "/articles/embody-alternatives",
-  // Retired articles with no 1:1 successor -> closest live guide by intent.
-  "/articles/noom-vs-glp1-providers": "/best-online-weight-loss-programs",
-  "/articles/glp1-benefits-beyond-weight-loss": "/articles/how-glp1-medications-work",
-  "/articles/ozempic-face-what-it-is": "/articles/how-glp1-medications-work",
-  "/articles/ozempic-before-and-after-weight-loss": "/articles/how-long-for-semaglutide-to-work",
-  "/articles/telemedicine-weight-loss-guide": "/articles/choosing-telehealth-weight-loss-provider",
-  // Still in Google's Nov 2026 Pages report and 404ing (no PCOS guide on the hub).
-  "/articles/glp1-weight-loss-pcos": "/articles/glp1-weight-loss-for-women",
-  // In Google's Nov 2026 report (linked from an older page version); no such
-  // matchup exists, and the TrimRx alternatives guide compares both.
-  "/trimrx-vs-directmeds": "/articles/trimrx-alternatives",
-  // Consolidated into the ranking homepage (see article-page.tsx). The page-level
-  // redirect still exists as a fallback, but resolving it here turns the
-  // legacy 301 -> 308 chain into a single hop. Empty target = the vertical root.
-  "/articles/best-weight-loss-telehealth-providers": "",
-  // Stale /articles/ copy of a battle slug - same single-hop reason.
-  "/articles/altrx-vs-ro": "/altrx-vs-ro",
-};
-
-// Same idea, scoped to one vertical: content-relative key and target, applied
-// only when the request is under that vertical's prefix. Needed where a
-// retired slug still exists in another vertical (DirectMeds is a live
-// weight-loss review, Hone a live TRT review).
-const VERTICAL_PATH_REDIRECTS: Record<string, Record<string, string>> = {
-  "weight-loss": {
-    // Oct 9, 2026: SYNNERGY RX removed from the ranking (operator decision).
-    "/reviews/synergyrx": "/reviews",
-  },
-  hrt: {
-    // Oct 8, 2026: HRT ranking cut to its three partner providers. The five
-    // dropped review pages consolidate onto the reviews index; the two
-    // retired comparisons both featured Winona, so they land on its review.
-    "/reviews/nurx": "/reviews",
-    "/reviews/innerbalance": "/reviews",
-    "/reviews/hone": "/reviews",
-    "/reviews/wisp": "/reviews",
-    "/reviews/directmeds": "/reviews",
-    "/hone-vs-winona": "/reviews/winona",
-    "/winona-vs-nurx": "/reviews/winona",
-  },
-};
+// linking to an aliased (redirecting) comparison URL. PATH_REDIRECTS and
+// VERTICAL_PATH_REDIRECTS (full-path and per-vertical content redirects) live
+// in @/lib/path-redirects for the same reason: the sitemap and llms.txt filter
+// against them (Nov 15, 2026 audit F2/F3).
 
 // One deployment serves two hosts:
 //

@@ -6,6 +6,7 @@ import {
   type SiteConfig,
 } from "@/lib/config";
 import { hubLink, type SiteContext } from "@/lib/site-context";
+import { servesBattle } from "@/lib/battle-slugs";
 
 // ───── Sibling links (crawl paths) ─────
 // Nov 4, 2026 internal-link audit: no page was a true orphan, but 31 sitemap
@@ -60,6 +61,7 @@ export function comparisonSiblings(config: SiteConfig, ctx: SiteContext): Siblin
   const names = new Map(config.providers.map((p) => [p.id, p.name] as const));
   const battles = (config.battles ?? [])
     .filter((b) => !(ctx.vertical === "weight-loss" && NOINDEX_WL_BATTLE_SLUGS.has(b.slug)))
+    .filter((b) => servesBattle(config, ctx.vertical, b))
     .map((b) => ({
       href: hubLink(ctx, `/${b.slug}`),
       label: b.matchupLabel ?? `${names.get(b.provider1Id) ?? b.provider1Id} vs ${names.get(b.provider2Id) ?? b.provider2Id}`,
