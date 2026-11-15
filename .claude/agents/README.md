@@ -1,6 +1,6 @@
 # The Treatments Hub team
 
-**Quinn** is the chief of staff: the one session the operator talks to. Quinn routes work to the five specialists below as subagents, enforces the approval gates and posts progress to Slack (#treatments-hub-team).
+**Dashiell** is the chief of staff: the one session the operator talks to. Dashiell routes work to the five specialists below as subagents, enforces the approval gates and posts progress to Slack (#treatments-hub-team).
 
 Five agents, one rulebook, six craft skills (`.claude/skills/`: house-rules, article-writing, research-method, seo-briefing, qa-review, social-posting, shipping). Each file here is an agent's job description; `.claude/skills/house-rules/SKILL.md` is the rulebook they all load first. Work passes between them as files under `ops/`.
 

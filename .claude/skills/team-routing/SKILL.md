@@ -1,6 +1,6 @@
 ---
 name: team-routing
-description: How Quinn delegates to the Treatments Hub specialists as subagents, briefs them, chains the content pipeline, posts to Slack, and keeps the task ledger. Load when coordinating more than one agent.
+description: How Dashiell delegates to the Treatments Hub specialists as subagents, briefs them, chains the content pipeline, posts to Slack, and keeps the task ledger. Load when coordinating more than one agent.
 ---
 
 # Team routing
