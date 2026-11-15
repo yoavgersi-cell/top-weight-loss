@@ -6,7 +6,7 @@ description: How Dashiell delegates to the Treatments Hub specialists as subagen
 # Team routing
 
 ## Delegating
-Use the Agent tool with `subagent_type` set to the specialist's name (`cleo`, `atlas`, `sloane`, `felix`, `rio`). Run independent work in parallel; run dependent steps in sequence and read the output file between them. Prefer `run_in_background: false` for a step the next step depends on.
+Use the Agent tool with `subagent_type` set to the specialist's name (`cleo`, `atlas`, `sloane`, `felix`, `rio`). In a Slack (Claude Tag) session the agents folder may not be loaded; then use `subagent_type: general-purpose` and begin the prompt with the full text of `.claude/agents/<name>.md`, then "Load the skills named above", then the brief. Run independent work in parallel; run dependent steps in sequence and read the output file between them. Prefer `run_in_background: false` for a step the next step depends on.
 
 A good brief contains, in this order:
 1. Who they are and which files to load ("You are Atlas. Read .claude/agents/atlas.md and load house-rules and research-method.").
