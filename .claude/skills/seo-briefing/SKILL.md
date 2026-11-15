@@ -11,7 +11,8 @@ Load `house-rules` first. Outputs go to `ops/briefs/`.
 - **Google Search Console** and **Bing Webmaster** when connected; otherwise the operator's latest CSV exports (ask for: queries, pages, AI/Copilot citation report). Never estimate traffic. If nothing is connected and no export is at hand, the review says "no fresh data" and stops at qualitative work.
 - **Site inventory**: `src/data/articles.ts`, `src/lib/seeds/*`, `src/lib/price-index.ts`, `src/lib/ed-price-index.ts`, sitemaps at `/sitemap-*.xml`, `/llms.txt`.
 - **Competitors**: read the top 5 results for the target query directly (WebFetch); note what each covers, its sources, its tables, its dates.
-- **Keyword tools**: DataForSEO when connected; WebSearch as the fallback for demand signals, labelled as such.
+- **Ahrefs** (MCP server `Ahrefs`, tools `mcp__Ahrefs__*`): the standard source for keyword demand, difficulty, SERP shape, competitor pages and backlinks, and Brand Radar for AI-answer citations. Rules: run `mcp__Ahrefs__doc` for a tool before its first call (it holds the real input schema); run `subscription-info-limits-and-usage` once per session and write the plan and remaining units at the top of the brief; monetary fields are USD cents; when a result says `render_with`, call that render tool. Useful calls: `site-explorer-organic-keywords` and `site-explorer-top-pages` (ours and a competitor's), `site-explorer-organic-competitors`, `keywords-explorer-overview` / `-matching-terms` / `-related-terms`, `serp-overview`, `site-explorer-referring-domains`, `brand-radar-*`. On the Free plan only `public-domain-rating-free` answers for arbitrary domains; say "Ahrefs: free plan, no data" rather than estimating.
+- **Keyword tools fallback**: DataForSEO when connected; WebSearch as the last fallback for demand signals, labelled as such.
 - Past baselines live in the repo history and earlier briefs; compare before calling anything a trend.
 
 ## 2. Scoring an opportunity
