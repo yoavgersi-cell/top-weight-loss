@@ -5,7 +5,11 @@ description: The exact build, verify, screenshot, audit, commit, PR, merge and b
 
 # Shipping a change
 
-Branch: `claude/weight-loss-rifgr-0mgcit`. Vercel deploys `main`. Scratch files go in the session scratchpad, never the repo.
+Branch: **one per task, named for the agent and the task**, e.g. `claude/sloane-ro-cost-refresh` or `claude/felix-audit-2026-11-20`, created from the latest `origin/main`. Several agents work at the same time, so a shared branch name causes rejected pushes and stale-info errors; never reuse another agent's branch. Vercel deploys `main`. Scratch files go in the session scratchpad, never the repo.
+
+```bash
+git fetch origin main && git checkout -B claude/<agent>-<task> origin/main
+```
 
 ## 1. Type-check and build
 ```bash
@@ -47,8 +51,9 @@ Commit message: what changed and why, sources and dates for content, then the at
 ```bash
 git add -A <paths>
 git commit -F msg.txt
-for i in 1 2 3 4; do git push -u origin claude/weight-loss-rifgr-0mgcit --force-with-lease && break; sleep $((i*15)); done
+for i in 1 2 3 4; do git push -u origin claude/<agent>-<task> && break; sleep $((i*15)); done
 ```
+If the push is rejected because `main` moved, `git fetch origin main && git rebase origin/main`, re-run tsc, then push again.
 
 ## 6. Pull request
 Use the GitHub MCP tool `create_pull_request` (owner `yoavgersi-cell`, repo `top-weight-loss`, base `main`). Body: Summary, Verification (tsc, build, screenshots, audit result), then the footer:
@@ -59,10 +64,8 @@ Use the GitHub MCP tool `create_pull_request` (owner `yoavgersi-cell`, repo `top
 ```
 Merge with `merge_pull_request` (squash) only if your agent file allows it. Otherwise post the PR link and stop.
 
-## 7. Reset the branch after a merge
-```bash
-git fetch origin main && git checkout -B claude/weight-loss-rifgr-0mgcit origin/main && git push -u origin claude/weight-loss-rifgr-0mgcit --force-with-lease
-```
+## 7. After a merge
+Delete the task branch (`git push origin --delete claude/<agent>-<task>`) and start the next task from a fresh `origin/main`. Do not keep a long-lived personal branch.
 GitHub occasionally answers 503 on push or fetch; retry with backoff, do not change anything else.
 
 ## Environment notes
