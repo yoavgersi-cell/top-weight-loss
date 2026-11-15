@@ -1,14 +1,26 @@
 #!/usr/bin/env node
-// SEO / GEO health check for treatmentshub.com, run against a production
-// build served locally (no network access to the live site is needed).
+// SEO / GEO health check for treatmentshub.com. Runs against a production
+// build served locally, or directly against the live site.
 //
-//   npm run build && node scripts/seo-audit.mjs
+//   Local build:   npm run build && node scripts/seo-audit.mjs
+//                  (or AUDIT_BASE=http://localhost:4201 when a server is up)
+//   Live site:     AUDIT_BASE=https://www.treatmentshub.com node scripts/seo-audit.mjs
 //
-// Starts `next start` on AUDIT_PORT (default 4310) unless AUDIT_BASE points at
-// a server that is already up, crawls every URL in the hub sitemaps with the
-// production Host header, and checks the signals that have actually broken on
-// this site before. Prints FAIL / WARN lines and a final RESULT line; exits 1
-// on any FAIL so a scheduler can tell pass from fail.
+// With an https AUDIT_BASE every request goes straight to the hostname it is
+// meant for (the hub, the legacy host for the migration checks, the bare apex
+// for the apex check), so the live run needs no forwarder. Behind an egress
+// proxy, Node's http/https honour it with NODE_USE_ENV_PROXY=1 (add
+// NODE_EXTRA_CA_CERTS=<bundle> if the proxy re-signs TLS). The live site
+// renders the CMS config stored in Blob, which the local build does not read
+// (Nov 15, 2026 audit, F6), so the live run is the one that counts after a
+// deploy; the local run is the pre-merge gate.
+//
+// Locally, starts `next start` on AUDIT_PORT (default 4310) unless AUDIT_BASE
+// points at a server that is already up. Crawls every URL in the hub sitemaps
+// with the production Host header and checks the signals that have actually
+// broken on this site before. Prints FAIL / WARN lines and a final RESULT
+// line; exits 1 on any FAIL so a scheduler can tell pass from fail. A network
+// error on a URL is reported as status 0 (a FAIL line), never a crash.
 //
 // FAIL (must be fixed):
 //   - a sitemap URL that is not a 200, or redirects
@@ -33,6 +45,7 @@
 //   - HTML over 1 MB
 import { spawn } from "node:child_process";
 import http from "node:http";
+import https from "node:https";
 import { setTimeout as sleep } from "node:timers/promises";
 
 const HOST = "www.treatmentshub.com";
@@ -40,6 +53,7 @@ const ORIGIN = `https://${HOST}`;
 const LEGACY_HOST = "www.topweightloss.io";
 const PORT = Number(process.env.AUDIT_PORT || 4310);
 const BASE = process.env.AUDIT_BASE || `http://localhost:${PORT}`;
+const SECURE = new URL(BASE).protocol === "https:";
 const VERTICALS = ["weight-loss", "hair-loss", "trt", "hrt", "online-therapy"];
 const SHARED_PAGES = ["disclaimer", "how-we-rank", "find-your-match", "about", "privacy", "terms"];
 // Internal links that are allowed to point outside the sitemap.
@@ -50,17 +64,23 @@ const warns = [];
 const fail = (m) => fails.push(m);
 const warn = (m) => warns.push(m);
 
-// node:http rather than fetch: undici silently drops a caller-set Host header,
-// and the proxy routes on Host (hub vs legacy vs other), so fetch would audit
-// the wrong site.
+// node:http(s) rather than fetch: undici silently drops a caller-set Host
+// header, and the proxy routes on Host (hub vs legacy vs other), so fetch
+// would audit the wrong site. Over https the connection goes to `host`
+// itself (TLS SNI = Host), so each check reaches its real hostname.
 function get(path, { host = HOST, ua = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" } = {}) {
   const base = new URL(BASE);
-  return new Promise((resolve, reject) => {
-    const req = http.request(
-      { hostname: base.hostname, port: base.port || 80, path, method: "GET", headers: { Host: host, "User-Agent": ua } },
-      (res) => {
+  const headers = { Host: host, "User-Agent": ua };
+  const opts = SECURE
+    ? { hostname: host, port: 443, servername: host, path, method: "GET", headers }
+    : { hostname: base.hostname, port: base.port || 80, path, method: "GET", headers };
+  const once = () =>
+    new Promise((resolve) => {
+      const failed = (e) => resolve({ status: 0, location: "", body: "", headers: {}, error: e.message });
+      const req = (SECURE ? https : http).request(opts, (res) => {
         const chunks = [];
         res.on("data", (c) => chunks.push(c));
+        res.on("error", failed); // a reset mid-body surfaces here, not on req
         res.on("end", () =>
           resolve({
             status: res.statusCode ?? 0,
@@ -69,11 +89,14 @@ function get(path, { host = HOST, ua = "Mozilla/5.0 (compatible; Googlebot/2.1; 
             headers: res.headers,
           }),
         );
-      },
-    );
-    req.on("error", reject);
-    req.end();
-  });
+      });
+      req.setTimeout(60_000, () => req.destroy(new Error("timeout")));
+      req.on("error", failed);
+      req.end();
+    });
+  // A network error (unreachable host, reset, timeout) is retried once, then
+  // reported as status 0 - a FAIL line, never a crash of the whole crawl.
+  return once().then((r) => (r.status === 0 ? sleep(1500).then(once) : r));
 }
 
 let server = null;
@@ -88,9 +111,10 @@ function stopServer() {
   }
 }
 async function ensureServer() {
-  try {
-    if ((await get("/robots.txt")).status === 200) return;
-  } catch {}
+  const probe = await get("/robots.txt");
+  if (probe.status === 200) return;
+  // A live target is never started here.
+  if (SECURE) throw new Error(`${BASE}/robots.txt answered ${probe.status}${probe.error ? ` (${probe.error})` : ""}`);
   // Detached so the whole process group (npx -> next -> server) can be
   // stopped at the end; killing only the npx wrapper left the server running.
   server = spawn("npx", ["next", "start", "-p", String(PORT)], {
@@ -156,7 +180,9 @@ async function main() {
   // crawl
   const pages = new Map();
   const paths = [...urls.keys()];
-  const CONCURRENCY = 8;
+  // Lower by default over https: a shared egress proxy resets connections
+  // under eight parallel streams. AUDIT_CONCURRENCY overrides either way.
+  const CONCURRENCY = Number(process.env.AUDIT_CONCURRENCY || (SECURE ? 4 : 8));
   let next = 0;
   await Promise.all(
     Array.from({ length: CONCURRENCY }, async () => {
@@ -175,7 +201,7 @@ async function main() {
   const linkTargets = new Map(); // non-sitemap internal link -> first source
   for (const [p, pg] of pages) {
     if (pg.status !== 200) {
-      fail(`${p}: status ${pg.status}${pg.location ? ` -> ${pg.location}` : ""}`);
+      fail(`${p}: status ${pg.status}${pg.location ? ` -> ${pg.location}` : ""}${pg.error ? ` (${pg.error})` : ""}`);
       continue;
     }
     const want = ORIGIN + (p === "/" ? "" : p);
@@ -227,9 +253,10 @@ async function main() {
   }
   const legacyMap = await get("/sitemap.xml", { host: LEGACY_HOST });
   if (legacyMap.status !== 200 || !legacyMap.body.includes(`https://${LEGACY_HOST}/`)) fail("legacy sitemap not serving the old URLs");
-  // apex -> www
+  // apex -> www, one permanent hop. Live, Vercel's domain redirect answers 308
+  // before the proxy's 301 can run; both are permanent, both are accepted.
   const apex = await get("/weight-loss", { host: "treatmentshub.com" });
-  if (apex.status !== 301 || apex.location !== `${ORIGIN}/weight-loss`) fail(`apex: ${apex.status} ${apex.location}`);
+  if (![301, 308].includes(apex.status) || apex.location !== `${ORIGIN}/weight-loss`) fail(`apex: ${apex.status} ${apex.location}`);
   // cross-vertical copies of shared pages must redirect
   for (const v of VERTICALS.filter((v) => v !== "weight-loss")) {
     for (const s of SHARED_PAGES) {

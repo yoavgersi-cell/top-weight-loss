@@ -14,6 +14,7 @@ import { WEIGHT_LOSS_MIGRATED } from "@/lib/site-context";
 import { WEIGHT_LOSS_GUIDES } from "@/components/guide-cluster";
 import { getReviewer, reviewerDisplayName, reviewerPath } from "@/data/reviewers";
 import { hubSitemap } from "@/lib/sitemaps";
+import { servesBattle } from "@/lib/battle-slugs";
 
 // llms.txt (llmstxt.org): a curated, human-readable index of the site's most
 // useful pages, written for AI answer engines (ChatGPT Search, Perplexity,
@@ -76,6 +77,7 @@ function weightLossSection(config: SiteConfig): string {
   out.push("### Head-to-head comparisons");
   const battles = (config.battles ?? [])
     .filter((b) => PARTNERS.has(b.provider1Id) && PARTNERS.has(b.provider2Id))
+    .filter((b) => servesBattle(config, DEFAULT_VERTICAL, b))
     .sort(
       (a, b) =>
         Math.min(rank(a.provider1Id), rank(a.provider2Id)) - Math.min(rank(b.provider1Id), rank(b.provider2Id)) ||
@@ -102,7 +104,7 @@ function verticalSection(vertical: string, config: SiteConfig): string {
   for (const lp of (config.landingPages ?? []).slice(0, 3)) {
     out.push(line(lp.seoTitle.replace(/\s*\|\s*Treatments Hub\s*$/i, ""), `${base}/${lp.slug}`, lp.seoDescription));
   }
-  for (const b of (config.battles ?? []).slice(0, 6)) {
+  for (const b of (config.battles ?? []).filter((b) => servesBattle(config, vertical, b)).slice(0, 6)) {
     out.push(line(b.matchupLabel ?? b.title.split(":")[0], `${base}/${b.slug}`, b.description));
   }
   for (const r of (config.reviews ?? []).slice(0, 8)) {
@@ -184,13 +186,15 @@ export async function GET() {
   // that answers 200 (the sitemap already drops aliased, redirected and
   // non-canonical records). Data files (.xml/.csv) are not pages and stay.
   // Nov 15, 2026 audit (F3): 13 links here were 301s to retired slugs.
+  // Applied per line: the vertical sections are multi-line strings.
   const listed = new Set((await hubSitemap()).map((e) => new URL(e.url).pathname));
   const answers = (l: string) => {
     const m = l.match(/^- \[[^\]]*\]\(https:\/\/www\.treatmentshub\.com(\/[^)\s]*)\)/);
     return !m || listed.has(m[1]) || /\.[a-z0-9]+$/i.test(m[1]);
   };
+  const body = parts.join("\n").split("\n").filter(answers).join("\n");
 
-  return new NextResponse(parts.filter(answers).join("\n"), {
+  return new NextResponse(body, {
     headers: {
       "content-type": "text/plain; charset=utf-8",
       // Cache at the edge - the content only changes when config does.
