@@ -1,6 +1,6 @@
 # The Treatments Hub team
 
-Five agents, one rulebook. Each file here is an agent's job description; `.claude/skills/house-rules/SKILL.md` is the rulebook they all load first. Work passes between them as files under `ops/`.
+Five agents, one rulebook, six craft skills (`.claude/skills/`: house-rules, article-writing, research-method, seo-briefing, qa-review, social-posting, shipping). Each file here is an agent's job description; `.claude/skills/house-rules/SKILL.md` is the rulebook they all load first. Work passes between them as files under `ops/`.
 
 | Agent | Role | May publish? |
 |---|---|---|
