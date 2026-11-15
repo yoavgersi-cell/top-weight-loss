@@ -15,6 +15,7 @@ import { LastUpdated } from "@/components/last-updated";
 import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
 import { MedicalDisclaimer } from "@/components/medical-disclaimer";
 import { TRIO_FACTS, type ThreeWayComparison } from "@/lib/three-way";
+import { servesBattle } from "@/lib/battle-slugs";
 
 // Matrix rows rendered for every trio - one place to add a row site-wide.
 const MATRIX_ROWS: { label: string; key: keyof typeof TRIO_FACTS[string] }[] = [
@@ -57,7 +58,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
   // Related 2-way battles among this trio's providers - the natural next click.
   const ids = new Set(trio.providerIds);
   const relatedBattles = (config.battles ?? []).filter(
-    (b) => ids.has(b.provider1Id) && ids.has(b.provider2Id)
+    (b) => ids.has(b.provider1Id) && ids.has(b.provider2Id) && servesBattle(config, ctx.vertical, b)
   );
 
   // Top-level page node: a MedicalWebPage with audience, condition and (where

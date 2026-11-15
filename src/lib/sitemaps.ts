@@ -24,6 +24,9 @@ import { ED_PRICE_DATA_UPDATED } from "@/lib/ed-price-index";
 import { PRICE_DATA_UPDATED } from "@/lib/price-index";
 import { articles } from "@/data/articles";
 import { analysisPath, reviewAnalysisRecords } from "@/lib/review-analysis";
+import { SLUG_ALIASES } from "@/lib/slug-aliases";
+import { isRedirectedContentPath } from "@/lib/path-redirects";
+import { servesBattle } from "@/lib/battle-slugs";
 
 const BASE_URL = "https://www.topweightloss.io";
 const HUB_URL = "https://www.treatmentshub.com";
@@ -190,6 +193,12 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
     entries.push({ url: P(s.path), lastModified: new Date(s.updatedAt), changeFrequency: "weekly", priority: 0.8 });
   }
 
+  // A CMS record whose URL the proxy 301s away from (retired slug in
+  // PATH_REDIRECTS / VERTICAL_PATH_REDIRECTS, or an alias in SLUG_ALIASES) is
+  // not a page; listing it made Search Console report "Page with redirect"
+  // on 26 live URLs (Nov 15, 2026 audit, F2).
+  const serves = (contentPath: string) => !isRedirectedContentPath(verticalId, contentPath);
+
   // Reviews - provider reviews are indexable by default (operator policy, Aug
   // 2026: impressions on every vertical first). Exception: thin filler reviews
   // on weight-loss are noindex and dropped here so they match review-page robots
@@ -197,6 +206,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
   entries.push(
     ...(config.reviews ?? [])
       .filter((r) => !(isWeightLoss && NOINDEX_WL_REVIEW_SLUGS.has(r.slug)))
+      .filter((r) => serves(`/reviews/${r.slug}`))
       .map((r) => ({
         url: P(`/reviews/${r.slug}`),
         lastModified: flooredLastModified(r.updatedAt),
@@ -208,6 +218,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
   entries.push(
     ...(config.articles ?? [])
       .filter((a) => !NOINDEX_ARTICLE_SLUGS.includes(a.slug))
+      .filter((a) => serves(`/articles/${a.slug}`))
       .map((a) => ({
         url: P(`/articles/${a.slug}`),
         lastModified: flooredLastModified(a.updatedAt),
@@ -216,9 +227,13 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
       }))
   );
 
+  // Battles: only the slug that answers 200 for its provider pair (the battle
+  // page 308s reverse-pair duplicates and the proxy 301s aliases; see
+  // src/lib/battle-slugs.ts).
   entries.push(
     ...(config.battles ?? [])
       .filter((b) => !(isWeightLoss && NOINDEX_WL_BATTLE_SLUGS.has(b.slug)))
+      .filter((b) => servesBattle(config, verticalId, b))
       .map((b) => ({
         url: P(`/${b.slug}`),
         lastModified: flooredLastModified(b.updatedAt),
@@ -228,12 +243,14 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
   );
 
   entries.push(
-    ...(config.landingPages ?? []).map((lp) => ({
-      url: P(`/${lp.slug}`),
-      lastModified: lp.updatedAt ? new Date(lp.updatedAt) : FALLBACK_DATE,
-      changeFrequency: "weekly" as const,
-      priority: 0.9,
-    }))
+    ...(config.landingPages ?? [])
+      .filter((lp) => !(lp.slug in SLUG_ALIASES) && serves(`/${lp.slug}`))
+      .map((lp) => ({
+        url: P(`/${lp.slug}`),
+        lastModified: lp.updatedAt ? new Date(lp.updatedAt) : FALLBACK_DATE,
+        changeFrequency: "weekly" as const,
+        priority: 0.9,
+      }))
   );
 
   // Curated 3-way comparisons (weight-loss only). Near-zero search demand, so
@@ -271,7 +288,9 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
     );
   }
 
-  return entries;
+  // One <url> per location, whatever the records say.
+  const seen = new Set<string>();
+  return entries.filter((e) => !seen.has(e.url) && !!seen.add(e.url));
 }
 
 // ───── topweightloss.io - the legacy sitemap (unchanged, one urlset) ─────

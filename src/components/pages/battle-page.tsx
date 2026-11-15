@@ -10,7 +10,7 @@ import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED, latestUpdate, NOINDEX_WL_BATTLE_SLUGS, DEFAULT_ROBOTS } from "@/lib/config";
 import { splitSentences, BoldKeyFacts, ReadableProse } from "@/components/prose";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
-import { findBattleForSlug, canonicalPairSlug } from "@/lib/battle-slugs";
+import { findBattleForSlug, canonicalPairSlug, servesBattle } from "@/lib/battle-slugs";
 import { providerArticles } from "@/lib/related-content";
 import { analysisPath, hasReviewAnalysis } from "@/lib/review-analysis";
 import { ComparisonLayout } from "@/components/comparison-layout";
@@ -693,6 +693,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     .filter(
       (b) =>
         b.slug !== battle.slug &&
+        servesBattle(config, ctx.vertical, b) &&
         [b.provider1Id, b.provider2Id].some((id) => id === p1.id || id === p2.id)
     )
     .map((b) => {

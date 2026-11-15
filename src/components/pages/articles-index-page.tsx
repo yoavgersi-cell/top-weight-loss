@@ -10,6 +10,7 @@ import { getConfig } from "@/lib/config-store";
 import { VERTICALS, DEFAULT_ROBOTS } from "@/lib/config";
 import { type SiteContext, canonicalUrl, hubLink, verticalNameInProse } from "@/lib/site-context";
 import { imgDims } from "@/lib/image-dims";
+import { servesBattle } from "@/lib/battle-slugs";
 
 function verticalName(id: string): string {
   return VERTICALS.find((v) => v.id === id)?.name ?? "Treatment";
@@ -70,7 +71,9 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
       : [];
 
   // Head-to-head comparison (battle) pages, with both providers resolved
+  // (served slugs only - retired/aliased battles redirect, Nov 15, 2026 F2)
   const comparisons = (config.battles ?? [])
+    .filter((b) => servesBattle(config, ctx.vertical, b))
     .map((battle) => {
       const p1 = config.providers.find((p) => p.id === battle.provider1Id);
       const p2 = config.providers.find((p) => p.id === battle.provider2Id);
