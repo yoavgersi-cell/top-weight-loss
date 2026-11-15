@@ -7,6 +7,7 @@ import { ED_GLP1_ARTICLE } from "./ed-articles/glp1-and-erectile-dysfunction";
 import { ED_STATISTICS_ARTICLE } from "./ed-articles/erectile-dysfunction-statistics";
 import { ED_FASTEST_ACTING } from "./ed-articles/fastest-acting-ed-treatments";
 import { ED_TREATMENT_OPTIONS_COMPARED } from "./ed-articles/ed-treatment-options-compared";
+import { ED_SILDENAFIL_NOT_WORKING } from "./ed-articles/sildenafil-not-working";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // ED (erectile dysfunction) vertical content - treatmentshub.com/ed
@@ -2258,6 +2259,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
       ED_STATISTICS_ARTICLE,
       ED_FASTEST_ACTING,
       ED_TREATMENT_OPTIONS_COMPARED,
+      ED_SILDENAFIL_NOT_WORKING,
     ],
 
     faqs: [
