@@ -1,38 +1,69 @@
 #!/usr/bin/env node
-// Deep SEO / GEO / AEO audit (Nov 13, 2026). Run against a local production
-// build: npm run build && (PORT=4201 npm start &) && AUDIT_BASE=http://localhost:4201 node scripts/deep-seo-audit.mjs
-// Complements scripts/seo-audit.mjs (which is the pass/fail gate); this one
-// reports counts per signal and writes a JSON report (AUDIT_OUT).
-// Deep SEO / GEO / AEO audit of the local production build.
+// Deep SEO / GEO / AEO audit (Nov 13, 2026). Complements scripts/seo-audit.mjs
+// (the pass/fail gate): this one reports counts per signal and writes a JSON
+// report (AUDIT_OUT, default /tmp/deep-seo-audit-report.json).
+//
+//   Local build:   npm run build && (PORT=4201 npm start &) &&
+//                  AUDIT_BASE=http://localhost:4201 node scripts/deep-seo-audit.mjs
+//   Live site:     AUDIT_BASE=https://www.treatmentshub.com node scripts/deep-seo-audit.mjs
+//
+// With an https AUDIT_BASE the requests go straight to the hub over TLS (no
+// forwarder). Behind an egress proxy set NODE_USE_ENV_PROXY=1 (and
+// NODE_EXTRA_CA_CERTS=<bundle> if the proxy re-signs TLS). The live site
+// renders the Blob-stored CMS config that the local build does not read, so
+// run it against live after each deploy and compare counts with the previous
+// report in ops/qa/. Sequential crawl: ~500 URLs take 15 to 20 minutes live.
+//
 // Crawls every sitemap URL with the production Host header and checks the
-// signals the repo's seo-audit.mjs does not: schema completeness per type,
-// social cards, heading structure, images, affiliate rel attributes, inbound
-// links, thin content, answer blocks, visible dates, AI-crawler access,
-// verification files, 404 handling. Writes report.json + prints a summary.
+// signals the gate does not: schema completeness per type, social cards,
+// heading structure, images, affiliate and UGC rel attributes, inbound links,
+// thin content, answer blocks, visible dates, AI-crawler access, verification
+// files, 404 handling. A sitemap URL that is not a 200 is counted under
+// page.status and skipped; a network error counts as status 0.
 import http from "node:http";
+import https from "node:https";
 import fs from "node:fs";
 import { parse } from "node-html-parser";
 
 const HOST = "www.treatmentshub.com";
 const ORIGIN = `https://${HOST}`;
 const BASE = process.env.AUDIT_BASE || "http://localhost:4201";
+const SECURE = new URL(BASE).protocol === "https:";
 const OUT = process.env.AUDIT_OUT || "/tmp/deep-seo-audit-report.json";
+const TODAY = new Date().toISOString().slice(0, 10);
 
 function get(path, ua = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)", extra = {}) {
   const base = new URL(BASE);
-  return new Promise((resolve, reject) => {
-    const req = http.request(
-      { hostname: base.hostname, port: base.port || 80, path, method: "GET", headers: { Host: HOST, "User-Agent": ua, ...extra } },
-      (res) => {
+  const headers = { Host: HOST, "User-Agent": ua, ...extra };
+  const opts = SECURE
+    ? { hostname: HOST, port: 443, servername: HOST, path, method: "GET", headers }
+    : { hostname: base.hostname, port: base.port || 80, path, method: "GET", headers };
+  const once = () =>
+    new Promise((resolve) => {
+      const failed = (e) => resolve({ status: 0, headers: {}, body: "", error: e.message });
+      const req = (SECURE ? https : http).request(opts, (res) => {
         const chunks = [];
         res.on("data", (c) => chunks.push(c));
-        res.on("end", () => resolve({ status: res.statusCode, headers: res.headers, body: Buffer.concat(chunks).toString("utf8") }));
-      },
-    );
-    req.on("error", reject);
-    req.end();
-  });
+        res.on("error", failed); // a reset mid-body surfaces here, not on req
+        res.on("end", () => resolve({ status: res.statusCode ?? 0, headers: res.headers, body: Buffer.concat(chunks).toString("utf8") }));
+      });
+      req.setTimeout(60_000, () => req.destroy(new Error("timeout")));
+      req.on("error", failed);
+      req.end();
+    });
+  // One retry on a network error, then status 0 (counted, never a crash).
+  return once().then((r) => (r.status === 0 ? new Promise((d) => setTimeout(d, 1500)).then(once) : r));
 }
+
+// Real affiliate tracking: the network hosts the site's provider links go
+// through, or tracking parameters in the query. Before Nov 15, 2026 the test
+// also counted any external target=_blank link that carried nofollow, which
+// made every Trustpilot and Reddit citation an "affiliate link without
+// sponsored" (63 false positives, audit F16).
+const AFFILIATE_RE = /https?:\/\/([^/?#]*\.)?(revoffers\.com|impact\.com|impactradius\.com|awin1\.com|shareasale\.com|cj\.com|anrdoezrs\.net|dpbolvw\.net|tkqlhce\.com|jdoqocy\.com|kqzyfj\.com|linksynergy\.com|partnerize\.com|prf\.hn|go2cloud\.org|hasoffers\.com|refersion\.com|tapfiliate\.com|clickbank\.net|pxf\.io|sjv\.io|7eer\.net)(\/|$|\?)|[?&](aff_c|aff_id|affid|affiliate_id|irclickid|clickid|utm_source=treatmentshub)=/i;
+// User-generated content hosts: cited, never endorsed, so rel must carry
+// nofollow or ugc. Reported separately as link.ugc_followed.
+const UGC_RE = /https?:\/\/([^/?#]*\.)?(reddit\.com|redd\.it|trustpilot\.com|quora\.com|facebook\.com|x\.com|twitter\.com|tiktok\.com|youtube\.com)(\/|$|\?)/i;
 
 const issues = {}; // key -> [{url, detail}]
 const add = (key, url, detail = "") => ((issues[key] ??= []).push({ url, detail }));
@@ -75,7 +106,7 @@ for (const p of urls) {
   n++;
   if (n % 50 === 0) process.stderr.write(`  ${n}/${urls.length}\n`);
   const r = await get(p);
-  if (r.status !== 200) { add("page.status", p, String(r.status)); continue; }
+  if (r.status !== 200) { add("page.status", p, `${r.status}${r.headers.location ? " -> " + r.headers.location : ""}${r.error ? " " + r.error : ""}`); continue; }
   const html = r.body;
   const root = parse(html, { blockTextElements: { script: true, style: true, noscript: true } });
   const head = root.querySelector("head");
@@ -104,7 +135,8 @@ for (const p of urls) {
   if (!twCard) add("twitter.card_missing", p);
   if (lang !== "en" && lang !== "en-US") add("html.lang", p, String(lang));
   if (!viewport) add("meta.viewport_missing", p);
-  if (!/^https:\/\/www\.treatmentshub\.com\//.test(canonical)) add("canonical.not_absolute", p, canonical);
+  // The homepage canonical is the bare origin, no trailing slash.
+  if (!/^https:\/\/www\.treatmentshub\.com(\/|$)/.test(canonical)) add("canonical.not_absolute", p, canonical);
   if (/nosnippet|max-snippet:0/.test(robotsMeta)) add("robots.snippet_blocked", p, robotsMeta);
 
   // Headings
@@ -136,7 +168,7 @@ for (const p of urls) {
 
   // Links
   const as = root.querySelectorAll("a[href]");
-  let affiliateNoSponsored = 0, affiliateNoNofollow = 0, externalNoNoopener = 0, emptyAnchor = 0, genericAnchor = 0, internal = 0, external = 0;
+  let affiliateLinks = 0, affiliateNoSponsored = 0, affiliateNoNofollow = 0, ugcFollowed = 0, externalNoNoopener = 0, emptyAnchor = 0, genericAnchor = 0, internal = 0, external = 0;
   const brokenFrag = [];
   const ids = new Set(root.querySelectorAll("[id]").map((e) => e.getAttribute("id")));
   for (const a of as) {
@@ -148,9 +180,14 @@ for (const p of urls) {
     if (href.startsWith("#")) { if (href.length > 1 && !ids.has(href.slice(1))) brokenFrag.push(href); continue; }
     if (/^https?:\/\//.test(href) && !href.startsWith(ORIGIN)) {
       external++;
-      const isAff = /aff_c|aff_id|affiliate|\/go\/|utm_source=treatments|ref=treatments|track\.|clk\.|impact|partner|awin|shareasale|cj\.com|refersion|tapfiliate|\?a=|\/r\/|redirect/i.test(href) || a.getAttribute("target") === "_blank" && /nofollow/.test(rel);
       if (a.getAttribute("target") === "_blank" && !/noopener/.test(rel)) externalNoNoopener++;
-      if (isAff) { if (!/sponsored/.test(rel)) affiliateNoSponsored++; if (!/nofollow|sponsored/.test(rel)) affiliateNoNofollow++; }
+      if (AFFILIATE_RE.test(href)) {
+        affiliateLinks++;
+        if (!/sponsored/.test(rel)) affiliateNoSponsored++;
+        if (!/nofollow|sponsored/.test(rel)) affiliateNoNofollow++;
+      } else if (UGC_RE.test(href) && !/nofollow|ugc/.test(rel)) {
+        ugcFollowed++;
+      }
       continue;
     }
     if (href.startsWith("/") || href.startsWith(ORIGIN)) {
@@ -165,6 +202,7 @@ for (const p of urls) {
   if (genericAnchor) add("link.generic_anchor", p, `${genericAnchor}`);
   if (affiliateNoSponsored) add("link.affiliate_no_sponsored", p, `${affiliateNoSponsored}`);
   if (affiliateNoNofollow) add("link.affiliate_followed", p, `${affiliateNoNofollow}`);
+  if (ugcFollowed) add("link.ugc_followed", p, `${ugcFollowed}`);
   if (externalNoNoopener) add("link.blank_no_noopener", p, `${externalNoNoopener}`);
   if (brokenFrag.length) add("link.broken_fragment", p, brokenFrag.slice(0, 5).join(" "));
 
@@ -189,7 +227,7 @@ for (const p of urls) {
         if (!node.datePublished) add("schema.article.no_datePublished", p);
         if (!node.dateModified) add("schema.article.no_dateModified", p);
         if (node.datePublished && node.dateModified && node.dateModified < node.datePublished) add("schema.article.modified_before_published", p);
-        if (node.dateModified && node.dateModified.slice(0, 10) > "2026-11-13") add("schema.article.future_date", p, node.dateModified);
+        if (node.dateModified && node.dateModified.slice(0, 10) > TODAY) add("schema.article.future_date", p, node.dateModified);
         if (!node.author) add("schema.article.no_author", p);
         else { const au = Array.isArray(node.author) ? node.author : [node.author]; au.forEach((a) => { if (!a.url && !a["@id"]) add("schema.article.author_no_url", p, a.name); }); }
         if (!node.publisher) add("schema.article.no_publisher", p);
@@ -250,7 +288,8 @@ for (const p of urls) {
   if (isArticlePath && !tables && !lists) add("aeo.no_tables_or_lists", p);
   if (isArticlePath && external < 1) add("eeat.no_external_sources", p);
   const disclosure = /affiliate|commission/i.test(bodyText);
-  if (affiliateNoSponsored + affiliateNoNofollow > 0 || /aff_c|aff_id/.test(html)) { if (!disclosure) add("eeat.affiliate_without_disclosure", p); }
+  // Only pages that actually carry an affiliate link need the disclosure.
+  if (affiliateLinks > 0 && !disclosure) add("eeat.affiliate_without_disclosure", p);
   if (!h2count && words > 600) add("structure.no_h2", p);
 
   pages[p] = { title, titleLen: title.length, descLen: desc.length, words, imgs: imgs.length, internal, external, types: [...new Set(types)], h2count, tables };
@@ -259,6 +298,7 @@ for (const p of urls) {
 // ── Inbound links ──
 let low = 0;
 for (const p of urls) {
+  if (!pages[p]) continue; // not a 200 (counted under page.status above)
   const c = inbound[p]?.size ?? 0;
   pages[p].inbound = c;
   if (c < 3) { low++; add("links.low_inbound", p, `${c}`); }
