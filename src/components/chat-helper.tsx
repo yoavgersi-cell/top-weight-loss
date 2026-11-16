@@ -1,11 +1,10 @@
 "use client";
 
 import { imgDims } from "@/lib/image-dims";
-import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowRight, Check, RotateCcw, Star, X } from "lucide-react";
+import { ArrowRight, Check, RotateCcw, X } from "lucide-react";
 import { ProviderCta } from "./provider-cta";
 import { trackEvent } from "@/lib/analytics";
 import { useNavPrefix } from "@/lib/nav-prefix";
@@ -92,12 +91,6 @@ function MatchCard({ m, med }: { m: ChatMatch; med: string }) {
         )}
       </div>
       <div className="space-y-3 px-4 py-3">
-        {SHOW_TRUSTPILOT_WIDGETS && m.trustpilot && (
-          <p className="flex items-center gap-1.5 text-[13px] text-gray-700">
-            <Star className="h-4 w-4 fill-[#00B67A] text-[#00B67A]" strokeWidth={0} />
-            <span className="font-bold text-[#191919]">{m.trustpilot.rating}</span> on Trustpilot · {m.trustpilot.count} reviews
-          </p>
-        )}
         {rows.length > 0 ? (
           <div className="space-y-1.5">
             {rows.map((r) => (

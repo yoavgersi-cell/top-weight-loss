@@ -1,6 +1,5 @@
 "use client";
 
-import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import { useEffect, useRef, useState } from "react";
 import { Trophy, ArrowRight } from "lucide-react";
 import { ProviderCta } from "./provider-cta";
@@ -129,26 +128,12 @@ export function WinnerTugMeter({
           >
             <span className="font-bold uppercase tracking-[0.06em]">Sources</span>
             <span className="text-gray-400">·</span>
-            <span className="inline-flex items-center gap-1">
-              {SHOW_TRUSTPILOT_WIDGETS && <TrustpilotStar className="h-3 w-3" />}
-              Trustpilot reviews
-            </span>
+            <span>Provider pricing and terms</span>
             <span className="text-gray-400">·</span>
             <span>Our own research</span>
           </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function TrustpilotStar({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
-      <path
-        fill="#00B67A"
-        d="M12 2l2.6 6.6 7.4.4-5.7 4.6 1.9 7.1L12 16.8l-6.2 3.9 1.9-7.1L2 9l7.4-.4L12 2z"
-      />
-    </svg>
   );
 }

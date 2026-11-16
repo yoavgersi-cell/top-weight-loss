@@ -1,8 +1,7 @@
 "use client";
 
-import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import { useEffect, useMemo, useState } from "react";
-import { ArrowRight, Check, Loader2, Star } from "lucide-react";
+import { ArrowRight, Check, Loader2 } from "lucide-react";
 import { ProviderCta } from "@/components/provider-cta";
 import { trackEvent, trackOnce } from "@/lib/analytics";
 import { captureClickId, withClickId } from "@/lib/click-id";
@@ -24,6 +23,7 @@ export type FunnelProvider = {
   tirzepatide: { price: string; note: string } | null;
   /** Three verified fact lines shown under the price. */
   facts: string[];
+  /** Legacy field, still passed by the page; nothing renders it (Nov 16, 2026 removal). */
   trustpilot: { rating: string; count: string } | null;
 };
 
@@ -68,17 +68,6 @@ function pick(priority: Priority | null, contact: Contact | null): string {
   if (contact === "human") eden++;
   if (contact === "portal") embody++;
   return eden > embody ? "eden" : "embody";
-}
-
-function Stars({ rating }: { rating: string }) {
-  const n = Math.round(parseFloat(rating));
-  return (
-    <span className="inline-flex gap-0.5 align-[-2px]">
-      {Array.from({ length: 5 }).map((_, i) => (
-        <Star key={i} className={`h-3.5 w-3.5 ${i < n ? "fill-[#00B67A] text-[#00B67A]" : "fill-gray-200 text-gray-200"}`} strokeWidth={0} />
-      ))}
-    </span>
-  );
 }
 
 function Option<T extends string>({
@@ -247,24 +236,12 @@ export function NativeFunnel({ providers, verifiedOn }: { providers: FunnelProvi
                 <Check className="h-3.5 w-3.5" strokeWidth={3} />
                 Your match
               </p>
-              {lead.trustpilot && (
-                <p className="flex items-center gap-1.5 whitespace-nowrap text-[12.5px] text-gray-600">
-                  {SHOW_TRUSTPILOT_WIDGETS && <Stars rating={lead.trustpilot.rating} />}
-                  <strong className="text-[#191919]">{lead.trustpilot.rating}</strong>
-                  <span className="text-gray-400">({lead.trustpilot.count})</span>
-                </p>
-              )}
             </div>
             <div className="mt-4 flex h-[48px] items-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={lead.logo} alt={`${lead.name} logo`} width={160} height={48} className="max-h-[48px] max-w-[170px] object-contain object-left" />
             </div>
             <p className="mt-2 text-[16px] font-bold leading-snug text-[#191919]">{lead.edge}</p>
-            {lead.trustpilot && (
-              <p className="mt-1 text-[12.5px] text-gray-500">
-                Rated {lead.trustpilot.rating} across {lead.trustpilot.count} Trustpilot reviews
-              </p>
-            )}
             <div className="mt-3 rounded-xl bg-[#F4F8FB] p-4">
               <PriceLine p={lead} med={med ?? "unsure"} />
             </div>

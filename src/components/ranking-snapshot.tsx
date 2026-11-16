@@ -6,8 +6,7 @@ import type { SiteConfig } from "@/lib/config";
 // providers, placed above the cards so a reader (and an AI engine answering
 // "most trusted online X provider") gets the ranking in one quotable block.
 // Every value comes from the vertical's config - rank order, our score, the
-// provider's own tagline and treatment list, and the public rating as plain
-// text where one is on record. Nothing is typed here. Added Nov 8, 2026
+// provider's own tagline and treatment list. Nothing is typed here. Added Nov 8, 2026
 // from the Bing AI Performance export (hair-loss home: "most trusted digital
 // hair loss treatment provider", 188 citations at 16%).
 export function RankingSnapshot({
@@ -36,7 +35,6 @@ export function RankingSnapshot({
         score: config.ranking.positions[i]?.score,
         tagline: p.tagline,
         offers: (review?.treatmentOptions ?? []).slice(0, 2).map((t) => t.split(" - ")[0]),
-        rating: p.trustpilotRating && p.trustpilotReviewCount ? `${p.trustpilotRating} across ${p.trustpilotReviewCount} Trustpilot reviews` : null,
       };
     })
     .filter((r): r is NonNullable<typeof r> => r !== null);
@@ -56,7 +54,7 @@ export function RankingSnapshot({
         <p className="mt-2 text-[15px] leading-relaxed text-gray-800">
           <strong>Short answer:</strong> {listText} are the online {categoryLabel} providers we rate highest
           {asOf ? <> in our ranking as of {asOf}</> : null}. We score each one on medical oversight, treatment
-          options, price transparency and its public review record; the full cards and reviews are below.
+          options and price transparency; the full cards and reviews are below.
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full min-w-[560px] text-left text-[13.5px]">
@@ -65,8 +63,7 @@ export function RankingSnapshot({
                 <th className="py-2 pr-3 font-bold">#</th>
                 <th className="py-2 pr-3 font-bold">Provider</th>
                 <th className="py-2 pr-3 font-bold">Our score</th>
-                <th className="py-2 pr-3 font-bold">What it offers</th>
-                <th className="py-2 font-bold">Public rating</th>
+                <th className="py-2 font-bold">What it offers</th>
               </tr>
             </thead>
             <tbody>
@@ -79,8 +76,7 @@ export function RankingSnapshot({
                     </Link>
                   </td>
                   <td className="py-2.5 pr-3 font-semibold text-[#191919]">{r.score ? `${fmt(r.score)}/10` : "-"}</td>
-                  <td className="py-2.5 pr-3 text-gray-700">{r.offers.length ? r.offers.join(" · ") : r.tagline}</td>
-                  <td className="py-2.5 text-gray-700">{r.rating ?? "Not published"}</td>
+                  <td className="py-2.5 text-gray-700">{r.offers.length ? r.offers.join(" · ") : r.tagline}</td>
                 </tr>
               ))}
             </tbody>
