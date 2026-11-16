@@ -53,8 +53,6 @@ export function ComparisonLayout({ config, heroOverrides, linkPrefix = "", bylin
         ratingLabel: position.label,
         starRating: position.starRating,
         badge: position.badge,
-        trustpilotRating: provider.trustpilotRating,
-        trustpilotReviewCount: provider.trustpilotReviewCount,
         priceNote: priceNotes?.[provider.id],
       };
     })
@@ -71,8 +69,6 @@ export function ComparisonLayout({ config, heroOverrides, linkPrefix = "", bylin
       rating: number;
       ratingLabel: string;
       badge?: string;
-      trustpilotRating?: string;
-      trustpilotReviewCount?: string;
       priceNote?: string;
     }>;
 

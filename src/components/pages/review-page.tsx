@@ -17,8 +17,6 @@ import { ReviewStickyCta } from "@/components/review-sticky-cta";
 import { ProviderGallery } from "@/components/provider-gallery";
 import { getGallery } from "@/data/provider-gallery";
 import { SiblingLinks, CATEGORY_LABEL, reviewSiblings, comparisonSiblings, articleSiblings, pickSiblings } from "@/components/sibling-links";
-import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
-import { TrustpilotSummary } from "@/components/trustpilot-summary";
 import { getReviewRecord } from "@/data/reviews";
 import { analysisPath, hasReviewAnalysis } from "@/lib/review-analysis";
 import { THREE_WAY_COMPARISONS } from "@/lib/three-way";
@@ -54,9 +52,8 @@ import { catalogPriceSnippet } from "@/lib/product-catalog";
 
 // Oct 25, 2026: "<provider> reviews and complaints" is among the most common
 // ways people reach these pages (Copilot citation data). The block answers it
-// on the page itself from the lowest-rated Trustpilot reviews we already hold
-// and transcribe below - no outside claims - and says plainly when a provider
-// has no public review record yet. Weight-loss vertical only.
+// on the page itself from the provider's own published terms - no outside
+// claims. Weight-loss vertical only.
 
 const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
   // Collective (weight loss), added Nov 11, 2026; figures from collective.org.
@@ -93,7 +90,7 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   rexmd: {
     title: "Rex MD Review 2026: Cost, Results & Is It Worth It?",
     description:
-      "Rex MD review: branded and generic Viagra and Cialis, daily tadalafil and the Ignite gummy, its 4.7 Trustpilot score, and the billing complaints to know.",
+      "Rex MD review: branded and generic Viagra and Cialis, daily tadalafil and the Ignite gummy, and the billing complaints to know before you order.",
   },
   embody: {
     // Oct 2026, Bing 30-day export: "embody reviews" 411 impressions at
@@ -110,7 +107,7 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // say delivery timelines are not guaranteed (Atlas read, Nov 16, 2026).
     title: "embody Reviews 2026: Complaints, Prices and What $49 Buys",
     description:
-      "We counted embody's 1 to 2-star Trustpilot complaints by theme, checked the $49 and $99 prices against its Terms and read the refund rule. The catches first.",
+      "We checked embody's $49 semaglutide and $99 tirzepatide prices against its Terms, read the refund rule and sorted the complaints. The catches first.",
   },
   medvi: {
     // Decoupled from the "is medvi legit" query (Sep 2026): that phrase lived in
@@ -119,7 +116,7 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // legitimacy query. Revert if the split doesn't resolve post-migration-swap.
     title: "Medvi Reviews 2026: $99 All-In GLP-1 Plan, Honestly Rated",
     description:
-      "Medvi's $99 semaglutide and $166 tirzepatide include video visits, a dietician and coaching. 4.3 on Trustpilot (15,097 reviews). What you get and what you don't",
+      "Medvi's $99 semaglutide and $166 tirzepatide include video visits, a dietician and coaching. What you get, what you don't, and who it suits.",
   },
   sprout: {
     title: "Sprout Reviews 2026: Is It Legit? GLP-1 Cost & Verdict",
@@ -136,9 +133,9 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // entry exists only to put "GLP-1" in the description (desc-only pass).
     title: "ro Weight Loss Review 2026: Worth the Membership Fee?",
     description:
-      "ro bills a membership ($39, then $74-$149) plus brand-name Wegovy or Zepbound; insurance can apply. 3.9 on Trustpilot from 7,380 reviews. Who should skip it.",
+      "ro bills a membership ($39, then $74-$149) plus brand-name Wegovy or Zepbound; insurance can apply. What the fee covers and who should skip it.",
   },
-  // Oct 25, 2026: two operator-added providers without Trustpilot profiles.
+  // Oct 25, 2026: two operator-added providers.
   luvo: {
     title: "Luvo Reviews 2026: GLP-1 Cost, 50% Off Offer & Verdict",
     description:
@@ -150,9 +147,9 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "MEDGm reviews: compounded GLP-1 injections from $169, daily GLP-1 tablets from $239 and brand-name Zepbound on a $99 membership plus medication. Pros and cons.",
   },
   eden: {
-    title: "Eden Reviews 2026: 4.5 Trustpilot, $99 Flat GLP-1 & Verdict",
+    title: "Eden Reviews 2026: $99 Flat GLP-1, Is It Legit? & Verdict",
     description:
-      "Eden reviews: {prices}, flat at every dose, no membership, 4.5 on Trustpilot across 5,019 reviews. Is Eden legit?",
+      "Eden reviews: {prices}, flat at every dose, no membership, 24/7 human support. Is Eden legit? Pros, cons and verdict.",
   },
   trimrx: {
     title: "TrimRx Reviews 2026 (Trim Rx): Is It Legit? Cost & Verdict",
@@ -174,7 +171,7 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // "wellmedr reviews" still match this page.
     title: "welludr Reviews 2026: $41 GLP-1 and the 12-Month Catch",
     description:
-      "welludr (ex-wellmedr) sells semaglutide at $41 and tirzepatide at $71, flat at every dose, 4.6 on Trustpilot (2,679 reviews). The plan term to read first.",
+      "welludr (ex-wellmedr) sells semaglutide at $41 and tirzepatide at $71, flat at every dose, with a weight-loss warranty. The 12-month plan term to read first.",
   },
   healthrx: {
     title: "HealthRx Reviews 2026: Is It Legit? $97/mo GLP-1 Examined",
@@ -245,7 +242,6 @@ const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
       "Prescription treatment overseen by licensed providers",
       "Regular monitoring and provider check-ins",
       "Transparent, all-inclusive pricing - no surprise charges",
-      "Highly rated, personal service on Trustpilot",
       "100% online - no clinic visit required",
     ],
   },
@@ -302,9 +298,8 @@ const REVIEW_LEGIT_TRT: Record<string, { verdict: string; signals: string[] }> =
   },
   maleexcel: {
     verdict:
-      "Yes - Male Excel is a legitimate, established men's-health telehealth brand with a strong track record, rated 4.5 on Trustpilot across thousands of reviews. It runs comprehensive at-home labs and a licensed-clinician review before prescribing, with unlimited provider follow-ups.",
+      "Yes - Male Excel is a legitimate, established men's-health telehealth brand. It runs comprehensive at-home labs and a licensed-clinician review before prescribing, with unlimited provider follow-ups.",
     signals: [
-      "Rated 4.5 on Trustpilot from thousands of reviews",
       "Comprehensive at-home lab testing before any prescription",
       "Licensed clinicians review your results",
       "Unlimited provider follow-ups",
@@ -507,7 +502,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "Does SHED include coaching?",
       answer:
-        "Yes - health coaching is included in every plan rather than sold as an add-on, alongside the provider visit and home delivery. Reviewers on Trustpilot (4.6 across 1,134 reviews) most often single out the coaching and onboarding staff by name.",
+        "Yes - health coaching is included in every plan rather than sold as an add-on, alongside the provider visit and home delivery.",
     },
     {
       question: "Can I pay for SHED with HSA/FSA funds?",
@@ -729,7 +724,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // Site's own editorial rating for this provider (same scoring shown on the
   // homepage), keyed off its ranking position. Surfaced visibly on the page.
   // NOTE: intentionally NOT emitted as review/aggregateRating structured data -
-  // re-publishing Trustpilot's aggregate and self-assigned editorial scores as
+  // re-publishing third-party aggregates and self-assigned editorial scores as
   // Product rating markup to earn SERP stars is a review-snippet policy risk
   // (and earned ~0 clicks per Search Appearance). The ratings remain visible as
   // page content; only the star-generating schema is removed.
@@ -759,8 +754,8 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // source of truth and the search snippet carries no price.
 
   // Review/AggregateRating Product schema deliberately removed - see the note
-  // on the editorial rating above. The visible on-page Trustpilot score and
-  // editorial rating stay; we just don't request star rich snippets.
+  // on the editorial rating above. The visible on-page editorial rating
+  // stays; we just don't request star rich snippets.
 
   // Article schema (no rating, no price) - the same shape the article and
   // battle templates emit. It gives the page a machine-readable headline,
@@ -792,16 +787,11 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
       url: ctx.origin,
       logo: { "@type": "ImageObject", url: `${ctx.origin}/treatmentshub.png` },
     },
-    // The provider as an entity. sameAs points at its verified Trustpilot
-    // profile so machines can connect the page to the public review record
-    // without us republishing the rating as markup (see the note above).
+    // The provider as an entity (no third-party profile links, Nov 16, 2026).
     about: {
       "@type": "Organization",
       name: provider.name,
       ...(FORMER_NAMES[provider.id] && { alternateName: FORMER_NAMES[provider.id] }),
-      ...(getReviewRecord(ctx.vertical, provider.id)?.profileUrl && {
-        sameAs: [getReviewRecord(ctx.vertical, provider.id)!.profileUrl],
-      }),
     },
     // Page entity: a MedicalWebPage with audience, condition and (where logged)
     // reviewer - see src/lib/medical-schema.ts.
@@ -1089,12 +1079,6 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                     {signal}
                   </li>
                 ))}
-                {provider.trustpilotRating && provider.trustpilotReviewCount && (
-                  <li className="flex items-start gap-2.5 text-[14px] text-gray-800">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" strokeWidth={2} />
-                    Rated {provider.trustpilotRating}/5 across {provider.trustpilotReviewCount} Trustpilot reviews
-                  </li>
-                )}
               </ul>
               <p className="mt-4 text-[12px] leading-relaxed text-gray-400">
                 &ldquo;Legitimate&rdquo; here means a real, licensed telehealth operation - not a
@@ -1117,8 +1101,6 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           />
         )}
 
-        {/* Trustpilot Reviews - social proof right after the legitimacy block,
-            before the feature/pricing detail (moved up, operator request Sept 20). */}
         {/* In-depth editorial deep-dive (long-form review sections, rendered when present) */}
         {review.sections && review.sections.length > 0 && (
           <article className="mb-8 space-y-8 border-t border-gray-200 pt-8">
@@ -1153,26 +1135,6 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             record={getReviewRecord(ctx.vertical, provider.id)!}
             className="mb-8"
           />
-        )}
-
-        {(provider.trustpilotReviews?.length ?? 0) > 0 && (
-          <div className="mb-6 space-y-3">
-            <TrustpilotSummary
-              providerName={provider.name}
-              reviews={provider.trustpilotReviews!}
-              rating={provider.trustpilotRating}
-              reviewCount={provider.trustpilotReviewCount}
-              record={getReviewRecord(ctx.vertical, provider.id)}
-            />
-            <TrustpilotCarousel
-              providerName={provider.name}
-              providerLogo={provider.logo}
-              reviews={provider.trustpilotReviews!}
-              rating={provider.trustpilotRating}
-              reviewCount={provider.trustpilotReviewCount}
-              profileUrl={getReviewRecord(ctx.vertical, provider.id)?.profileUrl}
-            />
-          </div>
         )}
 
         {/* Key Features + Pricing side by side on desktop */}
@@ -1591,7 +1553,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       href="/weight-loss/glp1-provider-comparison"
                       className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-medium text-[#191919] transition-colors hover:border-[#0C4B75]/30 hover:bg-[#0C4B75]/[0.02]"
                     >
-                      <span className="truncate">GLP-1 Telehealth Providers Compared: {provider.name} and seven others on verified prices, Trustpilot and Reddit</span>
+                      <span className="truncate">GLP-1 Telehealth Providers Compared: {provider.name} and seven others on verified prices and Reddit</span>
                       <span className="ml-auto shrink-0 text-[12px] text-gray-400">Comparison</span>
                     </Link>
                   )}

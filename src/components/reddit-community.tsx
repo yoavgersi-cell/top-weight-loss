@@ -194,7 +194,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
     themes:
       "Two things repeat across the threads above: speed - same-day approval, a vial within a week, a switcher whose order was approved the next day and shipped two days later at their previous dose - and a self-serve model users describe as 'autopilot' that keeps the price low but means little human contact. The gripes are specific: a refill flow one user couldn't find in the dashboard, support replies another called AI-generated, and the wait between approval and the first shipment. The $129 figure users quote is higher than embody's current $99/month tirzepatide price.",
     intro:
-      "Beyond Trustpilot, recent Reddit comments about embody paint a consistent - and usefully unvarnished - picture. These are excerpts from real public comments:",
+      "Recent Reddit comments about embody paint a consistent - and usefully unvarnished - picture. These are excerpts from real public comments:",
     threads: [
       {
         subreddit: "r/compoundedtirzepatide",
@@ -303,13 +303,13 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
     ],
     takeaway:
-      "The community picture matches the Trustpilot one: delivery is fast once medication ships, dose changes go through without pushback, and the model is deliberately self-serve - 'everything is on autopilot, that's how they keep costs low', as one user put it. The honest watch-outs are the flip side of that: little human contact, a refill process one user had to ask Reddit about, and pipeline time between approval and shipment - if timing matters, order before your current supply runs low. The $129 figures Reddit users mention are higher than embody's current $99/month tirzepatide price.",
+      "The community picture is consistent: delivery is fast once medication ships, dose changes go through without pushback, and the model is deliberately self-serve - 'everything is on autopilot, that's how they keep costs low', as one user put it. The honest watch-outs are the flip side of that: little human contact, a refill process one user had to ask Reddit about, and pipeline time between approval and shipment - if timing matters, order before your current supply runs low. The $129 figures Reddit users mention are higher than embody's current $99/month tirzepatide price.",
   },
   medvi: {
     themes:
       "The posts above are full-year stories, not first impressions: steady results (just under 15% body weight, 40 pounds), dose adjustments when progress stalled, and support that answered. The caveat users raise themselves is the ongoing monthly cost.",
     intro:
-      "Beyond its 15,097-review Trustpilot record, the most-upvoted recent Reddit threads about Medvi are full-year write-ups rather than first-week impressions. Excerpts from the real posts:",
+      "The most-upvoted recent Reddit threads about Medvi are full-year write-ups rather than first-week impressions. Excerpts from the real posts:",
     threads: [
       {
         subreddit: "r/telehealth",
@@ -358,7 +358,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
     ],
     takeaway:
-      "The Reddit picture matches the Trustpilot one from a different angle: the ongoing monthly cost is the caveat users themselves raise - though Medvi's current $99/month promotion (regularly $199) blunts it considerably - but the year-long accounts describe exactly what that price buys: medical structure, dose adjustments when progress stalls, and 10-15% body-weight results over a year that felt “sustainable, which is something I had not experienced before.”",
+      "The Reddit picture is consistent: the ongoing monthly cost is the caveat users themselves raise - though Medvi's current $99/month promotion (regularly $199) blunts it considerably - but the year-long accounts describe exactly what that price buys: medical structure, dose adjustments when progress stalls, and 10-15% body-weight results over a year that felt “sustainable, which is something I had not experienced before.”",
   },
   ro: {
     themes:
@@ -557,7 +557,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
   talkiatry: {
     vertical: "online-therapy",
     themes:
-      "Both comments tell the same two-sided story that Talkiatry's 2.5 Trustpilot average hints at: the psychiatrists themselves get praised, while billing and back-office - insurance verification, lost forms, unresponsive staff - draw serious, specific complaints.",
+      "Both comments tell the same two-sided story: the psychiatrists themselves get praised, while billing and back-office - insurance verification, lost forms, unresponsive staff - draw serious, specific complaints.",
     intro:
       "Talkiatry threads on Reddit are unusually consistent: good words for the clinicians, hard words for the office behind them. We show both, because that split is the single most useful thing to know before booking.",
     threads: [

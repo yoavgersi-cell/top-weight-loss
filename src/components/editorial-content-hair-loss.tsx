@@ -184,12 +184,10 @@ export function HairLossEditorialContent() {
           them directly with the verified figures we hold and a checklist. */}
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">Which online hair-loss providers are the most trusted?</h3>
       <p className="mb-4">
-        Trust is checkable, so we check it. Of the providers we rank, two publish Trustpilot records we have verified:{" "}
-        <Link href="/hair-loss/reviews/maximus" className="font-semibold text-[#0C4B75] hover:underline">Maximus</Link> at 4.4 across 1,050 reviews and{" "}
-        <Link href="/hair-loss/reviews/happyhead" className="font-semibold text-[#0C4B75] hover:underline">Happy Head</Link> at 4.5 across 1,803. <Link href="/hair-loss/reviews/hims" className="font-semibold text-[#0C4B75] hover:underline">Hims</Link>,{" "}
+        Trust is checkable, so we check it. Of the providers we rank, <Link href="/hair-loss/reviews/hims" className="font-semibold text-[#0C4B75] hover:underline">Hims</Link>,{" "}
         <Link href="/hair-loss/reviews/keeps" className="font-semibold text-[#0C4B75] hover:underline">Keeps</Link> and <Link href="/hair-loss/reviews/ro" className="font-semibold text-[#0C4B75] hover:underline">Ro</Link> are established national telehealth brands;{" "}
         <Link href="/hair-loss/reviews/petermd" className="font-semibold text-[#0C4B75] hover:underline">PeterMD</Link> publishes its prices in full; <Link href="/hair-loss/reviews/nutrafol" className="font-semibold text-[#0C4B75] hover:underline">Nutrafol</Link>{" "}is a drug-free supplement rather than a prescription service.
-        &ldquo;Trusted&rdquo;, in our method, means five concrete things: a licensed clinician reviews your history before any prescription, the dispensing pharmacy is named and licensed, prices are published with their conditions, cancellation terms are clear, and there is a public review record. Our{" "}
+        &ldquo;Trusted&rdquo;, in our method, means four concrete things: a licensed clinician reviews your history before any prescription, the dispensing pharmacy is named and licensed, prices are published with their conditions, and cancellation terms are clear. Our{" "}
         <Link href="/weight-loss/how-we-rank" className="font-semibold text-[#0C4B75] hover:underline">ranking method</Link> explains how those weigh against each other.
       </p>
 
@@ -201,7 +199,7 @@ export function HairLossEditorialContent() {
         <li><strong>It names the pharmacy.</strong> Compounded topicals and custom capsules come from a specific licensed pharmacy; you should be able to find out which one before you pay.</li>
         <li><strong>Its prices have conditions attached.</strong> First-order discounts, subscription savings and per-month figures are fine when the ongoing price is stated next to them. Compare on month three, not month one; our{" "}
           <Link href="/hair-loss/articles/hair-loss-treatment-cost" className="font-semibold text-[#0C4B75] hover:underline">cost guide</Link> lists every verified price.</li>
-        <li><strong>It has a public review record and answers complaints.</strong> A Trustpilot or similar profile with dated, attributable reviews, and visible replies to the negative ones, tells you how the service behaves when something goes wrong.</li>
+        <li><strong>It answers complaints in public.</strong> Dated, attributable customer posts on Reddit and similar forums, and visible replies to the negative ones, tell you how the service behaves when something goes wrong.</li>
       </ol>
 
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">Hair-loss guides &amp; research</h3>

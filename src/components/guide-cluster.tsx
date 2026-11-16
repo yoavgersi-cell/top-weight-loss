@@ -59,7 +59,7 @@ export const WEIGHT_LOSS_GUIDES: GuideLink[] = [
   {
     slug: "glp1-provider-support",
     title: "Provider Customer Support Compared",
-    blurb: "Each provider's published support channels, shipping and billing terms, side by side.",
+    blurb: "Support, shipping and billing compared by provider.",
   },
   {
     slug: "glp1-shipping-times",

@@ -1,14 +1,12 @@
 import { AffiliateNote } from "@/components/affiliate-note";
-import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import { pageReviewSchema } from "@/data/reviewers";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { Fragment } from "react";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Check, Star, ShieldCheck } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, ShieldCheck } from "lucide-react";
 import { VERTICALS, DEFAULT_VERTICAL, isPublishedVertical, isHiddenVertical, type Provider, type RankingPosition, type ReviewData } from "@/lib/config";
 import { getConfig } from "@/lib/config-store";
 import { ProviderCta } from "@/components/provider-cta";
-import { tpStarColor } from "@/components/trustpilot-rating";
 import { LatestGuides, newestGuides } from "@/components/latest-guides";
 import { PRICE_DATA_UPDATED } from "@/lib/price-index";
 import { ED_PRICE_DATA_UPDATED } from "@/lib/ed-price-index";
@@ -259,9 +257,8 @@ const BENTO: { id: string; wide: boolean }[] = [
 
 
 // Compact provider card for the homepage shelf - mirrors the ranking card's
-// data but in a lighter, three-up form. Every value (logo, score, Trustpilot
-// count, highlights, price) comes from config; nothing is invented, and the
-// Trustpilot line only appears when a real aggregate rating exists.
+// data but in a lighter, three-up form. Every value (logo, score, highlights,
+// price) comes from config; nothing is invented.
 function ProviderMiniCard({
   provider,
   position,
@@ -288,19 +285,10 @@ function ProviderMiniCard({
         </div>
       </div>
 
-      {SHOW_TRUSTPILOT_WIDGETS && provider.trustpilotRating ? (
-        <div className="mt-3 flex items-center gap-1.5 text-[12.5px] text-gray-500">
-          <Star className="h-3.5 w-3.5" style={{ fill: tpStarColor(parseFloat(provider.trustpilotRating)), color: tpStarColor(parseFloat(provider.trustpilotRating)) }} strokeWidth={0} />
-          <span className="font-bold text-gray-800">{provider.trustpilotRating}</span>
-          <span>on Trustpilot</span>
-          {provider.trustpilotReviewCount && <span className="text-gray-400">({provider.trustpilotReviewCount})</span>}
-        </div>
-      ) : (
-        <div className="mt-3 flex items-center gap-1.5 text-[12.5px] font-semibold uppercase tracking-wide text-[#0C4B75]">
-          <ShieldCheck className="h-3.5 w-3.5" strokeWidth={2} />
-          {position.label}
-        </div>
-      )}
+      <div className="mt-3 flex items-center gap-1.5 text-[12.5px] font-semibold uppercase tracking-wide text-[#0C4B75]">
+        <ShieldCheck className="h-3.5 w-3.5" strokeWidth={2} />
+        {position.label}
+      </div>
 
       <ul className="mt-3 space-y-1.5">
         {highlights.map((h) => (

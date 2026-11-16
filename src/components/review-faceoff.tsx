@@ -7,7 +7,6 @@ import {
   type CategoryBreakdown,
   type ThemeCategory,
 } from "@/data/reviews/themes";
-import { formatReviewDate } from "@/data/reviews";
 import { analysisPath, hasReviewAnalysis } from "@/lib/review-analysis";
 
 // ───── Review face-off ─────

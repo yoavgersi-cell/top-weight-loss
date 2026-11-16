@@ -9,7 +9,6 @@ import { TEMPLATES_LAST_UPDATED, NOINDEX_WL_BATTLE_SLUGS, DEFAULT_ROBOTS } from 
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
-import { TrustpilotRating } from "@/components/trustpilot-rating";
 import { LicensedTelehealthBadge } from "@/components/licensed-badge";
 import { LastUpdated } from "@/components/last-updated";
 import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
@@ -138,9 +137,6 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
                 <img {...imgDims(p.logo)} src={p.logo} alt={`${p.name} logo`} className="max-h-full max-w-[130px] object-contain" />
               </div>
               <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-2 border-b border-gray-100 pb-3">
-                {p.trustpilotRating && (
-                  <TrustpilotRating rating={p.trustpilotRating} reviewCount={p.trustpilotReviewCount} starSize={14} />
-                )}
                 <LicensedTelehealthBadge />
               </div>
               <p className="mb-4 flex-1 text-[13.5px] leading-relaxed text-gray-500">{p.tagline}</p>

@@ -1,7 +1,7 @@
 import { Clock } from "lucide-react";
 
 // Subtle "Last updated" freshness line. Formats an ISO/date string as
-// "Aug 11, 2026" (unambiguous for a US audience; matches Trustpilot dates).
+// "Aug 11, 2026" (unambiguous for a US audience).
 export function LastUpdated({ date, className = "" }: { date: string; className?: string }) {
   const label = new Date(date).toLocaleDateString("en-US", {
     month: "short",

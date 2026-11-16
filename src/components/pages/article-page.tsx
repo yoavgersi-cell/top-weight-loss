@@ -1,5 +1,4 @@
 import { DEFAULT_OG_IMAGE } from "@/lib/og";
-import { SHOW_TRUSTPILOT_WIDGETS, TRUSTPILOT_WIDGET_ARTICLE_SLUGS } from "@/lib/trustpilot-display";
 import type { Metadata } from "next";
 import { readableHeroColor } from "@/lib/hero-color";
 import { SiblingLinks, CATEGORY_LABEL, reviewSiblings, comparisonSiblings, articleSiblings, pickSiblings } from "@/components/sibling-links";
@@ -18,16 +17,12 @@ import { medicalWebPageFields } from "@/lib/medical-schema";
 import { MedicalSources } from "@/components/medical-sources";
 import { MedicalDisclaimer } from "@/components/medical-disclaimer";
 import { ProductCarousel } from "@/components/product-carousel";
-import { TrustpilotCarousel, MixedTrustpilotCarousel, type MixedReviewItem } from "@/components/trustpilot-carousel";
-import { getReviewRecord } from "@/data/reviews";
 import { TOP_TWO_PICK_IDS, TopProvidersBlock, TopTwoPicks } from "@/components/top-providers-block";
 import { TirzepatidePriceTable } from "@/components/tirzepatide-price-table";
-import { TrustpilotSummary } from "@/components/trustpilot-summary";
 import { PRICE_INDEX_VERIFIED } from "@/lib/price-index";
 import { LEGIT_PAGES, LegitChecklist, LegitInlineCta, LegitVerdictCta, PricingCapture, ProviderPeek } from "@/components/legit-page-blocks";
 import { ProviderCta } from "@/components/provider-cta";
 import { PRICE_INDEX } from "@/lib/price-index";
-import type { TrustpilotReview } from "@/lib/config";
 import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/reddit-community";
 import { FacebookCommunityBlock, FACEBOOK_COMMUNITY_FEEDBACK } from "@/components/facebook-community";
 import { notFound, permanentRedirect } from "next/navigation";
@@ -73,7 +68,7 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
   "is-wellmedr-legit": {
     title: "Is welludr (wellmedr) Legit or a Scam? Reviews Checked",
     description:
-      "Is welludr (wellmedr) legit or a scam? Yes, with one catch. We verified the prescriber, the US pharmacy, the $41-$71 prices and the 4.6 Trustpilot score.",
+      "Is welludr (wellmedr) legit or a scam? Yes, with one catch. We verified the prescriber, the US pharmacy, the $41-$71 prices and the 12-month plan term.",
   },
   "is-altrx-legit": {
     // Keeps the keyword-rich SERP snippet (prices, flat-dose) even though the
@@ -169,7 +164,7 @@ const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
   "glp1-after-65-medicare":
     "Since July 1, 2026, the Medicare GLP-1 Bridge pilot lets eligible beneficiaries get the Wegovy pill and injection, the Zepbound KwikPen and Foundayo for a flat $50 copay a month, unchanged as the dose rises, through December 31, 2027. Eligibility runs through clinical criteria and an approval step via your Part D plan. Medicare never covers compounded GLP-1s; if you don't qualify, the cash routes are brand-name ($149-$349 a month for Foundayo, $1,149+ for injections) or compounded ($41-$299).",
   "is-wellmedr-legit":
-    "Yes - by every marker we can verify: licensed-provider review before prescribing, a regulated US pharmacy, a weight-loss warranty, and a verified 4.6 on Trustpilot across 2,679 reviews (tied for the highest among providers we track). The honest caveats: the headline $41/$71 rates lock on a 12-month plan, the complaints that exist are about shipping delays and support response time, and results vary by person regardless of service quality.",
+    "Yes - by every marker we can verify: licensed-provider review before prescribing, a regulated US pharmacy, and a weight-loss warranty. The honest caveats: the headline $41/$71 rates lock on a 12-month plan, the complaints that exist are about shipping delays and support response time, and results vary by person regardless of service quality.",
   // Oct 9, 2026 oral GLP-1 pair. Ro figures are its verified published
   // prices; manufacturer figures are as reported by sources dated inside the
   // articles, so these two carry their own stamp (QUICK_ANSWER_STAMPS).
@@ -299,11 +294,10 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
 
   // Brand-cluster articles (is-embody-legit, happyhead-cost, ...) carry the
   // provider id as a slug segment. On those, surface the provider's real
-  // social proof - Trustpilot and Reddit carousels - high on the page.
-  // Exact segment match so "ro" never fires inside "sprout". Trustpilot data
-  // lives on the current vertical's own provider record, so it's safe on any
-  // vertical; the Reddit registry is weight-loss-researched and stays gated
-  // (a shared provider id like directmeds must not inherit those threads).
+  // social proof - the Reddit carousel - high on the page.
+  // Exact segment match so "ro" never fires inside "sprout". The Reddit
+  // registry is weight-loss-researched and stays gated (a shared provider id
+  // like directmeds must not inherit those threads).
   const slugParts = slug.split("-");
   const subjectProvider = config.providers.find((p) => slugParts.includes(p.id));
 
@@ -329,11 +323,6 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     );
   const restrictCarouselToSubject = isProviderGuide && subjectHasProducts;
   const hideCarouselForSubject = isHrtArticle && isProviderGuide && !!subjectProvider && !subjectHasProducts;
-  const subjectTrustpilot =
-    subjectProvider?.trustpilotReviews?.length ? subjectProvider : undefined;
-  // Full Trustpilot section on the one article the operator allowed (Nov 12,
-  // 2026); every other page keeps the sitewide flag.
-  const forceTrustpilot = TRUSTPILOT_WIDGET_ARTICLE_SLUGS.has(slug);
   const subjectReddit =
     ctx.vertical === "weight-loss" && subjectProvider && REDDIT_COMMUNITY_FEEDBACK[subjectProvider.id]
       ? subjectProvider
@@ -405,9 +394,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // The tirzepatide buyer guide is tuned as a topic page (Oct 2026 CRO pass):
   // the top-3 block shows only providers with a verified tirzepatide price and
   // prints that price on the card; the price table is code-rendered with CTAs;
-  // the product carousel is tirzepatide-only; the cross-provider Trustpilot
-  // carousel shows every stored review that mentions the molecule; and the
-  // generic mid-page blocks (duplicate provider list, stock-photo callout) are
+  // the product carousel is tirzepatide-only; and the generic mid-page blocks (duplicate provider list, stock-photo callout) are
   // dropped so the page stays on topic.
   const isTirzGuide = isWeightLoss && slug === "best-tirzepatide-online";
   // Mid-article product carousel: topic-matched and capped (Oct 2026). The full
@@ -448,25 +435,6 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   const tirzPriceNotes = Object.fromEntries(
     TIRZ_TOP_IDS.map((id) => [id, tirzNote(id)]).filter((e): e is [string, string] => typeof e[1] === "string"),
   );
-  const reviewTime = (r: TrustpilotReview): number => {
-    if (!r.date) return 0;
-    const t = new Date(r.date).getTime();
-    return isNaN(t) ? 0 : t;
-  };
-  // Every stored Trustpilot review, across providers, that mentions the
-  // molecule or its brand names - a fixed rule, no cherry-picking - newest first.
-  const tirzReviews: MixedReviewItem[] = isTirzGuide
-    ? config.providers
-        .flatMap((p) =>
-          (p.trustpilotReviews ?? [])
-            .filter((r) => /tirzepatide|zepbound|mounjaro/i.test(`${r.title} ${r.text}`))
-            .map((review) => ({
-              review,
-              provider: { name: p.name, href: hubLink(ctx, `/reviews/${p.id}`), total: p.trustpilotReviews!.length },
-            })),
-        )
-        .sort((a, b) => reviewTime(b.review) - reviewTime(a.review))
-    : [];
   const tirzEmbody = isTirzGuide ? config.providers.find((p) => p.id === "embody") : undefined;
   const tirzWellmedr = isTirzGuide ? config.providers.find((p) => p.id === "wellmedr") : undefined;
 
@@ -802,27 +770,17 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 </section>
 
                 {/* Tirzepatide guide: code-rendered price table (CTAs, review
-                    links, Trustpilot per row) right under the "cheapest" section,
-                    then the cross-provider carousel of tirzepatide reviews. */}
+                    links) right under the "cheapest" section. */}
                 {isTirzGuide && i === 1 && (
                   <>
                     <TirzepatidePriceTable providers={config.providers} linkPrefix={ctx.prefix} />
-                    {SHOW_TRUSTPILOT_WIDGETS && tirzReviews.length > 0 && (
-                      <div className="my-10">
-                        <MixedTrustpilotCarousel
-                          items={tirzReviews}
-                          title="What tirzepatide customers say on Trustpilot"
-                          subtitle="Every review we have captured that mentions tirzepatide, Zepbound or Mounjaro, across providers - newest first, reviewer names shortened."
-                        />
-                      </div>
-                    )}
                     {/* Top-providers conversion block: the ranked comparison-page
                         cards + CTAs on an otherwise-prose buyer guide. Oct 22,
                         2026 (operator request): moved up one notch, from under
                         the third section to here, directly after the price
-                        table and Trustpilot carousel, so the cards follow the
-                        prices without a section of prose in between. Gated per
-                        slug (see showTopProvidersCro). */}
+                        table, so the cards follow the prices without a section
+                        of prose in between. Gated per slug (see
+                        showTopProvidersCro). */}
                     {showTopProvidersCro && (
                       <TopProvidersBlock
                         config={config}
@@ -982,31 +940,10 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                   />
                 )}
 
-                {/* Subject-provider social proof, high on the page: Trustpilot
-                    carousel after the first section, Reddit carousel after the
-                    second (or first, on very short articles). Verified data
-                    only - providers without it simply render nothing. */}
-                {i === 0 && subjectTrustpilot && (
-                  <div className="my-10 space-y-3">
-                    <TrustpilotSummary
-                      providerName={subjectTrustpilot.name}
-                      reviews={subjectTrustpilot.trustpilotReviews!}
-                      rating={subjectTrustpilot.trustpilotRating}
-                      reviewCount={subjectTrustpilot.trustpilotReviewCount}
-                      record={getReviewRecord(ctx.vertical, subjectTrustpilot.id)}
-                      force={forceTrustpilot}
-                    />
-                    <TrustpilotCarousel
-                      providerName={subjectTrustpilot.name}
-                      providerLogo={subjectTrustpilot.logo}
-                      reviews={subjectTrustpilot.trustpilotReviews!}
-                      rating={subjectTrustpilot.trustpilotRating}
-                      reviewCount={subjectTrustpilot.trustpilotReviewCount}
-                      profileUrl={getReviewRecord(ctx.vertical, subjectTrustpilot.id)?.profileUrl}
-                      force={forceTrustpilot}
-                    />
-                  </div>
-                )}
+                {/* Subject-provider social proof, high on the page: Reddit
+                    carousel after the second section (or first, on very short
+                    articles). Verified data only - providers without it simply
+                    render nothing. */}
                 {!isLegitArticle && i === Math.min(1, article.sections.length - 1) && subjectReddit && (
                   <div className="my-10">
                     <RedditThreadCarousel

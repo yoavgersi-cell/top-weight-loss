@@ -61,7 +61,7 @@ const GALLERIES: Record<string, ProviderGallery> = {
         height: 688,
         title: "The support pitch",
         caption:
-          "embody puts support at the center of its pitch: \"Why are so many patients signing up for Embody? The Support.\" Recent Trustpilot reviewers most often mention the customer-service communication.",
+          "embody puts support at the center of its pitch: \"Why are so many patients signing up for Embody? The Support.\"",
         alt: "embody website section titled Why are so many patients signing up for Embody? The Support, beside a science of weight loss banner",
       },
       {

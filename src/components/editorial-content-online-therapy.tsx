@@ -6,23 +6,14 @@ const modelRows: [string, string, string][] = [
   ["Mindfulness apps", "Self-guided meditation, sleep and stress practice - not treatment.", "Headspace is the best-known (it now sells insurance-based therapy too); pairs well with therapy rather than replacing it."],
 ];
 
-// Verified Trustpilot standings, captured from each platform's live profile
-// (operator screenshots, August 2026). Real aggregates only - never adjusted.
-const ratingRows: [string, string, string][] = [
-  ["Talkspace", "4.4 across 2,370 reviews", "The best verified score in our coverage - praise centers on therapists who stick; the captured reviews carry Trustpilot's \"Invited\" tag."],
-  ["BetterHelp", "3.9 across 9,652 reviews", "Solid but mixed on the category's biggest review base - accessibility and therapist quality praised, fit and billing complaints alongside."],
-  ["Talkiatry", "2.5 across 956 reviews", "A split record: psychiatrists praised in recent reviews, while billing and back-office draw the criticism. Read recent reviews before booking."],
-  ["Headspace", "1.5 across 770 reviews", "Strikingly low for so popular an app - weigh it against the app-store popularity Headspace cites, and read recent reviews before subscribing."],
-];
-
-function ComparisonTable({ colA, colHeadB, colB, rows }: { colA: string; colHeadB?: string; colB: string; rows: [string, string, string][] }) {
+function ComparisonTable({ colA, colB, rows }: { colA: string; colB: string; rows: [string, string, string][] }) {
   return (
     <div className="mb-4 overflow-x-auto rounded-xl border border-gray-200">
       <table className="w-full min-w-[600px] text-left text-[14px]">
         <thead>
           <tr className="border-b border-gray-200 bg-gray-50">
             <th className="px-4 py-3 font-bold text-[#191919]">{colA}</th>
-            <th className="px-4 py-3 font-bold text-[#191919]">{colHeadB ?? "What it does"}</th>
+            <th className="px-4 py-3 font-bold text-[#191919]">What it does</th>
             <th className="px-4 py-3 font-bold text-[#191919]">{colB}</th>
           </tr>
         </thead>
@@ -41,9 +32,8 @@ function ComparisonTable({ colA, colHeadB, colB, rows }: { colA: string; colHead
 }
 
 // Editorial, general-information content for the online-therapy vertical home.
-// Mental-health claims are kept general and hedged; the only numbers on the
-// page are verified Trustpilot aggregates captured from the live profiles -
-// no fabricated statistics, prices or platform claims. Internal links, a 988
+// Mental-health claims are kept general and hedged; no fabricated statistics,
+// prices or platform claims. Internal links, a 988
 // crisis pointer and a disclaimer close it out.
 export function OnlineTherapyEditorialContent() {
   return (
@@ -54,7 +44,7 @@ export function OnlineTherapyEditorialContent() {
         of therapists, and formats that fit around work and family. The platforms differ far more than their ads
         suggest: insurance coverage and copays vary sharply between them, some offer psychiatry with medication
         management and some are therapy-only, and one of the best-known names isn&rsquo;t primarily therapy at all. We compare them on
-        exactly those lines - with real published information and verified customer ratings, never invented numbers.
+        exactly those lines - with real published information, never invented numbers.
         Read our{" "}
         <Link href="/online-therapy/reviews" className="font-semibold text-[#0C4B75] hover:underline">
           platform reviews
@@ -65,15 +55,6 @@ export function OnlineTherapyEditorialContent() {
         </Link>
         .
       </p>
-
-      <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">Verified customer ratings, side by side</h3>
-      <p className="mb-4">
-        These are each platform&rsquo;s real Trustpilot standings, checked against the live profiles in August 2026 -
-        shown exactly as they are, including the uncomfortable ones. Aggregate ratings at telehealth companies tend to
-        be driven by logistics (billing, cancellation, support) at least as much as by clinical care, so treat them as
-        a customer-experience signal and read recent reviews for the current picture.
-      </p>
-      <ComparisonTable colA="Platform" colHeadB="Trustpilot (verified Aug 2026)" colB="What stands out" rows={ratingRows} />
 
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">Three different products, one label</h3>
       <p className="mb-4">

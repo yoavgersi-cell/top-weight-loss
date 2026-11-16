@@ -1,8 +1,7 @@
 // ───── The verified GLP-1 price index ─────
 // One registry, real published prices only - the single source of truth for
 // the price-first switcher pages (/cheapest-glp1, /switch-from-ozempic).
-// Every figure here is a provider-published price or a Trustpilot record we
-// have verified; never add a row or edit a number from memory or estimation.
+// Every figure here is a provider-published price we have verified; never add a row or edit a number from memory or estimation.
 // Sorted by semaglutide price ascending - the order IS the editorial answer.
 
 export type PriceCell = {
@@ -27,7 +26,7 @@ export type PriceIndexRow = {
   plan?: { price: string; note: string };
   shipping: string;
   commitment: string;
-  /** Verified Trustpilot record, or null when none is published. */
+  /** Always null since Nov 16, 2026 (review-platform data is no longer shown). */
   trustpilot: { rating: string; count: string } | null;
 };
 
@@ -40,7 +39,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     tirzepatide: { price: "$71", note: "pre-Black Friday sale (shown on welludr's site, Nov 3, 2026); shipped every 4 weeks; previously $89" },
     shipping: "Ships in 3-5 business days",
     commitment: "12-month plan for the lowest rate; cancel or change anytime",
-    trustpilot: { rating: "4.6", count: "2,679" },
+    trustpilot: null,
   },
   {
     providerId: "embody",
@@ -49,7 +48,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     tirzepatide: { price: "$99", note: "sale price, flat month to month" },
     shipping: "Ships in 1-2 days, cold-chain",
     commitment: "None - month to month, cancel anytime",
-    trustpilot: { rating: "3.8", count: "10,689" },
+    trustpilot: null,
   },
   {
     providerId: "altrx",
@@ -85,7 +84,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     tirzepatide: { price: "$129", note: "flat every month, same price at every dose" },
     shipping: "Shipping time not published - confirm at checkout",
     commitment: "None - no membership, no annual or long-term plan",
-    trustpilot: { rating: "4.5", count: "5,019" },
+    trustpilot: null,
   },
   {
     providerId: "sprout",
@@ -94,7 +93,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     tirzepatide: { price: "from $149", note: "12-month plan, $1,788 billed upfront; monthly $199, no commitment" },
     shipping: "Prescription shipped within 2 days",
     commitment: "No membership fee; monthly option with no commitment; plans renew until cancelled",
-    trustpilot: { rating: "4.1", count: "188" },
+    trustpilot: null,
   },
   {
     providerId: "medvi",
@@ -104,7 +103,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     plan: { price: "from $99", note: "\"start for just $99\"; no membership or hidden fees; dietician visits and care coaching included" },
     shipping: "Free shipping",
     commitment: "None - no membership or hidden fees; HSA/FSA",
-    trustpilot: { rating: "4.3", count: "15,097" },
+    trustpilot: null,
   },
   {
     providerId: "directmeds",
@@ -114,7 +113,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     plan: { price: "from $147", note: "starting price; same price at every dose" },
     shipping: "Free shipping, arrives in 1-2 days",
     commitment: "None - no membership, cancel anytime",
-    trustpilot: { rating: "4.6", count: "16,390" },
+    trustpilot: null,
   },
   {
     providerId: "trimrx",
@@ -124,7 +123,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     plan: { price: "from $149", note: "weight loss plans starting at $149" },
     shipping: "Free tracked delivery, often next-day",
     commitment: "Month to month - cancel before your next billing cycle",
-    trustpilot: { rating: "3.4", count: "4,894" },
+    trustpilot: null,
   },
   {
     providerId: "bmimd",
@@ -133,7 +132,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     tirzepatide: { price: "$159", note: "3-month plan ($477); limited-time price" },
     shipping: "Free shipping on subscription orders",
     commitment: "3-month plan shown; 12-, 6- and 1-month plans also offered",
-    trustpilot: { rating: "4.4", count: "870" },
+    trustpilot: null,
   },
   {
     providerId: "shed",
@@ -142,7 +141,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     tirzepatide: { price: "from $299", note: "starting price" },
     shipping: "Home delivery included",
     commitment: "None - HSA/FSA approved",
-    trustpilot: { rating: "4.6", count: "1,134" },
+    trustpilot: null,
   },
 ];
 

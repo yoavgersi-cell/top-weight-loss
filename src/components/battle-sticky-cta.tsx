@@ -16,7 +16,7 @@ interface StickyProvider {
 // past the hero, so it never competes with the hero's own CTAs on first paint.
 //
 // The reassurance strip is deliberately provider-agnostic (no per-provider star
-// ratings): some providers carry mediocre Trustpilot scores, and surfacing those
+// ratings): some providers carry mediocre public review scores, and surfacing those
 // at the point of action would suppress clicks rather than lift them. Instead it
 // leans on friction-reducers that are true for every GLP-1 telehealth provider.
 // `recommendedId` (optional, CRO prototype): marks one provider with a small

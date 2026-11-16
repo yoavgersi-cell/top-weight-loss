@@ -101,11 +101,6 @@ export const glp1MuscleLossArticle: Article = {
 <p>BELIEVE is the proof that the lean-loss problem is tractable and that the next generation of weight-loss treatment will be judged on body composition, not on the scale alone. Several companies are running similar programmes. For a reader deciding what to do in 2026, the conclusion is simpler: the drugs that spare muscle are years away, and the methods that spare muscle are available today for the cost of groceries and a set of dumbbells.</p>`,
     },
     {
-      heading: "What customers say: results and dosing in the reviews we hold",
-      body: `<p>We transcribe customers' Trustpilot reviews of the providers we rank and group them into themes on each review page, which gives a modest but real window on what people experience. Muscle loss is almost never the subject of a review; what reviewers write about are results on the scale, side effects, and how clinicians handled dose changes. On the <a href="/weight-loss/reviews/embody">embody review</a>, the results theme is specific numbers lost in the first months and deliveries that arrived cold; on the <a href="/weight-loss/reviews/wellmedr">welludr review</a>, reviewers credit the flat price for letting them move up a dose. The dosing complaints across providers, set out in our <a href="/weight-loss/articles/glp1-microdosing-complete-guide">microdosing guide</a>, are about doses that arrived at a different strength than discussed, not about anyone being told to eat more protein.</p>
-<p>That silence is the finding. Among the reviews we hold, no provider is praised for nutrition or training support, and no reviewer mentions receiving a protein target or a resistance programme. The providers that bundle coaching, such as <a href="/weight-loss/reviews/medvi">Medvi</a> and <a href="/weight-loss/reviews/shed">SHED</a>, are the ones whose reviewers mention a dietitian or coach at all. For a man or woman worried about muscle, that is a reasonable thing to ask a provider before signing up: who, if anyone, will talk to me about protein and training?</p>`,
-    },
-    {
       heading: "Who is this not for, and what are the limits of the evidence?",
       body: `<p>This guide is for adults on, or considering, a prescribed GLP-1 weight-loss medication who want to keep the muscle they have. It is not for:</p>
 <ul>
