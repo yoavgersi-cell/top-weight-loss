@@ -1,3 +1,4 @@
+import { TRUSTPILOT_DATA_REMOVED } from "@/lib/trustpilot-display";
 import type { TrustpilotReview } from "@/lib/config";
 import { REVIEW_RECORDS } from "@/data/reviews";
 import type { ProviderReviewRecord } from "@/data/reviews/types";
@@ -17,6 +18,7 @@ export const analysisPath = (providerId: string) => `/weight-loss/review-analysi
 const totalReviews = (r: ProviderReviewRecord) => r.batches.reduce((n, b) => n + b.reviews.length, 0);
 
 export function reviewAnalysisRecords(): ProviderReviewRecord[] {
+  if (TRUSTPILOT_DATA_REMOVED) return [];
   return REVIEW_RECORDS.filter(
     (r) => r.vertical === "weight-loss" && REVIEW_THEMES[r.providerId]?.summary && totalReviews(r) >= REVIEW_ANALYSIS_MIN,
   );

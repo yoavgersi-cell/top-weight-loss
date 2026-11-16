@@ -144,6 +144,14 @@ export function proxy(req: NextRequest) {
       return NextResponse.redirect(url, 301);
     }
 
+    // Nov 16, 2026: the review-analysis pages (built on Trustpilot data) are
+    // retired; each 301s to the provider's review page.
+    if (isVertical(first) && segments[1] === "review-analysis") {
+      const url = req.nextUrl.clone();
+      url.pathname = segments[2] ? `/${first}/reviews/${segments[2]}` : `/${first}/reviews`;
+      return NextResponse.redirect(url, 301);
+    }
+
     // Already a vertical path - serve it, stripping the prefix only for the
     // shared one-off pages ("/<vertical>/about" → "/about").
     if (isVertical(first)) {

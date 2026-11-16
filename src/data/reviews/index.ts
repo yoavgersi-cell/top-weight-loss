@@ -1,3 +1,4 @@
+import { TRUSTPILOT_DATA_REMOVED } from "@/lib/trustpilot-display";
 import type { ProviderReviewRecord, ReviewVertical, SeedTrustpilotEntry } from "./types";
 import { BMIMD_REVIEWS } from "./weight-loss/bmimd";
 import { WELLMEDR_REVIEWS } from "./weight-loss/wellmedr";
@@ -38,6 +39,7 @@ export const REVIEW_RECORDS: ProviderReviewRecord[] = [
 ];
 
 export function getReviewRecord(vertical: ReviewVertical | string, providerId: string): ProviderReviewRecord | undefined {
+  if (TRUSTPILOT_DATA_REMOVED) return undefined;
   return REVIEW_RECORDS.find((r) => r.vertical === vertical && r.providerId === providerId);
 }
 
@@ -52,6 +54,7 @@ export function toSeedEntry(r: ProviderReviewRecord): SeedTrustpilotEntry {
 
 export function buildSeedTrustpilot(vertical: ReviewVertical): Record<string, SeedTrustpilotEntry> {
   const out: Record<string, SeedTrustpilotEntry> = {};
+  if (TRUSTPILOT_DATA_REMOVED) return out;
   for (const r of REVIEW_RECORDS) if (r.vertical === vertical) out[r.providerId] = toSeedEntry(r);
   return out;
 }

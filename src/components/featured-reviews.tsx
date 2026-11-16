@@ -1,4 +1,4 @@
-import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
+import { SHOW_TRUSTPILOT_WIDGETS, TRUSTPILOT_DATA_REMOVED } from "@/lib/trustpilot-display";
 import { Star } from "lucide-react";
 import type { ProviderReviewRecord } from "@/data/reviews/types";
 import { REVIEW_THEMES, THEME_CATEGORY_LABELS, resolveFeatured, type ThemeCategory } from "@/data/reviews/themes";
@@ -39,6 +39,7 @@ export function FeaturedReviews({
   record: ProviderReviewRecord;
   className?: string;
 }) {
+  if (TRUSTPILOT_DATA_REMOVED) return null;
   const themes = REVIEW_THEMES[record.providerId];
   if (!themes || !SHOW_TRUSTPILOT_WIDGETS) return null;
   const featured = resolveFeatured(record, themes);

@@ -29,7 +29,7 @@ These rules override convenience. Every agent on this repository (Cleo, Atlas, S
 ## 4. Providers and commerce
 - Do not harm the providers: report complaints factually and in proportion, emphasise verified positives, never editorialise against a partner.
 - Affiliate links go through `ProviderCta` (rel="sponsored nofollow"). No link exchanges, no bought links.
-- Trustpilot widgets are hidden sitewide (`SHOW_TRUSTPILOT_WIDGETS=false`) with no exceptions (`TRUSTPILOT_WIDGET_ARTICLE_SLUGS` is empty, operator decision Nov 16, 2026). Plain-text citations of a rating remain allowed. Keep Trustpilot out of videos and social content.
+- **No Trustpilot data anywhere** (removal notice from Trustpilot, Nov 16, 2026): no ratings, review counts, quotes from Trustpilot reviews, theme counts derived from them, profile links, or the name in rendered text, on the site, in social posts or in videos. `TRUSTPILOT_DATA_REMOVED=true` strips the structured fields; prose must not reintroduce them. Social proof on the site is the editorial score, verified provider facts, and the Reddit and Facebook community material already captured.
 - Never publish the operator's private research percentages or Bing/GSC exports verbatim.
 
 ## 5. Site conventions

@@ -10,6 +10,15 @@
 // Set to true to bring everything back exactly as it was.
 export const SHOW_TRUSTPILOT_WIDGETS = false;
 
+// Nov 16, 2026: Trustpilot sent the operator a removal notice. With this
+// true, no Trustpilot data is presented anywhere: ratings, review counts,
+// transcribed reviews, theme analyses, profile links and the name itself are
+// stripped at the data layer (getConfig, the review registry) and every
+// component that could render them returns null. The stored data stays in
+// the repository but is never served. The review-analysis pages 301 to the
+// provider review.
+export const TRUSTPILOT_DATA_REMOVED = true;
+
 // Per-page exception (operator request, Nov 12, 2026): the full Trustpilot
 // section (summary with star bars + review carousel) on this one article
 // only. Everything else on the site stays under the flag above.

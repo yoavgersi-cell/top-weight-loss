@@ -1,3 +1,4 @@
+import { TRUSTPILOT_DATA_REMOVED } from "@/lib/trustpilot-display";
 import { put, list } from "@vercel/blob";
 import { type SiteConfig, type ReviewData, type ArticleData, type BattleData, type LandingPageData, type TrustpilotReview, type Expert, defaultConfig, DEFAULT_VERTICAL, VERTICALS, WEIGHT_LOSS_HERO_TEXT } from "./config";
 import productsJson from "@/data/products.json";
@@ -4856,10 +4857,12 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
           // value. The CMS value is only a fallback for providers without a
           // seed aggregate - otherwise a stale blob figure contradicts the
           // text next to it.
-          trustpilotRating: seedFor(p)?.rating || p.trustpilotRating,
-          trustpilotReviewCount: seedFor(p)?.reviewCount || p.trustpilotReviewCount,
+          // Nov 16, 2026: TRUSTPILOT_DATA_REMOVED strips all three fields so
+          // nothing downstream can render a rating, a count or a review.
+          trustpilotRating: TRUSTPILOT_DATA_REMOVED ? undefined : seedFor(p)?.rating || p.trustpilotRating,
+          trustpilotReviewCount: TRUSTPILOT_DATA_REMOVED ? undefined : seedFor(p)?.reviewCount || p.trustpilotReviewCount,
           // Reviews: merge seed + CMS so new seed reviews always show.
-          trustpilotReviews: mergeTrustpilotReviews(p.trustpilotReviews, seedFor(p)?.reviews),
+          trustpilotReviews: TRUSTPILOT_DATA_REMOVED ? undefined : mergeTrustpilotReviews(p.trustpilotReviews, seedFor(p)?.reviews),
           // Highlights carry prices, so for providers whose prices change with
           // verified sweeps the code (products.json) wins over a CMS snapshot.
           // Nov 1, 2026: welludr's $41/$71 and embody's $49/$99 sale lines
