@@ -52,6 +52,12 @@ export const PATH_REDIRECTS: Record<string, string> = {
   "/articles/best-weight-loss-telehealth-providers": "",
   // Stale /articles/ copy of a battle slug - same single-hop reason.
   "/articles/altrx-vs-ro": "/altrx-vs-ro",
+  // Nov 16, 2026 weekly review: the provider trades as welludr but the review
+  // and legit pages live at the wellmedr slugs; both brand-name URLs answered
+  // 404 while "welludr" is the converting Bing query. Full-path entries (not
+  // SLUG_ALIASES) because the /reviews and /articles segments must be kept.
+  "/reviews/welludr": "/reviews/wellmedr",
+  "/articles/is-welludr-legit": "/articles/is-wellmedr-legit",
 };
 
 // Same idea, scoped to one vertical: content-relative key and target, applied
