@@ -25,8 +25,6 @@ const SHARED_ONE_OFF_PAGES = new Set([
   "cheapest-glp1",
   "switch-from-ozempic",
   "how-to-choose-a-glp1-provider",
-  "glp1-provider-support",
-  "glp1-shipping-times",
   "glp1-price-changes",
   "glp1-provider-comparison",
   "glp1-bmi-calculator",

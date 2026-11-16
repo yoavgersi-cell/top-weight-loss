@@ -24,7 +24,6 @@ export type FunnelProvider = {
   /** Three verified fact lines shown under the price. */
   facts: string[];
   /** Legacy field, still passed by the page; nothing renders it (Nov 16, 2026 removal). */
-  trustpilot: { rating: string; count: string } | null;
 };
 
 type Experience = "first" | "switching" | "unsure";

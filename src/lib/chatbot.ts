@@ -58,7 +58,6 @@ export type ChatMatch = {
   external: boolean;
   reviewHref: string;
   rank?: number;
-  trustpilot?: { rating: string; count: string };
   /** Verified prices, keyed by the medication option id. */
   prices: Record<string, ChatPrice>;
   /** Shown instead of prices when the provider has none in the index. */
@@ -202,7 +201,6 @@ export function buildChatMatches(config: SiteConfig, prefix = "/weight-loss"): R
     const prices: Record<string, ChatPrice> = {};
     if (row?.semaglutide) prices.semaglutide = { label: "Semaglutide", price: row.semaglutide.price, note: row.semaglutide.note };
     if (row?.tirzepatide) prices.tirzepatide = { label: "Tirzepatide", price: row.tirzepatide.price, note: row.tirzepatide.note };
-    const tp = row?.trustpilot ?? (p.trustpilotRating && p.trustpilotReviewCount ? { rating: String(p.trustpilotRating), count: String(p.trustpilotReviewCount) } : undefined);
     // "Lowest verified price" is only claimed while it is still true.
     const lowest = Math.min(...PRICE_INDEX.map((r) => priceValue(r.semaglutide)).filter((v): v is number => typeof v === "number"));
     const why = copy.why.filter((w) => !/^The lowest verified/.test(w) || priceValue(row?.semaglutide ?? null) === lowest);
@@ -216,7 +214,6 @@ export function buildChatMatches(config: SiteConfig, prefix = "/weight-loss"): R
       external,
       reviewHref: `${prefix}/reviews/${id}`,
       rank: rank >= 0 ? rank + 1 : undefined,
-      trustpilot: tp ?? undefined,
       prices,
       priceNote: Object.keys(prices).length ? undefined : copy.priceNote,
       commitment: row?.commitment,

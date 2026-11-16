@@ -33,8 +33,6 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
       { label: "Guides", href: "/weight-loss/articles" },
       { label: "Cheapest GLP-1", href: "/weight-loss/cheapest-glp1" },
       { label: "GLP-1 Providers Compared", href: "/weight-loss/glp1-provider-comparison" },
-      { label: "Provider Support Compared", href: "/weight-loss/glp1-provider-support" },
-      { label: "Shipping Times", href: "/weight-loss/glp1-shipping-times" },
       { label: "GLP-1 Price Tracker", href: "/weight-loss/glp1-price-changes" },
       { label: "GLP-1 Price Feed (RSS)", href: "/glp1-price-changes.xml" },
       // The three ranking landing pages were in the sitemap with zero

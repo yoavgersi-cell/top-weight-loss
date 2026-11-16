@@ -79,7 +79,6 @@ export default async function AboutPage() {
   const publishedGuides = (config.articles ?? []).filter((a) => !NOINDEX_ARTICLE_SLUGS.includes(a.slug)).length;
   const comparisons = (config.battles ?? []).length;
   const indexedProviders = PRICE_INDEX.length;
-  const trustpilotCaptured = config.providers.reduce((n, p) => n + (p.trustpilotReviews?.length ?? 0), 0);
   const redditCaptured = Object.values(REDDIT_COMMUNITY_FEEDBACK).reduce((n, p) => n + p.threads.length, 0);
   const pagesReviewed = Object.keys(REVIEW_LOG).length;
 
@@ -110,7 +109,6 @@ export default async function AboutPage() {
     { n: publishedReviews, label: "in-depth reviews" },
     { n: comparisons, label: "head-to-head comparisons" },
     { n: publishedGuides, label: "guides and articles" },
-    { n: trustpilotCaptured, label: "Trustpilot reviews captured verbatim" },
     { n: redditCaptured, label: "Reddit posts captured verbatim" },
   ];
 
@@ -123,7 +121,7 @@ export default async function AboutPage() {
     {
       icon: MessageSquareQuote,
       title: "Capture what customers say, word for word",
-      desc: "Trustpilot reviews and Reddit posts are quoted verbatim with their dates, names shortened, negative reviews included. Where a provider has no public rating, the page says so. We never write, paraphrase or invent a review.",
+      desc: "Reddit posts are quoted verbatim with their dates, usernames as posted, critical posts included. Where a provider has no verified community record, the page says so. We never write, paraphrase or invent a review.",
     },
     {
       icon: ListOrdered,
@@ -170,7 +168,6 @@ export default async function AboutPage() {
           <ul className="mt-6 flex flex-wrap gap-2.5 text-[13px] font-semibold text-[#191919]">
             {[
               `Prices verified on each provider's own site - last check ${longDate(PRICE_INDEX_VERIFIED)}`,
-              `${trustpilotCaptured} customer reviews quoted verbatim, dated`,
               `Medical statements reviewed by ${reviewerDisplayName(reviewer)}`,
             ].map((t) => (
               <li key={t} className="inline-flex items-center gap-2 rounded-full border border-[#0C4B75]/15 bg-white px-3.5 py-1.5 shadow-[0_1px_2px_rgba(16,42,67,0.05)]">
@@ -397,7 +394,7 @@ export default async function AboutPage() {
               <ul className="mt-3 space-y-2 text-[15px] text-gray-800">
                 {[
                   "The prices we publish - each one is the provider's own rate, verified on a stated date",
-                  "The Trustpilot figures and reviews we quote, or the Reddit posts",
+                  "The Reddit posts we quote",
                   "Medical statements and their review",
                   "What our written reviews and comparisons say",
                 ].map((t) => (
@@ -485,7 +482,7 @@ export default async function AboutPage() {
         <section className="rounded-2xl bg-[#0C4B75] px-6 py-8 text-center text-white sm:px-10 sm:py-10">
           <p className="text-[22px] font-extrabold leading-tight sm:text-[26px]">See the comparisons the method produces</p>
           <p className="mx-auto mt-2 max-w-[520px] text-[14.5px] text-white/80">
-            {rankedProviders} weight-loss providers ranked on verified prices and {trustpilotCaptured} captured reviews.
+            {rankedProviders} weight-loss providers ranked on verified prices and published terms.
           </p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link

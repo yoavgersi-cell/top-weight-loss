@@ -57,16 +57,6 @@ export const WEIGHT_LOSS_GUIDES: GuideLink[] = [
     blurb: "Eight providers on verified prices, Reddit and refund terms.",
   },
   {
-    slug: "glp1-provider-support",
-    title: "Provider Customer Support Compared",
-    blurb: "Support, shipping and billing compared by provider.",
-  },
-  {
-    slug: "glp1-shipping-times",
-    title: "Shipping Times by Provider",
-    blurb: "Each provider's published delivery promise next to what reviewers report, in days.",
-  },
-  {
     slug: "glp1-price-changes",
     title: "GLP-1 Price Tracker",
     blurb: "Current semaglutide and tirzepatide prices by provider, and every verified change, dated.",

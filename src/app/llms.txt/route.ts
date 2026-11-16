@@ -63,7 +63,7 @@ function weightLossSection(config: SiteConfig): string {
   out.push("");
 
   // Partner reviews in ranking order - the pages with verified pricing,
-  // Trustpilot excerpts and refund terms.
+  // Reddit excerpts and refund terms.
   out.push("### Provider reviews");
   const reviews = (config.reviews ?? [])
     .filter((r) => PARTNERS.has(r.providerId) && order.includes(r.providerId))

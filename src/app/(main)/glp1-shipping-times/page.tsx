@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { TRUSTPILOT_DATA_REMOVED } from "@/lib/trustpilot-display";
 import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import Link from "next/link";
 import { ArrowUpRight, Truck, ShieldCheck, MessageSquareQuote } from "lucide-react";
@@ -96,6 +98,8 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function ShippingTimesPage() {
+  // Retired Nov 16, 2026 (proxy 301s the URL to the provider comparison).
+  if (TRUSTPILOT_DATA_REMOVED) notFound();
   const config = await getConfig("weight-loss");
   const rows = buildRows(config.providers);
   const totalMentions = rows.reduce((s, r) => s + r.mentions.length, 0);

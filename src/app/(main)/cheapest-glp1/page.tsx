@@ -162,8 +162,7 @@ export default async function CheapestGlp1Page() {
           <h2 className="text-[22px] font-bold text-[#191919]">The 2026 GLP-1 price index</h2>
         </div>
         <p className="mb-5 max-w-[680px] text-[14px] text-gray-500">
-          {PRICE_INDEX.filter((r) => providers.some((p) => p.id === r.providerId)).length} providers, ranked by their published starting price. Trustpilot records shown are
-          real; where a provider has no published rating, we say so instead of inventing one.
+          {PRICE_INDEX.filter((r) => providers.some((p) => p.id === r.providerId)).length} providers, ranked by their published starting price.
         </p>
         <PriceIndex providers={providers} />
 

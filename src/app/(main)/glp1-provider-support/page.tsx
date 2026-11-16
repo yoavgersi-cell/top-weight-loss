@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { TRUSTPILOT_DATA_REMOVED } from "@/lib/trustpilot-display";
 import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import Link from "next/link";
 import { ArrowUpRight, MessageSquareQuote, ShieldCheck } from "lucide-react";
@@ -107,11 +109,8 @@ function buildRows(providers: Provider[]): Row[] {
 }
 
 export async function generateMetadata(): Promise<Metadata> {
-  const config = await getConfig("weight-loss");
-  const rows = buildRows(config.providers);
-  const total = rows.reduce((s, r) => s + r.n, 0);
   const title = `GLP-1 Provider Customer Support Compared (2026)`;
-  const description = `Which online GLP-1 providers get praised or criticised for support, shipping and billing, from the customer reviews we captured verbatim, counted with one fixed rule.`;
+  const description = `Which online GLP-1 providers get praised or criticised for support, shipping and billing, from the customer reviews we captured verbatim and one fixed rule.`;
   return {
     title,
     description,
@@ -121,6 +120,8 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function ProviderSupportPage() {
+  // Retired Nov 16, 2026 (proxy 301s the URL to the provider comparison).
+  if (TRUSTPILOT_DATA_REMOVED) notFound();
   const config = await getConfig("weight-loss");
   const rows = buildRows(config.providers);
   const total = rows.reduce((s, r) => s + r.n, 0);
@@ -174,7 +175,7 @@ export default async function ProviderSupportPage() {
           <h1 className="max-w-[820px] text-[27px] font-extrabold leading-[1.15] text-[#191919] sm:text-[36px]">{title}</h1>
           <p className="mt-3 max-w-[720px] text-[16px] leading-relaxed text-gray-500">
             Nobody publishes their support response time, so we counted what reviewers report. Every customer review we
-            have captured for {rows.length} online GLP-1 providers{from && to ? ` (dated ${fmt(from)} to ${fmt(to)})` : ""} was
+            have captured for {rows.length} online GLP-1 providers{from !== undefined && to !== undefined ? ` (dated ${fmt(from)} to ${fmt(to)})` : ""} was
             run through the same keyword rule for support, shipping and billing. The counts, the shares and every
             reviewer-stated time span are below, quoted as written.
           </p>

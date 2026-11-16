@@ -29,8 +29,7 @@ export default function DisclaimerPage() {
           <strong className="text-[#191919]">What compensation can affect:</strong> which providers are featured on
           the site, and the order and placement of listings, cards and links.{" "}
           <strong className="text-[#191919]">What it does not affect:</strong> the prices we publish, which are each
-          provider&rsquo;s own published rate verified on a stated date; the Trustpilot figures and reviews we quote;
-          the Reddit posts we quote; medical statements and their review; and the content of our written reviews and
+          provider&rsquo;s own published rate verified on a stated date; the Reddit posts we quote; medical statements and their review; and the content of our written reviews and
           comparisons. Our editorial scores follow the method on{" "}
           <Link href="/weight-loss/how-we-rank" className={ext}>how we rank</Link>. Not every provider in this
           market is included on this site.
@@ -149,16 +148,13 @@ export default function DisclaimerPage() {
 
         <h2 className="pt-4 text-xl font-semibold text-[#191919]">Customer reviews, testimonials and results</h2>
         <p>
-          We quote customer reviews from Trustpilot and posts from Reddit, verbatim and with their dates, as
-          evidence of what customers report. They are individual experiences, selected to show the range of
-          feedback including negative reviews, and they are not evidence that every customer will have the same
-          experience.{" "}
+          We quote posts from Reddit, verbatim and with their dates, as evidence of what customers report. They are
+          individual experiences, selected to show the range of feedback including critical posts, and they are not
+          evidence that every customer will have the same experience.{" "}
           <strong className="text-[#191919]">Where a review or post mentions weight lost, that result is one
           person&rsquo;s and is not typical; results from any weight-loss medication vary widely by individual.</strong>{" "}
-          Reviewer names are shortened to a first name and initial. Trustpilot aggregate ratings and review counts are
-          as shown on the provider&rsquo;s public profile on the date we captured them, and a Trustpilot rating reflects
-          customer experience, not medical quality. Trustpilot is a trademark of Trustpilot A/S; Reddit is a trademark
-          of Reddit, Inc.; neither is affiliated with this site.
+          Usernames are shown as posted, and vote counts only as captured. Reddit is a trademark of Reddit, Inc. and is
+          not affiliated with this site.
         </p>
 
         <h2 className="pt-4 text-xl font-semibold text-[#191919]">Prices and provider information</h2>

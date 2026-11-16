@@ -39,8 +39,6 @@ const flooredLastModified = (updatedAt?: string) => new Date(latestUpdate(update
 // Weight-loss-specific standalone pages (custom-coded, not CMS-driven). Shared
 // across hosts: on the hub they live under /weight-loss/... via the proxy.
 const WL_STATIC_PATHS: { path: string; priority: number; changeFrequency: "weekly" | "monthly"; lastModified?: string }[] = [
-  { path: "/glp1-provider-support", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/glp1-shipping-times", priority: 0.8, changeFrequency: "weekly" },
   // The price tracker's lastmod is the date its data last changed, so a
   // verified price change re-submits it through IndexNow the same day.
   { path: "/glp1-price-changes", priority: 0.8, changeFrequency: "weekly", lastModified: PRICE_DATA_UPDATED },

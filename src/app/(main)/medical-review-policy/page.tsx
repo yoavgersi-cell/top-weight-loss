@@ -60,7 +60,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: "What sources count as evidence on this site?",
     answer:
-      "In order: FDA approvals, labels and safety communications; the published pivotal trials, cited by journal and date; position statements and guidelines from the relevant medical societies; and government health references such as MedlinePlus and the NIH institutes. Manufacturer and third-party figures are quoted with their date and labelled as reported, not verified. Trustpilot and Reddit excerpts are quoted as captured and are not medical evidence.",
+      "In order: FDA approvals, labels and safety communications; the published pivotal trials, cited by journal and date; position statements and guidelines from the relevant medical societies; and government health references such as MedlinePlus and the NIH institutes. Manufacturer and third-party figures are quoted with their date and labelled as reported, not verified. Reddit excerpts are quoted as captured and are not medical evidence.",
   },
   {
     question: "How do I report an error?",
@@ -305,7 +305,7 @@ export default async function MedicalReviewPolicyPage() {
               , and the reviewer has no role in them.
             </p>
             <p className="text-[14.5px] leading-[1.7] text-gray-700">
-              Trustpilot figures and Reddit excerpts are quoted as captured, with the date, and are not medical evidence.
+              Reddit excerpts are quoted as captured, with the date, and are not medical evidence.
               Reviewers do not choose providers, set prices or rankings, or take part in commercial partnerships. We may earn
               a commission from provider links; that never changes a medical statement or a review date.
             </p>

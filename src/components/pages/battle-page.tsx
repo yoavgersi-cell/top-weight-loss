@@ -1534,7 +1534,6 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 {[
                   { href: "/articles/best-tirzepatide-online", title: "Best tirzepatide online", blurb: "Eight verified compounded prices from $71, plus every brand-name Zepbound route." },
                   { href: "/reviews/altrx", title: "altRx review", blurb: "$89 semaglutide, $149 tirzepatide, and the only brand-name shelf next to compounded plans." },
-                  { href: "/glp1-provider-support", title: "Provider customer support, compared", blurb: "Support, shipping and billing compared by provider." },
                   { href: "/articles/zepbound-price-online", title: "Zepbound price online", blurb: "Brand Zepbound at $1,249 to $1,599 cash, the Ro pen route, and the compounded ladder." },
                 ].map((g) => (
                   <Link

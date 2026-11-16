@@ -117,7 +117,7 @@ export const embodyVsRoWeightLossArticle: Article = {
 <h3>Labs and what to bring</h3>
 <p>Neither review in our files states whether labs are required. Across the providers we track, many ask for recent lab work and will order it if you have none, and some accept an attestation, so expect the question and have any recent results to hand. Both intakes will ask for height, weight, medical history, current medications and a government ID, because the prescription is written in your name. Answer honestly: the same answers that could get you declined are the ones that would make a GLP-1 unsafe for you.</p>
 <h3>Shipping times, side by side</h3>
-<p>embody's published promise is 1-2 days, cold-chain, free. Ro's is home delivery from its own pharmacy without a stored window. Across every provider we track, shipping delays are the most common complaint, and the most common cause is pharmacy backlog rather than carrier time, so order before your current supply runs low whichever provider you choose. Our <a href="/weight-loss/glp1-shipping-times">shipping times comparison</a> sets each published promise next to what customers report.</p>`,
+<p>embody's published promise is 1-2 days, cold-chain, free. Ro's is home delivery from its own pharmacy without a stored window. Across every provider we track, shipping delays are the most common complaint, and the most common cause is pharmacy backlog rather than carrier time, so order before your current supply runs low whichever provider you choose. Our <a href="/weight-loss/glp1-provider-comparison">provider comparison</a> sets each published shipping promise side by side.</p>`,
     },
     {
       heading: "Embody vs Ro head to head",
