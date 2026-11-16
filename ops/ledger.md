@@ -2,3 +2,4 @@
 |---|---|---|---|---|
 | 2026-11-15 | First Instagram image post (reference: top10.com IG; same tone as existing 3 posts; informative, not clickbait) | Rio | done | https://www.instagram.com/p/DfxCpDKjdYo/ |
 | 2026-11-15 | Full-site technical SEO audit, report only (operator decides fixes) | Felix | partly shipped (approved mechanical fixes F1, F2, F3, F5, F6 code, F8, F9, F16, F17, F18, F21, F24, F28 merged in PRs #614 to #618 and verified live; live gate now fails only on F4 links and the unreachable legacy-host checks; remaining for operator: retired CMS items, Blob token or CI job for the gate, F30/F31 new; F4 with Sloane; F7/F14 held; O-type rows open) | ops/qa/2026-11-15-technical-audit.md |
+| 2026-11-16 | Daily Instagram posts, week of Nov 17 to 23 (7 drafts, one batch) | Rio | awaiting-operator | ops/social/2026-11-16-week-batch.md |
