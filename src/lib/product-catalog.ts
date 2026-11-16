@@ -70,8 +70,8 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     medication: "semaglutide",
     format: "injection",
     price: "$49",
-    priceNote: "month-to-month; pre-Black Friday sale seen Oct 28, 2026",
-    shipping: "Free 1-2 day shipping",
+    priceNote: "homepage price, Nov 16, 2026; Terms list $79 monthly, $49 on the 12-month bundle",
+    shipping: "Free expedited delivery; no timeline guaranteed",
     image: "/products/embody-semaglutide.webp",
   },
   {
@@ -236,8 +236,8 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     medication: "tirzepatide",
     format: "injection",
     price: "$99",
-    priceNote: "month-to-month; pre-Black Friday sale seen Oct 28, 2026",
-    shipping: "Free 1-2 day shipping",
+    priceNote: "homepage price, Nov 16, 2026; Terms list $129 monthly, $99 on the 12-month bundle",
+    shipping: "Free expedited delivery; no timeline guaranteed",
     image: "/products/embody-tirzepatide.webp",
   },
   {

@@ -533,7 +533,7 @@ const defaultReviews: ReviewData[] = [
       "Anyone who prefers a fully online process with no insurance",
       "Readers who have read the refund rule and the counted complaints and are comfortable with them"
     ],
-    finalVerdict: "embody is a real telehealth operation with a public record, and the record is mixed in a specific way. The price is low and flat: $49/month semaglutide and $99/month tirzepatide on the homepage on November 16, 2026, with embody's Terms listing $79 and $129 monthly and $49 and $99 on the 12-month bundle, so confirm the plan at checkout. Both medicines are compounded and not FDA-approved. Trustpilot shows 3.8 across 10,689 reviews (October 25, 2026). In the 96 reviews we store, 43 praise nurses and providers who listen. In the 10 one- and two-star reviews from September 23 to October 25, 2026, 8 describe not being able to reach a person, 6 a late or missing shipment and 6 a refused refund or disputed charge. The money rule matters most: payments are non-refundable, bundles are sold as one purchase, and if you are not approved you get back the unused portion less the consult and review. If you accept those terms and start the cancellation clock 72 hours before each billing date, embody is one of the cheapest ways to start compounded GLP-1 treatment. Compare it in embody vs wellmedr and altRx vs embody before deciding.",
+    finalVerdict: "embody is a real telehealth operation with a public record, and the record is mixed in a specific way. The price is low and flat: $49/month semaglutide and $99/month tirzepatide on the homepage on November 16, 2026, with embody's Terms listing $79 and $129 monthly and $49 and $99 on the 12-month bundle, so confirm the plan at checkout. Both medicines are compounded and not FDA-approved. Trustpilot shows 3.8 across 10,689 reviews (October 25, 2026). In the 96 reviews we store, 43 praise nurses and providers who listen. In the 10 one- and two-star reviews from September 23 to October 25, 2026, 8 describe not being able to reach a person, 6 a late or missing shipment and 6 a refused refund or disputed charge. The money rule matters most: payments are non-refundable, bundles are sold as one purchase, and if you are not approved you get back the unused portion less the consult and review. If you accept those terms and start the cancellation clock 72 hours before each billing date, embody is one of the cheapest ways to start compounded GLP-1 treatment. Compare it in embody vs welludr and altRx vs embody before deciding.",
     trustBadges: [
       "Free expedited delivery",
       "No hidden fees",
@@ -659,13 +659,13 @@ const defaultReviews: ReviewData[] = [
         body: `<p>Short pointers; each comparison page carries its own dated prices.</p>
 <ul>
 <li><a href="/weight-loss/altrx-vs-embody">altRx vs embody</a>: altRx adds a brand-name shelf and Buy Now, Pay Later; embody is the lower compounded price with the stricter refund terms above.</li>
-<li><a href="/weight-loss/embody-vs-wellmedr">embody vs wellmedr</a>: two flat-price compounded providers; wellmedr's lowest rate needs a 12-month plan and includes a coach, embody's bundle terms are above.</li>
+<li><a href="/weight-loss/embody-vs-wellmedr">embody vs welludr</a>: two flat-price compounded providers; welludr's lowest rate needs a 12-month plan and includes a coach, embody's bundle terms are above.</li>
 <li><a href="/weight-loss/embody-vs-ro">embody vs Ro</a>: Ro fills from its own pharmacy; embody uses four partner 503A pharmacies and does not say which fills your order.</li>
 <li><a href="/weight-loss/articles/embody-alternatives">embody alternatives</a>: every provider we track that answers the same question, sorted by what you want fixed.</li>
 </ul>`,
       },
       {
-        heading: "Sources and methodology",
+        heading: "Where these figures come from",
         body: `<ul>
 <li><a href="https://joinem.co/" target="_blank" rel="noopener noreferrer">joinem.co homepage</a>: price cards, sale banner, FAQ and footer (prescriber, pharmacies, FDA disclaimer). Undated; read November 16, 2026, as served HTML and in a rendered browser session.</li>
 <li><a href="https://joinem.co/pages/terms-conditions" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>, "last updated April 24th, 2026": plan prices, bundle commitment, delivery timelines, eligibility. Read November 16, 2026.</li>
