@@ -46,12 +46,7 @@ const METHOD_FAQS = [
   {
     question: "Does affiliate status affect scores or rankings?",
     answer:
-      "No. Partnerships can affect how providers are displayed, but never scores, review content, or head-to-head winners. Our verdicts regularly favor the cheaper or better-documented provider in a matchup, and our reviews cite real Trustpilot records - including mixed ones - for partners and non-partners alike.",
-  },
-  {
-    question: "Why do some providers show no Trustpilot rating on your pages?",
-    answer:
-      "Because they don't publish one, and we never invent or estimate a score. Where no aggregate exists, our pages say so explicitly and rely on the individual reviews we can verify plus the provider's published terms.",
+      "No. Partnerships can affect how providers are displayed, but never scores, review content, or head-to-head winners. Our verdicts regularly favor the cheaper or better-documented provider in a matchup, and our reviews cite the same verified prices, terms and community posts - including critical ones - for partners and non-partners alike.",
   },
   {
     question: "How do you calculate the 12-month cost tables?",
@@ -62,7 +57,7 @@ const METHOD_FAQS = [
 
 const SOURCES = [
   { icon: Database, title: "The providers' own materials", desc: "We pull pricing, medications, shipping, and the medical model directly from each provider's official website and landing pages - so what you read here matches what you'll see when you enroll." },
-  { icon: ClipboardCheck, title: "Recent verified customer reviews", desc: "We read current Trustpilot reviews to gauge real-world customer experience - communication, delivery, and support - not just marketing claims." },
+  { icon: ClipboardCheck, title: "Community feedback", desc: "We read what customers post in public Reddit threads and Facebook groups, quoted verbatim and dated, to gauge real-world experience - communication, delivery, and support - not just marketing claims." },
   { icon: Scale, title: "In-house research", desc: "Our editors independently walk enrollment flows, compare pricing side by side, and track how each provider's offering changes over time." },
   { icon: ShieldCheck, title: "Clinical literature", desc: "Medical claims reference published trial data (such as STEP and SURMOUNT) and FDA information - not opinion." },
 ];
@@ -167,7 +162,7 @@ export default async function HowWeRankPage() {
                   <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Provider</th>
                   <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Semaglutide, as recorded</th>
                   <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Condition on record</th>
-                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Customer record</th>
+                  <th className="px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400">Shipping on record</th>
                 </tr>
               </thead>
               <tbody className="text-[13.5px]">
@@ -180,11 +175,7 @@ export default async function HowWeRankPage() {
                         {row.semaglutide ? `${row.semaglutide.price}/mo` : "-"}
                       </td>
                       <td className="px-4 py-3.5 text-gray-600">{row.semaglutide?.note ?? "-"}</td>
-                      <td className="px-4 py-3.5 text-gray-600">
-                        {row.trustpilot
-                          ? `Trustpilot ${row.trustpilot.rating} across ${row.trustpilot.count} reviews`
-                          : "No published aggregate - we say so rather than invent one"}
-                      </td>
+                      <td className="px-4 py-3.5 text-gray-600">{row.shipping}</td>
                     </tr>
                   );
                 })}
@@ -215,7 +206,6 @@ export default async function HowWeRankPage() {
               </p>
               <ul className="space-y-2 text-[14px] leading-relaxed text-gray-800">
                 <li>Flat pricing that holds at every dose - no titration increases</li>
-                <li>A large, public customer record (Trustpilot volume + score)</li>
                 <li>Third-party certification (LegitScript) and named, state-licensed 503A pharmacies</li>
                 <li>Real guarantees in writing - refunds, warranties, results promises</li>
                 <li>Fast, temperature-controlled shipping for injectables</li>
@@ -228,11 +218,9 @@ export default async function HowWeRankPage() {
               </p>
               <ul className="space-y-2 text-[14px] leading-relaxed text-gray-800">
                 <li>Teaser rates that jump after month one - we publish the regular rate next to every promo</li>
-                <li>No published review aggregate - noted plainly in the review</li>
                 <li>Prepaid commitments a shopper could miss at checkout</li>
                 <li>Undisclosed membership fees stacked on medication costs</li>
                 <li>Thin public detail on plan terms, cancellation or pharmacy standards</li>
-                <li>A weak or mixed published review record - we cite the real number even for partners</li>
               </ul>
             </div>
           </div>
@@ -243,7 +231,7 @@ export default async function HowWeRankPage() {
           <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Our review-integrity rules</h2>
           <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
             <div className="divide-y divide-gray-100 text-[14.5px] leading-[1.75] text-gray-600">
-              <p className="p-5"><strong className="text-[#191919]">No invented ratings, ever.</strong> If a provider has no published Trustpilot aggregate, our pages say exactly that - we never estimate or fabricate a score. Partner status doesn&rsquo;t change this: our top-rated partner&rsquo;s review openly discusses its 3.7 average.</p>
+              <p className="p-5"><strong className="text-[#191919]">No invented ratings, ever.</strong> We do not estimate, fabricate or republish a customer score. Where we have no verified community record for a provider, our pages say exactly that, whatever its partner status.</p>
               <p className="p-5"><strong className="text-[#191919]">Every promo carries its regular rate.</strong> Promotional prices are always published alongside the regular rate and the condition (&ldquo;first month only&rdquo;, &ldquo;12-month plan&rdquo;, &ldquo;prepaid at checkout&rdquo;), and our 12-month cost tables apply those conditions exactly as published.</p>
               <p className="p-5"><strong className="text-[#191919]">Community feedback is verified, not scraped.</strong> The &ldquo;What Reddit says&rdquo; sections on our reviews are built only from real public threads we&rsquo;ve independently verified - quotes lightly trimmed, vote counts shown only as captured, gripes included alongside praise.</p>
               <p className="p-5"><strong className="text-[#191919]">Medical claims cite primary sources.</strong> Clinical figures reference the published STEP and SURMOUNT trials (NEJM) and FDA prescribing information, cited at the bottom of every medical page - never blog folklore.</p>
