@@ -104,9 +104,13 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // "Weight Loss" stays in the title for Google, where "embody weight loss
     // reviews" is the page's main query, and "Legit" covers the legit/scam
     // long-tails that convert at 50-100% on Bing.
-    title: "embody Reviews 2026: $49 Semaglutide in 1-2 Days? Verified",
+    // Nov 16, 2026 refresh (ops/briefs/2026-11-16-embody-review-refresh.md):
+    // the review-and-complaints intent leads, and the "1-2 days" shipping
+    // claim is gone - no page on joinem.co states a day count and its Terms
+    // say delivery timelines are not guaranteed (Atlas read, Nov 16, 2026).
+    title: "embody Reviews 2026: Complaints, Prices and What $49 Buys",
     description:
-      "embody: flat $49 semaglutide, $99 tirzepatide, 1-2 day shipping, refund if not approved. What its 10,689 Trustpilot reviews actually complain about.",
+      "We counted embody's 1 to 2-star Trustpilot complaints by theme, checked the $49 and $99 prices against its Terms and read the refund rule. The catches first.",
   },
   medvi: {
     // Decoupled from the "is medvi legit" query (Sep 2026): that phrase lived in
@@ -203,13 +207,13 @@ const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
   },
   embody: {
     verdict:
-      "Yes - embody is a legitimate, US-based telehealth weight-loss provider. It's LegitScript-certified, works with US-based state-licensed 503A compounding pharmacies, and connects you with state-licensed doctors overseen by its own medical director.",
+      "Yes - embody (Modern Metabolic Medicine, Inc., Wilmington, Delaware) is a real US telehealth weight-loss company. Prescribing is done by OpenLoop Health, a network of US-licensed doctors, and orders are filled by four named state-licensed 503A compounding pharmacies. The medicines are compounded semaglutide and tirzepatide, which are not FDA-approved. Its site links to a LegitScript badge for joinem.co; we could not open LegitScript's page to confirm the certificate on November 16, 2026.",
     signals: [
-      "LegitScript-certified telehealth provider",
-      "US-based, state-licensed 503A compounding pharmacies",
-      "State-licensed doctors, a medical director, and a nursing team",
-      "Transparent flat pricing - $49/mo semaglutide, $99 tirzepatide (pre-Black Friday sale)",
-      "Full refund if you're not approved",
+      "Prescribers: OpenLoop Health, a network of US-licensed doctors (embody footer, read Nov 16, 2026)",
+      "Four named US state-licensed 503A compounding pharmacies",
+      "Compounded semaglutide and tirzepatide: not FDA-approved",
+      "Flat pricing on the homepage, Nov 16, 2026: $49/mo semaglutide, $99/mo tirzepatide; Terms list $79 and $129 monthly",
+      "If not approved: a partial refund of the unused portion, less services rendered (refund policy, Aug 25, 2026)",
     ],
   },
   altrx: {
@@ -437,12 +441,12 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "How fast does embody ship?",
       answer:
-        "embody ships free in 1-2 days in temperature-controlled, tracked and insured packaging, with same-day dispatch on orders placed before 2pm CT. The doctor review itself usually happens within 24 hours of completing the ~5-minute intake.",
+        "embody does not publish a delivery window. Its homepage says 'free expedited delivery' and 'fast, discreet shipping', and its Terms (last updated April 24, 2026) say embody 'does not guarantee delivery timelines' and is not responsible for delays caused by third-party pharmacies or carriers. Reviewers in the 96 reviews we store report 2 to 8 days. An order counts as complete when the pharmacy signs it out for shipping, not when it arrives (medical consent page, read November 16, 2026).",
     },
     {
       question: "Can you cancel embody anytime?",
       answer:
-        "Yes - embody has no long-term contract and no membership fee; plans are month-to-month and you can cancel anytime. If a provider doesn't approve your prescription in the first place, embody issues a full refund.",
+        "You can cancel through your online account, by email or by phone, but the request must arrive at least 72 hours before your next billing date to stop the next charge; inside that window you are billed once more and that charge is non-refundable (refund policy, last updated August 25, 2026). Multi-month bundles are sold as a single purchase and are non-refundable in whole and in part. If the prescriber decides you are not clinically eligible, embody refunds the unused portion of the current term less the value of services already rendered, such as the consultation and provider review.",
     },
     {
       question: "What are the side effects of embody's medications?",
@@ -452,12 +456,12 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "How much does embody cost per month?",
       answer:
-        "embody uses flat monthly pricing: $49/month for compounded semaglutide and $99/month for compounded tirzepatide on its pre-Black Friday sale, seen October 28, 2026 (previously $69 and $119). The price includes the medication, the doctor review, supplies and free 1-2 day shipping - there's no membership fee and no hidden costs. If a provider doesn't approve your prescription, embody issues a full refund.",
+        "On November 16, 2026 embody's homepage showed compounded semaglutide at a flat $49/month and compounded tirzepatide at $99/month under a 'Pre-Black Friday Sale' banner with no end date. embody's Terms (last updated April 24, 2026) list semaglutide at $79 monthly and $49 on the 12-month bundle, and tirzepatide at $129 monthly and $99 on the 12-month bundle, so confirm which plan the $49 applies to at checkout. The price covers the medication, provider visits and shipping, and embody says it does not rise as your dose changes. Payments are non-refundable; if you are not approved, the refund is the unused portion less services already rendered. Both medicines are compounded and not FDA-approved.",
     },
     {
       question: "Is embody FDA-approved?",
       answer:
-        "embody's medications are compounded semaglutide and tirzepatide, which are not FDA-approved brand-name drugs. They're prepared by US-based, state-licensed 503A compounding pharmacies using the same active ingredients as the FDA-approved brands (semaglutide in Ozempic and Wegovy; tirzepatide in Mounjaro and Zepbound). Compounded medications are legal and prescribed by a licensed provider, but they don't carry FDA brand-drug approval - a distinction worth understanding before starting. embody itself is LegitScript-certified.",
+        "No. embody prescribes compounded semaglutide and compounded tirzepatide, and compounded drugs are not FDA-approved. embody's own site says they 'have not been evaluated or approved by the FDA for safety, efficacy, or quality', and the FDA says it 'does not verify the safety, effectiveness or quality of compounded drugs before they are marketed' (FDA compounding Q&A, current as of September 16, 2025). The medicines are prepared by state-licensed 503A compounding pharmacies on a prescription from a licensed clinician. embody does not publish its dose steps or vial concentration; your prescriber sets the dose.",
     },
   ],
   altrx: [
