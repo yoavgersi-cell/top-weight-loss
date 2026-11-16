@@ -25,8 +25,6 @@ const SHARED_ONE_OFF_PAGES = new Set([
   "cheapest-glp1",
   "switch-from-ozempic",
   "how-to-choose-a-glp1-provider",
-  "glp1-provider-support",
-  "glp1-shipping-times",
   "glp1-price-changes",
   "glp1-provider-comparison",
   "glp1-bmi-calculator",
@@ -141,6 +139,14 @@ export function proxy(req: NextRequest) {
     if (isVertical(first) && segments[1] && ROOT_PAGES.has(segments[1])) {
       const url = req.nextUrl.clone();
       url.pathname = `/${segments.slice(1).join("/")}`;
+      return NextResponse.redirect(url, 301);
+    }
+
+    // Nov 16, 2026: the review-analysis pages (built on Trustpilot data) are
+    // retired; each 301s to the provider's review page.
+    if (isVertical(first) && segments[1] === "review-analysis") {
+      const url = req.nextUrl.clone();
+      url.pathname = segments[2] ? `/${first}/reviews/${segments[2]}` : `/${first}/reviews`;
       return NextResponse.redirect(url, 301);
     }
 

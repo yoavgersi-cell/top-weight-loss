@@ -34,7 +34,6 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Shipping", value: "Free expedited delivery; no delivery timeline guaranteed (Terms, Apr 24, 2026)" },
       { label: "Pharmacies", value: "Four named US state-licensed 503A compounding pharmacies; compounded, not FDA-approved" },
       { label: "Refund policy", value: "Non-refundable; if not approved, the unused portion less services rendered (Aug 25, 2026)" },
-      { label: "Trustpilot record", value: "3.8 across 10,689 reviews (verified Oct 25, 2026)" },
     ],
   },
   "weight-loss:welludr": {
@@ -44,7 +43,6 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Commitment", value: "12-month plan for the best rate" },
       { label: "Support", value: "Coach included on every plan" },
       { label: "Guarantee", value: "Weight-loss warranty" },
-      { label: "Trustpilot record", value: "4.6 across 2,679 reviews" },
     ],
   },
   "weight-loss:medvi": {
@@ -53,7 +51,6 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Tirzepatide price", value: "$166/month promotional (reg. $299)" },
       { label: "Support", value: "Video visits and a dietician on every plan" },
       { label: "Commitment", value: "Monthly, all-inclusive billing" },
-      { label: "Trustpilot record", value: "4.3 across 15,097 reviews" },
     ],
   },
   "weight-loss:altrx": {
@@ -79,7 +76,6 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Treatment formats", value: "Injections or needle-free oral drops" },
       { label: "Shipping", value: "Free 1-2 day" },
       { label: "Membership fee", value: "None" },
-      { label: "Trustpilot record", value: "4.6 across 16,390 reviews" },
     ],
   },
   "weight-loss:trimrx": {
@@ -87,7 +83,6 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Semaglutide price", value: "$149/month, same at every dose" },
       { label: "Tirzepatide price", value: "$259/month" },
       { label: "Commitment", value: "No contract; opt-in discount programs" },
-      { label: "Trustpilot record", value: "3.4 across 4,894 reviews" },
     ],
   },
   "weight-loss:shed": {
@@ -96,7 +91,6 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Tirzepatide price", value: "$299/month" },
       { label: "Guarantee", value: "5% of body weight in 120 days or your money back" },
       { label: "Payment options", value: "HSA/FSA eligible" },
-      { label: "Trustpilot record", value: "4.6 across 1,134 reviews" },
     ],
   },
   "weight-loss:sprout": {
@@ -104,7 +98,6 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Semaglutide price", value: "From $99/month on the 12-month plan; $149/month with no commitment" },
       { label: "Tirzepatide price", value: "From $149/month on the 12-month plan; $199/month with no commitment" },
       { label: "Brand-name option", value: "Wegovy $1,799/month" },
-      { label: "Trustpilot record", value: "4.1 across 188 reviews" },
     ],
   },
   "weight-loss:eden": {
@@ -114,7 +107,6 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Membership fee", value: "None" },
       { label: "Commitment", value: "None - no annual or long-term plans required" },
       { label: "Support", value: "Doctor-guided care with 24/7 human support" },
-      { label: "Trustpilot record", value: "4.5 across 5,019 reviews" },
     ],
   },
   // Collective: read from collective.org (homepage and FAQ), Nov 11, 2026.
@@ -127,7 +119,6 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Shipping", value: "2-day express cold shipping included; most orders within 7 days of the medical review" },
       { label: "Pharmacy", value: "State-licensed US pharmacies; third-party tested, per the provider" },
       { label: "Availability", value: "44 states (not AL, CA, LA, MA, MS, WA)" },
-      { label: "Trustpilot record", value: "Not yet reviewed by us" },
     ],
   },
   "weight-loss:luvo": {
@@ -138,7 +129,6 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Brand-name Ozempic", value: "$1,299 per 4 weeks" },
       { label: "Membership fee", value: "None" },
       { label: "Commitment", value: "None - cancel anytime" },
-      { label: "Trustpilot record", value: "No profile yet" },
     ],
   },
   "weight-loss:medgm": {
@@ -147,14 +137,12 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "GLP-1 tablets", value: "Starting at $239 (daily dissolvable tablet)" },
       { label: "Brand-name Zepbound", value: "$99 membership plus medication cost; availability subject to change" },
       { label: "Prescription", value: "Required - all options are Rx-only" },
-      { label: "Trustpilot record", value: "No profile yet" },
     ],
   },
   "weight-loss:ro": {
     rows: [
       { label: "Membership", value: "$39 first month, then $74-149/month ($74 on a 12-month prepaid plan)" },
       { label: "Medication cost", value: "Priced separately from membership - e.g. Wegovy pill $149 first month (then $299); Zepbound KwikPen from $299 first month" },
-      { label: "Trustpilot record", value: "3.9 across 7,380 reviews" },
     ],
   },
 
@@ -164,7 +152,6 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Oral minoxidil", value: "$24.99 / 90-day supply" },
       { label: "Finasteride", value: "$34.99 / 90-day supply (dutasteride $34.99)" },
       { label: "Combination plans", value: "Oral combo $59.99; topical gels from $44.99 (all 90-day)" },
-      { label: "Trustpilot record", value: "4.4 across 1,050 reviews" },
     ],
   },
   "hair-loss:happyhead": {
@@ -173,7 +160,6 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Dual Action set", value: "$98 (reg. $178)" },
       { label: "Subscription discount", value: "20% off subscriptions" },
       { label: "Guarantee", value: "6-month guarantee, per its published terms" },
-      { label: "Trustpilot record", value: "4.5 across 1,803 reviews" },
     ],
   },
   "hair-loss:petermd": {

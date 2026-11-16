@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { TRUSTPILOT_DATA_REMOVED } from "@/lib/trustpilot-display";
 import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import Link from "next/link";
 import { ArrowUpRight, Truck, ShieldCheck, MessageSquareQuote } from "lucide-react";
@@ -8,7 +10,7 @@ import { GuideCluster } from "@/components/guide-cluster";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { TrustDisclosure } from "@/components/medical-sources";
 import { ProviderCta } from "@/components/provider-cta";
-import { TrustpilotWordmark, tpStarColor } from "@/components/trustpilot-rating";
+import { tpStarColor } from "@/components/trustpilot-rating";
 import { pageReviewSchema } from "@/data/reviewers";
 import { getConfig } from "@/lib/config-store";
 import { PRICE_INDEX, PRICE_INDEX_VERIFIED } from "@/lib/price-index";
@@ -19,8 +21,9 @@ export const revalidate = 60;
 // ───── GLP-1 shipping times by provider ─────
 // Two columns of fact, kept apart on purpose: (1) what each provider PUBLISHES
 // about shipping, taken from the verified price index; (2) what reviewers
-// REPORT, computed from the Trustpilot reviews we captured verbatim with one
-// keyword rule. Nothing here is a measured delivery time.
+// REPORT, computed from the customer reviews stored per provider with one
+// keyword rule (empty since Nov 16, 2026: third-party review data was removed,
+// see ops/trustpilot-removal-rules.md). Nothing here is a measured delivery time.
 
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/glp1-shipping-times";
 const PUBLISHED = "2026-10-06";
@@ -90,11 +93,13 @@ export async function generateMetadata(): Promise<Metadata> {
   const rows = buildRows(config.providers);
   const total = rows.reduce((s, r) => s + r.mentions.length, 0);
   const title = `GLP-1 Shipping Times by Provider: Promise vs Reviews (2026)`;
-  const description = `How fast online GLP-1 providers say they ship (1-2 days, overnight, 3-5 days) against what 52 Trustpilot reviewers who mention delivery report.`;
+  const description = `How fast online GLP-1 providers say they ship (1-2 days, overnight, 3-5 days) against what the reviewers who mention delivery report.`;
   return { title, description, alternates: { canonical: CANONICAL }, openGraph: { images: [DEFAULT_OG_IMAGE], title, description, url: CANONICAL, type: "article" } };
 }
 
 export default async function ShippingTimesPage() {
+  // Retired Nov 16, 2026 (proxy 301s the URL to the provider comparison).
+  if (TRUSTPILOT_DATA_REMOVED) notFound();
   const config = await getConfig("weight-loss");
   const rows = buildRows(config.providers);
   const totalMentions = rows.reduce((s, r) => s + r.mentions.length, 0);
@@ -198,7 +203,6 @@ export default async function ShippingTimesPage() {
                   <th className={cell}>Mention delivery</th>
                   <th className={cell}>4-5★</th>
                   <th className={cell}>1-2★</th>
-                  <th className={cell}>Public Trustpilot</th>
                   <th className={cell} />
                 </tr>
               </thead>
@@ -215,17 +219,6 @@ export default async function ShippingTimesPage() {
                     <td className={`${cell} font-bold text-[#191919]`}>{pct(r.pos, r.mentions.length)}%</td>
                     <td className={cell}>{r.neg}</td>
                     <td className={cell}>
-                      {r.provider.trustpilotRating ? (
-                        <span className="inline-flex items-center gap-1 whitespace-nowrap">
-                          <span className="inline-block h-3 w-3 rounded-sm" style={{ backgroundColor: tpStarColor(parseFloat(r.provider.trustpilotRating)) }} />
-                          <strong>{r.provider.trustpilotRating}</strong>
-                          {r.provider.trustpilotReviewCount && <span className="text-gray-400">({r.provider.trustpilotReviewCount})</span>}
-                        </span>
-                      ) : (
-                        <span className="text-gray-400">Not published</span>
-                      )}
-                    </td>
-                    <td className={cell}>
                       <ProviderCta href={r.provider.affiliateUrl} providerName={r.provider.name} providerSlug={r.provider.id} pageType="listing" sourceFlow="main_comparison" className="inline-flex items-center gap-1 whitespace-nowrap text-[12.5px] font-semibold text-[#0C4B75] hover:underline">
                         Visit site <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.5} />
                       </ProviderCta>
@@ -235,10 +228,6 @@ export default async function ShippingTimesPage() {
               </tbody>
             </table>
           </div>
-          <p className="mt-3 text-[12.5px] leading-relaxed text-gray-500">
-            Public Trustpilot figures are each provider&rsquo;s profile aggregate on the date we captured it. Source:{" "}
-            <TrustpilotWordmark starClass="h-3.5 w-3.5" textClass="text-[12.5px]" />
-          </p>
         </section>
 
         <section className="mb-12">
@@ -277,7 +266,7 @@ export default async function ShippingTimesPage() {
           <h2 className="mb-3 text-[20px] font-bold text-[#191919]">Methodology and limits</h2>
           <ul className="list-disc space-y-2 pl-5 text-[15px] leading-[1.7] text-gray-600">
             <li><strong className="text-[#191919]">Published promise.</strong> The shipping statement in each provider&rsquo;s own materials, as recorded in our verified price index on {longDate(PRICE_INDEX_VERIFIED)}. Where a provider publishes no delivery window, the table says so.</li>
-            <li><strong className="text-[#191919]">Reviewer reports.</strong> Trustpilot reviews captured verbatim from each provider&rsquo;s public profile, names shortened. A review counts as mentioning delivery if its title or text contains ship, deliver, arrive, tracking, FedEx, package or refill. The same rule applies to every provider.</li>
+            <li><strong className="text-[#191919]">Reviewer reports.</strong> Customer reviews captured verbatim for each provider, names shortened. A review counts as mentioning delivery if its title or text contains ship, deliver, arrive, tracking, FedEx, package or refill. The same rule applies to every provider.</li>
             <li><strong className="text-[#191919]">Day counts.</strong> Sentences that both concern delivery and state a span (&ldquo;2 days&rdquo;, &ldquo;overnight&rdquo;, &ldquo;three days late&rdquo;), quoted as written. They are what one customer reported about one order.</li>
             <li><strong className="text-[#191919]">Limits.</strong> Samples are small and uneven, people with a problem review more often, and a first order (which includes the provider review) is not the same as a refill. Read the table as a map of what customers talk about. Prices and plan details are on the{" "}<Link href="/weight-loss/cheapest-glp1" className={ext}>cheapest GLP-1 comparison</Link>; support and billing on{" "}<Link href="/weight-loss/glp1-provider-support" className={ext}>provider support compared</Link>.</li>
           </ul>

@@ -42,8 +42,6 @@ export function rankedCardItems(
         ratingLabel: position.label,
         starRating: position.starRating,
         badge: position.badge,
-        trustpilotRating: provider.trustpilotRating,
-        trustpilotReviewCount: provider.trustpilotReviewCount,
       };
       return { product, review: (config.reviews ?? []).find((r) => r.providerId === provider.id), provider };
     })
@@ -117,8 +115,6 @@ export function TopProvidersBlock({
         ratingLabel: position.label,
         starRating: position.starRating,
         badge: position.badge,
-        trustpilotRating: provider.trustpilotRating,
-        trustpilotReviewCount: provider.trustpilotReviewCount,
         priceNote: priceNotes?.[provider.id],
         hideRank: hideRankNumbers,
       };

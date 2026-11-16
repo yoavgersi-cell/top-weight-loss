@@ -14,6 +14,10 @@
 // single 301. All targets are verified-live pages. (Sourced from the old-domain
 // Pages export - each key was 301'ing into a 404.)
 export const PATH_REDIRECTS: Record<string, string> = {
+  // Retired Nov 16, 2026: both guides were built entirely on third-party review
+  // data the site no longer presents. The provider comparison is the live page.
+  "/glp1-provider-support": "/glp1-provider-comparison",
+  "/glp1-shipping-times": "/glp1-provider-comparison",
   // Retired embody battles that still rank on the legacy domain for the brand
   // query "embody weight loss" (embody-vs-noom: 1,131 impressions in the
   // Sep 2026 old-domain export). The relevant live page for that query is the

@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 };
 
 // Each entry references an existing provider by id and overrides the display
-// copy; the affiliate link, CTA and Trustpilot record come from the record.
+// copy; the affiliate link and CTA come from the record.
 const WOMEN_LINEUP: Pick<Provider, "id" | "name" | "logo" | "smallLogo" | "tagline" | "highlights">[] = [
   {
     id: "hims",
@@ -173,8 +173,8 @@ export default async function WomenHairLossPage({ params }: { params: Promise<{ 
   const config = await getConfig("hair-loss");
   const byId = new Map(config.providers.map((p) => [p.id, p]));
 
-  // The women's lineup as a provider list: each record's link, CTA and
-  // Trustpilot figures with the women-facing name, logo and copy over it.
+  // The women's lineup as a provider list: each record's link and CTA with
+  // the women-facing name, logo and copy over it.
   const providers: Provider[] = WOMEN_LINEUP.flatMap((entry) => {
     const base = byId.get(entry.id);
     return base ? [{ ...base, ...entry }] : [];

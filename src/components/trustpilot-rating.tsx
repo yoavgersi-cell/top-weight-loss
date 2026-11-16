@@ -1,4 +1,4 @@
-import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
+import { SHOW_TRUSTPILOT_WIDGETS, TRUSTPILOT_DATA_REMOVED } from "@/lib/trustpilot-display";
 // Compact Trustpilot trust signal: the star rating rendered visually (with
 // fractional fill, like Trustpilot's own widget) plus the review count and a
 // clear "Trustpilot" attribution. Intentionally shows NO numeric score - just
@@ -28,6 +28,7 @@ function TrustpilotStar({ className }: { className?: string }) {
 
 // Official Trustpilot star mark (green star with dark-green notch) + wordmark
 export function TrustpilotWordmark({ starClass = "h-[13px] w-[13px]", textClass = "text-[12px]" }: { starClass?: string; textClass?: string }) {
+  if (TRUSTPILOT_DATA_REMOVED) return null;
   // Widgets hidden: a plain-text source name, no logo mark.
   if (!SHOW_TRUSTPILOT_WIDGETS) return <span className={`${textClass} font-semibold text-gray-600`}>Trustpilot</span>;
   return (

@@ -1,8 +1,7 @@
-import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ShieldCheck, Star } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { DEFAULT_VERTICAL } from "@/lib/config";
 import { PRICE_INDEX, PRICE_INDEX_VERIFIED } from "@/lib/price-index";
@@ -54,10 +53,6 @@ export default async function GoPage({ params }: { params: Promise<{ battleSlug:
     const u = provider(id)?.affiliateUrl;
     return u && u !== "#" ? u : `/${DEFAULT_VERTICAL}/reviews/${id}`;
   };
-  const tp = (id: string) => {
-    const p = provider(id);
-    return p?.trustpilotRating && p?.trustpilotReviewCount ? { rating: p.trustpilotRating, count: p.trustpilotReviewCount } : null;
-  };
   const catalog = (id: string, medication: "semaglutide" | "tirzepatide") => {
     const c = PRODUCT_CATALOG.find((x) => x.providerId === id && x.medication === medication && !/^brand-name/i.test(x.name));
     return c ? { price: c.price, note: c.priceNote } : null;
@@ -84,7 +79,8 @@ export default async function GoPage({ params }: { params: Promise<{ battleSlug:
         "No commitment: month to month, cancel anytime; full refund if you are not approved",
         "Licensed US clinician reviews your intake, usually within 24 hours; no insurance required",
       ],
-      trustpilot: embodyRow.trustpilot ?? tp("embody"),
+      // Nov 16, 2026: third-party review data removed sitewide; the funnel's
+      // trust line stays off.
     });
   }
   if (edenP) {
@@ -101,22 +97,11 @@ export default async function GoPage({ params }: { params: Promise<{ battleSlug:
         "No membership, no annual or long-term plan",
         "Free 3-minute online assessment; no insurance needed",
       ],
-      trustpilot: tp("eden"),
     });
   }
 
   const embody = providers.find((p) => p.id === "embody");
   const eden = providers.find((p) => p.id === "eden");
-
-  // Real, dated Trustpilot reviews from the verified records: the two most
-  // recent four-star-or-better reviews for each provider that has them.
-  const quotes = ["embody", "eden"].flatMap((id) => {
-    const p = provider(id);
-    return (p?.trustpilotReviews ?? [])
-      .filter((r) => r.rating >= 4 && r.date && r.text.length > 60)
-      .slice(0, 2)
-      .map((r) => ({ provider: p!.name, ...r }));
-  });
 
   return (
     <div className="bg-white text-[#191919]">
@@ -153,7 +138,7 @@ export default async function GoPage({ params }: { params: Promise<{ battleSlug:
         <div className="mt-4 overflow-hidden rounded-xl border border-gray-200">
           <table className="w-full text-[13.5px]">
             <thead className="bg-gray-50 text-left text-[11.5px] font-bold uppercase tracking-wider text-gray-500">
-              <tr><th className="px-3 py-2">Provider</th><th className="px-3 py-2">Semaglutide</th><th className="px-3 py-2">Tirzepatide</th><th className="px-3 py-2">Trustpilot</th></tr>
+              <tr><th className="px-3 py-2">Provider</th><th className="px-3 py-2">Semaglutide</th><th className="px-3 py-2">Tirzepatide</th></tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
               {providers.map((p) => (
@@ -161,7 +146,6 @@ export default async function GoPage({ params }: { params: Promise<{ battleSlug:
                   <td className="px-3 py-2.5 font-bold">{p.name}</td>
                   <td className="px-3 py-2.5"><strong>{p.semaglutide?.price}</strong><span className="block text-[11.5px] text-gray-500">{p.semaglutide?.note}</span></td>
                   <td className="px-3 py-2.5"><strong>{p.tirzepatide?.price}</strong><span className="block text-[11.5px] text-gray-500">{p.tirzepatide?.note}</span></td>
-                  <td className="px-3 py-2.5 text-gray-600">{p.trustpilot ? `${p.trustpilot.rating} (${p.trustpilot.count})` : "-"}</td>
                 </tr>
               ))}
             </tbody>
@@ -196,36 +180,12 @@ export default async function GoPage({ params }: { params: Promise<{ battleSlug:
           <li className="rounded-xl border border-gray-200 p-4">
             <p className="text-[15px] font-bold">4. Know what each one is best at</p>
             <p className="mt-1 text-[14px] leading-relaxed text-gray-600">
-              {embody && <>embody is the cheaper of the two and ships in 1-2 days, cold-chain, with a LegitScript certification and a 3.8 across {embody.trustpilot?.count ?? "its"} Trustpilot reviews.</>}{" "}
-              {eden && <>Eden costs $30 more a month for semaglutide and $10 more for tirzepatide, and includes doctor-guided care with 24/7 human support, with a {eden.trustpilot?.rating ?? "4.5"} across {eden.trustpilot?.count ?? "5,019"} Trustpilot reviews in which recent reviewers name the staff who helped them. Confirm Eden&rsquo;s shipping time at checkout; it does not publish one.</>}
+              {embody && <>embody is the cheaper of the two and ships in 1-2 days, cold-chain, with a LegitScript certification.</>}{" "}
+              {eden && <>Eden costs $30 more a month for semaglutide and $10 more for tirzepatide, and includes doctor-guided care with 24/7 human support. Confirm Eden&rsquo;s shipping time at checkout; it does not publish one.</>}
             </p>
           </li>
         </ol>
       </section>
-
-      {/* Verified customer quotes */}
-      {SHOW_TRUSTPILOT_WIDGETS && quotes.length > 0 && (
-        <section className="mx-auto max-w-[640px] px-4 pt-10">
-          <h2 className="text-[20px] font-bold sm:text-[22px]">What customers wrote on Trustpilot</h2>
-          <p className="mt-1 text-[13.5px] text-gray-500">Real reviews from the provider&rsquo;s public Trustpilot profile; names shortened.</p>
-          <div className="mt-4 grid gap-3 sm:grid-cols-2">
-            {quotes.map((q, i) => (
-              <figure key={i} className="rounded-xl border border-gray-200 bg-white p-4">
-                <p className="flex items-center gap-1 text-[12px] text-gray-500">
-                  <span className="inline-flex gap-0.5">
-                    {Array.from({ length: 5 }).map((_, s) => (
-                      <Star key={s} className={`h-3.5 w-3.5 ${s < q.rating ? "fill-[#00B67A] text-[#00B67A]" : "fill-gray-200 text-gray-200"}`} strokeWidth={0} />
-                    ))}
-                  </span>
-                  <span className="ml-1 font-semibold text-[#191919]">{q.provider}</span>
-                </p>
-                <blockquote className="mt-2 text-[14px] leading-relaxed text-gray-700 line-clamp-5">&ldquo;{q.text}&rdquo;</blockquote>
-                <figcaption className="mt-2 text-[12px] text-gray-400">{q.name} · {q.date}</figcaption>
-              </figure>
-            ))}
-          </div>
-        </section>
-      )}
 
       {/* FAQ */}
       <section className="mx-auto max-w-[640px] px-4 pt-10">

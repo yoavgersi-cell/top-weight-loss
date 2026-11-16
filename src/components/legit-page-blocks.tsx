@@ -45,7 +45,6 @@ export const LEGIT_PAGES: Record<string, LegitPageData> = {
       { ok: true, text: "A licensed provider reviews your medical intake before prescribing; approval is not automatic" },
       { ok: true, text: "Prescription required - there is no no-prescription route" },
       { ok: true, text: "Dispensed through a regulated US pharmacy (Reddit commenters independently name its Florida pharmacy)" },
-      { ok: true, text: "Trustpilot 4.6 across 2,679 reviews, re-verified October 25, 2026" },
       { ok: true, text: "Weight-loss warranty, with its terms published on the provider's site" },
       { ok: false, text: "The $41 / $71 rates are tied to a 12-month plan, billed monthly; standard delivery is 3-5 business days" },
     ],

@@ -44,7 +44,7 @@ export const WEIGHT_LOSS_GUIDES: GuideLink[] = [
   {
     slug: "how-to-choose-a-glp1-provider",
     title: "How to Choose a GLP-1 Provider",
-    blurb: "12 checks, ten providers, verified prices and Trustpilot records.",
+    blurb: "12 checks, ten providers, verified prices and terms.",
   },
   {
     slug: "cheapest-glp1",
@@ -54,17 +54,7 @@ export const WEIGHT_LOSS_GUIDES: GuideLink[] = [
   {
     slug: "glp1-provider-comparison",
     title: "GLP-1 Providers Compared",
-    blurb: "Eight providers on verified prices, Trustpilot patterns, Reddit and refund terms.",
-  },
-  {
-    slug: "glp1-provider-support",
-    title: "Provider Customer Support Compared",
-    blurb: "What captured Trustpilot reviews say about support, shipping and billing, by provider.",
-  },
-  {
-    slug: "glp1-shipping-times",
-    title: "Shipping Times by Provider",
-    blurb: "Each provider's published delivery promise next to what reviewers report, in days.",
+    blurb: "Eight providers on verified prices, Reddit and refund terms.",
   },
   {
     slug: "glp1-price-changes",

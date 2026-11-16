@@ -87,7 +87,7 @@ export const ED_ARTICLES_2026_10: ArticleData[] = [
       {
         heading: "What this means for getting ED treated online",
         body: `<p>The online ED clinics we review are good at the prescription and, by their nature, weaker at the risk assessment, because an intake form cannot take a blood pressure. The better ones ask about chest pain, blood pressure, diabetes and medications, decline men on nitrates or with cardiac symptoms, and tell the rest to see a doctor for a check-up; the weaker ones ask the nitrate question and nothing else. Neither replaces the visit above. The sensible sequence for a man with vascular-pattern ED is a primary-care check-up for the risk factors and, in parallel, a legitimate online prescription for the symptom, because the two are not in competition and the tablet works better once blood pressure and glucose are controlled. Our <a href="/ed">ED treatment ranking</a> and the guide to <a href="/ed/articles/how-to-get-ed-treatment-online">getting ED treatment online</a> cover the providers; <a href="/ed/articles/buying-ed-medication-online-safely">buying ED medication online safely</a> covers the checks a legitimate service passes.</p>
-<p>In the customers' reviews we hold for ED providers, the heart question does not appear; men write about speed, discretion, price and whether the medication worked. That silence is itself a finding: nobody reviews a clinic for the cardiac work-up it suggested, which means the man has to bring the question himself.</p>`,
+`,
       },
       {
         heading: "Who does this not apply to?",

@@ -1,3 +1,4 @@
+import { TRUSTPILOT_DATA_REMOVED } from "@/lib/trustpilot-display";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -70,6 +71,7 @@ export async function generateMetadata({ params }: { params: Promise<{ battleSlu
 }
 
 export default async function ReviewAnalysisPage({ params }: { params: Promise<{ battleSlug: string; providerId: string }> }) {
+  if (TRUSTPILOT_DATA_REMOVED) notFound();
   const { battleSlug, providerId } = await params;
   const data = await load(battleSlug, providerId);
   if (!data) return notFound();

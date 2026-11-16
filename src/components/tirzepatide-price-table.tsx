@@ -1,15 +1,13 @@
-import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
 import Link from "next/link";
-import { ArrowUpRight, Star } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { ProviderCta } from "@/components/provider-cta";
-import { tpStarColor } from "@/components/trustpilot-rating";
 import { PRICE_INDEX, PRICE_INDEX_VERIFIED } from "@/lib/price-index";
 import type { Provider } from "@/lib/config";
 
 // ───── Tirzepatide price table (best-tirzepatide-online) ─────
 // The money moment on that guide: the "what's the cheapest" table. Rendered
 // from code instead of article HTML so every row carries a live affiliate CTA,
-// a link to the review, and the provider's verified Trustpilot record. Prices
+// and a link to the review. Prices
 // come from the verified price index (single source of truth); the condition
 // and standout columns are the article's own editorial notes. Providers that
 // have no tirzepatide row in the index are skipped rather than guessed.
@@ -27,22 +25,6 @@ const ROWS: RowNote[] = [
 function regularFrom(note: string): string | null {
   const m = note.match(/reg\.\s*(\$[\d,]+)/i);
   return m ? m[1] : null;
-}
-
-// Same compact Trustpilot line the ranked cards use: one star in Trustpilot's
-// own colour for that rating, the figure, and the review count.
-function TpBadge({ rating, count }: { rating: string; count?: string }) {
-  const value = parseFloat(rating);
-  if (isNaN(value) || !SHOW_TRUSTPILOT_WIDGETS) return null;
-  const color = tpStarColor(value);
-  return (
-    <span className="inline-flex items-center gap-1.5 whitespace-nowrap text-[12.5px] text-gray-500">
-      <Star className="h-3.5 w-3.5" style={{ fill: color, color }} strokeWidth={0} />
-      <span className="font-bold text-[#191919]">{rating}</span>
-      <span>Trustpilot</span>
-      {count && <span className="text-gray-400">({count})</span>}
-    </span>
-  );
 }
 
 // ───── "How we verified these prices" strip ─────
@@ -124,10 +106,7 @@ export function TirzepatidePriceTable({ providers, linkPrefix = "" }: { provider
     const index = PRICE_INDEX.find((r) => r.providerId === note.id);
     const cell = index?.tirzepatide;
     if (!provider || !cell) return null;
-    // Trustpilot: the provider record (seed wins there) first, the index second.
-    const tpRating = provider.trustpilotRating || index.trustpilot?.rating;
-    const tpCount = provider.trustpilotReviewCount || index.trustpilot?.count;
-    return { ...note, provider, price: cell.price, regular: regularFrom(cell.note), tpRating, tpCount, position: i + 1 };
+    return { ...note, provider, price: cell.price, regular: regularFrom(cell.note), position: i + 1 };
   }).filter((r): r is NonNullable<typeof r> => r !== null);
 
   if (rows.length === 0) return null;
@@ -144,7 +123,6 @@ export function TirzepatidePriceTable({ providers, linkPrefix = "" }: { provider
               <th className="px-4 py-3">Provider</th>
               <th className="px-4 py-3">Monthly price</th>
               <th className="px-4 py-3">The condition</th>
-              {SHOW_TRUSTPILOT_WIDGETS && <th className="px-4 py-3">Trustpilot</th>}
               <th className="px-4 py-3" />
             </tr>
           </thead>
@@ -162,13 +140,6 @@ export function TirzepatidePriceTable({ providers, linkPrefix = "" }: { provider
                   {r.regular && <span className="ml-1.5 text-[12px] text-gray-400 line-through">{r.regular}</span>}
                 </td>
                 <td className="px-4 py-3.5 align-top text-[13px] leading-snug text-gray-700">{r.condition}</td>
-                <td className="px-4 py-3.5 align-top">
-                  {r.tpRating ? (
-                    <TpBadge rating={r.tpRating} count={r.tpCount} />
-                  ) : (
-                    <span className="text-[12px] text-gray-400">Not published</span>
-                  )}
-                </td>
                 <td className="px-4 py-3.5 align-top text-right">
                   <ProviderCta
                     href={r.provider.affiliateUrl}
@@ -207,14 +178,7 @@ export function TirzepatidePriceTable({ providers, linkPrefix = "" }: { provider
                 {r.regular && <p className="text-[11.5px] text-gray-400 line-through">{r.regular}</p>}
               </div>
             </div>
-            <div className="mt-3 flex items-center justify-between gap-3 border-t border-gray-100 pt-3">
-              {!SHOW_TRUSTPILOT_WIDGETS ? (
-                <span />
-              ) : r.tpRating ? (
-                <TpBadge rating={r.tpRating} count={r.tpCount} />
-              ) : (
-                <span className="text-[12px] text-gray-400">Trustpilot: not published</span>
-              )}
+            <div className="mt-3 flex items-center justify-end gap-3 border-t border-gray-100 pt-3">
               <ProviderCta
                 href={r.provider.affiliateUrl}
                 providerName={r.provider.name}
@@ -234,8 +198,7 @@ export function TirzepatidePriceTable({ providers, linkPrefix = "" }: { provider
 
       <p className="mt-3 text-[12.5px] leading-relaxed text-gray-500">
         Prices are each provider&rsquo;s published compounded tirzepatide rate, last verified {verifiedLabel(PRICE_INDEX_VERIFIED)}
-        {" - "}promos change, so confirm at checkout. Trustpilot figures are each provider&rsquo;s public profile on the date we captured them; a
-        rating reflects customer experience, not medical quality. The same providers&rsquo; semaglutide rates are in the{" "}
+        {" - "}promos change, so confirm at checkout. The same providers&rsquo; semaglutide rates are in the{" "}
         <Link href={`${linkPrefix}/cheapest-glp1`} className="font-medium text-[#0C4B75] underline underline-offset-2">full price index</Link>.
       </p>
 

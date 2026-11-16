@@ -359,7 +359,7 @@ export const glp1WeightLossMedicationsGuideArticle: Article = {
 <li>Who reviews my intake, and how do I reach a clinician if I have side effects?</li>
 <li>What happens to my money if I am not approved, or if I need to stop?</li>
 </ul>
-<p>Our 12-point checklist in <a href="/weight-loss/how-to-choose-a-glp1-provider">how to choose a GLP-1 provider</a> expands each check, <a href="/weight-loss/glp1-provider-support">our support comparison</a> and <a href="/weight-loss/glp1-shipping-times">shipping times guide</a> compare the practical side, and <a href="/weight-loss/articles/how-to-start-glp1-treatment-online">how to start GLP-1 treatment online</a> shows the intake step by step. If you would rather answer a few questions and get a shortlist, try <a href="/weight-loss/find-your-match">Find Your Match</a>.</p>
+<p>Our 12-point checklist in <a href="/weight-loss/how-to-choose-a-glp1-provider">how to choose a GLP-1 provider</a> expands each check, <a href="/weight-loss/glp1-provider-comparison">our provider comparison</a> covers the practical side, and <a href="/weight-loss/articles/how-to-start-glp1-treatment-online">how to start GLP-1 treatment online</a> shows the intake step by step. If you would rather answer a few questions and get a shortlist, try <a href="/weight-loss/find-your-match">Find Your Match</a>.</p>
 <p>We rank providers using the method described in <a href="/weight-loss/how-we-rank">how we rank</a>. Our three highest-ranked online GLP-1 providers are below.</p>`,
     },
     {

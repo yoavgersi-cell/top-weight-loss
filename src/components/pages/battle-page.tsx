@@ -1,5 +1,5 @@
 import { DEFAULT_OG_IMAGE } from "@/lib/og";
-import { SHOW_TRUSTPILOT_WIDGETS, visibleTrustBadges } from "@/lib/trustpilot-display";
+import { visibleTrustBadges } from "@/lib/trustpilot-display";
 import { pageReviewSchema } from "@/data/reviewers";
 import { SiblingLinks, CATEGORY_LABEL, reviewSiblings, comparisonSiblings, articleSiblings, pickSiblings } from "@/components/sibling-links";
 import { medicalWebPageFields } from "@/lib/medical-schema";
@@ -25,10 +25,8 @@ import { ArrowRight, Check, Minus, ShieldCheck, Sparkles, Star } from "lucide-re
 import { LastUpdated } from "@/components/last-updated";
 import { ProviderCta } from "@/components/provider-cta";
 import { BattleStickyCta } from "@/components/battle-sticky-cta";
-import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { getReviewRecord } from "@/data/reviews";
 import { ReviewFaceoff } from "@/components/review-faceoff";
-import { TrustpilotRating } from "@/components/trustpilot-rating";
 import { LicensedTelehealthBadge } from "@/components/licensed-badge";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
@@ -176,7 +174,7 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   "sprout-vs-wellmedr": {
     title: "Sprout vs welludr (formerly wellmedr): $99 vs $41 GLP-1",
     description:
-      "Sprout (from $99/mo on a 12-month plan, 2-day fulfillment, brand-name Wegovy) vs welludr ($41/mo, 4.6 on Trustpilot, warranty). Real prices, honest verdict.",
+      "Sprout (from $99/mo on a 12-month plan, 2-day fulfillment, brand-name Wegovy) vs welludr ($41/mo, weight-loss warranty). Real prices, honest verdict.",
   },
   "embody-vs-wellmedr": {
     title: "embody vs welludr (formerly wellmedr): $49 vs $41 GLP-1",
@@ -249,7 +247,7 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // Oct 15, 2026: welludr leads (named winner, shown first on the page).
     title: "welludr (formerly wellmedr) vs TrimRx: $41 vs $149 GLP-1",
     description:
-      "welludr ($41/mo semaglutide, weight-loss warranty, 4.6 on Trustpilot) vs TrimRx ($149/mo flat, custom dosing, no contract). Price and support compared.",
+      "welludr ($41/mo semaglutide, weight-loss warranty) vs TrimRx ($149/mo flat, custom dosing, no contract). Price and support compared.",
   },
   "trimrx-vs-ro": {
     title: "TrimRx vs ro (2026): Which GLP-1 Provider Fits You?",
@@ -627,7 +625,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   const p2VerdictPoints = p1IsBattleWinner ? (battle.verdictLoserPoints ?? []) : (battle.verdictWinnerPoints ?? []);
 
   // Per-provider deep dives. Each provider gets its own rich, full section
-  // (intro, what-you-get, pricing, pros/cons, its own Trustpilot reviews, CTA)
+  // (intro, what-you-get, pricing, pros/cons, CTA)
   // pulled from that provider's review data - so the page reads as two honest,
   // standalone write-ups rather than a "who wins" head-to-head. `bestForFallback`
   // covers providers that don't have a review entry yet.
@@ -1012,13 +1010,6 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 </div>
 
                 <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-2 border-b border-gray-100 pb-3">
-                  {provider.trustpilotRating && (
-                    <TrustpilotRating
-                      rating={provider.trustpilotRating}
-                      reviewCount={provider.trustpilotReviewCount}
-                      starSize={16}
-                    />
-                  )}
                   {ctx.vertical !== "hearing-aids" && !OTC_PROVIDERS.has(provider.id) && <LicensedTelehealthBadge />}
                 </div>
 
@@ -1080,7 +1071,6 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 const cons = review?.cons ?? [];
                 const badges = visibleTrustBadges(review?.trustBadges);
                 const lead = review?.reviewIntro || provider.tagline;
-                const reviewCount = provider.trustpilotReviews?.length ?? 0;
 
                 return (
                   <section
@@ -1091,22 +1081,13 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                     <div className="h-1 bg-gradient-to-r from-[#0C4B75] via-[#1a8cd8] to-[#0C4B75]" />
 
                     <div className="p-6 sm:p-8">
-                      {/* Header: logo + Trustpilot rating + quick CTA */}
+                      {/* Header: logo + badge + quick CTA */}
                       <div className="mb-6 flex flex-wrap items-center justify-between gap-4 border-b border-gray-100 pb-6">
                         <div className="flex flex-wrap items-center gap-4">
                           <div className="flex h-[44px] w-[130px] items-center">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img src={provider.logo} {...imgDims(provider.logo)} alt={`${provider.name} logo`} className="max-h-full max-w-full object-contain" />
                           </div>
-                          {SHOW_TRUSTPILOT_WIDGETS && provider.trustpilotRating && (
-                            <div className="border-l border-gray-200 pl-4">
-                              <TrustpilotRating
-                                rating={provider.trustpilotRating}
-                                reviewCount={provider.trustpilotReviewCount}
-                                starSize={15}
-                              />
-                            </div>
-                          )}
                           {ctx.vertical !== "hearing-aids" && !OTC_PROVIDERS.has(provider.id) && (
                             <div className="border-l border-gray-200 pl-4">
                               <LicensedTelehealthBadge />
@@ -1271,23 +1252,6 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                               </ul>
                             </div>
                           )}
-                        </div>
-                      )}
-
-                      {/* This provider's Trustpilot reviews */}
-                      {SHOW_TRUSTPILOT_WIDGETS && reviewCount > 0 && (
-                        <div className="mb-8">
-                          <h4 className="mb-4 text-[17px] font-bold text-[#191919]">
-                            What real {provider.name} customers are saying
-                          </h4>
-                          <TrustpilotCarousel
-                            providerName={provider.name}
-                            providerLogo={provider.logo}
-                            reviews={provider.trustpilotReviews!}
-                            rating={provider.trustpilotRating}
-                            reviewCount={provider.trustpilotReviewCount}
-                            profileUrl={getReviewRecord(ctx.vertical, provider.id)?.profileUrl}
-                          />
                         </div>
                       )}
 
@@ -1570,7 +1534,6 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 {[
                   { href: "/articles/best-tirzepatide-online", title: "Best tirzepatide online", blurb: "Eight verified compounded prices from $71, plus every brand-name Zepbound route." },
                   { href: "/reviews/altrx", title: "altRx review", blurb: "$89 semaglutide, $149 tirzepatide, and the only brand-name shelf next to compounded plans." },
-                  { href: "/glp1-provider-support", title: "Provider customer support, compared", blurb: "What captured Trustpilot reviews say about support, shipping and billing, by provider." },
                   { href: "/articles/zepbound-price-online", title: "Zepbound price online", blurb: "Brand Zepbound at $1,249 to $1,599 cash, the Ro pen route, and the compounded ladder." },
                 ].map((g) => (
                   <Link

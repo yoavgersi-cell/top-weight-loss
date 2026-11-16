@@ -109,9 +109,9 @@ export function SourcesMethodology({
           <div>
             <GroupLabel icon={MessagesSquare}>Customer &amp; community feedback</GroupLabel>
             <p className="text-[13px] leading-relaxed text-gray-500">
-              Third-party signals shown on this page and in our full reviews: verified Trustpilot
-              ratings, public Reddit discussions, and independent YouTube reviews. We report what
-              these sources say - we never fold their ratings into our own scores.
+              Third-party signals shown on this page and in our full reviews: public Reddit
+              discussions and independent YouTube reviews. We report what these sources say - we
+              never fold them into our own scores.
             </p>
           </div>
 

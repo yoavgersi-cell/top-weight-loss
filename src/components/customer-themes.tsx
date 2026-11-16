@@ -1,4 +1,4 @@
-import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
+import { SHOW_TRUSTPILOT_WIDGETS, TRUSTPILOT_DATA_REMOVED } from "@/lib/trustpilot-display";
 import type { ProviderReviewRecord } from "@/data/reviews/types";
 import { REVIEW_THEMES, resolveThemes, type ResolvedTheme } from "@/data/reviews/themes";
 import type { TrustpilotReview } from "@/lib/config";
@@ -68,6 +68,7 @@ export function CustomerThemes({
   methodologyHref?: string;
   className?: string;
 }) {
+  if (TRUSTPILOT_DATA_REMOVED) return null;
   const themes = REVIEW_THEMES[record.providerId];
   if (!themes) return null;
   const { praise, criticism, total } = resolveThemes(record, themes);

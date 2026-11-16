@@ -13,13 +13,12 @@ import productsJson from "@/data/products.json";
 // ───── Paid-social landing page: /<vertical>/go/top-5 ─────
 // Built for Facebook/Instagram ad traffic: cold, on a phone, one scroll. No
 // site navigation; the page is the category's top five from the live ranking,
-// rendered as lean cards (score, three bullets, one trust line, one button),
-// followed by three short paragraphs. Order, scores and badges come from the
-// same ranking config as the comparison page, so the page can never disagree
-// with it. Every bullet is a provider highlight already verified for the
-// comparison cards; the trust line is the provider's verified Trustpilot
-// record and is omitted where none is published. No visitor counters or other
-// figures we cannot verify. noindex, absent from the sitemap. Categories that
+// rendered as lean cards (score, three bullets, one button), followed by
+// three short paragraphs. Order, scores and badges come from the same ranking
+// config as the comparison page, so the page can never disagree with it.
+// Every bullet is a provider highlight already verified for the comparison
+// cards. The third-party review trust line was removed Nov 16, 2026. No
+// visitor counters or other figures we cannot verify. noindex, absent from the sitemap. Categories that
 // rank fewer than five providers show the real count in the headline.
 
 export const revalidate = 3600;
@@ -89,7 +88,7 @@ const CODE_COPY: Record<string, { tagline: string; highlights: string[] }> = Obj
 
 // Providers shown on a category's ad page whose only record lives in another
 // category's config (operator pick, Nov 1, 2026). The card uses that record's
-// logo, partner link and verified Trustpilot figure, with category-specific
+// logo and partner link, with category-specific
 // copy limited to facts verified for the provider, and no review link when
 // the only review is in the other category. No entries at present.
 const CROSS_VERTICAL: Record<string, Record<string, { from: string; tagline: string; highlights: string[] }>> = {
@@ -194,7 +193,6 @@ export default async function TopFivePage({ params }: { params: Promise<{ battle
         label: pos.label,
         stars: pos.starRating ?? Math.round(pos.score / 2),
         badge: displayIdx === 0 ? "Our Top Pick" : undefined,
-        trustpilot: p.trustpilotRating && p.trustpilotReviewCount ? `${p.trustpilotRating} on Trustpilot (${p.trustpilotReviewCount} reviews)` : null,
         href,
         reviewHref: crossCopy ? null : `/${vertical}/reviews/${review?.slug ?? id}`,
       };
@@ -255,7 +253,7 @@ export default async function TopFivePage({ params }: { params: Promise<{ battle
                 </div>
               </div>
 
-              {/* Tagline + 3 bullets + trust line */}
+              {/* Tagline + 3 bullets */}
               <div>
                 <p className="text-[16px] font-bold leading-snug sm:text-[17px]">{c.tagline}</p>
                 <ul className="mt-2 space-y-1.5">
@@ -266,12 +264,6 @@ export default async function TopFivePage({ params }: { params: Promise<{ battle
                     </li>
                   ))}
                 </ul>
-                {c.trustpilot && (
-                  <p className="mt-3 inline-flex items-center gap-1.5 rounded-lg border border-amber-200 bg-amber-50 px-2.5 py-1 text-[13px] font-semibold text-amber-800">
-                    <Star className="h-3.5 w-3.5 fill-amber-500 text-amber-500" strokeWidth={0} />
-                    {c.trustpilot}
-                  </p>
-                )}
               </div>
 
               {/* Score (desktop) + CTA */}

@@ -236,9 +236,9 @@ export function ProductCarousel({
             // Verified data only: description from the catalog's own honest
             // fields; free-shipping details only when the catalog says
             // shipping is free. No aggregateRating or review markup (Oct 25,
-            // 2026 policy, same as the review pages): Trustpilot scores are
-            // page content with their source and date, never structured-data
-            // ratings for a product the provider's profile does not rate.
+            // 2026 policy, same as the review pages): third-party scores are
+            // never structured-data ratings for a product the provider's
+            // profile does not rate.
             // Return policy: dispensed prescription medication cannot be
             // returned (US pharmacy practice), so MerchantReturnNotPermitted
             // is the accurate, conservative declaration for every product -

@@ -84,7 +84,7 @@ export const HAIR_LOSS_ARTICLES_2026_10: ArticleData[] = [
       },
       {
         heading: "What people losing hair actually say: the pattern in the reviews",
-        body: `<p>We capture customers' public reviews of the hair-loss providers we rank and quote them on the review pages. The pattern in them explains why Breezula has an audience before it has a product. The men who praise a provider praise the convenience of a prescription without a clinic visit and the first visible regrowth; the men who leave unhappy most often cite either side effects they attribute to finasteride or a subscription they found hard to cancel. Fear of finasteride's systemic effects is the single most common reason men in these reviews say they stopped or never started, and it is exactly the fear a topical anti-androgen promises to remove.</p>
+        body: `
 <p>That is worth saying plainly because it cuts both ways. A drug that lets anxious men treat the hormonal cause without a systemic drug would be a real advance. It would also be marketed to men whose hair loss is not advanced enough to need an anti-androgen at all, or whose problem is the subscription model rather than the molecule. Our reviews of <a href="/hair-loss/reviews/hims">Hims</a>, <a href="/hair-loss/reviews/keeps">Keeps</a> and <a href="/hair-loss/reviews/happyhead">Happy Head</a> set out what each provider's customers report about both.</p>`,
       },
       {

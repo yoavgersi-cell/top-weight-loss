@@ -1,4 +1,4 @@
-import { SHOW_TRUSTPILOT_WIDGETS } from "@/lib/trustpilot-display";
+import { SHOW_TRUSTPILOT_WIDGETS, TRUSTPILOT_DATA_REMOVED } from "@/lib/trustpilot-display";
 import type { TrustpilotReview } from "@/lib/config";
 import type { ProviderReviewRecord } from "@/data/reviews/types";
 import { formatReviewDate } from "@/data/reviews";
@@ -48,6 +48,7 @@ export function TrustpilotSummary({
   /** Show the full widget (star bars, "Trustpilot summary" label) on a page allowed by TRUSTPILOT_WIDGET_ARTICLE_SLUGS even while the sitewide flag is off. */
   force?: boolean;
 }) {
+  if (TRUSTPILOT_DATA_REMOVED) return null;
   // With the Trustpilot widgets hidden (Nov 6, 2026) this still renders as a
   // plain-text citation - the source named in words, no logo, colours, star
   // bars or review cards (operator decision, Nov 8, 2026: the summary is a

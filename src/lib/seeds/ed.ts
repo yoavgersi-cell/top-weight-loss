@@ -338,15 +338,14 @@ export function edSeed(base: SiteConfig): SiteConfig {
         slug: "rexmd",
         providerId: "rexmd",
         shortSummary:
-          "A large, established national men's-health telehealth brand with a broad ED menu - branded and generic Viagra & Cialis, daily tadalafil, and its exclusive Ignite gummy - backed by a strong 4.7 Trustpilot score, though with a recurring pattern of billing and subscription complaints worth managing.",
+          "A large, established national men's-health telehealth brand with a broad ED menu - branded and generic Viagra & Cialis, daily tadalafil, and its exclusive Ignite gummy - though with a recurring pattern of billing and subscription complaints worth managing.",
         reviewIntro:
-          "Rex MD is one of the better-known names in US men's-health telehealth, operating since around 2019 and carrying one of the broadest ED menus we rank: branded and generic Viagra and Cialis, low-dose daily tadalafil, and its own exclusive Ignite ED gummy. It runs the standard legitimate flow - online intake, US-licensed provider review, discreet 2-day delivery - and holds a strong 4.7 Trustpilot rating across more than 5,000 reviews. It also earns a recurring set of complaints about auto-refill billing and cancellation that we cover honestly below, because they're the main thing a prospective buyer should go in aware of.",
+          "Rex MD is one of the better-known names in US men's-health telehealth, operating since around 2019 and carrying one of the broadest ED menus we rank: branded and generic Viagra and Cialis, low-dose daily tadalafil, and its own exclusive Ignite ED gummy. It runs the standard legitimate flow - online intake, US-licensed provider review, discreet 2-day delivery - and earns a recurring set of complaints about auto-refill billing and cancellation that we cover honestly below, because they're the main thing a prospective buyer should go in aware of.",
         keyFeatures: [
           "Established national men's-health brand",
           "Branded + generic Viagra & Cialis, plus daily tadalafil",
           "Exclusive Ignite ED gummy (sildenafil + tadalafil compound)",
           "US-licensed provider review; free 2-day discreet delivery",
-          "4.7 Trustpilot across 5,000+ reviews",
         ],
         pricingSummary:
           "Approximate - confirm at checkout. Rex MD's generics are competitively priced (generic Viagra from around $1.60 per dose, generic Cialis from about $6, daily tadalafil from about $1.80), while branded Viagra and Cialis cost far more (roughly $96 and $29 per dose). Its Ignite gummy is an exclusive compounded product priced separately. Rex MD bills on a subscription model, and a recurring complaint is that refills are charged automatically - so confirm the plan terms, refill schedule and cancellation policy before you order.",
@@ -360,7 +359,6 @@ export function edSeed(base: SiteConfig): SiteConfig {
           "Large, established, recognizable brand",
           "One of the broadest ED menus we rank (brand, generic, daily, gummy)",
           "Competitive generic pricing and free 2-day delivery",
-          "Strong 4.7 Trustpilot rating across 5,000+ reviews",
           "Exclusive Ignite gummy for men who want a non-pill format",
         ],
         cons: [
@@ -375,7 +373,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
           "Buyers who will actively manage their subscription and refill settings",
         ],
         finalVerdict:
-          "Rex MD is a legitimate, well-established men's-health brand with one of the widest ED menus we rank and a strong Trustpilot record - a solid choice if you want brand recognition, format variety and the exclusive Ignite gummy. The honest caveat is its subscription billing: enough buyers report surprise auto-refill charges and cancellation friction that you should confirm the refill schedule and cancellation terms up front and keep an eye on your plan. Manage that, and it's a credible option; if you simply want the lowest price on proven generics, a value-focused clinic may suit you better. This review is general information, not medical advice.",
+          "Rex MD is a legitimate, well-established men's-health brand with one of the widest ED menus we rank - a solid choice if you want brand recognition, format variety and the exclusive Ignite gummy. The honest caveat is its subscription billing: enough buyers report surprise auto-refill charges and cancellation friction that you should confirm the refill schedule and cancellation terms up front and keep an eye on your plan. Manage that, and it's a credible option; if you simply want the lowest price on proven generics, a value-focused clinic may suit you better. This review is general information, not medical advice.",
         howItWorks: [
           {
             timing: "Step 1",
@@ -398,7 +396,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
         sections: [
           {
             heading: "What Rex MD is",
-            body: `<p>Rex MD is a <strong>national men's-health telehealth brand</strong> - one of the larger, more established names in the category, operating since around 2019. It treats erectile dysfunction (and other men's-health concerns, including hair loss and, more recently, weight management) entirely online: you complete an intake, a <strong>US-licensed provider</strong> reviews it, and if treatment is appropriate it ships discreetly to your door with free 2-day delivery. Where Rex MD stands out is <strong>menu breadth</strong> - it carries branded and generic Viagra and Cialis, low-dose daily tadalafil, and its own exclusive <strong>Ignite ED gummy</strong> - and <strong>brand trust</strong>, with a 4.7 rating across more than 5,000 Trustpilot reviews.</p>`,
+            body: `<p>Rex MD is a <strong>national men's-health telehealth brand</strong> - one of the larger, more established names in the category, operating since around 2019. It treats erectile dysfunction (and other men's-health concerns, including hair loss and, more recently, weight management) entirely online: you complete an intake, a <strong>US-licensed provider</strong> reviews it, and if treatment is appropriate it ships discreetly to your door with free 2-day delivery. Where Rex MD stands out is <strong>menu breadth</strong> - it carries branded and generic Viagra and Cialis, low-dose daily tadalafil, and its own exclusive <strong>Ignite ED gummy</strong>.</p>`,
           },
           {
             heading: "Products and pricing",
@@ -414,15 +412,15 @@ export function edSeed(base: SiteConfig): SiteConfig {
           },
           {
             heading: "The honest caveat: billing and subscriptions",
-            body: `<p>We'd be doing you a disservice not to flag this clearly: alongside its many positive reviews, Rex MD has a <strong>recurring pattern of complaints about subscription billing</strong>. The themes that come up repeatedly in public reviews are <strong>automatic refills being charged after a customer believed they had cancelled</strong>, difficulty cancelling before the next charge, and occasional disputes over pricing versus a local pharmacy. Many customers also praise the support team by name and describe issues being resolved well - so the experience clearly varies.</p><p>None of this makes Rex MD illegitimate - it's a real, licensed provider - but it does mean you should go in with your eyes open: <strong>confirm the refill schedule and cancellation policy before you order, set a reminder before your next billing date, and keep an eye on your statements.</strong> This is sensible practice with any telehealth subscription, and especially worth doing here. If predictable, no-subscription-surprise pricing is your priority, a straightforward per-order value clinic may suit you better - compare the field on our <a href="/ed">ED treatment comparison</a>.</p>`,
+            body: `<p>We'd be doing you a disservice not to flag this clearly: Rex MD has a <strong>recurring pattern of complaints about subscription billing</strong>. The themes that come up repeatedly in public reviews are <strong>automatic refills being charged after a customer believed they had cancelled</strong>, difficulty cancelling before the next charge, and occasional disputes over pricing versus a local pharmacy.</p><p>None of this makes Rex MD illegitimate - it's a real, licensed provider - but it does mean you should go in with your eyes open: <strong>confirm the refill schedule and cancellation policy before you order, set a reminder before your next billing date, and keep an eye on your statements.</strong> This is sensible practice with any telehealth subscription, and especially worth doing here. If predictable, no-subscription-surprise pricing is your priority, a straightforward per-order value clinic may suit you better - compare the field on our <a href="/ed">ED treatment comparison</a>.</p>`,
           },
           {
             heading: "Who Rex MD is - and isn't - for",
-            body: `<p><strong>Rex MD is a good fit if</strong> you want a big, established brand with the widest range of options - brand-name and generic pills, a daily option, and the exclusive Ignite gummy - and you're comfortable managing a subscription. The brand recognition, menu breadth and strong Trustpilot record are real strengths.</p><p><strong>It's a weaker fit if</strong> your top priority is the rock-bottom price on proven generics (a value-focused clinic like <a href="/ed/reviews/dudemeds">DudeMeds</a> will undercut the branded options), or if you want to avoid subscription billing entirely. For a differentiated compounded dose, compare our top picks <a href="/ed/reviews/directmeds">DirectMeds</a> and <a href="/ed/reviews/quad">Quad by MEDVi</a> - and see the head-to-head in our <a href="/ed/directmeds-vs-rexmd">DirectMeds vs Rex MD</a> comparison. And, like all PDE5 medication, Rex MD's ED treatments aren't appropriate for men who take nitrates or have certain heart conditions - which the intake is there to catch.</p>`,
+            body: `<p><strong>Rex MD is a good fit if</strong> you want a big, established brand with the widest range of options - brand-name and generic pills, a daily option, and the exclusive Ignite gummy - and you're comfortable managing a subscription. The brand recognition and menu breadth are real strengths.</p><p><strong>It's a weaker fit if</strong> your top priority is the rock-bottom price on proven generics (a value-focused clinic like <a href="/ed/reviews/dudemeds">DudeMeds</a> will undercut the branded options), or if you want to avoid subscription billing entirely. For a differentiated compounded dose, compare our top picks <a href="/ed/reviews/directmeds">DirectMeds</a> and <a href="/ed/reviews/quad">Quad by MEDVi</a> - and see the head-to-head in our <a href="/ed/directmeds-vs-rexmd">DirectMeds vs Rex MD</a> comparison. And, like all PDE5 medication, Rex MD's ED treatments aren't appropriate for men who take nitrates or have certain heart conditions - which the intake is there to catch.</p>`,
           },
           {
             heading: "Safety and the bottom line",
-            body: `<p>Rex MD dispenses standard PDE5 medication (and its compounded Ignite gummy) after a licensed-provider review, so the safety profile is the familiar one: mostly mild, temporary side effects (headache, flushing, congestion), and the firm rule that ED medication <strong>must never be combined with nitrates</strong>. The provider review is the safeguard that screens for that.</p><p>The bottom line: Rex MD is a legitimate, well-established men's-health brand with excellent menu breadth, a unique gummy option and a strong Trustpilot record - a credible top-tier choice, placed third in our rankings. Its one real asterisk is subscription billing, so manage your plan actively. Compare it against every option on our <a href="/ed">ED treatment comparison</a>.</p><p><em>This review is general information, not medical advice. A licensed clinician decides whether any ED treatment is appropriate for you - especially if you take nitrates or have a heart condition.</em></p>`,
+            body: `<p>Rex MD dispenses standard PDE5 medication (and its compounded Ignite gummy) after a licensed-provider review, so the safety profile is the familiar one: mostly mild, temporary side effects (headache, flushing, congestion), and the firm rule that ED medication <strong>must never be combined with nitrates</strong>. The provider review is the safeguard that screens for that.</p><p>The bottom line: Rex MD is a legitimate, well-established men's-health brand with excellent menu breadth and a unique gummy option - a credible top-tier choice, placed third in our rankings. Its one real asterisk is subscription billing, so manage your plan actively. Compare it against every option on our <a href="/ed">ED treatment comparison</a>.</p><p><em>This review is general information, not medical advice. A licensed clinician decides whether any ED treatment is appropriate for you - especially if you take nitrates or have a heart condition.</em></p>`,
           },
         ],
       },
@@ -974,9 +972,9 @@ export function edSeed(base: SiteConfig): SiteConfig {
         description:
           "DirectMeds vs Rex MD for online ED treatment in 2026: a compounded 3-in-1 rapid-dissolve tablet vs an established brand with the widest menu. Price and fit.",
         intro:
-          "DirectMeds and Rex MD are both legitimate men's-health telehealth brands, but they're built differently. DirectMeds is focused: its DirectMax is a compounded 3-in-1 rapid-dissolve tablet (sildenafil, tadalafil and apomorphine in one dose), priced transparently per dose. Rex MD is the broad, established brand - branded and generic Viagra and Cialis, daily tadalafil, and its exclusive Ignite gummy - with a strong Trustpilot record but a subscription-billing model worth watching. Here's how they compare.",
+          "DirectMeds and Rex MD are both legitimate men's-health telehealth brands, but they're built differently. DirectMeds is focused: its DirectMax is a compounded 3-in-1 rapid-dissolve tablet (sildenafil, tadalafil and apomorphine in one dose), priced transparently per dose. Rex MD is the broad, established brand - branded and generic Viagra and Cialis, daily tadalafil, and its exclusive Ignite gummy - with a subscription-billing model worth watching. Here's how they compare.",
         verdict:
-          "Both are legitimate online options, and this is a close call. DirectMeds is our top pick and edges it for the man who wants a differentiated, multi-mechanism dose with clean, transparent per-dose pricing and no subscription surprises. Rex MD wins if you value brand recognition, the widest menu of options (including the Ignite gummy) and a large Trustpilot track record - just manage the auto-refill billing. Confirm current pricing on each provider's site.",
+          "Both are legitimate online options, and this is a close call. DirectMeds is our top pick and edges it for the man who wants a differentiated, multi-mechanism dose with clean, transparent per-dose pricing and no subscription surprises. Rex MD wins if you value brand recognition and the widest menu of options (including the Ignite gummy) - just manage the auto-refill billing. Confirm current pricing on each provider's site.",
         verdictWinnerPoints: [
           "3-in-1 compounded dose - sildenafil, tadalafil and apomorphine in one",
           "Transparent per-dose pricing, no subscription surprises",
@@ -984,7 +982,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
         ],
         verdictLoserPoints: [
           "Widest menu: brand + generic pills, daily, and the Ignite gummy",
-          "Large, established brand with a 4.7 Trustpilot across 5,000+ reviews",
+          "Large, established national brand",
           "Free 2-day delivery and ongoing message-based care",
         ],
         winnerId: "directmeds",
@@ -1011,8 +1009,8 @@ export function edSeed(base: SiteConfig): SiteConfig {
             name: "Brand recognition",
             winner: "provider2",
             explanation:
-              "Rex MD is a large, established national brand with a 4.7 Trustpilot rating across more than 5,000 reviews.",
-            supportingPoints: ["Well-known national brand", "5,000+ Trustpilot reviews"],
+              "Rex MD is a large, established national brand, operating since around 2019.",
+            supportingPoints: ["Well-known national brand", "Operating since around 2019"],
           },
           {
             name: "Pricing & billing transparency",

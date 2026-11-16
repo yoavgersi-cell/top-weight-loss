@@ -17,7 +17,7 @@ For each piece: channel, format, the exact caption or script, the visual (file p
 ## House style on social
 - One verified fact per post is better than five vague ones. Every number traces to the page and carries "as of <date>" where it is a price.
 - Compounded medicines: "not FDA-approved" in the caption, every time. No before/after bodies, no weight numbers presented as typical, no medical advice.
-- Keep Trustpilot out of all social content. No testimonials, no screenshots of reviews.
+- No Trustpilot content of any kind, no testimonials, no screenshots of reviews.
 - Providers: factual, positive where verified, never a hard sell. Affiliate links are disclosed in the caption ("we may earn a commission").
 - Tone: calm, specific, useful. No hype words, no emojis in medical statements.
 

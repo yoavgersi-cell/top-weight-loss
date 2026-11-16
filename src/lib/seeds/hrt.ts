@@ -614,7 +614,7 @@ const reviews: ReviewData[] = [
     shortSummary:
       "Virtual, insurance-friendly care for perimenopause and menopause with clinicians trained in midlife women's health.",
     reviewIntro:
-      "Midi Health is a virtual clinic built specifically around perimenopause and menopause - \"Insurance-Covered Hormone Replacement Therapy\" is literally its headline. Care starts with an in-depth virtual visit where a clinician reviews your symptoms, health history and genetics before deciding whether HRT is appropriate; Midi itself notes HRT \"is not appropriate for all\", which is the right posture. Treatment paths span estradiol gels, creams, patches and pills, micronized progesterone, testosterone where clinically appropriate, and non-hormonal prescriptions when hormones aren't the answer. Midi says more than 230,000 women use its midlife care, and its claimed Trustpilot profile averages 4.1 across 1,707 reviews (re-verified October 8, 2026). The October page explains both the 4.1 and the loyalty: most reviews are women saying a Midi clinician was the first to listen after years of being dismissed, and a steady minority describe the other side - an unexpected $250 visit charge after being told insurance covered it, an insurance-billed assessment not listed in the fees, a no-show appointment, a back-ordered prescription with no portal reply. All of it is quoted below. This review covers the model and who it fits.",
+      "Midi Health is a virtual clinic built specifically around perimenopause and menopause - \"Insurance-Covered Hormone Replacement Therapy\" is literally its headline. Care starts with an in-depth virtual visit where a clinician reviews your symptoms, health history and genetics before deciding whether HRT is appropriate; Midi itself notes HRT \"is not appropriate for all\", which is the right posture. Treatment paths span estradiol gels, creams, patches and pills, micronized progesterone, testosterone where clinically appropriate, and non-hormonal prescriptions when hormones aren't the answer. Midi says more than 230,000 women use its midlife care. This review covers the model and who it fits.",
     keyFeatures: [
       "Clinicians trained in midlife women's health",
       "Hormonal and non-hormonal treatment paths",
@@ -629,7 +629,7 @@ const reviews: ReviewData[] = [
     // own star ratings and "clinically-proven" wording are Midi's claims and
     // are not reproduced.
     pricingSummary:
-      "Two different price questions. The clinic: Midi works with many major insurance plans, so for most patients the visit cost is a copay set by their plan; we haven't verified Midi's cash price for a visit, and one recent reviewer reports a $250 charge for a telehealth visit she believed was covered - ask what you'll owe before the appointment. The shop: Midi also sells its own supplement line separately from clinic care, with published prices we verified in October 2026 - Daily GLP-1 Support $31.99 (regularly $39.99), Daily Omega-3+ and Daily Cortisol Support $39.99 each (regularly $49.99), Daily Fiber+ and Berberine+ $43.99 each (regularly $54.99), with free shipping on orders above $65. Supplements are optional and are not hormone therapy. Prices as published in October 2026; confirm current rates on Midi's site.",
+      "Two different price questions. The clinic: Midi works with many major insurance plans, so for most patients the visit cost is a copay set by their plan; we haven't verified Midi's cash price for a visit - ask what you'll owe before the appointment. The shop: Midi also sells its own supplement line separately from clinic care, with published prices we verified in October 2026 - Daily GLP-1 Support $31.99 (regularly $39.99), Daily Omega-3+ and Daily Cortisol Support $39.99 each (regularly $49.99), Daily Fiber+ and Berberine+ $43.99 each (regularly $54.99), with free shipping on orders above $65. Supplements are optional and are not hormone therapy. Prices as published in October 2026; confirm current rates on Midi's site.",
     pricingPlans: [
       { name: "Daily GLP-1 Support", medication: "Supplement - Midi shop (optional, not HRT)", price: "$31.99", regularPrice: "$39.99", cadence: "sale price, Oct 2026" },
       { name: "Daily Omega-3+", medication: "Supplement - Midi shop (optional, not HRT)", price: "$39.99", regularPrice: "$49.99", cadence: "sale price, Oct 2026" },
@@ -645,32 +645,28 @@ const reviews: ReviewData[] = [
       "Non-hormonal prescriptions (e.g. SSRIs, neurokinin-3 antagonists) and lifestyle support",
       "Separate supplement line (Omega-3+, Cortisol Support, Fiber+, GLP-1 Support, Berberine+) - optional, sold through Midi's shop",
     ],
-    // The flow as Midi describes it and as the captured reviews describe it
-    // ("Visit-Bloodwork-Visit", "same day prescriptions").
+    // The flow as Midi describes it.
     howItWorks: [
       { timing: "Day 1", title: "Book a virtual visit", detail: "Choose a time online; many major insurance plans are accepted, otherwise ask the cash price before booking." },
       { timing: "Visit 1", title: "Clinician reviews your symptoms and history", detail: "A clinician trained in midlife women's health takes your history and decides whether hormone therapy, a non-hormonal path, or labs first is appropriate." },
-      { timing: "If needed", title: "Bloodwork", detail: "Labs are ordered when the clinician wants them before prescribing - reviewers describe a visit, bloodwork, then a results visit." },
+      { timing: "If needed", title: "Bloodwork", detail: "Labs are ordered when the clinician wants them before prescribing." },
       { timing: "Ongoing", title: "Prescription and follow-up", detail: "Prescriptions go to your pharmacy; follow-up visits and portal messaging adjust the plan over time." },
     ],
     pros: [
       "Menopause-specialist care, not general telehealth",
       "Insurance accepted in many cases - rare in this space",
       "Both hormonal and non-hormonal paths after review",
-      "4.1 Trustpilot average across 1,707 reviews",
     ],
     cons: [
       "We haven't verified the cash price of a visit - only the supplement shop prices are verified",
       "Availability and insurance participation vary by state and plan",
-      "Recent 1-star reviews cite surprise billing (a $250 visit, an unlisted assessment charge), a no-show clinician and unanswered portal messages",
-      "15-minute slots feel short to some reviewers; you don't choose your clinician",
     ],
     bestFor: [
       "Women who want specialist menopause care online",
       "Anyone who wants to use insurance rather than pay cash",
     ],
     finalVerdict:
-      "Midi Health is the insurance-friendly specialist of this ranking: dedicated menopause clinicians, a genuinely broad treatment menu (from estradiol formats through testosterone to non-hormonal prescriptions), and coverage through many major plans - backed by a 4.1 Trustpilot average across 1,707 reviews whose recent entries consistently praise clinicians who listen and know midlife medicine. Confirm your plan's participation and current costs on Midi's site - and if you'd rather have simple cash pricing, compare Winona's flat published prices.",
+      "Midi Health is the insurance-friendly specialist of this ranking: dedicated menopause clinicians, a genuinely broad treatment menu (from estradiol formats through testosterone to non-hormonal prescriptions), and coverage through many major plans. Confirm your plan's participation and current costs on Midi's site - and if you'd rather have simple cash pricing, compare Winona's flat published prices.",
     trustBadges: ["Menopause-trained clinicians", "Licensed US providers", "Insurance-friendly"],
     // Oct 8, 2026: Trustpilot record re-verified (1,707 reviews) and 32 new
     // captured reviews added.
@@ -682,7 +678,7 @@ const reviews: ReviewData[] = [
     shortSummary:
       "Flat $69/month doctor-prescribed hormone therapy - no membership, no price rise at dose changes - estradiol pill or patch, progesterone and vaginal estradiol.",
     reviewIntro:
-      "Gala Health runs a straightforward telehealth model for hormone care: an online evaluation reviewed by a licensed provider, prescription treatment shipped to your door if appropriate, and ongoing management through its app. The HRT line is priced as simply as it gets: $69/month, described on Gala's hormone-therapy page as flat for as long as you stay - no membership fee, no insurance, no price rise when your dose changes, free discreet shipping in 1-2 days, FSA/HSA accepted, cancel anytime - with estradiol as a pill or patch, progesterone, vaginal estradiol and non-hormonal options on the menu. Its claimed Trustpilot profile averages 4.6 across 4,212 reviews - a large record, with one honest caveat: the profile covers the whole Gala platform, and most recent reviewers are GLP-1 weight-loss customers rather than menopause patients. The recent page splits the way a high-volume telehealth service often does: praise for a quick intake, an easy app and responsive support, next to a cluster of 1- and 2-star reviews about fulfillment delays, a wrong-address shipment and a disputed annual prepayment refund - all quoted in full below. Gala doesn't publish a per-product price list the way Winona does; its promise is one flat number, with the exact plan shown before you pay.",
+      "Gala Health runs a straightforward telehealth model for hormone care: an online evaluation reviewed by a licensed provider, prescription treatment shipped to your door if appropriate, and ongoing management through its app. The HRT line is priced as simply as it gets: $69/month, described on Gala's hormone-therapy page as flat for as long as you stay - no membership fee, no insurance, no price rise when your dose changes, free discreet shipping in 1-2 days, FSA/HSA accepted, cancel anytime - with estradiol as a pill or patch, progesterone, vaginal estradiol and non-hormonal options on the menu. Gala doesn't publish a per-product price list the way Winona does; its promise is one flat number, with the exact plan shown before you pay.",
     keyFeatures: [
       "Flat $69/month - no membership fee, no price rise when your dose changes",
       "Estradiol pill or patch, progesterone, vaginal estradiol, non-hormonal options",
@@ -704,8 +700,8 @@ const reviews: ReviewData[] = [
     howItWorks: [
       { timing: "Day 1", title: "Online assessment", detail: "Symptoms and history online; the exact plan and price are shown before you pay." },
       { timing: "Review", title: "Licensed provider reads your assessment", detail: "Gala describes care as provider-led, not chatbot-led; a provider decides between estradiol, progesterone, vaginal estradiol or non-hormonal options." },
-      { timing: "1-2 days", title: "Free discreet shipping", detail: "Gala states free shipping in 1-2 days - weigh that against the fulfillment-delay reviews quoted on this page." },
-      { timing: "Monthly", title: "Flat $69, cancel anytime", detail: "The same price every cycle with no rise at dose changes; the app handles refills and messaging. Pay monthly rather than annually until deliveries prove smooth." },
+      { timing: "1-2 days", title: "Free discreet shipping", detail: "Gala states free shipping in 1-2 days." },
+      { timing: "Monthly", title: "Flat $69, cancel anytime", detail: "The same price every cycle with no rise at dose changes; the app handles refills and messaging." },
     ],
     treatmentOptions: [
       "Estradiol - daily pill or transdermal patch (bioidentical)",
@@ -716,21 +712,18 @@ const reviews: ReviewData[] = [
     pros: [
       "Flat $69/month with no price rise at dose changes - no membership, no insurance",
       "Full menu: estradiol pill or patch, progesterone, vaginal estradiol and non-hormonal options",
-      "4.6 Trustpilot average across 4,212 reviews (platform-wide)",
       "Fully online, provider-led process; free 1-2 day shipping; FSA/HSA accepted; cancel anytime",
     ],
     cons: [
       "No per-product price list like Winona's - one flat number, plan shown at checkout",
-      "Recent 1- and 2-star reviews cite fulfillment delays and a disputed annual-prepay refund",
-      "Trustpilot record covers all of Gala, mostly GLP-1 customers - not menopause care specifically",
     ],
     bestFor: [
       "Women who want an all-included monthly price without insurance paperwork",
       "Those who want hormonal and non-hormonal options from one online provider",
     ],
     finalVerdict:
-      "Gala Health offers the standard modern telehealth flow - evaluate online, prescribe if appropriate, ship, follow up - and a 4.6 Trustpilot average across 4,212 reviews says most customers come away satisfied. Read the record with two things in mind: it speaks for the whole platform, mostly GLP-1 customers, and its most recent low-star reviews describe shipment delays and a refund dispute over an annual prepayment, so pay monthly rather than annually until you've had a few smooth deliveries. On price it is the simplest offer in our HRT ranking: a flat $69/month that Gala says never rises when your dose changes, with free 1-2 day shipping - against Winona's per-product list ($39-$149/month) and Midi's insurance route, which can cost less if your plan participates. Prices as published in October 2026; confirm current rates on Gala's site.",
-    trustBadges: ["Flat $69/month", "4.6 across 4,212 Trustpilot reviews", "Licensed US providers"],
+      "Gala Health offers the standard modern telehealth flow - evaluate online, prescribe if appropriate, ship, follow up. On price it is the simplest offer in our HRT ranking: a flat $69/month that Gala says never rises when your dose changes, with free 1-2 day shipping - against Winona's per-product list ($39-$149/month) and Midi's insurance route, which can cost less if your plan participates. Prices as published in October 2026; confirm current rates on Gala's site.",
+    trustBadges: ["Flat $69/month", "Licensed US providers"],
     // Oct 8, 2026: Trustpilot record, captured reviews and published pricing added.
     updatedAt: "2026-10-08",
   },
@@ -740,7 +733,7 @@ const reviews: ReviewData[] = [
     shortSummary:
       "Menopause-focused telehealth prescribing physician-directed, body-identical hormone therapy with discreet monthly delivery.",
     reviewIntro:
-      "Winona does one thing: menopause and perimenopause care. Board-certified physicians prescribe bioidentical hormone therapy after an online medical review - the consultation itself is free, and you pay only if a physician prescribes and you approve the treatment. Prices are flat and published: creams run $89/month, estrogen tablets $54, progesterone capsules $39, with FSA/HSA eligibility and discreet monthly delivery. Its claimed Trustpilot profile averages 4.6 across 8,678 reviews (re-verified October 8, 2026) - the strongest verified record in this ranking - and the October page reads the way a menopause clinic should: hot flashes, night sweats and brain fog gone, doctors who answer the same day, a free online intake with no video call. The counterweights are there too and quoted below: one reviewer paid and saw no improvement, one was charged for a refill without notice, and one found it did nothing for her sleep. Winona itself reports a 4.6/5 rating from 100,000+ women.",
+      "Winona does one thing: menopause and perimenopause care. Board-certified physicians prescribe bioidentical hormone therapy after an online medical review - the consultation itself is free, and you pay only if a physician prescribes and you approve the treatment. Prices are flat and published: creams run $89/month, estrogen tablets $54, progesterone capsules $39, with FSA/HSA eligibility and discreet monthly delivery. Winona itself reports a 4.6/5 rating from 100,000+ women.",
     keyFeatures: [
       "Dedicated entirely to menopause and perimenopause",
       "Free physician consultation - pay only if prescribed",
@@ -761,10 +754,10 @@ const reviews: ReviewData[] = [
       { name: "DHEA", medication: "DHEA supplement (90 capsules)", price: "$27", unit: "/3 months" },
     ],
     howItWorks: [
-      { timing: "Day 1", title: "Online questionnaire", detail: "Symptoms and history, all online - reviewers single out that there is no video call. The consultation is free." },
+      { timing: "Day 1", title: "Online questionnaire", detail: "Symptoms and history, all online - there is no video call. The consultation is free." },
       { timing: "Within days", title: "Physician review", detail: "A board-certified physician reviews the answers and proposes a treatment; you pay only if prescribed and you approve the plan." },
       { timing: "Under 5 days", title: "Discreet delivery", detail: "Winona says treatment arrives in under 5 days; shipments then recur monthly." },
-      { timing: "Ongoing", title: "Adjust with your doctor", detail: "24-hour physician messaging; reviewers describe dose adjustments as symptoms settle. Note the refill-charge complaint below - check your reorder settings." },
+      { timing: "Ongoing", title: "Adjust with your doctor", detail: "24-hour physician messaging for dose adjustments as symptoms settle. Check your reorder settings so refills recur only when you want them." },
     ],
     treatmentOptions: [
       "Body creams - estrogen, progesterone, or combined",
@@ -776,20 +769,18 @@ const reviews: ReviewData[] = [
     pros: [
       "Menopause-only focus - the service is built for this",
       "Free consultation; flat published prices from $39/month",
-      "4.6 Trustpilot average across 8,678 reviews",
       "FSA/HSA eligible with discreet recurring delivery",
     ],
     cons: [
       "Cash-pay model - no insurance path like Midi's",
       "Compounded formulations are not individually FDA-approved products",
-      "A few recent reviewers report refills reordered and charged without notice, or no improvement for the price",
     ],
     bestFor: [
       "Women who want a dedicated menopause HRT service",
       "Those who prefer flat direct-pay pricing over insurance paperwork",
     ],
     finalVerdict:
-      "Winona is the focused, direct-pay counterpart to Midi's insurance-based model: a service built entirely around menopause hormone therapy, with a free physician consultation, flat published prices ($39-$149/month by product), FSA/HSA eligibility and a 4.6 Trustpilot average across 8,678 reviews. If insurance coverage matters more than pricing simplicity, compare Midi Health first - otherwise this is the most transparent offer in our HRT ranking.",
+      "Winona is the focused, direct-pay counterpart to Midi's insurance-based model: a service built entirely around menopause hormone therapy, with a free physician consultation, flat published prices ($39-$149/month by product) and FSA/HSA eligibility. If insurance coverage matters more than pricing simplicity, compare Midi Health first - otherwise this is the most transparent offer in our HRT ranking.",
     trustBadges: ["Menopause-focused physicians", "Licensed US providers", "Discreet delivery"],
     // Oct 8, 2026: Trustpilot record re-verified (8,678 reviews) and 26 new
     // captured reviews added.
@@ -871,7 +862,6 @@ const battles: BattleData[] = [
       { feature: "Treatment paths", provider1Value: "Hormonal + non-hormonal", provider2Value: "Body-identical hormone therapy", highlight: "provider1" },
       { feature: "Delivery", provider1Value: "Via plan/pharmacy", provider2Value: "Discreet monthly home delivery", highlight: "provider2" },
       { feature: "Pricing", provider1Value: "Depends on your insurance plan", provider2Value: "$39-$149/mo published; free consult", highlight: "provider2" },
-      { feature: "Trustpilot", provider1Value: "4.1 (1,707 reviews)", provider2Value: "4.6 (8,678 reviews)", highlight: "provider2" },
     ],
     // Oct 8, 2026: pricing statements corrected (Winona's published prices
     // were already verified when the "neither verified" wording shipped).
