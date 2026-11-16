@@ -23,13 +23,18 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
   // ── Weight loss ────────────────────────────────────────────────────────────
   "weight-loss:embody": {
     rows: [
-      { label: "Semaglutide price", value: "$49/month promotional, flat at every dose" },
-      { label: "Tirzepatide price", value: "$99/month promotional" },
-      { label: "Commitment", value: "Month-to-month, no contract" },
-      { label: "Shipping", value: "Free 1-2 day, tracked and insured" },
-      { label: "Certification", value: "LegitScript-certified; US-based 503A compounding pharmacies" },
-      { label: "Refund policy", value: "Full refund if a provider doesn't approve treatment" },
-      { label: "Trustpilot record", value: "3.8 across 10,689 reviews" },
+      // Nov 16, 2026: shipping, refund and certification rows rewritten from
+      // embody's own pages (ops/research/embody-review-refresh.md). No page on
+      // joinem.co states a day count; the Terms do not guarantee delivery
+      // timelines; the refund if not approved is partial; the LegitScript
+      // certificate could not be opened to confirm.
+      { label: "Semaglutide price", value: "$49/month on the homepage (Nov 16, 2026), flat at every dose; Terms list $79 monthly, $49 on the 12-month bundle" },
+      { label: "Tirzepatide price", value: "$99/month on the homepage (Nov 16, 2026); Terms list $129 monthly, $99 on the 12-month bundle" },
+      { label: "Commitment", value: "Monthly, or 3-, 6- and 12-month bundles; bundles are non-refundable" },
+      { label: "Shipping", value: "Free expedited delivery; no delivery timeline guaranteed (Terms, Apr 24, 2026)" },
+      { label: "Pharmacies", value: "Four named US state-licensed 503A compounding pharmacies; compounded, not FDA-approved" },
+      { label: "Refund policy", value: "Non-refundable; if not approved, the unused portion less services rendered (Aug 25, 2026)" },
+      { label: "Trustpilot record", value: "3.8 across 10,689 reviews (verified Oct 25, 2026)" },
     ],
   },
   "weight-loss:welludr": {

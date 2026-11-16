@@ -489,91 +489,193 @@ const defaultReviews: ReviewData[] = [
   {
     slug: "embody",
     providerId: "embody",
-    updatedAt: "2026-09-08",
-    shortSummary: "Doctor-prescribed GLP-1 treatment - compounded semaglutide from $49/mo and tirzepatide from $99/mo - shipped in 1-2 days with no insurance required. Rated 3.8 across 10,689 Trustpilot reviews.",
-    reviewIntro: "embody offers doctor-prescribed GLP-1 weight loss treatment - compounded semaglutide and tirzepatide injections - through a 100% online process. Getting started takes a roughly 5-minute health qualifier, after which a medical practitioner reviews your chart (embody says usually within 24 hours, often under 5). Pricing is flat and simple: $49/month for semaglutide and $99/month for tirzepatide on the pre-Black Friday sale seen October 28, 2026, with no insurance required, no hidden fees, and no clinic visits. Medication ships in 1-2 days in temperature-controlled, tracked, insured packaging, and embody is LegitScript-certified and works with US-based 503A compounding pharmacies. On Trustpilot, embody averages 3.8 across 10,689 reviews - an honest, mixed-to-positive record whose recent reviews cluster around two themes: responsive, proactive customer service ('from my very first inquiry I've had excellent communication... customer service updated me every step,' writes one tirzepatide patient) and the no-surprises pricing ('Love the fact that there are no surprises as in costly up front cost'). A 3.8 also means a minority of customers had negative experiences - worth reading both ends of the reviews before deciding, as with any provider.",
+    // Nov 16, 2026 refresh for "embody reviews and complaints"
+    // (ops/briefs/2026-11-16-embody-review-refresh.md). Every figure is from
+    // ops/research/embody-review-refresh.md: embody's homepage, Terms (Apr 24,
+    // 2026), refund policy (Aug 25, 2026) and medical consent page, all read
+    // Nov 16, 2026; the FDA compounding Q&A (current 09/16/2025); the stored
+    // Trustpilot set (3.8 across 10,689, verified Oct 25, 2026). The "1-2
+    // days" shipping claim was dropped: no page on joinem.co states a day
+    // count and the Terms do not guarantee delivery timelines.
+    updatedAt: "2026-11-16",
+    shortSummary: "Doctor-prescribed compounded GLP-1 treatment, not FDA-approved: semaglutide shown at $49/month and tirzepatide at $99/month on embody's homepage (Nov 16, 2026), no insurance required. Rated 3.8 across 10,689 Trustpilot reviews (Oct 25, 2026).",
+    reviewIntro: "embody sells doctor-prescribed compounded semaglutide and tirzepatide injections through a fully online process. Both are compounded medicines and are not FDA-approved. You pay first; then a clinician from OpenLoop Health, a network of US-licensed doctors, reviews your intake and decides whether to prescribe. On November 16, 2026 the homepage showed semaglutide at a flat $49/month and tirzepatide at $99/month under a pre-Black Friday banner with no end date. embody's Terms (last updated April 24, 2026) list $79 and $129 monthly, with $49 and $99 as the 12-month bundle rates, so confirm which plan the headline price applies to at checkout. Shipping is free and described as expedited, but the Terms do not guarantee a delivery timeline. On Trustpilot embody holds 3.8 across 10,689 reviews (verified October 25, 2026). The praise is about nurses, providers and support staff who listen and fix things. The complaints are about reaching a person, late shipments and refunds refused under a strict no-refund policy. We count both below.",
     keyFeatures: [
-      "Compounded semaglutide ($49/mo) and tirzepatide ($99/mo)",
-      "5-minute health qualifier; doctor review usually within 24 hrs",
-      "Free 1-2 day shipping - temperature-controlled, tracked, insured",
-      "No insurance required, no clinic visits, cancel anytime",
-      "LegitScript-certified, US-based 503A pharmacies"
+      "Compounded semaglutide ($49/mo) and tirzepatide ($99/mo) as shown on the homepage, Nov 16, 2026; not FDA-approved",
+      "Online intake, then a prescriber review by OpenLoop Health, a network of US-licensed doctors",
+      "Free expedited delivery (embody's words); the Terms do not guarantee a delivery timeline",
+      "No insurance required, no clinic visits; cancel at least 72 hours before the next billing date",
+      "Four named US 503A compounding pharmacies; the price stays the same as your dose changes"
     ],
-    pricingSummary: "Embody uses flat monthly pricing: $49/month for compounded semaglutide and $99/month for compounded tirzepatide. The price includes the medication, doctor review, supplies, and shipping - with no hidden fees, no monthly membership, and the option to cancel anytime. If a prescription isn't approved, Embody offers a full refund.",
+    pricingSummary: "On November 16, 2026 embody's homepage showed compounded semaglutide at a flat $49/month and compounded tirzepatide at $99/month under a 'Pre-Black Friday Sale' banner with no end date. embody's Terms (last updated April 24, 2026) list semaglutide at $79 monthly, $76 on a 3-month bundle, $73 on 6 months and $49 on the 12-month bundle; tirzepatide at $129, $126, $123 and $99. Which plan the $49 and $99 headline prices apply to is not confirmed at checkout, so check the plan length before you pay. The price covers medication, provider visits and shipping, and embody says it does not rise as your dose changes. Payments are non-refundable; if the prescriber finds you not clinically eligible, you get back the unused portion less services already rendered (refund policy, August 25, 2026). Compounded medicines are not FDA-approved.",
     treatmentOptions: [
-      "Compounded semaglutide injections (GLP-1)",
-      "Compounded tirzepatide injections (GLP-1 + GIP)",
-      "100% online doctor review and prescription",
-      "Dosage adjustments through the patient portal"
+      "Compounded semaglutide injections (GLP-1), not FDA-approved",
+      "Compounded tirzepatide injections (dual GIP/GLP-1), not FDA-approved",
+      "Online intake and prescriber review by OpenLoop Health clinicians",
+      "Transfer at your current dose with proof of your existing prescription"
     ],
     pros: [
-      "Low, flat pricing - $49/mo semaglutide, $99/mo tirzepatide (pre-Black Friday sale)",
-      "Fast shipping - same-day dispatch on orders before 2pm CT, next-day via UPS",
-      "100% online - no insurance or clinic visits",
-      "Dedicated nursing team and 1:1 medical support",
-      "LegitScript-certified with US-based 503A pharmacies"
+      "Flat pricing: $49/mo semaglutide, $99/mo tirzepatide on the homepage (Nov 16, 2026), the same at every dose",
+      "Free expedited delivery included in the price",
+      "100% online, no insurance or clinic visits; HSA/FSA eligible, per embody",
+      "Nurses and providers who listen and explain are the most praised theme: 43 of the 96 reviews we store",
+      "Four named US 503A compounding pharmacies and a published refund and cancellation policy"
     ],
     cons: [
-      "3.8 Trustpilot average - most reviews are 5-star, but a minority report negative experiences",
-      "Compounded medications only (not brand-name Ozempic/Wegovy/Zepbound)",
-      "Injectable options only - no oral or needle-free format",
-      "Medication-first model - no dietician or formal coaching layer",
-      "Requires an online intake and doctor approval (not everyone qualifies)"
+      "3.8 Trustpilot average across 10,689 reviews (Oct 25, 2026): most are 5-star, a meaningful minority are not",
+      "No refund if you change your mind; the refund if you are not approved is partial (unused portion less services rendered)",
+      "Which plan the $49 headline applies to is unconfirmed; the Terms list $79 monthly and $49 on a 12-month bundle",
+      "Compounded, injectable medicines only; not FDA-approved, no brand-name Wegovy or Zepbound",
+      "Dose steps and vial concentration (mg/mL) are not published; the Terms do not guarantee a delivery timeline"
     ],
     bestFor: [
-      "People who want affordable, doctor-prescribed GLP-1 treatment",
-      "Anyone who prefers a fully online process",
-      "Those who want fast shipping and simple flat pricing"
+      "People who want a flat compounded GLP-1 price that does not rise with dose",
+      "Anyone who prefers a fully online process with no insurance",
+      "Readers who have read the refund rule and the counted complaints and are comfortable with them"
     ],
-    finalVerdict: "embody is a strong choice for affordable, doctor-prescribed GLP-1 treatment - and an honest one to recommend, because its record is public: flat $49-$99/month with everything included, free 1-2 day cold shipping, LegitScript certification with US-based 503A pharmacies, a full refund if you're not approved, and 10,689 Trustpilot reviews averaging 3.8 whose recent pages consistently praise the customer-service communication. The realistic caveats: it's compounded-only and injectable-only, there's no coaching layer, and a 3.8 means not every experience lands well. For someone who wants the lowest-friction, no-commitment way to start GLP-1 treatment at a transparent price, it's one of the strongest offers in our ranking - compare it directly in embody vs welludr and altRx vs embody before deciding.",
+    finalVerdict: "embody is a real telehealth operation with a public record, and the record is mixed in a specific way. The price is low and flat: $49/month semaglutide and $99/month tirzepatide on the homepage on November 16, 2026, with embody's Terms listing $79 and $129 monthly and $49 and $99 on the 12-month bundle, so confirm the plan at checkout. Both medicines are compounded and not FDA-approved. Trustpilot shows 3.8 across 10,689 reviews (October 25, 2026). In the 96 reviews we store, 43 praise nurses and providers who listen. In the 10 one- and two-star reviews from September 23 to October 25, 2026, 8 describe not being able to reach a person, 6 a late or missing shipment and 6 a refused refund or disputed charge. The money rule matters most: payments are non-refundable, bundles are sold as one purchase, and if you are not approved you get back the unused portion less the consult and review. If you accept those terms and start the cancellation clock 72 hours before each billing date, embody is one of the cheapest ways to start compounded GLP-1 treatment. Compare it in embody vs wellmedr and altRx vs embody before deciding.",
     trustBadges: [
-      "Money-back guarantee",
       "Free expedited delivery",
       "No hidden fees",
-      "Doctor-led plans & coaching",
+      "HSA/FSA eligible, per embody",
+      "Optional care coaching at no charge",
     ],
     pricingPlans: [
       {
         name: "GLP-1 Injections",
-        medication: "Compounded Semaglutide",
+        medication: "Compounded Semaglutide (not FDA-approved)",
         cadence: "Weekly",
         price: "$49",
         unit: "/month",
-        highlights: ["One simple injection once a week", "No hidden fees - shipped to your door"],
+        highlights: ["One simple injection once a week", "No hidden fees - shipped to your door", "Homepage card, Nov 16, 2026; the Terms list $79 monthly and $49 on the 12-month bundle"],
       },
       {
         name: "GLP-1 / GIP Injections",
-        medication: "Compounded Tirzepatide",
+        medication: "Compounded Tirzepatide (not FDA-approved)",
         cadence: "Weekly",
         price: "$99",
         unit: "/month",
-        highlights: ["One simple injection once a week", "No hidden fees - shipped to your door"],
+        highlights: ["One simple injection once a week", "No hidden fees - shipped to your door", "Homepage card, Nov 16, 2026; the Terms list $129 monthly and $99 on the 12-month bundle"],
       },
     ],
     howItWorks: [
       {
         timing: "Today",
-        title: "Lock in flat monthly pricing",
-        detail: "Choose your plan - $49/month semaglutide or $99/month tirzepatide on the pre-Black Friday sale. Your price stays the same each month on the same medication and plan.",
+        title: "Choose a plan and pay",
+        detail: "$49/month semaglutide or $99/month tirzepatide as shown on the homepage, Nov 16, 2026. Membership starts the moment you pay, before the clinician's decision. The price stays the same as your dose changes on the same plan.",
       },
       {
-        timing: "In ~1 day",
-        title: "A licensed provider writes your prescription",
-        detail: "Complete a short online health intake; an Embody provider reviews it and, if appropriate, writes your prescription.",
+        timing: "After checkout",
+        title: "An OpenLoop Health clinician reviews your intake",
+        detail: "US-licensed doctors decide whether you qualify. If you are not clinically eligible, embody refunds the unused portion less the services already rendered.",
       },
       {
-        timing: "Within ~1 day",
-        title: "Your order ships from a licensed US pharmacy",
+        timing: "After approval",
+        title: "A partner 503A pharmacy fills the prescription",
+        detail: "embody names four US compounding pharmacies and does not say which fills a given order. The order counts as complete when it is signed out for shipping.",
       },
       {
-        timing: "Free 1-2 day delivery",
+        timing: "Free expedited delivery",
         title: "Get your medication",
-        detail: "Discreet, expedited shipping delivered to your door at no extra cost.",
+        detail: "embody does not guarantee a delivery timeline in its Terms. Reviewers in the 96 reviews we store report 2 to 8 days.",
       },
       {
         timing: "Ongoing",
-        title: "Begin treatment with nursing-staff support",
-        detail: "Continued care and support from Embody's nursing staff whenever you need it.",
+        title: "Care team and optional coaching",
+        detail: "embody says you get 24/7 access to a care team; care coaching is optional and free of charge.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Is embody for real, and what do the complaints say?",
+        body: `<div class="qa"><strong>The short answer</strong> Yes. embody is a real US telehealth company selling compounded semaglutide and tirzepatide, neither FDA-approved, at a flat $49 and $99 a month on its homepage as of November 16, 2026. Trustpilot shows 3.8 across 10,689 reviews (October 25, 2026). Of the 10 one- and two-star reviews we store from September 23 to October 25, 2026, 8 describe not reaching a person, 6 a late or missing shipment and 6 a refused refund or disputed charge.</div>
+<p>The company is Modern Metabolic Medicine, Inc., doing business as embody, at 1811 Silverside Road, Wilmington, Delaware. This page is the review: what embody charges, what its customers praise and complain about, counted, and what its own refund policy says if you are not approved or want out. The legitimacy question on its own (company, prescribers, pharmacies, certification) is answered in <a href="/weight-loss/articles/is-embody-legit">Is embody legit or a scam?</a>, and every one of the 96 reviews we hold is analyzed in <a href="/weight-loss/review-analysis/embody">What 96 embody reviews say</a>. Nothing on this page is medical advice.</p>`,
+      },
+      {
+        heading: "What does embody cost in 2026, and what is the catch?",
+        body: `<p>embody prints a regular price in only one place: its Terms. The homepage shows a sale price with no plan name. Both are below, as read on November 16, 2026.</p>
+<table><thead><tr><th>Plan</th><th>Compounded semaglutide</th><th>Compounded tirzepatide</th><th>Per 12 months (semaglutide / tirzepatide)</th></tr></thead><tbody>
+<tr><td>Monthly (Terms)</td><td>$79/month</td><td>$129/month</td><td>$948 / $1,548</td></tr>
+<tr><td>3-month bundle (Terms)</td><td>$76/month</td><td>$126/month</td><td>$912 / $1,512</td></tr>
+<tr><td>6-month bundle (Terms)</td><td>$73/month</td><td>$123/month</td><td>$876 / $1,476</td></tr>
+<tr><td>12-month bundle (Terms)</td><td>$49/month</td><td>$99/month</td><td>$588 / $1,188</td></tr>
+<tr><td>Homepage card, "flat rate at"</td><td>$49/month</td><td>$99/month</td><td>$588 / $1,188</td></tr>
+</tbody></table>
+<p>Sources: <a href="https://joinem.co/pages/terms-conditions" target="_blank" rel="noopener noreferrer">embody Terms and Conditions</a>, "Program Options and Pricing", last updated April 24, 2026; <a href="https://joinem.co/" target="_blank" rel="noopener noreferrer">joinem.co homepage</a> price cards; both read November 16, 2026. Per-12-month figures are the monthly rate times 12. Compounded medicines are not FDA-approved.</p>
+<p><strong>Catch 1: the plan behind the $49 is not named.</strong> The homepage card says "$49/month" under a banner reading "Pre-Black Friday Sale Promo Applied", with no countdown and no end date. The Terms print $49 and $99 only as the 12-month bundle rate. The sale is $30 a month below the Terms' monthly price for both drugs (38% on semaglutide, 23% on tirzepatide). We could not load embody's checkout to see whether $49 is charged month to month or as a 12-month commitment. Check the plan length on the payment page before you pay.</p>
+<p><strong>Catch 2: bundles are one purchase.</strong> The Terms say that on a 3-, 6- or 12-month plan "you agree to the full commitment period selected" and that refunds "will not be issued for unused portions, except in the case of a Medical Disqualification". The refund policy adds that multi-month plans "are sold as a single, indivisible purchase and are non-refundable in whole and in part".</p>
+<p><strong>Catch 3: the billing interval is not stated.</strong> The homepage FAQ sells "4-, 12-, 24-, or 52-week plans" while the Terms say "Monthly". embody does not say whether a month is a calendar month or four weeks, so we print no annual total beyond the monthly rate times 12.</p>
+<p>What is not a catch: embody says the price "remains the same each month as long as you're on the same medication and treatment plan" and does not rise with dose. The banner wording, "Save $200 instantly" in one version and "Save $250 Every Month" in another on the same day, does not match any pair of prices on the site, so we quote it as banner wording only. For every plan priced against the other providers we track, see <a href="/weight-loss/articles/embody-cost">how much embody costs</a> and the <a href="/weight-loss/cheapest-glp1">cheapest GLP-1 comparison</a>.</p>`,
+      },
+      {
+        heading: "What do embody customers complain about?",
+        body: `<p>We coded every one- and two-star review we hold for embody: 10 reviews (7 one-star, 3 two-star) posted between September 23 and October 25, 2026, captured from the newest-reviews pages of embody's <a href="https://www.trustpilot.com/review/joinem.co" target="_blank" rel="noopener noreferrer">Trustpilot profile</a> on September 24 and October 25, 2026. This is a small sample, not Trustpilot's full low-star set, and one review can count toward more than one theme, so the shares do not add up to 100%. No reviewer is named here.</p>
+<table><thead><tr><th>Complaint theme</th><th>Reviews (of 10)</th><th>Share</th><th>What the reviews describe</th></tr></thead><tbody>
+<tr><td>Hard to reach a person, or answers that loop</td><td>8</td><td>80%</td><td>Unreturned calls after a dosing error; chat that never clears; several calls and emails unanswered; the same scripted answer repeated; different agents saying different things</td></tr>
+<tr><td>Late or missing shipments</td><td>6</td><td>60%</td><td>A prepaid 3-month order not received after about a month; a refill held at the pharmacy while the patient ran out; a second month two weeks late; a box sent to an old address after a new one was given</td></tr>
+<tr><td>Refund refused or disputed charge</td><td>6</td><td>60%</td><td>Refund denied under the no-refund policy with no medication received; refusal to replace or refund a misdelivered box; a charge for something never received; a cancellation mix-up ending in a "balance due"</td></tr>
+<tr><td>Dose or order changed without agreement</td><td>2</td><td>20%</td><td>One shipment at roughly triple the expected dose, which the pharmacy told the patient not to take; one next order at a dose never discussed, shipped before a requested nurse call</td></tr>
+<tr><td>Subscription cancelled or altered by embody without notice</td><td>2</td><td>20%</td><td>A subscription cancelled without notification, delaying the schedule; a subscription cancelled after a complaint about a misdelivery</td></tr>
+<tr><td>Cold-chain failure</td><td>1</td><td>10%</td><td>A batch that arrived warm and had to be sent back</td></tr>
+</tbody></table>
+<p>Source: the 10 one- and two-star reviews stored in our embody review record, posted September 23 to October 25, 2026; coded November 16, 2026.</p>
+<p><strong>How embody responds.</strong> Our text captures did not keep embody's public replies, so we cannot verify its response pattern first-hand. Within our own stored set, 3 of the 15 reviews rated three stars or below say a nurse or account manager eventually called and resolved the problem.</p>
+<p><strong>Read the complaints against the Terms.</strong> Three of the six themes are the policy working as written. The Terms say embody "does not guarantee delivery timelines and is not responsible for delays, interruptions, loss, or performance issues caused by third-party pharmacies or shipping providers". The medical consent page says medication "is considered dispensed and the order completed when it is signed out for shipping, not when it arrives via delivery". The refund policy says damaged or incorrect items are replaced by the pharmacy and "no refund will be issued". A late box, a warm box or a misdelivered box therefore leads to a replacement at best, not money back. How embody's reported delivery times sit against other providers is in our <a href="/weight-loss/glp1-shipping-times">GLP-1 shipping times comparison</a>.</p>
+<p>The dosing-error review describes a shipment that the patient and the pharmacy agreed was far above the expected dose. It is one account, and the pharmacy intercepted it. It matters because embody does not publish its dose steps or vial strength; see the pharmacy section below.</p>`,
+      },
+      {
+        heading: "What do customers praise?",
+        body: `<p>The same stored set holds 96 embody reviews in total: 55 captured on October 25, 2026, 15 on September 24, 9 from September and 17 from August 2026. Most are five-star. The praise themes, counted the same way as the complaints:</p>
+<table><thead><tr><th>Praise theme</th><th>Reviews (of 96)</th><th>What the reviews describe</th></tr></thead><tbody>
+<tr><td>Nurses and providers who listen and explain</td><td>43</td><td>A nurse or provider who took time, answered every question, adjusted the dose when asked and called back when a video link failed</td></tr>
+<tr><td>Support staff, often named, who fixed the problem</td><td>19</td><td>A portal reset, a billing question or a shipment sorted out by a specific team member; chat that reached a person quickly</td></tr>
+<tr><td>Fast cold deliveries and results</td><td>9</td><td>Boxes arriving with the cold packs still frozen; reviewers reporting weight loss</td></tr>
+<tr><td>A price that stays flat</td><td>8</td><td>The flat monthly rate, unchanged at dose increases, as the reason for choosing embody or affording a higher dose</td></tr>
+</tbody></table>
+<p>Source: our stored embody review record, 96 reviews. One review can count toward more than one theme.</p>
+<p>Two more figures for proportion. The newest-reviews page captured on October 25, 2026 held 42 five-star, 2 four-star, 2 three-star, 2 two-star and 7 one-star reviews: 9 of 55 (16%) at one or two stars. That is one page of newest reviews, not the profile's overall distribution, which we have not verified ourselves. On delivery, reviewers in the stored set report "only 2 days" with the cold packs still frozen, "three days", "2-3 business days" and, in one case, 8 days against a quoted 3 to 5. That spread, 2 to 8 days, is the most honest shipping figure we can give; embody itself publishes none.</p>`,
+      },
+      {
+        heading: "How does embody work, and what if you are not approved?",
+        body: `<p>The order of events matters for your money. From embody's own pages, read November 16, 2026:</p>
+<ol>
+<li><strong>You pay first.</strong> "Your membership in the subscription program ... begins at the moment you submit payment", and a healthcare provider is allocated once your intake is submitted (refund policy, August 25, 2026). You must be 18 or over and live in a US state where the service is available; embody does not publish the state list and asks you to email support for it (Terms, April 24, 2026).</li>
+<li><strong>A clinician decides.</strong> OpenLoop Health, "a network of US-licensed doctors", applies exclusionary criteria to your answers, and a clinician "will meet with an individual after checkout to determine if they qualify for a prescription" (homepage footer). If you already take a GLP-1, embody asks for proof of your current prescription and, if appropriate, continues you at your current dose (homepage FAQ).</li>
+<li><strong>A partner pharmacy fills and ships.</strong> embody names four 503A compounding pharmacies and does not say which fills a given order. The order is complete when the pharmacy signs it out for shipping.</li>
+</ol>
+<p><strong>If you are not approved.</strong> This is the only refund embody's policy allows, and it is partial. The refund policy (last updated August 25, 2026) says: "If our healthcare provider determines that you are not clinically eligible for the Subscription Services, your Subscription Service will be canceled and you will be issued a refund for any unused portion of the amount paid for the then-current term." Used portions include "a live or asynchronous consultation that has taken place; a healthcare provider review of your intake, records, and lab results; issued prescriptions; dispensed or shipped medication; or ordered or performed lab services", and "the value of services already rendered will be deducted from your refund". embody does not price those components separately, so the amount cannot be worked out in advance. A "full refund if you are not approved" is not what the policy says.</p>
+<p><strong>If you change your mind.</strong> "All payments for the Subscription Services are final and non-refundable at the time of purchase", for single-month and bundled plans alike. Cancellation requests must arrive "at least 72 hours prior to your next billing date"; inside that window you are charged once more, that charge is non-refundable, and the cancellation takes effect the following cycle. You cancel through the online account, by email to support@joinem.co or by phone at +1 (347) 269-4270. Medication is "non-returnable and non-refundable under all circumstances". The refund policy also says that opening a card dispute "does not alter the non-refundable nature" of the purchase, and the medical consent form asks you to certify that you "will not dispute the payments" with your card company.</p>
+<p>Sources: <a href="https://joinem.co/pages/refund-policy" target="_blank" rel="noopener noreferrer">embody Refund Policy</a> (last updated August 25, 2026), <a href="https://joinem.co/pages/terms-conditions" target="_blank" rel="noopener noreferrer">Terms and Conditions</a> (last updated April 24, 2026) and <a href="https://joinem.co/pages/medical-consent" target="_blank" rel="noopener noreferrer">medical consent</a> (undated), all read November 16, 2026.</p>`,
+      },
+      {
+        heading: "Is the pharmacy legitimate, and what dose will you get?",
+        body: `<p>embody does not make the medicine. Its site says it "does not produce compounded medications" and lists four partner pharmacies: Red Rock Compounding Pharmacy (St. George, Utah), Health Warehouse (Florence, Kentucky), Precision Medicine (Bellmore, New York) and Triad Rx (Daphne, Alabama). embody describes them as "state-licensed 503A compounding pharmacies" that prepare "customized prescriptions". Which one fills your order is not stated.</p>
+<p>What 503A means for you, in the FDA's words: "Compounded drugs are not FDA-approved. This means that FDA does not verify the safety, effectiveness or quality of compounded drugs before they are marketed", and drugs compounded under section 503A are not subject to the manufacturing standards (CGMP) that apply to 503B outsourcing facilities (<a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener noreferrer">FDA, Compounding and the FDA: Questions and Answers</a>, content current as of September 16, 2025, read November 16, 2026). embody's own footer says the medications "are not FDA-approved or evaluated for safety, efficacy, or quality".</p>
+<p><strong>LegitScript.</strong> embody's footer links to a LegitScript checker badge for joinem.co. We could not open LegitScript's site on November 16, 2026, so we do not state a certification status or certificate number here. Treat "LegitScript-certified" as embody's claim until we can confirm it.</p>
+<p><strong>Dose and concentration.</strong> embody does not publish a dose schedule, the milligrams per weekly step or the vial concentration in mg/mL. Its FAQ says only that it offers "multiple dosing options based on your provider's recommendation", and its <a href="https://joinem.co/pages/glp1_medication_safety_information" target="_blank" rel="noopener noreferrer">safety page</a> lists warnings for "Compound Semaglutide (Injection)" and "Compound Tirzepatide (Injection)" without a dose. The one milligram figure on the site, "2.4 mg/week", is a footnote describing the patients behind a results claim, not a dose plan. Your OpenLoop Health prescriber sets the dose. When the vial arrives, the label should state the concentration in mg/mL and your dose in mg, not just "units"; our guide to <a href="/weight-loss/articles/compounded-semaglutide-units-to-mg">reading a compounded vial</a> explains how to check. This section is general information, not medical advice; talk to the prescriber before changing anything about how you inject.</p>`,
+      },
+      {
+        heading: "How does embody compare with the alternatives?",
+        body: `<p>Short pointers; each comparison page carries its own dated prices.</p>
+<ul>
+<li><a href="/weight-loss/altrx-vs-embody">altRx vs embody</a>: altRx adds a brand-name shelf and Buy Now, Pay Later; embody is the lower compounded price with the stricter refund terms above.</li>
+<li><a href="/weight-loss/embody-vs-wellmedr">embody vs wellmedr</a>: two flat-price compounded providers; wellmedr's lowest rate needs a 12-month plan and includes a coach, embody's bundle terms are above.</li>
+<li><a href="/weight-loss/embody-vs-ro">embody vs Ro</a>: Ro fills from its own pharmacy; embody uses four partner 503A pharmacies and does not say which fills your order.</li>
+<li><a href="/weight-loss/articles/embody-alternatives">embody alternatives</a>: every provider we track that answers the same question, sorted by what you want fixed.</li>
+</ul>`,
+      },
+      {
+        heading: "Sources and methodology",
+        body: `<ul>
+<li><a href="https://joinem.co/" target="_blank" rel="noopener noreferrer">joinem.co homepage</a>: price cards, sale banner, FAQ and footer (prescriber, pharmacies, FDA disclaimer). Undated; read November 16, 2026, as served HTML and in a rendered browser session.</li>
+<li><a href="https://joinem.co/pages/terms-conditions" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>, "last updated April 24th, 2026": plan prices, bundle commitment, delivery timelines, eligibility. Read November 16, 2026.</li>
+<li><a href="https://joinem.co/pages/refund-policy" target="_blank" rel="noopener noreferrer">Refund Policy</a>, "last updated August 25, 2026": non-refundable rule, medical disqualification refund, 72-hour cancellation, returns, disputes. Read November 16, 2026.</li>
+<li><a href="https://joinem.co/pages/medical-consent" target="_blank" rel="noopener noreferrer">Medical consent</a> (undated) and <a href="https://joinem.co/pages/glp1_medication_safety_information" target="_blank" rel="noopener noreferrer">GLP-1 medication safety information</a> (undated). Read November 16, 2026.</li>
+<li><a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener noreferrer">FDA, Compounding and the FDA: Questions and Answers</a>, content current as of September 16, 2025. Read November 16, 2026.</li>
+<li><a href="https://www.trustpilot.com/review/joinem.co" target="_blank" rel="noopener noreferrer">Trustpilot profile for joinem.co</a>: 3.8 across 10,689 reviews, verified October 25, 2026 from a screenshot of the claimed profile (earlier 9,604 on October 12 and 8,398 on September 24, 2026). Not re-read on November 16, 2026: the site's bot check blocked our reads, so the figure carries its October date.</li>
+<li>Complaint and praise counts: the 96 embody reviews stored in our review record, transcribed verbatim from the profile's newest-reviews pages on September 24 and October 25, 2026, plus earlier August and September batches. Low-star sample n = 10, September 23 to October 25, 2026, coded into six themes on November 16, 2026; one review can count toward several themes.</li>
+</ul>
+<p><strong>What we could not verify, and left out:</strong> Trustpilot's current score and star distribution; LegitScript's certification status for joinem.co; which plan the $49 and $99 homepage prices apply to at checkout; a sale end date (embody states none); embody's dose steps and vial concentration; embody's reply pattern to negative reviews. Prices on this page are as of November 16, 2026 and are re-checked with each sweep.</p>`,
       },
     ],
   },
