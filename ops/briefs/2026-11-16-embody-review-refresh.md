@@ -1,6 +1,7 @@
 # Brief: refresh `/weight-loss/reviews/embody` for "embody reviews and complaints"
 
-- Date: 2026-11-16 · Author: Cleo · Status: ready · Next: Atlas (verify figures in section 5), then Sloane
+- Date: 2026-11-16 · Author: Cleo · Status: in-review · Next: operator approves the copy, Felix QA
+- PR: https://github.com/yoavgersi-cell/top-weight-loss/pull/629 (Sloane, 2026-11-16). Content lives in the repo (`embody` is code-authoritative in `src/lib/config-store.ts`), so no CMS update is needed. Not done in this PR, per the launch instructions: the `is-embody-legit` title trim, the link from `best-online-weight-loss-programs`, and the "1-2 days" strings in shared files (`products.json` tagline and `product-catalog.ts` carousel line are still visible on the review page).
 - Answers: weekly review action 3 (`ops/briefs/2026-11-16-weekly-review.md`). Refresh, not a new article: the page exists and answers 200 (checked live 2026-11-16).
 - Ahrefs: Free plan, no keyword or SERP data; demand figures are Bing Webmaster (Oct 19 to Nov 15), rounded.
 
