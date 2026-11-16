@@ -113,3 +113,5 @@ media id: 18136733377780556
 time: 2026-11-15 14:53:55 UTC
 link: https://www.instagram.com/p/DfxCpDKjdYo/
 (published via Windsor.ai create_image_post; image URL verified 200 before publishing)
+
+story: media id 18154831816468483, published 2026-11-16 (operator asked for a story the same day; image /social/2026-11-15-first-post-1-story.jpg)
