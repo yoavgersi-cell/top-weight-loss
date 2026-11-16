@@ -2,6 +2,16 @@
 // Renders Treatments Hub social cards (1080x1350 JPEG, 4:5) from a JSON file.
 //
 //   node scripts/social-card.mjs ops/social/<week>.cards.json [outDir]
+//   node scripts/social-card.mjs --story ops/social/<week>.cards.json [outDir]
+//
+// --story renders the same cards as Instagram Stories (1080x1920 JPEG, 9:16):
+// same wordmark, pill, headline, swoosh and body, plus one bottom line
+// "More at treatmentshub.com" in the body style because a story has no
+// caption. Nothing is drawn in the top 250 px or bottom 250 px (Instagram UI
+// overlays); the decorative waves sit inside the bottom zone only. Output name
+// is the card's "out" with "-story" before the extension (2026-11-17-d1.jpg ->
+// 2026-11-17-d1-story.jpg) unless the card sets "storyOut". A card may also set
+// "format": "story" to be rendered as a story without the flag.
 //
 // JSON: an array of cards, or { "outDir": "...", "cards": [...] }.
 //   { "out": "2026-11-17-d1.jpg",
@@ -28,8 +38,34 @@ import sharp from "sharp";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const W = 1080;
-const H = 1350;
 const MARGIN = 72;
+
+// Vertical layout per format. "feed" is the approved 4:5 card and must not
+// change; "story" is the 9:16 version with everything inside y = 250..1670.
+const FORMATS = {
+  feed: {
+    H: 1350,
+    logoTop: 120,
+    pillY: 340,
+    headFirst: 540,
+    bodyMaxBaseline: 1090,
+    footer: null,
+    curve: (W) => `M ${W} 120 C 900 260, 760 300, 700 520 C 650 700, 820 760, ${W} 700 Z`,
+    wave1: (W, H) => `M 0 1180 C 200 1110, 380 1140, 540 1190 C 720 1245, 900 1215, ${W} 1140 L ${W} ${H} L 0 ${H} Z`,
+    wave2: (W, H) => `M 0 1250 C 240 1200, 420 1260, 620 1285 C 820 1310, 960 1280, ${W} 1240 L ${W} ${H} L 0 ${H} Z`,
+  },
+  story: {
+    H: 1920,
+    logoTop: 300,
+    pillY: 520,
+    headFirst: 720,
+    bodyMaxBaseline: 1400,
+    footer: { text: "More at treatmentshub.com", size: 38, baseline: 1590 },
+    curve: (W) => `M ${W} 300 C 900 440, 760 480, 700 700 C 650 880, 820 940, ${W} 880 Z`,
+    wave1: (W, H) => `M 0 1750 C 200 1680, 380 1710, 540 1760 C 720 1815, 900 1785, ${W} 1710 L ${W} ${H} L 0 ${H} Z`,
+    wave2: (W, H) => `M 0 1820 C 240 1770, 420 1830, 620 1855 C 820 1880, 960 1850, ${W} 1810 L ${W} ${H} L 0 ${H} Z`,
+  },
+};
 const MAX_TEXT_W = W - MARGIN * 2; // 936
 const LOGO = path.join(ROOT, "public", "treatmentshub.webp");
 const LOGO_W = 470;
@@ -116,8 +152,11 @@ async function wordmark() {
   return sharp(rgba, { raw: { width, height, channels: 4 } }).png().toBuffer();
 }
 
-async function renderCard(card, outPath, logo) {
+async function renderCard(card, outPath, logo, format = "feed") {
   if (!card.pill || !card.headline || !card.body) throw new Error(`Card ${outPath}: pill, headline and body are required`);
+  const L = FORMATS[format];
+  if (!L) throw new Error(`Card ${outPath}: unknown format "${format}"`);
+  const H = L.H;
 
   const head = await fit(card.headline, { size: 82, minSize: 64, step: 2, weight: 700, maxLines: 3, letterSpacing: -1.5 });
   const body = await fit(card.body, { size: 42, minSize: 34, step: 2, weight: 400, maxLines: 3 });
@@ -127,12 +166,12 @@ async function renderCard(card, outPath, logo) {
   const pillTextW = await textWidth(card.pill, pillSize, 600);
   const pillW = Math.round(pillTextW + 96);
   const pillX = MARGIN;
-  const pillY = 340;
+  const pillY = L.pillY;
   const pillH = 68;
 
   // Headline block: first baseline fixed, line height ~1.22em
   const headLH = Math.round(head.size * 1.22);
-  const headFirst = 540;
+  const headFirst = L.headFirst;
   const headLast = headFirst + headLH * (head.lines.length - 1);
   const lastW = await textWidth(head.lines[head.lines.length - 1], head.size, 700, -1.5);
 
@@ -146,7 +185,11 @@ async function renderCard(card, outPath, logo) {
   const bodyLH = Math.round(body.size * 1.38);
   const bodyFirst = headLast + 150;
   const bodyLast = bodyFirst + bodyLH * (body.lines.length - 1);
-  if (bodyLast > 1090) throw new Error(`Card ${outPath}: body runs into the bottom wave (last baseline ${bodyLast})`);
+  if (bodyLast > L.bodyMaxBaseline) throw new Error(`Card ${outPath}: body runs past the ${format} layout (last baseline ${bodyLast} > ${L.bodyMaxBaseline})`);
+
+  const footer = L.footer
+    ? `<text x="${MARGIN}" y="${L.footer.baseline}" font-family="${FONT}" font-weight="400" font-size="${L.footer.size}" fill="${C.grey}">${esc(L.footer.text)}</text>`
+    : "";
 
   const svg = `
 <svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
@@ -162,9 +205,9 @@ async function renderCard(card, outPath, logo) {
     </linearGradient>
   </defs>
   <rect width="${W}" height="${H}" fill="url(#bg)"/>
-  <path d="M ${W} 120 C 900 260, 760 300, 700 520 C 650 700, 820 760, ${W} 700 Z" fill="#dbe9fb" opacity="0.7"/>
-  <path d="M 0 1180 C 200 1110, 380 1140, 540 1190 C 720 1245, 900 1215, ${W} 1140 L ${W} ${H} L 0 ${H} Z" fill="url(#wave)" opacity="0.85"/>
-  <path d="M 0 1250 C 240 1200, 420 1260, 620 1285 C 820 1310, 960 1280, ${W} 1240 L ${W} ${H} L 0 ${H} Z" fill="#9fc1f1" opacity="0.6"/>
+  <path d="${L.curve(W)}" fill="#dbe9fb" opacity="0.7"/>
+  <path d="${L.wave1(W, H)}" fill="url(#wave)" opacity="0.85"/>
+  <path d="${L.wave2(W, H)}" fill="#9fc1f1" opacity="0.6"/>
 
   <rect x="${pillX}" y="${pillY}" rx="34" ry="34" width="${pillW}" height="${pillH}" fill="${C.pillBg}"/>
   <text x="${pillX + pillW / 2}" y="${pillY + 46}" text-anchor="middle" font-family="${FONT}" font-weight="600" font-size="${pillSize}" fill="${C.pillFg}">${esc(card.pill)}</text>
@@ -177,13 +220,14 @@ async function renderCard(card, outPath, logo) {
   <g font-family="${FONT}" font-weight="400" font-size="${body.size}" fill="${C.grey}">
     ${body.lines.map((l, i) => `<text x="${MARGIN}" y="${bodyFirst + bodyLH * i}">${esc(l)}</text>`).join("\n    ")}
   </g>
+  ${footer}
 </svg>`;
 
   await fs.mkdir(path.dirname(outPath), { recursive: true });
   await sharp({ create: { width: W, height: H, channels: 3, background: "#eef4fc" } })
     .composite([
       { input: Buffer.from(svg), top: 0, left: 0 },
-      { input: logo, top: 120, left: MARGIN },
+      { input: logo, top: L.logoTop, left: MARGIN },
     ])
     .jpeg({ quality: 88, mozjpeg: true })
     .toFile(outPath);
@@ -193,10 +237,17 @@ async function renderCard(card, outPath, logo) {
   return { out: outPath, width: meta.width, height: meta.height, bytes, headSize: head.size, headLines: head.lines.length, bodySize: body.size, bodyLines: body.lines.length };
 }
 
+function storyName(out) {
+  const ext = path.extname(out);
+  return `${out.slice(0, out.length - ext.length)}-story${ext || ".jpg"}`;
+}
+
 async function main() {
-  const [, , jsonArg, outDirArg] = process.argv;
+  const args = process.argv.slice(2);
+  const storyFlag = args.includes("--story");
+  const [jsonArg, outDirArg] = args.filter((a) => a !== "--story");
   if (!jsonArg) {
-    console.error("usage: node scripts/social-card.mjs <cards.json> [outDir]");
+    console.error("usage: node scripts/social-card.mjs [--story] <cards.json> [outDir]");
     process.exit(2);
   }
   const jsonPath = path.resolve(jsonArg);
@@ -207,8 +258,10 @@ async function main() {
 
   const logo = await wordmark();
   for (const card of cards) {
-    const outPath = path.isAbsolute(card.out) ? card.out : path.join(outDir, card.out);
-    const r = await renderCard(card, outPath, logo);
+    const format = storyFlag ? "story" : card.format ?? "feed";
+    const name = format === "story" ? card.storyOut ?? storyName(card.out) : card.out;
+    const outPath = path.isAbsolute(name) ? name : path.join(outDir, name);
+    const r = await renderCard(card, outPath, logo, format);
     console.log(`${path.relative(ROOT, r.out)}  ${r.width}x${r.height}  ${Math.round(r.bytes / 1024)} KB  headline ${r.headLines}L@${r.headSize}px  body ${r.bodyLines}L@${r.bodySize}px`);
   }
 }
