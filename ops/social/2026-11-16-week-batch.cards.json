@@ -1,0 +1,47 @@
+{
+  "outDir": "public/social",
+  "cards": [
+    {
+      "out": "2026-11-17-d1.jpg",
+      "pill": "Our policy",
+      "headline": "A review date is the day it happened. Never earlier.",
+      "body": "Pages that have not been reviewed show the reviewer as staff with no date. We do not backfill dates."
+    },
+    {
+      "out": "2026-11-18-d2.jpg",
+      "pill": "How we work",
+      "headline": "If we cannot check it, it is not on the site.",
+      "body": "The counts on our About page are computed from the live site each time it renders, so they cannot drift."
+    },
+    {
+      "out": "2026-11-19-d3.jpg",
+      "pill": "Price tracking",
+      "headline": "A price change is logged only after it is verified.",
+      "body": "One entry per change: what the listing said before, what it says now, the date and the source."
+    },
+    {
+      "out": "2026-11-20-d4.jpg",
+      "pill": "How we rank",
+      "headline": "Six weighted factors. The same rubric for every provider.",
+      "body": "Medical credibility carries the most weight at 25%. Pricing and value is 20%. No invented ratings, ever."
+    },
+    {
+      "out": "2026-11-21-d5.jpg",
+      "pill": "Tool",
+      "headline": "Published price, times the months you choose.",
+      "body": "The cost calculator does not estimate, average or add anything. Regular prices sit in their own column."
+    },
+    {
+      "out": "2026-11-22-d6.jpg",
+      "pill": "Reading a comparison",
+      "headline": "Read the table as a map, not a verdict.",
+      "body": "Six variables move the real cost. Our comparison page lists all six, dated and linked. No scores, no ranking."
+    },
+    {
+      "out": "2026-11-23-d7.jpg",
+      "pill": "Checklist",
+      "headline": "Three things to verify before you pay any provider.",
+      "body": "Who reviews and approves your treatment. Which pharmacy fills it. What you will actually pay after the intro price."
+    }
+  ]
+}
