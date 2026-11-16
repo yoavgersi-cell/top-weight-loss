@@ -486,8 +486,8 @@ const defaultReviews: ReviewData[] = [
     // (ops/briefs/2026-11-16-embody-review-refresh.md). Every figure is from
     // ops/research/embody-review-refresh.md: embody's homepage, Terms (Apr 24,
     // 2026), refund policy (Aug 25, 2026) and medical consent page, all read
-    // Nov 16, 2026; the FDA compounding Q&A (current 09/16/2025); the stored
-    // Trustpilot set (3.8 across 10,689, verified Oct 25, 2026). The "1-2
+    // Nov 16, 2026; the FDA compounding Q&A (current 09/16/2025). Review-platform
+    // figures and theme counts were removed on Nov 16, 2026. The "1-2
     // days" shipping claim was dropped: no page on joinem.co states a day
     // count and the Terms do not guarantee delivery timelines.
     updatedAt: "2026-11-16",

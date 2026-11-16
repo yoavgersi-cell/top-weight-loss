@@ -293,50 +293,6 @@ const FAQS: { question: string; answer: string }[] = [
   },
 ];
 
-// Parse the stored "Sep 21, 2026" review dates so the evidence tiles can say
-// how recent the captured reviews are. Undated reviews are simply skipped.
-function latestReviewDate(reviews: TrustpilotReview[]): string | null {
-  let best: Date | null = null;
-  let label: string | null = null;
-  for (const r of reviews) {
-    if (!r.date) continue;
-    const d = new Date(r.date);
-    if (isNaN(d.getTime())) continue;
-    if (!best || d > best) {
-      best = d;
-      label = r.date;
-    }
-  }
-  return label;
-}
-
-function reviewTime(r: TrustpilotReview): number {
-  if (!r.date) return 0;
-  const t = new Date(r.date).getTime();
-  return isNaN(t) ? 0 : t;
-}
-
-// The cross-provider carousel's rule, applied identically to every provider:
-// the most recent 4- or 5-star review we captured and the most recent 3-star
-// or lower. If a provider has no low-star review on record, its second most
-// recent review stands in, so every provider shows two cards.
-function pickMix(reviews: TrustpilotReview[]): TrustpilotReview[] {
-  const sorted = [...reviews].sort((a, b) => reviewTime(b) - reviewTime(a));
-  const high = sorted.find((r) => r.rating >= 4);
-  const low = sorted.find((r) => r.rating <= 3);
-  const picks = [high, low].filter((r): r is TrustpilotReview => !!r);
-  if (picks.length < 2) {
-    const next = sorted.find((r) => !picks.includes(r));
-    if (next) picks.push(next);
-  }
-  return picks;
-}
-
-function starMix(reviews: TrustpilotReview[]): string {
-  const counts = [5, 4, 3, 2, 1].map((s) => [s, reviews.filter((r) => r.rating === s).length] as const).filter(([, n]) => n > 0);
-  return counts.map(([s, n]) => `${n} ${s}-star`).join(", ");
-}
-
 export default async function HowToChooseGlp1ProviderPage() {
   const config = await getConfig("weight-loss");
   const priceById = new Map(PRICE_INDEX.map((r) => [r.providerId, r]));
@@ -348,15 +304,6 @@ export default async function HowToChooseGlp1ProviderPage() {
   const rowById = new Map(rows.map((r) => [r.id, r]));
   const redditProviders = rows.map((r) => ({ id: r.provider!.id, name: r.provider!.name })).filter((p) => REDDIT_COMMUNITY_FEEDBACK[p.id]);
   const explore = rankedCardItems(config, { providerIds: Object.keys(EXPLORE), order: "ranking" });
-  const mixedReviews: MixedReviewItem[] = rows
-    .flatMap((r) => {
-      const reviews = r.provider!.trustpilotReviews ?? [];
-      return pickMix(reviews).map((review) => ({
-        review,
-        provider: { name: r.provider!.name, href: `/weight-loss/reviews/${r.provider!.id}`, total: reviews.length },
-      }));
-    })
-    .sort((a, b) => reviewTime(b.review) - reviewTime(a.review));
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -406,7 +353,7 @@ export default async function HowToChooseGlp1ProviderPage() {
             Every telehealth site looks the same from the outside. This guide is how to tell how involved a
             licensed clinician actually is, which pharmacy fills the vial, and what the price really is at the
             dose you will end up on. Ten online GLP-1 providers checked against the same list, with verified
-            prices, Trustpilot records, and what reviewers and Reddit patients report about each.
+            prices and what Reddit patients report about each.
           </p>
           <LastUpdated date={UPDATED} className="mt-4" />
           <MedicalReviewBar path="/weight-loss/how-to-choose-a-glp1-provider" className="mt-4 max-w-[760px]" />
@@ -467,7 +414,7 @@ export default async function HowToChooseGlp1ProviderPage() {
               ["Who reviews the medical intake?", "A named role - physician, physician associate, nurse practitioner - stated on the how-it-works page, and an intake that asks about thyroid cancer or MEN 2 history, pancreatitis, pregnancy plans and current medications."],
               ["Are they appropriately licensed?", "Licensed in your state. HealthRx states an independent US-licensed clinician in your state; others describe licensed providers without the state detail, which is worth asking about."],
               ["Can they decline treatment?", "Look for \"if appropriate\" and refund-if-not-approved language. embody refunds in full when a provider does not approve treatment; Medvi states it declines patients for whom treatment is not appropriate."],
-              ["Can you reach a clinician after approval?", "Messaging, check-ins or video: TrimRx advertises unlimited check-ins, Medvi describes monitoring visits, HealthRx describes care-team check-ins. Ro reviewers report messaging-only support with 2-3 day replies."],
+              ["Can you reach a clinician after approval?", "Messaging, check-ins or video: TrimRx advertises unlimited check-ins, Medvi describes monitoring visits, HealthRx describes care-team check-ins. Ro's follow-up is messaging-based."],
               ["How are dose changes and clinical questions handled?", "Ask how a dose increase is requested and who approves it. Medvi builds adjustments into monitoring; embody reviewers describe dose-increase appointments; on Reddit, an embody user's dose was raised at a check-in three weeks in."],
             ].map(([h, b]) => (
               <div key={h} className="rounded-xl border border-gray-200 bg-white p-4">
@@ -528,7 +475,7 @@ export default async function HowToChooseGlp1ProviderPage() {
             <table className="w-full min-w-[900px] text-left text-[13px]">
               <thead>
                 <tr className="border-b border-gray-200 bg-gray-50">
-                  {["Provider", "Clinician gate", "Visit type", "Pharmacy", "Semaglutide / mo", "Dose pricing", "Trustpilot"].map((h) => (
+                  {["Provider", "Clinician gate", "Visit type", "Pharmacy", "Semaglutide / mo", "Dose pricing"].map((h) => (
                     <th key={h} className="border-r border-gray-200 px-3 py-3 align-bottom font-bold text-[#191919] last:border-r-0">{h}</th>
                   ))}
                 </tr>
@@ -559,22 +506,11 @@ export default async function HowToChooseGlp1ProviderPage() {
                       )}
                     </td>
                     <td className={`${cell} text-gray-700`}>{r.dosePricing}</td>
-                    <td className={`${cell} text-gray-700`}>
-                      {r.provider!.trustpilotRating && r.provider!.trustpilotReviewCount ? (
-                        <>
-                          <span className="font-semibold text-[#191919]">{r.provider!.trustpilotRating}</span>
-                          <span className="block text-[12px] text-gray-500">{r.provider!.trustpilotReviewCount} reviews</span>
-                        </>
-                      ) : (
-                        <span className="text-gray-400">Not verified</span>
-                      )}
-                    </td>
                   </tr>
                   {/* Review themes - full width under the row. Sources are
-                      named inside each line: aggregate, individual Trustpilot
-                      reviews, Reddit threads, provider claims. */}
+                      named inside each line: Reddit threads, provider claims. */}
                   <tr className={i % 2 === 1 ? "bg-gray-50/50" : ""}>
-                    <td colSpan={7} className="border-t border-dashed border-gray-200 px-3 py-3 text-[12.5px] leading-relaxed text-gray-600">
+                    <td colSpan={6} className="border-t border-dashed border-gray-200 px-3 py-3 text-[12.5px] leading-relaxed text-gray-600">
                       {r.likes && (
                         <p className={r.complaints ? "mb-1.5" : ""}>
                           <span className="font-semibold text-emerald-700">What reviewers like: </span>
@@ -682,7 +618,7 @@ export default async function HowToChooseGlp1ProviderPage() {
             <h2 className="text-[24px] font-bold text-[#191919]">Key patterns we found</h2>
           </div>
           <p className="mb-4 text-[14px] text-gray-500">
-            Five findings drawn only from the table above and the price index.
+            Four findings drawn only from the table above and the price index.
           </p>
           <ol className="space-y-3">
             {PATTERNS.map((p, i) => (
@@ -758,14 +694,6 @@ export default async function HowToChooseGlp1ProviderPage() {
                         ) : (
                           "Not in price index"
                         )}
-                      </dd>
-                    </div>
-                    <div>
-                      <dt className="font-semibold text-gray-500">Trustpilot</dt>
-                      <dd className="text-[#191919]">
-                        {provider.trustpilotRating && provider.trustpilotReviewCount
-                          ? `${provider.trustpilotRating} across ${provider.trustpilotReviewCount} reviews`
-                          : "No public aggregate verified"}
                       </dd>
                     </div>
                     <div className="sm:col-span-2">
@@ -849,11 +777,6 @@ export default async function HowToChooseGlp1ProviderPage() {
               information, not an independent audit of medical quality.
             </li>
             <li>
-              <span className="font-semibold text-gray-700">Trustpilot</span> figures are the public aggregate and review count
-              at the time we captured the profile; the individual reviews we quote were captured from the same profile,
-              positive and negative alike. A Trustpilot score reflects customer experience, not medical safety.
-            </li>
-            <li>
               <span className="font-semibold text-gray-700">Reddit</span> material is limited to public threads we verified, read for
               recurring themes; single posts are anecdotes.
             </li>
@@ -861,7 +784,7 @@ export default async function HowToChooseGlp1ProviderPage() {
               <span className="font-semibold text-gray-700">TreatmentsHub Scores</span> are not shown on this page. On our ranking and
               review pages they are editorial comparison scores across six weighted factors - medical credibility, medication
               access, pricing and value, patient experience, clinical support and flexibility - and are separate from
-              Trustpilot ratings, which are customer reviews. See{" "}
+              customer reviews. See{" "}
               <Link href="/weight-loss/how-we-rank" className={ext}>how we score providers</Link>.
             </li>
             <li>
