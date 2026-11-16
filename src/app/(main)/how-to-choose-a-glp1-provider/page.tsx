@@ -197,7 +197,7 @@ const ROWS: Row[] = [
     visit: "Online intake; ships within 2 days of approval",
     pharmacy: "Compounded plans plus brand-name Wegovy; pharmacy not named in our research",
     dosePricing: "Same price at any dose; 12-, 6- and 3-month plans or monthly",
-    note: "No Reddit threads verified yet. The structural trade-off is the plan length: the lowest rate sits on the 12-month plan.",
+    note: "No Reddit threads verified yet.",
   },
   {
     id: "directmeds",
@@ -539,75 +539,6 @@ export default async function HowToChooseGlp1ProviderPage() {
           <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">
             Individual reviews are single accounts, not evidence that every patient has the same experience. Where a
             line quotes a reviewer&rsquo;s claim we have not verified, it says so.
-          </p>
-        </section>
-
-        {/* Trustpilot evidence */}
-        <section className="mb-12">
-          <h2 className="mb-2 text-[24px] font-bold text-[#191919]">Public review evidence, provider by provider</h2>
-          <p className="mb-4 text-[14px] text-gray-500">
-            The Trustpilot aggregate and review count for each provider where we verified the profile, and the mix of
-            individual reviews we captured from it - positive, middling and negative alike. Trustpilot reflects customer
-            experience; it does not verify the medical quality of a provider. The full captured reviews are on each
-            provider&rsquo;s review page.
-          </p>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {rows.map((r) => {
-              const p = r.provider!;
-              const reviews = p.trustpilotReviews ?? [];
-              const latest = latestReviewDate(reviews);
-              const hasAggregate = !!(p.trustpilotRating && p.trustpilotReviewCount);
-              return (
-                <div key={r.id} className="rounded-xl border border-gray-200 bg-white p-4">
-                  <div className="mb-2 flex items-center justify-between gap-3">
-                    <Link href={`/weight-loss/reviews/${p.id}`} className="text-[15px] font-bold text-[#191919] hover:underline">{p.name}</Link>
-                    {!SHOW_TRUSTPILOT_WIDGETS ? null : hasAggregate ? (
-                      <TrustpilotRating rating={p.trustpilotRating!} reviewCount={p.trustpilotReviewCount} starSize={15} />
-                    ) : (
-                      <span className="text-[12px] text-gray-400">No public aggregate verified</span>
-                    )}
-                  </div>
-                  <p className="text-[12.5px] leading-relaxed text-gray-600">
-                    {reviews.length > 0 ? (
-                      <>
-                        <span className="font-semibold text-[#191919]">{reviews.length} reviews captured:</span> {starMix(reviews)}
-                        {latest && <span className="text-gray-400">, most recent dated {latest}</span>}.
-                      </>
-                    ) : (
-                      <span className="text-gray-400">No individual reviews captured yet.</span>
-                    )}
-                  </p>
-                  <p className="mt-2 flex flex-wrap gap-x-4 text-[12.5px] font-semibold">
-                    <Link href={`/weight-loss/reviews/${p.id}`} className="text-[#0C4B75] hover:underline">
-                      {reviews.length > 0 ? "Read the captured reviews" : "Read our review"}
-                    </Link>
-                    <ProviderCta
-                      href={p.affiliateUrl}
-                      providerName={p.name}
-                      providerSlug={p.id}
-                      pageType="listing"
-                      sourceFlow="main_comparison"
-                      className="inline-flex items-center gap-1 text-[#0C4B75] hover:underline"
-                    >
-                      Visit site
-                      <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
-                    </ProviderCta>
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-          <div className="mt-4">
-            <MixedTrustpilotCarousel
-              items={mixedReviews}
-              title="The reviews themselves, across providers"
-              subtitle="Two per provider by a fixed rule: the most recent 4- or 5-star review we captured and the most recent 3-star or lower. Newest first, reviewer names shortened."
-            />
-          </div>
-          <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">
-            Aggregates for ro, embody, TrimRx, SHED, welludr, Medvi, Sprout and DirectMeds were re-checked against their
-            public Trustpilot profiles in September 2026. Where a provider publishes no aggregate, we say so rather than
-            estimate one.
           </p>
         </section>
 

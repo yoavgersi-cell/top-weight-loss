@@ -578,7 +578,7 @@ const defaultReviews: ReviewData[] = [
     ],
     sections: [
       {
-        heading: "Is embody for real, and what do the complaints say?",
+        heading: "Is embody for real?",
         body: `<div class="qa"><strong>The short answer</strong> Yes. embody is a real US telehealth company selling compounded semaglutide and tirzepatide, neither FDA-approved, at a flat $49 and $99 a month on its homepage as of November 16, 2026.</div>
 <p>The company is Modern Metabolic Medicine, Inc., doing business as embody, at 1811 Silverside Road, Wilmington, Delaware. This page is the review: what embody charges and what its own refund policy says if you are not approved or want out. The legitimacy question on its own (company, prescribers, pharmacies, certification) is answered in <a href="/weight-loss/articles/is-embody-legit">Is embody legit or a scam?</a>. Nothing on this page is medical advice.</p>`,
       },

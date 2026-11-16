@@ -81,7 +81,7 @@ export const HRT_TESTOSTERONE_FOR_WOMEN: ArticleData = {
     {
       heading: "How online menopause clinics handle testosterone, and what their customers say",
       body: `<p>The online HRT providers we review differ on whether they prescribe testosterone at all and, where they do, on how carefully. Some offer it only after a consultation with a menopause-trained clinician, with a baseline level and a documented desire complaint; some list it as a product alongside estrogen and progesterone; some do not prescribe it. The careful pattern looks like the guideline: a question about desire and distress rather than a menu, a blood test before and after, and a review date. The careless pattern is testosterone offered for energy or "optimisation", a pellet or injection, and no level check. Our <a href="/hrt">HRT provider ranking</a> and the reviews of <a href="/hrt/reviews/winona">Winona</a>, <a href="/hrt/reviews/midi">Midi Health</a> and <a href="/hrt/reviews/gala">Gala</a> record what each offers and how; <a href="/hrt/articles/how-to-get-hrt-online">how to get HRT online</a> sets out the process.</p>
-<p>In the customers' reviews we capture for those providers, testosterone is rarely the subject; women write about estrogen symptoms, the speed of a first prescription, the quality of the clinician conversation and the billing. Where it appears, it is usually as part of a plan a clinician proposed after discussing libido, which is the right context. The clearest signal in the reviews is about the clinician: the providers whose reviewers describe a long, specific first consultation are the ones where a testosterone prescription is likely to have been reasoned rather than sold.</p>`,
+`,
     },
     {
       heading: "Who should not take testosterone?",

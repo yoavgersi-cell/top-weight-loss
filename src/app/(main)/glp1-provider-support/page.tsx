@@ -8,7 +8,7 @@ import { GuideCluster } from "@/components/guide-cluster";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { TrustDisclosure } from "@/components/medical-sources";
 import { ProviderCta } from "@/components/provider-cta";
-import { TrustpilotWordmark, tpStarColor } from "@/components/trustpilot-rating";
+import { tpStarColor } from "@/components/trustpilot-rating";
 import { pageReviewSchema } from "@/data/reviewers";
 import { getConfig } from "@/lib/config-store";
 import type { Provider, TrustpilotReview } from "@/lib/config";
@@ -16,8 +16,9 @@ import type { Provider, TrustpilotReview } from "@/lib/config";
 export const revalidate = 60;
 
 // ───── GLP-1 provider customer support, compared ─────
-// Every figure on this page is computed at render time from the Trustpilot
-// reviews we have captured verbatim for each weight-loss provider. The
+// Every figure on this page is computed at render time from the customer
+// reviews stored for each weight-loss provider (empty since Nov 16, 2026:
+// third-party review data was removed, see ops/trustpilot-removal-rules.md). The
 // classification is a fixed keyword rule (stated in the methodology section),
 // applied identically to every provider; nothing is weighted, sampled or
 // hand-picked. This is what reviewers REPORT about support, shipping and
@@ -109,8 +110,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const config = await getConfig("weight-loss");
   const rows = buildRows(config.providers);
   const total = rows.reduce((s, r) => s + r.n, 0);
-  const title = `GLP-1 Provider Support: ${total} Trustpilot Reviews (2026)`;
-  const description = `Which online GLP-1 providers get praised or criticised for support, shipping and billing, from 232 Trustpilot reviews captured verbatim across 11 providers.`;
+  const title = `GLP-1 Provider Customer Support Compared (2026)`;
+  const description = `Which online GLP-1 providers get praised or criticised for support, shipping and billing, from the customer reviews we captured verbatim, counted with one fixed rule.`;
   return {
     title,
     description,
@@ -134,7 +135,7 @@ export default async function ProviderSupportPage() {
   const totalShipping = rows.reduce((s, r) => s + r.shipping.n, 0);
   const totalShippingNeg = rows.reduce((s, r) => s + (r.shipping.n - r.shipping.pos), 0);
 
-  const title = `GLP-1 Provider Customer Support Compared: What ${total} Trustpilot Reviews Say`;
+  const title = `GLP-1 Provider Customer Support Compared: What ${total} Customer Reviews Say`;
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -172,7 +173,7 @@ export default async function ProviderSupportPage() {
           <Breadcrumbs items={[{ label: "Home", href: "/weight-loss" }, { label: "Provider Support Compared" }]} />
           <h1 className="max-w-[820px] text-[27px] font-extrabold leading-[1.15] text-[#191919] sm:text-[36px]">{title}</h1>
           <p className="mt-3 max-w-[720px] text-[16px] leading-relaxed text-gray-500">
-            Nobody publishes their support response time, so we counted what reviewers report. Every Trustpilot review we
+            Nobody publishes their support response time, so we counted what reviewers report. Every customer review we
             have captured for {rows.length} online GLP-1 providers{from && to ? ` (dated ${fmt(from)} to ${fmt(to)})` : ""} was
             run through the same keyword rule for support, shipping and billing. The counts, the shares and every
             reviewer-stated time span are below, quoted as written.
@@ -228,7 +229,6 @@ export default async function ProviderSupportPage() {
                   <th className={cell}>1-2★</th>
                   <th className={cell}>Mention shipping (4-5★)</th>
                   <th className={cell}>Mention billing (4-5★)</th>
-                  <th className={cell}>Public Trustpilot</th>
                   <th className={cell} />
                 </tr>
               </thead>
@@ -251,17 +251,6 @@ export default async function ProviderSupportPage() {
                     <td className={cell}>{r.shipping.n} ({share(r.shipping)})</td>
                     <td className={cell}>{r.billing.n} ({share(r.billing)})</td>
                     <td className={cell}>
-                      {r.provider.trustpilotRating ? (
-                        <span className="inline-flex items-center gap-1 whitespace-nowrap">
-                          <span className="inline-block h-3 w-3 rounded-sm" style={{ backgroundColor: tpStarColor(parseFloat(r.provider.trustpilotRating)) }} />
-                          <strong>{r.provider.trustpilotRating}</strong>
-                          {r.provider.trustpilotReviewCount && <span className="text-gray-400">({r.provider.trustpilotReviewCount})</span>}
-                        </span>
-                      ) : (
-                        <span className="text-gray-400">Not published</span>
-                      )}
-                    </td>
-                    <td className={cell}>
                       <ProviderCta
                         href={r.provider.affiliateUrl}
                         providerName={r.provider.name}
@@ -278,11 +267,6 @@ export default async function ProviderSupportPage() {
               </tbody>
             </table>
           </div>
-          <p className="mt-3 text-[12.5px] leading-relaxed text-gray-500">
-            Public Trustpilot figures are each provider&rsquo;s profile aggregate on the date we captured it; &ldquo;Not published&rdquo; means the
-            provider shows no aggregate. A Trustpilot rating reflects customer experience, not medical quality. Source:{" "}
-            <TrustpilotWordmark starClass="h-3.5 w-3.5" textClass="text-[12.5px]" />
-          </p>
         </section>
 
         {/* Timing quotes */}
@@ -330,8 +314,8 @@ export default async function ProviderSupportPage() {
           <h2 className="mb-3 text-[20px] font-bold text-[#191919]">Methodology and limits</h2>
           <ul className="list-disc space-y-2 pl-5 text-[15px] leading-[1.7] text-gray-600">
             <li>
-              <strong className="text-[#191919]">Source.</strong> The Trustpilot reviews we have captured verbatim for each weight-loss
-              provider, from the provider&rsquo;s public profile, with reviewer names shortened to a first name and initial. Only providers
+              <strong className="text-[#191919]">Source.</strong> The customer reviews we have captured verbatim for each weight-loss
+              provider, with reviewer names shortened to a first name and initial. Only providers
               with at least {MIN_REVIEWS} captured reviews appear; {total} reviews across {rows.length} providers today.
             </li>
             <li>
