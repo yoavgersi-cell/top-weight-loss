@@ -1,0 +1,12 @@
+{
+  "outDir": "public/social",
+  "cards": [
+    {
+      "out": "2026-11-15-first-post-1.jpg",
+      "storyOut": "2026-11-15-first-post-1-story.jpg",
+      "pill": "Good to know",
+      "headline": "A price only means something with its condition attached.",
+      "body": "Headline rate, regular rate, plan condition, shipping terms. We record all four before a number is published."
+    }
+  ]
+}
