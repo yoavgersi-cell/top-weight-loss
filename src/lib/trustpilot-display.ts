@@ -13,7 +13,9 @@ export const SHOW_TRUSTPILOT_WIDGETS = false;
 // Per-page exception (operator request, Nov 12, 2026): the full Trustpilot
 // section (summary with star bars + review carousel) on this one article
 // only. Everything else on the site stays under the flag above.
-export const TRUSTPILOT_WIDGET_ARTICLE_SLUGS: ReadonlySet<string> = new Set(["is-wellmedr-legit"]);
+// Nov 16, 2026 (operator): no exceptions. The set stays so a page can be
+// allowed again with one slug, but it is empty.
+export const TRUSTPILOT_WIDGET_ARTICLE_SLUGS: ReadonlySet<string> = new Set<string>([]);
 
 // Card trust pills ("4.4 across 1,050 Trustpilot reviews") are stored as
 // plain text in the review data, so the flag above didn't reach them. They
