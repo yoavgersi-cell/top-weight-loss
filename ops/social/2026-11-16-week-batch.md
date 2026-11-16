@@ -1,5 +1,7 @@
 2026-11-16 · Author: Rio · Status: approved (operator, 2026-11-16, all seven) · Request: one week of daily Instagram single-image posts for @treatmentshub, Mon 2026-11-17 to Sun 2026-11-23, 14:00 UTC each, same format as the approved first post (ops/social/2026-11-15-first-post.md); seven different live pages, one checkable brand/method statement each; informative, calm, not clickbait.
 
+Stories: approved alongside the feed posts; published via create_story with the image URL right after the feed post each day. Story images are 1080x1920 JPEG (9:16), same text and visual system as the feed card plus one bottom line "More at treatmentshub.com" (a story carries no caption); nothing in the top or bottom 250 px. Rendered with `node scripts/social-card.mjs --story ops/social/2026-11-16-week-batch.cards.json`; public URL pattern https://www.treatmentshub.com/social/<file>-story.jpg (must return 200 before publishing).
+
 Format for all seven: Instagram feed, single image, 1080x1350 JPEG (4:5), account @treatmentshub, connector Windsor.ai `instagram` / `create_image_post`. Nothing published or scheduled; no connector write action called. Images rendered with `scripts/social-card.mjs` from `ops/social/2026-11-16-week-batch.cards.json` (one command re-renders the week). Public URL pattern once deployed: https://www.treatmentshub.com/social/<file> (must return 200 before publishing; files are in the working tree only, not committed). Pages read live on 2026-11-16 (curl, 200 at the canonical URL).
 
 Shared compliance for the week: no Trustpilot anywhere in captions or images (several source pages discuss it; none carried over) · no testimonials · no before/after, no weight numbers · no provider named in any caption · no price figures quoted, so no "as of" dates needed · emoji only on the link line · 5 hashtags, #TreatmentsHub first · every caption under 700 characters.
@@ -9,6 +11,7 @@ Shared compliance for the week: no Trustpilot anywhere in captions or images (se
 ## D1 · Mon 2026-11-17 · 14:00 UTC
 Source page: https://www.treatmentshub.com/medical-review-policy (Last updated October 22, 2026)
 Image: /home/user/top-weight-loss/public/social/2026-11-17-d1.jpg · pill "Our policy"
+Story: /home/user/top-weight-loss/public/social/2026-11-17-d1-story.jpg (1080x1920, same text, bottom line "More at treatmentshub.com")
 Alt text: Text graphic from Treatments Hub: A review date is the day it happened. Never earlier. Pages that have not been reviewed show the reviewer as staff with no date. We do not backfill dates.
 ```
 A review date is the day the review happened. Never earlier.
@@ -30,6 +33,7 @@ Compliance: facts traced ✓ · compounded wording n/a ✓ · no testimonials/Tr
 ## D2 · Tue 2026-11-18 · 14:00 UTC
 Source page: https://www.treatmentshub.com/weight-loss/about (no "last updated" line on the page; counts are computed at render time)
 Image: /home/user/top-weight-loss/public/social/2026-11-18-d2.jpg · pill "How we work"
+Story: /home/user/top-weight-loss/public/social/2026-11-18-d2-story.jpg (1080x1920, same text, bottom line "More at treatmentshub.com")
 Alt text: Text graphic from Treatments Hub: If we cannot check it, it is not on the site. The counts on our About page are computed from the live site each time it renders, so they cannot drift.
 ```
 If we cannot check it, it does not appear on the site.
@@ -51,6 +55,7 @@ Compliance: facts traced ✓ · compounded wording n/a ✓ · no testimonials/Tr
 ## D3 · Wed 2026-11-19 · 14:00 UTC
 Source page: https://www.treatmentshub.com/weight-loss/glp1-price-changes (Last updated Nov 11, 2026)
 Image: /home/user/top-weight-loss/public/social/2026-11-19-d3.jpg · pill "Price tracking"
+Story: /home/user/top-weight-loss/public/social/2026-11-19-d3-story.jpg (1080x1920, same text, bottom line "More at treatmentshub.com")
 Alt text: Text graphic from Treatments Hub: A price change is logged only after it is verified. One entry per change: what the listing said before, what it says now, the date and the source.
 ```
 A price change is logged only after it is verified.
@@ -72,6 +77,7 @@ Compliance: facts traced ✓ · compounded wording: no medicine or product named
 ## D4 · Thu 2026-11-20 · 14:00 UTC
 Source page: https://www.treatmentshub.com/weight-loss/how-we-rank (Last updated Sep 1, 2026; reviewed Oct 30, 2026) — section "The 6 factors we score", a different section from the 2026-11-15 post
 Image: /home/user/top-weight-loss/public/social/2026-11-20-d4.jpg · pill "How we rank"
+Story: /home/user/top-weight-loss/public/social/2026-11-20-d4-story.jpg (1080x1920, same text, bottom line "More at treatmentshub.com")
 Alt text: Text graphic from Treatments Hub: Six weighted factors. The same rubric for every provider. Medical credibility carries the most weight at 25%. Pricing and value is 20%. No invented ratings, ever.
 ```
 Six weighted factors. The same rubric for every provider.
@@ -93,6 +99,7 @@ Compliance: facts traced ✓ · compounded wording n/a ✓ · no testimonials/Tr
 ## D5 · Fri 2026-11-21 · 14:00 UTC
 Source page: https://www.treatmentshub.com/weight-loss/glp1-cost-calculator (Last updated Oct 27, 2026; reviewed Oct 30, 2026)
 Image: /home/user/top-weight-loss/public/social/2026-11-21-d5.jpg · pill "Tool"
+Story: /home/user/top-weight-loss/public/social/2026-11-21-d5-story.jpg (1080x1920, same text, bottom line "More at treatmentshub.com")
 Alt text: Text graphic from Treatments Hub: Published price, times the months you choose. The cost calculator does not estimate, average or add anything. Regular prices sit in their own column.
 ```
 A published price, multiplied by the months you choose. Nothing else.
@@ -114,6 +121,7 @@ Compliance: facts traced ✓ · compounded = "not FDA-approved" ✓ · no price 
 ## D6 · Sat 2026-11-22 · 14:00 UTC
 Source page: https://www.treatmentshub.com/weight-loss/glp1-provider-comparison (Last updated Oct 17, 2026; reviewed Oct 30, 2026)
 Image: /home/user/top-weight-loss/public/social/2026-11-22-d6.jpg · pill "Reading a comparison"
+Story: /home/user/top-weight-loss/public/social/2026-11-22-d6-story.jpg (1080x1920, same text, bottom line "More at treatmentshub.com")
 Alt text: Text graphic from Treatments Hub: Read the table as a map, not a verdict. Six variables move the real cost. Our comparison page lists all six, dated and linked. No scores, no ranking.
 ```
 Read the table as a map, not a verdict.
@@ -135,6 +143,7 @@ Compliance: facts traced ✓ · compounded wording: no compounded product named 
 ## D7 · Sun 2026-11-23 · 14:00 UTC
 Source page: https://www.treatmentshub.com/weight-loss/how-to-choose-a-glp1-provider (Last updated Sep 24, 2026; reviewed Oct 30, 2026)
 Image: /home/user/top-weight-loss/public/social/2026-11-23-d7.jpg · pill "Checklist"
+Story: /home/user/top-weight-loss/public/social/2026-11-23-d7-story.jpg (1080x1920, same text, bottom line "More at treatmentshub.com")
 Alt text: Text graphic from Treatments Hub: Three things to verify before you pay any provider. Who reviews and approves your treatment. Which pharmacy fills it. What you will actually pay after the intro price.
 ```
 Three things to verify before you pay any provider.
@@ -161,5 +170,5 @@ D2: — · D3: — · D4: — · D5: — · D6: — · D7: —
 
 ## Notes
 - Live site: WebFetch could not resolve www.treatmentshub.com in this session; curl through the proxy returned 200 for every page, so the facts above were taken from the live HTML (saved in the session scratchpad), not from source files.
-- Rendering: `node scripts/social-card.mjs ops/social/2026-11-16-week-batch.cards.json` re-renders all seven; headlines are measured with the installed Inter font and the script fails rather than overflowing past 3 lines. d1 and d7 (the two tightest layouts) were viewed and are clean.
+- Rendering: `node scripts/social-card.mjs ops/social/2026-11-16-week-batch.cards.json` re-renders all seven; headlines are measured with the installed Inter font and the script fails rather than overflowing past 3 lines. d1 and d7 (the two tightest layouts) were viewed and are clean. Stories: `--story` renders all seven at 1080x1920 from the same JSON; d1 and d4 story images were viewed and are clean (feed output unchanged, byte-identical).
 - Not done, by instruction: no publishing, no scheduling, no commit, no push. The JPEGs are untracked in `public/social/` and will not be publicly reachable until committed and deployed.
