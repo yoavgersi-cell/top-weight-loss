@@ -37,6 +37,8 @@ import { longDate } from "@/lib/price-feed";
 
 export const revalidate = 60;
 
+export const generateStaticParams = () => [{ battleSlug: "ed" }];
+
 // ───── ED treatment price tracker ─────
 // The public, dated record of what online ED providers publish as their
 // prices: the current verified index (generic pills per dose or per month,

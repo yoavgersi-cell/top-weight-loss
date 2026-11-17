@@ -11,6 +11,8 @@ import type { FaqItem, Provider } from "@/lib/config";
 
 export const revalidate = 3600;
 
+export const generateStaticParams = () => [{ battleSlug: "hair-loss" }];
+
 // Women's hair-loss hub, served at treatmentshub.com/hair-loss/women. Ported
 // from tophairloss.io/women on Oct 22, 2026: a curated lineup over existing
 // provider records whose display copy speaks to women (Hims surfaces as its

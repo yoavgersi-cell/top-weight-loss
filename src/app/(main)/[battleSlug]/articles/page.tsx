@@ -3,8 +3,11 @@ import { notFound } from "next/navigation";
 import { isVertical } from "@/lib/config";
 import { hubContext } from "@/lib/site-context";
 import { ArticlesIndexView, articlesIndexMetadata } from "@/components/pages/articles-index-page";
+import { verticalParams } from "@/lib/static-params";
 
 export const revalidate = 60;
+
+export const generateStaticParams = verticalParams;
 
 // Hub articles index: treatmentshub.com/<vertical>/articles.
 export async function generateMetadata({

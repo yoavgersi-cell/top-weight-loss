@@ -3,8 +3,11 @@ import { notFound } from "next/navigation";
 import { isVertical } from "@/lib/config";
 import { hubContext } from "@/lib/site-context";
 import { ArticlePageView, articleMetadata } from "@/components/pages/article-page";
+import { articleParams } from "@/lib/static-params";
 
 export const revalidate = 60;
+
+export const generateStaticParams = articleParams;
 
 // Hub article page: treatmentshub.com/<vertical>/articles/<slug>.
 export async function generateMetadata({

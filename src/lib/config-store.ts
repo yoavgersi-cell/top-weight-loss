@@ -77,6 +77,10 @@ const CODE_AUTHORITATIVE_BLOB_ARTICLES = new Set([
   "online-therapy-psychiatry-guide",
 ]);
 
+// The CMS snapshot is read through Next's data cache (60 s, tag "site-config",
+// purged by the save route). A `cache: "no-store"` read here used to opt every
+// page that calls getConfig out of static rendering: on Vercel that was a MISS
+// with "private, no-store" on every URL, including the homepage.
 async function getVerticalConfig(vertical: string): Promise<SiteConfig> {
   const base = seedForVertical(vertical);
   if (CODE_AUTHORITATIVE_VERTICALS.has(vertical)) {
@@ -86,7 +90,7 @@ async function getVerticalConfig(vertical: string): Promise<SiteConfig> {
     const key = blobKeyFor(vertical);
     const { blobs } = await list({ prefix: key });
     if (blobs.length > 0) {
-      const res = await fetch(blobs[0].url, { cache: "no-store" });
+      const res = await fetch(blobs[0].url, { next: { revalidate: 60, tags: ["site-config"] } });
       if (res.ok) {
         const saved = (await res.json()) as Partial<SiteConfig>;
         // Articles added in code after the last CMS save still ship: the
@@ -4636,7 +4640,7 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
       // Retry the blob fetch a few times before giving up on this request.
       let res: Response | null = null;
       for (let attempt = 0; attempt < 3; attempt++) {
-        res = await fetch(blobs[0].url, { cache: "no-store" });
+        res = await fetch(blobs[0].url, { next: { revalidate: 60, tags: ["site-config"] } });
         if (res.ok) break;
         if (attempt < 2) await new Promise((r) => setTimeout(r, 150 * (attempt + 1)));
       }

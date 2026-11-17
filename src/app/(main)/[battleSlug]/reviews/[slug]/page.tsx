@@ -3,8 +3,11 @@ import { notFound } from "next/navigation";
 import { isVertical } from "@/lib/config";
 import { hubContext } from "@/lib/site-context";
 import { ReviewPageView, reviewMetadata } from "@/components/pages/review-page";
+import { reviewParams } from "@/lib/static-params";
 
 export const revalidate = 60;
+
+export const generateStaticParams = reviewParams;
 
 // Hub review page: treatmentshub.com/<vertical>/reviews/<slug>. The first
 // segment is the vertical (validated below); everything else is the same

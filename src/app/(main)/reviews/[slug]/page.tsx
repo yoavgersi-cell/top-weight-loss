@@ -4,6 +4,9 @@ import { ROOT_CONTEXT } from "@/lib/site-context";
 
 export const revalidate = 60;
 
+// Legacy root URL (the proxy 301s it to the hub); cached on demand, none prerendered.
+export const generateStaticParams = () => [];
+
 export async function generateMetadata({
   params,
 }: {

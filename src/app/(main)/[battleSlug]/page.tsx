@@ -20,8 +20,11 @@ import { ProductCarousel } from "@/components/product-carousel";
 import { LatestGuides, newestGuides } from "@/components/latest-guides";
 import { GuideCluster, ED_GUIDES } from "@/components/guide-cluster";
 import { notFound } from "next/navigation";
+import { verticalParams } from "@/lib/static-params";
 
 export const revalidate = 3600;
+
+export const generateStaticParams = verticalParams;
 
 const RESERVED_SLUGS = [
   "about",

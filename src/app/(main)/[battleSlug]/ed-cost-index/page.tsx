@@ -19,6 +19,8 @@ import {
 
 export const revalidate = 3600;
 
+export const generateStaticParams = () => [{ battleSlug: "ed" }];
+
 // Served at treatmentshub.com/ed/ed-cost-index (ported from edtreatmenthub.com, Oct 21, 2026).
 const SITE_URL = "https://www.treatmentshub.com";
 const VERTICAL_URL = `${SITE_URL}/ed`;

@@ -23,6 +23,8 @@ import productsJson from "@/data/products.json";
 
 export const revalidate = 3600;
 
+export const generateStaticParams = () => [];
+
 const COPY: Record<string, { h1: string; sub: string; note?: string }> = {
   "weight-loss": {
     h1: "The {n} best online GLP-1 weight loss programs of 2026",
