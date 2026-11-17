@@ -19,6 +19,8 @@ import { NativeFunnel, type FunnelProvider } from "@/components/native-funnel";
 
 export const revalidate = 3600;
 
+export const generateStaticParams = () => [];
+
 const PAGES: Record<string, { h1: string; sub: string }> = {
   glp1: {
     h1: "Doctor-prescribed GLP-1 weight loss online, from $49 a month, without insurance",

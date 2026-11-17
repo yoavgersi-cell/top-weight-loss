@@ -3,8 +3,11 @@ import { notFound } from "next/navigation";
 import { isVertical } from "@/lib/config";
 import { hubContext } from "@/lib/site-context";
 import { BattlePageView, battleMetadata } from "@/components/pages/battle-page";
+import { comparisonParams } from "@/lib/static-params";
 
 export const revalidate = 60;
+
+export const generateStaticParams = comparisonParams;
 
 // Hub comparison / landing page: treatmentshub.com/<vertical>/<slug>. The first
 // segment is the vertical; the second is a battle or landing-page slug within

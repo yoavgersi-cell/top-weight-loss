@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { revalidatePath, revalidateTag } from "next/cache";
 import { getConfig, saveConfig } from "@/lib/config-store";
 import { type SiteConfig, DEFAULT_VERTICAL, isVertical } from "@/lib/config";
 
@@ -37,6 +38,10 @@ export async function PUT(req: NextRequest) {
   try {
     const body = (await req.json()) as SiteConfig;
     await saveConfig(body, verticalFrom(req));
+    // The saved snapshot is served through the data cache and ISR pages:
+    // purge both so the admin sees the change on the next request.
+    revalidateTag("site-config", "max");
+    revalidatePath("/", "layout");
     return NextResponse.json({ success: true });
   } catch (err) {
     return NextResponse.json({ error: String(err) }, { status: 500 });
