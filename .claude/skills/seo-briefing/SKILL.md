@@ -15,6 +15,9 @@ Load `house-rules` first. Outputs go to `ops/briefs/`.
 - **Keyword tools fallback**: DataForSEO when connected; WebSearch as the last fallback for demand signals, labelled as such.
 - Past baselines live in the repo history and earlier briefs; compare before calling anything a trend.
 
+## 1a. Coverage map
+`coverage-map.md` in this folder is the operator's 14-folder SEO map with the owner and known gap for each. Every weekly review ends with a one-line-per-folder status (checked / not measured / gap unchanged) so nothing is silently skipped. Update the gap column when something ships.
+
 ## 2. Scoring an opportunity
 Score each candidate 1 to 5 on: demand (impressions or clear intent), position (4 to 15 is the sweet spot), authority fit (do we already rank for neighbours?), data edge (can Atlas get primary numbers competitors lack?), commercial fit (does it lead to a provider decision without forcing it?). Rank by the sum; write up the top three only.
 
