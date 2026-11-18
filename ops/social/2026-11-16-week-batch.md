@@ -165,6 +165,7 @@ Compliance: facts traced ✓ · compounded = "not FDA-approved" ✓ · no testim
 ---
 
 ## After publishing (fill per day)
+- D1 (2026-11-17): feed media id 17916451986284851, published 2026-11-17 15:11 UTC (task fired 14:08, connector reconnect delayed it), https://www.instagram.com/p/Df2ONkwjcaX/ ; story media id 18650182159039568.
 D1 media id / time / link: —
 D2: — · D3: — · D4: — · D5: — · D6: — · D7: —
 
