@@ -9,3 +9,4 @@
 | 2026-11-16 | Trustpilot usage rules check (warning received by operator) | Atlas | awaiting-operator (switch off the wellmedr widget exception; paste warning text) | ops/research/2026-11-16-trustpilot-usage.md |
 | 2026-11-18 | Article: Is compounded semaglutide going away? (brief ready; Atlas evidence; Sloane writes with FDA safety box on money pages) | Cleo → Atlas → Sloane → Felix | in-progress | ops/briefs/2026-11-18-compounded-semaglutide-going-away.md |
 | 2026-11-18 | Indexation: 180 of ~480 pages indexed, 287 discovered-not-indexed (GSC export) | Felix | awaiting-operator (per-URL export; then lastmod + internal-link PRs) | ops/qa/2026-11-18-indexation.md |
+| 2026-11-18 | Competitor note review (16 claims: 5 confirmed, 3 contradicted, 4 unverifiable, 4 already done); adopted: dated price blocks on 26 reviews, 3 title fixes, monthly industry post | Cleo | queued (Sloane/Felix after the article PRs) | ops/briefs/2026-11-18-competitor-note-review.md |
