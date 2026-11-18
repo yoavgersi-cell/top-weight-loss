@@ -7,3 +7,4 @@
 | 2026-11-16 | Brief: refresh embody review for "reviews and complaints" | Cleo → Atlas → Sloane → Felix | done (PR #629 merged 2026-11-16; verdict ops/qa/embody-review-refresh.md; follow-up: sitewide "1-2 days" cleanup incl. chatbot) | ops/briefs/2026-11-16-embody-review-refresh.md |
 | 2026-11-16 | Weight-loss industry trend research (top 5 trends, 3 article candidates) | Atlas | awaiting-operator (pick the article) | ops/research/2026-11-16-weight-loss-trends.md |
 | 2026-11-16 | Trustpilot usage rules check (warning received by operator) | Atlas | awaiting-operator (switch off the wellmedr widget exception; paste warning text) | ops/research/2026-11-16-trustpilot-usage.md |
+| 2026-11-18 | Article: Is compounded semaglutide going away? (brief ready; Atlas evidence; Sloane writes with FDA safety box on money pages) | Cleo → Atlas → Sloane → Felix | in-progress | ops/briefs/2026-11-18-compounded-semaglutide-going-away.md |
