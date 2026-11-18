@@ -162,8 +162,8 @@ const WL_MATCH_COPY: Record<string, { why: string[]; priceNote?: string; alt: { 
   embody: {
     why: [
       "Month to month, cancel anytime",
-      "Ships in 1-2 days, cold-chain",
-      "Full refund if you're not approved, per embody",
+      "Free expedited delivery, no timeline guaranteed",
+      "Partial refund if not approved (unused portion less services rendered), per embody",
     ],
     alt: { id: "wellmedr", compareSlug: "embody-vs-wellmedr" },
   },

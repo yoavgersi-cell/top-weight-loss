@@ -154,12 +154,12 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   "eden-vs-embody": {
     title: "Eden vs embody (2026): GLP-1 Semaglutide & Tirzepatide",
     description:
-      "Eden semaglutide ($99/mo) and tirzepatide ($129/mo), flat every month with 24/7 support, vs embody GLP-1 ($49/$99, 1-2 day shipping), compared.",
+      "Eden semaglutide ($99/mo) and tirzepatide ($129/mo), flat every month with 24/7 support, vs embody GLP-1 ($49/$99, free expedited delivery), compared.",
   },
   "embody-vs-sprout": {
     title: "embody vs Sprout (2026): $49 vs $99 GLP-1 Compared",
     description:
-      "embody ($49/mo semaglutide, 1-2 day cold-chain shipping, LegitScript) vs Sprout (from $99/mo on a 12-month plan, brand-name Wegovy available). Honest verdict.",
+      "embody ($49/mo semaglutide, cold-chain delivery, LegitScript) vs Sprout (from $99/mo on a 12-month plan, brand-name Wegovy available). Honest verdict.",
   },
   "altrx-vs-sprout": {
     title: "altRx vs Sprout (2026): $89 vs $99 GLP-1 Compared",
@@ -179,7 +179,7 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   "embody-vs-wellmedr": {
     title: "embody vs welludr (formerly wellmedr): $49 vs $41 GLP-1",
     description:
-      "embody ($49/mo, 1-2 day shipping, refund if not approved) vs welludr, formerly wellmedr ($41/mo, 1M+ patients, warranty). Real prices and trade-offs.",
+      "embody ($49/mo flat, partial refund if not approved) vs welludr, formerly wellmedr ($41/mo, 1M+ patients, warranty). Real prices and trade-offs.",
   },
   "altrx-vs-embody": {
     // Measured winner, restored Aug 30: when both reverse slugs were live, the
@@ -188,7 +188,7 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // page, same query. Do not switch back to price format without new data.
     title: "altRx vs embody (2026): Which GLP-1 Provider Fits You?",
     description:
-      "altRx ($89/mo semaglutide, brand-name Zepbound and Wegovy, BNPL) vs embody ($49/mo flat, 1-2 day shipping, LegitScript-certified). Which GLP-1 provider wins?",
+      "altRx ($89/mo semaglutide, brand-name Zepbound and Wegovy, BNPL) vs embody ($49/mo flat, free delivery, LegitScript-certified). Which GLP-1 provider wins?",
   },
   "altrx-vs-trimrx": {
     title: "altRx vs TrimRx (2026): $89 vs $149 GLP-1 Compared",
@@ -203,12 +203,12 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   "embody-vs-trimrx": {
     title: "embody vs TrimRx (2026): $49 vs $149 GLP-1 Compared",
     description:
-      "embody ($49/mo flat semaglutide, free 1-2 day shipping) vs TrimRx ($149/mo, flexible no-contract plans). Real pricing, speed and support compared side by side.",
+      "embody ($49/mo flat semaglutide, free delivery) vs TrimRx ($149/mo, flexible no-contract plans). Real pricing, speed and support compared side by side.",
   },
   "embody-vs-medvi": {
     title: "embody vs Medvi (2026): $49 vs $99 GLP-1 Compared",
     description:
-      "embody ($49/mo semaglutide, 1-2 day shipping, refund policy) vs Medvi ($99/mo promo, all-inclusive, high-touch provider support). Price or personal care?",
+      "embody ($49/mo semaglutide, free delivery, refund policy) vs Medvi ($99/mo promo, all-inclusive, high-touch provider support). Price or personal care?",
   },
   "embody-vs-ro": {
     // Sept 3 CTR pass: 0.5% CTR at avg position 6 over 191 impressions (3d) -

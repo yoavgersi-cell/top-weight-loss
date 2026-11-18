@@ -58,7 +58,7 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "What's the catch with the lowest prices?",
     answer:
-      "Commitment and speed. The $41/month headline at welludr is tied to a 12-month plan, and HealthRx's $97/month is its 12-month plan price. Month-to-month flexibility costs a little more (embody at $49/$99 on its pre-Black Friday sale). Slower shipping is the other trade: altRx at $89 ships in about 5-7 days versus 1-2 days at embody and DirectMeds. Every condition is listed under each price above - there are no unlisted catches we're aware of.",
+      "Commitment and speed. The $41/month headline at welludr is tied to a 12-month plan, and HealthRx's $97/month is its 12-month plan price. Month-to-month flexibility costs a little more (embody at $49/$99 on its pre-Black Friday sale). Slower shipping is the other trade: altRx at $89 ships in about 5-7 days versus 1-2 days at DirectMeds. Every condition is listed under each price above - there are no unlisted catches we're aware of.",
   },
   {
     question: "Are cheap compounded GLP-1s safe?",
@@ -137,7 +137,7 @@ export default async function CheapestGlp1Page() {
             commitment,{" "}
             <Link href="/weight-loss/reviews/embody" className="font-semibold text-[#0C4B75] hover:underline">embody</Link>{" "}
             is the cheapest month to month at <strong className="text-[#191919]">$49/$99</strong> on its pre-Black Friday sale{" "}
-            with 1-2 day shipping. For one flat price covering either medication - as injections or
+            with free expedited delivery (no timeline guaranteed). For one flat price covering either medication - as injections or
             needle-free drops -{" "}
             <Link href="/weight-loss/reviews/directmeds" className="font-semibold text-[#0C4B75] hover:underline">DirectMeds</Link>{" "}
             charges <strong className="text-[#191919]">$147/month</strong> at every dose. Brand-name

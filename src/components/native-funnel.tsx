@@ -46,7 +46,7 @@ const MED_OPTIONS: { value: Med; label: string; hint: string }[] = [
 ];
 const PRIORITY_OPTIONS: { value: Priority; label: string; hint: string }[] = [
   { value: "price", label: "The lowest monthly price", hint: "Same medication, least money each month" },
-  { value: "shipping", label: "The fastest delivery", hint: "At my door in a day or two" },
+  { value: "shipping", label: "The fastest delivery", hint: "Free expedited delivery included" },
   { value: "support", label: "Support I can reach any time", hint: "A person to talk to, around the clock" },
 ];
 const CONTACT_OPTIONS: { value: Contact; label: string; hint: string }[] = [
@@ -57,7 +57,7 @@ const CONTACT_OPTIONS: { value: Contact; label: string; hint: string }[] = [
 
 // Answer → provider. Each answer is a vote for the provider whose verified
 // record matches it: embody for price (cheapest no-commitment price we track)
-// and shipping (1-2 days); Eden for support (24/7 human support included).
+// and shipping (free expedited delivery, no timeline guaranteed); Eden for support (24/7 human support included).
 // Ties and "no preference" go to embody, the page's default.
 function pick(priority: Priority | null, contact: Contact | null): string {
   let eden = 0;
@@ -116,11 +116,11 @@ function PriceLine({ p, med }: { p: FunnelProvider; med: Med }) {
 const MATCHING_STEPS = ["Checking verified prices", "Comparing support and delivery", "Matching your answers"];
 
 // One line of advice on the result, chosen by question one. Each line is a
-// fact the provider publishes (embody: full refund if not approved; Eden:
+// fact the provider publishes (embody: partial refund if not approved; Eden:
 // free 3-minute assessment) or general guidance that names no provider.
 function adviceFor(exp: Experience | null, providerId: string): string | null {
   if (exp === "first") {
-    if (providerId === "embody") return "First time? embody refunds you in full if a clinician does not approve you, so there is no cost to finding out.";
+    if (providerId === "embody") return "First time? If a clinician does not approve you, embody refunds the unused portion of what you paid, less services rendered (refund policy, Aug 25, 2026).";
     if (providerId === "eden") return "First time? Eden's online assessment is free and takes about 3 minutes, before you pay anything.";
   }
   if (exp === "switching") return "Switching? Have your current dose and your pharmacy's name ready for the intake - the clinician decides whether to continue it.";

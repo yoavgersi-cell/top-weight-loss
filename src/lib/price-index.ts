@@ -41,10 +41,10 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   },
   {
     providerId: "embody",
-    edge: "Cheapest with no commitment - month to month, ships in 1-2 days",
-    semaglutide: { price: "$49", note: "sale price, flat month to month; site shows a countdown to a price increase (Nov 3, 2026)" },
+    edge: "Cheapest with no commitment - month to month, free expedited delivery (no timeline guaranteed)",
+    semaglutide: { price: "$49", note: "sale price, flat month to month; pre-Black Friday banner with no countdown or end date stated (homepage read Nov 16, 2026)" },
     tirzepatide: { price: "$99", note: "sale price, flat month to month" },
-    shipping: "Ships in 1-2 days, cold-chain",
+    shipping: "Free expedited delivery, cold-chain; no timeline guaranteed",
     commitment: "None - month to month, cancel anytime",
   },
   {

@@ -87,7 +87,7 @@ const CHECKLIST: { title: string; check: string; verify: string; redFlag: string
   {
     title: "Cancellation and refunds",
     check: "Whether you can stop at any renewal, whether there is a minimum term, and what you get back if the clinician does not approve you.",
-    verify: "embody refunds in full if not approved and has no commitment; TrimRx has no long-term contract; welludr's $41 rate wants a 12-month plan; HealthRx's lowest rate is on a 12-month plan. None of these is wrong, but you should know which one you are signing.",
+    verify: "embody refunds the unused portion (less services rendered) if not approved and has no commitment; TrimRx has no long-term contract; welludr's $41 rate wants a 12-month plan; HealthRx's lowest rate is on a 12-month plan. None of these is wrong, but you should know which one you are signing.",
     redFlag: "Auto-renew terms you can only find in the checkout fine print. Read them before you pay.",
   },
   {
@@ -153,7 +153,7 @@ const ROWS: Row[] = [
     clinician: "Licensed medical practitioner reviews the intake, typically within a day",
     visit: "Online intake; reviewers describe scheduled provider appointments, including video calls, and dose-increase appointments",
     pharmacy: "US 503A compounding pharmacies; LegitScript-certified",
-    dosePricing: "Flat monthly, no commitment; full refund if not approved",
+    dosePricing: "Flat monthly, no commitment; partial refund if not approved (unused portion less services rendered)",
     likes: "On Reddit: same-day approval, a vial within a week, and a switcher whose order was matched to their previous dose.",
     complaints: "On Reddit the recurring line is \"great if you don't need to actually talk to anyone\": a refill flow one user couldn't find, and support replies another called AI-generated.",
   },
@@ -244,7 +244,7 @@ const PATTERNS: { title: string; body: string }[] = [
 const EXPLORE: Record<string, { useCase: string; reason: string }> = {
   embody: {
     useCase: "Transparent flat pricing with a named pharmacy model",
-    reason: "One flat monthly price at every dose with no commitment, a full refund if a clinician does not approve you, and LegitScript-certified US 503A pharmacies named on the site.",
+    reason: "One flat monthly price at every dose with no commitment, a partial refund (unused portion less services rendered) if a clinician does not approve you, and LegitScript-certified US 503A pharmacies named on the site.",
   },
   altrx: {
     useCase: "Flat-dose compounded pricing plus a brand-name shelf",
@@ -413,7 +413,7 @@ export default async function HowToChooseGlp1ProviderPage() {
             {[
               ["Who reviews the medical intake?", "A named role - physician, physician associate, nurse practitioner - stated on the how-it-works page, and an intake that asks about thyroid cancer or MEN 2 history, pancreatitis, pregnancy plans and current medications."],
               ["Are they appropriately licensed?", "Licensed in your state. HealthRx states an independent US-licensed clinician in your state; others describe licensed providers without the state detail, which is worth asking about."],
-              ["Can they decline treatment?", "Look for \"if appropriate\" and refund-if-not-approved language. embody refunds in full when a provider does not approve treatment; Medvi states it declines patients for whom treatment is not appropriate."],
+              ["Can they decline treatment?", "Look for \"if appropriate\" and refund-if-not-approved language. embody issues a partial refund (unused portion less services rendered) when a provider does not approve treatment; Medvi states it declines patients for whom treatment is not appropriate."],
               ["Can you reach a clinician after approval?", "Messaging, check-ins or video: TrimRx advertises unlimited check-ins, Medvi describes monitoring visits, HealthRx describes care-team check-ins. Ro's follow-up is messaging-based."],
               ["How are dose changes and clinical questions handled?", "Ask how a dose increase is requested and who approves it. Medvi builds adjustments into monitoring; embody reviewers describe dose-increase appointments; on Reddit, an embody user's dose was raised at a check-in three weeks in."],
             ].map(([h, b]) => (

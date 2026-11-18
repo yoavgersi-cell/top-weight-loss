@@ -463,7 +463,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "How fast does altRx ship?",
       answer:
-        "Shipping is free and takes about 5-7 days. That's the main trade-off against the 1-2 day providers like embody and DirectMeds - altRx compensates on price ($89/month semaglutide, $149/month tirzepatide) and its brand-name shelf.",
+        "Shipping is free and takes about 5-7 days. That's the main trade-off against 1-2 day providers like DirectMeds - altRx compensates on price ($89/month semaglutide, $149/month tirzepatide) and its brand-name shelf.",
     },
     {
       question: "Can you pause or cancel altRx?",
@@ -514,7 +514,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "How fast does welludr ship?",
       answer:
-        "Standard delivery takes about 3-5 business days, with refills shipped every 4 weeks. That's slower than the 1-2 day providers like embody and DirectMeds - the trade-off for the lowest compounded prices in our ranking.",
+        "Standard delivery takes about 3-5 business days, with refills shipped every 4 weeks. That's slower than 1-2 day providers like DirectMeds - the trade-off for the lowest compounded prices in our ranking.",
     },
     {
       question: "Does welludr's price go up as your dose increases?",
@@ -548,7 +548,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "How fast does DirectMeds ship?",
       answer:
-        "Shipping is free and arrives in 1-2 days once your prescription is issued - among the fastest delivery in our ranking, on par with embody.",
+        "Shipping is free and arrives in 1-2 days once your prescription is issued - among the fastest delivery in our ranking.",
     },
     {
       question: "What are DirectMeds' sublingual drops?",

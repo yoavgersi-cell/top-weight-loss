@@ -63,7 +63,7 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
   "is-embody-legit": {
     title: "Is embody Legit or a Scam? We Checked the Pharmacy & Refunds",
     description:
-      "Is embody legit or a scam? LegitScript-certified 503A pharmacies, a licensed prescriber and a full refund if you're not approved. Plus the complaints, honestly.",
+      "Is embody legit or a scam? LegitScript-certified 503A pharmacies, a licensed prescriber and a partial refund if you're not approved. Plus the complaints, honestly.",
   },
   "is-wellmedr-legit": {
     title: "Is welludr (wellmedr) Legit or a Scam? Reviews Checked",
@@ -193,7 +193,7 @@ const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
   "best-wegovy-alternatives":
     "The closest Wegovy alternatives are compounded semaglutide plans - the same active ingredient - starting at $41/month (welludr), $49 (embody) and $89 (altRx) through licensed online providers, versus $1,150+ for brand-name without insurance.",
   "best-ro-alternatives":
-    "The strongest ro alternatives are flat-priced compounded GLP-1 providers: welludr from $41/month, embody at $49 with 1-2 day shipping, and altRx at $89 with brand-name options too. All require an online licensed-provider review.",
+    "The strongest ro alternatives are flat-priced compounded GLP-1 providers: welludr from $41/month, embody at $49 with free expedited delivery, and altRx at $89 with brand-name options too. All require an online licensed-provider review.",
   "can-you-get-ozempic-without-doctor":
     "No - Ozempic and every GLP-1 medication legally require a prescription in the US. What you don't need is an in-person visit: licensed telehealth providers evaluate you online and, if appropriate, prescribe treatment starting around $41-$89/month.",
   "weight-loss-medication-that-works-fast":
@@ -840,7 +840,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     <div>
                       <p className="text-[15px] font-bold text-[#191919]">Cheapest with no commitment: {tirzEmbody.name}</p>
                       <p className="mt-1 text-[13.5px] leading-relaxed text-gray-600">
-                        {tirzNote("embody")?.replace("Tirzepatide ", "Compounded tirzepatide ")}, month to month, ships in 1-2 days, full refund if you are not approved.
+                        {tirzNote("embody")?.replace("Tirzepatide ", "Compounded tirzepatide ")}, month to month, free expedited delivery (no timeline guaranteed), partial refund if not approved (unused portion less services rendered).
                         {tirzWellmedr && tirzNote("wellmedr") && (
                           <>
                             {" "}Willing to commit a year?{" "}
