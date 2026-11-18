@@ -32,7 +32,7 @@ const steps: { title: string; detail: string }[] = [
   {
     title: "Pick the provider before you run out",
     detail:
-      "Approval and first shipment take from a day to about a week depending on the provider (embody reviews chart-review in ~24 hours and ships in 1-2 days; altRx ships in 5-7 days). Start the switch while you still have one or two doses left so there's no gap in treatment.",
+      "Approval and first shipment take from a day to about a week depending on the provider (embody reviews chart-review in ~24 hours and offers free expedited delivery with no timeline guaranteed; altRx ships in 5-7 days). Start the switch while you still have one or two doses left so there's no gap in treatment.",
   },
   {
     title: "Complete the intake - and disclose your current medication and dose",
@@ -366,7 +366,7 @@ export default async function SwitchFromOzempicPage() {
                   [
                     "Cold-chain, tracked shipping",
                     "Semaglutide and tirzepatide are temperature-sensitive; injectables should arrive cold, with ice packs, fast.",
-                    "embody (1-2 days); HealthRx (overnight)",
+                    "embody (free expedited delivery, no timeline guaranteed); HealthRx (overnight)",
                   ],
                   [
                     "Price at YOUR dose, not the headline",

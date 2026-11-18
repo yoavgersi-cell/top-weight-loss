@@ -78,7 +78,7 @@ export default async function GoPage({ params }: { params: Promise<{ battleSlug:
       tirzepatide: embodyRow.tirzepatide,
       facts: [
         embodyRow.shipping,
-        "No commitment: month to month, cancel anytime; full refund if you are not approved",
+        "No commitment: month to month, cancel anytime; partial refund if you are not approved (unused portion less services rendered)",
         "Licensed US clinician reviews your intake, usually within 24 hours; no insurance required",
       ],
       // Nov 16, 2026: third-party review data removed sitewide; the funnel's
@@ -176,13 +176,13 @@ export default async function GoPage({ params }: { params: Promise<{ battleSlug:
           <li className="rounded-xl border border-gray-200 p-4">
             <p className="text-[15px] font-bold">3. Read the commitment and refund terms before you pay</p>
             <p className="mt-1 text-[14px] leading-relaxed text-gray-600">
-              Both are month to month with no membership and no annual or long-term plan. embody refunds in full if a clinician does not approve you. Read each provider&rsquo;s cancellation terms at checkout; they are short.
+              Both are month to month with no membership and no annual or long-term plan. embody refunds the unused portion, less services rendered, if a clinician does not approve you. Read each provider&rsquo;s cancellation terms at checkout; they are short.
             </p>
           </li>
           <li className="rounded-xl border border-gray-200 p-4">
             <p className="text-[15px] font-bold">4. Know what each one is best at</p>
             <p className="mt-1 text-[14px] leading-relaxed text-gray-600">
-              {embody && <>embody is the cheaper of the two and ships in 1-2 days, cold-chain, with a LegitScript certification.</>}{" "}
+              {embody && <>embody is the cheaper of the two and offers free expedited cold-chain delivery (no timeline guaranteed), with a LegitScript certification.</>}{" "}
               {eden && <>Eden costs $30 more a month for semaglutide and $10 more for tirzepatide, and includes doctor-guided care with 24/7 human support. Confirm Eden&rsquo;s shipping time at checkout; it does not publish one.</>}
             </p>
           </li>
@@ -207,7 +207,7 @@ export default async function GoPage({ params }: { params: Promise<{ battleSlug:
           </div>
           <div>
             <dt className="text-[15px] font-bold">How fast will it arrive?</dt>
-            <dd className="mt-1 text-[14px] leading-relaxed text-gray-600">embody ships in 1-2 days, cold-chain, after the clinician review, which is usually within 24 hours. Eden does not publish a shipping window; confirm it at checkout.</dd>
+            <dd className="mt-1 text-[14px] leading-relaxed text-gray-600">embody offers free expedited cold-chain delivery after the clinician review, which is usually within 24 hours; its Terms do not guarantee a delivery timeline. Eden does not publish a shipping window; confirm it at checkout.</dd>
           </div>
         </dl>
       </section>

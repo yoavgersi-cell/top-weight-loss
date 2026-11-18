@@ -81,7 +81,7 @@ const ROWS: Row[] = [
     entryNote: "month to month",
     after: "Same, month to month",
     membership: "None",
-    shipping: "Free 1-2 day, cold-chain",
+    shipping: "Free expedited delivery, cold-chain; no timeline guaranteed",
     support: "Nursing team, 1:1 messaging, video appointments",
     advantage: "Cheapest with no commitment; fastest shipping",
     limitation: "Self-serve model; little human contact by design",
@@ -233,7 +233,7 @@ const SECTIONS: Section[] = [
     ),
     pricing: (
       <>
-        <strong className="text-[#191919]">Semaglutide $49 a month and tirzepatide $99, month to month</strong>, a pre-Black Friday sale seen October 28, 2026 (previously $69 and $119). Free one-to-two-day cold-chain shipping. No membership. <strong className="text-[#191919]">A full refund if a provider does not approve treatment.</strong> embody is LegitScript-certified and names US-based 503A compounding pharmacies, the clearest pharmacy statement among the compounded providers here.
+        <strong className="text-[#191919]">Semaglutide $49 a month and tirzepatide $99, month to month</strong>, a pre-Black Friday sale seen October 28, 2026 (previously $69 and $119). Free expedited cold-chain delivery; no timeline guaranteed. No membership. <strong className="text-[#191919]">A partial refund if a provider does not approve treatment (unused portion less services rendered).</strong> embody is LegitScript-certified and names US-based 503A compounding pharmacies, the clearest pharmacy statement among the compounded providers here.
       </>
     ),
     support:
@@ -247,7 +247,7 @@ const SECTIONS: Section[] = [
     ),
     cancellation:
       "72 hours' notice before renewal. Payments are generally final, with a limited exception when a provider determines medical disqualification.",
-    pros: ["Cheapest no-commitment price here", "One-to-two-day shipping", "Dose changes go through without friction", "Named 503A pharmacies and LegitScript certification"],
+    pros: ["Cheapest no-commitment price here", "Free expedited delivery (no timeline guaranteed)", "Dose changes go through without friction", "Named 503A pharmacies and LegitScript certification"],
     cons: ["Little human contact by design", "A 72-hour notice rule with payments otherwise final", "No coaching or dietician layer"],
     suits: "Readers who want to try treatment without a plan, know their way around a patient portal, and would rather have fast delivery than a coach.",
     assessment: (
