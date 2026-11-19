@@ -40,6 +40,7 @@ import { ReadableProse, enhanceArticleHtml } from "@/components/prose";
 import { ProviderAudit } from "@/components/provider-audit";
 import { HowItWorksShowcase, HOW_IT_WORKS_SHOWCASE } from "@/components/how-it-works-showcase";
 import { catalogPriceSnippet } from "@/lib/product-catalog";
+import { FdaSafetyUpdate } from "@/components/fda-safety-update";
 
 // Per-provider SEO overrides for reviews with distinctive search demand.
 // Code-controlled (not CMS-merged) so they reliably target trending queries -
@@ -1051,6 +1052,13 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         <div className="mb-8">
           <ReadableProse text={review.reviewIntro} paragraphClassName="text-[16px] leading-[1.8] text-gray-600" />
         </div>
+
+        {/* FDA NAION safety update (Nov 9, 2026), once, after the intro, on
+            the three compounded GLP-1 reviews that convert most (operator
+            request, Nov 18, 2026). */}
+        {ctx.vertical === "weight-loss" && ["embody", "healthrx", "directmeds"].includes(slug) && (
+          <FdaSafetyUpdate className="mb-8" />
+        )}
 
         {/* Dated screenshots of the provider's own site (Nov 5, 2026). Renders
             only for providers with a gallery; price slides self-hide when the

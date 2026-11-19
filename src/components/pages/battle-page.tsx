@@ -17,6 +17,7 @@ import { ComparisonLayout } from "@/components/comparison-layout";
 import { EditorialContent } from "@/components/editorial-content";
 import { LandingEditorial } from "@/components/landing-editorial";
 import { landingFocusFor } from "@/lib/landing-focus";
+import { FdaSafetyUpdate } from "@/components/fda-safety-update";
 import { GuideCluster } from "@/components/guide-cluster";
 import { PopularGuides } from "@/components/popular-guides";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -540,6 +541,15 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             description: landing.heroDescription,
           }}
           byline={<MedicalReviewBar path={`/${ctx.vertical}/${landing.slug}`} compact />}
+          intro={
+            // FDA NAION safety update (Nov 9, 2026) once, above the provider
+            // cards, on the two molecule landings only (operator request, Nov 18, 2026).
+            ctx.vertical === "weight-loss" && (landing.slug === "semaglutide" || landing.slug === "tirzepatide") ? (
+              <section className="mx-auto max-w-[1200px] px-4 pt-4 sm:pt-6">
+                <FdaSafetyUpdate />
+              </section>
+            ) : undefined
+          }
         >
           {/* Verified price table + key facts from the price index, above
               the editorial sections on every weight-loss landing page
