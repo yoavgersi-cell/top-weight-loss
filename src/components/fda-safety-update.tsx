@@ -28,14 +28,14 @@ export function FdaSafetyUpdate({ className }: { className?: string }) {
       <p>
         On November 9, 2026 the FDA required all GLP-1 receptor agonist labels to add a Warnings and Precautions entry for non-arteritic
         anterior ischemic optic neuropathy (NAION), a rare but serious form of vision loss. It cites a meta-analysis of 126
-        randomized controlled trials with 134,253 patients: 6.4 NAION events per 100,000 patient-years on a GLP-1 RA
-        versus 3.8 on placebo (
+        randomized controlled trials with 134,253 patients: 6.4 NAION events per 100,000 person-years on a GLP-1 RA
+        versus 3.8 in comparator-treated patients (placebo or a non-GLP-1 RA glucose-lowering medication) (
         <a href={FDA_NAION_DSC_URL} target="_blank" rel="noopener noreferrer" className="font-semibold text-[#0C4B75] underline underline-offset-2 hover:text-[#093d61]">
           FDA Drug Safety Communication, Nov 9, 2026
         </a>
         , read Nov 16, 2026). For sudden, painless vision loss in one eye, the FDA says to contact your health care professional right away;
-        it tells prescribers to consider discontinuing the medication in anyone who develops NAION. Compounded semaglutide and tirzepatide carry the same active ingredients and are not
-        FDA-approved. On Nov 16, 2026 the Wegovy (revised 6/2026) and Zepbound (revised 8/2026) labels on DailyMed did not yet
+        it tells prescribers to consider discontinuing the medication in anyone who develops NAION unless the benefits of treatment clearly outweigh the risk. Compounded semaglutide and tirzepatide carry the same active ingredients and are not
+        FDA-approved. On Nov 19, 2026 the Wegovy (revised 6/2026) and Zepbound (revised 8/2026) labels on DailyMed did not yet
         show the new warning. This is not medical advice.
       </p>
     </aside>
