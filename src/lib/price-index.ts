@@ -163,6 +163,8 @@ export type PriceMove = {
   to: number;
   /** Condition attached to the new figure, as the provider states it. */
   condition?: string;
+  /** True when the listing changed basis (plan type or what the page shows), so from and to are not like for like. */
+  relisted?: boolean;
 };
 
 export type PriceChange = {
@@ -180,8 +182,8 @@ export const PRICE_CHANGELOG: PriceChange[] = [
     change:
       "Listing now follows HealthRx's monthly plan as shown on its pages: $39 for the first month, then $125/month for compounded semaglutide and $199/month for compounded tirzepatide until canceled. The 12-month rates we listed before (from $97 and from $177) are no longer displayed; the pages say longer plans have a lower monthly price without showing the tiers. HealthRx's pricing page states \"Prices current as of October 15, 2026.\"",
     moves: [
-      { drug: "semaglutide", from: 97, to: 125, condition: "monthly plan; $39 first month, then $125/month until canceled" },
-      { drug: "tirzepatide", from: 177, to: 199, condition: "monthly plan; $39 first month, then $199/month until canceled" },
+      { drug: "semaglutide", from: 97, to: 125, condition: "monthly plan; $39 first month, then $125/month until canceled", relisted: true },
+      { drug: "tirzepatide", from: 177, to: 199, condition: "monthly plan; $39 first month, then $199/month until canceled", relisted: true },
     ],
     source: "healthrx.com homepage, semaglutide page and pricing page, November 18, 2026",
   },
@@ -190,7 +192,7 @@ export const PRICE_CHANGELOG: PriceChange[] = [
     providerId: "directmeds",
     change:
       "Listing now shows DirectMeds' published \"Plans start at $249/month for sublingual Semaglutide, and $297/month for injections,\" with no subscriptions and 6- or 12-month bulk plans offered but not priced on the page. Previously listed as plans from $147 (not tied to one medication), a figure no longer on the page. The injection price is not tied to a named medication, so no tirzepatide price is listed.",
-    moves: [{ drug: "semaglutide", from: 147, to: 249, condition: "sublingual semaglutide; injections from $297/month" }],
+    moves: [{ drug: "semaglutide", from: 147, to: 249, condition: "sublingual semaglutide; injections from $297/month", relisted: true }],
     source: "directmeds.com weight-loss page, November 18, 2026",
   },
   {
@@ -339,13 +341,14 @@ export function priceValue(cell: PriceCell | { price: string; note: string } | u
 /** Stable anchor for a log entry - the feed and CSV link to it. */
 export const changeId = (c: PriceChange) => `${c.date}-${c.providerId}`;
 
-export type ChangeKind = "cut" | "increase" | "mixed" | "new" | "terms";
+export type ChangeKind = "cut" | "increase" | "mixed" | "new" | "terms" | "listing";
 
 /** What kind of change an entry records, read from its moves. */
 export function changeKind(c: PriceChange): ChangeKind {
   const moves = c.moves ?? [];
   if (moves.length === 0) return "terms";
   if (moves.every((m) => m.from === null)) return "new";
+  if (moves.some((m) => m.relisted)) return "listing";
   const priced = moves.filter((m): m is PriceMove & { from: number } => m.from !== null);
   const down = priced.some((m) => m.to < m.from);
   const up = priced.some((m) => m.to > m.from);
@@ -361,10 +364,11 @@ export const CHANGE_KIND_LABEL: Record<ChangeKind, string> = {
   mixed: "Price change",
   new: "New listing",
   terms: "Terms change",
+  listing: "Listing changed",
 };
 
 /** Percent change of a move, rounded; null for a new listing. */
-export const movePercent = (m: PriceMove) => (m.from ? Math.round(((m.to - m.from) / m.from) * 100) : null);
+export const movePercent = (m: PriceMove) => (m.from && !m.relisted ? Math.round(((m.to - m.from) / m.from) * 100) : null);
 
 /** The change log, newest first (ties keep their written order). */
 export const PRICE_CHANGES_NEWEST: PriceChange[] = [...PRICE_CHANGELOG].sort((a, b) => b.date.localeCompare(a.date));

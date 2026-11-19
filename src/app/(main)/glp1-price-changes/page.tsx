@@ -72,11 +72,12 @@ const KIND_STYLE: Record<ChangeKind, string> = {
   mixed: "bg-sky-50 text-sky-700",
   new: "bg-sky-50 text-sky-700",
   terms: "bg-gray-100 text-gray-600",
+  listing: "bg-gray-100 text-gray-600",
 };
 
 function MoveChip({ m }: { m: PriceMove }) {
-  const down = m.from !== null && m.to < m.from;
-  const up = m.from !== null && m.to > m.from;
+  const down = m.from !== null && !m.relisted && m.to < m.from;
+  const up = m.from !== null && !m.relisted && m.to > m.from;
   const Icon = up ? ArrowUpRight : ArrowDownRight;
   return (
     <span className="inline-flex items-center gap-1 rounded-lg border border-gray-200 bg-gray-50 px-2.5 py-1 text-[13px] text-gray-700 [font-variant-numeric:tabular-nums]">
@@ -113,6 +114,7 @@ export default async function PriceTrackerPage() {
     mixed: ["mixed price change", "mixed price changes"],
     new: ["new listing", "new listings"],
     terms: ["change to terms", "changes to terms"],
+    listing: ["listing change", "listing changes"],
   };
   const kindParts = (Object.keys(KIND_NOUN) as ChangeKind[])
     .filter((k) => count(k) > 0)
