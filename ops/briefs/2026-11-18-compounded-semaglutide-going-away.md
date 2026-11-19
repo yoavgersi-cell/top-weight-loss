@@ -1,6 +1,6 @@
 # Brief: Is Compounded Semaglutide Going Away? The Empower Warning Letter and the 503B Decision, Explained
 
-Date: 2026-11-18 · Author: Cleo · Status: ready · Next: Atlas (evidence file: exact FDA documents, shortage-list status, current provider prices), then Sloane · Answers: candidate 2 in `ops/research/2026-11-16-weight-loss-trends.md` section 3.
+Date: 2026-11-18 · Author: Cleo · Status: in-review · Next: Felix (QA) · PR: https://github.com/yoavgersi-cell/top-weight-loss/pull/649 (Sloane, 2026-11-18; article at /weight-loss/articles/compounded-semaglutide-going-away) · Answers: candidate 2 in `ops/research/2026-11-16-weight-loss-trends.md` section 3.
 Data this session: Ahrefs Free plan (0 workspace units, read 2026-11-18): no keyword, SERP or Brand Radar data, none estimated. Keyword Tool MCP (`keywordtool-suggestions-guest`) is not in this session's tool list; question mining below is from WebSearch result titles and snippets, strings only, no volume. Competitor pages (goodrx, singlecare, therxindex, meagain, healthline, beckers) are outside the session's allowed network (curl 000 / ENOTFOUND); the "what ranks" read is snippet-level and says so. Two FDA pages fetched directly today: WL #738238 and the 503B proposal press release.
 
 ## Target
