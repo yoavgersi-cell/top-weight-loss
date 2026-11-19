@@ -70,7 +70,7 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "Will I keep my current dose when I switch?",
     answer:
-      "That's the reviewing clinician's call, and it's made from your intake - which is why disclosing your exact current medication and dose matters. Many providers charge the same price at every dose (welludr, altRx, DirectMeds, embody), so a higher continuation dose doesn't cost more at those programs. Never adjust your own dose during a switch without clinical guidance.",
+      "That's the reviewing clinician's call, and it's made from your intake - which is why disclosing your exact current medication and dose matters. Many providers charge the same price at every dose (welludr, altRx, embody), so a higher continuation dose doesn't cost more at those programs. Never adjust your own dose during a switch without clinical guidance.",
   },
   {
     question: "What about switching from Zepbound or Mounjaro?",
@@ -282,7 +282,7 @@ export default async function SwitchFromOzempicPage() {
             deviated from them. Compounded programs dose in the same molecule but their clinician sets
             your continuation dose individually - being mid-ladder on the brand doesn&rsquo;t
             guarantee the same rung on the new program. Several providers charge the same price at
-            every dose (welludr, altRx, DirectMeds, embody), so a higher continuation dose
+            every dose (welludr, altRx, embody), so a higher continuation dose
             doesn&rsquo;t have to cost more.
           </p>
         </section>
@@ -371,7 +371,7 @@ export default async function SwitchFromOzempicPage() {
                   [
                     "Price at YOUR dose, not the headline",
                     "Switchers often arrive mid-titration; per-dose pricing can beat the advertised rate out of you.",
-                    "Flat at every dose: welludr, altRx, DirectMeds, embody",
+                    "Flat at every dose: welludr, altRx, embody",
                   ],
                 ].map(([check, why, who], i) => (
                   <tr key={i} className="border-b border-gray-100 align-top last:border-0">

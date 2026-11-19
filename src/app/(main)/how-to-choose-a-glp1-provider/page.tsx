@@ -75,7 +75,7 @@ const CHECKLIST: { title: string; check: string; verify: string; redFlag: string
   {
     title: "What happens to the price when your dose goes up",
     check: "GLP-1 treatment titrates upward over several months. Providers that price per dose quote the starter dose and re-bill you exactly when you are most committed.",
-    verify: "Ask one question: \"At my maintenance dose, what do I pay?\" altRx, welludr, TrimRx, DirectMeds, embody, HealthRx and Medvi all state a flat price at every dose.",
+    verify: "Ask one question: \"At my maintenance dose, what do I pay?\" altRx, welludr, TrimRx, embody and Medvi state a flat price at every dose. DirectMeds prices by form ($249 sublingual, $297 injections), and HealthRx lists a monthly plan price without a dose claim.",
     redFlag: "\"From $X\" with no maintenance-dose figure anywhere on the site. Ask what you pay at your maintenance dose.",
   },
   {
@@ -230,7 +230,7 @@ const PATTERNS: { title: string; body: string }[] = [
   },
   {
     title: "Flat-dose pricing is common but not universal",
-    body: "Eight of the ten - altRx, welludr, TrimRx, DirectMeds, embody, HealthRx, Medvi and Sprout - state one price at every dose. Ro prices medication separately from its membership, and SHED publishes starting rates without a single every-dose figure in the material we reviewed. Because treatment titrates upward, the maintenance-dose price is the one to ask for.",
+    body: "Six of the ten - altRx, welludr, TrimRx, embody, Medvi and Sprout - state one price at every dose. DirectMeds prices by form ($249 sublingual, $297 injections), and HealthRx lists a monthly plan price. Ro prices medication separately from its membership, and SHED publishes starting rates without a single every-dose figure in the material we reviewed. Because treatment titrates upward, the maintenance-dose price is the one to ask for.",
   },
   {
     title: "Pharmacy transparency varies more than clinician claims do",

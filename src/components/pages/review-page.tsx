@@ -169,7 +169,7 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   directmeds: {
     title: "DirectMeds Reviews 2026: Is It Legit? Cost & Verdict",
     description:
-      "DirectMeds reviews: {prices} flat at every dose, injections or drops, free 1-2 day shipping. Is it legit?",
+      "DirectMeds reviews: {prices} by form (sublingual or injection), free 1-2 day shipping. Is it legit?",
   },
   wellmedr: {
     // Rebranded Oct 2026; the old name stays in the title so searches for
