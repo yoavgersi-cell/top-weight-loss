@@ -2116,7 +2116,7 @@ export const articles: Article[] = [
     category: "Guide",
     readTime: "9 min read",
     publishedAt: "2026-08-30",
-    updatedAt: "2026-10-25",
+    updatedAt: "2026-11-09",
     heroColor: "#EDF2F8",
     author: "TopWeightLoss Team",
     keyTakeaways: [

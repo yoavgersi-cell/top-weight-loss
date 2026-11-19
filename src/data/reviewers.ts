@@ -1325,6 +1325,7 @@ export const EXTRA_PAGE_REVIEWERS: Record<string, { slug: string; reviewedAt?: s
   "/weight-loss/articles/is-wellmedr-legit": [{ slug: "buddhini-dolapihilla", reviewedAt: "2026-11-10", lead: true }],
   "/weight-loss": [{ slug: "buddhini-dolapihilla", reviewedAt: "2026-11-12", lead: true }],
   "/weight-loss/reviews/eden": [{ slug: "buddhini-dolapihilla", reviewedAt: "2026-11-15", lead: true }],
+  "/weight-loss/reviews/wellmedr": [{ slug: "buddhini-dolapihilla", reviewedAt: "2026-11-19", lead: true }],
 };
 
 export function getExtraPageReviewers(path: string): (Reviewer & { reviewedAt?: string; lead?: boolean })[] {

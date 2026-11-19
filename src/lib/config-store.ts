@@ -647,7 +647,7 @@ const defaultReviews: ReviewData[] = [
   {
     slug: "wellmedr",
     providerId: "wellmedr",
-    updatedAt: "2026-09-14",
+    updatedAt: "2026-11-19",
     shortSummary: "Telehealth GLP-1 weight-loss program used by 1,000,000+ patients - compounded semaglutide from $41/mo and tirzepatide from $71/mo, plus brand-name options - with board-certified specialists and a weight-loss warranty.",
     reviewIntro: "welludr is a telehealth weight-loss platform whose GLP-1 medications have been used by 1,000,000+ patients. It offers compounded GLP-1 (semaglutide) from $41/month and compounded GLP-1/GIP (tirzepatide) from $71/month - both shipped every 4 weeks at the same price no matter your dose - plus brand-name Ozempic and Zepbound for anyone who wants them. Board-certified specialists tailor your plan, treatment is 100% online with no office visit, and a Medical Weight-Care Coach supports you the whole way. It's backed by a weight-loss warranty, and there's a standing offer to lock in $200 off every month - or $41/mo on a 12-month plan, for life. The realistic caveats are pace and commitment: standard delivery runs 3-5 business days rather than the 1-2 days you get from DirectMeds, and the headline $41/month is tied to a 12-month plan.",
     keyFeatures: [
@@ -695,7 +695,7 @@ const defaultReviews: ReviewData[] = [
         cadence: "Every 4 weeks",
         price: "$41",
         unit: "/month",
-        highlights: ["Proven & steady - recommended for most", "Same price regardless of dosage"],
+        highlights: ["Same price regardless of dosage", "Starting dose and increases set by the clinician"],
       },
       {
         name: "GLP-1 + GIP",
@@ -703,7 +703,7 @@ const defaultReviews: ReviewData[] = [
         cadence: "Every 4 weeks",
         price: "$71",
         unit: "/month",
-        highlights: ["Most powerful option - stronger appetite control", "Cancel or change anytime"],
+        highlights: ["One medicine acting at both GIP and GLP-1 receptors", "Cancel or change anytime"],
       },
       {
         name: "Ozempic",
@@ -716,6 +716,39 @@ const defaultReviews: ReviewData[] = [
         medication: "Brand-name tirzepatide injection",
         price: "$1,599",
         unit: "/month",
+      },
+    ],
+    // Nov 19, 2026: three sections added at the medical reviewer's request
+    // (Dr. B. Dolapihilla): the regulatory status of each medication stated
+    // (compounded = not FDA-approved; brand Ozempic off-label for weight loss),
+    // tirzepatide clarified as one dual-agonist molecule, clinical eligibility
+    // placed before suitability, and adverse effects with titration, the
+    // contraceptive interaction and the warranty/plan framing. Sources: the
+    // Ozempic label (DailyMed, revised 5/2026), the Zepbound label (revised
+    // 8/2026) and the Wegovy label (revised 6/2026), all read Nov 19, 2026.
+    sections: [
+      {
+        heading: "Is welludr's GLP-1 treatment FDA-approved, and what do \"compounded\" and \"off-label\" mean here?",
+        body: `<p>welludr offers two kinds of medication, and their regulatory status is not the same - worth knowing before you choose a plan.</p>
+<p><strong>The compounded medicines are not FDA-approved.</strong> welludr's headline options - compounded semaglutide from $41/month and compounded tirzepatide from $71/month - are prepared by a compounding pharmacy. Compounded drugs are not reviewed by the FDA for safety, effectiveness or quality before they are sold. That is true of every compounded GLP-1 provider we rank, welludr included; it is a feature of compounding, not a mark against this provider specifically.</p>
+<p><strong>The brand-name options are different, and so is their labelling.</strong> welludr also lists brand-name Ozempic and Zepbound. Zepbound (tirzepatide) is FDA-approved for chronic weight management in adults with obesity, or overweight with at least one weight-related condition (<a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=487cd7e7-434c-4925-99fa-aa80b1cc776b" target="_blank" rel="noopener noreferrer">Zepbound prescribing information</a>, revised August 2026). Ozempic (semaglutide) is approved to improve blood sugar in adults with type 2 diabetes and to reduce certain cardiovascular and kidney risks in that group - <em>not</em> for weight loss (<a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=adec4fd2-6858-4c99-91d4-531f5f2a2d79" target="_blank" rel="noopener noreferrer">Ozempic prescribing information</a>, revised May 2026). Prescribing Ozempic for weight loss is therefore an <strong>off-label</strong> use: legal and common, but a use the FDA has not evaluated for that purpose. The FDA-approved semaglutide for weight management is Wegovy, which welludr does not list.</p>
+<p><strong>Tirzepatide is one medicine, not two.</strong> The pricing page labels tirzepatide "GLP-1 + GIP". That describes the two receptor targets, not two separate drugs mixed together. Tirzepatide is a single molecule that binds to and activates both the GIP and the GLP-1 receptors (<a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=487cd7e7-434c-4925-99fa-aa80b1cc776b" target="_blank" rel="noopener noreferrer">Zepbound label</a>, section 12.1, read November 19, 2026).</p>`,
+      },
+      {
+        heading: "Who is eligible for welludr's program?",
+        body: `<p>welludr's plan begins with a review by a licensed provider who decides whether a GLP-1 medicine is appropriate and at what starting dose. That clinical decision - not the price or the convenience - is the right starting point for whether the service suits you.</p>
+<p>Eligibility is a clinical judgment, not a single number. It depends on your body mass index, your medical history, any weight-related conditions, the contraindications set out below, the other medicines you take, and an individual weighing of risks and benefits. For reference, the FDA-approved weight-management products these medicines are modelled on are indicated for adults with obesity (a BMI of 30 kg/m² or more) or with overweight (a BMI of 27 kg/m² or more) together with at least one weight-related condition such as high blood pressure, type 2 diabetes or abnormal cholesterol (<a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee06186f-2aa3-4990-a760-757579d8f77b" target="_blank" rel="noopener noreferrer">Wegovy prescribing information</a>, revised June 2026; <a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=487cd7e7-434c-4925-99fa-aa80b1cc776b" target="_blank" rel="noopener noreferrer">Zepbound prescribing information</a>, revised August 2026). Meeting a BMI threshold does not by itself make treatment appropriate, and falling just outside one does not by itself rule it out; that is what the provider's review is for. Our <a href="/weight-loss/glp1-bmi-calculator">BMI and eligibility check</a> shows where you sit against the label criteria before you start.</p>
+<p><strong>Two commercial terms worth reading plainly.</strong> welludr's weight-loss warranty is a refund or guarantee policy set by the seller. It is a commercial promise about your money, not clinical evidence that the medication will produce a given amount of weight loss. And the $41/month 12-month plan is a pricing commitment, not a statement that obesity treatment lasts a year: how long you stay on a GLP-1 is a clinical decision you make with your provider, and it can be shorter or longer than the billing term.</p>`,
+      },
+      {
+        heading: "Side effects, exclusions and when to seek care",
+        body: `<p>Compounded semaglutide and tirzepatide are not FDA-approved, so there is no label for the exact product welludr ships. The approved products' labels are the best available description of what to expect, and welludr's provider should go through them with you.</p>
+<p><strong>Common effects.</strong> Nausea, vomiting, diarrhea, constipation and abdominal discomfort are the most frequently reported reactions with both drugs, most often when starting or after a dose increase.</p>
+<p><strong>Dose, titration and reading a compounded vial.</strong> GLP-1 doses are started low and raised gradually. A higher dose is not automatically better: whether you move up depends on how well you tolerate the current dose and how you respond, decided with your provider, not on preference. welludr charges the same price at every dose, which is a billing policy and is not a reason to escalate faster. Because compounded medicine comes in a vial rather than a pre-set pen, the dose is drawn up by units as instructed, and getting the units right matters - the FDA has reported dosing errors with compounded GLP-1s. See our guide to <a href="/weight-loss/articles/compounded-semaglutide-units-to-mg">reading a compounded vial</a>.</p>
+<p><strong>Serious complications, and when to seek care.</strong> Acute pancreatitis; gallbladder disease, including gallstones; dehydration-associated acute kidney injury after prolonged vomiting or diarrhea; and severe gastrointestinal reactions. Persistent severe abdominal pain, an inability to keep fluids down, or signs of an allergic reaction (swelling of the face, lips or throat, trouble breathing) need urgent medical assessment.</p>
+<p><strong>Boxed warning and contraindications.</strong> Both semaglutide and tirzepatide carry a boxed warning for thyroid C-cell tumors, which were observed in rodents; whether this applies to humans is unknown. They are contraindicated in anyone with a personal or family history of medullary thyroid carcinoma (MTC) or Multiple Endocrine Neoplasia syndrome type 2 (MEN 2), and in anyone who has had a serious allergic reaction to the drug.</p>
+<p><strong>Pregnancy and a contraceptive interaction to flag.</strong> These medicines are not for use in pregnancy or when planning pregnancy; the Wegovy label advises stopping semaglutide at least two months before a planned pregnancy. One interaction is easy to miss: tirzepatide can reduce the effectiveness of oral hormonal contraceptives through delayed gastric emptying, so the <a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=487cd7e7-434c-4925-99fa-aa80b1cc776b" target="_blank" rel="noopener noreferrer">Zepbound label</a> advises switching to a non-oral method or adding a barrier method for four weeks after starting and for four weeks after each dose increase. Severe gastroparesis (these medicines are not recommended) and concurrent glucose-lowering medicines such as insulin or a sulfonylurea (doses may need review because of the risk of low blood sugar) also need specific clinical consideration.</p>
+<p>Sources: <a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=adec4fd2-6858-4c99-91d4-531f5f2a2d79" target="_blank" rel="noopener noreferrer">Ozempic label</a> (revised May 2026), <a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee06186f-2aa3-4990-a760-757579d8f77b" target="_blank" rel="noopener noreferrer">Wegovy label</a> (revised June 2026) and <a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=487cd7e7-434c-4925-99fa-aa80b1cc776b" target="_blank" rel="noopener noreferrer">Zepbound label</a> (revised August 2026), all read November 19, 2026. This section is general information from the labels, not medical advice.</p>`,
       },
     ],
   },
