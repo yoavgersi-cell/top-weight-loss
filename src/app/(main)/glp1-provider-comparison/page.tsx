@@ -13,6 +13,7 @@ import { MedicalSources } from "@/components/medical-sources";
 import { RedditMark, RedditThreadCarousel } from "@/components/reddit-community";
 import { getConfig } from "@/lib/config-store";
 import { PRICE_INDEX_VERIFIED } from "@/lib/price-index";
+import { FdaSafetyUpdate } from "@/components/fda-safety-update";
 
 // ───── GLP-1 Telehealth Providers Compared ─────
 // Evidence-led comparison of the eight weight-loss partners: verified pricing
@@ -587,6 +588,10 @@ export default async function Glp1ProviderComparisonPage() {
             <a href="#methodology" className="font-semibold text-[#0C4B75] hover:underline">methodology section</a> below.
           </p>
         </section>
+
+        {/* FDA NAION safety update (Nov 9, 2026), once, directly above the
+            provider table (operator request, Nov 18, 2026). */}
+        <FdaSafetyUpdate className="mb-12" />
 
         {/* Section 2: table */}
         <section className="mb-12">
