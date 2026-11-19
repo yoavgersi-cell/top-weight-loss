@@ -19,8 +19,13 @@ Load `house-rules` first. Outputs go to `ops/briefs/`.
 ## 1a. Coverage map
 `coverage-map.md` in this folder is the operator's 14-folder SEO map with the owner and known gap for each. Every weekly review ends with a one-line-per-folder status (checked / not measured / gap unchanged) so nothing is silently skipped. Update the gap column when something ships.
 
+## 1b. Content cadence (operator rule, 2026-11-19)
+**One to two articles a week, total, across all six verticals combined** — not one to two per vertical. Rotate so weight loss, ED, TRT, HRT, online therapy and hair loss all get turns over a month; weight loss does not monopolise. Track the rotation in `ops/briefs/content-calendar.md` (week, vertical, slug, the edge, status) and pick the next vertical from demand and gap, not blind round-robin.
+**Value bar — the gate before any article is commissioned.** Write it only if it clears at least one verifiable edge no ranking competitor has: a dated verified price/comparison table, a time-point or unit correction, a counted complaint or outcome table, a primary-source quote (FDA letter, label, guideline) read and dated, or a calculation (cost per usable dose). If a candidate cannot clear the bar this week, **skip it and ship nothing rather than filler** — one strong page beats two weak ones. State the specific edge in the brief; if Atlas cannot verify it, the article does not proceed.
+Each Monday Cleo proposes the week's one or two candidates (vertical, query, the edge, why now) from the weekly review and the trend research; the operator picks; the pipeline runs. A refresh of an existing page counts as the week's article when its data has aged or its intent shifted.
+
 ## 2. Scoring an opportunity
-Score each candidate 1 to 5 on: demand (impressions or clear intent), position (4 to 15 is the sweet spot), authority fit (do we already rank for neighbours?), data edge (can Atlas get primary numbers competitors lack?), commercial fit (does it lead to a provider decision without forcing it?). Rank by the sum; write up the top three only.
+Score each candidate 1 to 5 on: demand (impressions or clear intent), position (4 to 15 is the sweet spot), authority fit (do we already rank for neighbours?), data edge (can Atlas get primary numbers competitors lack?), commercial fit (does it lead to a provider decision without forcing it?), **and the vertical's turn in the rotation**. Rank by the sum; write up the top two or three only.
 
 ## 3. Weekly review template (`ops/briefs/YYYY-MM-DD-weekly-review.md`)
 ```
