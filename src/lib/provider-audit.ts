@@ -64,15 +64,15 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
   },
   "weight-loss:healthrx": {
     rows: [
-      { label: "Semaglutide price", value: "From $97/month on the 12-month plan" },
-      { label: "Tirzepatide price", value: "From $177/month on the 12-month plan" },
+      { label: "Semaglutide price", value: "$125/month on the monthly plan after a $39 first month" },
+      { label: "Tirzepatide price", value: "$199/month on the monthly plan after a $39 first month" },
       { label: "Shipping", value: "Free overnight cold-chain delivery" },
       { label: "Certification", value: "LegitScript-certified" },
     ],
   },
   "weight-loss:directmeds": {
     rows: [
-      { label: "Pricing", value: "$147/month flat - semaglutide and tirzepatide" },
+      { label: "Pricing", value: "$249/month sublingual semaglutide; $297/month injections" },
       { label: "Treatment formats", value: "Injections or needle-free oral drops" },
       { label: "Shipping", value: "Free 1-2 day" },
       { label: "Membership fee", value: "None" },

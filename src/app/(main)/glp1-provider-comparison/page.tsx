@@ -106,15 +106,15 @@ const ROWS: Row[] = [
     id: "directmeds",
     name: "DirectMeds",
     medications: "Compounded semaglutide and tirzepatide; injections or sublingual drops",
-    entry: "$147",
-    entryNote: "either molecule, either format, every dose",
-    after: "Same at every dose",
+    entry: "$249",
+    entryNote: "sublingual semaglutide; injections $297; no tirzepatide price published",
+    after: "6- and 12-month bulk plans offered, not priced",
     membership: "None",
     shipping: "Free 1-2 day",
     support: "Telemedicine visit included; no coaching layer",
-    advantage: "One flat price; needle-free option at no premium",
+    advantage: "Needle-free sublingual option; no subscriptions",
     limitation: "No coaching; pharmacy not named",
-    cta: "Check DirectMeds' flat pricing",
+    cta: "Check DirectMeds' pricing",
   },
   {
     id: "medvi",
@@ -298,7 +298,7 @@ const SECTIONS: Section[] = [
     ),
     pricing: (
       <>
-        <strong className="text-[#191919]">$147 a month for either molecule in either format, the same at every dose</strong>, verified October 16, 2026. Free one-to-two-day shipping. No membership, no hidden fees, cancel anytime. The needle-free drops cost the same $147, which no other provider here matches (Medvi&rsquo;s tablets are $249).
+        <strong className="text-[#191919]">From $249 a month for sublingual semaglutide, $297 a month for injections</strong>, read November 18, 2026; no tirzepatide price is published. No subscriptions; 6- and 12-month bulk plans are offered but not priced on the page. Free one-to-two-day shipping and no membership were stated when we verified October 16, 2026. Medvi&rsquo;s tablets are also $249.
       </>
     ),
     support:
@@ -701,7 +701,7 @@ export default async function Glp1ProviderComparisonPage() {
         <section className="mb-12">
           <H2 id="in-depth">In-depth: the eight providers</H2>
           <p className="mb-2 text-[14px] text-gray-500">
-            Ordered by model so that neighbours contrast: flat-price compounded providers first (welludr, embody, Eden, DirectMeds), then the care-led
+            Ordered by model so that neighbours contrast: flat-price compounded providers first (welludr, embody, Eden), then DirectMeds with its two price tiers, then the care-led
             ones, then the brand-name shelf, then membership-plus-medication. Not a ranking.
           </p>
           <div className="space-y-8">
@@ -785,7 +785,7 @@ export default async function Glp1ProviderComparisonPage() {
         <section className="mb-12">
           <H2 id="what-reviews-reveal">What Reddit and the providers&rsquo; own terms reveal about GLP-1 telehealth</H2>
           <p className="mb-4">Read across all eight, the Reddit threads and the published terms point the same way more often than not, and the agreements are the useful part.</p>
-          <p className="mb-4"><strong className="text-[#191919]">Pricing transparency.</strong> The complaint that recurs most is not a high price but a surprise: a cost breakdown users ask each other to explain (Ro), a promotional tier billed differently from the one advertised (altRx), and the ongoing monthly cost named as the main caveat even after a good year (Medvi, Ro). The providers with flat, dose-independent pricing and one bill (DirectMeds, Eden, embody, welludr on its plan) leave less room for this kind of surprise.</p>
+          <p className="mb-4"><strong className="text-[#191919]">Pricing transparency.</strong> The complaint that recurs most is not a high price but a surprise: a cost breakdown users ask each other to explain (Ro), a promotional tier billed differently from the one advertised (altRx), and the ongoing monthly cost named as the main caveat even after a good year (Medvi, Ro). The providers with flat, dose-independent pricing and one bill (Eden, embody, welludr on its plan) leave less room for this kind of surprise.</p>
           <p className="mb-4"><strong className="text-[#191919]">Shipping reliability.</strong> Every provider makes a delivery promise, and the Reddit accounts show the range around it: one embody user had a vial within a week and another waited two weeks between approval and shipment; one altRx user had vials the morning after signing up while another in the same thread was still waiting for a prescription 24 hours in. The honest reading is that transit is fast and pipeline time before dispatch is where the variance lives. The shipping column above sets each provider&rsquo;s published promise side by side.</p>
           <p className="mb-4"><strong className="text-[#191919]">Customer service.</strong> Reddit&rsquo;s recurring note on embody is that it runs on &ldquo;autopilot&rdquo;, fine &ldquo;if you don&rsquo;t need to actually talk to anyone&rdquo;, with one user believing support replies were AI-generated; Ro&rsquo;s follow-up is message-based. Medvi, welludr and TrimRx build human contact into the price (video visits, a coach, unlimited check-ins), and Eden lists 24/7 human support.</p>
           <p className="mb-4"><strong className="text-[#191919]">Medical support.</strong> Medvi is the clear outlier on clinical contact: video visits, a dietician and coaching are included in the price. TrimRx&rsquo;s check-ins and welludr&rsquo;s coach are the next tier. embody&rsquo;s and DirectMeds&rsquo; models are visit-plus-portal. Ro&rsquo;s is clinician-reviewed but message-only. None of this says anything about results; the Reddit threads with the biggest numbers (Ro, Medvi) and the one with the smallest (welludr, one pound in eight weeks) are about the medication and the person, not the provider.</p>

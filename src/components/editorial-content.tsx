@@ -1,5 +1,10 @@
 import Link from "next/link";
 import { imgDims } from "@/lib/image-dims";
+import { PRICE_INDEX } from "@/lib/price-index";
+
+/** Headline monthly price for a provider and drug, read from the verified price index. */
+const indexPrice = (id: string, drug: "semaglutide" | "tirzepatide") =>
+  PRICE_INDEX.find((r) => r.providerId === id)?.[drug]?.price ?? "Not published";
 
 const tirzVsSemaRows: [string, string, string][] = [
   ["Drug class", "Dual GIP/GLP-1 receptor agonist", "GLP-1 receptor agonist"],
@@ -104,8 +109,8 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
               ["embody", "$49/mo", "$99/mo", "Flat monthly, no commitment"],
               ["altRx", "$89/mo", "$149/mo", "Flat at every dose, BNPL"],
               ["Medvi", "$99/mo promo (reg. $199)", "$166/mo promo (reg. $299)", "All-inclusive + dietician"],
-              ["HealthRx", "from $97/mo", "from $177/mo", "12-month plan for best rate"],
-              ["DirectMeds", "$147/mo", "$147/mo", "Flat, needle-free option"],
+              ["HealthRx", `${indexPrice("healthrx", "semaglutide")}/mo`, `${indexPrice("healthrx", "tirzepatide")}/mo`, "Monthly plan, $39 first month"],
+              ["DirectMeds", `${indexPrice("directmeds", "semaglutide")}/mo (sublingual)`, indexPrice("directmeds", "tirzepatide"), "No subscriptions; injections $297/mo"],
               ["Sprout", "from $99/mo", "from $149/mo", "12-month plan for best rate; monthly $149/$199"],
               ["trimrx", "$149/mo, same at every dose", "$259/mo", "No contract"],
               ["SHED", "$199/mo", "$299/mo", "Money-back results guarantee"],
