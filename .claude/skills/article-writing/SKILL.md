@@ -19,6 +19,18 @@ Load `house-rules` first. Inputs: a brief (`ops/briefs/`) and a research file (`
 
 Length follows the question: 1,800 to 3,500 words is typical. Short sentences, US English, no em-dashes, no hype adjectives, "not FDA-approved" wherever compounded products appear.
 
+## 1a. Sound human, not AI-generated
+Detectors are unreliable and Google ranks helpfulness, not origin, so the goal is prose a knowledgeable editor wrote, not a passing score. Banned phrases and patterns, the tells readers and detectors both flag:
+- Filler transitions and openers: "In today's world", "When it comes to", "It's important to note", "It's worth noting", "Keep in mind", "Moreover", "Furthermore", "In conclusion", "Ultimately", "That said" as a crutch.
+- Hollow intensifiers: "plays a crucial/vital/key role", "a wide range of", "a variety of", "navigate the landscape", "game-changer", "robust", "seamless", "delve", "unlock", "empower".
+- Hedge-and-balance clichés: "not only… but also", "X isn't just about A, it's about B", "whether you're a… or a…".
+- Rule-of-three on autopilot: three parallel adjectives or clauses in a row. Vary it; two is often enough, sometimes one.
+- Empty summary sentences that restate the heading or the paragraph above in other words. Cut them.
+- Uniform rhythm: every paragraph three sentences, every sentence the same length. Mix a 4-word sentence with a 25-word one.
+- Listicle throat-clearing: a sentence that previews the list that immediately follows.
+
+Do instead: lead each paragraph with the concrete fact or number, not a wind-up. Use specific nouns and real figures from the research file. Where a sentence could open any article on any topic, delete or replace it with something only this page can say. One concrete, checkable detail beats three abstract ones. Read the draft aloud in your head: anywhere it sounds like a brochure, rewrite it plainer.
+
 ## 2. File templates
 **Weight loss** (`src/data/<slug>.ts`, registered in `src/data/articles.ts`):
 ```ts

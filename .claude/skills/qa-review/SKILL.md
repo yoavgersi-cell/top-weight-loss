@@ -14,7 +14,8 @@ Check out the PR branch, build, serve (see `shipping`), then:
 3. **Rendering.** Your own screenshots at 1440 and 390: masthead, first table, provider block, FAQ section. Tables must scroll or wrap on the phone, never overflow the page.
 4. **SEO and schema.** `curl` the page and check: one `<h1>`, title ≤60, description ≤160, no heading skips, `?` headings present, JSON-LD parses, Article has `image`, `datePublished`, `dateModified`, author `@type: Organization`, FAQPage present, canonical absolute, internal links return 200.
 5. **Audit.** `scripts/seo-audit.mjs` PASS on the branch build.
-6. **Diff hygiene.** Only the files the change needs; no stray scratch files; `image-dims.json` regenerated if images were added.
+6. **AI-tells pass.** Read the new prose against `article-writing` §1a. `grep -nE -i 'in today|when it comes to|important to note|worth noting|keep in mind|plays a (crucial|vital|key) role|a wide range of|not only.*but also|game.?changer|seamless|robust|delve|unlock|navigate the landscape' <article file>` must return nothing. Also flag by eye: empty summary sentences, three-in-a-row parallel clauses, uniform paragraph rhythm. Any hit is a blocker with the line and a plainer rewrite. This is a style gate, not a detector score.
+7. **Diff hygiene.** Only the files the change needs; no stray scratch files; `image-dims.json` regenerated if images were added.
 
 Verdict file:
 ```
