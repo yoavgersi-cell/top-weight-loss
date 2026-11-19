@@ -32,3 +32,6 @@ FDA Empower letter, FDA 503B press release, FDA policy page (B12 example, 10%, f
 Scratchpad: a649-desk.png, a649-phone.png, a649-phone-table.png (1440 and 390; no page overflow).
 
 ## Audit: PASS (2 pre-existing warns, 471 pages). tsc clean, build 0 errors. SEO: one H1, title 57, description 159, canonical absolute, Article with image/dates, author Organization, FAQPage present, no heading skips, internal links all 200.
+
+## Re-check 2026-11-19 (Felix)
+Confirmed on branch tip e8e5b1d: all four blocker edits present, grep for the removed sentences returns nothing, em-dash count 0. Ready for operator. Merge after #653, before or with #656 (#656 needs this PR's price-index).

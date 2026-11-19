@@ -26,3 +26,6 @@ FDA DSC (full text), DailyMed Wegovy and Zepbound SPL XML: 3 opened / 2 match, 1
 Scratchpad: b653-semaglutide-phone.png, b653-semaglutide-desk.png, b653-reviews-embody-*.png, b653-glp1-provider-comparison-*.png.
 
 ## Audit: PASS (0 fails, 2 pre-existing warns, 470 pages). tsc clean, build 0 errors.
+
+## Re-check 2026-11-19 (Felix)
+Confirmed on branch tip 09b9be9: comparator wording ("comparator-treated patients (placebo or a non-GLP-1 RA ...)", "person-years") and "unless the benefits of treatment clearly outweigh the risk" are both present. Ready for operator.
