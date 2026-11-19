@@ -371,7 +371,7 @@ const defaultReviews: ReviewData[] = [
     ],
     cons: [
       "Mid-tier pricing: $149 semaglutide / $259 tirzepatide vs $41-$89 at welludr, embody and altRx",
-      "Tirzepatide at $259 is undercut by DirectMeds ($147), embody ($99) and welludr ($71)",
+      "Tirzepatide at $259 is undercut by altRx ($149), embody ($99) and welludr ($71)",
       "Compounded only - no brand-name Ozempic/Wegovy/Zepbound option",
       "No formal coaching or dietician layer - support is provider check-ins"
     ],
@@ -448,7 +448,7 @@ const defaultReviews: ReviewData[] = [
       "100% online visit and checkout with home delivery"
     ],
     cons: [
-      "Highest compounded pricing in our ranking - $199/mo semaglutide vs $41-$147 elsewhere",
+      "Compounded pricing at the top of our ranking - $199/mo semaglutide vs $41-$149 at most providers",
       "The money-back guarantee has conditions (5% in 120 days - check current terms)",
       "Compounded only - no brand-name Ozempic/Wegovy/Zepbound shelf"
     ],
@@ -1315,16 +1315,16 @@ const defaultReviews: ReviewData[] = [
     slug: "directmeds",
     providerId: "directmeds",
     updatedAt: "2026-09-14",
-    shortSummary: "Pharmacy-direct GLP-1 treatment at $147/month flat - semaglutide or tirzepatide, injections or sublingual drops - with free 1-2 day shipping and no membership.",
-    reviewIntro: "DirectMeds is a pharmacy-direct telehealth program with 250,000+ customers, offering doctor-prescribed GLP-1 weight loss treatment starting at $147/month. You can get compounded semaglutide or tirzepatide as weekly injections - or, if you'd rather skip needles, as sublingual oral drops at the same price. It's 100% online with the telemedicine visit and prescription included, no insurance required, no hidden fees, and no monthly membership. Medication ships free and arrives in 1-2 days, and you can cancel anytime. The model is deliberately stripped down - no coaching program, no brand-name shelf - just the visit, the medication, and fast delivery at one flat price.",
+    shortSummary: "Pharmacy-direct GLP-1 treatment from $249/month for sublingual semaglutide ($297/month for injections), with free 1-2 day shipping and no subscriptions.",
+    reviewIntro: "DirectMeds is a pharmacy-direct telehealth program with 250,000+ customers, offering doctor-prescribed GLP-1 weight loss treatment. Its page lists $249/month for sublingual semaglutide and $297/month for injections (prices read November 18, 2026). It's 100% online with the telemedicine visit and prescription included, no insurance required, no hidden fees, and no monthly membership. Medication ships free and arrives in 1-2 days, and you can cancel anytime. The model is deliberately stripped down - no coaching program, no brand-name shelf - just the visit, the medication, and fast delivery.",
     keyFeatures: [
-      "Doctor-prescribed GLP-1 starting at $147/month",
+      "Doctor-prescribed GLP-1 from $249/month (sublingual semaglutide); injections $297/month",
       "Injections or needle-free sublingual oral drops",
       "Compounded semaglutide and tirzepatide",
       "100% online - telemedicine visit & prescription included",
-      "Free 1-2 day shipping; same price at every dose"
+      "Free 1-2 day shipping; no subscriptions"
     ],
-    pricingSummary: "DirectMeds starts at $147/month for doctor-prescribed GLP-1 treatment - compounded semaglutide or tirzepatide, available as weekly injections or sublingual oral drops. It's the same price at every dose (no surprise increases as you titrate up), with no insurance required, no hidden fees, and no monthly membership. Free shipping arrives in 1-2 days, and you can cancel anytime.",
+    pricingSummary: "DirectMeds' page says plans start at $249/month for sublingual semaglutide and $297/month for injections (read November 18, 2026). The injection price is not tied to a named medication, so we list no tirzepatide price. There are no subscriptions, and 6- and 12-month bulk plans are offered but not priced on the page. No insurance is required. Free shipping arrives in 1-2 days, and you can cancel anytime.",
     treatmentOptions: [
       "Compounded semaglutide",
       "Compounded tirzepatide",
@@ -1332,25 +1332,25 @@ const defaultReviews: ReviewData[] = [
       "Ongoing treatment monitoring"
     ],
     pros: [
-      "$147/month flat for semaglutide or tirzepatide - same price at every dose",
-      "Needle-free option at no premium: sublingual drops cost the same $147",
+      "Needle-free option: sublingual semaglutide from $249/month",
+      "No subscriptions; bulk 6- and 12-month plans offered",
       "Free 1-2 day shipping; telemedicine visit and prescription included",
       "No membership, no hidden fees, cancel anytime"
     ],
     cons: [
       "No coaching or dietician layer - it's a medication-and-visit service",
       "Compounded medications only (no brand-name Ozempic/Wegovy/Zepbound)",
-      "Cheaper tirzepatide exists elsewhere (welludr from $71, embody $99)",
+      "No tirzepatide price is published, and cheaper semaglutide exists elsewhere (welludr from $41, embody $49)",
       "Availability may vary by state"
     ],
     bestFor: [
       "People who want fast pharmacy-direct fulfillment (1-2 days)",
       "Anyone who prefers needle-free sublingual drops over injections",
-      "Those who want one flat price with no membership on top"
+      "Those who want no subscription or membership on top"
     ],
-    finalVerdict: "DirectMeds keeps the promise it actually makes: $147/month flat for doctor-prescribed semaglutide or tirzepatide - injections or needle-free sublingual drops at the same price - with the telemedicine visit included, free 1-2 day shipping, and no membership to cancel your way out of. What it deliberately doesn't offer is a program - no coaching, no dietician, no brand-name shelf - and cheaper tirzepatide exists (welludr from $71, embody at $99). Pick DirectMeds for the drops format, the speed, and the flat simplicity; pick a program provider if you want support built around the medication.",
+    finalVerdict: "DirectMeds keeps the promise it actually makes: doctor-prescribed GLP-1 treatment from $249/month for sublingual semaglutide ($297/month for injections), with the telemedicine visit included, free 1-2 day shipping, and no subscription to cancel your way out of. What it deliberately doesn't offer is a program - no coaching, no dietician, no brand-name shelf - and cheaper semaglutide exists (welludr from $41, embody at $49). Pick DirectMeds for the drops format and the speed; pick a program provider if you want support built around the medication.",
     trustBadges: [
-      "Same price, every dose",
+      "No subscriptions",
       "No hidden fees or membership",
       "Free 1-2 day shipping",
       "Cancel anytime",
@@ -1358,19 +1358,19 @@ const defaultReviews: ReviewData[] = [
     pricingPlans: [
       {
         name: "Compounded GLP-1 Injections",
-        medication: "Semaglutide or Tirzepatide",
+        medication: "Medication not named on the price page",
         cadence: "Weekly",
-        price: "$147",
+        price: "$297",
         unit: "/month",
-        highlights: ["Starting price - same at every dose", "Free 1-2 day shipping, no hidden fees"],
+        highlights: ["Price read November 18, 2026", "Free 1-2 day shipping, no hidden fees"],
       },
       {
         name: "Compounded GLP-1 Oral Drops",
-        medication: "Sublingual semaglutide or tirzepatide",
+        medication: "Sublingual semaglutide",
         cadence: "Daily",
-        price: "$147",
+        price: "$249",
         unit: "/month",
-        highlights: ["No needles - sublingual liquid", "Starting price - cancel anytime"],
+        highlights: ["No needles - sublingual liquid", "Plans start at this price - cancel anytime"],
       },
     ],
   },
@@ -1417,19 +1417,19 @@ const defaultReviews: ReviewData[] = [
     slug: "healthrx",
     providerId: "healthrx",
     shortSummary:
-      "A GLP-1 telehealth program with one all-in price - semaglutide from $97/month on a 12-month plan - overnight cold-chain shipping, and LegitScript certification.",
+      "A GLP-1 telehealth program with a $39 first month, then $125/month for semaglutide on its monthly plan, overnight cold-chain shipping, and LegitScript certification.",
     reviewIntro:
-      "HealthRx runs its GLP-1 program on a simple promise: one price with everything in it. An independent US-licensed clinician reviews every request (approval is never automatic), a licensed 503A pharmacy prepares the medication, and it ships overnight in temperature-controlled, lot-tracked packaging - free on every plan. The headline $97/month semaglutide price comes on a 12-month plan, with tirzepatide from $177/month on the same plan. This review covers exactly what's included and who the 12-month model fits.",
+      "HealthRx runs its GLP-1 program on a simple promise: one price with everything in it. An independent US-licensed clinician reviews every request (approval is never automatic), a licensed 503A pharmacy prepares the medication, and it ships overnight in temperature-controlled, lot-tracked packaging - free on every plan. The monthly plan is $39 for the first month, then $125/month for semaglutide or $199/month for tirzepatide until canceled (prices read November 18, 2026). This review covers exactly what's included and who the plan fits.",
     keyFeatures: [
-      "Semaglutide from $97/month (12-month plan)",
-      "Tirzepatide from $177/month (12-month plan)",
+      "Semaglutide $125/month after a $39 first month (monthly plan)",
+      "Tirzepatide $199/month after a $39 first month (monthly plan)",
       "Independent US-licensed clinician reviews every request",
       "Free overnight cold-chain shipping, lot-tracked",
       "Price doesn't change when your dose does",
       "LegitScript certified (cert. 50087439)",
     ],
     pricingSummary:
-      "HealthRx prices its GLP-1 program from $97/month for compounded semaglutide and from $177/month for compounded tirzepatide, both on the 12-month plan. The 6-month plan is $115/month for semaglutide and $195/month for tirzepatide, the 3-month plan $125 and $201, and the monthly plan is $99 for the first month. We haven't confirmed how the 12-month plan is billed or what the monthly plan costs after the first month, so check both at checkout. The price is all-inclusive: medication, the provider consult, overnight cold-chain shipping, dose adjustments (no price change as your dose increases), and ongoing check-ins with the care team. It's cash-pay with no insurance and no prior authorization, and there's no consultation fee or shipping charge. The free 60-second assessment requires no payment to start.",
+      "HealthRx's monthly plan is $39 for the first month, then $125/month for compounded semaglutide or $199/month for compounded tirzepatide, until canceled. Its pages say longer plans have a lower monthly price but do not show the tiers, and the pricing page states \"Prices current as of October 15, 2026\" (read November 18, 2026). Check the plan terms at checkout. The price is all-inclusive: medication, the provider consult, overnight cold-chain shipping, dose adjustments (no price change as your dose increases), and ongoing check-ins with the care team. It's cash-pay with no insurance and no prior authorization, and there's no consultation fee or shipping charge. The free 60-second assessment requires no payment to start.",
     treatmentOptions: [
       "Compounded semaglutide (weekly GLP-1 injection)",
       "Compounded tirzepatide (weekly GLP-1 + GIP injection)",
@@ -1443,31 +1443,31 @@ const defaultReviews: ReviewData[] = [
       "No insurance or prior authorization needed",
     ],
     cons: [
-      "The $97/month headline requires the 12-month plan; the 6- and 3-month plans cost more per month",
+      "The lower monthly rates on longer plans are not shown on its pages, so the cheapest tier cannot be priced",
       "Newer, less-established brand than the big telehealth names",
       "Compounded only - no brand-name Ozempic/Wegovy/Zepbound shelf",
     ],
     bestFor: [
-      "People committed to a full year of treatment",
+      "People who want a monthly plan with a low first month",
       "Anyone who values overnight, temperature-controlled delivery",
       "Cash-pay patients who want one predictable all-in price",
     ],
     finalVerdict:
-      "HealthRx earns a spot on the shortlist for people who've already decided GLP-1 treatment is a year-long commitment - clinically, that's usually the right frame - and want a single 12-month price with genuinely everything included, delivered overnight. If you're still testing the waters, the 12-month commitment behind the $97 rate is the honest sticking point: month-to-month providers like embody or welludr let you start smaller. Confirm current plan terms on HealthRx's site.",
+      "HealthRx earns a spot on the shortlist for people who want one price with everything included, delivered overnight, and a $39 first month to start. The monthly rate is higher than embody or welludr for semaglutide, and the lower longer-plan rates are not shown on its pages. Confirm current plan terms on HealthRx's site.",
     pricingPlans: [
       {
         name: "GLP-1",
         medication: "Compounded Semaglutide",
         cadence: "Weekly injection",
-        price: "from $97/mo",
-        unit: "12-month plan",
+        price: "$125/mo",
+        unit: "monthly plan, $39 first month",
       },
       {
         name: "GLP-1 + GIP",
         medication: "Compounded Tirzepatide",
         cadence: "Weekly injection",
-        price: "from $177/mo",
-        unit: "12-month plan",
+        price: "$199/mo",
+        unit: "monthly plan, $39 first month",
       },
     ],
     howItWorks: [
@@ -3618,21 +3618,21 @@ const healthrxMedviBattle: BattleData = {
   updatedAt: "2026-09-02",
   provider1Id: "medvi",
   provider2Id: "healthrx",
-  title: "HealthRx vs Medvi (2026): $97 vs $99 Semaglutide Compared",
+  title: "HealthRx vs Medvi (2026): $125 vs $99 Semaglutide",
   matchupLabel: "HealthRx vs Medvi",
-  subtitle: "A 12-month plan with overnight shipping vs month-to-month all-inclusive care.",
+  subtitle: "A monthly plan with overnight shipping vs month-to-month all-inclusive care.",
   description:
-    "HealthRx ($97/mo semaglutide on a 12-month plan, overnight shipping) vs Medvi ($99/mo promo all-inclusive, dietician and coaching included). Real numbers, honest verdict.",
+    "HealthRx ($125/mo semaglutide after a $39 first month, overnight shipping) vs Medvi ($99/mo promo all-inclusive, dietician and coaching included). Real numbers, honest verdict.",
   intro:
-    "This is a genuinely close matchup, because the two providers price the same medication in opposite ways. HealthRx gets semaglutide down to $97/month by asking for a 12-month commitment - its 6-month plan is $115/month and its 3-month plan $125 - and backs it with overnight cold-chain shipping and LegitScript certification. Medvi comes within $2 of that at $99/month as a promotional rate (regularly $199) with no prepay at all, and bundles everything in. The right answer depends on how sure you are about the next twelve months.",
+    "This is a genuinely close matchup, because the two providers price the same medication in opposite ways. HealthRx charges $39 for the first month, then $125/month on its monthly plan (longer plans cost less per month, but its pages do not show the tiers), and backs it with overnight cold-chain shipping and LegitScript certification. Medvi is $26 lower at $99/month as a promotional rate (regularly $199) with no prepay at all, and bundles everything in. The right answer depends on how much the promotion, the first-month price and overnight delivery matter to you.",
   verdict:
-    "Medvi is our pick for most people: month-to-month flexibility and everything included - you're not committing a year to a newer brand. HealthRx is the sharper deal only if overnight shipping or its LegitScript pedigree matters most to you: with Medvi's promo at $99/month and no commitment, a $2/month saving for a 12-month plan is a harder sell - just remember Medvi's regular rate is $199 if the promo ends. Confirm current terms on both sites.",
+    "Medvi is our pick for most people: month-to-month flexibility and everything included - you're not committing a year to a newer brand. HealthRx makes sense if overnight shipping, its LegitScript pedigree or the $39 first month matters most to you: with Medvi's promo at $99/month and no commitment, HealthRx's $125 after month one is a harder sell - just remember Medvi's regular rate is $199 if the promo ends. Confirm current terms on both sites.",
   verdictWinnerPoints: [
-    "Month-to-month - no 12-month commitment",
+    "Month-to-month - no prepay",
     "All-inclusive $99/mo promo (reg. $199) with dietician & care coaching",
   ],
   verdictLoserPoints: [
-    "$97/mo semaglutide - lowest in this matchup (12-month plan)",
+    "$39 first month, then $125/mo semaglutide on the monthly plan",
     "Free overnight cold-chain shipping",
     "LegitScript-certified, 503A pharmacy fulfillment",
   ],
@@ -3642,22 +3642,22 @@ const healthrxMedviBattle: BattleData = {
       name: "Commitment & Flexibility",
       winner: "provider1",
       explanation:
-        "Medvi bills monthly and you can stop when your situation changes. HealthRx's headline price requires its 12-month plan, which is exactly how it gets to $97/month; its 6- and 3-month plans are $115 and $125. If GLP-1 treatment is new territory for you, the flexible structure is worth real money.",
+        "Medvi bills monthly and you can stop when your situation changes. HealthRx's monthly plan renews until canceled, and its longer plans cost less per month but their tiers are not shown on its pages. If GLP-1 treatment is new territory for you, a promotional rate with no prepay is worth real money.",
       supportingPoints: [
         "Monthly billing, adjust anytime (Medvi)",
-        "12-month plan required for the $97 rate (HealthRx)",
+        "Monthly plan until canceled; longer plan tiers not shown (HealthRx)",
         "No prepay needed to start (Medvi)",
       ],
     },
     {
-      name: "Price (If You Commit)",
-      winner: "provider2",
+      name: "Price",
+      winner: "provider1",
       explanation:
-        "On current pricing this is now nearly a tie on semaglutide: HealthRx at $97/month on its 12-month plan, Medvi at $99/month via a promotion (regularly $199). On tirzepatide, Medvi's $166 promo undercuts HealthRx's from-$177. HealthRx's edge is that its $97 comes with a 12-month plan; Medvi's promo could end.",
+        "On semaglutide Medvi is $26 a month lower: $99/month via a promotion (regularly $199) against HealthRx's $125/month after a $39 first month. On tirzepatide, Medvi's $166 promo undercuts HealthRx's $199. HealthRx's edge is the $39 first month; Medvi's promo could end.",
       supportingPoints: [
-        "$97 on a 12-month plan vs $99 promo rate (HealthRx)",
-        "Tirzepatide: Medvi $166 promo vs from $177 (Medvi)",
-        "$102/month below Medvi's $199 regular rate if the promo ends",
+        "$125 after a $39 first month (HealthRx) vs $99 promo rate (Medvi)",
+        "Tirzepatide: Medvi $166 promo vs $199 (HealthRx)",
+        "Medvi's regular rate is $199 if the promo ends",
       ],
     },
     {
@@ -3683,8 +3683,8 @@ const healthrxMedviBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "$99/mo promo semaglutide (reg. $199) · $166 tirzepatide", provider2Value: "$97/mo semaglutide (12-mo plan) · tirzepatide from $177", highlight: "both" },
-    { feature: "Billing", provider1Value: "Monthly, all-inclusive", provider2Value: "12-month plan for the lowest rate; billing terms not confirmed", highlight: "provider1" },
+    { feature: "Starting Price", provider1Value: "$99/mo promo semaglutide (reg. $199) · $166 tirzepatide", provider2Value: "$39 first month, then $125/mo semaglutide · $199/mo tirzepatide", highlight: "provider1" },
+    { feature: "Billing", provider1Value: "Monthly, all-inclusive", provider2Value: "Monthly plan until canceled; longer plans cheaper per month, tiers not shown", highlight: "provider1" },
     { feature: "Shipping", provider1Value: "Free, standard", provider2Value: "Free, overnight cold-chain", highlight: "provider2" },
     { feature: "Support", provider1Value: "Provider + dietician & care coaching", provider2Value: "Care-team check-ins", highlight: "provider1" },
     { feature: "Certifications", provider1Value: "Licensed providers, HSA/FSA approved", provider2Value: "LegitScript certified, 503A pharmacies", highlight: "both" },
@@ -4645,7 +4645,7 @@ function buildInitialConfig(): SiteConfig {
         { providerId: "luvo", priceLevel: "mid", strengths: ["cost", "personalized"], matchReasons: { cost: "50% off your first 4 weeks, no membership fees", medical: "Clinician review and ongoing check-ins included", online: "Discreet shipping to your door, cancel anytime", personalized: "Weekly injection or daily tablet, dosing adjusted over time" } },
         { providerId: "medgm", priceLevel: "mid", strengths: ["personalized", "online"], matchReasons: { cost: "Compounded GLP-1 injections from $169", medical: "Prescription-only GLP-1 medication", online: "Injections, tablets and brand-name Zepbound in one place", personalized: "Weekly injection, daily tablet or brand-name options" } },
         { providerId: "wellorithm", priceLevel: "low", strengths: ["cost", "online"], matchReasons: { cost: "Plans starting at just $147", medical: "No membership or hidden fees", online: "Free shipping included nationwide", personalized: "HSA/FSA eligible treatment plans" } },
-        { providerId: "directmeds", priceLevel: "low", strengths: ["cost", "online"], matchReasons: { cost: "Plans starting at just $147", medical: "Online medical visit included", online: "Free shipping in 1-2 days", personalized: "No insurance required to qualify" } },
+        { providerId: "directmeds", priceLevel: "low", strengths: ["cost", "online"], matchReasons: { cost: "Plans start at $249/month", medical: "Online medical visit included", online: "Free shipping in 1-2 days", personalized: "No insurance required to qualify" } },
         { providerId: "found", priceLevel: "mid", strengths: ["medical", "personalized"], matchReasons: { cost: "Up to $100 off membership", medical: "Board-certified provider care", online: "Affordable GLP-1 delivered fast", personalized: "Covered by major insurance plans" } },
         { providerId: "yucca", priceLevel: "low", strengths: ["cost", "online"], matchReasons: { cost: "Weight loss plans from $146", medical: "Licensed providers in all 50 states", online: "Free expedited shipping", personalized: "Trusted by over 20,000 patients" } },
         { providerId: "bodybuildinghealth", priceLevel: "mid", strengths: ["medical", "personalized"], matchReasons: { cost: "$100 off limited-time offer", medical: "Provider-guided weight loss", online: "No commitment until approved", personalized: "Choose GLP-1 or GIP + GLP-1" } },

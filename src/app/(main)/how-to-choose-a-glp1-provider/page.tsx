@@ -87,7 +87,7 @@ const CHECKLIST: { title: string; check: string; verify: string; redFlag: string
   {
     title: "Cancellation and refunds",
     check: "Whether you can stop at any renewal, whether there is a minimum term, and what you get back if the clinician does not approve you.",
-    verify: "embody refunds the unused portion (less services rendered) if not approved and has no commitment; TrimRx has no long-term contract; welludr's $41 rate wants a 12-month plan; HealthRx's lowest rate is on a 12-month plan. None of these is wrong, but you should know which one you are signing.",
+    verify: "embody refunds the unused portion (less services rendered) if not approved and has no commitment; TrimRx has no long-term contract; welludr's $41 rate wants a 12-month plan; HealthRx's monthly plan renews until canceled and its longer-plan rates are not shown. None of these is wrong, but you should know which one you are signing.",
     redFlag: "Auto-renew terms you can only find in the checkout fine print. Read them before you pay.",
   },
   {
@@ -204,7 +204,7 @@ const ROWS: Row[] = [
     clinician: "Licensed physician reviews the intake and can decline",
     visit: "Online intake, physician review; no membership, cancel anytime",
     pharmacy: "Compounded; pharmacy not named in our research",
-    dosePricing: "Flat $147 for either medication at any dose, injections or sublingual drops",
+    dosePricing: "From $249/month for sublingual semaglutide, $297/month for injections; no subscriptions",
     complaints: "Structurally: no coaching layer and no brand-name shelf, and the needle-free drops are a clinician-discretion format - the major trials studied injections. No Reddit threads verified yet.",
   },
   {
@@ -212,8 +212,8 @@ const ROWS: Row[] = [
     clinician: "Independent US-licensed clinician in your state reviews your full history before any charge",
     visit: "Free two-minute assessment, clinician review, care-team check-ins",
     pharmacy: "Licensed 503A pharmacies; LegitScript certificate 50087439",
-    dosePricing: "Plan price does not change with dose; lowest rate, $97/month, on the 12-month plan",
-    note: "No customer reviews captured; a newer brand with a thin public record. The structural trade-off is the prepayment: twelve months before knowing how you tolerate the medication.",
+    dosePricing: "Monthly plan: $39 first month, then $125/month semaglutide or $199/month tirzepatide until canceled",
+    note: "No customer reviews captured; a newer brand with a thin public record. Longer plans are offered at a lower monthly price, but the tiers are not shown on its pages, so the cheapest rate cannot be priced.",
   },
 ];
 
@@ -226,7 +226,7 @@ const PATTERNS: { title: string; body: string }[] = [
   },
   {
     title: "The headline price rarely stands alone",
-    body: "welludr's $41 requires a 12-month plan. HealthRx's $97 is a 12-month plan rate. Medvi's $99 and altRx's $89 are starting prices. Ro bills membership and medication separately. The condition attached to a price is as important as the number, which is why the price index prints both.",
+    body: "welludr's $41 requires a 12-month plan. HealthRx's $125 follows a $39 first month. Medvi's $99 and altRx's $89 are starting prices. Ro bills membership and medication separately. The condition attached to a price is as important as the number, which is why the price index prints both.",
   },
   {
     title: "Flat-dose pricing is common but not universal",

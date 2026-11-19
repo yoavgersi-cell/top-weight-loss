@@ -105,15 +105,15 @@ const ROWS: Row[] = [
     id: "directmeds",
     name: "DirectMeds",
     medications: "Compounded semaglutide and tirzepatide; injections or sublingual drops",
-    entry: "$147",
-    entryNote: "either molecule, either format, every dose",
-    after: "Same at every dose",
+    entry: "$249",
+    entryNote: "sublingual semaglutide; injections $297; no tirzepatide price published",
+    after: "6- and 12-month bulk plans offered, not priced",
     membership: "None",
     shipping: "Free 1-2 day",
     support: "Telemedicine visit included; no coaching layer",
-    advantage: "One flat price; needle-free option at no premium",
+    advantage: "Needle-free sublingual option; no subscriptions",
     limitation: "No coaching; pharmacy not named",
-    cta: "Check DirectMeds' flat pricing",
+    cta: "Check DirectMeds' pricing",
   },
   {
     id: "medvi",
@@ -297,7 +297,7 @@ const SECTIONS: Section[] = [
     ),
     pricing: (
       <>
-        <strong className="text-[#191919]">$147 a month for either molecule in either format, the same at every dose</strong>, verified October 16, 2026. Free one-to-two-day shipping. No membership, no hidden fees, cancel anytime. The needle-free drops cost the same $147, which no other provider here matches (Medvi&rsquo;s tablets are $249).
+        <strong className="text-[#191919]">From $249 a month for sublingual semaglutide, $297 a month for injections</strong>, read November 18, 2026; no tirzepatide price is published. No subscriptions; 6- and 12-month bulk plans are offered but not priced on the page. Free one-to-two-day shipping and no membership were stated when we verified October 16, 2026. Medvi&rsquo;s tablets are also $249.
       </>
     ),
     support:

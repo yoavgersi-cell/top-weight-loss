@@ -312,11 +312,11 @@ export const glp1Coverage2027Article: Article = {
 <tr><td>Compounded semaglutide, embody</td><td>$49 sale (October 28, 2026), month to month</td><td>12 x $49</td><td>$588 at sale price</td></tr>
 <tr><td>Compounded semaglutide, altRx</td><td>$89 listed; regular $199; flat at every dose</td><td>12 x $89; at regular price 12 x $199</td><td>$1,068; $2,388 at regular price</td></tr>
 <tr><td>Compounded semaglutide, Medvi</td><td>$99 promo, all-inclusive; regular $199</td><td>12 x $99; at regular price 12 x $199</td><td>$1,188; $2,388 at regular price</td></tr>
-<tr><td>Compounded semaglutide, HealthRx</td><td>$97 a month on the 12-month plan; billing terms not confirmed</td><td>Not computed</td><td>Not confirmed</td></tr>
+<tr><td>Compounded semaglutide, HealthRx</td><td>$39 first month, then $125 a month (monthly plan)</td><td>$39 + 11 x $125</td><td>$1,414</td></tr>
 <tr><td>Compounded tirzepatide, welludr</td><td>$71 sale (October 28, 2026); shipped every 4 weeks</td><td>12 x $71; if billed per 4-week shipment, 13 x $71</td><td>$852; $923 at 13 shipments</td></tr>
 <tr><td>Compounded tirzepatide, embody</td><td>$99 sale, month to month</td><td>12 x $99</td><td>$1,188 at sale price</td></tr>
 <tr><td>Compounded tirzepatide, altRx</td><td>$149 listed; regular $299</td><td>12 x $149; at regular price 12 x $299</td><td>$1,788; $3,588 at regular price</td></tr>
-<tr><td>Compounded semaglutide or tirzepatide, DirectMeds</td><td>$147 flat at every dose</td><td>12 x $147</td><td>$1,764</td></tr>
+<tr><td>Compounded sublingual semaglutide, DirectMeds</td><td>$249 a month</td><td>12 x $249</td><td>$2,988</td></tr>
 <tr><td>Wegovy pill, Ro</td><td>$149 first month, then $299; membership $39 first month, then $74-$149 (verified August 2026)</td><td>$149 + 11 x $299 = $3,438; membership $39 + 11 x $74 = $853 to $39 + 11 x $149 = $1,678</td><td>$4,291 to $5,116</td></tr>
 <tr><td>Foundayo, LillyDirect self-pay (reported)</td><td>$149 to $349 by dose</td><td>12 x $149 to 12 x $349</td><td>$1,788 to $4,188, depending on dose</td></tr>
 <tr><td>Zepbound KwikPen, Ro</td><td>$299 first month, then $399-$449; plus membership as above</td><td>$299 + 11 x $399 = $4,688 to $299 + 11 x $449 = $5,238; plus $853 to $1,678</td><td>$5,541 to $6,916</td></tr>
@@ -363,7 +363,7 @@ export const glp1Coverage2027Article: Article = {
 <li>The price is published, with the plan length and any promotion stated.</li>
 </ul>
 <h3>The providers in our index</h3>
-<p>The providers in our <a href="/weight-loss/cheapest-glp1">verified price index</a> each have genuine strengths for someone leaving a covered plan. welludr has the lowest ongoing price, flat at every dose, on a 12-month plan. embody is the cheapest with no commitment and ships in one to two days. altRx and DirectMeds keep one price at every dose, which makes the annual total predictable as the dose rises. Medvi includes clinician visits, a dietitian and coaching in its all-inclusive price, and SHED includes coaching with a money-back guarantee tied to results. A person leaving a covered brand drug should tell the new prescriber their current drug, dose and date of last injection; whether to continue at a similar dose or step down is the clinician's decision.</p>
+<p>The providers in our <a href="/weight-loss/cheapest-glp1">verified price index</a> each have genuine strengths for someone leaving a covered plan. welludr has the lowest ongoing price, flat at every dose, on a 12-month plan. embody is the cheapest with no commitment and ships in one to two days. altRx keeps one price at every dose, which makes the annual total predictable as the dose rises. Medvi includes clinician visits, a dietitian and coaching in its all-inclusive price, and SHED includes coaching with a money-back guarantee tied to results. A person leaving a covered brand drug should tell the new prescriber their current drug, dose and date of last injection; whether to continue at a similar dose or step down is the clinician's decision.</p>
 <h3>What not to do</h3>
 <p>Losing coverage is not a reason to leave the licensed system. "Research peptides" and vials sold without a prescription are not compounded medicines, carry no pharmacy accountability, and are outside anything a clinician can supervise.</p>`,
     },

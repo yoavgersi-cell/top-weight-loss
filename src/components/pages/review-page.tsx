@@ -20,6 +20,11 @@ import { SiblingLinks, CATEGORY_LABEL, reviewSiblings, comparisonSiblings, artic
 import { getReviewRecord } from "@/data/reviews";
 import { analysisPath, hasReviewAnalysis } from "@/lib/review-analysis";
 import { THREE_WAY_COMPARISONS } from "@/lib/three-way";
+import { PRICE_INDEX } from "@/lib/price-index";
+
+/** Headline monthly price for a provider and drug, read from the verified price index. */
+const indexPrice = (id: string, drug: "semaglutide" | "tirzepatide") =>
+  PRICE_INDEX.find((r) => r.providerId === id)?.[drug]?.price ?? "";
 import { CustomerThemes } from "@/components/customer-themes";
 import { ReviewInsights } from "@/components/review-insights";
 import { FeaturedReviews } from "@/components/featured-reviews";
@@ -174,9 +179,9 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "welludr (ex-wellmedr) sells semaglutide at $41 and tirzepatide at $71, flat at every dose, with a weight-loss warranty. The 12-month plan term to read first.",
   },
   healthrx: {
-    title: "HealthRx Reviews 2026: Is It Legit? $97/mo GLP-1 Examined",
+    title: `HealthRx Reviews 2026: Is It Legit? ${indexPrice("healthrx", "semaglutide")}/mo GLP-1 Examined`,
     description:
-      "HealthRx reviews: {prices} (semaglutide 12-month plan), overnight cold shipping, LegitScript-certified. Is it legit?",
+      "HealthRx reviews: {prices} (semaglutide monthly plan), overnight cold shipping, LegitScript-certified. Is it legit?",
   },
 };
 
@@ -264,7 +269,7 @@ const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
       "Independent US-licensed clinician reviews every request; approval is never automatic",
       "Licensed 503A pharmacy fulfillment",
       "Overnight cold-chain shipping, lot-tracked through delivery",
-      "Transparent pricing - from $97/mo semaglutide on the 12-month plan, no hidden fees",
+      `Transparent pricing - ${indexPrice("healthrx", "semaglutide")}/mo semaglutide on the monthly plan after a $39 first month, no hidden fees`,
     ],
   },
 };
@@ -553,12 +558,12 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "What are DirectMeds' sublingual drops?",
       answer:
-        "A needle-free format: compounded semaglutide or tirzepatide taken as daily liquid drops under the tongue instead of a weekly injection - at the same $147/month flat price as the injectable version.",
+        `A needle-free format: compounded semaglutide taken as sublingual drops under the tongue instead of a weekly injection. DirectMeds lists it at ${indexPrice("directmeds", "semaglutide")}/month; injections are listed at $297/month (price read November 18, 2026).`,
     },
     {
       question: "Is DirectMeds a membership?",
       answer:
-        "No - there's no monthly membership and no hidden fees. You pay $147/month flat (the same at every dose), the telemedicine visit and prescription are included, and you can cancel anytime.",
+        `No - DirectMeds lists no subscriptions and no hidden fees. Plans start at ${indexPrice("directmeds", "semaglutide")}/month for sublingual semaglutide and $297/month for injections, the telemedicine visit and prescription are included, and you can cancel anytime. Bulk 6- and 12-month plans are offered but not priced on the page.`,
     },
   ],
   sprout: [
@@ -582,7 +587,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "Do I have to commit to a full year with HealthRx?",
       answer:
-        "No - the lowest rates are on the 12-month plan (compounded semaglutide from $97/month, tirzepatide from $177/month), but 6-month ($115 / $195), 3-month ($125 / $201) and monthly plans are also offered, with the monthly plan at $99 for the first month. Confirm how your plan is billed at checkout. The initial 60-second assessment is free with no payment to start, and approval is never automatic.",
+        `No - the monthly plan is $39 for the first month, then ${indexPrice("healthrx", "semaglutide")}/month for compounded semaglutide or ${indexPrice("healthrx", "tirzepatide")}/month for tirzepatide, until canceled. Longer plans are offered at a lower monthly price, but the tiers are not shown on the pages we read November 18, 2026. Confirm how your plan is billed at checkout. The initial 60-second assessment is free with no payment to start, and approval is never automatic.`,
     },
     {
       question: "How fast does HealthRx ship?",

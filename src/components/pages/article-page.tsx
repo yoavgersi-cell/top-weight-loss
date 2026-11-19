@@ -156,7 +156,7 @@ const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
   "before-you-prepay-glp1":
     "Pay monthly for the first two or three cycles, then prepay only if the provider has shipped on time and answered when you wrote. Before any prepaid or 12-month plan, get written answers to five questions: when you're charged and for what, what is refunded if shipments stop, how you cancel and whether you get confirmation, whether the plan auto-renews and with how much notice, and whether a financing company bills you separately.",
   "what-100-to-200-a-month-gets-you-glp1":
-    "At verified published prices, under $100 a month buys compounded semaglutide from welludr ($41, 12-month plan), embody ($49, month to month), altRx ($89) and Medvi ($99 promo); $100-$150 buys compounded tirzepatide from embody ($99), DirectMeds ($147) and altRx ($149); $150-$200 buys the all-inclusive and coaching-led programs. Above $200 the choice becomes brand-name: Foundayo from $149 a month, brand injections from $1,149.",
+    "At verified published prices, under $100 a month buys compounded semaglutide from welludr ($41, 12-month plan), embody ($49, month to month), altRx ($89) and Medvi ($99 promo); $100-$150 buys compounded tirzepatide from embody ($99) and altRx ($149); $150-$200 buys the all-inclusive and coaching-led programs. Above $200 the choice becomes brand-name: Foundayo from $149 a month, brand injections from $1,149.",
   "lost-insurance-coverage-zepbound-wegovy":
     "Five routes: appeal if the drug is still on your formulary; use the manufacturer's savings card or direct price (Foundayo lists $149-$349 a month self-pay, $25 with commercial insurance); if you're on Medicare, the GLP-1 Bridge pilot charges a flat $50 a month for Wegovy, the Zepbound KwikPen and Foundayo through December 2027; buy brand-name for cash through telehealth ($1,149-$1,799 a month); or switch to a compounded version at $41-$299 a month. A licensed clinician decides whether your dose transfers.",
   "503a-vs-503b-pharmacy-28-day-rule":
@@ -189,7 +189,7 @@ const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
   "mounjaro-vs-ozempic":
     "They are not the same drug: Mounjaro (tirzepatide) targets two hormone receptors and produced up to 22.5% average weight loss in trials, versus ~15% for Ozempic (semaglutide). Ozempic's compounded version is cheaper - verified from $41/month versus $71 for tirzepatide - and both require a prescription from a licensed provider.",
   "best-mounjaro-alternatives":
-    "The closest Mounjaro alternatives are compounded tirzepatide plans - the same active ingredient - from licensed telehealth providers: $71/month at welludr, $99 at embody, $147 at DirectMeds, versus roughly $1,000+ for brand-name. Prescription required, shipped to your door.",
+    "The closest Mounjaro alternatives are compounded tirzepatide plans - the same active ingredient - from licensed telehealth providers: $71/month at welludr, $99 at embody, $149 at altRx, versus roughly $1,000+ for brand-name. Prescription required, shipped to your door.",
   "best-wegovy-alternatives":
     "The closest Wegovy alternatives are compounded semaglutide plans - the same active ingredient - starting at $41/month (welludr), $49 (embody) and $89 (altRx) through licensed online providers, versus $1,150+ for brand-name without insurance.",
   "best-ro-alternatives":

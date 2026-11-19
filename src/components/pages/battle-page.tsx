@@ -117,12 +117,12 @@ const BATTLE_COST_MATH: Record<
   "healthrx-vs-medvi": {
     rows: [
       ["First payment (semaglutide)", "$99", "$99 first month on the monthly plan"],
-      ["6-month total", "$594", "$115/mo on the 6-month plan"],
-      ["12-month total", "$1,188", "$97/mo on the 12-month plan; billing not confirmed"],
-      ["Tirzepatide, monthly", "$166 promo (reg. $299)", "from $177 (12-month plan)"],
-      ["The condition", "$99 is promotional (reg. $199)", "$97/mo is the 12-month plan rate"],
+      ["6-month total", "$594", "$664 ($39 + 5 x $125)"],
+      ["12-month total", "$1,188", "$1,414 ($39 + 11 x $125)"],
+      ["Tirzepatide, monthly", "$166 promo (reg. $299)", "$199 after the $39 first month"],
+      ["The condition", "$99 is promotional (reg. $199)", "$125/mo is the monthly plan; longer plans cost less per month (tiers not shown)"],
     ],
-    note: "The structures differ: Medvi bills $99 monthly at a promotional rate (regularly $199) with no prepay; HealthRx's lowest rate is $97/month on its 12-month plan, with 6-month ($115/month) and 3-month ($125/month) plans and a monthly plan at $99 for the first month. We haven't confirmed how HealthRx bills the 12-month plan, so check the terms at checkout.",
+    note: "The structures differ: Medvi bills $99 monthly at a promotional rate (regularly $199) with no prepay; HealthRx charges $39 for the first month, then $125/month until canceled, with longer plans at a lower monthly price that its pages do not show. Totals above assume the monthly plan; check the terms at checkout.",
   },
   // provider1 = embody, provider2 = TrimRx
   "embody-vs-trimrx": {
@@ -266,10 +266,10 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   },
   "healthrx-vs-medvi": {
     // Originally matched the stored (CMS) title byte-for-byte (desc-only pass,
-    // Aug 30); title updated Nov 3, 2026 when HealthRx's 12-month rate moved to $97.
-    title: "HealthRx vs Medvi (2026): $97 vs $99 Semaglutide Compared",
+    // Aug 30); title updated Nov 18, 2026 when HealthRx's listing moved to its $125 monthly plan.
+    title: "HealthRx vs Medvi (2026): $125 vs $99 Semaglutide",
     description:
-      "Two GLP-1 deals, opposite structures: HealthRx's 12-month plan from $97/month vs Medvi's $99/month all-inclusive promo. The honest math.",
+      "Two GLP-1 deals, opposite structures: HealthRx's $125/month plan (first month $39) vs Medvi's $99/month all-inclusive promo. The honest math.",
   },
   "ro-vs-wellmedr": {
     title: "ro vs welludr (formerly wellmedr): Big Brand or $41 GLP-1?",
