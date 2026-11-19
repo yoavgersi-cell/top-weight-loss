@@ -4,8 +4,8 @@ Verdict: block
 One factual mismatch (comparator group), one clipped qualifier. Both in `src/components/fda-safety-update.tsx`. Everything else verified.
 
 ## Blockers
-1. **L33 "versus 3.8 on placebo"**. FDA DSC (read Nov 19, 2026): "3.8 NAION cases per 100,000 PY for patients treated with a placebo or a non-GLP-1 RA glucose-lowering medication" (comparator-treated, 56,036 patients). Fix: "versus 3.8 in comparator-treated patients (placebo or a non-GLP-1 RA glucose-lowering medication)". Also change "patient-years" to "person-years", the FDA's unit.
-2. **L36-37 "it tells prescribers to consider discontinuing the medication in anyone who develops NAION"**. FDA text ends "unless the benefits of treatment clearly outweigh the risk". Clipped, it reads as a stop instruction. Fix: append "unless the benefits of treatment clearly outweigh the risk".
+1. **L31-32 "versus 3.8 on placebo"**. FDA DSC (read Nov 19, 2026): "3.8 NAION cases per 100,000 PY for patients treated with a placebo or a non-GLP-1 RA glucose-lowering medication" (comparator-treated, 56,036 patients). Fix: "versus 3.8 in comparator-treated patients (placebo or a non-GLP-1 RA glucose-lowering medication)". Also change "patient-years" to "person-years", the FDA's unit.
+2. **L37 "it tells prescribers to consider discontinuing the medication in anyone who develops NAION"**. FDA text ends "unless the benefits of treatment clearly outweigh the risk". Clipped, it reads as a stop instruction. Fix: append "unless the benefits of treatment clearly outweigh the risk".
 
 ## Confirmed
 - 126 trials, 134,253 patients, 6.4 per 100,000 PY, DSC dated November 9, 2026: match source and research file.
