@@ -29,7 +29,9 @@ export type PriceIndexRow = {
   /** Always null since Nov 16, 2026 (review-platform data is no longer shown). */
 };
 
-// Rows below: operator check of each provider's own site, November 3, 2026.
+// Rows below: operator check of each provider's own site, November 3, 2026;
+// embody re-read November 16, 2026; healthrx and directmeds re-read
+// November 18, 2026 (see the change log).
 export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "wellmedr",
@@ -57,11 +59,11 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   },
   {
     providerId: "healthrx",
-    edge: "Lowest rates on a 12-month plan, with overnight cold-chain delivery",
-    semaglutide: { price: "from $97", note: "12-month plan; $99 first month on the monthly plan; 3-month $125, 6-month $115" },
-    tirzepatide: { price: "from $177", note: "12-month plan; $99 first month on the monthly plan; 3-month $201, 6-month $195" },
+    edge: "$39 first month on either medication, then a flat monthly price until canceled, with overnight cold-chain delivery",
+    semaglutide: { price: "$125", note: "monthly plan: $39 first month, then $125/month until canceled; longer plans have a lower monthly price (tiers not shown); provider's page says \"Prices current as of October 15, 2026\" (read Nov 18, 2026)" },
+    tirzepatide: { price: "$199", note: "monthly plan: $39 first month, then $199/month until canceled; longer plans have a lower monthly price (tiers not shown); read Nov 18, 2026" },
     shipping: "Overnight cold-chain shipping",
-    commitment: "12-month plan for the lowest rate; monthly, 3- and 6-month plans also offered",
+    commitment: "None required - the monthly plan renews until canceled (cancel by email); longer plans offered at a lower monthly price, tiers not shown on the pages read Nov 18, 2026",
   },
   {
     providerId: "collective",
@@ -98,12 +100,11 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   },
   {
     providerId: "directmeds",
-    edge: "Same price at every dose, delivered in 1-2 days",
-    semaglutide: null,
+    edge: "Needle-free sublingual semaglutide option, no subscriptions, shipped within 1 business day",
+    semaglutide: { price: "from $249", note: "sublingual (under-the-tongue) semaglutide; injections from $297/month (medication not named on the page); 6- or 12-month bulk pricing offered but not published (read Nov 18, 2026)" },
     tirzepatide: null,
-    plan: { price: "from $147", note: "starting price; same price at every dose" },
     shipping: "Free shipping, arrives in 1-2 days",
-    commitment: "None - no membership, cancel anytime",
+    commitment: "None - \"no subscriptions, no surprise charges\"; full refund if the doctor does not approve treatment",
   },
   {
     providerId: "trimrx",
@@ -135,7 +136,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
 // Date of the last operator verification pass over the index above. Bump it
 // whenever a row is re-checked or changed - the statistics page prints it as
 // the dataset's "verified as of" date and emits it as schema dateModified.
-export const PRICE_INDEX_VERIFIED = "2026-11-03";
+export const PRICE_INDEX_VERIFIED = "2026-11-18";
 
 // ───── Public change log ─────
 // One entry per operator-verified change, newest first, describing what our
@@ -162,6 +163,8 @@ export type PriceMove = {
   to: number;
   /** Condition attached to the new figure, as the provider states it. */
   condition?: string;
+  /** True when the listing changed basis (plan type or what the page shows), so from and to are not like for like. */
+  relisted?: boolean;
 };
 
 export type PriceChange = {
@@ -173,6 +176,25 @@ export type PriceChange = {
 };
 
 export const PRICE_CHANGELOG: PriceChange[] = [
+  {
+    date: "2026-11-18",
+    providerId: "healthrx",
+    change:
+      "Listing now follows HealthRx's monthly plan as shown on its pages: $39 for the first month, then $125/month for compounded semaglutide and $199/month for compounded tirzepatide until canceled. The 12-month rates we listed before (from $97 and from $177) are no longer displayed; the pages say longer plans have a lower monthly price without showing the tiers. HealthRx's pricing page states \"Prices current as of October 15, 2026.\"",
+    moves: [
+      { drug: "semaglutide", from: 97, to: 125, condition: "monthly plan; $39 first month, then $125/month until canceled", relisted: true },
+      { drug: "tirzepatide", from: 177, to: 199, condition: "monthly plan; $39 first month, then $199/month until canceled", relisted: true },
+    ],
+    source: "healthrx.com homepage, semaglutide page and pricing page, November 18, 2026",
+  },
+  {
+    date: "2026-11-18",
+    providerId: "directmeds",
+    change:
+      "Listing now shows DirectMeds' published \"Plans start at $249/month for sublingual Semaglutide, and $297/month for injections,\" with no subscriptions and 6- or 12-month bulk plans offered but not priced on the page. Previously listed as plans from $147 (not tied to one medication), a figure no longer on the page. The injection price is not tied to a named medication, so no tirzepatide price is listed.",
+    moves: [{ drug: "semaglutide", from: 147, to: 249, condition: "sublingual semaglutide; injections from $297/month", relisted: true }],
+    source: "directmeds.com weight-loss page, November 18, 2026",
+  },
   {
     date: "2026-11-11",
     providerId: "collective",
@@ -319,13 +341,14 @@ export function priceValue(cell: PriceCell | { price: string; note: string } | u
 /** Stable anchor for a log entry - the feed and CSV link to it. */
 export const changeId = (c: PriceChange) => `${c.date}-${c.providerId}`;
 
-export type ChangeKind = "cut" | "increase" | "mixed" | "new" | "terms";
+export type ChangeKind = "cut" | "increase" | "mixed" | "new" | "terms" | "listing";
 
 /** What kind of change an entry records, read from its moves. */
 export function changeKind(c: PriceChange): ChangeKind {
   const moves = c.moves ?? [];
   if (moves.length === 0) return "terms";
   if (moves.every((m) => m.from === null)) return "new";
+  if (moves.some((m) => m.relisted)) return "listing";
   const priced = moves.filter((m): m is PriceMove & { from: number } => m.from !== null);
   const down = priced.some((m) => m.to < m.from);
   const up = priced.some((m) => m.to > m.from);
@@ -341,10 +364,11 @@ export const CHANGE_KIND_LABEL: Record<ChangeKind, string> = {
   mixed: "Price change",
   new: "New listing",
   terms: "Terms change",
+  listing: "Listing changed",
 };
 
 /** Percent change of a move, rounded; null for a new listing. */
-export const movePercent = (m: PriceMove) => (m.from ? Math.round(((m.to - m.from) / m.from) * 100) : null);
+export const movePercent = (m: PriceMove) => (m.from && !m.relisted ? Math.round(((m.to - m.from) / m.from) * 100) : null);
 
 /** The change log, newest first (ties keep their written order). */
 export const PRICE_CHANGES_NEWEST: PriceChange[] = [...PRICE_CHANGELOG].sort((a, b) => b.date.localeCompare(a.date));
