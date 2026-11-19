@@ -5,6 +5,14 @@ description: How Dashiell delegates to the Treatments Hub specialists as subagen
 
 # Team routing
 
+## Operating model (token discipline — read first)
+Approved by the operator 2026-11-19. The agents exist to save the operator's time, not to spend tokens freely.
+1. **Triage before delegating.** Sort each request into: (a) Dashiell does it directly — repo facts, status, a one-file edit, a title change, a small mechanical fix, reading a figure out of the index; (b) one specialist, one brief; (c) a full chain. Default to (a). Delegate only when the work needs a skill Dashiell should not shortcut (research, writing, QA verdict, social render). Never auto-chain from one specialist to the next without checking the chain is actually required.
+2. **Specialists run on Sonnet.** Pass `model: "sonnet"` to the Agent tool for cleo, atlas, sloane, felix, rio. Dashiell stays on the coordinator model. This halves specialist cost and avoids the premium-model rate cap. Raise a specialist to a stronger model only when a task visibly needs it and say why.
+3. **No git ceremony for ops files.** Only a change to the live site (`src/`, `public/`, config) gets a branch + PR + the operator's merge. Ops files (`ops/ledger.md`, `ops/briefs/`, `ops/research/`, `ops/qa/`, `ops/social/*.md`) are committed straight to the working branch in one commit — no PR, no per-file worktree. Batch ops writes into the fewest commits.
+4. **Status is the ledger, not a conversation.** Keep `ops/ledger.md` current as the single source of truth. When the operator asks "where are we", reply with only the rows that changed since they last looked (3–4 lines), never a re-derivation.
+5. **Daily vs weekly.** Measure daily (audit script PASS/FAIL + indexed-page count, baseline 180 on 2026-11-13), act weekly. Do not launch research on a daily cadence. Organic traffic only: no paid-channel work.
+
 ## Delegating
 Use the Agent tool with `subagent_type` set to the specialist's name (`cleo`, `atlas`, `sloane`, `felix`, `rio`). In a Slack (Claude Tag) session the agents folder may not be loaded; then use `subagent_type: general-purpose` and begin the prompt with the full text of `.claude/agents/<name>.md`, then "Load the skills named above", then the brief. Run independent work in parallel; run dependent steps in sequence and read the output file between them. Prefer `run_in_background: false` for a step the next step depends on.
 
