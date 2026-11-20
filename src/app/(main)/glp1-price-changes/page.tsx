@@ -7,7 +7,7 @@ import { LastUpdated } from "@/components/last-updated";
 import { GuideCluster } from "@/components/guide-cluster";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { TrustDisclosure } from "@/components/medical-sources";
-import { MarketTrendChart, PriceSparkline, buildMedianSeries } from "@/components/price-trend-chart";
+import { MarketTrendChart, PriceSparkline, buildCheapestSeries } from "@/components/price-trend-chart";
 import { ProviderCta } from "@/components/provider-cta";
 import { pageReviewSchema } from "@/data/reviewers";
 import { getConfig } from "@/lib/config-store";
@@ -138,7 +138,9 @@ export default async function PriceTrackerPage() {
   }
   const historyProviders = [...history.keys()];
   const semaNow = new Map(rows.filter((r) => r.semaValue !== null).map((r) => [r.providerId, r.semaValue as number]));
-  const trend = buildMedianSeries(PRICE_CHANGELOG, semaNow, PRICE_DATA_UPDATED);
+  const trend = buildCheapestSeries(PRICE_CHANGELOG, semaNow, PRICE_DATA_UPDATED);
+  const saleCut = entries.find((e) => e.date === PRICE_DATA_UPDATED && /black friday/i.test(e.change) && e.moves?.some((m) => m.drug === "semaglutide" && m.from !== null && m.to < m.from && m.to === sema?.min));
+  const saleNote = saleCut ? `it just dropped to ${usd(sema!.min)} in a Black Friday sale` : undefined;
 
   const shortAnswer =
     sema && tirz && cheapestSema && cheapestTirz
@@ -402,7 +404,7 @@ export default async function PriceTrackerPage() {
               <h2 id="price-history" className="text-[22px] font-bold text-[#191919]">Price history by provider</h2>
             </div>
             <p className="mb-5 text-[14px] text-gray-500">Each listed monthly price we have recorded, oldest to newest, for providers whose price has moved since {monthLabel(earliest)}.</p>
-            {trend && <MarketTrendChart series={trend} providerCountNow={semaNow.size} />}
+            {trend && <MarketTrendChart series={trend} providerCountNow={semaNow.size} saleNote={saleNote} />}
             <div className="grid gap-4 sm:grid-cols-2">
               {historyProviders.map((id) => (
                 <div key={id} className="rounded-xl border border-gray-200 bg-white p-5">

@@ -19,20 +19,15 @@ const fmtDayYear = (t: number) =>
   new Date(t).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
 const money = (n: number) => `$${Number.isInteger(n) ? n.toLocaleString("en-US") : n.toFixed(2)}`;
 
-function median(vals: number[]) {
-  const s = [...vals].sort((a, b) => a - b);
-  const m = Math.floor(s.length / 2);
-  return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
-}
 
 /**
- * Median listed monthly compounded semaglutide price over time.
+ * Lowest listed monthly compounded semaglutide price over time.
  * Only providers that list a semaglutide price today are counted (`current`).
  * A provider's price at a date is its last logged move on or before it; before
  * its first logged move it is the move's "from" price (absent if newly listed),
  * and a provider with no logged semaglutide move is held at its current price.
  */
-export function buildMedianSeries(changelog: PriceChange[], current: Map<string, number>, endIso: string) {
+export function buildCheapestSeries(changelog: PriceChange[], current: Map<string, number>, endIso: string) {
   const moves = new Map<string, { t: number; from: number | null; to: number }[]>();
   for (const e of [...changelog].sort((a, b) => a.date.localeCompare(b.date))) {
     if (!current.has(e.providerId)) continue;
@@ -55,7 +50,7 @@ export function buildMedianSeries(changelog: PriceChange[], current: Map<string,
       if (past.length) vals.push(past[past.length - 1].to);
       else if (l[0].from !== null) vals.push(l[0].from);
     }
-    return vals.length ? { v: median(vals), n: vals.length } : null;
+    return vals.length ? { v: Math.min(...vals), n: vals.length } : null;
   };
   const start = at("before");
   const pts: (TrendPoint & { n: number })[] = [];
@@ -78,13 +73,14 @@ function stepPath(pts: TrendPoint[], x: (t: number) => number, y: (v: number) =>
 function TrendSvg({
   series, w, h, font, className, id,
 }: {
-  series: NonNullable<ReturnType<typeof buildMedianSeries>>;
+  series: NonNullable<ReturnType<typeof buildCheapestSeries>>;
   w: number; h: number; font: number; className: string; id: string;
 }) {
-  const { points, startT, endT } = series;
+  const { points, startT } = series;
+  const endT = series.endT + 6 * DAY; // room after the last change so the final step is drawn
   const m = { l: font * 3.6, r: font * 1.6, t: font * 2.4, b: font * 2.6 };
   const vals = points.map((p) => p.v);
-  // Keep a minimum vertical span so a $1 shift in the median is not drawn as a cliff.
+  // Keep a minimum vertical span so a $1 shift in the line is not drawn as a cliff.
   const MIN_SPAN = 60;
   const mid = (Math.max(...vals) + Math.min(...vals)) / 2;
   const spanVals = [Math.min(Math.min(...vals), mid - MIN_SPAN / 2), Math.max(Math.max(...vals), mid + MIN_SPAN / 2)];
@@ -99,16 +95,16 @@ function TrendSvg({
   const d0 = new Date(startT);
   for (let mo = d0.getUTCMonth() + 1; ; mo++) {
     const t = Date.UTC(d0.getUTCFullYear(), mo, 1);
-    if (t >= endT - 10 * DAY) break;
+    if (t >= series.endT - 10 * DAY) break;
     if (t > series.firstChange + 10 * DAY) xTicks.push({ t, anchor: "middle" });
   }
-  xTicks.push({ t: endT, anchor: "end" });
+  xTicks.push({ t: series.endT, anchor: "end" });
   const last = points[points.length - 1];
   const first = points[0];
-  const label = `Median listed monthly compounded semaglutide price, ${fmtDayYear(series.firstChange)} to ${fmtDayYear(endT)}: ${money(first.v)} before the first logged change, ${money(last.v)} now.`;
+  const label = `Lowest listed monthly compounded semaglutide price, ${fmtDayYear(series.firstChange)} to ${fmtDayYear(series.endT)}: ${money(first.v)} before the first logged change, ${money(last.v)} now.`;
   return (
     <svg viewBox={`0 0 ${w} ${h}`} width="100%" role="img" aria-labelledby={`${id}-t ${id}-d`} className={className} style={{ fontFamily: "inherit" }}>
-      <title id={`${id}-t`}>Median compounded semaglutide price over time</title>
+      <title id={`${id}-t`}>Lowest compounded semaglutide price over time</title>
       <desc id={`${id}-d`}>{label}</desc>
       {yTicks.map((v) => (
         <g key={v}>
@@ -123,23 +119,24 @@ function TrendSvg({
         </g>
       ))}
       <path d={stepPath(points, x, y, endT)} fill="none" stroke={NAVY} strokeWidth={font * 0.2} strokeLinejoin="round" />
-      {points.slice(1).map((p) => (
+      {points.slice(1, -1).map((p) => (
         <circle key={p.t} cx={x(p.t)} cy={y(p.v)} r={font * 0.28} fill="#fff" stroke={NAVY} strokeWidth={font * 0.14} />
       ))}
-      <circle cx={x(endT)} cy={y(last.v)} r={font * 0.42} fill={NAVY} />
-      <text x={x(endT)} y={y(last.v) - font * 0.95} textAnchor="end" fontSize={font * 1.15} fontWeight={700} fill="#191919">
+      <circle cx={x(last.t)} cy={y(last.v)} r={font * 0.42} fill={NAVY} />
+      <text x={x(last.t) + font * 0.5} y={y(last.v) + font * 1.7} textAnchor="end" fontSize={font * 1.15} fontWeight={700} fill="#191919">
         Now {money(last.v)}
       </text>
     </svg>
   );
 }
 
-/** Hero chart: median listed monthly compounded semaglutide price over time. */
+/** Hero chart: lowest listed monthly compounded semaglutide price over time. */
 export function MarketTrendChart({
-  series, providerCountNow,
+  series, providerCountNow, saleNote,
 }: {
-  series: NonNullable<ReturnType<typeof buildMedianSeries>>;
+  series: NonNullable<ReturnType<typeof buildCheapestSeries>>;
   providerCountNow: number;
+  saleNote?: string;
 }) {
   const { points, endT, firstChange } = series;
   const last = points[points.length - 1];
@@ -147,13 +144,13 @@ export function MarketTrendChart({
   return (
     <figure className="mb-5 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-6">
       <figcaption className="mb-3 text-[14px] leading-snug text-gray-600">
-        <strong className="text-[#191919]">Median listed monthly price, compounded semaglutide.</strong>{" "}
-        The middle listed price across the {providerCountNow} providers that list one today, {fmtDayYear(firstChange)} to {fmtDayYear(endT)}; a price holds until its next logged change, and providers are counted from the date they were listed.
+        <strong className="text-[#191919]">Lowest listed monthly price, compounded semaglutide.</strong>{" "}
+        The lowest listed price across the {providerCountNow} providers that list one today, {fmtDayYear(firstChange)} to {fmtDayYear(endT)}{saleNote ? `; ${saleNote}` : ""}. A price holds until its next logged change, and providers count from the date they were listed.
       </figcaption>
       <TrendSvg series={series} w={360} h={250} font={12.5} id="trend-n" className="block h-auto w-full sm:hidden" />
       <TrendSvg series={series} w={820} h={320} font={13} id="trend-w" className="hidden h-auto w-full sm:block" />
       <p className="mt-3 text-[12.5px] leading-relaxed text-gray-500 [font-variant-numeric:tabular-nums]">
-        Median by date:{" "}
+        Lowest by date:{" "}
         {points.map((p, i) => (
           <span key={p.t}>
             {i > 0 && " → "}
