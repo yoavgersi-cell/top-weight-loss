@@ -70,6 +70,27 @@ function stepPath(pts: TrendPoint[], x: (t: number) => number, y: (v: number) =>
   return d + `H${x(endT).toFixed(1)}`;
 }
 
+/** Monotone cubic (Fritsch-Carlson) path through the points: never overshoots a real value. */
+function smoothPath(pts: { x: number; y: number }[]) {
+  const n = pts.length;
+  const dx: number[] = [], sl: number[] = [];
+  for (let i = 0; i < n - 1; i++) { dx.push(pts[i + 1].x - pts[i].x); sl.push((pts[i + 1].y - pts[i].y) / dx[i]); }
+  const m: number[] = [sl[0] ?? 0];
+  for (let i = 1; i < n - 1; i++) m.push(sl[i - 1] * sl[i] <= 0 ? 0 : (sl[i - 1] + sl[i]) / 2);
+  m.push(sl[n - 2] ?? 0);
+  for (let i = 0; i < n - 1; i++) {
+    if (sl[i] === 0) { m[i] = 0; m[i + 1] = 0; continue; }
+    const a = m[i] / sl[i], b = m[i + 1] / sl[i], h = Math.hypot(a, b);
+    if (h > 3) { m[i] = (3 * a * sl[i]) / h; m[i + 1] = (3 * b * sl[i]) / h; }
+  }
+  let d = `M${pts[0].x.toFixed(1)},${pts[0].y.toFixed(1)}`;
+  for (let i = 0; i < n - 1; i++) {
+    const k = dx[i] / 3;
+    d += `C${(pts[i].x + k).toFixed(1)},${(pts[i].y + m[i] * k).toFixed(1)} ${(pts[i + 1].x - k).toFixed(1)},${(pts[i + 1].y - m[i + 1] * k).toFixed(1)} ${pts[i + 1].x.toFixed(1)},${pts[i + 1].y.toFixed(1)}`;
+  }
+  return d;
+}
+
 function TrendSvg({
   series, w, h, font, className, id,
 }: {
@@ -101,6 +122,9 @@ function TrendSvg({
   xTicks.push({ t: series.endT, anchor: "end" });
   const last = points[points.length - 1];
   const first = points[0];
+  const sp = points.map((p) => ({ x: x(p.t), y: y(p.v) }));
+  sp.push({ x: x(endT), y: y(last.v) });
+  const curve = smoothPath(sp);
   const label = `Lowest listed monthly compounded semaglutide price, ${fmtDayYear(series.firstChange)} to ${fmtDayYear(series.endT)}: ${money(first.v)} before the first logged change, ${money(last.v)} now.`;
   return (
     <svg viewBox={`0 0 ${w} ${h}`} width="100%" role="img" aria-labelledby={`${id}-t ${id}-d`} className={className} style={{ fontFamily: "inherit" }}>
@@ -118,9 +142,16 @@ function TrendSvg({
           <text x={x(k.t)} y={h - m.b + font + 7} textAnchor={k.anchor} fontSize={font} fill={AXIS}>{fmtDay(k.t)}</text>
         </g>
       ))}
-      <path d={stepPath(points, x, y, endT)} fill="none" stroke={NAVY} strokeWidth={font * 0.2} strokeLinejoin="round" />
+      <defs>
+        <linearGradient id={`${id}-g`} x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stopColor={NAVY} stopOpacity={0.22} />
+          <stop offset="100%" stopColor={NAVY} stopOpacity={0} />
+        </linearGradient>
+      </defs>
+      <path d={`${curve}V${h - m.b}H${x(points[0].t).toFixed(1)}Z`} fill={`url(#${id}-g)`} />
+      <path d={curve} fill="none" stroke={NAVY} strokeWidth={font * 0.24} strokeLinecap="round" strokeLinejoin="round" />
       {points.slice(1, -1).map((p) => (
-        <circle key={p.t} cx={x(p.t)} cy={y(p.v)} r={font * 0.28} fill="#fff" stroke={NAVY} strokeWidth={font * 0.14} />
+        <circle key={p.t} cx={x(p.t)} cy={y(p.v)} r={font * 0.34} fill="#fff" stroke={NAVY} strokeWidth={font * 0.17} />
       ))}
       <circle cx={x(last.t)} cy={y(last.v)} r={font * 0.42} fill={NAVY} />
       <text x={x(last.t) + font * 0.5} y={y(last.v) + font * 1.7} textAnchor="end" fontSize={font * 1.15} fontWeight={700} fill="#191919">
@@ -145,10 +176,10 @@ export function MarketTrendChart({
     <figure className="mb-5 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-6">
       <figcaption className="mb-3 text-[14px] leading-snug text-gray-600">
         <strong className="text-[#191919]">Lowest listed monthly price, compounded semaglutide.</strong>{" "}
-        The lowest listed price across the {providerCountNow} providers that list one today, {fmtDayYear(firstChange)} to {fmtDayYear(endT)}{saleNote ? `; ${saleNote}` : ""}. A price holds until its next logged change, and providers count from the date they were listed.
+        The lowest listed price across the {providerCountNow} providers that list one today, {fmtDayYear(firstChange)} to {fmtDayYear(endT)}{saleNote ? `; ${saleNote}` : ""}. Shown as a trend; prices hold until the next logged change, and providers count from the date they were listed.
       </figcaption>
-      <TrendSvg series={series} w={360} h={250} font={12.5} id="trend-n" className="block h-auto w-full sm:hidden" />
-      <TrendSvg series={series} w={820} h={320} font={13} id="trend-w" className="hidden h-auto w-full sm:block" />
+      <TrendSvg series={series} w={360} h={290} font={12.5} id="trend-n" className="block h-auto w-full sm:hidden" />
+      <TrendSvg series={series} w={820} h={400} font={13} id="trend-w" className="hidden h-auto w-full sm:block" />
       <p className="mt-3 text-[12.5px] leading-relaxed text-gray-500 [font-variant-numeric:tabular-nums]">
         Lowest by date:{" "}
         {points.map((p, i) => (
