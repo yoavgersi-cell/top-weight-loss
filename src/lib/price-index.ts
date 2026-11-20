@@ -36,10 +36,10 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "wellmedr",
     edge: "Lowest ongoing price on the market - same price at every dose",
-    semaglutide: { price: "$41", note: "pre-Black Friday sale (shown on welludr's site, Nov 3, 2026); 12-month plan; previously $49" },
-    tirzepatide: { price: "$71", note: "pre-Black Friday sale (shown on welludr's site, Nov 3, 2026); shipped every 4 weeks; previously $89" },
+    semaglutide: { price: "$39", note: "Black Friday sale discount applied (welludr's site, read Nov 20, 2026); no end date stated; page labels it \"Monthly Plan\" (previously listed as the 12-month plan at $41); shipped every 4 weeks" },
+    tirzepatide: { price: "$69", note: "Black Friday sale discount applied (welludr's site, read Nov 20, 2026); no end date stated; page labels it \"Monthly Plan\" (previously listed as the 12-month plan at $71); shipped every 4 weeks, same price at every dose" },
     shipping: "Ships in 3-5 business days",
-    commitment: "12-month plan for the lowest rate; cancel or change anytime",
+    commitment: "Monthly plan shipped every 4 weeks; cancel or change anytime (the 12-month plan is no longer shown on the page read Nov 20, 2026)",
   },
   {
     providerId: "embody",
@@ -52,8 +52,8 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "altrx",
     edge: "Low starting prices, plus a real brand-name shelf",
-    semaglutide: { price: "from $89", note: "starting price" },
-    tirzepatide: { price: "from $149", note: "starting price" },
+    semaglutide: { price: "from $89", note: "starting price; site banner also shows \"Black Friday Sale - 15% Off Use Code FRIDAY15\" (read Nov 20, 2026), terms and end date not stated" },
+    tirzepatide: { price: "from $149", note: "starting price; site banner also shows \"Black Friday Sale - 15% Off Use Code FRIDAY15\" (read Nov 20, 2026), terms and end date not stated" },
     shipping: "Free shipping in 5-7 days",
     commitment: "None - pause or cancel anytime; Buy Now, Pay Later",
   },
@@ -176,6 +176,24 @@ export type PriceChange = {
 };
 
 export const PRICE_CHANGELOG: PriceChange[] = [
+  {
+    date: "2026-11-20",
+    providerId: "wellmedr",
+    change:
+      "Black Friday sale: compounded semaglutide now listed at $39/month (previously $41) and tirzepatide at $69/month (previously $71). welludr's page shows \"BLACK FRIDAY SALE DISCOUNT APPLIED!\" with no end date. The page now labels these prices \"Monthly Plan\" (shipped every 4 weeks, same price at every dose, cancel or change anytime); our earlier $41 and $71 were listed as the 12-month plan, which this page no longer shows, so the basis may differ. Compounded medicines are not FDA-approved.",
+    moves: [
+      { drug: "semaglutide", from: 41, to: 39, condition: "Black Friday sale; page labels it Monthly Plan, shipped every 4 weeks" },
+      { drug: "tirzepatide", from: 71, to: 69, condition: "Black Friday sale; page labels it Monthly Plan, shipped every 4 weeks, same price at every dose" },
+    ],
+    source: "welludr (wellmedr.com) get-started page, November 20, 2026",
+  },
+  {
+    date: "2026-11-20",
+    providerId: "altrx",
+    change:
+      "Black Friday sale live: a sitewide banner reads \"Black Friday Sale - 15% Off Use Code FRIDAY15\". The listed base prices are unchanged at $89/month for semaglutide and $149/month for tirzepatide. The page does not say whether those figures are before or after the code, what the 15% applies to, or when the sale ends.",
+    source: "altRx website, November 20, 2026",
+  },
   {
     date: "2026-11-18",
     providerId: "healthrx",
