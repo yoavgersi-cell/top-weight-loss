@@ -7,11 +7,13 @@ import { LastUpdated } from "@/components/last-updated";
 import { GuideCluster } from "@/components/guide-cluster";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { TrustDisclosure } from "@/components/medical-sources";
+import { MarketTrendChart, PriceSparkline, buildMedianSeries } from "@/components/price-trend-chart";
 import { ProviderCta } from "@/components/provider-cta";
 import { pageReviewSchema } from "@/data/reviewers";
 import { getConfig } from "@/lib/config-store";
 import {
   CHANGE_KIND_LABEL,
+  PRICE_CHANGELOG,
   PRICE_CHANGES_NEWEST,
   PRICE_DATA_UPDATED,
   PRICE_INDEX_VERIFIED,
@@ -135,6 +137,8 @@ export default async function PriceTrackerPage() {
     }
   }
   const historyProviders = [...history.keys()];
+  const semaNow = new Map(rows.filter((r) => r.semaValue !== null).map((r) => [r.providerId, r.semaValue as number]));
+  const trend = buildMedianSeries(PRICE_CHANGELOG, semaNow, PRICE_DATA_UPDATED);
 
   const shortAnswer =
     sema && tirz && cheapestSema && cheapestTirz
@@ -398,6 +402,7 @@ export default async function PriceTrackerPage() {
               <h2 id="price-history" className="text-[22px] font-bold text-[#191919]">Price history by provider</h2>
             </div>
             <p className="mb-5 text-[14px] text-gray-500">Each listed monthly price we have recorded, oldest to newest, for providers whose price has moved since {monthLabel(earliest)}.</p>
+            {trend && <MarketTrendChart series={trend} providerCountNow={semaNow.size} />}
             <div className="grid gap-4 sm:grid-cols-2">
               {historyProviders.map((id) => (
                 <div key={id} className="rounded-xl border border-gray-200 bg-white p-5">
@@ -408,6 +413,9 @@ export default async function PriceTrackerPage() {
                     {[...history.get(id)!.entries()].map(([drug, series]) => (
                       <div key={drug}>
                         <dt className="text-[12px] font-bold uppercase tracking-[0.06em] text-gray-400">{DRUG_LABEL[drug]}</dt>
+                        <dd className="mt-1">
+                          <PriceSparkline points={series} startIso={earliest} endIso={PRICE_DATA_UPDATED} title={`${name(id)} ${DRUG_LABEL[drug]}`} id={`sp-${id}-${drug}`} />
+                        </dd>
                         <dd className="mt-1 flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[14px] text-gray-700 [font-variant-numeric:tabular-nums]">
                           {series.map((pt, i) => (
                             <span key={i} className="inline-flex items-center gap-1.5">
