@@ -1899,7 +1899,7 @@ const altrxTrimrxBattle: BattleData = {
   categories: [
     {
       name: "Pricing & Value",
-      winner: "provider2",
+      winner: "provider1",
       explanation: "altRx lists compounded GLP-1 from $89/month and GLP-1 + GIP from $149 (price index, read Nov 20, 2026), with Buy Now, Pay Later available. TrimRX shows plans from $179/month on its site (read Nov 22, 2026), with discounts for multi-month commitments and consultations plus ongoing support bundled in. On published starting prices, altRx is lower.",
       supportingPoints: [
         "Multi-month discounts (TrimRX)",
@@ -2103,7 +2103,7 @@ const medviTrimrxBattle: BattleData = {
     },
     {
       name: "Pricing & Value",
-      winner: "provider2",
+      winner: "provider1",
       explanation: "Medvi lists plans from $99/month (price index, verified Nov 18, 2026) and its plans are all-inclusive (medication, consultations, and support with no surprise charges). TrimRX shows plans from $179/month on its site (read Nov 22, 2026), with multi-month discounts. On published starting prices, Medvi is lower.",
       supportingPoints: [
         "Multi-month discounts (TrimRX)",

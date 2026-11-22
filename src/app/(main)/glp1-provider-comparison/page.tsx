@@ -120,9 +120,9 @@ const ROWS: Row[] = [
     id: "medvi",
     name: "Medvi",
     medications: "Compounded semaglutide and tirzepatide; oral dissolving tablets",
-    entry: "$99 sema / $166 tirz",
-    entryNote: "promotional; reg. $199 / $299; tablets $249",
-    after: "Regular price once the promotion ends",
+    entry: "Plans from $99",
+    entryNote: "price index, verified Nov 18, 2026; no per-drug price listed; tablets $249",
+    after: "Not listed in our verified index",
     membership: "None",
     shipping: "Free",
     support: "Video visits with a provider or NP, dietician, care coaching",
@@ -328,7 +328,7 @@ const SECTIONS: Section[] = [
     ),
     pricing: (
       <>
-        <strong className="text-[#191919]">Semaglutide $99 a month and tirzepatide $166 a month at the current promotion</strong>, against regular prices of $199 and $299; oral dissolving tablets $249. Verified October 16, 2026. Free shipping, no membership, monthly billing. The promotion has no published end date, so budget for the regular price.
+        <strong className="text-[#191919]">Plans from $99 a month</strong> (price index, verified November 18, 2026; Medvi&rsquo;s site could not be re-read on November 22, 2026); oral dissolving tablets $249. Our verified index lists no per-drug or regular price for Medvi, so confirm the price you are quoted before you pay. Free shipping, no membership, monthly billing.
       </>
     ),
     support:
@@ -345,7 +345,7 @@ const SECTIONS: Section[] = [
     suits: "Readers whose previous attempts failed for lack of structure and who want scheduled clinical contact, or who can use HSA/FSA funds.",
     assessment: (
       <>
-        Medvi is <strong className="text-[#191919]">the provider to choose for care rather than price</strong>, and two long Reddit accounts support the care. The caution: understand the renewal date, the 72-hour rule and the regular price before you start.
+        Medvi is <strong className="text-[#191919]">the provider to choose for care rather than price</strong>, and two long Reddit accounts support the care. The caution: understand the renewal date, the 72-hour rule and the price you will be billed before you start.
       </>
     ),
   },

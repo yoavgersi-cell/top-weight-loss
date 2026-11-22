@@ -47,8 +47,8 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
   },
   "weight-loss:medvi": {
     rows: [
-      { label: "Semaglutide price", value: "$99/month promotional (reg. $199), all-inclusive" },
-      { label: "Tirzepatide price", value: "$166/month promotional (reg. $299)" },
+      { label: "Starting price", value: "Plans from $99/month, all-inclusive (price index, verified Nov 18, 2026)" },
+      { label: "Per-drug price", value: "Not currently listed in our verified index" },
       { label: "Support", value: "Video visits and a dietician on every plan" },
       { label: "Commitment", value: "Monthly, all-inclusive billing" },
     ],
