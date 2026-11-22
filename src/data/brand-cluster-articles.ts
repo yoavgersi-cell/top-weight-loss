@@ -148,7 +148,7 @@ export const brandClusterArticles: Article[] = [
     author: "Treatments Hub Staff",
     keyTakeaways: [
       "Yes, Medvi is legitimate: licensed providers on real video visits and a medical intake that can end in a decline.",
-      "Pricing is all-inclusive and HSA/FSA-approved: $99/month semaglutide (reg. $199) and $166/month tirzepatide (reg. $299), with no dose-based increases.",
+      "Pricing is all-inclusive and HSA/FSA-approved, with plans from $99 a month (Medvi site, read Nov 3, 2026); its page does not list a separate tirzepatide price.",
       "Fair criticisms: it is not the cheapest (welludr $41, embody $49), it is compounded-only, it is monthly-only, and whether the support premium is worth it is a personal call.",
     ],
     sections: [
