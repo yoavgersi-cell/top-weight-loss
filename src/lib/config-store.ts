@@ -1,4 +1,5 @@
 import { TRUSTPILOT_DATA_REMOVED } from "@/lib/trustpilot-display";
+import { resolveContentPath, resolveInternalPath } from "@/lib/path-redirects";
 import { put, list } from "@vercel/blob";
 import { type SiteConfig, type ReviewData, type ArticleData, type BattleData, type LandingPageData, type TrustpilotReview, type Expert, defaultConfig, DEFAULT_VERTICAL, VERTICALS, WEIGHT_LOSS_HERO_TEXT } from "./config";
 import productsJson from "@/data/products.json";
@@ -4100,8 +4101,43 @@ function rewriteBareWlLinksDeep(config: SiteConfig, prefix: string): SiteConfig 
   );
 }
 
-function normalizeBrandCasing(rawConfig: SiteConfig, linkPrefix = "/weight-loss"): SiteConfig {
-  const config = rewriteBareWlLinksDeep(replaceLongDashesDeep(rawConfig), linkPrefix);
+// Stale CMS hrefs that the proxy 301s (Nov 22, 2026 link check: 102 internal
+// links hit a redirect, from retired article records and old body HTML).
+// Rewrites every internal `href="/..."` in the config to its final URL using
+// the proxy's own redirect maps (resolveInternalPath), chains resolved. Runs
+// after the bare-prefix pass so `/articles/x` has already become
+// `/weight-loss/articles/x`.
+const INTERNAL_HREF_RE = /href="(\/[^"]*)"/g;
+function rewriteRedirectedLinksDeep(config: SiteConfig): SiteConfig {
+  return JSON.parse(JSON.stringify(config), (_key, value) =>
+    typeof value === "string" && value.includes('href="/')
+      ? value.replace(INTERNAL_HREF_RE, (m, path: string) => {
+          const final = resolveInternalPath(path);
+          return final === path ? m : `href="${final}"`;
+        })
+      : value
+  );
+}
+
+// A retired article record (slug the proxy redirects) whose destination is
+// itself a live article in this config is a true duplicate: the destination is
+// already rendered wherever the list draws on articles, so the stale card is
+// dropped. Records whose destination is not an article (a review, a landing
+// page, the vertical root) are kept; hubLink and the other card builders point
+// them at the final URL.
+function dropDuplicateRetiredArticles<T extends { slug: string }>(articles: T[], vertical: string): T[] {
+  const live = new Set(articles.map((a) => a.slug));
+  return articles.filter((a) => {
+    const from = `/articles/${a.slug}`;
+    const to = resolveContentPath(vertical, from);
+    if (to === from) return true;
+    const m = /^\/articles\/([^/]+)$/.exec(to);
+    return !(m && m[1] !== a.slug && live.has(m[1]));
+  });
+}
+
+export function normalizeBrandCasing(rawConfig: SiteConfig, linkPrefix = "/weight-loss"): SiteConfig {
+  const config = rewriteRedirectedLinksDeep(rewriteBareWlLinksDeep(replaceLongDashesDeep(rawConfig), linkPrefix));
   const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
   return {
     ...config,
@@ -4146,7 +4182,7 @@ function normalizeBrandCasing(rawConfig: SiteConfig, linkPrefix = "/weight-loss"
         provider2Value: fixBrandText(f.provider2Value),
       })),
     })),
-    articles: config.articles.map((a) => ({
+    articles: dropDuplicateRetiredArticles(config.articles, linkPrefix.replace(/^\//, "")).map((a) => ({
       ...a,
       title: fixBrandText(a.title),
       description: fixBrandText(a.description),

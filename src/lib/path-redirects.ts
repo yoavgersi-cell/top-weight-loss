@@ -1,3 +1,6 @@
+import { isVertical } from "./config";
+import { SLUG_ALIASES } from "./slug-aliases";
+
 // Full-path redirects for content pages that were renamed or consolidated.
 // The proxy resolves these as a single 301; the sitemap and llms.txt consult
 // the same maps so a redirecting URL is never advertised (Nov 15, 2026 audit,
@@ -90,3 +93,61 @@ export const VERTICAL_PATH_REDIRECTS: Record<string, Record<string, string>> = {
 /** True when `/<vertical><contentPath>` is a URL the proxy 301s away from. */
 export const isRedirectedContentPath = (vertical: string, contentPath: string): boolean =>
   PATH_REDIRECTS[contentPath] !== undefined || VERTICAL_PATH_REDIRECTS[vertical]?.[contentPath] !== undefined;
+
+// ---------------------------------------------------------------------------
+// Link resolution (Nov 22, 2026 internal-link check: 102 internal links hit a
+// 301). The CMS snapshot still holds retired article records and old body
+// HTML whose hrefs point at slugs the proxy now redirects. These helpers
+// follow the SAME maps the proxy uses (PATH_REDIRECTS, VERTICAL_PATH_REDIRECTS,
+// SLUG_ALIASES) and in the proxy's order, so a link can be written straight to
+// its final URL. No second copy of the redirect list exists.
+// ---------------------------------------------------------------------------
+
+/**
+ * Follow the proxy's redirect rules for one content-relative path ("/articles/x",
+ * "" for the vertical root) until it stops moving. Chains resolve to the last
+ * hop; a loop or runaway chain returns the input unchanged.
+ */
+export function resolveContentPath(vertical: string, contentPath: string): string {
+  let cp = contentPath;
+  for (let hop = 0; hop < 8; hop++) {
+    let next: string | undefined = PATH_REDIRECTS[cp];
+    if (next === undefined) next = VERTICAL_PATH_REDIRECTS[vertical]?.[cp];
+    if (next === undefined) {
+      const last = cp.split("/").filter(Boolean).pop();
+      if (last && SLUG_ALIASES[last]) next = `/${SLUG_ALIASES[last]}`;
+    }
+    if (next === undefined || next === cp) return cp;
+    cp = next;
+  }
+  return contentPath;
+}
+
+// A bare single-segment comparison slug ("/noom-vs-found"). The proxy 301s any
+// bare path under /weight-loss; comparison slugs are the only bare shape that
+// still appears in stale CMS HTML beyond the roots in config-store's
+// BARE_WL_LINK_RE, so they are the only bare form prefixed here.
+const BARE_BATTLE_RE = /^\/[a-z0-9]+-vs-[a-z0-9-]+$/;
+
+/**
+ * Map an internal site path (optionally with ?query or #hash) to the URL the
+ * proxy would finally serve it from. Paths that are not redirected, and
+ * anything that is not a root-relative internal path, come back unchanged.
+ */
+export function resolveInternalPath(path: string): string {
+  if (!path.startsWith("/") || path.startsWith("//")) return path;
+  const cut = path.search(/[?#]/);
+  const pure = cut === -1 ? path : path.slice(0, cut);
+  const suffix = cut === -1 ? "" : path.slice(cut);
+  const segs = pure.split("/").filter(Boolean);
+  const first = segs[0];
+  if (first && isVertical(first)) {
+    const rest = segs.length > 1 ? `/${segs.slice(1).join("/")}` : "";
+    const resolved = resolveContentPath(first, rest);
+    return resolved === rest ? path : `/${first}${resolved}${suffix}`;
+  }
+  const cp = resolveContentPath("weight-loss", pure);
+  if (cp !== pure) return `/weight-loss${cp}${suffix}`;
+  if (BARE_BATTLE_RE.test(pure)) return `/weight-loss${pure}${suffix}`;
+  return path;
+}

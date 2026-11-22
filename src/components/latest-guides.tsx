@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { NOINDEX_ARTICLE_SLUGS, VERTICALS, type ArticleData } from "@/lib/config";
+import { resolveInternalPath } from "@/lib/path-redirects";
 
 // ───── Latest guides ─────
 // A dated grid of the newest guides, used on the hub home (across every
@@ -74,7 +75,7 @@ export function LatestGuides({
           return (
             <Link
               key={`${vertical}/${a.slug}`}
-              href={`/${vertical}/articles/${a.slug}`}
+              href={resolveInternalPath(`/${vertical}/articles/${a.slug}`)}
               className="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md"
             >
               <div

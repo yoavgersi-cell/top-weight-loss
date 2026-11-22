@@ -468,7 +468,17 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // Related articles: the three whose title, slug and description share the
   // most words with this one (category as a tie-break), so every article is
   // linked from its closest siblings rather than the same three every time.
-  const relatedArticles = pickRelatedArticles(articles, article, 3);
+  // A retired CMS record links to its final URL (hubLink); over-pick, then drop
+  // any card that now points at this page or repeats another card's URL.
+  const relatedSeen = new Set<string>([hubLink(ctx, `/articles/${slug}`)]);
+  const relatedArticles = pickRelatedArticles(articles, article, 8)
+    .filter((a) => {
+      const href = hubLink(ctx, `/articles/${a.slug}`);
+      if (relatedSeen.has(href)) return false;
+      relatedSeen.add(href);
+      return true;
+    })
+    .slice(0, 3);
 
   const formattedDate = new Date(latestUpdate(article.updatedAt)).toLocaleDateString(
     "en-US",
