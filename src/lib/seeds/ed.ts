@@ -60,10 +60,11 @@ export function edSeed(base: SiteConfig): SiteConfig {
     ranking: {
       // Hims temporarily removed from the ranked comparison (chart + top-3). Its
       // review and battle pages stay live; re-add "hims" here to restore it.
-      providerOrder: ["quad", "directmeds", "rexmd", "dudemeds", "braverx", "petermd", "shed"],
+      providerOrder: ["quad", "directmeds", "rugiet", "rexmd", "dudemeds", "braverx", "petermd", "shed"],
       positions: [
         { score: 9.8, starRating: 5, label: "Exceptional", badge: "Our Top Pick" },
         { score: 9.6, starRating: 5, label: "Excellent" },
+        { score: 9.4, starRating: 5, label: "Excellent" },
         { score: 9.3, starRating: 5, label: "Excellent" },
         { score: 9.1, starRating: 5, label: "Excellent" },
         { score: 8.8, starRating: 4, label: "Very Good" },
@@ -103,6 +104,22 @@ export function edSeed(base: SiteConfig): SiteConfig {
           "Discreet, direct-to-door delivery",
         ],
         affiliateUrl: "https://www.vyrov30g.com/45LC6KK/9WQFXBK/",
+        ctaText: "Visit Site",
+      },
+      {
+        id: "rugiet",
+        name: "Rugiet",
+        tagline:
+          "A compounded, multi-ingredient dissolvable ED medication prescribed online after a licensed-provider telehealth review",
+        logo: "/logos/rugiet.webp",
+        smallLogo: "/logos/rugiet.webp",
+        highlights: [
+          "Compounded, multi-ingredient dissolvable dose",
+          "Blends PDE5 inhibitors (sildenafil + tadalafil)",
+          "Rx-only after licensed-provider review",
+          "Discreet home delivery",
+        ],
+        affiliateUrl: "https://track.revoffers.com/aff_c?offer_id=1364&aff_id=12904",
         ctaText: "Visit Site",
       },
       {
@@ -513,6 +530,96 @@ export function edSeed(base: SiteConfig): SiteConfig {
           {
             heading: "How Quad compares",
             body: `<p>Against a <strong>single generic pill</strong>, Quad's advantage is breadth - two PDE5 inhibitors plus two other mechanisms in one dissolvable dose - at a higher monthly cost and without FDA-approved-drug status. Against its closest peer, <strong>Rugiet</strong> (another compounded multi-ingredient option), the two are more alike than different, and the decision comes down to formula, brand and price; we put them side by side in <a href="/ed/articles/quad-vs-rugiet">Quad vs Rugiet</a>, and against a single-ingredient chewable in <a href="/ed/articles/quad-vs-bluechew">Quad vs BlueChew</a>. Against a general online clinic, see <a href="/ed/quad-vs-directmeds">Quad vs DirectMeds</a>. If you're still deciding between routes entirely, our guide to <a href="/ed/articles/alternatives-to-viagra-and-cialis">alternatives to Viagra and Cialis</a> maps the full landscape, and you can see how every licensed clinic we track stacks up on our <a href="/ed">ED treatment comparison</a>.</p><p><em>This review is general information, not medical advice. A licensed clinician decides whether Quad, or any ED treatment, is appropriate for you - especially if you take nitrates or have a heart condition.</em></p>`,
+          },
+        ],
+      },
+      {
+        slug: "rugiet",
+        providerId: "rugiet",
+        shortSummary:
+          "A compounded, multi-ingredient dissolvable ED medication prescribed online after a licensed-provider review - a credible alternative in the same category as our top-ranked compounded pick.",
+        reviewIntro:
+          "Rugiet is a men's-health telehealth brand built around a compounded, multi-ingredient ED medication taken as a dissolvable dose rather than a swallowed pill. Instead of a single active like a generic Viagra or Cialis, it blends more than one PDE5 inhibitor into one dose, with the exact formula set by the prescribing clinician. The flow is the standard legitimate one: an online intake, a licensed-provider review, and discreet delivery if it is appropriate for you. It sits in the same compounded, dissolvable category as our top-ranked option, so this review focuses on what it is, how it is taken, and where it fits.",
+        keyFeatures: [
+          "Compounded, multi-ingredient dissolvable ED medication",
+          "Blends PDE5 inhibitors - typically sildenafil and tadalafil",
+          "Prescription-only after a licensed-provider review",
+          "Fully online intake with discreet home delivery",
+          "Formula set and adjusted by the prescribing clinician",
+        ],
+        pricingSummary:
+          "Approximate only - confirm at checkout. Rugiet is sold as a compounded telehealth plan rather than a plain per-pill price, and compounded multi-ingredient programs generally cost more than a bare generic pill because you are paying for the blended formula plus provider oversight. Plan structures and promotions change often, so verify the current price and plan terms on Rugiet's own site before subscribing. If the lowest price is your priority, a single-ingredient generic from a licensed clinic will be cheaper.",
+        treatmentOptions: [
+          "Compounded multi-ingredient dissolvable ED medication",
+          "Online licensed-provider evaluation and follow-up",
+        ],
+        pros: [
+          "Compounded multi-ingredient dose for men a single pill underperformed for",
+          "Dissolvable format - no tablet to swallow",
+          "Established men's-health telehealth brand",
+          "Licensed-provider review before prescribing",
+          "Discreet, fully online process",
+        ],
+        cons: [
+          "Compounded, so not FDA-approved the way brand and generic pills are",
+          "Costs more than a plain generic pill",
+          "Pricing and plan terms shift often - confirm at checkout",
+          "Requires an online medical review",
+        ],
+        bestFor: [
+          "Men who want a compounded, multi-ingredient dissolvable rather than a single generic",
+          "Those who specifically want Rugiet's blend or brand and plan",
+          "Men for whom a standard single-ingredient pill underperformed",
+        ],
+        finalVerdict:
+          "Rugiet is a legitimate compounded, multi-ingredient dissolvable ED option in the same category as our top-ranked pick, and a credible alternative worth knowing about. It is prescription-only after a licensed-provider review, which matters more for a compounded product than for a plain generic because these blends are not FDA-approved. If you want a differentiated dissolvable blend and prefer Rugiet's brand and plan, it is a sensible choice; if the lowest price is your priority, a single-ingredient generic will beat it. Confirm the current price and formula on Rugiet's own site. This review is general information, not medical advice.",
+        howItWorks: [
+          {
+            timing: "Step 1",
+            title: "Online intake",
+            detail: "Complete a short health questionnaire online.",
+          },
+          {
+            timing: "Step 2",
+            title: "Provider review",
+            detail: "A licensed provider reviews your intake and sets the formula if treatment is appropriate.",
+          },
+          {
+            timing: "Step 3",
+            title: "Discreet delivery",
+            detail: "If prescribed, your medication ships discreetly to your door.",
+          },
+        ],
+        trustBadges: ["Compounded dissolvable", "Licensed providers", "Discreet shipping"],
+        updatedAt: "2026-11-22",
+        sections: [
+          {
+            heading: "What Rugiet is",
+            body: `<p>Rugiet is a <strong>men's-health telehealth brand</strong> whose flagship ED product is a <strong>compounded, multi-ingredient medication</strong> taken as a <strong>dissolvable dose</strong> - it melts rather than being swallowed as a tablet. Instead of relying on a single active ingredient the way a generic Viagra or Cialis pill does, Rugiet combines more than one into a single dose, with the exact blend set by the prescribing clinician. It is <strong>prescription-only</strong>: you complete an online intake, a licensed clinician decides whether it is appropriate for you, and, if so, it ships discreetly to your door.</p><p>That compounded, multi-ingredient design is what puts it in the same category as our <a href="/ed/reviews/quad">top-ranked option</a> - and also why the licensed-provider step matters more than it does for a plain generic. Compounded medications are made by specialized pharmacies and are <strong>not FDA-approved the way brand and generic drugs are</strong>, so a clinician confirming the formula is right for you is doing real work, not ticking a box.</p>`,
+          },
+          {
+            heading: "Inside the compounded blend",
+            body: `<p>Rugiet is built around a <strong>combination of PDE5 inhibitors</strong> - typically <strong>sildenafil</strong> (the active in Viagra) and <strong>tadalafil</strong> (the active in Cialis) - rather than one alone. Pairing a shorter-acting and a longer-acting PDE5 inhibitor in one dose is the core idea, and the brand has historically offered some customization of the mix with a provider. The exact ingredients and per-ingredient strengths are set by the prescribing clinician, so <strong>confirm your specific formulation with Rugiet</strong> rather than assuming a fixed recipe. For how the PDE5 backbone compares on its own, see our guide to <a href="/ed/articles/sildenafil-vs-cialis">sildenafil vs tadalafil</a>.</p>`,
+          },
+          {
+            heading: "How you take it",
+            body: `<p>Rugiet is a <strong>dissolvable dose</strong>: you let it dissolve rather than swallowing a tablet, which many men prefer. Like all ED medication, it supports an erection in response to arousal - it is not an automatic switch, and timing, food and alcohol still matter. Because the blend and strengths are set for you, follow the dosing your clinician sets rather than a generic schedule.</p>`,
+          },
+          {
+            heading: "What Rugiet costs",
+            body: `<p>Rugiet is sold as a <strong>compounded telehealth plan</strong> rather than a plain per-pill price. Compounded multi-ingredient programs generally <strong>cost more than a bare generic pill</strong> - you are paying for the blended formula plus the provider oversight - and promotional pricing and plan terms change often. Treat any headline figure as a starting point and <strong>confirm the current rate on Rugiet's own site before subscribing</strong>. If budget is the priority, a generic sildenafil or tadalafil plan from a licensed clinic will be cheaper; what you pay more for here is the blend and the included clinical review. We break down the trade-offs in our <a href="/ed/articles/ed-treatment-cost">ED treatment cost</a> guide.</p>`,
+          },
+          {
+            heading: "Who Rugiet is - and isn't - for",
+            body: `<p>Rugiet makes the most sense for a specific man: <strong>someone a single standard pill underperformed for</strong>, or who wants a dissolvable, multi-ingredient dose and prefers Rugiet's brand and plan. It also suits men who want the consultation and the formula handled as one online program.</p><p>It is <strong>not</strong> the right starting point for everyone. If you've never tried ED treatment, an affordable single-ingredient generic is the sensible first step before a compounded blend. And, like all PDE5 medication, Rugiet is <strong>not appropriate</strong> for men who take nitrates or certain blood-pressure drugs, or who have specific heart conditions; that screening is exactly what the clinician review is for, and why honesty on the intake matters.</p>`,
+          },
+          {
+            heading: "Safety and the compounding caveat",
+            body: `<p>Because Rugiet's blend is built on PDE5 inhibitors, its most common side effects mirror theirs: <strong>headache, facial flushing, nasal congestion and indigestion</strong>, usually mild and temporary. The serious, non-negotiable rule is the one that applies to all PDE5 medicines: <strong>never combine them with nitrates</strong>, and clear any heart condition or other medications with the prescribing clinician first. Rare but urgent effects - an erection lasting more than four hours, or sudden vision or hearing changes - need prompt medical care.</p><p>The honest caveat worth repeating: Rugiet is <strong>compounded</strong>, so it does not carry FDA approval the way brand-name Viagra/Cialis or their generics do. That is legal and long-established, but it puts more weight on the licensed clinician deciding it is suitable for you. We cover the broader side-effect picture in our <a href="/ed/articles/ed-medication-side-effects">ED medication side effects</a> guide.</p>`,
+          },
+          {
+            heading: "How Rugiet compares",
+            body: `<p>Rugiet's closest peer on this site is <strong><a href="/ed/reviews/quad">Quad by MEDVi</a></strong>, another compounded multi-ingredient dissolvable. The two are more alike than different, and the decision comes down to formula, brand and price; we put them side by side in <a href="/ed/articles/quad-vs-rugiet">Quad vs Rugiet</a>. Against a <strong>single generic pill</strong>, Rugiet's advantage is a blended, dissolvable dose - at a higher cost and without FDA-approved-drug status. If you're weighing routes more broadly, our guide to <a href="/ed/articles/alternatives-to-viagra-and-cialis">alternatives to Viagra and Cialis</a> maps the landscape, and you can see how every licensed clinic we track stacks up on our <a href="/ed">ED treatment comparison</a>.</p><p><em>This review is general information, not medical advice. A licensed clinician decides whether Rugiet, or any ED treatment, is appropriate for you - especially if you take nitrates or have a heart condition.</em></p>`,
           },
         ],
       },
@@ -1941,7 +2048,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
         sections: [
           {
             heading: "The short version",
-            body: `<p>Unlike most ED comparisons, this one is between two products in the <em>same</em> category. <a href="/ed/reviews/quad">Quad by MEDVi</a> and Rugiet are both <strong>compounded, multi-ingredient, dissolvable</strong> ED medications prescribed through an online telehealth flow - both blend several actives into one dose you dissolve rather than swallow, both are aimed at men who want more than a single standard pill delivers, and both are prescription-only. So the choice isn't "pill vs blend" - it's which compounded program, brand and provider experience fits you. Quad is our <a href="/ed">top-ranked option</a>; Rugiet is a credible alternative in the same space.</p>`,
+            body: `<p>Unlike most ED comparisons, this one is between two products in the <em>same</em> category. <a href="/ed/reviews/quad">Quad by MEDVi</a> and Rugiet are both <strong>compounded, multi-ingredient, dissolvable</strong> ED medications prescribed through an online telehealth flow - both blend several actives into one dose you dissolve rather than swallow, both are aimed at men who want more than a single standard pill delivers, and both are prescription-only. So the choice isn't "pill vs blend" - it's which compounded program, brand and provider experience fits you. Quad is our <a href="/ed">top-ranked option</a>; <a href="/ed/reviews/rugiet">Rugiet</a> is a credible alternative in the same space.</p>`,
           },
           {
             heading: "Quad vs Rugiet at a glance",
