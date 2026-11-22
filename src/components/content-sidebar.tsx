@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { ProviderCta } from "./provider-cta";
 import type { SidebarConfigData, Provider, ArticleData } from "@/lib/config";
 import { imgDims } from "@/lib/image-dims";
+import { resolveInternalPath } from "@/lib/path-redirects";
 
 interface ContentSidebarProps {
   config: SidebarConfigData;
@@ -96,7 +97,7 @@ export function ContentSidebar({ config, providers, articles, pageType, sourceFl
                     {selectedArticles.map((article) => (
                       <Link
                         key={article.slug}
-                        href={`/articles/${article.slug}`}
+                        href={resolveInternalPath(`/articles/${article.slug}`)}
                         className="group block"
                       >
                         <p className="text-[13px] font-semibold leading-snug text-[#191919] group-hover:text-[#0C4B75] transition-colors">

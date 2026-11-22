@@ -85,7 +85,7 @@ export function ReviewFaceoff({
           From the <strong>{A.total}</strong> {A.name} and <strong>{B.total}</strong> {B.name} public customer reviews we read,
           grouped by what the review is about. Each cell is the number of distinct reviews
           that praise or criticise that area; the last column compares the net rate per 100 reviews, and calls a gap under{" "}
-          {EVEN_BAND} points even. An area that only one side&rsquo;s reviewers mention is not counted as a lead.
+          {EVEN_BAND}{" "}points even. An area that only one side&rsquo;s reviewers mention is not counted as a lead.
         </p>
       </div>
       <div className="overflow-x-auto">

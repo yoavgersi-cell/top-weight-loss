@@ -1,4 +1,5 @@
 import { DEFAULT_VERTICAL, isPublishedVertical } from "./config";
+import { resolveInternalPath } from "./path-redirects";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Site context
@@ -108,5 +109,7 @@ export function hubLink(ctx: SiteContext, path: string): string {
   if (first && SHARED_ONE_OFF.has(first) && ctx.prefix && ctx.prefix !== `/${DEFAULT_VERTICAL}`) {
     return `/${DEFAULT_VERTICAL}${path}`;
   }
-  return `${ctx.prefix}${path}`;
+  // A card built from a retired CMS record (`/articles/<old-slug>`) links
+  // straight to the page the proxy would 301 it to (Nov 22, 2026 link check).
+  return ctx.prefix ? resolveInternalPath(`${ctx.prefix}${path}`) : `${path}`;
 }

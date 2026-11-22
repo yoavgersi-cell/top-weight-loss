@@ -438,7 +438,7 @@ export default async function Glp1PillsVsInjectionsPage() {
               American College of Cardiology on September 24, 2025) - and the STEP 1 extension in Diabetes,
               Obesity and Metabolism (April 19, 2022), each linked where cited. FDA approvals: Wegovy (June 4,
               2021), Zepbound (November 8, 2023), the Wegovy pill (December 2025) and Foundayo (April 1,
-              2026). Prices: the providers&rsquo; own published figures, verified {PRICE_DATE} for the price
+              2026). Prices: the providers&rsquo; own published figures, verified {PRICE_DATE}{" "}for the price
               index and August 2026 for Ro&rsquo;s brand products; Foundayo and NovoCare prices and savings
               cards as reported by Scientific American, Lilly&rsquo;s April 9, 2026 release and third-party
               trackers, not verified by us. Weight-loss figures are trial averages; individual results vary.

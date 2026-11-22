@@ -51,9 +51,7 @@ const categoryColors: Record<string, string> = {
 
 export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
   const config = await getConfig(ctx.vertical);
-  const articles = config.articles ?? [];
-  // Newest per-article updatedAt: a true freshness signal for the listing.
-  const newestArticle = articles.map((a) => a.updatedAt).filter((d): d is string => !!d).sort().pop();
+  const allArticles = config.articles ?? [];
   const vName = verticalName(ctx.vertical);
 
   // Standalone in-depth guide pages (custom weight-loss landing pages, not CMS
@@ -83,6 +81,23 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
     })
     .filter((c): c is NonNullable<typeof c> => c !== null);
 
+  // A retired CMS record links to its final URL (hubLink). When that URL is
+  // already on this page - as a standalone guide, a comparison, or another
+  // article card - the card is a duplicate and is dropped (Nov 22, 2026).
+  const shownHrefs = new Set<string>([
+    ...guides.map((g) => hubLink(ctx, g.href)),
+    ...comparisons.map(({ battle }) => hubLink(ctx, `/${battle.slug}`)),
+  ]);
+  const articles = allArticles.filter((a) => {
+    const href = hubLink(ctx, `/articles/${a.slug}`);
+    const retired = href !== `${ctx.prefix}/articles/${a.slug}`;
+    if (retired && shownHrefs.has(href)) return false;
+    shownHrefs.add(href);
+    return true;
+  });
+  // Newest per-article updatedAt: a true freshness signal for the listing.
+  const newestArticle = articles.map((a) => a.updatedAt).filter((d): d is string => !!d).sort().pop();
+
   if (articles.length === 0) {
     return (
       <div className="min-h-screen bg-gray-50">
@@ -109,7 +124,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
           "@type": "ListItem",
           position: i + 1,
           name: a.title,
-          url: canonicalUrl(ctx, `/articles/${a.slug}`),
+          url: canonicalUrl(ctx, hubLink(ctx, `/articles/${a.slug}`).slice(ctx.prefix.length) || "/"),
         })),
         ...guides.map((g, i) => ({
           "@type": "ListItem",

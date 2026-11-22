@@ -887,7 +887,12 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   const clusterSet = new Set(clusterSlugs.map((c) => c.slug));
   const mentions = (a: { slug: string; title: string }) =>
     a.slug.includes(provider.id) || a.title.toLowerCase().includes(provider.name.toLowerCase());
-  const nonCluster = (config.articles ?? []).filter((a) => !clusterSet.has(a.slug));
+  // A retired article record links to its final URL (hubLink); skip one that
+  // would now point at this very review (embody-weight-loss-review -> the embody review).
+  const thisPath = hubLink(ctx, `/reviews/${slug}`);
+  const nonCluster = (config.articles ?? []).filter(
+    (a) => !clusterSet.has(a.slug) && hubLink(ctx, `/articles/${a.slug}`) !== thisPath,
+  );
   const relatedArticles = [
     ...nonCluster.filter(mentions),
     ...nonCluster

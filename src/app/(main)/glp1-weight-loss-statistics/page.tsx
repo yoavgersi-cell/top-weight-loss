@@ -162,7 +162,7 @@ export default async function StatisticsPage() {
           </h1>
           <AffiliateNote className="mt-3" />
           <p className="mt-3 max-w-[640px] text-[15px] leading-relaxed text-gray-500">
-            The dated, citable record of what {PROVIDER_COUNT} US telehealth providers publish for
+            The dated, citable record of what {PROVIDER_COUNT}{" "}US telehealth providers publish for
             compounded semaglutide and tirzepatide - every price verified against the provider&rsquo;s
             own site, every change logged - paired with the published clinical-trial results for
             GLP-1 weight-loss medications (STEP, SURMOUNT, SCALE).
@@ -494,7 +494,7 @@ export default async function StatisticsPage() {
           <div className="rounded-xl border border-gray-200 bg-white p-6">
             <p className="mb-3 text-[14px] leading-[1.7] text-gray-600">
               <strong className="text-[#191919]">Pricing:</strong> our price survey tracks the
-              prices {PROVIDER_COUNT} US telehealth providers publish for compounded semaglutide and
+              prices {PROVIDER_COUNT}{" "}US telehealth providers publish for compounded semaglutide and
               tirzepatide. Every figure is a published provider price verified by our team against the
               provider&rsquo;s own site - we do not estimate, model or extrapolate prices. The index was
               last verified on {longDate(PRICE_INDEX_VERIFIED)}, and every change to a listing is
