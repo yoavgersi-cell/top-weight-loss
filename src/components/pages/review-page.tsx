@@ -530,7 +530,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "Can you cancel welludr anytime?",
       answer:
-        "Yes - you can cancel or change your plan anytime. Keep in mind the headline $41/month rate is locked in via a 12-month plan, and the program is backed by welludr's weight-loss warranty.",
+        "Yes, but there is a deadline, and welludr's two documents give different ones. Its terms (updated Oct 16, 2026) require cancelling at least 2 days before the renewal date; its refund policy (no date shown) says cancellation takes effect when the request is received. Read Nov 22, 2026. The headline $41/month rate is tied to a 12-month plan, which the refund policy describes as prepaid in full. See our cancel guide for the quotes.",
     },
   ],
   medvi: [

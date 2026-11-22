@@ -244,9 +244,9 @@ const GALLERIES: Record<string, ProviderGallery> = {
         src: "/provider-gallery/wellmedr/welludr-guarantee.webp",
         width: 1400,
         height: 795,
-        title: "The money-back guarantee",
+        title: "A 90-day banner on welludr's site",
         caption:
-          "welludr's site states a money-back guarantee: if you don't lose weight in 90 days, it refunds 100% of your money. Check the full terms on welludr's site before you sign up.",
+          "This banner says welludr refunds 100% of your money if you don't lose weight in 90 days. We could not find that guarantee in welludr's terms, refund policy, FAQ or plan page on Nov 22, 2026, and its refund policy says \"Lack of a desired result by itself does not qualify an accepted pharmacy order for a refund.\" Read the current terms before relying on it.",
         alt: "welludr money-back guarantee banner: if you don't lose weight in 90 days we will refund 100% of your money",
       },
     ],
