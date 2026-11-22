@@ -45,7 +45,7 @@ export const howToCancelTelehealthGlp1SubscriptionArticle: Article = {
   heroColor: "#EEF3F8",
   author: "Treatments Hub Research Team",
   keyTakeaways: [
-    "Four different deadlines in seven sets of terms, all read Nov 22, 2026: 72 hours before the next billing date (altRx, embody), 48 hours (DirectMeds), 2 days (wellmedr's terms) and 12 hours (REX MD). HealthRx and Collective state no hour count for month-to-month billing.",
+    "Three different windows in seven sets of terms, all read Nov 22, 2026: 72 hours before the next billing date (altRx, embody), 48 hours or 2 days (DirectMeds, wellmedr's terms) and 12 hours (REX MD). HealthRx and Collective state no hour count for month-to-month billing.",
     "wellmedr's two documents disagree. Its terms (updated Oct 16, 2026) require cancelling at least 2 days before the renewal date. Its refund policy (no date shown) says cancellation is effective when received and states no cutoff. Neither says it overrides the other.",
     "No provider here promises a refund for medication you have already received. altRx and embody refund the unused part of a term only if their provider finds you not clinically eligible. HealthRx still bills the rest of a 3, 6 or 12-month minimum if you cancel early.",
     "We could not read the cancel terms for TrimRx, Medvi, Eden, Shed, Sprout, bmiMD or Hims, so this page does not cover them.",
@@ -69,7 +69,7 @@ export const howToCancelTelehealthGlp1SubscriptionArticle: Article = {
     },
     {
       heading: "How do I cancel welludr (formerly wellmedr)?",
-      body: `<p>welludr (formerly wellmedr) has two documents that cover cancelling, and they give different rules. Its legal documents name the company Wellmedr LLC, and the quotes below use the spelling of each document.</p>
+      body: `<p>welludr (formerly wellmedr) has two documents that cover cancelling, and they give different rules.</p>
 <table><thead><tr><th>Document</th><th>Date shown</th><th>Cutoff</th><th>When cancellation takes effect</th></tr></thead><tbody>
 <tr><td>${ext(S.wmTerms, "Terms and Conditions")}</td><td>Last updated Oct 16, 2026</td><td>At least 2 days before the scheduled renewal date, "measured from the originally scheduled date even if a charge or shipment is processed early"</td><td>"at the end of your current billing period"</td></tr>
 <tr><td>${ext(S.wmRefund, "Refund, Cancellation and Subscription Policy")}</td><td>No date shown on the page</td><td>None stated: "You may cancel automatic renewal at any time"</td><td>"at the timestamp our system receives the online request, email, telephone request, or voicemail"</td></tr>
@@ -97,8 +97,8 @@ export const howToCancelTelehealthGlp1SubscriptionArticle: Article = {
 <p>Documents: ${ext(S.hrxTerms, "terms")} (Last updated November 7, 2026), ${ext(S.hrxRefund, "returns and refund policy")} (no date shown) and ${ext(S.hrxFaq, "FAQ")}.</p>
 <ul><li><strong>How:</strong> "You can cancel future renewals anytime by emailing support@healthrx.com." The FAQ adds: "No phone call needed."</li>
 <li><strong>Cutoff:</strong> none stated for month-to-month plans. For paid-up-front plans the terms say "To cancel, email support@healthrx.com before your next renewal date," with no hours or days given.</li>
-<li><strong>Cadence:</strong> "Subscribe &amp; Save renews automatically at the price and interval shown at checkout until canceled." The 3, 6 and 12-month plans carry "a minimum of 3, 6 or 12 monthly payments" and bill monthly; paid-in-full plans "renew at the same price every 3, 6 or 12 months."</li>
-<li><strong>The minimum:</strong> "On a 3, 6 or 12-month plan, the monthly payments in your minimum are still due if you cancel early." The policy adds "Payments still due in your minimum are charged on their normal dates, and your medication keeps shipping." After the minimum the plan "continues month to month at the same price until you cancel." Month-to-month plans "have no minimum."</li>
+<li><strong>Cadence:</strong> the refund policy says "Subscribe &amp; Save renews automatically at the price and interval shown at checkout until canceled." The 3, 6 and 12-month plans carry "a minimum of 3, 6 or 12 monthly payments" and bill monthly; paid-in-full plans "renew at the same price every 3, 6 or 12 months."</li>
+<li><strong>The minimum:</strong> "On a 3, 6 or 12-month plan, the monthly payments in your minimum are still due if you cancel early." The terms add "Payments still due in your minimum are charged on their normal dates, and your medication keeps shipping." After the minimum the plan "continues month to month at the same price until you cancel." Month-to-month plans "have no minimum."</li>
 <li><strong>Price changes:</strong> "If we propose a change to your renewal price or billing period, we will notify you at the email address on your account before it takes effect. You may cancel before the change." <strong>Pause:</strong> not found.</li></ul>
 <h3>DirectMeds</h3>
 <p>Document: ${ext(S.dmTerms, "terms")} (Last updated: April 16, 2026), sections 5 and 7.</p>
@@ -152,7 +152,7 @@ export const howToCancelTelehealthGlp1SubscriptionArticle: Article = {
     },
     {
       heading: "Does cancelling stop my treatment?",
-      body: `<p>No, not by itself, and the providers say so. wellmedr's refund policy: "Canceling automatic renewal does not automatically: Refund a payment already processed; Cancel a prescription or order that has received Medication Fulfillment Start; End the Current Term of a prepaid plan; or Tell your clinician to discontinue treatment." It then says: "Do not discontinue prescribed treatment solely because you canceled billing without first obtaining appropriate medical guidance." Its terms add: "Cancelling your membership also cancels your Medication Plan." HealthRx's terms say "Canceling a subscription does not return medication already dispensed."</p>
+      body: `<p>No, not by itself, and the providers say so. wellmedr's refund policy: "Canceling automatic renewal does not automatically: Refund a payment already processed; Cancel a prescription or order that has received Medication Fulfillment Start; End the Current Term of a prepaid plan; or Tell your clinician to discontinue treatment." It then says: "Do not discontinue prescribed treatment solely because you canceled billing without first obtaining appropriate medical guidance." Its terms add: "Cancelling your membership also cancels your Medication Plan." HealthRx's refund policy says "Canceling a subscription does not return medication already dispensed."</p>
 <p>Whether to stop, taper or switch is a question for your prescriber. altRx's FAQ makes the same point: "If you and your provider decide to discontinue GLP-1 treatment, your provider may recommend a tapering schedule." For what the research says about stopping, read <a href="/weight-loss/articles/stopping-glp1-medication-what-happens">what happens when you stop a GLP-1</a>. For how plans can change if compounding rules change, read <a href="/weight-loss/articles/compounded-semaglutide-going-away">is compounded semaglutide going away</a>.</p>`,
     },
     {

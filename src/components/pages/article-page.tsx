@@ -164,7 +164,7 @@ const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
   "glp1-after-65-medicare":
     "Since July 1, 2026, the Medicare GLP-1 Bridge pilot lets eligible beneficiaries get the Wegovy pill and injection, the Zepbound KwikPen and Foundayo for a flat $50 copay a month, unchanged as the dose rises, through December 31, 2027. Eligibility runs through clinical criteria and an approval step via your Part D plan. Medicare never covers compounded GLP-1s; if you don't qualify, the cash routes are brand-name ($149-$349 a month for Foundayo, $1,149+ for injections) or compounded ($41-$299).",
   "is-wellmedr-legit":
-    "Yes - by every marker we can verify: licensed-provider review before prescribing, a regulated US pharmacy, and a weight-loss warranty. The honest caveats: the headline $41/$71 rates lock on a 12-month plan, the complaints that exist are about shipping delays and support response time, and results vary by person regardless of service quality.",
+    "Yes - by every marker we can verify: licensed-provider review before prescribing, a regulated US pharmacy, and published cancellation and refund terms. The honest caveats: the headline $41/$71 rates are tied to a 12-month plan (which the refund policy describes as prepaid in full), the complaints that exist are about shipping delays and support response time, and results vary by person regardless of service quality.",
   // Oct 9, 2026 oral GLP-1 pair. Ro figures are its verified published
   // prices; manufacturer figures are as reported by sources dated inside the
   // articles, so these two carry their own stamp (QUICK_ANSWER_STAMPS).
@@ -175,7 +175,7 @@ const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
   "zepbound-price-online":
     "Brand-name Zepbound online runs $1,249/month cash at altRx and $1,599 at welludr, or Zepbound KwikPens from $299 for the first month (then $399-449) plus a $39-then-$74-149 monthly membership at Ro, where insurance can apply. Compounded tirzepatide, the same active ingredient, runs $71-$299/month through licensed telehealth providers. Every route requires a prescription.",
   "best-tirzepatide-online":
-    "Verified compounded tirzepatide prices run $71-$129/month: welludr $71 (12-month plan) is the floor, embody $99 the cheapest with no commitment, and Eden $129 flat at every dose. altRx lists compounded tirzepatide from $149. Brand-name Zepbound: $1,249/month cash at altRx. Every legitimate source requires a prescription after a licensed-provider review.",
+    "Nine providers list compounded tirzepatide in our price index (verified Nov 18, 2026), from $69 to $299 a month with a median of $149. Compounded tirzepatide is not FDA-approved. Brand-name Zepbound: $1,249/month cash at altRx. Every legitimate source requires a prescription after a licensed-provider review.",
   "ozempic-face":
     "Ozempic face is facial volume loss caused by losing weight quickly - not a chemical side effect of the drug. It can happen with any GLP-1 or any rapid weight loss. The levers that soften it: a moderate pace of loss, adequate protein, resistance training and hydration - and facial volume often partially recovers as weight stabilizes.",
   "zepbound-vs-wegovy-vs-ozempic":
