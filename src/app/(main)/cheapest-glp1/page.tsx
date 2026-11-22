@@ -193,7 +193,7 @@ export default async function CheapestGlp1Page() {
                   ["welludr", "$41 x 12 (12-month plan rate)", "$492", "$13,200"],
                   ["embody", "$49 x 12 (promo), month to month", "$588", "$12,960"],
                   ["altRx", "$89 x 12, flat at every dose", "$1,068", "$12,720"],
-                  ["Medvi", "$99 x 12 (promo; reg. $199) - all-inclusive", "$1,188", "$12,600"],
+                  ["Medvi", "from $99 x 12 - all-inclusive", "$1,188", "$12,600"],
                   ["HealthRx", "$39 first month + $125 x 11 (monthly plan, until canceled)", "$1,414", "$12,374"],
                   ["SHED", "$159 first month (20% off) + $199 x 11", "$2,348", "$11,440"],
                   ["DirectMeds", "$249 x 12 (sublingual semaglutide; injections $297)", "$2,988", "$10,800"],

@@ -36,7 +36,6 @@ import { MedicalDisclaimer } from "@/components/medical-disclaimer";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { SourcesMethodology } from "@/components/sources-methodology";
 import { ProductCarousel } from "@/components/product-carousel";
-import { PRODUCT_CATALOG } from "@/lib/product-catalog";
 import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/reddit-community";
 import { threeWayBySlug, THREE_WAY_COMPARISONS } from "@/lib/three-way";
 import { ThreeWayPageView, threeWayMetadata } from "@/components/pages/three-way-page";
@@ -1324,20 +1323,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               Shopping-style product cards for THIS matchup's two providers
               only - a battle page sells the contenders, not the whole market.
               Weight-loss (GLP-1 catalog) and HRT (Winona/Gala shelf). */}
-          {(ctx.vertical === "weight-loss" || ctx.vertical === "hrt") && (() => {
-            // A contender with no catalog entry (TrimRx since Nov 22, 2026: no
-            // per-drug price to show) is named as absent instead of implied.
-            const noShelf =
-              ctx.vertical === "weight-loss"
-                ? [p1, p2].filter((p) => !PRODUCT_CATALOG.some((x) => x.providerId === p.id && (x.vertical ?? "weight-loss") === "weight-loss"))
-                : [];
-            const shelfTitle =
-              noShelf.length === 1 ? `Shop ${(noShelf[0].id === p1.id ? p2 : p1).name} plans` : `Shop ${p1.name} and ${p2.name} plans`;
-            const shelfSubtitle =
-              noShelf.length === 1
-                ? `Published plans, cheapest first - conditions under every price. ${noShelf[0].name} is not shown: it publishes no per-drug price we could read.`
-                : "Both contenders' published plans, cheapest first - conditions under every price.";
-            return (
+          {(ctx.vertical === "weight-loss" || ctx.vertical === "hrt") && (
             <div className="mb-12">
               <ProductCarousel
                 providers={config.providers}
@@ -1345,12 +1331,12 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 title={
                   ctx.vertical === "hrt"
                     ? `${p1.name} vs ${p2.name}: products & prices`
-                    : shelfTitle
+                    : `Shop ${p1.name} and ${p2.name} plans`
                 }
                 subtitle={
                   ctx.vertical === "hrt"
                     ? "Both providers' HRT products with published prices and what each price includes."
-                    : shelfSubtitle
+                    : "Both contenders' published plans, cheapest first - conditions under every price."
                 }
                 onlyProviderIds={[p1.id, p2.id]}
                 pageType="battle"
@@ -1358,8 +1344,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 pageUrl={canonicalUrl(ctx, `/${slug}`)}
               />
             </div>
-            );
-          })()}
+          )}
 
           {/* ───── FEATURE COMPARISON TABLE ───── */}
           {battle.features && battle.features.length > 0 && (

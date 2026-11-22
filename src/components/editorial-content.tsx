@@ -108,7 +108,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
               ["welludr", "$41/mo", "$71/mo", "12-month plan for best rate"],
               ["embody", "$49/mo", "$99/mo", "Flat monthly, no commitment"],
               ["altRx", "$89/mo", "$149/mo", "Flat at every dose, BNPL"],
-              ["Medvi", "$99/mo promo (reg. $199)", "$166/mo promo (reg. $299)", "All-inclusive + dietician"],
+              ["Medvi", "from $99/mo", "Not listed", "All-inclusive + dietician"],
               ["HealthRx", `${indexPrice("healthrx", "semaglutide")}/mo`, `${indexPrice("healthrx", "tirzepatide")}/mo`, "Monthly plan, $39 first month"],
               ["DirectMeds", `${indexPrice("directmeds", "semaglutide")}/mo (sublingual)`, indexPrice("directmeds", "tirzepatide"), "No subscriptions; injections $297/mo"],
               ["Sprout", "from $99/mo", "from $149/mo", "12-month plan for best rate; monthly $149/$199"],

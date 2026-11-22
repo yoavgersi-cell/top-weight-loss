@@ -75,7 +75,7 @@ export const glp1ProvidersSameCompanyArticle: Article = {
 <tr><td>welludr</td><td>$41/month</td><td>$71/month</td><td>12-month plan for the lowest rate (pre-Black Friday sale)</td></tr>
 <tr><td>embody</td><td>$49/month</td><td>$99/month</td><td>Month to month (pre-Black Friday sale)</td></tr>
 <tr><td>altRx</td><td>$89/month</td><td>$149/month</td><td>Pause or cancel anytime; Buy Now, Pay Later</td></tr>
-<tr><td>Medvi</td><td>$99/month (promo)</td><td>$166/month (promo)</td><td>No membership; dietician and coaching included</td></tr>
+<tr><td>Medvi</td><td>from $99/month</td><td>Not listed</td><td>No membership; dietician and coaching included</td></tr>
 <tr><td>TrimRx</td><td colspan="2">Plans from $179/month (TrimRx site, read Nov 22, 2026); not tied to one drug</td><td>Month to month</td></tr>
 </tbody></table><p>Beyond price: altRx is the one with a brand-name shelf (Ozempic, Zepbound, Wegovy) alongside compounded plans; embody offers free expedited delivery (no timeline guaranteed) and a partial refund if you are not approved; welludr includes a coach and a weight-loss warranty; Medvi bundles video visits and a dietician; TrimRx has the cleanest exit terms. Prices change, so check the <a href="/weight-loss/cheapest-glp1">cheapest GLP-1 comparison</a> or the <a href="/weight-loss/glp1-cost-calculator">cost calculator</a> before you decide.</p>`,
     },

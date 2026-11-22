@@ -795,16 +795,16 @@ const defaultReviews: ReviewData[] = [
     slug: "medvi",
     providerId: "medvi",
     updatedAt: "2026-11-22",
-    shortSummary: "All-inclusive medical weight-loss program - GLP-1 (semaglutide) now from $99/month (reg. $199) and GLP-1/GIP (tirzepatide) from $166/month (reg. $299) - with provider visits, free dietician and care coaching, and HSA/FSA approval.",
-    reviewIntro: "Medvi's program is all-inclusive at one flat price, and its current promotion cuts that price roughly in half: weekly GLP-1 (semaglutide) injections now start at $99/month (regularly $199) and GLP-1/GIP (tirzepatide) at $166/month (regularly $299), with daily oral dissolving tablets at $249/month for the needle-averse - all with no membership fee, no hidden charges, free shipping, and free dietician and care coaching folded in. Plans are HSA/FSA approved. At the $99 promotional rate, Medvi's all-inclusive bundle now competes directly with the value tier - the honest caveat is simply that promos can end; the regular rates are $199/$299.",
+    shortSummary: "All-inclusive medical weight-loss program - plans \"start for just $99\" a month (price index, verified Nov 18, 2026; no per-drug price listed) - with provider visits, free dietician and care coaching, and HSA/FSA approval.",
+    reviewIntro: "Medvi's program is all-inclusive at one price: its listing says plans \"start for just $99\" a month (price index, verified Nov 18, 2026; Medvi's site was last read Nov 3, 2026), with daily oral dissolving tablets at $249/month for the needle-averse - all with no membership fee, no hidden charges, free shipping, and free dietician and care coaching folded in. Plans are HSA/FSA approved. Medvi's site could not be re-read on Nov 22, 2026, and we do not list a separate semaglutide price, tirzepatide price or regular price for it.",
     keyFeatures: [
-      "GLP-1 (semaglutide) injections now from $99/month (reg. $199)",
-      "GLP-1/GIP (tirzepatide) injections from $166/month (reg. $299)",
+      "Plans start at $99/month (price index, verified Nov 18, 2026)",
+      "No separate per-drug price listed in our index",
       "Daily oral dissolving GLP-1 tablets at $249/month - no needles",
       "Video visits, free dietician and care coaching included",
       "HSA/FSA approved; no membership or hidden fees"
     ],
-    pricingSummary: "Medvi charges one flat, all-inclusive price, currently promotional: weekly GLP-1 (semaglutide) injections from $99/month (regularly $199), GLP-1/GIP (tirzepatide) from $166/month (regularly $299), and daily oral dissolving GLP-1 tablets at $249/month. The price covers the provider visits, the medication, free shipping, and free dietician and care coaching - there's no membership fee and no hidden charges, and plans are HSA/FSA approved. At the promo rate the math gets aggressive: only welludr ($41), embody ($49) and altRx ($89) list semaglutide cheaper, and none of them bundles dietician access and coaching into the number.",
+    pricingSummary: "Medvi charges one all-inclusive price that \"starts for just $99\" a month (price index, verified Nov 18, 2026), plus daily oral dissolving GLP-1 tablets at $249/month. The price covers the provider visits, the medication, free shipping, and free dietician and care coaching - there's no membership fee and no hidden charges, and plans are HSA/FSA approved. Several providers list a lower starting price (welludr, embody, altRx), and none of them bundles dietician access and coaching into the number.",
     treatmentOptions: [
       "GLP-1 (semaglutide) weekly injections",
       "GLP-1/GIP (tirzepatide) weekly injections",
@@ -812,13 +812,13 @@ const defaultReviews: ReviewData[] = [
       "Video visits, free dietician and care coaching"
     ],
     pros: [
-      "Current promo roughly halves the price: $99 semaglutide / $166 tirzepatide",
+      "Starts at $99 a month with dietician visits and coaching included",
       "Genuinely all-inclusive pricing - visits, medication, shipping, coaching",
       "Needle-free option: daily oral dissolving tablets",
       "HSA/FSA approved; no membership or hidden fees"
     ],
     cons: [
-      "The $99/$166 rates are promotional - regular prices are $199/$299",
+      "Medvi's site could not be re-read on Nov 22, 2026; the $99 start price is from our price index",
       "The needle-free tablet option costs more ($249/month)",
       "No brand-name Ozempic/Wegovy/Zepbound shelf",
       "It's an ongoing monthly expense"
@@ -827,7 +827,7 @@ const defaultReviews: ReviewData[] = [
       "Anyone who wants dietician support and coaching bundled, not sold separately",
       "Needle-averse patients who want a daily dissolving tablet instead of injections"
     ],
-    finalVerdict: "Medvi was already the most complete bundle in our ranking - provider visits, dietician access, care coaching and shipping in one HSA/FSA-eligible price. The current promotion changes the math: at $99/month semaglutide (regularly $199) and $166 tirzepatide (regularly $299), the all-inclusive program now costs within $30-40 of the bare-bones value tier (welludr $41, embody $49) while bundling care those providers don't. As long as the promo holds, Medvi is arguably the best value-per-dollar in the ranking; at the $199/$299 regular rates, it goes back to being the premium-care pick. Needle-averse? The $249 dissolving tablets remain one of the few needle-free GLP-1 formats we track.",
+    finalVerdict: "Medvi was already the most complete bundle in our ranking - provider visits, dietician access, care coaching and shipping in one HSA/FSA-eligible price. Its listed starting price of $99 a month sits above the bare-bones value tier (welludr $41, embody $49) while bundling care those providers don't. Check the price you are quoted at checkout, because we do not list a regular price. Needle-averse? The $249 dissolving tablets remain one of the few needle-free GLP-1 formats we track.",
     trustBadges: [
       "HSA/FSA approved",
       "No membership or hidden fees",
@@ -839,19 +839,9 @@ const defaultReviews: ReviewData[] = [
         name: "GLP-1 Injections",
         medication: "Prescription GLP-1 (semaglutide)",
         cadence: "Weekly",
-        price: "$99",
-        regularPrice: "$199",
+        price: "from $99",
         unit: "/month",
         highlights: ["One simple injection per week", "No membership or hidden fees - everything included"],
-      },
-      {
-        name: "GLP-1 + GIP Injections",
-        medication: "Prescription GLP-1/GIP (tirzepatide)",
-        cadence: "Weekly",
-        price: "$166",
-        regularPrice: "$299",
-        unit: "/month",
-        highlights: ["One simple injection per week", "All-inclusive - visits, coaching & shipping"],
       },
       {
         name: "GLP-1 Tablets",
@@ -1893,10 +1883,10 @@ const altrxTrimrxBattle: BattleData = {
   title: "altRx vs TrimRX: Which GLP-1 Provider Is Right for You in 2026?",
   subtitle: "altRx vs TrimRX, compared on pricing, medication selection, medical support, and plan flexibility - so you can see which one delivers more value for you.",
   description: "altRx vs TrimRX: compare pricing, meds, plans & value. altRx: brand-name Zepbound & Wegovy. TrimRX: flexible, no-commitment plans. See which fits you.",
-  intro: "altRx and TrimRX are both fully online GLP-1 weight-loss providers that skip insurance and ship medication to your door. altRx bills itself as \"the #1 most affordable GLP-1 program\" from $89/month and stands out with the broadest lineup - compounded GLP-1 and GLP-1 + GIP plus brand-name Zepbound and Wegovy. TrimRX is built around affordable access to GLP-1 programs, pairing competitive monthly pricing with flexible plans, multi-month discounts, and ongoing clinical guidance. Here's how they compare across the factors that matter most.",
-  verdict: "Both are legitimate, no-insurance-required online GLP-1 providers - but TrimRX takes this one on value. Its plans are built around affordability, with competitive monthly pricing, multi-month discounts, and provider consultations plus ongoing support bundled in, all with no long-term commitment. altRx is the better pick if you want the widest medication selection - including brand-name Zepbound or Wegovy - or Buy Now, Pay Later.",
+  intro: "altRx and TrimRX are both fully online GLP-1 weight-loss providers that skip insurance and ship medication to your door. altRx bills itself as \"the #1 most affordable GLP-1 program\" from $89/month and stands out with the broadest lineup - compounded GLP-1 and GLP-1 + GIP plus brand-name Zepbound and Wegovy. TrimRX is built around flexible plans, multi-month discounts, and ongoing clinical guidance, with plans from $179/month on its site (read Nov 22, 2026). Here's how they compare across the factors that matter most.",
+  verdict: "Both are legitimate, no-insurance-required online GLP-1 providers - but TrimRX takes this one on plan flexibility. Its plans bundle multi-month discounts, provider consultations and ongoing support, all with no long-term commitment. altRx is the better pick if you want the widest medication selection - including brand-name Zepbound or Wegovy - or Buy Now, Pay Later, and it publishes the lower starting price: from $89/month (price index, read Nov 20, 2026) against TrimRx's plans from $179 (site, read Nov 22, 2026).",
   verdictWinnerPoints: [
-    "Built around affordable access - competitive pricing plus multi-month discounts",
+    "Multi-month discounts on top of the plan price",
     "Flexible plans with no long-term commitment",
     "Provider consultations and ongoing clinical guidance included",
   ],
@@ -1910,9 +1900,9 @@ const altrxTrimrxBattle: BattleData = {
     {
       name: "Pricing & Value",
       winner: "provider2",
-      explanation: "TrimRX is built around affordability - competitive monthly pricing with discounts for multi-month commitments, and consultations plus ongoing support bundled into the plan. altRx is transparent too, starting at $89/month for compounded GLP-1 and $149 for GLP-1 + GIP, with Buy Now, Pay Later available. For the lowest-cost path to GLP-1 treatment, TrimRX comes out ahead.",
+      explanation: "altRx lists compounded GLP-1 from $89/month and GLP-1 + GIP from $149 (price index, read Nov 20, 2026), with Buy Now, Pay Later available. TrimRX shows plans from $179/month on its site (read Nov 22, 2026), with discounts for multi-month commitments and consultations plus ongoing support bundled in. On published starting prices, altRx is lower.",
       supportingPoints: [
-        "Competitive pricing + multi-month discounts (TrimRX)",
+        "Multi-month discounts (TrimRX)",
         "Consultations & ongoing support included (TrimRX)",
         "$89/mo GLP-1 · $149 GLP-1 + GIP (altRx)",
         "No insurance required (both)",
@@ -1953,7 +1943,7 @@ const altrxTrimrxBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "$89/mo GLP-1 · $149 GLP-1 + GIP", provider2Value: "Affordability-focused · multi-month discounts", highlight: "provider2" },
+    { feature: "Starting Price", provider1Value: "From $89/mo GLP-1 · from $149 GLP-1 + GIP", provider2Value: "Plans from $179/mo (site, Nov 22, 2026) · multi-month discounts", highlight: "provider1" },
     { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
     { feature: "Medications", provider1Value: "Compounded + brand-name (Zepbound, Wegovy)", provider2Value: "Compounded semaglutide & tirzepatide", highlight: "provider1" },
     { feature: "Care Model", provider1Value: "Clinician-guided, licensed clinicians", provider2Value: "Provider consultations + ongoing guidance", highlight: "both" },
@@ -2064,15 +2054,15 @@ const medviTrimrxBattle: BattleData = {
   title: "Medvi vs TrimRX: Which Weight Loss Provider Is Right for You in 2026?",
   subtitle: "We compared personal support, ongoing care, pricing, and medication access so you can see which one fits you best.",
   description: "Medvi vs TrimRX: compare pricing, GLP-1 meds, support & value. Medvi: injections, tablets & coaching. TrimRX: flexible, no-commitment plans. See which fits you.",
-  intro: "Medvi and TrimRX are both online GLP-1 weight-loss providers that keep things affordable and skip the insurance hassle. TrimRX is built around affordable access to GLP-1 programs, with competitive pricing and multi-month discounts. Medvi keeps medical weight loss simple, pairing prescription GLP-1 treatment with attentive provider support, regular monitoring, and transparent all-inclusive pricing. Here's how they compare.",
-  verdict: "Both are solid, budget-friendly online GLP-1 providers - but Medvi takes this one for the experience. Its customers consistently praise the personal, attentive service, and its plans bundle medication, provider consultations, and ongoing monitoring with no surprise charges. TrimRX is the better pick if your top priority is the lowest headline price, with competitive pricing and multi-month discounts.",
+  intro: "Medvi and TrimRX are both online GLP-1 weight-loss providers that skip the insurance hassle. TrimRX is built around flexible plans and multi-month discounts, with plans from $179/month on its site (read Nov 22, 2026). Medvi keeps medical weight loss simple, pairing prescription GLP-1 treatment with attentive provider support, regular monitoring, and transparent all-inclusive pricing. Here's how they compare.",
+  verdict: "Both are solid online GLP-1 providers - but Medvi takes this one for the experience. Its customers consistently praise the personal, attentive service, and its plans bundle medication, provider consultations, and ongoing monitoring with no surprise charges. TrimRX is the better pick if flexible plans and multi-month discounts matter more to you. On published starting prices Medvi is lower: from $99/month (price index, verified Nov 18, 2026) against TrimRX's plans from $179 (site, read Nov 22, 2026).",
   verdictWinnerPoints: [
     "Personal, attentive service customers rave about",
     "Provider support with regular check-ins and monitoring",
     "Transparent, all-inclusive pricing - no surprise charges",
   ],
   verdictLoserPoints: [
-    "Affordability-first pricing with multi-month discounts",
+    "Multi-month discounts on top of the plan price",
     "Flexible plans with no long-term commitment",
     "Compounded semaglutide & tirzepatide options",
   ],
@@ -2114,9 +2104,9 @@ const medviTrimrxBattle: BattleData = {
     {
       name: "Pricing & Value",
       winner: "provider2",
-      explanation: "TrimRX is built around affordability - competitive monthly pricing with multi-month discounts. Medvi's plans are transparent and all-inclusive (medication, consultations, and support with no surprise charges). For the lowest headline price, TrimRX edges ahead.",
+      explanation: "Medvi lists plans from $99/month (price index, verified Nov 18, 2026) and its plans are all-inclusive (medication, consultations, and support with no surprise charges). TrimRX shows plans from $179/month on its site (read Nov 22, 2026), with multi-month discounts. On published starting prices, Medvi is lower.",
       supportingPoints: [
-        "Affordability-first + multi-month discounts (TrimRX)",
+        "Multi-month discounts (TrimRX)",
         "All-inclusive, no surprise charges (Medvi)",
         "No insurance required (both)",
         "No long-term commitment (TrimRX)",
@@ -2138,7 +2128,7 @@ const medviTrimrxBattle: BattleData = {
     { feature: "Personal Support", provider1Value: "Attentive, personal service", provider2Value: "Provider consultations included", highlight: "provider1" },
     { feature: "Ongoing Care", provider1Value: "Regular check-ins & follow-ups", provider2Value: "Ongoing clinical guidance", highlight: "provider1" },
     { feature: "Medical Visit", provider1Value: "100% online", provider2Value: "100% online", highlight: "both" },
-    { feature: "Pricing", provider1Value: "All-inclusive, no surprise charges", provider2Value: "Affordability-focused · multi-month discounts", highlight: "provider2" },
+    { feature: "Pricing", provider1Value: "From $99/mo, all-inclusive (index, verified Nov 18, 2026)", provider2Value: "Plans from $179/mo (site, Nov 22, 2026) · multi-month discounts", highlight: "provider1" },
     { feature: "Medications", provider1Value: "Compounded GLP-1 treatment", provider2Value: "Compounded semaglutide & tirzepatide", highlight: "both" },
     { feature: "Commitment", provider1Value: "Flexible monthly plans", provider2Value: "No long-term commitment", highlight: "both" },
   ],
@@ -2602,14 +2592,14 @@ const trimrxRoBattle: BattleData = {
   matchupLabel: "Ro vs TrimRX",
   subtitle: "We compared pricing, plan flexibility, medical support, and overall value so you can see which one fits you best.",
   description: "Ro vs TrimRX: compare pricing, plan flexibility, GLP-1 meds & value. Ro: established telehealth brand. TrimRX: flexible, no-commitment plans. See which fits you.",
-  intro: "TrimRX and Ro are both online providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established telehealth brand with an integrated in-house pharmacy and licensed providers reviewing every plan. TrimRX is built around affordable access to GLP-1 programs, with competitive pricing, multi-month discounts, and flexible plans that carry no long-term commitment. Here's how they compare.",
-  verdict: "Both are credible online GLP-1 providers, and each wins on different ground. TrimRX is the value-and-flexibility pick - competitive pricing, multi-month discounts, no long-term commitment. But Ro takes it overall: it's a large, established telehealth brand with an integrated in-house pharmacy, licensed providers reviewing every plan, and access to FDA-approved brand-name Wegovy and Zepbound when insurance covers them. Ro is the more complete platform for most people - while TrimRX is the better fit if flexible, low-commitment pricing is your priority.",
+  intro: "TrimRX and Ro are both online providers offering GLP-1 weight-loss treatment with home delivery. Ro is a large, well-established telehealth brand with an integrated in-house pharmacy and licensed providers reviewing every plan. TrimRX is built around flexible plans that carry no long-term commitment, with multi-month discounts and plans from $179/month on its site (read Nov 22, 2026). Here's how they compare.",
+  verdict: "Both are credible online GLP-1 providers, and each wins on different ground. TrimRX is the flexibility pick - multi-month discounts, no long-term commitment. But Ro takes it overall: it's a large, established telehealth brand with an integrated in-house pharmacy, licensed providers reviewing every plan, and access to FDA-approved brand-name Wegovy and Zepbound when insurance covers them. Ro is the more complete platform for most people - while TrimRX is the better fit if flexible, low-commitment plans are your priority.",
   verdictWinnerPoints: [
     "Large, established telehealth brand with an integrated in-house pharmacy",
     "Licensed providers review every plan; access to FDA-approved Wegovy & Zepbound with insurance",
   ],
   verdictLoserPoints: [
-    "Affordability-first pricing with multi-month discounts",
+    "Multi-month discounts on top of the plan price",
     "Flexible plans with no long-term commitment",
     "Ongoing clinical guidance included",
   ],
@@ -2617,11 +2607,11 @@ const trimrxRoBattle: BattleData = {
   categories: [
     {
       name: "Pricing & Value",
-      winner: "provider1",
-      explanation: "TrimRX is built around affordability - competitive monthly pricing with discounts for multi-month commitments. Ro is competitively priced, but costs can vary depending on the medication and plan you choose. For the lowest-cost path to GLP-1 treatment, TrimRX comes out ahead.",
+      winner: "tie",
+      explanation: "Not comparable like for like. TrimRX shows plans from $179/month on its site (read Nov 22, 2026), not tied to one drug, with discounts for multi-month commitments. Ro bills a membership plus brand-name medication separately, and costs vary by medication and plan.",
       supportingPoints: [
-        "Affordability-first + multi-month discounts (TrimRX)",
-        "Competitive monthly pricing (TrimRX)",
+        "Plans from $179/mo, with multi-month discounts (TrimRX)",
+        "Not tied to one drug or dose (TrimRX)",
         "Costs can vary by medication/plan (Ro)",
         "No insurance required (both)",
       ],
@@ -2640,11 +2630,11 @@ const trimrxRoBattle: BattleData = {
     {
       name: "Brand & Pharmacy",
       winner: "provider2",
-      explanation: "Ro is a large, well-known telehealth brand with an integrated in-house pharmacy that can streamline fulfillment, plus strong name recognition. TrimRX is a newer, fast-growing platform focused on affordable access.",
+      explanation: "Ro is a large, well-known telehealth brand with an integrated in-house pharmacy that can streamline fulfillment, plus strong name recognition. TrimRX is a newer, fast-growing platform focused on flexible plans.",
       supportingPoints: [
         "Large, well-known telehealth brand (Ro)",
         "Integrated in-house pharmacy (Ro)",
-        "Newer, affordability-focused platform (TrimRX)",
+        "Newer, flexibility-focused platform (TrimRX)",
         "Positive recent customer feedback (TrimRX)",
       ],
     },
@@ -2661,7 +2651,7 @@ const trimrxRoBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Starting Price", provider1Value: "Affordability-focused · multi-month discounts", provider2Value: "$39 first mo membership, then $74-149/mo + medication", highlight: "provider1" },
+    { feature: "Starting Price", provider1Value: "Plans from $179/mo (site, Nov 22, 2026) · multi-month discounts", provider2Value: "$39 first mo membership, then $74-149/mo + medication", highlight: "none" },
     { feature: "Commitment", provider1Value: "No long-term commitment", provider2Value: "Monthly plans", highlight: "provider1" },
     { feature: "Medications", provider1Value: "Compounded semaglutide & tirzepatide", provider2Value: "GLP-1 treatment options", highlight: "both" },
     { feature: "Pharmacy", provider1Value: "Home delivery included", provider2Value: "Integrated in-house pharmacy", highlight: "provider2" },
@@ -2843,10 +2833,10 @@ const embodyTrimrxBattle: BattleData = {
   provider1Id: "embody",
   provider2Id: "trimrx",
   title: "embody vs TrimRX: Which GLP-1 Provider Is Right for You in 2026?",
-  subtitle: "We compared pricing, shipping speed, plan flexibility, and medications so you can see which affordable option fits you best.",
+  subtitle: "We compared pricing, shipping speed, plan flexibility, and medications so you can see which option fits you best.",
   description: "embody vs TrimRX: compare pricing, shipping, plans & GLP-1 meds. embody: free expedited delivery. TrimRX: flexible, no-commitment plans. See which fits you.",
-  intro: "embody and TrimRX are both affordable, weight-loss-focused telehealth providers offering compounded GLP-1 with home delivery. embody uses flat pricing - $49/month for compounded semaglutide and $99 for tirzepatide - with free expedited delivery (no timeline guaranteed) and LegitScript-certified 503A pharmacies. TrimRX focuses on budget-friendly access with flexible plans, multi-month discounts, and no long-term commitment. Here's how they compare.",
-  verdict: "Both are strong budget picks - but embody edges ahead on entry price and speed. It offers flat $49/month compounded semaglutide, free expedited tracked delivery (no timeline guaranteed), and LegitScript-certified 503A pharmacies. TrimRX is the better fit if you want flexible plans and multi-month discounts with no long-term contract.",
+  intro: "embody and TrimRX are both weight-loss-focused telehealth providers offering compounded GLP-1 with home delivery. embody uses flat pricing - $49/month for compounded semaglutide and $99 for tirzepatide - with free expedited delivery (no timeline guaranteed) and LegitScript-certified 503A pharmacies. TrimRX focuses on budget-friendly access with flexible plans, multi-month discounts, and no long-term commitment. Here's how they compare.",
+  verdict: "Both are credible picks - but embody edges ahead on entry price and speed. It offers flat $49/month compounded semaglutide, free expedited tracked delivery (no timeline guaranteed), and LegitScript-certified 503A pharmacies. TrimRX is the better fit if you want flexible plans and multi-month discounts with no long-term contract.",
   verdictWinnerPoints: [
     "$49/mo semaglutide, $99/mo tirzepatide - flat pricing",
     "Free expedited tracked delivery, no timeline guaranteed",
@@ -2862,11 +2852,11 @@ const embodyTrimrxBattle: BattleData = {
     {
       name: "Pricing & Value",
       winner: "provider1",
-      explanation: "embody uses flat, published pricing - $49/month compounded semaglutide and $99 tirzepatide, the same at every dose. TrimRX is competitively priced too, with multi-month discounts, but its entry price runs a little higher. For the lowest transparent starting price, embody comes out ahead.",
+      explanation: "embody uses flat, published pricing - $49/month compounded semaglutide and $99 tirzepatide, the same at every dose. TrimRX shows plans from $179/month on its site (read Nov 22, 2026), with multi-month discounts. On published starting prices, embody is lower.",
       supportingPoints: [
         "$49/mo semaglutide, $99/mo tirzepatide (embody)",
         "Flat pricing, same at every dose (embody)",
-        "Competitive with multi-month discounts (TrimRX)",
+        "Plans from $179/mo, multi-month discounts (TrimRX)",
         "No insurance required (both)",
       ],
     },
@@ -2916,7 +2906,7 @@ const embodyTrimrxBattle: BattleData = {
     },
   ],
   features: [
-    { feature: "Pricing", provider1Value: "Flat $49 sema / $99 tirz (sale)", provider2Value: "Competitive, multi-month discounts", highlight: "provider1" },
+    { feature: "Pricing", provider1Value: "Flat $49 sema / $99 tirz (sale)", provider2Value: "Plans from $179/mo (site, Nov 22, 2026) · multi-month discounts", highlight: "provider1" },
     { feature: "Shipping", provider1Value: "Free expedited delivery, tracked; no timeline guaranteed", provider2Value: "Standard home delivery", highlight: "provider1" },
     { feature: "Plan Flexibility", provider1Value: "Simple monthly plans", provider2Value: "Flexible, no long-term contract", highlight: "provider2" },
     { feature: "Medications", provider1Value: "Compounded sema + tirz", provider2Value: "Compounded sema + tirz", highlight: "both" },

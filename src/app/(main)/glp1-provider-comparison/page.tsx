@@ -140,8 +140,8 @@ const ROWS: Row[] = [
     membership: "None",
     shipping: "Free tracked; often next-day (provider claim)",
     support: "Custom dosing, unlimited provider check-ins",
-    advantage: "No long-term contract; custom dosing; results guarantee (conditions apply)",
-    limitation: "Prepaid packages are not refundable",
+    advantage: "No long-term contract; custom dosing",
+    limitation: "Refund terms could not be read (Nov 22, 2026)",
     cta: "Check TrimRx's current plans",
   },
   {
@@ -353,29 +353,29 @@ const SECTIONS: Section[] = [
     id: "trimrx",
     overview: (
       <>
-        TrimRx sells compounded semaglutide and tirzepatide with <strong className="text-[#191919]">custom dosing and unlimited provider check-ins, no long-term contract</strong>, and a results guarantee for new patients.
+        TrimRx sells compounded semaglutide and tirzepatide with <strong className="text-[#191919]">custom dosing and unlimited provider check-ins, no long-term contract</strong>.
       </>
     ),
     pricing: (
       <>
-        <strong className="text-[#191919]">Plans from $179 a month</strong> on TrimRx&rsquo;s own site (read November 22, 2026), with a &ldquo;$120 Off&rdquo; banner that day. TrimRx does not publish a per-drug semaglutide or tirzepatide price we could read, and its page does not say whether $179 is before or after the $120. Free tracked delivery; consultation included; no insurance needed. TrimRx is the platform; its terms state it is not itself a healthcare provider, and the operating company is MetaFit Pharma Solutions LLC.
+        <strong className="text-[#191919]">Plans from $179 a month</strong> on TrimRx&rsquo;s own site (read November 22, 2026), with a &ldquo;$120 Off&rdquo; banner that day. TrimRx does not publish a per-drug semaglutide or tirzepatide price we could read, and its page does not say whether $179 is before or after the $120. Free tracked delivery; consultation included; no insurance needed. TrimRx&rsquo;s GLP-1 page says it does not practice medicine or prescribe medications and that independent licensed providers do.
       </>
     ),
     support:
-      "A free two-minute assessment, review by a licensed clinician, then custom dosing with unlimited check-ins included. The compounding pharmacy is not named on the site. The advertised three-month results guarantee is conditional on following the plan and completing monthly check-ins.",
+      "A free two-minute assessment, review by a licensed clinician, then custom dosing with unlimited check-ins included. The compounding pharmacy is not named on the site.",
     reddit: (
       <>
-        We found <strong className="text-[#191919]">no substantive Reddit discussion of TrimRx</strong> in the communities we searched, and we are not going to invent one. If you are researching TrimRx, its published terms and the conditions on its guarantee are the record to read.
+        We found <strong className="text-[#191919]">no substantive Reddit discussion of TrimRx</strong> in the communities we searched, and we are not going to invent one. If you are researching TrimRx, its published terms are the record to read; we could not read them on November 22, 2026.
       </>
     ),
     cancellation:
-      "Future subscriptions can be cancelled; refunds are restricted for prepaid packages; the results guarantee is subject to conditions.",
-    pros: ["No long-term contract", "Custom dosing and unlimited check-ins in the price", "A published starting price (plans from $179)", "A results guarantee, with conditions"],
-    cons: ["Mid-tier pricing against the sub-$100 providers here", "No Reddit record; pharmacy not named", "Prepaid packages are not refundable"],
+      "Its site says to cancel before your next billing cycle (read November 22, 2026). We could not read its refund terms that day.",
+    pros: ["No long-term contract", "Custom dosing and unlimited check-ins in the price", "A published starting price (plans from $179)"],
+    cons: ["Mid-tier pricing against the sub-$100 providers here", "No Reddit record; pharmacy not named", "Refund terms not read"],
     suits: "Readers who want a clinician adjusting the dose to them rather than a fixed protocol, with frequent check-ins, and who will pay month to month rather than prepay.",
     assessment: (
       <>
-        TrimRx&rsquo;s care model is its argument. Its refund terms are the reason to go in carefully: prepaid packages are not refundable, so <strong className="text-[#191919]">pay monthly, keep the quoted price in writing, and treat the guarantee as conditional</strong>. On this evidence it is a reasonable choice for people who value check-ins, not the one we would send a price-first reader to.
+        TrimRx&rsquo;s care model is its argument. We could not read its refund terms on November 22, 2026, so <strong className="text-[#191919]">pay monthly where you can and keep the quoted price in writing</strong>. On this evidence it is a reasonable choice for people who value check-ins, not the one we would send a price-first reader to.
       </>
     ),
   },
