@@ -107,7 +107,7 @@ export function CostCalculator({ rows, brands, verifiedOn }: { rows: CostRow[]; 
         </div>
       </div>
 
-      <div className="mt-6 overflow-x-auto rounded-xl border border-gray-200">
+      <div className="x-scroll-hint mt-6 overflow-x-auto rounded-xl border border-gray-200">
         <table className="w-full min-w-[720px] border-collapse text-left">
           <thead>
             <tr className="border-b border-gray-200 bg-[#F7F8FA] text-[11.5px] font-bold uppercase tracking-wide text-gray-500">
@@ -156,7 +156,7 @@ export function CostCalculator({ rows, brands, verifiedOn }: { rows: CostRow[]; 
       {brandRows.length > 0 && (
         <div className="mt-8">
           <h3 className="mb-2 text-[15px] font-bold text-[#191919]">Brand-name {molecule}, cash price, for comparison</h3>
-          <div className="overflow-x-auto rounded-xl border border-gray-200">
+          <div className="x-scroll-hint overflow-x-auto rounded-xl border border-gray-200">
             <table className="w-full min-w-[560px] border-collapse text-left">
               <thead>
                 <tr className="border-b border-gray-200 bg-[#F7F8FA] text-[11.5px] font-bold uppercase tracking-wide text-gray-500">

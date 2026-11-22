@@ -213,13 +213,40 @@ html[data-legacy] .legacy-name {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
+  /* Nov 22, 2026: the 9.5rem floor forced every 3-column table to 456px, so
+     the price column was clipped at 390 and 360 with no hint that the table
+     scrolls. A 5rem floor lets a 3-column table fit the phone; wider tables
+     still scroll, and the edge shadows (see .x-scroll-hint) show that they do. */
   .article-body table th,
   .article-body table td {
-    min-width: 9.5rem;
+    min-width: 5rem;
+    padding-left: 8px;
+    padding-right: 8px;
     white-space: normal;
+  }
+  .article-body table {
+    background:
+      linear-gradient(to right, #fff 30%, rgba(255, 255, 255, 0)) left center / 32px 100% no-repeat local,
+      linear-gradient(to left, #fff 30%, rgba(255, 255, 255, 0)) right center / 32px 100% no-repeat local,
+      linear-gradient(to right, rgba(15, 23, 42, 0.16), rgba(15, 23, 42, 0)) left center / 12px 100% no-repeat scroll,
+      linear-gradient(to left, rgba(15, 23, 42, 0.16), rgba(15, 23, 42, 0)) right center / 12px 100% no-repeat scroll,
+      #fff;
   }
   .article-body table caption {
     white-space: normal;
+  }
+}
+/* Edge shadows that appear only while a scroll container has more content to
+   that side. Used on the calculator tables, which scroll inside their own
+   wrapper on phones. Phone widths only, so desktop paints exactly as before. */
+@media (max-width: 640px) {
+  .x-scroll-hint {
+    background:
+      linear-gradient(to right, #fff 30%, rgba(255, 255, 255, 0)) left center / 32px 100% no-repeat local,
+      linear-gradient(to left, #fff 30%, rgba(255, 255, 255, 0)) right center / 32px 100% no-repeat local,
+      linear-gradient(to right, rgba(15, 23, 42, 0.16), rgba(15, 23, 42, 0)) left center / 12px 100% no-repeat scroll,
+      linear-gradient(to left, rgba(15, 23, 42, 0.16), rgba(15, 23, 42, 0)) right center / 12px 100% no-repeat scroll,
+      #fff;
   }
 }
 /* Provider-site screenshots embedded in articles (galleryFigureHtml). */

@@ -146,7 +146,7 @@ export default async function CostCalculatorPage() {
           <Breadcrumbs items={[{ label: "Home", href: "/weight-loss" }, { label: "GLP-1 Cost Calculator" }]} />
           <h1 className="max-w-[820px] text-[27px] font-extrabold leading-[1.15] text-[#191919] sm:text-[36px]">{TITLE}</h1>
           <p className="mt-3 max-w-[720px] text-[16px] leading-relaxed text-gray-500">
-            What {PRICE_INDEX.length} online providers charge for compounded semaglutide and tirzepatide, multiplied out over
+            What {PRICE_INDEX.length}{" "}online providers charge for compounded semaglutide and tirzepatide, multiplied out over
             the months you choose. Every figure is the provider&rsquo;s own published price from our index, verified {verified};
             promotions are shown next to the regular price they revert to.
           </p>
