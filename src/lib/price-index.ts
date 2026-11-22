@@ -111,7 +111,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     edge: "Custom dosing with unlimited provider check-ins",
     semaglutide: null,
     tirzepatide: null,
-    plan: { price: "from $149", note: "weight loss plans starting at $149" },
+    plan: { price: "from $179", note: "weight loss plans starting at $179 (TrimRx site, read Nov 22, 2026); a \"$120 Off\" banner was also showing, and the page does not say whether $179 is before or after it" },
     shipping: "Free tracked delivery, often next-day",
     commitment: "Month to month - cancel before your next billing cycle",
   },
@@ -176,6 +176,13 @@ export type PriceChange = {
 };
 
 export const PRICE_CHANGELOG: PriceChange[] = [
+  {
+    date: "2026-11-22",
+    providerId: "trimrx",
+    change:
+      "Listing now shows TrimRx's published \"starting at $179\" (offer cards on trimrx.com/glp1; its pricing and home page descriptions read \"plans from $179/mo\"), up from the \"plans starting at $149\" we listed on November 3. The page does not tie $179 to one drug or dose, and it does not say whether $179 is before or after the \"Exclusive Promotion Applied! $120 Off\" banner shown that day. We do not know how long the banner lasts. TrimRx still shows no separate per-drug price we could read. Compounded medicines are not FDA-approved.",
+    source: "TrimRx website (trimrx.com/glp1, pricing page and home page), November 22, 2026",
+  },
   {
     date: "2026-11-20",
     providerId: "wellmedr",

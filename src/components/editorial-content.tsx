@@ -112,7 +112,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
               ["HealthRx", `${indexPrice("healthrx", "semaglutide")}/mo`, `${indexPrice("healthrx", "tirzepatide")}/mo`, "Monthly plan, $39 first month"],
               ["DirectMeds", `${indexPrice("directmeds", "semaglutide")}/mo (sublingual)`, indexPrice("directmeds", "tirzepatide"), "No subscriptions; injections $297/mo"],
               ["Sprout", "from $99/mo", "from $149/mo", "12-month plan for best rate; monthly $149/$199"],
-              ["trimrx", "$149/mo, same at every dose", "$259/mo", "No contract"],
+              ["trimrx", "Plans from $179/mo (site, Nov 22, 2026)", "Not published per drug", "No contract"],
               ["SHED", "$199/mo", "$299/mo", "Money-back results guarantee"],
             ].map(([name, sema, tirz, model], i) => (
               <tr key={name} className={i % 2 === 1 ? "bg-gray-50/50" : ""}>

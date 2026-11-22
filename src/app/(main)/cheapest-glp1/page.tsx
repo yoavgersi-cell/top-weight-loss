@@ -195,7 +195,6 @@ export default async function CheapestGlp1Page() {
                   ["altRx", "$89 x 12, flat at every dose", "$1,068", "$12,720"],
                   ["Medvi", "$99 x 12 (promo; reg. $199) - all-inclusive", "$1,188", "$12,600"],
                   ["HealthRx", "$39 first month + $125 x 11 (monthly plan, until canceled)", "$1,414", "$12,374"],
-                  ["trimrx", "$149 x 12, same price at every dose", "$1,788", "$12,000"],
                   ["SHED", "$159 first month (20% off) + $199 x 11", "$2,348", "$11,440"],
                   ["DirectMeds", "$249 x 12 (sublingual semaglutide; injections $297)", "$2,988", "$10,800"],
                 ].map(([name, math, total, saved], i) => (
@@ -215,7 +214,7 @@ export default async function CheapestGlp1Page() {
             promotional). Savings compare against Ozempic&rsquo;s lowest listed
             brand price on our providers&rsquo; shelves ($1,149/month at altRx; welludr lists it at
             $1,399). What&rsquo;s bundled differs - Medvi and SHED include coaching layers others
-            don&rsquo;t - so the cheapest row isn&rsquo;t automatically the best fit. The dated,
+            don&rsquo;t - so the cheapest row isn&rsquo;t automatically the best fit. TrimRx is not in this table: its site shows plans from $179 a month (read Nov 22, 2026) but no per-drug semaglutide price we could read, so we cannot build a 12-month total. The dated,
             citable version of this data, with its change log, is our{" "}
             <Link href="/weight-loss/glp1-weight-loss-statistics" className="font-medium text-[#0C4B75] hover:underline">
               GLP-1 price index

@@ -63,13 +63,10 @@ export const PROMO_POPUPS: PromoPopupSpec[] = [
       },
     },
   },
-  {
-    providerId: "trimrx",
-    providerName: "TrimRx",
-    image: "/trimrxpopup.webp",
-    alt: "TrimRx - $140 off all weight loss plans, GLP-1 plans starting at $149. Start now and save.",
-    priority: 1,
-  },
+  // TrimRx popup paused Nov 22, 2026: the creative (/trimrxpopup.webp) prints
+  // "$140 OFF" and "Starting at $149", which trimrx.com no longer shows
+  // ("Starting at $179" and "$120 Off", read Nov 22, 2026). Restore the entry
+  // once TrimRx supplies a creative with current figures.
 ];
 
 // Minimal provider shape the resolver needs - id, name, and the CMS popup

@@ -80,8 +80,8 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
   },
   "weight-loss:trimrx": {
     rows: [
-      { label: "Semaglutide price", value: "$149/month, same at every dose" },
-      { label: "Tirzepatide price", value: "$259/month" },
+      { label: "Starting price", value: "Plans from $179/month (TrimRx site, read Nov 22, 2026)" },
+      { label: "Per-drug price", value: "Not published on the page we could read (semaglutide or tirzepatide)" },
       { label: "Commitment", value: "No contract; opt-in discount programs" },
     ],
   },

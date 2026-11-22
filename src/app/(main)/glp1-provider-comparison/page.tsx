@@ -134,9 +134,9 @@ const ROWS: Row[] = [
     id: "trimrx",
     name: "TrimRx",
     medications: "Compounded semaglutide and tirzepatide",
-    entry: "$149 sema / $259 tirz",
-    entryNote: "same at every dose; $140 discount applied (reg. $289)",
-    after: "Same per the published rate",
+    entry: "From $179 (site, read Nov 22, 2026)",
+    entryNote: "plans from; not tied to one drug or dose; a \"$120 Off\" banner showed that day",
+    after: "Not published per drug",
     membership: "None",
     shipping: "Free tracked; often next-day (provider claim)",
     support: "Custom dosing, unlimited provider check-ins",
@@ -358,7 +358,7 @@ const SECTIONS: Section[] = [
     ),
     pricing: (
       <>
-        <strong className="text-[#191919]">Semaglutide $149 a month, the same at every dose</strong>, with a $140 discount already applied against a regular price of $289; tirzepatide $259. Verified October 16, 2026, and consistent with the &ldquo;Save $140, plans from $149&rdquo; offer on TrimRx&rsquo;s homepage on October 11, 2026. Free tracked delivery; consultation included; no insurance needed. TrimRx is the platform; its terms state it is not itself a healthcare provider, and the operating company is MetaFit Pharma Solutions LLC.
+        <strong className="text-[#191919]">Plans from $179 a month</strong> on TrimRx&rsquo;s own site (read November 22, 2026), with a &ldquo;$120 Off&rdquo; banner that day. TrimRx does not publish a per-drug semaglutide or tirzepatide price we could read, and its page does not say whether $179 is before or after the $120. Free tracked delivery; consultation included; no insurance needed. TrimRx is the platform; its terms state it is not itself a healthcare provider, and the operating company is MetaFit Pharma Solutions LLC.
       </>
     ),
     support:
@@ -370,7 +370,7 @@ const SECTIONS: Section[] = [
     ),
     cancellation:
       "Future subscriptions can be cancelled; refunds are restricted for prepaid packages; the results guarantee is subject to conditions.",
-    pros: ["No long-term contract", "Custom dosing and unlimited check-ins in the price", "Clear, dose-flat semaglutide pricing in the captured offer", "A results guarantee, with conditions"],
+    pros: ["No long-term contract", "Custom dosing and unlimited check-ins in the price", "A published starting price (plans from $179)", "A results guarantee, with conditions"],
     cons: ["Mid-tier pricing against the sub-$100 providers here", "No Reddit record; pharmacy not named", "Prepaid packages are not refundable"],
     suits: "Readers who want a clinician adjusting the dose to them rather than a fixed protocol, with frequent check-ins, and who will pay month to month rather than prepay.",
     assessment: (
@@ -863,7 +863,7 @@ export default async function Glp1ProviderComparisonPage() {
         <section className="mb-12">
           <H2 id="methodology">Our research methodology</H2>
           <p className="mb-4"><strong className="text-[#191919]">Provider selection.</strong> The eight providers are the GLP-1 telehealth companies TreatmentsHub currently works with as commercial partners; Eden was added on October 14, 2026, after joining the partner list. That is the pool, stated plainly. Within it, nothing was ranked, and every provider is held to the same three sources. For the brand-name reference prices every cash-pay reader compares against, see our <L href="/weight-loss/articles/zepbound-price-online">Zepbound price guide</L> and <L href="/weight-loss/articles/wegovy-pill-price-online">Wegovy pill price guide</L>, which cite the manufacturers&rsquo; published and reported self-pay prices with dates.</p>
-          <p className="mb-4"><strong className="text-[#191919]">Official website research and pricing verification.</strong> Prices were captured from each provider&rsquo;s own pricing pages and recorded in our <L href="/weight-loss/glp1-weight-loss-statistics">price index</L>, last verified {fmt(PRICE_INDEX_VERIFIED)}, with a <L href="/weight-loss/glp1-price-changes">public change log</L> of every movement we have recorded (altRx September 14 and 21; TrimRx September 15; welludr September 14). Ro&rsquo;s membership and medication prices were captured from its published pricing in August 2026. Promotional, prepaid and first-month conditions are stated with every figure.</p>
+          <p className="mb-4"><strong className="text-[#191919]">Official website research and pricing verification.</strong> Prices were captured from each provider&rsquo;s own pricing pages and recorded in our <L href="/weight-loss/glp1-weight-loss-statistics">price index</L>, last verified {fmt(PRICE_INDEX_VERIFIED)}, with a <L href="/weight-loss/glp1-price-changes">public change log</L> of every movement we have recorded (altRx September 14 and 21; TrimRx September 15 and November 22; welludr September 14). Ro&rsquo;s membership and medication prices were captured from its published pricing in August 2026. Promotional, prepaid and first-month conditions are stated with every figure.</p>
           <p className="mb-4"><strong className="text-[#191919]">Reddit research.</strong> We searched GLP-1 communities (r/glp1, r/Semaglutide, r/tirzepatidecompound, r/compoundedtirzepatide, r/WegovyWeightLoss, r/telehealth and others) for discussions from the past twelve months, kept firsthand accounts over secondhand ones, and recorded the subreddit and date for each excerpt; thread links are given where we hold the permalink. Where we could find no substantive discussion we say so rather than fill the gap. Reddit excerpts are anonymous accounts and are presented as such.</p>
           <p className="mb-4"><strong className="text-[#191919]">Medical and regulatory sources.</strong> FDA pages on compounding and on compounded GLP-1 drugs; the FDA approval announcements for Zepbound and Foundayo and coverage of the Wegovy pill approval; the published OASIS 4 and ATTAIN-1 trials via the American College of Cardiology&rsquo;s summaries; the FDA&rsquo;s June 8, 2026 warning letter concerning altRx; and coverage of the FDA&rsquo;s March 2026 warning letters. All are linked in the sources list below.</p>
           <p className="mb-4"><strong className="text-[#191919]">Limitations.</strong> Three providers have no Reddit record we could locate. Reddit accounts are self-selected. Pharmacy names for four providers come from customers, not providers. Prices change; the dates on this page are the ones that matter. We did not purchase from or test any of these services.</p>
