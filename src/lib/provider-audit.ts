@@ -47,8 +47,8 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
   },
   "weight-loss:medvi": {
     rows: [
-      { label: "Semaglutide price", value: "$99/month promotional (reg. $199), all-inclusive" },
-      { label: "Tirzepatide price", value: "$166/month promotional (reg. $299)" },
+      { label: "Starting price", value: "Plans from $99/month, all-inclusive (price index, verified Nov 18, 2026)" },
+      { label: "Per-drug price", value: "Not currently listed in our verified index" },
       { label: "Support", value: "Video visits and a dietician on every plan" },
       { label: "Commitment", value: "Monthly, all-inclusive billing" },
     ],
@@ -80,8 +80,8 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
   },
   "weight-loss:trimrx": {
     rows: [
-      { label: "Semaglutide price", value: "$149/month, same at every dose" },
-      { label: "Tirzepatide price", value: "$259/month" },
+      { label: "Starting price", value: "Plans from $179/month (TrimRx site, read Nov 22, 2026)" },
+      { label: "Per-drug price", value: "Not published on the page we could read (semaglutide or tirzepatide)" },
       { label: "Commitment", value: "No contract; opt-in discount programs" },
     ],
   },

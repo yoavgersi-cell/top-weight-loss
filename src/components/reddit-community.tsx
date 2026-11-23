@@ -358,7 +358,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
     ],
     takeaway:
-      "The Reddit picture is consistent: the ongoing monthly cost is the caveat users themselves raise - though Medvi's current $99/month promotion (regularly $199) blunts it considerably - but the year-long accounts describe exactly what that price buys: medical structure, dose adjustments when progress stalls, and 10-15% body-weight results over a year that felt “sustainable, which is something I had not experienced before.”",
+      "The Reddit picture is consistent: the ongoing monthly cost is the caveat users themselves raise - though Medvi's from-$99 starting price (price index, verified Nov 18, 2026) eases it - but the year-long accounts describe exactly what that price buys: medical structure, dose adjustments when progress stalls, and 10-15% body-weight results over a year that felt “sustainable, which is something I had not experienced before.”",
   },
   ro: {
     themes:

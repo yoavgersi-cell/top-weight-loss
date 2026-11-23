@@ -54,8 +54,8 @@ export const TRIO_FACTS: Record<string, TrioFacts> = {
   },
   trimrx: {
     id: "trimrx",
-    semaglutide: "$149/mo, same at every dose",
-    tirzepatide: "$259/mo",
+    semaglutide: "Plans from $179/mo (TrimRx site, read Nov 22, 2026); no per-drug price published",
+    tirzepatide: "No per-drug price published (TrimRx site, read Nov 22, 2026)",
     billing: "Monthly - no long-term contract; multi-month discounts",
     shipping: "Free home delivery",
     support: "Licensed clinical guidance through dose changes",
@@ -64,8 +64,8 @@ export const TRIO_FACTS: Record<string, TrioFacts> = {
   },
   medvi: {
     id: "medvi",
-    semaglutide: "$99/mo promo (reg. $199), all-inclusive",
-    tirzepatide: "$166/mo promo (reg. $299)",
+    semaglutide: "Plans from $99/mo, all-inclusive (price index, verified Nov 18, 2026)",
+    tirzepatide: "No per-drug price listed",
     billing: "Monthly, all-inclusive - no surprise charges; HSA/FSA approved",
     shipping: "Free shipping",
     support: "Video visits + free dietician & care coaching",
@@ -152,14 +152,14 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     description:
       "Our three most-compared GLP-1 providers in one matrix: embody ($49 flat, free expedited delivery), altRx ($89 plus a brand-name shelf) and Medvi ($99 all-inclusive).",
     intro:
-      "Thirty dollars separates these three, and none of them asks for a commitment - so this comparison is really about what each adds on top of the same compounded semaglutide. embody keeps it lean: $49 flat at every dose, free expedited delivery (no timeline guaranteed), and a partial refund if a provider doesn't approve you (unused portion less services rendered). altRx charges $89 and is the only one with a brand-name shelf - Ozempic, Zepbound and Wegovy at published cash prices - plus Buy Now, Pay Later. Medvi's $99 promo is all-inclusive with video visits, a free dietician and care coaching.",
+      "Thirty dollars separates these three, and none of them asks for a commitment - so this comparison is really about what each adds on top of the same compounded semaglutide. embody keeps it lean: $49 flat at every dose, free expedited delivery (no timeline guaranteed), and a partial refund if a provider doesn't approve you (unused portion less services rendered). altRx charges $89 and is the only one with a brand-name shelf - Ozempic, Zepbound and Wegovy at published cash prices - plus Buy Now, Pay Later. Medvi's from-$99 price is all-inclusive with video visits, a free dietician and care coaching.",
     verdict:
       "All three bill monthly with no prepaid term, so the price gap is the honest starting point: $49, $89, $99. Pay the minimum and move fast: embody - cheapest here, quickest shipping, and the refund-if-not-approved policy removes the main risk of trying. Think brand-name Ozempic or Zepbound might be in your future: altRx - it's the only one of the three where that switch happens without changing providers, and BNPL softens the brand prices. Want a person in the loop - video visits, a dietician, someone to call: Medvi. There's no legitimacy gap to worry about: all three run licensed-provider review and dispense through regulated pharmacies.",
     faqs: [
       {
         question: "Which is cheapest: embody, altRx or Medvi?",
         answer:
-          "For compounded semaglutide: embody at $49/month flat, then altRx at $89/month promotional (regularly $199), then Medvi at $99/month promotional (regularly $199) all-inclusive. For tirzepatide: embody $99, altRx $149 (regularly $299), Medvi $166 promotional (regularly $299). All three bill monthly with no prepaid commitment.",
+          "For compounded semaglutide: embody at $49/month flat, then altRx at $89/month promotional (regularly $199), then Medvi at from $99/month all-inclusive. For tirzepatide: embody $99, altRx $149 (regularly $299). All three bill monthly with no prepaid commitment.",
       },
       {
         question: "Can I get brand-name Ozempic, Zepbound or Wegovy from any of them?",
@@ -210,14 +210,14 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     description:
       "Three ways to buy the same compounded GLP-1s: embody ($49 flat), Medvi ($99 all-inclusive) and welludr ($41 on a 12-month plan).",
     intro:
-      "welludr is the cheapest at $41/month - a rate that locks on a 12-month plan. embody's $49 is flat with zero commitment and a refund if a provider doesn't approve you. Medvi's $99 promo is the all-inclusive, high-touch option - video visits, free dietician, care coaching.",
+      "welludr is the cheapest at $41/month - a rate that locks on a 12-month plan. embody's $49 is flat with zero commitment and a refund if a provider doesn't approve you. Medvi's from-$99 price is the all-inclusive, high-touch option - video visits, free dietician, care coaching.",
     verdict:
       "Decide on commitment first, support second. Ready to commit to a year: welludr - the $41 lock is the best per-month rate in the market, and its weight-loss warranty backs the plan. Not ready to commit to anything: embody - $49 flat, cancel anytime, refunded if not approved. Know from experience that you quit without someone checking in: Medvi - the $30 premium over embody buys video visits, a dietician and coaching. All three prescribe the same compounded semaglutide after a licensed-provider review.",
     faqs: [
       {
         question: "Which is cheapest: embody, Medvi or welludr?",
         answer:
-          "For compounded semaglutide: welludr at $41/month (the rate locks on a 12-month plan), embody at $49/month flat with no commitment, Medvi at $99/month promotional (regularly $199) all-inclusive. For tirzepatide: welludr $71, embody $99, Medvi $166 promotional (regularly $299).",
+          "For compounded semaglutide: welludr at $41/month (the rate locks on a 12-month plan), embody at $49/month flat with no commitment, Medvi at from $99/month all-inclusive. For tirzepatide: welludr $71, embody $99.",
       },
       {
         question: "Which is best if I don't want a commitment?",
@@ -270,33 +270,33 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     providerIds: ["wellmedr", "embody", "trimrx"],
     updatedAt: "2026-10-15",
     title: "welludr vs embody vs TrimRx: Price, Freedom, Flexibility",
-    metaTitle: "welludr vs embody vs TrimRx (2026): $41 vs $49 vs $149",
+    metaTitle: "welludr vs embody vs TrimRx (2026): $41 vs $49 vs $179",
     description:
-      "welludr ($41 semaglutide, weight-loss warranty) vs embody ($49 flat, free expedited delivery) vs TrimRx ($149, no contract) on real GLP-1 prices.",
+      "welludr ($41 semaglutide, weight-loss warranty) vs embody ($49 flat, free expedited delivery) vs TrimRx (plans from $179, no contract) on real GLP-1 prices.",
     intro:
-      "This trio spans the market's price range - $41 to $149 for the same compounded semaglutide - which makes it a clean test of what the extra money buys. welludr sets the floor: $41/month semaglutide and $71 tirzepatide, the same price at every dose, with a weight-loss warranty, a Medical Weight-Care Coach on every plan, and brand-name Ozempic and Zepbound if you ever want them. embody charges $20 more for total freedom - flat, no commitment, free expedited delivery (no timeline guaranteed), a partial refund if you're not approved. TrimRx charges a premium for custom dosing with unlimited provider check-ins and a no-contract model.",
+      "This trio spans the market's price range, from $41 to TrimRx's plans from $179 (site, read Nov 22, 2026), which makes it a clean test of what the extra money buys. welludr sets the floor: $41/month semaglutide and $71 tirzepatide, the same price at every dose, with a weight-loss warranty, a Medical Weight-Care Coach on every plan, and brand-name Ozempic and Zepbound if you ever want them. embody charges $20 more for total freedom - flat, no commitment, free expedited delivery (no timeline guaranteed), a partial refund if you're not approved. TrimRx charges a premium for custom dosing with unlimited provider check-ins and a no-contract model.",
     verdict:
-      "welludr is our pick of the three. It has the lowest verified price at every dose and backs the program with a weight-loss warranty. The honest condition: the $41 rate locks on a 12-month plan, so it rewards people who have decided to commit. If you haven't, embody is the right second choice - $49 flat with no commitment, free expedited delivery (no timeline guaranteed), and a partial refund (unused portion less services rendered) if a provider doesn't approve you. TrimRx earns its $149 when its specific mix matters to you: custom dosing adjusted by your provider, unlimited check-ins, free consultation, and month-to-month freedom. All three run licensed-provider review and dispense through regulated pharmacies, so there is no legitimacy gap - only a difference in what you are paying for.",
+      "welludr is our pick of the three. It has the lowest verified price at every dose and backs the program with a weight-loss warranty. The honest condition: the $41 rate locks on a 12-month plan, so it rewards people who have decided to commit. If you haven't, embody is the right second choice - $49 flat with no commitment, free expedited delivery (no timeline guaranteed), and a partial refund (unused portion less services rendered) if a provider doesn't approve you. TrimRx earns its premium when its specific mix matters to you: custom dosing adjusted by your provider, unlimited check-ins, free consultation, and month-to-month freedom. All three run licensed-provider review and dispense through regulated pharmacies, so there is no legitimacy gap - only a difference in what you are paying for.",
     faqs: [
       {
         question: "Which is best overall: welludr, embody or TrimRx?",
         answer:
-          "welludr, on verified pricing: $41/month semaglutide and $71 tirzepatide at every dose, and a weight-loss warranty. Its best rate takes a 12-month plan; if you want no commitment, embody at $49 flat with free expedited delivery is the natural alternative, and TrimRx is the choice if custom dosing with unlimited provider check-ins is worth $149 to you.",
+          "welludr, on verified pricing: $41/month semaglutide and $71 tirzepatide at every dose, and a weight-loss warranty. Its best rate takes a 12-month plan; if you want no commitment, embody at $49 flat with free expedited delivery is the natural alternative, and TrimRx is the choice if custom dosing with unlimited provider check-ins is worth the premium to you.",
       },
       {
         question: "Why does TrimRx cost more than welludr and embody?",
         answer:
-          "TrimRx prices at $149/month, the same at every dose, with no long-term contract, custom dosing set by your provider, unlimited check-ins, a free consultation and tracked delivery included. welludr ($41 on a 12-month plan) and embody ($49 flat) run leaner models at lower prices. All three prescribe the same compounded semaglutide after a licensed-provider review.",
+          "TrimRx shows plans from $179/month on its site (read Nov 22, 2026) and publishes no per-drug price we could read. Plans come with no long-term contract, custom dosing set by your provider, unlimited check-ins, a free consultation and tracked delivery included. welludr ($41 on a 12-month plan) and embody ($49 flat) run leaner models at lower prices. All three prescribe the same compounded semaglutide after a licensed-provider review.",
       },
       {
         question: "Which is best if I don't want any commitment?",
         answer:
-          "embody - its $49/month is flat with no commitment, and it refunds the unused portion, less services rendered, if a provider doesn't approve treatment. TrimRx is also month-to-month with no contract, at $149. welludr's best rate ($41) locks on a 12-month plan.",
+          "embody - its $49/month is flat with no commitment, and it refunds the unused portion, less services rendered, if a provider doesn't approve treatment. TrimRx is also month-to-month with no contract, with plans from $179. welludr's best rate ($41) locks on a 12-month plan.",
       },
       {
         question: "Do any of the three offer a guarantee?",
         answer:
-          "welludr backs treatment with a weight-loss warranty (terms on its site), and embody offers a partial refund if you're not approved (unused portion less services rendered). TrimRx doesn't advertise a comparable guarantee.",
+          "welludr backs treatment with a weight-loss warranty (terms on its site), and embody offers a partial refund if you're not approved (unused portion less services rendered). We could not read TrimRx's guarantee or refund terms on Nov 22, 2026.",
       },
     ],
   },
@@ -308,9 +308,9 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     description:
       "The GLP-1 support tier: Medvi's all-inclusive care, TrimRx's no-contract flexibility and SHED's coaching with a money-back guarantee.",
     intro:
-      "These three sell more than medication - each wraps the same compounded GLP-1s in a different support philosophy, from Medvi's current $99 promo to SHED's $199. Medvi bundles video visits, a dietician and care coaching. TrimRx sells flexibility: no contract, optional discounts, clinical guidance. SHED sells accountability: formal health coaching plus the market's only lose-5%-in-120-days-or-your-money-back guarantee.",
+      "These three sell more than medication - each wraps the same compounded GLP-1s in a different support philosophy, from Medvi's current from $99 to SHED's $199. Medvi bundles video visits, a dietician and care coaching. TrimRx sells flexibility: no contract, optional discounts, clinical guidance. SHED sells accountability: formal health coaching plus the market's only lose-5%-in-120-days-or-your-money-back guarantee.",
     verdict:
-      "Match the model to your failure mode. If past attempts failed for lack of guidance, Medvi's high-touch care is the pick. If you want premium care without being locked to anything, TrimRx. If you need stakes and structure to follow through, SHED's guarantee literally pays you back if the program doesn't deliver. On current pricing Medvi's $99 promo is also the cheapest of the three - but the support philosophy, not the price, is the real choice.",
+      "Match the model to your failure mode. If past attempts failed for lack of guidance, Medvi's high-touch care is the pick. If you want premium care without being locked to anything, TrimRx. If you need stakes and structure to follow through, SHED's guarantee literally pays you back if the program doesn't deliver. On current pricing Medvi's from-$99 price is also the cheapest of the three - but the support philosophy, not the price, is the real choice.",
     faqs: [
       {
         question: "Is Medvi, TrimRx or SHED better for support?",
@@ -320,7 +320,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
       {
         question: "Which has a money-back guarantee?",
         answer:
-          "SHED - lose 5% of your body weight in 120 days or your money back, conditioned on following the program (terms on its site). Medvi and TrimRx don't advertise results guarantees.",
+          "SHED - lose 5% of your body weight in 120 days or your money back, conditioned on following the program (terms on its site). We did not find a results guarantee for Medvi, and could not read TrimRx's terms on Nov 22, 2026.",
       },
       {
         question: "Are these worth it over cheaper GLP-1 providers?",
@@ -373,7 +373,7 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
       {
         question: "Which is cheapest: Medvi, HealthRx or DirectMeds?",
         answer:
-          "For semaglutide, Medvi is $99/month, a monthly promotional rate (regularly $199) with no prepay; HealthRx is $125/month after a $39 first month; DirectMeds lists $249/month for sublingual semaglutide. For tirzepatide, Medvi is $166 promotional (regularly $299) and HealthRx $199; DirectMeds publishes no tirzepatide price.",
+          "For semaglutide, Medvi is from $99/month with no prepay; HealthRx is $125/month after a $39 first month; DirectMeds lists $249/month for sublingual semaglutide. For tirzepatide, Medvi lists no tirzepatide price and HealthRx is $199; DirectMeds publishes no tirzepatide price.",
       },
       {
         question: "Which one has a needle-free option?",

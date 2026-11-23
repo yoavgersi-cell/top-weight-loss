@@ -12,7 +12,7 @@ export type CatalogProduct = {
   vertical?: "weight-loss" | "hrt";
   /** Shopping-card product title, e.g. "Compounded Semaglutide Injection". */
   name: string;
-  medication: "semaglutide" | "tirzepatide" | "estradiol" | "progesterone" | "estrogen-progesterone";
+  medication: "semaglutide" | "tirzepatide" | "glp1-plan" | "estradiol" | "progesterone" | "estrogen-progesterone";
   format: "injection" | "drops" | "tablet" | "patch" | "cream" | "capsule" | "pill-or-patch" | "vaginal";
   /** Short form label for the image chip on HRT cards, e.g. "Patch", "Body cream". */
   form?: string;
@@ -36,6 +36,9 @@ export type CatalogProduct = {
   image: string | null;
 };
 
+// TrimRx has one plan-level card since Nov 22, 2026: its site shows only
+// "Starting at $179" (not tied to one drug or dose), so there are no per-drug
+// cards. The price index lists it as a single "plans from" row.
 export const PRODUCT_CATALOG: CatalogProduct[] = [
   // ── Semaglutide ──
   {
@@ -131,8 +134,8 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     medication: "semaglutide",
     format: "injection",
     price: "$99",
-    regularPrice: "$199",
-    priceNote: "promo; all-inclusive with coaching",
+    pricePrefix: "From",
+    priceNote: "price index, verified Nov 18, 2026; no per-drug price listed; all-inclusive with coaching",
     shipping: "Free fast & discreet shipping",
     image: "/products/medvi-semaglutide.webp",
   },
@@ -171,16 +174,16 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     image: "/products/sprout-semaglutide.webp",
   },
   {
-    id: "trimrx-semaglutide",
+    id: "trimrx-plans",
     providerId: "trimrx",
-    name: "Compounded Semaglutide Injection",
-    medication: "semaglutide",
+    name: "Compounded GLP-1 Injection Plans",
+    medication: "glp1-plan",
     format: "injection",
-    price: "$149",
-    regularPrice: "$289",
-    priceNote: "same price at every dose; $140 discount applied",
-    shipping: "Free discreet 1-2 day delivery",
-    image: "/products/trimrx-semaglutide.webp",
+    price: "$179",
+    pricePrefix: "Plans from",
+    priceNote: "TrimRx site, read Nov 22, 2026; not tied to one drug or dose; a \"$120 Off\" banner also showed",
+    shipping: "Free tracked delivery, often next-day",
+    image: null,
   },
   {
     id: "shed-semaglutide",
@@ -264,18 +267,6 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     image: "/products/altrx-glp1-tight.webp",
   },
   {
-    id: "medvi-tirzepatide",
-    providerId: "medvi",
-    name: "Compounded Tirzepatide (GLP-1/GIP) Injection",
-    medication: "tirzepatide",
-    format: "injection",
-    price: "$166",
-    regularPrice: "$299",
-    priceNote: "promo; all-inclusive with coaching",
-    shipping: "Free fast & discreet shipping",
-    image: "/products/medvi-tirzepatide.webp",
-  },
-  {
     id: "healthrx-tirzepatide",
     providerId: "healthrx",
     name: "Compounded Tirzepatide Injection",
@@ -297,17 +288,6 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     priceNote: "12-month plan, $1,788 billed upfront; monthly $199, no commitment",
     shipping: "Ships within 2 days",
     image: "/products/sprout-tirzepatide.webp",
-  },
-  {
-    id: "trimrx-tirzepatide",
-    providerId: "trimrx",
-    name: "Compounded Tirzepatide (GLP-1 + GIP) Injection",
-    medication: "tirzepatide",
-    format: "injection",
-    price: "$259",
-    priceNote: "custom dosing, unlimited check-ins",
-    shipping: "Free discreet 1-2 day delivery",
-    image: "/products/trimrx-tirzepatide.webp",
   },
   {
     id: "shed-tirzepatide",
