@@ -49,7 +49,7 @@ export const compoundedSemaglutideGoingAwayArticle: Article = {
   category: "Guide",
   readTime: "14 min read",
   publishedAt: "2026-11-18",
-  updatedAt: "2026-11-18",
+  updatedAt: "2026-11-22",
   heroColor: "#EEF3F8",
   author: "Treatments Hub Research Team",
   keyTakeaways: [
@@ -125,7 +125,7 @@ export const compoundedSemaglutideGoingAwayArticle: Article = {
 <tr><td>Eden</td><td>$99</td><td>$129</td><td>Flat every month, same price at every dose</td><td>Nov 3, 2026</td></tr>
 <tr><td>Sprout</td><td>from $99</td><td>from $149</td><td>12-month plan billed upfront ($1,188 and $1,788); monthly $149 and $199</td><td>Nov 3, 2026</td></tr>
 <tr><td>Medvi</td><td colspan="2">Plans from $99</td><td>Not tied to one medication on its page</td><td>Nov 3, 2026</td></tr>
-<tr><td>TrimRx</td><td colspan="2">Plans from $149</td><td>Not tied to one medication on its page</td><td>Nov 3, 2026</td></tr>
+<tr><td>TrimRx</td><td colspan="2">Plans from $179</td><td>Not tied to one medication on its page; a "$120 Off" banner also showed</td><td>Nov 22, 2026</td></tr>
 <tr><td>bmiMD</td><td>$149</td><td>$159</td><td>3-month plan ($447 and $477), limited-time price</td><td>Nov 3, 2026</td></tr>
 <tr><td>Shed</td><td>from $199</td><td>from $299</td><td>Starting price</td><td>Nov 3, 2026</td></tr>
 </tbody></table>

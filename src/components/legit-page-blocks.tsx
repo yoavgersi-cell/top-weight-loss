@@ -45,8 +45,8 @@ export const LEGIT_PAGES: Record<string, LegitPageData> = {
       { ok: true, text: "A licensed provider reviews your medical intake before prescribing; approval is not automatic" },
       { ok: true, text: "Prescription required - there is no no-prescription route" },
       { ok: true, text: "Dispensed through a regulated US pharmacy (Reddit commenters independently name its Florida pharmacy)" },
-      { ok: true, text: "Weight-loss warranty, with its terms published on the provider's site" },
-      { ok: false, text: "The $41 / $71 rates are tied to a 12-month plan, billed monthly; standard delivery is 3-5 business days" },
+      { ok: true, text: "Cancellation and refund terms published on the provider's site (a weight-loss guarantee was not found in them, read Nov 22, 2026)" },
+      { ok: false, text: "The $41 / $71 rates are tied to a 12-month plan, which the refund policy describes as prepaid in full; standard delivery is 3-5 business days" },
     ],
     priceLine: "$41/mo compounded semaglutide · $71/mo tirzepatide, the same price at every dose",
     alternative: { text: "Not sure about a 12-month plan? Compare the month-to-month alternative in embody vs welludr", href: "/embody-vs-wellmedr" },
@@ -70,7 +70,7 @@ export const LEGIT_PAGES: Record<string, LegitPageData> = {
           shows:
             "Two plans. Tirzepatide, \"Most Powerful Option\", monthly plan starting at $71 a month, shipped every 4 weeks, same price regardless of dosage, cancel or change anytime. Semaglutide, \"Proven & Steady\", starting at $41 a month, provider reviews your intake, dosing adjusted as your body responds. Both carry a \"Recommended for most patients\" badge.",
           note:
-            "The $41 and $71 match the prices we verified. \"Starting at\" is the phrase to read carefully: when we last checked, those rates came with a 12-month plan billed monthly, so confirm the plan term on the checkout screen before you pay. A badge that recommends both medicines for most patients is marketing; the clinician who reviews your intake decides which, if either, is right for you.",
+            "The $41 and $71 match the prices we verified. \"Starting at\" is the phrase to read carefully: when we last checked, welludr's refund policy (read Nov 22, 2026) describes its 12-month plans as prepaid in full, so confirm the plan term and the amount charged on the checkout screen before you pay. A badge that recommends both medicines for most patients is marketing; the clinician who reviews your intake decides which, if either, is right for you.",
         },
         {
           image: "/verification/welludr-site-2026-11-10/why-people-choose.webp",

@@ -160,7 +160,7 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   trimrx: {
     title: "TrimRx Reviews 2026 (Trim Rx): Is It Legit? Cost & Verdict",
     description:
-      "TrimRx (Trim Rx) reviews: {prices}, no contract, clinical support included. Is TrimRx legit? Pros and cons.",
+      "TrimRx (Trim Rx) reviews: plans from $179 a month (site, read Nov 22, 2026), no contract, clinical support included. Is TrimRx legit? Pros and cons.",
   },
   shed: {
     title: "Shed Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
@@ -491,7 +491,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "Is TrimRx a subscription with a contract?",
       answer:
-        "No long-term commitment - plans run month to month. The $149 semaglutide price is the same at every dose; compounded tirzepatide runs $259/month, with custom dosing and unlimited provider check-ins included.",
+        "No long-term commitment - plans run month to month. TrimRx's site shows plans from $179 a month (read Nov 22, 2026) and no per-drug price we could read; custom dosing and unlimited provider check-ins are included.",
     },
     {
       question: "What medications does TrimRx offer?",
@@ -530,7 +530,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "Can you cancel welludr anytime?",
       answer:
-        "Yes - you can cancel or change your plan anytime. Keep in mind the headline $41/month rate is locked in via a 12-month plan, and the program is backed by welludr's weight-loss warranty.",
+        "Yes, but there is a deadline, and welludr's two documents give different ones. Its terms (updated Oct 16, 2026) require cancelling at least 2 days before the renewal date; its refund policy (no date shown) says cancellation takes effect when the request is received. Read Nov 22, 2026. The headline $41/month rate is tied to a 12-month plan, which the refund policy describes as prepaid in full. See our cancel guide for the quotes.",
     },
   ],
   medvi: [

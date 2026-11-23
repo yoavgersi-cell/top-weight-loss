@@ -13,6 +13,7 @@ import { compoundedUnitsToMgArticle } from "./compounded-semaglutide-units-to-mg
 import { glp1WeightLossMedicationsGuideArticle } from "./glp1-weight-loss-medications-guide";
 import { embodyVsRoWeightLossArticle } from "./embody-vs-ro-weight-loss";
 import { compoundedSemaglutideGoingAwayArticle } from "./compounded-semaglutide-going-away";
+import { howToCancelTelehealthGlp1SubscriptionArticle } from "./how-to-cancel-telehealth-glp1-subscription";
 import { trueCostTable, budgetList } from "@/lib/true-cost";
 
 export interface Article {
@@ -348,7 +349,7 @@ export const articles: Article[] = [
       },
       {
         heading: "How much do Ozempic and Wegovy cost at verified prices?",
-        body: 'At verified published prices, <a href="/weight-loss/reviews/altrx">altRx</a> lists brand Ozempic at $1,149/month and Wegovy at $1,579, <a href="/weight-loss/reviews/sprout">Sprout</a> lists Wegovy at $1,799, and <a href="/weight-loss/reviews/ro">ro</a> lists the Wegovy pill at $149 for the first month (then $299, plus a separate membership). Most self-pay patients skip both brands and use compounded semaglutide - the same active ingredient - through licensed telehealth providers:<table><tr><th>Provider</th><th>Compounded semaglutide</th></tr><tr><td><a href="/weight-loss/reviews/wellmedr">welludr</a></td><td><strong>$41/mo</strong> (12-month plan)</td></tr><tr><td><a href="/weight-loss/reviews/embody">embody</a></td><td>$49/mo, no commitment</td></tr><tr><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td>$89/mo flat</td></tr><tr><td><a href="/weight-loss/reviews/medvi">Medvi</a></td><td>$99/mo promo (reg. $199), all-inclusive</td></tr></table>Prices as published in August 2026, checked against each provider\'s own site. Full breakdown: <a href="/weight-loss/articles/semaglutide-cost-per-month">semaglutide monthly cost guide</a> and the <a href="/weight-loss/cheapest-glp1">cheapest verified GLP-1 comparison</a>.',
+        body: 'At verified published prices, <a href="/weight-loss/reviews/altrx">altRx</a> lists brand Ozempic at $1,149/month and Wegovy at $1,579, <a href="/weight-loss/reviews/sprout">Sprout</a> lists Wegovy at $1,799, and <a href="/weight-loss/reviews/ro">ro</a> lists the Wegovy pill at $149 for the first month (then $299, plus a separate membership). Most self-pay patients skip both brands and use compounded semaglutide - the same active ingredient - through licensed telehealth providers:<table><tr><th>Provider</th><th>Compounded semaglutide</th></tr><tr><td><a href="/weight-loss/reviews/wellmedr">welludr</a></td><td><strong>$41/mo</strong> (12-month plan)</td></tr><tr><td><a href="/weight-loss/reviews/embody">embody</a></td><td>$49/mo, no commitment</td></tr><tr><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td>$89/mo flat</td></tr><tr><td><a href="/weight-loss/reviews/medvi">Medvi</a></td><td>from $99/mo, all-inclusive</td></tr></table>Prices as published in August 2026, checked against each provider\'s own site. Full breakdown: <a href="/weight-loss/articles/semaglutide-cost-per-month">semaglutide monthly cost guide</a> and the <a href="/weight-loss/cheapest-glp1">cheapest verified GLP-1 comparison</a>.',
       },
       {
         heading: "Does insurance cover Ozempic or Wegovy?",
@@ -436,7 +437,7 @@ export const articles: Article[] = [
     category: "Science",
     readTime: "9 min read",
     publishedAt: "2026-06-18",
-    updatedAt: "2026-09-15",
+    updatedAt: "2026-11-22",
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Team",
     keyTakeaways: [
@@ -460,7 +461,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What does each actually cost at real providers?",
-        body: 'Brand-name versions of both medications run $1,000+ per month at retail. The practical route for most cash-pay patients is compounded medication through licensed telehealth providers - and unlike the ballpark ranges most articles give, these are the real published prices we\'ve verified (September 2026; HealthRx and DirectMeds rows re-read November 18, 2026), promotional conditions noted:<table><thead><tr><th>Provider</th><th>Semaglutide /mo</th><th>Tirzepatide /mo</th></tr></thead><tbody><tr><td><a href="/weight-loss/reviews/wellmedr">welludr</a></td><td>$41 (12-month plan)</td><td>$89</td></tr><tr><td><a href="/weight-loss/reviews/embody">embody</a></td><td>$49 promo</td><td>$99 promo</td></tr><tr><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td>$89 promo (reg $199)</td><td>$149 promo (reg $299)</td></tr><tr><td><a href="/weight-loss/reviews/medvi">Medvi</a></td><td>$99 promo (reg $199)</td><td>$166 promo (reg $299)</td></tr><tr><td><a href="/weight-loss/reviews/healthrx">HealthRx</a></td><td>$125 (monthly plan; $39 first month)</td><td>$199 (monthly plan; $39 first month)</td></tr><tr><td><a href="/weight-loss/reviews/directmeds">DirectMeds</a></td><td>$249 (sublingual); injections $297</td><td>Not published</td></tr><tr><td><a href="/weight-loss/reviews/sprout">Sprout</a></td><td>from $99 (12-month plan)</td><td>from $149 (12-month plan)</td></tr><tr><td><a href="/weight-loss/reviews/trimrx">TrimRx</a></td><td>$149 (same at every dose)</td><td>$259</td></tr></tbody></table>The pattern: tirzepatide consistently costs $40-$100/month more than semaglutide at the same provider - the price of the stronger average results. Full breakdown in our <a href="/weight-loss/cheapest-glp1">cheapest GLP-1 comparison</a>, and the aggregate ranges plus brand-vs-compounded math in our <a href="/weight-loss/glp1-weight-loss-statistics">GLP-1 price &amp; statistics report</a>.',
+        body: 'Brand-name versions of both medications run $1,000+ per month at retail. The practical route for most cash-pay patients is compounded medication through licensed telehealth providers - and unlike the ballpark ranges most articles give, these are the real published prices we\'ve verified (September 2026; HealthRx and DirectMeds rows re-read November 18, 2026), promotional conditions noted:<table><thead><tr><th>Provider</th><th>Semaglutide /mo</th><th>Tirzepatide /mo</th></tr></thead><tbody><tr><td><a href="/weight-loss/reviews/wellmedr">welludr</a></td><td>$41 (12-month plan)</td><td>$89</td></tr><tr><td><a href="/weight-loss/reviews/embody">embody</a></td><td>$49 promo</td><td>$99 promo</td></tr><tr><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td>$89 promo (reg $199)</td><td>$149 promo (reg $299)</td></tr><tr><td><a href="/weight-loss/reviews/medvi">Medvi</a></td><td>from $99</td><td>Not listed</td></tr><tr><td><a href="/weight-loss/reviews/healthrx">HealthRx</a></td><td>$125 (monthly plan; $39 first month)</td><td>$199 (monthly plan; $39 first month)</td></tr><tr><td><a href="/weight-loss/reviews/directmeds">DirectMeds</a></td><td>$249 (sublingual); injections $297</td><td>Not published</td></tr><tr><td><a href="/weight-loss/reviews/sprout">Sprout</a></td><td>from $99 (12-month plan)</td><td>from $149 (12-month plan)</td></tr><tr><td><a href="/weight-loss/reviews/trimrx">TrimRx</a></td><td>Plans from $179 (site, read Nov 22, 2026)</td><td>Not published per drug</td></tr></tbody></table>The pattern: tirzepatide consistently costs $40-$100/month more than semaglutide at the same provider - the price of the stronger average results. Full breakdown in our <a href="/weight-loss/cheapest-glp1">cheapest GLP-1 comparison</a>, and the aggregate ranges plus brand-vs-compounded math in our <a href="/weight-loss/glp1-weight-loss-statistics">GLP-1 price &amp; statistics report</a>.',
       },
       {
         heading: "How are tirzepatide and semaglutide dosed?",
@@ -1106,7 +1107,7 @@ export const articles: Article[] = [
     category: "Advice",
     readTime: "7 min read",
     publishedAt: "2026-07-18",
-    updatedAt: "2026-09-15",
+    updatedAt: "2026-11-22",
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Team",
     keyTakeaways: [
@@ -1134,7 +1135,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Which Ro alternative offers the most support?",
-        body: 'Two options. <a href="/weight-loss/reviews/medvi">Medvi</a> bundles video visits with providers, regular monitoring, a dietician and care coaching into one all-inclusive price - <strong>$99/month</strong> for semaglutide (promo, reg. $199) or <strong>$166/month</strong> for tirzepatide (reg. $299). Head-to-head: <a href="/weight-loss/medvi-vs-ro">Medvi vs Ro</a>. <a href="/weight-loss/reviews/shed">SHED</a> goes further on accountability: <strong>$199/month</strong> semaglutide or $299 tirzepatide (20% off month one), with health coaching on every plan and the market\'s firmest promise - lose 5% of your body weight in 120 days or your money back.',
+        body: 'Two options. <a href="/weight-loss/reviews/medvi">Medvi</a> bundles video visits with providers, regular monitoring, a dietician and care coaching into one all-inclusive price - plans <strong>from $99/month</strong> (price index, verified Nov 18, 2026; no per-drug price listed). Head-to-head: <a href="/weight-loss/medvi-vs-ro">Medvi vs Ro</a>. <a href="/weight-loss/reviews/shed">SHED</a> goes further on accountability: <strong>$199/month</strong> semaglutide or $299 tirzepatide (20% off month one), with health coaching on every plan and the market\'s firmest promise - lose 5% of your body weight in 120 days or your money back.',
       },
       {
         heading: "Is Noom a good Ro alternative?",
@@ -1142,11 +1143,11 @@ export const articles: Article[] = [
       },
       {
         heading: "What about TrimRx?",
-        body: '<a href="/weight-loss/reviews/trimrx">TrimRx</a> is the mid-market flexibility pick: <strong>$149/month</strong> for compounded semaglutide (a $140 discount applied, the same price at every dose) and $259 for tirzepatide, with no long-term contract ever - month-to-month is always available, and multi-month plans are optional discounts. It is not a budget option, but if leaving freely matters more than the lowest rate, it earns a look. Head-to-head: <a href="/weight-loss/trimrx-vs-ro">TrimRx vs Ro</a>.',
+        body: '<a href="/weight-loss/reviews/trimrx">TrimRx</a> is the mid-market flexibility pick: <strong>plans from $179/month</strong> (TrimRx site, read Nov 22, 2026; it publishes no per-drug semaglutide or tirzepatide price we could read), with no long-term contract ever - month-to-month is always available, and multi-month plans are optional discounts. It is not a budget option, but if leaving freely matters more than the lowest rate, it earns a look. Head-to-head: <a href="/weight-loss/trimrx-vs-ro">TrimRx vs Ro</a>.',
       },
       {
         heading: "How do you choose the right Ro alternative?",
-        body: 'Match the provider to the one thing you would change about Ro:<table><tr><th>If you want...</th><th>Go to</th><th>Semaglutide</th></tr><tr><td>Both compounded and brand-name, BNPL</td><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td>$89/mo</td></tr><tr><td>The lowest price</td><td><a href="/weight-loss/reviews/wellmedr">welludr</a></td><td>$41/mo (12-month plan)</td></tr><tr><td>No commitment</td><td><a href="/weight-loss/reviews/embody">embody</a></td><td>$49/mo flat</td></tr><tr><td>Video visits and a dietician</td><td><a href="/weight-loss/reviews/medvi">Medvi</a></td><td>$99/mo promo</td></tr><tr><td>Coaching plus a results guarantee</td><td><a href="/weight-loss/reviews/shed">SHED</a></td><td>$199/mo</td></tr><tr><td>Behavior-change program</td><td><a href="/weight-loss/reviews/noom">Noom</a></td><td>Noom Med from $199/mo</td></tr><tr><td>No contract, mid-tier</td><td><a href="/weight-loss/reviews/trimrx">TrimRx</a></td><td>$149/mo</td></tr></table>Not sure? <a href="/weight-loss/find-your-match">Take our matching quiz</a> for a personalized recommendation, or <a href="/">compare all providers</a> side by side. Prices as listed at the time of writing - confirm current pricing on each provider\'s site.',
+        body: 'Match the provider to the one thing you would change about Ro:<table><tr><th>If you want...</th><th>Go to</th><th>Semaglutide</th></tr><tr><td>Both compounded and brand-name, BNPL</td><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td>$89/mo</td></tr><tr><td>The lowest price</td><td><a href="/weight-loss/reviews/wellmedr">welludr</a></td><td>$41/mo (12-month plan)</td></tr><tr><td>No commitment</td><td><a href="/weight-loss/reviews/embody">embody</a></td><td>$49/mo flat</td></tr><tr><td>Video visits and a dietician</td><td><a href="/weight-loss/reviews/medvi">Medvi</a></td><td>from $99/mo</td></tr><tr><td>Coaching plus a results guarantee</td><td><a href="/weight-loss/reviews/shed">SHED</a></td><td>$199/mo</td></tr><tr><td>Behavior-change program</td><td><a href="/weight-loss/reviews/noom">Noom</a></td><td>Noom Med from $199/mo</td></tr><tr><td>No contract, mid-tier</td><td><a href="/weight-loss/reviews/trimrx">TrimRx</a></td><td>Plans from $179/mo</td></tr></table>Not sure? <a href="/weight-loss/find-your-match">Take our matching quiz</a> for a personalized recommendation, or <a href="/">compare all providers</a> side by side. Prices as listed at the time of writing - confirm current pricing on each provider\'s site.',
       },
     ],
   },
@@ -1556,7 +1557,7 @@ export const articles: Article[] = [
     category: "Advice",
     readTime: "7 min read",
     publishedAt: "2026-07-22",
-    updatedAt: "2026-09-15",
+    updatedAt: "2026-11-22",
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Team",
     keyTakeaways: [
@@ -1580,15 +1581,15 @@ export const articles: Article[] = [
       },
       {
         heading: "Which Noom alternative keeps the coaching?",
-        body: 'If coaching is the part of Noom you value and the lessons are the part you do not, two providers keep the human layer without the app homework. <a href="/weight-loss/reviews/medvi">Medvi</a> bundles video visits, regular monitoring, a dietician and care coaching into one all-inclusive price - <strong>$99/month</strong> semaglutide (promo, reg. $199) or $166 tirzepatide (reg. $299), HSA/FSA approved. <a href="/weight-loss/reviews/shed">SHED</a> puts health coaching on every plan at <strong>$199/month</strong> semaglutide or $299 tirzepatide (20% off month one) and backs the program with the firmest promise in the market: lose 5% of your body weight in 120 days or your money back.',
+        body: 'If coaching is the part of Noom you value and the lessons are the part you do not, two providers keep the human layer without the app homework. <a href="/weight-loss/reviews/medvi">Medvi</a> bundles video visits, regular monitoring, a dietician and care coaching into one all-inclusive price - plans <strong>from $99/month</strong> (price index, verified Nov 18, 2026), HSA/FSA approved. <a href="/weight-loss/reviews/shed">SHED</a> puts health coaching on every plan at <strong>$199/month</strong> semaglutide or $299 tirzepatide (20% off month one) and backs the program with the firmest promise in the market: lose 5% of your body weight in 120 days or your money back.',
       },
       {
         heading: "What about TrimRx?",
-        body: '<a href="/weight-loss/reviews/trimrx">TrimRx</a> is the mid-market option with the cleanest exit terms: <strong>$149/month</strong> for compounded semaglutide (a $140 discount applied, the same price at every dose) and $259 for tirzepatide, no long-term contract ever, with optional multi-month discounts. It is not a budget provider, but if you are leaving Noom because you want the freedom to stop at any renewal, TrimRx is built around exactly that.',
+        body: '<a href="/weight-loss/reviews/trimrx">TrimRx</a> is the mid-market option with the cleanest exit terms: <strong>plans from $179/month</strong> (TrimRx site, read Nov 22, 2026; it publishes no per-drug semaglutide or tirzepatide price we could read), no long-term contract ever, with optional multi-month discounts. It is not a budget provider, but if you are leaving Noom because you want the freedom to stop at any renewal, TrimRx is built around exactly that.',
       },
       {
         heading: "How do you choose the right Noom alternative?",
-        body: 'Match the alternative to why you are switching:<table><tr><th>If you want...</th><th>Go to</th><th>Semaglutide</th></tr><tr><td>Medication without coaching</td><td><a href="/weight-loss/reviews/altrx">altRx</a> or <a href="/weight-loss/reviews/ro">Ro</a></td><td>$89/mo · brand-name at Ro</td></tr><tr><td>The lowest price</td><td><a href="/weight-loss/reviews/wellmedr">welludr</a></td><td>$41/mo (12-month plan)</td></tr><tr><td>No commitment</td><td><a href="/weight-loss/reviews/embody">embody</a></td><td>$49/mo flat</td></tr><tr><td>Coaching without the lessons</td><td><a href="/weight-loss/reviews/medvi">Medvi</a></td><td>$99/mo promo</td></tr><tr><td>Coaching plus a results guarantee</td><td><a href="/weight-loss/reviews/shed">SHED</a></td><td>$199/mo</td></tr><tr><td>No contract, mid-tier</td><td><a href="/weight-loss/reviews/trimrx">TrimRx</a></td><td>$149/mo</td></tr></table>Not sure? <a href="/weight-loss/find-your-match">Take our matching quiz</a> for a personalized recommendation, or <a href="/">compare all providers</a> side by side. Prices as listed at the time of writing - confirm current pricing on each provider\'s site.',
+        body: 'Match the alternative to why you are switching:<table><tr><th>If you want...</th><th>Go to</th><th>Semaglutide</th></tr><tr><td>Medication without coaching</td><td><a href="/weight-loss/reviews/altrx">altRx</a> or <a href="/weight-loss/reviews/ro">Ro</a></td><td>$89/mo · brand-name at Ro</td></tr><tr><td>The lowest price</td><td><a href="/weight-loss/reviews/wellmedr">welludr</a></td><td>$41/mo (12-month plan)</td></tr><tr><td>No commitment</td><td><a href="/weight-loss/reviews/embody">embody</a></td><td>$49/mo flat</td></tr><tr><td>Coaching without the lessons</td><td><a href="/weight-loss/reviews/medvi">Medvi</a></td><td>from $99/mo</td></tr><tr><td>Coaching plus a results guarantee</td><td><a href="/weight-loss/reviews/shed">SHED</a></td><td>$199/mo</td></tr><tr><td>No contract, mid-tier</td><td><a href="/weight-loss/reviews/trimrx">TrimRx</a></td><td>Plans from $179/mo</td></tr></table>Not sure? <a href="/weight-loss/find-your-match">Take our matching quiz</a> for a personalized recommendation, or <a href="/">compare all providers</a> side by side. Prices as listed at the time of writing - confirm current pricing on each provider\'s site.',
       },
     ],
   },
@@ -1600,7 +1601,7 @@ export const articles: Article[] = [
     category: "Advice",
     readTime: "8 min read",
     publishedAt: "2026-07-22",
-    updatedAt: "2026-09-15",
+    updatedAt: "2026-11-22",
     heroColor: "#EEF4FB",
     author: "TopWeightLoss Team",
     keyTakeaways: [
@@ -1628,7 +1629,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Top Telehealth Providers for Ozempic Alternatives",
-        body: 'The best way to access affordable Ozempic alternatives is through telehealth providers offering compounded semaglutide or tirzepatide. <a href="/weight-loss/reviews/altrx">ALT RX</a> offers both medications with transparent pricing. <a href="/weight-loss/reviews/trimrx">TrimRX</a> offers some of the lowest pricing. <a href="/weight-loss/reviews/shed">Shed</a> provides personalized treatment plans. All include physician oversight, consultations, and home delivery.',
+        body: 'The best way to access affordable Ozempic alternatives is through telehealth providers offering compounded semaglutide or tirzepatide. <a href="/weight-loss/reviews/altrx">ALT RX</a> offers both medications with transparent pricing. <a href="/weight-loss/reviews/trimrx">TrimRX</a> shows plans from $179 a month (site, read Nov 22, 2026). <a href="/weight-loss/reviews/shed">Shed</a> provides personalized treatment plans. All include physician oversight, consultations, and home delivery.',
       },
       {
         heading: "How much do Ozempic alternatives cost?",
@@ -1648,7 +1649,7 @@ export const articles: Article[] = [
     category: "Advice",
     readTime: "7 min read",
     publishedAt: "2026-07-22",
-    updatedAt: "2026-09-15",
+    updatedAt: "2026-11-22",
     heroColor: "#F0FAF5",
     author: "TopWeightLoss Team",
     keyTakeaways: [
@@ -1676,7 +1677,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Top Affordable Providers",
-        body: 'Several telehealth providers offer compounded semaglutide at a fraction of Wegovy\'s cost. <a href="/weight-loss/reviews/trimrx">TrimRX</a> and <a href="/weight-loss/reviews/directmeds">DirectMeds</a> offer the lowest pricing. <a href="/weight-loss/reviews/altrx">ALT RX</a> provides the broadest medication options. All include physician oversight and home delivery. <a href="/weight-loss/cheapest-glp1">Compare the cheapest options</a> on our platform.',
+        body: 'Several telehealth providers offer compounded semaglutide at a fraction of Wegovy\'s cost. <a href="/weight-loss/reviews/trimrx">TrimRX</a> (plans from $179, site read Nov 22, 2026) and <a href="/weight-loss/reviews/directmeds">DirectMeds</a> (from $249) publish higher starting prices than the budget tier. <a href="/weight-loss/reviews/altrx">ALT RX</a> provides the broadest medication options. All include physician oversight and home delivery. <a href="/weight-loss/cheapest-glp1">Compare the cheapest options</a> on our platform.',
       },
       {
         heading: "How do you choose a Wegovy alternative?",
@@ -1692,13 +1693,13 @@ export const articles: Article[] = [
     category: "Advice",
     readTime: "7 min read",
     publishedAt: "2026-07-22",
-    updatedAt: "2026-09-15",
+    updatedAt: "2026-11-22",
     heroColor: "#FBF5EE",
     author: "TopWeightLoss Team",
     keyTakeaways: [
       "The closest Mounjaro alternative is compounded tirzepatide - the same active ingredient via licensed telehealth from a verified $71/month (welludr), vs $1,000+ for brand pens.",
       "Zepbound is the same drug FDA-approved for weight loss: $1,249/month at altRx, or Zepbound KwikPens from $299 the first month at ro (then $399-449 plus a membership).",
-      "Verified compounded tirzepatide prices: welludr $71, embody $99, altRx $149, Medvi $166 promo, HealthRx $199, Sprout from $149, TrimRx $259, SHED $299.",
+      "Verified compounded tirzepatide prices: welludr $71, embody $99, altRx $149, HealthRx $199, Sprout from $149, SHED $299. TrimRx publishes no per-drug tirzepatide price we could read on Nov 22, 2026.",
       "Compounded semaglutide (from $41/month) is the budget path - about 15% average loss in trials vs up to 22.5% for tirzepatide - and many people step up only if results stall.",
     ],
     sections: [
@@ -1716,7 +1717,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What does each Mounjaro alternative actually cost?",
-        body: 'These are the published tirzepatide prices at every provider in our ranking - checked against each provider\'s own site, not estimated:<table><tr><th>Provider</th><th>Compounded tirzepatide</th><th>Worth knowing</th></tr><tr><td><a href="/weight-loss/reviews/wellmedr">welludr</a></td><td><strong>$71/mo</strong></td><td>Cheapest verified; 12-month plan for best rate</td></tr><tr><td><a href="/weight-loss/reviews/embody">embody</a></td><td>$99/mo</td><td>No commitment, free expedited delivery (no timeline guaranteed)</td></tr><tr><td><a href="/weight-loss/reviews/directmeds">DirectMeds</a></td><td>Not published</td><td>Lists injections at $297/mo without naming the medication (read Nov 18, 2026)</td></tr><tr><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td>$149/mo</td><td>Also stocks brand Zepbound ($1,249)</td></tr><tr><td><a href="/weight-loss/reviews/medvi">Medvi</a></td><td>$166/mo promo (reg. $299)</td><td>All-inclusive with video visits + dietician</td></tr><tr><td><a href="/weight-loss/reviews/healthrx">HealthRx</a></td><td>$199/mo ($39 first month)</td><td>Overnight cold-chain shipping</td></tr><tr><td><a href="/weight-loss/reviews/sprout">Sprout</a></td><td>From $149/mo (12-month plan; $199 monthly)</td><td>Also stocks brand Wegovy</td></tr><tr><td><a href="/weight-loss/reviews/trimrx">TrimRx</a></td><td>$259/mo</td><td>No contract</td></tr><tr><td><a href="/weight-loss/reviews/shed">SHED</a></td><td>$299/mo</td><td>Money-back results guarantee</td></tr></table>Prices as published in August 2026; confirm current pricing on each provider\'s site. For the full market picture, see our <a href="/">ranking of the best GLP-1 weight loss providers</a>.',
+        body: 'These are the published tirzepatide prices at every provider in our ranking - checked against each provider\'s own site, not estimated:<table><tr><th>Provider</th><th>Compounded tirzepatide</th><th>Worth knowing</th></tr><tr><td><a href="/weight-loss/reviews/wellmedr">welludr</a></td><td><strong>$71/mo</strong></td><td>Cheapest verified; 12-month plan for best rate</td></tr><tr><td><a href="/weight-loss/reviews/embody">embody</a></td><td>$99/mo</td><td>No commitment, free expedited delivery (no timeline guaranteed)</td></tr><tr><td><a href="/weight-loss/reviews/directmeds">DirectMeds</a></td><td>Not published</td><td>Lists injections at $297/mo without naming the medication (read Nov 18, 2026)</td></tr><tr><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td>$149/mo</td><td>Also stocks brand Zepbound ($1,249)</td></tr><tr><td><a href="/weight-loss/reviews/medvi">Medvi</a></td><td>Not listed</td><td>All-inclusive with video visits + dietician</td></tr><tr><td><a href="/weight-loss/reviews/healthrx">HealthRx</a></td><td>$199/mo ($39 first month)</td><td>Overnight cold-chain shipping</td></tr><tr><td><a href="/weight-loss/reviews/sprout">Sprout</a></td><td>From $149/mo (12-month plan; $199 monthly)</td><td>Also stocks brand Wegovy</td></tr><tr><td><a href="/weight-loss/reviews/trimrx">TrimRx</a></td><td>Not published per drug</td><td>No contract; plans from $179 (site, read Nov 22, 2026)</td></tr><tr><td><a href="/weight-loss/reviews/shed">SHED</a></td><td>$299/mo</td><td>Money-back results guarantee</td></tr></table>Prices as published in August 2026; confirm current pricing on each provider\'s site. For the full market picture, see our <a href="/">ranking of the best GLP-1 weight loss providers</a>.',
       },
       {
         heading: "Is there a cheaper alternative to Mounjaro?",
@@ -2044,26 +2045,26 @@ export const articles: Article[] = [
     slug: "is-wellmedr-legit",
     title: "Is welludr (formerly wellmedr) Legit? Reviews, Prices (2026)",
     description:
-      "Is welludr (formerly wellmedr) legit? The clinician, pharmacy and warranty checks we ran, the real $41-$71 GLP-1 pricing, and our verdict.",
+      "Is welludr (formerly wellmedr) legit? The clinician, pharmacy and cancellation checks we ran, the real $41-$71 GLP-1 pricing, and our verdict.",
     category: "Advice",
     readTime: "11 min read",
     publishedAt: "2026-08-30",
-    updatedAt: "2026-11-10",
+    updatedAt: "2026-11-22",
     heroColor: "#EEF4EF",
     author: "TopWeightLoss Team",
     keyTakeaways: [
-      "Real pricing: $41/month compounded semaglutide and $71/month tirzepatide, same price at every dose - but those rates lock on a 12-month plan, billed monthly.",
+      "Real pricing: $41/month compounded semaglutide and $71/month tirzepatide, same price at every dose - but those rates are tied to a 12-month plan, and wellmedr's refund policy says its 12-month plans are prepaid in full, so check the amount charged at checkout.",
       "Results vary by person (one Reddit account reports 1 pound in 8 weeks), and the 12-month term is the condition to understand before buying.",
-      "Every checkable legitimacy marker is in place: licensed-provider review, prescription required, a named US pharmacy, and a weight-loss warranty (terms on its site).",
+      "Checkable legitimacy markers in place: licensed-provider review, prescription required and a named US pharmacy. We could not find a weight-loss guarantee in wellmedr's terms, refund policy or FAQ (read Nov 22, 2026).",
     ],
     sections: [
       {
         heading: "What is welludr?",
-        body: '<div class="qa"><strong>The short answer</strong>Yes. welludr requires a licensed-provider review and a prescription, names a US pharmacy and offers a weight-loss warranty on its site. Real pricing is $41 a month for compounded semaglutide and $71 for tirzepatide, the same at every dose, but those rates lock on a 12-month plan billed monthly.</div>welludr is a telehealth weight-loss provider selling compounded GLP-1 treatment - semaglutide and tirzepatide - with a licensed-clinician review before any prescription and a Medical Weight-Care Coach included on every plan. Its pitch is the price: <strong>$41/month for semaglutide and $71/month for tirzepatide, the same price at every dose</strong>, which is the lowest published rate ladder in our <a href="/weight-loss/cheapest-glp1">verified price index</a>. welludr itself reports over 1 million patients treated and board-certified weight-loss specialists on staff - those are the company\'s own figures, so treat them as marketing claims.',
+        body: '<div class="qa"><strong>The short answer</strong>Yes. welludr requires a licensed-provider review and a prescription, names a US pharmacy and publishes cancellation and refund terms. Real pricing is $41 a month for compounded semaglutide and $71 for tirzepatide, the same at every dose, but those rates are tied to a 12-month plan, which its refund policy describes as prepaid in full.</div>welludr is a telehealth weight-loss provider selling compounded GLP-1 treatment - semaglutide and tirzepatide - with a licensed-clinician review before any prescription and a Medical Weight-Care Coach included on every plan. Its pitch is the price: <strong>$41/month for semaglutide and $71/month for tirzepatide, the same price at every dose</strong>, which is the lowest published rate ladder in our <a href="/weight-loss/cheapest-glp1">verified price index</a>. welludr itself reports over 1 million patients treated and board-certified weight-loss specialists on staff - those are the company\'s own figures, so treat them as marketing claims.',
       },
       {
         heading: "Is welludr legit?",
-        body: 'By every marker we can actually check - yes. A licensed provider reviews your medical intake before prescribing, and approval is not automatic; medication is dispensed through a <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">regulated US pharmacy</a> (Reddit commenters independently name its Florida pharmacy); and it backs treatment with a weight-loss warranty, terms published on its site. "Legit" does not mean the medication works identically for everyone - more on that in the complaints section, because that is where the honest caveat lives.',
+        body: 'By every marker we can actually check - yes. A licensed provider reviews your medical intake before prescribing, and approval is not automatic; medication is dispensed through a <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">regulated US pharmacy</a> (Reddit commenters independently name its Florida pharmacy); and it publishes cancellation and refund terms (summarized below). "Legit" does not mean the medication works identically for everyone - more on that in the complaints section, because that is where the honest caveat lives.',
       },
       {
         heading: "Is welludr the same company as embody, altRx or Medvi?",
@@ -2071,7 +2072,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Is welludr a scam?",
-        body: 'No. The markers that separate a real provider from a scam are all present and checkable: a licensed provider who can decline treatment, a regulated US pharmacy, published prices with the plan condition stated, a weight-loss warranty with its terms on the site. The same company shows up in searches under several spellings: <strong>wellmedr</strong> (its former name), <strong>wellmed</strong>, <strong>wellmedoc</strong> and <strong>welludr.com</strong> all refer to this one provider, which rebranded from wellmedr to welludr in 2026 with the same plans and pharmacy. If you are checking before you pay, the two things to confirm on its site are the 12-month plan condition behind the $41 rate and the warranty terms.',
+        body: 'No. The markers that separate a real provider from a scam are all present and checkable: a licensed provider who can decline treatment, a regulated US pharmacy, published prices with the plan condition stated, and written cancellation and refund terms. The same company shows up in searches under several spellings: <strong>wellmedr</strong> (its former name), <strong>wellmed</strong>, <strong>wellmedoc</strong> and <strong>welludr.com</strong> all refer to this one provider, which rebranded from wellmedr to welludr in 2026 with the same plans and pharmacy. If you are checking before you pay, the two things to confirm on its site are the 12-month plan condition behind the $41 rate and the cancellation and refund terms.',
       },
       {
         heading: "What do welludr customers say on Reddit?",
@@ -2079,7 +2080,7 @@ export const articles: Article[] = [
       },
       {
         heading: "What complaints come up about welludr?",
-        body: 'Searches for "welludr complaints" deserve a straight answer, so here is everything critical in the material we verified. <strong>On billing cadence:</strong> welludr\'s published cadence is one shipment every 4 weeks; confirm the billing schedule in the plan terms at checkout before you buy. <strong>On results:</strong> one detailed Reddit account describes fast shipping and responsive support - and being down only 1 pound after 8 weeks on tirzepatide, after prepaying $1,143 for six months. Response to GLP-1 treatment varies by person, and no provider\'s service quality can guarantee your results. The other condition to understand before buying is the <strong>commitment structure</strong>: the headline $41/$71 rates lock on a 12-month plan (billed monthly, not prepaid) - month-to-month flexibility is what competitors like embody charge $10-$20 more for.',
+        body: 'Searches for "welludr complaints" deserve a straight answer, so here is everything critical in the material we verified. <strong>On billing cadence:</strong> welludr\'s published cadence is one shipment every 4 weeks; confirm the billing schedule in the plan terms at checkout before you buy. <strong>On results:</strong> one detailed Reddit account describes fast shipping and responsive support - and being down only 1 pound after 8 weeks on tirzepatide, after prepaying $1,143 for six months. Response to GLP-1 treatment varies by person, and no provider\'s service quality can guarantee your results. The other condition to understand before buying is the <strong>commitment structure</strong>: the headline $41/$71 rates are tied to a 12-month plan (wellmedr\'s refund policy describes its 12-month plans as prepaid in full; see the billing section below) - month-to-month flexibility is what competitors like embody charge $10-$20 more for.',
       },
       {
         heading: "Where does the $41 price really come from?",
@@ -2091,7 +2092,15 @@ export const articles: Article[] = [
       },
       {
         heading: "How much does welludr cost?",
-        body: 'Published rates, verified at our last content pass: <strong>compounded semaglutide $41/month and tirzepatide $71/month on a 12-month plan, billed monthly, the same price at every dose</strong> - no dose-based price creep. Shipping is free every 4 weeks in discreet packaging, and a weight-loss warranty applies (terms on site). For context against the market: embody charges $49/month semaglutide flat with no commitment, altRx $89 with pause-anytime terms, and Medvi $99 all-inclusive with video visits and coaching - the full ladder is in our <a href="/weight-loss/cheapest-glp1">cheapest GLP-1 index</a>, and the direct matchup is <a href="/weight-loss/embody-vs-wellmedr">embody vs welludr</a>.',
+        body: 'Published rates, verified at our last content pass: <strong>compounded semaglutide $41/month and tirzepatide $71/month on a 12-month plan, the same price at every dose</strong> - no dose-based price creep. Shipping is free every 4 weeks in discreet packaging. How each plan is charged is in the billing section below. For context against the market: embody charges $49/month semaglutide flat with no commitment, altRx $89 with pause-anytime terms, and Medvi $99 all-inclusive with video visits and coaching - the full ladder is in our <a href="/weight-loss/cheapest-glp1">cheapest GLP-1 index</a>, and the direct matchup is <a href="/weight-loss/embody-vs-wellmedr">embody vs welludr</a>.',
+      },
+      {
+        heading: "How do I cancel welludr (formerly wellmedr)?",
+        body: `<p>You can cancel in your account, by email or by phone at 1-888-397-6905 (both on its terms page), but wellmedr\'s two documents give different deadlines, so send the request early and keep the confirmation.</p><table><thead><tr><th>Document</th><th>Date shown</th><th>Cutoff</th></tr></thead><tbody><tr><td><a href="https://wellmedr.com/pages/terms-conditions" target="_blank" rel="noopener noreferrer">Terms and Conditions</a></td><td>Last updated Oct 16, 2026</td><td>"at least two (2) days before your scheduled renewal date"; cancellation "takes effect at the end of your current billing period"</td></tr><tr><td><a href="https://wellmedr.com/pages/refund-and-cancellation-policy" target="_blank" rel="noopener noreferrer">Refund, Cancellation and Subscription Policy</a></td><td>No date shown</td><td>None stated: "You may cancel automatic renewal at any time," effective "at the timestamp our system receives" the request</td></tr></tbody></table><p>Source: both pages read Nov 22, 2026. Neither says it overrides the other, so we do not pick one; a request sent more than 2 days before the renewal date meets both. Cancelling billing is not the same as stopping treatment: the refund policy says "Do not discontinue prescribed treatment solely because you canceled billing without first obtaining appropriate medical guidance." The full rules, with the other six providers\' cutoffs, are in our <a href="/weight-loss/articles/how-to-cancel-telehealth-glp1-subscription">guide to cancelling a GLP-1 telehealth subscription</a>; the price side is in <a href="/weight-loss/articles/wellmedr-cost">wellmedr cost</a>.</p>`,
+      },
+      {
+        heading: "How does welludr (formerly wellmedr) billing work?",
+        body: `<p>It depends on the plan, and wellmedr\'s refund policy (no date shown, read Nov 22, 2026) describes three. The <strong>21-Day Plan</strong> "renews every 21 calendar days. It is not a calendar-month plan," with up to 18 charges in the first 365 days. The <strong>3-, 6- and 12-Month Plans</strong> "are prepaid in full"; if automatic renewal is on, the full plan price is charged again, generally 10 days before the term ends (3 and 6 months) or 15 days before (12 months), and renewal applies only if you "separately and affirmatively enroll in automatic renewal at checkout." The <strong>"Monthly Plan"</strong> on the plan page ("Shipped every 4 weeks," "Cancel or change anytime") has no charge interval stated in any document we read, so ask for the billing date in writing.</p><p>On "per month" prices, the policy is direct: "If a prepaid plan is advertised using a \'per month\' amount, that figure is only the total prepaid price divided by the number of months. It does not mean the plan is billed monthly." We earlier described the 12-month rate here as billed monthly; wellmedr\'s policy does not say that, and we corrected it on Nov 22, 2026.</p><p>On refunds, the policy says "Lack of a desired result by itself does not qualify an accepted pharmacy order for a refund." We also earlier quoted a 90-day money-back guarantee and could not find one in wellmedr\'s terms, refund policy, FAQ or plan page on Nov 22, 2026. Check wellmedr\'s current terms before relying on one. Compounded semaglutide and tirzepatide are not FDA-approved.</p>`,
       },
       {
         heading: "What should you know about safety before you order?",
@@ -2103,7 +2112,7 @@ export const articles: Article[] = [
       },
       {
         heading: "The verdict",
-        body: 'welludr is legit by every marker we can verify: a real prescription process, a named pharmacy, published prices that match what Reddit commenters report paying, and a warranty behind it. The honest caveats are the two above - results vary by person no matter how good the service is, and the headline price requires a 12-month commitment. Read the <a href="/weight-loss/reviews/wellmedr">full welludr review</a> for the complete record, or compare it against the no-commitment alternative in <a href="/weight-loss/embody-vs-wellmedr">embody vs welludr</a>.  Comparing the budget trio? The same checks are in <a href="/weight-loss/articles/is-embody-legit">is embody legit</a> and <a href="/weight-loss/articles/is-altrx-legit">is altRx legit</a>. This article is general information, not medical advice.',
+        body: 'welludr is legit by every marker we can verify: a real prescription process, a named pharmacy, published prices that match what Reddit commenters report paying, and written cancellation and refund terms. The honest caveats are the two above - results vary by person no matter how good the service is, and the headline price requires a 12-month commitment. Read the <a href="/weight-loss/reviews/wellmedr">full welludr review</a> for the complete record, or compare it against the no-commitment alternative in <a href="/weight-loss/embody-vs-wellmedr">embody vs welludr</a>.  Comparing the budget trio? The same checks are in <a href="/weight-loss/articles/is-embody-legit">is embody legit</a> and <a href="/weight-loss/articles/is-altrx-legit">is altRx legit</a>. This article is general information, not medical advice.',
       },
     ],
   },
@@ -2111,17 +2120,17 @@ export const articles: Article[] = [
     slug: "best-tirzepatide-online",
     image: "/article-images/best-tirzepatide-online.webp",
     imageAlt: "A tirzepatide injection pen on a desk with a tape measure, in front of a laptop showing a clinician on a video call",
-    title: "Cheapest Tirzepatide Online 2026: 4 Verified Prices From $71",
+    title: "Cheapest Tirzepatide Online 2026: 9 Verified Prices From $69",
     description:
-      "We read each price on the provider's own site: tirzepatide $71 at welludr, $99 at embody, $129 at Eden, from $149 at altRx. The plan terms behind each number.",
+      "Nine compounded tirzepatide prices read on provider sites, $69 to $299 a month with a median of $149. Each with its basis and read date. Not FDA-approved.",
     category: "Guide",
     readTime: "9 min read",
     publishedAt: "2026-08-30",
-    updatedAt: "2026-11-09",
+    updatedAt: "2026-11-22",
     heroColor: "#EDF2F8",
     author: "TopWeightLoss Team",
     keyTakeaways: [
-      "Verified compounded tirzepatide prices run $71-$149/month across the four licensed providers we track - welludr $71 (12-month plan) is the floor, embody $99 the cheapest with no commitment.",
+      "Nine providers list a compounded tirzepatide price in our index (verified Nov 18, 2026): $69 to $299 a month, median $149. The two $69 listings are welludr (a sale price) and Collective (plus a $199 yearly membership); embody lists $99, flat month to month.",
       "Brand-name Zepbound online: $1,249/month cash at altRx.",
       "Every legitimate source requires a prescription after a licensed-provider review. A site that sells tirzepatide without one is the red flag, not the bargain.",
       "In trials, tirzepatide produced up to 22.5% average body-weight loss versus roughly 15% for semaglutide - it is the stronger molecule, which is why it costs more.",
@@ -2129,19 +2138,19 @@ export const articles: Article[] = [
     sections: [
       {
         heading: "What is tirzepatide, and why do people want it specifically?",
-        body: '<div class="qa"><strong>The short answer</strong>Verified compounded tirzepatide prices run $71 to $149 a month across the four licensed providers we track: welludr at $71 on a 12-month plan is the floor and embody at $99 the cheapest with no commitment. Brand-name Zepbound online is $1,249 a month cash at altRx. Every legitimate source requires a prescription after a licensed-provider review; a site that sells tirzepatide without one is the red flag, not the bargain.</div>Tirzepatide is the dual-action molecule behind Zepbound and Mounjaro - it activates both GLP-1 and GIP receptors, where semaglutide (Wegovy/Ozempic) works on GLP-1 alone. The trial numbers explain the demand: <strong><a href="https://pubmed.ncbi.nlm.nih.gov/35658024/" target="_blank" rel="noopener">up to 22.5% average body-weight loss for tirzepatide</a> versus <a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">roughly 15% for semaglutide</a></strong>. It is the stronger option on the data, and it prices accordingly - which makes knowing the real market rates the whole game. Below is every price we have verified, cheapest first. (Deciding between the two molecules? Start with <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide</a>.)',
+        body: '<div class="qa"><strong>The short answer</strong>Nine providers list compounded tirzepatide in our price index (verified Nov 18, 2026), from $69 to $299 a month with a median of $149; the rows and read dates are further down. Compounded tirzepatide is not FDA-approved. Brand-name Zepbound online is $1,249 a month cash at altRx. Every legitimate source requires a prescription after a licensed-provider review; a site that sells tirzepatide without one is the red flag, not the bargain.</div>Tirzepatide is the dual-action molecule behind Zepbound and Mounjaro - it activates both GLP-1 and GIP receptors, where semaglutide (Wegovy/Ozempic) works on GLP-1 alone. The trial numbers explain the demand: <strong><a href="https://pubmed.ncbi.nlm.nih.gov/35658024/" target="_blank" rel="noopener">up to 22.5% average body-weight loss for tirzepatide</a> versus <a href="https://pubmed.ncbi.nlm.nih.gov/33567185/" target="_blank" rel="noopener">roughly 15% for semaglutide</a></strong>. It is the stronger option on the data, and it prices accordingly - which makes knowing the real market rates the whole game. Below is every price we have verified, cheapest first. (Deciding between the two molecules? Start with <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide</a>.)',
       },
       {
         heading: "What's the cheapest tirzepatide online?",
         // The price table itself is code-rendered right under this section
         // (TirzepatidePriceTable): live CTAs and review links per row, with
         // prices from the price index.
-        body: 'These are the four licensed telehealth providers in our ranking with published compounded tirzepatide rates, cheapest first. Every row links to our full review of that provider, and the price shown is the provider\'s own published rate with its condition spelled out - a 12-month lock, a promo, or a flat month-to-month figure.',
+        body: 'This table shows four of the nine providers that publish compounded tirzepatide rates, cheapest first; the full nine-provider list with read dates is further down. Every row links to our full review of that provider, and the price shown is the provider\'s own published rate with its condition spelled out - a 12-month lock, a promo, or a flat month-to-month figure.',
       },
       {
         heading: 'Who has the best price for tirzepatide online right now?',
         body:
-          'As of our October 16, 2026 verification pass, the lowest published compounded tirzepatide price is <strong>$71 a month at <a href="/weight-loss/reviews/wellmedr">welludr</a></strong>, which requires a 12-month plan; the lowest with no commitment is <strong>$99 a month at <a href="/weight-loss/reviews/embody">embody</a></strong>. Eden is the other flat-price option: <a href="/weight-loss/reviews/eden">Eden</a> at <strong>$129 a month</strong>, the same at every dose, with no membership and 24/7 human support. One caution on "best price": the price that matters is the one at your maintenance dose in month four, not month one, which is why the table marks every promotion and plan condition. Our <a href="/weight-loss/articles/glp1-true-cost-month-1-vs-year-one">true-cost guide</a> runs the year-one math for each.',
+          'In our price index (verified Nov 18, 2026), the lowest listed compounded tirzepatide price is <strong>$69 a month</strong>, shown by two providers. <a href="/weight-loss/reviews/wellmedr">welludr</a> lists $69 as a Black Friday sale price on a plan its page labels "Monthly Plan" (read Nov 20, 2026; no end date stated); our earlier listing was $71 on a 12-month plan, which the page no longer shows. Collective lists $69 plus a $199 yearly membership after a 21-day free trial (read Nov 11, 2026). Next is <a href="/weight-loss/reviews/embody">embody</a> at <strong>$99 a month</strong>, a sale price flat month to month (read Nov 16, 2026), then <a href="/weight-loss/reviews/eden">Eden</a> at <strong>$129 a month</strong>, flat every month at every dose (read Nov 3, 2026). Compounded tirzepatide is not FDA-approved. One caution on "best price": the price that matters is the one at your maintenance dose in month four, not month one, which is why the table marks every promotion and plan condition. Our <a href="/weight-loss/articles/glp1-true-cost-month-1-vs-year-one">true-cost guide</a> runs the year-one math for each.',
       },
       {
         heading: 'What is the best online pharmacy for tirzepatide?',
@@ -2154,7 +2163,7 @@ export const articles: Article[] = [
       },
       {
         heading: "Is compounded tirzepatide legit?",
-        body: 'Compounded tirzepatide from the providers above is prescribed by licensed clinicians after a medical review and prepared by <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">US state-licensed compounding pharmacies</a> - that is a legal, regulated channel, and it is how the $71-$149 prices exist at all. The honest trade-off: <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">compounded preparations are not FDA-approved products</a> the way brand Zepbound is - the FDA does not review each pharmacy\'s output - so the pharmacy\'s standards are what you are trusting. That is exactly why we only list providers with licensed-provider review and named, regulated pharmacies. What is <em>not</em> legit: "research chemical" and no-prescription peptide vendors. No clinician, no pharmacy license, no recourse - the discount is not worth what you are giving up.',
+        body: 'Compounded tirzepatide from the providers above is prescribed by licensed clinicians after a medical review and prepared by <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener">US state-licensed compounding pharmacies</a> - that is a legal, regulated channel, and it is how prices from $69 to $299 a month exist at all. The honest trade-off: <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener">compounded preparations are not FDA-approved products</a> the way brand Zepbound is - the FDA does not review each pharmacy\'s output - so the pharmacy\'s standards are what you are trusting. That is exactly why we only list providers with licensed-provider review and named, regulated pharmacies. What is <em>not</em> legit: "research chemical" and no-prescription peptide vendors. No clinician, no pharmacy license, no recourse - the discount is not worth what you are giving up.',
       },
       {
         heading: "Do I need a prescription for tirzepatide?",
@@ -2162,11 +2171,15 @@ export const articles: Article[] = [
       },
       {
         heading: "How do you choose a tirzepatide provider?",
-        body: 'Work down your actual constraint. <strong>Cheapest possible and willing to commit a year:</strong> <a href="/weight-loss/reviews/wellmedr">welludr</a> at $71. <strong>Cheapest without commitment:</strong> <a href="/weight-loss/reviews/embody">embody</a> at $99, with free expedited delivery. <strong>Might want brand-name later:</strong> <a href="/weight-loss/reviews/altrx">altRx</a> - $149 compounded with Zepbound on the same shelf. <strong>Want flat pricing with human support:</strong> <a href="/weight-loss/reviews/eden">Eden</a> at $129, the same at every dose. There is no wrong answer on legitimacy in this table - it is a fit decision, not a safety decision.',
+        body: 'Work down your actual constraint. <strong>Lowest listed price:</strong> <a href="/weight-loss/reviews/wellmedr">welludr</a> at $69 (Black Friday sale, read Nov 20, 2026). <strong>Flat month to month:</strong> <a href="/weight-loss/reviews/embody">embody</a> at $99 (sale price, read Nov 16, 2026), with free expedited delivery. <strong>Might want brand-name later:</strong> <a href="/weight-loss/reviews/altrx">altRx</a> - $149 compounded with Zepbound on the same shelf. <strong>Want flat pricing with human support:</strong> <a href="/weight-loss/reviews/eden">Eden</a> at $129, the same at every dose. There is no wrong answer on legitimacy in this table - it is a fit decision, not a safety decision.',
+      },
+      {
+        heading: "Am I overpaying for compounded tirzepatide?",
+        body: `<p>If you pay more than $149 a month, you are above the middle of the compounded listings we track. Our price index (verified Nov 18, 2026) lists nine providers with a compounded tirzepatide price, from $69 to $299 a month, with a median of $149 (the fifth of nine). Compounded tirzepatide is not FDA-approved, and these figures say nothing about whether any product matches Zepbound.</p><table><thead><tr><th>Provider</th><th>Listed price per month</th><th>Basis in the index</th><th>Read</th></tr></thead><tbody><tr><td>wellmedr</td><td>$69</td><td>Black Friday sale, labelled "Monthly Plan," same price at every dose, no end date stated</td><td>Nov 20, 2026</td></tr><tr><td>Collective</td><td>$69</td><td>Same price at every dose, plus $199 a year membership after a 21-day free trial</td><td>Nov 11, 2026</td></tr><tr><td>embody</td><td>$99</td><td>Sale price, flat month to month</td><td>Nov 16, 2026</td></tr><tr><td>Eden</td><td>$129</td><td>Flat every month, same price at every dose</td><td>Nov 3, 2026</td></tr><tr><td>altRx</td><td>from $149</td><td>Starting price; a FRIDAY15 banner is shown, terms not stated</td><td>Nov 20, 2026</td></tr><tr><td>Sprout</td><td>from $149</td><td>12-month plan, $1,788 billed upfront; $199 monthly with no commitment</td><td>Nov 3, 2026</td></tr><tr><td>bmiMD</td><td>$159</td><td>3-month plan ($477), limited-time price</td><td>Nov 3, 2026</td></tr><tr><td>HealthRx</td><td>$199</td><td>Monthly plan: $39 first month, then $199 a month until canceled</td><td>Nov 18, 2026</td></tr><tr><td>Shed</td><td>from $299</td><td>Starting price</td><td>Nov 3, 2026</td></tr></tbody></table><p>Source: our <a href="/weight-loss/glp1-price-changes">verified price index</a>, each row read on the provider\'s own page on the date shown. Arithmetic: the spread is $299 minus $69, or $230 a month, and the high is 4.3 times the low. Twelve months is $828 at the low, $1,788 at the median and $3,588 at the high. Collective\'s $199 membership adds about $16.58 a month ($199 divided by 12), or about $85.58 in all.</p><p>These are listed headline prices, not what an average patient pays. The bases are mixed: sale prices (wellmedr, embody), "from" prices (altRx, Sprout, Shed), prepaid plans (Sprout, bmiMD) and a membership plus drug price (Collective). The index records the same price at every dose for wellmedr, Collective, Eden, Sprout and bmiMD; it does not say either way for the others. The comparison table earlier on this page covers fewer providers than the index. For the full-year view, see <a href="/weight-loss/articles/glp1-true-cost-month-1-vs-year-one">GLP-1 true cost: month one versus year one</a>.</p>`,
       },
       {
         heading: "The verdict",
-        body: 'The best tirzepatide online in 2026 is not one provider - it is the short list above, filtered by your commitment appetite and budget. The verified floor is <strong>$71/month (<a href="/weight-loss/reviews/wellmedr">welludr</a>, 12-month plan)</strong>, the no-strings floor is <strong>$99 (<a href="/weight-loss/reviews/embody">embody</a>)</strong>, and brand-name Zepbound runs <strong>$1,249 cash (<a href="/weight-loss/reviews/altrx">altRx</a>)</strong> or potentially much less through <strong><a href="/weight-loss/reviews/ro">ro</a> with insurance</strong>. Whatever you pick, stay inside the licensed system: real prescription, real pharmacy, published price. This article is general information, not medical advice - a licensed provider decides whether tirzepatide is appropriate for you.',
+        body: 'The best tirzepatide online in 2026 is not one provider - it is the short list above, filtered by your commitment appetite and budget. The lowest listed price is <strong>$69/month</strong> (<a href="/weight-loss/reviews/wellmedr">welludr</a>\'s sale price, and Collective, which adds a $199 yearly membership), <a href="/weight-loss/reviews/embody">embody</a> lists <strong>$99</strong> flat month to month, and brand-name Zepbound runs <strong>$1,249 cash (<a href="/weight-loss/reviews/altrx">altRx</a>)</strong> or potentially much less through <strong><a href="/weight-loss/reviews/ro">ro</a> with insurance</strong>. Whatever you pick, stay inside the licensed system: real prescription, real pharmacy, published price. This article is general information, not medical advice - a licensed provider decides whether tirzepatide is appropriate for you.',
       },
     ],
   },
@@ -2178,19 +2191,19 @@ export const articles: Article[] = [
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-10-05",
-    updatedAt: "2026-10-05",
+    updatedAt: "2026-11-22",
     heroColor: "#EDF2F8",
     author: "TopWeightLoss Team",
     keyTakeaways: [
       "Brand-name Zepbound online, cash: $1,249/month at altRx (flat, Buy Now, Pay Later available) and $1,599/month at welludr - both the providers' own published prices, verified by us.",
       "Ro sells Zepbound KwikPens from $299 for the first month, then $399-449/month, plus its Body membership ($39 the first month, then $74-$149/month). Because Ro bills the medication separately, insurance can apply where your plan covers Zepbound.",
-      "Compounded tirzepatide - the same active ingredient, prepared by a 503A pharmacy - runs a verified $71-$299/month across eight licensed providers. It is not an FDA-approved product, which is the trade-off behind the price.",
+      "Compounded tirzepatide - the same active ingredient, prepared by a 503A pharmacy - runs a verified $71-$299/month across seven licensed providers. It is not an FDA-approved product, which is the trade-off behind the price.",
       "Every route requires a prescription from a licensed provider. Zepbound is FDA-approved for chronic weight management; in the SURMOUNT-1 trial, tirzepatide produced up to 22.5% average body-weight loss.",
     ],
     sections: [
       {
         heading: "What does Zepbound cost online? Verified prices",
-        body: '<div class="qa"><strong>The short answer</strong>Brand-name Zepbound online, paid in cash, is $1,249 a month at altRx and $1,599 at welludr, both the providers\' own published prices verified by us. Ro sells Zepbound KwikPens from $299 for the first month, then $399 to $449, plus its Body membership, and because it bills the medication separately insurance can apply where your plan covers Zepbound. Compounded tirzepatide, the same active ingredient from a 503A pharmacy, runs a verified $71 to $299 a month and is not an FDA-approved product.</div>Three providers we track sell brand-name Zepbound online, and eight sell compounded tirzepatide. These are their own published prices at our last verification - brand-name rows from the <a href="/weight-loss/glp1-weight-loss-statistics">price index</a> (verified October 16, 2026), Ro\'s from its published pricing in August 2026:<table><thead><tr><th>Route</th><th>Provider</th><th>Monthly price</th><th>What it includes / the condition</th></tr></thead><tbody><tr><td>Brand Zepbound, cash</td><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td><strong>$1,249</strong></td><td>Flat price, no membership; licensed-provider review; Buy Now, Pay Later available</td></tr><tr><td>Brand Zepbound, cash</td><td><a href="/weight-loss/reviews/wellmedr">welludr</a></td><td><strong>$1,599</strong></td><td>Brand-name shelf alongside its $41/$71 compounded plans; also lists Ozempic at $1,399</td></tr><tr><td>Brand Zepbound, pen</td><td><a href="/weight-loss/reviews/ro">Ro</a></td><td><strong>from $299</strong> first month, then $399-449</td><td>Zepbound KwikPen billed separately from the Ro Body membership ($39 first month, then $74-$149/month); insurance can apply to the medication where covered</td></tr><tr><td>Compounded tirzepatide</td><td>welludr</td><td><strong>$71</strong></td><td>12-month plan, billed monthly; same price at every dose</td></tr><tr><td>Compounded tirzepatide</td><td><a href="/weight-loss/reviews/embody">embody</a></td><td><strong>$99</strong></td><td>Flat, month to month; free expedited delivery; partial refund if not approved</td></tr><tr><td>Compounded tirzepatide</td><td>altRx · Medvi</td><td><strong>$149 · $166</strong></td><td>Flat at every dose, reg. $299 (altRx); promo, reg. $299, all-inclusive (Medvi)</td></tr><tr><td>Compounded tirzepatide</td><td>Sprout · TrimRx · SHED</td><td><strong>from $149 · $259 · $299</strong></td><td>12-month plan, $199 monthly (Sprout); no long-term contract (TrimRx); 20% off month one (SHED)</td></tr></tbody></table>Prices change - promotions end and plan terms move - so confirm at checkout. The compounded ladder in full, with conditions, is in our <a href="/weight-loss/articles/best-tirzepatide-online">best tirzepatide online</a> guide.',
+        body: '<div class="qa"><strong>The short answer</strong>Brand-name Zepbound online, paid in cash, is $1,249 a month at altRx and $1,599 at welludr, both the providers\' own published prices verified by us. Ro sells Zepbound KwikPens from $299 for the first month, then $399 to $449, plus its Body membership, and because it bills the medication separately insurance can apply where your plan covers Zepbound. Compounded tirzepatide, the same active ingredient from a 503A pharmacy, runs a verified $71 to $299 a month and is not an FDA-approved product.</div>Three providers we track sell brand-name Zepbound online, and eight sell compounded tirzepatide. These are their own published prices at our last verification - brand-name rows from the <a href="/weight-loss/glp1-weight-loss-statistics">price index</a> (verified October 16, 2026), Ro\'s from its published pricing in August 2026:<table><thead><tr><th>Route</th><th>Provider</th><th>Monthly price</th><th>What it includes / the condition</th></tr></thead><tbody><tr><td>Brand Zepbound, cash</td><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td><strong>$1,249</strong></td><td>Flat price, no membership; licensed-provider review; Buy Now, Pay Later available</td></tr><tr><td>Brand Zepbound, cash</td><td><a href="/weight-loss/reviews/wellmedr">welludr</a></td><td><strong>$1,599</strong></td><td>Brand-name shelf alongside its $41/$71 compounded plans; also lists Ozempic at $1,399</td></tr><tr><td>Brand Zepbound, pen</td><td><a href="/weight-loss/reviews/ro">Ro</a></td><td><strong>from $299</strong> first month, then $399-449</td><td>Zepbound KwikPen billed separately from the Ro Body membership ($39 first month, then $74-$149/month); insurance can apply to the medication where covered</td></tr><tr><td>Compounded tirzepatide</td><td>welludr</td><td><strong>$71</strong></td><td>12-month plan, billed monthly; same price at every dose</td></tr><tr><td>Compounded tirzepatide</td><td><a href="/weight-loss/reviews/embody">embody</a></td><td><strong>$99</strong></td><td>Flat, month to month; free expedited delivery; partial refund if not approved</td></tr><tr><td>Compounded tirzepatide</td><td>altRx</td><td><strong>$149</strong></td><td>Flat at every dose, reg. $299 (altRx)</td></tr><tr><td>Compounded tirzepatide</td><td>Sprout · SHED</td><td><strong>from $149 · $299</strong></td><td>12-month plan, $199 monthly (Sprout); 20% off month one (SHED)</td></tr></tbody></table>TrimRx is left out of the tirzepatide rows: it publishes no per-drug price we could read on Nov 22, 2026 (plans from $179). Prices change - promotions end and plan terms move - so confirm at checkout. The compounded ladder in full, with conditions, is in our <a href="/weight-loss/articles/best-tirzepatide-online">best tirzepatide online</a> guide.',
       },
       {
         heading: "Why is there such a gap between $1,249 and $89?",
@@ -2793,4 +2806,5 @@ export const articles: Article[] = [
   glp1WeightLossMedicationsGuideArticle,
   embodyVsRoWeightLossArticle,
   compoundedSemaglutideGoingAwayArticle,
+  howToCancelTelehealthGlp1SubscriptionArticle,
 ];
