@@ -1,4 +1,4 @@
-2026-11-23 · Author: Rio · Status: draft, awaiting operator approval · Request: next week of daily Instagram content for @treatmentshub, Tue 2026-11-24 to Mon 2026-11-30, one feed post plus one story per day at 14:00 UTC; same format, tone and visual system as the approved batch (ops/social/2026-11-16-week-batch.md); informative, calm, not clickbait; spread across verticals (at most 3 weight-loss, at least one each from ED, TRT, HRT, hair loss and online therapy).
+2026-11-23 · Author: Rio · Status: approved (operator, 2026-11-23, all seven) · Request: next week of daily Instagram content for @treatmentshub, Tue 2026-11-24 to Mon 2026-11-30, one feed post plus one story per day at 14:00 UTC; same format, tone and visual system as the approved batch (ops/social/2026-11-16-week-batch.md); informative, calm, not clickbait; spread across verticals (at most 3 weight-loss, at least one each from ED, TRT, HRT, hair loss and online therapy).
 
 Weekdays verified with `date -d`: 2026-11-24 Tue, 25 Wed, 26 Thu, 27 Fri, 28 Sat, 29 Sun, 30 Mon.
 
