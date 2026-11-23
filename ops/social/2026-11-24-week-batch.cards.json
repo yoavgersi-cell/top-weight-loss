@@ -1,0 +1,47 @@
+{
+  "outDir": "public/social",
+  "cards": [
+    {
+      "out": "2026-11-24-d1.jpg",
+      "pill": "Label change",
+      "headline": "The warning moved. The medicines did not change.",
+      "body": "Same products, same contraindications. Only the wording on the label changed."
+    },
+    {
+      "out": "2026-11-25-d2.jpg",
+      "pill": "Price history",
+      "headline": "A low headline price often has a condition attached.",
+      "body": "The tracker shows each listed price over time. Check the condition next to it, and quote the date."
+    },
+    {
+      "out": "2026-11-26-d3.jpg",
+      "pill": "Good to know",
+      "headline": "A therapist provides talk therapy. A psychiatrist can prescribe.",
+      "body": "Many people benefit from talk therapy alone, some from medication, and many from both together."
+    },
+    {
+      "out": "2026-11-27-d4.jpg",
+      "pill": "Before you start",
+      "headline": "A clinician cannot screen for what is not written down.",
+      "body": "List everything: prescription drugs, over-the-counter products, supplements and anything recreational."
+    },
+    {
+      "out": "2026-11-21-d5.jpg",
+      "pill": "Tool",
+      "headline": "Published price, times the months you choose.",
+      "body": "The cost calculator does not estimate, average or add anything. Regular prices sit in their own column."
+    },
+    {
+      "out": "2026-11-29-d6.jpg",
+      "pill": "Hair loss basics",
+      "headline": "The Norwood scale is a 7-stage map of male pattern hair loss.",
+      "body": "It usually moves along two fronts: a receding hairline at the temples and thinning at the crown, which eventually meet."
+    },
+    {
+      "out": "2026-11-30-d7.jpg",
+      "pill": "Monitoring",
+      "headline": "TRT is a monitored treatment.",
+      "body": "Baseline labs confirm the diagnosis, and follow-up labs keep it safe and dialed in."
+    }
+  ]
+}
