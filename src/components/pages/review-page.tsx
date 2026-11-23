@@ -160,7 +160,7 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   trimrx: {
     title: "TrimRx Reviews 2026 (Trim Rx): Is It Legit? Cost & Verdict",
     description:
-      "TrimRx (Trim Rx) reviews: {prices}, no contract, clinical support included. Is TrimRx legit? Pros and cons.",
+      "TrimRx (Trim Rx) reviews: plans from $179 a month (site, read Nov 22, 2026), no contract, clinical support included. Is TrimRx legit? Pros and cons.",
   },
   shed: {
     title: "Shed Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
@@ -491,7 +491,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "Is TrimRx a subscription with a contract?",
       answer:
-        "No long-term commitment - plans run month to month. The $149 semaglutide price is the same at every dose; compounded tirzepatide runs $259/month, with custom dosing and unlimited provider check-ins included.",
+        "No long-term commitment - plans run month to month. TrimRx's site shows plans from $179 a month (read Nov 22, 2026) and no per-drug price we could read; custom dosing and unlimited provider check-ins are included.",
     },
     {
       question: "What medications does TrimRx offer?",

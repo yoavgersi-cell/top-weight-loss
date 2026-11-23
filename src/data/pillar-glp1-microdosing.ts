@@ -25,7 +25,7 @@ export const pillarGlp1Microdosing: Article = {
   category: "Guide",
   readTime: "55 min read",
   publishedAt: "2026-10-26",
-  updatedAt: "2026-10-26",
+  updatedAt: "2026-11-22",
   heroColor: "#EEF3F8",
   author: "Treatments Hub Research Team",
   keyTakeaways: [
