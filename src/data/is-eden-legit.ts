@@ -54,7 +54,7 @@ export const isEdenLegitArticle: Article = {
     {
       heading: "Is TryEden legit?",
       body: `<div class="qa"><strong>The short answer</strong>Eden is run by Eden Health International Inc., names its own pharmacy (Eden Pharmacy, Albuquerque, NM) and publishes cancel and refund terms, all of which we read on Nov 24, 2026. Compounded semaglutide is $99 a month and tirzepatide $129; neither is FDA-approved. We could not verify the prescribing medical group, partner pharmacies or licence numbers. The FDA's June 2026 letter concerned website wording.</div>
-<p>TryEden is the older name of the website. Eden's pages now sit at eden.health, covered below. This page records what Eden's own documents say and where they stop. It uses no customer reviews, and it does not say whether the program suits you. That depends on your health history, which a licensed clinician reviews. For the product itself, see our <a href="/weight-loss/reviews/eden">Eden (TryEden) review</a>.</p>`,
+<p>TryEden is the older name of the website. Eden's pages now sit at eden.health: tryeden.com pages redirect there (as read Nov 24, 2026), covered below. This page records what Eden's own documents say and where they stop. It uses no customer reviews, and it does not say whether the program suits you. That depends on your health history, which a licensed clinician reviews. For the product itself, see our <a href="/weight-loss/reviews/eden">Eden (TryEden) review</a>.</p>`,
     },
     {
       heading: "What did we check, and when?",
@@ -74,7 +74,7 @@ export const isEdenLegitArticle: Article = {
     },
     {
       heading: "How much does Eden cost?",
-      body: `<p>Eden lists two compounded products at one monthly price each. The tirzepatide page reads "Monthly pricing at every dose" with $129 a month, and a table shows the same figure for month 1, month 2, month 3 and every month. The semaglutide page shows $99 in the same table. Eden's FAQ says: "The price you see is the price you'll keep. No second-month increase. No dose-based price hikes. No long-term contract." (${ext(S.sema, "semaglutide")} and ${ext(S.tirz, "tirzepatide")} pages, FAQ, read Nov 24, 2026).</p>
+      body: `<p>Eden lists two compounded products at one monthly price each. The tirzepatide page reads "Monthly pricing at every dose" with $129 a month, and a table shows the same figure for month 1, month 2, month 3 and every month. The semaglutide page shows $99 in the same table. The FAQ on the tirzepatide page says: "The price you see is the price you'll keep. No second-month increase. No dose-based price hikes. No long-term contract." (${ext(S.sema, "semaglutide")} and ${ext(S.tirz, "tirzepatide")} pages, FAQ, read Nov 24, 2026).</p>
 <table><thead><tr><th>Medication</th><th>Price per month</th><th>What the page says</th></tr></thead><tbody>
 <tr><td>Compounded semaglutide (not FDA-approved)</td><td>$99</td><td>Same in month 1, 2, 3 and every month</td></tr>
 <tr><td>Compounded tirzepatide (not FDA-approved)</td><td>$129</td><td>Same in month 1, 2, 3 and every month</td></tr>
@@ -95,7 +95,7 @@ export const isEdenLegitArticle: Article = {
     {
       heading: "What pharmacy does Eden use?",
       body: `<p>Eden names one: Eden Pharmacy. Its site, ${ext(S.pharmacy, "edenpharmacy.com")}, carries the banner "Contigo is now Eden Pharmacy!" (we did not read the press release it links to). The site lists "Sterile & Non-Sterile Compounding" and the address 8300 Carmel Ave, Suite 601, Albuquerque, NM 87122. It states: "Our pharmacy is licensed and operates in 38 states and Washington, D.C. For patients outside those areas, we work with a trusted network of partners." It lists twelve partner-served states: Alaska, Arkansas, California, Illinois, Kentucky, Louisiana, Mississippi, Nebraska, North Carolina, South Carolina, Tennessee and Virginia (read Nov 24, 2026).</p>
-<p>Eden's FAQ says your medication "is prepared by Eden Pharmacy or one of Eden's vetted U.S. pharmacy partners, each held to Eden standards." The tirzepatide page says: "Authentic Eden™ medication is prepared in our U.S. pharmacy network, with direct oversight at every step before it ships to your door." Its homepage also says medications are "dispensed by state-licensed pharmacies."</p>
+<p>The FAQ on the tirzepatide page says your medication "is prepared by Eden Pharmacy or one of Eden's vetted U.S. pharmacy partners, each held to Eden standards." The tirzepatide page says: "Authentic Eden™ medication is prepared in our U.S. pharmacy network, with direct oversight at every step before it ships to your door." Its homepage also says medications are "dispensed by state-licensed pharmacies."</p>
 <table><thead><tr><th>Question</th><th>Answer on Eden's pages</th></tr></thead><tbody>
 <tr><td>Is a pharmacy named?</td><td>Yes: Eden Pharmacy, Albuquerque, NM</td></tr>
 <tr><td>Are the partner pharmacies named?</td><td>No</td></tr>
@@ -115,16 +115,16 @@ export const isEdenLegitArticle: Article = {
     },
     {
       heading: "Does Eden charge a membership fee?",
-      body: `<p>Eden's pages say two things, and it does not reconcile them. The pricing pages say "No membership fees," and the FAQ says "There is no separate membership fee." The Terms (section 14) say "Eden's Services may be offered through a recurring membership model, as is displayed at checkout," that "Payments made to Eden cover the cost of membership fees and/or products," and that "Eden offers a recurring membership program for which automatic billing is a material term of enrollment." The refund clause refers to "the initial membership fee when no prescription is issued."</p>
+      body: `<p>Eden's pages say two things, and it does not reconcile them. The pricing pages say "No membership fees," and the FAQ on the tirzepatide page says "There is no separate membership fee." The Terms (section 14) say "Eden's Services may be offered through a recurring membership model, as is displayed at checkout," that "Payments made to Eden cover the cost of membership fees and/or products," and that "Eden offers a recurring membership program for which automatic billing is a material term of enrollment." The refund clause refers to "the initial membership fee when no prescription is issued."</p>
 <p>The safe reading is this: the monthly price you see is the whole charge on Eden's pricing pages, and the Terms still call the arrangement a recurring membership. We did not read checkout, so we cannot say what it shows.</p>`,
     },
     {
       heading: "How do I cancel Eden?",
       body: `<p>Per the Terms (revised Nov 16, 2026) and FAQ, read Nov 24, 2026:</p>
 <ol>
-<li>Cancel "through your Account Settings or by contacting Customer Support." The FAQ says you can pause or cancel "from your patient portal."</li>
-<li>Do it at least 48 hours before renewal. Section 3 says: "For the Eden Membership Program, cancellations must be submitted at least forty-eight (48) hours before your next renewal date, as further described at checkout if applicable." The California clause repeats the 48 hours.</li>
-<li>Know what cancelling does not reach. "Cancellations apply to future billing cycles and do not apply to orders already processed or shipped." The FAQ adds that orders already sent to the pharmacy "may not be cancellable, but if an order is still pending, Eden support can help."</li>
+<li>Cancel "through your Account Settings or by contacting Customer Support." The FAQ on the tirzepatide page says you can pause or cancel "from your patient portal."</li>
+<li>Do it at least 48 hours before renewal. Section 14.3 says: "For the Eden Membership Program, cancellations must be submitted at least forty-eight (48) hours before your next renewal date, as further described at checkout if applicable." The California clause repeats the 48 hours.</li>
+<li>Know what cancelling does not reach. "Cancellations apply to future billing cycles and do not apply to orders already processed or shipped." The same FAQ adds that orders already sent to the pharmacy "may not be cancellable, but if an order is still pending, Eden support can help."</li>
 </ol>
 <p>Billing is automatic. The Terms say you authorize Eden "to charge your payment method automatically at the frequency disclosed at checkout," and the California clause says the plan "renews automatically each month at the price shown at checkout (currently $99.00 per month for compounded semaglutide and $129.00 per month for compounded tirzepatide) until you cancel." That matches the prices on the product pages. Note the date of your next renewal when you sign up. Our guide to <a href="/weight-loss/articles/how-to-cancel-telehealth-glp1-subscription">cancelling a GLP-1 telehealth subscription</a> sets other providers' cutoffs side by side.</p>`,
     },
@@ -132,11 +132,11 @@ export const isEdenLegitArticle: Article = {
       heading: "Does Eden give refunds?",
       body: `<p>Mostly not once an order is fulfilled. The Terms and the ${ext(S.refund, "refund policy page")} set out these cases (read Nov 24, 2026):</p>
 <table><thead><tr><th>Situation</th><th>What the Terms say</th></tr></thead><tbody>
-<tr><td>No prescription is issued after your intake</td><td>"You will receive a full refund of your initial membership fee" (California clause); section 4 allows this exception at checkout</td></tr>
-<tr><td>The order has been fulfilled</td><td>Section 4: "all charges are non-refundable"; section 14: fees are "generally non-refundable, in whole or in part, once the order has been fulfilled"; "We cannot accept returns of prescription products"</td></tr>
+<tr><td>No prescription is issued after your intake</td><td>"You will receive a full refund of your initial membership fee" (California clause; elsewhere as shown at checkout); the Terms' general refund section (14.4) makes this exception only "as provided at checkout"</td></tr>
+<tr><td>The order has been fulfilled</td><td>Section 14.4: "all charges are non-refundable"; section 14: fees are "generally non-refundable, in whole or in part, once the order has been fulfilled"; "We cannot accept returns of prescription products"</td></tr>
 <tr><td>Eden cannot fulfill the plan (supply shortage, FDA regulations or other factors outside its control)</td><td>Section 15: a prorated refund for the unshipped part of the prepaid plan, less the monthly cost of treatment already provided, or a credit to switch plans; "within 30 days of an approved request"</td></tr>
-<tr><td>The order was cancelled after it shipped</td><td>Cancellation does not apply to "orders already processed or shipped" (section 3)</td></tr>
-<tr><td>A shipment arrives damaged or is lost</td><td>Section 4 points to "our full Refund Policy for specific exceptions regarding damaged or lost shipments." The refund policy page we read has no damaged or lost shipment text, so we could not find the rule</td></tr>
+<tr><td>The order was cancelled after it shipped</td><td>Cancellation does not apply to "orders already processed or shipped" (section 14.3)</td></tr>
+<tr><td>A shipment arrives damaged or is lost</td><td>Section 14.4 points to "our full Refund Policy for specific exceptions regarding damaged or lost shipments." The refund policy page we read has no damaged or lost shipment text, so we could not find the rule</td></tr>
 </tbody></table>
 <p>Eden's separate weight-loss warranty is covered next.</p>`,
     },

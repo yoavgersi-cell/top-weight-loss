@@ -155,7 +155,7 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   eden: {
     title: "Eden (TryEden) Reviews 2026: $99 Flat GLP-1, Legit or Not?",
     description:
-      "Eden (TryEden) reviews: {prices}, flat at every dose, 24/7 support. Is Eden legit? Pros, cons, refunds, verdict.",
+      "Eden (TryEden) reviews: {prices}, flat at every dose. Is Eden legit? Pros, cons, refunds, Terms and verdict.",
   },
   trimrx: {
     title: "TrimRx Reviews 2026 (Trim Rx): Is It Legit? Cost & Verdict",

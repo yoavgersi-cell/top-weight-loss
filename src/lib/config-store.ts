@@ -1042,14 +1042,14 @@ const defaultReviews: ReviewData[] = [
     slug: "eden",
     providerId: "eden",
     updatedAt: "2026-11-24",
-    shortSummary: "Compounded GLP-1 program at one flat monthly price - semaglutide $99/month and tirzepatide $129/month, the same at every dose, with no long-term contract and doctor-guided care with 24/7 human support. Compounded medicines are not FDA-approved.",
-    reviewIntro: "Eden, at eden.health (formerly tryeden.com), sells compounded semaglutide and tirzepatide at one flat, all-inclusive monthly price: $99/month for semaglutide and $129/month for tirzepatide, the same in month one, month two and every month after, at every dose - Eden's own pricing page puts it as 'the price you start with is the price you keep' (read November 24, 2026). Eden's pricing pages say there is no membership fee and no long-term contract, though its Terms still describe a recurring membership program that renews automatically each month; the clinical side is doctor-guided care with 24/7 human support, the medication is described by Eden as made in the US with strict quality oversight, and sign-up is a free assessment that takes about three minutes with no insurance needed. Eden also lists brand-name Wegovy ($1,695/month), Zepbound, Ozempic and Mounjaro ($1,399/month each) on its brand pages; it does not say which pharmacy fills those. One thing to know: on June 8, 2026 the FDA sent Eden a warning letter (reference MARCS-CMS 728279) over two things on its website: product images whose labels carried the 'Eden' name, which the FDA said suggests Eden compounds the drugs when it does not, and a description of its pharmacies as 'FDA-licensed 503(a) outsourcing facilities', when the FDA does not license or approve compounding facilities. The FDA classed both as misbranding and gave Eden 15 business days to respond. A warning letter is a regulatory finding about how the products were described; it is not evidence of a manufacturing defect, and it is not a clearance either, because compounded drugs are not evaluated by the FDA for safety, effectiveness or quality before they are sold. altRx received a letter dated the same day. The FDA's warning-letters list showed no response or close-out when we last read it on November 22, 2026, and the phrase the FDA quoted did not appear on the Eden pages we read on November 24, 2026; the summary is below and the full read is in our Eden legitimacy check.",
+    shortSummary: "Compounded GLP-1 program at one flat monthly price - semaglutide $99/month and tirzepatide $129/month, the same at every dose, with no long-term contract. Eden says it offers 24/7 real human support and clinician-guided care. Compounded medicines are not FDA-approved.",
+    reviewIntro: "Eden, at eden.health (tryeden.com pages redirect to eden.health, as read November 24, 2026), sells compounded semaglutide and tirzepatide at one flat, all-inclusive monthly price: $99/month for semaglutide and $129/month for tirzepatide, the same in month one, month two and every month after, at every dose - Eden's own pricing page puts it as 'the price you start with is the price you keep' (read November 24, 2026). Eden's pricing pages say there is no membership fee and no long-term contract, though its Terms still describe a recurring membership program that renews automatically each month; Eden says it offers 24/7 real human support and clinician-guided care, the medication is described by Eden as made in the US with strict quality oversight, and sign-up is a free assessment that takes about three minutes with no insurance needed. Eden also lists brand-name Wegovy ($1,695/month), Zepbound, Ozempic and Mounjaro ($1,399/month each) on its brand pages; it does not say which pharmacy fills those. One thing to know: on June 8, 2026 the FDA sent Eden a warning letter (reference MARCS-CMS 728279) over two things on its website: product images whose labels carried the 'Eden' name, which the FDA said suggests Eden compounds the drugs when it does not, and a description of its pharmacies as 'FDA-licensed 503(a) outsourcing facilities', when the FDA does not license or approve compounding facilities. The FDA classed both as misbranding and gave Eden 15 business days to respond. A warning letter is a regulatory finding about how the products were described; it is not evidence of a manufacturing defect, and it is not a clearance either, because compounded drugs are not evaluated by the FDA for safety, effectiveness or quality before they are sold. altRx received a letter dated the same day. The FDA's warning-letters list showed no response or close-out when we last read it on November 22, 2026, and the phrase the FDA quoted did not appear on the Eden pages we read on November 24, 2026; the summary is below and the full read is in our Eden legitimacy check.",
     keyFeatures: [
       "Compounded semaglutide $99/month - same price at every dose",
       "Compounded tirzepatide $129/month - same price at every dose",
       "One all-inclusive monthly price: no membership fee on its pricing pages, no long-term contract",
       "Weight-loss warranty: refund or credit if you do not lose 15% in six months, with conditions in the Terms",
-      "Doctor-guided clinical care with 24/7 human support",
+      "Eden says it offers clinician-guided care and 24/7 real human support",
       "Free 3-minute assessment; no insurance needed"
     ],
     pricingSummary: "Eden charges $99/month for compounded semaglutide and $129/month for compounded tirzepatide (eden.health, read November 24, 2026). The price is flat: Eden's pricing table shows the same figure in month one, month two, month three and every month after, and the same at every dose, excluding new member discounts or specific plans. Eden's pricing pages say there is no membership fee and no long-term contract, its Terms say prices can change at any time at Eden's discretion, and billing renews automatically each month until you cancel. That puts Eden's semaglutide alongside Medvi's $99 promotional rate and above the $41-$89 entry tier at welludr, embody and altRx - but Eden lists its figures as standard full-price rates rather than a promotion with an end date, and its tirzepatide at $129 is among the lowest flat tirzepatide prices we track.",
@@ -1057,13 +1057,13 @@ const defaultReviews: ReviewData[] = [
       "Compounded semaglutide (GLP-1) injection",
       "Compounded tirzepatide (GLP-1 + GIP) injection",
       "Brand-name Wegovy ($1,695/month), Zepbound, Ozempic and Mounjaro ($1,399/month each), as listed on Eden's brand pages; the pharmacy that fills them is not stated",
-      "Doctor-guided dosing with ongoing clinical care",
-      "24/7 human support"
+      "Clinician-guided dosing with ongoing clinical care, per Eden",
+      "24/7 real human support, per Eden"
     ],
     pros: [
       "Flat pricing with no month-one trick: $99 semaglutide, $129 tirzepatide, every month, every dose",
       "No long-term contract: month to month, cancel in Account Settings at least 48 hours before renewal",
-      "24/7 human support and doctor-guided care included in the price",
+      "Eden says 24/7 real human support and clinician-guided care are included in the price",
       "Low flat tirzepatide price for a no-commitment plan"
     ],
     cons: [
@@ -1075,14 +1075,14 @@ const defaultReviews: ReviewData[] = [
     ],
     bestFor: [
       "People who want one listed monthly number and no long-term contract (Eden's Terms allow price changes)",
-      "Anyone who values reachable, human support alongside the medication",
+      "Anyone who wants the 24/7 real human support and clinician-guided care Eden says it offers",
       "Tirzepatide buyers who want a flat, no-commitment price"
     ],
-    finalVerdict: "Eden's case is simplicity: $99 for semaglutide and $129 for tirzepatide, the same every month and at every dose, with no long-term contract to sign. If the lowest possible sticker price is your only criterion, welludr's $41 plan and embody's $49 month-to-month undercut it on semaglutide; if you want a flat price you can budget on, support that answers, and tirzepatide without a premium, Eden is one of the strongest no-commitment options we track. Read the FDA warning-letter section below before you decide, check the eligibility and safety points with Eden's clinician at the assessment, read the refund and warranty conditions in our Eden legitimacy check, and confirm shipping times at checkout.",
+    finalVerdict: "Eden's case is simplicity: $99 for semaglutide and $129 for tirzepatide, the same every month and at every dose, with no long-term contract to sign. If the lowest possible sticker price is your only criterion, welludr's $41 plan and embody's $49 month-to-month undercut it on semaglutide; if you want a flat price you can budget on, the 24/7 support Eden says it offers, and tirzepatide without a premium, Eden is one of the strongest no-commitment options we track. Read the FDA warning-letter section below before you decide, check the eligibility and safety points with Eden's clinician at the assessment, read the refund and warranty conditions in our Eden legitimacy check, and confirm shipping times at checkout.",
     trustBadges: [
       "Same price, every dose",
       "No long-term contract",
-      "24/7 human support",
+      "24/7 real human support (Eden says)",
       "No insurance needed"
     ],
     pricingPlans: [
@@ -1092,7 +1092,7 @@ const defaultReviews: ReviewData[] = [
         price: "$99",
         unit: "/month",
         cadence: "Monthly",
-        highlights: ["Same price every month and at every dose", "No long-term contract", "Doctor-guided care and 24/7 support included"]
+        highlights: ["Same price every month and at every dose", "No long-term contract", "Eden says clinician-guided care and 24/7 support are included"]
       },
       {
         name: "Tirzepatide",
@@ -1100,7 +1100,7 @@ const defaultReviews: ReviewData[] = [
         price: "$129",
         unit: "/month",
         cadence: "Monthly",
-        highlights: ["Same price every month and at every dose", "No long-term contract", "Doctor-guided care and 24/7 support included"]
+        highlights: ["Same price every month and at every dose", "No long-term contract", "Eden says clinician-guided care and 24/7 support are included"]
       }
     ],
     // Nov 15, 2026: three sections added at the medical reviewer's request
@@ -1132,8 +1132,8 @@ const defaultReviews: ReviewData[] = [
     ],
     howItWorks: [
       { timing: "Free · ~3 minutes", title: "Start the free assessment", detail: "Answer the health questions online - no insurance needed." },
-      { title: "A doctor reviews your plan", detail: "Doctor-guided clinical care decides whether semaglutide or tirzepatide is appropriate and sets your dose." },
-      { timing: "Delivered to your door", title: "Receive your medication", detail: "Compounded GLP-1 made in the US, shipped to you, with 24/7 human support throughout." }
+      { title: "A clinician reviews your plan", detail: "Clinician-guided care, per Eden, decides whether semaglutide or tirzepatide is appropriate and sets your dose." },
+      { timing: "Delivered to your door", title: "Receive your medication", detail: "Compounded GLP-1 made in the US, shipped to you, with 24/7 real human support throughout, per Eden." }
     ]
   },
   {
@@ -2409,12 +2409,12 @@ const edenEmbodyBattle: BattleData = {
   provider2Id: "embody",
   title: "Eden vs embody: Which Flat-Price GLP-1 Provider Fits You in 2026?",
   subtitle: "Two no-commitment compounded GLP-1 providers compared on price, speed, support and track record.",
-  description: "Eden ($99/mo semaglutide, $129/mo tirzepatide, flat every month, 24/7 support) vs embody ($49/$99, free expedited delivery). Price, support and shipping compared, with dated figures.",
-  intro: "Eden and embody both sell compounded semaglutide and tirzepatide month to month with no long-term contract, and both state one price at every dose. Eden also lists brand-name Wegovy, Zepbound, Ozempic and Mounjaro at $1,399-$1,695 a month, which embody does not. embody is cheaper - $49/month for semaglutide and $99 for tirzepatide against Eden's $99 and $129 - with free expedited delivery (no timeline guaranteed). Eden's pitch is the rest of the experience: doctor-guided care with 24/7 human support, against embody's self-serve model with a nursing team by message. This is a price-versus-service decision, and both answers are reasonable.",
-  verdict: "Eden takes this one on support; embody takes the price. Eden is $30 and $10 a month more, but its $99 and $129 rates are the same every month at every dose, with 24/7 human support and doctor-guided care. embody is the better buy if monthly cost decides it: $49 and $99 with free expedited delivery and a partial refund if a provider does not approve treatment. Both are month to month with no long-term contract, so the choice is about what you need most.",
+  description: "Eden ($99/mo semaglutide, $129/mo tirzepatide, flat every month, Eden says 24/7 support) vs embody ($49/$99, free expedited delivery). Price, support and shipping compared, with dated figures.",
+  intro: "Eden and embody both sell compounded semaglutide and tirzepatide month to month with no long-term contract, and both state one price at every dose. Eden also lists brand-name Wegovy, Zepbound, Ozempic and Mounjaro at $1,399-$1,695 a month, which embody does not. embody is cheaper - $49/month for semaglutide and $99 for tirzepatide against Eden's $99 and $129 - with free expedited delivery (no timeline guaranteed). Eden's pitch is the rest of the experience: Eden says it offers clinician-guided care with 24/7 real human support, against embody's self-serve model with a nursing team by message. This is a price-versus-service decision, and both answers are reasonable.",
+  verdict: "Eden takes this one on the support it advertises; embody takes the price. Eden is $30 and $10 a month more, but its $99 and $129 rates are the same every month at every dose, and Eden says it includes 24/7 real human support and clinician-guided care. embody is the better buy if monthly cost decides it: $49 and $99 with free expedited delivery and a partial refund if a provider does not approve treatment. Both are month to month with no long-term contract, so the choice is about what you need most.",
   verdictWinnerPoints: [
     "$99 semaglutide / $129 tirzepatide - the same every month, every dose",
-    "24/7 human support and doctor-guided care included",
+    "Eden says 24/7 real human support and clinician-guided care are included",
     "Price that does not change: $99 semaglutide and $129 tirzepatide, every month",
     "No long-term contract; no separate membership fee on its pricing pages",
   ],
@@ -2441,8 +2441,8 @@ const edenEmbodyBattle: BattleData = {
     {
       name: "Medical Support",
       winner: "provider1",
-      explanation: "Eden includes doctor-guided clinical care with 24/7 human support, and that matters most if you expect to message a clinician. embody's model is deliberately self-serve: a nursing team by message.",
-      supportingPoints: ["24/7 human support, doctor-guided care (Eden)", "Nursing team by message; 'autopilot' by design (embody)"],
+      explanation: "Eden says it offers clinician-guided care with 24/7 real human support (we did not test it), and that matters most if you expect to message a clinician. embody's model is deliberately self-serve: a nursing team by message.",
+      supportingPoints: ["24/7 real human support, clinician-guided care (Eden says)", "Nursing team by message; 'autopilot' by design (embody)"],
     },
     {
       name: "Flexibility",
@@ -2457,7 +2457,7 @@ const edenEmbodyBattle: BattleData = {
     { feature: "Membership fee", provider1Value: "None on its pricing pages; the Terms still mention a recurring membership program", provider2Value: "None", highlight: "none" },
     { feature: "Commitment", provider1Value: "No long-term contract; cancel in Account Settings at least 48 hours before renewal", provider2Value: "None - month to month", highlight: "both" },
     { feature: "Shipping", provider1Value: "Free expedited; delivery step labelled 2 - 3 business days, no guaranteed time in the Terms", provider2Value: "Free expedited delivery, cold-chain; no timeline guaranteed", highlight: "none" },
-    { feature: "Clinical support", provider1Value: "Doctor-guided care, 24/7 human support", provider2Value: "Nursing team by message, video appointments", highlight: "provider1" },
+    { feature: "Clinical support", provider1Value: "Eden says: clinician-guided care, 24/7 real human support", provider2Value: "Nursing team by message, video appointments", highlight: "provider1" },
     { feature: "Brand-name options", provider1Value: "Wegovy $1,695, Zepbound $1,399, Ozempic $1,399, Mounjaro $1,399 a month (pharmacy not stated)", provider2Value: "No", highlight: "provider1" },
     { feature: "Refunds", provider1Value: "Full refund of initial membership fee if no prescription; non-refundable once fulfilled; 15%-in-six-months warranty with conditions (Terms, read Nov 24, 2026)", provider2Value: "Partial refund if a provider does not approve treatment", highlight: "none" },
   ],
@@ -2471,17 +2471,17 @@ const altrxEdenBattle: BattleData = {
   provider2Id: "eden",
   title: "altRx vs Eden: Flat GLP-1 Pricing Compared (2026)",
   subtitle: "Both state one price at every dose - we compared the prices, the plans and the support.",
-  description: "altRx ($89/mo semaglutide, $149 tirzepatide promo, brand-name shelf, Buy Now, Pay Later) vs Eden ($99/$129 flat every month, 24/7 support).",
-  intro: "altRx and Eden both promise one price at every dose, and neither lists a separate membership fee on its pricing pages. The prices cross: altRx is cheaper on semaglutide ($89 against Eden's $99) while Eden is cheaper on tirzepatide ($129 against altRx's $149) - and altRx's figures are promotional rates against regular prices of $199 and $299, with a sale end date that has been extended more than once, while Eden lists its as standard full-price rates (its Terms let it change prices). Both list brand-name medication: altRx's shelf is Ozempic, Zepbound and Wegovy at lower cash prices than Eden's Wegovy ($1,695), Zepbound, Ozempic and Mounjaro ($1,399 each). altRx adds Buy Now, Pay Later; Eden adds 24/7 human support.",
-  verdict: "Eden edges this one. The deciding factors are the things you can check: a flat price that Eden lists as a standard full-price rate (though its Terms allow changes) and 24/7 human support, against altRx's promotional pricing. altRx is the better pick if you want brand-name medication at the lower cash prices of the two, financing through Buy Now, Pay Later, or the lowest semaglutide figure of the two while its promotion holds - and its one detailed firsthand Reddit account describes approval and cold-chain delivery within a day.",
+  description: "altRx ($89/mo semaglutide, $149 tirzepatide promo, brand-name shelf, Buy Now, Pay Later) vs Eden ($99/$129 flat every month, Eden says 24/7 support).",
+  intro: "altRx and Eden both promise one price at every dose, and neither lists a separate membership fee on its pricing pages. The prices cross: altRx is cheaper on semaglutide ($89 against Eden's $99) while Eden is cheaper on tirzepatide ($129 against altRx's $149) - and altRx's figures are promotional rates against regular prices of $199 and $299, with a sale end date that has been extended more than once, while Eden lists its as standard full-price rates (its Terms let it change prices). Both list brand-name medication: altRx's shelf is Ozempic, Zepbound and Wegovy, and Eden lists Wegovy ($1,695 a month), Zepbound, Ozempic and Mounjaro ($1,399 each), read Nov 24, 2026. altRx adds Buy Now, Pay Later; Eden says it adds 24/7 real human support.",
+  verdict: "Eden edges this one. The deciding factors are the things you can check: a flat price that Eden lists as a standard full-price rate (though its Terms allow changes) and the 24/7 real human support Eden says it offers, against altRx's promotional pricing. altRx is the better pick if you want brand-name medication at a cash price, financing through Buy Now, Pay Later, or the lowest semaglutide figure of the two while its promotion holds - and its one detailed firsthand Reddit account describes approval and cold-chain delivery within a day.",
   verdictWinnerPoints: [
     "$99 semaglutide / $129 tirzepatide - listed as standard full-price rates",
     "Cheaper tirzepatide of the two",
-    "24/7 human support, doctor-guided care",
+    "24/7 real human support, clinician-guided care (Eden says)",
   ],
   verdictLoserPoints: [
     "$89 semaglutide - cheaper while the promotion holds",
-    "Lower brand-name prices: Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 (Eden lists $1,399, $1,399 and $1,695)",
+    "Brand-name Ozempic, Zepbound and Wegovy on the shelf",
     "Buy Now, Pay Later available",
     "Pause or cancel anytime",
   ],
@@ -2491,19 +2491,19 @@ const altrxEdenBattle: BattleData = {
       name: "Pricing",
       winner: "tie",
       explanation: "A split decision. altRx's $89 semaglutide is $10 cheaper than Eden's $99; Eden's $129 tirzepatide is $20 cheaper than altRx's $149. Both are the same at every dose. The structural difference: altRx's rates are promotional against $199 and $299 regular prices, with an end date that has moved more than once, while Eden lists its as standard full-price rates every month (its Terms let it change prices).",
-      supportingPoints: ["$89 semaglutide, promotional (altRx)", "$129 tirzepatide, standard rate (Eden)", "No membership at either"],
+      supportingPoints: ["$89 semaglutide, promotional (altRx)", "$129 tirzepatide, listed standard full-price rate (Eden)", "No separate membership fee listed at either"],
     },
     {
       name: "Medication Options",
       winner: "provider1",
-      explanation: "altRx offers compounded semaglutide and tirzepatide plus brand-name Ozempic ($1,149), Zepbound ($1,249) and Wegovy ($1,579) at cash prices. Eden lists the same two compounded medications plus brand-name Wegovy ($1,695 a month), Zepbound, Ozempic and Mounjaro ($1,399 each), read Nov 24, 2026, without saying which pharmacy fills them, at higher cash prices than altRx's.",
+      explanation: "altRx offers compounded semaglutide and tirzepatide plus brand-name Ozempic ($1,149), Zepbound ($1,249) and Wegovy ($1,579) at cash prices (altRx figures are from our earlier listing, not re-read on Nov 24, 2026). Eden lists the same two compounded medications plus brand-name Wegovy ($1,695 a month), Zepbound, Ozempic and Mounjaro ($1,399 each), read Nov 24, 2026, without saying which pharmacy fills them.",
       supportingPoints: ["Compounded plus brand-name shelf (altRx)", "Compounded plus brand-name listings at higher prices (Eden)", "Buy Now, Pay Later (altRx)"],
     },
     {
       name: "Medical Support",
       winner: "provider2",
-      explanation: "Eden includes doctor-guided clinical care and 24/7 human support. altRx describes clinician-guided support with everything in the box, but it publishes less about ongoing contact.",
-      supportingPoints: ["24/7 human support (Eden)", "Clinician-guided; pause or cancel anytime (altRx)"],
+      explanation: "Eden says it offers clinician-guided care and 24/7 real human support (we did not test it). altRx describes clinician-guided support with everything in the box, but it publishes less about ongoing contact.",
+      supportingPoints: ["24/7 real human support (Eden says)", "Clinician-guided; pause or cancel anytime (altRx)"],
     },
     {
       name: "Flexibility",
@@ -2515,10 +2515,10 @@ const altrxEdenBattle: BattleData = {
   features: [
     { feature: "Semaglutide price", provider1Value: "$89/mo promo (reg. $199), flat at every dose", provider2Value: "$99/mo, flat every month and every dose (eden.health, read Nov 24, 2026)", highlight: "provider1" },
     { feature: "Tirzepatide price", provider1Value: "$149/mo promo (reg. $299), flat at every dose", provider2Value: "$129/mo, flat every month and every dose (eden.health, read Nov 24, 2026)", highlight: "provider2" },
-    { feature: "Brand-name options", provider1Value: "Ozempic $1,149, Zepbound $1,249, Wegovy $1,579", provider2Value: "Wegovy $1,695, Zepbound $1,399, Ozempic $1,399, Mounjaro $1,399 a month (pharmacy not stated)", highlight: "provider1" },
+    { feature: "Brand-name options", provider1Value: "Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 (earlier listing, not re-read Nov 24, 2026)", provider2Value: "Wegovy $1,695, Zepbound $1,399, Ozempic $1,399, Mounjaro $1,399 a month (pharmacy not stated)", highlight: "provider1" },
     { feature: "Membership fee", provider1Value: "None", provider2Value: "None on its pricing pages; the Terms still mention a recurring membership program", highlight: "none" },
     { feature: "Shipping", provider1Value: "Free 5-7 day", provider2Value: "Free expedited; delivery step labelled 2 - 3 business days, no guaranteed time in the Terms", highlight: "none" },
-    { feature: "Clinical support", provider1Value: "Clinician-guided", provider2Value: "Doctor-guided care, 24/7 human support", highlight: "provider2" },
+    { feature: "Clinical support", provider1Value: "Clinician-guided", provider2Value: "Eden says: clinician-guided care, 24/7 real human support", highlight: "provider2" },
     { feature: "Financing", provider1Value: "Buy Now, Pay Later", provider2Value: "Not stated", highlight: "provider1" },
     { feature: "Eden refunds", provider1Value: "Multi-month plans not refundable once paid, per its terms", provider2Value: "Full refund of initial membership fee if no prescription; non-refundable once fulfilled; 15%-in-six-months warranty with conditions (Terms, read Nov 24, 2026)", highlight: "none" },
   ],
@@ -2533,11 +2533,11 @@ const edenRoBattle: BattleData = {
   title: "Eden vs Ro: Flat Compounded Pricing or Brand-Name With a Membership?",
   subtitle: "A compounded provider with one flat price against a brand-name provider that bills a membership plus the medication.",
   description: "Eden ($99/mo semaglutide, $129 tirzepatide, flat, cancel anytime) vs Ro ($39-then-$74-149 membership plus Wegovy or Zepbound billed separately). Which fits you.",
-  intro: "Eden and Ro sit at opposite ends of the GLP-1 telehealth market. Eden sells compounded semaglutide at $99/month and tirzepatide at $129/month, flat every month and at every dose, with no separate membership fee on its pricing pages. Eden also lists brand-name Wegovy ($1,695 a month), Zepbound, Ozempic and Mounjaro ($1,399 each) without saying which pharmacy fills them. Ro sells FDA-approved medication - the Wegovy pill and pen, the Zepbound KwikPen - billed separately from a Body membership of $39 the first month and $74-$149 after, which is the structure that lets insurance pay for the drug. Paying cash, the two are not close; with coverage, Ro can be the cheaper route. The rest of the comparison is support: Eden's 24/7 human support against Ro's message-based follow-up.",
-  verdict: "For cash-pay buyers, Eden wins: one flat price with no long-term contract and 24/7 human support. Ro wins the moment insurance enters the picture, and FDA-approved medication is its core product while Eden's core plans are compounded (Eden also lists brand-name Wegovy and Zepbound at cash prices of $1,695 and $1,399 a month, and does not accept insurance) - if your plan covers Wegovy or Zepbound, Ro's membership-plus-copay can cost far less than any compounded price, and that is a clinical as well as a financial advantage. Decide on coverage first, then on price.",
+  intro: "Eden and Ro sit at opposite ends of the GLP-1 telehealth market. Eden sells compounded semaglutide at $99/month and tirzepatide at $129/month, flat every month and at every dose, with no separate membership fee on its pricing pages. Eden also lists brand-name Wegovy ($1,695 a month), Zepbound, Ozempic and Mounjaro ($1,399 each) without saying which pharmacy fills them. Ro sells FDA-approved medication - the Wegovy pill and pen, the Zepbound KwikPen - billed separately from a Body membership of $39 the first month and $74-$149 after, which is the structure that lets insurance pay for the drug. Paying cash, the two are not close; with coverage, Ro can be the cheaper route. The rest of the comparison is support: the 24/7 real human support Eden says it offers against Ro's message-based follow-up.",
+  verdict: "For cash-pay buyers, Eden wins: one flat price with no long-term contract, and Eden says it offers 24/7 real human support. Ro wins the moment insurance enters the picture, and FDA-approved medication is its core product while Eden's core plans are compounded (Eden also lists brand-name Wegovy and Zepbound at cash prices of $1,695 and $1,399 a month, and does not accept insurance) - if your plan covers Wegovy or Zepbound, Ro's membership-plus-copay can cost far less than any compounded price, and that is a clinical as well as a financial advantage. Decide on coverage first, then on price.",
   verdictWinnerPoints: [
     "$99 semaglutide / $129 tirzepatide, flat every month, no long-term contract",
-    "24/7 human support, doctor-guided care",
+    "24/7 real human support, clinician-guided care (Eden says)",
     "No annual or long-term plans required",
   ],
   verdictLoserPoints: [
@@ -2562,8 +2562,8 @@ const edenRoBattle: BattleData = {
     {
       name: "Medical Support",
       winner: "provider1",
-      explanation: "Eden includes doctor-guided care with 24/7 human support. Ro's licensed providers review every case and follow up by message.",
-      supportingPoints: ["24/7 human support (Eden)", "Licensed providers, message-based follow-up (Ro)"],
+      explanation: "Eden says it offers clinician-guided care with 24/7 real human support (we did not test it). Ro's licensed providers review every case and follow up by message.",
+      supportingPoints: ["24/7 real human support (Eden says)", "Licensed providers, message-based follow-up (Ro)"],
     },
     {
       name: "Flexibility",
@@ -2578,7 +2578,7 @@ const edenRoBattle: BattleData = {
     { feature: "Membership fee", provider1Value: "None on its pricing pages; the Terms still mention a recurring membership program", provider2Value: "$39 first month, then $74-$149/mo", highlight: "provider1" },
     { feature: "FDA-approved medication", provider1Value: "Core plans compounded; brand-name Wegovy $1,695, Zepbound/Ozempic/Mounjaro $1,399 a month also listed", provider2Value: "Yes", highlight: "provider2" },
     { feature: "Insurance", provider1Value: "Not needed; cash-pay", provider2Value: "Can apply to the medication", highlight: "provider2" },
-    { feature: "Clinical support", provider1Value: "Doctor-guided care, 24/7 human support", provider2Value: "Licensed providers, message-based", highlight: "provider1" },
+    { feature: "Clinical support", provider1Value: "Eden says: clinician-guided care, 24/7 real human support", provider2Value: "Licensed providers, message-based", highlight: "provider1" },
     { feature: "Cancellation", provider1Value: "Account Settings, 48+ hours before renewal; non-refundable once fulfilled; 15%-in-six-months warranty with conditions", provider2Value: "48 hours before renewal; fees non-refundable", highlight: "none" },
   ],
 };

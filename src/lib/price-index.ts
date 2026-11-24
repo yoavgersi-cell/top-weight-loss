@@ -76,7 +76,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   },
   {
     providerId: "eden",
-    edge: "One flat price every month and at every dose, with 24/7 human support",
+    edge: "One flat price every month and at every dose; Eden says it includes 24/7 real human support",
     semaglutide: { price: "$99", note: "flat every month, same price at every dose, excluding new member discounts or specific plans; standard full-price rate (Eden's site, eden.health, read Nov 24, 2026); the Terms allow price changes" },
     tirzepatide: { price: "$129", note: "flat every month, same price at every dose, excluding new member discounts or specific plans; standard full-price rate (Eden's site, eden.health, read Nov 24, 2026); the Terms allow price changes" },
     shipping: "Free expedited shipping; delivery step labelled 2 - 3 business days (Eden's Terms do not guarantee a time); read Nov 24, 2026",

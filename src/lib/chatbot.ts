@@ -169,7 +169,7 @@ const WL_MATCH_COPY: Record<string, { why: string[]; priceNote?: string; alt: { 
   },
   eden: {
     why: [
-      "24/7 human support with doctor-guided care",
+      "Eden says it offers 24/7 real human support and clinician-guided care",
       "One flat price every month, at every dose",
       "No long-term contract; cancel in Account Settings at least 48 hours before renewal",
     ],

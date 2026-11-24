@@ -110,7 +110,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Membership fee", value: "Pricing pages say none; the Terms still mention a recurring membership program" },
       { label: "Commitment", value: "No long-term contract; cancel in Account Settings at least 48 hours before renewal" },
       { label: "Refunds", value: "Non-refundable once fulfilled; 15%-in-six-months warranty with conditions" },
-      { label: "Support", value: "Doctor-guided care with 24/7 human support" },
+      { label: "Support", value: "Eden says it offers clinician-guided care and 24/7 real human support" },
     ],
   },
   // Collective: read from collective.org (homepage and FAQ), Nov 11, 2026.
