@@ -14,6 +14,7 @@ import { glp1WeightLossMedicationsGuideArticle } from "./glp1-weight-loss-medica
 import { embodyVsRoWeightLossArticle } from "./embody-vs-ro-weight-loss";
 import { compoundedSemaglutideGoingAwayArticle } from "./compounded-semaglutide-going-away";
 import { howToCancelTelehealthGlp1SubscriptionArticle } from "./how-to-cancel-telehealth-glp1-subscription";
+import { isEdenLegitArticle } from "./is-eden-legit";
 import { trueCostTable, budgetList } from "@/lib/true-cost";
 
 export interface Article {
@@ -1843,7 +1844,7 @@ export const articles: Article[] = [
       },
       {
         heading: "The verdict",
-        body: 'Embody is a legitimate, affordable way to start doctor-prescribed GLP-1 treatment online, backed by real certification and licensed pharmacies. Whether it\'s the right pick depends on price and features versus other providers - see how it stacks up in our <a href="/weight-loss/reviews">weight-loss provider rankings</a>, or compare cheaper and comparable options in <a href="/weight-loss/articles/embody-alternatives">Embody alternatives</a>.  The same checks for the other budget picks are in <a href="/weight-loss/articles/is-wellmedr-legit">is welludr legit</a> and <a href="/weight-loss/articles/is-altrx-legit">is altRx legit</a>. This article is general information, not medical advice.',
+        body: 'Embody is a legitimate, affordable way to start doctor-prescribed GLP-1 treatment online, backed by real certification and licensed pharmacies. Whether it\'s the right pick depends on price and features versus other providers - see how it stacks up in our <a href="/weight-loss/reviews">weight-loss provider rankings</a>, or compare cheaper and comparable options in <a href="/weight-loss/articles/embody-alternatives">Embody alternatives</a>.  The same checks for the other budget picks are in <a href="/weight-loss/articles/is-wellmedr-legit">is welludr legit</a>, <a href="/weight-loss/articles/is-altrx-legit">is altRx legit</a> and <a href="/weight-loss/articles/is-eden-legit">is Eden (TryEden) legit</a>. This article is general information, not medical advice.',
       },
     ],
   },
@@ -2112,7 +2113,7 @@ export const articles: Article[] = [
       },
       {
         heading: "The verdict",
-        body: 'welludr is legit by every marker we can verify: a real prescription process, a named pharmacy, published prices that match what Reddit commenters report paying, and written cancellation and refund terms. The honest caveats are the two above - results vary by person no matter how good the service is, and the headline price requires a 12-month commitment. Read the <a href="/weight-loss/reviews/wellmedr">full welludr review</a> for the complete record, or compare it against the no-commitment alternative in <a href="/weight-loss/embody-vs-wellmedr">embody vs welludr</a>.  Comparing the budget trio? The same checks are in <a href="/weight-loss/articles/is-embody-legit">is embody legit</a> and <a href="/weight-loss/articles/is-altrx-legit">is altRx legit</a>. This article is general information, not medical advice.',
+        body: 'welludr is legit by every marker we can verify: a real prescription process, a named pharmacy, published prices that match what Reddit commenters report paying, and written cancellation and refund terms. The honest caveats are the two above - results vary by person no matter how good the service is, and the headline price requires a 12-month commitment. Read the <a href="/weight-loss/reviews/wellmedr">full welludr review</a> for the complete record, or compare it against the no-commitment alternative in <a href="/weight-loss/embody-vs-wellmedr">embody vs welludr</a>.  Comparing the budget trio? The same checks are in <a href="/weight-loss/articles/is-embody-legit">is embody legit</a>, <a href="/weight-loss/articles/is-altrx-legit">is altRx legit</a> and <a href="/weight-loss/articles/is-eden-legit">is Eden (TryEden) legit</a>. This article is general information, not medical advice.',
       },
     ],
   },
@@ -2807,4 +2808,5 @@ export const articles: Article[] = [
   embodyVsRoWeightLossArticle,
   compoundedSemaglutideGoingAwayArticle,
   howToCancelTelehealthGlp1SubscriptionArticle,
+  isEdenLegitArticle,
 ];

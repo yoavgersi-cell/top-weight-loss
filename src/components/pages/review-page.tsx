@@ -153,9 +153,9 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "MEDGm reviews: compounded GLP-1 injections from $169, daily GLP-1 tablets from $239 and brand-name Zepbound on a $99 membership plus medication. Pros and cons.",
   },
   eden: {
-    title: "Eden Reviews 2026: $99 Flat GLP-1, Is It Legit? & Verdict",
+    title: "Eden (TryEden) Reviews 2026: $99 Flat GLP-1, Legit or Not?",
     description:
-      "Eden reviews: {prices}, flat at every dose, no membership, 24/7 human support. Is Eden legit? Pros, cons and verdict.",
+      "Eden (TryEden) reviews: {prices}, flat at every dose. Is Eden legit? Pros, cons, refunds, Terms and verdict.",
   },
   trimrx: {
     title: "TrimRx Reviews 2026 (Trim Rx): Is It Legit? Cost & Verdict",
@@ -632,6 +632,13 @@ const REVIEW_TRUST_STRIP: Record<string, { icon: LucideIcon; label: string }[]> 
 // Providers that changed their brand name. The old name is shown under the H1
 // and declared as the Organization's alternateName, so returning readers and
 // searches for the old name still land on the right page.
+// Display names for the H1 and the "Is X legit?" FAQ where searchers use a
+// second name for the brand (Nov 24, 2026: "tryeden" is the old domain and the
+// phrase people type; Eden's site now lives at eden.health).
+const H1_DISPLAY_NAMES: Record<string, string> = {
+  eden: "Eden (TryEden)",
+};
+
 const FORMER_NAMES: Record<string, string> = {
   wellmedr: "wellmedr", // welludr since Oct 2026; id and slug unchanged
 };
@@ -818,7 +825,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // own researched content (pricing, treatments, best-for, verdict). Powers
   // both the visible FAQ section and the FAQPage schema (rich results / PAA).
   const reviewFaqs = [
-    { question: `Is ${provider.name} legit?`, answer: legit?.verdict ?? review.reviewIntro },
+    { question: `Is ${H1_DISPLAY_NAMES[provider.id] ?? provider.name} legit?`, answer: legit?.verdict ?? review.reviewIntro },
     { question: `How much does ${provider.name} cost?`, answer: review.pricingSummary },
     review.treatmentOptions?.length
       ? { question: `What treatments does ${provider.name} offer?`, answer: `${provider.name} offers ${review.treatmentOptions.join(", ")}.` }
@@ -934,7 +941,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 <h1 className="text-[22px] font-bold text-[#191919] sm:text-[28px]">
                   {/* Providers reviewed on more than one vertical (Hims, Ro,
                       Maximus...) name the vertical, so no two pages share an H1. */}
-                  {provider.name} {MULTI_VERTICAL_PROVIDERS.has(provider.id) ? `${verticalH1Label(ctx.vertical)} ` : ""}Reviews
+                  {H1_DISPLAY_NAMES[provider.id] ?? provider.name} {MULTI_VERTICAL_PROVIDERS.has(provider.id) ? `${verticalH1Label(ctx.vertical)} ` : ""}Reviews
                 </h1>
                 {FORMER_NAMES[provider.id] && (
                   <p className="mt-0.5 text-[13px] text-gray-500">Formerly {FORMER_NAMES[provider.id]}</p>
