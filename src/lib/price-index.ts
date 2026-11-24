@@ -31,7 +31,8 @@ export type PriceIndexRow = {
 
 // Rows below: operator check of each provider's own site, November 3, 2026;
 // embody re-read November 16, 2026; healthrx and directmeds re-read
-// November 18, 2026 (see the change log).
+// November 18, 2026; eden re-read November 24, 2026 on eden.health (prices
+// unchanged at $99 and $129, so no change-log entry; see the change log).
 export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "wellmedr",
@@ -76,10 +77,10 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "eden",
     edge: "One flat price every month and at every dose, with 24/7 human support",
-    semaglutide: { price: "$99", note: "flat every month, same price at every dose" },
-    tirzepatide: { price: "$129", note: "flat every month, same price at every dose" },
-    shipping: "Shipping time not published - confirm at checkout",
-    commitment: "None - no membership, no annual or long-term plan",
+    semaglutide: { price: "$99", note: "flat every month, same price at every dose, excluding new member discounts or specific plans; standard full-price rate (Eden's site, eden.health, read Nov 24, 2026); the Terms allow price changes" },
+    tirzepatide: { price: "$129", note: "flat every month, same price at every dose, excluding new member discounts or specific plans; standard full-price rate (Eden's site, eden.health, read Nov 24, 2026); the Terms allow price changes" },
+    shipping: "Free expedited shipping; delivery step labelled 2 - 3 business days (Eden's Terms do not guarantee a time); read Nov 24, 2026",
+    commitment: "No long-term contract; month-to-month subscription, cancel in Account Settings at least 48 hours before renewal; pricing pages say no membership fee (the Terms still mention a membership program); read Nov 24, 2026",
   },
   {
     providerId: "sprout",

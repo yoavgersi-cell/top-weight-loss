@@ -84,8 +84,8 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     medication: "semaglutide",
     format: "injection",
     price: "$99",
-    priceNote: "flat every month, every dose; no membership",
-    shipping: "Home delivery",
+    priceNote: "flat every month, every dose; no separate membership fee listed (read Nov 24, 2026)",
+    shipping: "Free expedited delivery",
     image: "/products/eden-semaglutide.webp",
   },
   // Luvo (Oct 25, 2026): prices read from the provider's product pages;
@@ -238,8 +238,8 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     medication: "tirzepatide",
     format: "injection",
     price: "$129",
-    priceNote: "flat every month, every dose; no membership",
-    shipping: "Home delivery",
+    priceNote: "flat every month, every dose; no separate membership fee listed (read Nov 24, 2026)",
+    shipping: "Free expedited delivery",
     image: "/products/eden-tirzepatide.webp",
   },
   {

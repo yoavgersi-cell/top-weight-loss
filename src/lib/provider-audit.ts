@@ -100,12 +100,16 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Brand-name option", value: "Wegovy $1,799/month" },
     ],
   },
+  // Eden: read from eden.health (pricing pages, Terms revised Nov 16, 2026,
+  // brand pages), Nov 24, 2026. Source: ops/research/2026-11-24-eden-evidence.md.
   "weight-loss:eden": {
     rows: [
-      { label: "Semaglutide price", value: "$99/month, flat every month and at every dose" },
-      { label: "Tirzepatide price", value: "$129/month, flat every month and at every dose" },
-      { label: "Membership fee", value: "None" },
-      { label: "Commitment", value: "None - no annual or long-term plans required" },
+      { label: "Semaglutide price", value: "$99/month, flat every month and at every dose (read Nov 24, 2026)" },
+      { label: "Tirzepatide price", value: "$129/month, flat every month and at every dose (read Nov 24, 2026)" },
+      { label: "Brand-name options", value: "Wegovy $1,695/month; Zepbound, Ozempic and Mounjaro $1,399/month each" },
+      { label: "Membership fee", value: "Pricing pages say none; the Terms still mention a recurring membership program" },
+      { label: "Commitment", value: "No long-term contract; cancel in Account Settings at least 48 hours before renewal" },
+      { label: "Refunds", value: "Non-refundable once fulfilled; 15%-in-six-months warranty with conditions" },
       { label: "Support", value: "Doctor-guided care with 24/7 human support" },
     ],
   },
