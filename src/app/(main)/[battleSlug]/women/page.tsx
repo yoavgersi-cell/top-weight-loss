@@ -156,7 +156,8 @@ function WomenEditorial() {
             Give any treatment at least 3-6 months before judging it, with fuller results around 12 months. Hair
             grows slowly, so patience and consistency matter more than any single product. Compare the providers
             above to find the treatment and price that fit your goals, or read the{" "}
-            <Link href="/hair-loss" className={link}>full hair-loss comparison</Link> for every provider we track.
+            <Link href="/hair-loss" className={link}>full hair-loss comparison</Link> for every provider we track.{" "}
+            You can also browse <Link href="/hair-loss/reviews" className={link}>all hair loss reviews</Link>.
           </p>
         </div>
         <p className="text-[13px] leading-relaxed text-gray-500">

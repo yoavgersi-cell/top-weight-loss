@@ -16,7 +16,7 @@ import { ProviderCta } from "@/components/provider-cta";
 import { ReviewStickyCta } from "@/components/review-sticky-cta";
 import { ProviderGallery } from "@/components/provider-gallery";
 import { getGallery } from "@/data/provider-gallery";
-import { SiblingLinks, CATEGORY_LABEL, reviewSiblings, comparisonSiblings, articleSiblings, pickSiblings } from "@/components/sibling-links";
+import { SiblingLinks, CATEGORY_LABEL, reviewSiblings, comparisonSiblings, articleSiblings, pickSiblings, seeAlsoLinks } from "@/components/sibling-links";
 import { getReviewRecord } from "@/data/reviews";
 import { analysisPath, hasReviewAnalysis } from "@/lib/review-analysis";
 import { THREE_WAY_COMPARISONS } from "@/lib/three-way";
@@ -1518,6 +1518,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           title={`More ${CATEGORY_LABEL[ctx.vertical] ?? ""} provider reviews`.replace(/\s+/g, " ")}
           links={pickSiblings(reviewSiblings(config, ctx), hubLink(ctx, `/reviews/${slug}`))}
         />
+        <SiblingLinks className="mb-6" title="See also" links={seeAlsoLinks(ctx.vertical, `/reviews/${slug}`)} />
 
         {/* Related content */}
         {(relatedBattles.length > 0 || relatedTrios.length > 0 || relatedArticles.length > 0 || showComparisonLink) && (
