@@ -1,7 +1,7 @@
 import { DEFAULT_OG_IMAGE } from "@/lib/og";
 import { visibleTrustBadges } from "@/lib/trustpilot-display";
 import { pageReviewSchema } from "@/data/reviewers";
-import { SiblingLinks, CATEGORY_LABEL, reviewSiblings, comparisonSiblings, articleSiblings, pickSiblings } from "@/components/sibling-links";
+import { SiblingLinks, CATEGORY_LABEL, reviewSiblings, comparisonSiblings, articleSiblings, pickSiblings, seeAlsoLinks } from "@/components/sibling-links";
 import { medicalWebPageFields } from "@/lib/medical-schema";
 import type { Metadata } from "next";
 import { Fragment } from "react";
@@ -1572,6 +1572,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             title={`More ${CATEGORY_LABEL[ctx.vertical] ?? ""} comparisons`.replace(/\s+/g, " ")}
             links={pickSiblings(comparisonSiblings(config, ctx), hubLink(ctx, `/${slug}`), 10)}
           />
+          <SiblingLinks className="mb-10" title="See also" links={seeAlsoLinks(ctx.vertical, `/${slug}`)} />
 
           {/* ───── RELATED COMPARISONS ───── */}
           {(relatedBattles.length > 0 || relatedTrios.length > 0) && (

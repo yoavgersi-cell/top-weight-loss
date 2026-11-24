@@ -1364,7 +1364,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "How do you switch from Keeps without losing progress?",
-        body: `The active ingredients are identical prescriptions across providers, so switching is mostly about continuity: time the new order to your remaining supply, disclose current treatment in the new provider's intake, and let its licensed clinician set the plan - never stack DHT blockers from two services. If you're weighing the jump, start from <a href="/hair-loss/hims-vs-keeps">Hims vs Keeps</a> to see how the mainstream pair compare, then check <a href="/hair-loss/keeps-vs-maximus">Keeps vs Maximus</a> for the upgrade path.`,
+        body: `The active ingredients are identical prescriptions across providers, so switching is mostly about continuity: time the new order to your remaining supply, disclose current treatment in the new provider's intake, and let its licensed clinician set the plan - never stack DHT blockers from two services. If you're weighing the jump, start from <a href="/hair-loss/hims-vs-keeps">Hims vs Keeps</a> to see how the mainstream pair compare, then check <a href="/hair-loss/keeps-vs-maximus">Keeps vs Maximus</a> for the upgrade path. The Ro matchup is in <a href="/hair-loss/keeps-vs-ro">Keeps vs Ro</a>.`,
       },
     ],
   },
@@ -2020,11 +2020,11 @@ const articles: ArticleData[] = [
       },
       {
         heading: "How do the top providers compare?",
-        body: `In our rankings, <a href="/hair-loss/reviews/maximus">Maximus</a> stands out for men wanting a broad prescription toolkit - oral finasteride, minoxidil and dutasteride plus a compounded topical - while <a href="/hair-loss/reviews/happyhead">Happy Head</a> is dermatologist-founded and serves both men and women with highly customizable formulas. See them head to head in <a href="/hair-loss/maximus-vs-happy-head">Maximus vs Happy Head</a>.`,
+        body: `In our rankings, <a href="/hair-loss/reviews/maximus">Maximus</a> stands out for men wanting a broad prescription toolkit - oral finasteride, minoxidil and dutasteride plus a compounded topical - while <a href="/hair-loss/reviews/happyhead">Happy Head</a> is dermatologist-founded and serves both men and women with highly customizable formulas. See them head to head in <a href="/hair-loss/maximus-vs-happy-head">Maximus vs Happy Head</a>. Browse <a href="/hair-loss/reviews">all hair loss reviews</a> for the other providers.`,
       },
       {
         heading: "Does the provider treat men, women or both?",
-        body: `Not every provider treats everyone. Some, like Maximus, focus on men; others, like Happy Head, formulate for both men and women. If you're a woman, make sure a provider offers options appropriate for you - see our guide to <a href="/hair-loss/articles/hair-loss-treatment-for-women">hair loss treatment for women</a>.`,
+        body: `Not every provider treats everyone. Some, like Maximus, focus on men; others, like Happy Head, formulate for both men and women. If you're a woman, make sure a provider offers options appropriate for you - see our guide to <a href="/hair-loss/articles/hair-loss-treatment-for-women">hair loss treatment for women</a>. Providers suited to women are on our <a href="/hair-loss/women">hair loss treatment for women providers</a> page.`,
       },
       {
         heading: "What about cost?",
@@ -2058,7 +2058,7 @@ const articles: ArticleData[] = [
       },
       {
         heading: "How do you start treatment online?",
-        body: `Some telehealth providers formulate specifically for women. In our rankings, <a href="/hair-loss/reviews/happyhead">Happy Head</a> is dermatologist-founded and offers personalized formulas for both men and women, including options like spironolactone. Compare your choices on our <a href="/hair-loss">best hair-loss providers</a> page. This article is general information, not medical advice.`,
+        body: `Some telehealth providers formulate specifically for women. In our rankings, <a href="/hair-loss/reviews/happyhead">Happy Head</a> is dermatologist-founded and offers personalized formulas for both men and women, including options like spironolactone. Compare your choices on our <a href="/hair-loss">best hair-loss providers</a> page. The provider list for women is on our <a href="/hair-loss/women">hair loss treatment for women</a> page. This article is general information, not medical advice.`,
       },
     ],
   },

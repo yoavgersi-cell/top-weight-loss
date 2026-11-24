@@ -76,6 +76,25 @@ export function articleSiblings(config: SiteConfig, ctx: SiteContext): SiblingLi
     .map((a) => ({ href: hubLink(ctx, `/articles/${a.slug}`), label: a.title }));
 }
 
+// Editorial "see also" pins (Nov 24, 2026 internal-link plan). The related
+// comparison cards stop at six and skip unranked opponents, so a few useful
+// head-to-heads and listings were never linked from the pages a reader would
+// come from. Keyed by vertical + page path; the label is the destination's own
+// name. Nothing here states a fact, it only points.
+const SEE_ALSO: Record<string, SiblingLink[]> = {
+  "weight-loss/reviews/medvi": [{ href: "/trt/reviews/medvi-quad", label: "Medvi quad review" }],
+  "trt/reviews/dudemeds": [{ href: "/trt/dudemeds-vs-brightmeds", label: "DudeMeds vs Brightmeds" }],
+  "trt/reviews/petermd": [{ href: "/trt/fountain-trt-vs-petermd", label: "Fountain TRT vs PeterMD" }],
+  "trt/hone-vs-fridays": [{ href: "/trt/fridays-vs-brightmeds", label: "Fridays vs Brightmeds" }],
+  "hair-loss/reviews/keeps": [{ href: "/hair-loss/keeps-vs-ro", label: "Keeps vs Ro" }],
+  "online-therapy/reviews/betterhelp": [{ href: "/online-therapy/reviews", label: "All online therapy reviews" }],
+  "online-therapy/reviews/talkspace": [{ href: "/online-therapy/reviews", label: "All online therapy reviews" }],
+};
+
+export function seeAlsoLinks(vertical: string, path: string): SiblingLink[] {
+  return SEE_ALSO[`${vertical}${path}`] ?? [];
+}
+
 export function SiblingLinks({
   title,
   links,

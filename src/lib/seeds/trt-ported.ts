@@ -1806,7 +1806,7 @@ export const TRT_LANDING_PAGES_PORTED: LandingPageData[] = [
       },
       {
         heading: "How we ranked the cheapest TRT clinics",
-        body: `<p>We ranked these clinics by best value - the lowest all-in cost that still includes real lab testing and a licensed-clinician review - rather than the lowest headline price alone. Pricing changes often, so treat figures as approximate and confirm them on each provider's site. See the full field on our <a href="/trt">TRT clinic comparison</a> and browse every <a href="/trt/reviews">provider review</a>.</p><p><em>This page is general information, not medical advice, and not financial advice. Confirm current pricing directly with each provider, and let a licensed clinician decide whether TRT is right for you.</em></p>`,
+        body: `<p>We ranked these clinics by best value - the lowest all-in cost that still includes real lab testing and a licensed-clinician review - rather than the lowest headline price alone. Pricing changes often, so treat figures as approximate and confirm them on each provider's site. See the full field on our <a href="/trt">TRT clinic comparison</a> and browse every <a href="/trt/reviews">provider review</a>. You can also read our <a href="/trt/reviews/marek">Marek Health review</a>.</p><p><em>This page is general information, not medical advice, and not financial advice. Confirm current pricing directly with each provider, and let a licensed clinician decide whether TRT is right for you.</em></p>`,
       },
     ],
     updatedAt: UPDATED,
