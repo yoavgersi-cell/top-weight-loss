@@ -8,7 +8,7 @@ const indexPrice = (id: string, drug: "semaglutide" | "tirzepatide") =>
 
 const tirzVsSemaRows: [string, string, string][] = [
   ["Drug class", "Dual GIP/GLP-1 receptor agonist", "GLP-1 receptor agonist"],
-  ["Average Weight Loss in Trials", "~15.0%-20.9% average loss measured at the 72-week assessment point (SURMOUNT)", "~14.9% mean loss measured at the 68-week assessment point (STEP)"],
+  ["Average Weight Loss in Trials", "20.9% average loss at 72 weeks (tirzepatide 15 mg, SURMOUNT-1)", "~14.9% mean loss at 68 weeks (semaglutide 2.4 mg, STEP 1)"],
   ["FDA Approval Status", "Zepbound® injection is FDA-approved for chronic weight management; the same molecule is approved for type 2 diabetes as Mounjaro® injection", "Wegovy® injection and Wegovy® tablets are FDA-approved for chronic weight management; the same molecule is approved for type 2 diabetes as Ozempic® injection"],
   ["Dosing Schedule", "Once-weekly injection", "Once-weekly injection (Wegovy®, Ozempic®); Wegovy® tablets are taken once daily"],
   ["Best For", "Patients seeking greater average weight loss observed in clinical trials, when appropriate", "Patients seeking an FDA-approved GLP-1 therapy with extensive long-term safety and outcomes data"],
@@ -245,17 +245,42 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         - can help you better understand the differences and make a more informed decision.
       </p>
 
-      {/* Safety section added at the medical reviewer's request, Nov 12, 2026.
-          Every statement is taken from the current FDA labels (Zepbound rev.
-          01/2026, Wegovy June 2026, read on DailyMed) or FDA's page on
-          compounded GLP-1 drugs; nothing here is our own clinical claim. */}
+      {/* Eligibility & safety section, at the medical reviewer's request
+          (Dr. B. Dolapihilla): Nov 12, 2026, expanded Nov 25, 2026. Every
+          statement is taken from the current FDA labels (Zepbound rev.
+          11/2026, Wegovy June 2026, read on DailyMed), FDA's page on
+          compounded GLP-1 drugs, or the named trials cited inline
+          (SURMOUNT-1, via the Zepbound label; SURMOUNT-5, NEJM 2025). Nothing
+          here is our own clinical claim. */}
       <section id="safety" className="mb-8 rounded-2xl border border-amber-200 bg-amber-50/40 p-5 sm:p-6" aria-labelledby="safety-heading">
         <h2 id="safety-heading" className="mb-2 text-[22px] font-bold text-[#191919]">
-          Safety: what to know before you start
+          Eligibility and safety: what to know before you start
         </h2>
         <p className="mb-4 text-[15px] text-gray-700">
           Semaglutide and tirzepatide are prescription medicines. The points below come from the <a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee06186f-2aa3-4990-a760-757579d8f77b" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#0C4B75] hover:underline">Wegovy label</a> and the <a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=487cd7e7-434c-4925-99fa-aa80b1cc776b" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#0C4B75] hover:underline">Zepbound label</a> and from the <a href="https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#0C4B75] hover:underline">FDA guidance on compounded GLP-1 drugs</a>; a licensed prescriber decides whether either medicine is right for you.
         </p>
+
+        <h3 className="mb-1.5 text-[16px] font-bold text-[#191919]">Who these medicines are for</h3>
+        <ul className="mb-4 list-disc space-y-1 pl-6 text-[15px]">
+          <li>The approved medicines are generally for adults with a body mass index (BMI) of <strong>30 kg/m&sup2; or more</strong>, or <strong>27 kg/m&sup2; or more with a weight-related condition</strong> such as high blood pressure, type 2 diabetes or abnormal cholesterol.</li>
+          <li>Meeting a BMI threshold does not by itself make treatment appropriate, and falling just outside one does not by itself rule it out. A licensed prescriber decides, and that review should come before you sign up. Our{" "}
+            <Link href="/weight-loss/glp1-bmi-calculator" className="font-semibold text-[#0C4B75] hover:underline">BMI and eligibility check</Link>{" "}
+            shows where you sit against the label criteria.</li>
+        </ul>
+
+        <h3 className="mb-1.5 text-[16px] font-bold text-[#191919]">Know the drug, the form and its approval status before you click</h3>
+        <ul className="mb-4 list-disc space-y-1 pl-6 text-[15px]">
+          <li>The FDA-approved products are specific drugs in specific forms: semaglutide as the Wegovy&reg; once-weekly injection and the Wegovy&reg; once-daily tablet, and tirzepatide as the Zepbound&reg; once-weekly injection.</li>
+          <li>Compounded versions - including injection vials and under-the-tongue (sublingual) drops or troches - are <strong>not FDA-approved</strong> and are not the same as the approved product, even when the active ingredient&rsquo;s name matches. FDA&rsquo;s position is that a compounded medicine is appropriate only when an FDA-approved product cannot meet an individual patient&rsquo;s medical needs.</li>
+          <li>Before you choose a provider, be clear on three things: the drug name, the route (a swallowed tablet, an injection, or under-the-tongue), and whether that exact form is FDA-approved or compounded.</li>
+        </ul>
+
+        <h3 className="mb-1.5 text-[16px] font-bold text-[#191919]">What the trial results show - and what they don&rsquo;t</h3>
+        <ul className="mb-4 list-disc space-y-1 pl-6 text-[15px]">
+          <li>In its trial, the approved tirzepatide injection (Zepbound&reg;, 15 mg) produced an average weight loss of <strong>20.9% at 72 weeks</strong> (<a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=487cd7e7-434c-4925-99fa-aa80b1cc776b" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#0C4B75] hover:underline">Zepbound label</a>, Study 1, SURMOUNT-1). Higher averages that are sometimes quoted - around 22.5% - describe only the participants who stayed on treatment for the full trial, so 20.9% is the more representative figure.</li>
+          <li>A head-to-head trial in adults with obesity but without type 2 diabetes found <strong>20.2% with tirzepatide versus 13.7% with semaglutide</strong> at 72 weeks (<a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2416394" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#0C4B75] hover:underline">SURMOUNT-5</a>, N Engl J Med 2025;393(1):26-36).</li>
+          <li>These are results for the <strong>FDA-approved once-weekly injections</strong> in their clinical trials. Compounded semaglutide and tirzepatide have not been studied this way, so these figures should not be taken as the results you would get from a compounded product.</li>
+        </ul>
 
         <h3 className="mb-1.5 text-[16px] font-bold text-[#191919]">Side effects</h3>
         <ul className="mb-4 list-disc space-y-1 pl-6 text-[15px]">
@@ -279,8 +304,8 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
 
         <h3 className="mb-1.5 text-[16px] font-bold text-[#191919]">Dosing and medication review</h3>
         <ul className="list-disc space-y-1 pl-6 text-[15px]">
-          <li>Doses are increased step by step, and only under prescriber supervision.</li>
-          <li>With compounded injections, your instructions should state the dose in milligrams, the concentration of the vial, and the matching syringe volume. Syringe &ldquo;units&rdquo; alone cause confusion: FDA has received reports of dosing errors, some requiring hospital care, from patients measuring the wrong dose.</li>
+          <li>The approved semaglutide and tirzepatide weight-management injections are given <strong>once weekly</strong>, and doses are increased step by step under prescriber supervision. If you have side effects, contact your prescriber before changing your schedule or dose.</li>
+          <li>With compounded injections, your instructions should state the dose in milligrams, the concentration of the vial, and the matching syringe volume. Syringe &ldquo;units&rdquo; alone cause confusion: FDA has received reports of dosing errors, some requiring hospital care, from patients measuring the wrong dose. Whenever the concentration changes, confirm the correct syringe marking with your pharmacist.</li>
           <li>If you take insulin or a sulfonylurea, those doses may need review because of the risk of low blood sugar (hypoglycaemia).</li>
         </ul>
       </section>
