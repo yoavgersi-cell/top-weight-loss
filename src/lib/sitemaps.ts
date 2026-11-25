@@ -77,7 +77,7 @@ const WL_STATIC_PATHS: { path: string; priority: number; changeFrequency: "weekl
   { path: "/glp1-weight-loss-statistics", priority: 0.8, changeFrequency: "weekly", lastModified: PRICE_INDEX_VERIFIED },
   { path: "/how-to-choose-a-glp1-provider", priority: 0.8, changeFrequency: "weekly", lastModified: "2026-09-24" },
   { path: "/glp1-bmi-calculator", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-27" },
-  { path: "/glp1-cost-calculator", priority: 0.8, changeFrequency: "weekly", lastModified: "2026-10-27" },
+  { path: "/glp1-cost-calculator", priority: 0.8, changeFrequency: "weekly", lastModified: PRICE_DATA_UPDATED },
   { path: "/glp1-dose-schedule", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-27" },
   { path: "/black-friday-glp1-deals", priority: 0.8, changeFrequency: "weekly", lastModified: blackFridayLatestVerified() },
   { path: "/how-we-rank", priority: 0.6, changeFrequency: "monthly" },
@@ -189,6 +189,20 @@ export function newestLastModified(entries: MetadataRoute.Sitemap): Date | undef
   return times.length ? new Date(Math.max(...times)) : undefined;
 }
 
+// Newest content dates of one vertical: reviews, articles, and (for the home) battles too.
+function listingDates(config: SiteConfig) {
+  const reviewsNewest = newestOf((config.reviews ?? []).map((r) => itemLastModified(r.updatedAt)));
+  const articlesNewest = newestOf((config.articles ?? []).map((a) => itemLastModified(a.updatedAt, a.publishedAt)));
+  const battlesNewest = newestOf((config.battles ?? []).map((b) => itemLastModified(b.updatedAt, b.publishedAt)));
+  return { reviewsNewest, articlesNewest, homeNewest: newestOf([reviewsNewest, articlesNewest, battlesNewest]) };
+}
+
+// ISO day the vertical home was last changed (the same value its sitemap <lastmod> carries), for
+// the hub page's WebPage schema; undefined when no record carries a real date.
+export function verticalHomeModified(config: SiteConfig): string | undefined {
+  return listingDates(config).homeNewest?.toISOString().slice(0, 10);
+}
+
 // Sitemap entries for one vertical, rooted at `base` (origin + /<vertical>).
 function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean): MetadataRoute.Sitemap {
   const P = (path: string) => `${base}${path}`;
@@ -196,10 +210,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
   // Listing pages (vertical home, /reviews, /articles) change whenever one of
   // the items they list changes, so their lastmod is the newest child date -
   // a real value, not a shared constant.
-  const reviewsNewest = newestOf((config.reviews ?? []).map((r) => itemLastModified(r.updatedAt)));
-  const articlesNewest = newestOf((config.articles ?? []).map((a) => itemLastModified(a.updatedAt, a.publishedAt)));
-  const battlesNewest = newestOf((config.battles ?? []).map((b) => itemLastModified(b.updatedAt, b.publishedAt)));
-  const homeNewest = newestOf([reviewsNewest, articlesNewest, battlesNewest]);
+  const { reviewsNewest, articlesNewest, homeNewest } = listingDates(config);
 
   const entries: MetadataRoute.Sitemap = [
     { url: base, lastModified: homeNewest, changeFrequency: "weekly", priority: 0.9 },

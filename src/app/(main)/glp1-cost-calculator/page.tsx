@@ -11,7 +11,7 @@ import { TrustDisclosure } from "@/components/medical-sources";
 import { CostCalculator, type CostRow } from "@/components/tools/cost-calculator";
 import { medicalWebPageFields } from "@/lib/medical-schema";
 import { getConfig } from "@/lib/config-store";
-import { BRAND_SHELF, PRICE_INDEX, PRICE_INDEX_VERIFIED } from "@/lib/price-index";
+import { BRAND_SHELF, PRICE_DATA_UPDATED, PRICE_INDEX, PRICE_INDEX_VERIFIED } from "@/lib/price-index";
 
 export const revalidate = 60;
 
@@ -26,7 +26,9 @@ const SLUG = "glp1-cost-calculator";
 const PATH = `/weight-loss/${SLUG}`;
 const CANONICAL = `https://www.treatmentshub.com${PATH}`;
 const PUBLISHED = "2026-10-27";
-const UPDATED = "2026-10-27";
+// Every row is built from PRICE_INDEX, so the page changes when the price data does (e.g. the
+// Nov 20 welludr change), not on the day the tool shipped. Same record the tracker uses.
+const UPDATED = PRICE_DATA_UPDATED;
 const TITLE = "GLP-1 Cost Calculator: Semaglutide & Tirzepatide Over 1 to 24 Months";
 
 const longDate = (iso: string) => new Date(iso).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
