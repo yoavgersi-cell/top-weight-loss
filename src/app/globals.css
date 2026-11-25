@@ -384,3 +384,48 @@ html[data-legacy] .legacy-name {
 @media (prefers-reduced-motion: reduce) {
   .pip-eyes, .pip-light, .pip-launch, .pip-launch:hover svg, .pip-pop, .pip-panel, .pip-in, .pip-dot { animation: none; }
 }
+
+/* ───── Phone tap targets (Nov 25, 2026) ─────
+   Brand, breadcrumb, footer and in-table links get a 44px hit area from padding.
+   Each padding is paired with an equal negative margin (or sits on an inline box,
+   where vertical padding does not move the line), so nothing on the page shifts.
+   Phones only: from 640px up the rules do not apply. */
+@media (max-width: 639px) {
+  .hub-brand {
+    padding-block: 11px;
+    margin-block: -11px;
+  }
+  nav[aria-label="Breadcrumb"] a {
+    padding: 13px 6px;
+    margin: -13px -6px;
+  }
+  /* Footer: internal links are inline inside a block row, so padding is free. */
+  footer nav span.block a {
+    padding: 14px 8px;
+    margin-inline: -8px;
+  }
+  /* The two external links (Instagram, LinkedIn) are block rows in a space-y-1.5 list (17px line
+     + 6px gap = 23px pitch). Adjacent negative margins collapse instead of adding, so each
+     position gets its own offset to keep that pitch and the column height. */
+  footer nav a.block {
+    padding-block: 14px;
+    margin-block: 0;
+  }
+  footer nav span.block + a.block {
+    margin-top: -14px;
+  }
+  footer nav a.block + a.block {
+    margin-top: -22px;
+  }
+  footer nav:has(> a.block:last-child) {
+    margin-bottom: -14px;
+  }
+  /* Plain text links inside tables (button-style or padded links are left alone). The tables
+     scroll sideways inside their own box, so vertical padding past the cell's own padding would
+     make the box scroll up and down as well: 11px stays inside the tightest cells (about 38px
+     tall in total) and the width is padded out to 44px with an equal negative margin. */
+  main table a:not([class*="block"]):not([class*="flex"]):not([class*="rounded"]):not([class*="px-"]):not([class*="py-"]) {
+    padding: 11px 6px;
+    margin-inline: -6px;
+  }
+}

@@ -69,13 +69,13 @@ export function Header() {
 
       {/* Mobile menu */}
       {isOpen && nav.length > 0 && (
-        <nav className="sm:hidden border-t border-[#E5E5E5] bg-white px-4 py-3 space-y-3">
+        <nav className="sm:hidden border-t border-[#E5E5E5] bg-white px-4 py-1.5">
           {nav.map((item) => (
             <Link
               key={item.label}
               href={item.href}
               onClick={() => setIsOpen(false)}
-              className="block text-[15px] font-medium text-[#191919] hover:text-[#0C4B75]"
+              className="block py-[10.5px] text-[15px] font-medium text-[#191919] hover:text-[#0C4B75]"
             >
               {item.label}
             </Link>

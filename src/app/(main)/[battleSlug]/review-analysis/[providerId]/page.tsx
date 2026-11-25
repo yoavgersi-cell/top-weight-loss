@@ -177,7 +177,7 @@ export default async function ReviewAnalysisPage({ params }: { params: Promise<{
       <div className="mx-auto max-w-[960px] px-4 py-10 text-[16px] leading-[1.75] text-gray-800 sm:px-6">
         <div className="qa mb-10 flex items-start gap-4 rounded-2xl border border-emerald-100 bg-emerald-50/50 p-6">
           <ShieldCheck className="mt-0.5 h-6 w-6 shrink-0 text-emerald-600" strokeWidth={2} />
-          <div className="text-[15px] leading-[1.75] text-gray-600">
+          <div className="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">
             <h2 className="mb-2 text-[18px] font-bold text-[#191919]">The short answer</h2>
             <p className="mb-2">
               Of the {a.total} {name} reviews we hold, <strong className="text-[#191919]">{a.stars.positive} ({pct(a.stars.positive, a.total)}%) rate it 4 or 5 stars</strong> and {a.stars.low} ({pct(a.stars.low, a.total)}%) rate it 3 or lower.
@@ -274,7 +274,7 @@ export default async function ReviewAnalysisPage({ params }: { params: Promise<{
               </h3>
               <ul className="space-y-3">
                 {praiseExcerpts.map(({ theme, review, excerpt }) => (
-                  <li key={theme.label} className="rounded-xl border border-emerald-100 bg-emerald-50/30 p-4 text-[14.5px] leading-relaxed text-gray-700">
+                  <li key={theme.label} className="rounded-xl border border-emerald-100 bg-emerald-50/30 p-4 text-[16px] leading-relaxed sm:text-[14.5px] text-gray-700">
                     <span className="mb-1 block text-[11.5px] font-bold uppercase tracking-wide text-emerald-700">{theme.label}</span>
                     <span className="mr-2 inline-flex h-5 items-center rounded px-1.5 text-[11px] font-bold text-white" style={{ backgroundColor: tpStarColor(review.rating) }}>{review.rating}★</span>
                     &ldquo;{excerpt}&rdquo;
@@ -329,7 +329,7 @@ export default async function ReviewAnalysisPage({ params }: { params: Promise<{
               </h3>
               <ul className="space-y-3">
                 {criticismExcerpts.map(({ theme, review, excerpt }) => (
-                  <li key={theme.label} className="rounded-xl border border-amber-100 bg-amber-50/30 p-4 text-[14.5px] leading-relaxed text-gray-700">
+                  <li key={theme.label} className="rounded-xl border border-amber-100 bg-amber-50/30 p-4 text-[16px] leading-relaxed sm:text-[14.5px] text-gray-700">
                     <span className="mb-1 block text-[11.5px] font-bold uppercase tracking-wide text-amber-700">{theme.label}</span>
                     <span className="mr-2 inline-flex h-5 items-center rounded px-1.5 text-[11px] font-bold text-white" style={{ backgroundColor: tpStarColor(review.rating) }}>{review.rating}★</span>
                     &ldquo;{excerpt}&rdquo;
@@ -440,7 +440,7 @@ export default async function ReviewAnalysisPage({ params }: { params: Promise<{
             {FAQS.map((f) => (
               <div key={f.question}>
                 <h3 className="mb-1 text-[17px] font-bold text-[#191919]">{f.question}</h3>
-                <p className="text-[15px] leading-[1.75] text-gray-600">{f.answer}</p>
+                <p className="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">{f.answer}</p>
               </div>
             ))}
           </div>

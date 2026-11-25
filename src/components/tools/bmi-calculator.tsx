@@ -154,7 +154,7 @@ export function BmiCalculator() {
             </div>
             <div className={`mt-4 rounded-xl border p-4 ${result.verdict.tone}`}>
               <p className="text-[15px] font-bold text-[#191919]">{result.verdict.heading}</p>
-              <p className="mt-1 text-[14px] leading-[1.7] text-gray-700">{result.verdict.body}</p>
+              <p className="mt-1 text-[16px] leading-[1.7] sm:text-[14px] text-gray-700">{result.verdict.body}</p>
             </div>
             <p className="mt-3 text-[12.5px] leading-relaxed text-gray-500">
               For reference, at your height a BMI of 25 is about {Math.round(25 * result.meters * result.meters * (units === "imperial" ? 2.20462 : 1))} {units === "imperial" ? "lb" : "kg"} and a BMI of 30 is about{" "}

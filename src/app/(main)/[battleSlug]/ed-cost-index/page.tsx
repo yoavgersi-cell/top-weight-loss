@@ -237,7 +237,7 @@ export default async function EdCostIndexPage({ params }: { params: Promise<{ ba
         {/* Methodology */}
         <section className="mb-12">
           <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Methodology</h2>
-          <div className="space-y-3 text-[15px] leading-[1.75] text-gray-600">
+          <div className="space-y-3 text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">
             <p>
               The index covers the legitimate routes to ED treatment in the US online market: generic
               oral PDE5 inhibitors, brand-name pills, compounded multi-ingredient formulas, intranasal
@@ -293,7 +293,7 @@ export default async function EdCostIndexPage({ params }: { params: Promise<{ ba
         {/* Next steps */}
         <section>
           <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Compare the providers behind these prices</h2>
-          <p className="text-[15px] leading-[1.75] text-gray-600">
+          <p className="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">
             See how the licensed clinics stack up on our{" "}
             <Link href="/ed" className="font-semibold text-[#0C4B75] hover:underline">
               ED treatment comparison

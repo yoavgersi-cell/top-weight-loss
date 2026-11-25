@@ -272,7 +272,7 @@ export default async function PriceTrackerPage() {
         {shortAnswer && (
           <div className="mb-10 flex items-start gap-4 rounded-2xl border border-emerald-100 bg-emerald-50/50 p-6">
             <ShieldCheck className="mt-0.5 h-6 w-6 shrink-0 text-emerald-600" strokeWidth={2} />
-            <div className="text-[15px] leading-[1.75] text-gray-600">
+            <div className="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">
               <h2 className="mb-2 text-[18px] font-bold text-[#191919]">How much do online GLP-1s cost right now?</h2>
               <p>{shortAnswer}</p>
             </div>
@@ -465,7 +465,7 @@ export default async function PriceTrackerPage() {
                       {e.moves.map((m) => <MoveChip key={m.drug} m={m} />)}
                     </div>
                   )}
-                  <p className="mt-3 text-[14.5px] leading-relaxed text-gray-700">{e.change}</p>
+                  <p className="mt-3 text-[16px] leading-relaxed sm:text-[14.5px] text-gray-700">{e.change}</p>
                   {e.source && <p className="mt-2 text-[12.5px] text-gray-500">Source: {e.source}</p>}
                 </li>
               );
@@ -490,7 +490,7 @@ export default async function PriceTrackerPage() {
             {faqs.map((f) => (
               <div key={f.question} className="rounded-xl border border-gray-200 bg-white p-5">
                 <h3 className="text-[16px] font-bold text-[#191919]">{f.question}</h3>
-                <p className="mt-2 text-[14.5px] leading-relaxed text-gray-600 [overflow-wrap:anywhere]">{f.answer}</p>
+                <p className="mt-2 text-[16px] leading-relaxed sm:text-[14.5px] text-gray-600 [overflow-wrap:anywhere]">{f.answer}</p>
               </div>
             ))}
           </div>

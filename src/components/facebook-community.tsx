@@ -135,7 +135,7 @@ export function FacebookCommunityBlock({
           What people say about {providerName} in Facebook groups
         </h2>
       </div>
-      <p className="mb-5 max-w-[680px] text-[14.5px] leading-relaxed text-gray-700">
+      <p className="mb-5 max-w-[680px] text-[16px] leading-relaxed sm:text-[14.5px] text-gray-700">
         Real conversations from Facebook support groups. Shared anonymously, including both positive and
         negative experiences.
       </p>

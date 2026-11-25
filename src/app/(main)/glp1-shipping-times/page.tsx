@@ -164,7 +164,7 @@ export default async function ShippingTimesPage() {
       <div className="mx-auto max-w-[960px] px-4 py-10 text-[16px] leading-[1.75] text-gray-800 sm:px-6">
         <div className="mb-10 flex items-start gap-4 rounded-2xl border border-emerald-100 bg-emerald-50/50 p-6">
           <ShieldCheck className="mt-0.5 h-6 w-6 shrink-0 text-emerald-600" strokeWidth={2} />
-          <div className="text-[15px] leading-[1.75] text-gray-600">
+          <div className="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">
             <h2 className="mb-2 text-[18px] font-bold text-[#191919]">The short answer</h2>
             <p className="mb-2">
               {fastest.length > 0 && (

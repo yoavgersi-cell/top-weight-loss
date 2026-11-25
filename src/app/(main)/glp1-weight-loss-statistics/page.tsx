@@ -180,7 +180,7 @@ export default async function StatisticsPage() {
         {/* Short answer - the figures a reader (or an AI answer) most often wants from this page */}
         <section className="mb-10 rounded-xl border border-emerald-100 bg-emerald-50/40 p-5 sm:p-6">
           <h2 className="mb-2 text-[18px] font-bold text-[#191919]">The short answer</h2>
-          <p className="text-[15px] leading-[1.75] text-gray-600">
+          <p className="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">
             In the pivotal trials, <strong className="text-[#191919]">semaglutide 2.4 mg (Wegovy) produced about 15% mean weight loss at 68 weeks</strong> and{" "}
             <strong className="text-[#191919]">tirzepatide 15 mg (Zepbound) up to 22.5% at 72 weeks</strong>, against about 2.4% on
             lifestyle-only placebo in STEP 1. At verified published prices, {PROVIDER_COUNT} US telehealth providers list
@@ -320,7 +320,7 @@ export default async function StatisticsPage() {
                     <p className="text-[12.5px] font-semibold text-gray-400 [font-variant-numeric:tabular-nums]">{longDate(entry.date)}</p>
                     <p className="text-[14px] font-bold text-[#191919]">{providerName(entry.providerId)}</p>
                   </div>
-                  <p className="text-[14px] leading-[1.7] text-gray-600">{entry.change}</p>
+                  <p className="text-[16px] leading-[1.7] sm:text-[14px] text-gray-600">{entry.change}</p>
                 </li>
               ))}
             </ol>
@@ -492,7 +492,7 @@ export default async function StatisticsPage() {
         <section className="mb-10">
           <h2 className="mb-4 text-[22px] font-bold text-[#191919]">How was this data gathered, and how should you cite it?</h2>
           <div className="rounded-xl border border-gray-200 bg-white p-6">
-            <p className="mb-3 text-[14px] leading-[1.7] text-gray-600">
+            <p className="mb-3 text-[16px] leading-[1.7] sm:text-[14px] text-gray-600">
               <strong className="text-[#191919]">Pricing:</strong> our price survey tracks the
               prices {PROVIDER_COUNT}{" "}US telehealth providers publish for compounded semaglutide and
               tirzepatide. Every figure is a published provider price verified by our team against the
@@ -500,7 +500,7 @@ export default async function StatisticsPage() {
               last verified on {longDate(PRICE_INDEX_VERIFIED)}, and every change to a listing is
               recorded in the change log above with its date.
             </p>
-            <p className="mb-3 text-[14px] leading-[1.7] text-gray-600">
+            <p className="mb-3 text-[16px] leading-[1.7] sm:text-[14px] text-gray-600">
               <strong className="text-[#191919]">Clinical data:</strong> weight-loss and safety
               figures are drawn from the medications&rsquo; pivotal published trials (STEP, SURMOUNT,
               SCALE, SUSTAIN) and FDA prescribing information, and are trial averages rather than

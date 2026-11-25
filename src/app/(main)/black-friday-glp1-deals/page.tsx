@@ -178,7 +178,7 @@ export default async function BlackFridayDealsPage() {
           </div>
           <span className={`rounded-full px-2.5 py-1 text-[11.5px] font-bold ${statusChip(s)}`}>{statusLabel(s)}</span>
         </div>
-        <p className="mt-2 text-[14.5px] leading-relaxed text-gray-700">{o.detail}</p>
+        <p className="mt-2 text-[16px] leading-relaxed sm:text-[14.5px] text-gray-700">{o.detail}</p>
         {gaps.length > 0 && (
           <ul className="mt-2 text-[13.5px] text-gray-700">
             {gaps.map((g) => (
@@ -230,7 +230,7 @@ export default async function BlackFridayDealsPage() {
       <div className="mx-auto max-w-[1100px] px-4 py-10 text-[16px] leading-[1.75] text-gray-800 sm:px-6">
         <div className="qa mb-10 flex items-start gap-4 rounded-2xl border border-emerald-100 bg-emerald-50/50 p-6">
           <ShieldCheck className="mt-0.5 h-6 w-6 shrink-0 text-emerald-600" strokeWidth={2} />
-          <div className="text-[15px] leading-[1.75] text-gray-600">
+          <div className="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">
             <h2 className="mb-2 text-[18px] font-bold text-[#191919]">The short answer</h2>
             <p>
               Black Friday is <strong className="text-[#191919]">{longDate(HOLIDAY_SEASON.blackFriday)}</strong> and Cyber Monday is{" "}
@@ -404,7 +404,7 @@ export default async function BlackFridayDealsPage() {
             {faqs.map((f) => (
               <div key={f.question}>
                 <h3 className="mb-1 text-[17px] font-bold text-[#191919]">{f.question}</h3>
-                <p className="text-[15px] leading-[1.75] text-gray-600">{f.answer}</p>
+                <p className="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">{f.answer}</p>
               </div>
             ))}
           </div>

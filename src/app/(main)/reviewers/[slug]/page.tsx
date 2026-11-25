@@ -149,7 +149,7 @@ export default async function ReviewerProfilePage({ params }: { params: Promise<
         {/* Scope */}
         <section className="mb-10 rounded-2xl border border-emerald-100 bg-emerald-50/50 p-6">
           <h2 className="mb-2 text-[18px] font-bold text-[#191919]">What {r.name.split(" ")[0]} reviews on this site</h2>
-          <p className="text-[15px] leading-[1.75] text-gray-600">{r.scope}</p>
+          <p className="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">{r.scope}</p>
           <p className="mt-2 text-[14px] text-gray-500">
             Pages she has reviewed carry a dated &ldquo;Reviewed for medical accuracy&rdquo; line; pages she has not yet
             reviewed name her as the site&rsquo;s medical reviewer without a review date. The full policy is in{" "}

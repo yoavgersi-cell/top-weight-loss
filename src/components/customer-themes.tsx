@@ -41,7 +41,7 @@ function ThemeList({ items, total, tone }: { items: ResolvedTheme[]; total: numb
               {t.count} of {total} reviews
             </span>
           </div>
-          <p className="mt-1 text-[14px] leading-[1.7] text-gray-700">{t.detail}</p>
+          <p className="mt-1 text-[16px] leading-[1.7] sm:text-[14px] text-gray-700">{t.detail}</p>
           {t.quoted && (
             <blockquote className="mt-2 border-l-2 border-gray-200 pl-3 text-[13.5px] leading-[1.65] text-gray-600">
               &ldquo;{excerpt(t.quoted)}&rdquo;
@@ -86,7 +86,7 @@ export function CustomerThemes({
       <h2 id="customer-themes-heading" className="mb-3 text-[22px] font-bold text-[#191919]">
         What do {providerName} customers say in their reviews?
       </h2>
-      <p className="mb-5 text-[15px] leading-[1.75] text-gray-700">
+      <p className="mb-5 text-[16px] leading-[1.75] sm:text-[15px] text-gray-700">
         Across the <strong>{total} reviews</strong> we transcribed from {providerName}&rsquo;s Trustpilot profile
         {range && <> (dated {fmt(range.from)} to {fmt(range.to)})</>}, {positive} rate it 4 or 5 stars ({pct(positive)}%) and {low} rate it 3 stars or lower ({pct(low)}%). These are the themes that come up, with the number of reviews that mention each; one review can count toward more than one theme.
       </p>

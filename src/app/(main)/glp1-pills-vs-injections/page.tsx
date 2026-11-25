@@ -398,7 +398,7 @@ export default async function Glp1PillsVsInjectionsPage() {
               {FAQS.map((f) => (
                 <div key={f.question} className="p-6">
                   <h3 className="mb-2 text-[16px] font-bold text-[#191919]">{f.question}</h3>
-                  <p className="text-[14px] leading-[1.7] text-gray-600">{f.answer}</p>
+                  <p className="text-[16px] leading-[1.7] sm:text-[14px] text-gray-600">{f.answer}</p>
                 </div>
               ))}
             </div>

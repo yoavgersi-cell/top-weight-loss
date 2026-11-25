@@ -44,7 +44,7 @@ export function ExpertTeam({ experts }: { experts: Expert[] }) {
             </div>
 
             {expert.bio && (
-              <p className="mt-4 text-[14px] leading-[1.7] text-gray-600">{expert.bio}</p>
+              <p className="mt-4 text-[16px] leading-[1.7] sm:text-[14px] text-gray-600">{expert.bio}</p>
             )}
 
             {expert.specialties && expert.specialties.length > 0 && (

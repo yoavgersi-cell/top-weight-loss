@@ -111,7 +111,7 @@ export default async function RetatrutidePage() {
           <TriangleAlert className="mt-0.5 h-6 w-6 shrink-0 text-amber-500" strokeWidth={2} />
           <div>
             <h2 className="mb-2 text-[18px] font-bold text-[#191919]">First, the honest part</h2>
-            <p className="text-[15px] leading-[1.75] text-gray-600">
+            <p className="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">
               Retatrutide is <strong className="text-[#191919]">not yet FDA-approved</strong> and
               can&rsquo;t be legitimately prescribed or purchased for weight loss. It&rsquo;s in
               late-stage trials, with a possible approval in the 2026-2027 window. This page
@@ -210,7 +210,7 @@ export default async function RetatrutidePage() {
             {faqs.map((f, i) => (
               <div key={i} className="p-6">
                 <h3 className="mb-2 text-[16px] font-bold text-[#191919]">{f.question}</h3>
-                <p className="text-[14px] leading-[1.7] text-gray-600">{f.answer}</p>
+                <p className="text-[16px] leading-[1.7] sm:text-[14px] text-gray-600">{f.answer}</p>
               </div>
             ))}
           </div>

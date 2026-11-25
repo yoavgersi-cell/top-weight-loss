@@ -474,7 +474,7 @@ export default async function MedicalReviewPolicyPage() {
             <Mail className="h-5 w-5 text-emerald-600" strokeWidth={2} />
             Found an error?
           </h2>
-          <p className="text-[15px] leading-[1.75] text-gray-600">
+          <p className="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">
             Email{" "}
             <a href="mailto:contact@treatmentshub.com" className={link}>
               contact@treatmentshub.com
@@ -495,7 +495,7 @@ export default async function MedicalReviewPolicyPage() {
             {FAQS.map((f) => (
               <div key={f.question} className="p-6">
                 <h3 className="mb-2 text-[16px] font-bold text-[#191919]">{f.question}</h3>
-                <p className="text-[14px] leading-[1.7] text-gray-600">{f.answer}</p>
+                <p className="text-[16px] leading-[1.7] sm:text-[14px] text-gray-600">{f.answer}</p>
               </div>
             ))}
           </div>

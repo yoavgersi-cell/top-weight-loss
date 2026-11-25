@@ -82,7 +82,7 @@ export function DealChecker({ rows, verifiedOn }: { rows: CheckerRow[]; verified
         </div>
       </div>
 
-      <div className="mt-5 rounded-xl border border-gray-200 bg-[#F7F8FA] p-4 text-[14.5px] leading-relaxed text-gray-700" aria-live="polite">
+      <div className="mt-5 rounded-xl border border-gray-200 bg-[#F7F8FA] p-4 text-[16px] leading-relaxed sm:text-[14.5px] text-gray-700" aria-live="polite">
         {!row || !cell ? (
           <p>{row ? `${row.name} does not publish a ${molecule} price in our index, so there is no verified figure to compare against.` : "Pick a provider."}</p>
         ) : result?.adv == null ? (
