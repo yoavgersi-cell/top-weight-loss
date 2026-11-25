@@ -9,9 +9,9 @@ import type { ArticleData } from "../config";
 export const TRT_GUIDES_PORTED: ArticleData[] = [
   {
     slug: "what-is-trt",
-    title: "What Is TRT? Meaning, How It Works & Who It's For",
+    title: "TRT Meaning: Testosterone Replacement Therapy Explained",
     description:
-      "TRT stands for testosterone replacement therapy. A plain-English guide to what TRT means, who it is for, how diagnosis works and what to expect from treatment.",
+      "TRT means testosterone replacement therapy, a medical treatment for low testosterone. Who it is for, how diagnosis works and what to expect from treatment.",
     category: "Guide",
     readTime: "8 min read",
     publishedAt: "2026-09-14",

@@ -63,12 +63,12 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
   "is-embody-legit": {
     title: "Is embody Legit or a Scam? We Checked the Pharmacy & Refunds",
     description:
-      "Is embody legit or a scam? LegitScript-certified 503A pharmacies, a licensed prescriber and a partial refund if you're not approved. Plus the complaints, honestly.",
+      "Is embody legit or a scam? LegitScript-certified 503A pharmacies, a licensed prescriber and a partial refund if you're not approved. Plus the complaints.",
   },
   "is-wellmedr-legit": {
     title: "Is welludr (wellmedr) Legit or a Scam? Reviews Checked",
     description:
-      "Is welludr (wellmedr) legit or a scam? Yes, with one catch. We verified the prescriber, the US pharmacy, the $41-$71 prices and the 12-month plan term.",
+      "Is welludr (wellmedr) legit or a scam? We checked the prescriber, the US pharmacy and the refund and cancellation terms. What to read before you pay.",
   },
   "is-altrx-legit": {
     // Keeps the keyword-rich SERP snippet (prices, flat-dose) even though the
@@ -80,7 +80,7 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
   "tirzepatide-vs-semaglutide": {
     title: "Tirzepatide vs Semaglutide (2026): Results & Prices",
     description:
-      "Tirzepatide vs semaglutide, the two leading GLP-1s: up to 22.5% vs ~15% weight loss in trials, side effects, dosing, and verified compounded prices from $41.",
+      "Tirzepatide vs semaglutide, the two leading GLP-1s: up to 22.5% vs ~15% weight loss in trials, side effects, dosing, and how compounded prices compare.",
   },
   "best-mounjaro-alternatives": {
     title: "7 Best Mounjaro Alternatives in 2026 (From $89/Month)",
@@ -90,17 +90,17 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
   "best-wegovy-alternatives": {
     title: "7 Best Wegovy Alternatives in 2026 (From $49/Month)",
     description:
-      "Compounded semaglutide - Wegovy's active ingredient - from $41-$89/month through licensed online providers. Real prices, what's included, and how to choose.",
+      "Compounded semaglutide, Wegovy's active ingredient, through licensed online providers. Real prices, what's included and how to choose. Not FDA-approved.",
   },
   "best-ro-alternatives": {
     title: "Best ro Weight Loss Alternatives in 2026 (From $49/mo)",
     description:
-      "Flat-priced GLP-1 providers that compete with ro: welludr ($41/mo), embody ($49/mo), altRx ($89/mo) and more - compared on price, speed and support.",
+      "Flat-priced GLP-1 providers that compete with ro: welludr, embody ($49/mo), altRx ($89/mo) and more, compared on price, speed and support.",
   },
   "can-you-get-ozempic-without-doctor": {
     title: "Can You Get Ozempic Without Seeing a Doctor? (2026)",
     description:
-      "No. GLP-1s legally require a prescription, but you don't need an office visit: licensed telehealth providers evaluate you online, from $41/month.",
+      "No. GLP-1s legally require a prescription, but you don't need an office visit: licensed telehealth providers evaluate you online and prescribe if appropriate.",
   },
   "weight-loss-medication-that-works-fast": {
     title: "Weight Loss Medication That Actually Works Fast (2026)",
@@ -110,19 +110,19 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
   "how-to-get-ozempic-online": {
     title: "How to Get Ozempic Online in 2026: 3 Steps (Legally)",
     description:
-      "The legitimate route: online intake, licensed-provider review, medication shipped. Brand-name and compounded semaglutide options from $41/month, explained.",
+      "The legitimate route: online intake, licensed-provider review, medication shipped. Brand-name and compounded semaglutide options, explained. Not FDA-approved.",
   },
   "semaglutide-cost-per-month": {
     title: "Semaglutide Cost Per Month (2026): $49 vs $1,150+",
     description:
-      "Compounded semaglutide runs $41-$199/month all-in via telehealth; brand-name Ozempic/Wegovy runs $1,150-$1,600 without insurance. Full real-price breakdown.",
+      "Compounded semaglutide costs far less per month via telehealth; brand-name Ozempic or Wegovy runs $1,150-$1,600 without insurance. Full real-price breakdown.",
   },
   // Nov 5, 2026 keyword pass: the searcher types "GLP-1" / "semaglutide"
   // with "without insurance" / "no insurance", so the title names both.
   "weight-loss-medication-without-insurance": {
     title: "GLP-1 Without Insurance (2026): Semaglutide & Tirzepatide",
     description:
-      "No insurance? Self-pay compounded semaglutide and tirzepatide start at $41-$89/month with the provider visit included. Verified prices, compared.",
+      "No insurance? Self-pay compounded semaglutide and tirzepatide plans include the provider visit. Verified prices. Compounded drugs are not FDA-approved.",
   },
   "semaglutide-side-effects-guide": {
     title: "Semaglutide Side Effects & Nausea: How to Manage Them (2026)",
@@ -132,7 +132,39 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
   "compounded-semaglutide-vs-brand-name": {
     title: "Compounded Semaglutide vs Brand Name: Real Differences",
     description:
-      "Same active ingredient, 503A-pharmacy preparation, and a 10x price gap ($41-$199 vs $1,150+/mo). What the FDA says, the real trade-offs, and how to stay safe.",
+      "Same active ingredient, 503A-pharmacy preparation, and a large gap against $1,150+/mo brand-name. What the FDA says, the real trade-offs and how to stay safe.",
+  },
+  // Nov 25, 2026 CTR pass (ops: Cleo, 2026-11-25-ctr-titles). Meta only; the
+  // stored article titles and bodies are untouched.
+  "wellmedr-cost": {
+    title: "welludr (formerly wellmedr) Cost 2026: Plans and Billing",
+    description:
+      "What welludr (formerly wellmedr) charges for compounded semaglutide and tirzepatide, how billing and plan terms work, and what to check before you pay.",
+  },
+  "wellmedr-alternatives": {
+    title: "welludr (formerly wellmedr) Alternatives 2026, Compared",
+    description:
+      "Six alternatives to welludr (formerly wellmedr) compared on price, plan terms, shipping and support, so you can pick the one that fixes what bothers you.",
+  },
+  "embody-cost": {
+    title: "embody Cost: How Much Is embody Weight Loss in 2026?",
+    description:
+      "embody pricing explained: what its compounded semaglutide and tirzepatide plans include, how billing works and how it compares to other GLP-1 providers.",
+  },
+  "trimrx-alternatives": {
+    title: "6 TrimRx Alternatives 2026: Price, Speed & Brand-Name",
+    description:
+      "TrimRx plans start at $179 a month (site, read Nov 22, 2026). Six alternatives sorted by what you want fixed: price, delivery speed, brand-name or support.",
+  },
+  "glp1-with-insurance": {
+    title: "Tirzepatide With Insurance Online (2026): Coverage & PA",
+    description:
+      "How GLP-1 and tirzepatide insurance coverage works: formularies, prior authorization, why denials happen, and the self-pay backup when coverage falls through.",
+  },
+  "foundayo-vs-wegovy-pill": {
+    title: "Foundayo vs Wegovy Pills: 11.1% vs 13.6% in Trials (2026)",
+    description:
+      "Foundayo pills vs Wegovy pills: 11.1% at 72 weeks (ATTAIN-1) vs 13.6% at 64 weeks (OASIS 4), separate trials. Food rules, side effects and price compared.",
   },
 };
 

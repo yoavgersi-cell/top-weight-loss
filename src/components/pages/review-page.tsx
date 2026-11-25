@@ -88,9 +88,15 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   },
   // ED vertical (ported from edtreatmenthub.com, Oct 21, 2026)
   quad: {
-    title: "Quad by MEDVi Review 2026: Cost, Ingredients & Is It Legit?",
+    title: "MEDVi Quad ED Medication Review 2026: Cost & Is It Legit?",
     description:
-      "Independent review of Quad by MEDVi, the compounded 4-in-1 dissolvable ED medication: what is in it, monthly cost, who it suits, and whether it is legit.",
+      "Quad by MEDVi is a compounded 4-in-1 ED medication, not FDA-approved. What is in it, what it costs, who it suits and whether it is legit.",
+  },
+  // TRT vertical (Nov 25, 2026 CTR pass); thin page with no price, so no cost promise.
+  marek: {
+    title: "Marek Health Review 2026: Labs, Coaching & TRT Explained",
+    description:
+      "Marek Health pairs comprehensive lab testing with provider guidance and coaching, and can include TRT. What the program involves, pros and cons, who it suits.",
   },
   // Ported from edtreatmenthub.com, Oct 31, 2026.
   rexmd: {
@@ -111,9 +117,9 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // the review-and-complaints intent leads, and the "1-2 days" shipping
     // claim is gone - no page on joinem.co states a day count and its Terms
     // say delivery timelines are not guaranteed (Atlas read, Nov 16, 2026).
-    title: "embody Reviews 2026: Complaints, Prices and What $49 Buys",
+    title: "embody Weight Loss Reviews 2026: Complaints & Refund Rules",
     description:
-      "We checked embody's $49 semaglutide and $99 tirzepatide prices against its Terms, read the refund rule and sorted the complaints. The catches first.",
+      "embody weight loss reviews: we checked the $49 sale price (read Nov 16, 2026), the refund rule in its Terms and sorted the complaints. The catches first.",
   },
   medvi: {
     // Decoupled from the "is medvi legit" query (Sep 2026): that phrase lived in
@@ -130,14 +136,14 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "Sprout reviews: {prices}, brand-name Wegovy available. Is Sprout legit? Pricing, pros & cons.",
   },
   altrx: {
-    title: "altRx Reviews 2026: What $89 Really Buys (Read First)",
+    title: "altRx Reviews 2026: Complaints, Prices & What $89 Buys",
     description:
-      "We checked altRx's $89 semaglutide and $149 tirzepatide plans, the $1,149 brand-name Ozempic shelf, shipping and the complaints. The catches other reviews skip.",
+      "altRx (alt rx) reviews: plans from $89 semaglutide and $149 tirzepatide (site, read Nov 20, 2026), brand-name Ozempic, shipping and the complaints we found.",
   },
   ro: {
     // Title matches the generated shared-provider title byte-for-byte - this
     // entry exists only to put "GLP-1" in the description (desc-only pass).
-    title: "ro Weight Loss Review 2026: Worth the Membership Fee?",
+    title: "ro Weight Loss Review 2026: What the Membership Covers",
     description:
       "ro bills a membership ($39, then $74-$149) plus brand-name Wegovy or Zepbound; insurance can apply. What the fee covers and who should skip it.",
   },
@@ -175,9 +181,9 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   wellmedr: {
     // Rebranded Oct 2026; the old name stays in the title so searches for
     // "wellmedr reviews" still match this page.
-    title: "welludr Reviews 2026: $41 GLP-1 and the 12-Month Catch",
+    title: "welludr (wellmedr) Reviews 2026: Pricing Terms & Catches",
     description:
-      "welludr (ex-wellmedr) sells semaglutide at $41 and tirzepatide at $71, flat at every dose, with a weight-loss warranty. The 12-month plan term to read first.",
+      "welludr (formerly wellmedr) reviews: what the plans cost, how billing and shipping work, the prescriber and pharmacy we verified, and the catches to read first.",
   },
   healthrx: {
     title: `HealthRx Reviews 2026: Is It Legit? ${indexPrice("healthrx", "semaglutide")}/mo GLP-1 Examined`,
@@ -666,10 +672,13 @@ export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Me
   const ED_OVERRIDE_SLUGS = new Set(["quad", "rexmd"]);
   // Oct 22, 2026: HRT's three providers (winona, gala, midi) exist only on /hrt.
   const HRT_OVERRIDE_SLUGS = new Set(["winona", "gala", "midi"]);
+  // Nov 25, 2026: Marek Health exists only on /trt.
+  const TRT_OVERRIDE_SLUGS = new Set(["marek"]);
   const override =
     ctx.vertical === "weight-loss" ||
     (ctx.vertical === "ed" && ED_OVERRIDE_SLUGS.has(slug)) ||
-    (ctx.vertical === "hrt" && HRT_OVERRIDE_SLUGS.has(slug))
+    (ctx.vertical === "hrt" && HRT_OVERRIDE_SLUGS.has(slug)) ||
+    (ctx.vertical === "trt" && TRT_OVERRIDE_SLUGS.has(slug))
       ? REVIEW_SEO_OVERRIDES[slug]
       : undefined;
   // Providers reviewed in more than one vertical (Ro, Maximus, PeterMD, Hims)
