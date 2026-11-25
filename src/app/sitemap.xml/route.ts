@@ -13,7 +13,7 @@ export async function GET() {
   if (!host.includes("treatmentshub")) {
     return new Response(urlsetXml(await legacySitemap()), { headers: XML_HEADERS });
   }
-  const sitemaps = [{ loc: `${HUB_URL}/sitemap-site.xml`, lastmod: newestLastModified(hubSiteEntries()) }];
+  const sitemaps = [{ loc: `${HUB_URL}/sitemap-site.xml`, lastmod: newestLastModified(await hubSiteEntries()) }];
   for (const v of await hubSitemapVerticals()) {
     sitemaps.push({ loc: `${HUB_URL}/sitemap-${v}.xml`, lastmod: newestLastModified(await hubVerticalSitemap(v)) });
   }
