@@ -10,7 +10,6 @@ import { getConfig } from "@/lib/config-store";
 import { THREE_WAY_COMPARISONS } from "@/lib/three-way";
 import {
   CONTENT_LAST_UPDATED,
-  latestUpdate,
   NOINDEX_ARTICLE_SLUGS,
   NOINDEX_WL_REVIEW_SLUGS,
   NOINDEX_WL_BATTLE_SLUGS,
@@ -21,7 +20,9 @@ import {
 } from "@/lib/config";
 import { WEIGHT_LOSS_MIGRATED } from "@/lib/site-context";
 import { ED_PRICE_DATA_UPDATED } from "@/lib/ed-price-index";
-import { PRICE_DATA_UPDATED } from "@/lib/price-index";
+import { COST_INDEX_UPDATED } from "@/lib/ed-cost-index";
+import { PRICE_DATA_UPDATED, PRICE_INDEX_VERIFIED } from "@/lib/price-index";
+import { latestVerified as blackFridayLatestVerified } from "@/lib/holiday-offers";
 import { articles } from "@/data/articles";
 import { analysisPath, reviewAnalysisRecords } from "@/lib/review-analysis";
 import { SLUG_ALIASES } from "@/lib/slug-aliases";
@@ -30,31 +31,55 @@ import { servesBattle } from "@/lib/battle-slugs";
 
 const BASE_URL = "https://www.topweightloss.io";
 const HUB_URL = "https://www.treatmentshub.com";
-const FALLBACK_DATE = new Date(CONTENT_LAST_UPDATED);
 
-// Per-item last-modified (the item's own updatedAt; stable fallback when none)
-// - the same value the on-page "Last updated" line and schema dateModified use.
-const flooredLastModified = (updatedAt?: string) => new Date(latestUpdate(updatedAt));
+// ───── lastmod policy (Nov 25, 2026) ─────
+// A <lastmod> is emitted only when a record carries a real content date, and
+// never one that is in the future or newer than the page's visible "Last
+// updated". When a page has no date of its own the tag is omitted: the old
+// shared fallback (CONTENT_LAST_UPDATED, 2026-09-01) stamped one identical value
+// on dozens of URLs, which Google discards as an untrusted signal.
+const ISO_DAY = /^\d{4}-\d{2}-\d{2}/;
+function realDate(d?: string | null): Date | undefined {
+  if (!d || !ISO_DAY.test(d)) return undefined;
+  const t = new Date(d);
+  if (Number.isNaN(t.getTime()) || t.getTime() > Date.now()) return undefined; // never the future
+  return t;
+}
+
+// An item's own last-modified date. Falls back to its publishedAt only when
+// that is not newer than the date the page itself shows (a page with no
+// updatedAt renders latestUpdate() = CONTENT_LAST_UPDATED); otherwise omitted.
+const itemLastModified = (updatedAt?: string, publishedAt?: string): Date | undefined =>
+  realDate(updatedAt) ?? (publishedAt && publishedAt <= CONTENT_LAST_UPDATED ? realDate(publishedAt) : undefined);
+
+// Newest of several dates (undefined when none is real).
+const newestOf = (dates: (Date | string | undefined)[]): Date | undefined => {
+  const ts = dates.map((d) => (typeof d === "string" ? realDate(d) : d)).filter((d): d is Date => !!d).map((d) => d.getTime());
+  return ts.length ? new Date(Math.max(...ts)) : undefined;
+};
 
 // Weight-loss-specific standalone pages (custom-coded, not CMS-driven). Shared
 // across hosts: on the hub they live under /weight-loss/... via the proxy.
+// `lastModified` mirrors the date each page shows as "Last updated" (the
+// constant is named after its source). Pages whose only visible date is the
+// shared CONTENT_LAST_UPDATED have none here, so no <lastmod> is emitted.
 const WL_STATIC_PATHS: { path: string; priority: number; changeFrequency: "weekly" | "monthly"; lastModified?: string }[] = [
   // The price tracker's lastmod is the date its data last changed, so a
   // verified price change re-submits it through IndexNow the same day.
   { path: "/glp1-price-changes", priority: 0.8, changeFrequency: "weekly", lastModified: PRICE_DATA_UPDATED },
-  { path: "/glp1-provider-comparison", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/weight-loss-pills", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/glp1-pills-vs-injections", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/glp1-provider-comparison", priority: 0.8, changeFrequency: "weekly", lastModified: "2026-10-17" },
+  { path: "/weight-loss-pills", priority: 0.8, changeFrequency: "weekly", lastModified: "2026-10-22" },
+  { path: "/glp1-pills-vs-injections", priority: 0.8, changeFrequency: "weekly", lastModified: "2026-10-22" },
   { path: "/retatrutide-weight-loss", priority: 0.8, changeFrequency: "weekly" },
   { path: "/ozempic-alternatives", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/cheapest-glp1", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/cheapest-glp1", priority: 0.8, changeFrequency: "weekly", lastModified: PRICE_INDEX_VERIFIED },
   { path: "/switch-from-ozempic", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/glp1-weight-loss-statistics", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/how-to-choose-a-glp1-provider", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/glp1-bmi-calculator", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/glp1-cost-calculator", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/glp1-dose-schedule", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/black-friday-glp1-deals", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/glp1-weight-loss-statistics", priority: 0.8, changeFrequency: "weekly", lastModified: PRICE_INDEX_VERIFIED },
+  { path: "/how-to-choose-a-glp1-provider", priority: 0.8, changeFrequency: "weekly", lastModified: "2026-09-24" },
+  { path: "/glp1-bmi-calculator", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-27" },
+  { path: "/glp1-cost-calculator", priority: 0.8, changeFrequency: "weekly", lastModified: "2026-10-27" },
+  { path: "/glp1-dose-schedule", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-27" },
+  { path: "/black-friday-glp1-deals", priority: 0.8, changeFrequency: "weekly", lastModified: blackFridayLatestVerified() },
   { path: "/how-we-rank", priority: 0.6, changeFrequency: "monthly" },
   { path: "/about", priority: 0.3, changeFrequency: "monthly" },
   // Nov 2026: the quiz and the legal pages (disclaimer, privacy, terms) are
@@ -67,7 +92,7 @@ const WL_STATIC_PATHS: { path: string; priority: number; changeFrequency: "weekl
 // /<vertical>/<path> by a static folder under [battleSlug]).
 const VERTICAL_STATIC_PATHS: Record<string, { path: string; updatedAt: string }[]> = {
   ed: [
-    { path: "/ed-cost-index", updatedAt: "2026-10-09" },
+    { path: "/ed-cost-index", updatedAt: COST_INDEX_UPDATED },
     { path: "/ed-price-changes", updatedAt: ED_PRICE_DATA_UPDATED },
   ],
   "hair-loss": [{ path: "/women", updatedAt: "2026-10-22" }],
@@ -80,13 +105,18 @@ const VERTICAL_STATIC_PATHS: Record<string, { path: string; updatedAt: string }[
 // so advertising them here would just point crawlers at duplicate URLs).
 // Site-level entries: the hub landing, the medical review policy and the
 // reviewer profiles. Served as /sitemap-site.xml.
-export function hubSiteEntries(): MetadataRoute.Sitemap {
+export async function hubSiteEntries(): Promise<MetadataRoute.Sitemap> {
+  // The hub landing lists the newest content of every vertical, so its lastmod
+  // is the newest lastmod across the vertical sitemaps (omitted when none).
+  const verticals = await Promise.all(VERTICAL_IDS.map((v) => hubVerticalSitemap(v)));
+  const hubNewest = newestLastModified(verticals.flat());
   return [
-    { url: HUB_URL, lastModified: FALLBACK_DATE, changeFrequency: "weekly", priority: 1 },
-    { url: `${HUB_URL}/medical-review-policy`, lastModified: new Date("2026-10-04"), changeFrequency: "monthly", priority: 0.4 },
+    { url: HUB_URL, lastModified: hubNewest, changeFrequency: "weekly", priority: 1 },
+    // Same date the page shows as "Last updated" (medical-review-policy/page.tsx UPDATED).
+    { url: `${HUB_URL}/medical-review-policy`, lastModified: new Date("2026-10-22"), changeFrequency: "monthly", priority: 0.4 },
     ...[...REVIEWERS, ...PROFILE_ONLY_REVIEWERS].map((r) => ({
       url: `${HUB_URL}/reviewers/${r.slug}`,
-      lastModified: new Date(`${r.since}-01`),
+      lastModified: realDate(`${r.since}-01`),
       changeFrequency: "monthly" as const,
       priority: 0.5,
     })),
@@ -118,7 +148,7 @@ export async function hubSitemapVerticals(): Promise<string[]> {
 
 // The whole hub in one list (IndexNow submitter).
 export async function hubSitemap(): Promise<MetadataRoute.Sitemap> {
-  const entries: MetadataRoute.Sitemap = [...hubSiteEntries()];
+  const entries: MetadataRoute.Sitemap = [...(await hubSiteEntries())];
   for (const v of VERTICAL_IDS) entries.push(...(await hubVerticalSitemap(v)));
   return entries;
 }
@@ -166,14 +196,10 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
   // Listing pages (vertical home, /reviews, /articles) change whenever one of
   // the items they list changes, so their lastmod is the newest child date -
   // a real value, not a shared constant.
-  const newest = (dates: (string | undefined)[]) => {
-    const real = dates.filter((d): d is string => !!d).sort();
-    return real.length ? new Date(real[real.length - 1]) : FALLBACK_DATE;
-  };
-  const reviewsNewest = newest((config.reviews ?? []).map((r) => r.updatedAt));
-  const articlesNewest = newest((config.articles ?? []).map((a) => a.updatedAt));
-  const battlesNewest = newest((config.battles ?? []).map((b) => b.updatedAt));
-  const homeNewest = new Date(Math.max(reviewsNewest.getTime(), articlesNewest.getTime(), battlesNewest.getTime()));
+  const reviewsNewest = newestOf((config.reviews ?? []).map((r) => itemLastModified(r.updatedAt)));
+  const articlesNewest = newestOf((config.articles ?? []).map((a) => itemLastModified(a.updatedAt, a.publishedAt)));
+  const battlesNewest = newestOf((config.battles ?? []).map((b) => itemLastModified(b.updatedAt, b.publishedAt)));
+  const homeNewest = newestOf([reviewsNewest, articlesNewest, battlesNewest]);
 
   const entries: MetadataRoute.Sitemap = [
     { url: base, lastModified: homeNewest, changeFrequency: "weekly", priority: 0.9 },
@@ -188,7 +214,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
   // Custom-coded pages that belong to one non-weight-loss vertical.
   const verticalId = base.split("/").pop() ?? "";
   for (const s of VERTICAL_STATIC_PATHS[verticalId] ?? []) {
-    entries.push({ url: P(s.path), lastModified: new Date(s.updatedAt), changeFrequency: "weekly", priority: 0.8 });
+    entries.push({ url: P(s.path), lastModified: realDate(s.updatedAt), changeFrequency: "weekly", priority: 0.8 });
   }
 
   // A CMS record whose URL the proxy 301s away from (retired slug in
@@ -207,7 +233,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
       .filter((r) => serves(`/reviews/${r.slug}`))
       .map((r) => ({
         url: P(`/reviews/${r.slug}`),
-        lastModified: flooredLastModified(r.updatedAt),
+        lastModified: itemLastModified(r.updatedAt),
         changeFrequency: "weekly" as const,
         priority: 0.8,
       }))
@@ -219,7 +245,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
       .filter((a) => serves(`/articles/${a.slug}`))
       .map((a) => ({
         url: P(`/articles/${a.slug}`),
-        lastModified: flooredLastModified(a.updatedAt),
+        lastModified: itemLastModified(a.updatedAt, a.publishedAt),
         changeFrequency: "weekly" as const,
         priority: 0.8,
       }))
@@ -234,7 +260,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
       .filter((b) => servesBattle(config, verticalId, b))
       .map((b) => ({
         url: P(`/${b.slug}`),
-        lastModified: flooredLastModified(b.updatedAt),
+        lastModified: itemLastModified(b.updatedAt, b.publishedAt),
         changeFrequency: "weekly" as const,
         priority: 0.8,
       }))
@@ -245,7 +271,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
       .filter((lp) => !(lp.slug in SLUG_ALIASES) && serves(`/${lp.slug}`))
       .map((lp) => ({
         url: P(`/${lp.slug}`),
-        lastModified: lp.updatedAt ? new Date(lp.updatedAt) : FALLBACK_DATE,
+        lastModified: realDate(lp.updatedAt),
         changeFrequency: "weekly" as const,
         priority: 0.9,
       }))
@@ -257,7 +283,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
     entries.push(
       ...THREE_WAY_COMPARISONS.filter((t) => !NOINDEX_WL_BATTLE_SLUGS.has(t.slug)).map((t) => ({
         url: P(`/${t.slug}`),
-        lastModified: flooredLastModified(),
+        lastModified: realDate(t.updatedAt), // the page shows t.updatedAt or the shared floor
         changeFrequency: "weekly" as const,
         priority: 0.8,
       }))
@@ -268,7 +294,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
     entries.push(
       ...WL_STATIC_PATHS.map((s) => ({
         url: P(s.path),
-        lastModified: s.lastModified && s.lastModified > CONTENT_LAST_UPDATED ? new Date(s.lastModified) : FALLBACK_DATE,
+        lastModified: realDate(s.lastModified),
         changeFrequency: s.changeFrequency,
         priority: s.priority,
       }))
@@ -279,7 +305,7 @@ function verticalEntries(base: string, config: SiteConfig, isWeightLoss: boolean
     entries.push(
       ...reviewAnalysisRecords().map((r) => ({
         url: P(analysisPath(r.providerId).replace(/^\/weight-loss/, "")),
-        lastModified: FALLBACK_DATE,
+        lastModified: realDate("2026-10-27"), // review-analysis page UPDATED
         changeFrequency: "weekly" as const,
         priority: 0.8,
       }))
@@ -298,67 +324,56 @@ export async function legacySitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
-      lastModified: FALLBACK_DATE,
       changeFrequency: "weekly",
       priority: 1,
     },
     {
       url: `${BASE_URL}/reviews`,
-      lastModified: FALLBACK_DATE,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${BASE_URL}/find-your-match`,
-      lastModified: FALLBACK_DATE,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/weight-loss-pills`,
-      lastModified: FALLBACK_DATE,
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/glp1-pills-vs-injections`,
-      lastModified: FALLBACK_DATE,
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/retatrutide-weight-loss`,
-      lastModified: FALLBACK_DATE,
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/ozempic-alternatives`,
-      lastModified: FALLBACK_DATE,
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/glp1-weight-loss-statistics`,
-      lastModified: FALLBACK_DATE,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${BASE_URL}/how-we-rank`,
-      lastModified: FALLBACK_DATE,
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
       url: `${BASE_URL}/about`,
-      lastModified: FALLBACK_DATE,
       changeFrequency: "monthly",
       priority: 0.3,
     },
     {
       url: `${BASE_URL}/disclaimer`,
-      lastModified: FALLBACK_DATE,
       changeFrequency: "monthly",
       priority: 0.2,
     },
@@ -372,7 +387,7 @@ export async function legacySitemap(): Promise<MetadataRoute.Sitemap> {
     .filter((review) => !NOINDEX_WL_REVIEW_SLUGS.has(review.slug))
     .map((review) => ({
       url: `${BASE_URL}/reviews/${review.slug}`,
-      lastModified: flooredLastModified(review.updatedAt),
+      lastModified: itemLastModified(review.updatedAt),
       changeFrequency: "weekly" as const,
       priority: 0.8,
     }));
@@ -380,7 +395,6 @@ export async function legacySitemap(): Promise<MetadataRoute.Sitemap> {
   const articlePages: MetadataRoute.Sitemap = [
     {
       url: `${BASE_URL}/articles`,
-      lastModified: FALLBACK_DATE,
       changeFrequency: "weekly",
       priority: 0.8,
     },
@@ -389,7 +403,7 @@ export async function legacySitemap(): Promise<MetadataRoute.Sitemap> {
       .filter((article) => !NOINDEX_ARTICLE_SLUGS.includes(article.slug))
       .map((article) => ({
         url: `${BASE_URL}/articles/${article.slug}`,
-        lastModified: flooredLastModified(article.updatedAt),
+        lastModified: itemLastModified(article.updatedAt, article.publishedAt),
         changeFrequency: "weekly" as const,
         priority: 0.8,
       })),
@@ -399,7 +413,7 @@ export async function legacySitemap(): Promise<MetadataRoute.Sitemap> {
     .filter((battle) => !NOINDEX_WL_BATTLE_SLUGS.has(battle.slug))
     .map((battle) => ({
       url: `${BASE_URL}/${battle.slug}`,
-      lastModified: flooredLastModified(battle.updatedAt),
+      lastModified: itemLastModified(battle.updatedAt, battle.publishedAt),
       changeFrequency: "weekly" as const,
       priority: 0.8,
     }));
@@ -407,7 +421,7 @@ export async function legacySitemap(): Promise<MetadataRoute.Sitemap> {
   const landingPageEntries: MetadataRoute.Sitemap = (config.landingPages ?? []).map(
     (lp) => ({
       url: `${BASE_URL}/${lp.slug}`,
-      lastModified: lp.updatedAt ? new Date(lp.updatedAt) : FALLBACK_DATE,
+      lastModified: realDate(lp.updatedAt),
       changeFrequency: "weekly" as const,
       priority: 0.9,
     })
