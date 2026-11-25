@@ -126,7 +126,8 @@ export default function DoseSchedulePage() {
           <div className="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">
             <h2 className="mb-2 text-[18px] font-bold text-[#191919]">The short answer</h2>
             <p>
-              <strong className="text-[#191919]">Wegovy</strong> steps up every 4 weeks: 0.25 mg, 0.5 mg, 1 mg, 1.7 mg, then a
+              <strong className="text-[#191919]">Wegovy</strong>{" "}
+              steps up every 4 weeks: 0.25 mg, 0.5 mg, 1 mg, 1.7 mg, then a
               maintenance dose of 1.7 mg or 2.4 mg from week 17, so the full ramp takes 16 weeks at the label&rsquo;s pace.{" "}
               <strong className="text-[#191919]">Zepbound</strong> starts at 2.5 mg for 4 weeks, then 5 mg, then rises in 2.5 mg
               steps after at least 4 weeks each, to a maintenance dose of 5, 10 or 15 mg. Both labels allow holding a step

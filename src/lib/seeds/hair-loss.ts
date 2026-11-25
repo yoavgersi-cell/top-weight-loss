@@ -1172,9 +1172,9 @@ const articles: ArticleData[] = [
   // and no supplement recommendations (house rule).
   {
     slug: "iron-deficiency-hair-loss",
-    title: "Iron Deficiency Hair Loss: The Blood Test That Settles It",
+    title: "Does Iron Deficiency Cause Hair Loss? The Ferritin Test",
     description:
-      "Low iron is a common, fixable cause of shedding, especially in women. The blood test to ask for, what the number means and how long regrowth takes.",
+      "Low iron can drive shedding, mostly in women, but the evidence is limited. The ferritin blood test to ask for, what it shows and why regrowth lags by months.",
     category: "Science",
     readTime: "7 min read",
     publishedAt: "2026-08-30",
