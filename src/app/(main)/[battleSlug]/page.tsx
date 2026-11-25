@@ -2,6 +2,7 @@ import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { medicalWebPageFields } from "@/lib/medical-schema";
 import type { Metadata } from "next";
 import { getConfig } from "@/lib/config-store";
+import { verticalHomeModified } from "@/lib/sitemaps";
 import { CONTENT_LAST_UPDATED, DEFAULT_VERTICAL, VERTICALS, isVertical, isPublishedVertical } from "@/lib/config";
 import { ROOT_CONTEXT, hubContext, canonicalUrl, hubLink, WEIGHT_LOSS_MIGRATED } from "@/lib/site-context";
 import Link from "next/link";
@@ -114,7 +115,9 @@ export default async function BattlePage({
       description: vConfig.hero.description,
       inLanguage: "en-US",
       datePublished: "2026-06-01",
-      dateModified: CONTENT_LAST_UPDATED,
+      // Newest review/article/comparison date on this vertical (what the sitemap lastmod and the
+      // "Last Updated" label also follow), not the shared Sep 1 floor.
+      dateModified: verticalHomeModified(vConfig) ?? CONTENT_LAST_UPDATED,
       isPartOf: { "@type": "WebSite", name: ctx.brandName, url: ctx.origin },
       ...(author && {
         author: { "@type": "Organization", name: researchTeam, url: canonicalUrl(ctx, "/about") },

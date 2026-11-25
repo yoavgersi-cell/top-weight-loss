@@ -9,11 +9,11 @@ export function DisclosureBar() {
 
   return (
     <>
-      <div className="bg-[#f0f4f8] border-b-[1.5px] border-[#cdd7e1] px-4 py-1.5 sm:py-2 text-center text-[11.5px] sm:text-[13px] leading-tight sm:leading-normal text-gray-600">
+      <div className="bg-[#f0f4f8] border-b-[1.5px] border-[#cdd7e1] px-4 py-1.5 sm:py-2 text-center text-[12px] sm:text-[13px] leading-tight sm:leading-normal text-gray-600">
         Some providers featured on this site may compensate us. This may affect the order and placement of listings but does not influence our editorial ratings or reviews.{" "}
         <button
           onClick={() => setIsOpen(true)}
-          className="-my-1.5 inline-block py-1.5 font-bold text-[#191919] underline underline-offset-2 hover:text-[#0C4B75]"
+          className="-my-1.5 inline-block py-1.5 max-sm:-my-[14.5px] max-sm:py-[14.5px] font-bold text-[#191919] underline underline-offset-2 hover:text-[#0C4B75]"
         >
           Advertising Disclosure
         </button>
@@ -35,7 +35,7 @@ export function DisclosureBar() {
 
             <h2 className="mb-5 text-[20px] font-bold text-[#191919]">Advertising Disclosure</h2>
 
-            <div className="space-y-4 text-[14px] leading-[1.7] text-gray-600">
+            <div className="space-y-4 text-[16px] leading-[1.7] sm:text-[14px] text-gray-600">
               <p>
                 {WEIGHT_LOSS_MIGRATED ? "Treatments Hub" : "TopWeightLoss.io"} is an independent comparison website designed to help consumers explore and evaluate weight loss treatment providers. We research, review, and compare available programs, services, and treatment options to make the decision process easier.
               </p>

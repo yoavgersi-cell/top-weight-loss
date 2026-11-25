@@ -248,7 +248,7 @@ export default async function AboutPage() {
                   <span className="text-[12px] font-bold uppercase tracking-[0.1em] text-gray-400">Step {i + 1}</span>
                 </div>
                 <h3 className="mt-3.5 text-[17px] font-bold leading-snug text-[#191919]">{title}</h3>
-                <p className="mt-2 text-[14px] leading-[1.7] text-gray-600">{desc}</p>
+                <p className="mt-2 text-[16px] leading-[1.7] sm:text-[14px] text-gray-600">{desc}</p>
               </li>
             ))}
           </ol>
@@ -266,7 +266,7 @@ export default async function AboutPage() {
             <BadgeDollarSign className="mt-0.5 h-6 w-6 shrink-0 text-[#0C4B75]" strokeWidth={2} />
             <div>
               <h2 className="text-[22px] font-bold leading-tight text-[#191919] sm:text-[24px]">What verification looks like</h2>
-              <p className="mt-1.5 max-w-[680px] text-[14.5px] leading-relaxed text-gray-600">
+              <p className="mt-1.5 max-w-[680px] text-[16px] leading-relaxed sm:text-[14.5px] text-gray-600">
                 When we say a price is verified, this is what we mean: a dated capture of the provider&rsquo;s own pricing
                 page. These three were taken on {longDate(CAPTURES_DATE)} and sit under the price table on our{" "}
                 <Link href="/weight-loss/articles/best-tirzepatide-online" className="font-semibold text-[#0C4B75] hover:underline">
@@ -457,7 +457,7 @@ export default async function AboutPage() {
             <div key={title} className="rounded-2xl border border-gray-200 bg-white p-5">
               <Icon className="h-5 w-5 text-[#0C4B75]" strokeWidth={2} />
               <h2 className="mt-3 text-[16px] font-bold text-[#191919]">{title}</h2>
-              <p className="mt-1.5 text-[14px] leading-[1.7] text-gray-600">{body}</p>
+              <p className="mt-1.5 text-[16px] leading-[1.7] sm:text-[14px] text-gray-600">{body}</p>
               {link && (
                 <a href={link.href} className="mt-2 inline-block text-[14px] font-semibold text-[#0C4B75] hover:underline">
                   {link.label}
@@ -471,7 +471,7 @@ export default async function AboutPage() {
         <section className="mb-14 flex flex-col gap-3 rounded-2xl border border-gray-200 bg-white p-5 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h2 className="text-[16px] font-bold text-[#191919]">Follow Treatments Hub</h2>
-            <p className="mt-1 text-[14px] leading-[1.7] text-gray-600">
+            <p className="mt-1 text-[16px] leading-[1.7] sm:text-[14px] text-gray-600">
               Price changes, new provider reviews and the occasional explainer, on the channels where we publish.
             </p>
           </div>

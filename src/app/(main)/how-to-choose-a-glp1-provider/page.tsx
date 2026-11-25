@@ -367,7 +367,7 @@ export default async function HowToChooseGlp1ProviderPage() {
           <ShieldCheck className="mt-0.5 h-6 w-6 shrink-0 text-emerald-600" strokeWidth={2} />
           <div>
             <h2 className="mb-2 text-[18px] font-bold text-[#191919]">The short answer</h2>
-            <p className="mb-2 text-[15px] leading-[1.75] text-gray-600">
+            <p className="mb-2 text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">
               Before you pay any GLP-1 telehealth provider, verify three things:
             </p>
             <ol className="mb-2 list-decimal space-y-1 pl-5 text-[15px] leading-[1.7] text-gray-600">
@@ -375,7 +375,7 @@ export default async function HowToChooseGlp1ProviderPage() {
               <li><strong className="text-[#191919]">Which pharmacy fills the medication</strong> - named, US-licensed, and willing to say which form it compounds.</li>
               <li><strong className="text-[#191919]">What you will actually pay</strong> - after the introductory price, and as your dose goes up.</li>
             </ol>
-            <p className="text-[15px] leading-[1.75] text-gray-600">
+            <p className="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">
               For the providers we reviewed, we found licensed-clinician review described in every published care
               model. How much access you have to that clinician after approval varies considerably, and it is
               the fourth thing worth checking.
@@ -670,7 +670,7 @@ export default async function HowToChooseGlp1ProviderPage() {
             {FAQS.map((f) => (
               <div key={f.question} className="p-6">
                 <h3 className="mb-2 text-[16px] font-bold text-[#191919]">{f.question}</h3>
-                <p className="text-[14px] leading-[1.7] text-gray-600">{f.answer}</p>
+                <p className="text-[16px] leading-[1.7] sm:text-[14px] text-gray-600">{f.answer}</p>
               </div>
             ))}
           </div>

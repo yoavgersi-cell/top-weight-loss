@@ -721,13 +721,13 @@ export default async function Glp1ProviderComparisonPage() {
                   <p className="mb-2 text-[15.5px] leading-[1.75]">{s.overview}</p>
 
                   <H3>Pricing breakdown</H3>
-                  <p className="text-[15px] leading-[1.75]">{s.pricing}</p>
+                  <p className="text-[16px] leading-[1.75] sm:text-[15px]">{s.pricing}</p>
 
                   <H3>Treatment and medical support</H3>
-                  <p className="text-[15px] leading-[1.75]">{s.support}</p>
+                  <p className="text-[16px] leading-[1.75] sm:text-[15px]">{s.support}</p>
 
                   <H3><span className="inline-flex items-center gap-1.5"><RedditMark className="h-4 w-4" /> What Reddit users are discussing</span></H3>
-                  <p className="text-[15px] leading-[1.75]">{s.reddit}</p>
+                  <p className="text-[16px] leading-[1.75] sm:text-[15px]">{s.reddit}</p>
                   <div className="mt-4">
                     <RedditThreadCarousel
                       providers={[{ id: s.id, name: r.name }]}
@@ -738,7 +738,7 @@ export default async function Glp1ProviderComparisonPage() {
                   </div>
 
                   <H3>Cancellation and refunds</H3>
-                  <p className="text-[15px] leading-[1.75]">
+                  <p className="text-[16px] leading-[1.75] sm:text-[15px]">
                     {s.cancellation} <span className="text-[13px] text-gray-500">Terms reviewed {TERMS_REVIEWED}.</span>
                   </p>
 
@@ -762,10 +762,10 @@ export default async function Glp1ProviderComparisonPage() {
                   </div>
 
                   <H3>Who this provider may suit</H3>
-                  <p className="text-[15px] leading-[1.75]">{s.suits}</p>
+                  <p className="text-[16px] leading-[1.75] sm:text-[15px]">{s.suits}</p>
 
                   <H3>Our editorial assessment</H3>
-                  <p className="text-[15px] leading-[1.75]">{s.assessment}</p>
+                  <p className="text-[16px] leading-[1.75] sm:text-[15px]">{s.assessment}</p>
 
                   <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
                     {p && (
@@ -878,7 +878,7 @@ export default async function Glp1ProviderComparisonPage() {
             {FAQS.map((f) => (
               <div key={f.question} className="p-6">
                 <h3 className="mb-2 text-[16px] font-bold text-[#191919]">{f.question}</h3>
-                <p className="text-[14px] leading-[1.7] text-gray-600">{f.answer}</p>
+                <p className="text-[16px] leading-[1.7] sm:text-[14px] text-gray-600">{f.answer}</p>
               </div>
             ))}
           </div>

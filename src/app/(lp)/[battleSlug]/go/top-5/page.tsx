@@ -297,7 +297,7 @@ export default async function TopFivePage({ params }: { params: Promise<{ battle
       </ol>
 
             {/* Short text below the chart */}
-            <section className="mt-8 space-y-3 text-[14.5px] leading-relaxed text-gray-600">
+            <section className="mt-8 space-y-3 text-[16px] leading-relaxed sm:text-[14.5px] text-gray-600">
               <h2 className="text-[17px] font-bold text-[#191919]">How we picked</h2>
               <p>We compare published prices, what each plan includes, how care works and real customer reviews.</p>
               <p>

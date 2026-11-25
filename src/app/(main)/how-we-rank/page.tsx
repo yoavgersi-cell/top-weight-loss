@@ -284,7 +284,7 @@ export default async function HowWeRankPage() {
         <section className="mb-12">
           <h2 className="mb-4 text-[22px] font-bold text-[#191919]">How we keep it accurate</h2>
           <div className="rounded-xl border border-gray-200 bg-white p-6">
-            <div className="space-y-4 text-[15px] leading-[1.75] text-gray-600">
+            <div className="space-y-4 text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">
               <p>
                 <strong className="text-[#191919]">We don&rsquo;t make things up.</strong> Prices,
                 medications, shipping times, and medical details are taken from each provider&rsquo;s
@@ -325,7 +325,7 @@ export default async function HowWeRankPage() {
             <Trophy className="mt-0.5 h-6 w-6 shrink-0 text-amber-500" strokeWidth={2} />
             <div>
               <h2 className="mb-2 text-[22px] font-bold text-[#191919]">How we pick a winner</h2>
-              <p className="text-[15px] leading-[1.75] text-gray-600">
+              <p className="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">
                 In a head-to-head comparison we score the two providers category by category -
                 pricing, medical support, medication options, speed, and customer experience. The
                 provider that wins the majority of categories takes the matchup, and the advantage
@@ -342,7 +342,7 @@ export default async function HowWeRankPage() {
             <RefreshCw className="mt-0.5 h-6 w-6 shrink-0 text-[#0C4B75]" strokeWidth={2} />
             <div>
               <h2 className="mb-2 text-[22px] font-bold text-[#191919]">Keeping reviews current</h2>
-              <p className="text-[15px] leading-[1.75] text-gray-600">
+              <p className="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">
                 We continuously monitor provider pricing and offerings, new clinical data, and recent
                 customer reviews, and revise our rankings, reviews, and comparisons as things change.
                 Each review and comparison shows when it was last updated.
@@ -377,7 +377,7 @@ export default async function HowWeRankPage() {
         <section className="mb-12">
           <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Medical disclaimer</h2>
           <div className="rounded-xl border border-gray-200 bg-white p-6">
-            <p className="text-[15px] leading-[1.75] text-gray-600">
+            <p className="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">
               treatmentshub.com is not a medical provider and does not prescribe medications. The
               information on this site is for educational and comparison purposes only and should not
               replace professional medical advice. GLP-1 medications are prescription drugs that require

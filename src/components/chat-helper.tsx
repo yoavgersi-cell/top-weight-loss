@@ -341,7 +341,9 @@ export function ChatHelper({ matches, verifiedLabel }: { matches: Record<string,
 
   if (!flow) return null;
   const step = stepId ? flow.steps[stepId] : null;
-  const bottom = isReview ? "bottom-[calc(84px+env(safe-area-inset-bottom))] sm:bottom-6" : "bottom-[calc(16px+env(safe-area-inset-bottom))] sm:bottom-6";
+  // --battle-cta-h is set by BattleStickyCta while its bar is on screen (phones), so the launcher
+  // sits above the bar instead of covering its right-hand button.
+  const bottom = isReview ? "bottom-[calc(84px+env(safe-area-inset-bottom))] sm:bottom-6" : "bottom-[calc(16px+env(safe-area-inset-bottom)+var(--battle-cta-h,0px))] transition-[bottom] duration-300 sm:bottom-6";
 
   return (
     <>

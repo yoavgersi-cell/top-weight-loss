@@ -1094,7 +1094,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               </h2>
             </div>
             <div className="p-6">
-              <p className="mb-4 text-[15px] leading-[1.75] text-gray-600">
+              <p className="mb-4 text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">
                 {legit.verdict}
               </p>
               <ul className="grid gap-2.5 sm:grid-cols-2">
@@ -1228,7 +1228,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               ))}
             </div>
           )}
-          <ReadableProse text={review.pricingSummary} paragraphClassName="text-[15px] leading-[1.75] text-gray-600" />
+          <ReadableProse text={review.pricingSummary} paragraphClassName="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600" />
         </Section>
 
         {/* The Treatments Hub audit - verified-facts card. Registry-gated:
@@ -1359,7 +1359,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 What Reddit says about {provider.name}
               </h2>
             </div>
-            <p className="mb-5 text-[14.5px] leading-relaxed text-gray-700">
+            <p className="mb-5 text-[16px] leading-relaxed sm:text-[14.5px] text-gray-700">
               {REVIEW_COMMUNITY_FEEDBACK[slug].intro}
             </p>
 
@@ -1472,7 +1472,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <h3 className="text-[18px] font-bold text-[#191919]">Final Verdict</h3>
           </div>
           <div className="p-6">
-            <ReadableProse text={review.finalVerdict} paragraphClassName="text-[15px] leading-[1.75] text-gray-600" />
+            <ReadableProse text={review.finalVerdict} paragraphClassName="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600" />
             <ProviderCta
               href={provider.affiliateUrl}
               providerName={provider.name}
@@ -1499,7 +1499,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               {reviewFaqs.map((f, i) => (
                 <div key={i} className="p-6">
                   <h3 className="mb-2 text-[15px] font-bold text-[#191919]">{f.question}</h3>
-                  <p className="text-[14px] leading-[1.7] text-gray-600">{f.answer}</p>
+                  <p className="text-[16px] leading-[1.7] sm:text-[14px] text-gray-600">{f.answer}</p>
                 </div>
               ))}
             </div>

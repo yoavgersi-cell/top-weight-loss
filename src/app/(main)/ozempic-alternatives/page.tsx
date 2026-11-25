@@ -137,7 +137,7 @@ export default async function OzempicAlternativesPage() {
           <Pill className="mt-0.5 h-6 w-6 shrink-0 text-emerald-600" strokeWidth={2} />
           <div>
             <h2 className="mb-2 text-[18px] font-bold text-[#191919]">The one thing to understand first</h2>
-            <p className="text-[15px] leading-[1.75] text-gray-600">
+            <p className="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">
               Ozempic and Wegovy are both <strong className="text-[#191919]">semaglutide</strong>.
               Mounjaro and Zepbound are both <strong className="text-[#191919]">tirzepatide</strong>. So
               the cheapest, most effective &ldquo;alternative&rdquo; to these brands is typically the
@@ -264,7 +264,7 @@ export default async function OzempicAlternativesPage() {
             {faqs.map((f, i) => (
               <div key={i} className="p-6">
                 <h3 className="mb-2 text-[16px] font-bold text-[#191919]">{f.question}</h3>
-                <p className="text-[14px] leading-[1.7] text-gray-600">{f.answer}</p>
+                <p className="text-[16px] leading-[1.7] sm:text-[14px] text-gray-600">{f.answer}</p>
               </div>
             ))}
           </div>

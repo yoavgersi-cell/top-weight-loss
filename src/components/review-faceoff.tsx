@@ -81,7 +81,7 @@ export function ReviewFaceoff({
         <h2 id="review-faceoff-heading" className="text-[20px] font-bold text-[#191919] sm:text-[22px]">
           What {A.name} and {B.name} customers say
         </h2>
-        <p className="mt-2 text-[14px] leading-[1.7] text-gray-600">
+        <p className="mt-2 text-[16px] leading-[1.7] sm:text-[14px] text-gray-600">
           From the <strong>{A.total}</strong> {A.name} and <strong>{B.total}</strong> {B.name} public customer reviews we read,
           grouped by what the review is about. Each cell is the number of distinct reviews
           that praise or criticise that area; the last column compares the net rate per 100 reviews, and calls a gap under{" "}
@@ -122,7 +122,7 @@ export function ReviewFaceoff({
           </tbody>
         </table>
       </div>
-      <div className="space-y-2 border-t border-gray-100 px-4 py-4 text-[14px] leading-[1.7] text-gray-700 sm:px-6">
+      <div className="space-y-2 border-t border-gray-100 px-4 py-4 text-[16px] leading-[1.7] sm:text-[14px] text-gray-700 sm:px-6">
         <p>
           <span className="font-bold text-[#191919]">Where {A.name} comes out ahead:</span>{" "}
           {leadsA.length ? list(leadsA) : "no area by more than the even band"}.

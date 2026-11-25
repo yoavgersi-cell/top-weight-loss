@@ -9,7 +9,6 @@ import { TopTwoPicks } from "@/components/top-providers-block";
 import { FlaskConical, TriangleAlert, ArrowRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { LastUpdated } from "@/components/last-updated";
-import { CONTENT_LAST_UPDATED } from "@/lib/config";
 import { getConfig } from "@/lib/config-store";
 
 export const revalidate = 60;
@@ -38,6 +37,12 @@ const compareRows: [string, string, string][] = [
   ["Availability", "Not available to prescribe yet", "Available now via licensed providers"],
 ];
 
+// The page's own dates: the visible "Last updated" line and the Article schema read the same
+// constants, so they cannot disagree (the shared CONTENT_LAST_UPDATED floor showed Sep 1 while
+// the schema said Aug 9).
+const PUBLISHED = "2026-08-09";
+const UPDATED = "2026-08-09";
+
 const faqs: { question: string; answer: string }[] = [
   { question: "What is retatrutide?", answer: "Retatrutide (sometimes called “reta” or a “triple agonist”) is an investigational once-weekly injection from Eli Lilly. Unlike semaglutide (a GLP-1) or tirzepatide (a dual GLP-1/GIP), retatrutide targets three receptors at once - GLP-1, GIP, and glucagon - which is why it has produced the largest weight loss of any drug in trials so far." },
   { question: "How much weight loss does retatrutide cause?", answer: "In a Phase 2 trial, participants on the highest dose lost about 24% of their body weight over 48 weeks - more than tirzepatide (~20%) or semaglutide (~15%) in their trials. These are early results; larger Phase 3 trials are underway to confirm them." },
@@ -55,8 +60,8 @@ export default async function RetatrutidePage() {
     image: ["https://www.treatmentshub.com/og-default.png"],
     headline: "Retatrutide for Weight Loss: ~24% in Trials. Can You Get It?",
     description: metadata.description,
-    datePublished: "2026-08-09",
-    dateModified: "2026-08-09",
+    datePublished: PUBLISHED,
+    dateModified: UPDATED,
     ...pageReviewSchema("/weight-loss/retatrutide-weight-loss"),
     author: { "@type": "Organization", name: "Treatments Hub Team", url: "https://www.treatmentshub.com" },
     publisher: { "@type": "Organization", name: "Treatments Hub", url: "https://www.treatmentshub.com", logo: { "@type": "ImageObject", url: "https://www.treatmentshub.com/treatmentshub.png" } },
@@ -95,7 +100,7 @@ export default async function RetatrutidePage() {
             any weight loss drug so far. Here&rsquo;s what it is, how it stacks up against tirzepatide
             and semaglutide, and an honest answer on whether you can actually get it.
           </p>
-          <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
+          <LastUpdated date={UPDATED} className="mt-4" />
           <MedicalReviewBar path="/weight-loss/retatrutide-weight-loss" className="mt-4 max-w-[760px]" />
         </div>
       </div>
@@ -106,7 +111,7 @@ export default async function RetatrutidePage() {
           <TriangleAlert className="mt-0.5 h-6 w-6 shrink-0 text-amber-500" strokeWidth={2} />
           <div>
             <h2 className="mb-2 text-[18px] font-bold text-[#191919]">First, the honest part</h2>
-            <p className="text-[15px] leading-[1.75] text-gray-600">
+            <p className="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">
               Retatrutide is <strong className="text-[#191919]">not yet FDA-approved</strong> and
               can&rsquo;t be legitimately prescribed or purchased for weight loss. It&rsquo;s in
               late-stage trials, with a possible approval in the 2026-2027 window. This page
@@ -205,7 +210,7 @@ export default async function RetatrutidePage() {
             {faqs.map((f, i) => (
               <div key={i} className="p-6">
                 <h3 className="mb-2 text-[16px] font-bold text-[#191919]">{f.question}</h3>
-                <p className="text-[14px] leading-[1.7] text-gray-600">{f.answer}</p>
+                <p className="text-[16px] leading-[1.7] sm:text-[14px] text-gray-600">{f.answer}</p>
               </div>
             ))}
           </div>

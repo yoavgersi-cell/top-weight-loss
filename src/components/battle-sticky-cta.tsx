@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ArrowRight, Check } from "lucide-react";
 import { ProviderCta } from "./provider-cta";
 
@@ -33,6 +33,7 @@ export function BattleStickyCta({
   recommendedId?: string;
 }) {
   const [show, setShow] = useState(false);
+  const bar = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setShow(window.scrollY > 600);
@@ -41,8 +42,19 @@ export function BattleStickyCta({
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Tell the chat launcher how much of the bottom edge this bar covers, so it can sit above it.
+  useEffect(() => {
+    const root = document.documentElement;
+    if (show && bar.current) root.style.setProperty("--battle-cta-h", `${bar.current.offsetHeight + 12}px`);
+    else root.style.removeProperty("--battle-cta-h");
+    return () => {
+      root.style.removeProperty("--battle-cta-h");
+    };
+  }, [show]);
+
   return (
     <div
+      ref={bar}
       className={`fixed inset-x-0 bottom-0 z-40 sm:hidden transition-transform duration-300 ease-out ${
         show ? "translate-y-0" : "translate-y-full"
       }`}

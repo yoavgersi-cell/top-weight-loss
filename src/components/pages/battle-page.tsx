@@ -434,14 +434,14 @@ function ReadMoreProse({ text, label, visibleSentences = 2 }: { text: string; la
   const [visible, rest] = splitSentences(text, visibleSentences);
   if (!rest) {
     return (
-      <p className="mb-6 max-w-[820px] text-[15px] leading-[1.85] text-gray-600">
+      <p className="mb-6 max-w-[820px] text-[16px] leading-[1.85] sm:text-[15px] text-gray-600">
         <BoldKeyFacts text={text} />
       </p>
     );
   }
   return (
     <div className="mb-6 max-w-[820px]">
-      <p className="text-[15px] leading-[1.85] text-gray-600">
+      <p className="text-[16px] leading-[1.85] sm:text-[15px] text-gray-600">
         <BoldKeyFacts text={visible} />
       </p>
       <details className="group mt-1.5">
@@ -449,7 +449,7 @@ function ReadMoreProse({ text, label, visibleSentences = 2 }: { text: string; la
           {label}
           <span className="text-[11px] transition-transform group-open:rotate-180">▾</span>
         </summary>
-        <ReadableProse text={rest} className="mt-2" paragraphClassName="text-[15px] leading-[1.85] text-gray-600" />
+        <ReadableProse text={rest} className="mt-2" paragraphClassName="text-[16px] leading-[1.85] sm:text-[15px] text-gray-600" />
       </details>
     </div>
   );
@@ -922,7 +922,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.07em] text-[#0C4B75]">
                   What we found
                 </p>
-                <div className="space-y-3 text-[14px] leading-[1.7] text-gray-600">
+                <div className="space-y-3 text-[16px] leading-[1.7] sm:text-[14px] text-gray-600">
                   {[p1, p2].map((p) =>
                     REDDIT_COMMUNITY_FEEDBACK[p.id]?.themes ? (
                       <p key={p.id}>
@@ -1222,7 +1222,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                           <h4 className="mb-1.5 text-[17px] font-bold text-[#191919]">
                             How much does {provider.name} cost?
                           </h4>
-                          <p className="max-w-[820px] text-[14px] leading-[1.7] text-gray-500">
+                          <p className="max-w-[820px] text-[16px] leading-[1.7] sm:text-[14px] text-gray-500">
                             {review.pricingSummary}
                           </p>
                         </div>
@@ -1523,7 +1523,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 {battleFaqs.map((f, i) => (
                   <div key={i} className="p-6">
                     <h3 className="mb-2 text-[16px] font-bold text-[#191919]">{f.question}</h3>
-                    <p className="text-[14px] leading-[1.7] text-gray-600">{f.answer}</p>
+                    <p className="text-[16px] leading-[1.7] sm:text-[14px] text-gray-600">{f.answer}</p>
                   </div>
                 ))}
               </div>

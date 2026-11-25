@@ -11,7 +11,7 @@ import { TrustDisclosure } from "@/components/medical-sources";
 import { CostCalculator, type CostRow } from "@/components/tools/cost-calculator";
 import { medicalWebPageFields } from "@/lib/medical-schema";
 import { getConfig } from "@/lib/config-store";
-import { BRAND_SHELF, PRICE_INDEX, PRICE_INDEX_VERIFIED } from "@/lib/price-index";
+import { BRAND_SHELF, PRICE_DATA_UPDATED, PRICE_INDEX, PRICE_INDEX_VERIFIED } from "@/lib/price-index";
 
 export const revalidate = 60;
 
@@ -26,7 +26,9 @@ const SLUG = "glp1-cost-calculator";
 const PATH = `/weight-loss/${SLUG}`;
 const CANONICAL = `https://www.treatmentshub.com${PATH}`;
 const PUBLISHED = "2026-10-27";
-const UPDATED = "2026-10-27";
+// Every row is built from PRICE_INDEX, so the page changes when the price data does (e.g. the
+// Nov 20 welludr change), not on the day the tool shipped. Same record the tracker uses.
+const UPDATED = PRICE_DATA_UPDATED;
 const TITLE = "GLP-1 Cost Calculator: Semaglutide & Tirzepatide Over 1 to 24 Months";
 
 const longDate = (iso: string) => new Date(iso).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
@@ -159,7 +161,7 @@ export default async function CostCalculatorPage() {
       <div className="mx-auto max-w-[960px] px-4 py-10 text-[16px] leading-[1.75] text-gray-800 sm:px-6">
         <div className="qa mb-10 flex items-start gap-4 rounded-2xl border border-emerald-100 bg-emerald-50/50 p-6">
           <ShieldCheck className="mt-0.5 h-6 w-6 shrink-0 text-emerald-600" strokeWidth={2} />
-          <div className="text-[15px] leading-[1.75] text-gray-600">
+          <div className="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">
             <h2 className="mb-2 text-[18px] font-bold text-[#191919]">The short answer</h2>
             <p>
               Across the index, published compounded semaglutide prices run from{" "}
@@ -207,7 +209,7 @@ export default async function CostCalculatorPage() {
             {FAQS.map((f) => (
               <div key={f.question}>
                 <h3 className="mb-1 text-[17px] font-bold text-[#191919]">{f.question}</h3>
-                <p className="text-[15px] leading-[1.75] text-gray-600">{f.answer}</p>
+                <p className="text-[16px] leading-[1.75] sm:text-[15px] text-gray-600">{f.answer}</p>
               </div>
             ))}
           </div>

@@ -735,9 +735,9 @@ export function RedditThreadCarousel({
         <h2 className="text-[20px] font-bold text-[#191919]">{title ?? `What Reddit says about ${names}`}</h2>
       </div>
       {intro ? (
-        <div className="mb-5 max-w-[720px] text-[14.5px] leading-relaxed text-gray-700">{intro}</div>
+        <div className="mb-5 max-w-[720px] text-[16px] leading-relaxed sm:text-[14.5px] text-gray-700">{intro}</div>
       ) : (
-        <p className="mb-5 max-w-[640px] text-[14.5px] leading-relaxed text-gray-700">
+        <p className="mb-5 max-w-[640px] text-[16px] leading-relaxed sm:text-[14.5px] text-gray-700">
           Excerpts from real public Reddit posts and comments - the strengths and the caveats, in
           users&rsquo; own words.
           {withData.length < providers.length &&

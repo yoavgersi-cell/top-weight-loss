@@ -115,7 +115,7 @@ export default async function GoPage({ params }: { params: Promise<{ battleSlug:
           </Link>
           <span className="hidden text-[11px] text-gray-400 sm:inline">Independent comparison · verified prices</span>
         </div>
-        <p className="bg-[#f0f4f8] px-4 py-1.5 text-center text-[10.5px] leading-tight text-gray-600 sm:text-[12px]">
+        <p className="bg-[#f0f4f8] px-4 py-1.5 text-center text-[12px] leading-tight text-gray-600">
           Some providers featured here may compensate us. This never changes the prices shown or which provider we match you with.{" "}
           <Link href={`/${DEFAULT_VERTICAL}/disclaimer`} className="font-bold underline underline-offset-2">Advertising disclosure</Link>
         </p>
