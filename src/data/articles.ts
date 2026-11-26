@@ -318,7 +318,7 @@ export const articles: Article[] = [
     imageAlt: "An Ozempic (semaglutide) injection pen next to a Wegovy 2.4 mg (semaglutide) injection pen on a kitchen counter, comparing the two semaglutide brands",
     title: "Ozempic vs Wegovy (2026): Same Drug, Different Uses",
     description:
-      "Ozempic and Wegovy both contain semaglutide but aren't the same drug. FDA approvals, dosing, trial results - and verified prices from $41/month.",
+      "Ozempic and Wegovy both contain semaglutide but aren't the same drug. FDA approvals, dosing, trial results - and verified prices from $39/month.",
     category: "Science",
     readTime: "9 min read",
     publishedAt: "2026-06-10",
@@ -884,7 +884,7 @@ export const articles: Article[] = [
     imageAlt: "Two unbranded injection pens, navy and blue, on either side of a small empty balance scale on a desk, comparing tirzepatide and semaglutide",
     title: "Mounjaro vs Ozempic for Weight Loss (2026): Full Comparison",
     description:
-      "Mounjaro vs Ozempic: up to 22.5% vs ~15% average weight loss in trials, side effects, dosing, insurance - and verified compounded prices from $41/month.",
+      "Mounjaro vs Ozempic: up to 22.5% vs ~15% average weight loss in trials, side effects, dosing, insurance - and verified compounded prices from $39/month.",
     category: "Science",
     readTime: "10 min read",
     publishedAt: "2026-07-12",
@@ -1052,7 +1052,7 @@ export const articles: Article[] = [
     slug: "zepbound-vs-wegovy",
     title: "Zepbound vs Wegovy (2026): Full Comparison",
     description:
-      "Zepbound vs Wegovy: up to 22.5% vs ~15% average weight loss in trials, dosing, side effects - plus verified brand prices and compounded routes from $41/month.",
+      "Zepbound vs Wegovy: up to 22.5% vs ~15% average weight loss in trials, dosing, side effects - plus verified brand prices and compounded routes from $39/month.",
     category: "Science",
     readTime: "6 min read",
     publishedAt: "2026-07-16",
@@ -1962,7 +1962,7 @@ export const articles: Article[] = [
     slug: "zepbound-vs-wegovy-vs-ozempic",
     title: "Zepbound vs Wegovy vs Ozempic (2026): Full Comparison",
     description:
-      "Zepbound (tirzepatide) led trials with up to 22.5% average weight loss vs ~15% for Wegovy; Ozempic is the diabetes sibling. Verified prices from $41/month.",
+      "Zepbound (tirzepatide) led trials with up to 22.5% average weight loss vs ~15% for Wegovy; Ozempic is the diabetes sibling. Verified prices from $39/month.",
     category: "Comparison",
     readTime: "8 min read",
     publishedAt: "2026-08-28",
@@ -2006,7 +2006,7 @@ export const articles: Article[] = [
     slug: "glp1-with-insurance",
     title: "GLP-1 With Insurance (2026): Coverage, PA & the Backup Plan",
     description:
-      "How GLP-1 insurance coverage really works - formularies, prior authorization, why denials happen - and the verified $41-$99/month self-pay backup plan.",
+      "How GLP-1 insurance coverage really works - formularies, prior authorization, why denials happen - and the verified $39-$99/month self-pay backup plan.",
     category: "Advice",
     readTime: "7 min read",
     publishedAt: "2026-08-28",
@@ -2046,7 +2046,7 @@ export const articles: Article[] = [
     slug: "is-wellmedr-legit",
     title: "Is welludr (formerly wellmedr) Legit? Reviews, Prices (2026)",
     description:
-      "Is welludr (formerly wellmedr) legit? The clinician, pharmacy and cancellation checks we ran, the real $41-$71 GLP-1 pricing, and our verdict.",
+      "Is welludr (formerly wellmedr) legit? The clinician, pharmacy and cancellation checks we ran, the real $39-$69 GLP-1 pricing, and our verdict.",
     category: "Advice",
     readTime: "11 min read",
     publishedAt: "2026-08-30",
@@ -2081,11 +2081,11 @@ export const articles: Article[] = [
       },
       {
         heading: "What complaints come up about welludr?",
-        body: 'Searches for "welludr complaints" deserve a straight answer, so here is everything critical in the material we verified. <strong>On billing cadence:</strong> welludr\'s published cadence is one shipment every 4 weeks; confirm the billing schedule in the plan terms at checkout before you buy. <strong>On results:</strong> one detailed Reddit account describes fast shipping and responsive support - and being down only 1 pound after 8 weeks on tirzepatide, after prepaying $1,143 for six months. Response to GLP-1 treatment varies by person, and no provider\'s service quality can guarantee your results. The other condition to understand before buying is the <strong>commitment structure</strong>: the headline $41/$71 rates are tied to a 12-month plan (wellmedr\'s refund policy describes its 12-month plans as prepaid in full; see the billing section below) - month-to-month flexibility is what competitors like embody charge $10-$20 more for.',
+        body: 'Searches for "welludr complaints" deserve a straight answer, so here is everything critical in the material we verified. <strong>On billing cadence:</strong> welludr\'s published cadence is one shipment every 4 weeks; confirm the billing schedule in the plan terms at checkout before you buy. <strong>On results:</strong> one detailed Reddit account describes fast shipping and responsive support - and being down only 1 pound after 8 weeks on tirzepatide, after prepaying $1,143 for six months. Response to GLP-1 treatment varies by person, and no provider\'s service quality can guarantee your results. The other condition to understand before buying is the <strong>commitment structure</strong>: welludr\'s plan page now shows $39/$69 promotional prices on a Monthly Plan (read Nov 20, 2026), while its refund policy (read Nov 22, 2026) describes its 12-month plans as prepaid in full (see the billing section below), so confirm the plan term at checkout.',
       },
       {
-        heading: "Where does the $41 price really come from?",
-        body: 'The price has a structural explanation, not a suspicious one - three ingredients. <strong>Compounding economics:</strong> the active ingredient is not what makes brand-name GLP-1s expensive - the brand premium is. Compounded semaglutide across our entire ranking runs $39-$199/month (the $39 is a promotional price, read Nov 20, 2026), so welludr sits at the aggressive end of a normal range, not outside it. <strong>Scale:</strong> welludr itself reports over one million patients, and high volume is exactly what lets a telehealth operator run thin margins - a million-patient operation also has too much to lose to risk regulatory action on shortcuts. <strong>Promotional pricing:</strong> the headline price is a promotional price with no end date stated (read Nov 20, 2026). Do the math: $41 x 12 = <strong>$492 for a full year</strong> of semaglutide treatment with a coach included - less than four months at mid-market rates.',
+        heading: "Where does the $39 price really come from?",
+        body: 'The price has a structural explanation, not a suspicious one - three ingredients. <strong>Compounding economics:</strong> the active ingredient is not what makes brand-name GLP-1s expensive - the brand premium is. Compounded semaglutide across our entire ranking runs $39-$199/month (the $39 is a promotional price, read Nov 20, 2026), so welludr sits at the aggressive end of a normal range, not outside it. <strong>Scale:</strong> welludr itself reports over one million patients, and high volume is exactly what lets a telehealth operator run thin margins - a million-patient operation also has too much to lose to risk regulatory action on shortcuts. <strong>Promotional pricing:</strong> the headline price is a promotional price with no end date stated (read Nov 20, 2026). Do the math: $39 x 12 = <strong>$468 for a full year</strong> of semaglutide treatment at that promotional price with a coach included - less than four months at mid-market rates.',
       },
       {
         heading: "Does the price climb as your dose increases?",
@@ -2324,7 +2324,7 @@ export const articles: Article[] = [
     author: "TopWeightLoss Team",
     keyTakeaways: [
       "The number that matters is the price you keep paying, not the first-month price. Most providers we track charge one flat price at every dose; several list a sale or promotional price, and several charge less per month on a longer plan.",
-      "Year one for compounded semaglutide runs from $492 (welludr's 12-month plan) to roughly $1,800-$2,400 at the month-to-month providers, at the prices verified in our index. Tirzepatide runs about $500-$1,200 more.",
+      "Year one for compounded semaglutide runs from $468 (welludr's $39 promotional price x 12) to roughly $1,800-$2,400 at the month-to-month providers, at the prices verified in our index. Tirzepatide runs about $500-$1,200 more.",
       "The month-2 jump that fills review pages comes from three pricing shapes: an intro price that ends, a membership billed next to the drug, and a prepaid bundle that renews. All three are visible before you pay if you know where to look.",
       "Every figure on this page is derived from our verified price index and carries its verification date. Prices change monthly; the index and its change log are the live record.",
     ],
@@ -2332,7 +2332,7 @@ export const articles: Article[] = [
       {
         heading: "Why is the first-month price the wrong number?",
         body:
-          "<div class=\"qa\"><strong>The short answer</strong>The number that matters is the price you keep paying at your maintenance dose, not the first-month price. Most providers we track charge one flat price at every dose; several list a sale or promotional price, and several charge less per month on a longer plan. At the prices in our verified index, year one of compounded semaglutide runs from $492 on welludr's 12-month plan to roughly $1,800 to $2,400 at the month-to-month providers, and tirzepatide about $500 to $1,200 more.</div>Ask a hundred people what their GLP-1 costs and most will quote the number from the sign-up page. That number is right for one month. The price that decides whether you can stay on treatment is the one you pay in month 4, month 9 and month 12, at the dose your clinician settles you on - and across the providers we track it is sometimes the same as month 1, sometimes double. Three pricing shapes produce the gap. An <strong>introductory price</strong> that ends after the first month or two. A <strong>membership or subscription fee</strong> billed next to the medication, so the drug price you saw was never the whole bill. And a <strong>prepaid bundle</strong> that charges the year up front and renews. None of these is hidden, exactly; they are just not the number in the headline. This page puts the number in the headline. Every price below is the provider's own published figure as verified in our <a href=\"/weight-loss/glp1-weight-loss-statistics\">price index</a>, and every change we have logged is in the <a href=\"/weight-loss/glp1-price-changes\">price-change feed</a>.",
+          "<div class=\"qa\"><strong>The short answer</strong>The number that matters is the price you keep paying at your maintenance dose, not the first-month price. Most providers we track charge one flat price at every dose; several list a sale or promotional price, and several charge less per month on a longer plan. At the prices in our verified index, year one of compounded semaglutide runs from $468 on welludr's $39 promotional price (read Nov 20, 2026) to roughly $1,800 to $2,400 at the month-to-month providers, and tirzepatide about $500 to $1,200 more.</div>Ask a hundred people what their GLP-1 costs and most will quote the number from the sign-up page. That number is right for one month. The price that decides whether you can stay on treatment is the one you pay in month 4, month 9 and month 12, at the dose your clinician settles you on - and across the providers we track it is sometimes the same as month 1, sometimes double. Three pricing shapes produce the gap. An <strong>introductory price</strong> that ends after the first month or two. A <strong>membership or subscription fee</strong> billed next to the medication, so the drug price you saw was never the whole bill. And a <strong>prepaid bundle</strong> that charges the year up front and renews. None of these is hidden, exactly; they are just not the number in the headline. This page puts the number in the headline. Every price below is the provider's own published figure as verified in our <a href=\"/weight-loss/glp1-weight-loss-statistics\">price index</a>, and every change we have logged is in the <a href=\"/weight-loss/glp1-price-changes\">price-change feed</a>.",
       },
       {
         heading: "What do you really pay for compounded semaglutide: month 1, maintenance and year one?",
@@ -2346,7 +2346,7 @@ export const articles: Article[] = [
         body:
           "Same method, same sort. Tirzepatide costs more at every provider; the shape of each provider's pricing is the same as its semaglutide row." +
           trueCostTable("tirzepatide") +
-          "If you are choosing between the two molecules, <a href=\"/weight-loss/articles/tirzepatide-vs-semaglutide\">tirzepatide vs semaglutide</a> covers the trial results; this page only covers the money. The cheapest tirzepatide year at a verified published price is welludr's $852 on its 12-month plan; the cheapest with no commitment is <a href=\"/weight-loss/reviews/embody\">embody</a> at $1,188 if its $99 sale price holds all year.",
+          "If you are choosing between the two molecules, <a href=\"/weight-loss/articles/tirzepatide-vs-semaglutide\">tirzepatide vs semaglutide</a> covers the trial results; this page only covers the money. The cheapest tirzepatide year at a verified published price is welludr's $828 ($69 x 12, a promotional price on a Monthly Plan, read Nov 20, 2026); <a href=\"/weight-loss/reviews/embody\">embody</a>'s month-to-month year is $1,188 if its $99 sale price holds all year.",
       },
       {
         heading: "Where does the month-2 price jump come from?",

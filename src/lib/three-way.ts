@@ -34,8 +34,8 @@ export const TRIO_FACTS: Record<string, TrioFacts> = {
   },
   wellmedr: {
     id: "wellmedr",
-    semaglutide: "$39/mo (promotional price, read Nov 20, 2026), same price at every dose",
-    tirzepatide: "$69/mo (promotional price, read Nov 20, 2026)",
+    semaglutide: "$41/mo (12-month plan), same price at every dose",
+    tirzepatide: "$71/mo",
     billing: "Monthly billing - best rate locks on a 12-month plan",
     shipping: "Free, every 4 weeks, discreet packaging",
     support: "Medical Weight-Care Coach on every plan",
@@ -181,14 +181,14 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     description:
       "The three cheapest reliable GLP-1 providers compared in one table: embody ($49 flat), altRx ($89 + brand-name shelf) and welludr ($41 with a 12-month plan).",
     intro:
-      "These three providers own the budget end of the compounded GLP-1 market, and they get there by different routes: welludr's $39 (promotional price, read Nov 20, 2026) is the lowest listed price, embody's $49 is flat with zero commitment, and altRx's $89 adds the option to switch to brand-name Ozempic or Zepbound later. Same active ingredients across all three - the matrix below is really a comparison of commitment terms, logistics and optionality.",
+      "These three providers own the budget end of the compounded GLP-1 market, and they get there by different routes: welludr's $41 rewards a 12-month plan, embody's $49 is flat with zero commitment, and altRx's $89 adds the option to switch to brand-name Ozempic or Zepbound later. Same active ingredients across all three - the matrix below is really a comparison of commitment terms, logistics and optionality.",
     verdict:
       "Pick by your commitment appetite. Committed for a year and price-first: welludr's $41 is unbeatable. Want the freedom to stop anytime: embody's flat $49 with free expedited delivery and a partial-refund-if-not-approved policy is the cleanest deal in the market. Think brand-name might be in your future: altRx is the only one of the three with a brand shelf, and its BNPL spreads the cost. There's no wrong answer here on legitimacy - all three run licensed-provider review and regulated pharmacies.",
     faqs: [
       {
         question: "Which of embody, altRx and welludr is cheapest?",
         answer:
-          "welludr has the lowest headline price at $39/month (promotional price, read Nov 20, 2026) for compounded semaglutide. embody charges a flat $49/month with no commitment, and altRx $89/month with pause-anytime terms and Buy Now, Pay Later. On tirzepatide: welludr $69 (promotional price, read Nov 20, 2026), embody $99, altRx $149.",
+          "welludr has the lowest headline price at $41/month for compounded semaglutide, but that rate locks on a 12-month plan. embody charges a flat $49/month with no commitment, and altRx $89/month with pause-anytime terms and Buy Now, Pay Later. On tirzepatide: welludr $71, embody $99, altRx $149.",
       },
       {
         question: "Do all three require a prescription?",
@@ -210,19 +210,19 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     description:
       "Three ways to buy the same compounded GLP-1s: embody ($49 flat), Medvi ($99 all-inclusive) and welludr ($41 on a 12-month plan).",
     intro:
-      "welludr is the cheapest at $39/month (promotional price, read Nov 20, 2026). embody's $49 is flat with zero commitment and a refund if a provider doesn't approve you. Medvi's from-$99 price is the all-inclusive, high-touch option - video visits, free dietician, care coaching.",
+      "welludr is the cheapest at $41/month - a rate that locks on a 12-month plan. embody's $49 is flat with zero commitment and a refund if a provider doesn't approve you. Medvi's from-$99 price is the all-inclusive, high-touch option - video visits, free dietician, care coaching.",
     verdict:
       "Decide on commitment first, support second. Ready to commit to a year: welludr - the $41 lock is the best per-month rate in the market, and its weight-loss warranty backs the plan. Not ready to commit to anything: embody - $49 flat, cancel anytime, refunded if not approved. Know from experience that you quit without someone checking in: Medvi - the $30 premium over embody buys video visits, a dietician and coaching. All three prescribe the same compounded semaglutide after a licensed-provider review.",
     faqs: [
       {
         question: "Which is cheapest: embody, Medvi or welludr?",
         answer:
-          "For compounded semaglutide: welludr at $39/month (promotional price, read Nov 20, 2026), embody at $49/month flat with no commitment, Medvi at from $99/month all-inclusive. For tirzepatide: welludr $69 (promotional price, read Nov 20, 2026), embody $99.",
+          "For compounded semaglutide: welludr at $41/month (the rate locks on a 12-month plan), embody at $49/month flat with no commitment, Medvi at from $99/month all-inclusive. For tirzepatide: welludr $71, embody $99.",
       },
       {
         question: "Which is best if I don't want a commitment?",
         answer:
-          "embody - $49/month flat, billed month to month, cancel anytime, and a partial refund (unused portion less services rendered) if a licensed provider doesn't approve you for treatment. Medvi also bills monthly with no prepaid term.",
+          "embody - $49/month flat, billed month to month, cancel anytime, and a partial refund (unused portion less services rendered) if a licensed provider doesn't approve you for treatment. Medvi also bills monthly with no prepaid term. welludr's best rate ($41) requires a 12-month plan.",
       },
       {
         question: "Do any of the three offer a guarantee?",
@@ -276,22 +276,22 @@ export const THREE_WAY_COMPARISONS: ThreeWayComparison[] = [
     intro:
       "This trio spans the market's price range, from $41 to TrimRx's plans from $179 (site, read Nov 22, 2026), which makes it a clean test of what the extra money buys. welludr sets the floor: $41/month semaglutide and $71 tirzepatide, the same price at every dose, with a weight-loss warranty, a Medical Weight-Care Coach on every plan, and brand-name Ozempic and Zepbound if you ever want them. embody charges $20 more for total freedom - flat, no commitment, free expedited delivery (no timeline guaranteed), a partial refund if you're not approved. TrimRx charges a premium for custom dosing with unlimited provider check-ins and a no-contract model.",
     verdict:
-      "welludr is our pick of the three. It has the lowest verified price at every dose and backs the program with a weight-loss warranty. The honest condition: the lowest rate is a promotional price with no end date stated (read Nov 20, 2026), so check it before you buy. If you would rather not, embody is the right second choice - $49 flat with no commitment, free expedited delivery (no timeline guaranteed), and a partial refund (unused portion less services rendered) if a provider doesn't approve you. TrimRx earns its premium when its specific mix matters to you: custom dosing adjusted by your provider, unlimited check-ins, free consultation, and month-to-month freedom. All three run licensed-provider review and dispense through regulated pharmacies, so there is no legitimacy gap - only a difference in what you are paying for.",
+      "welludr is our pick of the three. It has the lowest verified price at every dose and backs the program with a weight-loss warranty. The honest condition: the $41 rate locks on a 12-month plan, so it rewards people who have decided to commit. If you haven't, embody is the right second choice - $49 flat with no commitment, free expedited delivery (no timeline guaranteed), and a partial refund (unused portion less services rendered) if a provider doesn't approve you. TrimRx earns its premium when its specific mix matters to you: custom dosing adjusted by your provider, unlimited check-ins, free consultation, and month-to-month freedom. All three run licensed-provider review and dispense through regulated pharmacies, so there is no legitimacy gap - only a difference in what you are paying for.",
     faqs: [
       {
         question: "Which is best overall: welludr, embody or TrimRx?",
         answer:
-          "welludr, on verified pricing: $39/month semaglutide and $69 (promotional prices, read Nov 20, 2026) tirzepatide at every dose, and a weight-loss warranty. Its best rate takes a 12-month plan; if you want no commitment, embody at $49 flat with free expedited delivery is the natural alternative, and TrimRx is the choice if custom dosing with unlimited provider check-ins is worth the premium to you.",
+          "welludr, on verified pricing: $41/month semaglutide and $71 tirzepatide at every dose, and a weight-loss warranty. Its best rate takes a 12-month plan; if you want no commitment, embody at $49 flat with free expedited delivery is the natural alternative, and TrimRx is the choice if custom dosing with unlimited provider check-ins is worth the premium to you.",
       },
       {
         question: "Why does TrimRx cost more than welludr and embody?",
         answer:
-          "TrimRx shows plans from $179/month on its site (read Nov 22, 2026) and publishes no per-drug price we could read. Plans come with no long-term contract, custom dosing set by your provider, unlimited check-ins, a free consultation and tracked delivery included. welludr ($39, promotional price, read Nov 20, 2026) and embody ($49 flat) run leaner models at lower prices. All three prescribe the same compounded semaglutide after a licensed-provider review.",
+          "TrimRx shows plans from $179/month on its site (read Nov 22, 2026) and publishes no per-drug price we could read. Plans come with no long-term contract, custom dosing set by your provider, unlimited check-ins, a free consultation and tracked delivery included. welludr ($41 on a 12-month plan) and embody ($49 flat) run leaner models at lower prices. All three prescribe the same compounded semaglutide after a licensed-provider review.",
       },
       {
         question: "Which is best if I don't want any commitment?",
         answer:
-          "embody - its $49/month is flat with no commitment, and it refunds the unused portion, less services rendered, if a provider doesn't approve treatment. TrimRx is also month-to-month with no contract, with plans from $179.",
+          "embody - its $49/month is flat with no commitment, and it refunds the unused portion, less services rendered, if a provider doesn't approve treatment. TrimRx is also month-to-month with no contract, with plans from $179. welludr's best rate ($41) locks on a 12-month plan.",
       },
       {
         question: "Do any of the three offer a guarantee?",

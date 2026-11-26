@@ -506,7 +506,7 @@ export const WEIGHT_LOSS_HERO_TEXT = {
   h1: "Best GLP-1 Weight Loss Providers of 2026",
   h2: "The top online GLP-1 weight loss programs, ranked and verified",
   description:
-    "Licensed GLP-1 clinics compared on verified prices - semaglutide from $41/mo and tirzepatide from $71/mo.",
+    "Licensed GLP-1 clinics compared on verified prices - semaglutide from $39/mo and tirzepatide from $69/mo.",
 };
 
 export const defaultConfig: SiteConfig = {

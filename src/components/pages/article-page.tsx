@@ -184,7 +184,7 @@ const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
   // price index (see src/lib/true-cost.ts) and dated external sources cited
   // inside each article; the dollar stamp below carries the index date.
   "glp1-true-cost-month-1-vs-year-one":
-    "The price that matters is the one you keep paying, not month 1. At verified prices, year one of compounded semaglutide runs from $492 on welludr's 12-month plan to roughly $1,800-$2,400 at month-to-month providers; tirzepatide about $500-$1,200 more. The month-2 jump comes from promos with no published end date, 20%-off-month-one offers, and memberships billed next to the drug - all visible before you pay.",
+    "The price that matters is the one you keep paying, not month 1. At verified prices, year one of compounded semaglutide runs from $468 on welludr's $39 promotional price (read Nov 20, 2026) to roughly $1,800-$2,400 at month-to-month providers; tirzepatide about $500-$1,200 more. The month-2 jump comes from promos with no published end date, 20%-off-month-one offers, and memberships billed next to the drug - all visible before you pay.",
   "before-you-prepay-glp1":
     "Pay monthly for the first two or three cycles, then prepay only if the provider has shipped on time and answered when you wrote. Before any prepaid or 12-month plan, get written answers to five questions: when you're charged and for what, what is refunded if shipments stop, how you cancel and whether you get confirmation, whether the plan auto-renews and with how much notice, and whether a financing company bills you separately.",
   "what-100-to-200-a-month-gets-you-glp1":

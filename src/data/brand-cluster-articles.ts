@@ -149,7 +149,7 @@ export const brandClusterArticles: Article[] = [
     keyTakeaways: [
       "Yes, Medvi is legitimate: licensed providers on real video visits and a medical intake that can end in a decline.",
       "Pricing is all-inclusive and HSA/FSA-approved, with plans from $99 a month (Medvi site, read Nov 3, 2026); its page does not list a separate tirzepatide price.",
-      "Fair criticisms: it is not the cheapest (welludr $41, embody $49), it is compounded-only, it is monthly-only, and whether the support premium is worth it is a personal call.",
+      "Fair criticisms: it is not the cheapest (welludr $39, a promotional price read Nov 20, 2026, and embody $49), it is compounded-only, it is monthly-only, and whether the support premium is worth it is a personal call.",
     ],
     sections: [
       {
@@ -166,7 +166,7 @@ export const brandClusterArticles: Article[] = [
       },
       {
         heading: "Where the skepticism is fair",
-        body: `<p>An honest audit has to include the other side of the ledger. Medvi is not the absolute cheapest way to get semaglutide - even at its listed from-$99 price, <a href="/weight-loss/reviews/wellmedr">welludr</a> sells the same active ingredient for $49 and <a href="/weight-loss/reviews/embody">embody</a> for $49. But at a from-$99 price the support-layer premium over welludr ($41) and embody ($49) is $50-$58 a month, before any regular price (none is listed in our index), and whether that is worth it is a personal call, not an objective one. Medvi also prescribes compounded medication only - if you specifically want brand-name Ozempic or Zepbound, you need a provider with a brand shelf like <a href="/weight-loss/reviews/altrx">altRx</a>. And its medication menu is narrower than platforms that also prescribe non-GLP-1 options. For a direct comparison with a no-contract rival, see <a href="/weight-loss/medvi-vs-trimrx">Medvi vs TrimRx</a>.</p>`,
+        body: `<p>An honest audit has to include the other side of the ledger. Medvi is not the absolute cheapest way to get semaglutide - even at its listed from-$99 price, <a href="/weight-loss/reviews/wellmedr">welludr</a> sells the same active ingredient for $39 (promotional price, read Nov 20, 2026) and <a href="/weight-loss/reviews/embody">embody</a> for $49. But at a from-$99 price the support-layer premium over welludr ($39) and embody ($49) is $50-$60 a month, before any regular price (none is listed in our index), and whether that is worth it is a personal call, not an objective one. Medvi also prescribes compounded medication only - if you specifically want brand-name Ozempic or Zepbound, you need a provider with a brand shelf like <a href="/weight-loss/reviews/altrx">altRx</a>. And its medication menu is narrower than platforms that also prescribe non-GLP-1 options. For a direct comparison with a no-contract rival, see <a href="/weight-loss/medvi-vs-trimrx">Medvi vs TrimRx</a>.</p>`,
       },
       {
         heading: "So - is Medvi legit?",
@@ -193,7 +193,7 @@ export const brandClusterArticles: Article[] = [
       "Medvi's listing says plans \"start for just $99\" a month (price index, verified Nov 18, 2026; Medvi's site last read Nov 3, 2026). Our index lists no separate semaglutide or tirzepatide price and no regular price.",
       "That one price covers the medication, provider consultations, monitoring, a dietician with care coaching, and free shipping; HSA/FSA accepted, no dose-based increases.",
       "A year at $99 a month is $1,188 ($99 x 12). That is a floor for a plan not tied to one drug, not a quoted total.",
-      "The same semaglutide runs $41-$125 at welludr, embody and HealthRx; Medvi's premium buys the human support layer, worth it only if support determines your success.",
+      "The same semaglutide runs $39-$125 at welludr (promotional price, read Nov 20, 2026), embody and HealthRx; Medvi's premium buys the human support layer, worth it only if support determines your success.",
     ],
     sections: [
       {
@@ -210,7 +210,7 @@ export const brandClusterArticles: Article[] = [
       },
       {
         heading: "Is Medvi worth it?",
-        body: `<p><strong>Worth it:</strong> if support determines whether you succeed. If you've tried medication-only approaches and stalled, if you want a provider who takes the call rather than an inbox, if a dietician guiding your food changes sounds like the missing piece - that's Medvi's actual product, and its review record says it delivers.</p><p><strong>Not worth it:</strong> if you're self-directed and price-sensitive. The same semaglutide runs $41-$125 at <a href="/weight-loss/reviews/wellmedr">welludr</a>, <a href="/weight-loss/reviews/embody">embody</a> and <a href="/weight-loss/reviews/healthrx">HealthRx</a>; over a year the gap is four figures. The medication doesn't know what you paid for it - the difference is entirely in the care around it.</p><p class="cta-row"><a href="/weight-loss/healthrx-vs-medvi">→ The closest call: HealthRx's $125 monthly plan vs Medvi's from-$99 plans, compared</a></p><p>This article is general information, not medical advice. Prices as listed at the time of writing - confirm current pricing on each provider's site.</p>`,
+        body: `<p><strong>Worth it:</strong> if support determines whether you succeed. If you've tried medication-only approaches and stalled, if you want a provider who takes the call rather than an inbox, if a dietician guiding your food changes sounds like the missing piece - that's Medvi's actual product, and its review record says it delivers.</p><p><strong>Not worth it:</strong> if you're self-directed and price-sensitive. The same semaglutide runs $39-$125 at <a href="/weight-loss/reviews/wellmedr">welludr</a> (promotional price, read Nov 20, 2026), <a href="/weight-loss/reviews/embody">embody</a> and <a href="/weight-loss/reviews/healthrx">HealthRx</a>; over a year the gap is four figures. The medication doesn't know what you paid for it - the difference is entirely in the care around it.</p><p class="cta-row"><a href="/weight-loss/healthrx-vs-medvi">→ The closest call: HealthRx's $125 monthly plan vs Medvi's from-$99 plans, compared</a></p><p>This article is general information, not medical advice. Prices as listed at the time of writing - confirm current pricing on each provider's site.</p>`,
       },
     ],
   },
@@ -250,7 +250,7 @@ export const brandClusterArticles: Article[] = [
     slug: "medvi-alternatives",
     title: "Medvi Alternatives 2026: 6 Real Options, Priced & Compared",
     description:
-      "Six alternatives to Medvi's all-inclusive GLP-1 program (from $99 a month) - from welludr at $41 to HealthRx's $125 monthly plan - and each trade-off.",
+      "Six alternatives to Medvi's all-inclusive GLP-1 program (from $99 a month) - from welludr at $39 to HealthRx's $125 monthly plan - and each trade-off.",
     category: "Comparison",
     readTime: "7 min read",
     publishedAt: "2026-08-10",
@@ -289,9 +289,9 @@ export const brandClusterArticles: Article[] = [
   // ═════ welludr ═════
   {
     slug: "wellmedr-cost",
-    title: "welludr (formerly wellmedr) Cost 2026: The $41/Month Math",
+    title: "welludr (formerly wellmedr) Cost 2026: The $39/Month Math",
     description:
-      "welludr's (formerly wellmedr) real GLP-1 cost: $41/month semaglutide and $71 tirzepatide at every dose, $492 a year. How the 12-month lock-in works.",
+      "welludr's (formerly wellmedr) real GLP-1 cost: $39/month semaglutide and $69 tirzepatide at every dose (promotional prices), $468 a year. The refund-policy fine print.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-13",
@@ -300,22 +300,22 @@ export const brandClusterArticles: Article[] = [
     author: "Treatments Hub Staff",
     keyTakeaways: [
       "welludr's compounded plans run $39/month for semaglutide and $69/month (promotional prices, read Nov 20, 2026) for tirzepatide - the same price at every dose, shipped every 4 weeks, with a coach and provider oversight included.",
-      "A full year of semaglutide costs $492 - the lowest in our ranking, versus $588 at embody on its pre-Black Friday sale, $1,068 at altRx and $1,188 at Medvi.",
+      "A full year of semaglutide costs $468 ($39 x 12, promotional price read Nov 20, 2026) - the lowest in our ranking, versus $588 at embody on its pre-Black Friday sale, $1,068 at altRx and $1,188 at Medvi.",
       "wellmedr's refund policy says its 3-, 6- and 12-month plans are prepaid in full and that a \"per month\" price \"does not mean the plan is billed monthly\" (read Nov 22, 2026); if you are still experimenting, embody's $49 no-commitment plan costs $10/month more for the freedom to walk away.",
       "Brand-name Ozempic (from $1,399) and Zepbound (from $1,599) are stocked, but altRx's brand shelf starts $250/month lower.",
     ],
     sections: [
       {
         heading: "Every welludr price on one screen",
-        body: `<div class="qa"><strong>Bottom line first</strong>welludr's compounded plans run <strong>$39/month (semaglutide)</strong> and <strong>$69/month (tirzepatide)</strong> (promotional prices, read Nov 20, 2026) - the same price at every dose, shipped every 4 weeks, with a Medical Weight-Care Coach and provider oversight included. Brand-name is stocked too: Ozempic from $1,399, Zepbound from $1,599.</div><table><tr><th>Plan</th><th>What it is</th><th>Price</th></tr><tr><td>GLP-1</td><td>Compounded semaglutide, weekly injection</td><td>$39/mo (promotional price, read Nov 20, 2026)</td></tr><tr><td>GLP-1/GIP</td><td>Compounded tirzepatide, weekly injection</td><td>$89/mo</td></tr><tr><td>Ozempic</td><td>Brand-name semaglutide</td><td>from $1,399/mo</td></tr><tr><td>Zepbound</td><td>Brand-name tirzepatide</td><td>from $1,599/mo</td></tr></table>`,
+        body: `<div class="qa"><strong>Bottom line first</strong>welludr's compounded plans run <strong>$39/month (semaglutide)</strong> and <strong>$69/month (tirzepatide)</strong> (promotional prices, read Nov 20, 2026) - the same price at every dose, shipped every 4 weeks, with a Medical Weight-Care Coach and provider oversight included. Brand-name is stocked too: Ozempic from $1,399, Zepbound from $1,599.</div><table><tr><th>Plan</th><th>What it is</th><th>Price</th></tr><tr><td>GLP-1</td><td>Compounded semaglutide, weekly injection</td><td>$39/mo (promotional price, read Nov 20, 2026)</td></tr><tr><td>GLP-1/GIP</td><td>Compounded tirzepatide, weekly injection</td><td>$69/mo (promotional price, read Nov 20, 2026)</td></tr><tr><td>Ozempic</td><td>Brand-name semaglutide</td><td>from $1,399/mo</td></tr><tr><td>Zepbound</td><td>Brand-name tirzepatide</td><td>from $1,599/mo</td></tr></table>`,
       },
       {
         heading: "How much does a year of welludr cost versus rivals?",
-        body: `<p>Because GLP-1 treatment is measured in months, annual cost is the honest unit. At listed starting prices for semaglutide:</p><table><tr><th>Provider</th><th>Monthly</th><th>12 months</th></tr><tr><td><strong>welludr</strong></td><td><strong>$41</strong></td><td><strong>$492</strong></td></tr><tr><td>embody</td><td>$49</td><td>$588</td></tr><tr><td>altRx</td><td>$89</td><td>$1,068</td></tr><tr><td>Medvi</td><td>from $99</td><td>$1,188</td></tr><tr><td>HealthRx</td><td>$39 first month, then $125</td><td>$1,414</td></tr><tr><td>SHED</td><td>$199</td><td>$2,388</td></tr><tr><td>DirectMeds</td><td>$249 (sublingual)</td><td>$2,988</td></tr></table><p>welludr wins the year at $492 - and notice the fine print: welludr's refund policy says its 12-month plans are "prepaid in full" and that a "per month" price "does not mean the plan is billed monthly" (policy read Nov 22, 2026), so check the amount charged at checkout before comparing. <a href="/weight-loss/reviews/healthrx">HealthRx</a>'s monthly plan runs $39 for the first month, then $125, until canceled.</p>`,
+        body: `<p>Because GLP-1 treatment is measured in months, annual cost is the honest unit. At listed starting prices for semaglutide:</p><table><tr><th>Provider</th><th>Monthly</th><th>12 months</th></tr><tr><td><strong>welludr</strong></td><td><strong>$39 (promotional price, read Nov 20, 2026)</strong></td><td><strong>$468 ($39 x 12)</strong></td></tr><tr><td>embody</td><td>$49</td><td>$588</td></tr><tr><td>altRx</td><td>$89</td><td>$1,068</td></tr><tr><td>Medvi</td><td>from $99</td><td>$1,188</td></tr><tr><td>HealthRx</td><td>$39 first month, then $125</td><td>$1,414</td></tr><tr><td>SHED</td><td>$199</td><td>$2,388</td></tr><tr><td>DirectMeds</td><td>$249 (sublingual)</td><td>$2,988</td></tr></table><p>welludr wins the year at $468 on that promotional price - and notice the fine print: welludr's refund policy says its 12-month plans are "prepaid in full" and that a "per month" price "does not mean the plan is billed monthly" (policy read Nov 22, 2026), so check the amount charged at checkout before comparing. <a href="/weight-loss/reviews/healthrx">HealthRx</a>'s monthly plan runs $39 for the first month, then $125, until canceled.</p>`,
       },
       {
         heading: "Is the 12-month lock a trap?",
-        body: `<p>It's a bet, and you should price it as one. Clinically, the bet is usually sound: meaningful GLP-1 results build over 3-6+ months, and <a href="https://pubmed.ncbi.nlm.nih.gov/35441470/" target="_blank" rel="noopener">stopping early typically means regaining</a> (see <a href="/weight-loss/articles/stopping-glp1-medication-what-happens">what happens when you stop</a>). If you're confident in the year, the lock is simply the best per-month rate in our ranking. If you're experimenting, don't lock - pay $10/month more at <a href="/weight-loss/reviews/embody">embody</a> for the right to walk away anytime, and revisit once you know the medication suits you. How cancelling works, including the two different cutoffs in wellmedr's own documents, is in <a href="/weight-loss/articles/is-wellmedr-legit">is welludr (wellmedr) legit</a> and our <a href="/weight-loss/articles/how-to-cancel-telehealth-glp1-subscription">cancel guide</a>.</p>`,
+        body: `<p>Update, Nov 20, 2026: welludr's plan page now labels its $39 and $69 prices "Monthly Plan" (cancel or change anytime), while its refund policy (read Nov 22, 2026) still describes 12-month plans as prepaid in full, so confirm the term at checkout. This section is about those 12-month plans, which our index listed at $41 and $71 until Nov 20, 2026.</p><p>It's a bet, and you should price it as one. Clinically, the bet is usually sound: meaningful GLP-1 results build over 3-6+ months, and <a href="https://pubmed.ncbi.nlm.nih.gov/35441470/" target="_blank" rel="noopener">stopping early typically means regaining</a> (see <a href="/weight-loss/articles/stopping-glp1-medication-what-happens">what happens when you stop</a>). If you're confident in the year, the lock is simply the best per-month rate in our ranking. If you're experimenting, don't lock - pay $10/month more at <a href="/weight-loss/reviews/embody">embody</a> for the right to walk away anytime, and revisit once you know the medication suits you. How cancelling works, including the two different cutoffs in wellmedr's own documents, is in <a href="/weight-loss/articles/is-wellmedr-legit">is welludr (wellmedr) legit</a> and our <a href="/weight-loss/articles/how-to-cancel-telehealth-glp1-subscription">cancel guide</a>.</p>`,
       },
       {
         heading: "The dose-stability clause, priced out",
@@ -331,7 +331,7 @@ export const brandClusterArticles: Article[] = [
     slug: "wellmedr-alternatives",
     title: "welludr (formerly wellmedr) Alternatives 2026, Compared",
     description:
-      "Nothing undercuts the $41/month GLP-1 plan at welludr (formerly wellmedr), so every alternative competes on something else. Six rivals compared.",
+      "Nothing undercuts the $39/month GLP-1 plan at welludr (formerly wellmedr), so every alternative competes on something else. Six rivals compared.",
     category: "Comparison",
     readTime: "7 min read",
     publishedAt: "2026-08-15",
@@ -351,7 +351,7 @@ export const brandClusterArticles: Article[] = [
       },
       {
         heading: "Pay $10 more for freedom: embody",
-        body: `<p>welludr's best rate wants a 12-month plan. <a href="/weight-loss/reviews/embody">embody</a> charges a flat <strong>$49/month</strong> (tirzepatide $99) with no commitment of any kind, ships free, tracked and insured, with no delivery timeline guaranteed, is LegitScript-certified, and issues a partial refund (unused portion less services rendered) if a provider doesn't approve treatment. Over a year that freedom costs exactly $120. For anyone not ready to commit, it's the obvious first alternative - the direct matchup is in <a href="/weight-loss/embody-vs-wellmedr">embody vs welludr</a>.</p>`,
+        body: `<p>welludr's refund policy still describes 12-month plans as prepaid in full, though its plan page now labels its $39 price a Monthly Plan (read Nov 20 and 22, 2026). <a href="/weight-loss/reviews/embody">embody</a> charges a flat <strong>$49/month</strong> (tirzepatide $99) with no commitment of any kind, ships free, tracked and insured, with no delivery timeline guaranteed, is LegitScript-certified, and issues a partial refund (unused portion less services rendered) if a provider doesn't approve treatment. Over a year that freedom costs exactly $120. For anyone not ready to commit, it's the obvious first alternative - the direct matchup is in <a href="/weight-loss/embody-vs-wellmedr">embody vs welludr</a>.</p>`,
       },
       {
         heading: "Pay for speed: HealthRx",
@@ -444,7 +444,7 @@ export const brandClusterArticles: Article[] = [
       },
       {
         heading: "What does a flexible year at TrimRx cost?",
-        body: `<p>We cannot give a verified 12-month total. TrimRx's site shows plans "from $179" without tying that to a drug or dose, so the floor is $179 x 12 = <strong>$2,148</strong>, a minimum on an unspecified product and not a plan total. For scale, welludr's locked 12-month rate is $41 x 12 = $492 (price index, verified Nov 18, 2026). Flexibility is worth paying for when your circumstances genuinely might change: income uncertainty, a possible switch to brand-name, or you're still confirming the medication suits you in the first months. It's not worth paying indefinitely: once you know you're staying, either take TrimRx's own multi-month discount or move down-market. Flexibility you no longer need is just margin you're donating.</p><p class="cta-row"><a href="/weight-loss/reviews/trimrx">→ Current plans and multi-month rates in the TrimRx review</a></p><p>This article is general information, not medical advice. TrimRx figures were read from its site on Nov 22, 2026 - confirm current pricing there.</p>`,
+        body: `<p>We cannot give a verified 12-month total. TrimRx's site shows plans "from $179" without tying that to a drug or dose, so the floor is $179 x 12 = <strong>$2,148</strong>, a minimum on an unspecified product and not a plan total. For scale, welludr's promotional price is $39 x 12 = $468 (price index, read Nov 20, 2026). Flexibility is worth paying for when your circumstances genuinely might change: income uncertainty, a possible switch to brand-name, or you're still confirming the medication suits you in the first months. It's not worth paying indefinitely: once you know you're staying, either take TrimRx's own multi-month discount or move down-market. Flexibility you no longer need is just margin you're donating.</p><p class="cta-row"><a href="/weight-loss/reviews/trimrx">→ Current plans and multi-month rates in the TrimRx review</a></p><p>This article is general information, not medical advice. TrimRx figures were read from its site on Nov 22, 2026 - confirm current pricing there.</p>`,
       },
     ],
   },
@@ -452,7 +452,7 @@ export const brandClusterArticles: Article[] = [
     slug: "trimrx-alternatives",
     title: "6 TrimRx Alternatives (2026): Cheaper, Faster or Brand-Name",
     description:
-      "Leaving TrimRx? Six alternatives sorted by what you want fixed: lower GLP-1 price (from $41), faster delivery, brand-name Ozempic or deeper support.",
+      "Leaving TrimRx? Six alternatives sorted by what you want fixed: lower GLP-1 price (from $39), faster delivery, brand-name Ozempic or deeper support.",
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-08-12",
@@ -597,7 +597,7 @@ export const brandClusterArticles: Article[] = [
     heroColor: "#FBEEF4",
     author: "Treatments Hub Staff",
     keyTakeaways: [
-      "Only two providers undercut altRx's $89 plan: welludr at $41/month and embody at $49 flat - a $240-$360/year saving, minus the brand shelf and BNPL.",
+      "Only two providers undercut altRx's $89 plan: welludr at $39/month and embody at $49 flat - a $480-$600/year saving, minus the brand shelf and BNPL.",
       "For logistics, HealthRx ships overnight cold-chain at $125/month after a $39 first month and DirectMeds offers needle-free sublingual semaglutide at $249.",
       "For human support, Medvi (from $99, all-inclusive with video visits and a dietician) and SHED ($199/$299, with a 5%-in-120-days money-back guarantee) fill altRx's self-serve gap.",
       "Nobody else offers financing: if cash flow is your constraint, altRx's Buy Now, Pay Later has no direct alternative.",
@@ -605,11 +605,11 @@ export const brandClusterArticles: Article[] = [
     sections: [
       {
         heading: "What altRx already wins - so you don't re-buy it",
-        body: `<div class="qa"><strong>The short answer</strong>Only two providers undercut altRx's $89 plan: welludr at $41 a month and embody at $49 flat, a $240 to $360 a year saving minus altRx's brand shelf and BNPL. For logistics, HealthRx ships overnight at $125 a month after a $39 first month and DirectMeds offers needle-free sublingual semaglutide at $249; for human support, Medvi and SHED fill altRx's self-serve gap. Nobody else offers financing, so if cash flow is the constraint altRx's Buy Now, Pay Later has no direct alternative.</div><p>Before shopping alternatives, bank what altRx does best in our ranking: the widest medication menu (both compounded plans <em>and</em> the cheapest brand-name shelf - Ozempic $1,149, Zepbound $1,249, Wegovy $1,579), dose-flat $89/$149 pricing, BNPL, and pause-anytime terms. If those are the features you use, switching means losing them. The alternatives below each beat altRx on exactly one axis - match the axis to your actual complaint.</p>`,
+        body: `<div class="qa"><strong>The short answer</strong>Only two providers undercut altRx's $89 plan: welludr at $39 a month (promotional price, read Nov 20, 2026) and embody at $49 flat, a $480 to $600 a year saving minus altRx's brand shelf and BNPL. For logistics, HealthRx ships overnight at $125 a month after a $39 first month and DirectMeds offers needle-free sublingual semaglutide at $249; for human support, Medvi and SHED fill altRx's self-serve gap. Nobody else offers financing, so if cash flow is the constraint altRx's Buy Now, Pay Later has no direct alternative.</div><p>Before shopping alternatives, bank what altRx does best in our ranking: the widest medication menu (both compounded plans <em>and</em> the cheapest brand-name shelf - Ozempic $1,149, Zepbound $1,249, Wegovy $1,579), dose-flat $89/$149 pricing, BNPL, and pause-anytime terms. If those are the features you use, switching means losing them. The alternatives below each beat altRx on exactly one axis - match the axis to your actual complaint.</p>`,
       },
       {
         heading: "Axis 1 - price: welludr and embody",
-        body: `<p>The only two providers that undercut $89: <a href="/weight-loss/reviews/wellmedr">welludr</a> at <strong>$39/month</strong> ($69 (promotional prices, read Nov 20, 2026) tirzepatide) - same dose-flat honesty as altRx, coach and warranty included - and <a href="/weight-loss/reviews/embody">embody</a> at <strong>$41 flat</strong> with free expedited delivery (no timeline guaranteed), LegitScript certification and a partial refund if not approved (unused portion less services rendered). Combined saving vs altRx: $240-$360/year. What neither has: any brand-name lane, or BNPL. Head-to-heads: <a href="/weight-loss/altrx-vs-wellmedr">altRx vs welludr</a> and <a href="/weight-loss/altrx-vs-embody">altRx vs embody</a>.</p>`,
+        body: `<p>The only two providers that undercut $89: <a href="/weight-loss/reviews/wellmedr">welludr</a> at <strong>$39/month</strong> ($69 (promotional prices, read Nov 20, 2026) tirzepatide) - same dose-flat honesty as altRx, coach and warranty included - and <a href="/weight-loss/reviews/embody">embody</a> at <strong>$49 flat</strong> with free expedited delivery (no timeline guaranteed), LegitScript certification and a partial refund if not approved (unused portion less services rendered). Saving vs altRx: $480/year at embody, $600/year at welludr ($89 less $49 or $39, times 12). What neither has: any brand-name lane, or BNPL. Head-to-heads: <a href="/weight-loss/altrx-vs-wellmedr">altRx vs welludr</a> and <a href="/weight-loss/altrx-vs-embody">altRx vs embody</a>.</p>`,
       },
       {
         heading: "Axis 2 - logistics: HealthRx and DirectMeds",
@@ -706,7 +706,7 @@ export const brandClusterArticles: Article[] = [
     slug: "shed-alternatives",
     title: "SHED Alternatives 2026: Keep the Support or Keep the Cash",
     description:
-      "Leaving SHED's $199 GLP-1 program means choosing: keep support (Medvi, welludr's coach) or keep cash ($41-$99 tier). Six alternatives, honestly mapped.",
+      "Leaving SHED's $199 GLP-1 program means choosing: keep support (Medvi, welludr's coach) or keep cash ($39-$99 tier). Six alternatives, honestly mapped.",
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-08-17",
@@ -797,7 +797,7 @@ export const brandClusterArticles: Article[] = [
     keyTakeaways: [
       "DirectMeds lists $249/month for sublingual semaglutide and $297/month for injections (read Nov 18, 2026), with no subscriptions, the doctor review and free 1-2 day shipping; cancel anytime.",
       "Tirzepatide patients: DirectMeds publishes no tirzepatide price. The cheaper published prices are welludr $69 (promotional price, read Nov 20, 2026), embody $99 and altRx $149.",
-      "Semaglutide patients: five providers list less per month - welludr $41, embody $49, altRx $89, Medvi from $99, HealthRx $125 after a $39 first month - a $1,488-$2,496 annual difference at $249.",
+      "Semaglutide patients: five providers list less per month - welludr $39, embody $49, altRx $89, Medvi from $99, HealthRx $125 after a $39 first month - a $1,488-$2,520 annual difference at $249.",
       "6- and 12-month bulk plans are offered but not priced on the page, so a long-plan rate cannot be quoted.",
     ],
     sections: [
@@ -807,7 +807,7 @@ export const brandClusterArticles: Article[] = [
       },
       {
         heading: "How $249 compares",
-        body: `<p><strong>If you're on semaglutide:</strong> $249 is above five providers - welludr $41, embody $49, altRx $89, Medvi from $99, HealthRx $125 after a $39 first month - a $1,488-$2,496 annual difference. Unless the drops format is what you're buying, the budget tier serves semaglutide patients better.</p><p><strong>If you're on tirzepatide:</strong> DirectMeds publishes no price for it. The published tirzepatide prices are welludr $69 (promotional price, read Nov 20, 2026), embody $99, altRx $149, HealthRx $199 and SHED $299. TrimRx publishes no per-drug tirzepatide price we could read on Nov 22, 2026.</p><table><tr><th>Provider</th><th>Semaglutide</th><th>Tirzepatide</th></tr><tr><td>welludr</td><td>$39/mo (promotional price, read Nov 20, 2026)</td><td>$69/mo (promotional price, read Nov 20, 2026)</td></tr><tr><td>embody</td><td>$49/mo</td><td>$99/mo</td></tr><tr><td>altRx</td><td>$89/mo</td><td>$149/mo</td></tr><tr><td>Medvi</td><td>from $99/mo</td><td>Not listed</td></tr><tr><td>HealthRx</td><td>$125/mo*</td><td>$199/mo*</td></tr><tr><td>SHED</td><td>$199/mo</td><td>$299/mo</td></tr><tr><td><strong>DirectMeds</strong></td><td><strong>$249/mo (sublingual)</strong></td><td><strong>Not published</strong></td></tr></table><p>*After a $39 first month. Choosing between the two medications in the first place: <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide</a>.</p>`,
+        body: `<p><strong>If you're on semaglutide:</strong> $249 is above five providers - welludr $39, embody $49, altRx $89, Medvi from $99, HealthRx $125 after a $39 first month - a $1,488-$2,520 annual difference. Unless the drops format is what you're buying, the budget tier serves semaglutide patients better.</p><p><strong>If you're on tirzepatide:</strong> DirectMeds publishes no price for it. The published tirzepatide prices are welludr $69 (promotional price, read Nov 20, 2026), embody $99, altRx $149, HealthRx $199 and SHED $299. TrimRx publishes no per-drug tirzepatide price we could read on Nov 22, 2026.</p><table><tr><th>Provider</th><th>Semaglutide</th><th>Tirzepatide</th></tr><tr><td>welludr</td><td>$39/mo (promotional price, read Nov 20, 2026)</td><td>$69/mo (promotional price, read Nov 20, 2026)</td></tr><tr><td>embody</td><td>$49/mo</td><td>$99/mo</td></tr><tr><td>altRx</td><td>$89/mo</td><td>$149/mo</td></tr><tr><td>Medvi</td><td>from $99/mo</td><td>Not listed</td></tr><tr><td>HealthRx</td><td>$125/mo*</td><td>$199/mo*</td></tr><tr><td>SHED</td><td>$199/mo</td><td>$299/mo</td></tr><tr><td><strong>DirectMeds</strong></td><td><strong>$249/mo (sublingual)</strong></td><td><strong>Not published</strong></td></tr></table><p>*After a $39 first month. Choosing between the two medications in the first place: <a href="/weight-loss/articles/tirzepatide-vs-semaglutide">tirzepatide vs semaglutide</a>.</p>`,
       },
       {
         heading: "Questions the pricing page leaves open",
@@ -832,14 +832,14 @@ export const brandClusterArticles: Article[] = [
     author: "Treatments Hub Staff",
     keyTakeaways: [
       "The right alternative depends on your medication: semaglutide patients have five cheaper options, tirzepatide patients a published price, and drops patients none.",
-      "Semaglutide: welludr $41 (12-month lock), embody $49 flat with no commitment, altRx $89 with BNPL and a brand-name shelf, Medvi from $99, HealthRx $125 after a $39 first month - annual savings of $1,488-$2,496 against $249, none with a needle-free format.",
+      "Semaglutide: welludr $39 (promotional price), embody $49 flat with no commitment, altRx $89 with BNPL and a brand-name shelf, Medvi from $99, HealthRx $125 after a $39 first month - annual savings of $1,488-$2,520 against $249, none with a needle-free format.",
       "Tirzepatide: DirectMeds publishes no price, so there is nothing to beat - welludr is $69 (promotional price, read Nov 20, 2026), embody $99 flat, altRx $149, HealthRx $199, SHED $299. TrimRx publishes no per-drug tirzepatide price we could read on Nov 22, 2026.",
       "Do not spend weeks optimizing a $30-$80/month gap while not starting treatment - pick the provider that fits your constraint, start, and revisit in month three with real data.",
     ],
     sections: [
       {
         heading: "Three customers, three different answers",
-        body: `<div class="qa"><strong>The short answer</strong>The right DirectMeds alternative depends on your medication. Semaglutide patients have five cheaper options: welludr $41 on a 12-month lock, embody $49 flat with no commitment, altRx $89 with BNPL and a brand-name shelf, Medvi from $99, and HealthRx $125 after a $39 first month, saving $1,488 to $2,496 a year against $249. Tirzepatide patients have a published price at welludr $69 (promotional price, read Nov 20, 2026) and embody $99, among others; DirectMeds publishes none. Drops patients have none, because no other ranked provider offers a needle-free format.</div><p>Generic alternatives lists fail DirectMeds shoppers because the $249 means different things to different patients. So we'll answer three people separately: the semaglutide patient (five cheaper options), the tirzepatide patient (no DirectMeds price to compare), and the drops patient (no alternatives exist - but staying has conditions worth knowing).</p>`,
+        body: `<div class="qa"><strong>The short answer</strong>The right DirectMeds alternative depends on your medication. Semaglutide patients have five cheaper options: welludr $39 (promotional price, read Nov 20, 2026), embody $49 flat with no commitment, altRx $89 with BNPL and a brand-name shelf, Medvi from $99, and HealthRx $125 after a $39 first month, saving $1,488 to $2,520 a year against $249. Tirzepatide patients have a published price at welludr $69 (promotional price, read Nov 20, 2026) and embody $99, among others; DirectMeds publishes none. Drops patients have none, because no other ranked provider offers a needle-free format.</div><p>Generic alternatives lists fail DirectMeds shoppers because the $249 means different things to different patients. So we'll answer three people separately: the semaglutide patient (five cheaper options), the tirzepatide patient (no DirectMeds price to compare), and the drops patient (no alternatives exist - but staying has conditions worth knowing).</p>`,
       },
       {
         heading: "Semaglutide patient? Five ways to pay less",
@@ -914,8 +914,8 @@ export const brandClusterArticles: Article[] = [
     keyTakeaways: [
       "HealthRx's compounded semaglutide is $39 for the first month, then $125/month until canceled; tirzepatide is $39 for the first month, then $199/month (read Nov 18, 2026). Longer plans have a lower monthly price, but the tiers are not shown.",
       "The price includes the clinician consult, medication at every dose, free overnight cold-chain shipping and care-team check-ins - no consultation fee, no shipping charge, no insurance.",
-      "Per month, welludr ($41), embody ($49), altRx ($89) and Medvi's from-$99 price are cheaper than HealthRx's $125; the premium buys the best logistics in the ranking.",
-      "A sensible check: a year on HealthRx's monthly plan is $1,414 for semaglutide, against $588 at embody and $492 at welludr; decide whether overnight delivery is worth the difference.",
+      "Per month, welludr ($39, promotional price), embody ($49), altRx ($89) and Medvi's from-$99 price are cheaper than HealthRx's $125; the premium buys the best logistics in the ranking.",
+      "A sensible check: a year on HealthRx's monthly plan is $1,414 for semaglutide, against $588 at embody and $468 at welludr ($39 x 12, promotional price); decide whether overnight delivery is worth the difference.",
     ],
     sections: [
       {
@@ -924,7 +924,7 @@ export const brandClusterArticles: Article[] = [
       },
       {
         heading: "The year table - where HealthRx competes",
-        body: `<p>Price a full year of semaglutide at every provider's real rate and structure:</p><table><tr><th>Provider</th><th>Billing</th><th>Year total</th></tr><tr><td>welludr</td><td>$41/mo, 12-mo lock, billed monthly</td><td>$492</td></tr><tr><td>embody</td><td>$49/mo flat, cancel anytime</td><td>$588</td></tr><tr><td>altRx</td><td>$89/mo flat, pause anytime</td><td>$1,068</td></tr><tr><td>Medvi</td><td>from $99/mo, all-inclusive</td><td>$1,188</td></tr><tr><td><strong>HealthRx</strong></td><td><strong>$39 first month, then $125/mo, until canceled</strong></td><td><strong>$1,414</strong></td></tr><tr><td>SHED</td><td>$199/mo + coaching</td><td>$2,388</td></tr><tr><td>DirectMeds</td><td>$249/mo (sublingual)</td><td>$2,988</td></tr></table><p>Read honestly: four providers charge less per month than HealthRx's $125, three of them (embody, altRx, Medvi) with no commitment at all. What the extra $26-$84 a month buys at HealthRx is <strong>overnight cold-chain delivery on every shipment</strong> - the best logistics in the ranking - plus dose-stable pricing and LegitScript-certified fulfillment. That's the real trade: paying a premium over the budget tier for premium shipping, while still below SHED and DirectMeds.</p>`,
+        body: `<p>Price a full year of semaglutide at every provider's real rate and structure:</p><table><tr><th>Provider</th><th>Billing</th><th>Year total</th></tr><tr><td>welludr</td><td>$39/mo promotional price (read Nov 20, 2026), Monthly Plan</td><td>$468</td></tr><tr><td>embody</td><td>$49/mo flat, cancel anytime</td><td>$588</td></tr><tr><td>altRx</td><td>$89/mo flat, pause anytime</td><td>$1,068</td></tr><tr><td>Medvi</td><td>from $99/mo, all-inclusive</td><td>$1,188</td></tr><tr><td><strong>HealthRx</strong></td><td><strong>$39 first month, then $125/mo, until canceled</strong></td><td><strong>$1,414</strong></td></tr><tr><td>SHED</td><td>$199/mo + coaching</td><td>$2,388</td></tr><tr><td>DirectMeds</td><td>$249/mo (sublingual)</td><td>$2,988</td></tr></table><p>Read honestly: four providers charge less per month than HealthRx's $125, three of them (embody, altRx, Medvi) with no commitment at all. What the extra $26-$86 a month buys at HealthRx is <strong>overnight cold-chain delivery on every shipment</strong> - the best logistics in the ranking - plus dose-stable pricing and LegitScript-certified fulfillment. That's the real trade: paying a premium over the budget tier for premium shipping, while still below SHED and DirectMeds.</p>`,
       },
       {
         heading: "Longer plans: the question nobody can price",
@@ -940,7 +940,7 @@ export const brandClusterArticles: Article[] = [
     slug: "healthrx-alternatives",
     title: "HealthRx Alternatives 2026: Six Options, Priced",
     description:
-      "Six HealthRx alternatives if $125/month after a $39 first month is too high or you want a track record - from embody's $49 flat to welludr's $41.",
+      "Six HealthRx alternatives if $125/month after a $39 first month is too high or you want a track record - from embody's $49 flat to welludr's $39.",
     category: "Comparison",
     readTime: "6 min read",
     publishedAt: "2026-08-21",
@@ -951,7 +951,7 @@ export const brandClusterArticles: Article[] = [
       "Shoppers leave HealthRx for three reasons: $125/month is above several monthly rivals, the newer brand lacks a track record, or tirzepatide at $199 is beatable.",
       "Lower monthly price, no commitment: embody is $49/month flat with cancel-anytime terms and a refund if not approved ($76 a month below HealthRx's $125); altRx ($89, pause anytime) adds Buy Now, Pay Later.",
       "Track record: welludr pairs $39/month (promotional price, read Nov 20, 2026) with over one million patients and a weight-loss warranty; Medvi (from $99) brings video visits and a dietician on every plan.",
-      "Tirzepatide: welludr $71, embody $99 and altRx $149 all beat HealthRx's $199 - monthly gaps of $50-$128 ($199 - $149 and $199 - $71).",
+      "Tirzepatide: welludr $69, embody $99 and altRx $149 all beat HealthRx's $199 - monthly gaps of $50-$130 ($199 - $149 and $199 - $69).",
     ],
     sections: [
       {
@@ -968,7 +968,7 @@ export const brandClusterArticles: Article[] = [
       },
       {
         heading: "Objection: \"tirzepatide pricing\" → four cheaper doors",
-        body: `<p>HealthRx's tirzepatide is $199 a month after a $39 first month; three providers beat it outright: <a href="/weight-loss/reviews/wellmedr">welludr at $69 (promotional price, read Nov 20, 2026)</a>, <a href="/weight-loss/reviews/embody">embody at $99</a>, <a href="/weight-loss/reviews/altrx">altRx at $149</a>. Monthly gaps run $50-$128 ($199 - $149 and $199 - $71).</p><table><tr><th>Alternative</th><th>Semaglutide</th><th>Upfront exposure</th><th>Beats HealthRx on</th></tr><tr><td>embody</td><td>$49/mo</td><td>$49</td><td>No commitment, refund policy, monthly price</td></tr><tr><td>welludr</td><td>$39/mo (promotional price, read Nov 20, 2026)</td><td>One month</td><td>Price + million-patient scale</td></tr><tr><td>altRx</td><td>$89/mo</td><td>One month (BNPL)</td><td>Flexibility + brand-name shelf</td></tr><tr><td>DirectMeds</td><td>$249/mo (sublingual)</td><td>One month</td><td>Needle-free format</td></tr><tr><td>Medvi</td><td>from $99/mo</td><td>One month</td><td>Support + video visits</td></tr><tr><td>SHED</td><td>$199/mo</td><td>One month</td><td>Coaching + money-back guarantee</td></tr></table><p>And the counter-case for staying: if overnight delivery and a $39 first month matter to you, none of the objections apply - HealthRx at $125 with the best logistics in the ranking is exactly what it claims to be.</p><p class="cta-row"><a href="/weight-loss/find-your-match">→ Sixty seconds to a personalized answer: take the matching quiz</a></p><p>This article is general information, not medical advice. Prices as listed at the time of writing.</p>`,
+        body: `<p>HealthRx's tirzepatide is $199 a month after a $39 first month; three providers beat it outright: <a href="/weight-loss/reviews/wellmedr">welludr at $69 (promotional price, read Nov 20, 2026)</a>, <a href="/weight-loss/reviews/embody">embody at $99</a>, <a href="/weight-loss/reviews/altrx">altRx at $149</a>. Monthly gaps run $50-$130 ($199 - $149 and $199 - $69).</p><table><tr><th>Alternative</th><th>Semaglutide</th><th>Upfront exposure</th><th>Beats HealthRx on</th></tr><tr><td>embody</td><td>$49/mo</td><td>$49</td><td>No commitment, refund policy, monthly price</td></tr><tr><td>welludr</td><td>$39/mo (promotional price, read Nov 20, 2026)</td><td>One month</td><td>Price + million-patient scale</td></tr><tr><td>altRx</td><td>$89/mo</td><td>One month (BNPL)</td><td>Flexibility + brand-name shelf</td></tr><tr><td>DirectMeds</td><td>$249/mo (sublingual)</td><td>One month</td><td>Needle-free format</td></tr><tr><td>Medvi</td><td>from $99/mo</td><td>One month</td><td>Support + video visits</td></tr><tr><td>SHED</td><td>$199/mo</td><td>One month</td><td>Coaching + money-back guarantee</td></tr></table><p>And the counter-case for staying: if overnight delivery and a $39 first month matter to you, none of the objections apply - HealthRx at $125 with the best logistics in the ranking is exactly what it claims to be.</p><p class="cta-row"><a href="/weight-loss/find-your-match">→ Sixty seconds to a personalized answer: take the matching quiz</a></p><p>This article is general information, not medical advice. Prices as listed at the time of writing.</p>`,
       },
     ],
   },
@@ -1018,7 +1018,7 @@ export const brandClusterArticles: Article[] = [
     keyTakeaways: [
       "Sprout's compounded semaglutide costs $99/month on the 12-month plan ($1,188 billed upfront), $110 on the 6-month plan, $125 on the 3-month plan or $149 month to month; tirzepatide is $149, $160, $180 or $199 on the same plans; brand-name Wegovy is from $1,799/month.",
       "First-year math: $1,188 for semaglutide and $1,788 for tirzepatide on the 12-month plan, billed upfront, or $1,588 and $2,188 month to month with the first-month discount; $21,388+ for Wegovy - which altRx lists $220/month cheaper at $1,579.",
-      "On semaglutide, Sprout's 12-month $99 prices tied-fourth of eight with Medvi's from-$99 price - welludr $41, embody $49 and altRx $89 undercut it; month to month, its price is $149.",
+      "On semaglutide, Sprout's 12-month $99 prices tied-fourth of eight with Medvi's from-$99 price - welludr $39, embody $49 and altRx $89 undercut it; month to month, its price is $149.",
       "The premium buys 2-day fulfillment, the option to move to brand-name Wegovy without switching providers, and fast named-human support - if none of those matter, the value tier wins.",
     ],
     sections: [
@@ -1036,7 +1036,7 @@ export const brandClusterArticles: Article[] = [
       },
       {
         heading: "Worth it, or walk?",
-        body: `<p><strong>Worth it:</strong> switchers timing a transition who can't absorb a shipping gap, anyone who wants the Wegovy door left open, and people who value fast, named-human support - "shout out to Frank" appears in more than one review for a reason.</p><p><strong>Walk:</strong> if price per milligram is the whole decision. The same compounded semaglutide runs $41-$99 across the value tier, and over a year that difference funds a vacation.</p><p class="cta-row"><a href="/weight-loss/sprout-vs-wellmedr">→ The extreme version of that choice: Sprout vs welludr's $39 (promotional price, read Nov 20, 2026), compared</a></p><p>This article is general information, not medical advice. Prices as listed at the time of writing - confirm current terms on Sprout's site.</p>`,
+        body: `<p><strong>Worth it:</strong> switchers timing a transition who can't absorb a shipping gap, anyone who wants the Wegovy door left open, and people who value fast, named-human support - "shout out to Frank" appears in more than one review for a reason.</p><p><strong>Walk:</strong> if price per milligram is the whole decision. The same compounded semaglutide runs $39-$99 across the value tier, and over a year that difference funds a vacation.</p><p class="cta-row"><a href="/weight-loss/sprout-vs-wellmedr">→ The extreme version of that choice: Sprout vs welludr's $39 (promotional price, read Nov 20, 2026), compared</a></p><p>This article is general information, not medical advice. Prices as listed at the time of writing - confirm current terms on Sprout's site.</p>`,
       },
     ],
   },
@@ -1044,7 +1044,7 @@ export const brandClusterArticles: Article[] = [
     slug: "sprout-alternatives",
     title: "Best Sprout Alternatives 2026 (From $49/mo)",
     description:
-      "Six real alternatives to Sprout's GLP-1 program ($99/month on a 12-month plan), from welludr at $41 to altRx's three-brand shelf, by reason to switch.",
+      "Six real alternatives to Sprout's GLP-1 program ($99/month on a 12-month plan), from welludr at $39 to altRx's three-brand shelf, by reason to switch.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-08-23",
@@ -1053,14 +1053,14 @@ export const brandClusterArticles: Article[] = [
     author: "Treatments Hub Staff",
     keyTakeaways: [
       "People leave Sprout for price (its $149 month-to-month semaglutide sits $50-90/month above the value tier), track record (it is a newer brand), or a bigger brand-name selection.",
-      "welludr sells the same compounded semaglutide for $41/month on a 12-month plan with a warranty - $696/year less than Sprout's 12-month plan; Sprout's counter is 2-day fulfillment vs 3-5 days.",
+      "welludr sells the same compounded semaglutide for $39/month (promotional price) with a warranty - $720/year less than Sprout's 12-month plan; Sprout's counter is 2-day fulfillment vs 3-5 days.",
       "altRx is the only other ranked provider with brand-name medication, and does it bigger and cheaper - Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 - plus $89 compounded semaglutide with BNPL.",
       "Other exits: embody $49 flat with free expedited cold-chain delivery, Medvi from $99 with coaching and video visits, HealthRx $125 after a $39 first month, DirectMeds $249 with needle-free drops.",
     ],
     sections: [
       {
         heading: "Name the reason before you name the alternative",
-        body: `<div class="qa"><strong>The short answer</strong>People leave Sprout for price, since its $149 month-to-month semaglutide sits $50 to $90 a month above the value tier, for track record, since it is a newer brand, or for a bigger brand-name selection. welludr sells the same compounded semaglutide for $41 a month on a 12-month plan with a weight-loss warranty; altRx is the only other ranked provider with brand-name medication, at Ozempic $1,149, Zepbound $1,249 and Wegovy $1,579 plus $89 compounded semaglutide; embody, Medvi, HealthRx and DirectMeds are the other exits.</div><p>People shop for Sprout alternatives for three distinct reasons, and each points somewhere different. If it's <strong>price</strong> - Sprout's $149 month-to-month semaglutide sits $50-90/month above the value tier - the answer is the budget lane. If it's <strong>track record</strong> - Sprout is a newer brand - the answer is a longer-established provider. And if it's <strong>brand-name selection</strong> - Sprout stocks Wegovy only, at $1,799 - the answer is the one provider with a bigger, cheaper shelf.</p>`,
+        body: `<div class="qa"><strong>The short answer</strong>People leave Sprout for price, since its $149 month-to-month semaglutide sits $50 to $90 a month above the value tier, for track record, since it is a newer brand, or for a bigger brand-name selection. welludr sells the same compounded semaglutide for $39 a month (promotional price, read Nov 20, 2026) with a weight-loss warranty; altRx is the only other ranked provider with brand-name medication, at Ozempic $1,149, Zepbound $1,249 and Wegovy $1,579 plus $89 compounded semaglutide; embody, Medvi, HealthRx and DirectMeds are the other exits.</div><p>People shop for Sprout alternatives for three distinct reasons, and each points somewhere different. If it's <strong>price</strong> - Sprout's $149 month-to-month semaglutide sits $50-90/month above the value tier - the answer is the budget lane. If it's <strong>track record</strong> - Sprout is a newer brand - the answer is a longer-established provider. And if it's <strong>brand-name selection</strong> - Sprout stocks Wegovy only, at $1,799 - the answer is the one provider with a bigger, cheaper shelf.</p>`,
       },
       {
         heading: "The map, by what you'd actually gain",
@@ -1068,7 +1068,7 @@ export const brandClusterArticles: Article[] = [
       },
       {
         heading: "The two matchups that decide it for most people",
-        body: `<p><strong>Sprout vs the price floor:</strong> <a href="/weight-loss/reviews/wellmedr">welludr</a> sells the same compounded semaglutide for $41/month on a 12-month plan with a warranty and a 4.7 published record - $696/year less than Sprout's 12-month plan. Sprout's counters are real but narrow: 2-day fulfillment vs 3-5 business days, Wegovy on the shelf, and a month-to-month option at $149. The full head-to-head is in <a href="/weight-loss/sprout-vs-wellmedr">Sprout vs welludr</a>.</p><p><strong>Sprout vs the other brand shelf:</strong> <a href="/weight-loss/reviews/altrx">altRx</a> is the only other provider we rank with brand-name medication, and it does it bigger and cheaper - Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 - on top of $89 compounded semaglutide with BNPL. Sprout's remaining edge there is pure speed: 2 days vs 5-7. That comparison is in <a href="/weight-loss/altrx-vs-sprout">altRx vs Sprout</a>.</p><p class="cta-row"><a href="/weight-loss/find-your-match">→ Six questions, one personalized answer: take the matching quiz</a></p><p>This article is general information, not medical advice. Prices as listed at the time of writing.</p>`,
+        body: `<p><strong>Sprout vs the price floor:</strong> <a href="/weight-loss/reviews/wellmedr">welludr</a> sells the same compounded semaglutide for $39/month (promotional price, read Nov 20, 2026) with a warranty and a 4.7 published record - $720/year less than Sprout's 12-month plan ($99 less $39, times 12). Sprout's counters are real but narrow: 2-day fulfillment vs 3-5 business days, Wegovy on the shelf, and a month-to-month option at $149. The full head-to-head is in <a href="/weight-loss/sprout-vs-wellmedr">Sprout vs welludr</a>.</p><p><strong>Sprout vs the other brand shelf:</strong> <a href="/weight-loss/reviews/altrx">altRx</a> is the only other provider we rank with brand-name medication, and it does it bigger and cheaper - Ozempic $1,149, Zepbound $1,249, Wegovy $1,579 - on top of $89 compounded semaglutide with BNPL. Sprout's remaining edge there is pure speed: 2 days vs 5-7. That comparison is in <a href="/weight-loss/altrx-vs-sprout">altRx vs Sprout</a>.</p><p class="cta-row"><a href="/weight-loss/find-your-match">→ Six questions, one personalized answer: take the matching quiz</a></p><p>This article is general information, not medical advice. Prices as listed at the time of writing.</p>`,
       },
     ],
   },
