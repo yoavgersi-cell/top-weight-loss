@@ -38,9 +38,9 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
   },
   "weight-loss:welludr": {
     rows: [
-      { label: "Semaglutide price", value: "$41/month on a 12-month plan" },
-      { label: "Tirzepatide price", value: "$71/month on a 12-month plan" },
-      { label: "Commitment", value: "12-month plan for the best rate" },
+      { label: "Semaglutide price", value: "$39/month, a promotional price on a plan its page labels Monthly Plan (read Nov 20, 2026)" },
+      { label: "Tirzepatide price", value: "$69/month, a promotional price on a plan its page labels Monthly Plan (read Nov 20, 2026)" },
+      { label: "Commitment", value: "Monthly Plan, cancel or change anytime (plan page, Nov 20, 2026); the refund policy still describes 12-month plans as prepaid in full (Nov 22, 2026)" },
       { label: "Support", value: "Coach included on every plan" },
       { label: "Guarantee", value: "Weight-loss warranty" },
     ],

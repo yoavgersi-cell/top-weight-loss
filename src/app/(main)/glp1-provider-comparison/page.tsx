@@ -64,15 +64,15 @@ const ROWS: Row[] = [
     id: "wellmedr",
     name: "welludr",
     medications: "Compounded semaglutide and tirzepatide; brand-name Ozempic and Zepbound",
-    entry: "$41 sema / $71 tirz",
-    entryNote: "12-month plan, same price at every dose",
-    after: "Same, locked on the plan; month to month is higher",
+    entry: "$39 sema / $69 tirz (promotional prices, read Nov 20, 2026)",
+    entryNote: "Monthly Plan as labeled on its page, same price at every dose",
+    after: "Same price at every dose",
     membership: "None",
     shipping: "3-5 business days",
     support: "Board-certified specialists plus a weight-care coach",
     advantage: "Lowest ongoing price; weight-loss warranty",
-    limitation: "Lowest rate needs a 12-month plan; slower shipping",
-    cta: "Check welludr's 12-month rate",
+    limitation: "Lowest rate is a promotional price; slower shipping",
+    cta: "Check welludr's current price",
   },
   {
     id: "embody",
@@ -199,12 +199,12 @@ const SECTIONS: Section[] = [
     id: "wellmedr",
     overview: (
       <>
-        welludr sells compounded semaglutide and tirzepatide on a twelve-month plan <strong className="text-[#191919]">at the lowest ongoing price we track</strong>, with the same price at every dose, a coach included on every plan and a brand-name shelf for people who want Ozempic or Zepbound. It is the provider for readers who have decided to stay on treatment and want the cheapest sustainable rate.
+        welludr sells compounded semaglutide and tirzepatide <strong className="text-[#191919]">at the lowest ongoing price we track</strong>, with the same price at every dose, a coach included on every plan and a brand-name shelf for people who want Ozempic or Zepbound. It is the provider for readers who have decided to stay on treatment and want the cheapest sustainable rate.
       </>
     ),
     pricing: (
       <>
-        <strong className="text-[#191919]">Semaglutide is $41 a month and tirzepatide $71 a month on the twelve-month plan</strong>, shipped every four weeks, verified October 16, 2026 (both figures came down on September 14, from $59 and $99). Brand-name Ozempic is $1,399 and Zepbound $1,599 a month. Shipping is standard, three to five business days. There is no membership. The plan is the condition: the $41 rate belongs to the twelve-month commitment, and Reddit users who pay month to month report $129. A year on the plan is $588 for semaglutide, the lowest year-one figure on this page.
+        <strong className="text-[#191919]">Semaglutide is $39 a month and tirzepatide $69 a month</strong> (promotional prices, read Nov 20, 2026), shipped every four weeks. Brand-name Ozempic is $1,399 and Zepbound $1,599 a month. Shipping is standard, three to five business days. There is no membership. Reddit users who pay month to month report $129. A year on the plan is $588 for semaglutide, the lowest year-one figure on this page.
       </>
     ),
     support:
@@ -217,7 +217,7 @@ const SECTIONS: Section[] = [
     cancellation:
       "Cancel before the next charge; refunds are provided for qualifying unfulfilled orders and objectively unearned services, the most refund-friendly wording among the eight.",
     pros: ["Lowest ongoing price on this page, same at every dose", "Coach included", "Weight-loss warranty"],
-    cons: ["The headline rate needs a twelve-month plan", "Slower shipping than the one-to-two-day providers", "Pharmacy not stated on the site"],
+    cons: ["The headline rate is a promotional price", "Slower shipping than the one-to-two-day providers", "Pharmacy not stated on the site"],
     suits: "Readers who already know they will stay on treatment for a year, want the lowest total cost, and value a coach over next-day delivery.",
     assessment: (
       <>
@@ -820,7 +820,7 @@ export default async function Glp1ProviderComparisonPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
-                <tr><th scope="row" className="px-4 py-3 font-medium text-[#191919]">welludr, semaglutide on the 12-month plan</th><td className="px-4 py-3 text-gray-600">$41</td><td className="px-4 py-3 text-gray-600">$41</td><td className="px-4 py-3 text-gray-600">$41</td><td className="px-4 py-3 text-gray-800"><strong>$123</strong> (with nine more months committed)</td></tr>
+                <tr><th scope="row" className="px-4 py-3 font-medium text-[#191919]">welludr, semaglutide (promotional price, read Nov 20, 2026)</th><td className="px-4 py-3 text-gray-600">$39</td><td className="px-4 py-3 text-gray-600">$39</td><td className="px-4 py-3 text-gray-600">$39</td><td className="px-4 py-3 text-gray-800"><strong>$117</strong></td></tr>
                 <tr className="bg-gray-50/50"><th scope="row" className="px-4 py-3 font-medium text-[#191919]">embody, semaglutide month to month</th><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-600">$49</td><td className="px-4 py-3 text-gray-800"><strong>$147</strong> (no further commitment)</td></tr>
                 <tr><th scope="row" className="px-4 py-3 font-medium text-[#191919]">Ro, Wegovy pill plus membership, month to month</th><td className="px-4 py-3 text-gray-600">$39 + $149 = $188</td><td className="px-4 py-3 text-gray-600">$149 + $299 = $448</td><td className="px-4 py-3 text-gray-600">$149 + $299 = $448</td><td className="px-4 py-3 text-gray-800"><strong>$1,084</strong> (FDA-approved product; insurance may change this entirely)</td></tr>
               </tbody>

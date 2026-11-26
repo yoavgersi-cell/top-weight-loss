@@ -88,7 +88,7 @@ export const glp1Coverage2027Article: Article = {
     "Employer coverage of GLP-1s for weight loss fell in WTW's 2026 survey for the first time in three years, from 57% to 53% of employers with 100 or more workers, and 30% of those still covering are considering dropping it. Business Group on Health reports large-employer coverage down from 72% in 2025 to 60% in 2026, with about 14% having dropped or planning to drop it in 2027.",
     "Demand is moving the other way: Gallup found 11% of US adults were taking a GLP-1 for weight loss in 2026, up from 3% in 2024. Cost is the stated reason for cuts, cited by 91% of employers that have dropped or are weighing dropping coverage in the WTW survey.",
     "Open enrollment is the moment to check, not January. Search your 2027 formulary for Wegovy and Zepbound, read the prior-authorization and BMI rules, ask whether coverage continues for heart disease, sleep apnea or liver indications, and compare plans if you have a choice. Diabetes coverage is usually untouched.",
-    "If coverage goes, routes remain at very different prices: Medicare's GLP-1 Bridge at $50 a month through December 31, 2027 if you qualify, brand-name cash at $1,149-$1,799 a month at the providers we track, the Wegovy pill at Ro from $149 then $299 plus membership, or compounded semaglutide from $41 a month and tirzepatide from $71 at verified sale prices, which are not FDA-approved products.",
+    "If coverage goes, routes remain at very different prices: Medicare's GLP-1 Bridge at $50 a month through December 31, 2027 if you qualify, brand-name cash at $1,149-$1,799 a month at the providers we track, the Wegovy pill at Ro from $149 then $299 plus membership, or compounded semaglutide from $39 a month and tirzepatide from $69 (promotional prices, read Nov 20, 2026) at verified sale prices, which are not FDA-approved products.",
   ],
   sections: [
     {
@@ -289,7 +289,7 @@ export const glp1Coverage2027Article: Article = {
 <tr><td>Direct-to-employer programme</td><td>Zepbound KwikPen (Lilly Employer Connect) or Wegovy (Andel with Novo Nordisk)</td><td>Depends on your employer's contribution; we have not verified employee prices</td><td>Only if your employer takes part</td></tr>
 <tr><td>Manufacturer savings offer with commercial coverage</td><td>Brand pills and pens</td><td>Reported as low as $25 a month for the Wegovy pill where your plan covers it; Foundayo $25 with commercial insurance (${ext(S.sciamFoundayo, "Scientific American")})</td><td>Eligibility rules apply; government-plan members excluded; we have not verified current Zepbound and Wegovy pen card terms</td></tr>
 <tr><td>Brand-name for cash</td><td>Wegovy, Zepbound, Ozempic; Wegovy pill; Foundayo</td><td>Pens $1,149-$1,799 a month at providers we track; Ro's Wegovy pill $149 first month, then $299, plus membership; Foundayo $149-$349 self-pay by dose (reported)</td><td>The FDA-approved product with no change; the most expensive route</td></tr>
-<tr><td>Compounded semaglutide or tirzepatide</td><td>Pharmacy-prepared, same active ingredient</td><td>Semaglutide from $41 a month (12-month plan, sale) and tirzepatide from $71 (sale) at verified prices</td><td>Not FDA-approved, no trials of its own, never covered by insurance or Medicare; ask which pharmacy fills it</td></tr>
+<tr><td>Compounded semaglutide or tirzepatide</td><td>Pharmacy-prepared, same active ingredient</td><td>Semaglutide from $39 a month and tirzepatide from $69 (promotional prices, read Nov 20, 2026) at verified prices</td><td>Not FDA-approved, no trials of its own, never covered by insurance or Medicare; ask which pharmacy fills it</td></tr>
 </tbody>
 </table>
 <h3>Brand-name cash, in detail</h3>
@@ -299,7 +299,7 @@ export const glp1Coverage2027Article: Article = {
 <h3>Manufacturer direct pens and vials</h3>
 <p>Both manufacturers also sell their injectable weight-loss drugs direct to self-paying patients: Lilly through LillyDirect, including Zepbound in single-dose vials, and Novo Nordisk through its NovoCare Pharmacy. We have not published verified prices for those injectable self-pay offers, so we do not quote them here; check the manufacturer's page for your dose and get the price for the dose you will stay on, not only the first fill.</p>
 <h3>Compounded</h3>
-<p>At verified published prices, compounded semaglutide runs from $41 a month at welludr (12-month plan, pre-Black Friday sale) and $49 at <a href="/weight-loss/reviews/embody">embody</a> (month to month, sale) up to $199, and compounded tirzepatide from $71 (welludr, sale) and $99 (embody, sale) up to $299. The trade-offs are covered below and in <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name</a>.</p>`,
+<p>At verified published prices, compounded semaglutide runs from $39 a month at welludr and $49 at <a href="/weight-loss/reviews/embody">embody</a> (month to month, sale) up to $199, and compounded tirzepatide from $69 (welludr, promotional prices, read Nov 20, 2026) and $99 (embody, sale) up to $299. The trade-offs are covered below and in <a href="/weight-loss/articles/compounded-semaglutide-vs-brand-name">compounded vs brand-name</a>.</p>`,
     },
     {
       heading: "What does a year of GLP-1 treatment cost on each route in 2027?",
@@ -308,12 +308,12 @@ export const glp1Coverage2027Article: Article = {
 <thead><tr><th>Route and provider</th><th>Monthly price and condition</th><th>Arithmetic</th><th>12-month total</th></tr></thead>
 <tbody>
 <tr><td>Medicare GLP-1 Bridge</td><td>$50 copay, if eligible; runs through December 31, 2027</td><td>12 x $50</td><td>$600</td></tr>
-<tr><td>Compounded semaglutide, welludr</td><td>$41, 12-month plan; pre-Black Friday sale (October 28, 2026), no end date stated</td><td>12 x $41</td><td>$492</td></tr>
+<tr><td>Compounded semaglutide, welludr</td><td>$39 promotional price (read Nov 20, 2026), no end date stated</td><td>12 x $39</td><td>$468</td></tr>
 <tr><td>Compounded semaglutide, embody</td><td>$49 sale (October 28, 2026), month to month</td><td>12 x $49</td><td>$588 at sale price</td></tr>
 <tr><td>Compounded semaglutide, altRx</td><td>$89 listed; regular $199; flat at every dose</td><td>12 x $89; at regular price 12 x $199</td><td>$1,068; $2,388 at regular price</td></tr>
 <tr><td>Compounded semaglutide, Medvi</td><td>$99 promo, all-inclusive; regular $199</td><td>12 x $99; at regular price 12 x $199</td><td>$1,188; $2,388 at regular price</td></tr>
 <tr><td>Compounded semaglutide, HealthRx</td><td>$39 first month, then $125 a month (monthly plan)</td><td>$39 + 11 x $125</td><td>$1,414</td></tr>
-<tr><td>Compounded tirzepatide, welludr</td><td>$71 sale (October 28, 2026); shipped every 4 weeks</td><td>12 x $71; if billed per 4-week shipment, 13 x $71</td><td>$852; $923 at 13 shipments</td></tr>
+<tr><td>Compounded tirzepatide, welludr</td><td>$69 promotional price (read Nov 20, 2026); shipped every 4 weeks</td><td>12 x $69; if billed per 4-week shipment, 13 x $69</td><td>$828; $897 at 13 shipments</td></tr>
 <tr><td>Compounded tirzepatide, embody</td><td>$99 sale, month to month</td><td>12 x $99</td><td>$1,188 at sale price</td></tr>
 <tr><td>Compounded tirzepatide, altRx</td><td>$149 listed; regular $299</td><td>12 x $149; at regular price 12 x $299</td><td>$1,788; $3,588 at regular price</td></tr>
 <tr><td>Compounded sublingual semaglutide, DirectMeds</td><td>$249 a month</td><td>12 x $249</td><td>$2,988</td></tr>
@@ -334,7 +334,7 @@ export const glp1Coverage2027Article: Article = {
 <li><strong>Premiums are part of the comparison.</strong> If choosing a plan that covers the drug costs more in premiums, add the difference to that route's total before you compare.</li>
 </ul>
 <h3>A worked example</h3>
-<p>Take an employee whose 2026 plan covered Zepbound and whose 2027 plan excludes it. Staying on brand-name tirzepatide for cash costs $14,988 over 2027 at altRx's published price. Ro's KwikPen route costs $5,541 to $6,916 with membership. Compounded tirzepatide costs $852 at welludr's sale price, or $1,188 at embody if its sale price holds. The gap between the brand cash route and the cheapest compounded route is $14,136 a year ($14,988 minus $852). That gap is the price of staying on the FDA-approved product, and only the employee, with a clinician, can decide whether it is worth paying. Our <a href="/weight-loss/glp1-cost-calculator">cost calculator</a> runs the same arithmetic for any provider and dose.</p>`,
+<p>Take an employee whose 2026 plan covered Zepbound and whose 2027 plan excludes it. Staying on brand-name tirzepatide for cash costs $14,988 over 2027 at altRx's published price. Ro's KwikPen route costs $5,541 to $6,916 with membership. Compounded tirzepatide costs $828 at welludr's promotional price (read Nov 20, 2026), or $1,188 at embody if its sale price holds. The gap between the brand cash route and the cheapest compounded route is $14,160 a year ($14,988 minus $828). That gap is the price of staying on the FDA-approved product, and only the employee, with a clinician, can decide whether it is worth paying. Our <a href="/weight-loss/glp1-cost-calculator">cost calculator</a> runs the same arithmetic for any provider and dose.</p>`,
     },
     {
       heading: "Can you use an HSA or FSA to pay for a GLP-1 in 2027?",
@@ -363,7 +363,7 @@ export const glp1Coverage2027Article: Article = {
 <li>The price is published, with the plan length and any promotion stated.</li>
 </ul>
 <h3>The providers in our index</h3>
-<p>The providers in our <a href="/weight-loss/cheapest-glp1">verified price index</a> each have genuine strengths for someone leaving a covered plan. welludr has the lowest ongoing price, flat at every dose, on a 12-month plan. embody is the cheapest with no commitment and ships in one to two days. altRx keeps one price at every dose, which makes the annual total predictable as the dose rises. Medvi includes clinician visits, a dietitian and coaching in its all-inclusive price, and SHED includes coaching with a money-back guarantee tied to results. A person leaving a covered brand drug should tell the new prescriber their current drug, dose and date of last injection; whether to continue at a similar dose or step down is the clinician's decision.</p>
+<p>The providers in our <a href="/weight-loss/cheapest-glp1">verified price index</a> each have genuine strengths for someone leaving a covered plan. welludr has the lowest ongoing price, flat at every dose. embody is the cheapest with no commitment and ships in one to two days. altRx keeps one price at every dose, which makes the annual total predictable as the dose rises. Medvi includes clinician visits, a dietitian and coaching in its all-inclusive price, and SHED includes coaching with a money-back guarantee tied to results. A person leaving a covered brand drug should tell the new prescriber their current drug, dose and date of last injection; whether to continue at a similar dose or step down is the clinician's decision.</p>
 <h3>What not to do</h3>
 <p>Losing coverage is not a reason to leave the licensed system. "Research peptides" and vials sold without a prescription are not compounded medicines, carry no pharmacy accountability, and are outside anything a clinician can supervise.</p>`,
     },

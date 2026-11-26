@@ -218,7 +218,7 @@ const GALLERIES: Record<string, ProviderGallery> = {
         height: 1785,
         title: "Plans and prices",
         caption:
-          "welludr's plan page lists compounded tirzepatide from $71 a month and compounded semaglutide from $41 a month, each shipped every 4 weeks, with dosing adjusted as you respond.",
+          "welludr's plan page lists compounded tirzepatide from $71 a month and compounded semaglutide from $41 a month, each shipped every 4 weeks, with dosing adjusted as you respond. This screenshot predates our November 20, 2026 re-read, when welludr's page listed $39 and $69 as promotional prices.",
         alt: "welludr Choose your GLP-1 plan section: tirzepatide starting at $71 a month and semaglutide starting at $41 a month",
         price: { semaglutide: 41, tirzepatide: 71 },
       },
