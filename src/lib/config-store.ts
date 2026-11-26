@@ -968,10 +968,10 @@ const defaultReviews: ReviewData[] = [
     // days of the medical review, 44 states. The per-month membership
     // arithmetic is ours and says so.
     shortSummary: "Compounded semaglutide at $59/month and tirzepatide at $69/month, the same price at every dose, plus a $199 annual membership (21-day free trial, billed yearly) that covers unlimited doctor messaging, check-ins and dose changes, nutrition support and 2-day express cold shipping. No multi-month orders, cancel anytime, HSA/FSA eligible. Founded by the founder of Thrive Market; available in 44 states.",
-    reviewIntro: "Collective is a telehealth GLP-1 provider built around one idea, stated on its own site: charge the real cost of the medication and fund the care with a flat membership. The medication prices are the lowest tirzepatide and among the lowest semaglutide figures we track - compounded semaglutide at $59 a month and compounded tirzepatide at $69 a month, 'the same price at any dose', with no multi-month orders and cancellation the site describes as a one-click process. The second half of the price is a $199 annual membership, billed annually rather than monthly, with a 21-day free trial during which you pay only for the medication; cancel before the 21 days end and the membership fee is never charged. The membership is what pays for the care around the drug: unlimited messaging with US-licensed doctors, ongoing check-ins and dose adjustments, nutrition and lifestyle support, and 2-day express cold shipping, with most orders arriving within 7 days of the medical review. Prescriptions are filled by state-licensed US pharmacies the site says are third-party tested for purity and potency, and a twice-a-week dosing option is offered for people who find once-weekly doses hard on the stomach. Collective was started by Gunnar Lovelace, founder of Thrive Market, and is currently available in 44 states (not yet Alabama, California, Louisiana, Massachusetts, Mississippi or Washington). It does not bill insurance; both the medication and the membership may qualify for HSA/FSA reimbursement, which your plan administrator decides. Spread over twelve months, the membership adds about $16.58 a month, so the all-in average works out to roughly $76 a month for semaglutide and $86 for tirzepatide - our arithmetic, not a figure Collective quotes.",
+    reviewIntro: "Collective is a telehealth GLP-1 provider built around one idea, stated on its own site: charge the real cost of the medication and fund the care with a flat membership. The medication prices are tied for the lowest tirzepatide figure we track (welludr also lists $69, promotional price, read Nov 20, 2026) and among the lowest semaglutide figures - compounded semaglutide at $59 a month and compounded tirzepatide at $69 a month, 'the same price at any dose', with no multi-month orders and cancellation the site describes as a one-click process. The second half of the price is a $199 annual membership, billed annually rather than monthly, with a 21-day free trial during which you pay only for the medication; cancel before the 21 days end and the membership fee is never charged. The membership is what pays for the care around the drug: unlimited messaging with US-licensed doctors, ongoing check-ins and dose adjustments, nutrition and lifestyle support, and 2-day express cold shipping, with most orders arriving within 7 days of the medical review. Prescriptions are filled by state-licensed US pharmacies the site says are third-party tested for purity and potency, and a twice-a-week dosing option is offered for people who find once-weekly doses hard on the stomach. Collective was started by Gunnar Lovelace, founder of Thrive Market, and is currently available in 44 states (not yet Alabama, California, Louisiana, Massachusetts, Mississippi or Washington). It does not bill insurance; both the medication and the membership may qualify for HSA/FSA reimbursement, which your plan administrator decides. Spread over twelve months, the membership adds about $16.58 a month, so the all-in average works out to roughly $76 a month for semaglutide and $86 for tirzepatide - our arithmetic, not a figure Collective quotes.",
     keyFeatures: [
       "Compounded semaglutide $59/month - the same price at every dose",
-      "Compounded tirzepatide $69/month - the same price at every dose, the lowest tirzepatide price we track",
+      "Compounded tirzepatide $69/month - the same price at every dose, tied for the lowest tirzepatide price we track (welludr lists $69 too, promotional price, read Nov 20, 2026)",
       "$199 annual membership, billed yearly, with a 21-day free trial (pay only for medication during the trial)",
       "Membership covers unlimited doctor messaging, check-ins and dose changes, nutrition support and 2-day express cold shipping",
       "No multi-month orders, cancel anytime, HSA/FSA eligible; 44 states"
@@ -985,7 +985,7 @@ const defaultReviews: ReviewData[] = [
       "Switching from another provider: keep your current dose if your doctor approves"
     ],
     pros: [
-      "Lowest tirzepatide price we track ($69/month) and one of the lowest semaglutide prices ($59/month), flat at every dose",
+      "Tied for the lowest tirzepatide price we track ($69/month, the same as welludr's promotional price) and one of the lowest semaglutide prices ($59/month), flat at every dose",
       "No multi-month orders - month to month, cancel anytime",
       "Membership includes unlimited doctor messaging, check-ins, dose adjustments and nutrition support",
       "2-day express cold shipping included; most orders within 7 days of the medical review",
@@ -999,7 +999,7 @@ const defaultReviews: ReviewData[] = [
       "Does not bill insurance"
     ],
     bestFor: [
-      "People who want the lowest tirzepatide price without a 12-month plan",
+      "People who want a tirzepatide price at the low end of the market without a 12-month plan",
       "Anyone who values unlimited doctor messaging and fast cold shipping being included",
       "Buyers who want to try one month, with the membership on a free trial, before committing"
     ],

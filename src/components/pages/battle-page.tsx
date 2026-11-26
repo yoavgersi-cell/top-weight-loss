@@ -113,7 +113,7 @@ const BATTLE_COST_MATH: Record<
       ["Tirzepatide, monthly", "$99", "$69 (promotional price, read Nov 20, 2026)"],
       ["The condition", "$49 is promotional; month to month", "$39 is promotional; its page labels it Monthly Plan (read Nov 20, 2026)"],
     ],
-    note: "Semaglutide at each provider's published rate: embody $49/mo promotional with no commitment; welludr $39/mo (promotional price, read Nov 20, 2026), same price at every dose, so the 6- and 12-month totals are $39 x 6 and $39 x 12. welludr wins the year by $120 - embody wins the exit terms.",
+    note: "Semaglutide at each provider's published rate: embody $49/mo promotional with no commitment; welludr $39/mo (promotional price, read Nov 20, 2026), same price at every dose, so the 6- and 12-month totals are $39 x 6 and $39 x 12. welludr wins the year by $120. On exit terms the two now read alike on welludr's plan page (cancel or change anytime, read Nov 20, 2026), but welludr's refund policy (read Nov 22, 2026) still describes 12-month plans as prepaid, so confirm the plan and the amount charged at checkout.",
   },
   // provider1 = Medvi, provider2 = HealthRx
   "healthrx-vs-medvi": {
