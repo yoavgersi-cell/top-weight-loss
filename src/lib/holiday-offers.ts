@@ -49,6 +49,36 @@ export const HOLIDAY_SEASON = {
 export const HOLIDAY_OFFERS: HolidayOffer[] = [
   {
     vertical: "weight-loss",
+    providerId: "wellmedr",
+    headline: "Black Friday sale: $35/month semaglutide, $65/month tirzepatide",
+    detail:
+      "welludr's homepage banner read \"BLACK FRIDAY SALE DISCOUNT APPLIED! $35/mo Semaglutide | $65/mo Tirzepatide\" on November 26, 2026, with no end date shown and no code. These are the prices in our index, so the offer is the everyday listed rate rather than a further discount. The screenshot does not show the plan label, shipping cadence or cancellation terms. On November 20 the same banner read $39 and $69.",
+    offerMonthly: { semaglutide: 35, tirzepatide: 65 },
+    verifiedOn: "2026-11-26",
+    source: "welludr homepage, operator screenshot",
+  },
+  {
+    vertical: "weight-loss",
+    providerId: "medvi",
+    headline: "Up to $100 off: starting at $99 (GLP-1) and $166 (GLP-1 + GIP)",
+    detail:
+      "Medvi's site read \"SAVE BIG THIS FALL! Up to $100 OFF! STARTING at GLP-1: $99 | GLP-1 + GIP: $166 - OFFER ENDS DECEMBER 1ST\" on November 26, 2026, with \"Was $199 Now starting at $99\" and a countdown of about four days and nine hours. Medvi's site says the offer ends December 1 (Medvi's wording, not verified by us). \"Was $199\" is Medvi's own comparison, not a regular price we verified. Prescription and telemed visits are included, no insurance is required, there are no hidden fees and shipping is free, per Medvi. No code is shown.",
+    offerMonthly: { semaglutide: 99, tirzepatide: 166 },
+    endsOn: "2026-12-01",
+    verifiedOn: "2026-11-26",
+    source: "Medvi site, operator screenshot (text read; the image was not saved)",
+  },
+  {
+    vertical: "weight-loss",
+    providerId: "trimrx",
+    headline: "Plans starting at $149 (not labelled a Black Friday offer)",
+    detail:
+      "TrimRx's homepage read \"Weight Loss Plans Starting at $149\" on November 26, 2026. The page does not call it a Black Friday or Cyber Monday offer, shows no code, no end date and no promotion banner, and shows no per-drug price. It is listed here as the current starting price, not as a holiday discount. On November 22 the site read plans from $179 with a \"$120 Off\" banner.",
+    verifiedOn: "2026-11-26",
+    source: "TrimRx homepage, operator screenshot",
+  },
+  {
+    vertical: "weight-loss",
     providerId: "embody",
     headline: "Black Friday sale: $49/month semaglutide, $99/month tirzepatide",
     detail:

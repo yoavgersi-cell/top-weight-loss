@@ -93,6 +93,10 @@ export default async function BlackFridayDealsPage() {
   const checkerRows: CheckerRow[] = PRICE_INDEX.map((r) => ({ providerId: r.providerId, name: nameOf(r.providerId), reviewHref: reviewHref(r.providerId), semaglutide: r.semaglutide, tirzepatide: r.tirzepatide }));
   const everydayPromos = PRICE_INDEX.filter((r) => /promo|off|discount|reg\.|sale/i.test(`${r.semaglutide?.note ?? ""} ${r.tirzepatide?.note ?? ""} ${r.plan?.note ?? ""}`));
   const indexVerified = longDate(PRICE_INDEX_VERIFIED);
+  // Rows whose own notes carry a November 26, 2026 read (the global verified date is not bumped).
+  const rereadNov26 = PRICE_INDEX.filter((r) =>
+    [r.semaglutide?.note, r.tirzepatide?.note, r.plan?.note].some((t) => /Nov(ember)? 26, 2026/.test(t ?? "")),
+  ).map((r) => r.providerId);
   const count = HOLIDAY_OFFERS.length;
   const live = HOLIDAY_OFFERS.filter((o) => offerStatus(o, today) === "live").length;
   const byVertical = [...new Set<HolidayVertical>(["weight-loss", ...HOLIDAY_OFFERS.map((o) => o.vertical)])].map((v) => ({ v, offers: HOLIDAY_OFFERS.filter((o) => o.vertical === v) }));
@@ -339,7 +343,7 @@ export default async function BlackFridayDealsPage() {
           <section className="mb-12" aria-labelledby="everyday-heading">
             <h2 id="everyday-heading" className="mb-2 text-[22px] font-bold text-[#191919]">The promotions already running, every day</h2>
             <p className="mb-4 text-[15px] text-gray-500">
-              Some providers&rsquo; everyday prices are themselves promotions, with a higher regular price in the small print. A holiday offer at one of these is only a saving if it goes below the everyday rate, not just the regular one. From the index, verified {indexVerified}:
+              Some providers&rsquo; everyday prices are themselves promotions, with a higher regular price in the small print. A holiday offer at one of these is only a saving if it goes below the everyday rate, not just the regular one. From the index, verified {indexVerified}{rereadNov26.length > 0 ? `; rows re-read November 26, 2026: ${rereadNov26.map((id) => nameOf(id)).join(", ")}` : ""}:
             </p>
             <ul className="grid gap-3 sm:grid-cols-2">
               {everydayPromos.map((r) => (
