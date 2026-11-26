@@ -68,7 +68,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   },
   {
     providerId: "collective",
-    edge: "Lowest tirzepatide price we track, flat at every dose, with a $199/year membership instead of a markup",
+    edge: "Tied for the lowest tirzepatide price we track, flat at every dose, with a $199/year membership instead of a markup",
     semaglutide: { price: "$59", note: "same price at every dose; plus $199/year membership (21-day free trial)" },
     tirzepatide: { price: "$69", note: "same price at every dose; plus $199/year membership (21-day free trial)" },
     shipping: "2-day express cold shipping included; most orders within 7 days of the medical review",
