@@ -531,12 +531,12 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "Does welludr's price go up as your dose increases?",
       answer:
-        "No - welludr charges the same price regardless of dosage: compounded semaglutide from $41/month and tirzepatide from $71/month. The lowest $41 rate is tied to a 12-month plan.",
+        "No - welludr charges the same price regardless of dosage: compounded semaglutide from $39/month and tirzepatide from $69/month (promotional prices, read Nov 20, 2026).",
     },
     {
       question: "Can you cancel welludr anytime?",
       answer:
-        "Yes, but there is a deadline, and welludr's two documents give different ones. Its terms (updated Oct 16, 2026) require cancelling at least 2 days before the renewal date; its refund policy (no date shown) says cancellation takes effect when the request is received. Read Nov 22, 2026. The headline $41/month rate is tied to a 12-month plan, which the refund policy describes as prepaid in full. See our cancel guide for the quotes.",
+        "Yes, but there is a deadline, and welludr's two documents give different ones. Its terms (updated Oct 16, 2026) require cancelling at least 2 days before the renewal date; its refund policy (no date shown) says cancellation takes effect when the request is received. Read Nov 22, 2026. The refund policy describes 12-month plans as prepaid in full, while the plan page now shows a Monthly Plan at a promotional price (read Nov 20, 2026). See our cancel guide for the quotes.",
     },
   ],
   medvi: [
@@ -617,7 +617,7 @@ const REVIEW_PROMOS: Record<string, { segments: { text: string; bold?: boolean }
       { text: "Lock in " },
       { text: "$200 off", bold: true },
       { text: " every month, or " },
-      { text: "$41/mo", bold: true },
+      { text: "$39/mo (promotional price, read Nov 20, 2026)", bold: true },
       { text: " on 12-month plans — for life." },
     ],
   },

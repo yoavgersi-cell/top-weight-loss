@@ -105,7 +105,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
           </thead>
           <tbody className="divide-y divide-gray-100">
             {[
-              ["welludr", "$41/mo", "$71/mo", "12-month plan for best rate"],
+              ["welludr", "$39/mo (promotional price, read Nov 20, 2026)", "$69/mo (promotional price, read Nov 20, 2026)", "Promotional price"],
               ["embody", "$49/mo", "$99/mo", "Flat monthly, no commitment"],
               ["altRx", "$89/mo", "$149/mo", "Flat at every dose, BNPL"],
               ["Medvi", "from $99/mo", "Not listed", "All-inclusive + dietician"],
@@ -366,7 +366,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
               <td className="px-4 py-3 font-medium">Semaglutide injection (Wegovy®)<span className="block text-xs font-normal text-gray-500">GLP-1 receptor agonist</span></td>
               <td className="px-4 py-3">~15% of body weight (average)</td>
               <td className="px-4 py-3">Measured at 68 weeks (STEP trials)</td>
-              <td className="hidden sm:table-cell px-4 py-3">From $41/month (verified)</td>
+              <td className="hidden sm:table-cell px-4 py-3">From $39/month (promotional price, read Nov 20, 2026; verified)</td>
             </tr>
             <tr className="bg-gray-50/50">
               <td className="px-4 py-3 font-medium">Tirzepatide injection (Zepbound®)<span className="block text-xs font-normal text-gray-500">Dual GIP/GLP-1 receptor agonist</span></td>
@@ -387,7 +387,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         Source: Published results from STEP (semaglutide), SURMOUNT (tirzepatide), and SCALE (liraglutide)
         clinical trials; the percentages are trial averages measured at each trial&apos;s assessment point, and
         individual response and timing vary. Compounded prices are the lowest listed rates in our verified
-        price index as of November 2026 (semaglutide: welludr, 12-month plan; tirzepatide: Collective, plus a
+        price index as of November 2026 (semaglutide: welludr, promotional price; tirzepatide: Collective, plus a
         $199/year membership).
       </p>
 
