@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Check, Clock, ArrowRight, TriangleAlert } from "lucide-react";
 import { GuideCluster } from "@/components/guide-cluster";
-import { TopTwoPicks } from "@/components/top-providers-block";
+import { TopProvidersBlock } from "@/components/top-providers-block";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
 import { MedicalSources } from "@/components/medical-sources";
@@ -36,11 +36,15 @@ import { PRICE_INDEX_VERIFIED } from "@/lib/price-index";
 // Featured accurately using verified provider data - no invented pill claims.
 const PILL_PROVIDER_IDS = ["embody", "trimrx", "medvi", "shed"];
 
+// Nov 26, 2026 (operator request): the ranked picks block on this page shows
+// these three providers, in this order (welludr's provider id is "wellmedr").
+const TOP_THREE_PICK_IDS = ["embody", "wellmedr", "eden"];
+
 export const revalidate = 60;
 
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/weight-loss-pills";
 const PAGE_PUBLISHED = "2026-08-01";
-const PAGE_UPDATED = "2026-10-22";
+const PAGE_UPDATED = "2026-11-26";
 const HERO_COLOR = "#EEF4F1";
 const READ_TIME = "17 min read";
 
@@ -443,11 +447,20 @@ export default async function WeightLossPillsPage() {
                     dangerouslySetInnerHTML={{ __html: enhanceArticleHtml(section.body) }}
                   />
                 </section>
-                {/* The ranked picks follow the GLP-1 pills section; the
+                {/* The ranked picks follow the opening section; the
                     compounded-oral provider cards follow their own section. */}
-                {i === 1 && (
+                {i === 0 && (
                   <div className="mt-8">
-                    <TopTwoPicks config={config} linkPrefix="/weight-loss" />
+                    <TopProvidersBlock
+                      config={config}
+                      linkPrefix="/weight-loss"
+                      limit={3}
+                      providerIds={TOP_THREE_PICK_IDS}
+                      order="given"
+                      introMode="short"
+                      title="Our top 3 picks"
+                      subtitle="Our three recommended GLP-1 providers, shown with the same verified pricing and ratings as our full comparison. The prices shown are for compounded semaglutide and tirzepatide, which are not FDA-approved."
+                    />
                   </div>
                 )}
                 {i === 5 && providerCards}

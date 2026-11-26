@@ -68,7 +68,7 @@ const WL_STATIC_PATHS: { path: string; priority: number; changeFrequency: "weekl
   // verified price change re-submits it through IndexNow the same day.
   { path: "/glp1-price-changes", priority: 0.8, changeFrequency: "weekly", lastModified: PRICE_DATA_UPDATED },
   { path: "/glp1-provider-comparison", priority: 0.8, changeFrequency: "weekly", lastModified: "2026-10-17" },
-  { path: "/weight-loss-pills", priority: 0.8, changeFrequency: "weekly", lastModified: "2026-10-22" },
+  { path: "/weight-loss-pills", priority: 0.8, changeFrequency: "weekly", lastModified: "2026-11-26" },
   { path: "/glp1-pills-vs-injections", priority: 0.8, changeFrequency: "weekly", lastModified: "2026-10-22" },
   { path: "/retatrutide-weight-loss", priority: 0.8, changeFrequency: "weekly" },
   { path: "/ozempic-alternatives", priority: 0.8, changeFrequency: "weekly" },
