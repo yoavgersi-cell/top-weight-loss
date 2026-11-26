@@ -87,7 +87,7 @@ const CHECKLIST: { title: string; check: string; verify: string; redFlag: string
   {
     title: "Cancellation and refunds",
     check: "Whether you can stop at any renewal, whether there is a minimum term, and what you get back if the clinician does not approve you.",
-    verify: "embody refunds the unused portion (less services rendered) if not approved and has no commitment; TrimRx has no long-term contract; welludr's $41 rate wants a 12-month plan; HealthRx's monthly plan renews until canceled and its longer-plan rates are not shown. None of these is wrong, but you should know which one you are signing.",
+    verify: "embody refunds the unused portion (less services rendered) if not approved and has no commitment; TrimRx has no long-term contract; welludr's $39 (promotional price, read Nov 20, 2026) is listed on a Monthly Plan; HealthRx's monthly plan renews until canceled and its longer-plan rates are not shown. None of these is wrong, but you should know which one you are signing.",
     redFlag: "Auto-renew terms you can only find in the checkout fine print. Read them before you pay.",
   },
   {
@@ -180,7 +180,7 @@ const ROWS: Row[] = [
     pharmacy: "Regulated US pharmacy; Reddit commenters name its Florida pharmacy",
     dosePricing: "Same price at every dose; best rate on a 12-month plan, billed monthly",
     likes: "On Reddit, short verdicts: \"legit\", a named Florida pharmacy, and annual-plan prices that match the published rates.",
-    complaints: "On Reddit, one detailed account was down only 1 pound after 8 weeks despite good service. The $41 rate requires the 12-month plan.",
+    complaints: "On Reddit, one detailed account was down only 1 pound after 8 weeks despite good service.",
   },
   {
     id: "medvi",
@@ -226,7 +226,7 @@ const PATTERNS: { title: string; body: string }[] = [
   },
   {
     title: "The headline price rarely stands alone",
-    body: "welludr's $41 requires a 12-month plan. HealthRx's $125 follows a $39 first month. Medvi's $99 and altRx's $89 are starting prices. Ro bills membership and medication separately. The condition attached to a price is as important as the number, which is why the price index prints both.",
+    body: "welludr's $39 (promotional price, read Nov 20, 2026) is listed on a Monthly Plan. HealthRx's $125 follows a $39 first month. Medvi's $99 and altRx's $89 are starting prices. Ro bills membership and medication separately. The condition attached to a price is as important as the number, which is why the price index prints both.",
   },
   {
     title: "Flat-dose pricing is common but not universal",
@@ -279,7 +279,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: "What does a GLP-1 provider actually cost per month?",
     answer:
-      "At verified published prices in our index, compounded semaglutide runs $41 to $199 a month and compounded tirzepatide $71 to $299, usually with the consultation and shipping included. Brand-name Wegovy, Zepbound and Ozempic run four figures a month cash. Always price the maintenance dose, not the starter dose, and add any membership billed separately.",
+      "At verified published prices in our index, compounded semaglutide runs $39 to $199 a month and compounded tirzepatide $69 to $299 (the $39 and $69 are promotional prices, read Nov 20, 2026), usually with the consultation and shipping included. Brand-name Wegovy, Zepbound and Ozempic run four figures a month cash. Always price the maintenance dose, not the starter dose, and add any membership billed separately.",
   },
   {
     question: "Which providers does this table not cover?",

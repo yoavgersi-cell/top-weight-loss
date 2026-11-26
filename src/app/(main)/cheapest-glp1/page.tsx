@@ -38,12 +38,12 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "What is the cheapest GLP-1 medication in 2026?",
     answer:
-      "The cheapest GLP-1 program among the providers we track is welludr, at $41/month for compounded semaglutide on a 12-month plan - the same price at every dose. The cheapest with no commitment is embody at $49/month, month to month, on its pre-Black Friday sale. All prices on this page are the providers' real published rates, with their conditions disclosed.",
+      "The cheapest GLP-1 program among the providers we track is welludr, at $39/month (promotional price, read Nov 20, 2026) for compounded semaglutide - the same price at every dose. The cheapest with no commitment is embody at $49/month, month to month, on its pre-Black Friday sale. All prices on this page are the providers' real published rates, with their conditions disclosed.",
   },
   {
     question: "What is the cheapest tirzepatide?",
     answer:
-      "welludr lists compounded tirzepatide from $71/month, the lowest published tirzepatide price we track. embody is the cheapest month-to-month option at $99/month, and DirectMeds lists $249/month for sublingual semaglutide and $297/month for injections (no tirzepatide price is published).",
+      "welludr lists compounded tirzepatide from $69/month (promotional price, read Nov 20, 2026), the lowest published tirzepatide price we track. embody is the cheapest month-to-month option at $99/month, and DirectMeds lists $249/month for sublingual semaglutide and $297/month for injections (no tirzepatide price is published).",
   },
   {
     question: "Why are these so much cheaper than Ozempic?",
@@ -58,7 +58,7 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "What's the catch with the lowest prices?",
     answer:
-      "Commitment and speed. The $41/month headline at welludr is tied to a 12-month plan, and HealthRx's $125/month semaglutide is its monthly plan after a $39 first month. Month-to-month flexibility costs a little more (embody at $49/$99 on its pre-Black Friday sale). Slower shipping is the other trade: altRx at $89 ships in about 5-7 days versus 1-2 days at DirectMeds. Every condition is listed under each price above - there are no unlisted catches we're aware of.",
+      "Commitment and speed. The headline price at welludr is a promotional price (read Nov 20, 2026), and HealthRx's $125/month semaglutide is its monthly plan after a $39 first month. Month-to-month flexibility costs a little more (embody at $49/$99 on its pre-Black Friday sale). Slower shipping is the other trade: altRx at $89 ships in about 5-7 days versus 1-2 days at DirectMeds. Every condition is listed under each price above - there are no unlisted catches we're aware of.",
   },
   {
     question: "Are cheap compounded GLP-1s safe?",
@@ -131,9 +131,8 @@ export default async function CheapestGlp1Page() {
           <p className="text-[15.5px] leading-[1.85] text-gray-800">
             The cheapest GLP-1 we track is{" "}
             <Link href="/weight-loss/reviews/wellmedr" className="font-semibold text-[#0C4B75] hover:underline">welludr</Link>{" "}
-            - compounded semaglutide at <strong className="text-[#191919]">$41/month</strong> on a
-            12-month plan, and the cheapest tirzepatide at{" "}
-            <strong className="text-[#191919]">$71/month</strong>. If you don&rsquo;t want a
+            - compounded semaglutide at <strong className="text-[#191919]">$39/month</strong> (promotional price, read Nov 20, 2026), and the cheapest tirzepatide at{" "}
+            <strong className="text-[#191919]">$69/month</strong>{" "}(promotional price, read Nov 20, 2026). If you don&rsquo;t want a
             commitment,{" "}
             <Link href="/weight-loss/reviews/embody" className="font-semibold text-[#0C4B75] hover:underline">embody</Link>{" "}
             is the cheapest month to month at <strong className="text-[#191919]">$49/$99</strong> on its pre-Black Friday sale{" "}
@@ -250,7 +249,7 @@ export default async function CheapestGlp1Page() {
                     "~21% average body-weight loss at 72 weeks (SURMOUNT-1, 15 mg)",
                   ],
                   ["Dosing", "One injection per week", "One injection per week"],
-                  ["Cheapest compounded price", "$41/mo (welludr, 12-month plan)", "$71/mo (welludr)"],
+                  ["Cheapest compounded price", "$39/mo (promotional price, read Nov 20, 2026)", "$69/mo (welludr, promotional price, read Nov 20, 2026)"],
                   ["Cheapest month-to-month", "$49/mo (embody)", "$99/mo (embody)"],
                   ["Month to month, $39 first month", "$125/mo after month one (HealthRx)", "$199/mo after month one (HealthRx)"],
                 ].map(([label, sema, tirz], i) => (
