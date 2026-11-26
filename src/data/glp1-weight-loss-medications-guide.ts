@@ -280,7 +280,7 @@ export const glp1WeightLossMedicationsGuideArticle: Article = {
 <tr><td>Clinical trials</td><td>Large randomised trials behind every label result</td><td>No trials of the compounded products themselves</td></tr>
 <tr><td>Who makes it</td><td>The manufacturer (Novo Nordisk, Eli Lilly)</td><td>A state-licensed 503A pharmacy or an FDA-registered 503B outsourcing facility</td></tr>
 <tr><td>Form</td><td>Prefilled pens or tablets</td><td>Usually multi-dose vials with syringes; you measure each dose</td></tr>
-<tr><td>Typical self-pay cost</td><td>Brand list prices run to four figures a month at cash prices (see our cost section)</td><td>From $41 to $199 a month for semaglutide at the providers in our price index (checked Nov 3, 2026)</td></tr>
+<tr><td>Typical self-pay cost</td><td>Brand list prices run to four figures a month at cash prices (see our cost section)</td><td>From $39 to $199 a month for semaglutide at the providers in our price index (checked Nov 3, 2026)</td></tr>
 <tr><td>Insurance and Medicare</td><td>Can be covered; Medicare's GLP-1 Bridge covers some brands at $50</td><td>Generally self-pay</td></tr>
 </tbody></table>
 <h3>Is compounded the "same drug"?</h3>
