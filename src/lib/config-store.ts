@@ -693,17 +693,17 @@ const defaultReviews: ReviewData[] = [
         name: "GLP-1",
         medication: "Compounded Semaglutide",
         cadence: "Every 4 weeks",
-        price: "$41",
+        price: "$39",
         unit: "/month",
-        highlights: ["Same price regardless of dosage", "Starting dose and increases set by the clinician"],
+        highlights: ["Promotional price, read Nov 20, 2026", "Same price regardless of dosage", "Starting dose and increases set by the clinician"],
       },
       {
         name: "GLP-1 + GIP",
         medication: "Compounded Tirzepatide",
         cadence: "Every 4 weeks",
-        price: "$71",
+        price: "$69",
         unit: "/month",
-        highlights: ["One medicine acting at both GIP and GLP-1 receptors", "Cancel or change anytime"],
+        highlights: ["Promotional price, read Nov 20, 2026", "One medicine acting at both GIP and GLP-1 receptors", "Cancel or change anytime"],
       },
       {
         name: "Ozempic",
@@ -738,7 +738,7 @@ const defaultReviews: ReviewData[] = [
         heading: "Who is eligible for welludr's program?",
         body: `<p>welludr's plan begins with a review by a licensed provider who decides whether a GLP-1 medicine is appropriate and at what starting dose. That clinical decision - not the price or the convenience - is the right starting point for whether the service suits you.</p>
 <p>Eligibility is a clinical judgment, not a single number. It depends on your body mass index, your medical history, any weight-related conditions, the contraindications set out below, the other medicines you take, and an individual weighing of risks and benefits. For reference, the FDA-approved weight-management products these medicines are modelled on are indicated for adults with obesity (a BMI of 30 kg/m² or more) or with overweight (a BMI of 27 kg/m² or more) together with at least one weight-related condition such as high blood pressure, type 2 diabetes or abnormal cholesterol (<a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee06186f-2aa3-4990-a760-757579d8f77b" target="_blank" rel="noopener noreferrer">Wegovy prescribing information</a>, revised June 2026; <a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=487cd7e7-434c-4925-99fa-aa80b1cc776b" target="_blank" rel="noopener noreferrer">Zepbound prescribing information</a>, revised August 2026). Meeting a BMI threshold does not by itself make treatment appropriate, and falling just outside one does not by itself rule it out; that is what the provider's review is for. Our <a href="/weight-loss/glp1-bmi-calculator">BMI and eligibility check</a> shows where you sit against the label criteria before you start.</p>
-<p><strong>Two commercial terms worth reading plainly.</strong> welludr's weight-loss warranty is a refund or guarantee policy set by the seller. It is a commercial promise about your money, not clinical evidence that the medication will produce a given amount of weight loss. And the $41/month 12-month plan is a pricing commitment, not a statement that obesity treatment lasts a year: how long you stay on a GLP-1 is a clinical decision you make with your provider, and it can be shorter or longer than the billing term.</p>`,
+<p><strong>Two commercial terms worth reading plainly.</strong> welludr's weight-loss warranty is a refund or guarantee policy set by the seller. It is a commercial promise about your money, not clinical evidence that the medication will produce a given amount of weight loss. And a 12-month plan, which welludr's refund policy (read Nov 22, 2026) describes as prepaid in full, is a pricing commitment, not a statement that obesity treatment lasts a year: how long you stay on a GLP-1 is a clinical decision you make with your provider, and it can be shorter or longer than the billing term.</p>`,
       },
       {
         heading: "Side effects, exclusions and when to seek care",
@@ -1078,7 +1078,7 @@ const defaultReviews: ReviewData[] = [
       "Anyone who wants the 24/7 real human support and clinician-guided care Eden says it offers",
       "Tirzepatide buyers who want a flat, no-commitment price"
     ],
-    finalVerdict: "Eden's case is simplicity: $99 for semaglutide and $129 for tirzepatide, the same every month and at every dose, with no long-term contract to sign. If the lowest possible sticker price is your only criterion, welludr's $41 plan and embody's $49 month-to-month undercut it on semaglutide; if you want a flat price you can budget on, the 24/7 support Eden says it offers, and tirzepatide without a premium, Eden is one of the strongest no-commitment options we track. Read the FDA warning-letter section below before you decide, check the eligibility and safety points with Eden's clinician at the assessment, read the refund and warranty conditions in our Eden legitimacy check, and confirm shipping times at checkout.",
+    finalVerdict: "Eden's case is simplicity: $99 for semaglutide and $129 for tirzepatide, the same every month and at every dose, with no long-term contract to sign. If the lowest possible sticker price is your only criterion, welludr's $39 plan (a promotional price, read Nov 20, 2026) and embody's $49 month-to-month undercut it on semaglutide; if you want a flat price you can budget on, the 24/7 support Eden says it offers, and tirzepatide without a premium, Eden is one of the strongest no-commitment options we track. Read the FDA warning-letter section below before you decide, check the eligibility and safety points with Eden's clinician at the assessment, read the refund and warranty conditions in our Eden legitimacy check, and confirm shipping times at checkout.",
     trustBadges: [
       "Same price, every dose",
       "No long-term contract",
@@ -2668,7 +2668,7 @@ const trimrxwellmedrBattle: BattleData = {
   matchupLabel: "welludr vs TrimRx",
   title: "welludr vs TrimRx: Which Weight Loss Provider Is Right for You in 2026?",
   subtitle: "We compared verified pricing, plan flexibility, and support so you can see which one fits you best.",
-  description: "welludr vs TrimRx: compare pricing, plans & reviews. welludr: $41/mo semaglutide, weight-loss warranty. TrimRx: plans from $179, custom dosing, no contract. See which fits you.",
+  description: "welludr vs TrimRx: compare pricing, plans & reviews. welludr: $39/mo semaglutide, weight-loss warranty. TrimRx: plans from $179, custom dosing, no contract. See which fits you.",
   intro: "welludr and TrimRx both offer online GLP-1 weight-loss treatment, but they take different approaches. welludr pairs the lowest compounded prices in our ranking - semaglutide from $39/month and tirzepatide from $69/month (promotional prices, read Nov 20, 2026), the same price at every dose - with board-certified specialists, a Medical Weight-Care Coach, a weight-loss warranty, and brand-name Ozempic and Zepbound on the shelf. TrimRx is built around custom dosing with unlimited provider check-ins, plans from $179/month on its site (read Nov 22, 2026) with no per-drug price we could read, and no long-term commitment. Here's how they compare for weight loss specifically.",
   verdict: "Both are credible online GLP-1 providers - but welludr takes this comparison. On verified pricing it is the clear value pick: $39/month semaglutide and $69/month (promotional prices, read Nov 20, 2026) tirzepatide against TrimRx's plans from $179 (site, read Nov 22, 2026). It also backs the program with a weight-loss warranty. TrimRx is the better fit if custom dosing with unlimited provider check-ins, free consultation, and tracked delivery that often lands next-day matter more to you than price - its care model is genuinely hands-on, and there is no long-term commitment. Just note that welludr's lowest rate is a promotional price (read Nov 20, 2026), and its 3-5 business-day delivery is slower than TrimRx's.",
   verdictWinnerPoints: [
@@ -3923,11 +3923,11 @@ const sproutWellmedrBattle: BattleData = {
   matchupLabel: "Sprout vs welludr",
   subtitle: "The market's lowest prices and a million-patient record vs 2-day fulfillment and a brand-name Wegovy option.",
   description:
-    "welludr ($41/mo semaglutide, weight-loss warranty) vs Sprout (from $99/mo on a 12-month plan, Wegovy available). Real prices and an honest verdict.",
+    "welludr ($39/mo semaglutide, weight-loss warranty) vs Sprout (from $99/mo on a 12-month plan, Wegovy available). Real prices and an honest verdict.",
   intro:
-    "On paper this looks lopsided - welludr's $39/month semaglutide and $69 (promotional prices, read Nov 20, 2026) tirzepatide are the lowest prices in our ranking, backed by 1,000,000+ patients and a weight-loss warranty. But the fine print gives Sprout its openings: welludr's headline rate takes a 12-month plan and standard delivery runs 3-5 business days, while Sprout ships within 2 days and stocks brand-name Wegovy - something welludr's brand shelf (Ozempic $1,399, Zepbound $1,599) doesn't carry.",
+    "On paper this looks lopsided - welludr's $39/month semaglutide and $69 (promotional prices, read Nov 20, 2026) tirzepatide are the lowest prices in our ranking, backed by 1,000,000+ patients and a weight-loss warranty. But the fine print gives Sprout its openings: welludr's headline rate took a 12-month plan until our November 20, 2026 read, when its page began labeling it a Monthly Plan, and standard delivery runs 3-5 business days, while Sprout ships within 2 days and stocks brand-name Wegovy - something welludr's brand shelf (Ozempic $1,399, Zepbound $1,599) doesn't carry.",
   verdict:
-    "welludr wins for anyone whose priority is price: $58/month cheaper on semaglutide and $78 on tirzepatide, 12-month plan against 12-month plan, with a warranty behind it. Sprout's case is narrower but real: you want your prescription inside 2 days rather than 3-5, you want Wegovy specifically (welludr stocks Ozempic and Zepbound, not Wegovy), or you would rather pay Sprout's $149 month to month than commit to a 12-month plan. If none of those three apply, take the $39 (promotional price, read Nov 20, 2026).",
+    "welludr wins for anyone whose priority is price: $60/month cheaper on semaglutide and $80 on tirzepatide against Sprout's 12-month plan, at welludr's promotional prices (read Nov 20, 2026), with a warranty behind it. Sprout's case is narrower but real: you want your prescription inside 2 days rather than 3-5, you want Wegovy specifically (welludr stocks Ozempic and Zepbound, not Wegovy), or you would rather pay Sprout's $149 month to month than commit to a 12-month plan. If none of those three apply, take the $39 (promotional price, read Nov 20, 2026).",
   verdictWinnerPoints: [
     "$39/mo semaglutide, $69 (promotional prices, read Nov 20, 2026) tirzepatide - lowest in our ranking",
     "1M+ patients",
@@ -3944,7 +3944,7 @@ const sproutWellmedrBattle: BattleData = {
       name: "Price",
       winner: "provider1",
       explanation:
-        "welludr's $41/month semaglutide and $71 tirzepatide - the same price at every dose - undercut Sprout's 12-month rates of $99/$149 by $58-78/month, and its $149/$199 month-to-month prices by more. Sprout's lowest rates need a 12-month plan billed upfront ($1,188 for semaglutide), while welludr's $39 is a promotional price listed on its Monthly Plan (read Nov 20, 2026).",
+        "welludr's $39/month semaglutide and $69 tirzepatide (promotional prices on its Monthly Plan, read Nov 20, 2026) - the same price at every dose - undercut Sprout's 12-month rates of $99/$149 by $60-80/month, and its $149/$199 month-to-month prices by more. Sprout's lowest rates need a 12-month plan billed upfront ($1,188 for semaglutide).",
       supportingPoints: [
         "$39 (welludr, promotional price, read Nov 20, 2026) vs $99 (Sprout, 12-month plan) semaglutide",
         "$69 (welludr, promotional price, read Nov 20, 2026) vs $149 (Sprout, 12-month plan) tirzepatide",
@@ -4353,7 +4353,7 @@ function buildInitialConfig(): SiteConfig {
       {
         slug: "semaglutide",
         updatedAt: "2026-11-11", // verified-price table added
-        seoTitle: "Best Semaglutide Providers 2026 (From $41/mo)",
+        seoTitle: "Best Semaglutide Providers 2026 (From $39/mo)",
         seoDescription: "Compare the top semaglutide weight loss providers of 2026. Side-by-side pricing, medical support, and treatment options for Ozempic and Wegovy alternatives.",
         h1: "Best Semaglutide Providers 2026",
         h2: "Compare GLP-1 weight loss programs side by side",
@@ -4382,7 +4382,7 @@ function buildInitialConfig(): SiteConfig {
       {
         slug: "tirzepatide",
         updatedAt: "2026-11-11", // verified-price table added
-        seoTitle: "Best Tirzepatide Providers 2026 (From $71/mo)",
+        seoTitle: "Best Tirzepatide Providers 2026 (From $69/mo)",
         seoDescription: "Compare the top tirzepatide weight loss providers of 2026. Side-by-side pricing, medical support, and treatment options for Mounjaro and Zepbound alternatives.",
         h1: "Best Tirzepatide Providers 2026",
         h2: "Compare dual-action GLP-1 weight loss programs",
@@ -4523,7 +4523,7 @@ function buildInitialConfig(): SiteConfig {
       {
         slug: "cheapest-weight-loss-medication",
         updatedAt: "2026-11-11", // verified-price table added
-        seoTitle: "Cheapest Weight Loss Medication 2026 - GLP-1 From $41",
+        seoTitle: "Cheapest Weight Loss Medication 2026 - GLP-1 From $39",
         seoDescription: "Find the most affordable GLP-1 weight loss medication in 2026. Compare compounded semaglutide and tirzepatide providers by price, with total cost breakdowns.",
         h1: "Most Affordable Weight Loss Medication 2026",
         h2: "Compare the cheapest GLP-1 providers",
@@ -4763,7 +4763,7 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
           trustpilotReviews: TRUSTPILOT_DATA_REMOVED ? undefined : mergeTrustpilotReviews(p.trustpilotReviews, seedFor(p)?.reviews),
           // Highlights carry prices, so for providers whose prices change with
           // verified sweeps the code (products.json) wins over a CMS snapshot.
-          // Nov 1, 2026: welludr's $41/$71 and embody's $49/$99 sale lines
+          // Nov 1, 2026: welludr's $41/$71 (since Nov 20: $39/$69) and embody's $49/$99 sale lines
           // (a CMS snapshot still showed embody "GLP-1 for $69/mon").
           highlights: CODE_AUTHORITATIVE_HIGHLIGHTS.has(p.id)
             ? (seedProviderById.get(p.id)?.highlights ?? p.highlights)

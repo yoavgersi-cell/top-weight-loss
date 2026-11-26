@@ -20,7 +20,7 @@ export const revalidate = 60;
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/cheapest-glp1";
 const TITLE = "Cheapest GLP-1 in 2026: Real Prices From 8 Providers";
 const DESCRIPTION =
-  "The cheapest GLP-1 programs of 2026, ranked by verified prices: compounded semaglutide from $41/month, tirzepatide from $71/month - conditions disclosed.";
+  "The cheapest GLP-1 programs of 2026, ranked by verified prices: compounded semaglutide from $39/month, tirzepatide from $69/month - conditions disclosed.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
@@ -189,8 +189,8 @@ export default async function CheapestGlp1Page() {
               </thead>
               <tbody className="text-[13.5px]">
                 {[
-                  ["welludr", "$41 x 12 (12-month plan rate)", "$492", "$13,200"],
-                  ["embody", "$49 x 12 (promo), month to month", "$588", "$12,960"],
+                  ["welludr", "$39 x 12 (promotional price, read Nov 20, 2026)", "$468", "$13,320"],
+                  ["embody", "$49 x 12 (promo), month to month", "$588", "$13,200"],
                   ["altRx", "$89 x 12, flat at every dose", "$1,068", "$12,720"],
                   ["Medvi", "from $99 x 12 - all-inclusive", "$1,188", "$12,600"],
                   ["HealthRx", "$39 first month + $125 x 11 (monthly plan, until canceled)", "$1,414", "$12,374"],

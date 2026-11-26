@@ -14,7 +14,7 @@ export type LegitChecklistItem = { ok: boolean; text: string };
 export type LegitPageData = {
   providerId: string;
   checklist: LegitChecklistItem[];
-  /** One line of verified pricing for the verdict box, e.g. "$41/mo semaglutide · $71/mo tirzepatide". */
+  /** One line of verified pricing for the verdict box, e.g. "$39/mo semaglutide · $69/mo tirzepatide". */
   priceLine: string;
   /** Optional secondary link for readers the caveat rules out. */
   alternative?: { text: string; href: string };

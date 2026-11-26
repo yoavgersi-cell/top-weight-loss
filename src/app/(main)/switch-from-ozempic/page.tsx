@@ -19,7 +19,7 @@ export const revalidate = 60;
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/switch-from-ozempic";
 const TITLE = "Switch From Ozempic to Compounded Semaglutide (2026)";
 const DESCRIPTION =
-  "Paying $1,000+/month for Ozempic or Wegovy? Compounded semaglutide - the same GLP-1 - runs $41-$299/month at licensed telehealth providers. How switching works.";
+  "Paying $1,000+/month for Ozempic or Wegovy? Compounded semaglutide - the same GLP-1 - runs $39-$299/month at licensed telehealth providers. How switching works.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
@@ -200,7 +200,7 @@ export default async function SwitchFromOzempicPage() {
             </table>
           </div>
           <p className="mt-3 text-[13px] text-gray-400">
-            At the widest gap - Wegovy $1,579 vs welludr&rsquo;s $41 semaglutide plan - the
+            At the widest gap - Wegovy $1,579 vs welludr&rsquo;s $39 semaglutide plan (promotional price, read Nov 20, 2026) - the
             difference is over $18,000 a year. Compounded products are not FDA-approved brand drugs;
             the quality bar lives with the pharmacy, which is what the checklist below is for.
           </p>
