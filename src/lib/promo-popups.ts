@@ -65,7 +65,7 @@ export const PROMO_POPUPS: PromoPopupSpec[] = [
   },
   // TrimRx popup paused Nov 22, 2026: the creative (/trimrxpopup.webp) prints
   // "$140 OFF" and "Starting at $149", which trimrx.com no longer shows
-  // ("Starting at $179" and "$120 Off", read Nov 22, 2026). Restore the entry
+  // ("Starting at $149" and "$120 Off", read Nov 26, 2026). Restore the entry
   // once TrimRx supplies a creative with current figures.
 ];
 

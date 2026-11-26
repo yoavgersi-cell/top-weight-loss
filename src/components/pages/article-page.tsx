@@ -154,7 +154,7 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
   "trimrx-alternatives": {
     title: "6 TrimRx Alternatives 2026: Price, Speed & Brand-Name",
     description:
-      "TrimRx plans start at $179 a month (site, read Nov 22, 2026). Six alternatives sorted by what you want fixed: price, delivery speed, brand-name or support.",
+      "TrimRx plans start at $149 a month (site, read Nov 26, 2026). Six alternatives sorted by what you want fixed: price, delivery speed, brand-name or support.",
   },
   "glp1-with-insurance": {
     title: "Tirzepatide With Insurance Online (2026): Coverage & PA",

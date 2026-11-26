@@ -134,8 +134,8 @@ const ROWS: Row[] = [
     id: "trimrx",
     name: "TrimRx",
     medications: "Compounded semaglutide and tirzepatide",
-    entry: "From $179 (site, read Nov 22, 2026)",
-    entryNote: "plans from; not tied to one drug or dose; a \"$120 Off\" banner showed that day",
+    entry: "From $149 (site, read Nov 26, 2026)",
+    entryNote: "plans from; not tied to one drug or dose; no banner shown Nov 26 (a \"$120 Off\" banner and $179 showed Nov 22)",
     after: "Not published per drug",
     membership: "None",
     shipping: "Free tracked; often next-day (provider claim)",
@@ -358,7 +358,7 @@ const SECTIONS: Section[] = [
     ),
     pricing: (
       <>
-        <strong className="text-[#191919]">Plans from $179 a month</strong> on TrimRx&rsquo;s own site (read November 22, 2026), with a &ldquo;$120 Off&rdquo; banner that day. TrimRx does not publish a per-drug semaglutide or tirzepatide price we could read, and its page does not say whether $179 is before or after the $120. Free tracked delivery; consultation included; no insurance needed. TrimRx&rsquo;s GLP-1 page says it does not practice medicine or prescribe medications and that independent licensed providers do.
+        <strong className="text-[#191919]">Plans from $149 a month</strong> on TrimRx&rsquo;s own site (read November 26, 2026), with no banner shown that day (on November 22, 2026 the site read plans from $179 with a &ldquo;$120 Off&rdquo; banner). TrimRx does not publish a per-drug semaglutide or tirzepatide price we could read. Free tracked delivery; consultation included; no insurance needed. TrimRx&rsquo;s GLP-1 page says it does not practice medicine or prescribe medications and that independent licensed providers do.
       </>
     ),
     support:
@@ -370,7 +370,7 @@ const SECTIONS: Section[] = [
     ),
     cancellation:
       "Its site says to cancel before your next billing cycle (read November 22, 2026). We could not read its refund terms that day.",
-    pros: ["No long-term contract", "Custom dosing and unlimited check-ins in the price", "A published starting price (plans from $179)"],
+    pros: ["No long-term contract", "Custom dosing and unlimited check-ins in the price", "A published starting price (plans from $149)"],
     cons: ["Mid-tier pricing against the sub-$100 providers here", "No Reddit record; pharmacy not named", "Refund terms not read"],
     suits: "Readers who want a clinician adjusting the dose to them rather than a fixed protocol, with frequent check-ins, and who will pay month to month rather than prepay.",
     assessment: (

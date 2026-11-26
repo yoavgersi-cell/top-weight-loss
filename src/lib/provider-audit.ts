@@ -80,7 +80,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
   },
   "weight-loss:trimrx": {
     rows: [
-      { label: "Starting price", value: "Plans from $179/month (TrimRx site, read Nov 22, 2026)" },
+      { label: "Starting price", value: "Plans from $149/month (TrimRx site, read Nov 26, 2026)" },
       { label: "Per-drug price", value: "Not published on the page we could read (semaglutide or tirzepatide)" },
       { label: "Commitment", value: "No contract; opt-in discount programs" },
     ],

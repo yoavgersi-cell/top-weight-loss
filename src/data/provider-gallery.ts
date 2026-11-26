@@ -176,6 +176,21 @@ const GALLERIES: Record<string, ProviderGallery> = {
       },
     ],
   },
+  trimrx: {
+    capturedOn: "2026-11-26",
+    source: "TrimRx's website",
+    slides: [
+      {
+        src: "/provider-gallery/trimrx/trimrx-hero-1126.webp",
+        width: 1000,
+        height: 495,
+        title: "The homepage price line",
+        caption:
+          "TrimRx's homepage on November 26, 2026 reads \"Weight Loss Plans Starting at $149\", with \"Online provider visits included. No insurance required.\", \"Straightforward pricing with no surprise fees.\" and \"Cancel Before Your Next Billing Cycle\" beneath it. The screenshot shows no per-drug price and no promotion banner. Cropped to the price block; the customer-count and review lines elsewhere on the page are not shown.",
+        alt: "TrimRx homepage reading Weight Loss Plans Starting at $149 with online provider visits included, no insurance required, no surprise fees and cancel before your next billing cycle",
+      },
+    ],
+  },
   collective: {
     capturedOn: "2026-11-26",
     source: "Collective's website",

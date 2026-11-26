@@ -213,7 +213,7 @@ export default async function CheapestGlp1Page() {
             promotional). Savings compare against Ozempic&rsquo;s lowest listed
             brand price on our providers&rsquo; shelves ($1,149/month at altRx; welludr lists it at
             $1,399). What&rsquo;s bundled differs - Medvi and SHED include coaching layers others
-            don&rsquo;t - so the cheapest row isn&rsquo;t automatically the best fit. TrimRx is not in this table: its site shows plans from $179 a month (read Nov 22, 2026) but no per-drug semaglutide price we could read, so we cannot build a 12-month total. The dated,
+            don&rsquo;t - so the cheapest row isn&rsquo;t automatically the best fit. TrimRx is not in this table: its site shows plans from $149 a month (read Nov 26, 2026) but no per-drug semaglutide price we could read, so we cannot build a 12-month total. The dated,
             citable version of this data, with its change log, is our{" "}
             <Link href="/weight-loss/glp1-weight-loss-statistics" className="font-medium text-[#0C4B75] hover:underline">
               GLP-1 price index

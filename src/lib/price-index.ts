@@ -33,7 +33,8 @@ export type PriceIndexRow = {
 // embody re-read November 16 and November 26, 2026 (prices unchanged on
 // Nov 26; see the change log); collective's $59 semaglutide price and
 // terms re-read November 26, 2026 (unchanged; tirzepatide and membership
-// keep their Nov 11 read); welludr's $35/$65 Black Friday sale read November 26, 2026
+// keep their Nov 11 read); trimrx's starting price read November 26, 2026
+// ($149, down from $179 on Nov 22; see the change log); welludr's $35/$65 Black Friday sale read November 26, 2026
 // (moved from $39/$69 on Nov 20; see the change log); shed's 30% first-month offer noted Nov 26, 2026
 // (no price shown); altrx's $89 starting price re-read November 26,
 // 2026 (unchanged; tirzepatide $149 and the Nov 20 banner note keep their
@@ -119,7 +120,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     edge: "Custom dosing with unlimited provider check-ins",
     semaglutide: null,
     tirzepatide: null,
-    plan: { price: "from $179", note: "weight loss plans starting at $179 (TrimRx site, read Nov 22, 2026); a \"$120 Off\" banner was also showing, and the page does not say whether $179 is before or after it" },
+    plan: { price: "from $149", note: "weight loss plans starting at $149 (TrimRx site, read Nov 26, 2026); no per-drug price and no promotion banner shown that day (Nov 22 read $179 with a \"$120 Off\" banner)" },
     shipping: "Free tracked delivery, often next-day",
     commitment: "Month to month - cancel before your next billing cycle",
   },
@@ -184,6 +185,13 @@ export type PriceChange = {
 };
 
 export const PRICE_CHANGELOG: PriceChange[] = [
+  {
+    date: "2026-11-26",
+    providerId: "trimrx",
+    change:
+      "Listing now shows TrimRx's \"Weight Loss Plans Starting at $149\" (homepage hero, November 26, 2026), down from the \"starting at $179\" we listed on November 22 with an \"Exclusive Promotion Applied! $120 Off\" banner. The Nov 26 screenshot shows no banner and no per-drug price, so we do not know whether the drop is a new regular start or a promotion, or how long it lasts. The hero also reads \"Online provider visits included. No insurance required.\", \"Straightforward pricing with no surprise fees.\" and \"Cancel Before Your Next Billing Cycle\" (TrimRx's wording). Compounded medicines are not FDA-approved.",
+    source: "TrimRx homepage, operator screenshot, November 26, 2026",
+  },
   {
     date: "2026-11-26",
     providerId: "wellmedr",
