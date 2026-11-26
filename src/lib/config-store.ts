@@ -4224,6 +4224,115 @@ function newerDate(a?: string, b?: string): string | undefined {
   return b > a ? b : a;
 }
 
+// ───── Code copy wins where the stored copy is an older snapshot (Nov 26, 2026) ─────
+// The CMS blob froze a snapshot of these articles, landing pages and battles;
+// the code copy has since been rewritten (longer, newer, more internal links)
+// and the stored copy carries nothing the code lacks (checked field by field:
+// no store-only date, source link, image or affiliate link). These explicit
+// slug lists make the code copy show. Everything else stays CMS-owned: store-
+// only items, provider affiliate URLs, uploaded images, and any slug not
+// listed here. Nothing is deleted from the blob.
+//
+// codeOverStored() cannot drop data: it starts from the stored item and
+// overwrites a field only when the code value is non-empty (not "", "#", [],
+// {} or missing). A field the code does not have, or has empty, keeps the
+// stored value. Author and published date stay as stored (naming of the
+// byline is an open editorial decision; a publish date must not move).
+const CODE_NEWER_KEEP_STORED_FIELDS = ["author", "publishedAt"] as const;
+const isEmptyCodeValue = (v: unknown): boolean =>
+  v === undefined ||
+  v === null ||
+  v === "" ||
+  v === "#" ||
+  (Array.isArray(v) && v.length === 0) ||
+  (typeof v === "object" && !Array.isArray(v) && Object.keys(v as object).length === 0);
+function codeOverStored<T extends object>(stored: T, code: T): T {
+  const out = { ...stored } as Record<string, unknown>;
+  for (const [k, v] of Object.entries(code)) {
+    if ((CODE_NEWER_KEEP_STORED_FIELDS as readonly string[]).includes(k)) continue;
+    if (isEmptyCodeValue(v)) continue;
+    out[k] = v;
+  }
+  return out as T;
+}
+// NOT listed (kept store-served): "best-noom-alternatives". Its stored copy is
+// the only content page linking to the store-only battles /weight-loss/noom-vs-found
+// and /weight-loss/noom-vs-shed; the code copy drops both links.
+const CODE_NEWER_ARTICLE_SLUGS = new Set([
+  "best-glp1-for-weight-loss",
+  "best-mounjaro-alternatives",
+  "best-ozempic-alternatives",
+  "best-ro-alternatives",
+  "best-wegovy-alternatives",
+  "can-you-get-ozempic-without-doctor",
+  "choosing-telehealth-weight-loss-provider",
+  "compounded-semaglutide-vs-brand-name",
+  "embody-alternatives",
+  "embody-cost",
+  "emotional-eating-and-weight-loss",
+  "exercise-while-on-glp1-medication",
+  "first-month-weight-loss-medication",
+  "glp1-and-mental-health",
+  "glp1-weight-loss-for-women",
+  "glp1-weight-loss-over-40",
+  "glp1-with-insurance",
+  "how-glp1-medications-work",
+  "how-long-for-semaglutide-to-work",
+  "how-to-get-ozempic-online",
+  "in-person-vs-online-weight-loss",
+  "is-embody-legit",
+  "menopause-weight-gain",
+  "mounjaro-vs-ozempic",
+  "ozempic-face",
+  "ozempic-hair-loss",
+  "ozempic-vs-wegovy-differences",
+  "semaglutide-cost-per-month",
+  "semaglutide-side-effects-guide",
+  "stopping-glp1-medication-what-happens",
+  "testosterone-and-weight-loss",
+  "tirzepatide-vs-semaglutide",
+  "weight-loss-medication-cost-guide",
+  "weight-loss-medication-that-works-fast",
+  "weight-loss-medication-without-insurance",
+  "weight-loss-plateau-what-to-do",
+  "what-to-eat-on-glp1-medication",
+  "who-qualifies-for-glp1-weight-loss",
+  "zepbound-vs-wegovy",
+  "zepbound-vs-wegovy-vs-ozempic",
+]);
+
+// NOT listed (kept store-served): "semaglutide" and "tirzepatide". Their stored
+// copy renders the shared ~2,000-word editorial block; the code copy replaces it
+// with ~300 words, so the pages would lose content and 18 internal links.
+const CODE_NEWER_LANDING_SLUGS = new Set([
+  "best-online-weight-loss-programs",
+  "best-weight-loss-injections",
+  "cheapest-weight-loss-medication",
+  "ozempic-for-weight-loss",
+  "wegovy-providers",
+]);
+
+const CODE_NEWER_BATTLE_SLUGS = new Set([
+  "altrx-vs-embody",
+  "altrx-vs-ro",
+  "altrx-vs-sprout",
+  "altrx-vs-wellmedr",
+  "calibrate-vs-embody",
+  "calibrate-vs-medvi",
+  "embody-vs-medvi",
+  "embody-vs-ro",
+  "embody-vs-sprout",
+  "embody-vs-wellmedr",
+  "found-vs-embody",
+  "healthrx-vs-medvi",
+  "medvi-vs-altrx",
+  "medvi-vs-ro",
+  "medvi-vs-wellmedr",
+  "ro-vs-wellmedr",
+  "sequence-vs-medvi",
+  "sprout-vs-wellmedr",
+]);
+
 function buildInitialConfig(): SiteConfig {
   return {
     ...defaultConfig,
@@ -4880,6 +4989,12 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
               const code = codeBySlug.get(a.slug);
               if (!code) return a;
               if (codeAuthoritativeGuides.has(a.slug)) return code;
+              if (CODE_NEWER_ARTICLE_SLUGS.has(a.slug)) {
+                return {
+                  ...codeOverStored(a, code),
+                  updatedAt: newerDate(a.updatedAt, code.updatedAt) ?? a.updatedAt,
+                };
+              }
               return {
                 ...a,
                 ...((code.image || code.imageAlt) && { image: code.image, imageAlt: code.imageAlt }),
@@ -4923,6 +5038,9 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
             const merged = savedBattles.map((b) => {
               const code = seedBattleBySlug.get(b.slug);
               if (code && codeAuthoritativeBattles.has(b.slug)) return code;
+              if (code && CODE_NEWER_BATTLE_SLUGS.has(b.slug)) {
+                return { ...codeOverStored(b, code), updatedAt: newerDate(b.updatedAt, code.updatedAt) };
+              }
               return code
                 ? {
                     ...b,
@@ -4956,6 +5074,9 @@ export async function getConfig(vertical: string = DEFAULT_VERTICAL): Promise<Si
             const seedBySlug = new Map(initial.landingPages.map((l) => [l.slug, l]));
             return base.map((l) => {
               const seed = seedBySlug.get(l.slug);
+              if (seed && CODE_NEWER_LANDING_SLUGS.has(l.slug)) {
+                return { ...codeOverStored(l, seed), providerOrder: seed.providerOrder };
+              }
               return seed ? { ...l, providerOrder: seed.providerOrder } : l;
             });
           })(),
