@@ -33,7 +33,8 @@ export type PriceIndexRow = {
 // embody re-read November 16 and November 26, 2026 (prices unchanged on
 // Nov 26; see the change log); collective's $59 semaglutide price and
 // terms re-read November 26, 2026 (unchanged; tirzepatide and membership
-// keep their Nov 11 read); trimrx's starting price read November 26, 2026
+// keep their Nov 11 read); medvi's $99 / $166 offer read November 26, 2026
+// (plan-level row, see the change log); trimrx's starting price read November 26, 2026
 // ($149, down from $179 on Nov 22; see the change log); welludr's $35/$65 Black Friday sale read November 26, 2026
 // (moved from $39/$69 on Nov 20; see the change log); shed's 30% first-month offer noted Nov 26, 2026
 // (no price shown); altrx's $89 starting price re-read November 26,
@@ -103,7 +104,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     edge: "All-inclusive care: visits, dietician and coaching in the price",
     semaglutide: null,
     tirzepatide: null,
-    plan: { price: "from $99", note: "\"start for just $99\"; no membership or hidden fees; dietician visits and care coaching included" },
+    plan: { price: "from $99", note: "\"STARTING at GLP-1: $99 | GLP-1 + GIP: $166\" with \"Up to $100 OFF!\" (Medvi's site, operator screenshot, Nov 26, 2026; Medvi says the offer ends December 1); \"Was $199\" is Medvi's own comparison; prescription and telemed visits included, no insurance required, no hidden fees, free shipping; the $166 GLP-1 + GIP figure is kept here, not as a per-drug tirzepatide row" },
     shipping: "Free shipping",
     commitment: "None - no membership or hidden fees; HSA/FSA",
   },
@@ -185,6 +186,13 @@ export type PriceChange = {
 };
 
 export const PRICE_CHANGELOG: PriceChange[] = [
+  {
+    date: "2026-11-26",
+    providerId: "medvi",
+    change:
+      "Medvi's site (operator screenshot, November 26, 2026) read \"SAVE BIG THIS FALL! Up to $100 OFF! STARTING at GLP-1: $99 | GLP-1 + GIP: $166 - OFFER ENDS DECEMBER 1ST\", with \"Was $199 Now starting at $99\" and a countdown of about four days and nine hours. Our from $99 listing is unchanged. The $166 GLP-1 + GIP figure is the same number we listed for tirzepatide until November 3, when Medvi's page stopped showing it; it is shown again, labelled GLP-1 + GIP. We record it here and in the plan note, and have not added a per-drug tirzepatide row, which would add a tenth provider to the tirzepatide tables and medians. \"Was $199\" is Medvi's own comparison, not a regular price we verified; we list no regular price. Medvi's site says the offer ends December 1 (Medvi's wording, not verified by us). The screenshot also reads \"Prescription & telemed visits included. No insurance required. No hidden fees. Free shipping.\"",
+    source: "Medvi website, operator screenshot, November 26, 2026",
+  },
   {
     date: "2026-11-26",
     providerId: "trimrx",

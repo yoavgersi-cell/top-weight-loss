@@ -311,7 +311,7 @@ export const glp1Coverage2027Article: Article = {
 <tr><td>Compounded semaglutide, welludr</td><td>$35 promotional price (read Nov 26, 2026), no end date stated</td><td>12 x $35</td><td>$420</td></tr>
 <tr><td>Compounded semaglutide, embody</td><td>$49 sale (read Nov 26, 2026), month to month</td><td>12 x $49</td><td>$588 at sale price</td></tr>
 <tr><td>Compounded semaglutide, altRx</td><td>$89 listed; regular $199; flat at every dose</td><td>12 x $89; at regular price 12 x $199</td><td>$1,068; $2,388 at regular price</td></tr>
-<tr><td>Compounded semaglutide, Medvi</td><td>$99 promo, all-inclusive; regular $199</td><td>12 x $99; at regular price 12 x $199</td><td>$1,188; $2,388 at regular price</td></tr>
+<tr><td>Compounded semaglutide, Medvi</td><td>$99 offer, all-inclusive (Medvi's site, read Nov 26, 2026; it says the offer ends December 1 and shows \"Was $199\" as its own comparison)</td><td>12 x $99; if the price returned to Medvi's \"Was $199\", 12 x $199</td><td>$1,188; $2,388 at $199</td></tr>
 <tr><td>Compounded semaglutide, HealthRx</td><td>$39 first month, then $125 a month (monthly plan)</td><td>$39 + 11 x $125</td><td>$1,414</td></tr>
 <tr><td>Compounded tirzepatide, welludr</td><td>$65 promotional price (read Nov 26, 2026); shipped every 4 weeks</td><td>12 x $65; if billed per 4-week shipment, 13 x $65</td><td>$780; $845 at 13 shipments</td></tr>
 <tr><td>Compounded tirzepatide, embody</td><td>$99 sale, month to month</td><td>12 x $99</td><td>$1,188 at sale price</td></tr>

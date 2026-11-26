@@ -47,8 +47,8 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
   },
   "weight-loss:medvi": {
     rows: [
-      { label: "Starting price", value: "Plans from $99/month, all-inclusive (price index, verified Nov 18, 2026)" },
-      { label: "Per-drug price", value: "Not currently listed in our verified index" },
+      { label: "Starting price", value: "GLP-1: $99, GLP-1 + GIP: $166 a month, all-inclusive (Medvi's site, operator screenshot, Nov 26, 2026; Medvi says the offer ends December 1)" },
+      { label: "Per-drug price", value: "Not listed as a per-drug row in our index; \"Was $199\" is Medvi's own comparison" },
       { label: "Support", value: "Video visits and a dietician on every plan" },
       { label: "Commitment", value: "Monthly, all-inclusive billing" },
     ],

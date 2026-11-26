@@ -135,7 +135,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     format: "injection",
     price: "$99",
     pricePrefix: "From",
-    priceNote: "price index, verified Nov 18, 2026; no per-drug price listed; all-inclusive with coaching",
+    priceNote: "Medvi's site, read Nov 26, 2026 (GLP-1: $99; offer ends Dec 1 per Medvi); all-inclusive with coaching",
     shipping: "Free fast & discreet shipping",
     image: "/products/medvi-semaglutide.webp",
   },

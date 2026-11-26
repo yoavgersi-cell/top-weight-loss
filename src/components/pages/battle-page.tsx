@@ -60,10 +60,10 @@ const BATTLE_COST_MATH: Record<
       ["First month (semaglutide)", "$49", "$99"],
       ["6-month total", "$294", "$594"],
       ["12-month total", "$588", "$1,188"],
-      ["Tirzepatide, monthly", "$99", "$166 promo (reg. $299)"],
-      ["If the promo ends", "No regular price shown", "$199/mo regular - $2,388/yr"],
+      ["Tirzepatide, monthly", "$99", "$166 (Medvi's site, read Nov 26, 2026)"],
+      ["If the offer ends", "No end date shown", "Medvi's site says its offer ends Dec 1; its \"Was $199\" is its own comparison, not a verified regular price"],
     ],
-    note: "Semaglutide at each provider's current published rate, promo conditions applied as published: embody $49/mo promotional, month to month; Medvi $99/mo promotional (regularly $199), all-inclusive with dietician and care coaching. Neither requires a prepaid term.",
+    note: "Semaglutide at each provider's current published rate, promo conditions applied as published: embody $49/mo promotional, month to month; Medvi $99/mo (Medvi's site says the offer ends Dec 1; \"Was $199\" is its own comparison), all-inclusive with dietician and care coaching. Neither requires a prepaid term.",
   },
   // provider1 = Medvi, provider2 = TrimRx. Rewritten Nov 22, 2026: TrimRx's
   // site shows only "starting at $149" (not per drug), and Medvi could not be
@@ -121,10 +121,10 @@ const BATTLE_COST_MATH: Record<
       ["First payment (semaglutide)", "$99", "$99 first month on the monthly plan"],
       ["6-month total", "$594", "$664 ($39 + 5 x $125)"],
       ["12-month total", "$1,188", "$1,414 ($39 + 11 x $125)"],
-      ["Tirzepatide, monthly", "$166 promo (reg. $299)", "$199 after the $39 first month"],
-      ["The condition", "$99 is promotional (reg. $199)", "$125/mo is the monthly plan; longer plans cost less per month (tiers not shown)"],
+      ["Tirzepatide, monthly", "$166 (Medvi's site, read Nov 26, 2026)", "$199 after the $39 first month"],
+      ["The condition", "$99 offer ends Dec 1 per Medvi's site; \"Was $199\" is its own comparison", "$125/mo is the monthly plan; longer plans cost less per month (tiers not shown)"],
     ],
-    note: "The structures differ: Medvi bills $99 monthly at a promotional rate (regularly $199) with no prepay; HealthRx charges $39 for the first month, then $125/month until canceled, with longer plans at a lower monthly price that its pages do not show. Totals above assume the monthly plan; check the terms at checkout.",
+    note: "The structures differ: Medvi bills $99 monthly at an offer rate its site says ends December 1 (\"Was $199\" is Medvi's own comparison) with no prepay; HealthRx charges $39 for the first month, then $125/month until canceled, with longer plans at a lower monthly price that its pages do not show. Totals above assume the monthly plan; check the terms at checkout.",
   },
   // provider1 = embody, provider2 = TrimRx
   "embody-vs-trimrx": {
