@@ -194,7 +194,7 @@ export default async function BlackFridayDealsPage() {
           {o.code && (
             <div><dt className="inline font-semibold text-gray-700">Code: </dt><dd className="inline font-mono text-[#191919]">{o.code}</dd></div>
           )}
-          <div><dt className="inline font-semibold text-gray-700">Window: </dt><dd className="inline">{o.startsOn || o.endsOn ? `${o.startsOn ? shortDate(o.startsOn) : "not stated"} to ${o.endsOn ? shortDate(o.endsOn) : "not stated"}` : "not published by the provider"}</dd></div>
+          <div><dt className="inline font-semibold text-gray-700">Window: </dt><dd className="inline">{o.startsOn && o.endsOn ? `${shortDate(o.startsOn)} to ${shortDate(o.endsOn)}` : o.endsOn ? `ends ${shortDate(o.endsOn)} per the provider (start not stated)` : o.startsOn ? `starts ${shortDate(o.startsOn)} (end not stated)` : "not published by the provider"}</dd></div>
           <div><dt className="inline font-semibold text-gray-700">Verified: </dt><dd className="inline">{longDate(o.verifiedOn)}, {o.source}</dd></div>
         </dl>
         <div className="mt-4 flex flex-wrap items-center gap-3">

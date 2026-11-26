@@ -670,7 +670,7 @@ export const brandClusterArticles: Article[] = [
     slug: "shed-cost",
     title: "SHED Cost 2026: Pricing the Guarantee - $199 Decoded",
     description:
-      "SHED costs $199/month for semaglutide, $299 for tirzepatide, 30% off month one (SHED's site, Nov 26, 2026). What the premium over $49 GLP-1 rivals actually buys: coaching plus a guarantee.",
+      "SHED costs $199/month for semaglutide, $299 for tirzepatide, 30% off month one. What the premium over $49 GLP-1 rivals actually buys: coaching plus a guarantee.",
     category: "Guide",
     readTime: "6 min read",
     publishedAt: "2026-08-11",

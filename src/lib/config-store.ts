@@ -346,7 +346,7 @@ const defaultReviews: ReviewData[] = [
   {
     slug: "trimrx",
     providerId: "trimrx",
-    updatedAt: "2026-11-22",
+    updatedAt: "2026-11-26",
     shortSummary: "Telehealth GLP-1 program built around custom dosing and unlimited provider check-ins - plans from $149/month on TrimRx's site (read Nov 26, 2026); compounded, not FDA-approved.",
     reviewIntro: "TrimRx (Trim Rx) is a telehealth GLP-1 program built around custom dosing. Its own site shows plans from $149/month (read Nov 26, 2026), with no promotion banner shown that day; on Nov 22, 2026 it read $179 with an \"Exclusive Promotion Applied! $120 Off\" banner. TrimRx does not publish a per-drug semaglutide or tirzepatide price we could read. The medications are compounded and not FDA-approved. The consultation, tracked delivery, and unlimited provider check-ins are all included in the price. The flow is the standard cash-pay one - a free 2-minute assessment, review by a qualified doctor (with a telehealth call if more information is needed), then free tracked shipping that often arrives as soon as the next day. Weigh the price against the $35-$89 (the $35 is a promotional price, read Nov 26, 2026) entry tier at welludr, embody and altRx before signing up.",
     keyFeatures: [

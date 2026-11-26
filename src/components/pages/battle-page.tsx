@@ -179,7 +179,7 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   "embody-vs-wellmedr": {
     title: "embody vs welludr (formerly wellmedr): $49 vs $35 GLP-1",
     description:
-      "embody ($49/mo flat, partial refund if not approved) vs welludr, formerly wellmedr ($35/mo, 100,000 patients per its site, warranty). Real prices and trade-offs.",
+      "embody ($49/mo flat, partial refund if not approved) vs welludr, formerly wellmedr ($35/mo, 100,000 patients per its site, warranty). Prices and trade-offs.",
   },
   "altrx-vs-embody": {
     // Measured winner, restored Aug 30: when both reverse slugs were live, the
@@ -198,7 +198,7 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   "altrx-vs-wellmedr": {
     title: "altRx vs welludr (formerly wellmedr): $89 vs $35 GLP-1",
     description:
-      "altRx ($89/mo semaglutide + the cheapest brand-name shelf) vs welludr ($35/mo, 100,000 patients per its site). We compared price, medications, support and guarantees.",
+      "altRx ($89/mo semaglutide + the cheapest brand-name shelf) vs welludr ($35/mo, 100,000 patients per its site). We compared price, meds, support and guarantees.",
   },
   "embody-vs-trimrx": {
     title: "embody vs TrimRx (2026): $49 vs $149 GLP-1 Compared",
@@ -236,7 +236,7 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   "medvi-vs-wellmedr": {
     title: "Medvi vs welludr (formerly wellmedr): $99 or $35 GLP-1?",
     description:
-      "Medvi ($99/mo promo with personal provider support) vs welludr ($35/mo semaglutide, 100,000 patients per its site, warranty). Is high-touch care worth the difference?",
+      "Medvi ($99/mo promo with personal provider support) vs welludr ($35/mo semaglutide, 100,000 patients per its site, warranty). Is high-touch worth it?",
   },
   "medvi-vs-altrx": {
     title: "Medvi vs altRx (2026): $99 vs $89 GLP-1 Compared",
@@ -274,7 +274,7 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   "ro-vs-wellmedr": {
     title: "ro vs welludr (formerly wellmedr): Big Brand or $35 GLP-1?",
     description:
-      "ro (major telehealth brand with in-house pharmacy) vs welludr ($35/mo semaglutide, 100,000 patients per its site, weight-loss warranty). Brand trust vs the lowest price.",
+      "ro (major telehealth brand with in-house pharmacy) vs welludr ($35/mo semaglutide, 100,000 patients per its site, warranty). Brand trust vs the lowest price.",
   },
 };
 
