@@ -30,7 +30,8 @@ export type PriceIndexRow = {
 };
 
 // Rows below: operator check of each provider's own site, November 3, 2026;
-// embody re-read November 16, 2026; healthrx and directmeds re-read
+// embody re-read November 16 and November 26, 2026 (prices unchanged on
+// Nov 26; see the change log); healthrx and directmeds re-read
 // November 18, 2026; eden re-read November 24, 2026 on eden.health (prices
 // unchanged at $99 and $129, so no change-log entry; see the change log).
 export const PRICE_INDEX: PriceIndexRow[] = [
@@ -45,8 +46,8 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "embody",
     edge: "Cheapest with no commitment - month to month, free expedited delivery (no timeline guaranteed)",
-    semaglutide: { price: "$49", note: "sale price, flat month to month; pre-Black Friday banner with no countdown or end date stated (homepage read Nov 16, 2026)" },
-    tirzepatide: { price: "$99", note: "sale price, flat month to month" },
+    semaglutide: { price: "$49", note: "sale price, flat month to month; homepage banner read \"Black Friday Sale Discount Applied\" and a countdown showed under five days until a price increase (homepage and pop-up read Nov 26, 2026); the pop-up calls it a \"lifetime discount\" and says \"never pay a dollar more\" (embody's words, not verified by us); the \"was $299\" shown is embody's own comparison, not a verified regular price; our earlier read, Nov 16, showed a pre-Black Friday banner with no countdown" },
+    tirzepatide: { price: "$99", note: "sale price, flat month to month; shown in the Black Friday banner (homepage read Nov 26, 2026)" },
     shipping: "Free expedited delivery, cold-chain; no timeline guaranteed",
     commitment: "None - month to month, cancel anytime",
   },
@@ -177,6 +178,13 @@ export type PriceChange = {
 };
 
 export const PRICE_CHANGELOG: PriceChange[] = [
+  {
+    date: "2026-11-26",
+    providerId: "embody",
+    change:
+      "No price move: compounded semaglutide stays at $49/month and tirzepatide at $99/month. The label changed from a pre-Black Friday sale to \"Black Friday Sale Discount Applied\", the homepage now shows a countdown (under five days until a price increase on our read) where the Nov 16 read showed none, and embody's pop-up calls the discount a \"lifetime discount\" and says \"never pay a dollar more\" (embody's words, not verified by us). The \"was $299\" price on the page is embody's own comparison, not a regular price we have verified; our earlier regular prices were $79 and $129.",
+    source: "embody homepage and offer pop-up, operator screenshots, November 26, 2026",
+  },
   {
     date: "2026-11-22",
     providerId: "trimrx",

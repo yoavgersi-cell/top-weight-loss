@@ -38,7 +38,7 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "What is the cheapest GLP-1 medication in 2026?",
     answer:
-      "The cheapest GLP-1 program among the providers we track is welludr, at $39/month (promotional price, read Nov 20, 2026) for compounded semaglutide - the same price at every dose. The cheapest with no commitment is embody at $49/month, month to month, on its pre-Black Friday sale. All prices on this page are the providers' real published rates, with their conditions disclosed.",
+      "The cheapest GLP-1 program among the providers we track is welludr, at $39/month (promotional price, read Nov 20, 2026) for compounded semaglutide - the same price at every dose. The cheapest with no commitment is embody at $49/month, month to month, on its Black Friday sale (read Nov 26, 2026). All prices on this page are the providers' real published rates, with their conditions disclosed.",
   },
   {
     question: "What is the cheapest tirzepatide?",
@@ -58,7 +58,7 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "What's the catch with the lowest prices?",
     answer:
-      "Commitment and speed. The headline price at welludr is a promotional price (read Nov 20, 2026), and HealthRx's $125/month semaglutide is its monthly plan after a $39 first month. Month-to-month flexibility costs a little more (embody at $49/$99 on its pre-Black Friday sale). Slower shipping is the other trade: altRx at $89 ships in about 5-7 days versus 1-2 days at DirectMeds. Every condition is listed under each price above - there are no unlisted catches we're aware of.",
+      "Commitment and speed. The headline price at welludr is a promotional price (read Nov 20, 2026), and HealthRx's $125/month semaglutide is its monthly plan after a $39 first month. Month-to-month flexibility costs a little more (embody at $49/$99 on its Black Friday sale, read Nov 26, 2026). Slower shipping is the other trade: altRx at $89 ships in about 5-7 days versus 1-2 days at DirectMeds. Every condition is listed under each price above - there are no unlisted catches we're aware of.",
   },
   {
     question: "Are cheap compounded GLP-1s safe?",

@@ -19,12 +19,14 @@ export type GallerySlide = {
   title: string;
   caption: string;
   alt: string;
+  /** ISO capture date when it differs from the gallery's capturedOn (an older screenshot kept alongside newer ones). */
+  capturedOn?: string;
   /** Prices visible in the screenshot, checked against the price index. */
   price?: { semaglutide?: number; tirzepatide?: number };
 };
 
 export type ProviderGallery = {
-  /** ISO date the screenshots were captured. */
+  /** ISO date the newest screenshots were captured; a slide's own capturedOn overrides it. */
   capturedOn: string;
   /** Where they were captured, as shown to readers. */
   source: string;
@@ -33,20 +35,42 @@ export type ProviderGallery = {
 
 const GALLERIES: Record<string, ProviderGallery> = {
   embody: {
-    capturedOn: "2026-11-05",
+    capturedOn: "2026-11-26",
     source: "embody's website",
     slides: [
       {
-        src: "/provider-gallery/embody/embody-homepage.webp",
-        width: 1400,
-        height: 777,
-        title: "The homepage",
+        src: "/provider-gallery/embody/embody-black-friday-banner.webp",
+        width: 1200,
+        height: 185,
+        title: "The Black Friday banner",
         caption:
-          "embody's homepage leads with \"Fat Loss made simple, powered by GLP-1 Science + Care\". The \"Am I qualified?\" button starts the online intake, which the site says most people finish in under 2 minutes.",
-        alt: "embody homepage with the headline Fat Loss made simple, powered by GLP-1 Science + Care and an Am I qualified? button",
+          "The banner at the top of embody's homepage on November 26, 2026 reads \"Black Friday Sale Discount Applied!\" with \"$49 Semaglutide / $99 Tirzepatide\". Our November 16 read of the same page showed a pre-Black Friday banner with no countdown. Cropped to the banner; the rest of the page is not shown.",
+        alt: "embody homepage banner reading Black Friday Sale Discount Applied with $49 Semaglutide and $99 Tirzepatide",
+        price: { semaglutide: 49, tirzepatide: 99 },
+      },
+      {
+        src: "/provider-gallery/embody/embody-price-countdown.webp",
+        width: 740,
+        height: 360,
+        title: "The price box and countdown",
+        caption:
+          "embody's homepage price box on November 26, 2026: \"Was $299, GLP1 for $49/mo\" and a countdown reading \"Price increases in 04 days, 14 hrs, 58 mins, 32 secs\". A countdown on the page read that day showed under five days until a price increase. The $299 is embody's own comparison price, not a regular price we have verified.",
+        alt: "embody homepage price box with Was $299 struck through, GLP1 for $49 per month, and a Price increases in countdown timer",
+        price: { semaglutide: 49 },
+      },
+      {
+        src: "/provider-gallery/embody/embody-offer-popup.webp",
+        width: 1400,
+        height: 1033,
+        title: "The offer pop-up",
+        caption:
+          "The pop-up embody showed on November 26, 2026: \"Black Friday Savings! You just unlocked $250 off. Get your GLP-1 for only $49 ($299 struck through). Sign up now and never pay a dollar more!\", with a footer reading \"Lifetime discount applied at checkout\". Those are embody's words, not ours; we have not verified what the lifetime wording covers.",
+        alt: "embody offer pop-up headed Black Friday Savings, saying You just unlocked $250 off and Get your GLP-1 for only $49, with a Claim My $250 Savings button",
+        price: { semaglutide: 49 },
       },
       {
         src: "/provider-gallery/embody/embody-pricing.webp",
+        capturedOn: "2026-11-05",
         width: 1400,
         height: 777,
         title: "Plans and prices",
@@ -57,6 +81,7 @@ const GALLERIES: Record<string, ProviderGallery> = {
       },
       {
         src: "/provider-gallery/embody/embody-support.webp",
+        capturedOn: "2026-11-05",
         width: 1400,
         height: 688,
         title: "The support pitch",
@@ -66,6 +91,7 @@ const GALLERIES: Record<string, ProviderGallery> = {
       },
       {
         src: "/provider-gallery/embody/embody-how-glp1-works.webp",
+        capturedOn: "2026-11-05",
         width: 1400,
         height: 574,
         title: "How GLP-1s work, in embody's words",
@@ -75,6 +101,7 @@ const GALLERIES: Record<string, ProviderGallery> = {
       },
       {
         src: "/provider-gallery/embody/embody-first-months.webp",
+        capturedOn: "2026-11-05",
         width: 1400,
         height: 1175,
         title: "Month 0-1, per embody",
@@ -84,6 +111,7 @@ const GALLERIES: Record<string, ProviderGallery> = {
       },
       {
         src: "/provider-gallery/embody/embody-month-1-2.webp",
+        capturedOn: "2026-11-05",
         width: 1400,
         height: 1206,
         title: "Month 1-2, per embody",
@@ -93,6 +121,7 @@ const GALLERIES: Record<string, ProviderGallery> = {
       },
       {
         src: "/provider-gallery/embody/embody-month-2-3.webp",
+        capturedOn: "2026-11-05",
         width: 1400,
         height: 1203,
         title: "Month 2-3, per embody",
@@ -102,6 +131,7 @@ const GALLERIES: Record<string, ProviderGallery> = {
       },
       {
         src: "/provider-gallery/embody/embody-month-3-4.webp",
+        capturedOn: "2026-11-05",
         width: 1400,
         height: 1200,
         title: "Month 3-4, per embody",
@@ -111,6 +141,7 @@ const GALLERIES: Record<string, ProviderGallery> = {
       },
       {
         src: "/provider-gallery/embody/embody-month-4-6.webp",
+        capturedOn: "2026-11-05",
         width: 1400,
         height: 1196,
         title: "Month 4-6, per embody",
@@ -120,6 +151,7 @@ const GALLERIES: Record<string, ProviderGallery> = {
       },
       {
         src: "/provider-gallery/embody/embody-whats-included.webp",
+        capturedOn: "2026-11-05",
         width: 1400,
         height: 637,
         title: "What's included",
@@ -286,6 +318,6 @@ export function galleryFigureHtml(providerId: string, file: string): string {
   if (!g || !s) throw new Error(`[provider-gallery] no slide ${providerId}/${file}`);
   if (s.price) throw new Error(`[provider-gallery] ${providerId}/${file} shows a price; not for articles`);
   const esc = (t: string) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
-  const date = new Date(g.capturedOn).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
+  const date = new Date(s.capturedOn ?? g.capturedOn).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
   return `<figure class="shot"><img src="${s.src}" width="${s.width}" height="${s.height}" alt="${esc(s.alt)}" loading="lazy" decoding="async"><figcaption>${esc(s.caption)} <span class="shot-src">Screenshot of ${esc(g.source)}, captured ${date}.</span></figcaption></figure>`;
 }

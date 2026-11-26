@@ -73,7 +73,7 @@ export const glp1ProvidersSameCompanyArticle: Article = {
       heading: "If they share a network, how do they actually differ?",
       body: `<p>On the things you will notice every month. Verified prices from our price index, with the condition attached to each:</p><table><thead><tr><th>Provider</th><th>Semaglutide</th><th>Tirzepatide</th><th>Commitment</th></tr></thead><tbody>
 <tr><td>welludr</td><td>$39/month (promotional price, read Nov 20, 2026)</td><td>$69/month (promotional price, read Nov 20, 2026)</td><td>Monthly Plan as labeled on its page (Black Friday sale)</td></tr>
-<tr><td>embody</td><td>$49/month</td><td>$99/month</td><td>Month to month (pre-Black Friday sale)</td></tr>
+<tr><td>embody</td><td>$49/month</td><td>$99/month</td><td>Month to month (Black Friday sale)</td></tr>
 <tr><td>altRx</td><td>$89/month</td><td>$149/month</td><td>Pause or cancel anytime; Buy Now, Pay Later</td></tr>
 <tr><td>Medvi</td><td>from $99/month</td><td>Not listed</td><td>No membership; dietician and coaching included</td></tr>
 <tr><td>TrimRx</td><td colspan="2">Plans from $179/month (TrimRx site, read Nov 22, 2026); not tied to one drug</td><td>Month to month</td></tr>

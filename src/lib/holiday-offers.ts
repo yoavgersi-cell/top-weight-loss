@@ -50,12 +50,12 @@ export const HOLIDAY_OFFERS: HolidayOffer[] = [
   {
     vertical: "weight-loss",
     providerId: "embody",
-    headline: "Pre-Black Friday sale: $49/month semaglutide, $99/month tirzepatide",
+    headline: "Black Friday sale: $49/month semaglutide, $99/month tirzepatide",
     detail:
-      "embody's site banner reads \"Pre-Black Friday sale discount applied\" with compounded semaglutide at $49/month and tirzepatide at $99/month, month to month, free expedited delivery (no timeline guaranteed). Before the sale our index listed $69 and $119, so both sale figures are $20/month below the previous everyday rate. The same prices appear on embody's exclusive landing page, where a countdown read just under six days on October 28; the main-site banner states no end date and no code.",
+      "embody's homepage banner read \"Black Friday Sale Discount Applied!\" with compounded semaglutide at $49/month and tirzepatide at $99/month on November 26, 2026, month to month, free expedited delivery (no timeline guaranteed). The same prices were listed under a pre-Black Friday banner on October 28, when our index recorded $69 and $119 before the sale. On November 26 a countdown on the page showed under five days until a price increase, and a pop-up called the discount a \"lifetime discount\" and said \"never pay a dollar more\"; those are embody's words, not ours, and we have not verified what they cover. The \"was $299\" shown on the page is embody's own comparison, not a regular price we have verified (our earlier regular prices were $79 and $129). No code is shown, and the countdown is the only timing given: no end date is stated.",
     offerMonthly: { semaglutide: 49, tirzepatide: 99 },
-    verifiedOn: "2026-10-28",
-    source: "banner on embody's homepage and its exclusive landing page, operator screenshots",
+    verifiedOn: "2026-11-26",
+    source: "embody homepage and offer pop-up, operator screenshots",
   },
   {
     vertical: "weight-loss",

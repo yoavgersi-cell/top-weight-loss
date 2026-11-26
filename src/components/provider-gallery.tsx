@@ -33,6 +33,7 @@ export function ProviderGallery({
   const [open, setOpen] = useState<number | null>(null);
   const n = gallery.slides.length;
   const captured = longDate(gallery.capturedOn);
+  const mixedDates = gallery.slides.some((s) => s.capturedOn && s.capturedOn !== gallery.capturedOn);
 
   // Which slide is in view (drives the dots and arrow states).
   useEffect(() => {
@@ -84,7 +85,7 @@ export function ProviderGallery({
         description: s.alt,
         width: s.width,
         height: s.height,
-        dateCreated: gallery.capturedOn,
+        dateCreated: s.capturedOn ?? gallery.capturedOn,
         creditText: providerName,
         copyrightNotice: `Screenshot of ${gallery.source}`,
         isPartOf: { "@type": "WebPage", "@id": pageUrl },
@@ -104,7 +105,7 @@ export function ProviderGallery({
             See it for yourself: {providerName}&rsquo;s site, step by step
           </h2>
           <p className="mt-1 text-[13.5px] text-gray-600">
-            Screenshots of {gallery.source}, captured {captured}. Claims shown are {providerName}&rsquo;s own.
+            Screenshots of {gallery.source}, captured {captured}{mixedDates ? " (older screenshots carry their own date)" : ""}. Claims shown are {providerName}&rsquo;s own.
           </p>
         </div>
         <div className="flex shrink-0 gap-2">
@@ -140,6 +141,7 @@ export function ProviderGallery({
                 <p className="text-[12px] font-bold uppercase tracking-[0.06em] text-[#0C4B75]">Step {i + 1}</p>
                 <p className="mt-0.5 text-[15.5px] font-bold text-[#191919]">{s.title}</p>
                 <p className="mt-1.5 text-[13.5px] leading-relaxed text-gray-700">{s.caption}</p>
+                {mixedDates && <p className="mt-1.5 text-[12px] text-gray-500">Captured {longDate(s.capturedOn ?? gallery.capturedOn)}</p>}
               </figcaption>
             </figure>
           </li>

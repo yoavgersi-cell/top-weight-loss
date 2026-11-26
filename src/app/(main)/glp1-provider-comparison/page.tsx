@@ -234,7 +234,7 @@ const SECTIONS: Section[] = [
     ),
     pricing: (
       <>
-        <strong className="text-[#191919]">Semaglutide $49 a month and tirzepatide $99, month to month</strong>, a pre-Black Friday sale seen October 28, 2026 (previously $69 and $119). Free expedited cold-chain delivery; no timeline guaranteed. No membership. <strong className="text-[#191919]">A partial refund if a provider does not approve treatment (unused portion less services rendered).</strong> embody is LegitScript-certified and names US-based 503A compounding pharmacies, the clearest pharmacy statement among the compounded providers here.
+        <strong className="text-[#191919]">Semaglutide $49 a month and tirzepatide $99, month to month</strong>, a sale first seen October 28, 2026 as a pre-Black Friday sale (previously $69 and $119), labelled a Black Friday sale when read November 26, 2026. Free expedited cold-chain delivery; no timeline guaranteed. No membership. <strong className="text-[#191919]">A partial refund if a provider does not approve treatment (unused portion less services rendered).</strong> embody is LegitScript-certified and names US-based 503A compounding pharmacies, the clearest pharmacy statement among the compounded providers here.
       </>
     ),
     support:

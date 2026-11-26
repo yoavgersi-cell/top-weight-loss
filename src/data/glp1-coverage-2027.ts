@@ -309,7 +309,7 @@ export const glp1Coverage2027Article: Article = {
 <tbody>
 <tr><td>Medicare GLP-1 Bridge</td><td>$50 copay, if eligible; runs through December 31, 2027</td><td>12 x $50</td><td>$600</td></tr>
 <tr><td>Compounded semaglutide, welludr</td><td>$39 promotional price (read Nov 20, 2026), no end date stated</td><td>12 x $39</td><td>$468</td></tr>
-<tr><td>Compounded semaglutide, embody</td><td>$49 sale (October 28, 2026), month to month</td><td>12 x $49</td><td>$588 at sale price</td></tr>
+<tr><td>Compounded semaglutide, embody</td><td>$49 sale (read Nov 26, 2026), month to month</td><td>12 x $49</td><td>$588 at sale price</td></tr>
 <tr><td>Compounded semaglutide, altRx</td><td>$89 listed; regular $199; flat at every dose</td><td>12 x $89; at regular price 12 x $199</td><td>$1,068; $2,388 at regular price</td></tr>
 <tr><td>Compounded semaglutide, Medvi</td><td>$99 promo, all-inclusive; regular $199</td><td>12 x $99; at regular price 12 x $199</td><td>$1,188; $2,388 at regular price</td></tr>
 <tr><td>Compounded semaglutide, HealthRx</td><td>$39 first month, then $125 a month (monthly plan)</td><td>$39 + 11 x $125</td><td>$1,414</td></tr>
@@ -328,7 +328,7 @@ export const glp1Coverage2027Article: Article = {
 </table>
 <h3>How to use the table</h3>
 <ul>
-<li><strong>Sale prices may not last the year.</strong> The welludr and embody figures are pre-Black Friday sale prices with no end date stated. Where a regular price is published, we show the annual total at that price as well, so you can budget for the worse case. Our <a href="/weight-loss/black-friday-glp1-deals">Black Friday GLP-1 deals</a> page tracks the windows as providers publish them.</li>
+<li><strong>Sale prices may not last the year.</strong> The welludr and embody figures are sale prices. welludr states no end date; embody's homepage showed a countdown on November 26, 2026 reading under five days until a price increase. Where a regular price is published, we show the annual total at that price as well, so you can budget for the worse case. Our <a href="/weight-loss/black-friday-glp1-deals">Black Friday GLP-1 deals</a> page tracks the windows as providers publish them.</li>
 <li><strong>Dose changes matter on some routes and not others.</strong> Several compounded prices are flat at every dose, which keeps the total predictable. The pills and Ro's pens step up after the first month, and Foundayo's reported price rises with the dose.</li>
 <li><strong>Insurance totals are personal.</strong> If your plan still covers the drug, your annual cost is your copays or coinsurance until the out-of-pocket maximum, which only your plan's documents can give you. Price that number and set it against the rows above.</li>
 <li><strong>Premiums are part of the comparison.</strong> If choosing a plan that covers the drug costs more in premiums, add the difference to that route's total before you compare.</li>
