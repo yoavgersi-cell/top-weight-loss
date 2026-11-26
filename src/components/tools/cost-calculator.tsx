@@ -9,7 +9,7 @@ import Link from "next/link";
 // the figures here are the same ones on the statistics and cheapest-GLP-1
 // pages, with the same verification date. The only arithmetic is:
 //   - listed monthly price x months;
-//   - a published "20% off month one" applied to month one only;
+//   - a published "N% off month one" applied to month one only;
 //   - a published regular price (note contains "reg. $X") multiplied out as a
 //     second column, so promotional rows show what they cost if the promotion
 //     ends - we do not know promo durations and do not guess them;
@@ -53,7 +53,8 @@ export function CostCalculator({ rows, brands, verifiedOn }: { rows: CostRow[]; 
         if (listed == null) return null;
         const note = cell.note.toLowerCase();
         const isFrom = /^from/i.test(cell.price.trim());
-        const monthOneOff = /20% off month one/.test(note) ? 0.8 : 1;
+        const monthOffMatch = note.match(/(\d+)% off month one/);
+        const monthOneOff = monthOffMatch ? 1 - Number(monthOffMatch[1]) / 100 : 1;
         const twelveMonth = /12-mo|12-month/.test(note) || /12-month/i.test(r.commitment);
         const billedMonths = twelveMonth ? Math.max(12, Math.ceil(months / 12) * 12) : months;
         const total = listed * monthOneOff + listed * (billedMonths - 1);
@@ -131,7 +132,7 @@ export function CostCalculator({ rows, brands, verifiedOn }: { rows: CostRow[]; 
                   {twelveMonth && billedMonths !== months && (
                     <span className="block text-[11.5px] font-normal text-amber-700">Billed as a {billedMonths}-month plan at this price</span>
                   )}
-                  {monthOneOff < 1 && <span className="block text-[11.5px] font-normal text-gray-500">20% off applied to month one only</span>}
+                  {monthOneOff < 1 && <span className="block text-[11.5px] font-normal text-gray-500">{Math.round((1 - monthOneOff) * 100)}% off applied to month one only</span>}
                 </td>
                 <td className={`${cell} text-gray-700`}>
                   {regTotal != null ? (

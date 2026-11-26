@@ -42,20 +42,69 @@ export const HOLIDAY_SEASON = {
   blackFriday: "2026-11-27",
   cyberMonday: "2026-11-30",
   /** The page's own last-updated date: the newest verifiedOn below, or this when the list is empty. */
-  pageUpdated: "2026-10-28",
+  pageUpdated: "2026-11-26",
 };
 
 /** Operator-verified offers only, newest verification first. */
 export const HOLIDAY_OFFERS: HolidayOffer[] = [
   {
     vertical: "weight-loss",
-    providerId: "embody",
-    headline: "Pre-Black Friday sale: $49/month semaglutide, $99/month tirzepatide",
+    providerId: "wellmedr",
+    headline: "Black Friday sale: $35/month semaglutide, $65/month tirzepatide",
     detail:
-      "embody's site banner reads \"Pre-Black Friday sale discount applied\" with compounded semaglutide at $49/month and tirzepatide at $99/month, month to month, free expedited delivery (no timeline guaranteed). Before the sale our index listed $69 and $119, so both sale figures are $20/month below the previous everyday rate. The same prices appear on embody's exclusive landing page, where a countdown read just under six days on October 28; the main-site banner states no end date and no code.",
+      "welludr's homepage banner read \"BLACK FRIDAY SALE DISCOUNT APPLIED! $35/mo Semaglutide | $65/mo Tirzepatide\" on November 26, 2026, with no end date shown and no code. These are the prices in our index, so the offer is the everyday listed rate rather than a further discount. The screenshot does not show the plan label, shipping cadence or cancellation terms. On November 20 the same banner read $39 and $69.",
+    offerMonthly: { semaglutide: 35, tirzepatide: 65 },
+    verifiedOn: "2026-11-26",
+    source: "welludr homepage, operator screenshot",
+  },
+  {
+    vertical: "weight-loss",
+    providerId: "medvi",
+    headline: "Up to $100 off: starting at $99 (GLP-1) and $166 (GLP-1 + GIP)",
+    detail:
+      "Medvi's site read \"SAVE BIG THIS FALL! Up to $100 OFF! STARTING at GLP-1: $99 | GLP-1 + GIP: $166 - OFFER ENDS DECEMBER 1ST\" on November 26, 2026, with \"Was $199 Now starting at $99\" and a countdown of about four days and nine hours. Medvi's site says the offer ends December 1 (Medvi's wording, not verified by us). \"Was $199\" is Medvi's own comparison, not a regular price we verified. Prescription and telemed visits are included, no insurance is required, there are no hidden fees and shipping is free, per Medvi. No code is shown.",
+    offerMonthly: { semaglutide: 99, tirzepatide: 166 },
+    endsOn: "2026-12-01",
+    verifiedOn: "2026-11-26",
+    source: "Medvi site, operator screenshot (text read; the image was not saved)",
+  },
+  {
+    vertical: "weight-loss",
+    providerId: "trimrx",
+    headline: "Plans starting at $149 (not labelled a Black Friday offer)",
+    detail:
+      "TrimRx's homepage read \"Weight Loss Plans Starting at $149\" on November 26, 2026. The page does not call it a Black Friday or Cyber Monday offer, shows no code, no end date and no promotion banner, and shows no per-drug price. It is listed here as the current starting price, not as a holiday discount. On November 22 the site read plans from $179 with a \"$120 Off\" banner.",
+    verifiedOn: "2026-11-26",
+    source: "TrimRx homepage, operator screenshot",
+  },
+  {
+    vertical: "weight-loss",
+    providerId: "embody",
+    headline: "Black Friday sale: $49/month semaglutide, $99/month tirzepatide",
+    detail:
+      "embody's homepage banner read \"Black Friday Sale Discount Applied!\" with compounded semaglutide at $49/month and tirzepatide at $99/month on November 26, 2026, month to month, free expedited delivery (no timeline guaranteed). The same prices were listed under a pre-Black Friday banner on October 28, when our index recorded $69 and $119 before the sale. On November 26 a countdown on the page showed under five days until a price increase, and a pop-up called the discount a \"lifetime discount\" and said \"never pay a dollar more\"; those are embody's words, not ours, and we have not verified what they cover. The \"was $299\" shown on the page is embody's own comparison, not a regular price we have verified (our earlier regular prices were $79 and $129). No code is shown, and the countdown is the only timing given: no end date is stated.",
     offerMonthly: { semaglutide: 49, tirzepatide: 99 },
-    verifiedOn: "2026-10-28",
-    source: "banner on embody's homepage and its exclusive landing page, operator screenshots",
+    verifiedOn: "2026-11-26",
+    source: "embody homepage and offer pop-up, operator screenshots",
+  },
+  {
+    vertical: "weight-loss",
+    providerId: "shed",
+    headline: "30% off your first month's GLP-1 program",
+    detail:
+      "SHED's homepage banner read \"Get 30% off your first month's GLP-1 program\" on November 26, 2026. The page does not call it a Black Friday or Cyber Monday offer, shows no price and no code, and states no end date. It applies to the first month only, so it is not a saving on month two onward. Our earlier listing said 20% off the first month.",
+    verifiedOn: "2026-11-26",
+    source: "SHED homepage, operator screenshot",
+  },
+  {
+    vertical: "weight-loss",
+    providerId: "altrx",
+    headline: "Black Friday sale: 15% off with code FRIDAY15",
+    detail:
+      "altRx's site banner read \"Black Friday Sale - 15% Off Use Code FRIDAY15\" on November 20, 2026. The page does not say whether its listed base prices ($89/month semaglutide, $149/month tirzepatide) are before or after the code, what the 15% applies to, or when the sale ends. We did not re-read the banner on November 26, 2026: that day's screenshot shows only the homepage hero, with \"Start for $89/mo\". No end date is stated.",
+    code: "FRIDAY15",
+    verifiedOn: "2026-11-20",
+    source: "altRx website banner, operator screenshot",
   },
   {
     vertical: "weight-loss",
@@ -83,6 +132,18 @@ export interface HolidayCheck {
 }
 
 export const HOLIDAY_CHECKS: HolidayCheck[] = [
+  {
+    vertical: "weight-loss",
+    providerId: "eden",
+    checkedOn: "2026-11-26",
+    found: "the part of the homepage captured shows \"Monthly pricing at every dose\" at $99 semaglutide and $129 tirzepatide, with no Black Friday or Cyber Monday offer shown",
+  },
+  {
+    vertical: "weight-loss",
+    providerId: "collective",
+    checkedOn: "2026-11-26",
+    found: "the part of the homepage captured (cropped on the right) shows \"Get GLP-1s at $59/month\", with no Black Friday or Cyber Monday offer shown",
+  },
   {
     vertical: "weight-loss",
     providerId: "altrx",

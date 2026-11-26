@@ -60,22 +60,22 @@ const BATTLE_COST_MATH: Record<
       ["First month (semaglutide)", "$49", "$99"],
       ["6-month total", "$294", "$594"],
       ["12-month total", "$588", "$1,188"],
-      ["Tirzepatide, monthly", "$99", "$166 promo (reg. $299)"],
-      ["If the promo ends", "No regular price shown", "$199/mo regular - $2,388/yr"],
+      ["Tirzepatide, monthly", "$99", "$166 (Medvi's site, read Nov 26, 2026)"],
+      ["If the offer ends", "No end date shown", "Medvi's site says its offer ends Dec 1; its \"Was $199\" is its own comparison, not a verified regular price"],
     ],
-    note: "Semaglutide at each provider's current published rate, promo conditions applied as published: embody $49/mo promotional, month to month; Medvi $99/mo promotional (regularly $199), all-inclusive with dietician and care coaching. Neither requires a prepaid term.",
+    note: "Semaglutide at each provider's current published rate, promo conditions applied as published: embody $49/mo promotional, month to month; Medvi $99/mo (Medvi's site says the offer ends Dec 1; \"Was $199\" is its own comparison), all-inclusive with dietician and care coaching. Neither requires a prepaid term.",
   },
   // provider1 = Medvi, provider2 = TrimRx. Rewritten Nov 22, 2026: TrimRx's
-  // site shows only "starting at $179" (not per drug), and Medvi could not be
+  // site shows only "starting at $149" (not per drug), and Medvi could not be
   // re-read that day, so no 12-month total is built (see ops/research/2026-11-22-eden-trimrx-evidence.md).
   "medvi-vs-trimrx": {
     rows: [
-      ["Published starting price", "From $99 (price index, verified Nov 18, 2026)", "Plans from $179 (TrimRx site, read Nov 22, 2026)"],
+      ["Published starting price", "From $99 (price index, verified Nov 18, 2026)", "Plans from $149 (TrimRx site, read Nov 26, 2026)"],
       ["Per-drug price", "Not published", "Not published on the page we could read"],
       ["What the price includes", "Dietician visits and care coaching", "GLP-1 medication and doctor consultations (pricing page)"],
       ["Commitment", "None; no membership or hidden fees", "Month to month; cancel before your next billing cycle"],
     ],
-    note: "Both figures are starting prices that our sources do not tie to one drug or dose, so we do not calculate a 12-month total. Medvi's \"start for just $99\" comes from our price index (Medvi site read Nov 3, 2026; index verified Nov 18, 2026); Medvi's site could not be re-read on Nov 22, 2026. TrimRx's $179 is from trimrx.com/glp1 and its pricing page, read Nov 22, 2026, where a \"$120 Off\" banner also showed; the page does not say whether $179 is before or after that promotion. Compounded medications are not FDA-approved.",
+    note: "Both figures are starting prices that our sources do not tie to one drug or dose, so we do not calculate a 12-month total. Medvi's \"start for just $99\" comes from our price index (Medvi site read Nov 3, 2026; index verified Nov 18, 2026); Medvi's site could not be re-read on Nov 22, 2026. TrimRx's $149 is its \"Weight Loss Plans Starting at $149\" line (site, read Nov 26, 2026, no banner shown that day); on Nov 22, 2026 its site read plans from $179 with a \"$120 Off\" banner. Compounded medications are not FDA-approved.",
   },
   // provider1 = embody, provider2 = Ro. Ro's figures are its own published
   // pricing (verified Aug 2026): a Ro Body membership ($39 first month, then
@@ -107,13 +107,13 @@ const BATTLE_COST_MATH: Record<
   // provider1 = embody, provider2 = welludr
   "embody-vs-wellmedr": {
     rows: [
-      ["First month (semaglutide)", "$49", "$39 (promotional price, read Nov 20, 2026)"],
-      ["6-month total", "$294", "$234"],
-      ["12-month total", "$588", "$468"],
-      ["Tirzepatide, monthly", "$99", "$69 (promotional price, read Nov 20, 2026)"],
-      ["The condition", "$49 is promotional; month to month", "$39 is promotional; its page labels it Monthly Plan (read Nov 20, 2026)"],
+      ["First month (semaglutide)", "$49", "$35 (promotional price, read Nov 26, 2026)"],
+      ["6-month total", "$294", "$210"],
+      ["12-month total", "$588", "$420"],
+      ["Tirzepatide, monthly", "$99", "$65 (promotional price, read Nov 26, 2026)"],
+      ["The condition", "$49 is promotional; month to month", "$35 is promotional (read Nov 26, 2026); its page labelled the plan Monthly Plan when read Nov 20, 2026"],
     ],
-    note: "Semaglutide at each provider's published rate: embody $49/mo promotional with no commitment; welludr $39/mo (promotional price, read Nov 20, 2026), same price at every dose, so the 6- and 12-month totals are $39 x 6 and $39 x 12. welludr wins the year by $120. On exit terms the two now read alike on welludr's plan page (cancel or change anytime, read Nov 20, 2026), but welludr's refund policy (read Nov 22, 2026) still describes 12-month plans as prepaid, so confirm the plan and the amount charged at checkout.",
+    note: "Semaglutide at each provider's published rate: embody $49/mo promotional with no commitment; welludr $35/mo (promotional price, read Nov 26, 2026), same price at every dose, so the 6- and 12-month totals are $35 x 6 and $35 x 12. welludr wins the year by $168. On exit terms the two now read alike on welludr's plan page (cancel or change anytime, read Nov 20, 2026), but welludr's refund policy (read Nov 22, 2026) still describes 12-month plans as prepaid, so confirm the plan and the amount charged at checkout.",
   },
   // provider1 = Medvi, provider2 = HealthRx
   "healthrx-vs-medvi": {
@@ -121,19 +121,19 @@ const BATTLE_COST_MATH: Record<
       ["First payment (semaglutide)", "$99", "$99 first month on the monthly plan"],
       ["6-month total", "$594", "$664 ($39 + 5 x $125)"],
       ["12-month total", "$1,188", "$1,414 ($39 + 11 x $125)"],
-      ["Tirzepatide, monthly", "$166 promo (reg. $299)", "$199 after the $39 first month"],
-      ["The condition", "$99 is promotional (reg. $199)", "$125/mo is the monthly plan; longer plans cost less per month (tiers not shown)"],
+      ["Tirzepatide, monthly", "$166 (Medvi's site, read Nov 26, 2026)", "$199 after the $39 first month"],
+      ["The condition", "$99 offer ends Dec 1 per Medvi's site; \"Was $199\" is its own comparison", "$125/mo is the monthly plan; longer plans cost less per month (tiers not shown)"],
     ],
-    note: "The structures differ: Medvi bills $99 monthly at a promotional rate (regularly $199) with no prepay; HealthRx charges $39 for the first month, then $125/month until canceled, with longer plans at a lower monthly price that its pages do not show. Totals above assume the monthly plan; check the terms at checkout.",
+    note: "The structures differ: Medvi bills $99 monthly at an offer rate its site says ends December 1 (\"Was $199\" is Medvi's own comparison) with no prepay; HealthRx charges $39 for the first month, then $125/month until canceled, with longer plans at a lower monthly price that its pages do not show. Totals above assume the monthly plan; check the terms at checkout.",
   },
   // provider1 = embody, provider2 = TrimRx
   "embody-vs-trimrx": {
     rows: [
-      ["Published price", "$49 semaglutide, $99 tirzepatide (promotional)", "Plans from $179 (TrimRx site, read Nov 22, 2026)"],
+      ["Published price", "$49 semaglutide, $99 tirzepatide (promotional)", "Plans from $149 (TrimRx site, read Nov 26, 2026)"],
       ["Per-drug price", "Published for both drugs", "Not published on the page we could read"],
       ["The condition", "$49 and $99 are promotional; month to month", "Starting price, not tied to one drug or dose; no long-term contract"],
     ],
-    note: "embody's figures are its promotional rates, the same every month. TrimRx's site shows plans from $179 (read Nov 22, 2026) and a \"$120 Off\" banner; it does not say whether $179 is before or after that promotion, and we could not read a per-drug price, so we do not calculate 6- or 12-month totals for TrimRx.",
+    note: "embody's figures are its promotional rates, the same every month. TrimRx's site shows plans starting at $149 (read Nov 26, 2026; it read $179 with a \"$120 Off\" banner on Nov 22) and we could not read a per-drug price, so we do not calculate 6- or 12-month totals for TrimRx.",
   },
   // provider1 = embody, provider2 = Sprout
   "embody-vs-sprout": {
@@ -167,19 +167,19 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "altRx ($89/mo plus Ozempic, Zepbound and Wegovy, BNPL) vs Sprout (from $99/mo on a 12-month plan, Wegovy available, 2-day fulfillment). Price and selection.",
   },
   "sprout-vs-trimrx": {
-    title: "Sprout vs TrimRx (2026): $99 vs $179 - Which GLP-1 Wins?",
+    title: "Sprout vs TrimRx (2026): $99 vs $149 - Which GLP-1 Wins?",
     description:
-      "Sprout (from $99/mo semaglutide on a 12-month plan, Wegovy option) vs TrimRx (plans from $179/mo, custom dosing, no contract). Compared honestly.",
+      "Sprout (from $99/mo semaglutide on a 12-month plan, Wegovy option) vs TrimRx (plans from $149/mo, custom dosing, no contract). Compared honestly.",
   },
   "sprout-vs-wellmedr": {
-    title: "Sprout vs welludr (formerly wellmedr): $99 vs $39 GLP-1",
+    title: "Sprout vs welludr (formerly wellmedr): $99 vs $35 GLP-1",
     description:
-      "Sprout (from $99/mo on a 12-month plan, 2-day fulfillment, brand-name Wegovy) vs welludr ($39/mo, weight-loss warranty). Real prices, honest verdict.",
+      "Sprout (from $99/mo on a 12-month plan, 2-day fulfillment, brand-name Wegovy) vs welludr ($35/mo, weight-loss warranty). Real prices, honest verdict.",
   },
   "embody-vs-wellmedr": {
-    title: "embody vs welludr (formerly wellmedr): $49 vs $39 GLP-1",
+    title: "embody vs welludr (formerly wellmedr): $49 vs $35 GLP-1",
     description:
-      "embody ($49/mo flat, partial refund if not approved) vs welludr, formerly wellmedr ($39/mo, 1M+ patients, warranty). Real prices and trade-offs.",
+      "embody ($49/mo flat, partial refund if not approved) vs welludr, formerly wellmedr ($35/mo, 100,000 patients per its site, warranty). Prices and trade-offs.",
   },
   "altrx-vs-embody": {
     // Measured winner, restored Aug 30: when both reverse slugs were live, the
@@ -191,19 +191,19 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "altRx ($89/mo semaglutide, brand-name Zepbound and Wegovy, BNPL) vs embody ($49/mo flat, free delivery, LegitScript-certified). Which GLP-1 provider wins?",
   },
   "altrx-vs-trimrx": {
-    title: "altRx vs TrimRx (2026): $89 vs $179 GLP-1 Compared",
+    title: "altRx vs TrimRx (2026): $89 vs $149 GLP-1 Compared",
     description:
-      "altRx ($89/mo semaglutide, flat at every dose, brand-name options) vs TrimRx (plans from $179/mo, no contract). Pricing and flexibility compared.",
+      "altRx ($89/mo semaglutide, flat at every dose, brand-name options) vs TrimRx (plans from $149/mo, no contract). Pricing and flexibility compared.",
   },
   "altrx-vs-wellmedr": {
-    title: "altRx vs welludr (formerly wellmedr): $89 vs $39 GLP-1",
+    title: "altRx vs welludr (formerly wellmedr): $89 vs $35 GLP-1",
     description:
-      "altRx ($89/mo semaglutide + the cheapest brand-name shelf) vs welludr ($39/mo, used by 1M+ patients). We compared price, medications, support and guarantees.",
+      "altRx ($89/mo semaglutide + the cheapest brand-name shelf) vs welludr ($35/mo, 100,000 patients per its site). We compared price, meds, support and guarantees.",
   },
   "embody-vs-trimrx": {
-    title: "embody vs TrimRx (2026): $49 vs $179 GLP-1 Compared",
+    title: "embody vs TrimRx (2026): $49 vs $149 GLP-1 Compared",
     description:
-      "embody ($49/mo flat semaglutide, free delivery) vs TrimRx (plans from $179/mo, no contract). Real pricing, speed and support compared side by side.",
+      "embody ($49/mo flat semaglutide, free delivery) vs TrimRx (plans from $149/mo, no contract). Real pricing, speed and support compared side by side.",
   },
   "embody-vs-medvi": {
     title: "embody vs Medvi (2026): $49 vs $99 GLP-1 Compared",
@@ -231,12 +231,12 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   "medvi-vs-trimrx": {
     title: "TrimRx vs Medvi (2026): Prices, Plans and Terms Compared",
     description:
-      "TrimRx (plans from $179/mo, read Nov 22, 2026) vs Medvi (from $99/mo): what each includes, how they bill and which suits you. Compounded, not FDA-approved.",
+      "TrimRx (plans from $149/mo, read Nov 26, 2026) vs Medvi (from $99/mo): what each includes, how they bill and which suits you. Compounded, not FDA-approved.",
   },
   "medvi-vs-wellmedr": {
-    title: "Medvi vs welludr (formerly wellmedr): $99 or $39 GLP-1?",
+    title: "Medvi vs welludr (formerly wellmedr): $99 or $35 GLP-1?",
     description:
-      "Medvi ($99/mo promo with personal provider support) vs welludr ($39/mo semaglutide, 1M+ patients, warranty). Is high-touch care worth the difference?",
+      "Medvi ($99/mo promo with personal provider support) vs welludr ($35/mo semaglutide, 100,000 patients per its site, warranty). Is high-touch worth it?",
   },
   "medvi-vs-altrx": {
     title: "Medvi vs altRx (2026): $99 vs $89 GLP-1 Compared",
@@ -245,14 +245,14 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
   },
   "trimrx-vs-wellmedr": {
     // Oct 15, 2026: welludr leads (named winner, shown first on the page).
-    title: "welludr (formerly wellmedr) vs TrimRx: $39 vs $179 GLP-1",
+    title: "welludr (formerly wellmedr) vs TrimRx: $35 vs $149 GLP-1",
     description:
-      "welludr ($39/mo semaglutide, weight-loss warranty) vs TrimRx (plans from $179/mo, custom dosing, no contract). Price and support compared.",
+      "welludr ($35/mo semaglutide, weight-loss warranty) vs TrimRx (plans from $149/mo, custom dosing, no contract). Price and support compared.",
   },
   "trimrx-vs-ro": {
     title: "TrimRx vs ro (2026): Which GLP-1 Provider Fits You?",
     description:
-      "TrimRx (plans from $179/mo, no long-term contract, clinical support included) vs ro (established brand, in-house pharmacy). Pricing and brand trust compared.",
+      "TrimRx (plans from $149/mo, no long-term contract, clinical support included) vs ro (established brand, in-house pharmacy). Pricing and brand trust compared.",
   },
   "medvi-vs-ro": {
     title: "Medvi vs ro (2026): $99 All-In or Membership + Brand-Name?",
@@ -272,9 +272,9 @@ const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "Two GLP-1 deals, opposite structures: HealthRx's $125/month plan (first month $39) vs Medvi's $99/month all-inclusive promo. The honest math.",
   },
   "ro-vs-wellmedr": {
-    title: "ro vs welludr (formerly wellmedr): Big Brand or $39 GLP-1?",
+    title: "ro vs welludr (formerly wellmedr): Big Brand or $35 GLP-1?",
     description:
-      "ro (major telehealth brand with in-house pharmacy) vs welludr ($39/mo semaglutide, 1M+ patients, weight-loss warranty). Brand trust vs the lowest price.",
+      "ro (major telehealth brand with in-house pharmacy) vs welludr ($35/mo semaglutide, 100,000 patients per its site, warranty). Brand trust vs the lowest price.",
   },
 };
 
@@ -316,17 +316,17 @@ function titleCaseOverrideTitle(title: string): string {
 // audit). Titles stay whatever the CMS stores - descriptions only.
 const LANDING_META_DESCRIPTION: Record<string, string> = {
   semaglutide:
-    "Compare the best semaglutide (GLP-1) providers of 2026 - verified prices from $39/month, licensed online prescribing, and honest reviews of every program.",
+    "Compare the best semaglutide (GLP-1) providers of 2026 - verified prices from $35/month, licensed online prescribing, and honest reviews of every program.",
   tirzepatide:
-    "The best tirzepatide providers of 2026 compared - verified GLP-1 prices from $69/month compounded, licensed online prescribing, honest pros and cons.",
+    "The best tirzepatide providers of 2026 compared - verified GLP-1 prices from $65/month compounded, licensed online prescribing, honest pros and cons.",
   "ozempic-for-weight-loss":
-    "Ozempic for weight loss in 2026: how the GLP-1 works, who prescribes it online, and verified alternatives from $39/month compared honestly.",
+    "Ozempic for weight loss in 2026: how the GLP-1 works, who prescribes it online, and verified alternatives from $35/month compared honestly.",
   "wegovy-providers":
-    "Where to get Wegovy online in 2026 - providers compared, plus verified GLP-1 alternatives from $39/month when brand-name pricing doesn't fit.",
+    "Where to get Wegovy online in 2026 - providers compared, plus verified GLP-1 alternatives from $35/month when brand-name pricing doesn't fit.",
   "ozempic-alternatives":
-    "Ozempic, Wegovy & Mounjaro alternatives for 2026 - verified GLP-1 options from $39/month, compared honestly on price, terms and support.",
+    "Ozempic, Wegovy & Mounjaro alternatives for 2026 - verified GLP-1 options from $35/month, compared honestly on price, terms and support.",
   "switch-from-ozempic":
-    "Switching from Ozempic to compounded semaglutide - how the GLP-1 switch works, verified prices from $39/month, and what to ask your prescriber.",
+    "Switching from Ozempic to compounded semaglutide - how the GLP-1 switch works, verified prices from $35/month, and what to ask your prescriber.",
   "retatrutide-weight-loss":
     "Retatrutide in 2026: where the next-generation GLP-1-class candidate stands, what its trials report, and the approved options available now.",
 };
@@ -1541,7 +1541,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               <p className="mb-4 text-[14px] text-gray-500">The pages readers of this comparison open next.</p>
               <div className="grid gap-3 sm:grid-cols-2">
                 {[
-                  { href: "/articles/best-tirzepatide-online", title: "Best tirzepatide online", blurb: "Eight verified compounded prices from $69 (promotional price, read Nov 20, 2026), plus every brand-name Zepbound route." },
+                  { href: "/articles/best-tirzepatide-online", title: "Best tirzepatide online", blurb: "Eight verified compounded prices from $65 (promotional price, read Nov 26, 2026), plus every brand-name Zepbound route." },
                   { href: "/reviews/altrx", title: "altRx review", blurb: "$89 semaglutide, $149 tirzepatide, and the only brand-name shelf next to compounded plans." },
                   { href: "/articles/zepbound-price-online", title: "Zepbound price online", blurb: "Brand Zepbound at $1,249 to $1,599 cash, the Ro pen route, and the compounded ladder." },
                 ].map((g) => (

@@ -119,7 +119,7 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // say delivery timelines are not guaranteed (Atlas read, Nov 16, 2026).
     title: "embody Weight Loss Reviews 2026: Complaints & Refund Rules",
     description:
-      "embody weight loss reviews: we checked the $49 sale price (read Nov 16, 2026), the refund rule in its Terms and sorted the complaints. The catches first.",
+      "embody weight loss reviews: we checked the $49 sale price (read Nov 26, 2026), the refund rule in its Terms and sorted the complaints. The catches first.",
   },
   medvi: {
     // Decoupled from the "is medvi legit" query (Sep 2026): that phrase lived in
@@ -166,7 +166,7 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   trimrx: {
     title: "TrimRx Reviews 2026 (Trim Rx): Is It Legit? Cost & Verdict",
     description:
-      "TrimRx (Trim Rx) reviews: plans from $179 a month (site, read Nov 22, 2026), no contract, clinical support included. Is TrimRx legit? Pros and cons.",
+      "TrimRx (Trim Rx) reviews: plans from $149 a month (site, read Nov 26, 2026), no contract, clinical support included. Is TrimRx legit? Pros and cons.",
   },
   shed: {
     title: "Shed Reviews 2026: Is It Legit? Cost, Real Results & Verdict",
@@ -463,7 +463,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "How much does embody cost per month?",
       answer:
-        "On November 16, 2026 embody's homepage showed compounded semaglutide at a flat $49/month and compounded tirzepatide at $99/month under a 'Pre-Black Friday Sale' banner with no end date. embody's Terms (last updated April 24, 2026) list semaglutide at $79 monthly and $49 on the 12-month bundle, and tirzepatide at $129 monthly and $99 on the 12-month bundle, so confirm which plan the $49 applies to at checkout. The price covers the medication, provider visits and shipping, and embody says it does not rise as your dose changes. Payments are non-refundable; if you are not approved, the refund is the unused portion less services already rendered. Both medicines are compounded and not FDA-approved.",
+        "On November 26, 2026 embody's homepage showed compounded semaglutide at a flat $49/month and compounded tirzepatide at $99/month under a 'Black Friday Sale Discount Applied' banner, with a countdown that read under five days until a price increase (on November 16 the same prices sat under a pre-Black Friday banner with no countdown). embody's Terms (last updated April 24, 2026) list semaglutide at $79 monthly and $49 on the 12-month bundle, and tirzepatide at $129 monthly and $99 on the 12-month bundle, so confirm which plan the $49 applies to at checkout. The price covers the medication, provider visits and shipping, and embody says it does not rise as your dose changes. Payments are non-refundable; if you are not approved, the refund is the unused portion less services already rendered. Both medicines are compounded and not FDA-approved.",
     },
     {
       question: "Is embody FDA-approved?",
@@ -497,7 +497,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "Is TrimRx a subscription with a contract?",
       answer:
-        "No long-term commitment - plans run month to month. TrimRx's site shows plans from $179 a month (read Nov 22, 2026) and no per-drug price we could read; custom dosing and unlimited provider check-ins are included.",
+        "No long-term commitment - plans run month to month. TrimRx's site shows plans from $149 a month (read Nov 26, 2026) and no per-drug price we could read; custom dosing and unlimited provider check-ins are included.",
     },
     {
       question: "What medications does TrimRx offer?",
@@ -519,7 +519,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "Can I pay for SHED with HSA/FSA funds?",
       answer:
-        "Yes - SHED plans are HSA/FSA approved. Compounded semaglutide starts at $199/month and tirzepatide at $299/month, with 20% off your first month.",
+        "Yes - SHED plans are HSA/FSA approved. Compounded semaglutide starts at $199/month and tirzepatide at $299/month, with 30% off your first month on SHED's site, read November 26, 2026 (our earlier read said 20%).",
     },
   ],
   wellmedr: [
@@ -531,7 +531,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "Does welludr's price go up as your dose increases?",
       answer:
-        "No - welludr charges the same price regardless of dosage: compounded semaglutide from $39/month and tirzepatide from $69/month (promotional prices, read Nov 20, 2026).",
+        "No - welludr charges the same price regardless of dosage: compounded semaglutide from $35/month and tirzepatide from $65/month (promotional prices, read Nov 26, 2026).",
     },
     {
       question: "Can you cancel welludr anytime?",
@@ -614,11 +614,11 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
 const REVIEW_PROMOS: Record<string, { segments: { text: string; bold?: boolean }[] }> = {
   wellmedr: {
     segments: [
-      { text: "Lock in " },
-      { text: "$200 off", bold: true },
-      { text: " every month, or " },
-      { text: "$41/mo", bold: true },
-      { text: " on 12-month plans — for life." },
+      { text: "Black Friday sale: " },
+      { text: "$35/mo", bold: true },
+      { text: " semaglutide and " },
+      { text: "$65/mo", bold: true },
+      { text: " tirzepatide, per welludr's site (read Nov 26, 2026)." },
     ],
   },
 };

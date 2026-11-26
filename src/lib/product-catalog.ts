@@ -36,8 +36,8 @@ export type CatalogProduct = {
   image: string | null;
 };
 
-// TrimRx has one plan-level card since Nov 22, 2026: its site shows only
-// "Starting at $179" (not tied to one drug or dose), so there are no per-drug
+// TrimRx has one plan-level card since Nov 26, 2026: its site shows only
+// "Starting at $149" (not tied to one drug or dose), so there are no per-drug
 // cards. The price index lists it as a single "plans from" row.
 export const PRODUCT_CATALOG: CatalogProduct[] = [
   // ── Semaglutide ──
@@ -47,8 +47,8 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     name: "Compounded Semaglutide (GLP-1) Injection",
     medication: "semaglutide",
     format: "injection",
-    price: "$39",
-    priceNote: "promotional price, read Nov 20, 2026; Monthly Plan as labeled on welludr's page; same price at every dose",
+    price: "$35",
+    priceNote: "promotional price, read Nov 26, 2026; Monthly Plan as labeled on welludr's page when read Nov 20, 2026; same price at every dose",
     shipping: "Free discreet shipping, 3-5 day delivery",
     image: "/products/wellmedr-semaglutide.webp",
   },
@@ -62,7 +62,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     format: "injection",
     fdaStatus: "compounded",
     price: "$59",
-    priceNote: "same price at any dose; month to month; plus $199/year membership after a 21-day free trial",
+    priceNote: "same price at any dose; month to month; plus $199/year membership after a 21-day free trial (price and terms read Nov 26, 2026)",
     shipping: "2-day express cold shipping included",
     image: "/products/collective-semaglutide.webp",
   },
@@ -123,7 +123,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     format: "injection",
     price: "$89",
     regularPrice: "$199",
-    priceNote: "flat at every dose",
+    priceNote: "flat at every dose (starting price read Nov 26, 2026)",
     shipping: "Free overnight cold shipping",
     image: "/products/altrx-glp1.webp",
   },
@@ -135,7 +135,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     format: "injection",
     price: "$99",
     pricePrefix: "From",
-    priceNote: "price index, verified Nov 18, 2026; no per-drug price listed; all-inclusive with coaching",
+    priceNote: "Medvi's site, read Nov 26, 2026 (GLP-1: $99; offer ends Dec 1 per Medvi); all-inclusive with coaching",
     shipping: "Free fast & discreet shipping",
     image: "/products/medvi-semaglutide.webp",
   },
@@ -179,9 +179,9 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     name: "Compounded GLP-1 Injection Plans",
     medication: "glp1-plan",
     format: "injection",
-    price: "$179",
+    price: "$149",
     pricePrefix: "Plans from",
-    priceNote: "TrimRx site, read Nov 22, 2026; not tied to one drug or dose; a \"$120 Off\" banner also showed",
+    priceNote: "TrimRx site, read Nov 26, 2026; not tied to one drug or dose; no banner shown that day (it read $179 with a \"$120 Off\" banner on Nov 22)",
     shipping: "Free tracked delivery, often next-day",
     image: null,
   },
@@ -192,7 +192,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     medication: "semaglutide",
     format: "injection",
     price: "$199",
-    priceNote: "20% off month one; coaching included",
+    priceNote: "30% off the first month per SHED's site, read Nov 26, 2026 (earlier read: 20%); coaching included",
     shipping: "Home delivery included, 4-8 day total turnaround",
     image: "/products/shed-semaglutide.webp",
   },
@@ -203,8 +203,8 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     name: "Compounded Tirzepatide (GLP-1/GIP) Injection",
     medication: "tirzepatide",
     format: "injection",
-    price: "$69",
-    priceNote: "promotional price, read Nov 20, 2026; shipped every 4 weeks; same price at every dose",
+    price: "$65",
+    priceNote: "promotional price, read Nov 26, 2026; shipped every 4 weeks; same price at every dose",
     shipping: "Free discreet shipping, 3-5 day delivery",
     image: "/products/wellmedr-tirzepatide.webp",
   },
@@ -296,7 +296,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     medication: "tirzepatide",
     format: "injection",
     price: "$299",
-    priceNote: "20% off month one; coaching included",
+    priceNote: "30% off the first month per SHED's site, read Nov 26, 2026 (earlier read: 20%); coaching included",
     shipping: "Home delivery included, 4-8 day total turnaround",
     image: "/products/shed-tirzepatide.webp",
   },

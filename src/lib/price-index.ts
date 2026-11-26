@@ -30,30 +30,39 @@ export type PriceIndexRow = {
 };
 
 // Rows below: operator check of each provider's own site, November 3, 2026;
-// embody re-read November 16, 2026; healthrx and directmeds re-read
-// November 18, 2026; eden re-read November 24, 2026 on eden.health (prices
-// unchanged at $99 and $129, so no change-log entry; see the change log).
+// embody re-read November 16 and November 26, 2026 (prices unchanged on
+// Nov 26; see the change log); collective's $59 semaglutide price and
+// terms re-read November 26, 2026 (unchanged; tirzepatide and membership
+// keep their Nov 11 read); medvi's $99 / $166 offer read November 26, 2026
+// (plan-level row, see the change log); trimrx's starting price read November 26, 2026
+// ($149, down from $179 on Nov 22; see the change log); welludr's $35/$65 Black Friday sale read November 26, 2026
+// (moved from $39/$69 on Nov 20; see the change log); shed's 30% first-month offer noted Nov 26, 2026
+// (no price shown); altrx's $89 starting price re-read November 26,
+// 2026 (unchanged; tirzepatide $149 and the Nov 20 banner note keep their
+// read date); healthrx and directmeds re-read
+// November 18, 2026; eden re-read November 24, 2026 on eden.health and November 26, 2026
+// (prices unchanged at $99 and $129, so no change-log entry; see the change log).
 export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "wellmedr",
     edge: "Lowest ongoing price on the market - same price at every dose",
-    semaglutide: { price: "$39", note: "Black Friday sale discount applied (welludr's site, read Nov 20, 2026); no end date stated; page labels it \"Monthly Plan\" (previously listed as the 12-month plan at $41); shipped every 4 weeks" },
-    tirzepatide: { price: "$69", note: "Black Friday sale discount applied (welludr's site, read Nov 20, 2026); no end date stated; page labels it \"Monthly Plan\" (previously listed as the 12-month plan at $71); shipped every 4 weeks, same price at every dose" },
+    semaglutide: { price: "$35", note: "Black Friday sale discount applied (welludr's site, read Nov 26, 2026); no end date shown; the page labelled it \"Monthly Plan\" when read Nov 20, 2026 at $39 (previously listed as the 12-month plan at $41); shipped every 4 weeks (as read Nov 20)" },
+    tirzepatide: { price: "$65", note: "Black Friday sale discount applied (welludr's site, read Nov 26, 2026); no end date shown; the page labelled it \"Monthly Plan\" when read Nov 20, 2026 at $69 (previously listed as the 12-month plan at $71); shipped every 4 weeks, same price at every dose (as read Nov 20)" },
     shipping: "Ships in 3-5 business days",
-    commitment: "Monthly plan shipped every 4 weeks; cancel or change anytime (the 12-month plan is no longer shown on the page read Nov 20, 2026)",
+    commitment: "Monthly plan shipped every 4 weeks; cancel or change anytime (the 12-month plan was no longer shown on the page read Nov 20, 2026; terms not re-read Nov 26)",
   },
   {
     providerId: "embody",
     edge: "Cheapest with no commitment - month to month, free expedited delivery (no timeline guaranteed)",
-    semaglutide: { price: "$49", note: "sale price, flat month to month; pre-Black Friday banner with no countdown or end date stated (homepage read Nov 16, 2026)" },
-    tirzepatide: { price: "$99", note: "sale price, flat month to month" },
+    semaglutide: { price: "$49", note: "sale price, flat month to month; homepage banner read \"Black Friday Sale Discount Applied\" and a countdown showed under five days until a price increase (homepage and pop-up read Nov 26, 2026); the pop-up calls it a \"lifetime discount\" and says \"never pay a dollar more\" (embody's words, not verified by us); the \"was $299\" shown is embody's own comparison, not a verified regular price; our earlier read, Nov 16, showed a pre-Black Friday banner with no countdown" },
+    tirzepatide: { price: "$99", note: "sale price, flat month to month; shown in the Black Friday banner (homepage read Nov 26, 2026)" },
     shipping: "Free expedited delivery, cold-chain; no timeline guaranteed",
     commitment: "None - month to month, cancel anytime",
   },
   {
     providerId: "altrx",
     edge: "Low starting prices, plus a real brand-name shelf",
-    semaglutide: { price: "from $89", note: "starting price; site banner also shows \"Black Friday Sale - 15% Off Use Code FRIDAY15\" (read Nov 20, 2026), terms and end date not stated" },
+    semaglutide: { price: "from $89", note: "starting price (\"Start for $89/mo\", altRx's site, read Nov 26, 2026; the page also says HSA/FSA approved, no insurance required and free shipping); a site banner showed \"Black Friday Sale - 15% Off Use Code FRIDAY15\" (read Nov 20, 2026; not re-read Nov 26, the screenshot shows only the hero), terms and end date not stated" },
     tirzepatide: { price: "from $149", note: "starting price; site banner also shows \"Black Friday Sale - 15% Off Use Code FRIDAY15\" (read Nov 20, 2026), terms and end date not stated" },
     shipping: "Free shipping in 5-7 days",
     commitment: "None - pause or cancel anytime; Buy Now, Pay Later",
@@ -68,8 +77,8 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   },
   {
     providerId: "collective",
-    edge: "Tied for the lowest tirzepatide price we track, flat at every dose, with a $199/year membership instead of a markup",
-    semaglutide: { price: "$59", note: "same price at every dose; plus $199/year membership (21-day free trial)" },
+    edge: "Second-lowest tirzepatide price we track (welludr's Nov 26 sale price is $65), flat at every dose, with a $199/year membership instead of a markup",
+    semaglutide: { price: "$59", note: "same price at any dose, no multi-month orders required, cancel easily anytime (Collective's site, read Nov 26, 2026); plus $199/year membership (21-day free trial; membership terms as read Nov 11, 2026)" },
     tirzepatide: { price: "$69", note: "same price at every dose; plus $199/year membership (21-day free trial)" },
     shipping: "2-day express cold shipping included; most orders within 7 days of the medical review",
     commitment: "Month to month, no multi-month orders, cancel anytime; membership billed annually after the trial",
@@ -77,10 +86,10 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "eden",
     edge: "One flat price every month and at every dose; Eden says it includes 24/7 real human support",
-    semaglutide: { price: "$99", note: "flat every month, same price at every dose, excluding new member discounts or specific plans; standard full-price rate (Eden's site, eden.health, read Nov 24, 2026); the Terms allow price changes" },
-    tirzepatide: { price: "$129", note: "flat every month, same price at every dose, excluding new member discounts or specific plans; standard full-price rate (Eden's site, eden.health, read Nov 24, 2026); the Terms allow price changes" },
+    semaglutide: { price: "$99", note: "flat every month, same price at every dose (monthly pricing at every dose, Eden's site, read Nov 26, 2026, unchanged from Nov 24); excluding new member discounts or specific plans, standard full-price rate and the Terms allowing price changes per eden.health, read Nov 24, 2026" },
+    tirzepatide: { price: "$129", note: "flat every month, same price at every dose (monthly pricing at every dose, Eden's site, read Nov 26, 2026, unchanged from Nov 24); excluding new member discounts or specific plans, standard full-price rate and the Terms allowing price changes per eden.health, read Nov 24, 2026" },
     shipping: "Free expedited shipping; delivery step labelled 2 - 3 business days (Eden's Terms do not guarantee a time); read Nov 24, 2026",
-    commitment: "No long-term contract; month-to-month subscription, cancel in Account Settings at least 48 hours before renewal; pricing pages say no membership fee (the Terms still mention a membership program); read Nov 24, 2026",
+    commitment: "No long-term contract; month-to-month subscription, cancel in Account Settings at least 48 hours before renewal; pricing pages say no membership fee (the Terms still mention a membership program); read Nov 24, 2026. Eden's site also said \"one clear, all-inclusive price, no annual or long term plans required\" on Nov 26, 2026",
   },
   {
     providerId: "sprout",
@@ -95,7 +104,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     edge: "All-inclusive care: visits, dietician and coaching in the price",
     semaglutide: null,
     tirzepatide: null,
-    plan: { price: "from $99", note: "\"start for just $99\"; no membership or hidden fees; dietician visits and care coaching included" },
+    plan: { price: "from $99", note: "\"STARTING at GLP-1: $99 | GLP-1 + GIP: $166\" with \"Up to $100 OFF!\" (Medvi's site, operator screenshot, Nov 26, 2026; Medvi says the offer ends December 1); \"Was $199\" is Medvi's own comparison; prescription and telemed visits included, no insurance required, no hidden fees, free shipping; the $166 GLP-1 + GIP figure is kept here, not as a per-drug tirzepatide row" },
     shipping: "Free shipping",
     commitment: "None - no membership or hidden fees; HSA/FSA",
   },
@@ -112,7 +121,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
     edge: "Custom dosing with unlimited provider check-ins",
     semaglutide: null,
     tirzepatide: null,
-    plan: { price: "from $179", note: "weight loss plans starting at $179 (TrimRx site, read Nov 22, 2026); a \"$120 Off\" banner was also showing, and the page does not say whether $179 is before or after it" },
+    plan: { price: "from $149", note: "weight loss plans starting at $149 (TrimRx site, read Nov 26, 2026); no per-drug price and no promotion banner shown that day (Nov 22 read $179 with a \"$120 Off\" banner)" },
     shipping: "Free tracked delivery, often next-day",
     commitment: "Month to month - cancel before your next billing cycle",
   },
@@ -127,8 +136,8 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "shed",
     edge: "Coaching included and a 5%-in-120-days money-back guarantee",
-    semaglutide: { price: "from $199", note: "starting price" },
-    tirzepatide: { price: "from $299", note: "starting price" },
+    semaglutide: { price: "from $199", note: "starting price; SHED's site showed \"Get 30% off your first month's GLP-1 program\" on Nov 26, 2026 (no price shown that day; our price keeps its earlier read date)" },
+    tirzepatide: { price: "from $299", note: "starting price; SHED's site showed \"Get 30% off your first month's GLP-1 program\" on Nov 26, 2026 (no price shown that day; our price keeps its earlier read date)" },
     shipping: "Home delivery included",
     commitment: "None - HSA/FSA approved",
   },
@@ -177,6 +186,45 @@ export type PriceChange = {
 };
 
 export const PRICE_CHANGELOG: PriceChange[] = [
+  {
+    date: "2026-11-26",
+    providerId: "medvi",
+    change:
+      "Medvi's site (operator screenshot, November 26, 2026) read \"SAVE BIG THIS FALL! Up to $100 OFF! STARTING at GLP-1: $99 | GLP-1 + GIP: $166 - OFFER ENDS DECEMBER 1ST\", with \"Was $199 Now starting at $99\" and a countdown of about four days and nine hours. Our from $99 listing is unchanged. The $166 GLP-1 + GIP figure is the same number we listed for tirzepatide until November 3, when Medvi's page stopped showing it; it is shown again, labelled GLP-1 + GIP. We record it here and in the plan note, and have not added a per-drug tirzepatide row, which would add a tenth provider to the tirzepatide tables and medians. \"Was $199\" is Medvi's own comparison, not a regular price we verified; we list no regular price. Medvi's site says the offer ends December 1 (Medvi's wording, not verified by us). The screenshot also reads \"Prescription & telemed visits included. No insurance required. No hidden fees. Free shipping.\"",
+    source: "Medvi website, operator screenshot, November 26, 2026",
+  },
+  {
+    date: "2026-11-26",
+    providerId: "trimrx",
+    change:
+      "Listing now shows TrimRx's \"Weight Loss Plans Starting at $149\" (homepage hero, November 26, 2026), down from the \"starting at $179\" we listed on November 22 with an \"Exclusive Promotion Applied! $120 Off\" banner. The Nov 26 screenshot shows no banner and no per-drug price, so we do not know whether the drop is a new regular start or a promotion, or how long it lasts. The hero also reads \"Online provider visits included. No insurance required.\", \"Straightforward pricing with no surprise fees.\" and \"Cancel Before Your Next Billing Cycle\" (TrimRx's wording). Compounded medicines are not FDA-approved.",
+    source: "TrimRx homepage, operator screenshot, November 26, 2026",
+  },
+  {
+    date: "2026-11-26",
+    providerId: "wellmedr",
+    change:
+      "Black Friday sale price moved again: compounded semaglutide now listed at $35/month (previously $39) and tirzepatide at $65/month (previously $69). welludr's page read \"BLACK FRIDAY SALE DISCOUNT APPLIED! $35/mo Semaglutide | $65/mo Tirzepatide\" on November 26, 2026, with no end date shown. The screenshot does not show the plan label, shipping cadence or cancellation terms, so those keep their November 20 read (Monthly Plan, shipped every 4 weeks, same price at every dose, cancel or change anytime). The page also says its GLP-1 medications have been used by 100,000 patients across the U.S. (welludr's own statement). Compounded medicines are not FDA-approved.",
+    moves: [
+      { drug: "semaglutide", from: 39, to: 35, condition: "Black Friday sale; no end date shown" },
+      { drug: "tirzepatide", from: 69, to: 65, condition: "Black Friday sale; no end date shown" },
+    ],
+    source: "welludr (wellmedr.com) homepage, operator screenshot, November 26, 2026",
+  },
+  {
+    date: "2026-11-26",
+    providerId: "shed",
+    change:
+      "No price move listed. SHED's homepage read \"Get 30% off your first month's GLP-1 program\" on November 26, 2026. The page showed no price, so SHED's from $199 semaglutide and from $299 tirzepatide keep their earlier read date, and we do not know whether they are before or after the offer or how long it lasts (no end date shown). Our earlier listing said 20% off the first month. The offer is SHED's wording, not a regular price.",
+    source: "SHED homepage, operator screenshot, November 26, 2026",
+  },
+  {
+    date: "2026-11-26",
+    providerId: "embody",
+    change:
+      "No price move: compounded semaglutide stays at $49/month and tirzepatide at $99/month. The label changed from a pre-Black Friday sale to \"Black Friday Sale Discount Applied\", the homepage now shows a countdown (under five days until a price increase on our read) where the Nov 16 read showed none, and embody's pop-up calls the discount a \"lifetime discount\" and says \"never pay a dollar more\" (embody's words, not verified by us). The \"was $299\" price on the page is embody's own comparison, not a regular price we have verified; our earlier regular prices were $79 and $129.",
+    source: "embody homepage and offer pop-up, operator screenshots, November 26, 2026",
+  },
   {
     date: "2026-11-22",
     providerId: "trimrx",

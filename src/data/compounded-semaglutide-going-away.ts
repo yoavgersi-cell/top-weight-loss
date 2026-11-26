@@ -119,13 +119,13 @@ export const compoundedSemaglutideGoingAwayArticle: Article = {
 <p>Source: each provider's own pages, read Nov 18, 2026. Compounded semaglutide and tirzepatide are not FDA-approved. None of the three pages states a formulation in mg/mL, and none says what happens to a plan if compounding of the product stops. One inconsistency for the record: HealthRx's pricing page also prints "$105/mo" for semaglutide and "$159/mo" for tirzepatide in a comparison paragraph, figures that do not match the $125 and $199 ongoing prices stated on the same page, and no plan on the pages we read is labelled at those amounts.</p>
 <p>The rest of the compounded field, from our price index with the date each row was verified:</p>
 <table><thead><tr><th>Provider</th><th>Compounded semaglutide</th><th>Compounded tirzepatide</th><th>Condition in the index</th><th>Verified</th></tr></thead><tbody>
-<tr><td>welludr (wellmedr)</td><td>$39 (promotional price, read Nov 20, 2026)</td><td>$69 (promotional price, read Nov 20, 2026)</td><td>Pre-Black Friday sale, 12-month plan, same price at every dose</td><td>Nov 3, 2026</td></tr>
+<tr><td>welludr (wellmedr)</td><td>$35 (promotional price, read Nov 26, 2026)</td><td>$65 (promotional price, read Nov 26, 2026)</td><td>Pre-Black Friday sale, 12-month plan, same price at every dose</td><td>Nov 3, 2026</td></tr>
 <tr><td>Collective</td><td>$59</td><td>$69</td><td>Same price at every dose, plus a $199/year membership after a 21-day trial</td><td>Nov 11, 2026</td></tr>
 <tr><td>altRx</td><td>from $89</td><td>from $149</td><td>Starting price</td><td>Nov 3, 2026</td></tr>
 <tr><td>Eden</td><td>$99</td><td>$129</td><td>Flat every month, same price at every dose</td><td>Nov 3, 2026</td></tr>
 <tr><td>Sprout</td><td>from $99</td><td>from $149</td><td>12-month plan billed upfront ($1,188 and $1,788); monthly $149 and $199</td><td>Nov 3, 2026</td></tr>
 <tr><td>Medvi</td><td colspan="2">Plans from $99</td><td>Not tied to one medication on its page</td><td>Nov 3, 2026</td></tr>
-<tr><td>TrimRx</td><td colspan="2">Plans from $179</td><td>Not tied to one medication on its page; a "$120 Off" banner also showed</td><td>Nov 22, 2026</td></tr>
+<tr><td>TrimRx</td><td colspan="2">Plans from $149</td><td>Not tied to one medication on its page; no banner shown Nov 26 (it read $179 with a "$120 Off" banner on Nov 22)</td><td>Nov 26, 2026</td></tr>
 <tr><td>bmiMD</td><td>$149</td><td>$159</td><td>3-month plan ($447 and $477), limited-time price</td><td>Nov 3, 2026</td></tr>
 <tr><td>Shed</td><td>from $199</td><td>from $299</td><td>Starting price</td><td>Nov 3, 2026</td></tr>
 </tbody></table>

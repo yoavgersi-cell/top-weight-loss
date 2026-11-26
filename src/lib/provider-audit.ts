@@ -38,8 +38,8 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
   },
   "weight-loss:welludr": {
     rows: [
-      { label: "Semaglutide price", value: "$39/month, a promotional price on a plan its page labels Monthly Plan (read Nov 20, 2026)" },
-      { label: "Tirzepatide price", value: "$69/month, a promotional price on a plan its page labels Monthly Plan (read Nov 20, 2026)" },
+      { label: "Semaglutide price", value: "$35/month, a Black Friday sale price (welludr's site, read Nov 26, 2026); the page labelled the plan Monthly Plan when read Nov 20, 2026" },
+      { label: "Tirzepatide price", value: "$65/month, a Black Friday sale price (welludr's site, read Nov 26, 2026); the page labelled the plan Monthly Plan when read Nov 20, 2026" },
       { label: "Commitment", value: "Monthly Plan, cancel or change anytime (plan page, Nov 20, 2026); the refund policy still describes 12-month plans as prepaid in full (Nov 22, 2026)" },
       { label: "Support", value: "Coach included on every plan" },
       { label: "Guarantee", value: "Weight-loss warranty" },
@@ -47,15 +47,15 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
   },
   "weight-loss:medvi": {
     rows: [
-      { label: "Starting price", value: "Plans from $99/month, all-inclusive (price index, verified Nov 18, 2026)" },
-      { label: "Per-drug price", value: "Not currently listed in our verified index" },
+      { label: "Starting price", value: "GLP-1: $99, GLP-1 + GIP: $166 a month, all-inclusive (Medvi's site, operator screenshot, Nov 26, 2026; Medvi says the offer ends December 1)" },
+      { label: "Per-drug price", value: "Not listed as a per-drug row in our index; \"Was $199\" is Medvi's own comparison" },
       { label: "Support", value: "Video visits and a dietician on every plan" },
       { label: "Commitment", value: "Monthly, all-inclusive billing" },
     ],
   },
   "weight-loss:altrx": {
     rows: [
-      { label: "Semaglutide price", value: "$89/month, flat at every dose" },
+      { label: "Semaglutide price", value: "$89/month starting price, flat at every dose (starting price read Nov 26, 2026)" },
       { label: "Tirzepatide price", value: "$149/month" },
       { label: "Brand-name shelf", value: "Ozempic $1,149 / Zepbound $1,249 / Wegovy $1,579" },
       { label: "Payment options", value: "Buy Now, Pay Later available" },
@@ -80,7 +80,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
   },
   "weight-loss:trimrx": {
     rows: [
-      { label: "Starting price", value: "Plans from $179/month (TrimRx site, read Nov 22, 2026)" },
+      { label: "Starting price", value: "Plans from $149/month (TrimRx site, read Nov 26, 2026)" },
       { label: "Per-drug price", value: "Not published on the page we could read (semaglutide or tirzepatide)" },
       { label: "Commitment", value: "No contract; opt-in discount programs" },
     ],
@@ -89,6 +89,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
     rows: [
       { label: "Semaglutide price", value: "$199/month" },
       { label: "Tirzepatide price", value: "$299/month" },
+      { label: "First-month offer", value: "30% off the first month's GLP-1 program (SHED's site, read Nov 26, 2026; no price shown that day)" },
       { label: "Guarantee", value: "5% of body weight in 120 days or your money back" },
       { label: "Payment options", value: "HSA/FSA eligible" },
     ],
@@ -101,11 +102,11 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
     ],
   },
   // Eden: read from eden.health (pricing pages, Terms revised Nov 16, 2026,
-  // brand pages), Nov 24, 2026. Source: ops/research/2026-11-24-eden-evidence.md.
+  // brand pages), Nov 24, 2026; prices re-read Nov 26, 2026. Source: ops/research/2026-11-24-eden-evidence.md.
   "weight-loss:eden": {
     rows: [
-      { label: "Semaglutide price", value: "$99/month, flat every month and at every dose (read Nov 24, 2026)" },
-      { label: "Tirzepatide price", value: "$129/month, flat every month and at every dose (read Nov 24, 2026)" },
+      { label: "Semaglutide price", value: "$99/month, flat every month and at every dose (read Nov 26, 2026)" },
+      { label: "Tirzepatide price", value: "$129/month, flat every month and at every dose (read Nov 26, 2026)" },
       { label: "Brand-name options", value: "Wegovy $1,695/month; Zepbound, Ozempic and Mounjaro $1,399/month each" },
       { label: "Membership fee", value: "Pricing pages say none; the Terms still mention a recurring membership program" },
       { label: "Commitment", value: "No long-term contract; cancel in Account Settings at least 48 hours before renewal" },
@@ -113,13 +114,14 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Support", value: "Eden says it offers clinician-guided care and 24/7 real human support" },
     ],
   },
-  // Collective: read from collective.org (homepage and FAQ), Nov 11, 2026.
+  // Collective: read from collective.org (homepage and FAQ), Nov 11, 2026;
+  // semaglutide price and month-to-month terms re-read Nov 26, 2026.
   "weight-loss:collective": {
     rows: [
-      { label: "Semaglutide price", value: "$59/month, the same at every dose" },
+      { label: "Semaglutide price", value: "$59/month, the same at every dose (read Nov 26, 2026)" },
       { label: "Tirzepatide price", value: "$69/month, the same at every dose" },
       { label: "Membership fee", value: "$199/year, billed annually, after a 21-day free trial" },
-      { label: "Commitment", value: "None - month to month, no multi-month orders, cancel anytime" },
+      { label: "Commitment", value: "None - month to month, no multi-month orders, cancel anytime (read Nov 26, 2026)" },
       { label: "Shipping", value: "2-day express cold shipping included; most orders within 7 days of the medical review" },
       { label: "Pharmacy", value: "State-licensed US pharmacies; third-party tested, per the provider" },
       { label: "Availability", value: "44 states (not AL, CA, LA, MA, MS, WA)" },

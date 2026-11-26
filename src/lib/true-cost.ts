@@ -6,7 +6,7 @@ import { PRICE_INDEX, PRICE_INDEX_VERIFIED, type PriceCell } from "./price-index
 // from the index. The only logic is reading the index's own notes:
 //   • "reg. $X"              → a struck regular price is listed; the current
 //                              price is a promotion of unstated length
-//   • "20% off month one"    → month 1 is 80% of the listed price, then the
+//   • "N% off month one"     → month 1 is (100-N)% of the listed price, then the
 //                              listed price
 //   • "$N at checkout"       → a prepaid plan; the year is paid up front
 //   • "starting price"/"from"→ the listed price is an entry point and the
@@ -70,10 +70,12 @@ export function trueCostRow(providerId: string, cell: PriceCell | null | undefin
   const prepaidMatch = note.match(/\$([\d,]+)\s*at checkout/i);
   const prepaidTotal = prepaidMatch ? Number(prepaidMatch[1].replace(/,/g, "")) : null;
   const entryOnly = /starting price|^from\b/i.test(note) || /^from\b/i.test(cell.price.trim());
-  const monthOneDiscount = /20% off month one/i.test(note);
+  const monthOneMatch = note.match(/(\d+)% off month one/i);
+  const monthOneDiscount = monthOneMatch !== null;
+  const monthOnePct = monthOneMatch ? Number(monthOneMatch[1]) : 0;
   const promo = /promo/i.test(note) || regular !== null;
 
-  const month1 = prepaidTotal ?? (monthOneDiscount ? Math.round(listed * 0.8 * 100) / 100 : listed);
+  const month1 = prepaidTotal ?? (monthOneDiscount ? Math.round(listed * (1 - monthOnePct / 100) * 100) / 100 : listed);
   const maintenance = entryOnly ? null : listed; // the listed price is what the index says you keep paying
   const yearAtCurrent = prepaidTotal ?? (maintenance === null ? null : month1 + maintenance * 11);
   const yearAtRegular = regular !== null ? regular * 12 : monthOneDiscount ? listed * 12 : null;
@@ -82,7 +84,7 @@ export function trueCostRow(providerId: string, cell: PriceCell | null | undefin
   let reading: string;
   if (prepaidTotal !== null) reading = `${name} charges ${money(prepaidTotal)} up front for the year - ${money(listed)} a month averaged, nothing more to pay, nothing back if you stop.`;
   else if (entryOnly) reading = `${name} publishes ${cell.price} as an entry price; the price at the dose you stay on isn't published, so ask before you sign up.`;
-  else if (monthOneDiscount) reading = `${name} takes 20% off month one (${money(month1)}), then ${money(listed)} every month after.`;
+  else if (monthOneDiscount) reading = `${name} takes ${monthOnePct}% off month one (${money(month1)}), then ${money(listed)} every month after.`;
   else if (promo && regular !== null) reading = `${name} lists ${money(listed)} as a promotional price against a regular ${money(regular)}; the page we verified doesn't say when the promotion ends, so year one lands between ${money(listed * 12)} and ${money(regular * 12)}.`;
   else reading = `${name} is one price every month - ${money(listed)} - at every dose (${commitment.toLowerCase()}).`;
 

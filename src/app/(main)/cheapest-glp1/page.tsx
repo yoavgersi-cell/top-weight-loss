@@ -20,7 +20,7 @@ export const revalidate = 60;
 const CANONICAL = "https://www.treatmentshub.com/weight-loss/cheapest-glp1";
 const TITLE = "Cheapest GLP-1 in 2026: Real Prices From 8 Providers";
 const DESCRIPTION =
-  "The cheapest GLP-1 programs of 2026, ranked by verified prices: compounded semaglutide from $39/month, tirzepatide from $69/month - conditions disclosed.";
+  "The cheapest GLP-1 programs of 2026, ranked by verified prices: compounded semaglutide from $35/month, tirzepatide from $65/month - conditions disclosed.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
@@ -38,12 +38,12 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "What is the cheapest GLP-1 medication in 2026?",
     answer:
-      "The cheapest GLP-1 program among the providers we track is welludr, at $39/month (promotional price, read Nov 20, 2026) for compounded semaglutide - the same price at every dose. The cheapest with no commitment is embody at $49/month, month to month, on its pre-Black Friday sale. All prices on this page are the providers' real published rates, with their conditions disclosed.",
+      "The cheapest GLP-1 program among the providers we track is welludr, at $35/month (promotional price, read Nov 26, 2026) for compounded semaglutide - the same price at every dose. The cheapest with no commitment is embody at $49/month, month to month, on its Black Friday sale (read Nov 26, 2026). All prices on this page are the providers' real published rates, with their conditions disclosed.",
   },
   {
     question: "What is the cheapest tirzepatide?",
     answer:
-      "welludr lists compounded tirzepatide from $69/month (promotional price, read Nov 20, 2026), the lowest published tirzepatide price we track. embody is the cheapest month-to-month option at $99/month, and DirectMeds lists $249/month for sublingual semaglutide and $297/month for injections (no tirzepatide price is published).",
+      "welludr lists compounded tirzepatide from $65/month (promotional price, read Nov 26, 2026), the lowest published tirzepatide price we track. embody is the cheapest month-to-month option at $99/month, and DirectMeds lists $249/month for sublingual semaglutide and $297/month for injections (no tirzepatide price is published).",
   },
   {
     question: "Why are these so much cheaper than Ozempic?",
@@ -58,7 +58,7 @@ const faqs: { question: string; answer: string }[] = [
   {
     question: "What's the catch with the lowest prices?",
     answer:
-      "Commitment and speed. The headline price at welludr is a promotional price (read Nov 20, 2026), and HealthRx's $125/month semaglutide is its monthly plan after a $39 first month. Month-to-month flexibility costs a little more (embody at $49/$99 on its pre-Black Friday sale). Slower shipping is the other trade: altRx at $89 ships in about 5-7 days versus 1-2 days at DirectMeds. Every condition is listed under each price above - there are no unlisted catches we're aware of.",
+      "Commitment and speed. The headline price at welludr is a promotional price (read Nov 26, 2026), and HealthRx's $125/month semaglutide is its monthly plan after a $39 first month. Month-to-month flexibility costs a little more (embody at $49/$99 on its Black Friday sale, read Nov 26, 2026). Slower shipping is the other trade: altRx at $89 ships in about 5-7 days versus 1-2 days at DirectMeds. Every condition is listed under each price above - there are no unlisted catches we're aware of.",
   },
   {
     question: "Are cheap compounded GLP-1s safe?",
@@ -131,8 +131,8 @@ export default async function CheapestGlp1Page() {
           <p className="text-[15.5px] leading-[1.85] text-gray-800">
             The cheapest GLP-1 we track is{" "}
             <Link href="/weight-loss/reviews/wellmedr" className="font-semibold text-[#0C4B75] hover:underline">welludr</Link>{" "}
-            - compounded semaglutide at <strong className="text-[#191919]">$39/month</strong> (promotional price, read Nov 20, 2026), and the cheapest tirzepatide at{" "}
-            <strong className="text-[#191919]">$69/month</strong>{" "}(promotional price, read Nov 20, 2026). If you don&rsquo;t want a
+            - compounded semaglutide at <strong className="text-[#191919]">$35/month</strong> (promotional price, read Nov 26, 2026), and the cheapest tirzepatide at{" "}
+            <strong className="text-[#191919]">$65/month</strong>{" "}(promotional price, read Nov 26, 2026). If you don&rsquo;t want a
             commitment,{" "}
             <Link href="/weight-loss/reviews/embody" className="font-semibold text-[#0C4B75] hover:underline">embody</Link>{" "}
             is the cheapest month to month at <strong className="text-[#191919]">$49/$99</strong> on its pre-Black Friday sale{" "}
@@ -189,12 +189,12 @@ export default async function CheapestGlp1Page() {
               </thead>
               <tbody className="text-[13.5px]">
                 {[
-                  ["welludr", "$39 x 12 (promotional price, read Nov 20, 2026)", "$468", "$13,320"],
+                  ["welludr", "$35 x 12 (promotional price, read Nov 26, 2026)", "$420", "$13,368"],
                   ["embody", "$49 x 12 (promo), month to month", "$588", "$13,200"],
                   ["altRx", "$89 x 12, flat at every dose", "$1,068", "$12,720"],
                   ["Medvi", "from $99 x 12 - all-inclusive", "$1,188", "$12,600"],
                   ["HealthRx", "$39 first month + $125 x 11 (monthly plan, until canceled)", "$1,414", "$12,374"],
-                  ["SHED", "$159 first month (20% off) + $199 x 11", "$2,348", "$11,440"],
+                  ["SHED", "$139 first month (30% off, read Nov 26, 2026) + $199 x 11", "$2,328", "$11,460"],
                   ["DirectMeds", "$249 x 12 (sublingual semaglutide; injections $297)", "$2,988", "$10,800"],
                 ].map(([name, math, total, saved], i) => (
                   <tr key={i} className="border-b border-gray-100 last:border-0">
@@ -209,11 +209,11 @@ export default async function CheapestGlp1Page() {
           </div>
           <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">
             Assumes published prices hold for 12 months and promo conditions apply exactly as listed
-            (SHED&rsquo;s 20% off is a month-one rate; embody&rsquo;s $49 is
+            (SHED&rsquo;s 30% off is a month-one rate; embody&rsquo;s $49 is
             promotional). Savings compare against Ozempic&rsquo;s lowest listed
             brand price on our providers&rsquo; shelves ($1,149/month at altRx; welludr lists it at
             $1,399). What&rsquo;s bundled differs - Medvi and SHED include coaching layers others
-            don&rsquo;t - so the cheapest row isn&rsquo;t automatically the best fit. TrimRx is not in this table: its site shows plans from $179 a month (read Nov 22, 2026) but no per-drug semaglutide price we could read, so we cannot build a 12-month total. The dated,
+            don&rsquo;t - so the cheapest row isn&rsquo;t automatically the best fit. TrimRx is not in this table: its site shows plans from $149 a month (read Nov 26, 2026) but no per-drug semaglutide price we could read, so we cannot build a 12-month total. The dated,
             citable version of this data, with its change log, is our{" "}
             <Link href="/weight-loss/glp1-weight-loss-statistics" className="font-medium text-[#0C4B75] hover:underline">
               GLP-1 price index
@@ -249,7 +249,7 @@ export default async function CheapestGlp1Page() {
                     "~21% average body-weight loss at 72 weeks (SURMOUNT-1, 15 mg)",
                   ],
                   ["Dosing", "One injection per week", "One injection per week"],
-                  ["Cheapest compounded price", "$39/mo (promotional price, read Nov 20, 2026)", "$69/mo (welludr, promotional price, read Nov 20, 2026)"],
+                  ["Cheapest compounded price", "$35/mo (promotional price, read Nov 26, 2026)", "$65/mo (welludr, promotional price, read Nov 26, 2026)"],
                   ["Cheapest month-to-month", "$49/mo (embody)", "$99/mo (embody)"],
                   ["Month to month, $39 first month", "$125/mo after month one (HealthRx)", "$199/mo after month one (HealthRx)"],
                 ].map(([label, sema, tirz], i) => (
