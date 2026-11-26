@@ -20,6 +20,3 @@ Verdict: SHIP (with Felix's follow-up commit 9ba0d07 included)
 ## Left for the operator
 - Review-page promo banner on /weight-loss/reviews/wellmedr ("$41/mo on 12-month plans") is the only stale line remaining in a rendered-text scan; it waits on the operator.
 - Dated history (price tracker, black-friday-glp1-deals Oct 28 entry, "previously $41" notes) still shows $41/$71 correctly as past figures.
-
-## Branch 2 (claude/sloane-defy-medical-review-1126)
-Not reviewed, per the operator's scope change. Nothing committed or pushed to it (remote still daf555f).
