@@ -83,7 +83,7 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
   category: "Guide",
   readTime: "56 min read",
   publishedAt: "2026-11-09",
-  updatedAt: "2026-11-09",
+  updatedAt: "2026-11-26",
   heroColor: "#EAF1F6",
   author: "Treatments Hub Research Team",
   keyTakeaways: [
@@ -650,6 +650,7 @@ export const TRT_ONLINE_GUIDE: ArticleData = {
 <li>Expect the new clinician to want their own labs; that is a good sign.</li>
 <li>Cancel the old membership only once the new prescription is in place, and check the cancellation terms.</li>
 </ol>
+<p>Terms differ more than prices do. Some clinics sell by the service rather than by subscription: <a href="/trt/reviews/defy-medical">Defy Medical</a> says "No Subscriptions or Contracts" but also that all sales are final, with a lab-order refund route that its own Terms and Clinical Procedures page describe differently (read Nov 26, 2026). Read the refund section before you buy.</p>
 <p>Comparing where to go next? Start with our <a href="/trt/hone-health-alternatives">Hone Health alternatives</a> page.</p>`,
     },
     {

@@ -1777,7 +1777,7 @@ export const TRT_LANDING_PAGES_PORTED: LandingPageData[] = [
       },
       {
         heading: "How much does online TRT actually cost?",
-        body: `<p>TRT pricing has two parts: an initial testing/diagnostic cost, and an ongoing monthly or membership fee that covers the clinician, monitoring and medication. Because providers bundle these differently, a low headline price isn't always the cheapest once you add labs, follow-ups and shipping. Compare the <strong>all-in monthly cost</strong>, not the teaser number - our <a href="/trt/articles/trt-cost">TRT cost guide</a> shows exactly what to add up.</p>`,
+        body: `<p>TRT pricing has two parts: an initial testing/diagnostic cost, and an ongoing monthly or membership fee that covers the clinician, monitoring and medication. Because providers bundle these differently, a low headline price isn't always the cheapest once you add labs, follow-ups and shipping. Compare the <strong>all-in monthly cost</strong>, not the teaser number - our <a href="/trt/articles/trt-cost">TRT cost guide</a> shows exactly what to add up. Some clinics skip the bundle and sell by the service: <a href="/trt/reviews/defy-medical">Defy Medical</a>, for instance, has no subscription, lists its lab prices publicly and gives its own average estimate of under $175 a month in year one (its FAQ, read Nov 26, 2026), but does not publish medication, consult or shipping prices.</p>`,
       },
       {
         heading: "How do I compare TRT prices fairly?",
@@ -1809,7 +1809,7 @@ export const TRT_LANDING_PAGES_PORTED: LandingPageData[] = [
         body: `<p>We ranked these clinics by best value - the lowest all-in cost that still includes real lab testing and a licensed-clinician review - rather than the lowest headline price alone. Pricing changes often, so treat figures as approximate and confirm them on each provider's site. See the full field on our <a href="/trt">TRT clinic comparison</a> and browse every <a href="/trt/reviews">provider review</a>. You can also read our <a href="/trt/reviews/marek">Marek Health review</a>.</p><p><em>This page is general information, not medical advice, and not financial advice. Confirm current pricing directly with each provider, and let a licensed clinician decide whether TRT is right for you.</em></p>`,
       },
     ],
-    updatedAt: UPDATED,
+    updatedAt: "2026-11-26",
   },
   {
     slug: "best-trt-for-fertility",

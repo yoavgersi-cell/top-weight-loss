@@ -37,7 +37,7 @@ export const TRT_DEA_DEADLINE: ArticleData = {
   category: "Guide",
   readTime: "7 min read",
   publishedAt: "2026-11-06",
-  updatedAt: "2026-11-06",
+  updatedAt: "2026-11-26",
   heroColor: "#EEF3F8",
   author: "Treatments Hub Research Team",
   keyTakeaways: [
@@ -69,7 +69,7 @@ export const TRT_DEA_DEADLINE: ArticleData = {
     },
     {
       heading: "Do state laws limit online testosterone prescribing?",
-      body: `<p>Yes. The federal rules set the floor, and states can add their own requirements, such as an in-person exam before a controlled-substance prescription or limits on which clinicians can prescribe by telehealth. Those rules vary and change often, so check with your clinic, which has to follow the rules of the state you're in when you're treated. Our guide to <a href="/trt/articles/how-to-get-trt-online">how to get TRT online</a> covers the standard steps.</p>`,
+      body: `<p>Yes. The federal rules set the floor, and states can add their own requirements, such as an in-person exam before a controlled-substance prescription or limits on which clinicians can prescribe by telehealth. Those rules vary and change often, so check with your clinic, which has to follow the rules of the state you're in when you're treated. Clinics also write their own limits into their terms: <a href="/trt/reviews/defy-medical">Defy Medical's</a> Terms (effective April 2, 2026, read Nov 26, 2026) say it does not send testosterone prescriptions across state lines to retail pharmacies in other states. Our guide to <a href="/trt/articles/how-to-get-trt-online">how to get TRT online</a> covers the standard steps.</p>`,
     },
     {
       heading: "What else changed for testosterone in 2026?",

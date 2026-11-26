@@ -12,6 +12,7 @@ import { TRT_ARTICLES_2026_10 } from "./trt-articles-2026-10";
 import { TRT_LOW_T_DIAGNOSIS } from "./trt-articles/how-low-testosterone-is-diagnosed";
 import { TRT_DEA_DEADLINE } from "./trt-articles/online-trt-dea-deadline";
 import { TRT_ONLINE_GUIDE } from "./trt-articles/online-trt-guide";
+import { TRT_DEFY_PROVIDER, TRT_DEFY_REVIEW } from "./trt-defy";
 import {
   TRT_PROVIDERS_PORTED,
   TRT_REVIEWS_PORTED,
@@ -1406,7 +1407,8 @@ export function trtSeed(base: SiteConfig): SiteConfig {
     },
     // Ported providers first (Hone, TMates, Male Excel, Taurus, Fridays,
     // BrightMeds), then the hub's own records.
-    providers: [...TRT_PROVIDERS_PORTED, ...providers],
+    // Defy Medical (Nov 26, 2026) is unranked: a review page only, no score.
+    providers: [...TRT_PROVIDERS_PORTED, ...providers, TRT_DEFY_PROVIDER],
     sidebar: {
       ...base.sidebar,
       blockOrder: ["secureBadge", "editorialReviews", "rankingMethodology", "disclosure"],
@@ -1428,7 +1430,7 @@ export function trtSeed(base: SiteConfig): SiteConfig {
         specialties: ["Provider comparison and research", "Telehealth and online prescribing", "Evidence-based health writing", "Consumer education"],
       },
     ],
-    reviews: [...TRT_REVIEWS_PORTED, ...reviews],
+    reviews: [...TRT_REVIEWS_PORTED, ...reviews, TRT_DEFY_REVIEW],
     battles: [...battles, ...TRT_BATTLES_PORTED],
     landingPages: TRT_LANDING_PAGES_PORTED,
     // The ported set first, then the hub's three questions it did not cover.

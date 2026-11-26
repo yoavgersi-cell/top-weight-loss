@@ -98,6 +98,12 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     description:
       "Marek Health pairs comprehensive lab testing with provider guidance and coaching, and can include TRT. What the program involves, pros and cons, who it suits.",
   },
+  // TRT vertical, Nov 26, 2026. Unranked review built on Defy's own pages.
+  "defy-medical": {
+    title: "Defy Medical Review 2026: Lab Prices, Terms & Refunds",
+    description:
+      "Defy Medical TRT review from its own pages: lab prices listed, no subscription, all sales final, labs every 6 months, and which prices it does not publish.",
+  },
   // Ported from edtreatmenthub.com, Oct 31, 2026.
   rexmd: {
     title: "Rex MD Review 2026: Cost, Results & Is It Worth It?",
@@ -337,6 +343,19 @@ const REVIEW_LEGIT_TRT: Record<string, { verdict: string; signals: string[] }> =
       "Value-minded pricing without skipping oversight",
     ],
   },
+  // Defy Medical (Nov 26, 2026): worded from what its own pages and a dated
+  // FDA database search show. Self-reported claims are labelled as such.
+  "defy-medical": {
+    verdict:
+      "Defy Medical says it is a licensed clinic led by Medical Director Dr. Justin Saya, and that it follows federal and state telemedicine rules (its FAQ, read Nov 26, 2026). Those are the company's own statements, and we did not verify them: no state license number is published on the pages we read. What we could confirm is on its pages: a named legal entity (Defy Medical, LLC) with dated Terms of Service (effective April 2, 2026), a Tampa, Florida clinic address, named dispensing pharmacies, and a rule that no prescription is given unless labs, an exam and a consult show a clinical need. A full-text search of FDA's warning-letters database for \"Defy Medical\" and \"Defy\" found no letter on Nov 26, 2026. We did not check state medical boards, so that is none found in the sources checked, not a clean record. The terms say all sales are final, so read the refund section before you pay.",
+    signals: [
+      "Named legal entity and dated Terms of Service (effective April 2, 2026)",
+      "In-office clinic in Tampa, FL, plus telemedicine in most states (no state list published)",
+      "Prescription gated on labs, an exam and a provider consult, per its Terms",
+      "Dispensing pharmacies named on a public page (APS, Empower, Hallandale)",
+      "No state license number published on the pages we read",
+    ],
+  },
   fridays: {
     verdict:
       "Yes - Fridays is a legitimate men's-health telehealth brand. TRT is offered only after lab-based diagnosis and a licensed clinician's review. Confirm its current TRT lineup, monitoring and pricing on its own site.",
@@ -350,6 +369,30 @@ const REVIEW_LEGIT_TRT: Record<string, { verdict: string; signals: string[] }> =
 };
 
 const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> = {
+  // TRT vertical, Nov 26, 2026: answers come only from Defy's own pages (read
+  // Nov 26, 2026) and its Terms (effective April 2, 2026).
+  "defy-medical": [
+    {
+      question: "Does Defy Medical have a subscription?",
+      answer:
+        "No, by its own account. Defy's TRT page says \"No Subscriptions or Contracts\" and its cost FAQ says it does not charge a monthly fee, with charges due when a service is purchased. Late cancellations of appointments (under 24 hours) and no-shows may owe the full consultation fee, which is not published.",
+    },
+    {
+      question: "Does Defy Medical give refunds?",
+      answer:
+        "Mostly no. Its Terms say all sales are final, medication cannot be returned once it leaves the pharmacy, and used lab orders and appointments are not refunded. Unused lab orders have a refund route, but two Defy pages conflict: the Terms give 12 months and a store credit minus $25, and the Clinical Procedures page gives 3 months and a refund to the original payment method within 90 days. Ask Defy which applies before you buy.",
+    },
+    {
+      question: "How much do Defy Medical's labs cost?",
+      answer:
+        "On its public lab site on Nov 26, 2026, the LabCorp initial men's panel listed at $299 and the follow-up TRT panel at $275, with single tests from $20 to $44 and a $125 mobile phlebotomy add-on. Defy's patient store hides prices from signed-out visitors, so a patient's price may differ.",
+    },
+    {
+      question: "How often do Defy Medical patients need labs and consults?",
+      answer:
+        "Its Terms require a provider consult and lab testing at least once every 6 months and a signed physical exam form at least once every 24 months. Follow-ups may cost extra, and the practitioner may discontinue therapy until requested follow-ups are completed.",
+    },
+  ],
   // HRT vertical (ported from hrtwomen.com, Oct 22, 2026). Figures are the
   // provider-published prices verified there on Oct 6, 2026 and match the
   // pricing plans in src/lib/seeds/hrt.ts; each answer says to confirm at checkout.
@@ -673,7 +716,7 @@ export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Me
   // Oct 22, 2026: HRT's three providers (winona, gala, midi) exist only on /hrt.
   const HRT_OVERRIDE_SLUGS = new Set(["winona", "gala", "midi"]);
   // Nov 25, 2026: Marek Health exists only on /trt.
-  const TRT_OVERRIDE_SLUGS = new Set(["marek"]);
+  const TRT_OVERRIDE_SLUGS = new Set(["marek", "defy-medical"]);
   const override =
     ctx.vertical === "weight-loss" ||
     (ctx.vertical === "ed" && ED_OVERRIDE_SLUGS.has(slug)) ||
@@ -848,6 +891,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
     // HRT) must not inherit another vertical's prices and shipping claims.
     ...(ctx.vertical === "weight-loss" ||
     (ctx.vertical === "ed" && slug === "quad") ||
+    (ctx.vertical === "trt" && slug === "defy-medical") ||
     (ctx.vertical === "hrt" && ["winona", "gala", "midi"].includes(slug))
       ? REVIEW_EXTRA_FAQS[slug] ?? []
       : []),
