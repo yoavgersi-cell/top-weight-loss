@@ -161,6 +161,22 @@ const GALLERIES: Record<string, ProviderGallery> = {
       },
     ],
   },
+  eden: {
+    capturedOn: "2026-11-26",
+    source: "Eden's website",
+    slides: [
+      {
+        src: "/provider-gallery/eden/eden-pricing.webp",
+        width: 845,
+        height: 495,
+        title: "The price box",
+        caption:
+          "Eden's price box on November 26, 2026, headed \"Monthly pricing at every dose\": Semaglutide $99/mo and Tirzepatide $129/mo, with a \"Start my free assessment\" button that the page says takes 3 minutes, and \"No insurance needed\". The page beside it says \"one clear, all-inclusive price, no annual or long term plans required\". Cropped to the box; the other claims on that page are not shown.",
+        alt: "Eden price box headed Monthly pricing at every dose showing Semaglutide $99 per month and Tirzepatide $129 per month with a Start my free assessment button",
+        price: { semaglutide: 99, tirzepatide: 129 },
+      },
+    ],
+  },
   altrx: {
     capturedOn: "2026-11-05",
     source: "altRx's website",

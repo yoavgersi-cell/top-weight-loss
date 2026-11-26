@@ -32,8 +32,8 @@ export type PriceIndexRow = {
 // Rows below: operator check of each provider's own site, November 3, 2026;
 // embody re-read November 16 and November 26, 2026 (prices unchanged on
 // Nov 26; see the change log); healthrx and directmeds re-read
-// November 18, 2026; eden re-read November 24, 2026 on eden.health (prices
-// unchanged at $99 and $129, so no change-log entry; see the change log).
+// November 18, 2026; eden re-read November 24, 2026 on eden.health and November 26, 2026
+// (prices unchanged at $99 and $129, so no change-log entry; see the change log).
 export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "wellmedr",
@@ -78,10 +78,10 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "eden",
     edge: "One flat price every month and at every dose; Eden says it includes 24/7 real human support",
-    semaglutide: { price: "$99", note: "flat every month, same price at every dose, excluding new member discounts or specific plans; standard full-price rate (Eden's site, eden.health, read Nov 24, 2026); the Terms allow price changes" },
-    tirzepatide: { price: "$129", note: "flat every month, same price at every dose, excluding new member discounts or specific plans; standard full-price rate (Eden's site, eden.health, read Nov 24, 2026); the Terms allow price changes" },
+    semaglutide: { price: "$99", note: "flat every month, same price at every dose (monthly pricing at every dose, Eden's site, read Nov 26, 2026, unchanged from Nov 24); excluding new member discounts or specific plans, standard full-price rate and the Terms allowing price changes per eden.health, read Nov 24, 2026" },
+    tirzepatide: { price: "$129", note: "flat every month, same price at every dose (monthly pricing at every dose, Eden's site, read Nov 26, 2026, unchanged from Nov 24); excluding new member discounts or specific plans, standard full-price rate and the Terms allowing price changes per eden.health, read Nov 24, 2026" },
     shipping: "Free expedited shipping; delivery step labelled 2 - 3 business days (Eden's Terms do not guarantee a time); read Nov 24, 2026",
-    commitment: "No long-term contract; month-to-month subscription, cancel in Account Settings at least 48 hours before renewal; pricing pages say no membership fee (the Terms still mention a membership program); read Nov 24, 2026",
+    commitment: "No long-term contract; month-to-month subscription, cancel in Account Settings at least 48 hours before renewal; pricing pages say no membership fee (the Terms still mention a membership program); read Nov 24, 2026. Eden's site also said \"one clear, all-inclusive price, no annual or long term plans required\" on Nov 26, 2026",
   },
   {
     providerId: "sprout",
