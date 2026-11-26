@@ -81,11 +81,14 @@ const WL_STATIC_PATHS: { path: string; priority: number; changeFrequency: "weekl
   { path: "/glp1-dose-schedule", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-27" },
   { path: "/black-friday-glp1-deals", priority: 0.8, changeFrequency: "weekly", lastModified: blackFridayLatestVerified() },
   { path: "/how-we-rank", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/find-your-match", priority: 0.6, changeFrequency: "monthly" },
   { path: "/about", priority: 0.3, changeFrequency: "monthly" },
-  // Nov 2026: the quiz and the legal pages (disclaimer, privacy, terms) are
-  // out of the sitemap so Google's small crawl budget goes to content pages
-  // (Page indexing: ~240 content URLs never crawled). They stay live, linked
-  // from every footer, and indexable.
+  // Nov 2026: the legal pages (disclaimer, privacy, terms) are out of the
+  // sitemap so Google's small crawl budget goes to content pages (Page
+  // indexing: ~240 content URLs never crawled). They stay live, linked from
+  // every footer, and indexable. The quiz was dropped with them but is listed
+  // again (Nov 26, 2026, operator request): it is indexable and linked from
+  // 116 pages.
 ];
 
 // Custom-coded pages owned by a single non-weight-loss vertical (served at
