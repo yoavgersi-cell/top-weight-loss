@@ -519,7 +519,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "Can I pay for SHED with HSA/FSA funds?",
       answer:
-        "Yes - SHED plans are HSA/FSA approved. Compounded semaglutide starts at $199/month and tirzepatide at $299/month, with 20% off your first month.",
+        "Yes - SHED plans are HSA/FSA approved. Compounded semaglutide starts at $199/month and tirzepatide at $299/month, with 30% off your first month on SHED's site, read November 26, 2026 (our earlier read said 20%).",
     },
   ],
   wellmedr: [

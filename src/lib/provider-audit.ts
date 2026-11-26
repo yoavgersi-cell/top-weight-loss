@@ -89,6 +89,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
     rows: [
       { label: "Semaglutide price", value: "$199/month" },
       { label: "Tirzepatide price", value: "$299/month" },
+      { label: "First-month offer", value: "30% off the first month's GLP-1 program (SHED's site, read Nov 26, 2026; no price shown that day)" },
       { label: "Guarantee", value: "5% of body weight in 120 days or your money back" },
       { label: "Payment options", value: "HSA/FSA eligible" },
     ],

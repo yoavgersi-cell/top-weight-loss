@@ -59,6 +59,15 @@ export const HOLIDAY_OFFERS: HolidayOffer[] = [
   },
   {
     vertical: "weight-loss",
+    providerId: "shed",
+    headline: "30% off your first month's GLP-1 program",
+    detail:
+      "SHED's homepage banner read \"Get 30% off your first month's GLP-1 program\" on November 26, 2026. The page does not call it a Black Friday or Cyber Monday offer, shows no price and no code, and states no end date. It applies to the first month only, so it is not a saving on month two onward. Our earlier listing said 20% off the first month.",
+    verifiedOn: "2026-11-26",
+    source: "SHED homepage, operator screenshot",
+  },
+  {
+    vertical: "weight-loss",
     providerId: "altrx",
     headline: "Black Friday sale: 15% off with code FRIDAY15",
     detail:

@@ -33,7 +33,8 @@ export type PriceIndexRow = {
 // embody re-read November 16 and November 26, 2026 (prices unchanged on
 // Nov 26; see the change log); collective's $59 semaglutide price and
 // terms re-read November 26, 2026 (unchanged; tirzepatide and membership
-// keep their Nov 11 read); altrx's $89 starting price re-read November 26,
+// keep their Nov 11 read); shed's 30% first-month offer noted Nov 26, 2026
+// (no price shown); altrx's $89 starting price re-read November 26,
 // 2026 (unchanged; tirzepatide $149 and the Nov 20 banner note keep their
 // read date); healthrx and directmeds re-read
 // November 18, 2026; eden re-read November 24, 2026 on eden.health and November 26, 2026
@@ -132,8 +133,8 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "shed",
     edge: "Coaching included and a 5%-in-120-days money-back guarantee",
-    semaglutide: { price: "from $199", note: "starting price" },
-    tirzepatide: { price: "from $299", note: "starting price" },
+    semaglutide: { price: "from $199", note: "starting price; SHED's site showed \"Get 30% off your first month's GLP-1 program\" on Nov 26, 2026 (no price shown that day; our price keeps its earlier read date)" },
+    tirzepatide: { price: "from $299", note: "starting price; SHED's site showed \"Get 30% off your first month's GLP-1 program\" on Nov 26, 2026 (no price shown that day; our price keeps its earlier read date)" },
     shipping: "Home delivery included",
     commitment: "None - HSA/FSA approved",
   },
@@ -182,6 +183,13 @@ export type PriceChange = {
 };
 
 export const PRICE_CHANGELOG: PriceChange[] = [
+  {
+    date: "2026-11-26",
+    providerId: "shed",
+    change:
+      "No price move listed. SHED's homepage read \"Get 30% off your first month's GLP-1 program\" on November 26, 2026. The page showed no price, so SHED's from $199 semaglutide and from $299 tirzepatide keep their earlier read date, and we do not know whether they are before or after the offer or how long it lasts (no end date shown). Our earlier listing said 20% off the first month. The offer is SHED's wording, not a regular price.",
+    source: "SHED homepage, operator screenshot, November 26, 2026",
+  },
   {
     date: "2026-11-26",
     providerId: "embody",

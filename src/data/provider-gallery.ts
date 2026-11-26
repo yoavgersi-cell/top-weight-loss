@@ -161,6 +161,21 @@ const GALLERIES: Record<string, ProviderGallery> = {
       },
     ],
   },
+  shed: {
+    capturedOn: "2026-11-26",
+    source: "SHED's website",
+    slides: [
+      {
+        src: "/provider-gallery/shed/shed-first-month-offer.webp",
+        width: 1000,
+        height: 347,
+        title: "The first-month offer",
+        caption:
+          "The banner at the top of SHED's homepage on November 26, 2026 reads \"Get 30% off your first month's GLP-1 program\", with a \"Find your plan\" button. The screenshot shows no price, so it does not tell us what the discount applies to or when it ends. Cropped to the banner; the weight-loss claims below it on the page are not shown.",
+        alt: "SHED homepage banner reading Get 30% off your first month's GLP-1 program with a Find your plan button",
+      },
+    ],
+  },
   collective: {
     capturedOn: "2026-11-26",
     source: "Collective's website",
