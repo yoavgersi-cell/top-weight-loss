@@ -179,7 +179,7 @@ const defaultReviews: ReviewData[] = [
       "Free shipping (about 5-7 days)",
       "No insurance required; Buy Now, Pay Later available"
     ],
-    pricingSummary: "altRx uses flat, transparent pricing - the same price at every dose: compounded GLP-1 (semaglutide) from $89/month and GLP-1 + GIP (tirzepatide) from $149/month. Brand-name options are also available (Zepbound and Wegovy at higher price points). It's a self-pay service with no insurance required, flexible Buy Now, Pay Later payment options, and the ability to pause or cancel anytime.",
+    pricingSummary: "altRx uses flat, transparent pricing - the same price at every dose: compounded GLP-1 (semaglutide) from $89/month (\"Start for $89/mo\" on altRx's site, read November 26, 2026) and GLP-1 + GIP (tirzepatide) from $149/month. Brand-name options are also available (Zepbound and Wegovy at higher price points). It's a self-pay service with no insurance required, flexible Buy Now, Pay Later payment options, and the ability to pause or cancel anytime.",
     treatmentOptions: [
       "Compounded semaglutide (GLP-1) injection",
       "Compounded tirzepatide (GLP-1 + GIP) injection",

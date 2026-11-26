@@ -42,7 +42,7 @@ export const HOLIDAY_SEASON = {
   blackFriday: "2026-11-27",
   cyberMonday: "2026-11-30",
   /** The page's own last-updated date: the newest verifiedOn below, or this when the list is empty. */
-  pageUpdated: "2026-10-28",
+  pageUpdated: "2026-11-26",
 };
 
 /** Operator-verified offers only, newest verification first. */
@@ -56,6 +56,16 @@ export const HOLIDAY_OFFERS: HolidayOffer[] = [
     offerMonthly: { semaglutide: 49, tirzepatide: 99 },
     verifiedOn: "2026-11-26",
     source: "embody homepage and offer pop-up, operator screenshots",
+  },
+  {
+    vertical: "weight-loss",
+    providerId: "altrx",
+    headline: "Black Friday sale: 15% off with code FRIDAY15",
+    detail:
+      "altRx's site banner read \"Black Friday Sale - 15% Off Use Code FRIDAY15\" on November 20, 2026. The page does not say whether its listed base prices ($89/month semaglutide, $149/month tirzepatide) are before or after the code, what the 15% applies to, or when the sale ends. We did not re-read the banner on November 26, 2026: that day's screenshot shows only the homepage hero, with \"Start for $89/mo\". No end date is stated.",
+    code: "FRIDAY15",
+    verifiedOn: "2026-11-20",
+    source: "altRx website banner, operator screenshot",
   },
   {
     vertical: "weight-loss",
@@ -83,6 +93,18 @@ export interface HolidayCheck {
 }
 
 export const HOLIDAY_CHECKS: HolidayCheck[] = [
+  {
+    vertical: "weight-loss",
+    providerId: "eden",
+    checkedOn: "2026-11-26",
+    found: "the part of the homepage captured shows \"Monthly pricing at every dose\" at $99 semaglutide and $129 tirzepatide, with no Black Friday or Cyber Monday offer shown",
+  },
+  {
+    vertical: "weight-loss",
+    providerId: "collective",
+    checkedOn: "2026-11-26",
+    found: "the part of the homepage captured (cropped on the right) shows \"Get GLP-1s at $59/month\", with no Black Friday or Cyber Monday offer shown",
+  },
   {
     vertical: "weight-loss",
     providerId: "altrx",

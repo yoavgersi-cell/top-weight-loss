@@ -194,21 +194,22 @@ const GALLERIES: Record<string, ProviderGallery> = {
     ],
   },
   altrx: {
-    capturedOn: "2026-11-05",
+    capturedOn: "2026-11-26",
     source: "altRx's website",
     slides: [
       {
-        src: "/provider-gallery/altrx/altrx-homepage.webp",
-        width: 1400,
-        height: 931,
-        title: "The homepage",
+        src: "/provider-gallery/altrx/altrx-hero-1126.webp",
+        width: 720,
+        height: 565,
+        title: "The homepage price",
         caption:
-          "altRx's homepage: \"Start for $89/mo\", HSA/FSA approved, no insurance required and free shipping, per altRx's site. The page carries the FDA notice that compounded medications are not FDA-approved, and GLP-1 safety information.",
-        alt: "altRx homepage headline Transforming Care, Redefining Weight Management with a Start for $89 per month offer and a Get Started Today button",
+          "altRx's homepage on November 26, 2026: \"Start for $89/mo\" under a list that reads \"HSA/FSA Approved!\", \"No price hike! Everything you need is included\" and \"No insurance required + free shipping\", with a \"Get Started Today\" button. Those are altRx's words, not ours. Cropped to the price block; the rest of the page is not shown. The screenshot is of the hero only, so it says nothing about the sitewide banner we read on November 20.",
+        alt: "altRx homepage price block: HSA/FSA Approved, No price hike, No insurance required plus free shipping, Start for $89 per month and a Get Started Today button",
         price: { semaglutide: 89 },
       },
       {
         src: "/provider-gallery/altrx/altrx-how-it-works.webp",
+        capturedOn: "2026-11-05",
         width: 1400,
         height: 853,
         title: "How it works, in 3 steps",
@@ -218,6 +219,7 @@ const GALLERIES: Record<string, ProviderGallery> = {
       },
       {
         src: "/provider-gallery/altrx/altrx-what-arrives.webp",
+        capturedOn: "2026-11-05",
         width: 1400,
         height: 808,
         title: "What the delivery looks like",
@@ -227,6 +229,7 @@ const GALLERIES: Record<string, ProviderGallery> = {
       },
       {
         src: "/provider-gallery/altrx/altrx-why-altrx.webp",
+        capturedOn: "2026-11-05",
         width: 1400,
         height: 844,
         title: "What's included",

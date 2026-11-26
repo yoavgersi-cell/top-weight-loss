@@ -123,7 +123,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     format: "injection",
     price: "$89",
     regularPrice: "$199",
-    priceNote: "flat at every dose",
+    priceNote: "flat at every dose (starting price read Nov 26, 2026)",
     shipping: "Free overnight cold shipping",
     image: "/products/altrx-glp1.webp",
   },

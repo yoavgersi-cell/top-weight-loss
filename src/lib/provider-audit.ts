@@ -55,7 +55,7 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
   },
   "weight-loss:altrx": {
     rows: [
-      { label: "Semaglutide price", value: "$89/month, flat at every dose" },
+      { label: "Semaglutide price", value: "$89/month starting price, flat at every dose (starting price read Nov 26, 2026)" },
       { label: "Tirzepatide price", value: "$149/month" },
       { label: "Brand-name shelf", value: "Ozempic $1,149 / Zepbound $1,249 / Wegovy $1,579" },
       { label: "Payment options", value: "Buy Now, Pay Later available" },

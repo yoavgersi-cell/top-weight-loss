@@ -33,7 +33,9 @@ export type PriceIndexRow = {
 // embody re-read November 16 and November 26, 2026 (prices unchanged on
 // Nov 26; see the change log); collective's $59 semaglutide price and
 // terms re-read November 26, 2026 (unchanged; tirzepatide and membership
-// keep their Nov 11 read); healthrx and directmeds re-read
+// keep their Nov 11 read); altrx's $89 starting price re-read November 26,
+// 2026 (unchanged; tirzepatide $149 and the Nov 20 banner note keep their
+// read date); healthrx and directmeds re-read
 // November 18, 2026; eden re-read November 24, 2026 on eden.health and November 26, 2026
 // (prices unchanged at $99 and $129, so no change-log entry; see the change log).
 export const PRICE_INDEX: PriceIndexRow[] = [
@@ -56,7 +58,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "altrx",
     edge: "Low starting prices, plus a real brand-name shelf",
-    semaglutide: { price: "from $89", note: "starting price; site banner also shows \"Black Friday Sale - 15% Off Use Code FRIDAY15\" (read Nov 20, 2026), terms and end date not stated" },
+    semaglutide: { price: "from $89", note: "starting price (\"Start for $89/mo\", altRx's site, read Nov 26, 2026; the page also says HSA/FSA approved, no insurance required and free shipping); a site banner showed \"Black Friday Sale - 15% Off Use Code FRIDAY15\" (read Nov 20, 2026; not re-read Nov 26, the screenshot shows only the hero), terms and end date not stated" },
     tirzepatide: { price: "from $149", note: "starting price; site banner also shows \"Black Friday Sale - 15% Off Use Code FRIDAY15\" (read Nov 20, 2026), terms and end date not stated" },
     shipping: "Free shipping in 5-7 days",
     commitment: "None - pause or cancel anytime; Buy Now, Pay Later",
