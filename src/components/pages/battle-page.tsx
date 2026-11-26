@@ -107,10 +107,10 @@ const BATTLE_COST_MATH: Record<
   // provider1 = embody, provider2 = welludr
   "embody-vs-wellmedr": {
     rows: [
-      ["First month (semaglutide)", "$49", "$41"],
+      ["First month (semaglutide)", "$49", "$39 (promotional price, read Nov 20, 2026)"],
       ["6-month total", "$294", "$246"],
       ["12-month total", "$588", "$492"],
-      ["Tirzepatide, monthly", "$99", "$71"],
+      ["Tirzepatide, monthly", "$99", "$69 (promotional price, read Nov 20, 2026)"],
       ["The condition", "$49 is promotional; month to month", "$49 locks on a 12-month plan"],
     ],
     note: "Semaglutide at each provider's published rate: embody $49/mo promotional with no commitment; welludr $41/mo on a 12-month plan, billed monthly, same price at every dose. welludr wins the year by $96 - embody wins the exit terms.",
@@ -1541,7 +1541,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               <p className="mb-4 text-[14px] text-gray-500">The pages readers of this comparison open next.</p>
               <div className="grid gap-3 sm:grid-cols-2">
                 {[
-                  { href: "/articles/best-tirzepatide-online", title: "Best tirzepatide online", blurb: "Eight verified compounded prices from $71, plus every brand-name Zepbound route." },
+                  { href: "/articles/best-tirzepatide-online", title: "Best tirzepatide online", blurb: "Eight verified compounded prices from $69 (promotional price, read Nov 20, 2026), plus every brand-name Zepbound route." },
                   { href: "/reviews/altrx", title: "altRx review", blurb: "$89 semaglutide, $149 tirzepatide, and the only brand-name shelf next to compounded plans." },
                   { href: "/articles/zepbound-price-online", title: "Zepbound price online", blurb: "Brand Zepbound at $1,249 to $1,599 cash, the Ro pen route, and the compounded ladder." },
                 ].map((g) => (

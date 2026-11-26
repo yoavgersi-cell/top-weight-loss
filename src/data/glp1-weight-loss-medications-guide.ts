@@ -326,7 +326,7 @@ export const glp1WeightLossMedicationsGuideArticle: Article = {
     },
     {
       heading: "What do GLP-1 medications cost, and does insurance or Medicare cover them?",
-      body: `<p>Costs range from about $41 a month for compounded semaglutide on a 12-month plan to more than $1,500 a month for brand-name Wegovy at cash prices, at the providers we track. Commercial insurance coverage for weight-loss GLP-1s varies by plan, and since July 1, 2026, eligible Medicare Part D members can get certain brand-name GLP-1s for a flat $50 a month through the Medicare GLP-1 Bridge.</p>
+      body: `<p>Costs range from about $39 a month (promotional price, read Nov 20, 2026) for compounded semaglutide to more than $1,500 a month for brand-name Wegovy at cash prices, at the providers we track. Commercial insurance coverage for weight-loss GLP-1s varies by plan, and since July 1, 2026, eligible Medicare Part D members can get certain brand-name GLP-1s for a flat $50 a month through the Medicare GLP-1 Bridge.</p>
 <h3>Self-pay prices at the providers we track</h3>
 <p>Prices change often, so we keep them in a verified price index rather than in articles. As of our last check on November 3, 2026, compounded semaglutide started at $41 a month (welludr, pre-Black Friday sale on a 12-month plan), $49 (embody, sale price, month to month), $89 (altRx, starting price) and $99 (Eden, flat at every dose), and compounded tirzepatide at $71 (welludr, sale), $99 (embody, sale), $129 (Eden) and $149 (altRx, starting price). Each of those figures comes with a condition, which the <a href="/weight-loss/glp1-price-changes">GLP-1 price tracker</a> lists in full.</p>
 <p>For brand-name medication bought through a telehealth provider, the shelf prices in our provider audit (checked September 2026) include Ozempic at $1,149, Zepbound at $1,249 and Wegovy at $1,579 a month at altRx, and the Wegovy pill at Ro at $149 for the first month, then $299 a month, plus Ro's membership ($39 the first month, then $74 to $149 a month). Ro bills the medication separately from the membership, so insurance can apply where a plan covers it.</p>
@@ -393,7 +393,7 @@ export const glp1WeightLossMedicationsGuideArticle: Article = {
     },
     {
       heading: "How do welludr (wellmedr), Ro and TrimRx compare?",
-      body: `<p>welludr (formerly wellmedr) is built around the lowest ongoing compounded prices on a 12-month plan plus a coach; Ro is an established telehealth brand with an in-house pharmacy and brand-name options including the Wegovy pill; TrimRx focuses on custom dosing with unlimited provider check-ins. Each is a credible option with a different strength.</p>
+      body: `<p>welludr (formerly wellmedr) is built around the lowest ongoing compounded prices plus a coach; Ro is an established telehealth brand with an in-house pharmacy and brand-name options including the Wegovy pill; TrimRx focuses on custom dosing with unlimited provider check-ins. Each is a credible option with a different strength.</p>
 <h3>welludr, formerly wellmedr (ranked #4)</h3>
 <p><a href="/weight-loss/reviews/wellmedr">welludr</a> offers compounded semaglutide and tirzepatide shipped every four weeks at the same price whatever your dose, plus brand-name Ozempic and Zepbound. Board-certified specialists tailor the plan, treatment is fully online, a Medical Weight-Care Coach is included on every plan, and the program is backed by a weight-loss warranty. welludr says its GLP-1 medications have been used by more than 1,000,000 patients. Its lowest price is tied to a 12-month plan, standard delivery takes about 3-5 business days, and it ships within the US only. See <a href="/weight-loss/articles/is-wellmedr-legit">is welludr legit?</a>, <a href="/weight-loss/articles/wellmedr-cost">welludr cost</a> and <a href="/weight-loss/embody-vs-wellmedr">embody vs welludr</a>.</p>
 <h3>Ro (ranked #5)</h3>
@@ -407,7 +407,7 @@ export const glp1WeightLossMedicationsGuideArticle: Article = {
       heading: "Where can you find the best prices for tirzepatide?",
       body: `<p>The lowest compounded tirzepatide prices in our verified index (checked November 3, 2026) were $71 a month at welludr (pre-Black Friday sale), $99 at embody (sale price, month to month), $129 at Eden (flat at every dose) and from $149 at altRx. Brand-name Zepbound costs far more without insurance. Each low price has a condition attached, so compare the terms, not just the number.</p>
 <table><thead><tr><th>Provider</th><th>Compounded tirzepatide (per month)</th><th>The condition</th><th>Commitment</th></tr></thead><tbody>
-<tr><td><a href="/weight-loss/reviews/wellmedr">welludr</a></td><td>$71</td><td>Pre-Black Friday sale shown on Nov 3, 2026; shipped every 4 weeks; previously $89</td><td>12-month plan for the lowest rate</td></tr>
+<tr><td><a href="/weight-loss/reviews/wellmedr">welludr</a></td><td>$69 (promotional price, read Nov 20, 2026)</td><td>Pre-Black Friday sale shown on Nov 3, 2026; shipped every 4 weeks; previously $89</td><td>12-month plan for the lowest rate</td></tr>
 <tr><td><a href="/weight-loss/reviews/embody">embody</a></td><td>$99</td><td>Sale price, flat month to month</td><td>None; cancel anytime</td></tr>
 <tr><td><a href="/weight-loss/reviews/eden">Eden</a></td><td>$129</td><td>Flat every month and at every dose</td><td>None; no membership or long-term plan</td></tr>
 <tr><td><a href="/weight-loss/reviews/altrx">altRx</a></td><td>from $149</td><td>Starting price</td><td>None; pause or cancel anytime</td></tr>
@@ -427,7 +427,7 @@ export const glp1WeightLossMedicationsGuideArticle: Article = {
 <ul>
 <li><strong>embody</strong> for month-to-month flexibility and free expedited delivery (no timeline guaranteed).</li>
 <li><strong>altRx</strong> for low starting prices that stay the same at every dose, flexible payment and a brand-name shelf.</li>
-<li><strong>welludr</strong> for the lowest ongoing price if you are comfortable with a 12-month plan, plus an included coach and a weight-loss warranty.</li>
+<li><strong>welludr</strong> for the lowest ongoing price, plus an included coach and a weight-loss warranty.</li>
 </ul>
 <p>Whichever you choose, a licensed clinician reviews your intake and decides whether to prescribe. If you are considering moving from one to another, tell the new provider exactly what you were taking and at what dose, so the prescriber can plan the switch safely.</p>`,
     },
@@ -565,7 +565,7 @@ export const glp1WeightLossMedicationsGuideArticle: Article = {
 <h3>"I am on Medicare."</h3>
 <p>Ask about the GLP-1 Bridge before anything else. If you meet its BMI and condition criteria, $50 a month for an FDA-approved brand is the best price in this guide. See <a href="/weight-loss/articles/glp1-after-65-medicare">GLP-1s after 65</a>.</p>
 <h3>"I am paying cash and want the most for my money."</h3>
-<p>Compounded semaglutide or tirzepatide from a licensed provider is the lowest-cost route, with the limits explained above. Compare plan structure as well as price: embody for month-to-month flexibility and fast shipping, Eden for one flat price at every dose, altRx for low starting prices and a brand-name option, welludr if you are comfortable with a 12-month plan. <a href="/weight-loss/articles/what-100-to-200-a-month-gets-you-glp1">What $100 to $200 a month gets you</a> lays out the tiers.</p>
+<p>Compounded semaglutide or tirzepatide from a licensed provider is the lowest-cost route, with the limits explained above. Compare plan structure as well as price: embody for month-to-month flexibility and fast shipping, Eden for one flat price at every dose, altRx for low starting prices and a brand-name option, welludr for the lowest ongoing price. <a href="/weight-loss/articles/what-100-to-200-a-month-gets-you-glp1">What $100 to $200 a month gets you</a> lays out the tiers.</p>
 <h3>"I don't want needles."</h3>
 <p>The Wegovy pill (more weight loss on average, strict morning routine) or Foundayo (no food or water timing). Read <a href="/weight-loss/articles/foundayo-vs-wegovy-pill">Foundayo vs Wegovy pill</a> and <a href="/weight-loss/glp1-pills-vs-injections">pills vs injections</a>.</p>
 <h3>"I want the strongest effect."</h3>
