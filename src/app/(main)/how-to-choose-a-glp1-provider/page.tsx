@@ -170,7 +170,7 @@ const ROWS: Row[] = [
     clinician: "Licensed clinician reviews the intake and can decline",
     visit: "100% online visit and checkout; health coaching on every plan",
     pharmacy: "Compounded semaglutide or tirzepatide; pharmacy not named in our research",
-    dosePricing: "Monthly, 20% off month one; HSA/FSA",
+    dosePricing: "Monthly, 30% off month one (read Nov 26, 2026); HSA/FSA",
     complaints: "At $199 it is the premium of the compounded market: the price buys coaching and a results guarantee, not a different medication. No Reddit threads verified yet.",
   },
   {

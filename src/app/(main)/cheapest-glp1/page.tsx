@@ -194,7 +194,7 @@ export default async function CheapestGlp1Page() {
                   ["altRx", "$89 x 12, flat at every dose", "$1,068", "$12,720"],
                   ["Medvi", "from $99 x 12 - all-inclusive", "$1,188", "$12,600"],
                   ["HealthRx", "$39 first month + $125 x 11 (monthly plan, until canceled)", "$1,414", "$12,374"],
-                  ["SHED", "$159 first month (20% off) + $199 x 11", "$2,348", "$11,440"],
+                  ["SHED", "$139 first month (30% off, read Nov 26, 2026) + $199 x 11", "$2,328", "$11,460"],
                   ["DirectMeds", "$249 x 12 (sublingual semaglutide; injections $297)", "$2,988", "$10,800"],
                 ].map(([name, math, total, saved], i) => (
                   <tr key={i} className="border-b border-gray-100 last:border-0">
@@ -209,7 +209,7 @@ export default async function CheapestGlp1Page() {
           </div>
           <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">
             Assumes published prices hold for 12 months and promo conditions apply exactly as listed
-            (SHED&rsquo;s 20% off is a month-one rate; embody&rsquo;s $49 is
+            (SHED&rsquo;s 30% off is a month-one rate; embody&rsquo;s $49 is
             promotional). Savings compare against Ozempic&rsquo;s lowest listed
             brand price on our providers&rsquo; shelves ($1,149/month at altRx; welludr lists it at
             $1,399). What&rsquo;s bundled differs - Medvi and SHED include coaching layers others

@@ -426,13 +426,13 @@ const defaultReviews: ReviewData[] = [
     providerId: "shed",
     updatedAt: "2026-09-14",
     shortSummary: "Coaching-included GLP-1 program - compounded semaglutide from $199/mo and tirzepatide from $299/mo, 30% off month one per SHED's site, read Nov 26, 2026 - backed by a lose-5%-in-120-days money-back guarantee.",
-    reviewIntro: "SHED is a telehealth weight-loss program with 150,000+ members, built around compounded GLP-1 medication - semaglutide from $199/month and tirzepatide from $299/month, both with 30% off the first month on SHED's site, read November 26, 2026 (our earlier read said 20%) - paired with health coaching that's included in every plan rather than sold as an upsell. The whole flow is 100% online: complete a visit, and if approved your medication ships straight to your door. Plans are HSA/FSA approved, and SHED backs the program with the most concrete guarantee in our ranking: lose 5% of your body weight in 120 days or your money back. The honest catch is price: $199-$299/month is the highest compounded tier among our affiliate providers, so you're paying for the coaching and the guarantee, not just the medication.",
+    reviewIntro: "SHED is a telehealth weight-loss program (SHED's site says it has 150,000+ members), built around compounded GLP-1 medication - semaglutide from $199/month and tirzepatide from $299/month, both with 30% off the first month on SHED's site, read November 26, 2026 (our earlier read said 20%) - paired with health coaching that's included in every plan rather than sold as an upsell. The whole flow is 100% online: complete a visit, and if approved your medication ships straight to your door. Plans are HSA/FSA approved, and SHED backs the program with the most concrete guarantee in our ranking: lose 5% of your body weight in 120 days or your money back. The honest catch is price: $199-$299/month is the highest compounded tier among our affiliate providers, so you're paying for the coaching and the guarantee, not just the medication.",
     keyFeatures: [
       "Compounded semaglutide from $199/mo, tirzepatide from $299/mo",
       "30% off your first month (SHED's site, read Nov 26, 2026)",
       "Health coaching included in every plan",
       "Lose 5% of your body weight in 120 days or your money back",
-      "HSA/FSA approved; 150,000+ members"
+      "HSA/FSA approved; SHED's site says it has 150,000+ members"
     ],
     pricingSummary: "Shed keeps pricing simple: compounded semaglutide starts at $199/month and compounded tirzepatide starts at $299/month, with 30% off your first month on SHED's site, read November 26, 2026 (our earlier read said 20%; the page shows no price). Every plan includes the provider visit, health coaching, and medication shipped straight to your door - and it's HSA/FSA approved. Shed also backs it with a guarantee: lose 5% of your body weight in 120 days or your money back.",
     treatmentOptions: [

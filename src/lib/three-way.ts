@@ -114,8 +114,8 @@ export const TRIO_FACTS: Record<string, TrioFacts> = {
   },
   shed: {
     id: "shed",
-    semaglutide: "$199/mo (20% off first month)",
-    tirzepatide: "$299/mo (20% off first month)",
+    semaglutide: "$199/mo (30% off first month, read Nov 26, 2026)",
+    tirzepatide: "$299/mo (30% off first month, read Nov 26, 2026)",
     billing: "Monthly; HSA/FSA approved",
     shipping: "Free home delivery",
     support: "Provider visit + health coaching included",
