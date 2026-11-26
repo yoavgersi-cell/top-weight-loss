@@ -161,6 +161,22 @@ const GALLERIES: Record<string, ProviderGallery> = {
       },
     ],
   },
+  collective: {
+    capturedOn: "2026-11-26",
+    source: "Collective's website",
+    slides: [
+      {
+        src: "/provider-gallery/collective/collective-hero.webp",
+        width: 1056,
+        height: 920,
+        title: "The homepage headline",
+        caption:
+          "Collective's homepage on November 26, 2026: \"Get GLP-1s at $59/month\", with \"Always the Same Price, Any Dose\", \"No Multi-Month Orders Required\" and \"Cancel Easily Anytime\", and a \"Stop Overpaying\" button that the page says takes less than 2 minutes. The headline does not name a medication; $59 is the semaglutide price we list. The screenshot was cropped on the right and does not show the tirzepatide price or the $199 annual membership.",
+        alt: "Collective homepage headline Get GLP-1s at $59 per month with three checkmarks: always the same price any dose, no multi-month orders required, cancel easily anytime",
+        price: { semaglutide: 59 },
+      },
+    ],
+  },
   eden: {
     capturedOn: "2026-11-26",
     source: "Eden's website",

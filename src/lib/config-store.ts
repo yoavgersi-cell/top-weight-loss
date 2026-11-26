@@ -962,6 +962,8 @@ const defaultReviews: ReviewData[] = [
     providerId: "collective",
     updatedAt: "2026-11-11",
     // Every figure here was read from collective.org on November 11, 2026
+    // (the $59 semaglutide price and the month-to-month terms were re-read on
+    // November 26, 2026, unchanged; tirzepatide and the membership were not)
     // (homepage, including its FAQ): $59/mo semaglutide, $69/mo tirzepatide,
     // same price at any dose, $199 annual membership billed annually with a
     // 21-day free trial, 2-day express cold shipping, most orders within 7
@@ -976,7 +978,7 @@ const defaultReviews: ReviewData[] = [
       "Membership covers unlimited doctor messaging, check-ins and dose changes, nutrition support and 2-day express cold shipping",
       "No multi-month orders, cancel anytime, HSA/FSA eligible; 44 states"
     ],
-    pricingSummary: "Collective charges $59 a month for compounded semaglutide and $69 a month for compounded tirzepatide, the same at every dose, billed month to month with no multi-month order. On top of that is a $199 annual membership, billed once a year, with a 21-day free trial; during the trial you pay only for the medication, and if you cancel before day 21 the membership is never charged. Averaged over a year the membership adds about $16.58 a month, so the realistic all-in cost is roughly $76 a month for semaglutide and $86 for tirzepatide (our arithmetic). For comparison, the cheapest compounded semaglutide we track is welludr at $39 and embody at $49 promotional; on tirzepatide, Collective's $69 undercuts welludr's $69 (promotional prices, read Nov 20, 2026) and embody's $99 promotional rate, before the membership is counted. Shipping is 2-day express and cold-chain, included; most orders arrive within 7 days of the medical review. Collective does not bill insurance.",
+    pricingSummary: "Collective charges $59 a month for compounded semaglutide and $69 a month for compounded tirzepatide, the same at every dose, billed month to month with no multi-month order (the $59 semaglutide price and the terms re-read on Collective's site November 26, 2026; tirzepatide and the membership as read November 11, 2026). On top of that is a $199 annual membership, billed once a year, with a 21-day free trial; during the trial you pay only for the medication, and if you cancel before day 21 the membership is never charged. Averaged over a year the membership adds about $16.58 a month, so the realistic all-in cost is roughly $76 a month for semaglutide and $86 for tirzepatide (our arithmetic). For comparison, the cheapest compounded semaglutide we track is welludr at $39 and embody at $49 promotional; on tirzepatide, Collective's $69 undercuts welludr's $69 (promotional prices, read Nov 20, 2026) and embody's $99 promotional rate, before the membership is counted. Shipping is 2-day express and cold-chain, included; most orders arrive within 7 days of the medical review. Collective does not bill insurance.",
     treatmentOptions: [
       "Compounded semaglutide (GLP-1) injection",
       "Compounded tirzepatide (GLP-1 + GIP) injection",

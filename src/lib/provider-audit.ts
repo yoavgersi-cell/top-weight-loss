@@ -113,13 +113,14 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
       { label: "Support", value: "Eden says it offers clinician-guided care and 24/7 real human support" },
     ],
   },
-  // Collective: read from collective.org (homepage and FAQ), Nov 11, 2026.
+  // Collective: read from collective.org (homepage and FAQ), Nov 11, 2026;
+  // semaglutide price and month-to-month terms re-read Nov 26, 2026.
   "weight-loss:collective": {
     rows: [
-      { label: "Semaglutide price", value: "$59/month, the same at every dose" },
+      { label: "Semaglutide price", value: "$59/month, the same at every dose (read Nov 26, 2026)" },
       { label: "Tirzepatide price", value: "$69/month, the same at every dose" },
       { label: "Membership fee", value: "$199/year, billed annually, after a 21-day free trial" },
-      { label: "Commitment", value: "None - month to month, no multi-month orders, cancel anytime" },
+      { label: "Commitment", value: "None - month to month, no multi-month orders, cancel anytime (read Nov 26, 2026)" },
       { label: "Shipping", value: "2-day express cold shipping included; most orders within 7 days of the medical review" },
       { label: "Pharmacy", value: "State-licensed US pharmacies; third-party tested, per the provider" },
       { label: "Availability", value: "44 states (not AL, CA, LA, MA, MS, WA)" },

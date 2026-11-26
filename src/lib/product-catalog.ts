@@ -62,7 +62,7 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     format: "injection",
     fdaStatus: "compounded",
     price: "$59",
-    priceNote: "same price at any dose; month to month; plus $199/year membership after a 21-day free trial",
+    priceNote: "same price at any dose; month to month; plus $199/year membership after a 21-day free trial (price and terms read Nov 26, 2026)",
     shipping: "2-day express cold shipping included",
     image: "/products/collective-semaglutide.webp",
   },

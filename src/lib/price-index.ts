@@ -31,7 +31,9 @@ export type PriceIndexRow = {
 
 // Rows below: operator check of each provider's own site, November 3, 2026;
 // embody re-read November 16 and November 26, 2026 (prices unchanged on
-// Nov 26; see the change log); healthrx and directmeds re-read
+// Nov 26; see the change log); collective's $59 semaglutide price and
+// terms re-read November 26, 2026 (unchanged; tirzepatide and membership
+// keep their Nov 11 read); healthrx and directmeds re-read
 // November 18, 2026; eden re-read November 24, 2026 on eden.health and November 26, 2026
 // (prices unchanged at $99 and $129, so no change-log entry; see the change log).
 export const PRICE_INDEX: PriceIndexRow[] = [
@@ -70,7 +72,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "collective",
     edge: "Tied for the lowest tirzepatide price we track, flat at every dose, with a $199/year membership instead of a markup",
-    semaglutide: { price: "$59", note: "same price at every dose; plus $199/year membership (21-day free trial)" },
+    semaglutide: { price: "$59", note: "same price at any dose, no multi-month orders required, cancel easily anytime (Collective's site, read Nov 26, 2026); plus $199/year membership (21-day free trial; membership terms as read Nov 11, 2026)" },
     tirzepatide: { price: "$69", note: "same price at every dose; plus $199/year membership (21-day free trial)" },
     shipping: "2-day express cold shipping included; most orders within 7 days of the medical review",
     commitment: "Month to month, no multi-month orders, cancel anytime; membership billed annually after the trial",
