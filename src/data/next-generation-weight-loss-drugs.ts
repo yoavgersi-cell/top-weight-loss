@@ -504,8 +504,8 @@ export const nextGenWeightLossDrugsArticle: Article = {
 <tr><td>Wegovy (semaglutide), brand shelf at our partner providers</td><td>$1,579-$1,799/mo</td><td>altRx $1,579 · Sprout $1,799</td></tr>
 <tr><td>Foundayo, LillyDirect self-pay</td><td>$149 to $349 a month by dose</td><td>As reported; $25 with commercial coverage and the Lilly savings card</td></tr>
 <tr><td>Wegovy pill via Ro</td><td>$149 first month, then $299, plus membership</td><td>Membership $39 first month, then $74-$149</td></tr>
-<tr><td>Compounded semaglutide, lowest listed</td><td>From $39/month (promotional price, read Nov 20, 2026)</td><td>welludr, Black Friday sale price, no end date stated (welludr's site, read Nov 20, 2026)</td></tr>
-<tr><td>Compounded tirzepatide, lowest listed</td><td>From $69/month (promotional price, read Nov 20, 2026)</td><td>welludr, shipped every 4 weeks, Black Friday sale price (welludr's site, read Nov 20, 2026)</td></tr>
+<tr><td>Compounded semaglutide, lowest listed</td><td>From $35/month (promotional price, read Nov 26, 2026)</td><td>welludr, Black Friday sale price, no end date stated (welludr's site, read Nov 26, 2026)</td></tr>
+<tr><td>Compounded tirzepatide, lowest listed</td><td>From $65/month (promotional price, read Nov 26, 2026)</td><td>welludr, shipped every 4 weeks, Black Friday sale price (welludr's site, read Nov 26, 2026)</td></tr>
 </tbody>
 </table>
 <p>Two practical points. First, Medicare's GLP-1 Bridge pilot covers the approved Wegovy, Zepbound and Foundayo products at a flat copay through 2027, as covered in our <a href="/weight-loss/articles/glp1-after-65-medicare">GLP-1s after 65 guide</a>; a newly approved drug would not automatically join it. Second, new drugs usually take time to win insurance coverage after approval. For most people paying cash, the first year of a new drug is likely to cost more than the approved options do now. Our <a href="/weight-loss/cheapest-glp1">cheapest GLP-1 page</a> keeps the verified prices current, and the <a href="/weight-loss/articles/glp1-with-insurance">insurance guide</a> explains how to check coverage.</p>`,

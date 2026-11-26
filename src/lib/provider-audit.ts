@@ -38,8 +38,8 @@ export const PROVIDER_AUDITS: Record<string, ProviderAuditEntry> = {
   },
   "weight-loss:welludr": {
     rows: [
-      { label: "Semaglutide price", value: "$39/month, a promotional price on a plan its page labels Monthly Plan (read Nov 20, 2026)" },
-      { label: "Tirzepatide price", value: "$69/month, a promotional price on a plan its page labels Monthly Plan (read Nov 20, 2026)" },
+      { label: "Semaglutide price", value: "$35/month, a Black Friday sale price (welludr's site, read Nov 26, 2026); the page labelled the plan Monthly Plan when read Nov 20, 2026" },
+      { label: "Tirzepatide price", value: "$65/month, a Black Friday sale price (welludr's site, read Nov 26, 2026); the page labelled the plan Monthly Plan when read Nov 20, 2026" },
       { label: "Commitment", value: "Monthly Plan, cancel or change anytime (plan page, Nov 20, 2026); the refund policy still describes 12-month plans as prepaid in full (Nov 22, 2026)" },
       { label: "Support", value: "Coach included on every plan" },
       { label: "Guarantee", value: "Weight-loss warranty" },

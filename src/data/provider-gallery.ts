@@ -295,14 +295,14 @@ const GALLERIES: Record<string, ProviderGallery> = {
         alt: "welludr What happens next timeline: step 3 medication delivered to your doorstep, step 4 on-time refills",
       },
       {
-        src: "/provider-gallery/wellmedr/welludr-plans.webp",
-        width: 1400,
-        height: 1785,
-        title: "Plans and prices",
+        src: "/provider-gallery/wellmedr/welludr-banner-1126.webp",
+        width: 1000,
+        height: 116,
+        title: "The Black Friday sale banner",
         caption:
-          "welludr's plan page lists compounded tirzepatide from $71 a month and compounded semaglutide from $41 a month, each shipped every 4 weeks, with dosing adjusted as you respond. This screenshot predates our November 20, 2026 re-read, when welludr's page listed $39 and $69 as promotional prices.",
-        alt: "welludr Choose your GLP-1 plan section: tirzepatide starting at $71 a month and semaglutide starting at $41 a month",
-        price: { semaglutide: 41, tirzepatide: 71 },
+          "The banner at the top of welludr's homepage on November 26, 2026 reads \"BLACK FRIDAY SALE DISCOUNT APPLIED! $35/mo Semaglutide | $65/mo Tirzepatide\", with no end date shown. Cropped to the banner; the screenshot does not show the plan label, shipping cadence or cancellation terms. Our earlier plans screenshot (November 5) showed $41 and $71 and has been retired.",
+        alt: "welludr homepage banner reading Black Friday sale discount applied, $35 a month semaglutide and $65 a month tirzepatide",
+        price: { semaglutide: 35, tirzepatide: 65 },
       },
       {
         src: "/provider-gallery/wellmedr/welludr-brand-name.webp",

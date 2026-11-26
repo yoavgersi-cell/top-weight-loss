@@ -33,7 +33,8 @@ export type PriceIndexRow = {
 // embody re-read November 16 and November 26, 2026 (prices unchanged on
 // Nov 26; see the change log); collective's $59 semaglutide price and
 // terms re-read November 26, 2026 (unchanged; tirzepatide and membership
-// keep their Nov 11 read); shed's 30% first-month offer noted Nov 26, 2026
+// keep their Nov 11 read); welludr's $35/$65 Black Friday sale read November 26, 2026
+// (moved from $39/$69 on Nov 20; see the change log); shed's 30% first-month offer noted Nov 26, 2026
 // (no price shown); altrx's $89 starting price re-read November 26,
 // 2026 (unchanged; tirzepatide $149 and the Nov 20 banner note keep their
 // read date); healthrx and directmeds re-read
@@ -43,10 +44,10 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   {
     providerId: "wellmedr",
     edge: "Lowest ongoing price on the market - same price at every dose",
-    semaglutide: { price: "$39", note: "Black Friday sale discount applied (welludr's site, read Nov 20, 2026); no end date stated; page labels it \"Monthly Plan\" (previously listed as the 12-month plan at $41); shipped every 4 weeks" },
-    tirzepatide: { price: "$69", note: "Black Friday sale discount applied (welludr's site, read Nov 20, 2026); no end date stated; page labels it \"Monthly Plan\" (previously listed as the 12-month plan at $71); shipped every 4 weeks, same price at every dose" },
+    semaglutide: { price: "$35", note: "Black Friday sale discount applied (welludr's site, read Nov 26, 2026); no end date shown; the page labelled it \"Monthly Plan\" when read Nov 20, 2026 at $39 (previously listed as the 12-month plan at $41); shipped every 4 weeks (as read Nov 20)" },
+    tirzepatide: { price: "$65", note: "Black Friday sale discount applied (welludr's site, read Nov 26, 2026); no end date shown; the page labelled it \"Monthly Plan\" when read Nov 20, 2026 at $69 (previously listed as the 12-month plan at $71); shipped every 4 weeks, same price at every dose (as read Nov 20)" },
     shipping: "Ships in 3-5 business days",
-    commitment: "Monthly plan shipped every 4 weeks; cancel or change anytime (the 12-month plan is no longer shown on the page read Nov 20, 2026)",
+    commitment: "Monthly plan shipped every 4 weeks; cancel or change anytime (the 12-month plan was no longer shown on the page read Nov 20, 2026; terms not re-read Nov 26)",
   },
   {
     providerId: "embody",
@@ -74,7 +75,7 @@ export const PRICE_INDEX: PriceIndexRow[] = [
   },
   {
     providerId: "collective",
-    edge: "Tied for the lowest tirzepatide price we track, flat at every dose, with a $199/year membership instead of a markup",
+    edge: "Second-lowest tirzepatide price we track (welludr's Nov 26 sale price is $65), flat at every dose, with a $199/year membership instead of a markup",
     semaglutide: { price: "$59", note: "same price at any dose, no multi-month orders required, cancel easily anytime (Collective's site, read Nov 26, 2026); plus $199/year membership (21-day free trial; membership terms as read Nov 11, 2026)" },
     tirzepatide: { price: "$69", note: "same price at every dose; plus $199/year membership (21-day free trial)" },
     shipping: "2-day express cold shipping included; most orders within 7 days of the medical review",
@@ -183,6 +184,17 @@ export type PriceChange = {
 };
 
 export const PRICE_CHANGELOG: PriceChange[] = [
+  {
+    date: "2026-11-26",
+    providerId: "wellmedr",
+    change:
+      "Black Friday sale price moved again: compounded semaglutide now listed at $35/month (previously $39) and tirzepatide at $65/month (previously $69). welludr's page read \"BLACK FRIDAY SALE DISCOUNT APPLIED! $35/mo Semaglutide | $65/mo Tirzepatide\" on November 26, 2026, with no end date shown. The screenshot does not show the plan label, shipping cadence or cancellation terms, so those keep their November 20 read (Monthly Plan, shipped every 4 weeks, same price at every dose, cancel or change anytime). The page also says its GLP-1 medications have been used by 100,000 patients across the U.S. (welludr's own statement). Compounded medicines are not FDA-approved.",
+    moves: [
+      { drug: "semaglutide", from: 39, to: 35, condition: "Black Friday sale; no end date shown" },
+      { drug: "tirzepatide", from: 69, to: 65, condition: "Black Friday sale; no end date shown" },
+    ],
+    source: "welludr (wellmedr.com) homepage, operator screenshot, November 26, 2026",
+  },
   {
     date: "2026-11-26",
     providerId: "shed",

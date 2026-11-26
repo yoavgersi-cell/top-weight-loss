@@ -48,7 +48,7 @@ export const LEGIT_PAGES: Record<string, LegitPageData> = {
       { ok: true, text: "Cancellation and refund terms published on the provider's site (a weight-loss guarantee was not found in them, read Nov 22, 2026)" },
       { ok: false, text: "welludr's refund policy (read Nov 22, 2026) describes its 12-month plans as prepaid in full, while its plan page now shows a Monthly Plan at a promotional price (read Nov 20, 2026); standard delivery is 3-5 business days" },
     ],
-    priceLine: "$39/mo compounded semaglutide · $69/mo (promotional prices, read Nov 20, 2026) tirzepatide, the same price at every dose",
+    priceLine: "$35/mo compounded semaglutide · $65/mo (promotional prices, read Nov 26, 2026) tirzepatide, the same price at every dose",
     alternative: { text: "Want a month-to-month alternative? Compare it in embody vs welludr", href: "/embody-vs-wellmedr" },
     capture: {
       image: "/verification/wellmedr-pricing-2026-10-05.webp",
@@ -68,9 +68,9 @@ export const LEGIT_PAGES: Record<string, LegitPageData> = {
           label: "Plan picker",
           wide: true,
           shows:
-            "Two plans. Tirzepatide, \"Most Powerful Option\", monthly plan starting at $69 a month (promotional price, read Nov 20, 2026), shipped every 4 weeks, same price regardless of dosage, cancel or change anytime. Semaglutide, \"Proven & Steady\", starting at $39 a month (promotional price, read Nov 20, 2026), provider reviews your intake, dosing adjusted as your body responds. Both carry a \"Recommended for most patients\" badge.",
+            "Two plans. Tirzepatide, \"Most Powerful Option\", monthly plan starting at $65 a month (promotional price, read Nov 26, 2026), shipped every 4 weeks, same price regardless of dosage, cancel or change anytime. Semaglutide, \"Proven & Steady\", starting at $35 a month (promotional price, read Nov 26, 2026), provider reviews your intake, dosing adjusted as your body responds. Both carry a \"Recommended for most patients\" badge.",
           note:
-            "The $39 and $69 (promotional prices, read Nov 20, 2026) match the prices we verified. \"Starting at\" is the phrase to read carefully: when we last checked, welludr's refund policy (read Nov 22, 2026) describes its 12-month plans as prepaid in full, so confirm the plan term and the amount charged on the checkout screen before you pay. A badge that recommends both medicines for most patients is marketing; the clinician who reviews your intake decides which, if either, is right for you.",
+            "The $35 and $65 (promotional prices, read Nov 26, 2026) match the prices we verified. \"Starting at\" is the phrase to read carefully: when we last checked, welludr's refund policy (read Nov 22, 2026) describes its 12-month plans as prepaid in full, so confirm the plan term and the amount charged on the checkout screen before you pay. A badge that recommends both medicines for most patients is marketing; the clinician who reviews your intake decides which, if either, is right for you.",
         },
         {
           image: "/verification/welludr-site-2026-11-10/why-people-choose.webp",
