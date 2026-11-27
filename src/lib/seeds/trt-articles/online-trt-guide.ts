@@ -77,6 +77,8 @@ const S = {
 
 export const TRT_ONLINE_GUIDE: ArticleData = {
   slug: "online-trt-guide",
+  image: "/article-images/online-trt-guide.webp",
+  imageAlt: "Man on a phone call at his kitchen table with coffee and a laptop",
   title: "Online TRT in 2026: The Complete Guide to Telehealth TRT",
   description:
     "Online TRT explained: who qualifies, the first telehealth consult, baseline and monitoring labs, formats, results, safety, DEA rules and choosing a clinic.",

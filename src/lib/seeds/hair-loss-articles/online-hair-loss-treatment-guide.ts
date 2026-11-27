@@ -67,6 +67,8 @@ const S = {
 
 export const HL_ONLINE_TREATMENT_GUIDE: ArticleData = {
   slug: "online-hair-loss-treatment-guide",
+  image: "/article-images/online-hair-loss-treatment-guide.webp",
+  imageAlt: "Man on a video call at a home desk with a laptop and headphones",
   title: "Online Hair Loss Treatment in 2026: The Complete Guide",
   description:
     "How online hair loss treatment works in 2026: finasteride, dutasteride, oral vs topical minoxidil, lasers and PRP compared, and how to pick a trusted provider.",
