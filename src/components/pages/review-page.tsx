@@ -88,7 +88,9 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   },
   // ED vertical (ported from edtreatmenthub.com, Oct 21, 2026)
   quad: {
-    title: "MEDVi Quad ED Medication Review 2026: Cost & Is It Legit?",
+    // Nov 27, 2026 CTR pass: uses the page's own name "Quad by MEDVi"; no
+    // "scam" (the page never uses it) and "medication", not "pill" (sublingual).
+    title: "Is Quad by MEDVi Legit? ED Medication Cost & Review",
     description:
       "Quad by MEDVi is a compounded 4-in-1 ED medication, not FDA-approved. What is in it, what it costs, who it suits and whether it is legit.",
   },
@@ -117,7 +119,9 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
     // the review-and-complaints intent leads, and the "1-2 days" shipping
     // claim is gone - no page on joinem.co states a day count and its Terms
     // say delivery timelines are not guaranteed (Atlas read, Nov 16, 2026).
-    title: "embody Weight Loss Reviews 2026: Complaints & Refund Rules",
+    // Nov 27, 2026 CTR pass: "$49 Sale Price" (price-index labels $49 a sale
+    // price; the figure is the index value, read Nov 26, 2026).
+    title: "embody Weight Loss Reviews 2026: Complaints & $49 Sale Price",
     description:
       "embody weight loss reviews: we checked the $49 sale price (read Nov 26, 2026), the refund rule in its Terms and sorted the complaints. The catches first.",
   },
@@ -136,9 +140,11 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "Sprout reviews: {prices}, brand-name Wegovy available. Is Sprout legit? Pricing, pros & cons.",
   },
   altrx: {
-    title: "altRx Reviews 2026: Complaints, Prices & What $89 Buys",
+    // Nov 27, 2026 CTR pass: the review owns "reviews / complaints / price";
+    // is-altrx-legit owns "legit / scam". Description trimmed to 155 or less.
+    title: "altRx Reviews & Complaints 2026: Is the $89 Plan Worth It?",
     description:
-      "altRx (alt rx) reviews: plans from $89 semaglutide and $149 tirzepatide (site, read Nov 20, 2026), brand-name Ozempic, shipping and the complaints we found.",
+      "altRx (alt rx) reviews: plans from $89 semaglutide and $149 tirzepatide (site, read Nov 20, 2026), brand-name Ozempic, shipping and the complaints.",
   },
   ro: {
     // Title matches the generated shared-provider title byte-for-byte - this
