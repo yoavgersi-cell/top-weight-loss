@@ -49,12 +49,12 @@ const HERO_COLOR = "#EEF4F1";
 const READ_TIME = "17 min read";
 
 export const metadata: Metadata = {
-  title: "Weight Loss Pills 2026: Wegovy Pill, Foundayo & More",
+  title: "Weight Loss Pills 2027: Wegovy Pill, Foundayo & More",
   description:
-    "Prescription weight loss pills in 2026: FDA-approved GLP-1 pills (Wegovy pill, Foundayo, Rybelsus), Qsymia, Contrave, phentermine and compounded options.",
+    "Prescription weight loss pills in 2027: FDA-approved GLP-1 pills (Wegovy pill, Foundayo, Rybelsus), Qsymia, Contrave, phentermine and compounded options.",
   alternates: { canonical: CANONICAL },
   openGraph: { images: [DEFAULT_OG_IMAGE],
-    title: "Weight Loss Pills 2026: Wegovy Pill, Foundayo & More",
+    title: "Weight Loss Pills 2027: Wegovy Pill, Foundayo & More",
     description:
       "Every prescription weight loss pill, compared: the FDA-approved GLP-1 pills, the older approved pills, compounded oral options, results, prices and safety.",
     url: CANONICAL,
@@ -279,7 +279,7 @@ export default async function WeightLossPillsPage() {
     "@context": "https://schema.org",
     "@type": "Article",
     image: ["https://www.treatmentshub.com/og-default.png"],
-    headline: "Weight Loss Pills 2026: Wegovy Pill, Foundayo, Rybelsus & Every Other Prescription Option",
+    headline: "Weight Loss Pills 2027: Wegovy Pill, Foundayo, Rybelsus & Every Other Prescription Option",
     description: metadata.description,
     datePublished: PAGE_PUBLISHED,
     dateModified: PAGE_UPDATED,
@@ -385,7 +385,7 @@ export default async function WeightLossPillsPage() {
               </span>
             </div>
             <h1 className="text-[22px] font-bold leading-[1.2] tracking-[-0.01em] text-[#191919] sm:max-w-[640px] sm:text-[32px] sm:leading-tight sm:tracking-normal">
-              Weight Loss Pills in 2026: Every Prescription Option, Compared
+              Weight Loss Pills in 2027: Every Prescription Option, Compared
             </h1>
             <AffiliateNote className="mt-3" />
             <p className="mt-2 max-w-[640px] text-[14px] leading-[1.45] text-gray-600 sm:text-[16px] sm:leading-[1.55]">
