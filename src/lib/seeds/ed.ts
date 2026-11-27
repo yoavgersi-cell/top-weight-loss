@@ -40,7 +40,7 @@ export function edSeed(base: SiteConfig): SiteConfig {
       backgroundImageUrl: "",
       imageAlt: "Erectile dysfunction treatment options",
       updatedLabel: RANKING_UPDATED_LABEL,
-      h1: "Best Erectile Dysfunction (ED) Treatments Online 2026",
+      h1: "Best Erectile Dysfunction (ED) Treatments Online 2027",
       h2: "The top online ED treatment providers, ranked and reviewed",
       description:
         "Compare licensed online erectile dysfunction (ED) clinics by treatment, price and support - from generic pills to compounded multi-ingredient options.",
