@@ -1399,7 +1399,7 @@ export function trtSeed(base: SiteConfig): SiteConfig {
       imageAlt: "Testosterone replacement therapy options",
       // Oct 22, 2026: copy adopted from toptrt.io when its content was folded in.
       updatedLabel: RANKING_UPDATED_LABEL,
-      h1: "Best Online TRT Clinics of 2026",
+      h1: "Best Online TRT Clinics of 2027",
       h2: "The top online testosterone replacement therapy providers, ranked and reviewed",
       description:
         "Compare licensed online TRT clinics by testing, treatment options, price and ongoing support - from at-home hormone testing to physician-guided testosterone therapy.",
