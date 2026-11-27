@@ -2571,7 +2571,7 @@ export function hairLossSeed(base: SiteConfig): SiteConfig {
       backgroundImageUrl: "/hero-hair-loss.webp",
       imageAlt: "Man with thick, healthy hair",
       updatedLabel: RANKING_UPDATED_LABEL,
-      h1: "Best Hair Loss Treatments & Providers of 2026",
+      h1: "Best Hair Loss Treatments & Providers of 2027",
       h2: "Compare the top hair-loss telehealth providers, side by side",
       description:
         "Compare the best online hair-loss providers (finasteride, minoxidil, dutasteride and doctor-led regrowth programs) on treatments, medical support and value.",
