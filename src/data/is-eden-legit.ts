@@ -35,9 +35,9 @@ export const isEdenLegitArticle: Article = {
   slug: "is-eden-legit",
   image: "/article-images/is-eden-legit.webp",
   imageAlt: "Man in his 40s sitting on a park bench in late afternoon light, reading on his phone with a tote bag beside him",
-  title: "Is Eden (TryEden) Legit or a Scam? Pharmacy, Price, Refunds",
+  title: "Is TryEden Legit or a Scam? Eden Pharmacy, Price, Refunds",
   description:
-    "Is Eden (TryEden) legit or a scam? We read its Terms and pharmacy pages on Nov 24, 2026: the $99 price, who fills the prescription, how to cancel, refunds.",
+    "Is TryEden legit or a scam? We read Eden's Terms and pharmacy pages (Nov 24, 2026): the $99 price, who fills the Rx, how to cancel, refunds.",
   category: "Advice",
   readTime: "13 min read",
   publishedAt: "2026-11-24",

@@ -159,9 +159,9 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "MEDGm reviews: compounded GLP-1 injections from $169, daily GLP-1 tablets from $239 and brand-name Zepbound on a $99 membership plus medication. Pros and cons.",
   },
   eden: {
-    title: "Eden (TryEden) Reviews 2026: $99 Flat GLP-1, Legit or Not?",
+    title: "Eden Weight Loss Reviews 2026: Real Cost, Pros & Cons",
     description:
-      "Eden (TryEden) reviews: {prices}, flat at every dose. Is Eden legit? Pros, cons, refunds, Terms and verdict.",
+      "Eden (TryEden) reviews: {prices}. Pros, cons, refund terms and verdict. Compounded GLP-1s are not FDA-approved.",
   },
   trimrx: {
     title: "TrimRx Reviews 2026 (Trim Rx): Is It Legit? Cost & Verdict",
