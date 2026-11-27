@@ -1357,7 +1357,7 @@ export function hrtSeed(base: SiteConfig): SiteConfig {
       // Search Console data showed the "online HRT for women" phrasing wins
       // the commercial cluster; the ranking stayed the three partner providers.
       updatedLabel: RANKING_UPDATED_LABEL,
-      h1: "Best Online HRT for Women of 2026",
+      h1: "Best Online HRT for Women of 2027",
       h2: "The top online menopause & HRT providers, ranked and reviewed",
       description:
         "Compare licensed online menopause clinics by treatment options, price, insurance and real clinician support - care models, specialist focus and what each one actually prescribes.",
