@@ -15,6 +15,7 @@ import { embodyVsRoWeightLossArticle } from "./embody-vs-ro-weight-loss";
 import { compoundedSemaglutideGoingAwayArticle } from "./compounded-semaglutide-going-away";
 import { howToCancelTelehealthGlp1SubscriptionArticle } from "./how-to-cancel-telehealth-glp1-subscription";
 import { isEdenLegitArticle } from "./is-eden-legit";
+import { edenCostArticle } from "./eden-cost";
 import { trueCostTable, budgetList } from "@/lib/true-cost";
 
 export interface Article {
@@ -1875,7 +1876,7 @@ export const articles: Article[] = [
       },
       {
         heading: "How does Embody's pricing compare?",
-        body: 'At $49/month for semaglutide, Embody is among the most affordable GLP-1 options online. Other providers price differently - for example <a href="/weight-loss/reviews/altrx">altRx</a> starts at $89/month with brand-name options too. Because the lowest headline price isn\'t always the best fit, compare shipping speed, support and treatment options as well. See the full lineup in our <a href="/weight-loss/reviews">provider rankings</a>.',
+        body: 'At $49/month for semaglutide, Embody is among the most affordable GLP-1 options online. Other providers price differently - for example <a href="/weight-loss/reviews/altrx">altRx</a> starts at $89/month with brand-name options too. Because the lowest headline price isn\'t always the best fit, compare shipping speed, support and treatment options as well. For a flat plan priced higher, see <a href="/weight-loss/articles/eden-cost">Eden cost: $99 semaglutide, $129 tirzepatide</a>. See the full lineup in our <a href="/weight-loss/reviews">provider rankings</a>.',
       },
       {
         heading: "Is Embody worth it?",
@@ -2809,4 +2810,5 @@ export const articles: Article[] = [
   compoundedSemaglutideGoingAwayArticle,
   howToCancelTelehealthGlp1SubscriptionArticle,
   isEdenLegitArticle,
+  edenCostArticle,
 ];
