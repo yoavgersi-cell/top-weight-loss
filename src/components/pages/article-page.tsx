@@ -73,9 +73,20 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
   "is-altrx-legit": {
     // Keeps the keyword-rich SERP snippet (prices, flat-dose) even though the
     // visible on-page dek was shortened to a clean editorial line.
-    title: "Is altRx Legit or a Scam? What We Found Before You Pay $89",
+    // Nov 27, 2026 CTR pass: the review page (reviews/altrx) owns "reviews,
+    // complaints, price"; this page owns "legit / scam", so no price or
+    // complaints promise here (the page has no complaints section).
+    title: "Is altRx Legit or a Scam? Prescribers, Pharmacy & Catches",
     description:
-      "Is altRx legit? A real telehealth provider with a licensed prescriber review, $89 compounded plans and brand-name Ozempic at $1,149+. The catches to know first.",
+      "Is altRx legit? Licensed prescriber review, $89 compounded plans (not FDA-approved) and brand-name Ozempic at $1,149+. The catches to know first.",
+  },
+  // Nov 27, 2026 CTR pass. The H1 is article.title and stays as is; only the
+  // meta title and description change. $39 is ro's first-month membership
+  // (the page's own table), not the medication, so the title says so.
+  "ro-cost": {
+    title: "ro Weight Loss Cost 2026: $39 Membership + Year-One Total",
+    description:
+      "ro charges a $39 first-month membership, then $74-$149, plus medication: Wegovy pill $149 the first month, then $299. Your year-one total, worked out.",
   },
   "tirzepatide-vs-semaglutide": {
     title: "Tirzepatide vs Semaglutide (2026): Results & Prices",
@@ -249,6 +260,18 @@ const QUICK_ANSWER_STAMPS: Record<string, string> = {
     "Ro's prices are its own published figures, verified August 2026. Manufacturer prices are as reported by the dated sources linked in the article and are not verified by us.",
 };
 
+// Same idea for the hair-loss vertical (code-authoritative, so no stored copy
+// to shadow it). Kept separate so the weight-loss map above never applies here.
+const HAIR_LOSS_ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+  // Nov 27, 2026 CTR pass: meta title only; the H1 stays "Does Iron Deficiency
+  // Cause Hair Loss? The Ferritin Test". Description unchanged.
+  "iron-deficiency-hair-loss": {
+    title: "Can Iron Deficiency Cause Hair Loss? Ferritin Test Guide",
+    description:
+      "Low iron can drive shedding, mostly in women, but the evidence is limited. The ferritin blood test to ask for, what it shows and why regrowth lags by months.",
+  },
+};
+
 export async function articleMetadata(slug: string, ctx: SiteContext): Promise<Metadata> {
   const config = await getConfig(ctx.vertical);
   const article = (config.articles ?? []).find((a) => a.slug === slug);
@@ -257,7 +280,12 @@ export async function articleMetadata(slug: string, ctx: SiteContext): Promise<M
   const url = canonicalUrl(ctx, `/articles/${slug}`);
 
   // CTR override (code-controlled) wins over stored meta for target articles.
-  const override = ctx.vertical === "weight-loss" ? ARTICLE_SEO_OVERRIDES[slug] : undefined;
+  const override =
+    ctx.vertical === "weight-loss"
+      ? ARTICLE_SEO_OVERRIDES[slug]
+      : ctx.vertical === "hair-loss"
+        ? HAIR_LOSS_ARTICLE_SEO_OVERRIDES[slug]
+        : undefined;
 
   return {
     title: override?.title ?? article.title,
