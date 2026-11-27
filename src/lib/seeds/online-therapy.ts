@@ -1394,7 +1394,7 @@ export function onlineTherapySeed(base: SiteConfig): SiteConfig {
       backgroundImageUrl: "",
       imageAlt: "",
       updatedLabel: RANKING_UPDATED_LABEL,
-      h1: "Best Online Therapy Platforms of 2026",
+      h1: "Best Online Therapy Platforms of 2027",
       h2: "The top therapy & psychiatry platforms, compared honestly",
       description:
         "Insurance, medication management and session formats - side by side, so you can pick the right platform. In crisis? Call or text 988 (US), free and open 24/7.",

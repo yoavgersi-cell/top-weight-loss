@@ -78,6 +78,9 @@ const CODE_AUTHORITATIVE_BLOB_ARTICLES = new Set([
   "online-therapy-psychiatry-guide",
 ]);
 
+// Blob-backed verticals whose hub H1 (the page title) always comes from code.
+const CODE_AUTHORITATIVE_HERO_H1 = new Set(["online-therapy"]);
+
 // The CMS snapshot is read through Next's data cache (60 s, tag "site-config",
 // purged by the save route). A `cache: "no-store"` read here used to opt every
 // page that calls getConfig out of static rendering: on Vercel that was a MISS
@@ -109,7 +112,15 @@ async function getVerticalConfig(vertical: string): Promise<SiteConfig> {
           : base.articles;
         // The ranking date is code-authoritative (RANKING_UPDATED_LABEL), like
         // the weight-loss hero text, so a CMS snapshot can't freeze it.
-        const hero = { ...base.hero, ...(saved.hero ?? {}), updatedLabel: base.hero.updatedLabel };
+        // Nov 27, 2026: the hub H1 doubles as the page title; for the verticals
+        // below it is also code-authoritative, so the 2027 year-roll ships from
+        // code instead of being shadowed by the h1 a CMS snapshot stored.
+        const hero = {
+          ...base.hero,
+          ...(saved.hero ?? {}),
+          ...(CODE_AUTHORITATIVE_HERO_H1.has(vertical) ? { h1: base.hero.h1 } : {}),
+          updatedLabel: base.hero.updatedLabel,
+        };
         return normalizeBrandCasing({ ...base, ...saved, hero, articles }, `/${vertical}`);
       }
     }
