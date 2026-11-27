@@ -63,7 +63,7 @@ export const edenCostArticle: Article = {
     `Eden lists compounded semaglutide at ${usd(EDEN.sema)} a month and compounded tirzepatide at ${usd(EDEN.tirz)}, the same every month and at every dose (eden.health, read Nov 27, 2026). Neither is FDA-approved.`,
     `Twelve months at the listed price is ${months(EDEN.sema, 12)} for semaglutide and ${months(EDEN.tirz, 12)} for tirzepatide (our arithmetic). Eden shows no 3-, 6- or 12-month plan, and its Terms let it change prices.`,
     `Eden's pages say "There is no separate membership fee," but its Terms still describe a "recurring membership model, as is displayed at checkout." We did not see checkout, so we have not seen the total due.`,
-    `Brand-name Wegovy is listed at ${usd(EDEN.wegovy)} a month and Zepbound at ${usd(EDEN.zepbound)}. Cancel at least 48 hours before renewal; charges are non-refundable once an order is fulfilled.`,
+    `Brand-name Wegovy is listed at ${usd(EDEN.wegovy)} a month and Zepbound at ${usd(EDEN.zepbound)}. Cancel before your next scheduled billing date (48 hours ahead for the Eden Membership Program); charges are non-refundable once an order is fulfilled.`,
   ],
   sections: [
     {
@@ -137,7 +137,7 @@ export const edenCostArticle: Article = {
 <p><strong>The brand-name rows.</strong> Eden lists Wegovy at ${usd(EDEN.wegovy)} a month ("No long-term contracts. Same price at every dose.") and Zepbound at ${usd(EDEN.zepbound)} a month. Its footer says "Eden has no ownership over brand-name, FDA-approved medications or products," and the brand pages do not say which pharmacy fills those prescriptions. A year of Wegovy at the listed price is ${usd(EDEN.wegovy * 12 - EDEN.sema * 12)} more than a year of compounded semaglutide; a year of Zepbound is ${usd(EDEN.zepbound * 12 - EDEN.tirz * 12)} more than compounded tirzepatide. Those are different products with different regulatory status, not two prices for the same item. Eden's own page says compounded medications are not FDA-approved and that the FDA does not review them for safety or effectiveness. Which one is appropriate is a decision for you and a licensed clinician.</p>`,
     },
     {
-      heading: "How do I cancel Eden, and what is the 48-hour cutoff?",
+      heading: "How do I cancel Eden, and what is the cutoff?",
       body: `<p>Per the Terms (revised Nov 16, 2026) and the FAQ, read Nov 27, 2026:</p>
 <ol>
 <li>Cancel "through your Account Settings or by contacting Customer Support." The FAQ says you can pause or cancel "from your patient portal."</li>
@@ -163,9 +163,9 @@ export const edenCostArticle: Article = {
       body: `<p>Eden's product pages say: "Follow the plan, lose at least 15% in 6 months or get your money back. See Terms of Service for additional details." The FAQ is more careful: "you may qualify for your money back. Eligibility depends on the full warranty terms, including plan adherence and required check-ins." Do not read it as a plain money-back guarantee. The conditions (Terms, revised Nov 16, 2026; read Nov 27, 2026):</p>
 <table><thead><tr><th>Condition</th><th>The Terms</th></tr></thead><tbody>
 <tr><td>Doses</td><td>26 consecutive weekly doses "without skipping any doses"</td></tr>
-<tr><td>Community post</td><td>A post about your journey every calendar week in Eden's private Facebook group</td></tr>
-<tr><td>Check-ins</td><td>Weekly check-ins through the member portal</td></tr>
-<tr><td>Proof</td><td>Two videos showing a scale reading</td></tr>
+<tr><td>Community post</td><td>A weekly post in Eden's private Facebook group</td></tr>
+<tr><td>Check-ins</td><td>Weekly check-ins</td></tr>
+<tr><td>Proof</td><td>Two scale videos</td></tr>
 <tr><td>Form of medication</td><td>Injectable only; "tablet or liquid forms" are not eligible</td></tr>
 <tr><td>Exclusions</td><td>Listed in the Terms</td></tr>
 <tr><td>Who decides</td><td>"The final eligibility decision will be made at the sole discretion of Eden."</td></tr>
@@ -180,7 +180,7 @@ export const edenCostArticle: Article = {
     },
     {
       heading: "Which pharmacy does Eden use, and what did the FDA letter say?",
-      body: `<p>Eden's FAQ says your medication "is prepared by Eden Pharmacy or one of Eden's vetted U.S. pharmacy partners." Eden Pharmacy is in Albuquerque, NM. The partner pharmacies are not named, and we found no statement of whether the pharmacy is a 503A pharmacy or a 503B outsourcing facility (see <a href="/weight-loss/articles/503a-vs-503b-pharmacy-28-day-rule">503A vs 503B</a>). The Terms say medical services come from "a contracted network of physicians licensed in the state where you reside," with no group named.</p>
+      body: `<p>Eden's FAQ says your medication "is prepared by Eden Pharmacy or one of Eden's vetted U.S. pharmacy partners." Eden Pharmacy is in Albuquerque, NM (Eden's pharmacy site, read Nov 24, 2026). The partner pharmacies are not named, and we found no statement of whether the pharmacy is a 503A pharmacy or a 503B outsourcing facility (see <a href="/weight-loss/articles/503a-vs-503b-pharmacy-28-day-rule">503A vs 503B</a>). The Terms say medical services come from "a contracted network of physicians licensed in the state where you reside," with no group named.</p>
 <p>On the FDA's side, the ${ext(S.letter, "warning letter")} is dated June 8, 2026 (MARCS-CMS 728279), from the Office of Compounding Quality and Compliance to Eden Health International Inc. The FDA page reads "Content current as of: 06/16/2026." It makes two findings about the website, which the FDA reviewed in March 2026: product labels that show "Eden," "suggesting Eden is the compounder of those drugs when in fact it is not," and a claim that products come from "FDA-licensed 503(a) outsourcing facilities," which the FDA says is not a designation the law establishes. The FDA asked for a response within 15 business days. When we read the page on Nov 27, 2026 it showed no response letter and no close-out letter. The letter is about labelling and advertising claims. It makes no finding about the quality of the medication. We draw no conclusion beyond that, and the full record is in <a href="/weight-loss/articles/is-eden-legit">Is TryEden legit?</a></p>`,
     },
     {
