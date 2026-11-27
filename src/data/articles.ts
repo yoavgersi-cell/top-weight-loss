@@ -2314,6 +2314,8 @@ export const articles: Article[] = [
   },
   {
     slug: "glp1-true-cost-month-1-vs-year-one",
+    image: "/article-images/glp1-true-cost-month-1-vs-year-one.webp",
+    imageAlt: "Couple at a kitchen table going over household plans on a laptop",
     title: "What Will I Really Pay for a GLP-1? Month 1 to Year One",
     description:
       "The real cost of online GLP-1 treatment at verified prices: month 1, what you keep paying at your dose, and what year one adds up to, provider by provider.",

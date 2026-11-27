@@ -71,6 +71,8 @@ const S = {
 
 export const OT_ONLINE_THERAPY_PSYCHIATRY_GUIDE: ArticleData = {
   slug: "online-therapy-psychiatry-guide",
+  image: "/article-images/online-therapy-psychiatry-guide.webp",
+  imageAlt: "Man in a sunroom chair on a laptop video call with earbuds in",
   title: "Online Therapy & Psychiatry: The Complete 2026 Guide",
   description:
     "How online therapy and online psychiatry work in 2026: the evidence, formats, costs, insurance, free options and privacy, plus how the main platforms differ.",
