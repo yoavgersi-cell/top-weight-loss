@@ -35,9 +35,9 @@ export const isEdenLegitArticle: Article = {
   slug: "is-eden-legit",
   image: "/article-images/is-eden-legit.webp",
   imageAlt: "Man in his 40s sitting on a park bench in late afternoon light, reading on his phone with a tote bag beside him",
-  title: "Is Eden (TryEden) Legit or a Scam? Pharmacy, Price, Refunds",
+  title: "Is TryEden Legit or a Scam? Eden Pharmacy, Price, Refunds",
   description:
-    "Is Eden (TryEden) legit or a scam? We read its Terms and pharmacy pages on Nov 24, 2026: the $99 price, who fills the prescription, how to cancel, refunds.",
+    "Is TryEden legit or a scam? We read Eden's Terms and pharmacy pages (Nov 24, 2026): the $99 price, who fills the Rx, how to cancel, refunds.",
   category: "Advice",
   readTime: "13 min read",
   publishedAt: "2026-11-24",
@@ -89,7 +89,7 @@ export const isEdenLegitArticle: Article = {
 <tr><td>First 6 months</td><td>$594</td><td>$774</td></tr>
 <tr><td>First 12 months</td><td>$1,188</td><td>$1,548</td></tr>
 </tbody></table>
-<p>Those totals multiply the listed monthly price by 6 and 12. They assume Eden does not change the price and that you do not pause. For other providers' prices, see our <a href="/weight-loss/glp1-price-changes">GLP-1 price tracker</a>.</p>
+<p>Those totals multiply the listed monthly price by 6 and 12. They assume Eden does not change the price and that you do not pause. For other providers' prices, see our <a href="/weight-loss/glp1-price-changes">GLP-1 price tracker</a>; month-by-month detail is in <a href="/weight-loss/articles/eden-cost">Eden cost: $99 semaglutide, $129 tirzepatide</a>.</p>
 <p><strong>What the price includes.</strong> Eden says the monthly price covers "your prescribed Authentic Eden™ medication and the complete care system around it": provider review, clinician-guided support, 24/7 messaging, dose and side-effect guidance, priority delivery, a member community, and provider-directed labwork "when needed." Shipping is free and described as expedited. A step on the tirzepatide page is labelled "2 - 3 business days" for delivery, without saying whether the count starts at the prescription or at shipment, and we found no guaranteed delivery time in the Terms. The page says the program is "FSA & HSA eligible." Per the Terms, Eden and its providers "do not accept commercial health insurance plans."</p>`,
     },
     {

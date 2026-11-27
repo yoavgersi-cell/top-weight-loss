@@ -1113,6 +1113,10 @@ const defaultReviews: ReviewData[] = [
     // Zepbound label (DailyMed, revised 8/2026).
     sections: [
       {
+        heading: "Eden cost in detail",
+        body: `<p>Month-by-month and 12-month totals, what the price includes and the membership wording we could not check at checkout are in <a href="/weight-loss/articles/eden-cost">Eden cost: $99 semaglutide, $129 tirzepatide</a> (read November 27, 2026).</p>`,
+      },
+      {
         heading: "What did the FDA's June 2026 warning letter to Eden say?",
         body: `<p>The <a href="https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/eden-health-international-inc-dba-eden-728279-06082026" target="_blank" rel="noopener noreferrer">letter</a> is dated June 8, 2026, reference MARCS-CMS 728279, from the FDA's Office of Compounding Quality and Compliance to Eden Health International Inc. (read November 22, 2026). It makes two findings about Eden's website: pictured product labels that carried the "Eden" name, which the FDA said "suggest[s] Eden is the compounder of those drugs when in fact it is not", and a description of its pharmacies as "FDA-licensed 503(a) outsourcing facilities", when the FDA says compounding facilities "are not 'FDA-approved' or 'FDA-licensed' entities". The FDA classed both as misbranding under sections 502(a) and 502(bb) of the Federal Food, Drug, and Cosmetic Act and asked for a written response within 15 business days. <a href="https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/trinity-healthcare-supply-llc-dba-altrx-728236-06082026" target="_blank" rel="noopener noreferrer">altRx received a letter dated the same day</a>.</p>
 <p>The letter contains no finding about the medication itself: no test result, no adverse-event report, no quality defect. It is also not a clearance, because compounded products "have not been evaluated by FDA for safety, effectiveness, or quality before marketing", and that applies to every compounded provider we rank. On the FDA's warning-letters list, the response and close-out columns for Eden were empty when we read them on November 22, 2026. The quoted "FDA-licensed 503(a) outsourcing facilities" wording did not appear on the Eden pages we read on November 24, 2026, and those pages describe Eden Pharmacy (Albuquerque, NM) and "vetted U.S. pharmacy partners". We draw no conclusion about compliance. The two-finding table, the current wording and the list of what we could not verify are in <a href="/weight-loss/articles/is-eden-legit">Is Eden (TryEden) legit or a scam?</a>, which also covers the pharmacy, cancel steps and refund terms.</p>`,
@@ -4270,6 +4274,7 @@ const CODE_NEWER_ARTICLE_SLUGS = new Set([
   "choosing-telehealth-weight-loss-provider",
   "compounded-semaglutide-vs-brand-name",
   "embody-alternatives",
+  "eden-cost",
   "embody-cost",
   "emotional-eating-and-weight-loss",
   "exercise-while-on-glp1-medication",
@@ -4282,6 +4287,7 @@ const CODE_NEWER_ARTICLE_SLUGS = new Set([
   "how-long-for-semaglutide-to-work",
   "how-to-get-ozempic-online",
   "in-person-vs-online-weight-loss",
+  "is-eden-legit",
   "is-embody-legit",
   "menopause-weight-gain",
   "mounjaro-vs-ozempic",
