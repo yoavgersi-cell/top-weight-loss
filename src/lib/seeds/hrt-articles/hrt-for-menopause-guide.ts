@@ -63,6 +63,8 @@ const S = {
 
 export const HRT_FOR_MENOPAUSE_GUIDE: ArticleData = {
   slug: "hrt-for-menopause-guide",
+  image: "/article-images/hrt-for-menopause-guide.webp",
+  imageAlt: "Woman holding a mug of tea by a sunlit living room window",
   title: "HRT for Menopause: The Complete 2026 Guide",
   description:
     "HRT for menopause explained: who it suits, the starting window, how long to stay on it, patch vs pill, side effects, the label change and online care.",

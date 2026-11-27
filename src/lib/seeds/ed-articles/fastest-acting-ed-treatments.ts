@@ -32,6 +32,8 @@ const S = {
 
 export const ED_FASTEST_ACTING: ArticleData = {
   slug: "fastest-acting-ed-treatments",
+  image: "/article-images/fastest-acting-ed-treatments.webp",
+  imageAlt: "Man in a car passenger seat looking out at a city street at dusk",
   title: "Fastest-Acting ED Treatments: Sprays, Films & Sublinguals",
   description:
     "ED nasal spray, sildenafil oral film, under-the-tongue tablets: what's FDA-approved, how fast each really works, and what the evidence shows.",

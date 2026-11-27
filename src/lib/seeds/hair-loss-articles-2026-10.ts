@@ -22,6 +22,8 @@ const S = {
 export const HAIR_LOSS_ARTICLES_2026_10: ArticleData[] = [
   {
     slug: "breezula-clascoterone-hair-loss",
+    image: "/article-images/breezula-clascoterone-hair-loss.webp",
+    imageAlt: "Man sitting on a park bench holding his cap and phone",
     title: "Breezula (Clascoterone) for Hair Loss: Phase 3 Results, Date",
     description:
       "What Cosmo's SCALP 1 and 2 trials of clascoterone 5% reported, the early-2027 filing plan, why nothing sold now is Breezula, and what to use meanwhile.",

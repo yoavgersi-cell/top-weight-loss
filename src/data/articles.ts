@@ -1103,6 +1103,8 @@ export const articles: Article[] = [
   },
   {
     slug: "best-ro-alternatives",
+    image: "/article-images/best-ro-alternatives.webp",
+    imageAlt: "Man comparing online options on a laptop from his living room sofa",
     title: "Best Ro Alternatives for Weight Loss in 2026",
     description:
       "Looking for alternatives to Ro for weight loss? Seven telehealth providers compared on verified GLP-1 pricing, commitment terms, support and medication options.",
@@ -1553,6 +1555,8 @@ export const articles: Article[] = [
   },
   {
     slug: "best-noom-alternatives",
+    image: "/article-images/best-noom-alternatives.webp",
+    imageAlt: "Woman looking at her phone at a café table with a cup of tea",
     title: "Best Noom Alternatives for Weight Loss in 2026",
     description:
       "Looking for alternatives to Noom? Seven GLP-1 telehealth providers compared on verified pricing, support and commitment terms - with and without coaching.",
@@ -1597,6 +1601,8 @@ export const articles: Article[] = [
   },
   {
     slug: "best-ozempic-alternatives",
+    image: "/article-images/best-ozempic-alternatives.webp",
+    imageAlt: "Man reading on his phone at a break room table during lunch",
     title: "Best Ozempic Alternatives for Weight Loss in 2026",
     description:
       "Can't get Ozempic or looking for a cheaper option? Compare the best alternatives including compounded semaglutide, tirzepatide, and top telehealth providers.",
@@ -2314,6 +2320,8 @@ export const articles: Article[] = [
   },
   {
     slug: "glp1-true-cost-month-1-vs-year-one",
+    image: "/article-images/glp1-true-cost-month-1-vs-year-one.webp",
+    imageAlt: "Couple at a kitchen table going over household plans on a laptop",
     title: "What Will I Really Pay for a GLP-1? Month 1 to Year One",
     description:
       "The real cost of online GLP-1 treatment at verified prices: month 1, what you keep paying at your dose, and what year one adds up to, provider by provider.",

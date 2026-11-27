@@ -58,6 +58,8 @@ const SRC = {
 
 export const HRT_BLACK_BOX_WARNING: ArticleData = {
   slug: "hrt-black-box-warning-removed",
+  image: "/article-images/hrt-black-box-warning-removed.webp",
+  imageAlt: "Two friends talking and laughing on a bench with takeaway coffee",
   title: "HRT Black Box Warning Removed: What Changed and What Didn't",
   description:
     "The FDA removed HRT's boxed warnings on heart disease, breast cancer and dementia in 2025-2026. What the WHI found, what changed, what still applies.",

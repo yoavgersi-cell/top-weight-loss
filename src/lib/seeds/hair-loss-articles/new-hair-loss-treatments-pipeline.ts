@@ -70,6 +70,8 @@ const S = {
 
 export const HL_PIPELINE_ARTICLE: ArticleData = {
   slug: "new-hair-loss-treatments-pipeline",
+  image: "/article-images/new-hair-loss-treatments-pipeline.webp",
+  imageAlt: "Woman reading on a tablet at a library table",
   title: "New Hair Loss Treatments 2026: The Full Pipeline",
   description:
     "VDPHL01, clascoterone, PP405, pyrilutamide, GT20029, topical finasteride and JAK drugs: phase, best result, stated timing, and what to use now.",

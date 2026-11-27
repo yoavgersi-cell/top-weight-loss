@@ -26,6 +26,8 @@ const S = {
 
 export const HL_GLP1_HAIR_LOSS: ArticleData = {
   slug: "glp1-hair-loss",
+  image: "/article-images/glp1-hair-loss.webp",
+  imageAlt: "Woman brushing her hair beside a bright bathroom window",
   title: "Ozempic Hair Loss: What 2026 Studies Show & What Helps",
   description:
     "New 2026 studies tie Ozempic, Wegovy and Zepbound to a modestly higher risk of hair loss. Why shedding happens, whether it's permanent, and what helps.",

@@ -21,6 +21,8 @@ const S = {
 
 export const HRT_TESTOSTERONE_FOR_WOMEN: ArticleData = {
   slug: "testosterone-for-menopausal-women",
+  image: "/article-images/testosterone-for-menopausal-women.webp",
+  imageAlt: "Woman using light dumbbells on a mat in her living room",
   title: "Testosterone for Women in Menopause: What the Evidence Says",
   description:
     "Low sexual desire after menopause is the one indication with evidence. The global consensus, the ISSWSH guideline, why no US product exists, and online access.",

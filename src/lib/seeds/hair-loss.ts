@@ -1248,6 +1248,8 @@ const articles: ArticleData[] = [
   },
   {
     slug: "veradermics-vdphl01",
+    image: "/article-images/veradermics-vdphl01.webp",
+    imageAlt: "Hands placing a plain unlabeled bottle on a bathroom shelf beside a towel",
     title: "VDPHL01 Phase 3 Results and FDA Timeline (2026)",
     description:
       "Veradermics' extended-release oral minoxidil met its phase 3 goals in 536 men (Oct 19, 2026). The results, the safety signal and when it could reach the FDA.",
@@ -2308,6 +2310,8 @@ const articles: ArticleData[] = [
   // framing throughout.
   {
     slug: "norwood-scale",
+    image: "/article-images/norwood-scale.webp",
+    imageAlt: "Barber trimming a customer's hair in a bright barbershop",
     title: "The Norwood Scale: Stages of Male Pattern Baldness (2026)",
     description:
       "The Norwood scale is how clinicians describe male pattern hair loss, from a maturing hairline to advanced balding. Each stage, and why earlier is easier.",

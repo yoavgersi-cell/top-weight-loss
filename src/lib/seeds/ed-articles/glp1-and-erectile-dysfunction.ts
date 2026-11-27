@@ -74,6 +74,8 @@ const CHECKED = "checked October 31, 2026";
 
 export const ED_GLP1_ARTICLE: ArticleData = {
   slug: "glp1-and-erectile-dysfunction",
+  image: "/article-images/glp1-and-erectile-dysfunction.webp",
+  imageAlt: "Man with a bicycle resting on a lakeside path",
   title: "GLP-1 Drugs and Erectile Dysfunction: Help or Harm? (2026)",
   description:
     "What the studies show on semaglutide, tirzepatide and erectile dysfunction, why weight loss usually helps, and how to use ED pills safely on a GLP-1.",

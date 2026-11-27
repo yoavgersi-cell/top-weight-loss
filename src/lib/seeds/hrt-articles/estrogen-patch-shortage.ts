@@ -29,6 +29,8 @@ const S = {
 
 export const HRT_ESTROGEN_PATCH_SHORTAGE: ArticleData = {
   slug: "estrogen-patch-shortage",
+  image: "/article-images/estrogen-patch-shortage.webp",
+  imageAlt: "Woman at a pharmacy pickup counter seen over her shoulder",
   title: "Estrogen Patch Shortage 2026: What to Do & Alternatives",
   description:
     "Can't fill your estradiol patch? What the FDA says, why it's happening, when supply may improve, and the alternatives to ask your prescriber about.",

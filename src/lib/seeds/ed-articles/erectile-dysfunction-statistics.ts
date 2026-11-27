@@ -77,6 +77,8 @@ const CHECKED = "checked November 2, 2026";
 
 export const ED_STATISTICS_ARTICLE: ArticleData = {
   slug: "erectile-dysfunction-statistics",
+  image: "/article-images/erectile-dysfunction-statistics.webp",
+  imageAlt: "Group of men of different ages laughing around a backyard table",
   title: "Erectile Dysfunction Statistics 2026: Prevalence by Age",
   description:
     "ED prevalence by age from MMAS, NHANES and EMAS, risk-factor odds, heart-risk data, treatment rates and pill response rates, each with source and year.",

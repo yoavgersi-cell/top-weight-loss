@@ -10,6 +10,8 @@ import type { Article } from "./articles";
 // labelled as such. Nothing here is estimated by us.
 export const pillarGlp1StoppingWeightRegain: Article = {
   slug: "stopping-glp1-weight-regain-complete-guide",
+  image: "/article-images/stopping-glp1-weight-regain-complete-guide.webp",
+  imageAlt: "Woman tying her trainers on a park bench at the start of a morning walk",
   title: "Stopping GLP-1s: Weight Regain and How to Keep It Off (2026)",
   description:
     "What happens when you stop semaglutide or tirzepatide: regain data from every major trial and 2026 meta-analysis, maintenance doses, tapering, muscle and cost.",

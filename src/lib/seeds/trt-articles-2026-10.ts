@@ -21,6 +21,8 @@ const S = {
 export const TRT_ARTICLES_2026_10: ArticleData[] = [
   {
     slug: "weight-loss-testosterone-glp1-vs-trt",
+    image: "/article-images/weight-loss-testosterone-glp1-vs-trt.webp",
+    imageAlt: "Man walking his dog on a wooded trail in the morning",
     title: "Low Testosterone and Obesity: Weight Loss or TRT? (2026)",
     description:
       "Obesity lowers testosterone and weight loss raises it. What the 2025 GLP-1 studies reported, functional versus organic hypogonadism, and when TRT is needed.",

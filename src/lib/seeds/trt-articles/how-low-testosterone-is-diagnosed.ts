@@ -68,6 +68,8 @@ const S = {
 
 export const TRT_LOW_T_DIAGNOSIS: ArticleData = {
   slug: "how-low-testosterone-is-diagnosed",
+  image: "/article-images/how-low-testosterone-is-diagnosed.webp",
+  imageAlt: "Man filling in a form on a clipboard in a bright waiting area",
   title: "How Low T Is Diagnosed: The Tests Before TRT (2026)",
   description:
     "How low testosterone should be diagnosed before TRT: two morning tests, LH and FSH, SHBG, hematocrit, PSA and fertility checks, per the US guidelines.",

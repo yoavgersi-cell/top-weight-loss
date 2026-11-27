@@ -966,6 +966,8 @@ export const TRT_GUIDES_PORTED: ArticleData[] = [
   },
   {
     slug: "is-trt-safe",
+    image: "/article-images/is-trt-safe.webp",
+    imageAlt: "Couple cooking dinner together in a bright kitchen",
     title: "Is TRT Safe? TRAVERSE, the 2025 FDA Label and the Real Risks",
     description:
       "Is TRT safe? What the 5,246-man TRAVERSE trial found, why the FDA dropped the heart-risk boxed warning in 2025, and the risks that monitoring catches.",
@@ -1161,6 +1163,8 @@ export const TRT_GUIDES_PORTED: ArticleData[] = [
   },
   {
     slug: "testosterone-levels-by-age",
+    image: "/article-images/testosterone-levels-by-age.webp",
+    imageAlt: "Three men of different ages talking over coffee at a backyard table",
     title: "Testosterone Levels by Age: Normal Ranges and What They Mean",
     description:
       "Normal testosterone by age: the harmonized 264-916 ng/dL range, how levels change from puberty to 70+, why charts disagree, what counts as low and when to test.",

@@ -79,6 +79,8 @@ const S = {
 
 export const HRT_MHT_2026_CHANGES: ArticleData = {
   slug: "menopause-hormone-therapy-2026-what-changed",
+  image: "/article-images/menopause-hormone-therapy-2026-what-changed.webp",
+  imageAlt: "Woman reading on a tablet in an armchair at home",
   title: "Menopause Hormone Therapy in 2026: What Changed",
   description:
     "ACOG and ACP named hormone therapy first-line for hot flashes, three more patches lost the boxed warning, and patches stayed scarce. What it means for you.",

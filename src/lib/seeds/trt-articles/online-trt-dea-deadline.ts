@@ -31,6 +31,8 @@ const S = {
 
 export const TRT_DEA_DEADLINE: ArticleData = {
   slug: "online-trt-dea-deadline-2026",
+  image: "/article-images/online-trt-dea-deadline-2026.webp",
+  imageAlt: "Man reading through paperwork at a home office desk",
   title: "Online TRT After Dec 31, 2026: The DEA Deadline Explained",
   description:
     "The rule that lets online clinics prescribe testosterone without an in-person visit ends Dec 31, 2026. What could change, and what TRT patients should do now.",
